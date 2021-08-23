@@ -1,6 +1,6 @@
 ---
 title: MDM_VPNv2_NativeProfile02-Klasse
-description: Die MDM \_ VPNv2 \_ NativeProfile2-Klasse definiert Profilinformationen bei Verwendung eines Windows-Eingangsbox-VPN-Protokolls (IKEv2, PPTP, L2TP).
+description: Die MDM VPNv2 NativeProfile2-Klasse definiert Profilinformationen bei Verwendung eines \_ \_ Windows-Inbox-VPN-Protokolls (IKEv2, PPTP, L2TP).
 ms.assetid: 50c4adc6-baef-437c-8223-9aeaaec813af
 keywords:
 - MDM_VPNv2_NativeProfile02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a8573975c488df6e5c759e719d5c687f6a71c505
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b09152d705e7746aded2487d06c5668c766e37940a620a19ff15733ac6522459
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859190"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076954"
 ---
 # <a name="mdm_vpnv2_nativeprofile02-class"></a>MDM \_ VPNv2 \_ NativeProfile02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ VPNv2 \_ NativeProfile2** -Klasse definiert Profilinformationen bei Verwendung eines Windows-Eingangsbox-VPN-Protokolls (IKEv2, PPTP, L2TP).
+Die **MDM \_ VPNv2 \_ NativeProfile2-Klasse** definiert Profilinformationen bei Verwendung eines Windows-Inbox-VPN-Protokolls (IKEv2, PPTP, L2TP).
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -49,20 +49,20 @@ class MDM_VPNv2_NativeProfile02
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ VPNv2 \_ NativeProfile02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ VPNv2 \_ NativeProfile02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ VPNv2 \_ NativeProfile02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ VPNv2 \_ NativeProfile02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -71,14 +71,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an.
+Identifiziert den Namen des übergeordneten Knotens.
 
 </dd> <dt>
 
 [L2tpPsk](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-l2tppsk)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -86,10 +86,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Nativeprotocoltype](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-nativeprotocoltype)
+[NativeProtocolType](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-nativeprotocoltype)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -97,10 +97,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -109,14 +109,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichen *Folge "./Vendor/MSFT/VPNv2/profile* Name".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/VPNv2/*ProfileName*"
 
 </dd> <dt>
 
-[Routingpolicytype](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-trafficfilterlist-trafficfilterid-routingpolicytype)
+[RoutingPolicyType](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-trafficfilterlist-trafficfilterid-routingpolicytype)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -127,7 +127,7 @@ Zugriffstyp: Lesen/Schreiben
 [Server](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-servers)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -141,10 +141,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -153,7 +153,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

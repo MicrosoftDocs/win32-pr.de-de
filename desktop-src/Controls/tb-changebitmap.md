@@ -1,9 +1,9 @@
 ---
-title: TB_CHANGEBITMAP Meldung (kommstrg. h)
+title: TB_CHANGEBITMAP Nachricht (Commctrl.h)
 description: Ändert die Bitmap für eine Schaltfläche in einer Symbolleiste.
 ms.assetid: 112b6f4e-6034-4e13-8b2f-b8411a351fbd
 keywords:
-- Windows-Steuerelemente für TB_CHANGEBITMAP Meldung
+- TB_CHANGEBITMAP Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1367a2a1b4e35d6f52bf1e7a0be42f1e75daa7ac
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5bb75e4586960a68e68c52d01d19ad78a3b3c848dcfb7acbd495dffbe530770c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957939"
 ---
-# <a name="tb_changebitmap-message"></a>TB \_ changebitmap-Meldung
+# <a name="tb_changebitmap-message"></a>TB \_ CHANGEBITMAP-Nachricht
 
 Ändert die Bitmap für eine Schaltfläche in einer Symbolleiste.
 
@@ -32,22 +32,22 @@ ms.locfileid: "103859335"
 *wParam* 
 </dt> <dd>
 
-Der Befehls Bezeichner der Schaltfläche, mit der eine neue Bitmap empfangen werden soll.
+Befehlsbezeichner der Schaltfläche, die eine neue Bitmap empfangen soll.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-NULL basierter Index eines Bilds in der Bildliste der Symbolleiste. Das System zeigt das angegebene Bild in der Schaltfläche an. Legen Sie diesen Parameter auf " \_ imagecallback" fest, und die Symbolleiste sendet die [**TBN- \_ getdispinfo**](tbn-getdispinfo.md) -Benachrichtigung, um den Abbild Index bei Bedarf abzurufen.
+Nullbasierter Index eines Bilds in der Bildliste der Symbolleiste. Das System zeigt das angegebene Bild in der Schaltfläche an. Legen Sie diesen Parameter auf I \_ IMAGECALLBACK fest, und die Symbolleiste sendet die [**\_ TBN-GETDISPINFO-Benachrichtigung,**](tbn-getdispinfo.md) um den Imageindex bei Bedarf abzurufen.
 
-[Version 5,81](common-control-versions.md). Legen Sie diesen Parameter auf " \_ imagenone" fest, um anzugeben, dass die Schaltfläche kein Bild hat. Das Layout der Schaltfläche enthält keinen Platz für eine Bitmap, sondern nur Text.
+[Version 5.81.](common-control-versions.md) Legen Sie diesen Parameter auf I \_ IMAGENONE fest, um anzugeben, dass die Schaltfläche kein Bild enthält. Das Schaltflächenlayout enthält keinen Platz für eine Bitmap, sondern nur Text.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

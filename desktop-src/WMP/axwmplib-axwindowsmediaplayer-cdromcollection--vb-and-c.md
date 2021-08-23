@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. cdromcollection (Eigenschaft)
-description: Die cdromcollection-Eigenschaft ruft eine iwmpcdromcollection-Schnittstelle ab, die den Zugriff auf eine Sammlung von CD-oder DVD-Laufwerken ermöglicht.
+title: AxWindowsMediaPlayer.ccollection -Eigenschaft
+description: Die ccollection-Eigenschaft ruft eine IWMPCassoCollection-Schnittstelle ab, die Zugriff auf eine Sammlung von CD- oder DVD-Laufwerken bietet.
 ms.assetid: 03f4e7d1-4376-4112-993e-943d29aca049
 keywords:
-- cdromcollection-Eigenschaft, Windows-Media Player
-- cdromcollection-Eigenschaft, Windows Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, cdromcollection (Eigenschaft)
+- ccollection-Eigenschafts-Windows Media Player
+- ccollection-Eigenschaft Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , ccollection-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac4ba3bb5df95e9ee53e2a6c3aecbd1e9a355882
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dec885de319153383b82359e35208d19031fa7378749b39033402aba11f8dbd5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367410"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055014"
 ---
-# <a name="axwindowsmediaplayercdromcollection-property"></a>AxWindowsMediaPlayer. cdromcollection (Eigenschaft)
+# <a name="axwindowsmediaplayercdromcollection-property"></a>AxWindowsMediaPlayer.ccollection -Eigenschaft
 
-Die cdromcollection-Eigenschaft ruft eine **iwmpcdromcollection** -Schnittstelle ab, die den Zugriff auf eine Sammlung von CD-oder DVD-Laufwerken ermöglicht.
+Die ccollection-Eigenschaft ruft eine **IWMPCassoCollection-Schnittstelle** ab, die Zugriff auf eine Sammlung von CD- oder DVD-Laufwerken bietet.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -48,11 +48,11 @@ Public ReadOnly Property cdromCollection As IWMPCdromCollection
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine WMPLib. iwmpcdromcollection-Schnittstelle.
+Eine WMPLib.IWMPCcollection-Schnittstelle.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erfo
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -70,16 +70,16 @@ Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erfo
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromcollection-Schnittstelle (VB und c#)**](iwmpcdromcollection--vb-and-c.md)
+[**IWMPCcollection-Schnittstelle (VB und C#)**](iwmpcdromcollection--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. mediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.mediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. requestmediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.requestMediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
 </dt> </dl>
 
  

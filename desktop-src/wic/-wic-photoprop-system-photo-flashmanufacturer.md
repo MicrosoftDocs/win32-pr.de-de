@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. Flash Manufacturer-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Photo.FlashManufacturer-Eigenschaft.
 ms.assetid: f62e85ec-2dc6-456b-a43b-7b76d162b608
-title: System. Photo. Flash Manufacturer-Foto-metadatenrichtlinie
+title: System.Photo.FlashManufacturer-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aa1e785dfd00662acf065021a3c80de5c587586c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a0d81a57967e5b3f1139b0efabd85266bec80d10e06fb18251b0a6b9ef61a1e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964806"
 ---
-# <a name="systemphotoflashmanufacturer-photo-metadata-policy"></a>System. Photo. Flash Manufacturer-Foto-metadatenrichtlinie
+# <a name="systemphotoflashmanufacturer-photo-metadata-policy"></a>System.Photo.FlashManufacturer-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Photo. Flash Manufacturer](../properties/props-system-photo-flashmanufacturer.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Photo.FlashManufacturer-Eigenschaft.](../properties/props-system-photo-flashmanufacturer.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ Photo- \_ Flash Hersteller
+PKEY \_ Photo \_ FlashManufacturer
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
@@ -35,19 +35,19 @@ VT \_ LPWSTR
 
 Eine Zeichenfolge.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="precedence-of-paths-jpeg"></a>Rangfolge von Pfaden (JPEG)
 
-Wenn die Datei im JPEG-Format vorliegt, verwendet der Handler beim Lesen oder Schreiben der Daten den folgenden Pfad.
+Wenn die Datei im JPEG-Format vor liegt, verwendet der Handler beim Lesen oder Schreiben der Daten den folgenden Pfad.
 
 
 
-| Auftrag | Pfad                                  | Datenträger Format | Datenformat | Erforderlich |
+| Auftrag | Pfad                                  | Datenträgerformat | Datenformat | Erforderlich |
 |-------|---------------------------------------|-------------|-------------|----------|
-| 1     | /XMP/MicrosoftPhoto: Flash Hersteller | Unicode     |             | Ja      |
+| 1     | /xmp/MicrosoftPhoto:FlashManufacturer | Unicode     |             | Ja      |
 
 
 
@@ -55,25 +55,25 @@ Wenn die Datei im JPEG-Format vorliegt, verwendet der Handler beim Lesen oder Sc
 
 ### <a name="precedence-of-paths-tiff"></a>Rangfolge von Pfaden (TIFF)
 
-Wenn die Datei im TIFF-Format vorliegt, verwendet der Handler beim Lesen oder Schreiben der Daten die folgende Rangfolge.
+Wenn die Datei im TIFF-Format vor liegt, verwendet der Handler beim Lesen oder Schreiben der Daten die folgende Rangfolge.
 
 
 
-| Auftrag | Pfad                                      | Datenträger Format | Datenformat | Erforderlich |
+| Auftrag | Pfad                                      | Datenträgerformat | Datenformat | Erforderlich |
 |-------|-------------------------------------------|-------------|-------------|----------|
-| 1     | /IFD/XMP/MicrosoftPhoto: Flash Hersteller | Unicode     |             | Ja      |
+| 1     | /ifd/xmp/MicrosoftPhoto:FlashManufacturer | Unicode     |             | Ja      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. Flash Hersteller](../properties/props-system-photo-flashmanufacturer.md)
+[System.Photo.FlashManufacturer](../properties/props-system-photo-flashmanufacturer.md)
 </dt> </dl>
 
  

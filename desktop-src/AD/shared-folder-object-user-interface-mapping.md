@@ -1,28 +1,28 @@
 ---
-title: Zuordnung von Benutzeroberflächen für freigegebene Ordner Objekte
-description: In diesem Thema werden die Eigenschaften Blätter für freigegebene Ordner Objekte im-Snap-in "Active Directory-Benutzer und-Computer" erläutert.
+title: Zuordnung von freigegebenen Ordnerobjekten Benutzeroberfläche
+description: In diesem Thema werden die Eigenschaftenblätter für freigegebene Ordner im snap-in Active Directory-Benutzer und -Computer erläutert.
 ms.assetid: d1dee2cc-edd2-443a-949d-c12696fcdf41
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 76c6dc2029aed9aa9d2a7f13d680f0164267bf22
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c6194ad6ad0521983608425f9857e854db63cbe348ae7e763c645e1d2f4675c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024728"
 ---
-# <a name="shared-folder-object-user-interface-mapping"></a>Zuordnung von Benutzeroberflächen für freigegebene Ordner Objekte
+# <a name="shared-folder-object-user-interface-mapping"></a>Zuordnung von freigegebenen Ordnerobjekten Benutzeroberfläche
 
-In diesem Thema werden die Eigenschaften Blätter für freigegebene Ordner Objekte im-Snap-in "Active Directory-Benutzer und-Computer" erläutert.
+In diesem Thema werden die Eigenschaftenblätter für freigegebene Ordner im snap-in Active Directory-Benutzer und -Computer erläutert.
 
-## <a name="general-property-sheet"></a>Eigenschaften Blatt "Allgemein"
+## <a name="general-property-sheet"></a>Allgemeines Eigenschaftenblatt
 
-In der folgenden Tabelle sind die Benutzeroberflächen Bezeichnungen der **allgemeinen** Eigenschaften Seite aufgeführt.
+In der folgenden Tabelle sind die Benutzeroberflächenbezeichnungen des **Eigenschaftenblatts Allgemein** aufgeführt.
 
 
 
-| UI-Bezeichnung    | Attribut in Active Directory Domain Services |
+| Bezeichnung der Benutzeroberfläche    | Attribut in Active Directory Domain Services |
 |-------------|-----------------------------------------------|
 | BESCHREIBUNG | description                                   |
 | UNC-Name    | uNCName                                       |
@@ -30,11 +30,11 @@ In der folgenden Tabelle sind die Benutzeroberflächen Bezeichnungen der **allge
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

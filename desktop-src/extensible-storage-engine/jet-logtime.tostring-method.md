@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_LOGTIME. Methode "destring"'
-title: JET_LOGTIME. Methode "destring"
+description: 'Erfahren Sie mehr über: JET_LOGTIME. ToString-Methode'
+title: JET_LOGTIME. ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_LOGTIME.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_logtime.tostring(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: de9abcef7f2b78b471bdfdbc9678a8df7fc54425
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7b108cc8a70ac1068750f6fef37c5a2efab527bd234f4a6bde66a3083fd645f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357083"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118979800"
 ---
-# <a name="jet_logtimetostring-method"></a>JET_LOGTIME. Methode "destring"
+# <a name="jet_logtimetostring-method"></a>JET_LOGTIME. ToString-Methode
 
-Generiert eine Zeichen folgen Darstellung der-Struktur.
+Generieren Sie eine Zeichenfolgendarstellung der -Struktur.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Die-Struktur als Zeichenfolge.  
+Typ: [System.String](/dotnet/api/system.string)  
+Die -Struktur als Zeichenfolge.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_LOGTIME Struktur](./jet-logtime-structure2.md)
+[JET_LOGTIME-Struktur](./jet-logtime-structure2.md)
 
-[Mitglieder JET_LOGTIME](./jet-logtime-members.md)
+[JET_LOGTIME-Member](./jet-logtime-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

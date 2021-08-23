@@ -1,7 +1,7 @@
 ---
-description: Gibt Handles an die Kryptografiesitzung und das Direct3D-Gerät zurück, die einem angegebenen DirectX Video Acceleration 2 (DXVA-2)-Decodergerät zugeordnet sind.
+description: Gibt Handles an die kryptografische Sitzung und das Direct3D-Gerät zurück, die einem angegebenen DXVA-2-Decodergerät (DirectX Video Acceleration 2) zugeordnet sind.
 ms.assetid: 90b3bcf3-2988-48de-8acd-62e385d4fdf0
-title: D3DAUTHENTICATEDQUERY_CRYPTOSESSION (D3d9types. h)
+title: D3DAUTHENTICATEDQUERY_CRYPTOSESSION (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,35 +13,35 @@ api_type:
 - HeaderDef
 api_location:
 - d3d9types.h
-ms.openlocfilehash: e824514c3fef4e3e036b8f2973d3a958c4e135ec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ee1cabc69122ebd7eb7d81c64eb761439e6a3c0cde20dd376c3581b9aed0738
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974669"
 ---
-# <a name="d3dauthenticatedquery_cryptosession"></a>D3DAUTHENTICATEDQUERY \_ CryptoSession
+# <a name="d3dauthenticatedquery_cryptosession"></a>D3DAUTHENTICATEDQUERY \_ CRYPTOSESSION
 
-Gibt Handles an die Kryptografiesitzung und das Direct3D-Gerät zurück, die einem angegebenen DirectX Video Acceleration 2 (DXVA-2)-Decodergerät zugeordnet sind.
+Gibt Handles an die kryptografische Sitzung und das Direct3D-Gerät zurück, die einem angegebenen DXVA-2-Decodergerät (DirectX Video Acceleration 2) zugeordnet sind.
 
 
 
 | Anforderung | Wert |
 |-------------|------------------------------------------------------------------------------------------------------------------|
-| Abfrage-GUID  | **D3DAUTHENTICATEDQUERY \_ CryptoSession**                                                                         |
-| Eingabedaten  | [**D3DAUTHENTICATEDCHANNEL- \_ Abfrage \_ Eingabe**](d3dauthenticatedchannel-query-input.md)                             |
-| Daten zurückgeben | [**D3DAUTHENTICATEDCHANNEL \_ querycryptosession- \_ Ausgabe**](d3dauthenticatedchannel-querycryptosession-output.md) |
+| Abfrage-GUID  | **D3DAUTHENTICATEDQUERY \_ CRYPTOSESSION**                                                                         |
+| Eingabedaten  | [**D3DAUTHENTICATEDCHANNEL-ABFRAGEEINGABE \_ \_**](d3dauthenticatedchannel-query-input.md)                             |
+| Daten zurückgeben | [**D3DAUTHENTICATEDCHANNEL \_ \_ QUERYCRYPTOSESSION-AUSGABE**](d3dauthenticatedchannel-querycryptosession-output.md) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Abfrage wird von den folgenden Kanaltypen unterstützt:
+Die folgenden Kanaltypen unterstützen diese Abfrage:
 
--   **D3DAUTHENTICATEDCHANNEL- \_ Treiber \_ Hardware**
--   **D3DAUTHENTICATEDCHANNEL- \_ Treiber \_ Software**
+-   **D3DAUTHENTICATEDCHANNEL-TREIBERHARDWARE \_ \_**
+-   **D3DAUTHENTICATEDCHANNEL-TREIBERSOFTWARE \_ \_**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Diese Abfrage wird von den folgenden Kanaltypen unterstützt:
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>D3d9types. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
@@ -62,10 +62,10 @@ Diese Abfrage wird von den folgenden Kanaltypen unterstützt:
 [Content Protection Abfragen](content-protection-queries.md)
 </dt> <dt>
 
-[GPU-basiertes Content Protection](gpu-based-content-protection.md)
+[GPU-basierte Content Protection](gpu-based-content-protection.md)
 </dt> <dt>
 
-[**IDirect3DAuthenticatedChannel9:: Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)
+[**IDirect3DAuthenticatedChannel9::Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)
 </dt> </dl>
 
  

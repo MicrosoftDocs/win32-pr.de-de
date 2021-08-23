@@ -1,29 +1,29 @@
 ---
-title: Httppurchaseorderwithkerberosoversslclieintexample
-description: Dieses Beispiel zeigt einen HTTP-Client, der den Dienst Proxy verwendet, um mit einem PurchaseOrder-Dienst zu kommunizieren, mit Kerberos über SSL-Sicherheit im gemischten Modus.
+title: HttpPurchaseOrderWithKerberosOverSslClientExample
+description: Dieses Beispiel zeigt einen HTTP-Client, der einen Dienstproxy für die Kommunikation mit einem PurchaseOrder-Dienst verwendet, mit Kerberos über ssl-Sicherheit im gemischten Modus.
 ms.assetid: 6756043c-ef4c-4fa6-a27b-7ecb900601f9
 keywords:
-- Httppurchaseorderwithkerberosoversslclieintexample Native-Web-Services
-- Wwsapi
+- HttpPurchaseOrderWithKerberosOverSslClientExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b5ca33bd87467a18857c20208fdc243b04f6224
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6cfb786d2b100006c4a9fa80edbfd4253d21de0322fcbe2ad4713dfe1b7840cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963179"
 ---
-# <a name="httppurchaseorderwithkerberosoversslclientexample"></a>Httppurchaseorderwithkerberosoversslclieintexample
+# <a name="httppurchaseorderwithkerberosoversslclientexample"></a>HttpPurchaseOrderWithKerberosOverSslClientExample
 
-Dieses Beispiel zeigt einen HTTP-Client, der den Dienst Proxy verwendet, um mit einem PurchaseOrder-Dienst zu kommunizieren, mit Kerberos über SSL-Sicherheit im gemischten Modus. In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt. Die Client Authentifizierung wird von einem Kerberos apreq-Ticket in einem WS-Security-Header in der Nachricht bereitgestellt.
+Dieses Beispiel zeigt einen HTTP-Client, der einen Dienstproxy für die Kommunikation mit einem PurchaseOrder-Dienst verwendet, mit Kerberos über ssl-Sicherheit im gemischten Modus. Bei diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Kerberos-APREQ-Ticket in einem WS-Security-Header in der Nachricht bereitgestellt.
 
--   [Purchaseorderclientkerberosoverssl. cpp](#purchaseorderclientkerberosoversslcpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [PurchaseOrderClientKerberosOverSsl.cpp](#purchaseorderclientkerberosoversslcpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="purchaseorderclientkerberosoversslcpp"></a>Purchaseorderclientkerberosoverssl. cpp
+## <a name="purchaseorderclientkerberosoversslcpp"></a>PurchaseOrderClientKerberosOverSsl.cpp
 
 
 ```C++
@@ -358,7 +358,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -497,9 +497,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: TBM_GETPOS Meldung (kommstrg. h)
-description: Ruft die aktuelle logische Position des Schiebereglers in einer TrackBar ab. Die logischen Positionen sind die ganzzahligen Werte in der TrackBar-Bereich der minimalen bis maximalen Schieberegler-Positionen.
+title: TBM_GETPOS Meldung (Commctrl.h)
+description: Ruft die aktuelle logische Position des Schiebereglers in einer Trackleiste ab. Die logischen Positionen sind die ganzzahligen Werte im Bereich der Trackleiste von minimalen bis maximalen Schiebereglerpositionen.
 ms.assetid: 6f082ab2-2f9a-4bc0-bfca-56f7b1a2d921
 keywords:
-- Windows-Steuerelemente für TBM_GETPOS Meldung
+- TBM_GETPOS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 072ff9b8a107fe19afb1fee6107a2f05bad36025
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 54ed3b8afed7b96e657984a437ff54b1099f196b8dc3d0035468835152b5a841
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476806"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078084"
 ---
-# <a name="tbm_getpos-message"></a>TBM- \_ GetPos-Nachricht
+# <a name="tbm_getpos-message"></a>TBM \_ GETPOS-Nachricht
 
-Ruft die aktuelle logische Position des Schiebereglers in einer TrackBar ab. Die logischen Positionen sind die ganzzahligen Werte in der TrackBar-Bereich der minimalen bis maximalen Schieberegler-Positionen.
+Ruft die aktuelle logische Position des Schiebereglers in einer Trackleiste ab. Die logischen Positionen sind die ganzzahligen Werte im Bereich der Trackleiste von minimalen bis maximalen Schiebereglerpositionen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,9 +45,9 @@ Gibt einen 32-Bit-Wert zurück, der die aktuelle logische Position des Schiebere
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Gibt einen 32-Bit-Wert zurück, der die aktuelle logische Position des Schiebere
 
 <dl> <dt>
 
-[**TBM- \_ SetPos**](tbm-setpos.md)
+[**TBM \_ SETPOS**](tbm-setpos.md)
 </dt> </dl>
 
  

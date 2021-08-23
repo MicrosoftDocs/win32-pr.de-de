@@ -1,7 +1,7 @@
 ---
-description: Flag, das angibt, ob das Fenster seine Zerstörungs Nachricht postet oder sendet.
+description: Flag, das angibt, ob das Fenster seine Zerstörungsmeldung sendet oder sendet.
 ms.assetid: 553a372e-1abe-4661-bfa5-b8a63be63c72
-title: 'Cbasewindow:: m_bDoPostToDestroy Member (winutil. h)'
+title: CBaseWindow::m_bDoPostToDestroy-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 804d0910760ddac5ea4d74979293f43e5b189225
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 070b94cc75fa3fb2d9b5983901abc2406b2e601ec3370323854905708ee681f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359676"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954609"
 ---
-# <a name="cbasewindowm_bdoposttodestroy-member"></a>Cbasewindow:: m \_ bdopostdedestroy-Member
+# <a name="cbasewindowm_bdoposttodestroy-member"></a>CBaseWindow::m \_ bDoPostToDestroy-Member
 
-Flag, das angibt, ob das Fenster seine Zerstörungs Nachricht postet oder sendet. **True** gibt an, dass die [**cbasewindow::D onewithwindow**](cbasewindow-donewithwindow.md) -Methode die **PostMessage** -Funktion verwendet, um sich selbst eine private Zerstörungs Nachricht zu senden. **False** gibt an, dass **donewithwindow** die **SendMessage** -Funktion verwendet, um die Nachricht zu senden. Standardmäßig ist der Wert **false**.
+Flag, das angibt, ob das Fenster seine Zerstörungsmeldung sendet oder sendet. True gibt an, dass die [**CBaseWindow::D oneWithWindow-Methode**](cbasewindow-donewithwindow.md) die **PostMessage-Funktion** verwendet, um sich selbst eine private Zerstörungsnachricht zu senden. **False** gibt an, dass **DoneWithWindow** die **SendMessage-Funktion** verwendet, um die Nachricht zu senden. Standardmäßig ist der Wert **FALSE.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ BOOL m_bDoPostToDestroy;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BOOL m_bDoPostToDestroy;
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

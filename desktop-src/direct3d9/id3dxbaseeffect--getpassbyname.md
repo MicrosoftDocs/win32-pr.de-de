@@ -1,7 +1,7 @@
 ---
-description: Ruft das Handle für einen Durchlauf ab, indem der zugehörige Name gesucht wird.
+description: Ruft das Handle eines Durchlaufs ab, indem nach seinem Namen gesucht wird.
 ms.assetid: 24d043a2-5c87-4a59-80d4-0c81bd7a0b3e
-title: 'ID3DXBaseEffect:: getpassbyname-Methode (D3DX9Effect. h)'
+title: ID3DXBaseEffect::GetPassByName-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 2cd96a9d91f0e822b3e869bd8f0c965f0f951f44
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5837d2b69c793f788c4c89f648402e7924bc2f3af9a92bbbe596c133efe10d1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987760"
 ---
-# <a name="id3dxbaseeffectgetpassbyname-method"></a>ID3DXBaseEffect:: getpassbyname-Methode
+# <a name="id3dxbaseeffectgetpassbyname-method"></a>ID3DXBaseEffect::GetPassByName-Methode
 
-Ruft das Handle für einen Durchlauf ab, indem der zugehörige Name gesucht wird.
+Ruft das Handle eines Durchlaufs ab, indem nach seinem Namen gesucht wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ D3DXHANDLE GetPassByName(
 
 <dl> <dt>
 
-*htechnik* \[ in\]
+*hTechnique* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Handle des übergeordneten Verfahrens. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Handle der übergeordneten Technik. Siehe [Handles (Direct3D 9)](handles.md).
 
 </dd> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeichenfolge, die den Pass Namen enthält.
+Zeichenfolge, die den Passnamen enthält.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Zeichenfolge, die den Pass Namen enthält.
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Gibt das Handle des ersten Durchlauf innerhalb der angegebenen Technik mit dem angegebenen Namen zurück, oder **null** , wenn der Name nicht gefunden wurde. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Gibt das Handle des ersten Durchlaufs innerhalb der angegebenen Technik mit dem angegebenen Namen zurück, oder **NULL,** wenn der Name nicht gefunden wurde. Siehe [Handles (Direct3D 9)](handles.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Gibt das Handle des ersten Durchlauf innerhalb der angegebenen Technik mit dem a
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 

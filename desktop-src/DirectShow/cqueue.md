@@ -1,7 +1,7 @@
 ---
-description: Die cqueue-Klassen Vorlage implementiert eine einfache, statisch formatierte Warteschlange.
+description: Die CQueue-Klassenvorlage implementiert eine einfache Warteschlange mit statischer Größe.
 ms.assetid: 5a4f0bcf-24ed-427d-898d-f3ddc6a35b59
-title: Cqueue-Klasse (wxutil. h)
+title: CQueue-Klasse (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,33 +16,33 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4ceef0d29e0f6f06c30355a47e3274495f17dceb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bf6c6225a393f8f6ff1848acc66c68b6d260b0c839f2cc9f1e24d06a11e88219
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359715"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953979"
 ---
-# <a name="cqueue-class"></a>Cqueue-Klasse
+# <a name="cqueue-class"></a>CQueue-Klasse
 
-Die **cqueue** -Klassen Vorlage implementiert eine einfache, statisch formatierte Warteschlange.
+Die **CQueue-Klassenvorlage** implementiert eine einfache Warteschlange mit statischer Größe.
 
 
 
 | Öffentliche Methoden                                  | BESCHREIBUNG                             |
 |-------------------------------------------------|-----------------------------------------|
-| [**Cqueue**](cqueue-cqueue.md)                 | Konstruktormethode.                     |
-| [**~ Cqueue**](cqueue--cqueue.md)               | Dekonstruktormethode.                      |
-| [**Getqueueobject**](cqueue-getqueueobject.md) | Ruft das nächste Element aus der Warteschlange ab. |
-| [**Putqueueobject**](cqueue-putqueueobject.md) | Fügt ein Element in die Warteschlange ein.            |
+| [**CQueue**](cqueue-cqueue.md)                 | Konstruktormethode.                     |
+| [**~CQueue**](cqueue--cqueue.md)               | Destruktormethode.                      |
+| [**GetQueueObject**](cqueue-getqueueobject.md) | Ruft das nächste Element aus der Warteschlange ab. |
+| [**PutQueueObject**](cqueue-putqueueobject.md) | Versetzt ein Element in die Warteschlange.            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Klassenkonstruktor gibt die Größe der Warteschlange an. Verwenden Sie das [**cqueue::P utqueueobject**](cqueue-putqueueobject.md) , um ein Element in die Warteschlange zu versetzen, und die [**cqueue:: getqueueobject**](cqueue-getqueueobject.md) -Methode, um ein Element aus der Warteschlange zu entfernen. Wenn die Warteschlange voll ist, wird die **putqueueobject** -Methode blockiert, bis ein Element aus der Warteschlange entfernt wird. Wenn die Warteschlange leer ist, wird **getqueueobject** blockiert, bis ein Element in die Warteschlange eingereiht wird. Der Template-Parameter gibt den Typ des Elements an. Beispiel:
+Der Klassenkonstruktor gibt die Größe der Warteschlange an. Verwenden Sie [**CQueue::P utQueueObject,**](cqueue-putqueueobject.md) um ein Element in die Warteschlange zu setzen, und die [**CQueue::GetQueueObject-Methode,**](cqueue-getqueueobject.md) um ein Element aus der Warteschlange zu entfernen. Wenn die Warteschlange voll ist, wird die **PutQueueObject-Methode** blockiert, bis ein Element aus der Warteschlange entfernt wird. Wenn die Warteschlange leer ist, wird **das GetQueueObject** blockiert, bis ein Element in die Warteschlange gestellt wird. Der Vorlagenparameter gibt den Typ des Elements an. Beispiel:
 
 
 ```
@@ -52,7 +52,7 @@ number_queue.PutQueueObject(7);
 
 
 
-Die-Klasse verwendet zwei Semaphor zum Steuern von Warteschlangen Vorgängen, eine "Get"-Semaphor und eine "Put"-Semaphor. Die [**getqueueobject**](cqueue-getqueueobject.md) -Methode wartet auf das "Get"-Semaphor (mit der **WaitForSingleObject** -Funktion) und gibt das "Put"-Semaphor frei (mit der **ReleaseSemaphore** -Funktion). Die [**putqueueobject**](cqueue-putqueueobject.md) -Methode wartet auf das "Put"-Semaphor und gibt das "Get"-Semaphor frei. Die-Klasse verwendet einen kritischen Abschnitt, um Warteschlangen Vorgänge zwischen mehreren Threads zu serialisieren.
+Die -Klasse verwendet zwei Semaphore, um Warteschlangenvorgänge zu steuern, ein "get"-Semaphor und ein "put"-Semaphor. Die [**GetQueueObject-Methode**](cqueue-getqueueobject.md) wartet auf das "get"-Semaphor (mithilfe der **WaitForSingleObject-Funktion)** und gibt das "put"-Semaphor frei (mithilfe der **ReleaseSemaphore-Funktion).** Die [**PutQueueObject-Methode**](cqueue-putqueueobject.md) wartet auf das "put"-Semaphor und gibt das "get"-Semaphor frei. Die -Klasse verwendet einen kritischen Abschnitt, um Warteschlangenvorgänge zwischen mehreren Threads zu serialisieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,8 +60,8 @@ Die-Klasse verwendet zwei Semaphor zum Steuern von Warteschlangen Vorgängen, ei
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

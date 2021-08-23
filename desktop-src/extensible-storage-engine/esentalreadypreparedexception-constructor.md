@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentalleserypreparedexception-Konstruktor'
-title: Esentalleserypreparedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentAlreadyPreparedException-Konstruktor'
+title: EsentAlreadyPreparedException-Konstruktor
 TOCTitle: 'EsentAlreadyPreparedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentAlreadyPreparedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentalreadypreparedexception.esentalreadypreparedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0a96448ccd3abdaed7b789b463f08c5d5c8e6f67
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9927a8f75868c40f93aab84f79e1f03e86ca1b88f1a1a4c6d99d8ed174199c5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119117389"
 ---
-# <a name="esentalreadypreparedexception-constructor"></a>Esentalleserypreparedexception-Konstruktor
+# <a name="esentalreadypreparedexception-constructor"></a>EsentAlreadyPreparedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentalleserypreparedexception-Klasse.
+Initialisiert eine neue Instanz der EsentAlreadyPreparedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentAlreadyPreparedException()
 public EsentAlreadyPreparedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentalleserypreparedexception-Klasse](./esentalreadypreparedexception-class.md)
+[EsentAlreadyPreparedException-Klasse](./esentalreadypreparedexception-class.md)
 
-[Esentalleserypreparedexception-Elemente](./esentalreadypreparedexception-members.md)
+[EsentAlreadyPreparedException-Member](./esentalreadypreparedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,60 +1,60 @@
 ---
-title: Abrufen von gelöschten Objekten
+title: Abrufen gelöschter Objekte
 description: Gelöschte Objekte werden im Container Gelöschte Objekte gespeichert.
 ms.assetid: dc9a6466-204b-4a78-b0f3-9c03c13a374b
 ms.tgt_platform: multiple
 keywords:
-- Abrufen gelöschter Objekte AD
+- Abrufen von Deleted Objects AD
 - Objekt-AD, Abrufen gelöschter Objekte
-- Active Directory, verwenden, Abrufen gelöschter Objekte
+- Active Directory, Verwenden, Abrufen gelöschter Objekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62b2062c747e38bc0b3a9b1b793a102006c11512
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 5b033a992599fecfc372bf578c1bade54867fd8332c3e114103a69264f736b48
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104472493"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025088"
 ---
-# <a name="retrieving-deleted-objects"></a>Abrufen von gelöschten Objekten
+# <a name="retrieving-deleted-objects"></a>Abrufen gelöschter Objekte
 
-Gelöschte Objekte werden im Container Gelöschte Objekte gespeichert. Der Container "Gelöschte Objekte" ist normalerweise nicht sichtbar, aber der Container "Gelöschte Objekte" kann von einem Mitglied der Gruppe "Administratoren" gebunden werden. Der Inhalt des gelöschten Objects-Containers kann aufgelistet werden, und einzelne gelöschte Objekt Attribute können mithilfe der [**IDirectorySearch**](/windows/desktop/api/iads/nn-iads-idirectorysearch) -Schnittstelle mit der Such Einstellung der Tombstone-Suche " **ADS \_ searchpref \_** " abgerufen werden.
+Gelöschte Objekte werden im Container Gelöschte Objekte gespeichert. Der Container für gelöschte Objekte ist normalerweise nicht sichtbar, aber der Container für gelöschte Objekte kann von einem Mitglied der Administratorengruppe gebunden werden. Der Inhalt des Containers für gelöschte Objekte kann aufzählt werden, und einzelne Attribute für gelöschte Objekte können über die [**IDirectorySearch-Schnittstelle**](/windows/desktop/api/iads/nn-iads-idirectorysearch) mit der **Sucheinstellung ADS \_ SEARCHPREF \_ TOMBSTONE** ermittelt werden.
 
-Der Container "Gelöschte Objekte" kann durch die Bindung an den bekannten Container für GUID- **GUID- \_ \_ Objekte \_** abgerufen werden, der in "NTDSAPI. h" definiert ist. Weitere Informationen zum Binden an bekannte GUIDs finden [Sie unterbinden an Well-Known Objekte mithilfe von wkguid](binding-to-well-known-objects-using-wkguid.md).
+Der Container für gelöschte Objekte kann durch Binden an den bekannten **GUID-GUID-Container \_ für \_ \_ gelöschte OBJEKTE,** der in Ntdsapi.h definiert ist, ermittelt werden. Weitere Informationen zum Binden an bekannte GUIDs finden Sie unter Binden an [Well-Known-Objekte mithilfe von WKGUID.](binding-to-well-known-objects-using-wkguid.md)
 
-Legen Sie die Option **ADS \_ fast \_ Bind** bei der Bindung an den Container für gelöschte Objekte fest. Dies bedeutet, dass die ADSI-Schnittstellen, die für die Arbeit mit einem Objekt in Active Directory Domain Services verwendet werden, z. b. [**IADs**](/windows/desktop/api/iads/nn-iads-iads) und [**IADsPropertyList**](/windows/desktop/api/iads/nn-iads-iadspropertylist), nicht für den Container für gelöschte Objekte verwendet werden können. Weitere Informationen und ein Codebeispiel, das die Bindung an den Container für gelöschte Objekte veranschaulicht, finden Sie unten in der Beispiel Funktion getdeletedobjeczcontainer.
+Geben Sie **die OPTION ADS FAST \_ \_ BIND** an, wenn Sie eine Bindung an den Container für gelöschte Objekte erstellen. Dies bedeutet, dass die ADSI-Schnittstellen, die zum Arbeiten mit einem Objekt in Active Directory Domain Services verwendet werden, z. B. [**IADs**](/windows/desktop/api/iads/nn-iads-iads) und [**IADsPropertyList,**](/windows/desktop/api/iads/nn-iads-iadspropertylist)nicht im Container gelöschte Objekte verwendet werden können. Weitere Informationen und ein Codebeispiel, das zeigt, wie eine Bindung an den Container für gelöschte Objekte erstellt wird, finden Sie weiter unten in der Beispielfunktion GetDeletedObjectsContainer.
 
--   [Auflisten von gelöschten Objekten](#enumerating-deleted-objects)
--   [Suchen nach einem bestimmten gelöschten Objekt](#finding-a-specific-deleted-object)
-    -   [Getdeletedobjectcontainer](#getdeletedobjectscontainer)
-    -   [Enumdeletedobjects](#enumdeletedobjects)
-    -   [Finddeletedobjectbyguid](#finddeletedobjectbyguid)
+-   [Aufzählen gelöschter Objekte](#enumerating-deleted-objects)
+-   [Suchen eines bestimmten gelöschten Objekts](#finding-a-specific-deleted-object)
+    -   [GetDeletedObjectsContainer](#getdeletedobjectscontainer)
+    -   [EnumDeletedObjects](#enumdeletedobjects)
+    -   [FindDeletedObjectByGUID](#finddeletedobjectbyguid)
 
-## <a name="enumerating-deleted-objects"></a>Auflisten von gelöschten Objekten
+## <a name="enumerating-deleted-objects"></a>Aufzählen gelöschter Objekte
 
-Die [**idirector ysearch**](/windows/desktop/api/iads/nn-iads-idirectorysearch) -Schnittstelle wird verwendet, um nach gelöschten Objekten zu suchen.
+Die [**IDirectorySearch-Schnittstelle**](/windows/desktop/api/iads/nn-iads-idirectorysearch) wird verwendet, um nach gelöschten Objekten zu suchen.
 
-**So zählen Sie gelöschte Objekte auf**
+**So aufzählen Sie gelöschte Objekte**
 
-1.  Rufen Sie die [**idirector ysearch**](/windows/desktop/api/iads/nn-iads-idirectorysearch) -Schnittstelle für den Container für gelöschte Objekte ab. Dies wird erreicht, indem an den Container für gelöschte Objekte gebunden und die **idirectoriysearch** -Schnittstelle angefordert wird. Weitere Informationen und ein Codebeispiel, das die Bindung an den Container für gelöschte Objekte veranschaulicht, finden Sie im folgenden Beispiel für die **getdeletedobjeczcontainer** -Funktion.
-2.  Legen Sie die Such Einstellung " **ADS \_ searchpref \_ Search \_ Scope** Search" auf **ADS \_ Scope \_ onelevel** mithilfe der [**IDirectorySearch:: setsearchpreference**](/windows/desktop/api/iads/nf-iads-idirectorysearch-setsearchpreference) -Methode fest. Die **Anzeige \_ Bereich- \_ Unterstruktur** Einstellung kann auch verwendet werden, aber der Container für gelöschte Objekte ist nur eine Ebene, daher ist die Verwendung der **ADS- \_ Bereichs \_ Teilstruktur** redundant.
-3.  Legen Sie die Einstellung für die Tombstone-Suche von **ADS \_ \_ searchpref** auf **true** fest. Dies bewirkt, dass die Suche gelöschte Objekte einschließt.
-4.  Legen Sie die Such Einstellung **ADS \_ searchpref \_ PageSize** auf einen Wert fest, der kleiner als oder gleich 1000 ist. Dies ist optional, aber wenn dies nicht der Fall ist, können nicht mehr als 1000 gelöschte Objekte abgerufen werden.
-5.  Legen Sie den Suchfilter im [**IDirectorySearch:: ExecuteSearch**](/windows/desktop/api/iads/nf-iads-idirectorysearch-executesearch) -Aufrufs auf "(IsDeleted =**true**)" fest. Dies bewirkt, dass die Suche nur Objekte abruft, bei denen das **isDeleted** -Attribut auf **true** festgelegt ist.
+1.  Abrufen der [**IDirectorySearch-Schnittstelle**](/windows/desktop/api/iads/nn-iads-idirectorysearch) für den Container für gelöschte Objekte. Dies erfolgt durch Binden an den Container für gelöschte Objekte und Anfordern der **IDirectorySearch-Schnittstelle.** Weitere Informationen und ein Codebeispiel, das zeigt, wie eine Bindung an den Container für gelöschte Objekte erstellt wird, finden Sie im folgenden Beispiel für eine **GetDeletedObjectsContainer-Funktion.**
+2.  Legen Sie **die Sucheinstellung ADS \_ SEARCHPREF \_ SEARCH \_ SCOPE** mithilfe der [**IDirectorySearch::SetSearchPreference-Methode**](/windows/desktop/api/iads/nf-iads-idirectorysearch-setsearchpreference) auf **ADS SCOPE \_ \_ ONELEVEL** fest. Die **EINSTELLUNG ADS SCOPE \_ \_ SUBTREE** kann ebenfalls verwendet werden, aber der Container für gelöschte Objekte ist nur eine Ebene, sodass die Verwendung von **ADS SCOPE \_ \_ SUBTREE** redundant ist.
+3.  Legen Sie **die SUCHeinstellung ADS \_ SEARCHPREF \_ TOMBSTONE** auf **TRUE fest.** Dies bewirkt, dass die Suche gelöschte Objekte enthält.
+4.  Legen Sie **die Sucheinstellung ADS \_ SEARCHPREF \_ PAGESIZE** auf einen Wert kleiner oder gleich 1000 fest. Dies ist optional, aber wenn dies nicht erfolgt, können nicht mehr als 1.000 gelöschte Objekte abgerufen werden.
+5.  Legen Sie den Suchfilter im [**IDirectorySearch::ExecuteSearch-Aufruf**](/windows/desktop/api/iads/nf-iads-idirectorysearch-executesearch) auf "(isDeleted=**TRUE**)" fest. Dies bewirkt, dass bei der Suche nur Objekte abgerufen werden, für die **das Attribut isDeleted** auf **TRUE festgelegt ist.**
 
-Ein Codebeispiel Code, in dem das Auflisten von gelöschten Objekten veranschaulicht wird, finden Sie im folgenden Beispiel für eine **enumdeletedobjects** -Funktion.
+Einen Codebeispielcode, der zeigt, wie gelöschte Objekte aufzählt werden, finden Sie im folgenden **EnumDeletedObjects-Funktionsbeispiel.**
 
-Die Suche kann weiter verfeinert werden, indem Sie dem Suchfilter hinzufügen, wie im [LDAP-Dialekt](/windows/desktop/ADSI/ldap-dialect)gezeigt. Wenn Sie z. b. nach allen gelöschten Objekten suchen möchten, deren Name mit "Jeff" beginnt, wird der Suchfilter auf "(& (IsDeleted =**true**) (CN = Jeff \* ))" festgelegt.
+Die Suche kann weiter verbessert werden, indem dem Suchfilter hinzugefügt wird, wie unter [LDAP-Dialekt gezeigt.](/windows/desktop/ADSI/ldap-dialect) Um beispielsweise nach allen gelöschten Objekten mit einem Namen zu suchen, der mit "Jeff" beginnt, wird der Suchfilter auf "(&(isDeleted=**TRUE**)(cn=Jeff \* ))" festgelegt.
 
-Da bei gelöschten Objekten die meisten Attribute entfernt werden, wenn Sie gelöscht werden, ist es nicht möglich, direkt an ein gelöschtes Objekt zu binden. Die Option **ADS \_ fast \_ Bind** muss beim Binden an ein gelöschtes Objekt angegeben werden. Dies bedeutet, dass die ADSI-Schnittstellen, die für die Arbeit mit einem Active Directory Domain Services Objekt verwendet werden, z. b. [**IADs**](/windows/desktop/api/iads/nn-iads-iads) und [**IADsPropertyList**](/windows/desktop/api/iads/nn-iads-iadspropertylist), nicht für einen gelöschten Objekt Container verwendet werden können.
+Da gelöschte Objekte die meisten ihrer Attribute entfernt haben, wenn sie gelöscht werden, ist es nicht möglich, eine direkte Bindung an ein gelöschtes Objekt zu erstellen. Die **OPTION ADS FAST \_ \_ BIND** muss beim Binden an ein gelöschtes Objekt angegeben werden. Dies bedeutet, dass die ADSI-Schnittstellen, die für die Arbeit mit einem Active Directory Domain Services-Objekt verwendet werden, z. B. [**IADs**](/windows/desktop/api/iads/nn-iads-iads) und [**IADsPropertyList,**](/windows/desktop/api/iads/nn-iads-iadspropertylist)nicht für einen gelöschten Objektcontainer verwendet werden können.
 
-## <a name="finding-a-specific-deleted-object"></a>Suchen nach einem bestimmten gelöschten Objekt
+## <a name="finding-a-specific-deleted-object"></a>Suchen eines bestimmten gelöschten Objekts
 
-Es ist auch möglich, ein bestimmtes gelöschtes Objekt zu finden. Wenn die **objectGUID** des Objekts bekannt ist, kann Sie verwendet werden, um nach dem Objekt mit dieser spezifischen **objectGUID** zu suchen. Weitere Informationen und ein Codebeispiel, das zeigt, wie Sie ein bestimmtes gelöschtes Objekt suchen, finden Sie unten unter **finddeletedobjectbyguid** .
+Es ist auch möglich, ein bestimmtes gelöschtes Objekt zu finden. Wenn **die objectGUID des** Objekts bekannt ist, kann sie verwendet werden, um mit diesem bestimmten **objectGUID-Objekt nach dem Objekt zu suchen.** Weitere Informationen und ein Codebeispiel, das zeigt, wie sie ein bestimmtes gelöschtes Objekt finden, finden Sie weiter unten unter **FindDeletedObjectByGUID.**
 
-### <a name="getdeletedobjectscontainer"></a>Getdeletedobjectcontainer
+### <a name="getdeletedobjectscontainer"></a>GetDeletedObjectsContainer
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie Sie eine Bindung an den Container für gelöschte Objekte herstellen.
+Das folgende C++-Codebeispiel zeigt, wie eine Bindung an den Container für gelöschte Objekte erstellt wird.
 
 
 ```C++
@@ -132,9 +132,9 @@ HRESULT GetDeletedObjectsContainer(IADsContainer **ppContainer)
 
 
 
-### <a name="enumdeletedobjects"></a>Enumdeletedobjects
+### <a name="enumdeletedobjects"></a>EnumDeletedObjects
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie die-Objekte im Container für gelöschte Objekte aufgelistet werden.
+Das folgende C++-Codebeispiel zeigt, wie die Objekte im Container Gelöschte Objekte aufzählt werden.
 
 
 ```C++
@@ -264,9 +264,9 @@ cleanup:
 
 
 
-### <a name="finddeletedobjectbyguid"></a>Finddeletedobjectbyguid
+### <a name="finddeletedobjectbyguid"></a>FindDeletedObjectByGUID
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie Sie ein bestimmtes gelöschtes Objekt aus der **objectGUID** -Eigenschaft des Objekts suchen.
+Das folgende C++-Codebeispiel zeigt, wie sie ein bestimmtes gelöschtes Objekt aus der **objectGUID-Eigenschaft des Objekts** finden.
 
 
 ```C++
@@ -435,6 +435,6 @@ cleanup:
 
 
 
- 
+ 
 
- 
+ 

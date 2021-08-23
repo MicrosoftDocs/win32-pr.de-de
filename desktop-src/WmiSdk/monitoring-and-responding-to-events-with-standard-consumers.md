@@ -1,8 +1,8 @@
 ---
-description: Sie können die installierten Standard Consumerklassen verwenden, um Aktionen auf der Grundlage von Ereignissen in einem Betriebssystem auszuführen.
+description: Sie können die installierten Standard-Consumerklassen verwenden, um Aktionen basierend auf Ereignissen in einem Betriebssystem durchzuführen.
 ms.assetid: 1979dc55-a440-4c31-832b-36fa84def4c9
 ms.tgt_platform: multiple
-title: Überwachen von und reagieren auf Ereignisse mit Standard Consumern
+title: Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,67 +10,67 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 5bd1d329cd861fa45c99851707177322d0b9d12f
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: b0b7e7b1d1e79e64fb1eb83f17f3aa2d118a9eb53b23c19cbdfd624e2c501a84
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103870220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992780"
 ---
-# <a name="monitoring-and-responding-to-events-with-standard-consumers"></a>Überwachen von und reagieren auf Ereignisse mit Standard Consumern
+# <a name="monitoring-and-responding-to-events-with-standard-consumers"></a>Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern
 
-Sie können die installierten [Standard Consumerklassen](standard-consumer-classes.md) verwenden, um Aktionen auf der Grundlage von Ereignissen in einem Betriebssystem auszuführen. Standard Consumer sind einfache Klassen, die bereits registriert sind und permanente Consumerklassen definieren. Jeder Standard Consumer nimmt eine bestimmte Aktion vor, nachdem er eine Ereignis Benachrichtigung erhalten hat. Beispielsweise können Sie eine Instanz von [**activescripteventconsumer**](activescripteventconsumer.md) definieren, um ein Skript auszuführen, wenn der freie Speicherplatz auf einem Computer von einer angegebenen Größe abweicht.
+Sie können die installierten [Standard-Consumerklassen verwenden,](standard-consumer-classes.md) um Aktionen basierend auf Ereignissen in einem Betriebssystem durchzuführen. Standard-Consumer sind einfache Klassen, die bereits registriert sind und permanente Consumerklassen definieren. Jeder Standardverbraucher führt eine bestimmte Aktion aus, nachdem er eine Ereignisbenachrichtigung erhalten hat. Sie können z. B. eine Instanz von [**ActiveScriptEventConsumer**](activescripteventconsumer.md) definieren, um ein Skript auszuführen, wenn sich der freie Speicherplatz auf einem Computer von einer angegebenen Größe unterscheiden soll.
 
-WMI kompiliert die Standardconsumer in Standardnamespaces, die vom Betriebssystem abhängig sind, z. b.:
+WMI kompiliert die Standardverbraucher in Standardnamespaces, die vom Betriebssystem abhängig sind. Beispiel:
 
--   In Windows Server 2003 werden standardmäßig alle Standard Consumer in den Namespace "root- \\ Abonnement" kompiliert.
+-   In Windows Server 2003 werden alle Standardverbraucher standardmäßig in den Namespace "Root \\ Subscription" kompiliert.
 
 > [!Note]  
-> Informationen zu den Standardnamespaces und Betriebssystemen, die für die einzelnen WMI-klassenspezifisch sind, finden Sie in den Abschnitten "Hinweise und Anforderungen" der einzelnen Klassen Themen.
+> Informationen zu den Standardnamespaces und Betriebssystemen, die für jede WMI-Klasse spezifisch sind, finden Sie in den Abschnitten Hinweise und Anforderungen der einzelnen Klassen.
 
  
 
-In der folgenden Tabelle werden die WMI-Standardconsumer aufgelistet und beschrieben.
+In der folgenden Tabelle werden die WMI-Standardverbraucher aufgeführt und beschrieben.
 
 
 
-| Standard Consumer                                              | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Standard-Consumer                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                             |
 |----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Activescripteventconsumer**](activescripteventconsumer.md) | Führt ein Skript aus, wenn eine Ereignis Benachrichtigung empfangen wird. Weitere Informationen finden Sie unter [Ausführen eines Skripts auf der Grundlage eines Ereignisses](running-a-script-based-on-an-event.md).                                                                                                                                                                                                                                                       |
-| [**Logfileeventconsumer**](logfileeventconsumer.md)           | Schreibt angepasste Zeichen folgen in eine Text Protokolldatei, wenn eine Ereignis Benachrichtigung empfangen wird. Weitere Informationen finden Sie unter [Schreiben in eine Protokolldatei auf Grundlage eines Ereignisses](writing-to-a-log-file-based-on-an-event.md).                                                                                                                                                                                                                  |
-| [**Nteventlogeventconsumer**](nteventlogeventconsumer.md)     | Protokolliert eine bestimmte Meldung im Anwendungs Ereignisprotokoll. Weitere Informationen finden Sie unter [Protokollierung in NT-Ereignisprotokoll basierend auf einem Ereignis](logging-to-nt-event-log-based-on-an-event.md).                                                                                                                                                                                                                                             |
-| [**Smtpeer-Consumer**](smtpeventconsumer.md)                 | Sendet bei jedem übermitteln eines Ereignisses eine e-Mail-Nachricht mithilfe von SMTP. Weitere Informationen finden Sie unter [Senden von e-Mails auf der Grundlage eines Ereignisses](sending-e-mail-based-on-an-event.md).                                                                                                                                                                                                                                          |
-| [**Commandlineeventconsumer**](commandlineeventconsumer.md)   | Hiermit wird ein Prozess gestartet, wenn ein Ereignis an ein lokales System übermittelt wird. Die ausführbare Datei muss sich an einem sicheren Speicherort befinden oder mit einer starken Zugriffs Steuerungs Liste (ACL) gesichert werden, um zu verhindern, dass nicht autorisierte Benutzer ihre ausführbare Datei durch eine andere ausführbare Datei ersetzen. Weitere Informationen finden Sie unter [Ausführen eines Programms in der Befehlszeile auf der Grundlage eines Ereignisses](running-a-program-from-the-command-line-based-on-an-event.md). |
+| [**ActiveScriptEventConsumer**](activescripteventconsumer.md) | Führt ein Skript aus, wenn es eine Ereignisbenachrichtigung empfängt. Weitere Informationen finden Sie unter [Ausführen eines Skripts basierend auf einem Ereignis.](running-a-script-based-on-an-event.md)                                                                                                                                                                                                                                                       |
+| [**LogFileEventConsumer**](logfileeventconsumer.md)           | Schreibt benutzerdefinierte Zeichenfolgen in eine Textdatei, wenn sie eine Ereignisbenachrichtigung empfängt. Weitere Informationen finden Sie unter [Schreiben in eine Protokolldatei basierend auf einem Ereignis.](writing-to-a-log-file-based-on-an-event.md)                                                                                                                                                                                                                  |
+| [**NTEventLogEventConsumer**](nteventlogeventconsumer.md)     | Protokolliert eine bestimmte Meldung im Anwendungsereignisprotokoll. Weitere Informationen finden Sie unter [Protokollierung im NT-Ereignisprotokoll basierend auf einem Ereignis.](logging-to-nt-event-log-based-on-an-event.md)                                                                                                                                                                                                                                             |
+| [**SMTPEventConsumer**](smtpeventconsumer.md)                 | Sendet eine E-Mail-Nachricht mithilfe von SMTP jedes Mal, wenn ein Ereignis an sie übermittelt wird. Weitere Informationen finden Sie unter [Senden von E-Mails basierend auf einem Ereignis.](sending-e-mail-based-on-an-event.md)                                                                                                                                                                                                                                          |
+| [**CommandLineEventConsumer**](commandlineeventconsumer.md)   | Startet einen Prozess, wenn ein Ereignis an ein lokales System übermittelt wird. Die ausführbare Datei muss sich an einem sicheren Speicherort befinden oder mit einer starken Zugriffssteuerungsliste (ACL) geschützt werden, um zu verhindern, dass ein nicht autorisierter Benutzer Ihre ausführbare Datei durch eine andere ausführbare Datei ersetzt. Weitere Informationen finden Sie unter [Ausführen eines Programms über die Befehlszeile basierend auf einem Ereignis.](running-a-program-from-the-command-line-based-on-an-event.md) |
 
 
 
  
 
-Im folgenden Verfahren wird beschrieben, wie Sie Ereignisse mithilfe eines standardconsumers überwachen und darauf reagieren. Beachten Sie, dass die Prozedur für eine Managed Object Format (MOF)-Datei, ein Skript oder eine Anwendung identisch ist.
+Im folgenden Verfahren wird beschrieben, wie Ereignisse mithilfe eines Standard-Consumers überwacht und darauf reagiert werden. Beachten Sie, dass die Prozedur für eine mof Managed Object Format-Datei, ein Skript oder eine Anwendung identisch ist.
 
-**So überwachen Sie Ereignisse mit einem Standard Consumer und reagieren darauf**
+**So überwachen Sie Ereignisse mit einem Standardverbraucher und reagieren darauf**
 
-1.  Geben Sie den Namespace in einer MOF-Datei mit dem MOF-Präprozessorbefehl- [ \# pragma-Namespace](pragma-namespace.md)an. Geben Sie in einem Skript oder einer Anwendung den Namespace im Code an, der eine Verbindung mit WMI herstellt.
+1.  Geben Sie den Namespace in einer MOF-Datei mithilfe des MOF-Präprozessorbefehls [ \# pragma namespace an.](pragma-namespace.md) Geben Sie in einem Skript oder einer Anwendung den Namespace im Code an, der eine Verbindung mit WMI herstellt.
 
-    Im folgenden MOF-Codebeispiel wird gezeigt, wie der \\ Namespace des Stamm Abonnements angegeben wird.
+    Das folgende MOF-Codebeispiel zeigt, wie der Namespace des Stammabonnements \\ angegeben wird.
 
     ```syntax
     #pragma namespace ("\\\\.\\root\\subscription")
     ```
 
-    Die meisten systeminternen [*Ereignisse*](gloss-i.md) werden Änderungen an Klassen Instanzen im root \\ CIMV2-Namespace zugeordnet. Registrierungs Ereignisse, wie z. b. [**RegistryKeyChangeEvent**](/previous-versions/windows/desktop/regprov/registrykeychangeevent) , werden jedoch \\ vom [System Registrierungs Anbieter](/previous-versions/windows/desktop/regprov/system-registry-provider)im Stamm-Standard Namespace ausgelöst.
+    Die [*meisten systeminternen*](gloss-i.md) Ereignisse sind Änderungen an Klasseninstanzen im \\ Cimv2-Stammnamespace zugeordnet. Registrierungsereignisse wie [**RegistryKeyChangeEvent**](/previous-versions/windows/desktop/regprov/registrykeychangeevent) werden jedoch vom Systemregistrierungsanbieter im \\ [Stamm-Standardnamespace ausgelöst.](/previous-versions/windows/desktop/regprov/system-registry-provider)
 
-    Ein Consumer kann in anderen Namespaces befindliche Ereignis Klassen einschließen, indem er in der [**\_ \_ EventFilter**](--eventfilter.md) -Abfrage für Ereignisse den Namespace in der **eventnamespace** -Eigenschaft angibt. Die systeminternen [*Ereignis*](gloss-i.md) Klassen, z. b. [**\_ \_ instanceoperationevent**](--instanceoperationevent.md) , sind in jedem Namespace verfügbar.
+    Ein Consumer kann Ereignisklassen in anderen Namespaces enthalten, indem der Namespace in der **EventNamespace-Eigenschaft** in der [**\_ \_ EventFilter-Abfrage**](--eventfilter.md) für Ereignisse angegeben wird. Die [*systeminternen*](gloss-i.md) Ereignisklassen wie [**\_ \_ InstanceOperationEvent**](--instanceoperationevent.md) sind in jedem Namespace verfügbar.
 
-2.  Erstellen Sie eine Instanz einer standardconsumerklasse, und füllen Sie Sie auf.
+2.  Erstellen sie eine Instanz einer Standard-Consumerklasse, und füllen Sie sie auf.
 
-    Diese Instanz kann einen eindeutigen Wert in der **Name** -Eigenschaft aufweisen. Sie können einen vorhandenen Consumer aktualisieren, indem Sie denselben Namen wieder verwenden.
+    Diese Instanz kann einen eindeutigen Wert in der **Name-Eigenschaft** haben. Sie können einen vorhandenen Consumer aktualisieren, indem Sie denselben Namen wiederverwenden.
 
-    **Insertionstringtemplates** enthält den Text, der in ein Ereignis eingefügt werden soll, das Sie in **eventType** angeben. Sie können Literalzeichenfolgen verwenden oder direkt auf eine Eigenschaft verweisen. Weitere Informationen finden Sie unter [Verwenden von Standard Zeichenfolgen-Vorlagen](using-standard-string-templates.md) und [SELECT-Anweisung für Ereignis Abfragen](select-statement-for-event-queries.md).
+    **InsertionStringTemplates enthält** den Text, der in ein Ereignis eingefügt werden soll, das Sie in **EventType angeben.** Sie können Literalzeichenfolgen verwenden oder direkt auf eine Eigenschaft verweisen. Weitere Informationen finden Sie unter [Verwenden von Standardzeichenfolgenvorlagen und](using-standard-string-templates.md) [SELECT-Anweisung für Ereignisabfragen.](select-statement-for-event-queries.md)
 
-    Verwenden Sie eine vorhandene Quelle für das Ereignisprotokoll, das eine Einfügezeichenfolge ohne zugehörigen Text unterstützt.
+    Verwenden Sie eine vorhandene Quelle für das Ereignisprotokoll, die eine Einfügezeichenfolge ohne zugeordneten Text unterstützt.
 
-    Im folgenden MOF-Codebeispiel wird gezeigt, wie eine vorhandene Quelle von WSH und der **EventID-** Wert 8 verwendet werden.
+    Im folgenden MOF-Codebeispiel wird die Verwendung einer vorhandenen WSH-Quelle und eines **EventID-Werts** von 8 veranschaulicht.
 
     ```syntax
     instance of NTEventLogEventConsumer as $Consumer
@@ -90,9 +90,9 @@ Im folgenden Verfahren wird beschrieben, wie Sie Ereignisse mithilfe eines stand
     };
     ```
 
-3.  Erstellen Sie eine Instanz von [**\_ \_ EventFilter**](--eventfilter.md) , und definieren Sie eine Abfrage für Ereignisse.
+3.  Erstellen Sie eine Instanz von [**\_ \_ EventFilter,**](--eventfilter.md) und definieren Sie eine Abfrage für Ereignisse.
 
-    Im folgenden Beispiel überwacht der Filter den Registrierungsschlüssel, in dem Start Programme registriert sind. Das Überwachen dieses Registrierungsschlüssels ist möglicherweise wichtig, da sich ein nicht autorisiertes Programm unter dem Schlüssel registrieren kann, was dazu veranlasst, dass es beim Starten des Computers gestartet wird.
+    Im folgenden Beispiel überwacht der Filter den Registrierungsschlüssel, in dem Startprogramme registriert sind. Die Überwachung dieses Registrierungsschlüssels kann wichtig sein, da sich ein nicht autorisiertes Programm unter dem Schlüssel registrieren kann, wodurch er beim Starten des Computers gestartet wird.
 
     ```syntax
     instance of __EventFilter as $Filter
@@ -109,24 +109,24 @@ Im folgenden Verfahren wird beschrieben, wie Sie Ereignisse mithilfe eines stand
     };
     ```
 
-4.  Identifizieren Sie ein Ereignis, um eine Ereignis Abfrage zu überwachen und zu erstellen.
+4.  Identifizieren Sie ein Ereignis, das überwacht und eine Ereignisabfrage erstellt werden soll.
 
-    Sie können überprüfen, ob ein System internes oder ein extrinsisches Ereignis verwendet, das verwendet. Verwenden Sie z. b. die [**RegistryTreeChangeEvent**](/previous-versions/windows/desktop/regprov/registrytreechangeevent) -Klasse des Registrierungs Anbieters, um Änderungen an der Systemregistrierung zu überwachen.
+    Sie können überprüfen, ob ein systeminternes oder extrinsisches Ereignis verwendet wird. Verwenden Sie beispielsweise die [**RegistryTreeChangeEvent-Klasse**](/previous-versions/windows/desktop/regprov/registrytreechangeevent) des Registrierungsanbieters, um Änderungen an der Systemregistrierung zu überwachen.
 
-    Wenn eine Klasse nicht vorhanden ist, die ein Ereignis beschreibt, das Sie überwachen müssen, müssen Sie einen eigenen Ereignis Anbieter erstellen und neue System externe-Ereignis Klassen definieren. Weitere Informationen finden Sie unter [Schreiben eines Ereignis Anbieters](writing-an-event-provider.md).
+    Wenn keine Klasse vorhanden ist, die ein Ereignis beschreibt, das Sie überwachen müssen, müssen Sie einen eigenen Ereignisanbieter erstellen und neue extrinsische Ereignisklassen definieren. Weitere Informationen finden Sie unter [Schreiben eines Ereignisanbieters.](writing-an-event-provider.md)
 
-    In einer MOF-Datei können Sie einen [*Alias*](gloss-a.md) für den Filter und den Consumer definieren, der eine einfache Möglichkeit bietet, die Instanzpfade zu beschreiben.
+    In einer MOF-Datei können [](gloss-a.md) Sie einen Alias für den Filter und Consumer definieren, der eine einfache Möglichkeit zum Beschreiben der Instanzpfade bietet.
 
-    Im folgenden Beispiel wird gezeigt, wie Sie einen [*Alias*](gloss-a.md) für den Filter und den Consumer definieren.
+    Das folgende Beispiel zeigt, wie Sie einen Alias [*für*](gloss-a.md) den Filter und consumer definieren.
 
     ```syntax
     instance of __EventFilter as $FILTER
     instance of LogFileEventConsumer as $CONSUMER
     ```
 
-5.  Erstellen Sie eine Instanz von [**\_ \_ filtertoconsumerbinding**](--filtertoconsumerbinding.md) , um den Filter und die Consumerklassen zuzuordnen. Diese Instanz bestimmt, dass bei Auftreten eines Ereignisses, das mit dem angegebenen Filter übereinstimmt, die vom Consumer angegebene Aktion erfolgen muss. [**\_ \_ EventFilter**](--eventfilter.md), [**\_ \_ eventconsumer**](--eventconsumer.md)und **\_ \_ filtertoconsumerbinding** müssen die gleiche individuelle Sicherheits-ID (SID) in der Eigenschaft " **kreatorsid** " aufweisen. Weitere Informationen finden Sie unter [Binden eines Ereignis Filters mit einem logischen Consumer](binding-an-event-filter-with-a-logical-consumer.md).
+5.  Erstellen Sie eine Instanz von [**\_ \_ FilterToConsumerBinding,**](--filtertoconsumerbinding.md) um den Filter und die Consumerklassen zu verknüpfen. Diese Instanz bestimmt, dass beim Auftreten eines Ereignisses, das dem angegebenen Filter entspricht, die vom Consumer angegebene Aktion erfolgen muss. [**\_ \_ EventFilter,**](--eventfilter.md) [**\_ \_ EventConsumer**](--eventconsumer.md)und **\_ \_ FilterToConsumerBinding** müssen dieselbe einzelne Sicherheits-ID (SID) in der **CreatorSID-Eigenschaft** aufweisen. Weitere Informationen finden Sie unter [Binden eines Ereignisfilters mit einem logischen Consumer.](binding-an-event-filter-with-a-logical-consumer.md)
 
-    Im folgenden Beispiel wird gezeigt, wie eine Instanz anhand des Objekt Pfads identifiziert wird, oder ein Alias als Kurzform Ausdruck für den Objekt Pfad verwendet wird.
+    Das folgende Beispiel zeigt, wie Sie eine -Instanz durch den Objektpfad identifizieren oder einen Alias als Kurzformausdruck für den Objektpfad verwenden.
 
     ```syntax
     instance of __EventFilter as $FILTER
@@ -144,20 +144,20 @@ Im folgenden Verfahren wird beschrieben, wie Sie Ereignisse mithilfe eines stand
     };
     ```
 
-    Sie können einen Filter an mehrere Consumer binden. Dies bedeutet, dass beim Auftreten von übereinstimmenden Ereignissen mehrere Aktionen ausgeführt werden müssen. oder Sie können einen Consumer an mehrere Filter binden, was darauf hinweist, dass die Aktion ausgeführt werden muss, wenn Ereignisse auftreten, die einem der Filter entsprechen.
+    Sie können einen Filter an mehrere Consumers binden. Dies bedeutet, dass beim Auftreten von übereinstimmenden Ereignissen mehrere Aktionen durchgeführt werden müssen. Oder Sie können einen Consumer an mehrere Filter binden. Dies bedeutet, dass die Aktion erfolgen muss, wenn Ereignisse auftreten, die mit einem der Filter übereinstimmen.
 
-    Die folgenden Aktionen werden basierend auf der Bedingung der Consumer und Ereignisse ausgeführt:
+    Die folgenden Aktionen werden basierend auf der Bedingung von Consumers und Ereignissen durchgeführt:
 
-    -   Wenn einer der permanenten Verbraucher ausfällt, erhalten andere Consumer, die das Ereignis anfordern, eine Benachrichtigung.
-    -   Wenn ein Ereignis gelöscht wird, löst WMI [**\_ \_ eventdroppedevent**](--eventdroppedevent.md)aus.
-    -   Wenn Sie dieses Ereignis abonnieren, wird das gelöschte Ereignis zurückgegeben, und ein Verweis auf den [**\_ \_ eventconsumer**](--eventconsumer.md) stellt den fehlgeschlagenen Consumer dar.
-    -   Wenn ein Consumer ausfällt, löst WMI [**\_ \_ consumerfailureevent**](--consumerfailureevent.md)aus, das möglicherweise weitere Informationen in den Eigenschaften **errorCode**, **ErrorDescription** und **ErrorObject** enthält.
+    -   Wenn einer der permanenten Consumers ausfällt, erhalten andere Verbraucher, die das Ereignis anfordern, eine Benachrichtigung.
+    -   Wenn ein Ereignis gelöscht wird, gibt WMI [**\_ \_ EventDroppedEvent aus.**](--eventdroppedevent.md)
+    -   Wenn Sie dieses Ereignis abonnieren, wird das gelöschte Ereignis zurückgegeben, und ein Verweis auf [**\_ \_ EventConsumer**](--eventconsumer.md) stellt den fehlerhaften Consumer dar.
+    -   Wenn ein Consumer ausfällt, wird von WMI [**\_ \_ ConsumerFailureEvent**](--consumerfailureevent.md)ausgelöst, das möglicherweise weitere Informationen in den **Eigenschaften ErrorCode,** **ErrorDescription** und **ErrorObject enthält.**
 
-    Weitere Informationen finden Sie unter [Binden eines Ereignis Filters mit einem logischen Consumer](binding-an-event-filter-with-a-logical-consumer.md).
+    Weitere Informationen finden Sie unter [Binden eines Ereignisfilters mit einem logischen Consumer.](binding-an-event-filter-with-a-logical-consumer.md)
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt das MOF für eine Instanz von [**nteventlogeventconsumer**](nteventlogeventconsumer.md). Nachdem Sie diese MOF kompiliert haben, wird bei jedem Versuch, einen Wert im Registrierungs Pfad **HKEY \_ local \_ Machine \\ Software \\ Microsoft \\ Windows \\ CurrentVersion \\** zu erstellen, zu löschen oder zu ändern, ein Eintrag im Anwendungs Ereignisprotokoll unter der Quelle "WSH" protokolliert.
+Das folgende Beispiel zeigt die MOF für eine Instanz von [**NTEventLogEventConsumer.**](nteventlogeventconsumer.md) Nachdem Sie diese MOF kompiliert haben, protokolliert jeder Versuch, einen Wert im Registrierungspfad **HKEY \_ LOCAL MACHINE Software Microsoft Windows \_ \\ \\ \\ \\ CurrentVersion \\ Run** zu erstellen, zu löschen oder zu ändern, einen Eintrag im Anwendungsereignisprotokoll unter der Quelle "WSH".
 
 
 ```mof
@@ -207,7 +207,7 @@ instance of __FilterToConsumerBinding
 
 <dl> <dt>
 
-[Sicheres empfangen von Ereignissen](receiving-events-securely.md)
+[Sicheres Empfangen von Ereignissen](receiving-events-securely.md)
 </dt> </dl>
 
  

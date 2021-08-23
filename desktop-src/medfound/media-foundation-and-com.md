@@ -1,36 +1,36 @@
 ---
-description: Microsoft Media Foundation verwendet eine Mischung aus com-Konstrukten, ist aber keine vollständig com-basierte API.
+description: Microsoft Media Foundation verwendet eine Mischung aus COM-Konstrukten, ist aber keine vollständig COM-basierte API.
 ms.assetid: d58ca46f-8f3a-4a12-b948-1ea7ab568788
-title: Media Foundation und com
+title: Media Foundation und COM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bdb7d05bac6a3f4deef2c004c6980ef1351c3823
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: bb43fa29063da453a17275fca0b5c441e89f75aab8016a1abcf1702f5433fd71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106353260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974212"
 ---
-# <a name="media-foundation-and-com"></a>Media Foundation und com
+# <a name="media-foundation-and-com"></a>Media Foundation und COM
 
-Microsoft Media Foundation verwendet eine Mischung aus com-Konstrukten, ist aber keine vollständig com-basierte API. In diesem Thema wird die Interaktion zwischen com und Media Foundation beschrieben. Außerdem werden einige bewährte Methoden für die Entwicklung von Media Foundation-Plug-in-Komponenten definiert. Die folgenden Vorgehensweisen helfen Ihnen, einige häufige, aber feine Programmierfehler zu vermeiden.
+Microsoft Media Foundation verwendet eine Mischung aus COM-Konstrukten, ist aber keine vollständig COM-basierte API. In diesem Thema wird die Interaktion zwischen COM und Media Foundation beschrieben. Außerdem werden einige bewährte Methoden für die Entwicklung Media Foundation Plug-In-Komponenten definiert. Wenn Sie diese Methoden befolgen, können Sie einige häufig auftretende, aber geringfügige Programmierfehler vermeiden.
 
 -   [Bewährte Methoden für Anwendungen](#best-practices-for-applications)
--   [Bewährte Methoden für Media Foundation Komponenten](#best-practices-for-media-foundation-components)
+-   [Bewährte Methoden für Media Foundation-Komponenten](#best-practices-for-media-foundation-components)
 -   [Zusammenfassung](#summary)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="best-practices-for-applications"></a>Bewährte Methoden für Anwendungen
 
-In Media Foundation werden die asynchrone Verarbeitung und Rückrufe von [Arbeits Warteschlangen](work-queues.md)verarbeitet. Arbeits Warteschlangen verfügen immer über Multithread-Apartment-Threads (MTA), sodass eine Anwendung eine einfachere Implementierung hat, wenn Sie auch in einem MTA-Thread ausgeführt wird. Daher wird empfohlen, [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) mit dem **coinit- \_ Multithreaded** -Flag aufzurufen.
+In Media Foundation werden asynchrone Verarbeitung und Rückrufe von [Arbeitswarteschlangen](work-queues.md)verarbeitet. Arbeitswarteschlangen verfügen immer über Multithread-Apartmentthreads (MTA), sodass eine Anwendung eine einfachere Implementierung hat, wenn sie auch in einem MTA-Thread ausgeführt wird. Aus diesem Grund wird empfohlen, [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) mit dem **FLAG COINIT \_ MULTITHREADED** aufzurufen.
 
-Mit Media Foundation werden keine STA-Objekte (Single Thread Apartment) in Arbeitswarteschlangen-Threads gemarshallt. Außerdem wird nicht sichergestellt, dass STA-invarianten verwaltet werden. Daher muss eine STA-Anwendung darauf achten, STA-Objekte oder-Proxys nicht an Media Foundation-APIs zu übergeben. Objekte, die nur STA-Objekte sind, werden in Media Foundation nicht unterstützt.
+Media Foundation marshallt keine STA-Objekte (Singlethreaded Apartment) in Arbeitswarteschlangenthreads. Es wird auch nicht sichergestellt, dass STA-Invarianten beibehalten werden. Daher muss eine STA-Anwendung darauf achten, keine STA-Objekte oder Proxys an Media Foundation APIs zu übergeben. Objekte, die nur STA sind, werden in Media Foundation nicht unterstützt.
 
-Wenn Sie über einen STA-Proxy für einen MTA oder ein frei Thread Objekt verfügen, kann das Objekt mithilfe eines Arbeits Warteschlangen Rückrufs an einen MTA-Proxy gemarshallt werden. Abhängig vom Objektmodell, das in der Registrierung für diese CLSID definiert ist, kann die [**cokreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion entweder einen Rohdaten Zeiger oder einen STA-Proxy zurückgeben. Wenn ein STA-Proxy zurückgegeben wird, dürfen Sie den Zeiger nicht an eine Media Foundation-API übergeben.
+Wenn Sie über einen STA-Proxy für ein MTA- oder Freethread-Objekt verfügen, kann das Objekt mithilfe eines Work-Queue-Rückrufs an einen MTA-Proxy gemarshallt werden. Die [**CoCreateInstance-Funktion**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) kann je nach dem in der Registrierung für diese CLSID definierten Objektmodell entweder einen rohen Zeiger oder einen STA-Proxy zurückgeben. Wenn ein STA-Proxy zurückgegeben wird, dürfen Sie den Zeiger nicht an eine Media Foundation-API übergeben.
 
-Angenommen, Sie möchten einen **IPropertyStore** -Zeiger an die [**imfsourceresolver:: beginkreateobjectfromurl**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-begincreateobjectfromurl) -Methode übergeben. Sie können **pscreatememorypropertystore** aufrufen, um den **IPropertyStore** -Zeiger zu erstellen. Wenn Sie von einem STA aufrufen, müssen Sie den Zeiger vor dem übergeben an **begincreateobjectfromurl** Mars Hallen.
+Angenommen, Sie möchten einen **IPropertyStore-Zeiger** an die [**METHODE POINTERSourceResolver::BeginCreateObjectFromURL**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-begincreateobjectfromurl) übergeben. Sie können **PSCreateMemoryPropertyStore** aufrufen, um den **IPropertyStore-Zeiger** zu erstellen. Wenn Sie aus einem STA aufrufen, müssen Sie den Zeiger marshallen, bevor Sie ihn an **BeginCreateObjectFromURL** übergeben.
 
-Der folgende Code zeigt, wie ein STA-Proxy in eine Media Foundation-API gemarshallt wird.
+Der folgende Code zeigt, wie ein STA-Proxy an eine Media Foundation-API gemarshallt wird.
 
 
 ```C++
@@ -131,57 +131,57 @@ private:
 
 
 
-Weitere Informationen zur globalen Schnittstellen Tabelle finden Sie unter [**iglobalinterfaketable**](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
+Weitere Informationen zur globalen Schnittstellentabelle finden Sie unter [**IGlobalInterfaceTable.**](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable)
 
-Wenn Sie Media Foundation Prozess intern verwenden, sind Objekte, die von Media Foundation Methoden und Funktionen zurückgegeben werden, direkte Zeiger auf das-Objekt. Bei prozessübergreifenden Media Foundation handelt es sich bei diesen Objekten möglicherweise um MTA-Proxys, die bei Bedarf in einen STA-Thread gemarshallt werden sollen. Ebenso sind Objekte, die innerhalb eines Rückrufs abgerufen werden – z. b. eine Topologie aus dem [mesessiontopologystatus](mesessiontopologystatus.md) -Ereignis – direkte Zeiger, wenn Media Foundation Prozess intern verwendet wird, aber MTA-Proxys sind, wenn Media Foundation Prozess übergreifend verwendet wird.
+Wenn Sie Media Foundation in-Process verwenden, sind objekte, die von Media Foundation Methoden und Funktionen zurückgegeben werden, direkte Zeiger auf das Objekt. Für prozessübergreifende Media Foundation können diese Objekte MTA-Proxys sein und sollten bei Bedarf in einen STA-Thread gemarshallt werden. Ebenso sind Objekte, die innerhalb eines Rückrufs abgerufen werden , z. B. eine Topologie aus dem [MESessionTopologyStatus-Ereignis,](mesessiontopologystatus.md) direkte Zeiger, wenn Media Foundation prozessübergreifend verwendet wird, aber MTA-Proxys, wenn Media Foundation prozessübergreifend verwendet wird.
 
 > [!Note]  
-> Das häufigste Szenario für die Verwendung von Media Foundation Prozess übergreifender Prozess ist der [geschützte Medien Pfad](protected-media-path.md) (PMP). Diese Hinweise gelten jedoch für jede Situation, in der Media Foundation APIs über RPC verwendet werden.
+> Das gängigste Szenario für die Verwendung Media Foundation prozessübergreifenden Vorgangs ist der [Geschützte Medienpfad (Protected Media Path,](protected-media-path.md) PMP). Diese Hinweise gelten jedoch für alle Situationen, in denen Media Foundation-APIs über RPC verwendet werden.
 
  
 
-Alle Implementierungen von [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) sollten MTA-kompatibel sein. Diese Objekte müssen überhaupt keine COM-Objekte sein. Wenn dies der Fall ist, können Sie nicht im STA ausgeführt werden. Die [**imfasynccallback:: Aufrufen**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) -Funktion wird für einen MTA-Arbeits Warteschlangen Thread aufgerufen, und das angegebene [**imfasynkresult**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) -Objekt ist entweder ein direkter Objekt Zeiger oder ein MTA-Proxy.
+Alle Implementierungen von [**AWAITAsyncCallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) sollten MTA-kompatibel sein. Diese Objekte müssen überhaupt keine COM-Objekte sein. Wenn dies dere ist, können sie nicht im STA ausgeführt werden. Die [**FUNKTION AWAITAsyncCallback::Invoke**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) wird für einen MTA-Arbeitsqueuethread aufgerufen, und das bereitgestellte OBJEKT VOM 16. [**16. IST**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) entweder ein direkter Objektzeiger oder ein MTA-Proxy.
 
-## <a name="best-practices-for-media-foundation-components"></a>Bewährte Methoden für Media Foundation Komponenten
+## <a name="best-practices-for-media-foundation-components"></a>Bewährte Methoden für Media Foundation-Komponenten
 
-Es gibt zwei Kategorien von Media Foundation-Objekten, die sich mit com befassen müssen. Einige Komponenten, z. b. Transformationen oder Byte Datenstrom Handler, sind vollständige COM-Objekte, die von der CLSID erstellt werden. Diese Objekte müssen den Regeln für com-Apartments für Prozess interne und prozessübergreifende Media Foundation entsprechen. Andere Media Foundation Komponenten sind keine vollständigen com-Objekte, benötigen aber com-Proxys für die prozessübergreifende Wiedergabe. Zu den Objekten in dieser Kategorie zählen Medienquellen und Aktivierungs Objekte. Diese Objekte können Apartment Probleme ignorieren, wenn Sie nur für Prozess interne Media Foundation verwendet werden.
+Es gibt zwei Kategorien von Media Foundation Objekten, die sich Gedanken über COM machen müssen. Einige Komponenten, z. B. Transformationen oder Bytestreamhandler, sind vollständige COM-Objekte, die von CLSID erstellt werden. Diese Objekte müssen den Regeln für COM-Apartments entsprechen, sowohl für prozess- als auch prozessübergreifende Media Foundation. Andere Media Foundation-Komponenten sind keine vollständigen COM-Objekte, benötigen jedoch COM-Proxys für die prozessübergreifende Wiedergabe. Objekte in dieser Kategorie umfassen Medienquellen und Aktivierungsobjekte. Diese Objekte können Apartmentprobleme ignorieren, wenn sie nur für prozessbearbeitende Media Foundation verwendet werden.
 
-Obwohl es sich nicht bei allen Media Foundation Objekten um COM-Objekte handelt, werden alle Media Foundation Schnittstellen von [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown)abgeleitet. Daher müssen alle Media Foundation Objekte **IUnknown** gemäß com-Spezifikationen implementieren, einschließlich der Regeln für die Verweis Zählung und [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)). Alle Verweis gezählten Objekte sollten außerdem sicherstellen, dass [**DllCanUnloadNow**](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow) das Entladen des Moduls nicht zulässt, während die Objekte weiterhin persistent gespeichert werden.
+Obwohl nicht alle Media Foundation-Objekte COM-Objekte sind, werden alle Media Foundation Schnittstellen von [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown)abgeleitet. Daher müssen alle Media Foundation-Objekte **IUnknown** gemäß COM-Spezifikationen implementieren, einschließlich der Regeln für die Verweiszählung und [**QueryInterface.**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) Alle Referenzzählungsobjekte sollten auch sicherstellen, dass [**DllCanUnloadNow**](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow) das Entladen des Moduls nicht zulässt, während die Objekte weiterhin beibehalten werden.
 
-Media Foundation Komponenten können keine STA-Objekte sein. Viele Media Foundation Objekte müssen überhaupt keine COM-Objekte sein. Wenn dies der Fall ist, können Sie nicht im STA ausgeführt werden. Alle Media Foundation Komponenten müssen Thread sicher sein. Einige Media Foundation Objekte müssen auch frei Thread-oder Apartment neutral sein. In der folgenden Tabelle sind die Anforderungen für benutzerdefinierte Schnittstellen Implementierungen angegeben:
+Media Foundation Komponenten können keine STA-Objekte sein. Viele Media Foundation-Objekte müssen überhaupt keine COM-Objekte sein. Wenn dies dere ist, können sie nicht im STA ausgeführt werden. Alle Media Foundation Komponenten müssen threadsicher sein. Einige Media Foundation-Objekte müssen auch freethreaded oder apartmentneutral sein. In der folgenden Tabelle werden die Anforderungen für benutzerdefinierte Schnittstellenimplementierungen angegeben:
 
 
 
-| Schnittstelle                                                          | Category            | Benötigtes Apartment       |
+| Schnittstelle                                                          | Kategorie            | Erforderliches Apartment       |
 |--------------------------------------------------------------------|---------------------|--------------------------|
-| [**Imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate)                                 | Prozess übergreifender Proxy | Free-Thread oder neutral |
-| [**IMF bytestreamhandler**](/windows/desktop/api/mfidl/nn-mfidl-imfbytestreamhandler)               | COM-Objekt          | MTA                      |
-| [**IMF contentprotection Manager**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentprotectionmanager) | Prozess übergreifender Proxy | Free-Thread oder neutral |
-| [**IMF-Manager**](/windows/desktop/api/mfidl/nn-mfidl-imfqualitymanager)                     | COM-Objekt          | Free-Thread oder neutral |
-| [**Imfmediasource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)                           | Prozess übergreifender Proxy | Free-Thread oder neutral |
-| [**IMF Schema Handler**](/windows/desktop/api/mfidl/nn-mfidl-imfschemehandler)                       | COM-Objekt          | MTA                      |
-| [**Imftopoloader**](/windows/desktop/api/mfidl/nn-mfidl-imftopoloader)                             | COM-Objekt          | Free-Thread oder neutral |
-| [**IMF-Transformation**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)                               | COM-Objekt          | MTA                      |
+| [**ÜBER DIE AKTIONAKTIVIEREN**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate)                                 | Prozessübergreifender Proxy | Freethreading oder neutral |
+| [**GIGABYTEByteStreamHandler**](/windows/desktop/api/mfidl/nn-mfidl-imfbytestreamhandler)               | COM-Objekt          | MTA                      |
+| [**CONTENTContentProtectionManager**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentprotectionmanager) | Prozessübergreifender Proxy | Freethreading oder neutral |
+| [**MANAGERSQualityManager**](/windows/desktop/api/mfidl/nn-mfidl-imfqualitymanager)                     | COM-Objekt          | Freethreading oder neutral |
+| [**WFMEDIASOURCE**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)                           | Prozessübergreifender Proxy | Freethreading oder neutral |
+| [**MERSCHEMEHandler**](/windows/desktop/api/mfidl/nn-mfidl-imfschemehandler)                       | COM-Objekt          | MTA                      |
+| [**ÜBERLADENTopoLoader**](/windows/desktop/api/mfidl/nn-mfidl-imftopoloader)                             | COM-Objekt          | Freethreading oder neutral |
+| [**ÜBERTRANSFORM**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)                               | COM-Objekt          | MTA                      |
 
 
 
  
 
-Abhängig von der Implementierung sind möglicherweise weitere Anforderungen erforderlich. Wenn eine Medien Senke z. b. eine andere Schnittstelle implementiert, die der Anwendung das Ausführen direkter Funktionsaufrufe an die Senke ermöglicht, muss die Senke frei Thread oder neutral sein, damit direkte prozessübergreifende Aufrufe möglich sind. Jedes Objekt ist möglicherweise frei Thread; in dieser Tabelle sind die Mindestanforderungen angegeben.
+Je nach Implementierung gibt es möglicherweise zusätzliche Anforderungen. Wenn eine Mediensenke beispielsweise eine andere Schnittstelle implementiert, die es der Anwendung ermöglicht, direkte Funktionsaufrufe an die Senke auszuführen, muss die Senke frei oder neutral sein, damit sie direkte prozessübergreifende Aufrufe verarbeiten kann. Jedes Objekt kann ein Freethreading sein. In dieser Tabelle werden die Mindestanforderungen angegeben.
 
-Die empfohlene Vorgehensweise zum Implementieren von frei Thread-oder neutralen Objekten besteht darin, den frei Hand Thread-Mars Haller zu aggregierten. Weitere Informationen finden Sie in der MSDN-Dokumentation zu [**cokreatefreethreadedmarshaler**](/windows/win32/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler). In Übereinstimmung mit der Anforderung, STA-Objekte oder-Proxys nicht an Media Foundation-APIs zu übergeben, müssen sich frei Thread Objekte keine Gedanken über das Marshalling von STA-Eingabe Zeigern in frei Thread Komponenten machen.
+Die empfohlene Methode zum Implementieren von Freethread-Objekten oder neutralen Objekten besteht darin, den Freethread-Marshaller zu aggregieren. Weitere Informationen finden Sie in der MSDN-Dokumentation zu [**CoCreateFreeThreadedMarshaler**](/windows/win32/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler). In Übereinstimmung mit der Anforderung, STA-Objekte oder Proxys nicht an Media Foundation-APIs zu übergeben, müssen sich Freethread-Objekte nicht um das Marshallen von STA-Eingabezeigern in Freethread-Komponenten kümmern.
 
-Komponenten, die die Arbeits Warteschlange für lange funktionsfähig verwenden (**mfasync- \_ Rückruf \_ Warteschlange \_ Long- \_ Funktion**), müssen mehr Sorgfalt walten lassen Threads in der Arbeits Warteschlange Long Function erstellen einen eigenen Sta. Komponenten, die die Long-Funktions Arbeits Warteschlange für Rückrufe verwenden, sollten das Erstellen von COM-Objekten in diesen Threads vermeiden und bei Bedarf darauf achten, Proxys auf dem STA zu Mars Hallen.
+Komponenten, die die Long-Function-Arbeitswarteschlange **(MFASYNC \_ CALLBACK \_ QUEUE LONG \_ \_ FUNCTION)** verwenden, müssen mehr Sorgfalt walten. Threads in der long-Funktion workqueue erstellen ein eigenes STA. Komponenten, die die lange Funktion workqueue für Rückrufe verwenden, sollten das Erstellen von COM-Objekten in diesen Threads vermeiden und bei Bedarf darauf achten, Proxys an das STA zu marshallen.
 
 ## <a name="summary"></a>Zusammenfassung
 
-Anwendungen haben einen einfacheren Zeit, wenn Sie mit Media Foundation über einen MTA-Thread interagieren, aber es ist möglich, Media Foundation von einem STA-Thread zu verwenden. Media Foundation verarbeitet STA-Komponenten nicht, und Anwendungen sollten darauf achten, STA-Objekte nicht an Media Foundation-APIs zu übergeben. Einige Objekte haben zusätzliche Anforderungen, insbesondere Objekte, die in einer prozessübergreifenden Situation ausgeführt werden. Die folgenden Richtlinien helfen dabei, com-Fehler, Deadlocks und unerwartete Verzögerungen bei der Medienverarbeitung zu vermeiden.
+Anwendungen haben eine einfachere Zeit, wenn sie mit Media Foundation aus einem MTA-Thread interagieren, aber es ist mit einiger Sorgfalt möglich, Media Foundation aus einem STA-Thread zu verwenden. Media Foundation keine STA-Komponenten verarbeitet, und Anwendungen sollten darauf achten, keine STA-Objekte an Media Foundation APIs zu übergeben. Einige Objekte haben zusätzliche Anforderungen, insbesondere Objekte, die in einer prozessübergreifenden Situation ausgeführt werden. Wenn Sie diese Richtlinien befolgen, können COM-Fehler, Deadlocks und unerwartete Verzögerungen bei der Medienverarbeitung vermieden werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Media Foundation Plattform-APIs](media-foundation-platform-apis.md)
+[Media Foundation Platform-APIs](media-foundation-platform-apis.md)
 </dt> <dt>
 
 [Media Foundation-Architektur](media-foundation-architecture.md)

@@ -1,7 +1,7 @@
 ---
-description: Legen Sie die Projektions Matrix für alle Sprites fest.
+description: Legen Sie die Projektionsmatrix für alle Sprites fest.
 ms.assetid: cb4c5546-1a31-40d9-a943-af4fbddcee01
-title: 'ID3DX10Sprite:: setprojectiontransform-Methode (d3dx10. h)'
+title: ID3DX10Sprite::SetProjectionTransform-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: c49fb570f87c8c86313e1f4adcf1560fee909433
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 478fb55b500ca8e4bdc3df796ffd60ef3d9ee649e21ec1dd72b19c87a14420c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104531088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119046878"
 ---
-# <a name="id3dx10spritesetprojectiontransform-method"></a>ID3DX10Sprite:: setprojectiontransform-Methode
+# <a name="id3dx10spritesetprojectiontransform-method"></a>ID3DX10Sprite::SetProjectionTransform-Methode
 
-Legen Sie die Projektions Matrix für alle Sprites fest.
+Legen Sie die Projektionsmatrix für alle Sprites fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT SetProjectionTransform(
 
 <dl> <dt>
 
-*pprojectiontransform* \[ in\]
+*pProjectionTransform* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Die Projektions Matrix, die für alle Sprites verwendet werden soll.
+Die Projektionsmatrix, die für alle Sprites verwendet werden soll.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Die Projektions Matrix, die für alle Sprites verwendet werden soll.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

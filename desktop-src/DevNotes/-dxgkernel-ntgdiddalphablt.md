@@ -1,7 +1,7 @@
 ---
-description: Ntgdiddaddalphablt-Funktion
+description: NtGdiDdAddAlphaBlt-Funktion
 ms.assetid: d0c2396f-cff0-4248-9dbc-6a9172aa4101
-title: Ntgdiddaddalphablt-Funktion
+title: NtGdiDdAddAlphaBlt-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c333c2110d19d1effe12dae63e8dddb9afd8b4d6
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e76e822a5a431c855b45ec53617bccb7c1231baa5f24a2e377fc7a8d831bf5af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104392986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956739"
 ---
-# <a name="ntgdiddaddalphablt-function"></a>Ntgdiddaddalphablt-Funktion
+# <a name="ntgdiddaddalphablt-function"></a>NtGdiDdAddAlphaBlt-Funktion
 
 Diese Funktion ist nicht implementiert.
 

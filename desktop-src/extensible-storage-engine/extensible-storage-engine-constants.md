@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen zu Extensible Storage Engine-Konstanten
-title: Erweiterbare Speicher-Engine-Konstanten
+description: Weitere Informationen finden Sie unter Erweiterbare Storage-Engine-Konstanten.
+title: Erweiterbare Storage-Engine-Konstanten
 TOCTitle: Extensible Storage Engine Constants
 ms:assetid: 9a361b83-491d-442d-971d-6696f88ad42e
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269351(v=EXCHG.10)
@@ -15,21 +15,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ab478b7972206f462cd0bd0031f74865d850dbee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 563efe09c011830ef17001c13a6f3d4564b26567940245aee3fcb272f562aa69
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103757069"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118980810"
 ---
-# <a name="extensible-storage-engine-constants"></a>Erweiterbare Speicher-Engine-Konstanten
+# <a name="extensible-storage-engine-constants"></a>Erweiterbare Storage-Engine-Konstanten
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="extensible-storage-engine-constants"></a>Erweiterbare Speicher-Engine-Konstanten
+## <a name="extensible-storage-engine-constants"></a>Erweiterbare Storage-Engine-Konstanten
 
-Der Abschnitt erweiterbare Speichermodul Konstanten enthält die folgenden Abschnitte:
+Der Abschnitt Extensible Storage Engine Constants (Erweiterbare Engine-Konstanten) enthält die folgenden Abschnitte:
 
   - [JET_CBTYP](./jet-cbtyp.md)
 
@@ -41,14 +41,14 @@ Der Abschnitt erweiterbare Speichermodul Konstanten enthält die folgenden Absch
 
   - [JET_SNT](./jet-snt.md)
 
-  - [Fehler Behandlungs Konstanten](./error-handling-constants.md)
+  - [Fehlerbehandlungskonst constants](./error-handling-constants.md)
 
-  - [Ereignis Protokollierungs Konstanten](./event-logging-constants.md)
+  - [Konstanten der Ereignisprotokollierung](./event-logging-constants.md)
 
-  - [System Parameter für Extensible Storage Engine](./extensible-storage-engine-system-parameters.md)
+  - [Erweiterbare Storage Engine-Systemparameter](./extensible-storage-engine-system-parameters.md)
 
-  - [Ungültige handle-Konstanten](./invalid-handle-constants.md)
+  - [Ungültige Handlekonst constants](./invalid-handle-constants.md)
 
-  - [Konstanten für maximale Einstellungen](./maximum-settings-constants.md)
+  - [Maximale Einstellungen Konstanten](./maximum-settings-constants.md)
 
   - [Veraltete Konstanten](./obsolete-constants.md)

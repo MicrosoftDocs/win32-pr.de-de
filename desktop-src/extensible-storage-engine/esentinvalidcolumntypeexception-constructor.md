@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentinvalidcolumntypeexception-Konstruktor'
-title: Esentinvalidcolumntypeexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentInvalidColumnTypeException-Konstruktor'
+title: EsentInvalidColumnTypeException-Konstruktor
 TOCTitle: 'EsentInvalidColumnTypeException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidColumnTypeException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidcolumntypeexception.esentinvalidcolumntypeexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0223ab42d7ebaa3d64273fdc5afe51183aaed630
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ac08e2ad3e1c274360f970dc6745737880a1883a1c007befd61d2bcca1ff97b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119041288"
 ---
-# <a name="esentinvalidcolumntypeexception-constructor"></a>Esentinvalidcolumntypeexception-Konstruktor
+# <a name="esentinvalidcolumntypeexception-constructor"></a>EsentInvalidColumnTypeException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidcolumntypeexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidColumnTypeException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentInvalidColumnTypeException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidcolumntypeexception-Klasse](./esentinvalidcolumntypeexception-class.md)
+[EsentInvalidColumnTypeException-Klasse](./esentinvalidcolumntypeexception-class.md)
 
-[Esentinvalidcolumntypeexception-Member](./esentinvalidcolumntypeexception-members.md)
+[EsentInvalidColumnTypeException-Member](./esentinvalidcolumntypeexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

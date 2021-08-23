@@ -1,9 +1,9 @@
 ---
-title: LB_SETLOCALE Meldung (Winuser. h)
-description: Legt das aktuelle Gebiets Schema des Listen Felds fest. Sie können das Gebiets Schema verwenden, um die richtige Sortierreihenfolge des angezeigten Texts (für Listenfelder mit dem lbs \_ -Sortier Stil) und des von der LB AddString-Nachricht hinzugefügten Texts zu bestimmen \_ .
+title: LB_SETLOCALE (Winuser.h)
+description: Legt das aktuelle Locale des Listenfelds fest. Sie können das -Locale verwenden, um die richtige Sortierreihenfolge des angezeigten Texts (für Listenfelder mit dem LBS SORT-Format) und des von der \_ LB ADDSTRING-Meldung hinzugefügten Texts \_ zu bestimmen.
 ms.assetid: e9503124-de9f-4b92-a59e-ec9320864ae7
 keywords:
-- Windows-Steuerelemente für LB_SETLOCALE Meldung
+- LB_SETLOCALE der Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd8ea7bb7b6d19144a84ab166f56cd2c0ad49e05
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 623b8550b3d5f382ddc8ccc1e1cfcf861a2f8c0a7877ba60c57e393abc1401d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958539"
 ---
-# <a name="lb_setlocale-message"></a>SLB- \_ setlocale-Meldung
+# <a name="lb_setlocale-message"></a>LB \_ SETLOCALE-Meldung
 
-Legt das aktuelle Gebiets Schema des Listen Felds fest. Sie können das Gebiets Schema verwenden, um die richtige Sortierreihenfolge des angezeigten Texts (für Listenfelder mit dem [**lbs- \_ Sortier**](list-box-styles.md) Stil) und des von der [**lb \_ AddString**](lb-addstring.md) -Nachricht hinzugefügten Texts zu bestimmen.
+Legt das aktuelle Locale des Listenfelds fest. Sie können das -Locale verwenden, um die richtige Sortierreihenfolge des angezeigten Texts (für Listenfelder mit [**dem LBS \_ SORT-Format)**](list-box-styles.md) und des von der [**LB \_ ADDSTRING-Meldung**](lb-addstring.md) hinzugefügten Texts zu bestimmen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt das aktuelle Gebiets Schema des Listen Felds fest. Sie können das Gebiets 
 *wParam* 
 </dt> <dd>
 
-Gibt den Gebiets Schema Bezeichner an, der beim Hinzufügen von Text vom Listenfeld zum Sortieren verwendet wird.
+Gibt den Locale Identifier an, den das Listenfeld beim Hinzufügen von Text zum Sortieren verwendet.
 
 </dd> <dt>
 
@@ -45,11 +45,11 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist der vorherige Gebiets Schema Bezeichner. Wenn der *wParam* -Parameter ein Gebiets Schema angibt, das nicht auf dem System installiert ist, lautet der Rückgabewert "lb err", \_ und das aktuelle Listenfeld "locale" wird nicht geändert.
+Der Rückgabewert ist der vorherige Locale Identifier. Wenn der *wParam-Parameter* ein auf dem System nicht installiertes Locale angibt, ist der Rückgabewert LB ERR, und das aktuelle Listenfeld-Locale \_ wird nicht geändert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie das [**MAKELCID**](/windows/desktop/api/winnt/nf-winnt-makelcid) -Makro zum Erstellen eines Gebiets Schema Bezeichners.
+Verwenden Sie das [**MAKELCID-Makro,**](/windows/desktop/api/winnt/nf-winnt-makelcid) um einen Locale Identifier zu erstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,23 +57,23 @@ Verwenden Sie das [**MAKELCID**](/windows/desktop/api/winnt/nf-winnt-makelcid) -
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**LB- \_ AddString**](lb-addstring.md)
+[**LB \_ ADDSTRING**](lb-addstring.md)
 </dt> <dt>
 
-[**LB \_ getLocale**](lb-getlocale.md)
+[**LB \_ GETLOCALE**](lb-getlocale.md)
 </dt> </dl>
 
  

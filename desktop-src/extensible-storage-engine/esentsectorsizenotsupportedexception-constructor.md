@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentsectorsizenotsupportedexception-Konstruktor'
-title: Esentsectorsizenotsupportedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSectorSizeNotSupportedException-Konstruktor'
+title: EsentSectorSizeNotSupportedException-Konstruktor
 TOCTitle: 'EsentSectorSizeNotSupportedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSectorSizeNotSupportedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentsectorsizenotsupportedexception.esentsectorsizenotsupportedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9c8587a1f6f4c25c5ce1883fc57a0a315c43c772
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df2aad4d65b8fdffaf2aeeebf36a431978b06f1e41cc825b2dbb53a37c5068ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118981650"
 ---
-# <a name="esentsectorsizenotsupportedexception-constructor"></a>Esentsectorsizenotsupportedexception-Konstruktor
+# <a name="esentsectorsizenotsupportedexception-constructor"></a>EsentSectorSizeNotSupportedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentsectorsizenotsupportedexception-Klasse.
+Initialisiert eine neue Instanz der EsentSectorSizeNotSupportedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentSectorSizeNotSupportedException()
 public EsentSectorSizeNotSupportedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentsectorsizenotsupportedexception-Klasse](./esentsectorsizenotsupportedexception-class.md)
+[EsentSectorSizeNotSupportedException-Klasse](./esentsectorsizenotsupportedexception-class.md)
 
-[Esentsector sizenotsupportedexception-Elemente](./esentsectorsizenotsupportedexception-members.md)
+[EsentSectorSizeNotSupportedException-Member](./esentsectorsizenotsupportedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

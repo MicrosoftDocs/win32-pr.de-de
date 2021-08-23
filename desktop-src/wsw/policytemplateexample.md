@@ -1,28 +1,28 @@
 ---
-title: Policytemplateexample
-description: In diesem Beispiel wird veranschaulicht, wie eine Richtlinien Beschreibung manuell erstellt und zum Erstellen des Dienst Proxys verwendet wird.
+title: PolicyTemplateExample
+description: In diesem Beispiel wird veranschaulicht, wie Sie eine Richtlinienbeschreibung manuell erstellen und damit einen Dienstproxy erstellen.
 ms.assetid: 1c7ff0fb-06a2-4285-bbc8-ea8f2d82b15b
 keywords:
-- Policytemplateexample Native Webdienste
-- Wwsapi
+- PolicyTemplateExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2085546550f2e3eff536f59efced9719e270dce0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8e735b5d4ffb61e601ea275023abf9ad7dea78cc127e6b391382e7bce4f4d2c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037198"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963079"
 ---
-# <a name="policytemplateexample"></a>Policytemplateexample
+# <a name="policytemplateexample"></a>PolicyTemplateExample
 
-In diesem Beispiel wird veranschaulicht, wie eine Richtlinien Beschreibung manuell erstellt und zum Erstellen des Dienst Proxys verwendet wird.
+In diesem Beispiel wird veranschaulicht, wie Sie eine Richtlinienbeschreibung manuell erstellen und damit einen Dienstproxy erstellen.
 
--   [Policytemplate. cpp](#policytemplatecpp)
+-   [PolicyTemplate.cpp](#policytemplatecpp)
 -   [Makefile](#makefile)
 
-## <a name="policytemplatecpp"></a>Policytemplate. cpp
+## <a name="policytemplatecpp"></a>PolicyTemplate.cpp
 
 
 ```C++
@@ -228,9 +228,9 @@ clean:
 
 ```
 
- 
+ 
 
- 
+ 
 
 
 

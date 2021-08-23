@@ -1,29 +1,29 @@
 ---
-title: Httpgetsample
-description: In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines PurchaseOrder-Diensts über HTTP verwendet wird. Der Dienst macht Metadaten über HTTP Get und WS-Metadata Exchange v 1.1 verfügbar. Der Dienst zeigt außerdem, wie eine Deckseite für einen wwsapi-Dienst implementiert wird.
+title: HttpGetSample
+description: In diesem Beispiel wird gezeigt, wie der Diensthost zum Hosten eines PurchaseOrder-Diensts über HTTP verwendet wird. Der Dienst macht Metadaten über HTTP GET und WS-Metadata Exchange v1.1 verfügbar. Der Dienst zeigt auch, wie eine Titelseite für einen WWSAPI-Dienst implementiert wird.
 ms.assetid: 5e3a2d24-afd1-451d-94c4-4234c24a4895
 keywords:
-- Httpgetsample Native Webdienste
-- Wwsapi
+- HttpGetSample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d5d0a39fb8411facd9e20ba30580d85173787ed7
-ms.sourcegitcommit: 40dd8501397fc79a643deb528c6c57ac2e9726ce
+ms.openlocfilehash: d16255865fdde1d29001094defc74f46c53fda1bfd781f340cd4ac6dc8cc7256
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "104389735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963269"
 ---
-# <a name="httpgetsample"></a>Httpgetsample
+# <a name="httpgetsample"></a>HttpGetSample
 
-In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines PurchaseOrder-Diensts über HTTP verwendet wird. Der Dienst macht Metadaten über HTTP Get und WS-Metadata Exchange v 1.1 verfügbar. Der Dienst zeigt außerdem, wie eine Deckseite für einen wwsapi-Dienst implementiert wird.
+In diesem Beispiel wird gezeigt, wie der Diensthost zum Hosten eines PurchaseOrder-Diensts über HTTP verwendet wird. Der Dienst macht Metadaten über HTTP GET und WS-Metadata Exchange v1.1 verfügbar. Der Dienst zeigt auch, wie eine Titelseite für einen WWSAPI-Dienst implementiert wird.
 
--   [Httpgetservice. cpp](#httpgetservicecpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [HttpGetService.cpp](#httpgetservicecpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="httpgetservicecpp"></a>Httpgetservice. cpp
+## <a name="httpgetservicecpp"></a>HttpGetService.cpp
 
 
 ```C++
@@ -805,7 +805,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -949,9 +949,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

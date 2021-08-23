@@ -1,35 +1,35 @@
 ---
-description: Sammeln von Partitions Metriken
+description: Sammeln von Partitionsmetriken
 ms.assetid: 2dc35011-24fa-49df-9cf8-96db2de39efa
-title: Sammeln von Partitions Metriken
+title: Sammeln von Partitionsmetriken
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6467dfb9c891e7ae57505c8ec3815bfa99e49d8a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 8168972a0bac0b4eb79c5adde3530d1a0673469adff6b66b4c1b31cc6446bca2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119047687"
 ---
-# <a name="collecting-partition-metrics"></a>Sammeln von Partitions Metriken
+# <a name="collecting-partition-metrics"></a>Sammeln von Partitionsmetriken
 
-In einigen Fällen möchte eine Organisation möglicherweise Informationen zur Verwendung der com+-Anwendung für die Überwachung, Kapazitätsplanung und Ressourcen Führung erfassen.
+In einigen Fällen möchte eine Organisation möglicherweise Informationen zur VERWENDUNG VON COM+-Anwendungen für die Überwachung, Kapazitätsplanung und Ressourcenbuchhaltung sammeln.
 
-Beispielsweise kann ein Anwendungs Dienstanbieter (ASP) einen Kunden für die Ressourcennutzung berechnen. Zu diesem Zweck können Sie mit com+ Ereignis-und metrikinformationen auf Partitions Basis erfassen.
+Beispielsweise kann ein Anwendungsdienstanbieter (Application Service Provider, ASP) einen Kunden für seine Ressourcennutzung in Rechnung stellen. Hierzu können Sie mit COM+ Ereignis- und Metrikinformationen pro Partition erfassen.
 
-Die Möglichkeit, diese Informationen für eine bestimmte Partition zu erfassen, besteht darin, für jede com+-Instrumentations Schnittstelle das Partitions-ID-Element in der Standard Ereignis Struktur anzugeben. Die Ereignis Struktur ist der erste Wert einer com+-Instrumentations Schnittstelle. Weitere Informationen finden Sie unter [com+-Instrumentierungs Schnittstellen](com--instrumentation-interfaces.md).
+Sie können diese Informationen für eine bestimmte Partition sammeln, indem Sie für jede COM+-Instrumentierungsschnittstelle den Partitions-ID-Member innerhalb der Standardereignisstruktur angeben. Die Ereignisstruktur ist der erste Wert einer COM+-Instrumentierungsschnittstelle. Weitere Informationen finden Sie unter [COM+-Instrumentierungsschnittstellen.](com--instrumentation-interfaces.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Konfigurieren des Partitions Caches](configuring-the-partition-cache.md)
+[Konfigurieren des Partitionscaches](configuring-the-partition-cache.md)
 </dt> <dt>
 
 [Gruppieren von Anwendungen in Partitionen](grouping-applications-into-partitions.md)
 </dt> <dt>
 
-[Verwalten von lokalen Partitionen](managing-local-partitions.md)
+[Verwalten lokaler Partitionen](managing-local-partitions.md)
 </dt> <dt>
 
 [Verwalten von Partitionen in Active Directory](managing-partitions-within-active-directory.md)

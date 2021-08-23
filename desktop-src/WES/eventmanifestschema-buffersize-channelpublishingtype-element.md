@@ -1,9 +1,9 @@
 ---
-title: bufferSize (channelpublishingtype)-Element
-description: Enthält die Menge an Arbeitsspeicher in Kilobytes, die für die Sitzungs Puffer reserviert ist.
+title: bufferSize-Element (ChannelPublishingType)
+description: Enthält die Arbeitsspeichermenge in Kilobyte, die für die Sitzungspuffer zugeordnet ist.
 ms.assetid: 05f38251-648a-48a2-a0f6-bac5ace7f02b
 keywords:
-- bufferSize-Element (Ereignisprotokoll)
+- bufferSize-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: af609db6fb81417e81b2981ed351dc8b2954371f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 42f28b81d0e5fb2e9dc79938f26d7e2e22f3b577d7aa9ed4b231c593de7c809e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056028"
 ---
-# <a name="buffersize-channelpublishingtype-element"></a>bufferSize (channelpublishingtype)-Element
+# <a name="buffersize-channelpublishingtype-element"></a>bufferSize-Element (ChannelPublishingType)
 
-Enthält die Menge an Arbeitsspeicher in Kilobytes, die für die Sitzungs Puffer reserviert ist.
+Enthält die Arbeitsspeichermenge in Kilobyte, die für die Sitzungspuffer zugeordnet ist.
 
 ``` syntax
 <xs:element name="bufferSize"
@@ -30,7 +30,7 @@ Enthält die Menge an Arbeitsspeicher in Kilobytes, die für die Sitzungs Puffer
  />
 ```
 
-Das **bufferSize** -Element wird durch den komplexen Typ [**channelpublishingtype**](eventmanifestschema-channelpublishingtype-complextype.md) definiert.
+Das **bufferSize-Element** wird vom komplexen [**ChannelPublishingType-Typ**](eventmanifestschema-channelpublishingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **bufferSize** -Element wird durch den komplexen Typ [**channelpublishingtyp
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **bufferSize** -Element wird durch den komplexen Typ [**channelpublishingtyp
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Veröffentlichung (channelType)**](eventmanifestschema-publishing-channeltype-element.md)
+[**publishing (ChannelType)**](eventmanifestschema-publishing-channeltype-element.md)
 </dt> </dl>
 
  

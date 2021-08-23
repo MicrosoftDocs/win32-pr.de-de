@@ -1,46 +1,46 @@
 ---
 title: Suchen in Active Directory Domain Services
-description: Search ist ein wichtiges Feature von Active Directory Domain Services. Mithilfe der Suche können Sie Objekte im Verzeichnis basierend auf Auswahlkriterien (Abfrage) suchen und die angegebenen Eigenschaften für die gefundenen Objekte abrufen.
+description: Die Suche ist ein wichtiges Feature Active Directory Domain Services. Mit der Suche können Sie Objekte im Verzeichnis basierend auf Auswahlkriterien (Abfrage) suchen und die angegebenen Eigenschaften für die gefundenen Objekte abrufen.
 ms.assetid: 049518d1-c994-4da2-83c1-d37acc94bb39
 ms.tgt_platform: multiple
 keywords:
-- Active Directory, suchen Active Directory
-- Active Directory Domain Services, suchen Active Directory
-- Suchen Active Directory Active Directory
+- Active Directory, Suchen von Active Directory
+- Active Directory Domain Services, Suchen von Active Directory
+- Durchsuchen von Active Directory Active Directory
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: db37131e95dcad6ff7b8621223182fcbf641b01a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e4b146f8c047310931955849f1fc64b56ef55ec8a6954db8aee3cd4200971991
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024938"
 ---
 # <a name="searching-in-active-directory-domain-services"></a>Suchen in Active Directory Domain Services
 
-Search ist ein wichtiges Feature von Active Directory Domain Services. Mithilfe der Suche können Sie Objekte im Verzeichnis basierend auf Auswahlkriterien (Abfrage) suchen und die angegebenen Eigenschaften für die gefundenen Objekte abrufen.
+Die Suche ist ein wichtiges Feature Active Directory Domain Services. Mit der Suche können Sie Objekte im Verzeichnis basierend auf Auswahlkriterien (Abfrage) suchen und die angegebenen Eigenschaften für die gefundenen Objekte abrufen.
 
-Das Suchen in Active Directory Domain Services ist das Auffinden eines Domänen Controllers (DC), das Binden an das Objekt, in dem die Suche im Verzeichnis beginnen soll, das Übermitteln einer Abfrage und das Verarbeiten der Ergebnisse.
+Bei der Suche in Active Directory Domain Services geht es darum, einen Domänencontroller (DC) zu finden, an das Objekt zu binden, an dem die Suche im Verzeichnis beginnen soll, eine Abfrage zu übermitteln und die Ergebnisse zu verarbeiten.
 
-Weitere Informationen zur Suchfunktion in Active Directory finden Sie unter:
+Weitere Informationen zum Suchfeature in Active Directory finden Sie unter:
 
--   [Entscheiden, was gesucht werden soll](deciding-what-to-find.md)
--   [Bestimmen des Orts für die Suche](where-to-search.md)
+-   [Entscheidung, was zu finden ist](deciding-what-to-find.md)
+-   [Entscheidung, wo gesucht werden soll](where-to-search.md)
 -   [Auswählen der Suchtechnologie](choosing-the-search-technology.md)
--   [Erstellen eines Abfrage Filters](creating-a-query-filter.md)
--   [Entscheiden, welche Attribute für die einzelnen gefundenen Objekte abgerufen werden sollen](listing-properties-to-retrieve-for-each-object-found.md)
--   [Binden an den Such Start Punkt](binding-to-a-search-start-point.md)
+-   [Erstellen eines Abfragefilters](creating-a-query-filter.md)
+-   [Entscheidung, welche Attribute für jedes gefundene Objekt abgerufen werden](listing-properties-to-retrieve-for-each-object-found.md)
+-   [Binden an den Suchstartpunkt](binding-to-a-search-start-point.md)
 -   [Angeben des Suchbereichs](search-scope.md)
 -   [Angeben anderer Suchoptionen](specifying-other-search-options.md)
 -   [Verarbeiten der Suchergebnisse](processing-query-results.md)
--   [Auswirkungen der Sicherheit bei der Suche](effects-of-security-on-queries.md)
--   [Erstellen von effizienten Abfragen](creating-efficient-queries.md)
+-   [Auswirkungen der Sicherheit auf die Suche](effects-of-security-on-queries.md)
+-   [Erstellen effizienter Abfragen](creating-efficient-queries.md)
 -   [Empfehlungen](referrals.md)
--   [Auflisten von Domänen Controllern](enumerating-domain-controllers.md)
+-   [Aufzählen von Domänencontrollern](enumerating-domain-controllers.md)
 
- 
+ 
 
- 
+ 
 
 
 

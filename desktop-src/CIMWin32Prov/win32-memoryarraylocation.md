@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse "Win32 memoryarraylocation Association" verknüpft ein Array Logischer Speicher und das Array physischer Speicher, auf dem es vorhanden ist.
+description: Die \_ WMI-Zuordnungsklasse Win32 MemoryArrayLocation verknüpft ein logisches Speicherarray und das physische Speicherarray, auf dem es vorhanden ist.
 ms.assetid: 455daeee-ad67-4599-84d6-fa3f4ac593aa
 ms.tgt_platform: multiple
 title: Win32_MemoryArrayLocation-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 62aae3bf672b12bdb947ff8ce6b76f919eaa11b7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a0fd01751794dc9177f3840804f0412db70531f6706a452793fe6cbcf3aa2389
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119079799"
 ---
-# <a name="win32_memoryarraylocation-class"></a>Win32 \_ memoryarraylocation-Klasse
+# <a name="win32_memoryarraylocation-class"></a>Win32 \_ MemoryArrayLocation-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) " **Win32 \_ memoryarraylocation** Association" verknüpft ein Array Logischer Speicher und das Array physischer Speicher, auf dem es vorhanden ist.
+Die [WMI-Zuordnungsklasse](/windows/desktop/WmiSdk/retrieving-a-class) **Win32 \_ MemoryArrayLocation** verknüpft ein logisches Speicherarray und das physische Speicherarray, auf dem es vorhanden ist.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,51 +42,51 @@ class Win32_MemoryArrayLocation : CIM_Realizes
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ memoryarraylocation** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ MemoryArrayLocation-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ memoryarraylocation** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ MemoryArrayLocation-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ physicalmemoryarray**
+Datentyp: **Win32 \_ PhysicalMemoryArray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ physicalmemoryarray")
+Qualifizierer: [**key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ PhysicalMemoryArray")
 </dt> </dl>
 
-Ein [**Win32 \_ physicalmemoryarray**](win32-physicalmemoryarray.md) , das das Array des physischen Speichers beschreibt, das das logische Speicher Array implementiert.
+Ein [**Win32 \_ PhysicalMemoryArray,**](win32-physicalmemoryarray.md) das das physische Speicherarray beschreibt, das das logische Speicherarray implementiert.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ memoryarray**
+Datentyp: **Win32 \_ MemoryArray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ memoryarray")
+Qualifizierer: [**key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ MemoryArray")
 </dt> </dl>
 
-Ein [**Win32 \_ memoryarray**](win32-memoryarray.md) , das das vom physischen Speicher Array implementierte logische Speicher Array beschreibt.
+Ein [**Win32 \_ MemoryArray,**](win32-memoryarray.md) das das logische Speicherarray beschreibt, das vom physischen Speicherarray implementiert wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32-Klasse \_ memoryarraylocation** ist von [**CIM \_**](cim-realizes.md)-ermittelungsort abgeleitet.
+Die **Win32 \_ MemoryArrayLocation-Klasse** wird von [**CIM \_ Realizes**](cim-realizes.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,20 +96,20 @@ Die **Win32-Klasse \_ memoryarraylocation** ist von [**CIM \_**](cim-realizes.md
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ erkennt**](cim-realizes.md)
+[**CIM \_ realisiert**](cim-realizes.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

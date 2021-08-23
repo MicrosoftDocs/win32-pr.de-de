@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentrecorddeobigexception-Konstruktor'
-title: Esentrecorddeobigexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentRecordTooBigException-Konstruktor'
+title: EsentRecordTooBigException-Konstruktor
 TOCTitle: 'EsentRecordTooBigException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentRecordTooBigException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentrecordtoobigexception.esentrecordtoobigexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bb58235584b6b4d408efb0e9240e2f4412c756ec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 48e72f35e9d0e1a17a1fab174042259259018dca96680e1cd18539dfa1039bba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214492"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119040063"
 ---
-# <a name="esentrecordtoobigexception-constructor"></a>Esentrecorddeobigexception-Konstruktor
+# <a name="esentrecordtoobigexception-constructor"></a>EsentRecordTooBigException-Konstruktor
 
-Initialisiert eine neue Instanz der esentrecorddeobigexception-Klasse.
+Initialisiert eine neue Instanz der EsentRecordTooBigException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentRecordTooBigException()
 public EsentRecordTooBigException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentrecorddeobigexception-Klasse](./esentrecordtoobigexception-class.md)
+[EsentRecordTooBigException-Klasse](./esentrecordtoobigexception-class.md)
 
-[Esentrecorddeobigexception-Elemente](./esentrecordtoobigexception-members.md)
+[EsentRecordTooBigException-Member](./esentrecordtoobigexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

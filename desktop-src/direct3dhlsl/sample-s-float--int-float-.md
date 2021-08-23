@@ -1,9 +1,9 @@
 ---
-title: Sample (S, float, int, float)-Funktion (HLSL-Referenz)
-description: Abtast eine Texture2D mit einem optionalen Wert, um Werte von Sample-Werten (LOD) an zu binden.
+title: Sample(S,float,int,float)-Funktion (HLSL-Referenz)
+description: Probieren Sie eine Texture2D mit einem optionalen Wert aus, um LoD-Werte (Sample Level of Detail) zu klammern.
 ms.assetid: 899FACB6-40BB-471B-82A7-BDBBC63B206E
 keywords:
-- Beispiel Funktion HLSL
+- HLSL-Beispielfunktion
 topic_type:
 - apiref
 api_name:
@@ -13,19 +13,19 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e5c151c3d93f5e2fe374f0f60fd06798cf1ce52a
-ms.sourcegitcommit: 0d6365d4e852b09a9100d9cfb9a5334922ebf478
+ms.openlocfilehash: d22cf5fa8a8fe03a62b554def7caf28b4c4e8ab9065446bab9281e4e791e5d3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "104102586"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986220"
 ---
-# <a name="samplesfloatintfloat-function-hlsl-reference"></a>Sample (S, float, int, float)-Funktion (HLSL-Referenz)
+# <a name="samplesfloatintfloat-function-hlsl-reference"></a>Sample(S,float,int,float)-Funktion (HLSL-Referenz)
 
-Abtast eine [**Texture2D**](sm5-object-texture2d.md) mit einem optionalen Wert, um Werte von Sample-Werten (LOD) an zu binden.
+Probieren Sie eine [**Texture2D**](sm5-object-texture2d.md) mit einem optionalen Wert aus, um LoD-Werte (Sample Level of Detail) zu klammern.
 
 > [!Note]  
-> Erfordert [Shader-Modell 5](d3d11-graphics-reference-sm5.md) oder höher.
+> Erfordert [Shadermodell 5](d3d11-graphics-reference-sm5.md) oder höher.
 
  
 
@@ -47,14 +47,14 @@ DXGI_FORMAT Sample(
 *S* \[ in\]
 </dt> <dd>
 
-Ein [samplerzustand](dx-graphics-hlsl-sampler.md). Dies ist ein Objekt, das in einer Effekt Datei deklariert wurde, die Zustands Zuweisungen enthält.
+Ein [Samplerzustand.](dx-graphics-hlsl-sampler.md) Dies ist ein Objekt, das in einer Effektdatei deklariert ist, die Zustandszuweisungen enthält.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
-Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
+Texturkoordinaten Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
@@ -62,8 +62,8 @@ Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
 |----------------------------------------|----------------|
 | Texture1D                              | float          |
 | Texture1DArray, Texture2D              | float2         |
-| Texture2DArray, Texture3D, texturecube | float3         |
-| Texturecubearray                       | float4         |
+| Texture2DArray, Texture3D, TextureCube | float3         |
+| TextureCubeArray                       | float4         |
 
 
 
@@ -71,10 +71,10 @@ Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*Offset* \[ In\]
 </dt> <dd>
 
-Ein optionaler Offset der Textur Koordinate, der für jeden Textur Objekttyp verwendet werden kann. der Offset wird vor der Stichprobenentnahme auf den Speicherort angewendet. Die Textur Offsets müssen statisch sein. Der Argumenttyp ist vom Textur Objekttyp abhängig. Weitere Informationen finden Sie unter [Anwenden von Texturkoordinaten Offsets](dx-graphics-hlsl-to-sample.md).
+Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf den Speicherort angewendet. Die Texturoffsets müssen statisch sein. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter [Anwenden von Texturkoordinatenoffsets.](dx-graphics-hlsl-to-sample.md)
 
 
 
@@ -83,7 +83,7 @@ Ein optionaler Offset der Textur Koordinate, der für jeden Textur Objekttyp ver
 | Texture1D, Texture1DArray     | INT            |
 | Texture2D, Texture2DArray     | int2           |
 | Texture3D                     | int3           |
-| Texturecube, texturecubearray | Nicht unterstützt  |
+| TextureCube, TextureCubeArray | Nicht unterstützt  |
 
 
 
@@ -91,45 +91,45 @@ Ein optionaler Offset der Textur Koordinate, der für jeden Textur Objekttyp ver
 
 </dd> <dt>
 
-*Klammer* \[ in\]
+*Klammer* \[ In\]
 </dt> <dd>
 
-Ein optionaler Wert zum Einspannen von Sample-Lod-Werten. Wenn Sie beispielsweise 2.0 f als Klammer Wert übergeben, stellen Sie sicher, dass kein einzelnes Beispiel auf eine MIP-Ebene kleiner als 2.0 f zugreift.
+Ein optionaler Wert zum Klammern von LOD-Beispielwerten. Wenn Sie beispielsweise 2,0f für den Klammerwert übergeben, stellen Sie sicher, dass keine einzelne Stichprobe auf eine Mip-Ebene kleiner als 2,0f zugreift.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das Textur Format, bei dem es sich um einen der im [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgelisteten typisierten Werte handelt.
+Das Texturformat, bei dem es sich um einen der typisierten Werte handelt, die in [**DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgeführt sind.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Textur Stichprobe wird die texusposition verwendet, um einen Texttyp zu suchen Ein Offset kann vor der Suche auf die Position angewendet werden. Der samplerstatus enthält die Optionen für Sampling und Filterung. Diese Methode kann in einem Pixelshader aufgerufen werden, wird jedoch in einem Vertexshader oder einem Geometry-Shader nicht unterstützt.
+Textursampling verwendet die Texelposition, um einen Texelwert zu suchen. Vor der Suche kann ein Offset auf die Position angewendet werden. Der Zustand des Samplers enthält die Sampling- und Filteroptionen. Diese Methode kann innerhalb eines Pixel-Shaders aufgerufen werden, wird jedoch in einem Scheitelpunkt-Shader oder einem Geometrie-Shader nicht unterstützt.
 
-Verwenden Sie einen Offset nur bei einer ganzzahligen miplevel. Andernfalls erhalten Sie abhängig von der Hardware Implementierung oder den Treibereinstellungen möglicherweise unterschiedliche Ergebnisse.
+Verwenden Sie einen Offset nur auf einem ganzzahligen Miplevel. Andernfalls erhalten Sie je nach Hardwareimplementierungen oder Treibereinstellungen möglicherweise unterschiedliche Ergebnisse.
 
-### <a name="calculating-texel-positions"></a>Berechnen von textabpositionen
+### <a name="calculating-texel-positions"></a>Berechnen von Texelpositionen
 
-Texturkoordinaten sind Gleit Komma Werte, die auf Textur Daten verweisen, die auch als normalisierter Textur Raum bezeichnet werden. Adress Umbruch Modi werden in dieser Reihenfolge (Texturkoordinaten + Offsets + Wrap-Modus) angewendet, um die Texturkoordinaten außerhalb des \[ Bereichs 0... 1 zu ändern \] .
+Texturkoordinaten sind Gleitkommawerte, die auf Texturdaten verweisen, die auch als normalisierter Texturraum bezeichnet werden. Adressumbruchmodi werden in dieser Reihenfolge angewendet (Texturkoordinaten + Offsets + Umbruchmodus), um Texturkoordinaten außerhalb des \[ Bereichs 0...1 zu \] ändern.
 
-Bei Textur Arrays gibt ein zusätzlicher Wert im Location-Parameter einen Index in ein Textur Array an. Dieser Index wird als skalierter float-Wert (anstelle des normalisierten Raums für standardmäßige Texturkoordinaten) behandelt. Die Konvertierung in einen ganzzahligen Index erfolgt in der folgenden Reihenfolge (float + Round-to-Next-even Integer + Klammer zum Array Bereich).
+Bei Texturarrays gibt ein zusätzlicher Wert im location-Parameter einen Index in einem Texturarray an. Dieser Index wird als skalierter float-Wert behandelt (anstelle des normalisierten Raums für Standardtexturkoordinaten). Die Konvertierung in einen ganzzahligen Index erfolgt in der folgenden Reihenfolge (float + round-to-nearest-even integer + Klammer an den Arraybereich).
 
-### <a name="applying-texture-coordinate-offsets"></a>Anwenden von Texturkoordinaten Offsets
+### <a name="applying-texture-coordinate-offsets"></a>Anwenden von Texturkoordinatenoffsets
 
-Der Offset-Parameter ändert die Texturkoordinaten in texesbereich. Obwohl Texturkoordinaten normalisierte Gleit Komma Zahlen sind, wendet der Offset einen ganzzahligen Offset an. Beachten Sie auch, dass die Textur Offsets statisch sein müssen.
+Der offset-Parameter ändert die Texturkoordinaten im Texelraum. Obwohl Texturkoordinaten gleitkommazahlen normalisiert sind, wendet der Offset einen ganzzahligen Offset an. Beachten Sie auch, dass die Texturoffsets statisch sein müssen.
 
-Das zurückgegebene Datenformat wird durch das Textur Format bestimmt. Wenn die Textur Ressource z. b. mit dem DXGI- \_ Format \_ A8B8G8R8 \_ unorm \_ sRGB-Format definiert wurde, konvertiert der Samplingvorgang Sampling-texeln von Gamma 2,0 in 1,0, filtert und schreibt das Ergebnis als Gleit Komma Wert im Bereich \[ 0.. 1 \] .
+Das zurückgegebene Datenformat wird durch das Texturformat bestimmt. Wenn die Texturressource z. B. mit dem \_ DXGI FORMAT \_ A8B8G8R8 \_ UNORM \_ SRGB-Format definiert wurde, konvertiert der Samplingvorgang die stichprobenierten Texel von Gamma 2.0 in 1.0, filtert und schreibt das Ergebnis als Gleitkommawert im Bereich \[ 0..1. \]
 
-Verwenden Sie einen Offset nur bei einer ganzzahligen miplevel. Andernfalls erhalten Sie möglicherweise Ergebnisse, die nicht gut in Hardware übersetzt werden.
+Verwenden Sie einen Offset nur auf einem ganzzahligen Miplevel. Andernfalls erhalten Sie möglicherweise Ergebnisse, die sich nicht gut in die Hardware übersetzen lassen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Beispiel Methoden](texture-sample-overload.md)
+[Beispielmethoden](texture-sample-overload.md)
 </dt> <dt>
 
-[Texture-Objekt](dx-graphics-hlsl-to-type.md)
+[Texturobjekt](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

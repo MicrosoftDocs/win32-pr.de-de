@@ -14,19 +14,19 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: b1f5e5f0f30714ed001438235e124341b8ce4d35
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c6441e000422c113521803924d7c1fc746cd2c96591463d33677425a49f7edfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115858"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988690"
 ---
 # <a name="d3dxcompileshader-function"></a>D3DXCompileShader-Funktion
 
 Kompilieren Sie eine Shaderdatei.
 
 > [!Note]  
-> Anstatt diese Legacyfunktion zu verwenden, empfiehlt es sich, offline zu kompilieren, indem Fxc.exe Befehlszeilencompiler oder die [**D3DCompile-API**](/windows/win32/api/d3dcompiler/nf-d3dcompiler-d3dcompile) verwendet wird.
+> Anstatt diese Legacyfunktion zu verwenden, empfiehlt es sich, offline zu kompilieren, indem Fxc.exe Befehlszeilencompiler oder die [**D3DCompile-API verwendet**](/windows/win32/api/d3dcompiler/nf-d3dcompiler-d3dcompile) wird.
 
  
 
@@ -95,7 +95,7 @@ Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für di
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf eine Zeichenfolge, die den Namen der Shader-Einstiegspunktfunktion enthält, an der die Ausführung beginnt.
+Zeiger auf eine Zeichenfolge, die den Namen der Shadereinstiegspunktfunktion enthält, an der die Ausführung beginnt.
 
 </dd> <dt>
 
@@ -104,11 +104,11 @@ Zeiger auf eine Zeichenfolge, die den Namen der Shader-Einstiegspunktfunktion en
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf ein Shaderprofil, das den Shader-Anweisungssatz bestimmt. Eine Liste der verfügbaren Profile finden Sie unter [**D3DXGetVertexShaderProfile**](d3dxgetvertexshaderprofile.md) oder [**D3DXGetPixelShaderProfile.**](d3dxgetpixelshaderprofile.md)
+Zeiger auf ein Shaderprofil, das den Shaderanweisungssatz bestimmt. Eine Liste der verfügbaren Profile finden Sie unter [**D3DXGetVertexShaderProfile**](d3dxgetvertexshaderprofile.md) oder [**D3DXGetPixelShaderProfile.**](d3dxgetpixelshaderprofile.md)
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
@@ -131,7 +131,7 @@ Gibt einen Puffer zurück, der den erstellten Shader enthält. Dieser Puffer ent
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Gibt einen Puffer zurück, der eine Liste von Fehlern und Warnungen enthält, die während der Kompilierung aufgetreten sind. Dies sind die gleichen Meldungen, die der Debugger anzeigt, wenn er im Debugmodus ausgeführt wird. Dieser Wert kann **NULL** sein.
+Gibt einen Puffer zurück, der eine Auflistung von Fehlern und Warnungen enthält, die während der Kompilierung aufgetreten sind. Dies sind die gleichen Meldungen, die der Debugger anzeigt, wenn er im Debugmodus ausgeführt wird. Dieser Wert kann NULL **sein.**
 
 </dd> <dt>
 
@@ -154,7 +154,7 @@ Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Fun
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |

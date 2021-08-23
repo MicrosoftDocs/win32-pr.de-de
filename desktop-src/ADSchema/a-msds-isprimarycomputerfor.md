@@ -1,11 +1,11 @@
 ---
-title: ms-DS-is-Primary-Computer-for-Attribut
-description: Backlink-Attribut für MSDS-isprimarycomputer.
+title: ms-DS-Is-Primary-Computer-For-Attribut
+description: Backlinkattribut für msDS-IsPrimaryComputer.
 ms.assetid: ba2feaf9-7705-49ca-8b83-dce54d6f368d
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-is-Primary-Computer-für Attribut-AD-Schema
-- MSDS-isprimarycomputerfor-Attribut AD-Schema
+- ms-DS-Is-Primary-Computer-For-Attribut AD-Schema
+- msDS-IsPrimaryComputerFor-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 690b7dd2481175985dcff95c7ae0d194332bea03
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ece3dec8229b1863ebe355ca0b0185c3dd5397f673bf3104945f8cfa1af00dd8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960768"
 ---
-# <a name="ms-ds-is-primary-computer-for-attribute"></a>ms-DS-is-Primary-Computer-for-Attribut
+# <a name="ms-ds-is-primary-computer-for-attribute"></a>ms-DS-Is-Primary-Computer-For-Attribut
 
-Backlink-Attribut für MSDS-isprimarycomputer.
+Backlinkattribut für msDS-IsPrimaryComputer.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-is-Primary-Computer-für           |
-| LDAP-Display-Name | MSDS-isprimarycomputerfor               |
+| CN                | ms-DS-Is-Primary-Computer-for           |
+| Ldap-Anzeigename | msDS-IsPrimaryComputerFor               |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.2168                 |
-| System-ID-GUID    | 998c06ac-3F 87-444e-a5df-11b03dc8a50c    |
+| System-Id-Guid    | 998c06ac-3f87-444e-a5df-11b03dc8a50c    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -52,11 +52,11 @@ Backlink-Attribut für MSDS-isprimarycomputer.
 |------------------------|---------------------------------|
 | Link-ID                | 2187                            |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse "Win32 devicememoryaddress" stellt eine Gerätespeicher Adresse auf einem Computersystem dar, auf dem Windows ausgeführt wird.
+description: Die \_ WMI-Klasse Win32 DeviceMemoryAddress stellt eine Gerätespeicheradresse auf einem Computersystem dar, auf dem Windows.
 ms.assetid: f0a70724-5ced-47fe-b17e-e153e65b80df
 ms.tgt_platform: multiple
 title: Win32_DeviceMemoryAddress-Klasse
@@ -10,18 +10,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 4aa7472e3c20808ff52f6f45b0dca57fd19f9dd6
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 31d49baca4e11ce1908ba1d057819f216153f49353415c8b5465e70e3a607e00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958513"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119020248"
 ---
-# <a name="win32_devicememoryaddress-class"></a>Win32 \_ devicememoryaddress-Klasse
+# <a name="win32_devicememoryaddress-class"></a>Win32 \_ DeviceMemoryAddress-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) " **Win32 \_ devicememoryaddress** " stellt eine Gerätespeicher Adresse auf einem Computersystem dar, auf dem Windows ausgeführt wird.
+Die **WMI-Klasse \_ Win32 DeviceMemoryAddress** stellt eine Gerätespeicheradresse auf einem Computersystem dar, auf dem Windows. [](/windows/desktop/WmiSdk/retrieving-a-class)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,174 +45,174 @@ class Win32_DeviceMemoryAddress : Win32_SystemMemoryResource
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ devicememoryaddress** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ DeviceMemoryAddress-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ devicememoryaddress** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ DeviceMemoryAddress-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
-Kurze Beschreibung des Objekts eine einzeilige Zeichenfolge.
+Kurze Beschreibung des -Objekts, eine einzeilenbasierte Zeichenfolge.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Name der ersten konkreten Klasse, die in der Vererbungs Kette angezeigt wird, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der-Klasse ermöglicht die-Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der ersten konkreten Klasse, die in der Vererbungskette angezeigt wird, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der -Klasse ermöglicht die -Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
 
-Diese Eigenschaft wird von [**CIM \_ memorymappedio**](cim-memorymappedio.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ MemoryMappedIO geerbt.**](cim-memorymappedio.md)
 
 </dd> <dt>
 
 **CSCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ Computersystem**](cim-computersystem.md).**"Kreationclassname**"), [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ComputerSystem**](cim-computersystem.md).**CreationClassName**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Name der System Erstellungs Klasse des Bereichs bezogenen Computers.
+Name der Bereichsklasse für die Computersystemerstellung.
 
-Diese Eigenschaft wird von [**CIM \_ memorymappedio**](cim-memorymappedio.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ MemoryMappedIO geerbt.**](cim-memorymappedio.md)
 
 </dd> <dt>
 
 **CSName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ Computersystem**](cim-computersystem.md).**Name**"), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ComputerSystem**](cim-computersystem.md).**Name**"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Name des Bereichs Computer Systems.
+Name des Bereichscomputersystems.
 
-Diese Eigenschaft wird von [**CIM \_ memorymappedio**](cim-memorymappedio.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ MemoryMappedIO geerbt.**](cim-memorymappedio.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
 </dt> </dl>
 
 Eine Beschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**"Endadresse"**
+**EndingAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF-Speicher, zugeordneter e \| /a \| 001,2 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Memory Mapped E/O \| 001.2")
 </dt> </dl>
 
-Endadresse der Speicher Abbild-e/a.
+Endadresse der speicherzuordnungsbasierten E/A.
 
-Diese Eigenschaft wird von [**CIM \_ memorymappedio**](cim-memorymappedio.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ MemoryMappedIO geerbt.**](cim-memorymappedio.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installation date")
 </dt> </dl>
 
-Datum und Uhrzeit der Installation des-Objekts. Diese Eigenschaft erfordert keinen Wert, um anzugeben, dass das-Objekt installiert ist.
+Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft erfordert keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **MemoryType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| systemstructures \| cm \_ partielle \_ Ressourcen \_ \| deskriptorflags")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| SystemStructures \| CM PARTIAL RESOURCE \_ \_ \_ DESCRIPTOR \| Flags")
 </dt> </dl>
 
-Merkmale der Arbeitsspeicher Ressource auf dem Computersystem, auf dem Windows ausgeführt wird. Die Werte lauten wie folgt:
+Merkmale der Arbeitsspeicherressource auf dem Computersystem, auf dem Windows. Werte sind die folgenden.
 
 <dt>
 
 <span id="ReadWrite"></span><span id="readwrite"></span><span id="READWRITE"></span>
 
-<span id="ReadWrite"></span><span id="readwrite"></span><span id="READWRITE"></span>**Lesen** ("lesen")
+<span id="ReadWrite"></span><span id="readwrite"></span><span id="READWRITE"></span>**ReadWrite** ("ReadWrite")
 
 
 </dt> <dd>
 
-Der Arbeitsspeicher kann gelesen und geschrieben werden.
+Der Arbeitsspeicher kann sowohl gelesen als auch geschrieben werden.
 
 </dd> <dt>
 
 <span id="ReadOnly"></span><span id="readonly"></span><span id="READONLY"></span>
 
-<span id="ReadOnly"></span><span id="readonly"></span><span id="READONLY"></span>Schreib **geschützt ("** schreibgeschützt")
+<span id="ReadOnly"></span><span id="readonly"></span><span id="READONLY"></span>**ReadOnly** ("ReadOnly")
 
 
 </dt> <dd>
@@ -223,7 +223,7 @@ Der Arbeitsspeicher ist schreibgeschützt.
 
 <span id="WriteOnly"></span><span id="writeonly"></span><span id="WRITEONLY"></span>
 
-<span id="WriteOnly"></span><span id="writeonly"></span><span id="WRITEONLY"></span>**Schreib** geschützt ("schreibgeschützt")
+<span id="WriteOnly"></span><span id="writeonly"></span><span id="WRITEONLY"></span>**WriteOnly** ("WriteOnly")
 
 
 </dt> <dd>
@@ -234,18 +234,18 @@ Der Arbeitsspeicher kann nur geschrieben werden.
 
 <span id="Prefetchable"></span><span id="prefetchable"></span><span id="PREFETCHABLE"></span>
 
-<span id="Prefetchable"></span><span id="prefetchable"></span><span id="PREFETCHABLE"></span>**Prefetchable** ("prefetchable")
+<span id="Prefetchable"></span><span id="prefetchable"></span><span id="PREFETCHABLE"></span>**Vorabrufbar** ("Vorabrufbar")
 
 
 </dt> <dd>
 
-Ein Speicherblock wird aus dem Hauptspeicher in einen kleinen Puffer kopiert, der vom Speicher-Chipsatz verwaltet wird. Wiederholte Lesevorgänge aus dem gleichen Teil des Arbeitsspeichers sind schneller mit vorab abgesetzbarem Speicher.
+Ein Speicherblock wird aus dem Hauptspeicher in einen kleinen Puffer kopiert, der vom Arbeitsspeicher-Chipsatz verwaltet wird. Wiederholte Lesevorgänge aus dem gleichen Teil des Arbeitsspeichers sind mit vorab ausrufbarem Arbeitsspeicher schneller.
 
 </dd> <dt>
 
 <span id="CombinedWrite"></span><span id="combinedwrite"></span><span id="COMBINEDWRITE"></span>
 
-<span id="CombinedWrite"></span><span id="combinedwrite"></span><span id="COMBINEDWRITE"></span>**Combinedwrite** ("combinedwrite")
+<span id="CombinedWrite"></span><span id="combinedwrite"></span><span id="COMBINEDWRITE"></span>**CombinedWrite** ("CombinedWrite")
 
 
 </dt> <dd>
@@ -267,7 +267,7 @@ TBD
 
 <span id="Cacheable"></span><span id="cacheable"></span><span id="CACHEABLE"></span>
 
-<span id="Cacheable"></span><span id="cacheable"></span><span id="CACHEABLE"></span>Zwischen speicherbar **("cachable** ")
+<span id="Cacheable"></span><span id="cacheable"></span><span id="CACHEABLE"></span>**Zwischenspeicherbar** ("Cacheable")
 
 
 </dt> <dd>
@@ -278,7 +278,7 @@ TBD
 
 <span id="WindowDecode"></span><span id="windowdecode"></span><span id="WINDOWDECODE"></span>
 
-<span id="WindowDecode"></span><span id="windowdecode"></span><span id="WINDOWDECODE"></span>**Windowdecode** ("windowdecode")
+<span id="WindowDecode"></span><span id="windowdecode"></span><span id="WINDOWDECODE"></span>**WindowDecode** ("WindowDecode")
 
 
 </dt> <dd>
@@ -289,7 +289,7 @@ TBD
 
 <span id="Bar"></span><span id="bar"></span><span id="BAR"></span>
 
-<span id="Bar"></span><span id="bar"></span><span id="BAR"></span>**Balken** ("Leiste")
+<span id="Bar"></span><span id="bar"></span><span id="BAR"></span>**Balken** ("Balken")
 
 
 </dt> <dd>
@@ -303,54 +303,54 @@ TBD
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
 </dt> </dl>
 
-Die Bezeichnung, nach der das-Objekt bekannt ist. Bei einer Unterklasse kann die Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung, unter der das Objekt bekannt ist. Bei Unterklassen kann die Eigenschaft überschrieben werden, um eine Schlüsseleigenschaft zu sein.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **StartingAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("StartingAddress"), [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF-Speicher, zugeordneter e \| /a \| 001,1 ")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("StartingAddress"), [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Memory Mapped E/O \| 001.1")
 </dt> </dl>
 
-Die Startadresse der Speicher Abbild-e/a. Die Eigenschaft Hardware Ressourcen Bezeichner sollte auf diesen Wert festgelegt werden, um den zugeordneten e/a-Ressourcen Schlüssel zu erstellen.
+Startadresse der speicherzuordnungsbasierten E/A. Die Hardwareressourcen-ID-Eigenschaft sollte auf diesen Wert festgelegt werden, um den zugeordneten E/A-Ressourcenschlüssel zu erstellen.
 
-Diese Eigenschaft wird von [**CIM \_ memorymappedio**](cim-memorymappedio.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ MemoryMappedIO geerbt.**](cim-memorymappedio.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle dieser Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -374,35 +374,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -416,37 +416,37 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ devicememoryaddress** -Klasse wird von [**Win32 \_ systemmemoryresource**](win32-systemmemoryresource.md)abgeleitet.
+Die **Win32 \_ DeviceMemoryAddress-Klasse** wird von [**Win32 \_ SystemMemoryResource**](win32-systemmemoryresource.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -456,8 +456,8 @@ Die **Win32 \_ devicememoryaddress** -Klasse wird von [**Win32 \_ systemmemoryre
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -466,10 +466,10 @@ Die **Win32 \_ devicememoryaddress** -Klasse wird von [**Win32 \_ systemmemoryre
 
 <dl> <dt>
 
-[**Win32 \_ systemmemoryresource**](win32-systemmemoryresource.md)
+[**Win32 \_ SystemMemoryResource**](win32-systemmemoryresource.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

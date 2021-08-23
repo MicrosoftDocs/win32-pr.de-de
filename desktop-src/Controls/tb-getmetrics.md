@@ -1,9 +1,9 @@
 ---
-title: TB_GETMETRICS Meldung (kommstrg. h)
-description: Ruft die Metriken eines Symbolleisten-Steuer Elements ab.
+title: TB_GETMETRICS (Commctrl.h)
+description: Ruft die Metriken eines Symbolleisten-Steuerelements ab.
 ms.assetid: 19c735cf-09f8-443e-8a73-dd64af0193a1
 keywords:
-- Windows-Steuerelemente für TB_GETMETRICS Meldung
+- TB_GETMETRICS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f1ee299f56b367eef649a05657d713e22206a7c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 733932b28dce34d06df0cbfc1d704763401b36a68380dc0aa8958b9bc3aff32f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859102"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078344"
 ---
-# <a name="tb_getmetrics-message"></a>TB \_ getmetrics-Nachricht
+# <a name="tb_getmetrics-message"></a>TB \_ GETMETRICS-Nachricht
 
-Ruft die Metriken eines Symbolleisten-Steuer Elements ab.
+Ruft die Metriken eines Symbolleisten-Steuerelements ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,7 +35,7 @@ Ruft die Metriken eines Symbolleisten-Steuer Elements ab.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**tbmetrics**](/windows/desktop/api/Commctrl/ns-commctrl-tbmetrics) -Struktur, die die Toolbar-Metriken empfängt.
+Zeiger auf eine [**TBMETRICS-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-tbmetrics) die die Symbolleistenmetriken empfängt.
 
 </dd> </dl>
 
@@ -43,10 +43,10 @@ Zeiger auf eine [**tbmetrics**](/windows/desktop/api/Commctrl/ns-commctrl-tbmetr
 
 Der Rückgabewert wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -56,9 +56,9 @@ Der Rückgabewert wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

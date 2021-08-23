@@ -1,37 +1,37 @@
 ---
-title: Das Commands-Auflistungs Objekt
-description: Das Commands-Auflistungs Objekt
+title: Das Commands-Auflistungsobjekt
+description: Das Commands-Auflistungsobjekt
 ms.assetid: 8726ce04-77d3-4ae3-bd46-e75f42b36d6f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c2367035d86f92d57dc459564943b9e7797ecb04
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: d30f7933bd973ae500b75abb51c47899fa60322444d49fe0835f6bfa3efab97f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390154"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975660"
 ---
-# <a name="the-commands-collection-object"></a>Das Commands-Auflistungs Objekt
+# <a name="the-commands-collection-object"></a>Das Commands-Auflistungsobjekt
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Der Microsoft-Agent-Server verwaltet eine Liste der Befehle, die dem Benutzer zurzeit zur Verfügung stehen. Diese Liste enthält Befehle, die der Server für allgemeine Interaktionen definiert (z. b. das Fenster Sprachbefehle ausblenden und öffnen), die Liste der verfügbaren (aber nicht Eingabe aktiven) Clients und die Befehle, die vom aktuellen aktiven Client definiert werden. Die ersten beiden Befehls Sätze sind globale Befehle. Das heißt, Sie sind unabhängig vom eingegebenen aktiven Client jederzeit verfügbar. Client definierte Befehle sind nur verfügbar, wenn der Client für die Eingabe aktiviert ist und das Zeichen sichtbar ist.
+Der Microsoft Agent-Server verwaltet eine Liste von Befehlen, die dem Benutzer derzeit zur Verfügung stehen. Diese Liste enthält Befehle, die der Server für die allgemeine Interaktion definiert (z. B. Hide and Open The Voice Commands Window), die Liste der verfügbaren (aber nicht eingabeaktiven) Clients und die vom aktuellen aktiven Client definierten Befehle. Die ersten beiden Befehlssätze sind globale Befehle. Das heißt, sie sind unabhängig vom eingabeaktiven Client jederzeit verfügbar. Clientdefinierte Befehle sind nur verfügbar, wenn dieser Client eingabeaktiv ist und das Zeichen sichtbar ist.
 
-Jede Client Anwendung kann eine Auflistung von Befehlen definieren, die als [**Befehls**](/windows/desktop/lwef/the-commands-collection-object) Auflistung bezeichnet werden. Um der Auflistung einen Befehl hinzuzufügen, verwenden [**Sie die Add**](add-method.md) -oder [**Insert**](insert-method.md) -Methode. Obwohl Sie die Eigenschaften eines Befehls mit separaten Anweisungen angeben können, geben Sie für optimale Code Leistung alle Eigenschaften eines Befehls in der **Add** -oder **Insert** Method-Anweisung an. Sie können für jeden Befehl in der Auflistung ermitteln, ob der Benutzer Zugriff auf den Befehl im Popup Menü des Zeichens, im Fenster "Sprachbefehle", sowohl in als auch in keinem von angezeigt wird. Wenn z. b. ein Befehl im Popup Menü für das Zeichen angezeigt werden soll, legen Sie die [**Beschriftung**](caption-property.md) des Befehls und die [**sichtbaren**](visible-property.md) Eigenschaften fest. Um den Befehl im Fenster "Sprachbefehle" anzuzeigen, legen Sie die [**voicecaption**](voicecaption-property.md) -und die [**Voice**](voice-property.md) -Eigenschaften des Befehls fest.
+Jede Clientanwendung kann eine Sammlung von Befehlen definieren, die als [**Commands-Sammlung bezeichnet**](/windows/desktop/lwef/the-commands-collection-object) wird. Um der Auflistung einen Befehl hinzuzufügen, verwenden Sie die [**Add- oder**](add-method.md) [**Insert-Methode.**](insert-method.md) Obwohl Sie die Eigenschaften eines Befehls mit separaten Anweisungen angeben können, geben Sie  für eine optimale Codeleistung alle Eigenschaften eines Befehls in der Add- oder **Insert-Methode** an. Für jeden Befehl in der Sammlung können Sie bestimmen, ob der Benutzerzugriff auf den Befehl im Popupmenü des Zeichens, im Fenster "Sprachbefehle", in beiden oder in keinem der beiden Optionen angezeigt wird. Wenn beispielsweise ein Befehl im Popupmenü für das Zeichen angezeigt werden soll, legen Sie die Eigenschaften [**Caption**](caption-property.md) und Visible des [**Befehls**](visible-property.md) fest. Um den Befehl im Fenster Sprachbefehle anzuzeigen, legen Sie die [**VoiceCaption-**](voicecaption-property.md) und Voice-Eigenschaften des [**Befehls**](voice-property.md) fest.
 
-Ein Benutzer kann nur dann auf die einzelnen comm-[**Befehle**](/windows/desktop/lwef/the-commands-collection-object)in ihrer Auflistung zugreifen, wenn die Client Anwendung aktiv ist. Wenn Sie das Zeichen also möglicherweise für andere Client Anwendungen freigeben, sollten Sie in der Regel die [**Beschriftungs**](caption-property.md)-, [**voicecaption**](voicecaption-property.md)-und [**Voice**](voice-property.md) -Eigenschaften für das **Commands** Collection-Objekt sowie für die Befehle in der Auflistung festlegen. Dadurch wird ein Eintrag für die **Befehls** Auflistung im Popupmenü eines Zeichens und im Fenster "Sprachbefehle" eingefügt.
+Ein Benutzer kann nur[](/windows/desktop/lwef/the-commands-collection-object)dann auf die einzelnen Befehle und Befehle in Ihrer Sammlung zugreifen, wenn Ihre Clientanwendung eingabeaktiv ist. Wenn Sie das Zeichen möglicherweise für andere Clientanwendungen freigeben, sollten Sie daher in der Regel die Eigenschaften [**Caption**](caption-property.md), [**VoiceCaption**](voicecaption-property.md)und [**Voice**](voice-property.md) für das **Sammlungsobjekt Commands** sowie für die Befehle in der Sammlung festlegen. Dadurch wird ein Eintrag für Ihre **Commands-Sammlung** im Popupmenü eines Zeichens und im Fenster "Sprachbefehle" platziert.
 
-Wenn der Benutzer durch Auswahl seines [**Befehls**](/windows/desktop/lwef/the-commands-collection-object) Eintrags zu Ihrem Client wechselt, wird der Client automatisch von dem Server eingegeben, und die Client Anwendung wird mithilfe des [**activateinput**](activateinput-event.md) -Ereignisses benachrichtigt, sodass die Befehle in der zugehörigen Auflistung verfügbar sind. Der Server benachrichtigt den Client auch darüber, dass er nicht mehr mit dem Ereignis " [**endactivateinput**](deactivateinput-event.md) " aktiv ist. Dies ermöglicht es dem Server, nur die Befehle anzuzeigen und zu akzeptieren, die auf den Kontext des aktuellen Eingabe aktiven Clients angewendet werden. Es dient auch zur Vermeidung von Konflikten mit Befehlsnamen zwischen Clients.
+Wenn der Benutzer zu Ihrem Client [](/windows/desktop/lwef/the-commands-collection-object) wechselt, indem er seinen Befehlseintrag auswählt, macht der Server den Client automatisch eingabeaktiv, benachrichtigt Ihre Clientanwendung mithilfe des [**ActivateInput-Ereignisses**](activateinput-event.md) und macht die Befehle in seiner Sammlung verfügbar. Der Server benachrichtigt den Client außerdem darüber, dass er mit dem [**DeActivateInput-Ereignis**](deactivateinput-event.md) nicht mehr eingabeaktiv ist. Dadurch kann der Server nur die Befehle präsentieren und akzeptieren, die für den Kontext des aktuellen eingabeaktiven Clients gelten. Es dient auch dazu, Befehlsnamenskollisionen zwischen Clients zu vermeiden.
 
-Ein Client kann mit der [**Aktivierungs**](activate-method.md) Methode auch explizit anfordern, dass er sich selbst als Eingabe aktiver Client erweist. Diese Methode unterstützt auch das festlegen, dass die Anwendung nicht der Eingabe aktive Client ist. Sie können diese Methode verwenden, wenn Sie ein Zeichen für eine andere Anwendung freigeben, und die Anwendung als Eingabe aktiv festlegen, wenn das Anwendungsfenster den Fokus erhält und nicht Eingabe aktiv ist, wenn es den Fokus verliert.
+Ein Client kann mithilfe der Activate-Methode auch explizit anfordern, sich selbst zum eingabeaktiven [**Client zu**](activate-method.md) machen. Diese Methode unterstützt auch das Festlegen der Anwendung, dass sie nicht der eingabeaktive Client ist. Sie können diese Methode verwenden, wenn Sie ein Zeichen für eine andere Anwendung freigeben und die Anwendung so festlegen, dass sie eingabeaktiv ist, wenn das Anwendungsfenster den Fokus erhält, und nicht eingabeaktiv, wenn es den Fokus verliert.
 
-Auf ähnliche Weise können Sie die Methode [**aktivieren**](activate-method.md) verwenden, um die Anwendung auf den aktiven Client des Zeichens festzulegen. Der aktive Client ist der Client, der Eingaben empfängt, wenn sein Zeichen das oberste Zeichen ist. Wenn sich dieser Status ändert, benachrichtigt der Server Ihre Anwendung mit dem [**activeclientchange**](activeclientchange-event.md) -Ereignis.
+Auf ähnliche Weise können Sie mit der [**Activate-Methode**](activate-method.md) festlegen, dass Ihre Anwendung der aktive Client des Zeichens ist (oder nicht). Der aktive Client ist der Client, der Eingaben empfängt, wenn sein Zeichen das oberste Zeichen ist. Wenn sich dieser Status ändert, benachrichtigt der Server Ihre Anwendung mit dem [**ActiveClientChange-Ereignis.**](activeclientchange-event.md)
 
-Wenn das Popup Menü eines Zeichens angezeigt wird, werden Änderungen an den Eigenschaften einer [**Befehls**](/windows/desktop/lwef/the-commands-collection-object) Auflistung oder die Befehle in der Auflistung erst angezeigt, wenn der Benutzer das Menü erneut anzeigt. Im Fenster Befehle werden jedoch Änderungen angezeigt, sobald sie auftreten.
+Wenn das Popupmenü eines Zeichens angezeigt wird, werden Änderungen an den Eigenschaften einer [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) oder an den Befehlen in der Sammlung erst angezeigt, wenn der Benutzer das Menü erneut anzeigt. Im Befehlsfenster werden jedoch Änderungen angezeigt, sobald sie vorgenommen werden.
 
 -   [Commands-Objektmethoden](commands-object-methods.md)
--   [Objekteigenschaften für Befehle](commands-object-properties.md)
+-   [Commands-Objekteigenschaften](commands-object-properties.md)
 
- 
+ 
 
- 
+ 

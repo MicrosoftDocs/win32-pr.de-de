@@ -1,7 +1,7 @@
 ---
 description: Startet einen Durchlauf innerhalb der aktiven Technik.
 ms.assetid: fbb2bf1c-e37a-4117-8c3c-5f5b6a267301
-title: 'ID3DXEffect:: beginpass-Methode (D3DX9Effect. h)'
+title: ID3DXEffect::BeginPass-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 56a2648f65c3747f8a98fc0cdbd3ed06cea560b9
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9013a67c2d4e0e9760167bc979ac05edd4879c5414ce5c9b9c55528baf3f6a18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353367"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987545"
 ---
-# <a name="id3dxeffectbeginpass-method"></a>ID3DXEffect:: beginpass-Methode
+# <a name="id3dxeffectbeginpass-method"></a>ID3DXEffect::BeginPass-Methode
 
 Startet einen Durchlauf innerhalb der aktiven Technik.
 
@@ -40,12 +40,12 @@ HRESULT BeginPass(
 
 <dl> <dt>
 
-*Durchlauf* \[ in\]
+*Übergeben* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein NULL basierter ganzzahliger Index in der Technik.
+Ein nullbasierter ganzzahliger Index in die Technik.
 
 </dd> </dl>
 
@@ -53,13 +53,13 @@ Ein NULL basierter ganzzahliger Index in der Technik.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung legt einen aktiven Durchlauf (innerhalb eines aktiven Verfahrens) im Effektsystem fest, indem **ID3DXEffect:: beginpass** aufgerufen wird. Eine Anwendung signalisiert das Ende des aktiven Pass durch Aufrufen von [**ID3DXEffect:: endpass**](id3dxeffect--endpass.md). **ID3DXEffect:: beginpass** und **ID3DXEffect:: endpass** müssen in einem übereinstimmenden Paar innerhalb eines übereinstimmenden Paares von [**ID3DXEffect:: begin**](id3dxeffect--begin.md) -und [**ID3DXEffect:: End**](id3dxeffect--end.md) -aufrufen auftreten.
+Eine Anwendung legt einen aktiven Durchlauf (innerhalb einer aktiven Technik) im Effektsystem fest, indem **ID3DXEffect::BeginPass** aufgerufen wird. Eine Anwendung signalisiert das Ende des aktiven Durchlaufs, indem [**sie ID3DXEffect::EndPass**](id3dxeffect--endpass.md)aufruft. **ID3DXEffect::BeginPass** und **ID3DXEffect::EndPass** müssen in einem übereinstimmenden Paar innerhalb eines übereinstimmenden Paars von [**ID3DXEffect::Begin-**](id3dxeffect--begin.md) und [**ID3DXEffect::End-Aufrufen**](id3dxeffect--end.md) auftreten.
 
-Wenn die Anwendung in einem [](id3dxeffect.md) **ID3DXEffect:: beginpass** / [**ID3DXEffect:: endpass**](id3dxeffect--endpass.md) -übereinstimmenden paar den Effekt Zustand ändert, muss Sie [**ID3DXEffect:: CommitChanges**](id3dxeffect--commitchanges.md) aufrufen, um das Update des Geräts mit den Statusänderungen festzulegen. Wenn keine Zustandsänderungen innerhalb eines **ID3DXEffect:: beginpass** -und **ID3DXEffect:: endpass** -übereinstimmenden Paars auftreten, ist es nicht erforderlich, **ID3DXEffect:: CommitChanges** aufzurufen.
+Wenn die Anwendung einen Effektzustand mithilfe einer der [**Effect::Setx-Methoden**](id3dxeffect.md) innerhalb eines **ID3DXEffect::BeginPass** / [**ID3DXEffect::EndPass-Abgleichspaars**](id3dxeffect--endpass.md) ändert, muss die Anwendung [**ID3DXEffect::CommitChanges**](id3dxeffect--commitchanges.md) aufrufen, um das Gerät mit den Zustandsänderungen zu aktualisieren. Wenn innerhalb eines **ID3DXEffect::BeginPass-** und **ID3DXEffect::EndPass-Paars** keine Zustandsänderungen auftreten, ist es nicht erforderlich, **ID3DXEffect::CommitChanges** aufzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,8 +67,8 @@ Wenn die Anwendung in einem [](id3dxeffect.md) **ID3DXEffect:: beginpass** / [**
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 

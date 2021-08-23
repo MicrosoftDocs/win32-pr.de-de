@@ -1,22 +1,22 @@
 ---
-title: Steuern eines Bits-Downloads über eine teure Verbindung
-description: Blockieren Sie das Herunterladen über eine teure Verbindung, z. b. eine Roaming-Verbindung.
+title: Steuern eines BITS-Downloads über eine teure Verbindung
+description: Blockieren Sie das Herunterladen über eine teure Verbindung, z. B. eine Roamingverbindung.
 ms.assetid: 66C20B32-1348-44D9-81F3-43CCED0CEA34
 keywords:
-- Herunterladen von Bits, Vorgehensweise
-- Herunterladen von Bits, kostenaufwendig vermeiden
+- Herunterladen von BITS , How to
+- lädt BITS herunter und vermeidet teure
 ms.topic: article
 ms.date: 10/04/2018
-ms.openlocfilehash: 6326838f08f1879929d9a6be67ef94c4aa035e00
-ms.sourcegitcommit: 00e0a8e56d28c4c720b97f0cf424c29f547460d7
+ms.openlocfilehash: 7cb09dbd277d9ec74ce4988db210bf80c22d97ccaa3054a170fc1c9913282cfe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "103857867"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118959489"
 ---
-# <a name="control-a-bits-download-over-an-expensive-connection"></a>Steuern eines Bits-Downloads über eine teure Verbindung
+# <a name="control-a-bits-download-over-an-expensive-connection"></a>Steuern eines BITS-Downloads über eine teure Verbindung
 
-In diesem Thema wird gezeigt, wie Sie das Herunterladen eines Bits-Auftrags über eine teure Verbindung blockieren, z. b. eine Roaming-Verbindung. Bits ist eine asynchrone API, in der die Anwendung einen Auftrag erstellt, URLs zu diesem Auftrag hinzufügt und die Funktion zum fort [**setzen des Auftrags**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-resume) Objekts aufruft. Ab diesem Punkt wählt Bits aus, wann der Auftrag basierend auf Faktoren wie der Auftrags Priorität und der Übertragungs Richtlinie heruntergeladen wird. Nachdem der Auftrag abgeschlossen ist, wird die Anwendung von Bits benachrichtigt, dass die URL heruntergeladen wurde (sofern die Anwendung für die Abschluss Benachrichtigung registriert wurde). Wenn während der Lebensdauer des Vorgangs das Netzwerk des Endbenutzers geändert wird – z. b. wenn der Benutzer unterwegs ist und aktuell Roaminggebühren anfallen –, hält Bits den Auftrag an, bis die Netzwerkbedingungen optimal sind. Die folgenden schrittweisen Anleitungen zeigen, wie Sie den Auftrag erstellen und die entsprechenden Übertragungs Richtlinien Einstellungen angeben.
+In diesem Thema wird gezeigt, wie Sie das Herunterladen eines BITS-Auftrags über eine teure Verbindung wie eine Roamingverbindung blockieren. BITS ist eine asynchrone API, bei der die Anwendung einen Auftrag erstellt, diesem Auftrag URLs hinzufügt und die Resume-Funktion des [**Auftragsobjekts**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-resume) aufruft. Ab diesem Punkt wählt BITS aus, wann der Auftrag basierend auf Faktoren wie Auftragspriorität und Übertragungsrichtlinie heruntergeladen wird. Nachdem der Download des Auftrags abgeschlossen ist, benachrichtigt BITS die Anwendung, dass die URL heruntergeladen wurde (wenn die Anwendung für die Abschlussbenachrichtigung registriert wurde). Wenn sich während der Lebensdauer des Auftrags das Netzwerk des Endbenutzers ändert , z. B. wenn der Benutzer unterwegs ist und derzeit Roaminggebühren anfallen, hält BITS den Auftrag an, bis die Netzwerkbedingungen optimal sind. Die folgenden Schritt-für-Schritt-Anweisungen zeigen, wie Sie den Auftrag erstellen und die entsprechenden Übertragungsrichtlinieeinstellungen angeben.
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -24,9 +24,9 @@ In diesem Thema wird gezeigt, wie Sie das Herunterladen eines Bits-Auftrags übe
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-include-the-required-bits-header-files"></a>Schritt 1: einschließen der erforderlichen Bits-Header Dateien
+### <a name="step-1-include-the-required-bits-header-files"></a>Schritt 1: Hinzufügen der erforderlichen BITS-Headerdateien
 
-Fügen Sie die folgenden Header Direktiven am Anfang der Quelldatei ein.
+Fügen Sie am Anfang der Quelldatei die folgenden Header-Direktiven ein.
 
 
 ```C++
@@ -36,9 +36,9 @@ Fügen Sie die folgenden Header Direktiven am Anfang der Quelldatei ein.
 
 
 
-### <a name="step-2-initialize-com"></a>Schritt 2: Initialisieren von com
+### <a name="step-2-initialize-com"></a>Schritt 2: Initialisieren von COM
 
-Vor dem Instanziieren der [**ibackgroundcopymanager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) -Schnittstelle (die zum Erstellen eines Bits-Auftrags verwendet wird) müssen Sie com initialisieren, das COM-Threading Modell festlegen und eine Identitätswechsel Ebene von mindestens RPC- \_ C \_ IMP- \_ Ebenen annehmen \_ .
+Vor dem Instanziieren der [**IBackgroundCopyManager-Schnittstelle**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) (die zum Erstellen eines BITS-Auftrags verwendet wird) müssen Sie COM initialisieren, das COM-Threadingmodell festlegen und eine Identitätswechselebene von mindestens RPC \_ C IMP LEVEL \_ \_ \_ IMPERSONATE angeben.
 
 
 ```C++
@@ -58,9 +58,9 @@ if (SUCCEEDED(hr))
 
 
 
-### <a name="step-3-instantiate-the-ibackgroundcopymanager-interface"></a>Schritt 3: Instanziieren der ibackgroundcopymanager-Schnittstelle
+### <a name="step-3-instantiate-the-ibackgroundcopymanager-interface"></a>Schritt 3: Instanziieren der IBackgroundCopyManager-Schnittstelle
 
-Verwenden Sie die [**ibackgroundcopymanager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) -Schnittstelle zum Erstellen von Übertragungs Aufträgen, rufen Sie ein Enumeratorobjekt ab, das die Aufträge in der Warteschlange enthält, und rufen Sie einzelne Aufträge aus der Warteschlange ab.
+Verwenden Sie die [**IBackgroundCopyManager-Schnittstelle,**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) um Übertragungsaufträge zu erstellen, ein Enumeratorobjekt abzurufen, das die Aufträge in der Warteschlange enthält, und einzelne Aufträge aus der Warteschlange abzurufen.
 
 
 ```C++
@@ -75,7 +75,7 @@ hr = CoCreateInstance(__uuidof(BackgroundCopyManager),
 
 
 
-### <a name="step-4-create-the-bits-job"></a>Schritt 4: Erstellen des Bits-Auftrags
+### <a name="step-4-create-the-bits-job"></a>Schritt 4: Erstellen des BITS-Auftrags
 
 Nur der Benutzer, der den Auftrag erstellt, oder ein Benutzer mit Administratorrechten kann dem Auftrag Dateien hinzufügen und die Eigenschaften des Auftrags ändern.
 
@@ -92,9 +92,9 @@ hr = pQueueMgr->CreateJob(L"TransferPolicy",
 
 
 
-### <a name="step-5-specify-the-transfer-policy-setting-for-the-job"></a>Schritt 5: Angeben der Übertragungs Richtlinien Einstellung für den Auftrag
+### <a name="step-5-specify-the-transfer-policy-setting-for-the-job"></a>Schritt 5: Angeben der Übertragungsrichtlinie für den Auftrag
 
-An dieser Stelle geben Sie die Datenübertragungs Richtlinie für den Kosten Zustand an. \_ \_ Um die gewünschten Ergebnisse zu erzielen, können Sie mehrere Bits-Cost-State-Flags festlegen, indem Sie eine bitweise **or** -Kombination verwenden.
+Hier geben Sie die Richtlinie für die Kostenstatusübertragung an. Sie können mehrere BITS \_ COST \_ STATE-Flags festlegen, indem Sie eine bitweise **OR-Kombination** verwenden, um die gewünschten Ergebnisse zu erzielen.
 
 
 ```C++
@@ -119,7 +119,7 @@ if(SUCCEEDED(hr))
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Codebeispiel wird gezeigt, wie die Übertragungs Richtlinie eines Bits-Auftrags so festgelegt wird, dass die Verarbeitung des Auftrags nicht stattfindet, während bestimmte Bedingungen erfüllt werden – z. b. wenn der Benutzer ein Roaming durchführt oder das monatliche Datenübertragungs Limit überschritten hat.
+Das folgende Codebeispiel zeigt, wie die Übertragungsrichtlinie eines BITS-Auftrags so festgelegt wird, dass die Verarbeitung des Auftrags nicht erfolgt, während bestimmte Bedingungen erfüllt sind, z. B. wenn der Benutzer roamingt oder sein monatliches Datenübertragungslimit überschritten hat.
 
 
 ```C++
@@ -240,9 +240,9 @@ cancel:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

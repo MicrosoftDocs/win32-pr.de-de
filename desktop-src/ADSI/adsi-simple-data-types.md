@@ -1,6 +1,6 @@
 ---
-title: Einfache ADSI-Datentypen (IADs. h)
-description: Mit Active Directory Service Interfaces (ADSI) werden die folgenden einfachen Datentypen definiert und verwendet.
+title: ADSI Simple Data Types (Iads.h)
+description: Active Directory Service Interfaces (ADSI) definiert und verwendet die folgenden einfachen Datentypen.
 ms.assetid: 0bd34f13-269f-4f5d-8a18-74577522e402
 ms.tgt_platform: multiple
 keywords:
@@ -17,16 +17,16 @@ keywords:
 - ADS_UTC_TIME
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5530fda2ca1f4fe967eaf376b668a0bedc29c4b6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 422fc0e20195e576f3ade8b39948992d61a376b58fd22f399ca1009db79cbdb0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040246"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119023698"
 ---
-# <a name="adsi-simple-data-types"></a>Einfache ADSI-Datentypen
+# <a name="adsi-simple-data-types"></a>EINFACHE ADSI-Datentypen
 
-Mit Active Directory Service Interfaces (ADSI) werden die folgenden einfachen Datentypen definiert und verwendet.
+Active Directory Service Interfaces (ADSI) definiert und verwendet die folgenden einfachen Datentypen.
 
 
 ```C++
@@ -47,86 +47,86 @@ typedef SYSTEMTIME ADS_UTC_TIME, *PADS_UTC_TIME;
 
 <dl> <dt>
 
-**ADS \_ boolescher Wert**
+**ADS \_ BOOLEAN**
 </dt> <dd>
 
 DWORD
 
 </dd> <dt>
 
-**\_ \_ akdie exakte \_ Zeichenfolge**
+**ADS \_ CASE \_ EXACT \_ STRING**
 </dt> <dd>
 
 LPWSTR
 
 </dd> <dt>
 
-**ADS \_ - \_ \_ Zeichenfolge ignorieren**
+**ADS \_ CASE \_ IGNORE \_ STRING**
 </dt> <dd>
 
 LPWSTR
 
 </dd> <dt>
 
-**ADS \_ DN- \_ Zeichenfolge**
+**ADS \_ DN \_ STRING**
 </dt> <dd>
 
 LPWSTR
 
 </dd> <dt>
 
-**ADS- \_ Ganzzahl**
+**ADS \_ INTEGER**
 </dt> <dd>
 
 DWORD
 
 </dd> <dt>
 
-**Werbung für \_ große \_ ganze Zahlen**
+**ADS \_ LARGE \_ INTEGER**
 </dt> <dd>
 
-[**große \_ ganze Zahl**](/windows/win32/api/winnt/ns-winnt-large_integer-r1)
+[**GROßE \_ GANZE ZAHL**](/windows/win32/api/winnt/ns-winnt-large_integer-r1)
 
 </dd> <dt>
 
-**\_numerische \_ Zeichenfolge ADS**
-</dt> <dd>
-
-LPWSTR
-
-</dd> <dt>
-
-**ADS- \_ Objekt \_ Klasse**
+**ADS \_ NUMERIC \_ STRING**
 </dt> <dd>
 
 LPWSTR
 
 </dd> <dt>
 
-**\_Druck druckbare \_ Zeichenfolge**
+**\_ \_ ADS-OBJEKTKLASSE**
 </dt> <dd>
 
 LPWSTR
 
 </dd> <dt>
 
-**ADS- \_ Such \_ handle**
+**ADS \_ PRINTABLE \_ STRING**
+</dt> <dd>
+
+LPWSTR
+
+</dd> <dt>
+
+**ADS \_ SEARCH \_ HANDLE**
 </dt> <dd>
 
 HANDLE
 
 </dd> <dt>
 
-**Anzeigen der \_ UTC- \_ Zeit**
+**ADS \_ UTC \_ TIME**
 </dt> <dd>
 
-[**System Time**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)
+[**Systemtime**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ADSI ein Attribut liest, das im LDAP-Schema als **Integer** definiert wurde, wird die ganze Zahl immer als 32-Bit-Wert behandelt, und die Daten können abgeschnitten werden. Dies ist nur bei LDAP-Servern von Bedeutung, die ganzzahlige Werte beliebig groß sind. Wenn das Attribut ein durch die Erweiterung des Schemas definiertes benutzerdefiniertes Attribut ist, kann dieses Problem vermieden werden, indem das benutzerdefinierte Attribut als Zeichenfolge definiert wird.
+Wenn ADSI ein Attribut liest, das im LDAP-Schema als **INTEGER** definiert wurde, verarbeitet es die ganze Zahl immer als 32-Bit-Wert und kann die Daten abschneiden. Dies ist nur ein Problem für LDAP-Server, die ganzzahlige Werte beliebiger Größe zulassen. Wenn das Attribut ein benutzerdefiniertes Attribut ist, das durch Erweitern des Schemas definiert wird, kann dieses Problem vermieden werden, indem das benutzerdefinierte Attribut als Zeichenfolge definiert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -136,7 +136,7 @@ Wenn ADSI ein Attribut liest, das im LDAP-Schema als **Integer** definiert wurde
 |-------------------------------------|-----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                    |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl> |
 
 
 

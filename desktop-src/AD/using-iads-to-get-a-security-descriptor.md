@@ -1,22 +1,22 @@
 ---
-title: Verwenden von IADs, um eine Sicherheits Beschreibung zu erhalten
-description: In den folgenden Codebeispielen wird die IADs Get-Methode verwendet, um einen IADsSecurityDescriptor-Zeiger auf die ntSecurityDescriptor-Eigenschaft eines Objekts in Active Directory Domain Services abzurufen.
+title: Verwenden von IADs zum Erhalten eines Sicherheitsdeskriptors
+description: In den folgenden Codebeispielen wird die IADs Get-Methode verwendet, um einen IADsSecurityDescriptor-Zeiger auf die nTSecurityDescriptor-Eigenschaft eines Objekts in Active Directory Domain Services.
 ms.assetid: ce8948ac-0644-42a0-8b77-5a06d3fcf042
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, verwenden von IADs, um eine Sicherheits Beschreibung zu erhalten
+- 'Active Directory-Beispiele: Active Directory mithilfe von IADs zum Erhalten eines Sicherheitsdeskriptors'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ef6fa2a4137f39bc31251f3b327b9dfc29a91318
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 24ecf0d8921e797a4d226d472f34b3172a01d9fb67d96ca61e9f0b491a7f7851
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103724385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024518"
 ---
-# <a name="using-iads-to-get-a-security-descriptor"></a>Verwenden von IADs, um eine Sicherheits Beschreibung zu erhalten
+# <a name="using-iads-to-get-a-security-descriptor"></a>Verwenden von IADs zum Erhalten eines Sicherheitsdeskriptors
 
-In den folgenden Codebeispielen wird die [**IADs:: Get**](/windows/desktop/api/iads/nf-iads-iads-get) -Methode verwendet, um einen [**IADsSecurityDescriptor**](/windows/desktop/api/iads/nn-iads-iadssecuritydescriptor) -Zeiger auf die **ntSecurityDescriptor** -Eigenschaft eines Objekts in Active Directory Domain Services abzurufen.
+In den folgenden Codebeispielen wird die [**IADs::Get-Methode**](/windows/desktop/api/iads/nf-iads-iads-get) verwendet, um einen [**IADsSecurityDescriptor-Zeiger**](/windows/desktop/api/iads/nn-iads-iadssecuritydescriptor) auf die **nTSecurityDescriptor-Eigenschaft** eines Objekts in Active Directory Domain Services.
 
 
 ```VB
@@ -90,6 +90,6 @@ HRESULT GetSDFromIADs(
 
 
 
- 
+ 
 
- 
+ 

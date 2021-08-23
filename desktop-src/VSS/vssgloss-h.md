@@ -5,30 +5,30 @@ ms.assetid: e99de576-ed73-4b91-a58c-4fae739d6709
 title: H (Volumeschattenkopie-Dienst)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b285e503b8105481cbafa49ef25d8085f72250d6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 235776eed621d744054be5cee9dc31b34af59a563def4f5eb2481b04a0c3ebf8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354482"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056173"
 ---
 # <a name="h-volume-shadow-copy-service"></a>H (Volumeschattenkopie-Dienst)
 
-[a](vssgloss-a.md) [B](vssgloss-b.md) [C](vssgloss-c.md) [D](vssgloss-d.md) [E](vssgloss-e.md) [F](vssgloss-f.md) [G](vssgloss-g.md) H [I](vssgloss-i.md) J K [L](vssgloss-l.md) M [N](vssgloss-n.md) [O](vssgloss-o.md) [P](vssgloss-p.md) Q [R](vssgloss-r.md) [S](vssgloss-s.md) [T](vssgloss-t.md) U [V](vssgloss-v.md) [W](vssgloss-w.md) X Y Z
+[A](vssgloss-a.md) [B](vssgloss-b.md) [C](vssgloss-c.md) [D](vssgloss-d.md) [E](vssgloss-e.md) F [](vssgloss-f.md) [G](vssgloss-g.md) H [I](vssgloss-i.md) J K [L](vssgloss-l.md) M [N](vssgloss-n.md) [O](vssgloss-o.md) [P](vssgloss-p.md) Q [R](vssgloss-r.md) [S](vssgloss-s.md) T [U](vssgloss-t.md) [V](vssgloss-v.md) [W](vssgloss-w.md) X Y Z
 
 <dl> <dt>
 
-<span id="base.vssgloss_hardware_based_provider"></span><span id="BASE.VSSGLOSS_HARDWARE_BASED_PROVIDER"></span>**Hardware Anbieter**
+<span id="base.vssgloss_hardware_based_provider"></span><span id="BASE.VSSGLOSS_HARDWARE_BASED_PROVIDER"></span>**Hardwareanbieter**
 </dt> <dd>
 
-Ein Anbieter, der Schatten Kopien auf der Hardwareebene verwaltet, indem er in Verbindung mit einem Hardware Speicher Adapter oder-Controller arbeitet. Siehe auch [*Anbieter*](vssgloss-p.md), [*Softwareanbieter*](vssgloss-s.md).
+Ein Anbieter, der Schattenkopien auf Hardwareebene verwaltet, indem er in Verbindung mit einem Hardwarespeicheradapter oder Controller arbeitet. Siehe auch [*Anbieter*](vssgloss-p.md), [*Softwareanbieter*](vssgloss-s.md).
 
 </dd> <dt>
 
-<span id="base.vssgloss_hidden_shadow_copy"></span><span id="BASE.VSSGLOSS_HIDDEN_SHADOW_COPY"></span>**verborgene Schatten Kopie**
+<span id="base.vssgloss_hidden_shadow_copy"></span><span id="BASE.VSSGLOSS_HIDDEN_SHADOW_COPY"></span>**Ausgeblendete Schattenkopie**
 </dt> <dd>
 
-Ein ausgeblendetes Volume, bei dem es sich um ein Volume handelt, das nicht eingebunden und im Windows-Namespace nicht als Laufwerk Buchstabe oder bereitgestellter Ordner verfügbar gemacht wird.
+Ein ausgeblendetes Volume, bei dem es sich um ein Volume handelt, das nicht bereitgestellt und nicht im Windows als Laufwerkbuchstaben oder bereitgestellter Ordner verfügbar gemacht wird.
 
 </dd> </dl>
 

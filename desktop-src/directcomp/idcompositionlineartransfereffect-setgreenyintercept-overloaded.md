@@ -1,9 +1,9 @@
 ---
-title: Idcompositionlineartransfereffect setgreenyintercept-Methode (Dcomp. h)
-description: Legt den Y-Abfang der linearen Funktion für den grünen Kanal fest.
+title: IDCompositionLinearTransferEffect setgreenyintercept-Methoden (Dcomp.h)
+description: Legt den Y-Intercept der linearen Funktion für den grünen Kanal fest.
 ms.assetid: 1aa4c933-ee49-2772-9a7e-b120b5bdd331
 keywords:
-- Setgreenyintercept-Methoden directcomposition
+- SetGreenYIntercept-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,25 +12,25 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: d74c5580ee5960c710d37d780e33c51fae6d091d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 053becac87899b8bd70145aef2597d97523212c7a30353fb8a08b80d93ef2108
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119043238"
 ---
-# <a name="idcompositionlineartransfereffectsetgreenyintercept-methods"></a>Idcompositionlineartransfereffect:: setgreenyintercept-Methoden
+# <a name="idcompositionlineartransfereffectsetgreenyintercept-methods"></a>IDCompositionLinearTransferEffect::setgreenyintercept-Methoden
 
-Legt den Y-Abfang der linearen Funktion für den grünen Kanal fest.
+Legt den Y-Intercept der linearen Funktion für den grünen Kanal fest.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                           | BESCHREIBUNG                                                                   |
+| Methode                                                                                                           | Beschreibung                                                                   |
 |:-----------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
-| [**Setgreenyintercept**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setgreenyintercept(float))                               | Legt den Y-Abfang der linearen Funktion für den grünen Kanal fest.<br/> |
-| [**Setgreenyintercept (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setgreenyintercept(idcompositionanimation)) | Legt den Y-Abfang der linearen Funktion für den grünen Kanal fest.<br/> |
+| [**SetGreenYIntercept**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setgreenyintercept(float))                               | Legt den Y-Intercept der linearen Funktion für den grünen Kanal fest.<br/> |
+| [**SetGreenYIntercept (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setgreenyintercept(idcompositionanimation)) | Legt den Y-Intercept der linearen Funktion für den grünen Kanal fest.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Legt den Y-Abfang der linearen Funktion für den grünen Kanal fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
@@ -48,7 +48,7 @@ Legt den Y-Abfang der linearen Funktion für den grünen Kanal fest.
 
 <dl> <dt>
 
-[**Idcompositionlineartransfereffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionlineartransfereffect)
+[**IDCompositionLinearTransferEffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionlineartransfereffect)
 </dt> </dl>
 
 �

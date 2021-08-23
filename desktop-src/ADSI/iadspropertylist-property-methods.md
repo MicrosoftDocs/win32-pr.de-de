@@ -1,10 +1,10 @@
 ---
-title: IADsPropertyList-Eigenschaften Methoden (IADs. h)
-description: Die Eigenschaften Methoden der IADsPropertyList-Schnittstelle lesen die in der folgenden Tabelle beschriebenen Eigenschaften. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsPropertyList-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsPropertyList-Schnittstelle lesen die in der folgenden Tabelle beschriebenen Eigenschaften. Weitere Informationen finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: 3564b61a-5950-4d00-8ea1-86fecd5c6c4e
 ms.tgt_platform: multiple
 keywords:
-- IADsPropertyList-Eigenschaften Methoden ADSI
+- IADsPropertyList-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f13494eeb502122216ffa0c73c24d5b707588e5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b5db37280cd72d51e0f47daa67d3b277418c077d91c9d0a07a1631ac184b4a91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859253"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119023388"
 ---
-# <a name="iadspropertylist-property-methods"></a>IADsPropertyList-Eigenschaften Methoden
+# <a name="iadspropertylist-property-methods"></a>IADsPropertyList-Eigenschaftsmethoden
 
-Die Eigenschaften Methoden der [**IADsPropertyList**](/windows/desktop/api/Iads/nn-iads-iadspropertylist) -Schnittstelle lesen die in der folgenden Tabelle beschriebenen Eigenschaften. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsPropertyList-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadspropertylist) lesen die in der folgenden Tabelle beschriebenen Eigenschaften. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -35,14 +35,14 @@ Die Eigenschaften Methoden der [**IADsPropertyList**](/windows/desktop/api/Iads/
 **PropertyCount**
 </dt> <dd> <dl>
 
-Die Anzahl der Elemente in der Eigenschaften Liste.
+Die Anzahl der Elemente in der Eigenschaftenliste.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -61,7 +61,7 @@ HRESULT get_PropertyCount(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird gezeigt, wie die Anzahl von Elementen in einer Eigenschaften Liste bestimmt wird.
+Das folgende Codebeispiel zeigt, wie die Anzahl der Elemente in einer Eigenschaftenliste bestimmt wird.
 
 
 ```VB
@@ -86,7 +86,7 @@ Cleanup:
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie die Anzahl von Elementen in einer Eigenschaften Liste bestimmt wird.
+Das folgende Codebeispiel zeigt, wie die Anzahl der Elemente in einer Eigenschaftenliste bestimmt wird.
 
 
 ```C++
@@ -139,20 +139,20 @@ int GetPropertyCacheCount(LPWSTR adsPath)
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
 | IID<br/>                      | IID \_ IADsPropertyList ist als C6F602B6-8F69-11D0-8528-00C04FD8D503 definiert.<br/>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IADsPropertyList**](/windows/desktop/api/Iads/nn-iads-iadspropertylist)
 </dt> <dt>
 
-[Schnittstelleneigenschaften Methoden](interface-property-methods.md)
+[Schnittstelleneigenschaftsmethoden](interface-property-methods.md)
 </dt> </dl>
 
  

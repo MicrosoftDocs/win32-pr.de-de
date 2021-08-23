@@ -1,9 +1,9 @@
 ---
-title: Releasedatemonth-Attribut
-description: Das releasedatemonth-Attribut ist der Monats Teil des Datums der ursprünglichen Version des Elements.
+title: ReleaseDateMonth-Attribut
+description: Das ReleaseDateMonth-Attribut ist der Monatsteil des Datums der ursprünglichen Version des Elements.
 ms.assetid: e2ec439e-9d0e-4f9a-aba8-5fbd0e959d84
 keywords:
-- Releasedatemonth-Attribut, Windows Media Player
+- ReleaseDateMonth-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b2c1e4e1ac12651857b6b62fabd4a05a81f9742c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cb3fae9bb43478c808728b153a591fd2f7890a2585641a146c490d6a0d39ede3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995580"
 ---
-# <a name="releasedatemonth-attribute"></a>Releasedatemonth-Attribut
+# <a name="releasedatemonth-attribute"></a>ReleaseDateMonth-Attribut
 
-Das **releasedatemonth** -Attribut ist der Monats Teil des Datums der ursprünglichen Version des Elements.
+Das **ReleaseDateMonth-Attribut** ist der Monatsteil des Datums der ursprünglichen Version des Elements.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 -   [CD-Spuren](cd-track-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird nur in der Bibliotheks Datenbank (oder im Cache) gespeichert.
+Dieses Attribut wird nur in der Bibliotheksdatenbank (oder im Cache) gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,11 +45,11 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

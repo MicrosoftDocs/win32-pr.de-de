@@ -1,5 +1,5 @@
 ---
-description: 'D3DXSHEvalDirectionalLight-Funktion (D3DX10.h): Wertet ein direktionales Licht aus und gibt SH-Daten zurück.'
+description: 'D3DXSHEvalDirectionalLight-Funktion (D3DX10.h): Wertet ein richtungsorientiertes Licht aus und gibt SH-Daten zurück.'
 ms.assetid: b5c657f5-d291-4e53-908c-670b29a1888a
 title: D3DXSHEvalDirectionalLight-Funktion (D3DX10.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 551dad8081af2b0138be4758682d5a660f621141
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7fb50ac274455c67da00d73f91319c0fa17ae85c46f74f4ef605af33e0085ddd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990890"
 ---
 # <a name="d3dxshevaldirectionallight-function-d3dx10h"></a>D3DXSHEvalDirectionalLight-Funktion (D3DX10.h)
 
-Wertet ein gerichtetes Licht aus und gibt sh-Daten zurück.
+Wertet ein richtungsförmiges Licht aus und gibt rekonsistente sphärische Rekonsumerdaten (SH) zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -123,17 +123,17 @@ Optionaler Zeiger auf den SH-Ausgabevektor für die blaue Komponente.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Ausgabevektor wird so berechnet, dass bei einem Intensitätsverhältnis von R/G/B gleich 1 die resultierende Beendigungsausgabe eines Punkts direkt unter dem Licht eines diffusen Objekts mit einem Albedo von 1 1,0 wäre. Dadurch werden drei Beispielbeispiele berechnet. pROut wird zurückgegeben, während pGOut und pBOut zurückgegeben werden können.
+Der Ausgabevektor wird berechnet, sodass die resultierende Ausgangsleistung eines Punkts direkt unter dem Licht eines diffusen Objekts mit einem Albedo von 1 1,0 beträgt, wenn das Intensitätsverhältnis R/G/B gleich 1 ist. Dadurch werden drei Testbeispiele berechnet: pROut wird zurückgegeben, während pGOut und pBOut zurückgegeben werden können.
 
-Auf der Kugel mit Einheitenradius, wie in der folgenden Abbildung dargestellt, kann die Richtung einfach mit theta, dem Winkel um die Z-Achse in der rechtshändigen Richtung und dem Winkel von z angegeben werden.
+Auf der Kugel mit Einheitenradius kann die Richtung wie in der folgenden Abbildung dargestellt einfach mit theta, dem Winkel um die Z-Achse in der rechtshändigen Richtung und phi, dem Winkel von z, angegeben werden.
 
 ![Abbildung einer Kugel mit Einheitenradius](images/spherical-coordinates.png)
 
-Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten (x, y, z) und pherischen Koordinaten (Theta, phi) auf der Einheitenkugel. Der Winkel theta variiert im Bereich von 0 bis 2 Pi, während phi von 0 bis pi variiert.
+Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten (x, y, z) und sphärischen Koordinaten (Theta, Phi) auf der Einheitenkugel. Der Winkel theta variiert über den Bereich von 0 bis 2 Pi, während phi von 0 bis pi variiert.
 
 ![Gleichungen der Beziehung zwischen kartesischen und sphärischen Koordinaten](images/spherical-coordinates-equations.png)
 
@@ -141,7 +141,7 @@ Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEXLIST. columnidckey-Eigenschaft'
-title: JET_INDEXLIST. columnidckey (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_INDEXLIST.columnidcKey-Eigenschaft'
+title: JET_INDEXLIST.columnidcKey-Eigenschaft
 TOCTitle: 'columnidcKey property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_INDEXLIST.columnidcKey
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_indexlist.columnidckey(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 884bfaaea30600919a905616cd0e808541f56ce0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f4d13e55184beaa67fdecff2c0b2904dba1cc6832338f7bc73cdd0b0790a426e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118980195"
 ---
-# <a name="jet_indexlistcolumnidckey-property"></a>JET_INDEXLIST. columnidckey (Eigenschaft)
+# <a name="jet_indexlistcolumnidckey-property"></a>JET_INDEXLIST.columnidcKey-Eigenschaft
 
-Ruft das ColumnID der Spalte in der temporären Tabelle ab, in der die Anzahl der eindeutigen Schlüssel im Index gespeichert wird. Dieser Wert ist nicht aktuell und wird nur von "API. jetcomputestats" aktualisiert. Die Spalte ist vom Typ [Long](./jet-coltyp-enumeration.md).
+Ruft die columnid der Spalte in der temporären Tabelle ab, in der die Anzahl der eindeutigen Schlüssel im Index gespeichert wird. Dieser Wert ist nicht aktuell und wird nur durch "Api.JetComputeStats" aktualisiert. Die Spalte ist vom Typ [Long.](./jet-coltyp-enumeration.md)
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_COLUMNID columnidcKey { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INDEXLIST-Klasse](./jet-indexlist-class.md)
 
-[Mitglieder JET_INDEXLIST](./jet-indexlist-members.md)
+[JET_INDEXLIST Member](./jet-indexlist-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

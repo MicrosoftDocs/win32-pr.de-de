@@ -1,116 +1,116 @@
 ---
-title: Microsoft-Agent-Animationen für Genie-Zeichen
-description: Microsoft-Agent-Animationen für Genie-Zeichen
+title: Microsoft Agent-Animationen für Figurzeichen
+description: Microsoft Agent-Animationen für Figurzeichen
 ms.assetid: 56c42d7a-32af-47cb-8578-0a89507a41ed
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d4f583fc6540b5fe13cc157542d69352a8ea5b31
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 204da244b74e96e239d540662dabf73af82001748b395da8e660f53fe4cf85e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976100"
 ---
-# <a name="microsoft-agent-animations-for-genie-character"></a>Microsoft-Agent-Animationen für Genie-Zeichen
+# <a name="microsoft-agent-animations-for-genie-character"></a>Microsoft Agent-Animationen für Figurzeichen
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Das [Microsoft-Agent-Genie-Zeichen](https://www.microsoft.com/downloads/details.aspx?FamilyID=da86ba4e-bc2d-4c1d-b5a0-3183fe206414) ist ein urheberrechtlich geschütztes Werk der Microsoft Corporation.
+Das [Microsoft Agent -Zeichen ist](https://www.microsoft.com/downloads/details.aspx?FamilyID=da86ba4e-bc2d-4c1d-b5a0-3183fe206414) ein urheberrechtlich geschütztes Microsoft Corporation.
 
-Genie unterstützt die in der folgenden Tabelle aufgeführten Animationen. Informationen dazu, wie Sie die Animationen des Zeichens aufzurufen, finden Sie unter [Programmieren der Microsoft-Agent-Server Schnittstelle](/windows/desktop/lwef/programming-the-microsoft-agent-server-interface) und [Programmieren des Microsoft-agentsteuerelements](programming-the-microsoft-agent-control.md) .
+Dabei werden die animationen unterstützt, die in der folgenden Tabelle aufgeführt sind. Informationen zum Aufrufen der Animationen des Zeichens finden Sie unter Programmieren der [Microsoft Agent-Serverschnittstelle](/windows/desktop/lwef/programming-the-microsoft-agent-server-interface) und Programmieren des Microsoft Agent-Steuerelements. [](programming-the-microsoft-agent-control.md)
 
-Wenn Sie auf diese Zeichen Animationen mithilfe des HTTP-Protokolls und der [**Get**](get-method.md) -oder Server [**Prepare**](/windows/desktop/lwef/iagentcharacter--prepare) -Methode des Steuer Elements zugreifen, sollten Sie überprüfen, wie Sie Sie herunterladen. Anstatt alle Animationen gleichzeitig herunterzuladen, können Sie zuerst die **Anzeige** -und **Sprech** Zustands Animationen abrufen. Dies ermöglicht es Ihnen, das Zeichen schnell anzuzeigen und zu sprechen, während andere Animationen asynchron heruntergeschaltet werden. Verwenden Sie außerdem das [**requestcomplete**](requestcomplete-event.md) -Ereignis, um sicherzustellen, dass die Zeichen-und Animationsdaten erfolgreich geladen werden. Wenn eine Lade Anforderung fehlschlägt, können Sie erneut versuchen, die Daten zu laden oder eine entsprechende Meldung anzuzeigen.
+Wenn Sie mithilfe des HTTP-Protokolls und der [**Prepare-Methode**](get-method.md) des -Steuerelements oder des Servers auf diese Zeichenanimationen zugreifen, überlegen Sie, wie Sie sie herunterladen. [](/windows/desktop/lwef/iagentcharacter--prepare) Anstatt alle Animationen gleichzeitig herunterzuladen, sollten Sie  zuerst die Animationen zum Anzeigen und **sprechenden** Zustand abrufen. Dadurch können Sie das Zeichen schnell anzeigen und sprechen lassen, während andere Animationen asynchron heruntergefahren werden. Verwenden Sie außerdem das [**RequestComplete-Ereignis,**](requestcomplete-event.md) um sicherzustellen, dass Zeichen- und Animationsdaten erfolgreich geladen werden. Wenn bei einer Ladeanforderung ein Fehler auftritt, können Sie versuchen, die Daten zu laden oder eine entsprechende Meldung anzuzeigen.
 
-Wenn die **Rückgabe** Animationen einer Animation mithilfe von Beendigungs Verzweigungen definiert werden, muss Sie nicht explizit aufgerufen werden. Der-Agent **gibt die Rückgabe** Animation automatisch vor der nächsten Animation wieder. Wenn jedoch eine **Rückgabe** Animation aufgeführt ist, müssen Sie die Animation mithilfe der [**Play**](play-method.md) -Methode vor einer anderen Animation abrufen, um einen reibungslosen Übergang bereitzustellen. Wenn keine **Rückgabe** Animation aufgeführt ist, endet die Animation in der Regel ohne eine Übergangs Animation.
+Wenn die **Rückgabeanimationen** einer Animation mit Exitbranches definiert werden, müssen Sie sie nicht explizit aufrufen. Der Agent gibt die **Return-Animation automatisch** vor der nächsten Animation wieder. Wenn jedoch eine **Return-Animation** aufgeführt wird, müssen Sie die Animation mit der [**Play-Methode**](play-method.md) vor einer anderen Animation aufrufen, um einen reibungslosen Übergang zu ermöglichen. Wenn  keine Rückgabeanimation aufgeführt wird, endet die Animation in der Regel, ohne dass eine Übergangsanimation erforderlich ist.
 
-Die Zeichen Datei enthält Soundeffekte für eine Animation, wie in der folgenden Tabelle angegeben. Sound Effekte werden nur wiedergegeben, wenn diese Option auf der Eigenschaften Seite des Microsoft-Agents aktiviert ist. Sie können auch Soundeffekte in der Anwendung deaktivieren.
+Die Zeichendatei enthält Soundeffekte für einige Animationen, wie in der folgenden Tabelle angegeben. Soundeffekte werden nur dann wieder verwendet, wenn diese Option im Microsoft Agent-Eigenschaftenblatt aktiviert ist. Sie können auch Soundeffekte in Ihrer Anwendung deaktivieren.
 
 
 
-| Animation                 | Animation zurückgeben         | Unterstützt sprach | Sound Effekte | Zustand zugewiesen                            | BESCHREIBUNG                                                    |
+| Animation                 | Rückgabeanimation         | Unterstützt Sprech | Soundeffekte | Zustand zugewiesen                            | BESCHREIBUNG                                                    |
 |---------------------------|--------------------------|-------------------|---------------|----------------------------------------------|----------------------------------------------------------------|
-| **Bestätigen**           | Keine                     | Nein                | **Nein**        | Keine                                         | Nods-Kopfzeile                                                      |
-| **Warnung**                 | Ja, mithilfe von Exit branches | Ja               | **Nein**        | **Raum**                                | Ausrichten und Auslösen von Augenbrauen                                |
-| **Ankündigung**              | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Löst Hand                                                    |
-| **Blink**                 | Keine                     | Nein                | **Nein**        | **IdlingLevel1** **IdlingLevel2**<br/> | Blinks-Augen                                                    |
-| **Verwirrt**              | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Kratz Spitze                                                 |
-| **Gratuliere**          | Ja, mithilfe von Exit branches | Ja               | **Ja**       | Keine                                         | Applaudiert                                                       |
-| **Gratuliere \_ 2**       | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Gibt die Daumen Bewegung an                                        |
-| **Ablehnen**               | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Löst Hände und shakes Kopf                                   |
-| **DoMagic1**              | Keine                     | Ja               | **Nein**        | Keine                                         | Wechselt zur Seite und löst Hände aus                                 |
-| **DoMagic2**              | Ja, mithilfe von Exit branches | Nein                | **Ja**       | Keine                                         | Senkt Hände, Clouds werden angezeigt.                                    |
-| **Dontrecognize**         | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Hält Hand an Ohr                                              |
-| **Explain**               | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Erweitert die Arme an die Seite.                                           |
-| **Gesturedown**           | Ja, mithilfe von Exit branches | Ja               | **Nein**        | **Gesturingdown**                            | Gesten nach unten                                                  |
-| **Gestureleft**           | Ja, mithilfe von Exit branches | Ja               | **Nein**        | **Gesturingleft**                            | Gesten Links                                                  |
-| **Gestureright**          | Ja, mithilfe von Exit branches | Ja               | **Nein**        | **Gesturingright**                           | Gesten rechts                                                 |
-| **Gestureup**             | Ja, mithilfe von Exit branches | Ja               | **Nein**        | **Gesturingup**                              | Gesten nach oben                                                    |
-| **Getatgende**          | **Getattentionreturn**   | Ja               | **Nein**        | Keine                                         | Wellen-Arme                                                     |
-| **Getattentionfort gesetzt** | **Getattentionreturn**   | Ja               | **Nein**        | Keine                                         | Wellen, wieder                                               |
-| **Getattentionreturn**    | Keine                     | Nein                | **Nein**        | Keine                                         | Kehrt zur neutralen Position zurück.                                    |
-| **Greet**                 | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Lang                                                           |
-| **Hören \_ 1**            | Keine                     | Nein                | **Nein**        | **Hörvermögen**                                  | Ears-Erweiterung ( \* Schleifen Animation)                              |
-| **Hören \_ 2**            | Keine                     | Nein                | **Nein**        | **Hörvermögen**                                  | Tilts Head Left ( \* Schleifen Animation)                          |
-| **Hören \_ 3**            | Keine                     | Nein                | **Nein**        | **Hörvermögen**                                  | Schaltet die Kopfzeile ( \* Schleifen Animation).                          |
-| **Hören \_ 4**            | Keine                     | Nein                | **Nein**        | **Hörvermögen**                                  | "Head right" ( \* Schleifen Animation)                         |
-| **Ausblenden**                  | Keine                     | Nein                | **Ja**       | **Zieher**                                   | In Rauch verschwinden                                          |
-| **Idle1 \_ 1**              | Keine                     | Nein                | **Nein**        | **IdlingLevel1** IdlingLevel2                | In den Atemtest                                                   |
-| **Idle1 \_ 2**              | Keine                     | Nein                | **Nein**        | **IdlingLevel1** **IdlingLevel2**<br/> | Nach rechts und blinkt                                       |
-| **Idle1 \_ 3**              | Ja, mithilfe von Exit branches | Nein                | **Nein**        | **IdlingLevel1** **IdlingLevel2**<br/> | Links und blinkt                                        |
-| **Idle1 \_ 4**              | Keine                     | Nein                | **Nein**        | **IdlingLevel1** **IdlingLevel2**<br/> | Nach rechts und blinkt                             |
-| **Idle1 \_ 5**              | Ja, mithilfe von Exit branches | Nein                | **Nein**        | **IdlingLevel1** **IdlingLevel2**<br/> | Nach unten und blinkt                                        |
-| **Idle1 \_ 6**              | Keine                     | Nein                | **Nein**        | **IdlingLevel1** **IdlingLevel2**<br/> | Nach oben und blinkt                                          |
-| **Idle2 \_ 1**              | Keine                     | Nein                | **Nein**        | **IdlingLevel2**                             | WISP-Schlangen                                                    |
-| **Idle2 \_ 2**              | Ja, mithilfe von Exit branches | Nein                | **Nein**        | **IdlingLevel2**                             | Zeigt Scroll und Lesevorgänge an                                       |
-| **Idle2 \_ 3**              | Ja, mithilfe von Exit branches | Nein                | **Nein**        | **IdlingLevel2**                             | Zeigt Scroll und Schreibvorgänge an                                      |
-| **Idle3 \_ 1**              | Keine                     | Nein                | **Ja**       | **IdlingLevel3**                             | Gähner                                                          |
-| **Idle3 \_ 2**              | Ja, mithilfe von Exit branches | Nein                | **Ja**       | **IdlingLevel3**                             | Fällt in den Standbymodus ( \* Schleifen Animation)                             |
-| **Suche**              | **Lookdownreturn**       | Nein                | **Nein**        | Keine                                         | Nach unten                                                     |
-| **Lookdownblink**         | **Lookdownreturn**       | Nein                | **Nein**        | Keine                                         | Blinks nach unten                                            |
-| **Lookdownreturn**        | Keine                     | Nein                | **Nein**        | Keine                                         | Kehrt zur neutralen Position zurück.                                    |
-| **Lookleft**              | **Lookleftreturn**       | Nein                | **Nein**        | Keine                                         | Nach links                                                     |
-| **Lookleftblink**         | **Lookleftreturn**       | Nein                | **Nein**        | Keine                                         | Links nach links                                            |
-| **Lookleftreturn**        | Keine                     | Nein                | **Nein**        | Keine                                         | Kehrt zur neutralen Position zurück.                                    |
-| **Lookright**             | **Lookrightreturn**      | Nein                | **Nein**        | Keine                                         | Nach rechts                                                    |
-| **Lookrightblink**        | **Lookrightreturn**      | Nein                | **Nein**        | Keine                                         | Blinks mit rechts                                           |
-| **Lookrightreturn**       | Keine                     | Nein                | **Nein**        | Keine                                         | Kehrt zur neutralen Position zurück.                                    |
-| **Suche**                | **Lookupreturn**         | Nein                | **Nein**        | Keine                                         | Nach unten                                                       |
-| **Lookupblink**           | **Lookupreturn**         | Nein                | **Nein**        | Keine                                         | Blinks nach oben                                              |
-| **Lookupreturn**          | Keine                     | Nein                | **Nein**        | Keine                                         | Kehrt zur neutralen Position zurück.                                    |
-| **Nach unten**              | Ja, mithilfe von Exit branches | Nein                | **Ja**       | **"Wvingdown"**                               | Nach unten                                                     |
-| **"Muveleft"**              | Ja, mithilfe von Exit branches | Nein                | **Ja**       | **"Wvingleft"**                               | Nach links                                                     |
-| **Überprüfen**             | Ja, mithilfe von Exit branches | Nein                | **Ja**       | **"Wvingright"**                              | Nach rechts                                                    |
-| **MoveUp**                | Ja, mithilfe von Exit branches | Nein                | **Ja**       | **"Wvingup"**                                 | Wird nach oben                                                       |
-| **Froh**               | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Ein Lächeln und eine Hand                                |
-| **Prozess**               | Nein                       | Nein                | **Nein**        | Keine                                         | Spinnt in eine Cloud                                             |
-| **Verarbeitung**            | Ja, mithilfe von Exit branches | Nein                | **Nein**        | Keine                                         | Spinnt in eine Cloud ( \* Schleifen Animation)                       |
-| **Lesen**                  | **"Read Return"**           | Ja               | **Ja**       | Keine                                         | Zeigt Scroll, Lesevorgänge und Nachschlagen an                             |
-| **Fortsetzung**         | **"Read Return"**           | Ja               | **Nein**        | Keine                                         | Lese-und Suchvorgänge                                             |
-| **"Read Return"**            | Keine                     | Nein                | **Nein**        | Keine                                         | Kehrt zur neutralen Position zurück.                                    |
-| **Lektüre**               | Ja, mithilfe von Exit branches | Nein                | **Ja**       | Keine                                         | Anzeigen von Scroll und Lesevorgängen ( \* Schleifen Animation)                  |
-| **Restpose**              | Keine                     | Ja               | **Nein**        | **Isch**                                 | Neutrale Position                                               |
-| **Leider**                   | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Trauriger Ausdruck                                                 |
-| **Suche**                | Nein                       | Nein                | **Nein**        | Keine                                         | Zeigt das Fern-und Ausschalten an                                   |
-| **Suchen**             | Ja, mithilfe von Exit branches | Nein                | **Nein**        | Keine                                         | Zeigt das Fern-und Turn-Diagramm an ( \* Schleifen Animation)             |
-| **Anzeigen**                  | Keine                     | Nein                | **Ja**       | **Anzeige**                                  | Erscheint nicht in Rauch                                           |
-| **Startüberwachung**        | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Legt Hand in den Ohr                                               |
-| **Stoplauschen**         | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Legt die Hände über Ohren                                           |
-| **Vorschlagen**               | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Zeigt Glühbirnen an                                             |
-| **Überrascht**             | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Überrascht überrascht                                                |
-| **Meiner**                 | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Sucht mit "Hand an Kinn"                                     |
-| **Berechnung**              | Nein                       | Nein                | **Nein**        | Keine                                         | Sucht mit "Hand an Chin" ( \* Schleifen Animation)               |
-| **Missverständ**             | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Verschiebt eine Hand zu "Chin", andere in "Hip" und löst "Right Augen w" aus. |
-| **Welle**                  | Ja, mithilfe von Exit branches | Ja               | **Nein**        | Keine                                         | Waves                                                          |
-| **Schreiben**                 | **Beschreibeturn**          | Ja               | **Ja**       | Keine                                         | Zeigt Scroll, Schreibvorgänge und Nachschlagen an                            |
-| **Write-Vorgang fortgesetzt**        | **Beschreibeturn**          | Ja               | **Ja**       | Keine                                         | Schreibvorgänge und suchen                                            |
-| **Beschreibeturn**           | Keine                     | Nein                | **Nein**        | Keine                                         | Kehrt zur neutralen Position zurück.                                    |
-| **Lassungs**               | Ja, mithilfe von Exit branches | Nein                | **Ja**       | Keine                                         | Zeigt Scroll, Schreibvorgänge ( \* Schleifen Animation)                   |
+| **Bestätigen**           | Keine                     | Nein                | **Nein**        | Keine                                         | Nods head                                                      |
+| **Warnung**                 | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | **Hören**                                | Begradigt und löst Augenbrowsen aus                                |
+| **Verkünden**              | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Löst Hand aus                                                    |
+| **Blink**                 | Keine                     | Nein                | **Nein**        | **IdlingLevel1** **IdlingLevel2**<br/> | Blinkende Augen                                                    |
+| **Verwirrt**              | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Scratches head                                                 |
+| **Gratulieren**          | Ja, Verwenden von Exitbranches | Ja               | **Ja**       | Keine                                         | Begrüßt                                                       |
+| **\_2. Januar 2016**       | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Gibt die Geste "Daumen nach oben"                                        |
+| **Ablehnen**               | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Hebt die Hände und schüttelt den Kopf                                   |
+| **DoMagic1**              | Keine                     | Ja               | **Nein**        | Keine                                         | Kehrt zur Seite und hebt die Hände                                 |
+| **DoMagic2**              | Ja, Verwenden von Exitbranches | Nein                | **Ja**       | Keine                                         | Senken der Hände, Clouds werden angezeigt                                    |
+| **DontRecognize**         | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Hand-zu-Hand-an-Hand-Hand                                              |
+| **Explain**               | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Erweitert Die Arme auf die Seite                                           |
+| **GestureDown**           | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | **GesturingDown**                            | Gesten nach unten                                                  |
+| **GestureLeft**           | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | **GesturingLeft**                            | Gesten nach links                                                  |
+| **GestureRight**          | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | **GesturingRight**                           | Gesten nach rechts                                                 |
+| **GestureUp**             | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | **GesturingUp**                              | Gesten nach oben                                                    |
+| **GetAttention**          | **GetAttentionReturn**   | Ja               | **Nein**        | Keine                                         | Wellenarme                                                     |
+| **GetAttentionContinued** | **GetAttentionReturn**   | Ja               | **Nein**        | Keine                                         | Wellenwappen erneut                                               |
+| **GetAttentionReturn**    | Keine                     | Nein                | **Nein**        | Keine                                         | Kehrt zur neutralen Position zurück                                    |
+| **Greet**                 | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Bögen                                                           |
+| **Hörvermögen \_ 1**            | Keine                     | Nein                | **Nein**        | **Hörvermögen**                                  | Verlängerungserweiterung ( \* Schleifenanimation)                              |
+| **Hörvermögen \_ 2**            | Keine                     | Nein                | **Nein**        | **Hörvermögen**                                  | Neigungen nach links ( \* Schleifenanimation)                          |
+| **Hörvermögen \_ 3**            | Keine                     | Nein                | **Nein**        | **Hörvermögen**                                  | Drehen des Kopfes nach links \* (Schleifenanimation)                          |
+| **Hörvermögen \_ 4**            | Keine                     | Nein                | **Nein**        | **Hörvermögen**                                  | Kehrt den Kopf nach rechts ( \* Schleifenanimation)                         |
+| **Ausblenden**                  | Keine                     | Nein                | **Ja**       | **Versteckt**                                   | Verschwindet in Qualm                                          |
+| **Idle1 \_ 1**              | Keine                     | Nein                | **Nein**        | **IdlingLevel1** IdlingLevel2                | Nimmt einen 100-Prozent                                                   |
+| **Idle1 \_ 2**              | Keine                     | Nein                | **Nein**        | **IdlingLevel1** **IdlingLevel2**<br/> | Blicke nach rechts und blinkt                                       |
+| **Idle1 \_ 3**              | Ja, Verwenden von Exitbranches | Nein                | **Nein**        | **IdlingLevel1** **IdlingLevel2**<br/> | Blicke nach links und Blinken                                        |
+| **Idle1 \_ 4**              | Keine                     | Nein                | **Nein**        | **IdlingLevel1** **IdlingLevel2**<br/> | Blick nach rechts und blinkt                             |
+| **Idle1 \_ 5**              | Ja, Verwenden von Exitbranches | Nein                | **Nein**        | **IdlingLevel1** **IdlingLevel2**<br/> | Blick nach unten und Blinken                                        |
+| **Idle1 \_ 6**              | Keine                     | Nein                | **Nein**        | **IdlingLevel1** **IdlingLevel2**<br/> | Blicke nach oben und Blinken                                          |
+| **Idle2 \_ 1**              | Keine                     | Nein                | **Nein**        | **IdlingLevel2**                             | Wisp-Gänge                                                    |
+| **Idle2 \_ 2**              | Ja, Verwenden von Exitbranches | Nein                | **Nein**        | **IdlingLevel2**                             | Zeigt Bildlauf und Lesefunktionen an                                       |
+| **Idle2 \_ 3**              | Ja, Verwenden von Exitbranches | Nein                | **Nein**        | **IdlingLevel2**                             | Zeigt Bildlauf und Schreibvorgänge an                                      |
+| **Idle3 \_ 1**              | Keine                     | Nein                | **Ja**       | **IdlingLevel3**                             | Yawns                                                          |
+| **Idle3 \_ 2**              | Ja, Verwenden von Exitbranches | Nein                | **Ja**       | **IdlingLevel3**                             | Falls a sleep \* (Schleifenanimation)                             |
+| **LookDown**              | **LookDownReturn**       | Nein                | **Nein**        | Keine                                         | Nach unten                                                     |
+| **LookDownBlink**         | **LookDownReturn**       | Nein                | **Nein**        | Keine                                         | Blinkt nach unten                                            |
+| **LookDownReturn**        | Keine                     | Nein                | **Nein**        | Keine                                         | Kehrt zur neutralen Position zurück                                    |
+| **LookLeft**              | **LookLeftReturn**       | Nein                | **Nein**        | Keine                                         | Sieht nach links aus.                                                     |
+| **LookLeftBlink**         | **LookLeftReturn**       | Nein                | **Nein**        | Keine                                         | Blinkt nach links                                            |
+| **LookLeftReturn**        | Keine                     | Nein                | **Nein**        | Keine                                         | Kehrt zur neutralen Position zurück                                    |
+| **LookRight**             | **LookRightReturn**      | Nein                | **Nein**        | Keine                                         | Sieht richtig aus                                                    |
+| **LookRightBlink**        | **LookRightReturn**      | Nein                | **Nein**        | Keine                                         | Blinkt nach rechts                                           |
+| **LookRightReturn**       | Keine                     | Nein                | **Nein**        | Keine                                         | Kehrt zur neutralen Position zurück                                    |
+| **Lookup**                | **LookUpReturn**         | Nein                | **Nein**        | Keine                                         | Sucht nach                                                       |
+| **LookUpBlink**           | **LookUpReturn**         | Nein                | **Nein**        | Keine                                         | Blinks looking up (Blinken nach oben)                                              |
+| **LookUpReturn**          | Keine                     | Nein                | **Nein**        | Keine                                         | Zurück zur neutralen Position                                    |
+| **Movedown**              | Ja, Verwenden von Exitbranches | Nein                | **Ja**       | **MovingDown**                               | Abknaben                                                     |
+| **MoveLeft**              | Ja, Verwenden von Exitbranches | Nein                | **Ja**       | **MovingLeft**                               | Links von Links                                                     |
+| **MoveRight**             | Ja, Verwenden von Exitbranches | Nein                | **Ja**       | **MovingRight**                              | Rechts vom 5.00                                                    |
+| **MoveUp**                | Ja, Verwenden von Exitbranches | Nein                | **Ja**       | **MovingUp**                                 | Nach oben                                                       |
+| **Zufrieden**               | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Lächeln und Halten der Hände                                |
+| **Process**               | Nein                       | Nein                | **Nein**        | Keine                                         | Spins in einer Cloud                                             |
+| **Verarbeitung**            | Ja, Verwenden von Exitbranches | Nein                | **Nein**        | Keine                                         | Drehungen in einer Cloud ( \* Schleifenanimation)                       |
+| **Lesen**                  | **ReadReturn**           | Ja               | **Ja**       | Keine                                         | Zeigt bildlauf, liest und sucht nach.                             |
+| **ReadContinued**         | **ReadReturn**           | Ja               | **Nein**        | Keine                                         | Liest und sucht                                             |
+| **ReadReturn**            | Keine                     | Nein                | **Nein**        | Keine                                         | Zurück zur neutralen Position                                    |
+| **Aktuell gelesen**               | Ja, Verwenden von Exitbranches | Nein                | **Ja**       | Keine                                         | Reveal scroll and reads ( looping animation) (Reveal scroll and reads ( \* Loopinganimation)                  |
+| **RestPose**              | Keine                     | Ja               | **Nein**        | **Sprechen**                                 | Neutrale Position                                               |
+| **Traurig**                   | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Leiderer Ausdruck                                                 |
+| **Suche**                | Nein                       | Nein                | **Nein**        | Keine                                         | Zeigt Binoken und Turns an                                   |
+| **Suche**             | Ja, Verwenden von Exitbranches | Nein                | **Nein**        | Keine                                         | Zeigt Binokulare und Turns an \* (Schleifenanimation)             |
+| **Anzeigen**                  | Keine                     | Nein                | **Ja**       | **Anzeige**                                  | Wird aus dem Feuer heraus angezeigt                                           |
+| **StartListening**        | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Legt Die Hand an das Hörhörnchen                                               |
+| **StopListening**         | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Legt Hand über Kopf                                           |
+| **Vorschlagen**               | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Zeigt eine Glühbirne an                                             |
+| **Überrascht**             | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Sieht überraschend aus                                                |
+| **Denke**                 | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Sucht mit der Hand auf dem Kinn                                     |
+| **Berechnung**              | Nein                       | Nein                | **Nein**        | Keine                                         | Sucht mit der Hand auf dem Kinn ( \* Schleifenanimation)               |
+| **Unsicher**             | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Verschiebt eine Hand an das Kinn, eine andere an die Hip und löst die rechte Augenbrow aus. |
+| **Welle**                  | Ja, Verwenden von Exitbranches | Ja               | **Nein**        | Keine                                         | Wellen                                                          |
+| **Schreiben**                 | **WriteReturn**          | Ja               | **Ja**       | Keine                                         | Zeigt Scrollen, Schreibt und sucht nach                            |
+| **WriteContinued**        | **WriteReturn**          | Ja               | **Ja**       | Keine                                         | Schreibt und sucht                                            |
+| **WriteReturn**           | Keine                     | Nein                | **Nein**        | Keine                                         | Kehrt zur neutralen Position zurück                                    |
+| **Schreiben**               | Ja, Verwenden von Exitbranches | Nein                | **Ja**       | Keine                                         | Zeigt Bildlauf und Schreibvorgänge an ( \* Schleifenanimation)                   |
 
 
 
  
 
-\* Wenn Sie eine Schleifen Animation wiedergeben, müssen Sie " [**Beenden**](stop-method.md) " verwenden, um Sie zu löschen, bevor andere Animationen in der Warteschlange des Zeichens abgespielt werden.
+\* Wenn Sie eine Schleifenanimation wiedergeben, müssen Sie [**beenden**](stop-method.md) verwenden, um sie zu löschen, bevor andere Animationen in der Warteschlange des Zeichens wiedergegeben werden.
 
  
 

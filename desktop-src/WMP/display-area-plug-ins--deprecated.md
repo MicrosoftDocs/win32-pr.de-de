@@ -1,50 +1,50 @@
 ---
-title: Anzeige Bereichs-Plug-ins (veraltet)
-description: Anzeige Bereichs-Plug-ins (veraltet)
+title: Anzeigebereichs-Plug-Ins (veraltet)
+description: Anzeigebereichs-Plug-Ins (veraltet)
 ms.assetid: 424e6f9b-3ecf-4172-9eb9-cd2ac532b488
 keywords:
-- Windows Media Player-Plug-ins, Anzeigebereich
-- Plug-ins, Anzeigebereich
-- Benutzeroberflächen-Plug-ins, Anzeigebereich
-- UI-Plug-ins, Anzeigebereich
-- Anzeige Bereichs-Plug-ins
+- Windows Media Player-Plug-Ins, Anzeigebereich
+- Plug-Ins, Anzeigebereich
+- Benutzeroberflächen-Plug-Ins, Anzeigebereich
+- Benutzeroberflächen-Plug-Ins, Anzeigebereich
+- Anzeigebereich-Plug-Ins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb398d4c0a1c0886183f4d6213874e4e54656965
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3c3be1b5232baf0b05ae2994860b8339f340b04874968c0e665d3d7ececdde17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388797"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997330"
 ---
-# <a name="display-area-plug-ins-deprecated"></a>Anzeige Bereichs-Plug-ins (veraltet)
+# <a name="display-area-plug-ins-deprecated"></a>Anzeigebereichs-Plug-Ins (veraltet)
 
-Diese Seite dokumentiert eine Funktion, die in zukünftigen Versionen von Windows Media Player und dem Windows Media Player SDK möglicherweise nicht verfügbar ist.
+Auf dieser Seite wird ein Feature dokumentiert, das in zukünftigen Versionen von Windows Media Player und des Windows Media Player SDK möglicherweise nicht verfügbar ist.
 
-Benutzeroberflächen-Plug-Ins für die Anzeige Fläche werden im Hauptbereich des Fensters " **jetzt Wiedergabe** " angezeigt, unterhalb des Künstlers und Nachverfolgen von Informationen und Links vom Wiedergabe Bereich. Es kann jeweils nur ein Anzeige Bereichs-Plug-in aktiviert werden. Wenn ein Anzeige Bereichs-Plug-in aktiviert ist, kann der Spieler nicht in den Vollbildmodus wechseln.
+Benutzeroberflächen-Plug-Ins für Anzeigebereich werden  im Hauptbereich des Bereichs "Jetzt abspielt" unterhalb des Interpreten und der Titelinformationen und links neben dem Wiedergabelistenbereich angezeigt. Es kann immer nur ein Anzeigebereichs-Plug-In gleichzeitig aktiviert werden. Wenn ein Anzeigebereichs-Plug-In aktiviert ist, kann der Player nicht in den Vollbildmodus wechseln.
 
-Anzeige Bereichs-Plug-ins sind zum Anzeigen großer Mengen von Informationen nützlich. Beispielsweise kann ein Anzeige Bereichs-Plug-in Informationen über das aktuell wiedergegebene Medien Element abrufen und Verwandte Artikel, Interviews und Reviews anzeigen. Ein Anzeige Bereichs-Plug-in kann ein Microsoft Internet Explorer-Browserfenster hosten, um diese Informationen mithilfe von HTML anzuzeigen.
-
-> [!Note]  
-> Ein gehosteter Browserfenster kann die ActiveX-Version von Windows Media Player einbetten. Dies wird jedoch nicht empfohlen, da das eingebettete Steuerelement nicht mit dem eigenständigen Player kommunizieren kann, der es enthält.
-
- 
+Anzeigebereichs-Plug-Ins sind nützlich, um große Mengen von Informationen anzuzeigen. Beispielsweise kann ein Anzeigebereichs-Plug-In Informationen über das aktuell abspielte Medienelement abrufen und verwandte Artikel, Berichte und Rezensionen anzeigen. Ein Anzeigebereichs-Plug-In kann ein Microsoft Internet Explorer-Browserfenster hosten, um diese Informationen über HTML anzuzeigen.
 
 > [!Note]  
-> Windows Media Player schließt jedes geöffnete Anzeige Bereichs-Plug-in, wenn der Benutzerinhalte wieder gibt, die Videos enthalten.
+> Ein gehostetes Browserfenster kann die ActiveX-Version von Windows Media Player einbetten. Dies wird jedoch nicht empfohlen, da das eingebettete Steuerelement nicht mit dem eigenständigen Player kommunizieren kann, der es enthält.
 
- 
+ 
+
+> [!Note]  
+> Windows Media Player schließt alle Plug-Ins für geöffnete Anzeigebereich, wenn der Benutzer Inhalte wiederruft, die Videos enthalten.
+
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Übersicht über das UI-Plug-in**](ui-plug-in-overview.md)
+[**Übersicht über das Benutzeroberflächen-Plug-In**](ui-plug-in-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

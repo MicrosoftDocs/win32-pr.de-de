@@ -1,26 +1,26 @@
 ---
-title: Beispiel Code zum Erstellen eines Attributs
-description: Im folgenden Codebeispiel wird ein attributeSchema-Objekt im Schema Container erstellt.
+title: Beispielcode zum Erstellen eines Attributs
+description: Im folgenden Codebeispiel wird ein attributeSchema-Objekt im Schemacontainer erstellt.
 ms.assetid: 5f679a88-29d1-44ec-918b-091522188ae9
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code zum Erstellen eines Attribut-AD
+- Beispielcode zum Erstellen eines Attribut-AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62ecd0d0c85db3d7dee5855010f35a7ed798ba17
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: f2fd20980ff184f612e4639ed0e1a31e1a3a84451bddc971b491670c0afac71f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104472572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962300"
 ---
-# <a name="example-code-for-creating-an-attribute"></a>Beispiel Code zum Erstellen eines Attributs
+# <a name="example-code-for-creating-an-attribute"></a>Beispielcode zum Erstellen eines Attributs
 
-Im folgenden Codebeispiel wird ein [**attributeSchema**](/windows/desktop/ADSchema/c-attributeschema) -Objekt im Schema Container erstellt.
+Im folgenden Codebeispiel wird ein [**attributeSchema-Objekt**](/windows/desktop/ADSchema/c-attributeschema) im Schemacontainer erstellt.
 
-Die Funktion " **initiateattribute** " erstellt ein [**attributeSchema**](/windows/desktop/ADSchema/c-attributeschema) -Objekt im Schema Container, führt jedoch keinen Commit für das Verzeichnis aus. Ruft die [**IADs. SetInfo**](/windows/desktop/api/iads/nf-iads-iads-setinfo) -Methode auf, um das neue **attributeSchema** -Objekt in das Verzeichnis zu übertragen.
+Die **CreateAttribute-Funktion** erstellt ein [**attributeSchema-Objekt**](/windows/desktop/ADSchema/c-attributeschema) im Schemacontainer, führt aber keinen Commit für das Verzeichnis aus. Rufen Sie die [**IADs.SetInfo-Methode**](/windows/desktop/api/iads/nf-iads-iads-setinfo) auf, um das neue **attributeSchema-Objekt** in das Verzeichnis zu committen.
 
-Die **bytestovariantarray** -Funktion ist eine Utility-Funktion, die eine Oktett-Zeichenfolge in ein Variant-Array packt.
+Die **BytesToVariantArray-Funktion** ist eine Hilfsprogrammfunktion, die eine Oktettzeichenfolge in ein Variantarray packt.
 
 
 ```C++
@@ -477,6 +477,6 @@ HRESULT CreateAttribute(
 
 
 
- 
+ 
 
- 
+ 

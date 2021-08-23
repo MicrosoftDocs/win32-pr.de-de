@@ -1,9 +1,9 @@
 ---
-title: Performservervalidation (etapextensionstype)-Element (V1-Schema)
-description: Erfahren Sie mehr über das performservervalidation (Peer-extensionstype)-Element. Dieses Element gibt an, ob die Server Validierung ausgeführt wird. | Performservervalidation (etapextensionstype)-Element (V1-Schema)
+title: PerformServerValidation (PeapExtensionsType)-Element (v1-Schema)
+description: Erfahren Sie mehr über das PerformServerValidation-Element (PeapExtensionsType). Dieses Element gibt an, ob die Serverüberprüfung ausgeführt wird. | PerformServerValidation (PeapExtensionsType)-Element (v1-Schema)
 ms.assetid: b0483ed0-a02f-4f60-b1ae-7c5e6be8e196
 keywords:
-- EAPHost-Element
+- Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 256d942d68c30788180f2d8080f963c1d79b401a
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 74be4614d1a08baf27b08cee7ffa46d36f658c36176e39f80714387981d45f13
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106355130"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042828"
 ---
-# <a name="performservervalidation-peapextensionstype-element-v1-schema"></a>Performservervalidation (etapextensionstype)-Element (V1-Schema)
+# <a name="performservervalidation-peapextensionstype-element-v1-schema"></a>PerformServerValidation (PeapExtensionsType)-Element (v1-Schema)
 
-Das **performservervalidation (etapextensionstype)** -Element gibt an, ob die Server Validierung ausgeführt wird.
+Das **PerformServerValidation-Element (PeapExtensionsType)** gibt an, ob eine Serverüberprüfung ausgeführt wird.
 
 ``` syntax
 <xs:element
@@ -30,20 +30,20 @@ Das **performservervalidation (etapextensionstype)** -Element gibt an, ob die Se
  />
 ```
 
-Das-Element wird durch das-Element von " [**Peer**](mspeapconnectionpropertiesv1schema-peapextensionstype-complextype.md) Type" definiert.
+Das -Element wird durch das [**PeapExtensionsType-Element**](mspeapconnectionpropertiesv1schema-peapextensionstype-complextype.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **performservervalidation** -Element ist optional.
+Das **PerformServerValidation-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Rolle | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Server<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Server<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
@@ -51,31 +51,31 @@ Das **performservervalidation** -Element ist optional.
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Peer-extensionstype**](mspeapconnectionpropertiesv1schema-peapextensionstype-complextype.md)
+[**PeapExtensionsType**](mspeapconnectionpropertiesv1schema-peapextensionstype-complextype.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**"Peer Erweiterungen"**](mspeapconnectionpropertiesv1schema-peapextensions-eaptype-element.md)
+[**PeapExtensions**](mspeapconnectionpropertiesv1schema-peapextensions-eaptype-element.md)
 </dt> <dt>
 
 
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [mspeapconnectionpropertiesv1-Schema](mspeapconnectionpropertiesv1schema-schema.md)
 </dt> <dt>
 
-[mspeapconnectionpropertiesv1-Schema Elemente](mspeapconnectionpropertiesv1schema-elements.md)
+[mspeapconnectionpropertiesv1-Schemaelemente](mspeapconnectionpropertiesv1schema-elements.md)
 </dt> <dt>
 
-[**Performservervalidation (Peer-extensionstype)**](mspeapconnectionpropertiesv2-performservervalidation-peapextensionstype-element.md)
+[**PerformServerValidation(PeapExtensionsType)**](mspeapconnectionpropertiesv2-performservervalidation-peapextensionstype-element.md)
 </dt> </dl>
 
  

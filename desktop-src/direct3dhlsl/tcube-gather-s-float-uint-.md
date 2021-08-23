@@ -1,9 +1,9 @@
 ---
-title: 'Texturecube:: Gather (S, float, uint)-Funktion'
-description: 'Gibt die vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden. | Texturecube:: Gather (S, float, uint)-Funktion'
+title: TextureCube::Gather(S,float,uint)-Funktion
+description: Gibt die vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden. | TextureCube::Gather(S,float,uint)-Funktion
 ms.assetid: 23FA8135-ECF0-4CAE-9A1C-B05DA3676453
 keywords:
-- Funktion "HLSL" erfassen
+- Gather-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e9710343ff9b09e4425bc133db6dab4d118d807e
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 0a1151ce9dd74df45321ceb74942253d87b7cfe69badb022cd1191e83d25045a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119043428"
 ---
-# <a name="texturecubegathersfloatuint-function"></a>Texturecube:: Gather (S, float, uint)-Funktion
+# <a name="texturecubegathersfloatuint-function"></a>TextureCube::Gather(S,float,uint)-Funktion
 
-Gibt die vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.
+Gibt die vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,45 +44,45 @@ TemplateType Gather(
 *S* \[ in\]
 </dt> <dd>
 
-Typ: **samplerstate**
+Typ: **SamplerState**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übergeben Sie stattdessen den Status an die systeminterne [**checkaccessfullymapping**](checkaccessfullymapped.md) -Funktion. **Checkaccessfullymapping** gibt **true** zurück, wenn alle Werte aus dem entsprechenden **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte von einer nicht zugeordneten Kachel entnommen wurden, gibt **checkaccessfullymapping** den Wert **false** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **TemplateType**
+Typ: **TemplateType**
 
-Ein vier komponentenwert, dessen Typ mit dem Vorlagentyp identisch ist.
+Ein Wert mit vier Komponenten, dessen Typ mit dem Vorlagentyp identisch ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -90,7 +90,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

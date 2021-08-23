@@ -1,5 +1,5 @@
 ---
-description: Die Win32 \_ serialportconfiguration-WMI-Klasse stellt die Einstellungen für die Datenübertragung an einem Windows-basierten seriellen Anschluss dar. Dies schließt Konfigurationen für das Herstellen einer Verbindung und Fehlerüberprüfung ein.
+description: Die WMI-Klasse Win32 SerialPortConfiguration stellt die Einstellungen für die Datenübertragung an einem Windows \_ seriellen Anschluss dar. Dies schließt Konfigurationen zum Herstellen einer Verbindung und Fehlerüberprüfung ein.
 ms.assetid: 688cdcce-8325-4b4d-93ab-5a602e9e3f8e
 ms.tgt_platform: multiple
 title: Win32_SerialPortConfiguration-Klasse
@@ -43,18 +43,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 065d069b261472e3347a115cfbbff652812b6622
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 07052c0366b32904ef6bf6f52b15f3ea98022ba8385120ec60cdefe5714e2c4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119079694"
 ---
-# <a name="win32_serialportconfiguration-class"></a>Win32 \_ serialportconfiguration-Klasse
+# <a name="win32_serialportconfiguration-class"></a>Win32 \_ SerialPortConfiguration-Klasse
 
-Die **Win32 \_ serialportconfiguration** - [WMI-Klasse](../wmisdk/retrieving-a-class.md) stellt die Einstellungen für die Datenübertragung an einem Windows-basierten seriellen Anschluss dar. Dies schließt Konfigurationen für das Herstellen einer Verbindung und Fehlerüberprüfung ein.
+Die **WMI-Klasse \_ Win32 SerialPortConfiguration** stellt die Einstellungen für die Datenübertragung an einem Windows seriellen Anschluss dar. [](../wmisdk/retrieving-a-class.md) Dies schließt Konfigurationen zum Herstellen einer Verbindung und Fehlerüberprüfung ein.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -96,79 +96,79 @@ class Win32_SerialPortConfiguration : CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ serialportconfiguration** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ SerialPortConfiguration-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ serialportconfiguration** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ SerialPortConfiguration-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Abortreadschreiteonerror**
+**AbortReadWriteOnError**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fabortonerror")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fAbortOnError")
 </dt> </dl>
 
-**True** gibt an, dass Lese-und Schreibvorgänge beendet werden, wenn ein Fehler auftritt. **True** gibt an, dass der Treiber alle Lese-und Schreibvorgänge mit einem Fehlerstatus beendet, wenn ein Fehler auftritt. Der Treiber nimmt keine weiteren Kommunikations Vorgänge an, bis der Fehler von der Anwendung bestätigt wird.
+True **gibt an,** dass Lese- und Schreibvorgänge beendet werden, wenn ein Fehler auftritt. True **gibt an,** dass der Treiber alle Lese- und Schreibvorgänge mit einem Fehlerstatus beendet, wenn ein Fehler auftritt. Der Treiber akzeptiert keine weiteren Kommunikationsvorgänge, bis die Anwendung den Fehler bestätigt.
 
 </dd> <dt>
 
-**' Baudrate '**
+**Baudrate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| Baudrate")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| BaudRate")
 </dt> </dl>
 
-Die Baudrate (Bits pro Sekunde), mit der das Kommunikationsgerät betrieben wird.
+Baud-Rate (Bits pro Sekunde), mit der das Kommunikationsgerät betrieben wird.
 
 Beispiel: 9600
 
 </dd> <dt>
 
-**Binarymodeaktiviert**
+**BinaryModeEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| sbinary")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fBinary")
 </dt> </dl>
 
-**True** gibt an, dass Datenübertragungen im binären Modus für den seriellen Anschluss aktiviert werden. Computer Systeme, auf denen Windows ausgeführt wird, erlauben nur binäre Übertragungen über serielle Ports, sodass dieser Wert immer **true** ist.
+True **gibt an,** dass Datenübertragungen im binären Modus für den seriellen Anschluss aktiviert sind. Computersysteme, auf denen Windows, lassen nur binäre Übertragungen über serielle Anschlüsse zu, sodass dieser Wert immer **TRUE ist.**
 
 </dd> <dt>
 
-**Bitsperbyte**
+**BitsPerByte**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| ByteSize")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| ByteSize")
 </dt> </dl>
 
-Anzahl von Bits, die für jedes Byte von Daten für den seriellen Port von Windows übertragen und empfangen werden. Die Zahl kann sich mit Steuerelementen und Fehlerkorrektur Bits (z. b. Paritätsbits) unterscheiden.
+Anzahl der Bits, die für jedes Byte von Daten für den seriellen Windows gesendet und empfangen werden. Die Anzahl kann mit Steuerelement- und Fehlerkorrekturbits variieren, z. B. Paritätsbits.
 
 Beispiel: 8
 
@@ -177,142 +177,142 @@ Beispiel: 8
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 </dt> </dl>
 
-Kurze Textbeschreibung des aktuellen-Objekts.
+Kurze Textbeschreibung des aktuellen Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
 **ContinueXMitOnXOff**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| ftxcontinueonxoff")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fTXContinueOnXoff")
 </dt> </dl>
 
-**True** gibt an, dass Datenübertragungen fortgesetzt werden, wenn der Eingabepuffer in **XOffXMitThreshold** Bytes voll ist und der Treiber den **xoffchararcter** -Wert übertragen hat, um den Empfang von Bytes zu beenden. Der Wert **false** gibt an, dass die Übertragung nicht fortgesetzt wird, bis der Eingabepuffer innerhalb des **XOnXMitThreshold** -Bytes leer ist und der Treiber den **XOnCharacter** -Wert zum Fortsetzen des Empfangs verwendet hat.
+True **gibt** an, dass Datenübertragungen fortgesetzt werden, wenn der Eingabepuffer innerhalb von **XOffXMitThreshold-Bytes** liegt und der Treiber den **XOffChararcter-Wert** übertragen hat, um den Empfang von Bytes zu beenden. False **gibt** an, dass die Übertragung erst fortgesetzt wird, wenn sich der Eingabepuffer innerhalb von **XOnXMitThreshold-Bytes** befindet und der Treiber den **XOnCharacter-Wert** übertragen hat, um den Empfang wieder aufzunehmen.
 
 </dd> <dt>
 
-**Czoutflowcontrol**
+**CTSOutflowControl**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| loutxczflow")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fOutxCtsFlow")
 </dt> </dl>
 
-Wenn der Wert **true** ist, wird das Signal "Clear to Send (CTS)" vor der Datenübertragung geprüft. CTS signalisiert, dass beide Geräte der seriellen Verbindung zum Übertragen von Daten bereit sind. Die Datenübertragung wird angehalten, bis das CTS-Signal angegeben wird.
+True **gibt an,** dass das CLEAR TO SEND-Signal (CTS) vor der Übertragung von Daten überprüft wird. CTS signalisiert, dass beide Geräte über die serielle Verbindung bereit sind, Daten zu übertragen. Die Datenübertragung wird angehalten, bis das CTS-Signal angegeben wird.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Textbeschreibung des aktuellen-Objekts.
+Textbeschreibung des aktuellen -Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
-**Verwerdnullbytes**
+**DiscardNULLBytes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| f NULL")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fNull")
 </dt> </dl>
 
-**True** gibt an, dass **null** -bytes (Zeichen) beim Empfang verworfen werden.
+True **gibt an,** **dass NULL-Bytes** (Zeichen) verworfen werden, wenn sie empfangen werden.
 
 </dd> <dt>
 
 **DSROutflowControl**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fioutxdsrflow")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fOutxDsrFlow")
 </dt> </dl>
 
-**True** gibt an, dass die Datenflusssteuerung aktiviert ist, wenn eine DSR-Bedingung (Data Set Ready) vorliegt. DSR signalisiert, dass die Verbindung von den Geräten der seriellen Verbindung hergestellt wurde. Die DSR-Datenübertragung wird angehalten, bis das DSR-Signal angegeben wird.
+True **gibt an,** dass die Datenflusssteuerung aktiviert ist, wenn eine DSR-Bedingung (Data Set Ready) vorgeschaltet ist. DSR signalisiert, dass die Verbindung von den Geräten über die serielle Verbindung hergestellt wurde. Die DSR-Datenübertragung wird angehalten, bis das DSR-Signal angegeben wird.
 
 </dd> <dt>
 
-**Dsrsensitivität**
+**DSRSensitivity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| sdsrsensisensitivität")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fDsrSensitivity")
 </dt> </dl>
 
-**True** gibt an, dass der Kommunikationstreiber für den Zustand des DSR-Signals sensibel ist. Der Treiber ignoriert alle empfangenen Bytes, es sei denn, die DSR-Modem-Eingabezeile ist hoch.
+True **gibt an,** dass der Kommunikationstreiber den Zustand des DSR-Signals berücksichtigt. Der Treiber ignoriert alle empfangenen Bytes, es sei denn, die DSR-Modemeingabelinie ist hoch.
 
 </dd> <dt>
 
 **DTRFlowControlType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| sdtrcontrol")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fDtrControl")
 </dt> </dl>
 
-Verwendung der DTR-Fluss Steuerung (Data Terminal Ready), nachdem eine Verbindung hergestellt wurde.
+Verwendung der DTR-Flusssteuerung (Data Terminal Ready), nachdem eine Verbindung hergestellt wurde.
 
 <dt>
 
 <span id="Enable"></span><span id="enable"></span><span id="ENABLE"></span>
 
-**Aktivieren** ("aktivieren")
+**Aktivieren** ("Aktivieren")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Disable"></span><span id="disable"></span><span id="DISABLE"></span>
 
-**Deaktivieren** ("deaktivieren")
+**Deaktivieren** ("Deaktivieren")
 
 
 </dt> <dd></dd> <dt>
@@ -326,89 +326,89 @@ Verwendung der DTR-Fluss Steuerung (Data Terminal Ready), nachdem eine Verbindun
 
 </dd> <dt>
 
-**EOF-Zeichen**
+**EOFCharacter**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| EOF char")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| EofChar")
 </dt> </dl>
 
-Der Wert des Zeichens, das verwendet wird, um das Ende der Daten zu signalisieren.
+Der Wert des Zeichens, das zum Signalisieren des Datenendes verwendet wird.
 
-Beispiel: ^ Z
+Beispiel: ^Z
 
 </dd> <dt>
 
-**Errorreplacecharacter**
+**ErrorReplaceCharacter**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| ErrorChar")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| ErrorChar")
 </dt> </dl>
 
-Der Wert des Zeichens, mit dem Bytes ersetzt werden, die mit einem Paritätsfehler empfangen wurden.
+Der Wert des Zeichens, das verwendet wird, um empfangene Bytes durch einen Paritätsfehler zu ersetzen.
 
-Beispiel: ^ C
+Beispiel: ^C
 
 </dd> <dt>
 
-**Errorreplacementaktivierte**
+**ErrorReplacementEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| ferrorchar")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fErrorChar")
 </dt> </dl>
 
-**True** gibt an, dass mit Paritäts Fehlern empfangene Bytes durch den Wert **errorreplacecharacter** ersetzt werden. Zeichen mit Paritäts Fehlern werden nur ersetzt, wenn diese Eigenschaft den Wert **true** hat und die Parität aktiviert ist.
+True **gibt an,** dass bytes, die mit Paritätsfehlern empfangen werden, durch den **ErrorReplaceCharacter-Wert ersetzt** werden. Zeichen mit Paritätsfehlern werden nur ersetzt, wenn diese Eigenschaft **TRUE ist** und die Parität aktiviert ist.
 
 </dd> <dt>
 
 **EventCharacter**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| evtchar")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| EvtChar")
 </dt> </dl>
 
-Der Wert des Steuer Zeichens, das zum Signalisieren eines Ereignisses verwendet wird, z. b. das Ende der Datei.
+Der Wert des Steuerzeichens, das verwendet wird, um ein Ereignis zu signalisieren, z. B. das Dateiende.
 
-Beispiel: ^ e
+Beispiel: ^e
 
 </dd> <dt>
 
-**IsBusy**
+**Isbusy**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| File Functions-Dateifunktionen \| ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| File Functions \| CreateFile")
 </dt> </dl>
 
-**True** gibt an, dass der serielle Port ausgelastet ist.
+True **gibt an,** dass der serielle Anschluss ausgelastet ist.
 
 </dd> <dt>
 
@@ -421,10 +421,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| Hardware- \\ \\ mappcemap \\ \\ SerialComm")
+Qualifizierer: [**Schlüssel,**](../wmisdk/key-qualifier.md) [**MaxLen**](../wmisdk/standard-qualifiers.md) (256), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| Hardware \\ \\ DeviceMap \\ \\ SerialComm")
 </dt> </dl>
 
-Name des seriellen Windows-Ports.
+Name des Windows seriellen Anschlusses.
 
 Beispiel: "COM1"
 
@@ -439,10 +439,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| Parität")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| Parity")
 </dt> </dl>
 
-Methode der zu verwendenden Paritäts Überprüfung. Parität wird als Fehler Überprüfungs Methode verwendet, bei der ein zusätzliches Paritäts Bit in jeder Dateneinheit enthalten ist. Der Empfänger kann dann die Gültigkeit der Daten überprüfen, indem er die Bits zählt, die festgelegt sind.
+Methode der zu verwendenden Paritätsüberprüfung. Parität wird als Fehlerüberprüfungstechnik verwendet, bei der in jeder Dateneinheit ein zusätzliches Paritätsbit enthalten ist. Der Empfänger kann dann die Gültigkeit der Daten überprüfen, indem er die festgelegten Bits zählt.
 
 <dt>
 
@@ -453,7 +453,7 @@ Methode der zu verwendenden Paritäts Überprüfung. Parität wird als Fehler Ü
 
 </dt> <dd>
 
-Die Paritäts Überprüfung wird nicht verwendet.
+Paritätsprüfung wird nicht verwendet.
 
 </dd> <dt>
 
@@ -470,7 +470,7 @@ Legt das Paritätsbit fest, sodass die Anzahl der festgelegten Bits eine ungerad
 
 <span id="Even"></span><span id="even"></span><span id="EVEN"></span>
 
-<span id="Even"></span><span id="even"></span><span id="EVEN"></span>**Sogar** ("auch")
+<span id="Even"></span><span id="even"></span><span id="EVEN"></span>**Even** ("Even")
 
 
 </dt> <dd>
@@ -492,34 +492,34 @@ Behält die Festlegung des Paritätsbits auf 1 bei.
 
 <span id="Space"></span><span id="space"></span><span id="SPACE"></span>
 
-<span id="Space"></span><span id="space"></span><span id="SPACE"></span>**Leerzeichen** ("Leerraum")
+<span id="Space"></span><span id="space"></span><span id="SPACE"></span>**Leerzeichen** ("Leerzeichen")
 
 
 </dt> <dd>
 
-Lässt das Paritätsbit auf 0 (null) festgelegt.
+Belässt das Paritätsbit auf 0 (null).
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Parametercheckaktivierte**
+**ParityCheckEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| f Parity")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fParity")
 </dt> </dl>
 
-**True** gibt an, dass die Paritäts Überprüfung aktiviert ist.
+True **gibt an,** dass die Paritätsprüfung aktiviert ist.
 
 </dd> <dt>
 
-**Rzflowcontroltype**
+**RTSFlowControlType**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -528,24 +528,24 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Request to Send (RTS)-Fluss Steuerung. RTS wird verwendet, um zu signalisieren, dass Daten für die Übertragung verfügbar sind.
+Anforderung zum Senden (RTS)-Flusssteuerung. RTS wird verwendet, um zu signalisieren, dass Daten für die Übertragung verfügbar sind.
 
 <dt>
 
 <span id="Enable"></span><span id="enable"></span><span id="ENABLE"></span>
 
-<span id="Enable"></span><span id="enable"></span><span id="ENABLE"></span>**Aktivieren** ("aktivieren")
+<span id="Enable"></span><span id="enable"></span><span id="ENABLE"></span>**Aktivieren** ("Aktivieren")
 
 
 </dt> <dd>
 
-RTS ist für die Datenübertragungs Sitzung noch nicht vorhanden.
+RTS bleibt für die Datenübertragungssitzung übrig.
 
 </dd> <dt>
 
 <span id="Disable"></span><span id="disable"></span><span id="DISABLE"></span>
 
-<span id="Disable"></span><span id="disable"></span><span id="DISABLE"></span>**Deaktivieren** ("deaktivieren")
+<span id="Disable"></span><span id="disable"></span><span id="DISABLE"></span>**Deaktivieren** ("Deaktivieren")
 
 
 </dt> <dd>
@@ -561,18 +561,18 @@ RTS wird ignoriert, nachdem das erste RTS-Signal empfangen wurde.
 
 </dt> <dd>
 
-RTS ist deaktiviert, wenn der Übertragungs Puffer mehr als drei Quartale voll ist, und RTS aktiviert ist, wenn der Puffer kleiner als 1-halbist.
+RTS wird deaktiviert, wenn der Übertragungspuffer mehr als drei Viertel voll ist, und RTS wird aktiviert, wenn der Puffer weniger als eine Hälfte voll ist.
 
 </dd> <dt>
 
 <span id="Toggle"></span><span id="toggle"></span><span id="TOGGLE"></span>
 
-<span id="Toggle"></span><span id="toggle"></span><span id="TOGGLE"></span>**Umschalten ("** umschalten")
+<span id="Toggle"></span><span id="toggle"></span><span id="TOGGLE"></span>**Umschalten** ("Umschalten")
 
 
 </dt> <dd>
 
-RTS ist eingeschaltet, wenn für die Übertragung Daten gepuffert werden.
+RTS wird aktiviert, wenn Daten für die Übertragung gepuffert werden.
 
 </dd> </dl>
 
@@ -587,12 +587,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Der Bezeichner, durch den das aktuelle-Objekt bekannt ist.
+Bezeichner, unter dem das aktuelle Objekt bekannt ist.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
@@ -605,10 +605,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| Stopbits")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| StopBits")
 </dt> </dl>
 
-Anzahl der zu verwendenden Stoppbits. Beenden Sie Bits trennen Sie jede Einheit von Daten in einer asynchronen seriellen Verbindung. Sie werden auch fortlaufend gesendet, wenn keine Daten für die Übertragung verfügbar sind.
+Anzahl der zu verwendenden Stoppbits. Stoppbits trennen jede Dateneinheit in einer asynchronen seriellen Verbindung. Sie werden auch fortlaufend gesendet, wenn keine Daten für die Übertragung verfügbar sind.
 
 <dt>
 
@@ -621,7 +621,7 @@ Anzahl der zu verwendenden Stoppbits. Beenden Sie Bits trennen Sie jede Einheit 
 
 <span id="1.5"></span>
 
-**1,5** ("1,5")
+**1.5** ("1.5")
 
 
 </dt> <dd></dd> <dt>
@@ -638,91 +638,91 @@ Anzahl der zu verwendenden Stoppbits. Beenden Sie Bits trennen Sie jede Einheit 
 **XOffCharacter**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| XoffChar")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| XoffChar")
 </dt> </dl>
 
-Der Wert des XOFF-Zeichens sowohl für die Übertragung als auch für den Empfang. XOFF ist ein Software Steuerelement, mit dem die Datenübertragung beendet wird (während "RTS" und "CTS" Hardware Steuerelemente sind). XOn nimmt die Übertragung wieder auf.
+Der Wert des XOFF-Zeichens für die Übertragung und den Empfang. XOFF ist ein Softwaresteuerelemente zum Beenden der Datenübertragung (während RTS und CTS Hardwaresteuerelemente sind). XON setzt die Übertragung wieder ein.
 
 </dd> <dt>
 
 **XOffXMitThreshold**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| xofflim")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| XoffLim")
 </dt> </dl>
 
-Maximale Anzahl von Bytes, die im Eingabepuffer zulässig sind, bevor das XOff-Zeichen gesendet wird.
+Maximale Anzahl von Bytes, die im Eingabepuffer zulässig sind, bevor das XOFF-Zeichen gesendet wird.
 
 </dd> <dt>
 
 **XOnCharacter**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| XonChar")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| XonChar")
 </dt> </dl>
 
-Der Wert des XOn-Zeichens für die Übertragung und den Empfang. XOn ist ein Software Steuerelement, mit dem die Datenübertragung fortgesetzt werden kann (während RTS und CTS Hardware Steuerelemente sind). XOFF beendet die Übertragung.
+Der Wert des XON-Zeichens für Übertragung und Empfang. XON ist eine Softwaresteuerung zum Fortsetzen der Datenübertragung (während RTS und CTS Hardwarekontrollen sind). XOFF beendet die Übertragung.
 
 </dd> <dt>
 
 **XOnXMitThreshold**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| XonLim")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| XonLim")
 </dt> </dl>
 
-Mindestanzahl von Bytes, die im Eingabepuffer zulässig sind, bevor das XON-Zeichen gesendet wird. Diese Eigenschaft funktioniert in Verbindung mit **XOffXMitThreshold** , um die Rate zu steuern, mit der Daten übertragen werden.
+Mindestanzahl von Bytes, die im Eingabepuffer zulässig sind, bevor das XON-Zeichen gesendet wird. Diese Eigenschaft arbeitet mit **XOffXMitThreshold** zusammen, um die Rate zu steuern, mit der Daten übertragen werden.
 
 </dd> <dt>
 
 **XOnXOffInFlowControl**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| finx")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fInX")
 </dt> </dl>
 
-**True** gibt an, dass die "XON/XOFF"-Fluss Steuerung beim Empfang verwendet wird. **True** gibt an, dass der **XOffCharacter** -Wert gesendet wird, wenn der Eingabepuffer in die **XOffXMitThreshold** -Bytes voll ist, und der **XOnCharacter** -Wert gesendet wird, wenn der Eingabepuffer in die **XOnXMitThreshold** -Bytes leer ist.
+True gibt an, dass während des Empfangs die Flusssteuerung STOCK/XOFF verwendet wird. **TRUE** gibt an, dass der **XOffCharacter-Wert** gesendet wird, wenn der Eingabepuffer innerhalb von **XOffXMitThreshold** Bytes von full und der **XOnCharacter-Wert** gesendet wird, wenn der Eingabepuffer innerhalb von **XOnXMitThreshold** Bytes von leer ist.
 
 <dt>
 
 <span id="0"></span>
 
-<span id="0"></span>**1,0**
+<span id="0"></span>**0**
 
 
 </dt> <dd>
 
-false
+FALSE
 
 </dd> <dt>
 
@@ -742,22 +742,22 @@ TRUE
 **XOnXOffOutFlowControl**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| f")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Communication Structures \| [**DCB**](/windows/win32/api/winbase/ns-winbase-dcb) \| fOutX")
 </dt> </dl>
 
-Das **XOnXOffOutFlowControl** -Element gibt an, ob bei der Übertragung die XOn-oder XOFF-Fluss Steuerung verwendet wird Wenn **true**, wird die Übertragung beendet, wenn der **XOffCharacter** -Wert empfangen wird, und wird erneut gestartet, wenn der **XOnCharacter** -Wert empfangen wird.
+**XOnXOffOutFlowControl** gibt an, ob während der Übertragung die Flusssteuerung TEXAS oder XOFF verwendet wird. True gibt an, dass die Übertragung beendet wird, wenn der **XOffCharacter-Wert** empfangen wird, und erneut gestartet wird, wenn der **XOnCharacter-Wert** empfangen wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Win32-Klasse " **\_ serialportconfiguration** " wird von der [**CIM- \_ Einstellung**](cim-setting.md)abgeleitet.
+Die **Win32 \_ SerialPortConfiguration-Klasse** wird von [**der \_ CIM-Einstellung**](cim-setting.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -767,20 +767,20 @@ Die Win32-Klasse " **\_ serialportconfiguration** " wird von der [**CIM- \_ Eins
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Einstellung**](cim-setting.md)
+[**\_CIM-Einstellung**](cim-setting.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

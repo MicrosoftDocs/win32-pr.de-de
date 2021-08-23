@@ -1,36 +1,36 @@
 ---
-description: Wie andere Instanzanbieter registrieren Sie einen Hochleistungs Anbieter bei Microsoft Windows&\# 160; Verwaltungs Instrumentation (WMI), indem eine Instanz der \_ \_ Win32Provider-Klasse und der \_ \_ instanceproviderregistration-Klasse erstellt wird.
+description: Wie bei anderen Instanzanbietern registrieren Sie einen Hochleistungsanbieter bei Microsoft Windows&\# 160; Verwaltungsinstrumentation (Management Instrumentation, WMI) durch Erstellen einer Instanz der \_ \_ Klassen Win32Provider und \_ \_ InstanceProviderRegistration.
 ms.assetid: 6ff3f8c6-71ca-4589-bca7-b864e24a473d
 ms.tgt_platform: multiple
 title: Registrieren eines High-Performance Anbieters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e38653be78747bbfe68ce01d610e9b65b4c981d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2ee52db95290810a046d23781dbccf666cd63a19b01bf9414b2e224b8137f8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042003"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992570"
 ---
 # <a name="registering-a-high-performance-provider"></a>Registrieren eines High-Performance Anbieters
 
-Wie andere Instanzanbieter registrieren Sie einen Hochleistungs Anbieter bei Microsoft Windows-Verwaltungsinstrumentation (WMI), indem Sie eine Instanz der [**\_ \_ Win32Provider**](--win32provider.md) -Klasse und der [**\_ \_ instanceproviderregistration**](--instanceproviderregistration.md) -Klasse erstellen. Die **\_ \_ Win32Provider** -Instanz definiert die physische Implementierung des Anbieters, und die **\_ \_ instanceproviderregistration** -Instanz definiert die Funktionsgruppe des Anbieters. Weitere Informationen finden Sie unter [Registrieren eines Anbieters](registering-a-provider.md).
+Wie bei anderen Instanzanbietern registrieren Sie einen Hochleistungsanbieter bei der Microsoft Windows Management Instrumentation (WMI), indem Sie eine Instanz der [**\_ \_ Klassen Win32Provider**](--win32provider.md) und [**\_ \_ InstanceProviderRegistration**](--instanceproviderregistration.md) erstellen. Die **\_ \_ Win32Provider-Instanz** definiert die physische Implementierung des Anbieters, und die **\_ \_ Instanz InstanceProviderRegistration** definiert den Featuresatz des Anbieters. Weitere Informationen finden Sie unter [Registrieren eines Anbieters.](registering-a-provider.md)
 
-Im folgenden Verfahren wird beschrieben, wie ein Anbieter für Hochleistungs Instanzen registriert wird.
+Im folgenden Verfahren wird beschrieben, wie Sie einen Hochleistungsinstanzanbieter registrieren.
 
-**So registrieren Sie einen Anbieter für Hochleistungs Instanzen**
+**So registrieren Sie einen Hochleistungsinstanzanbieter**
 
-1.  Erstellen Sie eine Instanz der [**\_ \_ Win32Provider**](--win32provider.md) -Klasse, die den Anbieter beschreibt.
+1.  Erstellen Sie eine Instanz der [**\_ \_ Win32Provider-Klasse,**](--win32provider.md) die den Anbieter beschreibt.
 
-    Stellen Sie sicher, dass Sie der [**\_ \_ Win32Provider**](--win32provider.md) -Instanz eine **clientloadableclsid** -Eigenschaft hinzufügen. Wenn sich sowohl der Anbieter als auch der Client auf demselben Computer befinden, lädt WMI den Anbieter Prozess in-Process auf den Client, wobei **clientloadableclsid** als Klassen Bezeichner verwendet wird. Wenn sich der Anbieter und der Client auf unterschiedlichen Computern befinden, wird der Anbieter von WMI in-Process in den WMI-Prozess geladen. WMI verwendet auch **clientloadableclsid** , um Aktualisierungs Vorgänge zu unterstützen.
+    Achten Sie darauf, der [**\_ \_ Win32Provider-Instanz**](--win32provider.md) eine **ClientLoadableCLSID-Eigenschaft** hinzuzufügen. Wenn sich sowohl der Anbieter als auch der Client auf demselben Computer befinden, lädt WMI den Anbieter prozessin process mithilfe von **ClientLoadableCLSID** als Klassenbezeichner auf den Client. Wenn sich der Anbieter und der Client auf verschiedenen Computern befinden, lädt WMI den Anbieter in-Process in WMI. WMI verwendet auch **ClientLoadableCLSID,** um Aktualisierungsvorgänge zu unterstützen.
 
-2.  Erstellen Sie eine Instanz der [**\_ \_ instanceproviderregistration**](--instanceproviderregistration.md) -Klasse, die den Funktions Satz des Anbieters beschreibt.
+2.  Erstellen Sie eine Instanz der [**\_ \_ InstanceProviderRegistration-Klasse,**](--instanceproviderregistration.md) die den Funktionssatz des Anbieters beschreibt.
 
-    Stellen Sie sicher, dass Sie die-Klasse mit dem [**dynamischen**](dynamic-qualifier.md) und dem [**Anbieter Qualifizierer**](/windows/desktop/api/Provider/nl-provider-provider) markieren. Der **dynamische** Qualifizierer signalisiert, dass WMI einen Anbieter zum Abrufen der Klassen Instanzen verwenden soll. Der **Anbieter Qualifizierer** gibt den Namen des Anbieters an, der von WMI verwendet werden soll.
+    Achten Sie darauf, die Klasse sowohl mit den Qualifizierern [**Dynamic als**](dynamic-qualifier.md) auch [**Provider**](/windows/desktop/api/Provider/nl-provider-provider) zu kennzeichnen. Der **Dynamische Qualifizierer** signalisiert, dass WMI einen Anbieter verwenden soll, um die Klasseninstanzen abzurufen. Der  Anbieterqualifizierer gibt den Namen des Anbieters an, den WMI verwenden soll.
 
-    Ein Hochleistungs Anbieter muss auch die Unterstützung für Vorgänge, Enumerationsvorgänge oder beides angeben. Stellen Sie sicher, dass Sie die Eigenschaften " **supportsget** " und " **supportsenumeration** " in der Implementierung verwenden.
+    Ein Hochleistungsanbieter muss auch Unterstützung für Vorgänge, Enumerationsvorgänge oder beides unterstützen. Stellen Sie sicher, dass Sie **die Eigenschaften SupportsGet** und **SupportsEnumeration** in Ihrer Implementierung verwenden.
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie die [**\_ \_ Win32Provider**](--win32provider.md) -und [**\_ \_ instanceproviderregistration**](--instanceproviderregistration.md) -Klassen für einen Hochleistungs Anbieter implementieren.
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie die [**\_ \_ Klassen Win32Provider**](--win32provider.md) und [**\_ \_ InstanceProviderRegistration**](--instanceproviderregistration.md) für einen Hochleistungsanbieter implementieren.
 
 ``` syntax
 instance of __Win32Provider as $P
@@ -68,7 +68,7 @@ class TestClass
 
 <dl> <dt>
 
-[Erstellen eines Instanzanbieters in einen High-Performance-Anbieter](making-an-instance-provider-into-a-high-performance-provider.md)
+[Erstellen eines Instanzanbieters zu einem High-Performance Anbieter](making-an-instance-provider-into-a-high-performance-provider.md)
 </dt> </dl>
 
  

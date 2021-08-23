@@ -1,6 +1,6 @@
 ---
-title: texreg2rgb-PS
-description: Interpretiert die roten, grünen und blauen (RGB) Farbkomponenten des Quell Registers als Textur Adressdaten, um die Textur in der Phase zu testen, die der Ziel Registernummer entspricht. Das Ergebnis wird im Ziel Register gespeichert.
+title: texreg2rgb – ps
+description: Interpretiert die Farbkomponenten rot, grün und blau (RGB) des Quellregisters als Texturadressendaten, um die Textur in der Stufe zu erfassen, die der Zielregisternummer entspricht. Das Ergebnis wird im Zielregister gespeichert.
 ms.assetid: 8ec44014-d796-407c-8fe0-036decaf2a3d
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,48 +9,48 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: f8bcd2bbd7e57ba9dc692f34404a5610cdc517f3
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 5c32ee8e6b1560bfcebf6a914a45be2c74b19e94568c9d4e9b24084bf56c3f01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104516496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119043048"
 ---
-# <a name="texreg2rgb---ps"></a>texreg2rgb-PS
+# <a name="texreg2rgb---ps"></a>texreg2rgb – ps
 
-Interpretiert die roten, grünen und blauen (RGB) Farbkomponenten des Quell Registers als Textur Adressdaten, um die Textur in der Phase zu testen, die der Ziel Registernummer entspricht. Das Ergebnis wird im Ziel Register gespeichert.
+Interpretiert die Farbkomponenten rot, grün und blau (RGB) des Quellregisters als Texturadressendaten, um die Textur in der Stufe zu erfassen, die der Zielregisternummer entspricht. Das Ergebnis wird im Zielregister gespeichert.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| texreg2rgb DST, src |
+| texreg2rgb dst, src |
 |---------------------|
 
 
 
- 
+ 
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | texreg2rgb            |      | x    | x    |      |      |      |       |      |       |
 
 
 
- 
+ 
 
-Diese Anweisung ist für die Neuzuordnung von Farbräumen nützlich. Es unterstützt zweidimensionale (2D) und dreidimensionale (3D) Koordinaten. Sie kann wie [texreg2ar-PS](texreg2ar---ps.md) oder [texreg2gb-PS](texreg2gb---ps.md) verwendet werden, um 2D-Daten neu zuzuordnen. Diese Anweisung unterstützt jedoch auch 3D-Daten, sodass Sie mit Cubemaps und 3D-volumetexturen verwendet werden kann.
+Diese Anweisung ist nützlich für Neuzuordnungsvorgänge im Farbraum. Es unterstützt zweidimensionale (2D) und dreidimensionale Koordinaten (3D). Sie kann genau wie die [texreg2ar - ps](texreg2ar---ps.md) oder [texreg2gb - ps](texreg2gb---ps.md) verwendet werden, um 2D-Daten neu zuzuordnen. Diese Anweisung unterstützt jedoch auch 3D-Daten, sodass sie mit Cube maps und 3D-Volumentexturen verwendet werden können.
 
-Im folgenden finden Sie ein Beispiel für die Sequenz, auf die die Anweisung folgt.
+Hier sehen Sie ein Beispiel für die Sequenz, auf die die Anweisung folgt.
 
 
 ```
@@ -61,12 +61,12 @@ texreg2rgb t(m), t(n)     where m > n
 
 
 
-Im folgenden finden Sie weitere Details dazu, wie die Neuzuordnung erreicht wird.
+Hier finden Sie weitere Details zur Durchführung der Neuzuordnung.
 
-<dl> Die erste Anweisung lädt die Textur Farbe (RGBA) in das Register TN.  
-tex TN  
-Mit der zweiten Anweisung wird die Farbe neu zugeordnet.  
-t (m)<sub>RGBA</sub> = texturesample (Phase m)<sub>RGBA</sub> mit t (n)<sub>RGB</sub> als Koordinaten
+<dl> Die erste Anweisung lädt die Texturfarbe (RGBA) in das Register tn.  
+tex tn  
+Die zweite Anweisung weist die Farbe neu zu  
+t(m)<sub>RGBA</sub> = TextureSample(stage m)<sub>RGBA</sub> mit t(n)<sub>RGB</sub> als Koordinaten
 </dl>
 
 ## <a name="related-topics"></a>Zugehörige Themen
@@ -76,9 +76,9 @@ t (m)<sub>RGBA</sub> = texturesample (Phase m)<sub>RGBA</sub> mit t (n)<sub>RGB<
 [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

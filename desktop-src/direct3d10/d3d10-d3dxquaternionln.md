@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 9abaaa231e424e55e496b7901882e9da17c59786
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ec225648d5024951ca51e0533098fee897a66d6770d0c937c0d251842613a9b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991120"
 ---
 # <a name="d3dxquaternionln-function-d3dx10mathh"></a>D3DXQuaternionLn-Funktion (D3DX10Math.h)
 
@@ -65,7 +65,7 @@ Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
 Zeiger auf eine D3DXQUATERNION-Struktur, bei der es sich um den natürlichen Logarithmus handelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die D3DXQuaternionLn-Funktion funktioniert nur für Einheitenquaternionen.
 
@@ -86,7 +86,7 @@ Verwenden [**Sie D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) f�
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

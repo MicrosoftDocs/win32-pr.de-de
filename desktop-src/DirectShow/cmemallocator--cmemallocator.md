@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 43b0505ee34df72ab82e4204b08440ac1a2558b5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 588b370fc56f6af547ead19c7a52758a3851dd7e46d88b90f8f621ed6002d6e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954379"
 ---
 # <a name="cmemallocatorcmemallocator-destructor"></a>CMemAllocator.~CMemAllocator-Destruktor
 
@@ -36,7 +36,7 @@ Destruktormethode.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode überschreibt den Basisklassen-Destruktor, um [**CBaseAllocator::D ecommit**](cbaseallocator-decommit.md) und [**CMemAllocator::ReallyFree**](cmemallocator-reallyfree.md)aufzurufen.
 
@@ -44,14 +44,14 @@ Diese Methode überschreibt den Basisklassen-Destruktor, um [**CBaseAllocator::D
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

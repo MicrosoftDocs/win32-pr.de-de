@@ -1,19 +1,19 @@
 ---
-title: Strukturen (Menüband-Framework)
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für Windows-Menü Band Framework-Strukturen.
+title: Strukturen (Menübandframework)
+description: Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für Windows Ribbon Framework-Strukturen.
 ms.assetid: 8A109C67-BF05-4BA4-8F12-473F2C773B90
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 928b1c0dcf404c054072dc57c1064dca3b39b096
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: adae6c190acb59ca0916d958266eff0d678fe75554a94aa5bdab14f2724afb14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106341979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964399"
 ---
-# <a name="structures-ribbon-framework"></a>Strukturen (Menüband-Framework)
+# <a name="structures-ribbon-framework"></a>Strukturen (Menübandframework)
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Windows-Menü Band Framework](-uiplat-windowsribbon-entry.md) -Strukturen.
+Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Windows Ribbon Framework-Strukturen.](-uiplat-windowsribbon-entry.md)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,8 +21,8 @@ Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Wind
 
 | Thema                                                                  | BESCHREIBUNG                                                                                                       |
 |------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| [**Benutzeroberflächen- \_ eventparametriams**](/windows/desktop/api/Uiribbon/ns-uiribbon-ui_eventparams)<br/>                   | Enthält Informationen zu einem Menü [**Band**](windowsribbon-element-ribbon.md) Ereignis.<br/>                     |
-| [**Befehl "Benutzeroberfläche \_ eventpara" \_**](/windows/desktop/api/Uiribbon/ns-uiribbon-ui_eventparams_command)<br/> | Enthält Informationen zu einem [**Befehl**](windowsribbon-element-command.md) , der einem-Ereignis zugeordnet ist.<br/> |
+| [**UI \_ EVENTPARAMS**](/windows/desktop/api/Uiribbon/ns-uiribbon-ui_eventparams)<br/>                   | Enthält Informationen zu einem [**Menübandereignis.**](windowsribbon-element-ribbon.md)<br/>                     |
+| [**BEFEHL "UI \_ \_ EVENTPARAMS"**](/windows/desktop/api/Uiribbon/ns-uiribbon-ui_eventparams_command)<br/> | Enthält Informationen zu einem [**Befehl,**](windowsribbon-element-command.md) der einem Ereignis zugeordnet ist.<br/> |
 
 
 
@@ -32,7 +32,7 @@ Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Wind
 
 <dl> <dt>
 
-[Windows-Menü Band Framework-Referenz](windowsribbon-reference-entry.md)
+[Windows Referenz zum Menübandframework](windowsribbon-reference-entry.md)
 </dt> </dl>
 
  

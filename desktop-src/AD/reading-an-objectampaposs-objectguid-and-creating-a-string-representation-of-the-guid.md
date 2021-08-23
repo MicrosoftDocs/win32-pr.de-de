@@ -1,22 +1,22 @@
 ---
-title: Die objectGUID eines Objekts wird gelesen und eine Zeichen folgen Darstellung der GUID erstellt.
-description: Verwenden Sie die IADs get \_ GUID-Methode, um die bindbare Zeichen folgen Form des objectGUID eines Verzeichnis Objekts abzurufen.
+title: Lesen der objectGUID eines Objekts und Erstellen einer Zeichenfolgendarstellung der GUID
+description: Verwenden Sie die IADs get \_ GUID-Methode, um die bindbare Zeichenfolgenform der objectGUID eines Verzeichnisobjekts abzurufen.
 ms.assetid: 4f7f0e9d-3e06-47c9-83ce-cabed8692c15
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 77bf9c346585e8604968c3f708dfdc62ee8d248f
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 9872f16ddeee2e7a01e05be0d3c98aed5e66a9e6bce310565c001f831bd46e02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103724456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025328"
 ---
-# <a name="reading-an-objects-objectguid-and-creating-a-string-representation-of-the-guid"></a>Die objectGUID eines Objekts wird gelesen und eine Zeichen folgen Darstellung der GUID erstellt.
+# <a name="reading-an-objects-objectguid-and-creating-a-string-representation-of-the-guid"></a>Lesen der objectGUID eines Objekts und Erstellen einer Zeichenfolgendarstellung der GUID
 
-Die **objectGUID** -Eigenschaft jedes Objekts in Active Directory Domain Services wird im Verzeichnis als Oktett-Zeichenfolge gespeichert. Eine Oktett-Zeichenfolge ist ein Array von 1-Byte-Zeichen. Verwenden Sie die [**IADs:: get- \_ GUID**](/windows/desktop/ADSI/iads-property-methods) -Methode, um die bindbare Zeichen folgen Form des **objectGUID** eines Verzeichnis Objekts abzurufen.
+Die **objectGUID-Eigenschaft** jedes Objekts in Active Directory Domain Services wird im Verzeichnis als Oktettzeichenfolge gespeichert. Eine Oktettzeichenfolge ist ein Array von 1-Byte-Zeichen. Verwenden Sie die [**IADs::get \_ GUID-Methode,**](/windows/desktop/ADSI/iads-property-methods) um die bindbare Zeichenfolgenform der **objectGUID** eines Verzeichnisobjekts abzurufen.
 
-Die folgenden Codebeispiele zeigen eine Funktion, die das **objectGUID** -Attribut liest und eine Zeichen folgen Darstellung der GUID zurückgibt, die zum Binden an das-Objekt verwendet wird.
+Die folgenden Codebeispiele zeigen eine Funktion, die das **objectGUID-Attribut** liest und eine Zeichenfolgendarstellung der GUID zurückgibt, die zum Binden an das -Objekt verwendet wird.
 
 -   [Visual Basic Beispiel](#visual-basic-example)
 -   [C++-Beispiel](#c-example)
@@ -178,6 +178,6 @@ void wmain(int argc, wchar_t *argv[])
 
 
 
- 
+ 
 
- 
+ 

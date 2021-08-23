@@ -1,22 +1,22 @@
 ---
-description: Ein mobiles Breitband-v2-Profil besteht aus den folgenden Elementen.
+description: Ein Mobiles Breitband v2-Profil besteht aus den folgenden Elementen.
 ms.assetid: 5B4A278C-C35E-496E-A5B8-6C98124689FB
-title: Mobile Breitband Profile Schema v2-Elemente
+title: Schema v2-Elemente für mobile Breitbandprofile
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8fe25009b3b361cdcfcc291754136b2bc31541ef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a9bb25666402b93d99ef240200b2f33623956e394641423dda7b0636b5e8ffa3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345130"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975269"
 ---
-# <a name="mobile-broadband-profile-schema-v2-elements"></a>Mobile Breitband Profile Schema v2-Elemente
+# <a name="mobile-broadband-profile-schema-v2-elements"></a>Schema v2-Elemente für mobile Breitbandprofile
 
-Ein mobiles Breitband-v2-Profil besteht aus den folgenden Elementen. Alle benannten Elemente befinden sich im-Namespace `https://www.microsoft.com/networking/WWAN/profile/v2` .
+Ein Mobiles Breitband v2-Profil besteht aus den folgenden Elementen. Alle benannten Elemente befinden sich im Namespace `https://www.microsoft.com/networking/WWAN/profile/v2` .
 
--   [**Ispurchaseprofile**](/previous-versions/windows/desktop/legacy/jj569902(v=vs.85))
--   [**Display Provider Name**](/previous-versions/windows/desktop/legacy/jj569901(v=vs.85))
+-   [**IsPurchaseProfile**](/previous-versions/windows/desktop/legacy/jj569902(v=vs.85))
+-   [**DisplayProviderName**](/previous-versions/windows/desktop/legacy/jj569901(v=vs.85))
 
  
 

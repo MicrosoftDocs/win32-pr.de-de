@@ -1,11 +1,11 @@
 ---
 title: GPC-WQL-Filter-Attribut
-description: Wird verwendet, um eine Zeichenfolge zu speichern, die eine GUID für den Filter und einen WMI-Namespace Pfad enthält.
+description: Wird zum Speichern einer Zeichenfolge verwendet, die eine GUID für den Filter und einen WMI-Namespacepfad enthält.
 ms.assetid: ea76239b-79e2-49b2-a848-a924450d332a
 ms.tgt_platform: multiple
 keywords:
-- GPC-WQL-Filter Attribut AD-Schema
-- AD-Schema des GpcWQLFilter-Attributs
+- AD-Schema des GPC-WQL-Filter-Attributs
+- gPCWQLFilter-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c9a6b8d3715c1692e93579d3c94cdfa44f4192e
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6da17b1edd25952668e838bd06ed4ce30bd667e24161d84c5d953c4433f75b7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859731"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961339"
 ---
 # <a name="gpc-wql-filter-attribute"></a>GPC-WQL-Filter-Attribut
 
-Wird verwendet, um eine Zeichenfolge zu speichern, die eine GUID für den Filter und einen WMI-Namespace Pfad enthält.
+Wird zum Speichern einer Zeichenfolge verwendet, die eine GUID für den Filter und einen WMI-Namespacepfad enthält.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------------------------|
 | CN                | GPC-WQL-Filter                                                                  |
-| LDAP-Display-Name | GpcWQLFilter                                                                    |
+| Ldap-Anzeigename | gPCWQLFilter                                                                    |
 | Size              | \-                                                                              |
-| Berechtigung aktualisieren  | Domänen Administrator                                                            |
-| Aktualisierungshäufigkeit  | Nur, wenn der Administrator die Filter-Eigenschaft in der Gruppenrichtlinie-Benutzeroberfläche ändert. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                                                            |
+| Updatehäufigkeit  | Nur wenn der Administrator die Filtereigenschaft in der Gruppenrichtlinie ändert. |
 | Attribute-Id      | 1.2.840.113556.1.4.1694                                                         |
-| System-ID-GUID    | 7bd4c7a6-1ADD-4436-8c04-3999a880154c                                            |
+| System-Id-Guid    | 7bd4c7a6-1add-4436-8c04-3999a880154c                                            |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                     |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,15 +57,15 @@ Wird verwendet, um eine Zeichenfolge zu speichern, die eine GUID für den Filter
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -78,15 +78,15 @@ Wird verwendet, um eine Zeichenfolge zu speichern, die eine GUID für den Filter
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -99,15 +99,15 @@ Wird verwendet, um eine Zeichenfolge zu speichern, die eine GUID für den Filter
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Group-Policy-Container**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -120,15 +120,15 @@ Wird verwendet, um eine Zeichenfolge zu speichern, die eine GUID für den Filter
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
 
 
 
@@ -141,15 +141,15 @@ Wird verwendet, um eine Zeichenfolge zu speichern, die eine GUID für den Filter
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
+| In verwendete Klassen        | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
 
 
 

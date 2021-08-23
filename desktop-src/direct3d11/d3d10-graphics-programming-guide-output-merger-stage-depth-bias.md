@@ -1,36 +1,36 @@
 ---
 title: Tiefenausrichtung
-description: Polygone, die in 3D-Raum kopiert werden, können so dargestellt werden, als wären Sie nicht durch Hinzufügen einer z-Bias (oder einer tiefen Abweichung) zu jeder Form.
+description: Polygone, die im 3D-Raum koplanar sind, können so dargestellt werden, als ob sie nicht koplanar sind, indem jedem Polygon ein Z-Bias (oder Tiefenvoreingenommenheit) hinzugefügt wird.
 ms.assetid: ee904316-dc6d-48a4-bdb7-0f7dcdb9d9d6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d6f9a3850b03e033a90b358d0c6ffd1ceef830f
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: c1f707a038a2da8ebe9c1adc21f6081c85f5a63fbbc1c360a4dfbbf5765d845d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103734936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990160"
 ---
 # <a name="depth-bias"></a>Tiefenausrichtung
 
-Polygone, die in 3D-Raum kopiert werden, können so dargestellt werden, als wären Sie nicht durch Hinzufügen einer z-Bias (oder einer tiefen Abweichung) zu jeder Form.
+Polygone, die im 3D-Raum koplanar sind, können so dargestellt werden, als ob sie nicht koplanar sind, indem jedem Polygon ein Z-Bias (oder Tiefenvoreingenommenheit) hinzugefügt wird.
 
-Dies ist eine Technik, die häufig verwendet wird, um sicherzustellen, dass Schatten in einer Szene ordnungsgemäß angezeigt werden. Beispielsweise hat ein Schatten auf einer Wand wahrscheinlich denselben tiefen Wert wie die Wand. Wenn eine Anwendung zuerst eine Wand und dann einen Schatten rendert, ist der Schatten möglicherweise nicht sichtbar, oder es sind keine tiefen Artefakte sichtbar.
+Dies ist eine Technik, die häufig verwendet wird, um sicherzustellen, dass Schatten in einer Szene ordnungsgemäß angezeigt werden. Beispielsweise hat ein Schatten an einer Wand wahrscheinlich den gleichen Tiefenwert wie die Wand. Wenn eine Anwendung zuerst eine Wand und dann einen Schatten rendert, ist der Schatten möglicherweise nicht sichtbar, oder Tiefenartefakte sind möglicherweise sichtbar.
 
 
-Eine Anwendung kann sicherstellen, dass kopale Polygone ordnungsgemäß gerendert werden, indem Sie den z-Werten (aus dem **depthbias** -Member von [**D3D11 \_ Rasterizer \_ DESC1**](/windows/desktop/api/D3D11_1/ns-d3d11_1-cd3d11_rasterizer_desc1)) den z-Werten hinzufügen, die das System beim Rendern der Mengen von Coplanar-Polygonen verwendet. Polygone mit einem größeren z-Wert werden vor Polygonen mit einem kleineren z-Wert gezeichnet.
+Eine Anwendung kann dazu beitragen, sicherzustellen, dass koplanare Polygone ordnungsgemäß gerendert werden, indem sie die Verzerrungen (vom **DepthBias-Member** von [**D3D11 \_ RASTERIZER \_ DESC1)**](/windows/desktop/api/D3D11_1/ns-d3d11_1-cd3d11_rasterizer_desc1)zu den Z-Werten hinzufügung, die das System beim Rendern der Gruppen von coplanaren Polygonen verwendet. Polygone mit einem größeren z-Wert werden vor Polygonen mit einem kleineren z-Wert gezeichnet.
 
-Es gibt zwei Optionen für die Berechnung der tiefen Abweichung.
+Es gibt zwei Optionen zum Berechnen des Tiefenvoreingenommenheits.
 
-1.  Wenn der derzeit an die Output-Fusion-Stufe gebundene tiefen Puffer ein **unorm** -Format aufweist oder kein tiefen Puffer gebunden ist, wird der Wert für den Wert wie folgt berechnet:
+1.  Wenn der tiefen Puffer, der derzeit an die Ausgabe-Merger-Phase gebunden ist, ein **UNORM-Format** auf hat oder kein Tiefenpuffer gebunden ist, wird der Biaswert wie folgt berechnet:
     ```
     Bias = (float)DepthBias * r + SlopeScaledDepthBias * MaxDepthSlope;
     ```
 
     
 
-    Dabei ist *r* der minimale darstellbare Wert > 0 im Tiefe-Puffer-Format, das in **float32** konvertiert wird. Die Werte **depthbias** und **slopescaleddepthbias** sind [**D3D11 \_ Rasterizer \_ DESC1**](/windows/desktop/api/D3D11_1/ns-d3d11_1-cd3d11_rasterizer_desc1) Structure Members. Der Wert **maxdepthslope** ist das Maximum der horizontalen und vertikalen Hänge des tiefen Werts auf dem Pixel.
-2.  Wenn ein Gleit Komma Tiefe-Puffer an die Output-Merger-Phase gebunden ist, wird der Wert für die Ausrichtung wie folgt berechnet:
+    Wobei *r* der darstellbare Mindestwert > 0 im in **float32** konvertierten Tiefenpufferformat ist. Die **Werte DepthBias** und **SlopeScaledDepthBias** sind [**D3D11 \_ RASTERIZER \_ DESC1-Strukturmitglieder.**](/windows/desktop/api/D3D11_1/ns-d3d11_1-cd3d11_rasterizer_desc1) Der **MaxDepthSxel-Wert** ist das Maximum der horizontalen und vertikalen Steigung des Tiefenwerts am Pixel.
+2.  Wenn ein Gleitkommatiefenpuffer an die Ausgabe-Merger-Phase gebunden ist, wird der Biaswert wie folgt berechnet:
     ```
     Bias = (float)DepthBias * 2**(exponent(max z in primitive) - r) +
                 SlopeScaledDepthBias * MaxDepthSlope;
@@ -38,9 +38,9 @@ Es gibt zwei Optionen für die Berechnung der tiefen Abweichung.
 
     
 
-    Dabei ist *r* die Anzahl der Mantisse-Bits in der Gleit Komma Darstellung (mit Ausnahme des ausgeblendeten Bits). beispielsweise 23 für **float32**.
+    Wobei *r* die Anzahl der Mantissebits in der Gleitkommadarstellung (mit Ausnahme des ausgeblendeten Bits) ist; Beispiel: 23 für **float32**.
 
-Der Wert "Bias" wird dann wie folgt gebunden:
+Der Bias-Wert wird dann wie hiergeklammert:
 
 
 ```
@@ -52,7 +52,7 @@ else if(DepthBiasClamp < 0)
 
 
 
-Der Wert "Bias" wird dann verwendet, um die Pixel Tiefe zu berechnen.
+Der Biaswert wird dann verwendet, um die Pixeltiefe zu berechnen.
 
 
 ```
@@ -62,14 +62,14 @@ if ( (DepthBias != 0) || (SlopeScaledDepthBias != 0) )
 
 
 
-Tiefe-bidirektionoperationen werden nach dem Abschneiden in Scheitel Punkten ausgeführt. Daher hat die tiefen Abweichung keine Auswirkung auf das geometrische Clipping. Der Wert "Bias" ist für ein bestimmtes primitiv konstant und wird vor dem interpolatorsetup dem z-Wert für jeden Scheitelpunkt hinzugefügt. Wenn Sie [featureebenen](overviews-direct3d-11-devices-downlevel-intro.md) 10,0 und höher verwenden, werden alle Bias-Berechnungen mithilfe von Gleit Komma Zahlen mit 32 Bit ausgeführt. Der-Wert wird auf keine Punkt-oder Zeilen primitiven angewendet, mit Ausnahme von Linien, die im Draht Modell-Modus gezeichnet werden.
+Tiefenverzerrungsvorgänge treten nach dem Clipping auf Scheitelungen auf, daher hat tiefenverzerrend keine Auswirkungen auf geometrische Clippings. Der Biaswert ist für einen bestimmten Primitiven konstant und wird dem z-Wert für jeden Scheitelpunkt vor dem Interpolatorsetup hinzugefügt. Bei Verwendung [der Featureebenen](overviews-direct3d-11-devices-downlevel-intro.md) 10.0 und höher werden alle Biasberechnungen mit 32-Bit-Gleitkommaarithmetik durchgeführt. Bias wird nicht auf Punkt- oder Linienprimitiven angewendet, mit Ausnahme von Linien, die im Wireframe-Modus gezeichnet werden.
 
-Eines der Artefakte mit Schatten Puffer basierten Schatten ist eine Schatten-Akne oder eine Oberfläche, die sich selbst aufgrund von geringfügigen Unterschieden zwischen der tiefen Berechnung in einem Shader und der Tiefe der gleichen Oberfläche im Schatten Puffer befindet. Eine Möglichkeit, dies zu umgehen, ist die Verwendung von **depthbias** und **slopescaleddepthbias** beim Rendern eines Schatten Puffers. Die Idee besteht darin, die Oberflächen beim Rendern eines Schatten Puffers ausreichend zu bewegen, damit das Vergleichs Ergebnis (zwischen dem Schatten Puffer z und dem Shader z) auf der gesamten Oberfläche konsistent ist, und eine lokale selbst Shadowing vermeiden.
+Eines der Artefakte mit Schattenpuffer-basierten Schatten ist Schattenschatten oder ein Schatten auf der Oberfläche selbst aufgrund geringfügiger Unterschiede zwischen der Tiefenberechnung in einem Shader und der Tiefe derselben Oberfläche im Schattenpuffer. Eine Möglichkeit, dies zu entschärfen, ist die Verwendung **von DepthBias** und **SlopeScaledDepthBias** beim Rendern eines Schattenpuffers. Die Idee ist, Oberflächen beim Rendern eines Schattenpuffers ausreichend zu pushen, damit das Vergleichsergebnis (zwischen dem Schattenpuffer z und dem Shader z) über die Oberfläche konsistent ist, und lokales Selbstschatten zu vermeiden.
 
-Die Verwendung von **depthbias** und **slopescaleddepthbias** kann jedoch zu neuen Renderingproblemen führen, wenn ein Polygon, das in einem extrem spitzen Winkel angezeigt wird, bewirkt, dass die Bias-Gleichung einen sehr großen z-Wert generiert. Dadurch wird das Polygon extrem weit von der ursprünglichen Oberfläche in der schattenkarte entfernt. Eine Möglichkeit, dieses Problem zu beheben, ist die Verwendung von **depthbiasclamp**, das eine obere Grenze (positiv oder negativ) für die Größe des berechneten z-Bias bereitstellt.
+Die **Verwendung von DepthBias** und **SlopeScaledDepthBias** kann jedoch neue Renderingprobleme verursachen, wenn ein Polygon, das in einem extrem starken Winkel angezeigt wird, dazu führt, dass die Biasgleichung einen sehr großen z-Wert generiert. Dadurch wird das Polygon extrem weit von der ursprünglichen Oberfläche in der Schattenkarte entfernt. Eine Möglichkeit, dieses spezielle Problem zu beheben, ist die **Verwendung von DepthBiasClamp,** die eine Obergrenze (positiv oder negativ) für die Größe der berechneten Z-Abweichung bietet.
 
 > [!Note]  
-> Für [featureebenen](overviews-direct3d-11-devices-downlevel-intro.md) 9,1, 9,2, 9,3, wird **depthbiasclamp** nicht unterstützt.
+> Für [die Featureebenen](overviews-direct3d-11-devices-downlevel-intro.md) 9.1, 9.2, 9.3 wird **DepthBiasClamp** nicht unterstützt.
 
  
 
@@ -77,7 +77,7 @@ Die Verwendung von **depthbias** und **slopescaleddepthbias** kann jedoch zu neu
 
 <dl> <dt>
 
-[Ausgabe-Fusion-Phase](d3d10-graphics-programming-guide-output-merger-stage.md)
+[Ausgabe-Merger-Phase](d3d10-graphics-programming-guide-output-merger-stage.md)
 </dt> </dl>
 
  

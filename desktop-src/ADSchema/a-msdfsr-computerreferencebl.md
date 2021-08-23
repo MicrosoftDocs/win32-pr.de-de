@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-computerreferencebl-Attribut
-description: Enthält den abwärts Link für das MS-DFSR-computerreference-Attribut.
+title: ms-DFSR-ComputerReferenceBL-Attribut
+description: Enthält den Abwärtslink für das Ms-DFSR-ComputerReference-Attribut.
 ms.assetid: 586b5d6a-86ff-4dac-905d-59928674a505
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-DFSR-computerreferencebl\"-Attribut AD-Schema"
-- AD-Schema des msdfsr-computerreferencebl-Attributs
+- MS-DFSR-ComputerReferenceBL-Attribut AD-Schema
+- AD-Schema des msDFSR-ComputerReferenceBL-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b4aed9748f74e08ae621d6391185b41f97aa702e
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f0e3a5b4ae4f01e0c5af0a46e13238237dde5e006e8a83a5a7082dc97c121f05
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106340054"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960959"
 ---
-# <a name="ms-dfsr-computerreferencebl-attribute"></a>MS-DFSR-computerreferencebl-Attribut
+# <a name="ms-dfsr-computerreferencebl-attribute"></a>ms-DFSR-ComputerReferenceBL-Attribut
 
-Enthält den abwärts Link für das [**MS-DFSR-computerreference-**](a-msdfsr-computerreference.md) Attribut.
+Enthält den Abwärtslink für das [**Ms-DFSR-ComputerReference-Attribut.**](a-msdfsr-computerreference.md)
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | MS-DFSR-computerreferencebl             |
-| LDAP-Display-Name | msdfsr-computerreferencebl              |
+| CN                | ms-DFSR-ComputerReferenceBL             |
+| Ldap-Anzeigename | msDFSR-ComputerReferenceBL              |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.103             |
-| System-ID-GUID    | 5eb526d7-d71b-44ae-8cc6-95460052e6ac    |
+| System-Id-Guid    | 5eb526d7-d71b-44ae-8cc6-95460052e6ac    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -56,10 +56,10 @@ Enthält den abwärts Link für das [**MS-DFSR-computerreference-**](a-msdfsr-co
 | Link-ID                | 2051                            |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -77,10 +77,10 @@ Enthält den abwärts Link für das [**MS-DFSR-computerreference-**](a-msdfsr-co
 | Link-ID                | 2051                            |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -98,10 +98,10 @@ Enthält den abwärts Link für das [**MS-DFSR-computerreference-**](a-msdfsr-co
 | Link-ID                | 2051                            |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -119,10 +119,10 @@ Enthält den abwärts Link für das [**MS-DFSR-computerreference-**](a-msdfsr-co
 | Link-ID                | 2051                            |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -131,9 +131,9 @@ Enthält den abwärts Link für das [**MS-DFSR-computerreference-**](a-msdfsr-co
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **MS-DFSR-computerreferencebl-** Attribut ist ein Teil der Unterstützung für den verteiltes Dateisystem (DFS)-Replikations Dienst.
+Das **ms-DFSR-ComputerReferenceBL-Attribut** ist Teil der Unterstützung des verteiltes Dateisystem -Replikationsdiensts (DFS).
 
  
 
