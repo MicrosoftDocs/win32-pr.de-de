@@ -36,7 +36,7 @@ Die **IShellFolderViewType-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                      | BESCHREIBUNG                                                                                                                                                          |
+| Methode                                                                      | Beschreibung                                                                                                                                                          |
 |:----------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**EnumViews**](ishellfolderviewtype-enumviews.md)                         | Ruft einen Enumerator ab, der eine PIDL für jede erweiterte Ansicht zurück gibt.<br/>                                                                                |
 | [**GetDefaultViewName**](ishellfolderviewtype-getdefaultviewname.md)       | Ruft den Namen der Standardansicht ab. Rufen [**Sie IShellFolder::GetDisplayNameOf auf,**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof) um die Namen der anderen Ansichten abzurufen.<br/> |

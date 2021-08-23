@@ -1,9 +1,9 @@
 ---
-title: MCI_VCR_SETTUNER_PARMS Struktur (VCR. h)
-description: Die Struktur des MCI \_ VCR \_ settuner- \_ Parameters enthält Parameter für den MCI \_ settuner-Befehl für Video-Kassetten-Recorder.
+title: MCI_VCR_SETTUNER_PARMS -Struktur (Vcr.h)
+description: Die MCI VCR SETTUNER PARMS-Struktur enthält Parameter für den \_ \_ \_ MCI \_ SETTUNER-Befehl für Video cassette-Aufzeichnungen.
 ms.assetid: 8254b4c0-80bb-44e4-9f51-1d7434d3b08f
 keywords:
-- MCI_VCR_SETTUNER_PARMS Struktur Windows Multimedia
+- MCI_VCR_SETTUNER_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 891ddf3b4b3dcb9532a2431901b0b2b9d84b0e52
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fa6d297ae86ad50ee9c7bb19a1f98ef69c77d502f4ccd306394436d07de330d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119784172"
 ---
-# <a name="mci_vcr_settuner_parms-structure"></a>Struktur von MCI \_ VCR \_ settuner- \_ Parametern
+# <a name="mci_vcr_settuner_parms-structure"></a>MCI \_ VCR \_ SETTUNER \_ PARMS-Struktur
 
-Die Struktur des **MCI \_ VCR \_ settuner- \_ para** meters enthält Parameter für den [**MCI \_ settuner**](mci-settuner.md) -Befehl für Video-Kassetten-Recorder.
+Die **MCI \_ VCR \_ SETTUNER \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ SETTUNER-Befehl**](mci-settuner.md) für Video cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ typedef struct tagMCI_VCR_SETTUNER_PARMS {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwchannel**
+**dwChannel**
 </dt> <dd>
 
-Neue Channelnummer.
+Neue Kanalnummer.
 
 </dd> <dt>
 
-**dwnumber**
+**dwNumber**
 </dt> <dd>
 
-Logischer Tuner, auf den der [**MCI- \_ settuner**](mci-settuner.md) -Befehl wirkt.
+Logischer Tuner, auf den sich [**der \_ MCI-Befehl SETTUNER**](mci-settuner.md) auswirken kann.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,21 +75,21 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VCR. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vcr.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ settuner**](mci-settuner.md)
+[**MCI \_ SETTUNER**](mci-settuner.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

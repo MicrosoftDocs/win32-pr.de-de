@@ -21,7 +21,7 @@ Das Entwicklerhandbuch bietet eine Übersicht über Windows Animation und enthä
 
 
 
-| Thema                                                                      | BESCHREIBUNG                                                                                                                           |
+| Thema                                                                      | Beschreibung                                                                                                                           |
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | [Windows Übersicht über Animationen](scenic-animation-api-overview.md)<br/> | Diese Übersicht bietet eine Einführung in den animations Windows-Manager und konzentriert sich auf wichtige Komponenten und Konzepte.<br/>        |
 | [Übersicht über Storyboards](storyboard-construction.md)<br/>              | In dieser Übersicht geht es um die Verwendung von Übergängen und Storyboards in Windows Animation. <br/>                                   |

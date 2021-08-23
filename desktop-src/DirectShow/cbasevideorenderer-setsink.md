@@ -1,7 +1,7 @@
 ---
-description: Die setsink-Methode legt das iqualitycontrol-Objekt fest, das Qualitäts Meldungen empfängt.
+description: Die SetSink-Methode legt das IQualityControl-Objekt fest, das Qualitätsmeldungen empfängt.
 ms.assetid: f5789781-1871-4fea-9d1f-bd1a21b70439
-title: Cbasevideorenderer. setsink-Methode (renbase. h)
+title: CBaseVideoRenderer.SetSink-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9658ab4a1099e7baaef0a3e1a0ae3c0d495e89e6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5b5fef3eb6bd1b959c6c7246e4aeebf5b42a01ddcecd211f3e1d7860102a6381
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697900"
 ---
-# <a name="cbasevideorenderersetsink-method"></a>Cbasevideorenderer. setsink-Methode
+# <a name="cbasevideorenderersetsink-method"></a>CBaseVideoRenderer.SetSink-Methode
 
-Die- `SetSink` Methode legt das [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) -Objekt fest, das Qualitäts Meldungen empfängt.
+Die `SetSink` -Methode legt das [**IQualityControl-Objekt**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) fest, das Qualitätsmeldungen empfängt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ HRESULT SetSink(
 *piqc* 
 </dt> <dd>
 
-Zeiger auf das [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) -Objekt, an das die Benachrichtigungen gesendet werden sollen.
+Zeiger auf das [**IQualityControl-Objekt,**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) an das die Benachrichtigungen gesendet werden sollen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion implementiert die [**iqualitycontrol:: setsink**](/windows/desktop/api/Strmif/nf-strmif-iqualitycontrol-setsink) -Methode für den Videorenderer.
+Diese Memberfunktion implementiert die [**IQualityControl::SetSink-Methode**](/windows/desktop/api/Strmif/nf-strmif-iqualitycontrol-setsink) für den Videorenderer.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Member-Funktion implementiert die [**iqualitycontrol:: setsink**](/windows
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Member-Funktion implementiert die [**iqualitycontrol:: setsink**](/windows
 
 <dl> <dt>
 
-[**Cbasevideorenderer-Klasse**](cbasevideorenderer.md)
+[**CBaseVideoRenderer-Klasse**](cbasevideorenderer.md)
 </dt> </dl>
 
  

@@ -13,7 +13,7 @@ ms.locfileid: "119768130"
 ---
 # <a name="ivmharddiskconnection-methods"></a>IVMHardDiskConnection-Methoden
 
-\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Die [**IVMHardDiskConnection-Schnittstelle**](ivmharddiskconnection.md) macht die folgenden Methoden verfügbar.
 

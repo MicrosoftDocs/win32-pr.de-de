@@ -1,7 +1,7 @@
 ---
 description: Diese Funktionen registrieren einen Filter.
 ms.assetid: c9c4976f-d4c5-465e-8ad7-4294c05d0e0a
-title: DLL-Setup Funktionen (dllsetup. h)
+title: DLL-Setupfunktionen (Dllsetup.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,26 +16,26 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 449c6899c207365118a57e396bb52817282453ea
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 369607e99abdd62718be210a156586a39cc2a88cc61b9aab16dfa2920b010573
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749090"
 ---
-# <a name="dll-setup-functions"></a>DLL-Setup Funktionen
+# <a name="dll-setup-functions"></a>DLL-Setupfunktionen
 
 Diese Funktionen registrieren einen Filter.
 
 
 
-| Funktion                                                         | BESCHREIBUNG                                        |
+| Funktion                                                         | Beschreibung                                        |
 |------------------------------------------------------------------|----------------------------------------------------|
-| [**Amoviedllregisterserver**](amoviedllregisterserver.md)       | Veraltet.                                          |
-| [**AMovieDllRegisterServer2**](amoviedllregisterserver2.md)     | Registriert und hebt die Registrierung von Filtern auf.                 |
-| [**Amoviedllunregisterserver**](amoviedllunregisterserver.md)   | Veraltet.                                          |
-| [**Amoviesetupregisterfilter**](amoviesetupregisterfilter.md)   | Veraltet.                                          |
-| [**AMovieSetupRegisterFilter2**](amoviesetupregisterfilter2.md) | Registriert die Vorzüge, Pins und Medientypen eines Filters. |
+| [**AMovieDllRegisterServer**](amoviedllregisterserver.md)       | Veraltet.                                          |
+| [**AMovieDllRegisterServer2**](amoviedllregisterserver2.md)     | Registriert Filter und entlädt die Registrierung.                 |
+| [**AMovieDllUnregisterServer**](amoviedllunregisterserver.md)   | Veraltet.                                          |
+| [**AMovieSetupRegisterFilter**](amoviesetupregisterfilter.md)   | Veraltet.                                          |
+| [**AMovieSetupRegisterFilter2**](amoviesetupregisterfilter2.md) | Registriert die Vorteile, Stecknadeln und Medientypen eines Filters. |
 
 
 
@@ -47,8 +47,8 @@ Diese Funktionen registrieren einen Filter.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dllsetup. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Dllsetup.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Löscht den Benutzernamen aus dem Smartcard-Steuerelement.
+description: Entfernt den Benutzernamen aus dem Smartcard-Steuerelement.
 ms.assetid: fff50db5-0610-4985-94c6-96d7ce990219
-title: 'Iscrdenr:: resetuser-Methode'
+title: ISCrdEnr::resetUser-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Scrdenrl.dll
-ms.openlocfilehash: e3b00721229890f82b00e7e7a41ccb8796a81b98
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 873872b17684aac3874b82f0570dfac93988356743055088c1916ef3cb41f4a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373301"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119867900"
 ---
-# <a name="iscrdenrresetuser-method"></a>Iscrdenr:: resetuser-Methode
+# <a name="iscrdenrresetuser-method"></a>ISCrdEnr::resetUser-Methode
 
-Die **resetuser** -Methode löscht den Benutzernamen aus dem Smartcard-Steuerelement.
+Die **resetUser-Methode** entfernt den Benutzernamen aus dem Smartcard-Steuerelement.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,9 +38,9 @@ HRESULT resetUser();
 
 Diese Methode hat keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode werden alle vorhandenen Benutzernamen und zuvor registrierten Zertifikate aus dem Arbeitsspeicher gelöscht. Das zuvor registrierte Zertifikat wird jedoch nicht von der Smartcard entfernt.
+Mit dieser Methode werden alle vorhandenen Benutzernamen und zuvor registrierten Zertifikate aus dem Arbeitsspeicher entfernt. Das zuvor registrierte Zertifikat wird jedoch nicht von der Smartcard entfernt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Mit dieser Methode werden alle vorhandenen Benutzernamen und zuvor registrierten
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Scrdenrl.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscrdenr ist definiert als 753988a1-1357-436d-9cf5-f089bdd67d64<br/>             |
+| IID<br/>                      | IID \_ ISCrdEnr ist als 753988a1-1357-436d-9cf5-f089bdd67d64 definiert.<br/>             |
 
 
 
@@ -59,16 +59,16 @@ Mit dieser Methode werden alle vorhandenen Benutzernamen und zuvor registrierten
 
 <dl> <dt>
 
-[**Iscrdenr**](iscrdenr.md)
+[**ISCrdEnr**](iscrdenr.md)
 </dt> <dt>
 
-[**Iscrdenr:: GetUserName**](iscrdenr-getusername.md)
+[**ISCrdEnr::getUserName**](iscrdenr-getusername.md)
 </dt> <dt>
 
-[**Iscrdenr:: selectusername**](iscrdenr-selectusername.md)
+[**ISCrdEnr::selectUserName**](iscrdenr-selectusername.md)
 </dt> <dt>
 
-[**Iscrdenr:: setUserName**](iscrdenr-setusername.md)
+[**ISCrdEnr::setUserName**](iscrdenr-setusername.md)
 </dt> </dl>
 
  

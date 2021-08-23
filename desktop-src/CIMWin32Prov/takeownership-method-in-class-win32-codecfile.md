@@ -1,8 +1,8 @@
 ---
-description: 'TakeOwnerShip-Methode der Win32_CodecFile-Klasse: Die TakeOwnerShip-WMI-Klassenmethode erhält den Besitz der logischen Datei, die im Objektpfad angegeben ist.'
+description: 'TakeOwnerShip-Methode der Win32_CodecFile-Klasse: Die TakeOwnerShip WMI-Klassenmethode ruft den Besitz der logischen Datei ab, die im Objektpfad angegeben ist.'
 ms.assetid: c8fa0706-1f7e-4e68-aea6-694ba24c16c3
 ms.tgt_platform: multiple
-title: TakeOwnerShip-Methode der Win32_CodecFile Klasse
+title: TakeOwnerShip-Methode der Win32_CodecFile-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -23,9 +23,9 @@ ms.locfileid: "119751690"
 ---
 # <a name="takeownership-method-of-the-win32_codecfile-class"></a>TakeOwnerShip-Methode der Win32 \_ CodecFile-Klasse
 
-Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **TakeOwnerShip** erhält den Besitz der logischen Datei, die im Objektpfad angegeben ist. Wenn die logische Datei tatsächlich ein Verzeichnis ist, verhält **sich TakeOwnerShip** rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
+Die **TakeOwnerShip** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) ruft den Besitz der logischen Datei ab, die im Objektpfad angegeben ist. Wenn die logische Datei tatsächlich ein Verzeichnis ist, verhält sich **TakeOwnerShip** rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
 
-In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -112,7 +112,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist ein Freigabeverstoß vor worden.
+Es ist ein Freigabeverstoß aufgetreten.
 
 </dd> <dt>
 

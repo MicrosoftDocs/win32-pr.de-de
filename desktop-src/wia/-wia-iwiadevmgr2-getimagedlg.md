@@ -1,7 +1,7 @@
 ---
-description: 'Die IWiaDevMgr2:: getimagedlg-Methode zeigt ein oder mehrere Dialogfelder an, mit denen ein Benutzer ein Bild von einem Windows-Image Erfassungsgerät (WIA) 2,0 abrufen und in eine angegebene Datei schreiben kann.'
+description: Die IWiaDevMgr2::GetImageDlg-Methode zeigt mindestens ein Dialogfeld an, mit dem ein Benutzer ein Bild von einem WIA 2.0-Gerät (Windows Image Acquisition) erwerben und in eine angegebene Datei schreiben kann.
 ms.assetid: 30a63426-150e-44cf-a03e-7b6da14450f7
-title: 'IWiaDevMgr2:: getimagedlg-Methode (WIA. h)'
+title: IWiaDevMgr2::GetImageDlg-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 6777b839beeb809383e524960e8882392be4bd24
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b03356e40f1c708c852917c890e4c1bf96b98cd18ccf82b75ebcaaccaa69597
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359060"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119814040"
 ---
-# <a name="iwiadevmgr2getimagedlg-method"></a>IWiaDevMgr2:: getimagedlg-Methode
+# <a name="iwiadevmgr2getimagedlg-method"></a>IWiaDevMgr2::GetImageDlg-Methode
 
-Die **IWiaDevMgr2:: getimagedlg** -Methode zeigt ein oder mehrere Dialogfelder an, mit denen ein Benutzer ein Bild von einem Windows-Image Erfassungsgerät (WIA) 2,0 abrufen und in eine angegebene Datei schreiben kann. Mit dieser Methode wird die Funktionalität von [**IWiaDevMgr2:: SelectDeviceDlg**](-wia-iwiadevmgr2-selectdevicedlg.md) erweitert, um die Bild Erfassung innerhalb eines einzelnen API-Aufrufs zu kapseln.
+Die **IWiaDevMgr2::GetImageDlg-Methode** zeigt ein oder mehrere Dialogfelder an, die es einem Benutzer ermöglichen, ein Bild von einem WIA 2.0-Gerät (Windows Image Acquisition) zu erhalten und es in eine angegebene Datei zu schreiben. Diese Methode erweitert die Funktionalität von [**IWiaDevMgr2::SelectDeviceDlg,**](-wia-iwiadevmgr2-selectdevicedlg.md) um die Bilderfassung innerhalb eines einzelnen API-Aufrufs zu kapseln.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,19 +46,19 @@ HRESULT GetImageDlg(
 
 <dl> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
-Gibt das Dialogfeld Verhalten an. Kann auf die folgenden Werte festgelegt werden:
+Gibt das Verhalten des Dialogfelds an. Kann auf die folgenden Werte festgelegt werden:
 
 
 
 | Flag                                 | Bedeutung                                                                                                                                                                     |
 |--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0                                    | Standardverhalten.                                                                                                                                                           |
-| Dialog Feld "WIA- \_ Gerät" \_ \_ verwenden \_ allgemeine \_ Benutzeroberfläche | Verwenden Sie die Benutzeroberfläche des-Systems anstelle der vom Hersteller bereitgestellten Benutzeroberfläche. Wenn die Benutzeroberfläche des Systems nicht verfügbar ist, wird die Benutzeroberfläche des Anbieters verwendet. Wenn keine Benutzeroberfläche verfügbar ist, gibt die Funktion E \_ notimpl zurück. |
+| DIALOGFELD \_ "WIA-GERÄT" \_ VERWENDEN DER ALLGEMEINEN \_ \_ \_ BENUTZEROBERFLÄCHE | Verwenden Sie die Systembenutzeroberfläche anstelle der vom Anbieter bereitgestellten Benutzeroberfläche. Wenn die Systembenutzeroberfläche nicht verfügbar ist, wird die Benutzeroberfläche des Anbieters verwendet. Wenn keine der Benutzeroberflächen verfügbar ist, gibt die Funktion E \_ NOTIMPL zurück. |
 
 
 
@@ -66,7 +66,7 @@ Gibt das Dialogfeld Verhalten an. Kann auf die folgenden Werte festgelegt werden
 
 </dd> <dt>
 
-*bstraude viceid* \[ in\]
+*bstrDeviceID* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -75,16 +75,16 @@ Gibt den zu verwendenden Scanner an.
 
 </dd> <dt>
 
-*hwndParent* \[ in\]
+*hwndParent* \[ In\]
 </dt> <dd>
 
 Typ: **HWND**
 
-Ein Handle des Fensters, das das Dialogfeld " **Bild Abbild** " besitzt.
+Ein Handle des Fensters, das das **Dialogfeld Bild herunterladen** besitzt.
 
 </dd> <dt>
 
-*bstrinfoldername* \[ in\]
+*bstrFolderName* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -93,39 +93,39 @@ Gibt den Namen des Ordners an, in dem die gescannten Dateien gespeichert werden.
 
 </dd> <dt>
 
-*bstrauch filename* \[ in\]
+*bstrFilename* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Gibt den Namen der Datei an, in die die Bilddaten geschrieben werden sollen.
+Gibt den Namen der Datei an, in die die Bilddaten geschrieben werden.
 
 </dd> <dt>
 
-*plnumfiles* \[ in\]
+*plNumFiles* \[ In\]
 </dt> <dd>
 
-Type: **Long \** _
+Typ: **\* LONG**
 
 Ein Zeiger auf die Anzahl der zu überprüfenden Dateien.
 
 </dd> <dt>
 
-_ppbstrFilePaths * \[ in\]
+*ppbstrFilePaths* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR \* \***
 
-Die Adresse eines Zeigers auf ein Array von Pfaden für die gescannten Dateien. Initialisieren Sie den Zeiger so, dass er auf ein Array der Größe 0 (null) verweist, bevor **IWiaDevMgr2:: getimagedlg** aufgerufen wird. Siehe **Hinweise**.
+Die Adresse eines Zeigers auf ein Array von Pfaden für die gescannten Dateien. Initialisieren Sie den Zeiger, um auf ein Array der Größe 0 (null) zu zeigen, bevor **IWiaDevMgr2::GetImageDlg** aufgerufen wird. Siehe **Hinweise**.
 
 </dd> <dt>
 
-*ppitem* \[ in, out\]
+*ppItem* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **IWiaItem2**](-wia-iwiaitem2.md)\*\***
 
-Die Adresse eines Zeigers auf den [**IWiaItem2**](-wia-iwiaitem2.md) , von dem die Bilder gescannt wurden.
+Die Adresse eines Zeigers auf [**IWiaItem2,**](-wia-iwiaitem2.md) von dem die Bilder gescannt wurden.
 
 </dd> </dl>
 
@@ -133,22 +133,22 @@ Die Adresse eines Zeigers auf den [**IWiaItem2**](-wia-iwiaitem2.md) , von dem d
 
 Typ: **HRESULT**
 
-**IWiaDevMgr2:: getimagedlg** gibt "s OK" zurück \_ , wenn die Daten erfolgreich übertragen werden, gibt "false" zurück, \_ Wenn der Benutzer das Dialogfeld abbricht, oder gibt einen com-Standardfehler zurück.
+**IWiaDevMgr2::GetImageDlg** gibt S OK zurück, wenn die Daten erfolgreich übertragen wurden, gibt S FALSE zurück, wenn der Benutzer das Dialogfeld abbricht, oder gibt einen COM-Standardfehler \_ \_ zurück.
 
 > [!Note]  
-> Der *ppbstraufilepath* -Parameter ist nicht notwendigerweise leer, wenn die Funktion "S false" zurückgibt \_ . Wenn der Benutzer abbricht, werden die Seiten, bei denen die Überprüfung abgeschlossen ist, verarbeitet und in *ppbstraufilepath* zurückgegeben. Auch wenn Sie nicht verwendet werden, müssen Sie das Array freigeben. Siehe **Hinweise**.
+> Der *ppbstrFilePaths-Parameter* ist nicht unbedingt leer, wenn die Funktion S \_ FALSE zurückgibt. Wenn der Benutzer abbricht, werden die Seiten, die die Überprüfung abgeschlossen haben, verarbeitet und in *ppbstrFilePaths zurückgegeben.* Auch wenn sie nicht verwendet werden, müssen Sie das Array frei geben. Siehe **Hinweise**.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Anwendung für den Wert des Parameters *bstraude viceid* den Wert **null** übergibt, zeigt **IWiaDevMgr2:: getimagetimagedlg** das Dialogfeld **Gerät auswählen** an, sodass der Benutzer das WIA 2,0-Eingabegerät auswählen kann.
+Wenn die Anwendung **NULL** für den Wert des *Parameters bstrDeviceID* übergibt, zeigt **IWiaDevMgr2::GetImageDlg** das Dialogfeld Gerät auswählen an, damit der Benutzer das WIA 2.0-Eingabegerät auswählen kann. 
 
-Verwenden Sie im Menü **Datei** ein Menü Element mit dem Namen **aus Scanner** , damit die Geräte-und Image Auswahl in der Anwendung verfügbar ist.
+Verwenden Sie ein Menüelement mit dem Namen **From scanner** im Menü **Datei,** damit die Geräte- und Bildauswahl in Ihrer Anwendung verfügbar ist.
 
-Nennen Sie [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring) auf jedem BSTR im Array, auf das *ppbstraufilepath* \[ \] verweist, und nennen Sie " [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) " für das Array selbst, um zugeordneten Arbeitsspeicher freizugeben. Wenn S \_ false zurückgegeben wird, überprüfen Sie, ob der Wert, auf den *plnumfiles* verweist, nicht NULL ist. Wenn der Wert nicht NULL ist, können Sie die Ressourcen von *ppbtrefilepath* \[ i \] in der Anwendung freigeben, da der Benutzer nach dem Scannen einer oder mehrerer Seiten abbrechen kann. Initialisieren Sie *plnumfiles* mit 0 (null), bevor Sie **IWiaDevMgr2:: getimagedlg** aufrufen. Wenn *plnumfiles* nicht mit 0 (null) initialisiert wird und ein Fehler in der com-Infrastruktur bewirkt, dass die Funktion den Wert "false" zurückgibt \_ , bevor **IWiaDevMgr2:: getimagedlg** aufgerufen wird, weist *plnumfiles* einen irreführenden Garbage-Wert auf.
+Rufen [Sie SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring) für jeden BSTR im Array auf, auf das *ppbstrFilePaths* i zeigt, und rufen Sie \[ \] [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) für das Array selbst auf, um zugeordneten Arbeitsspeicher frei zu geben. Wenn S FALSE zurückgegeben wird, überprüfen Sie, ob der Wert, auf \_ *den plNumFiles* zeigt, nicht 0 (null) ist. Wenn der Wert nicht 0 (null) ist, geben Sie die *ppbstrFilePaths* i-Ressourcen in der Anwendung frei, da der Benutzer nach dem Scannen einer oder mehrere Seiten \[ \] abbrechen kann. Initialisieren *Sie plNumFiles auf* 0 (null), bevor **Sie IWiaDevMgr2::GetImageDlg aufrufen.** Wenn *plNumFiles* nicht mit 0 initialisiert wird und ein Fehler in der COM-Infrastruktur bewirkt, dass die Funktion S FALSE zurück gibt, bevor \_ **IWiaDevMgr2::GetImageDlg** aufgerufen wird, hat *plNumFiles* einen irreführenden Garbage Value.
 
-Das Dialogfeld muss über ausreichende Berechtigungen für *bstrinfoldername* verfügen, damit die Dateien mit eindeutigen Dateinamen gespeichert werden können. Schützen Sie den Ordner mit einer Zugriffs Steuerungs Liste (Access Control List, ACL), da er Benutzerdaten enthält.
+Das Dialogfeld muss über ausreichende Rechte für *bstrFolderName* verfügen, damit die Dateien mit eindeutigen Dateinamen gespeichert werden können. Schützen Sie den Ordner mit einer Zugriffssteuerungsliste (Access Control List, ACL), da er Benutzerdaten enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -156,9 +156,9 @@ Das Dialogfeld muss über ausreichende Berechtigungen für *bstrinfoldername* ve
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                             |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl> |
 
 
 

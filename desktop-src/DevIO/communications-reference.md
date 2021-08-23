@@ -16,7 +16,7 @@ ms.locfileid: "119768860"
 Die folgenden Elemente werden mit Kommunikationsressourcen verwendet.
 
 -   [Kommunikationsfunktionen](communications-functions.md)
--   [Codes für Die Kommunikationssteuerung](communications-control-codes.md)
+-   [Kommunikationssteuerungscodes](communications-control-codes.md)
 -   [Kommunikationsstrukturen](communications-structures.md)
 
  

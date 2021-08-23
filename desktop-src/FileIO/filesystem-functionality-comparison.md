@@ -1,7 +1,7 @@
 ---
-description: Tabellen, in denen Funktionen und Features aufgeführt sind, unterstützen Vergleiche für die vier haupt- Windows Dateisysteme NTFS, exFAT, UDF und FAT32.
+description: Tabellen, die Funktionen und Features auflisten, unterstützen Vergleiche für die vier Windows Dateisysteme NTFS, exFAT, UDF und FAT32.
 ms.assetid: 28cf2805-f1ce-46b4-bf08-a329f67f4d99
-title: Vergleich der Dateisystemfunktionen
+title: Vergleich der Dateisystemfunktionalität
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: c5af85dbacfd04920d8eb0a9558e0d57cc6e4020da35ffac57f7bdc703e6ef15
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119790690"
 ---
-# <a name="file-system-functionality-comparison"></a>Vergleich der Dateisystemfunktionen
+# <a name="file-system-functionality-comparison"></a>Vergleich der Dateisystemfunktionalität
 
-In den folgenden Tabellen sind die Funktionen und Features aufgeführt, die Vergleiche für die vier haupt- Windows Dateisysteme NTFS, exFAT, UDF und FAT32 unterstützen:
+In den folgenden Tabellen werden die Funktionen und Featureunterstützungsvergleiche für die vier wichtigsten Dateisysteme Windows NTFS, exFAT, UDF und FAT32 aufgeführt:
 
 -   [Funktion](#file-system-functionality-comparison)
 -   [Einschränkungen](#limits)
--   [Journaling und Änderungsprotokoll](#journaling-and-change-log)
+-   [Journaling and Change Log](#journaling-and-change-log)
 -   [Blockzuordnungsfeatures](#block-allocation-features)
 -   [Sicherheit](#security)
 -   [Komprimierung](#compression)
@@ -29,14 +29,14 @@ In den folgenden Tabellen sind die Funktionen und Features aufgeführt, die Verg
 
 
 
-| Komponente                             | NTFS                           | exFAT          | UDF                           | FAT32                      |
+| Feature                             | NTFS                           | exFAT          | UDF                           | FAT32                      |
 |-------------------------------------|--------------------------------|----------------|-------------------------------|----------------------------|
 | Erstellungszeitstempel<br/>     | Ja<br/>                 | Ja<br/> | Ja<br/>                | Ja<br/>             |
 | Zeitstempel des letzten Zugriffs<br/>  | Nein (siehe nachstehenden Hinweis)<br/> | Ja<br/> | Ja<br/>                | Ja (nur Datum)<br/> |
 | Zeitstempel der letzten Änderung<br/>  | Ja<br/>                 | Ja<br/> | Ja<br/>                | Ja<br/>             |
 | Zeitstempel des letzten Archivs<br/> | Nein<br/>                  | Nein<br/>  | Nein<br/>                 | Nein<br/>              |
 | Beachtet Groß-/Kleinschreibung<br/>           | Ja (Option)<br/>        | Nein<br/>  | Ja<br/>                | Nein<br/>              |
-| Beibehalten der Case-Aufrechterhaltung<br/>          | Ja<br/>                 | Ja<br/> | Ja<br/>                | Ja<br/>             |
+| Beibehalten der Case-Beibehaltung<br/>          | Ja<br/>                 | Ja<br/> | Ja<br/>                | Ja<br/>             |
 | Feste Links<br/>               | Ja<br/>                 | Nein<br/>  | Ja<br/>                | Nein<br/>              |
 | Weiche Links<br/>               | Ja<br/>                 | Nein<br/>  | Nein<br/>                 | Nein<br/>              |
 | Sparsedateien<br/>             | Ja<br/>                 | Nein<br/>  | Ja<br/>                | Nein<br/>              |
@@ -50,7 +50,7 @@ In den folgenden Tabellen sind die Funktionen und Features aufgeführt, die Verg
 
  
 
-**Windows Server 2003 und Windows XP:** Das Ntfs-Zeitstempelfeld für den letzten Zugriff wird aktualisiert.
+**Windows Server 2003 und Windows XP:** Das NTFS-Feld zeitstempel für den letzten Zugriff wird aktualisiert.
 
 ## <a name="limits"></a>Grenzwerte
 
@@ -71,7 +71,7 @@ In den folgenden Tabellen sind die Funktionen und Features aufgeführt, die Verg
 
 
 
-| Komponente                             | NTFS           | exFAT         | UDF           | FAT32         |
+| Feature                             | NTFS           | exFAT         | UDF           | FAT32         |
 |-------------------------------------|----------------|---------------|---------------|---------------|
 | Nur Metadaten-Journaling<br/> | Ja<br/> | Nein<br/> | Nein<br/> | Nein<br/> |
 | Dateiänderungsprotokoll<br/>          | Ja<br/> | Nein<br/> | Nein<br/> | Nein<br/> |
@@ -84,7 +84,7 @@ In den folgenden Tabellen sind die Funktionen und Features aufgeführt, die Verg
 
 
 
-| Komponente                        | NTFS                                                                        | exFAT         | UDF            | FAT32         |
+| Feature                        | NTFS                                                                        | exFAT         | UDF            | FAT32         |
 |--------------------------------|-----------------------------------------------------------------------------|---------------|----------------|---------------|
 | Packen des Endes<br/>        | Ja (kleine Dateien werden im MFT-Streamdeskriptor gespeichert)<br/> | Nein<br/> | Nein<br/>  | Nein<br/> |
 | Extents<br/>             | Ja<br/>                                                              | Nein<br/> | Ja<br/> | Nein<br/> |
@@ -98,7 +98,7 @@ In den folgenden Tabellen sind die Funktionen und Features aufgeführt, die Verg
 
 
 
-| Funktion                                  | NTFS                                                 | exFAT               | UDF                 | FAT32         |
+| Feature                                  | NTFS                                                 | exFAT               | UDF                 | FAT32         |
 |------------------------------------------|------------------------------------------------------|---------------------|---------------------|---------------|
 | Nachverfolgen des Dateibesitzers<br/>              | Ja<br/>                                       | Nein<br/>       | Nein<br/>       | Nein<br/> |
 | POSIX-Dateiberechtigungen<br/>        | Nein (verfügbar im POSIX-Subsystemfeature)<br/> | Nein<br/>       | Ja<br/>      | Nein<br/> |
@@ -114,7 +114,7 @@ In den folgenden Tabellen sind die Funktionen und Features aufgeführt, die Verg
 
 
 
-| Komponente                         | NTFS           | exFAT         | UDF           | FAT32         |
+| Feature                         | NTFS           | exFAT         | UDF           | FAT32         |
 |---------------------------------|----------------|---------------|---------------|---------------|
 | Integrierte Komprimierung<br/> | Ja<br/> | Nein<br/> | Nein<br/> | Nein<br/> |
 
@@ -126,7 +126,7 @@ In den folgenden Tabellen sind die Funktionen und Features aufgeführt, die Verg
 
 
 
-| Komponente                               | NTFS                           | exFAT         | UDF           | FAT32         |
+| Feature                               | NTFS                           | exFAT         | UDF           | FAT32         |
 |---------------------------------------|--------------------------------|---------------|---------------|---------------|
 | Speicherplatz auf Benutzerebene<br/>      | Ja<br/>                 | Nein<br/> | Nein<br/> | Nein<br/> |
 | Speicherplatz auf Verzeichnisebene<br/> | Nein (siehe nachstehenden Hinweis)<br/> | Nein<br/> | Nein<br/> | Nein<br/> |
@@ -141,7 +141,7 @@ In den folgenden Tabellen sind die Funktionen und Features aufgeführt, die Verg
 
 
 
-| Komponente               | NTFS                           | exFAT         | UDF           | FAT32         |
+| Feature               | NTFS                           | exFAT         | UDF           | FAT32         |
 |-----------------------|--------------------------------|---------------|---------------|---------------|
 | Dateiebene<br/> | Nein (siehe nachstehenden Hinweis)<br/> | Nein<br/> | Nein<br/> | Nein<br/> |
 

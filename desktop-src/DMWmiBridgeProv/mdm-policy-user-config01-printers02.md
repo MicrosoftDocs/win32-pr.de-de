@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_User_Config01_Printers02-Klasse
-description: Die Mdm \_ Policy \_ User \_ Config01 \_ Printer02-Klasse stellt die verfügbaren Druckerrichtlinien dar.
+description: Die MDM \_ Policy \_ User \_ Config01 \_ Printer02-Klasse stellt die verfügbaren Druckerrichtlinien dar.
 ms.assetid: 9faeaa04-92b4-43b0-be17-0f85f2eb493c
 keywords:
 - MDM_Policy_User_Config01_Printers02-Klasse
@@ -28,7 +28,7 @@ ms.locfileid: "119694010"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die Mdm \_ Policy \_ User \_ Config01 \_ Printer02-Klasse stellt die verfügbaren Druckerrichtlinien dar.
+Die MDM \_ Policy \_ User \_ Config01 \_ Printer02-Klasse stellt die verfügbaren Druckerrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,7 +46,7 @@ class MDM_Policy_User_Config01_Printers02
 
 ## <a name="members"></a>Member
 
-Die **Mdm Policy User \_ \_ \_ Config01 \_ Printer02-Klasse** verfügt über diese Typen von Membern:
+Die **MDM Policy User \_ \_ \_ Config01 \_ Printer02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -65,7 +65,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
@@ -79,7 +79,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>

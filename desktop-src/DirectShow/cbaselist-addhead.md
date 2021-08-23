@@ -1,7 +1,7 @@
 ---
-description: Die AddHead-Methode fügt am Anfang dieser Liste eine andere Liste ein.
+description: Die AddHead-Methode fügt eine weitere Liste am Anfang dieser Liste ein.
 ms.assetid: 10999d93-2eb0-481f-8909-6f1184137786
-title: Cbaselist. AddHead-Methode (wxlist. h)
+title: CBaseList.AddHead-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a262f2bcfb7c40671fd472ecd7d3f887b1db4224
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fa8108af5f779bea4c1a1e756ab018ed9c902d3e516556c42b7899f442cb7704
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373785"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119814320"
 ---
-# <a name="cbaselistaddhead-method"></a>Cbaselist. AddHead-Methode
+# <a name="cbaselistaddhead-method"></a>CBaseList.AddHead-Methode
 
-Die- `AddHead` Methode fügt am Anfang dieser Liste eine andere Liste ein.
+Die `AddHead` -Methode fügt eine weitere Liste am Anfang dieser Liste ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ BOOL AddHead(
 
 <dl> <dt>
 
-*pList* 
+*Plist* 
 </dt> <dd>
 
-Ein Zeiger auf die Liste der hinzu zufügenden Elemente.
+Zeiger auf die Liste der hinzuzufügende Elemente.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode fehlschlägt, wurden möglicherweise einige Elemente zur Liste hinzugefügt.
+Wenn die Methode fehlschlägt, wurden der Liste möglicherweise einige Elemente hinzugefügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Wenn die Methode fehlschlägt, wurden möglicherweise einige Elemente zur Liste 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Wenn die Methode fehlschlägt, wurden möglicherweise einige Elemente zur Liste 
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

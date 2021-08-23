@@ -1,36 +1,36 @@
 ---
-description: Im folgenden Beispiel wird das Konzept des Sammlungs Speichers veranschaulicht. dabei handelt es sich um einen temporären Zertifikat Speicher, in dem der Inhalt mehrerer Zertifikat Speicher enthalten ist.
+description: Im folgenden Beispiel wird das Konzept des Sammlungsspeichers veranschaulicht. Dabei handelt es sich um einen temporären Zertifikatspeicher, der tatsächlich den Inhalt mehrerer Zertifikatspeicher enthält.
 ms.assetid: 5349222f-ad68-477c-8712-fde16e68f600
-title: 'Beispiel-C-Programm: Sammlungs-und gleich geordnete Zertifikat Speichervorgänge'
+title: 'C-Beispielprogramm: Sammlungs- und Store vorgänge für gleichgeordnete Zertifikate'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 79ad1957f37e1aabeabbda0be8c14662c14c3ecc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 52074b58cb96b37b17808cfa8de17e2cd4af3082cf58c7c4312b46eb8eca0e29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119873870"
 ---
-# <a name="example-c-program-collection-and-sibling-certificate-store-operations"></a>Beispiel-C-Programm: Sammlungs-und gleich geordnete Zertifikat Speichervorgänge
+# <a name="example-c-program-collection-and-sibling-certificate-store-operations"></a>C-Beispielprogramm: Sammlungs- und Store vorgänge für gleichgeordnete Zertifikate
 
-Im folgenden Beispiel wird das Konzept des Sammlungs Speichers veranschaulicht. dabei handelt es sich um einen temporären [*Zertifikat Speicher*](../secgloss/c-gly.md) , in dem der Inhalt mehrerer Zertifikat Speicher enthalten ist. Ein oder mehrere Speicher können einer Auflistung hinzugefügt werden, die mit einem einzelnen Funktions aufrufauf den Inhalt aller Geschäfte in der Sammlung zugreifen kann.
+Im folgenden Beispiel wird das Konzept des Sammlungsspeichers veranschaulicht. Dabei handelt es sich um einen temporären [*Zertifikatspeicher,*](../secgloss/c-gly.md) der tatsächlich den Inhalt mehrerer Zertifikatspeicher enthält. Einer Sammlung kann mindestens ein Speicher hinzugefügt werden, der mit einem einzigen Funktionsaufruf auf den Inhalt eines beliebigen Speichers in der Auflistung zugreifen kann.
 
-In diesem Beispiel werden die folgenden Aufgaben und [*kryptoapi*](../secgloss/c-gly.md) -Funktionen veranschaulicht:
+In diesem Beispiel werden die folgenden Aufgaben und [*CryptoAPI-Funktionen*](../secgloss/c-gly.md) veranschaulicht:
 
--   Öffnen und Schließen eines Sammlungs Speichers, eines Speicher Speichers und eines System Speichers mit " [**certopsstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore) " und " [**certclosestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)".
--   Hinzufügen eines gleich geordneten Stores zu einem Sammlungs Speicher mithilfe von [**certaddstoreeincollection**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddstoretocollection).
--   Suchen von Zertifikaten und Links zu Zertifikaten in Stores, die einige Kriterien mithilfe von " [**certfindcertifikateinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)" erfüllen.
--   Hinzufügen eines abgerufenen Zertifikats zu einem Speicher im Arbeitsspeicher mithilfe von [**certaddcertifikatecontexttostore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddcertificatecontexttostore).
--   Hinzufügen eines Links zu einem Zertifikat zu einem Speicher mithilfe von [**certaddcertifikatelinktostore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddcertificatelinktostore).
+-   Öffnen und Schließen eines Sammlungsspeichers, eines Speicherspeichers und eines Systemspeichers mit [**CertOpenStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore) und [**CertCloseStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
+-   Hinzufügen eines nebengeordneten Speichers zu einem Sammlungsspeicher mithilfe von [**CertAddStoreToCollection**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddstoretocollection).
+-   Suchen von Zertifikaten und Links zu Zertifikaten in Speichern, die einige Kriterien erfüllen, mithilfe von [**CertFindCertificateInStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)
+-   Hinzufügen eines abgerufenen Zertifikats zu einem Speicher im Arbeitsspeicher mithilfe von [**CertAddCertificateContextToStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddcertificatecontexttostore)
+-   Hinzufügen eines Links zu einem Zertifikat zu einem Speicher mithilfe von [**CertAddCertificateLinkToStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddcertificatelinktostore)
 -   Speichern des Speichers im Arbeitsspeicher in einer Datei auf dem Datenträger.
--   Öffnen und Schließen eines dateibasierten Zertifikat Speicher.
--   Entfernen eines gleich geordneten Speicher Orts aus einer Sammlung mithilfe von [**certrerovestorefromcollection**](/windows/desktop/api/Wincrypt/nf-wincrypt-certremovestorefromcollection).
+-   Öffnen und Schließen eines dateibasierten Zertifikatspeichers.
+-   Entfernen eines nebengeordneten Speichers aus einer Sammlung mithilfe von [**CertRemoveStoreFromCollection**](/windows/desktop/api/Wincrypt/nf-wincrypt-certremovestorefromcollection).
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel wird die Funktion [**MyHandleError verwendet.**](myhandleerror.md) Der Code für diese Funktion ist im Beispiel enthalten. Code für diese und andere Hilfsfunktionen ist auch unter [Universell Functions](general-purpose-functions.md)aufgeführt.
 
-In diesem Beispiel wird die im Thema [Erstellen einer DACL](../secbp/creating-a-dacl.md) definierte Funktion "-Funktion" verwendet, um sicherzustellen, **dass die geöffnete** Datei mit einer ordnungsgemäßen DACL erstellt wird.
+In diesem Beispiel wird die Im Thema [Erstellen einer DACL](../secbp/creating-a-dacl.md) definierte **CreateMyDACL-Funktion** verwendet, um sicherzustellen, dass die geöffnete Datei mit einer richtigen DACL erstellt wird.
 
-Im folgenden Beispiel wird ein Sammlungs Speicher geöffnet, ein neuer Zertifikat Speicher im Arbeitsspeicher erstellt, und der neue Speicher wird dem Sammlungs Speicher als gleich geordneter Speicher hinzugefügt. Das Programm öffnet dann einen Systemspeicher und ruft ein Zertifikat ab. Dieses Zertifikat wird dem Speicher Speicher hinzugefügt. Ein zweites Zertifikat wird aus dem Systemspeicher abgerufen, und es wird ein Link zu diesem Zertifikat zum Speicher Speicher hinzugefügt. Das Zertifikat und der Link werden dann aus dem Sammlungs Speicher abgerufen, und es wird angezeigt, dass Zertifikate und Verknüpfungen in einem gleich geordneten Speicher aus dem Sammlungs Speicher abgerufen werden können. Der Arbeitsspeicher wird auf dem Datenträger gespeichert. Der Speicher Speicher wird dann aus der Sammlung entfernt. Der dem Speicher Speicher hinzugefügte Link befindet sich weiterhin im Speicher Speicher, kann aber nicht mehr im Sammlungs Speicher gefunden werden. Alle Filialen und Dateien werden geschlossen, und der Dateispeicher wird erneut geöffnet, und für den Zertifikat Link wird eine Suche durchgeführt. Der Erfolg dieses Programms hängt von der Verfügbarkeit meines Stores ab. Dieser Speicher muss ein Zertifikat mit dem Betreff "INSERT \_ CERT \_ Subject \_ Name1" und ein zweites Zertifikat mit dem Betreff "CERT- \_ \_ Betreff \_ name2 einfügen" enthalten. Die Namen der Antragsteller müssen in die Namen von Zertifikat Subjekten geändert werden, die bekanntermaßen im My-Speicher sind.
+Im folgenden Beispiel wird ein Sammlungsspeicher geöffnet, ein neuer Zertifikatspeicher im Arbeitsspeicher erstellt und der neue Speicher dem Sammlungsspeicher als nebengeordneter Speicher hinzugefügt. Das Programm öffnet dann einen Systemspeicher und ruft ein Zertifikat ab. Dieses Zertifikat wird dem Speicher hinzugefügt. Ein zweites Zertifikat wird aus dem Systemspeicher abgerufen, und dem Speicherspeicher wird ein Link zu diesem Zertifikat hinzugefügt. Das Zertifikat und der Link werden dann aus dem Sammlungsspeicher abgerufen, um zu zeigen, dass Zertifikate und Links in einem nebengeordneten Speicher aus dem Sammlungsspeicher abgerufen werden können. Der Arbeitsspeicher wird auf dem Datenträger gespeichert. Der Speicher wird dann aus der Auflistung entfernt. Der dem Speicherspeicher hinzugefügte Link befindet sich weiterhin im Speicher, aber nicht mehr im Sammlungsspeicher. Alle Speicher und Dateien werden geschlossen, dann wird der Dateispeicher erneut geöffnet, und eine Suche nach dem Zertifikatlink wird durchgeführt. Der Erfolg dieses Programms hängt davon ab, ob ein My store verfügbar ist. Dieser Speicher muss ein Zertifikat mit dem Antragsteller "Name des \_ \_ Zertifikatsubjekts \_ einfügen1" und ein zweites Zertifikat mit dem Antragsteller "Antragstellername des \_ Zertifikats \_ \_ einfügen2" enthalten. Die Namen der Antragsteller sollten in die Namen der Zertifikatsubjekte geändert werden, die bekanntermaßen im Speicher "Mein" gespeichert sind.
 
 
 ```C++

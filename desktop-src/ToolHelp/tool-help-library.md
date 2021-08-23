@@ -1,29 +1,29 @@
 ---
-title: Tool Hilfe Bibliothek
-description: Abrufen von Informationen zu aktuell ausgeführten Anwendungen. Erstellen Sie Momentaufnahmen von Prozessen, Threads, Modulen und Heaps. Traversieren (durchlaufen) Thread-, Modul-und Heap Listen.
+title: Tool Help Library
+description: Abrufen von Informationen über aktuell ausgeführte Anwendungen. Erstellen Sie Momentaufnahmen von Prozessen, Threads, Modulen und Heaps. Durchlaufen Sie (exemplarische) Thread-, Modul- und Heaplisten.
 ms.assetid: bc8e3129-049f-491e-98e2-391e824976ca
 keywords:
-- Tool Hilfe Bibliothek
+- Toolhilfebibliothek
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1fc741c7cdf4011d356744e8cb444a3d59eae0da
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6ac533dea3ce7b00b1b3efeefa67093ccb1c2a5e0db23a506c944ad0833dd9ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119768880"
 ---
-# <a name="tool-help-library"></a>Tool Hilfe Bibliothek
+# <a name="tool-help-library"></a>Tool Help Library
 
-Die Funktionen, die von der Tool Hilfe Bibliothek bereitgestellt werden, erleichtern das Abrufen von Informationen zu aktuell ausgeführten Anwendungen. Diese Funktionen dienen zum Vereinfachen der Erstellung von Tools, insbesondere von Debuggern.
+Die funktionen, die von der Toolhilfebibliothek bereitgestellt werden, erleichtern es Ihnen, Informationen über aktuell ausgeführte Anwendungen zu erhalten. Diese Funktionen wurden entwickelt, um die Erstellung von Tools, insbesondere Debuggern, zu optimieren.
 
--   [Informationen zu Tool Hilfefunktionen](about-tool-help-functions.md)
--   [Verwenden der Tool Hilfefunktionen](using-the-tool-help-functions.md)
--   [Hilfe Referenz zu Tools](tool-help-reference.md)
+-   [Informationen zu Toolhilfefunktionen](about-tool-help-functions.md)
+-   [Verwenden der Toolhilfefunktionen](using-the-tool-help-functions.md)
+-   [Hilfereferenz zu Tools](tool-help-reference.md)
 
- 
+ 
 
- 
+ 
 
 
 

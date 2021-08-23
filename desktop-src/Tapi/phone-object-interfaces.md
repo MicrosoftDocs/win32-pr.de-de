@@ -1,30 +1,30 @@
 ---
-description: Das Telefon Objekt ist die Entität, die das eigentliche Telefongerät und alle seine Steuerelemente darstellt.
+description: Das Telefon objekt ist die Entität, die das tatsächliche Telefongerät und alle seine Steuerelemente darstellt.
 ms.assetid: 5bc2f595-8e2b-4938-b813-1574a9390084
-title: Telefon Objekt Schnittstellen
+title: Telefon Objektschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f39b163e895a512e7adc7be5c2fb848c5849361
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e146910b8184f35057843f20ad663e2be21d2c4844852e7cca3939e1e979d00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359186"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119873270"
 ---
-# <a name="phone-object-interfaces"></a>Telefon Objekt Schnittstellen
+# <a name="phone-object-interfaces"></a>Telefon Objektschnittstellen
 
-Das Telefon Objekt ist die Entität, die das eigentliche Telefongerät und alle seine Steuerelemente darstellt.
+Das Telefon objekt ist die Entität, die das tatsächliche Telefongerät und alle seine Steuerelemente darstellt.
 
-Die [**itphoneevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itphoneevent) -und [**ienumphone**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumphone) -Schnittstellen werden nicht direkt auf dem Phone-Objekt verfügbar gemacht, sind jedoch eng damit verknüpft und werden hier als praktische Referenz aufgeführt.
+Die [**Schnittstellen ITPhoneEvent**](/windows/desktop/api/tapi3if/nn-tapi3if-itphoneevent) und [**IEnumPhone**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumphone) werden nicht direkt im Telefon-Objekt verfügbar gemacht, sondern sind eng damit verknüpft und werden hier zur Vereinfachung aufgeführt.
 
 
 
 | Schnittstelle                                                  | BESCHREIBUNG                                                                                                                               |
 |------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| [**ITPhone**](/windows/desktop/api/tapi3if/nn-tapi3if-itphone)                                 | Ermöglicht den Zugriff auf das Telefongerät auf einer Ebene, die mit der von TAPI 2 verfügbaren vergleichbar ist. *x* -C-API.                                      |
-| [**Itautomatedphonecontrol**](/windows/desktop/api/tapi3if/nn-tapi3if-itautomatedphonecontrol) | Stellt Methoden für die automatisierte Steuerung der Töne und Ringe eines Telefons sowie für die automatisierte Anruf Behandlung auf der Grundlage des Status eines Telefonanschlusses bereit. |
-| [**Itphoneevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itphoneevent)                       | Ruft die Beschreibung der Telefon Ereignisse ab.                                                                                                |
-| [**Ienumphone**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumphone)                           | Listet das [**itphone**](/windows/desktop/api/tapi3if/nn-tapi3if-itphone)auf.                                                                                                    |
+| [**ITPhone**](/windows/desktop/api/tapi3if/nn-tapi3if-itphone)                                 | Ermöglicht den Zugriff auf das Telefongerät auf einer Ebene, die mit der mit TAPI 2 verfügbaren vergleichbar ist. *x* C-API.                                      |
+| [**ITAutomatedPhoneControl**](/windows/desktop/api/tapi3if/nn-tapi3if-itautomatedphonecontrol) | Stellt Methoden für die automatisierte Steuerung der Töne und Ringe eines Telefons sowie für die automatisierte Anrufbehandlung basierend auf dem Hookswitch-Zustand eines Telefons zur Seite. |
+| [**ITPhoneEvent**](/windows/desktop/api/tapi3if/nn-tapi3if-itphoneevent)                       | Ruft die Beschreibung von Telefonereignissen ab.                                                                                                |
+| [**IEnumPhone**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumphone)                           | Enumeriert [**ITPhone**](/windows/desktop/api/tapi3if/nn-tapi3if-itphone).                                                                                                    |
 
 
 

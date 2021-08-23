@@ -1,6 +1,6 @@
 ---
 description: Erstellt ein neues FolderItems-Objekt, das eine Kopie dieses FolderItemsss-Objekts ist, und gibt es zurück.
-title: FolderItems._NewEnum-Methode (Shldisp.h)
+title: FolderItems._NewEnum -Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:

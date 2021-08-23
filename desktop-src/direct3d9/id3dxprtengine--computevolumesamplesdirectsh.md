@@ -1,7 +1,7 @@
 ---
-description: Berechnet eine Projektion entfernter Beleuchtung in eine kugelförmige (SH) Basis Vektoren, die die Ereignis Strahlen an angegebenen Orten darstellen.
+description: Berechnet eine Projektion entfernter Beleuchtung in SH-Basisvektoren (Spherical Vector), die die Strahlkraft von Vorfällen an angegebenen Stellen darstellen.
 ms.assetid: 4d07b288-aec1-48eb-8d27-f3d7d8cfb69e
-title: 'ID3DXPRTEngine:: computevolumesamplesdirectsh-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::ComputeVolumeSamplesDirectSH-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 757e227907eab73848f43b2b8e2f40f9b4b1071b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a3aaa8f9332a80e35ffde43d145be1ed885caeaca6d61e4eb9190baba09b73ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747760"
 ---
-# <a name="id3dxprtenginecomputevolumesamplesdirectsh-method"></a>ID3DXPRTEngine:: computevolumesamplesdirectsh-Methode
+# <a name="id3dxprtenginecomputevolumesamplesdirectsh-method"></a>ID3DXPRTEngine::ComputeVolumeSamplesDirectSH-Methode
 
-Berechnet eine Projektion entfernter Beleuchtung in eine kugelförmige (SH) Basis Vektoren, die die Ereignis Strahlen an angegebenen Orten darstellen.
+Berechnet eine Projektion entfernter Beleuchtung in SH-Basisvektoren (Spherical Vector), die die Strahlkraft von Vorfällen an angegebenen Stellen darstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT ComputeVolumeSamplesDirectSH(
 
 <dl> <dt>
 
-*OrderIn* \[ in\]
+*OrderIn* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Reihenfolge der SH-Darstellung der entfernten Beleuchtung. Muss im Bereich von [D3DXSH \_ minorder](other-d3dx-constants.md) bis D3DXSH \_ maxorder (einschließlich) liegen. Der Bewertungs Grad ist OrderIn-1.
+Reihenfolge der SH-Darstellung entfernter Beleuchtung. Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Der Grad der Auswertung ist OrderIn - 1.
 
 </dd> <dt>
 
-*Order out* \[ in\]
+*OrderOut* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Reihenfolge der SH-Darstellung der lokalen Beleuchtung. Muss im Bereich von [D3DXSH \_ minorder](other-d3dx-constants.md) bis D3DXSH \_ maxorder (einschließlich) liegen. Der Bewertungs Grad ist orderout-1.
+Reihenfolge der SH-Darstellung der lokalen Beleuchtung. Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Der Grad der Auswertung ist OrderOut - 1.
 
 </dd> <dt>
 
-*NumVolSamples.xml* \[ in\]
+*NumVolSamples.xml* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Beispiel Speicherorte.
+Anzahl von Beispielspeicherorten.
 
 </dd> <dt>
 
-*psamplelocs* \[ in\]
+*pSampleLocs* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Die Position für jede Stichprobe.
+Position für jedes Beispiel.
 
 </dd> <dt>
 
-*pdataout* \[ in, out\]
+*pDataOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein Output [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, das die entfernte Beleuchtung in SH-Basis Vektoren projiziert. Dieser Puffer muss über die richtige Anzahl von Farbkanälen verfügen, die für die Simulation reserviert werden. Diese Methode generiert \* Orser ² orderout "² Skars pro Kanal an jedem Beispiel Speicherort.
+Zeiger auf ein [**Id3DXPRTBuffer-Ausgabeobjekt,**](id3dxprtbuffer.md) das die entfernte Beleuchtung in SH-Basisvektoren projiziert. Diesem Puffer muss die richtige Anzahl von Farbkanälen für die Simulation zugeordnet sein. Diese Methode generiert OrderInlimit \* OrderOut"skalare Skalar pro Kanal an jedem Beispielspeicherort.
 
 </dd> </dl>
 
@@ -93,13 +93,13 @@ Zeiger auf ein Output [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, das die e
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode wird berechnet, wie Light aus einer entfernten Quelle an jedem von psamplelocs angegebenen Raum erreicht wird. Die SH-Koeffizienten stellen die Zuordnung der Quell Strahlung an jedem psamplelocs-Punkt zur Übertragung von Ereignis Strahlen dar.
+Diese Methode berechnet, wie Licht aus einer entfernten Quelle an jedem Punkt im durch pSampleLocs angegebenen Raum eintrifft. Die SH-Koeffizienten stellen an jedem pSampleLocs-Punkt die Zuordnung des Quellstrahls zum übertragenen Vorfallsmaß dar.
 
-Um diese Methode erfolgreich zu verwenden, müssen Sie die Stichprobenentnahme für eine Kugel mit usesphere = **true** und usecosinus = **false** in [**ID3DXPRTEngine:: setsamplinginfo**](id3dxprtengine--setsamplinginfo.md); festlegen. Andernfalls gibt diese Methode einen Fehler mit D3DERR \_ invalidcallzurück.
+Um diese Methode erfolgreich zu verwenden, müssen Sie die Stichprobenentnahme für eine Kugel mit UseSphere = **TRUE** und UseCosine = **FALSE** in [**ID3DXPRTEngine::SetSamplingInfo**](id3dxprtengine--setsamplinginfo.md)festlegen. Andernfalls gibt diese Methode einen Fehler mit D3DERR \_ INVALIDCALL zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,19 +107,19 @@ Um diese Methode erfolgreich zu verwenden, müssen Sie die Stichprobenentnahme f
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXPRTEngine](id3dxprtengine.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: computevolumesamples**](id3dxprtengine--computevolumesamples.md)
+[**ID3DXPRTEngine::ComputeVolumeSamples**](id3dxprtengine--computevolumesamples.md)
 </dt> </dl>
 
  

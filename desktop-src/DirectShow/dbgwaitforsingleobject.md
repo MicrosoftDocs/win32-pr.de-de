@@ -1,7 +1,7 @@
 ---
-description: Wartet darauf, dass ein Objekt signalisiert wird.
+description: Wartet, bis ein Objekt signalisiert wird.
 ms.assetid: 5fbcccd9-9db7-4834-852a-86f28218e92e
-title: Dbgwaitforsingleobject-Funktion (wxdebug. h)
+title: DbgWaitForSingleObject-Funktion (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,20 +16,20 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 99d0058a60b5cf5b362adb80855a788d9a597af6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f5e8180c905cdb7d8d1024f22a85984c17c0e12e18971499d29ed1479a79498f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749350"
 ---
-# <a name="dbgwaitforsingleobject-function"></a>Dbgwaitforsingleobject-Funktion
+# <a name="dbgwaitforsingleobject-function"></a>DbgWaitForSingleObject-Funktion
 
-Wartet darauf, dass ein Objekt signalisiert wird.
+Wartet, bis ein Objekt signalisiert wird.
 
-In einem Debugbuild löst diese Funktion eine Assert-Funktion aus, wenn das Timeout Intervall abläuft, bevor das Objekt signalisiert wird. Um das Timeout Intervall festzulegen, müssen Sie die [**dbgsetwaittimeout**](dbgsetwaittimeout.md) -Funktion aufrufen.
+In einem Debugbuild löst diese Funktion eine Assert-Funktion aus, wenn das Time out-Intervall abläuft, bevor das Objekt signalisiert wird. Um das Timeoutintervall festzulegen, rufen Sie die [**DbgSetWaitTimeout-Funktion**](dbgsetwaittimeout.md) auf.
 
-In einem Einzelhandels Build entspricht diese Funktion der **WaitForSingleObject** -Funktion mit einem Timeout Intervall von unendlich.
+In einem Verkaufsbuild entspricht diese Funktion der **WaitForSingleObject-Funktion** mit einem Time out-Intervall von INFINITE.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ DWORD DbgWaitForSingleObject(
 *h* 
 </dt> <dd>
 
-Handle für das-Objekt.
+Handle für das -Objekt.
 
 </dd> </dl>
 
@@ -59,16 +59,16 @@ Handle für das-Objekt.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Wait-Debugging-Funktionen](wait-debugging-functions.md)
+[Wartedebuggen von Funktionen](wait-debugging-functions.md)
 </dt> </dl>
 
  

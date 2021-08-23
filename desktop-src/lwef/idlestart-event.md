@@ -13,27 +13,27 @@ ms.locfileid: "119716050"
 ---
 # <a name="idlestart-event"></a>IdleStart-Ereignis
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Tritt ein, wenn der Server ein Zeichen auf den **Idling-Zustand** festlegt.
+Tritt ein, wenn der Server ein Zeichen in den **Idling-Zustand** setzt.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
- *Sub-Agent** \_ IdleStart* *  **(ByVal** *CharacterID))**
+ *Sub-Agent** \_ IdleStart* *  **(ByVal** *CharacterID).)**
 
 
 
-| Teil          | BESCHREIBUNG                                         |
+| Teil          | Beschreibung                                         |
 |---------------|-----------------------------------------------------|
-| *CharacterID* | Gibt die ID des idling-Zeichens als Zeichenfolge zurück. |
+| *CharacterID* | Gibt die ID des Idlingzeichens als Zeichenfolge zurück. |
 
 
 

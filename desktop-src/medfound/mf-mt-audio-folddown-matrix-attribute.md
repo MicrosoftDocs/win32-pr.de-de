@@ -1,7 +1,7 @@
 ---
-description: Gibt an, wie ein Audiodecoder Multichannelaudio in Stereoausgabe transformieren soll. Dieser Prozess wird auch als "fold-down" bezeichnet.
+description: Gibt an, wie ein Audiodecoder Multichannel-Audio in Stereoausgabe transformieren soll. Dieser Prozess wird auch als Fold-Down bezeichnet.
 ms.assetid: 6dfe2b97-1ebc-4954-b478-85b3bbba89e3
-title: MF_MT_AUDIO_FOLDDOWN_MATRIX-Attribut (Mfapi.h)
+title: MF_MT_AUDIO_FOLDDOWN_MATRIX -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: 46763f3a32999136993cd3237da9c6cbcdd1d1addb5f6d9041555ac747a6d655
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119714660"
 ---
-# <a name="mf_mt_audio_folddown_matrix-attribute"></a>MF \_ MT \_ AUDIO \_ FOLDDOWN \_ MATRIX-Attribut
+# <a name="mf_mt_audio_folddown_matrix-attribute"></a>MF \_ MT AUDIO \_ \_ FOLDDOWN \_ MATRIX-Attribut
 
-Gibt an, wie ein Audiodecoder Multichannelaudio in Stereoausgabe transformieren soll. Dieser Prozess wird auch als *fold-down* bezeichnet.
+Gibt an, wie ein Audiodecoder Multichannel-Audio in Stereoausgabe transformieren soll. Dieser Prozess wird auch als *fold-down bezeichnet.*
 
 ## <a name="data-type"></a>Datentyp
 
@@ -23,7 +23,7 @@ Bytearray
 
 Dieses Attribut gilt für Audiomedientypen.
 
-Der Wert dieses Attributs ist eine [**ATTRIBUTESOLDDOWN \_ MATRIX-Struktur.**](/windows/desktop/api/mfapi/ns-mfapi-mffolddown_matrix)
+Der Wert dieses Attributs ist eine [**1000-000-MATRIX-Struktur. \_**](/windows/desktop/api/mfapi/ns-mfapi-mffolddown_matrix)
 
 Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
@@ -39,20 +39,20 @@ Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**ATTRIBUTEAttributes::GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
+[**ATTRIBUTEs::GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
 </dt> <dt>
 
-[**ATTRIBUTEAttributes::SetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
+[**ATTRIBUTEs::SetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
 </dt> <dt>
 
-[**ARCHEMEDIATYPE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**VERERBungstyp**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
 [Medientypattribute](media-type-attributes.md)

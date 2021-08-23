@@ -1,9 +1,9 @@
 ---
 title: D1110– Leerungsfehler
 ms.assetid: 44f122b0-08e3-4f63-a575-0f3619144823
-description: Fehler bei einem Flush-Aufruf durch ein Renderziel
+description: Fehler beim Flush-Aufruf eines Renderziels
 keywords:
-- D1110– Leerungsfehler Direct2D
+- D1110 Flush Failure Direct2D
 topic_type:
 - apiref
 api_name:
@@ -22,7 +22,7 @@ ms.locfileid: "119758150"
 ---
 # <a name="d1110-flush-failure"></a>D1110: Leerungsfehler
 
-Ein Leerungsaufruf durch eine fehlerhafte \[ *Renderzielressource.* \] Tags \[ *tag1*, *tag2* \] .
+Ein Flush-Aufruf durch eine fehlerhafte \[ *Renderzielressource.* \] Tags \[ *tag1,* *tag2* \] .
 
 ## <a name="placeholders"></a>Platzhalter
 
@@ -59,7 +59,7 @@ Der zweite Tagwert. Weitere Informationen finden Sie unter [**SetTags.**](/windo
 
 ## <a name="examples"></a>Beispiele
 
-**Beispiel 1:** Der folgende Code zeigt, dass sich ein Draw-Aufruf in einem ungültigen Zustand befindet. Um die Warnmeldung zu vermeiden, verwenden [**Sie SetAntialiasMode,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-setantialiasmode) um D2D1 \_ ANTIALIAS \_ MODE \_ ANTIALIASED vor einem [**FillOpacityMask-Aufruf**](id2d1rendertarget-fillopacitymask.md) festzulegen.
+**Beispiel 1:** Der folgende Code zeigt, dass sich ein Draw-Aufruf in einem ungültigen Zustand befindet. Um die Warnmeldung zu vermeiden, verwenden Sie [**SetAntialiasMode,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-setantialiasmode) um D2D1 \_ ANTIALIAS MODE ANTIALIASED vor einem \_ \_ [**FillOpacityMask-Aufruf**](id2d1rendertarget-fillopacitymask.md) zu setzen.
 
 
 ```C++
@@ -101,7 +101,7 @@ In diesem Beispiel wird die folgende Debugmeldung erzeugt:
 D2D DEBUG WARNING - Flush call on render target failed [88990001]. Tags [0, 0].
 ```
 
-**Beispiel 2:** Der folgende Code zeigt, dass [**flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) nach dem [**EndDraw-Aufruf**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) aufgerufen wird.
+**Beispiel 2:** Der folgende Code zeigt, dass [**flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) nach dem [**EndDraw-Aufruf aufgerufen**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) wird.
 
 
 ```C++
@@ -122,7 +122,7 @@ DEBUG WARNING - A Flush call by a render target failed [88990001]. Tags [0, 0].
 
 ## <a name="possible-causes"></a>Mögliche Ursachen
 
-Der [**Flush-Aufruf**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) kann aus einem von zwei Gründen fehlschlagen. Möglicherweise tritt ein Fehler auf, weil die Methode außerhalb des BeginDraw-EndDraw-Aufrufs aufgerufen wurde, oder weil ein [](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) / [](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) Fehler von einem der Renderzielvorgänge erzeugt wurde, die seit dem letzten **Flush-Aufruf** oder **EndDraw-Aufruf** verarbeitet wurden. Um das Problem zu beheben, sollte die Anwendung die Ursache des Fehlers ermitteln und die entsprechende Aktion ergreifen.
+Der [**Flush-Aufruf**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) kann aus einem von zwei Gründen fehlschlagen. Möglicherweise tritt ein Fehler auf, weil die Methode außerhalb des [**BeginDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) / [**EndDraw-Aufrufs**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) aufgerufen wurde, oder weil ein Fehler aufgetreten ist, der von einem der Renderzielvorgänge erzeugt wurde, die seit dem letzten **Flush-** oder **EndDraw-Aufruf** verarbeitet wurden. Um das Problem zu beheben, sollte die Anwendung die Ursache des Fehlers ermitteln und die entsprechende Aktion ergreifen.
 
 ## <a name="fixes"></a>Fehlerbehebungen
 

@@ -1,11 +1,11 @@
 ---
-title: MS-TS-Reconnection-action-Attribut
-description: Mit der Aktion "Terminal Dienste-Sitzungs Verbindung wiederherstellen" wird angegeben, ob von einem beliebigen Client Computer erneut Verbindungen mit einer getrennten Terminal Dienst Sitzung zugelassen werden sollen
+title: ms-TS-Reconnection-Action-Attribut
+description: Terminal services session Reconnection Action gibt an, ob die erneute Verbindung mit einer getrennten Terminaldienstesitzung von einem Clientcomputer zulässig ist.
 ms.assetid: 093c2477-aed6-4736-9c8a-05aeca539cf8
 ms.tgt_platform: multiple
 keywords:
-- MS-TS-Reconnection-action-Attribut AD-Schema
-- AD-Schema für mstsreconnectionaction-Attribut
+- AD-Schema des ms-TS-Reconnection-Action-Attributs
+- AD-Schema des msTSReconnectionAction-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 15e09931ec652f2fdd1e9ae6c6cec71e7a896a9f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 68e75a6e1f205cbd2037ea40cbb02d5e8c37115fc2f1082c2977c35cf2801428
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119760950"
 ---
-# <a name="ms-ts-reconnection-action-attribute"></a>MS-TS-Reconnection-action-Attribut
+# <a name="ms-ts-reconnection-action-attribute"></a>ms-TS-Reconnection-Action-Attribut
 
-Mit der Aktion "Terminal Dienste-Sitzungs Verbindung wiederherstellen" wird angegeben, ob von einem beliebigen Client Computer erneut Verbindungen mit einer getrennten Terminal Dienst Sitzung zugelassen werden sollen
+Terminal services session Reconnection Action gibt an, ob die erneute Verbindung mit einer getrennten Terminaldienstesitzung von einem Clientcomputer zulässig ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-TS-Reconnection-Aktion            |
-| LDAP-Display-Name | mstsreconnectionaction               |
+| CN                | ms-TS-Reconnection-Action            |
+| Ldap-Anzeigename | msTSReconnectionAction               |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1984              |
-| System-ID-GUID    | 366ed7ca-3e18-4c7b-abae-351a01e4b4f |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | 366ed7ca-3e18-4c7f-abae-351a01e4b4f7 |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 
@@ -55,10 +55,10 @@ Mit der Aktion "Terminal Dienste-Sitzungs Verbindung wiederherstellen" wird ange
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -76,10 +76,10 @@ Mit der Aktion "Terminal Dienste-Sitzungs Verbindung wiederherstellen" wird ange
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -97,10 +97,10 @@ Mit der Aktion "Terminal Dienste-Sitzungs Verbindung wiederherstellen" wird ange
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |

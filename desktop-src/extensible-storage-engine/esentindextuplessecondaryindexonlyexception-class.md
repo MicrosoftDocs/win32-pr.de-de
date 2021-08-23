@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentIndexTuplesSecondaryIndexOnlyException-Klasse'
+description: 'Weitere Informationen zu: EsentIndexTuplesSecondaryIndexOnlyException-Klasse'
 title: EsentIndexTuplesSecondaryIndexOnlyException-Klasse
 TOCTitle: EsentIndexTuplesSecondaryIndexOnlyException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentIndexTuplesSecondaryIndexOnlyException
@@ -68,7 +68,7 @@ public sealed class EsentIndexTuplesSecondaryIndexOnlyException : EsentUsageExce
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

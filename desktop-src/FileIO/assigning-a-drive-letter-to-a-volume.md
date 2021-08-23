@@ -1,25 +1,25 @@
 ---
-description: Sie können einem lokalen Volume einen Laufwerk Buchstaben (z. b. X:) zuweisen \) , indem Sie die setvolumemountpoint-Funktion verwenden, vorausgesetzt, dass diesem Laufwerk Buchstaben nicht bereits ein Volume zugeordnet ist.
+description: 'Sie können einem \) lokalen Volume mithilfe der SetVolumeMountPoint-Funktion einen Laufwerkbuchstaben (z. B. X: ) zuweisen, sofern diesem Laufwerkbuchstaben noch kein Volume zugewiesen ist.'
 ms.assetid: 8c78b2e8-199a-4934-a9c4-6f3913f44efe
-title: Zuweisen eines Laufwerk Buchstabens zu einem Volume
+title: Zuweisen eines Laufwerkbuchstabens zu einem Volume
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f31b9446cc41ad26f14a34874c59e153e1db8ce5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e6cc2e894580a394e73896291f05a2f54c615949bfeb63ea3e574deef1353d91
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766223"
 ---
-# <a name="assigning-a-drive-letter-to-a-volume"></a>Zuweisen eines Laufwerk Buchstabens zu einem Volume
+# <a name="assigning-a-drive-letter-to-a-volume"></a>Zuweisen eines Laufwerkbuchstabens zu einem Volume
 
-Sie können einem lokalen Volume einen Laufwerk Buchstaben (z. b. X:) zuweisen \) , indem Sie die [**setvolumemountpoint**](/windows/desktop/api/WinBase/nf-winbase-setvolumemountpointa) -Funktion verwenden, vorausgesetzt, dass diesem Laufwerk Buchstaben nicht bereits ein Volume zugeordnet ist. , Wenn das lokale Volume bereits über einen Laufwerk Buchstaben verfügt. [**setvolumemountpoint**](/windows/desktop/api/WinBase/nf-winbase-setvolumemountpointa) schlägt fehl. Um dies zu behandeln, löschen Sie zuerst den Laufwerk Buchstaben mithilfe der [**DeleteVolumeMountPoint**](/windows/desktop/api/FileAPI/nf-fileapi-deletevolumemountpointw) -Funktion. Beispielcode finden Sie unter [Bearbeiten von Laufwerk Buchstaben Zuweisungen](editing-drive-letter-assignments.md).
+Sie können einem \) lokalen Volume mithilfe der [**SetVolumeMountPoint-Funktion**](/windows/desktop/api/WinBase/nf-winbase-setvolumemountpointa) einen Laufwerkbuchstaben (z. B. X: ) zuweisen, sofern diesem Laufwerkbuchstaben noch kein Volume zugewiesen ist. Wenn das lokale Volume bereits über einen Laufwerkbuchstaben verfügt. dann schlägt [**SetVolumeMountPoint**](/windows/desktop/api/WinBase/nf-winbase-setvolumemountpointa) fehl. Löschen Sie hierzu zunächst den Laufwerkbuchstaben mithilfe der [**DeleteVolumeMountPoint-Funktion.**](/windows/desktop/api/FileAPI/nf-fileapi-deletevolumemountpointw) Beispielcode finden Sie unter [Bearbeiten von Laufwerkbuchstabenzuweisungen.](editing-drive-letter-assignments.md)
 
-Das System unterstützt höchstens einen Laufwerk Buchstaben pro Volume. Daher ist es nicht möglich, dass C: \\ und F: \\ dasselbe Volume darstellen.
+Das System unterstützt höchstens einen Laufwerkbuchstaben pro Volume. Daher können C: \\ und F: \\ nicht das gleiche Volume darstellen.
 
 > [!Caution]
 >
-> Wenn Sie einen vorhandenen Laufwerk Buchstaben löschen und einen neuen zuweisen, können vorhandene Pfade, z. b. die in Desktop Verknüpfungen Möglicherweise wird auch der Pfad des Programms unterbrechen, sodass der Laufwerksbuchstabe geändert wird. Mit der Verwaltung von virtuellen Windows-Arbeitsspeicher kann dies die Anwendung unterbrechen, sodass das System instabil und möglicherweise unbrauchbar ist. Der Programm-Designer ist dafür verantwortlich, derartige potenzielle Katastrophen zu vermeiden.
+> Das Löschen eines vorhandenen Laufwerkbuchstabens und das Zuweisen eines neuen Laufwerkbuchstabens kann dazu führen, dass vorhandene Pfade, z. B. in Desktopverknüpfungen, nicht mehr vorhanden sind. Es kann auch den Pfad zum Programm unterbrechen, das die Laufwerkbuchstaben ändert. Bei Windows verwaltung des virtuellen Arbeitsspeichers kann dies die Anwendung unterbrechen, sodass das System in einem instabilen und möglicherweise unbrauchbaren Zustand verbleibt. Es liegt in der Verantwortung des Programmdesigners, solche potenziellen Katastrophen zu vermeiden.
 
  
 

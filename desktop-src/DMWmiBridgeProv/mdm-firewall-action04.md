@@ -1,6 +1,6 @@
 ---
 title: MDM_Firewall_Action04-Klasse
-description: Die KLASSE MDM \_ Firewall \_ Action04 wird verwendet, um die Windows Defender Firewalleinstellungen zu konfigurieren.
+description: Die MDM \_ Firewall \_ Action04-Klasse wird verwendet, um die Firewalleinstellungen Windows Defender konfigurieren.
 ms.assetid: d0704662-ac2b-4ff5-a2c1-8f2bc7835488
 keywords:
 - MDM_Firewall_Action04-Klasse
@@ -29,7 +29,7 @@ ms.locfileid: "119694863"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die KLASSE MDM \_ Firewall \_ Action04 wird verwendet, um die Windows Defender Firewalleinstellungen zu konfigurieren.
+Die MDM \_ Firewall \_ Action04-Klasse wird verwendet, um die Firewalleinstellungen Windows Defender konfigurieren.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,7 +47,7 @@ class MDM_Firewall_Action04
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ Firewall \_ Action04-Klasse** verfügt über diese Typen von Membern:
+Die **MDM \_ Firewall \_ Action04-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -66,7 +66,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
@@ -80,7 +80,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>

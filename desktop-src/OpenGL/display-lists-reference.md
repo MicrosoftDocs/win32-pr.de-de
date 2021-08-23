@@ -1,33 +1,33 @@
 ---
-title: Anzeigen von Listen verweisen
-description: Anzeigen von Listen verweisen
+title: Referenz zu Anzeigelisten
+description: Referenz zu Anzeigelisten
 ms.assetid: 12e5051d-8277-4c4c-981f-25e4ba7d7697
 keywords:
 - OpenGL, Referenz zu Anzeigelisten
-- Anzeigen von Listen verweisen OpenGL
+- Anzeigen von Listenreferenz zu OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bfa1182650a87041fcfbe7cbf3169bbd62b58625
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7f320815fd83ab82c4feaf2eef011f6f5b1ca0b6bb7dfbdca3e0e8a8e799c5f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119889170"
 ---
-# <a name="display-lists-reference"></a>Anzeigen von Listen verweisen
+# <a name="display-lists-reference"></a>Referenz zu Anzeigelisten
 
 -   [**glCallList**](glcalllist.md)
--   [**glcalllists**](glcalllists.md)
--   [**gldelta etelists**](gldeletelists.md)
--   [**glendlist**](glendlist.md)
--   [**glgenlists**](glgenlists.md)
--   [**glislist**](glislist.md)
--   [**gllistbase**](gllistbase.md)
--   [**glnewlist**](glnewlist.md)
+-   [**glCallLists**](glcalllists.md)
+-   [**glDeleteLists**](gldeletelists.md)
+-   [**glEndList**](glendlist.md)
+-   [**glGenLists**](glgenlists.md)
+-   [**glIsList**](glislist.md)
+-   [**glListBase**](gllistbase.md)
+-   [**glNewList**](glnewlist.md)
 
- 
+ 
 
- 
+ 
 
 
 

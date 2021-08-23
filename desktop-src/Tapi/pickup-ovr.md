@@ -1,35 +1,35 @@
 ---
-description: Der Pickup-Vorgang ermöglicht es einer Anwendung, eine Sitzung zu beantworten, bei der eine Warnung an einer anderen Adresse angezeigt wird. Die Anwendung identifiziert das Ziel der Abholung und gibt eine Sitzungs-ID für den aufzurufenden-Befehl zurück.
+description: Mit dem Abholungsvorgang kann eine Anwendung eine Sitzung beantworten, die eine Warnung an einer anderen Adresse aussendet. Die Anwendung identifiziert das Ziel der Abholung und wird eine Sitzungs-ID für den abholten Anruf zurückgegeben.
 ms.assetid: 3dfbb5c0-b533-403f-ad6c-b9e1b52ab47a
-title: Aufhol
+title: Pickup
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e033689ffccf6ba01ad06eb071514c1c37aaca03
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 288510d2d9e2eb2ed6e9a5cc5c58f6957b933b7d43db951eb330dd081a4c446f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119873060"
 ---
-# <a name="pickup"></a>Aufhol
+# <a name="pickup"></a>Pickup
 
-Der Pickup-Vorgang ermöglicht es einer Anwendung, eine Sitzung zu beantworten, bei der eine Warnung an einer anderen Adresse angezeigt wird. Die Anwendung identifiziert das Ziel der Abholung und gibt eine Sitzungs-ID für den aufzurufenden-Befehl zurück.
+Mit dem Abholungsvorgang kann eine Anwendung eine Sitzung beantworten, die eine Warnung an einer anderen Adresse aussendet. Die Anwendung identifiziert das Ziel der Abholung und wird eine Sitzungs-ID für den abholten Anruf zurückgegeben.
 
-Es gibt mehrere Möglichkeiten, das Ziel der Abhol Anforderung zu identifizieren. Zuerst kann die Anwendung die Adresse der Warnungs Partei angeben. Zweitens: Wenn keine Adresse angegeben wird und der Switch dies zulässt, kann die Anwendung jede Warnungs Sitzung in der Pickup-Gruppe abrufen. Drittens ermöglichen einige Switches das Abfangen einer Sitzungs Warnung in einer anderen abholgruppe, wenn der Gruppen Bezeichner angegeben ist.
+Es gibt mehrere Möglichkeiten, das Ziel der Abholungsanforderung zu identifizieren. Zunächst kann die Anwendung die Adresse der Warnungs partei angeben. Wenn keine Adresse angegeben ist und der Schalter dies zulässt, kann die Anwendung eine beliebige Warnungssitzung in ihrer Abholgruppe auswählen. Drittens ermöglichen einige Schalter die Abholung einer Sitzungswarnung in einer anderen Abholgruppe, wenn die Gruppen-ID angegeben ist.
 
-Einige Schlüssel Telefonsysteme unterstützen eine *Übertragung durch die Hold* -Funktion bei überbrückenden exklusiven anrufen. In diesem Schema besitzt ein bestimmtes Telefon einen Anruf exklusiv, wenn der Anruf aktiv ist, aber wenn der Anruf angehalten ist, kann jedes Telefon, das eine Darstellung der Linie aufweist, den Anruf aufnehmen.
+Einige wichtige Telefonsysteme unterstützen eine *Übertragung über die Hold-Funktion* bei überbrückten exklusiven Anrufanrufen. In diesem Schema besitzt ein bestimmtes Telefon einen Anruf ausschließlich, wenn der Anruf aktiv ist, aber wenn der Anruf zurückbiert ist, kann jedes Telefon, das die Zeile anscheint, den Anruf aufrufen.
 
-**TAPI 2. x:** Eine Anwendung kann zu diesem Zweck einen Abholvorgang mit einer **null** -Zieladresse verwenden, ähnlich wie bei der Verwendung der Funktion zum Abrufen eines aufrufwartenden Aufrufens in einer analogen Zeile. Lineaddrfeature \_ pickbestätigte gibt an, dass die Funktion vorhanden ist.
+**TAPI 2.x:** Eine Anwendung kann zu diesem  Zweck einen Abholvorgang mit einer NULL-Zieladresse verwenden, ähnlich wie die -Funktion verwendet wird, um einen wartenden Anruf in einer analogen Zeile zu nutzen. LINEADDRFEATURE \_ PICKUPIERER gibt das Vorhandensein der Funktion an.
 
-Wenn lineaddrcapflags \_ pickupcallwait den Wert **true** hat, kann eine Sitzung übernommen werden, für die der Benutzer das aufrufende Signal, aber für das der Dienstanbieter die Erkennung nicht ausführen kann, übernommen hat. Dadurch erhält der Benutzer einen Mechanismus zum Beantworten eines wartenden Aufrufs, auch wenn der Dienstanbieter das Anruf Ende Signal nicht erkennen konnte. Sowohl die Zieladresse als auch die Gruppen-ID müssen **null** sein, um einen Rückruf aufzurufen.
+Wenn LINEADDRCAPFLAGS PICKUPCALLWAIT auf TRUE gesetzt ist, kann eine Sitzung verwendet werden, für die der Benutzer das Wartesignal für den Anruf erkannt hat, für die der Dienstanbieter die Erkennung jedoch nicht durchführen \_ kann.  Dadurch erhält der Benutzer einen Mechanismus zum Beantworten eines wartenden Anrufs, auch wenn der Dienstanbieter das Wartesignal für den Aufruf nicht erkennen konnte. Sowohl die Zieladresse als auch die Gruppen-ID müssen **NULL sein,** um einen Anruf mit Warteaufruf zu erhalten.
 
-Wenn eine Sitzung erfolgreich abgerufen wurde, empfängt die Anwendung eine Benachrichtigung über Statusänderungen, wobei der [Grund](reason-ovr.md) auf linecallreason Pickup festgelegt ist \_ .
+Wenn eine Sitzung erfolgreich empfangen wurde, erhält die Anwendung [](reason-ovr.md) eine Zustandsänderungsbenachrichtigung mit dem Grund, der auf LINECALLREASON PICKUP festgelegt \_ ist.
 
 Nicht alle Dienstanbieter unterstützen die Verwendung dieses Vorgangs.
 
-**TAPI 2. x:** Weitere Informationen finden [**Sie unter linepickup**](/windows/win32/api/tapi/nf-tapi-linepickup).
+**TAPI 2.x:** Weitere Informationen [**finden Sie unter linePickup**](/windows/win32/api/tapi/nf-tapi-linepickup).
 
-**TAPI 3. x:** Weitere Informationen finden [**Sie unter itbasiccallcontrol::P ickup**](/windows/desktop/api/tapi3if/nf-tapi3if-itbasiccallcontrol-pickup).
+**TAPI 3.x:** Weitere Informationen [**finden Sie unter ITBasicCallControl::P ickup**](/windows/desktop/api/tapi3if/nf-tapi3if-itbasiccallcontrol-pickup).
 
  
 

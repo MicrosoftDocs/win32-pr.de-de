@@ -8,9 +8,9 @@
           href: understanding-internationalization.md
         - name: Prüfliste für die Internationalisierung
           href: internationalization-checklist.md
-        - name: Hinzufügen von mehrsprachige Benutzeroberfläche-Unterstützung zu einer Anwendung
+        - name: Hinzufügen mehrsprachige Benutzeroberfläche-Unterstützung zu einer Anwendung
           href: creating-a-multilingual-user-interface-application.md
-    - name: Globalization Services
+    - name: Globalisierungsdienste
       href: globalization-services.md
       items:
         - name: Erweiterte linguistische Dienste
@@ -23,12 +23,12 @@
                   href: microsoft-language-detection.md
                 - name: Microsoft-Skripterkennung
                   href: microsoft-script-detection.md
-                - name: Transliteration Services
+                - name: Transliterationsdienste
                   href: transliteration-services.md
             - name: Verwenden erweiterter linguistischer Dienste
               href: using-extended-linguistic-services.md
               items:
-                - name: Aufzählen und Freigeben von Diensten
+                - name: Aufzählen und Freilassen von Diensten
                   href: enumerating-and-freeing-services.md
                 - name: Anfordern der Texterkennung
                   href: requesting-text-recognition.md
@@ -37,7 +37,7 @@
             - name: Referenz zu erweiterten linguistischen Diensten
               href: extended-linguistic-services-reference.md
               items:
-                - name: Erweiterte linguistische Dienstfunktionen
+                - name: Erweiterte Funktionen für linguistische Dienste
                   href: extended-linguistic-services-functions.md
                   items:
                     - name: PFN_MAPPINGCALLBACKPROC
@@ -52,7 +52,7 @@
                       href: /windows/desktop/api/Elscore/nf-elscore-mappinggetservices
                     - name: MappingRecognizeText
                       href: /windows/desktop/api/Elscore/nf-elscore-mappingrecognizetext
-                - name: Erweiterte linguistische Dienststrukturen
+                - name: Erweiterte Strukturen für linguistische Dienste
                   href: extended-linguistic-services-structures.md
                   items:
                     - name: MAPPING_DATA_RANGE
@@ -67,17 +67,17 @@
                       href: /windows/win32/api/Elscore/ns-elscore-mapping_service_info
         - name: Internationale Komponenten für Unicode (ICU)
           href: international-components-for-unicode--icu-.md
-        - name: Unterstützung für nationale Sprachen
+        - name: Unterstützung der Landessprache
           href: national-language-support.md
           items:
-            - name: Informationen zur Unterstützung der nationalen Sprache
+            - name: Informationen zur Unterstützung der Landessprache
               href: about-national-language-support.md
               items:
                 - name: Datum und Kalender
                   href: date-and-calendar.md
                 - name: Ziffernformen
                   href: digit-shapes.md
-                - name: Gebietsschemas und Sprachen
+                - name: Lokal und Sprachen
                   href: locales-and-languages.md
                   items:
                     - name: Benutzerdefinierte Gebietsschemas
@@ -86,9 +86,9 @@
                       href: language-identifiers.md
                     - name: Sprachnamen
                       href: language-names.md
-                    - name: Gebietsschemabezeichner
+                    - name: Locale Identifiers
                       href: locale-identifiers.md
-                    - name: Gebietsschemanamen
+                    - name: Locale Names
                       href: locale-names.md
                     - name: Pseudo-Locales
                       href: pseudo-locales.md
@@ -98,30 +98,30 @@
                   href: sorting.md
                 - name: Uhrzeit und Datum
                   href: time-and-date.md
-            - name: Verwenden der Unterstützung für nationale Sprachen
+            - name: Verwenden der Unterstützung der Landessprache
               href: using-national-language-support.md
               items:
-                - name: Aufrufen der &quot; &quot; Gebietsschemanamenfunktionen
+                - name: Aufrufen der &quot; Locale &quot; Name-Funktionen
                   href: calling-the--locale-name--functions.md
                 - name: Behandeln von internationalisierten Domänennamen (IDNs)
                   href: handling-internationalized-domain-names--idns.md
                 - name: Behandeln der Sortierung in Ihren Anwendungen
                   href: handling-sorting-in-your-applications.md
-                - name: Zuordnen von Gebietsschemadaten
+                - name: Zuordnen von Locale Data
                   href: mapping-locale-data.md
-                - name: Abrufen und Festlegen von Gebietsschemainformationen
+                - name: Abrufen und Festlegen von Informationen zum Locale
                   href: retrieving-and-setting-locale-information.md
-                - name: Abrufen von Uhrzeit- und Datumsinformationen
+                - name: Abrufen von Zeit- und Datumsinformationen
                   href: retrieving-time-and-date-information.md
                 - name: Umgang mit Ären im japanischen Kalender
                   href: era-handling-for-the-japanese-calendar.md
-                - name: Verwenden von persistenten Gebietsschemadaten
+                - name: Verwenden persistenter Locale-Daten
                   href: using-persistent-locale-data.md
-                - name: Verwenden von Pseudolokalitätsschemas für Lokalisierbarkeitstests
+                - name: Verwenden von Pseudo-Locales für Lokalisierbarkeitstests
                   href: using-pseudo-locales-for-localization-testing.md
                 - name: Verwenden der Unicode-Normalisierung zum Darstellen von Zeichenfolgen
                   href: using-unicode-normalization-to-represent-strings.md
-                - name: Arbeiten mit benutzerdefinierten Gebietsschemas
+                - name: Arbeiten mit benutzerdefinierten Locales
                   href: working-with-custom-locales.md
                 - name: NLS – Beispiel für die Konvertierung von internationalisierten Domänennamen
                   href: nls--internationalized-domain-name--idn--conversion-sample.md
@@ -131,7 +131,7 @@
                   href: nls--name-based-apis-sample.md
                 - name: NLS – Unicode-Normalisierungsbeispiel
                   href: nls--unicode-normalization-sample.md
-            - name: Referenz zur Unterstützung der nationalen Sprache
+            - name: Referenz zur Unterstützung der Landessprache
               href: national-language-support-reference.md
               items:
                 - name: Unterstützungsfunktionen für nationale Sprachen
@@ -460,7 +460,7 @@
                           href: locale-imonlzero.md
                         - name: LOCALE_INEGATIVEPERCENT
                           href: locale-inegativepercent.md
-                        - name: LOCALE_INEG* Konstanten
+                        - name: LOCALE_INEG*-Konstanten
                           href: locale-ineg-constants.md
                         - name: LOCALE_INEUTRAL
                           href: locale-ineutral.md
@@ -472,7 +472,7 @@
                           href: locale-ipapersize.md
                         - name: LOCALE_IPOSITIVEPERCENT
                           href: locale-ipositivepercent.md
-                        - name: LOCALE_IPOS*-Konstanten
+                        - name: LOCALE_IPOS* Konstanten
                           href: locale-ipos-constants.md
                         - name: LOCALE_IREADINGLAYOUT
                           href: locale-ireadinglayout.md
@@ -496,7 +496,7 @@
                           href: locale-nouseroverride.md
                         - name: LOCALE_REPLACEMENT
                           href: locale-replacement.md
-                        - name: LOCALE_RETURN* Konstanten
+                        - name: LOCALE_RETURN*-Konstanten
                           href: locale-return-constants.md
                         - name: LOCALE_S1159
                           href: locale-s1159.md
@@ -538,7 +538,7 @@
                           href: locale-slanguage.md
                         - name: LOCALE_SLIST
                           href: locale-slist.md
-                        - name: LOCALE_SLOCALIZED*-Konstanten
+                        - name: LOCALE_SLOCALIZED* Konstanten
                           href: locale-slocalized-constants.md
                         - name: LOCALE_SLONGDATE
                           href: locale-slongdate.md
@@ -546,13 +546,13 @@
                           href: locale-smon-constants.md
                         - name: LOCALE_SMONTHDAY
                           href: locale-smonthday.md
-                        - name: LOCALE_SMONTHNAME* Konstanten
+                        - name: LOCALE_SMONTHNAME*-Konstanten
                           href: locale-smonthname-constants.md
                         - name: LOCALE_SNAME
                           href: locale-sname.md
                         - name: LOCALE_SNAN
                           href: locale-snan.md
-                        - name: LOCALE_SNATIVE*-Konstanten
+                        - name: LOCALE_SNATIVE* Konstanten
                           href: locale-snative-constants.md
                         - name: LOCALE_SNEGATIVESIGN
                           href: locale-snegativesign.md
@@ -590,7 +590,7 @@
                           href: locale-ssort-constants.md
                         - name: LOCALE_STHOUSAND
                           href: locale-sthousand.md
-                        - name: LOCALE_STIME* Konstanten
+                        - name: LOCALE_STIME*-Konstanten
                           href: locale-stime-constants.md
                         - name: LOCALE_SUPPLEMENTAL
                           href: locale-supplemental.md
@@ -1053,7 +1053,7 @@
                   items:
                     - name: GetAppletIIDList-Methode
                       href: /windows/desktop/api/Imepad/nf-imepad-iimespecifyapplets-getappletiidlist
-            - name: Meldungen des Eingabemethode-Managers
+            - name: Eingabemethoden-Manager-Nachrichten
               href: input-method-manager-messages.md
               items:
                 - name: WM_IME_CHAR
@@ -1080,7 +1080,7 @@
                   href: wm-ime-setcontext.md
                 - name: WM_IME_STARTCOMPOSITION
                   href: wm-ime-startcomposition.md
-            - name: Strukturen des Eingabemethode-Managers
+            - name: Eingabemethoden-Manager-Strukturen
               href: input-method-manager-structures.md
               items:
                 - name: APPLETIDLIST
@@ -1134,40 +1134,40 @@
               items:
                 - name: Informationen zu komplexen Skripts
                   href: about-complex-scripts.md
-                - name: Verarbeitung komplexer Skripts
+                - name: Komplexe Skriptverarbeitung
                   href: complex-script-processing.md
                 - name: OpenType-Schriftartformat
                   href: opentype-font-format.md
-                - name: Uniscribe Glossary
+                - name: Uniscribe-Glossar
                   href: uniscribe-glossary.md
             - name: Verwenden von Uniscribe
               href: using-uniscribe.md
               items:
                 - name: Caching
                   href: caching.md
-                - name: 'Bestimmen, ob ein Skript die Gestaltung von Glyphen erfordert'
+                - name: 'Bestimmen, ob ein Skript die Glyphenstrukturierung erfordert'
                   href: determining-if-a-script-requires-glyph-shaping.md
                 - name: Anzeigen von Text mit Uniscribe
                   href: displaying-text-with-uniscribe.md
-                - name: Anzeigen des Caret-Zeichens in bidirektionalen Zeichenfolgen
+                - name: Anzeigen des Caretzeichens in bidirektionalen Zeichenfolgen
                   href: displaying-the-caret-in-bidirectional-strings.md
                 - name: Verwalten von Caretplatzierung und Treffertests
                   href: managing-caret-placement-and-hit-testing.md
                 - name: Verarbeiten komplexer Skripts
                   href: processing-complex-scripts.md
-                - name: Übersetzen des Maustreffer-X-Offsets in die Position des Caretzeichens
+                - name: Übersetzen des X-Offsets des Maustreffers in die Caretposition
                   href: translating-mouse-hit-x-offset-to-caret-position.md
                 - name: Verwenden von Zeichenclustern
                   href: using-character-clusters.md
                 - name: Verwenden des Schriftartfallbacks
                   href: using-font-fallback.md
-                - name: Verwenden von Shaping Engines
+                - name: Verwenden von Strukturierungs-Engines
                   href: using-shaping-engines.md
                 - name: Verwenden der ScriptString-Funktionen
                   href: using-the-scriptstring-functions.md
-                - name: Verwenden von Wörterpausenpunkten
+                - name: Verwenden von Wörterbruchpunkten
                   href: using-word-break-points.md
-                - name: 'Arbeiten mit Beziehungen zwischen Caretpositionen, Begründungspunkten und Clustern'
+                - name: 'Arbeiten mit Beziehungen zwischen Caretpunkten, Begründungspunkten und Clustern'
                   href: working-with-relationships-among-caret-positions--justification-points--and-clusters.md
             - name: Uniscribe-Referenz
               href: uniscribe-reference.md
@@ -1175,7 +1175,7 @@
                 - name: Uniscribe-Funktionen
                   href: uniscribe-functions.md
                   items:
-                    - name: ScriptApplyDigitSubs untertitel
+                    - name: ScriptApplyDigitSubsun
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptapplydigitsubstitution
                     - name: ScriptApplyLogicalWidth
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptapplylogicalwidth
@@ -1183,7 +1183,7 @@
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptbreak
                     - name: ScriptCacheGetHeight
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptcachegetheight
-                    - name: ScriptCPtoX
+                    - name: ScriptCProxyX
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptcptox
                     - name: ScriptFreeCache
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptfreecache
@@ -1221,7 +1221,7 @@
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptplaceopentype
                     - name: ScriptPositionSingleGlyph
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptpositionsingleglyph
-                    - name: ScriptRecordDigitSubsregistrieren
+                    - name: ScriptRecordDigitSubs cybersecurity
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptrecorddigitsubstitution
                     - name: ScriptShape
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptshape
@@ -1229,7 +1229,7 @@
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptshapeopentype
                     - name: ScriptStringAnalyse
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptstringanalyse
-                    - name: ScriptStringCPtoX
+                    - name: ScriptStringCSkriptx
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptstringcptox
                     - name: ScriptStringFree
                       href: /windows/desktop/api/Usp10/nf-usp10-scriptstringfree
@@ -1302,50 +1302,50 @@
     - name: Multilingual User Interface
       href: multilingual-user-interface.md
       items:
-        - name: Informationen zu mehrsprachige Benutzeroberfläche
+        - name: Informationen mehrsprachige Benutzeroberfläche
           href: about-multilingual-user-interface.md
           items:
-            - name: Grundlegendes zu DEN GRUNDLAGEN
+            - name: Grundlegendes zu ZUEB
               href: understanding-mui.md
               items:
-                - name: Übersicht über DIE ÜBERSICHT
+                - name: Übersicht über DAS PROGRAMM
                   href: overview-of-mui.md
-                - name: Grundlegende Konzepte von CONCEPTS explained
+                - name: 'GRUNDLAGEN: Grundlegende Konzepte'
                   href: mui-fundamental-concepts-explained.md
-                - name: Weiterentwicklung der SUPPORTS-Unterstützung über Windows Versionen hinweg
+                - name: Entwicklung derSUPPORT-Unterstützung für Windows Versionen
                   href: evolution-of-mui-support-across-windows-versions.md
-                - name: Vorteile von EXPLAINed
+                - name: Vorteile von ERKLÄRT
                   href: benefits-of-mui-explained.md
                 - name: Glossar zum Verstehen von GLOSSAR
                   href: glossary-for-understanding-mui.md
-            - name: Verfügbarkeit von MUI
+            - name: Verfügbarkeit von AVAILABILITY
               href: availability-of-mui.md
-            - name: SOURCE-Ressourcenverwaltung
+            - name: FALLS-Ressourcenverwaltung
               href: mui-resource-management.md
-            - name: Benutzeroberfläche Language Management
+            - name: Benutzeroberfläche-Sprachverwaltung
               href: user-interface-language-management.md
-            - name: Entwicklung von APPLICATIONS
+            - name: Entwicklung von ANMELDUNG-Anwendungen
               href: development-of-mui-applications.md
             - name: Anwendungsbereitstellung
               href: application-deployment.md
-        - name: Verwenden von mehrsprachige Benutzeroberfläche
+        - name: Verwenden mehrsprachige Benutzeroberfläche
           href: using-multilingual-user-interface.md
           items:
             - name: Vorbereiten von Ressourcen
               href: preparing-resources.md
               items:
-                - name: Erstellen der Ressourcendatei der Basissprache
+                - name: Erstellen der Basissprachressourcendatei
                   href: creating-the-base-language-resource-file.md
                 - name: Verwenden der Umleitung von Registrierungszeichenfolgen
                   href: using-registry-string-redirection.md
                 - name: Vorbereiten einer Ressourcenkonfigurationsdatei
                   href: preparing-a-resource-configuration-file.md
-            - name: Festlegen von Einstellungen für die Anwendungssprache
+            - name: Festlegen der Einstellungen für die Anwendungssprache
               href: setting-application-language-preferences.md
               items:
-                - name: Unterstützen von systemsprach Einstellungen
+                - name: Unterstützen der Einstellungen
                   href: supporting-system-language-settings.md
-                - name: Unterstützen Application-Specific Language Einstellungen
+                - name: Unterstützen Application-Specific-Einstellungen
                   href: supporting-application-specific-language-settings.md
                 - name: Filtern von Sprachen in einer CONSOLE-Konsolenanwendung
                   href: filtering-languages-in-a-mui-console-application.md
@@ -1356,17 +1356,17 @@
                   href: loading-a-win32-pe-resource-module.md
                 - name: Laden von Sprachressourcen
                   href: loading-language-resources.md
-                - name: Suchen nach umgeleiteten Zeichenfolgen
+                - name: Suchen von umgeleiteten Zeichenfolgen
                   href: locating-redirected-strings.md
-            - name: Suchen nach Nicht-Win32 PE-Ressourcen
+            - name: Suchen von Nicht-Win32 PE-Ressourcen
               href: locating-non-win32-pe-resources.md
             - name: Lokalisieren von Ressourcen und Erstellen der Anwendung
               href: localizing-resources-and-building-the-application.md
-            - name: 'PROGRAMM: Beispiel für system Einstellungen-Anwendung'
+            - name: ': System Einstellungen Application Sample (Systemanwendungsbeispiel)'
               href: mui-system-settings-application-sample.md
-            - name: 'WÄHREND: Application-Specific Einstellungen-Beispiel (Windows Vista)'
+            - name: ': Application-Specific Einstellungen (Windows Vista)'
               href: mui-application-specific-settings-sample-vista.md
-            - name: 'WÄHREND: Application-Specific Einstellungen-Beispiel (Pre-Windows Vista)'
+            - name: ': Application-Specific Einstellungen -Beispiel (Vor Windows Vista)'
               href: mui-application-specific-settings-sample-pre-vista.md
         - name: mehrsprachige Benutzeroberfläche Verweis
           href: multilingual-user-interface-reference.md
@@ -1447,13 +1447,13 @@
                   href: code-pages.md
                 - name: Doppel-Byte-Zeichensätze
                   href: double-byte-character-sets.md
-                - name: Einzel byte-Zeichensätze
+                - name: Einzel-Byte-Zeichensätze
                   href: single-byte-character-sets.md
                 - name: Surrogate und ergänzende Zeichen
                   href: surrogates-and-supplementary-characters.md
                 - name: Unicode
                   href: unicode.md
-            - name: Endbenutzerdefinierte und private Verwendungsbereichszeichen
+            - name: Benutzerdefinierte und private Verwendungsbereichszeichen
               href: end-user-defined-characters.md
               items:
                 - name: Zeichensätze und Schriftarten

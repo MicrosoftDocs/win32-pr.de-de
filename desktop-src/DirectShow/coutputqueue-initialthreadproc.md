@@ -1,7 +1,7 @@
 ---
-description: 'Die initialthread proc-Methode ruft die coutputqueue:: Thread proc-Methode auf, wenn der Thread erstellt wird.'
+description: Die InitialThreadProc-Methode ruft die COutputQueue::ThreadProc-Methode auf, wenn der Thread erstellt wird.
 ms.assetid: 6093f0c3-ec58-418d-bb8c-618163c43ac7
-title: COutputQueue.Initialthread proc-Methode (outputq. h)
+title: COutputQueue.InitialThreadProc-Methode (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: dfc7b8660d838b6ad31dd298c509b6282ab61810
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a80561ae652df7168ad09c1cf6e9fde767154e6c72a8fe5360a5d09c784941f1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371271"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119813590"
 ---
-# <a name="coutputqueueinitialthreadproc-method"></a>COutputQueue.Initialthread proc-Methode
+# <a name="coutputqueueinitialthreadproc-method"></a>COutputQueue.InitialThreadProc-Methode
 
-Die- `InitialThreadProc` Methode ruft die [**coutputqueue:: Thread proc**](coutputqueue-threadproc.md) -Methode auf, wenn der Thread erstellt wird.
+Die `InitialThreadProc` -Methode ruft die [**COutputQueue::ThreadProc-Methode**](coutputqueue-threadproc.md) auf, wenn der Thread erstellt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ static DWORD WINAPI InitialThreadProc(
 
 <dl> <dt>
 
-*teuren* 
+*Pv* 
 </dt> <dd>
 
-`this` Zeichner.
+`this` Zeiger.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert zurück, der von der [**coutputqueue:: ThreadProc**](coutputqueue-threadproc.md) -Methode zurückgegeben wird.
+Gibt den von der [**COutputQueue::ThreadProc-Methode**](coutputqueue-threadproc.md) zurückgegebenen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ist die Thread Prozedur für den Arbeits Thread des Objekts. Der Zeiger des Objekts `this` ist der Thread Parameter. Die-Methode dereferenziert dieses, um **ThreadProc** aufzurufen.
+Diese Methode ist die Threadprozedur für den Arbeitsthread des Objekts. Der Zeiger des Objekts `this` ist der Threadparameter. Die -Methode dereferenziert dies, um **ThreadProc** aufzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode ist die Thread Prozedur für den Arbeits Thread des Objekts. Der Z
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode ist die Thread Prozedur für den Arbeits Thread des Objekts. Der Z
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

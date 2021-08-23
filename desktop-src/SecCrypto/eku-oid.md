@@ -1,7 +1,7 @@
 ---
-description: Legt eine Zeichenfolge fest oder ruft eine Zeichenfolge ab, die einen EKU-OID-Zeichen folgen Wert enthält, wie in Wincrypt. h
+description: Legt eine Zeichenfolge fest, die einen in Wincrypt.h definierten EKU-OID-Zeichenfolgenwert enthält, oder ruft sie ab.
 ms.assetid: 2fdaeddc-5ed6-46a6-a4f7-827a605e890a
-title: 'Ieku:: OID (Eigenschaft)'
+title: IEKU::OID-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 77a519051d2bd1cb3c948bf0e2271cced7d80a20
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 49a35cb223c338573ba0a52288a1e5528820dcbd4c7589548ce31f9df46dc1e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370222"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119875250"
 ---
-# <a name="iekuoid-property"></a>Ieku:: OID (Eigenschaft)
+# <a name="iekuoid-property"></a>IEKU::OID-Eigenschaft
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509EnhancedKeyUsageExtension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509enhancedkeyusageextension?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace.\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509EnhancedKeyUsageExtension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509enhancedkeyusageextension?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **OID** -Eigenschaft legt eine Zeichenfolge fest oder ruft Sie ab, die einen EKU-OID-Zeichen folgen Wert enthält, wie in Wincrypt. h definiert.
+Die **OID-Eigenschaft** legt eine Zeichenfolge fest, die einen in Wincrypt.h definierten EKU-OID-Zeichenfolgenwert enthält, oder ruft sie ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -42,11 +42,11 @@ EKU.OID As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Zeichenfolge, die den EKU-OID-Zeichen folgen Wert enthält, wie in Wincrypt. h definiert.
+Zeichenfolge, die den in Wincrypt.h definierten EKU-OID-Zeichenfolgenwert enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft verwendet nicht das in CAPICOM 2,0 eingeführte [**OID**](oid.md) -Objekt.
+Diese Eigenschaft verwendet nicht das [**in CAPICOM**](oid.md) 2.0 eingeführte OID-Objekt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,7 +56,7 @@ Diese Eigenschaft verwendet nicht das in CAPICOM 2,0 eingeführte [**OID**](oid.
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

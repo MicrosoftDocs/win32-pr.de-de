@@ -1,7 +1,7 @@
 ---
-description: Richtet Shared Memory-Kommunikation für den Tablet-Kontext ein.
+description: Richtet die Shared Memory-Kommunikation für den Tablet-Kontext ein.
 ms.assetid: 63e6b271-d89a-4c91-9a15-9e41dcdfa363
-title: 'Itabletcontextp:: usenamedsharedmemorycommunications-Methode'
+title: ITabletContextP::UseNamedSharedMemoryCommunications-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Wisptis.exe
 - Wisptis.exe.dll
-ms.openlocfilehash: 81e8c653dd12600ae02fe7e6038de6e6a38786e7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a8ce5d4dde7f3fd678e4ac748a0f148750344a1e5e8da9f6481ad25eafa016a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119712230"
 ---
-# <a name="itabletcontextpusenamedsharedmemorycommunications-method"></a>Itabletcontextp:: usenamedsharedmemorycommunications-Methode
+# <a name="itabletcontextpusenamedsharedmemorycommunications-method"></a>ITabletContextP::UseNamedSharedMemoryCommunications-Methode
 
-Richtet Shared Memory-Kommunikation für den Tablet-Kontext ein.
+Richtet die Shared Memory-Kommunikation für den Tablet-Kontext ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,79 +46,79 @@ HRESULT UseNamedSharedMemoryCommunications(
 
 <dl> <dt>
 
-*PID* \[ in\]
+*pid* \[ In\]
 </dt> <dd>
 
-Die Prozess-ID des Clients, der auf den gemeinsamen Speicher zugreift.
+Die Prozess-ID des Clients, der auf freigegebenen Speicher zutritt.
 
 </dd> <dt>
 
-*pszcallersid* \[ in\]
+*pszCallerSid* \[ In\]
 </dt> <dd>
 
-Die Sicherheits-ID des Funktions Aufrufers.
+Die Sicherheits-ID des Funktionsaufrufers.
 
 </dd> <dt>
 
-*pszcallerintegratysid* \[ in\]
+*pszCallerIntegritySid* \[ In\]
 </dt> <dd>
 
 Die Sicherheits-ID, die die Integrität der aufrufenden Funktion überprüfen kann.
 
 </dd> <dt>
 
-*pdweventmoredataid* \[ vorgenommen\]
+*pdwEventMoreDataId* \[ out\]
 </dt> <dd>
 
-Eine ganze Zahl, die zum Erstellen des Namens eines Ereignisses verwendet wird. Das Ereignis gibt an, ob weitere Daten vorhanden sind.
+Eine ganze Zahl, die verwendet wird, um den Namen eines Ereignisses zu erstellen. Das -Ereignis gibt an, ob mehr Daten gespeichert sind.
 
 </dd> <dt>
 
-*pdweventclientleseryid* \[ vorgenommen\]
+*pdwEventClientReadyId* \[ out\]
 </dt> <dd>
 
-Eine ganze Zahl, die zum Erstellen des Namens eines Ereignisses verwendet wird. Das-Ereignis signalisiert, dass der Client für den Empfang von Daten bereit ist. Das Ereignis wird signalisiert, nachdem neue Daten verarbeitet wurden.
+Eine ganze Zahl, die verwendet wird, um den Namen eines Ereignisses zu erstellen. Das Ereignis signalisiert, dass der Client zum Empfangen von Daten bereit ist. Das Ereignis wird nach der Verarbeitung neuer Daten signalisiert.
 
 </dd> <dt>
 
-*pdwmutexaccessid* \[ vorgenommen\]
+*pdwMutexAccessId* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die Zugriffs-ID des freigegebenen Speichers.
+Ein Zeiger auf den Zugriffsbezeichner des freigegebenen Speichers.
 
 </dd> <dt>
 
-*pdwfilemappingid* \[ vorgenommen\]
+*pdwFileMappingId* \[ out\]
 </dt> <dd>
 
-Eine ganze Zahl, die den freigegebenen Arbeitsspeicher identifiziert.
+Eine ganze Zahl, die den freigegebenen Speicher identifiziert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **usenamedsharedmemorycommunications** -Methode ist Teil des Tablet PC Shared Memory-Protokolls. Ein Client ohne erhöhte Rechte übergibt eine Sicherheits-ID (SID) und eine Sicherheits-ID (Integritäts Stufe, Il-sid), sodass der Tablet-Dienst Zugriffs Steuerungs Listen (Access Control Lists, ACL) für den Zugriff auf die freigegebenen Speicher Objekte verwenden kann. Wenn der Client über erweiterte Berechtigungen verfügt, sollte er "remoesharedmemorycommunications" verwenden, bei dem es sich um die API handelt, die aufgerufen wird, wenn der Dienst bereits über eine erhöhte Berechtigung verfügt.
+Die **UseNamedSharedMemoryCommunications-Methode** ist Teil des Shared Memory-Protokolls für Tablet-PCs. Ein Client ohne erhöhte Rechte übergibt eine Sicherheits-ID (SID) und eine Integritätsebenen-Sicherheits-ID (IL-SID), damit der Tablet-Dienst Zugriffssteuerungslisten (Access Control Lists, ACL) verwenden kann, um auf die Shared Memory-Objekte zu zugreifen. Wenn der Client über erhöhte Berechtigungen verfügt, sollte er UseSharedMemoryCommunications verwenden. Dies ist die API, die aufgerufen wird, wenn der Dienst bereits über erhöhte Rechte verfügt.
 
-Die [**SharedMemory- \_ Header**](sharedmemory-header.md) Struktur speichert den Shared Memory-Header.
+Die [**SHAREDMEMORY \_ HEADER-Struktur**](sharedmemory-header.md) speichert den Shared Memory-Header.
 
-Die [**SharedMemory- \_ Header**](sharedmemory-header.md) Struktur wird aus den Daten umgewandelt, auf die von der Datei Zuordnung verwiesen wird. Die Rohdaten des Pakets folgen dem **SharedMemory- \_ Header**. Unformatierte Paketdaten können aus dem freigegebenen Speicher gelesen werden, wenn das Ereignis, auf das von *pdweventclientleseyid* verwiesen wird, ausgelöst wird.
+Die [**SHAREDMEMORY \_ HEADER-Struktur**](sharedmemory-header.md) wird aus den Daten, auf die von der Dateizuordnung verwiesen wird, umstrukturiert. Die Rohdaten des Pakets folgen dem **SHAREDMEMORY-HEADER \_**. Unformatierte Paketdaten können aus dem freigegebenen Speicher gelesen werden, wenn das Ereignis ausgelöst wird, auf das *von pdwEventClientReadyId* verwiesen wird.
 
-In der folgenden Liste wird die Abfolge von Ereignissen zum Zugreifen auf und Verwenden von frei gegebenem Speicher beschrieben.
+In der folgenden Liste wird die Abfolge von Ereignissen für den Zugriff auf und die Verwendung von freigegebenen Speicher beschrieben.
 
-1.  Der Client löst das clientready-Ereignis aus.
+1.  Der Client löst das clientReady-Ereignis aus.
 2.  Der Client wartet auf das MoreData-Ereignis.
-3.  Der Client erhält den Mutex.
-4.  Der Client liest Paketdaten aus dem Abschnitt des gemeinsam genutzten Speichers, der auf den Header folgt. Seriennummern werden im gemeinsam genutzten Speicher nach den Paketdaten angezeigt.
-5.  Der Client verarbeitet Daten abhängig vom Wert von **dwevent**.
-6.  Der Client schreibt-1 (0xFFFFFFFF) in **dwevent**.
+3.  Der Client übernimmt den Mutex.
+4.  Der Client liest Paketdaten aus dem Abschnitt des freigegebenen Speichers, der dem Header folgt. Seriennummern werden im freigegebenen Speicher nach den Paketdaten angezeigt.
+5.  Der Client verarbeitet Daten abhängig vom Wert von **dwEvent**.
+6.  Der Client schreibt -1 (0xFFFFFFFF) in **dwEvent**.
 7.  Der Client gibt den Mutex frei.
-8.  Der Client löst das clientready-Ereignis aus.
+8.  Der Client löst das clientReady-Ereignis aus.
 
-Die Ereignis Namen werden erstellt, indem die Ausgabe dieser Methode formatiert wird. Die folgenden Definitionen können in Verbindung mit sprintf oder dem entsprechenden verwendet werden, um die Ereignis Namen zu erstellen.
+Die Ereignisnamen werden erstellt, indem die Ausgabe dieser Methode formatiert wird. Die folgenden Definitionen können in Verbindung mit sprintf oder der entsprechenden Definition verwendet werden, um die Ereignisnamen zu erstellen.
 
 
 ```C++
@@ -130,7 +130,7 @@ Die Ereignis Namen werden erstellt, indem die Ausgabe dieser Methode formatiert 
 
 
 
-In jeder Definition wird der Abschnitt "% d" durch die Prozess-ID ersetzt, und der Abschnitt "% u" wird durch die in " *pdweventmoredataid* " oder " *pdweventclientread yid*" zurückgegebene Ganzzahl ersetzt.
+In jeder Definition wird der Abschnitt %d durch die Prozess-ID ersetzt, und der Abschnitt %u wird durch die ganze Zahl ersetzt, die in *pdwEventMoreDataId* oder *pdwEventClientReadyId* zurückgegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -138,20 +138,20 @@ In jeder Definition wird der Abschnitt "% d" durch die Prozess-ID ersetzt, und d
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**"US-haredmemorycommunications"**](itabletcontextp-usesharedmemorycommunications.md)
+[**UseSharedMemoryCommunications**](itabletcontextp-usesharedmemorycommunications.md)
 </dt> <dt>
 
-[**Itabletcontextp**](itabletcontextp.md)
+[**ITabletContextP**](itabletcontextp.md)
 </dt> </dl>
 
  

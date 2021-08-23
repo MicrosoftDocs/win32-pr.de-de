@@ -17,7 +17,7 @@ In diesem Thema werden Programmieranweisungen zum Suchen von umgeleiteten Regist
 
 ## <a name="load-a-language-neutral-registry-value"></a>Laden eines Language-Neutral Registrierungswerts
 
-Unter Windows Vista und höher verwendet die PROGRAMM-Anwendung einen sprachneutralen Registrierungswert, um den Zugriff auf sprachspezifische Zeichenfolgen zu ermöglichen, die in einer Zeichenfolgenressourcentabelle gespeichert sind. Weitere Informationen finden Sie unter Erstellen einer Language-Neutral-Ressource in [Using Registry String Redirection](using-registry-string-redirection.md).
+Unter Windows Vista und höher verwendet die PROGRAMM-Anwendung einen sprachneutralen Registrierungswert, um den Zugriff auf sprachspezifische Zeichenfolgen zu ermöglichen, die in einer Zeichenfolgenressourcentabelle gespeichert sind. Weitere Informationen finden Sie unter Create a Language-Neutral Resource in [Using Registry String Redirection](using-registry-string-redirection.md).
 
 Anwendungscode, der den sprachneutralen Wert aus der Registrierung liest, sollte die Zeichenfolgen in der richtigen Benutzeroberflächensprache laden, indem [**RegLoadMUIStringW aufruft.**](/windows/win32/api/winreg/nf-winreg-regloadmuistringa) Wenn Sie diese Funktion verwenden, muss sich Ihre Anwendung nicht explizit mit dem Laden von Ressourcen befassen.
 
@@ -42,7 +42,7 @@ HKCR,"CLSID\%CLSID_AntiSpyware%","InfoTip",,"@%ProgramFiles%\Windows AntiSpyware
 
 Die erste Zeile stellt aus Gründen der Fallback- und Abwärtskompatibilität eine nicht lokalisierte Literalzeichenfolge zur Unterstützung von Fallbacks und Abwärtskompatibilitäten zurVerfingung von Literalzeichenfolgen zur Veralten. Die zweite Zeile zeigt die MIT-kompatible Methode zum Registrieren des Anzeigenamens. Diese Zeile gibt den Zeichenfolgenbezeichner 104 an, der in Msascui.exe (für Windows XP) oder in der zugehörigen sprachspezifischen Datei (für Windows Vista) gespeichert ist. Dieser Zeichenfolgenbezeichner entspricht "My Network Places". Die dritte Zeile im Beispiel verarbeitet die InfoTip-Registrierung. %CLSID AntiSpyware% gibt eine Umgebungsvariable an, die die GUID darstellt, die dem \_ Klassenbezeichner dieser Komponente entspricht.
 
-Im oben gezeigten Beispiel ruft die Anwendung [**SHSetLocalizedName**](/windows/win32/api/shellapi/nf-shellapi-shsetlocalizedname) auf, um den Pfad der ausführbaren Datei für die ersten beiden Parameter anzugeben, und *idsRes* als "@%ProgramFiles% \\ Windows AntiSpyware \\MSASCui.exe,104". Ein Aufruf von [**IShellLink::SetDescription**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishelllinka-setdescription)gibt den Pfad für den InfoTip als "@%ProgramFiles% \\ Windows AntiSpyware \\MSASCui.exe,208" an.
+Im obigen Beispiel ruft die Anwendung [**SHSetLocalizedName**](/windows/win32/api/shellapi/nf-shellapi-shsetlocalizedname) auf, um den Pfad der ausführbaren Datei für die ersten beiden Parameter anzugeben, und *idsRes* als "@%ProgramFiles% \\ Windows AntiSpyware \\MSASCui.exe,104". Ein Aufruf von [**IShellLink::SetDescription**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishelllinka-setdescription)gibt den Pfad für den InfoTip als "@%ProgramFiles% \\ Windows AntiSpyware \\MSASCui.exe,208" an.
 
 ## <a name="query-friendly-document-type-names-in-the-registry"></a>Abfragefreundliche Dokumenttypnamen in der Registrierung
 
@@ -54,7 +54,7 @@ Ihre Anwendung kann ein MICROSOFT MANAGEMENT CONSOLE-Snap-In (MMC) verwenden, um
 
 ## <a name="set-the-display-name-and-description-for-a-windows-service-from-the-registry"></a>Festlegen des Anzeigenamens und der Beschreibung für einen Windows Dienst aus der Registrierung
 
-Wenn IhreSTELLUNG-Anwendung einen Windows verwendet, muss sie den Anzeigenamen und die Beschreibung des Diensts anzeigen. Die zugeordneten Ressourcen werden unter "Erstellen von Zeichenfolgenressourcen für einen Windows-Dienst" in [Using Registry String Redirection (Verwenden der Registrierungszeichenfolgenumleitung) erläutert.](using-registry-string-redirection.md)
+Wenn IhreSTELLUNG-Anwendung einen Windows verwendet, muss sie den Anzeigenamen und die Beschreibung des Diensts anzeigen. Die zugeordneten Ressourcen werden unter "Erstellen von Zeichenfolgenressourcen für einen Windows-Dienst" unter [Using Registry String Redirection (Verwenden der Registrierungszeichenfolgenumleitung) erläutert.](using-registry-string-redirection.md)
 
 Zum Festlegen des Anzeigenamens des Diensts ruft die ANWENDUNG FÜR DIE Anwendung [**CreateService**](/windows/win32/api/winsvc/nf-winsvc-createservicea) oder [**ChangeServiceConfig auf.**](/windows/win32/api/winsvc/nf-winsvc-changeserviceconfiga) Der Name ist eine Zeichenfolge der Form " `@<PE-path>,-<stringID>[;<comment>]` ". Wenn Ihr Dienst beispielsweise von einer .dll-Datei mit dem Pfad %ProgramFiles% %MyPath%MyDll.dll implementiert wird und der Zeichenfolgenbezeichner des sprachspezifischen Anzeigenamens \\ 347 ist, wird der Parameter als \\ " " `@%ProgramFiles%\\%MyPath%\\MyDll.dll,-347` angegeben. Die doppelten schrägen Schrägstriche ( ) sind erforderlich, da C/C++ den schrägen Schrägstrich als Escapezeichen \\ \\ in Zeichenfolgen verwendet.
 

@@ -1,11 +1,11 @@
 ---
-title: REPL-Topology--Attribut für Ausführungsdauer
-description: Die Verzögerung zwischen dem Löschen eines Server Objekts und dem permanenten Entfernen aus der Replikations Topologie.
+title: Repl-Topology-Stay-Of-Execution-Attribut
+description: Die Verzögerung zwischen dem Löschen eines Serverobjekts und dem endgültigen Entfernen aus der Replikationstopologie.
 ms.assetid: 770231b0-4886-41c2-a3b5-ac488ac09669
 ms.tgt_platform: multiple
 keywords:
-- Adschema für repl-Topology-be-of-Execution-Attribut
-- AD-Schema für repltopologystayosexecution-Attribut
+- AD-Schema des Repl-Topology-Stay-Of-Execution-Attributs
+- replTopologyStayOfExecution-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a51c74c477cce926dd18ea17b8df2b1adcf99df1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 05cb589fdf6ab99654b688df5710117a3fea4926de9fa7a96460c9644ff1ea5f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119837460"
 ---
-# <a name="repl-topology-stay-of-execution-attribute"></a>REPL-Topology--Attribut für Ausführungsdauer
+# <a name="repl-topology-stay-of-execution-attribute"></a>Repl-Topology-Stay-Of-Execution-Attribut
 
-Die Verzögerung zwischen dem Löschen eines Server Objekts und dem permanenten Entfernen aus der Replikations Topologie.
+Die Verzögerung zwischen dem Löschen eines Serverobjekts und dem endgültigen Entfernen aus der Replikationstopologie.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | REPL-Topologie-der Ausführungsdauer      |
-| LDAP-Display-Name | repltopologystayof Execution          |
+| CN                | Repl-Topology-Stay-of-Execution      |
+| Ldap-Anzeigename | replTopologyStayOfExecution          |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.     |
-| Aktualisierungshäufigkeit  | Jedes Mal, wenn ein Server Objekt gelöscht wird. |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
+| Updatehäufigkeit  | Jedes Mal, wenn ein Serverobjekt gelöscht wird. |
 | Attribute-Id      | 1.2.840.113556.1.4.677               |
-| System-ID-GUID    | 7bf dcb83-4807-11d1-a9c3-0000b80367c1 |
+| System-Id-Guid    | 7bfdcb83-4807-11d1-a9c3-0000f80367c1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Die Verzögerung zwischen dem Löschen eines Server Objekts und dem permanenten 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,20 +58,20 @@ Die Verzögerung zwischen dem Löschen eines Server Objekts und dem permanenten 
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Richtig                                             |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,16 +79,16 @@ Die Verzögerung zwischen dem Löschen eines Server Objekts und dem permanenten 
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Richtig                                             |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
@@ -100,16 +100,16 @@ Die Verzögerung zwischen dem Löschen eines Server Objekts und dem permanenten 
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Richtig                                             |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
@@ -121,16 +121,16 @@ Die Verzögerung zwischen dem Löschen eines Server Objekts und dem permanenten 
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Richtig                                             |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
@@ -142,16 +142,16 @@ Die Verzögerung zwischen dem Löschen eines Server Objekts und dem permanenten 
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Richtig                                             |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
@@ -163,16 +163,16 @@ Die Verzögerung zwischen dem Löschen eines Server Objekts und dem permanenten 
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Richtig                                             |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
@@ -184,16 +184,16 @@ Die Verzögerung zwischen dem Löschen eines Server Objekts und dem permanenten 
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
-| Ist indiziert             | False                                            |
-| Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| System-Only            | Falsch                                            |
+| Is-Single-Valued       | Richtig                                             |
+| Ist indiziert             | Falsch                                            |
+| Im globalen Katalog      | Falsch                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 

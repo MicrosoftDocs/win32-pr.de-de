@@ -1,9 +1,9 @@
 ---
-title: Devicememorybarrier-Funktion
-description: Blockiert die Ausführung aller Threads in einer Gruppe, bis alle Gerätespeicher Zugriffe abgeschlossen sind.
+title: DeviceMemoryBarrier-Funktion
+description: Blockiert die Ausführung aller Threads in einer Gruppe, bis alle Gerätespeicherzugriffe abgeschlossen sind.
 ms.assetid: 904ab8f6-4849-4b13-8fac-3967cf66574e
 keywords:
-- Devicememorybarrier-Funktion HLSL
+- DeviceMemoryBarrier-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1875b780f528000d46ba31bb979072d6d462fa91
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 3f3629f7eaf8b3e271ca988b73e1dedab1e428136cc86663b64b838597d1b98c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104388860"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119855260"
 ---
-# <a name="devicememorybarrier-function"></a>Devicememorybarrier-Funktion
+# <a name="devicememorybarrier-function"></a>DeviceMemoryBarrier-Funktion
 
-Blockiert die Ausführung aller Threads in einer Gruppe, bis alle Gerätespeicher Zugriffe abgeschlossen sind.
+Blockiert die Ausführung aller Threads in einer Gruppe, bis alle Gerätespeicherzugriffe abgeschlossen sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,47 +38,47 @@ Diese Funktion besitzt keine Parameter.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

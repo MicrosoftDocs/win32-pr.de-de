@@ -1,10 +1,10 @@
 ---
-title: DocumentTitle-Attribut
-description: Der DocumentTitle-Attributtyp gibt den Titel eines Dokuments an.
+title: documentTitle-Attribut
+description: Der attributtyp documentTitle gibt den Titel eines Dokuments an.
 ms.assetid: 41c50484-cde5-4c0f-95c9-bba5f4e99c75
 ms.tgt_platform: multiple
 keywords:
-- DocumentTitle-Attribut AD-Schema
+- documentTitle-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,41 +13,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 20b9574cd973b07f44cbed41af04fda0308ae440
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e945599d40450cc3130d717881098773bb331d46c163aa4d25d874b2247d5075
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479727"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119804870"
 ---
-# <a name="documenttitle-attribute"></a>DocumentTitle-Attribut
+# <a name="documenttitle-attribute"></a>documentTitle-Attribut
 
-Der DocumentTitle-Attributtyp gibt den Titel eines Dokuments an.
+Der attributtyp documentTitle gibt den Titel eines Dokuments an.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | DocumentTitle                               |
-| LDAP-Display-Name | DocumentTitle                               |
+| CN                | Documenttitle                               |
+| Ldap-Anzeigename | Documenttitle                               |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 0.9.2342.19200300.100.1.12                  |
-| System-ID-GUID    | de265a9c-ff2c-47b9-91dc-6e6fe2c43062        |
+| System-Id-Guid    | de265a9c-ff2c-47b9-91dc-6e6fe2c43062        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,10 +56,10 @@ Der DocumentTitle-Attributtyp gibt den Titel eines Dokuments an.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Is-Single-Valued       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |
@@ -77,10 +77,10 @@ Der DocumentTitle-Attributtyp gibt den Titel eines Dokuments an.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Is-Single-Valued       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |
@@ -98,10 +98,10 @@ Der DocumentTitle-Attributtyp gibt den Titel eines Dokuments an.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Is-Single-Valued       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |
@@ -119,10 +119,10 @@ Der DocumentTitle-Attributtyp gibt den Titel eines Dokuments an.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Ist einwertig       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |
@@ -140,10 +140,10 @@ Der DocumentTitle-Attributtyp gibt den Titel eines Dokuments an.
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Ist einwertig       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |

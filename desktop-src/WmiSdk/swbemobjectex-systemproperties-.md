@@ -1,8 +1,8 @@
 ---
-description: Gibt ein Objekt vom Typ "Swap PropertySet" zurück, das die Auflistung von WMI-System Eigenschaften enthält, die auf das Objekt angewendet werden.
+description: Gibt ein SWbemPropertySet-Objekt zurück, das die Auflistung der WMI-Systemeigenschaften enthält, die für das Objekt gelten.
 ms.assetid: e95c325a-8851-4f55-a99d-4346d064e308
 ms.tgt_platform: multiple
-title: SWbemObjectEx.SystemProperties_-Eigenschaft (wbemdisp. h)
+title: SWbemObjectEx.SystemProperties_ -Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,18 +17,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: cf8b7e15536c0d4e3116f0583662b3cd0b7d0887
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 23de364e4616b7b7c2ac6b7de6daaf42edfd73e2e7b3920f7ac3b84b7a59bde5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857330"
 ---
-# <a name="swbemobjectexsystemproperties_-property"></a>SWbemObjectEx.Systemproperties ( \_ Eigenschaft)
+# <a name="swbemobjectexsystemproperties_-property"></a>SWbemObjectEx.SystemProperties-Eigenschaft \_
 
-Die **SystemProperties \_** -Eigenschaft des " [**errbemubjectex**](swbemobjectex.md) "-Objekts gibt ein " [**errbempropertyset**](swbempropertyset.md) "-Objekt zurück, das die Sammlung von [WMI-System Eigenschaften](wmi-system-properties.md) enthält, die auf das Objekt angewendet werden.
+Die **\_ SystemProperties-Eigenschaft** des [**SWbemObjectEx-Objekts**](swbemobjectex.md) gibt ein [**SWbemPropertySet-Objekt**](swbempropertyset.md) zurück, das die Auflistung der [WMI-Systemeigenschaften](wmi-system-properties.md) enthält, die für das Objekt gelten.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -45,7 +45,7 @@ SWbemObjectEx.SystemProperties_ As Object
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel werden die Eigenschaftswerte für die Win32- \_ Prozess Klasse abgerufen.
+Im folgenden Codebeispiel werden die Eigenschaftswerte für die Win32 \_ Process-Klasse abgerufen.
 
 
 ```VB
@@ -84,11 +84,11 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-Austausch<br/>                                                         |
-| IID<br/>                      | IID \_ iswbejebjectex<br/>                                                          |
+| CLSID<br/>                    | CLSID \_ SWbemObjectEx<br/>                                                         |
+| IID<br/>                      | IID \_ ISWbemObjectEx<br/>                                                          |
 
 
 
@@ -96,7 +96,7 @@ Next
 
 <dl> <dt>
 
-[**Austauschen von "errbemubjectex"**](swbemobjectex.md)
+[**SWbemObjectEx**](swbemobjectex.md)
 </dt> </dl>
 
  

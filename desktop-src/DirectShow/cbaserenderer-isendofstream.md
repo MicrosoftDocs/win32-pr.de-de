@@ -1,7 +1,7 @@
 ---
-description: Die isendofstream-Methode fragt ab, ob das Ende der Stream-Benachrichtigung empfangen wurde.
+description: Die IsEndOfStream-Methode fragt ab, ob die Benachrichtigung zum Streamende empfangen wurde.
 ms.assetid: 44f9b740-ff7d-4387-9c2c-a5b6b90f3295
-title: Cbaserderderer. isendof Stream-Methode (renbase. h)
+title: CBaseRenderer.IsEndOfStream-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e07afb4dfb10e38d90184ba5747f200d1bc716d9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 50aab34fe73f617409ae3f1e33d132a45f8ea771722c42629d9f0e3df5ebb115
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119872310"
 ---
-# <a name="cbaserendererisendofstream-method"></a>Cbaserderderer. isendof Stream-Methode
+# <a name="cbaserendererisendofstream-method"></a>CBaseRenderer.IsEndOfStream-Methode
 
-Die- `IsEndOfStream` Methode fragt ab, ob das Ende der Stream-Benachrichtigung empfangen wurde.
+Die `IsEndOfStream` -Methode fragt ab, ob die End-of-Stream-Benachrichtigung empfangen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Flag " [**cbaserenderer:: m \_ BeOS**](cbaserenderer-m-beos.md) " zurück.
+Gibt das [**\_ BEOS-Flag CBaseRenderer::m**](cbaserenderer-m-beos.md) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt das Flag " [**cbaserenderer:: m \_ BeOS**](cbaserenderer-m-beos.md) " zurü
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt das Flag " [**cbaserenderer:: m \_ BeOS**](cbaserenderer-m-beos.md) " zurü
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

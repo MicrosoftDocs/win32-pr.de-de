@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_User_Config01_Desktop02-Klasse
-description: Die Benutzer Config01 Desktop02-Klasse der MDM- \_ Richtlinie \_ \_ \_ stellt die verfügbaren Ordner Profil Richtlinien dar.
+description: Die Mdm \_ Policy \_ User \_ Config01 \_ Desktop02-Klasse stellt die verfügbaren Ordnerprofilrichtlinien dar.
 ms.assetid: 44a60c60-bae5-44b2-b096-387c915e2692
 keywords:
 - MDM_Policy_User_Config01_Desktop02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 15f4ef08329b3927d7e3c3328c7c2f033fb25026
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fd533663554ecf341530c9a6025675dbb013d0b6d6994f91550a735df434f7ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858750"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694150"
 ---
-# <a name="mdm_policy_user_config01_desktop02-class"></a>MDM- \_ Richtlinien \_ Benutzer \_ Config01 \_ Desktop02-Klasse
+# <a name="mdm_policy_user_config01_desktop02-class"></a>MDM \_ Policy \_ User \_ Config01 \_ Desktop02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die Benutzer Config01 Desktop02-Klasse der MDM- \_ Richtlinie \_ \_ \_ stellt die verfügbaren Ordner Profil Richtlinien dar.
+Die Mdm \_ Policy \_ User \_ Config01 \_ Desktop02-Klasse stellt die verfügbaren Ordnerprofilrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,48 +46,48 @@ class MDM_Policy_User_Config01_Desktop02
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Benutzer \_ Config01 \_ Desktop02-Klasse der MDM-Richtlinie** verfügt über diese Typen von Membern:
+Die **MDM Policy User \_ \_ \_ Config01 \_ Desktop02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Benutzer \_ Config01 \_ Desktop02-Klasse der MDM-Richtlinie** verfügt über diese Eigenschaften.
+Die **MDM Policy User \_ \_ \_ Config01 \_ Desktop02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-[Preventuserredirectionofprofilefolders](/windows/client-management/mdm/policy-csp-desktop#desktop-preventuserredirectionofprofilefolders)
+[PreventUserRedirectionOfProfileFolders](/windows/client-management/mdm/policy-csp-desktop#desktop-preventuserredirectionofprofilefolders)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -101,10 +101,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

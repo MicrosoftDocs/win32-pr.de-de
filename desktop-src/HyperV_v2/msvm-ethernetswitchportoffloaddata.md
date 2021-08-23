@@ -100,7 +100,7 @@ Die **Msvm \_ EthernetSwitchPortOffloadData-Klasse** verfügt über diese Eigens
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -113,7 +113,7 @@ Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ Manag
 **CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -129,7 +129,7 @@ Der Name der Unterklasse, die bei der Erstellung dieser Portdateninstanz verwend
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -142,7 +142,7 @@ Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElem
 **DeviceCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -158,7 +158,7 @@ Der Name der Erstellungsklasse des Bereichssystems. Diese Eigenschaft wird von [
 **Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -174,7 +174,7 @@ Die Geräte-ID des Ports, der den Bereich dieser Portdateninstanz ein geltungsbe
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -187,7 +187,7 @@ Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedEle
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -283,7 +283,7 @@ Die aktuelle Anzahl von Sa-Ausladeslots (Security Association, Sicherheitszuordn
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -299,7 +299,7 @@ Eine Zeichenfolge, die diese Portdateninstanz innerhalb des Bereichs von Switch 
 **SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -315,7 +315,7 @@ Der Name der Erstellungsklasse des Bereichssystems. Diese Eigenschaft wird von [
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 0fde070b1b013e651c84ffea7098eb8225aed8f9
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 120a9f4179819b550502c2c3764d334159b647fd4c8621d3a088516b9a669d56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747850"
 ---
 # <a name="id3dxpatchmeshgetdeclaration-method"></a>ID3DXPatchMesh::GetDeclaration-Methode
 
@@ -45,7 +45,7 @@ HRESULT GetDeclaration(
 
 Typ: **[ **LPD3DVERTEXELEMENT9**](d3dvertexelement9.md)**
 
-Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) die das Scheitelpunktformat der Gitternetzvertices beschreiben. Die Dimension dieses Deklaratorarrays ist [**MAX \_ FVF \_ DECL \_ SIZE.**](./max-fvf-decl-size.md) Das Vertexelementarray endet mit dem [**D3DDECL-END-Makro. \_**](d3ddecl-end.md)
+Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) die das Scheitelpunktformat der Gitternetzvertices beschreiben. Die Dimension dieses Deklaratorarrays ist [**MAX \_ FVF \_ DECL \_ SIZE**](./max-fvf-decl-size.md). Das Vertexelementarray endet mit dem [**D3DDECL-END-Makro. \_**](d3ddecl-end.md)
 
 </dd> </dl>
 
@@ -55,7 +55,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das Array von Elementen enthält das [**D3DDECL-END-Makro, \_**](d3ddecl-end.md) das die Deklaration beendet.
 
@@ -63,7 +63,7 @@ Das Array von Elementen enthält das [**D3DDECL-END-Makro, \_**](d3ddecl-end.md)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

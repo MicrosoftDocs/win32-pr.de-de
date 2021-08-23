@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie im esentderivedcolumnkorruptionexception-Konstruktor.
-title: Esentderivedcolumnkorruptionexception-Konstruktor
+description: 'Weitere Informationen zu: EsentDerivedColumnCorruptionException-Konstruktor'
+title: EsentDerivedColumnCorruptionException-Konstruktor
 TOCTitle: 'EsentDerivedColumnCorruptionException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDerivedColumnCorruptionException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentderivedcolumncorruptionexception.esentderivedcolumncorruptionexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6ed577f2091a98b982313971f92f29930d715c4e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2bb6a25452bd9c37460db52e88263991a87d7f2d9d0b31f86097371e9e4ab6f7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119784690"
 ---
-# <a name="esentderivedcolumncorruptionexception-constructor"></a>Esentderivedcolumnkorruptionexception-Konstruktor
+# <a name="esentderivedcolumncorruptionexception-constructor"></a>EsentDerivedColumnCorruptionException-Konstruktor
 
-Initialisiert eine neue Instanz der esentderivedcolumnkorruptionexception-Klasse.
+Initialisiert eine neue Instanz der EsentDerivedColumnCorruptionException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentDerivedColumnCorruptionException()
 public EsentDerivedColumnCorruptionException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentderivedcolumnkorruptionexception-Klasse](./esentderivedcolumncorruptionexception-class.md)
+[EsentDerivedColumnCorruptionException-Klasse](./esentderivedcolumncorruptionexception-class.md)
 
-[Esentderivedcolumnkorruptionexception-Member](./esentderivedcolumncorruptionexception-members.md)
+[EsentDerivedColumnCorruptionException-Member](./esentderivedcolumncorruptionexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

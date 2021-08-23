@@ -17,14 +17,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: bef667872a7afa4c726ee1b2c77a36c29649114d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f39d800516f96cf602257abc3bd8ed9ed5a8d5561f4b4a5e60f5eb140fc1c308
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356947"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119693540"
 ---
-# <a name="msvm_affectedjobelement-class"></a>MSVM \_ affectedjobelements-Klasse
+# <a name="msvm_affectedjobelement-class"></a>Msvm \_ AffectedJobElement-Klasse
 
 Stellt eine Zuordnung zwischen einem Auftrag und dem verwalteten Element dar, das von seiner Ausführung betroffen sein kann.
 
@@ -45,71 +45,71 @@ class Msvm_AffectedJobElement : CIM_AffectedJobElement
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ affectedjobelements** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ AffectedJobElement-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ affectedjobelements** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ AffectedJobElement-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Affectedelta-Element**
+**AffectedElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
+Datentyp: **[ **CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das verwaltete Element, das von der Ausführung des Auftrags betroffen ist. Diese Eigenschaft wird von [**CIM \_ affectedjobelements**](/previous-versions//cc150663(v=vs.85))geerbt.
+Das verwaltete Element, das von der Ausführung des Auftrags betroffen ist. Diese Eigenschaft wird von [**CIM \_ AffectedJobElement geerbt.**](/previous-versions//cc150663(v=vs.85))
 
 </dd> <dt>
 
-**Affectingelement**
+**AffectingElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ concretejob**](msvm-concretejob.md)**
+Datentyp: **[ **Msvm \_ ConcreteJob**](msvm-concretejob.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Auftrag, der sich auf das verwaltete Element auswirkt. Diese Eigenschaft wird von [**CIM \_ affectedjobelements**](/previous-versions//cc150663(v=vs.85))geerbt.
+Der Auftrag, der das verwaltete Element beeinflusst. Diese Eigenschaft wird von [**CIM \_ AffectedJobElement geerbt.**](/previous-versions//cc150663(v=vs.85))
 
 </dd> <dt>
 
-**Elementeffects**
+**ElementEffects**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Enumeration, die den Effekt auf das verwaltete Element beschreibt. Diese Eigenschaft wird von [**CIM \_ affectedjobelements**](/previous-versions//cc150663(v=vs.85))geerbt.
+Eine Enumeration, die die Auswirkung auf das verwaltete Element beschreibt. Diese Eigenschaft wird von [**CIM \_ AffectedJobElement geerbt.**](/previous-versions//cc150663(v=vs.85))
 
 </dd> <dt>
 
-**Otherelementeffect-Beschreibungen**
+**OtherElementEffectsDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt Details für den Effekt an der entsprechenden Array Position in **elementeffects** bereit. Diese Eigenschaft wird von [**CIM \_ affectedjobelements**](/previous-versions//cc150663(v=vs.85))geerbt.
+Stellt Details für den Effekt an der entsprechenden Arrayposition in **ElementEffects dar.** Diese Eigenschaft wird von [**CIM \_ AffectedJobElement geerbt.**](/previous-versions//cc150663(v=vs.85))
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM- \_ affectedjobelements** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ AffectedJobElement-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -117,10 +117,10 @@ Der Zugriff auf die **MSVM- \_ affectedjobelements** -Klasse kann durch die UAC-
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -129,13 +129,13 @@ Der Zugriff auf die **MSVM- \_ affectedjobelements** -Klasse kann durch die UAC-
 
 <dl> <dt>
 
-[**CIM- \_ affectedjobelements**](cim-affectedjobelement.md)
+[**CIM \_ AffectedJobElement**](cim-affectedjobelement.md)
 </dt> <dt>
 
-[**CIM- \_ affectedjobelements**](/previous-versions//cc150663(v=vs.85))
+[**CIM \_ AffectedJobElement**](/previous-versions//cc150663(v=vs.85))
 </dt> <dt>
 
-[Verwaltungs Klassen für virtuelle Systeme](virtual-system-management-classes.md)
+[Verwaltungsklassen für virtuelle Systeme](virtual-system-management-classes.md)
 </dt> </dl>
 
  

@@ -47,7 +47,7 @@ Wenn Windows Vista eine **IPropertyStore-Schnittstelle** für einen Audiodecoder
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

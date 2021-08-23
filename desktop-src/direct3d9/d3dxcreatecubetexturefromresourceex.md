@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine cubetextur aus einer Ressource, die durch eine Zeichenfolge angegeben wird. Dies ist eine erweiterte Funktion als D3DXCreateCubeTextureFromResource.
+description: Erstellt eine Cubetextur aus einer Durch eine Zeichenfolge angegebenen Ressource. Dies ist eine erweiterte Funktion als D3DXCreateCubeTextureFromResource.
 ms.assetid: 4d263386-8270-4967-8ef5-e9ac69e502a5
-title: D3DXCreateCubeTextureFromResourceEx-Funktion (D3dx9tex. h)
+title: D3DXCreateCubeTextureFromResourceEx-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 4ed77556681e2ad43302b8608dc213b3ad0f0209
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8548863f7c35ff3d56fd83287cf1c3628bb1a9ff89d8ad34346530063c494c99
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355676"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857300"
 ---
 # <a name="d3dxcreatecubetexturefromresourceex-function"></a>D3DXCreateCubeTextureFromResourceEx-Funktion
 
-Erstellt eine cubetextur aus einer Ressource, die durch eine Zeichenfolge angegeben wird. Dies ist eine erweiterte Funktion als [**D3DXCreateCubeTextureFromResource**](d3dxcreatecubetexturefromresource.md).
+Erstellt eine Cubetextur aus einer Durch eine Zeichenfolge angegebenen Ressource. Dies ist eine erweiterte Funktion als [**D3DXCreateCubeTextureFromResource.**](d3dxcreatecubetexturefromresource.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,129 +53,129 @@ HRESULT D3DXCreateCubeTextureFromResourceEx(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Gerät darstellt, das der cubetextur zugeordnet werden soll.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät darstellt, das der Cubetextur zugeordnet werden soll.
 
 </dd> <dt>
 
-*hsrcmodule* \[ in\]
+*hSrcModule* \[ In\]
 </dt> <dd>
 
 Typ: **[ **HMODULE**](../winprog/windows-data-types.md)**
 
-Handle für das Modul, in dem sich die Ressource befindet, oder **null** für das Modul, das dem Image zugeordnet ist, das zum Erstellen des aktuellen Prozesses verwendet wurde.
+Handle für das Modul, in dem sich die Ressource befindet, oder **NULL** für das Modul, das dem Image zugeordnet ist, mit dem das Betriebssystem den aktuellen Prozess erstellt hat.
 
 </dd> <dt>
 
-*psrkresource* \[ in\]
+*pSrcResource* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf eine Zeichenfolge, die den Ressourcennamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der String-Datentyp in LPCSTR aufgelöst. Siehe Hinweise.
+Zeiger auf eine Zeichenfolge, die den Ressourcennamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR auflösen. Andernfalls wird der Zeichenfolgendatentyp in LPCSTR auflösen. Siehe Hinweise.
 
 </dd> <dt>
 
-*Größe* \[ in\]
+*Größe* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Breite und Höhe der cubetextur in Pixel. Wenn es sich bei der cubetextur z. b. um einen 8-Pixel-Cube mit 8 Pixel handelt, sollte der Wert für diesen Parameter 8 lauten. Wenn dieser Wert 0 oder D3DX \_ Default ist, werden die Dimensionen aus der Datei entnommen.
+Breite und Höhe der Cubetextur in Pixel. Wenn es sich bei der Cubetextur beispielsweise um einen Cube mit 8 Pixeln oder 8 Pixeln handelt, sollte der Wert für diesen Parameter 8 sein. Wenn dieser Wert 0 oder D3DX \_ DEFAULT ist, werden die Dimensionen aus der Datei übernommen.
 
 </dd> <dt>
 
-*Miplevels* \[ in\]
+*MipLevels* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der angeforderten Mip-Ebenen. Wenn dieser Wert 0 (null) oder D3DX \_ Default ist, wird eine komplette MipMap-Kette erstellt.
+Anzahl der angeforderten MIP-Ebenen. Wenn dieser Wert 0 (null) oder D3DX \_ DEFAULT ist, wird eine vollständige Mipmapkette erstellt.
 
 </dd> <dt>
 
-*Verwendung* \[ in\]
+*Verwendung* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-0 oder D3DUSAGE \_ renderTarget oder D3DUSAGE \_ Dynamic. Wenn dieses Flag auf D3DUSAGE \_ renderTarget festgelegt wird, wird angegeben, dass die Oberfläche als Renderziel verwendet werden soll. Die Ressource kann dann an den *pnewrendertarget* -Parameter der Methode "Setup [**target**](/windows/desktop/api) " übergeben werden. Wenn D3DUSAGE \_ renderTarget angegeben ist, muss die Anwendung überprüfen, ob das Gerät diesen Vorgang durch Aufrufen von [**CheckDeviceFormat**](/windows/desktop/api)unterstützt. D3DUSAGE \_ Dynamic gibt an, dass die Oberfläche dynamisch behandelt werden soll. Weitere Informationen zur Verwendung dynamischer Texturen finden Sie unter [Verwenden dynamischer Texturen](performance-optimizations.md).
+0 oder D3DUSAGE \_ RENDERTARGET oder D3DUSAGE \_ DYNAMIC. Das Festlegen dieses Flags auf D3DUSAGE RENDERTARGET gibt an, dass die Oberfläche \_ als Renderziel verwendet werden soll. Die Ressource kann dann an den *pNewRenderTarget-Parameter* der [**SetRenderTarget-Methode übergeben**](/windows/desktop/api) werden. Wenn D3DUSAGE RENDERTARGET angegeben ist, sollte die Anwendung überprüfen, ob das Gerät diesen Vorgang unterstützt, indem \_ [**CheckDeviceFormat aufruft.**](/windows/desktop/api) D3DUSAGE \_ DYNAMIC gibt an, dass die Oberfläche dynamisch behandelt werden soll. Weitere Informationen zur Verwendung dynamischer Texturen finden Sie unter [Verwenden von dynamischen Texturen.](performance-optimizations.md)
 
 </dd> <dt>
 
-*Format* \[ in\]
+*Formatieren* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DFORMAT](d3dformat.md)**
 
-Member des [D3DFORMAT](d3dformat.md) -Enumerationstyps, der das angeforderte Pixel Format für die cubetextur beschreibt. Die zurückgegebene cubetextur kann ein anderes Format aufweisen als das, das durch das *Format* angegeben wird. Anwendungen sollten das Format der zurückgegebenen cubetextur überprüfen. Wenn [D3DFMT \_ Unknown](other-d3dx-constants.md)ist, wird das Format aus der Datei entnommen. Wenn D3DFMT \_ from \_ File ist, wird das Format genau wie in der Datei erstellt, und der-Rückruf schlägt fehl, wenn dies die Gerätefunktionen verletzt.
+Member des [aufzählten D3DFORMAT-Typs,](d3dformat.md) der das angeforderte Pixelformat für die Cubetextur beschreibt. Die zurückgegebene Cubetextur hat möglicherweise ein anderes Format als das von *Format angegebene* Format. Anwendungen sollten das Format der zurückgegebenen Cubetextur überprüfen. Wenn [D3DFMT \_ UNKNOWN](other-d3dx-constants.md)ist, wird das Format aus der Datei übernommen. Wenn D3DFMT FROM FILE, wird das Format genau wie in der Datei verwendet, und der Aufruf ist nicht möglich, wenn dies die \_ \_ Gerätefunktionen verletzt.
 
 </dd> <dt>
 
-*Pool* \[ in\]
+*Pool* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DPOOL**](./d3dpool.md)**
 
-Member des [**D3DPOOL**](./d3dpool.md) -Enumerationstyps, der die Speicher Klasse beschreibt, in der die Cubestruktur platziert werden soll.
+Member des [**aufzählten D3DPOOL-Typs,**](./d3dpool.md) der die Speicherklasse beschreibt, in der die Cubetextur platziert werden soll.
 
 </dd> <dt>
 
-*Filter* \[ in\]
+*Filter* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus einem oder mehreren [D3DX- \_ Filtern](d3dx-filter.md), die steuert, wie das Bild gefiltert wird. Die Angabe \_ von D3DX default für diesen Parameter entspricht der Angabe von D3DX \_ Filter \_ Dreieck \| D3DX \_ Filter \_ Dither.
+Eine Kombination aus mindestens einem [D3DX-FILTER, \_ ](d3dx-filter.md)der steuert, wie das Bild gefiltert wird. Die Angabe von D3DX DEFAULT für diesen Parameter entspricht der Angabe von \_ D3DX \_ FILTER \_ TRIANGLE \| D3DX \_ FILTER \_ DITHER.
 
 </dd> <dt>
 
-*MipFilter* \[ in\]
+*MipFilter* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus einem oder mehreren [D3DX- \_ Filtern](d3dx-filter.md) , die Steuern, wie das Bild gefiltert wird. Die Angabe \_ von D3DX default für diesen Parameter entspricht der Angabe von D3DX \_ Filter \_ Box.
+Eine Kombination aus mindestens einem [D3DX-FILTER, \_ ](d3dx-filter.md) der steuert, wie das Bild gefiltert wird. Die Angabe von D3DX DEFAULT für diesen Parameter entspricht der Angabe von \_ D3DX \_ FILTER \_ BOX.
 
 </dd> <dt>
 
-*Colorkey* \[ in\]
+*ColorKey* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DCOLOR**](d3dcolor.md)**
 
-[**D3DCOLOR**](d3dcolor.md) -Wert, der durch transparente schwarze ersetzt werden soll, oder 0, um den Colorkey zu deaktivieren. Dabei handelt es sich immer um eine 32-Bit-ARGB-Farbe, die unabhängig vom Quell Bildformat ist. Alpha ist signifikant und sollte normalerweise für nicht transparente Farbtasten auf FF festgelegt werden. Daher wäre der Wert für den Wert "0xFF000000" gleich.
+[**D3DCOLOR-Wert,**](d3dcolor.md) der durch transparentes Schwarz ersetzt werden soll, oder 0, um den Colorkey zu deaktivieren. Dies ist immer eine 32-Bit-ARGB-Farbe, unabhängig vom Quellbildformat. Alpha ist wichtig und sollte für nicht transparente Farbtasten in der Regel auf FF festgelegt werden. Für nicht transparentes Schwarz wäre der Wert also gleich 0xFF000000.
 
 </dd> <dt>
 
-*psrcinfo* \[ in, out\]
+*pSrcInfo* \[ in, out\]
 </dt> <dd>
 
-Type: **[ **D3DXIMAGE \_ Info**](d3dximage-info.md)\***
+Typ: **[ **D3DXIMAGE \_ INFO**](d3dximage-info.md)\***
 
-Ein Zeiger auf eine [**D3DXIMAGE \_ Info**](d3dximage-info.md) -Struktur, die mit einer Beschreibung der Daten in der Quell Bilddatei gefüllt werden soll, oder **null**.
+Zeiger auf eine [**D3DXIMAGE \_ INFO-Struktur,**](d3dximage-info.md) die mit einer Beschreibung der Daten in der Quellbilddatei gefüllt werden soll, oder **NULL.**
 
 </dd> <dt>
 
-*pPalette* \[ vorgenommen\]
+*pPalette* \[ out\]
 </dt> <dd>
 
-Typ: **[ **PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry)\***
+Typ: **[ **PALETTEENTRY**](/windows/win32/api/wingdi/ns-wingdi-paletteentry)\***
 
-Zeiger auf eine [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) -Struktur, die eine 256-farbige Palette darstellt, die ausgefüllt werden soll, oder **null**.
+Zeiger auf eine [**PALETTEENTRY-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) die eine 256-Farbpalette darstellt, die auffüllt werden soll, oder **NULL.**
 
 </dd> <dt>
 
-*ppcubetexture* \[ vorgenommen\]
+*ppCubeTexture* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DCUBETEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dcubetexture9)\***
 
-Adresse eines Zeigers auf eine [**IDirect3DCubeTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dcubetexture9) -Schnittstelle, die das erstellte Cube-Textur Objekt darstellt.
+Adresse eines Zeigers auf eine [**IDirect3DCubeTexture9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dcubetexture9) die das erstellte Cubetexturobjekt darstellt.
 
 </dd> </dl>
 
@@ -183,17 +183,17 @@ Adresse eines Zeigers auf eine [**IDirect3DCubeTexture9**](/windows/win32/api/d3
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcallable, D3DERR \_ NotAvailable, D3DERR \_ oudefvideomemory, D3DXERR \_ InvalidData, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, D3DERR \_ NOTAVAILABLE, D3DERR \_ OUTOFVIDEOMEMORY, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt die Funktions Version. Wenn Unicode definiert ist, wird der Funktions aufrufin **D3DXCreateCubeTextureFromResourceExW** aufgelöst. Andernfalls wird der Funktions Aufruhe in **D3DXCreateCubeTextureFromResourceExA** aufgelöst, da ANSI-Zeichen folgen verwendet werden.
+Die Compilereinstellung bestimmt die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in **D3DXCreateCubeTextureFromResourceExW auflösen.** Andernfalls wird der Funktionsaufruf in **D3DXCreateCubeTextureFromResourceExAauflöset,** da ANSI-Zeichenfolgen verwendet werden.
 
-Diese Funktion unterstützt die folgenden Dateiformate: BMP,. DDS,. DIB,. HDR,. jpg,. PFM,. png,. ppm und. TGA. Siehe [**D3DXIMAGE \_ FileFormat**](./d3dximage-fileformat.md).
+Diese Funktion unterstützt die folgenden Dateiformate: .bmp, .dds, .dib, .hdr, .jpg, .pfm, .png, .ppm und .tga. Siehe [**D3DXIMAGE \_ FILEFORMAT**](./d3dximage-fileformat.md).
 
-Cube-Texturen unterscheiden sich von anderen Oberflächen darin, dass es sich um Auflistungen von Um "*" mit einer cubetextur aufzurufen, müssen Sie ein einzelnes Gesicht [**mithilfe von "**](/windows/desktop/api) [**getcubemapsurface**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dcubetexture9-getcubemapsurface) " auswählen und die resultierende Oberfläche an " **strendertarget**" übergeben.
+Cubetexturen unterscheiden sich von anderen Oberflächen, da sie Auflistungen von Oberflächen sind. Zum Aufrufen [**von SetRenderTarget**](/windows/desktop/api) mit einer Cubetextur müssen Sie ein einzelnes Gesicht mit [**GetCubeMapSurface**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dcubetexture9-getcubemapsurface) auswählen und die resultierende Oberfläche **an SetRenderTarget übergeben.**
 
-**D3DXCreateCubeTextureFromResourceEx** verwendet das DDS-Dateiformat (DirectDraw Surface). Mit dem DirectX-Textur-Editor (Dxtex.exe) können Sie eine cubemap aus anderen Dateiformaten generieren und im DDS-Dateiformat speichern. Sie erhalten Dxtex.exe und erfahren mehr über das DirectX SDK. Weitere Informationen zum DirectX SDK finden Sie unter [wo ist das DirectX SDK?](../directx-sdk--august-2009-.md).
+**D3DXCreateCubeTextureFromResourceEx** verwendet das DirectDraw-Oberflächendateiformat (DDS). Mit dem DirectX-Textur-Editor (Dxtex.exe) können Sie eine Cubemap aus anderen Dateiformaten generieren und im DDS-Dateiformat speichern. Sie können sich Dxtex.exe DirectX SDK darüber informieren. Informationen zum DirectX SDK finden Sie unter [Wo ist das DirectX SDK?](../directx-sdk--august-2009-.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -201,8 +201,8 @@ Cube-Texturen unterscheiden sich von anderen Oberflächen darin, dass es sich um
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
@@ -213,7 +213,7 @@ Cube-Texturen unterscheiden sich von anderen Oberflächen darin, dass es sich um
 [**D3DXCreateCubeTextureFromResource**](d3dxcreatecubetexturefromresource.md)
 </dt> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> </dl>
 
  

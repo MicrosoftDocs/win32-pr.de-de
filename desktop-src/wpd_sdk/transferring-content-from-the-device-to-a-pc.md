@@ -1,38 +1,38 @@
 ---
-description: Übertragen von Inhalt vom Gerät an einen PC
+description: Übertragen von Inhalten vom Gerät auf einen PC
 ms.assetid: 76069097-a513-42f7-bdcc-a65714e95f0a
-title: Übertragen von Inhalt vom Gerät an einen PC
+title: Übertragen von Inhalten vom Gerät auf einen PC
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: de06861ba74b4b7883c8d96e25cebe3fbb64e21c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3a8695f8158040e75a4aae40f95386ed70af45df56a137dabc944ab6d1771e69
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217504"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119806520"
 ---
-# <a name="transferring-content-from-the-device-to-a-pc"></a>Übertragen von Inhalt vom Gerät an einen PC
+# <a name="transferring-content-from-the-device-to-a-pc"></a>Übertragen von Inhalten vom Gerät auf einen PC
 
-Ein gängiger Vorgang, der von einer WPD-Anwendung ausgeführt wird, ist die Übertragung von Inhalt von einem verbundenen Gerät auf den PC.
+Ein gängiger Vorgang, der von einer WPD-Anwendung durchgeführt wird, ist die Übertragung von Inhalten von einem verbundenen Gerät an den PC.
 
-Inhalts Übertragungen werden mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen erreicht.
+Inhaltsübertragungen werden mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen durchgeführt.
 
 
 
 | Schnittstelle                                                                | BESCHREIBUNG                                                     |
 |--------------------------------------------------------------------------|-----------------------------------------------------------------|
-| [**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)       | Bietet Zugriff auf die **iportabledeviceproperties** -Schnittstelle. |
-| [**Iportabledeviceproperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties) | Ermöglicht den Zugriff auf Eigenschaften spezifische Methoden.                   |
-| [**Iportabledeviceresources-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceresources)   | Wird verwendet, um die Eigenschafts Schlüssel für das angegebene Profil zu speichern.          |
-| IStream-Schnittstelle                                                        | Wird verwendet, um die Daten zu lesen und zu schreiben.                                |
+| [**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)       | Ermöglicht den Zugriff auf die **IPortableDeviceProperties-Schnittstelle.** |
+| [**IPortableDeviceProperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties) | Ermöglicht den Zugriff auf eigenschaftenspezifische Methoden.                   |
+| [**IPortableDeviceResources-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceresources)   | Wird verwendet, um die Eigenschaftsschlüssel für das angegebene Profil zu speichern.          |
+| IStream-Schnittstelle                                                        | Wird zum Lesen und Schreiben der Daten verwendet.                                |
 
 
 
  
 
-Die `TransferContentFromDevice` Funktion im Modul "contenttransfer. cpp" der Beispielanwendung veranschaulicht, wie eine Anwendung Kontaktinformationen von einem verbundenen Gerät an einen PC übertragen könnte.
+Die `TransferContentFromDevice` Funktion im ContentTransfer.cpp-Modul der Beispielanwendung veranschaulicht, wie eine Anwendung Kontaktinformationen von einem verbundenen Gerät auf einen PC übertragen kann.
 
-Die erste Aufgabe, die von der- `TransferContentFromDevice` Funktion ausgeführt wird, besteht darin, den Benutzer zur Eingabe eines Objekt Bezeichners für das übergeordnete Objekt auf dem Gerät aufzufordern (unter dem der Inhalt übertragen wird).
+Die erste Aufgabe der `TransferContentFromDevice` Funktion besteht darin, den Benutzer aufzufordern, einen Objektbezeichner für das übergeordnete Objekt auf dem Gerät einzugeben (unter dem der Inhalt übertragen wird).
 
 
 ```C++
@@ -64,7 +64,7 @@ if (FAILED(hr))
 
 
 
-Der nächste Schritt ist das Abrufen eines **iportabledevicecontent** -Objekts, das im Beispiel für den Zugriff auf die Inhalts spezifischen Methoden verwendet wird.
+Der nächste Schritt ist das Abrufen eines **IPortableDeviceContent-Objekts,** das im Beispiel verwendet wird, um auf die inhaltsspezifischen Methoden zuzugreifen.
 
 
 ```C++
@@ -80,7 +80,7 @@ if (SUCCEEDED(hr))
 
 
 
-Der nächste Schritt ist das Abrufen eines **iportabledeviceresources** -Objekts, das im Beispiel für den Zugriff auf die Ressourcen spezifischen Methoden verwendet wird.
+Der nächste Schritt ist das Abrufen eines **IPortableDeviceResources-Objekts,** das im Beispiel verwendet wird, um auf die ressourcenspezifischen Methoden zuzugreifen.
 
 
 ```C++
@@ -116,7 +116,7 @@ if (SUCCEEDED(hr))
 
 
 
-Der nächste Schritt ist das Abrufen des Datei namens des Objekts auf dem Gerät. Diese Zeichenfolge wird zum Erstellen des entsprechenden Datei namens auf dem PC verwendet. Wenn das Objekt keinen Dateinamen auf dem Gerät hat, wird der Bezeichner des Objekts in eine Zeichenfolge konvertiert und zum Erstellen des Ziel Dateinamens verwendet.
+Der nächste Schritt ist das Abrufen des Dateinamens des Objekts auf dem Gerät. Diese Zeichenfolge wird verwendet, um den entsprechenden Dateinamen auf dem PC zu erstellen. Wenn das Objekt keinen Dateinamen auf dem Gerät hat, wird der Bezeichner des Objekts in eine Zeichenfolge konvertiert und zum Erstellen des Zieldateinamens verwendet.
 
 
 ```C++
@@ -164,7 +164,7 @@ if (SUCCEEDED(hr))
 
 
 
-Schließlich wird das Quell-IStream-Objekt in das Ziel auf dem PC kopiert.
+Schließlich wird das IStream-Quellobjekt in das Ziel auf dem PC kopiert.
 
 
 ```C++
@@ -195,13 +195,13 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
+[**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
 </dt> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

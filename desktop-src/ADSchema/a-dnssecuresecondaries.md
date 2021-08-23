@@ -4,8 +4,8 @@ description: Das Dns-Secure-Secondaries-Attribut wird derzeit nicht verwendet.
 ms.assetid: ba5110f1-e451-4f85-897e-e4223649dc10
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des Dns-Secure-Secondaries-Attributs
-- AD-Schema des dnsSecureSecondaries-Attributs
+- DNS-Secure-Secondaries-Attribut AD-Schema
+- DNSSecureSecondaries-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Das **Dns-Secure-Secondaries-Attribut** wird derzeit nicht verwendet.
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.380               |
-| System-Id-Guid    | e0fa1e67-9b45-11d0-afdd-00c04fd930c9 |
+| System-ID-GUID    | e0fa1e67-9b45-11d0-afdd-00c04fd930c9 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -58,7 +58,7 @@ Das **Dns-Secure-Secondaries-Attribut** wird derzeit nicht verwendet.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Is-Single-Valued       | False                                    |
+| Ist einwertig       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                             |
@@ -66,7 +66,7 @@ Das **Dns-Secure-Secondaries-Attribut** wird derzeit nicht verwendet.
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 
@@ -79,7 +79,7 @@ Das **Dns-Secure-Secondaries-Attribut** wird derzeit nicht verwendet.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Is-Single-Valued       | False                                    |
+| Ist einwertig       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                             |
@@ -87,7 +87,7 @@ Das **Dns-Secure-Secondaries-Attribut** wird derzeit nicht verwendet.
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 
@@ -100,7 +100,7 @@ Das **Dns-Secure-Secondaries-Attribut** wird derzeit nicht verwendet.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Is-Single-Valued       | False                                    |
+| Ist einwertig       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                             |
@@ -108,7 +108,7 @@ Das **Dns-Secure-Secondaries-Attribut** wird derzeit nicht verwendet.
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 

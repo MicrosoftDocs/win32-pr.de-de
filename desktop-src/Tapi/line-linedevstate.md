@@ -1,19 +1,19 @@
 ---
-description: Die TAPI- \_ linienlinedevstate-Nachricht wird gesendet, wenn sich der Status eines Zeilen Geräts geändert hat. Die Anwendung kann linegetlinedevstatus aufrufen, um den neuen Status der Zeile zu ermitteln.
+description: Die TAPI LINE \_ LINEDEVSTATE-Nachricht wird gesendet, wenn sich der Zustand eines Zeilengeräts geändert hat. Die Anwendung kann lineGetLineDevStatus aufrufen, um den neuen Status der Zeile zu bestimmen.
 ms.assetid: 15f616de-db47-4577-9a47-94f9292253dd
-title: LINE_LINEDEVSTATE Meldung (TAPI. h)
+title: LINE_LINEDEVSTATE Meldung (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 079e4494b7eb2e1bfe46b5470138e4e9f44fbb0b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 261e7527354b84801437e48ffc13ba4dbad60ced0cca61be65eb96ce6417bb10
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682387"
 ---
-# <a name="line_linedevstate-message"></a>\_Linienlinedevstate-Meldung
+# <a name="line_linedevstate-message"></a>LINE \_ LINEDEVSTATE-Meldung
 
-Die TAPI **- \_ linienlinedevstate** -Nachricht wird gesendet, wenn sich der Status eines Zeilen Geräts geändert hat. Die Anwendung kann [**linegetlinedevstatus**](/windows/desktop/api/Tapi/nf-tapi-linegetlinedevstatus) aufrufen, um den neuen Status der Zeile zu ermitteln.
+Die TAPI **LINE \_ LINEDEVSTATE-Nachricht** wird gesendet, wenn sich der Zustand eines Zeilengeräts geändert hat. Die Anwendung kann [**lineGetLineDevStatus**](/windows/desktop/api/Tapi/nf-tapi-linegetlinedevstatus) aufrufen, um den neuen Status der Zeile zu bestimmen.
 
 
 ```C++
@@ -26,42 +26,42 @@ Die TAPI **- \_ linienlinedevstate** -Nachricht wird gesendet, wenn sich der Sta
 
 <dl> <dt>
 
-*hdevice* 
+*hDevice* 
 </dt> <dd>
 
-Ein Handle für das liniengerät. Dieser Parameter ist **null** , wenn *dwParam1* linedevstate \_ REIT ist.
+Ein Handle für das Zeilengerät. Dieser Parameter ist **NULL,** wenn *dwParam1* LINEDEVSTATE \_ REINIT ist.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
-Die beim Öffnen der Zeile angegebene Rückruf Instanz. Wenn der *dwParam1* -Parameter linedevstate \_ REIT ist, ist der *dwcallbackinstance* -Parameter ungültig und auf 0 (null) festgelegt.
+Die Rückrufinstanz, die beim Öffnen der Zeile angegeben wird. Wenn der *dwParam1-Parameter* LINEDEVSTATE \_ REINIT ist, ist der *dwCallbackInstance-Parameter* ungültig und auf 0 (null) festgelegt.
 
 </dd> <dt>
 
 *dwParam1* 
 </dt> <dd>
 
-Das Element des Zeilen Gerätestatus, das geändert wurde. Der-Parameter kann eine oder mehrere der [**linedevstate- \_ Konstanten**](linedevstate--constants.md)sein.
+Das Gerätestatuselement der Zeile, das geändert wurde. Der Parameter kann eine oder mehrere der [**LINEDEVSTATE-Konstanten \_ sein.**](linedevstate--constants.md)
 
 </dd> <dt>
 
 *dwParam2* 
 </dt> <dd>
 
-Die Interpretation dieses Parameters hängt vom Wert von *dwParam1* ab. Wenn *dwParam1* ein linedevstate- \_ Klingeln ist, enthält *dwParam2* den Ring Modus, mit dem der Schalter die Zeile an den Ring anweist. Gültige ringmodi sind Zahlen im Bereich von 1 bis **dwnumringmodi**, wobei **dwnumringmodes** eine Linien Geräte Funktion ist.
+Die Interpretation dieses Parameters hängt vom Wert von *dwParam1* ab. Wenn *dwParam1* LINEDEVSTATE \_ RINGING ist, enthält *dwParam2* den Ringmodus, mit dem der Schalter die Zeile anweist, zu ringen. Gültige Ringmodi sind Zahlen im Bereich 1 bis **dwNumRingModes,** wobei **dwNumRingModes** eine Gerätefunktion für Linien ist.
 
-Wenn *dwParam1* "linedevstate" ist \_ und die Meldung von TAPI als Ergebnis der Übersetzung einer neuen API-Nachricht in eine REIT-Nachricht ausgegeben wurde, enthält *dwParam2* den *dwmsg* -Parameter der ursprünglichen Nachricht (z. b. [**line \_ Create**](line-create.md) oder line \_ linedevstate). Wenn *dwParam2* NULL ist, weist dies darauf hin, dass die REIT-Nachricht eine "Real"-REIT-Nachricht ist, die erfordert, dass die Anwendung [**LineShutdown**](/windows/desktop/api/Tapi/nf-tapi-lineshutdown) zu dem frühestmöglichen Zweck aufruft.
+Wenn *dwParam1* LINEDEVSTATE REINIT ist \_ und die Nachricht von TAPI als Ergebnis der Übersetzung einer neuen API-Nachricht in eine REINIT-Nachricht ausgegeben wurde, enthält *dwParam2* den *dwMsg-Parameter* der ursprünglichen Nachricht (z. B. [**LINE \_ CREATE**](line-create.md) oder LINE \_ LINEDEVSTATE). Wenn *dwParam2* 0 (null) ist, bedeutet dies, dass die REINIT-Nachricht eine "echte" REINIT-Nachricht ist, die erfordert, dass die Anwendung [**"lineShutdown"**](/windows/desktop/api/Tapi/nf-tapi-lineshutdown) möglichst schnell aufruft.
 
 </dd> <dt>
 
 *dwParam3* 
 </dt> <dd>
 
-Die Interpretation dieses Parameters hängt vom Wert von *dwParam1* ab. Wenn *dwParam1* ein linedevstate- \_ Klingeln ist, enthält *dwParam3* die Ring Anzahl für dieses Ring Ereignis. Die Ring Anzahl beginnt bei 0 (null).
+Die Interpretation dieses Parameters hängt vom Wert von *dwParam1* ab. Wenn *dwParam1* LINEDEVSTATE \_ RINGING ist, enthält *dwParam3* die Ringanzahl für dieses Ringereignis. Die Ringanzahl beginnt bei 0 (null).
 
-Wenn *dwParam1* linedevstate \_ REIT ist, und die Nachricht wurde von TAPI als Ergebnis der Übersetzung einer neuen API-Nachricht in eine REIT-Nachricht ausgegeben. anschließend enthält *dwParam3* den *dwParam1* -Parameter der ursprünglichen Nachricht (z. b. linedevstate \_ translatechange oder einen anderen Wert von linedevstate \_ , wenn *dwParam2* line \_ linedevstate ist, oder der neue Geräte Bezeichner, wenn *dwParam2* [**line \_ Create**](line-create.md)ist).
+Wenn *dwParam1* LINEDEVSTATE REINIT ist \_ und die Nachricht durch TAPI als Ergebnis der Übersetzung einer neuen API-Nachricht in eine REINIT-Nachricht ausgegeben wurde, enthält dwParam3 den *dwParam1-Parameter* der ursprünglichen Nachricht (z. B. LINEDEVSTATE  \_ TRANSLATECHANGE oder einen anderen LINEDEVSTATE-Wert, \_ wenn *dwParam2* LINE \_ LINEDEVSTATE ist, oder den neuen Gerätebezeichner, wenn *dwParam2* [**LINE \_ CREATE**](line-create.md)ist).
 
 </dd> </dl>
 
@@ -69,9 +69,9 @@ Wenn *dwParam1* linedevstate \_ REIT ist, und die Nachricht wurde von TAPI als E
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Senden der **\_ linienlinedevstate** -Nachricht kann mit [**linesetstatusmessages**](/windows/desktop/api/Tapi/nf-tapi-linesetstatusmessages)gesteuert werden. Eine Anwendung kann Status Element Änderungen anzeigen, über die Sie benachrichtigt werden möchten. Standardmäßig ist die gesamte Status Berichterstattung deaktiviert, mit Ausnahme von linedevstate \_ , die nicht deaktiviert werden kann. Diese Nachricht wird an alle Anwendungen gesendet, die über ein Handle für die Zeile verfügen, einschließlich derjenigen, die [**lineOpen**](/windows/desktop/api/Tapi/nf-tapi-lineopen) aufgerufen haben, wobei der *dwprivileges* -Parameter auf linecallprivilege \_ None, linecallprivilege \_ Owner, linecallprivilege \_ Monitor oder zulässige Kombinationen von diesen festgelegt ist.
+Das Senden der **\_ LINEDEVSTATE-Nachricht** kann mit [**lineSetStatusMessages**](/windows/desktop/api/Tapi/nf-tapi-linesetstatusmessages)gesteuert werden. Eine Anwendung kann Statuselementänderungen angeben, über die sie benachrichtigt werden soll. Standardmäßig ist alle Statusberichte deaktiviert, mit Ausnahme von LINEDEVSTATE \_ REINIT, die nicht deaktiviert werden können. Diese Meldung wird an alle Anwendungen gesendet, die über ein Handle für die Zeile verfügen, einschließlich der Anwendungen, die [**lineOpen**](/windows/desktop/api/Tapi/nf-tapi-lineopen) aufgerufen haben, wobei der *dwPrivileges-Parameter* auf LINECALLPRIVILEGE \_ NONE, LINECALLPRIVILEGE \_ OWNER, LINECALLPRIVILEGE MONITOR oder zulässige Kombinationen dieser Parameter festgelegt \_ ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Das Senden der **\_ linienlinedevstate** -Nachricht kann mit [**linesetstatusmes
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
@@ -88,40 +88,40 @@ Das Senden der **\_ linienlinedevstate** -Nachricht kann mit [**linesetstatusmes
 
 <dl> <dt>
 
-[**Zeilen \_ Schließen**](line-close.md)
+[**LINE \_ CLOSE**](line-close.md)
 </dt> <dt>
 
-[**Zeilen \_ Erstellung**](line-create.md)
+[**LINE \_ CREATE**](line-create.md)
 </dt> <dt>
 
-[**Linedevcaps**](/windows/desktop/api/Tapi/ns-tapi-linedevcaps)
+[**LINEDEVCAPS**](/windows/desktop/api/Tapi/ns-tapi-linedevcaps)
 </dt> <dt>
 
-[**linegetdevcaps**](/windows/desktop/api/Tapi/nf-tapi-linegetdevcaps)
+[**lineGetDevCaps**](/windows/desktop/api/Tapi/nf-tapi-linegetdevcaps)
 </dt> <dt>
 
-[**linegetdevconfig**](/windows/desktop/api/Tapi/nf-tapi-linegetdevconfig)
+[**lineGetDevConfig**](/windows/desktop/api/Tapi/nf-tapi-linegetdevconfig)
 </dt> <dt>
 
-[**linegettranslatecaps**](/windows/desktop/api/Tapi/nf-tapi-linegettranslatecaps)
+[**lineGetTranslateCaps**](/windows/desktop/api/Tapi/nf-tapi-linegettranslatecaps)
 </dt> <dt>
 
-[**lineinitialize**](/windows/desktop/api/Tapi/nf-tapi-lineinitialize)
+[**lineInitialize**](/windows/desktop/api/Tapi/nf-tapi-lineinitialize)
 </dt> <dt>
 
-[**lineOpen**](/windows/desktop/api/Tapi/nf-tapi-lineopen)
+[**lineÖffnen**](/windows/desktop/api/Tapi/nf-tapi-lineopen)
 </dt> <dt>
 
-[**linesetstatus-Meldungen**](/windows/desktop/api/Tapi/nf-tapi-linesetstatusmessages)
+[**lineSetStatusMessages**](/windows/desktop/api/Tapi/nf-tapi-linesetstatusmessages)
 </dt> <dt>
 
-[**LineShutdown**](/windows/desktop/api/Tapi/nf-tapi-lineshutdown)
+[**lineShutdown**](/windows/desktop/api/Tapi/nf-tapi-lineshutdown)
 </dt> <dt>
 
-[**Linetranslatecaps**](/windows/desktop/api/Tapi/ns-tapi-linetranslatecaps)
+[**LINETRANSLATECAPS**](/windows/desktop/api/Tapi/ns-tapi-linetranslatecaps)
 </dt> <dt>
 
-[**lineuncompletecall**](/windows/desktop/api/Tapi/nf-tapi-lineuncompletecall)
+[**lineUncompleteCall**](/windows/desktop/api/Tapi/nf-tapi-lineuncompletecall)
 </dt> </dl>
 
  

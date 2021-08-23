@@ -1,6 +1,6 @@
 ---
 title: Shadermodell 3 (HLSL-Referenz)
-description: Vertex-Shader und Pixel-Shader werden erheblich von früheren Shaderversionen vereinfacht.
+description: Vertex-Shader und Pixel-Shader werden erheblich vereinfacht als frühere Shaderversionen.
 ms.assetid: 01ac85cb-b309-4169-acc2-320a929b65cb
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 2d87c791694e91de135052b4172e3bd5f55577d7
-ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
+ms.openlocfilehash: 899284777f86c3a1e5d77da9a2f21ed9aa4b5368b540082cc92bd56b7fb780da
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111827099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119788640"
 ---
 # <a name="shader-model-3-hlsl-reference"></a>Shadermodell 3 (HLSL-Referenz)
 
-Vertex-Shader und Pixel-Shader werden erheblich von früheren Shaderversionen vereinfacht. Wenn Sie Shader in Hardware implementieren, verwenden Sie möglicherweise nicht im Vergleich zu 3 0 oder PS 3 0 mit anderen \_ \_ \_ Shaderversionen, und Sie verwenden keinen der Shadertypen mit der festen \_ Funktionspipeline. Diese Änderungen ermöglichen es, Treiber und die Laufzeit zu vereinfachen. Die einzige Ausnahme ist, dass Nur-Software-Shader im Vergleich zu \_ 3 \_ 0-Shadern mit jeder Pixel-Shaderversion verwendet werden können. Wenn Sie einen softwarebasierten Shader oder einen Shader 3 0 mit einer früheren Pixel-Shaderversion verwenden, kann der Vertex-Shader außerdem nur Ausgabesemantik verwenden, die mit flexiblen \_ \_ Vertexformatcodes (FVF) kompatibel ist.
+Vertex-Shader und Pixel-Shader werden erheblich vereinfacht als frühere Shaderversionen. Wenn Sie Shader in Hardware implementieren, dürfen Sie 3 0 oder PS 3 0 nicht mit anderen Shaderversionen verwenden, und Sie dürfen keinen der \_ shader-Typen mit der festen Funktionspipeline \_ \_ \_ verwenden. Diese Änderungen ermöglichen es, Treiber und die Laufzeit zu vereinfachen. Die einzige Ausnahme ist, dass Nur-Software-Shader im Vergleich zu \_ 3 \_ 0-Shadern mit jeder Pixel-Shaderversion verwendet werden können. Wenn Sie außerdem einen softwarebasierten Shader im Vergleich zu 3 0 mit einer früheren Pixel-Shaderversion verwenden, kann der Vertex-Shader nur Ausgabesemantik verwenden, die mit flexiblen \_ \_ Vertexformatcodes (FVF) kompatibel ist.
 
 Die für Vertex-Shader-Ausgaben verwendete Semantik muss für Pixel-Shadereingaben verwendet werden. Die Semantik wird verwendet, um die Vertex-Shader-Ausgaben den Pixel-Shadereingaben zu zuordnen, ähnlich wie die Vertexdeklaration den Vertex-Shader-Eingaberegistern und vorherigen Shadermodellen zugeordnet wird. Weitere Informationen finden Sie unter Vergleichssemantik für Shader 3.0 und ps 3.0.
 
@@ -44,7 +44,7 @@ Alle Register ( [Eingaberegister](dx9-graphics-reference-asm-vs-registers-input.
 
 Sie müssen Eingabe- und Ausgaberegister deklarieren, bevor Sie sie indizieren. Sie dürfen jedoch kein Ausgaberegister indizieren, das mit einer Semantik der Position oder Punktgröße deklariert wurde. Wenn die Indizierung verwendet wird, müssen die Position und die Psize-Semantik in den Registern o0 bzw. o1 deklariert werden.
 
-Sie dürfen nur einen kontinuierlichen Bereich von Registern indizieren. Das heißt, Sie können nicht über Register hinweg indizieren, die nicht deklariert wurden. Diese Einschränkung kann zwar unwesentlich sein, ermöglicht aber die Hardwareoptimierung. Der Versuch, nicht zusammenhängende Register zu indizieren, führt zu nicht definierten Ergebnissen. Die Shaderüberprüfung erzwingt diese Einschränkung nicht.
+Sie dürfen nur einen kontinuierlichen Bereich von Registern indizieren. Das heißt, Sie können nicht über Register hinweg indizieren, die nicht deklariert wurden. Diese Einschränkung kann zwar unwesentlich sein, lässt aber die Hardwareoptimierung zu. Der Versuch, nicht zusammenhängende Register zu indizieren, führt zu nicht definierten Ergebnissen. Die Shadervalidierung erzwingt diese Einschränkung nicht.
 
 ### <a name="simplify-output-registers"></a>Vereinfachen von Ausgaberegistern
 
@@ -52,7 +52,7 @@ Alle verschiedenen Arten von Ausgaberegistern wurden in zwölf Ausgaberegister r
 
 Die Register können wie folgt aufgeschlüsselt werden:
 
--   Mindestens ein Register muss als Positionsregister mit vier Komponenten deklariert werden. Dies ist das einzige Vertex-Shaderregister, das erforderlich ist.
+-   Mindestens ein Register muss als Vier-Komponenten-Positionsregister deklariert werden. Dies ist das einzige erforderliche Vertex-Shaderregister.
 -   Die ersten zehn Register, die von einem Shader verwendet werden, können maximal vier Komponenten (xyzw) verwenden.
 -   Das letzte (oder zwölfte) Register darf nur einen Skalar (z. B. Punktgröße) enthalten.
 
@@ -76,7 +76,7 @@ Die Shader-Konstantenregister können mithilfe von festgelegt werden:
 
 Es gibt einige Einschränkungen bei der semantischen Verwendung im Vergleich \_ zu 3 \_ 0 und ps \_ 3 \_ 0. Im Allgemeinen müssen Sie vorsichtig sein, wenn Sie eine Semantik für eine Shadereingabe verwenden, die einer Semantik entspricht, die für eine Shaderausgabe verwendet wird.
 
-Beispielsweise packt dieser Pixel-Shader mehrere Namen in ein Register:
+Beispielsweise packt dieser Pixel-Shader mehrere Namen in einem Register:
 
 
 ```
@@ -106,7 +106,7 @@ dcl_texcoord1 o6.yzw
 
 Diese beiden Shader stehen in Konflikt mit der Verwendung der [**Semantik D3DDECLUSAGE \_ TEXCOORD0**](/windows/desktop/direct3d9/d3ddeclusage) und **D3DDECLUSAGE \_ TEXCOORD1.**
 
-Schreiben Sie den Vertex-Shader wie diesen um, um die semantische Kollision zu vermeiden:
+Schreiben Sie den Vertex-Shader wie diesen um, um semantische Kollisionen zu vermeiden:
 
 
 ```
@@ -134,7 +134,7 @@ dcl_texcoord3 o9 ...
 
 
 
-Andererseits kann dieser Vertex-Shader nicht mit dem Pixel-Shader gekoppelt werden, da die Ausgabemaske für einen Parameter mit einer bestimmten Semantik nicht die vom Pixel-Shader angeforderten Daten enthält:
+Andererseits kann dieser Vertex-Shader nicht mit dem Pixel-Shader gekoppelt werden, da die Ausgabemaske für einen Parameter mit einer bestimmten Semantik nicht die Vom Pixel-Shader angeforderten Daten enthält:
 
 
 ```
@@ -169,9 +169,9 @@ dcl_texcoord3 o9
 
 Wenn D3DRS SHADEMODE während der Clipping- und Dreiecksrasterung für flache Schattierung festgelegt ist, werden Attribute mit \_ D3DDECLUSAGE COLOR als flach schattiert \_ interpoliert. Wenn Komponenten eines Registers mit einer Farbsemantik deklariert werden, andere Komponenten desselben Registers jedoch eine andere Semantik erhalten, ist die flache Schattierungsinterpolation (linear im Vergleich zu flach) für die Komponenten in diesem Register ohne Farbsemantik nicht definiert.
 
-Wenn ein Rendern von 3 0 und ps 3 0 gewünscht ist, müssen \_ \_ \_ \_ Shader 3 0 und 3 0 -Shader Eine-0-Shader implementieren. Außerhalb der Shader werden keine Berechnungsberechnungen durchgeführt. Es gibt kein Register in vs. 3 0, und es wurden zusätzliche Semantiken D3DDECLUSAGE CT (für den pro Scheitelpunkt berechneten Blendfaktor) und \_ \_ \_ D3DDECLUSAGE DEPTH (für die Übergabe eines Tiefenwerts an den Pixel-Shader zum Berechnen des Blendfaktors \_ des Blendings) hinzugefügt.
+Wenn rendering-Rendering gewünscht ist, müssen \_ 3 \_ 0- und PS \_ 3 \_ 0-Shader 2 implementieren. Außerhalb der Shader werden keine Berechnungsberechnungen durchgeführt. Es gibt kein Register in vs. 3 0, und es wurden zusätzliche Semantik D3DDECLUSAGE CT (für den pro Scheitelpunkt berechneten Blendfaktor) und \_ \_ \_ D3DDECLUSAGE DEPTH (für die Übergabe eines Tiefenwerts an den Pixel-Shader zum Berechnen des Blendfaktors \_ des Blendings) hinzugefügt.
 
-Der Texturphasenzustand D3DTSS TEXCOORDINDEX wird ignoriert, wenn \_ der Pixel-Shader 3.0 verwendet wird.
+Der Texturphasenzustand D3DTSS \_ TEXCOORDINDEX wird ignoriert, wenn der Pixel-Shader 3.0 verwendet wird.
 
 Die folgenden Werte wurden hinzugefügt, um diese Änderungen zu reagieren:
 
@@ -196,7 +196,7 @@ D3DRS_WRAP15
 
 ## <a name="floating-point-and-integer-conversions"></a>Gleitkomma- und Ganzzahlkonvertierungen
 
-Gleitkomma-Berechnungen werden mit unterschiedlicher Genauigkeit und unterschiedlichen Bereichen (16-Bit, 24-Bit und 32-Bit) in unterschiedlichen Teilen der Pipeline erfolgt. Ein Wert, der größer ist als der dynamische Bereich der Pipeline, die in diese Pipeline eintritt (z. B. wird eine 32-Bit-Gleitkommatexturzuordnung in eine 24-Bit-Float-Pipeline in PS \_ 2 0 entnommen), erzeugt ein nicht definiertes \_ Ergebnis. Für ein vorhersagbares Verhalten sollten Sie einen solchen Wert an das Maximum des dynamischen Bereichs klammern.
+Gleitkomma-Berechnungen werden mit unterschiedlicher Genauigkeit und unterschiedlichen Bereichen (16-Bit, 24-Bit und 32-Bit) in unterschiedlichen Teilen der Pipeline erfolgt. Ein Wert, der größer als der dynamische Bereich der Pipeline ist, die in diese Pipeline eintritt (z. B. wird eine 32-Bit-Gleitkommatexturzuordnung in eine 24-Bit-Float-Pipeline in PS \_ 2 0 entnommen), erzeugt ein nicht definiertes \_ Ergebnis. Für ein vorhersagbares Verhalten sollten Sie einen solchen Wert an das Maximum des dynamischen Bereichs klammern.
 
 Die Konvertierung von einem Gleitkommawert in eine ganze Zahl erfolgt an mehreren Stellen, z. B.:
 
@@ -210,7 +210,7 @@ Sowohl ps \_ 3 \_ 0 als auch ps \_ 2 \_ x bieten Unterstützung für zwei Genaui
 
 
 
-| PS \_ 3 \_ 0 | ps \_ 2 \_ 0 | Precision         | Wert                |
+| ps \_ 3 \_ 0 | ps \_ 2 \_ 0 | Genauigkeit         | Wert                |
 |----------|----------|-------------------|----------------------|
 | x        |          | Vollständig              | fp32 oder höher       |
 | x        |          | Partielle Genauigkeit | fp16=s10e5           |
@@ -223,12 +223,12 @@ Sowohl ps \_ 3 \_ 0 als auch ps \_ 2 \_ x bieten Unterstützung für zwei Genaui
 
 ps \_ 3 \_ 0 unterstützt eine größere Genauigkeit als ps \_ 2 \_ 0. Standardmäßig werden alle Vorgänge auf der Ebene der vollständigen Genauigkeit ausgeführt.
 
-Teilgenauigkeit (siehe [Pixelshader-Registermodifizierer)](dx9-graphics-reference-asm-ps-registers-modifiers.md)wird angefordert, indem der \_ pp-Modifizierer dem Shadercode hinzugefügt wird (sofern die zugrunde liegende Implementierung dies unterstützt). Implementierungen können den Modifizierer immer ignorieren und die betroffenen Vorgänge mit voller Genauigkeit ausführen.
+Teilgenauigkeit (siehe [Pixelshader-Registermodifizierer)](dx9-graphics-reference-asm-ps-registers-modifiers.md)wird angefordert, indem der \_ pp-Modifizierer dem Shadercode hinzugefügt wird (vorausgesetzt, dass die zugrunde liegende Implementierung dies unterstützt). Implementierungen können den Modifizierer immer ignorieren und die betroffenen Vorgänge mit voller Genauigkeit ausführen.
 
 Der \_ pp-Modifizierer kann in zwei Kontexten auftreten:
 
 -   In einer Texturkoordinatendeklaration, um Texturkoordinaten mit teilweiser Genauigkeit an den Pixelshader zu übergeben. Dies kann verwendet werden, wenn Texturkoordinaten Farbdaten an den Pixelshader weiterleiten, was in einigen Implementierungen mit teilweiser Genauigkeit schneller als mit vollständiger Genauigkeit sein kann.
--   Für jede Anweisung, die Verwendung von teilgenauer Genauigkeit anzufordern, einschließlich Anweisungen zum Laden von Texturen. Dies gibt an, dass die Implementierung die Anweisung mit teilweiser Genauigkeit ausführen und ein Ergebnis mit teilweiser Genauigkeit speichern darf. Wenn kein expliziter Modifizierer vorhanden ist, muss die Anweisung mit voller Genauigkeit ausgeführt werden (unabhängig von der Genauigkeit der Eingabeopernden).
+-   Für jede Anweisung zum Anfordern der Verwendung von teilgenauer Genauigkeit, einschließlich Anweisungen zum Laden von Texturen. Dies gibt an, dass die Implementierung die Anweisung mit teilweiser Genauigkeit ausführen und ein Ergebnis mit teilweiser Genauigkeit speichern darf. Wenn kein expliziter Modifizierer vorhanden ist, muss die Anweisung mit voller Genauigkeit ausgeführt werden (unabhängig von der Genauigkeit der Eingabeopernden).
 
 Eine Anwendung entscheidet sich möglicherweise absichtlich dafür, die Genauigkeit auf die Leistung abzuhandeln. Es gibt verschiedene Arten von Shadereingabedaten, die natürliche Kandidaten für die Verarbeitung teilweiser Genauigkeit sind:
 
@@ -240,7 +240,7 @@ In all diesen Fällen kann der Entwickler eine Teilgenauigkeit angeben, um die D
 
 ## <a name="software-vertex-and-pixel-shaders"></a>Softwarevertex- und Pixel-Shader
 
-Softwareimplementierungen (Laufzeit und Referenz für Vertex-Shader und Referenz für Pixel-Shader) von Shadern der Version 2 \_ 0 und höher haben eine gewisse Überprüfung gelockert. Dies ist für Debug- und Prototypzwecke nützlich. Die Anwendung gibt der Runtime/dem Assembler an, dass sie einen Teil der Validierung mithilfe des Flags sw im Assembler gelockert haben muss \_ (z. B. im Vergleich zu \_ 2 \_ SW). Ein Software-Shader funktioniert nicht mit Hardware.
+Softwareimplementierungen (Laufzeit und Referenz für Vertex-Shader und Referenz für Pixel-Shader) von Shadern der Version 2 \_ 0 und höher haben eine gewisse Überprüfung gelockert. Dies ist für Debug- und Prototypzwecke nützlich. Die Anwendung gibt der Runtime/dem Assembler an, dass ein Teil der Überprüfung mithilfe des Flags sw im Assembler gelockert werden muss \_ (z. B. im Vergleich zu \_ 2 \_ SW). Ein Software-Shader funktioniert nicht mit Hardware.
 
 Vs \_ 2 \_ sw ist ein Ausgleich für die maximalen Obergrenzen von vs \_ 2 \_ x; ebenso ist ps \_ 2 sw ein \_ Abstrich auf die maximalen Obergrenzen von ps \_ 2 \_ x. Insbesondere werden die folgenden Überprüfungen gelockert:
 

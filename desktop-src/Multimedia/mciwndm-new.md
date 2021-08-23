@@ -61,7 +61,7 @@ Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

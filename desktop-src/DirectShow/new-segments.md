@@ -4,22 +4,22 @@ ms.assetid: 6c470b38-481f-4e52-93b8-eb6b343dcefc
 title: Neue Segmente
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5438cb3b457ed8ea0f77bd2ac1dcc5d6d2c72698
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 28701a29a3b4edd61e9eb408aeab744297eac56408c49dc77dd4328a5afd24b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119790930"
 ---
 # <a name="new-segments"></a>Neue Segmente
 
-Bei einem *Segment* handelt es sich um eine Gruppe von Medien Beispielen, die eine gemeinsame Startzeit, Endzeit und Wiedergabe Rate gemeinsam verwenden. Die [**IPin:: newsegment**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment) -Methode signalisiert den Anfang eines neuen Segments. Er bietet eine Möglichkeit für einen Quell Filter, Downstream-Filter darüber zu informieren, dass sich die Zeit-und rateninformationen geändert haben. Wenn der Quell Filter z. b. einen neuen Punkt im Stream sucht, wird **newsegment** mit der neuen Startzeit aufgerufen.
+Ein *Segment* ist eine Gruppe von Medienbeispielen, die eine gemeinsame Startzeit, Beendigungszeit und Wiedergaberate gemeinsam nutzen. Die [**IPin::NewSegment-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment) signalisiert den Anfang eines neuen Segments. Sie bietet eine Möglichkeit für einen Quellfilter, Downstreamfilter darüber zu informieren, dass sich die Zeit- und Rateninformationen geändert haben. Wenn der Quellfilter beispielsweise zu einem neuen Punkt im Stream sucht, ruft er **NewSegment** mit der neuen Startzeit auf.
 
-Bei einigen downstreamfiltern werden die Segmentinformationen beim Verarbeiten von Beispielen verwendet. Wenn z. b. in einem Format, das die Interframe-Komprimierung verwendet, die Endzeit auf einen Delta Rahmen fällt, muss der Quell Filter möglicherweise nach der Endzeit zusätzliche Proben senden. Dadurch kann der Decoder den abschließenden Delta Frame decodieren. Um den richtigen abschließenden Frame zu ermitteln, verweist der Decoder auf die Endzeit des Segments. Ein weiteres Beispiel ist, dass audiorenderer die Segment Rate zusammen mit der audiosamplingrate verwenden, um die korrekte Audioausgabe zu generieren.
+Einige Downstreamfilter verwenden die Segmentinformationen, wenn sie Beispiele verarbeiten. Wenn z. B. in einem Format, das die Interframekomprimierung verwendet, die Beendigungszeit auf einen Deltaframe fällt, muss der Quellfilter nach der Beendigungszeit möglicherweise zusätzliche Stichproben senden. Dadurch kann der Decoder den endgültigen Deltaframe decodieren. Um den richtigen endgültigen Frame zu bestimmen, verweist der Decoder auf die Beendigungszeit des Segments. Als weiteres Beispiel verwenden Audiorenderer die Segmentrate zusammen mit der Audiosamplingrate, um die richtige Audioausgabe zu generieren.
 
-Im Push-Modell initiiert der Quell Filter den **newsegment** -Rückruf. Im Pull-Modell erfolgt dies durch den Parserfilter. In jedem Fall ruft der Filter **newsegment** für die downstreameingabepin auf, die den Aufruf an den nächsten Filter weitergibt, bis der Aufruf den Renderer erreicht. Filter müssen **newsegment** -Aufrufe mit anderen streamingaufrufen serialisieren, wie z. b. [**IMemInputPin:: Receive**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive).
+Im Pushmodell initiiert der Quellfilter den **NewSegment-Aufruf.** Im Pullmodell erfolgt dies durch den Parserfilter. In beiden Fällen ruft der Filter **NewSegment** auf dem Downstreameingabepin auf, der den Aufruf an den nächsten Filter weitergibt, bis der Aufruf den Renderer erreicht. Filter müssen **NewSegment-Aufrufe** mit anderen Streamingaufrufen serialisieren, z.B. [**IMemInputPin::Receive.**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive)
 
-Die streamzeit wird nach jedem neuen Segment auf Null zurückgesetzt. Zeitstempel für Stichproben, die nach dem Segment zugestellt werden, beginnen bei Null.
+Die Streamzeit wird nach jedem neuen Segment auf 0 (null) zurückgesetzt. Zeitstempel für Stichproben, die übermittelt werden, nachdem das Segment bei 0 (null) begonnen hat.
 
  
 

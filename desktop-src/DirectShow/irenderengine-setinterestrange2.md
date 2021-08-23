@@ -1,5 +1,5 @@
 ---
-description: 'IRenderEngine::SetInterestRange2-Methode: Nicht unterstützt.'
+description: 'IRenderEngine::SetInterestRange2-Methode: Wird nicht unterstützt.'
 ms.assetid: c5572927-905e-4420-9038-3f9573c5d0b0
 title: IRenderEngine::SetInterestRange2-Methode
 ms.topic: reference
@@ -74,7 +74,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

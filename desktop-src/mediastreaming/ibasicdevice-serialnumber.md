@@ -3,9 +3,9 @@ title: IBasicDevice SerialNumber-Methode
 description: Ruft die Seriennummer des Geräts ab.
 ms.assetid: 238A5999-0E8B-4462-AFCF-790DB58CFCB4
 keywords:
-- Media Streaming-API der SerialNumber-Methode
-- SerialNumber-Methode Media Streaming-API , IBasicDevice-Schnittstelle
-- IBasicDevice-Schnittstelle Medienstreaming-API , SerialNumber-Methode
+- 'SerialNumber-Methode: Medienstreaming-API'
+- 'SerialNumber-Methode: Medienstreaming-API, IBasicDevice-Schnittstelle'
+- IBasicDevice-Schnittstelle Medienstreaming-API, SerialNumber-Methode
 topic_type:
 - apiref
 api_name:
@@ -41,7 +41,7 @@ HRESULT SerialNumber(
 
 <dl> <dt>
 
-*wert* \[ out\]
+*value* \[ out\]
 </dt> <dd>
 
 Empfängt einen Zeiger auf die Seriennummer des Geräts.
@@ -62,7 +62,7 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

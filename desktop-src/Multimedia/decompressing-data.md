@@ -1,25 +1,25 @@
 ---
-title: Komprimieren von Daten
-description: Komprimieren von Daten
+title: Dekomprimieren von Daten
+description: Dekomprimieren von Daten
 ms.assetid: 1faf0238-7bef-4363-9bbc-44737600c946
 keywords:
-- Videokomprimierungs-Manager (VCM), Komprimieren von Daten
-- VCM (Videokomprimierungs-Manager), wieder Komprimieren von Daten
-- ICDE compressbegin-Makro
-- Icdebug-Funktion
-- Icentcompressend-Makro
+- Videokomprimierungs-Manager (VCM), Dekomprimieren von Daten
+- VCM (Videokomprimierungs-Manager), Dekomprimieren von Daten
+- ICDecompressBegin-Makro
+- ICDecompress-Funktion
+- ICDecompressEnd-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 03b44ea375bb1f2b5c41a361ca7f31387439b610
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a213a4d4762f782da817773aac6e8838155561ae47129dd998dad7a82ac5a4f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710805"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119785430"
 ---
-# <a name="decompressing-data"></a>Komprimieren von Daten
+# <a name="decompressing-data"></a>Dekomprimieren von Daten
 
-Das folgende Beispiel zeigt, wie eine Anwendung einen Dekompressor mithilfe des [**icdecompressbegin**](/windows/desktop/api/Vfw/nf-vfw-icdecompressbegin) -Makros initialisieren, eine Frame Sequenz mithilfe der [**icdecompress**](/windows/desktop/api/Vfw/nf-vfw-icdecompress) -Funktion Dekomprimieren und die Dekomprimierung mithilfe des [**icdecompressend**](/windows/desktop/api/Vfw/nf-vfw-icdecompressend) -Makros beenden kann.
+Das folgende Beispiel zeigt, wie eine Anwendung einen Dekomprimierer mithilfe des [**Makros ICDecompressBegin**](/windows/desktop/api/Vfw/nf-vfw-icdecompressbegin) initialisieren, eine Framesequenz mithilfe der [**ICDecompress-Funktion**](/windows/desktop/api/Vfw/nf-vfw-icdecompress) dekomprimieren und die Dekomprimierung mithilfe des [**ICDecompressEnd-Makros**](/windows/desktop/api/Vfw/nf-vfw-icdecompressend) beenden kann.
 
 
 ```C++
@@ -54,9 +54,9 @@ else
 
 
 
- 
+ 
 
- 
+ 
 
 
 

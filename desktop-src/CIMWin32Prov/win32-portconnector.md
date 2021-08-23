@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse für den Win32 portconnector stellt physische Verbindungsports dar, wie z. b. DB-25 Pin männlich, Centronics oder PS/2.
+description: Die WMI-Klasse Win32 PortConnector stellt physische Verbindungsports dar, z. B. \_ DB-25 pin male, Centronics oder PS/2.
 ms.assetid: 85788d1d-0641-4dba-b4ae-a84eb6c4992a
 ms.tgt_platform: multiple
 title: Win32_PortConnector-Klasse
@@ -34,18 +34,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: dcf9eea51d3a65ad07879cca3e47ae79bde92d53
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a2453c1cb1009da0b097065686cd0ae4d23707febae8a9f6b01d9203d4579257
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214049"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119816430"
 ---
-# <a name="win32_portconnector-class"></a>Win32 \_ portconnector-Klasse
+# <a name="win32_portconnector-class"></a>Win32 \_ PortConnector-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) für den **Win32 \_ portconnector** stellt physische Verbindungsports dar, wie z. b. DB-25 Pin männlich, Centronics oder PS/2.
+Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) **\_ Win32 PortConnector** stellt physische Verbindungsports dar, z. B. DB-25 pin male, Centronics oder PS/2.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -78,13 +78,13 @@ class Win32_PortConnector : CIM_PhysicalConnector
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ portconnector** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ PortConnector-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ portconnector** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ PortConnector-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -97,16 +97,16 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Caption")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Caption")
 </dt> </dl>
 
-Kurze Beschreibung des Objekts – eine einzeilige Zeichenfolge.
+Kurze Beschreibung des -Objekts– eine einzeilenbasierte Zeichenfolge.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Connectoriout**
+**ConnectorPinout**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -115,27 +115,27 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anheften Sie die Konfiguration und Signal Verwendung eines physischen Verbindungs-Connector.
+Pinkonfiguration und Signalverwendung eines physischen Connectors.
 
-Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalConnector geerbt.**](cim-physicalconnector.md)
 
 </dd> <dt>
 
-**Connector Type**
+**Connectortype**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](../wmisdk/standard-qualifiers.md) Setzung ("Connector Type"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| -Typ 8, \| interner/externer connectertyp")
+Qualifizierer: [**Override**](../wmisdk/standard-qualifiers.md) ("ConnectorType"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 8 \| Internal/External Connector Type")
 </dt> </dl>
 
-Array physischer Attribute der von diesem Port verwendeten Verbindung.
+Array von physischen Attributen des Connectors, der von diesem Port verwendet wird.
 
-Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.md)geerbt. In der folgenden Liste sind die-Werte aufgeführt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalConnector geerbt.**](cim-physicalconnector.md) In der folgenden Liste sind die Werte aufgeführt.
 
 <dt>
 
@@ -155,14 +155,14 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="Male"></span><span id="male"></span><span id="MALE"></span>
 
-<span id="Male"></span><span id="male"></span><span id="MALE"></span>**Männlich** (2)
+<span id="Male"></span><span id="male"></span><span id="MALE"></span>**Male** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Female"></span><span id="female"></span><span id="FEMALE"></span>
 
-<span id="Female"></span><span id="female"></span><span id="FEMALE"></span>**Weiblich** (3)
+<span id="Female"></span><span id="female"></span><span id="FEMALE"></span>**Female** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -176,7 +176,7 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="Unshielded"></span><span id="unshielded"></span><span id="UNSHIELDED"></span>
 
-<span id="Unshielded"></span><span id="unshielded"></span><span id="UNSHIELDED"></span>Nicht **gezitet** (5)
+<span id="Unshielded"></span><span id="unshielded"></span><span id="UNSHIELDED"></span>**Unshielded** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -197,7 +197,7 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="SCSI__P__High-Density__68_pins_"></span><span id="scsi__p__high-density__68_pins_"></span><span id="SCSI__P__HIGH-DENSITY__68_PINS_"></span>
 
-<span id="SCSI__P__High-Density__68_pins_"></span><span id="scsi__p__high-density__68_pins_"></span><span id="SCSI__P__HIGH-DENSITY__68_PINS_"></span>**SCSI (P) High-Density (68 Pins)** (8)
+<span id="SCSI__P__High-Density__68_pins_"></span><span id="scsi__p__high-density__68_pins_"></span><span id="SCSI__P__HIGH-DENSITY__68_PINS_"></span>**SCSI(P) High-Density (68 Pins)** (8)
 
 
 </dt> <dd></dd> <dt>
@@ -218,7 +218,7 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="SCSI_Fibre_Channel__DB-9__Copper_"></span><span id="scsi_fibre_channel__db-9__copper_"></span><span id="SCSI_FIBRE_CHANNEL__DB-9__COPPER_"></span>
 
-<span id="SCSI_Fibre_Channel__DB-9__Copper_"></span><span id="scsi_fibre_channel__db-9__copper_"></span><span id="SCSI_FIBRE_CHANNEL__DB-9__COPPER_"></span>**SCSI-Fibre Channel (DB-9, Kupfer)** (11)
+<span id="SCSI_Fibre_Channel__DB-9__Copper_"></span><span id="scsi_fibre_channel__db-9__copper_"></span><span id="SCSI_FIBRE_CHANNEL__DB-9__COPPER_"></span>**SCSI Fibre Channel (DB-9, Kupfer)** (11)
 
 
 </dt> <dd></dd> <dt>
@@ -232,35 +232,35 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="SCSI_Fibre_Channel_SCA-II__40_pins_"></span><span id="scsi_fibre_channel_sca-ii__40_pins_"></span><span id="SCSI_FIBRE_CHANNEL_SCA-II__40_PINS_"></span>
 
-<span id="SCSI_Fibre_Channel_SCA-II__40_pins_"></span><span id="scsi_fibre_channel_sca-ii__40_pins_"></span><span id="SCSI_FIBRE_CHANNEL_SCA-II__40_PINS_"></span>**SCSI-Fibre Channel SCA-II (40 Pins)** (13)
+<span id="SCSI_Fibre_Channel_SCA-II__40_pins_"></span><span id="scsi_fibre_channel_sca-ii__40_pins_"></span><span id="SCSI_FIBRE_CHANNEL_SCA-II__40_PINS_"></span>**SCSI Fibre Channel SCA-II (40 Pins)** (13)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SCSI_Fibre_Channel_SCA-II__20_pins_"></span><span id="scsi_fibre_channel_sca-ii__20_pins_"></span><span id="SCSI_FIBRE_CHANNEL_SCA-II__20_PINS_"></span>
 
-<span id="SCSI_Fibre_Channel_SCA-II__20_pins_"></span><span id="scsi_fibre_channel_sca-ii__20_pins_"></span><span id="SCSI_FIBRE_CHANNEL_SCA-II__20_PINS_"></span>**SCSI-Fibre Channel SCA-II (20 Pins)** (14)
+<span id="SCSI_Fibre_Channel_SCA-II__20_pins_"></span><span id="scsi_fibre_channel_sca-ii__20_pins_"></span><span id="SCSI_FIBRE_CHANNEL_SCA-II__20_PINS_"></span>**SCSI Fibre Channel SCA-II (20 Pins)** (14)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SCSI_Fibre_Channel_BNC"></span><span id="scsi_fibre_channel_bnc"></span><span id="SCSI_FIBRE_CHANNEL_BNC"></span>
 
-<span id="SCSI_Fibre_Channel_BNC"></span><span id="scsi_fibre_channel_bnc"></span><span id="SCSI_FIBRE_CHANNEL_BNC"></span>**SCSI-Fibre Channel BNC** (15)
+<span id="SCSI_Fibre_Channel_BNC"></span><span id="scsi_fibre_channel_bnc"></span><span id="SCSI_FIBRE_CHANNEL_BNC"></span>**SCSI Fibre Channel BNC** (15)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ATA_3-1_2_Inch__40_pins_"></span><span id="ata_3-1_2_inch__40_pins_"></span><span id="ATA_3-1_2_INCH__40_PINS_"></span>
 
-<span id="ATA_3-1_2_Inch__40_pins_"></span><span id="ata_3-1_2_inch__40_pins_"></span><span id="ATA_3-1_2_INCH__40_PINS_"></span>**ATA 3-1/2 Zoll (40 Pins)** (16)
+<span id="ATA_3-1_2_Inch__40_pins_"></span><span id="ata_3-1_2_inch__40_pins_"></span><span id="ATA_3-1_2_INCH__40_PINS_"></span>**ATA 3-1/2 Zoll (40 Stifte)** (16)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ATA_2-1_2_Inch__44_pins_"></span><span id="ata_2-1_2_inch__44_pins_"></span><span id="ATA_2-1_2_INCH__44_PINS_"></span>
 
-<span id="ATA_2-1_2_Inch__44_pins_"></span><span id="ata_2-1_2_inch__44_pins_"></span><span id="ATA_2-1_2_INCH__44_PINS_"></span>**ATA 2-1/2 Zoll (44 Pins)** (17)
+<span id="ATA_2-1_2_Inch__44_pins_"></span><span id="ata_2-1_2_inch__44_pins_"></span><span id="ATA_2-1_2_INCH__44_PINS_"></span>**ATA 2-1/2 Zoll (44 Stifte)** (17)
 
 
 </dt> <dd></dd> <dt>
@@ -351,14 +351,14 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="V.35"></span><span id="v.35"></span>
 
-<span id="v.35"></span>**V. 35** (30)
+<span id="v.35"></span>**V.35** (30)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="X.21"></span><span id="x.21"></span>
 
-<span id="x.21"></span>**X. 21** (31)
+<span id="x.21"></span>**X.21** (31)
 
 
 </dt> <dd></dd> <dt>
@@ -379,21 +379,21 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="UTP_Category_3"></span><span id="utp_category_3"></span><span id="UTP_CATEGORY_3"></span>
 
-<span id="UTP_Category_3"></span><span id="utp_category_3"></span><span id="UTP_CATEGORY_3"></span>**UTP Kategorie 3** (34)
+<span id="UTP_Category_3"></span><span id="utp_category_3"></span><span id="UTP_CATEGORY_3"></span>**UTP Category 3** (34)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="UTP_Category_4"></span><span id="utp_category_4"></span><span id="UTP_CATEGORY_4"></span>
 
-<span id="UTP_Category_4"></span><span id="utp_category_4"></span><span id="UTP_CATEGORY_4"></span>**UTP Kategorie 4** (35)
+<span id="UTP_Category_4"></span><span id="utp_category_4"></span><span id="UTP_CATEGORY_4"></span>UTP Category 4 (35) **(UTP-Kategorie 4** (35))
 
 
 </dt> <dd></dd> <dt>
 
 <span id="UTP_Category_5"></span><span id="utp_category_5"></span><span id="UTP_CATEGORY_5"></span>
 
-<span id="UTP_Category_5"></span><span id="utp_category_5"></span><span id="UTP_CATEGORY_5"></span>**UTP Kategorie 5** (36)
+<span id="UTP_Category_5"></span><span id="utp_category_5"></span><span id="UTP_CATEGORY_5"></span>UTP Category 5 (36) **(UTP-Kategorie 5** (36))
 
 
 </dt> <dd></dd> <dt>
@@ -435,7 +435,7 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="Apple_GeoPort"></span><span id="apple_geoport"></span><span id="APPLE_GEOPORT"></span>
 
-<span id="Apple_GeoPort"></span><span id="apple_geoport"></span><span id="APPLE_GEOPORT"></span>**Apple-GeoPort** (42)
+<span id="Apple_GeoPort"></span><span id="apple_geoport"></span><span id="APPLE_GEOPORT"></span>**Apple GeoPort** (42)
 
 
 </dt> <dd></dd> <dt>
@@ -526,14 +526,14 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="HIPPI"></span><span id="hippi"></span>
 
-<span id="HIPPI"></span><span id="hippi"></span>**HIPPI** (55)
+<span id="HIPPI"></span><span id="hippi"></span>**HIPI** (55)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="HSSDC__6_pins_"></span><span id="hssdc__6_pins_"></span><span id="HSSDC__6_PINS_"></span>
 
-<span id="HSSDC__6_pins_"></span><span id="hssdc__6_pins_"></span><span id="HSSDC__6_PINS_"></span>**HSSDC (6 Pins)** (56)
+<span id="HSSDC__6_pins_"></span><span id="hssdc__6_pins_"></span><span id="HSSDC__6_PINS_"></span>**HSSDC (6 Stifte)** (56)
 
 
 </dt> <dd></dd> <dt>
@@ -575,7 +575,7 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="Infrared"></span><span id="infrared"></span><span id="INFRARED"></span>
 
-<span id="Infrared"></span><span id="infrared"></span><span id="INFRARED"></span>**Infrarot** (62)
+<span id="Infrared"></span><span id="infrared"></span><span id="INFRARED"></span>**Zeit** (62)
 
 
 </dt> <dd></dd> <dt>
@@ -589,7 +589,7 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="Access.bus"></span><span id="access.bus"></span><span id="ACCESS.BUS"></span>
 
-<span id="access.bus"></span><span id="ACCESS.BUS"></span>**Access. Bus** (64)
+<span id="access.bus"></span><span id="ACCESS.BUS"></span>**Access.bus** (64)
 
 
 </dt> <dd></dd> <dt>
@@ -603,35 +603,35 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="Centronics"></span><span id="centronics"></span><span id="CENTRONICS"></span>
 
-<span id="Centronics"></span><span id="centronics"></span><span id="CENTRONICS"></span>**Zentronik** (66)
+<span id="Centronics"></span><span id="centronics"></span><span id="CENTRONICS"></span>**Schwerpunkten** (66)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Mini-Centronics"></span><span id="mini-centronics"></span><span id="MINI-CENTRONICS"></span>
 
-<span id="Mini-Centronics"></span><span id="mini-centronics"></span><span id="MINI-CENTRONICS"></span>**Mini-centronik** (67)
+<span id="Mini-Centronics"></span><span id="mini-centronics"></span><span id="MINI-CENTRONICS"></span>**Mini-Schwerpunkten** (67)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Mini-Centronics_Type-14"></span><span id="mini-centronics_type-14"></span><span id="MINI-CENTRONICS_TYPE-14"></span>
 
-<span id="Mini-Centronics_Type-14"></span><span id="mini-centronics_type-14"></span><span id="MINI-CENTRONICS_TYPE-14"></span>**Minicentronics Type-14** (68)
+<span id="Mini-Centronics_Type-14"></span><span id="mini-centronics_type-14"></span><span id="MINI-CENTRONICS_TYPE-14"></span>**Mini-Centronics Type-14** (68)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Mini-Centronics_Type-20"></span><span id="mini-centronics_type-20"></span><span id="MINI-CENTRONICS_TYPE-20"></span>
 
-<span id="Mini-Centronics_Type-20"></span><span id="mini-centronics_type-20"></span><span id="MINI-CENTRONICS_TYPE-20"></span>**Minicentronics Type-20** (69)
+<span id="Mini-Centronics_Type-20"></span><span id="mini-centronics_type-20"></span><span id="MINI-CENTRONICS_TYPE-20"></span>**Mini-Centronics Type-20** (69)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Mini-Centronics_Type-26"></span><span id="mini-centronics_type-26"></span><span id="MINI-CENTRONICS_TYPE-26"></span>
 
-<span id="Mini-Centronics_Type-26"></span><span id="mini-centronics_type-26"></span><span id="MINI-CENTRONICS_TYPE-26"></span>**Minicentronics Type-26** (70)
+<span id="Mini-Centronics_Type-26"></span><span id="mini-centronics_type-26"></span><span id="MINI-CENTRONICS_TYPE-26"></span>**Mini-Cenministrs Type-26** (70)
 
 
 </dt> <dd></dd> <dt>
@@ -659,7 +659,7 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="VME_Bus"></span><span id="vme_bus"></span><span id="VME_BUS"></span>
 
-<span id="VME_Bus"></span><span id="vme_bus"></span><span id="VME_BUS"></span>**VME-Bus** (74)
+<span id="VME_Bus"></span><span id="vme_bus"></span><span id="VME_BUS"></span>**VME Bus** (74)
 
 
 </dt> <dd></dd> <dt>
@@ -680,28 +680,28 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="Proprietary_Processor_Card_Slot"></span><span id="proprietary_processor_card_slot"></span><span id="PROPRIETARY_PROCESSOR_CARD_SLOT"></span>
 
-<span id="Proprietary_Processor_Card_Slot"></span><span id="proprietary_processor_card_slot"></span><span id="PROPRIETARY_PROCESSOR_CARD_SLOT"></span>**Platzhalter für proprietäre Prozessorkarte** (77)
+<span id="Proprietary_Processor_Card_Slot"></span><span id="proprietary_processor_card_slot"></span><span id="PROPRIETARY_PROCESSOR_CARD_SLOT"></span>**Proprietärer Prozessorkartenslot** (77)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Proprietary_Memory_Card_Slot"></span><span id="proprietary_memory_card_slot"></span><span id="PROPRIETARY_MEMORY_CARD_SLOT"></span>
 
-<span id="Proprietary_Memory_Card_Slot"></span><span id="proprietary_memory_card_slot"></span><span id="PROPRIETARY_MEMORY_CARD_SLOT"></span>Geschützter **Speicherkarten Slot** (78)
+<span id="Proprietary_Memory_Card_Slot"></span><span id="proprietary_memory_card_slot"></span><span id="PROPRIETARY_MEMORY_CARD_SLOT"></span>**Proprietärer Speicherkartenslot** (78)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Proprietary_I_O_Riser_Slot"></span><span id="proprietary_i_o_riser_slot"></span><span id="PROPRIETARY_I_O_RISER_SLOT"></span>
 
-<span id="Proprietary_I_O_Riser_Slot"></span><span id="proprietary_i_o_riser_slot"></span><span id="PROPRIETARY_I_O_RISER_SLOT"></span>**Eigener e/a-Riser-Slot** (79)
+<span id="Proprietary_I_O_Riser_Slot"></span><span id="proprietary_i_o_riser_slot"></span><span id="PROPRIETARY_I_O_RISER_SLOT"></span>**Proprietärer E/A-Riser-Slot** (79)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="PCI-66MHZ"></span><span id="pci-66mhz"></span>
 
-<span id="PCI-66MHZ"></span><span id="pci-66mhz"></span>**PCI-66MHz** (80)
+<span id="PCI-66MHZ"></span><span id="pci-66mhz"></span>**PCI-66 MHZ** (80)
 
 
 </dt> <dd></dd> <dt>
@@ -729,12 +729,12 @@ Diese Eigenschaft wird von [**CIM \_ physicalconnector**](cim-physicalconnector.
 
 <span id="PC-98Hireso"></span><span id="pc-98hireso"></span><span id="PC-98HIRESO"></span>
 
-<span id="PC-98Hireso"></span><span id="pc-98hireso"></span><span id="PC-98HIRESO"></span>**PC-98hireso** (84)
+<span id="PC-98Hireso"></span><span id="pc-98hireso"></span><span id="PC-98HIRESO"></span>**PC-98Hireso** (84)
 
 
 </dt> <dd>
 
-PC-98-hireso
+PC-98-Hireso
 
 </dd> <dt>
 
@@ -747,14 +747,14 @@ PC-98-hireso
 
 <span id="PC-98Note"></span><span id="pc-98note"></span><span id="PC-98NOTE"></span>
 
-<span id="PC-98Note"></span><span id="pc-98note"></span><span id="PC-98NOTE"></span>**PC-98note** (86)
+<span id="PC-98Note"></span><span id="pc-98note"></span><span id="PC-98NOTE"></span>**PC-98Hinweis** (86)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="PC-98Full"></span><span id="pc-98full"></span><span id="PC-98FULL"></span>
 
-<span id="PC-98Full"></span><span id="pc-98full"></span><span id="PC-98FULL"></span>**PC-98full** (87)
+<span id="PC-98Full"></span><span id="pc-98full"></span><span id="PC-98FULL"></span>**PC-98Full** (87)
 
 
 </dt> <dd></dd> <dt>
@@ -766,13 +766,13 @@ PC-98-hireso
 
 </dt> <dd>
 
-SSE SCSI
+SSA SCSI
 
 </dd> <dt>
 
 <span id="On_Board_Floppy"></span><span id="on_board_floppy"></span><span id="ON_BOARD_FLOPPY"></span>
 
-<span id="On_Board_Floppy"></span><span id="on_board_floppy"></span><span id="ON_BOARD_FLOPPY"></span>**Auf der boarddiskette** (89)
+<span id="On_Board_Floppy"></span><span id="on_board_floppy"></span><span id="ON_BOARD_FLOPPY"></span>**On Board Floppy** (89)
 
 
 </dt> <dd>
@@ -783,23 +783,23 @@ Kreisförmig
 
 <span id="9_Pin_Dual_Inline__pin_10_cut_"></span><span id="9_pin_dual_inline__pin_10_cut_"></span><span id="9_PIN_DUAL_INLINE__PIN_10_CUT_"></span>
 
-<span id="9_Pin_Dual_Inline__pin_10_cut_"></span><span id="9_pin_dual_inline__pin_10_cut_"></span><span id="9_PIN_DUAL_INLINE__PIN_10_CUT_"></span>**9 Dual Inline (Pin 10 Ausschneiden)** (90)
+<span id="9_Pin_Dual_Inline__pin_10_cut_"></span><span id="9_pin_dual_inline__pin_10_cut_"></span><span id="9_PIN_DUAL_INLINE__PIN_10_CUT_"></span>**9 Pin Dual Inline (Pin 10 cut)** (90)
 
 
 </dt> <dd>
 
-On-board-IDE-Connector
+On-Board-IDE-Connector
 
 </dd> <dt>
 
 <span id="25_Pin_Dual_Inline__pin_26_cut_"></span><span id="25_pin_dual_inline__pin_26_cut_"></span><span id="25_PIN_DUAL_INLINE__PIN_26_CUT_"></span>
 
-<span id="25_Pin_Dual_Inline__pin_26_cut_"></span><span id="25_pin_dual_inline__pin_26_cut_"></span><span id="25_PIN_DUAL_INLINE__PIN_26_CUT_"></span>**25 Pin Dual Inline (PIN 26-Ausschneiden)** (91)
+<span id="25_Pin_Dual_Inline__pin_26_cut_"></span><span id="25_pin_dual_inline__pin_26_cut_"></span><span id="25_PIN_DUAL_INLINE__PIN_26_CUT_"></span>**25 Pin Dual Inline (Pin 26 Cut)** (91)
 
 
 </dt> <dd>
 
-Auf dem Disketten Verbinder
+On Board Floppy Connector
 
 </dd> <dt>
 
@@ -810,7 +810,7 @@ Auf dem Disketten Verbinder
 
 </dt> <dd>
 
-9 Dual Inline anheften
+9 Dual inline anheften
 
 </dd> <dt>
 
@@ -827,7 +827,7 @@ Auf dem Disketten Verbinder
 
 <span id="On_Board_Sound_Input_from_CD-ROM"></span><span id="on_board_sound_input_from_cd-rom"></span><span id="ON_BOARD_SOUND_INPUT_FROM_CD-ROM"></span>
 
-<span id="On_Board_Sound_Input_from_CD-ROM"></span><span id="on_board_sound_input_from_cd-rom"></span><span id="ON_BOARD_SOUND_INPUT_FROM_CD-ROM"></span>**Audioeingabe von CD-ROM** (94)
+<span id="On_Board_Sound_Input_from_CD-ROM"></span><span id="on_board_sound_input_from_cd-rom"></span><span id="ON_BOARD_SOUND_INPUT_FROM_CD-ROM"></span>On Board Sound Input from CD-ROM (94) **(On Board Sound Input von CD-ROM** (94))
 
 
 </dt> <dd>
@@ -839,7 +839,7 @@ Auf dem Disketten Verbinder
 95
 </dt> <dd>
 
-68 Pin Dual Inline
+68 Anheften von dualen Inline-Stecknadeln
 
 </dd> <dt>
 
@@ -867,14 +867,14 @@ PCI-X
 99
 </dt> <dd>
 
-SBus IEEE 1396-1993 32 Bit
+Sbus IEEE 1396-1993 32 Bit
 
 </dd> <dt>
 
 100
 </dt> <dd>
 
-SBus IEEE 1396-1993 64 Bit
+Sbus IEEE 1396-1993 64 Bit
 
 </dd> <dt>
 
@@ -888,7 +888,7 @@ MCA
 102
 </dt> <dd>
 
-Sant
+Gio
 
 </dd> <dt>
 
@@ -902,14 +902,14 @@ XIO
 104
 </dt> <dd>
 
-HI
+HIO
 
 </dd> <dt>
 
 105
 </dt> <dd>
 
-Ngio
+NUNE
 
 </dd> <dt>
 
@@ -923,7 +923,7 @@ PMC
 107
 </dt> <dd>
 
-MTRJ
+Mtrj
 
 </dd> <dt>
 
@@ -937,7 +937,7 @@ VF-45
 109
 </dt> <dd>
 
-Zukünftige e/a-Vorgänge
+Zukünftige E/A
 
 </dd> <dt>
 
@@ -965,7 +965,7 @@ Electrical
 113
 </dt> <dd>
 
-Optical
+Optische
 
 </dd> <dt>
 
@@ -979,7 +979,7 @@ Menüband
 115
 </dt> <dd>
 
-GLM
+Glm
 
 </dd> <dt>
 
@@ -993,7 +993,7 @@ GLM
 117
 </dt> <dd>
 
-Mini-SG
+Mini SG
 
 </dd> <dt>
 
@@ -1014,7 +1014,7 @@ HSSC
 120
 </dt> <dd>
 
-VHDCI abgeschirmt (68 Pins)
+VHDCI Abgeschirmt (68 Pins)
 
 </dd> <dt>
 
@@ -1027,19 +1027,19 @@ InfiniBand
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM- \_ Taste**](../wmisdk/standard-wmi-qualifiers.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**\_ CIM-Schlüssel,**](../wmisdk/standard-wmi-qualifiers.md) [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Der Name der ersten konkreten Klasse, die in der Vererbungs Kette angezeigt wird, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der-Klasse ermöglicht die-Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der ersten konkreten Klasse, die in der Vererbungskette angezeigt wird, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der -Klasse ermöglicht die -Eigenschaft die eindeutige Identifizierung aller Instanzen dieser Klasse und ihrer Unterklassen.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
@@ -1048,13 +1048,13 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Description")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Beschreibung")
 </dt> </dl>
 
 Eine Beschreibung des Objekts.
@@ -1072,10 +1072,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS- \| Typ 8, \| externer Verweis Zeichner")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 8 \| External Reference Designator")
 </dt> </dl>
 
-Externer Verweis Kenn Zeichner des Ports. Externe Verweis Kenn Zeichner sind Bezeichner, die den Typ und die Verwendung des Ports bestimmen.
+Externer Verweisdesignator des Ports. Externe Verweiskennzeichner sind Bezeichner, die den Typ und die Verwendung des Ports bestimmen.
 
 Beispiel: "COM1"
 
@@ -1084,22 +1084,22 @@ Beispiel: "COM1"
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](../wmisdk/standard-qualifiers.md) (" Install Date ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Installation date")
 </dt> </dl>
 
-Datum und Uhrzeit der Installation des-Objekts. Für diese Eigenschaft ist kein Wert erforderlich, um anzugeben, dass das Objekt installiert ist.
+Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft benötigt keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Internalreferencedesignator**
+**InternalReferenceDesignator**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1108,10 +1108,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS- \| Typ 8, \| interner Verweis Zeichner")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 8 \| Internal Reference Designator")
 </dt> </dl>
 
-Interner Verweis Kenn Zeichner des Ports. Interne Verweis Kenn Zeichner sind für den Hersteller spezifisch und identifizieren den Standort oder die Verwendung des Ports.
+Interner Verweisdesignator des Ports. Interne Referenzdesignatoren sind herstellerspezifisch und identifizieren den Standort der Leitungsplatine oder die Verwendung des Anschlusses.
 
 Beispiel: "J101"
 
@@ -1126,12 +1126,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Der Name der Organisation, die für die Erstellung des physischen Elements verantwortlich ist.
+Name der Organisation, die für die Erstellung des physischen Elements verantwortlich ist.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
@@ -1144,12 +1144,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 </dt> </dl>
 
-Der Name für das physische Element.
+Name für das physische Element.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
@@ -1162,12 +1162,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Name")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Name")
 </dt> </dl>
 
-Die Bezeichnung für das-Objekt. Bei einer Unterklasse kann die Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung für das -Objekt. Bei Unterklassen kann die Eigenschaft überschrieben werden, um eine Schlüsseleigenschaft zu sein.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
@@ -1180,9 +1180,9 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zusätzliche Daten, über die Informationen zu Asset-Tags hinausgehen, die zum Identifizieren eines physischen Elements verwendet werden können. Ein Beispiel hierfür sind Barcode-Daten, die einem Element zugeordnet sind, das auch über ein Bestands Kennzeichen verfügt. Wenn nur Barcode Daten verfügbar und eindeutig sind oder als Element Schlüssel verwendet werden können, ist diese Eigenschaft **null** , und die Barcode Daten werden als Klassen Schlüssel in der Tag-Eigenschaft verwendet.
+Zusätzliche Daten, die über Assettaginformationen hinausgehen und zum Identifizieren eines physischen Elements verwendet werden können. Ein Beispiel sind Balkencodedaten, die einem Element zugeordnet sind, das auch über ein Assettag verfügt. Wenn nur Balkencodedaten verfügbar sind und eindeutig sind oder als Elementschlüssel verwendet werden können, ist diese Eigenschaft **NULL,** und die Barcodedaten werden als Klassenschlüssel in der Tageigenschaft verwendet.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
@@ -1195,28 +1195,28 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Teilenummer, die von der Organisation zugewiesen wurde, die für das Erstellen oder die Herstellung des physischen Elements verantwortlich ist
+Teilenummer, die von der Organisation zugewiesen wird, die für die Produktion oder Herstellung des physischen Elements zuständig ist.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
-**PortType**
+**Porttype**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS- \| Typ 8- \| Porttyp")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS-Typ \| \| 8-Porttyp")
 </dt> </dl>
 
-Funktion des Ports. In der folgenden Liste sind die-Werte aufgeführt.
+Funktion des Ports. In der folgenden Liste sind die Werte aufgeführt.
 
 <dt>
 
@@ -1229,7 +1229,7 @@ Funktion des Ports. In der folgenden Liste sind die-Werte aufgeführt.
 
 <span id="Parallel_Port_XT_AT_Compatible"></span><span id="parallel_port_xt_at_compatible"></span><span id="PARALLEL_PORT_XT_AT_COMPATIBLE"></span>
 
-**Paralleler Port XT/bei kompatibel** (1)
+**Paralleler Port XT/AT-kompatibel** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -1243,35 +1243,35 @@ Funktion des Ports. In der folgenden Liste sind die-Werte aufgeführt.
 
 <span id="Parallel_Port_ECP"></span><span id="parallel_port_ecp"></span><span id="PARALLEL_PORT_ECP"></span>
 
-**Paralleler Port-ECP** (3)
+**Parallel Port ECP** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Parallel_Port_EPP"></span><span id="parallel_port_epp"></span><span id="PARALLEL_PORT_EPP"></span>
 
-**Paralleler Port-EPP** (4)
+**Parallel portIEREN** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Parallel_Port_ECP_EPP"></span><span id="parallel_port_ecp_epp"></span><span id="PARALLEL_PORT_ECP_EPP"></span>
 
-**Paralleler Port ECP/EPP** (5)
+**Paralleler Port ECP/IMPORT** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Serial_Port_XT_AT_Compatible"></span><span id="serial_port_xt_at_compatible"></span><span id="SERIAL_PORT_XT_AT_COMPATIBLE"></span>
 
-**Serial Port XT/AT kompatibel** (6)
+**Serieller Port XT/AT-kompatibel** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Serial_Port_16450_Compatible"></span><span id="serial_port_16450_compatible"></span><span id="SERIAL_PORT_16450_COMPATIBLE"></span>
 
-**Serieller Port 16450 kompatibel** (7)
+**Serieller Port 16450-kompatibel** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -1285,7 +1285,7 @@ Funktion des Ports. In der folgenden Liste sind die-Werte aufgeführt.
 
 <span id="Serial_Port_16550A_Compatible"></span><span id="serial_port_16550a_compatible"></span><span id="SERIAL_PORT_16550A_COMPATIBLE"></span>
 
-**Serieller Port 16550ein kompatibler** (9)
+**Serieller Port 16550A-kompatibel** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -1299,21 +1299,21 @@ Funktion des Ports. In der folgenden Liste sind die-Werte aufgeführt.
 
 <span id="MIDI_Port"></span><span id="midi_port"></span><span id="MIDI_PORT"></span>
 
-**MIDI-Port** (11)
+**PORTS-Port** (11)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Joy_Stick_Port"></span><span id="joy_stick_port"></span><span id="JOY_STICK_PORT"></span>
 
-" **Joy Stick** "-Port (12)
+**Stickport** (12)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Keyboard_Port"></span><span id="keyboard_port"></span><span id="KEYBOARD_PORT"></span>
 
-**Tastatur Anschluss** (13)
+**Tastaturport** (13)
 
 
 </dt> <dd></dd> <dt>
@@ -1327,7 +1327,7 @@ Funktion des Ports. In der folgenden Liste sind die-Werte aufgeführt.
 
 <span id="SSA_SCSI"></span><span id="ssa_scsi"></span>
 
-SSE **SCSI** (15)
+**SSA SCSI** (15)
 
 
 </dt> <dd></dd> <dt>
@@ -1369,14 +1369,14 @@ SSE **SCSI** (15)
 
 <span id="Cardbus"></span><span id="cardbus"></span><span id="CARDBUS"></span>
 
-**CardBus** (21)
+**Cardbus** (21)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Access_Bus_Port"></span><span id="access_bus_port"></span><span id="ACCESS_BUS_PORT"></span>
 
-**Access Bus Port** (22)
+**Access Bus-Port** (22)
 
 
 </dt> <dd></dd> <dt>
@@ -1390,7 +1390,7 @@ SSE **SCSI** (15)
 
 <span id="SCSI_Wide"></span><span id="scsi_wide"></span><span id="SCSI_WIDE"></span>
 
-**SCSI (breit** ) (24)
+**SCSI-Breit** (24)
 
 
 </dt> <dd></dd> <dt>
@@ -1404,7 +1404,7 @@ SSE **SCSI** (15)
 
 <span id="PC-98-Hireso"></span><span id="pc-98-hireso"></span><span id="PC-98-HIRESO"></span>
 
-**PC-98-hireso** (26)
+**PC-98-Hireso** (26)
 
 
 </dt> <dd></dd> <dt>
@@ -1432,7 +1432,7 @@ SSE **SCSI** (15)
 
 <span id="Modem_Port"></span><span id="modem_port"></span><span id="MODEM_PORT"></span>
 
-**Modem Anschluss** (30)
+**Modemport** (30)
 
 
 </dt> <dd></dd> <dt>
@@ -1446,7 +1446,7 @@ SSE **SCSI** (15)
 
 <span id="8251_Compatible"></span><span id="8251_compatible"></span><span id="8251_COMPATIBLE"></span>
 
-**8251 kompatibel** (32)
+**8251 Kompatibel** (32)
 
 
 </dt> <dd></dd> <dt>
@@ -1460,22 +1460,22 @@ SSE **SCSI** (15)
 
 </dd> <dt>
 
-**Poweredon**
+**PoweredOn**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das physische Element eingeschaltet ist.
+True **gibt an,** dass das physische Element eingeschaltet wird.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
-**SerialNumber**
+**Serialnumber**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1484,48 +1484,48 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 </dt> </dl>
 
-Vom Hersteller zugewiesene Nummer, mit der ein physisches Element identifiziert wird.
+Vom Hersteller zugeordnete Nummer, die zum Identifizieren eines physischen Elements verwendet wird.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
 **SKU**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 </dt> </dl>
 
-Die Stock Keeping Unit-Nummer für ein physisches Element.
+Lagerbestandseinheitsnummer für ein physisches Element.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (10), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Status")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (10), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Status")
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene betriebsbereite und nicht betriebsbereite Status definiert werden. Folgende Betriebsstatus sind möglich: "OK", "Heruntergestuft" und "Fehler vor dem Ausfall" (ein Element, z. B. eine SMART-fähige Festplatte, funktioniert möglicherweise ordnungsgemäß, aber es wird in naher Zukunft ein Fehler vorhergesagt). Nicht operative Status sind: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während der Spiegelung eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen administrativen Aufgaben angewendet werden. Nicht alle derartigen Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 Folgende Werte sind gültig:
 
@@ -1547,35 +1547,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird** gestartet ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Wird beendet** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -1589,28 +1589,28 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Striche** ("Strich")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Lost Comm** ("Lost Comm")
 
 
 </dt> <dd></dd> </dl>
@@ -1620,44 +1620,44 @@ Wird **beendet ("wird angehalten** ")
 **Tag**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256), [**override**](../wmisdk/standard-qualifiers.md) ("Tag"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**MaxLen**](../wmisdk/standard-qualifiers.md) (256), [**Override**](../wmisdk/standard-qualifiers.md) ("Tag"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI")
 </dt> </dl>
 
-Eindeutiger Bezeichner einer Port Verbindung auf dem Computersystem.
+Eindeutiger Bezeichner einer Portverbindung auf dem Computersystem.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
-Beispiel: "Port-Connector 1"
+Beispiel: "Portconnector 1"
 
 </dd> <dt>
 
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 </dt> </dl>
 
 Version des physischen Elements.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ portconnector** -Klasse wird von [**CIM \_ physicalconnector**](cim-physicalconnector.md)abgeleitet.
+Die **Win32 \_ PortConnector-Klasse** wird von [**CIM \_ PhysicalConnector abgeleitet.**](cim-physicalconnector.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -1667,8 +1667,8 @@ Die **Win32 \_ portconnector** -Klasse wird von [**CIM \_ physicalconnector**](c
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -1677,10 +1677,10 @@ Die **Win32 \_ portconnector** -Klasse wird von [**CIM \_ physicalconnector**](c
 
 <dl> <dt>
 
-[**CIM \_ physicalconnector**](cim-physicalconnector.md)
+[**CIM \_ PhysicalConnector**](cim-physicalconnector.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

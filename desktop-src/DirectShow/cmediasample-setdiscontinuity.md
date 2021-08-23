@@ -1,7 +1,7 @@
 ---
-description: 'Die setdiscontinuity-Methode gibt an, ob dieses Beispiel eine Unterbrechung im Datenstrom darstellt. Diese Methode implementiert die imediasample:: setdiscontinuity-Methode.'
+description: Die SetDiscontinuity-Methode gibt an, ob dieses Beispiel eine Unterbrechung im Datenstrom darstellt. Diese Methode implementiert die IMediaSample::SetDiscontinuity-Methode.
 ms.assetid: 29072130-1ec7-4b5b-8a43-5308b1365527
-title: Cmediasample. setdiscontinuity-Methode (amfilter. h)
+title: CMediaSample.SetDiscontinuity-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 35565b2cee0284d0e5b9f85d7335a630b5f54e87
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4189498c60a52692c057a867dba8bc48c43d2b1c32fbd6091738a3711102f4b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832180"
 ---
-# <a name="cmediasamplesetdiscontinuity-method"></a>Cmediasample. setdiscontinuity-Methode
+# <a name="cmediasamplesetdiscontinuity-method"></a>CMediaSample.SetDiscontinuity-Methode
 
-Die- `SetDiscontinuity` Methode gibt an, ob dieses Beispiel eine Unterbrechung im Datenstrom darstellt. Diese Methode implementiert die [**imediasample:: setdiscontinuity**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setdiscontinuity) -Methode.
+Die `SetDiscontinuity` -Methode gibt an, ob dieses Beispiel eine Unterbrechung im Datenstrom darstellt. Diese Methode implementiert die [**IMediaSample::SetDiscontinuity-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setdiscontinuity)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ HRESULT SetDiscontinuity(
 
 <dl> <dt>
 
-*bdis-Datei* 
+*bDiscont* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob es sich bei diesem Beispiel um eine Diskontinuität handelt. Wenn der Wert **true** ist, wird das Medien Beispiel mit dem vorherigen Beispiel diskontinuierlich.
+Boolescher Wert, der angibt, ob dieses Beispiel eine Diskontinuität ist. True **gibt an,** dass das Medienbeispiel im vorherigen Beispiel nicht mehr verwendet wird.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Boolescher Wert, der angibt, ob es sich bei diesem Beispiel um eine Diskontinuit
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode aktualisiert die Member-Variable [**cmediasample:: m \_ dwFlags**](cmediasample-m-dwflags.md) , die die Diskontinuität-Eigenschaft angibt.
+Diese Methode aktualisiert die [**CMediaSample::m \_ dwFlags-Membervariable,**](cmediasample-m-dwflags.md) die die Diskontinuitätseigenschaft angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode aktualisiert die Member-Variable [**cmediasample:: m \_ dwFlags**]
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode aktualisiert die Member-Variable [**cmediasample:: m \_ dwFlags**]
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  
