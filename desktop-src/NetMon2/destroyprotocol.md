@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "destroyprotocol" zerstört das Protokoll, das von der Funktion "kreateprotocol" erstellt wird.
+description: Die DestroyProtocol-Funktion zerstört das Protokoll, das von der CreateProtocol-Funktion erstellt wird.
 ms.assetid: f7621c2a-1905-4748-b8e3-7b49f3f2bf03
-title: Destroyprotocol-Funktion (Netmon. h)
+title: DestroyProtocol-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: be96a13816a6a35bdd554380dacd5e8e2f5d5450
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2c3a89bfd74a01a7455ecd9393d913ddd906474ceabd1c8884f187444cb483a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911140"
 ---
-# <a name="destroyprotocol-function"></a>Destroyprotocol-Funktion
+# <a name="destroyprotocol-function"></a>DestroyProtocol-Funktion
 
-Die Funktion " **destroyprotocol** " zerstört das Protokoll, das von der Funktion " **kreateprotocol** " erstellt wird.
+Die **DestroyProtocol-Funktion** zerstört das Protokoll, das von der **CreateProtocol-Funktion** erstellt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ VOID WINAPI DestroyProtocol(
 
 <dl> <dt>
 
-*hprotocol* \[ in\]
+*hProtocol* \[ In\]
 </dt> <dd>
 
-Handle für das Protokoll, das zerstört werden soll.
+Handle für das zu zerstörende Protokoll.
 
 </dd> </dl>
 
@@ -50,16 +50,16 @@ Handle für das Protokoll, das zerstört werden soll.
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Parser-DLL ruft die **destroyprotocol** -Funktion während der Implementierung von [DllMain](dllmain-parser.md)auf. **Destroyprotocol** wird aufgerufen, wenn das Betriebssystem die DLL entladen wird.
+Die Parser-DLL ruft die **DestroyProtocol-Funktion** während der Implementierung von [DllMain auf.](dllmain-parser.md) **DestroyProtocol** wird aufgerufen, wenn das Betriebssystem die DLL entlädt.
 
 
 
 | Für Informationen zu                                        | Siehe                                                     |
 |-----------------------------------------------------------|---------------------------------------------------------|
-| Welche Parser sind und wie Sie mit Netzwerkmonitor funktionieren. | [Parser](parsers.md)                                  |
-| Zur Implementierung von **DllMain** gehört ein Beispiel.         | [Implementieren von DllMain](implementing-dllmain-parser.md) |
+| Was Parser sind und wie sie mit Netzwerkmonitor. | [Parser](parsers.md)                                  |
+| Die Implementierung von **DllMain enthält** ein Beispiel.         | [Implementieren von DllMain](implementing-dllmain-parser.md) |
 
 
 
@@ -73,13 +73,13 @@ Die Parser-DLL ruft die **destroyprotocol** -Funktion während der Implementieru
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

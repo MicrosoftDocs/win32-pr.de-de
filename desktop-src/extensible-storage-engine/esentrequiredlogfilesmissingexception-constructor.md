@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentrequirements dlogfilesmissingexception-Konstruktor'
-title: Esentrequirements dlogfilesmissingexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentRequiredLogFilesMissingException-Konstruktor'
+title: EsentRequiredLogFilesMissingException-Konstruktor
 TOCTitle: 'EsentRequiredLogFilesMissingException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentRequiredLogFilesMissingException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentrequiredlogfilesmissingexception.esentrequiredlogfilesmissingexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 903307b7a06fa65df432238276248a36e4deb7c8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 078f4a17e05d200ac63a7c773dfa3240bcaa9ac018b519bc34ae6e0ddde76120
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526942"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119851510"
 ---
-# <a name="esentrequiredlogfilesmissingexception-constructor"></a>Esentrequirements dlogfilesmissingexception-Konstruktor
+# <a name="esentrequiredlogfilesmissingexception-constructor"></a>EsentRequiredLogFilesMissingException-Konstruktor
 
-Initialisiert eine neue Instanz der esentrequirements dlogfilesmissingexception-Klasse.
+Initialisiert eine neue Instanz der EsentRequiredLogFilesMissingException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentRequiredLogFilesMissingException()
 public EsentRequiredLogFilesMissingException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentrequirements dlogfilesmissingexception-Klasse](./esentrequiredlogfilesmissingexception-class.md)
+[EsentRequiredLogFilesMissingException-Klasse](./esentrequiredlogfilesmissingexception-class.md)
 
-[Esentrequirements dlogfilesmissingexception-Elemente](./esentrequiredlogfilesmissingexception-members.md)
+[EsentRequiredLogFilesMissingException-Member](./esentrequiredlogfilesmissingexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

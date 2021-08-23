@@ -1,19 +1,19 @@
 ---
-description: Enthält eine Erkennungs-Alternative für ein InkWord. Die Alternativen werden nach der Zuverlässigkeit der Erkennung in die Alternative geordnet, wobei der höchste Wert an erster Stelle liegt.
+description: Enthält eine Erkennungs alternative für ein InkWord. Die Alternativen werden nach der Konfidenz der Erkannten in der Alternativen geordnet, mit der höchsten zuerst.
 ms.assetid: 6ec78ac9-c10c-4227-bead-5ddfc48ce27e
 title: Alternate-Element (Wingdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 55dfb629aadea988a6aeec1cba1020c8ab47c994
-ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
+ms.openlocfilehash: 306371c1f2eff41629c115261fecb0d807652a598458be79bbabf8d7c7cc7587
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "114436605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119884015"
 ---
-# <a name="alternate-element"></a>Alternate-Element
+# <a name="alternate-element"></a>Alternatives Element
 
-Enthält eine Erkennungs-Alternative für ein [**InkWord-.**](inkword-element.md) Die Alternativen werden nach der Zuverlässigkeit der Erkennung in die Alternative geordnet, wobei der höchste Wert an erster Stelle liegt.
+Enthält eine Erkennungs alternative für ein [**InkWord-**](inkword-element.md). Die Alternativen werden nach der Konfidenz der Erkannten in der Alternativen geordnet, mit der höchsten zuerst.
 
 ## <a name="definition"></a>Definition
 
@@ -47,7 +47,7 @@ Keine
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

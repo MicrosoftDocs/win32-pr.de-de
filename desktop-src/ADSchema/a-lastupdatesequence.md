@@ -1,11 +1,11 @@
 ---
 title: Last-Update-Sequence-Attribut
-description: Dieses Attribut enthält die Aktualisierungs Sequenznummer für das letzte Element im Klassen Speicher, das geändert wurde.
+description: Dieses Attribut enthält die Updatesequenznummer für das letzte Element im Klassenspeicher, das geändert wurde.
 ms.assetid: fd434b8d-31b4-45f7-8d8f-048f61cabb92
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des Last-Update-Sequence-Attributs
-- lastupdatesequence-Attribut, AD-Schema
+- AD-Schema des Attributs "Last-Update-Sequence"
+- lastUpdateSequence-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7e670c6784ded96a1e81d98f5f1c9bfb859efaa
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7c5ff31db81cbdbc1767c05cb2f4c7d366ad685c39cd873f15d2a113eb5b2dbc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346147"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924690"
 ---
 # <a name="last-update-sequence-attribute"></a>Last-Update-Sequence-Attribut
 
-Dieses Attribut enthält die Aktualisierungs Sequenznummer für das letzte Element im Klassen Speicher, das geändert wurde.
+Dieses Attribut enthält die Updatesequenznummer für das letzte Element im Klassenspeicher, das geändert wurde.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | Letzte Update-Sequenz                        |
-| LDAP-Display-Name | lastupdatesequence                          |
+| CN                | Last-Update-Sequence                        |
+| Ldap-Anzeigename | lastUpdateSequence                          |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.330                      |
-| System-ID-GUID    | 7d6c0e9c-7E20-11D0-afd6-00c04 C9        |
+| System-ID-GUID    | 7d6c0e9c-7e20-11d0-afd6-00c04fd930c9        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Dieses Attribut enthält die Aktualisierungs Sequenznummer für das letzte Eleme
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Dieses Attribut enthält die Aktualisierungs Sequenznummer für das letzte Eleme
 |------------------------|-----------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                              |
 | MAPI-Id                | \-                                                                                                              |
-| System-Only            | False                                                                                                           |
-| Ist-einwertig       | Richtig                                                                                                            |
-| Ist indiziert             | False                                                                                                           |
-| Im globalen Katalog      | False                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                    |
+| System-Only            | Falsch                                                                                                           |
+| Ist einwertig       | Richtig                                                                                                            |
+| Ist indiziert             | Falsch                                                                                                           |
+| Im globalen Katalog      | Falsch                                                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                    |
 | Range-Lower            | \-                                                                                                              |
 | Range-Upper            | \-                                                                                                              |
 | Search-Flags           | 0x00000000                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                      |
-| In verwendete Klassen        | [**Class-Store**](c-classstore.md)<br/> [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Klassen-Store**](c-classstore.md)<br/> [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Dieses Attribut enthält die Aktualisierungs Sequenznummer für das letzte Eleme
 |------------------------|-----------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                              |
 | MAPI-Id                | \-                                                                                                              |
-| System-Only            | False                                                                                                           |
-| Ist-einwertig       | Richtig                                                                                                            |
-| Ist indiziert             | False                                                                                                           |
-| Im globalen Katalog      | False                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                    |
+| System-Only            | Falsch                                                                                                           |
+| Ist einwertig       | Richtig                                                                                                            |
+| Ist indiziert             | Falsch                                                                                                           |
+| Im globalen Katalog      | Falsch                                                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                    |
 | Range-Lower            | \-                                                                                                              |
 | Range-Upper            | \-                                                                                                              |
 | Search-Flags           | 0x00000000                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                      |
-| In verwendete Klassen        | [**Class-Store**](c-classstore.md)<br/> [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Klassen-Store**](c-classstore.md)<br/> [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Dieses Attribut enthält die Aktualisierungs Sequenznummer für das letzte Eleme
 |------------------------|-----------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                              |
 | MAPI-Id                | \-                                                                                                              |
-| System-Only            | False                                                                                                           |
-| Ist-einwertig       | Richtig                                                                                                            |
-| Ist indiziert             | False                                                                                                           |
-| Im globalen Katalog      | False                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                    |
+| System-Only            | Falsch                                                                                                           |
+| Ist einwertig       | Richtig                                                                                                            |
+| Ist indiziert             | Falsch                                                                                                           |
+| Im globalen Katalog      | Falsch                                                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                    |
 | Range-Lower            | \-                                                                                                              |
 | Range-Upper            | \-                                                                                                              |
 | Search-Flags           | 0x00000000                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                      |
-| In verwendete Klassen        | [**Class-Store**](c-classstore.md)<br/> [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Klassen-Store**](c-classstore.md)<br/> [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Dieses Attribut enthält die Aktualisierungs Sequenznummer für das letzte Eleme
 |------------------------|-----------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                              |
 | MAPI-Id                | \-                                                                                                              |
-| System-Only            | False                                                                                                           |
-| Ist-einwertig       | Richtig                                                                                                            |
-| Ist indiziert             | False                                                                                                           |
-| Im globalen Katalog      | False                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                    |
+| System-Only            | Falsch                                                                                                           |
+| Is-Single-Valued       | Richtig                                                                                                            |
+| Ist indiziert             | Falsch                                                                                                           |
+| Im globalen Katalog      | Falsch                                                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                    |
 | Range-Lower            | \-                                                                                                              |
 | Range-Upper            | \-                                                                                                              |
 | Search-Flags           | 0x00000000                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                      |
-| In verwendete Klassen        | [**Class-Store**](c-classstore.md)<br/> [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Klassen-Store**](c-classstore.md)<br/> [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Dieses Attribut enthält die Aktualisierungs Sequenznummer für das letzte Eleme
 |------------------------|-----------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                              |
 | MAPI-Id                | \-                                                                                                              |
-| System-Only            | False                                                                                                           |
-| Ist-einwertig       | Richtig                                                                                                            |
-| Ist indiziert             | False                                                                                                           |
-| Im globalen Katalog      | False                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                    |
+| System-Only            | Falsch                                                                                                           |
+| Is-Single-Valued       | Richtig                                                                                                            |
+| Ist indiziert             | Falsch                                                                                                           |
+| Im globalen Katalog      | Falsch                                                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                    |
 | Range-Lower            | \-                                                                                                              |
 | Range-Upper            | \-                                                                                                              |
 | Search-Flags           | 0x00000000                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                      |
-| In verwendete Klassen        | [**Class-Store**](c-classstore.md)<br/> [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Klassen-Store**](c-classstore.md)<br/> [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Dieses Attribut enthält die Aktualisierungs Sequenznummer für das letzte Eleme
 |------------------------|-----------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                              |
 | MAPI-Id                | \-                                                                                                              |
-| System-Only            | False                                                                                                           |
-| Ist-einwertig       | Richtig                                                                                                            |
-| Ist indiziert             | False                                                                                                           |
-| Im globalen Katalog      | False                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                    |
+| System-Only            | Falsch                                                                                                           |
+| Is-Single-Valued       | Richtig                                                                                                            |
+| Ist indiziert             | Falsch                                                                                                           |
+| Im globalen Katalog      | Falsch                                                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                    |
 | Range-Lower            | \-                                                                                                              |
 | Range-Upper            | \-                                                                                                              |
 | Search-Flags           | 0x00000000                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                      |
-| In verwendete Klassen        | [**Class-Store**](c-classstore.md)<br/> [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Klassen-Store**](c-classstore.md)<br/> [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 

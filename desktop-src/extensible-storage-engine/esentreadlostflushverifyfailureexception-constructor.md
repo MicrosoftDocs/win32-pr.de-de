@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentlelostflushverifyfailureexception-Konstruktor'
-title: Esentlelostflushverifyfailureexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentReadLostFlushVerifyFailureException-Konstruktor'
+title: EsentReadLostFlushVerifyFailureException-Konstruktor
 TOCTitle: 'EsentReadLostFlushVerifyFailureException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentReadLostFlushVerifyFailureException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentreadlostflushverifyfailureexception.esentreadlostflushverifyfailureexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f8b57470509599160544df2bf93846fd31d73506
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e462438ea762160988e44f034bc0e32f4d631a9fbd472a9584dd40886211ae9c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863699"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119722340"
 ---
-# <a name="esentreadlostflushverifyfailureexception-constructor"></a>Esentlelostflushverifyfailureexception-Konstruktor
+# <a name="esentreadlostflushverifyfailureexception-constructor"></a>EsentReadLostFlushVerifyFailureException-Konstruktor
 
-Initialisiert eine neue Instanz der esentlelostflushverifyfailureexception-Klasse.
+Initialisiert eine neue Instanz der EsentReadLostFlushVerifyFailureException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentReadLostFlushVerifyFailureException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlelostflushverifyfailureexception-Klasse](./esentreadlostflushverifyfailureexception-class.md)
+[EsentReadLostFlushVerifyFailureException-Klasse](./esentreadlostflushverifyfailureexception-class.md)
 
-[Esentleleslostflushverifyfailureexception-Member](./esentreadlostflushverifyfailureexception-members.md)
+[EsentReadLostFlushVerifyFailureException-Member](./esentreadlostflushverifyfailureexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

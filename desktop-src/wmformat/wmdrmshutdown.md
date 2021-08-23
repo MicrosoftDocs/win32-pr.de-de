@@ -1,9 +1,9 @@
 ---
-title: Wmdrmshutdown-Funktion (wmdrmsdk. h)
-description: Die wmdrmshutdown-Funktion gibt Ressourcen frei, die von den erweiterten APIs des Windows Media DRM-Clients verwendet werden.
+title: WMDRMShutdown-Funktion (Wmdrmsdk.h)
+description: Die WMDRMShutdown-Funktion gibt Ressourcen frei, die von den erweiterten APIs des Windows Media DRM-Clients verwendet werden.
 ms.assetid: fa99a07a-2f07-464b-b7a2-e8f3110389b5
 keywords:
-- Wmdrmshutdown-Funktion Windows Media-Format
+- WMDRMShutdown-Funktion windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2eb49049a593699a4071eefea9c5cf7c61571fc3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f80f0f7264cd0962cb642f0877ccd044e777c3e9f269f87fcffc0037dcc0836d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119930366"
 ---
-# <a name="wmdrmshutdown-function"></a>Wmdrmshutdown-Funktion
+# <a name="wmdrmshutdown-function"></a>WMDRMShutdown-Funktion
 
-Die **wmdrmshutdown** -Funktion gibt Ressourcen frei, die von den erweiterten APIs des Windows Media DRM-Clients verwendet werden.
+Die **WMDRMShutdown-Funktion** gibt Ressourcen frei, die von den erweiterten APIs des Windows Media DRM-Clients verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -52,9 +52,9 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um Speicher Verluste zu vermeiden, müssen Sie diese Funktion für jeden Aufrufe der [**wmdrmstartup**](wmdrmstartup.md) -Funktion abrufen.
+Um Speicherverluste zu vermeiden, müssen Sie diese Funktion für jeden Aufruf der [**WMDRMStartup-Funktion**](wmdrmstartup.md) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,13 +62,13 @@ Um Speicher Verluste zu vermeiden, müssen Sie diese Funktion für jeden Aufrufe
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>Wmdrmsdk.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

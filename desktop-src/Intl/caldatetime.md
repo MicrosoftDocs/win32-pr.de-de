@@ -1,7 +1,7 @@
 ---
-description: Veraltet. Stellt einen Zeitpunkt dar, der normalerweise als Datum und Uhrzeit und als entsprechender Kalender ausgedrückt wird.
+description: Veraltet. Stellt einen Zeitpunkt dar, der in der Regel als Datum und Uhrzeit und als entsprechender Kalender ausgedrückt wird.
 ms.assetid: a714ff32-2b1f-4256-931e-324d64daf2ac
-title: Caldatetime-Struktur
+title: CALDATETIME-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 5e3f0099a8e1dd7794b960af3d753085f2a32eaa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 700e11f27b673d9ff706483cc4abcf2f06cd7d8bb779ef8eaf9b51a6d81b4068
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363860"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119822830"
 ---
-# <a name="caldatetime-structure"></a>Caldatetime-Struktur
+# <a name="caldatetime-structure"></a>CALDATETIME-Struktur
 
-Veraltet. Stellt einen Zeitpunkt dar, der normalerweise als Datum und Uhrzeit und als entsprechender Kalender ausgedrückt wird.
+Veraltet. Stellt einen Zeitpunkt dar, der in der Regel als Datum und Uhrzeit und als entsprechender Kalender ausgedrückt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,28 +47,28 @@ typedef struct _caldatetime {
 
 <dl> <dt>
 
-**Calid**
+**CalId**
 </dt> <dd>
 
-Der [Kalender Bezeichner](calendar-identifiers.md) für den Zeitpunkt des Zeitpunkts.
+Der [Kalenderbezeichner](calendar-identifiers.md) für den Zeitpunkt.
 
 </dd> <dt>
 
-**Thi**
+**Ära**
 </dt> <dd>
 
-Die ERA-Informationen für den Zeitpunkt.
+Die Informationen zum Zeitraum für den Zeitpunkt.
 
 </dd> <dt>
 
-**Jährigen**
+**Jahr**
 </dt> <dd>
 
 Das Jahr für den Zeitpunkt.
 
 </dd> <dt>
 
-**Ges**
+**Month (Monat)**
 </dt> <dd>
 
 Der Monat für den Zeitpunkt.
@@ -89,31 +89,31 @@ Der Wochentag für den Zeitpunkt.
 
 </dd> <dt>
 
-**Geöffneten**
+**Stunde**
 </dt> <dd>
 
 Die Stunde für den Zeitpunkt.
 
 </dd> <dt>
 
-**Tiges**
+**Minute**
 </dt> <dd>
 
 Die Minute für den Zeitpunkt.
 
 </dd> <dt>
 
-**Klässler**
+**Second**
 </dt> <dd>
 
 Die zweite für den Zeitpunkt.
 
 </dd> <dt>
 
-**Bewegt**
+**Tick**
 </dt> <dd>
 
-Der Takt für den Zeitpunkt.
+Der Tick für den Zeitpunkt.
 
 </dd> </dl>
 
@@ -123,16 +123,16 @@ Der Takt für den Zeitpunkt.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Unterstützung für nationale Sprachunterstützung](national-language-support-structures.md)
+[Unterstützungsstrukturen für nationale Sprachen](national-language-support-structures.md)
 </dt> </dl>
 
  

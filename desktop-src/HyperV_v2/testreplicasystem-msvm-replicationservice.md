@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein neues Replikat eines virtuellen Computers mit der angegebenen Momentaufnahme zu Testzwecken.
+description: Erstellt zu Testzwecken ein neues Replikat eines virtuellen Computers mit der angegebenen Momentaufnahme.
 ms.assetid: 447f3c8f-8c57-4874-9466-91c6aea533bc
-title: Testreplicasystem-Methode der Msvm_ReplicationService-Klasse
+title: TestReplicaSystem-Methode der Msvm_ReplicationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 029130e619aa36d0aa9b9c1c85a877fb26e1b22b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d23a97e43dce07d8c0ac0b06f2b488f5966ee63d82f5d92eacac017dc8e05de1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119870250"
 ---
-# <a name="testreplicasystem-method-of-the-msvm_replicationservice-class"></a>Testreplicasystem-Methode der MSVM- \_ replicationservice-Klasse
+# <a name="testreplicasystem-method-of-the-msvm_replicationservice-class"></a>TestReplicaSystem-Methode der Msvm \_ ReplicationService-Klasse
 
-Erstellt ein neues Replikat eines virtuellen Computers mit der angegebenen Momentaufnahme zu Testzwecken.
+Erstellt zu Testzwecken ein neues Replikat eines virtuellen Computers mit der angegebenen Momentaufnahme.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ uint32 TestReplicaSystem(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Instanz, die den virtuellen Computer darstellt, für den die Replikation getestet werden soll.
+Ein Verweis auf eine [**\_ CIM-ComputerSysteminstanz,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die den virtuellen Computer darstellt, für den die Replikation getestet werden soll.
 
 </dd> <dt>
 
-*Snapshotsettingdata* \[ in\]
+*SnapshotSettingData* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine [**CIM- \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85)) -Instanz, die die Momentaufnahme darstellt, die zum Erstellen des Test Failover Systems verwendet wurde. Wenn dieser Parameter **null** ist, wird das Failover auf den letzten Zeitpunkt durchgeführt.
+Ein Verweis auf eine [**CIM \_ VirtualSystemSettingData-Instanz,**](/previous-versions//cc136954(v=vs.85)) die die Momentaufnahme darstellt, die zum Erstellen des Testfailoversystems verwendet wurde. Wenn dieser Parameter NULL **ist,** muss das Failover ab dem letzten Zeitpunkt ausgeführt werden.
 
 </dd> <dt>
 
-*Resultingsystem* \[ vorgenommen\]
+*ResultingSystem* \[ out\]
 </dt> <dd>
 
-Wenn ein virtueller Computer erfolgreich definiert wurde, empfängt einen Verweis auf eine Instanz der [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Klasse, die den neu definierten virtuellen Testcomputer darstellt. Wenn dieses System nicht mehr benötigt wird, zerstören Sie es durch Aufrufen der [**destroysystem**](destroysystem-msvm-virtualsystemmanagementservice.md) -Methode.
+Wenn ein virtueller Computer erfolgreich definiert wurde, empfängt einen Verweis auf eine Instanz der [**\_ CIM-ComputerSystem-Klasse,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die den neu definierten virtuellen Testcomputer darstellt. Wenn dieses System nicht mehr benötigt wird, zerstören Sie es, indem Sie die [**DestroySystem-Methode**](destroysystem-msvm-virtualsystemmanagementservice.md) aufrufen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -79,10 +79,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -91,31 +91,31 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -124,10 +124,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -136,7 +136,7 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**MSVM \_ replicationservice**](msvm-replicationservice.md)
+[**Msvm \_ ReplicationService**](msvm-replicationservice.md)
 </dt> </dl>
 
  

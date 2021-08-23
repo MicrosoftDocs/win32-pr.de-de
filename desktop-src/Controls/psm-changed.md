@@ -1,9 +1,9 @@
 ---
-title: PSM_CHANGED Meldung (prsht. h)
-description: Teilt einem Eigenschaften Blatt mit, dass sich die Informationen in einer Seite geändert haben. Sie können diese Nachricht explizit oder mithilfe des von propsheet \_ geänderten Makros senden.
+title: PSM_CHANGED (Prsht.h)
+description: Informiert ein Eigenschaftenblatt darüber, dass sich die Informationen auf einer Seite geändert haben. Sie können diese Nachricht explizit oder mithilfe des PropSheet \_ Changed-Makros senden.
 ms.assetid: b092969f-31dc-4e3c-9100-d15f1bdd5aa5
 keywords:
-- Windows-Steuerelemente für PSM_CHANGED Meldung
+- PSM_CHANGED von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 57f931db5e25f816f7ea164ca5871a4e3e7757a1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2002801d21e4e89a6ccf762b9c9932671b210217a950f5494fb736feda35d32e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119826020"
 ---
-# <a name="psm_changed-message"></a>PSM- \_ geänderte Nachricht
+# <a name="psm_changed-message"></a>PSM \_ CHANGED-Meldung
 
-Teilt einem Eigenschaften Blatt mit, dass sich die Informationen in einer Seite geändert haben. Sie können diese Nachricht explizit oder mithilfe des von [**propsheet \_ geänderten**](/windows/desktop/api/Prsht/nf-prsht-propsheet_changed) Makros senden.
+Informiert ein Eigenschaftenblatt darüber, dass sich die Informationen auf einer Seite geändert haben. Sie können diese Nachricht explizit oder mithilfe des [**PropSheet \_ Changed-Makros**](/windows/desktop/api/Prsht/nf-prsht-propsheet_changed) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Teilt einem Eigenschaften Blatt mit, dass sich die Informationen in einer Seite 
 *wParam* 
 </dt> <dd>
 
-Handle der Seite, die geändert wurde.
+Handle für die geänderte Seite.
 
 </dd> <dt>
 
@@ -47,12 +47,12 @@ Muss Null sein.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Auf dem Eigenschaften Blatt wird die Schaltfläche **anwenden** aktiviert.
+Das Eigenschaftenblatt aktiviert die **Schaltfläche** Anwenden.
 
 > [!Note]  
-> Diese Meldung wird nicht unterstützt, wenn der Aero Wizard Style ([**PSH \_ aerowizard**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)) verwendet wird.
+> This message is not supported when using the Aero wizard style ([**PSH\_AEROWIZARD**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)).
 
  
 
@@ -62,9 +62,9 @@ Auf dem Eigenschaften Blatt wird die Schaltfläche **anwenden** aktiviert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

@@ -1,116 +1,116 @@
 ---
-description: Unterstützung von DXVA 2,0 in Media Foundation
+description: Unterstützung von DXVA 2.0 in Media Foundation
 ms.assetid: d7330370-adb3-4c6a-962a-7b46c344500c
-title: Unterstützung von DXVA 2,0 in Media Foundation
+title: Unterstützung von DXVA 2.0 in Media Foundation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ce144c24a1aeeda6281ddb423757f3e339903440
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 170b9c8ccdbdb7e0844b79e5743c4a84b033b7d504378dba083be5adfb244fcf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106364999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119721929"
 ---
-# <a name="supporting-dxva-20-in-media-foundation"></a>Unterstützung von DXVA 2,0 in Media Foundation
+# <a name="supporting-dxva-20-in-media-foundation"></a>Unterstützung von DXVA 2.0 in Media Foundation
 
-In diesem Thema wird beschrieben, wie Sie die DirectX-Video Beschleunigung (DXVA) 2,0 in einer Media Foundation Transformation (MFT) mit Microsoft Direct3D 9 unterstützen, insbesondere die Kommunikation zwischen dem Decoder und dem Videorenderer, der vom topologielader vermittelt wird. In diesem Thema wird nicht beschrieben, wie DXVA-Decodierung implementiert wird.
+In diesem Thema wird beschrieben, wie DirectX Video Acceleration (DXVA) 2.0 in einer Media Foundation-Transformation (MFT) mithilfe von Microsoft Direct3D 9 unterstützt wird. Insbesondere wird die Kommunikation zwischen dem Decoder und dem Videorenderer beschrieben, der vom Topologielader vermittelt wird. In diesem Thema wird nicht beschrieben, wie die DXVA-Decodierung implementiert wird.
 
-Im restlichen Teil dieses Themas verweist der Begriff " *Decoder* " auf den Decoder-MFT, der komprimierte Videos empfängt und unkomprimierte Videos ausgibt. Der Begriff " *Decoder-Gerät* " bezieht sich auf einen Hardware-Video Beschleuniger, der vom Grafiktreiber implementiert wird.
+Im restlichen Teil dieses  Themas bezieht sich der Begriff Decoder auf den Decoder MFT, der komprimiertes Video empfängt und unkomprimiertes Video ausausgabet. Der Begriff *Decodergerät bezieht* sich auf eine Hardwarevideobeschleunigung, die vom Grafiktreiber implementiert wird.
 
 > [!TIP]
-> Weitere Informationen zur Video Decodierung von Microsoft Direct3D 11 finden Sie unter [Unterstützung von Direct3D 11 Video Decodierung in Media Foundation](supporting-direct3d-11-video-decoding-in-media-foundation.md).
+> Informationen zur Videodecodierung von Microsoft Direct3D 11 finden Sie unter [Supporting Direct3D 11 Video Decoding in Media Foundation.](supporting-direct3d-11-video-decoding-in-media-foundation.md)
 
  
 
 > [!Note]  
-> Für Windows Store-Apps muss Direct3D 11 verwendet werden.
+> Windows Store Müssen Direct3D 11 verwenden.
 
  
 
-Im folgenden finden Sie die grundlegenden Schritte, die ein Decoder ausführen muss, um DXVA 2,0 in Media Foundation zu unterstützen:
+Hier sind die grundlegenden Schritte, die ein Decoder ausführen muss, um DXVA 2.0 in Media Foundation:
 
-1.  Öffnen Sie ein Handle für das Gerät Direct3D 9.
-2.  Suchen Sie die Konfiguration des DXVA-Decoders.
-3.  Nicht komprimierte Puffer zuordnen.
+1.  Öffnen Sie ein Handle für das Direct3D 9-Gerät.
+2.  Suchen sie nach einer DXVA-Decoderkonfiguration.
+3.  Ordnen Sie unkomprimierte Puffer zu.
 4.  Decodieren von Frames.
 
 Diese Schritte werden im weiteren Verlauf dieses Themas ausführlicher beschrieben.
 
-## <a name="opening-a-direct3d-device-handle"></a>Öffnen eines Direct3D-Geräte Handles
+## <a name="opening-a-direct3d-device-handle"></a>Öffnen eines Direct3D-Gerätehandpunkts
 
-Der MFT verwendet den Microsoft Direct3D-Geräte-Manager, um ein Handle für das Direct3D 9-Gerät zu erhalten. Führen Sie die folgenden Schritte aus, um das Geräte Handle zu öffnen:
+MFT verwendet den Microsoft Direct3D-Geräte-Manager, um ein Handle für das Direct3D 9-Gerät zu erhalten. Führen Sie die folgenden Schritte aus, um das Gerätehand handle zu öffnen:
 
-1.  Machen Sie das Attribut [MF \_ sa \_ D3D \_ Aware](mf-sa-d3d-aware-attribute.md) mit dem Wert **true** verfügbar. Das topologielader fragt dieses Attribut durch Aufrufen von [**imftransform:: GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes)ab. Wenn das-Attribut auf **true** festgelegt wird, wird der topologielader benachrichtigt, dass der MFT DXVA unterstützt.
-2.  Wenn die Format Aushandlung beginnt, ruft das topologieloader " [**imftransform::P rocess Message**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage) " mit der Meldung " [**MFT \_ Message \_ Set \_ D3D \_ Manager**](mft-message-set-d3d-manager.md) " auf. Der *ulparam* -Parameter ist ein **IUnknown** -Zeiger auf den Direct3D-Geräte-Manager des Video-Renderers. Fragen Sie diesen Zeiger auf die [**IDirect3DDeviceManager9**](/windows/desktop/api/dxva2api/nn-dxva2api-idirect3ddevicemanager9) -Schnittstelle ab.
-3.  Wenn Sie [**IDirect3DDeviceManager9:: opentovicehandle**](/windows/desktop/api/dxva2api/nf-dxva2api-idirect3ddevicemanager9-opendevicehandle) aufzurufen, erhalten Sie ein Handle für das Direct3D-Gerät des Renderers.
-4.  Aufrufen von [**IDirect3DDeviceManager9:: getvideoservice**](/windows/desktop/api/dxva2api/nf-dxva2api-idirect3ddevicemanager9-getvideoservice) und übergeben des Geräte Handles. Diese Methode gibt einen Zeiger auf die [**idirectxvideodecoderservice**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideodecoderservice) -Schnittstelle zurück.
-5.  Zwischenspeichern der Zeiger und des Geräte Handles.
+1.  Machen Sie das [MF \_ SA \_ D3D \_ AWARE-Attribut](mf-sa-d3d-aware-attribute.md) mit dem Wert **TRUE verfügbar.** Das Topologielader fragt dieses Attribut ab, indem [**ESGETRANSFORM::GetAttributes aufruft.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) Wenn Sie das -Attribut **auf TRUE** festlegen, wird das Topologielader benachrichtigt, dass das MFT DXVA unterstützt.
+2.  Wenn die Formatierungsaushandlung beginnt, ruft das Topologielader mit der [**MFT \_ MESSAGE \_ SET \_ D3D \_ MANAGER-Nachricht**](mft-message-set-d3d-manager.md) [**DEN AUFRUF VON DURCHSICHTTransform::P rocessMessage**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage) auf. Der *ulParam-Parameter* ist ein **IUnknown-Zeiger** auf den Direct3D-Geräte-Manager des Videorenderers. Fragen Sie diesen Zeiger für die [**IDirect3DDeviceManager9-Schnittstelle**](/windows/desktop/api/dxva2api/nn-dxva2api-idirect3ddevicemanager9) ab.
+3.  Rufen [**Sie IDirect3DDeviceManager9::OpenDeviceHandle**](/windows/desktop/api/dxva2api/nf-dxva2api-idirect3ddevicemanager9-opendevicehandle) auf, um ein Handle für das Direct3D-Gerät des Renderers abzurufen.
+4.  Rufen [**Sie IDirect3DDeviceManager9::GetVideoService**](/windows/desktop/api/dxva2api/nf-dxva2api-idirect3ddevicemanager9-getvideoservice) auf, und übergeben Sie das Gerätehand handle. Diese Methode gibt einen Zeiger auf die [**IDirectXVideoDecoderService-Schnittstelle**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideodecoderservice) zurück.
+5.  Speichern Sie die Zeiger und das Gerätehandler zwischen.
 
-## <a name="finding-a-decoder-configuration"></a>Suchen einer decoderkonfiguration
+## <a name="finding-a-decoder-configuration"></a>Suchen einer Decoderkonfiguration
 
-Der MFT muss eine kompatible Konfiguration für das DXVA-Decodergerät finden. Führen Sie nach der Überprüfung des Eingabe Typs die folgenden Schritte innerhalb der [**IMF Transform:: abktinputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) -Methode aus:
+MFT muss eine kompatible Konfiguration für das DXVA-Decodergerät finden. Führen Sie nach der Validierung des Eingabetyps die folgenden Schritte in der [**METHODE VEREERTRANSFORM::SetInputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) aus:
 
-1.  Aufrufen von [**idirectxvideodecoderservice:: getdecoderdeviceguids**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoderservice-getdecoderdeviceguids). Diese Methode gibt ein Array von Decoder-Geräte-GUIDs zurück.
-2.  Durchlaufen Sie das Array von decoderguids, um diejenigen zu finden, die der Decoder unterstützt. Für einen MPEG-2-Decoder würden Sie z. b. nach **DXVA2 \_ ModeMPEG2 \_ mucomp**, **DXVA2 \_ ModeMPEG2 \_ IDCT** oder **DXVA2 \_ ModeMPEG2 \_ VLD** suchen.
+1.  Rufen [**Sie IDirectXVideoDecoderService::GetDecoderDeviceGuids auf.**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoderservice-getdecoderdeviceguids) Diese Methode gibt ein Array von Decodergeräte-GUIDs zurück.
+2.  Schleife durch das Array von Decoder-GUIDs, um diejenigen zu finden, die der Decoder unterstützt. Für einen MPEG-2-Decoder würden Sie beispielsweise nach **DXVA2 \_ ModeMPEG2 \_ MOCOMP,** **DXVA2 \_ ModeMPEG2 \_ IDCT** oder **DXVA2 \_ ModeMPEG2 \_ VLD** suchen.
 
-3.  Wenn Sie eine Geräte-GUID für den Kandidaten Decoder finden, übergeben Sie die GUID an die [**idirectxvideodecoderservice:: getdecoderrendertargets**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoderservice-getdecoderrendertargets) -Methode. Diese Methode gibt ein Array von renderzielformaten zurück, die als **D3DFORMAT** -Werte angegeben werden.
-4.  Durchlaufen Sie die renderzielformate, und suchen Sie nach einem Format, das vom Decoder unterstützt wird.
-5.  Aufrufen von [**idirectxvideodecoderservice:: getdecoderkonfigurationen**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoderservice-getdecoderconfigurations). Übergeben Sie dieselbe Decoder-Geräte-GUID, zusammen mit einer [**DXVA2 \_ videodesc**](/windows/desktop/api/dxva2api/ns-dxva2api-dxva2_videodesc) -Struktur, die das vorgeschlagene Ausgabeformat beschreibt. Die-Methode gibt ein Array von [**DXVA2 \_ configpicturedecode**](/windows/desktop/api/dxva2api/ns-dxva2api-dxva2_configpicturedecode) -Strukturen zurück. Jede Struktur beschreibt eine mögliche Konfiguration für das Decoder-Gerät. Suchen Sie nach einer Konfiguration, die vom Decoder unterstützt wird.
-6.  Speichert das renderzielformat und die Konfiguration.
+3.  Wenn Sie eine kandidatenweise Decodergeräte-GUID finden, übergeben Sie die GUID an die [**IDirectXVideoDecoderService::GetDecoderRenderTargets-Methode.**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoderservice-getdecoderrendertargets) Diese Methode gibt ein Array von Renderzielformaten zurück, die als **D3DFORMAT-Werte angegeben** werden.
+4.  Schleife durch die Renderzielformate, und suchen Sie nach einem Format, das vom Decoder unterstützt wird.
+5.  Rufen [**Sie IDirectXVideoDecoderService::GetDecoderConfigurations auf.**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoderservice-getdecoderconfigurations) Übergeben Sie die gleiche Decodergeräte-GUID zusammen mit einer [**DXVA2 \_ VideoDesc-Struktur,**](/windows/desktop/api/dxva2api/ns-dxva2api-dxva2_videodesc) die das vorgeschlagene Ausgabeformat beschreibt. Die -Methode gibt ein Array von [**DXVA2-ConfigPictureDecode-Strukturen \_**](/windows/desktop/api/dxva2api/ns-dxva2api-dxva2_configpicturedecode) zurück. Jede Struktur beschreibt eine mögliche Konfiguration für das Decodergerät. Suchen Sie nach einer Konfiguration, die der Decoder unterstützt.
+6.  Store das Format und die Konfiguration des Renderziels.
 
-Geben Sie in der [**imftransform:: getoutputavailabletype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype) -Methode basierend auf dem vorgeschlagenen renderzielformat ein unkomprimiertes Videoformat zurück.
+Geben Sie [**in der METHODE DURCHSICHTTransform::GetOutputAvailableType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype) basierend auf dem vorgeschlagenen Renderzielformat ein unkomprimiertes Videoformat zurück.
 
-Überprüfen Sie in der [**IMF Transform:: setoutputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype) -Methode den Medientyp auf das renderzielformat.
+Überprüfen Sie den Medientyp in [**der METHODE VERTRANSFORM::SetOutputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype) mit dem Renderzielformat.
 
-### <a name="fallback-to-software-decoding"></a>Fallback auf Software Decodierung
+### <a name="fallback-to-software-decoding"></a>Fallback auf Softwaredecodierung
 
-Wenn die MFT eine DXVA-Konfiguration nicht finden kann (z. b. wenn der Grafiktreiber nicht über die richtigen Funktionen verfügt), sollte der Fehlercode **MF \_ E \_ nicht unterstützter \_ D3D- \_ Typ** aus den Methoden [**setinputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) und [**setoutputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype) zurückgegeben werden. Das topologielader antwortet, indem er die [**MFT \_ Message \_ Set \_ D3D \_ Manager**](mft-message-set-d3d-manager.md) -Nachricht mit dem Wert **null** für den *ulparam* -Parameter sendet. Der MFT sollte seinen Zeiger auf die [**IDirect3DDeviceManager9**](/windows/desktop/api/dxva2api/nn-dxva2api-idirect3ddevicemanager9) -Schnittstelle freigeben. Das topologielader wird dann den Medientyp erneut aushandeln, und die MFT kann Software Decodierung verwenden.
+Wenn MFT keine DXVA-Konfiguration finden kann (z. B. wenn der Grafiktreiber nicht über die richtigen Funktionen verfügt), sollte er den Fehlercode **MF \_ E \_ UNSUPPORTED \_ D3D \_ TYPE** aus den [**Methoden SetInputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) und [**SetOutputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype) zurückgeben. Das Topologielader antwortet, indem es die [**MFT \_ MESSAGE SET \_ \_ D3D \_ MANAGER-Nachricht**](mft-message-set-d3d-manager.md) mit dem Wert **NULL** für den *ulParam-Parameter* sendet. Der MFT sollte seinen Zeiger auf die [**IDirect3DDeviceManager9-Schnittstelle**](/windows/desktop/api/dxva2api/nn-dxva2api-idirect3ddevicemanager9) frei geben. Der Medientyp wird dann vom Topologielader neu ausgehandelt, und MFT kann die Softwaredecodierung verwenden.
 
-## <a name="allocating-uncompressed-buffers"></a>Zuordnen von nicht komprimierten Puffern
+## <a name="allocating-uncompressed-buffers"></a>Zuordnen von unkomprimierten Puffern
 
-In DXVA 2,0 ist der Decoder für das Zuordnen von Direct3D-Oberflächen zur Verwendung als nicht komprimierte Video Puffer verantwortlich. Der Decoder sollte drei Oberflächen zuordnen, die der EVR für Deinterlacing verwenden soll. Diese Zahl ist korrigiert, da Media Foundation keine Möglichkeit bietet, den EVR anzugeben, wie viele Oberflächen der Grafiktreiber für Deinterlacing benötigt. Für jeden Treiber sollten drei Oberflächen ausreichen.
+In DXVA 2.0 ist der Decoder dafür verantwortlich, Direct3D-Oberflächen als unkomprimierte Videopuffer zu verwenden. Der Decoder sollte 3 Oberflächen zuordnen, die der EVR für das Deinterlacing verwenden kann. Diese Zahl ist fest, da Media Foundation evr keine Möglichkeit bietet, anzugeben, wie viele Oberflächen der Grafiktreiber für das Deinterlacing benötigt. Drei Oberflächen sollten für jeden Treiber ausreichend sein.
 
-Legen Sie in der [**imftransform:: getoutputstreaminfo**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputstreaminfo) -Methode den **MFT- \_ Ausgabestream \_ \_ enthält \_** ein beispielflag in der [**MFT- \_ Ausgabestream- \_ \_ Informations**](/windows/desktop/api/mftransform/ns-mftransform-mft_output_stream_info) Struktur fest. Dieses Flag benachrichtigt die Medien Sitzung, dass der MFT seine eigenen Ausgabe Beispiele zuweist.
+Legen Sie [**in der METHODE VERFORMTransform::GetOutputStreamInfo**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputstreaminfo) das **Flag MFT OUTPUT STREAM PROVIDES \_ \_ \_ \_ SAMPLES** in der [**MFT \_ OUTPUT STREAM \_ \_ INFO-Struktur**](/windows/desktop/api/mftransform/ns-mftransform-mft_output_stream_info) fest. Dieses Flag benachrichtigt die Mediensitzung, dass MFT eigene Ausgabebeispiele zuteilen.
 
-Rufen Sie zum Erstellen der Oberflächen [**idirectxvideoaccelerationservice:: CreateSurface**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideoaccelerationservice-createsurface)auf. (Die [**idirectxvideodecoderservice**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideodecoderservice) -Schnittstelle erbt diese Methode von [**idirectxvideoaccelerationservice**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideoaccelerationservice).) Sie können dies in [**setinputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype)tun, nachdem Sie das renderzielformat gefunden haben.
+Rufen Sie zum Erstellen der Oberflächen [**IDirectXVideoAccelerationService::CreateSurface auf.**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideoaccelerationservice-createsurface) (Die [**IDirectXVideoDecoderService-Schnittstelle**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideodecoderservice) erbt diese Methode von [**IDirectXVideoAccelerationService**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideoaccelerationservice).) Sie können dies in [**SetInputType nach**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype)dem Suchen des Renderzielformats tun.
 
-Rufen Sie für jede Oberfläche [**mfcreatevideosamplefromsurface**](/windows/desktop/api/evr/nc-evr-mfcreatevideosamplefromsurface) auf, um ein Medien Beispiel zu erstellen, das die Oberfläche enthält. Die-Methode gibt einen Zeiger auf die [**imfsample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) -Schnittstelle zurück.
+Rufen Sie für jede Oberfläche [**MFCreateVideoSampleFromSurface**](/windows/desktop/api/evr/nc-evr-mfcreatevideosamplefromsurface) auf, um ein Medienbeispiel für die Oberfläche zu erstellen. Die -Methode gibt einen Zeiger auf die [**NSSAMPLE-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) zurück.
 
 ## <a name="decoding"></a>Decodierung
 
-Um das Decoder-Gerät zu erstellen, rufen Sie [**idirectxvideodecoderservice:: createvideodecoder**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoderservice-createvideodecoder)auf. Die-Methode gibt einen Zeiger auf die [**idirectxvideodecoder**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideodecoder) -Schnittstelle des Decoder-Geräts zurück.
+Rufen Sie zum Erstellen des Decodergeräts [**IDirectXVideoDecoderService::CreateVideoDecoder auf.**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoderservice-createvideodecoder) Die -Methode gibt einen Zeiger auf die [**IDirectXVideoDecoder-Schnittstelle**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideodecoder) des Decodergeräts zurück.
 
-Die Decodierung sollte in der [**IMF Transform::P rocess Output**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) -Methode erfolgen. Bei jedem Frame wird [**IDirect3DDeviceManager9:: testdevice**](/windows/desktop/api/dxva2api/nf-dxva2api-idirect3ddevicemanager9-testdevice) aufgerufen, um das Geräte Handle zu testen. Wenn sich das Gerät geändert hat, gibt die Methode **DXVA2 \_ E \_ New \_ Video \_ Device** zurück. Wenn dies der Fall ist, gehen Sie wie folgt vor:
+Die Decodierung sollte innerhalb der [**METHODE 10::P ROCTransform::P Output erfolgen.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) Rufen Sie in jedem Frame [**IDirect3DDeviceManager9::TestDevice auf,**](/windows/desktop/api/dxva2api/nf-dxva2api-idirect3ddevicemanager9-testdevice) um das Gerätehandchen zu testen. Wenn das Gerät geändert wurde, gibt die Methode **DXVA2 \_ E NEW VIDEO DEVICE \_ \_ \_ zurück.** Gehen Sie in diesem Fall wie folgt vor:
 
-1.  Schließen Sie das Geräte Handle durch Aufrufen von [**IDirect3DDeviceManager9:: closedevicehandle**](/windows/desktop/api/dxva2api/nf-dxva2api-idirect3ddevicemanager9-closedevicehandle).
-2.  Geben Sie die Zeiger [**idirectxvideodecoderservice**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideodecoderservice) und [**idirectxvideodecoder**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideodecoder) frei.
-3.  Öffnen Sie ein neues Geräte handle.
-4.  Aushandeln Sie eine neue decoderkonfiguration, wie unter "Suchen einer decoderkonfiguration" weiter oben auf dieser Seite beschrieben.
-5.  Erstellen Sie ein neues Decoder-Gerät.
+1.  Schließen Sie das Gerätehandle, indem [**Sie IDirect3DDeviceManager9::CloseDeviceHandle aufrufen.**](/windows/desktop/api/dxva2api/nf-dxva2api-idirect3ddevicemanager9-closedevicehandle)
+2.  Geben Sie [**die Zeiger IDirectXVideoDecoderService**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideodecoderservice) [**und IDirectXVideoDecoder**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideodecoder) frei.
+3.  Öffnen Sie ein neues Gerätehand handle.
+4.  Aushandeln einer neuen Decoderkonfiguration, wie weiter oben auf dieser Seite unter "Finding a Decoder Configuration" (Suchen einer Decoderkonfiguration) beschrieben.
+5.  Erstellen Sie ein neues Decodergerät.
 
-Wenn das Geräte Handle gültig ist, funktioniert der Decodierungs Prozess wie folgt:
+Unter der Annahme, dass das Gerätehandy gültig ist, funktioniert der Decodierungsprozess wie folgt:
 
-1.  Sie erhalten eine verfügbare Oberfläche, die derzeit nicht verwendet wird. (Anfänglich sind alle Oberflächen verfügbar.)
-2.  Fragen Sie das Medien Beispiel nach der [**IMF trackedsample**](/windows/win32/api/mfidl/nn-mfidl-imftrackedsample) -Schnittstelle ab.
-3.  Aufrufen von [**imftrackedsample:: abtallocator**](/windows/win32/api/mfidl/nf-mfidl-imftrackedsample-setallocator) und Bereitstellen eines Zeigers auf die [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) -Schnittstelle, die vom Decoder implementiert wird. Wenn der Videorenderer das Beispiel freigibt, wird der Rückruf des Decoders aufgerufen.
-4.  Aufrufen von [**idirectxvideodecoder:: beginFrame**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-beginframe).
-5.  Führen Sie die folgenden Schritte aus:
-    1.  Aufrufen von [**idirectxvideodecoder:: GetBuffer**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-getbuffer) zum Abrufen eines DXVA-decoderpuffers.
+1.  Hier erhalten Sie eine verfügbare Oberfläche, die derzeit nicht verwendet wird. (Anfänglich sind alle Oberflächen verfügbar.)
+2.  Fragen Sie das Medienbeispiel für die [**BENUTZEROBERFLÄCHETrackedSample-Schnittstelle**](/windows/win32/api/mfidl/nn-mfidl-imftrackedsample) ab.
+3.  Rufen [**Sie DIEDOKTrackedSample::SetAllocator**](/windows/win32/api/mfidl/nf-mfidl-imftrackedsample-setallocator) auf, und stellen Sie einen Zeiger auf die [**DURCHDNASYNCCallback-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) bereit, die vom Decoder implementiert wird. Wenn der Videorenderer das Beispiel frei gibt, wird der Rückruf des Decoders aufgerufen.
+4.  Rufen [**Sie IDirectXVideoDecoder::BeginFrame auf.**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-beginframe)
+5.  Führen Sie die folgenden Schritte mindestens einmal aus:
+    1.  Rufen [**Sie IDirectXVideoDecoder::GetBuffer auf,**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-getbuffer) um einen DXVA-Decoderpuffer zu erhalten.
     2.  Füllen Sie den Puffer aus.
-    3.  Nennen Sie [**idirectxvideodecoder:: ReleaseBuffer**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-releasebuffer).
-    4.  Nennen Sie [**idirectxvideodecoder:: Execute**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-execute) , um die Decodierungs Vorgänge für den Frame auszuführen.
+    3.  Rufen [**Sie IDirectXVideoDecoder::ReleaseBuffer auf.**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-releasebuffer)
+    4.  Rufen [**Sie IDirectXVideoDecoder::Execute auf,**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-execute) um die Decodierungsvorgänge für den Frame auszuführen.
 
-DXVA 2,0 verwendet die gleichen Datenstrukturen wie DXVA 1,0 für Decodierungs Vorgänge. Für den ursprünglichen Satz von DXVA-Profilen (für h. 261, h. 263 und MPEG-2) werden diese Datenstrukturen in der [Spezifikation DXVA 1,0](/windows-hardware/drivers/display/directx-video-acceleration)beschrieben.
+DXVA 2.0 verwendet dieselben Datenstrukturen wie DXVA 1.0 für Decodierungsvorgänge. Für den ursprünglichen Satz von DXVA-Profilen (für H.261, H.263 und MPEG-2) werden diese Datenstrukturen in der [DXVA 1.0-Spezifikation beschrieben.](/windows-hardware/drivers/display/directx-video-acceleration)
 
-In jedem Paar von [**beginFrame**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-beginframe)- / [**Execute**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-execute) -aufrufen können Sie [**GetBuffer**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-getbuffer) mehrmals aufrufen, aber nur einmal für jeden DXVA-Puffer. Wenn Sie es zweimal mit dem gleichen Puffertyp aufzurufen, überschreiben Sie die Daten.
+Innerhalb jedes [**BeginFrame Execute-Aufrufpaars**](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-beginframe)können Sie GetBuffer mehrmals aufrufen, jedoch nur einmal für jeden / [](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-execute) [](/windows/desktop/api/dxva2api/nf-dxva2api-idirectxvideodecoder-getbuffer) DXVA-Puffertyp. Wenn Sie ihn zweimal mit dem gleichen Puffertyp aufrufen, überschreiben Sie die Daten.
 
-Verwenden [**Sie den Rückruf der Methode "**](/windows/win32/api/mfidl/nf-mfidl-imftrackedsample-setallocator) -Methode" (Schritt 3), um nachzuverfolgen, welche Beispiele derzeit verfügbar sind und welche verwendet werden.
+Verwenden Sie den Rückruf der [**SetAllocator-Methode**](/windows/win32/api/mfidl/nf-mfidl-imftrackedsample-setallocator) (Schritt 3), um zu verfolgen, welche Beispiele derzeit verfügbar sind und welche verwendet werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[DirectX-Video Beschleunigung 2,0](directx-video-acceleration-2-0.md)
+[DirectX-Videobeschleunigung 2.0](directx-video-acceleration-2-0.md)
 </dt> <dt>
 
 [Media Foundation Transformationen](media-foundation-transforms.md)

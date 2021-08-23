@@ -1,5 +1,5 @@
 ---
-description: Diese Zuordnung richtet einen Dienst Zugriffspunkt (Service Access Point, SAP) als Anforderer für Protokoll Dienste von einem Protokoll Endpunkt ein.
+description: Diese Zuordnung richtet einen Dienstzugriffspunkt (SERVICE Access Point, SAP) als Anfordernde von Protokolldiensten von einem Protokollendpunkt aus ein.
 ms.assetid: 14edefd8-d59b-4925-8b78-a979fb9a975f
 title: Msvm_BindsToLANEndpoint-Klasse
 ms.topic: reference
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: c2fa01c8e9e7df40a2907e6e43a9cb4b507a53d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 44dc8d88475b23d8d7ac12ec36eba96376cf19b7d4d3168556519597d445c73d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119870405"
 ---
-# <a name="msvm_bindstolanendpoint-class"></a>MSVM \_ bindstolanendpoint-Klasse
+# <a name="msvm_bindstolanendpoint-class"></a>Msvm \_ BindsToLANEndpoint-Klasse
 
-Diese Zuordnung richtet einen Dienst Zugriffspunkt (Service Access Point, SAP) als Anforderer für Protokoll Dienste von einem Protokoll Endpunkt ein. In der Regel wird diese Zuordnung zwischen SAPs und Endpunkten auf einem einzelnen System ausgeführt. Da es sich bei einem Protokoll Endpunkt um eine Art von SAP handelt, kann diese Bindung verwendet werden, um eine Schicht von zwei Protokollen einzurichten, wobei die obere Ebene durch die **abhängige** und die untere Ebene dargestellt wird, die durch den **Vorgänger** repräsentiert wird.
+Diese Zuordnung richtet einen Dienstzugriffspunkt (SERVICE Access Point, SAP) als Anfordernde von Protokolldiensten von einem Protokollendpunkt aus ein. In der Regel wird diese Zuordnung zwischen SAPs und Endpunkten auf einem einzelnen System ausgeführt. Da es sich bei einem Protokollendpunkt um eine Art VON SAP handelt, kann diese Bindung verwendet werden, um eine Schicht aus zwei Protokollen zu erstellen, bei der die obere Ebene durch die **abhängige** und die untere Ebene durch den Vordenten dargestellt **wird.**
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -43,58 +43,58 @@ class Msvm_BindsToLANEndpoint : CIM_BindsToLANEndpoint
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ bindstolanendpoint** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ BindsToLANEndpoint-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ bindstolanendpoint** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ BindsToLANEndpoint-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ lanendpoint**](msvm-lanendpoint.md)**
+Datentyp: **[ **Msvm \_ LANEndpoint**](msvm-lanendpoint.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Ein Verweis auf eine [**MSVM \_ lanendpoint**](msvm-lanendpoint.md) -Klasse, die den Switchport darstellt. Diese Eigenschaft wird von der [**CIM- \_ Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)geerbt.
+Ein Verweis auf eine [**Msvm \_ LANEndpoint-Klasse,**](msvm-lanendpoint.md) die den Switchport darstellt. Diese Eigenschaft wird von der [**CIM-Abhängigkeit \_ geerbt.**](/windows/desktop/CIMWin32Prov/cim-dependency)
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ vlanendpoint**](msvm-vlanendpoint.md)**
+Datentyp: **[ **Msvm \_ VLANEndpoint**](msvm-vlanendpoint.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein Verweis auf den [**MSVM- \_ vlanendpoint**](msvm-vlanendpoint.md) , der dem Switchport zugeordnet ist. Diese Eigenschaft wird von der [**CIM- \_ Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)geerbt.
+Ein Verweis auf den [**Msvm \_ VLANEndpoint,**](msvm-vlanendpoint.md) der dem Switchport zugeordnet ist. Diese Eigenschaft wird von der [**CIM-Abhängigkeit \_ geerbt.**](/windows/desktop/CIMWin32Prov/cim-dependency)
 
 </dd> <dt>
 
 **FrameType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Beschreibt die rahmenmethode für den SAP-oder-Endpunkt der oberen Ebene, der an den LAN-Endpunkt gebunden ist. Diese Eigenschaft wird von **CIM \_ bindstolanendpoint** geerbt und ist immer auf **null** festgelegt.
+Beschreibt die Rahmenmethode für den SAP- oder Endpunkt der oberen Ebene, der an den LAN-Endpunkt gebunden ist. Diese Eigenschaft wird von **CIM \_ BindsToLANEndpoint geerbt** und immer auf **NULL festgelegt.**
 
 </dd> </dl>
 
@@ -104,10 +104,10 @@ Beschreibt die rahmenmethode für den SAP-oder-Endpunkt der oberen Ebene, der an
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

@@ -1,21 +1,21 @@
 ---
-description: Die get \_ enumerationif-Methode gibt die ienumtime-Enumerationsschnittstelle zurück, die ittime auflistet.
+description: Die get \_ EnumerationIf-Methode gibt die IEnumTime-Enumerationsschnittstelle zurück, die ITTime aufzählt.
 ms.assetid: 31f6fa94-d047-4c53-96ae-8dd7e66a4e33
-title: 'Ittimecollection:: get_EnumerationIf-Methode (sdpblb. h)'
+title: ITTimeCollection::get_EnumerationIf-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a698fca73e923597b2dff5b82e3258dd79306f05
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fb6afa99d1170180d0174bfd9b4d3f92f3733b1bee716ddd1e80b957e0c9bf33
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119905906"
 ---
-# <a name="ittimecollectionget_enumerationif-method"></a>Ittimecollection:: get \_ enumerationif-Methode
+# <a name="ittimecollectionget_enumerationif-method"></a>ITTimeCollection::get \_ EnumerationIf-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **get \_ enumerationif** -Methode gibt die [**ienumtime**](ienumtime.md) -Enumerationsschnittstelle zurück, die [**ittime**](ittime.md)auflistet.
+Die **get \_ EnumerationIf-Methode** gibt die [**IEnumTime-Enumerationsschnittstelle**](ienumtime.md) zurück, die [**ITTime**](ittime.md)aufzählt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT get_EnumerationIf(
 
 <dl> <dt>
 
-*PVal* \[ vorgenommen\]
+*pVal* \[ out\]
 </dt> <dd>
 
-Zeiger auf die [**ienumtime**](ienumtime.md) -Schnittstelle.
+Zeiger auf die [**IEnumTime-Schnittstelle.**](ienumtime.md)
 
 </dd> </dl>
 
@@ -48,20 +48,20 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Wert                                                                                         | Bedeutung                                                         |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *PVal* -Parameter ist kein gültiger Zeiger.<br/>         |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *pVal-Parameter* ist kein gültiger Zeiger.<br/>         |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ist mit [**get \_ \_ netwenum**](ittimecollection-get--newenum.md) austauschbar, mit der Ausnahme, dass Sie [**ienumtime**](ienumtime.md) anstelle von **IUnknown** zurückgibt.
+Diese Methode kann mit [**get \_ \_ NewEnum**](ittimecollection-get--newenum.md) austauschbar sein, mit der Ausnahme, dass sie [**IEnumTime**](ienumtime.md) anstelle von **IUnknown** zurückgibt.
 
-TAPI Ruft die **adressf** -Methode für die [**ienumtime**](ienumtime.md) -Schnittstelle auf, die von **ittimecollection:: get \_ enumerationif** zurückgegeben wurde. Die Anwendung muss Release auf der [**ienumtime**](ienumtime.md) -Schnittstelle aufzurufen, um Ressourcen frei **zugeben** , die ihr zugeordnet sind.
+TAPI ruft die **AddRef-Methode** für die [**IEnumTime-Schnittstelle**](ienumtime.md) auf, die von **ITTimeCollection::get \_ EnumerationIf** zurückgegeben wird. Die Anwendung muss **Release** auf der [**IEnumTime-Schnittstelle**](ienumtime.md) aufrufen, um zugeordnete Ressourcen freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,9 +69,9 @@ TAPI Ruft die **adressf** -Methode für die [**ienumtime**](ienumtime.md) -Schni
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
@@ -80,13 +80,13 @@ TAPI Ruft die **adressf** -Methode für die [**ienumtime**](ienumtime.md) -Schni
 
 <dl> <dt>
 
-[**Ienumtime**](ienumtime.md)
+[**IEnumTime**](ienumtime.md)
 </dt> <dt>
 
-[**Ittimecollection**](ittimecollection.md)
+[**ITTimeCollection**](ittimecollection.md)
 </dt> <dt>
 
-[**Ittime**](ittime.md)
+[**ITTime**](ittime.md)
 </dt> </dl>
 
  

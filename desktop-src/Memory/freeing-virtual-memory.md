@@ -1,27 +1,27 @@
 ---
-description: Die VirtualFree-Funktion hebt die Commits auf und gibt Seiten gemäß den folgenden Regeln frei.
+description: Die VirtualFree-Funktion dekommitiert Seiten gemäß den folgenden Regeln und gibt diese frei.
 ms.assetid: 8fbd7960-f3f0-4326-ad1d-12b636c0039e
-title: Freigeben von virtuellem Speicher
+title: Freigeben von virtuellem Arbeitsspeicher
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a7628ed53f956d5cd13f0c7d2d1157443d529129
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 60c5f78da34573126cfb20d7bc16f803ec603c818a3147f388c9661245d6c408
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869695"
 ---
-# <a name="freeing-virtual-memory"></a>Freigeben von virtuellem Speicher
+# <a name="freeing-virtual-memory"></a>Freigeben von virtuellem Arbeitsspeicher
 
-Mit der [**VirtualFree**](/windows/win32/api/memoryapi/nf-memoryapi-virtualfree) -Funktion werden Seiten gemäß den folgenden Regeln deaktiviert und freigegeben:
+Die [**VirtualFree-Funktion**](/windows/win32/api/memoryapi/nf-memoryapi-virtualfree) dekommitiert seiten gemäß den folgenden Regeln und gibt diese frei:
 
--   Führt einen Commit für mindestens eine zugesicherte Seite aus, wobei der Status der Seiten in "reserviert" geändert wird. Beim Debuggen von Seiten wird der physische Speicher, der den Seiten zugeordnet ist, freigegeben, sodass Sie von einem beliebigen Prozess zugeordnet werden können. Für jeden Block mit zugesicherte Seiten kann ein Commit ausgeführt werden.
--   Gibt einen Block von mindestens einer reservierten Seite frei, wobei der Status der Seiten in "Free" geändert wird. Wenn Sie einen Seiten Block freigeben, wird der Bereich reservierter Adressen vom Prozess zur Verfügung gestellt. Reservierte Seiten können nur freigegeben werden, indem der gesamte Block freigegeben wird, der anfänglich von [**virtualzuordc**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc)reserviert wurde.
--   Führt einen Block von mindestens einer übergebenen Seite gleichzeitig aus und gibt den Zustand der Seiten frei. Der angegebene Block muss den gesamten Block enthalten, der anfänglich von [**virtualzuordc**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc)reserviert ist, und für alle Seiten muss zurzeit ein Commit ausgeführt werden.
+-   Dekommitiert eine oder mehrere Seiten, für die ein Commit ausgeführt wurde, und ändert den Zustand der Seiten in reserviert. Durch das Decommiting von Seiten wird der physische Speicher, der den Seiten zugeordnet ist, veröffentlicht, sodass er von jedem Prozess zugeordnet werden kann. Für jeden Block von Seiten, für die ein Commit ausgeführt wurde, kann der Commit aufgehoben werden.
+-   Gibt einen Block von einer oder mehreren reservierten Seiten frei und ändert den Zustand der Seiten in "Free". Durch das Freigeben eines Seitenblocks wird der Bereich der reservierten Adressen verfügbar, der vom Prozess zugeordnet werden soll. Reservierte Seiten können nur freigegeben werden, indem der gesamte Block freigegeben wird, der ursprünglich von [**VirtualAlloc**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc)reserviert wurde.
+-   Dekommitiert einen Block von einer oder mehreren Seiten, für die ein Commit ausgeführt wurde, und gibt diesen gleichzeitig frei, und ändert den Zustand der Seiten in "Free". Der angegebene Block muss den gesamten Block enthalten, der ursprünglich von [**VirtualAlloc**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc)reserviert wurde, und für alle Seiten muss derzeit ein Commit ausgeführt werden.
 
-Nachdem ein Speicherblock freigegeben oder freigegeben wurde, können Sie nicht mehr darauf verweisen. Alle Informationen, die möglicherweise in diesem Speicher vorhanden waren, sind nicht mehr vorhanden. Der Versuch, eine freie Seite zu lesen oder auf diese zu schreiben, führt zu einer Zugriffs Verletzungs Ausnahme. Wenn Sie Informationen benötigen, können Sie keinen Arbeitsspeicher mit diesen Informationen Debuggen oder freigeben.
+Nachdem ein Speicherblock freigegeben oder die Freigabe aufgehoben wurde, können Sie nie wieder darauf verweisen. Alle Informationen, die sich möglicherweise in diesem Speicher befinden, sind für immer verloren gegangen. Der Versuch, aus einer kostenlosen Seite zu lesen oder auf eine kostenlose Seite zu schreiben, führt zu einer Zugriffsverletzungsausnahme. Wenn Sie Informationen benötigen, sollten Sie den Arbeitsspeicher, der diese Informationen enthält, nicht freigeben oder freigeben.
 
-Um anzugeben, dass die Daten in einem Speicherbereich nicht mehr von Interesse sind, nennen Sie [**virtualbelegc**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc) mit dem **\_ Zurücksetzen** von Arbeitsbereichen. Die Seiten werden nicht aus der Auslagerungs Datei gelesen oder in diese geschrieben. Der Speicherblock kann jedoch später wieder verwendet werden.
+Um anzugeben, dass die Daten in einem Speicherbereich nicht mehr von Interesse sind, rufen Sie [**VirtualAlloc**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc) mit **MEM RESET \_ auf.** Die Seiten werden nicht aus der Auslagerungsdatei gelesen oder in diese geschrieben. Der Speicherblock kann jedoch später wieder verwendet werden.
 
  
 

@@ -4,127 +4,127 @@ ms.assetid: f94f0264-78b8-4a28-9d3a-dda55db29897
 title: Kryptografieschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ccf5284f5c2107e741fd91e2936ff3dea0853e71
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5937dce6da8ffa3396c885d00c895b845de9889c2688c6daef4eba5db0beb90b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119876100"
 ---
 # <a name="cryptography-interfaces"></a>Kryptografieschnittstellen
 
 Kryptografieschnittstellen werden gemäß der Verwendung wie folgt kategorisiert:
 
--   [Server-Engine-Export Schnittstellen](#server-engine-export-interfaces)
--   [Server-Engine-Import Schnittstellen](#server-engine-import-interfaces)
--   [Codierungs Schnittstellen](#encoding-interfaces)
--   [Zertifikat Registrierungs Schnittstellen](#certificate-enrollment-interfaces)
--   [CAPICOM-Interoperabilitäts Schnittstellen](#capicom-interoperability-interfaces)
+-   [Exportschnittstellen der Server-Engine](#server-engine-export-interfaces)
+-   [Importschnittstellen der Server-Engine](#server-engine-import-interfaces)
+-   [Codierungsschnittstellen](#encoding-interfaces)
+-   [Schnittstellen für die Zertifikatregistrierung](#certificate-enrollment-interfaces)
+-   [CAPICOM-Interoperabilitätsschnittstellen](#capicom-interoperability-interfaces)
 
-## <a name="server-engine-export-interfaces"></a>Server-Engine-Export Schnittstellen
+## <a name="server-engine-export-interfaces"></a>Exportschnittstellen der Server-Engine
 
-Im folgenden Referenz Thema werden die Schnittstellen beschrieben, die von der Server-Engine exportiert und von externen Objekten aufgerufen werden.
+Im folgenden Referenzthema werden die Schnittstellen beschrieben, die von der Server-Engine exportiert und von externen Objekten aufgerufen werden.
 
 
 
 | Schnittstelle                                                                | BESCHREIBUNG                                                                                                                                                                                                                                     |
 |--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**ICertAdmin**](/windows/desktop/api/Certadm/nn-certadm-icertadmin)                                         | Wird von Verwaltungsprogrammen zur Verwaltung von Anforderungen, Zertifikaten und Widerruf verwendet.                                                                                                                                                              |
-| [**ICertAdmin2**](/windows/desktop/api/Certadm/nn-certadm-icertadmin2)                                       | Wird von Verwaltungsprogrammen zur Verwaltung von Anforderungen, Zertifikaten und Widerruf verwendet. Ersetzt [**ICertAdmin**](/windows/desktop/api/Certadm/nn-certadm-icertadmin).                                                                                                                 |
-| [**ICertConfig**](/windows/desktop/api/Certcli/nn-certcli-icertconfig)                                       | Wird von Clients verwendet, um Informationen zu den verfügbaren Servern zu erhalten.                                                                                                                                                                                 |
-| [**ICertConfig2**](/windows/desktop/api/Certcli/nn-certcli-icertconfig2)                                     | Wird von Clients verwendet, um Informationen zu den verfügbaren Servern zu erhalten. Ersetzt [**ICertConfig**](/windows/desktop/api/Certcli/nn-certcli-icertconfig).                                                                                                                                  |
-| [**ICertGetConfig**](/windows/desktop/api/Certcli/nn-certcli-icertgetconfig)                                 | Stellt Funktionen bereit, mit denen die während der Client Installation angegebenen öffentlichen Konfigurationsdaten für einen [*Zertifikat Dienst*](../secgloss/c-gly.md) Server abgerufen werden.                |
-| [**ICertRequest**](/windows/desktop/api/Certcli/nn-certcli-icertrequest)                                     | Wird verwendet, um eine Anforderung an den Server zu senden und die Ergebnisse der Anforderung zu erhalten.                                                                                                                                                                        |
-| [**ICertRequest2**](/windows/desktop/api/Certcli/nn-certcli-icertrequest2)                                   | Wird verwendet, um eine Anforderung an den Server zu senden und die Ergebnisse der Anforderung zu erhalten. Ersetzt [**ICertRequest**](/windows/desktop/api/Certcli/nn-certcli-icertrequest).                                                                                                                       |
-| [**Icertserverexit**](/windows/desktop/api/Certif/nn-certif-icertserverexit)                               | Wird von [Exit-Modulen](exit-modules.md) verwendet, um Zertifikat-und Anforderungs Eigenschaften zu erhalten.                                                                                                                                                             |
-| [**Icertserverpolicy**](/windows/desktop/api/Certif/nn-certif-icertserverpolicy)                           | Wird vom- [Richtlinien Modul](policy-modules.md) verwendet, um Zertifikat-und Anforderungs Eigenschaften zu erhalten und festzulegen.                                                                                                                                              |
-| [**Icertview**](/windows/desktop/api/Certview/nn-certview-icertview)                                           | Wird von Clients zum [Anzeigen der Zertifikat Dienst Datenbank](viewing-the-certificate-services-database.md)verwendet.                                                                                                                                 |
-| [**ICertView2**](/windows/desktop/api/Certview/nn-certview-icertview2)                                         | Wird von Clients zum Anzeigen der Zertifikat Dienst Datenbank verwendet. Ersetzt [**icertview**](/windows/desktop/api/Certview/nn-certview-icertview).                                                                                                                                       |
-| [**Ienumcertviewattribute**](/windows/desktop/api/Certview/nn-certview-ienumcertviewattribute)                 | Wird von Clients verwendet, um auf die Zertifikat Attribute für eine Zeile in der Zertifikat Dienst Ansicht zuzugreifen.                                                                                                                                                |
-| [**Ienumcertviewcolumn**](/windows/desktop/api/Certview/nn-certview-ienumcertviewcolumn)                       | Wird von Clients verwendet, um auf die Datenspalten einer Zeile in der Zertifikat Dienst Ansicht zuzugreifen.                                                                                                                                                           |
-| [**Ienumcertviewextension**](/windows/desktop/api/Certview/nn-certview-ienumcertviewextension)                 | Wird von Clients verwendet, um auf die Zertifikat Erweiterungs Daten für eine Zeile in der Zertifikat Dienst Ansicht zuzugreifen.                                                                                                                                            |
-| [**Ienumcertviewrow**](/windows/desktop/api/Certview/nn-certview-ienumcertviewrow)                             | Wird von Clients verwendet, um die Zeilen der Zertifikat Dienst Ansicht aufzulisten.                                                                                                                                                                         |
-| [**IOCSPAdmin**](/windows/desktop/api/certadm/nn-certadm-iocspadmin)                                         | Wird von Verwaltungsprogrammen verwendet, um OCSP-responderserver (Online Certificate Status-Protokoll) zu konfigurieren.                                                                                                                                       |
-| [**Iocspcaconfiguration**](/windows/desktop/api/Certadm/nn-certadm-iocspcaconfiguration)                     | Stellt Funktionen bereit, mit denen ein OCSP-Beantworter-Dienst zum Verarbeiten von Status Anforderungen für eine bestimmte [*Zertifizierungs*](../secgloss/c-gly.md) Stelle konfiguriert werden können.<br/> |
-| [**Iocspcaconfigurationcollection**](/windows/desktop/api/Certadm/nn-certadm-iocspcaconfigurationcollection) | Stellt Funktionen zum Verwalten der Zertifizierungsstellen Konfigurationen bereit, für die ein OCSP-Beantworter-Dienst Anforderungen verarbeiten kann.                                                                                                                                 |
-| [**Iocspproperty**](/windows/desktop/api/Certadm/nn-certadm-iocspproperty)                                   | Stellt Funktionen zum Konfigurieren eines OCSP-Beantworter-Server Attributs bereit.                                                                                                                                                                         |
-| [**Iocsppropertycollection**](/windows/desktop/api/Certadm/nn-certadm-iocsppropertycollection)               | Wird von Verwaltungsprogrammen zum Verwalten von OCSP-Beantworter-Server Attributen verwendet.                                                                                                                                                                     |
+| [**ICertAdmin**](/windows/desktop/api/Certadm/nn-certadm-icertadmin)                                         | Wird von Verwaltungsprogrammen zum Verwalten von Anforderungen, Zertifikaten und Sperrungen verwendet.                                                                                                                                                              |
+| [**ICertAdmin2**](/windows/desktop/api/Certadm/nn-certadm-icertadmin2)                                       | Wird von Verwaltungsprogrammen zum Verwalten von Anforderungen, Zertifikaten und Sperrungen verwendet. Ersetzt [**ICertAdmin.**](/windows/desktop/api/Certadm/nn-certadm-icertadmin)                                                                                                                 |
+| [**ICertConfig**](/windows/desktop/api/Certcli/nn-certcli-icertconfig)                                       | Wird von Clients verwendet, um Informationen zu den verfügbaren Servern abzurufen.                                                                                                                                                                                 |
+| [**ICertConfig2**](/windows/desktop/api/Certcli/nn-certcli-icertconfig2)                                     | Wird von Clients verwendet, um Informationen zu den verfügbaren Servern abzurufen. Ersetzt [**ICertConfig.**](/windows/desktop/api/Certcli/nn-certcli-icertconfig)                                                                                                                                  |
+| [**ICertGetConfig**](/windows/desktop/api/Certcli/nn-certcli-icertgetconfig)                                 | Stellt Funktionen zum Abrufen der (während der Clienteinrichtung angegebenen) öffentlichen Konfigurationsdaten für einen [*Zertifikatdienstserver*](../secgloss/c-gly.md) bereit.                |
+| [**ICertRequest**](/windows/desktop/api/Certcli/nn-certcli-icertrequest)                                     | Wird verwendet, um eine Anforderung an den Server zu senden und die Ergebnisse der Anforderung abzurufen.                                                                                                                                                                        |
+| [**ICertRequest2**](/windows/desktop/api/Certcli/nn-certcli-icertrequest2)                                   | Wird verwendet, um eine Anforderung an den Server zu senden und die Ergebnisse der Anforderung abzurufen. Ersetzt [**ICertRequest.**](/windows/desktop/api/Certcli/nn-certcli-icertrequest)                                                                                                                       |
+| [**ICertServerExit**](/windows/desktop/api/Certif/nn-certif-icertserverexit)                               | Wird von [Exitmodulen](exit-modules.md) verwendet, um Zertifikat- und Anforderungseigenschaften abzurufen.                                                                                                                                                             |
+| [**ICertServerPolicy**](/windows/desktop/api/Certif/nn-certif-icertserverpolicy)                           | Wird vom [Richtlinienmodul](policy-modules.md) zum Abrufen und Festlegen von Zertifikat- und Anforderungseigenschaften verwendet.                                                                                                                                              |
+| [**ICertView**](/windows/desktop/api/Certview/nn-certview-icertview)                                           | Wird von Clients zum [Anzeigen der Zertifikatdienste-Datenbank](viewing-the-certificate-services-database.md)verwendet.                                                                                                                                 |
+| [**ICertView2**](/windows/desktop/api/Certview/nn-certview-icertview2)                                         | Wird von Clients zum Anzeigen der Zertifikatdienste-Datenbank verwendet. Ersetzt [**ICertView.**](/windows/desktop/api/Certview/nn-certview-icertview)                                                                                                                                       |
+| [**IEnumCERTVIEWATTRIBUTE**](/windows/desktop/api/Certview/nn-certview-ienumcertviewattribute)                 | Wird von Clients verwendet, um auf die Zertifikatattribute für eine Zeile in der Ansicht Zertifikatdienste zuzugreifen.                                                                                                                                                |
+| [**IEnumCERTVIEWCOLUMN**](/windows/desktop/api/Certview/nn-certview-ienumcertviewcolumn)                       | Wird von Clients verwendet, um auf die Datenspalten einer Zeile in der Ansicht Zertifikatdienste zuzugreifen.                                                                                                                                                           |
+| [**IEnumCERTVIEWEXTENSION**](/windows/desktop/api/Certview/nn-certview-ienumcertviewextension)                 | Wird von Clients verwendet, um auf die Zertifikaterweiterungsdaten für eine Zeile in der Ansicht Zertifikatdienste zuzugreifen.                                                                                                                                            |
+| [**IEnumCERTVIEWROW**](/windows/desktop/api/Certview/nn-certview-ienumcertviewrow)                             | Wird von Clients verwendet, um die Zeilen der Ansicht Zertifikatdienste aufzuzählen.                                                                                                                                                                         |
+| [**IOCSPAdmin**](/windows/desktop/api/certadm/nn-certadm-iocspadmin)                                         | Wird von Verwaltungsprogrammen zum Konfigurieren von OCSP-Antwortservern (Online Certificate Status Protocol) verwendet.                                                                                                                                       |
+| [**IOCSPCAConfiguration**](/windows/desktop/api/Certadm/nn-certadm-iocspcaconfiguration)                     | Stellt Funktionen zum Konfigurieren eines OCSP-Antwortdiensts für die Verarbeitung von Statusanforderungen für eine bestimmte [*Zertifizierungsstelle*](../secgloss/c-gly.md) bereit.<br/> |
+| [**IOCSPCAConfigurationCollection**](/windows/desktop/api/Certadm/nn-certadm-iocspcaconfigurationcollection) | Stellt Funktionen zum Verwalten der Konfigurationen der Zertifizierungsstelle bereit, für die ein OCSP-Antwortdienst Anforderungen verarbeiten kann.                                                                                                                                 |
+| [**IOCSPProperty**](/windows/desktop/api/Certadm/nn-certadm-iocspproperty)                                   | Stellt Funktionen zum Konfigurieren eines OCSP-Antwortserverattributs bereit.                                                                                                                                                                         |
+| [**IOCSPPropertyCollection**](/windows/desktop/api/Certadm/nn-certadm-iocsppropertycollection)               | Wird von Verwaltungsprogrammen zum Verwalten von OCSP-Antwortserverattributen verwendet.                                                                                                                                                                     |
 
 
 
  
 
-## <a name="server-engine-import-interfaces"></a>Server-Engine-Import Schnittstellen
+## <a name="server-engine-import-interfaces"></a>Importschnittstellen der Server-Engine
 
-In den folgenden Referenz Themen werden die Schnittstellen beschrieben, die von der Server-Engine importiert werden.
+In den folgenden Referenzthemen werden die Schnittstellen beschrieben, die von der Server-Engine importiert werden.
 
 
 
 | Schnittstelle                                      | BESCHREIBUNG                                                                                                                            |
 |------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| [**Icertexit**](/windows/desktop/api/Certexit/nn-certexit-icertexit)                 | Exportiert durch Exit-Module. Wird von der Server-Engine verwendet, um fertige Zertifikate und Sperrinformationen bereitzustellen.                       |
-| [**ICertExit2**](/windows/desktop/api/Certexit/nn-certexit-icertexit2)               | Fügt [**icertexit**](/windows/desktop/api/Certexit/nn-certexit-icertexit)die [**getmanagemodule**](/windows/desktop/api/Certexit/nf-certexit-icertexit2-getmanagemodule) -Methode hinzu.                               |
-| [**Icertmanagemodule**](/windows/desktop/api/Certmod/nn-certmod-icertmanagemodule) | Exportiert nach Richtlinien-oder Beendigungs Modulen. Wird verwendet, um Modul Informationen anzuzeigen oder um eine Benutzeroberfläche für die Konfiguration des Moduls anzuzeigen. |
-| [**Icertpolicy**](/windows/desktop/api/Certpol/nn-certpol-icertpolicy)             | Wird vom-Richtlinien Modul exportiert. Wird von der Server-Engine verwendet, um Anforderungen zu überprüfen und Eigenschaften für Zertifikate zu erhalten.                        |
-| [**ICertPolicy2**](/windows/desktop/api/Certpol/nn-certpol-icertpolicy2)           | Fügt [**icertpolicy**](/windows/desktop/api/Certpol/nn-certpol-icertpolicy)die [**getmanagemodule**](/windows/desktop/api/Certpol/nf-certpol-icertpolicy2-getmanagemodule) -Methode hinzu.                         |
+| [**ICertExit**](/windows/desktop/api/Certexit/nn-certexit-icertexit)                 | Von Exitmodulen exportiert. Wird von der Server-Engine verwendet, um fertige Zertifikate und Sperrinformationen bereitzustellen.                       |
+| [**ICertExit2**](/windows/desktop/api/Certexit/nn-certexit-icertexit2)               | Fügt [**ICertExit**](/windows/desktop/api/Certexit/nn-certexit-icertexit)die [**GetManageModule-Methode**](/windows/desktop/api/Certexit/nf-certexit-icertexit2-getmanagemodule) hinzu.                               |
+| [**ICertManageModule**](/windows/desktop/api/Certmod/nn-certmod-icertmanagemodule) | Wird von Richtlinien- oder Exitmodulen exportiert. Wird zum Anzeigen von Modulinformationen oder zum Anzeigen einer Benutzeroberfläche für die Konfiguration des Moduls verwendet. |
+| [**ICertPolicy**](/windows/desktop/api/Certpol/nn-certpol-icertpolicy)             | Wird vom Richtlinienmodul exportiert. Wird von der Server-Engine verwendet, um Anforderungen zu überprüfen und Eigenschaften für Zertifikate abzurufen.                        |
+| [**ICertPolicy2**](/windows/desktop/api/Certpol/nn-certpol-icertpolicy2)           | Fügt die [**GetManageModule-Methode**](/windows/desktop/api/Certpol/nf-certpol-icertpolicy2-getmanagemodule) zu [**ICertPolicy**](/windows/desktop/api/Certpol/nn-certpol-icertpolicy)hinzu.                         |
 
 
 
  
 
-## <a name="encoding-interfaces"></a>Codierungs Schnittstellen
+## <a name="encoding-interfaces"></a>Codierungsschnittstellen
 
-In den folgenden Referenz Themen werden die Schnittstellen beschrieben, die von [Erweiterungs Handlern](writing-custom-extension-handlers.md) exportiert und durch das-Richtlinien Modul importiert werden können.
+In den folgenden Referenzthemen werden die Schnittstellen beschrieben, die von [Erweiterungshandlern](writing-custom-extension-handlers.md) exportiert und vom Richtlinienmodul importiert werden können.
 
 
 
 | Schnittstelle                                                | BESCHREIBUNG                                                                                                                                                                                                                                   |
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Icertencodealtname**](/windows/desktop/api/Certenc/nn-certenc-icertencodealtname)         | Wird vom- [Richtlinien Modul](policy-modules.md) verwendet, um alternative namens Erweiterungen zu verarbeiten.                                                                                                                                                          |
-| [**Icertencodebitstring**](/windows/desktop/api/Certenc/nn-certenc-icertencodebitstring)     | Wird vom-Richtlinien Modul verwendet, um in Zertifikat Erweiterungen verwendete Bitzeichenfolgen zu verarbeiten.                                                                                                                                                               |
-| [**Icertencodecrldistinfo**](/windows/desktop/api/Certenc/nn-certenc-icertencodecrldistinfo) | Wird vom-Richtlinien Modul verwendet, um die in Zertifikat Erweiterungen verwendeten CRL-Verteilungs Informations Arrays [*zu verarbeiten.*](../secgloss/c-gly.md) |
-| [**Icertencodedatearray**](/windows/desktop/api/Certenc/nn-certenc-icertencodedatearray)     | Wird vom-Richtlinien Modul verwendet, um **Datums** Arrays zu verarbeiten, die in Zertifikat Erweiterungen verwendet werden.                                                                                                                                                           |
-| [**Icertencodelta ongarray**](/windows/desktop/api/Certenc/nn-certenc-icertencodelongarray)     | Wird vom-Richtlinien Modul verwendet, um **lange** Arrays zu verarbeiten, die in Zertifikat Erweiterungen verwendet werden.                                                                                                                                                           |
-| [**Icertencodestringarray**](/windows/desktop/api/Certenc/nn-certenc-icertencodestringarray) | Wird vom Richtlinien Modul verwendet, um **Zeichen** folgen Arrays zu verarbeiten, die in Zertifikat Erweiterungen verwendet werden.                                                                                                                                                         |
+| [**ICertEncodeAltName**](/windows/desktop/api/Certenc/nn-certenc-icertencodealtname)         | Wird vom [Richtlinienmodul](policy-modules.md) zum Behandeln alternativer Namenserweiterungen verwendet.                                                                                                                                                          |
+| [**ICertEncodeBitString**](/windows/desktop/api/Certenc/nn-certenc-icertencodebitstring)     | Wird vom Richtlinienmodul zum Verarbeiten von Bitzeichenfolgen verwendet, die in Zertifikaterweiterungen verwendet werden.                                                                                                                                                               |
+| [**ICertEncodeCRLDistInfo**](/windows/desktop/api/Certenc/nn-certenc-icertencodecrldistinfo) | Wird vom Richtlinienmodul zum Verarbeiten von Verteilungsinformationsarrays für [*Zertifikatsperrlisten*](../secgloss/c-gly.md) (Certificate Revocation List, CRL) verwendet, die in Zertifikaterweiterungen verwendet werden. |
+| [**ICertEncodeDateArray**](/windows/desktop/api/Certenc/nn-certenc-icertencodedatearray)     | Wird vom Richtlinienmodul  verwendet, um Datumsarrays zu verarbeiten, die in Zertifikaterweiterungen verwendet werden.                                                                                                                                                           |
+| [**ICertEncodeLongArray**](/windows/desktop/api/Certenc/nn-certenc-icertencodelongarray)     | Wird vom Richtlinienmodul zum Verarbeiten von **Long-Arrays** verwendet, die in Zertifikaterweiterungen verwendet werden.                                                                                                                                                           |
+| [**ICertEncodeStringArray**](/windows/desktop/api/Certenc/nn-certenc-icertencodestringarray) | Wird vom Richtlinienmodul zum Behandeln von **STRING-Arrays** verwendet, die in Zertifikaterweiterungen verwendet werden.                                                                                                                                                         |
 
 
 
  
 
-## <a name="certificate-enrollment-interfaces"></a>Zertifikat Registrierungs Schnittstellen
+## <a name="certificate-enrollment-interfaces"></a>Schnittstellen für die Zertifikatregistrierung
 
-In diesem Abschnitt werden die Objekte, Methoden und Eigenschaften der Zertifikat Registrierungs Steuerung sowie das Objekt, die Methoden und die Eigenschaften beschrieben, die in der Smartcard-Registrierungs Steuerung zur Verfügung stehen. Hierzu gehören die folgenden Schnittstellen.
+In diesem Abschnitt werden die Objekte, Methoden und Eigenschaften des Zertifikatregistrierungssteuerelements sowie das Objekt, die Methoden und eigenschaften beschrieben, die im Smartcard-Registrierungssteuerelement verfügbar sind. Dazu gehören die folgenden Schnittstellen.
 
 
 
 | Schnittstelle                                                                                  | BESCHREIBUNG                                                                                                                                                                                                      |
 |--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Icenroll**](/windows/desktop/api/Xenroll/nn-xenroll-icenroll)                                                               | Eine von mehreren Schnittstellen, die das Zertifikat Registrierungs Steuerelement darstellen. Dies ist in erster Linie von Interesse, wenn Sie keine Automatisierung verwenden.                                                                        |
-| [**ICEnroll2**](/windows/desktop/api/Xenroll/nn-xenroll-icenroll2)                                                             | Eine von mehreren Schnittstellen, die das Zertifikat Registrierungs Steuerelement darstellen. Dies ist in erster Linie von Interesse, wenn Sie keine Automatisierung verwenden.                                                                        |
-| [**ICEnroll3**](/windows/desktop/api/Xenroll/nn-xenroll-icenroll3)                                                             | Eine von mehreren Schnittstellen, die das Zertifikat Registrierungs Steuerelement darstellen. Dies ist in erster Linie von Interesse, wenn Sie keine Automatisierung verwenden.                                                                        |
-| [**Icertificateregistrimentpolicyserversetup**](/windows/desktop/api/Casetup/nn-casetup-icertificateenrollmentpolicyserversetup) | Stellt den CEP-Webdienst (Certificate Anmeldungs Richtlinie) in Active Directory Zertifikat Diensten (ADCs) dar. Der-Dienst ermöglicht Benutzern und Computern das Abrufen von Informationen zur Zertifikat Registrierungs Richtlinie. |
-| [**Icertificateregistrimentserversetup**](/windows/desktop/api/Casetup/nn-casetup-icertificateenrollmentserversetup)             | Stellt die Zertifikatregistrierungs-Webdienst (CES) innerhalb von ADCs dar. Der-Dienst ermöglicht Benutzern und Computern das registrieren und erneuern von Zertifikaten.                                                               |
-| [**ICEnroll4**](/windows/desktop/api/Xenroll/nn-xenroll-icenroll4)                                                             | Eine von mehreren Schnittstellen, die das Zertifikat Registrierungs Steuerelement darstellen. Dies ist in erster Linie von Interesse, wenn Sie keine Automatisierung verwenden.                                                                        |
-| [**Ienroll**](/windows/desktop/api/Xenroll/nn-xenroll-ienroll)                                                                 | Eine von mehreren Schnittstellen, die das Zertifikat Registrierungs Steuerelement darstellen. Die Schnittstelle ist in erster Linie von Interesse, wenn Sie keine Automatisierung verwenden.                                                             |
-| [**IEnroll2**](/windows/desktop/api/Xenroll/nn-xenroll-ienroll2)                                                               | Eine von mehreren Schnittstellen, die das Zertifikat Registrierungs Steuerelement darstellen. Die Schnittstelle ist in erster Linie von Interesse, wenn Sie keine Automatisierung verwenden.                                                             |
-| [**IEnroll4**](/windows/desktop/api/Xenroll/nn-xenroll-ienroll4)                                                               | Eine von mehreren Schnittstellen, die das Zertifikat Registrierungs Steuerelement darstellen. Die Schnittstelle ist in erster Linie von Interesse, wenn Sie keine Automatisierung verwenden.                                                             |
-| [**Iscrdenr**](iscrdenr.md)                                                               | Stellt die Smartcard-Registrierungs Steuerung dar. Dies ist in erster Linie von Interesse, wenn Sie keine Automatisierung verwenden.                                                                                                       |
+| [**ICEnroll**](/windows/desktop/api/Xenroll/nn-xenroll-icenroll)                                                               | Eine von mehreren Schnittstellen, die die Zertifikatregistrierungssteuerung darstellen. Dies ist in erster Linie dann von Interesse, wenn Sie Automation nicht verwenden.                                                                        |
+| [**ICEnroll2**](/windows/desktop/api/Xenroll/nn-xenroll-icenroll2)                                                             | Eine von mehreren Schnittstellen, die die Zertifikatregistrierungssteuerung darstellen. Dies ist in erster Linie dann von Interesse, wenn Sie Automation nicht verwenden.                                                                        |
+| [**ICEnroll3**](/windows/desktop/api/Xenroll/nn-xenroll-icenroll3)                                                             | Eine von mehreren Schnittstellen, die die Zertifikatregistrierungssteuerung darstellen. Dies ist in erster Linie dann von Interesse, wenn Sie Automation nicht verwenden.                                                                        |
+| [**ICertificateEnrollmentPolicyServerSetup**](/windows/desktop/api/Casetup/nn-casetup-icertificateenrollmentpolicyserversetup) | Stellt den CEP-Webdienst (Certificate Enrollment Policy) in Active Directory-Zertifikatdienste (ADCS) dar. Mit dem Dienst können Benutzer und Computer Informationen zur Zertifikatregistrierungsrichtlinie abrufen. |
+| [**ICertificateEnrollmentServerSetup**](/windows/desktop/api/Casetup/nn-casetup-icertificateenrollmentserversetup)             | Stellt die Zertifikatregistrierungs-Webdienst (CES) in ADCS dar. Der Dienst ermöglicht Es Benutzern und Computern, sich für Zertifikate zu registrieren und diese zu erneuern.                                                               |
+| [**ICEnroll4**](/windows/desktop/api/Xenroll/nn-xenroll-icenroll4)                                                             | Eine von mehreren Schnittstellen, die die Zertifikatregistrierungssteuerung darstellen. Dies ist in erster Linie dann von Interesse, wenn Sie Automation nicht verwenden.                                                                        |
+| [**IEnroll**](/windows/desktop/api/Xenroll/nn-xenroll-ienroll)                                                                 | Eine von mehreren Schnittstellen, die die Zertifikatregistrierungssteuerung darstellen. Die Schnittstelle ist in erster Linie von Interesse, wenn Sie automation nicht verwenden.                                                             |
+| [**IEnroll2**](/windows/desktop/api/Xenroll/nn-xenroll-ienroll2)                                                               | Eine von mehreren Schnittstellen, die die Zertifikatregistrierungssteuerung darstellen. Die Schnittstelle ist in erster Linie von Interesse, wenn Sie automation nicht verwenden.                                                             |
+| [**IEnroll4**](/windows/desktop/api/Xenroll/nn-xenroll-ienroll4)                                                               | Eine von mehreren Schnittstellen, die die Zertifikatregistrierungssteuerung darstellen. Die Schnittstelle ist in erster Linie von Interesse, wenn Sie automation nicht verwenden.                                                             |
+| [**ISCrdEnr**](iscrdenr.md)                                                               | Stellt das Smartcard-Registrierungssteuerelement dar. Dies ist in erster Linie dann von Interesse, wenn Sie Automation nicht verwenden.                                                                                                       |
 
 
 
  
 
-## <a name="capicom-interoperability-interfaces"></a>CAPICOM-Interoperabilitäts Schnittstellen
+## <a name="capicom-interoperability-interfaces"></a>CAPICOM-Interoperabilitätsschnittstellen
 
-In den folgenden Referenz Themen werden die Schnittstellen beschrieben, mit denen die Ableitung von CryptoAPI mit CAPICOM 2,0 zusammenarbeiten kann.
+In den folgenden Referenzthemen werden die Schnittstellen beschrieben, mit denen Ableitungen von CryptoAPI mit CAPICOM 2.0 zusammenarbeiten können.
 
 
 
 | Schnittstelle                              | BESCHREIBUNG                                                                                                                                                                              |
 |----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Icertcontext**](icertcontext.md)   | Bietet Zugriff auf den Kontext eines CAPICOM X. 509v3- [**Zertifikat**](certificate.md) Objekts. In diesem Kontext kann das CAPICOM-Zertifikat in anderen Ableitungen von CryptoAPI verwendet werden. |
-| [**Icertstore**](icertstore.md)       | Bietet Zugriff auf den Kontext eines CAPICOM- [**Speicher**](store.md) Objekts. In diesem Kontext kann der CAPICOM-Zertifikat Speicher in anderen Ableitungen von CryptoAPI verwendet werden.               |
-| [**Ichaincontext**](ichaincontext.md) | Bietet Zugriff auf den Kontext eines CAPICOM- [**Ketten**](chain.md) Objekts. In diesem Kontext kann die CAPICOM-Zertifikats Vertrauenskette in anderen Ableitungen von CryptoAPI verwendet werden.         |
+| [**ICertContext**](icertcontext.md)   | Bietet Zugriff auf den Kontext eines CAPICOM X.509v3 [**Certificate-Objekts.**](certificate.md) Dieser Kontext ermöglicht die Verwendung des CAPICOM-Zertifikats in anderen Ableitungen von CryptoAPI. |
+| [**ICertStore**](icertstore.md)       | Ermöglicht den Zugriff auf den [](store.md) Kontext eines CAPICOM-Store-Objekts. Dieser Kontext ermöglicht die Verwendung des CAPICOM-Zertifikatspeichers in anderen Ableitungen von CryptoAPI.               |
+| [**IChainContext**](ichaincontext.md) | Ermöglicht den Zugriff auf den Kontext eines CAPICOM [**Chain-Objekts.**](chain.md) Dieser Kontext ermöglicht die Verwendung der CAPICOM-Zertifikatvertrauenskette in anderen Ableitungen von CryptoAPI.         |
 
 
 

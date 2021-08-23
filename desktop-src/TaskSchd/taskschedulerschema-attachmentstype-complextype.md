@@ -1,9 +1,9 @@
 ---
-title: komplexer attachmentstype-Typ
-description: Definiert die Elemente, mit denen eine mit einer e-Mail-Nachricht gesendete Anlage angegeben wird.
+title: attachmentsType Complex Type
+description: Definiert die Elemente, die verwendet werden, um eine Anlage anzugeben, die mit einer E-Mail gesendet wird.
 ms.assetid: b13d9346-a28d-4362-bcfc-dc11869fb8eb
 keywords:
-- komplexer attachmentstype-Typ Taskplaner
+- attachmentsType complex type Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ce5bc25b74221112b487be58a729bffa47b8688d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0d98b266fcb15fbd47fbb2a5bb792b95e4fb765a48b2fbcf6c1185aad9475df1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119772390"
 ---
-# <a name="attachmentstype-complex-type"></a>komplexer attachmentstype-Typ
+# <a name="attachmentstype-complex-type"></a>attachmentsType Complex Type
 
-Definiert die Elemente, mit denen eine mit einer e-Mail-Nachricht gesendete Anlage angegeben wird.
+Definiert die Elemente, die verwendet werden, um eine Anlage anzugeben, die mit einer E-Mail gesendet wird.
 
 ``` syntax
 <xs:complexType name="attachmentsType">
@@ -40,9 +40,9 @@ Definiert die Elemente, mit denen eine mit einer e-Mail-Nachricht gesendete Anla
 
 
 
-| Element                                                          | type                                                                    | BESCHREIBUNG                                                                                |
+| Element                                                          | type                                                                    | Beschreibung                                                                                |
 |------------------------------------------------------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| [**Datei**](taskschedulerschema-file-attachmentstype-element.md) | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Gibt den Pfad zu einer Datei an, die als Anlage in einer e-Mail-Nachricht gesendet wird.<br/> |
+| [**Datei**](taskschedulerschema-file-attachmentstype-element.md) | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Gibt den Pfad zu einer Datei an, die als Anlage in einer E-Mail gesendet wird.<br/> |
 
 
 
@@ -52,8 +52,8 @@ Definiert die Elemente, mit denen eine mit einer e-Mail-Nachricht gesendete Anla
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

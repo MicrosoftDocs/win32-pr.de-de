@@ -1,10 +1,10 @@
 ---
-title: Tlskeypackenumbegin-Funktion
-description: Beginnt die Enumeration über alle auf einem Remotedesktop Lizenzserver installierten Schlüsselpakete auf der Grundlage von Suchkriterien.
+title: TLSKeyPackEnumBegin-Funktion
+description: Beginnt mit der Enumeration über alle Schlüsselpakete, die auf einem Remotedesktop Lizenzserver basierend auf Suchkriterien installiert sind.
 ms.assetid: 2d847fe4-66ab-42df-8213-651e14257590
 ms.tgt_platform: multiple
 keywords:
-- Tlskeypackenumbegin-Funktion Remotedesktopdienste
+- TLSKeyPackEnumBegin-Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -15,19 +15,19 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: db8f61197e3c08f5608be954a9288ea54cad5586
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 469e4e255f3bdd64749060fcb712df480a8a1f6fc3683ebb25916be44856e211
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869330"
 ---
-# <a name="tlskeypackenumbegin-function"></a>Tlskeypackenumbegin-Funktion
+# <a name="tlskeypackenumbegin-function"></a>TLSKeyPackEnumBegin-Funktion
 
-Beginnt die Enumeration über alle auf einem Remotedesktop Lizenzserver installierten Schlüsselpakete auf der Grundlage von Suchkriterien.
+Beginnt mit der Enumeration über alle Schlüsselpakete, die auf einem Remotedesktop Lizenzserver basierend auf Suchkriterien installiert sind.
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mstlsapi.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um eine dynamische Verknüpfung mit Mstlsapi.dll.
 
  
 
@@ -50,55 +50,55 @@ DWORD WINAPI TLSKeyPackEnumBegin(
 
 <dl> <dt>
 
-*hHandle* \[ in\]
+*hHandle* \[ In\]
 </dt> <dd>
 
-Handle für einen Remotedesktop-Lizenzserver. Geben Sie ein Handle an, das von der [**tlsconnecttolsserver**](tlsconnecttolsserver.md) -Funktion geöffnet wird.
+Handle für einen Remotedesktop Lizenzserver. Geben Sie ein Handle an, das von der [**TLSConnectToLsServer-Funktion geöffnet**](tlsconnecttolsserver.md) wird.
 
 </dd> <dt>
 
-*dwsearchparser* \[ in\]
+*dwSearchParm* \[ In\]
 </dt> <dd>
 
-Gibt die Suchkriterien an. Dieser Parameter ist für die zukünftige Verwendung reserviert und muss 0xFFFFFFFF enthalten.
+Gibt die Suchkriterien an. Dieser Parameter ist für die zukünftige Verwendung reserviert und muss 0xFFFFFFFF.
 
 </dd> <dt>
 
-*bmatchall* \[ in\]
+*bMatchAll* \[ In\]
 </dt> <dd>
 
-Gibt an, ob alle Suchwerte abgeglichen werden sollen.
+Gibt an, ob alle Suchwerte übereinstimmen.
 
 </dd> <dt>
 
-*lpsearchparameminm* \[ in\]
+*lpSearchParm* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**lschräypack**](lskeypack.md) -Struktur, die die Suchparameter angibt, nach denen gesucht werden soll.
+Zeiger auf eine [**LSKeyPack-Struktur,**](lskeypack.md) die die Suchparameter angibt, nach denen gesucht werden soll.
 
 </dd> <dt>
 
-*pdwerrcode* \[ vorgenommen\]
+*pdwErrCode* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die bei der Rückgabe einen der folgenden Fehlercodes empfängt.
+Zeiger auf eine Variable, die bei der Rückgabe einen der folgenden Fehlercodes empfängt.
 
 <dt>
 
 <span id="LSERVER_S_SUCCESS"></span><span id="lserver_s_success"></span>
 
-<span id="LSERVER_S_SUCCESS"></span><span id="lserver_s_success"></span>**Lserver \_ S \_ erfolgreich** (0)
+<span id="LSERVER_S_SUCCESS"></span><span id="lserver_s_success"></span>**LSERVER \_ S \_ SUCCESS** (0)
 
 
 </dt> <dd>
 
-Der-Vorgang wurde erfolgreich ausgeführt.
+Der Aufruf ist erfolgreich.
 
 </dd> <dt>
 
 <span id="LSERVER_E_INTERNAL_ERROR"></span><span id="lserver_e_internal_error"></span>
 
-<span id="LSERVER_E_INTERNAL_ERROR"></span><span id="lserver_e_internal_error"></span>**Lserver \_ Interner E- \_ \_ Fehler** (5001)
+<span id="LSERVER_E_INTERNAL_ERROR"></span><span id="lserver_e_internal_error"></span>**LSERVER \_ INTERNER \_ \_ E-FEHLER** (5001)
 
 
 </dt> <dd>
@@ -109,29 +109,29 @@ Interner Fehler auf dem Lizenzserver.
 
 <span id="LSERVER_E_INVALID_SEQUENCE"></span><span id="lserver_e_invalid_sequence"></span>
 
-<span id="LSERVER_E_INVALID_SEQUENCE"></span><span id="lserver_e_invalid_sequence"></span>**Lserver \_ E \_ ungültige \_ Reihenfolge** (5006)
+<span id="LSERVER_E_INVALID_SEQUENCE"></span><span id="lserver_e_invalid_sequence"></span>**LSERVER \_ E \_ \_ UNGÜLTIGE SEQUENZ** (5006)
 
 
 </dt> <dd>
 
-Die Aufruf Sequenz war nicht gültig. Höchstwahrscheinlich wurde eine vorherige Enumeration nicht beendet.
+Die aufrufende Sequenz war ungültig. Höchstwahrscheinlich wurde eine vorherige Enumeration nicht beendet.
 
 </dd> <dt>
 
 <span id="LSERVER_E_SERVER_BUSY"></span><span id="lserver_e_server_busy"></span>
 
-<span id="LSERVER_E_SERVER_BUSY"></span><span id="lserver_e_server_busy"></span>**Lserver \_ E- \_ Server \_ ausgelastet** (5007)
+<span id="LSERVER_E_SERVER_BUSY"></span><span id="lserver_e_server_busy"></span>**LSERVER \_ E \_ SERVER \_ AUSGELASTET** (5007)
 
 
 </dt> <dd>
 
-Der Lizenzserver ist zu stark ausgelastet, um die Anforderung zu verarbeiten.
+Der Lizenzserver ist zu ausgelastet, um die Anforderung zu verarbeiten.
 
 </dd> <dt>
 
 <span id="LSERVER_E_OUTOFMEMORY"></span><span id="lserver_e_outofmemory"></span>
 
-<span id="LSERVER_E_OUTOFMEMORY"></span><span id="lserver_e_outofmemory"></span>**Lserver \_ E \_ outo-Memory** (5008)
+<span id="LSERVER_E_OUTOFMEMORY"></span><span id="lserver_e_outofmemory"></span>**LSERVER \_ E \_ OUTOFMEMORY** (5008)
 
 
 </dt> <dd>
@@ -142,12 +142,12 @@ Die Anforderung kann aufgrund von unzureichendem Arbeitsspeicher nicht verarbeit
 
 <span id="LSERVER_E_INVALID_DATA"></span><span id="lserver_e_invalid_data"></span>
 
-<span id="LSERVER_E_INVALID_DATA"></span><span id="lserver_e_invalid_data"></span>**Lserver \_ E \_ ungültige \_ Daten** (5009)
+<span id="LSERVER_E_INVALID_DATA"></span><span id="lserver_e_invalid_data"></span>**LSERVER \_ E \_ \_ UNGÜLTIGE DATEN** (5009)
 
 
 </dt> <dd>
 
-Die Daten im Suchparameter sind ungültig.
+Daten im Suchparameter sind ungültig.
 
 </dd> </dl> </dd> </dl>
 
@@ -160,11 +160,11 @@ Diese Funktion gibt die folgenden möglichen Rückgabewerte zurück.
 **RPC \_ S \_ OK**
 </dt> <dd>
 
-Der-Befehl wurde erfolgreich ausgeführt. Überprüfen Sie den Wert des Parameters " *pdwerrcode* ", um den Rückgabecode für den-Befehl abzurufen.
+Der Aufruf war erfolgreich. Überprüfen Sie den Wert des *pdwErrCode-Parameters,* um den Rückgabecode für den Aufruf zu erhalten.
 
 </dd> <dt>
 
-**RPC \_ S \_ ungültig \_**
+**RPC \_ S \_ INVALID \_ ARG**
 </dt> <dd>
 
 Das Argument war ungültig.
@@ -187,16 +187,16 @@ Das Argument war ungültig.
 
 <dl> <dt>
 
-[**Lschräypack**](lskeypack.md)
+[**LSKeyPack**](lskeypack.md)
 </dt> <dt>
 
-[**Tlsconnecttolsserver**](tlsconnecttolsserver.md)
+[**TLSConnectToLsServer**](tlsconnecttolsserver.md)
 </dt> <dt>
 
-[**Tlskeypackenumnext**](tlskeypackenumnext.md)
+[**TLSKeyPackEnumNext**](tlskeypackenumnext.md)
 </dt> <dt>
 
-[**Tlskeypackenumend**](tlskeypackenumend.md)
+[**TLSKeyPackEnumEnd**](tlskeypackenumend.md)
 </dt> </dl>
 
  

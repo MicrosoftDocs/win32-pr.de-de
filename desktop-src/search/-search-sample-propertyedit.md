@@ -1,25 +1,25 @@
 ---
-description: Das propertyedit-Codebeispiel veranschaulicht, wie Sie den kanonischen Eigenschaftsnamen in einen PropertyKey konvertieren, den Wert des Eigenschaften Speicher auf den des Elements festlegen und die Daten zurück in den Dateistream schreiben.
+description: Im Codebeispiel PropertyEdit wird veranschaulicht, wie sie den kanonischen Eigenschaftennamen in einen PROPERTYKEY konvertieren, den Wert des Eigenschaftenspeichers auf den wert des Elements festlegen und die Daten in den Dateistream zurückschreiben.
 ms.assetid: 5918b4f6-6b6f-4229-8f29-1c41f80b3b02
 title: PropertyEdit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aa248b9e86f8ab93cccba3d5d6b169d7e8699dbb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 944419f990c8f1f8b52706dbab0b08102829e77a5bfa8a91c72a5bc16eddfa63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119944669"
 ---
 # <a name="propertyedit"></a>PropertyEdit
 
-Das propertyedit-Codebeispiel veranschaulicht, wie Sie den kanonischen Eigenschaftsnamen in einen PropertyKey konvertieren, den Wert des Eigenschaften Speicher auf den des Elements festlegen und die Daten zurück in den Dateistream schreiben.
+Im Codebeispiel PropertyEdit wird veranschaulicht, wie sie den kanonischen Eigenschaftennamen in einen PROPERTYKEY konvertieren, den Wert des Eigenschaftenspeichers auf den wert des Elements festlegen und die Daten in den Dateistream zurückschreiben.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 -   [Zugehörige Themen](#related-topics)
 
@@ -27,7 +27,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 
 
-| Produkt     | Minimale Produkt Version |
+| Product (Produkt)     | Mindestproduktversion |
 |-------------|-------------------------|
 | Windows     | Windows 7               |
 | Windows SDK | 7.0                     |
@@ -38,13 +38,13 @@ Dieses Thema enthält folgende Abschnitte:
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Dieses Beispiel ist in den folgenden Speicherorten verfügbar.
+Dieses Beispiel ist an den folgenden Speicherorten verfügbar.
 
 
 
 | Standort      | Pfad-URL                                                                  |
 |---------------|---------------------------------------------------------------------------|
-| GitHub  | [Propertyedit-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/PropertyEdit)    |
+| GitHub  | [PropertyEdit-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/PropertyEdit)    |
 
 
 
@@ -53,53 +53,53 @@ Dieses Beispiel ist in den folgenden Speicherorten verfügbar.
  
 
 > [!Note]  
-> Für alle Versionen von Windows, einschließlich Windows 7, empfiehlt es sich, die Beispiele direkt von GitHub für die aktuellste Version herunterzuladen.
+> Für alle Versionen von Windows, einschließlich Windows 7, wird empfohlen, die Beispiele für die aktuelle Version direkt von GitHub herunterzuladen.
 
  
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-So erstellen Sie das Beispiel von der Eingabeaufforderung aus:
+So erstellen Sie das Beispiel über die Eingabeaufforderung:
 
-1.  Öffnen Sie das Eingabe Aufforderungs Fenster, und navigieren Sie zum Projektverzeichnis **propertyedit** . 
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum **Projektverzeichnis PropertyEdit.** 
 2.  Geben Sie `msbuild PropertyEdit.sln` ein.
 
-So erstellen Sie das Beispiel mithilfe Microsoft Visual Studio (bevorzugt):
+So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt):
 
-1.  Öffnen Sie Windows-Explorer, und navigieren Sie zum Projektverzeichnis **propertyedit** .
-2.  Doppelklicken Sie auf das Symbol für die Datei propertyedit. sln, um das Projekt in Visual Studio zu öffnen.
+1.  Öffnen Windows Explorer, und navigieren Sie zum **Projektverzeichnis PropertyEdit.**
+2.  Doppelklicken Sie auf das Symbol für die Datei PropertyEdit.sln, um das Projekt in Visual Studio.
     > [!Note]  
-    > Die Dateinamenerweiterung. sln wird unter den Standardordner Einstellungen nicht angezeigt. In dieser Situation kann Sie durch das eindeutige Symbol oder durch die Typbeschreibung "Microsoft Visual Studio Lösung" identifiziert werden.
+    > Die Dateierweiterung SLN wird unter den Standardordnereinstellungen nicht angezeigt. In diesem Fall kann er anhand seines eindeutigen Symbols oder seiner Typbeschreibung "Microsoft Visual Studio identifiziert werden.
 
      
 
-3.  Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus.
+3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen).
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-1.  Navigieren Sie mit dem Eingabe Aufforderungs Fenster oder Windows-Explorer zu dem Verzeichnis, das die neue ausführbare Datei enthält.
-2.  Geben Sie an der Eingabeaufforderung ein, `PropertyEdit.exe` oder Doppelklicken Sie in Windows-Explorer auf das Symbol für PropertyEdit.exe.
+1.  Navigieren Sie zum Verzeichnis, das die neue ausführbare Datei enthält, indem Sie das Eingabeaufforderungsfenster oder den Windows verwenden.
+2.  Geben Sie an der Eingabeaufforderung ein, oder doppelklicken Sie Windows Explorer auf das Symbol `PropertyEdit.exe` für PropertyEdit.exe.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Code Beispiele durchsuchen](-search-samples-ovw.md)
+[Suchcodebeispiele](-search-samples-ovw.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
+[**Ipropertystore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 </dt> <dt>
 
-[Informationen zu Eigenschaften und Eigenschaften Handlern](../properties/building-property-handlers-properties.md)
+[Informationen zu Eigenschaften und Eigenschaftenhandlern](../properties/building-property-handlers-properties.md)
 </dt> <dt>
 
-[Eigenschafts Beschreibungs Schema](/previous-versions//cc144127(v=vs.85))
+[Schema der Eigenschaftenbeschreibung](/previous-versions//cc144127(v=vs.85))
 </dt> </dl>
 
  

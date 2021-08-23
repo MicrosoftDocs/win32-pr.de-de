@@ -36,7 +36,7 @@ Das **Wiederholungselement** wird durch den komplexen [**TriggerBaseType-Typ**](
 
 
 
-| Element                                                                                     | Abgeleitet von                                                                               | BESCHREIBUNG                                                                                  |
+| Element                                                                                     | Abgeleitet von                                                                               | Beschreibung                                                                                  |
 |---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
 | [**BootTrigger**](taskschedulerschema-boottrigger-triggergroup-element.md)                 | [**bootTriggerType**](taskschedulerschema-boottriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn das System gestartet wird.<br/>                 |
 | [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md)         | [**calendarTriggerType**](taskschedulerschema-calendartriggertype-complextype.md)         | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen DOW-Trigger (Day-of-the-Week) an.<br/>   |
@@ -52,7 +52,7 @@ Das **Wiederholungselement** wird durch den komplexen [**TriggerBaseType-Typ**](
 
 
 
-| Element                                                                                   | type     | BESCHREIBUNG                                                                                                         |
+| Element                                                                                   | Typ     | Beschreibung                                                                                                         |
 |-------------------------------------------------------------------------------------------|----------|---------------------------------------------------------------------------------------------------------------------|
 | [**Duration**](taskschedulerschema-duration-repetitiontype-element.md)                   | duration | Gibt an, wie lange das Muster wiederholt wird.<br/>                                                              |
 | [**Intervall**](taskschedulerschema-interval-repetitiontype-element.md)                   | duration | Gibt die Zeitspanne zwischen jedem Neustart der Aufgabe an.<br/>                                           |
@@ -113,7 +113,7 @@ Der folgende XML-Code definiert ein Starttriggerelement, das ein Wiederholungsmu
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

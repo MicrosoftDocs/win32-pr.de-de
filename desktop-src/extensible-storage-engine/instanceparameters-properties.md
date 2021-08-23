@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie unter InstanceParameters-Eigenschaften.
+description: 'Weitere Informationen zu: InstanceParameters-Eigenschaften'
 title: InstanceParameters-Eigenschaften
 TOCTitle: InstanceParameters properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.InstanceParameters
@@ -16,8 +16,8 @@ ms.locfileid: "119721160"
 ---
 # <a name="instanceparameters-properties"></a>InstanceParameters-Eigenschaften
 
-Geschützte Member enthalten  
-Geerbte Member enthalten  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 Der [InstanceParameters-Typ](./instanceparameters-class.md) macht die folgenden Member verfügbar.
 
@@ -28,44 +28,44 @@ Der [InstanceParameters-Typ](./instanceparameters-class.md) macht die folgenden 
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350971(v=exchg.10).md">AlternateDatabaseRecoveryDirectory</a></td>
-<td>Ruft den relativen oder absoluten Dateisystempfad eines Ordners ab, in dem die Absturzwiederherstellung oder ein Wiederherstellungsvorgang die Datenbanken finden kann, auf die im Transaktionsprotokoll im angegebenen Ordner verwiesen wird, oder legt diesen fest.</td>
+<td>Ruft den relativen oder absoluten Dateisystempfad eines Ordners ab, in dem die Absturzwiederherstellung oder ein Wiederherstellungsvorgang die Datenbanken finden kann, auf die im Transaktionsprotokoll im angegebenen Ordner verwiesen wird, oder legt den Pfad fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350972(v=exchg.10).md">Basename</a></td>
-<td>Ruft das Präfix mit drei Buchstaben ab, das für viele der von der Datenbank-Engine verwendeten Dateien verwendet wird, oder legt dieses fest. Die Prüfpunktdatei heißt beispielsweise EDB. CHK ist standardmäßig der Standardbasisname, da EDB der Standardbasisname ist.</td>
+<td>Ruft das Präfix mit drei Buchstaben ab, das für viele der von der Datenbank-Engine verwendeten Dateien verwendet wird, oder legt dieses fest. Die Prüfpunktdatei heißt beispielsweise EDB. CHK standardmäßig, da EDB der Standardbasisname ist.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350951(v=exchg.10).md">CachedClosedTables</a></td>
-<td>Ruft einen Wert ab, der die Anzahl der B+-Strukturressourcen an gibt, die von der -Instanz zwischengespeichert werden, nachdem die tabellen, die sie darstellen, von der Anwendung geschlossen wurden, oder legt einen Wert fest. Große Werte für diesen Parameter führen dazu, dass die Datenbank-Engine mehr Arbeitsspeicher verwendet, erhöht jedoch die Geschwindigkeit, mit der eine große Anzahl von Tabellen nach dem Zufallsprinzip von der Anwendung geöffnet werden kann. Dies ist nützlich für Anwendungen, die über ein Schema mit einer sehr großen Anzahl von Tabellen verfügen. Wird unter Windows Vista und up unterstützt. Wird auf Windows XP und Windows Server 2003 ignoriert.</td>
+<td>Ruft einen Wert ab, der die Anzahl der von der Instanz zwischengespeicherten B+-Strukturressourcen angibt, nachdem die von ihnen dargestellten Tabellen von der Anwendung geschlossen wurden, oder legt diesen fest. Große Werte für diesen Parameter bewirken, dass die Datenbank-Engine mehr Arbeitsspeicher verwendet, erhöht jedoch die Geschwindigkeit, mit der eine große Anzahl von Tabellen von der Anwendung nach dem Zufallsprinzip geöffnet werden kann. Dies ist nützlich für Anwendungen, die über ein Schema mit einer sehr großen Anzahl von Tabellen verfügen. Wird ab Windows Vista unterstützt. Wird auf Windows XP und Windows Server 2003 ignoriert.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350974(v=exchg.10).md">CachePriority</a></td>
-<td>Ruft die Pro-Instanz-Eigenschaft für relative Cacheprioritäten ab (Standardwert = 100) oder legt diese fest.</td>
+<td>Ruft die Instanzeigenschaft für relative Cacheprioritäten ab (Standardwert = 100), oder legt sie fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350953(v=exchg.10).md">CheckpointDepthMax</a></td>
-<td>Ruft den Schwellenwert in Bytes ab, um zu erfahren, wie viele Transaktionsprotokolldateien nach einem Absturz wiedergegeben werden müssen, oder legt den Schwellenwert fest. Wenn die zirkuläre Protokollierung mit CircularLog aktiviert ist, kontrolliert dieser Parameter auch die ungefähre Menge an Transaktionsprotokolldateien, die auf dem Datenträger beibehalten werden.</td>
+<td>Ruft den Schwellenwert in Bytes ab, der angibt, wie viele Transaktionsprotokolldateien nach einem Absturz wiedergegeben werden müssen, oder legt diesen fest. Wenn die zirkuläre Protokollierung mit CircularLog aktiviert ist, steuert dieser Parameter auch die ungefähre Menge der Transaktionsprotokolldateien, die auf dem Datenträger beibehalten werden.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350977(v=exchg.10).md">CircularLog</a></td>
-<td>Ruft einen Wert ab, der angibt, ob die zirkuläre Protokollierung aktiviert ist, oder legt einen Wert fest. Wenn die zirkuläre Protokollierung deaktiviert ist, werden alle generierten Transaktionsprotokolldateien auf dem Datenträger beibehalten, bis sie nicht mehr benötigt werden, da eine vollständige Sicherung der Datenbank durchgeführt wurde. Wenn die zirkuläre Protokollierung aktiviert ist, werden nur Transaktionsprotokolldateien, die vor dem aktuellen Prüfpunkt liegen, auf dem Datenträger beibehalten. Der Vorteil dieses Modus ist, dass Sicherungen nicht erforderlich sind, um alte Transaktionsprotokolldateien abwiederherstellen zu können.</td>
+<td>Ruft einen Wert ab, der angibt, ob die zirkuläre Protokollierung eingeschaltet ist, oder legt einen Wert fest. Wenn die zirkuläre Protokollierung deaktiviert ist, werden alle generierten Transaktionsprotokolldateien auf dem Datenträger beibehalten, bis sie nicht mehr benötigt werden, da eine vollständige Sicherung der Datenbank durchgeführt wurde. Wenn die zirkuläre Protokollierung aktiviert ist, werden nur Transaktionsprotokolldateien, die älter als der aktuelle Prüfpunkt sind, auf dem Datenträger beibehalten. Der Vorteil dieses Modus besteht darin, dass sicherungen nicht erforderlich sind, um alte Transaktionsprotokolldateien abzumelden.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350955(v=exchg.10).md">CleanupMismatchedLogFiles</a></td>
-<td>Ruft einen Wert ab, der angibt, ob JetInit fehlschlägt, wenn die Datenbank-Engine so konfiguriert ist, dass transaktionsprotokolldateien auf einem Datenträger verwendet werden, die eine andere Größe als die konfigurierte haben, oder legt diesen fest. Normalerweise stellt <a href="dn292210(v=exchg.10).md">JetInit(JET_INSTANCE)</a> die Datenbanken erfolgreich wieder auf, aber mit <a href="hh564840(v=exchg.10).md">LogFileSizeMismatchDatabasesConsistent</a> wird ein Fehler angezeigt, um anzugeben, dass die Größe der Protokolldatei falsch konfiguriert ist. Wenn dieser Parameter jedoch auf TRUE festgelegt ist, löscht die Datenbank-Engine automatisch alle alten Protokolldateien und startet einen neuen Satz von Transaktionsprotokolldateien unter Verwendung der konfigurierten Protokolldateigröße. Dieser Parameter ist nützlich, wenn die Anwendung die Größe der Transaktionsprotokolldatei transparent ändern möchte, aber in Upgrade- und Wiederherstellungsszenarien weiterhin transparent funktioniert.</td>
+<td>Ruft einen Wert ab, der angibt, ob JetInit fehlschlägt, wenn die Datenbank-Engine für die Verwendung von Transaktionsprotokolldateien auf datenträgern konfiguriert ist, die eine andere Größe als die konfigurierte aufweisen, oder legt diesen fest. Normalerweise stellt <a href="dn292210(v=exchg.10).md">JetInit(JET_INSTANCE)</a> die Datenbanken erfolgreich wieder her, schlägt jedoch mit <a href="hh564840(v=exchg.10).md">LogFileSizeMismatchDatabasesConsistent</a> fehl, um anzugeben, dass die Größe der Protokolldatei falsch konfiguriert ist. Wenn dieser Parameter jedoch auf TRUE festgelegt ist, löscht die Datenbank-Engine im Hintergrund alle alten Protokolldateien. Starten Sie mithilfe der konfigurierten Protokolldateigröße einen neuen Satz von Transaktionsprotokolldateien. Dieser Parameter ist nützlich, wenn die Anwendung die Größe der Transaktionsprotokolldatei transparent ändern möchte, in Upgrade- und Wiederherstellungsszenarien aber trotzdem transparent funktioniert.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
@@ -75,17 +75,17 @@ Der [InstanceParameters-Typ](./instanceparameters-class.md) macht die folgenden 
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350957(v=exchg.10).md">DbExtensionSize</a></td>
-<td>Ruft die Anzahl der Seiten ab, die einer Datenbankdatei jedes Mal hinzugefügt werden, wenn sie größer werden muss, um mehr Daten aufnehmen zu können, oder legt diese fest.</td>
+<td>Ruft die Anzahl der Seiten ab, die einer Datenbankdatei jedes Mal hinzugefügt werden, wenn sie vergrößert werden muss, um mehr Daten aufzunehmen, oder legt diese fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350980(v=exchg.10).md">DbScanIntervalMaxSec</a></td>
-<td>Ruft das maximale Intervall in Sekunden ab, in dem der Datenbankscan abgeschlossen werden kann, oder legt dieses fest.</td>
+<td>Ruft das maximale Intervall in Sekunden ab, mit dem der Datenbankscan abgeschlossen werden kann, oder legt dieses fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350959(v=exchg.10).md">DbScanIntervalMinSec</a></td>
-<td>Ruft das minimale Intervall zum Wiederholen des Datenbankscans in Sekunden ab oder legt dieses fest.</td>
+<td>Ruft das minimale Intervall für die Wiederholung des Datenbankscans in Sekunden ab oder legt dieses fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
@@ -95,17 +95,17 @@ Der [InstanceParameters-Typ](./instanceparameters-class.md) macht die folgenden 
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350961(v=exchg.10).md">EnableDbScanInRecovery</a></td>
-<td>Ruft einen Wert ab, der angibt, ob die Datenbankwartung während der Wiederherstellung ausgeführt werden soll, oder legt diesen fest.</td>
+<td>Ruft einen Wert ab, der angibt, ob die Datenbankwartung während der Wiederherstellung ausgeführt werden soll, oder legt einen Wert fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350984(v=exchg.10).md">EnableDBScanSerialization</a></td>
-<td>Ruft einen Wert ab, der angibt, ob die Datenbankwartungsserialisierung für Datenbanken aktiviert ist, die denselben Datenträger gemeinsam nutzen, oder legt diesen fest.</td>
+<td>Ruft einen Wert ab, der angibt, ob die Serialisierung der Datenbankwartung für Datenbanken aktiviert ist, die denselben Datenträger gemeinsam nutzen, oder legt den Wert fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350986(v=exchg.10).md">EnableIndexChecking</a></td>
-<td>Ruft einen Wert ab, der angibt, ob <a href="dn292096(v=exchg.10).md">JetAttachDatabase(JET_SESID, String, AttachDatabaseGrbit)</a> auf Indizes überprüft, die mit einer älteren Version der NLS-Bibliothek im Betriebssystem erstellt wurden, oder legt diesen fest.</td>
+<td>Ruft einen Wert ab, der angibt, ob <a href="dn292096(v=exchg.10).md">JetAttachDatabase(JET_SESID, String, AttachDatabaseGrbit)</a> nach Indizes sucht, die mit einer älteren Version der NLS-Bibliothek im Betriebssystem erstellt wurden, oder legt diesen fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
@@ -115,32 +115,32 @@ Der [InstanceParameters-Typ](./instanceparameters-class.md) macht die folgenden 
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350988(v=exchg.10).md">EventSource</a></td>
-<td>Ruft eine anwendungsspezifische Zeichenfolge ab, die allen Ereignisprotokollmeldungen hinzugefügt wird, die von der Datenbank-Engine ausgegeben werden, oder legt diese fest. Dies ermöglicht eine einfache Korrelation von Ereignisprotokollmeldungen mit der Quellanwendung. Standardmäßig wird der Name der ausführbaren Hostanwendung verwendet.</td>
+<td>Ruft eine anwendungsspezifische Zeichenfolge ab, die allen Ereignisprotokollmeldungen hinzugefügt wird, die von der Datenbank-Engine ausgegeben werden, oder legt diese fest. Dies ermöglicht eine einfache Korrelation von Ereignisprotokollmeldungen mit der Quellanwendung. Standardmäßig wird der ausführbare Name der Hostanwendung verwendet.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350966(v=exchg.10).md">EventSourceKey</a></td>
-<td>Ruft den Namen des Ereignisprotokolls ab, das die Datenbank-Engine für die Ereignisprotokollmeldungen verwendet, oder legt diesen fest. Standardmäßig werden alle Ereignisprotokollmeldungen an das Anwendungsereignisprotokoll gesendet. Wenn der Registrierungsschlüsselname für ein anderes Ereignisprotokoll konfiguriert ist, werden stattdessen die Ereignisprotokollmeldungen dort angezeigt.</td>
+<td>Ruft den Namen des Ereignisprotokolls ab, das die Datenbank-Engine für die Ereignisprotokollmeldungen verwendet, oder legt dieses fest. Standardmäßig werden alle Ereignisprotokollmeldungen an das Anwendungsereignisprotokoll geleitet. Wenn der Registrierungsschlüsselname für ein anderes Ereignisprotokoll konfiguriert ist, werden die Ereignisprotokollmeldungen stattdessen dorthin verschoben.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350968(v=exchg.10).md">LogBuffers</a></td>
-<td>Ruft die Arbeitsspeichermenge ab, die zum Zwischenspeichern von Protokolldatensätzen verwendet wird, bevor sie in die Transaktionsprotokolldatei geschrieben werden, oder legt diese fest. Die Einheit für diesen Parameter ist die Sektorgröße des Volumes, das die Transaktionsprotokolldateien enthält. Die Sektorgröße beträgt fast immer 512 Bytes, daher ist es sicher, diese Größe für die Einheit vorauszugehen. Dieser Parameter wirkt sich auf die Leistung aus. Wenn die Datenbank-Engine stark aktualisiert wird, kann dieser Puffer sehr schnell voll werden. Eine größere Cachegröße für die Transaktionsprotokolldatei ist entscheidend für eine gute Updateleistung unter einer solchen hohen Auslastungsbedingung. Es ist bekannt, dass der Standardwert für diesen Fall zu klein ist. Legen Sie diesen Parameter nicht auf eine Anzahl von Puffern fest, die größer (in Bytes) als die Hälfte der Größe einer Transaktionsprotokolldatei sind.</td>
+<td>Ruft den Arbeitsspeicher ab, der zum Zwischenspeichern von Protokolldatensätzen verwendet wird, bevor sie in die Transaktionsprotokolldatei geschrieben werden, oder legt diesen fest. Die Einheit für diesen Parameter ist die Sektorgröße des Volumes, das die Transaktionsprotokolldateien enthält. Die Sektorgröße beträgt fast immer 512 Bytes, daher ist es sicher, diese Größe für die Einheit anzunehmen. Dieser Parameter wirkt sich auf die Leistung aus. Wenn die Datenbank-Engine stark ausgelastet ist, kann dieser Puffer sehr schnell voll werden. Eine größere Cachegröße für die Transaktionsprotokolldatei ist entscheidend für eine gute Updateleistung unter einem solchen hohen Auslastungszustand. Der Standardwert ist für diesen Fall bekanntlich zu klein. Legen Sie diesen Parameter nicht auf eine Anzahl von Puffern fest, die größer (in Bytes) als die Hälfte der Größe einer Transaktionsprotokolldatei ist.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350991(v=exchg.10).md">LogFileDirectory</a></td>
-<td>Ruft den relativen oder absoluten Dateisystempfad des Ordners ab, der die Transaktionsprotokolle für die Instanz enthalten soll, oder legt diesen fest.</td>
+<td>Ruft den relativen oder absoluten Dateisystempfad des Ordners ab, der die Transaktionsprotokolle für die Instanz enthält, oder legt diesen fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350969(v=exchg.10).md">LogFileSize</a></td>
-<td>Ruft die Größe der Transaktionsprotokolldateien ab oder legt diese fest. Dieser Parameter sollte in Einheiten von 1.024 Bytes festgelegt werden (z. B. gibt eine Einstellung von 2048 2 MB Protokolldateien an).</td>
+<td>Ruft die Größe der Transaktionsprotokolldateien ab oder legt diese fest. Dieser Parameter sollte in Einheiten von 1.024 Byte festgelegt werden (z.B. gibt eine Einstellung von 2048 2 MB Protokolldateien).</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn350993(v=exchg.10).md">MaxCursors</a></td>
-<td>Ruft die Anzahl der für diese Instanz reservierten Cursorressourcen ab oder legt diese fest. Eine Cursorressource entspricht direkt einem JET_TABLEID.</td>
+<td>Ruft die Anzahl der cursor-Ressourcen ab, die für diese Instanz reserviert sind, oder legt diese fest. Eine Cursorressource entspricht direkt einem JET_TABLEID.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
@@ -223,7 +223,7 @@ Der [InstanceParameters-Typ](./instanceparameters-class.md) macht die folgenden 
 
 Oben
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

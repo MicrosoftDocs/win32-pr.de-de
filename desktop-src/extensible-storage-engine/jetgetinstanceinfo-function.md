@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: jetgetinstancinput Info-Funktion'
-title: Jetgetinstancinput Info-Funktion
+description: Weitere Informationen finden Sie unter JetGetInstanceInfo-Funktion.
+title: JetGetInstanceInfo-Funktion
 TOCTitle: JetGetInstanceInfo Function
 ms:assetid: ffccdac0-3631-4753-876a-90ddfdd0252f
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294149(v=EXCHG.10)
@@ -20,23 +20,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b8c8e9a279f536622cfdfccb8bc8882914aeee64
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6db8dce5861f6b75590becf2fd8ce3da112d09ae9d01e6e7514043fa47241861
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866824"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119849980"
 ---
-# <a name="jetgetinstanceinfo-function"></a>Jetgetinstancinput Info-Funktion
+# <a name="jetgetinstanceinfo-function"></a>JetGetInstanceInfo-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetgetinstanceinfo-function"></a>Jetgetinstancinput Info-Funktion
+## <a name="jetgetinstanceinfo-function"></a>JetGetInstanceInfo-Funktion
 
-Die **jetgetinstanceinfo** -Funktion Ruft Informationen zu den Instanzen ab, die ausgeführt werden.
+Die **JetGetInstanceInfo-Funktion** ruft Informationen zu den ausgeführten Instanzen ab.
 
-**Windows XP: jetgetinstanceinfo** wird in Windows XP eingeführt.
+**Windows XP: JetGetInstanceInfo** wird in Windows XP eingeführt.
 
 ```cpp
     JET_ERR JET_API JetGetInstanceInfo(
@@ -47,17 +47,17 @@ Die **jetgetinstanceinfo** -Funktion Ruft Informationen zu den Instanzen ab, die
 
 ### <a name="parameters"></a>Parameter
 
-*pcinstanceingefo*
+*pcInstanceInfo*
 
-Ein Zeiger auf einen Puffer, der die Anzahl der in " *painstanceinfo*" gespeicherten Elemente empfängt.
+Ein Zeiger auf einen Puffer, der die Anzahl der in *paInstanceInfo gespeicherten Elemente erhält.*
 
-*painstanceingefo*
+*paInstanceInfo*
 
-Ein Zeiger auf einen Puffer, der die Adresse des ersten Elements eines Arrays von-Strukturen empfängt.
+Ein Zeiger auf einen Puffer, der die Adresse des ersten Elements eines Arrays von Strukturen erhält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR-Datentyp](./jet-err.md) mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -77,24 +77,24 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </tr>
 <tr class="even">
 <td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der angegebenen Parameter enthielt einen unerwarteten Wert oder enthielt einen Wert, der nicht sinnvoll war, wenn er mit dem Wert eines anderen Parameters kombiniert wurde. Dieser Fehler wird von <strong>jetgetinstanceingefo</strong> zurückgegeben, wenn Folgendes gilt:</p>
+<td><p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dieser Fehler wird von <strong>JetGetInstanceInfo zurückgegeben, wenn:</strong></p>
 <ul>
-<li><p><em>pcinstanceingefo</em> oder <em>painstanceingefo</em> ist NULL.</p></li>
+<li><p><em>pcInstanceInfo oder</em> <em>paInstanceInfo sind</em> NULL.</p></li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errOutOfMemory</p></td>
-<td><p>Es ist nicht genügend Arbeitsspeicher vorhanden, um die Anforderung zu verarbeiten.</p></td>
+<td><p>Es ist nicht genügend Arbeitsspeicher verfügbar, um die Anforderung zu verarbeiten.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Die Datenbank-Engine weist ein Array von [JET_INSTANCE_INFO](./jet-instance-info-structure.md) Strukturen zu. Der Aufrufer ist dafür verantwortlich, diesen Arbeitsspeicher mit [jetfrebuffer](./jetfreebuffer-function.md)freizugeben.
+Die Datenbank-Engine ordnet ein Array [von](./jet-instance-info-structure.md) JET_INSTANCE_INFO zu. Der Aufrufer ist dafür verantwortlich, diesen Arbeitsspeicher mit [JetFreeBuffer frei zu geben.](./jetfreebuffer-function.md)
 
-Wenn keine aktiven Instanzen vorhanden sind, gibt **jetgetinstanceinfo** JET_errSuccess zurück, und *pcinstanceinfo* erhält den Wert 0.
+Wenn keine aktiven Instanzen verfügbar sind, gibt **JetGetInstanceInfo** JET_errSuccess zurück, *und pcInstanceInfo* erhält den Wert 0.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -114,19 +114,19 @@ Wenn keine aktiven Instanzen vorhanden sind, gibt **jetgetinstanceinfo** JET_err
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetgetinstancin Fow</strong> (Unicode) und <strong>jetgetinstanceingefoa</strong> (ANSI).</p></td>
+<td><p>Wird als <strong>JetGetInstanceInfoW</strong> (Unicode) und <strong>JetGetInstanceInfoA</strong> (ANSI) implementiert.</p></td>
 </tr>
 </tbody>
 </table>
@@ -137,4 +137,4 @@ Wenn keine aktiven Instanzen vorhanden sind, gibt **jetgetinstanceinfo** JET_err
 [JET_ERR](./jet-err.md)  
 [JET_INSTANCE](./jet-instance.md)  
 [JET_INSTANCE_INFO](./jet-instance-info-structure.md)  
-[Jetfrebuffer](./jetfreebuffer-function.md)
+[JetFreeBuffer](./jetfreebuffer-function.md)

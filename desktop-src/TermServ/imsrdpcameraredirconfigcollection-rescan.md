@@ -1,11 +1,11 @@
 ---
 title: IMsRdpCameraRedirConfigCollection Rescan-Methode
-description: Listet verbundene Kamerageräte auf.
+description: Aufzählt verbundene Kamerageräte.
 ms.tgt_platform: multiple
 keywords:
-- Rescan-Methode Remotedesktopdienste
-- Rescan-Methode Remotedesktopdienste, imsrdpcameraredirconfigcollection-Schnittstelle
-- Imsrdpcameraredirconfigcollection-Schnittstelle Remotedesktopdienste, Rescan-Methode
+- Erneutes Einscannen Remotedesktopdienste
+- Erneutes Einscannen Remotedesktopdienste, IMsRdpCameraRedirConfigCollection-Schnittstelle
+- IMsRdpCameraRedirConfigCollection-Remotedesktopdienste, Rescan-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 12/16/2020
-ms.openlocfilehash: 3e615afa5f534c7e8fb71a88a5113782ba42da0e
-ms.sourcegitcommit: 04e801237156e90b48111d60bddf437f87f5cdfe
+ms.openlocfilehash: cb2cef653d99ab6727f56f4ed1281b02956a4466108eedfe096977f3fbb4a48b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "106345975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119771820"
 ---
-# <a name="imsrdpcameraredirconfigcollectionrescan-method"></a>Imsrdpcameraredirconfigcollection:: Rescan-Methode
+# <a name="imsrdpcameraredirconfigcollectionrescan-method"></a>IMsRdpCameraRedirConfigCollection::Rescan-Methode
 
-Listet verbundene Kamerageräte auf.
+Aufzählt verbundene Kamerageräte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** wenn erfolgreich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,9 +48,9 @@ Gibt **\_ OK** zurück, wenn erfolgreich.
 | Unterstützte Mindestversion (Client)| Windows 10, Version 1803 (Build 17134)      |
 | Typbibliothek            | MsTscAx.dll                        |
 | DLL                  | MsTscAx.dll     |
-| IID                      | IID \_ imsrdpcameraredirconfigcollection ist als AE45252B-aaab-4504-B681-649d6073a37a definiert.          |
+| IID                      | IID \_ IMsRdpCameraRedirConfigCollection ist als AE45252B-AAAB-4504-B681-649D6073A37A definiert.          |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-title: dcl_samplerType (sm2, sm3 – ps asm)
-description: Deklarieren Sie einen Pixelshader-Sampler.
+title: dcl_samplerType (sm2, sm3 - ps asm)
+description: Deklarieren Sie einen Pixel-Shader-Sampler.
 ms.assetid: c90ff5b6-f89a-4993-8a5d-dbbc4a7896b0
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 7a6da220e50b43ce990c090c61d1caf84afec653
-ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
+ms.openlocfilehash: 764c3b992cd248a8900c3762c7c9e68abd3bed973ca4f7d44b1705122984f321
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113129667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119726740"
 ---
-# <a name="dcl_samplertype-sm2-sm3---ps-asm"></a>dcl \_ samplerType (sm2, sm3 – ps asm)
+# <a name="dcl_samplertype-sm2-sm3---ps-asm"></a>dcl \_ samplerType (sm2, sm3 - ps asm)
 
-Deklarieren Sie einen Pixelshader-Sampler.
+Deklarieren Sie einen Pixel-Shader-Sampler.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,17 +30,17 @@ dcl \_ samplerType s\#
 
 Dabei gilt:
 
--   \_samplerType definiert den Samplerdatentyp. Dadurch wird bestimmt, wie viele Koordinaten für jede Texturkoordinate beim Sampling erforderlich sind. Die folgenden Texturkoordinatendimensionen sind definiert.
+-   \_samplerType definiert den Samplerdatentyp. Dadurch wird bestimmt, wie viele Koordinaten für jede Texturkoordinate bei der Stichprobenentnahme erforderlich sind. Die folgenden Texturkoordinatendimensionen werden definiert.
     -   \_2d
     -   \_Cube
     -   \_Volumen
--   s \# identifiziert einen Sampler, wobei s eine Abkürzung für den Sampler \# und die Samplernummer ist. Sampler sind Pseudoregister, da Sie sie nicht direkt lesen oder schreiben können.
+-   s \# identifiziert einen Sampler, wobei s eine Abkürzung für den Sampler und \# die Samplernummer ist. Sampler sind Pseudoregister, da Sie sie nicht direkt lesen oder schreiben können.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | dcl \_ samplerType      |      |      |      |      | x    | x    | x     | x    | x     |
 
@@ -68,7 +68,7 @@ texld r0, s0, r0; // Load r0 with a color sampled from stage0
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

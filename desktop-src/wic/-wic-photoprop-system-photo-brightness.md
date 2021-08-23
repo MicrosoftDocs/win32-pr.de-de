@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. Brightness-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Photo.Brightness-Eigenschaft.
 ms.assetid: 3fd73845-f1d9-468c-abf8-081109880974
-title: System. Photo. Helligkeit Photo-metadatenrichtlinie
+title: System.Photo.Brightness Photo Metadata Policy
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: acd7328b4d40b8d1582dcc17b317b706b2695c73
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a78549d86d50f9b48359932698b02c827bd454a439476f2dc82627e4aab21d25
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119882060"
 ---
-# <a name="systemphotobrightness-photo-metadata-policy"></a>System. Photo. Helligkeit Photo-metadatenrichtlinie
+# <a name="systemphotobrightness-photo-metadata-policy"></a>System.Photo.Brightness Photo Metadata Policy
 
-Die fotometadatenrichtlinie für die [System. Photo. Brightness](../properties/props-system-photo-aperture.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Photo.Brightness-Eigenschaft.](../properties/props-system-photo-aperture.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Foto \_ Helligkeit
+PKEY \_ Photo \_ Brightness
 
 ### <a name="containers"></a>Container
 
@@ -31,46 +31,46 @@ Ja
 
 Double
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Dieser Wert wird von "System. Photo. aperturenumerator" und "System. Photo. aperturenenner" generiert. Sie kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas sind abgestimmt.
+Dieser Wert wird von System.Photo.ApertureNumerator und System.Photo.ApertureDenominator generiert. Sie kann nicht direkt geschrieben werden. Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 37379} |             |
-| 2     | /XMP/EXIF: brightnessvalue     |             |
+| 1     | /app1/ifd/exif/{ushort=37379} |             |
+| 2     | /xmp/exif:BrightnessValue     |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 37379} |             |
-| 2     | /XMP/EXIF: brightnessvalue     |             |
+| 1     | /app1/ifd/exif/{ushort=37379} |             |
+| 2     | /xmp/exif:BrightnessValue     |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /App1/IFD/EXIF/{ushort = 37379} |
-| 2     | /XMP/EXIF: brightnessvalue     |
+| 1     | /app1/ifd/exif/{ushort=37379} |
+| 2     | /xmp/exif:brightnessvalue     |
 
 
 
@@ -78,52 +78,52 @@ Dieser Wert wird von "System. Photo. aperturenumerator" und "System. Photo. aper
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 37379}      |             |
-| 2     | /IFD/XMP/EXIF: brightnessvalue |             |
+| 1     | /ifd/exif/{ushort=37379}      |             |
+| 2     | /ifd/xmp/exif:BrightnessValue |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 37379}      |             |
-| 2     | /IFD/XMP/EXIF: brightnessvalue |             |
+| 1     | /ifd/exif/{ushort=37379}      |             |
+| 2     | /ifd/xmp/exif:BrightnessValue |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /IFD/EXIF/{ushort = 37379}      |
-| 2     | /IFD/XMP/EXIF: brightnessvalue |
+| 1     | /ifd/exif/{ushort=37379}      |
+| 2     | /ifd/xmp/exif:brightnessvalue |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. Helligkeit](../properties/props-system-photo-aperture.md)
+[System.Photo.Brightness](../properties/props-system-photo-aperture.md)
 </dt> </dl>
 
  

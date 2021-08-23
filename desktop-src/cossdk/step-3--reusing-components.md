@@ -1,49 +1,49 @@
 ---
-description: 'Schritt 3: wieder verwenden von Komponenten'
+description: 'Schritt 3: Wiederverwenden von Komponenten'
 ms.assetid: d9c14cf8-5bc9-4a6c-9421-c16c3f41b10d
-title: 'Schritt 3: wieder verwenden von Komponenten'
+title: 'Schritt 3: Wiederverwenden von Komponenten'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 06f44446ee20baa6dc8c947ef0650f4478847a1c
-ms.sourcegitcommit: bf526e267d3991892733bdd229c66d5365cf244a
+ms.openlocfilehash: 9cf500746e7c9052a421691299903437e129108405b49c7753a841e8ca505518
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "104559992"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119895809"
 ---
-# <a name="step-3-reusing-components"></a>Schritt 3: wieder verwenden von Komponenten
+# <a name="step-3-reusing-components"></a>Schritt 3: Wiederverwenden von Komponenten
 
 ## <a name="objectives"></a>Ziele
 
-In diesem Schritt erfahren Sie mehr über Folgendes:
+In diesem Schritt lernen Sie Folgendes kennen:
 
 -   Wiederverwendbare Komponenten.
--   Planen der Wiederverwendbarkeit.
+-   Planen der Wiederverwendebarkeit
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Zwei vorherige Teile dieses com+-Diensts: [Schritt 1: Erstellen einer Transaktions Komponente](step-1--creating-a-transactional-component.md) und [Schritt 2: Erweitern einer Transaktion über mehrere Komponenten](step-2--extending-a-transaction-across-multiple-components.md) erfahren, wie eine Komponente geschrieben wird, die eine zweite Komponente aufruft, um den Abschluss einiger Aufgaben zu unterstützen und die Autoreninformationen in der Microsoft SQL Server pubs-Datenbank zu aktualisieren. Alle Arbeiten werden durch eine einzelne Transaktion geschützt. Die Beispiel Komponenten konzentrieren sich auf das Aktualisieren der Daten eines Autors und das Überprüfen der Adresse des Autors, und com+ hat die Transaktionsverarbeitung, [JIT-Aktivierung](com--just-in-time-activation.md)und Parallelitäts [Schutz](com--synchronization.md)bereitgestellt.
+Zwei vorherige Teile dieser COM+-Dienstprimierung, [Schritt 1: Erstellen einer Transaktionskomponente](step-1--creating-a-transactional-component.md) und [Schritt 2: Erweitern einer Transaktion über mehrere Komponenten hinweg,](step-2--extending-a-transaction-across-multiple-components.md) zeigen, wie eine Komponente geschrieben wird, die eine zweite Komponente aufruft, um beim Abschließen einiger Arbeit zu helfen und Die Autorinformationen in der Microsoft SQL Server Pubs-Datenbank zu aktualisieren. alle Arbeiten werden durch eine einzelne Transaktion geschützt. Die Beispielkomponenten konzentrierten sich auf die Aktualisierung der Daten eines Autors und die Überprüfung der Adresse des Autors, und COM+ hat Transaktionsverarbeitung, [JIT-Aktivierung](com--just-in-time-activation.md)und [Parallelitätsschutz](com--synchronization.md)bereitgestellt.
 
-In diesem Schritt wird veranschaulicht, wie die in den Schritten 1 und 2 erstellten Komponenten wieder verwendet werden, und es wird erläutert, was dies für den Entwurf dieser Komponenten bedeutet. Wie in der folgenden Abbildung gezeigt, bedeutet dies, dass eine neue Komponente erstellt wird, `AddNewAuthor` die der Datenbank neue Autoren hinzufügt, indem aufgerufen wird `UpdateAuthorAddress` .
+In diesem Schritt wird veranschaulicht, wie die in den Schritten 1 und 2 erstellten Komponenten wiederverwendet werden, und es wird erläutert, was dies für den Entwurf dieser Komponenten bedeutet. Wie in der folgenden Abbildung gezeigt, bedeutet dies das Erstellen einer neuen Komponente, `AddNewAuthor` , die der Datenbank durch Aufrufen von neue Autoren hinzufügt. `UpdateAuthorAddress`
 
-![Diagramm, das den Flow anzeigt, wenn Komponenten wieder verwendet werden.](images/e746f50e-2e86-4e59-82f9-f407d2b0325c.png)
+![Diagramm, das den Ablauf beim Wiederverwenden von Komponenten zeigt.](images/e746f50e-2e86-4e59-82f9-f407d2b0325c.png)
 
-Zusätzlich zur Wiederverwendung vorhandener Komponenten Funktionen `AddNewAuthor` Ruft eine weitere neue Komponente mit dem Namen auf `ValidateAuthorName` . Wie die vorherige Abbildung zeigt, `ValidateAuthorName` ist nicht transaktional. Der Wert des Transaktions Attributs für diese Komponente bleibt bei der Standardeinstellung (**nicht unterstützt**), um die Arbeit von der Transaktion auszuschließen. Wie im Beispielcode Schritt 3 gezeigt, werden schreibgeschützte `ValidateAuthorName` Abfragen für die Datenbank durchführt, und der Fehler dieser kleinen Aufgabe sollte nicht die Möglichkeit haben, die Transaktion abzubrechen. Allerdings ist der Wert des Transaktions Attributs der `AddNewAuthor` Komponente auf **Required** festgelegt.
+Zusätzlich zur Wiederverwendung vorhandener Komponentenfunktionen `AddNewAuthor` ruft eine weitere neue Komponente mit dem Namen `ValidateAuthorName` auf. Wie die obige Abbildung zeigt, `ValidateAuthorName` ist nicht transaktional. Der Transaktionsattributwert für diese Komponente bleibt bei der Standardeinstellung (**Nicht unterstützt**), um ihre Arbeit von der Transaktion auszuschließen. Wie im Beispielcode in Schritt 3 gezeigt, `ValidateAuthorName` führt schreibgeschützte Abfragen für die Datenbank aus, und der Fehler dieser nebensächlichen Aufgabe sollte nicht das Potenzial haben, die Transaktion abzubricht. Der Transaktionsattributwert der Komponente ist jedoch `AddNewAuthor` auf **Erforderlich** festgelegt.
 
-Die `AddNewAuthor` `UpdateAuthorAddress` Komponenten, und `ValidateAuthorAddress` Stimmen in der Transaktion ab. In dieser Transaktion `AddNewAuthor` ist das Stamm Objekt. Com+ macht das erste Objekt, das in der Transaktion erstellt wird, immer zum Stamm Objekt.
+Die `AddNewAuthor` `UpdateAuthorAddress` Komponenten , und stimmen alle in der `ValidateAuthorAddress` Transaktion ab. In dieser Transaktion `AddNewAuthor` ist das Stammobjekt. COM+ macht das erste in der Transaktion erstellte Objekt immer zum Stammobjekt.
 
-In diesem Beispiel ist die Wiederverwendung der `UpdateAuthorAddress` Komponente einfach – durch com + werden die erwarteten Dienste automatisch bereitgestellt. Die Ergebnisse unterscheiden sich jedoch, wenn der Wert des Transaktions Attributs der `UpdateAuthorAddress` Komponente anfänglich auf " **neu** " anstatt " **erforderlich**" festgelegt wurde. Auf der-Oberfläche erscheinen beide Einstellungen ähnlich. Beide garantieren eine Transaktion. **Erfordert New, erfordert** jedoch immer eine neue Transaktion, während **erforderlich** eine neue Transaktion nur dann startet, wenn der Aufrufer des Objekts nicht transaktional ist. Sie sehen, wie wichtig es ist, `UpdateAuthorAddress` sorgfältig und sorgfältig zu konfigurieren. Andernfalls könnte com+ die Service Request anders interpretieren und dabei zwei nicht verknüpfte Transaktionen erzeugen, wie in der folgenden Abbildung dargestellt, anstelle von einer.
+In diesem Beispiel ist die Wiederverwendung der `UpdateAuthorAddress` Komponente einfach– COM+ stellt automatisch die erwarteten Dienste bereit. Die Ergebnisse würden sich jedoch unterscheiden, wenn der Transaktionsattributwert der `UpdateAuthorAddress` Komponente anfänglich auf Erfordert **Neu** anstelle von **Erforderlich** festgelegt wäre. Auf der Oberfläche werden beide Einstellungen ähnlich angezeigt. beide garantieren eine Transaktion. **Erfordert Neu,** startet jedoch immer eine neue Transaktion, während **Required** nur dann eine neue Transaktion startet, wenn der Aufrufer des Objekts nicht transaktional ist. Sie sehen, wie wichtig es war, sorgfältig und sorgfältig zu `UpdateAuthorAddress` konfigurieren. Andernfalls hat COM+ die Dienstanforderung möglicherweise anders interpretiert und dabei zwei nicht verbundene Transaktionen generiert, wie in der folgenden Abbildung dargestellt, anstelle einer Transaktion.
 
-![Diagramm, das den Flow anzeigt, wenn Komponenten mit "erfordert New" wieder verwendet werden.](images/24b9edf6-af00-4994-8fa1-cee4ace16379.png)
+![Diagramm, das den Ablauf beim Wiederverwenden von Komponenten mit "Erfordert Neu" zeigt.](images/24b9edf6-af00-4994-8fa1-cee4ace16379.png)
 
 > [!Note]  
-> Wenn Sie Komponenten wieder verwenden, stellen Sie sicher, dass die Dienste für die Unterstützung des gewünschten Ergebnisses konfiguriert sind.
+> Wenn Sie Komponenten wiederverwenden, stellen Sie sicher, dass die Dienste so konfiguriert sind, dass sie das gewünschte Ergebnis unterstützen.
 
  
 
 ## <a name="sample-code"></a>Beispielcode
 
-Die Komponente addnewauthor führt Batch Ergänzungen neuer Autoren durch, indem das Objekt so lange aktiv bleibt, bis der Client seinen Verweis auf das Objekt freigibt.
+Die AddNewAuthor-Komponente führt Batchhinzufügungen neuer Autoren durch, indem das Objekt aktiv bleibt, bis der Client seinen Verweis auf das Objekt freigibt.
 
 
 ```VB
@@ -161,7 +161,7 @@ End Sub
 
 
 
-Die `ValidateAuthorName` Komponente überprüft Autorennamen, bevor `AddNewAuthor` der Name der Datenbank hinzugefügt wird. Diese Komponente löst einen Fehler an den Aufrufer aus, wenn etwas unerwartetes Ereignis auftritt.
+Die `ValidateAuthorName` Komponente überprüft Autorennamen, bevor `AddNewAuthor` sie der Datenbank den Namen hinzufügt. Diese Komponente löst einen Fehler an ihren Aufrufer zurück, wenn etwas Unerwartetes geschieht.
 
 
 ```VB
@@ -229,15 +229,15 @@ End Function
 
 ## <a name="summary"></a>Zusammenfassung
 
--   Es gibt Zeiten, in denen eine Komponente nicht in der Transaktion abstimmen soll.
--   Com+ erzwingt nicht die JIT-Aktivierung oder den Parallelitäts Schutz für nicht transaktionale Komponenten. Diese Dienste können separat konfiguriert werden.
--   Die Konfiguration einer aufrufenden Komponente wirkt sich darauf aus, wie com+ die Service Requests der aufgerufenen Komponente interpretiert.
+-   Es gibt Zeiten, in denen Sie nicht möchten, dass eine Komponente in der Transaktion abstimmt.
+-   COM+ erzwingt keine JIT-Aktivierung oder keinen Parallelitätsschutz für nicht transaktionale Komponenten. Sie können diese Dienste separat konfigurieren.
+-   Die Konfiguration einer aufrufenden Komponente wirkt sich darauf aus, wie COM+ die Dienstanforderungen der aufgerufenen Komponente interpretiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Schritt 1: Erstellen einer transaktionalen Komponente](step-1--creating-a-transactional-component.md)
+[Schritt 1: Erstellen einer Transaktionskomponente](step-1--creating-a-transactional-component.md)
 </dt> <dt>
 
 [Schritt 2: Erweitern einer Transaktion über mehrere Komponenten hinweg](step-2--extending-a-transaction-across-multiple-components.md)
@@ -246,7 +246,7 @@ End Function
 [Konfigurieren von Transaktionen](configuring-transactions.md)
 </dt> <dt>
 
-[Entwerfen von Skalierbarkeit](designing-for-scalability.md)
+[Entwerfen für Skalierbarkeit](designing-for-scalability.md)
 </dt> </dl>
 
  

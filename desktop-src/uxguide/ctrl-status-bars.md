@@ -1,31 +1,31 @@
 ---
-title: Statusleisten (Entwurfsgrundlage)
-description: Eine Statusleiste ist ein Bereich am unteren Rand eines primären Fensters, der Informationen zum Zustand des aktuellen Fensters (z. B. was angezeigt wird und wie), Hintergrundaufgaben (z. B. Drucken, Scannen und Formatieren) oder andere Kontextinformationen (z. B. Auswahl und Tastaturzustand) anzeigt.
+title: Statusleisten (Entwurfsgrundinformationen)
+description: Eine Statusleiste ist ein Bereich am unteren Rand eines primären Fensters, in dem Informationen über den Zustand des aktuellen Fensters (z. B. was angezeigt wird und wie), Hintergrundaufgaben (z. B. Drucken, Scannen und Formatieren) oder andere Kontextinformationen (z. B. Auswahl und Tastaturzustand) angezeigt werden.
 ms.assetid: 09dc03d9-d730-4f03-86a8-7b39d9a55369
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 3458b301c10cb4b9d6ca3a26a71b59e1011ec5a9
-ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
+ms.openlocfilehash: fa76563adbd3810b48339cc49014441512e3d76a0ac7484ff632f64f635b4cf6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111524484"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119934177"
 ---
-# <a name="status-bars-design-basics"></a>Statusleisten (Entwurfsgrundlage)
+# <a name="status-bars-design-basics"></a>Statusleisten (Entwurfsgrundinformationen)
 
 > [!NOTE]
-> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
+> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
 
-Eine Statusleiste ist ein Bereich am unteren Rand eines primären Fensters, der Informationen zum Zustand des aktuellen Fensters (z. B. was angezeigt wird und wie), Hintergrundaufgaben (z. B. Drucken, Scannen und Formatieren) oder andere Kontextinformationen (z. B. Auswahl und Tastaturzustand) anzeigt.
+Eine Statusleiste ist ein Bereich am unteren Rand eines primären Fensters, in dem Informationen über den Zustand des aktuellen Fensters (z. B. was angezeigt wird und wie), Hintergrundaufgaben (z. B. Drucken, Scannen und Formatieren) oder andere Kontextinformationen (z. B. Auswahl und Tastaturzustand) angezeigt werden.
 
-Statusleisten zeigen den Status in der Regel über Text und Symbole an, können aber auch Statusindikatoren sowie Menüs für Befehle und Optionen im Zusammenhang mit dem Status enthalten.
+Statusleisten geben in der Regel den Status über Text und Symbole an, können aber auch Statusindikatoren sowie Menüs für Befehle und Optionen im Zusammenhang mit dem Status enthalten.
 
 ![Screenshot der typischen Statusleiste ](images/ctrl-status-bars-image1.png)
 
 Eine typische Statusleiste.
 
 > [!Note]  
-> Richtlinien im Zusammenhang mit dem [Benachrichtigungsbereich](winenv-notification.md) werden in einem separaten Artikel vorgestellt.
+> Richtlinien im Zusammenhang mit [dem Benachrichtigungsbereich](winenv-notification.md) werden in einem separaten Artikel vorgestellt.
 
  
 
@@ -33,44 +33,44 @@ Eine typische Statusleiste.
 
 Orientieren Sie sich an folgenden Fragen:
 
--   **Ist der Status relevant, wenn Benutzer aktiv andere Programme verwenden?** Wenn ja, verwenden Sie ein Symbol für den [Benachrichtigungsbereich](winenv-notification.md).
--   **Muss das Statuselement Benachrichtigungen anzeigen?** In diesem Falle müssen Sie ein Symbol für den Benachrichtigungsbereich verwenden.
--   **Ist das Fenster ein primäres Fenster?** Falls nicht, verwenden Sie keine Statusleiste. Dialogfelder, Assistenten, Steuerelementpanels und Eigenschaftenblätter sollten keine Statusleisten aufweisen.
--   **Sind die Informationen in erster Linie status?** Falls nicht, verwenden Sie keine Statusleiste. Statusleisten dürfen nicht als sekundäre [Menüleiste](cmd-menus.md) oder [Symbolleiste](cmd-toolbars.md)verwendet werden.
+-   **Ist der Status relevant, wenn Benutzer aktiv andere Programme verwenden?** Verwenden Sie in diesem Bereich ein [Symbol für den Benachrichtigungsbereich.](winenv-notification.md)
+-   **Muss das Statuselement Benachrichtigungen anzeigen?** Wenn ja, müssen Sie ein Symbol für den Benachrichtigungsbereich verwenden.
+-   **Ist das Fenster ein primäres Fenster?** Wenn nicht, verwenden Sie keine Statusleiste. Dialogfelder, Assistenten, Systemsteuerungen und Eigenschaftenblätter sollten keine Statusleisten haben.
+-   **Sind die Informationen in erster Linie Status?** Wenn nicht, verwenden Sie keine Statusleiste. Statusleisten dürfen nicht als sekundäre Menüleiste [oder](cmd-menus.md) Symbolleiste [verwendet werden.](cmd-toolbars.md)
 -   **Wird in den Informationen erläutert, wie das ausgewählte Steuerelement verwendet wird?** Wenn ja, zeigen Sie die Informationen neben dem zugeordneten Steuerelement stattdessen mit einer ergänzenden Erklärung oder Anweisungsbezeichnung an.
--   **Ist der Status nützlich und relevant? Das heißt, sind Benutzer aufgrund dieser Informationen wahrscheinlich in der Lage, ihr Verhalten zu ändern?** Wenn nicht, zeigen Sie entweder den Status nicht an, oder speichern Sie ihn in einer Protokolldatei.
--   **Ist der Status kritisch? Ist sofortige Aktion erforderlich?** Wenn ja, zeigen Sie die Informationen in einem Formular an, das Aufmerksamkeit erfordert und nicht einfach ignoriert werden kann, z. B. ein [Dialogfeld](win-dialog-box.md) oder innerhalb des primären Fensters selbst.
+-   **Ist der Status nützlich und relevant? Das heißt, werden Benutzer wahrscheinlich ihr Verhalten als Folge dieser Informationen ändern?** Falls nicht, zeigen Sie den Status entweder nicht an, oder speichern Sie ihn in einer Protokolldatei.
+-   **Ist der Status kritisch? Ist sofortiges Handeln erforderlich?** Wenn ja, zeigen Sie die Informationen in einem Formular an, [](win-dialog-box.md) das Aufmerksamkeit erfordert und nicht einfach ignoriert werden kann, z. B. in einem Dialogfeld oder im primären Fenster selbst.
 
     ![Screenshot der roten Statusleiste "Zertifikatfehler" ](images/ctrl-status-bars-image2.png)
 
     Eine rote Adressleiste in Windows Internet Explorer.
 
--   **Ist das Programm in erster Linie für erfahrene Benutzer vorgesehen?** Unerfahrene Benutzer sind in der Regel nicht über Statusleisten informiert, weshalb Sie die Verwendung von Statusleisten in diesem Fall erwägen.
+-   **Ist das Programm in erster Linie für erfahrene Benutzer vorgesehen?** Unerfahrene Benutzer kennen in der Regel keine Statusleisten, daher sollten Sie in diesem Fall die Verwendung von Statusleisten durchdenken.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-Statusleisten sind eine hervorragende Möglichkeit, Statusinformationen bereitzustellen, ohne Benutzer zu unterbrechen oder ihren Flow zu unterbrechen. Statusleisten sind jedoch leicht zu übersehen. So einfach, dass viele Benutzer überhaupt keine Statusleisten bemerken.
+Statusleisten sind eine hervorragende Möglichkeit, um Statusinformationen zur Verfügung zu stellen, ohne Benutzer zu unterbrechen oder ihren Flow zu unterbrechen. Statusleisten sind jedoch leicht zu übersehen. So einfach, dass viele Benutzer überhaupt keine Statusleisten bemerken.
 
-Die Lösung für dieses Problem besteht nicht darin, die Aufmerksamkeit des Benutzers mithilfe von grellen Symbolen, Animationen oder Flashing aufzufordern, sondern um diese Einschränkung zu entwerfen. Gehen Sie dafür so vor:
+Die Lösung für dieses Problem besteht nicht in der Anforderung der Aufmerksamkeit des Benutzers durch die Verwendung von Symbolen, Animationen oder Flashen, sondern im Entwurf für diese Einschränkung. Gehen Sie dafür so vor:
 
 -   **Stellen Sie sicher, dass die Statusinformationen nützlich und relevant sind.** Falls nicht, geben Sie keine Statusleiste an.
--   **Keine Verwendung von Statusleisten für wichtige Informationen.** Benutzer sollten nie wissen müssen, was sich in der Statusleiste befindet. Wenn Benutzer sie sehen müssen, legen Sie sie nicht in eine Statusleiste ein.
+-   **Verwenden Sie keine Statusleisten für wichtige Informationen.** Benutzer sollten nie wissen müssen, was sich in der Statusleiste befindet. Wenn Benutzer sie sehen müssen, sollten Sie sie nicht in eine Statusleiste setzen.
 
-**Wenn Sie nur eine Sache tun...**
+**Wenn Sie nur eins tun...**
 
 Stellen Sie sicher, dass die Statusleisteninformationen nützlich und relevant, aber nicht entscheidend sind.
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
-Statusleisten weisen mehrere Verwendungsmuster auf:
+Statusleisten haben mehrere Verwendungsmuster:
 
 
 
 |   Verwendung                                                                                                                                 |    Beispiel                                                                                                                                                                                                                             |
 |------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Status des aktuellen Fensters**<br/> Anzeigen der Quelle, was angezeigt wird, zusammen mit allen Ansichtsmodi <br/>              | ![Screenshot einer Statusleiste "Location" ](images/ctrl-status-bars-image3.png)<br/> In diesem Beispiel zeigt die Statusleiste den Pfad zum Dokument an.<br/>                                                         |
-| **Progress**<br/> Zeigen Sie den Fortschritt von Hintergrundaufgaben an, entweder mit einer bestimmende Statusanzeige oder einer Animation. <br/> | ![Screenshot der Statusleiste mit Statusanzeige ](images/ctrl-status-bars-image4.png)<br/> In diesem Beispiel enthält die Statusleiste eine Statusanzeige, um das Laden der Webseite in ein Internet Explorer Fenster anzuzeigen.<br/> |
-| **Kontextinformationen**<br/> Zeigen Sie kontextbezogene Informationen dazu an, was der Benutzer gerade tut. <br/>              | ![Screenshot der Statusleiste mit der Anzahl von Pixeln ](images/ctrl-status-bars-image5.png)<br/> In diesem Beispiel zeigt Microsoft Paint die Auswahlgröße in Pixel an.<br/>                                           |
+| **Aktueller Fensterstatus**<br/> Anzeigen der Quelle der angezeigten Inhalte zusammen mit allen Ansichtsmodi <br/>              | ![Screenshot der Statusleiste "Standort" ](images/ctrl-status-bars-image3.png)<br/> In diesem Beispiel zeigt die Statusleiste den Pfad zum Dokument an.<br/>                                                         |
+| **Progress**<br/> Zeigen Sie den Fortschritt von Hintergrundaufgaben an, entweder mit einer bestimmten Statusleiste oder einer Animation. <br/> | ![Screenshot der Statusleiste mit Statusleiste ](images/ctrl-status-bars-image4.png)<br/> In diesem Beispiel enthält die Statusleiste eine Statusleiste, um das Laden der Webseite in ein Internet Explorer anzuzeigen.<br/> |
+| **Kontextinformationen**<br/> Anzeigen von Kontextinformationen darüber, was der Benutzer gerade tut. <br/>              | ![Screenshot der Statusleiste mit der Anzahl von Pixeln ](images/ctrl-status-bars-image5.png)<br/> In diesem Beispiel Microsoft Paint die Auswahlgröße in Pixeln.<br/>                                           |
 
 
 
@@ -80,19 +80,19 @@ Statusleisten weisen mehrere Verwendungsmuster auf:
 
 ### <a name="general"></a>Allgemein
 
--   Erwägen Sie die Bereitstellung eines Befehls Statusleiste anzeigen, wenn nur einige Benutzer die Statusleisteninformationen benötigen. Blenden Sie die Statusleiste standardmäßig aus, wenn sie von den meisten Benutzern nicht benötigt wird.
+-   Erwägen Sie die Bereitstellung eines Befehls "Statusleiste anzeigen", wenn nur einige Benutzer die Statusleisteninformationen benötigen. Blenden Sie die Statusleiste standardmäßig aus, wenn die meisten Benutzer sie nicht benötigen.
 -   Verwenden Sie nicht die Statusleiste, um Menüleistenelemente zu erläutern. Dieses Hilfemuster ist nicht erkennbar.
 
 ### <a name="presentation"></a>Präsentation
 
--   Deaktivieren Sie den modalen Status, der nicht angewendet wird. Der modale Status umfasst Tastatur- und Dokumentzustände.
--   Entfernen Sie den nicht modalen Status, der nicht zutrifft.
--   Zeigen Sie Statusinformationen in der folgenden Reihenfolge an: aktueller Fensterstatus; progress; und kontextbezogene Informationen.
+-   Deaktivieren Sie den modalen Status, der nicht gilt. Der modale Status umfasst Tastatur- und Dokumentzustände.
+-   Entfernen Sie den nicht modalen Status, der nicht gilt.
+-   Statusinformationen in der folgenden Reihenfolge anzeigen: aktueller Fensterstatus; progress; und Kontextinformationen.
 
 ### <a name="icons"></a>Symbole
 
--   Wählen Sie leicht erkennbare Statussymbolentwürfe aus. Symbole mit eindeutigen Konturen gegenüber quadratischen oder rechteckigen Symbolen bevorzugen.
--   Verwenden Sie nur Swathen von rein rot, gelb und grün, um Statusinformationen zu kommunizieren. Andernfalls sind solche Symbole verwirrend.
+-   Wählen Sie leicht erkennbare Statussymbolentwürfe aus. Bevorzugen Sie Symbole mit eindeutigen Konturen gegenüber quadratischen oder rechteckigen, formten Symbolen.
+-   Verwenden Sie Nur Swaths von rein rot, gelb und grün, um Statusinformationen zu übermitteln. Andernfalls sind solche Symbole verwirrend.
 
     **Richtig:**
 
@@ -102,9 +102,9 @@ Statusleisten weisen mehrere Verwendungsmuster auf:
 
     ![Screenshot der Statusleiste mit einem roten Symbol ](images/ctrl-status-bars-image7.png)
 
-    Im falschen Beispiel deutet das rote Symbol unbeabsichtigt auf einen Fehler hin, wodurch Verwirrung entsteht.
+    Im falschen Beispiel schlägt das rote Symbol unbeabsichtigt einen Fehler vor, was zu Verwirrung führt.
 
--   Verwenden Sie Symbolvariationen oder Überlagerungen, um Status- oder Statusänderungen anzuzeigen. Verwenden Sie Symbolvariationen, um Änderungen in Mengen oder Stärken anzuzeigen. Verwenden Sie für andere Statustypen die folgenden Standardüberlagerungen: 
+-   Verwenden Sie Symbolvarianten oder Überlagerungen, um Status- oder Statusänderungen anzuzeigen. Verwenden Sie Symbolvarianten, um Änderungen an Mengen oder Stärken anzuzeigen. Verwenden Sie für andere Statustypen die folgenden Standardüberlagerungen: 
 
     | Überlagerung                 | Status            |
     |-----------------------------------------------------------------------------------------------|----------------------------------|
@@ -117,9 +117,9 @@ Statusleisten weisen mehrere Verwendungsmuster auf:
 
      
 
--   Ändern Sie den Status nicht zu häufig. Statusleistensymbole sollten nicht laut, instabil oder aufmerksamkeitsfähig angezeigt werden. Das Auge reagiert empfindlich auf Änderungen im Peripheriebereich des Sehens, sodass Statusänderungen geringfügig sein müssen.
--   Für Symbole, die wichtige Statusinformationen bereitstellen, bevorzugen Sie ortsbezogene Bezeichnungen.
--   Nicht bezeichnete Statusleistensymbole sollten QuickInfos enthalten.
+-   Ändern Sie den Status nicht zu häufig. Statusleistensymbole sollten nicht laut oder instabil sein und keine Aufmerksamkeit erfordern. Das Auge ist empfindlich auf Änderungen im Peripheriebereich des Sehens, daher müssen Statusänderungen dezent sein.
+-   Für Symbole, die wichtige Statusinformationen bereitstellen, bevorzugen Sie ortsspezifische Bezeichnungen.
+-   Nicht gekennzeichnete Statusleistensymbole sollten QuickInfos enthalten.
 
 Weitere Informationen finden Sie unter [Symbole](vis-icons.md).
 

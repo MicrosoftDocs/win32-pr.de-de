@@ -1,11 +1,11 @@
 ---
-title: INapComponentConfig3 newconfig-Methode (napcommon. h)
-description: Wird von System Integritätsprüfungen (SHVs) implementiert, um eine Möglichkeit zum Erstellen von Konfigurationsdaten für eine bestimmte Konfigurations-ID zu bieten.
+title: INapComponentConfig3 NewConfig-Methode (NapCommon.h)
+description: Wird von System health validators (SHVs) implementiert, um eine Möglichkeit zum Erstellen von Konfigurationsdaten für eine bestimmte Konfigurations-ID bereitzustellen.
 ms.assetid: cea762d3-815d-4034-94c1-5fa9a859cce8
 keywords:
-- Newconfig-Methode, NAP
-- Newconfig-Methode, NAP, INapComponentConfig3-Schnittstelle
-- INapComponentConfig3 Interface NAP, newconfig-Methode
+- NewConfig-Methode NAP
+- NewConfig-Methode NAP, INapComponentConfig3-Schnittstelle
+- INapComponentConfig3-Schnittstelle NAP, NewConfig-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 924204068dbb66b22cc06d28966511d8922e0068
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ff87f55218d8c84b1cb95a75e1801783e57b17288c36057323589ab44a47d3c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119891340"
 ---
-# <a name="inapcomponentconfig3newconfig-method"></a>INapComponentConfig3:: newconfig-Methode
+# <a name="inapcomponentconfig3newconfig-method"></a>INapComponentConfig3::NewConfig-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **newconfig** -Methode wird von System Integritätsprüfungen (SHVs) implementiert, um eine Möglichkeit zum Erstellen von Konfigurationsdaten für eine bestimmte Konfigurations-ID zu bieten. Wenn diese Funktion aufgerufen wird, muss ein SHV neue Konfigurationsdaten zuordnen und diese mit einer Kopie der Standard Konfigurationsdaten auffüllen.
+Die **NewConfig-Methode** wird von System health validators (SHVs) implementiert, um eine Möglichkeit zum Erstellen von Konfigurationsdaten für eine bestimmte Konfigurations-ID bereitzustellen. Wenn diese Funktion aufgerufen wird, muss eine SHV neue Konfigurationsdaten zuordnen und mit einer Kopie der Standardkonfigurationsdaten auffüllen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,10 +47,10 @@ HRESULT NewConfig(
 
 <dl> <dt>
 
-*ConfigID* 
+*configID* 
 </dt> <dd>
 
-Ein-Wert, der die Konfiguration darstellt. *ConfigID* wird vom Netzwerk Richtlinien Server-Dienst (Network Policy Server, NPS) zugewiesen und ist innerhalb des SHV eindeutig.
+Ein -Wert, der die Konfiguration darstellt. *ConfigID* wird vom NpS-Dienst (Network Policy Server) zugewiesen und ist innerhalb der SHV eindeutig.
 
 </dd> </dl>
 
@@ -63,16 +63,16 @@ Gibt basierend auf dem Ergebnis dieses Vorgangs einen der folgenden Fehlercodes 
 | Rückgabecode                                                                                                 | Beschreibung                                                                                   |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Der Vorgang ist erfolgreich.<br/>                                                       |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>                | *ConfigID* ist 0 (ein Wert, der für die Standardkonfiguration reserviert ist).<br/>                  |
-| <dl> <dt>**NAP- \_ E- \_ SHV- \_ Konfiguration \_ vorhanden**</dt> </dl> | Die *ConfigID* ist bereits vorhanden. Die Liste der IDs, die NPS bekannt sind, unterscheidet sich vom SHV.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>                | *ConfigID* ist 0 (ein für die Standardkonfiguration reservierter Wert).<br/>                  |
+| <dl> <dt>**NAP \_ E \_ SHV \_ CONFIG \_ EXISTED**</dt> </dl> | *ConfigID* ist bereits vorhanden. Die Liste der IDs, die NPS bekannt sind, unterscheidet sich von der SHV.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem die neue Konfiguration von **newconfig** erstellt wurde, sollten die Methoden [**getconfigfromid**](inapcomponentconfig3-getconfigfromid.md), [**invokeuifromconfigblob**](inapcomponentconfig2-invokeuifromconfigblob.md)und [**setconfigtoid**](inapcomponentconfig3-setconfigtoid.md) verwendet werden, um die Konfiguration nach Bedarf zu ändern.
+Nachdem die neue Konfiguration von **NewConfig** erstellt wurde, sollten die Methoden [**GetConfigFromID,**](inapcomponentconfig3-getconfigfromid.md) [**InvokeUIFromConfigBlob**](inapcomponentconfig2-invokeuifromconfigblob.md)und [**SetConfigToID**](inapcomponentconfig3-setconfigtoid.md) verwendet werden, um die Konfiguration nach Bedarf zu ändern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,9 +81,9 @@ Nachdem die neue Konfiguration von **newconfig** erstellt wurde, sollten die Met
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Napcommon. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcommon. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>NapCommon.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCommon.idl</dt> </dl> |
 
 
 

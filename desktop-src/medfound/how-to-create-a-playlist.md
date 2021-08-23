@@ -1,58 +1,58 @@
 ---
-description: In diesem Thema wird beschrieben, wie die Sequenz Quelle verwendet wird, um eine Sequenz von Dateien wiederzugeben.
+description: In diesem Thema wird beschrieben, wie Sie die Sequenzquelle verwenden, um eine Sequenz von Dateien wiederzuspielen.
 ms.assetid: 5a760492-bd52-40b8-a652-8a62646db6ae
 title: Erstellen einer Wiedergabeliste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a2e6e19766c3fa569a701fea9bed0f05d11a4324
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 57d2a36735d29510e0622882a399fff199fd2289261453a51f281414b5076826
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527689"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119828170"
 ---
 # <a name="how-to-create-a-playlist"></a>Erstellen einer Wiedergabeliste
 
-In diesem Thema wird beschrieben, wie die Sequenz Quelle verwendet wird, um eine Sequenz von Dateien wiederzugeben.
+In diesem Thema wird beschrieben, wie Sie die Sequenzquelle verwenden, um eine Sequenz von Dateien wiederzuspielen.
 
 ## <a name="overview"></a>Übersicht
 
-Zum Wiedergeben von Mediendateien in einer Sequenz muss die Anwendung Topologien in einer Sequenz hinzufügen, um eine Wiedergabeliste zu erstellen, und diese Topologien in der Medien Sitzung zur Wiedergabe in eine Warteschlange stellen.
+Um Mediendateien in einer Sequenz wiederzugeben, muss die Anwendung Topologien in einer Sequenz hinzufügen, um eine Wiedergabeliste zu erstellen, und diese Topologien für die Wiedergabe in der Mediensitzung in die Warteschlange stellen.
 
-Die Sequencer-Quelle sorgt für eine nahtlose Wiedergabe durch initialisieren und Laden der nächsten Topologie, bevor die Medien Sitzung mit der Wiedergabe der aktuellen Topologie beginnt. Dadurch kann die Anwendung die nächste Topologie schnell starten, wenn Sie benötigt wird.
+Die Sequencerquelle stellt eine nahtlose Wiedergabe sicher, indem die nächste Topologie initialisiert und geladen wird, bevor die Mediensitzung mit der Wiedergabe der aktuellen Topologie beginnt. Dies ermöglicht es der Anwendung, die nächste Topologie schnell zu starten, wenn sie erforderlich ist.
 
-Die Medien Sitzung ist für das Füttern von Daten in die senken und das Abspielen der Topologien in der Sequenz Quelle verantwortlich. Außerdem verwaltet die Medien Sitzung die Präsentationszeit für die Segmente.
+Die Mediensitzung ist für die Einspeisung von Daten an die Senken und die Wiedergabe der Topologien in der Sequenzquelle zuständig. Darüber hinaus verwaltet die Mediensitzung die Präsentationszeit für die Segmente.
 
-Weitere Informationen zum Verwalten von Topologien durch die Sequencer-Quelle finden Sie unter [Informationen zur Sequencer-Quelle](about-the-sequencer-source.md).
+Weitere Informationen zur Verwaltung von Topologien durch die Sequencerquelle finden Sie unter [Informationen zur Sequencerquelle.](about-the-sequencer-source.md)
 
 Diese exemplarische Vorgehensweise enthält die folgenden Schritte:
 
 1.  [Voraussetzungen](#prerequisites)
-2.  [Media Foundation wird initialisiert.](#initializing-media-foundation)
-3.  [Erstellen von Media Foundation Objekten](#creating-media-foundation-objects)
+2.  [Initialisieren Media Foundation](#initializing-media-foundation)
+3.  [Erstellen von Media Foundation-Objekten](#creating-media-foundation-objects)
 4.  [Erstellen der Medienquelle](#creating-the-media-source)
-5.  [Erstellen von partiellen Topologien](#creating-partial-topologies)
-6.  [Hinzufügen von Topologien zur Sequencer-Quelle](#adding-topologies-to-the-sequencer-source)
-7.  [Festlegen der ersten Topologie in der Medien Sitzung](#setting-the-first-topology-on-the-media-session)
-8.  [Nächste Topologie in der Medien Sitzung in die Warteschlange eingereiht](#queuing-the-next-topology-on-the-media-session)
-9.  [Freigeben der Sequencer-Quelle](#releasing-the-sequencer-source)
+5.  [Erstellen von Teiltopologien](#creating-partial-topologies)
+6.  [Hinzufügen von Topologien zur Sequencerquelle](#adding-topologies-to-the-sequencer-source)
+7.  [Festlegen der ersten Topologie in der Mediensitzung](#setting-the-first-topology-on-the-media-session)
+8.  [Queuing the Next Topology on the Media Session](#queuing-the-next-topology-on-the-media-session)
+9.  [Freigeben der Sequencerquelle](#releasing-the-sequencer-source)
 
-Die in diesem Thema gezeigten Codebeispiele sind Ausschnitte aus dem Thema [Sequencer-Quell Codebeispiel Code](sequencer-source-example-code.md), der den gesamten Beispielcode enthält.
+Die in diesem Thema gezeigten Codebeispiele sind Auszüge aus dem Thema [Sequencer Source Example Code](sequencer-source-example-code.md), das den vollständigen Beispielcode enthält.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Bevor Sie mit dieser exemplarischen Vorgehensweise beginnen, machen Sie sich mit den folgenden Media Foundation Konzepten vertraut:
+Machen Sie sich vor Beginn dieser exemplarischen Schritte mit den folgenden Media Foundation Konzepten vertraut:
 
--   [Medien Sitzung](media-session.md)
+-   [Mediensitzung](media-session.md)
 -   [Topologien](topologies.md)
--   [Medienereignis Generatoren](media-event-generators.md)
--   [Präsentations Deskriptoren](presentation-descriptors.md)
+-   [Medienereignisgeneratoren](media-event-generators.md)
+-   [Präsentationsdeskriptoren](presentation-descriptors.md)
 
-Lesen Sie außerdem die Informationen zum Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md), da der Code in diesem Thema den Code in diesem Thema erweitert.
+Lesen Sie auch [Wiedergeben von Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md), da der hier enthaltene Beispielcode den Code in diesem Thema erweitert.
 
-## <a name="initializing-media-foundation"></a>Media Foundation wird initialisiert.
+## <a name="initializing-media-foundation"></a>Initialisieren Media Foundation
 
-Bevor Sie beliebige Media Foundation Schnittstellen oder Methoden verwenden können, initialisieren Sie Media Foundation, indem Sie die [**MFStartup**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup) -Funktion aufrufen. Weitere Informationen finden Sie unter [Initialisieren von Media Foundation](initializing-media-foundation.md).
+Bevor Sie Media Foundation Schnittstellen oder Methoden verwenden können, initialisieren Sie Media Foundation, indem Sie die [**MFStartup-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup) aufrufen. Weitere Informationen finden Sie unter [Initialisieren Media Foundation](initializing-media-foundation.md).
 
 
 ```C++
@@ -61,18 +61,18 @@ Bevor Sie beliebige Media Foundation Schnittstellen oder Methoden verwenden kön
 
 
 
-## <a name="creating-media-foundation-objects"></a>Erstellen von Media Foundation Objekten
+## <a name="creating-media-foundation-objects"></a>Erstellen von Media Foundation-Objekten
 
-Erstellen Sie als nächstes die folgenden Media Foundation Objekte:
+Erstellen Sie als Nächstes die folgenden Media Foundation-Objekte:
 
--   Medien Sitzung. Dieses Objekt macht die [**imfmediasession**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) -Schnittstelle verfügbar, die Methoden zum Abspielen, anhalten und stoppen der aktuellen Topologie bereitstellt.
--   Sequencer-Quelle. Dieses Objekt macht die [**imfsequencersource**](/windows/desktop/api/mfidl/nn-mfidl-imfsequencersource) -Schnittstelle verfügbar, die Methoden zum Hinzufügen, aktualisieren und Löschen von Topologien in einer Sequenz bereitstellt.
+-   Mediensitzung. Dieses Objekt macht die [**INTERFACESMediaSession-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) verfügbar, die Methoden zum Wiedergeben, Anhalten und Beenden der aktuellen Topologie bereitstellt.
+-   Sequencerquelle. Dieses Objekt macht die [**INTERFACESSequencerSource-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfsequencersource) verfügbar, die Methoden zum Hinzufügen, Aktualisieren und Löschen von Topologien in einer Sequenz bereitstellt.
 
-1.  Rufen Sie die [**mfkreatemediasession**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatemediasession) -Funktion auf, um die Medien Sitzung zu erstellen.
-2.  Aufrufen von [**imfmediaeventqueue:: begingetevent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventqueue-begingetevent) , um das erste Ereignis aus der Medien Sitzung anzufordern.
-3.  Rufen Sie die [**mfkreatesequencersource**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesequencersource) -Funktion auf, um die Sequencer-Quelle zu erstellen.
+1.  Rufen Sie die [**MFCreateMediaSession-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatemediasession) auf, um die Mediensitzung zu erstellen.
+2.  Rufen Sie [**DEN AUFRUF VONMEDIAEVENTQUEUE::BeginGetEvent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventqueue-begingetevent) auf, um das erste Ereignis aus der Mediensitzung anzufordern.
+3.  Rufen Sie die [**MFCreateSequencerSource-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesequencersource) auf, um die Sequencerquelle zu erstellen.
 
-Mit dem folgenden Code wird die Medien Sitzung erstellt und das erste Ereignis angefordert:
+Der folgende Code erstellt die Mediensitzung und fordert das erste Ereignis an:
 
 
 ```C++
@@ -113,27 +113,27 @@ done:
 
 ## <a name="creating-the-media-source"></a>Erstellen der Medienquelle
 
-Erstellen Sie als nächstes eine Medienquelle für das erste Wiedergabelisten Segment. Verwenden Sie den [quellresolver](source-resolver.md) , um eine Medienquelle aus einer URL zu erstellen. Rufen Sie hierzu die [**mffroatesourceresolver**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesourceresolver) -Funktion auf, um einen quellresolver zu erstellen, und rufen Sie dann die [**imfsourceresolver::**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-createobjectfromurl) -Methode auf, um die Medienquelle zu erstellen.
+Erstellen Sie als Nächstes eine Medienquelle für das erste Wiedergabelistensegment. Verwenden Sie den [Quelllöser,](source-resolver.md) um eine Medienquelle aus einer URL zu erstellen. Rufen Sie zu diesem Zweck die [**MFCreateSourceResolver-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatesourceresolver) auf, um einen Quellresolver zu erstellen, und rufen Sie dann die [**METHODE VONSOURCEResolver::CreateObjectFromURL**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-createobjectfromurl) auf, um die Medienquelle zu erstellen.
 
-Weitere Informationen zu Medienquellen finden Sie unter [Medienquellen](media-sources.md).
+Informationen zu Medienquellen finden Sie unter [Medienquellen.](media-sources.md)
 
-## <a name="creating-partial-topologies"></a>Erstellen von partiellen Topologien
+## <a name="creating-partial-topologies"></a>Erstellen von Teiltopologien
 
-Jedes Segment in der Sequencer-Quelle verfügt über eine eigene partielle Topologie. Erstellen Sie als nächstes partielle Topologien für Medienquellen. Bei einer partiellen Topologie sind die Quellknoten der Topologie direkt mit den Ausgabe Knoten verbunden, ohne dass zwischen Transformationen angegeben werden. Die Medien Sitzung verwendet das topologielademobjekt zum Auflösen der Topologie. Nachdem eine Topologie aufgelöst wurde, werden die erforderlichen Decoder und andere Transformations Knoten hinzugefügt. Die Sequencer-Quelle kann auch vollständige Topologien enthalten.
+Jedes Segment in der Sequencerquelle verfügt über eine eigene partielle Topologie. Erstellen Sie als Nächstes Teiltopologien für Medienquellen. Bei einer partiellen Topologie werden die Topologiequellknoten direkt mit den Ausgabeknoten verbunden, ohne zwischengeschaltete Transformationen anzugeben. Die Mediensitzung verwendet das Topologieladeprogrammobjekt, um die Topologie aufzulösen. Nachdem eine Topologie aufgelöst wurde, werden die erforderlichen Decoder und andere Transformationsknoten hinzugefügt. Die Sequencerquelle kann auch vollständige Topologien enthalten.
 
-Verwenden Sie zum Erstellen des topologieobjekts die [**mfkreatetopology**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetopology) -Funktion, und verwenden Sie dann die [**imftopologynode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode) -Schnittstelle zum Erstellen von streamknoten.
+Um das Topologieobjekt zu erstellen, verwenden Sie die [**MFCreateTopology-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetopology) und dann die [**NODESTopologyNode-Schnittstelle,**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode) um Streamknoten zu erstellen.
 
-Umfassende Anweisungen zur Verwendung dieser Programmier Elemente zum Erstellen von Topologien finden Sie unter [Erstellen von Wiedergabe Topologien](creating-playback-topologies.md).
+Eine vollständige Anleitung zur Verwendung dieser Programmierelemente zum Erstellen von Topologien finden Sie unter [Erstellen von Wiedergabetopologien.](creating-playback-topologies.md)
 
-Eine Anwendung kann einen ausgewählten Teil der systemeigenen Quelle wiedergeben, indem der Quellknoten konfiguriert wird. Legen Sie zu diesem Zweck das [**MF- \_ toponode \_ mediastart**](mf-toponode-mediastart-attribute.md) -Attribut und das [**MF- \_ toponode \_ mediastop**](mf-toponode-mediastop-attribute.md) -Attribut auf den Knoten der Knoten Topologie der **MF- \_ Topologie \_ \_** fest. Geben Sie die Start Zeit des Mediums und die Endzeit des Mediums in Bezug auf den Start der systemeigenen Quelle als **UINT64** -Typen an.
+Eine Anwendung kann einen ausgewählten Teil der nativen Quelle wiedergeben, indem der Quellknoten konfiguriert wird. Legen Sie hierzu das [**MF \_ TOPONODE \_ MEDIASTART-Attribut**](mf-toponode-mediastart-attribute.md) und das [**MF \_ TOPONODE \_ MEDIASTOP-Attribut**](mf-toponode-mediastop-attribute.md) auf **MF \_ TOPOLOGY \_ SOURCESTREAM \_ NODE-Topologieknotenknoten** fest. Geben Sie die Startzeit des Mediums und die Medienstoppzeit relativ zum Start der nativen Quelle als **UINT64-Typen** an.
 
-## <a name="adding-topologies-to-the-sequencer-source"></a>Hinzufügen von Topologien zur Sequencer-Quelle
+## <a name="adding-topologies-to-the-sequencer-source"></a>Hinzufügen von Topologien zur Sequencerquelle
 
-Fügen Sie als nächstes die partiellen Topologien, die Sie erstellt haben, der Sequencer-Quelle hinzu. Jedem Sequence-Element, das als *Segment* bezeichnet wird, wird ein **mfsequencerelementid-** Bezeichner zugewiesen. Weitere Informationen zum Verwalten von Topologien durch die Sequencer-Quelle finden Sie unter [Informationen zur Sequencer-Quelle](about-the-sequencer-source.md).
+Fügen Sie als Nächstes der Sequencerquelle die partiellen Topologien hinzu, die Sie erstellt haben. Jedem Sequenzelement, das als *Segment* bezeichnet wird, wird ein **MFSequencerElementId-Bezeichner** zugewiesen. Weitere Informationen zur Verwaltung von Topologien durch die Sequencerquelle finden Sie unter [Informationen zur Sequencerquelle.](about-the-sequencer-source.md)
 
-Nachdem alle Topologien der Sequencer-Quelle hinzugefügt wurden, muss die Anwendung das letzte Segment in der Sequenz markieren, um die Wiedergabe in der Pipeline beenden zu können. Ohne dieses Flag erwartet die Sequencer-Quelle, dass weitere Topologien hinzugefügt werden.
+Nachdem alle Topologien der Sequencerquelle hinzugefügt wurden, muss die Anwendung das letzte Segment in der Sequenz kennzeichnen, um die Wiedergabe in der Pipeline zu beenden. Ohne dieses Flag erwartet die Sequencerquelle, dass weitere Topologien hinzugefügt werden.
 
-1.  Wenden Sie die [**imfsequencersource:: appendtopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology) -Methode an, um der Sequencer-Quelle eine bestimmte Topologie hinzuzufügen.
+1.  Rufen Sie die [**APPENDSequencerSource::AppendTopology-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology) auf, um der Sequencerquelle eine bestimmte Topologie hinzuzufügen.
 
     ```C++
         hr = m_pSequencerSource->AppendTopology(
@@ -145,11 +145,11 @@ Nachdem alle Topologien der Sequencer-Quelle hinzugefügt wurden, muss die Anwen
 
     
 
-    [**Appendtopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology) fügt der Sequenz die angegebene Topologie hinzu. Diese Methode gibt den Segment Bezeichner im *pdwid-* Parameter zurück.
+    [**AppendTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology) fügt der Sequenz die angegebene Topologie hinzu. Diese Methode gibt den Segmentbezeichner im *pdwId-Parameter* zurück.
 
-    Wenn die Topologie die letzte in der Sequencer-Quelle ist, übergeben Sie sequencertopologyflags \_ zuletzt im *dwFlags* -Parameter. Dieser Wert wird in der [**MF sequencertopologyflags**](/windows/desktop/api/mfidl/ne-mfidl-mfsequencertopologyflags) -Enumeration definiert.
+    Wenn die Topologie die letzte in der Sequencerquelle ist, übergeben Sie SequencerTopologyFlags \_ Last im *dwFlags-Parameter.* Dieser Wert wird in der [**MFSequencerTopologyFlags-Enumeration**](/windows/desktop/api/mfidl/ne-mfidl-mfsequencertopologyflags) definiert.
 
-2.  Aufrufen von [**imfsequencersource:: updatetopologyflags**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-updatetopologyflags) zum Aktualisieren der Flags für die Topologie, die dem Segment Bezeichner in der Eingabeliste zugeordnet ist. In diesem Fall gibt der-Befehl an, dass es sich bei dem angegebenen Segment um das letzte Segment im Sequencer handelt. (Dieser-Befehl ist optional, wenn die letzte Topologie im [**appendtopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology) -Befehl angegeben wird.)
+2.  Rufen Sie [**DEN AUFRUFEQUENCERSOURCE::UpdateTopologyFlags**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-updatetopologyflags) auf, um die Flags für die Topologie zu aktualisieren, die dem Segmentbezeichner in der Eingabeliste zugeordnet ist. In diesem Fall gibt der Aufruf an, dass das angegebene Segment das letzte Segment im Sequencer ist. (Dieser Aufruf ist optional, wenn die letzte Topologie im [**AppendTopology-Aufruf**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-appendtopology) angegeben ist.)
 
     ```C++
         BOOL bFirstSegment = (NumSegments() == 0);
@@ -167,22 +167,22 @@ Nachdem alle Topologien der Sequencer-Quelle hinzugefügt wurden, muss die Anwen
 
     
 
-Die Anwendung kann die Topologie eines Segments durch eine andere Topologie ersetzen, indem Sie die [**imfsequencersource:: updatetopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-updatetopology) aufrufen und die neue Topologie in *ptopology* übergibt. Wenn neue Native Quellen in der neuen Topologie vorhanden sind, werden die Quellen dem Quell Cache hinzugefügt. Die vorab Liste wird ebenfalls aktualisiert.
+Die Anwendung kann die Topologie eines Segments durch eine andere Topologie ersetzen, indem sie [**DIE QuencerSource::UpdateTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfsequencersource-updatetopology) aufruft und die neue Topologie in *pTopology* übergibt. Wenn neue native Quellen in der neuen Topologie vorhanden sind, werden die Quellen dem Quellcache hinzugefügt. Die Prerollliste wird ebenfalls aktualisiert.
 
-## <a name="setting-the-first-topology-on-the-media-session"></a>Festlegen der ersten Topologie in der Medien Sitzung
+## <a name="setting-the-first-topology-on-the-media-session"></a>Festlegen der ersten Topologie in der Mediensitzung
 
-Als Nächstes stellen Sie die erste Topologie in der Sequenz Quelle in der Medien Sitzung in die Warteschlange. Wenn Sie die erste Topologie aus der Sequencer-Quelle abrufen möchten, muss die Anwendung die [**imfmediasourcetopologyprovider:: getmediasourcetopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourcetopologyprovider-getmediasourcetopology) -Methode aufrufen. Diese Methode gibt die partielle Topologie zurück, die von der Medien Sitzung aufgelöst wird.
+Als Nächstes wird die erste Topologie in der Sequenzquelle in der Mediensitzung in die Warteschlange eingereiht. Um die erste Topologie aus der Sequencerquelle abzurufen, muss die Anwendung die [**METHODE VONMEDIASourceTopologyProvider::GetMediaSourceTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourcetopologyprovider-getmediasourcetopology) aufrufen. Diese Methode gibt die partielle Topologie zurück, die von der Mediensitzung aufgelöst wird.
 
-Weitere Informationen zu partiellen Topologien finden Sie unter Informationen [zu Topologien](about-topologies.md).
+Informationen zu Teiltopologien finden Sie unter [Informationen zu Topologien.](about-topologies.md)
 
-1.  Rufen Sie die native Medienquelle für die erste Topologie der Sequenz Quelle ab.
-2.  Erstellen Sie einen Präsentations Deskriptor für die Medienquelle, indem Sie die [**imfmediasource:: createpresentationdescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor) -Methode aufrufen.
-3.  Rufen Sie die zugehörige Topologie für die Präsentation ab, indem Sie die [**imfmediasourcetopologyprovider:: getmediasourcetopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourcetopologyprovider-getmediasourcetopology) -Methode aufrufen.
-4.  Legen Sie die erste Topologie in der Medien Sitzung durch Aufrufen von [**imfmediasession:: settopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology)fest.
+1.  Rufen Sie die native Medienquelle für die erste Topologie der Sequenzquelle ab.
+2.  Erstellen Sie einen Präsentationsdeskriptor für die Medienquelle, indem Sie die [**METHODE VONMEDIASOURCE::CreatePresentationDescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor) aufrufen.
+3.  Rufen Sie die zugeordnete Topologie für die Präsentation ab, indem Sie die [**METHODE VONMEDIASOURCETopologyProvider::GetMediaSourceTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourcetopologyprovider-getmediasourcetopology) aufrufen.
+4.  Legen Sie die erste Topologie in der Mediensitzung fest, indem Sie [**DIE SESSIONMediaSession::SetTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology)aufrufen.
 
-    Aufrufen der [**settopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology) , bei der der *dwsettopologyflags* -Parameter auf **null** festgelegt ist. Dies weist die Medien Sitzung an, die angegebene Topologie zu starten, wenn die aktuelle Topologie abgeschlossen wurde. Da in diesem Fall die angegebene Topologie die erste Topologie ist und keine aktuelle Präsentation vorhanden ist, startet die Medien Sitzung die neue Präsentation sofort.
+    Rufen [**Sie SetTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology) auf, wobei der *dwSetTopologyFlags-Parameter* auf **NULL** festgelegt ist. Dadurch wird die Mediensitzung angewiesen, die angegebene Topologie zu starten, wenn die aktuelle Topologie abgeschlossen wurde. Da in diesem Fall die angegebene Topologie die erste Topologie ist und keine aktuelle Präsentation vorhanden ist, startet die Mediensitzung die neue Präsentation sofort.
 
-    Der **null** -Wert gibt auch an, dass die Medien Sitzung die Topologie auflösen muss, da die vom topologieanbieter zurückgegebene Topologie immer eine partielle Topologie ist.
+    Der **NULL-Wert** gibt auch an, dass die Mediensitzung die Topologie auflösen muss, da die vom Topologieanbieter zurückgegebene Topologie immer eine partielle Topologie ist.
 
 
 ```C++
@@ -218,21 +218,21 @@ done:
 
 
 
-## <a name="queuing-the-next-topology-on-the-media-session"></a>Nächste Topologie in der Medien Sitzung in die Warteschlange eingereiht
+## <a name="queuing-the-next-topology-on-the-media-session"></a>Queuing the Next Topology on the Media Session
 
-Als nächstes muss die Anwendung das [menewpresentation](menewpresentation.md) -Ereignis behandeln.
+Als Nächstes muss die Anwendung das [MENewPresentation-Ereignis](menewpresentation.md) verarbeiten.
 
-Die Sequencer-Quelle löst [menewpresentation](menewpresentation.md) aus, wenn die Medien Sitzung mit der Wiedergabe eines Segments beginnt, dem ein anderes Segment folgt. Dieses Ereignis informiert die Anwendung über die nächste Topologie in der Sequenz Quelle, indem Sie den Präsentations Deskriptor für das nächste Segment in der vorab Liste bereitstellt. Die Anwendung muss die zugeordnete Topologie mit dem topologieanbieter abrufen und in der Medien Sitzung in eine Warteschlange stellen. Die Sequencer-Quelle stellt dann eine Vorabversion dieser Topologie dar, wodurch ein nahtloser Übergang zwischen Präsentationen sichergestellt wird.
+Die Sequencerquelle löst [MENewPresentation](menewpresentation.md) aus, wenn die Mediensitzung mit der Wiedergabe eines Segments beginnt, dem ein weiteres Segment folgt. Dieses Ereignis informiert die Anwendung über die nächste Topologie in der Sequenzquelle, indem der Präsentationsdeskriptor für das nächste Segment in der Prärollliste angegeben wird. Die Anwendung muss die zugeordnete Topologie mithilfe des Topologieanbieters abrufen und in der Mediensitzung in die Warteschlange stellen. Die Sequencerquelle führt dann eine Vorrolling dieser Topologie durch, wodurch ein nahtloser Übergang zwischen Präsentationen sichergestellt wird.
 
-Wenn die Anwendung über Segmente hinweg sucht, empfängt die Anwendung mehrere [menewpresentation](menewpresentation.md) -Ereignisse, da die Sequencer-Quelle die vorab Liste aktualisiert und die richtige Topologie einrichtet. Die Anwendung muss jedes Ereignis verarbeiten und die in den Ereignisdaten zurückgegebene Topologie in der Medien Sitzung in die Warteschlange stellen. Weitere Informationen zum Überspringen von Segmenten finden [Sie unter Verwenden der Sequencer-Quelle](using-the-sequencer-source.md).
+Wenn die Anwendung segmentübergreifend sucht, empfängt die Anwendung mehrere [MENewPresentation-Ereignisse,](menewpresentation.md) während die Sequencerquelle die Vorabrollliste aktualisiert und die richtige Topologie einrichtet. Die Anwendung muss jedes Ereignis verarbeiten und die in den Ereignisdaten zurückgegebene Topologie in der Mediensitzung in die Warteschlange stellen. Informationen zum Überspringen von Segmenten finden Sie unter [Verwenden der Sequencerquelle](using-the-sequencer-source.md).
 
-Informationen zum erhalten von Sequencer-Quell Benachrichtigungen finden Sie unter [Sequencer](sequencer-source-events.md)-Quell Ereignisse.
+Informationen zum Abrufen von Sequencer-Quellbenachrichtigungen finden Sie unter [Sequencer-Quellereignisse.](sequencer-source-events.md)
 
-1.  Rufen Sie im [menewpresentation](menewpresentation.md) -Ereignishandler den Präsentations Deskriptor für das nächste Segment aus den Ereignisdaten ab.
-2.  Rufen Sie die zugehörige Topologie für die Präsentation ab, indem Sie die [**imfmediasourcetopologyprovider:: getmediasourcetopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourcetopologyprovider-getmediasourcetopology) -Methode aufrufen.
-3.  Legen Sie die Topologie für die Medien Sitzung fest, indem Sie die [**imfmediasession:: settopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology) -Methode aufrufen.
+1.  Rufen Sie im [MENewPresentation-Ereignishandler](menewpresentation.md) den Präsentationsdeskriptor für das nächste Segment aus den Ereignisdaten ab.
+2.  Rufen Sie die zugeordnete Topologie für die Präsentation ab, indem Sie [**die METHODETOPOLOGYMediaSourceTopologyProvider::GetMediaSourceTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourcetopologyprovider-getmediasourcetopology) aufrufen.
+3.  Legen Sie die Topologie für die Mediensitzung fest, indem Sie [**die METHODETOPOLOGYMediaSession::SetTopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology) aufrufen.
 
-    Die Medien Sitzung startet die neue Präsentation, wenn die aktuelle Präsentation abgeschlossen ist.
+    Die Mediensitzung startet die neue Präsentation, wenn die aktuelle Präsentation abgeschlossen wurde.
 
 
 ```C++
@@ -255,26 +255,26 @@ HRESULT CPlaylist::OnNewPresentation(IMFMediaEvent *pEvent)
 
 
 
-## <a name="releasing-the-sequencer-source"></a>Freigeben der Sequencer-Quelle
+## <a name="releasing-the-sequencer-source"></a>Freigeben der Sequencerquelle
 
-Beenden Sie abschließend die Sequencer-Quelle. Dazu können Sie die [**imfmediasource:: Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-shutdown) -Methode für die Sequencer-Quelle verwenden. Durch diesen aufzurufenden Befehl werden alle zugrunde liegenden systemeigenen Medienquellen in der Sequencer-Quelle heruntergefahren.
+Fahren Sie abschließend die Sequencerquelle herunter. Rufen Sie zu diesem Schritt die METHODE 1002211111111177111 der [**Sequencerquelle**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-shutdown) auf. Dieser Aufruf fährt alle zugrunde liegenden nativen Medienquellen in der Sequencerquelle herunter.
 
-Nachdem die Sequencer-Quelle freigegeben wurde, sollte die Anwendung die Medien Sitzung schließen und beenden, indem [**imfmediasession:: Close**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-close) und [**imfmediasession:: Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-shutdown)in dieser Reihenfolge aufgerufen wird.
+Nachdem die Sequencerquelle veröffentlicht wurde, sollte die Anwendung die Mediensitzung schließen und herunterfahren, indem sie IN DIESER Reihenfolge [**DURCH DEN Aufruf von DURCHEMEDIASession::Close**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-close) und DURCH DIE [**VeröffentlichungSsitzung::Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-shutdown)beendet wird.
 
-Um Speicher Verluste zu vermeiden, muss die Anwendung Zeiger auf Media Foundation-Schnittstellen freigeben, wenn Sie nicht mehr benötigt werden.
+Um Speicherverlusten zu vermeiden, muss die Anwendung Zeiger auf Media Foundation Schnittstellen veröffentlichen, wenn sie nicht mehr benötigt werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie eine einfache Wiedergabeliste mithilfe der Sequencer-Quelle erstellt wird. Nachdem Sie die Wiedergabeliste erstellt haben, können Sie erweiterte Funktionen hinzufügen, wie z. b. das Überspringen von Segmenten, das Ändern des Wiedergabe Zustands und das Suchen innerhalb eines Segments. In der folgenden Liste finden Sie Links zu den verwandten Themen:
+In dieser exemplarischen Vorgehensweise wurde veranschaulicht, wie Sie mithilfe der Sequencerquelle eine einfache Wiedergabeliste erstellen. Nach dem Erstellen der Wiedergabeliste sollten Sie erweiterte Features hinzufügen, z. B. Segment überspringen, den Wiedergabezustand ändern und innerhalb eines Segments suchen. Die folgende Liste enthält Links zu den verwandten Themen:
 
--   [Steuern von Präsentations Zuständen](how-to-control-presentation-states.md): die Sequencer-Quelle basiert auf der Medien Sitzung, um die Transportsteuerung wie, wiedergeben, anhalten und stoppen bereitzustellen.
--   [In diesem](how-to-perform-scrubbing.md) Thema werden die Schritte beschrieben, die erforderlich sind, um eine bestimmte Position in einem Stream zu suchen.
+-   [Steuern von Präsentationszuständen:](how-to-control-presentation-states.md)Die Sequencerquelle nutzt die Mediensitzung, um Transportsteuerung wie Wiedergabe, Anhalten und Beenden zu ermöglichen.
+-   [How to Perform Scrubbing (How to Perform Scrubbing)](how-to-perform-scrubbing.md) beschreibt die Schritte, die erforderlich sind, um eine bestimmte Position in einem Stream zu suchen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Sequencer-Quelle](sequencer-source.md)
+[Sequencerquelle](sequencer-source.md)
 </dt> </dl>
 
  

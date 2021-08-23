@@ -2,59 +2,59 @@
 description: Glossarseite
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 8e9b45de-c81b-4324-b00b-b11ee6749920
-title: Glossar für Windows-Suche
+title: Windows Search Glossary
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ac0620f4c85c43aac6d41300e16e3e5a8dd037f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c8efe8bbe07badc7575cc3aba83100814d601bc5c8ebca24961b198950b2e5e7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119844650"
 ---
-# <a name="windows-search-glossary"></a>Glossar für Windows-Suche
+# <a name="windows-search-glossary"></a>Windows Search Glossary
 
 ## <a name=""></a>\#
 
 **OSD-Datei**
 
-OpenSearch-Deskriptordatei.
+OpenSearch Deskriptordatei.
 
 **OSDX-Datei**
 
-Eine OpenSearch-Beschreibungs-XML-Datei, die die verfügbaren Serververbindungen und Ergebnis Formate für eine bestimmte webbasierte Datenquelle beschreibt. Sie wird für die Interaktion mit der Windows-Shell verwendet. Siehe auch: OpenSearch-Deskriptor.
+Eine OpenSearch XML-Beschreibungsdatei, die verfügbare Serververbindungen und Ergebnisformate für eine bestimmte webbasierte Datenquelle beschreibt. Sie wird für die Interaktion mit der Windows Shell verwendet. Siehe auch: OpenSearch Deskriptor.
 
-## <a name="a"></a>A
+## <a name="a"></a>Ein
 
-**Erweiterte Abfrage Syntax (AQS)**
+**Erweiterte Abfragesyntax (AQS)**
 
-Die Standard Abfrage Syntax, die von Windows Search verwendet wird, um den Index abzufragen und Suchparameter zu verfeinern und einzuschränken. AQS ist hauptsächlich für Benutzer sichtbar und kann von Benutzern verwendet werden, um AQS-Abfragen zu erstellen. Sie können aber auch Programm gesteuert verwendet werden. Siehe auch: natürliche Abfrage Syntax (NQS).
+Die standardabfragesyntax, die von Windows Search verwendet wird, um den Index abzufragen und Suchparameter zu verfeinern und einzugrenzen. AQS ist in erster Linie für Benutzer zugänglich und kann von Benutzern zum Erstellen von AQS-Abfragen verwendet werden, kann aber auch programmgesteuert verwendet werden. Siehe auch: Natural Query Syntax (NQS).
 
-**AQS**
+**Aqs**
 
-Siehe Definition für: Erweiterte Abfrage Syntax (AQS).
+Siehe Definition für: Erweiterte Abfragesyntax (Advanced Query Syntax, AQS).
 
-**Anwalt**
+**Verband**
 
-Eine Zuordnung einer Dateinamenerweiterung (z. b.. MP3) oder eines Protokolls (z. b. http) zu einem programmatischen Bezeichner (ProgID). Diese Zuordnung wird in der Registrierung als benutzerspezifische Einstellung mit einem Fallback pro Computer gespeichert. Anwendungen, die am Standardprogramm System teilnehmen, legen die Zuordnungs Zuordnung für die Dateinamenerweiterung oder das Protokoll fest, um auf die ProgID-Schlüssel zu verweisen, die Sie besitzen.
+Eine Zuordnung einer Dateinamenerweiterung (z. B. .mp3) oder eines Protokolls (z. B. HTTP) zu einem programmgesteuerten Bezeichner (ProgID). Diese Zuordnung wird in der Registrierung als benutzerspezifische Einstellung mit einem Fallback pro Computer gespeichert. Anwendungen, die am Standardprogrammsystem teilnehmen, legen die Zuordnungszuordnung für die Dateinamenerweiterung oder das Protokoll so fest, dass sie auf die ProgID-Schlüssel verweisen, deren Eigentümer sie sind.
 
-**Zuordnungs Array**
+**Zuordnungsarray**
 
-Eine geordnete Liste der Registrierungs Speicherorte, die zum Speichern von Informationen über einen Elementtyp verwendet werden, einschließlich Handler, Verben und anderen Attributen, wie z. b. Symbol und Anzeige Name des Typs. Beispielsweise verfügt eine JPG-Datei über das folgende Zuordnungs Array auf einem standardmäßigen Windows-System: "HKCR \\ jpgfile", "HKCR \\ systemfileassociations \\ . jpg", "HKCR \\ systemfileassociation \\ Image", "HKCR \\ \* ", "HKCR \\ AllFilesystemObjects".
+Eine sortierte Liste von Registrierungsspeicherorten, die zum Speichern von Informationen zu einem Elementtyp verwendet werden, einschließlich Handlern, Verben und anderen Attributen wie dem Symbol und dem Anzeigenamen des Typs. Beispielsweise weist eine .jpg-Datei das folgende Zuordnungsarray auf einem Standardsystem Windows auf: "HKCR \\ jpgfile", "HKCR \\ SystemFileAssociations \\.jpg", "HKCR \\ SystemFileAssociations \\ image", "HKCR \\ \* ", "HKCR \\ AllFileSystemObjects".
 
 **Atom**
 
-Ein XML-Schema, das für Webfeeds und Inhalts Verteilung verwendet wird und als Alternative zu "Really Simple Syndikation (RSS)" entwickelt wurde. Das Atom-Syndizierungs Format wurde als von IETF vorgeschlagene Standard in RFC 4287 veröffentlicht.
+Ein XML-Schema, das für Webfeeds und die Inhaltsverteilung verwendet wird und als Alternative zu Really Simple Syndication (RSS) entwickelt wurde. Das Atom-Syndication-Format wurde als IETF-vorgeschlagener Standard in RFC 4287 veröffentlicht.
 
 ## <a name="b"></a>B
 
 **bind**
 
-Zum Laden oder Zuordnen von Code mit Daten. Beispielsweise kann ein Handler einer shelldatenquelle zugeordnet werden.
+Zum Laden oder Zuordnen von Code zu Daten. Beispielsweise kann ein Handler einer Shell-Datenquelle zugeordnet werden.
 
-**lichere**
+**Bindung**
 
-Eine Anforderung in einer Suchabfrage für eine Spalte in einem zurückgegebenen Rowset. Die Bindung gibt eine Eigenschaft an, die in den Suchergebnissen enthalten sein soll.
+Eine Anforderung in einer Suchabfrage für eine Spalte in einem zurückgegebenen Rowset. Die Bindung gibt eine Eigenschaft an, die in die Suchergebnisse aufgenommen werden soll.
 
 **bookmark**
 
@@ -62,147 +62,147 @@ Ein Indikator, der eine Zeile innerhalb einer Gruppe von Zeilen eindeutig identi
 
 ## <a name="c"></a>C
 
-**Kanonischer Name**
+**kanonischer Name**
 
-Der eindeutige Name einer Ressource. Kanonisch bedeutet "gemäß den Regeln". Siehe auch: kanonischer Verb Name.
+Der eindeutige Name einer Ressource. Kanonisch bedeutet "gemäß den Regeln". Siehe auch: kanonischer Verbname.
 
-**Kanonischer Verb Name**
+**kanonischer Verbname**
 
-Ein sprach neutraler Name, der unabhängig von der lokalisierten Zeichenfolge in der Benutzeroberfläche Programm gesteuert verwendet werden kann, um auf ein Verb zu verweisen. Siehe auch: kanonischer Name, Verb.
+Ein sprachneutraler Name, der programmgesteuert verwendet werden kann, um unabhängig von der lokalisierten Zeichenfolge auf der Benutzeroberfläche auf ein Verb zu verweisen. Siehe auch: kanonischer Name, Verb.
 
 **catalog**
 
-Die Organisationseinheit der obersten Ebene in Windows Search. Ein Katalog stellt einen Satz indizierter Dokumente dar, die abgefragt werden können. Ein Katalog besteht aus einer Eigenschaften Tabelle mit dem Text oder Wert und dem entsprechenden Speicherort, der in Spalten der Tabelle gespeichert ist. Jede Zeile der Tabelle entspricht einem separaten Dokument im Geltungsbereich des Katalogs, und jede Spalte der Tabelle entspricht einer Eigenschaft. Siehe auch: Index, Windows Search-Dienst.
+Die höchste Organisationseinheit in Windows Search. Ein Katalog stellt einen Satz indizierter Dokumente dar, die abgefragt werden können. Ein Katalog besteht aus einer Eigenschaftentabelle mit dem Text oder Wert und dem entsprechenden Speicherort, der in Spalten der Tabelle gespeichert ist. Jede Zeile der Tabelle entspricht einem separaten Dokument im Bereich des Katalogs, und jede Spalte der Tabelle entspricht einer -Eigenschaft. Siehe auch: index, Windows Suchdienst.
 
 **category**
 
-Eine hierarchische Gruppierung von Zeilen. Beispielsweise kann ein Abfrageergebnis, das Autoren-und Titel Spalten enthält, basierend auf dem Autor kategorisiert werden. In diesem Beispiel stellt jede Gruppe von Zeilen, die den gleichen Wert für Author enthält, eine Kategorie dar.
+Eine hierarchische Gruppierung von Zeilen. Beispielsweise kann ein Abfrageergebnis, das Spalten für Autor und Titel enthält, basierend auf dem Autor kategorisiert werden. In diesem Beispiel stellt jede Gruppe von Zeilen, die den gleichen Wert für author enthält, eine Kategorie dar.
 
-**geschlagen**
+**Kapitel**
 
-Eine Auflistung von Zeilen innerhalb einer Reihe von Zeilen. Siehe auch: Catalog, Category.
+Eine Auflistung von Zeilen innerhalb einer Gruppe von Zeilen. Siehe auch: catalog, category.
 
 **column**
 
-Der Container für einen einzelnen Typ von Informationen in einer Zeile. Spalten werden Eigenschaftsnamen zugeordnet und geben an, welche Eigenschaften für die Befehlsstruktur Elemente der Suchabfrage verwendet werden. Siehe auch: Kategorie.
+Der Container für einen einzelnen Informationstyp in einer Zeile. Spalten werden Eigenschaftennamen zugeordnet und geben an, welche Eigenschaften für die Befehlsstrukturelemente der Suchabfrage verwendet werden. Siehe auch: Kategorie.
 
 **Befehlsstruktur**
 
-Eine Kombination aus Einschränkungen, Kategorien und Sortier Reihenfolgen, die für die Suchabfrage angegeben werden. Siehe auch: Kategorie.
+Eine Kombination aus Einschränkungen, Kategorien und Sortierreihenfolgen, die für die Suchabfrage angegeben werden. Siehe auch: Kategorie.
 
 **container**
 
-Ein Typ von shellelement, das andere Elemente enthalten kann. Elemente in einem Container werden mithilfe einer shelldatenquelle für den Shellnamespace verfügbar gemacht. Beispiele hierfür sind Ordner, Laufwerke, Netzwerkserver und komprimierte Dateien mit der Dateinamenerweiterung ". zip". Siehe auch: Shell-Datenquelle, Ordner, shellelement.
+Ein Shellelementtyp, der andere Elemente enthalten kann. Elemente in einem Container werden mithilfe einer Shell-Datenquelle für den Shellnamespace verfügbar gemacht. Beispiele hierfür sind Ordner, Laufwerke, Netzwerkserver und komprimierte Dateien mit einer .zip Dateinamenerweiterung. Siehe auch: Shelldatenquelle, Ordner, Shellelement.
 
 **content**
 
-Text und Eigenschaften, die einem shellelement oder einer Inhaltsquelle zugeordnet sind, das indiziert werden kann.
+Text und Eigenschaften, die einem Shellelement oder einer Inhaltsquelle zugeordnet sind, die indiziert werden können.
 
 **Inhaltsquelle**
 
-Ein Element, auf das der Indexer zugreifen kann. Inhalts Quellen sind über eine URL adressierbar und werden von einem Protokollhandler für den Indexer bereitgestellt. Beispiele hierfür sind: Dateisystem Dateien und-Ordner, Microsoft Outlook-Elemente und-Ordner, Datenbankeinträge und gespeicherte Microsoft SharePoint-Elemente. Eine Inhaltsquelle kann als shellelemente verfügbar gemacht werden, indem eine shelldatenquelle implementiert wird. Siehe auch: Inhalt, shellelement.
+Ein Element, auf das der Indexer zugreifen kann. Inhaltsquellen können über eine URL adressiert werden und werden dem Indexer von einem Protokollhandler bereitgestellt. Beispiele hierfür sind Dateisystemdateien und -ordner, Microsoft Outlook Elemente und Ordner, Datenbankdatensätze und Gespeicherte Elemente von Microsoft SharePoint. Eine Inhaltsquelle kann als Shellelemente verfügbar gemacht werden, indem eine Shell-Datenquelle implementiert wird. Siehe auch: Inhalt, Shellelement.
 
 **content view (Inhaltsansicht)**
 
-Eine Ansicht in Windows-Explorer (in Windows 7 und höher angeboten), die den relevantesten Inhalt für jedes Element in der Liste basierend auf der Dateinamenerweiterung oder der Art der Zuordnung anzeigt. In der Inhaltsansicht wird eine Logik zur Größenänderung verwendet, mit der Eigenschaften gelöscht werden, wenn die Fenstergröße abnimmt, um sicherzustellen, dass die kritischsten Eigenschaften weiterhin Platz aufweisen, um klar lesbar Siehe auch: Layoutmuster, Kind, Kind Association.
+Eine Ansicht im Windows Explorer (angeboten in Windows 7 und höher), die den relevantesten Inhalt für jedes Element in der Liste basierend auf seiner Dateierweiterung oder Kind-Zuordnung anzeigt. Die Inhaltsansicht verwendet eine Größenänderungslogik, die Eigenschaften löscht, wenn die Fenstergröße abnimmt, um sicherzustellen, dass die kritischsten Eigenschaften weiterhin Platz haben, um klar lesbar zu sein. Siehe auch: Layoutmuster, Art, Kind-Zuordnung.
 
-**Inhalts Ansichtsmodus**
+**Inhaltsansichtsmodus**
 
 Siehe Definition für: Inhaltsansicht.
 
 **Kontextmenü**
 
-Dieser Begriff wird manchmal verwendet, um das Kontextmenü zu verwenden. Siehe Definition für: Kontextmenü.
+Dieser Begriff wird manchmal als Kontextmenü verwendet. Siehe Definition für: Kontextmenü.
 
-**Kontextmenü Handler**
+**Kontextmenühandler**
 
-Dieser Begriff wird manchmal verwendet, um den Kontextmenü Handler zu verwenden. Siehe Definition für: Kontextmenü Handler.
+Dieser Begriff wird manchmal als Kontextmenühandler verwendet. Siehe Definition für: Kontextmenühandler.
 
 **Durchforsten**
 
-Zum Durchlaufen eines Durchforstungs Bereichs, der Inhalts Quellen identifiziert, die Indizierung oder Neuindizierung erfordern.
+Um einen Durchforstungsbereich zu iterieren, identifizieren Sie Inhaltsquellen, die eine Indizierung oder erneute Indizierung erfordern.
 
-**Crawl Bereich**
+**Durchforstungsbereich**
 
-Eine Auflistung von Daten speichern (nach URL identifizierbar), die Inhalt darstellt, den der Indexer durch forken und indiziert.
+Eine Auflistung von Datenspeichern (durch URL identifizierbar), die Inhalte darstellen, die der Indexer durchforstet und indiziert.
 
 **Cursor**
 
-Im Kontext des lokalen Indexes ist ein Cursor ein Indikator für das Arbeiten mit einer Zeile oder einem kleinen Zeilen Block zu einem Zeitpunkt in einem Satz von Daten, der in einem Resultset zurückgegeben wird. Nachdem der Cursor auf einer Zeile positioniert wurde, können Vorgänge für diese Zeile oder einen Zeilen Block gestartet werden, beginnend an dieser Position.
+Im Kontext des lokalen Indexes ist ein Cursor ein Indikator für die Gleichzeitige Arbeit mit einer Zeile oder einem kleinen Zeilenblock in einem Satz von Daten, die in einem Resultset zurückgegeben werden. Nachdem der Cursor in einer Zeile positioniert wurde, können Vorgänge für diese Zeile oder für einen Zeilenblock ausgeführt werden, der an dieser Position beginnt.
 
 ## <a name="d"></a>D
 
-**Datenverwaltung, durchsuchen und Mining**
+**Datenverwaltung, Exploration und Mining**
 
 Siehe Definition für: Database Mining Extensions (DMX).
 
-**Datenobjekt Handler**
+**Datenobjekthandler**
 
-Ein Handler, der zusätzliche Zwischenablage Formate für das Datenobjekt (IDataObject) eines Elements bereitstellt. Datenobjekte werden in Drag & Drop-und Kopier-/Einfüge Szenarien verwendet.
+Ein Handler, der zusätzliche Zwischenablageformate für das Datenobjekt (IDataObject) eines Elements bereitstellt. Datenobjekte werden in Drag & Drop- und Kopier-/Einfügeszenarien verwendet.
 
 **Datenquelle**
 
-Dieser Begriff wird manchmal verwendet, um Datenspeicher oder Shell-Datenquelle zu verwenden. Siehe Definition für: Datenspeicher, shelldatenquelle.
+Dieser Begriff wird manchmal als Datenspeicher oder Shell-Datenquelle verwendet. Siehe Definition für: Datenspeicher, Shelldatenquelle.
 
 **Datenspeicher**
 
-Ein Repository mit Daten. Ein Datenspeicher kann für das shellprogrammierungs Modell als Container mithilfe einer shelldatenquelle verfügbar gemacht werden. Die Elemente in einem Datenspeicher können vom Windows-Suchsystem mithilfe eines Protokoll Handlers indiziert werden.
+Ein Repository mit Daten. Ein Datenspeicher kann für das Shell-Programmiermodell als Container mithilfe einer Shell-Datenquelle verfügbar gemacht werden. Die Elemente in einem Datenspeicher können vom Suchsystem mithilfe Windows Protokollhandlers indiziert werden.
 
-**Daten Bank Mining-Erweiterungen (DMX)**
+**Database Mining Extensions (DMX)**
 
-Eine Abfragesprache, die zum Erstellen und Bearbeiten von Data Mining verwendet wird. Bei den administrativen Vorlagen für Windows 7, Windows Search und Windows Explorer handelt es sich um ADMX-Dateien, die auf der DMX-Technologie basieren. Die folgenden Vorlagen können über Gruppenrichtlinie angepasst werden: Search. ADMX, Explorer. ADMX und WindowsExplorer. ADMX.
+Eine Abfragesprache, die zum Erstellen und Bearbeiten von Data Mining verwendet wird. Die administrativen Vorlagen für Windows 7, Windows Search und Windows Explorer sind ADMX-Dateien und basieren auf DMX-Technologie. Die folgenden Vorlagen können über die folgenden Gruppenrichtlinie angepasst werden: Search.admx, Explorer.admx und WindowsExplorer.admx.
 
-**DMX**
+**Dmx**
 
-Siehe Definition für: Daten Bank Mining Erweiterungen.
+Siehe Definition für: Database Mining Extensions.
 
 **document**
 
-Ein shellelement, das Text enthält und für das die IFilter-Schnittstelle implementiert werden konnte.
+Ein Shellelement, das Text enthält und für das die IFilter-Schnittstelle implementiert werden kann.
 
 **Drop-Handler**
 
-Ein Handler, der einem bestimmten Elementtyp ermöglicht, Drag & Drop-und Kopier-/Einfüge Szenarien zu unterstützen.
+Ein Handler, der es einem bestimmten Elementtyp ermöglicht, Drag & Drop- und Kopier-/Einfügeszenarien zu unterstützen.
 
-**Ablage Ziel**
+**Drop-Ziel**
 
-Ein Datenobjekt, das in eine Datei gezogen und dort abgelegt wird. Siehe auch: Daten Handler, Drop Handler.
+Ein Datenobjekt, das gezogen und in eine Datei gelöscht wird. Siehe auch: Datenhandler, Abbruchhandler.
 
 **Dynamisches Verb**
 
-Ein Verb, das vom Zustand eines shellelements oder des Systems abhängig ist. das Element ist Zustands basiert und erfordert, dass der ausführende Code bestimmt, ob das Element angezeigt werden soll. Siehe auch: Kontextmenü Handler, statisches Verb, Verb.
+Ein Verb, das vom Zustand eines Shellelements oder des Systems abhängt; Die Darstellung des Elements ist zustandsbasierte und erfordert, dass der ausgeführte Code bestimmt, ob das Element angezeigt werden soll. Siehe auch: Kontextmenühandler, statisches Verb, Verb.
 
 ## <a name="e"></a>E
 
 **Explorer-Befehl**
 
-Ein Objekt, das als Schaltfläche in der Nähe des oberen Fensters des Windows-Explorer-Fensters angezeigt werden kann, das Funktionen für Elemente und Container in diesem Fenster bereitstellt. Eine shelldatenquelle stellt die Windows-Explorer-Befehls Objekte für ein bestimmtes Containerelement bereit. Befehle werden manchmal als Verben verwendet.
+Ein Objekt, das als Schaltfläche im oberen Bereich des Fensters Windows Explorer angezeigt werden kann, das Funktionen für Elemente und Container in diesem Fenster bietet. Eine Shell-Datenquelle stellt die Windows Explorer-Befehlsobjekte für ein bestimmtes Containerelement. Befehle werden manchmal als Verben verwendet.
 
 ## <a name="f"></a>F
 
-**Verbund Suche**
+**Verbundsuche**
 
-Ein Erweiterbarkeits Modell, das das Durchsuchen von Daten speichern und das darstellen der Ergebnisse als shellelemente in Windows-Explorer ermöglicht. Siehe auch: Anbieter für Verbund Suche, Suchconnector, OpenSearch-Deskriptor, OpenSearch-Standard.
+Ein Erweiterbarkeitsmodell, das das Durchsuchen von Datenspeichern und das Darstellen der Ergebnisse als Shellelemente im Windows ermöglicht. Siehe auch: Verbundsuchanbieter, Suchconnector, OpenSearch Deskriptor, OpenSearch Standard.
 
-**Connector für Verbund Suche**
+**Verbundsuchconnector**
 
-Siehe Definition für: Suchconnector.
+Weitere Informationen finden Sie unter Definition for: search connector (Definition für: Suchconnector).
 
-**Anbieter für Verbund Suche**
+**Verbundsuchanbieter**
 
-Ein von einem Datenspeicher implementierter Webdienst, der die von Windows 7 verwendeten Protokolle unterstützt, sodass Windows 7 und spätere Versionen diesen Datenspeicher Remote durchsuchen können. Siehe auch: OpenSearch-Deskriptor, OpenSearch-Standard.
+Ein von einem Datenspeicher implementierter Webdienst, der die protokolle unterstützt, die von Windows 7 verwendet werden, sodass Windows 7 und höher diesen Datenspeicher remote durchsuchen kann. Siehe auch: OpenSearch Deskriptor, OpenSearch Standard.
 
-**Datei Zuordnung**
+**Dateiassoz**
 
-Siehe Definition für: Dateityp Zuordnung.
+Siehe Definition für: Dateitypassoz.
 
 **Dateiformat**
 
-Ein Format für Daten, die in einer Datei gespeichert sind, die über eine dokumentierte Format Spezifikation verfügt. Beispiele hierfür sind OLE DOCFILE, OPC, XML, zip und andere bekannte Datei Formatspezifikationen. Dateityp-Ersteller verwenden im Allgemeinen ein vorhandenes Dateiformat als Grundlage für einen neuen Dateityp. Ein Dateiformat kann einfach eine Definition sein, die nicht als Dateityp instanziiert wird.
+Ein Format für Daten, die in einer Datei gespeichert sind, die über eine dokumentierte Formatspezifikation verfügt. Beispiele hierfür sind OLE DocFile, OPC, XML, ZIP und andere bekannte Dateiformatspezifikationen. Dateitypersteller verwenden in der Regel ein vorhandenes Dateiformat als Grundlage für einen neuen Dateityp. Ein Dateiformat kann einfach eine Definition sein, die nicht als Dateityp instanziiert wird.
 
-**Dateiformat Handler**
+**Dateiformathandler**
 
-Dieser Begriff ist ein Synonym für den Dateityp Handler. Siehe Definition für: Dateityp Handler.
+Dieser Begriff ist ein Synonym für den Dateityphandler. Siehe Definition für: Dateityphandler.
 
 **Dateinamenerweiterung**
 
@@ -210,65 +210,65 @@ Siehe Definition für: Dateinamenerweiterung.
 
 **Dateinamenerweiterung**
 
-Der primäre Indikator eines Dateityps für Dateisystem Elemente, ist der Teil des Datei namens, der auf den letzten Punkt folgt. Die Dateinamenerweiterung darf keine Leerzeichen oder nicht-ASCII-Zeichen enthalten und gilt nur für Dateien (nicht für Ordner). Dateinamen Erweiterungen werden mithilfe einer Vergleichsfunktion verglichen, bei der es sich nicht um groß-oder Kleinschreibung handelt. Siehe auch: Dateiformat, Dateityp.
+Der primäre Indikator eines Dateityps für Dateisystemelemente ist der Teil des Dateinamens, der auf den letzten Punkt folgt. Die Dateierweiterung darf keine Leerzeichen oder Nicht-ASCII-Zeichen enthalten und gilt nur für Dateien (keine Ordner). Dateinamenerweiterungen werden mithilfe einer Vergleichsfunktion verglichen, bei der die Schreibung oder das Lokale nicht berücksichtigt wird. Siehe auch: Dateiformat, Dateityp.
 
 **Dateityp**
 
-Ein bestimmter Dateiname-Erweiterungs Wert, wie z. b. ". htm" oder ". jpg", der eine Klasse von Dateien definiert, die denselben Typ aufweisen und über einen gemeinsamen Satz von Zuordnungen verfügen. Siehe auch: Kind, Dateityp Zuordnung.
+Ein bestimmter Dateinamenerweiterungswert, z. B. ".htm" oder ".jpg", der eine Klasse von Dateien definiert, die denselben Typ haben und einen gemeinsamen Satz von Zuordnungen haben. Siehe auch: Art, Dateitypassoz.
 
 **Dateitypzuordnung**
 
-Für eine bestimmte Dateinamenerweiterung werden die Zuordnungs Elemente, die angeben, wo Handler und andere Attribute registriert werden können, definiert. Siehe auch: Zuordnungs Array, Dateityp.
+Für eine bestimmte Dateinamenerweiterung die Zuordnungsarrayelemente, die definieren, wo Handler und andere Attribute registriert werden können. Siehe auch: Zuordnungsarray, Dateityp.
 
-**Dateityp Anpassung**
+**Anpassung des Dateityps**
 
-Eine Zuordnung, mit der Shell anpassen kann, wie Shell einen Dateityp behandelt. Dateityp Anpassungen umfassen Folgendes: Angeben der Anwendung, die zum Öffnen der Datei beim Doppelklicken verwendet wurde, Hinzufügen von Befehlen zum Kontextmenü für einen Dateityp, Angeben eines benutzerdefinierten Symbols, Angeben eines MIME-Inhaltstyps, der einem Dateityp zugeordnet werden soll, Angeben eines erkannten Typs und Angeben einer oder mehrerer Anwendungen, die mit dem Dateityp verknüpft sind Siehe auch: wahrnehmvedtype.
+Eine Zuordnung, mit der Shell anpassen kann, wie Shell einen Dateityp behandelt. Zu den Dateitypanpassungen gehören: Angeben der Anwendung, die zum Öffnen der Datei beim Doppelklicken verwendet wird, Hinzufügen von Befehlen zum Kontextmenü für einen Dateityp, Angeben eines benutzerdefinierten Symbols, Angeben eines MIME-Inhaltstyps, der einem Dateityp zugeordnet werden soll, Angeben eines wahrgenommenen Typs und Angeben einer oder mehrere Anwendungen, die dem Dateityp mit dem Dialogfeld Öffnen mit zugeordnet sind. Siehe auch: PerceivedType.
 
-**Dateityp Handler**
+**Dateityphandler**
 
 Ein für einen Dateityp registrierter Handler. Siehe auch: Handler.
 
 **filter**
 
-Eine Implementierung der IFilter-Schnittstelle. Er öffnet Dateien eines bestimmten Dateityps und filtert Eigenschaften und Textabschnitte für den Indexer. Filter sind Dateitypen zugeordnet, die durch Dateinamen Erweiterungen, MIME-Typen oder Klassen Bezeichner (CLSIDs) bezeichnet werden. Obwohl ein Filter mehrere Dateitypen verarbeiten kann, kann jeder Dateityp nur mit einem einzigen Filter verwendet werden.
+Eine Implementierung der IFilter-Schnittstelle. Sie öffnet Dateien eines bestimmten Dateityps und filtert Eigenschaften und Textbrocken für den Indexer. Filter werden Dateitypen zugeordnet, wie durch Dateierweiterungen, MIME-Typen oder Klassenbezeichner (CLSIDs) angegeben. Obwohl ein Filter mehrere Dateitypen verarbeiten kann, funktioniert jeder Dateityp nur mit einem Filter.
 
-**Pfalz**
+**Ordner**
 
-Siehe Definition für: Container.
+Weitere Informationen finden Sie unter Definition für: Container.
 
 ## <a name="h"></a>H
 
-**lers**
+**handler**
 
-Ein COM-Objekt, das Funktionen für ein shellelement bereitstellt. Die meisten shelldatenquellen bieten ein erweiterbares System zum Binden von Handlern an Elemente. Beispielsweise verwendet der Dateisystem Ordner das Zuordnungs System, um die Handler für einen bestimmten Dateityp zu suchen. Siehe auch: Datei Zuordnung, Dateityp, Dateityp Anpassung.
+Ein COM-Objekt, das Funktionen für ein Shellelement bietet. Die meisten Shell-Datenquellen bieten ein erweiterbares System zum Binden von Handlern an Elemente. Beispielsweise verwendet der Dateisystemordner das Zuordnungssystem, um die Handler für einen bestimmten Dateityp zu suchen. Siehe auch: Dateiassoz, Dateityp, Dateitypanpassung.
 
 ## <a name="i"></a>I
 
-**Symbol Handler**
+**Symbolhandler**
 
-Ein Handler, der die zum Generieren und Zwischenspeichern eines Symbols für ein Element benötigten Informationen bereitstellt. Der Dateisystem-Datenspeicher unterstützt das Laden eines Symbol Handlers für ein Element auf der Grundlage des Dateityps, sodass dieser Handler ein Symbol bereitstellen kann, das für alle Instanzen dieses Dateityps verwendet wird.
+Ein Handler, der die Informationen enthält, die zum Generieren und Zwischenspeichern eines Symbols für ein Element erforderlich sind. Der Dateisystemdatenspeicher unterstützt das Laden eines Symbolhandlers für ein Element basierend auf dem Dateityp, sodass dieser Handler ein Symbol bereitstellen kann, das für alle Instanzen dieses Dateityps verwendet wird.
 
 **Index**
 
-n. Ein Katalog, in dem der Inhalt und die Eigenschaften von shellelementen gespeichert werden, um schnelle Suchvorgänge zu ermöglichen. Siehe auch: Catalog, Indexer, Indizierung, invertierter Index. v. Um auf Inhalts Quellen zuzugreifen, Filtern Sie die Quellen nach Inhalt und Eigenschaften, und fügen Sie die extrahierten Werte in den Index (für Text) und den Windows Search-Eigenschaften Speicher (für Eigenschaften) ein. Siehe auch: Inhaltsquelle, Index, Indexer, invertierter Index.
+n. Ein Katalog, der den Inhalt und die Eigenschaften von Shellelementen speichert, um schnelle Suchvorgänge zu ermöglichen. Siehe auch: Katalog, Indexer, Indizierung, invertierter Index. v. Um auf Inhaltsquellen zu zugreifen, filtern Sie die Quellen nach Inhalt und Eigenschaften, und fügen Sie die extrahierten Werte in den Index (für Text) und den Windows Search-Eigenschaftenspeicher (für Eigenschaften) ein. Siehe auch: Inhaltsquelle, Index, Indexer, invertierter Index.
 
 **Indexer**
 
-Eine Anwendung, die die Indizierung indiziert oder koordiniert. Siehe auch: Index, Indizierung, invertierter Index.
+Eine Anwendung, die die Indizierung übernimmt oder die Indizierung koordiniert. Siehe auch: Index, Indizierung, invertierter Index.
 
-**Infotipp-Handler**
+**Infotip-Handler**
 
-Ein Handler, der Popup Text bereitstellt, wenn der Benutzer mit dem Mauszeiger auf ein Benutzeroberflächen Objekt zeigt.
+Ein Handler, der Popuptext enthält, wenn der Benutzer mit dem Mauszeiger auf ein Benutzeroberflächenobjekt zeigt.
 
-**umgekehrter Index**
+**Invertierter Index**
 
-Eine persistente Struktur, die den Inhalt enthält, der von der Windows-Suche aus Dateien entnommen wurde. Der Text wird in einen Index organisiert, der aus einem Wort in einer Eigenschaft einer Liste der Dokumente und Speicherorte innerhalb eines Dokuments zugeordnet ist, die dieses Wort enthalten. Daher ist ein invertierter Index der umgekehrte Vorgang des Extrahierens von Text und Eigenschaften aus dem Dokument und dem Einfügen in den Indexer. Siehe auch: Index, Indexer, Indizierung.
+Eine persistente Struktur, die den Inhalt enthält, der von der Suche aus dateien Windows wird. Der Text ist in einem Index organisiert, der von einem Wort in einer Eigenschaft zu einer Liste der Dokumente und Positionen in einem Dokument, die dieses Wort enthalten, zu ordnet. Daher ist ein invertierter Index die Umkehrung des Prozesses, bei dem der Text und die Eigenschaften aus dem Dokument extrahiert und in den Indexer eingefügt werden. Siehe auch: Index, Indexer, Indizierung.
 
 **item**
 
-Siehe Definition für: shellelement.
+Siehe Definition für: Shellelement.
 
-**Item-Klasse**
+**item-Klasse**
 
 Siehe Definition für: Dateityp.
 
@@ -276,191 +276,191 @@ Siehe Definition für: Dateityp.
 
 **Kind**
 
-Eine Eigenschaft, die einen benutzerfreundlichen Namen bereitstellt und einer Liste von Eigenschaften und einem Layoutmuster zugeordnet werden kann. Art wurde in Windows Vista eingeführt, um einen benutzerfreundlicheren Begriff "Dateityp" zu lesen, und er wurde als mehrwertige Zeichen folgen Eigenschaft (kanonische Zeichen folgen Werte) definiert. Daher können Sie einen "Audiotext"-oder "Link; Dokument"-Wert haben. Einige benutzerfreundliche Arten von Namen sind bereits Eigenschaften und layoutmustern zugeordnet. Beispielsweise werden Elementen, die mit "Kind. Picture" verknüpft sind, und Elementen, die mit Kind.Doc-Ereignis verknüpft sind, andere Eigenschaften angezeigt, auch wenn Sie sich in derselben Ansicht befinden Jede Elementart kann einem von vier eindeutigen layoutmustern zugeordnet werden, die die Anzahl der Eigenschaften definieren, die für die einzelnen Elemente und deren Layout angezeigt werden. Siehe auch: Kind Association, Content View, Layout Pattern.
+Eine Eigenschaft, die einen benutzerfreundlichen Kind-Namen bereitstellt und einer Liste von Eigenschaften und einem Layoutmuster zugeordnet werden kann. Kind wurde in Windows Vista eingeführt, um ein benutzerfreundlicheres Konzept des Dateityps auszudrücken, und es wurde als mehrwertige Zeichenfolgeneigenschaft (kanonische Zeichenfolgenwerte) definiert, daher können Sie einen "audio;video"- oder "link;document"-Typwert haben. Einige benutzerfreundliche Kind-Namen sind bereits Eigenschaften und Layoutmustern zugeordnet. Beispielsweise zeigen Elemente, die Kind.Picture zugeordnet sind, und Elemente, die Kind.Document zugeordnet sind, unterschiedliche Eigenschaften an, auch wenn sie sich in derselben Ansicht befinden. Jede Elementart kann einem von vier eindeutigen Layoutmustern zugeordnet werden, die die Anzahl der eigenschaften definieren, die für jedes Element und dessen Layout angezeigt werden. Siehe auch: Artzuordnung, Inhaltsansicht, Layoutmuster.
 
-**Kind-Zuordnung**
+**Art-Zuordnung**
 
-Eine Eigenschaft im Eigenschaften System namens System. Kind, die bestimmt, welche UX-Vorlagen für eine Datei angezeigt werden. Diese Eigenschaft stellt auch einen benutzerfreundlichen Namen für den Typ des Elements bereit und ist mit der Dateinamenerweiterung verknüpft. Siehe auch: Kind.
+Eine Eigenschaft im Eigenschaftensystem namens System.Kind, die bestimmt, welche UX-Vorlagen für eine Datei angezeigt werden. Diese Eigenschaft stellt auch einen benutzerfreundlichen Namen für den Typ des Elements bereit und ist mit der Dateinamenerweiterung verknüpft. Siehe auch: Kind.
 
 ## <a name="l"></a>L
 
 **Layoutmuster**
 
-Eine von mehreren Anordnungen zum Anzeigen von Eigenschaften. Wenn Sie in Windows 7 und höher einen neuen Dateityp registrieren, können Sie die Inhaltsansicht verwenden, um eine benutzerdefinierte Eigenschaften Liste und ein Layoutmuster für den Dateityp zu registrieren. Sie können aus vier unterschiedlichen layoutmustern wählen: Alpha (für Dokument Suchergebnisse, die Code Ausschnitte enthalten), Beta (für e-Mail-Suchergebnisse mit Code Ausschnitten), Gamma (ähnlich wie Alpha, aber mit einem zweizeiligen Layout anstelle von vier) und Delta (für die Anzeige zahlreicher kürzerer Eigenschaften, z. b. mit Musik und Bildern). Siehe auch: Inhaltsansicht, Kind, Kind Association.
+Eine von mehreren Anordnungen zum Anzeigen von Eigenschaften. Wenn Sie in Windows 7 und höher einen neuen Dateityp registrieren, können Sie die Inhaltsansicht verwenden, um eine benutzerdefinierte Eigenschaftenliste und ein Layoutmuster für Ihren Dateityp zu registrieren. Sie können aus vier verschiedenen Layoutmustern wählen: Alpha (für Dokumentsuchergebnisse, die Codeausschnitte enthalten), Beta (für E-Mail-Suchergebnisse mit Codeausschnitten), Gamma (ähnlich wie Alpha, aber mit einem zweizeiligen Layout anstelle von vier) und Delta (zum Anzeigen vieler kürzerer Eigenschaften, z. B. mit Musik und Bildern). Siehe auch: Inhaltsansicht, Art, Kind-Zuordnung.
 
 ## <a name="m"></a>M
 
 **Metadatenhandler**
 
-Dieser Begriff wird manchmal verwendet, um den Eigenschafts Handler zu verwenden. Siehe Definition für: Eigenschaften Handler.
+Dieser Begriff wird manchmal als Eigenschaftenhandler verwendet. Siehe Definition für: Eigenschaftenhandler.
 
 ## <a name="n"></a>N
 
-**Namespace Erweiterung**
+**Namespaceerweiterung**
 
-Siehe Definition für: shelldatenquelle.
+Siehe Definition für: Shelldatenquelle.
 
-**Namespace-Walk**
+**Namespace-Exemplarische Schritte**
 
-Ein Hilfsprozess, der den Namespace eines Containers oder einer Gruppe von Containern durchläuft, wobei jedes Element ermittelt und ggf. eine beliebige Aufgabe durchgeführt wird. Die inamespacewalk-Schnittstelle kann zum Durchlaufen eines beliebigen Teils des Windows Explorer-Namespace oder zum Ermitteln der Elemente verwendet werden, auf die von einem Datenobjekt oder einer Sicht verwiesen wird. Container Verben (z. b. "Play" in Artists-Containern) durchlaufen den Namespace und ermitteln die Elemente.
+Ein Hilfsprozess, der den Namespace eines Containers oder einer Gruppe von Containern durchläuft, jedes Element erkennt und möglicherweise etwas mit jedem element macht. Die INamespaceWalk-Schnittstelle kann verwendet werden, um einen beliebigen Teil des Windows Explorer-Namespace zu erkunden oder um die Elemente zu ermitteln, auf die von einem Datenobjekt oder einer Datenansicht verwiesen wird. Containerverben (z.B. "Play" in Containers für Zeichner) gehen durch den Namespace und ermitteln die Elemente.
 
 **Abfrage in natürlicher Sprache**
 
-Siehe Definition für: natürliche Abfrage Syntax (NQS).
+Siehe Definition für: Natural Query Syntax (NQS).
 
-**Natürliche Abfrage Syntax (NQS)**
+**Natural Query Syntax (NQS)**
 
-Eine Abfrage Syntax, die einfacher als AQS ist und mehr wie die menschliche Sprache aussieht. NQS kann von Windows Search verwendet werden, um den Index abzufragen, wenn NQS anstelle der standardmäßigen AQS ausgewählt wird. Siehe auch: Erweiterte Abfrage Syntax (AQS).
+Eine Abfragesyntax, die weniger locker als AQS ist und eher der menschlichen Sprache ähnelt. NQS kann von Windows Search verwendet werden, um den Index abzufragen, wenn NQS anstelle der Standardeinstellung AQS ausgewählt ist. Siehe auch: Erweiterte Abfragesyntax (Advanced Query Syntax, AQS).
 
-**Füll Wort**
+**Füllwort**
 
-Ein Wort, das von Windows Search ignoriert wird, wenn es in den für die Suchabfrage angegebenen Einschränkungen vorhanden ist, da es wenig diskriminierenden Wert hat. Beispiele hierfür sind "and" und "The".
+Ein Wort, das von Windows Search ignoriert wird, wenn es in den für die Suchabfrage angegebenen Einschränkungen vorhanden ist, da es nur einen geringen Wert hat. Beispiele hierfür sind "and" und "the".
 
-**NQS**
+**Nqs**
 
-Siehe Definition für: natürliche Abfrage Syntax (NQS).
+Siehe Definition für: Natural Query Syntax (NQS).
 
 ## <a name="o"></a>O
 
-**Objekt Verknüpfungs-und Einbettungs Datenbank (OLE DB)**
+**Object Linking and Embedding-Datenbank (OLE DB)**
 
-Ein Standardsatz von Schnittstellen, der heterogenen Zugriff auf verschiedenartige Informationsquellen bietet, z. b. Dateisysteme, e-Mail-Ordner und Datenbanken.
+Ein Standardsatz von Schnittstellen, der heterogenen Zugriff auf unterschiedliche Informationsquellen an beliebigen Orten ermöglicht, z. B. Dateisysteme, E-Mail-Ordner und Datenbanken.
 
 **OLE DB**
 
-Siehe Definition für: Objekt Verknüpfungs-und Einbettungs Datenbank.
+Siehe Definition für: Object Linking and Embedding-Datenbank.
 
-**OpenSearch-Deskriptor**
+**OpenSearch Deskriptor**
 
-Eine XML-Datei, die die verfügbaren Serververbindungen und Ergebnis Formate für eine bestimmte webbasierte Datenquelle beschreibt. Diese Datei enthält eine oder mehrere URL-Vorlagen und verwendet bei der Interaktion mit der Windows-Shell die Dateinamenerweiterung. OSDX. Eine OpenSearch-Beschreibung wird manchmal auch als Suchconnector bezeichnet, obwohl Sie nur der Beschreibungs Teil eines Verbindungs-Connector ist. Siehe auch: Suchconnector.
+Eine XML-Datei, die verfügbare Serververbindungen und Ergebnisformate für eine bestimmte webbasierte Datenquelle beschreibt. Diese Datei enthält eine oder mehrere URL-Vorlagen und verwendet bei der Interaktion mit der Windows Shell eine OSDX-Dateinamenerweiterung. Eine OpenSearch Beschreibung wird manchmal auch als Suchconnector bezeichnet, obwohl es nur der Beschreibungsteil eines Connectors ist. Siehe auch: Connector suchen.
 
-**OpenSearch-Standard**
+**OpenSearch Standard**
 
-Eine Auflistung von einfachen Formaten und Protokollen, die für die Freigabe von Suchergebnissen verwendet werden. Weitere Informationen finden Sie auf der OpenSearch-Website ( https://github.com/dewitt/opensearch) .
+Eine Sammlung einfacher Formate und Protokolle, die zum Freigeben von Suchergebnissen verwendet werden. Weitere Informationen finden Sie auf der OpenSearch-Website ( https://github.com/dewitt/opensearch) .
 
 ## <a name="p"></a>P
 
-**Wahrnehmungstyp**
+**PerceivedType**
 
-Eine breite Kategorie von Dateiformat Typen. "Wahrnehmvedtype" wurde in Windows XP eingeführt und unterstützt eine begrenzte Anzahl bekannter Dateitypen (Beispiele sind Bild-, Text-, Audio-und komprimierte Dateitypen). Dateitypen, in der Regel öffentliche Dateitypen, können auch über einen wahrgenommenen Typ verfügen. Beispielsweise sind die Image Dateitypen. BMP,. png,. jpg und. gif ebenfalls den wahrgenommenen Typ Image. Auf der Programmier Ebene wird "wahrvedtype" als ganze Zahl ausgedrückt. Da es Code gibt, der "Kind" und "wahrnehmvedtype" verwendet, müssen Besitzer von Dateiformaten beide registrieren. Beispielsweise ist "Play All" von "wahrnehmvedtype" abhängig. Siehe auch: Dateityp.
+Eine breite Kategorie von Dateiformattypen. PerceivedType wurde in Windows XP eingeführt und unterstützt eine begrenzte Anzahl bekannter Dateitypen (z. B. Bild-, Text-, Audio- und komprimierte Dateitypen). Dateitypen, im Allgemeinen öffentliche Dateitypen, können auch einen wahrgenommenen Typ aufweisen. Beispielsweise sind die Bilddateitypen .bmp, .png, .jpg und .gif ebenfalls vom wahrgenommenen Typ Image. Auf der Programmierebene wird PerceivedType als ganze Zahl ausgedrückt. Da es Code gibt, der Kind und PerceivedType verwendet, müssen Besitzer des Dateiformats beides registrieren. Beispielsweise hängt "alles wiedergeben" von PerceivedType ab. Siehe auch: Dateityp.
 
-**Vorschau Handler**
+**Vorschauhandler**
 
-Ein Handler, der schnell eine schreibgeschützte, vereinfachte Ansicht des shellelements erstellt, das im Vorschaubereich von Windows-Explorer angezeigt werden soll.
+Ein Handler, der schnell eine schreibgeschützte, vereinfachte Ansicht des Shellelements erzeugt, das im Vorschaubereich Windows Explorer angezeigt werden soll.
 
-**Vorschau**
+**Previewer**
 
-Dieser Begriff wird manchmal verwendet, um einen Vorschau Handler zu verwenden. Siehe Definition für: Vorschau Handler.
+Dieser Begriff wird manchmal als Vorschauhandler verwendet. Siehe Definition für: Vorschauhandler.
 
-**Eigenschaften Handler**
+**Eigenschaftenhandler**
 
-Ein Handler, der in einer Datei gespeicherte Daten in ein strukturiertes Schema übersetzt, das von erkannt wird und auf das von Windows-Explorer, Windows Search und anderen Anwendungen zugegriffen werden kann. Diese Systeme können dann mit dem Eigenschaften Handler interagieren, um Eigenschaften in die Datei zu schreiben und diese zu lesen. Zu den übersetzten Daten zählen Detailansicht, Infotipps, Detailbereich, Eigenschaften Seiten usw. Jeder Eigenschaften Handler ist einem bestimmten Dateityp zugeordnet, der durch die Dateinamenerweiterung gekennzeichnet ist. Siehe auch: Eigenschaften System.
+Ein Handler, der in einer Datei gespeicherte Daten in ein strukturiertes Schema übersetzt, das von erkannt wird und auf das Windows Explorer, Windows Search und andere Anwendungen zugreifen können. Diese Systeme können dann mit dem Eigenschaftenhandler interagieren, um Eigenschaften in und aus der Datei zu schreiben und zu lesen. Die übersetzten Daten umfassen Detailansicht, Infotips, Detailbereich, Eigenschaftenseiten usw. Jeder Eigenschaftenhandler ist einem bestimmten Dateityp zugeordnet, der durch die Dateinamenerweiterung identifiziert wird. Siehe auch: Eigenschaftensystem.
 
-**Eigenschaften Blatt Handler**
+**Eigenschaftenblatthandler**
 
-Ein Handler, der zum Erstellen benutzerdefinierter Eigenschaften Blätter mit UI-Bildern und Steuerelementen verwendet wird, die eine benutzerdefinierte Interaktion mit einem Dateityp ermöglichen.
+Ein Handler, der verwendet wird, um benutzerdefinierte Eigenschaftenblätter mit Ui-Bildern und -Steuerelementen zu erstellen, die eine benutzerdefinierte Interaktion mit einem Dateityp ermöglichen.
 
-**Eigenschaften System**
+**-Eigenschaftensystem**
 
-Ein erweiterbares Lese-/Schreibsystem von Daten Definitionen, das Eigenschaften verwendet, die als Name-Wert-Paare implementiert werden. Siehe auch: Eigenschaften Handler, shellelement.
+Ein erweiterbares Lese-/Schreibsystem von Datendefinitionen, das Eigenschaften verwendet, die als Name-Wert-Paare implementiert sind. Siehe auch: Eigenschaftenhandler, Shellelement.
 
-**Eigenschafts Wert**
+**-Eigenschaftswert**
 
-Ein Wert, der einem Eigenschaftsnamen für ein shellelement zugeordnet ist. Beispielsweise sind "Author", "size" und "Date Taken" Eigenschaften. Eigenschaftswerte werden als PROPVARIANT-Struktur ausgedrückt.
+Ein Wert, der einem Eigenschaftennamen für ein Shellelement zugeordnet ist. Beispielsweise sind "Author", "Size" und "Date Taken" Eigenschaften. Eigenschaftswerte werden als PROPVARIANT-Struktur ausgedrückt.
 
 **Protokollhandler**
 
-Ein Handler, der auf Inhalts Quellen zugreift und ein iurlaccessor-Objekt für ein angegebenes Protokoll und eine URL bereitstellt. Protokollhandler erweitern die Windows-Suchfunktionen und stellen möglicherweise Änderungs Benachrichtigungen für Indexer bereit. Zum Indizieren bestimmter Typen von Daten speichern sind unterschiedliche Protokollhandler erforderlich. Zum Bereitstellen eines angemessenen Benutzer Erlebnisses müssen Sie zusätzlich zur Implementierung des Protokoll Handlers auch eine Shell-Datenquelle für den Datenspeicher bereitstellen. Der Protokollhandler macht die Elemente im Datenspeicher für den Indexer verfügbar, während die shelldatenquelle die Elemente im Datenspeicher für die Shell verfügbar macht.
+Ein Handler, der auf Inhaltsquellen zugreift und ein IUrlAccessor-Objekt für ein angegebenes Protokoll und eine URL bereitstellt. Protokollhandler erweitern Windows Search-Funktionalität und können Änderungsbenachrichtigungen für Indexer bereitstellen. Unterschiedliche Protokollhandler sind erforderlich, um bestimmte Typen von Datenspeichern zu indizieren. Um eine angemessene Benutzererfahrung zu bieten, müssen Sie zusätzlich zur Implementierung Ihres Protokollhandlers auch eine Shell-Datenquelle für den Datenspeicher bereitstellen. Der Protokollhandler macht die Elemente im Datenspeicher für den Indexer verfügbar, während die Shell-Datenquelle die Elemente im Datenspeicher für die Shell verfügbar macht.
 
 ## <a name="r"></a>R
 
-**Geschwin**
+**Einschränkung**
 
-Eine Bedingung, die eine Datei erfüllen muss, um in die von Windows Search zurückgegebenen Suchergebnisse aufgenommen zu werden.
+Eine Bedingung, die eine Datei erfüllen muss, um in die Suchergebnisse aufgenommen zu werden, die von Windows Search zurückgegeben werden.
 
 **row**
 
-Die Spalten, die die Eigenschaftswerte enthalten, die ein einzelnes Ergebnis aus dem Satz von-Objekten beschreiben, der den in einer Suchabfrage angegebenen Einschränkungen entspricht.
+Die Spalten, die die Eigenschaftswerte enthalten, die ein einzelnes Ergebnis aus dem Satz von -Objekten beschreiben, die den in einer Suchabfrage angegebenen Einschränkungen entsprachen.
 
 **Rowset**
 
-Eine Reihe von Zeilen, die in den Suchergebnissen zurückgegeben werden.
+Ein Satz von Zeilen, die in den Suchergebnissen zurückgegeben werden.
 
 ## <a name="s"></a>E
 
-**Connector suchen**
+**Suchconnector**
 
-Eine XML-Datei, die Informationen zu einem Datenspeicher enthält. Suchconnectors werden für die Verbund Suche bereitgestellt.
+Eine XML-Datei, die Informationen zu einem Datenspeicher enthält. Suchconnectors werden für die Verbundsuche bereitgestellt.
 
-**Consumer durchsuchen**
+**Search-Consumer**
 
 Eine Komponente oder Anwendung, die den Index abfragt.
 
 **Verbund suchen**
 
-Siehe Definition für: Verbund-Suchanbieter.
+Siehe Definition für: Verbundsuchanbieter.
 
 **Suchanbieter**
 
-Eine Komponente oder Anwendung, die Daten für die Windows-Suche bereitstellt.
+Eine Komponente oder Anwendung, die Daten für die suche Windows.
 
 **Suchbereich**
 
-Dieser Begriff wird manchmal verwendet, um den Crawl Bereich zu Mean. Siehe Definition für: Crawl Bereich.
+Dieser Begriff wird manchmal als Durchforstungsbereich verwendet. Siehe Definition für: Durchforstungsbereich.
 
 **Shelldatenquelle**
 
-Eine Komponente, die verwendet wird, um den Shellnamespace zu erweitern und Elemente in einem Datenspeicher verfügbar zu machen. In der Vergangenheit wurde die shelldatenquelle als Shell-Namespace Erweiterung bezeichnet. Siehe auch: Container, Handler, shellelement.
+Eine Komponente, die verwendet wird, um den Shellnamespace zu erweitern und Elemente in einem Datenspeicher verfügbar zu machen. In der Vergangenheit wurde die Shell-Datenquelle als Shellnamespaceerweiterung bezeichnet. Siehe auch: Container, Handler, Shell-Element.
 
 **Shellerweiterung**
 
-Dieser Begriff wird manchmal verwendet, um den Dateityp Handler zu verwenden. Siehe Definition für: Dateityp Handler.
+Dieser Begriff wird manchmal als Dateityphandler verwendet. Siehe Definition für: Dateityphandler.
 
-**Shellerweiterungs Handler**
+**Shell-Erweiterungshandler**
 
-Dieser Begriff wird manchmal verwendet, um den Dateityp Handler zu verwenden. Siehe Definition für: Dateityp Handler.
+Dieser Begriff wird manchmal als Dateityphandler verwendet. Siehe Definition für: Dateityphandler.
 
 **Shellhandler**
 
-Dieser Begriff wird manchmal verwendet, um den Dateityp Handler zu verwenden. Siehe Definition für: Dateityp Handler.
+Dieser Begriff wird manchmal als Dateityphandler verwendet. Siehe Definition für: Dateityphandler.
 
 **Shellelement**
 
-Ein einzelnes Inhalts Element. Einige shellelemente sind Inhalts Quellen, andere hingegen nicht. Ein Ordner ist eine Inhaltsquelle, z. b. eine JPG-Datei. Dateityp Handler machen shellelemente verfügbar. In manchen Kontexten wird "Item" verwendet, um Container von nicht Containern zu unterscheiden. Siehe auch: Container, Inhaltsquelle, Dateityp Handler.
+Ein einzelner Inhalt. Einige Shellelemente sind Inhaltsquellen, andere nicht. Ein Ordner ist z. B. eine Inhaltsquelle, eine .jpg jedoch nicht. Dateityphandler machen Shellelemente verfügbar. In einigen Kontexten wird "Item" verwendet, um Container von Nichtcontainern zu unterscheiden. Siehe auch: Container, Inhaltsquelle, Dateityphandler.
 
-**Shell-Namespace Erweiterung**
+**Shellnamespaceerweiterung**
 
-Dieser Begriff wird manchmal zum Mean der shelldatenquelle verwendet. Siehe Definition für: shelldatenquelle.
+Dieser Begriff wird manchmal als Shell-Datenquelle verwendet. Siehe Definition für: Shell-Datenquelle.
 
 **Kontextmenü**
 
-Eine Benutzeroberfläche, die verwendet wird, um eine Auflistung von Verben darzustellen, die einem Benutzeroberflächen Element zugeordnet sind, z. b. eine Datei oder ein Ordner.
+Eine Benutzeroberfläche, die verwendet wird, um eine Auflistung von Verben zu präsentieren, die einem Benutzeroberflächenelement zugeordnet sind, z. B. eine Datei oder ein Ordner.
 
-**Kontextmenü Handler**
+**Kontextmenühandler**
 
-Ein Handler, der Verben für ein Element oder Elemente hinzufügt. Diese Verben werden in der Regel in einem Kontextmenü angezeigt. Siehe auch: Kontextmenü.
+Ein Handler, der Verben für ein Element oder Elemente hinzufügt. Diese Verben werden häufig in einem Kontextmenü angezeigt. Siehe auch: Kontextmenü.
 
 **statisches Verb**
 
-Ein Verb, das für ein shellelement gilt, ohne den aktuellen Zustand eines Elements oder Systems überprüfen zu müssen. Ein statisches Verb basiert auf einer statischen Registrierung der zugeordneten Elemente eines Elements und ändert sich nicht.
+Ein Verb, das für ein Shellelement gilt, ohne den aktuellen Zustand eines Elements oder Systems überprüfen zu müssen. Ein statisches Verb basiert auf einer statischen Registrierung der zugeordneten Elemente eines Elements und ändert sich nicht.
 
 ## <a name="t"></a>T
 
-**Miniatur Ansichts Handler**
+**Thumbnail-Handler**
 
-Ein Handler, der ein statisches Bild bereitstellt, das ein shellelement darstellen soll.
+Ein Handler, der ein statisches Bild zur Darstellung eines Shellelements bietet.
 
-**Miniatur Ansichts Anbieter**
+**Miniaturansichtsanbieter**
 
-Dieser Begriff wird manchmal verwendet, um den Miniatur Ansichts Handler zu verwenden. Siehe Definition für: Miniatur Ansichts Handler.
+Dieser Begriff wird manchmal als Miniaturbildhandler verwendet. Weitere Informationen finden Sie unter Definition für: Thumbnail Handler.
 
 ## <a name="u"></a>U
 
 **URL-Vorlage**
 
-Eine URL-basierte Verbindungs Zeichenfolge, die zum Abfragen eines Webservers für Suchergebnisse verwendet wird. Die Vorlage sieht wie eine URL aus, enthält jedoch mehrere Platzhalter Werte (z. b. {searchTerms}), die der Client durch Daten zu den Ergebnissen ersetzen muss, die er abrufen möchte. Die Definition von URL-Vorlagen ist entscheidend für die Implementierung der Verbund Suche und der OpenSearch-Standards.
+Eine URL-basierte Verbindungszeichenfolge, die zum Abfragen von Suchergebnissen auf einem Webserver verwendet wird. Die Vorlage sieht wie eine URL aus, enthält jedoch mehrere Platzhalterwerte (z. B. {searchTerms}), die der Client durch Daten zu den abzurufenden Ergebnissen ersetzen muss. Die Definition von URL-Vorlagen ist entscheidend für die Implementierung der Verbundsuche und OpenSearch Standards.
 
-**benutzerfreundlicher Name der Art**
+**Benutzerfreundlicher Artname**
 
 Siehe Definition für: Kind.
 
@@ -468,26 +468,26 @@ Siehe Definition für: Kind.
 
 **Verb**
 
-Eine einzelne Aktion, die von einem shellelement aufgerufen werden kann. Beispiele hierfür sind Open und Print. Verben werden manchmal als Befehle oder Aufgaben bezeichnet. Siehe auch: Dynamisches Verb, Kontextmenü Handler, statisches Verb.
+Eine einzelne Aktion, die von einem Shellelement aufgerufen werden kann. Beispiele hierfür sind "öffnen" und "drucken". Verben werden manchmal als Befehle oder Aufgaben bezeichnet. Siehe auch: dynamisches Verb, Kontextmenühandler, statisches Verb.
 
-**Verb Handler**
+**Verbhandler**
 
-Dieser Begriff wird manchmal verwendet, um den Kontextmenü Handler zu verwenden. Siehe Definition für: Kontextmenü Handler.
+Dieser Begriff wird manchmal als Kontextmenühandler verwendet. Siehe Definition für: Kontextmenühandler.
 
 ## <a name="w"></a>W
 
-**Promenade**
+**Spaziergang**
 
-Siehe Definition für: Namespace-Exemplarische Vorgehensweise.
+Weitere Informationen finden Sie unter Definition for: namespace walk (Exemplarische Vorgehensweise für Namespaces).
 
 **Windows-Suche**
 
-Siehe Definition für: Windows Search-Dienst.
+Siehe Definition für: Windows Suchdienst.
 
-**Eigenschaften Speicher für Windows-Suche**
+**Windows Suchen des Eigenschaftenspeichers**
 
-Der Cache der Eigenschaftswerte, die in der Implementierung des Windows Search-Dienstanbieter verwendet werden. Diese Eigenschaftswerte können mithilfe des Windows Search-OLE DB Anbieters Programm gesteuert abgefragt werden. Der Windows Search-Eigenschaften Speicher sammelt und speichert Eigenschaften, die von Filter Handlern oder Eigenschaften Handlern ausgegeben werden, wenn ein Element wie ein Word-Dokument indiziert wird. Dieser Speicher wird verworfen und neu erstellt, wenn der Index neu erstellt wird.
+Der Cache von Eigenschaftswerten, die in der Implementierung des -Windows Suchdienst. Diese Eigenschaftswerte können programmgesteuert mithilfe des Suchanbieters Windows Search OLE DB werden. Der Windows Search-Eigenschaftenspeicher sammelt und speichert Eigenschaften, die von Filterhandlern oder Eigenschaftenhandlern ausgegeben werden, wenn ein Element wie ein Word-Dokument indiziert wird. Dieser Speicher wird verworfen und neu erstellt, wenn der Index neu erstellt wird.
 
-**Windows Search-Dienst**
+**Windows Suchdienst**
 
-Bezieht sich auf Windows Search 3,0 und höher. Dieser Dienst analysiert eine Reihe von Dokumenten, extrahiert nützliche Informationen und organisiert dann die extrahierten Informationen, sodass die Eigenschaften dieser Dokumente als Reaktion auf Abfragen effizient zurückgegeben werden können. Siehe auch: catalog.
+Bezieht sich Windows Search 3.0 und höher. Dieser Dienst analysiert eine Reihe von Dokumenten, extrahiert nützliche Informationen und organisiert dann die extrahierten Informationen, sodass Eigenschaften dieser Dokumente effizient als Reaktion auf Abfragen zurückgegeben werden können. Siehe auch: Katalog.

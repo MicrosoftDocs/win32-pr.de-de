@@ -1,7 +1,7 @@
 ---
-description: Die checktime-Methode bestimmt, ob eine angegebene Zeit fällig ist.
+description: Die CheckTime-Methode bestimmt, ob eine angegebene Zeit fällig ist.
 ms.assetid: 522bc7ae-f998-4a7d-8bc3-caf09b4108a6
-title: Ccmdqueue. checktime-Methode (winutil. h)
+title: CCmdQueue.CheckTime-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 17fd67973e122830e53d93d1d8db17046f716507
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 826b59d12c135e9c86ce923f37e1558dca4f13efafb4880aecab1384829a484a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119910430"
 ---
-# <a name="ccmdqueuechecktime-method"></a>Ccmdqueue. checktime-Methode
+# <a name="ccmdqueuechecktime-method"></a>CCmdQueue.CheckTime-Methode
 
-Die- `CheckTime` Methode bestimmt, ob eine angegebene Zeit fällig ist.
+Die `CheckTime` -Methode bestimmt, ob eine angegebene Zeit fällig ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,20 +46,20 @@ BOOL CheckTime(
 *time* 
 </dt> <dd>
 
-Zeit bis zur Überprüfung.
+Zeit, die überprüft werden soll.
 
 </dd> <dt>
 
 *bStream* 
 </dt> <dd>
 
-**True** , wenn der *Zeit* Parameter ein streamzeitwert ist. **False** , wenn *time* ein Präsentationszeit Wert ist.
+**TRUE,** wenn der *Time-Parameter* ein Streamzeitwert ist; **FALSE,** wenn *time* ein Präsentationszeitwert ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die angegebene Zeit noch nicht überschritten wurde.
+Gibt **TRUE** zurück, wenn die angegebene Zeit noch nicht überschritten wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,16 +67,16 @@ Gibt **true** zurück, wenn die angegebene Zeit noch nicht überschritten wurde.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ccmdqueue-Klasse**](ccmdqueue.md)
+[**CCmdQueue-Klasse**](ccmdqueue.md)
 </dt> </dl>
 
  

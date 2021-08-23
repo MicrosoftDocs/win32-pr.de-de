@@ -68,7 +68,7 @@ Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

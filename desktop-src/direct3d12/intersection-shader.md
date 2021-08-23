@@ -1,5 +1,5 @@
 ---
-description: Ein Shader, der verwendet wird, um benutzerdefinierte Schnittmengen primitive für Strahlen zu implementieren, die ein zugeordnetes Begrenzungs Volume (Begrenzungsfeld) überschneiden.
+description: Ein Shader, der verwendet wird, um benutzerdefinierte Schnittmengenprimitiven für Lichtstrahl zu implementieren, die ein zugeordnetes Begrenzungsvolumen (Begrenzungsfeld) überschneiden.
 ms.assetid: ''
 title: Intersection-Shader
 ms.localizationpriority: low
@@ -12,20 +12,20 @@ api_name:
 - RAY_FLAG
 api_type:
 - NA
-ms.openlocfilehash: f20d9ceb90b716ca5e5c04fb796a8b20f535825d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: d7f9f81fdedae0fc6f6aa0448e6771c331af9c0d8924ab0f091d281565e4cfa3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119850880"
 ---
 # <a name="intersection-shader"></a>Intersection-Shader
 
-Ein Shader, der verwendet wird, um benutzerdefinierte Schnittmengen primitive für Strahlen zu implementieren, die ein zugeordnetes Begrenzungs Volume (Begrenzungsfeld) überschneiden. 
+Ein Shader, der verwendet wird, um benutzerdefinierte Schnittmengenprimitiven für Lichtstrahl zu implementieren, die ein zugeordnetes Begrenzungsvolumen (Begrenzungsfeld) überschneiden. 
 
-Der Schnittstellen-Shader hat keinen Zugriff auf die Ray-Nutzlast, sondern definiert die Schnittmengen Attribute für jede Treffer durch einen Report of [**Report.**](reporthit-function.md)  Durch die Behandlung von **reporthit** kann der schnittsshader frühzeitig beendet werden, wenn das Ray **-Flag \_ \_ \_ erste \_ HIT_ \und \_ \end \_ Search** festgelegt ist, oder wenn [**Accept thitandendsearch**](accepthitandendsearch-function.md) von einem beliebigen Treffer-Shader aufgerufen wird.  Andernfalls wird true zurückgegeben, wenn der Treffer akzeptiert wurde, oder false, wenn der Treffer abgelehnt wurde.  Dies bedeutet, dass ein beliebiger Treffer-Shader, falls vorhanden, ausgeführt werden muss, bevor die Steuerung bedingt an den schnittsshader zurückgegeben wird.
+Der Schnittpunkt-Shader hat keinen Zugriff auf die Raynutzlast, definiert aber die Schnittmengenattribute für jeden Treffer durch einen Aufruf von [**ReportHit.**](reporthit-function.md)  Die Behandlung von **ReportHit** kann den Schnittpunkt-Shader früh beenden, wenn das Rayflag **RAY FLAG ACCEPT FIRST \_ \_ \_ \_ HIT_\AND \_ \END \_ SEARCH** festgelegt ist oder [**AcceptHitAndEndSearch**](accepthitandendsearch-function.md) von einem beliebigen Treffer-Shader aufgerufen wird.  Andernfalls wird TRUE zurückgegeben, wenn der Treffer akzeptiert wurde, oder FALSE, wenn der Treffer abgelehnt wurde.  Dies bedeutet, dass ein beliebiger Treffer-Shader, sofern vorhanden, ausgeführt werden muss, bevor das Steuerelement bedingt zum Schnittpunkt-Shader zurückkehrt.
 
-## <a name="shader-type-attribute"></a>Shader Type-Attribut
+## <a name="shader-type-attribute"></a>Shadertypattribut
 
 
 ```

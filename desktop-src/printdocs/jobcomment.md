@@ -1,19 +1,19 @@
 ---
-description: Erfahren Sie mehr über das JobComment-Element, das einen Kommentar angibt, der dem Auftrag zugeordnet ist, z. B. Bitte senden Sie nach Abschluss an Raum 1234.
+description: Erfahren Sie mehr über das JobComment-Element, das einen Kommentar angibt, der dem Auftrag zugeordnet ist, z. B. Please deliver to room 1234 when completed (Bitte übermitteln Sie nach Abschluss des Auftrags an Raum 1234).
 ms.assetid: 100fe310-8e64-453f-8eaf-10abaf8b10b7
 title: JobComment
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1decf4cf3af7b3a992b07d8008579ac005d3d14e
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 8132d3a6f1b7f488fe1f88e04d134b7d60cad8c415419b61ba794445aab44e95
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112409043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119845970"
 ---
 # <a name="jobcomment"></a>JobComment
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt einen Kommentar an, der dem Auftrag zugeordnet ist. Beispiel: "Please deliver to room 1234 when completed".
 
@@ -36,7 +36,7 @@ Gibt einen Kommentar an, der dem Auftrag zugeordnet ist. Beispiel: "Please deliv
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet wie folgt:
+Die XML-Struktur dieses Elements sieht wie folgt aus:
 
 ``` syntax
 <psf:ParameterDef name="psk:JobComment">
@@ -63,7 +63,7 @@ Die XML-Struktur dieses Elements lautet wie folgt:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 

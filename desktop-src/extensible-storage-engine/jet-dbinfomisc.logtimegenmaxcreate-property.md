@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_DBINFOMISC. logtimegenmaxcreate-Eigenschaft'
-title: JET_DBINFOMISC. logtimegenmaxcreate (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_DBINFOMISC.logtimeGenMaxCreate-Eigenschaft'
+title: JET_DBINFOMISC.logtimeGenMaxCreate-Eigenschaft
 TOCTitle: 'logtimeGenMaxCreate property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.logtimeGenMaxCreate
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbinfomisc.logtimegenmaxcreate(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5685212515d1e0bc00a4aa198243e0a2c8419f54
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 07af4b749114b8ee79f4bbf10a6addaeb5ef9970a00a4c2e6469f5a759fb7de8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340151"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119891388"
 ---
-# <a name="jet_dbinfomisclogtimegenmaxcreate-property"></a>JET_DBINFOMISC. logtimegenmaxcreate (Eigenschaft)
+# <a name="jet_dbinfomisclogtimegenmaxcreate-property"></a>JET_DBINFOMISC.logtimeGenMaxCreate-Eigenschaft
 
-Ruft die Erstellungszeit der [genmaxrequired](./jet-dbinfomisc.genmaxrequired-property.md) -Protokolldatei ab.
+Ruft die Erstellungszeit der [genMaxRequired-Protokolldatei](./jet-dbinfomisc.genmaxrequired-property.md) ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_LOGTIME logtimeGenMaxCreate { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_LOGTIME](./jet-logtime-structure2.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_LOGTIME](./jet-logtime-structure2.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[Mitglieder JET_DBINFOMISC](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC-Member](./jet-dbinfomisc-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

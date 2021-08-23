@@ -1,7 +1,7 @@
 ---
-description: Erstellt mithilfe der angegebenen Initialisierungs Daten und benutzerdefinierten Daten ein Medien Schlüssel-Sitzungs Objekt. .
+description: Erstellt ein Medienschlüsselsitzungsobjekt unter Verwendung der angegebenen Initialisierungsdaten und benutzerdefinierten Daten. .
 ms.assetid: 9f11433c-7cff-4a59-9d4a-7f4b56ba62cf
-title: 'IMF Media Keys:: foratesession-Methode'
+title: WFMediaKeys::CreateSession-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: 89d3abce0c1c15d472f7008fa0ef2c5f27bba6ad
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 2dd9bcc7a1151b042d275917e8bd8106eb079de3315137ca41fa7faecaf5c957
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106366372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119942040"
 ---
-# <a name="imfmediakeyscreatesession-method"></a>IMF Media Keys:: foratesession-Methode
+# <a name="imfmediakeyscreatesession-method"></a>WFMediaKeys::CreateSession-Methode
 
-Erstellt mithilfe der angegebenen Initialisierungs Daten und benutzerdefinierten Daten ein Medien Schlüssel-Sitzungs Objekt. .
+Erstellt ein Medienschlüsselsitzungsobjekt unter Verwendung der angegebenen Initialisierungsdaten und benutzerdefinierten Daten. .
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,55 +48,55 @@ HRESULT CreateSession(
 *mimeType* 
 </dt> <dd>
 
-Der MIME-Typ des Medien Containers, der für den Inhalt verwendet wird.
+Der MIME-Typ des Mediencontainers, der für den Inhalt verwendet wird.
 
 </dd> <dt>
 
 *initData* 
 </dt> <dd>
 
-Die Initialisierungs Daten für das Schlüsselsystem.
+Die Initialisierungsdaten für das Schlüsselsystem.
 
 </dd> <dt>
 
-*betrieben* 
+*Cb* 
 </dt> <dd>
 
-Die Anzahl in Bytes von *initdata*.
+Die Anzahl von *initData in* Bytes.
 
 </dd> <dt>
 
-*CustomData* 
+*Customdata* 
 </dt> <dd>
 
 Benutzerdefinierte Daten, die an das Schlüsselsystem gesendet werden.
 
 </dd> <dt>
 
-*cbcustomdata* 
+*cbCustomData* 
 </dt> <dd>
 
-Die Anzahl in Bytes von *cbcustomdata*.
+Die Anzahl von *cbCustomData* in Bytes.
 
 </dd> <dt>
 
-*informiert* 
+*Benachrichtigen* 
 </dt> <dd>
 
-informiert
+Benachrichtigen
 
 </dd> <dt>
 
 *ppSession* 
 </dt> <dd>
 
-Die Medien schlüsselsitzung.
+Die Medienschlüsselsitzung.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,9 +104,9 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
@@ -114,7 +114,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**IMF Media Keys**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediakeys)
+[**WFMediaKeys**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediakeys)
 </dt> </dl>
 
  

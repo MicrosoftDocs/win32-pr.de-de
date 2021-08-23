@@ -1,21 +1,21 @@
 ---
-description: Die WM- \_ printclient-Nachricht wird an ein Fenster gesendet, um anzufordern, dass Sie den Client Bereich im angegebenen Gerätekontext (in der Regel in einem Drucker Gerätekontext) zeichnet.
+description: Die WM \_ PRINTCLIENT-Nachricht wird an ein Fenster gesendet, um anzufordern, dass der Clientbereich im angegebenen Gerätekontext gezeichnet wird, am häufigsten in einem Druckergerätekontext.
 ms.assetid: 8703ee74-812a-4ca2-8ee3-a3b8779739e7
-title: WM_PRINTCLIENT Meldung (Winuser. h)
+title: WM_PRINTCLIENT Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 52aca68695964a35ab9a2c4e309cd71c2e9f7eca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 807c12ca4d0a5fe5f1e2a12aecd3b3148d936119f72771e811fe85d5b0af3abf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119717660"
 ---
-# <a name="wm_printclient-message"></a>WM- \_ printclient-Meldung
+# <a name="wm_printclient-message"></a>WM \_ PRINTCLIENT-Nachricht
 
-Die **WM- \_ printclient** -Nachricht wird an ein Fenster gesendet, um anzufordern, dass Sie den Client Bereich im angegebenen Gerätekontext (in der Regel in einem Drucker Gerätekontext) zeichnet.
+Die **WM \_ PRINTCLIENT-Nachricht** wird an ein Fenster gesendet, um anzufordern, dass der Clientbereich im angegebenen Gerätekontext gezeichnet wird, am häufigsten in einem Druckergerätekontext.
 
-Im Gegensatz zum [**WM- \_ Print**](wm-print.md)wird **WM \_ printclient** nicht von [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)verarbeitet. Ein Fenster sollte die **WM \_ printclient** -Nachricht über eine von der Anwendung definierte [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion verarbeiten, damit es ordnungsgemäß verwendet werden kann.
+Im Gegensatz zu [**WM \_ PRINT**](wm-print.md)wird **WM \_ PRINTCLIENT** nicht von [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)verarbeitet. Ein Fenster sollte die **WM \_ PRINTCLIENT-Nachricht** über eine anwendungsdefinierte [**WindowProc-Funktion**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) verarbeiten, damit sie ordnungsgemäß verwendet werden kann.
 
 
 ```C++
@@ -36,25 +36,25 @@ LRESULT CALLBACK WindowProc(
 *wParam* 
 </dt> <dd>
 
-Ein Handle für den Gerätekontext, in dem gezeichnet werden soll.
+Ein Handle für den Gerätekontext, der gezeichnet werden soll.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Die Zeichnungsoptionen. Dieser Parameter kann einen oder mehrere der folgenden Werte aufweisen.
+Die Zeichnungsoptionen. Bei diesem Parameter kann es sich um einen oder mehrere der folgenden Werte handelt.
 
 
 
 | Wert                                                                                                                                                                  | Bedeutung                                                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| <span id="PRF_CHECKVISIBLE"></span><span id="prf_checkvisible"></span><dl> <dt>**PRF \_ checkvisible**</dt> </dl> | Zeichnet das Fenster nur, wenn es sichtbar ist.<br/>          |
-| <span id="PRF_CHILDREN"></span><span id="prf_children"></span><dl> <dt>**untergeordnete Elemente \_**</dt> </dl>             | Zeichnet alle sichtbaren untergeordneten Fenster.<br/>              |
-| <span id="PRF_CLIENT"></span><span id="prf_client"></span><dl> <dt>**PRF- \_ Client**</dt> </dl>                   | Zeichnet den Client Bereich des Fensters.<br/>             |
-| <span id="PRF_ERASEBKGND"></span><span id="prf_erasebkgnd"></span><dl> <dt>**PRF \_ erasebkgnd**</dt> </dl>       | Löscht den Hintergrund vor dem Zeichnen des Fensters.<br/> |
-| <span id="PRF_NONCLIENT"></span><span id="prf_nonclient"></span><dl> <dt>**PRF- \_ nonclient**</dt> </dl>          | Zeichnet den nicht-Client Bereich des Fensters.<br/>          |
-| <span id="PRF_OWNED"></span><span id="prf_owned"></span><dl> <dt>**PRF- \_ Besitzer**</dt> </dl>                      | Zeichnet alle eigenen Fenster.<br/>                         |
+| <span id="PRF_CHECKVISIBLE"></span><span id="prf_checkvisible"></span><dl> <dt>**PRF \_ CHECKVISIBLE**</dt> </dl> | Zeichnet das Fenster nur, wenn es sichtbar ist.<br/>          |
+| <span id="PRF_CHILDREN"></span><span id="prf_children"></span><dl> <dt>**PRF \_ CHILDREN**</dt> </dl>             | Zeichnet alle sichtbaren untergeordneten Fenster.<br/>              |
+| <span id="PRF_CLIENT"></span><span id="prf_client"></span><dl> <dt>**\_PRF-CLIENT**</dt> </dl>                   | Zeichnet den Clientbereich des Fensters.<br/>             |
+| <span id="PRF_ERASEBKGND"></span><span id="prf_erasebkgnd"></span><dl> <dt>**PRF \_ ERASEBKGND**</dt> </dl>       | Löscht den Hintergrund vor dem Zeichnen des Fensters.<br/> |
+| <span id="PRF_NONCLIENT"></span><span id="prf_nonclient"></span><dl> <dt>**PRF \_ NONCLIENT**</dt> </dl>          | Zeichnet den Nicht-Clientbereich des Fensters.<br/>          |
+| <span id="PRF_OWNED"></span><span id="prf_owned"></span><dl> <dt>**PRF \_ OWNED**</dt> </dl>                      | Zeichnet alle eigenen Fenster.<br/>                         |
 
 
 
@@ -62,15 +62,15 @@ Die Zeichnungsoptionen. Dieser Parameter kann einen oder mehrere der folgenden W
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Nachricht kann von einem Fenster auf die gleiche Weise wie bei [**WM \_ Paint**](./wm-paint.md)verarbeitet werden, mit der Ausnahme, dass [**BeginPaint**](/windows/desktop/api/Winuser/nf-winuser-beginpaint) und [**endpaint**](/windows/desktop/api/Winuser/nf-winuser-endpaint) nicht aufgerufen werden müssen (ein Gerätekontext wird bereitgestellt) und das Fenster den gesamten Client Bereich und nicht nur den ungültigen Bereich zeichnen soll.
+Ein Fenster kann diese Meldung in etwa auf die gleiche Weise verarbeiten wie [**WM \_ PAINT,**](./wm-paint.md)mit der Ausnahme, dass [**BeginPaint**](/windows/desktop/api/Winuser/nf-winuser-beginpaint) und [**EndPaint**](/windows/desktop/api/Winuser/nf-winuser-endpaint) nicht aufgerufen werden müssen (ein Gerätekontext wird bereitgestellt), und das Fenster sollte seinen gesamten Clientbereich anstatt nur den ungültigen Bereich zeichnen.
 
-Windows, die an beliebiger Stelle im System verwendet werden können, z. b. Steuerelemente, sollten diese Nachricht verarbeiten. Es ist wahrscheinlich auch für andere Fenster sinnvoll, diese Nachricht zu verarbeiten, da Sie relativ einfach zu implementieren ist.
+Windows, die überall im System verwendet werden können, z. B. Steuerelemente, sollten diese Meldung verarbeiten. Es ist wahrscheinlich sinnvoll, diese Meldung auch in anderen Fenstern zu verarbeiten, da sie relativ einfach zu implementieren ist.
 
-Die [animatewindow](/windows/desktop/api/winuser/nf-winuser-animatewindow) -Funktion erfordert, dass das zu animierende Fenster die **WM \_ printclient** -Nachricht implementiert.
+Die [AnimateWindow-Funktion](/windows/desktop/api/winuser/nf-winuser-animatewindow) erfordert, dass das animierte Fenster die **WM \_ PRINTCLIENT-Nachricht** implementiert.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -78,7 +78,7 @@ Die [animatewindow](/windows/desktop/api/winuser/nf-winuser-animatewindow) -Funk
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -86,22 +86,22 @@ Die [animatewindow](/windows/desktop/api/winuser/nf-winuser-animatewindow) -Funk
 
 <dl> <dt>
 
-[Übersicht über das Zeichnen und zeichnen](painting-and-drawing.md)
+[Übersicht über Zeichnen und Zeichnen](painting-and-drawing.md)
 </dt> <dt>
 
 [Zeichnen und Zeichnen von Nachrichten](painting-and-drawing-messages.md)
 </dt> <dt>
 
-[**Animatewindow**](/windows/win32/api/winuser/nf-winuser-animatewindow)
+[**AnimateWindow**](/windows/win32/api/winuser/nf-winuser-animatewindow)
 </dt> <dt>
 
 [**BeginPaint**](/windows/desktop/api/Winuser/nf-winuser-beginpaint)
 </dt> <dt>
 
-[**Endpaint auf**](/windows/desktop/api/Winuser/nf-winuser-endpaint)
+[**EndPaint**](/windows/desktop/api/Winuser/nf-winuser-endpaint)
 </dt> <dt>
 
-[**WM- \_ Paint**](wm-paint.md)
+[**WM \_ PAINT**](wm-paint.md)
 </dt> </dl>
 
  

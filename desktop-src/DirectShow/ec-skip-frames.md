@@ -1,19 +1,19 @@
 ---
-description: Wird vom DVD-Navigator gesendet, wenn die Rahmen übersprungen werden müssen.
+description: Wird vom DVD-Navigator gesendet, wenn Frames übersprungen werden müssen.
 ms.assetid: 252ffbcc-e81a-499d-9dd2-170be01f7ce1
-title: EC_SKIP_FRAMES (DShow. h)
+title: EC_SKIP_FRAMES (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7da28321ec06940cebf637c4da89290b69765f64
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c872d2a49af5226e60cbeffe3e7e9770dce5d61ae7995dad1f0a2dc99227db51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119792440"
 ---
-# <a name="ec_skip_frames"></a>EC- \_ Skip- \_ Frames
+# <a name="ec_skip_frames"></a>EC \_ SKIP \_ FRAMES
 
-Wird vom DVD-Navigator gesendet, wenn die Rahmen übersprungen werden müssen.
+Wird vom DVD-Navigator gesendet, wenn Frames übersprungen werden müssen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -22,7 +22,7 @@ Wird vom DVD-Navigator gesendet, wenn die Rahmen übersprungen werden müssen.
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-Anzahl der zu über springenden Frames.
+Anzahl der zu überspringenden Frames.
 
 </dd> <dt>
 
@@ -43,18 +43,18 @@ Dieses Ereignis wird nicht an die Anwendung gesendet. Anwendungen können die St
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

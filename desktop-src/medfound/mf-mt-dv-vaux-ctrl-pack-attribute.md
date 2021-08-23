@@ -1,29 +1,29 @@
 ---
-description: Video-hilfssteuerungspaket (Vaux) in einem Medientyp Digital Video (DV).
+description: Video-Hilfs-Quellcodeverwaltungspaket (Video Auxiliary, AUX) in einem digitalen Videomedientyp (DV).
 ms.assetid: 14098435-5033-489c-908f-cbb814a0349c
-title: MF_MT_DV_VAUX_CTRL_PACK-Attribut (mfapi. h)
+title: MF_MT_DV_VAUX_CTRL_PACK -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d4fc8e8eeeab10936e42cfba96693aa9097c1de
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1b4540c693e715461334b1557231732fe4281f3b404fc1df02d0717efaad69e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119722976"
 ---
-# <a name="mf_mt_dv_vaux_ctrl_pack-attribute"></a>MF \_ MT \_ DV \_ Vaux \_ STRG \_ Pack-Attribut
+# <a name="mf_mt_dv_vaux_ctrl_pack-attribute"></a>MF \_ MT DV \_ \_ \_ CTRL \_ PACK-Attribut
 
-Video-hilfssteuerungspaket (Vaux) in einem Medientyp Digital Video (DV).
+Video-Hilfs-Quellcodeverwaltungspaket (Video Auxiliary, AUX) in einem digitalen Videomedientyp (DV).
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut entspricht dem **dwdvvauxctl** -Member der DirectShow [**dvinfo**](/windows/win32/api/strmif/ns-strmif-dvinfo) -Struktur.
+Dieses Attribut entspricht dem **dwDVVAuxCtl-Element** der DirectShow [**DVINFO-Struktur.**](/windows/win32/api/strmif/ns-strmif-dvinfo)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,9 +31,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -41,19 +41,19 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEs::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEs::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**VERERBungstyp**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> </dl>
 
  

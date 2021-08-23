@@ -1,7 +1,7 @@
 ---
-description: Die dbgcheckmodulelevel-Funktion überprüft, ob die Protokollierung für die angegebenen Nachrichten Typen und die angegebene Ebene aktiviert ist. Wird in Einzelhandels Builds ignoriert.
+description: Die DbgCheckModuleLevel-Funktion überprüft, ob die Protokollierung für die angegebenen Nachrichtentypen und -ebenen aktiviert ist. Wird in Einzelhandels-Builds ignoriert.
 ms.assetid: f4b12df7-9001-4bfb-9d84-84a0e8295a8b
-title: Dbgcheckmodulelevel-Funktion (wxdebug. h)
+title: DbgCheckModuleLevel-Funktion (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 79df8cd06617cf9b17fa9933d4d7a87954a6e2b8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dd6d7c61e7989987401c22386054c02f87410ce66dbb98bb6e20a813f2c851be
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119823700"
 ---
-# <a name="dbgcheckmodulelevel-function"></a>Dbgcheckmodulelevel-Funktion
+# <a name="dbgcheckmodulelevel-function"></a>DbgCheckModuleLevel-Funktion
 
-Die `DbgCheckModuleLevel` -Funktion überprüft, ob die Protokollierung für die angegebenen Nachrichten Typen und-Ebenen aktiviert ist. Wird in Einzelhandels Builds ignoriert.
+Die `DbgCheckModuleLevel` Funktion überprüft, ob die Protokollierung für die angegebenen Nachrichtentypen und -ebene aktiviert ist. Wird in Einzelhandels-Builds ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ BOOL DbgCheckModuleLevel(
 *Typen* 
 </dt> <dd>
 
-Bitweise Kombination von einem oder mehreren Nachrichten Typen.
+Bitweise Kombination eines oder mehrerer Nachrichtentypen.
 
 </dd> <dt>
 
@@ -59,7 +59,7 @@ Protokolliergrad
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Protokollierung für einen der angegebenen Nachrichten Typen auf die angegebene Ebene oder höher festgelegt ist. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE zurück,** wenn die Protokollierung für einen der angegebenen Nachrichtentypen auf die angegebene Ebene oder höher festgelegt ist. Andernfalls wird **FALSE zurückgegeben.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,16 +67,16 @@ Gibt **true** zurück, wenn die Protokollierung für einen der angegebenen Nachr
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Debug-Ausgabefunktionen](debug-output-functions.md)
+[Debugausgabefunktionen](debug-output-functions.md)
 </dt> </dl>
 
  

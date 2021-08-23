@@ -1,30 +1,30 @@
 ---
-description: Weitere Informationen finden Sie in den com+-Strukturen.
+description: 'Weitere Informationen zu: COM+-Strukturen'
 ms.assetid: 90780b75-d6b1-47a3-8700-ba05ee2020c4
-title: Com+-Strukturen
+title: COM+-Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 09a01a6cd0b3a7f02f2e86f978fcd70cb70ef659
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 4af107c3b84883cfe5f9716125e71501dfb1b689a691696b16ab0aa6f1f917a4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793570"
 ---
-# <a name="com-structures"></a>Com+-Strukturen
+# <a name="com-structures"></a>COM+-Strukturen
 
-Im folgenden sind die com+-Strukturen aufgeführt:
+Im Folgenden sind die COM+-Strukturen zu verstehen:
 
--   [**Applicationprocessrecycl-Info**](/windows/desktop/api/ComSvcs/ns-comsvcs-applicationprocessrecycleinfo)
--   [**Applicationprocessstatistics**](/windows/desktop/api/ComSvcs/ns-comsvcs-applicationprocessstatistics)
--   [**Applicationprocesssummary**](/windows/desktop/api/ComSvcs/ns-comsvcs-applicationprocesssummary)
--   [**Applicationsummary**](/windows/desktop/api/ComSvcs/ns-comsvcs-applicationsummary)
--   [**Comeventsyschangeingefo**](/windows/win32/api/eventsys/ns-eventsys-comeventsyschangeinfo)
--   [**Componenthangmonitorinfo**](/windows/desktop/api/ComSvcs/ns-comsvcs-componenthangmonitorinfo)
--   [**Componentstatistics**](/windows/desktop/api/ComSvcs/ns-comsvcs-componentstatistics)
--   [**Komponenten Zusammenfassung**](/windows/desktop/api/ComSvcs/ns-comsvcs-componentsummary)
--   [**Comsvcsiebzig Info**](/windows/win32/api/comsvcs/ns-comsvcs-comsvcseventinfo)
--   [**Crmlogrecordread**](/windows/win32/api/comsvcs/ns-comsvcs-crmlogrecordread)
+-   [**ApplicationProcessRecycleInfo**](/windows/desktop/api/ComSvcs/ns-comsvcs-applicationprocessrecycleinfo)
+-   [**ApplicationProcessStatistics**](/windows/desktop/api/ComSvcs/ns-comsvcs-applicationprocessstatistics)
+-   [**ApplicationProcessSummary**](/windows/desktop/api/ComSvcs/ns-comsvcs-applicationprocesssummary)
+-   [**ApplicationSummary**](/windows/desktop/api/ComSvcs/ns-comsvcs-applicationsummary)
+-   [**COMEVENTSYSCHANGEINFO**](/windows/win32/api/eventsys/ns-eventsys-comeventsyschangeinfo)
+-   [**ComponentHangMonitorInfo**](/windows/desktop/api/ComSvcs/ns-comsvcs-componenthangmonitorinfo)
+-   [**ComponentStatistics**](/windows/desktop/api/ComSvcs/ns-comsvcs-componentstatistics)
+-   [**ComponentSummary**](/windows/desktop/api/ComSvcs/ns-comsvcs-componentsummary)
+-   [**COMSVCSEVENTINFO**](/windows/win32/api/comsvcs/ns-comsvcs-comsvcseventinfo)
+-   [**CrmLogRecordRead**](/windows/win32/api/comsvcs/ns-comsvcs-crmlogrecordread)
 
  
 

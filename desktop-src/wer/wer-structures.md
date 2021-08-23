@@ -1,31 +1,31 @@
 ---
-title: Wer-Strukturen
+title: WER-Strukturen
 ms.assetid: 59b4d44a-2681-4ec1-9f43-7ceaec98c55e
-description: 'Weitere Informationen zu: Wer-Strukturen'
+description: 'Weitere Informationen zu: WER-Strukturen'
 keywords:
-- Windows-Fehlerberichterstattung für die Windows-Fehlerberichterstattung, Strukturen
+- Windows fehlerberichterstattung Windows-Fehlerberichterstattung , -Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 78cc6228e7f5775306dd5f45f8d335b66e0d1785
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f27770d998965c238dbd8d6fac825fa4accdcdf270395ebd9e46a77b8ba0fad8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347377"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119772890"
 ---
-# <a name="wer-structures"></a>Wer-Strukturen
+# <a name="wer-structures"></a>WER-Strukturen
 
-Die folgenden Strukturen werden in Windows-Fehlerberichterstattung verwendet:
+Die folgenden Strukturen werden in der Windows-Fehlerberichterstattung:
 
 <dl>
 
-[**Header für verstaute \_ Ausnahme \_ Informationen \_**](stowed-exception-information-header.md)  
-[**Informationen zu verstauten \_ Ausnahmen \_ \_ v2**](stowed-exception-information-v2.md)  
-[**\_ \_ benutzerdefinierte \_ Optionen zum Sichern**](/windows/desktop/api/Werapi/ns-werapi-wer_dump_custom_options)  
-[**Informationen zur wer- \_ Ausnahme \_**](/windows/desktop/api/Werapi/ns-werapi-wer_exception_information)  
-[**Informationen des Wer- \_ Berichts \_**](/windows/desktop/api/Werapi/ns-werapi-wer_report_information)  
-[**Wer \_ meldet \_ Metadaten \_ v2**](/windows/desktop/api/Werapi/ns-werapi-wer_report_metadata_v2)  
-[**\_Informationen zur Lauf Zeit \_ Ausnahme \_**](/windows/desktop/api/Werapi/ns-werapi-wer_runtime_exception_information)  
+[**STOWED \_ EXCEPTION \_ INFORMATION \_ HEADER**](stowed-exception-information-header.md)  
+[**STOWED \_ EXCEPTION \_ INFORMATION \_ V2**](stowed-exception-information-v2.md)  
+[**BENUTZERDEFINIERTE WER \_ \_ \_ DUMP-OPTIONEN**](/windows/desktop/api/Werapi/ns-werapi-wer_dump_custom_options)  
+[**WER \_ EXCEPTION \_ INFORMATION**](/windows/desktop/api/Werapi/ns-werapi-wer_exception_information)  
+[**\_ \_ WER-BERICHTSINFORMATIONEN**](/windows/desktop/api/Werapi/ns-werapi-wer_report_information)  
+[**WER \_ REPORT \_ METADATA \_ V2**](/windows/desktop/api/Werapi/ns-werapi-wer_report_metadata_v2)  
+[**INFORMATIONEN ZUR \_ \_ WER-LAUFZEITAUSNAHME \_**](/windows/desktop/api/Werapi/ns-werapi-wer_runtime_exception_information)  
 </dl>
 
  

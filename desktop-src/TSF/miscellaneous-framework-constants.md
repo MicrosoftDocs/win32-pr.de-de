@@ -1,6 +1,6 @@
 ---
-title: Sonstige frameworkkonstanten (msctf. h)
-description: Verschiedene frameworkkonstanten geben Einstellungen für Clients, Prozesse oder Text an.
+title: Sonstige Frameworkkonst constants (Msctf.h)
+description: Verschiedene Frameworkkonst constants geben Einstellungen für Clients, Prozesse oder Text an.
 ms.assetid: fa53c1f1-50eb-45eb-b2ea-f236a376d41a
 topic_type:
 - apiref
@@ -23,33 +23,33 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ce9eab083f6763d4244d0720b04c2a22744febc3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f9bcd6ad253e71d662cbc713398e65c6a250863e18a9fe2d461a2d93717fb7b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119906010"
 ---
-# <a name="miscellaneous-framework-constants"></a>Sonstige frameworkkonstanten
+# <a name="miscellaneous-framework-constants"></a>Sonstige Frameworkkonst constants
 
-Verschiedene frameworkkonstanten geben Einstellungen für Clients, Prozesse oder Text an.
+Verschiedene Frameworkkonst constants geben Einstellungen für Clients, Prozesse oder Text an.
 
 
 
 | Konstante/Wert                                                                                                                                                                                                                                                      | BESCHREIBUNG                                                                                                                                                                                                                                                   |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="TF_CLIENTID_NULL"></span><span id="tf_clientid_null"></span><dl> <dt>**Tf \_ ClientID \_ null**</dt> <dt>((tfclientid) 0)</dt> </dl>                        | Gibt einem Text Dienst an, dass der Client deaktiviert ist. Siehe [tfclientid](tfclientid.md).<br/>                                                                                                                                                      |
-| <span id="TF_INVALID_GUIDATOM"></span><span id="tf_invalid_guidatom"></span><dl> <dt>**Tf \_ Ungültiges \_ guidatom**</dt> <dt>((tfguidatom) 0)</dt> . </dl>               | Der [tfguidatom](tfguidatom.md) -Wert für den aktuellen Prozess ist ungültig.<br/>                                                                                                                                                                         |
-| <span id="TF_DEFAULT_SELECTION"></span><span id="tf_default_selection"></span><dl> <dt>**Tf \_ Standard \_ Auswahl**</dt> <dt>(TS- \_ Standard \_ Auswahl)</dt> </dl> | Verwenden Sie die Standardauswahl. Wird von [ITF context:: GetSelection](/windows/desktop/api/Msctf/nf-msctf-itfcontext-getselection), [ITextStoreACP:: GetSelection](/windows/desktop/api/Textstor/nf-textstor-itextstoreacp-getselection)und [itextstoreanchor:: GetSelection](/windows/desktop/api/Textstor/nf-textstor-itextstoreanchor-getselection)verwendet.<br/>                |
-| <span id="TF_GTP_INCL_TEXT"></span><span id="tf_gtp_incl_text"></span><dl> <dt>**Tf \_ GTP \_ inkl \_ Text**</dt> <dt>(0x1)</dt> </dl>                               | Gibt an, dass die [itfeditrecord:: gettextandpropertyupdates](/windows/desktop/api/Msctf/nf-msctf-itfeditrecord-gettextandpropertyupdates) -Methode die Auflistung von Bereichs Objekten abruft, die den Text abdecken, der während der Bearbeitungs Sitzung geändert wurde.<br/>                                 |
-| <span id="TF_HF_OBJECT"></span><span id="tf_hf_object"></span><dl> <dt>**Tf \_ HF- \_ Objekt**</dt> <dt>(1)</dt> </dl>                                              | Der Bereichs Wechsel wird beendet, wenn ein eingebettetes Objekt gefunden wird. Wird im **dwFlags** -Member der [tf \_ -"Hald"-](/windows/desktop/api/Msctf/ns-msctf-tf_haltcond) Struktur verwendet.<br/>                                                                                                               |
-| <span id="TF_IE_CORRECTION"></span><span id="tf_ie_correction"></span><dl> <dt>**Tf \_ IE- \_ Korrektur**</dt> <dt>(1)</dt> </dl>                                  | Bei dem Text handelt es sich um eine Transformation (Korrektur) vorhandener Inhalte, sodass andere Text Dienste die dem ursprünglichen Text zugeordneten Daten beibehalten können. Wird im *dwFlags* -Parameter von [itfrange:: insertembedded](/windows/desktop/api/Msctf/nf-msctf-itfrange-insertembedded)verwendet.<br/>                 |
-| <span id="TF_INVALID_COOKIE"></span><span id="tf_invalid_cookie"></span><dl> <dt>**Tf \_ Ungültiges \_ Cookie**</dt> <dt>(0xFFFFFFFF)</dt> </dl>                      | Nicht verwendet.<br/>                                                                                                                                                                                                                                          |
-| <span id="TF_INVALID_EDIT_COOKIE"></span><span id="tf_invalid_edit_cookie"></span><dl> <dt>**Tf \_ Ungültiges \_ Bearbeitungs \_ Cookie**</dt> <dt>(0)</dt> </dl>               | Nicht verwendet.<br/>                                                                                                                                                                                                                                          |
-| <span id="TF_POPF_ALL"></span><span id="tf_popf_all"></span><dl> <dt>**Tf \_ Popf \_ alle**</dt> <dt>(0x1)</dt> </dl>                                               | Alle Kontexte werden aus dem Stapel entfernt. Wird im *dwFlags* -Parameter von [ITF documentmgr::P op](/windows/desktop/api/Msctf/nf-msctf-itfdocumentmgr-pop)verwendet.<br/>                                                                                                                             |
-| <span id="TF_ST_CORRECTION"></span><span id="tf_st_correction"></span><dl> <dt>**Tf \_ St- \_ Korrektur**</dt> <dt>(1)</dt> </dl>                                  | Bei dem Text handelt es sich um eine Transformation (Korrektur) vorhandener Inhalte, sodass andere Text Dienste die dem ursprünglichen Text zugeordneten Daten beibehalten können. Wird im *dwFlags* -Parameter von [itfrange:: SetText](/windows/desktop/api/Msctf/nf-msctf-itfrange-settext)verwendet.<br/>                               |
-| <span id="TF_TU_CORRECTION"></span><span id="tf_tu_correction"></span><dl> <dt>**Tf \_ TU- \_ Korrektur**</dt> <dt>(0x1)</dt> </dl>                                | Die Textänderung ist das Ergebnis einer Transformation (Korrektur) vorhandener Inhalte. Dies impliziert, dass die Semantik des Texts nicht geändert wurde. Wird im *dwFlags* -Parameter von [itbpropertystore:: ontextupexpverwendet](/windows/desktop/api/Msctf/nf-msctf-itfpropertystore-ontextupdated).<br/> |
-| <span id="TF_US_HIDETIPUI"></span><span id="tf_us_hidetipui"></span><dl> <dt>**Tf \_ US \_ hidetipui**</dt> <dt>0x00000001</dt> </dl>                                | Nicht verwendet.<br/>                                                                                                                                                                                                                                          |
+| <span id="TF_CLIENTID_NULL"></span><span id="tf_clientid_null"></span><dl> <dt>**TF \_ CLIENTID \_ NULL**</dt> <dt>((TfClientId)0)</dt> </dl>                        | Gibt für einen Textdienst an, dass der Client deaktiviert ist. Weitere Informationen [finden Sie unter TfClientId](tfclientid.md).<br/>                                                                                                                                                      |
+| <span id="TF_INVALID_GUIDATOM"></span><span id="tf_invalid_guidatom"></span><dl> <dt>**TF \_ UNGÜLTIGER \_ GUIDATOM**</dt> <dt>((TfGuidAtom)0)</dt> </dl>               | Der [TfGuidAtom-Wert](tfguidatom.md) für den aktuellen Prozess ist ungültig.<br/>                                                                                                                                                                         |
+| <span id="TF_DEFAULT_SELECTION"></span><span id="tf_default_selection"></span><dl> <dt>**TF \_ \_STANDARDAUSWAHL**</dt> <dt>( TS DEFAULT SELECTION \_ \_ )</dt> </dl> | Verwenden Sie die Standardauswahl. Wird von [ITfContext::GetSelection,](/windows/desktop/api/Msctf/nf-msctf-itfcontext-getselection) [ITextStoreACP::GetSelection](/windows/desktop/api/Textstor/nf-textstor-itextstoreacp-getselection)und [ITextStoreAnchor::GetSelection verwendet.](/windows/desktop/api/Textstor/nf-textstor-itextstoreanchor-getselection)<br/>                |
+| <span id="TF_GTP_INCL_TEXT"></span><span id="tf_gtp_incl_text"></span><dl> <dt>**TF \_ GTP \_ INCL \_ TEXT**</dt> <dt>( 0x1 )</dt> </dl>                               | Gibt an, dass die [ITfEditRecord::GetTextAndPropertyUpdates-Methode](/windows/desktop/api/Msctf/nf-msctf-itfeditrecord-gettextandpropertyupdates) die Auflistung von Bereichsobjekten erhält, die den während der Bearbeitungssitzung geänderten Text abdecken.<br/>                                 |
+| <span id="TF_HF_OBJECT"></span><span id="tf_hf_object"></span><dl> <dt>**TF \_ HF \_ OBJECT**</dt> <dt>( 1 )</dt> </dl>                                              | Die Bereichsverschiebung wird beendet, wenn ein eingebettetes Objekt gefunden wird. Wird im **dwFlags-Member** der [TF \_ HALTCOND-Struktur](/windows/desktop/api/Msctf/ns-msctf-tf_haltcond) verwendet.<br/>                                                                                                               |
+| <span id="TF_IE_CORRECTION"></span><span id="tf_ie_correction"></span><dl> <dt>**TF \_ \_IE-KORREKTUR**</dt> <dt>( 1 )</dt> </dl>                                  | Der Text ist eine Transformation (Korrektur) vorhandener Inhalte, sodass andere Textdienste daten beibehalten können, die dem ursprünglichen Text zugeordnet sind. Wird im *dwFlags-Parameter* von [ITfRange::InsertEmbedded verwendet.](/windows/desktop/api/Msctf/nf-msctf-itfrange-insertembedded)<br/>                 |
+| <span id="TF_INVALID_COOKIE"></span><span id="tf_invalid_cookie"></span><dl> <dt>**TF \_ UNGÜLTIGES \_ COOKIE**</dt> <dt>( 0xffffffff )</dt> </dl>                      | Wird nicht verwendet.<br/>                                                                                                                                                                                                                                          |
+| <span id="TF_INVALID_EDIT_COOKIE"></span><span id="tf_invalid_edit_cookie"></span><dl> <dt>**TF \_ UNGÜLTIGES \_ COOKIE \_ BEARBEITEN**</dt> <dt>( 0 )</dt> </dl>               | Wird nicht verwendet.<br/>                                                                                                                                                                                                                                          |
+| <span id="TF_POPF_ALL"></span><span id="tf_popf_all"></span><dl> <dt>**TF \_ POPF \_ ALL**</dt> <dt>( 0x1 )</dt> </dl>                                               | Alle Kontexte werden aus dem Stapel entfernt. Wird im *dwFlags-Parameter* von [ITfDocumentMgr::P op verwendet.](/windows/desktop/api/Msctf/nf-msctf-itfdocumentmgr-pop)<br/>                                                                                                                             |
+| <span id="TF_ST_CORRECTION"></span><span id="tf_st_correction"></span><dl> <dt>**TF \_ ST \_ CORRECTION**</dt> <dt>( 1 )</dt> </dl>                                  | Der Text ist eine Transformation (Korrektur) vorhandener Inhalte, sodass andere Textdienste daten beibehalten können, die dem ursprünglichen Text zugeordnet sind. Wird im *dwFlags-Parameter* von [ITfRange::SetText verwendet.](/windows/desktop/api/Msctf/nf-msctf-itfrange-settext)<br/>                               |
+| <span id="TF_TU_CORRECTION"></span><span id="tf_tu_correction"></span><dl> <dt>**TF \_ \_TU-KORREKTUR**</dt> <dt>( 0x1 )</dt> </dl>                                | Die Textänderung ist das Ergebnis einer Transformation (Korrektur) vorhandener Inhalte. Dies bedeutet, dass sich die Semantik des Texts nicht geändert hat. Wird im *dwFlags-Parameter* von [ITfPropertyStore::OnTextUpdated verwendet.](/windows/desktop/api/Msctf/nf-msctf-itfpropertystore-ontextupdated)<br/> |
+| <span id="TF_US_HIDETIPUI"></span><span id="tf_us_hidetipui"></span><dl> <dt>**TF \_ US \_ HIDETIPUI**</dt> <dt>0x00000001</dt> </dl>                                | Wird nicht verwendet.<br/>                                                                                                                                                                                                                                          |
 
 
 
@@ -61,9 +61,9 @@ Verschiedene frameworkkonstanten geben Einstellungen für Clients, Prozesse oder
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                      |
-| Header<br/>                   | <dl> <dt>Msctf. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msctf. idl</dt> </dl> |
+| Verteilbare Komponente<br/>          | TSF 1.0 auf Windows 2000 Professional<br/>                                      |
+| Header<br/>                   | <dl> <dt>Msctf.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msctf.idl</dt> </dl> |
 
 
 
@@ -71,37 +71,37 @@ Verschiedene frameworkkonstanten geben Einstellungen für Clients, Prozesse oder
 
 <dl> <dt>
 
-[ITextStoreACP:: GetSelection](/windows/desktop/api/Textstor/nf-textstor-itextstoreacp-getselection)
+[ITextStoreACP::GetSelection](/windows/desktop/api/Textstor/nf-textstor-itextstoreacp-getselection)
 </dt> <dt>
 
-[Itextstoreanchor:: GetSelection](/windows/desktop/api/Textstor/nf-textstor-itextstoreanchor-getselection)
+[ITextStoreAnchor::GetSelection](/windows/desktop/api/Textstor/nf-textstor-itextstoreanchor-getselection)
 </dt> <dt>
 
-[ITF context:: GetSelection](/windows/desktop/api/Msctf/nf-msctf-itfcontext-getselection)
+[ITfContext::GetSelection](/windows/desktop/api/Msctf/nf-msctf-itfcontext-getselection)
 </dt> <dt>
 
-[ITF documentmgr::P op](/windows/desktop/api/Msctf/nf-msctf-itfdocumentmgr-pop)
+[ITfDocumentMgr::P op](/windows/desktop/api/Msctf/nf-msctf-itfdocumentmgr-pop)
 </dt> <dt>
 
-[Itfeditrecord:: gettextandpropertyupdates](/windows/desktop/api/Msctf/nf-msctf-itfeditrecord-gettextandpropertyupdates)
+[ITfEditRecord::GetTextAndPropertyUpdates](/windows/desktop/api/Msctf/nf-msctf-itfeditrecord-gettextandpropertyupdates)
 </dt> <dt>
 
-[Itmapropertystore:: ontextupexp](/windows/desktop/api/Msctf/nf-msctf-itfpropertystore-ontextupdated)
+[ITfPropertyStore::OnTextUpdated](/windows/desktop/api/Msctf/nf-msctf-itfpropertystore-ontextupdated)
 </dt> <dt>
 
-[Itfrange:: insertembedded](/windows/desktop/api/Msctf/nf-msctf-itfrange-insertembedded)
+[ITfRange::InsertEmbedded](/windows/desktop/api/Msctf/nf-msctf-itfrange-insertembedded)
 </dt> <dt>
 
-[Itfrange:: SetText](/windows/desktop/api/Msctf/nf-msctf-itfrange-settext)
+[ITfRange::SetText](/windows/desktop/api/Msctf/nf-msctf-itfrange-settext)
 </dt> <dt>
 
-[Tfclientid](tfclientid.md)
+[TfClientId](tfclientid.md)
 </dt> <dt>
 
-[Tfguidatom](tfguidatom.md)
+[TfGuidAtom](tfguidatom.md)
 </dt> <dt>
 
-[TF \_ -Halt-ID](/windows/desktop/api/Msctf/ns-msctf-tf_haltcond)
+[TF \_ HALTCOND](/windows/desktop/api/Msctf/ns-msctf-tf_haltcond)
 </dt> </dl>
 
  

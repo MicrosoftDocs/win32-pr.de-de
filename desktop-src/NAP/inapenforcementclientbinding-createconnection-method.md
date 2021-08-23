@@ -1,11 +1,11 @@
 ---
-title: Inapenforcementclientbinding-Methode "fiateconnetction" (napforcementclient. h)
-description: Wird von enforcern zum Erstellen von Verbindungs Objekten verwendet.
+title: INapEnforcementClientBinding CreateConnection-Methode (NapEnforcementClient.h)
+description: Wird von Erzwingern zum Erstellen von Verbindungsobjekten verwendet.
 ms.assetid: 4d31928f-1a10-4168-a53c-256cbbf3e5c9
 keywords:
-- Methode "deeconnetction" für NAP
-- Anateconnetction-Methode NAP, inapenforcementclientbinding-Schnittstelle
-- Inapenforcementclientbinding-Schnittstelle NAP, Methode "kreateconnetction"
+- CreateConnection-Methode NAP
+- CreateConnection-Methode NAP, INapEnforcementClientBinding-Schnittstelle
+- INapEnforcementClientBinding-Schnittstelle NAP, CreateConnection-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4bf530b9fefd0e5b361f4f86ef2421712c750be9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3e72c8ef4760d611c45291f0de1039b915e9bc8fedde94c314bb1272e4b99b03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040404"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119891280"
 ---
-# <a name="inapenforcementclientbindingcreateconnection-method"></a>Inapenforcementclientbinding:: kreateconnetction-Methode
+# <a name="inapenforcementclientbindingcreateconnection-method"></a>INapEnforcementClientBinding::CreateConnection-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapenforcementclientbinding:: kreateconnetction** -Factorymethode wird von enforcern zum Erstellen von Verbindungs Objekten verwendet.
+Die **INapEnforcementClientBinding::CreateConnection-Factorymethode** wird von Erzwingern zum Erstellen von Verbindungsobjekten verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,32 +47,32 @@ HRESULT CreateConnection(
 
 <dl> <dt>
 
-*Verbindung* \[ vorgenommen\]
+*Verbindung* \[ out\]
 </dt> <dd>
 
-Ein com-Zeiger auf eine neue [**inapenforcementclientconnection**](inapenforcementclientconnection.md) -Schnittstelle, die vom NAP-System zurückgegeben wird.
+Ein COM-Zeiger auf eine neue [**INapEnforcementClientConnection-Schnittstelle,**](inapenforcementclientconnection.md) die vom NAP-System zurückgegeben wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Es können auch andere COM-spezifische Fehlercodes zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Der Vorgang ist erfolgreich.<br/>                            |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Erzwingungs Client muss die [**inapenforcementclientbinding:: Initialize**](inapenforcementclientbinding-initialize-method.md) -Methode aufrufen, bevor diese oder eine andere Methode der [**inapenforcementclientbinding**](inapenforcementclientbinding.md) -Schnittstelle aufgerufen wird.
+Der Erzwingungsclient muss die [**INapEnforcementClientBinding::Initialize-Methode**](inapenforcementclientbinding-initialize-method.md) aufrufen, bevor er diese oder eine andere Methode der [**INapEnforcementClientBinding-Schnittstelle**](inapenforcementclientbinding.md) aufruft.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,10 +80,10 @@ Der Erzwingungs Client muss die [**inapenforcementclientbinding:: Initialize**](
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 
@@ -95,10 +95,10 @@ Der Erzwingungs Client muss die [**inapenforcementclientbinding:: Initialize**](
 
 </dt> <dt>
 
-[**Inapenforcementclientbinding**](inapenforcementclientbinding.md)
+[**INapEnforcementClientBinding**](inapenforcementclientbinding.md)
 </dt> <dt>
 
-[**Inapenforcementclientconnection**](inapenforcementclientconnection.md)
+[**INapEnforcementClientConnection**](inapenforcementclientconnection.md)
 </dt> </dl>
 
  

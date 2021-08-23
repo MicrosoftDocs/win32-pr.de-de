@@ -1,11 +1,11 @@
 ---
-title: TSMF_SUPPORT_NODEDATA_OUT Struktur
-description: Wird innerhalb der tsmf- \_ Unterstützung der \_ Datenausgabe Struktur verwendet \_ , um Informationen zu unterstützten Medienformaten zu enthalten.
+title: TSMF_SUPPORT_NODEDATA_OUT-Struktur
+description: Wird in der TSMF \_ SUPPORT \_ DATA \_ OUT-Struktur verwendet, um Informationen zu unterstützten Medienformaten zu enthalten.
 ms.assetid: cac0af9e-6750-4735-b075-46c77aea7d41
 ms.tgt_platform: multiple
 keywords:
-- TSMF_SUPPORT_NODEDATA_OUT Struktur Remotedesktopdienste
-- PTSMF_SUPPORT_NODEDATA_OUT Struktur Zeiger Remotedesktopdienste
+- TSMF_SUPPORT_NODEDATA_OUT struktur Remotedesktopdienste
+- PTSMF_SUPPORT_NODEDATA_OUT strukturzeiger Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 517170e9d6580f69b59f71e0994351ebe0484ddc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: df3eb4c515963e13d2a7919c58a6d55ca4b2a7600c429a33516093215b5ac0eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869010"
 ---
-# <a name="tsmf_support_nodedata_out-structure"></a>Tsmf \_ unterstützt \_ nodedata- \_ out-Struktur
+# <a name="tsmf_support_nodedata_out-structure"></a>TSMF \_ SUPPORT \_ NODEDATA \_ OUT-Struktur
 
-Wird innerhalb der [**tsmf- \_ Unterstützung der \_ Daten \_**](tsmf-support-data-out.md) Ausgabestruktur verwendet, um Informationen zu unterstützten Medienformaten zu enthalten.
+Wird in der [**TSMF \_ SUPPORT \_ DATA \_ OUT-Struktur**](tsmf-support-data-out.md) verwendet, um Informationen zu unterstützten Medienformaten zu enthalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,19 +44,19 @@ typedef struct tagTSMF_SUPPORT_NODEDATA_OUT {
 
 <dl> <dt>
 
-**NodeId**
+**nodeId**
 </dt> <dd>
 
 Der Knoten.
 
 </dd> <dt>
 
-**hrsupportstatus**
+**hrSupportStatus**
 </dt> <dd>
 
-Gibt an, ob die durch den *clsidnewsink* -Parameter identifizierte Senke unterstützt wird.
+Gibt an, ob die vom *clsidNewSink-Parameter* identifizierte Senke unterstützt wird.
 
-Mögliche Werte sind.
+Die möglichen Werte sind.
 
 <dt>
 
@@ -78,17 +78,17 @@ Andere Werte sind nicht definiert.
 
 </dd> <dt>
 
-**clsidnewsink**
+**clsidNewSink**
 </dt> <dd>
 
 Die Senke, die dem Medientyp zugeordnet ist.
 
 </dd> <dt>
 
-**supportedmediatypeingedex**
+**supportedMediaTypeIndex**
 </dt> <dd>
 
-Der null basierte Index des Medientyps, der von der Senke unterstützt wird.
+Der nullbasierte Index des Medientyps, der von der Senke unterstützt wird.
 
 </dd> </dl>
 
@@ -110,7 +110,7 @@ Der null basierte Index des Medientyps, der von der Senke unterstützt wird.
 [**QueryProperty**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwrdsprotocolconnection-queryproperty)
 </dt> <dt>
 
-[**tsmf- \_ Unterstützung \_ \_ von Daten**](tsmf-support-data-out.md)
+[**TSMF \_ SUPPORT \_ DATA \_ OUT**](tsmf-support-data-out.md)
 </dt> </dl>
 
  

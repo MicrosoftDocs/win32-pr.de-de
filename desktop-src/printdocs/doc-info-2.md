@@ -1,7 +1,7 @@
 ---
-description: In der doc \_ Info \_ 2-Struktur wird ein Dokument beschrieben, das gedruckt wird.
+description: Die \_ DOC INFO \_ 2-Struktur beschreibt ein Dokument, das gedruckt wird.
 ms.assetid: d62333f3-cc39-4c9b-8fb3-02a2d24bbbad
-title: DOC_INFO_2 Struktur (winspool. h)
+title: DOC_INFO_2-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: c76b66711883e2238e971cb26d071716bd52ca54
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 27d7753fa16abcfbc30b28bcc4343b2e1ef7996cad408b54fefb850feac9b17e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364150"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119846260"
 ---
-# <a name="doc_info_2-structure"></a>DOC \_ Info \_ 2-Struktur
+# <a name="doc_info_2-structure"></a>\_DOC INFO \_ 2-Struktur
 
-In der **doc \_ Info \_ 2** -Struktur wird ein Dokument beschrieben, das gedruckt wird.
+Die **DOC \_ INFO \_ 2-Struktur** beschreibt ein Dokument, das gedruckt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,38 +45,38 @@ typedef struct _DOC_INFO_2 {
 
 <dl> <dt>
 
-**pdocname**
+**pDocName**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen des Dokuments angibt.
+Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Dokuments angibt.
 
 </dd> <dt>
 
-**poutputfile**
+**pOutputFile**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen einer Ausgabedatei angibt.
+Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen einer Ausgabedatei angibt.
 
 </dd> <dt>
 
-**pdatatype**
+**pDatatype**
 </dt> <dd>
 
 Zeiger auf eine auf NULL endende Zeichenfolge, die den Datentyp identifiziert, der zum Aufzeichnen des Dokuments verwendet wird.
 
 </dd> <dt>
 
-**dwmode**
+**dwMode**
 </dt> <dd>
 
-Informiert den Druck Spooler über die Art der Daten, die befolgt werden sollen. Wenn dieser Wert 0 (null) ist, behandelt der Druck Spooler die Daten, die durch nachfolgende Aufrufe an den [**Schreib Drucker**](writeprinter.md) als normaler Druckauftrag gesendet werden (unabhängig davon, ob er gespooltet ist, hängt von der Drucker Eigenschaft ab). Wenn dieser Wert di- \_ Channel ist, wird nur ein Kommunikationskanal geöffnet. In diesem Fall werden die an nachfolgende Aufrufe von " **Write Printer** " übergebenen Daten an den Drucker gesendet, oder bei nachfolgenden Aufrufen von "read [**Printer**](readprinter.md) " werden Daten vom Drucker abgerufen. Dieser Modus bleibt wirksam, bis [**EndDoc**](/windows/desktop/api/Wingdi/nf-wingdi-enddoc) aufgerufen wird.
+Informiert den Druckspooler über die Art der zu befolgenden Daten. Wenn dieser Wert 0 (null) ist, behandelt der Druckspooler die daten, die durch nachfolgende Aufrufe von [**WritePrinter**](writeprinter.md) gesendet werden, als normalen Druckauftrag (ob er gespoolt wird, hängt von der Druckereigenschaft ab). Wenn dieser Wert DI \_ CHANNEL ist, wird nur ein Kommunikationskanal geöffnet. In diesem Fall werden die an nachfolgende Aufrufe von **WritePrinter** übergebenen Daten an den Drucker gesendet, oder nachfolgende Aufrufe von [**ReadPrinter**](readprinter.md) rufen Daten vom Drucker ab. Dieser Modus bleibt wirksam, bis [**EndDoc**](/windows/desktop/api/Wingdi/nf-wingdi-enddoc) aufgerufen wird.
 
 </dd> <dt>
 
-**JobId**
+**Jobid**
 </dt> <dd>
 
-Für die interne Verwendung reserviert. muss 0 (null) sein.
+Für die interne Verwendung reserviert; sollte 0 (null) sein.
 
 </dd> </dl>
 
@@ -88,31 +88,31 @@ Für die interne Verwendung reserviert. muss 0 (null) sein.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Doc \_ Info \_ 2W** (Unicode) und **\_ doc \_ Info \_ 2a** (ANSI)<br/>                                   |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ DOC \_ INFO \_ 2W** (Unicode) und **\_ DOC INFO \_ \_ 2A** (ANSI)<br/>                                   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
 [**EndDoc**](/windows/desktop/api/Wingdi/nf-wingdi-enddoc)
 </dt> <dt>
 
-[**Lesen von Druckern**](readprinter.md)
+[**ReadPrinter**](readprinter.md)
 </dt> <dt>
 
 [**StartDocPrinter**](startdocprinter.md)
 </dt> <dt>
 
-[**"Write Printer"**](writeprinter.md)
+[**WritePrinter**](writeprinter.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Das- <libraryDescription> Element ist der Container der obersten Ebene für die Bibliotheksdefinition. Dieses Element ist erforderlich.
+description: Das <libraryDescription> -Element ist der Container der obersten Ebene für die Bibliotheksdefinition. Dieses Element ist erforderlich.
 ms.assetid: 62098944-E1B2-46e8-AC87-314C55F96B62
-title: librarydescription-Element (Bibliotheks Schema)
+title: libraryDescription-Element (Bibliotheksschema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 125cb01ce1bd38418c10f5b14ff7b28f64efba87
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a454321649746dc9408110e2fb96a616934977022ac80a4c0325494d354bfb46
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119942060"
 ---
-# <a name="librarydescription-element-library-schema"></a>librarydescription-Element (Bibliotheks Schema)
+# <a name="librarydescription-element-library-schema"></a>libraryDescription-Element (Bibliotheksschema)
 
-Das- <libraryDescription> Element ist der Container der obersten Ebene für die Bibliotheksdefinition. Dieses Element ist erforderlich.
+Das <libraryDescription> -Element ist der Container der obersten Ebene für die Bibliotheksdefinition. Dieses Element ist erforderlich.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,24 +68,24 @@ Das- <libraryDescription> Element ist der Container der obersten Ebene für die 
 
 | Übergeordnetes Element | Untergeordnete Elemente                                                                                                          |
 |----------------|-------------------------------------------------------------------------------------------------------------------------|
-|                | [Name-Element (Bibliotheks Schema)](schema-library-name.md). Erforderlich.                                                     |
-|                | Besitzer- [sid-Element (Bibliotheks Schema)](schema-library-ownersid.md). Optional.                                             |
-|                | [Version-Element (Bibliotheks Schema)](schema-library-version.md). Optional.                                               |
-|                | [islibrarypinned-Element (Bibliotheks Schema)](schema-library-islibrarypinned.md). Optional.                               |
-|                | [iconReference-Element (Bibliotheks Schema)](schema-library-iconreference.md). Optional.                                   |
-|                | [PropertyStore-Element (Bibliotheks Schema)](schema-library-propertystore.md). Optional.                                   |
-|                | [templateingefo-Element (Bibliotheks Schema)](schema-library-templateinfo.md). Optional.                                     |
-|                | [searchconnectordescriptionlist-Element (Bibliotheks Schema)](schema-library-searchconnectordescriptionlist.md). Erforderlich. |
+|                | [name-Element (Bibliotheksschema)](schema-library-name.md). Erforderlich.                                                     |
+|                | [ownerSID-Element (Bibliotheksschema)](schema-library-ownersid.md). Optional.                                             |
+|                | [version-Element (Bibliotheksschema)](schema-library-version.md). Optional.                                               |
+|                | [isLibraryPinned-Element (Bibliotheksschema)](schema-library-islibrarypinned.md). Optional.                               |
+|                | [iconReference-Element (Bibliotheksschema)](schema-library-iconreference.md). Optional.                                   |
+|                | [propertyStore-Element (Bibliotheksschema)](schema-library-propertystore.md). Optional.                                   |
+|                | [templateInfo-Element (Bibliotheksschema)](schema-library-templateinfo.md). Optional.                                     |
+|                | [searchConnectorDescriptionList-Element (Bibliotheksschema)](schema-library-searchconnectordescriptionlist.md). Erforderlich. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jede Bibliothek kann einen oder mehrere Speicherorte enthalten, die von einem Benutzer mithilfe von Windows-Explorer durchsucht oder durchsucht werden können. Die Speicherorte werden von Suchconnectors mithilfe von [<searchConnectorDescription>](schema-library-searchconnectordescription.md) Elementen in einem [<searchConnectorDescriptionList>](schema-library-searchconnectordescriptionlist.md) Containerelement definiert.
+Jede Bibliothek kann einen oder mehrere Speicherorte enthalten, die von einem Benutzer mithilfe Windows Explorers durchsucht oder durchsucht werden können. Die Speicherorte werden durch Suchconnectors definiert, die [<searchConnectorDescription>](schema-library-searchconnectordescription.md) Elemente in einem [<searchConnectorDescriptionList>](schema-library-searchconnectordescriptionlist.md) Containerelement verwenden.
 
-Eine Bibliothek kann über einen eindeutigen Satz von Eigenschaften verfügen, und Positionen in der Bibliothek können auch eindeutige Eigenschaften Sätze aufweisen. Diese Eigenschaften werden in [<property>](schema-library-property.md) Elementen innerhalb eines [<propertyStore>](schema-library-propertystore.md) Container Elements definiert.
+Eine Bibliothek kann über einen eindeutigen Satz von Eigenschaften verfügen, und Speicherorte in der Bibliothek können auch eindeutige Sätze von Eigenschaften aufweisen. Diese Eigenschaften werden in [<property>](schema-library-property.md) Elementen innerhalb eines [<propertyStore>](schema-library-propertystore.md) Containerelements definiert.
 
 ## <a name="example"></a>Beispiel
 
@@ -128,10 +128,10 @@ Eine Bibliothek kann über einen eindeutigen Satz von Eigenschaften verfügen, u
 
 <dl> <dt>
 
-[Bibliotheks Beschreibungs Schema](library-schema-entry.md)
+[Bibliotheksbeschreibungsschema](library-schema-entry.md)
 </dt> <dt>
 
-[Suchdienst-Beschreibungs Schema](../search/search-sconn-desc-schema-entry.md)
+[Suchconnectorbeschreibungsschema](../search/search-sconn-desc-schema-entry.md)
 </dt> </dl>
 
  

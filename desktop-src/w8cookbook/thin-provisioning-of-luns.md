@@ -1,20 +1,20 @@
 ---
-title: Schlanke Speicherzuweisung logischer Einheiten
-description: Schlanke Speicherzuweisung logischer Einheiten
+title: Schlanke Bereitstellung logischer Einheiten
+description: Schlanke Bereitstellung logischer Einheiten
 ms.assetid: D64ECA7B-62AC-4C14-BE4B-84DA2E20C16B
 keywords:
 - LUN
-- LBA
+- Lba
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4abb6fa3cec112737b23e3cd658a48984cb0fcd1
-ms.sourcegitcommit: ea4baf9953a78d2d6bd530b680601e39f3884541
+ms.openlocfilehash: 64ed5385322601e633f79755fb192f1dce578f2bec0f944fa2f4f412c32d69a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "104039745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119935050"
 ---
-# <a name="thin-provisioning-of-logical-units"></a>Schlanke Speicherzuweisung logischer Einheiten
+# <a name="thin-provisioning-of-logical-units"></a>Schlanke Bereitstellung logischer Einheiten
 
 ## <a name="platforms"></a>Plattformen
 
@@ -24,47 +24,47 @@ ms.locfileid: "104039745"
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Die schlanke Windows-Bereitstellung ist eine Schnittstelle zur Lösung für die End-to-End-Speicher Bereitstellung. Zum Bereitstellen eines hoch verfügbaren, skalierbaren und benutzerfreundlichen Speicher Bereitstellungs Diensts sind robuste Implementierungen vom Server Host zum Speicher Zielgerät erforderlich. Das Windows-Feature für die schlanke Speicherzuweisung bietet dem Systemadministrator, dem IT-Manager und dem Speicher Administrator eine synchrone Ansicht der Speichergeräte für die schlanke Speicherzuweisung für den Systemadministrator, den IT-Manager und den Speicher Administrator, indem es die (LUN)-Identifikation der logischen Einheit (LUN), Schwellenwert Benachrichtigung, Ressourcen Auslastungs Behandlung, Speicherplatz Rückgewinnung und Das Windows-Feature für die schlanke Speicherzuweisung stellt ein stabiles Speicher Bereitstellungs Dienstmodell dar, das auf Client-Server-Speichersysteme, virtualisierungsspeicher und cloudspeicherdienste angewendet werden kann. Microsoft gewährleistet die hohe Qualität des Features für die schlanke Speicherzuweisung durch erzwingen der Anforderungen an das Hardware-zertifizierungskit für Windows Thin Bereitstellung für Speicher Array Produkte.
+Windows Thin Provisioning ist eine Schnittstelle zur End-to-End-Speicherbereitstellungslösung. Für die Bereitstellung eines hoch verfügbaren, skalierbaren und benutzerfreundlichen Speicherbereitstellungsdiensts sind stabile Implementierungen vom Serverhost zum Speicherzielgerät erforderlich. Die Windows Thin Provisioning-Funktion bietet dem Systemadministrator, IT-Manager und Speicheradministrator eine synchrone Ansicht der Speichergeräte für die schlanke Speicherbereitstellung über die Identifikation der logischen Einheit (LUNs), die Schwellenwertbenachrichtigung, die Verarbeitung der Ressourcenerschöpfung, die Speicherplatzwiederherstellung und den Abruf des Zustands der logischen Blockadressierung (Logical Block Addressing, LBA). Die Windows Schlanke Bereitstellungsfunktion stellt ein robustes Speicherbereitstellungsdienstmodell dar, das auf Client-Server-Speichersysteme, Virtualisierungsspeicher und Cloudspeicherdienste angewendet werden kann. Microsoft stellt die hohe Qualität des Thin Provisioning-Features sicher, indem die Windows Hardware Certification Kit-Anforderungen für Thin Provisioning für Speicherarrayprodukte erzwungen werden.
 
-Die Speicherlösung für die Bereitstellung von Windows schlank:
+Die Windows Thin Provisioning-Speicherlösung:
 
--   Ermöglicht Speicher Administratoren das Erstellen einer größeren LUN mit weniger physischen Datenträger Ressourcen.
--   Fügt physische Datenträger Ressource hinzu oder entfernt Sie, ohne den Speicher Bereitstellungs Dienst zu unterbrechen.
--   Benachrichtigt Benutzer über die Schwellenwert Einstellung auf die Auslastung des Speichervolumes.
--   Unterstützt die Speicher Bereitstellung über die freigegebene Speicherpool Konfiguration
--   Erhöht oder verringert die Größe des Speicherpools entsprechend der Nachfrage und Verwendung von Speicherplatz.
+-   Ermöglicht Speicheradministratoren das Erstellen einer größeren LUN mit weniger physischen Datenträgerressourcen.
+-   Fügt eine physische Datenträgerressource hinzu oder entfernt sie, ohne den Speicherbereitstellungsdienst zu unterbrechen.
+-   Warnung der Benutzer zur Speichervolumenutzung über die Schwellenwerteinstellung
+-   Unterstützt die Speicherbereitstellung über die Konfiguration des freigegebenen Speicherpools.
+-   Erhöht oder verringert die Größe des Speicherpools entsprechend dem Bedarf und der Nutzung des Speicherplatzes.
 
-Zusammenfassung der Features der Windows-Thin Bereitstellung:
+Zusammenfassung der Features der Windows Thin Provisioning:
 
--   LUN-Identifikation der schlank Bereitstellung
--   Handles für Schwellenwert Benachrichtigung, temporäre Ressourcenauslastung und permanente Ressourcenauslastung
--   Speicherplatz Rückgewinnung
--   Zuordnung von Zustands Abfragen logischer Blöcke
+-   LUN-Identifikation für die schlanke Bereitstellung
+-   Handles für Schwellenwertbenachrichtigungen, temporäre Ressourcenerschöpfung und dauerhafte Ressourcenüberschöpfung
+-   Storage Leerraumrückruf
+-   Zuordnen von Zustandsabfragen logischer Blöcke
 
-## <a name="manifestation"></a>Ausstrahlung
+## <a name="manifestation"></a>Manifestation
 
-Ohne das richtige Verständnis der Windows-Handles für die LUN mit schlanker Speicherzuweisung kann die APP mit unerwartetem Verhalten oder aus unbekannter Ursache fehlschlagen.
+Ohne das richtige Verständnis der Windows Handles für die LUN für die schlanke Bereitstellung kann die App mit unerwartetem Verhalten oder aus unbekannter Ursache fehlschlagen.
 
-## <a name="using-thin-provisioning-luns"></a>Verwenden von LUNs mit schlanker Speicherzuweisung
+## <a name="using-thin-provisioning-luns"></a>Verwenden von LUNs für die schlanke Bereitstellung
 
-Zur Verwendung von schlank bereitgestellten LUNs in Windows 8 oder Windows Server 2012 sollten System-und Speicher Administratoren Folgendes beachten:
+Um lunsierte LUNs mit schlanker Speicherbereitstellung in Windows 8 oder Windows Server 2012 verwenden zu können, sollten System- und Speicheradministratoren folgende Aspekte beachten:
 
--   LUN-Identifikation der Thin Bereitstellung; Systemadministratoren oder Endbenutzer können Defrag und das Dienstprogramm für den Speicher Optimierer verwenden, um den Medientyp des Speichergeräts zu identifizieren.
--   Wenn ein Schwellenwert oder ein dauerhaftes Ressourcen Auslastungs Ereignis erreicht wird, protokolliert Windows ein System Ereignis, um den Systemadministrator zu benachrichtigen.
--   Die Speicherplatz Rückgewinnung kann manuell oder automatisch durch Datei Lösch Benachrichtigung oder den Scheduler des Speicher Optimierers ausgeführt werden.
--   Der Speicher Administrator sollte die Schwellenwert Benachrichtigung für Warnungs Systemadministrator oder Endbenutzer implementieren und unerwartete Speicherdienst Unterbrechungen vermeiden.
+-   LUN-Identifikation mit schlanker Bereitstellung; Systemadministratoren oder Endbenutzer können defrag und das hilfsprogramm Storage Optimizer verwenden, um den Medientyp des Speichergeräts zu identifizieren.
+-   Wenn ein Schwellenwert oder ein permanentes Ressourcenerschöpfungsereignis erreicht wird, protokolliert Windows ein Systemereignis, um den Systemadministrator zu benachrichtigen.
+-   Storage Speicherplatzaufbewahrung kann manuell oder automatisch über eine Dateilöschbenachrichtigung oder den Planer des Speicheroptimierers ausgeführt werden.
+-   Storage Administrator sollte die Schwellenwertbenachrichtigung implementieren, um den Systemadministrator oder Endbenutzer zu warnen und unerwartete Speicherdienstunterbrechungen zu vermeiden.
 
 ## <a name="tests"></a>Tests
 
--   Das Speicher Array muss ein Zertifikat für die schlanke Windows 8-Bereitstellung erhalten, um die Windows Thin Provisioning-Funktionen
--   Das Hardware-zertifizierungskit für die Windows-schlanke Speicherzuweisung für das Speicher Array ist ein nützliches Testtool zum Überprüfen der Funktion von Speicherarrays für die Unterstützung von Windows schlank
--   Windows erwartet, dass die LUN mit schlanker Speicherzuweisung und die LUN für die vollständige Bereitstellung ohne Probleme in demselben System funktionieren.
+-   Storage Array muss Windows 8 Thin Provisioning-Zertifikat empfangen, um Windows Thin Provisioning-Features zu unterstützen.
+-   Windows Das Thin Provisioning Hardware Certification Kit für Speicherarray ist ein nützliches Testtool, um die Funktion des Speicherarrays für die Unterstützung Windows Thin Provisioning-Features zu überprüfen.
+-   Windows erwartet, dass die LUN für die schlanke Bereitstellung und die LUN für die vollständige Bereitstellung ohne Probleme im selben System funktionieren.
 
 ## <a name="resources"></a>Ressourcen
 
--   [T10-SCSI-Block-Befehls Spezifikation (SBC3r27)](https://www.t10.org/cgi-bin/ac.pl?t=f&f=sbc3r27.pdf)
--   [Hardware-Dashboard-Dienste](/windows-hardware/drivers/dashboard/)
+-   [T10-SCSI-Blockbefehlsspezifikation (SBC3r27)](https://www.t10.org/cgi-bin/ac.pl?t=f&f=sbc3r27.pdf)
+-   [Hardwaredashboarddienste](/windows-hardware/drivers/dashboard/)
 
- 
+ 
 
- 
+ 

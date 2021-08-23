@@ -1,7 +1,7 @@
 ---
-description: Ruft die Dauer der Medienquelle in 100-Nanosecond-Einheiten ab.
+description: Ruft die Dauer der Medienquelle in Einheiten von 100 Nanosekunden ab.
 ms.assetid: d0c644a0-9784-40b0-9d1f-7d9e8334d705
-title: 'Imfmediasourceextension:: getduration-Methode'
+title: MÜSSENMediaSourceExtension::GetDuration-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: a64aa611e4c34a03097027b9001908db72556479
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: a5f3e3914f7434508464564758f14421c15949cadd1ef0b727a0f9824107b707
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104219012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941970"
 ---
-# <a name="imfmediasourceextensiongetduration-method"></a>Imfmediasourceextension:: getduration-Methode
+# <a name="imfmediasourceextensiongetduration-method"></a>MÜSSENMediaSourceExtension::GetDuration-Methode
 
-Ruft die Dauer der Medienquelle in 100-Nanosecond-Einheiten ab.
+Ruft die Dauer der Medienquelle in Einheiten von 100 Nanosekunden ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Dauer der Medienquelle in 100-Nanosecond-Einheiten.
+Die Dauer der Medienquelle in Einheiten von 100 Nanosekunden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,9 +47,9 @@ Die Dauer der Medienquelle in 100-Nanosecond-Einheiten.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
@@ -57,7 +57,7 @@ Die Dauer der Medienquelle in 100-Nanosecond-Einheiten.
 
 <dl> <dt>
 
-[**Imfmediasourceextension**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediasourceextension)
+[**DURCHSCHN.MediaSourceExtension**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediasourceextension)
 </dt> </dl>
 
  

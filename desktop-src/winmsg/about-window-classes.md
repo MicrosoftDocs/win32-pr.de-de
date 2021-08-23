@@ -1,157 +1,157 @@
 ---
-description: Jede Fenster Klasse verfügt über eine zugeordnete Fenster Prozedur, die von allen Fenstern derselben Klasse gemeinsam genutzt wird. Die Fenster Prozedur verarbeitet Nachrichten für alle Fenster dieser Klasse und steuert somit das Verhalten und die Darstellung.
+description: Jede Fensterklasse verfügt über eine zugeordnete Fensterprozedur, die von allen Fenstern derselben Klasse gemeinsam genutzt wird. Die Fensterprozedur verarbeitet Meldungen für alle Fenster dieser Klasse und steuert daher deren Verhalten und Darstellung.
 ms.assetid: db79fd4b-6a15-4bf9-a0d9-5f6415f6c75f
-title: Informationen zu Fenster Klassen
+title: Informationen zu Fensterklassen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b683176c3fd7904cf3f89b385ce0fa393b89e9f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0fcb46d862bf5b9249bb4f13b111ac10c441c3e687dd3fb1784f355c40d14b72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217823"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119932330"
 ---
-# <a name="about-window-classes"></a>Informationen zu Fenster Klassen
+# <a name="about-window-classes"></a>Informationen zu Fensterklassen
 
-Jede Fenster Klasse verfügt über eine zugeordnete Fenster Prozedur, die von allen Fenstern derselben Klasse gemeinsam genutzt wird. Die Fenster Prozedur verarbeitet Nachrichten für alle Fenster dieser Klasse und steuert somit das Verhalten und die Darstellung. Weitere Informationen finden Sie unter [Window Procedures](window-procedures.md).
+Jede Fensterklasse verfügt über eine zugeordnete Fensterprozedur, die von allen Fenstern derselben Klasse gemeinsam genutzt wird. Die Fensterprozedur verarbeitet Meldungen für alle Fenster dieser Klasse und steuert daher deren Verhalten und Darstellung. Weitere Informationen finden Sie unter [Window Procedures](window-procedures.md).
 
-Ein Prozess muss eine Fenster Klasse registrieren, bevor ein Fenster dieser Klasse erstellt werden kann. Beim Registrieren einer Fenster Klasse werden eine Fenster Prozedur, Klassen Stile und andere Klassenattribute mit einem Klassennamen verknüpft. Wenn ein Prozess einen Klassennamen in der Funktion "" von " [](/windows/win32/api/winuser/nf-winuser-createwindowexa) " von "", "", "", "", "", "" und "" mit dem Namen " [**" des Klassen**](/windows/win32/api/winuser/nf-winuser-createwindowa) namens angibt, erstellt das System ein Fenster mit der Fenster Prozedur
+Ein Prozess muss eine Fensterklasse registrieren, bevor er ein Fenster dieser Klasse erstellen kann. Beim Registrieren einer Fensterklasse werden eine Fensterprozedur, Klassenstile und andere Klassenattribute einem Klassennamen zu ordnet. Wenn ein Prozess einen Klassennamen in der [**CreateWindow-**](/windows/win32/api/winuser/nf-winuser-createwindowa) oder [**CreateWindowEx-Funktion**](/windows/win32/api/winuser/nf-winuser-createwindowexa) angibt, erstellt das System ein Fenster mit der Fensterprozedur, stilen und anderen Attributen, die diesem Klassennamen zugeordnet sind.
 
-In diesem Abschnitt werden die folgenden Themen behandelt.
+In diesem Abschnitt werden die folgenden Themen erläutert.
 
--   [Typen von Fenster Klassen](#types-of-window-classes)
-    -   [System Klassen](#system-classes)
-    -   [Globale Anwendungs Klassen](#application-global-classes)
-    -   [Lokale Anwendungs Klassen](#application-local-classes)
--   [Wie das System eine Fenster Klasse lokalisiert](#how-the-system-locates-a-window-class)
--   [Registrieren einer Fenster Klasse](#registering-a-window-class)
--   [Elemente einer Fenster Klasse](#elements-of-a-window-class)
+-   [Typen von Fensterklassen](#types-of-window-classes)
+    -   [Systemklassen](#system-classes)
+    -   [Globale Anwendungsklassen](#application-global-classes)
+    -   [Lokale Anwendungsklassen](#application-local-classes)
+-   [So sucht das System nach einer Fensterklasse](#how-the-system-locates-a-window-class)
+-   [Registrieren einer Fensterklasse](#registering-a-window-class)
+-   [Elemente einer Window-Klasse](#elements-of-a-window-class)
     -   [Klassenname](#class-name)
-    -   [Fenster Prozedur Adresse](#window-procedure-address)
+    -   [Fensterprozeduradresse](#window-procedure-address)
     -   [Instanzhandle](#instance-handle)
-    -   [Klassen Cursor](#class-cursor)
-    -   [Klassen Symbole](#class-icons)
-    -   [Klassenhintergrund Pinsel](#class-background-brush)
-    -   [Klassen Menü](#class-menu)
+    -   [Klassencursor](#class-cursor)
+    -   [Klassensymbole](#class-icons)
+    -   [Klassenhintergrundpinsel](#class-background-brush)
+    -   [Klassenmenü](#class-menu)
     -   [Klassenstile](#class-styles)
-    -   [Zusätzlicher Klassen Arbeitsspeicher](#extra-class-memory)
-    -   [Zusätzlicher Fenster Speicher](#extra-window-memory)
+    -   [Zusätzlicher Klassenspeicher](#extra-class-memory)
+    -   [Zusätzlicher Fensterspeicher](#extra-window-memory)
 
-## <a name="types-of-window-classes"></a>Typen von Fenster Klassen
+## <a name="types-of-window-classes"></a>Typen von Fensterklassen
 
-Es gibt drei Arten von Fenster Klassen:
+Es gibt drei Typen von Fensterklassen:
 
--   [System Klassen](#system-classes)
--   [Globale Anwendungs Klassen](#application-global-classes)
--   [Lokale Anwendungs Klassen](#application-local-classes)
+-   [Systemklassen](#system-classes)
+-   [Globale Anwendungsklassen](#application-global-classes)
+-   [Lokale Anwendungsklassen](#application-local-classes)
 
-Diese Typen unterscheiden sich im Gültigkeitsbereich, wann und wie Sie registriert und zerstört werden.
+Diese Typen unterscheiden sich im Gültigkeitsbereich und in wann und wie sie registriert und zerstört werden.
 
-### <a name="system-classes"></a>System Klassen
+### <a name="system-classes"></a>Systemklassen
 
-Eine System Klasse ist eine vom System registrierte Fenster Klasse. Viele System Klassen sind für alle Prozesse verfügbar, während andere nur intern vom System verwendet werden. Da das System diese Klassen registriert, kann ein Prozess Sie nicht zerstören.
+Eine Systemklasse ist eine vom System registrierte Fensterklasse. Viele Systemklassen sind für alle Prozesse verfügbar, während andere nur intern vom System verwendet werden. Da das System diese Klassen registriert, kann ein Prozess sie nicht zerstören.
 
-Das System registriert die System Klassen für einen Prozess, wenn ein Thread das erste Mal einen Benutzer oder eine Windows Graphics Device Interface-Funktion (GDI) aufruft.
+Das System registriert die Systemklassen für einen Prozess, wenn einer seiner Threads zum ersten Mal eine User- oder Windows Graphics Device Interface(GDI)-Funktion aufruft.
 
-Jede Anwendung erhält eine eigene Kopie der System Klassen. Alle 16-Bit-Windows-basierten Anwendungen im gleichen VDM Teilen System Klassen auf, genauso wie auf 16-Bit-Fenstern.
+Jede Anwendung erhält eine eigene Kopie der Systemklassen. Alle 16-Bit-Windows-basierten Anwendungen in denselben SYSTEMklassen teilen sich systemklassen, genau wie bei 16-Bit-Windows.
 
-In der folgenden Tabelle werden die System Klassen beschrieben, die für die Verwendung durch alle-Prozesse verfügbar sind.
+In der folgenden Tabelle werden die Systemklassen beschrieben, die für alle Prozesse verfügbar sind.
 
 
 
-| Klasse     | BESCHREIBUNG                         |
+| Klasse     | Beschreibung                         |
 |-----------|-------------------------------------|
-| Schaltfläche    | Die-Klasse für eine Schaltfläche.             |
-| Kombinationsfeld  | Die Klasse für ein Kombinations Feld.          |
-| Bearbeiten      | Die-Klasse für ein Bearbeitungs Steuerelement.      |
-| ListBox   | Die-Klasse für ein Listenfeld.           |
-| MDIClient | Die-Klasse für ein MDI-Client Fenster. |
-| ScrollBar | Die Klasse für eine Schiebe Leiste.         |
-| statischen    | Die-Klasse für ein statisches-Steuerelement.     |
+| Schaltfläche    | Die Klasse für eine Schaltfläche.             |
+| Kombinationsfeld  | Die Klasse für ein Kombinationsfeld.          |
+| Bearbeiten      | Die -Klasse für ein Bearbeitungssteuer steuerelement.      |
+| ListBox   | Die Klasse für ein Listenfeld.           |
+| MDIClient | Die -Klasse für ein MDI-Clientfenster. |
+| ScrollBar | Die -Klasse für eine Bildlaufleiste.         |
+| statischen    | Die -Klasse für ein statisches Steuerelement.     |
 
 
 
  
 
-In der folgenden Tabelle werden die System Klassen beschrieben, die nur für die Verwendung durch das System verfügbar sind. Sie werden hier aus Gründen der Vollständigkeit aufgeführt.
+In der folgenden Tabelle werden die Systemklassen beschrieben, die nur für die Verwendung durch das System verfügbar sind. Sie werden aus Gründen der Vollständigkeit hier aufgeführt.
 
 
 
-| Klasse      | BESCHREIBUNG                                                            |
+| Klasse      | Beschreibung                                                            |
 |------------|------------------------------------------------------------------------|
-| Combolbox  | Die Klasse für das Listenfeld, das in einem Kombinations Feld enthalten ist.                   |
-| Ddemlevent | Die-Klasse für Ddeml-Ereignisse (dynamischer Datenaustausch Management Library). |
-| `Message`    | Die-Klasse für ein Nachrichten geschütztes Fenster.                                   |
-| \#32768    | Die-Klasse für ein Menü.                                                  |
-| \#32769    | Die-Klasse für das Desktop Fenster.                                      |
-| \#32770    | Die-Klasse für ein Dialogfeld.                                            |
-| \#32771    | Die-Klasse für das Fenster "Task Switch".                                  |
-| \#32772    | Die Klasse für Symbol Titel.                                             |
+| ComboLBox  | Die Klasse für das Listenfeld, das in einem Kombinationsfeld enthalten ist.                   |
+| DDEMLEvent | Die -Klasse für dynamische Daten Exchange DDEML-Ereignisse (Management Library). |
+| `Message`    | Die -Klasse für ein Nur-Nachrichten-Fenster.                                   |
+| \#32768    | Die -Klasse für ein Menü.                                                  |
+| \#32769    | Die -Klasse für das Desktopfenster.                                      |
+| \#32770    | Die -Klasse für ein Dialogfeld.                                            |
+| \#32771    | Die Klasse für das Aufgabenwechselfenster.                                  |
+| \#32772    | Die Klasse für Symboltitel.                                             |
 
 
 
  
 
-### <a name="application-global-classes"></a>Globale Anwendungs Klassen
+### <a name="application-global-classes"></a>Globale Anwendungsklassen
 
-Eine [globale Anwendungsklasse](#application-global-classes) ist eine Fenster Klasse, die von einer ausführbaren Datei oder dll registriert wird, die für alle anderen Module im Prozess verfügbar ist. Beispielsweise kann die DLL-Datei die [**RegisterClassEx**](/windows/win32/api/winuser/nf-winuser-registerclassexa) -Funktion aufrufen, um eine Fenster Klasse zu registrieren, die ein benutzerdefiniertes Steuerelement als globale Anwendungsklasse definiert, sodass ein Prozess, der die DLL-Datei lädt, Instanzen des benutzerdefinierten Steuer Elements erstellen kann.
+Eine [globale Anwendungsklasse ist](#application-global-classes) eine Von einer ausführbaren Datei oder DLL registrierte Fensterklasse, die für alle anderen Module im Prozess verfügbar ist. Ihr .dll kann beispielsweise die [**RegisterClassEx-Funktion**](/windows/win32/api/winuser/nf-winuser-registerclassexa) aufrufen, um eine Fensterklasse zu registrieren, die ein benutzerdefiniertes Steuerelement als globale Anwendungsklasse definiert, sodass ein Prozess, der die .dll lädt, Instanzen des benutzerdefinierten Steuerelements erstellen kann.
 
-Erstellen Sie zum Erstellen einer Klasse, die in jedem Prozess verwendet werden kann, die Fenster Klasse in einer DLL, und laden Sie in jedem Prozess die dll. Fügen Sie den Namen des **AppInit- \_ DLLs** im folgenden Registrierungsschlüssel hinzu, um die DLL-Datei in jedem Prozess zu laden:
+Um eine Klasse zu erstellen, die in jedem Prozess verwendet werden kann, erstellen Sie die Fensterklasse in .dll und laden die .dll in jedem Prozess. Um die .dll in jedem Prozess zu laden, fügen Sie ihren Namen dem **Wert der AppInit-DLLs \_** im folgenden Registrierungsschlüssel hinzu:
 
-**HKEY \_ Lokale \_ Computer** \\ **Software** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** \\ **Windows**
+**HKEY \_ LOCAL \_ MACHINE** \\ **Software** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** \\ **Windows**
 
-Wenn ein Prozess gestartet wird, lädt das System die angegebene DLL in den Kontext des neu gestarteten Prozesses, bevor die Einstiegspunkt Funktion aufgerufen wird. Die dll muss die Klasse während der Initialisierungs Prozedur registrieren und den **CS \_ Global Class** -Stil angeben. Weitere Informationen finden Sie unter [Klassen Stile](#class-styles).
+Wenn ein Prozess gestartet wird, lädt das System die angegebene .dll im Kontext des neu gestarteten Prozesses, bevor die Einstiegspunktfunktion aufruft. Der .dll muss die Klasse während der Initialisierungsprozedur registrieren und den **CS \_ GLOBALCLASS-Stil** angeben. Weitere Informationen finden Sie unter [Klassenstile.](#class-styles)
 
-Verwenden Sie die [**unregisterclass**](/windows/win32/api/winuser/nf-winuser-unregisterclassa) -Funktion, um eine globale Anwendungsklasse zu entfernen und den zugeordneten Speicher freizugeben.
+Verwenden Sie die [**UnregisterClass-Funktion,**](/windows/win32/api/winuser/nf-winuser-unregisterclassa) um eine globale Anwendungsklasse zu entfernen und den zugeordneten Speicher frei zu geben.
 
-### <a name="application-local-classes"></a>Lokale Anwendungs Klassen
+### <a name="application-local-classes"></a>Lokale Anwendungsklassen
 
-Eine [lokale Anwendungsklasse](#application-local-classes) ist eine beliebige Fenster Klasse, die eine ausführbare Datei oder eine DLL-Datei für ihre ausschließliche Verwendung registriert. Obwohl Sie eine beliebige Anzahl von lokalen Klassen registrieren können, ist es üblich, nur eine zu registrieren. Diese Fenster Klasse unterstützt die Fenster Prozedur des Hauptfensters der Anwendung.
+Eine [lokale Anwendungsklasse ist](#application-local-classes) eine beliebige Fensterklasse, die von einer ausführbaren datei oder .dll zur exklusiven Verwendung registriert wird. Obwohl Sie eine beliebige Anzahl von lokalen Klassen registrieren können, ist es typisch, nur eine zu registrieren. Diese Fensterklasse unterstützt die Fensterprozedur des Hauptfensters der Anwendung.
 
-Das System zerstört eine lokale Klasse, wenn das Modul, das es registriert hat, geschlossen wird. Eine Anwendung kann auch die [**unregisterclass**](/windows/win32/api/winuser/nf-winuser-unregisterclassa) -Funktion verwenden, um eine lokale Klasse zu entfernen und den zugeordneten Speicher freizugeben.
+Das System zerstört eine lokale Klasse, wenn das Modul, das sie registriert hat, geschlossen wird. Eine Anwendung kann auch die [**UnregisterClass-Funktion**](/windows/win32/api/winuser/nf-winuser-unregisterclassa) verwenden, um eine lokale Klasse zu entfernen und den zugeordneten Speicher frei zu geben.
 
-## <a name="how-the-system-locates-a-window-class"></a>Wie das System eine Fenster Klasse lokalisiert
+## <a name="how-the-system-locates-a-window-class"></a>So sucht das System nach einer Fensterklasse
 
-Das System verwaltet eine Liste von Strukturen für jeden der drei Typen von Fenster Klassen. Wenn eine Anwendung die Funktion "up [**Window**](/windows/win32/api/winuser/nf-winuser-createwindowa) " oder " [**kreatewindowex**](/windows/win32/api/winuser/nf-winuser-createwindowexa) " aufruft, um ein Fenster mit einer bestimmten Klasse zu erstellen, verwendet das System das folgende Verfahren, um die-Klasse zu suchen.
+Das System verwaltet eine Liste von Strukturen für jeden der drei Typen von Fensterklassen. Wenn eine Anwendung die [**CreateWindow-**](/windows/win32/api/winuser/nf-winuser-createwindowa) oder [**CreateWindowEx-Funktion**](/windows/win32/api/winuser/nf-winuser-createwindowexa) aufruft, um ein Fenster mit einer angegebenen Klasse zu erstellen, verwendet das System das folgende Verfahren, um die Klasse zu suchen.
 
-1.  Durchsuchen Sie die Liste der lokalen Anwendungs Klassen nach einer Klasse mit dem angegebenen Namen, deren Instanzhandle mit dem Instanzhandle des Moduls übereinstimmt. (Mehrere Module können den gleichen Namen verwenden, um lokale Klassen im gleichen Prozess zu registrieren.)
-2.  Wenn der Name nicht in der Liste der lokalen Anwendungs Klassen enthalten ist, Durchsuchen Sie die Liste der globalen Anwendungs Klassen.
-3.  Wenn der Name nicht in der globalen Klassenliste der Anwendung enthalten ist, Durchsuchen Sie die Liste der System Klassen.
+1.  Suchen Sie in der Liste der lokalen Anwendungsklassen nach einer Klasse mit dem angegebenen Namen, deren Instanzhand handle dem Instanzhand handle des Moduls entspricht. (Mehrere Module können denselben Namen verwenden, um lokale Klassen im gleichen Prozess zu registrieren.)
+2.  Wenn der Name nicht in der Lokalen Klassenliste der Anwendung enthalten ist, durchsuchen Sie die Liste der globalen Anwendungsklassen.
+3.  Wenn der Name nicht in der globalen Klassenliste der Anwendung enthalten ist, durchsuchen Sie die Liste der Systemklassen.
 
-Alle von der Anwendung erstellten Fenster verwenden dieses Verfahren, einschließlich Windows, das vom System im Namen der Anwendung (z. b. in Dialogfeldern) erstellt wurde. System Klassen können außer Kraft gesetzt werden, ohne dass sich dies auf andere Anwendungen auswirkt. Das heißt, eine Anwendung kann eine lokale Anwendungsklasse registrieren, die denselben Namen wie eine System Klasse hat. Dies ersetzt die System Klasse im Kontext der Anwendung, verhindert jedoch nicht, dass andere Anwendungen die System Klasse verwenden.
+Alle von der Anwendung erstellten Fenster verwenden dieses Verfahren, einschließlich der Fenster, die vom System im Auftrag der Anwendung erstellt werden, z. B. Dialogfelder. Es ist möglich, Systemklassen außer Kraft zu setzen, ohne andere Anwendungen zu beeinträchtigen. Das heißt, eine Anwendung kann eine lokale Anwendungsklasse registrieren, die den gleichen Namen wie eine Systemklasse hat. Dadurch wird die Systemklasse im Kontext der Anwendung ersetzt, aber es wird nicht verhindert, dass andere Anwendungen die Systemklasse verwenden.
 
-## <a name="registering-a-window-class"></a>Registrieren einer Fenster Klasse
+## <a name="registering-a-window-class"></a>Registrieren einer Fensterklasse
 
-Eine Fenster Klasse definiert die Attribute eines Fensters, z. b. Stil, Symbol, Cursor, Menü und Fenster Prozedur. Der erste Schritt beim Registrieren einer Fenster Klasse ist das Ausfüllen einer [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur mit den Fenster Klassen Informationen. Weitere Informationen finden Sie unter [Elemente einer Fenster Klasse](#elements-of-a-window-class). Übergeben Sie als nächstes die-Struktur an die [**RegisterClassEx**](/windows/win32/api/winuser/nf-winuser-registerclassexa) -Funktion. Weitere Informationen finden Sie unter [Verwenden von Fenster Klassen](using-window-classes.md).
+Eine Fensterklasse definiert die Attribute eines Fensters, z. B. Stil, Symbol, Cursor, Menü und Fensterprozedur. Der erste Schritt beim Registrieren einer Fensterklasse besteht im Ausfüllen einer [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) mit den Fensterklasseninformationen. Weitere Informationen finden Sie unter [Elemente einer Window-Klasse.](#elements-of-a-window-class) Übergeben Sie als Nächstes die -Struktur an die [**RegisterClassEx-Funktion.**](/windows/win32/api/winuser/nf-winuser-registerclassexa) Weitere Informationen finden Sie unter [Verwenden von Fensterklassen.](using-window-classes.md)
 
-Um eine globale Anwendungsklasse zu registrieren, geben Sie den CS \_ Global Class-Stil im **Style** -Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur an. Wenn Sie eine lokale Anwendungsklasse registrieren, geben Sie den **CS-Stil \_ Global Class** nicht an.
+Um eine globale Anwendungsklasse zu registrieren, geben Sie den CS \_ GLOBALCLASS-Stil im Stil member der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) an.  Geben Sie beim Registrieren einer lokalen Anwendungsklasse nicht den **CS \_ GLOBALCLASS-Stil** an.
 
-Wenn Sie die Fenster Klasse mithilfe der ANSI-Version von [**RegisterClassEx**](/windows/win32/api/winuser/nf-winuser-registerclassexa), **registerclassexa**, registrieren, fordert die Anwendung an, dass das System Text Parameter von Meldungen an die Fenster der erstellten Klasse mit dem ANSI-Zeichensatz übergibt. Wenn Sie die Klasse mithilfe der Unicode-Version von **RegisterClassEx**, **registerclassexw**, registrieren, fordert die Anwendung an, dass das System Text Parameter von Meldungen an die Fenster der erstellten Klasse mit dem Unicode-Zeichensatz übergibt. Die [**iswindowunicode**](/windows/win32/api/winuser/nf-winuser-iswindowunicode) -Funktion ermöglicht Anwendungen, die Art der einzelnen Fenster abzufragen. Weitere Informationen zu ANSI-und Unicode-Funktionen finden Sie unter [Konventionen für Funktionsprototypen](/windows/desktop/Intl/conventions-for-function-prototypes).
+Wenn Sie die Fensterklasse mit der ANSI-Version von [**RegisterClassEx**](/windows/win32/api/winuser/nf-winuser-registerclassexa), **RegisterClassExA** registrieren, fordert die Anwendung an, dass das System Textparameter von Nachrichten mithilfe des ANSI-Zeichensets an die Fenster der erstellten Klasse über gibt. Wenn Sie die -Klasse mithilfe der Unicode-Version von **RegisterClassEx**, **RegisterClassExW** registrieren, fordert die Anwendung an, dass das System Textparameter von Nachrichten mithilfe des Unicode-Zeichensets an die Fenster der erstellten Klasse über gibt. Mit [**der IsWindowUnicode-Funktion**](/windows/win32/api/winuser/nf-winuser-iswindowunicode) können Anwendungen die Art der einzelnen Fenster abfragen. Weitere Informationen zu ANSI- und Unicode-Funktionen finden Sie unter [Konventionen für Funktionsprototypen.](/windows/desktop/Intl/conventions-for-function-prototypes)
 
-Die ausführbare Datei oder dll, die die Klasse registriert hat, ist der Besitzer der Klasse. Das System bestimmt den Klassen Besitz aus dem **HINSTANCE** -Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur, die an die [**RegisterClassEx**](/windows/win32/api/winuser/nf-winuser-registerclassexa) -Funktion übermittelt wird, wenn die Klasse registriert wird. Bei DLLs muss das **HINSTANCE** -Element das Handle für die dll-Instanz sein.
+Die ausführbare Datei oder DLL, die die Klasse registriert hat, ist der Besitzer der Klasse. Das System bestimmt den Klassenbesitz vom **hInstance-Member** der [**WNDCLASSEX-Struktur,**](/windows/win32/api/winuser/ns-winuser-wndclassexa) der an die [**RegisterClassEx-Funktion**](/windows/win32/api/winuser/nf-winuser-registerclassexa) übergeben wird, wenn die Klasse registriert wird. Bei DLLs muss **das hInstance-Member** das Handle für die .dll sein.
 
-Die-Klasse wird nicht zerstört, wenn die DLL-Datei, die Sie besitzt, entladen wird. Wenn das System die Fenster Prozedur für ein Fenster dieser Klasse aufruft, wird daher eine Zugriffsverletzung verursacht, da sich die DLL-Datei, die die Fenster Prozedur enthält, nicht mehr im Arbeitsspeicher befindet. Der Prozess muss alle Fenster mit der-Klasse zerstören, bevor die DLL-Datei entladen und die [**unregisterclass**](/windows/win32/api/winuser/nf-winuser-unregisterclassa) -Funktion aufgerufen wird.
+Die -Klasse wird nicht zerstört, wenn der .dll, der sie besitzt, entladen wird. Wenn das System die Fensterprozedur für ein Fenster dieser Klasse aufruft, verursacht dies daher eine Zugriffsverletzung, da sich die .dll, die die Fensterprozedur enthält, nicht mehr im Arbeitsspeicher befindet. Der Prozess muss alle Fenster mithilfe der -Klasse zerstören, bevor .dll entlädt und die [**UnregisterClass-Funktion aufruft.**](/windows/win32/api/winuser/nf-winuser-unregisterclassa)
 
-## <a name="elements-of-a-window-class"></a>Elemente einer Fenster Klasse
+## <a name="elements-of-a-window-class"></a>Elemente einer Window-Klasse
 
-Die Elemente einer Fenster Klasse definieren das Standardverhalten von Fenstern, die zur-Klasse gehören. Die Anwendung, die eine Fenster Klasse registriert, weist der Klasse Elemente zu, indem geeignete Member in einer [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur festgelegt und die Struktur an die [**RegisterClassEx**](/windows/win32/api/winuser/nf-winuser-registerclassexa) -Funktion übergeben wird. Die Funktionen " [**getclassinfoex**](/windows/win32/api/winuser/nf-winuser-getclassinfoexa) " und " [**GetClassLong**](/windows/win32/api/winuser/nf-winuser-getclasslonga) " rufen Informationen über eine bestimmte Fenster Klasse ab. Die [**SetClassLong**](/windows/win32/api/winuser/nf-winuser-setclasslonga) -Funktion ändert Elemente einer lokalen oder globalen Klasse, die von der Anwendung bereits registriert wurde.
+Die Elemente einer Fensterklasse definieren das Standardverhalten von Fenstern, die zur -Klasse gehören. Die Anwendung, die eine Fensterklasse registriert, weist der Klasse Elemente zu, indem sie die entsprechenden Member in einer [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) festlegen und die Struktur an die [**RegisterClassEx-Funktion übergeben.**](/windows/win32/api/winuser/nf-winuser-registerclassexa) Die [**Funktionen GetClassInfoEx**](/windows/win32/api/winuser/nf-winuser-getclassinfoexa) und [**GetClassLong**](/windows/win32/api/winuser/nf-winuser-getclasslonga) rufen Informationen zu einer bestimmten Fensterklasse ab. Die [**SetClassLong-Funktion**](/windows/win32/api/winuser/nf-winuser-setclasslonga) ändert Elemente einer lokalen oder globalen Klasse, die die Anwendung bereits registriert hat.
 
-Obwohl eine komplette Fenster Klasse aus vielen Elementen besteht, erfordert das System lediglich, dass eine Anwendung einen Klassennamen, die Fenster Prozedur Adresse und einen Instanzhandle bereitstellt. Verwenden Sie die anderen-Elemente, um Standard Attribute für Fenster der-Klasse zu definieren, z. b. die Form des Cursors und den Inhalt des Menüs für das Fenster. Sie müssen alle nicht verwendeten Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur mit 0 (null) oder **null** initialisieren. Die Fenster Klassen Elemente sind wie in der folgenden Tabelle dargestellt.
+Obwohl eine vollständige Fensterklasse aus vielen Elementen besteht, erfordert das System nur, dass eine Anwendung einen Klassennamen, die Fensterprozeduradresse und ein Instanzhand handle anfordert. Verwenden Sie die anderen Elemente, um Standardattribute für Fenster der -Klasse zu definieren, z. B. die Form des Cursors und den Inhalt des Menüs für das Fenster. Sie müssen alle nicht verwendeten Member der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) auf null oder **NULL initialisieren.** Die Fensterklassenelemente sind wie in der folgenden Tabelle dargestellt.
 
 
 
 | Element                                               | Zweck                                                                                                                                                                                                                                       |
 |-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Klassenname](#class-name)                             | Unterscheidet die Klasse von anderen registrierten Klassen.                                                                                                                                                                                        |
-| [Fenster Prozedur Adresse](#window-procedure-address) | Ein Zeiger auf die Funktion, die alle an Windows in der-Klasse gesendeten Nachrichten verarbeitet und das Verhalten des Fensters definiert.                                                                                                                      |
-| [Instanzhandle](#instance-handle)                   | Identifiziert die Anwendung oder. dll, die die Klasse registriert hat.                                                                                                                                                                                 |
-| [Klassen Cursor](#class-cursor)                         | Definiert den Maus Cursor, den das System für ein Fenster der Klasse anzeigt.                                                                                                                                                                  |
-| [Klassen Symbole](#class-icons)                           | Definiert das große Symbol und das kleine Symbol.                                                                                                                                                                                                    |
-| [Klassenhintergrund Pinsel](#class-background-brush)     | Definiert die Farbe und das Muster, die den Client Bereich ausfüllen, wenn das Fenster geöffnet oder gezeichnet wird.                                                                                                                                                 |
-| [Klassen Menü](#class-menu)                             | Gibt das Standardmenü für Windows an, in dem ein Menü nicht explizit definiert wird.                                                                                                                                                                  |
-| [Klassenstile](#class-styles)                         | Definiert, wie das Fenster nach dem Verschieben oder Ändern der Größe aktualisiert wird, wie Doppelklicks der Maus verarbeitet werden, wie der Speicherplatz für den Gerätekontext und andere Aspekte des Fensters belegt werden.                                                       |
-| [Zusätzlicher Klassen Arbeitsspeicher](#extra-class-memory)             | Gibt die Menge des zusätzlichen Arbeitsspeichers in Bytes an, den das System für die Klasse reservieren soll. Alle Fenster in der Klasse teilen den zusätzlichen Arbeitsspeicher und können ihn für beliebige Anwendungs definierte Zwecke verwenden. Das System initialisiert diesen Arbeitsspeicher mit 0 (null). |
-| [Zusätzlicher Fenster Speicher](#extra-window-memory)           | Gibt die Menge an zusätzlichem Arbeitsspeicher in Bytes an, die das System für jedes Fenster reservieren sollte, das zur-Klasse gehört. Der zusätzliche Arbeitsspeicher kann für beliebige Anwendungs definierte Zwecke verwendet werden. Das System initialisiert diesen Arbeitsspeicher mit 0 (null).          |
+| [Klassenname](#class-name)                             | Unterscheidet die -Klasse von anderen registrierten Klassen.                                                                                                                                                                                        |
+| [Fensterprozeduradresse](#window-procedure-address) | Zeiger auf die Funktion, die alle Nachrichten verarbeitet, die an Fenster in der -Klasse gesendet werden, und das Verhalten des Fensters definiert.                                                                                                                      |
+| [Instanzhandle](#instance-handle)                   | Identifiziert die Anwendung oder den .dll, der die Klasse registriert hat.                                                                                                                                                                                 |
+| [Klassencursor](#class-cursor)                         | Definiert den Mauszeiger, der vom System für ein Fenster der -Klasse angezeigt wird.                                                                                                                                                                  |
+| [Klassensymbole](#class-icons)                           | Definiert das große Symbol und das kleine Symbol.                                                                                                                                                                                                    |
+| [Klassenhintergrundpinsel](#class-background-brush)     | Definiert die Farbe und das Muster, die den Clientbereich ausfüllen, wenn das Fenster geöffnet oder gestrichet wird.                                                                                                                                                 |
+| [Klassenmenü](#class-menu)                             | Gibt das Standardmenü für Fenster an, die kein Menü explizit definieren.                                                                                                                                                                  |
+| [Klassenstile](#class-styles)                         | Definiert, wie das Fenster nach dem Verschieben oder Ändern der Größe aktualisiert wird, wie Doppelklicks mit der Maus verarbeiten, wie Speicherplatz für den Gerätekontext und andere Aspekte des Fensters reserviert werden.                                                       |
+| [Zusätzlicher Klassenspeicher](#extra-class-memory)             | Gibt den zusätzlichen Arbeitsspeicher in Bytes an, den das System für die Klasse reservieren soll. Alle Fenster in der -Klasse nutzen den zusätzlichen Arbeitsspeicher gemeinsam und können ihn für jeden anwendungsdefinierten Zweck verwenden. Das System initialisiert diesen Arbeitsspeicher auf 0 (null). |
+| [Zusätzlicher Fensterspeicher](#extra-window-memory)           | Gibt die Menge an zusätzlichem Arbeitsspeicher in Bytes an, die das System für jedes Fenster reservieren soll, das zur -Klasse gehört. Der zusätzliche Arbeitsspeicher kann für jeden anwendungsdefinierten Zweck verwendet werden. Das System initialisiert diesen Arbeitsspeicher auf 0 (null).          |
 
 
 
@@ -159,85 +159,85 @@ Obwohl eine komplette Fenster Klasse aus vielen Elementen besteht, erfordert das
 
 ### <a name="class-name"></a>Klassenname
 
-Jede Fenster Klasse benötigt einen [Klassennamen](#class-name) , um eine Klasse von einer anderen Klasse zu unterscheiden. Weisen Sie einen Klassennamen zu, indem Sie den **lpszClassName** -Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur auf die Adresse einer auf NULL endenden Zeichenfolge festlegen, die den Namen angibt. Da Fenster Klassen Prozess spezifisch sind, müssen Fenster Klassennamen nur innerhalb desselben Prozesses eindeutig sein. Da Klassennamen Platz in der privaten Atom-Tabelle des Systems belegen, sollten Sie Klassennamen Zeichenfolgen so kurz wie möglich halten.
+Jede Fensterklasse benötigt einen [Klassennamen,](#class-name) um eine Klasse von einer anderen zu unterscheiden. Weisen Sie einen Klassennamen zu, indem Sie den **lpszClassName-Member** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) auf die Adresse einer auf NULL beendeten Zeichenfolge festlegen, die den Namen angibt. Da Fensterklassen prozessspezifisch sind, müssen Fensterklassennamen nur innerhalb desselben Prozesses eindeutig sein. Da Klassennamen den Platz in der privaten Atomtabelle des Systems belegen, sollten Sie klassennamenszeichenfolgen so kurz wie möglich halten.
 
-Die [**GetClassName**](/windows/win32/api/winuser/nf-winuser-getclassname) -Funktion Ruft den Namen der Klasse ab, zu der ein bestimmtes Fenster gehört.
+Die [**GetClassName-Funktion**](/windows/win32/api/winuser/nf-winuser-getclassname) ruft den Namen der Klasse ab, zu der ein bestimmtes Fenster gehört.
 
-### <a name="window-procedure-address"></a>Fenster Prozedur Adresse
+### <a name="window-procedure-address"></a>Adresse der Fensterprozedur
 
-Jede Klasse benötigt eine Fenster Prozedur Adresse, um den Einstiegspunkt der Fenster Prozedur zu definieren, die für die Verarbeitung aller Nachrichten für Windows in der Klasse verwendet wird. Das System übergibt Nachrichten an die Prozedur, wenn es erforderlich ist, dass das Fenster Aufgaben durchführt, z. b. das Zeichnen des Client Bereichs oder das reagieren auf Benutzereingaben. Ein Prozess weist einer Klasse eine Fenster Prozedur zu, indem er die Adresse in das **lpfnwndproc** -Element der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur kopiert. Weitere Informationen finden Sie unter [Window Procedures](window-procedures.md).
+Jede Klasse benötigt eine Fensterprozeduradresse, um den Einstiegspunkt der Fensterprozedur zu definieren, die zum Verarbeiten aller Meldungen für Fenster in der -Klasse verwendet wird. Das System übergibt Nachrichten an die Prozedur, wenn das Fenster Aufgaben ausführen muss, z. B. das Malen des Clientbereichs oder das Reagieren auf Eingaben des Benutzers. Ein Prozess weist einer Klasse eine Fensterprozedur zu, indem seine Adresse in den **lpfnWndProc-Member** der [**WNDCLASSEX-Struktur kopiert**](/windows/win32/api/winuser/ns-winuser-wndclassexa) wird. Weitere Informationen finden Sie unter [Window Procedures](window-procedures.md).
 
 ### <a name="instance-handle"></a>Instanzhandle
 
-Jede Fenster Klasse erfordert ein Instanzhandle, um die Anwendung oder dll zu identifizieren, die die Klasse registriert hat. Das System erfordert Instanzhandles, um alle Module nachzuverfolgen. Das System weist jeder Kopie einer ausführbaren ausführbaren Datei oder dll ein Handle zu.
+Jede Fensterklasse erfordert ein Instanzhand handle, um die Anwendung oder den .dll, der die Klasse registriert hat, zu identifizieren. Das System erfordert Instanzhandles, um alle Module nachverfolgen zu können. Das System weist jeder Kopie einer ausgeführten ausführbaren Datei oder eines ausgeführten .dll.
 
-Das System übergibt ein Instanzhandle an die Einstiegspunkt Funktion der einzelnen ausführbaren Dateien (siehe [**WinMain**](/windows/win32/api/winbase/nf-winbase-winmain)) und. dll (siehe [**DllMain**](/windows/desktop/Dlls/dllmain)). Die ausführbare Datei oder dll weist dieses Instanzhandle der-Klasse zu, indem es in das **HINSTANCE** -Element der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur kopiert wird.
+Das System übergibt ein Instanzhandl an die Einstiegspunktfunktion jeder ausführbaren Datei (siehe [**WinMain**](/windows/win32/api/winbase/nf-winbase-winmain)) und .dll (siehe [**DllMain**](/windows/desktop/Dlls/dllmain)). Die ausführbare Datei oder .dll weist der -Klasse dieses Instanzhand handle zu, indem es in den **hInstance-Member** der [**WNDCLASSEX-Struktur kopiert**](/windows/win32/api/winuser/ns-winuser-wndclassexa) wird.
 
-### <a name="class-cursor"></a>Klassen Cursor
+### <a name="class-cursor"></a>Klassencursor
 
-Der *Klassen Cursor* definiert die Form des Cursors, wenn er sich im Client Bereich eines Fensters in der-Klasse befindet. Das System legt den Cursor automatisch auf die angegebene Form fest, wenn der Cursor in den Client Bereich des Fensters wechselt, und stellt sicher, dass er diese Form beibehält, während er im Client Bereich verbleibt. Um einer Fenster Klasse eine Cursor Form zuzuweisen, laden Sie eine vordefinierte Cursor Form mithilfe der [**LoadCursor**](/windows/desktop/api/winuser/nf-winuser-loadcursora) -Funktion, und weisen Sie dann das zurückgegebene Cursor Handle dem **hcursor** -Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur zu. Alternativ dazu können Sie auch eine benutzerdefinierte Cursor Ressource bereitstellen und die **LoadCursor** -Funktion verwenden, um Sie aus den Ressourcen der Anwendung zu laden.
+Der *Klassencursor* definiert die Form des Cursors, wenn er sich im Clientbereich eines Fensters in der -Klasse befindet. Das System legt den Cursor automatisch auf die gegebene Form fest, wenn der Cursor in den Clientbereich des Fensters eintritt, und stellt sicher, dass diese Form erhalten bleibt, solange sie im Clientbereich verbleibt. Um einer Fensterklasse eine Cursorform zu zuweisen, laden Sie eine vordefinierte Cursorform mithilfe der [**LoadCursor-Funktion,**](/windows/desktop/api/winuser/nf-winuser-loadcursora) und weisen Sie dann das zurückgegebene Cursorhandle dem **hCursor-Member** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) zu. Alternativ können Sie eine benutzerdefinierte Cursorressource bereitstellen und die **LoadCursor-Funktion** verwenden, um sie aus den Ressourcen der Anwendung zu laden.
 
-Das System erfordert keinen Klassen Cursor. Wenn eine Anwendung den **hcursor** -Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur auf **null** festlegt, wird kein Klassen Cursor definiert. Das System geht davon aus, dass das Fenster die Cursor Form jedes Mal festlegt, wenn der Cursor in das Fenster bewegt wird. Ein Fenster kann die Cursor Form durch Aufrufen der [**SetCursor**](/windows/desktop/api/winuser/nf-winuser-setcursor) -Funktion festlegen, wenn das Fenster die [**WM- \_ MouseMove**](/windows/desktop/inputdev/wm-mousemove) -Nachricht empfängt. Weitere Informationen zu Cursorn finden Sie unter [Cursors](/windows/desktop/menurc/cursors).
+Das System erfordert keinen Klassencursor. Wenn eine Anwendung den **hCursor-Member** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) auf **NULL** setzt, wird kein Klassencursor definiert. Das System geht davon aus, dass das Fenster die Cursorform jedes Mal fest legt, wenn der Cursor in das Fenster bewegt wird. Ein Fenster kann die Cursorform festlegen, indem die [**SetCursor-Funktion**](/windows/desktop/api/winuser/nf-winuser-setcursor) immer dann aufruft, wenn das Fenster die [**WM \_ MOUSEMOVE-Nachricht**](/windows/desktop/inputdev/wm-mousemove) empfängt. Weitere Informationen zu Cursorn finden Sie unter [Cursor.](/windows/desktop/menurc/cursors)
 
-### <a name="class-icons"></a>Klassen Symbole
+### <a name="class-icons"></a>Klassensymbole
 
-Ein *Klassen Symbol* ist ein Bild, das vom System verwendet wird, um ein Fenster einer bestimmten Klasse darzustellen. Eine Anwendung kann zwei Klassen Symbole haben – eine große und eine kleine. Das System zeigt das *große Klassen Symbol* eines Fensters im Aufgaben Schalterfenster an, das angezeigt wird, wenn der Benutzer Alt + Tab drückt, und in den Ansichten mit dem großen Symbol der Taskleiste und im Explorer. Das *Symbol für die kleine Klasse* wird in der Titelleiste eines Fensters und in den Ansichten des kleinen Symbols der Taskleiste und des Explorers angezeigt.
+Ein *Klassensymbol* ist ein Bild, das das System verwendet, um ein Fenster einer bestimmten Klasse zu darstellen. Eine Anwendung kann über zwei Klassensymbole verfügen: eins groß und ein kleines. Das System zeigt das große Klassensymbol eines Fensters *im* Taskschalterfenster an, das angezeigt wird, wenn der Benutzer ALT+TAB drückt, sowie in den großen Symbolansichten der Taskleiste und des Explorers. Das *kleine Klassensymbol* wird in der Titelleiste eines Fensters und in den kleinen Symbolansichten der Taskleiste und des Explorers angezeigt.
 
-Wenn Sie einer Fenster Klasse ein großes und kleines Symbol zuweisen möchten, geben Sie die Handles der Symbole in den **HICON** -und **hikonsm** -Membern der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur an. Die Symbol Dimensionen müssen den erforderlichen Dimensionen für große und kleine Klassen Symbole entsprechen. Für ein großes Klassen Symbol können Sie die erforderlichen Dimensionen ermitteln, indem Sie die **SM- \_ cxicon** -und **SM \_ cyicon** -Werte in einem Aufrufen der [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) -Funktion angeben. Geben Sie für ein kleines Klassen Symbol die **SM \_ cxsmicon** -und **SM \_ cysmicon** -Werte an. Weitere Informationen finden Sie unter [Symbole](/windows/desktop/menurc/icons).
+Um einer Fensterklasse ein großes und kleines Symbol zu zuweisen, geben Sie die Handles der Symbole in den **Membern hIcon** **und hIconSm** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) an. Die Symboldimensionen müssen den erforderlichen Dimensionen für große und kleine Klassensymbole entsprechen. Für ein großes Klassensymbol können Sie die erforderlichen Dimensionen ermitteln, indem Sie die **SM \_ CXICON-** und **SM \_ CYICON-Werte** in einem Aufruf der [**GetSystemMetrics-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) angeben. Geben Sie für ein kleines Klassensymbol die **Werte SM \_ CXSMICON** und **SM \_ CYSMICON** an. Weitere Informationen finden Sie unter [Symbole](/windows/desktop/menurc/icons).
 
-Wenn eine Anwendung die **HICON** -und **hikonsm** -Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur auf **null** festlegt, verwendet das System das Standard Anwendungssymbol als große und kleine Klassen Symbole für die Fenster Klasse. Wenn Sie ein Symbol für eine große Klasse angeben, aber keinen kleinen, erstellt das System ein kleines Klassen Symbol basierend auf dem großen. Wenn Sie jedoch ein kleines Klassen Symbol, aber keinen großen Wert angeben, verwendet das System das Standard Anwendungssymbol als großes Klassen Symbol und das angegebene Symbol als kleines Klassen Symbol.
+Wenn eine Anwendung die **Member hIcon** und **hIconSm** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) auf **NULL** setzt, verwendet das System das Standardanwendungssymbol als große und kleine Klassensymbole für die Fensterklasse. Wenn Sie ein großes Klassensymbol angeben, aber kein kleines, erstellt das System ein kleines Klassensymbol basierend auf dem großen. Wenn Sie jedoch ein kleines, aber kein großes Klassensymbol angeben, verwendet das System das Standardanwendungssymbol als großes Klassensymbol und das angegebene Symbol als kleines Klassensymbol.
 
-Sie können das Symbol für groß-oder Kleinschreibung für ein bestimmtes Fenster überschreiben, indem Sie die [**WM \_**](wm-seticon.md) -Nachricht "*" verwenden. Sie können das aktuelle Symbol für große oder kleine Klassen mithilfe der [**WM- \_ GetIcon**](wm-geticon.md) -Nachricht abrufen.
+Sie können das große oder kleine Klassensymbol für ein bestimmtes Fenster überschreiben, indem Sie die [**WM \_ SETICON-Meldung**](wm-seticon.md) verwenden. Sie können das aktuelle große oder kleine Klassensymbol mithilfe der [**WM \_ GETICON-Nachricht**](wm-geticon.md) abrufen.
 
-### <a name="class-background-brush"></a>Klassenhintergrund Pinsel
+### <a name="class-background-brush"></a>Klassenhintergrundpinsel
 
-Ein *klassenhintergrund Pinsel* bereitet den Client Bereich eines Fensters für nachfolgende Zeichnungen durch die Anwendung vor. Das System verwendet den Pinsel, um den Client Bereich mit einer voll Tonfarbe oder einem Muster auszufüllen. Dadurch werden alle vorherigen Bilder aus diesem Speicherort entfernt, unabhängig davon, ob Sie zum Fenster gehören oder nicht. Das System benachrichtigt ein Fenster, dass der Hintergrund durch das Senden der WM- [**\_ erasebkgnd**](wm-erasebkgnd.md) -Meldung an das Fenster gezeichnet werden soll. Weitere Informationen finden Sie unter [Pinsel](/windows/desktop/gdi/brushes).
+Ein *Klassenhintergrundpinsel* bereitet den Clientbereich eines Fensters für das nachfolgende Zeichnen durch die Anwendung vor. Das System verwendet den Pinsel, um den Clientbereich mit einer Volltonfarbe oder einem Muster zu füllen, wodurch alle vorherigen Bilder von diesem Speicherort entfernt werden, unabhängig davon, ob sie zum Fenster gehören oder nicht. Das System benachrichtigt ein Fenster, dass sein Hintergrund gezeichnet werden soll, indem die [**WM \_ ERASEBKGND-Nachricht**](wm-erasebkgnd.md) an das Fenster gesendet wird. Weitere Informationen finden Sie unter [Pinsel.](/windows/desktop/gdi/brushes)
 
-Wenn Sie einer Klasse einen Hintergrund Pinsel zuweisen möchten, erstellen Sie einen Pinsel mithilfe der entsprechenden GDI-Funktionen, und weisen Sie das zurückgegebene Pinsel handle dem **hbrbackground** -Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur zu.
+Um einer Klasse einen Hintergrundpinsel zuzuweisen, erstellen Sie einen Pinsel mithilfe der entsprechenden GDI-Funktionen und weisen das zurückgegebene Pinselhandle dem **hbrBackground-Member** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) zu.
 
-Anstatt einen Pinsel zu erstellen, kann eine Anwendung den **hbrbackground** -Member auf einen der standardmäßigen System Farbwerte festlegen. Eine Liste der standardmäßigen System Farbwerte finden Sie unter [**SetSysColors**](/windows/desktop/api/winuser/nf-winuser-setsyscolors).
+Anstatt einen Pinsel zu erstellen, kann eine Anwendung den **hbrBackground-Member** auf einen der Standard-Systemfarbwerte festlegen. Eine Liste der Standard-Systemfarbwerte finden Sie unter [**SetSysColors**](/windows/desktop/api/winuser/nf-winuser-setsyscolors).
 
-Um eine Standardsystem Farbe zu verwenden, muss die Anwendung den Wert für die Hintergrundfarbe um 1 erhöhen. Beispielsweise ist **Color \_ Background** + 1 die System Hintergrundfarbe. Alternativ können Sie die [**getsyscolorbrush**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) -Funktion verwenden, um ein Handle für einen Pinsel abzurufen, der einer Standardsystem Farbe entspricht, und dann das Handle im **hbrbackground** -Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur angeben.
+Um eine Standardsystemfarbe zu verwenden, muss die Anwendung den Hintergrundfarbwert um eins erhöhen. COLOR **\_ BACKGROUND** + 1 ist beispielsweise die Hintergrundfarbe des Systems. Alternativ können Sie die [**GetSysColorBrush-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) verwenden, um ein Handle für einen Pinsel abzurufen, der einer Standardsystemfarbe entspricht, und dann das Handle im **hbrBackground-Member** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) angeben.
 
-Das System erfordert nicht, dass eine Fenster Klasse über einen klassenhintergrund Pinsel verfügt. Wenn dieser Parameter auf **null** festgelegt ist, muss das Fenster beim Empfang der [**WM \_ erasebkgnd**](wm-erasebkgnd.md) -Meldung seinen eigenen Hintergrund zeichnen.
+Das System erfordert nicht, dass eine Fensterklasse über einen Klassenhintergrundpinsel verfügt. Wenn dieser Parameter auf **NULL** festgelegt ist, muss das Fenster seinen eigenen Hintergrund zeichnen, sobald es die [**WM \_ ERASEBKGND-Nachricht**](wm-erasebkgnd.md) empfängt.
 
-### <a name="class-menu"></a>Klassen Menü
+### <a name="class-menu"></a>Klassenmenü
 
-Ein *Klassen Menü* definiert das Standardmenü, das von den Fenstern in der-Klasse verwendet werden soll, wenn beim Erstellen der Fenster kein explizites Menü angegeben wird. Ein Menü ist eine Liste der Befehle, aus denen ein Benutzeraktionen auswählen kann, die von der Anwendung durchgeführt werden sollen.
+Ein *Klassenmenü* definiert das Standardmenü, das von den Fenstern in der -Klasse verwendet werden soll, wenn beim Erstellen der Fenster kein explizites Menü angegeben wird. Ein Menü ist eine Liste von Befehlen, über die ein Benutzer Aktionen auswählen kann, die von der Anwendung ausgeführt werden sollen.
 
-Sie können einer Klasse ein Menü zuweisen, indem Sie den **lpszmenuname** -Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur auf die Adresse einer auf NULL endenden Zeichenfolge festlegen, die den Ressourcennamen des Menüs angibt. Es wird davon ausgegangen, dass das Menü eine Ressource in der angegebenen Anwendung ist. Das System lädt das Menü automatisch, wenn es benötigt wird. Wenn die Menü Ressource durch eine ganze Zahl und nicht durch einen Namen identifiziert wird, kann die Anwendung das **lpszmenuname** -Element auf diese Ganzzahl festlegen, indem das [**makeintresource**](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) -Makro vor dem Zuweisen des Werts angewendet wird.
+Sie können einer Klasse ein Menü zuweisen, indem Sie den **lpszMenuName-Member** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) auf die Adresse einer auf NULL endende Zeichenfolge festlegen, die den Ressourcennamen des Menüs angibt. Das Menü wird als Ressource in der angegebenen Anwendung angenommen. Das System lädt das Menü automatisch, wenn es benötigt wird. Wenn die Menüressource durch eine ganze Zahl und nicht durch einen Namen identifiziert wird, kann die Anwendung das **lpszMenuName-Element** auf diese ganze Zahl festlegen, indem das [**MAKEINTRESOURCE-Makro**](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) angewendet wird, bevor der Wert zugewiesen wird.
 
-Das System erfordert kein Klassen Menü. Wenn eine Anwendung das **lpszmenuname** -Element der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur auf **null** festlegt, haben Fenster in der-Klasse keine Menüleisten. Auch wenn kein Klassen Menü angegeben ist, kann eine Anwendung immer noch eine Menüleiste für ein Fenster definieren, wenn das Fenster erstellt wird.
+Das System erfordert kein Klassenmenü. Wenn eine Anwendung den **lpszMenuName-Member** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) auf **NULL** festlegt, haben Fenster in der -Klasse keine Menüleisten. Auch wenn kein Klassenmenü angegeben ist, kann eine Anwendung beim Erstellen des Fensters trotzdem eine Menüleiste für ein Fenster definieren.
 
-Wenn ein Menü für eine Klasse angegeben wird und ein untergeordnetes Fenster dieser Klasse erstellt wird, wird das Menü ignoriert. Weitere Informationen finden Sie unter [Menüs](/windows/desktop/menurc/menus).
+Wenn ein Menü für eine Klasse angegeben und ein untergeordnetes Fenster dieser Klasse erstellt wird, wird das Menü ignoriert. Weitere Informationen finden Sie unter [Menüs](/windows/desktop/menurc/menus).
 
 ### <a name="class-styles"></a>Klassenstile
 
-Die Klassen Stile definieren zusätzliche Elemente der Fenster Klasse. Zwei oder mehr Stile können mithilfe des bitweisen or ()-Operators kombiniert werden \| . Um einer Fenster Klasse einen Stil zuzuweisen, weisen Sie das Format dem **stilmember** der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur zu. Eine Liste der Klassen Stile finden Sie unter [**Fenster Klassen Stile**](window-class-styles.md).
+Die Klassenstile definieren zusätzliche Elemente der Fensterklasse. Zwei oder mehr Stile können mithilfe des bitweisen OR \| ()-Operators kombiniert werden. Um einer Fensterklasse einen Stil zuzuweisen, weisen Sie den Stil dem **Stilmember** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) zu. Eine Liste der Klassenstile finden Sie unter [**Fensterklassenstile.**](window-class-styles.md)
 
-### <a name="classes-and-device-contexts"></a>Klassen und Geräte Kontexte
+### <a name="classes-and-device-contexts"></a>Klassen und Gerätekontexte
 
-Ein *Gerätekontext* ist ein spezieller Satz von Werten, die Anwendungen zum Zeichnen im Client Bereich ihrer Fenster verwenden. Das System benötigt für jedes Fenster in der Anzeige einen Gerätekontext, bietet jedoch einige Flexibilität bei der Speicherung und Überstellung dieses Geräte Kontexts durch das System.
+Ein *Gerätekontext* ist ein spezieller Satz von Werten, die Anwendungen zum Zeichnen im Clientbereich ihrer Fenster verwenden. Das System erfordert einen Gerätekontext für jedes Fenster auf dem Display, ermöglicht aber eine gewisse Flexibilität bei der Speicherung und Behandlung dieses Gerätekontexts durch das System.
 
-Wenn kein Gerätekontext Stil explizit angegeben wird, geht das System davon aus, dass jedes Fenster einen Gerätekontext verwendet, der aus einem Pool von Kontexten abgerufen wurde, die vom System verwaltet werden. In solchen Fällen muss jedes Fenster den Gerätekontext abrufen und initialisieren, bevor er gezeichnet wird, und ihn nach dem Zeichnen freigeben.
+Wenn kein Gerätekontextstil explizit angegeben wird, geht das System davon aus, dass jedes Fenster einen Gerätekontext verwendet, der aus einem Pool von Kontexten abgerufen wird, die vom System verwaltet werden. In solchen Fällen muss jedes Fenster den Gerätekontext vor dem Zeichnen abrufen und initialisieren und nach dem Zeichnen freigeben.
 
-Um zu vermeiden, dass jedes Mal, wenn es innerhalb eines Fensters gezeichnet werden muss, ein Gerätekontext abgerufen wird, kann eine Anwendung den **CS- \_ owndc** -Stil für die Fenster Klasse angeben. Dieser Klassen Stil weist das System an, einen privaten Gerätekontext zu erstellen, d. –., um einen eindeutigen Gerätekontext für jedes Fenster in der Klasse zuzuordnen. Die Anwendung muss den Kontext nur einmal abrufen und dann für alle nachfolgenden Zeichnungen verwenden.
+Um das Abrufen eines Gerätekontexts bei jedem Zeichnen innerhalb eines Fensters zu vermeiden, kann eine Anwendung den **CS \_ OWNDC-Stil** für die Fensterklasse angeben. Dieser Klassenstil weist das System an, einen privaten Gerätekontext zu erstellen, d.h. einen eindeutigen Gerätekontext für jedes Fenster in der Klasse zuzuordnen. Die Anwendung muss den Kontext nur einmal abrufen und ihn dann für alle nachfolgenden Zeichnungen verwenden.
 
-### <a name="extra-class-memory"></a>Zusätzlicher Klassen Arbeitsspeicher
+### <a name="extra-class-memory"></a>Zusätzlicher Klassenspeicher
 
-Das System verwaltet eine [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur intern für jede Fenster Klasse im System. Wenn eine Anwendung eine Fenster Klasse registriert, kann Sie das System anweisen, eine Anzahl zusätzlicher Arbeitsspeicher Bytes an das Ende der **WNDCLASSEX** -Struktur zuzuordnen und anzufügen. Dieser Arbeitsspeicher wird als *zusätzlicher Klassen Speicher* bezeichnet und wird von allen Fenstern gemeinsam genutzt, die zur-Klasse gehören. Verwenden Sie den zusätzlichen Klassen Speicher, um Informationen zur-Klasse zu speichern.
+Das System verwaltet intern eine [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) für jede Fensterklasse im System. Wenn eine Anwendung eine Fensterklasse registriert, kann sie das System anweisen, am Ende der **WNDCLASSEX-Struktur** eine Reihe zusätzlicher Bytes an Arbeitsspeicher zuzuordnen und anzufügen. Dieser Speicher wird als *zusätzlicher Klassenspeicher* bezeichnet und wird von allen Fenstern gemeinsam genutzt, die zur -Klasse gehören. Verwenden Sie den zusätzlichen Klassenspeicher, um alle Informationen zur -Klasse zu speichern.
 
-Da zusätzlicher Arbeitsspeicher aus dem lokalen Heap des Systems belegt wird, sollte eine Anwendung den zusätzlichen Klassen Speicher sparsam verwenden. Die [**RegisterClassEx**](/windows/win32/api/winuser/nf-winuser-registerclassexa) -Funktion schlägt fehl, wenn die Menge des angeforderten zusätzlichen Klassen Speichers größer als 40 Byte ist. Wenn eine Anwendung mehr als 40 Bytes erfordert, sollte Sie Ihren eigenen Arbeitsspeicher zuordnen und einen Zeiger auf den Arbeitsspeicher im zusätzlichen Klassen Speicher speichern.
+Da zusätzlicher Arbeitsspeicher vom lokalen Heap des Systems belegt wird, sollte eine Anwendung zusätzlichen Klassenarbeitsspeicher verwenden. Die [**RegisterClassEx-Funktion**](/windows/win32/api/winuser/nf-winuser-registerclassexa) schlägt fehl, wenn der angeforderte zusätzliche Klassenspeicher größer als 40 Bytes ist. Wenn eine Anwendung mehr als 40 Bytes erfordert, sollte sie ihren eigenen Arbeitsspeicher zuordnen und einen Zeiger auf den Arbeitsspeicher im zusätzlichen Klassenspeicher speichern.
 
-Die Funktionen [**setclassword**](/windows/win32/api/winuser/nf-winuser-setclassword) und [**SetClassLong**](/windows/win32/api/winuser/nf-winuser-setclasslonga) kopieren einen Wert in den zusätzlichen Klassen Speicher. Um einen Wert aus dem zusätzlichen Klassen Speicher abzurufen, verwenden Sie die Funktionen [**getclassword**](/windows/win32/api/winuser/nf-winuser-getclassword) und [**GetClassLong**](/windows/win32/api/winuser/nf-winuser-getclasslonga) . Der **CbClsExtra** -Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur gibt den Umfang des zu belegenden zusätzlichen Klassen Speichers an. Eine Anwendung, die keinen zusätzlichen Klassen Speicher verwendet, muss das **CbClsExtra** -Element auf 0 (null) initialisieren.
+Die Funktionen [**SetClassWord**](/windows/win32/api/winuser/nf-winuser-setclassword) und [**SetClassLong**](/windows/win32/api/winuser/nf-winuser-setclasslonga) kopieren einen Wert in den zusätzlichen Klassenspeicher. Um einen Wert aus dem zusätzlichen Klassenspeicher abzurufen, verwenden Sie die Funktionen [**GetClassWord**](/windows/win32/api/winuser/nf-winuser-getclassword) und [**GetClassLong.**](/windows/win32/api/winuser/nf-winuser-getclasslonga) Der **cbClsExtra-Member** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) gibt die Menge an zusätzlichem Klassenspeicher an, der zugeordnet werden soll. Eine Anwendung, die keinen zusätzlichen Klassenspeicher verwendet, muss den **cbClsExtra-Member** mit 0 (null) initialisieren.
 
-### <a name="extra-window-memory"></a>Zusätzlicher Fenster Speicher
+### <a name="extra-window-memory"></a>Zusätzlicher Fensterspeicher
 
-Das System verwaltet für jedes Fenster eine interne Datenstruktur. Beim Registrieren einer Fenster Klasse kann eine Anwendung eine Anzahl zusätzlicher Arbeitsspeicher Bytes als *zusätzlichen Fenster Speicher* angeben. Beim Erstellen eines Fensters der-Klasse ordnet das System dem Ende der Fenster Struktur die angegebene Menge an zusätzlichem Fenster Arbeitsspeicher zu und fügt Sie an. Eine Anwendung kann diesen Arbeitsspeicher zum Speichern Fenster spezifischer Daten verwenden.
+Das System verwaltet eine interne Datenstruktur für jedes Fenster. Beim Registrieren einer Fensterklasse kann eine Anwendung eine Anzahl zusätzlicher Bytes an Arbeitsspeicher angeben, die als *zusätzlicher Fensterarbeitsspeicher* bezeichnet wird. Beim Erstellen eines Fensters der -Klasse ordnet das System die angegebene Menge an zusätzlichem Fensterspeicher an das Ende der Fensterstruktur zu und fügt sie an. Eine Anwendung kann diesen Arbeitsspeicher verwenden, um fensterspezifische Daten zu speichern.
 
-Da zusätzlicher Arbeitsspeicher vom lokalen Heap des Systems belegt wird, sollte eine Anwendung den zusätzlichen Fenster Speicher sparsam verwenden. Die [**RegisterClassEx**](/windows/win32/api/winuser/nf-winuser-registerclassexa) -Funktion schlägt fehl, wenn der angeforderte zusätzliche Fenster Speicher größer als 40 Bytes ist. Wenn eine Anwendung mehr als 40 Bytes erfordert, sollte Sie Ihren eigenen Arbeitsspeicher zuordnen und einen Zeiger auf den Arbeitsspeicher im zusätzlichen Fenster Speicher speichern.
+Da vom lokalen Heap des Systems zusätzlicher Arbeitsspeicher belegt wird, sollte eine Anwendung zusätzlichen Fensterarbeitsspeicher verwenden. Die [**RegisterClassEx-Funktion**](/windows/win32/api/winuser/nf-winuser-registerclassexa) schlägt fehl, wenn der angeforderte zusätzliche Fensterspeicher größer als 40 Bytes ist. Wenn eine Anwendung mehr als 40 Bytes erfordert, sollte sie ihren eigenen Arbeitsspeicher zuordnen und einen Zeiger auf den Arbeitsspeicher im zusätzlichen Fensterspeicher speichern.
 
-Die [**SetWindowLong**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) -Funktion kopiert einen Wert in den zusätzlichen Arbeitsspeicher. Die [**GetWindowLong**](/windows/win32/api/winuser/nf-winuser-getwindowlonga) -Funktion Ruft einen Wert aus dem zusätzlichen Arbeitsspeicher ab. Der **CbWndExtra** -Member der [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur gibt den Umfang des zusätzlichen Fenster Speichers an, der belegt werden soll. Eine Anwendung, die den Arbeitsspeicher nicht verwendet, muss **CbWndExtra** auf Null initialisieren.
+Die [**SetWindowLong-Funktion**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) kopiert einen Wert in den zusätzlichen Arbeitsspeicher. Die [**GetWindowLong-Funktion**](/windows/win32/api/winuser/nf-winuser-getwindowlonga) ruft einen Wert aus dem zusätzlichen Arbeitsspeicher ab. Der **cbWndExtra-Member** der [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) gibt die Menge an zusätzlichem Fensterspeicher an, der zugeordnet werden soll. Eine Anwendung, die den Arbeitsspeicher nicht verwendet, muss **cbWndExtra** mit 0 (null) initialisieren.
 
  
 

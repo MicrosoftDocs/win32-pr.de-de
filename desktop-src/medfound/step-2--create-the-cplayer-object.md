@@ -1,25 +1,25 @@
 ---
-description: Dieses Thema ist Schritt 2 des Tutorials zum Wiedergeben von Mediendateien mit Media Foundation.
+description: Dieses Thema ist Schritt 2 des Tutorials Wiedergeben von Mediendateien mit Media Foundation.
 ms.assetid: b489312f-ab8c-4ec6-8070-f5848034087e
-title: 'Schritt 2: Erstellen des cplayer-Objekts'
+title: 'Schritt 2: Erstellen des CPlayer-Objekts'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 021ffa383506c0ab1be8d6c1ca327f67ed8f52f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df004aa060a8ce8a46adbf0fdae438ca0a0cd1a454e9fc17889ad29eebef21ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847780"
 ---
-# <a name="step-2-create-the-cplayer-object"></a>Schritt 2: Erstellen des cplayer-Objekts
+# <a name="step-2-create-the-cplayer-object"></a>Schritt 2: Erstellen des CPlayer-Objekts
 
-Dieses Thema ist Schritt 2 des Tutorials zum Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md). Der gesamte Code wird im Thema Beispiel für die [Wiedergabe von Medien Sitzungen](media-session-playback-example.md)angezeigt.
+Dieses Thema ist Schritt 2 des Tutorials Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md). Der vollständige Code wird im Thema [Mediensitzung – Wiedergabebeispiel](media-session-playback-example.md)gezeigt.
 
-Um eine Instanz der-Klasse zu erstellen `CPlayer` , ruft die Anwendung die statische- `CPlayer::CreateInstance` Methode auf. Diese Methode übernimmt die folgenden Parameter:
+Um eine Instanz der -Klasse zu `CPlayer` erstellen, ruft die Anwendung die statische `CPlayer::CreateInstance` Methode auf. Diese Methode verwendet die folgenden Parameter:
 
--   *hvideo* gibt das Fenster zum Anzeigen von Videos an.
--   *hevent* gibt ein Fenster für das Empfangen von Ereignissen an. Es ist zulässig, das gleiche Handle für beide Fenster Handles zu übergeben.
--   *ppplayer* erhält einen Zeiger auf eine neue- `CPlayer` Instanz.
+-   *hVideo* gibt das Fenster zum Anzeigen des Videos an.
+-   *hEvent* gibt ein Fenster zum Empfangen von Ereignissen an. Es ist gültig, das gleiche Handle für beide Fensterhandles zu übergeben.
+-   *ppPlayer* empfängt einen Zeiger auf eine neue `CPlayer` -Instanz.
 
 Der folgende Code veranschaulicht die `CreateInstance`-Methode:
 
@@ -73,7 +73,7 @@ HRESULT CPlayer::Initialize()
 
 
 
-Der folgende Code zeigt den- `CPlayer` Konstruktor:
+Der folgende Code zeigt den `CPlayer` Konstruktor:
 
 
 ```C++
@@ -92,12 +92,12 @@ CPlayer::CPlayer(HWND hVideo, HWND hEvent) :
 
 
 
-Der-Konstruktor führt Folgendes aus:
+Der Konstruktor führt folgende Schritte aus:
 
 1.  Ruft [**MFStartup**](/windows/desktop/api/mfapi/nf-mfapi-mfstartup) auf, um die Media Foundation Plattform zu initialisieren.
-2.  Erstellt ein Ereignis für die automatische zurück Setzung. Dieses Ereignis wird beim Schließen der Medien Sitzung verwendet. Weitere Informationen finden [Sie unterschritt 7: Herunterfahren der Medien Sitzung](step-7--shut-down-the-media-session.md).
+2.  Erstellt ein Ereignis für die automatische Zurücksetzung. Dieses Ereignis wird verwendet, wenn die Mediensitzung geschlossen wird. siehe [Schritt 7: Herunterfahren der Mediensitzung.](step-7--shut-down-the-media-session.md)
 
-Der debugtor fährt die Medien Sitzung herunter, wie in [Schritt 7: Herunterfahren der Medien Sitzung](step-7--shut-down-the-media-session.md)beschrieben.
+Der Destruktor fährt die Mediensitzung herunter, wie in [Schritt 7: Herunterfahren der Mediensitzung](step-7--shut-down-the-media-session.md)beschrieben.
 
 
 ```C++
@@ -123,9 +123,9 @@ CPlayer::~CPlayer()
 
 
 
-Beachten Sie, dass der Konstruktor und der Dekonstruktor beide geschützte Klassen Methoden sind. Die Anwendung erstellt das-Objekt mit der statischen- `CreateInstance` Methode. Das Objekt wird durch Aufrufen von " **IUnknown:: Release**" zerstört und nicht explizit mithilfe von " **Delete**".
+Beachten Sie, dass Konstruktor und Destruktor geschützte Klassenmethoden sind. Die Anwendung erstellt das Objekt mithilfe der statischen `CreateInstance` Methode. Es zerstört das -Objekt, indem **IUnknown::Release** aufgerufen wird, anstatt explizit delete zu **verwenden.**
 
-Nächstes: [Schritt 3: Öffnen einer Mediendatei](step-3--open-a-media-file.md)
+Weiter: [Schritt 3: Öffnen einer Mediendatei](step-3--open-a-media-file.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

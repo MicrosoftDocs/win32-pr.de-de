@@ -1,9 +1,9 @@
 ---
-title: einfacher emptystring-Typ
-description: Erfahren Sie mehr über den einfachen emptystring-Typ, der nicht verwendet wird. Informationen finden Sie unter Anforderungen und Anzeigen zusätzlicher verfügbarer Ressourcen.
+title: emptyString Simple Type
+description: Erfahren Sie mehr über den einfachen Typ emptyString, der nicht verwendet wird. Sehen Sie sich die Anforderungen an, und zeigen Sie zusätzliche verfügbare Ressourcen an.
 ms.assetid: e561b8d5-8683-41a1-bd72-73b1a767b6cf
 keywords:
-- emptystring Simple Type EAPHost
+- 'emptyString: einfacher EAPHost-Typ'
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 756c8976c8b989cf77be921491770fcff9ea62d5
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 4f210fadeb0097ffd7a11d80dd47b252dbbfdc614950af0ac07d612b44edd0aa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104039629"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119948210"
 ---
-# <a name="emptystring-simple-type"></a>einfacher emptystring-Typ
+# <a name="emptystring-simple-type"></a>emptyString Simple Type
 
-Der einfache **emptystring** -Typ wird nicht verwendet.
+Der **simple-Typ emptyString** wird nicht verwendet.
 
 ``` syntax
 <xs:simpleType name="emptyString">
@@ -41,10 +41,10 @@ Der einfache **emptystring** -Typ wird nicht verwendet.
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |-------------------------------------|------------------------------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -52,13 +52,13 @@ Der einfache **emptystring** -Typ wird nicht verwendet.
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaptlsconnectionpropertiesv1-Schema](eaptlsconnectionpropertiesv1schema-schema.md)
 </dt> <dt>
 
-[einfache eaptlsconnectionpropertiesv1 Schema Typen](eaptlsconnectionpropertiesv1schema-simple-types.md)
+[eaptlsconnectionpropertiesv1 Schema Simple Types](eaptlsconnectionpropertiesv1schema-simple-types.md)
 </dt> </dl>
 
  
