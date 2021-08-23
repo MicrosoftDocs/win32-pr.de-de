@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_BKLOGTIME. Issnapshot (Eigenschaft)'
-title: JET_BKLOGTIME. Issnapshot (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_BKLOGTIME. IsSnapshot-Eigenschaft'
+title: JET_BKLOGTIME. IsSnapshot-Eigenschaft
 TOCTitle: 'IsSnapshot property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_BKLOGTIME.IsSnapshot
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_bklogtime.issnapshot(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 519309e47df2c3607b5a31838a8ea06f75c51c1f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b744ebe8adce1ee05576555ac68b995a476fc667f9bad197f7dd64ec3d1bdcda
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119781120"
 ---
-# <a name="jet_bklogtimeissnapshot-property"></a>JET_BKLOGTIME. Issnapshot (Eigenschaft)
+# <a name="jet_bklogtimeissnapshot-property"></a>JET_BKLOGTIME. IsSnapshot-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob die JET_BKLOGTIME für eine Momentaufnahme Sicherung ist.
+Ruft einen Wert ab, der angibt, ob die JET_BKLOGTIME für eine Momentaufnahmesicherung ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public bool IsSnapshot { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_BKLOGTIME Struktur](./jet-bklogtime-structure2.md)
+[JET_BKLOGTIME-Struktur](./jet-bklogtime-structure2.md)
 
-[Mitglieder JET_BKLOGTIME](./jet-bklogtime-members.md)
+[JET_BKLOGTIME Member](./jet-bklogtime-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

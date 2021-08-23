@@ -1,19 +1,19 @@
 ---
-description: Wird an eine Anwendung gesendet, wenn das IME-Fenster keinen Platz zum Erweitern des Bereichs für das Kompositionsfenster findet. Ein Fenster empfängt diese Meldung über seine WindowProc-Funktion.
+description: Wird an eine Anwendung gesendet, wenn das IME-Fenster keinen Platz findet, um den Bereich für das Kompositionsfenster zu erweitern. Ein Fenster empfängt diese Nachricht über seine WindowProc-Funktion.
 ms.assetid: d81d6438-c470-4ae5-8016-8d816bcba9b8
-title: WM_IME_COMPOSITIONFULL Meldung (Winuser. h)
+title: WM_IME_COMPOSITIONFULL (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f33051ac3e4e893eb803d4b13d7bfbf53751258b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 954a5f91283ca5c4944c274d422508ef0b91b55b8acc34f790cf446f93a598ea
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218683"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119811490"
 ---
-# <a name="wm_ime_compositionfull-message"></a>"WM \_ IME \_ compositionfull"-Meldung
+# <a name="wm_ime_compositionfull-message"></a>WM \_ IME \_ COMPOSITIONFULL-Nachricht
 
-Wird an eine Anwendung gesendet, wenn das IME-Fenster keinen Platz zum Erweitern des Bereichs für das Kompositionsfenster findet. Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Wird an eine Anwendung gesendet, wenn das IME-Fenster keinen Platz findet, um den Bereich für das Kompositionsfenster zu erweitern. Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -29,19 +29,19 @@ LRESULT CALLBACK WindowProc(
 
 ## <a name="parameters"></a>Parameter
 
-Diese Nachricht weist keine Parameter auf.
+Diese Meldung enthält keine Parameter.
 
 <dl></dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Nachricht weist keinen Rückgabewert auf.
+Diese Meldung hat keinen Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung sollte mithilfe des Befehls [IMC \_ setcompositionwindow](imc-setcompositionwindow.md) angeben, wie das Fenster angezeigt werden soll.
+Die Anwendung sollte den [Befehl IMC \_ SETCOMPOSITIONWINDOW](imc-setcompositionwindow.md) verwenden, um anzugeben, wie das Fenster angezeigt werden soll.
 
-Das IME-Fenster sendet diese Benachrichtigungs Meldung nicht in den IME, sondern von der [**SendMessage**](/windows/win32/api/winuser/nf-winuser-sendmessage) -Funktion.
+Das IME-Fenster sendet anstelle des IME diese Benachrichtigungsnachricht von der [**SendMessage-Funktion.**](/windows/win32/api/winuser/nf-winuser-sendmessage)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,7 +51,7 @@ Das IME-Fenster sendet diese Benachrichtigungs Meldung nicht in den IME, sondern
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -59,13 +59,13 @@ Das IME-Fenster sendet diese Benachrichtigungs Meldung nicht in den IME, sondern
 
 <dl> <dt>
 
-[Eingabemethoden-Manager](input-method-manager.md)
+[Eingabemethode-Manager](input-method-manager.md)
 </dt> <dt>
 
-[Eingabemethoden-Manager-Meldungen](input-method-manager-messages.md)
+[Meldungen des Eingabemethode-Managers](input-method-manager-messages.md)
 </dt> <dt>
 
-[IMC \_ setcompositionwindow](imc-setcompositionwindow.md)
+[IMC \_ SETCOMPOSITIONWINDOW](imc-setcompositionwindow.md)
 </dt> </dl>
 
  

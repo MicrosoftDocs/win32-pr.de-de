@@ -1,9 +1,9 @@
 ---
-title: STRINGTABLE-Struktur
-description: Stellt die Organisation von Daten in einer Datei Versions Ressource dar. Sie enthält sprach-und Code Page Formatierungsinformationen für die Zeichen folgen, die vom Children-Member angegeben werden. Eine Codepage ist ein geordneter Zeichensatz.
+title: StringTable-Struktur
+description: Stellt die Organisation von Daten in einer Dateiversionsressource dar. Sie enthält Sprach- und Codepageformatierungsinformationen für die Vom Untergeordneten Element angegebenen Zeichenfolgen. Eine Codepage ist ein geordneter Zeichensatz.
 ms.assetid: e8e9d654-b515-434c-ac38-79d333a8d7cb
 keywords:
-- STRINGTABLE-Struktur Menüs und andere Ressourcen
+- StringTable-StrukturMenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: dc790baa6484c5b1a8a7d96a0a7bc8e8ad12b0e4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 01ad7a2436c4b32f0f2fa09ab801339903ed55f35be80bbfc43c4542da4e4ce5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119720660"
 ---
-# <a name="stringtable-structure"></a>STRINGTABLE-Struktur
+# <a name="stringtable-structure"></a>StringTable-Struktur
 
-Stellt die Organisation von Daten in einer Datei Versions Ressource dar. Sie enthält sprach-und Code Page Formatierungsinformationen für die Zeichen folgen, die vom **Children** -Member angegeben werden. Eine Codepage ist ein geordneter Zeichensatz.
+Stellt die Organisation von Daten in einer Dateiversionsressource dar. Sie enthält Sprach- und Codepageformatierungsinformationen für die Vom **Untergeordneten** Element angegebenen Zeichenfolgen. Eine Codepage ist ein geordneter Zeichensatz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ typedef struct {
 
 <dl> <dt>
 
-**wlength**
+**wLength**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Länge der **STRINGTABLE** -Struktur in Bytes, einschließlich aller **vom untergeordneten** Element angegeben Strukturen.
+Die Länge dieser **StringTable-Struktur** in Bytes, einschließlich aller strukturen, die durch den **Children-Member** angegeben werden.
 
 </dd> <dt>
 
-**wvaluelength**
+**wValueLength**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
@@ -69,33 +69,33 @@ Dieser Member ist immer gleich 0 (null).
 **wType**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Der Typ der Daten in der Versions Ressource. Dieser Member ist 1, wenn die Versions Ressource Textdaten enthält, und 0, wenn die Versions Ressource binäre Daten enthält.
+Der Datentyp in der Versionsressource. Dieser Member ist 1, wenn die Versionsressource Textdaten enthält, und 0, wenn die Versionsressource Binärdaten enthält.
 
 </dd> <dt>
 
-**szkey**
+**szKey**
 </dt> <dd>
 
 Typ: **WCHAR**
 
 </dd> <dd>
 
-Eine 8-stellige hexadezimal Zahl, die als Unicode-Zeichenfolge gespeichert wird. Die vier signifikantesten Ziffern stellen den sprach Bezeichner dar. Die vier wichtigsten Ziffern stellen die Codepage dar, für die die Daten formatiert sind. Jeder Bezeichner der Microsoft-Standard Sprache enthält zwei Teile: die nieder wertigen 10 Bits geben die Hauptsprache an, und die höherwertigen 6 Bits geben die unter Sprache an. Eine Tabelle gültiger Bezeichner finden Sie unter.
+Eine achtstellige Hexadezimalzahl, die als Unicode-Zeichenfolge gespeichert ist. Die vier signifikantesten Ziffern stellen den Sprachbezeichner dar. Die vier am wenigsten signifikanten Ziffern stellen die Codepage dar, für die die Daten formatiert sind. Jeder Microsoft Standard Language-Bezeichner enthält zwei Teile: Die 10 Bits mit niedriger Reihenfolge geben die Hauptsprache an, und die 6 Bits mit hoher Ordnung geben die Untersprache an. Eine Tabelle gültiger Bezeichner finden Sie unter .
 
 </dd> <dt>
 
 **Auffüllen**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-So viele Null-Wörter, wie erforderlich, **um den unter** geordneten Member an einer 32-Bit-Grenze auszurichten.
+So viele 0 Wörter wie erforderlich, um das **Children-Element** an einer 32-Bit-Grenze auszurichten.
 
 </dd> <dt>
 
@@ -106,19 +106,19 @@ Typ: **[ **Zeichenfolge**](string-str.md)**
 
 </dd> <dd>
 
-Ein Array aus einer oder mehreren [**Zeichen**](string-str.md) folgen Strukturen.
+Ein Array von einer oder mehreren [**Zeichenfolgenstrukturen.**](string-str.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur ist keine echte C-Sprachstruktur, da Sie Member variabler Länge enthält. Diese Struktur wurde ausschließlich zur Darstellung der Organisation von Daten in einer Versions Ressource erstellt und wird nicht in den Header Dateien angezeigt, die im Windows Software Development Kit (SDK) enthalten sind.
+Diese Struktur ist keine echte C-Sprachstruktur, da sie Member variabler Länge enthält. Diese Struktur wurde ausschließlich zur Darstellung der Organisation von Daten in einer Versionsressource erstellt und wird in keiner der Headerdateien angezeigt, die mit dem Windows Software Development Kit (SDK) ausgeliefert werden.
 
-Der **Children** -Member der [**stringfileinfo**](stringfileinfo.md) -Struktur enthält mindestens eine **STRINGTABLE** -Struktur.
+Der **Children-Member** der [**StringFileInfo-Struktur**](stringfileinfo.md) enthält mindestens eine **StringTable-Struktur.**
 
-Legen Sie den Codepage-Teil des **szkey** -Members auf den Hexadezimalwert 0x04b0 fest, um die Unicode-Codepage anzugeben, oder auf den Hexadezimalwert der Codepage, der für die Sprachkomponente geeignet ist. Nachdem Sie den Wert für die Codepage ausgewählt haben, sollten Sie den gleichen Wert auch in späteren Revisionen der Datei verwenden.
+Legen Sie den Codepageteil des **szKey-Elements** auf den Hexadezimalwert 0x04b0 fest, um die Unicode-Codepage anzugeben, oder auf den Hexadezimalwert der Codepage, der für die Sprachkomponente geeignet ist. Nachdem Sie den Wert für die Codepage ausgewählt haben, sollten Sie in späteren Revisionen der Datei weiterhin denselben Wert verwenden.
 
-Eine ausführbare Datei oder dll, die mehrere Sprachen unterstützt, sollte über eine Versions Ressource für jede Sprache verfügen, anstatt über eine einzige Versions Ressource, die Zeichen folgen in mehreren Sprachen enthält. Wenn Sie jedoch die [**var**](var-str.md) -Struktur verwenden, um die Sprachen aufzulisten, die von der Anwendung unterstützt werden, ist die Anzahl der **STRINGTABLE** -Strukturen in der Versions Ressource direkt mit der Anzahl der sprach-/Codepage-bezeichnerpaare im **Wertmember** der **var** -Struktur verknüpft.
+Eine ausführbare Datei oder DLL, die mehrere Sprachen unterstützt, sollte über eine Versionsressource für jede Sprache verfügen, anstatt über eine einzelne Versionsressource, die Zeichenfolgen in mehreren Sprachen enthält. Wenn Sie jedoch die [**Var-Struktur**](var-str.md) verwenden, um die Sprachen aufzulisten, die ihre Anwendung unterstützt, hängt die Anzahl der **StringTable-Strukturen** in der Versionsressource direkt mit der Anzahl der Sprachen-/Codepagebezeichnerpaare im **Value-Member** der **Var-Struktur** zusammen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -135,25 +135,25 @@ Eine ausführbare Datei oder dll, die mehrere Sprachen unterstützt, sollte übe
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Schnür**](string-str.md)
+[**String**](string-str.md)
 </dt> <dt>
 
-[**Stringfileingefo**](stringfileinfo.md)
+[**StringFileInfo**](stringfileinfo.md)
 </dt> <dt>
 
-[**Kreis**](var-str.md)
+[**Var**](var-str.md)
 </dt> <dt>
 
-[**Varfileingefo**](varfileinfo.md)
+[**VarFileInfo**](varfileinfo.md)
 </dt> <dt>
 
 [**VS \_ VERSIONINFO**](vs-versioninfo.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Versionsinformationen](version-information.md)

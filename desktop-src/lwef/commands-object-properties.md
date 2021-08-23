@@ -1,58 +1,58 @@
 ---
-title: Objekteigenschaften für Befehle
-description: Objekteigenschaften für Befehle
+title: Commands-Objekteigenschaften
+description: Commands-Objekteigenschaften
 ms.assetid: 889a56b2-0b6d-4df8-a313-7553371e4413
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f4493b1e146a011434f7a0324a4008031a575d2
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 11b9e8f8e6e7b44697891cd567fce8ca0f5db13a0142936b5cf48bdb52721392
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038826"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119716540"
 ---
-# <a name="commands-object-properties"></a>Objekteigenschaften für Befehle
+# <a name="commands-object-properties"></a>Commands-Objekteigenschaften
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Der Server unterstützt die folgenden Eigenschaften für die [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung:
+Der Server unterstützt die folgenden Eigenschaften für die [**Commands-Sammlung:**](/windows/desktop/lwef/the-commands-collection-object)
 
 -   [**Caption**](caption-property-cmds.md)
--   [**Countdown**](count-property.md)
+-   [**Anzahl**](count-property.md)
 -   [**DefaultCommand**](defaultcommand-property.md)
 -   [**FontName**](fontname-property.md)
--   [**FontSize**](fontsize-property.md)
--   [**Globalvoicecommandsenabled**](globalvoicecommandsenabled-property.md)
--   [**HelpContextID**](helpcontextid-property.md)
+-   [**Fontsize**](fontsize-property.md)
+-   [**GlobalVoiceCommandsEnabled**](globalvoicecommandsenabled-property.md)
+-   [**Helpcontextid**](helpcontextid-property.md)
 -   [**Sichtbar**](visible-property-cso.md)
 -   [**Sprache**](voice-property.md)
--   [**Voicecaption**](voicecaption-property.md)
+-   [**VoiceCaption**](voicecaption-property.md)
 
-Ein Eintrag für die [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung kann sowohl im Popup Menü als auch im Fenster "Sprachbefehle" für ein Zeichen angezeigt werden. Damit dieser Eintrag im Popupmenü angezeigt wird, legen Sie die [**Beschriftung**](caption-property-cmds.md) -Eigenschaft fest. Wenn Sie den Eintrag in das Fenster "Sprachbefehle" einschließen möchten, legen Sie seine [**voicecaption**](voicecaption-property.md) -Eigenschaft fest. (Aus Gründen der Abwärtskompatibilität wird die **Beschriftungs** Einstellung verwendet, wenn keine **voicecaption** vorhanden ist.)
+Ein Eintrag für die [**Sammlung Befehle**](/windows/desktop/lwef/the-commands-collection-object) kann sowohl im Popupmenü als auch im Sprachbefehlsfenster für ein Zeichen angezeigt werden. Damit dieser Eintrag im Popupmenü angezeigt wird, legen Sie dessen [**Caption-Eigenschaft**](caption-property-cmds.md) fest. Legen Sie die VoiceCaption-Eigenschaft fest, um den Eintrag in das [**Fenster "Sprachbefehle"**](voicecaption-property.md) ein-/aus. (Aus Gründen der Abwärtskompatibilität wird die Einstellung Caption verwendet, wenn **voiceCaption** **nicht** vorhanden ist.)
 
-In der folgenden Tabelle wird zusammengefasst, wie sich die Eigenschaften eines [**Befehls**](/windows/desktop/lwef/the-commands-collection-object) Objekts auf die Darstellung des Eintrags auswirken:
+In der folgenden Tabelle wird zusammengefasst, wie sich die Eigenschaften eines [**Commands-Objekts**](/windows/desktop/lwef/the-commands-collection-object) auf die Darstellung des Eintrags auswirken:
 
 
 
-| Caption-Eigenschaft                                                                                                                                                                                                                                            | Voice-Caption-Eigenschaft | Voice-Eigenschaft | Visible-Eigenschaft | Wird im Popupmenü des Zeichens angezeigt. | Wird im Fenster "Sprachbefehle" angezeigt |
+| Caption-Eigenschaft                                                                                                                                                                                                                                            | Voice-Caption-Eigenschaft | Voice-Eigenschaft | Visible-Eigenschaft | Wird im Popupmenü des Zeichens angezeigt | Wird im Fenster "Sprachbefehle" angezeigt |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|----------------|------------------|------------------------------------|----------------------------------|
-| Ja                                                                                                                                                                                                                                                         | Ja                    | Ja            | Richtig             | Ja, mit Beschriftung                 | Ja, mit voicecaption          |
-| Ja                                                                                                                                                                                                                                                         | Ja                    | Nein             | Richtig             | Ja, mit Beschriftung                 | Nein                               |
-| Ja                                                                                                                                                                                                                                                         | Ja                    | Ja            | False            | Nein                                 | Ja, mit voicecaption          |
+| Ja                                                                                                                                                                                                                                                         | Ja                    | Ja            | Richtig             | Ja, verwenden von Caption                 | Ja, mit VoiceCaption          |
+| Ja                                                                                                                                                                                                                                                         | Ja                    | Nein             | Richtig             | Ja, verwenden von Caption                 | Nein                               |
+| Ja                                                                                                                                                                                                                                                         | Ja                    | Ja            | False            | Nein                                 | Ja, mit VoiceCaption          |
 | Ja                                                                                                                                                                                                                                                         | Ja                    | Nein             | False            | Nein                                 | Nein                               |
-| Nein                                                                                                                                                                                                                                                          | Ja                    | Ja            | True             | Nein                                 | Ja, mit voicecaption          |
-| Nein                                                                                                                                                                                                                                                          | Ja                    | Ja            | False            | Nein                                 | Ja, mit voicecaption          |
+| Nein                                                                                                                                                                                                                                                          | Ja                    | Ja            | True             | Nein                                 | Ja, mit VoiceCaption          |
+| Nein                                                                                                                                                                                                                                                          | Ja                    | Ja            | False            | Nein                                 | Ja, mit VoiceCaption          |
 | Nein                                                                                                                                                                                                                                                          | Ja                    | Nein             | True             | Nein                                 | Nein                               |
 | Nein                                                                                                                                                                                                                                                          | Ja                    | Nein             | False            | Nein                                 | Nein                               |
-| Ja                                                                                                                                                                                                                                                         | Nein                    | Ja            | Richtig             | Ja, mit Beschriftung                 | Ja, mit Beschriftung               |
+| Ja                                                                                                                                                                                                                                                         | Nein                    | Ja            | Richtig             | Ja, verwenden von Caption                 | Ja, verwenden von Caption               |
 | Ja                                                                                                                                                                                                                                                         | Nein                     | Nein             | True             | Ja                                | Nein                               |
-| Ja                                                                                                                                                                                                                                                         | Nein                     | Ja            | False            | Nein                                 | Ja, mit Beschriftung               |
+| Ja                                                                                                                                                                                                                                                         | Nein                     | Ja            | False            | Nein                                 | Ja, verwenden von Caption               |
 | Ja                                                                                                                                                                                                                                                         | Nein                     | Nein             | False            | Nein                                 | Nein                               |
 | Nein                                                                                                                                                                                                                                                          | Nein                     | Ja            | True             | Nein                                 | Nein                               |
 | Nein                                                                                                                                                                                                                                                          | Nein                     | Ja            | False            | Nein                                 | Nein                               |
 | Nein                                                                                                                                                                                                                                                          | Nein                     | Nein             | True             | Nein                                 | Nein                               |
 | Nein                                                                                                                                                                                                                                                          | Nein                     | Nein             | False            | Nein                                 | Nein                               |
-|  , Wenn die Eigenschafts Einstellung NULL ist. In manchen Programmiersprachen kann eine leere Zeichenfolge nicht als identisch mit einer NULL-Zeichenfolge interpretiert werden.  Der Befehl ist weiterhin sprach zugänglich und wird im Fenster "Sprachbefehle" als "(Befehl nicht definiert)" angezeigt.<br/> |                        |                |                  |                                    |                                  |
+|  Wenn die Eigenschafteneinstellung NULL ist. In einigen Programmiersprachen kann eine leere Zeichenfolge nicht als null-Zeichenfolge interpretiert werden.  Der Befehl ist weiterhin sprachbereit und wird im Fenster "Sprachbefehle" als "(command undefined)" angezeigt.<br/> |                        |                |                  |                                    |                                  |
 
 
 

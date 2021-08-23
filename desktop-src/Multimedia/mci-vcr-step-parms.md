@@ -1,6 +1,6 @@
 ---
-title: MCI_VCR_STEP_PARMS Struktur (VCR. h)
-description: Die Struktur der MCI- \_ VCR- \_ Schritt- \_ Parameter enthält Parameter für den MCI- \_ Schritt Befehl für Video-Kassetten-Recorder.
+title: MCI_VCR_STEP_PARMS-Struktur (Vcr.h)
+description: Die MCI \_ VCR \_ STEP \_ PARMS-Struktur enthält Parameter für den MCI \_ STEP-Befehl für Video-Cassette-Aufzeichnungen.
 ms.assetid: 57751de6-d174-418f-8167-402d3ead4e24
 keywords:
 - MCI_VCR_STEP_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a616b31500a2c814edb3dd443586131ed0ffae7d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7f25e79903a694b6537e88d1c58994d1f39ccf958ea95f40f571a267239a055e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119783829"
 ---
-# <a name="mci_vcr_step_parms-structure"></a>Struktur von MCI- \_ VCR- \_ Schritt- \_ Parametern
+# <a name="mci_vcr_step_parms-structure"></a>MCI \_ VCR \_ STEP \_ PARMS-Struktur
 
-Die Struktur der **MCI- \_ VCR- \_ Schritt \_** -Parameter enthält Parameter für den [**MCI- \_ Schritt**](mci-step.md) Befehl für Video-Kassetten-Recorder.
+Die **MCI \_ VCR \_ STEP \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ STEP-Befehl**](mci-step.md) für Video-Cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ typedef struct tagMCI_VCR_STEP_PARMS {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwframes**
+**dwFrames**
 </dt> <dd>
 
-Die Anzahl der zu über springenden Frames (die Länge eines einzelnen Schritts), wenn der [**MCI- \_ Schritt**](mci-step.md) Befehl den Inhalt vorwärts oder rückwärts durchläuft.
+Anzahl der Zu springende Frames (die Länge eines einzelnen Schritts), während der [**MCI \_ STEP-Befehl**](mci-step.md) den Inhalt vorwärts oder rückwärts durchschritten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Elementen in dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter von [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) fest, um die Elemente zu validieren.
+Legen Sie beim Zuweisen von Daten zu den Membern in dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* von [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Wenn Sie den Elementen in dieser Strukturdaten zuweisen, legen Sie die entsprech
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VCR. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vcr.h</dt> </dl> |
 
 
 
@@ -75,13 +75,13 @@ Wenn Sie den Elementen in dieser Strukturdaten zuweisen, legen Sie die entsprech
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Schritt**](mci-step.md)
+[**\_MCI-SCHRITT**](mci-step.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

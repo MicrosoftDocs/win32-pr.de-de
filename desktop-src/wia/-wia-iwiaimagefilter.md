@@ -1,7 +1,7 @@
 ---
-description: Die iwiaimagefilter-Schnittstelle ist eine durch Bild Verarbeitungs Filter-Entwickler implementierte Erweiterungsschnittstelle, die von der Windows-Abbild Erfassung (WIA) 2,0 aufgerufen wird.
+description: Die IWiaImageFilter-Schnittstelle ist eine Erweiterungsschnittstelle, die von Bildverarbeitungsfilterentwicklern implementiert und von Windows Image Acquisition (WIA) 2.0 aufgerufen wird.
 ms.assetid: 2abe913b-bb2b-486d-a3f4-d5932433fc82
-title: Iwiaimagefilter-Schnittstelle (WIA. h)
+title: IWiaImageFilter-Schnittstelle (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,77 +13,77 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 8d859b79d15db627bb09cb60f758791a8b5860f7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7c85a25d7478e0ad51a1d427e74b69a743bc4203ed57b8929a3e4ec856d94b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119813980"
 ---
-# <a name="iwiaimagefilter-interface"></a>Iwiaimagefilter-Schnittstelle
+# <a name="iwiaimagefilter-interface"></a>IWiaImageFilter-Schnittstelle
 
-Die **iwiaimagefilter** -Schnittstelle ist eine durch Bild Verarbeitungs Filter-Entwickler implementierte Erweiterungsschnittstelle, die von der Windows-Abbild Erfassung (WIA) 2,0 aufgerufen wird.
+Die **IWiaImageFilter-Schnittstelle** ist eine Erweiterungsschnittstelle, die von Entwicklern von Bildverarbeitungsfiltern implementiert und von Windows Image Acquisition (WIA) 2.0 aufgerufen wird.
 
 ## <a name="members"></a>Member
 
-Die **iwiaimagefilter** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwiaimagefilter** verfügt auch über die folgenden Typen von Membern:
+Die **IWiaImageFilter-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IWiaImageFilter** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwiaimagefilter** -Schnittstelle verfügt über diese Methoden.
+Die **IWiaImageFilter-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                | BESCHREIBUNG                                                                                             |
+| Methode                                                                | Beschreibung                                                                                             |
 |:----------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|
-| [**Applyproperties**](-wia-iwiaimagefilter-applyproperties.md)       | Ermöglicht dem Bild Verarbeitungs Filter das Zurückschreiben von Eigenschaften an den Treiber (und das Gerät).<br/>     |
+| [**ApplyProperties**](-wia-iwiaimagefilter-applyproperties.md)       | Aktiviert den Filter für die Bildverarbeitung, um Eigenschaften zurück in den Treiber (und das Gerät) zu schreiben.<br/>     |
 | [**FilterPreviewImage**](-wia-iwiaimagefilter-filterpreviewimage.md) | Filtert das Vorschaubild.<br/>                                                                   |
-| [**Initializefilter**](-wia-iwiaimagefilter-initializefilter.md)     | Initialisiert den Filter. Wird von WIA 2,0 vor jedem Bilddownload aufgerufen. <br/>                       |
-| [**Setnewcallback**](-wia-iwiaimagefilter-setnewcallback.md)         | Legt einen neuen Anwendungs Rückruf für den Bild Verarbeitungs Filter fest, der für Weiterleitungs Aufrufe verwendet werden soll.<br/> |
+| [**InitializeFilter**](-wia-iwiaimagefilter-initializefilter.md)     | Initialisiert den Filter. Wird von WIA 2.0 vor jedem Imagedownload aufgerufen. <br/>                       |
+| [**SetNewCallback**](-wia-iwiaimagefilter-setnewcallback.md)         | Legt einen neuen Anwendungsrückruf für den Bildverarbeitungsfilter fest, der für die Weiterleitung von Aufrufen verwendet werden soll.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bild Verarbeitungs Filter-Entwickler sollten diese Schnittstelle und die [**iwiatransfercallback**](-wia-iwiatransfercallback.md) -Schnittstelle implementieren.
+Entwickler von Bildverarbeitungsfiltern sollten diese Schnittstelle und die [**IWiaTransferCallback-Schnittstelle**](-wia-iwiatransfercallback.md) implementieren.
 
-WIA 2,0 ruft Filter Methoden auf. Sie werden niemals direkt von einer Anwendung aufgerufen.
+WIA 2.0 ruft Filtermethoden auf. Sie werden nie direkt aus einer Anwendung aufgerufen.
 
-Microsoft stellt die WIA 2,0 Preview-Komponente bereit, die das ursprüngliche, ungefilterte Vorschaubild zwischenspeichert, das vom Scanner abgerufen wird. Eine Anwendung verwendet [cokreateinstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) , um eine Instanz der WIA 2,0-Vorschau Komponente (CLSID \_ wiapreview) zu erstellen, die den Filter mithilfe von [**IWiaItem2:: GetExtension**](-wia-iwiaitem2-getextension.md)lädt. Der Filter wird automatisch aufgerufen, wenn die Anwendung [**iwiatransfer::D ownload**](-wia-iwiatransfer-download.md)aufruft.
+Microsoft stellt die WIA 2.0 Preview-Komponente zur Verfügung, die das ursprüngliche, ungefilterte Vorschaubild zwischenspeichert, das vom Scanner bezogen wird. Eine Anwendung verwendet [CoCreateInstance,](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) um eine Instanz der WIA 2.0-Vorschaukomponente (CLSID WiaPreview) zu erstellen, \_ die den Filter mit [**IWiaItem2::GetExtension**](-wia-iwiaitem2-getextension.md)lädt. Der Filter wird automatisch aufgerufen, wenn die Anwendung [**IWiaTransfer::D ownload**](-wia-iwiatransfer-download.md)aufruft.
 
-Der Bild Verarbeitungs Filter wird immer ausgeführt, wenn ein Bild gescannt wird. Eine Anwendung kann kein Image vom Scanner abrufen, ohne dass der Bild Verarbeitungs Filter zuerst angewendet wird.
+Der Bildverarbeitungsfilter wird immer ausgeführt, wenn ein Bild gescannt wird. Eine Anwendung kann kein Bild vom Scanner abrufen, ohne dass zuerst der Bildverarbeitungsfilter angewendet wird.
 
-Ein Filter muss die Helligkeit und den Kontrast minimal implementieren. Die gemeinsame Benutzeroberfläche, die dem Benutzer Helligkeit und Kontrast Steuerelemente bereitstellt, kann dem Benutzer genaue Vorschau anzeigen.
+Ein Filter muss mindestens Helligkeit und Kontrast implementieren. Die allgemeine Benutzeroberfläche, die dem Benutzer Helligkeits- und Kontraststeuerelemente bereitstellt, kann dem Benutzer genaue Vorschauen anzeigen.
 
-Ein Bild Verarbeitungs Filter sollte nie den *lMessage* -Member der [**wiatransferparameams**](-wia-wiatransferparams.md) -Struktur ändern.
+Ein Bildverarbeitungsfilter sollte niemals den *lMessage-Member* der [**WiaTransferParams-Struktur**](-wia-wiatransferparams.md) ändern.
 
-Um die erforderlichen Eigenschaften zu lesen, sollte der Bild Verarbeitungs Filter [**iwiapropertystorage:: getpropertystream**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiapropertystorage-getpropertystream) auf der [**iwiapropertystorage**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) -Schnittstelle aufrufen, die er vom Element erhält, indem er [iwiaimagefilter:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))aufruft. Der Filter kann dann eine [IPropertyStorage](/windows/win32/api/propidlbase/nn-propidlbase-ipropertystorage) -Instanz in diesem Stream instanziieren, um die Element Eigenschaften zu lesen. Der Bild Verarbeitungs Filter sollte [iwiapropertystorage:: Read Multiple](/windows/win32/api/propidlbase/nf-propidlbase-ipropertystorage-readmultiple) nicht direkt aufrufen, da diese Methode den Treiber aufruft `drvReadItemProperties` , aber der WIA 2,0-Dienst den Treiber bereits im Aufruf gesperrt hat, `drvAcquireItemData` sodass dieser Aufruf einen Timeout und einen Fehler verursacht.
+Um die erforderlichen Eigenschaften zu lesen, sollte der Bildverarbeitungsfilter [**IWiaPropertyStorage::GetPropertyStream**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiapropertystorage-getpropertystream) auf der [**IWiaPropertyStorage-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) aufrufen, die er aus dem Element abruft, indem [er IWiaImageFilter::QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))aufruft. Der Filter kann dann eine [IPropertyStorage-Instanz](/windows/win32/api/propidlbase/nn-propidlbase-ipropertystorage) in diesem Stream instanziieren, um die Elementeigenschaften zu lesen. Der Bildverarbeitungsfilter sollte [IWiaPropertyStorage::ReadMultiple](/windows/win32/api/propidlbase/nf-propidlbase-ipropertystorage-readmultiple) nicht direkt aufrufen, da diese Methode den `drvReadItemProperties` aufruft, aber der WIA 2.0-Dienst den Treiber bereits im Aufruf gesperrt hat, `drvAcquireItemData` sodass bei diesem Aufruf ein Timeout auftritt und ein Fehler auftritt.
 
-Die Eigenschaften, an denen der Filter interessiert ist, könnten z. b. die Einstellungen für Helligkeit und Kontrast sein. Der Filter muss in der Regel auch das Bildformat und die Vorschau Eigenschaft ( [**WIA \_ DPS \_ Preview**](-wia-wiaitempropscannerdevice.md)) von *pWiaItem2* lesen. Diese Eigenschaften werden alle im Filter Vorgang verwendet.
+Die Eigenschaften, an denen der Filter interessiert ist, können z. B. die Helligkeits- und Kontrasteinstellungen sein. Der Filter muss in der Regel auch das Bildformat sowie die Vorschaueigenschaft [**WIA \_ DPS \_ PREVIEW**](-wia-wiaitempropscannerdevice.md)aus *pWiaItem2* lesen. Diese Eigenschaften werden alle im Filterprozess verwendet.
 
-Die WIA 2,0-Komponenten schreiben immer ungefilterte Daten in den Bild Verarbeitungs Filter. Der vom Stream des Filters implementierte Bild Verarbeitungs Algorithmus kann die Daten mehrmals Filtern und muss sich nicht darum kümmern, dieselben Ergebnisse wie das Filtern der Daten zu erzeugen.
+Die WIA 2.0-Komponenten schreiben immer ungefilterte Daten in den Bildverarbeitungsfilter. Der vom Datenstrom des Filters implementierte Bildverarbeitungsalgorithmus kann die Daten mehr als einmal filtern und muss sich nicht darum kümmern, die gleichen Ergebnisse wie das einmalige Filtern der Daten zu erzeugen.
 
-Der Filter muss auf die [**\_ \_ Vorschau Eigenschaft der WIA-DPS**](-wia-wiaitempropscannerdevice.md) achten, insbesondere, wenn einige Filter bezogene Aufgaben in der Hardware behandelt werden. Beispielsweise kann ein bestimmter Treiber die Helligkeit der Lamp in der Überprüfungs Hardware ändern, je nachdem, wie die Anwendung die Helligkeit in einem WIA-2,0-Element festgelegt hat. Während der letzten Überprüfung (wenn die Anwendung [**iwiatransfer::D ownload**](-wia-iwiatransfer-download.md)aufruft), würde der Treiber normalerweise die physische Lamp des Scanners ändern. In diesem Fall muss der Bild Verarbeitungs Filter möglicherweise überhaupt keine Helligkeits Verarbeitung durchführen. Während einer Vorschau Prüfung sollte der Treiber jedoch die Helligkeit der Lamp nicht ändern – stattdessen sollte dieser nur im Bild Verarbeitungs Filter behandelt werden. Es ist wichtig, dass die WIA 2,0-Vorschau Komponente und der Bild Verarbeitungs Filter basierend auf den Eigenschaften, die in das Element festgelegt werden, genaue Bilder zurückgeben.
+Der Filter muss auf die [**WIA \_ DPS \_ PREVIEW-Eigenschaft**](-wia-wiaitempropscannerdevice.md) achten, insbesondere wenn einige filterbezogene Aufgaben in der Hardware verarbeitet werden. Beispielsweise kann ein bestimmter Treiber die Helligkeit der Lampe in der Scannerhardware ändern, je nachdem, wie die Anwendung die Helligkeit in ein WIA 2.0-Element festgelegt hat. Während der letzten Überprüfung (wenn die Anwendung [**IWiaTransfer::D ownload**](-wia-iwiatransfer-download.md)aufruft) ändert der Treiber in der Regel die physische Lampe des Scanners. In diesem Fall muss der Bildverarbeitungsfilter möglicherweise überhaupt keine Helligkeitsverarbeitung durchführen. Während einer Vorschauüberprüfung sollte der Treiber jedoch die Helligkeit der Lampe nicht ändern. Stattdessen sollte dies ausschließlich im Bildverarbeitungsfilter berücksichtigt werden. Es ist wichtig, dass die WIA 2.0-Vorschaukomponente und der Bildverarbeitungsfilter genaue Bilder basierend auf den eigenschaften zurückgeben, die im Element festgelegt sind.
 
-Ein Bild Verarbeitungs Filter muss alle Bildformate unterstützen, die vom Treiber unterstützt werden.
+Ein Bildverarbeitungsfilter muss alle Bildformate unterstützen, die der Treiber unterstützt.
 
-Der Bild Verarbeitungs Filter erhält immer ein Bild, das dem Auswahlbereich entspricht, der auf das Element festgelegt ist, für das das Bild abgerufen wird. Beachten Sie jedoch, dass das Bild möglicherweise durch den Treiber gedreht wurde, wenn es die WIA-Eigenschaft für die [**\_ \_ Rotation von IPS**](-wia-wiaitempropscanneritem.md) unterstützt.
+Dem Bildverarbeitungsfilter wird immer ein Bild angezeigt, das dem Auswahlbereich entspricht, der in dem Element festgelegt ist, für das wir das Bild abrufen. Beachten Sie jedoch, dass das Bild möglicherweise vom Treiber gedreht wurde, falls es die [**WIA \_ IPS \_ ROTATION-Eigenschaft**](-wia-wiaitempropscanneritem.md) unterstützt.
 
-Der Bild Verarbeitungs Filter wird über [**IWiaItem2:: GetExtension**](-wia-iwiaitem2-getextension.md)erstellt, normalerweise nicht durch die Anwendung, sondern durch WIA 2,0-Komponenten, wenn eine Anwendung [**iwiapreview:: getnewpreview**](-wia-iwiapreview-getnewpreview.md) oder [**iwiatransfer::D ownload**](-wia-iwiatransfer-download.md)aufruft.
+Der Bildverarbeitungsfilter wird über [**IWiaItem2::GetExtension**](-wia-iwiaitem2-getextension.md)erstellt, in der Regel nicht von der Anwendung, sondern von WIA 2.0-Komponenten, wenn eine Anwendung [**IWiaPreview::GetNewPreview**](-wia-iwiapreview-getnewpreview.md) oder [**IWiaTransfer::D ownload**](-wia-iwiatransfer-download.md)aufruft.
 
-Die **iwiaimagefilter** -Schnittstelle erbt wie alle Component Object Model-Schnittstellen (com) die [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstellen Methoden.
+Die **IWiaImageFilter-Schnittstelle** erbt wie alle com-Schnittstellen (Component Object Model) die [IUnknown-Schnittstellenmethoden.](/windows/win32/api/unknwn/nn-unknwn-iunknown)
 
 
 
-| IUnknown-Methoden                                        | BESCHREIBUNG                               |
+| IUnknown-Methoden                                        | Beschreibung                               |
 |---------------------------------------------------------|-------------------------------------------|
-| [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) | Gibt Zeiger auf unterstützte Schnittstellen zurück. |
-| [IUnknown:: adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)                 | Inkrementiert Verweiszähler.               |
-| [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)               | Dekrementiert Verweiszähler.               |
+| [IUnknown::QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) | Gibt Zeiger auf unterstützte Schnittstellen zurück. |
+| [IUnknown::AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)                 | Inkrementiert Verweiszähler.               |
+| [IUnknown::Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)               | Dekrementiert Verweiszähler.               |
 
 
 
@@ -95,10 +95,10 @@ Die **iwiaimagefilter** -Schnittstelle erbt wie alle Component Object Model-Schn
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

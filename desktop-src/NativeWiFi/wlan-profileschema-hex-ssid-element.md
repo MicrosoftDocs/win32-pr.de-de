@@ -1,7 +1,7 @@
 ---
-description: Enthält die SSID eines Drahtlos-LANs im Hexadezimal Format.
+description: Enthält die SSID eines WLAN im Hexadezimalformat.
 ms.assetid: 6c49a3e6-f167-408b-a96f-5b6032108f34
-title: Hex (SSID)-Element
+title: hex-Element (SSID)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 6bc214f50788fdc6965a1ce429c5c2919846cf72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 666562f7a476505dbb0ff23d5354e0f073505d9dd5195bcae17543294cc5f176
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119799890"
 ---
-# <a name="hex-ssid-element"></a>Hex (SSID)-Element
+# <a name="hex-ssid-element"></a>hex-Element (SSID)
 
-Das Hex (SSID)-Element enthält die SSID eines drahtlosen LANs im Hexadezimal Format.
+Das hexadezimale Element (SSID) enthält die SSID eines WLAN im Hexadezimalformat.
 
 ``` syntax
 <xs:element name="hex"
@@ -42,19 +42,19 @@ Das Hex (SSID)-Element enthält die SSID eines drahtlosen LANs im Hexadezimal Fo
 </xs:element>
 ```
 
-Das-Element wird durch das [**SSID**](wlan-profileschema-ssid-ssidconfig-element.md) -Element definiert.
+Das -Element wird durch das [**SSID-Element**](wlan-profileschema-ssid-ssidconfig-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Obwohl das **Hex** -Element und das [**Name**](wlan-profileschema-name-ssid-element.md) -Element optional sind, muss mindestens ein **Hex** -oder [**Name**](wlan-profileschema-name-ssid-element.md) -Element als untergeordnetes Element des [**SSID**](wlan-profileschema-ssid-ssidconfig-element.md) -Elements angezeigt werden.
+Obwohl die **Hexadezimal-** und Namenselemente [](wlan-profileschema-name-ssid-element.md) optional sind, muss mindestens ein [](wlan-profileschema-name-ssid-element.md) Hexadezimal- oder Namenselement als untergeordnetes Element des [**SSID-Elements angezeigt**](wlan-profileschema-ssid-ssidconfig-element.md) werden. 
 
-Wenn Profilinformationen in eine SSID konvertiert werden, wird das **Hex** -Element in die SSID (sofern vorhanden) konvertiert, und das [**Name**](wlan-profileschema-name-ssid-element.md) -Element wird ignoriert. Wenn das **Hex** -Element nicht vorhanden ist, wird das [**Name**](wlan-profileschema-name-ssid-element.md) -Element mithilfe der Unicode-in-ASCII-Konvertierung in eine SSID konvertiert.
+Wenn Profilinformationen in eine SSID  konvertiert werden, wird das hexadezimale Element in die SSID konvertiert (sofern vorhanden), und das [**Name-Element**](wlan-profileschema-name-ssid-element.md) wird ignoriert. Wenn das **hexadezimale** Element nicht vorhanden ist, wird das [**Name-Element**](wlan-profileschema-name-ssid-element.md) mithilfe der Unicode-Konvertierung in ASCII in eine SSID konvertiert.
 
-Wenn eine SSID in einem Profil gespeichert wird, wird das **Hex** -Element immer generiert. Das [**Name**](wlan-profileschema-name-ssid-element.md) -Element wird nur generiert, wenn sowohl die ASCII-als auch die Unicode-Konvertierung der SSID und die Generierung des XML-Profils erfolgreich sind. Einige Informationen aus der ursprünglichen SSID können verloren gehen, wenn Sie in einen [**Namen**](wlan-profileschema-name-ssid-element.md)konvertiert werden.
+Wenn eine SSID in einem Profil gespeichert wird, wird immer **das hexadezimale** Element generiert. Das [**Name-Element**](wlan-profileschema-name-ssid-element.md) wird nur generiert, wenn sowohl die ASCII- in Unicode-Konvertierung der SSID als auch die XML-Profilgenerierung erfolgreich sind. Einige Informationen aus der ursprünglichen SSID gehen möglicherweise verloren, wenn sie in einen Namen konvertiert [**wird.**](wlan-profileschema-name-ssid-element.md)
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel Profil, das das **Hex** -Element verwendet, finden Sie unter Beispiel für ein Beispiel für den [PPS-Profil](fips-profile-sample.md)
+Ein Beispielprofil, das das **hexadezimale Element** verwendet, finden Sie unter [FIPS-Profilbeispiel.](fips-profile-sample.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,9 +62,9 @@ Ein Beispiel Profil, das das **Hex** -Element verwendet, finden Sie unter Beispi
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP mit SP3 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                |
-| Verteilbare Komponente<br/>          | Drahtlose LAN-API für Windows XP mit SP2<br/>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP nur mit \[ SP3-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                |
+| Verteilbare Komponente<br/>          | WLAN-API für Windows XP mit SP2<br/>                 |
 
 
 
@@ -72,16 +72,16 @@ Ein Beispiel Profil, das das **Hex** -Element verwendet, finden Sie unter Beispi
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**SSID**](wlan-profileschema-ssid-ssidconfig-element.md)
+[**Ssid**](wlan-profileschema-ssid-ssidconfig-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**SSID (ssidconfig)**](wlan-profileschema-ssid-ssidconfig-element.md)
+[**SSID (SSIDConfig)**](wlan-profileschema-ssid-ssidconfig-element.md)
 </dt> </dl>
 
  

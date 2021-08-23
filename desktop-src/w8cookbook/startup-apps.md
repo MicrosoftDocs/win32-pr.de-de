@@ -1,211 +1,211 @@
 ---
-title: Start-apps
-description: Start-apps
+title: Starten von Apps
+description: Starten von Apps
 ms.assetid: 3519CB52-A6EC-4819-87FE-C144801BDD9F
 keywords:
 - Start-App
 - Hintergrundaufgabe
-- Taste ausführen
+- Ausführen des Schlüssels
 - RunOnce
 - Startordner
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75a12f01dac073712512206a5c432561b4a0b75e
-ms.sourcegitcommit: 46376be61d3fa308f9b1a06d7e2fa122a39755af
+ms.openlocfilehash: dbc2dc2a73a08c3aebd265c209b407646e50a6cb1b7cba630884cf719330b8dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "103734632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119815050"
 ---
-# <a name="startup-apps"></a>Start-apps
+# <a name="startup-apps"></a>Starten von Apps
 
 ## <a name="platform"></a>Plattform
 
-**Clients**   Windows 8  
+**Clients** Windows 8     
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Eine der großen Wett-und Windows-Anwendungen ist die Möglichkeit, verschiedene Formfaktoren, von herkömmlichen Desktops und Laptops bis hin zu kleinen Tablets, zu untersuchen. Um sicherzustellen, dass unsere wechselseitigen Kunden eine gute Benutzeroberfläche für jeden von Ihnen gewählten Formfaktor haben, sind zwei wichtige Erfolgs Metriken, die berücksichtigt werden müssen, eine größere Akku Lebensdauer und eine ausgezeichnete PC-Reaktionsfähigkeit. Um dies zu erreichen, wurden Verbesserungen an mehreren Windows-Bereichen vorgenommen, einschließlich Prozess Lebenszyklus, Ruhezustand und Start-apps (Apps mit automatisiertem Start nach dem Starten des Computers). In diesem Thema werden einige der Auswirkungen von Start-apps auf einem Windows-Gerät hervorgehoben und Anleitungen für Entwickler (ISV/IHV) und OEMs bereitstellt, um die Verwendungs Muster von Start-apps zu überdenken, um die Akku Lebensdauer und Reaktionsfähigkeit unserer gegenseitigen Kunden zu verbessern. Außerdem werden die Änderungen in Windows beschrieben, mit denen Benutzer steuern können, welche der Start-apps tatsächlich ausgeführt werden.
+Einer der großen Windows ist die Möglichkeit, verschiedene Formfaktoren zu beleuchten, von herkömmlichen Desktops und Laptops bis hin zu low-powered Tablets. Um sicherzustellen, dass unsere gegenseitigen Kunden eine hervorragende Erfahrung mit jedem Formfaktor haben, den sie mit Windows auswählen, sind zwei wichtige Erfolgsmetriken, die berücksichtigt werden müssen, eine höhere Akkulaufzeit und eine hervorragende PC-Reaktionsfähigkeit. Um dies zu erreichen, wurden Verbesserungen in mehreren Bereichen von Windows vorgenommen, einschließlich Prozesslebenszyklus, Standbyzuständen und Start-Apps (Apps mit automatisiertem Start nach dem Start des Computers). Dieses Thema hebt einige der Auswirkungen hervor, die Start-Apps auf ein Windows Gerät haben, und bietet Entwicklern (ISV/IHV) und OEMs Anleitungen, um die Nutzungsmuster von Start-Apps zu überdenken, um die Akkulaufzeit und Reaktionsfähigkeit für unsere gemeinsamen Kunden zu verbessern. Außerdem werden die Änderungen in Windows beschrieben, mit denen Benutzer bestimmen können, welche der Start-Apps tatsächlich ausgeführt werden sollen.
 
-Windows Store-Apps sind so konzipiert, dass Sie neuen Standards für den Akku Verbrauch und die Reaktionsfähigkeit entsprechen, und Windows verwaltet ihren Lebenszyklus, indem Sie angehalten und/oder beendet wird. Desktop-Apps, die für frühere Windows-Versionen entwickelt wurden, wurden jedoch nicht notwendigerweise so entworfen, dass Sie die Akku Lebensdauer beibehalten oder die Benutzeraktivität beeinträchtigen können. Sie können sich auch auf die Reaktionsfähigkeit des Systems auswirken (z. b. Wenn eine APP einen regulären 1-Sekunden-Takt sendet, um nach Updates zu suchen, oder den Arbeitsspeicher vorab bereitstellen). Dies kann für den Benutzer, der einen Windows-Tablet PC kauft, mit einer langen Akku Lebensdauer und Wochen im Standbymodus eine schlechte Benutzer Leistung schaffen, aber es wird feststellt, dass die Akku Lebensdauer des Tablets diese Ziele nicht erreicht. Da Start-apps im Hintergrund ausgeführt werden, kann die Anzahl von apps, die auf dem System ausgeführt werden, deutlich länger sein als das, was der Benutzer kennt, und sich auf die Reaktionsfähigkeit des Systems auswirken. Start-apps werden klassifiziert, um diejenigen zu berücksichtigen, die diese Mechanismen zum Starten nutzen:
+Windows Store-Apps sind so konzipiert, dass sie neue Standards für Akkuverbrauch und Reaktionsfähigkeit einhalten, und Windows verwaltet ihren Lebenszyklus durch Anhalten und/oder Beenden. Desktop-Apps, die für frühere Windows Versionen entwickelt wurden, wurden jedoch nicht notwendigerweise so konzipiert, dass sie die Akkulaufzeit beibehalten oder auf Benutzeraktivitäten reagieren, und können sich auf die Reaktionsfähigkeit des Systems auswirken (z. B. wenn eine App einen regulären 1-Sekunden-Heartbeat sendet, um nach Updates zu suchen, oder vorab Arbeitsspeicher vorab zuweist, falls sie ihn später benötigt). Dies kann für den Benutzer, der einen Windows Tablet-PC mit einer langen Akkulebenserwartung und wochenlanger Standbydauer kauft, eine schlechte Erfahrung erzielen, aber ermittelt, dass die Akkulaufzeit des Tablets diese Ziele nicht erreicht. Da Start-Apps im Hintergrund ausgeführt werden, kann die Anzahl von Apps, die auf dem System ausgeführt werden, deutlich höher sein als das, was dem Benutzer bekannt ist, und sich auf die Reaktionsfähigkeit des Systems auswirken. Start-Apps sind so klassifiziert, dass sie diejenigen umfassen, die diese Mechanismen nutzen, um zu starten:
 
--   Ausführen von Registrierungs Schlüsseln (HKLM, HKCU, WOW64-Knoten eingeschlossen)
+-   Ausführen von Registrierungsschlüsseln (HKLM, HKCU, Wow64-Knoten enthalten)
 -   RunOnce-Registrierungsschlüssel
--   Startordner im Startmenü für Benutzer-und öffentliche Speicherorte
+-   Startordner im Startmenü für benutzer- und öffentliche Speicherorte
 
-Windows wurde eine neue Funktionalität hinzugefügt, um sicherzustellen, dass Endbenutzer immer die Kontrolle über die apps haben, die auf Ihren Systemen ausgeführt werden. Auf der Registerkarte "Start" im Task-Manager wird eine Liste der Start-apps angezeigt. Außerdem werden Steuerelemente angezeigt, mit denen Benutzer Start-apps deaktivieren Um Benutzern zu helfen, zu deaktivieren, was deaktiviert werden soll, zeigt der Task-Manager ein Measure für jede Auswirkung der Start-APP an Die Auswirkung wird basierend auf der CPU und der Datenträger Nutzung einer APP beim Start bewertet. Die Auswirkung von Werten wird durch Anwenden der folgenden Kriterien bestimmt:
+Windows wurden neue Funktionen hinzugefügt, um sicherzustellen, dass Endbenutzer immer die Kontrolle über die Apps haben, die auf ihren Systemen ausgeführt werden. Auf der Registerkarte Start in Task-Manager wird eine Liste der Start-Apps sowie Steuerelemente angezeigt, mit denen Benutzer Start-Apps deaktivieren können. Damit Benutzer bestimmen können, was deaktiviert werden soll, zeigt Task-Manager ein Maß für die Auswirkungen der einzelnen Start-Apps an. Die Auswirkungen werden basierend auf der CPU- und Datenträgerauslastung einer App beim Start bewertet. Die Auswirkungswerte werden durch Anwenden der folgenden Kriterien bestimmt:
 
--   **Hohe Auswirkung**   Apps, die mehr als eine Sekunde CPU-Zeit oder mehr als 3 MB Datenträger-e/a beim Start verwenden
--   **Mittlere Auswirkung**   Apps mit 300 MS-1000 ms CPU-Zeit oder 300 KB-3 MB Datenträger-e/a
--   **Geringe Auswirkung**   Apps, die weniger als 300 ms CPU-Zeit und weniger als 300 KB Datenträger-e/a verwenden
+-   **Hohe Auswirkungen**   Apps, die mehr als eine Sekunde CPU-Zeit oder mehr als 3 MB Datenträger-E/A beim Start verwenden
+-   **Mittlere Auswirkung**   Apps, die 300 ms – 1000 ms CPU-Zeit oder 300 KB – 3 MB Datenträger-E/A verwenden
+-   **Geringe Auswirkung**   Apps mit weniger als 300 ms CPU-Zeit und weniger als 300 KB Datenträger-E/A
 
-Microsoft stellt Tools bereit, die APP-Entwicklern bei der Bewertung, Analyse und Durchführung von Maßnahmen unterstützen, um die Auswirkungen auf den Start zu verringern und die Benutzer Das Assessment and Deployment Kit bietet die Möglichkeit, eine Start Leistungsbewertung auszuführen und die Auswirkungen von apps zu messen, die beim Start ausgeführt werden. Die Bewertungsergebnisse enthalten ggf. detaillierte Analyse-und Wiederherstellungs Informationen für die wichtigsten Komponenten beim Windows-Start. Mithilfe von Windows Performance Analyzer können App-Entwickler eine umfassende Analyse durchführen, um die Grundursache der Auswirkungen auf die Leistung zu ermitteln und die Windows-Startleistung zu verbessern. Installieren Sie das Windows ADK von [hier](/previous-versions/windows/hh825494(v=win.10)).
+Microsoft stellt Tools bereit, mit denen App-Entwickler ihre Auswirkungen auf das Startverhalten bewerten, analysieren und Maßnahmen ergreifen können, um ihre Auswirkungen auf das Startverhalten zu verringern und die Benutzerfreundlichkeit zu verbessern. Das Assessment and Deployment Kit bietet die Möglichkeit, eine Startleistungsbewertung durchzuführen und die Auswirkungen von Apps zu messen, die beim Start ausgeführt werden. Die Bewertungsergebnisse enthalten ggf. detaillierte Analyse- und Wartungsinformationen für die wichtigsten Komponenten beim Start Windows. Mithilfe des Windows Leistungsanalyse können App-Entwickler eine umfassende Analyse durchführen, um die Grundursache der Leistungsbeeinträchtigung zu ermitteln und Windows Startleistung zu verbessern. Installieren Sie die Windows ADK [von hier](/previous-versions/windows/hh825494(v=win.10))aus.
 
-## <a name="guidance"></a>Leitfaden
+## <a name="guidance"></a>Anleitung
 
-Start-apps umfassen mehrere Kategorien, wie in der folgenden Tabelle beschrieben. Eine Reihe von Empfehlungen für Entwickler werden den Kategorien von Start-apps zugeordnet, um die oben beschriebenen Windows-Funktionsänderungen auszurichten.
+Start-Apps umfassen mehrere Kategorien, wie in der folgenden Tabelle beschrieben. Eine Reihe von Empfehlungen für Entwickler wird den Kategorien von Start-Apps zugeordnet, die mit den oben beschriebenen Windows funktionalen Änderungen übereinstimmen.
 
 
 
-Kategorien von Start-apps
+Kategorien von Start-Apps
 
 BESCHREIBUNG
 
 Empfehlung
 
-**Aktualisierungen**
+**Updater**
 
-Überwachen und Aktualisieren von Benutzern für Online Updates
+Überwachen und Aktualisieren von Benutzern auf Onlineupdates
 
-**Wartungs Task**
+**Wartungstask**
 
 > [!Note]  
-> Alle Updates sollten Wartungs Tasks sein, ohne dass Anforderungen an die UI-Interaktion bestehen. Apps sollten sich einfach selbst aktualisieren und bei einem Fehler ein Rollback durchführen.
+> Alle Updates sollten Wartungstasks ohne Anforderungen an die Benutzeroberflächeninteraktion sein. Apps sollten sich einfach nur still aktualisieren und bei Einem Fehler ein Rollback durchführen.
 
 <br/>
 
-$ {ROWSPAN2} $**Hardware Unterstützung**$ {Remove} $  
+${ROWSPAN2}$**Hardwareunterstützung**${REMOVE}$  
 
 Alternative Zugriffspunkte
 
-Bereitstellen des Zugriffs auf Windows-Features und-apps, die über andere Zugriffspunkte in Windows zugänglich sind
+Bereitstellen des Zugriffs auf Windows Features und Apps, auf die über andere Zugriffspunkte in Windows
 
-**Remove**
+**Entfernen**
 
 > [!Note]  
-> Der Schlüssel besteht darin, doppelte Features zu verringern, die in Windows vorhanden sind.
+> Der Schlüssel besteht darin, doppelte Features zu reduzieren, die in Windows
 
 <br/>
 
-Benachrichtigt
+Antragsteller
 
-Benutzern Benachrichtigungen zu Ihren Geräten bereitstellen
+Bereitstellen von Benachrichtigungen für Benutzer zu ihren Geräten
 
-**Remove**
+**Entfernen**
 
 > [!Note]  
-> Windows stellt Benachrichtigungen für Benutzer über Ihre Geräte bereit.
+> Windows stellt Benutzern Benachrichtigungen zu ihren Geräten bereit.
 
 <br/>
 
-**Pre-Launcher**
+**Vorabstarts**
 
-Einige der für apps benötigten vorläufigen Aktivitäten werden bei der Benutzeranmeldung in eine Start-App verlagert.
+Einige vorläufige Aktivitäten, die von Apps benötigt werden, werden während der Benutzeranmeldung an eine Start-App ausgelagert.
 
-**Remove**
+**Entfernen**
 
 > [!Note]  
-> Windows 8 ist für eine schnelle Darstellung von App-Starts optimiert.
+> Windows 8 ist für eine schnelle Benutzeroberfläche für App-Starte optimiert.
 
 <br/>
 
-$ {ROWSPAN4} $**Utility**$ {Remove} $  
+${ROWSPAN4}$**Hilfsprogramm**${REMOVE}$  
 
 PC-Synchronisierung
 
-Bereitstellen von Synchronisierungs Funktionen über mehrere Systeme hinweg
+Bereitstellen von Synchronisierungsfunktionen für mehrere Systeme
 
-**Start** (potenzielle Updates in der Beta Version)
+**Start** (Potenzielle Updates in der Betaversion)
 
 Sicherung und Wiederherstellung
 
 Einstiegspunkt zum Speichern und Wiederherstellen des Zustands von Dateien, Einstellungen oder ganzen Systemen
 
-**Windows Store-App für die Schnittstellen mit den Benutzern**
+**Windows Store App für die Benutzerverknüpfung**
 
 Telemetrie
 
-Sammeln und Senden von Informationen über die Benutzerumgebung und die Umgebung
+Sammeln und Senden von Informationen zur Benutzeroberfläche und Umgebung
 
-**Wartungs Task**
+**Wartungstask**
 
 PC-Überwachung
 
-Bereitstellen von angeforderter Systemstatus Überwachung und Benachrichtigungen, die vorhandene Eingangsbox
+Bereitstellen nicht angeforderter Systemstatusüberwachung und Benachrichtigungen, die vorhandene Posteingangsfunktionen duplizieren
 
-**Remove**
+**Entfernen**
 
 > [!Note]  
-> Der Schlüssel besteht darin, doppelte Features zu verringern, die in Windows vorhanden sind.
+> Der Schlüssel besteht darin, doppelte Features zu reduzieren, die in Windows
 
 <br/>
 
-$ {ROWSPAN2} $**Security**$ {Remove} $  
+${ROWSPAN2}$**Sicherheit**${REMOVE}$  
 
-Eltern Steuerungs & Filter
+Filter für die jugendschutz &
 
-Erzwingen von Regeln und Einschränkungen für den Zugriff auf das Internet und die Verwendung
+Erzwingen von Regeln und Einschränkungen für Internetzugriff und -nutzung
 
 **Startup**
 
 Konfiguration und Verwaltung
 
-Benutzern das Steuern von Diagnose-und Wiederherstellungsoptionen für die Überwachung der Systemsicherheit gestatten Benutzer über Ergebnisse und Sicherheitsaktionen Benachrichtigen
+Benutzern das Steuern von Diagnose- und Wiederherstellungsoptionen für die Systemsicherheitsüberwachung erlauben Benachrichtigen von Benutzern über Ergebnisse und Sicherheitsaktionen
 
-**Windows Store-App für die Schnittstellen mit den Benutzern**
+**Windows Store App für die Benutzerverknüpfung**
 
-**Kommunikation & Internet** (im & VoIP)
+**Kommunikation & Internet** (IM & VoIP)
 
-Senden und empfangen von Nachrichten und aufrufen
+Senden und Empfangen von Nachrichten und Aufrufen
 
 **Windows Store-App**
 
 **Musik & MP3**
 
-Spielen, speichern und Verwalten von Musik
+Wiedergeben, Speichern und Verwalten von Musik
 
 **Windows Store-App**
 
 **Foto & Video**
 
-Erkennen, aufzeichnen, wiedergeben, speichern und Verwalten von Fotos und Videos
+Erkennen, Aufzeichnen, Rendern, Speichern und Verwalten von Fotos und Videos
 
 **Windows Store-App**
 
-**PC-Gaming**
+**PC Gaming**
 
-Spiele in verschiedenen Domänen starten
+Starten von Spielen in verschiedenen Domänen
 
 **Windows Store-App**
 
-**Upsell-& Ankündigung**
+**Upsell & Advertisement**
 
-Aufmerksamkeit auf waren und Dienste, die für den Kauf verfügbar sind
+Aufmerksamkeit auf Waren und Dienstleistungen lenken, die zum Kauf verfügbar sind
 
-**Remove**
+**Entfernen**
 
 
 
  
 
 > [!Note]  
-> Richtlinien für Barrierefreiheit-apps werden durch separate direkte Verpflichtungen mit ISVs abgedeckt. Weitere Informationen finden Sie [*unter Programmieren für den einfachen Zugriff*](../winauto/ease-of-access---assistive-technology-registration.md) .
+> Richtlinien für Barrierefreiheits-Apps werden durch separate direkte Interaktionen mit ISVs abgedeckt. Weitere Informationen finden Sie [*unter Programmieren für Erleichterte Bedienung.*](../winauto/ease-of-access---assistive-technology-registration.md)
 
  
 
 **Windows Store-Apps**
 
-Windows Store-Apps verbessern die Benutzeroberfläche durch die Einführung eines Windows-Raums mit neuen Koordinaten: ein neues app-Modell, eine neue Benutzeroberfläche und einen Windows Store. Diese sprach-und Präsentations Framework-Optionen sind für die Entwicklung von Windows Store-Apps verfügbar:
+Windows Store-Apps verbessern die Benutzerfreundlichkeit, indem sie einen Windows-Raum mit neuen Koordinaten einführen: ein neues App-Modell, eine neue Benutzeroberfläche und eine Windows Store. Diese Sprach- und Präsentationsframeworkoptionen sind für die Entwicklung Windows Store verfügbar:
 
 -   HTML/JavaScript/CSS
 -   XAML/C #
 -   XAML/C++
 
-Aggregierte Informationen für die Entwicklung von Windows Store-Apps finden Sie im [Windows dev Center](https://msdn.microsoft.com/windows/apps/).
+Aggregierte Informationen zum Entwickeln von Windows Store-Apps finden Sie unter [Windows Dev Center](https://msdn.microsoft.com/windows/apps/).
 
 Beispiele:
 
--   [Entwickeln von Windows Store-spielen](/previous-versions/windows/apps/hh452744(v=win.10))
--   [Entwickeln einer Windows Store-App, die Medien verwendet](/previous-versions/windows/apps/hh465132(v=win.10))
+-   [Entwickeln Windows Store Spielen](/previous-versions/windows/apps/hh452744(v=win.10))
+-   [Entwickeln Windows Store-App, die Medien verwendet](/previous-versions/windows/apps/hh465132(v=win.10))
 
-**Automatische Wartungs Tasks**
+**Automatische Wartungsaufgaben**
 
-Periodische Hintergrund Aktivitäten sollten als automatische Wartungs Tasks entworfen werden. Diese werden zur Leerlaufzeit des Systems geplant, um die Reaktionsfähigkeit und Energieeffizienz von Windows-PCs zu erhöhen. Wartungs Tasks können von einer Desktop-App zur Installationszeit mithilfe des Desktop SDK erstellt und konfiguriert werden. Weitere Informationen finden Sie im folgenden Thema zur automatischen Wartung.
+Periodische Hintergrundaktivitäten sollten als Automatische Wartung entworfen werden. Diese werden zur Leerlaufzeit des Systems geplant, um die Reaktionsfähigkeit und Energieeffizienz Windows PCs zu erhöhen. Wartungsaufgaben können mithilfe des Desktop-SDK von einer Desktop-App zur Installationszeit erstellt und konfiguriert werden. Weitere Informationen Automatische Wartung im folgenden Thema.
 
 ## <a name="resources"></a>Ressourcen
 
--   [Richtlinien für Barrierefreiheit](../winauto/ease-of-access---assistive-technology-registration.md)
+-   [Richtlinien für die Barrierefreiheit](../winauto/ease-of-access---assistive-technology-registration.md)
 -   [Windows Developer Center](https://msdn.microsoft.com/windows/apps/)
 -   [Windows ADK](/previous-versions/windows/hh825494(v=win.10))
 

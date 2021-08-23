@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentlogkorruptduringhardrecoveryexception-Konstruktor'
-title: Esentlogkorruptduringhardrecoveryexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentLogCorruptDuringHardRecoveryException-Konstruktor'
+title: EsentLogCorruptDuringHardRecoveryException-Konstruktor
 TOCTitle: 'EsentLogCorruptDuringHardRecoveryException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentLogCorruptDuringHardRecoveryException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentlogcorruptduringhardrecoveryexception.esentlogcorruptduringhardrecoveryexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 14ec7c4a7f86f3c4dcc9229b3cf2d476f9c28363
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9628ce9181395fc4b32c4aeac6fc78a26c7e88ff876b4fbc4f41aef028c1ebeb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119723300"
 ---
-# <a name="esentlogcorruptduringhardrecoveryexception-constructor"></a>Esentlogkorruptduringhardrecoveryexception-Konstruktor
+# <a name="esentlogcorruptduringhardrecoveryexception-constructor"></a>EsentLogCorruptDuringHardRecoveryException-Konstruktor
 
-Initialisiert eine neue Instanz der esentlogkorruptduringhardrecoveryexception-Klasse.
+Initialisiert eine neue Instanz der EsentLogCorruptDuringHardRecoveryException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentLogCorruptDuringHardRecoveryException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlogkorruptduringhardrecoveryexception-Klasse](./esentlogcorruptduringhardrecoveryexception-class.md)
+[EsentLogCorruptDuringHardRecoveryException-Klasse](./esentlogcorruptduringhardrecoveryexception-class.md)
 
-[Esentlogkorruptduringhardrecoveryexception-Member](./esentlogcorruptduringhardrecoveryexception-members.md)
+[EsentLogCorruptDuringHardRecoveryException-Member](./esentlogcorruptduringhardrecoveryexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

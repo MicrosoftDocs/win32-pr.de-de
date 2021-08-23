@@ -1,19 +1,19 @@
 ---
-description: Der Ursprung des boundingfrustum-Typs.
+description: Der Ursprung des BoundingFrustums.
 ms.assetid: 9cfe75ae-cd9c-41c6-ae05-990d6b27fb04
-title: Boundingfrustum. Origin (directxcollision. h)
+title: BoundingFrustum.Origin (DirectXCollision.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8769ff8ff60d115d9aca45c215945170c1b1af34
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: da59c06b7fb65501d882c376bc40ab5c366aa3ab5a1764d8b0066a3e89c4d582
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119740840"
 ---
-# <a name="boundingfrustumorigin"></a>Boundingfrustum. Origin
+# <a name="boundingfrustumorigin"></a>BoundingFrustum.Origin
 
-Der Ursprung des [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)-Typs.
+Der Ursprung des [**BoundingFrustums.**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
 
 
 ```C++
@@ -23,7 +23,7 @@ public:
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -35,21 +35,21 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxcollision. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXCollision.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Fields](boundingfrustum-fields.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
+[**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
 </dt> </dl>
 
  

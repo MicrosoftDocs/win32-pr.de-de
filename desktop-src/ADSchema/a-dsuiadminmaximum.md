@@ -1,11 +1,11 @@
 ---
-title: DS-UI-admin-Maximum-Attribut
-description: Dies ist die standardmäßige maximale Anzahl von Objekten, die von der Administrator Benutzeroberfläche in einem Container angezeigt werden.
+title: Attribut "DS-UI-Admin-Maximum"
+description: Dies ist die maximale Standardanzahl von Objekten, die von der Administratorbenutzeroberfläche in einem Container angezeigt werden sollen.
 ms.assetid: 4ee84329-4ddf-4efa-a43b-f64e6d0e7f76
 ms.tgt_platform: multiple
 keywords:
-- DS-UI-admin-Maximum-Attribut AD Schema
-- dsuiadminmaximum-Attribut AD-Schema
+- AD-Schema des DS-UI-Admin-Maximum-Attributs
+- AD-Schema des dSUIAdminMaximum-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2de3a8c4b0c25c0da0e248f07743adee836d0f80
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 1a7df2f7e3955a39a80792e0a35331a2eb41f8f34ec1cc25efb59a4a69a0b678
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119804720"
 ---
-# <a name="ds-ui-admin-maximum-attribute"></a>DS-UI-admin-Maximum-Attribut
+# <a name="ds-ui-admin-maximum-attribute"></a>Attribut "DS-UI-Admin-Maximum"
 
-Dies ist die standardmäßige maximale Anzahl von Objekten, die von der Administrator Benutzeroberfläche in einem Container angezeigt werden.
+Dies ist die maximale Standardanzahl von Objekten, die von der Administratorbenutzeroberfläche in einem Container angezeigt werden sollen.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | DS-UI-admin-Maximum                  |
-| LDAP-Display-Name | dsuiadminmaximum                     |
+| CN                | DS-UI-Admin-Maximum                  |
+| Ldap-Anzeigename | dSUIAdminMaximum                     |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Domänenadministrator                 |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                 |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1344              |
-| System-ID-GUID    | ee8d0ae0-6f91-11d2-9905-0000f87a57d4 |
+| System-Id-Guid    | ee8d0ae0-6f91-11d2-9905-0000f87a57d4 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Dies ist die standardmäßige maximale Anzahl von Objekten, die von der Administ
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Dies ist die standardmäßige maximale Anzahl von Objekten, die von der Administ
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
+| Is-Single-Valued       | True                                                |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**DS-UI-Settings**](c-dsuisettings.md)<br/> |
+| In verwendete Klassen        | [**DS-UI-Einstellungen**](c-dsuisettings.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Dies ist die standardmäßige maximale Anzahl von Objekten, die von der Administ
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
+| Is-Single-Valued       | True                                                |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**DS-UI-Settings**](c-dsuisettings.md)<br/> |
+| In verwendete Klassen        | [**DS-UI-Einstellungen**](c-dsuisettings.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Dies ist die standardmäßige maximale Anzahl von Objekten, die von der Administ
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
+| Is-Single-Valued       | True                                                |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**DS-UI-Settings**](c-dsuisettings.md)<br/> |
+| In verwendete Klassen        | [**DS-UI-Einstellungen**](c-dsuisettings.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Dies ist die standardmäßige maximale Anzahl von Objekten, die von der Administ
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
+| Is-Single-Valued       | True                                                |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**DS-UI-Settings**](c-dsuisettings.md)<br/> |
+| In verwendete Klassen        | [**DS-UI-Einstellungen**](c-dsuisettings.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Dies ist die standardmäßige maximale Anzahl von Objekten, die von der Administ
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
+| Is-Single-Valued       | True                                                |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**DS-UI-Settings**](c-dsuisettings.md)<br/> |
+| In verwendete Klassen        | [**DS-UI-Einstellungen**](c-dsuisettings.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Dies ist die standardmäßige maximale Anzahl von Objekten, die von der Administ
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
+| Is-Single-Valued       | True                                                |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**DS-UI-Settings**](c-dsuisettings.md)<br/> |
+| In verwendete Klassen        | [**DS-UI-Einstellungen**](c-dsuisettings.md)<br/> |
 
 
 

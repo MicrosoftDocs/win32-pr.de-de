@@ -3,42 +3,42 @@ title: Bereitstellen von Steuerelementen zum Zuschneiden und Strecken von Bilder
 description: Bereitstellen von Steuerelementen zum Zuschneiden und Strecken von Bildern
 ms.assetid: cc62d70d-3f5f-477c-bc09-ab8ab0a9dce3
 keywords:
-- Mciwndgetsource-Makro
-- Mciwndputsource-Makro
-- Mciwndgetdest-Makro
-- Mciwndputdest-Makro
+- MCIWndGetSource-Makro
+- MCIWndPutSource-Makro
+- MCIWndGetDest-Makro
+- MCIWndPutDest-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9cd0889b40204e7c99ec782e454dba2cdeebfe79
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 712dddf0d022b63bccb3c64157df796585569b72604dc82746417d725c4135dd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103724809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805750"
 ---
 # <a name="providing-controls-for-cropping-and-stretching-images"></a>Bereitstellen von Steuerelementen zum Zuschneiden und Strecken von Bildern
 
-Mit mciwnd können Sie Bilder eines Videoclips Zuschneiden und Strecken. Um diese Features zu verstehen, müssen Sie die Beziehungen zwischen *Frame Größe*, *Quell Rechteck*, *Ziel Rechteck* und *Wiedergabe Bereich* verstehen.
+Mit MCIWnd können Sie Bilder eines Videoclips zuschneiden und strecken. Um diese Features zu verstehen, müssen Sie die Beziehungen zwischen Framegröße, Quellrechteck, Zielrechteck *und* *Wiedergabebereich verstehen.*
 
-Ein Videoclip besteht aus mehreren Frames, die jeweils ein Bild enthalten. Die Rahmengröße eines Videoclips ist die Größe des Bilds im aktuellen Frame. In der Regel hat ein Videoclip eine Frame Größe, da alle Bilder im Clip die gleiche Größe haben.
+Ein Videoclip besteht aus mehreren Frames, die jeweils ein Bild enthalten. Die Framegröße eines Videoclips ist die Größe des Bilds im aktuellen Frame. In der Regel hat ein Videoclip eine Framegröße, da alle Bilder im Clip die gleiche Größe haben.
 
-Das Quell Rechteck ist ein rechteckiger Bereich, der die Frames eines Videoclips überlagert. Das Quell Rechteck definiert den Teil jedes Frames, der während der Wiedergabe angezeigt wird. Wenn ein Videoclip mit mciwnd geladen wird, wird das Quell Rechteck mit denselben Dimensionen und der gleichen Position wie der erste Frame des Videoclips initialisiert.
+Das Quellrechteck ist ein rechteckiger Bereich, der die Frames eines Videoclips überlagert. Das Quellrechteck definiert den Teil jedes Frames, der während der Wiedergabe angezeigt wird. Wenn ein Videoclip mit MCIWnd geladen wird, wird das Quellrechteck mit den gleichen Dimensionen und der gleichen Position wie der ursprüngliche Frame des Videoclips initialisiert.
 
-Das Ziel Rechteck ist ein rechteckiger Bereich, der ein virtuelles Wiedergabe Fenster definiert. Das Ziel Rechteck empfängt die Bilddaten aus dem Quell Rechteck für jeden Frame des Videoclips. Wenn die Größe des Quell-und Ziel Rechtecks unterschiedlich ist, passt mciwnd die Bilddaten bei Bedarf horizontal und vertikal an, um das Ziel Rechteck auszufüllen. Wenn ein Videoclip mit mciwnd geladen wird, wird das Ziel Rechteck mit denselben Dimensionen und der gleichen Position wie der erste Frame des Videoclips initialisiert.
+Das Zielrechteck ist ein rechteckiger Bereich, der ein virtuelles Wiedergabefenster definiert. Das Zielrechteck empfängt die Bilddaten aus dem Quellrechteck für jeden Frame des Videoclips. Wenn die Quell- und Zielrechteckdimensionen unterschiedlich sind, passt MCIWnd die Bilddaten nach Bedarf horizontal und vertikal an, um das Zielrechteck zu füllen. Wenn ein Videoclip mit MCIWnd geladen wird, wird das Zielrechteck mit den gleichen Dimensionen und der gleichen Position wie der ursprüngliche Frame des Videoclips initialisiert.
 
-Der Wiedergabe Bereich ist der Teil eines mciwnd-Fensters, den eine Anwendung verwendet, um den Videoclip anzuzeigen. Der Wiedergabe Bereich ist der Client Bereich eines mciwnd-Fensters oder der Teil des Client Bereichs, von dem die mciwnd-Symbolleiste ausgeschlossen wird. Wenn ein Videoclip mit mciwnd geladen wird, wird der Wiedergabe Bereich mit denselben Dimensionen und der gleichen Position wie der erste Frame des Videoclips initialisiert.
+Der Wiedergabebereich ist der Teil eines MCIWnd-Fensters, das von einer Anwendung zum Anzeigen des Videoclips verwendet wird. Der Wiedergabebereich ist der Clientbereich eines MCIWnd-Fensters oder der Teil des Clientbereichs, der die MCIWnd-Symbolleiste ausschließt. Wenn ein Videoclip mit MCIWnd geladen wird, wird der Wiedergabebereich mit den gleichen Dimensionen und der gleichen Position wie der ursprüngliche Frame des Videoclips initialisiert.
 
-Sie können einen Videoclip mit den Makros " [**mciwndgetsource**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetsource) " und " [**mciwndputsource**](/windows/desktop/api/Vfw/nf-vfw-mciwndputsource) " zum Ändern des Quell Rechtecks zuschneiden. Beim Zuschneiden eines Bilds wird nur bestimmt, welcher Teil der Rahmen während der Wiedergabe angezeigt wird. der Inhalt der wiedergegebenen Datei wird nicht geändert. Bevor Sie ein Bild zuschneiden, können Sie die aktuelle Größe des Quell Rechtecks mithilfe von **mciwndgetsource** abrufen. Nachdem Sie die neue Größe und Position des Quell Rechtecks berechnet haben, können Sie die zuschnittgrenzen des Quell Rechtecks mithilfe von " **mciwndputsource**" festlegen.
+Sie können einen Videoclip mithilfe der [**Makros MCIWndGetSource**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetsource) und [**MCIWndPutSource**](/windows/desktop/api/Vfw/nf-vfw-mciwndputsource) zuschneiden, um das Quellrechteck zu ändern. Das Zuschneiden eines Bilds bestimmt nur, welcher Teil der Frames während der Wiedergabe angezeigt wird. Sie ändert nicht den Inhalt der Datei, die abgespielt wird. Bevor Sie ein Bild zuschneiden, können Sie die aktuelle Größe des Quellrechtecks mithilfe von **MCIWndGetSource abrufen.** Nachdem die neue Größe und Position des Quellrechtecks berechnet wurden, können Sie die Zuschneidegrenzen des Quellrechtecks mithilfe von **MCIWndPutSource festlegen.**
 
-Sie können einen Videoclip mithilfe der Makros [**mciwndgetdest**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdest) und [**mciwndputdest**](/windows/desktop/api/Vfw/nf-vfw-mciwndputdest) Strecken, um das Ziel Rechteck zu ändern. Wenn Sie einen Videoclip Strecken, verlängern Sie die Frame Größe eines Videoclips vertikal, horizontal oder in beide Richtungen. Vor dem Strecken eines Bilds können Sie die aktuelle Größe und Position des Ziel Rechtecks mithilfe von **mciwndgetdest** abrufen. Mit dem **mciwndputdest** -Makro können Sie das Ziel Rechteck neu definieren. Durch das Stretching kann das Bild während der Wiedergabe verzerrt werden, aber der Inhalt der wiedergegebenen Datei wird nicht geändert.
+Sie können einen Videoclip mithilfe der Makros [**MCIWndGetDest**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdest) und [**MCIWndPutDest**](/windows/desktop/api/Vfw/nf-vfw-mciwndputdest) strecken, um das Zielrechteck zu ändern. Wenn Sie einen Videoclip strecken, wird die Framegröße eines Videoclips vertikal, horizontal oder in beide Richtungen verlängert oder verkürzt. Bevor Sie ein Bild strecken, können Sie die aktuelle Größe und Position des Zielrechtecks mithilfe von **MCIWndGetDest abrufen.** Mit **dem MCIWndPutDest-Makro** können Sie das Zielrechteck neu definieren. Stretching kann das Bild während der Wiedergabe verzerren, ändert jedoch nicht den Inhalt der Datei, die abgespielt wird.
 
-Wenn die Größe des Ziel Rechtecks größer als der Wiedergabe Bereich ist, können Sie angeben, welcher Teil des Wiedergabe Bereichs den Videoclip mithilfe von " **mciwndputdest**" anzeigt.
+Wenn die Größe des Zielrechtecks größer als der Wiedergabebereich wird, können Sie angeben, welcher Teil des Wiedergabebereichs den Videoclip mithilfe von **MCIWndPutDest anzeigen soll.**
 
 > [!Note]  
-> Das [**mciwndputdest**](/windows/desktop/api/Vfw/nf-vfw-mciwndputdest) -Makro ändert nicht die Größe des Wiedergabe Bereichs. Um das mciwnd-Fenster zusammen mit dem Ziel Rechteck zu Strecken, müssen Sie die aktuelle Größe des mciwnd-Fensters kennen und neue Fenster Dimensionen auf der Grundlage des Ziel Rechtecks ausgeben. Sie können die mciwnd-Fenster Dimensionen mithilfe der [GetWindowRect](/windows/win32/api/winuser/nf-winuser-getwindowrect) -Funktion abrufen und die Größe des mciwnd-Fensters ändern, indem Sie die [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) -Funktion verwenden.
+> Das [**MCIWndPutDest-Makro**](/windows/desktop/api/Vfw/nf-vfw-mciwndputdest) ändert die Größe des Wiedergabebereichs nicht. Um das MCIWnd-Fenster zusammen mit dem Zielrechteck zu strecken, müssen Sie die aktuelle Größe des MCIWnd-Fensters kennen und neue Fensterdimensionen basierend auf dem Zielrechteck ausgibt. Sie können die MCIWnd-Fensterdimensionen mithilfe der [GetWindowRect-Funktion](/windows/win32/api/winuser/nf-winuser-getwindowrect) abrufen und die Größe des MCIWnd-Fensters mithilfe der [SetWindowPos-Funktion](/windows/win32/api/winuser/nf-winuser-setwindowpos) ändern.
 
- 
+ 
 
- 
+ 
 
- 
+ 

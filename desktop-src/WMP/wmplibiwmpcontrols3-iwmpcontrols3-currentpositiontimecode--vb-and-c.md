@@ -1,11 +1,11 @@
 ---
-title: IWMPControls3 currentPositionTimecode (Eigenschaft)
-description: Die currentPositionTimecode-Eigenschaft ruft die aktuelle Position im aktuellen Medien Element mithilfe eines Zeit Code Formats ab oder legt diese fest. Diese Eigenschaft unterstützt derzeit den SMPTE-Zeit Code.
+title: IWMPControls3 currentPositionTimecode-Eigenschaft
+description: Die currentPositionTimecode-Eigenschaft ruft die aktuelle Position im aktuellen Medienelement mithilfe eines Zeitcodeformats ab oder legt sie fest. Diese Eigenschaft unterstützt derzeit SMPTE-Zeitcode.
 ms.assetid: 035b812c-e976-4b4e-b4e5-820653257732
 keywords:
-- currentPositionTimecode-Eigenschaften Fenster Media Player
-- currentPositionTimecode-Eigenschaft, Windows Media Player, IWMPControls3-Schnittstelle
-- IWMPControls3 Interface Windows Media Player, currentPositionTimecode-Eigenschaft
+- currentPositionTimecode-Windows Media Player
+- currentPositionTimecode-Eigenschaft Windows Media Player , IWMPControls3-Schnittstelle
+- IWMPControls3-Schnittstelle Windows Media Player , currentPositionTimecode-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7660e6dc2690c310cf06f64e38190dc1cb3f24ab
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b91c00c166050f4f3a3bc05861fa92d4fb66efcfa139e726c7cc799e21623fa4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119760920"
 ---
-# <a name="iwmpcontrols3currentpositiontimecode-property"></a>IWMPControls3:: currentPositionTimecode-Eigenschaft
+# <a name="iwmpcontrols3currentpositiontimecode-property"></a>IWMPControls3::currentPositionTimecode-Eigenschaft
 
-Die **currentPositionTimecode** -Eigenschaft ruft die aktuelle Position im aktuellen Medien Element mithilfe eines Zeit Code Formats ab oder legt diese fest. Diese Eigenschaft unterstützt derzeit den SMPTE-Zeit Code.
+Die **currentPositionTimecode-Eigenschaft** ruft die aktuelle Position im aktuellen Medienelement mithilfe eines Zeitcodeformats ab oder legt sie fest. Diese Eigenschaft unterstützt derzeit SMPTE-Zeitcode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,23 +46,23 @@ Public Property currentPositionTimecode As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **System. String** , bei der es sich um den SMPTE-Zeit Code handelt.
+Eine **System.String,** bei der es sich um den SMPTE-Zeitcode handelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der SMPTE-Zeit Code stellt eine Standardmethode zum Identifizieren eines einzelnen Video Rahmens dar, der für die Synchronisierung der Wiedergabe nützlich ist. Wenn eine digitale Mediendatei SMPTE-Zeit Code unterstützt, können Windows Media Player die aktuellen Zeit Code Positionsinformationen abrufen oder einen Video Frame suchen, der durch einen bestimmten Zeit Code gekennzeichnet ist.
+Der SMPTE-Zeitcode stellt eine Standard-Möglichkeit zum Identifizieren eines einzelnen Videoframes zur Synchronisierung der Wiedergabe zur Möglichkeit zur Synchronisierung von Videoaufnahmen. Wenn eine digitale Mediendatei SMPTE-Zeitcode unterstützt, kann Windows Media Player die aktuellen Zeitcodepositionsinformationen abrufen oder nach einem Videoframe suchen, der durch einen bestimmten Zeitcode identifiziert wird.
 
-Der SMPTE-Zeit Code identifiziert einen bestimmten Frame um die Anzahl von Stunden, Minuten, Sekunden und Frames, die ihn von einem bestimmten Verweis Rahmen aus dem Frame trennen, der als Zeit NULL festgelegt ist. Normalerweise ist der Zeit Null-Frame der Anfang der Datei, und ein bestimmter SMPTE-Zeit Codewert stellt die verstrichene Zeit seit dem Start der Datei dar.
+Der SMPTE-Zeitcode identifiziert einen bestimmten Frame durch die Anzahl von Stunden, Minuten, Sekunden und Frames, die ihn von einem bestimmten Referenzrahmen trennen, der als Zeit 0 festgelegt ist. Normalerweise ist der Zeitrahmen 0 (null) der Anfang der Datei, und ein bestimmter SMPTE-Zeitcodewert stellt die seit dem Start der Datei verstrichene Zeit dar.
 
-Der Zeit Code liegt im Format \[ *Bereich* \] *HH*:*mm*:*SS*.*FF* , wobei \[ *Range* \] den Bereich darstellt, hh stellt Stunden, *mm* stellt Minuten dar, *SS* stellt Sekunden dar, und *FF* stellt Frames dar. Wenn Sie einen Wert für **currentPositionTimecode** festlegen, müssen Sie alle acht Ziffern einschließen, wobei Sie Nullen als Platzhalter verwenden.
+Der Zeitcode liegt im Format \[  \] *hh*:*mm*:*ss*.*ff,* \[ *wobei range* \] den Bereich darstellt, hh stunden, *mm* minuten, *ss* sekunden und *ff Frames* darstellt. Wenn Sie einen Wert für **currentPositionTimecode festlegen,** müssen Sie alle acht Ziffern mit Nullen als Platzhaltern verwenden.
 
-\[*Bereich* \] entspricht dem **Wrange** -Member der **WMT- \_ \_ Erweiterungs \_ Daten** Struktur "Windows Media-Format". Weitere Informationen zu Zeit Codebereichen finden Sie im Windows Media-Format-SDK.
+\[*Bereich* \] entspricht dem **wRange-Member** der Windows Media Format **WMT \_ TIMECODE \_ EXTENSION \_ DATA-Struktur.** Weitere Informationen zu Zeitcodebereichen finden Sie im Windows Media Format SDK.
 
-Das Festlegen und das erhalten von **currentPositionTimecode** wird nur für Dateien unterstützt, die SMPTE-Zeit Code Informationen enthalten.
+Das Festlegen und Abrufen **von currentPositionTimecode** wird nur für Dateien unterstützt, die SMPTE-Zeitcodeinformationen enthalten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird **currentPositionTimecode** als 1 Stunde, 0 Minuten, 30 Sekunden und 5 Frames angegeben. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Codebeispiel wird **currentPositionTimecode** als 1 Stunde, null Minuten, 30 Sekunden und 5 Frames angegeben. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -105,7 +105,7 @@ Controls.currentPositionTimecode = &quot;[00000]01:00:30.05&quot;
 
 <dl> <dt>
 
-[**IWMPControls3-Schnittstelle (VB und c#)**](iwmpcontrols3--vb-and-c.md)
+[**IWMPControls3-Schnittstelle (VB und C#)**](iwmpcontrols3--vb-and-c.md)
 </dt> </dl>
 
  

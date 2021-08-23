@@ -1,7 +1,7 @@
 ---
-description: Die Struktur von Datatypes \_ Info \_ 1 enthält Informationen zum Datentyp, der zum Aufzeichnen eines Druckauftrags verwendet wird.
+description: Die DATATYPES INFO 1-Struktur enthält Informationen zum Datentyp, der zum \_ \_ Aufzeichnen eines Druckauftrags verwendet wird.
 ms.assetid: 6169006c-12d4-4608-865c-732f04107f9f
-title: DATATYPES_INFO_1 Struktur (winspool. h)
+title: DATATYPES_INFO_1 -Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: e7259f6559220697538774fef8d2460318df84c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 05defe3d8cc6cd66b15b2cacdd3d3d1d56c348e4946a43700278f100ea17da5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215981"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119719670"
 ---
-# <a name="datatypes_info_1-structure"></a>Datatypes \_ Info \_ 1-Struktur
+# <a name="datatypes_info_1-structure"></a>DATATYPES \_ INFO \_ 1-Struktur
 
-Die Struktur von **Datatypes \_ Info \_ 1** enthält Informationen zum Datentyp, der zum Aufzeichnen eines Druckauftrags verwendet wird.
+Die **DATATYPES \_ INFO \_ 1-Struktur** enthält Informationen zum Datentyp, der zum Aufzeichnen eines Druckauftrags verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ typedef struct _DATATYPES_INFO_1 {
 **pName**
 </dt> <dd>
 
-Zeiger auf eine auf NULL endende Zeichenfolge, die den Datentyp identifiziert, der zum Aufzeichnen eines Druckauftrags verwendet wird.
+Zeiger auf eine auf NULL beendete Zeichenfolge, die den Datentyp identifiziert, der zum Aufzeichnen eines Druckauftrags verwendet wird.
 
 </dd> </dl>
 
@@ -56,22 +56,22 @@ Zeiger auf eine auf NULL endende Zeichenfolge, die den Datentyp identifiziert, d
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Datatypes \_ Info \_ 1W** (Unicode) und **\_ Datatypes \_ Info \_ 1a** (ANSI)<br/>                       |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ DATATYPES \_ INFO \_ 1W** (Unicode) und **\_ DATATYPES \_ INFO \_ 1A** (ANSI)<br/>                       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
-[**Enumprintprocessordatatypes**](enumprintprocessordatatypes.md)
+[**EnumPrintProcessorDatatypes**](enumprintprocessordatatypes.md)
 </dt> </dl>
 
  

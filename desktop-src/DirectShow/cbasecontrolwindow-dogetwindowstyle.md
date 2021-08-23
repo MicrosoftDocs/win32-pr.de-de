@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d970ee52203c5c8dfe8a897c5612604becc2b2e1
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 0fe158e4a17b898110a2555f87b469ee934aa791b6f0379f9054642810673389
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793760"
 ---
 # <a name="cbasecontrolwindowdogetwindowstyle-method"></a>CBaseControlWindow.DoGetWindowStyle-Methode
 
@@ -72,7 +72,7 @@ Wert, der an gibt, welche Stile abgerufen werden. Dies muss eine der folgenden R
 
 Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Memberfunktion ruft die Win32 **GetWindowLong-Funktion** auf, um den Fensterstil abzurufen. Sie wird von den [**Memberfunktionen CBaseControlWindow::get \_ WindowStyle**](cbasecontrolwindow-get-windowstyle.md) und [**CBaseControlWindow::get \_ WindowStyleEx**](cbasecontrolwindow-get-windowstyleex.md) aufgerufen.
 
@@ -82,7 +82,7 @@ Diese Memberfunktion ruft die Win32 **GetWindowLong-Funktion** auf, um den Fenst
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 

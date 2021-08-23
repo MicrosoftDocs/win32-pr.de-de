@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist veraltet. Stattdessen wird die Ableitung von der CIM- \_ Dienstklasse empfohlen.
+description: Diese Klasse ist veraltet. Stattdessen wird empfohlen, von der CIM-Dienstklasse \_ zu ableiten.
 ms.assetid: 67b3a96e-4549-41e0-8097-f8d145df0c49
 title: CIM_NetworkService-Klasse
 ms.topic: reference
@@ -17,16 +17,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: b141e6e38f2fafefdf6e75670b975e0fcdd2961c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cfb2ea7b122516cc3b62f675684649e22577171f713856638f97985d9713e8d5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352513"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694690"
 ---
-# <a name="cim_networkservice-class"></a>CIM- \_ NetworkService-Klasse
+# <a name="cim_networkservice-class"></a>CIM \_ NetworkService-Klasse
 
-Diese Klasse ist veraltet. Stattdessen wird die Ableitung von der [**CIM- \_ Dienst**](cim-service.md) Klasse empfohlen.
+Diese Klasse ist veraltet. Stattdessen wird empfohlen, von der [**CIM-Dienstklasse \_ zu**](cim-service.md) ableiten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ class CIM_NetworkService : CIM_Service
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ NetworkService** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ NetworkService-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ NetworkService** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ NetworkService-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Schlüsselwörter**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("kein Wert")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("Kein Wert")
 </dt> </dl>
 
 Diese Eigenschaft ist veraltet und sollte nicht verwendet werden.
 
 > [!Note]  
-> Veraltete Beschreibung: ein Array von Schlüsselwörtern, die in Abfragen verwendet werden können.
+> Veraltete Beschreibung: Ein Array von Schlüsselwörtern, die in Abfragen verwendet werden können.
 
  
 
 </dd> <dt>
 
-**ServiceUrl**
+**ServiceURL**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -83,34 +83,34 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("CIM \_ serviceaccessuri")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("CIM \_ ServiceAccessURI")
 </dt> </dl>
 
-Diese Eigenschaft ist veraltet. Stattdessen wird die **CIM \_ serviceaccessuri** -Klasse empfohlen.
+Diese Eigenschaft ist veraltet. Stattdessen wird die **CIM \_ ServiceAccessURI-Klasse** empfohlen.
 
 > [!Note]  
-> Veraltete Beschreibung: eine URL, die das Protokoll, den Netzwerk Speicherort und andere Dienst spezifische Informationen bereitstellt, die erforderlich sind, um auf den Dienst zuzugreifen.
+> Veraltete Beschreibung: Eine URL, die das Protokoll, den Netzwerkspeicherort und andere dienstspezifische Informationen enthält, die für den Zugriff auf den Dienst erforderlich sind.
 
  
 
 </dd> <dt>
 
-**Startupconditions**
+**StartupConditions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("kein Wert")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("Kein Wert")
 </dt> </dl>
 
 Diese Eigenschaft ist veraltet und sollte nicht verwendet werden.
 
 > [!Note]  
-> Veraltete Beschreibung: die Voraussetzungen, die erfüllt sein müssen, damit dieser Dienst ordnungsgemäß gestartet wird.
+> Veraltete Beschreibung: Die Voraussetzungen, die erfüllt sein müssen, damit dieser Dienst ordnungsgemäß gestartet werden kann.
 
  
 
@@ -119,19 +119,19 @@ Diese Eigenschaft ist veraltet und sollte nicht verwendet werden.
 **StartupParameters**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("kein Wert")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("Kein Wert")
 </dt> </dl>
 
 Diese Eigenschaft ist veraltet und sollte nicht verwendet werden.
 
 > [!Note]  
-> Deprecated Description: die Parameter, die für die **Start Service** -Methode bereitgestellt werden müssen, damit dieser Dienst ordnungsgemäß gestartet wird.
+> Veraltete Beschreibung: Die Parameter, die für die **StartService-Methode** angegeben werden müssen, damit dieser Dienst ordnungsgemäß gestartet werden kann.
 
  
 
@@ -146,7 +146,7 @@ Diese Eigenschaft ist veraltet und sollte nicht verwendet werden.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -155,7 +155,7 @@ Diese Eigenschaft ist veraltet und sollte nicht verwendet werden.
 
 <dl> <dt>
 
-[**CIM- \_ Dienst**](cim-service.md)
+[**\_CIM-Dienst**](cim-service.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: MCI_VCR_STATUS_PARMS Struktur (VCR. h)
-description: Die Struktur der MCI- \_ VCR- \_ Status \_ Parameter enthält Parameter für den MCI- \_ Status Befehl für Video-Kassetten-Recorder.
+title: MCI_VCR_STATUS_PARMS -Struktur (Vcr.h)
+description: Die MCI \_ VCR STATUS PARMS-Struktur enthält Parameter für den \_ \_ MCI \_ STATUS-Befehl für Video-Cassette-Aufzeichnungen.
 ms.assetid: 5d7cbb64-a81d-4bdd-8f07-8c20dd7b9ef5
 keywords:
-- MCI_VCR_STATUS_PARMS Struktur Windows Multimedia
+- MCI_VCR_STATUS_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d0b197acfa0e170a9ab199cd6d6c51a64e14c320
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8569a278f697ed816085c4fc8f313502d2994215519fb2452f82e63ce31a80cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949485"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119783920"
 ---
-# <a name="mci_vcr_status_parms-structure"></a>Struktur des MCI \_ VCR- \_ Status \_ Parametern
+# <a name="mci_vcr_status_parms-structure"></a>MCI \_ VCR \_ STATUS \_ PARMS-Struktur
 
-Die Struktur der **MCI- \_ VCR- \_ Status \_** Parameter enthält Parameter für den [**MCI- \_ Status**](mci-status.md) Befehl für Video-Kassetten-Recorder.
+Die **MCI \_ VCR \_ STATUS \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ STATUS-Befehl**](mci-status.md) für Video-Cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,44 +44,44 @@ typedef struct tagMCI_VCR_STATUS_PARMS {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwreturn**
+**dwReturn**
 </dt> <dd>
 
-Wert, der vom [**MCI- \_ Status**](mci-status.md) Befehl zurückgegeben wird. Der Rückgabewert variiert je nach Abfrage des Befehls. Weitere Informationen finden Sie in der Beschreibung des Befehls " [**MCI- \_ Status**](mci-status-parms.md) ".
+Der vom [**MCI-Befehl \_ STATUS zurückgegebene**](mci-status.md) Wert. Der Rückgabewert variiert je nach Abfrage des Befehls. Weitere Informationen finden Sie in der Beschreibung des [**Befehls MCI \_ STATUS.**](mci-status-parms.md)
 
 </dd> <dt>
 
-**dwitem**
+**dwItem**
 </dt> <dd>
 
-Der Typ der angeforderten Informationen.
+Typ der angeforderten Informationen.
 
 </dd> <dt>
 
-**dwtrack**
+**dwTrack**
 </dt> <dd>
 
-Audiobild oder Videotitel, das Informationen während der nächsten Aufzeichnung speichert. Dieser Member wird verwendet, um Informationen zurückzugeben, wenn der [**MCI- \_ Status**](mci-status-parms.md) Befehl den Video-oder audioaufzeichnungs Status fragt.
+Audio- oder Videospur, in der Informationen während der nächsten Aufzeichnung gespeichert werden. Dieser Member wird verwendet, um Informationen zurück zu geben, wenn der [**\_ MCI-Befehl STATUS**](mci-status-parms.md) den Status der Video- oder Audioaufzeichnung abfragt.
 
 </dd> <dt>
 
-**dwnumber**
+**dwNumber**
 </dt> <dd>
 
-Logischer Tuner, dem der aktuelle Channel zugeordnet ist. Dieser Member wird verwendet, um Informationen zurückzugeben, wenn der [**MCI- \_ Status**](mci-status.md) Befehl die aktuelle Channelnummer fragt.
+Logischer Tuner, dem der aktuelle Kanal zugeordnet ist. Dieses Member wird verwendet, um Informationen zurück zu geben, wenn der [**\_ MCI-Befehl STATUS**](mci-status.md) die aktuelle Kanalnummer anfragt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,21 +91,21 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VCR. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vcr.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Status**](mci-status.md)
+[**\_MCI-STATUS**](mci-status.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

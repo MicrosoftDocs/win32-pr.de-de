@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_UNICODEINDEX-Konstruktor'
+description: 'Weitere Informationen zu: JET_UNICODEINDEX-Konstruktor'
 title: JET_UNICODEINDEX-Konstruktor
 TOCTitle: 'JET_UNICODEINDEX constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_UNICODEINDEX.#ctor
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4b20fd853f33048c0cc9654a12c3a6aa678df994
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e850698e4f3d1239fe2b5f04cb649f8312d518c8db604966a57ca3c4faa79db1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350829"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832440"
 ---
 # <a name="jet_unicodeindex-constructor"></a>JET_UNICODEINDEX-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,10 +52,10 @@ public JET_UNICODEINDEX()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_UNICODEINDEX-Klasse](./jet-unicodeindex-class.md)
 
-[Mitglieder JET_UNICODEINDEX](./jet-unicodeindex-members.md)
+[JET_UNICODEINDEX-Member](./jet-unicodeindex-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

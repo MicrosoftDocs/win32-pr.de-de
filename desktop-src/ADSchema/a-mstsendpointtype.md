@@ -1,11 +1,11 @@
 ---
-title: MS-TS-Endpoint-Type-Attribut
-description: Mit diesem Attribut wird definiert, ob es sich bei dem Computer um einen physischen oder einen virtuellen Computer handelt.
+title: ms-TS-Endpoint-Type-Attribut
+description: Dieses Attribut definiert, ob der Computer ein physischer Computer oder ein virtueller Computer ist.
 ms.assetid: e7bf05e1-de40-473b-8ab3-27e8aea6c4b9
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-TS-Endpoint-Type\"-Attribut, AD-Schema"
-- AD-Schema für das mstsendpointtype-Attribut
+- MS-TS-Endpoint-Type-Attribut AD-Schema
+- AD-Schema des msTSEndpointType-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9797016cb3bb74b16511c2e73f72d6224f88e276
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: fb4e90e8bacb71a5a82b64dcc3d66a3cfb50746be3d45ad7480724aaa325c199
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119802700"
 ---
-# <a name="ms-ts-endpoint-type-attribute"></a>MS-TS-Endpoint-Type-Attribut
+# <a name="ms-ts-endpoint-type-attribute"></a>ms-TS-Endpoint-Type-Attribut
 
-Mit diesem Attribut wird definiert, ob es sich bei dem Computer um einen physischen oder einen virtuellen Computer handelt.
+Dieses Attribut definiert, ob der Computer ein physischer Computer oder ein virtueller Computer ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-TS-Endpoint-Type                  |
-| LDAP-Display-Name | mstsendpointtype                     |
+| CN                | ms-TS-Endpoint-Type                  |
+| Ldap-Anzeigename | msTSEndpointType                     |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2071              |
-| System-ID-GUID    | 377ade80-e2d8-46c5-9bcd-6d9dec93b35e |
+| System-Id-Guid    | 377ade80-e2d8-46c5-9bcd-6d9dec93b35e |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -54,10 +54,10 @@ Mit diesem Attribut wird definiert, ob es sich bei dem Computer um einen physisc
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
+| Is-Single-Valued       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -75,10 +75,10 @@ Mit diesem Attribut wird definiert, ob es sich bei dem Computer um einen physisc
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
+| Is-Single-Valued       | True                                      |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |

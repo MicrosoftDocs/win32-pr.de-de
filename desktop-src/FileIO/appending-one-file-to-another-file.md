@@ -1,30 +1,30 @@
 ---
-description: Beispielcode, der zeigt, wie eine Anwendung eine Datei am Ende einer anderen Datei anfügen kann, einschließlich der Vorgehensweise zum Öffnen und Schließen von Dateien, lesen und Schreiben in Dateien und Sperren und Entsperren von Dateien.
+description: Beispielcode, der zeigt, wie eine Anwendung eine Datei an das Ende einer anderen Datei anfügen kann, einschließlich des Öffnens und Schließens von Dateien, Lesen und Schreiben in Dateien sowie Sperren und Entsperren von Dateien.
 ms.assetid: e4d1f842-16a1-47e4-84b4-9bb44aaa1dc5
-title: Anhängen einer Datei an eine andere Datei
+title: Anfügen einer Datei an eine andere Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 546d24fe88a2bbf22c190a0caca3b3f98e753720
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 585521c1d0bb85c41806ba83c2c0940dc3523035731279d4da3f06af45334984
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766227"
 ---
-# <a name="appending-one-file-to-another-file"></a>Anhängen einer Datei an eine andere Datei
+# <a name="appending-one-file-to-another-file"></a>Anfügen einer Datei an eine andere Datei
 
-Das Codebeispiel in diesem Thema veranschaulicht das Öffnen und Schließen von Dateien, das Lesen und Schreiben in Dateien sowie das Sperren und Entsperren von Dateien.
+Im Codebeispiel in diesem Thema wird gezeigt, wie Sie Dateien öffnen und schließen, In Dateien lesen und schreiben sowie Dateien sperren und entsperren.
 
-Im Beispiel fügt die Anwendung eine Datei an das Ende einer anderen Datei an. Zuerst öffnet die Anwendung die Datei, die mit Berechtigungen versehen wird, die nur der Anwendung das Schreiben erlauben. Während des Anfüge Vorgangs können andere Prozesse die Datei jedoch mit einer schreibgeschützten Berechtigung Öffnen, die eine Momentaufnahme Ansicht der angefügten Datei bereitstellt. Anschließend wird die Datei während des eigentlichen Anfüge Vorgangs gesperrt, um die Integrität der Daten sicherzustellen, die in die Datei geschrieben werden.
+Im Beispiel fügt die Anwendung eine Datei an das Ende einer anderen Datei an. Zunächst öffnet die Anwendung die Datei, die mit Berechtigungen angefügt wird, die es nur der Anwendung ermöglichen, in sie zu schreiben. Während des Anfügevorgangs können andere Prozesse die Datei jedoch mit schreibgeschützter Berechtigung öffnen, die eine Momentaufnahmeansicht der anzufügenden Datei bereitstellt. Anschließend wird die Datei während des eigentlichen Anfügevorgangs gesperrt, um die Integrität der Daten sicherzustellen, die in die Datei geschrieben werden.
 
-In diesem Beispiel werden keine Transaktionen verwendet. Wenn Sie transaktive Vorgänge verwendet haben, können Sie nur schreibgeschützten Zugriff haben. In diesem Fall werden nur die angefügten Daten angezeigt, nachdem der Transaktionscommit-Vorgang abgeschlossen wurde.
+In diesem Beispiel werden keine Transaktionen verwendet. Wenn Sie transaktive Vorgänge verwenden, verfügen Sie nur über schreibgeschützten Zugriff. In diesem Fall werden die angefügten Daten erst angezeigt, nachdem der Transaktionscommitvorgang abgeschlossen wurde.
 
-Das Beispiel zeigt auch, dass die Anwendung zwei Dateien mithilfe von "- [**Datei**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea)" ("") "
+Das Beispiel zeigt auch, dass die Anwendung mit [**CreateFile**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea)zwei Dateien öffnet:
 
--   One.txt zum Lesen geöffnet ist.
--   Two.txt ist zum Schreiben und zum gemeinsamen Lesen geöffnet.
+-   One.txt wird zum Lesen geöffnet.
+-   Two.txt wird zum Schreiben und zum gemeinsamen Lesen geöffnet.
 
-Dann verwendet die Anwendung [**ReadFile**](/windows/desktop/api/FileAPI/nf-fileapi-readfile) und [**WriteFile**](/windows/desktop/api/FileAPI/nf-fileapi-writefile) , um den Inhalt von One.txt am Ende der Two.txt anzufügen, indem Sie die 4-KB-Blöcke liest und schreibt. Vor dem Schreiben in die zweite Datei verwendet die Anwendung jedoch [**SetFilePointer**](/windows/desktop/api/FileAPI/nf-fileapi-setfilepointer) , um den Zeiger der zweiten Datei auf das Ende dieser Datei festzulegen, und verwendet [**lockfile**](/windows/desktop/api/FileAPI/nf-fileapi-lockfile) , um den zu schreibenden Bereich zu sperren. Dadurch wird verhindert, dass ein anderer Thread oder Prozess mit einem doppelten Handle auf den Bereich zugreift, während der Schreibvorgang ausgeführt wird. Wenn jeder Schreibvorgang beendet ist, wird [**unlockfile**](/windows/desktop/api/FileAPI/nf-fileapi-unlockfile) verwendet, um den gesperrten Bereich zu entsperren.
+Anschließend verwendet die Anwendung [**ReadFile**](/windows/desktop/api/FileAPI/nf-fileapi-readfile) und [**WriteFile,**](/windows/desktop/api/FileAPI/nf-fileapi-writefile) um den Inhalt von One.txt durch Lesen und Schreiben der 4-KB-Blöcke an das Ende Two.txt anzufügen. Vor dem Schreiben in die zweite Datei verwendet die Anwendung [**jedoch SetFilePointer,**](/windows/desktop/api/FileAPI/nf-fileapi-setfilepointer) um den Zeiger der zweiten Datei auf das Ende dieser Datei festzulegen, und [**verwendet LockFile,**](/windows/desktop/api/FileAPI/nf-fileapi-lockfile) um den zu schreibenden Bereich zu sperren. Dadurch wird verhindert, dass ein anderer Thread oder Prozess mit einem doppelten Handle auf den Bereich zugreift, während der Schreibvorgang ausgeführt wird. Wenn jeder Schreibvorgang abgeschlossen ist, wird [**UnlockFile**](/windows/desktop/api/FileAPI/nf-fileapi-unlockfile) verwendet, um den gesperrten Bereich zu entsperren.
 
 
 ```C++

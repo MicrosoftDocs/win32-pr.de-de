@@ -1,9 +1,9 @@
 ---
-title: View. BackgroundImage
-description: Das BackgroundImage-Attribut gibt das Hintergrundbild der Ansicht oder unter Ansicht an oder ruft es ab.
+title: VIEW.backgroundImage
+description: Das backgroundImage-Attribut gibt das Hintergrundbild der VIEW- oder SUBVIEW-Ansicht an oder ruft es ab.
 ms.assetid: 60ffb257-2f43-4ae3-869d-3eb981ef4ae7
 keywords:
-- Anzeigen von BackgroundImage-Windows-Media Player
+- VIEW.backgroundImage-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e96f4a93882e02589d7f15b74ba5cb225f506d69
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c1de8bcbd0eb47f03aaff46b4292a8afe226ca8a221ec570537351af8e509801
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761740"
 ---
-# <a name="viewbackgroundimage"></a>View. BackgroundImage
+# <a name="viewbackgroundimage"></a>VIEW.backgroundImage
 
-Das **BackgroundImage** -Attribut gibt das Hintergrundbild der **Ansicht** oder **unter Ansicht** an oder ruft es ab.
+Das **backgroundImage-Attribut** gibt das Hintergrundbild von **VIEW** oder SUBVIEW an oder ruft **es ab.**
 
 ``` syntax
         elementID.backgroundImage
@@ -29,13 +29,13 @@ Das **BackgroundImage** -Attribut gibt das Hintergrundbild der **Ansicht** oder 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die unterstützten Formate sind BMP, JPG, GIF und PNG. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können seine Farbton-und Sättigungswerte mithilfe der **backgroundimagehueshift** -und **backgroundimagesationtribute** -Attribute dynamisch geändert werden.
+Die unterstützten Formate sind BMP, JPG, GIF und PNG. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können die Farbton- und Sättigungswerte mithilfe der Attribute **backgroundImageHueShift** und **backgroundImageSaturation** dynamisch geändert werden.
 
-Wenn Sie in einem Windows Media-Download Paket das **BackgroundImage** -Attribut für ein **Ansichts** Element angeben, müssen Sie auch das **BackgroundColor** -Attribut für dieses Element angeben.
+Wenn Sie in Windows Mediendownloadpaket das **backgroundImage-Attribut** für ein **VIEW-Element** angeben, müssen Sie auch das **backgroundColor-Attribut** für dieses Element angeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Wenn Sie in einem Windows Media-Download Paket das **BackgroundImage** -Attribut
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -51,13 +51,13 @@ Wenn Sie in einem Windows Media-Download Paket das **BackgroundImage** -Attribut
 
 <dl> <dt>
 
-[**View-Element**](view-element.md)
+[**VIEW-Element**](view-element.md)
 </dt> <dt>
 
-[**View. backgroundimagehueshift**](view-backgroundimagehueshift.md)
+[**VIEW.backgroundImageHueShift**](view-backgroundimagehueshift.md)
 </dt> <dt>
 
-[**View. backgroundimagesationations**](view-backgroundimagesaturation.md)
+[**VIEW.backgroundImageSaturation**](view-backgroundimagesaturation.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: RB_MINIMIZEBAND Meldung (kommstrg. h)
-description: Ändert die Größe eines Bands in einem Grund leisten-Steuerelement auf seine kleinste Größe.
+title: RB_MINIMIZEBAND (Commctrl.h)
+description: Ändern der Größe eines Bands in einem Rebar-Steuerelement auf die kleinste Größe.
 ms.assetid: 4962d90a-2a69-4490-9063-cc2be995df13
 keywords:
-- Windows-Steuerelemente für RB_MINIMIZEBAND Meldung
+- RB_MINIMIZEBAND message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 598f5fc30a9063befff384a8f081027b69fb9512
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 46ef08d33903f002e3aaa8975580a770b941cf4330e8d8e2260dc9a0a4947713
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119798560"
 ---
-# <a name="rb_minimizeband-message"></a>RB \_ minimizeband-Meldung
+# <a name="rb_minimizeband-message"></a>RB \_ MINIMIZEBAND-Meldung
 
-Ändert die Größe eines Bands in einem Grund leisten-Steuerelement auf seine kleinste Größe.
+Ändern der Größe eines Bands in einem Rebar-Steuerelement auf die kleinste Größe.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ ms.locfileid: "103858677"
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index des zu minimier enden Bands.
+Nullbasierter Index des zu minimierenden Bandes.
 
 </dd> <dt>
 
@@ -49,9 +49,9 @@ Der Rückgabewert wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

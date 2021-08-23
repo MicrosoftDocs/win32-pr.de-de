@@ -1,7 +1,7 @@
 ---
-description: Lädt die Filterdaten aus einem angegebenen Datenstrom.
+description: Lädt die Daten des Filters aus einem bestimmten Stream.
 ms.assetid: c2bfd379-2916-4698-bc41-653161723706
-title: Cpersiststream. Load-Methode (pStream. h)
+title: CPersistStream.Load-Methode (Pstream.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 83b16c3fe7bf905d1ade6b7f38cf27c61b44e4d6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d65ff2d2ba95f66e6153aa78a9ce376ed144ac24ce8945c1fbc678e9f6894802
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119813350"
 ---
-# <a name="cpersiststreamload-method"></a>Cpersiststream. Load-Methode
+# <a name="cpersiststreamload-method"></a>CPersistStream.Load-Methode
 
-Lädt die Filterdaten aus einem angegebenen Datenstrom.
+Lädt die Daten des Filters aus einem bestimmten Stream.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT Load(
 
 <dl> <dt>
 
-*pstm* 
+*pStm* 
 </dt> <dd>
 
 Zeiger auf den Stream, aus dem geladen werden soll.
@@ -51,11 +51,11 @@ Zeiger auf den Stream, aus dem geladen werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion implementiert die **IPersistStream:: Load** -Methode.
+Diese Memberfunktion implementiert die **IPersistStream::Load-Methode.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Member-Funktion implementiert die **IPersistStream:: Load** -Methode.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>PStream. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pstream.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Member-Funktion implementiert die **IPersistStream:: Load** -Methode.
 
 <dl> <dt>
 
-[**Cpersiststream-Klasse**](cpersiststream.md)
+[**CPersistStream-Klasse**](cpersiststream.md)
 </dt> </dl>
 
  

@@ -1,26 +1,26 @@
 ---
-title: VML-Margin-Left Attribut
-description: VML-Margin-Left Attribut
+title: VML Margin-Left-Attribut
+description: VML Margin-Left-Attribut
 ms.assetid: 65488c47-06c2-4a8f-8d29-4837865465f4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f98900e862f22f31ad444bc6fb6f372627eca1f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d4f403c19e617f8131886d3f4a862ff1ac0b878edbd2acf2fd0e27cb17b3406c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119680821"
 ---
-# <a name="vml-margin-left-attribute"></a>VML-Margin-Left Attribut
+# <a name="vml-margin-left-attribute"></a>VML Margin-Left-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Gibt den linken Rand des enthaltenden Rechtecks der Form an, das relativ zum Shape-Anker ist. Lese-/Schreibzugriff. **Zeichenfolge**.
+Gibt den linken Rand des enthaltenden Rechtecks der Form relativ zum Formanker an. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
@@ -28,37 +28,37 @@ Gibt den linken Rand des enthaltenden Rechtecks der Form an, das relativ zum Sha
 
 **Tagsyntax**
 
-<v: *Element* Style = "margin-left: *Expression* " >
+<v: *element* style="margin-left: *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Style. MarginLeft = "*Ausdruck*"
+*element* .style.marginleft="*expression*"
 
-*Ausdruck* = *Element*. Style. MarginLeft
+*expression* = *.style.marginleft-Element*
 
 **Anmerkungen**
 
-Das Attribut " **margin-left** " ähnelt dem standardmäßigen HTML-Attribut " **margin-left** ", das mit Stylesheets verwendet wird.
+Das **Margin-Left-Attribut** ähnelt dem html-Standardattribut **Margin-Left,** das mit Stylesheets verwendet wird.
 
-Beachten Sie, dass **MarginLeft** anstelle von **margin-left** für die Skripterstellung verwendet wird. Beachten Sie auch, dass der Rand nicht geändert werden kann, wenn die **Position** **absolut** ist.
+Beachten Sie, dass **marginleft** anstelle von **margin-left** für die Skripterstellung verwendet wird. Beachten Sie außerdem, dass sich der Rand nicht zu ändern scheint, wenn die **Position** **absolut** ist.
 
-Diese Eigenschaft wird anstelle von **left** für Formen in Microsoft Word und Microsoft Excel verwendet, die in einer Position relativ zu einem Ankerpunkt schweben.
+Diese Eigenschaft wird anstelle von **Left** für Formen in Microsoft Word und Microsoft Excel verwendet, die an einer Position relativ zu einem Ankerpunkt gleitend sind.
 
 Mögliche Werte:
 
 
 
-| Wert      | BESCHREIBUNG                                                                                                                                                                                       |
+| Wert      | Beschreibung                                                                                                                                                                                       |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Auto       | Die Standardposition eines Elements im Fluss der Seite.                                                                                                                                           |
-| units      | Standard. Eine Zahl mit einem absoluten Einheiten Kenn Zeichner (cm, mm, in, PT, PC oder px) oder einem relativen Einheiten Kenn Zeichner (em oder Ex). Wenn keine Einheiten angegeben werden, wird die Pixel (px) angenommen. Der Standardwert ist 0. |
-| Prozentwert | Wert, ausgedrückt als Prozentsatz der Höhe des übergeordneten Objekts.                                                                                                                                    |
+| Automatisch       | Standardposition eines Elements im Seitenfluss.                                                                                                                                           |
+| units      | Standard. Eine Zahl mit einem absoluten Einheiten-Kennzeichner (cm, mm, in, pt, pc oder px) oder einem bezeichner für relative Einheiten (em oder ex). Wenn keine Einheiten angegeben werden, wird von Pixeln (px) ausgegangen. Der Standardwert ist 0. |
+| Prozentwert | Der Als Prozentsatz der Höhe des übergeordneten Objekts ausgedrückte Wert.                                                                                                                                    |
 
 
 
- 
+ 
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Siehe auch**
 
@@ -77,8 +77,8 @@ Der linke Rand ist auf 25 Pixel festgelegt.
 
 
 
-[Beispiel für das margin-left-Attribut](/previous-versions/visualstudio/design-tools/expression-studio-3/ee371308(v=expression.40)#examples). (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Beispiel für ein Margin-Left-Attribut.](/previous-versions/visualstudio/design-tools/expression-studio-3/ee371308(v=expression.40)#examples) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

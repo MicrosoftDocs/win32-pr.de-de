@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentossnapshotinvalidsnapidexception-Konstruktor'
-title: Esentossnapshotinvalidsnapidexception-Konstruktor
+description: 'Weitere Informationen zu: EsentOSSnapshotInvalidSnapIdException-Konstruktor'
+title: EsentOSSnapshotInvalidSnapIdException-Konstruktor
 TOCTitle: 'EsentOSSnapshotInvalidSnapIdException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOSSnapshotInvalidSnapIdException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentossnapshotinvalidsnapidexception.esentossnapshotinvalidsnapidexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 72198ac05459562da9fb96c27a7cc3408521980b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4e487714d76895070c82ae575f6420510d4c4f9a35441ed890c8c9b15a4a43b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358844"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119733540"
 ---
-# <a name="esentossnapshotinvalidsnapidexception-constructor"></a>Esentossnapshotinvalidsnapidexception-Konstruktor
+# <a name="esentossnapshotinvalidsnapidexception-constructor"></a>EsentOSSnapshotInvalidSnapIdException-Konstruktor
 
-Initialisiert eine neue Instanz der esentossnapshotinvalidsnapidexception-Klasse.
+Initialisiert eine neue Instanz der EsentOSSnapshotInvalidSnapIdException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentOSSnapshotInvalidSnapIdException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentossnapshotinvalidsnapidexception-Klasse](./esentossnapshotinvalidsnapidexception-class.md)
+[EsentOSSnapshotInvalidSnapIdException-Klasse](./esentossnapshotinvalidsnapidexception-class.md)
 
-[Esentossnapshotinvalidsnapidexception-Member](./esentossnapshotinvalidsnapidexception-members.md)
+[EsentOSSnapshotInvalidSnapIdException-Member](./esentossnapshotinvalidsnapidexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

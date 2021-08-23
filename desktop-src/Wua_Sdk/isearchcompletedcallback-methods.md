@@ -1,25 +1,25 @@
 ---
-description: Die isearchcompletedcallback-Schnittstelle definiert die folgende Methode.
+description: Die ISearchCompletedCallback-Schnittstelle definiert die folgende Methode.
 ms.assetid: cb65a106-2cf7-4544-96cb-47481dc81111
-title: Isearchcompletedcallback-Methoden
+title: ISearchCompletedCallback-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d13ef015192e42bd0020ebcdd222183297a3eaee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 86844c4d1e9e8834313f6592e905125b2f2ec9179127e2431cfc9f2102fe5687
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119756580"
 ---
-# <a name="isearchcompletedcallback-methods"></a>Isearchcompletedcallback-Methoden
+# <a name="isearchcompletedcallback-methods"></a>ISearchCompletedCallback-Methoden
 
-Die [**isearchcompletedcallback**](/windows/desktop/api/Wuapi/nn-wuapi-isearchcompletedcallback) -Schnittstelle definiert die folgende Methode.
+Die [**ISearchCompletedCallback-Schnittstelle**](/windows/desktop/api/Wuapi/nn-wuapi-isearchcompletedcallback) definiert die folgende Methode.
 
 
 
-| Methode                                            | BESCHREIBUNG                                                                                                                                                                     |
+| Methode                                            | Beschreibung                                                                                                                                                                     |
 |---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Invoke**](/windows/desktop/api/Wuapi/nf-wuapi-isearchcompletedcallback-invoke) | Verarbeitet die Benachrichtigung über den Abschluss einer asynchronen Suche, die durch Aufrufen der [**iupdatesearcher. beginsearch**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatesearcher-beginsearch) -Methode initiiert wird. |
+| [**Invoke**](/windows/desktop/api/Wuapi/nf-wuapi-isearchcompletedcallback-invoke) | Behandelt die Benachrichtigung über den Abschluss einer asynchronen Suche, die durch Aufrufen der [**IUpdateSearcher.BeginSearch-Methode**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatesearcher-beginsearch) initiiert wird. |
 
 
 

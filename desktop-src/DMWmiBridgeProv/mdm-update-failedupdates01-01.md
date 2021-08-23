@@ -1,6 +1,6 @@
 ---
 title: MDM_Update_FailedUpdates01_01-Klasse
-description: Die Klasse MDM \_ Update \_ FailedUpdates01 \_ 01 wird zum Verwalten von fehlgeschlagenen Updates verwendet.
+description: Die MDM \_ Update \_ FailedUpdates01 \_ 01-Klasse wird verwendet, um fehlgeschlagene Updates zu verwalten.
 ms.assetid: 3bb7993b-b44b-44d1-84ee-dbdda0093ca0
 keywords:
 - MDM_Update_FailedUpdates01_01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e0ba8d42d97b15cd195e87f536abad9610492e9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 646f485544e9a51711e55453d79f1a16d0a37d38c8d18d6ed4d2340e3c34fa30
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119795950"
 ---
-# <a name="mdm_update_failedupdates01_01-class"></a>MDM- \_ Update \_ FailedUpdates01 01- \_ Klasse
+# <a name="mdm_update_failedupdates01_01-class"></a>MDM \_ Update \_ FailedUpdates01 \_ 01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die Klasse **MDM \_ Update \_ FailedUpdates01 \_ 01** wird zum Verwalten von fehlgeschlagenen Updates verwendet.
+Die **MDM \_ Update \_ FailedUpdates01 \_ 01-Klasse** wird verwendet, um fehlgeschlagene Updates zu verwalten.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,17 +47,17 @@ class MDM_Update_FailedUpdates01_01
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Update- \_ FailedUpdates01 \_ 01** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Update \_ FailedUpdates01 \_ 01-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM-Update-Klasse \_ \_ FailedUpdates01 \_ 01** verfügt über diese Eigenschaften.
+Die **MDM \_ Update \_ FailedUpdates01 \_ 01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[HRESULT](/windows/client-management/mdm/update-csp#failedupdates-failed-update-guid-hresult)
+[Hresult](/windows/client-management/mdm/update-csp#failedupdates-failed-update-guid-hresult)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -71,32 +71,32 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Bei dieser Klasse ist die Zeichenfolge die GUID des fehlgeschlagenen Updates.
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge die GUID des fehlgeschlagenen Updates.
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Update/FailedUpdates".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/Update/FailedUpdates".
 
 </dd> <dt>
 
@@ -117,11 +117,11 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl>      |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl>      |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 

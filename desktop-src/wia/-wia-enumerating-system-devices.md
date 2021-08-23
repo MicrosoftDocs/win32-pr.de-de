@@ -1,23 +1,23 @@
 ---
-description: 'Verwenden Sie die iwiadevmgr:: enumdevicumfo (oder IWiaDevMgr2:: enumdevicumfo)-Methode, um die auf einem System installierten Windows-Abbild Erfassungsgeräte (WIA) aufzuzählen.'
+description: Verwenden Sie die IWiaDevMgr::EnumDeviceInfo-Methode (oder IWiaDevMgr2::EnumDeviceInfo), um die auf einem System installierten WIA-Geräte (Windows Image Acquisition) aufzulisten.
 ms.assetid: 6465a33e-1b3b-4142-a58f-b27e9c95cd3e
-title: Auflisten von System Geräten
+title: Aufzählen von Systemgeräten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d2d65879cd1fc8466f4ada638281ef496636b19
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 60b6587d88b2836e057f0b6d7e31bd7f22d79c6220c51b407b621370d8524b89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959824"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119814260"
 ---
-# <a name="enumerating-system-devices"></a>Auflisten von System Geräten
+# <a name="enumerating-system-devices"></a>Aufzählen von Systemgeräten
 
-Verwenden Sie die [**iwiadevmgr:: enumdevicumfo**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-enumdeviceinfo) (oder [**IWiaDevMgr2:: enumdevicumfo**](-wia-iwiadevmgr2-enumdeviceinfo.md))-Methode, um die auf einem System installierten Windows-Abbild Erfassungsgeräte (WIA) aufzuzählen. Diese Methode erstellt ein Enumerationsobjekt für die Eigenschaften der Geräte und gibt einen Zeiger auf die [**ienumwia \_ dev \_ Info**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) -Schnittstelle zurück, die das Enumerationsobjekt unterstützt.
+Verwenden Sie die [**Methode IWiaDevMgr::EnumDeviceInfo**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-enumdeviceinfo) (oder [**IWiaDevMgr2::EnumDeviceInfo),**](-wia-iwiadevmgr2-enumdeviceinfo.md)um die auf einem System installierten WIA-Geräte (Windows Image Acquisition) aufzulisten. Diese Methode erstellt ein Enumerationsobjekt für die Eigenschaften der Geräte und gibt einen Zeiger auf die [**IEnumWIA \_ DEV \_ INFO-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) zurück, die das Enumerationsobjekt unterstützt.
 
-Anschließend können Sie die Methoden der [**ienumwia \_ dev \_ Info**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) -Schnittstelle verwenden, um für jedes im System installierte Gerät einen [**iwiapropertystorage**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) -Schnittstellen Zeiger zu erhalten.
+Anschließend können Sie die Methoden der [**IEnumWIA \_ DEV \_ INFO-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) verwenden, um einen [**IWiaPropertyStorage-Schnittstellenzeiger**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) für jedes auf dem System installierte Gerät abzurufen.
 
-Der folgende Code aus der wiassamp-Beispielanwendung veranschaulicht, wie ein Enumerationsobjekt für die Geräte in einem System erstellt und diese Geräte durchlaufen werden:
+Der folgende Code aus der WiaSSamp-Beispielanwendung veranschaulicht, wie Sie ein Enumerationsobjekt für die Geräte auf einem System erstellen und diese Geräte durchlaufen:
 
 
 ```
@@ -96,17 +96,17 @@ Der folgende Code aus der wiassamp-Beispielanwendung veranschaulicht, wie ein En
 
 
 
-WIA (WIA) \_ \_ \_ ist eine WIA-Konstante, die den einzigen gültigen Wert für diesen Parameter darstellt.
+WIA \_ DEVINFO \_ ENUM \_ LOCAL ist eine WIA-Konstante, die den einzigen gültigen Wert für diesen Parameter darstellt.
 
-Im Beispiel zeigt der Parameter **pwiadevmgr** nach einem vorherigen [cokreateinstance-Code](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)auf eine Instanz der [**iwiadevmgr**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadevmgr) -Schnittstelle (oder der [**IWiaDevMgr2**](-wia-iwiadevmgr2.md)-Schnittstelle).
+Im Beispiel zeigt der **Parameter pWiaDevMgr** nach einem vorherigen Aufruf von [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)auf eine Instanz der [**Schnittstelle IWiaDevMgr**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadevmgr) (oder [**IWiaDevMgr2).**](-wia-iwiadevmgr2.md)
 
-Die Anwendung ruft die [**iwiadevmgr:: enumdeviceinfo**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-enumdeviceinfo) (oder [**IWiaDevMgr2:: enumdeviceinfo**](-wia-iwiadevmgr2-enumdeviceinfo.md))-Methode des [**iwiadevmgr**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadevmgr) (oder [**IWiaDevMgr2**](-wia-iwiadevmgr2.md))-Zeigers **pwiadevmgr** auf, der **pwiaenumdevinfo** mit der Adresse eines Zeigers auf die [**ienumwia \_ dev \_ Info**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) -Schnittstelle füllt.
+Die Anwendung ruft die [**IWiaDevMgr::EnumDeviceInfo-Methode**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-enumdeviceinfo) (oder [**IWiaDevMgr2::EnumDeviceInfo)**](-wia-iwiadevmgr2-enumdeviceinfo.md)des [**IWiaDevMgr-Zeigers**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadevmgr) (oder [**IWiaDevMgr2)**](-wia-iwiadevmgr2.md) **pWiaDevMgr** auf, der **pWiaEnumDevInfo** mit der Adresse eines Zeigers auf die [**IEnumWIA \_ DEV \_ INFO-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) füllt.
 
-Wenn der Aufruf erfolgreich ist, ruft die Anwendung dann die [**ienumwia \_ dev \_ Info:: Reset**](/windows/desktop/api/wia_xp/nf-wia_xp-ienumwia_dev_info-reset) -Methode des [**ienumwia \_ dev \_ Info**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) -Zeigers auf. Die **pwiaenumdebug** -Variable stellt sicher, dass die Enumeration am Anfang beginnt.
+Wenn der Aufruf erfolgreich ist, ruft die Anwendung die [**IEnumWIA \_ DEV \_ INFO::Reset-Methode**](/windows/desktop/api/wia_xp/nf-wia_xp-ienumwia_dev_info-reset) des [**IEnumWIA \_ DEV \_ INFO-Zeigers**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) auf. Die **Variable pWiaEnumDevInfo** stellt sicher, dass die Enumeration am Anfang beginnt.
 
-Wenn dieser Aufruf erfolgreich ist, durchläuft die Anwendung die Geräte im System durch wiederholtes Aufrufen der [**ienumwia \_ dev \_ Info:: Next**](/windows/desktop/api/wia_xp/nf-wia_xp-ienumwia_dev_info-next) -Methode des [**ienumwia \_ dev \_ Info**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) -Zeigers **pwiaenumdevinfo** , bis die Methode nicht mehr S OK zurückgibt \_ , was darauf hinweist, dass die Enumeration abgeschlossen ist.
+Wenn dieser Aufruf erfolgreich ist, durchläuft die Anwendung die Geräte im System, indem sie wiederholt die [**IEnumWIA \_ DEV \_ INFO::Next-Methode**](/windows/desktop/api/wia_xp/nf-wia_xp-ienumwia_dev_info-next) des [**IEnumWIA \_ DEV \_ INFO-Zeigers**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwia_dev_info) **pWiaEnumDevInfo** aufruft, bis die Methode S OK nicht mehr zurückgibt, \_ was angibt, dass die Enumeration abgeschlossen ist.
 
-Jeder **pwiaenumdevinfo->Next-Befehl** füllt **pwiapropertystorage** mit einem Zeiger auf die [**iwiapropertystorage**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) -Schnittstelle auf, die Eigenschafts Informationen für ein bestimmtes Gerät enthält.
+Jeder Aufruf von **pWiaEnumDevInfo->Next** füllt **pWiaPropertyStorage** mit einem Zeiger auf die [**IWiaPropertyStorage-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) aus, die Eigenschafteninformationen für ein bestimmtes Gerät enthält.
 
  
 

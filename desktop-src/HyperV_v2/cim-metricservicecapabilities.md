@@ -1,5 +1,5 @@
 ---
-description: Beschreibt die Funktionen eines CIM \_ metricservice-Objekts.
+description: Beschreibt die Funktionen eines \_ CIM-MetricService-Objekts.
 ms.assetid: 3b4da02f-5298-46d4-876c-404baca38c03
 title: CIM_MetricServiceCapabilities-Klasse
 ms.topic: reference
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: f878cb0e616cb710a33d350df866160fc0eebb83
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c784fc9fac067c0cde07ad3e8911f9e09cd81b5cd3d7c76c16b1dd2407536838
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694959"
 ---
-# <a name="cim_metricservicecapabilities-class"></a>CIM \_ metricservicecapabili-Klasse
+# <a name="cim_metricservicecapabilities-class"></a>\_CIM-Klasse "MetricServiceCapabilities"
 
-Beschreibt die Funktionen eines [**CIM \_ metricservice**](cim-metricservice.md) -Objekts.
+Beschreibt die Funktionen eines [**\_ CIM-MetricService-Objekts.**](cim-metricservice.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,63 +45,63 @@ class CIM_MetricServiceCapabilities : CIM_EnabledLogicalElementCapabilities
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ metricservicecapabili-** Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-Klasse MetricServiceCapabilities** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ metricservicecapabili-** Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse MetricServiceCapabilities** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Controllablemanagedelements**
+**ControllableManagedElements**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ metricservicecapabili.****Managedelta Message Controller Types**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ MetricServiceCapabilities**.**ManagedElementControlTypes**")
 </dt> </dl>
 
-Ein Array, das Bezeichner der [**CIM- \_ managedelta**](cim-managedelement.md) -Instanzen enthält, die vom metrikdienst gesteuert werden. Die Bezeichner müssen als Web-Based Enterprise Management (WBEM)-URIs formatiert sein. Um diese Eigenschaft verwenden zu können, muss der metrikdienst das Aktivieren oder Deaktivieren von mindestens einer Metrik unterstützen, die für die **CIM- \_ managedelements** -Instanz definiert ist.
+Ein Array, das Bezeichner der [**CIM \_ ManagedElement-Instanzen**](cim-managedelement.md) enthält, die vom Metrikdienst gesteuert werden. Die Bezeichner müssen als WBEM-URIs (Web-Based Enterprise Management) formatiert werden. Um diese Eigenschaft verwenden zu können, muss der Metrikdienst das Aktivieren oder Deaktivieren von mindestens einer Metrik unterstützen, die für die **CIM \_ ManagedElement-Instanz definiert** ist.
 
 </dd> <dt>
 
-**Controllablemetrics**
+**ControllableMetrics**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ metricservicecapabili.****Metriccontroltypes**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ MetricServiceCapabilities**.**MetricControlTypes**")
 </dt> </dl>
 
-Ein Array, das Bezeichner der [**CIM \_ basemetricdefinition**](cim-basemetricdefinition.md) enthält, die die vom metrikdienst verwalteten Metriken definiert. Die Bezeichner müssen als Web-Based Enterprise Management (WBEM)-URIs formatiert sein.
+Ein Array, das Bezeichner der [**CIM \_ BaseMetricDefinition**](cim-basemetricdefinition.md) enthält, die die vom Metrikdienst verwalteten Metriken definiert. Die Bezeichner müssen als WBEM-URIs (Web-Based Enterprise Management) formatiert werden.
 
-Um diese Eigenschaft zu verwenden, muss eine [**CIM \_ basemetricdefinition**](cim-basemetricdefinition.md) -Instanz über die [**CIM \_ serviceaffectselements**](cim-serviceaffectselement.md) -Klasse einer [**CIM- \_ metricservice**](cim-metricservice.md) -Instanz zugeordnet werden. Außerdem muss der metrikdienst das Aktivieren oder Deaktivieren von mindestens einer Metrik unterstützen, die von der **CIM \_ basemetricdefinition** -Instanz definiert wird.
+Um diese Eigenschaft verwenden zu können, muss eine [**CIM \_ BaseMetricDefinition-Instanz**](cim-basemetricdefinition.md) über die [**CIM \_ ServiceAffectsElement-Klasse**](cim-serviceaffectselement.md) einer [**CIM \_ MetricService-Instanz**](cim-metricservice.md) zugeordnet werden. Darüber hinaus muss der Metrikdienst das Aktivieren oder Deaktivieren von mindestens einer Metrik unterstützen, die von der **CIM \_ BaseMetricDefinition-Instanz definiert** wird.
 
 </dd> <dt>
 
-**Managedelta Type Controller Types**
+**ManagedElementControlTypes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ metricservicecapabili.****Controllablemanagedelements**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ MetricServiceCapabilities**.**ControllableManagedElements**")
 </dt> </dl>
 
-Ein Array, das die Steuerelement Typen angibt, die vom metrikdienst für die verwalteten Elemente im **Steuerelement "controllablemanagedelements** " unterstützt werden. Dieses Array entspricht dem **controllablemanagedelements** -Array. Die Steuerelement Typen in diesem Array sind über das Steuerelement " **controllablemanagedelements** " mit Metriken verknüpft.
+Ein Array, das die Steuerelementtypen angibt, die vom Metrikdienst für die verwalteten Elemente im **ControllableManagedElements-Array unterstützt** werden. Dieses Array entspricht dem **ControllableManagedElements-Array.** Die Steuerelementtypen in diesem Array werden Metriken über das **ControllableManagedElements-Array** zugeordnet.
 
 <dt>
 
@@ -121,47 +121,47 @@ Ein Array, das die Steuerelement Typen angibt, die vom metrikdienst für die ver
 
 <span id="Bulk"></span><span id="bulk"></span><span id="BULK"></span>
 
-**Massen** Vorgang (3)
+**Massen** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Both"></span><span id="both"></span><span id="BOTH"></span>
 
-**Beides** (4)
+**Beide** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Metricscontroltypes**
+**MetricsControlTypes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ metricservicecapabili.****Controllablemetrics**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ MetricServiceCapabilities**.**ControllableMetrics**")
 </dt> </dl>
 
-Ein Array, das die Steuerelement Typen angibt, die vom metrikdienst unterstützt werden. Dieses Array entspricht dem **controllablemetrics** -Array. Die Steuerelement Typen in diesem Array werden Metriken über das **controllablemetrics** -Array zugeordnet.
+Ein Array, das die Steuerelementtypen angibt, die vom Metrikdienst unterstützt werden. Dieses Array entspricht dem **ControllableMetrics-Array.** Die Steuerelementtypen in diesem Array werden Metriken über das **ControllableMetrics-Array** zugeordnet.
 
 <dt>
 
@@ -181,28 +181,28 @@ Ein Array, das die Steuerelement Typen angibt, die vom metrikdienst unterstützt
 
 <span id="Bulk"></span><span id="bulk"></span><span id="BULK"></span>
 
-**Massen** Vorgang (3)
+**Massen** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Both"></span><span id="both"></span><span id="BOTH"></span>
 
-**Beides** (4)
+**Beide** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -212,68 +212,68 @@ Ein Array, das die Steuerelement Typen angibt, die vom metrikdienst unterstützt
 **SupportedMethods**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array, das die Namen der Methoden enthält, die vom metrikdienst unterstützt werden.
+Ein Array, das Namen von Methoden enthält, die vom Metrikdienst unterstützt werden.
 
 <dt>
 
 <span id="ControlMetrics"></span><span id="controlmetrics"></span><span id="CONTROLMETRICS"></span>
 
-**Controlmetrics** (2)
+**ControlMetrics** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ControlMetricsByClass"></span><span id="controlmetricsbyclass"></span><span id="CONTROLMETRICSBYCLASS"></span>
 
-**Controlmetricsbyclass** (3)
+**ControlMetricsByClass** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ShowMetrics"></span><span id="showmetrics"></span><span id="SHOWMETRICS"></span>
 
-**Showmetrics** (4)
+**ShowMetrics** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ShowMetricsByClass"></span><span id="showmetricsbyclass"></span><span id="SHOWMETRICSBYCLASS"></span>
 
-**Showmetricsbyclass** (5)
+**ShowMetricsByClass** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="GetMetricValues"></span><span id="getmetricvalues"></span><span id="GETMETRICVALUES"></span>
 
-**Getmetricvalues** (6)
+**GetMetricValues** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ControlSampleTimes"></span><span id="controlsampletimes"></span><span id="CONTROLSAMPLETIMES"></span>
 
-**Controlsampletimes** (7)
+**ControlSampleTimes** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>
 
-**Hersteller spezifisch** (0X8000..)
+**Herstellerspezifisch** (0x8000.)
 
 
 </dt> <dd></dd> </dl>
@@ -289,7 +289,7 @@ Ein Array, das die Namen der Methoden enthält, die vom metrikdienst unterstütz
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -298,7 +298,7 @@ Ein Array, das die Namen der Methoden enthält, die vom metrikdienst unterstütz
 
 <dl> <dt>
 
-[**CIM \_ enabledlogicalelementfunktionalitäten**](cim-enabledlogicalelementcapabilities.md)
+[**CIM \_ EnabledLogicalElementCapabilities**](cim-enabledlogicalelementcapabilities.md)
 </dt> </dl>
 
  

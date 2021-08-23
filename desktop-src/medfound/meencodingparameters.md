@@ -1,29 +1,29 @@
 ---
-description: Gesendet von der Pipeline an Encoder-MFTs serialisiert mit Medien Beispielen über imftransform::P rocesabvent.
+description: Wird von der Pipeline an Encoder-MFTs seriell mit Medienbeispielen über DIE ÜBERTRANSFORM::P rocessEvent gesendet.
 ms.assetid: D5D4544B-CD8D-4C94-B050-7BA1944800CC
-title: Meencodingparameters-Ereignis (mfobjects. h)
+title: MEEncodingParameters-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e193044b25eb1d333182a2593fcf2248fba2366
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2230640adf1f92111569a39558f2959271a23ea2b5dbe5d0d915b6a2b989d371
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215170"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119723830"
 ---
-# <a name="meencodingparameters-event"></a>Meencodingparameters-Ereignis
+# <a name="meencodingparameters-event"></a>MEEncodingParameters-Ereignis
 
-Gesendet von der Pipeline an Encoder-MFTs serialisiert mit Medien Beispielen über [**imftransform::P rocesabvent**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processevent).
+Wird von der Pipeline an Encoder-MFTs seriell mit Medienbeispielen über [**DIETRANSFORM::P rocessEvent**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processevent)gesendet.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -33,15 +33,15 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 
 
-| Attribut                                         | BESCHREIBUNG                                                                                                                    |
+| attribute                                         | Beschreibung                                                                                                                    |
 |---------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| [**Imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)<br/> | Enthält die neuen icodecapi-basierten Einstellungen, die der Encoder auf nachfolgende eingehende Stichproben anwenden soll.<br/> <br/> |
+| [**ATTRIBUTEAttributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)<br/> | Enthält die neuen ICodecAPI-basierten Einstellungen, die der Encoder auf nachfolgende eingehende Stichproben anwenden soll.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Ereignis Nutzlast ist ein Attribut Speicher (imfattributes-Zeiger), der die neuen icodecapi-basierten///-Einstellungen enthält, die der Encoder auf nachfolgende eingehende Beispiele anwenden soll.
+Bei der Ereignisnutzlast handelt es sich um einen Attributspeicher (POINTERAttributes-Zeiger), der die neuen ICodecAPI-basierten /-Einstellungen enthält, die der Encoder auf nachfolgende eingehende Stichproben anwenden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,17 +49,17 @@ Die Ereignis Nutzlast ist ein Attribut Speicher (imfattributes-Zeiger), der die 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                  |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                  |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation-Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Enthält die globalen Einstellungen für die automatische Konfiguration von verkabelten Netzwerken.
+description: Enthält die globalen Einstellungen für die automatische Konfiguration verkabelter Netzwerke.
 ms.assetid: 172cf15c-cd51-43d4-ae5d-f9460c2a40e2
-title: globalflags-Element (lanpolicy)
+title: globalFlags-Element (LANPolicy)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: c9a244fbbc616e3092e2293fe187da1d7be0fa53
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bfbfecbc1d60e34a913bb523f5af8c2ab25665fd689976c87725d392f6ea26c2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119801130"
 ---
-# <a name="globalflags-lanpolicy-element"></a>globalflags-Element (lanpolicy)
+# <a name="globalflags-lanpolicy-element"></a>globalFlags-Element (LANPolicy)
 
-Das globalflags-Element (lanpolicy) enthält die globalen Einstellungen für die automatische Konfiguration von verkabelten Netzwerken.
+Das element globalFlags (LANPolicy) enthält die globalen Einstellungen für die automatische Konfiguration von kabelgebundenen Netzwerken.
 
 ``` syntax
 <xs:element name="globalFlags">
@@ -41,15 +41,15 @@ Das globalflags-Element (lanpolicy) enthält die globalen Einstellungen für die
 </xs:element>
 ```
 
-Das **globalflags** -Element wird durch das [**lanpolicy**](lan-policyschema-lanpolicy-element.md) -Element definiert.
+Das **globalFlags-Element** wird durch das [**LANPolicy-Element**](lan-policyschema-lanpolicy-element.md) definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 
 
-| Element                                                                           | type    | BESCHREIBUNG                                                                                                                                                                          |
+| Element                                                                           | Typ    | Beschreibung                                                                                                                                                                          |
 |-----------------------------------------------------------------------------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**enableautoconfig**](lan-policyschema-enableautoconfig-globalflags-element.md) | boolean | Gibt an, ob Computer den integrierten automatischen Konfigurations Dienst zum Verwalten von Verbindungen mit verkabelten Netzwerken verwenden, die Layer 2-Authentifizierung erfordern (z. b. 802.1 x).<br/> |
+| [**enableAutoConfig**](lan-policyschema-enableautoconfig-globalflags-element.md) | boolean | Gibt an, ob Computer den integrierten automatischen Konfigurationsdienst verwenden, um Verbindungen mit kabelgebundenen Netzwerken zu verwalten, die eine Layer-2-Authentifizierung erfordern (z. B. 802.1X).<br/> |
 
 
 
@@ -59,8 +59,8 @@ Das **globalflags** -Element wird durch das [**lanpolicy**](lan-policyschema-lan
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -68,16 +68,16 @@ Das **globalflags** -Element wird durch das [**lanpolicy**](lan-policyschema-lan
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Lanpolicy**](lan-policyschema-lanpolicy-element.md)
+[**LANPolicy**](lan-policyschema-lanpolicy-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Lanpolicy**](lan-policyschema-lanpolicy-element.md)
+[**LANPolicy**](lan-policyschema-lanpolicy-element.md)
 </dt> </dl>
 
  

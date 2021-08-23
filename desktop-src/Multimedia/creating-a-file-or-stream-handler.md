@@ -1,23 +1,23 @@
 ---
-title: Erstellen einer Datei oder eines streamhandlers
-description: Erstellen einer Datei oder eines streamhandlers
+title: Erstellen eines Datei- oder Streamhandlers
+description: Erstellen eines Datei- oder Streamhandlers
 ms.assetid: 9ec1af9a-f428-4323-a4f8-3eb923ce78d7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b2f118f4f5279cea1aacedd58b86f23afa9a9af
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a6732c572e390f3401f6e0472659bec7c522189b357b04d8ef7def20a7d9519b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036827"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119785790"
 ---
-# <a name="creating-a-file-or-stream-handler"></a>Erstellen einer Datei oder eines streamhandlers
+# <a name="creating-a-file-or-stream-handler"></a>Erstellen eines Datei- oder Streamhandlers
 
-In einer Anwendung, die in der Programmiersprache C geschrieben ist, erstellt ein Datei-oder streamhandler in der Regel eine Funktion für jede Methode. Die Anwendung greift auf diese Funktionen über ein Array von Funktions Zeigern zu, die der streamhandler erstellt. Eine **iavistreamvtbl** -Struktur enthält das Array von Funktions Zeigern. Ein Datenstrom Handler kann jeden beliebigen Namen zuweisen, den er für die Methoden erstellt. Die Position des Funktions Zeigers in der Struktur impliziert die Entsprechung der Funktion zur Methode. Beispielsweise entspricht der erste Funktionszeiger in der-Struktur der **QueryInterface** -Methode. Der Datenstrom Handler muss alle Funktionen einer Schnittstelle bereitstellen.
+In einer Anwendung, die in der Programmiersprache C geschrieben wurde, erstellt ein Datei- oder Streamhandler in der Regel eine Funktion für jede Methode. Ihre Anwendung greift über ein Array von Funktionszeigern, die der Streamhandler erstellt, auf diese Funktionen zu. Eine **IAVIStreamVtbl-Struktur** enthält das Array von Funktionszeigern. Ein Streamhandler kann einen beliebigen Namen zuweisen, der für die Methoden erstellt werden soll. Die Position des Funktionszeigers in der -Struktur impliziert die Entsprechung der Funktion mit der -Methode. Beispielsweise entspricht der erste Funktionszeiger in der -Struktur der **QueryInterface-Methode.** Ihr Streamhandler muss alle Funktionen einer Schnittstelle bereitstellen.
 
- 
+ 
 
- 
+ 
 
 
 

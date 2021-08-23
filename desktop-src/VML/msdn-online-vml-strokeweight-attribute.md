@@ -1,26 +1,26 @@
 ---
-title: VML-Attribut "strokeweight"
-description: VML-Attribut "strokeweight"
+title: VML-StrokeWeight-Attribut
+description: VML-StrokeWeight-Attribut
 ms.assetid: 364882b2-e5f4-4a86-b7d7-352f8780ebdc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a8da9f7220315b066676f2439f37b97250cc7c8
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: abac5efa964607fdd942c8dff31a4a124d424aa5fbfeede27abc6164fddef087
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119680680"
 ---
-# <a name="vml-strokeweight-attribute"></a>VML-Attribut "strokeweight"
+# <a name="vml-strokeweight-attribute"></a>VML-StrokeWeight-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Pinsel Stärke, mit der der Pfad einer Form festgelegt wird. Lese-/Schreibzugriff. **Vglength**.
+Definiert die Pinselstärke, die den Pfad einer Form strichiert. Lese-/Schreibzugriff. **VGLength**.
 
 **Gilt für**
 
@@ -28,29 +28,29 @@ Definiert die Pinsel Stärke, mit der der Pfad einer Form festgelegt wird. Lese-
 
 **Tagsyntax**
 
-<v: *Element* strokeweight = " *Expression* " >
+<v: *element* strokeweight=" *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . strokeweight = "*Ausdruck*"
+*element* .strokeweight="*expression*"
 
-*Ausdruck* = *Element*. strokeweight
+*expression* = *Element*.strokeweight
 
 **Anmerkungen**
 
-Der Wert wird aus dem **Weight** -Attribut des **Stroke** -Elements dupliziert. Wenn eine Zahl angegeben, aber keine Einheiten hinzugefügt werden, ist die Standard Maßeinheit die EWU. Wenn kein Wert angegeben wird, ist der Standardwert 1 Pixel (1px).
+Der Wert wird aus dem **Weight-Attribut** des **Stroke-Elements dupliziert.** Wenn eine Zahl angegeben wird, aber keine Einheiten hinzugefügt werden, ist die Standardeinheit der Emu. Wenn kein Wert angegeben wird, beträgt der Standardwert 1 Pixel (1 px).
 
-Bei der Skripterstellung wird jedoch die Standard Maßeinheit in Punkten angezeigt.
+Für die Skripterstellung befindet sich die Standardmessungseinheit jedoch in Punkten.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Siehe auch**
 
-[Strich](msdn-online-vml-stroke-element.md), [ivglength](msdn-online-vml-vglength.md), [Einheiten](msdn-online-vml-units.md)
+[Stroke](msdn-online-vml-stroke-element.md), [IVgLength](msdn-online-vml-vglength.md), [Units](msdn-online-vml-units.md)
 
 **Beispiel**
 
-Die Strich Gewichtung der Form ist 1 Punkt.
+Die Strichgewichtung der Form beträgt 1 Punkt.
 
 
 ```HTML
@@ -64,8 +64,8 @@ Die Strich Gewichtung der Form ist 1 Punkt.
 
 
 
-[Beispiel für ein strokeweight-Attribut](/previous-versions/bb264095(v=vs.85)). (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[StrokeWeight-Attribut – Beispiel.](/previous-versions/bb264095(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

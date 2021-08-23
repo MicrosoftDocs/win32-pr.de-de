@@ -1,11 +1,11 @@
 ---
-title: Iwmpwiedergabe AttributeCount (Eigenschaft)
-description: Die AttributeCount-Eigenschaft ruft die Anzahl der Attribute ab, die einer Wiedergabeliste zugeordnet sind.
+title: IWMPPlaylist attributeCount-Eigenschaft
+description: Die attributeCount-Eigenschaft ruft die Anzahl der Attribute ab, die einer Wiedergabeliste zugeordnet sind.
 ms.assetid: 0713ec4e-7e06-4ad2-8f7c-17ed5a92d5ee
 keywords:
-- AttributeCount-Eigenschaft, Windows-Media Player
-- AttributeCount-Eigenschaft, Windows Media Player, iwmpwiedergabe-Schnittstelle
-- Iwmpwiedergabe Interface, Windows Media Player, AttributeCount (Eigenschaft)
+- attributeCount-Eigenschaft Windows Media Player
+- attributeCount-Eigenschaft Windows Media Player , IWMPPlaylist-Schnittstelle
+- IWMPPlaylist-Schnittstelle Windows Media Player , attributeCount-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4107eb1ad302415715b573b55d2dee1d7155128d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6b51c621f5a484c23a2f7d0677fe20d1b62bfb4d2ec94228e003adc2ebc841cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119760770"
 ---
-# <a name="iwmpplaylistattributecount-property"></a>Iwmpwiedergabe:: AttributeCount (Eigenschaft)
+# <a name="iwmpplaylistattributecount-property"></a>IWMPPlaylist::attributeCount-Eigenschaft
 
-Die **AttributeCount** -Eigenschaft ruft die Anzahl der Attribute ab, die einer Wiedergabeliste zugeordnet sind.
+Die **attributeCount-Eigenschaft** ruft die Anzahl der Attribute ab, die einer Wiedergabeliste zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,19 +46,19 @@ Public ReadOnly Property attributeCount As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die Anzahl der der Wiedergabeliste zugeordneten Attribute ist.
+Eine **System.Int32-Datei,** die der Anzahl von Attributen entspricht, die der Wiedergabeliste zugeordnet sind.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da Wiedergabelisten aus vielen verschiedenen Quellen stammen können, können Sie mehrere unterschiedliche Sätze von Attributen haben. Diese Eigenschaft ruft die Gesamtanzahl von Attributen ab, die einer bestimmten Wiedergabeliste zugeordnet sind, sodass andere Member der **iwmpwiedergabe** -Schnittstelle darauf zugreifen können.
+Da Wiedergabelisten aus vielen verschiedenen Quellen stammen können, können sie über mehrere unterschiedliche Attribute verfügen. Diese Eigenschaft ruft die Gesamtzahl der Attribute ab, die einer bestimmten Wiedergabeliste zugeordnet sind, sodass andere Member der **IWMPPlaylist-Schnittstelle** darauf zugreifen können.
 
-Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Eigenschaft verwenden können, benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Weitere Informationen zu Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attribut Referenz](attribute-reference.md).
+Weitere Informationen zu Attributen, die von Windows Media Player unterstützt werden, finden Sie unter [Attributverweis.](attribute-reference.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird veranschaulicht, wie verschiedene Eigenschaften und Methoden der **iwmpwiedergabe** -Schnittstelle und der **iwmpmedia** -Schnittstelle verwendet werden, indem ein TreeView-Steuerelement mit Knoten für die aktuelle Wiedergabeliste, Wiedergabelisten Attribute, Medienelemente in der Wiedergabeliste und Medien Element Attribute gefüllt wird. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird veranschaulicht, wie verschiedene Eigenschaften und Methoden der **IWMPPlaylist-** und **IWMPMedia-Schnittstellen** verwendet werden, indem ein Treeview-Steuerelement mit Knoten für die aktuelle Wiedergabeliste, Wiedergabelistenattribute, Medienelemente in der Wiedergabeliste und Medienelementattribute gefüllt wird. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -173,7 +173,7 @@ displayAttributes.Nodes.Add(mediaRootNode)
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -183,7 +183,7 @@ displayAttributes.Nodes.Add(mediaRootNode)
 
 <dl> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> </dl>
 
  

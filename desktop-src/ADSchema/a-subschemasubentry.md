@@ -1,11 +1,11 @@
 ---
-title: Subschemasubentry-Attribut
-description: Der Distinguished Name für den Speicherort des unter Schema Objekts, in dem eine Klasse oder ein Attribut definiert ist.
+title: SubSchemaSubEntry-Attribut
+description: Der Distinguished Name für den Speicherort des Unterschemaobjekts, in dem eine Klasse oder ein Attribut definiert ist.
 ms.assetid: 16beeb31-436c-4ae1-b1f7-fa00abb3bcbb
 ms.tgt_platform: multiple
 keywords:
-- Subschemasubentry-Attribut, AD-Schema
-- subschemasubentry-Attribut, AD-Schema
+- SubSchemaSubEntry-Attribut AD-Schema
+- subSchemaSubEntry-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 57a0278d63d3a6ed9d0f84ad67df87e248af31f1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 389eaf9a0761633b15bc39d93f8e37b5abb3fdf7b1fbca79530fd14df2d2eab5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519647"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836136"
 ---
-# <a name="subschemasubentry-attribute"></a>Subschemasubentry-Attribut
+# <a name="subschemasubentry-attribute"></a>SubSchemaSubEntry-Attribut
 
-Der Distinguished Name für den Speicherort des unter Schema Objekts, in dem eine Klasse oder ein Attribut definiert ist.
+Der Distinguished Name für den Speicherort des Unterschemaobjekts, in dem eine Klasse oder ein Attribut definiert ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| CN                | Subschemasubentry                                                                |
-| LDAP-Display-Name | subschemasubentry                                                                |
+| CN                | SubSchemaSubEntry                                                                |
+| Ldap-Anzeigename | subSchemaSubEntry                                                                |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Schema Administrator                                                             |
-| Aktualisierungshäufigkeit  | Wenn die Active Directory geladen wird oder wenn eine neue Klasse oder ein neues Attribut definiert wird. |
+| Aktualisieren von Berechtigungen  | Schemaadministrator                                                             |
+| Updatehäufigkeit  | Beim Laden von Active Directory oder beim Definieren einer neuen Klasse oder eines neuen Attributs. |
 | Attribute-Id      | 2.5.18.10                                                                        |
 | System-ID-GUID    | 9a7ad94d-ca53-11d1-bbd0-0080c76670c0                                             |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md)                                          |
@@ -43,7 +43,7 @@ Der Distinguished Name für den Speicherort des unter Schema Objekts, in dem ein
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,10 +59,10 @@ Der Distinguished Name für den Speicherort des unter Schema Objekts, in dem ein
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -71,7 +71,7 @@ Der Distinguished Name für den Speicherort des unter Schema Objekts, in dem ein
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ Der Distinguished Name für den Speicherort des unter Schema Objekts, in dem ein
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -101,10 +101,10 @@ Der Distinguished Name für den Speicherort des unter Schema Objekts, in dem ein
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -122,10 +122,10 @@ Der Distinguished Name für den Speicherort des unter Schema Objekts, in dem ein
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -143,10 +143,10 @@ Der Distinguished Name für den Speicherort des unter Schema Objekts, in dem ein
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -164,10 +164,10 @@ Der Distinguished Name für den Speicherort des unter Schema Objekts, in dem ein
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -185,10 +185,10 @@ Der Distinguished Name für den Speicherort des unter Schema Objekts, in dem ein
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

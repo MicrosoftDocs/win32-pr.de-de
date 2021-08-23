@@ -1,7 +1,7 @@
 ---
-description: Die mcsvc-Methode ruft die OnStatus-Methode auf, um den Monitor zu benachrichtigen, dass ein NPP-Status Ereignis vorhanden ist. Diese Methode muss vom Monitor implementiert werden.
+description: Die MCSVC-Methode ruft die OnStatus-Methode auf, um den Monitor zu benachrichtigen, dass ein NPP-Statusereignis vorhanden ist. Diese Methode muss vom Monitor implementiert werden.
 ms.assetid: 771852b1-77d8-4d7d-b3fb-03eb3ea593b8
-title: 'Imonitor:: OnStatus-Methode (Netmon. h)'
+title: IMonitor::OnStatus-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Netmon.h
-ms.openlocfilehash: fc2716a10673cc1178591b14a335b1d8559aa35a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2a82594400bebc8a529290e0e0e881603172aa45c111d2d4d83ebcbd5ebfbeb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119779040"
 ---
-# <a name="imonitoronstatus-method"></a>Imonitor:: OnStatus-Methode
+# <a name="imonitoronstatus-method"></a>IMonitor::OnStatus-Methode
 
-Die mcsvc-Methode ruft die **OnStatus** -Methode auf, um den Monitor zu benachrichtigen, dass ein NPP-Status Ereignis vorhanden ist. Diese Methode muss vom Monitor implementiert werden.
+Die MCSVC-Methode ruft die **OnStatus-Methode** auf, um den Monitor zu benachrichtigen, dass ein NPP-Statusereignis vorhanden ist. Diese Methode muss vom Monitor implementiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,18 +39,18 @@ HRESULT OnStatus(
 
 <dl> <dt>
 
-*Ereignis* \[ in\]
+*Ereignis* \[ In\]
 </dt> <dd>
 
-Eine [Update- \_ Ereignis](update-event.md) Struktur.
+Eine [UPDATE \_ EVENT-Struktur.](update-event.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK (entspricht noError), und der mcsvc übergibt den zurückgegebenen Wert zur Verarbeitung an den NPP zurück.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S OK (was mit NOERROR identisch ist), und MCSVC übergibt den zurückgegebenen Wert zur Verarbeitung zurück an \_ den NPP.
 
-Wenn die Methode nicht erfolgreich ist, wird ein Fehlercode zurückgegeben. Bei einem Fehler übergibt der mcsvc den zurückgegebenen Wert zur Verarbeitung an den NPP zurück.
+Wenn die Methode nicht erfolgreich ist, geben Sie einen Fehlercode zurück. Bei einem Fehler übergibt MCSVC den zurückgegebenen Wert zur Verarbeitung zurück an das NPP.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Wenn die Methode nicht erfolgreich ist, wird ein Fehlercode zurückgegeben. Bei 
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

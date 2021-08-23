@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Server2003Api. jedessnapshotabort-Methode'
-title: Server2003Api. jedessnapshotabort-Methode (Microsoft. ISAM. ESENT. Interop. Server2003)
+description: 'Weitere Informationen finden Sie unter: Server2003Api.JetOSSnapshotAbort-Methode'
+title: Server2003Api.JetOSSnapshotAbort-Methode (Microsoft.Isam.Esent.Interop.Server2003)
 TOCTitle: 'JetOSSnapshotAbort method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Server2003.Server2003Api.JetOSSnapshotAbort(Microsoft.Isam.Esent.Interop.JET_OSSNAPID,Microsoft.Isam.Esent.Interop.Server2003.SnapshotAbortGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.server2003.server2003api.jetossnapshotabort(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 44ee61a7c6cff7fe90a77fdaced786532457c132
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6ca7633ce07468c7c516988e7e048b6c9673bc3ed685bbee35a4f5f094a59db3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119780220"
 ---
-# <a name="server2003apijetossnapshotabort-method"></a>Server2003Api. jedessnapshotabort-Methode
+# <a name="server2003apijetossnapshotabort-method"></a>Server2003Api.JetOSSnapshotAbort-Methode
 
-Benachrichtigt die Engine, dass Sie normale e/a-Vorgänge fortsetzen kann, nachdem eine Sperrfrist mit einem fehlerhaften Snapshot erreicht wurde.
+Benachrichtigt die Engine, dass sie normale E/A-Vorgänge fortsetzen kann, nachdem ein Einfrierenzeitraum mit einer fehlerhaften Momentaufnahme beendet wurde.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Server2003](./microsoft.isam.esent.interop.server2003-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Server2003](./microsoft.isam.esent.interop.server2003-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,23 +62,23 @@ public static void JetOSSnapshotAbort(
 #### <a name="parameters"></a>Parameter
 
   - snapid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_OSSNAPID](./jet-ossnapid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_OSSNAPID](./jet-ossnapid-structure.md)  
     
-    Der Bezeichner der Momentaufnahme Sitzung.
+    Bezeichner der Momentaufnahmesitzung.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. Server2003. snapshotabortgrbit](./snapshotabortgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.Server2003.SnapshotAbortGrbit](./snapshotabortgrbit-enumeration.md)  
     
-    Optionen für diesen-Befehl.
+    Optionen für diesen Aufruf.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Server2003Api-Klasse](./server2003api-class.md)
 
 [Server2003Api-Member](./server2003api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Server2003-Namespace](./microsoft.isam.esent.interop.server2003-namespace.md)
+[Microsoft.Isam.Esent.Interop.Server2003-Namespace](./microsoft.isam.esent.interop.server2003-namespace.md)

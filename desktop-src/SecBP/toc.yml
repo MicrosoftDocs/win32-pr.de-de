@@ -1,12 +1,12 @@
 - name: Bewährte Methoden für die Sicherheits-APIs
   href: best-practices-for-the-security-apis.md
   items:
-    - name: Ausführen mit besonderen Berechtigungen
+    - name: Ausführen mit speziellen Berechtigungen
       href: running-with-special-privileges.md
       items:
-        - name: Ausführen mit Administrator Rechten
+        - name: Ausführen mit Administratorrechten
           href: running-with-administrator-privileges.md
-        - name: Benutzer werden zur Anmelde Informationen aufgefordert
+        - name: Fragen des Benutzers nach Anmeldeinformationen
           href: asking-the-user-for-credentials.md
         - name: Ändern von Berechtigungen in einem Token
           href: changing-privileges-in-a-token.md
@@ -21,10 +21,10 @@
           href: pe-metadata.md
     - name: Erstellen einer DACL
       href: creating-a-dacl.md
-    - name: Behandeln von Kenn Wörtern
+    - name: Behandeln von Kennwörtern
       href: handling-passwords.md
       items:
-        - name: Kenn Wort Bedrohungsbewertung
+        - name: Bewertung der Kennwortbedrohung
           href: password-threat-assessment.md
         - name: Techniken zur Bedrohungsminderung
           href: threat-mitigation-techniques.md

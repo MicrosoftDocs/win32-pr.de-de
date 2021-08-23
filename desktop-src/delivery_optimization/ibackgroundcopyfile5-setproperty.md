@@ -1,11 +1,11 @@
 ---
-title: IBackgroundCopyFile5 SetProperty-Methode (deliveryoptimization. h)
-description: Legt eine generische Eigenschaft einer Übermittlungs Optimierungs Datei-Übertragung (Do) fest.
+title: IBackgroundCopyFile5 SetProperty-Methode (Deliveryoptimization.h)
+description: Legt eine generische Eigenschaft einer Übermittlungsoptimierung(DO)-Dateiübertragung fest.
 ms.assetid: 63B6806E-47D6-49B0-9867-628C110540D0
 keywords:
 - SetProperty-Methode
 - SetProperty-Methode, IBackgroundCopyFile5-Schnittstelle
-- IBackgroundCopyFile5 Interface, SetProperty-Methode
+- IBackgroundCopyFile5-Schnittstelle, SetProperty-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7f519ee77af0ae6e0c3d1d036aeeb6a8ad712870
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 10da7fff9066ccefe7c356e3577ffffe7b0fc2e89d5fdb3f74611f5621d5b757
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949785"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755600"
 ---
-# <a name="ibackgroundcopyfile5setproperty-method"></a>IBackgroundCopyFile5:: SetProperty-Methode
+# <a name="ibackgroundcopyfile5setproperty-method"></a>IBackgroundCopyFile5::SetProperty-Methode
 
-Legt eine generische Eigenschaft einer Übermittlungs Optimierungs Datei-Übertragung (Do) fest.
+Legt eine generische Eigenschaft einer Übermittlungsoptimierung(DO)-Dateiübertragung fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,23 +44,23 @@ HRESULT SetProperty(
 
 <dl> <dt>
 
-*PropertyId* \[ in\]
+*PropertyId* \[ In\]
 </dt> <dd>
 
-Gibt die festzulegende Eigenschaft an.
+Gibt die eigenschaft an, die festgelegt werden soll.
 
 </dd> <dt>
 
-*Proertyvalue* \[ vorgenommen\]
+*ProertyValue* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Union, die den festzulegenden Wert angibt. Das für die eigen schafts-ID geeignete Unionmember wird verwendet.
+Ein Zeiger auf eine Union, die den wert angibt, der festgelegt werden soll. Der für die Eigenschaften-ID geeignete Union-Member wird verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, gibt **sie** S_OK. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,24 +68,24 @@ Wenn diese Methode erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur Desktop-Apps der Version 1709) \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyFile5 ist als "85c1657f-DAFC-40e8-8834-df18ea25717e" definiert.<br/>             |
+| IID<br/>                      | IID_IBackgroundCopyFile5 ist als 85C1657F-DAFC-40E8-8834-DF18EA25717E definiert.<br/>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IBackgroundCopyFile5**](ibackgroundcopyfile5.md)
 </dt> <dt>
 
-[**IBackgroundCopyFile5. GetProperty**](ibackgroundcopyfile5-getproperty.md)
+[**IBackgroundCopyFile5.GetProperty**](ibackgroundcopyfile5-getproperty.md)
 </dt> </dl>
 
  

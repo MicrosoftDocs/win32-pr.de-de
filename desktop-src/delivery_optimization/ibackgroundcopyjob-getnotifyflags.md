@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopyjob getnotifyflags-Methode (deliveryoptimization. h)
-description: Ruft die ereignisbenachrichtigungsflags für den Auftrag ab.
+title: IBackgroundCopyJob GetNotifyFlags-Methode (Deliveryoptimization.h)
+description: Ruft die Ereignisbenachrichtigungsflags für den Auftrag ab.
 ms.assetid: 95ADC97F-63DC-4EB6-B85C-7BCC79238C12
 keywords:
-- Getnotifyflags-Methode
-- Getnotifyflags-Methode, ibackgroundcopyjob-Schnittstelle
-- Ibackgroundcopyjob-Schnittstelle, getnotifyflags-Methode
+- GetNotifyFlags-Methode
+- GetNotifyFlags-Methode, IBackgroundCopyJob-Schnittstelle
+- IBackgroundCopyJob-Schnittstelle, GetNotifyFlags-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e104857725849dfeb899b449ea055bc3cdb046bd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0f25a79fbf3ec508526f8107b55ad70c37b860ca99115945f9ee9f77b84ab138
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755390"
 ---
-# <a name="ibackgroundcopyjobgetnotifyflags-method"></a>Ibackgroundcopyjob:: getnotifyflags-Methode
+# <a name="ibackgroundcopyjobgetnotifyflags-method"></a>IBackgroundCopyJob::GetNotifyFlags-Methode
 
-Ruft die ereignisbenachrichtigungsflags für den Auftrag ab.
+Ruft die Ereignisbenachrichtigungsflags für den Auftrag ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ HRESULT GetNotifyFlags(
 
 <dl> <dt>
 
-*pnotifyflags* \[ vorgenommen\]
+*pNotifyFlags* \[ out\]
 </dt> <dd>
 
-Identifiziert die Ereignisse, die von der Anwendung empfangen werden. In der folgenden Tabelle sind die Werte für das Ereignis Benachrichtigungs Kennzeichen aufgeführt.
+Identifiziert die Ereignisse, die Ihre Anwendung empfängt. In der folgenden Tabelle sind die Werte des Ereignisbenachrichtigungsflags aufgeführt.
 
 
 
@@ -54,7 +54,7 @@ Identifiziert die Ereignisse, die von der Anwendung empfangen werden. In der fol
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
 | <span id="BG_NOTIFY_JOB_TRANSFERRED"></span><span id="bg_notify_job_transferred"></span><dl> <dt>**BG_NOTIFY_JOB_TRANSFERRED**</dt> </dl>    | Alle Dateien im Auftrag wurden übertragen.<br/>                  |
 | <span id="BG_NOTIFY_JOB_ERROR"></span><span id="bg_notify_job_error"></span><dl> <dt>**BG_NOTIFY_JOB_ERROR**</dt> </dl>                      | Es ist ein Fehler aufgetreten.<br/>                                              |
-| <span id="BG_NOTIFY_DISABLE"></span><span id="bg_notify_disable"></span><dl> <dt>**BG_NOTIFY_DISABLE**</dt> </dl>                             | Die Ereignis Benachrichtigung ist deaktiviert. Wenn festgelegt, werden die anderen Flags ignoriert.<br/> |
+| <span id="BG_NOTIFY_DISABLE"></span><span id="bg_notify_disable"></span><dl> <dt>**BG_NOTIFY_DISABLE**</dt> </dl>                             | Ereignisbenachrichtigung ist deaktiviert. Wenn diese Einstellung festgelegt ist, ignoriert DO die anderen Flags.<br/> |
 | <span id="BG_NOTIFY_JOB_MODIFICATION"></span><span id="bg_notify_job_modification"></span><dl> <dt>**BG_NOTIFY_JOB_MODIFICATION**</dt> </dl> | Der Auftrag wurde geändert.<br/>                                          |
 
 
@@ -65,13 +65,13 @@ Identifiziert die Ereignisse, die von der Anwendung empfangen werden. In der fol
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurück.
+Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 
 
 | Rückgabecode                                                                              | Beschreibung                                                |
 |------------------------------------------------------------------------------------------|------------------------------------------------------------|
-| <dl> <dt>S_OK * * * *</dt> </dl> | Die Flags für die Ereignis Benachrichtigung wurden erfolgreich abgerufen.<br/> |
+| <dl> <dt>S_OK</dt> </dl> | Ereignisbenachrichtigungsflags wurden erfolgreich abgerufen.<br/> |
 
 
 
@@ -83,30 +83,30 @@ Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurü
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668d37-507E-4160-9316-26306d150b12 definiert.<br/>               |
+| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668D37-507E-4160-9316-26306D150B12 definiert.<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IBackgroundCopyJob**](ibackgroundcopyjob-.md)
 </dt> <dt>
 
-[**Ibackgroundcopycallback**](ibackgroundcopycallback.md)
+[**IBackgroundCopyCallback**](ibackgroundcopycallback.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: getnotifyinterface**](ibackgroundcopyjob-getnotifyinterface.md)
+[**IBackgroundCopyJob::GetNotifyInterface**](ibackgroundcopyjob-getnotifyinterface.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: setnotifyflags**](ibackgroundcopyjob-setnotifyflags.md)
+[**IBackgroundCopyJob::SetNotifyFlags**](ibackgroundcopyjob-setnotifyflags.md)
 </dt> </dl>
 
  

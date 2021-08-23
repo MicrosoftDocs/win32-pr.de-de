@@ -13,12 +13,12 @@ api_type:
 - DllExport
 api_location:
 - Msjint40.dll
-ms.openlocfilehash: cba2d09f9865c43a5b64a34783c621c783c7aac3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0377b8507507b40c5b17c3d9bb6861e5077f8c7bb763b51c66289ab1819f9cc7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119815470"
 ---
 # <a name="cchlszofid2-function"></a>CchLszOfId2-Funktion
 
@@ -44,21 +44,21 @@ UINT CchLszOfId2(
 *id* 
 </dt> <dd>
 
-Der Bezeichner der Zeichenfolge in der Ressourcen Datei, die decodiert und gespeichert werden soll. Die Gültigkeit der Zeichenfolge wird nicht überprüft.
+Der Bezeichner der Zeichenfolge in der Ressourcendatei, die decodiert und gespeichert werden soll. Die Gültigkeit der Zeichenfolge wird nicht überprüft.
 
 </dd> <dt>
 
-*LSZ* 
+*lsz* 
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer mit einer Länge von *cbmax*. Zeichen folgen, die länger sind als *cbmax* , werden abgeschnitten.
+Ein Zeiger auf einen Puffer mit der Länge *cbmax*. Zeichenfolgen, die länger als *cbmax* sind, werden abgeschnitten.
 
 </dd> <dt>
 
 *cbmax* 
 </dt> <dd>
 
-Die maximale Länge der Zeichenfolge, die im *LSZ* -Parameter gespeichert werden soll.
+Die maximale Länge der Zeichenfolge, die im *lsz-Parameter* gespeichert werden soll.
 
 </dd> </dl>
 
@@ -66,9 +66,9 @@ Die maximale Länge der Zeichenfolge, die im *LSZ* -Parameter gespeichert werden
 
 Diese Funktion gibt die decodierte Zeichenfolge zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

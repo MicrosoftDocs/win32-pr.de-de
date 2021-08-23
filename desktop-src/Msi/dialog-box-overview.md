@@ -1,32 +1,32 @@
 ---
-description: Das Erstellen eines Dialog Felds in Windows Installer ähnelt dem Prozess der programmgesteuerten Erstellung eines Dialog Felds mithilfe einer Microsoft Windows-API-Dialogfeld Vorlage.
+description: Das Erstellen eines Dialogfelds in Windows Installer ähnelt dem programmgesteuerten Erstellen eines Dialogfelds mithilfe einer Dialogfeldvorlage für die Microsoft Windows-API.
 ms.assetid: c46f6b7b-e78c-4dd8-a4ff-7da5465391f9
-title: Dialog Feld Übersicht
+title: Übersicht über das Dialogfeld
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 884c85f06bc06588084311aee370700d5b2a5290
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9a17963148100d8f0d99a6fdb9e043654e089880b81ade0a943b92b4bfcd35f7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764170"
 ---
-# <a name="dialog-box-overview"></a>Dialog Feld Übersicht
+# <a name="dialog-box-overview"></a>Übersicht über das Dialogfeld
 
-Das Erstellen eines Dialog Felds in Windows Installer ähnelt dem Prozess der programmgesteuerten Erstellung eines Dialog Felds mithilfe einer Microsoft Windows-API-Dialogfeld Vorlage. Während eine Windows-Dialogfeld Vorlage in einer null-terminierten –-Zeichenfolge gespeichert wird, speichert Windows Installer die Dialogfeld Parameter in der Dialogfeld Tabelle. Die Dialog Feld Tabelle enthält eine Spalte Attribute, die analog zu Fenster Stilen in der Microsoft Windows-API für die Benutzeroberfläche ist. Die Anzahl der Dialogfeld Stil-Bits in Windows Installer ist jedoch ein reduzierter und spezieller Satz.
+Das Erstellen eines Dialogfelds in Windows Installer ähnelt dem programmgesteuerten Erstellen eines Dialogfelds mithilfe einer Dialogfeldvorlage für die Microsoft Windows-API. Während eine Windows Dialogfeldvorlage in einer null-Terminzeichenfolge gespeichert wird, speichert Windows Installer die Dialogfeldparameter in der Tabelle Dialog. Die Tabelle Dialog enthält eine Attributspalte, die den Fensterstilen in der Microsoft Windows-Benutzeroberfläche entspricht. Die Anzahl der Dialogformatbits in Windows Installer ist jedoch ein reduzierter und spezialisierter Satz.
 
-Um das Dialogfeld mithilfe der API der Windows-Benutzeroberfläche physisch zu erstellen, wird [**Dialogbox**](/windows/win32/api/winuser/nf-winuser-dialogboxa) aufgerufen und übergibt einen Zeiger auf die Vorlage. In Windows Installer wird das Dialogfeld während der Ausführung einer der drei UI-Sequenz Tabellen erstellt.
+Zum physischen Erstellen des Dialogfelds mithilfe der Windows-Api für die Benutzeroberfläche wird [**DialogBox**](/windows/win32/api/winuser/nf-winuser-dialogboxa) aufgerufen und übergibt einen Zeiger auf die Vorlage. In Windows Installer wird das Dialogfeld während der Ausführung einer der drei Ui-Sequenztabellen erstellt.
 
-Windows Installer enthält keine Standardbenutzer Oberfläche, die Paket Autoren für Ihre Pakete verwenden können. Sie enthält einen begrenzten Satz von Standard Dialogfeldern, die Fehler-und Informationsmeldungen anzeigen. Diese werden jedoch nur angezeigt, wenn Windows Installer die Dialog-und UI-Sequenz Tabellen abfragt und feststellt, dass keine benutzerdefinierten Dialogfelder verfügbar sind.
+Windows Das Installationsprogramm enthält keine Standardbenutzeroberfläche, die Paketautoren für ihre Pakete verwenden können. Sie enthält eine begrenzte Anzahl von Standarddialogfeldern, die Fehler- und Informationsmeldungen anzeigen. Diese werden jedoch nur angezeigt, wenn Windows Installer die Tabellen Dialog und UI Sequence abfragt und feststellt, dass keine benutzerdefinierten Dialogfelder verfügbar sind.
 
-Das Installer SDK enthält eine minimale Datenbank mit dem Namen Uisample.msi, die die Tabellen für die Benutzeroberfläche und die Ausführungssequenz sowie eine vollständige Benutzeroberfläche enthält Diese Datenbank kann problemlos angepasst und mit einem beliebigen Paket zusammengeführt werden.
+Das Installationsprogramm-SDK enthält eine minimale Datenbank mit dem Namen Uisample.msi, die aufgefüllte Ui- und Ausführungssequenztabellen sowie eine vollständige Benutzeroberfläche enthält. Diese Datenbank kann problemlos angepasst und mit einem beliebigen Paket zusammengeführt werden.
 
-Einige Standard Aktionen und interne Windows Installer Fehlerbedingungen geben einen bestimmten Satz von Benutzeroberflächen Daten zurück und benötigen daher ein Dialogfeld mit einer bestimmten Gruppe von Steuerelementen, um diese Daten zu unterstützen. Windows Installer überprüft zwei separate Speicherorte für die Bezeichner für diese Dialogfelder.
+Einige Standardaktionen und interne Windows Installer-Fehlerbedingungen geben einen bestimmten Satz von Benutzeroberflächendaten zurück und erfordern daher ein Dialogfeld mit einem bestimmten Satz von Steuerelementen, um diese Daten aufzunehmen. Windows Das Installationsprogramm überprüft zwei separate Speicherorte auf die Bezeichner für diese Dialogfelder.
 
--   Windows Installer enthält einen Satz von eingebetteten Dialogfeld Namen. Die benutzerdefinierte Aktion fragt die Dialog Tabelle nach diesen reservierten Namen ab.
--   In jeder der drei UI-Sequenz Tabellen werden Dialog Namen mit der Sequenznummer-1,-2 oder-3 als Reaktion auf beenden, vom Benutzer angeforderte Beendigung und schwerwiegende Fehlermeldungen aus Windows Installer angezeigt.
+-   Windows Das Installationsprogramm enthält einen Satz eingebetteter Dialogfeldnamen. Die benutzerdefinierte Aktion fragt die Tabelle Dialog nach diesen reservierten Namen ab.
+-   In jeder der drei Ui-Sequenztabellen werden Dialognamen mit der Sequenznummer -1,-2 oder -3 als Antwort auf das Beenden, vom Benutzer angeforderte Beendigung und schwerwiegende Fehlermeldungen von Windows Installer angezeigt.
 
-Eine komplette Liste der Namen der reservierten Primärschlüssel Dialogfelder finden Sie in den [Dialogfeldern](dialog-boxes.md). Beachten Sie, dass der Name des Primärschlüssel-Dialog Felds nur vom Installationsprogramm reserviert wird und in Windows Installer keine bestimmte Implementierung des Dialog Felds vorhanden ist. Paket Autoren müssen weiterhin alle Felder in der Datenbank auffüllen, die die Attribute und Steuerelemente dieser reservierten Dialogfelder angeben.
+Eine vollständige Liste der Namen reservierter Primärschlüsseldialogfelder ist in [den Dialogfeldern](dialog-boxes.md)verfügbar. Beachten Sie, dass der Name des Primärschlüsseldialogfelds nur vom Installationsprogramm reserviert wird und es keine spezifische Implementierung des Dialogfelds innerhalb Windows Installers gibt. Paketautoren müssen weiterhin alle Felder in der Datenbank auffüllen, die die Attribute und Steuerelemente dieser reservierten Dialogfelder angeben.
 
  
 

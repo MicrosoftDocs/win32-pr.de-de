@@ -1,7 +1,7 @@
 ---
-description: Die Methode checkheaderordinüberprüft eine BITMAPINFOHEADER-Struktur. Diese Methode ist nur für nicht komprimierte RGB-Typen, nicht für komprimierte Typen oder YUV-Typen nützlich.
+description: Die CheckHeaderValidity-Methode überprüft eine BITMAPINFOHEADER-Struktur. Diese Methode ist nur für nicht komprimierte RGB-Typen nützlich, nicht für komprimierte Typen oder YUV-Typen.
 ms.assetid: 24b547b6-b730-48b2-9a1b-6e77f9cb1ce1
-title: Cimagedisplay. checkheadergültigkeit-Methode (winutil. h)
+title: CImageDisplay.CheckHeaderValidity-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 803e8cd1a70c68f3e20c320978e9a350bdf23bdb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 25c8ce12f7e383e04942184e3897d0ddc52700a1a621844719d94f54f60203ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652360"
 ---
-# <a name="cimagedisplaycheckheadervalidity-method"></a>Cimagedisplay. checkheadergültigkeit-Methode
+# <a name="cimagedisplaycheckheadervalidity-method"></a>CImageDisplay.CheckHeaderValidity-Methode
 
-Die- `CheckHeaderValidity` Methode überprüft eine [**BITMAPINFOHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) -Struktur. Diese Methode ist nur für nicht komprimierte RGB-Typen, nicht für komprimierte Typen oder YUV-Typen nützlich.
+Die `CheckHeaderValidity` -Methode überprüft eine [**BITMAPINFOHEADER-Struktur.**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) Diese Methode ist nur für nicht komprimierte RGB-Typen nützlich, nicht für komprimierte Typen oder YUV-Typen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ BOOL CheckHeaderValidity(
 
 <dl> <dt>
 
-*pinput* 
+*pInput* 
 </dt> <dd>
 
-Zeiger auf eine [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur, die die **BITMAPINFOHEADER** -Struktur enthält.
+Zeiger auf eine [**VIDEOINFO-Struktur,**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) die die **BITMAPINFOHEADER-Struktur** enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn der **BITMAPINFOHEADER** gültig ist, andernfalls **false** .
+Gibt **TRUE zurück,** **wenn BITMAPINFOHEADER** gültig ist, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überprüft, ob die Bild Dimensionen nicht negativ sind. der Komprimierungstyp ist BI \_ RGB-oder BI- \_ Bitfields; die Farbtiefe und die Farb Masken sind gültig. der **Biplane** -Member ist gleich 1, und die **bisize** -und **bisizeimage** -Member sind richtig. Er prüft außerdem ggf., ob häufige Fehler in den paletteneinträgen vorhanden sind.
+Diese Methode überprüft, ob die Bilddimensionen nicht negativ sind. Der Komprimierungstyp ist BI RGB oder BI BITFIELDS. Die Farbtiefe und farbmasken sind gültig, das BiPlanes-Member ist gleich 1, und die \_ \_ Elemente **biSize** und **biSizeImage**  sind korrekt. Außerdem werden häufige Fehler in den Paletteneinträgen überprüft, sofern diese auftreten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode überprüft, ob die Bild Dimensionen nicht negativ sind. der Kompr
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode überprüft, ob die Bild Dimensionen nicht negativ sind. der Kompr
 
 <dl> <dt>
 
-[**Cimagedisplay-Klasse**](cimagedisplay.md)
+[**CImageDisplay-Klasse**](cimagedisplay.md)
 </dt> </dl>
 
  

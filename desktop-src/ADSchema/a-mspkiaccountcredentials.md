@@ -1,11 +1,11 @@
 ---
-title: MS-PKI-Account-Anmelde Informationen-Attribut
-description: Speicherung verschlüsselter Benutzer Anmelde Informationen tokenblob für Roaming. | MS-PKI-Account-Anmelde Informationen-Attribut
+title: ms-PKI-AccountCredentials-Attribut
+description: Storage verschlüsselter Token-BLOBs für Benutzeranforderungen für das Roaming. | ms-PKI-AccountCredentials-Attribut
 ms.assetid: 08df5c7d-3aae-4cff-97df-25da6995c72e
 ms.tgt_platform: multiple
 keywords:
-- MS-PKI-Account-Anmelde Informationen-Attribut, AD-Schema
-- mspkiaccountanmelde-Attribut AD-Schema
+- MS-PKI-AccountCredentials-Attribut AD-Schema
+- MSPKIAccountCredentials-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 76fb96e598b156ba5940bfb75bbfdb628f777353
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: dbba37bf220cb35bfc1aa26d4a59948539ccaec117240387ca6481bbd6388818
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119802876"
 ---
-# <a name="ms-pki-accountcredentials-attribute"></a>MS-PKI-Account-Anmelde Informationen-Attribut
+# <a name="ms-pki-accountcredentials-attribute"></a>ms-PKI-AccountCredentials-Attribut
 
-Speicherung verschlüsselter Benutzer Anmelde Informationen tokenblob für Roaming.
+Storage verschlüsselter Token-BLOBs für Benutzeranforderungen für das Roaming.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------|
-| CN                | MS-PKI-accountanmelde Informationen                       |
-| LDAP-Display-Name | mspkiaccountanmelde Informationen                         |
+| CN                | ms-PKI-AccountCredentials                       |
+| Ldap-Anzeigename | msPKIAccountCredentials                         |
 | Size              | \-                                              |
-| Berechtigung aktualisieren  | \-                                              |
-| Aktualisierungshäufigkeit  | \-                                              |
+| Aktualisieren von Berechtigungen  | \-                                              |
+| Updatehäufigkeit  | \-                                              |
 | Attribute-Id      | 1.2.840.113556.1.4.1894                         |
-| System-ID-GUID    | b8dfa744-31dc-4ef1-ac7c-84baf7ef9da7            |
+| System-Id-Guid    | b8dfa744-31dc-4ef1-ac7c-84baf7ef9da7            |
 | Syntax            | [**Object(DN-Binary)**](s-object-dn-binary.md) |
 
 
@@ -55,10 +55,10 @@ Speicherung verschlüsselter Benutzer Anmelde Informationen tokenblob für Roami
 | Link-ID                | 2048                              |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
+| Is-Single-Valued       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000280                        |
@@ -76,10 +76,10 @@ Speicherung verschlüsselter Benutzer Anmelde Informationen tokenblob für Roami
 | Link-ID                | 2048                              |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
+| Is-Single-Valued       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000280                        |
@@ -97,10 +97,10 @@ Speicherung verschlüsselter Benutzer Anmelde Informationen tokenblob für Roami
 | Link-ID                | 2048                              |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
+| Is-Single-Valued       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000280                        |

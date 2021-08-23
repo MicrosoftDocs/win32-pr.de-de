@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob die erkannte Zeichenfolge dieses icontextnode aus dem System Wörterbuch, dem Benutzerwörterbuch oder der Wort Liste stammt.
+description: Gibt an, ob die erkannte Zeichenfolge dieses IContextNode aus dem Systemwörterbuch, Benutzerwörterbuch oder der Wortliste stammt.
 ms.assetid: 9eaee549-ae78-4a67-a39e-2096c7d5d9cd
-title: 'Icontextnode:: IsStringSupported-Methode (iacom. h)'
+title: IContextNode::IsStringSupported-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 853b244cdd6f9e61d4474876190daeccaa2c8779
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2eef383f059897665c013e3575d452564295ccd9bd014ae8084fd1635892bd99
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119709110"
 ---
-# <a name="icontextnodeisstringsupported-method"></a>Icontextnode:: IsStringSupported-Methode
+# <a name="icontextnodeisstringsupported-method"></a>IContextNode::IsStringSupported-Methode
 
-Gibt an, ob die erkannte Zeichenfolge dieses [**icontextnode**](icontextnode.md) aus dem System Wörterbuch, dem Benutzerwörterbuch oder der Wort Liste stammt.
+Gibt an, ob die erkannte Zeichenfolge dieses [**IContextNode**](icontextnode.md) aus dem Systemwörterbuch, Benutzerwörterbuch oder der Wortliste stammt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ HRESULT IsStringSupported(
 
 <dl> <dt>
 
-*pfissupported* \[ Out, retval\]
+*pfIsSupported* \[ out, retval\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn der erkannte Zeichen folgen Wert dieses [**icontextnode**](icontextnode.md) von [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) unterstützt wird, wenn alle entsprechenden Hinweis Knoten angewendet werden. Andernfalls ist der Wert **\_ false**.
+**VARIANT \_ TRUE,** wenn der erkannte Zeichenfolgenwert dieses [**IContextNode**](icontextnode.md) vom [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) mit allen entsprechenden angewendeten Hinweisknoten unterstützt wird; andernfalls **VARIANT \_ FALSE**.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,9 +56,9 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -67,7 +67,7 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> </dl>
 
  

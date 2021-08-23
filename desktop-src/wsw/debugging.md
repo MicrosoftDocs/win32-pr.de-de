@@ -1,35 +1,35 @@
 ---
-title: Debuggen (Windows-Webdienste)
-description: Eine Reihe von Funktionen ist nur im Debugbuild verfügbar und zum Testen und Debuggen vorgesehen.
+title: Debuggen (Windows Webdienste)
+description: Ein Satz von Funktionen ist nur im DEBUG-Build verfügbar und dient zum Testen und Debuggen.
 ms.assetid: 23c01420-3f51-4c3f-9ee1-2614de3a278f
 keywords:
 - Debuggen von Webdiensten für Windows
-- Wwsapi
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cad0abe916e068408cfda48184aa86e40029203
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 135f81ec45028df098679c91d750915005bfc64b3ff7d072b0494badc98159fe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106341571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119838680"
 ---
-# <a name="debugging-windows-web-services"></a>Debuggen (Windows-Webdienste)
+# <a name="debugging-windows-web-services"></a>Debuggen (Windows Webdienste)
 
-Eine Reihe von Funktionen ist nur im Debugbuild verfügbar und zum Testen und Debuggen vorgesehen.
+Ein Satz von Funktionen ist nur im DEBUG-Build verfügbar und dient zum Testen und Debuggen.
 
 
-Eine Reihe von Funktionen und Umgebungsvariablen sind nur im Debugmodus verfügbar. Sie können zum Testen und Debuggen verwendet werden.
+Es gibt eine Reihe von Funktionen und Umgebungsvariablen, die nur im DEBUG-Modus verfügbar sind. Sie können zum Testen und Debuggen verwendet werden.
 
--   Durch Festlegen von wstimeout = 0 werden alle Timeouts unendlich. Dies ist nützlich, wenn der Debugger bei zeitsensiblen Vorgängen durchlaufen wird.
--   Das Festlegen von wsfailcount hat denselben Effekt wie das Aufrufen von wssetautofail.
--   Mit wsflags können Sie verschiedene Flags festlegen, die das Laufzeitverhalten ändern. Die Syntax ist wsflags = a, b, c. Die unterstützten Flags sind modifytimestamp, modifyinclusiveprefixes, modifytimestampdigest, modifyyheaderdigest und modifysignaturevalue.
+-   Das Festlegen von WsTimeout=0 verursacht, dass alle Timeouts INFINITE sind. Dies ist nützlich, wenn Sie den Debugger während zeitsensibler Vorgänge durchschritten.
+-   Das Festlegen von WsFailCount hat die gleiche Auswirkung wie das Aufrufen von WsSetAutoFail.
+-   Mit WsFlags können Sie verschiedene Flags festlegen, die das Laufzeitverhalten ändern. Die Syntax ist WsFlags=a,b,c. Die unterstützten Flags sind ModifyTimestamp, ModifyInclusivePrefixes, ModifyTimestampDigest, ModifyToHeaderDigest und ModifySignatureValue.
 
 Die folgenden Funktionen werden beim Debuggen verwendet:
 
--   [**Wsdumpmemory**](wsdumpmemory.md)
--   [**Wssetauentfail**](wssetautofail.md)
+-   [**WsDumpMemory**](wsdumpmemory.md)
+-   [**WsSetAutoFail**](wssetautofail.md)
 
  
 

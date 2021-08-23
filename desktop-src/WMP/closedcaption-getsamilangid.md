@@ -1,11 +1,11 @@
 ---
-title: Closedcaption. getsamilangid-Methode
-description: Die getsamilangid-Methode ruft den Gebiets Schema Bezeichner (LCID) einer Sprache ab, die von der aktuellen Sami-Datei unterstützt wird.
+title: ClosedCaption.getSAMILangID-Methode
+description: Die getSAMILangID-Methode ruft den Locale Identifier (LCID) einer Sprache ab, die von der aktuellen SAMI-Datei unterstützt wird.
 ms.assetid: 35f8379a-a2f5-4b22-b1ad-3c5cc5bc5e3d
 keywords:
-- getsamilangid-Methode, Windows-Media Player
-- getsamilangid-Methode, Windows Media Player, closedcaption-Klasse
-- Closedcaption-Klasse, Windows Media Player, getsamilangid-Methode
+- getSAMILangID-Windows Media Player
+- getSAMILangID-Methode Windows Media Player , ClosedCaption-Klasse
+- ClosedCaption-Klasse Windows Media Player , getSAMILangID-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8cd543c9cb9d884022d78a875a2f8de078c479b3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7317bff13b0dcf29157e4a31c1b854fff781d93460633b64485670fab64e6f1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367160"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764040"
 ---
-# <a name="closedcaptiongetsamilangid-method"></a>Closedcaption. getsamilangid-Methode
+# <a name="closedcaptiongetsamilangid-method"></a>ClosedCaption.getSAMILangID-Methode
 
-Die **getsamilangid** -Methode ruft den Gebiets Schema Bezeichner (LCID) einer Sprache ab, die von der aktuellen Sami-Datei unterstützt wird.
+Die **getSAMILangID-Methode** ruft den Locale Identifier (LCID) einer Sprache ab, die von der aktuellen SAMI-Datei unterstützt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ retVal = ClosedCaption.getSAMILangID(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index der abzurufenden LCID angibt.
+**Number** (**long**), die den Index der abzurufenden LCID an gibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zahl** (**Long**) zurück, die die LCID der Sprache mit dem angegebenen Index enthält.
+Diese Methode gibt eine **Zahl** (**long**) zurück, die die LCID der Sprache mit dem angegebenen Index enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Sprachen in einer Sami-Datei werden in der in der Datei gezeigten Reihenfolge indiziert, beginnend mit 0 (null).
+Die Sprachen in einer SAMI-Datei werden in der Reihenfolge indiziert, die in der Datei angezeigt wird, beginnend mit 0 (null).
 
-Diese Methode kann erst verwendet werden, wenn eine digitale Mediendatei (*Player*) geöffnet ist.**openstate** ist gleich 13).
+Diese Methode kann erst verwendet werden, wenn eine digitale Mediendatei geöffnet ist (*Player*.**openState** ist gleich 13).
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
@@ -67,19 +67,19 @@ Diese Methode kann erst verwendet werden, wenn eine digitale Mediendatei (*Playe
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Hinzufügen von Untertiteln zu digitalen Medien**](adding-closed-captions-to-digital-media.md)
 </dt> <dt>
 
-[**Closedcaption-Objekt**](closedcaption-object.md)
+[**ClosedCaption-Objekt**](closedcaption-object.md)
 </dt> </dl>
 
  

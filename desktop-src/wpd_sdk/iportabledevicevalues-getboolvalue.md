@@ -1,7 +1,7 @@
 ---
-description: Die GetBoolValue-Methode ruft einen booleschen Wert (Typ VT \_ bool) ab, der durch einen Schlüssel angegeben wird.
+description: Die GetBoolValue-Methode ruft einen booleschen Wert (Typ VT BOOL) ab, \_ der durch einen Schlüssel angegeben wird.
 ms.assetid: cb5fed7a-50b5-4af1-806a-c6582409d265
-title: 'Iportabledevicevalues:: GetBoolValue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::GetBoolValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 8554fc30a1b66226f6e4f8de4e5d8ac0e8abfabf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 26006d151cd3adfc9f1c3f892cca05724c4ba54dc273cbbf58bd96c5779ccefa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807020"
 ---
-# <a name="iportabledevicevaluesgetboolvalue-method"></a>Iportabledevicevalues:: GetBoolValue-Methode
+# <a name="iportabledevicevaluesgetboolvalue-method"></a>IPortableDeviceValues::GetBoolValue-Methode
 
-Die **GetBoolValue** -Methode ruft einen **booleschen** Wert (Typ VT \_ bool) ab, der durch einen Schlüssel angegeben wird.
+Die **GetBoolValue-Methode** ruft einen **booleschen Wert** (Typ VT BOOL) ab, \_ der durch einen Schlüssel angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,31 +41,31 @@ HRESULT GetBoolValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** -Schlüssel, der das abzurufende Element angibt.
+Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
 
 </dd> <dt>
 
-*pValue* \[ vorgenommen\]
+*pValue* \[ out\]
 </dt> <dd>
 
-Zeiger auf den abgerufenen **booleschen** Wert.
+Zeiger auf den abgerufenen **BOOL-Wert.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                            | Beschreibung                                                          |
 |------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                     |
-| <dl> <dt>**DISP \_ E \_ typemismatch**</dt> </dl>                   | Die von *Key* angegebene Eigenschaft ist kein **boolescher** Typ.<br/>   |
-| <dl> <dt>**HRESULT \_ von \_ Win32 (Fehler \_ nicht \_ gefunden)**</dt> </dl> | Die von *Key* angegebene Eigenschaft ist nicht in der Auflistung.<br/> |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die durch key angegebene *Eigenschaft* ist kein **BOOL-Typ.**<br/>   |
+| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ NOT \_ FOUND)**</dt> </dl> | Die durch key angegebene *Eigenschaft* ist nicht in der Auflistung.<br/> |
 
 
 
@@ -73,7 +73,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Festlegen von Eigenschaften für ein einzelnes Objekt](setting-properties-for-a-single-object.md).
+Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Festlegen von Eigenschaften für ein einzelnes Objekt.](setting-properties-for-a-single-object.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Festlegen von 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
@@ -90,19 +90,19 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Festlegen von 
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportabledebug:: SetBoolValue**](iportabledevicevalues-setboolvalue.md)
+[**IPortableDeviceValues::SetBoolValue**](iportabledevicevalues-setboolvalue.md)
 </dt> <dt>
 
-[Abrufen unterstützter Dienst Ereignisse](retrieving-supported-events.md)
+[Abrufen unterstützter Dienstereignisse](retrieving-supported-events.md)
 </dt> <dt>
 
 [Festlegen von Eigenschaften für ein einzelnes Objekt](setting-properties-for-a-single-object.md)
 </dt> <dt>
 
-[Schreiben von Content-Object-Eigenschaften](writing-content-object-properties.md)
+[Schreiben von Inhaltsobjekteigenschaften](writing-content-object-properties.md)
 </dt> </dl>
 
  

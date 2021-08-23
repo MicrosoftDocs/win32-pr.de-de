@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentinvalidbookmarkexception-Konstruktor'
-title: Esentinvalidbookmarkexception-Konstruktor
+description: 'Weitere Informationen zu: EsentInvalidBookmarkException-Konstruktor'
+title: EsentInvalidBookmarkException-Konstruktor
 TOCTitle: 'EsentInvalidBookmarkException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidBookmarkException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidbookmarkexception.esentinvalidbookmarkexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5fbd4741a4c17bed10ee3bf7fe528d260cbd4807
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e6867c2222a0056bdeb435bd3bc76cef74dee018650f6bb851e5ea7688cdff3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119837568"
 ---
-# <a name="esentinvalidbookmarkexception-constructor"></a>Esentinvalidbookmarkexception-Konstruktor
+# <a name="esentinvalidbookmarkexception-constructor"></a>EsentInvalidBookmarkException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidbookmarkexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidBookmarkException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentInvalidBookmarkException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidbookmarkexception-Klasse](./esentinvalidbookmarkexception-class.md)
+[EsentInvalidBookmarkException-Klasse](./esentinvalidbookmarkexception-class.md)
 
-[Esentinvalidbookmarkexception-Member](./esentinvalidbookmarkexception-members.md)
+[EsentInvalidBookmarkException-Member](./esentinvalidbookmarkexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

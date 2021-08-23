@@ -1,11 +1,11 @@
 ---
-title: ms-DS-repl-Attribute-Meta-Data-Attribut
-description: Eine Liste von Metadaten für jedes replizierte Attribut. Die Metadaten zeigen an, wer das Attribut zuletzt geändert hat.
+title: ms-DS-Repl-Attribute-Meta-Data-Attribut
+description: Eine Liste der Metadaten für jedes replizierte Attribut. Die Metadaten geben an, wer das Attribut zuletzt geändert hat.
 ms.assetid: 07cfd323-eb90-4715-9307-583cf7e9f63e
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-repl-Attribute-Meta-Data\"-Attribut AD-Schema"
-- adschema des msDS-ReplAttributeMetaData-Attributs
+- MS-DS-Repl-Attribute-Meta-Data-Attribut AD-Schema
+- MSDS-ReplAttributeMetaData-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2edc991ead7104d8b9b4c023882d39adf1d53446
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 29b22df95eedd83799bf1d27e2ce11ea691e87c2f806ee0b14767b317905b289
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803510"
 ---
-# <a name="ms-ds-repl-attribute-meta-data-attribute"></a>ms-DS-repl-Attribute-Meta-Data-Attribut
+# <a name="ms-ds-repl-attribute-meta-data-attribute"></a>ms-DS-Repl-Attribute-Meta-Data-Attribut
 
-Eine Liste von Metadaten für jedes replizierte Attribut. Die Metadaten zeigen an, wer das Attribut zuletzt geändert hat.
+Eine Liste der Metadaten für jedes replizierte Attribut. Die Metadaten geben an, wer das Attribut zuletzt geändert hat.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | ms-DS-repl-Attribute-Meta-Data              |
-| LDAP-Display-Name | msDS-ReplAttributeMetaData                  |
+| CN                | ms-DS-Repl-Attribute-Meta-Data              |
+| Ldap-Anzeigename | msDS-ReplAttributeMetaData                  |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.            |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.            |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1707                     |
 | System-ID-GUID    | d7c53242-724e-4c39-9d4c-2df8c9d66c7a        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -42,14 +42,14 @@ Eine Liste von Metadaten für jedes replizierte Attribut. Die Metadaten zeigen a
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -58,10 +58,10 @@ Eine Liste von Metadaten für jedes replizierte Attribut. Die Metadaten zeigen a
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -79,10 +79,10 @@ Eine Liste von Metadaten für jedes replizierte Attribut. Die Metadaten zeigen a
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -100,10 +100,10 @@ Eine Liste von Metadaten für jedes replizierte Attribut. Die Metadaten zeigen a
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -121,10 +121,10 @@ Eine Liste von Metadaten für jedes replizierte Attribut. Die Metadaten zeigen a
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -142,10 +142,10 @@ Eine Liste von Metadaten für jedes replizierte Attribut. Die Metadaten zeigen a
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -163,10 +163,10 @@ Eine Liste von Metadaten für jedes replizierte Attribut. Die Metadaten zeigen a
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

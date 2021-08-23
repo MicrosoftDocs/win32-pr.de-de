@@ -1,11 +1,11 @@
 ---
-title: Inapsystemhealthagentbinding Initialize-Methode (napsystemhealthagent. h)
-description: Initialisiert den Systemintegritäts-Agent (SHA) und bindet den SHA an den NAPAgent-Dienst.
+title: INapSystemHealthAgentBinding Initialize-Methode (NapSystemHealthAgent.h)
+description: Initialisiert den System health agent (SHA) und bindet den SHA an den NapAgent-Dienst.
 ms.assetid: abbc942b-0217-4b07-bf43-fab55ca9c411
 keywords:
-- Methode "NAP initialisieren"
-- Initialize-Methode NAP, inapsystemhealthagentbinding-Schnittstelle
-- Inapsystemhealthagentbinding-Schnittstelle NAP, Initialize-Methode
+- Initialisieren der NAP-Methode
+- Initialisieren der NAP-Methode, INapSystemHealthAgentBinding-Schnittstelle
+- INapSystemHealthAgentBinding-Schnittstelle NAP , Initialize-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ee4d4f602303ca1943e47c04ba30ab8f6e75e72
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7dbe764d477c5f176fcaebc0825bbbcd02495ec70ee669a02c59258173cfbdd3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119802710"
 ---
-# <a name="inapsystemhealthagentbindinginitialize-method"></a>Inapsystemhealthagentbinding:: Initialize-Methode
+# <a name="inapsystemhealthagentbindinginitialize-method"></a>INapSystemHealthAgentBinding::Initialize-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapsystemhealthagentbinding:: Initialize** -Methode initialisiert den Systemintegritäts-Agent (SHA) und bindet den SHA an den NAPAgent-Dienst. Diese Methode muss aufgerufen werden, bevor eine andere Methode in der [**INapSystemHealthAgentBinding2**](inapsystemhealthagentbinding2.md) -Schnittstelle aufgerufen wird.
+Die **INapSystemHealthAgentBinding::Initialize-Methode initialisiert** den System health agent (SHA) und bindet den SHA an den NapAgent-Dienst. Diese Methode muss aufgerufen werden, bevor eine andere Methode für die [**INapSystemHealthAgentBinding2-Schnittstelle**](inapsystemhealthagentbinding2.md) aufgerufen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,42 +48,42 @@ HRESULT Initialize(
 
 <dl> <dt>
 
-*ID* \[ in\]
+*id* \[ in\]
 </dt> <dd>
 
-Eine eindeutige [systemhealthentityid](nap-datatypes.md) , die die ID des SHA enthält, der an den NAPAgent-Dienst gebunden ist.
+Eine eindeutige [SystemHealthEntityId,](nap-datatypes.md) die die ID des SHA enthält, das an den NapAgent-Dienst gebunden wird.
 
 </dd> <dt>
 
-*Rückruf* \[ in\]
+*Rückruf* \[ In\]
 </dt> <dd>
 
-Ein com-Zeiger auf eine [**inapsystemhealthagentcallback**](inapsystemhealthagentcallback.md) -Schnittstelle, die vom NAPAgent verwendet wird, um den Integritäts-Agent mit einer Benachrichtigung/einem Prozess zu Rückruf. Der NAPAgent enthält einen Verweis auf das Objekt, das dieser Schnittstelle zugeordnet ist, bis die [**uninitialisierung**](inapsystemhealthagentbinding-uninitialize-method.md) aufgerufen wird.
+Ein COM-Zeiger auf eine [**INapSystemHealthAgentCallback-Schnittstelle,**](inapsystemhealthagentcallback.md) die vom NapAgent verwendet wird, um den Integritäts-Agent mit einer Benachrichtigung/einem Prozess zurückzurufen. NapAgent enthält einen Verweis auf das Objekt, das dieser Schnittstelle zugeordnet ist, bis [**Uninitialize**](inapsystemhealthagentbinding-uninitialize-method.md) aufgerufen wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                                                                                                    |
 |------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                      | Vorgang erfolgreich.<br/>                                                                                                |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl>            | Berechtigungs Fehler, Zugriff verweigert.<br/>                                                                                   |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>             | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/>                                                             |
-| <dl> <dt>**Fehler \_ bereits \_ Initialisiert**</dt> </dl> | Wenn das SHA zuvor initialisiert wurde, wird dieser Fehler zurückgegeben.<br/>                                                      |
-| <dl> <dt>**NAP \_ E \_ nicht \_ registriert**</dt> </dl>     | Wenn der SHA nicht bereits zuvor registriert wurde, wird dieser Fehler zurückgegeben.<br/>                                                      |
-| <dl> <dt>**RPC- \_ E \_ getrennt**</dt> </dl>        | Der NAPAgent wurde beendet. Dieses Objekt wird nach dem Neustart automatisch wieder hergestellt und an den NAPAgent gebunden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl>            | Berechtigungsfehler, Zugriff verweigert.<br/>                                                                                   |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>             | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/>                                                             |
+| <dl> <dt>**FEHLER \_ WURDE BEREITS \_ INITIALISIERT**</dt> </dl> | Wenn der SHA zuvor initialisiert wurde, wird dieser Fehler zurückgegeben.<br/>                                                      |
+| <dl> <dt>**NAP \_ E \_ NICHT \_ REGISTRIERT**</dt> </dl>     | Wenn der SHA zuvor nicht registriert wurde, wird dieser Fehler zurückgegeben.<br/>                                                      |
+| <dl> <dt>**RPC \_ E \_ DISCONNECTED**</dt> </dl>        | Der NapAgent wurde beendet. Dieses Objekt wird nach dem Neustart automatisch wiederhergestellt und wieder an den NapAgent-Agent bindungiert.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der "NAPAgent" löst keinen SoH-Austausch aufgrund der Initialisierung aus. Ein Systemintegritäts-Agent muss [**notifysohchange**](inapsystemhealthagentbinding-notifysohchange-method.md) anrufen, um nach der Initialisierung mit dem NAPAgent einen Austausch von SoH-Paketen anzufordern.
+NapAgent löst aufgrund der Initialisierung keinen SoH-Austausch aus. Ein Systemzustands-Agent muss [**NotifySoHChange**](inapsystemhealthagentbinding-notifysohchange-method.md) aufrufen, um nach der Initialisierung mit napAgent einen Austausch von SoH-Paketen anzufordern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,10 +91,10 @@ Der "NAPAgent" löst keinen SoH-Austausch aufgrund der Initialisierung aus. Ein 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napsystemhealthagent. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthagent. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapSystemHealthAgent.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthAgent.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 
@@ -103,7 +103,7 @@ Der "NAPAgent" löst keinen SoH-Austausch aufgrund der Initialisierung aus. Ein 
 
 <dl> <dt>
 
-[**Inapsystemhealthagentbinding**](inapsystemhealthagentbinding.md)
+[**INapSystemHealthAgentBinding**](inapsystemhealthagentbinding.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: 'Gibt an, wie ipropertydescription:: formatfordisplay den Wert der Eigenschaft als Zeichenfolge formatieren soll. Dies gilt nur, wenn <displayInfo displayType=&\#0034;Number&\#0034;> .'
+description: Gibt an, wie IPropertyDescription::FormatForDisplay den Wert der Eigenschaft als Zeichenfolge formatieren soll. Dies gilt nur, wenn <displayInfo displayType=&\#0034;Number&\#0034;> .
 ms.assetid: 9e8cfe5c-e17a-40d6-958f-a1bd1130c699
-title: NumberFormat
+title: Numberformat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6750a9fb4dcf6a7a56c350fccf80241644b956da
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ad1ad529b6f23191f4cfb703862a70164c4ce32d1bbb9c039fdc881e2f19cdc8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355624"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119718230"
 ---
-# <a name="numberformat"></a>NumberFormat
+# <a name="numberformat"></a>Numberformat
 
-Gibt an, wie [**ipropertydescription:: formatfordisplay**](/windows/win32/api/propsys/nf-propsys-ipropertydescription-formatfordisplay) den Wert der Eigenschaft als Zeichenfolge formatieren soll. Dies gilt nur, wenn <displayInfo displayType="Number"> . Es darf nur ein " [infoformat]() "-Element für jedes " [DisplayInfo](./propdesc-schema-displayinfo.md) "-Element vorhanden sein.
+Gibt an, wie [**IPropertyDescription::FormatForDisplay**](/windows/win32/api/propsys/nf-propsys-ipropertydescription-formatfordisplay) den Wert der Eigenschaft als Zeichenfolge formatieren soll. Dies gilt nur, wenn <displayInfo displayType="Number"> . Es sollte nur ein [numberFormat-Element]() für jedes [displayInfo-Element](./propdesc-schema-displayinfo.md) vorhanden sein.
 
-Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [NumFormat-]() Element bereitgestellt wird, werden die Standard Attribut Einstellungen auf die Eigenschafts Beschreibung angewendet.
+Wenn mehrere Elemente vorhanden sind, wird das letzte Element verwendet. Wenn kein [numberFormat-Element]() angegeben wird, werden die Standardattributeinstellungen auf die Eigenschaftenbeschreibung angewendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,7 +61,7 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [NumF
 
 | Übergeordnetes Element                                   | Untergeordnete Elemente |
 |--------------------------------------------------|----------------|
-| [Display Info](./propdesc-schema-displayinfo.md) | Keine           |
+| [displayInfo](./propdesc-schema-displayinfo.md) | Keine           |
 
 
 
@@ -78,14 +78,14 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [NumF
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
-<th>BESCHREIBUNG</th>
+<th>attribute</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>formatas</td>
-<td>Öffentlich. Dies ist optional. Der Standardwert ist &quot; Allgemein &quot; . Gibt das Anzeige Format an. Die folgenden Werte sind gültig. 
+<td>formatAs</td>
+<td>Öffentlich. Optional. Der Standardwert ist &quot; &quot; Allgemein. Gibt das Anzeigeformat an. Die folgenden Werte sind gültig. 
 <table>
 <thead>
 <tr class="header">
@@ -99,44 +99,44 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [NumF
 <td>Standard. Zeigt den Wert als unformatierte Zahl an.</td>
 </tr>
 <tr class="even">
-<td>Prozentwert</td>
-<td>Formatiert den Wert als Prozentsatz. Erfordert, dass die-Eigenschaft UInt32 ist.</td>
+<td>Prozentsatz</td>
+<td>Formatiert den Wert als Prozentsatz. Erfordert, dass die -Eigenschaft UInt32 ist.</td>
 </tr>
 <tr class="odd">
 <td>ByteSize</td>
-<td>Formatiert den Wert nach Bedarf als Byte, &quot; KB &quot; , &quot; MB &quot; oder &quot; GB &quot; . Erfordert, dass die-Eigenschaft UInt64 ist.</td>
+<td>Formatiert den Wert je nach Bedarf als Byte, &quot; &quot; &quot; KB, MB &quot; oder &quot; &quot; GB. Erfordert, dass die -Eigenschaft UInt64 ist.</td>
 </tr>
 <tr class="even">
-<td>Kbsize</td>
-<td>Formatiert den Wert in &quot; KB &quot; , unabhängig davon, was der Wert ist. Erfordert, dass die-Eigenschaft UInt64 ist.</td>
+<td>KBSize</td>
+<td>Formatiert den Wert als &quot; &quot; KB, unabhängig davon, welcher Wert ist. Erfordert, dass die -Eigenschaft UInt64 ist.</td>
 </tr>
 <tr class="odd">
-<td>Sample Size (</td>
-<td>Formatiert den Wert als Anzahl von Bits. Erfordert, dass die-Eigenschaft UInt32 ist.</td>
+<td>SampleSize</td>
+<td>Formatiert den Wert als Anzahl von Bits. Erfordert, dass die -Eigenschaft UInt32 ist.</td>
 </tr>
 <tr class="even">
 <td>BitRate</td>
-<td>Formatiert den Wert in Kbit/s &quot; &quot; . Erfordert, dass die-Eigenschaft UInt32 ist. Der Wert muss in &quot; Bits-pro-Sekunde-Einheiten gespeichert werden &quot; .</td>
+<td>Formatiert den Wert in &quot; KBit/s. &quot; Erfordert, dass die -Eigenschaft UInt32 ist. Der Wert muss in Bits pro Sekunde gespeichert &quot; &quot; werden.</td>
 </tr>
 <tr class="odd">
-<td>Sample Rate</td>
-<td>Formatiert den Wert in &quot; kHz &quot; . Erfordert, dass die-Eigenschaft UInt32 ist. Der Wert muss in Hertz- &quot; Einheiten gespeichert werden &quot; .</td>
+<td>Samplerate</td>
+<td>Formatiert den Wert in &quot; &quot; KHz. Erfordert, dass die -Eigenschaft UInt32 ist. Der Wert muss in &quot; Hertz-Einheiten gespeichert &quot; werden.</td>
 </tr>
 <tr class="even">
 <td>FrameRate</td>
-<td>Formatiert den Wert in Frames/Sekunde. Erfordert, dass die-Eigenschaft UInt32 ist. Der Wert muss in &quot; Kilo-Frames-pro Sekunde-Einheiten gespeichert werden &quot; .</td>
+<td>Formatiert den Wert in Frames/Sekunde. Erfordert, dass die -Eigenschaft UInt32 ist. Der Wert muss in &quot; Kiloframes pro Sekunde gespeichert &quot; werden.</td>
 </tr>
 <tr class="odd">
 <td>Okkludierte</td>
-<td>Formatiert den Wert in Pixel Einheiten. Erfordert, dass die-Eigenschaft UInt32 ist.</td>
+<td>Formatiert den Wert in Pixeleinheiten. Erfordert, dass die -Eigenschaft UInt32 ist.</td>
 </tr>
 <tr class="even">
 <td>DPI</td>
-<td>Formatiert den Wert in Punkten pro Zoll. Erfordert, dass die-Eigenschaft UInt32 ist.</td>
+<td>Formatiert den Wert in Punkt pro Zoll. Erfordert, dass die -Eigenschaft UInt32 ist.</td>
 </tr>
 <tr class="odd">
 <td>Duration</td>
-<td>Formatiert den Wert als Dauer. Verwenden <formatDurationAs> Sie, um das Format für die Dauer anzugeben. Erfordert, dass die-Eigenschaft UInt64 ist.</td>
+<td>Formatiert den Wert als Dauer. Verwenden Sie <formatDurationAs> , um das Format der Dauer anzugeben. Erfordert, dass die -Eigenschaft UInt64 ist.</td>
 </tr>
 </tbody>
 </table>
@@ -144,8 +144,8 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [NumF
 <p> </p></td>
 </tr>
 <tr class="even">
-<td>formatdurationas</td>
-<td>Öffentlich. Dies ist optional. Der Standardwert ist &quot; hh: mm: SS &quot; . Gilt nur, wenn <em>formatas &quot; = &quot; Duration</em>ist. Erfordert, dass die-Eigenschaft UInt64 ist. Die folgenden Werte sind gültig. 
+<td>formatDurationAs</td>
+<td>Öffentlich. Optional. Der Standardwert ist &quot; hh:mm:ss. &quot; Gilt nur, wenn <em>formatAs= &quot; Duration &quot; </em>. Erfordert, dass die -Eigenschaft UInt64 ist. Die folgenden Werte sind gültig. 
 <table>
 <thead>
 <tr class="header">
@@ -163,7 +163,7 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [NumF
 <td>Standard. Formatiert den Wert in Stunden, Minuten und Sekunden.</td>
 </tr>
 <tr class="odd">
-<td>hh: mm: SS. fff</td>
+<td>hh:mm:ss.fff</td>
 <td>Formatiert den Wert in Stunden, Minuten, Sekunden und Millisekunden.</td>
 </tr>
 </tbody>

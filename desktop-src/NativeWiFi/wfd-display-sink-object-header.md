@@ -1,7 +1,7 @@
 ---
-description: Beschreibt die in einem Benachrichtigungs-oder Benachrichtigungs Ergebnis enthaltenen Daten der Senke-Objektdaten.
+description: Beschreibt die Anzeigesenkenobjektdaten, die in einem Benachrichtigungs- oder Benachrichtigungsergebnis enthalten sind.
 ms.assetid: 40D931F6-C068-48EB-A968-9CBAA3F9FAD8
-title: WFD_DISPLAY_SINK_OBJECT_HEADER-Struktur (WF-Sink. h)
+title: WFD_DISPLAY_SINK_OBJECT_HEADER -Struktur (Wfdsink.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - wfdsink.h
-ms.openlocfilehash: cdefd6b0b91fefb0f42a6e37e7584f7cd966884b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e4c9e4d83fbac1cccb2dbc0643acc707176be433dfca7854395a0f97c9c36435
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119800470"
 ---
-# <a name="wfd_display_sink_object_header-structure"></a>WFD- \_ Anzeige \_ Sink- \_ Objekt \_ Header Struktur
+# <a name="wfd_display_sink_object_header-structure"></a>WFD \_ DISPLAY SINK OBJECT \_ \_ \_ HEADER-Struktur
 
-Die **WFD- \_ Anzeige Sink-Objekt \_ \_ \_ Header** Struktur beschreibt die in einem Benachrichtigungs-oder Benachrichtigungs Ergebnis enthaltenen Daten der Senke-Objektdaten.
+Die **WFD \_ DISPLAY SINK OBJECT \_ \_ \_ HEADER-Struktur** beschreibt die Anzeigesenkenobjektdaten, die in einem Benachrichtigungs- oder Benachrichtigungsergebnis enthalten sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ typedef struct _WFD_DISPLAY_SINK_OBJECT_HEADER {
 
 <dl> <dt>
 
-**Type**
+**Typ**
 </dt> <dd>
 
-Der Typ des anzeigesenkjektobjekts. Sie können den Bezeichner **WFD \_ Display \_ Sink \_ Object \_ Type \_ default** verwenden, der als Wert 1 definiert ist.
+Der Typ des Anzeigesenkenobjekts. Sie können den Bezeichner **WFD \_ DISPLAY SINK OBJECT TYPE \_ \_ \_ \_ DEFAULT** verwenden, der als Wert 1 definiert ist.
 
 </dd> <dt>
 
-**Novel**
+**Revision**
 </dt> <dd>
 
-Die Revisions Version des Objekts für die Anzeige Senke. Sie können den Bezeichner **WFD \_ Display \_ Sink \_ Object \_ Revision \_ Version \_ 1** verwenden, der als Wert 1 definiert ist.
+Die Revisionsversion des Anzeigesenkenobjekts. Sie können den Bezeichner **WFD \_ DISPLAY SINK OBJECT REVISION VERSION \_ \_ \_ \_ \_ 1** verwenden, der als Wert 1 definiert ist.
 
 </dd> <dt>
 
 **Länge**
 </dt> <dd>
 
-Die Länge der Daten im Benachrichtigungs-oder Benachrichtigungs Ergebnis.
+Die Länge der Daten im Benachrichtigungs- oder Benachrichtigungsergebnis.
 
 </dd> </dl>
 
@@ -68,9 +68,9 @@ Die Länge der Daten im Benachrichtigungs-oder Benachrichtigungs Ergebnis.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>WF-Senke. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Wfdsink.h</dt> </dl> |
 
 
 

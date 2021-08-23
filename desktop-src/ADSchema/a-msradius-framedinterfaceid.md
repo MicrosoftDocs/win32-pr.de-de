@@ -1,11 +1,11 @@
 ---
-title: MS-RADIUS-framedinterfakeid-Attribut
-description: Gibt den IPv6-Schnittstellen Bezeichner an, der für den Benutzer konfiguriert werden soll. | MS-RADIUS-framedinterfakeid-Attribut
+title: ms-RADIUS-FramedInterfaceId-Attribut
+description: Gibt den IPv6-Schnittstellenbezeichner an, der für den Benutzer konfiguriert werden soll. | ms-RADIUS-FramedInterfaceId-Attribut
 ms.assetid: a686f5d6-762b-4477-9fea-0b14288e8c6a
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-RADIUS-framedinterfakeid-Attribut
-- AD-Schema des msradius-framedinterfakeid-Attributs
+- MS-RADIUS-FramedInterfaceId-Attribut AD-Schema
+- MSRADIUS-FramedInterfaceId-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe3ece0fc360e39bc82cd3f6059e04d2cc2e0cee
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: c5e80c16ce79dd54f75920b1b079793b5143546cda0445cd2f3cc0ea05b8972d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106365033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761660"
 ---
-# <a name="ms-radius-framedinterfaceid-attribute"></a>MS-RADIUS-framedinterfakeid-Attribut
+# <a name="ms-radius-framedinterfaceid-attribute"></a>ms-RADIUS-FramedInterfaceId-Attribut
 
-Gibt den IPv6-Schnittstellen Bezeichner an, der für den Benutzer konfiguriert werden soll.
+Gibt den IPv6-Schnittstellenbezeichner an, der für den Benutzer konfiguriert werden soll.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-RADIUS-framedinterfaeid          |
-| LDAP-Display-Name | msradius-framedinterfakeid           |
+| CN                | ms-RADIUS-FramedInterfaceId          |
+| Ldap-Anzeigename | msRADIUS-FramedInterfaceId           |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1913              |
 | System-ID-GUID    | a6f24a23-d65c-4d65-a64f-35fb6873c2b9 |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
@@ -54,11 +54,11 @@ Gibt den IPv6-Schnittstellen Bezeichner an, der für den Benutzer konfiguriert w
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -75,11 +75,11 @@ Gibt den IPv6-Schnittstellen Bezeichner an, der für den Benutzer konfiguriert w
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -96,11 +96,11 @@ Gibt den IPv6-Schnittstellen Bezeichner an, der für den Benutzer konfiguriert w
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |

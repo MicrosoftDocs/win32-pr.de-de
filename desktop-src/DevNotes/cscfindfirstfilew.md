@@ -1,7 +1,7 @@
 ---
 description: Sucht im Offlinedateien Cache nach einer Datei, die die angegebenen Kriterien erfüllt.
 ms.assetid: 09de6c55-fc37-4c0a-b5a0-ea73f06793d5
-title: Cscfindfirstfilew-Funktion
+title: CSCFindFirstFileW-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Cscmig.dll
-ms.openlocfilehash: f8cad9caf78b44f40a4126307db6deb0f71dfd1e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7289fb19a0062ce66212927bbe3e77c9e90c54ceb1980f83265000cc228e27ab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119833410"
 ---
-# <a name="cscfindfirstfilew-function"></a>Cscfindfirstfilew-Funktion
+# <a name="cscfindfirstfilew-function"></a>CSCFindFirstFileW-Funktion
 
 \[Diese Funktion wird nicht unterstützt und sollte nicht verwendet werden.\]
 
@@ -46,35 +46,35 @@ HANDLE WINAPI CSCFindFirstFileW(
 
 <dl> <dt>
 
-*lpszfilename* \[ in\]
+*lpszFileName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die ein gültiges UNC-Verzeichnis oder einen gültigen Pfad angibt.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die ein gültiges UNC-Verzeichnis oder einen gültigen UNC-Pfad angibt.
 
 </dd> <dt>
 
-*lpFind32* \[ vorgenommen\]
+*lpFind32* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die [**Win32 \_ - \_ Daten**](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataa) Struktur, die Informationen über die Datei oder das Unterverzeichnis empfängt.
+Ein Zeiger auf die [**WIN32 \_ FIND \_ DATA-Struktur,**](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataa) die Informationen über die Datei oder das Unterverzeichnis empfängt.
 
 </dd> <dt>
 
-*lpdwstatus* \[ vorgenommen\]
+*lpdwStatus* \[ out\]
 </dt> <dd>
 
-Ein NTSTATUS-Code, der den Status des Aufrufes angibt.
+Ein NTSTATUS-Code, der den Status des Aufrufs angibt.
 
 </dd> <dt>
 
-*lpdwpincount* \[ vorgenommen\]
+*lpdwPinCount* \[ out\]
 </dt> <dd>
 
 Dieser Parameter ist ungleich 0 (null), wenn die Datei offline verfügbar gemacht wurde, andernfalls 0.
 
 </dd> <dt>
 
-*lpdwhintflags* \[ vorgenommen\]
+*lpdwHintFlags* \[ out\]
 </dt> <dd>
 
 Dieser Parameter kann einen der folgenden Werte annehmen.
@@ -83,10 +83,10 @@ Dieser Parameter kann einen der folgenden Werte annehmen.
 
 | Wert                                                                                                                                                                                                                                                                                | Bedeutung                                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="FLAG_CSC_HINT_PIN_USER"></span><span id="flag_csc_hint_pin_user"></span><dl> <dt>**Flag \_ CSC- \_ Hinweis- \_ Pin- \_ Benutzer**</dt> <dt>0x01</dt> </dl>                                | Ein Benutzer hat die Datei offline verfügbar gemacht.<br/>                                                                                                |
-| <span id="FLAG_CSC_HINT_PIN_INHERIT_USER"></span><span id="flag_csc_hint_pin_inherit_user"></span><dl> <dt>**Flag \_ CSC- \_ Hinweis- \_ Pin \_ erben \_ Benutzer**</dt> <dt>0x02</dt> </dl>       | Ein Benutzer hat das übergeordnete Element offline verfügbar gemacht und als übergeordnetes Element gekennzeichnet, sodass die untergeordneten Elemente offline verfügbar sind.<br/>                           |
-| <span id="FLAG_CSC_HINT_PIN_INHERIT_SYSTEM"></span><span id="flag_csc_hint_pin_inherit_system"></span><dl> <dt>**Flag \_ CSC- \_ Hinweis- \_ Pin \_ erbt \_ System**</dt> <dt>0x04</dt> </dl> | Ein Administrator oder eine Gruppenrichtlinie hat das übergeordnete Element offline zur Verfügung gestellt und als übergeordnetes Element gekennzeichnet, sodass die untergeordneten Elemente offline verfügbar sind.<br/> |
-| <span id="FLAG_CSC_HINT_PIN_SYSTEM"></span><span id="flag_csc_hint_pin_system"></span><dl> <dt>**Flag \_ CSC- \_ Hinweis- \_ Pin- \_ System**</dt> <dt>0x10</dt> </dl>                          | Die Datei wurde von einem Administrator oder einer Gruppenrichtlinie offline verfügbar gemacht.<br/>                                                                      |
+| <span id="FLAG_CSC_HINT_PIN_USER"></span><span id="flag_csc_hint_pin_user"></span><dl> <dt>**FLAG \_ BENUTZER-0X01 MIT \_ CSC-HINWEIS \_ ANHEFTEN \_**</dt> <dt></dt> </dl>                                | Ein Benutzer hat die Datei offline verfügbar gemacht.<br/>                                                                                                |
+| <span id="FLAG_CSC_HINT_PIN_INHERIT_USER"></span><span id="flag_csc_hint_pin_inherit_user"></span><dl> <dt>**FLAG \_ CSC \_ HINT \_ PIN INHERIT \_ \_ USER**</dt> <dt>0x02</dt> </dl>       | Ein Benutzer hat das übergeordnete Element offline verfügbar gemacht und das übergeordnete Element so gekennzeichnet, dass seine untergeordneten Elemente offline verfügbar sind.<br/>                           |
+| <span id="FLAG_CSC_HINT_PIN_INHERIT_SYSTEM"></span><span id="flag_csc_hint_pin_inherit_system"></span><dl> <dt>**FLAG \_ CSC \_ HINT \_ PIN INHERIT \_ \_ SYSTEM**</dt> <dt>0x04</dt> </dl> | Ein Administrator oder eine Gruppenrichtlinie hat das übergeordnete Element offline verfügbar gemacht und das übergeordnete Element so gekennzeichnet, dass seine untergeordneten Elemente offline verfügbar sind.<br/> |
+| <span id="FLAG_CSC_HINT_PIN_SYSTEM"></span><span id="flag_csc_hint_pin_system"></span><dl> <dt>**FLAG \_ CSC \_ HINT \_ PIN \_ SYSTEM**</dt> <dt>0x10</dt> </dl>                          | Ein Administrator oder eine Gruppenrichtlinie hat die Datei offline verfügbar gemacht.<br/>                                                                      |
 
 
 
@@ -94,22 +94,22 @@ Dieser Parameter kann einen der folgenden Werte annehmen.
 
 </dd> <dt>
 
-*lporgfiletime* \[ vorgenommen\]
+*lpOrgFileTime* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**FILETIME**](/windows/win32/api/minwinbase/ns-minwinbase-filetime) -Struktur, um die Datums-und Uhrzeit Informationen für die Datei oder das Unterverzeichnis zu erhalten.
+Ein Zeiger auf eine [**FILETIME-Struktur,**](/windows/win32/api/minwinbase/ns-minwinbase-filetime) um die Datums- und Uhrzeitinformationen für die Datei oder das Unterverzeichnis zu erhalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Such handle, das in einem nachfolgenden [**cscfindnextfilew**](cscfindnextfilew.md) -oder [**cscfindclose**](cscfindclose.md)-Befehl verwendet wird.
+Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Suchhandle, das in einem nachfolgenden Aufruf von [**CSCFindNextFileW**](cscfindnextfilew.md) oder [**CSCFindClose**](cscfindclose.md)verwendet wird.
 
 Wenn bei der Ausführung der Funktion ein Fehler auftritt, lautet der Rückgabewert **INVALID\_HANDLE\_VALUE**.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

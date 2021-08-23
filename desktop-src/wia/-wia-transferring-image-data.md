@@ -1,26 +1,26 @@
 ---
-description: Verwenden Sie die Methoden der iwiadatatransfer-Schnittstelle zum Übertragen von Daten von einem Windows-Abbild Erfassungsgerät (WIA) 1,0 an eine Anwendung.
+description: Verwenden Sie die Methoden der IWiaDataTransfer-Schnittstelle, um Daten von einem Windows WIA 1.0-Gerät (Image Acquisition) an eine Anwendung zu übertragen.
 ms.assetid: 67fbf3d9-6965-4464-b04c-10989b2fd55d
-title: Übertragen von Bilddaten in WIA 1,0
+title: Übertragen von Bilddaten in WIA 1.0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 00fc7ff76576b6c140358f9af3a0f9d17d4b180e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f5e2c1dfce551f105b0df1627f11e9b4ccb7ee8a420e395f3fd0cc1ba932f136
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129396"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119813670"
 ---
-# <a name="transferring-image-data-in-wia-10"></a>Übertragen von Bilddaten in WIA 1,0
+# <a name="transferring-image-data-in-wia-10"></a>Übertragen von Bilddaten in WIA 1.0
 
 > [!Note]  
-> In diesem Tutorial geht es um das Übertragen von Image Daten in Anwendungen, die unter Windows XP oder früher ausgeführt werden. Informationen zum Übertragen von Bilddaten in Anwendungen, die unter Windows Vista oder höher ausgeführt werden, finden Sie unter über [tragen von Bilddaten in WIA 2,0](-wia-transferring-image-data-in-wia2.md) .
+> In diesem Tutorial wird das Übertragen von Imagedaten in Anwendungen, die Windows XP oder früher ausgeführt werden, verwendet. Informationen zum Übertragen von Bilddaten in Anwendungen, die auf Windows Vista oder höher ausgeführt werden, finden Sie unter Übertragen von [Bilddaten in WIA 2.0.](-wia-transferring-image-data-in-wia2.md)
 
  
 
-Verwenden Sie die Methoden der [**iwiadatatransfer**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer) -Schnittstelle zum Übertragen von Daten von einem Windows-Abbild Erfassungsgerät (WIA) 1,0 an eine Anwendung. Diese Schnittstelle unterstützt ein frei gegebenes Speicherfenster, um Daten aus dem Geräte Objekt an die Anwendung zu übertragen und unnötige Datenkopien beim Marshalling auszuschließen.
+Verwenden Sie die Methoden der [**IWiaDataTransfer-Schnittstelle,**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer) um Daten von einem wia 1.0-Gerät (Windows Image Acquisition) an eine Anwendung zu übertragen. Diese Schnittstelle unterstützt ein Shared Memory-Fenster, um Daten aus dem Geräteobjekt an die Anwendung zu übertragen und unnötige Datenkopien während des Marshallings zu vermeiden.
 
-Anwendungen müssen ein Bildelement Abfragen, um einen Zeiger auf seine [**iwiadatatransfer**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer) -Schnittstelle zu erhalten, wie im folgenden Codebeispiel:
+Anwendungen müssen ein Bildelement abfragen, um einen Zeiger auf seine [**IWiaDataTransfer-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer) abzurufen, wie im folgenden Codebeispiel dargestellt:
 
 
 ```
@@ -32,9 +32,9 @@ Anwendungen müssen ein Bildelement Abfragen, um einen Zeiger auf seine [**iwiad
 
 
 
-Im vorherigen Code wird davon ausgegangen, dass **pwiaitem** ein gültiger Zeiger auf die [**iwiaitem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) -Schnittstelle ist. Der [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Aufrufe füllt **pwiadatatransfer** mit einem Zeiger auf die [**iwiadatatransfer**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer) -Schnittstelle des Elements, auf das **pwiaitem** verweist.
+Im vorherigen Code wird davon ausgegangen, dass **pWiaItem** ein gültiger Zeiger auf die [**IWiaItem-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) ist. Der Aufruf von [IUnknown::QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) füllt **pWiaDataTransfer** mit einem Zeiger auf die [**IWiaDataTransfer-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer) des Elements, auf das **pWiaItem** verweist.
 
-Die Anwendung legt dann die [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) -Strukturmember fest. Weitere Informationen finden Sie unter STGMEDIUM und [TYMED](/windows/win32/api/objidl/ne-objidl-tymed).
+Die Anwendung legt dann die [STGMEDIUM-Strukturmember](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) fest. Weitere Informationen finden Sie unter STGMEDIUM und [TYMED](/windows/win32/api/objidl/ne-objidl-tymed).
 
 
 ```
@@ -46,9 +46,9 @@ Die Anwendung legt dann die [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustg
 
 
 
-Wenn Sie einen Dateinamen angeben, sollte dieser die richtige Dateierweiterung enthalten. WIA 1,0 bietet keine Dateierweiterungen. Wenn das **lpszfilename** -Element von **STGMEDIUM** **null** ist, generiert WIA 1,0 einen zufälligen Dateinamen und einen Pfad für die übertragenen Daten. Verschieben oder kopieren Sie diese Datei vor dem Aufruf von ReleaseStgMedium, da diese Funktion die Datei löscht.
+Wenn Sie einen Dateinamen bereitstellen, sollte er die richtige Dateierweiterung enthalten. WIA 1.0 bietet keine Dateierweiterungen. Wenn das **lpszFileName-Element** von **StgMedium** **NULL** ist, generiert WIA 1.0 einen zufälligen Dateinamen und Pfad für die übertragenen Daten. Verschieben oder kopieren Sie diese Datei, bevor Sie ReleaseStgMedium aufrufen, da diese Funktion die Datei löscht.
 
-Die Anwendung ruft dann die [**iwiadatatransfer:: idtGetData**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatatransfer-idtgetdata) -Methode auf, um die Datenübertragung auszuführen:
+Die Anwendung ruft dann die [**IWiaDataTransfer::idtGetData-Methode**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatatransfer-idtgetdata) auf, um die Datenübertragung auszuführen:
 
 
 ```
@@ -59,13 +59,13 @@ Die Anwendung ruft dann die [**iwiadatatransfer:: idtGetData**](/windows/desktop
 
 
 
-Beim Aufrufen von [**iwiadatatransfer:: idtGetData**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatatransfer-idtgetdata)gibt der zweite Parameter einen Zeiger auf die [**iwiadatacallback**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatacallback) -Schnittstelle an. Anwendungen müssen diese Schnittstelle implementieren, um Rückrufe während der Datenübertragung zu empfangen. Weitere Informationen zum Implementieren dieser Schnittstelle finden Sie unter [**iwiadatacallback:: BandedDataCallback**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatacallback-bandeddatacallback).
+Beim Aufruf von [**IWiaDataTransfer::idtGetData**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatatransfer-idtgetdata)gibt der zweite Parameter einen Zeiger auf die [**IWiaDataCallback-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatacallback) an. Anwendungen müssen diese Schnittstelle implementieren, um Rückrufe während Datenübertragungen zu empfangen. Informationen zum Implementieren dieser Schnittstelle finden Sie unter [**IWiaDataCallback::BandedDataCallback.**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatacallback-bandeddatacallback)
 
-Die Anwendung gibt dann die Zeiger auf die [**iwiadatatransfer**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer) -Schnittstelle frei und gibt alle Daten frei, die in der [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) -Struktur zugeordnet sind.
+Die Anwendung gibt dann die Zeiger auf die [**IWiaDataTransfer-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer) frei und gibt alle in der [STGMEDIUM-Struktur](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) zugeordneten Daten frei.
 
-Die Anwendung kann das Image auch mithilfe von Datenübertragungen im Arbeitsspeicher anstelle von Dateiübertragungen übertragen. In diesem Fall verwendet die Anwendung die idtGetBandedData-Methode anstelle der idtGetData-Methode.
+Die Anwendung kann das Image auch mithilfe von In-Memory-Datenübertragungen anstelle von Dateiübertragungen übertragen. In diesem Fall verwendet die Anwendung die idtGetBandedData-Methode anstelle der idtGetData-Methode.
 
-Hier ist das Beispiel für die komplette Datenübertragung:
+Hier ist das vollständige Beispiel für die Datenübertragung:
 
 
 ```

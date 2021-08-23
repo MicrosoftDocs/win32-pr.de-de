@@ -1,11 +1,11 @@
 ---
-title: MediaRenderer. isvideosupported-Eigenschaft
-description: Ruft einen Wert ab, der angibt, ob der DMR Videoinhalte abspielen kann.
+title: MediaRenderer.IsVideoSupported (Eigenschaft)
+description: Ruft einen Wert ab, der angibt, ob die DMR Videoinhalte wiedergibt.
 ms.assetid: 09fee4e2-7ea4-45b6-944c-39bed030866d
 keywords:
-- Isvideosupported-Eigenschaft Medien Streaming-API
-- Isvideosupported-Eigenschaft Medien Streaming-API, MediaRenderer-Schnittstelle
-- MediaRenderer Interface Medien Streaming-API, isvideosupported-Eigenschaft
+- IsVideoSupported-Eigenschaft Media Streaming-API
+- IsVideoSupported-Eigenschaft Media Streaming-API, MediaRenderer-Schnittstelle
+- MediaRenderer-Schnittstelle Media Streaming-API, IsVideoSupported-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 150ebe5c2514760cbdbda2c751a191c61a7f6641
-ms.sourcegitcommit: 4f5016b1fbfd703dbf769c508db464c2518c0fa5
+ms.openlocfilehash: 0f08387534d512cc684a2dbceddac7da0b38e5454978c271183906b8a4f6d637
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104389358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119712690"
 ---
-# <a name="mediarendererisvideosupported-property"></a>MediaRenderer. isvideosupported-Eigenschaft
+# <a name="mediarendererisvideosupported-property"></a>MediaRenderer.IsVideoSupported (Eigenschaft)
 
-Ruft einen Wert ab, der angibt, ob der DMR Videoinhalte abspielen kann.
+Ruft einen Wert ab, der angibt, ob die DMR Videoinhalte wiedergibt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -33,7 +33,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ```C++
 HRESULT get_IsVideoSupported(
-  [out] boolean *value
+  [out] boolean *value
 );
 ```
 
@@ -41,18 +41,18 @@ HRESULT get_IsVideoSupported(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein boolescher Wert, der **true** ist, wenn der DMR Videoinhalte abspielen kann, andernfalls **false** .
+Ein boolescher Wert, der **True** ist, wenn die DMR Videoinhalte wiederveröffentlichen kann, und **False,** wenn dies nicht der Fall ist.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**MediaRenderer**](mediarenderer.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

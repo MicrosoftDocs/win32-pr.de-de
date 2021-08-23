@@ -1,8 +1,8 @@
 ---
-description: Der setshareingefo-&\# 8194; WMI-Klassenmethode legt die Parameter einer freigegebenen Ressource fest.
+description: SetShareInfo&\# 8194; Die WMI-Klassenmethode legt die Parameter einer freigegebenen Ressource fest.
 ms.assetid: f6379261-9325-4b7f-92df-438c5029569f
 ms.tgt_platform: multiple
-title: Setshareingefo-Methode der Win32_Share-Klasse
+title: SetShareInfo-Methode der Win32_Share Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 54b599ed3124c0d06468bd15589d6aa8a93fb7c1
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: fb9ee76a0b8336ccdca90a04ee3c2a223b7269a30a00276418d6c46a8bb3abc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119800900"
 ---
-# <a name="setshareinfo-method-of-the-win32_share-class"></a>Setshareingefo-Methode der Win32- \_ Freigabe Klasse
+# <a name="setshareinfo-method-of-the-win32_share-class"></a>SetShareInfo-Methode der Win32 \_ Share-Klasse
 
-Die **setshareinfo** - [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode legt die Parameter einer freigegebenen Ressource fest.
+Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **SetShareInfo** legt die Parameter einer freigegebenen Ressource fest.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ uint32 SetShareInfo(
 *MaximumAllowed* \[ in, optional\]
 </dt> <dd>
 
-Limit für die maximale Anzahl von Benutzern, die diese Ressource gleichzeitig verwenden dürfen.
+Begrenzen Sie die maximale Anzahl von Benutzern, die diese Ressource gleichzeitig verwenden dürfen.
 
 Beispiel: 10. Dieser Parameter ist optional.
 
@@ -56,20 +56,20 @@ Beispiel: 10. Dieser Parameter ist optional.
 *Beschreibung* \[ in, optional\]
 </dt> <dd>
 
-Optionaler Kommentar zum Beschreiben der freigegebenen Ressource.
+Optionaler Kommentar, um die freigegebene Ressource zu beschreiben.
 
 </dd> <dt>
 
 *Zugriff* \[ in, optional\]
 </dt> <dd>
 
-Sicherheits Beschreibung für Berechtigungen auf Benutzerebene. Eine Sicherheits Beschreibung enthält Informationen zu den Berechtigungen, den Besitzern und den Zugriffs Funktionen der Ressource. Weitere Informationen finden Sie unter [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor).
+Sicherheitsdeskriptor für Berechtigungen auf Benutzerebene. Ein Sicherheitsdeskriptor enthält Informationen über die Berechtigungs-, Besitzer- und Zugriffsfunktionen der Ressource. Weitere Informationen finden Sie unter [**Win32 \_ SecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben.
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um auf einen Fehler hindeuten zu können.
 
 <dl> <dt>
 
@@ -100,21 +100,21 @@ Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wer
 **Unbekanntes Gerät oder Verzeichnis** (24)
 </dt> <dt>
 
-Der **Netzwerkname wurde nicht gefunden** (25).
+**Net name not found** (25)
 </dt> <dt>
 
-**Sonstige** (26 4294967295)
+**Andere** (26 4294967295)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **setshareinfo** -Methode ist eine dynamische Objektmethode und wird bei einem Vorkommen dieser Klasse verwendet.
+**Die SetShareInfo-Methode** ist eine dynamische Objektmethode und wird bei einem Vorkommen dieser Klasse verwendet.
 
-Nur Mitglieder der lokalen Gruppe "Administratoren" oder "Konto Operatoren" oder die Gruppenmitgliedschaften "Kommunikation", "Drucken" oder "Server Operator" können " **setshareinfo**" erfolgreich ausführen Der Druck Operator kann nur Drucker Warteschlangen festlegen. Der Kommunikations Operator kann nur Warteschlangen für Kommunikationsgeräte festlegen.
+Nur Mitglieder der lokalen Gruppe Administratoren oder Kontooperatoren oder Mitglieder der Operatorgruppe Communication, Print oder Server können **SetShareInfo erfolgreich ausführen.** Der Druckeroperator kann nur Druckerwarteschlangen festlegen. Der Kommunikationsoperator kann nur Kommunikationsgerätewarteschlangen festlegen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden PowerShell-Beispiel wird der Name der **NewShare** -Freigabe aktualisiert.
+Im folgenden PowerShell-Beispiel wird der Name der **neuen FreigabeFreigabe** aktualisiert.
 
 
 ```PowerShell
@@ -132,8 +132,8 @@ $newShare = Get-WmiObject win32_share | Where-Object {$_.name -eq "newShare"}
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -145,7 +145,7 @@ $newShare = Get-WmiObject win32_share | Where-Object {$_.name -eq "newShare"}
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Freigabe**](win32-share.md)
+[**Win32-Freigabe \_**](win32-share.md)
 </dt> </dl>
 
  
