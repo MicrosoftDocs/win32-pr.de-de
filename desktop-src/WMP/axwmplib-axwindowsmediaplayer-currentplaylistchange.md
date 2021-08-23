@@ -1,9 +1,9 @@
 ---
-title: Currentplaylistchange-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das currentplaylistchange-Ereignis tritt auf, wenn sich etwas innerhalb der aktuellen Wiedergabeliste ändert. | Currentplaylistchange-Ereignis des AxWindowsMediaPlayer-Objekts
+title: CurrentPlaylistChange-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das CurrentPlaylistChange-Ereignis tritt auf, wenn sich etwas innerhalb der aktuellen Wiedergabeliste ändert. | CurrentPlaylistChange-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: 1f9c99a4-7d10-48bf-b5ff-b1c1d6753b20
 keywords:
-- Currentplaylistchange-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- CurrentPlaylistChange-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f99f34f0e02d03352a61bbfca6767295d63d59a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 07ff3c076f9b670e3cd234a53b93f3ea9c0963d2dea1f12a3963f12300e9532e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136143"
 ---
-# <a name="currentplaylistchange-event-of-the-axwindowsmediaplayer-object"></a>Currentplaylistchange-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="currentplaylistchange-event-of-the-axwindowsmediaplayer-object"></a>CurrentPlaylistChange-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das currentplaylistchange-Ereignis tritt auf, wenn sich etwas innerhalb der aktuellen Wiedergabeliste ändert.
+Das CurrentPlaylistChange-Ereignis tritt auf, wenn sich etwas innerhalb der aktuellen Wiedergabeliste ändert.
 
 ``` syntax
 [C#]
@@ -41,25 +41,25 @@ Private Sub player_CurrentPlaylistChange(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ currentplaylistchangeeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ currentplaylistchangeevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ CurrentPlaylistChangeEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ CurrentPlaylistChangeEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft | BESCHREIBUNG                                                                                                                   |
+| Eigenschaft | Beschreibung                                                                                                                   |
 |----------|-------------------------------------------------------------------------------------------------------------------------------|
-| change (Ändern)   | WMPLib. wmpplaylistchangeeventtypea-Enumerationswert, der den Typ der Änderung angibt, die für die Wiedergabeliste aufgetreten ist.<br/> |
+| change (Ändern)   | WMPLib.WMPPlaylistChangeEventTypeAn-Enumerationswert, der den Typ der Änderung an der Wiedergabeliste angibt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis tritt nicht auf, wenn eine andere Wiedergabeliste zur aktuellen Wiedergabeliste wird. Sie tritt nur auf, wenn eine Änderung innerhalb der aktuellen Wiedergabeliste stattfindet, z. b. ein Medien Element, das an die Wiedergabeliste angehängt wird.
+Dieses Ereignis tritt nicht auf, wenn eine andere Wiedergabeliste zur aktuellen Wiedergabeliste wird. Sie tritt nur auf, wenn eine Änderung innerhalb der aktuellen Wiedergabeliste erfolgt, z. B. wenn ein Medienelement an die Wiedergabeliste angefügt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel werden die Namen aller Medienelemente in der aktuellen Wiedergabeliste als Reaktion auf das currentplaylistchange-Ereignis angezeigt. Das AxWMPLib. AxWindowsMediaPlayer-Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel werden die Namen aller Medienelemente in der aktuellen Wiedergabeliste als Reaktion auf das CurrentPlaylistChange-Ereignis angezeigt. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -144,26 +144,26 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. currentwiedergabe (VB und c#)**](axwmplib-axwindowsmediaplayer-currentplaylist--vb-and-c.md)
+[**AxWindowsMediaPlayer.currentPlaylist (VB und C#)**](axwmplib-axwindowsmediaplayer-currentplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. playlistchange-Ereignis (VB und c#)**](axwmplib-axwindowsmediaplayer-playlistchange.md)
+[**AxWindowsMediaPlayer.PlaylistChange-Ereignis (VB und C#)**](axwmplib-axwindowsmediaplayer-playlistchange.md)
 </dt> <dt>
 
-[**Wmpplaylistchangeeventtype**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpplaylistchangeeventtype)
+[**WMPPlaylistChangeEventType**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpplaylistchangeeventtype)
 </dt> </dl>
 
  

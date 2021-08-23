@@ -1,54 +1,54 @@
 ---
-title: Legacy Unterstützung für das Schwenken mit Bild Lauf leisten
-description: In diesem Abschnitt wird die Unterstützung für das Schwenken mithilfe von Bild Lauf leisten in Windows-basierten Anwendungen beschrieben.
+title: Legacyunterstützung für Schwenken mit Scrollleisten
+description: In diesem Abschnitt wird die Unterstützung für das Schwenken mithilfe von Scrollleisten in Windows-basierten Anwendungen beschrieben.
 ms.assetid: a8906b48-b804-4f3a-bb9b-dc94b632e2f7
 keywords:
-- Windows-Fingereingabe, Legacy Unterstützung
-- Schwenken mit Bild Lauf leisten
-- Windows-Fingereingabe, Schwenken mit Bild Lauf leisten
-- Windows-Fingereingabe, Scrollleisten
-- Bild Lauf leisten, Schwenken
-- Bild Lauf leisten, Legacy Unterstützung
-- Windows-Toucheingabe, Gesten
-- Gesten, Schwenken mit Bild Lauf leisten
-- Windows-Fingereingabe, Flicks
-- Flicks, Schwenken mit Bild Lauf leisten
-- Flicks, deaktivieren
-- Windows-Fingereingabe, Mausrad-Nachrichten
-- Mausrad Meldungen
-- Windows-Fingereingabe, Anpassen von schwenken
+- Windows Touch,Legacy-Unterstützung
+- Schwenken mit Scrollleisten
+- Windows Touch,Schwenken mit Bildlaufleisten
+- Windows Touch,Scrollleisten
+- Scrollleisten,Schwenken
+- Scrollleisten,Legacyunterstützung
+- Windows Touch,Gesten
+- Gesten,Schwenken mit Scrollleisten
+- Windows Touch,Flicks
+- Flicks,Schwenken mit Scrollleisten
+- Flicks,deaktivieren
+- Windows Touch,Mausradmeldungen
+- Mausradmeldungen
+- Windows Touch,Anpassen des Schwenkens
 - Schwenken, Scrollleisten
-- Schwenken, Legacy Unterstützung
+- Schwenken, Legacyunterstützung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 57f6b9dd47821205a6aa5b6f07e5053e31597358
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 97190d637cae5cc6936ecd78dca31e1e6c0f9ef1037b292b6080f973fc4e8701
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104554585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119086309"
 ---
-# <a name="legacy-support-for-panning-with-scroll-bars"></a>Legacy Unterstützung für das Schwenken mit Bild Lauf leisten
+# <a name="legacy-support-for-panning-with-scroll-bars"></a>Legacyunterstützung für Schwenken mit Scrollleisten
 
-In diesem Abschnitt wird die Unterstützung für das Schwenken mithilfe von Bild Lauf leisten in Windows-basierten Anwendungen beschrieben.
+In diesem Abschnitt wird die Unterstützung für das Schwenken mithilfe von Scrollleisten in Windows-basierten Anwendungen beschrieben.
 
-In Windows 7 generieren Schwenk Gesten eine WM- \_ \* scrollnachricht, um die Legacy Unterstützung für das Schwenken zu aktivieren. Da Ihre Anwendungen möglicherweise nicht alle WM- \_ \* scrollnachrichten unterstützen, funktioniert das Schwenken möglicherweise nicht ordnungsgemäß. In diesem Thema werden die Schritte beschrieben, die Sie ausführen müssen, um sicherzustellen, dass die Legacy-schwenken-Funktionen in-Anwendungen wie erwartet funktionieren.
+In Windows 7 generieren Schwenkgesten WM SCROLL-Nachrichten, um legacy-Unterstützung für \_ \* Schwenken zu ermöglichen. Da Ihre Anwendungen möglicherweise nicht alle WM SCROLL-Nachrichten unterstützen, funktioniert \_ \* das Schwenken möglicherweise nicht ordnungsgemäß. In diesem Thema werden die Schritte beschrieben, die Sie ausführen müssen, um sicherzustellen, dass das Legacy-Schwenken in Anwendungen wie erwartet funktioniert.
 
 ## <a name="overview"></a>Übersicht
 
-In den folgenden Abschnitten wird erläutert, wie Sie die Legacy-schwenken-Darstellung aktivieren:
+In den folgenden Abschnitten wird erläutert, wie Sie das Legacy-Schwenken aktivieren:
 
--   Erstellen Sie eine Anwendung mit Bild Lauf leisten.
--   Deaktivieren Sie Flicks.
--   Passen Sie die Schwenkfunktion an.
+-   Erstellen Sie eine Anwendung mit Bildlaufleisten.
+-   Deaktivieren Sie die Licks.
+-   Passen Sie die Schwenkerfahrung an.
 
-## <a name="create-an-application-with-scroll-bars"></a>Erstellen einer Anwendung mit Bild Lauf leisten
+## <a name="create-an-application-with-scroll-bars"></a>Erstellen einer Anwendung mit Bildlaufleisten
 
-Starten Sie mithilfe des Microsoft Visual Studio-Assistenten ein neues Win32-Projekt. Stellen Sie sicher, dass der Anwendungstyp auf die Windows-Anwendung festgelegt ist. Sie müssen die Unterstützung für die Active Template Library (ATL) nicht aktivieren. In der folgenden Abbildung wird gezeigt, wie das Projekt aussieht, nachdem Sie es gestartet haben.
+Starten Sie ein neues Win32-Projekt mithilfe des Microsoft Visual Studio Assistenten. Stellen Sie sicher, dass der Anwendungstyp auf die Windows ist. Sie müssen die Unterstützung für die Active Template Library (ATL) nicht aktivieren. Die folgende Abbildung zeigt, wie Ihr Projekt aussehen wird, nachdem Sie es gestartet haben.
 
-![Screenshot mit einem Fenster ohne Scrollleisten](images/gpd-1.png)
+![Screenshot eines Fensters ohne Bildlaufleisten](images/gpd-1.png)
 
-Aktivieren Sie als nächstes die Bild Lauf leisten auf dem Bild. Ändern [**Sie den Code**](/windows/desktop/api/winuser/nf-winuser-createwindowa) Erstellungs Code in **InitInstance** so, dass der Vorgang zum Aufrufen der Skripterstellung ein Fenster mit Bild Lauf leisten erstellt. Dies wird im folgenden Code veranschaulicht.
+Aktivieren Sie als Nächstes Bildlaufleisten auf dem Bild. Ändern Sie den Code für die Fenstererstellung in **InitInstance** so, dass der [**CreateWindow-Funktionsaufruf**](/windows/desktop/api/winuser/nf-winuser-createwindowa) ein Fenster mit Bildlaufleisten erstellt. Dies wird im folgenden Code veranschaulicht.
 
 
 ```C++
@@ -69,11 +69,11 @@ Aktivieren Sie als nächstes die Bild Lauf leisten auf dem Bild. Ändern [**Sie 
 
 
 
-Nachdem Sie den Code zum Erstellen von Fenstern geändert haben, verfügt die Anwendung über eine Bild Lauf Leiste. Die folgende Abbildung zeigt, wie die Anwendung an diesem Punkt aussehen könnte.
+Nachdem Sie den Code für die Fenstererstellung geändert haben, hat Ihre Anwendung eine Scrollleiste. Die folgende Abbildung zeigt, wie die Anwendung an diesem Punkt aussehen könnte.
 
-![Screenshot mit einem Fenster, das eine vertikale Schiebe Leiste, aber keinen Text anzeigt](images/gpd-2.png)
+![Screenshot eines Fensters mit einer vertikalen Scrollleiste, aber ohne Text](images/gpd-2.png)
 
-Nachdem Sie den Code zum Erstellen von Fenstern geändert haben, fügen Sie der Anwendung ein ScrollBar-Objekt und Text zum Scrollen hinzu. Platzieren Sie den folgenden Code am Anfang der **WndProc** -Methode.
+Nachdem Sie den Code für die Fenstererstellung geändert haben, fügen Sie ihrer Anwendung ein Scrollleistenobjekt und einen Text hinzu, um einen Bildlauf zu erstellen. Platzieren Sie den folgenden Code am Anfang der **WndProc-Methode.**
 
 
 ```C++
@@ -121,7 +121,7 @@ Nachdem Sie den Code zum Erstellen von Fenstern geändert haben, fügen Sie der 
 
 
 
-Implementieren Sie als nächstes die Anwendungslogik zum Konfigurieren der Text Berechnungen für textmetriken. Mit dem folgenden Code sollte der vorhandene **WM \_ Create** Case in der **WndProc** -Funktion ersetzt werden.
+Implementieren Sie als Nächstes die Anwendungslogik zum Konfigurieren der Textberechnungen für Textmetriken. Der folgende Code sollte den vorhandenen **WM \_ CREATE-Fall** in der **WndProc-Funktion** ersetzen.
 
 
 ```C++
@@ -148,7 +148,7 @@ Implementieren Sie als nächstes die Anwendungslogik zum Konfigurieren der Text 
 
 
 
-Implementieren Sie als nächstes die Anwendungslogik für die Neuberechnung des Textblocks, wenn die Größe des Fensters geändert wird. Der folgende Code sollte in **WndProc** in den Nachrichten Switch eingefügt werden.
+Implementieren Sie als Nächstes die Anwendungslogik für die Neuberechnung des Textblocks, wenn die Größe des Fensters geändert wird. Der folgende Code sollte in den Meldungsschalter in **WndProc platziert werden.**
 
 
 ```C++
@@ -178,7 +178,7 @@ Implementieren Sie als nächstes die Anwendungslogik für die Neuberechnung des 
 
 
 
-Implementieren Sie als nächstes die Anwendungslogik für vertikale scrollnachrichten. Der folgende Code sollte in **WndProc** in den Nachrichten Switch eingefügt werden.
+Implementieren Sie als Nächstes die Anwendungslogik für vertikale Bildlaufnachrichten. Der folgende Code sollte in den Meldungsschalter in **WndProc platziert werden.**
 
 
 ```C++
@@ -251,7 +251,7 @@ Implementieren Sie als nächstes die Anwendungslogik für vertikale scrollnachri
 
 
 
-Aktualisieren Sie anschließend den Code, um das Fenster neu zu zeichnen. Der folgende Code sollte die standardmäßige **WM \_** -Zeichnungs Fall in **WndProc** ersetzen.
+Aktualisieren Sie als Nächstes den Code, um das Fenster neu zu zeichnet. Der folgende Code sollte die STANDARDMÄßIGE **WM \_ PAINT-Case** in **WndProc ersetzen.**
 
 
 ```C++
@@ -297,18 +297,18 @@ Aktualisieren Sie anschließend den Code, um das Fenster neu zu zeichnen. Der fo
 
 
 
-Wenn Sie nun die Anwendung erstellen und ausführen, sollte Sie den Textbausteine und eine vertikale Schiebe Leiste enthalten. Die folgende Abbildung zeigt, wie Ihre Anwendung aussehen könnte.
+Wenn Sie nun Ihre Anwendung erstellen und ausführen, sollte sie den Textbaustein und eine vertikale Bildlaufleiste enthalten. Die folgende Abbildung zeigt, wie Ihre Anwendung aussehen könnte.
 
-![Screenshot mit einem Fenster mit vertikaler Scrollleiste und Text](images/gpd-3.png)
+![Screenshot eines Fensters mit vertikaler Scrollleiste und Text](images/gpd-3.png)
 
-## <a name="disable-flicks"></a>Flicks deaktivieren
+## <a name="disable-flicks"></a>Deaktivieren von Flicks
 
-Zum Verbessern der Schwenkfunktion in der Anwendung sollten Sie Flicks ausschalten. Legen Sie zu diesem Zweck die Fenster Eigenschaften für den *HWND* -Wert fest, wenn dieser initialisiert wird. Die für schnelle Stift Bewegungen verwendeten Werte werden im tpcshrd. h-Header gespeichert, der ebenfalls eingeschlossen werden muss. Der folgende Code sollte in die include-Direktiven und in der **InitInstance** -Funktion eingefügt werden, nachdem Sie das *HWND* erstellt haben.
+Um die Schwenkerfahrung in Ihrer Anwendung zu verbessern, sollten Sie die Blättern deaktivieren. Legen Sie hierzu fenstereigenschaften für den *hWnd-Wert* fest, wenn er initialisiert wird. Die für Flicks verwendeten Werte werden im Header tpcshrd.h gespeichert, der ebenfalls eingeschlossen werden muss. Der folgende Code sollte in Ihren include-Direktiven und in der **InitInstance-Funktion** platziert werden, nachdem Sie *hWnd erstellt haben.*
 
 > [!Note]  
-> Dies ist nützlich für Anwendungen, die sofortiges Feedback zu einem Toucheingabe-oder-Stift-Ereignis erfordern, anstatt einen Zeit-oder Entfernungs Schwellenwert zu testen.
+> Dies ist nützlich für Anwendungen, die sofortiges Feedback bei einem Touch- oder Pen down-Ereignis benötigen, anstatt auf einen Zeit- oder Entfernungsschwellenwert zu testen.
 
- 
+ 
 
 
 ```C++
@@ -340,17 +340,17 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow){
 
 
 
-## <a name="customize-the-panning-experience"></a>Anpassen der Schwenk Darstellung
+## <a name="customize-the-panning-experience"></a>Anpassen der Schwenkerfahrung
 
-Möglicherweise möchten Sie eine andere Fenster Darstellung als Windows 7-Angebote. Um das Schwenken zu verbessern, müssen Sie den Handler für die [**WM- \_ Gesten**](wm-gesture.md) Nachricht hinzufügen. Weitere Informationen finden Sie unter [verbessern der Single-Finger schwenken](improving-the-single-finger-panning-experience.md).
+Möglicherweise möchten Sie eine andere Schwenkerfahrung als Windows 7-Angebote standardmäßig. Um das Schwenken zu verbessern, müssen Sie den Handler für die [**WM \_ GESTURE-Meldung**](wm-gesture.md) hinzufügen. Weitere Informationen finden Sie unter [Improving the Single-Finger Panning Experience](improving-the-single-finger-panning-experience.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Windows-Touchgesten](guide-multi-touch-gestures.md)
+[Windows Touchgesten](guide-multi-touch-gestures.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

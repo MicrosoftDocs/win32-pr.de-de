@@ -1,11 +1,11 @@
 ---
-title: Ivmdvddrive AttachHostDrive-Methode (vpccominterfaces. h)
-description: Fügt ein Host Laufwerk an das DVD-Laufwerk innerhalb der virtuellen Maschine an.
+title: IVMDVDDrive AttachHostDrive-Methode (VPCCOMInterfaces.h)
+description: Anfügen eines Hostlaufwerks an das DVD-Laufwerk auf dem virtuellen Computer.
 ms.assetid: 68e658ba-470c-452c-8124-5bb2ec81911b
 keywords:
-- AttachHostDrive-Methode Virtual PC
-- AttachHostDrive-Methode Virtual PC, ivmdvddrive-Schnittstelle
-- Ivmdvddrive Interface Virtual PC, AttachHostDrive-Methode
+- AttachHostDrive-Methode Virtueller PC
+- AttachHostDrive-Methode Virtueller PC, IVMDVDDrive-Schnittstelle
+- IVMDVDDrive-Schnittstelle Virtueller PC, AttachHostDrive-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 012afcdc0b88aa5b77f1d85cc5becff1e70853f8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c82229488ebb705cab1a684a207f973356d2d43177c4123ae4f456b55fbe6840
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136853"
 ---
-# <a name="ivmdvddriveattachhostdrive-method"></a>Ivmdvddrive:: AttachHostDrive-Methode
+# <a name="ivmdvddriveattachhostdrive-method"></a>IVMDVDDrive::AttachHostDrive-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Fügt ein Host Laufwerk an das DVD-Laufwerk innerhalb der virtuellen Maschine an.
+Anfügen eines Hostlaufwerks an das DVD-Laufwerk auf dem virtuellen Computer.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,10 +44,10 @@ HRESULT AttachHostDrive(
 
 <dl> <dt>
 
-Laufwerk *Etter* \[ in\]
+*driveLetter* \[ In\]
 </dt> <dd>
 
-Der Buchstabe des Host Laufwerks, das angefügt werden soll.
+Der Buchstabe des Hostlaufwerks, das angefügt werden soll.
 
 </dd> </dl>
 
@@ -57,15 +57,15 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                    | BESCHREIBUNG                                                                                                                                                                          |
+| Rückgabecode/-wert                                                                                                                                                    | Beschreibung                                                                                                                                                                          |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                          | Der Vorgang wurde durchgeführt.<br/>                                                                                                                                             |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>         | Es wurde kein Laufwerk Buchstabe angegeben, oder der angegebene Laufwerk Buchstabe ist ungültig.<br/>                                                                                                  |
-| <dl> <dt>**E \_**</dt> <dt>0x80004005</dt> fehlschlagen </dl>               | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                                         |
-| <dl> <dt>**VM \_ E \_ VM \_ unbekannt**</dt> <dt>0xa0040207</dt> </dl>    | Der virtuelle Computer wurde nicht gefunden.<br/>                                                                                                                                   |
-| <dl> <dt>**VM \_ E- \_ Laufwerk \_ in \_ Verwendung**</dt> von <dt>0xa0040727</dt> </dl> | Ein Host-DVD-Laufwerk oder ISO-Abbild ist bereits an dieses Laufwerk innerhalb des virtuellen Computers angefügt, oder das angegebene Host Laufwerk wird bereits in einer anderen virtuellen Maschine verwendet.<br/> |
-| <dl> <dt>**VM \_ E \_ Laufwerk \_ ungültige**</dt> <dt>0xa0040502</dt> </dl> | Der Busort dieses Laufwerks ist ungültig, oder das Laufwerk scheint kein gültiges DVD-Laufwerk zu sein.<br/>                                                                         |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>    | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                                         |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>         | Es wurde kein Laufwerkbuchstaben angegeben, oder der angegebene Laufwerkbuchstaben ist ungültig.<br/>                                                                                                  |
+| <dl> <dt>**E \_ FEHLER**</dt> <dt>0x80004005</dt> </dl>               | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                                         |
+| <dl> <dt>**VM \_ E \_ VM \_ UNKNOWN**</dt> <dt>0xA0040207</dt> </dl>    | Der virtuelle Computer wurde nicht gefunden.<br/>                                                                                                                                   |
+| <dl> <dt>**VM \_ \_VERWENDETES \_ \_ E-LAUFWERK**</dt> <dt>0XA0040727</dt> </dl> | Ein Host-DVD-Laufwerk oder ISO-Image ist bereits auf dem virtuellen Computer an dieses Laufwerk angefügt, oder das angegebene Hostlaufwerk wird bereits auf einem anderen virtuellen Computer verwendet.<br/> |
+| <dl> <dt>**VM \_ E \_ DRIVE \_ INVALID**</dt> <dt>0xA0040502</dt> </dl> | Der Busspeicherort für dieses Laufwerk ist ungültig, oder das Laufwerk scheint kein gültiges DVD-Laufwerk zu sein.<br/>                                                                         |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>    | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                                         |
 
 
 
@@ -77,20 +77,20 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmdvddrive ist als b96328f6-6732-437d-a00d-ffa47e43971c definiert.<br/>                |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMDVDDrive ist als b96328f6-6732-437d-a00d-ffa47e43971c definiert.<br/>                |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmdvddrive**](ivmdvddrive.md)
+[**IVMDVDDrive**](ivmdvddrive.md)
 </dt> </dl>
 
  

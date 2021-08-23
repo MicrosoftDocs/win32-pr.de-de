@@ -1,33 +1,33 @@
 ---
-description: Im folgenden Beispiel werden die Zertifikate in einem Systemzertifikat Speicher aufgelistet. dabei wird der Name des Antragstellers der einzelnen Zertifikate angezeigt, und der Benutzer kann auswählen, ob Zertifikate aus dem Speicher gelöscht werden sollen.
+description: Das folgende Beispiel listet die Zertifikate in einem Systemzertifikatspeicher auf, zeigt den Namen des Betreffs jedes Zertifikats an und ermöglicht es dem Benutzer, alle Zertifikate aus dem Speicher zu löschen.
 ms.assetid: 52a0287b-7d2a-483e-8bbc-43621c4b7103
-title: 'Beispiel-C-Programm: Löschen von Zertifikaten aus einem Zertifikat Speicher'
+title: 'Beispiel C-Programm: Löschen von Zertifikaten aus einem Store'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f29f55d27bf2a85d82e4ab96e51fe5368c9de935
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 065a7e0e46f3072d69014e294610ec7ae546d05c98816f809b9b2de92949db62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007853"
 ---
-# <a name="example-c-program-deleting-certificates-from-a-certificate-store"></a>Beispiel-C-Programm: Löschen von Zertifikaten aus einem Zertifikat Speicher
+# <a name="example-c-program-deleting-certificates-from-a-certificate-store"></a>Beispiel C-Programm: Löschen von Zertifikaten aus einem Store
 
-Im folgenden Beispiel werden die Zertifikate in einem System [*Zertifikat Speicher*](../secgloss/c-gly.md)aufgelistet. dabei wird der Name des Antragstellers der einzelnen Zertifikate angezeigt, und der Benutzer kann auswählen, ob Zertifikate aus dem Speicher gelöscht werden sollen. Im Beispiel wird der Name des Zertifikat Speicher des Benutzers abgerufen und kann daher verwendet werden, um den Inhalt eines beliebigen Systemzertifikat Speicher zu verwalten.
+Das folgende Beispiel listet die Zertifikate in einem Systemzertifikatspeicher [*auf,*](../secgloss/c-gly.md)zeigt den Namen des Betreffs jedes Zertifikats an und ermöglicht es dem Benutzer, alle Zertifikate aus dem Speicher zu löschen. Das Beispiel ruft den Namen des Zertifikatspeichers vom Benutzer ab und kann daher verwendet werden, um den Inhalt eines beliebigen Systemzertifikatspeichers zu verwalten.
 
-In diesem Beispiel werden die folgenden Aufgaben und [*kryptoapi*](../secgloss/c-gly.md) -Funktionen veranschaulicht:
+Dieses Beispiel veranschaulicht die folgenden Aufgaben und [*CryptoAPI-Funktionen:*](../secgloss/c-gly.md)
 
--   Öffnen eines Systemzertifikat Speicher mithilfe von " [**certopdsystemstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopensystemstorea)".
--   Auflisten der Zertifikate in einem Zertifikat Speicher mithilfe von [**certenrecertifikatesinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatesinstore).
--   Der Name des Subjekts eines Zertifikats mit [**certgetnamestring wird abgerufen**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa).
--   Vergleichen des Namens des Antragstellers des Zertifikats mit dem Namen des Ausstellers des Zertifikats unter Verwendung von [**certcomparecertifikatename**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcomparecertificatename).
--   Es wird überprüft, ob der öffentliche Schlüssel des aktuellen Zertifikats mit dem öffentlichen Schlüssel eines vorherigen Zertifikats mit [**certcomparepublickeyinfo**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcomparepublickeyinfo)übereinstimmt.
--   Duplizieren eines Zeigers auf einen [*Zertifikat Kontext*](../secgloss/c-gly.md) mithilfe von [**certduplikatecertifiertifikatecontext**](/windows/desktop/api/Wincrypt/nf-wincrypt-certduplicatecertificatecontext).
--   Vergleichen der [**CERT \_ Info**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_info) -Mitglieder der einzelnen Zertifikate mithilfe von " [**certcomparecertificate**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcomparecertificate)".
--   Löschen eines Zertifikats aus einem Speicher mithilfe von " [**certdeletecertifikatefromstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certdeletecertificatefromstore)".
--   Schließen eines Zertifikat Speicher mithilfe von " [**certclosestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)".
+-   Öffnen eines Systemzertifikatspeichers [**mithilfe von CertOpenSystemStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopensystemstorea)
+-   Auflisten der Zertifikate in einem Zertifikatspeicher [**mithilfe von CertEnumCertificatesInStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatesinstore)
+-   Abrufen des Namens des Betreffs eines Zertifikats [**mithilfe von CertGetNameString**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa).
+-   Vergleicht den Namen des Zertifikatssubjekts mit dem Namen des Zertifikatausstellers mithilfe von [**CertCompareCertificateName.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcomparecertificatename)
+-   Überprüfen, ob der öffentliche Schlüssel des aktuellen Zertifikats mit dem öffentlichen Schlüssel eines vorherigen Zertifikats mithilfe von [**CertComparePublicKeyInfo entspricht.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcomparepublickeyinfo)
+-   Duplizieren eines Zeigers auf einen [*Zertifikatkontext mithilfe*](../secgloss/c-gly.md) [**von CertDuplicateCertificateContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-certduplicatecertificatecontext).
+-   Vergleichen der [**CERT \_ INFO-Member**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_info) jedes Zertifikats [**mithilfe von CertCompareCertificate**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcomparecertificate).
+-   Löschen eines Zertifikats aus einem Speicher [**mithilfe von CertDeleteCertificateFromStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certdeletecertificatefromstore).
+-   Schließen eines Zertifikatspeichers [**mithilfe von CertCloseStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
 
-In diesem Beispiel wird der Name eines Systemzertifikat Speicher vom Benutzer abgerufen, der Speicher geöffnet und die Zertifikate in diesem Speicher durchlaufen. Für jedes Zertifikat wird der Name des Antragstellers des Zertifikats angezeigt, und der Benutzer erhält die Möglichkeit, das Zertifikat zu löschen.
+Dieses Beispiel ruft den Namen eines Systemzertifikatspeichers vom Benutzer ab, öffnet diesen Speicher und durchläuft die Zertifikate in diesem Speicher. Für jedes Zertifikat wird der Name des Zertifikatssubjekts angezeigt, und der Benutzer erhält die Möglichkeit, dieses Zertifikat zu löschen.
 
 
 ```C++

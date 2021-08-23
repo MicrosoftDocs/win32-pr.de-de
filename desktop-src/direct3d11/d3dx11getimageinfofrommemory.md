@@ -1,6 +1,6 @@
 ---
-title: D3DX11GetImageInfoFromMemory-Funktion (D3DX11tex. h)
-description: Beachten Sie, dass die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) für Windows 8 veraltet ist und für Windows Store-Apps nicht unterstützt wird. Beachten Sie, dass Sie anstelle dieser Funktion die directxtex-Bibliothek GetMetadataFromXXXMemory (wobei xxx für WIC, DDS oder TGA verwendet wird) verwenden. Die WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Kunst Quellformat für Spiele). Sie erhalten Informationen zu einem bereits in den Arbeitsspeicher geladenen Image.
+title: D3DX11GetImageInfoFromMemory-Funktion (D3DX11tex.h)
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt. Hinweis Anstelle dieser Funktion wird empfohlen, die DirectXTex-Bibliothek GetMetadataFromXXXMemory (wobei XXX WIC, DDS oder TGA ist) zu verwenden. WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Art-Source-Format für Spiele). Abrufen von Informationen zu einem Image, das bereits in den Arbeitsspeicher geladen wurde.
 ms.assetid: b13192fa-4235-4c38-ba46-e14ffab2f653
 keywords:
 - D3DX11GetImageInfoFromMemory-Funktion Direct3D 11
@@ -15,26 +15,26 @@ api_type:
 - LibDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 85c5f1f04c9540614541b9f63b7833967d6ce959
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f64db94fd0827e1168c599c3a4b959da097faaf43231943d323a19917e18a8b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119124705"
 ---
 # <a name="d3dx11getimageinfofrommemory-function"></a>D3DX11GetImageInfoFromMemory-Funktion
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 
  
 
 > [!Note]  
-> Anstatt diese Funktion zu verwenden, empfiehlt es sich, die [directxtex](https://github.com/Microsoft/DirectXTex) -Bibliothek **GetMetadataFromXXXMemory** (wobei xxx für WIC, DDS oder TGA verwendet wird) zu verwenden. Die WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Kunst Quellformat für Spiele).
+> Anstatt diese Funktion zu verwenden, wird empfohlen, die [DirectXTex-Bibliothek](https://github.com/Microsoft/DirectXTex) **GetMetadataFromXXXMemory** zu verwenden (wobei XXX WIC, DDS oder TGA ist. WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Art-Source-Format für Spiele).
 
  
 
-Sie erhalten Informationen zu einem bereits in den Arbeitsspeicher geladenen Image.
+Abrufen von Informationen zu einem Image, das bereits in den Arbeitsspeicher geladen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,48 +55,48 @@ HRESULT D3DX11GetImageInfoFromMemory(
 
 <dl> <dt>
 
-*pSrcData* \[ in\]
+*pSrcData* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[ **lpcvoid**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **LPCVOID**](/windows/desktop/WinProg/windows-data-types)**
 
 Zeiger auf das Bild im Arbeitsspeicher.
 
 </dd> <dt>
 
-*Srcdatasize* \[ in\]
+*SrcDataSize* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **SIZE \_ T**](/windows/desktop/WinProg/windows-data-types)**
 
 Größe des Bilds im Arbeitsspeicher in Bytes.
 
 </dd> <dt>
 
-*ppump* \[ in\]
+*pPump* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3DX11ThreadPump**](id3dx11threadpump.md)\***
 
-Optionales threadpump, das verwendet werden kann, um die Informationen asynchron zu laden. Kann **null** sein. Siehe [**ID3DX11ThreadPump-Schnittstelle**](id3dx11threadpump.md).
+Optionale Threadpumpe, die zum asynchronen Laden der Informationen verwendet werden kann. Kann **NULL** sein. Siehe [**ID3DX11ThreadPump-Schnittstelle.**](id3dx11threadpump.md)
 
 </dd> <dt>
 
-*psrcinfo* \[ in\]
+*pSrcInfo* \[ In\]
 </dt> <dd>
 
-Type: **[ **Bibliothek d3dx11 \_ Image \_ Info**](d3dx11-image-info.md)\***
+Typ: **[ **D3DX11 \_ IMAGE \_ INFO**](d3dx11-image-info.md)\***
 
-Informationen zum Image im Arbeitsspeicher.
+Informationen zum Bild im Arbeitsspeicher.
 
 </dd> <dt>
 
-*phresult* \[ vorgenommen\]
+*pHResult* \[ out\]
 </dt> <dd>
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)\***
 
-Ein Zeiger auf den Rückgabewert. Kann **null** sein. Wenn *ppump* nicht **null** ist, muss *phresult* eine gültige Speicheradresse sein, bis die asynchrone Ausführung abgeschlossen ist.
+Ein Zeiger auf den Rückgabewert. Kann **NULL** sein. Wenn *pPump* nicht **NULL** ist, muss *pHResult* ein gültiger Speicherort sein, bis die asynchrone Ausführung abgeschlossen ist.
 
 </dd> </dl>
 
@@ -104,16 +104,16 @@ Ein Zeiger auf den Rückgabewert. Kann **null** sein. Wenn *ppump* nicht **null*
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 11-Rückgabecodes aufgeführten](d3d11-graphics-reference-returnvalues.md)Werte.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX11tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Bibliothek d3dx11. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX11tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX11.lib</dt> </dl>  |
 
 
 

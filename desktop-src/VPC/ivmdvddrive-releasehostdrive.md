@@ -1,11 +1,11 @@
 ---
-title: Ivmdvddrive releasehostdrive-Methode (vpccominterfaces. h)
-description: Gibt ein erfasstes Host Laufwerk vom DVD-Laufwerk frei.
+title: IVMDVDDrive ReleaseHostDrive-Methode (VPCCOMInterfaces.h)
+description: Gibt ein aufgezeichnetes Hostlaufwerk vom DVD-Laufwerk frei.
 ms.assetid: 88bbe364-0c39-40c2-89e7-22ffd66259a2
 keywords:
-- Releasehostdrive-Methode Virtual PC
-- Releasehostdrive-Methode Virtual PC, ivmdvddrive-Schnittstelle
-- Ivmdvddrive Interface Virtual PC, releasehostdrive-Methode
+- ReleaseHostDrive-Methode Virtueller PC
+- ReleaseHostDrive-Methode Virtueller PC, IVMDVDDrive-Schnittstelle
+- IVMDVDDrive-Schnittstelle Virtueller PC, ReleaseHostDrive-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c2ed2c551ba619855743266b9b506a0c579f92a7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 865b9aa54304d8ddacacf048825d6c9767347f341d31524cbd4dd60d7060ae4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136803"
 ---
-# <a name="ivmdvddrivereleasehostdrive-method"></a>Ivmdvddrive:: releasehostdrive-Methode
+# <a name="ivmdvddrivereleasehostdrive-method"></a>IVMDVDDrive::ReleaseHostDrive-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Gibt ein erfasstes Host Laufwerk vom DVD-Laufwerk frei.
+Gibt ein aufgezeichnetes Hostlaufwerk vom DVD-Laufwerk frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,14 +48,14 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                         | BESCHREIBUNG                                                                   |
+| Rückgabecode/-wert                                                                                                                                                         | Beschreibung                                                                   |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                               | Der Vorgang wurde durchgeführt.<br/>                                      |
-| <dl> <dt>**E \_**</dt> <dt>0x80004005</dt> fehlschlagen </dl>                    | Ein unerwarteter Fehler ist aufgetreten.<br/>                                  |
-| <dl> <dt>**VM \_ E \_ VM \_ unbekannt**</dt> <dt>0xa0040207</dt> </dl>         | Der virtuelle Computer wurde nicht gefunden.<br/>                            |
-| <dl> <dt>**VM \_ E \_ Medien \_ falscher \_ Typ**</dt> <dt>0xa00400728</dt> </dl> | Das aktuell erfasste Medium ist kein Host Laufwerk.<br/>             |
-| <dl> <dt>**VM \_ E \_ Laufwerk \_ ungültige**</dt> <dt>0xa0040502</dt> </dl>      | Das Laufwerk konnte aufgrund eines ungültigen busstandorts nicht initialisiert werden.<br/> |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>         | Ein unerwarteter Fehler ist aufgetreten.<br/>                                  |
+| <dl> <dt>**E \_ FAIL**</dt> <dt>0x80004005</dt> </dl>                    | Ein unerwarteter Fehler ist aufgetreten.<br/>                                  |
+| <dl> <dt>**VM \_ E \_ VM \_ UNKNOWN**</dt> <dt>0xA0040207</dt> </dl>         | Der virtuelle Computer wurde nicht gefunden.<br/>                            |
+| <dl> <dt>**VM \_ E \_ MEDIA \_ WRONG \_ TYPE**</dt> <dt>0xA00400728</dt> </dl> | Das derzeit erfasste Medium ist kein Hostdatenträgerlaufwerk.<br/>             |
+| <dl> <dt>**VM \_ E \_ LAUFWERK \_ UNGÜLTIGE**</dt> <dt>0xA0040502</dt> </dl>      | Das Laufwerk konnte aufgrund eines ungültigen Busspeicherorts nicht initialisiert werden.<br/> |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>         | Ein unerwarteter Fehler ist aufgetreten.<br/>                                  |
 
 
 
@@ -67,20 +67,20 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmdvddrive ist als b96328f6-6732-437d-a00d-ffa47e43971c definiert.<br/>                |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMDVDDrive ist als b96328f6-6732-437d-a00d-ffa47e43971c definiert.<br/>                |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmdvddrive**](ivmdvddrive.md)
+[**IVMDVDDrive**](ivmdvddrive.md)
 </dt> </dl>
 
  

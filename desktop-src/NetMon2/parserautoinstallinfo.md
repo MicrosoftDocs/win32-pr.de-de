@@ -1,7 +1,7 @@
 ---
-description: Die parserautoinstallinfo-Exportfunktion identifiziert den Parser oder Parser, die sich in einer DLL befinden. Parserautoinstallinfo sollte in allen Parser-DLLs implementiert werden.
+description: Die ParserAutoInstallInfo-Exportfunktion identifiziert den Parser oder Parser, die sich in einer DLL befinden. ParserAutoInstallInfo sollte in allen Parser-DLLs implementiert werden.
 ms.assetid: 7af3bf3c-d415-4af9-8f5c-c9a76535bd1a
-title: "\"Parameserautoinstallinfo\"-Rückruffunktion (Netmon. h)"
+title: ParserAutoInstallInfo-Rückruffunktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - UserDefined
 api_location:
 - Netmon.h
-ms.openlocfilehash: 7702ae8aad5ae24acf3835451b7b8eff3a26ceb4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3c6c69b66f3ff92905333a28c5dadfd79290033f0abb68cb2a790f07c6e34412
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342739"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119063750"
 ---
-# <a name="parserautoinstallinfo-callback-function"></a>Parameserautoinstallinfo-Rückruffunktion
+# <a name="parserautoinstallinfo-callback-function"></a>ParserAutoInstallInfo-Rückruffunktion
 
-Die **parserautoinstallinfo** -Exportfunktion identifiziert den Parser oder Parser, die sich in einer DLL befinden. **Parserautoinstallinfo** sollte in allen Parser-DLLs implementiert werden.
+Die **ParserAutoInstallInfo-Exportfunktion** identifiziert den Parser oder Parser, die sich in einer DLL befinden. **ParserAutoInstallInfo** sollte in allen Parser-DLLs implementiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,35 +35,35 @@ PPF_PARSERDLLINFO WINAPI ParserAutoInstallInfo(void);
 
 ## <a name="parameters"></a>Parameter
 
-Diese Rückruffunktion hat keine Parameter.
+Diese Rückruffunktion verfügt über keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert eine [PF- \_ parametedllinfo](pf-parserdllinfo.md) -Struktur, die die Parser in der dll beschreibt.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert eine [PF \_ PARSERDLLINFO-Struktur,](pf-parserdllinfo.md) die die Parser in der DLL beschreibt.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **false**.
+Wenn die Funktion nicht erfolgreich ist, lautet der Rückgabewert **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Netzwerkmonitor zum ersten Mal geladen wird, wird **parserautoinstallinfo** aufgerufen (sofern vorhanden), um jeden Parser automatisch zu installieren, und anschließend werden alle parserdlls im Parser-Unterverzeichnis aufgelistet.
+Wenn Netzwerkmonitor zum ersten Mal geladen wird, ruft es **ParserAutoInstallInfo** auf (sofern vorhanden), um jeden Parser automatisch zu installieren, und listet dann alle Parser-DLLs im Parser-Unterverzeichnis auf.
 
-Zu den Informationen, die in der **PF-parametdllinfo \_** -Struktur zurückgegeben werden, gehören folgende:
+Die in der **PF \_ PARSERDLLINFO-Struktur** zurückgegebenen Informationen umfassen Folgendes:
 
--   Die Anzahl der Parser in der dll (in der Regel eine).
+-   Die Anzahl der Parser in der DLL (in der Regel eins).
 -   Der Name und eine kurze Beschreibung des Protokolls, das jeder Parser erkennt.
 -   Eine optionale Hilfedatei für jedes Protokoll.
 -   Die Protokolle, die jedem Protokoll vorangestellt sind.
--   Die Protokolle, die auf die einzelnen Protokolle folgen.
+-   Die Protokolle, die den einzelnen Protokollen folgen.
 
-Jede Parser-DLL sollte einen Parser enthalten. Netzwerkmonitor ermöglicht es Ihnen jedoch, eine DLL zu erstellen, die mehr als einen Parser enthält. Beispielsweise ist tcpip.dll eine Netzwerkmonitor-dll mit mehr als einem Parser.
+Jede Parser-DLL sollte einen Parser enthalten. Mit Netzwerkmonitor können Sie jedoch eine DLL erstellen, die mehr als einen Parser enthält. Beispielsweise ist tcpip.dll eine Netzwerkmonitor DLL mit mehreren Parsern.
 
 
 
 | Für Informationen zu                                               | Siehe                                                                          |
 |------------------------------------------------------------------|------------------------------------------------------------------------------|
-| Welche Parser sind und wie Sie mit Netzwerkmonitor funktionieren.        | [Parser](parsers.md)                                                       |
-| Welche Einstiegspunkte in der Parser-DLL enthalten sind.               | [Architektur der Parser-DLL](parser-dll-architecture.md)                       |
-| Zum Implementieren von " **Parser autoinstallinfo**  " ist ein Beispiel enthalten. | [Implementieren von "parameserautoinstallinfo"](implementing-parserautoinstallinfo.md) |
+| Was Parser sind und wie sie mit Netzwerkmonitor arbeiten.        | [Parser](parsers.md)                                                       |
+| Welche Einstiegspunkte in der Parser-DLL enthalten sind.               | [Parser-DLL-Architektur](parser-dll-architecture.md)                       |
+| Die Implementierung von **ParserAutoInstallInfo**  enthält ein Beispiel. | [Implementieren von ParserAutoInstallInfo](implementing-parserautoinstallinfo.md) |
 
 
 
@@ -77,15 +77,15 @@ Jede Parser-DLL sollte einen Parser enthalten. Netzwerkmonitor ermöglicht es Ih
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[PF- \_ Parser (Parser)](pf-parserdllinfo.md)
+[PF \_ PARSERDLLINFO](pf-parserdllinfo.md)
 </dt> </dl>
 
  

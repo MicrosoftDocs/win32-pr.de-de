@@ -4,12 +4,12 @@ ms.assetid: 368e7381-8978-421a-b450-59915f8e70e2
 title: WPD_CONTENT_TYPE_MEDIA_CAST
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d45c9bc1e8e41bae526f02102d341ef00fad435
-ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
+ms.openlocfilehash: e4454053400c783b53437dd025e5adc8e845ea08c1b95b8d9b1fd358f39e326f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110423460"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083314"
 ---
 # <a name="wpd_content_type_media_cast"></a>MEDIENCAST DES \_ WPD-INHALTSTYPS \_ \_ \_
 
@@ -32,24 +32,24 @@ Dieser Objekttyp unterstützt die folgenden Eigenschaften.
 | [\_WPD-OBJEKT \_ ISHIDDEN](object-properties.md)                                                    | Erforderlich, wenn das Objekt ausgeblendet ist.                                     |
 | [WPD \_ OBJECT \_ ISSYSTEM](object-properties.md)                                                    | Erforderlich, wenn das Objekt ein Systemobjekt ist (stellt eine Systemdatei dar). |
 | [\_WPD-OBJEKTGRÖßE \_](object-properties.md)                                                            | Erforderlich, wenn das Objekt über mindestens eine Ressource verfügt.                     |
-| [\_WPD-OBJEKT \_ \_ URSPRÜNGLICHER \_ DATEINAME](object-properties.md)                              | Erforderlich, wenn das -Objekt eine Datei darstellt.                             |
-| [\_WPD-OBJEKT \_ NICHT \_ VERWENDBAR](object-properties.md)                                       | Empfohlen, wenn das Objekt nicht für die Verwendung durch das Gerät bestimmt ist. |
-| [\_ \_ WPD-OBJEKTVERWEISE](object-properties.md)                                                | Erforderlich, wenn das -Objekt Verweise auf andere Objekte enthält.               |
-| [\_WPD-OBJEKTSCHLÜSSELWÖRTER \_](object-properties.md)                                                    | Dies ist optional.                                                             |
-| [\_ \_ WPD-OBJEKTSYNCHRONISIERUNGS-ID \_](object-properties.md)                                                     | Dies ist optional.                                                             |
-| [\_WPD-OBJEKT \_ IST \_ \_ DRM-GESCHÜTZT](object-properties.md)                                  | Erforderlich, wenn das Objekt durch DRM-Technologie geschützt ist.                |
-| [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                           | Dies ist optional.                                                             |
-| [\_WPD-OBJEKTDATUM \_ \_ GEÄNDERT](object-properties.md)                                         | Empfohlen.                                                          |
-| [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                         | Dies ist optional.                                                             |
-| [WPD \_ OBJECT BACK REFERENCES (WPD-OBJEKTVERWEISE \_ \_ ZURÜCK)](object-properties.md)                                     | Wird empfohlen, wenn auf das Objekt von einem anderen Objekt verwiesen wird.            |
-| [\_ \_ WPD-OBJEKTCONTAINER \_ FUNKTIONALE \_ \_ OBJEKT-ID](object-properties.md)     | Dies ist optional.                                                             |
-| [\_WPD-OBJEKT \_ GENERIERT \_ \_ MINIATURANSICHT AUS \_ RESSOURCE](object-properties.md) | Dies ist optional.                                                             |
-| [\_WPD-OBJEKT \_ KANN LÖSCHEN \_](object-properties.md)                                               | Erforderlich, wenn das Objekt gelöscht werden kann.                                |
+| [\_ \_ URSPRÜNGLICHER \_ \_ DATEINAME DES WPD-OBJEKTS](object-properties.md)                              | Erforderlich, wenn das -Objekt eine Datei darstellt.                             |
+| [\_WPD-OBJEKT \_ NICHT \_ VERWENDBAR](object-properties.md)                                       | Empfohlen, wenn das Objekt nicht für die Nutzung durch das Gerät vorgesehen ist. |
+| [\_ \_ WPD-OBJEKTVERWEISE](object-properties.md)                                                | Erforderlich, wenn das Objekt Verweise auf andere Objekte hat.               |
+| [\_ \_ WPD-OBJEKTSCHLÜSSELWÖRTER](object-properties.md)                                                    | Optional.                                                             |
+| [\_ \_ WPD-OBJEKTSYNCHRONISIERUNGS-ID \_](object-properties.md)                                                     | Optional.                                                             |
+| [\_WPD-OBJEKT \_ IST \_ \_ DRM-GESCHÜTZT](object-properties.md)                                  | Erforderlich, wenn das Objekt durch drm-Technologie geschützt ist.                |
+| [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                           | Optional.                                                             |
+| [ÄNDERUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                         | Empfohlen.                                                          |
+| [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                         | Optional.                                                             |
+| [\_ \_ WPD-OBJEKTRÜCKVERWEISE \_](object-properties.md)                                     | Empfohlen, wenn ein anderes Objekt auf das Objekt verweist.            |
+| [FUNKTIONALE \_ \_ \_ \_ OBJEKT-ID DES WPD-OBJEKTCONTAINERS \_](object-properties.md)     | Optional.                                                             |
+| [\_WPD-OBJEKT \_ GENERIERT \_ \_ MINIATURANSICHTEN AUS \_ RESSOURCE](object-properties.md) | Optional.                                                             |
+| [\_WPD-OBJEKT \_ KANN GELÖSCHT \_ WERDEN](object-properties.md)                                               | Erforderlich, wenn das Objekt gelöscht werden kann.                                |
 | [\_GEBIETSSCHEMA DER WPD-OBJEKTSPRACHE \_ \_](object-properties.md)                                                                | Erforderlich, wenn das Objekt nicht gelöscht werden kann.                             |
-| [WPD \_ MEDIA \_ COPYRIGHT](media-properties.md)                                                     | Dies ist optional.                                                             |
-| [WPD \_ MEDIA \_ PARENTAL \_ RATING](media-properties.md)                                        | Dies ist optional.                                                             |
-| [WPD \_ MEDIA \_ META \_ GENRE](media-properties.md)                                                  | Dies ist optional.                                                             |
-| [\_ \_ WPD-MEDIENUNTERTITEL \_](media-properties.md)                                                    | Dies ist optional.                                                             |
+| [WPD \_ MEDIA \_ COPYRIGHT](media-properties.md)                                                     | Optional.                                                             |
+| [WPD \_ MEDIA \_ PARENTAL \_ RATING](media-properties.md)                                        | Optional.                                                             |
+| [WPD \_ MEDIA \_ META \_ GENRE](media-properties.md)                                                  | Optional.                                                             |
+| [\_ \_ WPD-MEDIENUNTERTITEL \_](media-properties.md)                                                    | Optional.                                                             |
 | [\_ \_ WPD-MEDIENVERÖFFENTLICHUNGSDATUM \_](media-properties.md)                                              | Empfohlen.                                                          |
 | [\_WPD-MEDIENTITEL \_](media-properties.md)                                                             | Empfohlen.                                                          |
 | [\_WPD-MEDIENBESITZER \_](media-properties.md)                                                             | Empfohlen.                                                          |
@@ -57,12 +57,12 @@ Dieser Objekttyp unterstützt die folgenden Eigenschaften.
 | [WPD \_ \_ MEDIALES](media-properties.md)                                                     | Empfohlen.                                                          |
 | [\_ \_ WPD-MEDIENQUELL-URL \_](media-properties.md)                                                  | Empfohlen.                                                          |
 | [ZIEL-URL FÜR \_ WPD-MEDIEN \_ \_](media-properties.md)                                        | Empfohlen.                                                          |
-| [\_WPD-MEDIENBESCHREIBUNG \_](media-properties.md)                                                 | Dies ist optional.                                                             |
-| [WPD \_ MEDIA \_ GENRE](media-properties.md)                                                             | Dies ist optional.                                                             |
+| [\_WPD-MEDIENBESCHREIBUNG \_](media-properties.md)                                                 | Optional.                                                             |
+| [WPD \_ MEDIA \_ GENRE](media-properties.md)                                                             | Optional.                                                             |
 | [\_ \_ \_ WPD-MEDIENOBJEKTLESEZEICHEN](media-properties.md)                                        | Empfohlen                                                           |
 | [WPD \_ MEDIA \_ LAST \_ BUILD \_ DATE](media-properties.md)                                       | Empfohlen.                                                          |
-| [WPD \_ MEDIA \_ TIME \_ TO \_ LIVE](media-properties.md)                                             | Dies ist optional.                                                             |
-| [\_ \_ WPD-MEDIENUNTERBESCHREIBUNG \_](object-properties.md)                                                                 | Dies ist optional.                                                             |
+| [WPD \_ MEDIA \_ TIME \_ TO \_ LIVE](media-properties.md)                                             | Optional.                                                             |
+| [\_ \_ WPD-MEDIENUNTERBESCHREIBUNG \_](object-properties.md)                                                                 | Optional.                                                             |
 
 
 
@@ -74,21 +74,21 @@ Diese Objekte enthalten in der Regel die folgenden Ressourcen.
 
 
 
-| Ressourcenname                                               | Erforderlich oder optional | BESCHREIBUNG                                                                                                                 |
+| Ressourcenname                                               | Erforderlich oder optional | Beschreibung                                                                                                                 |
 |-------------------------------------------------------------|----------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| [**WPD \_ RESOURCE \_ DEFAULT**](wpd-resource-default.md)      | Dies ist optional.            | Enthält die Mediacastdateidaten. Wenn dieser Mediacast beispielsweise einen RSS-Kanal darstellt, kann dies das RSS-Dokument sein. |
-| [**\_WPD-RESSOURCENMINIATURANSICHT \_**](wpd-resource-thumbnail.md)  | Dies ist optional.            | Enthält die Miniaturansicht, die diesen Mediacast darstellt.                                                                         |
-| [**WPD \_ RESOURCE \_ ALBUM \_ ART**](wpd-resource-album-art.md) | Dies ist optional.            | Enthält die Grafik für diesen Mediacast.                                                                                    |
+| [**\_WPD-RESSOURCENSTANDARD \_**](wpd-resource-default.md)      | Optional.            | Enthält die Mediacastdateidaten. Wenn dieser Mediacast beispielsweise einen RSS-Kanal darstellt, kann dies das RSS-Dokument sein. |
+| [**\_ \_ WPD-RESSOURCENMINIATURANSICHT**](wpd-resource-thumbnail.md)  | Optional.            | Enthält die Miniaturansicht, die diesen Mediacast darstellt.                                                                         |
+| [**WPD \_ RESOURCE \_ ALBUM \_ ART**](wpd-resource-album-art.md) | Optional.            | Enthält die Grafik für diesen Mediacast.                                                                                    |
 
 
 
  
 
-## <a name="mapping-of-rss-elements-and-mediacast-properties"></a>Zuordnung von RSS-Elementen und Mediacast-Eigenschaften
+## <a name="mapping-of-rss-elements-and-mediacast-properties"></a>Zuordnung von RSS-Elementen und Mediacasteigenschaften
 
-Ein RSS-Kanal kann als Mediacast-Objekt dargestellt werden, dessen Verweise auf Inhaltsobjekte zeigen, die jedes Element in einem bestimmten Kanal darstellen.
+Ein RSS-Kanal kann als Mediacast-Objekt dargestellt werden, dessen Verweise auf Inhaltsobjekte verweisen, die jedes Element in einem bestimmten Kanal darstellen.
 
-Die Elemente in einem RSS-Feed verfügen über die folgende Hierarchie und Attribute.
+Die Elemente in einem RSS-Feed weisen die folgende Hierarchie und die folgenden Attribute auf.
 
 
 ```C++
@@ -152,24 +152,24 @@ In der folgenden Tabelle sind die Kanalelemente in einem RSS-Feed und die entspr
 
 | Channel-Element | RSS-Feedanforderung | Entsprechende Mediacast-Eigenschaft      |
 |---------------------|--------------------------|---------------------------------------------------------------------------------|
-| category            | Dies ist optional.                | [WPD \_ MEDIA \_ GENRE](media-properties.md)                       |
+| category            | Optional.                | [WPD \_ MEDIA \_ GENRE](media-properties.md)                       |
 | cloud               | Nicht zutreffend          | Nicht zutreffend                                                                 |
-| Copyright           | Dies ist optional.                | [\_WPD-MEDIEN \_ COPYRIGHT](media-properties.md)               |
+| Copyright           | Optional.                | [WPD \_ MEDIA \_ COPYRIGHT](media-properties.md)               |
 | description         | Erforderlich.                | [\_WPD-MEDIENBESCHREIBUNG \_](media-properties.md)           |
 | Docs                | Nicht zutreffend          | Nicht zutreffend                                                                 |
 | Generator           | Nicht zutreffend          | Nicht zutreffend                                                                 |
 | language            | Nicht zutreffend          | Nicht zutreffend                                                                 |
-| lastBuildDate       | Dies ist optional.                | [WPD \_ MEDIA \_ LAST \_ BUILD \_ DATE](media-properties.md) |
+| lastBuildDate       | Optional.                | [WPD \_ MEDIA \_ LAST \_ BUILD \_ DATE](media-properties.md) |
 | link                | Erforderlich.                | [ZIEL-URL FÜR \_ WPD-MEDIEN \_ \_](media-properties.md)  |
-| managingEditor      | Dies ist optional.                | [\_ \_ WPD-MEDIENVERWALTUNGS-EDITOR \_](media-properties.md)  |
-| Pubdate             | Dies ist optional.                | [\_ \_ WPD-MEDIENVERÖFFENTLICHUNGSDATUM \_](media-properties.md)        |
+| managingEditor      | Optional.                | [\_ \_ WPD-MEDIENVERWALTUNGS-EDITOR \_](media-properties.md)  |
+| Pubdate             | Optional.                | [\_ \_ WPD-MEDIENVERÖFFENTLICHUNGSDATUM \_](media-properties.md)        |
 | rating              | Nicht zutreffend          | Nicht zutreffend                                                                 |
 | skipDays            | Nicht zutreffend          | Nicht zutreffend                                                                 |
 | skipHours           | Nicht zutreffend          | Nicht zutreffend                                                                 |
 | Textinput           | Nicht zutreffend          | Nicht zutreffend                                                                 |
 | title               | Erforderlich.                | [\_WPD-OBJEKTNAME \_](object-properties.md)                      |
-| ttl                 | Dies ist optional.                | [WPD \_ MEDIA \_ TIME \_ TO \_ LIVE](media-properties.md)       |
-| Webmaster           | Dies ist optional.                | [WPD \_ \_ MEDIALES](media-properties.md)               |
+| ttl                 | Optional.                | [WPD \_ MEDIA \_ TIME \_ TO \_ LIVE](media-properties.md)       |
+| Webmaster           | Optional.                | [WPD \_ \_ MEDIALES](media-properties.md)               |
 
 
 
@@ -181,12 +181,12 @@ In der folgenden Tabelle sind die Bildelemente in einem RSS-Feed und die entspre
 
 | Image-Element | RSS-Feedanforderung | Mediacast-Eigenschaft                     |
 |-------------------|--------------------------|--------------------------------------------------------------------------------|
-| description       | Dies ist optional.                | [\_WPD-MEDIENBESCHREIBUNG \_](media-properties.md)          |
-| height            | Dies ist optional.                | [\_WPD-MEDIENHÖHE \_](media-properties.md)                    |
-| link              | Dies ist optional.                | [ZIEL-URL FÜR \_ WPD-MEDIEN \_ \_](media-properties.md) |
-| title             | Dies ist optional.                | [\_WPD-OBJEKTNAME \_](object-properties.md)                     |
-| url               | Dies ist optional.                | [\_ \_ WPD-MEDIENQUELLEN-URL \_](media-properties.md)           |
-| width             | Dies ist optional.                | [\_WPD-MEDIENBREITE \_](media-properties.md)                      |
+| description       | Optional.                | [\_WPD-MEDIENBESCHREIBUNG \_](media-properties.md)          |
+| height            | Optional.                | [\_WPD-MEDIENHÖHE \_](media-properties.md)                    |
+| link              | Optional.                | [ZIEL-URL FÜR \_ WPD-MEDIEN \_ \_](media-properties.md) |
+| title             | Optional.                | [\_WPD-OBJEKTNAME \_](object-properties.md)                     |
+| URL               | Optional.                | [\_ \_ WPD-MEDIENQUELL-URL \_](media-properties.md)           |
+| width             | Optional.                | [\_WPD-MEDIENBREITE \_](media-properties.md)                      |
 
 
 
@@ -198,26 +198,26 @@ In der folgenden Tabelle sind die Elementelemente in einem RSS-Feed und die ents
 
 | Item-Element | attribute | RSS-Feedanforderung | Mediacast-Eigenschaft  |
 |------------------|---------------|--------------------------|--------------------------------------------------------------------------------|
-| author           |               | Dies ist optional.                | [WPD \_ MEDIA \_ INTERPRET](media-properties.md)                    |
-| category         |               | Dies ist optional.                | [WPD \_ MEDIA \_ GENRE](media-properties.md)                      |
+| author           |               | Optional.                | [WPD \_ MEDIA \_ INTERPRET](media-properties.md)                    |
+| category         |               | Optional.                | [WPD \_ MEDIA \_ GENRE](media-properties.md)                      |
 |                  | Domäne        | Nicht zutreffend          | Nicht zutreffend                                                                |
-| description      |               | Dies ist optional.                | [\_WPD-MEDIENBESCHREIBUNG \_](media-properties.md)          |
-| Gehäuse        |               | Dies ist optional.                |                                                                                |
-|                  | url           | Erforderlich.                | [\_ \_ WPD-MEDIENQUELLEN-URL \_](media-properties.md)           |
+| description      |               | Optional.                | [\_WPD-MEDIENBESCHREIBUNG \_](media-properties.md)          |
+| Gehäuse        |               | Optional.                |                                                                                |
+|                  | URL           | Erforderlich.                | [\_ \_ WPD-MEDIENQUELL-URL \_](media-properties.md)           |
 |                  | length        | Erforderlich.                | [\_WPD-OBJEKTGRÖßE \_](object-properties.md)                     |
-|                  | Typ          | Erforderlich.                | (Der MIME-Typ sollte dem Inhaltstyp der Eigenschaft zugeordnet werden.)                 |
-| guid             |               | Dies ist optional.                | [\_ \_ WPD-MEDIEN-GUID](media-properties.md)                        |
+|                  | Typ          | Erforderlich.                | (Der MIME-Typ sollte dem Eigenschaftsinhaltstyp zugeordnet werden.)                 |
+| guid             |               | Optional.                | [WPD \_ MEDIA \_ GUID](media-properties.md)                        |
 |                  | isPermaLink   | Nicht zutreffend          | Nicht zutreffend                                                                |
-| link             |               | Dies ist optional.                | [\_ \_ WPD-MEDIENZIEL-URL \_](media-properties.md) |
-| Pubdate          |               | Dies ist optional.                | [\_ \_ WPD-MEDIENVERÖFFENTLICHUNGSDATUM \_](media-properties.md)       |
+| link             |               | Optional.                | [ZIEL-URL FÜR \_ WPD-MEDIEN \_ \_](media-properties.md) |
+| Pubdate          |               | Optional.                | [\_ \_ WPD-MEDIENVERÖFFENTLICHUNGSDATUM \_](media-properties.md)       |
 | source           |               | Nicht zutreffend          | Nicht zutreffend                                                                |
-| title            |               | Dies ist optional.                | [\_WPD-OBJEKTNAME \_](object-properties.md)                     |
+| title            |               | Optional.                | [\_WPD-OBJEKTNAME \_](object-properties.md)                     |
 
 
 
  
 
-Das folgende Beispiel zeigt einen vollständigen RSS-Feed für einen fiktiven Podcast, der vom CEO eines Veröffentlichungsunternehmens bereitgestellt wurde.
+Das folgende Beispiel zeigt einen vollständigen RSS-Feed für einen fiktiven Podcast, der vom CEO eines Veröffentlichungsunternehmens bereitgestellt wird.
 
 
 ```C++
@@ -279,7 +279,7 @@ In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS-Kanalelement
 | [WPD \_ MEDIA \_ COPYRIGHT](media-properties.md)                            | 2006 Lucerne Publishing LP, LLLP. Alle Rechte vorbehalten.                                        |
 | [\_WPD-MEDIENBESCHREIBUNG \_](media-properties.md)                        | Peter Bankov, CEO von Lucerne Publishing, untersucht die neuesten Trends in Onlineveröffentlichungen. |
 | [ZIEL-URL FÜR \_ WPD-MEDIEN \_ \_](media-properties.md)               | https://www.lucernepublishing.com/services/podcasting                                          |
-| [WPD \_ MEDIA \_ GENRE](media-properties.md)                                    | Neuigkeiten                                                                                          |
+| [WPD \_ MEDIA \_ GENRE](media-properties.md)                                    | News                                                                                          |
 | [WPD \_ MEDIA \_ LAST \_ BUILD \_ DATE](media-properties.md)              | Fr, 9. Juni 2006 14:00:28 EDT                                                                 |
 | [\_ \_ WPD-MEDIENVERWALTUNGS-EDITOR \_](media-properties.md)               | someone@example.com                                                                           |
 | [\_ \_ WPD-MEDIENVERÖFFENTLICHUNGSDATUM \_](media-properties.md)                     | Fr, 9. Juni 2006 14:00:28 EDT                                                                 |
@@ -290,13 +290,13 @@ In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS-Kanalelement
 | [\_ \_ WPD-OBJEKTINHALTSTYP \_](object-properties.md)                  | MEDIENCAST DES \_ WPD-INHALTSTYPS \_ \_ \_                                                               |
 | [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                | Fr, 9. Juni 2006 14:00:28 EDT                                                                 |
 | [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                  | Fr, 9. Juni 2006 14:00:28 EDT                                                                 |
-| [\_WPD-OBJEKTDATUM \_ \_ GEÄNDERT](object-properties.md)                | Fr, 9. Juni 2006 14:00:28 EDT                                                                 |
+| [ÄNDERUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                | Fr, 9. Juni 2006 14:00:28 EDT                                                                 |
 | [\_WPD-OBJEKTFORMAT \_](object-properties.md)                               | WPD \_ OBJECT \_ FORMAT \_ ABSTRACT \_ MEDIA \_ CAST                                                    |
-| [\_WPD-OBJEKT-ID \_](object-properties.md)                                       | Sitzungsabhängiger Wert.                                                                      |
+| [\_ \_ WPD-OBJEKT-ID](object-properties.md)                                       | Sitzungsabhängiger Wert.                                                                      |
 | [\_WPD-OBJEKTNAME \_](object-properties.md)                                   | Die digitale Veröffentlichung                                                                       |
-| [\_WPD-OBJEKT \_ \_ URSPRÜNGLICHER \_ DATEINAME](object-properties.md)     | Die digitale Veröffentlichung                                                                       |
-| [ÜBERGEORDNETE ID DES \_ \_ WPD-OBJEKTS \_](object-properties.md)                        | MyPodcasts (ein fiktiver Podcast-Ordner auf dem Gerät). Gehen Sie für dieses Beispiel von "0A0" aus.        |
-| [PERSISTENTE EINDEUTIGE ID \_ DES WPD-OBJEKTS \_ \_ \_](object-properties.md) | Sitzungsunabhängiger Wert. (In diesem Beispiel wird "0A1" angenommen.)                                   |
+| [\_ \_ URSPRÜNGLICHER \_ \_ DATEINAME DES WPD-OBJEKTS](object-properties.md)     | Die digitale Veröffentlichung                                                                       |
+| [ÜBERGEORDNETE \_ \_ \_ WPD-OBJEKT-ID](object-properties.md)                        | MyPodcasts (ein fiktiver Podcastordner auf dem Gerät). Gehen Sie für dieses Beispiel von "0A0" aus.        |
+| [\_PERSISTENTE EINDEUTIGE ID DES \_ \_ \_ WPD-OBJEKTS](object-properties.md) | Sitzungsunabhängiger Wert. (Nehmen Sie für dieses Beispiel "0A1" an.)                                   |
 | [\_ \_ WPD-OBJEKTVERWEISE](object-properties.md)                       | 0A2 für N Elemente<br/>                                                                   |
 | [\_WPD-OBJEKTGRÖßE \_](object-properties.md)                                   | 13,790                                                                                        |
 
@@ -321,8 +321,8 @@ In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS-Bildelemente
 | [\_ \_ WPD-RESSOURCENATTRIBUT \_ KANN GELÖSCHT \_ WERDEN](attributes.md)                               | VARIANT \_ TRUE                                       |
 | [\_ \_ WPD-RESSOURCENATTRIBUT \_ KANN GELESEN \_ WERDEN](attributes.md)                                   | VARIANT \_ TRUE                                       |
 | [\_ \_ WPD-RESSOURCENATTRIBUTFORMAT \_](resource-attribute-properties.md)                     | \_ \_ WPD-OBJEKTFORMAT \_ GIF                            |
-| [WPD \_ RESOURCE \_ ATTRIBUTE \_ OPTIMAL \_ READ \_ BUFFER \_ SIZE](attributes.md) | 1024                                                |
-| [\_ \_ WPD-RESSOURCENATTRIBUT \_ \_ GESAMTGRÖßE](resource-attribute-properties.md)            | 512                                                 |
+| [\_ \_ WPD-RESSOURCENATTRIBUT \_ OPTIMALE \_ \_ \_ LESEPUFFERGRÖßE](attributes.md) | 1024                                                |
+| [\_GESAMTGRÖßE DES WPD-RESSOURCENATTRIBUTS \_ \_ \_](resource-attribute-properties.md)            | 512                                                 |
 
 
 
@@ -330,7 +330,7 @@ In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS-Bildelemente
 
 ## <a name="mapping-rss-item-elements-to-wpd-property-values"></a>Zuordnen von RSS-Elementelementen zu WPD-Eigenschaftswerten
 
-In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS Item-Elementen im vorherigen Beispiel bestimmten WPD-Eigenschaften zuordnen.
+In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS-Elementelementen im vorherigen Beispiel bestimmten WPD-Eigenschaften zugeordnet werden.
 
 
 
@@ -339,12 +339,12 @@ In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS Item-Element
 | [\_WPD-MEDIENTITEL \_](media-properties.md)                                    | Die digitale Veröffentlichung                                                                                                          |
 | [\_WPD-MEDIENDAUER \_](media-properties.md)                              | 10329011                                                                                                                         |
 | [WPD \_ MEDIA \_ INTERPRET](media-properties.md)                                  | Luzern                                                                                                                          |
-| [\_WPD-MEDIENBESCHREIBUNG \_](media-properties.md)                        | Onlineveröffentlichungen ändern sich schnell. Ein CEO eines Herausgebers untersucht die Trends der letzten 5 Jahre und deren Auswirkungen. |
-| [\_ \_ WPD-MEDIENZIEL-URL \_](media-properties.md)               | https://www.lucernepublishing/services/podcasting/digital.publishing/audio/2006/06/digital0601.mp3                                |
-| [WPD \_ MEDIA \_ GENRE](media-properties.md)                                    | Neuigkeiten                                                                                                                             |
-| [\_ \_ WPD-MEDIEN-GUID](media-properties.md)                                      | https://www.lucernepublishing/services/podcasting/digital.publishing/audio/2006/06/digital0601.mp3                                |
-| [\_ \_ WPD-MEDIENVERÖFFENTLICHUNGSDATUM \_](media-properties.md)                     | Ite, 1. Juni 2006, 14:00:28 EDT                                                                                                   |
-| [\_ \_ WPD-MEDIENQUELLEN-URL \_](media-properties.md)                         | https://www.lucernepublishing/services/podcasting/digital.publishing/audio/2006/06/digital0601.mp3                                |
+| [\_WPD-MEDIENBESCHREIBUNG \_](media-properties.md)                        | Onlineveröffentlichungen ändern sich schnell. Ein CEO eines Herausgebers untersucht die Trends der letzten 5 Jahre und ihre Auswirkungen. |
+| [ZIEL-URL FÜR \_ WPD-MEDIEN \_ \_](media-properties.md)               | https://www.lucernepublishing/services/podcasting/digital.publishing/audio/2006/06/digital0601.mp3                                |
+| [WPD \_ MEDIA \_ GENRE](media-properties.md)                                    | News                                                                                                                             |
+| [WPD \_ MEDIA \_ GUID](media-properties.md)                                      | https://www.lucernepublishing/services/podcasting/digital.publishing/audio/2006/06/digital0601.mp3                                |
+| [\_ \_ WPD-MEDIENVERÖFFENTLICHUNGSDATUM \_](media-properties.md)                     | Do, 1. Juni 2006 14:00:28 EDT                                                                                                   |
+| [\_ \_ WPD-MEDIENQUELL-URL \_](media-properties.md)                         | https://www.lucernepublishing/services/podcasting/digital.publishing/audio/2006/06/digital0601.mp3                                |
 | [\_ \_ WPD-OBJEKTRÜCKVERWEISE \_](object-properties.md)            | 0A1                                                                                                                              |
 | [\_ \_ WPD-OBJEKTINHALTSTYP \_](object-properties.md)                  | MEDIENBILD DES \_ WPD-INHALTSTYPS \_ \_ \_                                                                                                 |
 | [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                | Do, 1. Juni 2006 14:00:28 EDT                                                                                                   |
@@ -355,7 +355,7 @@ In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS Item-Element
 | [\_WPD-OBJEKTNAME \_](object-properties.md)                                   | Die digitale Veröffentlichung                                                                                                          |
 | [\_ \_ URSPRÜNGLICHER \_ \_ DATEINAME DES WPD-OBJEKTS](object-properties.md)     | digital0601.mp3                                                                                                                  |
 | [ÜBERGEORDNETE \_ \_ \_ WPD-OBJEKT-ID](object-properties.md)                        | 0A0                                                                                                                              |
-| [PERSISTENTE EINDEUTIGE ID \_ DES WPD-OBJEKTS \_ \_ \_](object-properties.md) | Sitzungsunabhängig.                                                                                                             |
+| [\_PERSISTENTE EINDEUTIGE ID DES \_ \_ \_ WPD-OBJEKTS](object-properties.md) | Sitzungsunabhängig.                                                                                                             |
 | [\_WPD-OBJEKTGRÖßE \_](object-properties.md)                                   | 10329011                                                                                                                         |
 
 

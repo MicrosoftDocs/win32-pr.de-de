@@ -1,7 +1,7 @@
 ---
-description: Ruft die Hash Daten nach erfolgreichen Aufrufen der Hash Methode ab.
+description: Ruft die Hashdaten nach erfolgreichen Aufrufen der Hash-Methode ab.
 ms.assetid: 02ba92d2-38eb-4c01-99b9-11676e7d49ff
-title: HashedData. Value (Eigenschaft)
+title: HashedData.Value-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 496bdd76400c746ae3209a2e3c99b6cf4e5bc4b6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a6b8b2c8291e793cd88c5d4b0821c036fb6b112beb87e73d4f8ccb8d523deb31
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119006568"
 ---
-# <a name="hasheddatavalue-property"></a>HashedData. Value (Eigenschaft)
+# <a name="hasheddatavalue-property"></a>HashedData.Value-Eigenschaft
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**HashAlgorithm-Klasse**](/previous-versions/windows/) im [**System. Security. Cryptography**](/dotnet/api/system.security.cryptography?view=dotnet-plat-ext-3.1&preserve-view=true) -Namespace.\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**HashAlgorithm-Klasse**](/previous-versions/windows/) im [**System.Security.Cryptography-Namespace.**](/dotnet/api/system.security.cryptography?view=dotnet-plat-ext-3.1&preserve-view=true)\]
 
-Die **value** -Eigenschaft ruft die Hash Daten nach erfolgreichen Aufrufen der [**Hash**](hasheddata-hash.md) Methode ab. Der Hashwert wird im Hexadezimal Format zurückgegeben. Dies ist die Standard Eigenschaft.
+Die **Value-Eigenschaft** ruft die Hashdaten nach erfolgreichen Aufrufen der [**Hashmethode**](hasheddata-hash.md) ab. Der Hashwert wird im Hexadezimalformat zurückgegeben. Dies ist die Standardeigenschaft.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,11 +37,11 @@ HashedData.Value As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Zeichenfolge, die die Hash Daten im Hexadezimal Format enthält.
+Eine Zeichenfolge, die die Hashdaten im Hexadezimalformat enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um den Hash einer großen Datenmenge zu erstellen, rufen Sie die [**Hash**](hasheddata-hash.md) Methode für jedes Datenelement auf. Der Hash der einzelnen Daten Daten wird bis zum Lesen der Eigenschaft mit der **value** -Eigenschaft verkettet. Der Inhalt der **value** -Eigenschaft wird zurückgesetzt, wenn die Eigenschaft gelesen wird.
+Um den Hash einer großen Datenmenge zu erstellen, rufen Sie die [**Hash-Methode**](hasheddata-hash.md) für jedes Datenstück auf. Der Hash jedes Datenstücks wird mit der **Value-Eigenschaft** verkettet, bis die Eigenschaft gelesen wird. Der Inhalt der **Value-Eigenschaft** wird zurückgesetzt, wenn die Eigenschaft gelesen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,7 +51,7 @@ Um den Hash einer großen Datenmenge zu erstellen, rufen Sie die [**Hash**](hash
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

@@ -1,7 +1,7 @@
 ---
-description: Mit der setdefaultsourcerect-Methode wird das standardmäßige Quellvideo Rechteck (rein virtuell) festgelegt. Dies in einer internen Member-Funktion, die beim Zurücksetzen des Quell Rechtecks aufgerufen wird.
+description: Die SetDefaultSourceRect-Methode legt das Standardquellvideorechteck (rein virtuell) fest. Dies in einer internen Memberfunktion, die aufgerufen wird, wenn das Quellrechteck zurückgesetzt wird.
 ms.assetid: d0dae0a9-8763-485e-b9d3-80076a3f2f35
-title: Cbasecontrolvideo. setdefaultsourcerect-Methode (ctlutil. h)
+title: CBaseControlVideo.SetDefaultSourceRect-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 82fe2001a42ca75fff4f3172c8ce05da18881d73
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ae7f2e88e170b0c21187b2615029fcb4ed2bed4717af09b60eb4309aee2bea0f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119432610"
 ---
-# <a name="cbasecontrolvideosetdefaultsourcerect-method"></a>Cbasecontrolvideo. setdefaultsourcerect-Methode
+# <a name="cbasecontrolvideosetdefaultsourcerect-method"></a>CBaseControlVideo.SetDefaultSourceRect-Methode
 
-Die- `SetDefaultSourceRect` Methode legt das standardmäßige Quellvideo Rechteck (rein virtuell) fest. Dies in einer internen Member-Funktion, die beim Zurücksetzen des Quell Rechtecks aufgerufen wird.
+Die `SetDefaultSourceRect` -Methode legt das Standardquellvideorechteck (rein virtuell) fest. Dies in einer internen Memberfunktion, die aufgerufen wird, wenn das Quellrechteck zurückgesetzt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Abgeleitete Klassen sollten diese überschreiben, um das Quell Rechteck zurückzusetzen. Sie wird von [**cbasecontrolvideo:: setdefaultsourceposition**](cbasecontrolvideo-setdefaultsourceposition.md)aufgerufen.
+Abgeleitete Klassen sollten dies überschreiben, um das Quellrechteck zurückzusetzen. Sie wird von [**CBaseControlVideo::SetDefaultSourcePosition**](cbasecontrolvideo-setdefaultsourceposition.md)aufgerufen.
 
 Im folgenden Beispiel wird eine Implementierung dieser Funktion in einer abgeleiteten Klasse veranschaulicht.
 
@@ -65,7 +65,7 @@ HRESULT CVideoText::SetDefaultSourceRect()
 
 
 
-In diesem Beispiel ist cvideotext eine Klasse, die von [**cbasecontrolvideo**](cbasecontrolvideo.md)abgeleitet ist. m \_ prenderer enthält ein Objekt einer Klasse, die von [**cbasevideorenderer**](cbasevideorenderer.md)abgeleitet ist, und das \_ in der abgeleiteten Klasse definierte Datenmember m DrawImage enthält ein [**cdrawimage**](cdrawimage.md) -Objekt. Der m \_ MTiN-Datenmember, der auch in der abgeleiteten Klasse definiert ist, enthält ein [**cmediatype**](cmediatype.md) -Objekt mit dem Medientyp der Eingabe-PIN.
+In diesem Beispiel ist CVideoText eine von [**CBaseControlVideo**](cbasecontrolvideo.md)abgeleitete Klasse, m \_ pRenderer enthält ein Objekt einer klasse, die von [**CBaseVideoRenderer**](cbasevideorenderer.md)abgeleitet wurde, und der \_ m DrawImage-Datenmember, der in der abgeleiteten Klasse definiert ist, enthält ein [**CDrawImage-Objekt.**](cdrawimage.md) Der m \_ mtIn-Datenmember, der auch in der abgeleiteten Klasse definiert ist, enthält ein [**CMediaType-Objekt**](cmediatype.md) mit dem Medientyp des Eingabepins.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,16 +73,16 @@ In diesem Beispiel ist cvideotext eine Klasse, die von [**cbasecontrolvideo**](c
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

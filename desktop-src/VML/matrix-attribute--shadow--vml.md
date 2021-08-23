@@ -1,26 +1,26 @@
 ---
-title: Matrix Attribut (Schatten) (VML)
-description: Matrix Attribut (Schatten) (VML)
+title: Matrixattribut (Shadow)(VML)
+description: Matrixattribut (Shadow)(VML)
 ms.assetid: 29bebd2f-7f66-4883-8c12-57fef4a0ac9e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d599aa817e87481aefdec43dbe345b7235fc54bd
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6124005ef3202e11dc8a4e7eeeaacba8e87e9c3a7cb3a1dd1eee55c595e40ecb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119057928"
 ---
-# <a name="matrix-attribute-shadowvml"></a>Matrix Attribut (Schatten) (VML)
+# <a name="matrix-attribute-shadowvml"></a>Matrixattribut (Shadow)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert eine perspektivische Transformation für einen Schatten. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert eine Perspektiventransformation für einen Schatten. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
@@ -28,20 +28,20 @@ Definiert eine perspektivische Transformation für einen Schatten. Lese-/Schreib
 
 **Tagsyntax**
 
-<v: *Element* Matrix = " *Ausdruck* " >
+<v: *element* matrix=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Matrix = "*Ausdruck*"
+*element* .matrix="*expression*"
 
-*Ausdruck* = *Element*. Matrix
+*expression* = *Element*.matrix
 
 **Anmerkungen**
 
-Eine perspektivische Transformationsmatrix in der Form "Sxx, sxy, syx, SYY, px, py", wobei s = Scale und p = Perspective ist. Wenn der Offset in absoluten Einheiten liegt, sind px und py in 1/Emu-Einheiten. andernfalls handelt es sich um einen umgekehrten Bruchteil der Shape-Größe.
+Eine perspektivische Transformationsmatrix im Format "sxx,sxy,syx,syy,px,py", wobei s= scale und p = perspective sind. Wenn offset in absoluten Einheiten und dann px ist, liegt py bei 1/emul-Einheiten. andernfalls sind sie ein umgekehrter Bruchteil der Formgröße.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
- 
+ 
 
- 
+ 

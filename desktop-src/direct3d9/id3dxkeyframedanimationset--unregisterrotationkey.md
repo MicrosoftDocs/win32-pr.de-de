@@ -1,7 +1,7 @@
 ---
-description: Entfernt die Rotationsdaten am angegebenen Keyframe.
+description: Entfernt die Drehungsdaten am angegebenen Keyframe.
 ms.assetid: 8e95d684-fa22-4eba-a721-e7551e8f393b
-title: 'ID3DXKeyframedAnimationSet:: unregisterrotationkey-Methode (D3dx9anim. h)'
+title: ID3DXKeyframedAnimationSet::UnregisterRotationKey-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 420a15d0086f94def7db8c7d558640d03b69562f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a6e6d58695a8d1094fa8d4f5d8fac99d73dc0a4d9181801e0c5f2b4bf2458d5f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119121119"
 ---
-# <a name="id3dxkeyframedanimationsetunregisterrotationkey-method"></a>ID3DXKeyframedAnimationSet:: unregisterrotationkey-Methode
+# <a name="id3dxkeyframedanimationsetunregisterrotationkey-method"></a>ID3DXKeyframedAnimationSet::UnregisterRotationKey-Methode
 
-Entfernt die Rotationsdaten am angegebenen Keyframe.
+Entfernt die Drehungsdaten am angegebenen Keyframe.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,19 +41,19 @@ HRESULT UnregisterRotationKey(
 
 <dl> <dt>
 
-*Animation* \[ in\]
+*Animation* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Animations Bezeichner.
+Animationsbezeichner.
 
 </dd> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Keyframe.
 
@@ -63,11 +63,11 @@ Keyframe.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ist langsam und sollte nicht verwendet werden, nachdem die Wiedergabe einer Animation begonnen hat.
+Diese Methode ist langsam und sollte nicht verwendet werden, nachdem eine Animation mit der Wiedergabe begonnen hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,12 +75,12 @@ Diese Methode ist langsam und sollte nicht verwendet werden, nachdem die Wiederg
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

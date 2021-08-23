@@ -1,9 +1,9 @@
 ---
 title: Eingabeattribut
-description: Das Attribut \ Entry \ gibt eine exportierte Funktion oder Konstante in einem Modul an, indem der Einstiegspunkt in der DLL identifiziert wird.
+description: Das \entry\-Attribut gibt eine exportierte Funktion oder Konstante in einem Modul an, indem der Einstiegspunkt in der DLL identifiziert wird.
 ms.assetid: 1d2d6429-d828-44ec-8b0a-cefb64c6e706
 keywords:
-- Eingabe Attribut-Mittel l
+- Entry-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0e596284a83c48bcfc84ef4f7985aed7c33ba7da
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 1f6dab1681cb04adbd48c4a27c14a359c87624870a43c118c6dd1a589689c00f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013928"
 ---
 # <a name="entry-attribute"></a>Eingabeattribut
 
-Das Attribut **\[ Entry \]** gibt eine exportierte Funktion oder Konstante in einem Modul an, indem der Einstiegspunkt in der DLL identifiziert wird.
+Das **\[ \] Entry-Attribut** gibt eine exportierte Funktion oder Konstante in einem Modul an, indem der Einstiegspunkt in der DLL identifiziert wird.
 
 ``` syntax
 [
@@ -39,44 +39,44 @@ module modulename
 
 <dl> <dt>
 
-*UUID-Nummer* 
+*uuid-number* 
 </dt> <dd>
 
-Gibt eine universell eindeutige ID für das [**Modul**](module.md)an.
+Gibt eine universell eindeutige ID für das Modul [**an.**](module.md)
 
 </dd> <dt>
 
-*Eintrags-ID* 
+*entry-id* 
 </dt> <dd>
 
-Gibt den Funktionsnamen oder die ganzzahlige Identifikationsnummer des Modul Einstiegs Punkts an.
+Gibt den Funktionsnamen des Moduleinstiegspunkts oder die Ganzzahl-ID an.
 
 </dd> <dt>
 
-*optional-Attribut-List* 
+*optional-attribute-list* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Attribute an, die der mittlerer l-Compiler auf das [**Modul**](module.md)anwenden soll.
+Gibt null oder mehr Attribute für den MIDL-Compiler an, die auf das Modul angewendet [**werden.**](module.md)
 
 </dd> <dt>
 
-*ModuleName* 
+*Modulename* 
 </dt> <dd>
 
-Gibt den Namen an, den andere Softwarekomponenten verwenden, um das [**Modul**](module.md)zu kennzeichnen.
+Gibt den Namen an, den andere Softwarekomponenten verwenden, um das Modul [**zu bezeichnen.**](module.md)
 
 </dd> <dt>
 
-*Elementliste* 
+*elementlist* 
 </dt> <dd>
 
-Gibt mindestens eine Modul Element Definitions-Anweisung an.
+Gibt mindestens eine Modulelementdefinitions-Anweisung an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die *EntryID* -Variable des **\[ Entry \]** -Attributs eine Zeichenfolge ist, ist dies ein benannter Einstiegspunkt. Wenn *EntryID* eine Zahl ist, wird der Einstiegspunkt durch eine Ordinalzahl definiert. Dieses Attribut bietet eine Möglichkeit zum Abrufen der Adresse einer Funktion in einem Modul.
+Wenn die *entryid-Variable* des **\[ \] Entry-Attributs** eine Zeichenfolge ist, ist dies ein benannter Einstiegspunkt. Wenn *entryid* eine Zahl ist, wird der Einstiegspunkt durch eine Ordnungszahl definiert. Dieses Attribut bietet eine Möglichkeit, die Adresse einer Funktion in einem Modul zu erhalten.
 
 ## <a name="examples"></a>Beispiele
 
@@ -102,21 +102,21 @@ module MyModule
 
 <dl> <dt>
 
-[**dllname**](dllname-str-.md)
+[**Dllname**](dllname-str-.md)
 </dt> <dt>
 
-[**Mond**](module.md)
+[**Modul**](module.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

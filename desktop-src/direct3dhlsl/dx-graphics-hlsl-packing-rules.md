@@ -1,6 +1,6 @@
 ---
-title: Packen von Regeln für konstante Variablen
-description: Verpackungs Regeln legen fest, wie eng Daten beim Speichern angeordnet werden können.
+title: Komprimierungsregeln für konstante Variablen
+description: Komprimierungsregeln bestimmen, wie eng Daten angeordnet werden können, wenn sie gespeichert werden.
 ms.assetid: 5c399342-06e1-47d2-8ecf-e093ed04be50
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,24 +9,24 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: d85566083dc9ead93a1a9e73fb06051b62178114
-ms.sourcegitcommit: 004d7881dc9ff92ea394cd2331774e13b1e7f13c
+ms.openlocfilehash: 49b10f6383344821c7659ac40b367a77e0421d33be68a374c59920a62d37697c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "103724368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119120084"
 ---
-# <a name="packing-rules-for-constant-variables"></a>Packen von Regeln für konstante Variablen
+# <a name="packing-rules-for-constant-variables"></a>Komprimierungsregeln für konstante Variablen
 
-Verpackungs Regeln legen fest, wie eng Daten beim Speichern angeordnet werden können. HLSL implementiert Verpackungs Regeln für vs-Ausgabedaten, GS-Eingabe-und-Ausgabedaten und PS-Eingabe-und-Ausgabedaten. (Die Daten werden für vs-Eingaben nicht gepackt, da die IA-Phase keine Daten entpacken kann.)
+Komprimierungsregeln bestimmen, wie eng Daten angeordnet werden können, wenn sie gespeichert werden. HLSL implementiert Komprimierungsregeln für VS-Ausgabedaten, GS-Eingabe- und -Ausgabedaten sowie PS-Ein- und -Ausgabedaten. (Daten werden nicht für VS-Eingaben gepackt, da die IA-Phase keine Daten entpacken kann.)
 
-HLSL-Verpackungs Regeln ähneln dem Ausführen eines **\# Pragma Pack 4** mit Visual Studio, das Daten in 4-Byte-Grenzen packt. Außerdem packt HLSL Daten so, dass Sie keine 16-Byte-Grenze überschreiten. Variablen werden in einem angegebenen vier-Komponenten-Vektor verpackt, bis die Variable eine Begrenzung von vier Vektoren überschreitet. die nächsten Variablen werden zum nächsten vier-Komponenten Vektor gerhütet.
+HLSL-Komprimierungsregeln ähneln der Durchführung eines **\# Pragma packs 4** mit Visual Studio, das Daten in 4-Byte-Grenzen packt. Darüber hinaus packt HLSL Daten, sodass sie keine 16-Byte-Grenze überschreiten. Variablen werden in einen angegebenen Vektor mit vier Komponenten gepackt, bis die Variable eine Vier-Vektor-Grenze umgeht. die nächsten Variablen werden auf den nächsten Vektor mit vier Komponenten verschoben.
 
-Jede-Struktur zwingt, dass die nächste Variable beim nächsten vier-Komponenten-Vektor gestartet wird. Dadurch wird manchmal Auffüllung für Struktur Arrays generiert. Die sich ergebende Größe einer beliebigen Struktur ist immer durch **sizeof**(*vier-Komponenten Vektor*) gleichmäßig teilbar.
+Jede Struktur erzwingt, dass die nächste Variable mit dem nächsten Vektor mit vier Komponenten beginnt. Dies generiert manchmal Auffüllung für Arrays von Strukturen. Die resultierende Größe einer beliebigen Struktur ist immer gleichmäßig durch **sizeof***(Vierkomponentenvektor)* teilbar.
 
-Arrays werden standardmäßig nicht in HLSL gepackt. Um zu vermeiden, dass der Shader den Alu-Overhead für Offset Berechnungen übernimmt, wird jedes Element in einem Array in einem Vektor mit vier Komponenten gespeichert. Beachten Sie, dass Sie das Packen von Arrays (und die Adressierungs Berechnungen) mithilfe von Umwandlungen erreichen können.
+Arrays sind standardmäßig nicht in HLSL gepackt. Um zu vermeiden, dass der Shader ALU-Mehraufwand für Offsetberechnungen übernimmt, wird jedes Element in einem Array in einem Vektor mit vier Komponenten gespeichert. Beachten Sie, dass Sie das Packen für Arrays erreichen können (und die Adressierungsberechnungen verursachen), indem Sie die Umwandlung verwenden.
 
-Im folgenden finden Sie Beispiele für Strukturen und ihre entsprechenden verpackten Größen (wenn ein **float1** 4 Bytes belegt):
+Im Folgenden sind Beispiele für Strukturen und deren entsprechende gepackte Größen aufgeführt (mit der Angegebenen: **float1** belegt 4 Bytes):
 
 
 ```
@@ -130,9 +130,9 @@ cbuffer IE
 
 
 
-## <a name="more-aggressive-packing"></a>Aggressivere Verpackung
+## <a name="more-aggressive-packing"></a>Aggressivere Komprimierung
 
-Sie könnten ein Array aggressiver verpacken. Beispielsweise ein Array von float-Variablen:
+Sie könnten ein Array aggressiver packen. Bei einem Array von float-Variablen:
 
 
 ```
@@ -141,7 +141,7 @@ float4 array[16];
 
 
 
-Sie können diese Option ohne Leerzeichen im Array wie folgt Verpacken:
+Sie können es wie folgt packen, ohne Leerzeichen im Array zu verwenden:
 
 
 ```
@@ -150,7 +150,7 @@ static float2 aggressivePackArray[32] = (float2[32])array;
 
 
 
-Die strengere Verpackung ist ein Kompromiss und der Bedarf an zusätzlichen shaderanweisungen für die Adress Berechnung.
+Die strengere Komprimierung ist ein Trade off im Vergleich zur Notwendigkeit zusätzlicher Shaderanweisungen für die Adressberechnung.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -159,9 +159,9 @@ Die strengere Verpackung ist ein Kompromiss und der Bedarf an zusätzlichen shad
 [Shadermodell 4](dx-graphics-hlsl-sm4.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

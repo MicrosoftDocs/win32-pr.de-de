@@ -1,9 +1,9 @@
 ---
-title: IPM_SETADDRESS Meldung (kommstrg. h)
-description: Legt die Adress Werte für alle vier Felder im IP-Adress Steuerelement fest.
+title: IPM_SETADDRESS Meldung (Commctrl.h)
+description: Legt die Adresswerte für alle vier Felder im IP-Adresssteuerelement fest.
 ms.assetid: 52e72437-3558-4789-844f-5ab5b0b7967c
 keywords:
-- Windows-Steuerelemente für IPM_SETADDRESS Meldung
+- IPM_SETADDRESS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a8e8e4fa69791f93094d24f990ad62207cad33dc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 54817d2206295432e9b477532268a000fc43047ae928ab02224d668912474519
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119434490"
 ---
-# <a name="ipm_setaddress-message"></a>IPM- \_ setAddress-Nachricht
+# <a name="ipm_setaddress-message"></a>IPM \_ SETADDRESS-Nachricht
 
-Legt die Adress Werte für alle vier Felder im IP-Adress Steuerelement fest.
+Legt die Adresswerte für alle vier Felder im IP-Adresssteuerelement fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,7 +35,7 @@ Legt die Adress Werte für alle vier Felder im IP-Adress Steuerelement fest.
 *lParam* 
 </dt> <dd>
 
-Ein **DWORD** -Wert, der die neue Adresse enthält. Der Wert von Feld 3 ist in Bits 0 bis 7 enthalten. Der Wert für Feld 2 ist in Bits 8 bis 15 enthalten. Der Wert für Feld 1 ist in Bits 16 bis 23 enthalten. Der Wert Feld 0 ist in Bits 24 bis 31 enthalten. Das [**MakeIPAddress**](/windows/desktop/api/Commctrl/nf-commctrl-makeipaddress) -Makro kann auch zum Erstellen der Adressinformationen verwendet werden.
+Ein **DWORD-Wert,** der die neue Adresse enthält. Der Wert von Feld 3 ist in den Bits 0 bis 7 enthalten. Der Wert von Feld 2 ist in den Bits 8 bis 15 enthalten. Der Wert von Feld 1 ist in den Bits 16 bis 23 enthalten. Der Wert des Felds 0 ist in den Bits 24 bis 31 enthalten. Das [**MAKEIPADDRESS-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-makeipaddress) kann auch zum Erstellen der Adressinformationen verwendet werden.
 
 </dd> </dl>
 
@@ -43,9 +43,9 @@ Ein **DWORD** -Wert, der die neue Adresse enthält. Der Wert von Feld 3 ist in B
 
 Der Rückgabewert wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung generiert keine [**IPN \_ FieldChanged**](ipn-fieldchanged.md) -Benachrichtigung.
+Diese Meldung generiert keine [**IPN \_ FIELDCHANGED-Benachrichtigung.**](ipn-fieldchanged.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Diese Meldung generiert keine [**IPN \_ FieldChanged**](ipn-fieldchanged.md) -Be
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

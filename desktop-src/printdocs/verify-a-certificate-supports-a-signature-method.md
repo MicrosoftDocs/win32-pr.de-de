@@ -1,29 +1,29 @@
 ---
-description: In diesem Thema wird beschrieben, wie Sie überprüfen, ob ein Zertifikat eine bestimmte Signatur Methode unterstützt.
+description: In diesem Thema wird beschrieben, wie überprüft wird, ob ein Zertifikat eine bestimmte Signaturmethode unterstützt.
 ms.assetid: c7a23ace-4e9c-4de2-994e-2aa9c70a30b6
-title: Überprüfen, ob ein Zertifikat eine Signatur Methode unterstützt
+title: Überprüfen, ob ein Zertifikat eine Signaturmethode unterstützt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 27da9ae31c3cf0c4e453a5507d93d1505606e859
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 177859dd78d30ee9f9147cee7ca01311ed95c0733115cd939dde8aa6ec70f5b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119098712"
 ---
-# <a name="verify-that-a-certificate-supports-a-signature-method"></a>Überprüfen, ob ein Zertifikat eine Signatur Methode unterstützt
+# <a name="verify-that-a-certificate-supports-a-signature-method"></a>Überprüfen, ob ein Zertifikat eine Signaturmethode unterstützt
 
-In diesem Thema wird beschrieben, wie Sie überprüfen, ob ein Zertifikat eine bestimmte Signatur Methode unterstützt.
+In diesem Thema wird beschrieben, wie überprüft wird, ob ein Zertifikat eine bestimmte Signaturmethode unterstützt.
 
-Der **cryptxmlenumalgorithminfo** in der kryptografieapi von Microsoft listet die Eigenschaften eines Zertifikats auf und wird in diesem Codebeispiel verwendet, um die Signatur Methoden aufzulisten, die das Zertifikat unterstützt. Um **cryptxmlenumalgorithminfo** zum Auflisten der Signatur Methoden zu verwenden, die das Zertifikat unterstützt, muss der Aufrufer eine Rückruf Methode und eine Datenstruktur im Aufruf von **cryptxmlenumalgorithminfo** bereitstellen, sodass Daten an die Rückruf Methode übergeben werden können.
+Die **CryptXmlEnumAlgorithmInfo** in der Microsoft Crypto-API enumeriert die Eigenschaften eines Zertifikats und wird in diesem Codebeispiel zum Aufzählen der Signaturmethoden verwendet, die das Zertifikat unterstützt. Um **CryptXmlEnumAlgorithmInfo** zum Aufzählen der signaturmethoden zu verwenden, die das Zertifikat unterstützt, muss der Aufrufer eine Rückrufmethode und eine Datenstruktur im Aufruf von **CryptXmlEnumAlgorithmInfo** bereitstellen, sodass daten an die Rückrufmethode übergeben werden können.
 
-Die im nächsten Codebeispiel verwendete Datenstruktur verfügt über die folgenden Felder:
+Die im nächsten Codebeispiel verwendete Datenstruktur enthält die folgenden Felder:
 
-| Feld                               | BESCHREIBUNG                                                                                                                               |
+| Feld                               | Beschreibung                                                                                                                               |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| **usersignaturealgorithmzu Check**   | Ein **LPWSTR** -Feld, das auf die Zeichenfolge verweist, die den URI des Signatur Algorithmus enthält, der geprüft werden soll.                             |
-| **certificatealgorithminfo**        | Ein Zeiger auf eine **crypt- \_ OID \_** -Informationsstruktur, die Informationen über einen Signatur Algorithmus enthält, der vom Zertifikat unterstützt wird. |
-| **usersignaturealgorithmsupported** | Ein **boolescher** Wert, der angibt, ob der Signatur Algorithmus vom Zertifikat unterstützt wird.                                       |
+| **userSignatureAlgorithmToCheck**   | Ein **LPWSTR-Feld,** das auf die Zeichenfolge zeigt, die den URI des zu überprüfenden Signaturalgorithmus enthält.                             |
+| **certificateAlgorithmInfo**        | Ein Zeiger auf eine **\_ CRYPT-OID-INFO-Struktur, \_** die Informationen zu einem Signaturalgorithmus enthält, der vom Zertifikat unterstützt wird. |
+| **userSignatureAlgorithmSupported** | Ein **boolescher Wert,** der angibt, ob der Signaturalgorithmus vom Zertifikat unterstützt wird.                                       |
 
 
 
@@ -41,9 +41,9 @@ struct SignatureMethodData
 
 
 
-Die kryptografieapi-Methode, die das Zertifikat überprüft, verwendet eine Rückruf Methode, um Daten an den Aufrufer zurückzugeben **Cryptxmlenumalgorithminfo** listet die Signatur Methoden auf, die das Zertifikat unterstützt, und ruft die Rückruf Methode für jede Signatur Methode auf, bis die Rückruf Methode **false** zurückgibt oder alle Signatur Methoden im Zertifikat aufgezählt wurden.
+Die Crypto-API-Methode, die das Zertifikat überprüft, verwendet eine Rückrufmethode, um Daten an den Aufrufer zurück zu geben. **CryptXmlEnumAlgorithmInfo** aufzählt die Signaturmethoden, die das Zertifikat unterstützt, und ruft die Rückrufmethode für jede Signaturmethode auf, bis die Rückrufmethode **FALSE** zurückgibt oder bis alle Signaturmethoden im Zertifikat aufzählt wurden.
 
-Die Rückruf Methode im nächsten Codebeispiel sucht nach einer Signatur Methode, die von **cryptxmlenenalgorithminfo** übergangen wird und mit der Signatur Methode übereinstimmt, die von der aufrufenden Methode bereitgestellt wird. Wenn eine Entsprechung gefunden wird, überprüft die Rückruf Methode, ob die Signatur Methode auch vom System unterstützt wird. Wenn die Signatur Methoden Stimmen und vom System unterstützt werden, wird die Signatur Methode als vom System unterstützt gekennzeichnet, und die Rückruf Methode gibt **false** zurück.
+Die Rückrufmethode im nächsten Codebeispiel sucht nach einer Signaturmethode, die von **CryptXmlEnumAlgorithmInfo** übergeben wird und der signaturmethode entspricht, die von der aufrufenden Methode bereitgestellt wird. Wenn eine Übereinstimmung gefunden wird, überprüft die Rückrufmethode, ob die Signaturmethode auch vom System unterstützt wird. Wenn die Signaturmethoden übereinstimmen und vom System unterstützt werden, wird die Signaturmethode als vom System unterstützt markiert, und die Rückrufmethode gibt **FALSE zurück.**
 
 
 ```C++
@@ -108,7 +108,7 @@ EnumSignatureMethodCallback (
 
 
 
-Im folgenden Codebeispiel wird die Validierungsfunktion in eine einzelne Methode umschlossen. Diese Methode gibt einen **booleschen** Wert zurück, der angibt, ob das Zertifikat die Signatur Methode unterstützt und ob die Signatur Methode vom System unterstützt wird.
+Im folgenden Codebeispiel wird die Validierungsfunktion in eine einzelne Methode umschließen. Diese Methode gibt einen **booleschen Wert** zurück, der angibt, ob das Zertifikat die Signaturmethode unterstützt und ob die Signaturmethode vom System unterstützt wird.
 
 
 ```C++
@@ -172,37 +172,37 @@ SupportsSignatureAlgorithm (
 [Laden eines Zertifikats aus einer Datei](load-a-certificate-from-a-file.md)
 </dt> <dt>
 
-[Überprüfen, ob das System eine Digest-Methode unterstützt](verify-a-certificate-supports-a-digest-method.md)
+[Überprüfen, ob das System eine Digestmethode unterstützt](verify-a-certificate-supports-a-digest-method.md)
 </dt> <dt>
 
-[Einbinden von Zertifikat Ketten in ein Dokument](embedding-certificate-trust-chains-in-a-document.md)
+[Einbetten von Zertifikatketten in ein Dokument](embedding-certificate-trust-chains-in-a-document.md)
 </dt> <dt>
 
-**In diesem Beispiel verwendet**
+**Wird in diesem Beispiel verwendet**
 </dt> <dt>
 
-[**Cryptfindoidinfo**](/windows/desktop/api/wincrypt/nf-wincrypt-cryptfindoidinfo)
+[**CryptFindOIDInfo**](/windows/desktop/api/wincrypt/nf-wincrypt-cryptfindoidinfo)
 </dt> <dt>
 
-[**Crypt- \_ OID- \_ Informationen**](/windows/desktop/api/wincrypt/ns-wincrypt-crypt_oid_info)
+[**CRYPT \_ OID \_ INFO**](/windows/desktop/api/wincrypt/ns-wincrypt-crypt_oid_info)
 </dt> <dt>
 
-**Cryptxmlenenalgorithminfo**
+**CryptXmlEnumAlgorithmInfo**
 </dt> <dt>
 
 **Weitere Informationen**
 </dt> <dt>
 
-[Kryptografieapi](/windows/desktop/SecCrypto/cryptography-portal)
+[Kryptografie-API](/windows/desktop/SecCrypto/cryptography-portal)
 </dt> <dt>
 
 [Kryptografiefunktionen](/windows/desktop/SecCrypto/cryptography-functions)
 </dt> <dt>
 
-[XPS-Fehler bei der digitalen Signatur-API](xps-digital-signatures-errors.md)
+[XPS Digital Signature-API-Fehler](xps-digital-signatures-errors.md)
 </dt> <dt>
 
-[XPS-Dokument Fehler](xps-document-errors.md)
+[XPS-Dokumentfehler](xps-document-errors.md)
 </dt> <dt>
 
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

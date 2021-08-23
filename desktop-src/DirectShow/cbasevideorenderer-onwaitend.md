@@ -1,7 +1,7 @@
 ---
-description: Die onwaitend-Methode wird aufgerufen, wenn eine Wartezeit endet.
+description: Die OnWaitEnd-Methode wird aufgerufen, wenn eine Wartezeit endet.
 ms.assetid: 283627bb-599c-4711-abc4-b5f92dfd29a5
-title: Cbasevideorenderer. onwaitend-Methode (renbase. h)
+title: CBaseVideoRenderer.OnWaitEnd-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 36377565556a759c9268ef1bf31ff7774933ccc2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b130bf38833951cad4f82fd559c0299d2aea86854ca0ab5545f3f2794ab9b4b1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119432470"
 ---
-# <a name="cbasevideorendereronwaitend-method"></a>Cbasevideorenderer. onwaitend-Methode
+# <a name="cbasevideorendereronwaitend-method"></a>CBaseVideoRenderer.OnWaitEnd-Methode
 
-Die onwaitend-Methode wird aufgerufen, wenn eine Wartezeit endet.
+Die OnWaitEnd-Methode wird aufgerufen, wenn eine Wartezeit endet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion führt nur die Leistungs Protokollierung durch. Sie wird aufgerufen, wenn der Thread nicht im Fenster wartet oder das nächste Beispiel als gerendert wird. Es könnte schließlich verwendet werden, um Informationen zu sammeln, die die Synchronisierung steuern.
+Diese Memberfunktion führt nur die Leistungsprotokollierung durch. Sie wird aufgerufen, wenn der Thread vom Warten im Fenster aufgeweckt wird oder wenn das nächste Beispiel gerendert werden soll. Sie kann schließlich verwendet werden, um Informationen zu sammeln, die die Synchronisierung steuern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Diese Member-Funktion führt nur die Leistungs Protokollierung durch. Sie wird a
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Cbasevideorenderer-Klasse**](cbasevideorenderer.md)
+[**CBaseVideoRenderer-Klasse**](cbasevideorenderer.md)
 </dt> </dl>
 
  

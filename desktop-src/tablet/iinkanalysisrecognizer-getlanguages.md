@@ -1,7 +1,7 @@
 ---
-description: Ruft die Bezeichner für die Gebiets Schemas ab, die von diesem iinkanalysiserkenzer unterstützt werden.
+description: Ruft die Bezeichner für die Gebietsschemas ab, die von IInkAnalysisRecognizer unterstützt werden.
 ms.assetid: 14c91ad0-f49e-43e7-848c-abc96b0dffa8
-title: 'Iinkanalysiserkenzer:: GetLanguages-Methode (iacom. h)'
+title: IInkAnalysisRecognizer::GetLanguages-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 1e2b9792957b2de02daf45f8b662cfcb1174be72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8a94b85dfe9a6b5dbbd755ff1e0a4cf2d68dccd5178da6d0578d6f50e8b48936
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119350970"
 ---
-# <a name="iinkanalysisrecognizergetlanguages-method"></a>Iinkanalysiserkenzer:: GetLanguages-Methode
+# <a name="iinkanalysisrecognizergetlanguages-method"></a>IInkAnalysisRecognizer::GetLanguages-Methode
 
-Ruft die Bezeichner für die Gebiets Schemas ab, die von diesem [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) unterstützt werden.
+Ruft die Bezeichner für die Gebietsschemas ab, die von [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) unterstützt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,34 +40,34 @@ HRESULT GetLanguages(
 
 <dl> <dt>
 
-*pullanguagescount* \[ in, out\]
+*pulLanguagesCount* \[ in, out\]
 </dt> <dd>
 
-Die Anzahl der Bezeichner in *ppullanguages*.
+Die Anzahl der Bezeichner in *ppulLanguages*.
 
 </dd> <dt>
 
-*ppullanguages* \[ vorgenommen\]
+*ppulLanguages* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die Bezeichner für die Gebiets Schemas, die von diesem [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) unterstützt werden.
+Ein Zeiger auf die Bezeichner für die Gebietsschemas, die von [**diesem IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) unterstützt werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, verwenden Sie " [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) ", um den Arbeitsspeicher von \* *ppullanguages* freizugeben, wenn Sie die Informationen nicht mehr benötigen.
+> Um einen Speicherverlust zu vermeiden, verwenden Sie [**CoTaskMemFree,**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) um den Arbeitsspeicher von \* *ppulLanguages* freizugeben, wenn Sie die Informationen nicht mehr benötigen.
 
  
 
-Diese Methode gibt ein leeres Array für Objekt-und Gesten Erkennungs Tools zurück.
+Diese Methode gibt ein leeres Array für die Objekt- und Gestenerkennung zurück.
 
-Weitere Informationen zu sprach Bezeichnern finden Sie unter [sprach Bezeichner-Konstanten und-](/windows/desktop/Intl/language-identifier-constants-and-strings)Zeichen folgen.
+Weitere Informationen zu Sprachbezeichnern finden Sie unter [Sprachbezeichnerkonstanten und Zeichenfolgen.](/windows/desktop/Intl/language-identifier-constants-and-strings)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,21 +75,21 @@ Weitere Informationen zu sprach Bezeichnern finden Sie unter [sprach Bezeichner-
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalysiserkenzer**](iinkanalysisrecognizer.md)
+[**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

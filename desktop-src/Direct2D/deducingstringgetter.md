@@ -1,9 +1,9 @@
 ---
-title: Deducingstringgetter (D2d1effecthelpers. h)
-description: Leitet die-Klasse und die-Argumente ab und ruft dann für eine Eigenschaft vom Typ "String" einen Eigenschaften-Getter-Rückruf für eine Element Funktion auf.
+title: DeducingStringGetter (D2d1effecthelpers.h)
+description: Deduces the class and arguments and then calls a member-function property getter callback for a string-type property.
 ms.assetid: 434E3360-D6C3-46CB-818E-15A185F4BB84
 keywords:
-- Deducingstringgetter Direct2D
+- DeducingStringGetter Direct2D
 topic_type:
 - apiref
 api_name:
@@ -14,19 +14,19 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac65b9e5d7e37e2db83f06f80172e90f9f27f80b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c99e23a2f79f38527dfae76c74e5e2ad8b828dce1a0ff984f622bd95fd287c97
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119342960"
 ---
-# <a name="deducingstringgetter"></a>Deducingstringgetter
+# <a name="deducingstringgetter"></a>DeducingStringGetter
 
-Leitet die-Klasse und die-Argumente ab und ruft dann für eine Eigenschaft vom Typ "String" einen Eigenschaften-Getter-Rückruf für eine Element Funktion auf.
+Deduces the class and arguments and then calls a member-function property getter callback for a string-type property.
 
 > [!Note]  
-> Deducingstringgetter sollte nicht direkt aufgerufen werden.
+> DeducingStringGetter sollte nicht direkt aufgerufen werden.
 
  
 
@@ -47,15 +47,15 @@ HRESULT DeducingStringGetter(
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D2d1effecthelpers. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D2d1effecthelpers.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Direct2D::D educingstringsetter**](deducingstringsetter.md)
+[**Direct2D::D educingStringSetter**](deducingstringsetter.md)
 </dt> </dl>
 
  

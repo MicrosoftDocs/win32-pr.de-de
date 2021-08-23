@@ -1,7 +1,7 @@
 ---
-description: Ruft die Gitter Optionen ab, die für dieses Mesh zum Zeitpunkt der Erstellung aktiviert sind.
+description: Ruft die Gitternetzoptionen ab, die zum Zeitpunkt der Erstellung für dieses Gitternetz aktiviert sind.
 ms.assetid: 4be990d7-77ab-4273-b852-e6283a89ac6c
-title: 'ID3DXBaseMesh:: GetOptions-Methode (D3DX9Mesh. h)'
+title: ID3DXBaseMesh::GetOptions-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a751230b4ccfc537f651846ed455b62d7c7f8262
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8b8ed6281e1418246027a05f281ef5c01d8fbe757a8bd88d2bf6f44ca41ed1d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373535"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119121762"
 ---
-# <a name="id3dxbasemeshgetoptions-method"></a>ID3DXBaseMesh:: GetOptions-Methode
+# <a name="id3dxbasemeshgetoptions-method"></a>ID3DXBaseMesh::GetOptions-Methode
 
-Ruft die Gitter Optionen ab, die für dieses Mesh zum Zeitpunkt der Erstellung aktiviert sind.
+Ruft die Gitternetzoptionen ab, die zum Zeitpunkt der Erstellung für dieses Gitternetz aktiviert sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,29 +42,29 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt eine Kombination aus einem oder mehreren der folgenden Flags zurück, die die Optionen angibt, die für dieses Mesh zum Zeitpunkt der Erstellung aktiviert wurden.
+Gibt eine Kombination aus einem oder mehreren der folgenden Flags zurück, die die Optionen angeben, die für dieses Gitternetz zur Erstellungszeit aktiviert sind.
 
 
 
-| Wert                   | BESCHREIBUNG                                                                                                                                                                                      |
+| Wert                   | Beschreibung                                                                                                                                                                                      |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D3DXMESH \_ 32-Bit         | Verwenden Sie 32-Bit-Indizes.                                                                                                                                                                              |
-| D3DXMESH \_ DoNotClip     | Verwenden Sie das D3DUSAGE \_ DoNotClip-nutzungsflag für Scheitelpunkt-und Index Puffer.                                                                                                                             |
-| D3DXMESH \_ dynamisch       | Äquivalent zum Angeben von D3DXMESH \_ vb \_ Dynamic und D3DXMESH \_ IB \_ Dynamic.                                                                                                                   |
-| D3DXMESH \_ rtpatches     | Verwenden Sie das D3DUSAGE \_ rtpatches Usage-Flag für Scheitelpunkt-und Index Puffer.                                                                                                                             |
-| D3DXMESH \_ npatches      | Die Angabe dieses Flags bewirkt, dass der Scheitelpunkt und der Index Puffer des Mesh mit dem D3DUSAGE \_ npatches-Flag erstellt werden. Dies ist erforderlich, wenn das Mesh-Objekt mit der N-Patch-Erweiterung gerendert werden soll. |
-| D3DXMESH \_ verwaltet       | Entspricht der Angabe von D3DXMESH \_ vb \_ Managed und D3DXMESH \_ IB \_ Managed.                                                                                                                   |
-| D3DXMESH \_ Punkte        | Verwenden Sie das \_ Usage-Flag D3DUSAGE Points für Scheitelpunkt-und Index Puffer.                                                                                                                                |
-| D3DXMESH \_ IB \_ dynamisch   | Verwenden Sie das D3DUSAGE \_ Dynamic Usage-Flag für Index Puffer.                                                                                                                                          |
-| D3DXMESH \_ IB \_ verwaltet   | Verwenden Sie die \_ verwaltete D3DPOOL-Speicher Klasse für Index Puffer.                                                                                                                                         |
-| D3DXMESH \_ IB-System Arbeitsspeicher \_ | Verwenden Sie die D3DPOOL \_ SystemMem-Speicher Klasse für Index Puffer.                                                                                                                                       |
-| D3DXMESH \_ IB \_ schreibgeschützt | Verwenden Sie das D3DUSAGE \_ Write-use-Flag für Index Puffer.                                                                                                                                        |
-| D3DXMESH \_ SystemMem     | Entspricht der Angabe von D3DXMESH \_ vb \_ SystemMem und D3DXMESH \_ IB \_ SystemMem.                                                                                                               |
-| D3DXMESH \_ vb \_ dynamisch   | Verwenden Sie das D3DUSAGE \_ Dynamic Usage-Flag für Scheitelpunkt Puffer.                                                                                                                                         |
-| D3DXMESH \_ vb \_ verwaltet   | Verwenden Sie die \_ verwaltete D3DPOOL-Speicher Klasse für Scheitelpunkt Puffer.                                                                                                                                        |
-| D3DXMESH \_ vb \_ SystemMem | Verwenden Sie die D3DPOOL \_ SystemMem-Speicher Klasse für Scheitelpunkt Puffer.                                                                                                                                      |
-| D3DXMESH \_ vb \_ schreibgeschützt | Verwenden Sie das D3DUSAGE \_ Write-use-Flag für Scheitel Punkte.                                                                                                                                       |
-| D3DXMESH \_ schreiben     | Entspricht der Angabe von D3DXMESH \_ vb \_ Write-only und D3DXMESH \_ IB \_ Write.                                                                                                               |
+| D3DXMESH \_ 32 BIT         | Verwenden Sie 32-Bit-Indizes.                                                                                                                                                                              |
+| D3DXMESH \_ DONOTCLIP     | Verwenden Sie das D3DUSAGE \_ DONOTCLIP-Verwendungsflag für Scheitelpunkt- und Indexpuffer.                                                                                                                             |
+| D3DXMESH \_ DYNAMIC       | Entspricht der Angabe von D3DXMESH \_ VB \_ DYNAMIC und D3DXMESH \_ IB \_ DYNAMIC.                                                                                                                   |
+| D3DXMESH \_ RTPATCHES     | Verwenden Sie das D3DUSAGE \_ RTPATCHES-Verwendungsflag für Scheitelpunkt- und Indexpuffer.                                                                                                                             |
+| D3DXMESH \_ NPATCHES      | Wenn Sie dieses Flag angeben, werden der Scheitelpunkt und der Indexpuffer des Gitternetzes mit dem NPATCHES-Flag D3DUSAGE \_ erstellt. Dies ist erforderlich, wenn das Gittermodellobjekt mithilfe der N-Patch-Erweiterung gerendert werden soll. |
+| D3DXMESH \_ VERWALTET       | Entspricht der Angabe von D3DXMESH \_ VB \_ MANAGED und D3DXMESH \_ IB \_ MANAGED.                                                                                                                   |
+| D3DXMESH-PUNKTE \_        | Verwenden Sie das D3DUSAGE \_ POINTS-Verwendungsflag für Scheitelpunkt- und Indexpuffer.                                                                                                                                |
+| D3DXMESH \_ IB \_ DYNAMIC   | Verwenden Sie das D3DUSAGE \_ DYNAMIC-Verwendungsflag für Indexpuffer.                                                                                                                                          |
+| D3DXMESH \_ IB \_ VERWALTET   | Verwenden Sie die \_ VERWALTETE D3DPOOL-Speicherklasse für Indexpuffer.                                                                                                                                         |
+| D3DXMESH \_ IB \_ SYSTEMMEM | Verwenden Sie die D3DPOOL \_ SYSTEMMEM-Speicherklasse für Indexpuffer.                                                                                                                                       |
+| D3DXMESH \_ IB \_ WRITEONLY | Verwenden Sie das D3DUSAGE \_ WRITEONLY-Verwendungsflag für Indexpuffer.                                                                                                                                        |
+| D3DXMESH \_ SYSTEMMEM     | Entspricht der Angabe von D3DXMESH \_ VB \_ SYSTEMMEM und D3DXMESH \_ IB \_ SYSTEMMEM.                                                                                                               |
+| D3DXMESH \_ VB \_ DYNAMIC   | Verwenden Sie das D3DUSAGE \_ DYNAMIC-Verwendungsflag für Scheitelpunktpuffer.                                                                                                                                         |
+| D3DXMESH \_ VB \_ VERWALTET   | Verwenden Sie die \_ VERWALTETE D3DPOOL-Speicherklasse für Scheitelpunktpuffer.                                                                                                                                        |
+| D3DXMESH \_ VB \_ SYSTEMMEM | Verwenden Sie die D3DPOOL \_ SYSTEMMEM-Speicherklasse für Scheitelpunktpuffer.                                                                                                                                      |
+| D3DXMESH \_ VB \_ WRITEONLY | Verwenden Sie das D3DUSAGE \_ WRITEONLY-Verwendungsflag für Scheitelpunktpuffer.                                                                                                                                       |
+| D3DXMESH \_ WRITEONLY     | Entspricht der Angabe von D3DXMESH \_ VB \_ WRITEONLY und D3DXMESH \_ IB \_ WRITEONLY.                                                                                                               |
 
 
 
@@ -76,12 +76,12 @@ Gibt eine Kombination aus einem oder mehreren der folgenden Flags zurück, die d
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

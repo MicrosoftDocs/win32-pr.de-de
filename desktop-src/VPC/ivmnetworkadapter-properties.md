@@ -1,29 +1,29 @@
 ---
-title: Ivmnetworkadapter-Eigenschaften
-description: Die ivmnetworkadapter-Schnittstelle stellt die folgenden Eigenschaften zur Verfügung.
+title: IVMNetworkAdapter-Eigenschaften
+description: Die IVMNetworkAdapter-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 1EDB5245-8130-4BC1-B66A-0B05E2901770
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 92215b07898b238b5b62cd60ec326146f9bbf4cf
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e650e640c0fcdb0dba73d827dea83eda788975cb5f9f202242082f9f6832ce86
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103949050"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998800"
 ---
-# <a name="ivmnetworkadapter-properties"></a>Ivmnetworkadapter-Eigenschaften
+# <a name="ivmnetworkadapter-properties"></a>IVMNetworkAdapter-Eigenschaften
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Die [**ivmnetworkadapter**](ivmnetworkadapter.md) -Schnittstelle stellt die folgenden Eigenschaften zur Verfügung.
+Die [**IVMNetworkAdapter-Schnittstelle**](ivmnetworkadapter.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Ethernetaddress (Eigenschaft)**](ivmnetworkadapter-ethernetaddress.md)
--   [**Isethernetaddressdynamic (Eigenschaft)**](ivmnetworkadapter-isethernetaddressdynamic.md)
--   [**Virtualmachine (Eigenschaft)**](ivmnetworkadapter-virtualmachine.md)
+-   [**EthernetAddress-Eigenschaft**](ivmnetworkadapter-ethernetaddress.md)
+-   [**IsEthernetAddressDynamic-Eigenschaft**](ivmnetworkadapter-isethernetaddressdynamic.md)
+-   [**VirtualMachine-Eigenschaft**](ivmnetworkadapter-virtualmachine.md)
 -   [**VirtualNetwork-Eigenschaft**](ivmnetworkadapter-virtualnetwork.md)
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: Bietet Zugriff auf den Kontext eines CAPICOM-Speicher Objekts. In diesem Kontext kann der CAPICOM-Zertifikat Speicher in anderen Ableitungen von CryptoAPI verwendet werden.
+description: Ermöglicht den Zugriff auf den Kontext eines CAPICOM-Store Objekts. Dieser Kontext ermöglicht die Verwendung des CAPICOM-Zertifikatspeichers in anderen Ableitungen von CryptoAPI.
 ms.assetid: dc108e2d-d6ec-4972-9c8e-e6e738c25756
-title: Icertstore-Schnittstelle
+title: ICertStore-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,39 +13,39 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 119609399709340049bc43693ac51f6259021416
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a48913b4bfb1fc28b612437a8f3b6934941c19b22683913f68d59f3f11d9e1c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005578"
 ---
-# <a name="icertstore-interface"></a>Icertstore-Schnittstelle
+# <a name="icertstore-interface"></a>ICertStore-Schnittstelle
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP.\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP.\]
 
-Die **icertstore** -Schnittstelle bietet Zugriff auf den Kontext eines CAPICOM- [**Speicher**](store.md) Objekts. In diesem Kontext kann der CAPICOM-Zertifikat Speicher in anderen Ableitungen von CryptoAPI verwendet werden.
+Die **ICertStore-Schnittstelle** ermöglicht den Zugriff auf den Kontext eines CAPICOM-Store Objekts. [](store.md) Dieser Kontext ermöglicht die Verwendung des CAPICOM-Zertifikatspeichers in anderen Ableitungen von CryptoAPI.
 
 ## <a name="when-to-use"></a>Verwendung
 
-Verwenden Sie diese Schnittstelle, wenn Sie ein CAPICOM- [**Speicher**](store.md) Objekt in einer anderen Ableitung von CryptoAPI verwenden müssen.
+Verwenden Sie diese Schnittstelle, wenn Sie [](store.md) ein CAPICOM-Store in einer anderen Ableitung von CryptoAPI verwenden müssen.
 
 ## <a name="members"></a>Member
 
-Die **icertstore** -Schnittstelle verfügt über diese Typen von Membern:
+Die **ICertStore-Schnittstelle** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **icertstore** -Schnittstelle verfügt über diese Methoden.
+Die **ICertStore-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                        | BESCHREIBUNG                                                                                                         |
+| Methode                                        | Beschreibung                                                                                                         |
 |:----------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
-| [**CloseHandle**](icertstore-closehandle.md) | Schließt ein HCERTSTORE-handle, das über die [**storeHandle**](icertstore-storehandle.md) -Eigenschaft abgerufen wurde.<br/> |
+| [**Closehandle**](icertstore-closehandle.md) | Schließt ein HCERTSTORE-Handle, das über die [**StoreHandle-Eigenschaft erworben**](icertstore-storehandle.md) wurde.<br/> |
 
 
 
@@ -53,14 +53,14 @@ Die **icertstore** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **icertstore** -Schnittstelle verfügt über diese Eigenschaften.
+Die **ICertStore-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                     | Zugriffstyp           | BESCHREIBUNG                                                                                                         |
+| Eigenschaft                                                     | Zugriffstyp           | Beschreibung                                                                                                         |
 |:-------------------------------------------------------------|:----------------------|:--------------------------------------------------------------------------------------------------------------------|
-| [**StoreHandle**](icertstore-storehandle.md)<br/>     | Lesen/Schreiben<br/> | Legt das HCERTSTORE-Handle eines Zertifikat Speicher fest oder ruft es ab.<br/>                                          |
-| [**StoreLocation**](icertstore-storelocation.md)<br/> | Lesen/Schreiben<br/> | Legt den [**CAPICOM- \_ \_ Speicherort**](capicom-store-location.md) eines Zertifikat Speicher fest oder ruft ihn ab.<br/> |
+| [**Storehandle**](icertstore-storehandle.md)<br/>     | Lesen/Schreiben<br/> | Legt das HCERTSTORE-Handle eines Zertifikatspeichers fest oder ruft es ab.<br/>                                          |
+| [**Storelocation**](icertstore-storelocation.md)<br/> | Lesen/Schreiben<br/> | Legt den [**CAPICOM \_ STORE \_ LOCATION eines Zertifikatspeichers**](capicom-store-location.md) fest oder ruft diese ab.<br/> |
 
 
 
@@ -72,7 +72,7 @@ Die **icertstore** -Schnittstelle verfügt über diese Eigenschaften.
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

@@ -1,44 +1,44 @@
 ---
-description: Listet die Zugriffs Typen des Policy-Objekts auf und beschreibt diese.
+description: Listet die Zugriffstypen des Richtlinienobjekts auf und beschreibt sie.
 ms.assetid: 592dea65-9da1-4e49-82e4-8e08c451e026
-title: Zugriffsrechte für Richtlinien Objekte
+title: Zugriffsrechte für Richtlinienobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e2e5c762955a4c53015241086b2249c5edbc4f12
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ae22db51c28e76e7122a1f7baf781671d9cc445e253fb6df7d63f87e3f7e921
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005098"
 ---
-# <a name="policy-object-access-rights"></a>Zugriffsrechte für Richtlinien Objekte
+# <a name="policy-object-access-rights"></a>Zugriffsrechte für Richtlinienobjekte
 
-Das [**Policy**](policy-object.md) -Objekt verfügt über die folgenden Objekt spezifischen Zugriffs Typen:
+Das [**Policy-Objekt**](policy-object.md) verfügt über die folgenden objektspezifischen Zugriffstypen:
 
 
 
-| Zugriffstyp                         | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                        |
+| Zugriffstyp                         | Beschreibung                                                                                                                                                                                                                                                                                                                                                        |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \_ \_ lokale \_ Informationen zur Richtlinien Anzeige    | Dieser Zugriffstyp ist erforderlich, um die verschiedenen Sicherheitsrichtlinien Informationen des Zielsystems zu lesen. Dies umfasst das Standard Kontingent, die Überwachung, den Serverstatus und die Informationen zur Rolle sowie Informationen zur Vertrauensstellung. Dieser Zugriffstyp wird auch zum Auflisten vertrauenswürdiger Domänen, Konten und [*Berechtigungen*](/windows/desktop/SecGloss/p-gly)benötigt. |
-| Richtlinie \_ get \_ private \_ Information   | Dieser Zugriffstyp ist erforderlich, um vertrauliche Informationen anzuzeigen, z. b. die Namen der Konten, die für vertrauenswürdige Domänen Beziehungen hergestellt wurden                                                                                                                                                                                                                              |
-| Richtlinien \_ Vertrauensstellungs \_ Administrator                | Dieser Zugriffstyp ist erforderlich, um die Informationen zur Konto Domäne oder zur primären Domäne zu ändern.                                                                                                                                                                                                                                                                             |
-| \_ \_ Standard \_ Kontingent \_ Limits für Richtlinien festlegen | Legen Sie die standardmäßigen System Kontingente fest, die auf Benutzerkonten angewendet werden.                                                                                                                                                                                                                                                                                                   |
-| Richtlinie \_ Create \_ Secret              | Dieser Zugriffstyp ist erforderlich, um ein neues privates Datenobjekt zu erstellen.                                                                                                                                                                                                                                                                                                    |
-| Konto für die Richtlinien \_ Erstellung \_             | Dieser Zugriffstyp wird zum Erstellen eines neuen [**Konto**](account-object.md) Objekts benötigt.                                                                                                                                                                                                                                                                               |
-| Richtlinien \_ Satz-Überwachungs \_ \_ Anforderungen    | Dieser Zugriffstyp ist erforderlich, um die Überwachungsanforderungen des Systems zu aktualisieren.                                                                                                                                                                                                                                                                                      |
-| Richtlinien \_ Überwachungs \_ Protokoll- \_ Administrator           | Dieser Zugriffstyp wird benötigt, um die Eigenschaften des Überwachungs Pfads zu ändern, z. b. die maximale Größe oder die Beibehaltungs Dauer für Überwachungsdaten Sätze, oder um das Protokoll zu löschen.                                                                                                                                                                                               |
-| Überwachungsinformationen für die Richtlinien \_ Ansicht \_ \_    | Dieser Zugriffstyp ist erforderlich, um Informationen über Überwachungs Pfade oder Überwachungsanforderungen anzuzeigen.                                                                                                                                                                                                                                                                                  |
-| Richtlinien \_ Server \_ Administrator               | Dieser Zugriffstyp ist erforderlich, um die Informationen zum Serverstatus oder zur Rolle (Master/Replica) zu ändern. Außerdem müssen die Informationen zur Replikat Quelle und zum Kontonamen geändert werden.                                                                                                                                                                                           |
-| Namen der Richtlinien \_ Suche \_               | Dieser Zugriffstyp ist erforderlich, um zwischen Namen und SIDs zu übersetzen.                                                                                                                                                                                                                                                                                                    |
-| \_ \_ Berechtigungs Erstellungs Berechtigung           | Noch nicht unterstützt.                                                                                                                                                                                                                                                                                                                                                 |
+| RICHTLINIENANSICHT \_ \_ : LOKALE \_ INFORMATIONEN    | Dieser Zugriffstyp ist erforderlich, um die verschiedenen Sicherheitsrichtlinieninformationen des Zielsystems zu lesen. Dies schließt die Standardkontingent-, Überwachungs-, Serverstatus- und Rolleninformationen sowie Vertrauensinformationen ein. Dieser Zugriffstyp ist auch erforderlich, um vertrauenswürdige Domänen, Konten und [*Berechtigungen*](/windows/desktop/SecGloss/p-gly)aufzuzählen. |
+| RICHTLINIE \_ ABRUFEN \_ PRIVATER \_ INFORMATIONEN   | Dieser Zugriffstyp ist erforderlich, um vertrauliche Informationen anzuzeigen, z. B. die Namen von Konten, die für vertrauenswürdige Domänenbeziehungen eingerichtet wurden.                                                                                                                                                                                                                              |
+| ADMINISTRATOR \_ DER RICHTLINIENVERTRAUENSSTELLUNG \_                | Dieser Zugriffstyp ist erforderlich, um die Informationen zur Kontodomäne oder zur primären Domäne zu ändern.                                                                                                                                                                                                                                                                             |
+| \_ \_ RICHTLINIENSATZ– \_ \_ STANDARDKONTINGENTGRENZEN | Legen Sie die Standardsystemkontingente fest, die auf Benutzerkonten angewendet werden.                                                                                                                                                                                                                                                                                                   |
+| POLICY \_ CREATE \_ SECRET              | Dieser Zugriffstyp ist erforderlich, um ein neues Private Data-Objekt zu erstellen.                                                                                                                                                                                                                                                                                                    |
+| POLICY \_ CREATE \_ ACCOUNT             | Dieser Zugriffstyp ist erforderlich, um ein neues [**Kontoobjekt**](account-object.md) zu erstellen.                                                                                                                                                                                                                                                                               |
+| \_ÜBERWACHUNGSANFORDERUNGEN FÜR RICHTLINIENSATZ \_ \_    | Dieser Zugriffstyp ist erforderlich, um die Überwachungsanforderungen des Systems zu aktualisieren.                                                                                                                                                                                                                                                                                      |
+| \_ \_ \_ RICHTLINIENÜBERWACHUNGSPROTOKOLLADMINISTRATOR           | Dieser Zugriffstyp ist erforderlich, um die Merkmale des Überwachungspfads zu ändern, z. B. die maximale Größe oder den Aufbewahrungszeitraum für Überwachungsdatensätze, oder um das Protokoll zu löschen.                                                                                                                                                                                               |
+| RICHTLINIENANSICHT \_ \_ – \_ ÜBERWACHUNGSINFORMATIONEN    | Dieser Zugriffstyp ist erforderlich, um Überwachungspfad- oder Überwachungsanforderungsinformationen anzuzeigen.                                                                                                                                                                                                                                                                                  |
+| \_ \_ RICHTLINIENSERVERADMINISTRATOR               | Dieser Zugriffstyp ist erforderlich, um die Serverstatus- oder Rolleninformationen (Master/Replikat) zu ändern. Es ist auch erforderlich, die Informationen zur Replikatquelle und zum Kontonamen zu ändern.                                                                                                                                                                                           |
+| \_RICHTLINIENS \_ LOOKUP-NAMEN               | Dieser Zugriffstyp ist erforderlich, um zwischen Namen und SIDs zu übersetzen.                                                                                                                                                                                                                                                                                                    |
+| BERECHTIGUNG ZUM ERSTELLEN VON RICHTLINIEN \_ \_           | Noch nicht unterstützt.                                                                                                                                                                                                                                                                                                                                                 |
 
 
 
  
 
-## <a name="generic-access-masks"></a>Generische Zugriffs Masken
+## <a name="generic-access-masks"></a>Generische Zugriffsmasken
 
-Das [**Policy**](policy-object.md) -Objekt veröffentlicht die folgenden Zuordnungen von generischen Zugriffs Typen auf bestimmte Zugriffs Typen:
+Das [**Policy-Objekt**](policy-object.md) veröffentlicht die folgenden Zuordnungen von generischen Zugriffstypen zu bestimmten Zugriffstypen:
 
 ``` syntax
     GENERIC_READ    STANDARD_RIGHTS_READ |
@@ -60,9 +60,9 @@ Das [**Policy**](policy-object.md) -Objekt veröffentlicht die folgenden Zuordnu
                     POLICY_LOOKUP_NAMES
 ```
 
-## <a name="standard-access-types"></a>Standard Zugriffs Typen
+## <a name="standard-access-types"></a>Standardzugriffstypen
 
-Dieses Objekt unterstützt den (optionalen) Standard Zugriffstyp "synchronisieren" nicht. Alle erforderlichen Zugriffs Typen werden unterstützt. Die Maske aller unterstützten Zugriffs Typen für diesen Objekttyp lautet:
+Dieses Objekt unterstützt den (optionalen) SYNCHRONIZE-Standardzugriffstyp nicht. Alle erforderlichen Zugriffstypen werden unterstützt. Die Maske aller unterstützten Zugriffstypen für diesen Objekttyp lautet:
 
 ``` syntax
     POLICY_ALL_ACCESS STANDARD_RIGHTS_REQUIRED |

@@ -1,7 +1,7 @@
 ---
-description: Mit der Put \_ destinationtop-Methode wird die obere Koordinate des Ziel Rechtecks festgelegt.
+description: Die put \_ DestinationTop-Methode legt die obere Koordinate des Zielrechtecks fest.
 ms.assetid: d18996ac-85f2-4778-b0aa-1bc0c4d5f7d9
-title: CBaseControlVideo.put_DestinationTop-Methode (ctlutil. h)
+title: CBaseControlVideo.put_DestinationTop -Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c89e4693d424412a43869509e046a5023e76341c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 01820ef8df08d7d4359793a6400f5a5ec23d8b0a1f33f722173c83c705492d29
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369130"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119341730"
 ---
-# <a name="cbasecontrolvideoput_destinationtop-method"></a>Cbasecontrolvideo. Put \_ destinationtop-Methode
+# <a name="cbasecontrolvideoput_destinationtop-method"></a>CBaseControlVideo.put \_ DestinationTop-Methode
 
-Die- `put_DestinationTop` Methode legt die obere Koordinate des Ziel Rechtecks fest.
+Die `put_DestinationTop` -Methode legt die obere Koordinate des Zielrechtecks fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,34 +42,34 @@ HRESULT put_DestinationTop(
 
 <dl> <dt>
 
-*Destinationtop* 
+*DestinationTop* 
 </dt> <dd>
 
-Neue obere Koordinate des Ziel Rechtecks.
+Neue obere Koordinate des Zielrechtecks.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück, der von der Implementierung abhängig ist. kann einen der folgenden Werte oder andere nicht aufgelistete Werte aufweisen.
+Gibt einen **HRESULT-Wert** zurück, der von der Implementierung abhängt. kann einer der folgenden Werte oder ein anderer nicht aufgeführter Wert sein.
 
 
 
 | Rückgabecode                                                                                           | Beschreibung                                                                      |
 |-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>                | Fehler.<br/>                                                              |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>          | Ungültiges Argument.<br/>                                                     |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>             | **Null** -Zeigerargument.<br/>                                            |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>                | Fehler.<br/>                                                              |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>          | Ungültiges Argument.<br/>                                                     |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>             |  NULL-Zeigerargument.<br/>                                            |
 | <dl> <dt>**NOERROR**</dt> </dl>                | Erfolg.<br/>                                                              |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Der Vorgang kann nicht ausgeführt werden, da die Pins nicht verbunden sind.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der Vorgang kann nicht ausgeführt werden, da die Stecknadeln nicht verbunden sind.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**ibasicvideo**](/windows/desktop/api/Control/nn-control-ibasicvideo) -Schnittstelle ändern. Das Quell Rechteck wirkt sich darauf aus, welcher Abschnitt der systemeigenen Videoquelle auf der Anzeige angezeigt wird. Das Ziel Rechteck wirkt sich darauf aus, wo das Video bei der Wiedergabe angezeigt wird. Das Ziel Rechteck ist relativ zum Client Bereich des Fensters, in dem es abgespielt wird. Die linke obere Ecke des Fensters ist Koordinaten (0,0).
+Eine Anwendung kann die Quell- und Zielrechtecke für das Video über die [**IBasicVideo-Schnittstelle**](/windows/desktop/api/Control/nn-control-ibasicvideo) ändern. Das Quellrechteck wirkt sich darauf aus, welcher Abschnitt der nativen Videoquelle auf der Anzeige angezeigt wird. Das Zielrechteck wirkt sich darauf aus, wo das Video angezeigt wird, wenn es abgespielt wird. Das Zielrechteck ist relativ zum Clientbereich des Fensters, in dem es abspielt. Die obere linke Ecke des Fensters ist koordinate (0,0).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,16 +77,16 @@ Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**iba
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

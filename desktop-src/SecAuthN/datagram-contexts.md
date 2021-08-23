@@ -1,34 +1,34 @@
 ---
-description: Die Semantik für Datagramm oder verbindungslose Kontexte unterscheidet sich geringfügig von denen für Verbindungs orientierte Kontexte.
+description: Die Semantik für Datagrammkontexte oder verbindungslose Kontexte unterscheidet sich geringfügig von denen für verbindungsorientierte Kontexte.
 ms.assetid: f312796c-cbe6-4be9-9886-52fdb34ced6b
-title: Datagramm-Kontexte
+title: Datagrammkontexte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d233a0ba397e67a13b1c25588cf81b6f12c31d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 51cade151c77b9ceec037de57e08bcc3a90638ddeb56f27764d5ad2799abc523
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119008648"
 ---
-# <a name="datagram-contexts"></a>Datagramm-Kontexte
+# <a name="datagram-contexts"></a>Datagrammkontexte
 
-Die Semantik für [*Datagramm*](/windows/desktop/SecGloss/d-gly)oder verbindungslose Kontexte unterscheidet sich geringfügig von denen für Verbindungs orientierte Kontexte. Im Verbindungs losen [*Kontext*](/windows/desktop/SecGloss/c-gly)eines Datagramms kann ein Server nicht bestimmen, wann die Verbindung vom Client heruntergefahren oder anderweitig beendet wurde. Anders ausgedrückt: Es wird keine Abbruch Mitteilung von der Transport Anwendung an den Server übermittelt, wie es in einem Verbindungs orientierten Kontext der Fall wäre.
+Die Semantik für [*Datagrammkontexte*](/windows/desktop/SecGloss/d-gly)oder verbindungslose Kontexte unterscheidet sich geringfügig von denen für verbindungsorientierte Kontexte. Im verbindungslosen [*Kontext*](/windows/desktop/SecGloss/c-gly)eines Datagramms kann ein Server nicht bestimmen, wann der Client die Verbindung heruntergefahren oder anderweitig beendet hat. Anders ausgedrückt: Es wird keine Beendigungsbenachrichtigung von der Transportanwendung an den Server übergeben, wie dies in einem verbindungsorientierten Kontext der Fall wäre.
 
-Um einen Datagramm-Kontext zu verwenden, legt ein Client das ISC \_ req- \_ Datagramm-Flag im-Befehl der [**InitializeSecurityContext (General)**](/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta) -Funktion fest.
+Um einen Datagrammkontext zu verwenden, legt ein Client das ISC \_ REQ \_ DATAGRAM-Flag in seinem Aufruf der [**InitializeSecurityContext (General)-Funktion**](/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta) fest.
 
 > [!IMPORTANT]
-> Das [Microsoft Kerberos](microsoft-kerberos.md) -Paket unterstützt keine datagrammkontexte im Benutzer-zu-Benutzer-Modus.
+> Das [Microsoft Kerberos-Paket](microsoft-kerberos.md) unterstützt keine Datagrammkontexte im Benutzer-zu-Benutzer-Modus.
 
  
 
-Um einige Modelle besser zu unterstützen, insbesondere RPC im DCE-Format, gelten die folgenden Regeln, wenn der Client einen Datagramm-Kontext verwendet:
+Um einige Modelle, insbesondere RPC im DCE-Stil, besser zu unterstützen, gelten die folgenden Regeln, wenn der Client einen Datagrammkontext verwendet:
 
--   Das [*Sicherheitspaket*](/windows/desktop/SecGloss/s-gly) erzeugt beim ersten [**InitializeSecurityContext-Befehl (allgemein)**](/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta)kein Authentifizierungs- [*BLOB*](/windows/desktop/SecGloss/b-gly) (Binary Large Object). Der Client kann jedoch den zurückgegebenen Sicherheitskontext in einem Rückruf der [**makesignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature) -Funktion verwenden, um eine Signatur für eine Nachricht zu generieren.
--   Das Sicherheitspaket muss zulassen, dass der Kontext mehrmals wieder hergestellt wird, damit der Server die Verbindung ohne vorherige Ankündigung löschen kann. Dies impliziert, dass alle in den Funktionen [**makesignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature) und [**VerifySignature**](/windows/desktop/api/Sspi/nf-sspi-verifysignature) verwendeten Schlüssel in einen konsistenten [*Zustand*](/windows/desktop/SecGloss/s-gly)versetzt werden können.
--   Das Sicherheitspaket ermöglicht dem Aufrufer, Sequenz Informationen anzugeben, und stellt diese Sequenz Informationen auf Empfängerseite bereit. Dies gilt zusätzlich zu den vom Paket verwalteten Sequenz Informationen.
+-   Das [*Sicherheitspaket*](/windows/desktop/SecGloss/s-gly) erzeugt beim ersten Aufruf von [**InitializeSecurityContext (Allgemein) kein Authentifizierungsblob (binary**](/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta)large object). [](/windows/desktop/SecGloss/b-gly) Der Client kann jedoch den zurückgegebenen Sicherheitskontext in einem Aufruf der [**MakeSignature-Funktion**](/windows/desktop/api/Sspi/nf-sspi-makesignature) verwenden, um eine Signatur für eine Nachricht zu generieren.
+-   Das Sicherheitspaket muss ermöglichen, dass der Kontext mehrmals neu eingerichtet wird, damit der Server die Verbindung ohne vorherige Ankündigung löschen kann. Dies bedeutet, dass alle Schlüssel, die in den Funktionen [**MakeSignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature) und [**VerifySignature**](/windows/desktop/api/Sspi/nf-sspi-verifysignature) verwendet werden, in einen konsistenten [*Zustand*](/windows/desktop/SecGloss/s-gly)zurückgesetzt werden können.
+-   Das Sicherheitspaket ermöglicht dem Aufrufer das Angeben von Sequenzinformationen und stellt diese Sequenzinformationen auf empfängerseitiger Seite bereit. Dies gilt zusätzlich zu allen Sequenzinformationen, die vom Paket verwaltet werden.
 
-Ein Sicherheitspaket legt das Datagramm-Flag "secpkg Flag" fest, \_ \_ um anzugeben, dass es datagrammsemantik unterstützt
+Ein Sicherheitspaket legt das DATAGRAM-Flag SECPKG \_ FLAG \_ fest, um anzugeben, dass es die Datagrammsemantik unterstützt.
 
  
 

@@ -1,44 +1,44 @@
 ---
-description: Enthält den symbolischen Link für einen Video Erfassungs Treiber.
+description: Enthält die symbolische Verknüpfung für einen Videoaufnahmetreiber.
 ms.assetid: 3d256dec-ec8c-4c62-883b-e2c292fd90eb
-title: MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_SYMBOLIC_LINK-Attribut (mspdl. h)
+title: MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_SYMBOLIC_LINK -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 48e1c854ee070713462676482cc04690c2bdde2d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1dd3b69899eb9df1973cb13611a822139ffda0e744c84137ff9d6094ed4a962d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130721"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119104946"
 ---
-# <a name="mf_devsource_attribute_source_type_vidcap_symbolic_link-attribute"></a>MF \_ devsource \_ - \_ Attribut \_ Quelltyp \_ VidCap \_ symbolischen \_ Link Attribut
+# <a name="mf_devsource_attribute_source_type_vidcap_symbolic_link-attribute"></a>MF \_ \_ DEVSOURCE-ATTRIBUT \_ \_ QUELLTYP \_ VIDCAP SYMBOLIC \_ \_ LINK-Attribut
 
-Enthält den symbolischen Link für einen Video Erfassungs Treiber.
+Enthält die symbolische Verknüpfung für einen Videoaufnahmetreiber.
 
 ## <a name="data-type"></a>Datentyp
 
-**WCHAR \** _
+**Wchar\***
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [_ *imfattributes:: GetString* *](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring).
+Um dieses Attribut zu erhalten, rufen [**Sie DEN ATTRIBUTEAttributes::GetString auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)
 
-Um dieses Attribut festzulegen, müssen Sie [**imfattributes:: SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)aufrufen.
+Rufen Sie ZUM Festlegen dieses [**Attributs DEN WERTATTRIBUTEs::SetString auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Attribut als Eingabe für die [**mfkreatedevicesourceaktivierungs**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatedevicesourceactivate) -Funktion.
+Verwenden Sie dieses Attribut als Eingabe für die [**MFCreateDeviceSourceActivate-Funktion.**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatedevicesourceactivate)
 
-Außerdem wird dieses Attribut für die Aktivierungs Objekte festgelegt, die von den folgenden Funktionen zurückgegeben werden:
+Darüber hinaus wird dieses Attribut für die Aktivierungsobjekte festgelegt, die von den folgenden Funktionen zurückgegeben werden:
 
--   [**MF | atedevicesourceaktivierungs**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatedevicesourceactivate)
--   [**Mfenumschlag**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources)
+-   [**MFCreateDeviceSourceActivate**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatedevicesourceactivate)
+-   [**MFEnumDeviceSources**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources)
 
-Die symbolische Verknüpfung sollte als nicht transparente Zeichenfolge betrachtet werden. Der lesbare Anzeige Name für ein Gerät ist in dem Attribut "Anzeige Name" des [MF- \_ devsource- \_ Attributs \_ \_ ](mf-devsource-attribute-friendly-name.md) enthalten.
+Die symbolische Verknüpfung sollte als nicht transparente Zeichenfolge betrachtet werden. Der für Menschen lesbare Anzeigename für ein Gerät ist im [MF \_ DEVSOURCE \_ ATTRIBUTE FRIENDLY \_ \_ NAME-Attribut](mf-devsource-attribute-friendly-name.md) enthalten.
 
-Das Attribut "MF \_ devsource \_ Attribute \_ Source \_ Type \_ VidCap \_ symbolischen \_ Link" kann als Wert des DevicePath-Arguments der [**setupdiopendeviceinterface**](/windows/win32/api/setupapi/nf-setupapi-setupdiopendeviceinterfacea) -Funktion übergeben werden.
+Das MF DEVSOURCE ATTRIBUTE SOURCE TYPE VIDCAP SYMBOLIC LINK-Attribut kann als Wert des DevicePath-Arguments der \_ \_ \_ \_ \_ \_ \_ [**SetupDiOpenDeviceInterface-Funktion übergeben**](/windows/win32/api/setupapi/nf-setupapi-setupdiopendeviceinterfacea) werden.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,23 +46,23 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [Audio-/Videoaufzeichnung](audio-video-capture.md)
 </dt> <dt>
 
-[Geräte Attribute erfassen](capture-device-attributes.md)
+[Erfassen von Geräteattributen](capture-device-attributes.md)
 </dt> </dl>
 
  

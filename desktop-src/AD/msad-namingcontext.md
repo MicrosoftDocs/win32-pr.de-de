@@ -1,11 +1,11 @@
 ---
 title: MSAD_NamingContext-Klasse
-description: Stellt einen bestimmten namens Kontext (NC) auf dem Domänen Controller dar.
+description: Stellt einen bestimmten Benennungskontext (NC) auf dem Domänencontroller dar.
 ms.assetid: 67dd6c68-6c67-40b4-a20a-c6c312d23441
 ms.tgt_platform: multiple
 keywords:
-- MSAD_NamingContext-Klasse Active Directory
-- MSAD_NamingContext Klasse Active Directory, beschrieben
+- MSAD_NamingContext Active Directory-Klasse
+- MSAD_NamingContext Active Directory-Klasse , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d68f70c6e40e823df0a6827e1114f40dae7937be
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 571f13642116be0e846fe1350cd932d52087d9f0422b8f40d695e4fef99df5cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025778"
 ---
 # <a name="msad_namingcontext-class"></a>MSAD \_ NamingContext-Klasse
 
-Stellt einen bestimmten namens Kontext (NC) auf dem Domänen Controller dar.
+Stellt einen bestimmten Benennungskontext (NC) auf dem Domänencontroller dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ class MSAD_NamingContext
 
 ## <a name="members"></a>Member
 
-Die **MSAD \_ NamingContext** -Klasse verfügt über diese Typen von Membern:
+Die **MSAD \_ NamingContext-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSAD \_ NamingContext** -Klasse verfügt über diese Eigenschaften.
+Die **MSAD \_ NamingContext-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -64,20 +64,20 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Ruft den X. 500-Pfad des NC ab.
+Ruft den X.500-Pfad des NC ab.
 
 </dd> <dt>
 
-**Isfullreplica**
+**IsFullReplica**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ruft den Wert ab, der angibt, ob der NC Lese-/Schreibzugriff hat. **True** , wenn der NC den Lese-/Schreibzugriff hat. **False** , wenn der NC schreibgeschützt ist.
+Ruft den Wert ab, der angibt, ob der NC lese-/schreibe. **TRUE,** wenn der NC Lese-/Schreibzugriff hat; **FALSE,** wenn der NC schreibgeschützt ist.
 
 </dd> </dl>
 
@@ -89,8 +89,8 @@ Ruft den Wert ab, der angibt, ob der NC Lese-/Schreibzugriff hat. **True** , wen
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | \\Microsoftactivedirectory-Stammverzeichnis<br/>                                               |
-| MOF<br/>                      | <dl> <dt>ReplProv. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ MicrosoftActiveDirectory<br/>                                               |
+| MOF<br/>                      | <dl> <dt>Replprov.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Replprov.dll</dt> </dl> |
 
 

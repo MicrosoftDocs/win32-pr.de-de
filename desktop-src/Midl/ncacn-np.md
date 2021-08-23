@@ -1,9 +1,9 @@
 ---
 title: ncacn_np-Attribut
-description: Das Schlüsselwort ncacn \_ NP identifiziert Named Pipes als Protokollfamilie für den Endpunkt.
+description: Das \_ ncacn np-Schlüsselwort identifiziert Named Pipes als Protokollfamilie für den Endpunkt.
 ms.assetid: 02961bb8-faf0-42e5-b134-dd2983e6d146
 keywords:
-- ncacn_np Attribut-Mittel l
+- ncacn_np-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 84634e6bb5d2b634439be767ad44749291cffe11
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: a7acf294241c1d38b2067ba54e315fc3240e5bb6eca81a6b12012f8dec457a8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103726736"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013758"
 ---
-# <a name="ncacn_np-attribute"></a>ncacn- \_ NP-Attribut
+# <a name="ncacn_np-attribute"></a>ncacn \_ np-Attribut
 
-Das Schlüsselwort **ncacn \_ NP** identifiziert Named Pipes als Protokollfamilie für den Endpunkt.
+Das **ncacn \_ np-Schlüsselwort** identifiziert Named Pipes als Protokollfamilie für den Endpunkt.
 
 ``` syntax
 endpoint("ncacn_np:server-name[\\pipe\\pipe-name]")
@@ -34,22 +34,22 @@ endpoint("ncacn_np:server-name[\\pipe\\pipe-name]")
 *Servername* 
 </dt> <dd>
 
-Dies ist optional. Gibt den Namen des Servers an. Umgekehrte Schrägstriche sind optional.
+Optional. Gibt den Namen des Servers an. Umgekehrte Schrägstriche sind optional.
 
 </dd> <dt>
 
-*Pipename* 
+*pipe-name* 
 </dt> <dd>
 
-Gibt einen gültigen Pipenamen an. Ein gültiger Pipename ist eine Zeichenfolge, die Bezeichner enthält, die durch umgekehrte Schrägstriche getrennt sind. Der erste Bezeichner muss eine [**Pipe**](pipe.md)sein. Jeder Bezeichner muss durch zwei umgekehrte Schrägstriche getrennt werden.
+Gibt einen gültigen Pipenamen an. Ein gültiger Pipename ist eine Zeichenfolge mit Bezeichnern, die durch umgekehrte Schrägstriche getrennt sind. Der erste Bezeichner muss [**pipe**](pipe.md)sein. Jeder Bezeichner muss durch zwei umgekehrte Schrägstriche getrennt werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Server erstellt eine Instanz einer Named Pipe, die dann jedem Client zur Verfügung steht. Wenn ein Client versucht, eine Verbindung herzustellen, wird die vorhandene Instanz diesem Client zugeordnet. Bevor ein anderer Client eine Verbindung herstellen kann, muss vom Server eine weitere Instanz des Named Pipe erstellt werden. Wenn ein Client versucht, eine Bindung mit dem Server herzustellen, bevor die neue Instanz erstellt wird, schlägt der Bindungs Aufruf [**RpcBindingFromStringBinding**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcbindingfromstringbinding)möglicherweise fehl, und die Fehlermeldung RPC \_ S \_ Server ist \_ \_ ausgelastet. Daher müssen Sie sicherstellen, dass die Client Anwendung den Fall behandelt, in dem der Server zu stark ausgelastet ist, um eine Verbindung zu akzeptieren. Der Client sollte automatisch einen Wiederholungsversuch durchführen, den Benutzer zur Eingabe einer Aktion auffordern oder ordnungsgemäß fehlschlagen.
+Ein Server erstellt eine Instanz einer Named Pipe, die dann für jeden Client verfügbar ist. Wenn ein Client versucht, eine Verbindung herzustellen, wird die vorhandene Instanz diesem Client zugeordnet. Bevor ein anderer Client eine Verbindung herstellen kann, muss der Server eine weitere Instanz der Named Pipe erstellen. Wenn ein Client versucht, eine Bindung an den Server herzustellen, bevor die neue Instanz erstellt wird, schlägt der Bindungsaufruf [**RpcBindingFromStringBinding**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcbindingfromstringbinding)möglicherweise mit der Fehlermeldung RPC \_ S SERVER TOO BUSY \_ \_ \_ fehl. Daher müssen Sie sicherstellen, dass Ihre Clientanwendung den Fall behandelt, in dem der Server zu ausgelastet ist, um eine Verbindung zu akzeptieren. Der Client sollte den Vorgang automatisch wiederholen, den Benutzer zur Aktion auffordern oder ordnungsgemäß fehlschlagen.
 
-Die Syntax der Named Pipe-Port Zeichenfolge, wie alle Port Zeichenfolgen, wird von der Transport Implementierung definiert und ist unabhängig von der IDL-Spezifikation. Der mittlerer l-Compiler führt eine eingeschränkte Syntax Überprüfung durch, gewährleistet jedoch nicht, dass die Endpunkt Spezifikation korrekt ist. Einige Klassen von Fehlern können zur Laufzeit und nicht zur Kompilierzeit gemeldet werden.
+Die Syntax der Named Pipe-Portzeichenfolge wird wie alle Portzeichenfolgen von der Transportimplementierungen definiert und ist unabhängig von der IDL-Spezifikation. Der MIDL-Compiler führt eine eingeschränkte Syntaxüberprüfung durch, garantiert jedoch nicht, dass die Endpunktspezifikation korrekt ist. Einige Fehlerklassen werden möglicherweise zur Laufzeit und nicht zur Kompilierzeit gemeldet.
 
 ## <a name="examples"></a>Beispiele
 
@@ -79,48 +79,48 @@ interface iface2
 
 <dl> <dt>
 
-[**Dreher**](endpoint.md)
+[**Endpunkt**](endpoint.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**ncacn \_ bei \_ DSP**](ncacn-at-dsp.md)
+[**ncacn \_ bei \_ dsp**](ncacn-at-dsp.md)
 </dt> <dt>
 
-[**ncacn \_ dnet \_ NSP**](ncacn-dnet-nsp.md)
+[**ncacn \_ dnet \_ nsp**](ncacn-dnet-nsp.md)
 </dt> <dt>
 
-[**ncacn \_ IP \_ TCP**](ncacn-ip-tcp.md)
+[**ncacn \_ ip \_ tcp**](ncacn-ip-tcp.md)
 </dt> <dt>
 
-[**ncacn \_ NB \_ IPX**](ncacn-nb-ipx.md)
+[**ncacn \_ nb \_ ipx**](ncacn-nb-ipx.md)
 </dt> <dt>
 
-[**ncacn- \_ SPX**](ncacn-spx.md)
+[**ncacn \_ spx**](ncacn-spx.md)
 </dt> <dt>
 
-[**ncacn \_ NB \_ NB**](ncacn-nb-nb.md)
+[**ncacn \_ nb \_ nb**](ncacn-nb-nb.md)
 </dt> <dt>
 
-[**ncacn \_ NB \_ TCP**](ncacn-nb-tcp.md)
+[**ncacn \_ nb \_ tcp**](ncacn-nb-tcp.md)
 </dt> <dt>
 
-[**ncacn \_ VNS- \_ spp**](ncacn-vns-spp.md)
+[**ncacn \_ vns \_ spp**](ncacn-vns-spp.md)
 </dt> <dt>
 
-[**Ncalrpc**](ncalrpc.md)
+[**ncalrpc**](ncalrpc.md)
 </dt> <dt>
 
-[**ncadg \_ IPX**](ncadg-ipx.md)
+[**ncadg \_ ipx**](ncadg-ipx.md)
 </dt> <dt>
 
-[**ncadg \_ -IP- \_ UDP**](ncadg-ip-udp.md)
+[**ncadg \_ ip \_ udp**](ncadg-ip-udp.md)
 </dt> <dt>
 
-[**Zeichen folgen Bindung**](/windows/desktop/Rpc/string-binding)
+[**Zeichenfolgenbindung**](/windows/desktop/Rpc/string-binding)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

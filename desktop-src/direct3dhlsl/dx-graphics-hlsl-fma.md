@@ -1,9 +1,9 @@
 ---
-title: FMA (corecrt \_ Math. h)
-description: Gibt die multiplizierte Multiplikation mit doppelter Genauigkeit von a \ b + c zurück.
+title: fma (Corecrt \_ math.h)
+description: Gibt das fused-Additionszeichen mit doppelter Genauigkeit von a \ b + c zurück.
 ms.assetid: C4EF2552-7388-4CA8-B78F-6B2D4C8FC5F6
 keywords:
-- FMA HLSL
+- fma HLSL
 topic_type:
 - apiref
 api_name:
@@ -14,20 +14,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 287f07881a00ca53a3f1fe702cf4d95b64bf14c7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8d2b9a6932a1b0f0f8f1f7bc674920162def49e556c8d5b757547d4837caa60b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391887"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119120204"
 ---
 # <a name="fma"></a>fma
 
-Gibt die multiplizierte Multiplikation mit doppelter Genauigkeit von a \* b + c zurück.
+Gibt das fused-Additionszeichen b + c mit doppelter Genauigkeit \* zurück.
 
 
 
-| *ret* FMA (Double *a*, *b*, *c*); |
+| *ret* fma(double *a*, *b*, *c*); |
 |----------------------------------|
 
 
@@ -38,36 +38,36 @@ Gibt die multiplizierte Multiplikation mit doppelter Genauigkeit von a \* b + c 
 
 <dl> <dt>
 
-<span id="a"></span><span id="A"></span>*ein*
+<span id="a"></span><span id="A"></span>*Eine*
 </dt> <dd>
 
-\[im \] ersten Wert in der multiplizierten Multiplikations Addition.
+\[in \] Der erste Wert in der fused-Multiplikationshinzufügung.
 
 </dd> <dt>
 
-<span id="b"></span><span id="B"></span>*b*
+<span id="b"></span><span id="B"></span>*B*
 </dt> <dd>
 
-\[im \] zweiten Wert in der Addition multiplizieren multiplizieren.
+\[in \] Der zweite Wert in der fused-Multiplikationshinzufügung.
 
 </dd> <dt>
 
-<span id="c"></span><span id="C"></span>*scher*
+<span id="c"></span><span id="C"></span>*C*
 </dt> <dd>
 
-\[im \] dritten Wert in der Addition multiplizieren multiplizieren.
+\[in \] Der dritte Wert in der fused-Multiplikationshinzufügung.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Multiplikation mit doppelter Genauigkeit multipliziert mit den Parametern *a* \* *b*  +  *c*. Der zurückgegebene Wert muss auf 0,5 Einheiten der geringsten Genauigkeit (ULP) genau sein.
+Die fused-Multiplikation von Parametern *mit* doppelter Genauigkeit a \* *b*  +  *c*. Der zurückgegebene Wert muss auf 0,5 Einheiten der geringsten Genauigkeit (ULP) genau sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das systeminterne **FMA** -System muss Nane, INFs und denorms unterstützen.
+Die **systeminterne fma-Eigenschaft** muss NaNs, INFs und Denorms unterstützen.
 
-Um die systeminterne Funktion " **FMA** " im Shader-Code zu verwenden, müssen Sie die [**ID3D11Device:: checkfeaturesupport**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) -Methode mit [**D3D11 \_ Feature \_ D3D11- \_ Optionen**](/windows/desktop/api/d3d11/ne-d3d11-d3d11_feature) aufrufen, um zu überprüfen, ob das Direct3D-Gerät die [**extendeddoublesshaderinstructions**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_feature_data_d3d11_options) -Funktions Option Die systeminterne **FMA** -Funktion erfordert einen WDDM 1,2-Anzeigetreiber, und alle WDDM 1,2-Anzeigetreiber müssen **FMA** unterstützen. Wenn Ihre APP ein renderinggerät mit [Featureebene](/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro) 11,0 oder 11,1 erstellt und das Kompilierungs Ziel Shader-Modell 5 oder höher ist, kann der HLSL-Quellcode den systeminternen **FMA** -Code verwenden.
+Um die systeminterne **fma-Funktion** in Ihrem Shadercode zu verwenden, rufen Sie die [**ID3D11Device::CheckFeatureSupport-Methode**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport) mit [**D3D11 \_ FEATURE \_ D3D11 \_ OPTIONS**](/windows/desktop/api/d3d11/ne-d3d11-d3d11_feature) auf, um zu überprüfen, ob das Direct3D-Gerät die Featureoption [**ExtendedDoublesShaderInstructions**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_feature_data_d3d11_options) unterstützt. Die **systeminterne fma-Datei** erfordert einen WDDM 1.2-Anzeigetreiber, und alle WDDM 1.2-Anzeigetreiber müssen **fma** unterstützen. Wenn Ihre App ein Renderinggerät mit [der Featureebene](/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro) 11.0 oder 11.1 erstellt und das Kompilierungsziel das Shadermodell 5 oder höher ist, kann der HLSL-Quellcode die systeminterne **fma-Funktion** verwenden.
 
 ### <a name="type-description"></a>Typbeschreibung
 
@@ -75,38 +75,38 @@ Um die systeminterne Funktion " **FMA** " im Shader-Code zu verwenden, müssen S
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                         |
 |-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|------------------------------|
-| *ein*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Maß**](/windows/desktop/WinProg/windows-data-types)                       | any                          |
-| *b*   | identisch mit Eingabe *a*                                                                                              | [**Maß**](/windows/desktop/WinProg/windows-data-types)                       | gleiche Dimensionen wie Eingabe *a* |
-| *c*   | identisch mit Eingabe *a*                                                                                              | [**Maß**](/windows/desktop/WinProg/windows-data-types)                       | gleiche Dimensionen wie Eingabe *a* |
-| *TZI* | identisch mit Eingabe *a*                                                                                              | [**Maß**](/windows/desktop/WinProg/windows-data-types)                       | gleiche Dimensionen wie Eingabe *a* |
+| *Eine*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**Doppel**](/windows/desktop/WinProg/windows-data-types)                       | any                          |
+| *b*   | entspricht der Eingabe *eines*                                                                                              | [**Doppel**](/windows/desktop/WinProg/windows-data-types)                       | die gleichen Dimensionen wie die Eingabe *eines* |
+| *c*   | entspricht der Eingabe *eines*                                                                                              | [**Doppel**](/windows/desktop/WinProg/windows-data-types)                       | die gleichen Dimensionen wie die Eingabe *eines* |
+| *Ret* | entspricht der Eingabe *eines*                                                                                              | [**Doppel**](/windows/desktop/WinProg/windows-data-types)                       | die gleichen Dimensionen wie die Eingabe *eines* |
 
 
 
  
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                | Unterstützt |
 |-------------------------------------------------------------|-----------|
-| [Shadermodell 5 oder höher](d3d11-graphics-reference-sm5.md) | ja       |
+| [Shadermodell 5 oder höher](d3d11-graphics-reference-sm5.md) | Ja       |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Corecrt \_ Math. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Corecrt \_ math.h</dt> </dl> |
 
 
 
@@ -114,7 +114,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

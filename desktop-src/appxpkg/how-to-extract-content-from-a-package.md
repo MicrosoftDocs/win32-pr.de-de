@@ -1,25 +1,25 @@
 ---
-title: Inhalt des App-Pakets extrahieren (C++)
-description: Erfahren Sie, wie Sie mithilfe der Paket-API Dateien aus dem App-Paket für eine Windows-App extrahieren.
+title: Extrahieren von App-Paketinhalten (C++)
+description: Erfahren Sie, wie Sie Dateien aus dem App-Paket für eine Windows-App mithilfe der Paket-API extrahieren.
 ms.assetid: 72C368F9-2EBA-4930-81CF-9B85717CC0AA
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8830ba7bc21553a9f8145bc97a6b98b3e32729af
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 4960a2b30ad7946f1f68e11df5170ae5246f3c36564a7e5e9bc27595be0b7903
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104390129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119049048"
 ---
-# <a name="extract-app-package-contents-c"></a>Inhalt des App-Pakets extrahieren (C++)
+# <a name="extract-app-package-contents-c"></a>Extrahieren von App-Paketinhalten (C++)
 
-Erfahren Sie, wie Sie mithilfe der [Paket-API](interfaces.md)Dateien aus dem App-Paket für eine Windows-App extrahieren.
+Erfahren Sie, wie Sie Dateien aus dem App-Paket für eine Windows-App mithilfe der [Paket-API extrahieren.](interfaces.md)
 
-Sie können das MakeAppx.exe Tool auch verwenden, um Dateien aus einem App-Paket oder Paket zu extrahieren. Weitere Informationen finden Sie [unter Extrahieren von Dateien aus einem Paket oder Paket](/windows/msix/package/create-app-package-with-makeappx-tool#extract-files-from-a-package-or-bundle) .
+Sie können auch das tool MakeAppx.exe verwenden, um Dateien aus einem App-Paket oder -Paket zu extrahieren. Weitere [Informationen finden Sie unter Extrahieren von Dateien](/windows/msix/package/create-app-package-with-makeappx-tool#extract-files-from-a-package-or-bundle) aus einem Paket oder Paket.
 
-### <a name="create-a-package-reader"></a>Erstellen eines Paket Readers
+### <a name="create-a-package-reader"></a>Erstellen eines Paketlesers
 
-Zum Erstellen eines Paket Readers rufen Sie die [**iappxfactory::**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfactory-createpackagereader) -Methode auf. Der erste Parameter ist ein Eingabestream für das Paket (AppX-Datei). Der zweite Parameter ist ein Ausgabeparameter, der einen Zeiger auf einen [**iappxpackagereader**](/windows/desktop/api/AppxPackaging/nn-appxpackaging-iappxpackagereader) -Zeiger empfängt.
+Um einen Paketreader zu erstellen, rufen Sie die [**IAppxFactory::CreatePackageReader-Methode**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfactory-createpackagereader) auf. Der erste Parameter ist ein Eingabestream für das Paket (APPX-Datei). Der zweite Parameter ist ein Ausgabeparameter, der einen Zeiger auf einen [**IAppxPackageReader-Zeiger**](/windows/desktop/api/AppxPackaging/nn-appxpackaging-iappxpackagereader) empfängt.
 
 
 ```C++
@@ -127,9 +127,9 @@ HRESULT GetPackageReader(
 
 
 
-### <a name="extract-footprint-files"></a>Dateien mit Speicherbedarf extrahieren
+### <a name="extract-footprint-files"></a>Extrahieren von Speicherbedarfsdateien
 
-Rufen Sie die [**iappxpackagereader:: getfußprintfile**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxpackagereader-getfootprintfile) -Methode auf, um jede Speicherplatz Datei abzurufen. Jede Speicherbedarf-Datei wird durch eine [**iappxfile**](/windows/desktop/api/AppxPackaging/nn-appxpackaging-iappxfile) -Schnittstelle dargestellt. Die `ExtractFile` -Funktion in diesem Beispiel verwendet die Methoden [**GetName**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfile-getname), [**getContentType**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfile-getcontenttype)und [**GetSize**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfile-getsize) von **iappxfile** , um grundlegende Informationen über die Speicherplatz Datei anzuzeigen.
+Rufen Sie die [**IAppxPackageReader::GetFootprintFile-Methode**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxpackagereader-getfootprintfile) auf, um jede Speicherabdruckdatei zu erhalten. Jede Speicherabdruckdatei wird durch eine [**IAppxFile-Schnittstelle**](/windows/desktop/api/AppxPackaging/nn-appxpackaging-iappxfile) dargestellt. Die Funktion in diesem Beispiel verwendet die `ExtractFile` [**Methoden GetName,**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfile-getname) [**GetContentType**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfile-getcontenttype)und [**GetSize**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfile-getsize) von **IAppxFile,** um grundlegende Informationen zur Speicherbedarfsdatei anzuzeigen.
 
 
 ```C++
@@ -267,7 +267,7 @@ HRESULT ExtractFile(
 
 
 
-Der vorherige Code verwendet diese Variablen Definitionen und `GetOutputStream` Hilfsfunktionen.
+Im vorherigen Code werden diese Variablendefinitionen und `GetOutputStream` Hilfsfunktionen verwendet.
 
 
 ```C++
@@ -354,11 +354,11 @@ HRESULT GetOutputStream(
 
 
 
-### <a name="extract-payload-files"></a>Extrahieren von Nutz Last Dateien
+### <a name="extract-payload-files"></a>Extrahieren von Nutzlastdateien
 
-Rufen Sie die [**iappxpackagereader:: getpayloadfiles**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxpackagereader-getpayloadfiles) -Methode auf, um die Nutz Last Dateien aufzulisten. Jede Nutz Last Datei wird durch eine [**iappxfile**](/windows/desktop/api/AppxPackaging/nn-appxpackaging-iappxfile) -Schnittstelle dargestellt. Die `ExtractFile` -Funktion in diesem Beispiel verwendet die Methoden [**GetName**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfile-getname), [**getContentType**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfile-getcontenttype)und [**GetSize**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfile-getsize) von **iappxfile** , um grundlegende Informationen über die Nutz Last Datei anzuzeigen.
+Rufen Sie [**die IAppxPackageReader::GetPayloadFiles-Methode**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxpackagereader-getpayloadfiles) auf, um die Nutzlastdateien aufzählen. Jede Nutzlastdatei wird durch eine [**IAppxFile-Schnittstelle**](/windows/desktop/api/AppxPackaging/nn-appxpackaging-iappxfile) dargestellt. Die Funktion in diesem Beispiel verwendet die `ExtractFile` [**Methoden GetName,**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfile-getname) [**GetContentType**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfile-getcontenttype)und [**GetSize**](/windows/desktop/api/AppxPackaging/nf-appxpackaging-iappxfile-getsize) von **IAppxFile,** um grundlegende Informationen zur Nutzlastdatei anzuzeigen.
 
-In diesem Code wird die `ExtractFile` im vorherigen Schritt gezeigte Hilfsfunktion verwendet, um den Datenstrom für das Paket Manifest zu erstellen.
+In diesem Code wird die im vorherigen Schritt gezeigte Hilfsfunktion `ExtractFile` verwendet, um den Stream für das Paketmanifest zu erstellen.
 
 
 ```C++
@@ -422,9 +422,9 @@ HRESULT ExtractPayloadFiles(
 
 
 
-### <a name="clean-up-the-package-reader"></a>Bereinigen des Paket Readers
+### <a name="clean-up-the-package-reader"></a>Bereinigt den Paketleser.
 
-Bevor Sie von der-Funktion zurückgegeben `wmain` werden, müssen Sie die [**releasemethode**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) zum Bereinigen des Paket Readers und zum Abrufen der Funktion " [**count**](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) " aufruft.
+Rufen Sie vor der Rückgabe von der Funktion die Release-Methode auf, um den Paketleser zu bereinigt und `wmain` die [**CoUninitialize-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) aufrufen. [](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)
 
 
 ```C++
@@ -447,15 +447,15 @@ CoUninitialize();
 **Beispiele**
 </dt> <dt>
 
-[Beispiel zum Extrahieren von App-Paket Inhalten](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/AppxPackingExtractAppx)
+[Beispiel zum Extrahieren von App-Paketinhalten](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/AppxPackingExtractAppx)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Iappxpackagereader**](/windows/desktop/api/AppxPackaging/nn-appxpackaging-iappxpackagereader)
+[**IAppxPackageReader**](/windows/desktop/api/AppxPackaging/nn-appxpackaging-iappxpackagereader)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

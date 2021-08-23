@@ -1,35 +1,35 @@
 ---
 title: Behandeln von Trägheit in nicht verwaltetem Code
-description: In diesem Abschnitt wird erläutert, wie Sie die IInertiaProcessor-Schnittstelle für die Handhabung von Trägheit in nicht verwaltetem Code verwenden.
+description: In diesem Abschnitt wird erläutert, wie die IInertiaProcessor-Schnittstelle zum Behandeln von Trägheit in nicht verwaltetem Code verwendet wird.
 ms.assetid: 3261b461-add2-4e92-9a51-b2d46630fb4f
 keywords:
-- Windows-Fingereingabe, Trägheit
-- Windows-Fingereingabe, Manipulations Prozessor
+- Windows Touch,Trägheit
+- Windows Touch,Manipulationsprozessor
 - Trägheit, nicht verwalteter Code
 - Trägheit, IInertiaProcessor-Schnittstelle
-- Trägheit, Manipulations Prozessor
-- Manipulations Prozessor, Trägheit
+- Trägheit, Manipulationsprozessor
+- Manipulationsprozessor,Trägheit
 - IInertiaProcessor-Schnittstelle, nicht verwalteter Code
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3de56d06547f426de252a89ef5172df3fe4ca439
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6e112605b1f998b850c3a04a045166b376fc3a12d98615b9c2af72e756a1c1b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119346500"
 ---
 # <a name="handling-inertia-in-unmanaged-code"></a>Behandeln von Trägheit in nicht verwaltetem Code
 
-In diesem Abschnitt wird erläutert, wie Sie die [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) -Schnittstelle für die Handhabung von Trägheit in nicht verwaltetem Code verwenden.
+In diesem Abschnitt wird erläutert, wie die [**IInertiaProcessor-Schnittstelle**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) zum Behandeln von Trägheit in nicht verwaltetem Code verwendet wird.
 
 ## <a name="overview"></a>Übersicht
 
-Um Trägheit in nicht verwaltetem Code zu verwenden, müssen Sie sowohl für den Manipulations Prozessor als auch für den Trägheits Prozessor Ereignis senken implementieren. Beginnen Sie mit dem Hinzufügen von Bearbeitungs Unterstützung zu Ihrer Anwendung, wie im Abschnitt [Hinzufügen von Manipulations Unterstützung zu nicht verwaltetem Code](adding-manipulation-support-in-unmanaged-code.md)beschrieben. Beachten Sie, dass die Bearbeitungs Unterstützung erfordert, dass Sie touchnachrichten anstelle von Gesten Nachrichten verwenden, um Ereignisdaten an den Manipulations Prozessor zu senden. Nachdem Sie die Bearbeitung bearbeitet haben, müssen Sie auch eine zweite Ereignis Senke für die Ereignisse implementieren, die von der [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) -Schnittstelle generiert werden, oder Sie müssen die vorhandene Ereignis Senke ändern, damit die von den **IInertiaProcessor** -und [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) -Schnittstellen generierten Ereignisse berücksichtigt werden. Im Rahmen dieses Beispiels ist es einfacher, von der Ereignis Senke zu starten, die für den Abschnitt Hinzufügen von Manipulations Unterstützung zu nicht verwaltetem Code erstellt wurde, und einen zweiten Konstruktor hinzuzufügen, der mit dem Trägheits Prozessor anstelle des Manipulations Prozessors funktioniert. Auf diese Weise kann die Implementierung der Ereignis Senke entweder für den Bearbeitungs Prozessor oder den Trägheits Prozessor funktionieren. Zusätzlich zum Hinzufügen eines zweiten Konstruktors hat die Ereignis Senke eine Variable, die angibt, ob die Vorgänge auf der Grundlage von Trägheit-Eingaben anstelle von Bearbeitungs Eingaben durchgeführt werden.
+Um Trägheit in nicht verwaltetem Code zu verwenden, müssen Sie Ereignissenken sowohl für den Manipulationsprozessor als auch für den Trägheitsprozessor implementieren. Fügen Sie ihrer Anwendung zunächst Bearbeitungsunterstützung hinzu, wie im Abschnitt Hinzufügen von [Manipulationsunterstützung zu nicht verwaltetem Code beschrieben.](adding-manipulation-support-in-unmanaged-code.md) Beachten Sie, dass die Manipulationsunterstützung erfordert, dass Sie Touchnachrichten anstelle von Gestennachrichten verwenden, um Ereignisdaten an den Bearbeitungsprozessor zu senden. Nachdem die Bearbeitung funktioniert hat, müssen Sie auch eine zweite Ereignissenke für die Ereignisse implementieren, die von der [**IInertiaProcessor-Schnittstelle**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) generiert werden, oder Sie müssen Ihre vorhandene Ereignissenke so ändern, dass sie sowohl die von der **IInertiaProcessor-** als auch der [**IManipulationProcessor-Schnittstelle**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) generierten Ereignisse aufnehmen kann. Für dieses Beispiel ist es einfacher, mit der Ereignissenke zu beginnen, die für den Abschnitt Adding Manipulation Support to Unmanaged Code (Hinzufügen von Manipulationsunterstützung zu nicht verwaltetem Code) erstellt wurde, und einen zweiten Konstruktor hinzuzufügen, der mit dem Trägheitsprozessor anstelle des Bearbeitungsprozessors funktioniert. Auf diese Weise kann die Implementierung der Ereignissenke entweder für den Manipulationsprozessor oder den Trägheitsprozessor funktionieren. Zusätzlich zum Hinzufügen eines zweiten Konstruktors verfügt die Ereignissenke über eine Variable, die angibt, ob die Vorgänge basierend auf Trägheitseingaben und nicht auf Bearbeitungseingaben ausgeführt werden.
 
-### <a name="add-inertia-support-to-a-manipulation-processor-event-sink"></a>Hinzufügen der trägheitunterstützung zu einer Bearbeitungs Prozessor-Ereignis
+### <a name="add-inertia-support-to-a-manipulation-processor-event-sink"></a>Hinzufügen von Trägheitsunterstützung zu einer Manipulation Processor-Ereignissenke
 
-Der folgende Code zeigt den neuen ereignisenkenkonstruktor, neue Member-Variablen für eine [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) -Schnittstelle und ein Flag, das angibt, ob die Senke für Trägheit extrapoliert.
+Der folgende Code zeigt den neuen Ereignissenkenkonstruktor, neue Membervariablen für eine [**IInertiaProcessor-Schnittstelle**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) und ein Flag, das angibt, ob die Senke für Trägheit extrapoliert wird.
 
 
 ```C++
@@ -47,7 +47,7 @@ Der folgende Code zeigt den neuen ereignisenkenkonstruktor, neue Member-Variable
 
 
 
-Nachdem der Klassen Header über die neuen Konstruktoren und ein Flag verfügt, das angibt, ob Sie die Extrapolierung durchführen, können Sie die Ereignis Senke implementieren, um separate Verarbeitungsblöcke für die [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) -Ereignisse und [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) -Ereignisse zu verwenden. Der Konstruktor, der einen **IManipulationProcessor** und einen **IInertiaProcessor** akzeptiert, sollte das **fextrapolierungsflag** auf false festlegen, was darauf hinweist, dass es sich hierbei um einen **IManipulationProcessor** -Ereignishandler handelt. Der folgende Code zeigt, wie der Konstruktor für eine Ereignis Senke, die den **IManipulationProcessor** verwendet, implementiert werden kann.
+Nachdem der Klassenheader über die neuen Konstruktoren und ein Flag verfügt, das angibt, ob Sie extrapolieren, können Sie die Ereignissenke implementieren, um separate Behandlungsblöcke für die [**IManipulationProcessor-Ereignisse**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) und [**IInertiaProcessor-Ereignisse**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) zu erhalten. Der Konstruktor, der einen **IManipulationProcessor** und einen **IInertiaProcessor** akzeptiert, sollte das **fExtrapolating-Flag** auf false festlegen, was angibt, dass es sich um einen **IManipulationProcessor-Ereignishandler** handelt. Der folgende Code zeigt, wie der Konstruktor für eine Ereignissenke, die **den IManipulationProcessor** verwendet, implementiert werden kann.
 
 
 ```C++
@@ -100,7 +100,7 @@ CManipulationEventSink::CManipulationEventSink(IManipulationProcessor *pManip, I
 
 
 
-Der folgende Code zeigt, wie der Konstruktor für eine Ereignis Senke, die den [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) verwendet, implementiert werden kann. Dieser Konstruktor legt das **fextraktions** Flag auf true fest und gibt an, dass diese Instanz der Ereignis Senkenklasse eine extra Polierung ausführt und alle Verschiebungs Vorgänge ausführt, die zuvor von den Manipulations Prozessor Ereignissen durchgeführt wurden.
+Der folgende Code zeigt, wie der Konstruktor für eine Ereignissenke, die [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) verwendet, implementiert werden kann. Dieser Konstruktor legt das **fExtrapolating-Flag** auf TRUE fest, was angibt, dass diese Instanz der Ereignissenkeklasse Eine Extrapolierung und alle Zuvor von den Manipulationsprozessorereignissen ausgeführten Bewegungsvorgänge ausführen wird.
 
 
 ```C++
@@ -147,18 +147,18 @@ CManipulationEventSink::CManipulationEventSink(IInertiaProcessor *pInert, HWND h
 
 
 > [!Note]  
-> Die Implementierung der Implementierung der Ereignis Senke von der Manipulations Prozessor-Ereignis Senke wird als Ereignis Senke für den Trägheits Prozessor wieder verwendet
+> Die Implementierung der Ereignissenkenklasse aus der Manipulationsprozessor-Ereignissenke wird als Ereignissenke für den Trägheitsprozessor wiederverwendet.
 
- 
+ 
 
-Wenn Sie diese Klasse ( **CManipulationEventSink**) erstellen, kann Sie nun entweder als Ereignis Senke für einen Bearbeitungs Prozessor oder als Ereignis Senke für einen Trägheits Prozessor erstellt werden. Wenn Sie als Trägheits-Prozessor-Ereignis Senke erstellt wird, wird das **fextrahierende** Flag auf true festgelegt, um anzugeben, dass Manipulations Ereignisse extrapoliert werden sollen.
+Wenn Sie nun diese Klasse **(CManipulationEventSink)** erstellen, kann sie entweder als Ereignissenke für einen Manipulationsprozessor oder als Ereignissenke für einen Trägheitsprozessor erstellt werden. Wenn es als Trägheitsprozessor-Ereignissenke erstellt wird, ist das **fExtrapolating-Flag** auf TRUE festgelegt, was angibt, dass Manipulationsereignisse extrapoliert werden sollen.
 
 > [!Note]  
 > [**ManipulationStarted**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationstarted) wird von den Schnittstellen [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) und [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) ausgelöst.
 
- 
+ 
 
-Wenn die Manipulation gestartet wird, werden die Eigenschaften der [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) -Schnittstelle festgelegt. Der folgende Code zeigt, wie das gestartete Ereignis behandelt wird.
+Wenn die Bearbeitung beginnt, werden die [**IInertiaProcessor-Schnittstelleneigenschaften**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) festgelegt. Der folgende Code zeigt, wie das gestartete Ereignis behandelt wird.
 
 
 ```C++
@@ -204,7 +204,7 @@ HRESULT STDMETHODCALLTYPE CManipulationEventSink::ManipulationStarted(
 
 
 
-In diesem Beispiel werden Manipulations Delta Vorgänge verwendet, um das Fenster zu verschieben. Der folgende Code zeigt, wie das Delta Ereignis behandelt wird.
+In diesem Beispiel werden Manipulationsdelta verwendet, um das Fenster zu verschieben. Der folgende Code zeigt, wie das Deltaereignis behandelt wird.
 
 
 ```C++
@@ -245,7 +245,7 @@ HRESULT STDMETHODCALLTYPE CManipulationEventSink::ManipulationDelta(
 
 
 
-In diesem Beispiel wird durch die Bearbeitung von abgeschlossenen Ereignissen entweder ein Timer gestartet oder angehalten, der [**Process**](/windows/desktop/api/manipulations/nf-manipulations-iinertiaprocessor-process) für die [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) -Schnittstelle aufruft. Der folgende Code zeigt, wie das abgeschlossene Manipulations Ereignis behandelt wird.
+In diesem Beispiel starten oder beenden Manipulationsereignisse entweder einen Timer, der [**Process auf**](/windows/desktop/api/manipulations/nf-manipulations-iinertiaprocessor-process) der [**IInertiaProcessor-Schnittstelle aufruft.**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) Der folgende Code zeigt, wie das abgeschlossene Manipulationsereignis behandelt wird.
 
 
 ```C++
@@ -301,7 +301,7 @@ HRESULT STDMETHODCALLTYPE CManipulationEventSink::ManipulationCompleted(
 
 
 
-Der folgende Code zeigt, wie Sie die **WM \_** -Zeit Geber Meldungen in **WndProc** interpretieren können, um Aufrufe für die [**Verarbeitung**](/windows/desktop/api/manipulations/nf-manipulations-iinertiaprocessor-process) auf der [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) -Schnittstelle auszuführen.
+Der folgende Code zeigt, wie Sie **WM \_ TIMER-Nachrichten** in **WndProc** interpretieren können, um Aufrufe von [**Process auf**](/windows/desktop/api/manipulations/nf-manipulations-iinertiaprocessor-process) der [**IInertiaProcessor-Schnittstelle**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) durchzuführen.
 
 
 ```C++
@@ -315,9 +315,9 @@ case WM_TIMER:
 
 
 
-### <a name="coinitialize-the-inertia-processor-and-manipulation-processor-and-initialize-the-event-sinks"></a>Coinitialisieren des Trägheits Prozessor-und Bearbeitungs Prozessors und Initialisieren der Ereignis senken
+### <a name="coinitialize-the-inertia-processor-and-manipulation-processor-and-initialize-the-event-sinks"></a>CoInitialisieren des Trägheitsprozessors und des Manipulationsprozessors und Initialisieren der Ereignissenken
 
-Nachdem Sie die Ereignis Senke so geändert haben, dass Sie sowohl [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) als auch [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor)unterstützt, können Sie die Ereignis senken initialisieren und Sie so einrichten, dass Sie von der Anwendung ausgeführt werden. Der folgende Code zeigt, wie die Schnittstellen Zeiger zugeordnet werden.
+Nachdem Sie ihre Ereignissenke so geändert haben, dass sie sowohl [**den IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) als auch den [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor)unterstützt, können Sie die Ereignissenken initialisieren und für die Ausführung über Ihre Anwendung einrichten. Der folgende Code zeigt, wie die Schnittstellenzeker zugeordnet werden.
 
 
 ```C++
@@ -334,7 +334,7 @@ IInertiaProcessor*      g_pIInertProc;
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie die Schnittstellen instanziieren.
+Das folgende Codebeispiel zeigt, wie Sie Ihre Schnittstellen instanziieren.
 
 
 ```C++
@@ -357,7 +357,7 @@ Im folgenden Codebeispiel wird gezeigt, wie Sie die Schnittstellen instanziieren
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie die Ereignis senken anhand der Schnittstellen Zeiger erstellen und das Fenster für die Berührungs Eingabe registrieren.
+Das folgende Codebeispiel zeigt, wie Sie Ihre Ereignissenken mit den Schnittstellenzeern erstellen und das Fenster für Toucheingaben registrieren.
 
 
 ```C++
@@ -377,9 +377,9 @@ Im folgenden Codebeispiel wird gezeigt, wie Sie die Ereignis senken anhand der S
 [Trägheit](getting-started-with-inertia.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

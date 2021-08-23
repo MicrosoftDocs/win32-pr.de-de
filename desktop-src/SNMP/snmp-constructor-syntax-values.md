@@ -1,6 +1,6 @@
 ---
-title: SNMP-Konstruktorsyntax Werte (SNMP. h)
-description: In den SNMP-Konstruktorsyntax Werten werden Typen beschrieben, die mit dem Codierungsstandard der abstrakten Syntax Notation One (ASN. 1) kompatibel sind.
+title: SNMP-Konstruktorsyntaxwerte (Snmp.h)
+description: Die SNMP-Konstruktorsyntaxwerte beschreiben Typen, die mit dem ASN.1-Codierungsstandard (Abstract Syntax Notation One) kompatibel sind.
 ms.assetid: 8e3b6e00-51cf-4e39-a68e-dcf8fbe8ab3b
 topic_type:
 - apiref
@@ -13,25 +13,25 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a484e58d7a92a3c75408db3160362d84e7891b76
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2409fc45c74cfecc5167da53f3ca81e501ea5aa1d279ddfe591b6c589990e187
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103422"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119008978"
 ---
-# <a name="snmp-constructor-syntax-values"></a>Werte der SNMP-Konstruktorsyntax
+# <a name="snmp-constructor-syntax-values"></a>SNMP-Konstruktorsyntaxwerte
 
-\[SNMP ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Windows-Remoteverwaltung](/windows/desktop/WinRM/portal), bei dem es sich um die Microsoft-Implementierung von WS-man handelt.\]
+\[SNMP ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Windows Remoteverwaltung](/windows/desktop/WinRM/portal), bei dem es sich um die Microsoft-Implementierung von WS-Man handelt.\]
 
-In den SNMP-Konstruktorsyntax Werten werden Typen beschrieben, die mit dem Codierungsstandard der abstrakten Syntax Notation One (ASN. 1) kompatibel sind.
+Die SNMP-Konstruktorsyntaxwerte beschreiben Typen, die mit dem ASN.1-Codierungsstandard (Abstract Syntax Notation One) kompatibel sind.
 
 
 
-| Konstante                                                                                                                                                         | BESCHREIBUNG                                               |
+| Konstante                                                                                                                                                         | Beschreibung                                               |
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------|
-| <span id="ASN_SEQUENCE"></span><span id="asn_sequence"></span><dl> <dt>**ASN- \_ Sequenz**</dt> </dl>       | Gibt an, dass die Nachricht eine ASN-Sequenz ist.<br/> |
-| <span id="ASN_SEQUENCEOF"></span><span id="asn_sequenceof"></span><dl> <dt>**ASN- \_ sequenceof**</dt> </dl> | Siehe ASN \_ Sequence.<br/>                             |
+| <span id="ASN_SEQUENCE"></span><span id="asn_sequence"></span><dl> <dt>**ASN \_ SEQUENCE**</dt> </dl>       | Gibt an, dass die Nachricht eine ASN-Sequenz ist.<br/> |
+| <span id="ASN_SEQUENCEOF"></span><span id="asn_sequenceof"></span><dl> <dt>**ASN \_ SEQUENCEOF**</dt> </dl> | Weitere Informationen finden Sie unter ASN \_ SEQUENCE.<br/>                             |
 
 
 
@@ -43,11 +43,11 @@ In den SNMP-Konstruktorsyntax Werten werden Typen beschrieben, die mit dem Codie
 |-------------------------------------|-----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>SNMP. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Snmp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

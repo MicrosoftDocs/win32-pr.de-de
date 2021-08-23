@@ -1,19 +1,19 @@
 ---
-description: Zwingt den erweiterten Videorenderer (EVR), seine Ausgabe auf die GPU-Bandbreite zu begrenzen.
+description: Erzwingt, dass der Enhanced Video Renderer (EVR) seine Ausgabe an die GPU-Bandbreite angrenzt.
 ms.assetid: e81e67d6-aa72-44c1-90e9-72ab18bca1c9
-title: EVRConfig_ForceThrottle-Attribut (UUIDs. h)
+title: EVRConfig_ForceThrottle -Attribut (Uuids.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f39cef0bd032eeaf84129e74274b59dbafadbc47
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ad09d0c3133039975a04a026ec84233987dfd4033b120a4b8fc6272e2fd72b9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119346140"
 ---
-# <a name="evrconfig_forcethrottle-attribute"></a>Evrconfig \_ forcethrottle-Attribut
+# <a name="evrconfig_forcethrottle-attribute"></a>EVRConfig \_ ForceThrottle-Attribut
 
-Zwingt den erweiterten Videorenderer (EVR), seine Ausgabe auf die GPU-Bandbreite zu begrenzen.
+Erzwingt, dass der Enhanced Video Renderer (EVR) seine Ausgabe an die GPU-Bandbreite angrenzt.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,17 +21,17 @@ Zwingt den erweiterten Videorenderer (EVR), seine Ausgabe auf die GPU-Bandbreite
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut kann in der EVR-Medien Senke festgelegt werden. Um das-Attribut festzulegen, verwenden Sie **IUnknown:: QueryInterface** , um die EVR-Medien Senke für die [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle abzufragen.
+Dieses Attribut kann für die EVR-Mediensenke festgelegt werden. Verwenden Sie zum Festlegen des Attributs **IUnknown::QueryInterface,** um die EVR-Mediensenke für die [**SCHNITTSTELLE ATTRIBUTEAttributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) abfragt.
 
-Das Festlegen dieses Attributs hat dieselbe Auswirkung wie das Festlegen des Flags " **MF videorenderprefs \_ forceoutputthrottelt** " für den EVR. Eine Beschreibung dieses Flags finden Sie unter [**MF videorenderprefs**](/windows/desktop/api/evr/ne-evr-mfvideorenderprefs) .
+Das Festlegen dieses Attributs hat die gleiche Auswirkung wie das Festlegen des **Flags "MFVideoRenderPrefs \_ ForceOutputThrottling"** auf der EVR. Eine Beschreibung dieses Flags finden Sie unter [**MFVideoRenderPrefs.**](/windows/desktop/api/evr/ne-evr-mfvideorenderprefs)
 
-Die GUID-Konstante für dieses Attribut wird aus "straumiids. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus strmiids.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,23 +39,23 @@ Die GUID-Konstante für dieses Attribut wird aus "straumiids. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>UUIDs. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Uuids.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [EVR-Attribute](enhanced-video-renderer-attributes.md)
 </dt> <dt>
 
-[Video Qualitäts Verwaltung](video-quality-management.md)
+[VideoQualitätsverwaltung](video-quality-management.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Ivmhostinfo processorfeaturesstring-Eigenschaft (vpccominterfaces. h)
-description: Ruft die Listen Features ab, die vom Host Prozessor unterstützt werden.
+title: IVMHostInfo ProcessorFeaturesString-Eigenschaft (VPCCOMInterfaces.h)
+description: Ruft die vom Hostprozessor unterstützten Listenfeatures ab.
 ms.assetid: 036c6376-0e9b-46fa-90f4-a40c71c5cf23
 keywords:
-- Processorfeaturesstring-Eigenschaft virtueller PC
-- Processorfeaturesstring-Eigenschaft Virtual PC, ivmhostinfo-Schnittstelle
-- Ivmhostinfo Interface Virtual PC, processorfeaturesstring (Eigenschaft)
+- ProcessorFeaturesString-Eigenschaft Virtueller PC
+- ProcessorFeaturesString-Eigenschaft Virtueller PC, IVMHostInfo-Schnittstelle
+- IVMHostInfo-Schnittstelle Virtueller PC , ProcessorFeaturesString-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 118aaa2eabe7ddb2fd608892775a17eac6a77d16
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1040702df250c906bb32af5068a340c37a9ba3faabee3af17d8397bfdc8059e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998890"
 ---
-# <a name="ivmhostinfoprocessorfeaturesstring-property"></a>Ivmhostinfo::P rocess orfeaturesstring-Eigenschaft
+# <a name="ivmhostinfoprocessorfeaturesstring-property"></a>IVMHostInfo::P rocessorFeaturesString-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft die Listen Features ab, die vom Host Prozessor unterstützt werden.
+Ruft die vom Hostprozessor unterstützten Listenfeatures ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,21 +45,21 @@ HRESULT get_ProcessorFeaturesString(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine durch Trennzeichen getrennte Liste von Features. Ein Beispiel wäre "MMX, SSE, SSE2, x86-64".
+Eine durch Trennzeichen getrennte Liste von Features. Ein Beispiel wäre "MMX,SSE,SSE2,x86-64".
 
 
 
 | Wert                                                                                 | Bedeutung                                                             |
 |---------------------------------------------------------------------------------------|---------------------------------------------------------------------|
 | <dl> <dt>"AMD-V"</dt> </dl>    | Unterstützt die AMD-Virtualisierungserweiterungen.<br/>              |
-| <dl> <dt>"Intel VT"</dt> </dl> | Unterstützt die Intel Virtualization Technology Extensions.<br/> |
-| <dl> <dt>"Havd"</dt> </dl>     | Die Hardware gestützte Virtualisierung ist deaktiviert.<br/>            |
-| <dl> <dt>Hätten</dt> </dl>     | Die Hardware gestützte Virtualisierung ist aktiviert.<br/>             |
-| <dl> <dt>MMX</dt> </dl>      | Unterstützt die MMX-Erweiterungen.<br/>                             |
-| <dl> <dt>Preußen</dt> </dl>      | Unterstützt die Streaming SIMD Extensions.<br/>                  |
-| <dl> <dt>SSE2</dt> </dl>     | Unterstützt die Streaming SIMD Extensions 2.<br/>                |
-| <dl> <dt>SSE3</dt> </dl>     | Unterstützt die Streaming SIMD Extensions 3.<br/>                |
-| <dl> <dt>"Txte"</dt> </dl>     | Unterstützt die Erweiterungen der vertrauenswürdigen Ausführungs Technologie.<br/>    |
+| <dl> <dt>"Intel VT"</dt> </dl> | Unterstützt die Intel Virtualization Technology-Erweiterungen.<br/> |
+| <dl> <dt>"HAVD"</dt> </dl>     | Die hardwareunterstützte Virtualisierung ist deaktiviert.<br/>            |
+| <dl> <dt>"HAVE"</dt> </dl>     | Die hardwareunterstützte Virtualisierung ist aktiviert.<br/>             |
+| <dl> <dt>"MMX"</dt> </dl>      | Unterstützt die MMX-Erweiterungen.<br/>                             |
+| <dl> <dt>"SSE"</dt> </dl>      | Unterstützt die Streaming SIMD Extensions.<br/>                  |
+| <dl> <dt>"SSE2"</dt> </dl>     | Unterstützt die Streaming SIMD Extensions 2.<br/>                |
+| <dl> <dt>"SSE3"</dt> </dl>     | Unterstützt die Streaming SIMD Extensions 3.<br/>                |
+| <dl> <dt>"TXTE"</dt> </dl>     | Unterstützt die Erweiterungen der vertrauenswürdigen Ausführungstechnologie.<br/>    |
 | <dl> <dt>"x86-64"</dt> </dl>   | Unterstützt x86-64-Erweiterungen.<br/>                              |
 
 
@@ -73,8 +73,8 @@ Eine durch Trennzeichen getrennte Liste von Features. Ein Beispiel wäre "MMX, S
 | Name/Wert                                                                                                                                                    | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>        |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der Parameter ist **NULL.**<br/>        |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -84,12 +84,12 @@ Eine durch Trennzeichen getrennte Liste von Features. Ein Beispiel wäre "MMX, S
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmhostinfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMHostInfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
 
 
 
@@ -97,7 +97,7 @@ Eine durch Trennzeichen getrennte Liste von Features. Ein Beispiel wäre "MMX, S
 
 <dl> <dt>
 
-[**Ivmhostinfo**](ivmhostinfo.md)
+[**IVMHostInfo**](ivmhostinfo.md)
 </dt> </dl>
 
  

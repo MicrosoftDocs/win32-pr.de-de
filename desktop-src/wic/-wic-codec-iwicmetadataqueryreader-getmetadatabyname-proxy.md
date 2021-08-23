@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die GetMetadataByName-Methode.
+description: Proxyfunktion für die GetMetadataByName-Methode.
 ms.assetid: 5685e282-637e-4db0-8654-fee12ae25112
 title: IWICMetadataQueryReader_GetMetadataByName_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 96afa63f83e79f399b1c345d38ff2914307c2fa8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c84d8d6e93c3f5edf223811844937fd1d223a1a3df991e9d62dd24c2fa445ce9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119088232"
 ---
-# <a name="iwicmetadataqueryreader_getmetadatabyname_proxy-function"></a>IWICMetadataQueryReader \_ GetMetadataByName \_ Proxy-Funktion
+# <a name="iwicmetadataqueryreader_getmetadatabyname_proxy-function"></a>Proxyfunktion \_ "GetMetadataByName" von IWICMetadataQueryReader \_
 
-Proxy Funktion für die [**GetMetadataByName**](/windows/desktop/api/Wincodec/nf-wincodec-iwicmetadataqueryreader-getmetadatabyname) -Methode.
+Proxyfunktion für die [**GetMetadataByName-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicmetadataqueryreader-getmetadatabyname)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT IWICMetadataQueryReader_GetMetadataByName_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**IWICMetadataQueryReader**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader) \** _
+Typ: **[ **IWICMetadataQueryReader**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader)\***
 
-Zeiger auf dieses [_ *IWICMetadataQueryReader* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader) -Objekt.
+Zeiger auf dieses [**IWICMetadataQueryReader-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader)
 
 </dd> <dt>
 
-*wzName* \[ in\]
+*wzName* \[ In\]
 </dt> <dd>
 
 Typ: **LPCWSTR**
@@ -60,20 +60,20 @@ Der Name des angeforderten Metadatenelements.
 
 </dd> <dt>
 
-*pvarvalue* \[ in, out\]
+*pvarValue* \[ in, out\]
 </dt> <dd>
 
-Typ: **[PROPVARIANT](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) \** _
+Typ: **[PROPVARIANT](/windows/win32/api/propidlbase/ns-propidlbase-propvariant)\***
 
-Ein Zeiger, der die Metadateneigenschaft empfängt.
+Zeiger, der die Metadateneigenschaft empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -83,9 +83,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

@@ -1,49 +1,49 @@
 ---
-description: Digitale Signal Prozessoren
+description: Digitale Signalprozessoren
 ms.assetid: cd3952ca-3958-4944-8fde-f0163a47bff9
-title: Digitale Signal Prozessoren
+title: Digitale Signalprozessoren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0961554d9c9902e68f74c6b2b57662b23846614f
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 88f5c9aa0ee3c4cc2a8c7f725b3a8444f4852c8c5b52ee3713b533ec435f4a3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106373415"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119100942"
 ---
-# <a name="digital-signal-processors"></a>Digitale Signal Prozessoren
+# <a name="digital-signal-processors"></a>Digitale Signalprozessoren
 
-In diesem Abschnitt werden die von Windows bereitgestellten DSP-Objekte (Digital Signal Processor) beschrieben.
+In diesem Abschnitt werden die DSP-Objekte (Digital Signal Processor) beschrieben, die von Windows.
 
-Microsoft verwendet den Begriff *Digital Signal Processor* zum Festlegen eines Satzes von COM-Objekten, die Transformationen für nicht komprimierte Audiodaten und Videodaten ausführen. Die in diesem SDK beschriebenen DSPs transformieren Audiodaten und Videos in einer Vielzahl von unkomprimierten Formaten.
+Microsoft verwendet den Begriff Digitale *Signalprozessor,* um eine Reihe von COM-Objekten zu bestimmen, die Transformationen für unkomprimierte Audio- und Videodaten durchführen. Die in diesem SDK beschriebenen DSPs transformieren Audio- und Videodaten in eine Vielzahl von unkomprimierten Formaten.
 
-Die DSPs können eigenständig oder in Kombination mit Audio-und Video Codecs verwendet werden. Mit Ausnahme von "Voice Capture DSP" implementiert jeder hier aufgeführte DSP zwei separate, aber ähnliche Schnittstellen.
+Die DSPs können selbst oder in Kombination mit Audio- und Videocodecs verwendet werden. Mit Ausnahme des Voice Capture-DSP implementiert jeder hier aufgeführte DSP zwei separate, aber ähnliche Schnittstellen.
 
 
 
-| Schnittstelle                              | BESCHREIBUNG                                 |
+| Schnittstelle                              | Beschreibung                                 |
 |----------------------------------------|---------------------------------------------|
-| [**IMF-Transformation**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)   | Kompatibel mit Microsoft Media Foundation. |
-| [**Imediaobject**](/previous-versions/windows/desktop/api/mediaobj/nn-mediaobj-imediaobject) | Kompatibel mit DirectShow.                 |
+| [**VORRÜBERSETZUNGTransform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)   | Kompatibel mit Microsoft Media Foundation. |
+| [**IMediaObject**](/previous-versions/windows/desktop/api/mediaobj/nn-mediaobj-imediaobject) | Kompatibel mit DirectShow.                 |
 
 
 
  
 
-Sie können die DSPs konfigurieren, indem Sie die [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Schnittstelle verwenden, um Eigenschaften festzulegen. Einige der DSPs verfügen über zusätzliche Schnittstellen, die Eigenschaften festlegen. Um diese Schnittstellen zu verwenden, nennen Sie die [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Methode einer beliebigen anderen Schnittstelle des DSP. Das Referenz Thema für die einzelnen DSP listet die unterstützten Eigenschaften, Schnittstellen und andere Funktionen auf.
+Sie können die DSPs konfigurieren, indem Sie die [**IPropertyStore-Schnittstelle**](/windows/win32/api/propsys/nn-propsys-ipropertystore) zum Festlegen von Eigenschaften verwenden. Einige der DSPs verfügen über zusätzliche Schnittstellen, die Eigenschaften festlegen. Um diese Schnittstellen zu verwenden, rufen Sie die [**QueryInterface-Methode**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) einer beliebigen anderen Schnittstelle des DSP auf. Das Referenzthema für jeden DSP listet die unterstützten Eigenschaften, Schnittstellen und andere Features auf.
 
 In diesem Abschnitt werden die folgenden Themen behandelt:
 
 
 
-| DSP                                                      | BESCHREIBUNG                                          |
+| Dsp                                                      | Beschreibung                                          |
 |----------------------------------------------------------|------------------------------------------------------|
-| [Audioresampler-DSP](audioresampler.md)                | Konvertiert die Samplingrate eines Audiodatenstroms.       |
-| [Farb Steuerungs Transformation (DSP)](colorcontroltransform.md) | Passt die Farbmerkmale eines Videostreams an. |
-| [Farb Konverter-DSP](colorconverter.md)                | Konvertiert einen Videostream zwischen Farbformaten.       |
-| [Frame Rate Konverter DSP](framerateconverter.md)       | Ändert die Framerate eines Videodaten Stroms.            |
-| [Video Resizer DSP](videoresizer.md)                    | Ändert die Größe eines Videodaten Stroms.                              |
-| [Sprach Erfassungs-DSP](voicecapturedmo.md)                 | Kapselt mehrere DSPs, die mit der sprach Erfassung verknüpft sind.  |
+| [Audio Resampler DSP](audioresampler.md)                | Konvertiert die Samplingrate eines Audiostreams.       |
+| [Farbsteuerungstransformations-DSP](colorcontroltransform.md) | Passt die Farbmerkmale eines Videostreams an. |
+| [Farbkonverter-DSP](colorconverter.md)                | Konvertiert einen Videostream zwischen Farbformaten.       |
+| [Bildfrequenzkonverter-DSP](framerateconverter.md)       | Ändert die Bildfrequenz eines Videostreams.            |
+| [Video Resizer DSP](videoresizer.md)                    | Ändern der Größe eines Videostreams.                              |
+| [Voice Capture-DSP](voicecapturedmo.md)                 | Kapselt mehrere DSPs im Zusammenhang mit der Spracherfassung.  |
 
 
 

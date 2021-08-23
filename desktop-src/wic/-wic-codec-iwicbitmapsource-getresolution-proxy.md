@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die GetResolution-Methode.
+description: Proxyfunktion für die GetResolution-Methode.
 ms.assetid: 5e261c2b-534a-4875-a84f-7251d54f15c6
 title: IWICBitmapSource_GetResolution_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 0bcd63c01bf99e426cdbf5044223a40308fb5e9e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f226e1fddc1d780e24796d342736082c2f7f11e7d03369245f2222eee1074713
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216394"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119088352"
 ---
-# <a name="iwicbitmapsource_getresolution_proxy-function"></a>IWICBitmapSource \_ GetResolution- \_ Proxy Funktion
+# <a name="iwicbitmapsource_getresolution_proxy-function"></a>IWICBitmapSource \_ \_ GetResolution-Proxyfunktion
 
-Proxy Funktion für die [**GetResolution**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsource-getresolution) -Methode.
+Proxyfunktion für die [**GetResolution-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsource-getresolution)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,38 +42,38 @@ HRESULT IWICBitmapSource_GetResolution_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) \** _
+Typ: **[ **IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)\***
 
-Zeiger auf dieses [_ *IWICBitmapSource* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) -Objekt.
+Zeiger auf dieses [**IWICBitmapSource-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)
 
 </dd> <dt>
 
-*pdpix* \[ vorgenommen\]
+*pDpiX* \[ out\]
 </dt> <dd>
 
-Typ: **Double \** _
+Typ: **\* double**
 
-Ein Zeiger, der die x-Achse-dpi-Auflösung empfängt.
+Ein Zeiger, der die DPI-Auflösung der X-Achse empfängt.
 
 </dd> <dt>
 
-_pDpiY * \[ out\]
+*pDpiY* \[ out\]
 </dt> <dd>
 
-Typ: **Double \** _
+Typ: **\* double**
 
-Ein Zeiger, der die dpi-Auflösung der y-Achse empfängt.
+Ein Zeiger, der die DPI-Auflösung der Y-Achse empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -83,9 +83,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

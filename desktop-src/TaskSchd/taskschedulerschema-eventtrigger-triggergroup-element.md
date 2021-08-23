@@ -1,9 +1,9 @@
 ---
-title: Event Trigger-Element (triggergroup)
-description: Gibt einen-Fehler an, der einen Task startet, wenn ein System Ereignis auftritt.
+title: EventTrigger (triggerGroup)-Element
+description: Gibt einen Trigger an, der eine Aufgabe startet, wenn ein Systemereignis auftritt.
 ms.assetid: 8faffc04-1ad2-499d-bcdf-bc28f64b8aa8
 keywords:
-- Taskplaner des Ereignis Auslösers, Element
+- Ereignistrigger Taskplaner , -Element
 - EventTrigger-Element Taskplaner
 topic_type:
 - apiref
@@ -14,16 +14,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3cecf46250fface0f716adbf287cda3269b86f04
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 555c8683933b2242d119fc00f29c6d0a33188f6404ca48a00e8a127dd59aa791
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478180"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119424470"
 ---
-# <a name="eventtrigger-triggergroup-element"></a>Event Trigger-Element (triggergroup)
+# <a name="eventtrigger-triggergroup-element"></a>EventTrigger (triggerGroup)-Element
 
-Gibt einen-Fehler an, der einen Task startet, wenn ein System Ereignis auftritt.
+Gibt einen Trigger an, der eine Aufgabe startet, wenn ein Systemereignis auftritt.
 
 ``` syntax
 <xs:element name="EventTrigger"
@@ -31,15 +31,15 @@ Gibt einen-Fehler an, der einen Task startet, wenn ein System Ereignis auftritt.
  />
 ```
 
-Das **EventTrigger** -Element wird von [**triggergroup**](taskschedulerschema-triggergroup-group.md) definiert.
+Das **EventTrigger-Element** wird von [**triggerGroup**](taskschedulerschema-triggergroup-group.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                            |
+| Element                                                           | Abgeleitet von                                                         | Beschreibung                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------------------------|
-| [**Trigger**](taskschedulerschema-triggers-tasktype-element.md) | [**triggerstype**](taskschedulerschema-triggerstype-complextype.md) | Gibt die Trigger an, die den Task starten.<br/> |
+| [**Trigger**](taskschedulerschema-triggers-tasktype-element.md) | [**triggersType**](taskschedulerschema-triggerstype-complextype.md) | Gibt die Trigger an, die den Task starten.<br/> |
 
 
 
@@ -47,14 +47,14 @@ Das **EventTrigger** -Element wird von [**triggergroup**](taskschedulerschema-tr
 
 
 
-| Element                                                                                              | type                                                                     | BESCHREIBUNG                                                                                                                        |
+| Element                                                                                              | Typ                                                                     | Beschreibung                                                                                                                        |
 |------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| [**Delay (eventtriggertype)**](taskschedulerschema-delay-eventtriggertype-element.md)               | duration                                                                 | Gibt die Zeitspanne zwischen dem Auftreten des Ereignisses und dem Start der Aufgabe an.<br/>                                |
-| [**Aktiviert (triggerbasetype)**](taskschedulerschema-enabled-triggerbasetype-element.md)             | boolean                                                                  | Gibt an, dass der-Wert aktiviert ist.<br/>                                                                                  |
-| [**Endboundary (triggerbasetype)**](taskschedulerschema-endboundary-triggerbasetype-element.md)     | dateTime                                                                 | Gibt das Datum und die Uhrzeit der Deaktivierung des Auslösers an. Der-Vorgang kann die Aufgabe nicht starten, nachdem Sie deaktiviert wurde.<br/> |
-| [**Wiederholung (triggerbasetype)**](taskschedulerschema-repetition-triggerbasetype-element.md)       | [**Wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md) | Gibt an, wie oft die Aufgabe ausgeführt wird und wie lange das Wiederholungsmuster nach dem Start der Aufgabe wiederholt wird.<br/>          |
-| [**StartBoundary (triggerbasetype)**](taskschedulerschema-startboundary-triggerbasetype-element.md) | dateTime                                                                 | Gibt das Datum und die Uhrzeit der Aktivierung des Auslösers an.<br/>                                                              |
-| [**Abonnement (eventtriggertype)**](taskschedulerschema-subscription-eventtriggertype-element.md) | Zeichenfolge                                                                   | Gibt die XPath-Abfrage an, die das Ereignis identifiziert, das den-Triggern auslöst.<br/>                                             |
+| [**Delay (eventTriggerType)**](taskschedulerschema-delay-eventtriggertype-element.md)               | duration                                                                 | Gibt die Zeitspanne zwischen dem Eintreten des Ereignisses und dem Start des Tasks an.<br/>                                |
+| [**Aktiviert (triggerBaseType)**](taskschedulerschema-enabled-triggerbasetype-element.md)             | boolean                                                                  | Gibt an, dass der Trigger aktiviert ist.<br/>                                                                                  |
+| [**EndBoundary (triggerBaseType)**](taskschedulerschema-endboundary-triggerbasetype-element.md)     | dateTime                                                                 | Gibt das Datum und die Uhrzeit der Deaktivierung des Triggers an. Der Trigger kann die Aufgabe nicht starten, nachdem sie deaktiviert wurde.<br/> |
+| [**Wiederholung (triggerBaseType)**](taskschedulerschema-repetition-triggerbasetype-element.md)       | [**wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md) | Gibt an, wie oft der Task ausgeführt wird und wie lange das Wiederholungsmuster wiederholt wird, nachdem der Task gestartet wurde.<br/>          |
+| [**StartBoundary (triggerBaseType)**](taskschedulerschema-startboundary-triggerbasetype-element.md) | dateTime                                                                 | Gibt das Datum und die Uhrzeit der Aktivierung des Triggers an.<br/>                                                              |
+| [**Abonnement (eventTriggerType)**](taskschedulerschema-subscription-eventtriggertype-element.md) | Zeichenfolge                                                                   | Gibt die XPath-Abfrage an, die das Ereignis identifiziert, das den Trigger auslöst.<br/>                                             |
 
 
 
@@ -62,23 +62,23 @@ Das **EventTrigger** -Element wird von [**triggergroup**](taskschedulerschema-tr
 
 
 
-| Name | type | BESCHREIBUNG                           |
+| Name | Typ | BESCHREIBUNG                           |
 |------|------|---------------------------------------|
-| Id   | id   | Der Bezeichner des Auslösers.<br/> |
+| Id   | ID   | Bezeichner des Triggers.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es können maximal 500 Tasks mit Ereignis Abonnements erstellt werden. Ein Ereignis Abonnement, das Abfragen für eine Vielzahl von Ereignissen verwendet, kann verwendet werden, um eine Aufgabe zu initiieren, die dieselbe Aktion als Reaktion auf die protokollierten Ereignisse verwendet.
+Es können maximal 500 Aufgaben mit Ereignisabonnements erstellt werden. Ein Ereignisabonnement, das eine Vielzahl von Ereignissen abfragt, kann verwendet werden, um eine Aufgabe auszulösen, die die gleiche Aktion als Reaktion auf die protokollierten Ereignisse verwendet.
 
-Bei der Skript Entwicklung wird ein Ereignis Trigger durch das [**EventTrigger**](eventtrigger.md) -Objekt definiert.
+Für die Skriptentwicklung wird ein Ereignistrigger durch das [**EventTrigger-Objekt**](eventtrigger.md) definiert.
 
-Bei der C++-Entwicklung wird ein Ereignis-von der [**IEvent-auslöserschnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-ieventtrigger) definiert.
+Für die C++-Entwicklung wird ein Ereignistrigger durch die [**IEventTrigger-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-ieventtrigger) definiert.
 
 ## <a name="examples"></a>Beispiele
 
-Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen Ereignis Auslösers verwendet, finden Sie unter [Event-auslöserbeispiel (XML)](/previous-versions//aa446889(v=vs.85)).
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die einen Ereignistrigger verwendet, finden Sie unter [Ereignistriggerbeispiel (XML).](/previous-versions//aa446889(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,12 +86,12 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen Ereignis
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

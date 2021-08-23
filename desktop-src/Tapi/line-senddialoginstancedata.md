@@ -1,19 +1,19 @@
 ---
-description: Die TSPI-Zeile \_ senddialoginstancedata bewirkt, dass TAPI die Funktion "tuispi \_ providergenericdialogdata" in der Benutzeroberflächen-DLL aufruft, die mit "htdlginst" verknüpft ist, und übergibt dabei den Parameter Block, auf den lpparser zeigt, mit der Länge "dwSize".
+description: Die TSPI LINE \_ SENDDIALOGINSTANCEDATA-Nachricht bewirkt, dass TAPI in der \_ UI-DLL, die htDlgInst zugeordnet ist, die FUNKTION MODISPI-AnbieterGenericDialogData aufruft und dabei den Parameterblock übergibt, auf den lpParams mit der Länge dwSize zeigt.
 ms.assetid: d3c176ba-8b4b-4b7c-a603-130dfa761898
-title: LINE_SENDDIALOGINSTANCEDATA Meldung (TSPI. h)
+title: LINE_SENDDIALOGINSTANCEDATA Meldung (Tspi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f0af7ae5bfc942d4408ac5ce2438cd9a88c1f1f9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8b955d890c385894467fa0f8f3f93ec50856c746c72f0957ecbe33af203917bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140133"
 ---
-# <a name="line_senddialoginstancedata-message"></a>Zeile \_ senddialoginstancedata
+# <a name="line_senddialoginstancedata-message"></a>LINE \_ SENDDIALOGINSTANCEDATA-Nachricht
 
-Die TSPI **-Zeile \_ senddialoginstancedata** bewirkt, dass TAPI die Funktion " [**tuispi \_ providergenericdialogdata**](/windows/win32/api/tspi/nf-tspi-tuispi_providergenericdialogdata) " in der Benutzeroberflächen-DLL aufruft, die mit " *htdlginst*" verknüpft ist, und übergibt dabei den Parameter Block, auf den *lpparser* zeigt, mit der Länge " *dwSize*".
+Die TSPI **LINE \_ SENDDIALOGINSTANCEDATA-Nachricht** bewirkt, dass TAPI in der UI-DLL, die *htDlgInst* zugeordnet ist, die [**FUNKTION MODISPI-AnbieterGenericDialogData \_**](/windows/win32/api/tspi/nf-tspi-tuispi_providergenericdialogdata) aufruft. Dabei wird der Parameterblock übergeben, auf den *lpParams* zeigt, der Länge *dwSize*.
 
 
 ```C++
@@ -26,24 +26,24 @@ Die TSPI **-Zeile \_ senddialoginstancedata** bewirkt, dass TAPI die Funktion " 
 
 <dl> <dt>
 
-*"htdlginst"* 
+*htDlgInst* 
 </dt> <dd>
 
-Die htapidialoginstance, die an den Dienstanbieter zurückgegeben wurde, als die Dialogfeld Instanz mithilfe der Zeile ' ' erstellt wurde. [**\_**](line-createdialoginstance.md)
+Die HTAPIDIALOGINSTANCE, die an den Dienstanbieter zurückgegeben wurde, als die Dialogfeldinstanz mit [**LINE \_ CREATEDIALOGINSTANCE**](line-createdialoginstance.md)erstellt wurde.
 
 </dd> <dt>
 
-*lpparser* 
+*lpParams* 
 </dt> <dd>
 
-Ein Zeiger auf einen anbieterspezifischen Parameter Block, der der Benutzeroberflächen-DLL-Funktion " [**tuispi \_ providergenericdialogdata**](/windows/win32/api/tspi/nf-tspi-tuispi_providergenericdialogdata) " übermittelt wird, deren Größe von *dwSize* angegeben wird. Wenn dieser Parameter auf **null** festgelegt ist, ist dies eine Anforderung zum sofortigen Schließen des Dialog Felds und zum Bereinigen (die Benutzeroberflächen-DLL sollte während dieser Bereinigung nicht " [**tuispidllcallback**](/windows/win32/api/tspi/nc-tspi-tuispidllcallback) " aufrufen).
+Zeiger auf einen anbieterspezifischen Parameterblock, der an die [**UI-DLL-DLL-FUNKTION DLLsPI \_ providerGenericDialogData**](/windows/win32/api/tspi/nf-tspi-tuispi_providergenericdialogdata) übermittelt wird, deren Größe von *dwSize* angegeben wird. Wenn dieser Parameter auf **NULL** festgelegt ist, ist dies eine Anforderung zum sofortigen Schließen des Dialogfelds und zum Bereinigen (die UI-DLL sollte während dieser Bereinigung [**NICHT DEN AUFRUF VON QUOTSPIDLLCALLBACK**](/windows/win32/api/tspi/nc-tspi-tuispidllcallback) ausführen).
 
 </dd> <dt>
 
 *dwSize* 
 </dt> <dd>
 
-Die Größe des Parameter Blocks in Bytes, der an die Benutzeroberflächen-DLL übermittelt werden soll.
+Die Größe des Parameterblocks in Bytes, der an die UI-DLL übermittelt werden soll.
 
 </dd> </dl>
 
@@ -53,22 +53,22 @@ Die Größe des Parameter Blocks in Bytes, der an die Benutzeroberflächen-DLL �
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TSPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tspi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Tuispidllcallback**](/windows/win32/api/tspi/nc-tspi-tuispidllcallback)
+[**WIESSPIDLLCALLBACK**](/windows/win32/api/tspi/nc-tspi-tuispidllcallback)
 </dt> <dt>
 
-[**Tuispi \_ providergenericdialogdata**](/windows/win32/api/tspi/nf-tspi-tuispi_providergenericdialogdata)
+[**\_PROVIDERSSPI-AnbieterGenericDialogData**](/windows/win32/api/tspi/nf-tspi-tuispi_providergenericdialogdata)
 </dt> <dt>
 
-[**Zeile " \_ kreatedialoginstance"**](line-createdialoginstance.md)
+[**LINE \_ CREATEDIALOGINSTANCE**](line-createdialoginstance.md)
 </dt> </dl>
 
  

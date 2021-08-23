@@ -1,19 +1,19 @@
 ---
-title: C/C++-Code Beispiel zum Abrufen einer Aufgabenseite
-description: In diesem Beispiel wird die Aufgabenseite einer bekannten Aufgabe abgerufen und angezeigt. Beachten Sie, dass in diesem Beispiel alle Schnittstellen freigegeben werden, wenn Sie nicht mehr benötigt werden.
+title: C/C++-Codebeispiel zum Abrufen einer Aufgabenseite
+description: In diesem Beispiel wird die Seite Aufgabe einer bekannten Aufgabe abgerufen und angezeigt. Beachten Sie, dass in diesem Beispiel alle Schnittstellen freigegeben werden, wenn sie nicht mehr benötigt werden.
 ms.assetid: f234f5b3-d668-44c3-8d03-c333cfe3acde
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a1db7bd6b472df53ff47629dbc1fcb9ecf13fb73
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 894ea88289203ea35e85005b4aa30f22bad7a2cd07150ac5a5ee83f1c9f8a22c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119139673"
 ---
-# <a name="cc-code-example-retrieving-a-task-page"></a>C/C++-Code Beispiel: Abrufen einer Aufgabenseite
+# <a name="cc-code-example-retrieving-a-task-page"></a>C/C++-Codebeispiel: Abrufen einer Aufgabenseite
 
-In diesem Beispiel wird die Aufgabenseite einer bekannten Aufgabe abgerufen und angezeigt. Beachten Sie, dass in diesem Beispiel alle Schnittstellen freigegeben werden, wenn Sie nicht mehr benötigt werden.
+In diesem Beispiel wird die Seite Aufgabe einer bekannten Aufgabe abgerufen und angezeigt. Beachten Sie, dass in diesem Beispiel alle Schnittstellen freigegeben werden, wenn sie nicht mehr benötigt werden.
 
 
 ```C++
@@ -143,12 +143,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[beispiele für Taskplaner 1.0](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

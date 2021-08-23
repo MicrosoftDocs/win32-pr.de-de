@@ -29,12 +29,12 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 4b43c57d69f0f9eb92293aa8fa1ff1aa1ebe96c8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3766d6c2fdc46b36350e9259e0e988f3a276cee6376d02de349abbe83bf8031b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119427730"
 ---
 # <a name="cim_usbdevice-class-hyper-v-management"></a>CIM_USBDevice-Klasse (Hyper-V-Verwaltung)
 
@@ -67,18 +67,18 @@ class CIM_USBDevice : CIM_LogicalDevice
 
 ## <a name="members"></a>Member
 
-Die **CIM \_** -Klasse "-Klasse" verfügt über diese Typen von Membern:
+Die **CIM \_ USBDevice-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM \_** -Klasse "-Klasse" verfügt über diese Methoden.
+Die **CIM \_ USBDevice-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                               | BESCHREIBUNG                                   |
+| Methode                                               | Beschreibung                                   |
 |:-----------------------------------------------------|:----------------------------------------------|
 | [**GetDescriptor**](cim-usbdevice-getdescriptor.md) | Ruft einen USB-Gerätedeskriptor ab.<br/> |
 
@@ -88,257 +88,257 @@ Die **CIM \_** -Klasse "-Klasse" verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_** -Klasse "-Klasse" verfügt über diese Eigenschaften.
+Die **CIM \_ USBDevice-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Classcode**
+**ClassCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification. USB-IF \| Standard Device Descriptor \| bdeviceclass")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification.USB-IF \| Standard Device Descriptor \| bDeviceClass")
 </dt> </dl>
 
-Der USB-Klassen Code.
+Der USB-Klassencode.
 
 </dd> <dt>
 
 **CommandTimeout**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Timeout Intervall, das von Verwaltungs Anwendungen konfiguriert werden kann, die die USB-Umleitung unterstützen. Wenn der Umleitungs Dienst einen USB-Geräte Befehl an ein Remote Gerät umleitet und das Remote Gerät nicht vor einem Timeout Intervall antwortet, emuliert der Umleitungs Dienst ein Medien-auswerfen-Ereignis. Außerdem kann der Dienst den Befehl wiederholen oder versuchen, die Verbindung mit dem Remote Gerät wiederherzustellen.
+Ein Timeoutintervall, das von Verwaltungsanwendungen konfiguriert werden kann, die die USB-Umleitung unterstützen. Wenn der Umleitungsdienst einen USB-Gerätebefehl an ein Remotegerät umleitet und das Remotegerät nicht vor dem Timeoutintervall antwortet, emuliert der Umleitungsdienst ein Medienauswerfenereignis. Darüber hinaus kann der Dienst den Befehl erneut versuchen oder versuchen, die Verbindung mit dem Remotegerät herzustellen.
 
 </dd> <dt>
 
-**Currentalternative esettings**
+**CurrentAlternateSettings**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM-Start **\_ Gerät**".**Currentconfigvalue**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ USBDevice**.**CurrentConfigValue**")
 </dt> </dl>
 
 Ein Array, das die alternativen Einstellungen für jede Schnittstelle in der aktuellen Konfiguration des Geräts enthält.
 
 </dd> <dt>
 
-**Currentconfigvalue**
+**CurrentConfigValue**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM-Start **\_ Gerät**".**Currentalternativ esettings**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ USBDevice**.**CurrentAlternateSettings**")
 </dt> </dl>
 
-Die Konfiguration, die zurzeit für das Gerät ausgewählt ist. Wenn dieser Wert 0 (null) ist, ist das Gerät nicht konfiguriert.
+Die konfiguration, die derzeit für das Gerät ausgewählt ist. Wenn dieser Wert 0 (null) ist, ist das Gerät nicht konfiguriert.
 
 </dd> <dt>
 
-**Devicereleasenumber**
+**DeviceReleaseNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("universelle serielle Busspezifikation. USB-IF \| Standard-Gerätedeskriptor \| bcddevice")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification.USB-IF \| Standard Device Descriptor \| bcdDevice")
 </dt> </dl>
 
-Die Geräte Freigabe Nummer im BCD-Format.
+Die Gerätefreigabenummer im BCD-Format.
 
 </dd> <dt>
 
 **Manufacturer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification. USB-IF \| Standard Device Descriptor \| imanufacturer")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification.USB-IF \| Standard Device Descriptor \| iManufacturer")
 </dt> </dl>
 
-Die Hersteller Zeichenfolge des Geräts.
+Die Herstellerzeichenfolge des Geräts.
 
 </dd> <dt>
 
 **MaxPacketSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification. USB-IF \| Standard Device Descriptor \| bmaxpacketsize")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification.USB-IF \| Standard Device Descriptor \| bMaxPacketSize")
 </dt> </dl>
 
-Die maximale Paketgröße für den USB-Endpunkt NULL.
+Die maximale Paketgröße für den USB-Endpunkt 0 (null).
 
 </dd> <dt>
 
-**Anzahlungskonfigurationen**
+**NumberOfConfigs**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("universelle serielle Busspezifikation. USB-IF \| Standard-Gerätedeskriptor \| bnumkonfigurationen")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification.USB-IF \| Standard Device Descriptor \| bNumConfigurations")
 </dt> </dl>
 
-Die Anzahl der Geräte Konfigurationen, die für das Gerät definiert sind.
+Die Anzahl der Gerätekonfigurationen, die für das Gerät definiert sind.
 
 </dd> <dt>
 
 **Produkt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification. USB-IF \| Standard Device Descriptor \| iproduct")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification.USB-IF \| Standard Device Descriptor \| iProduct")
 </dt> </dl>
 
-Die Produkt Zeichenfolge des Geräts.
+Die Produktzeichenfolge des Geräts.
 
 </dd> <dt>
 
 **ProductID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("universelle serielle Busspezifikation. USB-IF \| Standard-Gerätedeskriptor \| idProduct")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification.USB-IF \| Standard Device Descriptor \| idProduct")
 </dt> </dl>
 
-Die Produkt-ID, die dem Gerät vom Hersteller zugewiesen wird.
+Die Produkt-ID, die dem Gerät nach Hersteller zugewiesen ist.
 
 </dd> <dt>
 
-**Protocolcode**
+**ProtocolCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification. USB-IF \| Standard Device Descriptor \| bdeviceprotocol")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification.USB-IF \| Standard Device Descriptor \| bDeviceProtocol")
 </dt> </dl>
 
 Der USB-Protokollcode.
 
 </dd> <dt>
 
-**SerialNumber**
+**Serialnumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification. USB-IF \| Standard Device Descriptor \| iserialnumber")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification.USB-IF \| Standard Device Descriptor \| iSerialNumber")
 </dt> </dl>
 
 Die Seriennummer des Geräts.
 
 </dd> <dt>
 
-**Subclasscode**
+**UnterklasseCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("universelle serielle Busspezifikation. USB-Wenn \| Standard Gerätedeskriptor \| bdevicesubclass")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification.USB-IF \| Standard Device Descriptor \| bDeviceSubClass")
 </dt> </dl>
 
-Der USB-Unterklassen Code.
+Der USB-Unterklassencode.
 
 </dd> <dt>
 
-**Start Version**
+**USBVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die neueste USB-Version, die vom USB-Gerät unterstützt wird. Die-Eigenschaft wird als Binär codiertes Dezimaltrennzeichen (BCD) ausgedrückt, das einen Dezimaltrennzeichen zwischen den 2. und dritten Ziffern enthält. Der Wert 0x201 gibt z. b. an, dass Version 2,01 unterstützt wird.
+Die neueste USB-Version, die vom USB-Gerät unterstützt wird. Die -Eigenschaft wird als binär codierte Dezimalzahl (Binary-Coded Decimal, BCD) ausgedrückt, die ein Dezimaltrennzeichen zwischen der 2. und 3. Ziffer enthält. Beispielsweise gibt der Wert 0x201 an, dass Version 2.01 unterstützt wird.
 
 </dd> <dt>
 
-**Start-CD**
+**USBVersionInBCD**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification. USB-IF \| Standard Device Descriptor \| bcdUSB")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification.USB-IF \| Standard Device Descriptor \| bcdUSB")
 </dt> </dl>
 
-Die Nummer der USB-Spezifikation, der das Gerät entspricht. Diese Eigenschaft ist mit dem BCD-Format formatiert.
+Die USB-Spezifikationsnummer, der das Gerät entspricht. Diese Eigenschaft wird im BCD-Format formatiert.
 
 </dd> <dt>
 
-**VendorID**
+**Vendorid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification. USB-IF \| Standard Gerätedeskriptor \| idVendor")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Universal Serial Bus Specification.USB-IF \| Standard Device Descriptor \| idVendor")
 </dt> </dl>
 
-Die Anbieter-ID, die dem Gerät durch USB.org zugewiesen ist.
+Die Anbieter-ID, die dem Gerät durch die USB.org.
 
 </dd> </dl>
 
@@ -351,12 +351,12 @@ Die Anbieter-ID, die dem Gerät durch USB.org zugewiesen ist.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

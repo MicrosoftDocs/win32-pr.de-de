@@ -1,22 +1,22 @@
 ---
-title: Datentyp Schnittstellen
-description: In diesem Thema werden die ADSI-Schnittstellen aufgelistet, die mit unterschiedlichen Datentypen funktionieren.
+title: Datentypschnittstellen
+description: In diesem Thema werden die ADSI-Schnittstellen aufgelistet, die mit verschiedenen Datentypen funktionieren.
 ms.assetid: b9cfd99e-f2df-4db0-ae94-889f7aacd92d
 ms.tgt_platform: multiple
 keywords:
-- Datentyp Schnittstellen ADSI
+- Datentypschnittstellen ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1329637121c60325424fe4ddf2d204053983d8c8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 643b71204775224e1e7090f455a2bfb1d9fb590b9e544c0bd7dfa7caa2049470
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082704"
 ---
-# <a name="data-type-interfaces"></a>Datentyp Schnittstellen
+# <a name="data-type-interfaces"></a>Datentypschnittstellen
 
-In diesem Abschnitt werden die folgenden Datentyp Schnittstellen beschrieben:
+In diesem Abschnitt werden die folgenden Datentypschnittstellen beschrieben:
 
 -   [**IADsAcl**](/windows/desktop/api/Iads/nn-iads-iadsacl)
 -   [**IADsBackLink**](/windows/desktop/api/Iads/nn-iads-iadsbacklink)
@@ -35,9 +35,9 @@ In diesem Abschnitt werden die folgenden Datentyp Schnittstellen beschrieben:
 -   [**IADsTimestamp**](/windows/desktop/api/Iads/nn-iads-iadstimestamp)
 -   [**IADsTypedName**](/windows/desktop/api/Iads/nn-iads-iadstypedname)
 
- 
+ 
 
- 
+ 
 
 
 

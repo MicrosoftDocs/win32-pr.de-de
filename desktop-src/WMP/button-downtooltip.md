@@ -1,9 +1,9 @@
 ---
-title: Button. downtooltip
-description: Das downtooltip-Attribut gibt den QuickInfo-Text an oder ruft ihn ab, der angezeigt wird, wenn sich der Mauszeiger über der Schaltfläche befindet und sich die Schaltfläche im Zustand "
+title: BUTTON.downToolTip
+description: Das downToolTip-Attribut gibt den QuickInfo-Text an oder ruft diesen ab, der angezeigt wird, wenn sich der Mauszeiger über button befindet und sich button im Zustand "Down" befindet.
 ms.assetid: 53a13aaf-34c8-4730-98b7-c9c3a4b64721
 keywords:
-- Button. downtooltip-Fenster Media Player
+- BUTTON.downToolTip-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 22f487c470f612a30919d2dae006f2ccbe64f26c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c32ad6138f0442fdcb4c76b0f50bb75158410cd2980cc32d4b6774a2cec18320
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119417270"
 ---
-# <a name="buttondowntooltip"></a>Button. downtooltip
+# <a name="buttondowntooltip"></a>BUTTON.downToolTip
 
-Das **downtooltip** -Attribut gibt den QuickInfo-Text an oder ruft ihn ab, der angezeigt wird, wenn sich der Mauszeiger über der **Schaltfläche** befindet und sich die **Schaltfläche** im Zustand "
+Das **downToolTip-Attribut** gibt den QuickInfo-Text an oder ruft  diesen ab, der angezeigt wird, wenn sich der Mauszeiger über button befindet und sich **button** im Zustand "Down" befindet.
 
 ``` syntax
         elementID.downToolTip
@@ -29,9 +29,9 @@ Das **downtooltip** -Attribut gibt den QuickInfo-Text an oder ruft ihn ab, der a
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit dem Standardwert "" (leere Zeichenfolge) und einer maximalen Länge von 1024 Zeichen.
+Dieses Attribut ist eine  Zeichenfolge mit Lese-/Schreibzugriff mit dem Standardwert "" (leere Zeichenfolge) und einer maximalen Länge von 1.024 Zeichen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn dieses Attribut auf "" (leere Zeichenfolge) festgelegt ist, wird keine QuickInfo angezeigt.
 
@@ -41,18 +41,18 @@ Wenn dieses Attribut auf "" (leere Zeichenfolge) festgelegt ist, wird keine Quic
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Button-Element**](button-element.md)
+[**BUTTON-Element**](button-element.md)
 </dt> <dt>
 
-[**Schaltfläche. nach unten**](button-down.md)
+[**BUTTON.down**](button-down.md)
 </dt> </dl>
 
  

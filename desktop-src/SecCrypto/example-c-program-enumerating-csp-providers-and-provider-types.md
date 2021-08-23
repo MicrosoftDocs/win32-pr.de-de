@@ -1,28 +1,28 @@
 ---
-description: Listet die auf einem Computer verfügbaren CSPs mithilfe von CryptoAPI auf.
+description: Listet die auf einem Computer verfügbaren CSPs mit CryptoAPI auf.
 ms.assetid: 10a5210d-7992-4832-9435-67ac2b851a97
-title: 'Beispiel-C-Programm: Auflisten von CSP-Anbietern und-Anbieter Typen'
+title: 'C-Beispielprogramm: Aufzählen von CSP-Anbietern und Anbietertypen'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a109aab8bbf3788bd539d078f00f7a28926f98de
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 372ea5f228008856d2a7701a7f11dbff462d239f8e0d39486a2c1634379ddec4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356662"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007648"
 ---
-# <a name="example-c-program-enumerating-csp-providers-and-provider-types"></a>Beispiel-C-Programm: Auflisten von CSP-Anbietern und-Anbieter Typen
+# <a name="example-c-program-enumerating-csp-providers-and-provider-types"></a>C-Beispielprogramm: Aufzählen von CSP-Anbietern und Anbietertypen
 
-Im folgenden Beispiel werden die auf einem Computer verfügbaren CSPs aufgelistet und die folgenden [*CryptoAPI*](../secgloss/c-gly.md) -Funktionen verwendet:
+Im folgenden Beispiel werden die auf einem Computer verfügbaren CSPs aufgeführt und die folgenden [*CryptoAPI-Funktionen*](../secgloss/c-gly.md) verwendet:
 
--   [**Cryptenum providertypes**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptenumprovidertypesa)
--   [**Cryptenum Providers**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptenumprovidersa)
--   [**Cryptgetdefaultprovider**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetdefaultprovidera)
+-   [**CryptEnumProviderTypes**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptenumprovidertypesa)
+-   [**CryptEnumProviders**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptenumprovidersa)
+-   [**CryptGetDefaultProvider**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetdefaultprovidera)
 -   [**CryptGetProvParam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetprovparam)
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist in diesem Beispiel enthalten. Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel wird die [**MyHandleError-Funktion verwendet.**](myhandleerror.md) Der Code für diese Funktion ist in diesem Beispiel enthalten. Der Code für diese und andere Hilfsfunktionen ist auch unter Universell [Functions aufgeführt.](general-purpose-functions.md)
 
-Im folgenden Beispiel werden die Aufzählung von CSPs und Anbieter Typen veranschaulicht.
+Das folgende Beispiel zeigt das Aufzählen von CSPs und Anbietertypen.
 
 
 ```C++

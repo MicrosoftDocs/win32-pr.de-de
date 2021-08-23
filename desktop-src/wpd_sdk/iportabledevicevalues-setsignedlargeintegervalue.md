@@ -1,7 +1,7 @@
 ---
-description: Die setsignedlargeintegervalue-Methode fügt einen neuen Longlong-Wert (Typ VT \_ I8) hinzu oder überschreibt eine vorhandene.
+description: Die SetSignedLargeIntegerValue-Methode fügt einen neuen LONGLONG-Wert (Typ VT \_ I8) hinzu oder überschreibt einen vorhandenen Wert.
 ms.assetid: 604b48ed-3e3f-4a06-91dd-7ece9f146824
-title: 'Iportabledevicevalues:: setsignedlargeingetegervalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::SetSignedLargeIntegerValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: f8c207a88e17c9a1ddf45d77e9da8b62a8396e23
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5ac0ec7e7dce817565ea8b260501879ca8423b090ff357b30f177ff828c8ff9d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358346"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026768"
 ---
-# <a name="iportabledevicevaluessetsignedlargeintegervalue-method"></a>Iportabledevicevalues:: setsignedlargeingetegervalue-Methode
+# <a name="iportabledevicevaluessetsignedlargeintegervalue-method"></a>IPortableDeviceValues::SetSignedLargeIntegerValue-Methode
 
-Die **setsignedlargeintegervalue** -Methode fügt einen neuen **Longlong** -Wert (Typ VT \_ I8) hinzu oder überschreibt eine vorhandene.
+Die **SetSignedLargeIntegerValue-Methode** fügt einen neuen **LONGLONG-Wert** (Typ VT \_ I8) hinzu oder überschreibt einen vorhandenen Wert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT SetSignedLargeIntegerValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** , der das Element angibt, das erstellt oder überschrieben werden soll.
+Ein **REFPROPERTYKEY,** der das zu erstellende oder zu überschreibende Element angibt.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*Wert* \[ In\]
 </dt> <dd>
 
-Ein **Longlong** -Wert, der den neuen Wert angibt.
+Ein **LONGLONG-Wert,** der den neuen Wert angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -69,9 +69,9 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Schlüssel* Parameter angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben.
+Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der vom *Schlüsselparameter* angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,19 +79,19 @@ Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Sc
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportablede vicevalues:: getsignedlargeingetegervalue**](iportabledevicevalues-getsignedlargeintegervalue.md)
+[**IPortableDeviceValues::GetSignedLargeIntegerValue**](iportabledevicevalues-getsignedlargeintegervalue.md)
 </dt> </dl>
 
  

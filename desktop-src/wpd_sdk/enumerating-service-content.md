@@ -4,12 +4,12 @@ ms.assetid: 4af4201c-d3f6-4630-91ec-6509c51871a5
 title: Aufzählen von Dienstinhalten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d2b701bdab867e96bc9658e2624ea18aa65dfc33
-ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
+ms.openlocfilehash: bd9846565b7cdc4b0a4475cb99806b671452dcbe134e40d4b1e3d70df249c510
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110424250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083564"
 ---
 # <a name="enumerating-service-content"></a>Aufzählen von Dienstinhalten
 
@@ -70,7 +70,7 @@ void EnumerateAllContent(
 
 
 
-Der folgende Code entspricht der **RecursiveEnumerate-Methode.** Die RecursiveEnumerate-Methode instanziiert eine **IEnumPortableDeviceObjectIDs-Schnittstelle** für das angegebene übergeordnete Objekt und ruft **IEnumPortableDeviceObjectIDs::Next** auf und ruft einen Batch von unmittelbar untergeordneten Objekten ab. Für jedes untergeordnete Objekt wird RecursiveEnumerate erneut aufgerufen, um seine untergeordneten untergeordneten Objekte zurück zu geben, und so weiter.
+Der folgende Code entspricht der **RecursiveEnumerate-Methode.** Die RecursiveEnumerate-Methode instanziiert eine **IEnumPortableDeviceObjectIDs-Schnittstelle** für das angegebene übergeordnete Objekt und ruft **IEnumPortableDeviceObjectIDs::Next** auf und ruft einen Batch von unmittelbar untergeordneten Objekten ab. Für jedes untergeordnete Objekt wird RecursiveEnumerate erneut aufgerufen, um seine untergeordneten Nachfolgerobjekte zurückzugeben usw.
 
 
 ```C++

@@ -1,9 +1,9 @@
 - name: API-Index
   href: api-index-portal.md
   items:
-    - name: Windows-API-Liste
+    - name: Windows API-Liste
       href: windows-api-list.md
-    - name: Windows-API-Sätze
+    - name: Windows API-Sätze
       items:
         - name: Übersicht
           href: windows-apisets.md
@@ -13,5 +13,5 @@
           href: detect-api-set-availability.md
         - name: Übergeordnete Windows-Bibliothek
           href: windows-umbrella-libraries.md
-    - name: 'WinRT-APIs, die von einer Desktop-App aufgerufen werden können'
+    - name: 'WinRT-APIs, die von einer Desktop-App aus aufgerufen werden können'
       href: uwp-apis-callable-from-a-classic-desktop-app.md

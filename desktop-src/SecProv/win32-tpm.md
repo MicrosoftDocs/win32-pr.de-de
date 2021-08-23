@@ -1,5 +1,5 @@
 ---
-description: Stellt den Trusted Platform Module (TPM) dar, einen Hardware Sicherheits Chip, der eine Vertrauensstellung für ein Computersystem bereitstellt.
+description: Stellt den Trusted Platform Module (TPM) dar, einen Hardwaresicherheitschip, der einen Vertrauensstamm für ein Computersystem bereitstellt.
 ms.assetid: da4ba366-49af-420e-a2ad-80bba34b3b00
 title: Win32_Tpm-Klasse
 ms.topic: reference
@@ -21,16 +21,16 @@ api_type:
 - DllExport
 api_location:
 - Win32_tpm.dll
-ms.openlocfilehash: d8d6eac9fba875484ba2f08e149608c9994a1087
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 53fbe055e469dc4327ae747ab3e20873724923980f1e765d266a5f8143b545c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356972"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119004018"
 ---
-# <a name="win32_tpm-class"></a>Win32- \_ TPM-Klasse
+# <a name="win32_tpm-class"></a>Win32 \_ Tpm-Klasse
 
-Die **Win32- \_ TPM** -Klasse stellt die Trusted Platform Module (TPM) dar, einen Hardware Sicherheits Chip, der eine Vertrauensstellung für ein Computersystem bereitstellt.
+Die **Win32 \_ Tpm-Klasse** stellt den Trusted Platform Module (TPM) dar, einen Hardwaresicherheitschip, der einen Vertrauensstamm für ein Computersystem bereitstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,45 +50,45 @@ class Win32_Tpm
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ TPM** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ Tpm-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32- \_ TPM** -Klasse verfügt über diese Methoden.
+Die **Win32 \_ Tpm-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                   | BESCHREIBUNG                                                                                                                                                                                 |
 |:-----------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Addblockedcommand**](addblockedcommand-win32-tpm.md)                                 | Fügt der lokalen Liste von Befehlen, die unter Windows blockiert sind, einen TPM-Befehl hinzu.<br/>                                                                                                             |
-| [**Changebesitzauth**](changeownerauth-win32-tpm.md)                                     | Ändert den TPM-Besitzer Autorisierungs Wert.<br/>                                                                                                                                       |
-| [**Klartext**](clear-win32-tpm.md)                                                         | Setzt das TPM auf seine Werkseinstellungen zurück.<br/>                                                                                                                                     |
-| [**Converttbesitzauth**](converttoownerauth-win32-tpm.md)                               | Konvertiert eine vom Benutzer bereitgestellte Passphrase in einen 20-Byte-Besitzer Autorisierungs Wert, der für die Interaktion mit dem TPM verwendet werden kann.<br/>                                                            |
-| [**"Kreateendorsegmentkeypair"**](createendorsementkeypair-win32-tpm.md)                   | Erstellt ein 2048-Bit-Endorsement Key-paar auf dem TPM.<br/>                                                                                                                              |
+| [**AddBlockedCommand**](addblockedcommand-win32-tpm.md)                                 | Fügt der lokalen Liste der auf Windows blockierten Befehle einen TPM-Befehl hinzu.<br/>                                                                                                             |
+| [**ChangeOwnerAuth**](changeownerauth-win32-tpm.md)                                     | Ändert den Wert der TPM-Besitzerautorisierung.<br/>                                                                                                                                       |
+| [**Klar**](clear-win32-tpm.md)                                                         | Setzt das TPM auf den standardseitigen Zustand zurück.<br/>                                                                                                                                     |
+| [**ConvertToOwnerAuth**](converttoownerauth-win32-tpm.md)                               | Konvertiert eine vom Benutzer bereitgestellte Passphrase in einen 20-Byte-Besitzerautorisierungswert, der für die Interaktion mit dem TPM verwendet werden kann.<br/>                                                            |
+| [**CreateEndorsementKeyPair**](createendorsementkeypair-win32-tpm.md)                   | Erstellt ein 2048-Bit-Endorsement Key-Paar auf dem TPM.<br/>                                                                                                                              |
 | [**Deaktivieren**](disable-win32-tpm.md)                                                     | Ermöglicht dem TPM-Besitzer, das TPM zu deaktivieren.<br/>                                                                                                                                         |
 | [**Aktivieren**](enable-win32-tpm.md)                                                       | Ermöglicht dem TPM-Besitzer, das TPM zu aktivieren.<br/>                                                                                                                                          |
-| [**Getphysicalpresencerequest**](getphysicalpresencerequest-win32-tpm.md)               | Ruft den ausstehenden TPM-Anwesenheits Vorgang ab und gibt ihn zurück. Verwenden Sie die [**setphysicalpresencerequest**](setphysicalpresencerequest-win32-tpm.md) -Methode, um einen Vorgang anzufordern.<br/> |
-| [**Getphysicalpresenceresponse**](getphysicalpresenceresponse-win32-tpm.md)             | Ruft die Ergebnisse eines ausgeführten TPM-Vorgangs für physische Anwesenheit ab und gibt Sie zurück.<br/>                                                                                          |
-| [**Getphysicalpresencetransition**](getphysicalpresencetransition-win32-tpm.md)         | Gibt die Benutzeraktion an, die erforderlich ist, um einen physischen TPM-Anwesenheits Vorgang auszuführen.<br/>                                                                                           |
-| [**Isaktiviert**](isactivated-win32-tpm.md)                                             | Gibt an, ob das TPM aktiviert ist.<br/>                                                                                                                                          |
-| [**Iscommandblockierte**](iscommandblocked-win32-tpm.md)                                   | Gibt an, ob der TPM-Befehl unter diesem Betriebssystem ausgeführt werden kann.<br/>                                                                                                              |
-| [**Iscommandpresent**](iscommandpresent-win32-tpm.md)                                   | Gibt an, ob ein TPM-Befehl von diesem Computer unterstützt wird.<br/>                                                                                                                   |
+| [**GetPhysicalPresenceRequest**](getphysicalpresencerequest-win32-tpm.md)               | Ruft den ausstehenden physischen TPM-Anwesenheitsvorgang ab und gibt den Vorgang zurück. Verwenden Sie die [**SetPhysicalPresenceRequest-Methode,**](setphysicalpresencerequest-win32-tpm.md) um einen Vorgang anzufordern.<br/> |
+| [**GetPhysicalPresenceResponse**](getphysicalpresenceresponse-win32-tpm.md)             | Ruft die Ergebnisse eines physischen TPM-Anwesenheitsvorgangs ab, der ausgeführt wurde, und gibt sie zurück.<br/>                                                                                          |
+| [**GetPhysicalPresenceTransition**](getphysicalpresencetransition-win32-tpm.md)         | Gibt die Benutzeraktion an, die zum Ausführen eines physischen TPM-Anwesenheitsvorgangs erforderlich ist.<br/>                                                                                           |
+| [**IsActivated**](isactivated-win32-tpm.md)                                             | Gibt an, ob das TPM aktiviert ist.<br/>                                                                                                                                          |
+| [**IsCommandBlocked**](iscommandblocked-win32-tpm.md)                                   | Gibt an, ob der TPM-Befehl unter diesem Betriebssystem ausgeführt werden kann.<br/>                                                                                                              |
+| [**IsCommandPresent**](iscommandpresent-win32-tpm.md)                                   | Gibt an, ob ein TPM-Befehl von diesem Computer unterstützt wird.<br/>                                                                                                                   |
 | [**isEnabled**](isenabled-win32-tpm.md)                                                 | Gibt an, ob das TPM aktiviert ist.<br/>                                                                                                                                            |
-| [**Isendorsementkeypaarpresent**](isendorsementkeypairpresent-win32-tpm.md)             | Gibt an, ob das TPM ein Endorsement Key-Paar hat.<br/>                                                                                                                           |
-| [**Isowned**](isowned-win32-tpm.md)                                                     | Gibt an, ob das TPM über einen Besitzer verfügt.<br/>                                                                                                                                          |
-| [**Isownercleardeaktiviert**](isownercleardisabled-win32-tpm.md)                           | Gibt an, ob der TPM-Besitzer das TPM löschen kann.<br/>                                                                                                                               |
-| [**Isownershipallowed**](isownershipallowed-win32-tpm.md)                               | Gibt an, ob ein TPM-Besitzer installiert werden kann.<br/>                                                                                                                                  |
-| [**Isphysicalcleardeaktiviert**](isphysicalcleardisabled-win32-tpm.md)                     | Gibt an, ob das TPM durch einen physischen TPM-Anwesenheits Vorgang gelöscht werden kann.<br/>                                                                                                           |
-| [**Isphysicalpresencehardwareaktivierte**](isphysicalpresencehardwareenabled-win32-tpm.md) | Gibt an, ob dieser Computer einen dedizierten Hardware Pfad zum signalisieren physischer Präsenz unterstützt.<br/>                                                                                  |
-| [**Issrkauthcompatible**](issrkauthcompatible-win32-tpm.md)                             | Gibt an, ob die SRK-Autorisierung (Storage Root Key) mit Windows kompatibel ist.<br/>                                                                                           |
-| [**Removeblockedcommand**](removeblockedcommand-win32-tpm.md)                           | Entfernt einen TPM-Befehl aus der lokalen Liste der Befehle, die von Windows blockiert werden.<br/>                                                                                                        |
-| [**Resetauthlockout**](resetauthlockout-win32-tpm.md)                                   | Setzt den Timeout Zeitraum oder einen anderen Mechanismus zurück, den TPM-Hersteller implementiert, um Wörterbuchangriffe auf dem TPM zu schützen.<br/>                                                 |
-| [**Resegzrkauth**](resetsrkauth-win32-tpm.md)                                           | Setzt den SRK-Autorisierungs Wert (Storage Root Key) so zurück, dass er mit Windows kompatibel ist.<br/>                                                                                             |
+| [**IsEndorsementKeyPairPresent**](isendorsementkeypairpresent-win32-tpm.md)             | Gibt an, ob das TPM über ein Endorsement Key-Paar verfügt.<br/>                                                                                                                           |
+| [**IsOwned**](isowned-win32-tpm.md)                                                     | Gibt an, ob das TPM über einen Besitzer verfügt.<br/>                                                                                                                                          |
+| [**IsOwnerClearDisabled**](isownercleardisabled-win32-tpm.md)                           | Gibt an, ob der TPM-Besitzer das TPM löschen kann.<br/>                                                                                                                               |
+| [**IsOwnershipAllowed**](isownershipallowed-win32-tpm.md)                               | Gibt an, ob ein TPM-Besitzer installiert werden kann.<br/>                                                                                                                                  |
+| [**IsPhysicalClearDisabled**](isphysicalcleardisabled-win32-tpm.md)                     | Gibt an, ob ein physischer TPM-Anwesenheitsvorgang das TPM löschen kann.<br/>                                                                                                           |
+| [**IsPhysicalPresenceHardwareEnabled**](isphysicalpresencehardwareenabled-win32-tpm.md) | Gibt an, ob dieser Computer einen dedizierten Hardwarepfad unterstützt, um physische Präsenz zu signalisieren.<br/>                                                                                  |
+| [**IsSrkAuthCompatible**](issrkauthcompatible-win32-tpm.md)                             | Gibt an, ob die SRK-Autorisierung (Storage Root Key) mit Windows kompatibel ist.<br/>                                                                                           |
+| [**RemoveBlockedCommand**](removeblockedcommand-win32-tpm.md)                           | Entfernt einen TPM-Befehl aus der lokalen Liste der Befehle, die durch Windows blockiert werden.<br/>                                                                                                        |
+| [**ResetAuthLockOut**](resetauthlockout-win32-tpm.md)                                   | Setzt den Time out-Zeitraum oder einen anderen Mechanismus zurück, den TPM-Hersteller implementieren, um sich vor Wörterbuchangriffen auf das TPM zu schützen.<br/>                                                 |
+| [**ResetSrkAuth**](resetsrkauth-win32-tpm.md)                                           | Setzt den SRK-Autorisierungswert (Storage Root Key) zurück, um mit Windows kompatibel zu sein.<br/>                                                                                             |
 | [**SelfTest**](selftest-win32-tpm.md)                                                   | Führt einen Selbsttest des TPM aus und gibt das Ergebnis zurück.<br/>                                                                                                                          |
-| [**Setphysicalpresencerequest**](setphysicalpresencerequest-win32-tpm.md)               | Fordert die Ausführung eines physischen TPM-Anwesenheits Vorgangs an.<br/>                                                                                                                               |
+| [**SetPhysicalPresenceRequest**](setphysicalpresencerequest-win32-tpm.md)               | Fordert die Ausführung eines physischen TPM-Anwesenheitsvorgangs an.<br/>                                                                                                                               |
 | [**TakeOwnership**](takeownership-win32-tpm.md)                                         | Installiert einen Besitzer für das TPM.<br/>                                                                                                                                                   |
 
 
@@ -97,14 +97,14 @@ Die **Win32- \_ TPM** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ TPM** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ Tpm-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Isaktivierter \_ InitialValue**
+**IsActivated \_ InitialValue**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -112,18 +112,18 @@ Zugriffstyp: Schreibgeschützt
 
 Gibt an, ob das TPM aktiviert ist.
 
-**true** , wenn das Gerät aktiviert ist (d. h., wenn **isaktivierter \_ InitialValue** true ist), andernfalls **false**.
+**TRUE,** wenn das Gerät aktiviert ist (d. h. wenn **IsActivated \_ InitialValue** true ist), andernfalls **FALSE.**
 
-Dieser Wert wird gespeichert, wenn die-Klasse instanziiert wird. Das TPM kann den Status zwischen der Instanziierung und dem Zeitpunkt, zu dem Sie diesen Wert überprüfen, ändern. Verwenden Sie die [**isaktivierte**](isactivated-win32-tpm.md) Methode, um zu überprüfen, ob das TPM in Echtzeit aktiviert ist.
+Dieser Wert wird gespeichert, wenn die Klasse instanziiert wird. Es ist möglich, dass das TPM den Zustand zwischen der Instanziierung und beim Überprüfen dieses Werts ändert. Verwenden Sie die [**IsActivated-Methode,**](isactivated-win32-tpm.md) um zu überprüfen, ob das TPM in Echtzeit aktiviert ist.
 
 **Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht verfügbar.
 
 </dd> <dt>
 
-**Isaktivierter \_ InitialValue**
+**IsEnabled \_ InitialValue**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -131,18 +131,18 @@ Zugriffstyp: Schreibgeschützt
 
 Gibt an, ob das TPM aktiviert ist.
 
-**true** , wenn das Gerät aktiviert ist (d. h., wenn **isaktivierter \_ InitialValue** true ist), andernfalls **false**.
+**TRUE,** wenn das Gerät aktiviert ist (d. h. **wenn IsEnabled \_ InitialValue** true ist), andernfalls **FALSE.**
 
-Dieser Wert wird gespeichert, wenn die-Klasse instanziiert wird. Das TPM kann den Status zwischen der Instanziierung und dem Zeitpunkt, zu dem Sie diesen Wert überprüfen, ändern. Verwenden Sie die [**isaktivierte**](isenabled-win32-tpm.md) Methode, um zu überprüfen, ob das TPM in Echtzeit aktiviert ist.
+Dieser Wert wird gespeichert, wenn die Klasse instanziiert wird. Es ist möglich, dass das TPM den Zustand zwischen der Instanziierung und beim Überprüfen dieses Werts ändert. Verwenden Sie die [**IsEnabled-Methode,**](isenabled-win32-tpm.md) um zu überprüfen, ob das TPM in Echtzeit aktiviert ist.
 
 **Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht verfügbar.
 
 </dd> <dt>
 
-**Isowned \_ InitialValue**
+**IsOwned \_ InitialValue**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -150,18 +150,18 @@ Zugriffstyp: Schreibgeschützt
 
 Gibt an, ob das TPM über einen Besitzer verfügt.
 
-**true** , wenn das Gerät über einen Besitzer verfügt (d. h., wenn der **isowned \_ InitialValue** true ist), andernfalls **false**.
+**TRUE,** wenn das Gerät über einen Besitzer verfügt (d. h. **wenn IsOwned \_ InitialValue** true ist), andernfalls **FALSE.**
 
-Dieser Wert wird gespeichert, wenn die-Klasse instanziiert wird. Das TPM kann den Status zwischen der Instanziierung und dem Zeitpunkt, zu dem Sie diesen Wert überprüfen, ändern. Verwenden Sie die [**isowned**](isowned-win32-tpm.md) -Methode, um zu überprüfen, ob das TPM in Echtzeit gehört.
+Dieser Wert wird gespeichert, wenn die Klasse instanziiert wird. Es ist möglich, dass das TPM den Zustand zwischen der Instanziierung und beim Überprüfen dieses Werts ändert. Verwenden Sie die [**IsOwned-Methode,**](isowned-win32-tpm.md) um zu überprüfen, ob sich das TPM in Echtzeit im Besitz des TPM befindet.
 
 **Windows Server 2008 und Windows Vista:** Diese Eigenschaft ist nicht verfügbar.
 
 </dd> <dt>
 
-**Manufacturerid**
+**ManufacturerId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -169,31 +169,31 @@ Zugriffstyp: Schreibgeschützt
 
 Die identifizierenden Informationen, die den TPM-Hersteller eindeutig benennen.
 
-Wenn die Daten nicht verfügbar sind, wird NULL zurückgegeben.
+Wenn die Daten nicht verfügbar sind, wird 0 zurückgegeben.
 
-Dieser ganzzahlige Wert kann in einen Zeichen folgen Wert übersetzt werden, indem die einzelnen Bytes als ASCII-Zeichen interpretiert werden. Beispielsweise kann ein ganzzahliger Wert von 1414548736 in diese 4 Bytes unterteilt werden: 0x54, 0x50, 0x4D und 0x00. Wenn die Zeichenfolge von links nach rechts interpretiert wird, wird dieser ganzzahlige Wert in den Zeichen folgen Wert "TPM" übersetzt.
+Dieser ganzzahlige Wert kann in einen Zeichenfolgenwert übersetzt werden, indem jedes Byte als ASCII-Zeichen interpretiert wird. Beispielsweise kann ein ganzzahliger Wert von 1414548736 in die folgenden 4 Bytes unterteilt werden: 0x54, 0x50, 0x4D und 0x00. Wenn die Zeichenfolge von links nach rechts interpretiert wird, wird dieser ganzzahlige Wert in den Zeichenfolgenwert "TPM" übersetzt.
 
 </dd> <dt>
 
-**Manufacturerversion**
+**ManufacturerVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die vom Hersteller angegebene TPM-Version.
+Die vom Hersteller angegebene Version des TPM.
 
-Wenn die Daten nicht verfügbar sind, wird "nicht unterstützt" zurückgegeben.
+Wenn die Daten nicht verfügbar sind, wird "Nicht unterstützt" zurückgegeben.
 
 </dd> <dt>
 
-**Manufacturerversioninfo**
+**ManufacturerVersionInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -201,45 +201,45 @@ Zugriffstyp: Schreibgeschützt
 
 Weitere herstellerspezifische Versionsinformationen für das TPM.
 
-Wenn die Daten nicht verfügbar sind, wird "nicht unterstützt" zurückgegeben.
+Wenn die Daten nicht verfügbar sind, wird "Nicht unterstützt" zurückgegeben.
 
 </dd> <dt>
 
-**Physicalpresenceversioninfo**
+**PhysicalPresenceVersionInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Version der physischen Anwesenheits Schnittstelle, ein Kommunikationsmechanismus, der zum Ausführen von Geräte Vorgängen verwendet wird, die vom Computer unterstützt werden.
+Die Version der Schnittstelle für physische Präsenz, ein Kommunikationsmechanismus, der zum Ausführen von Gerätevorgängen verwendet wird, die physische Präsenz erfordern, die der Computer unterstützt.
 
-Diese Schnittstelle muss verfügbar sein, um TPM-Vorgänge zur physischen Anwesenheit auszuführen. Die **Win32 \_ TPM** -Methoden [**setphysicalpresencerequest**](setphysicalpresencerequest-win32-tpm.md), [**getphysicalpresencerequest**](getphysicalpresencerequest-win32-tpm.md), [**getphysicalpresencetransition**](getphysicalpresencetransition-win32-tpm.md)und [**getphysicalpresenceresponse**](getphysicalpresenceresponse-win32-tpm.md) machen die Funktionen der physischen Anwesenheits Schnittstelle verfügbar.
+Diese Schnittstelle muss verfügbar sein, um PHYSISCHE TPM-Anwesenheitsvorgänge auszuführen. Die **Win32 \_ Tpm-Methoden** [**SetPhysicalPresenceRequest,**](setphysicalpresencerequest-win32-tpm.md) [**GetPhysicalPresenceRequest,**](getphysicalpresencerequest-win32-tpm.md) [**GetPhysicalPresenceTransition**](getphysicalpresencetransition-win32-tpm.md)und [**GetPhysicalPresenceResponse**](getphysicalpresenceresponse-win32-tpm.md) machen die Funktionen der Physical Presence Interface verfügbar.
 
-Wenn die Daten nicht verfügbar sind, wird "nicht unterstützt" zurückgegeben.
+Wenn die Daten nicht verfügbar sind, wird "Nicht unterstützt" zurückgegeben.
 
 </dd> <dt>
 
 **SpecVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Version der Trusted Computing Group (TCG)-Spezifikation, die das TPM unterstützt. Dieser Wert umfasst die Spezifikation für die Haupt-und neben Version der TCG-Spezifikation, die Spezifikations Revisions Ebene und die Errata-Revisions Ebene. Alle Werte sind hexadezimal. Beispielsweise geben die Versionsinformationen "1,2, 2, 0" an, dass das Gerät in die TCG-Spezifikation Version 1,2, Revision Level 2 und ohne Errata implementiert wurde.
+Die Version der TCG-Spezifikation (Trusted Computing Group), die das TPM unterstützt. Dieser Wert umfasst die Haupt- und Nebenversion der TCG-Spezifikation, die Spezifikationsrevisionsebene und die Errata-Revisionsebene. Alle Werte sind hexadezimal. Eine Versionsinformation von "1.2, 2, 0" gibt beispielsweise an, dass das Gerät in die TCG-Spezifikation Version 1.2, Revisionsebene 2 und ohne Errata implementiert wurde.
 
-Wenn die Daten nicht verfügbar sind, wird "nicht unterstützt" zurückgegeben.
+Wenn die Daten nicht verfügbar sind, wird "Nicht unterstützt" zurückgegeben.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -247,11 +247,11 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ Security- \\ mikrosofttpm<br/>                                            |
-| MOF<br/>                      | <dl> <dt>Win32- \_ TPM. MOF</dt> </dl> |
-| DLL<br/>                      | <dl> <dt>Win32- \_tpm.dll</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                      |
+| Namespace<br/>                | Root \\ CIMV2 \\ Security \\ MicrosoftTpm<br/>                                            |
+| MOF<br/>                      | <dl> <dt>Win32 \_ tpm.mof</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Win32 \_tpm.dll</dt> </dl> |
 
 
 

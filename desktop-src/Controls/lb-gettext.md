@@ -1,9 +1,9 @@
 ---
-title: LB_GETTEXT Meldung (Winuser. h)
+title: LB_GETTEXT-Nachricht (Winuser.h)
 description: Ruft eine Zeichenfolge aus einem Listenfeld ab.
 ms.assetid: 6bf7ec3b-237b-4668-9493-40c098a32428
 keywords:
-- Windows-Steuerelemente für LB_GETTEXT Meldung
+- LB_GETTEXT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c3dd5e2c7a9e6c1c1aa1b847592555a013766134
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9b2aa37a2d07e440aac615d1edc1e6f91c6a60e71a96418cd443daff9809ec18
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119434099"
 ---
-# <a name="lb_gettext-message"></a>LB- \_ gettext-Nachricht
+# <a name="lb_gettext-message"></a>LB \_ GETTEXT-Nachricht
 
 Ruft eine Zeichenfolge aus einem Listenfeld ab.
 
@@ -32,26 +32,26 @@ Ruft eine Zeichenfolge aus einem Listenfeld ab.
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index der abzurufenden Zeichenfolge.
+Der nullbasierte Index der abzurufenden Zeichenfolge.
 
-Windows 95/Windows 98/Windows Millennium Edition (Windows Me): der *wParam* -Parameter ist auf 16-Bit-Werte beschränkt. Dies bedeutet, dass Listenfelder nicht mehr als 32.767 Elemente enthalten dürfen. Obwohl die Anzahl der Elemente eingeschränkt ist, wird die Gesamtgröße der Elemente in einem Listenfeld in Bytes nur durch den verfügbaren Arbeitsspeicher beschränkt.
+Windows 95/Windows 98/Windows Edition (Windows Me): Der *wParam-Parameter* ist auf 16-Bit-Werte beschränkt. Das bedeutet, dass Listenfelder nicht mehr als 32.767 Elemente enthalten dürfen. Obwohl die Anzahl der Elemente eingeschränkt ist, ist die Gesamtgröße der Elemente in einem Listenfeld in Byte nur durch den verfügbaren Arbeitsspeicher beschränkt.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf den Puffer, der die Zeichenfolge empfängt. der Typ ist **LPTSTR** , der anschließend in ein **LPARAM** umgewandelt wird. Der Puffer muss über ausreichend Speicherplatz für die Zeichenfolge und ein abschließendes NULL-Zeichen verfügen. Eine [**lb- \_ gettextlen**](lb-gettextlen.md) -Nachricht kann vor der **lb- \_ gettext** -Nachricht gesendet werden, um die Länge der Zeichenfolge in **TCHAR** s abzurufen.
+Ein Zeiger auf den Puffer, der die Zeichenfolge empfängt. es ist vom Typ **LPTSTR,** der anschließend in eine **LPARAM-Datei** umgeformt wird. Der Puffer muss über ausreichend Speicherplatz für die Zeichenfolge und ein abschließendes NULL-Zeichen verfügen. Eine [**LB \_ GETTEXTLEN-Nachricht**](lb-gettextlen.md) kann vor der **LB \_ GETTEXT-Nachricht** gesendet werden, um die Länge der Zeichenfolge in **TCHAR** s abzurufen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist die Länge der Zeichenfolge in **TCHAR** s, wobei das abschließende Null-Zeichen ausgeschlossen wird. Wenn von *wParam* kein gültiger Index angegeben wird, ist der Rückgabewert lb \_ Err.
+Der Rückgabewert ist die Länge der Zeichenfolge in **TCHAR** s, mit Ausnahme des abschließenden NULL-Zeichens. Wenn *wParam* keinen gültigen Index angibt, lautet der Rückgabewert LB \_ ERR.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn im Listenfeld ein vom Besitzer gezeichneter Stil, aber nicht der [**lbs \_ hasstrings**](list-box-styles.md) -Stil enthalten ist, erhält der Puffer, auf den der *LPARAM* -Parameter verweist, den Wert, der dem Element zugeordnet ist (die Elementdaten).
+Wenn das Listenfeld über einen vom Besitzer gezeichneten Stil, aber nicht über den [**LBS \_ HASSTRINGS-Stil**](list-box-styles.md) verfügt, empfängt der Puffer, auf den der *lParam-Parameter* zeigt, den wert, der dem Element (den Elementdaten) zugeordnet ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,17 +59,17 @@ Wenn im Listenfeld ein vom Besitzer gezeichneter Stil, aber nicht der [**lbs \_ 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**LB- \_ gettextlen**](lb-gettextlen.md)
+[**LB \_ GETTEXTLEN**](lb-gettextlen.md)
 </dt> </dl>
 
  

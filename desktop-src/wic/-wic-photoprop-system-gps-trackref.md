@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. trackref-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.GPS.TrackRef-Eigenschaft.
 ms.assetid: e6912177-8add-4520-b396-c28060b359c7
-title: System. GPS. trackref-Foto-metadatenrichtlinie
+title: System.GPS.TrackRef-Fotometadatenrichtlinie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 95fc63de6eaffd697798c08ff74a46c3d15c7818
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 34a523f801b8e82fc4191b54bf0bb5fee659ab4f5b09c326d5d1adf14c713f13
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119087178"
 ---
-# <a name="systemgpstrackref-photo-metadata-policy"></a>System. GPS. trackref-Foto-metadatenrichtlinie
+# <a name="systemgpstrackref-photo-metadata-policy"></a>System.GPS.TrackRef-Fotometadatenrichtlinie
 
-Die fotometadatenrichtlinie für die [System. GPS. trackref](../properties/props-system-gps-trackref.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.GPS.TrackRef-Eigenschaft.](../properties/props-system-gps-trackref.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ GPS \_ trackref
+PKEY \_ GPS \_ TrackRef
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
@@ -35,46 +35,46 @@ VT \_ LPWSTR
 
 String
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policies"></a>JPEG-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 14} | ascii       |
-| 2     | /XMP/EXIF: gpstrackref     | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=14} | ascii       |
+| 2     | /xmp/exif:GPSTrackRef     | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 14} | ascii       |
-| 2     | /XMP/EXIF: gpstrackref     | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=14} | ascii       |
+| 2     | /xmp/exif:GPSTrackRef     | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                      |
 |-------|---------------------------|
-| 1     | /App1/IFD/GPS/{ushort = 14} |
-| 2     | /XMP/EXIF: gpstrackref     |
+| 1     | /app1/ifd/gps/{ushort=14} |
+| 2     | /xmp/exif:gpstrackref     |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 14}      | ascii       |
-| 2     | /IFD/XMP/EXIF: gpstrackref | Unicode     |
+| 1     | /ifd/gps/{ushort=14}      | ascii       |
+| 2     | /ifd/xmp/exif:GPSTrackRef | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 14}      | ascii       |
-| 2     | /IFD/XMP/EXIF: gpstrackref | Unicode     |
+| 1     | /ifd/gps/{ushort=14}      | ascii       |
+| 2     | /ifd/xmp/exif:GPSTrackRef | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                      |
 |-------|---------------------------|
-| 1     | /IFD/GPS/{ushort = 14}      |
-| 2     | /IFD/XMP/EXIF: gpstrackref |
+| 1     | /ifd/gps/{ushort=14}      |
+| 2     | /ifd/xmp/exif:gpstrackref |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. GPS. trackref](../properties/props-system-gps-trackref.md)
+[System.GPS.TrackRef](../properties/props-system-gps-trackref.md)
 </dt> </dl>
 
  

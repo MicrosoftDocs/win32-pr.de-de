@@ -1,9 +1,9 @@
 ---
-title: Kommentare (msfeeds. h)
-description: Fügen Sie Metadatendateien Kommentare hinzu, indem Sie die Extensible Markup Language Syntax (XML) befolgen. Kommentare beginnen mit \ 0034; --\ 0034; und enden mit \ 0034;--\ 0034;.
+title: Kommentare (Msfeeds.h)
+description: Fügen Sie Metadateien Kommentare hinzu, indem Sie Extensible Markup Language -Syntax (XML) folgen. Kommentare beginnen mit \ 0034; -- \ 0034; und enden mit \ 0034;-- \ 0034;.
 ms.assetid: 3d8dbf13-bd48-4405-804f-57e0f5eff642
 keywords:
-- Kommentare zu Windows-Media Player
+- Kommentare Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,25 +14,25 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 701f456cae9f1432ed42235a3a6e13af555b2b8d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0fe5aaf9dde3d804bb91a1e2551636c86aa54ff2bec599bf06100ee2622b592a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135783"
 ---
-# <a name="comments-msfeedsh"></a>Kommentare (msfeeds. h)
+# <a name="comments-msfeedsh"></a>Kommentare (Msfeeds.h)
 
-Fügen Sie Metadatendateien Kommentare hinzu, indem Sie die Extensible Markup Language Syntax (XML) befolgen. Kommentare beginnen mit " &lt; !--" und enden mit "-- &gt; ".
+Fügen Sie Metadateien Kommentare hinzu, indem Sie Extensible Markup Language -Syntax (XML) folgen. Kommentare beginnen mit &lt; "!--" und enden mit "-- &gt; ".
 
 ``` syntax
 
 <!--Enter your comment text here.-->
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Kommentare können an beliebiger Stelle angezeigt werden, außer innerhalb von Element Inhalten (zwischen öffnenden und schließende tagtags,  < >). Sie sind nicht Teil der Zeichendaten des Dokuments und werden ignoriert, wenn die Metadatei analysiert wird.
+Kommentare können überall angezeigt werden, außer innerhalb des Elementinhalts (zwischen elementöffnen und schließende Tags,  < >). Sie sind nicht Teil der Zeichendaten des Dokuments und werden ignoriert, wenn die Metadatei analysiert wird.
 
 ## <a name="examples"></a>Beispiele
 
@@ -62,15 +62,15 @@ Kommentare können an beliebiger Stelle angezeigt werden, außer innerhalb von E
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Msfeeds. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Msfeeds.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> </dl>
 
  

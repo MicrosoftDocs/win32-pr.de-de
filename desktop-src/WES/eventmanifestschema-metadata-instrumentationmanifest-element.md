@@ -1,9 +1,9 @@
 ---
-title: Metadata-Element (instrumentationmanifest)
-description: Enthält globale Werte, auf die in anderen Manifesten verwiesen werden kann.
+title: metadata (instrumentationManifest)-Element
+description: Enthält globale Werte, auf die Sie in anderen Manifesten verweisen können.
 ms.assetid: 5bf3bb1e-47c9-4d6e-86e3-3316e21b76b3
 keywords:
-- Metadatenelement-Ereignisprotokoll
+- Metadata-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c14dc8772dee66fcce9ff07e9918c11b463aa414
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: eaa22cc13c611b90ace42a2a71517fe0771d6e9ed03d6d964f11a4e4c93cda43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102931"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136323"
 ---
-# <a name="metadata-instrumentationmanifest-element"></a>Metadata-Element (instrumentationmanifest)
+# <a name="metadata-instrumentationmanifest-element"></a>metadata (instrumentationManifest)-Element
 
-Enthält globale Werte, auf die in anderen Manifesten verwiesen werden kann. Ein Beispiel finden Sie in der Winmeta.xml-Datei, die im \\ Ordner include des Windows SDK enthalten ist.
+Enthält globale Werte, auf die Sie in anderen Manifesten verweisen können. Ein Beispiel finden Sie in der Winmeta.xml-Datei, die im Ordner Include des Windows SDK enthalten \\ ist.
 
 ``` syntax
 <xs:element name="metadata"
@@ -30,11 +30,11 @@ Enthält globale Werte, auf die in anderen Manifesten verwiesen werden kann. Ein
  />
 ```
 
-Das **Metadatenelement** wird durch das [**instrumentationmanifest**](eventmanifestschema-instrumentationmanifest-element.md) -Element definiert.
+Das **Metadatenelement** wird durch das [**instrumentationManifest-Element**](eventmanifestschema-instrumentationmanifest-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Obwohl Sie ein Manifest erstellen können, das einen Metadatenabschnitt enthält, wird es vom Dienst nicht verwendet. die einzigen Metadaten, die der Dienst erkennt, sind die Metadaten, die in der Winmeta.xml-Datei gefunden werden.
+Obwohl Sie ein Manifest erstellen können, das einen Metadatenabschnitt enthält, wird es vom Dienst nicht verwendet. Die einzigen Metadaten, die der Dienst erkennt, sind die Metadaten, die in der datei Winmeta.xml gefunden werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,19 +42,19 @@ Obwohl Sie ein Manifest erstellen können, das einen Metadatenabschnitt enthält
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**instrumentationmanifest**](eventmanifestschema-instrumentationmanifest-element.md)
+[**instrumentationManifest**](eventmanifestschema-instrumentationmanifest-element.md)
 </dt> </dl>
 
  

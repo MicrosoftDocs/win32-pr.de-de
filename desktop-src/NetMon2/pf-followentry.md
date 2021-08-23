@@ -1,7 +1,7 @@
 ---
-description: Die PF- \_ nach Verfolgungs Struktur definiert ein Protokoll, das Netzwerkmonitor dem nachfolgenden Satz eines Parsers hinzufügt.
+description: Die PF FOLLOWENTRY-Struktur definiert ein Protokoll, Netzwerkmonitor dem folgenden Satz eines Parsers \_ hinzufügt.
 ms.assetid: 931ae70f-8c5e-4b7a-aae6-64a33dac3b23
-title: PF_FOLLOWENTRY Struktur (Netmon. h)
+title: PF_FOLLOWENTRY -Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: f93ec4784fc8d0f92f68fdff3914e230ffd3cdce
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8fd7452a4db6318df0d4c23ea405d2cd4afcf6575c7abac34749a66bc88c2084
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119063730"
 ---
-# <a name="pf_followentry-structure"></a>PF-nach Verfolgungs \_ Struktur
+# <a name="pf_followentry-structure"></a>PF \_ FOLLOWENTRY-Struktur
 
-Die **PF \_** -nach Verfolgungs Struktur definiert ein Protokoll, das Netzwerkmonitor dem nachfolgenden Satz eines Parsers hinzufügt.
+Die **PF \_ FOLLOWENTRY-Struktur** definiert ein Protokoll, Netzwerkmonitor dem folgenden Satz eines Parsers hinzufügt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ typedef struct _PF_FOLLOWENTRY {
 
 <dl> <dt>
 
-**szprotocol**
+**szProtocol**
 </dt> <dd>
 
 Der Name des Protokolls.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [PF \_](pf-followset.md) -nach Verfolgungs Struktur verwendet ein Array von **PF \_** -after-Entry-Strukturen.
+Die [PF \_ FOLLOWSET-Struktur](pf-followset.md) verwendet ein Array von **PF \_ FOLLOWENTRY-Strukturen.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,15 +58,15 @@ Die [PF \_](pf-followset.md) -nach Verfolgungs Struktur verwendet ein Array von 
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[PF-nach \_ Verfolgung](pf-followset.md)
+[PF \_ FOLLOWSET](pf-followset.md)
 </dt> </dl>
 
  

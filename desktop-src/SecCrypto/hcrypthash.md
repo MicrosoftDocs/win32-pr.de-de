@@ -1,19 +1,19 @@
 ---
-description: Der hcrypthash-Datentyp wird verwendet, um Handles für Hash Objekte darzustellen.
+description: Der HCRYPTHASH-Datentyp wird verwendet, um Handles für Hashobjekte darzustellen.
 ms.assetid: 3b872bf0-cf1b-465b-82a2-c6fd154e1125
-title: Hcrypthash (Wincrypt. h)
+title: HCRYPTHASH (Wincrypt.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a009350ed910627c1e6ec9ae33997ed20c7fec2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 99b2d20d7aeb46adda162f8d5ec380143164690bad8ee88139f9653753f1e290
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867412"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119006558"
 ---
-# <a name="hcrypthash"></a>Hcrypthash
+# <a name="hcrypthash"></a>HCRYPTHASH
 
-Der **hcrypthash** -Datentyp wird verwendet, um Handles für [*Hash Objekte*](../secgloss/h-gly.md)darzustellen. Diese Handles geben dem CSP-Modul an, welcher Hash in einem bestimmten Vorgang verwendet wird. Das CSP-Modul ermöglicht keine direkte Bearbeitung der Hashwerte. Stattdessen manipuliert der Benutzer die Hashwerte durch das Hashhandle.
+Der **HCRYPTHASH-Datentyp** wird verwendet, um Handles für [*Hashobjekte*](../secgloss/h-gly.md)darzustellen. Diese Handles geben dem CSP-Modul an, welcher Hash in einem bestimmten Vorgang verwendet wird. Das CSP-Modul ermöglicht keine direkte Bearbeitung der Hashwerte. Stattdessen bearbeitet der Benutzer die Hashwerte über das Hashhandle.
 
 
 ```C++
@@ -28,9 +28,9 @@ typedef ULONG_PTR HCRYPTHASH;
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>WinCrypt. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Wincrypt.h</dt> </dl> |
 
 
 

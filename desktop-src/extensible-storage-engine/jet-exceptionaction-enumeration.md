@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_ExceptionAction-Enumeration'
-title: JET_ExceptionAction-Enumeration
+description: 'Weitere Informationen finden Sie unter: JET_ExceptionAction Enumeration'
+title: JET_ExceptionAction Enumeration
 TOCTitle: JET_ExceptionAction enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_ExceptionAction
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_exceptionaction(v=EXCHG.10)
@@ -28,19 +28,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0cba09666308ab55ae4327a9f9a683734aa28f41
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7cfd19fdbddfb169e1f12fcb4ca3d0f54df361bde5fb065378f5cb1af726cd25
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119362350"
 ---
-# <a name="jet_exceptionaction-enumeration"></a>JET_ExceptionAction-Enumeration
+# <a name="jet_exceptionaction-enumeration"></a>JET_ExceptionAction Enumeration
 
-Konstanten, die mit JET_paramExceptionAction verwendet werden sollen.
+Konstanten, die mit dem -JET_paramExceptionAction.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,19 +69,19 @@ public enum JET_ExceptionAction
 <tr class="odd">
 <td></td>
 <td>Meldung</td>
-<td>Meldungs Feld bei Ausnahme anzeigen.</td>
+<td>Meldungsfeld bei Ausnahme anzeigen.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Keine</td>
-<td>Behandeln Sie keine Ausnahmen. Lösen Sie Sie an den Aufrufer aus.</td>
+<td>Behandeln Sie keine Ausnahmen. Löst sie an den Aufrufer aus.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

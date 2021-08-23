@@ -1,39 +1,39 @@
 ---
-title: Diskreter Übertragungs Effekt
-description: Verwenden Sie den diskreten Übertragungs Effekt, um die Farb Intensitäten eines Bilds mithilfe einer Schritt Übertragungsfunktion zuzuordnen, die aus einer Liste mit von Ihnen bereitgestellten Werten erstellt wurde.
+title: Diskreter Übertragungseffekt
+description: Verwenden Sie den diskreten Übertragungseffekt, um die Farbstärken eines Bilds mithilfe einer Schrittübertragungsfunktion zu zuordnen, die aus einer Liste der von Ihnen angegebenen Werte erstellt wurde.
 ms.assetid: 5A612002-2B1D-4FC3-B364-AACD9FD44BEC
 keywords:
-- diskreter Übertragungs Effekt
+- Diskreter Übertragungseffekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c05ef08f9ddf053eaa686cb0f88d4183194d9e3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f8c977e6d2b03a3496bfa9be84209a32f57094c8514f6760746f9ec967c2ff8a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104567575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119431403"
 ---
-# <a name="discrete-transfer-effect"></a>Diskreter Übertragungs Effekt
+# <a name="discrete-transfer-effect"></a>Diskreter Übertragungseffekt
 
-Verwenden Sie den diskreten Übertragungs Effekt, um die Farb Intensitäten eines Bilds mithilfe einer Schritt Übertragungsfunktion zuzuordnen, die aus einer Liste mit von Ihnen bereitgestellten Werten erstellt wurde.
+Verwenden Sie den diskreten Übertragungseffekt, um die Farbstärken eines Bilds mithilfe einer Schrittübertragungsfunktion zu zuordnen, die aus einer Liste der von Ihnen angegebenen Werte erstellt wurde.
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1DiscreteTransfer.
 
--   [Beispiel Bild](#example-image)
--   [Effekt Eigenschaften](#effect-properties)
--   [Anforderungen](#requirements)
+-   [Beispielbild](#example-image)
+-   [Effect-Eigenschaften](#effect-properties)
+-   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="example-image"></a>Beispielbild
 
-Das Bild hier zeigt die Eingabe und die Ausgabe des diskreten Übertragungs Effekts.
+Die Abbildung zeigt die Ein- und Ausgabe des diskreten Übertragungseffekts.
 
 
 
 | Vorher                                                            |
 |-------------------------------------------------------------------|
 | ![das Bild vor dem Effekt.](images/default-before.jpg)        |
-| Nach                                                             |
+| Danach                                                             |
 | ![das Bild nach der Transformation.](images/12-discretetransfer.png) |
 
 
@@ -59,42 +59,42 @@ m_d2dContext->EndDraw();
 
 
 
-Die Übertragungsfunktion basiert auf der Liste der Eingaben: V = (v0, v1, v2, v3, V? , V<sub>N</sub>), wobei N die Anzahl der Elemente-1 ist.
+Die Übertragungsfunktion basiert auf der Liste der Eingaben: V=(V0, V1, V2, V3, V? ,V<sub>N</sub>), wobei N die Anzahl der Elemente ist – 1.
 
-Die Eingabe Pixel Intensität wird als C dargestellt. Die Ausgabe Pixel Intensität, C wird mit der Gleichung berechnet:
+Die Intensität des Eingabepixels wird als C dargestellt. Die Ausgabepixelstärke C wird mit der Gleichung berechnet:
 
-Wählen Sie für einen Wert C den Wert k aus, um Folgendes zu erhalten:
+Wählen Sie für einen Wert C einen Wert k aus, damit:
 
-![die Formel für den Prozess.](images/discrete-transfer1.png)
+![Formel für den Prozess.](images/discrete-transfer1.png)
 
-Die Ausgabe c kann mit der Gleichung berechnet werden: c ' = V?
+Die Ausgabe C kann mit der folgenden Gleichung berechnet werden: C' = V?
 
-Dieser Effekt kann bei geraden und vorab multiplizierten Alpha Bildern verwendet werden. Der Effekt gibt prämultiplizierte Alpha Bitmaps aus.
+Dieser Effekt funktioniert bei geraden und prämultipliierten Alphabildern. Der Effekt gibt prämultipliierte Alphabitmaps aus.
 
-So sieht das Diagramm der diskreten Übertragungsfunktion aus, wenn die Eingaben sind `[0.25, 0.5, 0.75, 1.0]` .
+So sieht das Diagramm der diskreten Übertragungsfunktion aus, wenn die Eingaben `[0.25, 0.5, 0.75, 1.0]` sind.
 
-![Pixel Intensität des Diagramms für die diskrete Übertragungsfunktion.](images/discrete-transfer-graph.png)
+![Pixel-Intensitätsdiagramm für die diskrete Übertragungsfunktion.](images/discrete-transfer-graph.png)
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
 > [!Note]  
-> Die Werte aller Kanäle der diskreten Übertragungseigenschaften sind unitless und haben mindestens 0,0 und einen maximalen Wert von 1,0.
+> Die Werte aller Kanäle der diskreten Übertragungseigenschaften sind einheitslos und haben mindestens 0,0 und maximal 1,0.
 
  
 
 
 
-| Anzeige Name und indexenumeration                                              | Typ und Standardwert                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Anzeigename und Indexenumeration                                              | Typ und Standardwert                       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |---------------------------------------------------------------------------------|----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Redtable<br/> D2D1 \_ diskretetransfer \_ ( \_ Rote \_ Tabelle)<br/>         | Hafen\[\]<br/> {0,0 f, 1.0 f}<br/> | Die Liste der Werte, die zum Definieren der Übertragungsfunktion für den roten Kanal verwendet werden.                                                                                                                                                                                                                                                                                                                                                                                 |
-| Reddeaktiviert<br/> D2D1 \_ diskretetransfer-unter \_ Stützung \_ rot \_ Deaktivieren<br/>     | BOOL<br/> false<br/>             | Wenn Sie diese Einstellung auf "true" festlegen, wird die Übertragungsfunktion nicht auf den roten Kanal angewendet. Wenn Sie diese Einstellung auf "false" festlegen, wendet der Effekt die reddiskretetransfer-Funktion auf den roten Kanal an.                                                                                                                                                                                                                                                                 |
-| Abbrechbar<br/> D2D1 \_ diskretetransfer-unter \_ Stützung für \_ grüne \_ Tabelle<br/>     | Hafen\[\]<br/> {0,0 f, 1.0 f}<br/> | Die Liste der Werte, die die Übertragungsfunktion für den grünen Kanal definieren.                                                                                                                                                                                                                                                                                                                                                                                  |
-| Greendeaktivieren<br/> D2D1 \_ diskretetransfer- \_ Prop \_ grün \_ Deaktivieren<br/> | BOOL<br/> false<br/>             | Wenn Sie diese Einstellung auf "true" festlegen, wird die Übertragungsfunktion nicht auf den grünen Kanal angewendet. Wenn Sie diese Einstellung auf "false" festlegen, wendet der Effekt die greendiskretetransfer-Funktion auf den grünen Kanal an.                                                                                                                                                                                                                                                           |
-| Bluetable<br/> D2D1 \_ diskretetransfer- \_ Prop ( \_ blaue \_ Tabelle)<br/>       | Hafen\[\]<br/> {0,0 f, 1.0 f}<br/> | Die Liste der Werte, die die Übertragungsfunktion für den blauen Kanal definieren.                                                                                                                                                                                                                                                                                                                                                                                   |
-| Bluedeaktiviert<br/> D2D1 \_ diskretetransfer- \_ Prop \_ blau \_ Deaktivieren<br/>   | BOOL<br/> false<br/>             | Wenn Sie diese Einstellung auf "true" festlegen, wird die Übertragungsfunktion nicht auf den blauen Kanal angewendet. Wenn Sie diese Einstellung auf "false" festlegen, wird die bluediskretetransfer-Funktion auf den blauen Kanal angewendet.                                                                                                                                                                                                                                                              |
-| Alpha kompatibel<br/> D2D1 \_ diskretetransfer- \_ Prop- \_ alpha \_ Tabelle<br/>     | Hafen\[\]<br/> {0,0 f, 1.0 f}<br/> | Die Liste der Werte, die die Übertragungsfunktion für den Alpha Kanal definieren.                                                                                                                                                                                                                                                                                                                                                                                  |
-| Alphadeaktivieren<br/> D2D1 \_ diskretetransfer- \_ Prop- \_ alpha \_ Deaktivieren<br/> | BOOL<br/> false<br/>             | Wenn Sie diese Einstellung auf "true" festlegen, wird die Übertragungsfunktion nicht auf den Alpha Kanal angewendet. Wenn Sie diese Einstellung auf false festlegen, wird die alphadiskretetransfer-Funktion auf den Alpha Kanal angewendet.                                                                                                                                                                                                                                                           |
-| Klamme Ausgabe<br/> D2D1 \_ diskretetransfer- \_ Prop- \_ Klemm \_ Ausgabe<br/>   | BOOL<br/> false<br/>             | Gibt an, ob der Effekt Farbwerte auf zwischen 0 und 1 zeigt, bevor der Effekt die Werte an den nächsten Effekt im Diagramm übergibt. Der Effekt bindet die Werte, bevor die Alpha-angezeigt werden.<br/> Wenn Sie diese Einstellung auf "true" festlegen, werden die Werte durch die Auswirkung fixiert. Wenn Sie diese Einstellung auf "false" festlegen, werden die Farbwerte durch die Auswirkung nicht fixiert, aber andere Effekte und die Ausgabe Oberfläche können die Werte einspannen, wenn Sie nicht über eine hohe Genauigkeit verfügen.<br/> |
+| RedTable<br/> D2D1 \_ DISCRETETRANSFER \_ PROP \_ RED \_ TABLE<br/>         | schweben\[\]<br/> {0.0f, 1.0f}<br/> | Die Liste der Werte, die zum Definieren der Übertragungsfunktion für den roten Kanal verwendet werden.                                                                                                                                                                                                                                                                                                                                                                                 |
+| RedDisable<br/> D2D1 \_ DISCRETETRANSFER \_ PROP \_ RED \_ DISABLE<br/>     | BOOL<br/> FALSE<br/>             | Wenn Sie dies auf TRUE festlegen, wird die Übertragungsfunktion nicht auf den roten Kanal angewendet. Wenn Sie dies auf FALSE festlegen, wird die RedDiscreteTransfer-Funktion auf den roten Kanal angewendet.                                                                                                                                                                                                                                                                 |
+| GreenTable<br/> D2D1 \_ DISCRETETRANSFER \_ PROP \_ GREEN \_ TABLE<br/>     | schweben\[\]<br/> {0.0f, 1.0f}<br/> | Die Liste der Werte, die die Übertragungsfunktion für den grünen Kanal definieren.                                                                                                                                                                                                                                                                                                                                                                                  |
+| GreenDisable<br/> D2D1 \_ DISCRETETRANSFER \_ PROP \_ GREEN \_ DISABLE<br/> | BOOL<br/> FALSE<br/>             | Wenn Sie dies auf TRUE festlegen, wird die Übertragungsfunktion nicht auf den grünen Kanal angewendet. Wenn Sie dies auf FALSE festlegen, wendet der Effekt die GreenDiscreteTransfer-Funktion auf den Green-Kanal an.                                                                                                                                                                                                                                                           |
+| BlueTable<br/> D2D1 \_ DISCRETETRANSFER \_ PROP \_ BLUE \_ TABLE<br/>       | schweben\[\]<br/> {0.0f, 1.0f}<br/> | Die Liste der Werte, die die Übertragungsfunktion für den blauen Kanal definieren.                                                                                                                                                                                                                                                                                                                                                                                   |
+| BlueDisable<br/> D2D1 \_ DISCRETETRANSFER \_ PROP \_ BLUE \_ DISABLE<br/>   | BOOL<br/> FALSE<br/>             | Wenn Sie dies auf TRUE festlegen, wird die Übertragungsfunktion nicht auf den blauen Kanal angewendet. Wenn Sie dies auf FALSE festlegen, wendet der Effekt die BlueDiscreteTransfer-Funktion auf den blauen Kanal an.                                                                                                                                                                                                                                                              |
+| AlphaTable<br/> D2D1 \_ DISCRETETRANSFER \_ PROP \_ ALPHA \_ TABLE<br/>     | schweben\[\]<br/> {0.0f, 1.0f}<br/> | Die Liste der Werte, die die Übertragungsfunktion für den Alphakanal definieren.                                                                                                                                                                                                                                                                                                                                                                                  |
+| AlphaDisable<br/> D2D1 \_ DISCRETETRANSFER \_ PROP \_ ALPHA \_ DISABLE<br/> | BOOL<br/> FALSE<br/>             | Wenn Sie dies auf TRUE festlegen, wird die Übertragungsfunktion nicht auf den Alphakanal angewendet. Wenn Sie dies auf FALSE festlegen, wendet der Effekt die AlphaDiscreteTransfer-Funktion auf den Alphakanal an.                                                                                                                                                                                                                                                           |
+| ClampOutput<br/> D2D1 \_ DISCRETETRANSFER \_ \_ PROP-KLAMMERAUSGABE \_<br/>   | BOOL<br/> FALSE<br/>             | Gibt an, ob der Effekt Farbwerte auf zwischen 0 und 1 klammert, bevor der Effekt die Werte an den nächsten Effekt im Diagramm übergibt. Der Effekt klammert die Werte, bevor er das Alpha prämultipliert.<br/> Wenn Sie dies auf TRUE festlegen, klammert der Effekt die Werte. Wenn Sie dies auf FALSE festlegen, klammert der Effekt die Farbwerte nicht, aber andere Effekte und die Ausgabeoberfläche können die Werte klammern, wenn sie nicht hoch genug sind.<br/> |
 
 
 
@@ -106,10 +106,10 @@ So sieht das Diagramm der diskreten Übertragungsfunktion aus, wenn die Eingaben
 
 | Anforderung | Wert |
 |--------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects. h                                                                      |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                                               |
+| Unterstützte Mindestversion (Client) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects.h                                                                      |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                                               |
 
 
 

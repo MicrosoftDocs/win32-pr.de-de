@@ -1,29 +1,29 @@
 ---
-title: Httpcalculatorwithsslpolizyklieintexample
-description: In diesem Beispiel wird gezeigt, wie die von wsutil generierten Richtlinien Hilfsroutinen verwendet werden, um einen Dienst Proxy für die Kommunikation mit einem Rechner Dienst mit SSL-Transportsicherheit zu erstellen.
+title: HttpCalculatorWithSslPolicyClientExample
+description: In diesem Beispiel wird gezeigt, wie Sie die wsutil-generierten Richtlinienhilfsprogrammroutinen verwenden, um einen Dienstproxy für die Verbindung mit einem Rechnerdienst mit SSL-Transportsicherheit zu erstellen.
 ms.assetid: cf2455d4-0670-4ea2-8ee7-073698bfb765
 keywords:
-- Httpcalculatorwithsslpolizyklieintexample Native-Web-Services
-- Wwsapi
+- HttpCalculatorWithSslPolicyClientExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d010d666ab4801b9920933547841963c0d1063f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6cd9aaaddee3d2cef79fd57f46dffd8da85b2e72bafc710783f025eec68aa5f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947785"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026478"
 ---
-# <a name="httpcalculatorwithsslpolicyclientexample"></a>Httpcalculatorwithsslpolizyklieintexample
+# <a name="httpcalculatorwithsslpolicyclientexample"></a>HttpCalculatorWithSslPolicyClientExample
 
-In diesem Beispiel wird gezeigt, wie die von wsutil generierten Richtlinien Hilfsroutinen verwendet werden, um einen Dienst Proxy für die Kommunikation mit einem Rechner Dienst mit SSL-Transportsicherheit zu erstellen. In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt.
+In diesem Beispiel wird gezeigt, wie Sie die wsutil-generierten Richtlinienhilfsprogrammroutinen verwenden, um einen Dienstproxy für die Verbindung mit einem Rechnerdienst mit SSL-Transportsicherheit zu erstellen. In diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird.
 
--   [Httpcalculatorwithsslpolicyclient. cpp](#httpcalculatorwithsslpolicyclientcpp)
--   [Calculatorservicewithpolicy. WSDL](#calculatorservicewithpolicywsdl)
+-   [HttpCalculatorWithSslPolicyClient.cpp](#httpcalculatorwithsslpolicyclientcpp)
+-   [CalculatorServiceWithPolicy.wsdl](#calculatorservicewithpolicywsdl)
 -   [Makefile](#makefile)
 
-## <a name="httpcalculatorwithsslpolicyclientcpp"></a>Httpcalculatorwithsslpolicyclient. cpp
+## <a name="httpcalculatorwithsslpolicyclientcpp"></a>HttpCalculatorWithSslPolicyClient.cpp
 
 
 ```C++
@@ -181,7 +181,7 @@ Exit:
 
 
 
-## <a name="calculatorservicewithpolicywsdl"></a>Calculatorservicewithpolicy. WSDL
+## <a name="calculatorservicewithpolicywsdl"></a>CalculatorServiceWithPolicy.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -334,9 +334,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

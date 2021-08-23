@@ -1,50 +1,50 @@
 ---
-title: VML-Pfad Attribut
-description: VML-Pfad Attribut
+title: VML-Pfadattribut
+description: VML-Pfadattribut
 ms.assetid: ecb64a2f-65f7-4eb9-8d67-d7909bf52d9c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e43e453e982327549475de4643cc0ad21bc0b4db
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f314956452db5a88011a147fd05302483e50cbce3724cf8188068770ec492db6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136963"
 ---
-# <a name="vml-path-attribute"></a>VML-Pfad Attribut
+# <a name="vml-path-attribute"></a>VML-Pfadattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Gibt die Zeile an, aus der die Ränder einer Form gebildet werden. Lese-/Schreibzugriff. **Zeichenfolge**.
+Gibt die Linie an, aus der die Ränder einer Form besteht. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* Path = " *Expression* " >
+<v: *element* path=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Path = "*Ausdruck*"
+*element* .path="*expression*"
 
-*Ausdruck* = *Element*. Path
+*expression* = *.path-Element*
 
 **Anmerkungen**
 
-Wenn eine Form das [path](msdn-online-vml-path-element.md) -Element enthält, haben die Pfad Befehle des Path-Elements Vorrang vor dem Shape-Attribut Wert. Weitere Informationen zu dem für Pfade verwendeten Befehlssatz finden Sie im Thema " **Pfad** Element".
+Wenn eine Form das [Path-Element](msdn-online-vml-path-element.md) enthält, haben die Pfadbefehle des Path-Elements Vorrang vor dem Shape-Attributwert. Ausführliche Informationen **zum** Für Pfade verwendeten Befehlssatz finden Sie im Thema Path-Element.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Ein geschlossener quadratischer Pfad wird in der Zeichenfolge des Path-Attributs definiert. Ein Anfangspunkt wird mit `m` (für den Befehl "  Befehl") bei 1, 1 definiert, und eine Linie wird mit `l` (dem Buchstaben "L", der für den Befehl " **LineTo**" verwendet wird) von der Startposition (1, 1) bis zu den anderen drei Punkten (in der Reihenfolge) gezeichnet: 1.200; 200.200; 200, 1. Die Zeile wird mit `x` (**Close**) geschlossen und endet mit `e` (**Ende**). Beachten Sie, dass Koordinaten im relativen Koordinaten Bereich angegeben werden und dass die tatsächliche Größe durch **Breite** und **Höhe** bestimmt wird.
+Ein geschlossener quadratischer Pfad wird in der Zeichenfolge des Pfadattributs definiert. Ein Anfangspunkt wird mit `m` (für den **Moveto-Befehl** verwendet) bei 1,1 definiert, und eine Zeile wird mit `l` (dem Buchstaben "L" für die **Befehlszeile bis**) von der Anfangsposition (1,1) bis zu den anderen drei Punkten (in der Reihenfolge) gezeichnet: 1.200; 200.200; 200,1. Die Zeile wird mit ( close ) geschlossen `x` und mit ( end ) `e` beendet. Beachten Sie, dass Koordinaten im relativen Koordinatenraum angegeben werden und dass die tatsächliche Größe durch die **Breite** und **Höhe** bestimmt wird.
 
 
 ```HTML
@@ -58,8 +58,8 @@ Ein geschlossener quadratischer Pfad wird in der Zeichenfolge des Path-Attributs
 
 
 
-[Beispiel für ein Pfad Attribut](/previous-versions/bb264089(v=vs.85)). (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Pfadattribut – Beispiel.](/previous-versions/bb264089(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

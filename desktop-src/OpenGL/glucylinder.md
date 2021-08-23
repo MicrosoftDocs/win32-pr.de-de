@@ -1,9 +1,9 @@
 ---
-title: gluzylinder-Funktion (glu. h)
-description: Die Funktion "gluzylinder" zeichnet einen Zylinder.
+title: gluCylinder-Funktion (Glu.h)
+description: Die gluCylinder-Funktion zeichnet einen Zylinder.
 ms.assetid: 43329d2f-50bb-46ea-85cb-22956d0df375
 keywords:
-- gluzylinder-Funktion OpenGL
+- gluCylinder-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 26fd201d1ddd720501715d1ead08d94bab72f7b3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1a09ff92aec17a13f03ecb1cbaaf118398b2b88dea76936454d527bb9c37032f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345305"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061608"
 ---
-# <a name="glucylinder-function"></a>gluzylinder-Funktion
+# <a name="glucylinder-function"></a>gluCylinder-Funktion
 
-Die Funktion " **gluzylinder** " zeichnet einen Zylinder.
+Die **gluCylinder-Funktion** zeichnet einen Zylinder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,21 +48,21 @@ void WINAPI gluCylinder(
 *qobj* 
 </dt> <dd>
 
-Das Quadric-Objekt (mit [**glunewquadric**](glunewquadric.md)erstellt).
+Das Quadric-Objekt (erstellt mit [**gluNewQuadric**](glunewquadric.md)).
 
 </dd> <dt>
 
-*baseradius* 
+*baseRadius* 
 </dt> <dd>
 
 Der Radius des Zylinders bei *z* = 0.
 
 </dd> <dt>
 
-*topradius* 
+*topRadius* 
 </dt> <dd>
 
-Der Radius des Zylinders an der *z*-  =  *Höhe*.
+Der Radius des Zylinders in *z*  =  *Höhe*.
 
 </dd> <dt>
 
@@ -73,17 +73,17 @@ Die Höhe des Zylinders.
 
 </dd> <dt>
 
-*aufs* 
+*Scheiben* 
 </dt> <dd>
 
-Die Anzahl der Unterteilungen um die z-Achse.
+Die Anzahl der Unterteilungen um die Z-Achse.
 
 </dd> <dt>
 
-*Stöcke* 
+*Stacks* 
 </dt> <dd>
 
-Die Anzahl der Unterteilungen entlang der z-Achse.
+Die Anzahl der Unterteilungen entlang der Z-Achse.
 
 </dd> </dl>
 
@@ -91,15 +91,15 @@ Die Anzahl der Unterteilungen entlang der z-Achse.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **gluzylinder** " zeichnet einen Zylinder, der entlang der z-Achse ausgerichtet ist. Die Basis des Zylinders wird bei *z* = 0 und am oberen Rand bei der *z*-  =  *Höhe* platziert. Wie bei einer Kugel wird ein Zylinder um die z-Achse in Slices und entlang der z-Achse in Stapel aufgeteilt.
+Die **gluCylinder-Funktion** zeichnet einen Zylinder, der entlang der Z-Achse ausgerichtet ist. Die Basis des Zylinders wird bei *z* = 0 und die obere bei *z Höhe*  =  *platziert.* Wie eine Kugel wird ein Zylinder um die Z-Achse in Slices und entlang der Z-Achse in Stapel unterteilt.
 
-Beachten Sie, dass diese Routine einen Kegel generiert, wenn *topradius* auf 0 (null) festgelegt ist.
+Beachten Sie, dass diese Routine einen Kegel generiert, wenn *topRadius* auf 0 festgelegt ist.
 
-Wenn die Ausrichtung auf "glu \_ outside" (mit " [**gluquadricorientation**](gluquadricorientation.md)") festgelegt ist, zeigen alle generierten normale von der z-Achse Weg. Andernfalls zeigen Sie auf die z-Achse.
+Wenn die Ausrichtung auf GLU \_ OUTSIDE (mit [**gluQuadricOrientation)**](gluquadricorientation.md)festgelegt ist, zeigen alle generierten Normals von der Z-Achse ab. Andernfalls zeigen sie auf die Z-Achse.
 
-Wenn die Texturierung aktiviert ist (mit " [**gluquadrictexture**](gluquadrictexture.md)"): Es werden Texturkoordinaten generiert, sodass *t* von 0,0 bei *z* = 0 auf 1,0 bei *z*  =  *height* und *s* zwischen 0,0 an der positiven y-Achse, bis 0,25 an der positiven x-Achse, zu 0,5 auf der negativen y-Achse, zu 0,75 auf der negativen x-Achse und zurück zu 1,0 auf der positiven y-Achse reicht.
+Wenn die Texturierung aktiviert ist (mit [**gluQuadricTexture):**](gluquadrictexture.md)Texturkoordinaten werden generiert, sodass *t* linear von 0,0 bei *z* = 0 bis 1,0 bei *z* Höhe und s im Bereich  =  von 0,0 an der positiven y-Achse liegt. auf 0,25 an der positiven X-Achse, auf 0,5 an der negativen y-Achse, auf 0,75 an der negativen x-Achse und zurück zu 1,0 an der positiven y-Achse. 
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -109,32 +109,32 @@ Wenn die Texturierung aktiviert ist (mit " [**gluquadrictexture**](gluquadrictex
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**gludisk**](gludisk.md)
+[**gluDisk**](gludisk.md)
 </dt> <dt>
 
-[**glunewquadric**](glunewquadric.md)
+[**gluNewQuadric**](glunewquadric.md)
 </dt> <dt>
 
-[**glupartialdisk**](glupartialdisk.md)
+[**gluPartialDisk**](glupartialdisk.md)
 </dt> <dt>
 
-[**gluquadricorientation**](gluquadricorientation.md)
+[**gluQuadricOrientation**](gluquadricorientation.md)
 </dt> <dt>
 
-[**gluquadrictexture**](gluquadrictexture.md)
+[**gluQuadricTexture**](gluquadrictexture.md)
 </dt> <dt>
 
-[**glusphere**](glusphere.md)
+[**gluSphere**](glusphere.md)
 </dt> </dl>
 
  

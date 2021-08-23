@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, nachdem die Größe des InkPicture-Steuer Elements geändert wurde, genauer gesagt, nachdem sich der Wert der Breite oder Höhe geändert hat.
+description: Tritt ein, nachdem die Größe des InkPicture-Steuerelements geändert wurde, insbesondere nachdem sich der Width- oder Height-Eigenschaftswert geändert hat.
 ms.assetid: a5fc6c82-f9c8-4104-8abe-082c47c56be9
-title: InkPicture. SizeChanged-Ereignis (msink AUT. h)
+title: InkPicture.SizeChanged-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c5675d2a581d9e8973b88fa9fb6e213f54c0e283
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4473bf580e1683c8d410cd1f2cdbaf271302485f51556b68c4fae7a5d6b99ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032038"
 ---
-# <a name="inkpicturesizechanged-event"></a>InkPicture. SizeChanged-Ereignis
+# <a name="inkpicturesizechanged-event"></a>InkPicture.SizeChanged-Ereignis
 
-Tritt auf, nachdem die Größe des [InkPicture](inkpicture-control-reference.md) -Steuer Elements geändert wurde, genauer gesagt, nachdem sich der Wert der [**Breite**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdrawingattributes-get_width) oder [**Höhe**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdrawingattributes-get_height) geändert hat.
+Tritt ein, nachdem die Größe des [InkPicture-Steuerelements](inkpicture-control-reference.md) geändert wurde, insbesondere nachdem sich der [**Width-**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdrawingattributes-get_width) oder [**Height-Eigenschaftswert**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdrawingattributes-get_height) geändert hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,31 +33,31 @@ void SizeChanged(
 
 <dl> <dt>
 
-*Links* \[ in\]
+*Links* \[ In\]
 </dt> <dd>
 
-Die x-Koordinate der linken Seite des [InkPicture](inkpicture-control-reference.md) -Steuer Elements.
+Die x-Koordinate der linken Seite des [InkPicture-Steuerelements.](inkpicture-control-reference.md)
 
 </dd> <dt>
 
-Nach *oben* \[ in\]
+*Top* \[ In\]
 </dt> <dd>
 
-Die y-Koordinate des oberen Rands des [InkPicture](inkpicture-control-reference.md) -Steuer Elements.
+Die y-Koordinate des oberen Rands des [InkPicture-Steuerelements.](inkpicture-control-reference.md)
 
 </dd> <dt>
 
-*Rechts* \[ in\]
+*Rechts* \[ In\]
 </dt> <dd>
 
-Die x-Koordinate der rechten Seite des [InkPicture](inkpicture-control-reference.md) -Steuer Elements.
+Die x-Koordinate der rechten Seite des [InkPicture-Steuerelements.](inkpicture-control-reference.md)
 
 </dd> <dt>
 
-*Unten* \[ in\]
+*Unten* \[ In\]
 </dt> <dd>
 
-Die y-Koordinate für den unteren Rand des [InkPicture](inkpicture-control-reference.md) -Steuer Elements.
+Die y-Koordinate des unteren Rands des [InkPicture-Steuerelements.](inkpicture-control-reference.md)
 
 </dd> </dl>
 
@@ -65,9 +65,9 @@ Die y-Koordinate für den unteren Rand des [InkPicture](inkpicture-control-refer
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in der **\_ iinkpictureevents** -Schnittstelle definiert. Die **\_ iinkpictureevents** -Schnittstelle implementiert die [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle mit dem Bezeichner "DISPID \_ iPeer SizeChanged".
+Diese Ereignismethode wird in der **\_ IInkPictureEvents-Schnittstelle** definiert. Die **\_ IInkPictureEvents-Schnittstelle** implementiert die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) mit dem Bezeichner DISPID \_ IPESizeChanged.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,9 +75,9 @@ Diese Ereignismethode wird in der **\_ iinkpictureevents** -Schnittstelle defini
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
@@ -86,7 +86,7 @@ Diese Ereignismethode wird in der **\_ iinkpictureevents** -Schnittstelle defini
 
 <dl> <dt>
 
-[InkPicture](inkpicture-control-reference.md)
+[Inkpicture](inkpicture-control-reference.md)
 </dt> </dl>
 
  

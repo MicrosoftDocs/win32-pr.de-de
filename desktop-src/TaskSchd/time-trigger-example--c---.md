@@ -1,48 +1,48 @@
 ---
-title: Beispiel für Zeit Auslösung (C++)
-description: Dieses C++-Beispiel zeigt, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad zu einem bestimmten Zeitpunkt geplant ist.
+title: Zeittriggerbeispiel (C++)
+description: In diesem C++-Beispiel wird gezeigt, wie Sie eine Aufgabe erstellen, für die die Ausführung Editor zu einem bestimmten Zeitpunkt geplant ist.
 ms.assetid: e45b18b0-5a7f-4283-b42f-15e9ffcfaff7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 39f7f8d3c8bd1f179b0def9be069d710a2e126a6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 227d6fe24aa63b430376a7ce50d23b4b8ecd282f807315384b42175b9903d1b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119059649"
 ---
-# <a name="time-trigger-example-c"></a>Beispiel für Zeit Auslösung (C++)
+# <a name="time-trigger-example-c"></a>Zeittriggerbeispiel (C++)
 
-Dieses C++-Beispiel zeigt, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad zu einem bestimmten Zeitpunkt geplant ist. Der Task enthält einen zeitbasierten-Auslösers, der eine Start Grenze und eine Endgrenze für den Task angibt. Der Task enthält auch eine Aktion, die den Task zum Ausführen von Notepad angibt. Der Task wird mit einem interaktiven Anmeldetyp registriert. Dies bedeutet, dass der Task im Sicherheitskontext des Benutzers ausgeführt wird, der die Anwendung ausführt. Der Task enthält auch Einstellungen im Leerlauf, die angeben, wie Taskplaner Tasks ausführt, wenn sich der Computer im Leerlauf befindet.
+In diesem C++-Beispiel wird gezeigt, wie Sie eine Aufgabe erstellen, für die die Ausführung Editor zu einem bestimmten Zeitpunkt geplant ist. Die Aufgabe enthält einen zeitbasierten Trigger, der eine Startgrenze und eine Endgrenze für den Task angibt. Die Aufgabe enthält auch eine Aktion, die den Task angibt, der Editor ausgeführt werden soll. Die Aufgabe wird mit einem interaktiven Anmeldetyp registriert. Dies bedeutet, dass die Aufgabe im Sicherheitskontext des Benutzers ausgeführt wird, der die Anwendung ausführt. Die Aufgabe enthält auch Leerlaufeinstellungen, die angeben, wie Taskplaner Aufgaben ausführt, wenn sich der Computer in einem Leerlaufzustand befindet.
 
-Im folgenden Verfahren wird beschrieben, wie eine Aufgabe zum Starten einer ausführbaren Datei zu einem bestimmten Zeitpunkt geplant wird.
+Im folgenden Verfahren wird beschrieben, wie eine Aufgabe so geplant wird, dass eine ausführbare Datei zu einem bestimmten Zeitpunkt gestartet wird.
 
-**So planen Sie den Start von Notepad zu einem bestimmten Zeitpunkt**
+**So planen Sie Editor, um zu einem bestimmten Zeitpunkt zu starten**
 
-1.  Initialisieren Sie com, und legen Sie allgemeine com-Sicherheit fest.
-2.  Erstellen Sie das [**ITaskService**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice) -Objekt.
+1.  Initialisieren Sie COM, und legen Sie die allgemeine COM-Sicherheit fest.
+2.  Erstellen Sie das [**ITaskService-Objekt.**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice)
 
     Mit diesem Objekt können Sie Aufgaben in einem angegebenen Ordner erstellen.
 
-3.  Rufen Sie einen Aufgaben Ordner ab, in dem eine Aufgabe erstellt werden soll.
+3.  Abrufen eines Aufgabenordners zum Erstellen einer Aufgabe.
 
-    Verwenden Sie die [**ITaskService:: GetFolder**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getfolder) -Methode, um den Ordner zu erhalten, und die [**ITaskService:: newtask**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-newtask) -Methode zum Erstellen des [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Objekts.
+    Verwenden Sie die [**ITaskService::GetFolder-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getfolder) um den Ordner abzurufen, und die [**ITaskService::NewTask-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-newtask) um das [**ITaskDefinition-Objekt**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) zu erstellen.
 
-4.  Definieren von Informationen über den Task mithilfe des [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Objekts, z. b. Registrierungsinformationen für den Task.
+4.  Definieren Sie Informationen zur Aufgabe mithilfe des [**ITaskDefinition-Objekts,**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) z. B. die Registrierungsinformationen für die Aufgabe.
 
-    Verwenden Sie die [**RegistrationInfo-Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_registrationinfo) und andere Eigenschaften der [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Schnittstelle, um die Aufgabeninformationen zu definieren.
+    Verwenden Sie die [**RegistrationInfo-Eigenschaft von ITaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_registrationinfo) und andere Eigenschaften der [**ITaskDefinition-Schnittstelle,**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) um die Taskinformationen zu definieren.
 
-5.  Erstellen Sie einen zeitbasierten Trigger mithilfe der Triggers- [**Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_triggers) , um auf die [**ITriggerCollection**](/windows/desktop/api/taskschd/nn-taskschd-itriggercollection) für die Aufgabe zuzugreifen.
+5.  Erstellen Sie mithilfe der [**Trigger-Eigenschaft von ITaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_triggers) einen zeitbasierten Trigger, um auf die [**ITriggerCollection**](/windows/desktop/api/taskschd/nn-taskschd-itriggercollection) für die Aufgabe zuzugreifen.
 
-    Verwenden Sie die [**ITriggerCollection:: Create**](/windows/desktop/api/taskschd/nf-taskschd-itriggercollection-create) -Methode (geben Sie den Typ des zu erstellenden Triggers an), um einen zeitbasierten Trigger zu erstellen. Auf diese Weise können Sie die Anfangs Grenze und die Endgrenze für den-Befehl festlegen, sodass die Aktionen der Aufgabe zur Ausführung zu einem bestimmten Zeitpunkt geplant werden.
+    Verwenden Sie die [**ITriggerCollection::Create-Methode**](/windows/desktop/api/taskschd/nf-taskschd-itriggercollection-create) (die den Typ des Triggers angibt, den Sie erstellen möchten), um einen zeitbasierten Trigger zu erstellen. Dadurch können Sie die Startgrenze und die Endgrenze für den Trigger festlegen, sodass die Ausführung der Aufgabenaktionen zu einem bestimmten Zeitpunkt geplant wird.
 
-6.  Erstellen Sie eine Aktion für die Ausführung der Aufgabe mithilfe der [**Actions-Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_actions) , um auf die [**IAction Collection**](/windows/desktop/api/taskschd/nn-taskschd-iactioncollection) -Schnittstelle für den Task zuzugreifen.
+6.  Erstellen Sie eine Aktion für die auszuführende Aufgabe, indem Sie die [**Actions-Eigenschaft von ITaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_actions) verwenden, um auf die [**IActionCollection-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-iactioncollection) für die Aufgabe zuzugreifen.
 
-    Verwenden Sie die [**IAction Collection:: Create**](/windows/desktop/api/taskschd/nf-taskschd-iactioncollection-create) -Methode, um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**IExecAction**](/windows/desktop/api/taskschd/nn-taskschd-iexecaction) -Objekt verwendet, das eine Aktion darstellt, die einen Befehlszeilen Vorgang ausführt.
+    Verwenden Sie die [**IActionCollection::Create-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-iactioncollection-create) um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**IExecAction-Objekt**](/windows/desktop/api/taskschd/nn-taskschd-iexecaction) verwendet, das eine Aktion darstellt, die einen Befehlszeilenvorgang ausführt.
 
-7.  Registrieren Sie die Aufgabe mit der [**ITaskFolder:: RegisterTaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertaskdefinition) -Methode.
+7.  Registrieren Sie die Aufgabe mithilfe der [**ITaskFolder::RegisterTaskDefinition-Methode.**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertaskdefinition)
 
-Im folgenden Beispiel wird gezeigt, wie Sie einen Task so planen, dass der Editor eine Minute nach der Registrierung der Aufgabe ausgeführt wird.
+Das folgende C++-Beispiel zeigt, wie Sie eine Aufgabe so planen, dass sie Editor eine Minute nach der Registrierung des Tasks ausgeführt wird.
 
 
 ```C++
@@ -415,12 +415,12 @@ int __cdecl wmain()
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

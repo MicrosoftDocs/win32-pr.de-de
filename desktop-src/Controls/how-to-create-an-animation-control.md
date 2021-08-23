@@ -1,37 +1,37 @@
 ---
-title: Erstellen eines Animations Steuer Elements
-description: In diesem Thema wird veranschaulicht, wie ein Animations Steuerelement erstellt wird.
+title: Erstellen eines Animationssteuerelements
+description: In diesem Thema wird veranschaulicht, wie ein Animationssteuerelement erstellt wird.
 ms.assetid: 5852B636-F3D0-47A4-82F6-8BE570013E1B
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d4ff190617996e42e6580b82311fb51f4248000
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8117d7c9393a828786532bd3d3fbfcf4f4eaaf6bb1bfdccdc5a2f97fa1c5cb38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119435820"
 ---
-# <a name="how-to-create-an-animation-control"></a>Erstellen eines Animations Steuer Elements
+# <a name="how-to-create-an-animation-control"></a>Erstellen eines Animationssteuerelements
 
-In diesem Thema wird veranschaulicht, wie ein Animations Steuerelement erstellt wird. Das dazugehörige C++-Codebeispiel erstellt ein Animations Steuerelement in einem Dialogfeld. Sie positioniert das Animations Steuerelement unterhalb eines angegebenen Steuer Elements und legt die Dimensionen des Animations Steuer Elements auf der Grundlage der Abmessungen eines Frames im Audio-Video Interleaved (AVI)-Clip fest.
+In diesem Thema wird veranschaulicht, wie ein Animationssteuerelement erstellt wird. Im zugehörigen C++-Codebeispiel wird ein Animationssteuerelement in einem Dialogfeld erstellt. Es positioniert das Animationssteuerelement unter einem angegebenen Steuerelement und legt die Abmessungen des Animationssteuerelements basierend auf den Abmessungen eines Frames im clip Audio-Video Interleaved (AVI) fest.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 -   AVI-Dateien
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-create-an-instance-of-the-animation-control"></a>Schritt 1: Erstellen Sie eine Instanz des Animations Steuer Elements.
+### <a name="step-1-create-an-instance-of-the-animation-control"></a>Schritt 1: Erstellen Sie eine Instanz des Animationssteuerelements.
 
-Verwenden Sie das [**animieren \_ Create**](/windows/desktop/api/Commctrl/nf-commctrl-animate_create) -Makro, um eine Instanz des Animations Steuer Elements zu erstellen.
+Verwenden Sie das Makro [**Animieren \_ erstellen,**](/windows/desktop/api/Commctrl/nf-commctrl-animate_create) um eine Instanz des Animationssteuerelements zu erstellen.
 
 
 ```C++
@@ -44,9 +44,9 @@ hwndAnim = Animate_Create(hwndDlg, IDC_ANIMATE,
 
 
 
-### <a name="step-2-position-the-animation-control"></a>Schritt 2: Positionieren Sie das Animations Steuerelement.
+### <a name="step-2-position-the-animation-control"></a>Schritt 2: Positionieren des Animationssteuerelements.
 
-Die Bildschirm Koordinaten der angegebenen Steuerelement Schaltfläche werden angezeigt.
+Abrufen der Bildschirmkoordinaten der angegebenen Steuerelementschaltfläche.
 
 
 ```C++
@@ -56,7 +56,7 @@ GetWindowRect(GetDlgItem(hwndDlg, nIDCtl), &rc);
 
 
 
-Die Koordinaten der unteren linken Ecke werden in Client Koordinaten konvertiert.
+Konvertieren Sie die Koordinaten der unteren linken Ecke in Clientkoordinaten.
 
 
 ```C++
@@ -68,7 +68,7 @@ ScreenToClient(hwndDlg, &pt);
 
 
 
-Positionieren Sie das Animations Steuerelement unterhalb der angegebenen Steuerelement Schaltfläche.
+Positionieren Sie das Animationssteuerelement unterhalb der angegebenen Steuerelementschaltfläche.
 
 
 ```C++
@@ -82,7 +82,7 @@ SetWindowPos(hwndAnim, 0, pt.x, pt.y + 20,
 
 ### <a name="step-3-open-the-avi-clip"></a>Schritt 3: Öffnen Sie den AVI-Clip.
 
-Aufrufen Sie das Makro [**animieren \_ Open**](/windows/desktop/api/Commctrl/nf-commctrl-animate_open) , um den AVI-Clip zu öffnen und den ersten Frame im Animations Steuerelement anzuzeigen. Ruft die **ShowWindow** -Funktion auf, um das Animations Steuerelement sichtbar zu machen.
+Rufen Sie das [**Makro Animieren \_ öffnen**](/windows/desktop/api/Commctrl/nf-commctrl-animate_open) auf, um den AVI-Clip zu öffnen und den ersten Frame im Animationssteuerelement anzuzeigen. Rufen Sie die **ShowWindow-Funktion** auf, um das Animationssteuerelement sichtbar zu machen.
 
 
 ```C++
@@ -151,21 +151,21 @@ HWND CreateAnimationCtrl(HWND hwndDlg, int nIDCtl)
 
 <dl> <dt>
 
-[Informationen zu Animations Steuerelementen](animation-control-overview.md)
+[Informationen zu Animationssteuerelementen](animation-control-overview.md)
 </dt> <dt>
 
-[Referenz zum Animations Steuerelement](bumper-animation-animation-control-reference.md)
+[Referenz zum Animationssteuerelement](bumper-animation-animation-control-reference.md)
 </dt> <dt>
 
-[Verwenden von Animations Steuerelementen](using-animation-control.md)
+[Verwenden von Animationssteuerelementen](using-animation-control.md)
 </dt> <dt>
 
 [Animation](animation-control-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

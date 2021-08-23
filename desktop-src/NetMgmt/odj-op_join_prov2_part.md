@@ -5,16 +5,16 @@ ms.assetid: c220627e-49bd-49f2-a03c-9cdef4b973ca
 ms.topic: reference
 ms.date: 10/12/2020
 ms.reviewer: jsimmons
-ms.openlocfilehash: f8537b6ca9627a15470115a20f99082dae80e040
-ms.sourcegitcommit: 1e64562147b11f90de802c2431173582d066fae6
+ms.openlocfilehash: fa6853846695c02aabf85d0be865254608b9d4c00f39a372e99f1332e6eb4003
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "104102523"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119012458"
 ---
-# <a name="op_joinprov2_part-structure"></a>OP_JOINPROV2_PART Struktur
+# <a name="op_joinprov2_part-structure"></a>OP_JOINPROV2_PART-Struktur
 
-Enthält zusätzliche Informationen, die zum Konfigurieren eines Clients verwendet werden, der einer Domäne hinzugefügt wurde.
+Enthält zusätzliche Informationen, die zum Konfigurieren eines Clients verwendet werden, der einer Domäne beigetreten ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,32 +34,32 @@ typedef struct _OP_JOINPROV2_PART
 
 ### <a name="dwflags"></a>dwFlags
 
-Muss entweder auf NULL oder auf einen der folgenden Werte festgelegt werden:
+Muss entweder auf 0 (null) oder einen der folgenden Werte festgelegt werden:
 
 |Wert|Bedeutung|
 | --- | --- |
-|OP_JP2_FLAG_PERSISTENTSITE (0x00000001)|Die in "lpsitename" angegebene Site muss als dauerhafter Standort für den Client angesehen werden.|
+|OP_JP2_FLAG_PERSISTENTSITE (0x00000001)|Der in lpSiteName angegebene Standort MUSS als dauerhafter Standort für den Client betrachtet werden.|
 
-### <a name="lpnetbiosname"></a>lpnetbiosname
+### <a name="lpnetbiosname"></a>lpNetbiosName
 
-Enthält den NetBIOS-Namen des Computer Kontos im Unicode-Format.
+Enthält den Netbios-Namen des Computerkontos im Unicode-Format.
 
-### <a name="lpsitename"></a>lpsitename
+### <a name="lpsitename"></a>lpSiteName
 
-Enthält den Namen der Active Directory Site, die vom Client verwendet werden soll.
+Enthält den Namen des Active Directory-Standorts, den der Client verwenden soll.
 
-### <a name="lpprimarydnsdomain"></a>lpprimarydnsdomain
+### <a name="lpprimarydnsdomain"></a>lpPrimaryDNSDomain
 
-Enthält den primären DNS-Domänen Namen, den der Client verwenden soll.
+Enthält den primären DNS-Domänennamen, den der Client verwenden soll.
 
 ### <a name="dwreserved"></a>dwReserved
 
-Für zukünftige Verwendung reserviert und muss auf 0 (null) festgelegt werden.
+Für die zukünftige Verwendung reserviert und muss auf 0 festgelegt werden.
 
 ### <a name="lpreserved"></a>lpReserved
 
-Für zukünftige Verwendung reserviert und muss auf NULL festgelegt werden.
+Für die zukünftige Verwendung reserviert und muss auf NULL festgelegt werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[**IDL-Definitionen im Offline-Domänen Beitritt**](odj-idl.md)
+[**IDL-Definitionen für den Offlinedomänen-Join**](odj-idl.md)
