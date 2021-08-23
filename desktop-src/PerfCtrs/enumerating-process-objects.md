@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Beispiel wird die Funktion pdhenumubjectitems aufgerufen, um die Instanzen und Leistungsindikatoren der Prozess Objekte auf dem lokalen Computer aufzulisten.
+description: Im folgenden Beispiel wird die PdhEnumObjectItems-Funktion zum Auflisten der Instanzen und Leistungsindikatoren der Prozessobjekte auf dem lokalen Computer aufruft.
 ms.assetid: d7518ba6-a0f1-4985-aa2c-1ca15a0ceb02
-title: Auflisten von Prozess Objekten
+title: Aufzählen von Prozessobjekten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 329afb511a4551ba0449b826c7eece26d609816b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 072510f27ba91a3cad3b76cd2f0c1c04e8c9dd10dd0304f8665d12d16283fda4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349223"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061188"
 ---
-# <a name="enumerating-process-objects"></a>Auflisten von Prozess Objekten
+# <a name="enumerating-process-objects"></a>Aufzählen von Prozessobjekten
 
-Im folgenden Beispiel wird die Funktion [**pdhenumubjectitems**](/windows/desktop/api/Pdh/nf-pdh-pdhenumobjectitemsa) aufgerufen, um die Instanzen und Leistungsindikatoren der Prozess Objekte auf dem lokalen Computer aufzulisten.
+Im folgenden Beispiel wird die [**PdhEnumObjectItems-Funktion**](/windows/desktop/api/Pdh/nf-pdh-pdhenumobjectitemsa) zum Auflisten der Instanzen und Leistungsindikatoren der Prozessobjekte auf dem lokalen Computer aufruft.
 
 
 ```C++

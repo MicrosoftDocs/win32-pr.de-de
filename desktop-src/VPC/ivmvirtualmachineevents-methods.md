@@ -1,37 +1,37 @@
 ---
-title: Ivmvirtualmachineevents-Methoden
-description: Die ivmvirtualmachineevents-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: IVMVirtualMachineEvents-Methoden
+description: Die IVMVirtualMachineEvents-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: C248949A-4F01-43B3-9841-6752A592E646
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14b4c57cbe5db6861246d09c0054ffcc2c651a9e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9a344c6dd927757278ed1dcf4e8f92c08f8f5eff9e858f458a1bc665e1e0d84e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056757"
 ---
-# <a name="ivmvirtualmachineevents-methods"></a>Ivmvirtualmachineevents-Methoden
+# <a name="ivmvirtualmachineevents-methods"></a>IVMVirtualMachineEvents-Methoden
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Die [**ivmvirtualmachineevents**](ivmvirtualmachineevents.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IVMVirtualMachineEvents-Schnittstelle**](ivmvirtualmachineevents.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Onadditionsavailable-Methode**](ivmvirtualmachineevents-onadditionsavailable.md)
--   [**Onadditionsuninstallierte-Methode**](ivmvirtualmachineevents-onadditionsuninstalled.md)
--   [**Onconfigurationchanged-Methode**](ivmvirtualmachineevents-onconfigurationchanged.md)
--   [**Ondiskoudef Space-Methode**](ivmvirtualmachineevents-ondiskoutofspace.md)
--   [**Onenhancedvideomodechanged-Methode**](ivmvirtualmachineevents-onenhancedvideomodechanged.md)
--   [**Onguestlogoff-Methode**](ivmvirtualmachineevents-onguestlogoff.md)
--   [**Onguestshutdown-Methode**](ivmvirtualmachineevents-onguestshutdown.md)
--   [**Onheartbeatbeendete-Methode**](ivmvirtualmachineevents-onheartbeatstopped.md)
--   [**Onrequestshutdown-Methode**](ivmvirtualmachineevents-onrequestshutdown.md)
--   [**Onreset-Methode**](ivmvirtualmachineevents-onreset.md)
+-   [**OnAdditionsAvailable-Methode**](ivmvirtualmachineevents-onadditionsavailable.md)
+-   [**OnAdditionsUninstalled-Methode**](ivmvirtualmachineevents-onadditionsuninstalled.md)
+-   [**OnConfigurationChanged-Methode**](ivmvirtualmachineevents-onconfigurationchanged.md)
+-   [**OnDiskOutOfSpace-Methode**](ivmvirtualmachineevents-ondiskoutofspace.md)
+-   [**OnEnhancedVideoModeChanged-Methode**](ivmvirtualmachineevents-onenhancedvideomodechanged.md)
+-   [**OnGuestLogoff-Methode**](ivmvirtualmachineevents-onguestlogoff.md)
+-   [**OnGuestShutdown-Methode**](ivmvirtualmachineevents-onguestshutdown.md)
+-   [**OnHeartbeatStopped-Methode**](ivmvirtualmachineevents-onheartbeatstopped.md)
+-   [**OnRequestShutdown-Methode**](ivmvirtualmachineevents-onrequestshutdown.md)
+-   [**OnReset-Methode**](ivmvirtualmachineevents-onreset.md)
 -   [**OnStateChange-Methode**](ivmvirtualmachineevents-onstatechange.md)
--   [**Onseriplefault-Methode**](ivmvirtualmachineevents-ontriplefault.md)
+-   [**OnTripleFault-Methode**](ivmvirtualmachineevents-ontriplefault.md)
 
- 
+ 
 
- 
+ 

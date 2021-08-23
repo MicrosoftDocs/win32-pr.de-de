@@ -1,84 +1,84 @@
 ---
-title: Remotedesktop Gateway-Klassen
-description: Der WMI-Anbieter für Remotedesktop Gateway (RD-Gateway) stellt die folgenden Klassen bereit.
+title: Remotedesktop Gatewayklassen
+description: Der WMI-Anbieter Remotedesktop Gateway (RD-Gateway) stellt die folgenden Klassen bereit.
 ms.assetid: 482ba056-0de7-4c91-816c-dd3c926662ef
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61d17adca523833f3418661cd3f9851d7c814cdc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 19e498c7520d3c69fce970ed299ef02ef8fb6a7504da4c436994b539c0df397d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103713290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000060"
 ---
-# <a name="remote-desktop-gateway-classes"></a>Remotedesktop Gateway-Klassen
+# <a name="remote-desktop-gateway-classes"></a>Remotedesktop Gatewayklassen
 
-Der WMI-Anbieter für Remotedesktop Gateway (RD-Gateway) stellt die folgenden Klassen bereit.
+Der WMI-Anbieter Remotedesktop Gateway (RD-Gateway) stellt die folgenden Klassen bereit.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Win32-"- \_ gatewayconnection"**](win32-tsgatewayconnection.md)
+[**Win32 \_ TSGatewayConnection**](win32-tsgatewayconnection.md)
 </dt> <dd>
 
-Stellt eine Verbindung zwischen einem Client Computer und einem RD-Gateway Server dar.
+Stellt eine Verbindung zwischen einem Clientcomputer und einem RD-Gatewayserver dar.
 
 </dd> <dt>
 
-[**Win32- \_ faigatewayconnectionauthorizationpolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
+[**Win32 \_ TSGatewayConnectionAuthorizationPolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
 </dt> <dd>
 
-Beschreibt eine Remotedesktop Verbindungs Autorisierungs Richtlinie (RD-CAP). RD-CAPs werden verwendet, um zu bestimmen, ob ein Benutzer eine Verbindung mit dem RD-Gateway-Server herstellen darf.
+Beschreibt eine Remotedesktop Verbindungsautorisierungsrichtlinie (RD CAP). RD-CAPs werden verwendet, um zu bestimmen, ob ein Benutzer eine Verbindung mit dem RD-Gatewayserver herstellen darf.
 
 </dd> <dt>
 
-[**Win32-"t- \_ gatewayloadbalancer"**](win32-tsgatewayloadbalancer.md)
+[**Win32 \_ TSGatewayLoadBalancer**](win32-tsgatewayloadbalancer.md)
 </dt> <dd>
 
-Beschreibt eine Gruppe von RD-Gateway Lasten Ausgleichs Servern. Diese werden verwendet, um einen Lastenausgleich RD-Gateway Verbindungen über mehrere Server hinweg durchzusetzen.
+Beschreibt einen Satz von RD-Gateway-Lastenausgleichsservern. Diese werden zum Lastenausgleich von RD-Gatewayverbindungen über mehrere Server hinweg verwendet.
 
 </dd> <dt>
 
-[**Win32-"t- \_ gatewayradiusserver"**](win32-tsgatewayradiusserver.md)
+[**Win32 \_ TSGatewayRADIUSServer**](win32-tsgatewayradiusserver.md)
 </dt> <dd>
 
-Beschreibt einen Remote Authentication Dial-in User Service Server (RADIUS), der über eine Reihe von Remotedesktopdienste Verbindungs Autorisierungs Richtlinien (RD-CAPs) verfügt.
+Beschreibt einen RADIUS-Server (Remote Authentication Dial-In User Service), der über eine Reihe von Remotedesktopdienste Verbindungsautorisierungsrichtlinien (RD CAPs) verfügt.
 
 </dd> <dt>
 
-[**Win32- \_ faigatewayresourceauthorizationpolicy**](win32-tsgatewayresourceauthorizationpolicy.md)
+[**Win32 \_ TSGatewayResourceAuthorizationPolicy**](win32-tsgatewayresourceauthorizationpolicy.md)
 </dt> <dd>
 
-Beschreibt eine Remotedesktop-Ressourcen Autorisierungs Richtlinie (RD-RAP). Eine RD-RAP wird verwendet, um zu entscheiden, ob ein Benutzer über RD-Gateway autorisiert ist, eine Verbindung mit einer angegebenen Ressource herzustellen.
+Beschreibt eine Remotedesktop-Ressourcenautorisierungsrichtlinie (RD-ABS). Mithilfe eines RD-RD-ENTR wird entschieden, ob ein Benutzer berechtigt ist, über das RD-Gateway eine Verbindung mit einer angegebenen Ressource herzustellen.
 
 </dd> <dt>
 
-[**Win32-Datei " \_ zgatewayresourcegroup"**](win32-tsgatewayresourcegroup.md)
+[**Win32 \_ TSGatewayResourceGroup**](win32-tsgatewayresourcegroup.md)
 </dt> <dd>
 
-Beschreibt eine Ressourcengruppe, die eine Gruppe von Ressourcen (Computernamen) einer einzelnen Entität zuordnet.
+Beschreibt eine Ressourcengruppe, die eine Gruppe von Ressourcen (Computernamen) einer einzelnen Entität zulistet.
 
 </dd> <dt>
 
-[**Win32- \_ Gatewayserver**](win32-tsgatewayserver.md)
+[**Win32 \_ TSGatewayServer**](win32-tsgatewayserver.md)
 </dt> <dd>
 
-Wird für RD-Gateway Server spezifische Vorgänge verwendet.
+Wird für serverspezifische Vorgänge des RD-Gateways verwendet.
 
 </dd> <dt>
 
-[**Win32-Datei- \_ gatewayserversettings**](win32-tsgatewayserversettings.md)
+[**Win32 \_ TSGatewayServerSettings**](win32-tsgatewayserversettings.md)
 </dt> <dd>
 
-Stellt Methoden und Eigenschaften zum Anzeigen und konfigurieren RD-Gateway Servereinstellungen bereit.
+Stellt Methoden und Eigenschaften zum Anzeigen und Konfigurieren von RD-Gatewayservereinstellungen bereit.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

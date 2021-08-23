@@ -1,49 +1,49 @@
 ---
-description: XAudio2 Voices können automatische Samplingrate-Konvertierungen durchführen, wenn die Eingabe Stichproben Rate von der Eingabe Stichproben Rate ihrer Ausgabe Stimmen abweicht.
+description: XAudio2-Stimmen können automatische Stichprobenratenkonvertierungen durchführen, wenn sich ihre Eingabestichprobenrate von der Eingabestichprobenrate ihrer Ausgabestimmen unterscheiden.
 ms.assetid: be34ce62-6552-45e2-a247-830ab55ea9ec
-title: XAudio2 Sample-Raten Konvertierungen
+title: XAudio2 Sample Rate Conversions
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d437a45f9e896826bedc1418382fb257201722d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: af82983d1d9307551e516f1b8b60676b4b250450da65f416c340446c5a906f99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962523"
 ---
-# <a name="xaudio2-sample-rate-conversions"></a>XAudio2 Sample-Raten Konvertierungen
+# <a name="xaudio2-sample-rate-conversions"></a>XAudio2 Sample Rate Conversions
 
-XAudio2 Voices können automatische Samplingrate-Konvertierungen durchführen, wenn die Eingabe Stichproben Rate von der Eingabe Stichproben Rate ihrer Ausgabe Stimmen abweicht.
+XAudio2-Stimmen können automatische Stichprobenratenkonvertierungen durchführen, wenn sich ihre Eingabestichprobenrate von der Eingabestichprobenrate ihrer Ausgabestimmen unterscheiden.
 
-Für Abtastraten Konvertierungen gelten folgende Regeln:
+Beispielratenkonvertierungen folgen den folgenden Regeln:
 
--   Die Stichprobenrate für die Spracheingabe ist korrigiert.
+-   Die Abtastrate der Spracheingabe ist fest.
 
-    Stimmen können nur die Eingabe Stichproben Rate verarbeiten, die bei der Erstellung angegeben wurde. Bei der [**Bewältigung von Stimmen**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2masteringvoice) und [**Teil Mischungen**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2submixvoice)wird die Eingabe Stichproben Rate mit dem *inputsamplerate* [**-Argument**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-createsubmixvoice) für die [**IXAudio2::::**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-createmasteringvoice) Bei Quell stimmen wird die Eingabe Stichproben Rate der Stimme durch das psourceformat-Argument der [**IXAudio2:: | atesourcevoice**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-createsourcevoice) -Funktion angegeben.
+    Stimmen können nur die Eingabestichprobenrate verarbeiten, die beim Erstellen angegeben wurde. Für [**die Masteringstimmen**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2masteringvoice) und Untermischungsstimmen wird die Eingabestichprobenrate mit dem *InputSampleRate-Argument* für die [**Funktionen IXAudio2::CreateMasteringVoice**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-createmasteringvoice) und [**IXAudio2::CreateSubmixVoice**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-createsubmixvoice) angegeben. [](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2submixvoice) Bei Quellstimmen wird die Eingabestichprobenrate der Stimme durch das pSourceFormat-Argument für die [**IXAudio2::CreateSourceVoice-Funktion**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-createsourcevoice) angegeben.
 
--   Alle Ausgabe Stimmen einer Stimme müssen die gleiche Eingabe Stichproben Rate aufweisen.
+-   Alle Ausgabestimmen einer Stimme müssen die gleiche Eingabestichprobenrate haben.
 
-    Stimmen können von Ihrer Eingabe Stichproben Rate in eine beliebige Ausgabe Samplingrate konvertieren, aber alle Ausgabe Stimmen der Stimme müssen die gleiche Eingabe Stichproben Rate aufweisen. Beispielsweise könnte eine Stimme an eine beliebige Anzahl von Stimmen mit einer Eingabe Stichproben Rate von 22 kHz ausgegeben werden. Wenn dieselbe Stimme jedoch mehrere Ausgabe Stimmen enthielt, die jeweils eine andere Eingabe Stichprobe aufweisen, wäre das audiodiagramm nicht gültig.
+    Stimmen können von ihrer Eingabestichprobenrate in eine beliebige Ausgabestichprobenrate konvertiert werden, aber alle Ausgabestimmen der Stimme müssen die gleiche Eingabestichprobenrate haben. Beispielsweise könnte eine Stimme mit einer Eingabestichprobenrate von 22 kHz an eine beliebige Anzahl von Stimmen ausgegeben werden. Wenn dieselbe Stimme jedoch mehrere Ausgabestimmen hätte, von denen jede eine andere Eingabestichprobenrate auftraten, wäre das Audiodiagramm ungültig.
 
--   Die Verarbeitung von Samplingrate erfolgt nur bei Bedarf.
+-   Die Konvertierung der Stichprobenrate erfolgt nur bei Bedarf.
 
-    Das Umrechnen von Audiodaten in eine andere Stichprobenrate führt zu einem höheren Verarbeitungsaufwand, der besser zu vermeiden ist. Wenn die Eingabe Stichproben Rate einer Stimme mit der Eingabe Stichproben Rate der Ausgabe Stimmen übereinstimmt, wird diese Konvertierung nicht durchgeführt, und die Verarbeitungszeit wird verkürzt.
+    Das Konvertieren von Audiodaten in eine andere Abtastrate verursacht mehr Verarbeitungsaufwand, was zu vermeiden ist. Wenn die Eingabestichprobenrate einer Stimme mit der Eingabestichprobenrate ihrer Ausgabestimmen entspricht, erfolgt diese Konvertierung nicht, und die Verarbeitungszeit wird verkürzt.
 
--   Die Ausgabe Stichproben Rate kann sich über die Lebensdauer einer Stimme unterscheiden.
+-   Die Ausgabestichprobenrate kann im Laufe der Lebensdauer einer Stimme variieren.
 
-    Die Ausgabe Stichproben Rate einer Stimme ist nicht korrigiert. Solange alle Ausgabe Stimmen die gleiche Eingabe Stichproben Rate aufweisen, ist das audiodiagramm gültig. Wenn eine Stimme so geändert wird, dass Sie in neue stimmen mit einer anderen Eingabe Stichproben Rate ausgegeben wird, konvertiert die Stimme in die Eingabe Stichproben Rate der neuen Stimmen.
+    Die Ausgabestichprobenrate einer Stimme ist nicht festgelegt. Solange alle Ausgabestimmen die gleiche Eingabestichprobenrate haben, ist das Audiodiagramm gültig. Wenn eine Stimme so geändert wird, dass sie an neue Stimmen mit einer anderen Eingabestichprobenrate ausgegeben wird, wird die Stimme in die Eingabestichprobenrate der neuen Stimmen konvertiert.
 
-Es gibt einige Szenarien, in denen es erforderlich ist, eine unter Mischungs Stimme hinzuzufügen, um eine Stichproben Raten Konvertierung zwischen Stimmen auszuführen. Wenn eine Stimme mit verschiedenen Eingabe Stichproben Raten in Stimmen ausgeben muss, kann nur eine der Stimmen eine direkte Ausgabe der ursprünglichen Stimme sein. Da alle Ausgabe Stimmen der Stimme die gleiche Eingabe Stichproben Rate aufweisen müssen, erhalten die anderen Stimmen indirekt eine Ausgabe. Es muss eine teilmix-Stimme mit der richtigen Eingabe Stichproben Rate vorhanden sein, die zwischen der ursprünglichen Stimme und der beabsichtigten Ausgabesprache liegt.
+Es gibt einige Szenarien, in denen es erforderlich ist, eine Untermischungsstimme hinzuzufügen, um eine Konvertierung der Stichprobenrate zwischen Stimmen durchzuführen. Wenn eine Stimme an Stimmen mit verschiedenen Eingabestichprobenraten ausgegeben werden muss, kann nur eine der Stimmen eine direkte Ausgabe der ursprünglichen Stimme sein. Da alle Ausgabestimmen einer Stimme die gleiche Eingabestichprobenrate haben müssen, erhalten die anderen Stimmen indirekt eine Ausgabe. Es muss eine Untermischung der Stimme mit der richtigen Eingabestichprobenrate zwischen der ursprünglichen Stimme und der beabsichtigten Ausgabestimme geben.
 
-Angenommen, eine Quell Stimme mit einer Eingabe Stichproben Rate von 22 kHz muss in eine teilmischungs Sprache mit einer Eingabe Stichproben Rate von 11 kHz und eine Stimme mit einer Eingabe Stichproben Rate von 44,1 kHz ausgegeben werden. Da die beiden Ausgabe Stimmen unterschiedliche Eingabe Stichproben Raten aufweisen, müssen Sie mehr Teil Mischungs Stimmen zwischen der ursprünglichen Stimme und den vorgesehenen Ausgabe Stimmen einfügen. Um die Genauigkeit der Quell Stimme beizubehalten und unnötige, aufwändige Konvertierungen in höhere Stichproben Raten zu vermeiden, müssen Sie zwei Teil Mischungs stimmen mit 22 kHz-Stichproben Eingabe Raten in das Diagramm einfügen. Eine teilmischungs Stimme würde bei einer Teil Mischungs Stimme mit dem eingabeeffekt bei 11 kHz ausgegeben werden, und die andere unter Mischungs Sprache würde bei 44,1 kHz an die Stimme der Stimme ausgeben.
+Betrachten Sie beispielsweise eine Quellstimme mit einer Eingabestichprobenrate von 22 kHz, die an eine Untermischungsstimme mit einer Eingabestichprobenrate von 11 kHz und einer Masterstimme mit einer Eingabestichprobenrate von 44,1 kHz ausgegeben werden muss. Da die beiden Ausgabestimmen unterschiedliche Eingabestichprobenraten haben, müssen Sie mehr Untermischungsstimmen zwischen der ursprünglichen Stimme und den beabsichtigten Ausgabestimmen einfügen. Um die Genauigkeit der Quellstimme zu erhalten und unnötige teure Konvertierungen in höhere Stichprobenraten zu vermeiden, müssen Sie zwei Untermischungsstimmen mit 22-kHz-Beispieleingaberaten in das Diagramm einfügen. Eine Untermischungsstimme würde mit 11 kHz an die Untermischungsstimme mit dem Halleffekt ausgegeben, und die andere Untermischungsstimme würde mit 44,1 kHz an die Masterstimme ausgegeben.
 
-## <a name="examples-of-sample-rate-conversion-in-audio-graphs"></a>Beispiele für die Stichproben Raten Konvertierung in audiodiagrammen
+## <a name="examples-of-sample-rate-conversion-in-audio-graphs"></a>Beispiele für die Konvertierung der Abtastrate in Audiographen
 
-Alle Stimmen haben dieselbe Stichproben Eingabe Rate. im audiodiagramm wird keine Stichproben Raten Konvertierung durchgeführt.![im audiodiagramm wird keine Stichproben Raten Konvertierung durchgeführt.](images/xaudio2-sample-rate-conversions-1.png)
+Alle Stimmen haben die gleiche Stichprobeneingaberate. Im Audiodiagramm wird keine Konvertierung der Abtastrate durchgeführt.![Im Audiodiagramm wird keine Konvertierung der Abtastrate durchgeführt.](images/xaudio2-sample-rate-conversions-1.png)
 
-Alle Stimmen haben dieselbe Stichproben Eingabe Rate außer der Stimme der Stimme. die Stichproben Raten Konvertierung erfolgt nur bei Daten, die an die Stimme der Stimme erfolgen. ![die Stichproben Raten Konvertierung erfolgt nur bei Daten, die an die Stimme der Stimme erfolgen.](images/xaudio2-sample-rate-conversions-2.png)
+Alle Stimmen haben die gleiche Stichprobeneingaberate außer der Masterstimme. Die Konvertierung der Stichprobenrate erfolgt nur für Daten, die an die Masterstimme gehen. ![Die Konvertierung der Stichprobenrate erfolgt nur für Daten, die an die Masterstimme gehen.](images/xaudio2-sample-rate-conversions-2.png)
 
-Stimmen haben unterschiedliche Stichproben Eingabe Raten und erfordern mehr teilmischungs Stimmen, um Stichproben Raten Konvertierungen auszuführen. die Stichproben Raten Konvertierung erfolgt an mehreren Stellen im audiodiagramm. ![die Stichproben Raten Konvertierung erfolgt an mehreren Stellen im audiodiagramm.](images/xaudio2-sample-rate-conversions-3.png)
+Stimmen haben unterschiedliche Stichprobeneingaberaten und erfordern mehr Untermischungsstimmen, um Konvertierungen der Stichprobenrate durchzuführen. Die Konvertierung der Abtastrate wird an mehreren Stellen im Audiographen durchgeführt. ![Die Konvertierung der Abtastrate wird an mehreren Stellen im Audiographen durchgeführt.](images/xaudio2-sample-rate-conversions-3.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

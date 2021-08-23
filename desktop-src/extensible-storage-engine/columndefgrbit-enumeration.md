@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der columndefgrbit-Enumeration.
-title: Columndefgrbit-Enumeration
+description: Weitere Informationen finden Sie unter ColumndefGrbit-Enumeration.
+title: ColumndefGrbit-Enumeration
 TOCTitle: ColumndefGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.ColumndefGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.columndefgrbit(v=EXCHG.10)
@@ -50,21 +50,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d2c94dcf7d454c5f0ea11fcee0bd46655099dfd4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2bd26a3dac291d78b101aa56f186d9b31f7a927b1eca3e29febc7773e3c0939
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356551"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042458"
 ---
-# <a name="columndefgrbit-enumeration"></a>Columndefgrbit-Enumeration
+# <a name="columndefgrbit-enumeration"></a>ColumndefGrbit-Enumeration
 
 Optionen für die JET_COLUMNDEF Struktur.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -99,63 +99,63 @@ public enum ColumndefGrbit
 </tr>
 <tr class="even">
 <td></td>
-<td>Columnfixed</td>
-<td>Die Spalte wird korrigiert. Es wird immer die gleiche Menge an Speicherplatz in einer Zeile verwendet, unabhängig davon, wie viele Daten in der Spalte gespeichert werden. Columnfixed kann nicht mit columntagged verwendet werden. Dieses Bit kann nicht mit langen Werten verwendet werden (d. h. JET_coltyp. LONGTEXT und JET_coltyp. LONGBINARY).</td>
+<td>ColumnFixed</td>
+<td>Die Spalte wird korrigiert. Es wird immer die gleiche Menge an Speicherplatz in einer Zeile verwendet, unabhängig davon, wie viele Daten in der Spalte gespeichert werden. ColumnFixed kann nicht mit ColumnTagged verwendet werden. Dieses Bit kann nicht mit langen Werten verwendet werden (d. h. JET_coltyp. LongText und JET_coltyp. LongBinary).</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columntagged</td>
-<td>Die Spalte wird gekennzeichnet. Markierte Spalten beanspruchen keinen Speicherplatz in der Datenbank, wenn Sie keine Daten enthalten. Dieses Bit kann nicht mit columnfixed verwendet werden.</td>
+<td>ColumnTagged</td>
+<td>Die Spalte wird markiert. Markierte Spalten nehmen keinen Speicherplatz in der Datenbank ein, wenn sie keine Daten enthalten. Dieses Bit kann nicht mit ColumnFixed verwendet werden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Columnnotnull</td>
-<td>Die Spalte darf nie auf einen NULL-Wert festgelegt werden. Unter Windows XP kann dies nur auf fixierte Spalten (Bit, Byte, Integer usw.) angewendet werden.</td>
+<td>ColumnNotNULL</td>
+<td>Die Spalte darf nie auf einen NULL-Wert festgelegt werden. Auf Windows XP kann dies nur auf feste Spalten (Bit, Byte, ganze Zahl usw.) angewendet werden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columnversion</td>
-<td>Die Spalte ist eine Versions Spalte, die die Version der Zeile angibt. Der Wert dieser Spalte beginnt bei Null und wird für jedes Update in der Zeile automatisch inkrementiert. Diese Option kann nur auf JET_coltyp angewendet werden. Lange Spalten. Diese Option kann nicht mit ' columnautoincrement ', ' columnescrowupdate ' oder ' columntagged ' verwendet werden.</td>
+<td>ColumnVersion</td>
+<td>Die Spalte ist eine Versionsspalte, die die Version der Zeile angibt. Der Wert dieser Spalte beginnt bei 0 (null) und wird für jedes Update der Zeile automatisch erhöht. Diese Option kann nur auf die JET_coltyp. Lange Spalten. Diese Option kann nicht mit ColumnAutoincrement, ColumnEscrowUpdate oder ColumnTagged verwendet werden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Columnautoincrement</td>
-<td>Die Spalte wird automatisch inkrementiert. Die Zahl ist eine steigende Zahl, die in einer Tabelle garantiert eindeutig ist. Die Zahlen sind jedoch möglicherweise nicht kontinuierlich. Wenn z. b. fünf Zeilen in eine Tabelle eingefügt werden, &quot; kann die AutoIncrement- &quot; Spalte die Werte {1, 2, 6, 7, 8} enthalten. Dieses Bit kann nur für Spalten vom Typ JET_coltyp verwendet werden. Long oder JET_coltyp. Währungs.</td>
+<td>ColumnAutoincrement</td>
+<td>Die Spalte wird automatisch erhöht. Die Zahl ist eine steigende Zahl, und es ist garantiert, dass sie innerhalb einer Tabelle eindeutig ist. Die Zahlen sind jedoch möglicherweise nicht kontinuierlich. Wenn beispielsweise fünf Zeilen in eine Tabelle eingefügt werden, kann die Spalte für die automatische Inkrementierung die Werte &quot; &quot; { 1, 2, 6, 7, 8 } enthalten. Dieses Bit kann nur für Spalten vom Typ JET_coltyp. Long oder JET_coltyp. Währung.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columnmultiwertig</td>
-<td>Die Spalte kann mehr wertig sein. Für eine mehrwertige Spalte können NULL, ein oder mehrere Werte zugeordnet werden. Die verschiedenen Werte in einer mehrwertigen Spalte werden durch eine Zahl gekennzeichnet, die als itagsequence-Member bezeichnet wird, der zu verschiedenen Strukturen gehört, einschließlich: JET_RETINFO, JET_SETINFO, JET_SETCOLUMN, JET_RETRIEVECOLUMN und JET_ENUMCOLUMNVALUE. Mehrwertige Spalten müssen markierte Spalten sein. Das heißt, Sie können keine Spalten fester Länge oder Spalten mit variabler Länge aufweisen.</td>
+<td>ColumnMultiValued</td>
+<td>Die Spalte kann mehrere Werte haben. Einer mehrwertigen Spalte können null, ein oder mehrere Werte zugeordnet sein. Die verschiedenen Werte in einer mehrwertigen Spalte werden durch eine Zahl namens itagSequence-Member identifiziert, die zu verschiedenen Strukturen gehört, einschließlich: JET_RETINFO, JET_SETINFO, JET_SETCOLUMN, JET_RETRIEVECOLUMN und JET_ENUMCOLUMNVALUE. Mehrwertige Spalten müssen mit Tags versehen sein. Das bedeutet, dass es sich nicht um Spalten fester länge oder variabler Länge handelt.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Columnescrowupdate</td>
-<td>Gibt an, dass eine Spalte eine Spalte für die hinterlegte Aktualisierung ist. Eine Spalte für das Hinterlegungs Update kann gleichzeitig von verschiedenen Sitzungen mit jetescrowupdate aktualisiert werden und behält die Transaktions Konsistenz bei. Eine Spalte vom Datentyp "hinterlegter" muss auch die folgenden Bedingungen erfüllen: eine Spalte für das hinterlegter-Update kann nur erstellt werden, wenn die Tabelle leer ist. Eine Spalte vom Typ "hinterlegter" muss vom Typ "JET_coltypLong" sein. Eine Spalte für das hinterlegter-Update muss einen Standardwert aufweisen. JET_bitColumnEscrowUpdate kann nicht in Verbindung mit columntagged, columnversion oder columnautoincrement verwendet werden.</td>
+<td>ColumnEscrowUpdate</td>
+<td>Gibt an, dass es sich bei einer Spalte um eine Spalte zum Aktualisieren der Stirnrunzel handelt. Eine Spalte zum Aktualisieren der Stirnrunzeln kann gleichzeitig von verschiedenen Sitzungen mit JetEscrowUpdate aktualisiert werden und behält die Transaktionskonsistenz bei. Eine Spalte zum Aktualisieren der Stirnrunzeln muss auch die folgenden Bedingungen erfüllen: Eine Spalte zum Aktualisieren der Stirnrunzeln kann nur erstellt werden, wenn die Tabelle leer ist. Eine Spalte zum Aktualisieren der Stirnrunzeln muss vom Typ JET_coltypLong. Eine Spalte zum Aktualisieren der Stirnrunzeln muss über einen Standardwert verfügen. JET_bitColumnEscrowUpdate kann nicht in Verbindung mit ColumnTagged, ColumnVersion oder ColumnAutoincrement verwendet werden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columnunversioniert</td>
-<td>Die Spalte wird in einem ohne Versionsinformationen erstellt. Dies bedeutet, dass andere Transaktionen, die versuchen, eine Spalte mit demselben Namen hinzuzufügen, fehlschlagen. Dieses Bit ist nur bei jetaddcolumn nützlich. Sie kann nicht innerhalb einer Transaktion verwendet werden.</td>
+<td>ColumnUnversioned</td>
+<td>Die Spalte wird in einem ohne Versionsinformationen erstellt. Dies bedeutet, dass andere Transaktionen, die versuchen, eine Spalte mit dem gleichen Namen hinzuzufügen, fehlschlagen. Dieses Bit ist nur bei JetAddColumn nützlich. Sie kann nicht innerhalb einer Transaktion verwendet werden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Columnmaybenull</td>
-<td>Beim äußeren Join weist der Vorgang zum Abrufen von Spalten möglicherweise keine Entsprechung aus der inneren Tabelle auf.</td>
+<td>ColumnMaybeNull</td>
+<td>Bei einem äußeren Join hat der Vorgang zum Abrufen der Spalte möglicherweise keine Übereinstimmung aus der inneren Tabelle.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columnuserdefineddefault</td>
-<td>Der Standardwert für eine Spalte wird von einer Rückruffunktion bereitgestellt. Eine Spalte, die über einen benutzerdefinierten Standardwert verfügt, muss eine markierte Spalte sein. Das Angeben von JET_bitColumnUserDefinedDefault bedeutet, dass pvdefault auf eine JET_USERDEFINEDDEFAULT Struktur verweisen muss und cbdefault auf sizeof (JET_USERDEFINEDDEFAULT) festgelegt werden muss.</td>
+<td>ColumnUserDefinedDefault</td>
+<td>Der Standardwert für eine Spalte wird von einer Rückruffunktion bereitgestellt. Eine Spalte mit einem benutzerdefinierten Standardwert muss eine markierte Spalte sein. Die Angabe JET_bitColumnUserDefinedDefault bedeutet, dass pvDefault auf eine JET_USERDEFINEDDEFAULT-Struktur verweisen muss, und cbDefault muss auf sizeof( JET_USERDEFINEDDEFAULT ) festgelegt werden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Ttkey</td>
-<td>Die Spalte ist eine Schlüssel Spalte für die temporäre Tabelle. Die Reihenfolge der Spaltendefinitionen, bei denen diese Option im Eingabe Array angegeben ist, bestimmt die Rangfolge der einzelnen Schlüssel Spalten für die temporäre Tabelle. Die erste Spaltendefinition im Array, für die diese Option festgelegt ist, ist die wichtigste Schlüssel Spalte usw. Wenn mehr Schlüssel Spalten angefordert werden, als von der Datenbank-Engine unterstützt werden können, wird diese Option für die nicht supportablen Schlüssel Spalten ignoriert.</td>
+<td>TTKey</td>
+<td>Die Spalte ist eine Schlüsselspalte für die temporäre Tabelle. Die Reihenfolge der Spaltendefinitionen mit dieser Option, die im Eingabearray angegeben ist, bestimmt die Rangfolge der einzelnen Schlüsselspalten für die temporäre Tabelle. Die erste Spaltendefinition im Array, für das diese Option festgelegt ist, ist die wichtigste Schlüsselspalte und so weiter. Wenn mehr Schlüsselspalten angefordert werden, als von der Datenbank-Engine unterstützt werden können, wird diese Option für die nicht unterstützten Schlüsselspalten ignoriert.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Absteigend</td>
-<td>Die Sortierreihenfolge der Schlüssel Spalte für die temporäre Tabelle sollte absteigend und nicht aufsteigend sein. Wenn diese Option ohne ttkey angegeben wird, wird diese Option ignoriert.</td>
+<td>TTDescending</td>
+<td>Die Sortierreihenfolge der Schlüsselspalte für die temporäre Tabelle sollte absteigend und nicht aufsteigend sein. Wenn diese Option ohne TTKey angegeben wird, wird diese Option ignoriert.</td>
 </tr>
 </tbody>
 </table>
@@ -163,8 +163,8 @@ public enum ColumndefGrbit
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
 
-[Columncompressed](./windows7grbits.columncompressed-field.md)
+[ColumnCompressed](./windows7grbits.columncompressed-field.md)

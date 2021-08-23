@@ -1,28 +1,28 @@
 ---
-title: Struktur der Skin-Definitionsdatei
-description: Struktur der Skin-Definitionsdatei
+title: Struktur der Skindefinitionsdatei
+description: Struktur der Skindefinitionsdatei
 ms.assetid: 6b9ea288-ec64-473b-b796-ab637517099a
 keywords:
-- Windows Media Player Skins, Skin-Definitions Dateien
-- Skins, Skin-Definitions Dateien
-- Dateien für Skins, Skin-Definition
-- Skin-Definitions Dateien, Struktur
+- Windows Media Player Skins, Skindefinitionsdateien
+- Skins, Skindefinitionsdateien
+- Dateien für Skins, Skindefinition
+- Skindefinitionsdateien,Struktur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a64226fb918bcbf93c95ece52075e2c8e7ed13e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6c708e46f93e2d00820015a04b0f467da2deafe59e4dbafb0b9e4f3fb8660271
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037229"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995280"
 ---
-# <a name="skin-definition-file-structure"></a>Struktur der Skin-Definitionsdatei
+# <a name="skin-definition-file-structure"></a>Struktur der Skindefinitionsdatei
 
-Die Skin-Definitionsdatei muss einer bestimmten Struktur folgen. Sie beginnen **mit einem Design** Element, erstellen ein oder mehrere **Ansichts** Elemente und definieren dann jedes **Ansichts** Element mit den Benutzeroberflächen Elementen, die für den gewünschten Ansichtstyp geeignet sind.
+Die Skindefinitionsdatei muss einer bestimmten Struktur folgen. Sie beginnen  mit einem THEME-Element, erstellen ein oder mehrere VIEW-Elemente und definieren dann jedes **VIEW-Element** mit den Benutzeroberflächenelementen, die für den Zu verwendenden Ansichtstyp geeignet sind. 
 
-## <a name="theme-elements"></a>Designelemente
+## <a name="theme-elements"></a>THEME-Elemente
 
-Auf der obersten Ebene müssen Sie die Skin-Definitionsdatei **mit dem Design** -Element starten und damit schließen.
+Auf der obersten Ebene müssen Sie die Skindefinitionsdatei mit dem **THEME-Element starten** und damit schließen.
 
 
 ```C++
@@ -34,21 +34,21 @@ Auf der obersten Ebene müssen Sie die Skin-Definitionsdatei **mit dem Design** 
 
 
 
-Das **Theme** -Element ist das Stamm Element für Ihre Skin. In einer Skin-Definitionsdatei kann nur ein **Designelement vorhanden** sein, und es muss sich auf der obersten Ebene befinden. Design **Elemente verfügen** über bestimmte Attribute und Ambient-Attribute, die in den meisten Fällen aber nicht verwendet werden müssen. Weitere Informationen zu diesen Attributen finden Sie in der [Skin-Programmier Referenz](skin-programming-reference.md).
+Das **THEME-Element** ist das Stammelement für Ihre Skin. Es kann nur ein **THEME-Element** in einer Skindefinitionsdatei geben, und es muss sich auf der obersten Ebene befingen. **THEME-Elemente** verfügen über spezifische und Umgebungsattribute, obwohl Sie sie in den meisten Jahren nicht verwenden müssen. Weitere Informationen zu diesen Attributen finden Sie in der [Referenz zur Skinprogrammierung.](skin-programming-reference.md)
 
-## <a name="view-elements"></a>Elemente anzeigen
+## <a name="view-elements"></a>VIEW-Elemente
 
-Jedes **Design** muss mindestens ein **Ansichts** Element aufweisen. Das **Ansichts** Element steuert das jeweilige Bild, das auf dem Bildschirm angezeigt wird. Möglicherweise möchten Sie mehr als eine Ansicht haben, damit Sie hin-und herwechseln können. Angenommen, Sie möchten eine große Ansicht zum Arbeiten mit Wiedergabelisten, eine mittlere Ansicht zum Überwachen von Visualisierungen und eine kleine Ansicht, die in eine Ecke des Bildschirms passt.
+Jedes **THEME** muss mindestens ein **VIEW-Element** haben. Das **VIEW-Element** steuert das bestimmte Bild, das auf dem Bildschirm angezeigt wird. Möglicherweise möchten Sie mehr als eine Ansicht haben, damit Sie hin- und herwechseln können. Sie möchten z. B. eine große Ansicht für die Arbeit mit Wiedergabelisten, eine mittlere Ansicht zum Ansehen von Visualisierungen und eine kleine Ansicht, die in eine Ecke des Bildschirms passt.
 
-Wenn Sie mehrere Ansichten erstellen, sollten Sie sicherstellen, dass jede Ansicht über einen eindeutigen **ID** -Attribut Wert verfügt, der zum Identifizieren der Sicht verwendet wird. Sie müssen das **BackgroundImage** -Attribut definieren, oder die Ansicht enthält kein Startbild. Wenn Sie kein rechteckiges Bild anzeigen möchten, verwenden Sie wahrscheinlich das **clippingcolor** -Attribut, um die Bereiche Ihrer Skin zu definieren, die nicht angezeigt werden, und Sie möchten wahrscheinlich das **TitleBar** -Attribut des **View** -Elements festlegen.
+Wenn Sie mehrere Ansichten erstellen, sollten Sie sicherstellen, dass  jede Ansicht über einen eindeutigen ID-Attributwert verfügt, der zum Identifizieren der Ansicht verwendet wird. Sie müssen das **backgroundImage-Attribut** definieren, da ihre Ansicht kein Startbild hat. Wenn Sie kein rechteckiges Bild anzeigen möchten, sollten Sie das **clippingColor-Attribut** verwenden, um die Bereiche Ihrer Skin zu definieren, die nicht angezeigt werden, und Sie möchten wahrscheinlich das **titleBar-Attribut** des **VIEW-Elements** festlegen.
 
-Jedes **Ansichts** Element kann auch über ein oder mehrere **untergeordnete** Elemente verfügen. Ein **unter Ansichts** Element ähnelt einer **Ansicht** und kann für Teile der Skin verwendet werden, die Sie bewegen, ausblenden oder anzeigen möchten. Beispielsweise kann ein **subview** -Element verwendet werden, um eine Schiebe Leiste zu erstellen, die aus ihrer Skin herausspringt, um einen Grafik-Equalizer anzuzeigen. **Subview** -Elemente können an der **Ansicht** ausgerichtet werden und andere besondere Beziehungen zur **Ansicht** aufweisen.
+Jedes **VIEW-Element** kann auch ein oder mehrere **SUBVIEW-Elemente** enthalten. Ein **SUBVIEW-Element** ähnelt **einem VIEW-Element** und kann für Teile Ihrer Skin verwendet werden, die Sie bewegen, ausblenden oder anzeigen möchten. Ein **SUBVIEW-Element** kann z. B. verwendet werden, um eine gleitende Taskleiste zu erstellen, die aus der Skin lädt, um einen grafischen Equalizer anzuzeigen. **SUBVIEW-Elemente** können an view ausgerichtet **werden** und haben andere besondere Beziehungen zur **VIEW.**
 
-## <a name="initializing-windows-media-player"></a>Windows-Media Player werden initialisiert.
+## <a name="initializing-windows-media-player"></a>Initialisieren Windows Media Player
 
-Sie können bestimmte anfängliche Eigenschaften von Windows Media Player mit den Elementen **Player**, **Settings** und **Controls** festlegen. Beispielsweise können Sie das Volume auf eine anfängliche Ebene festlegen oder einen Standardwert für einen Dateinamen festlegen.
+Sie können bestimmte Anfangseigenschaften von Windows Media Player **player-,** **SETTINGS- und** **CONTROLS-Elementen** festlegen. Beispielsweise können Sie das Volume auf eine anfängliche Ebene festlegen oder einen Standardwert für einen Dateinamen angeben.
 
-Der folgende Code zeigt, wie der **URL** -Wert in einer Skin festgelegt wird:
+Der folgende Code zeigt, wie der **URL-Wert** in einer Skin festgelegt wird:
 
 
 ```C++
@@ -60,7 +60,7 @@ Der folgende Code zeigt, wie der **URL** -Wert in einer Skin festgelegt wird:
 
 
 
-Wenn Sie das **Autostart** -Attribut der **Einstellungen** auf false festlegen möchten, verwenden Sie den folgenden Code:
+Wenn Sie das **autoStart-Attribut von** SETTINGS auf **False** festlegen möchten, verwenden Sie den folgenden Code:
 
 
 ```C++
@@ -74,120 +74,120 @@ Wenn Sie das **Autostart** -Attribut der **Einstellungen** auf false festlegen m
 
 
 
-Beachten Sie, dass das **Settings** -Element im **Player** -Element geschachtelt ist.
+Beachten Sie, **dass das SETTINGS-Element** im **PLAYER-Element geschachtelt** ist.
 
-Mit diesen Elementen können die folgenden Attribute und Ereignisse zur Entwurfszeit angegeben werden:
+Mithilfe dieser Elemente können zur Entwurfszeit die folgenden Attribute und Ereignisse angegeben werden:
 
-**Player-Element Attribute**
+**PLAYER-Elementattribute**
 
 -   **url**
 -   **Pufferung**
--   **Ereignis Wechsel**
+-   **Currentitemchange**
 -   **Currentplaylistchange**
 -   **Fehler**
 -   **Markerhit**
 -   **Mediachange**
 -   **Mediacollectionchange**
--   **Modeänderung**
--   **Mpendstatechange**
+-   **Modechange**
+-   **Mpenstatechange**
 -   **Mlaylistchange**
 -   **Mlaystatechange**
--   **"Musitionchange"**
+-   **Mositionchange**
 -   **Mcriptcommand**
 -   **Mtatuschange**
 
-**SETTINGS-Element Attribute**
+**SETTINGS-Elementattribute**
 
--   **Autostart**
--   **Schwebe**
--   **Basis**
--   **defaultframe**
--   **enableerrordialogfelder**
--   **invokeurls**
--   **verstum**
--   **playcount**
--   **zinss**
+-   **autoStart**
+-   **Gleichgewicht**
+-   **baseURL**
+-   **defaultFrame**
+-   **enableErrorDialogs**
+-   **invokeURLs**
+-   **Stumm**
+-   **playCount**
+-   **Rate**
 -   **volume**
 
-## <a name="controls-element-attributes"></a>Steuert Element Attribute
+## <a name="controls-element-attributes"></a>CONTROLS-Elementattribute
 
--   **currentmarker**
--   **CurrentPosition**
+-   **currentMarker**
+-   **currentPosition**
 
-## <a name="other-user-interface-elements"></a>Andere Elemente der Benutzeroberfläche
+## <a name="other-user-interface-elements"></a>Andere Benutzeroberfläche-Elemente
 
-Nachdem Sie das **Design und die** **Ansichts** Elemente definiert haben, müssen Sie die **Ansicht** mit bestimmten Benutzeroberflächen Elementen auffüllen. Sie müssen nicht alle verfügbaren Elemente in einer Skin verwenden, sondern nur die Elemente, die Sie benötigen.
+Nachdem Sie ihre **THEME-** und **VIEW-Elemente** definiert haben, müssen Sie **view** mit bestimmten Benutzeroberflächenelementen auffüllen. Sie müssen nicht alle verfügbaren Elemente in einer Skin verwenden, sondern nur die elemente, die Sie benötigen.
 
-Wenn ein Element vom Benutzer angezeigt werden kann, wird es als Steuerelement bezeichnet. Die folgenden Steuerelemente sind für Skins verfügbar:
+Wenn ein Element für den Benutzer angezeigt werden kann, wird es als Steuerelement bezeichnet. Die folgenden Steuerelemente sind für Skins verfügbar:
 
 -   Schaltflächen
--   Schieberegler, benutzerdefinierte Schieberegler und Status leisten
+-   Schieberegler, benutzerdefinierte Schieberegler und Statusleisten
 -   Textfelder
--   Video Fenster
--   Visualisierungs Fenster
--   Wiedergabelisten Fenster
--   Unter Ansichts Fenster
+-   Videofenster
+-   Visualisierungsfenster
+-   Wiedergabelistenfenster
+-   Unteransichtsfenster
 
-Darüber hinaus können mehrere-Elemente verwendet werden, um Windows-Media Player Aktionen weiter zu definieren, Sie erfordern jedoch visuelle Elemente wie Schaltflächen oder Schieberegler:
+Darüber hinaus können mehrere Elemente verwendet werden, um Windows Media Player zu definieren, aber sie erfordern visuelle Elemente wie Schaltflächen oder Schieberegler:
 
--   Video Einstellungen
--   Ausgleichs Einstellungen
--   Visualisierungs Einstellungen
+-   Videoeinstellungen
+-   Equalizer-Einstellungen
+-   Visualisierungseinstellungen
 
 ## <a name="buttons"></a>Schaltflächen
 
-Schaltflächen sind der beliebteste Teil eines Skin. Sie können Schaltflächen verwenden, um Aktionen wie z. b. abspielen, beenden, beenden, minimieren und wechseln zu einer anderen Ansicht zu initiieren. Windows Media Player stellt dem Skin-Ersteller zwei Arten von Schaltflächen Elementen bereit: das **Button** -Element und das **ButtonGroup** -Element. Außerdem gibt es mehrere vordefinierte Typen von Schaltflächen.
+Schaltflächen sind der beliebtesten Teil einer Skin. Sie können Schaltflächen verwenden, um Aktionen wie Wiedergabe, Beenden, Beenden, Minimieren und Wechseln zu einer anderen Ansicht auszulösen. Windows Media Player bietet dem Skin-Ersteller zwei Arten von Schaltflächenelementen: das **BUTTON-Element** und das **BUTTONGROUP-Element.** Darüber hinaus gibt es mehrere vordefinierte Typen von Schaltflächen.
 
--   **Button-Element.** Das **Button** -Element wird für einzelne Schaltflächen verwendet. Wenn Sie das **Button** -Element verwenden, müssen Sie für jede Schaltfläche ein Bild angeben und die genaue Position definieren, an der die Schaltfläche relativ zum Hintergrundbild angezeigt werden soll. Einer der Vorteile des **Schalt** Flächen Elements besteht darin, dass Sie das Schaltflächen Bild dynamisch ändern können.
--   **ButtonGroup-Element.** Das **ButtonGroup** -Element wird für Gruppen von Schaltflächen verwendet. Tatsächlich müssen Sie jedes **ButtonGroup** -Element mit einem Paar **ButtonGroup** -Tags einschließen. Die Verwendung von Schaltflächen Gruppen ist einfacher als die Verwendung einzelner Schaltflächen, da Sie nicht den genauen Speicherort für die einzelnen Schaltflächen angeben müssen. Stattdessen geben Sie eine separate ImageMap an, mit der die Aktionen definiert werden, die durchgeführt werden, wenn der Mauszeiger auf einen Bereich im Hintergrund bewegt oder klickt. Die Verwendung von Image Maps ist einfach, da Sie die für den Hintergrund erstellte Grafik in eine Zuordnungs Ebene in Ihrem Grafikbearbeitungsprogramm kopieren können. Die Verwendung des Programms zur Grafikbearbeitung ist schneller und präziser, als zu versuchen, genau zu definieren, wo eine einzelne Schaltfläche auf dem Hintergrund platziert werden soll.
--   **Vordefinierte Schaltflächen.** Es gibt mehrere vordefinierte Schaltflächen. Beispielsweise können Sie eine playelement-Schaltfläche verwenden, um digitale Mediendateien wiederzugeben, und ein stopelement, um die Wiedergabe zu beenden. Weitere Informationen finden Sie unter Button [Group](buttongroup-element.md) -Element und [Button-Element](button-element.md) in der Skin-Programmier Referenz. Mithilfe von [ImageButton](imagebutton.md) können Bilder angezeigt werden, die sich in Reaktion auf bestimmte Ereignisse ändern können.
+-   **BUTTON-Element.** Das **BUTTON-Element** wird für einzelne Schaltflächen verwendet. Wenn Sie das **BUTTON-Element** verwenden, müssen Sie für jede Schaltfläche ein Bild festlegen und die genaue Position definieren, an der die Schaltfläche relativ zum Hintergrundbild angezeigt werden soll. Einer der Vorteile des **BUTTON-Elements** ist, dass Sie das Schaltflächenbild dynamisch ändern können.
+-   **BUTTONGROUP-Element.** Das **BUTTONGROUP-Element** wird für Gruppen von Schaltflächen verwendet. Tatsächlich müssen Sie jedes **BUTTONGROUP-Element** mit einem Paar von **BUTTONGROUP-Tags** umschließen. Die Verwendung von Schaltflächengruppen ist einfacher als die Verwendung einzelner Schaltflächen, da Sie nicht die genaue Position für jede Schaltfläche angeben müssen. Stattdessen geben Sie eine separate Bildkarte an, die die Aktionen definiert, die ausgeführt werden, wenn der Mauszeiger auf einen Bereich im Hintergrund zeigt oder darauf klickt. Die Verwendung von Bildzuordnungen ist einfach, da Sie die für Ihren Hintergrund erstellte Grafik auf eine Zuordnungsebene in Ihrem Grafikbearbeitungsprogramm kopieren können. Die Verwendung des Grafikbearbeitungsprogramms ist schneller und präziser als der Versuch, genau zu definieren, wo eine einzelne Schaltfläche im Hintergrund platziert werden soll.
+-   **Vordefinierte Schaltflächen.** Es gibt mehrere vordefinierte Schaltflächen. Beispielsweise können Sie eine PLAYELEMENT-Schaltfläche verwenden, um digitale Mediendateien wiedergeben, und ein STOPELEMENT, um die Wiedergabe zu beenden. Weitere [Informationen finden Sie unter BUTTONGROUP-Element](buttongroup-element.md) und [BUTTON-Element](button-element.md) in der Referenz zur Skinprogrammierung. [IMAGEBUTTON kann](imagebutton.md) verwendet werden, um Bilder anzuzeigen, die sich als Reaktion auf bestimmte Ereignisse ändern können.
 
 ## <a name="sliders"></a>Schieberegler
 
-Schieberegler sind nützlich für die Arbeit mit Informationen, die sich im Laufe der Zeit ändern. Beispielsweise können Sie einen Schieberegler verwenden, um die Menge der Musik anzugeben, die bereits für eine bestimmte Mediendatei wiedergegeben wurde. Schieberegler können horizontal oder vertikal, linear oder Zirkel oder eine beliebige Form sein, die Sie sich vorstellen können. Schieberegler sind in drei Varianten enthalten: Schieberegler, Status leisten und benutzerdefinierte Schieberegler.
+Schieberegler sind nützlich für die Arbeit mit Informationen, die sich im Laufe der Zeit ändern. Beispielsweise können Sie einen Schieberegler verwenden, um die Menge an Musik anzugeben, die bereits für eine bestimmte Mediendatei abgespielt wurde. Schieberegler können horizontal oder vertikal, linear oder kreisförmige Schieberegler oder eine beliebige Form sein, an die Sie sich denken können. Schieberegler gibt es in drei Varianten: Schieberegler, Statusleisten und benutzerdefinierte Schieberegler.
 
--   **Rutscher.** Sie können das **Slider** -Element für volumensteuerelemente verwenden oder den Benutzer auf einen anderen Teil des Medien Inhalts verschieben.
--   **Status leisten.** Status anzeigen ähneln Schiebereglern. Status Indikatoren sind für die grafische Darstellung des Prozentsatzes eines bestimmten Prozesses konzipiert, der abgeschlossen wurde, jedoch nicht für einen Prozess, mit dem der Benutzer interagieren soll. Beispielsweise können Sie eine Statusanzeige verwenden, um den Puffer Status anzugeben.
--   **Benutzerdefinierte Schieberegler.** Es wird eine benutzerdefinierte Schieberegler-Funktionalität bereitgestellt, sodass Sie Steuerelemente wie z. b.-Knoten erstellen oder ungewöhnliche Steuerelement Mechanismen Wenn Sie z. b. ein Volume-Steuerelement erstellen möchten, das Ihre Skin umschließt, können Sie es mit einem benutzerdefinierten Schieberegler verwenden. Zum Einrichten des benutzerdefinierten Schiebereglers müssen Sie eine Imagemap erstellen, die Graustufenbilder enthält, um die Speicherorte der Werte auf dem Schieberegler zu definieren. Dies ist relativ einfach mit einem Grafikbearbeitungsprogramm, das Ebenen unterstützt.
+-   **Schieberegler.** Sie können das **SLIDER-Element** für Volumesteuerelemente verwenden oder dem Benutzer ermöglichen, zu einem anderen Teil des Medieninhalts zu wechseln.
+-   **Statusleisten.** Statusleisten ähneln Schiebereglern. Statusanzeigen sind für die grafische Anzeige des Prozentsatzes eines bestimmten Prozesses, der abgeschlossen wurde, konzipiert, jedoch nicht für einen Prozess, mit dem der Benutzer interagieren möchte. Beispielsweise können Sie eine Statusleiste verwenden, um den Pufferungsfortschritt anzugeben.
+-   **Benutzerdefinierte Schieberegler.** Benutzerdefinierte Schiebereglerfunktionen werden bereitgestellt, damit Sie Steuerelemente wie Regler erstellen oder ungewöhnliche Steuerungsmechanismen erstellen können. Wenn Sie z. B. ein Volumesteuer steuerelement erstellen möchten, das Ihre Skin umhingt, können Sie dies mit einem benutzerdefinierten Schieberegler tun. Zum Einrichten des benutzerdefinierten Schiebereglers müssen Sie eine Bildkarte erstellen, die Graustufenbilder enthält, um die Positionen der Werte auf dem Schieberegler zu definieren. Dies ist relativ einfach mit einem Grafikbearbeitungsprogramm zu tun, das Ebenen unterstützt.
 
 ## <a name="text"></a>Text
 
-Sie können das **Text** -Element verwenden, um Text auf Ihrer Skin anzuzeigen, z. b. Titel Titel.
+Sie können das **TEXT-Element verwenden,** um Text auf Ihrer Skin anzuzeigen, z. B. Titel von Musiktiteln.
 
 ## <a name="video"></a>Video
 
-Sie können Videos in der Skin anzeigen. Mit dem **Video** -Element können Sie die Größe und Position des Videofensters festlegen.
+Sie können Videos in Ihrer Skin anzeigen. Mit **dem VIDEO-Element** können Sie die Größe und Position des Videofensters festlegen.
 
-Sie können es dem Benutzer auch ermöglichen, die Videoeinstellungen mit dem **Video Settings** -Element zu ändern. Beispielsweise können Sie Steuerelemente erstellen, um die Helligkeit des Videos anzupassen.
+Sie können dem Benutzer auch erlauben, die Videoeinstellungen mit dem **VIDEOSETTINGS-Element zu** ändern. Beispielsweise können Sie Steuerelemente erstellen, um die Helligkeit des Videos anzupassen.
 
-Wenn Sie kein Video Element angeben und der Inhalt Video enthält, kehrt Windows Media Player in den vollständigen Modus zurück, und ihre Skin wird nicht angezeigt.
+Wenn Sie kein Videoelement geben und der Inhalt Video enthält, wird Windows Media Player in den Vollmodus zurück, und Ihre Skin wird nicht angezeigt.
 
-## <a name="equalizer-settings"></a>Ausgleichs Einstellungen
+## <a name="equalizer-settings"></a>Equalizer-Einstellungen
 
-Sie können das Filtern für bestimmte audiohäufigkeits Bänder mit dem Element **equalizersettings** festlegen. Sie können den Bass steigern, das Treble optimieren und ihre Sounds so einrichten, dass Sie Ihren Ohren oder dem Wohnraum entsprechen.
+Sie können die Filterung für bestimmte Audiofrequenzbänder mithilfe des **EQUALIZERSETTINGS-Elements** festlegen. Sie können die Töne ankurbeln, den Treble optimieren und Ihre Sounds so einrichten, dass sie Ihren Tönen oder Ihrem Zimmer passen.
 
 ## <a name="visualizations"></a>Visualisierungen
 
-Visualisierungen können in der Skin angezeigt werden. Visualisierungen sind visuelle Effekte, die sich im Laufe der Zeit ändern, wenn Audiodaten über Windows Media Player abgespielt werden. Das **Effects** -Element bestimmt, wo die Visualisierungen abgespielt werden, welche Größe das Fenster darstellen wird und welche Visualisierungen wiedergegeben werden.
+Sie können Visualisierungen in Ihrer Skin anzeigen. Visualisierungen sind visuelle Effekte, die sich im Laufe der Zeit ändern, wenn Audiodaten über Windows Media Player. Das **EFFECTS-Element** bestimmt, wo die Visualisierungen abgespielt werden, welche Fenstergröße und welche Visualisierungen abgespielt werden.
 
 ## <a name="playlists"></a>Wiedergabelisten
 
-Sie können das **Wiedergabe** Listen-Element verwenden, um dem Benutzer zu ermöglichen, ein Element aus einer bestimmten Wiedergabeliste auszuwählen.
+Sie können das **PLAYLIST-Element verwenden,** damit der Benutzer ein Element aus einer bestimmten Wiedergabeliste auswählen kann.
 
-## <a name="subviews"></a>Unter Ansichten
+## <a name="subviews"></a>Unteransichten
 
-Mit dem **subview** -Element können Sie sekundäre Sätze von Schnittstellen Steuerelementen anzeigen, z. b. eine Wiedergabeliste oder ein Video Steuerelement.
+Sie können das **SUBVIEW-Element verwenden,** um sekundäre Sätze von Schnittstellensteuerelementen anzuzeigen, z. B. wiedergabelisten- oder videosteuerelemente.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Skin-Dateien**](skin-files.md)
+[**Skindateien**](skin-files.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

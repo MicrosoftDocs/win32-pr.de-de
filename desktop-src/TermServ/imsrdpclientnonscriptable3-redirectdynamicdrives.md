@@ -1,26 +1,26 @@
 ---
-title: IMsRdpClientNonScriptable3 redirectdynamicdrives (Eigenschaft)
-description: Gibt an, ob dynamisch angefügte Plug & Play (PNP) Laufwerke, die während einer Sitzung aufgelistet sind, für die Umleitung verfügbar sind, oder ruft Sie ab.
+title: IMsRdpClientNonScriptable3 RedirectDynamicDrives (Eigenschaft)
+description: Gibt an oder ruft ab, ob dynamisch Plug & Play (PnP)-Laufwerke, die während einer Sitzung aufzählt werden, für die Umleitung verfügbar sind.
 ms.assetid: 11eb19fc-9711-4293-8054-f7975dadb492
 ms.tgt_platform: multiple
 keywords:
-- Redirectdynamicdrives-Eigenschaft Remotedesktopdienste
-- Redirectdynamicdrives-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, redirectdynamicdrives (Eigenschaft)
-- Redirectdynamicdrives-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, redirectdynamicdrives (Eigenschaft)
-- Redirectdynamicdrives-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, redirectdynamicdrives (Eigenschaft)
-- Redirectdynamicdrives-Eigenschaft Remotedesktopdienste, MsRdpClient5-Objekt
-- MsRdpClient5-Objekt Remotedesktopdienste, redirectdynamicdrives (Eigenschaft)
-- Redirectdynamicdrives-Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6-Objekt Remotedesktopdienste, redirectdynamicdrives (Eigenschaft)
-- Redirectdynamicdrives-Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7-Objekt Remotedesktopdienste, redirectdynamicdrives (Eigenschaft)
-- Redirectdynamicdrives-Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8-Objekt Remotedesktopdienste, redirectdynamicdrives (Eigenschaft)
-- Redirectdynamicdrives-Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9-Objekt Remotedesktopdienste, redirectdynamicdrives (Eigenschaft)
+- RedirectDynamicDrives-Remotedesktopdienste
+- RedirectDynamicDrives-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , RedirectDynamicDrives-Eigenschaft
+- RedirectDynamicDrives-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , RedirectDynamicDrives-Eigenschaft
+- RedirectDynamicDrives-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , RedirectDynamicDrives-Eigenschaft
+- RedirectDynamicDrives-Eigenschaft Remotedesktopdienste , MsRdpClient5-Objekt
+- MsRdpClient5-Objekt Remotedesktopdienste , RedirectDynamicDrives-Eigenschaft
+- RedirectDynamicDrives-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , RedirectDynamicDrives-Eigenschaft
+- RedirectDynamicDrives-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , RedirectDynamicDrives-Eigenschaft
+- RedirectDynamicDrives-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , RedirectDynamicDrives-Eigenschaft
+- RedirectDynamicDrives-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , RedirectDynamicDrives-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -44,16 +44,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b19c0e6e20f7f73481f6f2ecbc50ab0eda512ded
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5199f8fcf8e114cfb8febd05631e49de97aab01a69ca9397bc7d15539ad819d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001104"
 ---
-# <a name="imsrdpclientnonscriptable3redirectdynamicdrives-property"></a>IMsRdpClientNonScriptable3:: redirectdynamicdrives (Eigenschaft)
+# <a name="imsrdpclientnonscriptable3redirectdynamicdrives-property"></a>IMsRdpClientNonScriptable3::RedirectDynamicDrives (Eigenschaft)
 
-Gibt an, ob dynamisch angefügte Plug & Play (PNP) Laufwerke, die während einer Sitzung aufgelistet sind, für die Umleitung verfügbar sind, oder ruft Sie ab.
+Gibt an oder ruft ab, ob dynamisch Plug & Play (PnP)-Laufwerke, die während einer Sitzung aufzählt werden, für die Umleitung verfügbar sind.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -74,7 +74,7 @@ HRESULT get_RedirectDynamicDrives(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt an, ob dynamisch angefügte PNP-Laufwerke, die in einer Sitzung aufgelistet sind, für die Umleitung verfügbar sind.
+Gibt an, ob dynamisch angefügte PnP-Laufwerke, die während einer Sitzung aufzählt werden, für die Umleitung verfügbar sind.
 
 ## <a name="requirements"></a>Anforderungen
 

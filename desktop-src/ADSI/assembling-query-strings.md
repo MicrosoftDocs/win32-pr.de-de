@@ -1,30 +1,30 @@
 ---
-title: Assemblieren von Abfrage
-description: In Active Directory kann die Suchleistung durch die Verwendung spezifischer Filterkriterien gesteigert werden. Der Grund hierfür ist, dass Active Directory alle Prädikate auswertet, die Indizes identifiziert und dann einen Index auswählt, der wahrscheinlich die kleinste Menge an zurückgegebenen Werten liefert.
+title: Zusammenbauen von Abfragezeichenfolgen
+description: In Active Directory kann die Verwendung bestimmter Filterkriterien die Suchleistung steigern. Dies liegt daran, dass Active Directory alle Prädikate auswertet, die Indizes identifiziert und dann einen Index auswählt, der wahrscheinlich den kleinsten Satz zurückgegebener Werte ergibt.
 ms.assetid: 4139eedb-1383-4654-9b40-5e294a71be24
 ms.tgt_platform: multiple
 keywords:
-- Assemblierungszeichenfolgen ADSI
+- Assembling Query Strings ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e56dec34f63a4a3e12385a36ad5fe5339a0f3d9c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 610ba78d6536d9cfe12f296fcbfa46d04cd572ae05cdb7d3bb8b0e1e7b5d32a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962197"
 ---
-# <a name="assembling-query-strings"></a>Assemblieren von Abfrage
+# <a name="assembling-query-strings"></a>Zusammenbauen von Abfragezeichenfolgen
 
-In Active Directory kann die Suchleistung durch die Verwendung spezifischer Filterkriterien gesteigert werden. Der Grund hierfür ist, dass Active Directory alle Prädikate auswertet, die Indizes identifiziert und dann einen Index auswählt, der wahrscheinlich die kleinste Menge an zurückgegebenen Werten liefert.
+In Active Directory kann die Verwendung bestimmter Filterkriterien die Suchleistung steigern. Dies liegt daran, dass Active Directory alle Prädikate auswertet, die Indizes identifiziert und dann einen Index auswählt, der wahrscheinlich den kleinsten Satz zurückgegebener Werte ergibt.
 
-Vermeiden Sie das Suchen nach Text in der Mitte oder am Ende einer Zeichenfolge, z. b. "CN = \* Hille \* " oder "CN = \* larouse".
+Vermeiden Sie es, in der Mitte oder am Ende einer Zeichenfolge nach Text zu suchen, z. B. "cn= \* stringe" oder \* "cn= \* fadeouse".
 
-Suchen Sie nach Möglichkeit nach indizierten Attributen. Indizierte Attribute werden auf allen Domänen Controllern gespeichert, sodass die Abfrage höchstwahrscheinlich schneller ist als bei der Suche nach einem nicht indizierten Attribut.
+Suchen Sie nach Möglichkeit nach indizierten Attributen. Indizierte Attribute werden auf allen Domänencontrollern gespeichert, sodass die Abfrage höchstwahrscheinlich schneller ist als die Suche nach einem nicht indizierten Attribut.
 
- 
+ 
 
- 
+ 
 
 
 

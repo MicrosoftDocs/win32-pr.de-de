@@ -1,19 +1,19 @@
 ---
-title: .Net tracelogging-Beispiele
-description: Dieses Thema enthält ein Beispiel für einen verwalteten Code tracelogging, das veranschaulicht, wie ein Ereignis nur protokolliert wird, wenn der ausführlichkeits Grad der Sitzung ausführlich ist, und wie strukturierte Ereignisdaten protokolliert werden.
+title: Beispiele für die .NET-Ablaufverfolgung
+description: Dieses Thema enthält ein Beispiel für die Ablaufverfolgung mit verwaltetem Code, das veranschaulicht, wie ein Ereignis nur protokolliert wird, wenn die Ausführlichkeitsstufe der Sitzung ausführlich ist, und wie strukturierte Ereignisdaten protokolliert werden.
 ms.assetid: 156016FE-FDC7-4361-BFD0-5F41254FE14D
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8064f2ce139b5fd07bc74b3de6e107abeb958530
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4346374974f450f11382f46f28ab1eda6c9ac891391ec0a565942e7918966c84
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966519"
 ---
-# <a name="net-tracelogging-examples"></a>.Net tracelogging-Beispiele
+# <a name="net-tracelogging-examples"></a>Beispiele für die .NET-Ablaufverfolgung
 
-Dieses Thema enthält ein Beispiel für einen verwalteten Code tracelogging, das veranschaulicht, wie ein Ereignis nur protokolliert wird, wenn der ausführlichkeits Grad der Sitzung ausführlich ist, und wie strukturierte Ereignisdaten protokolliert werden.
+Dieses Thema enthält ein Beispiel für die Ablaufverfolgung mit verwaltetem Code, das veranschaulicht, wie ein Ereignis nur protokolliert wird, wenn die Ausführlichkeitsstufe der Sitzung ausführlich ist, und wie strukturierte Ereignisdaten protokolliert werden.
 
 
 ```CSharp
@@ -72,9 +72,9 @@ namespace MoreSimpleTraceLoggingExamples
 
 
 
- 
+ 
 
- 
+ 
 
 
 

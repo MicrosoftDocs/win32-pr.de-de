@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetsetsystemparameter-Methode.
-title: API. jetsetsystemparameter-Methode
+description: Weitere Informationen finden Sie unter Api.JetSetSystemParameter-Methode.
+title: Api.JetSetSystemParameter-Methode
 TOCTitle: 'JetSetSystemParameter method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.Api.JetSetSystemParameter
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetsetsystemparameter(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: c54c2f72fc4712aa60b237110030fb88c31cbbf0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2639c783c32646ebba5ada00507296082269a3d1f77fa9b4b76b4201fc92cbb1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983120"
 ---
-# <a name="apijetsetsystemparameter-method"></a>API. jetsetsystemparameter-Methode
+# <a name="apijetsetsystemparameter-method"></a>Api.JetSetSystemParameter-Methode
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -33,24 +33,24 @@ Geerbte Member einschließen
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn334028(v=exchg.10).md">Jetsetsystemparameter (JET_INSTANCE, JET_SESID, JET_param, JET_CALLBACK, Zeichenfolge)</a></td>
-<td>Legt Daten Bank Konfigurationsoptionen fest.</td>
+<td><a href="dn334028(v=exchg.10).md">JetSetSystemParameter(JET_INSTANCE, JET_SESID, JET_param, JET_CALLBACK, String)</a></td>
+<td>Legt Datenbankkonfigurationsoptionen fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn334017(v=exchg.10).md">Jetsetsystemparameter (JET_INSTANCE, JET_SESID, JET_param, Int32, String)</a></td>
-<td>Legt Daten Bank Konfigurationsoptionen fest.</td>
+<td><a href="dn334017(v=exchg.10).md">JetSetSystemParameter(JET_INSTANCE, JET_SESID, JET_param, Int32, String)</a></td>
+<td>Legt Datenbankkonfigurationsoptionen fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn334029(v=exchg.10).md">Jetsetsystemparameter (JET_INSTANCE, JET_SESID, JET_param, IntPtr, String)</a></td>
-<td>Legt Daten Bank Konfigurationsoptionen fest.</td>
+<td><a href="dn334029(v=exchg.10).md">JetSetSystemParameter(JET_INSTANCE, JET_SESID, JET_param, IntPtr, String)</a></td>
+<td>Legt Datenbankkonfigurationsoptionen fest.</td>
 </tr>
 </tbody>
 </table>
@@ -58,12 +58,12 @@ Geerbte Member einschließen
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,10 +1,10 @@
 ---
-title: MPTHREAT_STATS Struktur (mpclient. h)
-description: Bedrohungs bezogene Statistiken.
+title: MPTHREAT_STATS-Struktur (MpClient.h)
+description: Bedrohungsbezogene Statistiken.
 ms.assetid: 78B7E2A8-1BB4-4610-8E90-1F8ECBE740A8
 keywords:
-- MPTHREAT_STATS Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPTHREAT_STATS Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPTHREAT_STATS struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPTHREAT_STATS Strukturzeiger Legacy Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 21a2eef7acde5fbeac2cf9951dfad3e6923ccea2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7671b45dc09c8aca494ad270aa69fc386ef3d7c03d5144fdc3e89b4f657bb07b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858858"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975940"
 ---
-# <a name="mpthreat_stats-structure"></a>Mpthreat \_ Stats-Struktur
+# <a name="mpthreat_stats-structure"></a>\_MPTHREAT-STATS-Struktur
 
-Bedrohungs bezogene Statistiken.
+Bedrohungsbezogene Statistiken.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ typedef struct tagMPTHREAT_STATS {
 
 <dl> <dt>
 
-**Anzahl von Zustellungen**
+**ThreatCount**
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
 </dd> <dd>
 
@@ -54,21 +54,21 @@ Anzahl der erkannten Bedrohungen.
 
 </dd> <dt>
 
-**Verdächtiger Anzahl**
+**SuspiciousThreatCount**
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
 </dd> <dd>
 
-Anzahl der erkannten Bedrohungen bei der Verhaltens Überwachung.
+Anzahl der bei der Verhaltensüberwachung erkannten Bedrohungen.
 
 </dd> <dt>
 
 **Reserved**
 </dt> <dd>
 
-Typ: **uint \[ 4 \]**
+Typ: **UINT \[ 4 \]**
 
 </dd> <dd>
 
@@ -82,9 +82,9 @@ Felder, die für die zukünftige Verwendung reserviert sind.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

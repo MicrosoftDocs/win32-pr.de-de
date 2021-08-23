@@ -1,29 +1,29 @@
 ---
-title: Httppurchaseorderwithusernameoversslserviceexample
-description: In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines PurchaseOrder-Diensts über HTTP verwendet wird, mit dem Benutzernamen über SSL-Sicherheit im gemischten Modus
+title: HttpPurchaseOrderWithUserNameOverSslServiceExample
+description: In diesem Beispiel wird gezeigt, wie Sie den Diensthost zum Hosten eines PurchaseOrder-Diensts über HTTP mit Benutzername über SSL-Sicherheit im gemischten Modus verwenden.
 ms.assetid: 3dfedab1-d508-4cff-b179-591871078adb
 keywords:
-- Httppurchaseorderwithusernameoversslserviceexample Native Webdienste
-- Wwsapi
+- HttpPurchaseOrderWithUserNameOverSslServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e6558a119efda4f8e2c4c009b9de3ad2525985ae
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 63bb584286d749687889a1a24d638ba8fc62ae8620ffb821e940115d1655b42c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712251"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026448"
 ---
-# <a name="httppurchaseorderwithusernameoversslserviceexample"></a>Httppurchaseorderwithusernameoversslserviceexample
+# <a name="httppurchaseorderwithusernameoversslserviceexample"></a>HttpPurchaseOrderWithUserNameOverSslServiceExample
 
-In diesem Beispiel wird gezeigt, wie der Dienst Host zum Hosten eines PurchaseOrder-Diensts über HTTP verwendet wird, mit dem Benutzernamen über SSL-Sicherheit im gemischten Modus In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt. Die Client Authentifizierung wird von einem Paar aus Benutzername und Kennwort in einem WS-Security-Header in der Nachricht bereitgestellt.
+In diesem Beispiel wird gezeigt, wie Sie den Diensthost zum Hosten eines PurchaseOrder-Diensts über HTTP mit Benutzername über SSL-Sicherheit im gemischten Modus verwenden. Bei diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Benutzername-Kennwort-Paar in einem WS-Security-Header in der Nachricht bereitgestellt.
 
--   [Purchaseorderserviceusernameoverssl. cpp](#purchaseorderserviceusernameoversslcpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [PurchaseOrderServiceUserNameOverSsl.cpp](#purchaseorderserviceusernameoversslcpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="purchaseorderserviceusernameoversslcpp"></a>Purchaseorderserviceusernameoverssl. cpp
+## <a name="purchaseorderserviceusernameoversslcpp"></a>PurchaseOrderServiceUserNameOverSsl.cpp
 
 
 ```C++
@@ -470,7 +470,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -609,9 +609,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

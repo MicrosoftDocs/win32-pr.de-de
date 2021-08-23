@@ -1,11 +1,11 @@
 ---
-title: ms-DS-hab-Seniority-Index-Attribut
-description: Enthält den Seniority Index, der von der Organisation angewendet wird, in der die Person arbeitet. | ms-DS-hab-Seniority-Index-Attribut
+title: ms-DS-TS-Seniority-Index-Attribut
+description: Enthält den Senioritätsindex, der von der Organisation angewendet wird, in der die Person arbeitet. | ms-DS-TS-Seniority-Index-Attribut
 ms.assetid: 4110b6c3-6987-4f65-bfdf-244a9c9c0f46
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-hab-Seniority-Index\"-Attribut AD-Schema"
-- AD-Schema des msDS-habseniorityindex-Attributs
+- MS-DS-SENIORITY-Index-Attribut AD-Schema
+- AD-Schema des msDS-DIZSeniorityIndex-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f796b30d2676df76803ec407423e34e8cd96ecb
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 994719462ae47396e5765cde7ed24faf19f486c8052d089888e5751687b5619d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106364322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960760"
 ---
-# <a name="ms-ds-hab-seniority-index-attribute"></a>ms-DS-hab-Seniority-Index-Attribut
+# <a name="ms-ds-hab-seniority-index-attribute"></a>ms-DS-TS-Seniority-Index-Attribut
 
-Enthält den Seniority Index, der von der Organisation angewendet wird, in der die Person arbeitet.
+Enthält den Senioritätsindex, der von der Organisation angewendet wird, in der die Person arbeitet.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-hab-Seniority-Index            |
-| LDAP-Display-Name | msDS-HABSeniorityIndex               |
+| CN                | ms-DS-HEIT-Seniority-Index            |
+| Ldap-Anzeigename | msDS-HABSeniorityIndex               |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1997              |
-| System-ID-GUID    | def449f1-fd3b-4045-98cf-d9658da788b5 |
+| System-Id-Guid    | def449f1-fd3b-4045-98cf-d9658da788b5 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -53,12 +53,12 @@ Enthält den Seniority Index, der von der Organisation angewendet wird, in der d
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8ca0                                                             |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| MAPI-Id                | 0x8CA0                                                             |
+| System-Only            | Falsch                                                              |
+| Is-Single-Valued       | Richtig                                                               |
 | Ist indiziert             | Richtig                                                               |
 | Im globalen Katalog      | Richtig                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000001                                                         |
@@ -74,12 +74,12 @@ Enthält den Seniority Index, der von der Organisation angewendet wird, in der d
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8ca0                                                             |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| MAPI-Id                | 0x8CA0                                                             |
+| System-Only            | Falsch                                                              |
+| Is-Single-Valued       | Richtig                                                               |
 | Ist indiziert             | Richtig                                                               |
 | Im globalen Katalog      | Richtig                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000001                                                         |
@@ -95,12 +95,12 @@ Enthält den Seniority Index, der von der Organisation angewendet wird, in der d
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8ca0                                                             |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| MAPI-Id                | 0x8CA0                                                             |
+| System-Only            | Falsch                                                              |
+| Is-Single-Valued       | Richtig                                                               |
 | Ist indiziert             | Richtig                                                               |
 | Im globalen Katalog      | Richtig                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000001                                                         |

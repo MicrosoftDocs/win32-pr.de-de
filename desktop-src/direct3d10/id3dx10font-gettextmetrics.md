@@ -1,7 +1,7 @@
 ---
-description: Rufen Sie Schriftart Eigenschaften ab.
+description: Ruft Schriftartmerkmale ab.
 ms.assetid: ef7e0d18-492b-476b-945a-bfc0232a939a
-title: 'ID3DX10Font:: GetTextMetrics-Methode (d3dx10. h)'
+title: ID3DX10Font::GetTextMetrics-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 72decdcf0a9573f7ad8ba0f4e363df6df3599477
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 97cbddc59dd84d0a5b83610212fe94e87a49757da0430d64cb420280c815d9cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104530938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119047048"
 ---
-# <a name="id3dx10fontgettextmetrics-method"></a>ID3DX10Font:: GetTextMetrics-Methode
+# <a name="id3dx10fontgettextmetrics-method"></a>ID3DX10Font::GetTextMetrics-Methode
 
-Rufen Sie Schriftart Eigenschaften ab.
+Ruft Schriftartmerkmale ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,18 +40,18 @@ BOOL GetTextMetrics(
 
 <dl> <dt>
 
-*ptextmetrics* \[ in\]
+*pTextMetrics* \[ In\]
 </dt> <dd>
 
-Typ: **TextMetric \***
+Typ: **TEXTMETRIC \***
 
-Zeiger auf eine [textmetrikstruktur](/previous-versions//ms534202(v=vs.85)) , die Schriftart Eigenschaften enthält. Wenn Unicode definiert ist, gibt die Funktion eine textmetricw-Struktur zurück. Andernfalls gibt die Funktion eine textmetrica-Struktur zurück.
+Zeiger auf eine [TEXTMETRIC-Struktur,](/previous-versions//ms534202(v=vs.85)) die Schriftarteigenschaften enthält. Wenn Unicode definiert ist, gibt die Funktion eine TEXTMETRICW-Struktur zurück. Andernfalls gibt die Funktion eine TEXTMETRICA-Struktur zurück.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).
 
@@ -61,8 +61,8 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

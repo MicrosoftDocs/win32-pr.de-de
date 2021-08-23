@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Objekt aus der Auflistung der Empfänger ab.
+description: Ruft ein -Objekt aus der Recipients-Auflistung ab.
 ms.assetid: 03600d4a-5fd4-45c7-ae91-efdc26c084ee
-title: Empfängers. Item (Eigenschaft)
+title: Recipients.Item-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 2a80b472c8257597356c626a9e88aad97c447f4d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 82a9e45ee82c42f659d6fa9e60f0b96122ee8d0f701d2d039df6ce995d1c778a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118900797"
 ---
-# <a name="recipientsitem-property"></a>Empfängers. Item (Eigenschaft)
+# <a name="recipientsitem-property"></a>Recipients.Item-Eigenschaft
 
-\[Die **Item** -Eigenschaft ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Verwenden Sie stattdessen die [**cmsrecepentcollection-Klasse**](/dotnet/api/system.security.cryptography.pkcs.cmsrecipientcollection?view=dotnet-plat-ext-3.1&preserve-view=true) im [**System. Security. Cryptography. Pkcs**](/dotnet/api/system.security.cryptography.pkcs?view=dotnet-plat-ext-3.1&preserve-view=true) -Namespace.\]
+\[Die **Item-Eigenschaft** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Verwenden Sie stattdessen die [**CmsRecipientCollection-Klasse**](/dotnet/api/system.security.cryptography.pkcs.cmsrecipientcollection?view=dotnet-plat-ext-3.1&preserve-view=true) im [**System.Security.Cryptography.Pkcs-Namespace.**](/dotnet/api/system.security.cryptography.pkcs?view=dotnet-plat-ext-3.1&preserve-view=true)\]
 
-Die **Item** -Eigenschaft ruft ein Objekt aus der Auflistung der [**Empfänger**](recipients.md) ab. Dies ist die Standard Eigenschaft.
+Die **Item-Eigenschaft** ruft ein Objekt aus der [**Recipients-Auflistung**](recipients.md) ab. Dies ist die Standardeigenschaft.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ Recipients.Item( _
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Variante, die das indizierte Element in der [**Empfänger**](recipients.md) Auflistung darstellt.
+Eine Variante, die das indizierte Element in der [**Empfängerauflistung**](recipients.md) darstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,12 +47,12 @@ Eine Variante, die das indizierte Element in der [**Empfänger**](recipients.md)
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

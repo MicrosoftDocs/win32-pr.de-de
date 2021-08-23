@@ -1,24 +1,24 @@
 ---
-description: Mit der Eigenschaft "karaokeaudiopressentiments ationmode" wird die "right left Speaker"-Mischung für die zusätzlichen Karaoke-Kanäle festgelegt oder abgerufen.
+description: Die Eigenschaft ProzentokeAudioPresentationMode legt die Link-rechts-Lautsprechermischung für die zusätzlichen Sendekanäle fest oder ruft sie ab.
 ms.assetid: f32706eb-7f97-433d-854a-17d57cc60190
-title: Karaokeaudiopressentiments ationmode (Eigenschaft)
+title: Moduseigenschaft "QualokeAudioPresentationMode"
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 429f15c99d58136d4c423c4f66b19d12c93802a9
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: af634a3beaade7e497cdc6d158ccf1121ebb09542bdec92ceaae823b1b91ccdb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106343546"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118952379"
 ---
-# <a name="karaokeaudiopresentationmode-property"></a>Karaokeaudiopressentiments ationmode (Eigenschaft)
+# <a name="karaokeaudiopresentationmode-property"></a>Moduseigenschaft "QualokeAudioPresentationMode"
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `KaraokeAudioPresentationMode` Eigenschaft legt den Rechts linken sprechermix für die zusätzlichen Karaoke-Kanäle fest oder ruft ihn ab.
+Die `KaraokeAudioPresentationMode` -Eigenschaft legt die Linke-rechts-Lautsprechermischung für die Hilfskanäle fest oder ruft sie ab.
 
 ``` syntax
 [iMode ] = MSWebDVD.KaraokeAudioPresentationMode
@@ -26,24 +26,24 @@ Die- `KaraokeAudioPresentationMode` Eigenschaft legt den Rechts linken sprecherm
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen ganzzahligen Wert mit einem Satz von Bitflags zurück, der angibt, wie die zusätzlichen Karaoke-Kanäle auf den linken und rechten Referenten herabgestuft werden.
+Gibt einen ganzzahligen Wert zurück, der einen Satz von Bitflags enthält, der angibt, wie die Hilfskanalkanäle links und rechts gemischt werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist Lese-/Schreibzugriff mit dem Standardwert 0 (null).
+Diese Eigenschaft wird mit dem Standardwert 0 (null) gelesen/geschrieben.
 
-Audiokanäle sind NULL basiert, sodass die Kanäle 0 und 1 im Allgemeinen die Kanäle für den rechten und linken Sprecher darstellen und die Kanäle 2 bis 4 die drei zusätzlichen Karaoke-Kanäle sind. Wenn das mswebdvd-Objekt in den Modus "Karaoke" wechselt, werden die Kanäle 2 und höher automatisch mit einem Mutes Verwenden Sie bitweise **or** -Vorgänge, um das entsprechende Bit festzulegen, um einen hilfsanchannel an den linken Sprecher, den rechten Sprecher, beide Sprecher (beide Bits on) oder an keine Sprecher (beide Bits off) zu senden. Diese Bits sind standardmäßig deaktiviert, wenn der DVD-Navigator in den Karaoke-Modus wechselt. Der Wert der Bits und die entsprechende Aktion werden in der folgenden Tabelle angegeben.
+Audiokanäle sind nullbasiert, sodass die Kanäle 0 und 1 im Allgemeinen die Kanäle rechts und links darstellen, und Kanäle 2 bis 4 sind die drei zusätzlichen Sendekanäle. Wenn das MSWebDVD-Objekt in den Modus "Tarifoke" wechselt, werden kanäle 2 und höher automatisch stummgeschaltet. Verwenden Sie  bitweise OR-Vorgänge, um das entsprechende Bit festzulegen, um einen Hilfskanal an den linken Lautsprecher, den rechten Lautsprecher, beide Sprecher (beide Bits eingeschaltet) oder an keine Sprecher (beide Bits aus) zu senden. Diese Bits sind standardmäßig deaktiviert, wenn der DVD-Navigator in den Modus "Dvdoke" wechselt. Der Wert der Bits und ihre entsprechende Aktion sind in der folgenden Tabelle angegeben.
 
 
 
-| Wert  | BESCHREIBUNG                            |
+| Wert  | Beschreibung                            |
 |--------|----------------------------------------|
-| 0x0004 | Downmix von Channel 2 zum linken Sprecher  |
-| 0x0008 | Downmix von Channel 3 zum linken Sprecher  |
-| 0x0010 | Downmix von Channel 4 zum linken Sprecher  |
-| 0x0400 | Downmix von Channel 2 zum rechten Redner |
-| 0x0800 | Downmix von Channel 3 zum rechten Redner |
-| 0x1000 | Downmix von Channel 4 zum rechten Redner |
+| 0x0004 | Downmix Channel 2 zum linken Lautsprecher  |
+| 0x0008 | Downmix Channel 3 zum linken Lautsprecher  |
+| 0x0010 | Downmix Channel 4 zum linken Lautsprecher  |
+| 0x0400 | Downmix Channel 2 zum rechten Lautsprecher |
+| 0x0800 | Downmix Channel 3 zum rechten Lautsprecher |
+| 0x1000 | Downmix Channel 4 zum rechten Lautsprecher |
 
 
 

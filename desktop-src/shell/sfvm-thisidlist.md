@@ -1,21 +1,21 @@
 ---
-description: Die sfvm- \_ thisidlist kann geändert werden oder ist nicht verfügbar.
+description: SFVM \_ THISIDLIST kann geändert oder nicht verfügbar sein.
 ms.assetid: 488f696d-aa71-4727-bbd2-c99e7d245d85
-title: SFVM_THISIDLIST Meldung (shlobj. h)
+title: SFVM_THISIDLIST (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e86e24199e5adbb895c8d1d5fc36bfff0c109bc2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cd00f1cfc2b6661dac2414f0327cab03d4c0586eb62b992b5e33f81e64565246
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968629"
 ---
-# <a name="sfvm_thisidlist-message"></a>Sfvm- \_ thisidlist-Meldung
+# <a name="sfvm_thisidlist-message"></a>SFVM \_ THISIDLIST-Meldung
 
-\[**Sfvm \_ Thisidlist** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
+\[**SFVM \_ THISIDLIST steht** für die Verwendung in den Betriebssystemen zur Verfügung, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
 
-Ermöglicht dem Rückruf Objekt, den Zeiger der Ansicht auf eine Element Bezeichner-Liste (PIDL) anzugeben. Dies wird nur verwendet, wenn " [**ipersistidlist:: abtidlist**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipersistidlist-setidlist) " und " [**IPersistFolder2:: getcurrfolder**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipersistfolder2-getcurfolder) " fehlgeschlagen sind. Wird von [**ishellfolderviewcb:: messagesfvcb**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
+Ermöglicht es dem Rückrufobjekt, den Zeiger der Sicht auf eine Elementbezeichnerliste (PIDL) anzugeben. Dies wird nur verwendet, wenn [**IPersistIDList::SetIDList**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipersistidlist-setidlist) und [**IPersistFolder2::GetCurFolder**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipersistfolder2-getcurfolder) fehlgeschlagen sind. Wird von [**IShellFolderViewCB::MessageSFVCB verwendet.**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)
 
 
 ```C++
@@ -30,24 +30,24 @@ SFVM_THISIDLIST
 
 <dl> <dt>
 
-*PIDL* \[ vorgenommen\]
+*pidl* \[ out\]
 </dt> <dd>
 
 Die Adresse der PIDL der Ansicht.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                |
 | Ende des Supports (Client)<br/>    | Windows XP mit SP2<br/>                                                      |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

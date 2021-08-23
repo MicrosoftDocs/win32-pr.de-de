@@ -1,31 +1,31 @@
 ---
-description: Um ein Dialogfeld anzuzeigen, in dem die auf dem Computer definierten Leistungs Objekte und-Indikatoren aufgelistet sind, können Sie die pdhbrowsecounters-Funktion aufrufen.
+description: Um ein Dialogfeld anzuzeigen, in dem die auf dem Computer definierten Leistungsobjekte und Leistungsindikatoren aufgeführt sind, rufen Sie die PdhBrowseCounters-Funktion auf.
 ms.assetid: f2fac1d3-f643-43c9-a445-112015baecdd
-title: Leistungsindikatoren durchsuchen
+title: Durchsuchen von Leistungsindikatoren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cd4bae5ce5ae7a21ae247cf66515f7386b8d0265
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c63278e0a531ec882bad6e102c89f6db0e0946a0d2a0a14b8736e7ee3aef6a8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011408"
 ---
-# <a name="browsing-counters"></a>Leistungsindikatoren durchsuchen
+# <a name="browsing-counters"></a>Durchsuchen von Leistungsindikatoren
 
-Um ein Dialogfeld anzuzeigen, in dem die auf dem Computer definierten Leistungs Objekte und-Indikatoren aufgelistet sind, können Sie die [**pdhbrowsecounters**](/windows/desktop/api/Pdh/nf-pdh-pdhbrowsecountersa) -Funktion aufrufen. Das Dialogfeld ermöglicht dem Benutzer das Durchsuchen und Auswählen von Leistungsindikatoren. Sie verwenden die Struktur [**PDH- \_ Durchsuchen \_ DLG \_ config**](/windows/win32/api/pdh/ns-pdh-pdh_browse_dlg_config_a) , um die Konfiguration des Dialog Felds anzugeben. Beispielsweise können Sie das Dialogfeld so konfigurieren, dass eine Auswahl oder eine Mehrfachauswahl zurückgegeben wird.
+Um ein Dialogfeld anzuzeigen, in dem die auf dem Computer definierten Leistungsobjekte und Leistungsindikatoren aufgeführt sind, rufen Sie die [**PdhBrowseCounters-Funktion**](/windows/desktop/api/Pdh/nf-pdh-pdhbrowsecountersa) auf. Im Dialogfeld kann der Benutzer Leistungsindikatoren durchsuchen und auswählen. Sie verwenden die [**PDH \_ BROWSE \_ DLG \_ CONFIG-Struktur,**](/windows/win32/api/pdh/ns-pdh-pdh_browse_dlg_config_a) um die Konfiguration des Dialogfelds anzugeben. Beispielsweise können Sie das Dialogfeld so konfigurieren, dass eine Auswahl oder mehrfache Auswahl zurück angezeigt wird.
 
-Bei der Eingabe enthält das Element **szreturnpathbuffer** das Standard Leistungs Objekt und den Leistungswert, der im Dialogfeld ausgewählt ist. Bei der Ausgabe enthält der Puffer das Leistungs Objekt und den Leistungs Bewert, den der Benutzer ausgewählt hat. Sie können auch das **pCallback** -Member verwenden, um eine Rückruffunktion anzugeben, mit der die vom Dialogfeld zurückgegebenen Namen von Zählern verarbeitet werden.
+Bei der Eingabe enthält **das szReturnPathBuffer-Element** das Standardleistungsobjekt und den Leistungsindikator, die im Dialogfeld ausgewählt sind. Bei der Ausgabe enthält der Puffer das Leistungsobjekt und den Leistungsindikator, die der Benutzer ausgewählt hat. Sie können auch den **pCallBack-Member** verwenden, um eine Rückruffunktion anzugeben, um die vom Dialogfeld zurückgegebenen Indikatornamen zu verarbeiten.
 
-Beachten Sie, dass dieses Dialogfeld das PDH-Dialogfeld zurückgeben kann \_ \_ , das abgebrochen wird, wenn **bsinglecounterperdialog** **false** ist und der Benutzer auf die Schaltfläche Schließen klickt, damit die Fehlerbehandlung dies berücksichtigen muss.
+Beachten Sie, dass dieses Dialogfeld PDH DIALOG CANCELLED zurückgeben kann, wenn \_ \_ **bSingleCounterPerDialog** **FALSE** ist und der Benutzer auf die Schaltfläche Schließen klickt, sodass die Fehlerbehandlung dies berücksichtigen muss.
 
-Ein Beispiel, in dem die [**pdhbrowscounters**](/windows/desktop/api/Pdh/nf-pdh-pdhbrowsecountersa) -Funktion verwendet wird, finden Sie unter durch [Suchen von Leistungsindikatoren](browsing-performance-counters.md).
+Ein Beispiel, in dem die [**PdhBrowseCounters-Funktion verwendet**](/windows/desktop/api/Pdh/nf-pdh-pdhbrowsecountersa) wird, finden Sie unter [Durchsuchen von Leistungsindikatoren.](browsing-performance-counters.md)
 
-Zum Abrufen einer Liste von Leistungs Objekten auf dem Computer können Sie auch die [**pdhenumubjects**](/windows/desktop/api/Pdh/nf-pdh-pdhenumobjectsa) -Funktion aufrufen. Rufen Sie zum Abrufen einer Liste von Leistungsindikatoren und Instanzen für ein Leistungs Objekt die [**pdhenumubjectitems**](/windows/desktop/api/Pdh/nf-pdh-pdhenumobjectitemsa) -Funktion auf. Sie können diese Funktionen auch verwenden, um die Leistungs Objekte und-Indikatoren zu identifizieren, die in einer Protokolldatei enthalten sind. Bei wiederholten Aufrufen von **pdhenumubjectitems** wird die gleiche Liste von Leistungsindikatoren und Instanzen zurückgegeben, bis Sie **pdhenumubjects** aufrufen, um die Liste der Leistungs Objekte zuerst zu aktualisieren. Ein Beispiel für das Auflisten von Objekten und Leistungsindikatoren finden Sie unter Auflisten von [Prozess Objekten](enumerating-process-objects.md).
+Um eine Liste von Leistungsobjekten auf dem Computer abzurufen, können Sie auch die [**PdhEnumObjects-Funktion**](/windows/desktop/api/Pdh/nf-pdh-pdhenumobjectsa) aufrufen. Um eine Liste von Leistungsindikatoren und Instanzen für ein Leistungsobjekt abzurufen, rufen Sie die [**PdhEnumObjectItems-Funktion**](/windows/desktop/api/Pdh/nf-pdh-pdhenumobjectitemsa) auf. Sie können diese Funktionen auch verwenden, um die Leistungsobjekte und Leistungsindikatoren zu identifizieren, die in einer Protokolldatei enthalten sind. Wiederholte Aufrufe von **PdhEnumObjectItems** geben dieselbe Liste von Leistungsindikatoren und Instanzen zurück, bis **Sie PdhEnumObjects** aufrufen, um zuerst die Liste der Leistungsobjekte zu aktualisieren. Ein Beispiel, das Objekte und Leistungsindikatoren aufzählt, finden Sie unter [Aufzählen von Prozessobjekten.](enumerating-process-objects.md)
 
 ## <a name="selecting-the-data-source"></a>Auswählen der Datenquelle
 
-Mit [**pdhselectdatasource**](/windows/desktop/api/Pdh/nf-pdh-pdhselectdatasourcea) können Sie zusammen mit [**pdhbrowscounters**](/windows/desktop/api/Pdh/nf-pdh-pdhbrowsecountersa) den Benutzer auffordern, auszuwählen, ob sich die Datenquelle in Echtzeit oder aus einer Protokolldatei befindet, und ob es sich um eine Protokolldatei handelt. Wenn Sie nicht möchten, dass das Dialogfeld Datenquelle angezeigt wird, können Sie **pdhselectdatasource** aufrufen, um nur den Katalog des Datei Browsers anzuzeigen. Geben Sie hierzu \_ den Datei Browser PDH-Flags \_ \_ \_ nur als zweiten Parameter des Aufrufens von **pdhselectdatasource** an.
+Sie können [**PdhSelectDataSource**](/windows/desktop/api/Pdh/nf-pdh-pdhselectdatasourcea) in Verbindung mit [**PdhBrowseCounters**](/windows/desktop/api/Pdh/nf-pdh-pdhbrowsecountersa) verwenden, um den Benutzer aufzufordern, auszuwählen, ob sich die Datenquelle in Echtzeit oder aus einer Protokolldatei befindet, und, wenn es sich um eine Protokolldatei handelt, ihren Namen auszuwählen. Wenn das Datenquellendialogfeld nicht angezeigt werden soll, können Sie **PdhSelectDataSource** aufrufen, um nur den Dateibrowserkatalog anzuzeigen. Geben Sie hierzu PDH FLAGS FILE BROWSER ONLY als zweiten Parameter des Aufrufs von \_ \_ \_ \_ **PdhSelectDataSource an.**
 
  
 

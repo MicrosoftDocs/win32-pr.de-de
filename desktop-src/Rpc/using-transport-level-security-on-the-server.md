@@ -1,32 +1,32 @@
 ---
-title: Verwenden der Sicherheit auf Transport Ebene auf dem Server
-description: Verwenden der Sicherheit auf Transport Ebene auf dem Server mit Remote Prozedur Aufruf (RPC).
+title: Verwenden der Sicherheit auf Transportebene auf dem Server
+description: Verwenden der Sicherheit auf Transportebene auf dem Server mit Remoteprozeduraufruf (RPC).
 ms.assetid: 8ad86d46-cdc8-44f0-bb56-4d5069f33e64
 keywords:
-- Remote Prozedur Aufruf RPC, Tasks, mit Sicherheit auf Transport Ebene auf dem Server
+- Rpc für Remoteprozeduraufrufe , Tasks mit Sicherheit auf Transportebene auf dem Server
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 39af5b8fb43a57683804eb7b91067ca9faad4390
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6abd1f072f249336f4804aed56fb1122556596c43286383b763839d988a2406b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473412"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119010588"
 ---
-# <a name="using-transport-level-security-on-the-server"></a>Verwenden der Sicherheit auf Transport Ebene auf dem Server
+# <a name="using-transport-level-security-on-the-server"></a>Verwenden der Sicherheit auf Transportebene auf dem Server
 
-In diesem Abschnitt werden die Diskussionen über die Sicherheit auf Transport Ebene erläutert, die in die folgenden Themen unterteilt sind:
+Dieser Abschnitt enthält Diskussionen zur Sicherheit auf Transportebene, unterteilt in die folgenden Themen:
 
--   [Verwenden von Transport-Level Sicherheit auf dem Client](using-transport-level-security-on-the-client.md)
+-   [Verwenden Transport-Level Sicherheit auf dem Client](using-transport-level-security-on-the-client.md)
 
-Wenn Sie [ncacn \_ NP](/windows/desktop/Midl/ncacn-np) oder [Ncalrpc](/windows/desktop/Midl/ncalrpc) als Protokoll Sequenz verwenden, gibt der Server beim Auswählen der Protokoll Sequenz eine Sicherheits Beschreibung für den Endpunkt an. Weitere Informationen zu Protokoll Sequenzen finden Sie unter [Angeben von Protokoll Sequenzen](specifying-protocol-sequences.md). Die Anwendung stellt die Sicherheits Beschreibung als zusätzlichen Parameter (eine Erweiterung der standardmäßigen OSF-DCE-Parameter) für alle Funktionen bereit, die mit den Präfixen [**RpcServerUseProtseq**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserveruseprotseq) und [**RpcServerUseAllProtSeqs**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserveruseallprotseqs)beginnen. Der Sicherheits Deskriptor steuert, ob ein Client eine Verbindung mit dem Endpunkt herstellen kann.
+Wenn Sie [ncacn \_ np](/windows/desktop/Midl/ncacn-np) oder [ncalrpc](/windows/desktop/Midl/ncalrpc) als Protokollsequenz verwenden, gibt der Server zum Zeitpunkt der Auswahl der Protokollsequenz einen Sicherheitsdeskriptor für den Endpunkt an. Weitere Informationen zu Protokollsequenzen finden Sie unter [Specifying Protocol Sequences](specifying-protocol-sequences.md). Ihre Anwendung stellt den Sicherheitsdeskriptor als zusätzlichen Parameter (eine Erweiterung der OSF-DCE-Standardparameter) für alle Funktionen zur Verfügung, die mit den Präfixen [**RpcServerUseProtseq**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserveruseprotseq) und [**RpcServerUseAllProtseqs beginnen.**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserveruseallprotseqs) Der Sicherheitsdeskriptor steuert, ob ein Client eine Verbindung mit dem Endpunkt herstellen kann.
 
-Jedem Prozess und Thread ist ein Sicherheits Token zugeordnet. Dieses Token enthält eine Standard Sicherheits Beschreibung, die für alle Objekte verwendet wird, die vom Prozess erstellt werden, z. b. den-Endpunkt. Wenn die Anwendung keine Sicherheits Beschreibung angibt, wenn eine Funktion mit den Präfixen [**RpcServerUseProtseq**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserveruseprotseq) und [**RpcServerUseAllProtSeqs**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserveruseallprotseqs)aufgerufen wird, wendet die RPC-Lauf Zeit Bibliothek die Standard Sicherheits Beschreibung vom Prozess Sicherheits Token auf den Endpunkt an.
+Jeder Prozess und Thread ist einem Sicherheitstoken zugeordnet. Dieses Token enthält einen Standardsicherheitsdeskriptor, der für alle objekte verwendet wird, die der Prozess erstellt, z. B. den Endpunkt. Wenn Ihre Anwendung beim Aufrufen einer Funktion mit den Präfixen [**RpcServerUseProtseq**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserveruseprotseq) und [**RpcServerUseAllProtseqs**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcserveruseallprotseqs)keinen Sicherheitsdeskriptor anordnt, wendet die RPC-Laufzeitbibliothek den Standardsicherheitsdeskriptor aus dem Prozesssicherheitstoken auf den Endpunkt an.
 
-Um sicherzustellen, dass die Serveranwendung für alle Clients zugänglich ist, sollte der Administrator die Serveranwendung auf einem Prozess starten, der über eine Standard Sicherheits Beschreibung verfügt, die von allen Clients verwendet werden kann. Im Allgemeinen verfügen nur System Prozesse über eine Standard Sicherheits Beschreibung.
+Um zu gewährleisten, dass alle Clients auf die Serveranwendung zugreifen können, sollte der Administrator die Serveranwendung in einem Prozess starten, der über eine Standardsicherheitsbeschreibung verfügt, die von allen Clients verwendet werden kann. Im Allgemeinen verfügen nur Systemprozesse über einen Standardsicherheitsdeskriptor.
 
-Weitere Informationen zu diesen Funktionen und den Funktionen [**RpcImpersonateClient**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcimpersonateclient) und [**rpkrevertdeself**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcreverttoself).
+Weitere Informationen zu diesen Funktionen und den Funktionen [**RpcImpersonateClient**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcimpersonateclient) und [**RpcRevertToSelf**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcreverttoself).
 
- 
+ 
 
- 
+ 

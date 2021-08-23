@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. intersectindexes-Methode.
-title: API. intersectindexes-Methode
+description: 'Weitere Informationen finden Sie unter: Api.IntersectIndexes-Methode'
+title: Api.IntersectIndexes-Methode
 TOCTitle: 'IntersectIndexes method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.IntersectIndexes(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID[])
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.intersectindexes(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8dfe5784ecd5ab517e183f8eeeb5f79315fe585a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 88bcc872fc557e3942a119845206661bd48705317163520924059af5456f6e00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983680"
 ---
-# <a name="apiintersectindexes-method"></a>API. intersectindexes-Methode
+# <a name="apiintersectindexes-method"></a>Api.IntersectIndexes-Methode
 
-Intersect eine Gruppe von Index Bereichen und gibt die Lesezeichen der Datensätze zurück, die in allen Index Bereichen gefunden werden. Siehe auch [jetintersectindexes (JET_SESID, \[ \] , Int32, JET_RECORDLIST, intersectindexesgrbit)](./api.jetintersectindexes-method.md).
+Überschneiden Sie eine Gruppe von Indexbereichen, und geben Sie die Lesezeichen der Datensätze zurück, die in allen Indexbereichen gefunden werden. Siehe auch [JetIntersectIndexes(JET_SESID, \[ \] , Int32, JET_RECORDLIST, IntersectIndexesGrbit).](./api.jetintersectindexes-method.md)
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,29 +64,29 @@ public static IEnumerable<byte[]> IntersectIndexes(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
   - tableids  
-    Sorte \[\]  
+    Typ: \[\]  
     
-    Das zu verwendende TableIDs. Jede TableID muss von einem anderen Index für dieselbe Tabelle sein und über einen aktiven Index Bereich verfügen. Verwenden Sie [jetsetindexrange (JET_SESID, JET_TABLEID, setindexrangegrbit)](./api.jetsetindexrange-method.md) , um einen Index Bereich zu erstellen.
+    Die zu verwendenden tableids. Jede tableid muss aus einem anderen Index in derselben Tabelle sein und über einen aktiven Indexbereich verfügen. Verwenden [Sie JetSetIndexRange(JET_SESID, JET_TABLEID, SetIndexRangeGrbit),](./api.jetsetindexrange-method.md) um einen Indexbereich zu erstellen.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Collections. Generic. IEnumerable](/dotnet/api/system.collections.generic.ienumerable-1)\<\[\]\>  
-Die Lesezeichen der Datensätze, die in allen Index Bereichen gefunden werden. Die Lesezeichen werden in der Primärschlüssel Reihenfolge zurückgegeben.  
+Typ: [System.Collections.Generic.IEnumerable](/dotnet/api/system.collections.generic.ienumerable-1)\<\[\]\>  
+Die Lesezeichen der Datensätze, die in allen Indexbereichen gefunden werden. Die Lesezeichen werden in der Reihenfolge des Primärschlüssels zurückgegeben.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

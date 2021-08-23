@@ -1,25 +1,25 @@
 ---
 description: Das folgende Beispiel zeigt die Entschlüsselung einer Datei.
 ms.assetid: be355b08-95c1-4ad3-bb05-6f646d5db5cd
-title: 'Beispiel-C-Programm: Entschlüsseln einer Datei'
+title: 'C-Beispielprogramm: Entschlüsseln einer Datei'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 57e65b7e33ba58a80fe87cc51a25912c66bf3589
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ac4aa59245600fa99f9992a08bda9dd7cdaa39bbd899851052559ee22b08997e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007868"
 ---
-# <a name="example-c-program-decrypting-a-file"></a>Beispiel-C-Programm: Entschlüsseln einer Datei
+# <a name="example-c-program-decrypting-a-file"></a>C-Beispielprogramm: Entschlüsseln einer Datei
 
-Das folgende Beispiel zeigt die Entschlüsselung einer Datei. Im Beispiel wird der Benutzer aufgefordert, den Namen einer verschlüsselten Datei und den Namen einer Datei zu erhalten, in die die entschlüsselten Daten geschrieben werden. Die Datei mit den verschlüsselten Daten muss vorhanden sein. Das Beispiel erstellt oder überschreibt die Ausgabedatei.
+Das folgende Beispiel zeigt die Entschlüsselung einer Datei. Im Beispiel wird der Benutzer nach dem Namen einer verschlüsselten Datei und dem Namen einer Datei gefragt, in die die entschlüsselten Daten geschrieben werden. Die Datei mit den verschlüsselten Daten muss vorhanden sein. Im Beispiel wird die Ausgabedatei erstellt oder überschrieben.
 
-Im Beispiel wird auch eine Zeichenfolge angefordert, die als Kennwort verwendet wird. Wenn ein Kennwort verwendet wurde, um den Verschlüsselungs Sitzungsschlüssel zu erstellen, muss das gleiche Kennwort eingegeben werden, um den Entschlüsselungs Sitzungsschlüssel zu erstellen. Weitere Informationen finden Sie unter [Beispiel C-Programm: Verschlüsseln einer Datei](example-c-program-encrypting-a-file.md).
+Im Beispiel wird auch eine Zeichenfolge angefordert, die als Kennwort verwendet wird. Wenn ein Kennwort zum Erstellen des Verschlüsselungssitzungsschlüssels verwendet wurde, muss dasselbe Kennwort eingegeben werden, um den Entschlüsselungssitzungsschlüssel zu erstellen. Weitere Informationen finden Sie unter [C-Beispielprogramm: Verschlüsseln einer Datei.](example-c-program-encrypting-a-file.md)
 
-Aufgrund der Änderung der Einschränkungen bei der Exportkontrolle können sich der standardmäßige [*Kryptografiedienstanbieter*](../secgloss/c-gly.md) (CSP) und die Standard [*Schlüssellänge*](../secgloss/k-gly.md) zwischen Betriebssystemversionen ändern. Es ist wichtig, dass sowohl die Verschlüsselung als auch die Entschlüsselung denselben CSP verwenden und dass die Schlüssellänge explizit festgelegt wird, um die Interoperabilität auf verschiedenen Betriebssystemplattformen sicherzustellen.
+Aufgrund der geänderten Exportsteuerungseinschränkungen können sich der [*Standardmäßige Kryptografiedienstanbieter (Cryptographic Service Provider,*](../secgloss/c-gly.md) CSP) und die [*Standardschlüssellänge*](../secgloss/k-gly.md) zwischen Betriebssystemversionen ändern. Es ist wichtig, dass sowohl die Verschlüsselung als auch die Entschlüsselung denselben CSP verwenden und die Schlüssellänge explizit festgelegt wird, um die Interoperabilität auf verschiedenen Betriebssystemplattformen sicherzustellen.
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel wird die Funktion [**MyHandleError verwendet.**](myhandleerror.md) Der Code für diese Funktion ist im Beispiel enthalten. Code für diese und andere Hilfsfunktionen ist auch unter [Universell Functions](general-purpose-functions.md)aufgeführt.
 
 
 ```C++

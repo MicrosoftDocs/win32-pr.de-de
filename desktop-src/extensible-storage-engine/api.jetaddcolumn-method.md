@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: API. jetaddcolumn-Methode'
-title: API. jetaddcolumn-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetAddColumn-Methode'
+title: Api.JetAddColumn-Methode
 TOCTitle: 'JetAddColumn method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetAddColumn(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,System.String,Microsoft.Isam.Esent.Interop.JET_COLUMNDEF,System.Byte[],System.Int32,Microsoft.Isam.Esent.Interop.JET_COLUMNID@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetaddcolumn(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a864bab9c3b888622640e6226c3e7ee542a096d2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d1972fdf9f19ad7a249df00a07cbe8481bcb133da81a748fda865639d934e4c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983690"
 ---
-# <a name="apijetaddcolumn-method"></a>API. jetaddcolumn-Methode
+# <a name="apijetaddcolumn-method"></a>Api.JetAddColumn-Methode
 
 Fügen Sie einer vorhandenen Tabelle eine neue Spalte hinzu.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,59 +77,59 @@ public static void JetAddColumn(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
     Die Tabelle, der die Spalte hinzugefügt werden soll.
 
 <!-- end list -->
 
   - column  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Der Name der Spalte.
 
 <!-- end list -->
 
   - columndef  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNDEF](./jet-columndef-class.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNDEF](./jet-columndef-class.md)  
     
     Die Definition der Spalte.
 
 <!-- end list -->
 
   - defaultValue  
-    Sorte \[\]  
+    Typ: \[\]  
     
     Der Standardwert der Spalte.
 
 <!-- end list -->
 
-  - defaultvaluesize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - defaultValueSize  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Die Größe des Standardwerts.
 
 <!-- end list -->
 
   - columnid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
     
-    Gibt das ColumnID der neuen Spalte zurück.
+    Gibt die Columnid der neuen Spalte zurück.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

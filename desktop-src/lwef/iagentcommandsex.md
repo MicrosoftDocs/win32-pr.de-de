@@ -1,47 +1,47 @@
 ---
-title: Iagentcommandsex
-description: Iagentcommandsex
+title: IAgentCommandsEx
+description: IAgentCommandsEx
 ms.assetid: 6c354677-4cdb-4a74-9c41-2d0bf6f8dd55
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d16616ccb86bf109dad85a8ee2ac5d2bd009827
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 3ff4ff8e6dc87eb1a5fa5c3e79fe26b00d8bd3c8eb18a5fc6ca7cac22d3dfd07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106338059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976260"
 ---
-# <a name="iagentcommandsex"></a>Iagentcommandsex
+# <a name="iagentcommandsex"></a>IAgentCommandsEx
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-[**Iagentcommandsex**](iagentcommandex.md) definiert eine Schnittstelle, die die [**iagentcommands**](iagentcommands.md) -Schnittstelle erweitert.
+[**IAgentCommandsEx**](iagentcommandex.md) definiert eine Schnittstelle, die die [**IAgentCommands-Schnittstelle**](iagentcommands.md) erweitert.
 
 **Methoden in Vtable-Reihenfolge**
 
 
 
-| Iagentcommandsex-Methoden                                                             | BESCHREIBUNG                                                                                                   |
+| IAgentCommandsEx-Methoden                                                             | Beschreibung                                                                                                   |
 |--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| [Setdefaultid](iagentcommandsex--setdefaultid.md)                                   | Legt den Standardbefehl für das Popup Menü des Zeichens fest.                                                     |
-| [Getdefaultid](iagentcommandsex--getdefaultid.md)                                   | Gibt den Standardbefehl für das Popup Menü des Zeichens zurück.                                                  |
-| [**"Setup"**](iagentcommandex--sethelpcontextid.md)                        | Legt die kontextabhängige Hilfe Themen-ID für ein [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt fest.                     |
-| [**Gethelpcontextid**](iagentcommandex--gethelpcontextid.md)                        | Gibt die kontextbezogene Hilfe Themen-ID für ein [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt zurück.                  |
-| [Setfontname](iagentcommandsex--setfontname.md)                                     | Legt die Schriftart fest, die im Popupmenü des Zeichens verwendet werden soll.                                                          |
+| [SetDefaultID](iagentcommandsex--setdefaultid.md)                                   | Legt den Standardbefehl für das Popupmenü des Zeichens fest.                                                     |
+| [GetDefaultID](iagentcommandsex--getdefaultid.md)                                   | Gibt den Standardbefehl für das Popupmenü des Zeichens zurück.                                                  |
+| [**SetHelpContextID**](iagentcommandex--sethelpcontextid.md)                        | Legt die kontextbezogene Hilfethema-ID für ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) fest.                     |
+| [**GetHelpContextID**](iagentcommandex--gethelpcontextid.md)                        | Gibt die kontextbezogene Hilfethema-ID für ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) zurück.                  |
+| [SetFontName](iagentcommandsex--setfontname.md)                                     | Legt die Schriftart fest, die im Popupmenü des Zeichens verwendet werden soll.                                                          |
 | [GetFontName](iagentcommandsex--getfontname.md)                                     | Gibt die Schriftart zurück, die im Popupmenü des Zeichens verwendet wird.                                                         |
-| [SetFontSize](iagentcommandsex--setfontsize.md)                                     | Legt den Schrift Grad fest, der im Popupmenü des Zeichens verwendet werden soll.                                                     |
-| [GetFontSize](iagentcommandsex--getfontsize.md)                                     | Gibt den im Popupmenü des Zeichens verwendeten Schrift Grad zurück.                                                    |
-| [**Setvoicecaption**](iagentcommandex--setvoicecaption.md)                          | Legt die sprach Beschriftung für das [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt des Zeichens fest.                         |
-| [**Getvoicecaption**](iagentcommandex--getvoicecaption.md)                          | Gibt die sprach Beschriftung für das [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt des Zeichens zurück.                      |
-| [Addex](iagentcommandsex--addex.md)                                                 | Fügt [**einer Befehls**](/windows/desktop/lwef/the-commands-collection-object) Auflistung ein [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt hinzu.    |
-| [Insertex](iagentcommandsex--insertex.md)                                           | Fügt ein [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt in eine [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung ein. |
-| [Setglobalvoicecommandsenabled](iagentcommandsex--setglobalvoicecommandsenabled.md) | Aktiviert die Sprachgrammatik für die globalen Befehle des Agents.                                                        |
-| [Getglobalvoicecommandsenabled](iagentcommandsex--getglobalvoicecommandsenabled.md) | Gibt zurück, ob die Sprachgrammatik für die globalen Befehle des Agents aktiviert ist.                                     |
+| [Formattedtext.setfontsize](iagentcommandsex--setfontsize.md)                                     | Legt den Schriftgrad fest, der im Popupmenü des Zeichens verwendet werden soll.                                                     |
+| [GetFontSize](iagentcommandsex--getfontsize.md)                                     | Gibt den Schriftgrad zurück, der im Popupmenü des Zeichens verwendet wird.                                                    |
+| [**SetVoiceCaption**](iagentcommandex--setvoicecaption.md)                          | Legt die Sprachbeschriftung für das [**Command-Objekt**](/windows/desktop/lwef/the-command-object) des Zeichens fest.                         |
+| [**GetVoiceCaption**](iagentcommandex--getvoicecaption.md)                          | Gibt die Sprachbeschriftung für das [**Command-Objekt**](/windows/desktop/lwef/the-command-object) des Zeichens zurück.                      |
+| [AddEx](iagentcommandsex--addex.md)                                                 | Fügt einer [**Commands-Auflistung**](/windows/desktop/lwef/the-commands-collection-object) ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) hinzu.    |
+| [InsertEx](iagentcommandsex--insertex.md)                                           | Fügt ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) in eine [**Commands-Auflistung**](/windows/desktop/lwef/the-commands-collection-object) ein. |
+| [SetGlobalVoiceCommandsEnabled](iagentcommandsex--setglobalvoicecommandsenabled.md) | Aktiviert die Sprachgrammatik für globale Befehle des -Agents.                                                        |
+| [GetGlobalVoiceCommandsEnabled](iagentcommandsex--getglobalvoicecommandsenabled.md) | Gibt zurück, ob die Sprachgrammatik für die globalen Befehle des -Agents aktiviert ist.                                     |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

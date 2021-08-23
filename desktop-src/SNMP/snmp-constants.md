@@ -1,40 +1,40 @@
 ---
 title: SNMP-Konstanten
-description: Die SNMP-API definiert Konstanten für die Verwendung in einer Reihe von Funktionsbereichen. In der folgenden Tabelle sind diese Funktionsbereiche aufgelistet und beschrieben.
+description: Die SNMP-API definiert Konstanten für die Verwendung in einer Reihe von Funktionbereichen. In der folgenden Tabelle werden diese Funktionsbereiche aufgeführt und beschrieben.
 ms.assetid: 18d0eede-c89b-41e3-8380-d88f893ba491
 keywords:
 - SNMP-Konstanten SNMP
 - Konstanten SNMP, SNMP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b5e060c3979f2176120d285b60438bb89e51d208
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: aafd752c2f2ef115d669544359c9470fc87edf046fc282055e0a2755dea8a6ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728960"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119009018"
 ---
 # <a name="snmp-constants"></a>SNMP-Konstanten
 
-\[SNMP ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Windows-Remoteverwaltung](/windows/desktop/WinRM/portal), bei dem es sich um die Microsoft-Implementierung von WS-man handelt.\]
+\[SNMP ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Windows Remoteverwaltung,](/windows/desktop/WinRM/portal)bei der es sich um die Microsoft-Implementierung von WS-Man handelt.\]
 
-Die SNMP-API definiert Konstanten für die Verwendung in einer Reihe von Funktionsbereichen. In der folgenden Tabelle sind diese Funktionsbereiche aufgelistet und beschrieben.
+Die SNMP-API definiert Konstanten für die Verwendung in einer Reihe von Funktionbereichen. In der folgenden Tabelle werden diese Funktionsbereiche aufgeführt und beschrieben.
 
 
 
 | Konstante                                                                 | BESCHREIBUNG                                   |
 |--------------------------------------------------------------------------|-----------------------------------------------|
-| [**PDU-Typwerte**](pdu-type-values.md)                               | Beschreibt die Werte des PDU-Typs.                |
-| [**SNMP-Anwendungs Syntax Werte**](snmp-application-syntax-values.md) | Beschreibt die SNMP-Anwendungs Syntax Werte. |
-| [**Einfache SNMP-Syntax Werte**](snmp-simple-syntax-values.md)           | Beschreibt die einfachen Syntax Werte für SNMP.  |
-| [**Werte der SNMP-Konstruktorsyntax**](snmp-constructor-syntax-values.md) | Beschreibt die SNMP-Konstruktorsyntax-Werte. |
-| [**SNMP-Anforderungs Typen**](snmp-request-types.md)                         | Beschreibt die SNMP-Anforderungs Typen.             |
-| [**SNMPv1 Trap-Typen**](snmpv1-trap-types.md)                           | Beschreibt Trap-Typen für SNMPv1.              |
+| [**PDU-Typwerte**](pdu-type-values.md)                               | Beschreibt die PDU-Typwerte.                |
+| [**SNMP-Anwendungssyntaxwerte**](snmp-application-syntax-values.md) | Beschreibt die Syntaxwerte der SNMP-Anwendung. |
+| [**Einfache SNMP-Syntaxwerte**](snmp-simple-syntax-values.md)           | Beschreibt die einfachen Syntaxwerte für SNMP.  |
+| [**SNMP-Konstruktorsyntaxwerte**](snmp-constructor-syntax-values.md) | Beschreibt die SNMP-Konstruktorsyntaxwerte. |
+| [**SNMP-Anforderungstypen**](snmp-request-types.md)                         | Beschreibt die SNMP-Anforderungstypen.             |
+| [**SNMPv1-Traptypen**](snmpv1-trap-types.md)                           | Beschreibt Traptypen für SNMPv1.              |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

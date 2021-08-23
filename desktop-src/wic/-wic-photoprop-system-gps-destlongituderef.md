@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die Eigenschaft System. GPS. destlängs Deref.
+description: Die Fotometadatenrichtlinie für die System.GPS.DestLongitudeRef-Eigenschaft.
 ms.assetid: 2a0abb9b-41e3-49ba-a60b-3096d9c032bd
-title: System. GPS. destlängs Deref-Foto-metadatenrichtlinie
+title: System.GPS.DestLongitudeRef-Fotometadatenrichtlinie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8139fcf5218d9863393888d7ab7b188a53e7f55f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1fca1095138b35767da94e2eeed85a11892ba6edea3fa32f37ea6bd85fb76462
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362900"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964949"
 ---
-# <a name="systemgpsdestlongituderef-photo-metadata-policy"></a>System. GPS. destlängs Deref-Foto-metadatenrichtlinie
+# <a name="systemgpsdestlongituderef-photo-metadata-policy"></a>System.GPS.DestLongitudeRef-Fotometadatenrichtlinie
 
-Die fotometadatenrichtlinie für die Eigenschaft [System. GPS. destlängs Deref](../properties/props-system-gps-destlongituderef.md) .
+Die Fotometadatenrichtlinie für die [System.GPS.DestLongitudeRef-Eigenschaft.](../properties/props-system-gps-destlongituderef.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-pkey \_ GPS. Destlängs Deref
+PKEY \_ GPS. DestLongitudeRef
 
 ### <a name="containers"></a>Container
 
@@ -27,43 +27,43 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
-### <a name="input-propvariant-type"></a>Eingabe-PROPVARIANT-Typ
+### <a name="input-propvariant-type"></a>Propvariant-Eingabetyp
 
-VT \_ LPWSTR wird bevorzugt, aber VT \_ LPSTR wird ebenfalls akzeptiert.
+VT \_ LPWSTR wird bevorzugt, aber auch VT \_ LPSTR wird akzeptiert.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="precedence-of-paths-jpeg"></a>Rangfolge von Pfaden (JPEG)
 
-Wenn die Datei im JPEG-Format vorliegt, wird der Handler die Daten in der folgenden Reihenfolge lesen, schreiben und entfernen:
+Wenn die Datei im JPEG-Format vorliegt, liest, schreibt und entfernt der Handler die Daten in der folgenden Reihenfolge:
 
 
 
-| Auftrag | Pfad                          | Datenträger Format | Erforderlich |
+| Auftrag | Pfad                          | Datenträgerformat | Erforderlich |
 |-------|-------------------------------|-------------|----------|
-| 1     | /XMP/EXIF: gpsdestlängs Deref | Unicode     | Ja      |
-| 2     | /App1/IFD/GPS/ \\ {UShort = 21 \\ } | ASCII       | Nein       |
+| 1     | /xmp/exif:GPSDestLongitudeRef | Unicode     | Ja      |
+| 2     | /app1/ifd/gps/ \\ {ushort=21 \\ } | ASCII       | Nein       |
 
 
 
  
 
-### <a name="precedence-of-paths-tiff"></a>Rangfolge von Pfaden (TIFF)
+### <a name="precedence-of-paths-tiff"></a>Rangfolge von Pfaden (Precedence of Paths, TIFF)
 
-Wenn die Datei im TIFF-Format vorliegt, wird der Handler die Daten in der folgenden Reihenfolge lesen, schreiben und entfernen:
+Wenn die Datei im TIFF-Format vorliegt, liest, schreibt und entfernt der Handler die Daten in der folgenden Reihenfolge:
 
 
 
-| Auftrag | Pfad                              | Datenträger Format | Erforderlich |
+| Auftrag | Pfad                              | Datenträgerformat | Erforderlich |
 |-------|-----------------------------------|-------------|----------|
-| 1     | /IFD/XMP/EXIF: gpsdestlängs Deref | Unicode     | Ja      |
-| 2     | /IFD/GPS/ \\ {UShort = 21 \\ }          | ASCII       | Nein       |
+| 1     | /ifd/xmp/exif:GPSDestLongitudeRef | Unicode     | Ja      |
+| 2     | /ifd/gps/ \\ {ushort=21 \\ }          | ASCII       | Nein       |
 
 
 
@@ -75,7 +75,7 @@ Wenn die Datei im TIFF-Format vorliegt, wird der Handler die Daten in der folgen
 
 <dl> <dt>
 
-[System. GPS. destlängs Deref](../properties/props-system-gps-destlongituderef.md)
+[System.GPS.DestLongitudeRef](../properties/props-system-gps-destlongituderef.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft die frei Hand Blattknoten ab, die die angegebenen Striche enthalten.
+description: Ruft die Ink-Blattknoten ab, die die angegebenen Striche enthalten.
 ms.assetid: d9ebc57d-63f5-4175-8bb6-a688b98823d4
-title: 'Iinkanalyzer:: findinkleafnodesforstrokes-Methode (iacom. h)'
+title: IInkAnalyzer::FindInkLeafNodesForStrokes-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: d19bed823f5385533dfc938eb9f6013b4a5640c2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a7424f62008e15feb538df7a6a27745dda17bf6ace4612218608f8e509e75e59
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862692"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967279"
 ---
-# <a name="iinkanalyzerfindinkleafnodesforstrokes-method"></a>Iinkanalyzer:: findinkleafnodesforstrokes-Methode
+# <a name="iinkanalyzerfindinkleafnodesforstrokes-method"></a>IInkAnalyzer::FindInkLeafNodesForStrokes-Methode
 
-Ruft die frei Hand Blattknoten ab, die die angegebenen Striche enthalten.
+Ruft die Ink-Blattknoten ab, die die angegebenen Striche enthalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,41 +41,41 @@ HRESULT FindInkLeafNodesForStrokes(
 
 <dl> <dt>
 
-*ulstrokeidscount* \[ in\]
+*ulStrokeIdsCount* \[ In\]
 </dt> <dd>
 
-Die Anzahl der über gebenen Strich Bezeichner.
+Die Anzahl der übergebenen Strichbezeichner.
 
 </dd> <dt>
 
-*plstrokeids* \[ in\]
+*plStrokeIds* \[ In\]
 </dt> <dd>
 
-Ein Array der Strich Bezeichner.
+Ein Array der Strichbezeichner.
 
 </dd> <dt>
 
-*ppcontextnodesfound* \[ vorgenommen\]
+*ppContextNodesFound* \[ out\]
 </dt> <dd>
 
-Die Auflistung von [**icontextnode**](icontextnode.md) -Objekten, die alle frei Hand Blattknoten enthalten, die die Striche mit bezeichern im *plstrokeids* -Array enthalten.
+Die Auflistung von [**IContextNode-Objekten,**](icontextnode.md) die alle Ink-Blattknoten enthalten, die die Striche mit Bezeichnern im *plStrokeIds-Array* enthalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, nennen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf *ppcontextnodesfound* , wenn Sie das-Objekt nicht mehr verwenden müssen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) für *ppContextNodesFound* auf, wenn Sie das Objekt nicht mehr verwenden müssen.
 
  
 
-Blattknoten enthalten keine untergeordneten Knoten. Frei Hand Knoten enthalten Strich Daten. Beispiele für frei Hand Blattknoten sind InkWord-, InkDrawing-und andinkbullet- [**icontextnode**](icontextnode.md) -Objekte. Weitere Informationen finden Sie unter [Kontext Knoten Typen](context-node-types.md).
+Blattknoten enthalten keine untergeordneten Knoten. Ink-Knoten enthalten Strichdaten. Beispiele für Freihandblattknoten sind InkWord-, InkDrawing- [**undInkBullet-IContextNode-Objekte.**](icontextnode.md) Weitere Informationen finden Sie unter [Kontextknotentypen.](context-node-types.md)
 
-Wenn keine Knoten die angegebenen Striche enthalten, wird eine leere [**icontextnodes**](icontextnodes.md) -Auflistung zurückgegeben. Wenn *ulstrokeidscount* gleich 0 (null) ist, wird eine leere **icontextnodes** -Auflistung zurückgegeben.
+Wenn keine Knoten die angegebenen Striche enthalten, wird eine leere [**IContextNodes-Auflistung**](icontextnodes.md) zurückgegeben. Wenn *ulStrokeIdsCount* gleich 0 (null) ist, wird eine leere **IContextNodes-Auflistung** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,9 +83,9 @@ Wenn keine Knoten die angegebenen Striche enthalten, wird eine leere [**icontext
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -94,34 +94,34 @@ Wenn keine Knoten die angegebenen Striche enthalten, wird eine leere [**icontext
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: FindInkLeafNodes-Methode**](iinkanalyzer-findinkleafnodes.md)
+[**IInkAnalyzer::FindInkLeafNodes-Methode**](iinkanalyzer-findinkleafnodes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findleafnodes-Methode**](iinkanalyzer-findleafnodes.md)
+[**IInkAnalyzer::FindLeafNodes-Methode**](iinkanalyzer-findleafnodes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: FindNode-Methode**](iinkanalyzer-findnode.md)
+[**IInkAnalyzer::FindNode-Methode**](iinkanalyzer-findnode.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodesoft ype-Methode**](iinkanalyzer-findnodesoftype.md)
+[**IInkAnalyzer::FindNodesOfType-Methode**](iinkanalyzer-findnodesoftype.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodesoft ypeer forstrokes-Methode**](iinkanalyzer-findnodesoftypeforstrokes.md)
+[**IInkAnalyzer::FindNodesOfTypeForStrokes-Methode**](iinkanalyzer-findnodesoftypeforstrokes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodesoft ypeinsubtree-Methode**](iinkanalyzer-findnodesoftypeinsubtree.md)
+[**IInkAnalyzer::FindNodesOfTypeInSubTree-Methode**](iinkanalyzer-findnodesoftypeinsubtree.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodeswithcallback-Methode**](iinkanalyzer-findnodeswithcallback.md)
+[**IInkAnalyzer::FindNodesWithCallBack-Methode**](iinkanalyzer-findnodeswithcallback.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodeswithcallbackinsubtree-Methode**](iinkanalyzer-findnodeswithcallbackinsubtree.md)
+[**IInkAnalyzer::FindNodesWithCallBackInSubTree-Methode**](iinkanalyzer-findnodeswithcallbackinsubtree.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

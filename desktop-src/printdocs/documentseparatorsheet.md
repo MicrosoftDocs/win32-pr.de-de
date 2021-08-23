@@ -19,7 +19,7 @@ Beschreibt die Verwendung des Trennblatts für ein Dokument. Trennzeichenblätte
 
 -   [Elementinformationen](#element-information)
 -   [Strukturell](#structural-content)
--   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -68,7 +68,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
 
 Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

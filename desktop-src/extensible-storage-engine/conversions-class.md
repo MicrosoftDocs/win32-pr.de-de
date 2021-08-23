@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Konvertierungs Klasse'
-title: Konvertierungs Klasse
+description: 'Weitere Informationen zu: Conversions-Klasse'
+title: Conversions-Klasse
 TOCTitle: Conversions class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Conversions
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.conversions(v=EXCHG.10)
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 43a5716348fb41ce6875729f97094fddb05a228c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b224985569d5fd04c10bc923c591da0faecac2b967b6c347333d8bfe6c5d546c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042308"
 ---
-# <a name="conversions-class"></a>Konvertierungs Klasse
+# <a name="conversions-class"></a>Conversions-Klasse
 
 Stellen Sie Methoden zum Konvertieren von Daten und Flags zwischen Win32 und dem .NET Framework bereit.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. Konvertierungen  
+  Microsoft.Isam.Esent.Interop.Conversions  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,8 +62,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Konvertierungs Elemente](./conversions-members.md)
+[Konvertierungsmember](./conversions-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

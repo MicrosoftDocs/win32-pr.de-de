@@ -1,7 +1,7 @@
 ---
-description: Ermöglicht die Verarbeitung eines Transformations Befehls, der in einer Vorschau Vorlage gefunden wurde.
+description: Ermöglicht die Verarbeitung eines Transformationsbefehls, der in einer Vorschauvorlage gefunden wurde.
 ms.assetid: 0b81b780-8bd1-4667-a0a1-65319f209603
-title: Iitempreviewerext::P rocesstransformcommand-Methode
+title: IItemPreviewerExt::P rocessTransformCommand-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 384294aac177679ea7445edb880198d250310625
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f93d4be0bf9491c4fd2f6074c00692d6f634704ec820a34baeb4f1d52343c36a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862172"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118969775"
 ---
-# <a name="iitempreviewerextprocesstransformcommand-method"></a>Iitempreviewerext::P rocesstransformcommand-Methode
+# <a name="iitempreviewerextprocesstransformcommand-method"></a>IItemPreviewerExt::P rocessTransformCommand-Methode
 
-Ermöglicht die Verarbeitung eines Transformations Befehls, der in einer Vorschau Vorlage gefunden wurde.
+Ermöglicht die Verarbeitung eines Transformationsbefehls, der in einer Vorschauvorlage gefunden wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,39 +41,39 @@ HRESULT ProcessTransformCommand(
 
 <dl> <dt>
 
-*dwcontext* \[ in\]
+*dwContext* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
 
-Der Kontext Bezeichner für den Vorgang. Überschreiben Sie den *dwcontext* -Standard, um den Kontext Bezeichner auf einen Wert Ihrer Wahl festzulegen.
+Der Kontextbezeichner für den Vorgang. Überschreiben Sie den *dwContext-Standardwert,* um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen.
 
 </dd> <dt>
 
-*pwszName* \[ in\]
+*pwszName* \[ In\]
 </dt> <dd>
 
-Typ: **lpcolestr**
+Typ: **LPCOLESTR**
 
-Ein Zeiger auf den Namen des Transformations Befehls als Unicode-Zeichenfolge.
+Ein Zeiger auf den Namen des Transformationsbefehls als Unicode-Zeichenfolge.
 
 </dd> <dt>
 
-*pwszarg* \[ in\]
+*pwszArg* \[ In\]
 </dt> <dd>
 
-Typ: **lpcolestr**
+Typ: **LPCOLESTR**
 
 Ein Zeiger auf das Argument als Unicode-Zeichenfolge.
 
 </dd> <dt>
 
-*pVarResult* \[ Out, retval\]
+*pvarResult* \[ out, retval\]
 </dt> <dd>
 
-Typ: **Variant \** _
+Typ: **\* VARIANT**
 
-Ein Zeiger auf die Ergebnis Variante. _pvarResult * darf kein **null** -Zeiger sein.
+Ein Zeiger auf die Ergebnisvariante. *pvarResult* darf kein **NULL-Zeiger** sein.
 
 </dd> </dl>
 
@@ -81,13 +81,13 @@ Ein Zeiger auf die Ergebnis Variante. _pvarResult * darf kein **null** -Zeiger s
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**iitempreviewerext**](-search-iitempreviewerext.md) -Schnittstelle wird nur unter Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+Die [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
-Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**iitempreviewerext**](-search-iitempreviewerext.md) -Schnittstelle und die folgenden APIs zu verwenden: die Schnittstellen [**isearchprotocolui**](-search-isearchprotocolui.md), [**iitempropertybag**](iitempropertybag.md) und [**isearchitem**](-search-isearchitem.md) , die [**linkinfo**](-search-linkinfo.md) -Struktur und die [**linktype**](-search-linktype.md)
+Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) und die folgenden APIs zu verwenden: die Schnittstellen [**ISearchProtocolUI,**](-search-isearchprotocolui.md) [**IItemPropertyBag**](iitempropertybag.md) und [**ISearchItem,**](-search-isearchitem.md) die [**LINKINFO-Struktur**](-search-linkinfo.md) und die [**LINKTYPE-Enumeration.**](-search-linktype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,9 +95,9 @@ Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittan
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 3,0<br/>          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 3.0<br/>          |
 
 
 
@@ -105,7 +105,7 @@ Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittan
 
 <dl> <dt>
 
-[**Iitempreviewerext**](-search-iitempreviewerext.md)
+[**IItemPreviewerExt**](-search-iitempreviewerext.md)
 </dt> </dl>
 
  

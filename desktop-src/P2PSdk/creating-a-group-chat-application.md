@@ -1,28 +1,28 @@
 ---
-description: Dieses Thema enthält relevante Codebeispiele für die wichtigsten Schritte bei der Entwicklung einer Chatanwendung mit der Peer Gruppierungs-API, die einen Kontext für jeden API-Befehl bereitstellt.
+description: Dieses Thema enthält relevante Codebeispiele für die wichtigsten Schritte zum Entwickeln einer Chatanwendung mit der Peergruppierungs-API, die einen Kontext für jeden API-Aufruf bereitstellt.
 ms.assetid: 47bb8606-0b7b-4e71-9d6f-c400d6a82e43
-title: Erstellen einer Gruppen Chat-Anwendung
+title: Erstellen einer Gruppenchatanwendung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 676d4e9913934024df3131c0f965a5d85477d148
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bcb8f9458f8e01bea86e42f0cd976395e951bda52f13af46952479d5810e46c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104345539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011658"
 ---
-# <a name="creating-a-group-chat-application"></a>Erstellen einer Gruppen Chat-Anwendung
+# <a name="creating-a-group-chat-application"></a>Erstellen einer Gruppenchatanwendung
 
-Dieses Thema enthält relevante Codebeispiele für die wichtigsten Schritte bei der Entwicklung einer Chatanwendung mit der Peer Gruppierungs-API, die einen Kontext für jeden API-Befehl bereitstellt. UI-Verhalten und allgemeine Anwendungs Struktur sind nicht enthalten.
+Dieses Thema enthält relevante Codebeispiele für die wichtigsten Schritte zum Entwickeln einer Chatanwendung mit der Peergruppierungs-API, die einen Kontext für jeden API-Aufruf bereitstellt. Benutzeroberflächenverhalten und allgemeine Anwendungsstruktur sind nicht enthalten.
 
 > [!Note]  
-> Die Beispielanwendung für die komplette Peer Gruppen Chat-Anwendung wird im Peer SDK bereitgestellt. Dieses Thema verweist auf Funktionen, die im Beispiel bereitgestellt werden.
+> Die vollständige Peergruppenchat-Beispielanwendung wird im Peer SDK bereitgestellt. Dieses Thema verweist auf Funktionen, die im Beispiel bereitgestellt werden.
 
  
 
 ## <a name="initializing-a-group"></a>Initialisieren einer Gruppe
 
-Der erste Schritt beim Erstellen einer Chatanwendung besteht darin, die Peer Gruppierungs Infrastruktur zu initialisieren, indem [**peergroupstartup**](/windows/desktop/api/P2P/nf-p2p-peergroupstartup) mit der höchsten unterstützten Version aufgerufen wird. In diesem Fall wird die **Peer \_ Gruppen \_ Version** in der Anwendungs Header Datei definiert. Die von der Infrastruktur tatsächlich unterstützte Version wird in " **Peer Version**" zurückgegeben.
+Der erste Schritt beim Erstellen einer Chatanwendung besteht darin, die Peergruppierungsinfrastruktur durch Aufrufen von [**PeerGroupStartup**](/windows/desktop/api/P2P/nf-p2p-peergroupstartup) mit der höchsten unterstützten Version zu initialisieren. In diesem Fall wird **PEER \_ GROUP \_ VERSION** in der Anwendungsheaderdatei definiert. Die tatsächlich von der Infrastruktur unterstützte Version wird in **peerVersion** zurückgegeben.
 
 
 ```C++
@@ -39,7 +39,7 @@ Der erste Schritt beim Erstellen einer Chatanwendung besteht darin, die Peer Gru
 
 ## <a name="creating-a-group"></a>Erstellen einer Gruppe
 
-Eine Chatanwendung muss in der Lage sein, eine Peer Gruppe zu erstellen, wenn keine Gruppe zum beitreten verfügbar ist, oder wenn der Anwendungs Benutzer eine neue erstellen möchte. Zu diesem Zweck müssen Sie eine Struktur der [**Peer \_ Gruppen \_ Eigenschaften**](/windows/desktop/api/P2P/ns-p2p-peer_group_properties) erstellen und Sie mit den anfänglichen Einstellungen für die Gruppe auffüllen, einschließlich des Klassifizierers für die Peer Gruppe, des anzeigen Amens, des anzeigen Amens und der Anwesenheits Lebensdauer. Nachdem diese Struktur aufgefüllt wurde, übergeben Sie Sie an " [**Peer groupcreate**](/windows/desktop/api/P2P/nf-p2p-peergroupcreate)".
+Eine Chatanwendung muss in der Lage sein, eine Peergruppe zu erstellen, wenn keine Gruppe für den Beitritt verfügbar ist oder wenn der Anwendungsbenutzer eine neue erstellen möchte. Hierzu müssen Sie eine [**PEER \_ GROUP \_ PROPERTIES-Struktur**](/windows/desktop/api/P2P/ns-p2p-peer_group_properties) erstellen und mit den Anfangseinstellungen für die Gruppe auffüllen, einschließlich der Klassifizierung für die Peergruppe, des Anzeigenamens, des Peernamens des Erstellers und der Lebensdauer der Anwesenheit. Nachdem diese Struktur aufgefüllt wurde, übergeben Sie sie an [**PeerGroupCreate**](/windows/desktop/api/P2P/nf-p2p-peergroupcreate).
 
 
 ```C++
@@ -91,11 +91,11 @@ HRESULT CreateGroup(PCWSTR pwzName, PCWSTR pwzIdentity)
 
 
 
-## <a name="issuing-invitations"></a>Ausstellende Einladungen
+## <a name="issuing-invitations"></a>Ausstellen von Einladungen
 
-Beim Ausgeben einer Einladung müssen die gmcs der eingeladenen Personen abgerufen werden. Diese können durch Aufrufen von " [**Peer Identity tygetxml**](/windows/desktop/api/P2P/nf-p2p-peeridentitygetxml) " für den einladenden Empfänger mit Ihrem Identitäts Namen abgerufen werden. Bei erfolgreicher Ausführung werden die Identitätsinformationen (der XML-Code, der das Base-64-codierte Zertifikat mit dem öffentlichen RSA-Schlüssel enthält) an einen externen Speicherort (in diesem Beispiel eine Datei) geschrieben, wo der einlader Sie abrufen und zum Erstellen einer Einladung verwenden kann.
+Beim Ausstellen einer Einladung müssen die GMCs der Eingeladenen abgerufen werden. Diese können abgerufen werden, indem [**PeerIdentityGetXML**](/windows/desktop/api/P2P/nf-p2p-peeridentitygetxml) für die eingeladene Person mit ihrem Identitätsnamen aufgerufen wird. Bei Erfolg werden die Identitätsinformationen (der XML-Code, der das Base64-codierte Zertifikat mit dem öffentlichen RSA-Schlüssel enthält) an einen externen Speicherort (in diesem Beispiel eine Datei) geschrieben, wo der einladende Benutzer es abrufen und zum Erstellen einer Einladung verwenden kann.
 
-An diesem Punkt muss ein Mechanismus für die Übermittlung der Einladung an den einladenden Empfänger eingerichtet werden. Dabei kann es sich um eine e-Mail oder eine andere sichere Methode des Datei Austauschs handeln. Im folgenden Beispiel wird die Einladung in eine Datei geschrieben, die dann auf den Computer des einladenden Benutzers übertragen werden kann.
+An diesem Punkt muss ein Mechanismus für die Übermittlung der Einladung an den eingeladenen Teilnehmer eingerichtet werden. Dies kann eine E-Mail oder eine andere sichere Methode für den Dateiaustausch sein. Im folgenden Beispiel wird die Einladung in eine Datei geschrieben, die dann auf den Computer des eingeladenen Benutzers übertragen werden kann.
 
 
 ```C++
@@ -146,7 +146,7 @@ HRESULT SaveIdentityInfo(PCWSTR pwzIdentity, PCWSTR pwzFile)
 
 
 
-Einladungen, wie Identitäten, werden auch extern ausgegeben. In diesem Beispiel wird die Einladung in eine Datei mit **fputws** geschrieben, wo Sie vom einladenden Benutzer abgerufen und beim Aufrufen von " [**Peer GroupJoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin)" verwendet werden kann.
+Einladungen wie Identitäten werden auch extern ausgegeben. In diesem Beispiel wird die Einladung in eine Datei mit **Fputws** geschrieben, in der der eingeladene Benutzer sie abrufen und verwenden kann, wenn er [**PeerGroupJoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin)aufruft.
 
 
 ```C++
@@ -224,9 +224,9 @@ HRESULT CreateInvitation(PCWSTR wzIdentityInfoPath, PCWSTR wzInvitationPath)
 
 
 
-## <a name="joining-a-peer-group"></a>Beitreten zu einer Peer Gruppe
+## <a name="joining-a-peer-group"></a>Beitreten zu einer Peergruppe
 
-Wenn der Peer versucht, einer Peer Gruppe beizutreten, die von einem anderen Peer erstellt wurde, wird eine Einladung dieses Peers benötigt. Einladungen werden von einem externen Prozess oder einer externen Anwendung an den einladenden gesendet und in einer lokalen Datei gespeichert, die im folgenden Beispiel als *pwzfilename* angegeben ist. Der Einladungs-XML-BLOB wird aus der Datei in **wzeinladungs** gelesen und an " [**Peer GroupJoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin)" weitergegeben.
+Wenn der Peer versucht, einer Peergruppe beizutreten, die von einem anderen Peer erstellt wurde, benötigt er eine Einladung von diesem Peer. Einladungen werden von einem externen Prozess oder einer externen Anwendung an den Eingeladenen übermittelt und in einer lokalen Datei gespeichert, die im folgenden Beispiel als *pwzFileName* angegeben ist. Das EINLADUNGS-XML-Blob wird aus der Datei in **wzInvitation** gelesen und an [**PeerGroupJoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin)übergeben.
 
 
 ```C++
@@ -280,15 +280,15 @@ HRESULT JoinGroup(PCWSTR pwzIdentity, PCWSTR pwzFileName)
 
 
 
-## <a name="register-for-peer-events"></a>Für Peer Ereignisse registrieren
+## <a name="register-for-peer-events"></a>Registrieren für Peerereignisse
 
-Bevor Sie eine Verbindung herstellen, sollten Sie sich für jedes Peer Ereignis registrieren, das für die Anwendung relevant ist. Im folgenden Beispiel registrieren Sie sich für die folgenden Ereignisse:
+Bevor Sie eine Verbindung herstellen, sollten Sie sich für jedes Peerereignis registrieren, das für die Anwendung relevant ist. Im folgenden Beispiel registrieren Sie sich für die folgenden Ereignisse:
 
--   \_Ereignisdaten Satz der Peer Gruppe wurde \_ \_ \_ geändert. Da Datensätze verwendet werden, um öffentliche Chat Nachrichten zu enthalten, muss die Anwendung jedes Mal benachrichtigt werden, wenn eine neue hinzugefügt wird. Wenn dieses Peer Ereignis empfangen wird, machen die Ereignisdaten den Datensatz mit der Chat Nachricht verfügbar. Anwendungen sollten nur für die Daten Satz Typen registriert werden, die direkt verarbeitet werden sollen.
--   Das Peer \_ Gruppen- \_ \_ Ereignismember wurde \_ geändert. Die Anwendung muss benachrichtigt werden, wenn Mitglieder der Peer Gruppe beitreten oder diese verlassen, sodass die Liste der Teilnehmer entsprechend aktualisiert werden kann.
--   der Peer \_ Gruppen- \_ Ereignis Status wurde \_ \_ geändert. Änderungen am Peer Gruppenstatus müssen an die Anwendung übermittelt werden. Ein Peer Gruppenmitglied wird nur in der Peer Gruppe als verfügbar betrachtet, wenn sein Status angibt, dass es mit der Gruppe verbunden ist, mit der datensatzdatenbank der Peer Gruppe synchronisiert wird und aktiv auf Daten Satz Aktualisierungen lauscht.
--   \_direkte Peer Gruppen- \_ Ereignis \_ \_ Verbindung. Private Nachrichten zwischen zwei Mitgliedern und Austauschen von Daten müssen über eine direkte Verbindung durchgeführt werden, sodass die Anwendung direkte Verbindungsanforderungen verarbeiten kann.
--   \_ \_ eingehende Daten der Peer Gruppen Ereignisse \_ \_ . Nachdem eine direkte Verbindung initiiert wurde, warnt dieses Peer Ereignis die Anwendung, dass eine private Nachricht empfangen wurde.
+-   DER \_ \_ PEERGRUPPENEREIGNISDATENSATZ \_ \_ WURDE GEÄNDERT. Da Datensätze verwendet werden, um öffentliche Chatnachrichten zu enthalten, muss die Anwendung jedes Mal benachrichtigt werden, wenn eine neue hinzugefügt wird. Wenn dieses Peerereignis empfangen wird, machen die Ereignisdaten den Datensatz mit der Chatnachricht verfügbar. Anwendungen sollten sich nur für die Datensatztypen registrieren, die sie direkt behandeln möchten.
+-   DAS \_ \_ PEERGRUPPENEREIGNISMITGLIED \_ \_ WURDE GEÄNDERT. Die Anwendung muss benachrichtigt werden, wenn Mitglieder der Peergruppe beitreten oder diese verlassen, damit die Liste der Teilnehmer entsprechend aktualisiert werden kann.
+-   STATUS DES \_ \_ PEERGRUPPENEREIGNISSES \_ \_ GEÄNDERT. Änderungen am Peergruppenstatus müssen der Anwendung übermittelt werden. Ein Peergruppenmitglied gilt nur als innerhalb der Peergruppe verfügbar, wenn sein Status angibt, dass es mit der Gruppe verbunden, mit der Peergruppen-Datensatzdatenbank synchronisiert und aktiv auf Datensatzaktualisierungen lauscht.
+-   DIREKTE VERBINDUNG MIT \_ \_ PEERGRUPPENEREIGNISSEN. \_ \_ Private Nachrichten zwischen zwei Membern und der Datenaustausch müssen über eine direkte Verbindung erfolgen, sodass die Anwendung anforderungen für direkte Verbindungen verarbeiten kann.
+-   \_EINGEHENDE DATEN DES PEERGRUPPENEREIGNISSES. \_ \_ \_ Nachdem eine direkte Verbindung initiiert wurde, warnt dieses Peerereignis die Anwendung, dass eine private Nachricht empfangen wurde.
 
 
 ```C++
@@ -335,13 +335,13 @@ HRESULT RegisterForEvents(void)
 
 
 
-## <a name="connecting-to-a-peer-group"></a>Herstellen einer Verbindung mit einer Peer Gruppe
+## <a name="connecting-to-a-peer-group"></a>Herstellen einer Verbindung mit einer Peergruppe
 
-Nachdem Sie die Gruppe erstellt oder verknüpft und für die entsprechenden Ereignisse registriert haben, ist es an der Zeit, Online zu gehen und eine aktive Chatsitzung zu starten. Dazu rufen Sie " [**Peer groupconnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect) " auf und übergeben das Gruppen handle, das von " [**Peer groupcreate**](/windows/desktop/api/P2P/nf-p2p-peergroupcreate) " oder " [**Peer-GroupJoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin)" abgerufen wurde. Nach dem Aufruf dieser Methode werden Chat Nachrichten als \_ geänderte Ereignisse für Peer Gruppen \_ Ereignis \_ Datensätze empfangen \_ .
+Nachdem Sie die Gruppe erstellt oder der Gruppe beigetreten und sich für die entsprechenden Ereignisse registriert haben, ist es an der Zeit, online zu gehen und eine aktive Chatsitzung zu starten. Hierzu rufen Sie [**PeerGroupConnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect) auf und übergeben das Gruppenhandle, das von [**PeerGroupCreate**](/windows/desktop/api/P2P/nf-p2p-peergroupcreate) oder [**PeerGroupJoin**](/windows/desktop/api/P2P/nf-p2p-peergroupjoin)abgerufen wurde. Nach dem Aufruf werden Chatnachrichten als PEER \_ GROUP \_ EVENT RECORD \_ \_ CHANGED-Ereignisse empfangen.
 
-## <a name="obtaining-a-list-of-peer-group-members"></a>Abrufen einer Liste von Peer Gruppenmitgliedern
+## <a name="obtaining-a-list-of-peer-group-members"></a>Abrufen einer Liste von Peergruppenmitgliedern
 
-Das Abrufen einer Liste von Membern, die mit der Peer Gruppe verbunden sind, ist einfach: Rufen Sie [**peergroutzenummembers**](/windows/desktop/api/P2P/nf-p2p-peergroupenummembers) auf, um die Liste der Gruppenmitglieder abzurufen, und rufen Sie [**peergetnextitem**](/windows/desktop/api/P2P/nf-p2p-peergetnextitem) dann iterativ auf, bis alle Elemente abgerufen wurden. Sie sollten " [**Peer Service**](/windows/desktop/api/P2P/nf-p2p-peerfreedata) " aufrufen, nachdem Sie die einzelnen Element Strukturen verarbeitet haben, und Sie müssen die Enumeration schließen, indem Sie " [**Peer Enumeration**](/windows/desktop/api/P2P/nf-p2p-peerendenumeration) " aufrufen, wenn die Verarbeitung abgeschlossen ist.
+Das Abrufen einer Liste von Mitgliedern, die mit der Peergruppe verbunden sind, ist einfach: Rufen Sie [**PeerGroupEnumMembers**](/windows/desktop/api/P2P/nf-p2p-peergroupenummembers) auf, um die Liste der Gruppenmitglieder abzurufen, und rufen Sie [**peerGetNextItem**](/windows/desktop/api/P2P/nf-p2p-peergetnextitem) dann iterativ auf, bis alle Mitglieder abgerufen werden. Sie sollten [**PeerFreeData**](/windows/desktop/api/P2P/nf-p2p-peerfreedata) aufrufen, nachdem Sie die einzelnen Memberstrukturen verarbeitet haben, und Sie müssen die Enumeration schließen, indem Sie [**PeerEndEnumeration**](/windows/desktop/api/P2P/nf-p2p-peerendenumeration) aufrufen, wenn die Verarbeitung abgeschlossen ist.
 
 
 ```C++
@@ -398,9 +398,9 @@ void UpdateParticipantList(void)
 
 
 
-## <a name="sending-a-chat-message"></a>Senden einer Chat Nachricht
+## <a name="sending-a-chat-message"></a>Senden einer Chatnachricht
 
-In diesem Beispiel wird eine Chat Nachricht gesendet, indem Sie im **Datenfeld** einer [**Peer \_ Daten Satz**](/windows/desktop/api/P2P/ns-p2p-peer_record) Struktur abgelegt wird. Der Datensatz wird den Peer Gruppendaten Sätzen hinzugefügt, indem [**peergroupaddrecord**](/windows/desktop/api/P2P/nf-p2p-peergroupaddrecord)aufgerufen wird, der ihn veröffentlicht und das Änderungs Ereignis des Peer \_ Gruppen \_ Ereignis \_ Datensatzes \_ auf allen Peers, die an der Peer Gruppe teilnehmen, aufhebt.
+In diesem Beispiel wird eine Chatnachricht gesendet, indem sie im **Datenfeld** einer [**PEER \_ RECORD-Struktur**](/windows/desktop/api/P2P/ns-p2p-peer_record) platziert wird. Der Datensatz wird den Peergruppendatensätzen durch Aufrufen von [**PeerGroupAddRecord**](/windows/desktop/api/P2P/nf-p2p-peergroupaddrecord)hinzugefügt. Dadurch wird er veröffentlicht und das \_ PEER GROUP EVENT RECORD \_ \_ \_ CHANGED-Ereignis auf allen Peers, die an der Peergruppe teilnehmen, ausgegeben.
 
 
 ```C++
@@ -448,9 +448,9 @@ HRESULT AddChatRecord(PCWSTR pwzMessage)
 
 
 
-## <a name="receiving-a-chat-message"></a>Empfangen einer Chat Nachricht
+## <a name="receiving-a-chat-message"></a>Empfangen einer Chatnachricht
 
-Um die Chat Nachricht zu empfangen, erstellen Sie eine Rückruffunktion für das Ereignisdaten Satz-Änderungs Ereignis des Peer \_ Gruppen \_ Ereignisses \_ \_ , das eine Funktion ähnlich der folgenden aufruft. Der Datensatz wird abgerufen, indem für die Ereignisdaten, die von einem vorherigen Aufruf von " [**Peer groupgeteventdata**](/windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata) " in der Rückruffunktion empfangen wurden, " [**Peer groupgetrecord**](/windows/desktop/api/P2P/nf-p2p-peergroupgetrecord) " aufgerufen wird. Die Chat Nachricht wird im **Datenfeld dieses Daten** Satzes gespeichert.
+Um die Chatnachricht zu empfangen, erstellen Sie eine Rückruffunktion für das PEER \_ GROUP \_ EVENT RECORD \_ \_ CHANGED-Ereignis, das eine Funktion ähnlich der folgenden aufruft. Der Datensatz wird durch Aufrufen von [**PeerGroupGetRecord**](/windows/desktop/api/P2P/nf-p2p-peergroupgetrecord) für die Ereignisdaten abgerufen, die durch einen vorherigen Aufruf von [**PeerGroupGetEventData**](/windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata) in der Rückruffunktion empfangen wurden. Die Chatnachricht wird im **Datenfeld** dieses Datensatzes gespeichert.
 
 
 ```C++

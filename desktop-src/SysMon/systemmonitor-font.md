@@ -1,11 +1,11 @@
 ---
-title: Systemmonitor. Font (Eigenschaft)
-description: Ruft die im-Steuerelement verwendete Schriftart ab oder legt Sie fest.
+title: SystemMonitor.Font-Eigenschaft
+description: Ruft die schriftart ab, die im -Steuerelement verwendet wird, oder legt sie fest.
 ms.assetid: 973ac31e-33e6-4280-ba0b-5b9f5f7563e7
 keywords:
-- Schriftart Eigenschaft (Sysmon)
-- Font-Eigenschaft (Sysmon), Systemmonitor-Klasse
-- Systemmonitor-Klasse "sysmon", Schriftart (Eigenschaft)
+- Schriftarteigenschaft SysMon
+- Font-Eigenschaft SysMon , SystemMonitor-Klasse
+- SystemMonitor-Klasse SysMon , Font-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b2abf021000d673474bb006d9d16afa459ddbdb3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2a605420418c03fae69926dac5dc184f67142cad83918ab2e34dca11ea411aac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118882416"
 ---
-# <a name="systemmonitorfont-property"></a>Systemmonitor. Font (Eigenschaft)
+# <a name="systemmonitorfont-property"></a>SystemMonitor.Font-Eigenschaft
 
-Ruft die im-Steuerelement verwendete Schriftart ab oder legt Sie fest.
+Ruft die schriftart ab, die im -Steuerelement verwendet wird, oder legt sie fest.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,11 +40,11 @@ Property Font As stdole.IFontDisp
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Schriftart, die zum Anzeigen von Text im-Steuerelement verwendet wird.
+Schriftart, die zum Anzeigen von Text im -Steuerelement verwendet wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist eine Ambient-Eigenschaft. Der Wert dieser Eigenschaft wird vom Container bestimmt. Das Festlegen des Werts dieser Eigenschaft kann sich auf die Illusion des Steuer Elements und Containers auswirken, die eine einzelne Anwendung sind.
+Dies ist eine Ambient-Eigenschaft. Der Wert dieser Eigenschaft wird vom Container bestimmt. Das Festlegen des Werts dieser Eigenschaft kann sich darauf auswirken, dass das Steuerelement und der Container eine einzelne Anwendung sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,18 +54,18 @@ Dies ist eine Ambient-Eigenschaft. Der Wert dieser Eigenschaft wird vom Containe
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**System Monitor**](systemmonitor.md)
+[**SystemMonitor**](systemmonitor.md)
 </dt> <dt>
 
-[**Systemmonitor. ForeColor**](systemmonitor-forecolor.md)
+[**SystemMonitor.ForeColor**](systemmonitor-forecolor.md)
 </dt> </dl>
 
  

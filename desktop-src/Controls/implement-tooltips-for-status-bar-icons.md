@@ -1,36 +1,36 @@
 ---
-title: Implementieren von Quick Infos für Status leisten Symbole
-description: Eine nicht eindringliche Möglichkeit, eine erklärende Meldung für ein Status leisten Symbol anzuzeigen, ist die Implementierung einer QuickInfo. Die QuickInfo wird beim Klicken nicht mehr angezeigt, Sie können aber auch einen Timeout Wert angeben.
+title: Implementieren von QuickInfos für Statusleistensymbole
+description: Eine nicht inintrusive Möglichkeit, eine erläuternde Meldung für ein Statusleistensymbol anzuzeigen, besteht in der Implementierung einer QuickInfo. Die QuickInfo wird beim Klicken nicht mehr angezeigt, Sie können aber auch einen Time out-Wert angeben.
 ms.assetid: AA7F17F2-63A4-4954-9DAB-788B73984628
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 277fb8d15654ae51565c1a461a9a8414d3e9213c
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 0a2bd100dc6edb2aac7b4c8c5df3781e76391ae2d9d0ad456533384ed8701f14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104474397"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958579"
 ---
-# <a name="how-to-implement-tooltips-for-status-bar-icons"></a>Implementieren von Quick Infos für Status leisten Symbole
+# <a name="how-to-implement-tooltips-for-status-bar-icons"></a>Implementieren von QuickInfos für Statusleistensymbole
 
-Eine nicht eindringliche Möglichkeit, eine erklärende Meldung für ein Status leisten Symbol anzuzeigen, ist die Implementierung einer QuickInfo. Die QuickInfo wird beim Klicken nicht mehr angezeigt, Sie können aber auch einen Timeout Wert angeben.
+Eine nicht inintrusive Möglichkeit, eine erläuternde Meldung für ein Statusleistensymbol anzuzeigen, besteht in der Implementierung einer QuickInfo. Die QuickInfo wird beim Klicken nicht mehr angezeigt, Sie können aber auch einen Time out-Wert angeben.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="implement-tooltips-for-status-bar-icons"></a>Tooltips für StatusBar-Symbole implementieren
+### <a name="implement-tooltips-for-status-bar-icons"></a>Implementieren von QuickInfos für Statusleistensymbole
 
-Im folgenden Code Fragment wird veranschaulicht, wie einem Status leisten Symbol eine QuickInfo-Sprechblase hinzugefügt wird.
+Das folgende Codefragment veranschaulicht, wie Sie einem Statusleistensymbol eine QuickInfo für eine Sprechblase hinzufügen.
 
 
 ```C++
@@ -58,19 +58,19 @@ Shell_NotifyIcon(NIM_MODIFY, &IconData);
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine ausführliche Erläuterung der Statusleiste finden Sie in [der Taskleiste](/windows/desktop/shell/taskbar).
+Eine ausführliche Erläuterung der Statusleiste finden Sie unter [Die Taskleiste.](/windows/desktop/shell/taskbar)
 
-Zum Anzeigen einer QuickInfo-Sprechblase müssen Sie das NIF- \_ infoflag in der [**notifyiendata**](/windows/desktop/api/shellapi/ns-shellapi-notifyicondataa) -Struktur festlegen und die Elemente **szinfo** und **utimeout** verwenden, um den QuickInfo-Text und die Timeout Dauer anzugeben.
+Zum Anzeigen einer QuickInfo für die Sprechblasen müssen Sie das \_ NIF-INFO-Flag in der [**NOTIFYICONDATA-Struktur**](/windows/desktop/api/shellapi/ns-shellapi-notifyicondataa) festlegen und die **Elemente szInfo** und **uTimeout** verwenden, um den QuickInfo-Text und die Timeoutdauer anzugeben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von Quick Infos](using-tooltip-contro.md)
+[Verwenden von QuickInfo-Steuerelementen](using-tooltip-contro.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,19 +1,19 @@
 ---
-description: Generiert Implementierungen für Abonnieren/Kündigen von Proxyfunktionen für Benachrichtigungsvorgänge für Porttypen.
+description: Generiert Implementierungen für Subscribe/Unsubscribe-Proxyfunktionen für Porttypbenachrichtigungsvorgänge.
 ms.assetid: aa26a3f1-df1e-4caa-9ada-6f4a6627b6b8
 title: subscriptionProxyFunctionImplementations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d9a3cba202c05d3f8b43b31c292dad8d601dc4e4
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: bf0abc98e0e9bebd4ff2185d669402c0dae025c07bc4af84be3116dda97b6657
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107995317"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991570"
 ---
 # <a name="subscriptionproxyfunctionimplementations-element"></a>subscriptionProxyFunctionImplementations-Element
 
-Generiert Implementierungen für Abonnieren/Kündigen von Proxyfunktionen für Benachrichtigungsvorgänge für Porttypen.
+Generiert Implementierungen für Subscribe/Unsubscribe-Proxyfunktionen für Porttypbenachrichtigungsvorgänge.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -28,9 +28,9 @@ Generiert Implementierungen für Abonnieren/Kündigen von Proxyfunktionen für B
 
 
 
-| Attribut                 | type               | Erforderlich      | BESCHREIBUNG                                                                                                                   |
+| attribute                 | type               | Erforderlich      | Beschreibung                                                                                                                   |
 |---------------------------|--------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------|
-| **Extensible**<br/> | boolean<br/> | Nein<br/> | Die Möglichkeit, Erweiterbarkeitspunkte zu Funktionen und Schnittstellen hinzuzufügen. Dieser Wert ist immer auf TRUE festgelegt.<br/> <br/> |
+| **Extensible**<br/> | boolean<br/> | Nein<br/> | Die Möglichkeit, Erweiterungspunkte zu Funktionen und Schnittstellen hinzuzufügen. Dieser Wert ist immer auf TRUE festgelegt.<br/> <br/> |
 
 
 
@@ -38,7 +38,7 @@ Generiert Implementierungen für Abonnieren/Kündigen von Proxyfunktionen für B
 
 
 
-| Element                                                           | BESCHREIBUNG                                                                                            |
+| Element                                                           | Beschreibung                                                                                            |
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | [**notificationInterface**](notificationinterface.md)<br/> | Gibt den Namen der Benachrichtigungsschnittstelle an, die mit Ereignisabonnements verwendet wird.<br/> <br/> |
 | [**Vorgang**](operation.md)<br/>                         | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                       |
@@ -62,7 +62,7 @@ Generiert Implementierungen für Abonnieren/Kündigen von Proxyfunktionen für B
 
 
 
-| Element                         | BESCHREIBUNG                                                    |
+| Element                         | Beschreibung                                                    |
 |---------------------------------|----------------------------------------------------------------|
 | [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 

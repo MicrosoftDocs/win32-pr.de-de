@@ -1,9 +1,9 @@
 ---
-title: LVM_GETGROUPSTATE Meldung (kommstrg. h)
-description: Ruft den Zustand für eine angegebene Gruppe ab. Senden Sie diese Nachricht explizit oder mithilfe des ListView \_ getgroupstate-Makros.
+title: LVM_GETGROUPSTATE Nachricht (Commctrl.h)
+description: Ruft den Zustand für eine angegebene Gruppe ab. Senden Sie diese Nachricht explizit oder mithilfe des ListView \_ GetGroupState-Makros.
 ms.assetid: f087d17f-9066-44fb-b21b-ac7ceb56eb45
 keywords:
-- Windows-Steuerelemente für LVM_GETGROUPSTATE Meldung
+- LVM_GETGROUPSTATE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,38 +14,38 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 17b5bb25fd517816afd04bb700211222e6985f5d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 66272dd259e80f239804ffadbd706370f948a2505173cc03aaa40057b273a629
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475375"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958429"
 ---
-# <a name="lvm_getgroupstate-message"></a>LVM \_ getgroupstate-Meldung
+# <a name="lvm_getgroupstate-message"></a>LVM \_ GETGROUPSTATE-Nachricht
 
-Ruft den Zustand für eine angegebene Gruppe ab. Senden Sie diese Nachricht explizit oder mithilfe des [**ListView \_ getgroupstate**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getgroupstate) -Makros.
+Ruft den Zustand für eine angegebene Gruppe ab. Senden Sie diese Nachricht explizit oder mithilfe des [**ListView \_ GetGroupState-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getgroupstate)
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Gibt die Group by **igroupid** an (siehe Struktur von " [**LVGROUP**](/windows/win32/api/commctrl/ns-commctrl-lvgroup) ").
+Gibt die Gruppe nach **iGroupId** an (siehe [**LVGROUP-Struktur).**](/windows/win32/api/commctrl/ns-commctrl-lvgroup)
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Gibt die abzurufenden Zustands Werte an. Dies ist eine Kombination der Flags, die für das **State** -Mitglied von " [**LVGROUP**](/windows/win32/api/commctrl/ns-commctrl-lvgroup)" aufgelistet sind.
+Gibt die abzurufenden Zustandswerte an. Dies ist eine Kombination der Flags, die für den **Statusmember** von [**LVGROUP**](/windows/win32/api/commctrl/ns-commctrl-lvgroup)aufgelistet sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Kombination von Zustands Werten zurück, die festgelegt werden. Wenn z. b. *LPARAM* auf "lvgs reduziert" \_ und der zurückgegebene Wert 0 (null) ist, wird der reduzierte Status der Netzwerk Sicherheitsgruppen \_ nicht festgelegt NULL wird zurückgegeben, wenn die Gruppe nicht gefunden wurde.
+Gibt die Kombination der festgelegten Zustandswerte zurück. Wenn *lParam* beispielsweise LVGS COLLAPSED ist \_ und der zurückgegebene Wert 0 (null) ist, wird der \_ LVGS COLLAPSED-Zustand nicht festgelegt. 0 (null) wird zurückgegeben, wenn die Gruppe nicht gefunden wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt die Kombination von Zustands Werten zurück, die festgelegt werden. Wenn z.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

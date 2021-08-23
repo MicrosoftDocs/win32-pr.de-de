@@ -1,19 +1,19 @@
 ---
-title: Iagentcharacter gestureat
-description: Iagentcharacter gestureat
+title: IAgentCharacter GestureAt
+description: IAgentCharacter GestureAt
 ms.assetid: ece84652-383e-4397-a6d9-f0209dd80767
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 266dc2d5e797ec0c7b30f7f827a094cd01c04195
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9bde86f9e1e60820aa7e1bc3a3f839dc920efda001f5b15e4f1ec7df4fc0cd7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388815"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976450"
 ---
-# <a name="iagentcharactergestureat"></a>Iagentcharacter:: gestureat
+# <a name="iagentcharactergestureat"></a>IAgentCharacter::GestureAt
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GestureAt(
@@ -23,38 +23,38 @@ HRESULT GestureAt(
 );
 ```
 
-Gibt die zugehörige Status Animation des **gesturten** Zustands basierend auf der angegebenen Position wieder.
+Gibt die zugeordnete **Gesturing-Zustandsanimation** basierend auf der angegebenen Position wieder.
 
--   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war. Wenn die Funktion zurückgibt, enthält *pdwreqid* die ID der Anforderung.
+-   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war. Wenn die Funktion zurückgegeben wird, *enthält pdwReqID* die ID der Anforderung.
 
 <dl> <dt>
 
-<span id="x"></span><span id="X"></span>*Stuben*
+<span id="x"></span><span id="X"></span>*X*
 </dt> <dd>
 
-Die x-Koordinate der angegebenen Position in Pixel relativ zum Bildschirm Ursprung (oben links).
+Die x-Koordinate der angegebenen Position in Pixel relativ zum Ursprung des Bildschirms (links oben).
 
 </dd> <dt>
 
-<span id="y"></span><span id="Y"></span>*Teenie*
+<span id="y"></span><span id="Y"></span>*Y*
 </dt> <dd>
 
-Die y-Koordinate der angegebenen Position in Pixel relativ zum Bildschirm Ursprung (oben links).
+Die y-Koordinate der angegebenen Position in Pixel relativ zum Ursprung des Bildschirms (links oben).
 
 </dd> <dt>
 
-<span id="pdwReqID"></span><span id="pdwreqid"></span><span id="PDWREQID"></span>*pdwreqid*
+<span id="pdwReqID"></span><span id="pdwreqid"></span><span id="PDWREQID"></span>*pdwReqID*
 </dt> <dd>
 
-Adresse einer Variablen, die die **gestureat** -Anforderungs-ID empfängt.
+Adresse einer Variablen, die die **GestureAt-Anforderungs-ID** empfängt.
 
 </dd> </dl>
 
-Der Server ermittelt und gibt die entsprechende gesturinganimation automatisch basierend auf der aktuellen Position des Zeichens und der angegebenen Position wieder. Verwenden Sie bei Verwendung des HTTP-Protokolls für den Zugriff auf Zeichen-und Animationsdaten die [**Prepare**](iagentcharacter--prepare.md) -Methode, um sicherzustellen, dass die Animationen verfügbar sind, bevor Sie diese Methode aufrufen.
+Der Server bestimmt automatisch die entsprechende Gesturierungsanimation basierend auf der aktuellen Position des Zeichens und der angegebenen Position und gibt diese wieder. Wenn Sie das HTTP-Protokoll für den [](iagentcharacter--prepare.md) Zugriff auf Zeichen- und Animationsdaten verwenden, verwenden Sie die Prepare-Methode, um sicherzustellen, dass die Animationen verfügbar sind, bevor Sie diese Methode aufrufen.
 
- 
+ 
 
- 
+ 
 
 
 

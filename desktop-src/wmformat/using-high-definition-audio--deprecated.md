@@ -1,9 +1,9 @@
 ---
-title: Verwenden High-Definition Audiodatei (Windows Media Format 11 SDK)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Verwenden High-Definition Audiodatei (Windows Media Format 11 SDK)
+title: Verwenden von High-Definition Audio (Windows Media Format 11 SDK)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | Verwenden von High-Definition Audio (Windows Media Format 11 SDK)
 ms.assetid: 8a35b7c6-7df5-4ac7-8057-b5b865aeaf39
 keywords:
-- Verwenden High-Definition Audioformats Windows Media
+- Verwenden von High-Definition Audiofenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 05a3df78b90a009c365f905b6a5f920e6348d3f4
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 7a505a490f1523a29c38f27761ada934d897c9445ad0dd5601933584d0805123
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106354339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027179"
 ---
-# <a name="using-high-definition-audio-windows-media-format-11-sdk"></a>Verwenden High-Definition Audiodatei (Windows Media Format 11 SDK)
+# <a name="using-high-definition-audio-windows-media-format-11-sdk"></a>Verwenden von High-Definition Audio (Windows Media Format 11 SDK)
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
  
 

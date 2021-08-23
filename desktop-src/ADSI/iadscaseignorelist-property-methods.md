@@ -1,10 +1,10 @@
 ---
-title: Iadscaseignorelist-Eigenschafts Methoden (IADs. h)
-description: Die-Eigenschaften Methode der iadscaseignorelist-Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsCaseIgnoreList-Eigenschaftsmethoden (Iads.h)
+description: Die -Eigenschaftsmethode der IADsCaseIgnoreList-Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: 4f73adbf-abe3-4552-a3e4-19cff22e0ad0
 ms.tgt_platform: multiple
 keywords:
-- Iadscaseignorelist-Eigenschafts Methoden ADSI
+- IADsCaseIgnoreList-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -18,32 +18,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a5aabf26508c3e38e117ad25721af8bece5d69b1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 84e2f07d3c4afa6cd55f6a757ccae6f2d1076b954e0afdd0c82c8a5247af33f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342461"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961919"
 ---
-# <a name="iadscaseignorelist-property-methods"></a>Iadscaseignorelist-Eigenschaften Methoden
+# <a name="iadscaseignorelist-property-methods"></a>IADsCaseIgnoreList-Eigenschaftsmethoden
 
-Die-Eigenschaften Methode der [**iadscaseignorelist**](/windows/desktop/api/Iads/nn-iads-iadscaseignorelist) -Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die -Eigenschaftsmethode der [**IADsCaseIgnoreList-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadscaseignorelist) legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Caseignorelist**
+**CaseIgnoreList**
 </dt> <dd> <dl>
 
-Eine geordnete Sequenz von Zeichen folgen ohne Beachtung
+Eine geordnete Sequenz von Zeichenfolgen, bei der die Groß-/Kleinschreibung nicht beachtet wird.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -71,20 +71,20 @@ HRESULT put_CaseIgnoreList(
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadscaseignorelist als 7b66b533-4680-11d1-a3b4-00c04fb950 DC definiert.<br/>   |
+| IID<br/>                      | IID \_ IADsCaseIgnoreList ist als 7B66B533-4680-11D1-A3B4-00C04FB950DC definiert.<br/>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IADsCaseIgnoreList**](/windows/desktop/api/Iads/nn-iads-iadscaseignorelist)
 </dt> <dt>
 
-[**Liste der anzeigen \_ caseignore \_**](/windows/desktop/api/Iads/ns-iads-ads_caseignore_list)
+[**ADS \_ CASEIGNORE \_ LIST**](/windows/desktop/api/Iads/ns-iads-ads_caseignore_list)
 </dt> </dl>
 
  

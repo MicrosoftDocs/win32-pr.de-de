@@ -1,9 +1,9 @@
 ---
-title: HexInt16Type einfacher Typ
-description: Definiert einen 2-Byte-hexadezimal-Typ.
+title: HexInt16Type Simple Type
+description: Definiert einen Hexadezimaltyp mit 2 Byte.
 ms.assetid: d33d24e7-d260-49ea-a8ba-187b9b7a3a9c
 keywords:
-- HexInt16Type einfaches Ereignisprotokoll
+- HexInt16Type – einfacher Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6aaa5021fbc5a7de5c16083c0f7744bc4a154c50
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e5f441071daa84f162a1dacbd16513fe2550b99d34d24ed90205ff4d8d184493
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055959"
 ---
-# <a name="hexint16type-simple-type"></a>HexInt16Type einfacher Typ
+# <a name="hexint16type-simple-type"></a>HexInt16Type Simple Type
 
-Definiert einen 2-Byte-hexadezimal-Typ.
+Definiert einen Hexadezimaltyp mit 2 Byte.
 
 ``` syntax
 <xs:simpleType name="HexInt16Type">
@@ -38,11 +38,11 @@ Definiert einen 2-Byte-hexadezimal-Typ.
 
 ## <a name="patterns"></a>Muster
 
-Der einfache **HexInt16Type** -Typ ist eine **Zeichenfolge** , die durch das folgende Muster eingeschränkt ist:
+Der einfache **HexInt16Type-Typ** ist eine **Zeichenfolge,** die durch das folgende Muster eingeschränkt ist:
 
 -   `0[xX][0-9A-Fa-f]{1,4}`
 
-    Der Wert kann zwischen einem und vier hexadezimal Zeichen (z. b. 0xA oder 0xac7b) enthalten.
+    Der Wert kann ein bis vier Hexadezimalzeichen enthalten (z. B. 0xa oder 0xac7b).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Der einfache **HexInt16Type** -Typ ist eine **Zeichenfolge** , die durch das fol
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

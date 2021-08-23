@@ -1,35 +1,35 @@
 ---
-title: Grafik zu virtuellen Kanälen Enumerationen
-description: Die Grafik Virtual Channels-API definiert die folgenden Enumerationen.
+title: Enumerationen virtueller Grafikkanäle
+description: Die API für virtuelle Grafikkanäle definiert die folgenden Enumerationen.
 ms.assetid: 2A7C9A21-26B6-4DF4-B2DB-F07EB24B2B2D
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 28033479d62bc71cb86cc0b095819eac2b399c1a
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: e14f4c5c2aa48c4029d6452192a169a2ccafad942db918a48423029aaf84e051
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119059378"
 ---
-# <a name="graphics-virtual-channels-enumerations"></a>Grafik zu virtuellen Kanälen Enumerationen
+# <a name="graphics-virtual-channels-enumerations"></a>Enumerationen virtueller Grafikkanäle
 
-Die Grafik Virtual Channels-API definiert die folgenden Enumerationen.
+Die API für virtuelle Grafikkanäle definiert die folgenden Enumerationen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Wrdsgraphicschanneltype**](/windows/win32/api/wrdsgraphicschannels/ne-wrdsgraphicschannels-wrdsgraphicschanneltype)
+[**WRdsGraphicsChannelType**](/windows/win32/api/wrdsgraphicschannels/ne-wrdsgraphicschannels-wrdsgraphicschanneltype)
 </dt> <dd>
 
-Wird verwendet, um den Typ des virtuellen virtuellen Kanals anzugeben, der in der [**iwrdsgraphicschannelmanager::**](/windows/desktop/api/wrdsgraphicschannels/nf-wrdsgraphicschannels-iwrdsgraphicschannelmanager-createchannel) -Methode erstellt wird.
+Wird verwendet, um den Typ des virtuellen Grafikkanals anzugeben, der in der [**IWRdsGraphicsChannelManager::CreateChannel-Methode erstellt werden**](/windows/desktop/api/wrdsgraphicschannels/nf-wrdsgraphicschannels-iwrdsgraphicschannelmanager-createchannel) soll.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

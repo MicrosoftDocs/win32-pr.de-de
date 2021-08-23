@@ -1,7 +1,7 @@
 ---
 description: Flag, das angibt, ob sich die Qualität geändert hat.
 ms.assetid: 9084ab1d-b6a0-4e87-a653-86e64c74b07f
-title: 'Ctransformfilter:: m_bQualityChanged Member (Transfrm. h)'
+title: CTransformFilter::m_bQualityChanged-Member (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: abd0371389d6c17a074580643a06c3fe25bdf433
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 454d8bad4ced2291b061b09992ad450d9e483f269e3fd72b192adbbacb077d7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953609"
 ---
-# <a name="ctransformfilterm_bqualitychanged-member"></a>Ctransformfilter:: m \_ bqualitychanged-Member
+# <a name="ctransformfilterm_bqualitychanged-member"></a>CTransformFilter::m \_ bQualityChanged-Member
 
-Flag, das angibt, ob sich die Qualität geändert hat. Wenn der Filter zum ersten Mal ein Beispiel löscht, sendet er ein [**EC- \_ Qualitäts \_ Änderungs**](ec-quality-change.md) Ereignis an den Filter Graph-Manager und legt dieses Flag auf **true** fest. Dieses Ereignis wird erst dann wieder gesendet, wenn der Filter angehalten und neu gestartet wird, auch wenn es in der Zwischenzeit weiterhin Beispiele enthält.
+Flag, das angibt, ob sich die Qualität geändert hat. Wenn der Filter ein Beispiel zum ersten Mal löscht, sendet er ein [**EC \_ QUALITY \_ CHANGE-Ereignis**](ec-quality-change.md) an den Filterdiagramm-Manager und legt dieses Flag auf **TRUE fest.** Dieses Ereignis wird erst dann erneut gesendet, wenn der Filter beendet und neu gestartet wird, auch wenn er in der Zwischenzeit weiterhin Stichproben abbricht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ BOOL m_bQualityChanged;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

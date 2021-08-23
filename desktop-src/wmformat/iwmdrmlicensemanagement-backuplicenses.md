@@ -1,11 +1,11 @@
 ---
-title: Methode "iwmdrmlicentmanagement" backuplicenses (wmdrmsdk. h)
-description: Die backuplicenses-Methode erstellt eine Sicherung der Lizenzen im lokalen Lizenz Speicher.
+title: IWMDRMLicenseManagement BackupLicenses-Methode (Wmdrmsdk.h)
+description: Die BackupLicenses-Methode erstellt eine Sicherung der Lizenzen im lokalen Lizenzspeicher.
 ms.assetid: f265254d-b240-4a9f-9c67-de9c92e8a14d
 keywords:
-- Backuplicenses-Methode (Windows Media-Format)
-- Backuplicenses-Methode Windows Media-Format, iwmdrmlicensmanagement-Schnittstelle
-- Iwmdrmlicenabmanagement Interface Windows Media-Format, backuplicenses-Methode
+- BackupLicenses-Methode windows Media Format
+- BackupLicenses-Methode windows Media Format , IWMDRMLicenseManagement-Schnittstelle
+- IWMDRMLicenseManagement-Schnittstelle Windows Media Format , BackupLicenses-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 61c7f676b532353c839a428571f6d28540851bee
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3905f8fd464645f7fcd22551360e6a9610913eeea7f191d7e770e24f5ea8cd49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027648"
 ---
-# <a name="iwmdrmlicensemanagementbackuplicenses-method"></a>Iwmdrmlicensmanagement:: backuplicenses-Methode
+# <a name="iwmdrmlicensemanagementbackuplicenses-method"></a>IWMDRMLicenseManagement::BackupLicenses-Methode
 
-Die **backuplicenses** -Methode erstellt eine Sicherung der Lizenzen im lokalen Lizenz Speicher.
+Die **BackupLicenses-Methode** erstellt eine Sicherung der Lizenzen im lokalen Lizenzspeicher.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ HRESULT BackupLicenses(
 
 <dl> <dt>
 
-*bstraubackupdirectory* \[ in\]
+*bstrBackupDirectory* \[ In\]
 </dt> <dd>
 
-Der UNC-Pfad des Speicher Orts, an dem die Lizenzen gesichert werden.
+UNC-Pfad des Standorts, an dem die Lizenzen gesichert werden.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Flags, die die zu verwendenden Sicherungs Optionen angeben. Das einzige Flag, das derzeit unterstützt wird, ist die WMDRM- \_ Sicherung \_ überschreiben, bei der die Methode zum Überschreiben vorhandener Sicherungsdateien im Verzeichnis konfiguriert wird.
+Flags, die die zu verwendenden Sicherungsoptionen angeben. Das einzige derzeit unterstützte Flag ist WMDRM \_ BACKUP \_ OVERWRITE, das die -Methode zum Überschreiben vorhandener Sicherungsdateien im Verzeichnis konfiguriert.
 
 </dd> <dt>
 
-*ppunkcancelationcookie* \[ vorgenommen\]
+*ppunkCancelationCookie* \[ out\]
 </dt> <dd>
 
-Ein Zeiger, der einen Zeiger auf die **IUnknown** -Schnittstelle eines Objekts empfängt, das diesen asynchronen-Befehl identifiziert. Dieser Schnittstellen Zeiger kann zum Abbrechen des asynchronen Aufrufs verwendet werden, indem die [**iwmdrmeventgenerator:: cancelasyncoperation**](iwmdrmeventgenerator-cancelasyncoperation.md) -Methode aufgerufen wird.
+Zeiger, der einen Zeiger auf die **IUnknown-Schnittstelle** eines Objekts empfängt, das diesen asynchronen Aufruf identifiziert. Dieser Schnittstellenzeiger kann verwendet werden, um den asynchronen Aufruf abzubrechen, indem die [**IWMDRMEventGenerator::CancelAsyncOperation-Methode**](iwmdrmeventgenerator-cancelasyncoperation.md) aufgerufen wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -80,13 +80,13 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird asynchron ausgeführt. Sie wird unmittelbar nach dem Aufruf von zurückgegeben und generiert dann eine Reihe von **mewmdrmlicencbackupprogress** -Ereignissen, gefolgt von einem **mewmdrmlicenabcomplete** -Ereignis, wenn die Verarbeitung abgeschlossen ist. Der Wert jedes **mewmdrmlicencbackupprogress** -Ereignisses, das durch Aufrufen von **imfmediaevent:: GetValue** abgerufen wird, ist ein **IUnknown** -Zeiger. Sie können die **QueryInterface** -Methode der abgerufenen **IUnknown** -Schnittstelle zum Abrufen einer Instanz der [**iwmdrmlicenanbackuprestorestatus**](iwmdrmlicensebackuprestorestatus.md) -Schnittstelle abrufen.
+Diese Methode wird asynchron ausgeführt. Sie gibt sofort nach dem Aufruf zurück und generiert dann eine Reihe von **MEWMDRMLicenseBackupProgress-Ereignissen,** gefolgt von einem **MEWMDRMLicenseBackupCompleted-Ereignis,** wenn die Verarbeitung abgeschlossen ist. Der Wert jedes **MEWMDRMLicenseBackupProgress-Ereignisses,** das durch Aufrufen von **"POINTERMediaEvent::GetValue"** abgerufen wird, ist ein **IUnknown-Zeiger.** Sie können die **QueryInterface-Methode** der abgerufenen **IUnknown-Schnittstelle** aufrufen, um eine Instanz der [**IWMDRMLicenseBackupRestoreStatus-Schnittstelle**](iwmdrmlicensebackuprestorestatus.md) abzurufen.
 
-Weitere Informationen zur Verwendung der asynchronen Methoden der erweiterten APIs für den Windows Media DRM-Client finden [Sie unter Verwenden des Media Foundation-Ereignis Modells](using-the-media-foundation-model.md).
+Weitere Informationen zur Verwendung der asynchronen Methoden der erweiterten APIs des Windows Media DRM-Clients finden Sie unter [Verwenden des Media Foundation Ereignismodells.](using-the-media-foundation-model.md)
 
-Nicht alle Lizenzen dürfen gesichert werden. Diese Methode sichert nur Lizenzen, die dies zulassen.
+Nicht alle Lizenzen dürfen gesichert werden. Mit dieser Methode werden nur Lizenzen gesichert, die dies zulassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,16 +94,16 @@ Nicht alle Lizenzen dürfen gesichert werden. Diese Methode sichert nur Lizenzen
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmlicenabmanagement-Schnittstelle**](iwmdrmlicensemanagement.md)
+[**IWMDRMLicenseManagement-Schnittstelle**](iwmdrmlicensemanagement.md)
 </dt> </dl>
 
  

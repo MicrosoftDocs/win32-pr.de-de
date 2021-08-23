@@ -1,43 +1,43 @@
 ---
-description: Das TAPI-Callcenter unterstützt Funktionen zum Erstellen von Zeilen-Agent-und-Agent-Gruppen.
+description: TapI Call Center unterstützt Funktionen zum Erstellen eines Line-Agents und von Agent-Gruppen.
 ms.assetid: 81bd0e7b-2bf1-4a05-83f4-ef641641cf2b
-title: Callcenter-Funktionen
+title: Callcenterfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 261188a4a1440ca128a6a6830149230a47672581
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4ac927158c260a1a2bede4e114c6e46c1a5cac5b5939eb9de1a4c30a749a7670
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118870714"
 ---
-# <a name="call-center-functions"></a>Callcenter-Funktionen
+# <a name="call-center-functions"></a>Callcenterfunktionen
 
-TAPI unterstützt die folgenden Callcenter-Funktionen:
+TAPI unterstützt die folgenden Callcenterfunktionen:
 
--   [**lineagentspecific**](/windows/desktop/api/Tapi/nf-tapi-lineagentspecific)
--   [**linecreateagent**](/windows/desktop/api/Tapi/nf-tapi-linecreateagenta)
--   [**linecreateagentsession**](/windows/desktop/api/Tapi/nf-tapi-linecreateagentsessiona)
--   [**linegetagentactivitylist**](/windows/desktop/api/Tapi/nf-tapi-linegetagentactivitylista)
--   [**linegetagentcaps**](/windows/desktop/api/Tapi/nf-tapi-linegetagentcapsa)
--   [**linegetagentgrouplist**](/windows/desktop/api/Tapi/nf-tapi-linegetagentgrouplista)
--   [**linegetagentinfo**](/windows/desktop/api/Tapi/nf-tapi-linegetagentinfo)
--   [**linegetagentsessioninfo**](/windows/desktop/api/Tapi/nf-tapi-linegetagentsessioninfo)
--   [**linegetagentsessionlist**](/windows/desktop/api/Tapi/nf-tapi-linegetagentsessionlist)
--   [**linegetagentstatus**](/windows/desktop/api/Tapi/nf-tapi-linegetagentstatusa)
--   [**linegetgrouplist**](/windows/desktop/api/Tapi/nf-tapi-linegetgrouplista)
--   [**linegetproxystatus**](/windows/desktop/api/Tapi/nf-tapi-linegetproxystatus)
--   [**linegetqueueinfo**](/windows/desktop/api/Tapi/nf-tapi-linegetqueueinfo)
--   [**linegetqueuelist**](/windows/desktop/api/Tapi/nf-tapi-linegetqueuelista)
--   [**lineproxymess**](/windows/desktop/api/Tapi/nf-tapi-lineproxymessage)
--   [**lineproxyresponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse)
--   [**linesetagentactivity**](/windows/desktop/api/Tapi/nf-tapi-linesetagentactivity)
--   [**linesetagentgroup**](/windows/desktop/api/Tapi/nf-tapi-linesetagentgroup)
--   [**linesetagentmessrementperiod**](/windows/desktop/api/Tapi/nf-tapi-linesetagentmeasurementperiod)
--   [**linesetagentsessionstate**](/windows/desktop/api/Tapi/nf-tapi-linesetagentsessionstate)
--   [**linesetagentstate**](/windows/desktop/api/Tapi/nf-tapi-linesetagentstate)
--   [**linesetagentstateex**](/windows/desktop/api/Tapi/nf-tapi-linesetagentstateex)
--   [**linesetqueuemessrementperiod**](/windows/desktop/api/Tapi/nf-tapi-linesetqueuemeasurementperiod)
+-   [**lineAgentSpecific**](/windows/desktop/api/Tapi/nf-tapi-lineagentspecific)
+-   [**lineCreateAgent**](/windows/desktop/api/Tapi/nf-tapi-linecreateagenta)
+-   [**lineCreateAgentSession**](/windows/desktop/api/Tapi/nf-tapi-linecreateagentsessiona)
+-   [**lineGetAgentActivityList**](/windows/desktop/api/Tapi/nf-tapi-linegetagentactivitylista)
+-   [**lineGetAgentCaps**](/windows/desktop/api/Tapi/nf-tapi-linegetagentcapsa)
+-   [**lineGetAgentGroupList**](/windows/desktop/api/Tapi/nf-tapi-linegetagentgrouplista)
+-   [**lineGetAgentInfo**](/windows/desktop/api/Tapi/nf-tapi-linegetagentinfo)
+-   [**lineGetAgentSessionInfo**](/windows/desktop/api/Tapi/nf-tapi-linegetagentsessioninfo)
+-   [**lineGetAgentSessionList**](/windows/desktop/api/Tapi/nf-tapi-linegetagentsessionlist)
+-   [**lineGetAgentStatus**](/windows/desktop/api/Tapi/nf-tapi-linegetagentstatusa)
+-   [**lineGetGroupList**](/windows/desktop/api/Tapi/nf-tapi-linegetgrouplista)
+-   [**lineGetProxyStatus**](/windows/desktop/api/Tapi/nf-tapi-linegetproxystatus)
+-   [**lineGetQueueInfo**](/windows/desktop/api/Tapi/nf-tapi-linegetqueueinfo)
+-   [**lineGetQueueList**](/windows/desktop/api/Tapi/nf-tapi-linegetqueuelista)
+-   [**lineProxyMessage**](/windows/desktop/api/Tapi/nf-tapi-lineproxymessage)
+-   [**lineProxyResponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse)
+-   [**lineSetAgentActivity**](/windows/desktop/api/Tapi/nf-tapi-linesetagentactivity)
+-   [**lineSetAgentGroup**](/windows/desktop/api/Tapi/nf-tapi-linesetagentgroup)
+-   [**lineSetAgentMeasurementPeriod**](/windows/desktop/api/Tapi/nf-tapi-linesetagentmeasurementperiod)
+-   [**lineSetAgentSessionState**](/windows/desktop/api/Tapi/nf-tapi-linesetagentsessionstate)
+-   [**lineSetAgentState**](/windows/desktop/api/Tapi/nf-tapi-linesetagentstate)
+-   [**lineSetAgentStateEx**](/windows/desktop/api/Tapi/nf-tapi-linesetagentstateex)
+-   [**lineSetQueueMeasurementPeriod**](/windows/desktop/api/Tapi/nf-tapi-linesetqueuemeasurementperiod)
 
  
 

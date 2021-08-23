@@ -1,9 +1,9 @@
 ---
-title: Display Artist-Attribut
-description: Das displayartist-Attribut ist der Name des Künstlers, der für ein Element angezeigt wird.
+title: DisplayArtist-Attribut
+description: Das DisplayArtist-Attribut ist der Name des Interpreten, der für ein Element angezeigt wird.
 ms.assetid: 8cf5a4e6-ce96-4fd4-b01a-6cd4264a5c09
 keywords:
-- Display Artist-Attribut, Windows Media Player
+- DisplayArtist-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,26 +12,26 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 44d479add519d8b7df346869e783c36560fc46dc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c6c20e3d693aa7d5be5be0236d9eefebe7efcb70bc236db3f84389e5a3ceeccf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997320"
 ---
-# <a name="displayartist-attribute"></a>Display Artist-Attribut
+# <a name="displayartist-attribute"></a>DisplayArtist-Attribut
 
-Das **displayartist** -Attribut ist der Name des Künstlers, der für ein Element angezeigt wird.
+Das **DisplayArtist-Attribut** ist der Name des Interpreten, der für ein Element angezeigt wird.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im Allgemeinen hat **displayartist** denselben Wert wie das **WM/Album-** Attribut, wenn dieses Attribut festgelegt wird. Andernfalls ist der Wert der Name des Künstlers, der mit dem ersten Titel des Albums verknüpft ist.
+Im Allgemeinen **hat DisplayArtist** den gleichen Wert wie das **WM/AlbumArtist-Attribut,** wenn dieses Attribut festgelegt wird. Andernfalls ist der Wert der Name des Interpreten, der dem ersten Titel des Albums zugeordnet ist.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,10 +47,10 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> <dt>
 
-[**WM/albumartist-Attribut**](wm-albumartist-attribute.md)
+[**WM/AlbumArtist-Attribut**](wm-albumartist-attribute.md)
 </dt> </dl>
 
  

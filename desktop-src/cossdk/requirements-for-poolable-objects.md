@@ -1,70 +1,70 @@
 ---
-description: In Poolable-Objekten müssen bestimmte Anforderungen erfüllt werden, damit eine einzelne Objektinstanz von mehreren Clients verwendet werden kann.
+description: Poolfähige Objekte müssen bestimmte Anforderungen erfüllen, damit eine einzelne Objektinstanz von mehreren Clients verwendet werden kann.
 ms.assetid: 2cd4211e-be12-4197-8b43-5cb9f2321016
-title: Anforderungen für in einem Pool Bare Objekte
+title: Anforderungen für poolfähige Objekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 78d6834210f180ad8b514b51b6926b5cd30714fd
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1af3e3b67f7d796c199649b64f711ec32a75374bff60ebf900b34871ed4bc310
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958354"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119047288"
 ---
-# <a name="requirements-for-poolable-objects"></a>Anforderungen für in einem Pool Bare Objekte
+# <a name="requirements-for-poolable-objects"></a>Anforderungen für poolfähige Objekte
 
-In Poolable-Objekten müssen bestimmte Anforderungen erfüllt werden, damit eine einzelne Objektinstanz von mehreren Clients verwendet werden kann.
+Poolfähige Objekte müssen bestimmte Anforderungen erfüllen, damit eine einzelne Objektinstanz von mehreren Clients verwendet werden kann.
 
 ## <a name="stateless"></a>Zustandslos
 
-Um Sicherheit, Konsistenz und Isolation zu gewährleisten, sollten in einem Pool einsetzbare Objekte keinen Client spezifischen Zustand vom Client zum Client aufweisen. Sie können jeden Client Status mithilfe von [**IObjectControl**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontrol)verwalten, eine kontextspezifische Initialisierung mit [**IObjectControl:: Aktivierung**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontrol-activate) durchführen und einen beliebigen Client Zustand mit [**IObjectControl::D eaktivierungs**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontrol-deactivate)bereinigen. Weitere Details finden Sie unter [Steuern der Objekt Lebensdauer und des Zustands](controlling-object-lifetime-and-state.md).
+Um Sicherheit, Konsistenz und Isolation zu gewährleisten, sollten poolfähige Objekte keinen clientspezifischen Zustand von Client zu Client enthalten. Sie können jeden clientspezifischen Zustand mithilfe von [**IObjectControl**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontrol)verwalten, eine kontextspezifische Initialisierung mit [**IObjectControl::Activate**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontrol-activate) durchführen und alle Clientstatus mit [**IObjectControl::D eactivate**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontrol-deactivate)bereinigen. Weitere Informationen finden Sie unter [Steuern der Objektlebensdauer und des Zustands.](controlling-object-lifetime-and-state.md)
 
-## <a name="no-thread-affinity"></a>Keine Thread Affinität
+## <a name="no-thread-affinity"></a>Keine Threadaffinität
 
-Poolable-Objekte können nicht an einen bestimmten Thread gebunden werden. Andernfalls könnte die Leistung möglicherweise katastrophal sein. Aus diesem Grund können Pool fähige Objekte nicht für die Durchführung im Apartment Modell gekennzeichnet werden. Sie müssen im Multithread-Apartment oder im neutralen Apartment ausgeführt werden. Außerdem sollten in einem Pool einsetzbare Objekte keinen lokalen Thread Speicher verwenden, und Sie sollten nicht den frei Thread-Mars Haller aggregieren. Weitere Details zum Threading in com+ finden Sie unter [com+-Threading Modelle](com--threading-models.md).
+Poolfähige Objekte können nicht an einen bestimmten Thread gebunden werden. Andernfalls kann die Leistung möglicherweise unerschwert sein. Aus diesem Grund können poolfähige Objekte nicht für die Ausführung im Apartmentmodell markiert werden. sie müssen im Multithread-Apartment oder im neutralen Apartment ausgeführt werden. Darüber hinaus sollten poolfähige Objekte weder den lokalen Threadspeicher verwenden noch den Freethread-Marshaller aggregieren. Weitere Informationen zum Threading in COM+ finden Sie unter [COM+-Threadingmodelle.](com--threading-models.md)
 
 > [!Note]  
-> Mit den Entwicklungsumgebungen Microsoft Visual Basic 6,0 und früher können nur Apartment Modellkomponenten erstellt werden. In Visual Basic .net können Komponenten jedoch in einem Pool zusammengefasst werden.
+> Die Microsoft Visual Basic 6.0 und frühere Entwicklungsumgebungen können nur Apartmentmodellkomponenten erstellen. In Visual Basic .NET können Komponenten jedoch in einem Pool zusammengefasst werden.
 
  
 
 ## <a name="aggregatable"></a>Aggregierbar
 
-In Poolable-Objekten müssen Aggregationen unterstützt werden, d. –. Sie müssen die Erstellung unterstützen, indem [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) mit einem *pUnkOuter* -Argument ungleich NULL aufgerufen wird. Wenn com+ ein in einem Pool zusammengefasster Objekt aktiviert, wird ein Aggregat erstellt, um die Lebensdauer des gepoolten Objekts zu verwalten und Methoden für [**IObjectControl**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontrol)aufzurufen. Ausführliche Informationen zum Schreiben von aggregierbare-Objekten finden Sie unter [Aggregation](/windows/desktop/com/aggregation).
+Poolfähige Objekte müssen aggregation unterstützen, d. h., sie müssen das Erstellen durch Aufrufen von [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) mit einem *pUnkOuter-Argument* unterstützen, das nicht NULL ist. Wenn COM+ ein in einem Pool zusammengefasstes Objekt aktiviert, wird ein Aggregat erstellt, um die Lebensdauer des in einem Pool zusammengefassten Objekts zu verwalten und Methoden für [**IObjectControl**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontrol)aufzurufen. Ausführliche Informationen zum Schreiben von aggregierbaren Objekten finden Sie unter [Aggregation](/windows/desktop/com/aggregation).
 
-## <a name="transactional-components"></a>Transaktionale Komponenten
+## <a name="transactional-components"></a>Transaktionskomponenten
 
-In Poolable-Objekten, die an Transaktionen teilnehmen, müssen verwaltete Ressourcen manuell eingetragen werden. Wenn Ihr Objekt eine verwaltete Ressource (z. b. eine Datenbankverbindung) enthält, ist es für den Ressourcen-Manager nicht möglich, sich automatisch in eine Transaktion einzutragen, wenn das Objekt im angegebenen Kontext aktiviert wird. Daher muss das-Objekt selbst die Logik zum Erkennen der Transaktion, das Ausschalten der automatischen Eintragung des Ressourcen-Managers und das manuelle eintragen der darin befindlichen Ressourcen verarbeiten. Außerdem sollte ein transaktionales, in einem Pool zusammengefasste Objekt den aktuellen Zustand seiner Ressourcen in den Parameterwerten von [**IObjectControl:: CanBePooled**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontrol-canbepooled)widerspiegeln. Weitere Details finden Sie unter [Pooling von transaktionalen Objekten](pooling-transactional-objects.md).
+Poolfähige Objekte, die an Transaktionen teilnehmen, müssen verwaltete Ressourcen manuell eintragen. Wenn ihr Objekt eine verwaltete Ressource enthält, z. B. eine Datenbankverbindung, kann der Ressourcen-Manager beim Aktivieren des Objekts im kontextgesteuerten Kontext keine automatische Eintragung in eine Transaktion durchführen, während es in einem Pool zusammengefasst ist. Daher muss das Objekt selbst die Logik der Erkennung der Transaktion verarbeiten, die automatische Eintragung des Ressourcen-Managers deaktivieren und alle darin enthaltenen Ressourcen manuell eintragen. Darüber hinaus sollte ein Transaktionspoolobjekt den aktuellen Zustand seiner Ressourcen in den Parameterwerten von [**IObjectControl::CanBePooled**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontrol-canbepooled)widerspiegeln. Weitere Informationen finden Sie unter [Pooling Transactional Objects](pooling-transactional-objects.md).
 
-## <a name="implement-iobjectcontrol-to-manage-the-object-lifetime"></a>Implementieren von IObjectControl zum Verwalten der Objekt Lebensdauer
+## <a name="implement-iobjectcontrol-to-manage-the-object-lifetime"></a>Implementieren von IObjectControl zum Verwalten der Objektlebensdauer
 
-In Poolable-Objekten sollte [**IObjectControl**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontrol)implementiert werden, obwohl dies nicht zwingend erforderlich ist. Transaktionale Komponenten, die in einem Pool zusammengefasst sind, müssen jedoch **IObjectControl** implementieren. Diese Komponenten sollten den Zustand der Ressourcen überwachen, die Sie enthalten, und angeben, wann Sie nicht wieder verwendet werden können. Wenn [**IObjectControl:: CanBePooled**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontrol-canbepooled) den Wert "false" zurückgibt, wird eine Transaktion beendet. Weitere Details finden Sie unter [Steuern der Objekt Lebensdauer und des Zustands](controlling-object-lifetime-and-state.md).
+Poolfähige Objekte sollten [**IObjectControl**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontrol)implementieren, obwohl dies nicht unbedingt erforderlich ist. Transaktionskomponenten, die in einem Pool zusammengefasst sind, müssen jedoch **IObjectControl** implementieren. Diese Komponenten sollten den Zustand der ressourcen, die sie enthalten, überwachen und angeben, wann sie nicht wiederverwendet werden können. Wenn [**IObjectControl::CanBePooled**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontrol-canbepooled) false zurückgibt, wird eine Transaktion untergangen. Weitere Informationen finden Sie unter [Steuern der Objektlebensdauer und des Zustands.](controlling-object-lifetime-and-state.md)
 
 ## <a name="language-restrictions"></a>Spracheinschränkungen
 
-Komponenten, die mit Microsoft Visual Basic 6,0 und früher entwickelt wurden, können nicht in einem Pool zusammengefasst werden, da diese Komponenten Apartment Modell Thread sind. In Visual Basic .net können Komponenten jedoch in einem Pool zusammengefasst werden.
+Komponenten, die mit Microsoft Visual Basic 6.0 und früher entwickelt wurden, können nicht in einem Pool zusammengefasst werden, da diese Komponenten im Apartmentmodell gethreadt werden. In Visual Basic .NET können Komponenten jedoch in einem Pool zusammengefasst werden.
 
 ## <a name="legacy-components"></a>Legacykomponenten
 
-Solange Sie nicht transaktional sind und den entsprechenden Voraussetzungen entsprechen, können Komponenten in einem Pool zusammengefasst werden, auch wenn Sie nicht speziell mit den Pooling-Funktionen geschrieben wurden. Das Implementieren von [**IObjectControl**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontrol)ist nicht erforderlich. eine Komponente, die dies nicht einfach macht, wird nicht an der Verwaltung Ihrer Lebensdauer beteiligt sein. Wenn [**IObjectControl:: CanBePooled**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontrol-canbepooled) nicht implementiert ist, wird das Objekt weiterhin wieder verwendet, bis der Pool die maximale Größe erreicht.
+Solange sie nicht transaktional sind und den entsprechenden vorherigen Anforderungen entsprechen, können Komponenten auch dann in einem Pool zusammengefasst werden, wenn sie nicht speziell unter Berücksichtigung der Poolfunktion geschrieben wurden. Es ist nicht erforderlich, [**IObjectControl**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontrol)zu implementieren. Eine Komponente, die dies nicht tut, nimmt einfach nicht an der Verwaltung ihrer Lebensdauer teil. Wenn [**IObjectControl::CanBePooled**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontrol-canbepooled) nicht implementiert ist, wird das Objekt weiterhin wiederverwendet, bis der Pool die maximale Größe erreicht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Com+-objektkonstruktorzeichenfolgen](com--object-constructor-strings.md)
+[COM+-Objektkonstruktorzeichenfolgen](com--object-constructor-strings.md)
 </dt> <dt>
 
-[Steuern der Objekt Lebensdauer und des Zustands](controlling-object-lifetime-and-state.md)
+[Steuern der Lebensdauer und des Zustands von Objekten](controlling-object-lifetime-and-state.md)
 </dt> <dt>
 
-[Funktionsweise des Objekt Pooling](how-object-pooling-works.md)
+[Funktionsweise von Objektpooling](how-object-pooling-works.md)
 </dt> <dt>
 
-[Verbessern der Leistung durch Objekt Pooling](improving-performance-with-object-pooling.md)
+[Verbessern der Leistung mit Objektpooling](improving-performance-with-object-pooling.md)
 </dt> <dt>
 
-[Pooling von transaktionalen Objekten](pooling-transactional-objects.md)
+[Pooling von Transaktionsobjekten](pooling-transactional-objects.md)
 </dt> </dl>
 
  

@@ -13,10 +13,10 @@
               href: window-features.md
             - name: Verwenden von Windows
               href: using-windows.md
-        - name: Fensterverweis
+        - name: Fensterreferenz
           href: window-reference.md
           items:
-            - name: Fensterkonst constants
+            - name: Fensterkonstanten
               href: constants.md
               items:
                 - name: Erweiterte Fensterstile
@@ -32,7 +32,7 @@
                   href: /windows/desktop/api/winuser/nf-winuser-adjustwindowrectex
                 - name: AllowSetForegroundWindow
                   href: /windows/desktop/api/winuser/nf-winuser-allowsetforegroundwindow
-                - name: AnimierenWindow
+                - name: AnimateWindow
                   href: /windows/desktop/api/winuser/nf-winuser-animatewindow
                 - name: AnyPopup
                   href: /windows/desktop/api/winuser/nf-winuser-anypopup
@@ -363,7 +363,7 @@
     - name: Fensterklassen
       href: window-classes.md
       items:
-        - name: Übersichten über Die Window-Klasse
+        - name: Übersichten der Window-Klasse
           href: window-class-overviews.md
           items:
             - name: Informationen zu Fensterklassen
@@ -417,17 +417,17 @@
                   href: /windows/win32/api/winuser/ns-winuser-wndclassexa
             - name: Fensterklassenstile
               href: window-class-styles.md
-    - name: Fensterprozessuren
+    - name: Fenster-Prozeduren
       href: window-procedures.md
       items:
-        - name: Übersicht über Fensterprozedur
+        - name: Übersicht über Fensterprozeduren
           href: window-procedure-overviews.md
           items:
-            - name: Informationen zu Fensterprozessen
+            - name: Informationen zu Fensterverfahren
               href: about-window-procedures.md
-            - name: Verwenden von Fensterprozessen
+            - name: Verwenden von Fenster-Prozeduren
               href: using-window-procedures.md
-        - name: Referenz zur Fensterprozedur
+        - name: Referenz zu Fensterprozeduren
           href: window-procedure-reference.md
           items:
             - name: Fensterprozedurfunktionen
@@ -512,7 +512,7 @@
                   href: /windows/desktop/api/winuser/ns-winuser-bsminfo
                 - name: Msg
                   href: /windows/win32/api/winuser/ns-winuser-msg
-            - name: Nachrichtenkonstanten
+            - name: Nachrichtenkonst constants
               href: message-and-message-queue-notifications.md
               items:
                 - name: OCM__BASE
@@ -524,7 +524,7 @@
     - name: Timer
       href: timers.md
       items:
-        - name: Übersichten zu Timern
+        - name: Übersicht über Timer
           href: timer-overviews.md
           items:
             - name: Informationen zu Timern
@@ -553,7 +553,7 @@
     - name: Fenstereigenschaften
       href: window-properties.md
       items:
-        - name: Übersicht über Fenstereigenschaften
+        - name: Übersichten über Fenstereigenschaft
           href: window-property-overviews.md
           items:
             - name: Informationen zu Fenstereigenschaften
@@ -563,7 +563,7 @@
         - name: Fenstereigenschaftsreferenz
           href: window-property-reference.md
           items:
-            - name: Fenstereigenschaftsfunktionen
+            - name: Window-Eigenschaftenfunktionen
               href: window-property-functions.md
               items:
                 - name: EnumProps
@@ -586,7 +586,7 @@
         - name: Referenz zur Konfiguration
           href: configuration-reference.md
           items:
-            - name: Konfigurationskonst constants
+            - name: Konfigurationskonst constants (Konfigurationskonst constants
               href: configuration-constants.md
               items:
                 - name: Kontaktvisualisierung
@@ -615,7 +615,7 @@
     - name: Hooks
       href: hooks.md
       items:
-        - name: Hookübersicht
+        - name: Übersicht über Hooks
           href: about-hooks.md
         - name: Verwenden von Hooks
           href: using-hooks.md
@@ -696,7 +696,7 @@
     - name: Multiple Document Interface (MDI)
       href: multiple-document-interface.md
       items:
-        - name: Übersichten zu MDI
+        - name: MDI-Übersichten
           href: multiple-document-interface-overviews.md
           items:
             - name: Informationen zur Schnittstelle für mehrere Dokumente

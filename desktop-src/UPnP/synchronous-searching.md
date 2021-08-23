@@ -1,28 +1,28 @@
 ---
 title: Synchrone Suche
-description: Das Device Finder-Objekt ermöglicht synchrone und asynchrone Suchvorgänge. Synchrone Suchvorgänge sind abgeschlossen und geben die Steuerung nur dann an die aufrufenden Anwendung zurück, nachdem alle verfügbaren Geräte gefunden wurden.
+description: Das Device Finder-Objekt ermöglicht sowohl synchrone als auch asynchrone Suchvorgänge. Synchrone Suchvorgänge werden abgeschlossen und geben die Steuerung erst an die aufrufende Anwendung zurück, nachdem alle verfügbaren Geräte gefunden wurden.
 ms.assetid: fa22cd53-6468-4958-b4e3-b1a41b3cb2f6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c1890829dfe8386cd79627dde039264dc81e473c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f852957bed4bb73d9b31d0e26e099eb545b804953718d8cfd4e3cb44ea5f6c62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999500"
 ---
 # <a name="synchronous-searching"></a>Synchrone Suche
 
-Das Device Finder-Objekt ermöglicht synchrone und asynchrone Suchvorgänge. Synchrone Suchvorgänge sind abgeschlossen und geben die Steuerung nur dann an die aufrufenden Anwendung zurück, nachdem alle verfügbaren Geräte gefunden wurden. Um eine synchrone Suche auszuführen, verwenden Sie eine der synchronen Suchmethoden der [**IUPnPDeviceFinder**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevicefinder) -Schnittstelle.
+Das Device Finder-Objekt ermöglicht sowohl synchrone als auch asynchrone Suchvorgänge. Synchrone Suchvorgänge werden abgeschlossen und geben die Steuerung erst an die aufrufende Anwendung zurück, nachdem alle verfügbaren Geräte gefunden wurden. Um eine synchrone Suche durchzuführen, verwenden Sie eine der synchronen Suchmethoden der [**IUPnPDeviceSynchron-Schnittstelle.**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevicefinder)
 
 > [!Note]  
-> Die Rückgabe synchroner Suchvorgänge dauert mindestens neun Sekunden. Die Verzögerung ist darauf zurückzuführen, dass die anfängliche UDP-Such Nachricht mehrmals gesendet werden muss. Diese Duplizierung berücksichtigt die Unzuverlässigkeit des zugrunde liegenden Netzwerk Protokolls. Synchrone Suchvorgänge eignen sich am besten für Befehlszeilen Schnittstellen. Sie werden nicht für grafische Benutzeroberflächen empfohlen.
+> Die Rückgabe synchroner Suchvorgänge dauert mindestens neun Sekunden. Die Verzögerung wird dadurch verursacht, dass die erste UDP-Suchnachricht mehrmals gesendet werden muss. Diese Duplizierung ist für die Nichtzuverlässigkeit des zugrunde liegenden Netzwerkprotokolls verantwortlich. Synchrone Suchvorgänge sind am besten für Befehlszeilenschnittstellen. Sie werden für grafische Benutzeroberflächen nicht empfohlen.
 
- 
+ 
 
-Die [**IUPnPDeviceFinder:: findbytype**](/windows/desktop/api/Upnp/nf-upnp-iupnpdevicefinder-findbytype) -Methode sucht nach Gerät oder Diensttyp. Diese Methode nimmt einen Typ-Uri als Eingabeparameter an und gibt eine Auflistung von Geräte Objekten zurück. Ein Geräte Objekt stellt ein einzelnes Gerät dar.
+Die [**IUPnPDevice Wiesn::FindByType-Methode**](/windows/desktop/api/Upnp/nf-upnp-iupnpdevicefinder-findbytype) durchsucht nach Geräte- oder Diensttyp. Diese Methode verwendet einen Typ-URI als Eingabeparameter und gibt eine Auflistung von Geräteobjekten zurück. Ein Device-Objekt stellt ein einzelnes Gerät dar.
 
-In den folgenden Beispielen wird veranschaulicht, wie eine synchrone Suche nach Geräten in VBScript ausgeführt wird. Jedes Skript verwendet [**IUPnPDeviceFinder:: findbytype**](/windows/desktop/api/Upnp/nf-upnp-iupnpdevicefinder-findbytype), das mit dem Typ-Uri (Dienst-ID) für den Media Player-Gerätetyp, *urn: Schemas-UPnP-org: Device: MediaPlayer. v 1.00.00*, aufgerufen wird. Die-Methode gibt eine Auflistung von Geräte Objekten zurück, die den gefundenen Media Player-Geräten entsprechen. Informationen zum Extrahieren einzelner Geräte Objekte aus einer Sammlung finden Sie unter [von synchronen Such Vorgängen zurückgegebene Geräte](device-collections-returned-by-synchronous-searches.md)Auflistungen.
+In den folgenden Beispielen wird veranschaulicht, wie sie eine synchrone Suche nach Geräten in VBScript ausführen. Jedes Skript verwendet [**IUPnPDeviceGramm::FindByType,**](/windows/desktop/api/Upnp/nf-upnp-iupnpdevicefinder-findbytype)der mit dem Typ-URI (Dienst-ID) für den Media *Player-Gerätetyp urn:schemas-upnp-org:device:mediaplayer.v1.00.00 aufgerufen wird.* Die -Methode gibt eine Sammlung von Geräteobjekten zurück, die gefundenen Media Player-Geräten entsprechen. Informationen zum Extrahieren einzelner Geräteobjekte aus einer Sammlung finden Sie unter Gerätesammlungen, die [von synchronen Suchvorgängen zurückgegeben werden.](device-collections-returned-by-synchronous-searches.md)
 
 ## <a name="search-for-devices-by-type-in-vbscript"></a>Suchen nach Geräten nach Typ in VBScript
 
@@ -39,11 +39,11 @@ Set devices = deviceFinder.FindByType( "urn:schemas-upnp-org:device:multidisk-dv
 
 
 
-## <a name="search-for-device-by-type-in-c"></a>Suchen nach einem Gerät nach Typ in C++
+## <a name="search-for-device-by-type-in-c"></a>Suchen nach Gerät nach Typ in C++
 
-Im folgenden Beispiel wird eine synchrone Suche nach Media Player-Geräten mithilfe von C++ veranschaulicht. Die Funktion nimmt einen Zeiger auf die [**IUPnPDeviceFinder**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevicefinder) -Schnittstelle als Eingabe an und gibt den [**iupnpdevices**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevices) -Schnittstellen Zeiger zurück.
+Im folgenden Beispiel wird eine synchrone Suche nach Media Player-Geräten mit C++ veranschaulicht. Die -Funktion verwendet einen Zeiger auf die [**IUPnPDeviceGrad-Schnittstelle**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevicefinder) als Eingabe und gibt den [**IUPnPDevices-Schnittstellenzeiger**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevices) zurück.
 
-Das Beispiel ordnet zuerst einen **BSTR** zu, der den Gerätetyp-URI darstellt, und übergibt ihn dann an die [**IUPnPDeviceFinder:: findbytype**](/windows/desktop/api/Upnp/nf-upnp-iupnpdevicefinder-findbytype) -Methode. Außerdem wird die Adresse eines lokalen [**iupnpdevices**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevices) -Zeigers in dem Puffer übergeben, in dem die-Methode die gefundene Geräte Auflistung speichert. Wenn der Funktions Aufrufvorgang erfolgreich ist, wird der Zeiger auf diese Auflistung zurückgegeben.
+Im Beispiel wird zuerst ein **BSTR** zur Darstellung des Gerätetyp-URI zuteilen, und anschließend wird dieser an die [**IUPnPDeviceViceVic::FindByType-Methode**](/windows/desktop/api/Upnp/nf-upnp-iupnpdevicefinder-findbytype) übertragen. Außerdem wird die Adresse eines lokalen [**IUPnPDevices-Zeigers**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevices) in den Puffer übergibt, in dem die -Methode dann die Sammlung der gefundenen Geräte speichert. Wenn der Funktionsaufruf erfolgreich ist, wird der Zeiger auf diese Auflistung zurückgegeben.
 
 
 ```C++
@@ -95,9 +95,9 @@ IUPnPDevices *FindMediaPlayerDevices(IUPnPDeviceFinder *pDeviceFinder)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

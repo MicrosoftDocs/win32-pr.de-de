@@ -1,27 +1,27 @@
 ---
-description: Das Erstellen eines Erfassungs Filters, der mit Netzwerkmonitor funktioniert, ist ein fünfstufiger Prozess.
+description: Das Erstellen eines Erfassungsfilters, der mit Netzwerkmonitor funktioniert, ist ein fünfstufiger Prozess.
 ms.assetid: 04be791c-43c5-44c2-8ab0-799a99974bf6
-title: Erstellen eines Monitor Erfassungs Filters
+title: Erstellen eines Monitorerfassungsfilters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 097a8276bd6a1f311b343787b3f06175d9b7091f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 72e9e58aebd18f861ad8fc36c4d6f718ff3e3694c828b23436764e288d083fbb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119064153"
 ---
-# <a name="creating-a-monitor-capture-filter"></a>Erstellen eines Monitor Erfassungs Filters
+# <a name="creating-a-monitor-capture-filter"></a>Erstellen eines Monitorerfassungsfilters
 
-Das Erstellen eines Erfassungs Filters, der mit Netzwerkmonitor funktioniert, ist ein fünfstufiger Prozess:
+Das Erstellen eines Erfassungsfilters, der mit Netzwerkmonitor funktioniert, ist ein fünfstufiger Prozess:
 
--   [Festlegen von ETYPE oder SAP-Filter](writing-etypesap-filter-portion.md)
--   [Schreiben von adresstablem Filter](writing-addresstable-filter-portion.md)
--   [Schreiben des patternmatch-Filters](writing-the-patternmatch-filter.md)
--   [Clipping eines Frames](clipping-a-frame.md)
--   [Implementieren des Erfassungs Filter Codes](implementing-the-capture-filter-code.md)
+-   [Festlegen des Etype- oder SAP-Filters](writing-etypesap-filter-portion.md)
+-   [Schreiben eines ADDRESSTABLE-Filters](writing-addresstable-filter-portion.md)
+-   [Schreiben des PATTERNMATCH-Filters](writing-the-patternmatch-filter.md)
+-   [Clipping a Frame](clipping-a-frame.md)
+-   [Implementieren des Erfassungsfiltercodes](implementing-the-capture-filter-code.md)
 
-Ein [*Erfassungs Filter*](c.md) ist eine Reihe von Ergänzungen zum NPP-BLOB, die auswählen, welche Frames an den Monitor zurückgegeben werden. Wenn der NPP-BLOB von einem Monitor nicht geändert wird, wechselt der NPP in den Modus "gemischten" und sendet den gesamten Netzwerk Datenverkehr an den Monitor. Der npp ist am effizientesten, wenn er die an einen Treiber übergebenen Daten reduzieren kann, sodass ein Monitor einen Erfassungs Filter erstellen sollte. Ein Monitor legt den Erfassungs Filter fest, indem er im Aufrufe der [doconfigure](imonitor-doconfigure.md) -Funktion in das NPP-BLOB schreibt. Anschließend ruft der mcsvc den NPP mit dem NPP-BLOB auf. Weitere Informationen zum Erfassungs Filter, zu [Netzwerk Paket Anbietern](network-packet-providers.md) in NPPs und [Netzwerkmonitor BLOBs](network-monitor-blobs.md) für BLOB-Funktionen finden Sie unter [Erfassungs Filter](capture-filters.md) .
+Ein [*Erfassungsfilter*](c.md) ist eine Reihe von Ergänzungen zum NPP-BLOB, mit denen ausgewählt wird, welche Frames an den Monitor zurückübergeüberträgt werden. Wenn ein Monitor das NPP-BLOB nicht ändert, wird der NPP in den promiscuous-Modus wechseln und den ganzen Netzwerkdatenverkehr an den Monitor senden. Der NPP ist am effizientesten, wenn er die an einen Treiber übergebenen Daten reduzieren kann. Daher sollte ein Monitor einen Erfassungsfilter erstellen. Ein Monitor legt seinen Erfassungsfilter fest, indem er im Aufruf der [DoConfigure-Funktion](imonitor-doconfigure.md) in das NPP-BLOB schreibt. McSVC ruft dann den NPP mit dem NPP-BLOB auf. Weitere Informationen zu Erfassungsfiltern, [](network-packet-providers.md) Netzwerkpaketanbietern für NPPs und Netzwerkmonitor Blobs in BLOB-Funktionen finden Sie unter [](capture-filters.md) [Erfassungsfilter.](network-monitor-blobs.md)
 
  
 

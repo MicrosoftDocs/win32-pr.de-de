@@ -1,30 +1,30 @@
 ---
 title: Auflisten von Event Collector-Abonnements
-description: Sie können eine Liste mit Namen von Event Collector-Abonnements abrufen, die auf einem lokalen Computer aktiviert sind.
+description: Sie können eine Liste der Namen von Event Collector-Abonnements abrufen, die auf einem lokalen Computer aktiviert sind.
 ms.assetid: b44fc694-b94a-4fc5-95d1-72afb016ad72
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ab030e3f85b1abc0e763c30dfa4208023b2e654
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 67f67e888ba62b225603cd47293936b7010ce9f730238119d2b5d36ca9ed6dbe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712203"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997920"
 ---
 # <a name="listing-event-collector-subscriptions"></a>Auflisten von Event Collector-Abonnements
 
-Sie können eine Liste mit Namen von Event Collector-Abonnements abrufen, die auf einem lokalen Computer aktiviert sind. Mithilfe der [**ecopenabonptionenum**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscriptionenum) -Funktion können Sie ein Handle für einen Abonnement Enumerator abrufen. Nachdem das Handle erstellt wurde, wird die Funktion [**ecenumnextabonnement**](/windows/desktop/api/Evcoll/nf-evcoll-ecenumnextsubscription) verwendet, um die Abonnements auf dem lokalen Computer aufzulisten.
+Sie können eine Liste der Namen von Event Collector-Abonnements abrufen, die auf einem lokalen Computer aktiviert sind. Mithilfe [**der EcOpenSubscriptionEnum-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscriptionenum) können Sie ein Handle für einen Abonnement-Enumerator abrufen. Nachdem das Handle erstellt wurde, wird die [**EcEnumNextSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecenumnextsubscription) verwendet, um die Abonnements auf dem lokalen Computer auflisten.
 
 > [!Note]
 >
 > Sie können das folgende Codebeispiel verwenden, um eine Liste von Abonnements abzurufen, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
 >
-> **wecutil**
+> **wecutil es**
 
- 
+ 
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie die Event Collector-Abonnements aufgelistet werden.
+Das folgende C++-Codebeispiel zeigt, wie Sie die Event Collector-Abonnements auflisten.
 
 
 ```C++
@@ -122,12 +122,12 @@ void __cdecl wmain()
 
 <dl> <dt>
 
-[Referenz zur Windows-Ereignis Sammlung](windows-event-collector-reference.md)
+[Windows Referenz zum Ereignissammler](windows-event-collector-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

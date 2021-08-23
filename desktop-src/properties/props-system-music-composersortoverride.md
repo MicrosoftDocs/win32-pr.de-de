@@ -1,5 +1,5 @@
 ---
-description: Dieser optionale Zeichenfolgenwert ermöglicht das Überschreiben der Standardsortierreihenfolge von System. Musik. Composer. Dies ist sehr wichtig für die ordnungsgemäße Sortierung von Musikdateien auf Japanisch, die ohne dieses Feld nicht phonetisch sortiert werden können (die vom Benutzer erwartete Reihenfolge). Sie kann auch zum Anpassen der Sortierung in nicht ostasiatischen Szenarien verwendet werden, z. B. um dem Benutzer das Entfernen von Artikeln zu Sortierzwecken zu ermöglichen.
+description: Dieser optionale Zeichenfolgenwert ermöglicht das Überschreiben der Standardsortierreihenfolge von System. Musik. Composer. Dies ist sehr wichtig für die ordnungsgemäße Sortierung von Musikdateien auf Japanisch, die ohne dieses Feld nicht falsch phonetisch sortiert werden können (die vom Benutzer erwartete Sortierung). Sie kann auch zum Anpassen der Sortierung in nicht ostasiatischen Szenarien verwendet werden, z. B. zum Entfernen von Artikeln zu Sortierungszwecken.
 ms.assetid: f087cbd3-7d0e-48c8-8e59-383d6b47cb12
 title: System. Musik. ComposerSortOverride
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118970229"
 ---
 # <a name="systemmusiccomposersortoverride"></a>System. Musik. ComposerSortOverride
 
-Dieser optionale Zeichenfolgenwert ermöglicht das Überschreiben der Standardsortierreihenfolge von System. Musik. Composer. Dies ist sehr wichtig für die ordnungsgemäße Sortierung von Musikdateien auf Japanisch, die ohne dieses Feld nicht phonetisch sortiert werden können (die vom Benutzer erwartete Reihenfolge). Sie kann auch zum Anpassen der Sortierung in nicht ostasiatischen Szenarien verwendet werden, z. B. um dem Benutzer das Entfernen von Artikeln zu Sortierzwecken zu ermöglichen.
+Dieser optionale Zeichenfolgenwert ermöglicht das Überschreiben der Standardsortierreihenfolge von System. Musik. Composer. Dies ist sehr wichtig für die ordnungsgemäße Sortierung von Musikdateien auf Japanisch, die ohne dieses Feld nicht falsch phonetisch sortiert werden können (die vom Benutzer erwartete Sortierung). Sie kann auch zum Anpassen der Sortierung in nicht ostasiatischen Szenarien verwendet werden, z. B. zum Entfernen von Artikeln zu Sortierungszwecken.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8
 

@@ -1,5 +1,5 @@
 ---
-description: CRenderedInputPin.CRenderedInputPin-Konstruktor – Konstruktormethode.
+description: 'CRenderedInputPin.CRenderedInputPin-Konstruktor : Konstruktormethode.'
 ms.assetid: bf335750-b776-47bc-978d-e84e8b5259f7
 title: CRenderedInputPin.CRenderedInputPin-Konstruktor (Amextra.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4bd8e864531604fb36c2abe0bcd57ac5b3a9c869
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6b75ce6b5f91f5bd9019a4bf6e46266269b72ac7a5e719f7a58b2f2e702375a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953829"
 ---
 # <a name="crenderedinputpincrenderedinputpin-constructor"></a>CRenderedInputPin.CRenderedInputPin-Konstruktor
 
@@ -49,21 +49,21 @@ CRenderedInputPin(
 *pObjectName* 
 </dt> <dd>
 
-Eine Zeichenfolge, die den Debugnamen des Objekts enthält. Weitere Informationen finden Sie unter [**CBaseObject-Klasse**](cbaseobject.md).
+Zeichenfolge, die den Debugnamen des Objekts enthält. Weitere Informationen finden Sie unter [**CBaseObject-Klasse.**](cbaseobject.md)
 
 </dd> <dt>
 
 *pFilter* 
 </dt> <dd>
 
-Zeiger auf den Filter, der diesen Pin erstellt hat.
+Zeiger auf den Filter, der diese Stecknadel erstellt hat.
 
 </dd> <dt>
 
 *Plock* 
 </dt> <dd>
 
-Zeiger auf eine [**CCritSec-Sperre,**](ccritsec.md) die zum Serialisieren von Zustandsänderungen verwendet wird. Dies kann derselbe kritische Abschnitt wie die Filtersperre [**CBaseFilter::m \_ pLock sein.**](cbasefilter-m-plock.md)
+Zeiger auf eine [**CCritSec-Sperre,**](ccritsec.md) die zum Serialisieren von Zustandsänderungen verwendet wird. Dies kann derselbe kritische Abschnitt wie die Filtersperre [**CBaseFilter::m \_ pLock**](cbasefilter-m-plock.md)sein.
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Zeiger auf eine Variable, die einen **HRESULT-Wert** empfängt, der den Erfolg o
 *pName* 
 </dt> <dd>
 
-Breitzeichenfolge mit dem Pinnamen (wird auch als Pinbezeichner verwendet).
+Breitzeichenzeichenfolge, die den Pinnamen enthält (wird auch als Stecknadelbezeichner verwendet).
 
 </dd> </dl>
 
@@ -85,14 +85,14 @@ Breitzeichenfolge mit dem Pinnamen (wird auch als Pinbezeichner verwendet).
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Amextra.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

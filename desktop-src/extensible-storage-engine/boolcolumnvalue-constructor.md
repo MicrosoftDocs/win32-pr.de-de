@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: boolcolumnvalue-Konstruktor'
-title: Boolcolumnvalue-Konstruktor
+description: Weitere Informationen finden Sie unter BoolColumnValue-Konstruktor.
+title: BoolColumnValue-Konstruktor
 TOCTitle: 'BoolColumnValue constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.BoolColumnValue.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.boolcolumnvalue.boolcolumnvalue(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b48948c3e1ba36fc60c7a2e0277d24a4d857ca1e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec71df1f390ff0e1afc2a19549d8787c08f0b34efa1999f9d2d7a86cc79a23c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118982850"
 ---
-# <a name="boolcolumnvalue-constructor"></a>Boolcolumnvalue-Konstruktor
+# <a name="boolcolumnvalue-constructor"></a>BoolColumnValue-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,10 +52,10 @@ public BoolColumnValue()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Boolcolumnvalue-Klasse](./boolcolumnvalue-class.md)
+[BoolColumnValue-Klasse](./boolcolumnvalue-class.md)
 
-[Boolcolumnvalue-Member](./boolcolumnvalue-members.md)
+[BoolColumnValue-Elemente](./boolcolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

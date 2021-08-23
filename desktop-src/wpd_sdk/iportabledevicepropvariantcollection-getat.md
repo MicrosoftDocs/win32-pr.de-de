@@ -14,12 +14,12 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: b901e8fcfa065813e4c0942632f80901800ef0a9
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 02fa273b3bedea78884e15d2dedb5b7d2f675c78330c735e3bfb1896bc9d5199
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963729"
 ---
 # <a name="iportabledevicepropvariantcollectiongetat-method"></a>IPortableDevicePropVariantCollection::GetAt-Methode
 
@@ -57,7 +57,7 @@ Zeiger auf eine **PROPVARIANT-Struktur.** Der Aufrufer ist dafür verantwortlich
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die -Methode gibt ein **HRESULT zurück.** Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -79,7 +79,7 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie unter Abrufen der von
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
@@ -108,7 +108,7 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie unter Abrufen der von
 [Abrufen der von einem Gerät unterstützten Inhaltstypen](retrieving-the-content-types-supported-by-a-device.md)
 </dt> <dt>
 
-[Abrufen der von einem Gerät unterstützten Funktionskategorien](retrieving-the-functional-categories-supported-by-a-device.md)
+[Abrufen der von einem Gerät unterstützten Funktionalen Kategorien](retrieving-the-functional-categories-supported-by-a-device.md)
 </dt> <dt>
 
 [Abrufen der funktionalen Objektbezeichner für ein Gerät](retrieving-the-functional-object-identifiers-for-a-device.md)

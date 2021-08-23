@@ -1,7 +1,7 @@
 ---
-description: Dieser Operator testet auf Ungleichheit zwischen zwei Verweis Zeiten.
+description: Dieser Operator testet auf Ungleichheit zwischen zwei Verweiszeiten.
 ms.assetid: c081fff2-d85e-409a-8902-4b2aa2c1fc78
-title: Coaref time. Operator! =-Methode (ctlutil. h)
+title: COARefTime.operator!=-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e93934d7b31715422f2cc091e606b681a57e7f61
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 86e138eecf387cf85bf57776f05e6e2711f58883e92a02cac83c4d2e8b1ebe19
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954349"
 ---
-# <a name="coareftimeoperator-method"></a>Coaref time. Operator! =-Methode
+# <a name="coareftimeoperator-method"></a>COARefTime.operator!=-Methode
 
-Dieser Operator testet auf Ungleichheit zwischen zwei Verweis Zeiten.
+Dieser Operator testet auf Ungleichheit zwischen zwei Verweiszeiten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ BOOL operator!=(
 
 <dl> <dt>
 
-*RT* \[ atur\]
+*rt* \[ Ref\]
 </dt> <dd>
 
-Verweis auf das **coareftime** -Objekt, das verglichen werden soll.
+Verweis auf das zu vergleichende **COARefTime-Objekt.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die beiden-Objekte nicht gleich sind. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE** zurück, wenn die beiden Objekte ungleich sind. Andernfalls gibt **FALSE** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt **true** zurück, wenn die beiden-Objekte nicht gleich sind. Andernfalls wi
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt **true** zurück, wenn die beiden-Objekte nicht gleich sind. Andernfalls wi
 
 <dl> <dt>
 
-[**Coaref Time-Klasse**](coareftime.md)
+[**COARefTime-Klasse**](coareftime.md)
 </dt> </dl>
 
  

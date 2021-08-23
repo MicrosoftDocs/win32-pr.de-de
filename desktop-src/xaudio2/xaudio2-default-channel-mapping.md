@@ -1,55 +1,55 @@
 ---
-description: Ein XAudio2-Client hat die vollständige Kontrolle über die Zuordnung von den Kanälen einer Stimme zu den Kanälen der einzelnen Ziel Stimmen.
+description: Ein XAudio2-Client hat die vollständige Kontrolle über die Zuordnung von den Kanälen einer Stimme zu den Kanälen der einzelnen Zielstimmen.
 ms.assetid: 219d5b70-3f07-f973-f9ec-1cb3cf0be37e
-title: XAudio2 Standard Kanal Zuordnung
+title: XAudio2-Standardkanalzuordnung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 06d77371223ccef02d6f0831a7aea182326f8477
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b42bb2f67709586532a19d86a916d3b7852652e76f9b6ce1ae115f1fc670e37a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104485859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025948"
 ---
-# <a name="xaudio2-default-channel-mapping"></a>XAudio2 Standard Kanal Zuordnung
+# <a name="xaudio2-default-channel-mapping"></a>XAudio2-Standardkanalzuordnung
 
-Ein XAudio2-Client hat die vollständige Kontrolle über die Zuordnung von den Kanälen einer Stimme zu den Kanälen der einzelnen Ziel voicesit steuert die Zuordnung durch die Verwendung der [**IXAudio2Voice:: setoutputmatrix**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setoutputmatrix) -Methode. In einigen Fällen vereinfacht XAudio2 diese Aufgabe jedoch, indem automatisch eine standardmäßige Sende Matrix eingerichtet wird. Dies erfolgt mithilfe der Kanalmaske, sofern vorhanden, die den Audiokanälen einer Stimme zugeordnet ist. Eine Kanalmaske ist eine Kombination aus Lautsprecher \_ xxx-Bitmasken, die in X3DAudio. h und an anderen Stellen definiert sind. XAudio2 erfordert, dass Kanalmasken 0 sind oder die gleiche Anzahl von Bits als Anzahl von Kanälen festgelegt ist.
+Ein XAudio2-Client hat die vollständige Kontrolle über die Zuordnung zwischen den Kanälen einer Stimme und den Kanälen der einzelnen Zielstimmen. Er steuert die Zuordnung mithilfe der [**IXAudio2Voice::SetOutputMatrix-Methode.**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setoutputmatrix) In einigen Fällen vereinfacht XAudio2 diese Aufgabe jedoch, indem automatisch eine Standardsendenmatrix eingerichtet wird. Hierzu wird ggf. die Kanalmaske verwendet, die den Audiokanälen einer Stimme zugeordnet ist. Eine Kanalmaske ist eine Kombination aus SPEAKER \_ xxx-Bitmasken, wie in X3DAudio.h und an anderer Stelle definiert. XAudio2 erfordert, dass Kanalmasken 0 sind oder die gleiche Anzahl von Bits wie die Anzahl der Kanäle festgelegt ist.
 
-In der folgenden Tabelle werden die Anforderungen an die Kanalmaske und die Standardwerte für die von XAudio2 unterstützten Formate angezeigt. 
+In der folgenden Tabelle sind die Anforderungen und Standardwerte für die Kanalmasken für die von XAudio2 unterstützten Formate aufgeführt. 
 
-| Format | Kanalmasken Anforderung             | Standard Maske                        | Entsprechendes Strukturmember                            |
+| Format | Kanalmaskenanforderung             | Standardmaske                        | Entsprechender Strukturmember                            |
 |--------|--------------------------------------|-------------------------------------|-----------------------------------------------------------|
-| PCM    | Die Datei enthält möglicherweise eine Kanalmaske.    | Die Kanalmaske ist 0 (null) oder nicht vorhanden.        | WAVEFORMATEXTENSIBLE. dwchannelmask oder None (WaveFormatEx) |
-| ADPCM  | Die Datei enthält keine Kanalmaske. | Standard Kanalmaske wird immer verwendet. | None (ADPCMWAVEFORMAT)                                    |
+| PCM    | Die Datei kann eine Kanalmaske enthalten.    | Kanalmaske ist "0" oder "nicht vorhanden"        | WAVEFORMATEXTENSIBLE.dwChannelMask oder none (WAVEFORMATEX) |
+| Adpcm  | Die Datei enthält keine Kanalmaske. | Die Standardkanalmaske wird immer verwendet. | None (ADPCMWAVEFORMAT)                                    |
 
 
 
  
 
-Für unter Mischungs-und Mastering-Stimmen und für Quell Stimmen ohne Kanalmaske oder Kanalmaske 0 nimmt XAudio2 die Standard Sprecherpositionen gemäß der folgenden Tabelle an. 
+Für Submix- und Masteringstimmen sowie für Quellstimmen ohne Kanalmaske oder Kanalmaske von 0 nimmt XAudio2 gemäß der folgenden Tabelle standardlautende Positionen an. 
 
-| Channels  | Implizite channelpositionen                                                                                            |
+| Kanäle  | Implizite Kanalpositionen                                                                                            |
 |-----------|-----------------------------------------------------------------------------------------------------------------------|
-| 1         | Wird immer frontleft und frontRight in vollem Umfang in beiden Referenten zugeordnet (Sonderfall für Mono-Sounds).                 |
-| 2         | Frontleft, frontRight (grundlegende Stereo Konfiguration)                                                                    |
-| 3         | Frontleft, frontRight, lowfrequency (2,1-Konfiguration)                                                               |
-| 4         | Frontleft, frontRight, backLeft, backright (Quadraphonic)                                                             |
-| 5         | Frontleft, frontRight, frontcenter, sideleft, sideright (5,0-Konfiguration)                                           |
-| 6         | Frontleft, frontRight, frontcenter, lowfrequency, sideleft, sideright (5,1-Konfiguration) (siehe folgende Hinweise) |
-| 7         | Frontleft, frontRight, frontcenter, lowfrequency, sideleft, sideright, backcenter (6,1-Konfiguration)                 |
-| 8         | Frontleft, frontRight, frontcenter, lowfrequency, backLeft, backright, sideleft, sideright (7,1-Konfiguration)        |
-| 9 oder mehr | Keine impliziten Positionen (eins-zu-Eins-Zuordnung)                                                                            |
+| 1         | Wird in beiden Lautsprechern immer frontLeft und FrontRight in vollem Umfang zugeordnet (Sonderfall für Mono-Sounds).                 |
+| 2         | FrontLeft, FrontRight (grundlegende Stereokonfiguration)                                                                    |
+| 3         | FrontLeft, FrontRight, LowFrequency (2.1-Konfiguration)                                                               |
+| 4         | FrontLeft, FrontRight, BackLeft, BackRight (quadraphonic)                                                             |
+| 5         | FrontLeft, FrontRight, FrontCenter, SideLeft, SideRight (5.0-Konfiguration)                                           |
+| 6         | FrontLeft, FrontRight, FrontCenter, LowFrequency, SideLeft, SideRight (5.1-Konfiguration) (siehe die folgenden Hinweise) |
+| 7         | FrontLeft, FrontRight, FrontCenter, LowFrequency, SideLeft, SideRight, BackCenter (6.1-Konfiguration)                 |
+| 8         | FrontLeft, FrontRight, FrontCenter, LowFrequency, BackLeft, BackRight, SideLeft, SideRight (7.1-Konfiguration)        |
+| 9 oder mehr | Keine impliziten Positionen (1:1-Zuordnung)                                                                            |
 
 
 
  
 
-Wenn ein angegebenes Sprachpaar im audiodiagramm keine Redner Positionen hat, die entweder mit der Quell-oder Ziel Stimme verknüpft sind (eine Stimme hat mehr als acht Kanäle), wird keine Stimme erst wiedergegeben, wenn die Quellsprache eine Sende Matrix explizit mithilfe der [**IXAudio2Voice:: setoutputmatrix**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setoutputmatrix) -Methode festgelegt hat. Das Aufrufen der [**IXAudio2SourceVoice:: Start**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-start) -Methode für jede Stimme schlägt fehl, bis Sie dies tun.
+Wenn einem bestimmten Stimmenpaar im Audiographen weder die Quell- noch die Zielstimme zugeordnet ist (eine Stimme hat mehr als acht Kanäle), kann keine Stimme wiedergegeben werden, bis für die Quellstimme eine Sendematrix explizit mit der [**IXAudio2Voice::SetOutputMatrix-Methode**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setoutputmatrix) festgelegt wurde. Der Aufruf der [**IXAudio2SourceVoice::Start-Methode**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-start) für beide Stimmen schlägt fehl, bis Sie dies tun.
 
-Wenn die Stimme der Quellsprache und die Zielstimme unterschiedliche Zahlen von Redner Positionen aufweisen und [**IXAudio2Voice:: setoutputmatrix**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setoutputmatrix) nicht auf der Quellsprache aufgerufen wurde, sendet XAudio2 jeden Quell Kanal an den nächstgelegenen Ziel Sprecher (oder die sprechenden Referenten), der proportional zur Art und Weise, wie nah Sie für den beabsichtigten Redner sind. Es gibt zwei Sonderfälle, in denen das Standardverhalten anders ist.
+Wenn die Quellstimme und die Zielstimme eine unterschiedliche Anzahl von Sprecherpositionen aufweisen und [**IXAudio2Voice::SetOutputMatrix**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2voice-setoutputmatrix) nicht auf der Quellstimme aufgerufen wurde, sendet XAudio2 jeden Quellkanal an den nächsten verfügbaren Ziellautgeber (bzw. die nächsten verfügbaren Sprecher), proportional zur Nähe des gewünschten Sprechers. Es gibt zwei Sonderfälle, in denen sich das Standardverhalten unterscheidet.
 
-1.  Wenn die Audioquelle Mono ist und sich an der Sprech \_ Spitze im Vordergrund befindet \_ oder über keine definierte Position verfügt, wird Sie immer an den Redner \_ Vordergrund und den Sprecher Front-Right gesendet, \_ \_ \_ Wenn Sie in der Ausgabeaudiodatei vorhanden sind. Wenn Sie nicht vorhanden sind, werden Sie auf den Normalfall zurückgegriffen.
-2.  Wenn die Quelle und das Ziel beide 6-Kanal sind und sich auf einer der standardmäßigen 5,1-Sprecher-Setups befinden (links + rechts + Center + Sub + backl + backr oder Left + Right + Center + Sub + Sidel + sider), werden die Kanäle nacheinander zugeordnet. Mit anderen Worten: sideleft/Right und backLeft/right werden gleichwertig behandelt. Dies liegt daran, dass in Bezug auf diese Setups Verlaufs Verwirrung aufgetreten ist. Daher wird angenommen, dass es sich um eine Zuordnung handelt.
+1.  Wenn das Quellaudio mono ist und sich im SPEAKER FRONT CENTER befindet \_ oder über keine definierte Position \_ verfügt, wird es immer an SPEAKER \_ FRONT LEFT und SPEAKER FRONT RIGHT \_ \_ \_ gesendet, wenn sie in der Ausgabeaudio vorhanden sind. Wenn sie nicht vorhanden sind, greift dies auf den normalen Fall zurück.
+2.  Wenn die Quelle und das Ziel beide über 6 Kanäle verfügen und an einer der standard 5.1-Lautsprechersetups positioniert sind (Left+Right+Center+Sub+BackL+BackR oder Left+Right+Center+Sub+SideL+SideR), werden Kanäle eins zu eins zugeordnet. Anders ausgedrückt: SideLeft/Right und BackLeft/Right werden gleichwertig behandelt. Dies liegt daran, dass diese Setups in der Vergangenheit verwechslungen sind. Daher besteht die angenommene Absicht immer darin, eins zu eins zuzuordnen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -61,7 +61,7 @@ Wenn die Stimme der Quellsprache und die Zielstimme unterschiedliche Zahlen von 
 [XAudio2-Programmieranleitung](programming-guide.md)
 </dt> <dt>
 
-[**Getchannelmask**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2masteringvoice-getchannelmask)
+[**GetChannelMask**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2masteringvoice-getchannelmask)
 </dt> </dl>
 
  
