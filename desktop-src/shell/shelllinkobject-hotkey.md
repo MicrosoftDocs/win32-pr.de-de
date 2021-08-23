@@ -1,7 +1,7 @@
 ---
-description: Ruft die Tastenkombination für den Link ab oder legt Sie fest.
+description: Ruft die Tastenkombination für den Link ab oder legt sie fest.
 ms.assetid: edc65fe8-c7f3-46d0-86ca-1c0c93e7ca64
-title: Shelllinkobject. Hotkey-Eigenschaft (Shldisp. h)
+title: ShellLinkObject.Hotkey-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 23ab8615421eee7289e5f0bb58582bf8e0d48f17
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 5b741b40d0947119109d3496a214ccdd75c59272fd7c5f4d0eac569a5b24c3a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119591900"
 ---
-# <a name="shelllinkobjecthotkey-property"></a>Shelllinkobject. Hotkey (Eigenschaft)
+# <a name="shelllinkobjecthotkey-property"></a>ShellLinkObject.Hotkey-Eigenschaft
 
-Ruft die Tastenkombination für den Link ab oder legt Sie fest.
+Ruft die Tastenkombination für den Link ab oder legt sie fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -38,7 +38,7 @@ ShellLinkObject.Hotkey(iHotkey) = iHotkey
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-die Tastenkombination des Links. Die Tastenkombination für die virtuelle Tastatur ist das nieder wertige Byte, und die Modifiziererflags befinden sich im höherwertigen Byte. Die Modifiziererflags können eine Kombination der folgenden Werte sein.
+Die Tastenkombination des Links. Die virtuelle Tastenkombination befindet sich im Low-Order-Byte, und die Modifiziererflags befinden sich im High-Order-Byte. Die Modifiziererflags können eine Kombination der folgenden Werte sein.
 
 <dt>
 
@@ -60,7 +60,7 @@ Umschalttaste
 
 </dt> <dd>
 
-STRG-Taste
+STRG-TASTE
 
 </dd> <dt>
 
@@ -90,7 +90,7 @@ Erweiterter Schlüssel
 
 Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft in JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -131,7 +131,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -214,17 +214,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

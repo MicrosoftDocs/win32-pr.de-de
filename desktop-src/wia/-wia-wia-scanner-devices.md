@@ -1,44 +1,44 @@
 ---
-description: Das Windows-Abbild Erfassungsgerät (WIA) ist als hierarchische Struktur von iwiaitem-Objekten implementiert.
+description: Das WiA-Scannergerät (Windows Image Acquisition) wird als hierarchische Struktur von IWiaItem-Objekten implementiert.
 ms.assetid: d716faec-9ace-422d-b6eb-ad4d86c1b0fd
-title: WIA-Scanner-Geräte in WIA 1,0
+title: WIA-Scannergeräte in WIA 1.0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 443277b0b580a481b523739cd5bc21642d827252
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bd22cc9fe330a3acf231034b61c72178f3b282cb9e66a1f455d4b6939a1c3cde
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119592670"
 ---
-# <a name="wia-scanner-devices-in-wia-10"></a>WIA-Scanner-Geräte in WIA 1,0
+# <a name="wia-scanner-devices-in-wia-10"></a>WIA-Scannergeräte in WIA 1.0
 
 > [!Note]  
-> In diesem Thema wird die Überprüfung der Gerätestruktur für Anwendungen erläutert, die den Windows-Abbild Erfassungs Dienst (WIA) 1,0 verwenden (der unter Windows XP oder früher unterstützt wird). Informationen zur Gerätestruktur von Windows-Abbild Erfassungs Elementen (WIA) 2,0 (die unter Windows Vista oder höher unterstützt werden) finden Sie unter [Informationen zur IWiaItem2-Element](-wia-about-item-tree.md)Struktur.
+> In diesem Thema wird die Scannergerätestruktur für Anwendungen erläutert, die den Wia 1.0-Dienst (Windows Image Acquisition) verwenden (der auf Windows XP oder früher unterstützt wird). Informationen zur Gerätestruktur von Windows Wia 2.0-Elementen (Image Acquisition, Bilderfassung) (die auf Windows Vista oder höher unterstützt werden) finden Sie unter [Informationen zur IWiaItem2-Elementstruktur.](-wia-about-item-tree.md)
 
  
 
-Das Windows-Abbild Erfassungsgerät (WIA) ist als hierarchische Struktur von [**iwiaitem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) -Objekten implementiert. Aus dem Stamm Element kann eine Anwendung folgende Aktionen ausführen:
+Das WiA-Scannergerät (Windows Image Acquisition) wird als hierarchische Struktur von [**IWiaItem-Objekten**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) implementiert. Aus dem Stammelement kann eine Anwendung Folgendes:
 
--   Funktionen für Abfrage Scanner
--   Festlegen der Eigenschaften von Scanner-Geräten
--   Steuern des Dokument Anlegers
+-   Funktionen der Abfragescanner
+-   Festlegen der Eigenschaften des Scannergeräts
+-   Steuern des Dokumentfeeders
 
-Ein WIA-Überprüfungs Gerät unterscheidet sich von einem WIA-Kamera Gerät, da es im Allgemeinen nicht mehrere Abbilder im Arbeitsspeicher speichert.
+Ein WIA-Scannergerät unterscheidet sich von einem WIA-Kameragerät, da es im Allgemeinen nicht mehrere Bilder im Arbeitsspeicher speichert.
 
-Unterhalb des Stamm Elements verfügt ein typisches Scanner-Objekt über ein einzelnes [**iwiaitem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) -Objekt, das die Daten Sammlungs Funktionen des Geräts darstellt, das Scan Element. Für dieses Element ist das [**wiaitemtypefile**](-wia-wia-item-type-flags.md) -Flag festgelegt, um anzugeben, dass Datenübertragungen für dieses Element möglich sind. Eine Anwendung richtet einen Scan durch Festlegen der Eigenschaften des Überprüfungs Elements ein, führt die Überprüfung durch und überträgt die Daten mithilfe einer Datenübertragungs Schnittstelle.
+Unterhalb des Stammelements verfügt ein typisches Scannerobjekt über ein einzelnes [**IWiaItem-Objekt,**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) das die Datensammlungsfunktionalität des Geräts darstellt, das Scanelement. Für dieses Element ist das [**WiaItemTypeFile-Flag**](-wia-wia-item-type-flags.md) festgelegt, um anzugeben, dass Datenübertragungen für dieses Element möglich sind. Eine Anwendung richtet eine Überprüfung durch Festlegen der Eigenschaften des Scanelements ein, führt dann die Überprüfung durch und überträgt die Daten über eine Datenübertragungsschnittstelle.
 
 Das folgende Diagramm veranschaulicht die WIA-Implementierung für einen typischen Scanner:
 
-![WIA-Implementierung eines typischen Scanners](images/wiscantr.gif)
+![wia-Implementierung eines typischen Scanners](images/wiscantr.gif)
 
-Ein typischer Duplex Scanner wird in WIA durch ein [**iwiaitem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) -Objekt dargestellt. Der Zugriff auf Front-und Back-Page-Daten erfolgt sequenziell auf eine Datenübertragung pro Seite. Daher ist die Darstellung eines Duplex Scanners mit der Darstellung eines typischen Scanners identisch.
+Ein typischer Duplexscanner wird in WIA durch ein [**IWiaItem-Objekt**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) dargestellt. Auf Front-Page- und Back-Page-Daten wird sequenziell eine Datenübertragung pro Seite zugegriffen. Daher ist die Darstellung eines Duplexscanners mit der Darstellung eines typischen Scanners identisch.
 
-Ein Folien Scanner, der mehrere Folien in einem einzelnen Scanvorgang scannen können, stellt jedes separate Bild als separates [**iwiaitem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) -Objekt dar.
+Ein Diascanner, der mehrere Folien in einem einzelnen Scanvorgang scannen kann, stellt jedes separate Bild als separates [**IWiaItem-Objekt**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) dar.
 
-Das folgende Diagramm veranschaulicht die WIA-Darstellung eines Folien Scanners:
+Das folgende Diagramm veranschaulicht die WIA-Darstellung eines Diascanners:
 
-![Folien Scanner](images/wislscan.gif)
+![Schieberegler](images/wislscan.gif)
 
  
 

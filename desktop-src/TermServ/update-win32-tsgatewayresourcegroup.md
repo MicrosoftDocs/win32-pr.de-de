@@ -1,12 +1,12 @@
 ---
-title: Update-Methode der Win32_TSGatewayResourceGroup-Klasse
+title: Updatemethode der Win32_TSGatewayResourceGroup Klasse
 description: Aktualisiert die Ressourcengruppe.
 ms.assetid: b5927046-f461-41cd-861b-0fd77f2008e5
 ms.tgt_platform: multiple
 keywords:
-- Update-Methode Remotedesktopdienste
-- Update-Methode Remotedesktopdienste, Win32_TSGatewayResourceGroup-Klasse
-- Win32_TSGatewayResourceGroup-Klasse Remotedesktopdienste, Update-Methode
+- Aktualisieren der Remotedesktopdienste
+- Updatemethode Remotedesktopdienste , Win32_TSGatewayResourceGroup-Klasse
+- Win32_TSGatewayResourceGroup klasse Remotedesktopdienste , Update-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a7b1610fc14aa522fa4d8b7caf03fccd7b37375
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e0c2f32e7f0c06f67ad0d32a7754c701097320564c5c01de3c348b9935b8b702
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119423910"
 ---
-# <a name="update-method-of-the-win32_tsgatewayresourcegroup-class"></a>Update-Methode der Win32-Klasse "t- \_ gatewayresourcegroup"
+# <a name="update-method-of-the-win32_tsgatewayresourcegroup-class"></a>Update-Methode der Win32 \_ TSGatewayResourceGroup-Klasse
 
 Aktualisiert die Ressourcengruppe.
 
@@ -45,38 +45,38 @@ uint32 Update(
 
 <dl> <dt>
 
-*Name* \[ in\]
+*Name* \[ In\]
 </dt> <dd>
 
 Name der Ressourcengruppe
 
 </dd> <dt>
 
-*Beschreibung* \[ in\]
+*Beschreibung* \[ In\]
 </dt> <dd>
 
 Beschreibung der Ressourcengruppe.
 
 </dd> <dt>
 
-*Ressourcen* \[ in\]
+*Ressourcen* \[ In\]
 </dt> <dd>
 
-Durch Semikolons getrennte Liste von Ressourcen in dieser Ressourcengruppe. Ein " \* " bedeutet alle Ressourcen.
+Durch Semikolons getrennte Liste der Ressourcen in dieser Ressourcengruppe. Ein \* "" steht für alle Ressourcen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sich mehrere Ressourcen im *Ressourcen* Parameter befinden und eine der Ressourcen nicht verarbeitet werden kann, wird keine der Ressourcen verarbeitet.
+Wenn sich mehrere Ressourcen im *Resources-Parameter* befinden und eine der Ressourcen nicht verarbeitet werden kann, wird keine der Ressourcen verarbeitet.
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,17 +86,17 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Win32-Datei " \_ zgatewayresourcegroup"**](win32-tsgatewayresourcegroup.md)
+[**Win32 \_ TSGatewayResourceGroup**](win32-tsgatewayresourcegroup.md)
 </dt> </dl>
 
  

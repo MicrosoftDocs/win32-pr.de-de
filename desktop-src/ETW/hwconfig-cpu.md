@@ -1,5 +1,5 @@
 ---
-description: Die hwconfig- \_ CPU-Klasse ist die Ereignistyp Klasse für CPU-Konfigurations Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Die \_ HWConfig-CPU-Klasse ist die Ereignistypklasse für CPU-Konfigurationsereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: a94714c6-009c-4300-a0a0-b7b3ce94f91e
 title: HWConfig_CPU-Klasse
 ms.topic: reference
@@ -18,18 +18,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 493952e25080d4a64e018477ca1b45033c8747af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9987095c8c2a1e9b9abbb54eb66816277428e2296c98395d36340297cc541bfa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119070190"
 ---
-# <a name="hwconfig_cpu-class"></a>Hwconfig- \_ CPU-Klasse
+# <a name="hwconfig_cpu-class"></a>\_HWConfig-CPU-Klasse
 
-Die **hwconfig- \_ CPU** -Klasse ist die Ereignistyp Klasse für CPU-Konfigurations Ereignisse.
+Die **\_ HWConfig-CPU-Klasse** ist die Ereignistypklasse für CPU-Konfigurationsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,74 +48,74 @@ class HWConfig_CPU : HWConfig
 
 ## <a name="members"></a>Member
 
-Die **hwconfig- \_ CPU** -Klasse verfügt über diese Typen von Membern:
+Die **\_ HWConfig-CPU-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **hwconfig- \_ CPU** -Klasse verfügt über diese Eigenschaften.
+Die **\_ HWConfig-CPU-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-"Zuweisung"-Granularität
+AllocationGranularity
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5)
+Qualifizierer: WmiDataId(5)
 </dt> </dl>
 
-Die Granularität, mit der der virtuelle Arbeitsspeicher zugewiesen wird.
+Granularität, mit der virtueller Arbeitsspeicher zugeordnet wird.
 
 </dd> <dt>
 
 Computername
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(6), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
 Name des Computers
 
 </dd> <dt>
 
-Memsize
+MemSize
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Gesamtmenge des für das Betriebssystem verfügbaren physischen Speichers.
+Gesamtmenge des für das Betriebssystem verfügbaren physischen Arbeitsspeichers.
 
 </dd> <dt>
 
-Suhr
+Mhz
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1)
+Qualifizierer: WmiDataId(1)
 </dt> </dl>
 
 Maximale Geschwindigkeit des Prozessors in Megahertz.
@@ -125,13 +125,13 @@ Maximale Geschwindigkeit des Prozessors in Megahertz.
 NumberOfProcessors
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
 Anzahl der Prozessoren auf dem Computer.
@@ -141,35 +141,35 @@ Anzahl der Prozessoren auf dem Computer.
 PageSize
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4)
+Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-Größe einer Auslagerungs Seite (in Bytes).
+Größe einer Auslagerungsseite in Bytes.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Hwconfig**](hwconfig.md)
+[**HWConfig**](hwconfig.md)
 </dt> </dl>
 
  

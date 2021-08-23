@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_TABLECREATE. sztablename-Eigenschaft'
-title: JET_TABLECREATE. sztablename-Eigenschaft
+description: 'Weitere Informationen finden Sie unter: JET_TABLECREATE.szTableName-Eigenschaft'
+title: JET_TABLECREATE.szTableName-Eigenschaft
 TOCTitle: 'szTableName property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_TABLECREATE.szTableName
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_tablecreate.sztablename(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 34d80a4392beea5b6c81fa29cf70ccc3bc40d25b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a9baac6af448dd600c19d1f3535e5b9164862547073fec220a1d295e51ce665c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119615980"
 ---
-# <a name="jet_tablecreatesztablename-property"></a>JET_TABLECREATE. sztablename-Eigenschaft
+# <a name="jet_tablecreatesztablename-property"></a>JET_TABLECREATE.szTableName-Eigenschaft
 
-Ruft den Namen der zu erstellenden Tabelle ab oder legt ihn fest.
+Ruft den Namen der zu erstellenden Tabelle ab oder legt den Namen fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public string szTableName { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. String](/dotnet/api/system.string)  
+Typ: [System.String](/dotnet/api/system.string)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_TABLECREATE-Klasse](./jet-tablecreate-class.md)
 
-[Mitglieder JET_TABLECREATE](./jet-tablecreate-members.md)
+[JET_TABLECREATE Mitglieder](./jet-tablecreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

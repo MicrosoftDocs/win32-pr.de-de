@@ -1,50 +1,50 @@
 ---
-title: Debugobjectrpcenabled
-description: Der debugobjectrpcenabled ermöglicht das Remote-com-Debuggen über RPC. Wenn dieser Schlüssel nicht auf dem Server definiert ist, ist das Remote Debuggen deaktiviert.
+title: DebugObjectRPCEnabled
+description: DebugObjectRPCEnabled ermöglicht remotes COM-Debuggen über RPC. Wenn dieser Schlüssel auf dem Server nicht definiert ist, ist das Remotedebuggen deaktiviert.
 ms.assetid: 26c9ed13-f7cb-476f-b51e-510448334f92
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b07d8dc6f704b42847ca3041ed46e69d8b0dc05
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2291b83a37f795ce74afcff2a2872ca7aedd52fdf473cb69067f73938b0fb6b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036396"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119501275"
 ---
-# <a name="debugobjectrpcenabled"></a>Debugobjectrpcenabled
+# <a name="debugobjectrpcenabled"></a>DebugObjectRPCEnabled
 
-Der **debugobjectrpcenabled** ermöglicht das Remote-com-Debuggen über RPC. Wenn dieser Schlüssel nicht auf dem Server definiert ist, ist das Remote Debuggen deaktiviert.
+**DebugObjectRPCEnabled ermöglicht** remotes COM-Debuggen über RPC. Wenn dieser Schlüssel auf dem Server nicht definiert ist, ist das Remotedebuggen deaktiviert.
 
 ## <a name="registry-key"></a>Registrierungsschlüssel
 
-**HKEY \_ local \_ Machine \\ Software \\ Microsoft \\ Windows NT \\ CurrentVersion \\ debugobjectrpcenabled**
+**HKEY \_ LOCAL MACHINE SOFTWARE Microsoft Windows NT \_ \\ \\ \\ \\ CurrentVersion \\ DebugObjectRPCEnabled**
 
 
 
 | Registrierungsschlüssel               | Beschreibung                       |
 |----------------------------|-----------------------------------|
-| [**AEDebug**](aedebug.md) | Speichert debuggerspezifische Optionen. |
+| [**AeDebug**](aedebug.md) | Speichert debuggerspezifische Optionen. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Dlldebugobjectrpchook**](dlldebugobjectrpchook.md)
+[**DllDebugObjectRPCHook**](dlldebugobjectrpchook.md)
 </dt> <dt>
 
-[**Iorpcdebug-Benachrichtigung**](iorpcdebugnotify.md)
+[**IOrpcDebugNotify**](iorpcdebugnotify.md)
 </dt> <dt>
 
-[**ORPC \_ dbg \_ alle**](orpc-dbg-all.md)
+[**ORPC \_ DBG \_ ALL**](orpc-dbg-all.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

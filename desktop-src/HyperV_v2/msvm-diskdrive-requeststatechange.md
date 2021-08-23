@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: ca2f9263d29a4412ab505e94268d0d18d28a60b6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b6702fefd72a51f1e593f4b775bc4de5e93aed368468557b1f9f9b8edac7fdab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108112068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119431050"
 ---
 # <a name="requeststatechange-method-of-the-msvm_diskdrive-class"></a>RequestStateChange-Methode der Msvm \_ DiskDrive-Klasse
 
@@ -128,7 +128,7 @@ Der für das Element angeforderte Zustand. Diese Informationen werden in die Req
 *Auftrag* \[ out\]
 </dt> <dd>
 
-Kann einen Verweis auf den ConcreteJob enthalten, der zum Nachverfolgen des Zustandsübergangs erstellt wurde, der durch den Methodenaufruf initiiert wurde.
+Kann einen Verweis auf den ConcreteJob enthalten, der erstellt wurde, um den Zustandsübergang nachzuverfolgen, der durch den Methodenaufruf initiiert wurde.
 
 </dd> <dt>
 
@@ -157,17 +157,17 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

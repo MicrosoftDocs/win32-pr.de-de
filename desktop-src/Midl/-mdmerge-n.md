@@ -1,9 +1,9 @@
 ---
-title: /n-Schalter
-description: Der/n-Schalter gibt die Kompositions Tiefe für das Verfassen von Metadatendateien an.
+title: /n switch
+description: Der Schalter /n gibt die Kompositionstiefe für das Zusammenstellen von Metadatendateien an.
 ms.assetid: 7A1F8A9E-B3CC-4BB2-BF50-5662D4560280
 keywords:
-- /n-Schalter-Mittel l
+- /n switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 78197c0f79c6bbe21ae4eb883620b95e6f0bd4c0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d3e9575995d80a4c61b5e91be7c5cfc1c802abed892af8cfa653f62c66e602b3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366860"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119430970"
 ---
-# <a name="n-switch"></a>/n-Schalter
+# <a name="n-switch"></a>/n switch
 
-Der **/n** -Schalter gibt die Kompositions Tiefe für das Verfassen von Metadatendateien an.
+Der Schalter **/n** gibt die Kompositionstiefe für das Zusammenstellen von Metadatendateien an.
 
 ``` syntax
 mdmerge /n namespace_depth
@@ -31,59 +31,59 @@ mdmerge /n namespace_depth
 
 <dl> <dt>
 
-*Namespace \_ Tiefe* 
+*\_Namespacetiefe* 
 </dt> <dd>
 
-Gibt die Namespace Tiefe zum Verfassen in eine einzelne Metadatendatei an.
+Gibt die Namespacetiefe an, die in einer einzelnen Metadatendatei erstellt werden soll.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden finden Sie die möglichen Werte Formate, die Sie mit dem **/n** -Schalter angeben können.
+Hier sind die möglichen Wertformate, die Sie mit dem Schalter **/n** angeben können.
 
 
 
-| Wertformat                   | BESCHREIBUNG                                                                     |
+| Wertformat                   | Beschreibung                                                                     |
 |--------------------------------|---------------------------------------------------------------------------------|
-| Int32 > 0                   | Verfassen Sie alle Typen in der im Switch angegebenen Namespace Tiefe.               |
+| Int32 > 0                   | Erstellen Sie alle Typen in der im Schalter angegebenen Namespacetiefe.               |
 | -1                             | Erstellen Sie alle Typen in einer IDL-Datei pro Namespace.                              |
-| <namespace>: Int32 > 0 | Verfassen Sie alle Typen mit einem entsprechenden Namespace in der im Switch angegebenen Tiefe. |
-| <namespace>:-1           | Erstellen Sie alle Typen mit einem entsprechenden Namespace in eine Datei pro Namespace.          |
+| <namespace>:Int32 > 0 | Erstellen Sie alle Typen mit übereinstimmenden Namespaces in der im Schalter angegebenen Tiefe. |
+| <namespace>:-1           | Erstellen Sie alle Typen mit übereinstimmenden Namespaces in einer Datei pro Namespace.          |
 
 
 
  
 
-In der folgenden Tabelle werden die Ergebnisse aus verschiedenen Kombinationen des **/n** -Schalters angezeigt, die für diese Namespaces funktionieren.
+Die folgende Tabelle zeigt die Ergebnisse verschiedener Kombinationen des **Schalters /n,** die an diesen Namespaces arbeiten.
 
--   Windows. Foundation. Collections. iiterable
--   Windows. UI. directui. Controls. Button
--   Windows. UI. directui. Controls. ListView
--   Windows. UI. immersive. Application. playto. Target
--   Windows. Web. Syndikation. RSS
+-   Windows. Foundation.Collections.IIterable
+-   Windows. Benutzeroberfläche. DirectUI.Controls.Button
+-   Windows. Benutzeroberfläche. DirectUI.Controls.ListView
+-   Windows. Benutzeroberfläche. Immersive.Application.PlayTo.Target
+-   Windows. Web.Syndication.RSS
 
 
 
-| Switches                         | Ergebnis                                                                                                                                                                                                                                                       | Erklärung                                                                                                                                                                                                                                                                                                                        |
+| Optionen                         | Ergebnis                                                                                                                                                                                                                                                       | Erklärung                                                                                                                                                                                                                                                                                                                        |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **/n:-1**  / **n:1**               | Windows.winmd                                                                                                                                                                                                                                                | Der letzte/n-Schalter überschreibt alle vorherigen – n-Switches.                                                                                                                                                                                                                                                                           |
-| **/n:-1/n: Windows. UI: 2**         | <dl> <dt>Windows. Foundation. winmd</dt> <dt>Windows. UI. winmd</dt> <dt>Windows. Web. Syndikation. winmd</dt> </dl> | <dl> <dt>**Windows. Foundation** besteht immer aus – n:2</dt> <dt>**Windows. UI** -Typen werden gruppiert.</dt> <dt>" **Windows. Web. Syndikation** " wird unter "n:-1." erstellt.</dt> </dl>       |
-| **/n: 1/n: Windows. UI. directui: 3** | <dl> Windows <dt>. Foundation. winmd</dt> Windows <dt>. UI. directui. winmd</dt> <dt>Windows. winmd</dt> </dl>       | <dl> <dt>**Windows. Foundation** besteht immer aus – n:2</dt> <dt>**Windows. UI. directui** ist auf Ebene 3 verfasst.</dt> <dt>Alle anderen Typen werden auf Ebene 1 zusammengesetzt.</dt> </dl> |
+| **/n:-1**  / **n:1**               | Windows.winmd                                                                                                                                                                                                                                                | Der letzte /n-Schalter überschreibt alle vorherigen –n Schalter.                                                                                                                                                                                                                                                                           |
+| **/n:-1/n:Windows. Benutzeroberfläche:2**         | <dl> <dt>Windows. Foundation.winmd</dt> <dt>Windows. UI.winmd</dt> <dt>Windows. Web.Syndication.winmd</dt> </dl> | <dl> <dt>**Windows. Die Basis** wird immer bei –n:2 zusammengesetzt.</dt> <dt>**Windows. Benutzeroberflächentypen** werden gruppiert.</dt> <dt>**Windows. Web.Syndication** besteht aus n:-1.</dt> </dl>       |
+| **/n:1/n:Windows. Benutzeroberfläche. DirectUI:3** | <dl> <dt>Windows. Foundation.winmd</dt> <dt>Windows. Benutzeroberfläche. DirectUI.winmd</dt> <dt>Windows.winmd</dt> </dl>       | <dl> <dt>**Windows. Die Basis** wird immer bei –n:2 zusammengesetzt.</dt> <dt>**Windows. Benutzeroberfläche. DirectUI** besteht aus Ebene 3.</dt> <dt>Alle anderen Typen werden auf Ebene 1 zusammengesetzt.</dt> </dl> |
 
 
 
  
 
-Hier sind die Regeln zum Verarbeiten mehrerer Instanzen des **/n** -Schalters aufgeführt.
+Hier sind die Regeln für die Behandlung mehrerer Instanzen des Schalters **/n.**
 
--   Die spezifischere Instanz hat Vorrang. Wenn Sie z. b. **– n:a.b.c: 4 – n:a.b: 5** angeben, löst mdmerge A. b. c. D auf Ebene 4 auf, da a. b. c spezifischer als A.B. ist. A. b. E. F wird in Tiefe 5 aufgelöst, da es mit A. b übereinstimmt, nicht jedoch mit A.B.C.
--   Die letzte Instanz hat Vorrang. Wenn Sie z. b. **– n:5 – n:2** angeben, werden die Typen auf Ebene 2 zusammengesetzt.
--   Beide Regeln gelten. Wenn Sie – n:a.b.c: 4 – n:a.b.c: 1 angeben, wird der Namespace A. B. c auf Ebene 1 zusammengesetzt.
+-   Die spezifischste Instanz tritt auf. Wenn Sie beispielsweise **–n:A.B.C:4-n:A.B:5** angeben, löst MDMERGE A.B.C.D auf Ebene 4 auf, da A.B.C spezifischer als A.B. B ist. A.B.E.F wird in Tiefe 5 aufgelöst, da es A.B, aber nicht A.B.C entspricht.
+-   Die letzte Instanz ist nicht mehr vorhanden. Wenn Sie beispielsweise **–n:5–n:2** angeben, werden die Typen auf Ebene 2 zusammengesetzt.
+-   Beide Regeln gelten. Wenn Sie –n:A.B.C:4 –n:A.B.C:1 angeben, wird namespace A.B.C auf Ebene 1 zusammengesetzt.
 
 ## <a name="examples"></a>Beispiele
 
-**mdmerge.exe-Metadata \_ dir $ (SDK \_ - \_ Metadatenpfad)-i $ (interner \_ SDK- \_ \_ Metadatenpfad)-o $ (obj- \_ Pfad) \\ $O \\ systemmetadata-v-n:-1-n:Windows.Foundation: 2**
+**mdmerge.exe -metadata \_ dir $(SDK \_ METADATA \_ PATH) -i $(INTERNAL \_ SDK METADATA \_ \_ PATH) -o $(OBJ \_ PATH) $O \\ \\ SystemMetadata -v -n:-1 -n:Windows. Foundation:2**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,11 +96,11 @@ Hier sind die Regeln zum Verarbeiten mehrerer Instanzen des **/n** -Schalters au
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> </dl>
 
  

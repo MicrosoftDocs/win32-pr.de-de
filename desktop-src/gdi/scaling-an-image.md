@@ -1,40 +1,40 @@
 ---
-description: Einige Anwendungen skalieren Bilder Das heißt, Sie zeigen die Zoom-oder reduzierten Sichten eines Bilds an. Beispielsweise kann eine Zeichnungsanwendung eine Zoomfunktion bereitstellen, die es dem Benutzer ermöglicht, eine Zeichnung auf Pixel Basis anzuzeigen und zu bearbeiten.
+description: Einige Anwendungen skalieren Images. Das heißt, sie zeigen vergrößerte oder reduzierte Ansichten eines Bilds an. Beispielsweise kann eine Zeichnungsanwendung eine Zoomfunktion bereitstellen, die es dem Benutzer ermöglicht, eine Zeichnung pixelweise anzuzeigen und zu bearbeiten.
 ms.assetid: ab7d5224-62de-40a8-909f-564f61c45d01
 title: Skalieren eines Bilds
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 40ce5d1584c905bbf46f10e29e512af95ddbc55c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd7445c64bcf7ca4332612de0689e9ebeb55850372a5be2b4fb19c1593bbf339
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042121"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119613740"
 ---
 # <a name="scaling-an-image"></a>Skalieren eines Bilds
 
-Einige Anwendungen skalieren Bilder Das heißt, Sie zeigen die Zoom-oder reduzierten Sichten eines Bilds an. Beispielsweise kann eine Zeichnungsanwendung eine Zoomfunktion bereitstellen, die es dem Benutzer ermöglicht, eine Zeichnung auf Pixel Basis anzuzeigen und zu bearbeiten.
+Einige Anwendungen skalieren Images. Das heißt, sie zeigen vergrößerte oder reduzierte Ansichten eines Bilds an. Beispielsweise kann eine Zeichnungsanwendung eine Zoomfunktion bereitstellen, die es dem Benutzer ermöglicht, eine Zeichnung pixelweise anzuzeigen und zu bearbeiten.
 
-Anwendungen skalieren Images durch Aufrufen der [**StretchBlt**](/windows/desktop/api/Wingdi/nf-wingdi-stretchblt) -Funktion. Wie die [**BitBLT**](/windows/desktop/api/Wingdi/nf-wingdi-bitblt) -Funktion kopiert **StretchBlt** Bitmapdaten aus einer Bitmap in einem Quell Gerätekontext ([**DC**](/windows/desktop/api/Winuser/nf-winuser-getdcex)) in eine Bitmap in einem Ziel-DC. Anders als bei der **BitBLT** -Funktion skaliert **StretchBlt** das Bild jedoch auf der Grundlage der angegebenen Dimensionen der Quell-und Ziel Rechtecke. Wenn das Quell Rechteck größer als das Ziel Rechteck ist, wird das resultierende Bild scheinbar verkleinert. Wenn das Quell Rechteck kleiner als das Ziel Rechteck ist, wird das resultierende Bild scheinbar erweitert.
+Anwendungen skalieren Bilder durch Aufrufen der [**StretchBlt-Funktion.**](/windows/desktop/api/Wingdi/nf-wingdi-stretchblt) Wie die [**BitBlt-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-bitblt) kopiert **StretchBlt** Bitmapdaten aus einer Bitmap in einem Quellgerätekontext [**(DC)**](/windows/desktop/api/Winuser/nf-winuser-getdcex)in eine Bitmap in einem Zieldomänencontroller. Im Gegensatz zur **BitBlt-Funktion** skaliert **StretchBlt** das Bild jedoch basierend auf den angegebenen Dimensionen der Quell- und Zielrechtecke. Wenn das Quellrechteck größer als das Zielrechteck ist, scheint das resultierende Bild verkrumpft zu sein. Wenn das Quellrechteck kleiner als das Zielrechteck ist, scheint das resultierende Bild erweitert zu sein.
 
-Wenn das Ziel Rechteck kleiner als das Quell Rechteck ist, entfernt [**StretchBlt**](/windows/desktop/api/Wingdi/nf-wingdi-stretchblt) Farbdaten aus dem Bild gemäß einem angegebenen stretchmodus, wie in der folgenden Tabelle dargestellt.
+Wenn das Zielrechteck kleiner als das Quellrechteck ist, entfernt [**StretchBlt**](/windows/desktop/api/Wingdi/nf-wingdi-stretchblt) Farbdaten gemäß einem angegebenen Stretchingmodus aus dem Bild, wie in der folgenden Tabelle gezeigt.
 
 
 
-| Streckungs Modus | Methode                                                                                                                    |
+| Stretchmodus | Methode                                                                                                                    |
 |--------------|---------------------------------------------------------------------------------------------------------------------------|
-| Blackonwhite | Führt eine logische and-Operation für die Farbdaten für die eliminieren Pixel und die Farbdaten für die verbleibenden Pixel aus. |
-| Whiteonblack | Führt eine logische OR-Operation für die Farbdaten für die eliminieren Pixel und die Farbdaten für die verbleibenden Pixel aus.  |
-| Coloroncolor | Entfernt die Farbdaten der gelöschten Pixel vollständig.                                                               |
-| Halbton     | Gleicht die ursprünglichen (Quell-) Farbdaten im Ziel ab.                                                         |
+| BLACKONWHITE | Führt einen logischen AND-Vorgang für die Farbdaten für die entfernten Pixel und die Farbdaten für die verbleibenden Pixel aus. |
+| WHITEONBLACK | Führt einen logischen OR-Vorgang für die Farbdaten für die entfernten Pixel und die Farbdaten für die verbleibenden Pixel aus.  |
+| COLORONCOLOR | Entfernt die Farbdaten der gelöschten Pixel vollständig.                                                               |
+| Halbton     | Entspricht den ursprünglichen (Quell-)Farbdaten im Ziel.                                                         |
 
 
 
  
 
-Sie legen den Stretch-Modus fest, indem Sie die [**setstretchbltmode**](/windows/desktop/api/Wingdi/nf-wingdi-setstretchbltmode) -Funktion aufrufen.
+Sie legen den Stretchmodus fest, indem Sie die [**SetStretchBltMode-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-setstretchbltmode) aufrufen.
 
-Der folgende Beispielcode stammt aus einer Anwendung, die alle vier der mit der [**StretchBlt**](/windows/desktop/api/Wingdi/nf-wingdi-stretchblt) -Funktion verfügbaren streckungs Modi veranschaulicht.
+Der folgende Beispielcode stammt aus einer Anwendung, die alle vier stretch-Modi veranschaulicht, die mit der [**StretchBlt-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-stretchblt) verfügbar sind.
 
 
 ```C++

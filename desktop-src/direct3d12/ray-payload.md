@@ -1,18 +1,18 @@
 ---
-title: Ray-Nutz Last Struktur
-description: Eine benutzerdefinierte Struktur, die als ein INOUT-Argument in einem traceray-Befehl bereitgestellt wird, und als INOUT-Parameter in den shadertypen, die möglicherweise auf die Ray-Nutzlast zugreifen.
+title: Raynutzlaststruktur
+description: Eine benutzerdefinierte Struktur, die als inout-Argument in einem TraceRay-Aufruf und als Inout-Parameter in den Shadertypen bereitgestellt wird, die auf die Raynutzlast zugreifen können.
 ms.assetid: ''
 ms.localizationpriority: low
 ms.topic: language-reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9887bbadc2fd94b2e766c568a30fd6669f51e048
-ms.sourcegitcommit: 5b98bf8c68922f8f03c14f793fbe17504900559c
+ms.openlocfilehash: 7b2c1c6944bc66d33ebd134d6e2d0899c1992624cfb4db3b0fc0aaa80a1ef99a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "106363830"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119565630"
 ---
-# <a name="ray-payload-structure"></a>Ray-Nutz Last Struktur 
+# <a name="ray-payload-structure"></a>Raynutzlaststruktur 
 
-Eine benutzerdefinierte Struktur, die als ein INOUT-Argument in einem [**traceray**](traceray-function.md) -Befehl bereitgestellt wird, und als INOUT-Parameter in den shadertypen, die möglicherweise auf die Ray-Nutzlast zugreifen, einschließlich [Treffer](any-hit-shader.md), [nächster Treffer](closest-hit-shader.md)und [fehlshader](miss-shader.md) . Alle Shader, die auf die Ray-Nutzlast zugreifen, müssen dieselbe Struktur wie die des ursprünglichen **traceray** -Aufrufes verwenden.  Auch wenn einer dieser Shader überhaupt nicht auf die Ray-Nutzlast verweist, muss er trotzdem die passende Nutzlast als ursprünglichen **traceray** -Aufrufwert angeben.
+Eine benutzerdefinierte -Struktur, die als Inout-Argument in einem [**TraceRay-Aufruf**](traceray-function.md) und als Inout-Parameter in den Shadertypen bereitgestellt [](miss-shader.md) wird, die auf die Raynutzlast zugreifen können. Dazu gehören alle [Treffer,](any-hit-shader.md)der nächstgelegene Treffer und die Shader für Fehlschlage. [](closest-hit-shader.md) Alle Shader, die auf die Raynutzlast zugreifen, müssen die gleiche Struktur wie beim ursprünglichen **TraceRay-Aufruf** verwenden.  Auch wenn einer dieser Shader überhaupt nicht auf die Raynutzlast verweist, muss er dennoch die übereinstimmende Nutzlast als ursprünglichen **TraceRay-Aufruf** angeben.
 

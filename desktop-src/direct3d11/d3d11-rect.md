@@ -1,6 +1,6 @@
 ---
-title: D3D11_RECT (D3D11. h)
-description: D3D11 \_ Rect wird wie folgt deklariert
+title: D3D11_RECT (D3D11.h)
+description: 'D3D11 \_ RECT wird wie folgt deklariert:'
 ms.assetid: d1cbbbd7-1221-4706-b805-8422c5ebdadc
 keywords:
 - D3D11_RECT Direct3D 11
@@ -15,35 +15,35 @@ api_type:
 - LibDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f7fac5627c74123c977aac379826d5264d767ba6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: ec65cc8c14cd1c659a9ed9634c124ea0d5355c35e4eb56221e28112f5ac1b1ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103870184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119378360"
 ---
-# <a name="d3d11_rect"></a>D3D11 \_ Rect
+# <a name="d3d11_rect"></a>D3D11 \_ RECT
 
-D3D11 \_ Rect wird wie folgt deklariert:
+D3D11 \_ RECT wird wie folgt deklariert:
 
 ``` syntax
 typedef RECT D3D11_RECT;
 ```
 
-Weitere Informationen zu dieser GDI-Rechteck Struktur finden Sie unter [**Rect**](/previous-versions//dd162897(v=vs.85)).
+Weitere Informationen zu dieser GDI-Rechteckstruktur finden Sie unter [**RECT**](/previous-versions//dd162897(v=vs.85)).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird für die Scheren Rechtecke von [**Verknüpfung id3d11devicecontext aus:: rsgezcissorrects**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rsgetscissorrects) und [**Verknüpfung id3d11devicecontext aus:: rssezcissorrects**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rssetscissorrects)verwendet.
+Diese Struktur wird für Scissorrechtecke von [**ID3D11DeviceContext::RSGetScissorRects**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rsgetscissorrects) und [**ID3D11DeviceContext::RSSetScissorRects**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rssetscissorrects)verwendet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3D11. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3D11. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3D11.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3D11.lib</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ Diese Struktur wird für die Scheren Rechtecke von [**Verknüpfung id3d11devicec
 
 <dl> <dt>
 
-[Kern Strukturen](d3d11-graphics-reference-d3d11-core-structures.md)
+[Kernstrukturen](d3d11-graphics-reference-d3d11-core-structures.md)
 </dt> </dl>
 
  

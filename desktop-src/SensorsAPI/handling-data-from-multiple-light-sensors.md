@@ -1,35 +1,35 @@
 ---
-description: Verwenden von Licht Sensor Daten
+description: Verwenden von Lichtsensordaten
 ms.assetid: 98272df5-08c0-4392-a74b-2919bbdcb022
-title: Verwenden von Licht Sensor Daten
+title: Verwenden von Lichtsensordaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ccf1c032b4100174afd6073d8c43db27bce3892
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ae4f7047301c7d31d18014bb09512d1f3944c418a34c153a87c001f95fb63a8f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353858"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119425128"
 ---
-# <a name="using-light-sensor-data"></a>Verwenden von Licht Sensor Daten
+# <a name="using-light-sensor-data"></a>Verwenden von Lichtsensordaten
 
 Es gibt zwei empfohlene Methoden zum Interpretieren und Verwenden von Lux-Daten, die von Umgebungslichtsensoren stammen.
 
--   Wenden Sie eine Transformation auf die Daten an, sodass die normalisierte Lichtebene direkt im Verhältnis zu Programmverhalten oder Interaktionen verwendet werden kann. Ein Beispiel wäre das Ändern der Größe einer Schaltfläche in Ihrem Programm in direktem Verhältnis zu den normalisierten Daten (oder einem Bereich der normalisierten Daten, z.b. für die Einstellung "Outdoor"). Dieser Ansatz bietet die optimale Implementierung.
--   Behandeln Sie Bereiche von Lux-Daten, und ordnen Sie Programmverhalten und Reaktionen auf den oberen und unteren Schwellenwert dieser Bereiche von Lux-Daten zu. Dies ist eine einfache Möglichkeit, auf Beleuchtungsbedingungen zu reagieren, und bietet möglicherweise nicht die optimale Benutzer Leistung. Diese Vorgehensweise funktioniert jedoch problemlos, wenn reibungslose Übergänge nicht möglich sind.
+-   Wenden Sie eine Transformation auf die Daten an, damit der normalisierte Lichtpegel direkt im Verhältnis zum Programmverhalten oder zu Interaktionen verwendet werden kann. Ein Beispiel wäre, die Größe einer Schaltfläche in Ihrem Programm in direktem Verhältnis zu den normalisierten Daten (oder einem Bereich der normalisierten Daten, z. B. im Freien) zu variieren. Dieser Ansatz bietet die optimale Implementierung.
+-   Behandeln Sie Bereiche von Lux-Daten, und ordnen Sie das Verhalten und die Reaktionen des Programms den oberen und unteren Schwellenwerten dieser Lux-Datenbereiche zu. Dies ist eine einfache Möglichkeit, auf Beleuchtungsbedingungen zu reagieren, und führt möglicherweise nicht zu einer optimalen Benutzererfahrung. Dieser Ansatz funktioniert jedoch gut, wenn reibungslose Übergänge nicht möglich sind.
 
-## <a name="handling-data-from-multiple-light-sensors"></a>Verarbeiten von Daten aus mehreren Lichtsensoren
+## <a name="handling-data-from-multiple-light-sensors"></a>Verarbeiten von Daten von mehreren Lichtsensoren
 
-Um die präzisere Näherung der aktuellen Beleuchtungsbedingungen zu erreichen, können Sie Daten aus mehreren Umgebungslichtsensoren verwenden. Da Ambient-Light-Sensoren teilweise oder vollständig durch Schatten oder Objekte verdeckt werden können, die den Sensor abdecken, können mehrere Sensoren, die eine gewisse Entfernung aufweisen, eine viel bessere Näherung der aktuellen Beleuchtungsbedingungen darstellen als ein einzelner Sensor.
+Um die genaueste Näherung der aktuellen Beleuchtungsbedingungen zu erzielen, können Sie Daten von mehreren Umgebungslichtsensoren verwenden. Da Umgebungslichtsensoren teilweise oder vollständig durch Schatten oder Objekte verdeckt werden können, die den Sensor abdecken, können mehrere Sensoren, die etwas voneinander entfernt platziert werden, eine wesentlich bessere Annäherung an die aktuellen Beleuchtungsbedingungen bieten als ein einzelner Sensor.
 
-Um die Daten zu verfolgen, die von mehreren Sensoren stammen, können Sie die folgenden beiden Methoden verwenden:
+Um die Daten von mehreren Sensoren nachzuverfolgen, können Sie die folgenden beiden Verfahren verwenden:
 
--   Der aktuellste Datenwert für jeden Umgebungslichtsensor kann zusammen mit dem Zeitstempel des Sensordaten Berichts für jede dieser Messwerte beibehalten werden. Der letzte für jeden Sensor Lesevorgang empfangene " [**isensordatareport**](/windows/desktop/api/sensorsapi/nn-sensorsapi-isensordatareport) " konnte beibehalten werden und kann beide Werte für einen späteren Verweis enthalten. Durch den Verweis auf den Zeitstempel für die einzelnen Sensordaten Berichte können die Daten basierend auf dem Alter verwaltet werden. Wenn die Daten z. b. mehr als 2 Sekunden alt sind, können Sie ausgelassen werden. Basierend auf den neueren Sensordaten Werten könnte die höchste Lese barkeit verwendet werden, da der entsprechende Sensor vermutlich nicht verdeckt wäre.
--   Sie können den zuletzt gemeldeten Umgebungslichtsensor-Wert verwenden. Diese Implementierung wäre nicht optimal, da die Werte von mehreren Sensoren nicht miteinander verglichen werden, um das genaueste Ergebnis zu erhalten. Diese Methode wird nicht empfohlen.
+-   Der neueste Datenwert für jeden Umgebungslichtsensor kann zusammen mit dem Zeitstempel aus dem Sensordatenbericht für jeden dieser Messwerte beibehalten werden. Der letzte [**ISensorDataReport,**](/windows/desktop/api/sensorsapi/nn-sensorsapi-isensordatareport) der für jeden Sensormesswert empfangen wurde, kann beibehalten werden und beide Werte für die spätere Referenz bereitstellen. Durch Verweisen auf den Zeitstempel für jeden Sensordatenbericht können die Daten basierend auf ihrem Alter verwaltet werden. Wenn die Daten beispielsweise mehr als 2 Sekunden alt sind, können sie ausgelassen werden. Basierend auf den neueren Sensordatenwerten kann der höchste Messwert verwendet werden, da davon ausgegangen wird, dass der entsprechende Sensor nicht verdeckt wird.
+-   Sie können den letzten gemeldeten Umgebungslichtsensorwert verwenden. Diese Implementierung wäre nicht optimal, da die Werte mehrerer Sensoren nicht miteinander verglichen werden, um das genaueste Ergebnis zu erzielen. Diese Methode wird nicht empfohlen.
 
 ## <a name="example-code"></a>Beispielcode
 
-Der folgende Beispielcode zeigt eine Implementierung für das [**ondataupdatiert**](/windows/win32/api/sensorsapi/nf-sensorsapi-isensorevents-ondataupdated) -Ereignis. Der Ereignishandler ruft eine Hilfsfunktion mit dem Namen **UpdateUI** auf, die die Benutzeroberfläche basierend auf dem Lux-Wert ändert. Wenn Sie die Implementierung von UpdateUI schreiben, sind Sie auf dem neuesten Stand.
+Der folgende Beispielcode zeigt eine Implementierung für das [**OnDataUpdated-Ereignis.**](/windows/win32/api/sensorsapi/nf-sensorsapi-isensorevents-ondataupdated) Der Ereignishandler ruft eine Hilfsfunktion namens **UpdateUI** auf, die die Benutzeroberfläche basierend auf dem Lux-Wert ändert. Es liegt an Ihnen, die Implementierung von UpdateUI zu schreiben.
 
 
 ```C++

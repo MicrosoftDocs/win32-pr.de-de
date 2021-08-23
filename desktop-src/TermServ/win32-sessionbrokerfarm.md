@@ -1,11 +1,11 @@
 ---
 title: Win32_SessionBrokerFarm-Klasse
-description: Definiert die Abfrage für eine Sitzungs Broker Farm.
+description: Definiert die Abfrage für eine Sitzungsbrokerfarm.
 ms.assetid: 55a2a7ea-e891-4723-b919-ee3c908eaffb
 ms.tgt_platform: multiple
 keywords:
-- Win32_SessionBrokerFarm-Klasse Remotedesktopdienste
-- Win32_SessionBrokerFarm Klasse Remotedesktopdienste, beschrieben
+- Win32_SessionBrokerFarm-Klassen-Remotedesktopdienste
+- Win32_SessionBrokerFarm -Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e6a3ccbb5e1e08a036fb9973d552db73ee1607c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ab65d00cd4be793556929d3049db549ad8ab9729d1e2e2752e550c3e2cf357d1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119422510"
 ---
-# <a name="win32_sessionbrokerfarm-class"></a>Win32- \_ Klasse "sessionbrokerfarm"
+# <a name="win32_sessionbrokerfarm-class"></a>Win32 \_ SessionBrokerFarm-Klasse
 
-Definiert die Abfrage für eine Sitzungs Broker Farm.
+Definiert die Abfrage für eine Sitzungsbrokerfarm.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -44,51 +44,51 @@ class Win32_SessionBrokerFarm
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ sessionbrokerfarm** " verfügt über diese Typen von Membern:
+Die **Win32 \_ SessionBrokerFarm-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ sessionbrokerfarm** " verfügt über diese Eigenschaften.
+Die **Win32 \_ SessionBrokerFarm-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Farmname**
+**FarmName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der Name der Sitzungs Broker Farm, die abgefragt werden muss.
+Der Name der Sitzungsbrokerfarm, die abgefragt werden muss.
 
 </dd> <dt>
 
 **PluginName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der Name des Plug-ins.
+Der Name des Plug-Ins.
 
 </dd> </dl>
 
 ## <a name="examples"></a>Beispiele
 
-Die folgende Abfrage Zeichenfolge veranschaulicht, wie die Win32-Klasse " **\_ sessionbrokerfarm** " in einer Abfrage verwendet wird.
+Die folgende Abfragezeichenfolge veranschaulicht, wie die **Win32 \_ SessionBrokerFarm-Klasse** in einer Abfrage verwendet wird.
 
 
 ```CSharp
@@ -106,7 +106,7 @@ queryString = string.Format("SELECT * FROM Win32_SessionBrokerFarm WHERE PluginN
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                      |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                               |
-| MOF<br/>                      | <dl> <dt>"Tssdwmi. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TssdWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TssdWmi.dll</dt> </dl> |
 
 

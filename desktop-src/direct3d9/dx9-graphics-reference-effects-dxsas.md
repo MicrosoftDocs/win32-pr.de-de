@@ -1,51 +1,51 @@
 ---
-description: Standard Anmerkungen und-Semantik (dxsas) stellen eine Methode dar, mit der Shader auf eine standardmäßige Weise verwendet werden können, mit der Shader mit Tools, Anwendungen und Spiel Modulen verwendet werden können.
+description: Standardanmerkungen und -semantik (DXSAS) bieten eine Methode zur Verwendung von Shadern in einer Standardmethode, die die Verwendung von Shadern mit Tools, Anwendungen und Spiel-Engines ermöglicht.
 ms.assetid: b3206b30-56b4-4d56-a778-af3a6b3b8d9c
-title: DirectX-Standard Anmerkungen und Semantik Referenz
+title: DirectX-Standardanmerkungen und Semantikreferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c989f4aed7c01c62d6133e01fe035223b74c8d3
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6da1489f92fce16e4717d501a64ab862fb9292c271397aa4a77e00e74c2e7952
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481694"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119373634"
 ---
-# <a name="directx-standard-annotations-and-semantics-reference"></a>DirectX-Standard Anmerkungen und Semantik Referenz
+# <a name="directx-standard-annotations-and-semantics-reference"></a>DirectX-Standardanmerkungen und Semantikreferenz
 
-Standard Anmerkungen und-Semantik (dxsas) stellen eine Methode dar, mit der Shader auf eine standardmäßige Weise verwendet werden können, mit der Shader mit Tools, Anwendungen und Spiel Modulen verwendet werden können. Dxsas definiert einen Satz von Semantik und Anmerkungen, die an Host Anwendungs Werte und Effektparameter zum Zweck der Freigabe von Effekten angefügt werden. Damit diese Anmerkungen und Semantik nützlich sein können, müssen Sie sowohl in der Host Anwendung als auch in der Effekt Datei implementiert werden. In diesem Dokument wird der dxsas-Standard beschrieben, der die Leistungsfähigkeit des DirectX-Effekts-Frameworks nutzt, damit Host Anwendungen und-Tools DirectX-Effekte (FX-Dateien) Programm gesteuert freigeben und die Interaktion mit der Benutzeroberfläche entwerfen können.
+Standardanmerkungen und -semantik (DXSAS) bieten eine Methode zur Verwendung von Shadern in einer Standardmethode, die die Verwendung von Shadern mit Tools, Anwendungen und Spiel-Engines ermöglicht. DXSAS definiert eine Reihe von Semantiken und Anmerkungen, die an Hostanwendungswerte und Effektparameter angefügt werden, um Effekte zu teilen. Damit diese Anmerkungen und Semantik nützlich sind, müssen sie sowohl in der Hostanwendung als auch in der Effektdatei implementiert werden. In diesem Dokument wird der DXSAS-Standard beschrieben, der die Leistung des DirectX Effect Framework nutzt, um Hostanwendungen und Tools das programmgesteuerte Freigeben von DirectX-Effekten (FX-Dateien) zu ermöglichen und die Interaktion mit der Benutzeroberfläche zu entwerfen.
 
 ## <a name="background-information"></a>Hintergrundinformationen
 
-Standard Anmerkungen und-Semantik dienen zum Binden von Effekt-und X-Datei Parametern zum Hosten von Anwendungs Werten. Das D3DX Effect-Framework (oder Effekte) kapselt den Renderingzustand. Durch das Kapseln eines Renderingzustands (einschließlich Scheitelpunkt, Textur und Pixel Verarbeitungs Status) können Sie eine Reihe von Effekten erstellen, die eine Vielzahl von Renderingoptionen abdecken. Dies kann z. b. Optionen wie das Rendern auf verschiedenen Hardwaretypen oder das Rendering mit Einzel-oder Multipass-Blending einschließen. Weitere Informationen zum Effect-Framework finden Sie unter [Wirkungs Referenz](dx9-graphics-reference-effects.md). Dxsas basiert auf diesem Framework und ermöglicht Entwicklern ein konsistenteres Verhalten. Sobald das renderingsetup in einem Effekt gekapselt ist, ermöglicht der dxsas-Standard dem Effekt Entwickler das verfügbar machen der Absicht der Effektparameter mithilfe von Anmerkungen. Diese Anmerkungen können dann von jeder Host Anwendung oder einem Tool gelesen werden (nicht nur die, die für die Verwendung des Effekts entworfen wurde), die mit dem Standard kompatibel ist. Sie erfahren, wie Sie die Auswirkungen in der Art und Weise verwenden, die entworfen wurde.
+Standardanmerkungen und -semantik sind so konzipiert, dass Effect- und X-Dateiparameter an Hostanwendungswerte gebunden werden. Das D3DX Effect Framework (oder Effekte) kapselt den Renderingzustand. Indem Sie den Renderingzustand (einschließlich Scheitelpunkt, Textur und Pixelverarbeitungszustand) in einem Effekt kapseln, können Sie eine Bibliothek mit Effekten erstellen, die eine Vielzahl von Renderingoptionen abdecken. Dies kann Optionen wie das Rendern auf verschiedenen Hardwaretypen oder das Rendern mit Single- oder Multi-Pass-Blending umfassen. Weitere Informationen zum Effektframework finden Sie unter [Effect Reference (Auswirkungsreferenz).](dx9-graphics-reference-effects.md) DXSAS baut auf diesem Framework auf und ermöglicht entwicklern eine konsistentere Benutzererfahrung. Sobald das Renderingsetup in einem Effekt gekapselt ist, ermöglicht der DXSAS-Standard dem Effektentwickler, die Absicht der Effektparameter über Anmerkungen verfügbar zu machen. Diese Anmerkungen können dann von jeder Hostanwendung oder jedem Tool gelesen werden (nicht nur von der Anwendung, die für die Verwendung des Effekts konzipiert wurde), die mit dem Standard kompatibel ist, um zu verstehen, wie der Effekt so verwendet wird, wie er entworfen wurde.
 
-Durch die Standardisierung des Satzes von Effekt Semantik und Anmerkungen, die von Host Anwendungen unterstützt werden, können Autoren Ergebnisse erzeugen, die in mehreren Projekten verwendet werden können. auf diese Weise wird eine breitere Community von Effekten für Benutzer herauf gestuft. Der dxsas-Standard macht von Entwicklern lesbare Dateien, die zwischen Tools austauschbar sind, und ermöglicht Entwicklern das Nutzen von Drittanbieter Tools zum Erstellen von Effekten für ihre Pipeline.
+Durch die Standardisierung des Satzes von Effektsemantik und Anmerkungen, die Von Hostanwendungen unterstützt werden, können Effektautoren Effekte erstellen, die in mehreren Projekten verwendet werden können, und so eine größere Community von Effektbenutzern fördern. Der DXSAS-Standard macht Dateien für Entwickler lesbar, austauschbar zwischen Tools und ermöglicht Es Entwicklern, Drittanbietertools für die Erstellung von Effekten für ihre Pipeline zu nutzen.
 
-In diesem Dokument wird der dxsas-Standard beschrieben, der mithilfe von Anmerkungen die Absicht von Effekt Parametern ausdrückt und eine Auflistung von Host Anwendungs Werten definiert, denen Host Anwendungen zustimmen, dass Sie für einen Effekt verfügbar gemacht werden.
+In diesem Dokument wird der DXSAS-Standard beschrieben, der Anmerkungen verwendet, um die Absicht von Effektparametern auszudrücken. Außerdem wird eine Sammlung von Hostanwendungswerten definiert, die Hostanwendungen akzeptieren, um sie für einen Effekt verfügbar zu machen.
 
-## <a name="authoring-effects-with-standard-annotations-and-semantics"></a>Erstellen von Effekten mit Standard Anmerkungen und Semantik
+## <a name="authoring-effects-with-standard-annotations-and-semantics"></a>Erstellungseffekte mit Standardanmerkungen und Semantik
 
-Wie Sie aus dem folgenden Diagramm sehen können, erfordert der dxsas-Standard Anmerkungen in einer Effekt Datei sowie eine Host Anwendung, die die hier beschriebenen Richtlinien befolgt, um mit der Datei zu arbeiten.
+Wie Sie im folgenden Diagramm sehen können, erfordert der DXSAS-Standard Anmerkungen in einer Effektdatei sowie eine Hostanwendung, die den hier beschriebenen Richtlinien entspricht, um mit der Datei zu arbeiten.
 
-![Diagramm des dxsas-Standards für Host Anwendungen und Effekt Dateien](images/sas-2.png)
+![Diagramm des dxsas-Standards für Hostanwendungen und Effektdateien](images/sas-2.png)
 
-Die Host Anwendung muss die Benutzeroberflächen Logik und die Host Umgebung implementieren. Informationen zum Implementieren von dxsas-kompatiblen Effekten finden Sie in den folgenden Themen:
+Die Hostanwendung muss die Benutzeroberflächenlogik und die Hostumgebung implementieren. Lesen Sie die folgenden Themen, um DXSAS-kompatible Effekte zu implementieren:
 
--   Der [globale Parameter](global-parameter.md) definiert Informationen, die für den Effekt relevant sind, z. b. die Version oder den Effekt Autor.
--   Die [Datenbindung](data-binding.md) definiert die Auflistung von Parametern (sowie deren Typ und Struktur), die von einem Effekt verwendet werden können, der von der Host Anwendung festgelegt werden kann, die für Effekte verfügbar gemacht wird.
--   Wenn Sie ein Benutzeroberflächen Steuerelement einem Effektparameter zuordnen möchten, verwenden Sie eine [UI](ui-annotation.md)-Anmerkung. Folgende Anmerkungen sind enthalten: [sasuimax](ui-annotation.md), [sasuimin](ui-annotation.md), [sasuisteps](ui-annotation.md), [sasuistepspower](ui-annotation.md)und [sasuistride](ui-annotation.md).
--   Um einen Effektparameter mit Daten in einer externen Datei zu initialisieren, verwenden Sie eine [Parameter Initialisierungs Anmerkung](parameter-initialization-annotation.md).
--   Wenn Daten zwischen der Host Anwendung und einem Effekt (oder umgekehrt) übertragen werden, treten [Umwandlungen und Konvertierungen](casting-and-conversion.md) auf, wenn die Typen nicht genau übereinstimmen. In diesem Abschnitt wird angegeben, wie Daten geschrieben werden, wenn sich die Quell-und Zieltypen unterscheiden. Verwenden Sie außerdem [parametervaluemodifier](casting-and-conversion.md) , um zu ändern, wie die Host Anwendung aus dem Effekt-Parameter gelesene Daten interpretieren soll. Folgende Anmerkungen sind enthalten: [sasnormalize](casting-and-conversion.md) und [sasunits](casting-and-conversion.md).
+-   Der [globale Parameter](global-parameter.md) definiert Informationen, die für den Effekt relevant sind, z. B. die Version oder den Effektautor.
+-   [Die Datenbindung](data-binding.md) definiert die Auflistung von Parametern (sowie deren Typ und Struktur), die von einem Effekt verwendet werden können, der von der Hostanwendung festgelegt werden kann, die Auswirkungen ausgesetzt ist.
+-   Um ein Benutzeroberflächensteuerelement einem Effect-Parameter zu zuordnen, verwenden Sie eine [Benutzeroberflächenanmerkung.](ui-annotation.md) Diese Anmerkungen umfassen: [SasUiMax](ui-annotation.md), [SasUiMin](ui-annotation.md), [SasUiSteps](ui-annotation.md), [SasUiStepsPower](ui-annotation.md)und [SasUiStride](ui-annotation.md).
+-   Verwenden Sie eine Parameterinitialisierungsanmerkung, um einen Effect-Parameter mit Daten zu [initialisieren,](parameter-initialization-annotation.md)die in einer externen Datei enthalten sind.
+-   Wenn Daten zwischen der Hostanwendung und einem Effekt (oder umgekehrt) übertragen [werden,](casting-and-conversion.md) treten Umwandlung und Konvertierung auf, wenn die Typen nicht genau übereinstimmen. In diesem Abschnitt wird angegeben, wie Daten geschrieben werden, wenn sich quell- und zieltypen unterscheiden. Verwenden Sie außerdem [ParameterValueModifiers,](casting-and-conversion.md) um zu ändern, wie die Hostanwendung aus dem Effect-Parameter gelesene Daten interpretieren soll. Zu diesen Anmerkungen gehören: [SasNormalize](casting-and-conversion.md) und [SasUnits.](casting-and-conversion.md)
 
 ## <a name="case-sensitivity"></a>Groß- und Kleinschreibung
 
-Bei allen Bezeichner, Semantik und Anmerkung-Werten wird die Groß-/Kleinschreibung nicht beachtet. Bei Anmerkungen-Namen (keine Werte) wird die Groß-/Kleinschreibung beachtet Anmerkung-Namen werden vom D3DX Effects-System erkannt, und daher sind Namen von SAS-Anmerkungen ebenfalls zulässig.
+Bei allen Bezeichnern, Semantik- und Anmerkungswerten wird die Groß-/Kleinschreibung nicht beachtet. Bei Anmerkungsnamen (nicht bei Werten) wird die Kleinschreibung beachtet. Anmerkungsnamen werden vom D3DX-Effektsystem erkannt, daher auch SAS-Anmerkungsnamen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Effekt Referenz](dx9-graphics-reference-effects.md)
+[Referenz zu Effekten](dx9-graphics-reference-effects.md)
 </dt> </dl>
 
  

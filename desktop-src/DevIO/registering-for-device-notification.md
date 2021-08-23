@@ -1,26 +1,26 @@
 ---
 title: Registrierung für Gerätebenachrichtigungen
-description: Anwendungen können die registerdevicenotifi-Funktion verwenden, um sich für den Empfang von Benachrichtigungs Meldungen vom System zu registrieren.
+description: Anwendungen können die RegisterDeviceNotification-Funktion verwenden, um sich für den Empfang von Benachrichtigungsmeldungen vom System zu registrieren.
 ms.date: 08/28/2020
 ms.assetid: f3a4477a-7b09-4943-8b06-f252f8f9fed8
 ms.topic: article
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: 16f529003d97c77d9ffc74207500390222c0baf8
-ms.sourcegitcommit: f374b50b37160b683da16b59ac9340282a8f50a5
+ms.openlocfilehash: 1c4c9fb6f4ead427dfa307c680a69a28b490ee963ffd96b9a320c48e51abbf9e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "104123313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119390960"
 ---
 # <a name="registering-for-device-notification"></a>Registrierung für Gerätebenachrichtigungen
 
-Das Betriebssystem kann Benachrichtigungs Meldungen senden, die die Ereignisse darstellen, die von einem Gerät ausgelöst werden. Das System sendet diese Benachrichtigungen entweder an ein Fenster oder an einen Windows-Dienst. Und Sie können sich registrieren, um diese Benachrichtigungen durch Aufrufen der [**registerdevicenotifi-**](/windows/win32/api/winuser/nf-winuser-registerdevicenotificationw) Funktion zu erhalten.
+Das Betriebssystem kann Benachrichtigungsmeldungen senden, die die von einem Gerät ausgelösten Ereignisse darstellen. Das System sendet diese Benachrichtigungen entweder an ein Fenster oder an einen Windows Dienst. Sie können sich registrieren, um diese Benachrichtigungen zu erhalten, indem Sie die [**RegisterDeviceNotification-Funktion**](/windows/win32/api/winuser/nf-winuser-registerdevicenotificationw) aufrufen.
 
-Dieses Thema enthält ein Codebeispiel, das zeigt, wie Sie sich für Geräte Benachrichtigungen registrieren. Sie können das Gerät identifizieren, um Benachrichtigungen zu erhalten, indem Sie eine Geräteklasse angeben, wenn Sie **registerdevicenotifiaufrufen**. Und Sie identifizieren diese Geräteklasse anhand ihrer GUID.
+Dieses Thema enthält ein Codebeispiel, das zeigt, wie Sie sich für Gerätebenachrichtigungen registrieren. Sie können das Gerät identifizieren, über das Benachrichtigungen empfangen werden sollen, indem Sie eine Geräteklasse angeben, wenn Sie **RegisterDeviceNotification aufrufen.** Und Sie identifizieren diese Geräteklasse durch ihre GUID.
 
-## <a name="source-code-listing"></a>Quell Code Auflistung
+## <a name="source-code-listing"></a>Quellcodeauflistung
 
-Wenn Sie dieses Quell Codebeispiel als app erstellen und ausführen möchten, erstellen Sie zunächst ein neues Projekt in Microsoft Visual Studio. Erstellen Sie ein neues Projekt auf der Grundlage der Projektvorlage für **Windows-Desktop Anwendungen** . Benennen Sie das Projekt *registerdevicenotifi.*
+Wenn Sie dieses Quellcodebeispiel als App erstellen und ausführen möchten, erstellen Sie zunächst ein neues Projekt in Microsoft Visual Studio. Erstellen Sie basierend auf der Projektvorlage Windows **Desktopanwendung ein** neues Projekt. Nennen Sie das *Projekt RegisterDeviceNotification*.
 
 Öffnen Sie `RegisterDeviceNotification.cpp`, löschen Sie den gesamten Inhalt, und fügen Sie das unten aufgeführte Listing ein.
 
@@ -505,12 +505,12 @@ Jetzt kannst du das Projekt kompilieren und ausführen.
 
 ## <a name="about-the-code-example"></a>Informationen zum Codebeispiel
 
-Das Codebeispiel verwendet ein Fenster Handle für Benachrichtigungen über Geräteänderungen und enthält eine große Menge an Code, nur um die Fenster Infrastruktur zu verwalten. Eine Anwendung, die als Windows-Dienst installiert werden soll, würde unterschiedlichen Infrastruktur Code enthalten.
+Im Codebeispiel wird ein Fensterhand handle für Geräteänderungsbenachrichtigungen verwendet, und es enthält eine große Menge an Code, nur um die Fensterinfrastruktur zu verwalten. Eine Anwendung, die als Dienst installiert werden Windows würde einen anderen Infrastrukturcode enthalten.
 
-Die Anwendung empfängt die [**WM_DEVICECHANGE**](./wm-devicechange.md) Nachricht, wenn eine USB-Geräteschnittstellen-Ereignis Benachrichtigung gesendet wird.
+Die Anwendung erhält die [**WM_DEVICECHANGE,**](./wm-devicechange.md) wenn eine Ereignisbenachrichtigung über die USB-Geräteschnittstelle gesendet wird.
 
-Das System überträgt eine Reihe von standardmäßigen Geräte Änderungs Ereignissen an alle Anwendungen und Dienste. Sie müssen sich nicht registrieren, um diese Standard Ereignisse zu empfangen. Weitere Informationen finden Sie im Abschnitt " **Hinweise** " unter [**registerdevicenotifi.**](/windows/win32/api/winuser/nf-winuser-registerdevicenotificationw)
+Das System überträgt eine Reihe von Standardereignissen für Geräteänderung an alle Anwendungen und Dienste. Sie müssen sich nicht registrieren, um diese Standardereignisse zu empfangen. Weitere Informationen finden Sie im **Abschnitt "Hinweise"** unter [**RegisterDeviceNotification**](/windows/win32/api/winuser/nf-winuser-registerdevicenotificationw).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-* [Geräte Benachrichtigungen](./device-notifications.md)
+* [Gerätebenachrichtigungen](./device-notifications.md)

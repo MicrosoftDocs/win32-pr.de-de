@@ -1,12 +1,12 @@
 ---
-title: Provisioningprepjob-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
-description: Erstellt einen Bereitstellungs Auftrag für virtuelle Desktops.
+title: ProvisioningPrepJob-Methode der Win32_RDMSVirtualDesktopCollection Klasse
+description: Erstellt einen Bereitstellungsauftrag für virtuelle Desktops.
 ms.assetid: 240D4BE6-95BD-4858-8F8F-A00C92042AEF
 ms.tgt_platform: multiple
 keywords:
-- Provisioningprepjob-Methode Remotedesktopdienste
-- Provisioningprepjob-Methode Remotedesktopdienste, Win32_RDMSVirtualDesktopCollection-Schnittstelle
-- Win32_RDMSVirtualDesktopCollection Interface Remotedesktopdienste, provisioningprepjob-Methode
+- ProvisioningPrepJob-Remotedesktopdienste
+- ProvisioningPrepJob-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktopCollection Schnittstelle
+- Win32_RDMSVirtualDesktopCollection schnittstelle Remotedesktopdienste , ProvisioningPrepJob-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d9727dec0e31dd199f324ed01a4510041ba3558f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b2dab9dcbd606dd32857f0d2dc4b2de3d8516e2b2da10e804fa36254679c1d2b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119422840"
 ---
-# <a name="provisioningprepjob-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>Provisioningprepjob-Methode der Win32 \_ rdmsvirtualdesktopcollection-Klasse
+# <a name="provisioningprepjob-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>ProvisioningPrepJob-Methode der Win32 \_ RDMSVirtualDesktopCollection-Klasse
 
-Erstellt einen Bereitstellungs Auftrag für virtuelle Desktops.
+Erstellt einen Bereitstellungsauftrag für virtuelle Desktops.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,66 +51,66 @@ uint32 ProvisioningPrepJob(
 
 <dl> <dt>
 
-*Collectionalias* \[ in\]
+*CollectionAlias* \[ In\]
 </dt> <dd>
 
 Der Alias der Auflistung, die den virtuellen Desktop hostet.
 
 </dd> <dt>
 
-*Vmhostname* \[ in\]
+*VMHostName* \[ In\]
 </dt> <dd>
 
 Der Hostname des virtuellen Computers.
 
 </dd> <dt>
 
-*VMName* \[ in\]
+*VMName* \[ In\]
 </dt> <dd>
 
 Der Name des virtuellen Computers.
 
 </dd> <dt>
 
-*Exporttolokation* \[ in\]
+*ExportToLocation* \[ In\]
 </dt> <dd>
 
-Der vollständige Pfad des Speicher Orts, an den der Bereitstellungs Auftrag exportiert werden soll.
+Der vollständige Pfad des Speicherorts zum Exportieren des Bereitstellungsauftrags.
 
 </dd> <dt>
 
-*bsystreup* \[ in\]
+*bSysPrep* \[ In\]
 </dt> <dd>
 
-Gibt an, ob der Bereitstellungs Auftrag eine System Vorbereitungs Bereitstellung darstellt.
+Gibt an, ob der Bereitstellungsauftrag eine Sysprep-Bereitstellung darstellt.
 
 </dd> <dt>
 
-*MachineName* \[ in\]
+*MachineName* \[ In\]
 </dt> <dd>
 
-Der Computername des Computers, der die virtuelle Maschine hostet.
+Der Computername des Computers, der den virtuellen Computer hostet.
 
 </dd> <dt>
 
-*Benutzername* \[ in\]
+*UserName* \[ In\]
 </dt> <dd>
 
-Der Benutzername des Administrators der virtuellen Maschine.
+Der Benutzername des Administrators des virtuellen Computers.
 
 </dd> <dt>
 
-*Kennwort* \[ in\]
+*Kennwort* \[ In\]
 </dt> <dd>
 
 Das Kennwort des Administrators des virtuellen Computers.
 
 </dd> <dt>
 
-*Jobguid* \[ vorgenommen\]
+*JobGuid* \[ out\]
 </dt> <dd>
 
-Die **GUID** , die den Bereitstellungs Auftrag eindeutig identifiziert.
+Die **GUID,** die den Bereitstellungsauftrag eindeutig identifiziert.
 
 </dd> </dl>
 
@@ -126,17 +126,17 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMV2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Win32 \_ rdmsvirtualdesktopcollection**](win32-rdmsvirtualdesktopcollection.md)
+[**Win32 \_ RDMSVirtualDesktopCollection**](win32-rdmsvirtualdesktopcollection.md)
 </dt> </dl>
 
  

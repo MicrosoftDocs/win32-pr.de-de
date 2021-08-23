@@ -1,5 +1,5 @@
 ---
-description: Eine Zuordnung, die einen virtuellen Switch-Dienst mit einem transparenten Überbrückungs Dienst verbindet.
+description: Eine Zuordnung, die einen virtuellen Switchdienst mit einem transparenten Bridgingdienst verbindet.
 ms.assetid: 4DFD73CA-38F0-4C06-BEBE-C684590E50E8
 title: Msvm_HostedSwitchService-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: f0b7319dbe58649ac7abce2d36201f3984c1b807
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 634cff066c602cc4eb684bd7e1a016f9f9c925f19db25a0556fd37cc1e27c5f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346694"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119531270"
 ---
-# <a name="msvm_hostedswitchservice-class"></a>MSVM- \_ Klasse "hustedswitchservice"
+# <a name="msvm_hostedswitchservice-class"></a>Msvm \_ HostedSwitchService-Klasse
 
-Eine Zuordnung, die einen virtuellen Switch-Dienst mit einem transparenten Überbrückungs Dienst verbindet.
+Eine Zuordnung, die einen virtuellen Switchdienst mit einem transparenten Bridgingdienst verbindet.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,51 +41,51 @@ class Msvm_HostedSwitchService : CIM_HostedService
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ hustedswitchservice** " enthält diese Typen von Membern:
+Die **Msvm \_ HostedSwitchService-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM-Klasse " \_ hustedswitchservice** " verfügt über diese Eigenschaften.
+Die **Msvm \_ HostedSwitchService-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ virtualethernwitch**](msvm-virtualethernetswitch.md)**
+Datentyp: **[ **Msvm \_ VirtualEthernetSwitch**](msvm-virtualethernetswitch.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM \_ virtualethernwitch**](msvm-virtualethernetswitch.md) -Klasse, die den virtuellen Switch darstellt.
+Ein Verweis auf eine Instanz der [**Msvm \_ VirtualEthernetSwitch-Klasse,**](msvm-virtualethernetswitch.md) die den virtuellen Switch darstellt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-service)**
+Datentyp: **[ **\_ CIM-Dienst**](/windows/desktop/CIMWin32Prov/cim-service)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM-Klasse " \_ transparentbridgingservice**](msvm-transparentbridgingservice.md) ", die den Überbrückungs Dienst darstellt.
+Ein Verweis auf eine Instanz der [**Msvm \_ TransparentBridgingService-Klasse,**](msvm-transparentbridgingservice.md) die den Bridgingdienst darstellt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM-Klasse " \_ hustedswitchservice** " kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ HostedSwitchService-Klasse** kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,10 +93,10 @@ Der Zugriff auf die **MSVM-Klasse " \_ hustedswitchservice** " kann durch die UA
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -105,10 +105,10 @@ Der Zugriff auf die **MSVM-Klasse " \_ hustedswitchservice** " kann durch die UA
 
 <dl> <dt>
 
-[**CIM- \_ Dienst**](cim-hostedservice.md)
+[**CIM \_ HostedService**](cim-hostedservice.md)
 </dt> <dt>
 
-[**CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-hostedservice)
+[**CIM \_ HostedService**](/windows/desktop/CIMWin32Prov/cim-hostedservice)
 </dt> </dl>
 
  

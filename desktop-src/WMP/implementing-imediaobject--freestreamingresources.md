@@ -1,26 +1,26 @@
 ---
-title: Implementieren von imediaobject-freestreamingresources
-description: Implementieren von imediaobject-freestreamingresources
+title: Implementieren von IMediaObject FreeStreamingResources
+description: Implementieren von IMediaObject FreeStreamingResources
 ms.assetid: 970dd10b-a7a0-4ba0-97e3-725d5c914500
 keywords:
-- Windows Media Player-Plug-ins, Echo Sample Streaming Resources
-- Plug-ins, Echo Sample Streaming-Ressourcen
-- Plug-Ins für die digitale Signalverarbeitung, Echo Sample Streaming-Ressourcen
-- DSP-Plug-ins, Echo Sample Streaming-Ressourcen
-- Echo DSP-Plug-in-Beispiel, Streamingressourcen
-- Echo DSP-Plug-in-Beispiel, Freigeben von Arbeitsspeicher
+- Windows Media Player-Plug-Ins, Echo-Beispielstreamingressourcen
+- Plug-Ins, Echo-Beispielstreamingressourcen
+- Digitale Signalverarbeitungs-Plug-Ins, Echo-Beispielstreamingressourcen
+- DSP-Plug-Ins, Echo-Beispielstreamingressourcen
+- Echo-DSP-Plug-In-Beispiel, Streamingressourcen
+- Echo-DSP-Plug-In-Beispiel, Freigeben von Arbeitsspeicher
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a31a293cfc68caf43496d031426de2441c9c1d05
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 30da5f92ec8420ccc90f74256003aae02664a57a8ffad3470901f672cf37aa73
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855803"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119617320"
 ---
-# <a name="implementing-imediaobjectfreestreamingresources"></a>Implementieren von imediaobject:: freestreamingresources
+# <a name="implementing-imediaobjectfreestreamingresources"></a>Implementieren von IMediaObject::FreeStreamingResources
 
-Es ist wichtig, dass Ihr Code jeden zugeordneten Arbeitsspeicher freigibt, bevor das Plug-in-Objekt zerstört wird. Windows Media Player ruft **freestreamingresources** auf, um dies zu ermöglichen. Aus Sicherheitsgründen enthält das Beispiel **, das vom** Plug-in-Assistenten erstellt wurde, einen aufzurufenden **freestreamingresources** -Befehl, um sicherzustellen, dass der Arbeitsspeicher freigegeben wird. Sie müssen den folgenden Code für das Echo-Beispiel zu " **freestreamingresources** " hinzufügen:
+Es ist wichtig, dass Ihr Code jeglichen zugeordneten Arbeitsspeicher freigibt, bevor das Plug-In-Objekt zerstört wird. Windows Media Player ruft **FreeStreamingResources** auf, um dies zu ermöglichen. Aus Sicherheitsgründen enthält das vom Plug-In-Assistenten erstellte Beispiel einen Aufruf von **FreeStreamingResources** in der **FinalRelease-Methode,** um sicherzustellen, dass der Arbeitsspeicher freigegeben wird. Sie müssen **freeStreamingResources** den folgenden Code für das Echo-Beispiel hinzufügen:
 
 
 ```
@@ -43,9 +43,9 @@ if (m_pbDelayBuffer)
 [**Arbeiten mit Streamingressourcen**](working-with-streaming-resources.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

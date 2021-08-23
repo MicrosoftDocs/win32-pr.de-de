@@ -1,43 +1,43 @@
 ---
-title: Win32-Fehler Codes für ADSI
-description: Standard-Win32-Fehlercodes werden auch zum Zurückgeben von ADSI-Fehlermeldungen verwendet.
+title: Win32-Fehlercodes für ADSI
+description: Standardmäßige Win32-Fehlercodes werden auch verwendet, um ADSI-Fehlermeldungen zurück zu geben.
 ms.assetid: 5b7b85c9-ccca-4ea3-8b37-54f6b30a509f
 ms.tgt_platform: multiple
 keywords:
-- Win32-Fehler Codes für ADSI
+- Win32-Fehlercodes für ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a47151a3a1619a7f224dc0b9b7f0871813a346a3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3b18539e93504991f244bbba8b41b13e524ff236918145deda73788169cef368
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589740"
 ---
-# <a name="win32-error-codes-for-adsi"></a>Win32-Fehler Codes für ADSI
+# <a name="win32-error-codes-for-adsi"></a>Win32-Fehlercodes für ADSI
 
-Standard-Win32-Fehlercodes werden auch zum Zurückgeben von ADSI-Fehlermeldungen verwendet. Insbesondere ordnet der ADSI LDAP-Anbieter alle LDAP-Fehlercodes den Win32-Fehlercodes zu. Die **HRESULT** -Werte dieser Fehlercodes haben das Format 0x8007xxxx, wobei die letzten vier hexadezimalen Ziffern xxxx den **DWORD** -Werten des entsprechenden Win32-Fehlercodes entsprechen. Der ADSI-Fehlerwert 0x80072020 gibt z. b. den Win32-Fehlerwert 0x2020 in Hexadezimal oder 8224 als Dezimalwert an.
+Standardmäßige Win32-Fehlercodes werden auch verwendet, um ADSI-Fehlermeldungen zurück zu geben. Insbesondere ordnet der ADSI-LDAP-Anbieter alle LDAP-Fehlercodes Win32-Fehlercodes zu. Die **HRESULT-Werte** dieser Fehlercodes haben das Format 0x8007XXXX, wobei die letzten vier Hexadezimalziffern XXXX den **DWORD-Werten** des entsprechenden Win32-Fehlercodes entsprechen. Der ADSI-Fehlerwert 0x80072020 beispielsweise den Win32-Fehlerwert 0x2020 hexadezimal oder 8224 als Dezimalzahl.
 
-Um den **HRESULT** -Wert eines von der Anwendung zurückgegebenen ADSI-Fehlercodes in den entsprechenden Win32- **DWORD** -Wert zu konvertieren, wie in den Header Dateien oben definiert, verwenden Sie das folgende Verfahren.
+Um den **HRESULT-Wert** eines ADSI-Fehlercodes, der von Ihrer Anwendung zurückgegeben wird, in den entsprechenden Win32-Fehler-DWORD-Wert zu konvertieren, wie in den obigen Headerdateien definiert, verwenden Sie das folgende Verfahren. 
 
-Die meisten Win32-Fehlercodes für ADSI sind in WinError. h oder lmerr. h definiert. Die Fehler Werte werden in diesen Dateien als Dezimalwerte aufgelistet.
+Die meisten Win32-Fehlercodes für ADSI sind in Winerror.h oder Lmerr.h definiert. Die Fehlerwerte werden in diesen Dateien als Dezimalwerte aufgeführt.
 
-**So konvertieren Sie den **HRESULT** -Wert eines ADSI-Fehlercodes in den entsprechenden Win32-Fehler **DWORD** -Wert**
+**So konvertieren Sie den **HRESULT-Wert** eines ADSI-Fehlercodes in den entsprechenden Win32-Fehler-DWORD-Wert**
 
-1.  Konvertieren Sie den **HRESULT** -Wert in eine hexadezimale Zahl, wenn Sie mit einem Dezimalwert beginnen, wie Sie möglicherweise von einer Visual Basic Anwendung erhalten.
-2.  Drop The 0x8007 Part erzeugt den Rest.
+1.  Konvertieren Sie **den HRESULT-Wert** in eine Hexadezimalzahl, wenn Sie mit einem Dezimalwert beginnen, wie Sie es von einer Visual Basic erhalten.
+2.  Wenn Sie den 0x8007, wird der Rest erzeugt.
 3.  Konvertiert den Rest in eine Dezimalzahl.
-4.  Suchen Sie in WinError. h nach dem Dezimaltrennzeichen.
-5.  Wenn Sie in WinError. h nicht gefunden werden, subtrahieren Sie 2100 vom Dezimaltrennzeichen, und suchen Sie das Ergebnis in lmerr. h.
+4.  Suchen Sie in Winerror.h nach dem Dezimaltrennzeichen.
+5.  Wenn sie in "Winerror.h" nicht gefunden wird, subtrahieren Sie 2100 vom Dezimaltrennzeichen, und suchen Sie das Ergebnis in Lmerr.h.
 
-ADSI 2,0 ordnet die LDAP-Fehlercodes einer Reihe von Win32-Fehlercodes zu, die sich von der in ADSI für Windows 2000 und dem DS-Client verwendeten Win32-Fehlercodes unterscheiden. Die Unterschiede sind in aufgeführt:
+ADSI 2.0 ordnet die LDAP-Fehlercodes einer Reihe von Win32-Fehlercodes zu, die sich von denen unterscheiden, die in ADSI für Windows 2000 und den DS-Client verwendet werden. Die Unterschiede sind in folgenden Aufgeführt:
 
--   [Win32-Fehler Codes](win32-error-codes.md)
--   [Win32-Fehler Codes für ADSI 2,0](win32-error-codes-for-adsi-2-0.md)
+-   [Win32-Fehlercodes](win32-error-codes.md)
+-   [Win32-Fehlercodes für ADSI 2.0](win32-error-codes-for-adsi-2-0.md)
 
- 
+ 
 
- 
+ 
 
 
 

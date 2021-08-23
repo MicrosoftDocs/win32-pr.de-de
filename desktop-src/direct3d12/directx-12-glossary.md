@@ -1,311 +1,311 @@
 ---
-title: Direct3D 12 Glossar
-description: Diese Begriffe sind von Direct3D 12 unterschiedlichen.
+title: Direct3D 12-Glossar
+description: Diese Begriffe gelten für Direct3D 12.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 46B0F055-7E4F-4F8D-9915-3D195FD695B7
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a84b4b2e5a993b33b4c322b91682c8f9b5499bc
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c4a7ad8d9c925d4bd3b82a3c7dd177a58afd7f50fb82836bed56fac6a20c8f6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104548735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119496880"
 ---
-# <a name="direct3d-12-glossary"></a>Direct3D 12 Glossar
+# <a name="direct3d-12-glossary"></a>Direct3D 12-Glossar
 
-Diese Begriffe sind von Direct3D 12 unterschiedlichen.
+Diese Begriffe gelten für Direct3D 12.
 
 <dl> <dt>
 
-<span id="direct3d12.directx_12_glossary_binding"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_BINDING"></span>**lichere**
+<span id="direct3d12.directx_12_glossary_binding"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_BINDING"></span>**Bindung**
 </dt> <dd>
 
-Der Prozess des Anfügens von Speicher an die Grafik Pipeline. Die Ressourcen Bindung umfasst z. b. die Bindung einer Ressource, z. b. eine Textur an die Pipeline, die zum Rendern eines Objekts verwendet werden soll.
+Der Prozess des Anfügens von Arbeitsspeicher an die Grafikpipeline. Die Ressourcenbindung umfasst z. B. die Bindung einer Ressource, z. B. einer Textur, an die Pipeline, um sie zum Rendern eines Objekts zu verwenden.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_buffer"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_BUFFER"></span>**ert**
+<span id="direct3d12.directx_12_glossary_buffer"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_BUFFER"></span>**Puffer**
 </dt> <dd>
 
-Ein D3D-Ressourcentyp, der mit einer zusammenhängenden Speicher Belegung Synonym ist.
+Ein Typ von D3D-Ressource, der mit einer zusammenhängenden Speicherzuweisung synonym ist.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_bundle"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_BUNDLE"></span>**dels**
+<span id="direct3d12.directx_12_glossary_bundle"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_BUNDLE"></span>**Bündel**
 </dt> <dd>
 
-Ein Befehls Puffer, der von der GPU (Graphics Processing Unit) nur direkt über eine *direkte Befehlsliste* ausgeführt werden kann. Ein Bundle erbt den gesamten GPU-Zustand (mit Ausnahme des aktuell festgelegten *Pipeline Zustands Objekts* und der primitiven Topologie).
+Ein Befehlspuffer, der von der Grafikprozessor (GRAPHICS Processing Unit, GPU) nur direkt über eine direkte *Befehlsliste ausgeführt werden kann.* Ein Bündel erbt den gpu-Zustand (mit Ausnahme des aktuell festgelegten *Pipelinezustandsobjekts* und der primitiven Topologie).
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_command_allocator"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_COMMAND_ALLOCATOR"></span>**Befehls Zuweisung**
+<span id="direct3d12.directx_12_glossary_command_allocator"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_COMMAND_ALLOCATOR"></span>**Befehlszuweisung**
 </dt> <dd>
 
-Die zugrunde liegenden Speicher Belegungen, in denen GPU-Befehle gespeichert werden. Das Befehls zuordnerobjekt gilt sowohl für *direkte Befehlslisten* als auch für *Pakete*.
+Die zugrunde liegenden Speicherzuweisungen, in denen GPU-Befehle gespeichert werden. Das Befehlszuweisungsobjekt gilt sowohl für *direkte Befehlslisten als* auch *für Bundles.*
 
 </dd> <dt>
 
 <span id="direct3d12.directx_12_glossary_command_list"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_COMMAND_LIST"></span>**Befehlsliste**
 </dt> <dd>
 
-Eine Befehlsliste entspricht einem Satz von Befehlen, die von der GPU ausgeführt werden. Dazu zählen Befehle wie z. b. das Festlegen von Status, zeichnen, löschen und kopieren. Die D3D12-Befehlslisten Schnittstelle unterscheidet sich deutlich von der-Schnittstelle der D3D11-Befehlsliste. Die D3D12-Befehlslisten Schnittstelle enthält ähnliche APIs wie die D3D11-Gerätekontext-Rendering-APIs.
+Eine Befehlsliste entspricht einem Satz von Befehlen, die die GPU ausführt. Dazu gehören Befehle wie zum Festlegen des Zustands, Zeichnen, Löschen und Kopieren. Die D3D12-Befehlslistenschnittstelle ist deutlich anders als die D3D11-Befehlslistenschnittstelle. Die D3D12-Befehlslistenschnittstelle enthält APIs, die den D3D11-Gerätekontextrendering-APIs ähneln.
 
-In einer D3D12-Befehlsliste werden Ressourcen weder zugeordnet noch die Zuordnung aufgehoben, Kachel Zuordnungen geändert, die Größe der Kachel Pools geändert, Abfrage Daten erhalten oder es werden nie implizit Befehle zur Ausführung an die GPU übermittelt.
+Eine D3D12-Befehlsliste lässt weder Ressourcen zuordnen oder zuordnen, Kachelzuordnungen ändern, die Größe von Kachelpools ändern, Abfragedaten erhalten, noch übermittelt sie befehle zur Ausführung implizit an die GPU.
 
-Anders als D3D11 verzögerte Kontexte unterstützen D3D12-Befehlslisten nur zwei Dereferenzierungsebenen. Eine *direkte Befehlsliste* entspricht einem Befehls Puffer, den die GPU ausführen kann. Ein *Bundle* kann nur direkt über eine direkte Befehlsliste ausgeführt werden.
+Im Gegensatz zu verzögerten D3D11-Kontexten unterstützen D3D12-Befehlslisten nur zwei Deskriptionsebenen. Eine *direkte Befehlsliste* entspricht einem Befehlspuffer, den die GPU ausführen kann. Ein *Paket* kann nur direkt über eine direkte Befehlsliste ausgeführt werden.
 
-Eine direkte Befehlsliste erbt keinen GPU-Zustand. Ein Bundle erbt den gesamten GPU-Zustand (mit Ausnahme des aktuell festgelegten Pipeline Zustands Objekts und der primitiven Topologie).
+Eine direkte Befehlsliste erbt keinen GPU-Zustand. Ein Bündel erbt den gpu-Zustand (mit Ausnahme des aktuell festgelegten Pipelinezustandsobjekts und der primitiven Topologie).
 
-Der Arbeitsspeicher für eine Befehlsliste wird von der *Befehls Zuweisung* festgelegt. Der Zweck der Befehlslisten besteht darin, dass Sie als einzelne Renderinganforderung an eine GPU übermittelt werden können.
-
-</dd> <dt>
-
-<span id="direct3d12.directx_12_glossary_command_queue"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_COMMAND_QUEUE"></span>**Befehls Warteschlange**
-</dt> <dd>
-
-Eine *Befehls* Warteschlange, in der die GPU nacheinander ausgeführt wird. Anwendungen müssen *Befehlslisten* explizit zur Ausführung an eine Befehls Warteschlange übermitteln. In der Regel gibt es drei Befehls Warteschlangen: 3D-Grafiken, COMPUTE und Copy, die der 3D-Grafik Pipeline, der COMPUTE-Engine und einem oder mehreren Kopier Modulen auf der GPU entsprechen.
+Der Arbeitsspeicher für eine Befehlsliste wird durch die *Befehlszuweisung festgelegt.* Befehlslisten dienen dazu, dass sie als einzelne Renderinganforderung an eine GPU übermittelt werden können.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_conservative_rasterization"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_CONSERVATIVE_RASTERIZATION"></span>**konservative rasterisierung**
+<span id="direct3d12.directx_12_glossary_command_queue"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_COMMAND_QUEUE"></span>**Befehlswarteschlange**
 </dt> <dd>
 
-Die konservative rasterisierung ist ein Betriebsmodus für die Raster-Phase der Direct3D-Grafik Pipeline. Dadurch wird die standardmäßige, auf Stichproben basierende rasterisierung deaktiviert, und stattdessen wird ein Pixel, das von einem beliebigen Betrag durch ein primitiv abgedeckt wird, rasteriert. Ein wichtiger Unterschied besteht darin, dass jede Abdeckung überhaupt ein rasterisiertes Pixel erzeugt, dass diese Abdeckung nicht durch die Hardware gekennzeichnet werden kann, sodass die Abdeckung immer Binär zu einem Pixelshader erscheint: entweder vollständig abgedeckt oder nicht abgedeckt. Es wird dem Pixelshader-Code überlassen, um die tatsächliche Abdeckung analytisch zu bestimmen.
-
-Die konservative rasterisierung kann bei solchen Problemen hilfreich sein, z. b. bei der Kollision und Treffer Erkennung, bei der Klassifizierung und bei der Verschleierung, bei der die Farbe eines Pixels genauer ist, und die Kanten Fälle entfernt werden können. Siehe [konservative rasterization](conservative-rasterization.md).
+Eine *Befehlswarteschlange listet* auf, dass die GPU nacheinander ausgeführt wird. Anwendungen müssen Befehlslisten *explizit zur Ausführung* an eine Befehlswarteschlange übermitteln. In der Regel gibt es drei Befehlswarteschlangen: 3D-Grafiken, Compute- und Kopiermodule, die der 3D-Grafikpipeline, der Compute-Engine und mindestens einem Kopiermodul auf der GPU entspricht.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_cbv"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_CBV"></span>**Konstante Puffer Ansicht (CBV)**
+<span id="direct3d12.directx_12_glossary_conservative_rasterization"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_CONSERVATIVE_RASTERIZATION"></span>**konservative Rasterung**
 </dt> <dd>
 
-Konstante Puffer enthalten Shader-Konstante Daten, z. b. eine Kameraansicht, Projektions Matrizen und Welt Matrizen. Eine "Konstante Puffer Ansicht" ist die Format spezifische Ansicht des Puffers, wie von der Grafik Pipeline ersichtlich.
+Die konservative Rasterung ist ein Betriebsmodus für die Rasterizerphase der Direct3D-Grafikpipeline. Sie deaktiviert die standardmäßige beispielbasierte Rasterung und rastert stattdessen ein Pixel, das durch eine beliebige Menge durch ein Primitiv abgedeckt wird. Ein wichtiger Unterschied ist, dass jede Abdeckung zwar überhaupt ein rasterisiertes Pixel erzeugt, diese Abdeckung jedoch nicht durch die Hardware gekennzeichnet werden kann, sodass die Abdeckung immer binär für einen Pixel-Shader angezeigt wird: entweder vollständig abgedeckt oder nicht abgedeckt. Es bleibt dem Pixelschattencode übrig, um die tatsächliche Abdeckung analytisch zu bestimmen.
+
+Die konservative Rasterung kann bei Problemen wie Kollisionen und Treffererkennung, Binning und Okklusionsculling helfen, bei denen die Farbe eines Pixels genauer ist und Kantenfälle beseitigt werden können. Weitere Informationen [finden Sie unter Konservative Rasterung.](conservative-rasterization.md)
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_default_heap"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_DEFAULT_HEAP"></span>**Standard Heap**
+<span id="direct3d12.directx_12_glossary_cbv"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_CBV"></span>**Konstante Pufferansicht (CONSTANT Buffer View, CBV)**
 </dt> <dd>
 
-Ein Heap im Benutzermodus, der sich auf die Unterstützung von permanenten GPU-Ressourcentypen konzentriert, einschließlich von GPU-geschriebenen Ressourcen.
+Konstante Puffer enthalten Shaderkonstantdaten, z. B. eine Kameraansicht, Projektionsmatrizen und Weltmatrizen. Eine "konstante Pufferansicht" ist die formatspezifische Ansicht des Puffers, die von der Grafikpipeline angezeigt wird.
+
+</dd> <dt>
+
+<span id="direct3d12.directx_12_glossary_default_heap"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_DEFAULT_HEAP"></span>**Standard heap**
+</dt> <dd>
+
+Ein Benutzermodus-Heap, der sich auf die Unterstützung persistenter GPU-Ressourcentypen konzentriert, einschließlich GPU-geschriebener Ressourcen.
 
 </dd> <dt>
 
 <span id="direct3d12.directx_12_glossary_descriptor"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_DESCRIPTOR"></span>**Deskriptor**
 </dt> <dd>
 
-Deskriptoren sind die primäre Bindungs Einheit für eine einzelne Ressource in D3D12. Ein Deskriptor ist ein relativ kleiner Datenblock, in dem ein Objekt für die GPU vollständig in einem GPU-spezifischen Format beschrieben wird. Es gibt viele verschiedene Arten von Deskriptoren: Shader-Ressourcen Sichten (Srvs), unsorderte Zugriffs Sichten (UAVs), Konstante Puffer Ansichten (cbvs) und Samplers sind einige Beispiele.
+Deskriptoren sind die primäre Bindungseinheit für eine einzelne Ressource in D3D12. Ein Deskriptor ist ein relativ kleiner Datenblock, der ein Objekt für die GPU in einem GPU-spezifischen Format vollständig beschreibt. Es gibt viele verschiedene Arten von Deskriptoren: Shader-Ressourcenansichten (SRVs), ungeordnete Zugriffsansichten (Unordered Access Views, UAVs), Konstante Pufferansichten (CBVs) und Sampler sind einige Beispiele.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_descriptor_heap"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_DESCRIPTOR_HEAP"></span>**deskriptorheap**
+<span id="direct3d12.directx_12_glossary_descriptor_heap"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_DESCRIPTOR_HEAP"></span>**Deskriptor-Heap**
 </dt> <dd>
 
-Ein deskriptorheap ist eine Auflistung zusammenhängender Belegungen von Deskriptoren, eine Zuordnung für jeden Deskriptor. Der primäre Punkt eines deskriptorheaps besteht darin, den größten Teil der Arbeitsspeicher Belegung zu umfassen, der zum Speichern der deskriptorspezifikationen von Objekttypen erforderlich ist, auf die sich Shader für einen großen Teil des Renderings als möglich (idealerweise ein ganzer Renderingbereich) beziehen.
+Ein Deskriptor-Heap ist eine Sammlung zusammenhängender Zuordnungen von Deskriptoren, eine Zuordnung für jeden Deskriptor. Der Hauptpunkt eines Deskriptorheaps besteht im Umfang der Speicherzuweisung, die zum Speichern der Deskriptorspezifikationen von Objekttypen erforderlich ist, auf die Shader so groß wie möglich in einem Renderingfenster verweisen (idealerweise ein gesamter Renderingrahmen oder mehr).
 
 </dd> <dt>
 
 <span id="direct3d12.directx_12_glossary_descriptor_table"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_DESCRIPTOR_TABLE"></span>**Deskriptortabelle**
 </dt> <dd>
 
-Eine Deskriptortabelle ist logisch ein Array von Deskriptoren. Jede Deskriptortabelle speichert Deskriptoren von einem oder mehreren Typen, einschließlich Srvs, uave, cbvs und Samplers. Eine Deskriptortabelle ist keine Speicher Belegung, sondern lediglich ein Offset und eine Länge in einem deskriptorheap.
+Eine Deskriptortabelle ist logisch ein Array von Deskriptoren. Jede Deskriptortabelle speichert Deskriptoren eines oder mehrere Typen, einschließlich SRVs, UAVe, CBVs und Sampler. Eine Deskriptortabelle ist keine Speicherzuweisung, sondern lediglich ein Offset und eine Länge in einem Deskriptor-Heap.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_direct_command_list"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_DIRECT_COMMAND_LIST"></span>**direkte Befehlsliste**
+<span id="direct3d12.directx_12_glossary_direct_command_list"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_DIRECT_COMMAND_LIST"></span>**Direkte Befehlsliste**
 </dt> <dd>
 
-Ein Befehls Puffer, der von der GPU ausgeführt werden kann. Eine direkte Befehlsliste erbt keinen GPU-Zustand.
+Ein Befehlspuffer, der von der GPU ausgeführt werden kann. Eine direkte Befehlsliste erbt keinen GPU-Zustand.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_fence"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_FENCE"></span>**einzu**
+<span id="direct3d12.directx_12_glossary_fence"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_FENCE"></span>**Zaun**
 </dt> <dd>
 
-Ein Mechanismus zum Synchronisieren von GPU und CPU. Sowohl die GPU als auch die CPU können angewiesen werden, auf einen Fence zu warten, und es wird darauf gewartet, dass der andere Prozessor in Kraft ist. Siehe [Synchronisierung mit mehreren](./user-mode-heap-synchronization.md)Modulen.
+Ein Mechanismus zum Synchronisieren von GPU und CPU. Sowohl die GPU als auch die CPU können angewiesen werden, an einem Fence zu warten und auf den Aufholbedarf des anderen Prozessors zu warten. Weitere Informationen [finden Sie unter Multi-Engine-Synchronisierung.](./user-mode-heap-synchronization.md)
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_hazard"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_HAZARD"></span>**Gefährdung, Gefahren Verfolgung**
+<span id="direct3d12.directx_12_glossary_hazard"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_HAZARD"></span>**Gefahr, Gefahrverfolgung**
 </dt> <dd>
 
-Eine Gefahr tritt auf, wenn eine Ressource für einen Zweck verwendet wurde, und die APP beabsichtigt, Sie für einen anderen Zweck wiederzuverwenden. Um die Ressource erneut zu verwenden, müssen zwischengespeicherte Caches geleert oder ungültig gemacht werden. die Komprimierungs Anforderungen müssen mit der zweiten Verwendung konsistent sein, und die Ressource sollte sich im erforderlichen Zustand befinden, um das Lesen der Ressource zu vermeiden, nachdem Sie für den beabsichtigten Zweck geschrieben und für ungültig erklärt wurde.
+Eine Gefährdung tritt auf, wenn eine Ressource für einen Zweck verwendet wurde und die App diese für einen anderen Zweck wiederverwenden möchte. Um die Ressource erneut zu verwenden, müssen Zwischencaches geleert oder für ungültig erklärt werden, die Komprimierungsanforderungen müssen mit der zweiten Verwendung konsistent sein, und die Ressource sollte sich im erforderlichen Zustand sein, um zu vermeiden, dass die Ressource gelesen wird, nachdem sie für den vorgesehenen Zweck geschrieben und für ungültig erklärt wurde.
 
-Der Prozess der Wartung von Ressourcen und die Vermeidung dieser Synchronisierungs Probleme wird als Risiko Verfolgung bezeichnet. Wenn keine Gefahren Nachverfolgung durch den Treiber vorhanden ist, ist die App dafür verantwortlich. In den meisten früheren Versionen von DirectX wurde die Gefahren Nachverfolgung durch den Treiber behandelt. Um die Leistung zu verbessern, sind Methoden ohne Risiko Verfolgung in DirectX 12 verfügbar.
+Der Prozess der Verwaltung von Ressourcen und das Vermeiden dieser Synchronisierungsprobleme wird als Risikoverfolgung bezeichnet. Wenn es keine Risikoverfolgung durch den Fahrer gibt, ist die App dafür verantwortlich. In den meisten früheren Versionen von DirectX wurde die Gefahrverfolgung vom Treiber verarbeitet. Zur Verbesserung der Leistung sind Methoden ohne Risikoverfolgung in DirectX 12 verfügbar.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_hlsl"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_HLSL"></span>**High-Level-Shader-Sprache (HLSL)**
+<span id="direct3d12.directx_12_glossary_hlsl"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_HLSL"></span>**High-Level Shader Language (HLSL)**
 </dt> <dd>
 
-Eine Computersprache, die sich in vielerlei Hinsicht von C unterscheidet, die zum Schreiben von Shader-Code verwendet wird. Vertex-, Pixel-, Geometrie-, COMPUTE-, Domänen-und Hull-Shader werden mithilfe von HLSL geschrieben. Ein Compiler konvertiert die HLSL-Quelle in ein binäres Format, das von der GPU verwendet werden soll.
+Eine Computersprache, ähnlich, aber in vielerlei Hinsicht anders als C, die zum Schreiben von Shadercode verwendet wird. Vertex-, Pixel-, Geometry-, Compute-, Domänen- und Hüllen-Shader werden alle mit HLSL geschrieben. Ein Compiler konvertiert die HLSL-Quelle in ein Binärformat, das von der GPU genutzt werden kann.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_multiengine"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_MULTIENGINE"></span>**multiengine**
+<span id="direct3d12.directx_12_glossary_multiengine"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_MULTIENGINE"></span>**Multiengine**
 </dt> <dd>
 
-Die verschiedenen Instanzen und Typen von Engines in einer einzelnen GPU. Die Arten von Engines umfassen: Grafiken, COMPUTE und Copy.
+Die verschiedenen Instanzen und Typen von Engines in einer einzelnen GPU. Zu den Arten von Engines gehören: Grafiken, Compute und Kopier.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_multigpu"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_MULTIGPU"></span>**Multigpu**
+<span id="direct3d12.directx_12_glossary_multigpu"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_MULTIGPU"></span>**MultiGPU**
 </dt> <dd>
 
-Eine Hardwarekonfiguration, bei der mehr als ein Grafikadapter vorhanden ist. Die separaten Adapter werden manchmal als Knoten bezeichnet. Wenn Sie über mehrere GPUs verfügen, können Sie die Synchronisierung mit der CPU und einander erheblich komplexer machen als mit einer einzelnen GPU.
+Eine Hardwarekonfiguration, bei der mehrere Grafikkarten enthalten sind. Die separaten Adapter werden manchmal als Knoten bezeichnet. Die Verwendung mehrerer GPUs kann die Aufgabe der Synchronisierung mit der CPU und untereinander erheblich komplexer als bei einer einzelnen GPU machen.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_pipeline_state_object"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_PIPELINE_STATE_OBJECT"></span>**Pipeline Zustands Objekt (PSO)**
+<span id="direct3d12.directx_12_glossary_pipeline_state_object"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_PIPELINE_STATE_OBJECT"></span>**Pipelinezustandsobjekt (PSO)**
 </dt> <dd>
 
-Ein erheblicher Teil des Status der GPU. Dieser Status umfasst alle aktuell festgelegten Shader und bestimmte Zustands Objekte mit fester Funktions Zeit. Die einzige Möglichkeit zum Ändern von Zuständen, die im Pipeline Objekt enthalten sind, besteht darin, das zurzeit gebundene Pipeline Objekt zu ändern.
+Ein wesentlicher Teil des GPU-Zustands. Dieser Zustand schließt alle derzeit festgelegten Shader und bestimmte Objekte mit festem Funktionszustand ein. Die einzige Möglichkeit, die im Pipelineobjekt enthaltenen Zustände zu ändern, besteht darin, das aktuell gebundene Pipelineobjekt zu ändern.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_predication"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_PREDICATION"></span>**Prädikation übersprungen**
+<span id="direct3d12.directx_12_glossary_predication"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_PREDICATION"></span>**Prädication**
 </dt> <dd>
 
-Das-Prädikat ist ein Feature, mit dem die GPU anstelle der CPU feststellen kann, ob ein Objekt nicht gezeichnet, kopiert oder versendet werden soll. Wenn z. b. ein Begrenzungsfeld eines Objekts vollständig von einem anderen Objekt oder einer Perspektive vollständig auf eine geringere Größe als die Pixelgröße reduziert wurde, ist es möglicherweise nicht sinnvoll, das verborgene Objekt zu zeichnen. Siehe [prediation](predication.md).
+Prädication ist ein Feature, mit dem die GPU und nicht die CPU bestimmen kann, ob ein Objekt nicht ge zeichnen, kopiert oder gesendet werden soll. Wenn z. B. ein Begrenzungsfeld eines Objekts vollständig von einem anderen Objekt oder einer anderen Perspektive verdeckt wird, das Objekt auf einen kleineren Bereich als ein Pixel reduziert hat, kann es keinen Sinn machen, das ausgeblendete Objekt zu zeichnen. Weitere Informationen [finden Sie unter Prädication](predication.md).
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_rov"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_ROV"></span>**Reihen folgen Ansicht des Rasterizers (Row)**
+<span id="direct3d12.directx_12_glossary_rov"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_ROV"></span>**Rasterizer Order View (ROV)**
 </dt> <dd>
 
-Standard Grafik Pipelines haben möglicherweise Probleme mit der ordnungsgemäßen Zusammensetzung mehrerer Texturen, die Transparenz enthalten. Objekte wie z. b. Drahtzäune, Rauch, Feuer, Vegetation und farbige Glas verwenden Transparenz, um den gewünschten Effekt zu erzielen. Es treten Probleme auf, wenn mehrere Texturen, die Transparenz enthalten, aufeinander zueinander stehen (Feuer vor einem Fence vor einem Glasgebäude, das eine Vegetations enthält). Mithilfe von "Rasterizer-Ansichten" (ROVs) können die zugrunde liegenden OIT-Algorithmen (Order Independent Transparenz) die Features der Hardware zum ordnungsgemäßen Auflösen der Transparenz Reihenfolge verwenden. Transparenz wird vom Pixelshader behandelt.
+Bei Standardgrafikpipelines können Probleme beim richtigen Zusammenordnen mehrerer Texturen mit Transparenz auftkommen. Objekte wie Wire Fences, Feuer, Feuer, Brand und farbiges Wasser verwenden Transparenz, um die gewünschte Wirkung zu erzielen. Probleme treten auf, wenn mehrere Texturen, die Transparenz enthalten, miteinander in Einklang stehen (z. B. Qualm vor einem Zäun vor einem glasigen Gebäude, das Dieben enthält). Rasterizer ordered views (ROVs) ermöglichen es den zugrunde liegenden OIT-Algorithmen (Order Independent Transparency), Features der Hardware zu verwenden, um zu versuchen, die Transparenz reihenfolge richtig aufzulösen. Transparenz wird vom Pixel-Shader verarbeitet.
 
-Mithilfe geordneter Ansichten von Rasterizer (ROVs) können Pixel-Shader-Code ungeordnete zugriffsansichts-Bindungen (UAV) mit einer Deklaration markieren, die die normalen Anforderungen für die Reihenfolge der Ergebnisse der Grafik Pipeline für UAVs ändert.
+RoVs (Rasterizer Ordered Views) ermöglichen es Pixel-Shadercode, UAV-Bindungen (Unordered Access View) mit einer Deklaration zu markieren, die die normalen Anforderungen für die Reihenfolge der Grafikpipelineergebnisse für UAVs ändert.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_readback_heap"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_READBACK_HEAP"></span>**Read-Back-Heap**
+<span id="direct3d12.directx_12_glossary_readback_heap"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_READBACK_HEAP"></span>**Readback-Heap**
 </dt> <dd>
 
-Ein Heap im Benutzermodus, der sich auf die Datenübertragung von der GPU zurück zur CPU konzentriert.
+Ein Benutzermodus-Heap, der sich auf die Datenübertragung von der GPU zurück zur CPU konzentriert.
 
 </dd> <dt>
 
 <span id="direct3d12.directx_12_glossary_resource"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_RESOURCE"></span>**Ressource**
 </dt> <dd>
 
-Eine Entität, die Daten für die Pipeline bereitstellt und definiert, was während der Szene gerendert wird. Ressourcen können von ihren Spiel Medien geladen oder dynamisch zur Laufzeit erstellt werden. In der Regel enthalten Ressourcen Textur Daten, Scheitelpunkt Daten und shaderdaten. Die meisten Direct3D-Anwendungen erstellen und zerstören Ressourcen in der gesamten Lebensdauer.
+Eine Entität, die Daten für die Pipeline liefert und definiert, was während Ihrer Szene gerendert wird. Ressourcen können von Ihren Spielmedien geladen oder dynamisch zur Laufzeit erstellt werden. Zu den Ressourcen gehören in der Regel Texturdaten, Scheitelpunktdaten und Shaderdaten. Die meisten Direct3D-Anwendungen erstellen und zerstören Ressourcen während ihrer gesamten Lebensdauer umfassend.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_resource_barrier"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_RESOURCE_BARRIER"></span>**Ressourcen Barriere**
+<span id="direct3d12.directx_12_glossary_resource_barrier"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_RESOURCE_BARRIER"></span>**Ressourcenbarriere**
 </dt> <dd>
 
-Eine Ressourcengrenze benachrichtigt den Treiber, dass möglicherweise eine Synchronisierung mehrerer Zugriffe auf eine einzelne Ressource erforderlich ist, z. b. das Lesen und Schreiben in dieselbe Textur.
+Eine Ressourcenbarriere benachrichtigt den Treiber, dass die Synchronisierung mehrerer Zugriffe auf eine einzelne Ressource erforderlich sein kann, z. B. lesen und in dieselbe Textur schreiben.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_resource_binding"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_RESOURCE_BINDING"></span>**Ressourcen Bindung**
+<span id="direct3d12.directx_12_glossary_resource_binding"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_RESOURCE_BINDING"></span>**Ressourcenbindung**
 </dt> <dd>
 
-Bei der Ressourcen Bindung werden Ressourcen (Texturen, Vertex-Puffer, Index Puffer usw.) mit der Grafik Pipeline verknüpft, sodass die Shader der Pipeline die richtige Ressource verarbeiten können.
+Bei der Ressourcenbindung werden Ressourcen (Texturen, Scheitelpunktpuffer, Indexpuffer usw.) mit der Grafikpipeline verknüpft, sodass die Shader der Pipeline die richtige Ressource verarbeiten können.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_resource_heaps"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_RESOURCE_HEAPS"></span>**Ressourcen Heaps**
+<span id="direct3d12.directx_12_glossary_resource_heaps"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_RESOURCE_HEAPS"></span>**Ressourcenheaps**
 </dt> <dd>
 
-Ressourcen Heaps sind ein allgemeiner Begriff für die Heaps, bei denen es sich um Speicherpuffer handelt, die bei der Übertragung an und von der GPU reserviert werden. Eine Übertragung an die GPU erfordert einen uploadheap, von der GPU bis zur CPU erfordert einen abzurufenden Heap, und ein persistenter Heap für die GPU, der über mehrere renderingframes gewartet werden soll, wird als Standard Heap bezeichnet.
+Ressourcenheaps sind ein allgemeiner Begriff für die Heaps, bei denen es sich um Speicherpuffer handelt, die für die Speicherung von Ressourcen bei der Übertragung auf und von der GPU vorgesehen sind. Eine Übertragung an die GPU erfordert einen Hochladen Heap, von der GPU zur CPU erfordert einen Rückleseheap, und ein persistenter Heap, den die GPU über mehrere Renderingframes verwalten kann, wird als Standardheap bezeichnet.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_root_signature"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_ROOT_SIGNATURE"></span>**Stamm Signatur**
+<span id="direct3d12.directx_12_glossary_root_signature"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_ROOT_SIGNATURE"></span>**Stammsignatur**
 </dt> <dd>
 
-Stamm Signaturen definieren alle Ressourcen, die an die Grafiken oder COMPUTE-Pipelines gebunden werden sollen. Eine Stamm Signatur wird von der APP und Verknüpfungen Befehlslisten mit den Ressourcen konfiguriert, die für die Shader normalerweise erforderlich sind. es gibt jeweils eine Grafik und eine computestammsignatur pro app.
+Stammsignaturen definieren alle Ressourcen, die an die Grafik- oder Computepipelines gebunden werden sollen. Eine Stammsignatur wird von der App konfiguriert und verknüpft Befehlslisten mit den Ressourcen, die die Shader benötigen. In der Regel gibt es eine Grafik und eine Computestammsignatur pro App.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_sampler"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_SAMPLER"></span>**Sammel**
+<span id="direct3d12.directx_12_glossary_sampler"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_SAMPLER"></span>**Sampler**
 </dt> <dd>
 
 Ein Sampler ist Code, der aus einer Textur liest.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_srv"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_SRV"></span>**Shader-Ressourcenansicht (SRV)**
+<span id="direct3d12.directx_12_glossary_srv"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_SRV"></span>**Shader Ressourcenansicht (SRV)**
 </dt> <dd>
 
-Eine Format spezifische Methode zum Überprüfen der Daten in einer Shader-Ressource, z. b. eine Textur.
+Eine formatspezifische Möglichkeit zum Anzeigen der Daten in einer Shaderressource, z. B. einer Textur.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_static_heap"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_STATIC_HEAP"></span>**statischer Heap**
+<span id="direct3d12.directx_12_glossary_static_heap"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_STATIC_HEAP"></span>**Statischer Heap**
 </dt> <dd>
 
-Ein Heap im Benutzermodus, der sich auf mehrere GPU-schreibgeschützte Ressourcen konzentriert, die normalerweise gleichzeitig verwendet werden und nicht häufig geändert werden.
+Ein Benutzermodusheap, der sich auf mehrere lesegeschützte GPU-Ressourcen konzentriert, die in der Regel gleichzeitig verwendet werden und nicht häufig geändert werden.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_swap_chain"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_SWAP_CHAIN"></span>**Austausch Kette**
+<span id="direct3d12.directx_12_glossary_swap_chain"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_SWAP_CHAIN"></span>**Swapkette**
 </dt> <dd>
 
-Austausch Ketten steuern die Hintergrund Puffer Drehung und bilden die Grundlage der Grafik Animation. Swapketten werden vom Low-Level-API-Satz DXGI behandelt (Weitere Informationen finden Sie unter [DXGI Overview](../direct3ddxgi/d3d10-graphics-programming-guide-dxgi.md)).
+Swapketten steuern die Hintergrundpufferrotation und bilden die Grundlage der Grafikanimation. Austauschketten werden vom LOW-API-Satz DXGI verarbeitet (siehe [DXGI-Übersicht](../direct3ddxgi/d3d10-graphics-programming-guide-dxgi.md)).
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_swizzle"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_SWIZZLE"></span>**Swizzle**
+<span id="direct3d12.directx_12_glossary_swizzle"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_SWIZZLE"></span>**swizzle**
 </dt> <dd>
 
-Eine Technik, mit der Mehrdimensionale Daten im Arbeitsspeicher gesucht werden, sodass Daten aus der nahen Dimensionalität in der Regel nahe gelegene Adressen aufweisen. Vor allem werden alle Daten für eine Zeile vor den Daten für die nächste Zeile nicht zusammenhängend gefunden. Ein "parametrisiertes schwenken" beschreibt eine standardisierte Methode zum Beschreiben von swidingmustern.
+Eine Technik der Suche nach mehrdimensionalen Daten im Arbeitsspeicher, sodass Daten von in der Nähe befindlichen Dimensionen tendenziell Adressen in der Nähe haben. Insbesondere befinden sich nicht alle Daten für eine Zeile zusammenhängend vor den Daten für die nächste Zeile. Eine "parametrisierte Swizzle" beschreibt eine standardisierte Methode zum Beschreiben von Swizzlemustern.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_static_texture"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_STATIC_TEXTURE"></span>**Konsistenz**
+<span id="direct3d12.directx_12_glossary_static_texture"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_STATIC_TEXTURE"></span>**Textur**
 </dt> <dd>
 
-Ein D3D-Ressourcentyp, der mehrdimensional ist und über ein Speicher Layout verfügt, das für den mehrdimensionalen Zugriff von der GPU optimiert ist. Texturen enthalten häufig das Rohbild, das zum Renderingvorgang auf einer Oberfläche erforderlich ist, bevor Beleuchtung und Vermischung stattfinden, aber auch andere Formen von Daten enthalten können, z. b. Farbverläufe und Bezugs Farben. Direct3D 12 unterstützt eine, zwei und dreidimensionale Texturen.
+Ein D3D-Ressourcentyp, der mehrdimensional ist und über ein Speicherlayout verfügt, das für den mehrdimensionalen Zugriff über die GPU optimiert ist. Texturen enthalten häufig das rohe Bild, das zum Rendern auf einer Oberfläche erforderlich ist, bevor Beleuchtung und Mischung stattfinden, können aber andere Formen von Daten enthalten, z. B. Farbverläufe und Referenzfarben. Direct3D 12 unterstützt ein-, zwei- und dreidimensionale Texturen.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_tile"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_TILE"></span>**Stein**
+<span id="direct3d12.directx_12_glossary_tile"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_TILE"></span>**Fliese**
 </dt> <dd>
 
-Eine Seite mit Video Arbeitsspeicher, ähnlich einer CPU/System-Seite des Speichers. Mithilfe der Kachel Notation kann das subsubsystem des virtuellen GPU-Speichers vom virtuellen CPU-Speichersubsystem unterschieden werden. GPUs bieten ähnliche Funktionen für den virtuellen Arbeitsspeicher wie der virtuelle Systemspeicher. Einige GPUs verfügen über freigegebene Funktionen für den virtuellen Arbeitsspeicher, die die Freigabe einiger Seiten des virtuellen Speicher Subsystems sowohl mit der CPU als auch mit der GPU ermöglichen.
+Eine Seite mit Videospeicher, ähnlich einer CPU-/Systemseite des Arbeitsspeichers. Die Kachel notation hilft dabei, das VIRTUELLE GPU-Speichersubsystem von dem VIRTUELLEN CPU-Speichersubsystem zu unterscheiden. GPUs bieten ähnliche virtuelle Arbeitsspeicherfunktionen wie virtueller Systemspeicher. Einige GPUs verfügen über funktionen für gemeinsam genutzten virtuellen Arbeitsspeicher, die die Freigabe einiger Seiten des Subsystems für virtuellen Speicher sowohl mit der CPU als auch mit der GPU ermöglichen.
 
 </dd> <dt>
 
 <span id="direct3d12.directx_12_glossary_tiled_resources"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_TILED_RESOURCES"></span>**Gekachelte Ressourcen**
 </dt> <dd>
 
-Gekachelte Ressourcen werden benötigt, sodass weniger GPU-Speicherplatz für das Speichern von Bereichen von Oberflächen verschwendet wird, auf die die Anwendung keinen Zugriff hat, und die Hardware weiß, wie Sie über angrenzende Kacheln filtern kann. Bei gekachelten Ressourcen handelt es sich um große logische Ressourcen, die jedoch nur wenige physische Speichermengen erfordern.
+Kachelressourcen werden benötigt, sodass weniger GPU-Arbeitsspeicher für die Speicherung von Oberflächenbereichen verschwendet wird, von denen die Anwendung weiß, dass nicht zugegriffen werden kann, und die Hardware kann verstehen, wie über angrenzende Kacheln gefiltert wird. Gekachelte Ressourcen sind große logische Ressourcen, erfordern jedoch kleine Mengen an physischem Arbeitsspeicher.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_uav"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_UAV"></span>**Unsortierter Zugriffs Ansicht (UAV)**
+<span id="direct3d12.directx_12_glossary_uav"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_UAV"></span>**Ungeordnete Zugriffsansicht (UAV)**
 </dt> <dd>
 
-Eine ungeordnete Zugriffs Ansicht in eine Ressource (die Puffer, Texturen und Textur Arrays enthält, ohne Multisampling), ermöglicht temporalen ungeordneten Lese-/Schreibzugriff von mehreren Threads. Dies bedeutet, dass dieser Ressourcentyp gleichzeitig von mehreren Threads gelesen/geschrieben werden kann, ohne dass Speicher Konflikte entstehen.
+Eine unsortierte Zugriffsansicht auf eine Ressource (die Puffer, Texturen und Texturarrays ohne Mehrfachsampling umfasst) ermöglicht den zeitlich ungeordneten Lese-/Schreibzugriff von mehreren Threads. Dies bedeutet, dass dieser Ressourcentyp von mehreren Threads gleichzeitig gelesen/geschrieben werden kann, ohne Speicherkonflikte zu generieren.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_upload_heap"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_UPLOAD_HEAP"></span>**Heap hochladen**
+<span id="direct3d12.directx_12_glossary_upload_heap"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_UPLOAD_HEAP"></span>**Uploadheap**
 </dt> <dd>
 
-Ein Heap im Benutzermodus, der sich auf die Datenübertragung von der CPU an die GPU konzentriert.
+Ein Benutzermodusheap, der sich auf die Datenübertragung von der CPU zur GPU konzentriert.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_user_mode_heap"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_USER_MODE_HEAP"></span>**benutzermodusheap**
+<span id="direct3d12.directx_12_glossary_user_mode_heap"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_USER_MODE_HEAP"></span>**Benutzermodusheap**
 </dt> <dd>
 
-Eine Auflistung großer, zusammenhängender Speicher Belegungen, die ohne das Wissen der Kernel Komponente wieder verwendet werden: die Zuordnungs-und Zerstörungs Methoden werden während des stabilen Zustands nicht als Kernel Zuordnungs-und Zerstörungs Methoden bezeichnet. Upload-, leseback-und Standard-Heaps sind Varianten von Heaps im Benutzermodus.
+Eine Sammlung von großen, zusammenhängenden Speicherbelegungen, die ohne das Bewusstsein einer Kernelkomponente wiederverwendet werden: Die Zuordnungs- und Zerstörungsmethoden rufen keine Kernelzuordnungs- und -zerstörungsmethoden im stabilen Zustand auf. Hochladen, Readback und Standardheaps sind Varianten von Heaps im Benutzermodus.
 
 </dd> <dt>
 
-<span id="direct3d12.directx_12_glossary_volume_tiled_resources"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_VOLUME_TILED_RESOURCES"></span>**Menge an Kacheln**
+<span id="direct3d12.directx_12_glossary_volume_tiled_resources"></span><span id="DIRECT3D12.DIRECTX_12_GLOSSARY_VOLUME_TILED_RESOURCES"></span>**Volumekachelressourcen**
 </dt> <dd>
 
-Dreidimensionale [gekachelte Ressourcen](/windows).
+Dreidimensionale [gekachelte Ressourcen.](/windows)
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 

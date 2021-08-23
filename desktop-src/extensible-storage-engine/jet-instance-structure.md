@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INSTANCE Struktur'
+description: 'Weitere Informationen zu: JET_INSTANCE Struktur'
 title: JET_INSTANCE Struktur
 TOCTitle: JET_INSTANCE structure
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_INSTANCE
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a676c0815ba20b725da0216a7c9a145c1c1cfd68
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6c29edd252ddb476f120a8dc9d938d5a76076c90f3e492fd1b086ff9bb097a5a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119401490"
 ---
 # <a name="jet_instance-structure"></a>JET_INSTANCE Struktur
 
-Ein JET_INSTANCE der ein Handle für die Instanz der Datenbank enthält, die für Aufrufe der Jet-API verwendet werden soll.
+Ein JET_INSTANCE enthält ein Handle für die Instanz der Datenbank, die für Aufrufe der JET-API verwendet werden soll.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,10 +57,10 @@ public struct JET_INSTANCE : IEquatable<JET_INSTANCE>,
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_INSTANCE](./jet-instance-members.md)
+[JET_INSTANCE-Member](./jet-instance-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,177 +1,177 @@
 ---
-title: Nutzbarkeit beim Software Entwurf
-description: In diesem Thema wird das Konzept der Nutzbarkeit vorgestellt und erläutert, warum es ein wichtiger Bestandteil eines beliebigen Software Entwurfsprojekts sein sollte.
+title: Nutzbarkeit im Softwareentwurf
+description: In diesem Thema wird das Konzept der Benutzerfreundlichkeit und derEntspricht, warum es ein wichtiger Bestandteil jedes Softwareentwurfsprojekts sein sollte.
 ms.assetid: 912b3224-e36d-44d6-98fa-a7f28e68a2d0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b302e63a475d060748e896440b28915816d910e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 482fd749a797c58656d987e1bde9e995ac58b8fdf98a6c056cd327e846665749
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589130"
 ---
-# <a name="usability-in-software-design"></a>Nutzbarkeit beim Software Entwurf
+# <a name="usability-in-software-design"></a>Nutzbarkeit im Softwareentwurf
 
-In diesem Thema wird das Konzept der Nutzbarkeit vorgestellt und erläutert, warum es ein wichtiger Bestandteil eines beliebigen Software Entwurfsprojekts sein sollte.
+In diesem Thema wird das Konzept der Benutzerfreundlichkeit und derEntspricht, warum es ein wichtiger Bestandteil jedes Softwareentwurfsprojekts sein sollte.
 
 -   [Introduction (Einführung)](#introduction)
 -   [Definieren der Benutzerfreundlichkeit](#defining-usability)
-    -   [Einfache Verwendung](#ease-of-use)
-    -   [Nutzbarkeit und Dienstprogramm](#usability-vs-utility)
-    -   [Im Vergleich zur Verwendung](#liking-it-vs-using-it)
-    -   [Ermittlung im Vergleich zu lernen und Effizienz](#discovery-vs-learning-vs-efficiency)
-    -   [Slogans funktionieren nicht](#slogans-do-not-work)
+    -   [Benutzerfreundlichkeit](#ease-of-use)
+    -   [Nutzbarkeit im Vergleich zum Hilfsprogramm](#usability-vs-utility)
+    -   [Vergleich von "Liking It" und "Using It"](#liking-it-vs-using-it)
+    -   [Ermittlung im Vergleich zu Learning im Vergleich zur Effizienz](#discovery-vs-learning-vs-efficiency)
+    -   [Keine Arbeit](#slogans-do-not-work)
 -   [Warum ist die Benutzerfreundlichkeit wichtig?](#why-is-usability-important)
-    -   [Warum sollten Sie sich für Sie interessieren?](#why-should-you-care)
-    -   [Was kostet dies?](#what-does-it-cost)
-    -   [Wie kann ich die Nutzbarkeit erhöhen?](#how-do-i-increase-usability)
+    -   [Warum sollten Sie sich darum kümmern?](#why-should-you-care)
+    -   [Was kostet es?](#what-does-it-cost)
+    -   [Wie kann ich die Benutzerfreundlichkeit erhöhen?](#how-do-i-increase-usability)
     -   [Warum sollte ich Benutzer einbeziehen?](#why-should-i-involve-users)
-    -   [Kann ich nicht einfach die Richtlinien befolgen?](#cant-i-just-follow-guidelines)
-    -   [Muss ich ein Nutz barkeits Labor erstellen?](#do-i-need-to-build-a-usability-lab)
-    -   [Wie gehe ich vor?](#how-do-i-get-started)
+    -   [Kann ich die Richtlinien nicht einfach befolgen?](#cant-i-just-follow-guidelines)
+    -   [Muss ich ein Usability Lab erstellen?](#do-i-need-to-build-a-usability-lab)
+    -   [Wie kann ich Erste Schritte?](#how-do-i-get-started)
 
 ## <a name="introduction"></a>Einführung
 
-Der Begriff "Nutzbarkeit" im Kontext der Software Erstellung ist ein Ansatz, bei dem der Benutzer statt des Systems in den Mittelpunkt des Prozesses versetzt wird. Diese Philosophie, die als benutzerzentrierter Entwurf bezeichnet wird, beinhaltet Benutzer Belange und das Eintreten vor dem Anfang des Entwurfsprozesses und legt fest, dass die Anforderungen des Benutzers die Wichtigkeit von Entwurfsentscheidungen sein sollten.
+Der Begriff "Benutzerfreundlichkeit" im Kontext des Erstellens von Software stellt einen Ansatz dar, bei dem der Benutzer anstelle des Systems in den Mittelpunkt des Prozesses stellt. Diese als benutzerzentriertes Design bezeichnete Philosophie umfasst Benutzerbedenken und -unterstützung vom Anfang des Entwurfsprozesses und schreibt vor, dass die Anforderungen des Benutzers die wichtigste aller Entwurfsentscheidungen sein sollten.
 
-Der am häufigsten sichtbare Aspekt dieses Ansatzes ist das Testen der Benutzerfreundlichkeit, bei dem Benutzer arbeiten und mit der Produkt Schnittstelle interagieren und ihre Ansichten und Probleme mit den Designern und Entwicklern teilen.
+Der sichtbarste Aspekt dieses Ansatzes sind Benutzerfreundlichkeitstests, bei denen Benutzer mit der Produktschnittstelle arbeiten und mit ihnen interagieren und ihre Ansichten und Bedenken mit den Designern und Entwicklern teilen.
 
 ## <a name="defining-usability"></a>Definieren der Benutzerfreundlichkeit
 
-Der Abschnitt definiert, welche Nutzbarkeit im Zusammenhang mit der Softwareentwicklung bedeutet und wie Sie sich auf andere Aspekte des Entwicklungsprozesses bezieht.
+Im Abschnitt wird definiert, was Benutzerfreundlichkeit im Kontext der Softwareentwicklung bedeutet und wie sie mit anderen Aspekten des Entwicklungsprozesses in Zusammenhang steht.
 
-### <a name="ease-of-use"></a>Einfache Verwendung
+### <a name="ease-of-use"></a>Benutzerfreundlichkeit
 
-Die Nutzbarkeit ist ein Maß dafür, wie einfach es ist, ein Produkt zum Ausführen von vorgeschriebenen Aufgaben zu verwenden. Dies unterscheidet sich von den verwandten Konzepten von Utility und Likeability.
+Die Benutzerfreundlichkeit ist ein Maß, wie einfach es ist, ein Produkt zum Ausführen vorgeschriebener Aufgaben zu verwenden. Dies ist ein Unterschied zu den verwandten Konzepten von Nützlichkeit und Gleichbarkeit.
 
-### <a name="usability-vs-utility"></a>Nutzbarkeit und Dienstprogramm
+### <a name="usability-vs-utility"></a>Nutzbarkeit im Vergleich zum Hilfsprogramm
 
-Ein zentrales Attribut, das die Qualität eines Produkts bestimmt, ist Nützlichkeit. Dadurch wird gemessen, ob die tatsächliche Verwendung eines Produkts die Ziele erreichen kann, die die Designer für diese erreichen möchten. Das Konzept der Nützlichkeit verzweigt sich weiter in das Hilfsprogramm und die Benutzerfreundlichkeit Obwohl diese Begriffe verwandt sind, sind Sie nicht austauschbar.
+Ein zentrales Attribut, das die Qualität eines Produkts bestimmt, ist nützlich. Dies misst, ob die tatsächlichen Verwendungen eines Produkts die Ziele erreichen können, die die Designer erreichen möchten. Das Konzept der Nützlichkeit ist ein weiterer Teil des Nutzens und der Nutzbarkeit. Obwohl diese Begriffe verknüpft sind, sind sie nicht austauschbar.
 
-Das Hilfsprogramm bezieht sich auf die Fähigkeit des Produkts, eine Aufgabe oder Aufgaben auszuführen. Die weiteren Aufgaben, die das Produkt ausführen soll, desto mehr Dienstprogramm ist es.
+Hilfsprogramm bezieht sich auf die Fähigkeit des Produkts, eine Aufgabe oder Aufgaben auszuführen. Wenn das Produkt mehr Aufgaben ausführen soll, desto nützlicher ist es.
 
-Beachten Sie typische Microsoft MS-DOS-Wörter Prozessoren aus den späten 80er Jahren. Solche Programme stellten viele leistungsstarke Funktionen für die Bearbeitung und Bearbeitung von Text bereit, benötigten jedoch, dass Benutzer Dutzende von Arkans Tastatureingaben erlernen und merken konnten, um Sie auszuführen. Anwendungen wie diese können so lauten, dass Sie über ein hohes Hilfsprogramm verfügen (Sie bieten den Benutzern die erforderliche Funktionalität), aber wenig Nutzbarkeit (die Benutzer müssen viel Zeit und Mühe aufwenden, um Sie zu erlernen und zu verwenden). Eine gut entworfene, einfache Anwendung, wie z. b. ein Rechner, kann jedoch sehr einfach zu verwenden sein, bietet jedoch kein viel Hilfsprogramm.
+Betrachten Sie typische Microsoft MS-DOS-Textprozessoren aus den ende 1980er Jahren. Solche Programme stellten viele leistungsstarke Textbearbeitungs- und Bearbeitungsfeatures zur Verfügung, erforderten jedoch, dass Benutzer Dutzende von arkanen Tastatureingaben lernen und sich merken mussten, um sie durchzuführen. Anwendungen wie diese verfügen über ein hohes Hilfsprogramm (sie bieten Benutzern die erforderliche Funktionalität), aber eine geringe Benutzerfreundlichkeit (die Benutzer müssen viel Zeit und Aufwand damit verbringen, sie zu lernen und zu verwenden). Im Gegensatz dazu kann eine gut entworfene, einfache Anwendung wie ein Rechner sehr einfach zu verwenden sein, aber nicht viel Nutzen bieten.
 
-Beide Qualitäten sind für Marktakzeptanz erforderlich, und beide sind Teil des Gesamtkonzepts der Nützlichkeit. Wenn ein Programm zwar hochgradig verwendbar ist, aber keinen Wert hat, wird es von niemandem verwendet. Und Benutzern, die ein leistungsfähiges Programm haben, das nur schwer zu verwenden ist, wird es wahrscheinlich gegen Sie widersprechen oder Alternativen suchen.
+Beide Qualitäten sind für die Akzeptanz des Markts erforderlich und sind Teil des allgemeinen Nutzenkonzepts. Wenn ein Programm sehr gut verwendet werden kann, aber nichts von Nutzen ist, wird es natürlich von niemandem verwendet. Und Benutzer, denen ein leistungsstarkes Programm präsentiert wird, das schwer zu verwenden ist, werden sich wahrscheinlich dagegen sträubt oder Alternativen suchen.
 
-Mithilfe von Nutzbarkeits Tests können Sie feststellen, wie einfach es für Benutzer ist, bestimmte Aufgaben auszuführen. Es hilft Ihnen jedoch nicht direkt festzustellen, ob das Produkt selbst über einen Wert oder ein Hilfsprogramm verfügt. (Benutzer können sich im Zusammenhang mit dem Hilfsprogramm im Zusammenhang mit dem Testen der Benutzerfreundlichkeit informieren, aber Kommentare sollten mit anderen, robusteren Forschungsmethoden überprüft werden.)
+Benutzerfreundlichkeitstests helfen Ihnen zu bestimmen, wie einfach es benutzern ist, bestimmte Aufgaben auszuführen. Sie können jedoch nicht direkt feststellen, ob das Produkt selbst einen Wert oder einen Nutzen hat. (Benutzer können während der Benutzerfreundlichkeitstests kommentare im Zusammenhang mit dem Hilfsprogramm abgeben, aber alle Kommentare sollten mit anderen, stabileren Forschungsmethoden überprüft werden.)
 
-### <a name="liking-it-vs-using-it"></a>Im Vergleich zur Verwendung
+### <a name="liking-it-vs-using-it"></a>Vergleich von "Liking It" und "Using It"
 
-"Likeability" ist immer ein wünschenswert in einem Produkt. Wenn Personen wie das Produkt, ist es wahrscheinlicher, dass Sie es verwenden und es anderen Personen empfehlen. Aber wie beim-Hilfsprogramm sollten Sie darauf achten, die Sympathie in Bezug auf die Verwendbarkeit nicht zu verwechseln.
+Die Freundlichkeit ist in einem Produkt immer ein wünschenswertes Merkmal. Wenn Menschen das Produkt mag, verwenden sie es eher und empfehlen es anderen Personen. Wie beim -Hilfsprogramm sollten Sie jedoch darauf achten, dass Sie die Benutzerfreundlichkeit nicht mit der Nutzbarkeit verwechseln.
 
-Personen, die sich häufig wie ein Produkt befinden, aus Gründen, die nicht mit dem Hilfsprogramm Sie werden möglicherweise auf den Stil oder den Status, den Sie dem Produkt zuweist, erhalten. Benutzer sind in der Regel sehr nutzbare Produkte, aber Sie sollten nicht davon ausgehen, dass ein bekanntes Produkt verwendbar ist.
+Menschen gefällt ein Produkt häufig aus Gründen, die nicht mit dem Nutzen und der Nutzbarkeit in Zusammenhang stehen. Sie sind möglicherweise an ihrem Stil oder dem Status, den sie glauben, dass das Produkt ihnen überträgt, ungniert. Menschen möchten in der Regel hochverfetzbare Produkte, aber Sie sollten nicht davon ausgehen, dass ein gut gefälltes Produkt verwendet werden kann.
 
-Die Nutzbarkeit besteht darin, ob eine Person das Produkt verwenden kann, um die Aufgaben auszuführen, die Sie ausführen müssen. Das Testen der Benutzerfreundlichkeit misst primär die Leistung und nicht die bevorzugte. Allerdings können standardisierte Fragebögen verwendet werden, um die Einstellungen über mehrere Produkte hinweg zu messen.
+Bei der Nutzbarkeit geht es darum, ob eine Person das Produkt verwenden kann, um die Aufgaben auszuführen, die sie ausführen muss. Benutzerfreundlichkeitstests misst in erster Linie die Leistung, nicht die Einstellung. Standardisierte Fragekataloge können jedoch verwendet werden, um Präferenzen produktübergreifend zu messen.
 
-### <a name="discovery-vs-learning-vs-efficiency"></a>Ermittlung im Vergleich zu lernen und Effizienz
+### <a name="discovery-vs-learning-vs-efficiency"></a>Ermittlung im Vergleich zu Learning im Vergleich zur Effizienz
 
-Es gibt viele Aspekte der Verwendbarkeit, aber in der Regel bezieht sich der Begriff auf die Attribute der Ermittlung, des Lernens und der Effizienz.
+Es gibt viele Aspekte der Benutzerfreundlichkeit, aber normalerweise bezieht sich der Begriff speziell auf die Attribute der Ermittlung, des Lernens und der Effizienz.
 
--   Die Ermittlung umfasst das Suchen und Auffinden der Funktion eines Produkts als Reaktion auf einen bestimmten Bedarf. Durch das Testen der Benutzerfreundlichkeit können Sie feststellen, wie lange ein Benutzer das Auffinden eines Features und die Anzahl der Fehler (falsche Entscheidungen zum Speicherort) des Benutzers auf dem Weg nimmt.
--   Learning bezieht sich auf den Prozess, mit dem der Benutzer versteht, wie ein ermitteltes Feature verwendet wird, um eine Aufgabe abzuschließen. Benutzerbarkeits Tests können bestimmen, wie lange dieser Prozess dauert und wie viele Fehler der Benutzer beim Erlernen des Features trifft.
--   Effizienz bezieht sich auf den Punkt, an dem der Benutzer die Funktion "gemasterte" hat, und verwendet diese, ohne dass weitere Kenntnisse erforderlich sind. Mithilfe von Nutzbarkeits Tests kann festgelegt werden, wie lange es dauert, bis der erfahrene Benutzer die erforderlichen Schritte zur Verwendung der Funktion ausführt.
+-   Bei der Ermittlung wird das Feature eines Produkts als Reaktion auf eine bestimmte Notwendigkeit gesucht und gesucht. Benutzerfreundlichkeitstests können bestimmen, wie lange es dauert, bis ein Benutzer ein Feature findet, und wie viele Fehler (falsche Standortauswahl) der Benutzer dabei macht.
+-   Learning bezieht sich auf den Prozess, mit dem der Benutzer versteht, wie ein gefundenes Feature zum Abschließen einer Aufgabe verwendet wird. Benutzerfreundlichkeitstests können bestimmen, wie lange dieser Prozess dauert und wie viele Fehler der Benutzer beim Erlernen des Features macht.
+-   Effizienz bezieht sich auf den Punkt, an dem der Benutzer das Feature "gemastert" hat und es ohne weiteres Lernen verwendet. Benutzerfreundlichkeitstests können bestimmen, wie lange es dauert, bis der erfahrene Benutzer die erforderlichen Schritte zur Verwendung des Features ausgeführt hat.
 
-Diese drei grundlegenden Aspekte der Nutzbarkeit werden stark von der Art der Aufgabe und der Häufigkeit beeinflusst, mit der der Benutzer Sie ausführt. Einige Features werden so selten verwendet oder sind so komplex, dass der Benutzer Sie im Grunde jedes Mal erneut lernt. für diese Features entwickelt Microsoft häufig Assistenten, um den Benutzer durch den Prozess zu leiten.
+Diese drei grundlegenden Aspekte der Benutzerfreundlichkeit werden stark von der Art der aufgabe und der Häufigkeit beeinflusst, mit der der Benutzer sie ausführt. Einige Features werden so selten oder so komplex verwendet, dass der Benutzer sie jedes Mal erneut verleert. Für diese Features entwickelt Microsoft häufig Assistenten, um den Benutzer durch den Prozess zu führen.
 
-### <a name="slogans-do-not-work"></a>Slogans funktionieren nicht
+### <a name="slogans-do-not-work"></a>Keine Arbeit
 
-Software Entwickler stellen manchmal fest, dass einfache Slogans wie "das Produkt besser verwendbar" helfen, Probleme mit der Benutzerfreundlichkeit zu lösen. Eine positive Haltung zur Benutzerfreundlichkeit ist zwar wichtig, aber nur durch die ordnungsgemäße Verwendung von Benutzerfreundlichkeit mit normalen Benutzern, im Zusammenhang mit dem jeweiligen erstellten Produkt, können Entwickler die Informationen bereitstellen, die Sie benötigen, um ein Produkt zu erstellen, das die Anforderungen der Benutzer erfüllt. "Machen Sie das Produkt verwendbar", sollte der Slogan jedes Softwareentwicklers lauten, aber es ist nur sinnvoll, wenn der Entwickler weiß, welche Benutzerfreundlichkeit es bedeutet. Das Testen mit normalen Benutzern ist die zuverlässigste Möglichkeit, herauszufinden.
+Softwareentwickler denken manchmal, dass einfache Schwierigkeiten wie "Das Produkt nutzbarer machen" bei der Lösung von Problemen mit der Benutzerfreundlichkeit helfen. Eine positive Einstellung zur Benutzerfreundlichkeit ist zwar wichtig, aber nur ordnungsgemäße Benutzerfreundlichkeitstests mit normalen Benutzern im Kontext des spezifischen Produkts, das erstellt wird, können Entwicklern die Informationen bereitstellen, die sie benötigen, um ein Produkt zu erstellen, das die Anforderungen der Benutzer erfüllt. "Make the product more usable" (Das Produkt nutzbarer machen) sollte das Ziel jedes Softwareentwicklers sein, aber es ist nur sinnvoll, wenn der Entwickler weiß, was Benutzerfreundlichkeit bedeutet. Tests mit normalen Benutzern sind die zuverlässigste Möglichkeit, dies herauszufinden.
 
 ## <a name="why-is-usability-important"></a>Warum ist die Benutzerfreundlichkeit wichtig?
 
-Der Abschnitt beantwortet einige häufig gestellte Fragen dazu, warum die Benutzerfreundlichkeit wichtig ist und wie Sie Benutzer zentrierte Entwurfs Prinzipien in den Entwicklungsprozess integrieren können.
+Im Abschnitt werden einige häufig gestellte Fragen beantwortet, warum Benutzerfreundlichkeit wichtig ist und wie benutzerzentrierte Entwurfsprinzipien in den Entwicklungsprozess integriert werden.
 
-### <a name="why-should-you-care"></a>Warum sollten Sie sich für Sie interessieren?
+### <a name="why-should-you-care"></a>Warum sollten Sie sich darum kümmern?
 
-Wenn die Überlegungen zur Nutzbarkeit nicht bereits in den Produkt Entwurfsprozess integriert wurden, Fragen Sie sich vielleicht, warum dies notwendig oder wünschenswert ist. Schließlich ist es sicherlich möglich, ein funktionierendes, fehlerfreies Produkt zu veröffentlichen, ohne jegliche Nutzbarkeit auszuführen. Die Einbindung von Benutzer zentrierten Entwurfs Prinzipien kann jedoch zu einem viel verbesserten Produkt in verschiedenen Bereichen führen.
+Wenn benutzerfreundlichkeitsaspekte noch nicht in den Produktentwurfsprozess integriert wurden, fragen Sie sich vielleicht, warum dies notwendig oder wünschenswert ist. Schließlich ist es sicherlich möglich, ein funktionierendes, fehlerfreies Produkt frei zu geben, ohne benutzerfreundlichkeitsbasierte Aufgaben ausführen zu müssen. Die Integration benutzerzentrierter Entwurfsprinzipien kann jedoch in mehreren Bereichen zu einem deutlich verbesserten Produkt führen.
 
-Der beste Grund für die Durchführung von Nutzbarkeits Tests besteht darin, die Anzahl der Support Anrufe durch Benutzer zu verringern. Schlechte Nutzbarkeit ist ein wichtiger Grund, warum Benutzer den technischen Support von Software anrufen, und jeder Softwareunternehmen und Informationsdienste-Manager weiß, wie teuer der Produktsupport sein kann. Außerdem erhöht das Berechnen von Benutzern für die Unterstützung die potenziellen Unzufriedenheit mit dem Produkt. Wenn Benutzer die Verwendung Ihres Produkts leicht finden, müssen Sie nicht so häufig technische Unterstützung erhalten.
+Der beste Grund für Benutzerfreundlichkeitstests ist die Reduzierung der Anzahl von Supportanrufen von Benutzern. Eine schlechte Benutzerfreundlichkeit ist ein hauptgrund dafür, dass Benutzer softwaretechnische Supportzeilen aufrufen und jeder Softwareunternehmensleiter und Information Services-Manager weiß, wie teuer der Produktsupport sein kann. Darüber hinaus erhöht sich die potenzielle Unzufriedenheit der Benutzer mit dem Produkt. Wenn Es für Benutzer einfach ist, Ihr Produkt zu verwenden, müssen sie nicht so oft technischen Support anrufen.
 
-Für Software, die für die interne Verwendung erstellt wurde, ist der beste Grund für die Verwendbarkeit ein wichtiger Bestandteil des Entwicklungsprozesses, die Trainingskosten zu reduzieren. Ein sehr nutzbares Produkt ist für Benutzer viel einfacher zu erlernen als eine, bei der die Benutzerfreundlichkeit keine hohe Priorität hatte. Benutzer erlernen Features schneller und bewahren ihr Wissen länger auf, was sich direkt mit geringeren Schulungskosten und-Zeit korreliert.
+Für Software, die für die interne Verwendung erstellt wird, besteht der nächste beste Grund, die Benutzerfreundlichkeit zu einem wichtigen Bestandteil des Entwicklungsprozesses zu machen, in der Reduzierung der Trainingskosten. Ein hochgradig verwendbares Produkt ist für Benutzer viel einfacher zu erlernen als ein Produkt, bei dem die Benutzerfreundlichkeit keine hohe Priorität hatte. Benutzer lernen Features schneller und behalten ihr Wissen länger bei, was direkt mit verringerten Trainingskosten und -zeit korreliert.
 
-Nutzbarkeits Tests helfen, die Benutzer Akzeptanz zu verbessern. Die Annahme ergibt sich aus einer Reihe von Faktoren, einschließlich Nutzbarkeit, Hilfsprogramm und Likeability. Für Einzelhandelsprodukte korreliert die Benutzer Akzeptanz häufig direkt mit dem wiederholten Kauf oder der Treue, was bedeutet, dass der Benutzer das Produkt wahrscheinlich für andere empfehlen wird. Bei internen Anwendungen korreliert die Benutzer Akzeptanz der Bereitschaft, die Software zu verwenden, um die Aufgaben auszuführen, für die Sie entworfen wurde, wodurch die Produktivität gesteigert werden kann. Das Erhöhen der Nutzbarkeit ist einer der Faktoren, die zu einer verbesserten Benutzer Akzeptanz beitragen können.
+Benutzerfreundlichkeitstests helfen dabei, die Benutzerakzeptanz zu verbessern. Die Akzeptanz ergibt sich aus einer Reihe von Faktoren, z. B. Benutzerfreundlichkeit, Nützlichkeit und Anpassungsfähigkeit. Bei Einzelhandelsprodukten korreliert die Benutzerakzeptanz häufig direkt mit dem wiederholten Kauf oder der Bindung, was bedeutet, dass der Benutzer das Produkt wahrscheinlich anderen empfehlen wird. Bei internen Anwendungen korreliert die Benutzerakzeptanz mit der Bereitschaft, die Software für die Aufgaben zu verwenden, für die sie entworfen wurde, wodurch die Produktivität gesteigert wird. Die Verbesserung der Benutzerfreundlichkeit ist einer der Faktoren, die zu einer höheren Benutzerakzeptanz beitragen können.
 
-Die Nutzbarkeit kann Ihnen helfen, ihre Produkte von denjenigen ihrer Mitbewerber zu unterscheiden. Wenn zwei Produkte im-Hilfsprogramm im Wesentlichen gleich sind, wird das Produkt mit besserer Benutzerfreundlichkeit wahrscheinlich als überlegen angesehen. Außerdem haben die Windows-Richtlinien für Aussehen und Verhalten und begleitende Programmierung das Spiel Feld für die grundlegende Benutzeroberfläche festgestellt, sodass viele Programme, die ähnliche Funktionen bedienen, etwas ähnliches Aussehen und agieren. Diese Ähnlichkeiten bedeuten, dass kleine Unterschiede bei der Nutzbarkeit eine große Auswirkung auf die Benutzereinstellung haben können.
+Die Benutzerfreundlichkeit kann dabei helfen, Ihre Produkte von denen Ihrer Mitbewerber zu unterscheiden. Wenn zwei Produkte im Wesentlichen gleich sind, wird das Produkt mit besserer Benutzerfreundlichkeit wahrscheinlich als überlegen betrachtet. Darüber hinaus haben die Windows-Look-and-Feel und die zugehörigen Programmierrichtlinien die Spielregeln für die grundlegende Benutzeroberfläche ge gleicht, sodass viele Programme, die ähnliche Funktionen bedienen, ähnlich aussehen und agieren. Diese Ähnlichkeiten bedeuten, dass kleine Unterschiede bei der Benutzerfreundlichkeit einen großen Einfluss auf die Benutzereinstellung haben können.
 
-Schließlich wird jedes Produkt auf die Verwendbarkeit getestet. Benutzer führen jedes Mal, wenn Sie Sie verwenden, Nutz barkeits Tests für das Produkt aus, und Sie geben ihr Ergebnis durch die fortgesetzte Verwendung oder das Fehlen aus. Das Testen des Produkts vor der Freigabe auf dem Markt kann dazu beitragen, dass die Benutzererfahrung mit dem Produkt positiv ist.
+Schließlich wird jedes Produkt schließlich auf Benutzerfreundlichkeit getestet. Benutzer führen jedes Mal Benutzerfreundlichkeitstests für das Produkt durch, wenn sie es verwenden, und sie rendern ihr Diktat durch ihre weitere Verwendung oder deren Fehlen. Wenn Sie das Produkt testen, bevor es auf den Markt gebracht wird, können Sie sicherstellen, dass die Erfahrungen der Benutzer mit dem Produkt positiv sind.
 
-### <a name="what-does-it-cost"></a>Was kostet dies?
+### <a name="what-does-it-cost"></a>Was kostet es?
 
-Software Entwickler und Projektmanager sind häufig besorgt, dass die Initiierung eines benutzerorientierten Entwurfsprozesses und die Durchführung ordnungsgemäßer benutzerbarkeits Tests unzulässige Zeit und Geld erfordern. Die Realität ist, dass die Kosten in Zeit und Geld, die sich auf den Benutzer konzentrieren, häufig relativ klein sind, und sicherlich auch im Vergleich zu den Kosten, die nicht durchgeführt werden müssen.
+Softwareentwickler und Projektleiter machen sich häufig Sorgen, dass das Initiieren eines benutzerzentrierten Entwurfsprozesses und das Durchführen von geeigneten Benutzerfreundlichkeitstests nicht akzeptable Zeit und Geld erfordern. Die Realität ist, dass die Zeit- und Geldkosten, die sich auf den Benutzer konzentrieren, häufig relativ gering sind und dies im Vergleich zu den Kosten, die dafür nicht zu tun sind.
 
-Berücksichtigen Sie z. b. die Kosten in Zeit und Geld, um Entwurfs Revisionen zu spät im Entwicklungszeitraum zu erstellen, und zwar im Gegensatz zu früheren Versionen, wenn sich das Produkt noch auf der Zeichnungs Platine befindet. Wenn Sie warten, bis der Beta Zeitraum die Benutzer für das Produkt verfügbar macht, um die Benutzerfreundlichkeit zu testen, kann dies dazu führen, dass Teile des Programms, die viel Zeit für die Entwicklung benötigte, nicht mehr benötigt werden. Und warten Sie, bis das Produkt tatsächlich freigegeben ist, und nehmen Sie dann Änderungen auf der Grundlage von negativem Feedback oder der Unterstützung eines schlechten Entwurfs vor
+Berücksichtigen Sie beispielsweise die Zeit- und Geldkosten für die Erstellung von Entwurfsrevisionen zu einem späteren Zeitpunkt im Entwicklungszyklus als früher, wenn sich das Produkt noch auf dem Zeichenbrett befindet. Wenn Sie bis zur Betaphase warten, um Benutzer für Benutzerfreundlichkeitstests für das Produkt verfügbar zu machen, kann dies dazu führen, dass Teile des Programms sehr lange entwickelt wurden. Und wenn Sie warten, bis das Produkt tatsächlich freigegeben wird, und dann Änderungen basierend auf negativem Feedback oder unterstützung eines schlechten Designs vornehmen, können die Kosten aufgrund hoher Produktsupportkosten oder schlechter Aufnahme durch Benutzer unermesslich höher sein.
 
-Eine sinnvolle Nutzbarkeits Studie kann in der Regel in etwa zwei Wochen ausgeführt werden und die Zeit und die Kosten für Änderungen im Entwicklungs Durchlauf erheblich verkürzen. Die Kosten für die Durchführung von Tests variieren in Abhängigkeit von der Art des Produkts und den Teilen der Schnittstelle, die getestet werden.
+Eine sinnvolle Benutzerfreundlichkeitsstudie kann in der Regel in etwa zwei Wochen oder weniger durchgeführt werden und kann die Zeit und Kosten für Änderungen zu einem späteren Zeitpunkt im Entwicklungszyklus erheblich reduzieren. Die Kosten für die Durchführung von Tests variieren je nach Art des Produkts und den Teilen der getesteten Schnittstelle.
 
-Stellen Sie sich das Testen der Benutzerfreundlichkeit als vergleichbar mit Code Tests vor. Erfolgreiches Projekt-Manager-Konto für Code Tests beim Planen eines Entwicklungsprojekts. Sie sehen Sie nicht als etwas zusätzliches, das auf den Projektplan und das Budget hin zu tackiert werden muss. Stattdessen akzeptieren Projektmanager Code Tests als Kosten für Geschäftsabläufe, da die Alternative so viel teurer ist. Das gleiche gilt für benutzerbarkeits Tests.
+Stellen Sie sich das Testen der Benutzerfreundlichkeit so vor, als würden Sie es mit Codetests vergleichbar machen. Erfolgreiche Projektmanager berücksichtigen Codetests bei der Planung eines Entwicklungsprojekts. Sie sehen es nicht als etwas Zusätzliches, das dem Projektzeitplan und -budget entspricht. Stattdessen akzeptieren Projektmanager Codetests als Kosten für die Geschäftstätigkeit, da die Alternative so viel teurer ist. Dasselbe gilt für Benutzerfreundlichkeitstests.
 
-### <a name="how-do-i-increase-usability"></a>Wie kann ich die Nutzbarkeit erhöhen?
+### <a name="how-do-i-increase-usability"></a>Wie kann ich die Benutzerfreundlichkeit erhöhen?
 
-Wenn Sie die Wichtigkeit der Nutzbarkeit kennen und verstehen, sind Softwareentwickler manchmal dazu verleitet, Nutzbarkeit hinzuzufügen, als wäre es ein Bestandteil, der einfach einem Produkt hinzugefügt werden kann, um ihn verwendbar zu machen. Stattdessen sollte die Verwendbarkeit Teil des Entwurfsprozesses selbst sein, statt eines "Thing", das dem Prozess hier oder dort hinzugefügt wird. Der Grund für die Benutzerfreundlichkeit der Benutzerfreundlichkeit liegt darin, dass die Benutzerfreundlichkeit auf "Benutzer Fokus" und "benutzerzentrierter Entwurf" verweist. Der Benutzer zentrierte Entwurf umfasst mehr als nur das befolgen eines Satzes von Regeln, die die Schaltfläche und die Menü Platzierung in einer Schnittstelle steuern. Das Testen der Benutzerfreundlichkeit bietet die Möglichkeit, die Entwurfsarbeit zu überprüfen. Es ist keine Möglichkeit, einem Produkt "Benutzerfreundlichkeit" hinzuzufügen.
+Nach dem Lesen und Verstehen der Bedeutung der Benutzerfreundlichkeit sind Softwareentwickler manchmal verlockend, benutzerfreundlicher zu sein, als ob es sich um eine Freundlichkeit handelte, die einfach zu einem Produkt hinzugefügt werden kann, um es besser nutzbar zu machen. Stattdessen sollte benutzerfreundlichkeit Teil des Entwurfsprozesses selbst sein, anstatt ein "Ding", das dem Prozess hier oder dort hinzugefügt wird. Der Grund dafür, dass Benutzerfreundlichkeitsexperten auf "Benutzerfokus" und "benutzerzentriertes Design" verweisen, ist, dass die Benutzerfreundlichkeit davon abhängt, dass die Anforderungen der Benutzer für den Entwurfsprozess zentral bleiben. Benutzerzentriertes Design umfasst notwendigerweise mehr als nur das Befolgen einer Reihe von Regeln, die die Platzierung von Schaltflächen und Menüs in einer Schnittstelle steuern. Benutzerfreundlichkeitstests sind eine Möglichkeit, die Entwurfsarbeit zu überprüfen. Es ist keine Möglichkeit, die Benutzerfreundlichkeit eines Produkts zu "erweitern".
 
-Gould, Boies und Lewis (1991) identifizieren vier wichtige Grundsätze des Benutzer zentrierten Entwurfs:
+Die folgenden vier wichtigen Grundsätze des benutzerzentrierten Designs werden von Denkerld, Boies und Einem (1991) identifiziert:
 
--   Der frühe Fokus auf Benutzer.
+-   Frühzeitiger Fokus auf Benutzer.
 
     Entwickler sollten sich darauf konzentrieren, die Anforderungen der Benutzer frühzeitig im Entwurfsprozess zu verstehen.
 
 -   Integrierter Entwurf.
 
-    Alle Aspekte des Entwurfs sollten parallel und nicht nacheinander weiterentwickelt werden. Sorgen Sie dafür, dass der interne Entwurf des Produkts den Anforderungen der Benutzeroberfläche entspricht.
+    Alle Aspekte des Entwurfs sollten parallel und nicht nacheinander weiterentwickelt werden. Halten Sie den internen Entwurf des Produkts mit den Anforderungen der Benutzeroberfläche konsistent.
 
--   Frühe und fortlaufende Tests.
+-   Frühe und kontinuierliche Tests.
 
-    Der einzige derzeit realisierbare Ansatz für den Software Entwurf ist ein empirischer Ansatz: der Entwurf funktioniert, wenn echte Benutzer entscheiden, ob er funktioniert. Das Integrieren von Nutzbarkeits Tests im gesamten Entwicklungsprozess bietet Benutzern die Möglichkeit, Feedback zum Entwurf zu liefern, bevor das Produkt veröffentlicht wird.
+    Der derzeit einzige mögliche Ansatz für den Softwareentwurf ist ein empirischer Ansatz: Der Entwurf funktioniert, wenn echte Benutzer entscheiden, dass er funktioniert. Die Integration von Benutzerfreundlichkeitstests im gesamten Entwicklungsprozess gibt Benutzern die Möglichkeit, Feedback zum Entwurf zu übermitteln, bevor das Produkt veröffentlicht wird.
 
--   Iterativer Entwurf.
+-   Iteratives Design.
 
-    Große Probleme maskieren häufig kleine Probleme. Designer und Entwickler sollten den Entwurf iterativ durch Tests überprüfen.
+    Große Probleme maskieren häufig kleine Probleme. Designer und Entwickler sollten den Entwurf iterativ durch Testläufe überarbeiten.
 
 ### <a name="why-should-i-involve-users"></a>Warum sollte ich Benutzer einbeziehen?
 
-Entwickler sollten erkennen, dass es sich nicht um typische Benutzer handelt. Sie verfügen über genauere Kenntnisse und Kenntnisse des Systems, das Sie entwickeln, als der durchschnittliche Benutzer jemals. Aspekte der Schnittstelle, die für die meisten Benutzer unklar oder verwirrend sind, sind daher für jemanden, der an dem Projekt gearbeitet hat, völlig klar. Einige Softwareentwickler sind in der Lage, mit dem durchschnittlichen Benutzer zu einem gewissen Grad zu arbeiten, aber es gibt keinen Ersatz für die tatsächlichen Interaktionen der tatsächlichen Benutzer mit dem Produkt.
+Entwickler sollten erkennen, dass sie keine typischen Benutzer sind. Sie verfügen über ein tieferes Wissen und Verständnis des Systems, das sie entwickeln, als der durchschnittliche Benutzer jemals. Aspekte der Schnittstelle, die für die meisten Benutzer unklar oder verwirrend sind, können daher für jemanden, der am Projekt gearbeitet hat, eindeutig sein. Einige Softwareentwickler sind in der Lage, sich bis zu einem gewissen Grad mit dem durchschnittlichen Benutzer zu beschäftigen, aber es gibt keinen Ersatz für die tatsächlichen Interaktionen der tatsächlichen Benutzer mit dem Produkt.
 
-Dementsprechend werden durch benutzerorientierte Softwareentwickler häufig bessere Entwürfe und somit bessere Produkte erzielt, wenn Sie sich frühzeitig auf die Anforderungen typischer Benutzer konzentrieren und den Entwurf auf der Grundlage von Benutzer Tests überarbeiten.
+Entsprechend erzeugen benutzerorientierte Softwareentwickler bessere Entwürfe und somit bessere Produkte, indem sie sich frühzeitig auf die typischen Benutzeranforderungen konzentrieren und den Entwurf basierend auf Benutzertests häufig überarbeiten.
 
-Ein besseres Design ergibt eine bessere Akzeptanz durch Benutzer. Der Vorteil der Einzelhandels Software ist offensichtlich: mehr Umsätze. Die Akzeptanz ist auch bei der für die interne Verwendung entwickelten Software wichtig: ein erhöhter Fokus auf den Benutzer zentrierten Entwurf führt zu einer höheren Produktivität und einem verringerten Bedarf an Support. Die sichtbare Einbindung von Benutzern ab dem Anfang der Entwicklung demonstriert auch ein Interesse an ihren Anliegen und Anforderungen, was die Bereitschaft der Entwicklungsarbeit erhöht.
+Durch einen besseren Entwurf wird die Akzeptanz der Benutzer verbessert. Der Vorteil von Einzelhandelssoftware ist offensichtlich: Umsatzsteigerung. Die Akzeptanz ist auch bei Software wichtig, die für die interne Verwendung entwickelt wurde: Ein erhöhter Fokus auf benutzerzentriertes Design führt zu einer höheren Produktivität und einem verringerten Supportbedarf. Die sichtbare Einbeziehung von Benutzern von Beginn der Entwicklung an zeigt auch ein Interesse an ihren Belangen und Bedürfnissen, was ihre Bereitschaft erhöht, bei den Entwicklungsbemühungen zu helfen.
 
-### <a name="cant-i-just-follow-guidelines"></a>Kann ich nicht einfach die Richtlinien befolgen?
+### <a name="cant-i-just-follow-guidelines"></a>Kann ich die Richtlinien nicht einfach befolgen?
 
-Microsoft hat einen Satz von Schnittstellen Richtlinien für die Windows Computing-Plattform entwickelt, um sicherzustellen, dass Windows-Programme ein konsistentes Erscheinungsbild haben. Andere Unternehmen haben ähnliche Richtlinien für andere Computerplattformen entwickelt, und Nutz Fachexperten wie Jakob Nielsen haben ausführlich auf das Entwerfen verwendbarer Webseiten geschrieben. Dank der Fülle an Informationen, die in diesen Themen verfügbar sind, ist es für Designer manchmal sehr üblich, dass Sie sich an Richtlinien und Standards halten, sodass Sie nutzbare Produkte entwickeln können.
+Microsoft hat eine Reihe von Schnittstellenrichtlinien für die Windows Computingplattform entwickelt, um sicherzustellen, dass Windows Programme ein einheitliches Aussehen und Gefühl aufweisen. Andere Unternehmen haben ähnliche Richtlinien für andere Computingplattformen entwickelt, und Benutzerfreundlichkeitsexperten wie Wies Nielsen haben ausführlich über das Entwerfen verwendbarer Webseiten geschrieben. Mit der Vielzahl von Informationen zu diesen Themen sind Designer manchmal der Meinung, dass die strikte Einhaltung von Richtlinien und Standards alles ist, was erforderlich ist, um verwendbare Produkte zu erzeugen.
 
-Das Problem bei diesem Ansatz ist, dass Richtlinien grundsätzlich allgemein sind. Richtlinien müssen auf eine Vielzahl von Fällen angewendet werden und sollten daher nicht immer die beste Vorgehensweise für die jeweilige entwickelte Anwendung vorschreiben. Die Einhaltung eines gut geschriebenen Satzes von Richtlinien kann beim Entwerfen einer konsistenten Schnittstelle hilfreich sein, aber Sie können nicht gewährleisten, dass Sie Ihre Anwendung ist, es sei denn, Sie wird mit echten Benutzern getestet. Wenn Sie Richtlinien verwenden, sollten Sie Sie nicht wie ein Cookbook verwenden, bei dem Richtlinien auf das Beste aus allen Ergebnissen hinweisen. Zwei Entwickler können dieselbe Richtlinie auf zwei verschiedene Arten implementieren, und beide Implementierungen sind möglicherweise nicht gleichermaßen für die Situation geeignet. Gelegentlich kann eine strikte Einhaltung von Richtlinien zu schlechten Ergebnissen oder zu Konflikten zwischen Richtlinien führen. Nur Benutzer zentrierte Entwürfe können dabei helfen, diese Probleme zu leeren, bevor Sie zu Problemen werden.
+Das Problem bei diesem Ansatz besteht darin, dass Richtlinien grundsätzlich allgemein sind. Richtlinien müssen für eine Vielzahl von Fällen gelten und daher nicht immer die beste Vorgehensweise für die bestimmte Anwendung vorgeben, die entwickelt wird. Die Einhaltung eines gut geschriebenen Satzes von Richtlinien kann beim Entwurf einer konsistenten Schnittstelle hilfreich sein, aber sie können die Usablilität nur garantieren, wenn sie mit echten Benutzern getestet wurde. Wenn Sie Richtlinien verwenden, verwenden Sie sie nicht wie ein Cookbook, in dem Richtlinien den Weg zum Besten aller Ergebnisse weisen. Zwei Entwickler können die gleiche Richtlinie auf zwei verschiedene Arten implementieren, und beide Implementierungen sind für die Situation möglicherweise nicht gleichermaßen geeignet. Gelegentlich kann die strikte Einhaltung von Richtlinien zu schlechten Ergebnissen oder zu Konflikten zwischen Richtlinien führen. Nur ein benutzerzentrierter Entwurf kann dabei helfen, diese Probleme zu leeren, bevor sie zu Problemen werden.
 
-Eine andere Möglichkeit, dies zu überdenken, besteht darin, den Benutzer zentrierten Entwurf als Arbiter von Entwurfsentscheidungen und nicht als Richtlinien für die Benutzeroberfläche zu betrachten.
+Eine andere Möglichkeit, dies zu berücksichtigen, ist: Lassen Sie den benutzerzentrierten Entwurf die Entscheidungsberechtigung für Entwurfsentscheidungen, nicht die Richtlinien für die Benutzeroberfläche.
 
-### <a name="do-i-need-to-build-a-usability-lab"></a>Muss ich ein Nutz barkeits Labor erstellen?
+### <a name="do-i-need-to-build-a-usability-lab"></a>Muss ich ein Benutzerfreundlichkeitslab erstellen?
 
-Gehen Sie nicht davon aus, dass die Benutzerfreundlichkeit für die Benutzerfreundlichkeit einen Commit für ein kostspieliger Lab durchführt. Um sicher zu sein, ist es für Unternehmen, die viele Tests durchführen, sehr praktisch, dedizierte Labs zu erstellen, und Benutzerfreundlichkeit für die Benutzerfreundlichkeit verfügen häufig über eine große Bandbreite an Einrichtungen und Ausrüstung, um Ihre Clients anzubieten Es können jedoch nützliche Nutzbarkeits Tests in einer Vielzahl von Einstellungen und Umständen ausgeführt werden.
+Gehen Sie nicht davon aus, dass Benutzerfreundlichkeitstests die Verpflichtung zu einem teuren Lab mit Kameras mit Deckenbelegung, Einwegspiegeln und anderen Fokusgruppenaufnahmen bedeuten. Allerdings ist es für Unternehmen, die viele Tests durchführen, häufig praktisch, dedizierte Labs zu erstellen, und Benutzerfreundlichkeitsberater verfügen häufig über eine Vielzahl von Einrichtungen und Geräten, die ihren Kunden zur Verfügung stehen. Aber nützliche, gültige Benutzerfreundlichkeitstests können in einer Vielzahl von Einstellungen und Umständen durchgeführt werden.
 
-Ein Ansatz besteht darin, einfach einen Tester zu haben? jemand, der sich mit der Durchführung von Menschen Teilnehmer Studien und dem Sammeln von Daten vertraut gemacht hat. Dies kann problemlos in einem Konferenzraum oder in einem Büro durchgeführt werden. Weitere Informationen zu Testzwecken finden Sie im Abschnitt "Dumas und Redish" in [anderen Ressourcen](other-resources.md).
+Ein Ansatz besteht darin, einfach einen Tester zu haben? Jemand, der mit dem Durchführen menschlicher Teilnehmerstudien und dem Sammeln von Daten vertraut ist? befindet sich hinter einem Benutzer, während er arbeitet, und beobachtet den Benutzer, der Aufgaben ausführt. Dies kann problemlos in einem Konferenzraum oder büro erfolgen. Weitere Informationen zum Testen durch Beobachtung finden Sie im Eintrag Dumas und Redish unter [Andere Ressourcen.](other-resources.md)
 
-Wenn Nutzbarkeits Tests entwickelt werden und mehr beteiligt sind, können Geräte wie z. b. eine Videokamera, eine unidirektionale Spiegelung oder Tools, mit denen Sie den Monitor eines Benutzers in Echtzeit anzeigen und aufzeichnen können, hinzugefügt werden.
+Wenn Benutzerfreundlichkeitstests entwickelt werden und immer komplexer werden, können Geräte wie eine Videokamera, ein eindirektionler Spiegel oder Tools hinzugefügt werden, mit denen Sie den Monitor eines Benutzers in Echtzeit anzeigen und aufzeichnen können.
 
-Alternativ können Tests auch an benutzerbarkeits Berater ausgelagert werden. Der folgende Abschnitt enthält Tipps zum finden der richtigen Berater.
+Alternativ können Tests an Benutzerfreundlichkeitsberater ausgelagert werden. Der folgende Abschnitt enthält Tipps zum Suchen der richtigen Berater.
 
-### <a name="how-do-i-get-started"></a>Wie gehe ich vor?
+### <a name="how-do-i-get-started"></a>Wie Erste Schritte ich?
 
-Nachdem die Entscheidung getroffen wurde, Benutzer zentrierte Entwurfs Prinzipien in den Entwicklungsprozess einzubinden, müssen Sie entscheiden, ob Sie Nutz barkeits Experten einstellen oder die Nutzbarkeits Tests an einen Hersteller auslagern möchten.
+Nachdem Sie sich entschieden haben, benutzerzentrierte Entwurfsprinzipien in den Entwicklungsprozess zu integrieren, müssen Sie entscheiden, ob Sie Benutzerfreundlichkeitsexperten einstellen oder die Benutzerfreundlichkeitstests an einen Anbieter auslagern möchten.
 
-Die Benutzerfreundlichkeit der Nutzbarkeit (Professionals Professionals Association, UPA) verfügt über einen Hersteller Leit Faden, der Ihnen helfen kann,
+Die Usability Professionals Association (UPA) verfügt über einen Anbieterleitfaden, der Ihnen bei der Suche nach Nutzbarkeitsberatern helfen kann.
 
-Einige Beratungsgruppen können auch beim Einrichten von Nutzbarkeits Labs helfen oder ein internes Nutz barkeits Programm entwickeln, um Verwendbarkeits Prinzipien in den Entwurfsprozess einzubeziehen.
+Einige Beratungsgruppen können auch dabei helfen, Benutzerfreundlichkeitslabs einzurichten oder ein eigenes Benutzerfreundlichkeitsprogramm zu entwickeln, um Benutzerfreundlichkeitsprinzipien in den Entwurfsprozess zu integrieren.
 
-Wenn Sie Nutz barkeits Experten einstellen, verfügt die menschliche Faktoren und die Ergonomie-Gesellschaft über einen Platzierungs Dienst, mit dem Sie potenzielle Mitarbeiter finden können. Viele Nutz Fachexperten gehören auch zur ACM Special Interest Group bei Computer-Human Interaktion (SIGCHI) und UPA. Platzieren Sie Arbeits anzeigen in ihren Veröffentlichungen oder auf ihren Konferenzen.
+Wenn Sie Benutzerfreundlichkeitsexperten einstellen, verfügt die Human Factors and Placements Society über einen Platzierungsdienst, der bei der Suche nach potenziellen Mitarbeitern helfen kann. Viele Benutzerfreundlichkeitsexperten gehören auch zu ACM Special Interest Group on Computer-Human Interaction (SIGCHI) und UPA. Stellen Sie Inserate für die Arbeit in ihren Veröffentlichungen oder auf ihren Konferenzen ein.
 
-Unabhängig davon, welche Route verwendet wird, denken Sie daran, dass es sich um Testdienste Das Prinzip, dass Designer keine typischen Benutzer sind, gilt auch für Nutz Fachanwender.
+Denken Sie daran, dass es sich dabei um Testdienste handelt, unabhängig davon, welche Route ausgeführt wird. Das Prinzip, dass Designer keine typischen Benutzer sind, gilt auch für Benutzerfreundlichkeitsexperten.
 
-Weitere Informationen zu diesen Unternehmen und Organisationen sowie weitere Informationen zum Testen der Benutzerfreundlichkeit und zum Benutzer zentrierten Entwurf finden Sie unter [andere Ressourcen](other-resources.md).
+Weitere Informationen zu diesen Unternehmen und Organisationen sowie weitere Informationen zu Benutzerfreundlichkeitstests und benutzerzentriertem Design finden Sie unter [Weitere Ressourcen.](other-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

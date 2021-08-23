@@ -1,21 +1,21 @@
 ---
-description: Manifestressourcenbasierte Anbieter verwenden ein Manifest, um das Schema für Ihre Ereignisse zu veröffentlichen.
+description: Manifestbasierte Anbieter verwenden ein Manifest, um das Schema für ihre Ereignisse zu veröffentlichen.
 ms.assetid: 37d1a504-ecc7-4df3-bf31-546debb62123
-title: Veröffentlichen des Ereignis Schemas für einen Manifest-basierten Anbieter
+title: Veröffentlichen des Ereignisschemas für einen manifestbasierten Anbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b4c100dd041d5bd454d8ec64d40fcc9a953d8fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 70d2ffd6d991e90ea19d20e78d3d18faff3d24c158d285834b23838b10e78239
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069830"
 ---
-# <a name="publishing-your-event-schema-for-a-manifest-based-provider"></a>Veröffentlichen des Ereignis Schemas für einen Manifest-basierten Anbieter
+# <a name="publishing-your-event-schema-for-a-manifest-based-provider"></a>Veröffentlichen des Ereignisschemas für einen manifestbasierten Anbieter
 
-[](about-event-tracing.md) Manifestressourcenbasierte Anbieter verwenden ein Manifest, um das Schema für Ihre Ereignisse zu veröffentlichen. Das Manifest ist in die Binärdatei des Anbieters eingebettet, was bedeutet, dass der Anbieter auf dem Computer verfügbar sein muss, damit der Consumer seine Ereignisse verarbeiten kann. Ausführliche Informationen zum Schreiben eines Manifests finden Sie unter [Schreiben eines Instrumentierungs Manifests](../wes/writing-an-instrumentation-manifest.md).
+[Manifestbasierte](about-event-tracing.md) Anbieter verwenden ein Manifest, um das Schema für ihre Ereignisse zu veröffentlichen. Das Manifest ist in die Anbieterbinärdatei eingebettet. Das bedeutet, dass der Anbieter auf dem Computer verfügbar sein muss, damit der Consumer seine Ereignisse nutzen kann. Ausführliche Informationen zum Schreiben eines Manifests finden Sie unter [Schreiben eines Instrumentierungsmanifests.](../wes/writing-an-instrumentation-manifest.md)
 
-Im folgenden Manifest werden die Ereignisse definiert, die in den Beispielen im Abschnitt [Bereitstellen von Ereignissen](providing-events.md) und Verb [raubenden Ereignissen](consuming-events.md) des Dokuments verwendet werden.
+Das folgende Manifest definiert die Ereignisse, die in Beispielen im Abschnitt [Bereitstellen von Ereignissen](providing-events.md) und Nutzen von [Ereignissen](consuming-events.md) des Dokuments verwendet werden.
 
 ``` syntax
 <!-- <?xml version="1.0" encoding="UTF-16"?> -->

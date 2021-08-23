@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentmissingfiledebackupexception-Konstruktor'
-title: Esentmissingfiledebackupexception-Konstruktor
+description: 'Weitere Informationen zu: EsentMissingFileToBackupException-Konstruktor'
+title: EsentMissingFileToBackupException-Konstruktor
 TOCTitle: 'EsentMissingFileToBackupException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentMissingFileToBackupException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentmissingfiletobackupexception.esentmissingfiletobackupexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: baf7f1bfdee61906f534ac0a3f8c0eff0194a5cb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d676c7907932482711cf9451a3b2de4d99a62cb07aca7307f233baac125486ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359977"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119040678"
 ---
-# <a name="esentmissingfiletobackupexception-constructor"></a>Esentmissingfiledebackupexception-Konstruktor
+# <a name="esentmissingfiletobackupexception-constructor"></a>EsentMissingFileToBackupException-Konstruktor
 
-Initialisiert eine neue Instanz der esentmissingfiledebackupexception-Klasse.
+Initialisiert eine neue Instanz der EsentMissingFileToBackupException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentMissingFileToBackupException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentmissingfiledebackupexception-Klasse](./esentmissingfiletobackupexception-class.md)
+[EsentMissingFileToBackupException-Klasse](./esentmissingfiletobackupexception-class.md)
 
-[Esentmissingfile-backupexception-Member](./esentmissingfiletobackupexception-members.md)
+[EsentMissingFileToBackupException-Member](./esentmissingfiletobackupexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

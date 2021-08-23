@@ -1,7 +1,7 @@
 ---
-description: Speichert ein Datenobjekt und seine untergeordneten Elemente in einer x-Datei auf dem Datenträger.
+description: Speichert ein Datenobjekt und seine untergeordneten Elemente in einer X-Datei auf dem Datenträger.
 ms.assetid: a48cd1b2-d1e7-446b-8482-485ccdd59353
-title: 'ID3DXFileSaveObject:: Save-Methode (D3DX9Xof. h)'
+title: ID3DXFileSaveObject::Save-Methode (D3DX9Xof.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: c97c2ccf6c509aec1d217e3179c927fe2bb5a797
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a49c4776f9ce590d287869436b329ddf9a378e73f04f0127246fc890944ffee3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394125"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119563960"
 ---
-# <a name="id3dxfilesaveobjectsave-method"></a>ID3DXFileSaveObject:: Save-Methode
+# <a name="id3dxfilesaveobjectsave-method"></a>ID3DXFileSaveObject::Save-Methode
 
-Speichert ein Datenobjekt und seine untergeordneten Elemente in einer x-Datei auf dem Datenträger.
+Speichert ein Datenobjekt und seine untergeordneten Elemente in einer X-Datei auf dem Datenträger.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert wie folgt lauten: D3DXFERR \_ badobject.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert wie folgt sein: D3DXFERR \_ BADOBJECT.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem diese Methode erfolgreich ausgeführt wurde, können [**ID3DXFileSaveObject:: adddataobject**](id3dxfilesaveobject--adddataobject.md), [**ID3DXFileSaveData:: adddataobject**](id3dxfilesavedata--adddataobject.md) und [**ID3DXFileSaveData:: adddatareferenzierungsart**](id3dxfilesavedata--adddatareference.md) nicht mehr aufgerufen werden, bis ein neues [**ID3DXFile**](id3dxfile.md) -Objekt erstellt wird.
+Nachdem diese Methode erfolgreich ausgeführt wurde, können [**ID3DXFileSaveObject::AddDataObject**](id3dxfilesaveobject--adddataobject.md), [**ID3DXFileSaveData::AddDataObject**](id3dxfilesavedata--adddataobject.md) und [**ID3DXFileSaveData::AddDataReference**](id3dxfilesavedata--adddatareference.md) nicht mehr aufgerufen werden, bis ein neues [**ID3DXFile-Objekt**](id3dxfile.md) erstellt wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Nachdem diese Methode erfolgreich ausgeführt wurde, können [**ID3DXFileSaveObj
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Xof. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX9Xof.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 

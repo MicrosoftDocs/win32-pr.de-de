@@ -1,37 +1,37 @@
 ---
-description: Debug-Ausgabefunktionen
+description: Debuggen von Ausgabefunktionen
 ms.assetid: dfe44c8c-43ec-461f-952f-b87256b82ee6
-title: Debug-Ausgabefunktionen
+title: Debuggen von Ausgabefunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 87470b44717bb76c1a029bd885bb9149a4636b5d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 252e1020ca99bd5b4f2f46d7f2169fa6835dea83a25d599dba142f370bb794f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106342965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119537740"
 ---
-# <a name="debug-output-functions"></a>Debug-Ausgabefunktionen
+# <a name="debug-output-functions"></a>Debuggen von Ausgabefunktionen
 
 Die [DirectShow-Basisklassen](directshow-base-classes.md) stellen mehrere Makros zum Anzeigen von Debuginformationen bereit.
 
 
 
-| Funktion                                               | BESCHREIBUNG                                                                                          |
+| Funktion                                               | Beschreibung                                                                                          |
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [**Dbgcheckmodulelevel**](dbgcheckmodulelevel.md)     | Überprüft, ob die Protokollierung für die angegebenen Nachrichten Typen und die angegebene Ebene aktiviert ist.                             |
-| [**Dbgdumpobjectregiester**](dbgdumpobjectregister.md) | Zeigt Informationen zu aktiven Objekten an.                                                           |
-| [**Dbginitialise**](dbginitialise.md)                 | Initialisiert die Debugbibliothek.                                                                       |
-| [**Dbglog**](dbglog.md)                               | Sendet eine Zeichenfolge an den debugausgabeort, wenn die Protokollierung für den angegebenen Typ und die angegebene Ebene aktiviert ist. |
-| [**Dbgoutstring**](dbgoutstring.md)                   | Sendet eine Zeichenfolge an den debugausgabespeicherort.                                                         |
-| [**Dbgsetmodulelevel**](dbgsetmodulelevel.md)         | Legt den Protokolliergrad für einen oder mehrere Nachrichten Typen fest.                                                |
-| [**Dbgbeenden**](dbgterminate.md)                   | Bereinigt die Debug-Bibliothek.                                                                         |
-| [**Display Type**](displaytype.md)                     | Sendet Informationen über einen Medientyp an den debugausgabespeicherort.                                   |
-| [**Dumpgraph**](dumpgraph.md)                         | Sendet Informationen zu einem Filter Diagramm an den debugausgabespeicherort.                                 |
-| [**Guidnames**](guidnames.md)                         | Globales Array, das Zeichen folgen enthält, die die in "UUIDs. h" definierten GUIDs darstellen.                        |
-| [**Benennen**](name.md)                                   | Generiert eine reine debugzeichenfolge.                                                                       |
-| [**Nebenbei**](note.md)                                   | Sendet eine Zeichenfolge an den debugausgabespeicherort.                                                         |
-| [**Erinnern**](remind.md)                               | Generiert zum Zeitpunkt der Kompilierung eine Erinnerung.                                                                |
+| [**DbgCheckModuleLevel**](dbgcheckmodulelevel.md)     | Überprüft, ob die Protokollierung für die angegebenen Nachrichtentypen und -ebenen aktiviert ist.                             |
+| [**DbgDumpObjectRegister**](dbgdumpobjectregister.md) | Zeigt Informationen zu aktiven Objekten an.                                                           |
+| [**DbgInitialise**](dbginitialise.md)                 | Initialisiert die Debugbibliothek.                                                                       |
+| [**DbgLog**](dbglog.md)                               | Sendet eine Zeichenfolge an den Debugausgabespeicherort, wenn die Protokollierung für den angegebenen Typ und die angegebene Ebene aktiviert ist. |
+| [**DbgOutString**](dbgoutstring.md)                   | Sendet eine Zeichenfolge an den Debugausgabespeicherort.                                                         |
+| [**DbgSetModuleLevel**](dbgsetmodulelevel.md)         | Legt den Protokolliergrad für einen oder mehrere Nachrichtentypen fest.                                                |
+| [**DbgTerminate**](dbgterminate.md)                   | Bereinigt die Debugbibliothek.                                                                         |
+| [**DisplayType**](displaytype.md)                     | Sendet Informationen zu einem Medientyp an den Debugausgabespeicherort.                                   |
+| [**DumpGraph**](dumpgraph.md)                         | Sendet Informationen zu einem Filterdiagramm an den Debugausgabespeicherort.                                 |
+| [**GuidNames**](guidnames.md)                         | Globales Array, das Zeichenfolgen enthält, die die in Uuids.h definierten GUIDs darstellen.                        |
+| [**Namen**](name.md)                                   | Generiert eine Nur-Debug-Zeichenfolge.                                                                       |
+| [**Hinweis**](note.md)                                   | Sendet eine Zeichenfolge an den Debugausgabespeicherort.                                                         |
+| [**Erinnern**](remind.md)                               | Generiert zur Kompilierzeit eine Erinnerung.                                                                |
 
 
 
@@ -39,56 +39,56 @@ Die [DirectShow-Basisklassen](directshow-base-classes.md) stellen mehrere Makros
 
 **Registrierungsschlüssel**
 
-Die Debug-Ausgabefunktion in DirectShow verwendet einen Satz von Registrierungs Schlüsseln. Der Speicherort dieser Registrierungsschlüssel hängt von der Windows-Version ab.
+Die Debugausgabefunktion in DirectShow verwendet einen Satz von Registrierungsschlüsseln. Der Speicherort dieser Registrierungsschlüssel hängt von der Version der Windows ab.
 
-*Vor Windows Vista* befinden sich die debugschlüssel unter folgendem Pfad:
+*Vor Windows Vista* befinden sich die Debugschlüssel unter folgendem Pfad:
 
-**HKEY \_ \_** \\ **Software** \\ **Debuggen** des lokalen Computers
+**HKEY \_ \_** \\  \\ **SOFTWAREdebuggen** AUF DEM LOKALEN COMPUTER
 
-In Windows Vista oder höher befinden sich diese unter folgendem Pfad:
+In Windows Vista oder höher befinden sie sich unter dem folgenden Pfad:
 
-**HKEY \_ Software für den lokalen \_ Computer** \\  \\ **Microsoft** \\ **DirectShow** \\ **Debug**
+**HKEY \_ LOKALE \_ COMPUTERSOFTWARE** \\  \\ **Microsoft** \\ **DirectShow** \\ **Debug**
 
-Für Filter von Drittanbietern hängt der Speicherort davon ab, welche Version der [DirectShow-Basisklassen](directshow-base-classes.md) verwendet wurde, um den Filter zu erstellen. Die Version, die im Windows SDK für Windows Vista enthalten ist, verwendet den neueren Pfad. In früheren Versionen wurde der ältere Pfad verwendet.
+Bei Filtern von Drittanbietern hängt der Speicherort davon ab, welche Version der [DirectShow-Basisklassen](directshow-base-classes.md) zum Erstellen des Filters verwendet wurde. Die version, die im Windows SDK für Windows Vista enthalten ist, verwendet den neueren Pfad. Frühere Versionen verwendeten den älteren Pfad.
 
-In den folgenden Anmerkungen wird die Bezeichnung *<DebugRoot>* verwendet, um diese beiden Pfade anzugeben. Ersetzen Sie abhängig von der Windows-Version oder der-Version der Basisklassen den korrekten Pfad.
+In den folgenden Hinweisen wird die Bezeichnung *<DebugRoot>* verwendet, um diese beiden Pfade anzugeben. Ersetzen Sie den richtigen Pfad abhängig von der Version von Windows oder der Version der Basisklassen.
 
 **Debugprotokollierung**
 
-In DirectShow werden mehrere Nachrichten Typen definiert, die in der folgenden Tabelle aufgeführt sind.
+DirectShow definiert mehrere Nachrichtentypen, wie in der folgenden Tabelle gezeigt.
 
 
 
-| Wert                   | BESCHREIBUNG                                             |
+| Wert                   | Beschreibung                                             |
 |-------------------------|---------------------------------------------------------|
-| Protokoll \_ Fehler              | Fehler Benachrichtigung.                                     |
-| Protokoll \_ Sperren            | Sperren und entsperren kritischer Abschnitte.             |
-| Protokoll \_ Speicher             | Speicher Belegung und Objekt Erstellung und-Zerstörung. |
-| Protokoll \_ zeitliche Steuerung             | Zeitliche Steuerung und Leistungsmessungen.                    |
-| Protokoll Ablauf \_ Verfolgung              | Allgemeine Rückruf-Ablauf Verfolgung.                                   |
+| \_PROTOKOLLFEHLER              | Fehlerbenachrichtigung.                                     |
+| \_PROTOKOLLSPERREN            | Sperren und Entsperren kritischer Abschnitte.             |
+| \_PROTOKOLLSPEICHER             | Speicherbelegung und Objekterstellung und -zerstörung. |
+| \_PROTOKOLLIERUNGSZEIT             | Zeit- und Leistungsmessungen.                    |
+| \_PROTOKOLLABLAUFVERFOLGUNG              | Allgemeine Aufrufablaufverfolgung.                                   |
 | CUSTOM1 bis CUSTOM5 | Verfügbar für benutzerdefinierte Debugmeldungen                     |
 
 
 
  
 
-Jede der DirectShow-Debug-Protokollierungsfunktionen gibt einen Nachrichtentyp und eine Protokollebene an. Die Debugmeldung wird nur angezeigt, wenn die aktuelle Debugebene für diesen Nachrichtentyp größer oder gleich der in der Protokollierungsfunktion angegebenen Ebene ist. Andernfalls wird die Meldung ignoriert.
+Jede der DirectShow-Debugprotokollierungsfunktionen gibt einen Nachrichtentyp und einen Protokolliergrad an. Die Debugmeldung wird nur angezeigt, wenn die aktuelle Debugebene für diesen Meldungstyp gleich oder größer als die in der Protokollierungsfunktion angegebene Ebene ist. Andernfalls wird die Nachricht ignoriert.
 
-Der folgende Code gibt beispielsweise die Zeichenfolge "This is a Debug Message" aus, wenn die Protokoll Ablauf \_ Verfolgungs Ebene 3 oder höher ist:
+Der folgende Code gibt beispielsweise die Zeichenfolge "This is a debug message" (Dies ist eine Debugmeldung) aus, wenn die LOG \_ TRACE-Ebene 3 oder höher ist:
 
 ``` syntax
 DbgLog((LOG_TRACE, 3, TEXT("This is a debug message")));
 ```
 
-Jedes Modul kann seine eigene Debugebene für jeden Nachrichtentyp festlegen. (Ein *Modul* ist eine DLL-Datei oder ausführbare Datei, die mithilfe der **LoadLibrary** -Funktion geladen werden kann.) Die debugebenen eines Moduls werden in der Registrierung unter dem folgenden Schlüssel angezeigt:
+Jedes Modul kann für jeden Nachrichtentyp eine eigene Debugebene festlegen. (Ein *Modul* ist eine DLL oder ausführbare Datei, die mit der **LoadLibrary-Funktion** geladen werden kann.) Die Debugebenen eines Moduls werden in der Registrierung unter dem folgenden Schlüssel angezeigt:
 
-**lokaler HKEY- \_ \_ Computer**\\**<DebugRoot>**\\**<ModuleName>**\\**<MessageType>**
+**HKEY \_ LOCAL \_ MACHINE**\\**<DebugRoot>**\\**<ModuleName>**\\**<MessageType>**
 
-dabei *<Message Type>* ist der Nachrichtentyp abzüglich des anfänglichen "Protokolls \_ ", z. b. **Sperren** für Protokoll \_ Sperr Nachrichten. Wenn ein Modul geladen wird, sucht die Debugbibliothek die Protokolliergrade des Moduls in der Registrierung. Wenn die Registrierungsschlüssel nicht vorhanden sind, werden Sie von der Debugbibliothek erstellt.
+dabei *<Message Type>* ist der Nachrichtentyp minus dem anfänglichen "LOG", \_ z. B. **LOCKING** für LOG \_ LOCKING-Nachrichten. Wenn ein Modul geladen wird, findet die Debugbibliothek die Protokolliergrade des Moduls in der Registrierung. Wenn die Registrierungsschlüssel nicht vorhanden sind, werden sie von der Debugbibliothek erstellt.
 
-Ein Modul kann mithilfe der [**dbgsetmodulelevel**](dbgsetmodulelevel.md) -Funktion auch seine eigenen Ebenen zur Laufzeit festlegen. Um eine Nachricht an die Debugausgabe zu senden, nennen Sie das [**dbglog**](dbglog.md) -Makro. Im folgenden Beispiel wird eine Nachricht der Ebene 3 des Typs log \_ Trace erstellt:
+Ein Modul kann mithilfe der [**DbgSetModuleLevel-Funktion**](dbgsetmodulelevel.md) auch eigene Ebenen zur Laufzeit festlegen. Um eine Nachricht an die Debugausgabe zu senden, rufen Sie das [**DbgLog-Makro**](dbglog.md) auf. Im folgenden Beispiel wird eine Meldung der Ebene 3 vom Typ LOG \_ TRACE erstellt:
 
-Sie können auch globale Protokollierungs Stufen mit dem folgenden Registrierungsschlüssel angeben:
+Sie können auch globale Protokolliergrade mit dem folgenden Registrierungsschlüssel angeben:
 
 
 ```C++
@@ -97,23 +97,23 @@ Sie können auch globale Protokollierungs Stufen mit dem folgenden Registrierung
 
 
 
-Die Debug-Bibliothek verwendet, je nachdem, auf welcher Ebene größer, auf der globalen Ebene oder auf der Modulebene.
+Die Debugbibliothek verwendet die höhere Ebene, die globale Ebene oder die Modulebene.
 
-**Ausgabepfad Debuggen**
+**Debugausgabespeicherort**
 
 Der Speicherort der Debugausgabe wird durch einen anderen Registrierungsschlüssel bestimmt:
 
-**HKEY \_ \_** \\ **<DebugRoot>** \\ **<Modile Name>** \\ **Protokolldatei** des lokalen Computers
+**HKEY \_ LOCAL \_ MACHINE** \\ **<DebugRoot>** \\ **<Modile Name>** \\ **LogToFile**
 
-Wenn der Wert dieses Schlüssels ist `Console` , wird die Ausgabe in das Konsolenfenster ausgegeben. Wenn der Wert `Deb` , `Debug` , `Debugger` oder eine leere Zeichenfolge ist, wird die Ausgabe an das Debuggerfenster weitergeleitet. Andernfalls wird die Ausgabe in eine Datei geschrieben, die durch den Registrierungsschlüssel angegeben wird.
+Wenn der Wert dieses Schlüssels `Console` ist, wird die Ausgabe an das Konsolenfenster ausgegeben. Wenn der Wert `Deb` , , oder eine leere Zeichenfolge `Debug` `Debugger` ist, wird die Ausgabe an das Debuggerfenster ausgegeben. Andernfalls wird die Ausgabe in eine Datei geschrieben, die durch den Registrierungsschlüssel angegeben wird.
 
-Bevor eine ausführbare Datei die DirectShow-Debugbibliothek verwendet, muss Sie die [**dbginitialise**](dbginitialise.md) -Funktion aufruft. Danach muss Sie die [**dbgend**](dbgterminate.md) -Funktion abrufen. DLLs müssen diese Funktionen nicht aufrufen, da Sie vom DLL-Einstiegspunkt (in der Basisklassen Bibliothek definiert) automatisch aufgerufen werden.
+Bevor eine ausführbare Datei die DirectShow-Debugbibliothek verwendet, muss sie die [**DbgInitialise-Funktion**](dbginitialise.md) aufrufen. Anschließend muss die [**DbgTerminate-Funktion**](dbgterminate.md) aufgerufen werden. DLLs müssen diese Funktionen nicht aufrufen, da sie vom DLL-Einstiegspunkt (definiert in der Basisklassenbibliothek) automatisch aufgerufen werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Debugging-Hilfsprogramme](debugging-utilities.md)
+[Debuggen von Hilfsprogrammen](debugging-utilities.md)
 </dt> </dl>
 
  

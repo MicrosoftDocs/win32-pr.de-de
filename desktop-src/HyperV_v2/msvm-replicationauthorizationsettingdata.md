@@ -1,5 +1,5 @@
 ---
-description: Stellt einen Autorisierungs Eintrag für einen Wiederherstellungs Server dar.
+description: Stellt einen Autorisierungseintrag für einen Wiederherstellungsserver dar.
 ms.assetid: 8c057b39-7102-4fbf-b4be-f18627a88834
 title: Msvm_ReplicationAuthorizationSettingData-Klasse
 ms.topic: reference
@@ -20,16 +20,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0ba069de1bbe005e8a2a06891db8218ab313baa5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 933ad48062cd8eca89771c36287d8e1a6c09f20bdf973c989dd706fce8db257c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119535710"
 ---
-# <a name="msvm_replicationauthorizationsettingdata-class"></a>MSVM \_ replicationauthorizationsettingdata-Klasse
+# <a name="msvm_replicationauthorizationsettingdata-class"></a>Msvm \_ ReplicationAuthorizationSettingData-Klasse
 
-Stellt einen Autorisierungs Eintrag für einen Wiederherstellungs Server dar.
+Stellt einen Autorisierungseintrag für einen Wiederherstellungsserver dar.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -51,72 +51,72 @@ class Msvm_ReplicationAuthorizationSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ replicationauthorizationsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ ReplicationAuthorizationSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ replicationauthorizationsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ ReplicationAuthorizationSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Bereitstellungs-Hostsystem"**
+**AllowedPrimaryHostSystem**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der voll qualifizierte Domänen Name oder Gruppenname der primären Server, die auf diesem Wiederherstellungs Server repliziert werden dürfen.
+Der vollqualifizierte Domänen- oder Gruppenname der primären Server, die auf diesen Wiederherstellungsserver repliziert werden dürfen.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -125,33 +125,33 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt und ist immer auf **null** festgelegt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt**](/previous-versions//cc136911(v=vs.85))und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
-**Replicastorageloation**
+**ReplicaStorageLocation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Speicherort, an dem die Replikations Dateien aus dem " **Zustellungs System" zugeordnet** werden.
+Der Speicherort, an dem Replikationsdateien aus **dem AllowedPrimaryHostSystem** gespeichert werden.
 
 </dd> <dt>
 
-**Trust Group**
+**TrustGroup**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Name der Vertrauens Gruppe für den Autorisierungs Eintrag. Dadurch werden die mehrfach gruppierten Autorisierungs Einträge identifiziert.
+Der Name der Vertrauensstellungsgruppe für den Autorisierungseintrag. Dadurch werden die mehreren Autorisierungseinträge identifiziert, die zusammen gegruppen werden.
 
 </dd> </dl>
 
@@ -161,10 +161,10 @@ Der Name der Vertrauens Gruppe für den Autorisierungs Eintrag. Dadurch werden d
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -173,16 +173,16 @@ Der Name der Vertrauens Gruppe für den Autorisierungs Eintrag. Dadurch werden d
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> <dt>
 
-[**Addauthorizationentry**](addauthorizationentry-msvm-replicationservice.md)
+[**AddAuthorizationEntry**](addauthorizationentry-msvm-replicationservice.md)
 </dt> <dt>
 
-[**Modifyauthorizationentry**](modifyauthorizationentry-msvm-replicationservice.md)
+[**ModifyAuthorizationEntry**](modifyauthorizationentry-msvm-replicationservice.md)
 </dt> <dt>
 
-[**Removeauthorizationentry**](removeauthorizationentry-msvm-replicationservice.md)
+[**RemoveAuthorizationEntry**](removeauthorizationentry-msvm-replicationservice.md)
 </dt> </dl>
 
  

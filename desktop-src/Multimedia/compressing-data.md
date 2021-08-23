@@ -4,22 +4,22 @@ description: Komprimieren von Daten
 ms.assetid: b231316b-0c81-410a-b2fe-b58ab7aca02b
 keywords:
 - Videokomprimierungs-Manager (VCM), Komprimieren von Daten
-- VCM (Videokomprimierungs-Manager), Komprimieren von Daten
-- Iccompressbegin-Makro
-- Iccompress-Funktion
-- Iccompressend-Makro
+- VCM (Videokomprimierungs-Manager),Komprimieren von Daten
+- ICCompressBegin-Makro
+- ICCompress-Funktion
+- ICCompressEnd-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b0c08308b695bf022d2d2b76bda6727d9f9c1a9c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 22f45c7b592b4b55e77b71390d7ffd79b23714242ea678d641d4a3f5b8118bef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036831"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145003"
 ---
 # <a name="compressing-data"></a>Komprimieren von Daten
 
-Im folgenden Beispiel werden Bilddaten für die Verwendung in einer AVI-Datei komprimiert. Es wird davon ausgegangen, dass der-Kompressor die Temporal-Flags von vidcf \_ Crunch oder vidcf nicht unterstützt \_ , sondern die vidcf-Qualität unterstützt \_ . Das Beispiel verwendet das [**iccompressbegin**](/windows/desktop/api/Vfw/nf-vfw-iccompressbegin) -Makro, die [**iccompress**](/windows/desktop/api/Vfw/nf-vfw-iccompress) -Funktion und das [**iccompressend**](/windows/desktop/api/Vfw/nf-vfw-iccompressend) -Makro.
+Im folgenden Beispiel werden Bilddaten für die Verwendung in einer AVI-Datei komprimiert. Es wird davon ausgegangen, dass die VIDCF \_ CRUNCH- oder VIDCF TEMPORAL-Flags von der Vidcf nicht unterstützt \_ werden, aber sie unterstützt VIDCF \_ QUALITY. Im Beispiel werden das [**ICCompressBegin-Makro,**](/windows/desktop/api/Vfw/nf-vfw-iccompressbegin) die [**ICCompress-Funktion**](/windows/desktop/api/Vfw/nf-vfw-iccompress) und das [**ICCompressEnd-Makro**](/windows/desktop/api/Vfw/nf-vfw-iccompressend) verwendet.
 
 
 ```C++
@@ -61,9 +61,9 @@ else
 
 
 
- 
+ 
 
- 
+ 
 
 
 

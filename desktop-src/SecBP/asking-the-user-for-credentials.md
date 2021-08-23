@@ -1,29 +1,29 @@
 ---
-description: Möglicherweise muss Ihre Anwendung den Benutzer zur Eingabe von Benutzernamen-und Kenn Wort Informationen auffordern, um das Speichern eines Administrator Kennworts zu vermeiden oder zu überprüfen, ob das Token die entsprechenden Berechtigungen enthält.
+description: Ihre Anwendung muss den Benutzer möglicherweise zur Eingabe von Benutzernamen- und Kennwortinformationen auffordern, um das Speichern eines Administratorkennworts zu vermeiden oder zu überprüfen, ob das Token über die entsprechenden Berechtigungen verfügt.
 ms.assetid: 966de0cc-63de-4430-843f-668de2dfe0a6
-title: Benutzer werden zur Anmelde Informationen aufgefordert
+title: Fragen des Benutzers nach Anmeldeinformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8adb315837d86a9f1dda4075b8d89db33f0dd22e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dc9b9941be168a307e35b3575f4d12241dc624553686a61b232f2c5ba86e9c0f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119480490"
 ---
-# <a name="asking-the-user-for-credentials"></a>Benutzer werden zur Anmelde Informationen aufgefordert
+# <a name="asking-the-user-for-credentials"></a>Fragen des Benutzers nach Anmeldeinformationen
 
-Möglicherweise muss Ihre Anwendung den Benutzer zur Eingabe von Benutzernamen-und Kenn Wort Informationen auffordern, um das Speichern eines Administrator Kennworts zu vermeiden oder zu überprüfen, ob das Token die entsprechenden Berechtigungen enthält.
+Ihre Anwendung muss den Benutzer möglicherweise zur Eingabe von Benutzernamen- und Kennwortinformationen auffordern, um das Speichern eines Administratorkennworts zu vermeiden oder zu überprüfen, ob das Token über die entsprechenden Berechtigungen verfügt.
 
-Durch die einfache Eingabe von Anmelde Informationen können die Benutzer jedoch dazu trainiert werden, diese an ein zufälliges, nicht identifiziertes Dialogfeld zu übergeben, das auf dem Bildschirm angezeigt wird Das folgende Verfahren wird empfohlen, um diesen Trainingseffekt zu verringern.
+Wenn Sie jedoch einfach zur Eingabe von Anmeldeinformationen auffordern, können Benutzer diese für beliebige, nicht identifizierte Dialogfelder bereitstellen, die auf dem Bildschirm angezeigt werden. Das folgende Verfahren wird empfohlen, um diesen Trainingseffekt zu reduzieren.
 
-**So erhalten Sie Benutzer Anmelde Informationen ordnungsgemäß**
+**So erhalten Sie ordnungsgemäß Benutzeranmeldeinformationen**
 
-1.  Informieren Sie den Benutzer, indem Sie eine Nachricht verwenden, die in Ihrer Anwendung eindeutig ist, dass ein Dialogfeld angezeigt wird, in dem der Benutzername und das Kennwort angefordert werden. Sie können auch die [**kredui- \_ Informations**](/windows/desktop/api/wincred/ns-wincred-credui_infoa) Struktur beim Aufrufen von " [**" für "**](/windows/desktop/api/wincred/nf-wincred-creduipromptforcredentialsa) " "" "" "" "" "".
-2.  Aufrufen von " [**kreduipromptforanmelde**](/windows/desktop/api/wincred/nf-wincred-creduipromptforcredentialsa)Informationen". Beachten Sie, dass die für Benutzername und Kennwort angegebene maximale Anzahl von Zeichen das abschließende Null-Zeichen enthält.
-3.  Stellen Sie [**sicher, dass**](/windows/desktop/api/wincred/nf-wincred-creduiconfirmcredentialsa) Sie die entsprechenden Anmelde Informationen erhalten haben, um zu überprüfen, ob Sie die entsprechenden Anmelde [**Informationen abgerufen haben**](/windows/desktop/api/wincred/nf-wincred-creduiparseusernamea) .
+1.  Informieren Sie den Benutzer mithilfe einer Meldung, die eindeutig Teil Ihrer Anwendung ist, dass ein Dialogfeld angezeigt wird, in dem der Benutzername und das Kennwort angefordert werden. Sie können auch die [**CREDUI \_ INFO-Struktur**](/windows/desktop/api/wincred/ns-wincred-credui_infoa) beim Aufruf von [**CredUIPromptForCredentials**](/windows/desktop/api/wincred/nf-wincred-creduipromptforcredentialsa) verwenden, um identifizierende Daten oder eine Nachricht zu übermitteln.
+2.  Rufen Sie [**CredUIPromptForCredentials auf.**](/windows/desktop/api/wincred/nf-wincred-creduipromptforcredentialsa) Beachten Sie, dass die maximale Anzahl von Zeichen, die für Benutzernamen- und Kennwortinformationen angegeben sind, das abschließende NULL-Zeichen enthält.
+3.  Rufen Sie [**CredUIParseUserName**](/windows/desktop/api/wincred/nf-wincred-creduiparseusernamea) und [**CredUIConfirmCredentials**](/windows/desktop/api/wincred/nf-wincred-creduiconfirmcredentialsa) auf, um zu überprüfen, ob Sie die entsprechenden Anmeldeinformationen erhalten haben.
 
-Im folgenden Beispiel wird gezeigt, wie Sie " [**forduipromptfor-Anmelde**](/windows/desktop/api/wincred/nf-wincred-creduipromptforcredentialsa) Informationen" aufrufen, um den Benutzer zu einem Benutzernamen und einem Kennwort aufzufordern. Zuerst füllt er eine kredui- \_ Informationsstruktur mit Informationen zu den zu verwendenden Eingabe Aufforderungen. Als nächstes füllt der Code zwei Puffer mit Nullen aus. Dadurch wird sichergestellt, dass keine Informationen an die Funktion weitergegeben werden, die möglicherweise einen alten Benutzernamen oder ein Kennwort für den Benutzer offenlegen. Durch den Aufrufen von " **forduipromptforanmelde** " wird das Dialogfeld geöffnet. Aus Sicherheitsgründen wird in diesem Beispiel das Flag zum Kennzeichnen von Kennzeichen nicht beibehalten verwendet \_ \_ \_ \_ , um zu verhindern, dass das Betriebssystem das Kennwort speichert, da es möglicherweise verfügbar gemacht wird. Wenn keine Fehler vorliegen, füllt " **forduipromptfor-Anmelde** Informationen" die Variablen "pszName" und "pszpwd" auf und gibt "0" zurück. Wenn die Anwendung mit der Verwendung der Anmelde Informationen fertig ist, sollte Sie Nullen in den Puffern ablegen, um zu verhindern, dass die Informationen versehentlich offengelegt werden.
+Das folgende Beispiel zeigt, wie [**Sie CredUIPromptForCredentials**](/windows/desktop/api/wincred/nf-wincred-creduipromptforcredentialsa) aufrufen, um den Benutzer nach einem Benutzernamen und Kennwort zu fragen. Zunächst wird eine CREDUI \_ INFO-Struktur mit Informationen dazu ausgefüllt, welche Eingabeaufforderungen verwendet werden sollen. Als Nächstes füllt der Code zwei Puffer mit Nullen aus. Dadurch wird sichergestellt, dass keine Informationen an die Funktion übergeben werden, die dem Benutzer möglicherweise einen alten Benutzernamen oder ein altes Kennwort anzeigen. Durch den Aufruf von **CredUIPromptForCredentials** wird das Dialogfeld geöffnet. Aus Sicherheitsgründen wird in diesem Beispiel das FLAG CREDUI FLAGS DO NOT PERSIST verwendet, \_ \_ um zu \_ \_ verhindern, dass das Betriebssystem das Kennwort speichert, da es dann verfügbar gemacht werden kann. Wenn keine Fehler auftreten, füllt **CredUIPromptForCredentials** die Variablen pszName und pszPwd aus und gibt 0 (null) zurück. Wenn die Anwendung die Anmeldeinformationen nicht mehr verwendet hat, sollte sie Nullen in die Puffer setzen, um zu verhindern, dass die Informationen versehentlich offengelegt werden.
 
 
 ```C++
@@ -75,10 +75,10 @@ if(!dwErr)
 
 <dl> <dt>
 
-[**"Forduicmdlinepromptforanmelde"**](/windows/desktop/api/wincred/nf-wincred-creduicmdlinepromptforcredentialsa)
+[**CredUICmdLinePromptForCredentials**](/windows/desktop/api/wincred/nf-wincred-creduicmdlinepromptforcredentialsa)
 </dt> <dt>
 
-[**Benutzeroberflächen- \_ uinfo**](/windows/desktop/api/wincred/ns-wincred-credui_infoa)
+[**CREDUI \_ UINFO**](/windows/desktop/api/wincred/ns-wincred-credui_infoa)
 </dt> </dl>
 
  

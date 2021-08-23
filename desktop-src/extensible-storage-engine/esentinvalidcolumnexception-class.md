@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentinvalidcolumnexception-Klasse'
-title: Esentinvalidcolumnexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentInvalidColumnException-Klasse'
+title: EsentInvalidColumnException-Klasse
 TOCTitle: EsentInvalidColumnException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentInvalidColumnException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidcolumnexception(v=EXCHG.10)
@@ -24,26 +24,26 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9768a479ebb1257b349e28eb7a352f0034ca7317
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e30b03b7bbe5d4e0eb5243dd00a478ec950a1901fecf1f77da2f5d3d4226cac6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103869164"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119620900"
 ---
-# <a name="esentinvalidcolumnexception-class"></a>Esentinvalidcolumnexception-Klasse
+# <a name="esentinvalidcolumnexception-class"></a>EsentInvalidColumnException-Klasse
 
-Ausnahme, die ausgelöst wird, wenn eine Spalten Konvertierung fehlschlägt
+Ausnahme, die ausgelöst wird, wenn eine Spaltenkonvertierung fehlschlägt.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      Microsoft. ISAM. ESENT. Interop. esentinvalidcolumnexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      Microsoft.Isam.Esent.Interop.EsentInvalidColumnException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,10 +65,10 @@ public class EsentInvalidColumnException : EsentException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidcolumnexception-Elemente](./esentinvalidcolumnexception-members.md)
+[EsentInvalidColumnException-Member](./esentinvalidcolumnexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

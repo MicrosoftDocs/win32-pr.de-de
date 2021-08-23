@@ -1,24 +1,24 @@
 ---
-title: Erstellen eines radialen Farbverlaufs Pinsels
-description: Zeigt, wie ein radialer Farbverlaufs Pinsel mit Direct2D erstellt wird.
+title: Erstellen eines Pinsels mit radialem Farbverlauf
+description: Zeigt, wie Sie einen Radialverlaufspinsel mit Direct2D erstellen.
 ms.assetid: 663743c9-16e9-4e3a-90b2-883ef0b8d5cf
 ms.topic: article
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: fe3509a80f80132f4a5e5d65f62476be1cac61d1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1932dc6506c625332d61f4e549ae2dd169060731bfbea344f64c3aa826540ae0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104209268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119569265"
 ---
-# <a name="how-to-create-a-radial-gradient-brush"></a>Erstellen eines radialen Farbverlaufs Pinsels
+# <a name="how-to-create-a-radial-gradient-brush"></a>Erstellen eines Pinsels mit radialem Farbverlauf
 
-Um einen radialen Farbverlaufs Pinsel zu erstellen, verwenden Sie die [**ID2DRenderTarget:: samateradialgradientbrush**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createradialgradientbrush(constd2d1_radial_gradient_brush_properties__id2d1gradientstopcollection_id2d1radialgradientbrush)) -Methode, und geben Sie die Eigenschaften des radialen Farbverlaufs Pinsels und die Auflistung der Mit einigen über Ladungen können Sie die Pinsel Eigenschaften angeben. Der folgende Code zeigt, wie Sie einen radialen Farbverlaufs Pinsel zum Auffüllen eines Kreises erstellen, und einen Pinsel mit einem Pinsel, um die Kontur des Kreises zu zeichnen.
+Verwenden Sie zum Erstellen eines radialen Farbverlaufspinsels die [**ID2DRenderTarget::CreateRadialGradientBrush-Methode,**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createradialgradientbrush(constd2d1_radial_gradient_brush_properties__id2d1gradientstopcollection_id2d1radialgradientbrush)) und geben Sie die Eigenschaften des Radialverlaufspinsels und die Gradientenstoppsammlung an. Mit einigen Überladungen können Sie die Pinseleigenschaften angeben. Der folgende Code zeigt, wie Sie einen Radialverlaufspinsel erstellen, um einen Kreis zu füllen, und einen soliden schwarzen Pinsel, um die Umrisse des Kreises zu zeichnen.
 
 Der Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 
-![Abbildung eines Kreises, der mit einem radialen Farbverlaufs Pinsel gefüllt ist](images/brushes-ovw-radials.png)
+![Abbildung eines Kreises, der mit einem radialen Farbverlaufspinsel gefüllt ist](images/brushes-ovw-radials.png)
 
 1.  Deklarieren Sie eine Variable vom Typ [**ID2D1RadialGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush).
     ```C++
@@ -27,7 +27,7 @@ Der Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 
     
 
-2.  Erstellen Sie ein Array [**von \_ D2D1 \_ Gradient**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_gradient_stop) -Strukturen, die in die Auflistung der Farbverlaufs Stopps eingefügt werden sollen. Die **D2D1 \_ Gradient- \_ Ende** -Struktur enthält die Position und Farbe eines Farbverlaufs Stopps. Die Position gibt die relative Position des Farbverlaufs Stopps im Pinsel an. Der Wert liegt im Bereich \[ 0,0 f, 1.0 f \] , wie im folgenden Code dargestellt.
+2.  Erstellen Sie ein Array von [**D2D1 \_ GRADIENT \_ STOP-Strukturen,**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_gradient_stop) die in der Gradientenstopp-Auflistung gespeichert werden. Die **D2D1 \_ GRADIENT \_ STOP-Struktur** enthält die Position und Farbe eines Farbverlaufsstopps. Die Position gibt die relative Position des Farbverlaufsstopps im Pinsel an. Der Wert liegt im Bereich \[ 0,0f, 1,0f, \] wie im folgenden Code gezeigt.
 
     ```C++
     // Create an array of gradient stops to put in the gradient stop
@@ -52,12 +52,12 @@ Der Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 
     
 
-3.  Verwenden Sie die [**ID2D1RenderTarget:: kreategradientstopcollection**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-creategradientstopcollection(constd2d1_gradient_stop_uint32_d2d1_gamma_d2d1_extend_mode_id2d1gradientstopcollection)) -Methode, um die [**ID2D1GradientStopCollection**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) -Sammlung aus einem zuvor deklarierten Array von [**D2D1 Gradient- \_ \_ Stopp**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_gradient_stop) Strukturen zu erstellen. Verwenden Sie dann " [**" mit "**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createradialgradientbrush(constd2d1_radial_gradient_brush_properties__id2d1gradientstopcollection_id2d1radialgradientbrush)) " "" "" ", um einen radialen Farbverlaufs Pinsel zu erstellen.
+3.  Verwenden Sie die [**ID2D1RenderTarget::CreateGradientStopCollection-Methode,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-creategradientstopcollection(constd2d1_gradient_stop_uint32_d2d1_gamma_d2d1_extend_mode_id2d1gradientstopcollection)) um die [**ID2D1GradientStopCollection-Auflistung**](/windows/win32/api/d2d1/nn-d2d1-id2d1gradientstopcollection) aus einem zuvor deklarierten Array von [**D2D1 \_ GRADIENT \_ STOP-Strukturen**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_gradient_stop) zu erstellen. Verwenden Sie dann [**createRadialGradientBrush,**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createradialgradientbrush(constd2d1_radial_gradient_brush_properties__id2d1gradientstopcollection_id2d1radialgradientbrush)) um einen Radialverlaufspinsel zu erstellen.
 
     > [!Note]  
-    > Ab Windows 8 können Sie eine [**ID2D1GradientStopCollection1**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1gradientstopcollection1) -Auflistung anstelle der [**ID2D1RenderTarget:: foategradientstopcollection**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-creategradientstopcollection(constd2d1_gradient_stop_uint32_d2d1_gamma_d2d1_extend_mode_id2d1gradientstopcollection)) -Methode mithilfe der [**ID2D1DeviceContext:: foategradientstopcollection**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-creategradientstopcollection) -Methode erstellen. Diese Schnittstelle fügt Farbverläufe mit hoher Farbe und die interpolung von Farbverläufen entweder in geraden oder in den Sonderfarben hinzu. Weitere Informationen finden Sie auf der Seite " **ID2DDeviceContext:: kreategradientstopcollection** ".
+    > Ab Windows 8 können Sie die [**ID2D1DeviceContext::CreateGradientStopCollection-Methode**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-creategradientstopcollection) verwenden, um eine [**ID2D1GradientStopCollection1-Sammlung**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1gradientstopcollection1) anstelle der [**ID2D1RenderTarget::CreateGradientStopCollection-Methode zu**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-creategradientstopcollection(constd2d1_gradient_stop_uint32_d2d1_gamma_d2d1_extend_mode_id2d1gradientstopcollection)) erstellen. Diese Schnittstelle fügt farblich hochwertige Farbverläufe und die Interpolation von Farbverläufen in geraden oder prmultipliierten Farben hinzu. Weitere Informationen finden Sie auf der Seite **ID2DDeviceContext::CreateGradientStopCollection.**
 
-     
+     
 
     ```C++
     // The center of the gradient is in the center of the box.
@@ -92,6 +92,6 @@ Der Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 [Direct2D-Referenz](reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

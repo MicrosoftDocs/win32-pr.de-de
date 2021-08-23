@@ -1,23 +1,23 @@
 ---
-description: Monitore können Frames im reinen Modus oder im gemischten-Modus untersuchen.
+description: Monitore können Frames im lokalen modus oder im promiscuous-Modus untersuchen.
 ms.assetid: 4646f5bb-e3e3-4929-91b7-f68c5b70ccb3
-title: Local-Only-und Promiscuous-Modi
+title: Local-Only und promiscuous-Modi
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dd1188760d8de31836de3fbd437854a5df138402
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8155c968f82154712ec8926f114e63380cdb1099bf7908d5a4dde86d7646dc20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119555890"
 ---
-# <a name="local-only-and-promiscuous-modes"></a>Local-Only-und Promiscuous-Modi
+# <a name="local-only-and-promiscuous-modes"></a>Local-Only und promiscuous-Modi
 
-Monitore können Frames im reinen Modus oder im gemischten-Modus untersuchen.
+Monitore können Frames im lokalen modus oder im promiscuous-Modus untersuchen.
 
-Im reinen Modus gibt der Netzwerk Paketanbieter (NPP) Frames zurück, die an den bzw. von dem Computer gesendet werden, auf dem der Monitor ausgeführt wird, einschließlich der Übertragungen und mit, die an den lokalen Computer weitergeleitet werden. Der lokale Modus ist zwar auf Lokal gesteuerte Frames beschränkt, aber auch der lokale Modus ist weitaus weniger Prozessor intensiv.
+Im ausschließlich lokalen Modus gibt der Netzwerkpaketanbieter (Network Packet Provider, NPP) Frames zurück, die an oder von dem Computer gesendet werden, auf dem der Monitor ausgeführt wird, einschließlich Broadcasts und Multicasts, die an den lokalen Computer geleitet werden. Obwohl dies auf lokal gerichtete Frames beschränkt ist, ist der lokale Modus auch viel weniger prozessorintensiv.
 
-Im gemischten-Modus kann der Monitor auch auf Datenverkehr achten, der nicht an den lokalen Computer weitergeleitet wird. Wenn für den Monitor nicht das Flag, MCS \_ Create \_ pmode \_ , \_ in der [onloadingdll](onloadingdll.md) -Funktion nicht erforderlich angegeben ist, geht der Monitor Steuerungs Dienst (Monitor Control Service, mcsvc) davon aus, dass der Monitor beim Laden der Monitor-DLL den gemischten-Modus erfordert.
+Im promiscuous-Modus kann der Monitor auch auf Datenverkehr achten, der nicht an den oder vom lokalen Computer geleitet wird. Sofern der Monitor das Flag MCS CREATE PMODE NOT REQUIRED nicht angegeben hat, geht der \_ \_ Monitor Control Service \_ \_ (MCSVC) in der [OnLoadingDLL-Funktion](onloadingdll.md) davon aus, dass der Monitor beim Laden der Monitor-DLL den promiscuous-Modus erfordert.
 
  
 

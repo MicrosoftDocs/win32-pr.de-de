@@ -1,7 +1,7 @@
 ---
 description: Multipliziert erweiterte ganze Zahlen.
 ms.assetid: 6a59d211-4baf-4c7c-af2a-ffb0c5773445
-title: Rtlextendebug-Funktion
+title: RtlExtendedIntegerMultiply-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ntdll.dll
-ms.openlocfilehash: 8b824080c28da3265be6dc0333f236b8c9a4cbaf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0048da80026029274a89d089f5c232311a481a6010c0aad32d8b1a6ae6cc6786
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119571470"
 ---
-# <a name="rtlextendedintegermultiply-function"></a>Rtlextendebug-Funktion
+# <a name="rtlextendedintegermultiply-function"></a>RtlExtendedIntegerMultiply-Funktion
 
-\[Die **rtlextendedintegermultiplizieren** -Funktion wird exportiert, um vorhandene Treiber Binärdateien zu unterstützen, und ist veraltet. Um eine bessere Leistung zu erzielen, verwenden Sie die Compilerunterstützung für ganzzahlige Vorgänge mit 64 Bit.\]
+\[Die **RtlExtendedIntegerMultiply-Funktion** wird zur Unterstützung vorhandener Treiberbinärdateien exportiert und ist veraltet. Um eine bessere Leistung zu erzielen, verwenden Sie die Compilerunterstützung für 64-Bit-Ganzzahlvorgänge.\]
 
 Multipliziert erweiterte ganze Zahlen.
 
@@ -42,14 +42,14 @@ LARGE_INTEGER RtlExtendedIntegerMultiply(
 
 <dl> <dt>
 
-*Multiplicand* \[ in\]
+*Multiplicand* \[ In\]
 </dt> <dd>
 
-Multiplikand.
+Multiplicand.
 
 </dd> <dt>
 
-*Multiplikator* \[ in\]
+*Multiplikator* \[ In\]
 </dt> <dd>
 
 Multiplikator.
@@ -58,11 +58,11 @@ Multiplikator.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt Multiplikations Ergebnisse zurück.
+Gibt das Multiplikationsergebnis zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

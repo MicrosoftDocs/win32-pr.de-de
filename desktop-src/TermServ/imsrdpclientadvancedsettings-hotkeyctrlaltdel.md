@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings-hotkeyctrlaltdel-Eigenschaft
-description: Gibt den Code des virtuellen Schlüssels an, der STRG + ALT hinzugefügt werden soll, um die Hotkey-Ersetzung für STRG + ALT + ENTF, auch als "sichere Aufmerksamkeit" (Secure Attention Sequence, SAS) bezeichnet.
+title: IMsRdpClientAdvancedSettings HotKeyCtrlAltDel-Eigenschaft
+description: Gibt den Virtuellen Schlüsselcode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für STRG+ALT+DELETE zu bestimmen, der auch als Sichere Aufmerksamkeitssequenz (Secure Attention Sequence, SAS) bezeichnet wird.
 ms.assetid: bce55cdb-4444-4291-b443-9bc1b3743e23
 ms.tgt_platform: multiple
 keywords:
-- Hotkeyctrlaltdel-Eigenschaft Remotedesktopdienste
-- Hotkeyctrlaltdel-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, hotkeyctrlaltdel-Eigenschaft
-- Hotkeyctrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, hotkeyctrlaltdel-Eigenschaft
-- Hotkeyctrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, hotkeyctrlaltdel-Eigenschaft
-- Hotkeyctrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, hotkeyctrlaltdel-Eigenschaft
-- Hotkeyctrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, hotkeyctrlaltdel-Eigenschaft
-- Hotkeyctrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, hotkeyctrlaltdel-Eigenschaft
-- Hotkeyctrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, hotkeyctrlaltdel-Eigenschaft
-- Hotkeyctrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, hotkeyctrlaltdel-Eigenschaft
+- HotKeyCtrlAltDel-Eigenschaft Remotedesktopdienste
+- HotKeyCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , HotKeyCtrlAltDel-Eigenschaft
+- HotKeyCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , HotKeyCtrlAltDel-Eigenschaft
+- HotKeyCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , HotKeyCtrlAltDel-Eigenschaft
+- HotKeyCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , HotKeyCtrlAltDel-Eigenschaft
+- HotKeyCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , HotKeyCtrlAltDel-Eigenschaft
+- HotKeyCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , HotKeyCtrlAltDel-Eigenschaft
+- HotKeyCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , HotKeyCtrlAltDel-Eigenschaft
+- HotKeyCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , HotKeyCtrlAltDel-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,19 +54,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00fa4c1f963841d0c1ea0375cdf11913b28d0286
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 47975b2c4586728fc4727044b7340d87c275c5a5f47aac1c68ab3d9fdafbda6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391603"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119424410"
 ---
-# <a name="imsrdpclientadvancedsettingshotkeyctrlaltdel-property"></a>Imsrdpclientadvancedsettings:: hotkeyctrlaltdel-Eigenschaft
+# <a name="imsrdpclientadvancedsettingshotkeyctrlaltdel-property"></a>IMsRdpClientAdvancedSettings::HotKeyCtrlAltDel-Eigenschaft
 
-Gibt den Code des virtuellen Schlüssels an, der STRG + ALT hinzugefügt werden soll, um die Hotkey-Ersetzung für STRG + ALT + ENTF, auch als "sichere Aufmerksamkeit" (Secure Attention Sequence, SAS) bezeichnet.
+Gibt den Virtuellen Schlüsselcode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für STRG+ALT+DELETE zu bestimmen, der auch als Sichere Aufmerksamkeitssequenz (Secure Attention Sequence, SAS) bezeichnet wird.
 
 > [!Note]  
-> STRG + ALT + ENTF wird nie an den Remote Server umgeleitet, auch wenn die [keyboardhuokmode](imsrdpclientsecuredsettings-keyboardhookmode.md) -Eigenschaft aktiviert ist. STRG + ALT + ENTF ist die lokale SAS-Sequenz.
+> STRG+ALT+DELETE wird nie an den Remoteserver umgeleitet, auch wenn die [KeyboardHookMode-Eigenschaft](imsrdpclientsecuredsettings-keyboardhookmode.md) aktiviert ist. STRG+ALT+DELETE ist die lokale SAS-Sequenz.
 
  
 
@@ -89,13 +89,13 @@ HRESULT get_HotKeyCtrlAltDel(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der neue Code des virtuellen Schlüssels. **VK \_ "End** " ist die Standardeinstellung.
+Der neue Code für virtuelle Schlüssel. **VK \_ END** ist die Standardeinstellung.
 
 ## <a name="error-codes"></a>Fehlercodes
 
 Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -109,11 +109,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
@@ -138,7 +138,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

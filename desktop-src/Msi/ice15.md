@@ -1,56 +1,56 @@
 ---
-description: ICE15 überprüft, ob Inhaltstyp-und Erweiterungs Verweise in den MIME-und Erweiterungs Tabellen einander einander entsprechen. Die MIME-Tabelle muss auf einen Inhaltstyp auf eine Erweiterung verweisen, auf die die Erweiterungs Tabelle auf denselben Inhaltstyp zurückverweist.
+description: ICE15 überprüft, ob Inhaltstyp- und Erweiterungsverweise in den MIME- und Erweiterungstabellen reziprok sind. Die MIME-Tabelle muss auf einen Inhaltstyp auf eine Erweiterung verweisen, auf die die Erweiterungstabelle zurück auf denselben Inhaltstyp verweist.
 ms.assetid: 8a38c8d2-324d-4de9-932b-d188ff5ccbaf
 title: ICE15
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eb39b3c617db41e9e58a226f1eeb92c3d733ebad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ce1e5e54dedd2663a9f849abee43e244c73d7aa5835426be05d4e0163f599ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119529310"
 ---
 # <a name="ice15"></a>ICE15
 
-ICE15 überprüft, ob Inhaltstyp-und Erweiterungs Verweise in den [MIME](mime-table.md) -und [Erweiterungs](extension-table.md) Tabellen einander einander entsprechen. Die MIME-Tabelle muss auf einen Inhaltstyp auf eine Erweiterung verweisen, auf die die Erweiterungs Tabelle auf denselben Inhaltstyp zurückverweist.
+ICE15 überprüft, ob Inhaltstyp- und Erweiterungsverweise in den [MIME-](mime-table.md) und [Erweiterungstabellen](extension-table.md) reziprok sind. Die MIME-Tabelle muss auf einen Inhaltstyp auf eine Erweiterung verweisen, auf die die Erweiterungstabelle zurück auf denselben Inhaltstyp verweist.
 
-Mehrere Erweiterungen können auf denselben MIME-Typ verweisen, solange der MIME-Typ auf eine der Erweiterungen zurückverweist. Mehrere MIME-Typen können auf dieselbe Erweiterung verweisen, solange die Erweiterung auf einen der MIME-Typen zurückverweist.
+Mehrere Erweiterungen können auf denselben MIME-Typ verweisen, solange der MIME-Typ auf eine der Erweiterungen verweist. Mehrere MIME-Typen können auf dieselbe Erweiterung verweisen, solange die Erweiterung auf einen der MIME-Typen verweist.
 
-Beachten Sie, dass die MIME- \_ Spalte in der Erweiterungs Tabelle nicht auf NULL festgelegt werden kann, wenn ein MIME auf eine Erweiterung verweist.
+Beachten Sie, dass die MIME-Spalte in der Extension-Tabelle nicht auf NULL festgelegt werden kann, wenn eine MIME auf eine Erweiterung \_ verweist.
 
 ## <a name="result"></a>Ergebnis
 
-ICE15 gibt einen Fehler aus, wenn der Inhaltstyp und die Erweiterungs Verweise nicht gegenseitig sind.
+ICE15 gibt einen Fehler aus, wenn der Inhaltstyp und die Erweiterungsverweise nicht reziprok sind.
 
 ## <a name="example"></a>Beispiel
 
-ICE15 gibt zwei Fehlermeldungen für das folgende Beispiel aus:
+ICE15 sendet zwei Fehlermeldungen für das gezeigte Beispiel:
 
--   Der Inhaltstyp "Test/x-Flas" in der MIME-Tabelle verweist auf die Erweiterung "TST", aber die Erweiterung "TST" in der Erweiterungs Tabelle verweist auf "Flas/x- Dies ist kein gegenseitiger Wert.
--   Die Inhaltstyp-Klappen/x-Klappen verweisen auf die Erweiterungs-FLP, aber diese Erweiterung weist einen NULL-Eintrag in der MIME- \_ Spalte der Erweiterungs Tabelle auf.
+-   Der Inhaltstyp test/x-flaps in der MIME-Tabelle verweist auf die Erweiterung tst, aber die Erweiterung tst in der Erweiterungstabelle verweist auf flaps/x-flaps. Dies ist nicht reziprok.
+-   Der Inhaltstyp flaps/x-flaps verweist auf die Erweiterung flp, aber diese Erweiterung weist in der MIME-Spalte der Extension-Tabelle einen NULL-Eintrag \_ auf.
 
 [MIME-Tabelle](mime-table.md) (partiell)
 
 
 
-| ContentType   | Durchwahl\_ |
+| ContentType   | Erweiterung\_ |
 |---------------|-------------|
-| Test/x-Test   | TST         |
-| Klappen/x-Klappen | FLP         |
+| test/x-test   | Tst         |
+| flaps/x-flaps | Flp         |
 
 
 
  
 
-[Erweiterungs Tabelle](extension-table.md) (partiell)
+[Erweiterungstabelle](extension-table.md) (teilweise)
 
 
 
-| Durchwahl | Medi\_        |
+| Erweiterung | Mime\_        |
 |-----------|---------------|
-| TST       | Klappen/x-Klappen |
-| FLP       | Null          |
+| Tst       | flaps/x-flaps |
+| Flp       | Null          |
 
 
 
@@ -60,7 +60,7 @@ ICE15 gibt zwei Fehlermeldungen für das folgende Beispiel aus:
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

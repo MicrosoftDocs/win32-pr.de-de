@@ -1,7 +1,7 @@
 ---
-description: Die getmediatype-Methode ruft einen bevorzugten Medientyp ab.
+description: Die GetMediaType-Methode ruft einen bevorzugten Medientyp ab.
 ms.assetid: 85605885-adb5-4f13-91af-48bf74684eca
-title: Csourcestream. getmediatype-Methode (Source. h)-pmediatype-Parameter
+title: CSourceStream.GetMediaType-Methode (Source.h) – pMediaType-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8306da8451d4af7da8ce4f4c7d4d3f6fd367e1ec
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 2850d08726337f1ff43ad09319aea8b0af95d107ad9dad9c0f89ce94474c7261
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389183"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073194"
 ---
-# <a name="csourcestreamgetmediatype-method-sourceh"></a>Csourcestream. getmediatype-Methode (Quelle. h)
+# <a name="csourcestreamgetmediatype-method-sourceh"></a>CSourceStream.GetMediaType-Methode (Source.h)
 
-Die- `GetMediaType` Methode ruft einen bevorzugten Medientyp ab.
+Die `GetMediaType` -Methode ruft einen bevorzugten Medientyp ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,38 +42,38 @@ virtual HRESULT GetMediaType(
 
 <dl> <dt>
 
-*pmediatype* 
+*pMediaType* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den Medientyp empfängt.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den Medientyp empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                            | Beschreibung                      |
 |--------------------------------------------------------------------------------------------------------|----------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Erfolg.<br/>              |
-| <dl> <dt>**VFW \_ S \_ keine \_ weiteren \_ Elemente**</dt> </dl> | Der Index liegt außerhalb des zulässigen Bereichs.<br/>   |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>           | Index kleiner als 0 (null).<br/> |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl>           | Unerwarteter Fehler.<br/>     |
+| <dl> <dt>**VFW \_ S \_ NO \_ MORE \_ ITEMS**</dt> </dl> | Index außerhalb des Bereichs.<br/>   |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>           | Index kleiner als 0 (null).<br/> |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl>           | Unerwarteter Fehler.<br/>     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es gibt zwei Versionen dieser Methode. Eine Version überschreibt die [**cbasepin:: getmediatype**](cbasepin-getmediatype.md) -Methode und übernimmt einen Indexwert als Parameter. Die andere Version dient zum Abrufen eines einzelnen Medientyps, sodass der Index-Parameter fehlt.
+Es gibt zwei Versionen dieser Methode. Eine Version überschreibt die [**CBasePin::GetMediaType-Methode**](cbasepin-getmediatype.md) und verwendet einen Indexwert als Parameter. Die andere Version ist so konzipiert, dass ein einzelner Medientyp abgerufen wird, sodass der Indexparameter fehlt.
 
-Die Methode mit einem Parameter gibt "E unerwartete" zurück \_ . Die zwei-Parameter-Methode überprüft, ob der *iPosition* -Parameter NULL ist, und ruft dann die Einzel Parameter Version auf. Abhängig von der Anzahl der Medientypen, die von der PIN unterstützt werden, müssen Sie eine dieser Methoden überschreiben:
+Die Einzelparametermethode gibt E \_ UNEXPECTED zurück. Die Methode mit zwei Parametern überprüft, ob der *iPosition-Parameter* 0 (null) ist, und ruft dann die Einzelparameterversion auf. Abhängig von der Anzahl von Medientypen, die der Pin unterstützt, müssen Sie eine der folgenden Methoden überschreiben:
 
--   Wenn die PIN genau einen Medientyp unterstützt, überschreiben Sie die Einzel Parameter Version. Füllen Sie den Medientyp aus, der von der PIN unterstützt wird.
--   Wenn die PIN mehr als einen Medientyp unterstützt, überschreiben Sie die Version mit zwei Parametern. Überschreiben Sie außerdem die [**csourcestream:: checkmediatype**](csourcestream-checkmediatype.md) -Methode.
+-   Wenn der Pin genau einen Medientyp unterstützt, überschreiben Sie die Einzelparameterversion. Geben Sie den Medientyp ein, den der Pin unterstützt.
+-   Wenn der Pin mehrere Medientypen unterstützt, überschreiben Sie die Zwei-Parameter-Version. Überschreiben Sie auch die [**CSourceStream::CheckMediaType-Methode.**](csourcestream-checkmediatype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Die Methode mit einem Parameter gibt "E unerwartete" zurück \_ . Die zwei-Param
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -90,7 +90,7 @@ Die Methode mit einem Parameter gibt "E unerwartete" zurück \_ . Die zwei-Param
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

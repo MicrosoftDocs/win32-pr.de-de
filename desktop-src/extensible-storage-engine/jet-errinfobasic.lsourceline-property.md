@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_ERRINFOBASIC. lsourceline-Eigenschaft'
-title: JET_ERRINFOBASIC. lsourceline-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen finden Sie unter: JET_ERRINFOBASIC.lSourceLine-Eigenschaft'
+title: JET_ERRINFOBASIC.lSourceLine -Eigenschaft (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'lSourceLine property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Windows8.JET_ERRINFOBASIC.lSourceLine
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.jet_errinfobasic.lsourceline(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5b5853e6855cd2079bdd782662d10509942b6239
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f64e459a26d55569531d09885e94d881f99c580e4ce1e34ea8e31a9f43faa650
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119617170"
 ---
-# <a name="jet_errinfobasiclsourceline-property"></a>JET_ERRINFOBASIC. lsourceline-Eigenschaft
+# <a name="jet_errinfobasiclsourceline-property"></a>JET_ERRINFOBASIC.lSourceLine-Eigenschaft
 
-Ruft die Quelldatei Zeile für die angeforderte Informationsebene ab oder legt diese fest.
+Ruft die Quelldateizeile für die angeforderte Infoebene ab oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int lSourceLine { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_ERRINFOBASIC-Klasse](./jet-errinfobasic-class.md)
 
-[Mitglieder JET_ERRINFOBASIC](./jet-errinfobasic-members.md)
+[JET_ERRINFOBASIC Mitglieder](./jet-errinfobasic-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

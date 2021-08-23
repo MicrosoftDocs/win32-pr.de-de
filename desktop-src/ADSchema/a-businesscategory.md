@@ -4,8 +4,8 @@ description: Beschreibender Text für eine Organisationseinheit.
 ms.assetid: 8af9ee4a-0bc6-49f5-809c-234d1913db86
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Business-Category-Attribut
-- businesscategory-Attribut AD-Schema
+- Business-Category AD-Attributschema
+- businessCategory-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 24a1469475b5ed290863ebfbad3035e576aa8bad
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: edcbd38feba1364291685ecd68d8afc060fcc5f09e1144b8ecc73af9aaaf5b28
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106345957"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119307290"
 ---
 # <a name="business-category-attribute"></a>Business-Category-Attribut
 
@@ -30,10 +30,10 @@ Beschreibender Text für eine Organisationseinheit.
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Business-Category                           |
-| LDAP-Display-Name | businesscategory                            |
+| Ldap-Anzeigename | businessCategory                            |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 2.5.4.15                                    |
 | System-ID-GUID    | bf967931-0de6-11d0-a285-00aa003049e2        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -43,7 +43,7 @@ Beschreibender Text für eine Organisationseinheit.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,20 +58,20 @@ Beschreibender Text für eine Organisationseinheit.
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                                                |
 | MAPI-Id                | 0x8057                                                                                                                                                                                                                            |
-| System-Only            | False                                                                                                                                                                                                                             |
-| Ist-einwertig       | False                                                                                                                                                                                                                             |
-| Ist indiziert             | False                                                                                                                                                                                                                             |
-| Im globalen Katalog      | False                                                                                                                                                                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                                                      |
+| System-Only            | Falsch                                                                                                                                                                                                                             |
+| Ist einwertig       | Falsch                                                                                                                                                                                                                             |
+| Ist indiziert             | Falsch                                                                                                                                                                                                                             |
+| Im globalen Katalog      | Falsch                                                                                                                                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                      |
 | Range-Lower            | 1                                                                                                                                                                                                                                 |
 | Range-Upper            | 128                                                                                                                                                                                                                               |
 | Search-Flags           | 0x00000000                                                                                                                                                                                                                        |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                        |
-| In verwendete Klassen        | [**Gruppe von Namen**](c-groupofnames.md)<br/> [**Organisation**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Privat Person**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Gruppe von Namen**](c-groupofnames.md)<br/> [**Organization**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,16 +79,16 @@ Beschreibender Text für eine Organisationseinheit.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                                                                                                              |
 | MAPI-Id                | 0x8057                                                                                                                                                                                                                                                                                          |
-| System-Only            | False                                                                                                                                                                                                                                                                                           |
-| Ist-einwertig       | False                                                                                                                                                                                                                                                                                           |
-| Ist indiziert             | False                                                                                                                                                                                                                                                                                           |
-| Im globalen Katalog      | False                                                                                                                                                                                                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                                                                                                                    |
+| System-Only            | Falsch                                                                                                                                                                                                                                                                                           |
+| Ist einwertig       | Falsch                                                                                                                                                                                                                                                                                           |
+| Ist indiziert             | Falsch                                                                                                                                                                                                                                                                                           |
+| Im globalen Katalog      | Falsch                                                                                                                                                                                                                                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                                    |
 | Range-Lower            | 1                                                                                                                                                                                                                                                                                               |
 | Range-Upper            | 128                                                                                                                                                                                                                                                                                             |
 | Search-Flags           | 0x00000000                                                                                                                                                                                                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                                      |
-| In verwendete Klassen        | [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupof uniquumames**](c-groupofuniquenames.md)<br/> [**Organisation**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Privat Person**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> [**Organization**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> |
 
 
 
@@ -100,16 +100,16 @@ Beschreibender Text für eine Organisationseinheit.
 |------------------------|------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                               |
 | MAPI-Id                | 0x8057                                                                                                           |
-| System-Only            | False                                                                                                            |
-| Ist-einwertig       | False                                                                                                            |
-| Ist indiziert             | False                                                                                                            |
-| Im globalen Katalog      | False                                                                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                     |
+| System-Only            | Falsch                                                                                                            |
+| Ist einwertig       | Falsch                                                                                                            |
+| Ist indiziert             | Falsch                                                                                                            |
+| Im globalen Katalog      | Falsch                                                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                     |
 | Range-Lower            | 1                                                                                                                |
 | Range-Upper            | 128                                                                                                              |
 | Search-Flags           | 0x00000000                                                                                                       |
 | System-Flags           | 0x00000010                                                                                                       |
-| In verwendete Klassen        | [**Organisation**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> |
+| In verwendete Klassen        | [**Organization**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> |
 
 
 
@@ -121,16 +121,16 @@ Beschreibender Text für eine Organisationseinheit.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                                                                                                              |
 | MAPI-Id                | 0x8057                                                                                                                                                                                                                                                                                          |
-| System-Only            | False                                                                                                                                                                                                                                                                                           |
-| Ist-einwertig       | False                                                                                                                                                                                                                                                                                           |
-| Ist indiziert             | False                                                                                                                                                                                                                                                                                           |
-| Im globalen Katalog      | False                                                                                                                                                                                                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                                                                                                                    |
+| System-Only            | Falsch                                                                                                                                                                                                                                                                                           |
+| Is-Single-Valued       | Falsch                                                                                                                                                                                                                                                                                           |
+| Ist indiziert             | Falsch                                                                                                                                                                                                                                                                                           |
+| Im globalen Katalog      | Falsch                                                                                                                                                                                                                                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                                    |
 | Range-Lower            | 1                                                                                                                                                                                                                                                                                               |
 | Range-Upper            | 128                                                                                                                                                                                                                                                                                             |
 | Search-Flags           | 0x00000000                                                                                                                                                                                                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                                      |
-| In verwendete Klassen        | [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupof uniquumames**](c-groupofuniquenames.md)<br/> [**Organisation**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Privat Person**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Gruppen von Namen**](c-groupofnames.md)<br/> [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> [**Organization**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Besennungsperson**](c-residentialperson.md)<br/> |
 
 
 
@@ -142,16 +142,16 @@ Beschreibender Text für eine Organisationseinheit.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                                                                                                              |
 | MAPI-Id                | 0x8057                                                                                                                                                                                                                                                                                          |
-| System-Only            | False                                                                                                                                                                                                                                                                                           |
-| Ist-einwertig       | False                                                                                                                                                                                                                                                                                           |
-| Ist indiziert             | False                                                                                                                                                                                                                                                                                           |
-| Im globalen Katalog      | False                                                                                                                                                                                                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                                                                                                                    |
+| System-Only            | Falsch                                                                                                                                                                                                                                                                                           |
+| Is-Single-Valued       | Falsch                                                                                                                                                                                                                                                                                           |
+| Ist indiziert             | Falsch                                                                                                                                                                                                                                                                                           |
+| Im globalen Katalog      | Falsch                                                                                                                                                                                                                                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                                    |
 | Range-Lower            | 1                                                                                                                                                                                                                                                                                               |
 | Range-Upper            | 128                                                                                                                                                                                                                                                                                             |
 | Search-Flags           | 0x00000000                                                                                                                                                                                                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                                      |
-| In verwendete Klassen        | [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupof uniquumames**](c-groupofuniquenames.md)<br/> [**Organisation**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Privat Person**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Gruppen von Namen**](c-groupofnames.md)<br/> [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> [**Organization**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Besennungsperson**](c-residentialperson.md)<br/> |
 
 
 
@@ -163,16 +163,16 @@ Beschreibender Text für eine Organisationseinheit.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                                                                                                              |
 | MAPI-Id                | 0x8057                                                                                                                                                                                                                                                                                          |
-| System-Only            | False                                                                                                                                                                                                                                                                                           |
-| Ist-einwertig       | False                                                                                                                                                                                                                                                                                           |
-| Ist indiziert             | False                                                                                                                                                                                                                                                                                           |
-| Im globalen Katalog      | False                                                                                                                                                                                                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                                                                                                                    |
+| System-Only            | Falsch                                                                                                                                                                                                                                                                                           |
+| Is-Single-Valued       | Falsch                                                                                                                                                                                                                                                                                           |
+| Ist indiziert             | Falsch                                                                                                                                                                                                                                                                                           |
+| Im globalen Katalog      | Falsch                                                                                                                                                                                                                                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                                    |
 | Range-Lower            | 1                                                                                                                                                                                                                                                                                               |
 | Range-Upper            | 128                                                                                                                                                                                                                                                                                             |
 | Search-Flags           | 0x00000000                                                                                                                                                                                                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                                      |
-| In verwendete Klassen        | [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupof uniquumames**](c-groupofuniquenames.md)<br/> [**Organisation**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Privat Person**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> [**Organization**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> |
 
 
 
@@ -184,16 +184,16 @@ Beschreibender Text für eine Organisationseinheit.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                                                                                                              |
 | MAPI-Id                | 0x8057                                                                                                                                                                                                                                                                                          |
-| System-Only            | False                                                                                                                                                                                                                                                                                           |
-| Ist-einwertig       | False                                                                                                                                                                                                                                                                                           |
-| Ist indiziert             | False                                                                                                                                                                                                                                                                                           |
-| Im globalen Katalog      | False                                                                                                                                                                                                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                                                                                                                    |
+| System-Only            | Falsch                                                                                                                                                                                                                                                                                           |
+| Ist einwertig       | Falsch                                                                                                                                                                                                                                                                                           |
+| Ist indiziert             | Falsch                                                                                                                                                                                                                                                                                           |
+| Im globalen Katalog      | Falsch                                                                                                                                                                                                                                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                                    |
 | Range-Lower            | 1                                                                                                                                                                                                                                                                                               |
 | Range-Upper            | 128                                                                                                                                                                                                                                                                                             |
 | Search-Flags           | 0x00000000                                                                                                                                                                                                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                                      |
-| In verwendete Klassen        | [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupof uniquumames**](c-groupofuniquenames.md)<br/> [**Organisation**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Privat Person**](c-residentialperson.md)<br/> |
+| In verwendete Klassen        | [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> [**Organization**](c-organization.md)<br/> [**Organisationseinheit**](c-organizationalunit.md)<br/> [**1600-000-**](c-residentialperson.md)<br/> |
 
 
 

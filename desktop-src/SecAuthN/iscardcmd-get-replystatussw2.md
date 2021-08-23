@@ -1,7 +1,7 @@
 ---
-description: Ruft das Antwort-APDU-SW2 Status Byte ab.
+description: Ruft das Antwort-APDU SW2-Status byte ab.
 ms.assetid: 24ad0164-84fc-4a99-b9dd-0f7d789dff92
-title: 'Iscardcmd:: get_ReplyStatusSW2-Methode (scarddat. h)'
+title: ISCardCmd::get_ReplyStatusSW2-Methode (Ddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 7ff503758a50437b4b7ff974fe4455d4b92ce978
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 60004c56d9d6dec8aa7b5afc9c77e3c5af813020db387172b06a0c802bd9fd8b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119481540"
 ---
-# <a name="iscardcmdget_replystatussw2-method"></a>Iscardcmd:: get \_ ReplyStatusSW2-Methode
+# <a name="iscardcmdget_replystatussw2-method"></a>ISCardCmd::get \_ ReplyStatusSW2-Methode
 
-\[Die Methode " **get \_ ReplyStatusSW2** " ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **\_ methode get ReplyStatusSW2** steht für die Verwendung in den Betriebssystemen zur Verfügung, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **get \_ ReplyStatusSW2** -Methode ruft die [*Antwort APDU*](../secgloss/r-gly.md) SW2 Status Byte ab.
+Die **\_ get ReplyStatusSW2-Methode** ruft das [*Antwort-APDU*](../secgloss/r-gly.md) SW2-Status-Byte ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,43 +41,43 @@ HRESULT get_ReplyStatusSW2(
 
 <dl> <dt>
 
-*pbySW2* \[ vorgenommen\]
+*pbySW2* \[ out\]
 </dt> <dd>
 
-Zeiger auf das Byte, das den Wert des SW2 Byte bei der Rückgabe enthält.
+Zeiger auf das Byte, das bei der Rückgabe den Wert des SW2-Byte enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                      |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/>     |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *pbySW2* ist ungültig.<br/>            |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | In *pbySW2* wurde ein fehlerhafter Zeiger übermittelt.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                        |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | *PbySW2* ist ungültig.<br/>            |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde in *pbySW2* übergeben.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das SW2-Status Byte der Antwort APDU ist schreibgeschützt.
+Das SW2-Status-Byte des Antwort-APDU ist schreibgeschützt.
 
-Rufen [**Sie get \_ ReplyStatusSW1**](iscardcmd-get-replystatussw1.md)auf, um das SW1-Status Byte der Antwort abzurufen.
+Rufen Sie [**get \_ ReplyStatusSW1**](iscardcmd-get-replystatussw1.md)auf, um das Sw1-Status byte der Antwort-APDU abzurufen.
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**iscardcmd**](iscardcmd.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardCmd**](iscardcmd.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die [*Smartcard*](../secgloss/s-gly.md) zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen [*Smartcardfehlercode*](../secgloss/s-gly.md) zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie das SW2-Status Byte der [*Antwort-APDU*](../secgloss/r-gly.md)abgerufen wird. Im Beispiel wird davon ausgegangen, dass "piscardcmd" ein gültiger Zeiger auf eine Instanz der [**iscardcmd**](iscardcmd.md) -Schnittstelle ist.
+Das folgende Beispiel zeigt, wie das SW2-Status-Byte der [*Antwort-APDU*](../secgloss/r-gly.md)abgerufen wird. Im Beispiel wird davon ausgegangen, dass pISCardCmd ein gültiger Zeiger auf eine Instanz der [**ISCardCmd-Schnittstelle**](iscardcmd.md) ist.
 
 
 ```C++
@@ -101,28 +101,28 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Ddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Ddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardcmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
+| IID<br/>                      | IID \_ ISCardCmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**get \_ ReplyStatusSW1**](iscardcmd-get-replystatussw1.md)
 </dt> <dt>
 
-[**\_replystatus erhalten**](iscardcmd-get-replystatus.md)
+[**get \_ ReplyStatus**](iscardcmd-get-replystatus.md)
 </dt> <dt>
 
-[**Iscardcmd**](iscardcmd.md)
+[**ISCardCmd**](iscardcmd.md)
 </dt> </dl>
 
  

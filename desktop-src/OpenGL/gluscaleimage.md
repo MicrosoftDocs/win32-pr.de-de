@@ -1,9 +1,9 @@
 ---
-title: gluscaleimage-Funktion (glu. h)
-description: Die Funktion "gluscaleimage" skaliert ein Bild auf eine beliebige Größe.
+title: gluScaleImage-Funktion (Glu.h)
+description: Die gluScaleImage-Funktion skaliert ein Bild auf eine beliebige Größe.
 ms.assetid: f47191e8-b22d-4f6a-949a-9c7782d6d338
 keywords:
-- gluscaleimage-Funktion OpenGL
+- gluScaleImage-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7da95f1545996a83adeb27deaceb7fab6290005e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0a6bab8865dec475087743f658429fd633fc9bb1443da14bd1198e8a7c73b0fd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119488740"
 ---
-# <a name="gluscaleimage-function"></a>gluscaleimage-Funktion
+# <a name="gluscaleimage-function"></a>gluScaleImage-Funktion
 
-Die Funktion " **gluscaleimage** " skaliert ein Bild auf eine beliebige Größe.
+Die **gluScaleImage-Funktion** skaliert ein Bild auf eine beliebige Größe.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,63 +51,63 @@ int WINAPI gluScaleImage(
 *format* 
 </dt> <dd>
 
-Das Format der Pixeldaten. Die folgenden symbolischen Werte sind gültig: GL \_ Color \_ Index, GL \_ Stencil \_ Index, GL- \_ tiefen \_ Komponente, GL \_ red, GL \_ Green, GL \_ Blue, GL \_ Alpha, GL \_ RGB, GL \_ RGBA, GL \_ BGR \_ ext, GL \_ BGRA \_ ext, GL \_ Helligkeit und GL \_ Luminance \_ alpha.
+Das Format der Pixeldaten. Die folgenden symbolischen Werte sind gültig: GL \_ COLOR \_ INDEX, GL \_ STENCIL \_ INDEX, GL \_ DEPTH \_ COMPONENT, GL \_ RED, GL \_ GREEN, GL \_ BLUE, GL \_ ALPHA, GL \_ RGB, GL \_ RGBA, GL \_ BGR \_ EXT, GL \_ BGRA \_ EXT, GL \_ LUMINANCE und GL \_ LUMINANCE \_ ALPHA.
 
 </dd> <dt>
 
 *widthin* 
 </dt> <dd>
 
-Die Breite des skalierten Quell Bilds.
+Die Breite des Quellbilds, das skaliert wird.
 
 </dd> <dt>
 
-*Erhöhung* 
+*heightin* 
 </dt> <dd>
 
-Die Höhe des skalierten Quell Bilds.
+Die Höhe des Quellbilds, das skaliert wird.
 
 </dd> <dt>
 
 *typein* 
 </dt> <dd>
 
-Der *Datentyp für Datain*. Muss eines der folgenden sein: GL \_ unsigned \_ Byte, GL \_ Byte, GL \_ Bitmap, GL \_ unsigned \_ Short, GL \_ Short, GL \_ unsigned \_ int, GL \_ int oder GL \_ float.
+Der Datentyp für *datain*. Folgendes muss sein: GL \_ \_ UNSIGNED BYTE, GL \_ BYTE, GL \_ BITMAP, GL \_ UNSIGNED \_ SHORT, GL \_ SHORT, GL \_ UNSIGNED \_ INT, GL \_ INT oder GL \_ FLOAT.
 
 </dd> <dt>
 
-*Datain* 
+*datain* 
 </dt> <dd>
 
-Ein Zeiger auf das Quell Bild.
+Ein Zeiger auf das Quellbild.
 
 </dd> <dt>
 
 *widthout* 
 </dt> <dd>
 
-Die Breite des Ziel Bilds.
+Die Breite des Zielbilds.
 
 </dd> <dt>
 
-*"heightout"* 
+*heightout* 
 </dt> <dd>
 
-Die Höhe des Ziel Bilds.
+Die Höhe des Zielbilds.
 
 </dd> <dt>
 
-*meinen* 
+*Typeout* 
 </dt> <dd>
 
-Der *Datentyp für dataout*. Muss eines der folgenden sein: GL \_ unsigned \_ Byte, GL \_ Byte, GL \_ Bitmap, GL \_ unsigned \_ Short, GL \_ Short, GL \_ unsigned \_ int, GL \_ int oder GL \_ float.
+Der Datentyp für *dataout*. Folgendes muss sein: GL \_ \_ UNSIGNED BYTE, GL \_ BYTE, GL \_ BITMAP, GL \_ UNSIGNED \_ SHORT, GL \_ SHORT, GL \_ UNSIGNED \_ INT, GL \_ INT oder GL \_ FLOAT.
 
 </dd> <dt>
 
 *dataout* 
 </dt> <dd>
 
-Ein Zeiger auf das Ziel Image.
+Ein Zeiger auf das Zielimage.
 
 </dd> </dl>
 
@@ -115,15 +115,15 @@ Ein Zeiger auf das Ziel Image.
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert „0“.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein glu-Fehlercode (siehe [**gluerrorstring**](gluerrorstring.md)).
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein GLU-Fehlercode (siehe [**gluErrorString**](gluerrorstring.md)).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **gluscaleimage** " skaliert ein Pixel Bild mithilfe der entsprechenden Pixel Speicher Modi, um Daten aus dem Quell Abbild zu entpacken und Daten in das Ziel Image zu packen.
+Die **gluScaleImage-Funktion** skaliert ein Pixelbild mithilfe der entsprechenden Pixelspeichermodi, um Daten aus dem Quellbild zu entpacken und Daten in das Zielbild zu packen.
 
-Beim Verkleinern eines Bilds verwendet " **gluscaleimage** " einen Feld Filter, um ein Beispiel für das Quell Abbild zu erstellen und Pixel für das Ziel Image zu erstellen. Beim Vergrößern eines Bilds werden die Pixel des Quell Bilds linear interpoliert, um das Ziel Image zu erstellen.
+Beim Verkleinern eines Bilds verwendet **gluScaleImage** einen Feldfilter, um das Quellbild zu beproben und Pixel für das Zielbild zu erstellen. Beim Vergrößern eines Bilds werden die Pixel aus dem Quellbild linear interpoliert, um das Zielbild zu erstellen.
 
-Eine Beschreibung der zulässigen Werte für die Parameter " *Format*", " *typein*" und " *meinen* " finden Sie unter [**glread Pixels**](glreadpixels.md).
+Eine Beschreibung der zulässigen Werte für die Parameter *format*, *typein* und *typeout* finden Sie unter [**glReadPixels**](glreadpixels.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -133,8 +133,8 @@ Eine Beschreibung der zulässigen Werte für die Parameter " *Format*", " *typei
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -143,10 +143,10 @@ Eine Beschreibung der zulässigen Werte für die Parameter " *Format*", " *typei
 
 <dl> <dt>
 
-[**gldrawpixels**](gldrawpixels.md)
+[**glDrawPixels**](gldrawpixels.md)
 </dt> <dt>
 
-[**glread Pixels**](glreadpixels.md)
+[**glReadPixels**](glreadpixels.md)
 </dt> <dt>
 
 [**gluBuild1DMipmaps**](glubuild1dmipmaps.md)
@@ -155,7 +155,7 @@ Eine Beschreibung der zulässigen Werte für die Parameter " *Format*", " *typei
 [**gluBuild2DMipmaps**](glubuild2dmipmaps.md)
 </dt> <dt>
 
-[**gluerrorstring**](gluerrorstring.md)
+[**gluErrorString**](gluerrorstring.md)
 </dt> </dl>
 
  

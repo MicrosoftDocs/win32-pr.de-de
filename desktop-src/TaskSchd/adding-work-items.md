@@ -1,37 +1,37 @@
 ---
-title: Hinzufügen von Arbeits Elementen
-description: Es gibt zwei Möglichkeiten, dem geplanten tasksordner Arbeitselemente hinzuzufügen. Sie können ein neues Arbeits Element innerhalb des Ordners erstellen, oder Sie können dem Ordner ein vorhandenes Arbeits Element hinzufügen.
+title: Hinzufügen von Arbeitselementen
+description: Es gibt zwei Möglichkeiten, dem Ordner Geplante Aufgaben Arbeitselemente hinzuzufügen. Sie können ein neues Arbeitselement im Ordner erstellen oder dem Ordner ein vorhandenes Arbeitselement hinzufügen.
 ms.assetid: fad5e813-a2e9-40af-97a9-4f92debf1808
 keywords:
-- Arbeitselemente Taskplaner, hinzufügen
-- Aufgaben Taskplaner, hinzufügen
+- Arbeitselemente Taskplaner , hinzufügen
+- Tasks Taskplaner , hinzufügen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 722f776fd36933995cfd9b5a85612b52dae63f7b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cc964b620a01b0f1114240dcb11f275fa8faffc37e8264d8854cb60191628943
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119621160"
 ---
-# <a name="adding-work-items"></a>Hinzufügen von Arbeits Elementen
+# <a name="adding-work-items"></a>Hinzufügen von Arbeitselementen
 
-Es gibt zwei Möglichkeiten, dem [*geplanten tasksordner*](s.md) [*Arbeitselemente*](w.md) hinzuzufügen. Sie können ein neues Arbeits Element innerhalb des Ordners erstellen, oder Sie können dem Ordner ein vorhandenes Arbeits Element hinzufügen.
+Es gibt zwei Möglichkeiten, [*Dem*](w.md) Ordner Geplante [*Aufgaben Arbeitselemente hinzuzufügen.*](s.md) Sie können ein neues Arbeitselement im Ordner erstellen oder dem Ordner ein vorhandenes Arbeitselement hinzufügen.
 
 > [!Note]  
-> Derzeit können dem Ordner "geplante Aufgaben" nur Aufgaben Objekte hinzugefügt werden. Wenn Sie eine Aufgabe hinzufügen, müssen Sie die Bezeichner für die Aufgaben Klasse und die Aufgaben Schnittstelle [**ITask**](/windows/desktop/api/Mstask/nn-mstask-itask)kennen.
+> Derzeit können dem Ordner Geplante Aufgaben nur Taskobjekte hinzugefügt werden. Wenn Sie eine Aufgabe hinzufügen, müssen Sie die Bezeichner für die Aufgabenklasse und die Taskschnittstelle [**ITask kennen.**](/windows/desktop/api/Mstask/nn-mstask-itask)
 
- 
+ 
 
-Sie erstellen neue Arbeitselemente, indem Sie die [**itaskscheduler:: NewWorkItem**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-newworkitem) -Methode aufrufen. Diese Methode erstellt ein neues Arbeits Element Objekt mit dem von Ihnen angegebenen Namen und fügt das Arbeits Element dem Ordner "geplante Aufgaben" hinzu. Wenn Sie ein neues Arbeits Element erstellen, ordnet der Taskplaner den für das neue-Objekt erforderlichen Arbeitsspeicher zu.
+Sie erstellen neue Arbeitselemente, indem Sie die [**ITaskScheduler::NewWorkItem-Methode**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-newworkitem) aufrufen. Diese Methode erstellt ein neues Arbeitselementobjekt unter Verwendung des von Ihnen genannten Namens und fügt das Arbeitselement dem Ordner Geplante Aufgaben hinzu. Wenn Sie ein neues Arbeitselement erstellen, weist der Taskplaner den Arbeitsspeicher zu, der für das neue Objekt erforderlich ist.
 
-Um dem Ordner "geplante Aufgaben" vorhandene Arbeitselemente hinzuzufügen, müssen Sie die [**itaskscheduler:: addworkitem**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-addworkitem) -Methode aufzurufen. Wenn Sie diese Methode aufgerufen haben, müssen Sie das-Objekt erstellen.
+Um dem Ordner Geplante Aufgaben vorhandene Arbeitselemente hinzuzufügen, rufen Sie die [**ITaskScheduler::AddWorkItem-Methode**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-addworkitem) auf. Wenn Sie diese Methode aufrufen, müssen Sie das -Objekt erstellen.
 
-Die Namen, die Sie für Arbeitselemente angeben, müssen innerhalb des Ordners für geplante Aufgaben eindeutig sein. Wenn eine Arbeitsaufgabe mit dem gleichen Namen bereits vorhanden ist, wenn Sie entweder die [**itaskscheduler:: NewWorkItem**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-newworkitem) -Methode oder die [**itaskscheduler:: addworkitem**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-addworkitem) -Methode aufruft, gibt die Methode eine **Fehler Datei "ist \_ \_ vorhanden** " zurück. Weitere Informationen finden Sie unter [Erstellen einer Aufgabe mit NewWorkItem-Beispiel](creating-a-task-using-newworkitem-example.md).
+Die Namen, die Sie für Arbeitselemente verwenden, müssen innerhalb des Ordners Geplante Aufgaben eindeutig sein. Wenn ein Arbeitselement mit demselben Namen bereits vorhanden ist, wenn Sie entweder die [**ITaskScheduler::NewWorkItem-Methode**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-newworkitem) oder die [**ITaskScheduler::AddWorkItem-Methode**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-addworkitem) aufrufen, gibt die Methode einen **ERROR FILE \_ \_ EXISTS-Fehler** zurück. Weitere Informationen finden Sie unter [Creating a Task Using NewWorkItem Example](creating-a-task-using-newworkitem-example.md).
 
- 
+ 
 
- 
+ 
 
 
 

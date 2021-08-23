@@ -1,29 +1,29 @@
 ---
-title: Mittel l-Basis Typen
-description: Alle Datentypen, die über ein Netzwerk übertragen werden sollen, müssen in einen Mittelwert oder einen vordefinierten Typ aufgelöst werden.
+title: MIDL-Basistypen
+description: Um über ein Netzwerk übertragen zu werden, müssen alle Datentypen in einen MIDL-Basistyp oder vordefinierten Typ auflösen.
 ms.assetid: 267c7582-c6c6-48da-9d22-d9ef13509ec8
 keywords:
-- Datentypen mittlerer l, Basis
+- Datentypen MIDL , Basis
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7f267559ae6c2aece23c2cbe213a65d373b42c90
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 64d075e375f3ceb2c3db75d395c2dc77530d774ea3fbd13fe795de6b77a306fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119560290"
 ---
-# <a name="midl-base-types"></a>Mittel l-Basis Typen
+# <a name="midl-base-types"></a>MIDL-Basistypen
 
-Alle Datentypen, die über ein Netzwerk übertragen werden sollen, müssen in einen Mittelwert oder einen vordefinierten Typ aufgelöst werden. In diesem Abschnitt werden die vordefinierten und Basis Typen vorgestellt, die von der mittleren l definiert werden:
+Um über ein Netzwerk übertragen zu werden, müssen alle Datentypen in einen MIDL-Basistyp oder vordefinierten Typ auflösen. In diesem Abschnitt werden die vordefinierten und Basistypen beschrieben, die VON MIDL definiert werden:
 
--   [Vordefinierte mittlere und Basis Typen](midl-predefined-and-base-types.md)
--   [Typen mit und ohne Vorzeichen](signed-vs--unsigned-types.md)
--   [Andere Datentypen in der Mitte](other-midl-data-types.md)
+-   [Vordefinierte MIDL- und Basistypen](midl-predefined-and-base-types.md)
+-   [Signierte und nicht signierte Typen](signed-vs--unsigned-types.md)
+-   [Andere MIDL-Datentypen](other-midl-data-types.md)
 
- 
+ 
 
- 
+ 
 
 
 

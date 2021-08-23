@@ -1,5 +1,5 @@
 ---
-description: Sendet eine Meldung an das angegebene Steuerelement in einem Dialogfeld.
+description: Sendet eine Nachricht an das angegebene Steuerelement in einem Dialogfeld.
 ms.assetid: 7c91e432-662c-4dd0-980c-892ce1092077
 title: _SendDlgItemMessage-Funktion
 ms.topic: reference
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Sqlunirl.dll
-ms.openlocfilehash: ea5595ecef953d81ee947042e6265178c1feecd6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3a1c17ab1ad303ce95755140ebe7f264b976471c7ecfa507f2152ec9e0ad221c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365964"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119538835"
 ---
-# <a name="_senddlgitemmessage-function"></a>\_SendDlgItemMess-Funktion
+# <a name="_senddlgitemmessage-function"></a>\_SendDlgItemMessage-Funktion
 
-\[Diese Funktion ist ein Wrapper über die **SendDlgItemMess** -Funktion. Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **SendDlgItemMess** direkt aufzurufen.\]
+\[Diese Funktion ist ein Wrapper für die **SendDlgItemMessage-Funktion.** Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **SendDlgItemMessage** direkt aufrufen.\]
 
-Sendet eine Meldung an das angegebene Steuerelement in einem Dialogfeld. Siehe [**SendDlgItemMess**](/windows/win32/api/winuser/nf-winuser-senddlgitemmessagea).
+Sendet eine Nachricht an das angegebene Steuerelement in einem Dialogfeld. Siehe [**SendDlgItemMessage.**](/windows/win32/api/winuser/nf-winuser-senddlgitemmessagea)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ LRESULT _SendDlgItemMessage(
 
 <dl> <dt>
 
-[**SendDlgItemMess age**](/windows/win32/api/winuser/nf-winuser-senddlgitemmessagea)
+[**SendDlgItemMessage**](/windows/win32/api/winuser/nf-winuser-senddlgitemmessagea)
 </dt> </dl>
 
  

@@ -1,32 +1,32 @@
 ---
 title: Paketzeitstempel
-description: Die IP-Hilfspaketzeitstempel-APIs bieten die Möglichkeit, die Zeitstempelfunktion eines Netzwerkadapters zu bestimmen und Zeitstempel vom Netzwerkadapter in Form von Zeitstempeln abfragt.
+description: Die APIs für IP-Hilfspakete mit Zeitstempeln bieten die Möglichkeit, die Zeitstempelfunktion eines Netzwerkadapters zu bestimmen und Zeitstempel vom Netzwerkadapter in Form von zeitstempelübergreifenden Zeitstempeln abzufragen.
 ms.topic: article
 ms.date: 01/19/2021
-ms.openlocfilehash: 07743473bcb606ccdb86c55f14a3413adf10d73a
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 12da7189dbae5f38085cdf4ad5f8e9ac1214cff7ddd0b683ecd97b70b2786c51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110559983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146633"
 ---
 # <a name="packet-timestamping"></a>Paketzeitstempel
 
 ## <a name="introduction"></a>Einführung
 
-Viele Netzwerkschnittstellenkarten (NICs oder Netzwerkadapter) können bei jedem Empfangen oder Übertragen eines Pakets einen Zeitstempel in ihrer Hardware generieren. Der Zeitstempel wird mithilfe der eigenen Hardwareuhr der NIC generiert. Dieses Feature wird insbesondere vom Precision Time Protocol (PTP) verwendet, bei dem es sich um ein Zeitsynchronisierungsprotokoll handelt. PTP stellt die Verwendung solcher Hardwarezeitstempel innerhalb des Protokolls selbst zur Verfügung.
+Viele Netzwerkschnittstellenkarten (NICs oder Netzwerkadapter) können einen Zeitstempel auf ihrer Hardware generieren, wenn ein Paket empfangen oder übertragen wird. Der Zeitstempel wird mithilfe der eigenen Hardwareuhr der NIC generiert. Dieses Feature wird insbesondere vom Precision Time Protocol (PTP) verwendet, einem Zeitsynchronisierungsprotokoll. PTP stellt die Verwendung solcher Hardwarezeitstempel innerhalb des Protokolls selbst bereit.
 
-Die Zeitstempel können beispielsweise verwendet werden, um die Zeit zu berechnen, die von einem Paket im Netzwerkstapel des Computers verbracht wird, bevor es an das Netzwerk gesendet oder vom Netzwerk empfangen wird. Diese Berechnungen können dann von PTP verwendet werden, um die Genauigkeit der Zeitsynchronisierung zu verbessern. Die Unterstützung des Paketzeitstempels von Netzwerkadaptern ist manchmal speziell auf das PTP-Protokoll ausgerichtet. In anderen Fällen wird eine allgemeinere Unterstützung bereitgestellt.
+Die Zeitstempel können z. B. verwendet werden, um die Zeit zu berechnen, die ein Paket innerhalb des Netzwerkstapels des Computers aufgewendet hat, bevor es an das Netzwerk gesendet oder von diesem empfangen wird. Diese Berechnungen können dann von PTP verwendet werden, um die Genauigkeit der Zeitsynchronisierung zu verbessern. Die Paketzeitstempelunterstützung von Netzwerkadaptern ist manchmal speziell auf das PTP-Protokoll ausgerichtet. In anderen Fällen wird eine allgemeinere Unterstützung bereitgestellt.
 
-Zeitstempel-APIs bieten Windows die Möglichkeit, die Hardwarezeitstempelfunktion von Netzwerkadaptern für das PTP-Protokoll version 2 zu unterstützen. Insgesamt umfassen die Features die Bereitstellung der Möglichkeit für Treiber von Netzwerkadaptern, Zeitstempel zu unterstützen, und für Benutzermodusanwendungen die Nutzung von Zeitstempeln, die Paketen über [Windows Sockets](/windows/win32/winsock/windows-sockets-start-page-2) zugeordnet sind (siehe Winsock-Zeitstempel). [](/windows/win32/winsock/winsock-timestamping) Darüber hinaus ist auch die Möglichkeit verfügbar, Softwarezeitstempel zu generieren, die es einem Netzwerktreiber ermöglichen, Zeitstempel in Software zu generieren. Solche Softwarezeitstempel werden von NIC-Treibern mithilfe der Kernelmodusentsprechung von [**QueryPerformanceCounter**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) (QPC) generiert. Die gemeinsame Aktivierung von *Hardware-* und Softwarezeitstempeln wird jedoch nicht unterstützt.
+Zeitstempel-APIs bieten Windows die Möglichkeit, die Hardware-Zeitstempelfunktion von Netzwerkadaptern für das PTP Version 2-Protokoll zu unterstützen. Insgesamt umfassen die Features die Bereitstellung der Möglichkeit für Treiber von Netzwerkadaptern zur Unterstützung von Zeitstempeln und für Anwendungen im Benutzermodus die Nutzung von Zeitstempeln, die Paketen über [Windows Sockets](/windows/win32/winsock/windows-sockets-start-page-2) zugeordnet sind (siehe [Winsock-Zeitstempel).](/windows/win32/winsock/winsock-timestamping) Darüber hinaus ist die Möglichkeit zum Generieren von Softwarezeitstempeln verfügbar, wodurch ein Netzwerktreiber Zeitstempel in Software generieren kann. Solche Softwarezeitstempel werden von NIC-Treibern mithilfe der Kernelmodusentsprechung von [**QueryPerformanceCounter**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) (QPC) generiert. Die gleichzeitige Aktivierung von Hardware- *und* Softwarezeitstempeln wird jedoch nicht unterstützt.
 
 Insbesondere bieten die in diesem Thema beschriebenen PAKETzeitstempel-APIs des Internetprotokollhilfs -Pakets die Möglichkeit für Benutzermodusanwendungen, die Zeitstempelfunktion eines Netzwerkadapters zu bestimmen und Zeitstempel vom Netzwerkadapter in Form von Kreuzzeitstempeln abzufragen (siehe unten).
 
 ## <a name="supporting-precision-time-protocol-version-2"></a>Unterstützung von Precision Time Protocol, Version 2
 
-Wie bereits erwähnt, besteht das Hauptziel der Unterstützung von Zeitstempeln in Windows darin, das PTPv2-Protokoll (Precision Time Protocol, Version 2) zu unterstützen. In PTPv2 benötigen nicht alle Nachrichten einen Zeitstempel. Ptp-Ereignismeldungen verwenden insbesondere Zeitstempel. Derzeit ist die Unterstützung auf PTPv2 über das User Datagram-Protokoll (User Datagram Protocol, UDP) festgelegt. PTP über Unformatiertes Ethernet wird nicht unterstützt.
+Wie bereits erwähnt, besteht das Hauptziel der Zeitstempelunterstützung in Windows darin, das PTPv2-Protokoll (Precision Time Protocol, Version 2) zu unterstützen. In PTPv2 benötigen nicht alle Nachrichten einen Zeitstempel. Insbesondere ptp-Ereignismeldungen verwenden Zeitstempel. Derzeit ist die Unterstützung auf PTPv2 über das User Datagram-Protokoll (User Datagram Protocol, UDP) festgelegt. PTP über Unformatiertes Ethernet wird nicht unterstützt.
 
-Zeitstempel werden für PTPv2 im *2-Schritt-Modus* unterstützt. *2 Schritt* bezieht sich auf den Modus, in dem die tatsächlichen Zeitstempel in den PTP-Paketen nicht während der Übertragung in der Hardware generiert werden, sondern stattdessen von der Hardware abgerufen und als separate Nachrichten übermittelt werden (z. B. mithilfe einer Folgemeldung).
+Zeitstempel werden für PTPv2 im *2-Schritt-Modus* unterstützt. *2 Schritt* bezieht sich auf den Modus, in dem die tatsächlichen Zeitstempel in den PTP-Paketen nicht im Echtzeitmodus in der Hardware generiert werden, sondern stattdessen von der Hardware abgerufen und als separate Nachrichten übermittelt werden (z. B. mithilfe einer Folgenachricht).
 
 Zusammenfassend lässt sich die Zeitstempel-APIs des Ip-Hilfsdiensts (Internet Protocol Helper) zusammen mit der Zeitstempelunterstützung von Winsock in einer PTPv2-Anwendung verwenden, um die Genauigkeit der Zeitsynchronisierung zu verbessern.
 
@@ -34,23 +34,23 @@ Zusammenfassend lässt sich die Zeitstempel-APIs des Ip-Hilfsdiensts (Internet P
 
 Eine Anwendung wie ein PTP-Zeitsynchronisierungsdienst muss die Zeitstempelfunktion eines Netzwerkadapters bestimmen. Mithilfe der abgerufenen Funktionen kann die Anwendung dann entscheiden, ob sie Zeitstempel verwenden möchte.
 
-Auch wenn ein *Netzwerkadapter* Zeitstempel unterstützt, muss die Funktion standardmäßig deaktiviert bleiben. Ein Adapter aktiviert das Zeitstempeln, wenn er dazu aufgefordert wird. Windows stellt APIs für eine Anwendung bereit, um die Funktionalität der Hardware abzurufen und welche Funktionen aktiviert sind.
+Auch wenn ein *Netzwerkadapter* Zeitstempel unterstützt, muss die Funktion standardmäßig deaktiviert bleiben. Ein Adapter aktiviert das Zeitstempeln, wenn er dazu aufgefordert wird. Windows stellt APIs für eine Anwendung bereit, um die Hardwarefunktionen abzurufen und welche Funktionen aktiviert sind.
 
-Um die unterstützten Zeitstempelfunktionen eines Netzwerkadapters abzurufen, rufen Sie die [**GetInterfaceSupportedTimestampCapabilities-Funktion**](/windows/win32/api/iphlpapi/nf-iphlpapi-getinterfacesupportedtimestampcapabilities) auf, geben den lokal eindeutigen Bezeichner (LUID) des Netzwerkadapters an und rufen im Gegenzug die unterstützten Zeitstempelfunktionen in Form eines [**INTERFACE_TIMESTAMP_CAPABILITIES-Objekts ab.**](/windows/win32/api/iphlpapi/ns-iphlpapi-interface_timestamp_capabilities)
+Um die unterstützten Zeitstempelfunktionen eines Netzwerkadapters abzurufen, rufen Sie die [**GetInterfaceSupportedTimestampCapabilities-Funktion**](/windows/win32/api/iphlpapi/nf-iphlpapi-getinterfacesupportedtimestampcapabilities) auf, stellen den lokal eindeutigen Bezeichner (LUID) des Netzwerkadapters bereit und rufen als Rückgabe die unterstützten Zeitstempelfunktionen in Form eines [**INTERFACE_TIMESTAMP_CAPABILITIES-Objekts**](/windows/win32/api/iphlpapi/ns-iphlpapi-interface_timestamp_capabilities) ab.
 
-Der von **GetInterfaceSupportedTimestampCapabilities** zurückgegebene Code gibt an, ob der Aufruf  erfolgreich war und ob ein aufgefüllter INTERFACE_TIMESTAMP_CAPABILITIES abgerufen wurde.
+Der von **GetInterfaceSupportedTimestampCapabilities zurückgegebene** Code gibt an, ob der Aufruf erfolgreich war und ob ein aufgefüllter **INTERFACE_TIMESTAMP_CAPABILITIES** Wert abgerufen wurde.
 
-Um die derzeit aktivierten Zeitstempelfunktionen eines Netzwerkadapters abzurufen, rufen Sie die [**GetInterfaceActiveTimestampCapabilities-Funktion**](/windows/win32/api/iphlpapi/nf-iphlpapi-getinterfaceactivetimestampcapabilities) auf, geben den lokal eindeutigen Bezeichner (LUID) des Netzwerkadapters an und rufen im Gegenzug die aktivierten Zeitstempelfunktionen in Form eines [**INTERFACE_TIMESTAMP_CAPABILITIES-Objekts**](/windows/win32/api/iphlpapi/ns-iphlpapi-interface_timestamp_capabilities) ab.
+Um die derzeit aktivierten Zeitstempelfunktionen eines Netzwerkadapters abzurufen, rufen Sie die [**GetInterfaceActiveTimestampCapabilities-Funktion**](/windows/win32/api/iphlpapi/nf-iphlpapi-getinterfaceactivetimestampcapabilities) auf, stellen den lokal eindeutigen Bezeichner (LUID) des Netzwerkadapters bereit und rufen als Rückgabe die aktivierten Zeitstempelfunktionen in Form eines [**INTERFACE_TIMESTAMP_CAPABILITIES-Objekts**](/windows/win32/api/iphlpapi/ns-iphlpapi-interface_timestamp_capabilities) ab.
 
-Auch hier gibt der von **GetInterfaceActiveTimestampCapabilities** zurückgegebene Code einen  Erfolg oder Fehler an und gibt an, ob ein gültiger INTERFACE_TIMESTAMP_CAPABILITIES abgerufen wurde.
+Auch hier gibt der von **GetInterfaceActiveTimestampCapabilities** zurückgegebene Code einen Erfolg oder Fehler an und gibt an, ob ein gültiger **INTERFACE_TIMESTAMP_CAPABILITIES** Wert abgerufen wurde.
 
-Netzwerkadapter können eine Vielzahl von Zeitstempelfunktionen unterstützen. Beispielsweise können einige Adapter jedes Paket beim Senden und Empfangen mit einem Zeitstempel versehen, während andere nur PTPv2-Pakete unterstützen. Die [**INTERFACE_TIMESTAMP_CAPABILITIES**](/windows/win32/api/iphlpapi/ns-iphlpapi-interface_timestamp_capabilities) beschreibt die genauen Funktionen, die ein Netzwerkadapter unterstützt.
+Netzwerkadapter können eine Vielzahl von Zeitstempelfunktionen unterstützen. Einige Adapter können beispielsweise beim Senden und Empfangen zeitstempeln, während andere nur PTPv2-Pakete unterstützen. Die [**INTERFACE_TIMESTAMP_CAPABILITIES-Struktur**](/windows/win32/api/iphlpapi/ns-iphlpapi-interface_timestamp_capabilities) beschreibt die genauen Funktionen, die ein Netzwerkadapter unterstützt.
 
 ## <a name="retrieving-cross-timestamps-from-a-network-adapter"></a>Abrufen von Zeitstempeln von einem Netzwerkadapter
 
-Bei Verwendung von Hardwarezeitstempeln muss eine PTP-Anwendung eine Beziehung zwischen der Hardwareuhr des Netzwerkadapters und einer Systemuhr herstellen (z. B. mithilfe geeigneter mathematischer Techniken). Dies ist erforderlich, damit ein Wert, der eine Uhrzeit in der Einheit einer Uhr darstellt, in eine Einheit einer anderen Uhr konvertiert werden kann. Für diesen Zweck werden Zeitstempel bereitgestellt, und Ihre Anwendung kann regelmäßig Zeitstempelstichproben erstellen, um eine solche Beziehung zu erstellen.
+Bei Verwendung von Hardwarezeitstempeln muss eine PTP-Anwendung eine Beziehung zwischen der Hardwareuhr des Netzwerkadapters und einer Systemuhr herstellen (z. B. mit geeigneten mathematischen Techniken). Dies ist erforderlich, damit ein Wert, der eine Uhrzeit in der Einheit einer Uhr darstellt, in die Einheit einer anderen Uhr konvertiert werden kann. Zu diesem Zweck werden zeitstempelübergreifende Zeitstempel bereitgestellt, und Ihre Anwendung kann in regelmäßigen Abständen Eine Stichprobe von Zeitstempeln erstellen, um eine solche Beziehung herzustellen.
 
-Rufen Sie hierzu die [**CaptureInterfaceHardwareCrossTimestamp-Funktion**](/windows/win32/api/iphlpapi/nf-iphlpapi-captureinterfacehardwarecrosstimestamp) auf, geben Sie den lokal eindeutigen Bezeichner (LUID) des Netzwerkadapters an, und rufen Sie als Rückgabe den Zeitstempel vom Netzwerkadapter in Form eines [**INTERFACE_HARDWARE_CROSSTIMESTAMP-Objekts**](/windows/win32/api/iphlpapi/ns-iphlpapi-interface_hardware_crosstimestamp) ab.
+Rufen Sie hierzu die [**CaptureInterfaceHardwareCrossTimestamp-Funktion**](/windows/win32/api/iphlpapi/nf-iphlpapi-captureinterfacehardwarecrosstimestamp) auf, und geben Sie dabei den lokal eindeutigen Bezeichner (LUID) des Netzwerkadapters an, und rufen Sie als Rückgabe den Zeitstempel vom Netzwerkadapter in Form eines [**INTERFACE_HARDWARE_CROSSTIMESTAMP-Objekts**](/windows/win32/api/iphlpapi/ns-iphlpapi-interface_hardware_crosstimestamp) ab.
 
 ## <a name="timestamp-capability-change-notifications"></a>Änderungsbenachrichtigungen zur Zeitstempelfunktion
 
@@ -186,7 +186,7 @@ int main()
 }
 ```
 
-## <a name="code-example-2mdashregistering-for-timestamp-capability-change-notifications"></a>Codebeispiel &mdash; 2: Registrierung für Änderungsbenachrichtigungen für Zeitstempelfunktionen
+## <a name="code-example-2mdashregistering-for-timestamp-capability-change-notifications"></a>Codebeispiel &mdash; 2: Registrierung für Zeitstempelfunktionsänderungsbenachrichtigungen
 
 Dieses Beispiel zeigt, wie Ihre Anwendung End-to-End-Zeitstempel verwenden kann.
 

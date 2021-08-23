@@ -1,23 +1,23 @@
 ---
-description: Wenn Sie ein Anwendungs Wörterbuch mit der Tablet PC-API verwenden möchten, müssen Sie zuerst eine Datei mit der Liste der Wörter für das Anwendungs Wörterbuch erstellen.
+description: Um ein Anwendungswörterbuch mit der Tablet PC-API zu verwenden, müssen Sie zunächst eine Datei mit der Liste der Wörter für Ihr Anwendungswörterbuch erstellen.
 ms.assetid: 6abadad1-262b-4536-8846-1c06226dc18a
-title: Verwenden von Anwendungs Wörterbüchern mit den Tablet PC Platform-APIs
+title: Verwenden von Anwendungswörterbüchern mit den Plattform-APIs für Tablet-PCs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9fc0e444ad2213d945c0210d07c72f9540ae16be
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8c30fec5539a9b1f4efb0ca89a53568becff2368942d069149106a4032676d50
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353057"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119091305"
 ---
-# <a name="using-application-dictionaries-with-the-tablet-pc-platform-apis"></a>Verwenden von Anwendungs Wörterbüchern mit den Tablet PC Platform-APIs
+# <a name="using-application-dictionaries-with-the-tablet-pc-platform-apis"></a>Verwenden von Anwendungswörterbüchern mit den Plattform-APIs für Tablet-PCs
 
-Wenn Sie ein Anwendungs Wörterbuch mit der Tablet PC-API verwenden möchten, müssen Sie zuerst eine Datei mit der Liste der Wörter für das Anwendungs Wörterbuch erstellen.
+Um ein Anwendungswörterbuch mit der Tablet PC-API zu verwenden, müssen Sie zunächst eine Datei mit der Liste der Wörter für Ihr Anwendungswörterbuch erstellen.
 
-Die einfachste Lösung hierfür ist die Verwendung einer Textdatei, die eine Liste der Wörter enthält. Wenn die Anwendung geladen wird, liest Sie die Textdatei und erstellt ein [**WordList**](inkwordlist-class.md) -Objekt aus der Liste der Wörter in der Datei. Legen Sie für jeden mit dem Anwendungs Wörterbuch verknüpften [**Erkennungs Kontext**](inkrecognizercontext-class.md) die [**WordList**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) -Eigenschaft des **erkenzercontext** -Objekts auf die Word-Liste in der Textdatei fest.
+Die einfachste Lösung dafür ist die Verwendung einer Textdatei, die eine Liste der Wörter enthält. Wenn Ihre Anwendung geladen wird, liest sie die Textdatei und erstellt ein [**WordList-Objekt**](inkwordlist-class.md) aus der Liste der Wörter in der Datei. Legen Sie [**für jeden RecognizerContext,**](inkrecognizercontext-class.md) der dem Anwendungswörterbuch zugeordnet ist, die [**WordList-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) des **RecognizerContext-Objekts** auf die Wortliste in der Textdatei fest.
 
-Im folgenden Beispiel wird veranschaulicht, wie ein [**WordList**](inkwordlist-class.md) -Objekt aus einer [StringCollection](/dotnet/api/system.collections.specialized.stringcollection?view=netcore-3.1) -Auflistung erstellt wird. In diesem Beispiel wird davon ausgegangen, dass Sie die Liste der Wörter bereits von der Festplatte geladen und eine StringCollection-Sammlung mit diesen Wörtern erstellt haben.
+Im folgenden Beispiel wird veranschaulicht, wie ein [**WordList-Objekt**](inkwordlist-class.md) aus einer [StringCollection-Auflistung erstellt](/dotnet/api/system.collections.specialized.stringcollection?view=netcore-3.1) wird. In diesem Beispiel wird davon ausgegangen, dass Sie bereits die Liste der Wörter vom Datenträger geladen und eine StringCollection-Sammlung aus diesen Wörtern erstellt haben.
 
 
 ```C++
@@ -40,13 +40,13 @@ theRecognizerContext.WordList = theUserWordList;
 
 
 > [!Note]  
-> Die [**Strokes**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_strokes) -Eigenschaft des [**erkenzercontext**](inkrecognizercontext-class.md) -Objekts muss leer sein, bevor Sie die [**WordList**](inkwordlist-class.md) -Eigenschaft festlegen. Wenn die [**Strokes**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Eigenschaft nicht leer ist, wird eine Ausnahme ausgelöst. Außerdem sollten Wörter niemals zu einer Word-Liste hinzugefügt werden, nachdem Sie einem **erkenzercontext** -Objekt zugewiesen wurde. Wörter, die der Word-Liste hinzugefügt werden, nachdem Sie dem **erkenzercontext** -Objekt zugewiesen wurde, werden in der Erkennung nicht aktualisiert. Zum Aktualisieren der Word-Liste müssen Sie das **WordList** -Objekt der [**WordList**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) -Eigenschaft des **erkenzercontext** -Objekts neu zuweisen.
+> Die [**Strokes-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_strokes) des [**RecognizerContext-Objekts**](inkrecognizercontext-class.md) muss leer sein, bevor Sie die [**WordList-Eigenschaft**](inkwordlist-class.md) festlegen. Wenn die [**Strokes-Eigenschaft**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) nicht leer ist, wird eine Ausnahme ausgelöst. Darüber hinaus sollten Wörter niemals einer Wortliste hinzugefügt werden, nachdem sie einem **RecognizerContext-Objekt zugewiesen** wurde. Wörter, die der Wortliste hinzugefügt werden, nachdem sie dem **RecognizerContext-Objekt** zugewiesen wurden, werden in der Recognizer-Klasse nicht aktualisiert. Um die Wortliste zu aktualisieren, müssen Sie das **WordList-Objekt** der [**WordList-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) des **RecognizerContext-Objekts neu** zuweisen.
 
  
 
-Kombinieren Sie für maximale Erkennungsgenauigkeit die Faktoide mit Ihrem Anwendungs Wörterbuch in einer vorteilhaften Beziehung. Weitere Informationen über die Beziehung zwischen Faktoiden und Anwendungs Wörterbüchern finden Sie Untergrund Legendes zu [Wortlisten, Erkennungs Kontext und Faktoiden](understanding-wordlists--the-recognizercontext--and-factoids.md).
+Um eine maximale Erkennungsgenauigkeit zu erhalten, kombinieren Sie Factoids mit Ihrem Anwendungswörterbuch in einer vorteilhaften Beziehung. Weitere Informationen zur Beziehung zwischen Factoiden und Anwendungswörterbüchern finden Sie unter [Understanding Word Lists, Recognizer Context, and Factoids](understanding-wordlists--the-recognizercontext--and-factoids.md).
 
-Ein Beispiel für die Verwendung von Anwendungs Wörterbüchern mit dem [InkEdit](inkedit-control-reference.md) -Steuerelement finden [Sie unter Verwenden eines Anwendungs Wörterbuchs mit InkEdit](using-an-application-dictionary-with-inkedit.md).
+Ein Beispiel für die Verwendung von Anwendungswörterbüchern mit dem [InkEdit-Steuerelement](inkedit-control-reference.md) finden Sie unter Verwenden eines [Anwendungswörterbuchs mit InkEdit](using-an-application-dictionary-with-inkedit.md).
 
  
 

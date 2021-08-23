@@ -1,9 +1,9 @@
 ---
-title: EM_GETRECT Meldung (Winuser. h)
-description: Ruft das Formatierungs Rechteck eines Bearbeitungs Steuer Elements ab.
+title: EM_GETRECT Meldung (Winuser.h)
+description: Ruft das Formatierungsrechteck eines Bearbeitungssteuerelements ab.
 ms.assetid: eef0150d-9b7a-4247-acbf-6fea2efd1dc3
 keywords:
-- Windows-Steuerelemente für EM_GETRECT Meldung
+- EM_GETRECT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a8192fd4c3aa7fbe953a36217f6b1408f055d8d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f1d4ad7dbab40a8d294d814e3524b54c5b11206c91608e9293bdf88df2a63f23
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119541040"
 ---
-# <a name="em_getrect-message"></a>EM \_ GetRect-Nachricht
+# <a name="em_getrect-message"></a>EM \_ GETRECT-Nachricht
 
-Ruft das [Formatierungs Rechteck](about-edit-controls.md) eines Bearbeitungs Steuer Elements ab. Das Formatierungs Rechteck ist das einschränkende Rechteck, in das das Steuerelement den Text zeichnet. Das Begrenzungs Rechteck ist unabhängig von der Größe des Bearbeitungs Steuer Elements. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+Ruft das [Formatierungsrechteck](about-edit-controls.md) eines Bearbeitungssteuerelements ab. Das Formatierungsrechteck ist das einschränkende Rechteck, in das das Steuerelement den Text zeichnet. Das einschränkende Rechteck ist unabhängig von der Größe des Bearbeitungssteuerelementfensters. Sie können diese Nachricht entweder an ein Bearbeitungssteuerelement oder ein Rich Edit-Steuerelement senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,21 +39,21 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die das Formatierungs Rechteck empfängt.
+Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die das Formatierungsrechteck empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist nicht sinnvoll.
+Der Rückgabewert ist nicht aussagekräftig.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können das Formatierungs Rechteck eines mehrzeiligen Bearbeitungs Steuer Elements ändern, indem Sie die Meldungen " [**EM \_ SetRect**](em-setrect.md) " und " [**EM \_ setrectnp**](em-setrectnp.md) " verwenden.
+Sie können das Formatierungsrechteck eines mehrzeiligen Bearbeitungssteuerelements mithilfe der [**EM \_ SETRECT-**](em-setrect.md) und [**EM \_ SETRECTNP-Meldungen**](em-setrectnp.md) ändern.
 
-Unter bestimmten Bedingungen gibt **EM \_ GetRect** möglicherweise nicht die exakten Werte zurück, die von [**EM \_ SetRect**](em-setrect.md) oder [**EM \_ setrectnp**](em-setrectnp.md) festgelegt wurden
+Unter bestimmten Umständen gibt **EM \_ GETRECT** möglicherweise nicht die genauen Werte zurück, die [**EM \_ SETRECT**](em-setrect.md) oder [**EM \_ SETRECTNP**](em-setrectnp.md) festlegen, sind ungefähr richtig, können aber um einige Pixel deaktiviert sein.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Das Formatierungs Rechteck enthält nicht die Auswahl Leiste, bei der es sich um einen nicht markierten Bereich links neben den einzelnen Absätzen handelt. Wenn Sie darauf klicken, wählt die Auswahl Leiste die Zeile aus. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Rich Edit:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Das Formatierungsrechteck enthält nicht die Auswahlleiste, bei der es sich um einen nicht markierten Bereich links neben jedem Absatz handelt. Wenn Sie darauf klicken, wählt die Auswahlleiste die Zeile aus. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,9 +61,9 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -71,13 +71,13 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ SetRect**](em-setrect.md)
+[**EM \_ SETRECT**](em-setrect.md)
 </dt> <dt>
 
-[**EM \_ setrectnp**](em-setrectnp.md)
+[**EM \_ SETRECTNP**](em-setrectnp.md)
 </dt> <dt>
 
 **Andere Ressourcen**

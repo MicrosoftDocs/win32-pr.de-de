@@ -1,21 +1,21 @@
 ---
-description: Die get \_ SessionID-Methode ruft den 32-Bit-NTP (Network Time Protocol)-Wert ab, der als Sitzungs Bezeichner fungiert. Diese wird automatisch generiert, wenn die Sitzung erstellt wird.
+description: Die get \_ SessionId-Methode ruft den 32-Bit-NTP-Wert (Network Time Protocol) ab, der als Sitzungsbezeichner dient. Dies wird automatisch generiert, wenn die Sitzung erstellt wird.
 ms.assetid: 5177f120-4b93-40bc-9481-aedf65a8dee9
-title: 'Itsdp:: get_SessionId-Methode (sdpblb. h)'
+title: ITSdp::get_SessionId-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ad593b61f4c935a220e59383ae170569f04af54
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 67f7e8ea9bef17e5cb34ca23443b1f16f815c964c3cf76b9b122878e8662d051
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119621540"
 ---
-# <a name="itsdpget_sessionid-method"></a>Itsdp:: get \_ SessionID-Methode
+# <a name="itsdpget_sessionid-method"></a>ITSdp::get \_ SessionId-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **get \_ SessionID** -Methode ruft den 32-Bit-NTP (Network Time Protocol)-Wert ab, der als Sitzungs Bezeichner fungiert. Diese wird automatisch generiert, wenn die Sitzung erstellt wird.
+Die **get \_ SessionId-Methode** ruft den 32-Bit-NTP-Wert (Network Time Protocol) ab, der als Sitzungsbezeichner dient. Dies wird automatisch generiert, wenn die Sitzung erstellt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT get_SessionId(
 
 <dl> <dt>
 
-*psessionid* \[ vorgenommen\]
+*pSessionId* \[ out\]
 </dt> <dd>
 
-Zeiger auf den Sitzungs Bezeichner.
+Zeiger auf den Sitzungsbezeichner.
 
 </dd> </dl>
 
@@ -48,19 +48,19 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *psessionid* -Parameter ist ungültig.<br/>             |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *psessionid* -Parameter ist kein gültiger Zeiger.<br/>   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *pSessionId-Parameter* ist ungültig.<br/>             |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Der *pSessionId-Parameter* ist kein gültiger Zeiger.<br/>   |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rückgabewert dieser Methode kann **ulong** lauten, Visual Basic den **ulong** -Typ jedoch nicht unterstützt. Ein **Double** ist der nächste kleinste Typ, der den gesamten erforderlichen Wertebereich umfasst.
+Der Rückgabewert dieser Methode kann **ULONG** sein, aber Visual Basic unterstützt den **ULONG-Typ** nicht. Ein **DOUBLE** ist der kleinste Typ, der den gesamten erforderlichen Wertebereich umfasst.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Der Rückgabewert dieser Methode kann **ulong** lauten, Visual Basic den **ulong
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
@@ -79,7 +79,7 @@ Der Rückgabewert dieser Methode kann **ulong** lauten, Visual Basic den **ulong
 
 <dl> <dt>
 
-[**Itsdp**](itsdp.md)
+[**ITSdp**](itsdp.md)
 </dt> </dl>
 
  

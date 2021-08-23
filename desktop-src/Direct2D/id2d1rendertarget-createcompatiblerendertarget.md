@@ -1,9 +1,9 @@
 ---
-title: ID2D1RenderTarget-Methode "up-Methode" (D2d1. h)
-description: Erstellt ein neues Bitmap-Renderziel zur Verwendung während der zwischengeschalteten Offscreen-Zeichnung, das mit dem aktuellen Renderziel kompatibel ist.
+title: ID2D1RenderTarget CreateCompatibleRenderTarget-Methoden (D2d1.h)
+description: Erstellt ein neues Bitmaprenderziel für die Verwendung während der zwischengeschalteten Offscreenzeichnung, die mit dem aktuellen Renderziel kompatibel ist.
 ms.assetid: 4a799a7c-0d2f-460f-99f9-24c6cf7c4537
 keywords:
-- Methoden von "Direct2D"
+- CreateCompatibleRenderTarget-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,35 +12,35 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 0f0de8478d2ab3ee2e7142bd0e197053dc58ac2a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9015586109ff5015743874d18b604de919a9464a655383cf4d47aabb7b7acf35
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367729"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119432780"
 ---
-# <a name="id2d1rendertargetcreatecompatiblerendertarget-methods"></a>ID2D1RenderTarget::-Methode
+# <a name="id2d1rendertargetcreatecompatiblerendertarget-methods"></a>ID2D1RenderTarget::CreateCompatibleRenderTarget-Methoden
 
-Erstellt ein neues Bitmap-Renderziel zur Verwendung während der zwischengeschalteten Offscreen-Zeichnung, das mit dem aktuellen Renderziel kompatibel ist.
+Erstellt ein neues Bitmaprenderziel für die Verwendung während der zwischengeschalteten Offscreenzeichnung, die mit dem aktuellen Renderziel kompatibel ist.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                                                                                                                                        | BESCHREIBUNG                                                                                                                                                                                                                                            |
+| Methode                                                                                                                                                                                                                        | Beschreibung                                                                                                                                                                                                                                            |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**"Kreatecompatiblerendertarget" (D2D1 \_ size \_ F, D2D1 \_ size \_ U, D2D1 \_ Pixel \_ Format, D2D1 \_ Compatible \_ \_ renderzieloptionen \_ , ID2D1BitmapRenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(d2d1_size_f_d2d1_size_u_d2d1_pixel_format_d2d1_compatible_render_target_options_id2d1bitmaprendertarget))       | Erstellt ein Bitmap-Renderziel zur Verwendung während der zwischengeschalteten Offscreen-Zeichnung, das mit dem aktuellen Renderziel kompatibel ist.<br/>                                                                                                             |
-| [**"Kreatecompatiblerendertarget" (D2D1 \_ size \_ F \* , D2D1 \_ size \_ U \* , D2D1 \_ Pixel \_ Format \* , D2D1 \_ Compatible \_ \_ renderzieloptionen \_ , ID2D1BitmapRenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(d2d1_size_f_d2d1_size_u_d2d1_pixel_format_d2d1_compatible_render_target_options_id2d1bitmaprendertarget)) | Erstellt ein Bitmap-Renderziel zur Verwendung während der zwischengeschalteten Offscreen-Zeichnung, das mit dem aktuellen Renderziel kompatibel ist. <br/>                                                                                                            |
-| [**"Kreatecompatiblerendertarget" (ID2D1BitmapRenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(id2d1bitmaprendertarget))                                                                                                 | Erstellt ein neues Bitmap-Renderziel, das während der zwischengeschalteten Offscreen-Zeichnung verwendet werden kann, die mit dem aktuellen Renderziel kompatibel ist und die gleiche Größe, den dpi-Wert und das Pixel Format aufweist (aber nicht der Alpha-Modus) <br/>         |
-| [**"Kreatecompatiblerendertarget" (D2D1 \_ size \_ F, ID2D1BitmapRenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(d2d1_size_f_id2d1bitmaprendertarget))                                                                                   | Erstellt ein neues Bitmap-Renderziel zur Verwendung während der zwischengeschalteten Offscreen-Zeichnung, das mit dem aktuellen Renderziel kompatibel ist und das gleiche Pixel Format (aber nicht den Alpha-Modus) wie das aktuelle Renderziel aufweist. <br/>                        |
-| [**"Kreatecompatiblerendertarget" (D2D1 \_ size \_ F, D2D1 \_ size \_ U, ID2D1BitmapRenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(d2d1_size_f_d2d1_size_u_id2d1bitmaprendertarget))                                                                     | Erstellt ein Bitmap-Renderziel, das während der zwischengeschalteten Bildschirm Zeichnung verwendet werden kann, die mit dem aktuellen Renderziel kompatibel ist. Das neue Bitmap-Renderziel hat das gleiche Pixel Format (aber nicht der Alpha-Modus) wie das aktuelle Renderziel. <br/> |
-| [**"Kreatecompatiblerendertarget" (D2D1 \_ size \_ F, D2D1 \_ size \_ U, D2D1 \_ Pixel \_ Format, ID2D1BitmapRenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(d2d1_size_f_d2d1_size_u_d2d1_pixel_format_id2d1bitmaprendertarget))                                                 | Erstellt ein Bitmap-Renderziel zur Verwendung während der zwischengeschalteten Offscreen-Zeichnung, das mit dem aktuellen Renderziel kompatibel ist. <br/>                                                                                                            |
+| [**CreateCompatibleRenderTarget(D2D1 \_ SIZE \_ F,D2D1 \_ SIZE \_ U,D2D1 \_ PIXEL \_ FORMAT,D2D1 \_ COMPATIBLE RENDER TARGET \_ \_ \_ OPTIONS,ID2D1BitmapRenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(d2d1_size_f_d2d1_size_u_d2d1_pixel_format_d2d1_compatible_render_target_options_id2d1bitmaprendertarget))       | Erstellt ein Bitmaprenderingziel zur Verwendung während der zwischengeschalteten Offscreenzeichnung, die mit dem aktuellen Renderziel kompatibel ist.<br/>                                                                                                             |
+| [**CreateCompatibleRenderTarget(D2D1 \_ SIZE F , \_ \* D2D1 \_ SIZE U , \_ \* D2D1 \_ PIXEL FORMAT , \_ \* D2D1 \_ COMPATIBLE RENDER TARGET \_ \_ \_ OPTIONS,ID2D1BitmapRenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(d2d1_size_f_d2d1_size_u_d2d1_pixel_format_d2d1_compatible_render_target_options_id2d1bitmaprendertarget)) | Erstellt ein Bitmaprenderingziel zur Verwendung während der zwischengeschalteten Offscreenzeichnung, die mit dem aktuellen Renderziel kompatibel ist. <br/>                                                                                                            |
+| [**CreateCompatibleRenderTarget(ID2D1BitmapRenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(id2d1bitmaprendertarget))                                                                                                 | Erstellt ein neues Bitmaprenderingziel für die Verwendung während der zwischengeschalteten Offscreenzeichnung, das mit dem aktuellen Renderziel kompatibel ist und die gleiche Größe, DPI und das gleiche Pixelformat (aber nicht den Alphamodus) wie das aktuelle Renderziel aufweist. <br/>         |
+| [**CreateCompatibleRenderTarget(D2D1 \_ SIZE \_ F,ID2D1BitmapRenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(d2d1_size_f_id2d1bitmaprendertarget))                                                                                   | Erstellt ein neues Bitmaprenderingziel zur Verwendung während der zwischengeschalteten Offscreenzeichnung, das mit dem aktuellen Renderziel kompatibel ist und das gleiche Pixelformat (aber nicht den Alphamodus) wie das aktuelle Renderziel aufweist. <br/>                        |
+| [**CreateCompatibleRenderTarget(D2D1 \_ SIZE \_ F,D2D1 \_ SIZE \_ U,ID2D1BitmapRenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(d2d1_size_f_d2d1_size_u_id2d1bitmaprendertarget))                                                                     | Erstellt ein Bitmaprenderziel für die Verwendung während der Zwischenzeichnung außerhalb des Bildschirms, das mit dem aktuellen Renderziel kompatibel ist. Das neue Bitmaprenderingziel hat das gleiche Pixelformat (aber nicht den Alphamodus) wie das aktuelle Renderziel. <br/> |
+| [**CreateCompatibleRenderTarget(D2D1 \_ SIZE \_ F,D2D1 \_ SIZE \_ U,D2D1 \_ PIXEL \_ FORMAT,ID2D1BitmapRenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(d2d1_size_f_d2d1_size_u_d2d1_pixel_format_id2d1bitmaprendertarget))                                                 | Erstellt ein Bitmaprenderingziel zur Verwendung während der zwischengeschalteten Offscreenzeichnung, die mit dem aktuellen Renderziel kompatibel ist. <br/>                                                                                                            |
 
 
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die Methode " **kreatecompatiblerendertarget** " verwendet, um ein [**ID2D1BitmapRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmaprendertarget) zu erstellen und zum Zeichnen eines Raster Musters zu verwenden. Das Raster Muster wird als Quelle eines [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush)verwendet.
+Im folgenden Beispiel wird die **CreateCompatibleRenderTarget-Methode** verwendet, um ein [**ID2D1BitmapRenderTarget-Objekt**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmaprendertarget) zu erstellen und es zum Zeichnen eines Rastermusters zu verwenden. Das Rastermuster wird als Quelle eines [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush)verwendet.
 
 
 ```C++
@@ -97,7 +97,7 @@ HRESULT DemoApp::CreateGridPatternBrush(
 
 
 
-Im folgenden Codebeispiel wird der Pinsel zum Zeichnen eines Musters verwendet.
+Im folgenden Codebeispiel wird der Pinsel verwendet, um ein Muster zu zeichnen.
 
 
 ```C++
@@ -118,13 +118,13 @@ Code wurde in diesem Beispiel ausgelassen.
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D2d1. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D2d1.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

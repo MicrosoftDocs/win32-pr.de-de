@@ -1,6 +1,6 @@
 ---
-description: 'Benachrichtigt das Rückruf Objekt, dass der Benutzer auf einen Spaltenheader geklickt hat, um die Liste der Objekte in der Ordneransicht zu sortieren. Wird von ishellfolderviewcb:: messagesfvcb verwendet.'
-title: SFVM_COLUMNCLICK Meldung (shlobj. h)
+description: Benachrichtigt das Rückrufobjekt, dass der Benutzer auf eine Spaltenüberschrift geklickt hat, um die Liste der Objekte in der Ordneransicht zu sortieren. Wird von IShellFolderViewCB::MessageSFVCB verwendet.
+title: SFVM_COLUMNCLICK Meldung (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 351be842-6ea5-4223-8162-0e6c4e6a5afb
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: bca80554e25378af1c078a36a02222390b771874
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d5ebd98ebc887d26bcee4799ffa3412df803fd0dfa099ac41bc69e1c25d83f06
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104485515"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119592700"
 ---
-# <a name="sfvm_columnclick-message"></a>Sfvm- \_ ColumnClick-Nachricht
+# <a name="sfvm_columnclick-message"></a>SFVM \_ COLUMNCLICK-Nachricht
 
-Benachrichtigt das Rückruf Objekt, dass der Benutzer auf einen Spaltenheader geklickt hat, um die Liste der Objekte in der Ordneransicht zu sortieren. Wird von [**ishellfolderviewcb:: messagesfvcb**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
+Benachrichtigt das Rückrufobjekt, dass der Benutzer auf eine Spaltenüberschrift geklickt hat, um die Liste der Objekte in der Ordneransicht zu sortieren. Wird von [**IShellFolderViewCB::MessageSFVCB**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
 
 
 ```C++
@@ -39,18 +39,18 @@ SFVM_COLUMNCLICK
 
 <dl> <dt>
 
-*icolumn* \[ in\]
+*iColumn* \[ In\]
 </dt> <dd>
 
 Der Index der Spalte, auf die geklickt wurde.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Als Antwort auf diese Benachrichtigung sollten Sie S OK zurückgeben, \_ um die Liste selbst neu anzuordnen. Wenn das Ansichts Objekt des System Ordners die Liste neu anordnen soll, geben Sie "false" zurück \_ .
+Als Reaktion auf diese Benachrichtigung sollten Sie S OK zurückgeben, \_ um die Liste selbst neu anzuordnen. Damit das Objekt der Systemordneransicht die Liste neu anordnen kann, geben Sie S \_ FALSE zurück.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -58,7 +58,7 @@ Als Antwort auf diese Benachrichtigung sollten Sie S OK zurückgeben, \_ um die 
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

@@ -1,10 +1,10 @@
 ---
-title: MPNIS_PRIVATE_DATA Struktur (mpclient. h)
+title: MPNIS_PRIVATE_DATA -Struktur (MpClient.h)
 description: Private NIS-Benachrichtigungen.
 ms.assetid: 19B4928F-BC78-4DEA-A563-1516B6454465
 keywords:
-- MPNIS_PRIVATE_DATA Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPNIS_PRIVATE_DATA Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPNIS_PRIVATE_DATA struktur Legacy Windows Umgebungsfeatures
+- PMPNIS_PRIVATE_DATA strukturzeiger Legacy-Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 21340665a32b619c42d7909e8cd1b72ca6d09fb7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a50719e4ecc0beff848467023a1c5f941ff06ceb891b05674e199d47a38b8659
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119556140"
 ---
-# <a name="mpnis_private_data-structure"></a>Private mpnis- \_ \_ Datenstruktur
+# <a name="mpnis_private_data-structure"></a>MPNIS \_ PRIVATE \_ DATA-Struktur
 
 Private NIS-Benachrichtigungen.
 
@@ -43,7 +43,7 @@ typedef struct tagMPNIS_PRIVATE_DATA {
 
 <dl> <dt>
 
-**dwnotificationtype**
+**dwNotificationType**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -68,7 +68,7 @@ Größe der reservierten Daten in Bytes.
 **pbData**
 </dt> <dd>
 
-Type: **Byte \***
+Typ: **BYTE \***
 
 </dd> <dd>
 
@@ -82,9 +82,9 @@ Zeiger auf reservierte Daten.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: gludisk-Funktion (glu. h)
-description: Die Funktion "gludisk" zeichnet einen Datenträger.
+title: gluDisk-Funktion (Glu.h)
+description: Die gluDisk-Funktion zeichnet einen Datenträger.
 ms.assetid: c9260621-930d-47dd-a046-30895779473b
 keywords:
-- gludisk-Funktion OpenGL
+- gluDisk-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a9a9e8b547790049c93360f060e944aafcea4511
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 83abb24f665cbcbf978a6423868751794371606cf412f609876a8f17d42c115a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119489530"
 ---
-# <a name="gludisk-function"></a>gludisk-Funktion
+# <a name="gludisk-function"></a>gluDisk-Funktion
 
-Die Funktion " **gludisk** " zeichnet einen Datenträger.
+Die **gluDisk-Funktion** zeichnet einen Datenträger.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,35 +47,35 @@ void WINAPI gluDisk(
 *qobj* 
 </dt> <dd>
 
-Das Quadric-Objekt (mit [**glunewquadric**](glunewquadric.md)erstellt).
+Das Quadric-Objekt (erstellt mit [**gluNewQuadric**](glunewquadric.md)).
 
 </dd> <dt>
 
-*innerradius* 
+*innerRadius* 
 </dt> <dd>
 
-Der innere Radius des Datenträgers (kann NULL sein).
+Der innere Radius des Datenträgers (kann 0 (null) sein).
 
 </dd> <dt>
 
-*outerradius* 
+*outerRadius* 
 </dt> <dd>
 
 Der äußere Radius des Datenträgers.
 
 </dd> <dt>
 
-*aufs* 
+*Scheiben* 
 </dt> <dd>
 
-Die Anzahl der Unterteilungen um die z-Achse.
+Die Anzahl der Unterteilungen um die Z-Achse.
 
 </dd> <dt>
 
-*Loops* 
+*Schleifen* 
 </dt> <dd>
 
-Die Anzahl der konzentrischen Ringe für den Ursprung, in den der Datenträger unterteilt wird.
+Die Anzahl der konzentrierten Ringe über den Ursprung, in den der Datenträger unterteilt ist.
 
 </dd> </dl>
 
@@ -83,13 +83,13 @@ Die Anzahl der konzentrischen Ringe für den Ursprung, in den der Datenträger u
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **gludisk** " rendert einen Datenträger auf der *z* = 0-Ebene. Der Datenträger weist einen Radius von *outerradius* auf und enthält eine konzentrische zirkuläre Lücke mit einem Radius von *innerradius*. Wenn *innerradius* 0 ist, wird kein Loch generiert. Der Datenträger ist um die z-Achse in Slices (z. b. Pizza Slices) und auch über die z-Achse in Ringe (wie von *Slices* bzw. *Schleifen* angegeben) unterteilt.
+Die **gluDisk-Funktion** rendert einen Datenträger auf der *z* = 0-Ebene. Der Datenträger verfügt über einen Radius *von outerRadius* und enthält ein konzentriertes kreisförmiges Lücke mit einem Radius *von innerRadius*. Wenn *innerRadius* 0 ist, wird keine Lücke generiert. Der Datenträger wird um die Z-Achse in *Slices*(z. B. Pizzaslices) und auch um die Z-Achse in Ringe unterteilt (wie durch *Slices* bzw. Schleifen angegeben).
 
-Im Hinblick auf die Ausrichtung wird die positive *z*-Seite des Datenträgers als *außerhalb* betrachtet (siehe [**gluquadricorientation**](gluquadricorientation.md)). Dies bedeutet Folgendes: Wenn die Ausrichtung auf "glu extern" festgelegt ist \_ , werden alle normalisieren generiert, die auf die positive z-Achse zeigen.
+In Bezug auf die Ausrichtung wird die positive *z-Seite* des Datenträgers als außerhalb betrachtet *(siehe* [**gluQuadricOrientation**](gluquadricorientation.md)). Dies bedeutet, dass alle generierten Normals entlang der positiven Z-Achse zeigen, wenn die Ausrichtung auf GLU \_ OUTSIDE festgelegt ist.
 
-Wenn die Texturierung aktiviert ist (mit " [**gluquadrictexture**](gluquadrictexture.md)"), werden die Texturkoordinaten linear generiert, sodass *r*  =  *outerradius*, der Wert bei (*r*, 0, 0) ist (1, 0,5); bei (0, *r*, 0) ist er (0,5, 1); bei (-*r*, 0, 0) ist er (0, 0,5); und bei (0,-*r*, 0) ist er (0,5, 0).
+Wenn die Texturierung aktiviert ist (mit [**gluQuadricTexture),**](gluquadrictexture.md)werden Texturkoordinaten linear generiert, wobei *r* outerRadius , der Wert  =  bei (*r*, 0, 0) ist (1, 0,5), bei (0, *r,* 0) ist es (0,5, 1), bei (-*r,* 0, 0) ist es (0, 0,5) und bei (0, -*r*, 0) ist es (0,5, 0).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -99,8 +99,8 @@ Wenn die Texturierung aktiviert ist (mit " [**gluquadrictexture**](gluquadrictex
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -109,22 +109,22 @@ Wenn die Texturierung aktiviert ist (mit " [**gluquadrictexture**](gluquadrictex
 
 <dl> <dt>
 
-[**gluzylinder**](glucylinder.md)
+[**gluCylinder**](glucylinder.md)
 </dt> <dt>
 
-[**glunewquadric**](glunewquadric.md)
+[**gluNewQuadric**](glunewquadric.md)
 </dt> <dt>
 
-[**glupartialdisk**](glupartialdisk.md)
+[**gluPartialDisk**](glupartialdisk.md)
 </dt> <dt>
 
-[**gluquadricorientation**](gluquadricorientation.md)
+[**gluQuadricOrientation**](gluquadricorientation.md)
 </dt> <dt>
 
-[**gluquadrictexture**](gluquadrictexture.md)
+[**gluQuadricTexture**](gluquadrictexture.md)
 </dt> <dt>
 
-[**glusphere**](glusphere.md)
+[**gluSphere**](glusphere.md)
 </dt> </dl>
 
  

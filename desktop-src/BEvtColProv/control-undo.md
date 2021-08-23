@@ -1,8 +1,8 @@
 ---
-description: Stellen Sie die aktive Konfiguration des Sammlers aus der vorherigen Sicherungsdatei wieder her (festgelegt durch zurückkehren vom aktuellen ursprünglichen Zeitstempel).
+description: Stellen Sie die aktive Konfiguration des Collectors aus der vorherigen Sicherungsdatei wieder her (bestimmt durch Zurückgehen vom aktuellen ursprünglichen Zeitstempel).
 ms.assetid: 150fa554-9efd-483e-a177-5fc7766a6a6c
 ms.tgt_platform: multiple
-title: Rückgängig-Methode der Steuerelement Klasse
+title: Rückgängig-Methode der Control-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - BEvtCol.exe
-ms.openlocfilehash: 285f1ec39ea52f6c388e324f72745d72f65207e6
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e46649473da31fac09c65fcecaf44e91eba049c7ddce089d7f3c5ba9de2f8e19
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344806"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589040"
 ---
-# <a name="undo-method-of-the-control-class"></a>Rückgängig-Methode der Steuerelement Klasse
+# <a name="undo-method-of-the-control-class"></a>Rückgängig-Methode der Control-Klasse
 
-Stellen Sie die aktive Konfiguration des Sammlers aus der vorherigen Sicherungsdatei wieder her (festgelegt durch zurückkehren vom aktuellen ursprünglichen Zeitstempel). Wenn die Konfiguration gerade festgelegt wurde, bedeutet dies, dass diese Änderung nicht mehr durchgeführt werden muss. Die aufeinander folgenden Aufrufe werden in früheren und früheren Konfigurationen rückgängig gemacht. Gibt bei Erfolg den Wert 1 zurück, 0 bei Fehler.
+Stellen Sie die aktive Konfiguration des Collectors aus der vorherigen Sicherungsdatei wieder her (bestimmt durch Zurückgehen vom aktuellen ursprünglichen Zeitstempel). Wenn die Konfiguration gerade festgelegt wurde, bedeutet dies, dass diese Änderung rückgängig gemacht wird. Die aufeinanderfolgenden Aufrufe werden auf die früheren und früheren Konfigurationen rückgängig machen. Gibt bei Erfolg 1 und bei Fehler 0 zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,73 +49,73 @@ Uint32 Undo(
 
 <dl> <dt>
 
-*Oldtimestamplow* \[ in\]
+*OldTimestampLow* \[ In\]
 </dt> <dd>
 
-Der Zeitstempel, zu dem die vorherige Konfiguration festgelegt wurde. Wenn nicht 0, aktiviert die atomizitäts Überprüfung: die neue Konfiguration wird nur angewendet, wenn der Zeitstempel der alten Konfiguration übereinstimmt (d. h., die Konfiguration wurde nicht in between geändert). Dies ist der niedrige Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
+Der Zeitstempel des Zeitpunkts, zu dem die vorherige Konfiguration festgelegt wurde. Wenn nicht 0, aktiviert die Atomaritätsprüfung: Die neue Konfiguration wird nur angewendet, wenn der Zeitstempel der alten Konfiguration übereinstimmt (d. h. die Konfiguration wurde zwischendurch nicht geändert). Dies ist der untere Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
 
 </dd> <dt>
 
-*Oldtimestamphigh* \[ in\]
+*OldTimestampHigh* \[ In\]
 </dt> <dd>
 
-Der Zeitstempel, zu dem die vorherige Konfiguration festgelegt wurde. Wenn nicht 0, aktiviert die atomizitäts Überprüfung: die neue Konfiguration wird nur angewendet, wenn der Zeitstempel der alten Konfiguration übereinstimmt (d. h., die Konfiguration wurde nicht in between geändert). Dies ist der große Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
+Der Zeitstempel des Zeitpunkts, zu dem die vorherige Konfiguration festgelegt wurde. Wenn nicht 0, aktiviert die Atomaritätsprüfung: Die neue Konfiguration wird nur angewendet, wenn der Zeitstempel der alten Konfiguration übereinstimmt (d. h. die Konfiguration wurde zwischendurch nicht geändert). Dies ist der hohe Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
 
 </dd> <dt>
 
-*Newtimestamplow* \[ vorgenommen\]
+*NewTimestampLow* \[ out\]
 </dt> <dd>
 
-Der Zeitstempel, zu dem die neue Konfiguration festgelegt wurde,, wenn der-Befehl erfolgreich ausgeführt wurde. Dies ist der niedrige Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
+Der Zeitstempel des Zeitpunkts, zu dem die neue Konfiguration festgelegt wurde, wenn der Aufruf erfolgreich war. Dies ist der untere Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
 
 </dd> <dt>
 
-*Newtimestamphigh* \[ vorgenommen\]
+*NewTimestampHigh* \[ out\]
 </dt> <dd>
 
-Der Zeitstempel, zu dem die neue Konfiguration festgelegt wurde,, wenn der-Befehl erfolgreich ausgeführt wurde. Dies ist der große Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
+Der Zeitstempel des Zeitpunkts, zu dem die neue Konfiguration festgelegt wurde, wenn der Aufruf erfolgreich war. Dies ist der hohe Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
 
 </dd> <dt>
 
-*Originaltimestamplow* \[ vorgenommen\]
+*OriginalTimestampLow* \[ out\]
 </dt> <dd>
 
-Der ursprüngliche Zeitstempel, zu dem die wiederhergestellte Konfiguration zum ersten Mal festgelegt wurde. Dies ist der niedrige Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
+Der ursprüngliche Zeitstempel, zu dem die wiederhergestellte Konfiguration zum ersten Mal festgelegt wurde. Dies ist der untere Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
 
 </dd> <dt>
 
-*Originaltimestamphigh* \[ vorgenommen\]
+*OriginalTimestampHigh* \[ out\]
 </dt> <dd>
 
-Der ursprüngliche Zeitstempel, zu dem die wiederhergestellte Konfiguration zum ersten Mal festgelegt wurde. Dies ist der große Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
+Der ursprüngliche Zeitstempel, zu dem die wiederhergestellte Konfiguration zum ersten Mal festgelegt wurde. Dies ist der hohe Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
 
 </dd> <dt>
 
-*ErrorString* \[ vorgenommen\]
+*ErrorString* \[ out\]
 </dt> <dd>
 
-Die Text Zeichenfolge mit einer Erläuterung des Fehlers.
+Die Textzeichenfolge mit Erklärung des Fehlers.
 
 </dd> <dt>
 
-*Warningstring* \[ vorgenommen\]
+*WarningString* \[ out\]
 </dt> <dd>
 
-Die Text Zeichenfolge mit Warnungen.
+Die Textzeichenfolge mit Warnungen.
 
 </dd> <dt>
 
-*InfoString* \[ vorgenommen\]
+*InfoString* \[ out\]
 </dt> <dd>
 
-Die Text Zeichenfolge mit Informationen zur Konfiguration.
+Die Textzeichenfolge mit Informationen zur Konfiguration.
 
 </dd> <dt>
 
-*ErrorType* \[ vorgenommen\]
+*ErrorType* \[ out\]
 </dt> <dd>
 
-Der Typ des Fehlers: Beachten Sie, dass 0 oder nicht vorhanden den Erfolg angibt.
+Der Typ des Fehlers: Beachten Sie, dass "0" oder "nicht vorhanden" auf Erfolg hinweist.
 
 <dt>
 
@@ -129,35 +129,35 @@ Erfolg.
 1
 </dt> <dd>
 
-Ungültiges Argument Format
+Ungültiges Argumentformat
 
 </dd> <dt>
 
 2
 </dt> <dd>
 
-Ungültiger Argument Wert
+Ungültiger Argumentwert
 
 </dd> <dt>
 
 3
 </dt> <dd>
 
-Fehler beim Öffnen der Ressource (Socket).
+Fehler beim Öffnen der Ressource (Socket)
 
 </dd> <dt>
 
 4
 </dt> <dd>
 
-Persistenz (Datei Schreibfehler)
+Persistenzfehler (Dateischreibfehler)
 
 </dd> <dt>
 
 5
 </dt> <dd>
 
-Unteilbarkeit-Fehler (der alte Zeitstempel entsprach nicht.)
+Atomicity-Fehler (der alte Zeitstempel stimmte nicht überein)
 
 </dd> </dl> </dd> </dl>
 
@@ -189,10 +189,10 @@ Erfolg
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                       |
-| Namespace<br/>                | Stammverzeichnis von \\ Microsoft \\ Windows \\ booteventcollector<br/>                                              |
-| MOF<br/>                      | <dl> <dt>Booteventcollector WMI. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-Microsoft \\ Windows \\ BootEventCollector<br/>                                              |
+| MOF<br/>                      | <dl> <dt>BootEventCollectorWMI.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>BEvtCol.exe</dt> </dl>               |
 
 

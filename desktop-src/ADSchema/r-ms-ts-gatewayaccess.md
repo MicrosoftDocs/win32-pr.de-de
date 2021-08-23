@@ -1,10 +1,10 @@
 ---
-title: MS-TS-gatewayaccess-Eigenschaften Satz
-description: MS-TS-gatewayaccess-Eigenschaften Satz
+title: MS-TS-GatewayAccess-Eigenschaftensatz
+description: MS-TS-GatewayAccess-Eigenschaftensatz
 ms.assetid: 9d0faf11-6ae8-47a2-913c-1f1aee52c791
 ms.tgt_platform: multiple
 keywords:
-- MS-TS-gatewayaccess-Eigenschaften Satz AD-Schema
+- MS-TS-GatewayAccess-Eigenschaftensatz AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,21 +13,21 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b3b9ac561d502e63ed2628c5c4a86c43c852a61
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4ae083bc3741825dcd6739c17f8f308b529bd867d338213f46e73a681e1b0538
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104041098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119531650"
 ---
-# <a name="ms-ts-gatewayaccess-property-set"></a>MS-TS-gatewayaccess-Eigenschaften Satz
+# <a name="ms-ts-gatewayaccess-property-set"></a>MS-TS-GatewayAccess-Eigenschaftensatz
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | MS-TS-gatewayaccess                  |
-| Anzeigename | MS-TS-gatewayaccess                  |
+| CN           | MS-TS-GatewayAccess                  |
+| Anzeigename | MS-TS-GatewayAccess                  |
 | Rights-GUID  | ffa6f046-ca4b-4feb-b40d-04dfee722543 |
 
 
@@ -45,8 +45,8 @@ ms.locfileid: "104041098"
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------|
 | Applies-To              | [**Computer**](c-computer.md)<br/> |
-| Lokalisierung-Display-ID | 74                                        |
-| Eigenschaften Satz Elemente    | \-                                        |
+| Lokalisierungsanzeige-ID | 74                                        |
+| Eigenschaftensatz-Member    | \-                                        |
 
 
 
@@ -56,9 +56,9 @@ ms.locfileid: "104041098"
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Konto**](c-msds-managedserviceaccount.md)<br/> |
-| Lokalisierung-Display-ID | 74                                                                                                                         |
-| Eigenschaften Satz Elemente    | \-                                                                                                                         |
+| Applies-To              | [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Account**](c-msds-managedserviceaccount.md)<br/> |
+| Lokalisierungsanzeige-ID | 74                                                                                                                         |
+| Eigenschaftensatz-Member    | \-                                                                                                                         |
 
 
 
@@ -68,9 +68,9 @@ ms.locfileid: "104041098"
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Konto**](c-msds-managedserviceaccount.md)<br/> |
-| Lokalisierung-Display-ID | 74                                                                                                                         |
-| Eigenschaften Satz Elemente    | \-                                                                                                                         |
+| Applies-To              | [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Account**](c-msds-managedserviceaccount.md)<br/> |
+| Lokalisierungsanzeige-ID | 74                                                                                                                         |
+| Eigenschaftensatz-Member    | \-                                                                                                                         |
 
 
 
