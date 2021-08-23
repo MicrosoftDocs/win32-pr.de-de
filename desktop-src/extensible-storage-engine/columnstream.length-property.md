@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen zur ColumnStream.Length-Eigenschaft
+description: 'Weitere Informationen zu: ColumnStream.Length-Eigenschaft'
 title: ColumnStream.Length-Eigenschaft
 TOCTitle: 'Length property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnStream.Length
@@ -60,12 +60,12 @@ public override long Length { get; }
 
 Typ: [System.Int64](/dotnet/api/system.int64)  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 
 [ColumnStream-Klasse](./columnstream-class.md)
 
-[ColumnStream-Member](./columnstream-members.md)
+[ColumnStream-Elemente](./columnstream-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

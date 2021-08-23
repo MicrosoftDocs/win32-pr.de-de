@@ -1,5 +1,5 @@
 ---
-title: UI_COLLECTION_INVALIDINDEX (uiribbon. h)
+title: UI_COLLECTION_INVALIDINDEX (Uiribbon.h)
 description: Gibt eine Konstante an, die einen ungültigen Index in einer Auflistung identifiziert.
 ms.assetid: vs|scenicintent|~\scenicintent\reference\enums\ui_collection_invalidindex.htm
 topic_type:
@@ -12,14 +12,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b403db94a30ee8641420af97137a1f3b5bc67949
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fdf08743a19c5689971cf8e461f8d252737e1d24ccc98549ab9091b4043d74e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119028538"
 ---
-# <a name="ui_collection_invalidindex"></a>benutzeroberflächensammlungs- \_ \_ InvalidIndex
+# <a name="ui_collection_invalidindex"></a>UI \_ COLLECTION \_ INVALIDINDEX
 
 Gibt eine Konstante an, die einen ungültigen Index in einer Auflistung identifiziert.
 
@@ -29,14 +29,14 @@ Gibt eine Konstante an, die einen ungültigen Index in einer Auflistung identifi
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista mit SP2 und Platt Form Update für Windows Vista \[ -Desktop-Apps\]<br/>                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Platt Form Update für Windows Server 2008 \[ Desktop-Apps\]<br/> |
-| Header<br/>                   | <dl> <dt>Uiribbon. h</dt> </dl>                                             |
-| IDL<br/>                      | <dl> <dt>Uiribbon. idl</dt> </dl>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 Windows Vista mit SP2 und Plattformupdate nur für Windows \[ Vista-Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Plattformupdate nur für Windows Server 2008-Desktop-Apps \[\]<br/> |
+| Header<br/>                   | <dl> <dt>Uiribbon.h</dt> </dl>                                             |
+| Idl<br/>                      | <dl> <dt>Uiribbon.idl</dt> </dl>                                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

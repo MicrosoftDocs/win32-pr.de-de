@@ -1,6 +1,6 @@
 ---
-title: D3DX11FilterTexture-Funktion (D3DX11tex. h)
-description: Beachten Sie, dass die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) für Windows 8 veraltet ist und für Windows Store-Apps nicht unterstützt wird. Beachten Sie, dass Sie die directxtex-Bibliothek, generatemipmaps und GenerateMipMaps3D verwenden, anstatt diese Funktion zu verwenden. Generiert eine MipMap-Kette mithilfe eines bestimmten Textur Filters.
+title: D3DX11FilterTexture-Funktion (D3DX11tex.h)
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Hinweis Anstelle dieser Funktion wird empfohlen, die DirectXTex-Bibliothek, GenerateMipMaps und GenerateMipMaps3D zu verwenden. Generiert eine Mipmap-Kette mithilfe eines bestimmten Texturfilters.
 ms.assetid: 52ae3228-f9d7-4944-b49c-55df1816f1f7
 keywords:
 - D3DX11FilterTexture-Funktion Direct3D 11
@@ -15,12 +15,12 @@ api_type:
 - LibDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 71e74e60e9d66e2a5251c161e4df6451266d3fb5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 728f76a28a2d97d3e6789a35c2f375d964d331c607c7570e44aa44a17ccbaa8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119124695"
 ---
 # <a name="d3dx11filtertexture-function"></a>D3DX11FilterTexture-Funktion
 
@@ -30,11 +30,11 @@ ms.locfileid: "104982335"
  
 
 > [!Note]  
-> Anstatt diese Funktion zu verwenden, wird empfohlen, dass Sie die [directxtex](https://github.com/Microsoft/DirectXTex) -Bibliothek, **generatemipmaps** und **GenerateMipMaps3D** verwenden.
+> Anstatt diese Funktion zu verwenden, wird empfohlen, die [DirectXTex-Bibliothek,](https://github.com/Microsoft/DirectXTex) **GenerateMipMaps** und **GenerateMipMaps3D zu verwenden.**
 
  
 
-Generiert eine MipMap-Kette mithilfe eines bestimmten Textur Filters.
+Generiert eine Mipmap-Kette mithilfe eines bestimmten Texturfilters.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,36 +57,36 @@ HRESULT D3DX11FilterTexture(
 *pContext* 
 </dt> <dd>
 
-Typ: **[ **Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext)\***
+Typ: **[ **ID3D11DeviceContext**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext)\***
 
-Ein Zeiger auf ein [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) -Objekt.
+Ein Zeiger auf ein [**ID3D11DeviceContext-Objekt.**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext)
 
 </dd> <dt>
 
-*ptexture* 
+*pTexture* 
 </dt> <dd>
 
 Typ: **[ **ID3D11Resource**](/windows/desktop/api/D3D11/nn-d3d11-id3d11resource)\***
 
-Das zu filternde Textur Objekt. Siehe [**ID3D11Resource**](/windows/desktop/api/D3D11/nn-d3d11-id3d11resource).
+Das zu filternde Texturobjekt. Siehe [**ID3D11Ressourcen.**](/windows/desktop/api/D3D11/nn-d3d11-id3d11resource)
 
 </dd> <dt>
 
-*Srclevel* 
+*SrcLevel* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die MipMap-Ebene, deren Daten verwendet werden, um den Rest der MipMap-Kette zu generieren.
+Die Mipmapebene, deren Daten verwendet werden, um den Rest der Mipmapkette zu generieren.
 
 </dd> <dt>
 
 *MipFilter* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Flags, die Steuern, wie die einzelnen miplevel-Werte gefiltert werden (oder Bibliothek d3dx11 \_ default for Bibliothek d3dx11 \_ Filter \_ linear). Siehe [**Bibliothek d3dx11 \_ Filter- \_ Flag**](d3dx11-filter-flag.md).
+Flags, die steuern, wie die einzelnen miplevel-Ebenen gefiltert werden (oder D3DX11 \_ DEFAULT für D3DX11 \_ FILTER \_ LINEAR). Weitere Informationen [**finden Sie unter D3DX11 \_ FILTER \_ FLAG**](d3dx11-filter-flag.md).
 
 </dd> </dl>
 
@@ -94,16 +94,16 @@ Flags, die Steuern, wie die einzelnen miplevel-Werte gefiltert werden (oder Bibl
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Werte, die unter [Direct3D 11-Rückgabecodes aufgeführt sind.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX11tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Bibliothek d3dx11. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX11tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX11.lib</dt> </dl>  |
 
 
 

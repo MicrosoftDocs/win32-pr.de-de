@@ -1,7 +1,7 @@
 ---
-description: Legt den Warnungs Schwellenwert des Benutzers in Bytes fest oder ruft ihn ab.
+description: Legt den Warnungsschwellenwert des Benutzers in Bytes fest oder ruft den Warnungsschwellenwert ab.
 ms.assetid: 5289d472-d591-4604-91f9-252dd4a1b62b
-title: Didiskquotauser. quotathreshold (Eigenschaft)
+title: DIDiskQuotaUser.QuotaThreshold-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 7ce336c84d086c4e4be369278a77e40e59474bc5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 38caa5ef5ded6ed40708314c6063fba13a74cbbe506465aed55e8504898a9307
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032788"
 ---
-# <a name="didiskquotauserquotathreshold-property"></a>Didiskquotauser. quotathreshold (Eigenschaft)
+# <a name="didiskquotauserquotathreshold-property"></a>DIDiskQuotaUser.QuotaThreshold-Eigenschaft
 
-Legt den Warnungs Schwellenwert des Benutzers in Bytes fest oder ruft ihn ab.
+Legt den Warnungsschwellenwert des Benutzers in Bytes fest oder ruft den Warnungsschwellenwert ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -38,9 +38,9 @@ DIDiskQuotaUser.QuotaThreshold = iQuotaThreshold
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **ganzzahliger** Wert, der den Warnungs Schwellenwert des Benutzers angibt oder empfängt. Wenn die Datenträger Nutzung eines Benutzers diesen Wert überschreitet und die [**logquotathreshold**](diskquotacontrol-logquotathreshold.md) -Eigenschaft auf **true** festgelegt ist, generiert das System einen Ereignisprotokoll Eintrag.
+Ein **Ganzzahlwert,** der den Warnungsschwellenwert des Benutzers angibt oder empfängt. Wenn die Datenträgerverwendung eines Benutzers diesen Wert überschreitet und die [**LogQuotaThreshold-Eigenschaft**](diskquotacontrol-logquotathreshold.md) auf **TRUE** festgelegt ist, generiert das System einen Ereignisprotokolleintrag.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -48,24 +48,24 @@ Ein **ganzzahliger** Wert, der den Warnungs Schwellenwert des Benutzers angibt o
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Defaultquotathreshold**](diskquotacontrol-defaultquotathreshold.md)
+[**DefaultQuotaThreshold**](diskquotacontrol-defaultquotathreshold.md)
 </dt> <dt>
 
-[**Didiskquotauser**](didiskquotauser-object.md)
+[**DIDiskQuotaUser**](didiskquotauser-object.md)
 </dt> <dt>
 
 [**QuotaLimit**](didiskquotauser-quotalimit.md)
 </dt> <dt>
 
-[**Quotader OLDTEXT**](didiskquotauser-quotathresholdtext.md)
+[**QuotaThresholdText**](didiskquotauser-quotathresholdtext.md)
 </dt> </dl>
 
  

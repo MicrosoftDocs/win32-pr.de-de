@@ -1,7 +1,7 @@
 ---
 description: Gibt Attribute für eine Authenticode-Signatur an.
 ms.assetid: 1c1052c3-c5c5-48ae-8266-0b367800a84a
-title: SIGNER_ATTR_AUTHCODE-Struktur
+title: SIGNER_ATTR_AUTHCODE Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -24,7 +24,7 @@ ms.locfileid: "118898947"
 Die **SIGNER \_ ATTR \_ AUTHCODE-Struktur** gibt Attribute für eine [*Authenticode-Signatur*](../secgloss/a-gly.md) an.
 
 > [!Note]  
-> Diese Struktur ist in einer Headerdatei nicht definiert. Um diese Struktur zu verwenden, müssen Sie sie selbst definieren, wie in diesem Thema gezeigt.
+> Diese Struktur ist in keiner Headerdatei definiert. Um diese Struktur zu verwenden, müssen Sie sie selbst definieren, wie in diesem Thema gezeigt.
 
  
 
@@ -50,35 +50,35 @@ typedef struct _SIGNER_ATTR_AUTHCODE {
 **cbSize**
 </dt> <dd>
 
-Die Größe der -Struktur in Bytes.
+Die Größe der Struktur in Bytes.
 
 </dd> <dt>
 
 **fCommercial**
 </dt> <dd>
 
-**TRUE,** um den Betreff als kommerziellen Herausgeber zu signieren; andernfalls **FALSE**.
+**TRUE** zum Signieren des Antragstellers als kommerzieller Herausgeber Andernfalls **FALSE**.
 
 </dd> <dt>
 
 **fIndividual**
 </dt> <dd>
 
-**TRUE,** um den Betreff als einzelnen Herausgeber zu signieren; andernfalls **FALSE**.
+**TRUE** zum Signieren des Antragstellers als einzelner Herausgeber Andernfalls **FALSE**.
 
 </dd> <dt>
 
 **pwszName**
 </dt> <dd>
 
-Der Anzeigename der Datei beim Download.
+Der Anzeigename der Datei beim Herunterladen.
 
 </dd> <dt>
 
 **pwszInfo**
 </dt> <dd>
 
-Der Anzeigename der URL der Datei beim Download.
+Der Anzeigename der URL der Datei beim Herunterladen.
 
 </dd> </dl>
 
@@ -88,16 +88,16 @@ Der Anzeigename der URL der Datei beim Download.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**SIGNATURINFORMATIONEN \_ FÜR \_ SIGNATUR**](signer-signature-info.md)
+[**SIGNATURINFORMATIONEN DES SIGNATURGEBERS \_ \_**](signer-signature-info.md)
 </dt> </dl>
 
  

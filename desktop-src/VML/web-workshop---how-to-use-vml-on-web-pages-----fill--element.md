@@ -4,9 +4,9 @@ description: In diesem Artikel wird die Verwendung des Fill-Elements von VML bes
 ms.assetid: ed36601d-2e90-412e-ac3f-58324fac300d
 keywords:
 - Web workshop,fill-Element
-- Entwerfen von Webseiten, Füllen des Elements
-- Vector Markup Language (VML),Fill-Element
-- VML (Vector Markup Language),Fill-Element
+- Entwerfen von Webseiten, Fill-Element
+- Vector Markup Language (VML), Fill-Element
+- VML (Vector Markup Language),Füllelement
 - Vektorgrafiken, Fill-Element
 - fill-Element
 - VML-Elemente, auffüllen
@@ -21,23 +21,23 @@ keywords:
 - Vektorgrafiken, Musterfüllung
 - VML-Formen, Musterfüllung
 - Mit Mustern gefüllte Formen
-- Vector Markup Language (VML),Bildfüllung
+- Vector Markup Language (VML), Bildfüllung
 - VML (Vector Markup Language),Bildfüllung
 - Vektorgrafiken, Bildfüllung
 - VML-Formen, Bildfüllung
 - Mit Bildern gefüllte Formen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ecb243e4896443fd36a1b22c2ac3a0ab0bedfb2b
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 54f6b3e0c92989e037ebf9b95b7bd726134b9099dd5d3755ff4588f7e970586c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112407793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119057264"
 ---
 # <a name="using-the-fill-element"></a>Verwenden des Fill-Elements
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
 > Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
@@ -141,7 +141,7 @@ type="gradient" />
 
 Um eine Form zu erstellen, die von der Mitte aus mit Farbverläufen gefüllt ist, können Sie `angle="-45" focus="100%" focusposition=".5, .5" focussize="0, 0" type="gradientRadial"` angeben, wie in der folgenden VML-Darstellung gezeigt:
 
-![fromcenter1.gif (4598 Bytes)](images/fromcenter1.gif)
+![fromcenter1.gif (4.598 Byte)](images/fromcenter1.gif)
 
 
 ```HTML
@@ -179,7 +179,7 @@ Um eine Form zu erstellen, die mit einem  Musterbild gefüllt ist, können Sie d
 
 Wenn Sie  das src-Eigenschaftsattribut auf eine andere Musterdatei verweisen, können Sie eine Form erstellen, die mit einem anderen Muster gefüllt ist. Außerdem können Sie die Farbe ändern, indem Sie einen anderen Wert für das **fillcolor-** oder color2-Eigenschaftsattribut angeben, wie in der folgenden VML-Darstellung gezeigt: 
 
-![pattern2.gif (831 Byte)](images/pattern2.gif)
+![pattern2.gif (831 Bytes)](images/pattern2.gif)
 
 
 ```HTML

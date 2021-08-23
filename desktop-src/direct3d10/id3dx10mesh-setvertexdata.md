@@ -1,7 +1,7 @@
 ---
-description: Legen Sie Scheitelpunkt Daten auf einen der Vertex-Puffer des Netzes fest.
+description: Legen Sie Scheitelpunktdaten in einen der Scheitelpunktpuffer des Gitters fest.
 ms.assetid: 930cbc49-4202-431f-ac72-386c31acd87e
-title: 'ID3DX10Mesh:: setvertexdata-Methode (d3dx10. h)'
+title: ID3DX10Mesh::SetVertexData-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 68d54c6868e44517d42e0b53159f7a23ef45a05a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 59dc5292d5d5dfc269f97f2a8d19ce9a19ea95ceefda47eaf89ac77f81838f92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367467"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990330"
 ---
-# <a name="id3dx10meshsetvertexdata-method"></a>ID3DX10Mesh:: setvertexdata-Methode
+# <a name="id3dx10meshsetvertexdata-method"></a>ID3DX10Mesh::SetVertexData-Methode
 
-Legen Sie Scheitelpunkt Daten auf einen der Vertex-Puffer des Netzes fest.
+Legen Sie Scheitelpunktdaten in einen der Scheitelpunktpuffer des Gitters fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetVertexData(
 
 <dl> <dt>
 
-*ibuffer* \[ in\]
+*iBuffer* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Vertex-Puffer, der mit pData aufgefüllt werden soll.
+Der Scheitelpunktpuffer, der mit pData gefüllt werden soll.
 
 </dd> <dt>
 
-*pData* \[ in\]
+*pData* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **void \***
+Typ: **const \* void**
 
-Die festzulegenden Vertex-Daten.
+Die zu setzenden Scheitelpunktdaten.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Die festzulegenden Vertex-Daten.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

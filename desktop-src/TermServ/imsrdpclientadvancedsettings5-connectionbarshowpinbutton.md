@@ -1,18 +1,18 @@
 ---
-title: IMsRdpClientAdvancedSettings5 connectionbarshowpinbutton-Eigenschaft
-description: Legt die Konfiguration für die PIN-Schaltfläche in der Verbindungs Leiste fest oder ruft Sie ab.
+title: IMsRdpClientAdvancedSettings5 ConnectionBarShowPinButton-Eigenschaft
+description: Legt die Konfiguration für die Pinschaltfläche in der Verbindungsleiste fest oder ruft sie ab.
 ms.assetid: fbb2c19b-88a7-435b-86ef-4856e194b383
 ms.tgt_platform: multiple
 keywords:
-- Connectionbarshowpinbutton-Eigenschaft Remotedesktopdienste
-- Connectionbarshowpinbutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, connectionbarshowpinbutton-Eigenschaft
-- Connectionbarshowpinbutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, connectionbarshowpinbutton-Eigenschaft
-- Connectionbarshowpinbutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, connectionbarshowpinbutton-Eigenschaft
-- Connectionbarshowpinbutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, connectionbarshowpinbutton-Eigenschaft
+- ConnectionBarShowPinButton-Eigenschaft Remotedesktopdienste
+- ConnectionBarShowPinButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , ConnectionBarShowPinButton-Eigenschaft
+- ConnectionBarShowPinButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , ConnectionBarShowPinButton-Eigenschaft
+- ConnectionBarShowPinButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , ConnectionBarShowPinButton-Eigenschaft
+- ConnectionBarShowPinButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , ConnectionBarShowPinButton-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -34,16 +34,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a766bc01bc5bf773fa03e788c3089441e6c3f6f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2a978f6d1b6a26fe84f5ad590cfc41ab384d6ba49f1e265eecc0ea408b67b59c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001388"
 ---
-# <a name="imsrdpclientadvancedsettings5connectionbarshowpinbutton-property"></a>IMsRdpClientAdvancedSettings5:: connectionbarshowpinbutton-Eigenschaft
+# <a name="imsrdpclientadvancedsettings5connectionbarshowpinbutton-property"></a>IMsRdpClientAdvancedSettings5::ConnectionBarShowPinButton-Eigenschaft
 
-Legt die Konfiguration für die PIN-Schaltfläche in der Verbindungs Leiste fest oder ruft Sie ab.
+Legt die Konfiguration für die Pinschaltfläche in der Verbindungsleiste fest oder ruft sie ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -64,7 +64,7 @@ HRESULT get_ConnectionBarShowPinButton(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der boolesche Wert **true** oder **false**. Mit dem Wert **true** wird die PIN-Schaltfläche in der Verbindungs Leiste angezeigt. Mit dem Wert **false** wird die PIN-Schaltfläche in der Verbindungs Leiste ausgeblendet.
+Ein boolescher Wert von **TRUE** oder **FALSE.** Der Wert **TRUE** zeigt die Stecknadelschaltfläche in der Verbindungsleiste an. Der Wert **FALSE** blendet die Pin-Schaltfläche in der Verbindungsleiste aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Der boolesche Wert **true** oder **false**. Mit dem Wert **true** wird die PIN-S
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

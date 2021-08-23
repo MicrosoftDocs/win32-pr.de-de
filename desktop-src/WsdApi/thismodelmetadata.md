@@ -4,12 +4,12 @@ ms.assetid: 2ebd3092-39aa-469c-a8c9-23f373ba0e66
 title: thisModelMetadata-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 872bcdfcf3f93bfc8fe307684c31cdebb2000b05
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 01d074e7e9c8d43e078ebc477366d88608e7c4f3fade6c0be3dbc6fda23f006b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107995337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991550"
 ---
 # <a name="thismodelmetadata-element"></a>thisModelMetadata-Element
 
@@ -67,17 +67,17 @@ Es gibt keine Attribute.
 
 | Element                                     | BESCHREIBUNG                                                                          |
 |---------------------------------------------|--------------------------------------------------------------------------------------|
-| [**wsdCodeGen**](wsdcodegen.md)<br/> | Das Stammelement einer WSDAPI-Codegenerator-XML-Skriptdatei.<br/> <br/> |
+| [**wsdCodeGen**](wsdcodegen.md)<br/> | Das Stammelement einer XML-Skriptdatei des WSDAPI-Codegenerators.<br/> <br/> |
 
 
 
 ## <a name="remarks"></a>Hinweise
 
-Die Herstellermetadaten entsprechen dem Abschnitt mit den Herstellermetadaten, der im Geräteprofil beschrieben ist (details finden Sie im Geräteprofil). Der Herstellername oder mindestens eine lokalisierte Version des Herstellernamens muss angegeben werden. Der Modellname oder mindestens eine lokalisierte Version des Modellnamens muss angegeben werden.
+Die Herstellermetadaten sind mit dem Im Geräteprofil beschriebenen Abschnitt mit den Herstellermetadaten (Details finden Sie im Geräteprofil). Der Herstellername oder mindestens eine lokalisierte Version des Herstellernamens muss angegeben werden. Der Modellname oder mindestens eine lokalisierte Version des Modellnamens muss angegeben werden.
 
 Das [**thisModelMetadataDefinition-Element**](thismodelmetadatadefinition.md) wird anschließend verwendet, um eine C-Konstante zu generieren, die diese Informationen enthält.
 
-Wenn ein [**PnPXDeviceCategory-Element**](pnpxdevicecategory.md) vorhanden ist, muss mindestens ein [**gehostetes**](hosted.md) Element sowohl [**PnPXHardwareId-**](pnpxhardwareid.md) als auch [**PnPXCompatibleId-Elemente**](pnpxcompatibleid.md) enthalten. Wenn **PnPXHardwareId-** und **PnPXCompatibleId-Elemente** in einem **gehosteten** Element vorhanden sind, muss ein **PnPXDeviceCategory-Element** innerhalb des **thisModelMetadata-Elements** vorhanden sein.
+Wenn ein [**PnPXDeviceCategory-Element**](pnpxdevicecategory.md) vorhanden ist, [](hosted.md) muss mindestens ein gehostetes Element sowohl [**PnPXHardwareId-**](pnpxhardwareid.md) als auch [**PnPXCompatibleId-Elemente**](pnpxcompatibleid.md) enthalten. Wenn **PnPXHardwareId-** und **PnPXCompatibleId-Elemente** in  einem gehosteten Element vorhanden sind, muss ein **PnPXDeviceCategory-Element** innerhalb des **thisModelMetadata-Elements** vorhanden sein.
 
 ## <a name="element-information"></a>Elementinformationen
 

@@ -1,7 +1,7 @@
 ---
-description: Speichert ein Mesh in einer x-Datei.
+description: Speichert ein Gitternetz in einer X-Datei.
 ms.assetid: 6d9cbca8-3847-4e15-95d4-9df3f8269665
-title: D3DXSaveMeshToX-Funktion (D3DX9Mesh. h)
+title: D3DXSaveMeshToX-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 504e7ad69b83c67dad52ebbf0f6d1eef8639a9fd
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 668131237def6078d775d0002f624b035ad29e21b9a49399b673933dc63e5b5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361199"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988437"
 ---
 # <a name="d3dxsavemeshtox-function"></a>D3DXSaveMeshToX-Funktion
 
-Speichert ein Mesh in einer x-Datei.
+Speichert ein Gitternetz in einer X-Datei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ HRESULT D3DXSaveMeshToX(
 
 <dl> <dt>
 
-*pfilename* \[ in\]
+*pFilename* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der String-Datentyp in LPCSTR aufgelöst. Siehe Hinweise.
+Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR auflösen. Andernfalls wird der Zeichenfolgendatentyp in LPCSTR auflösen. Siehe Hinweise.
 
 </dd> <dt>
 
-*pmesh* \[ in\]
+*pMesh* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)**
 
-Zeiger auf eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle, die das Mesh darstellt, das in einer x-Datei gespeichert werden soll.
+Zeiger auf eine [**ID3DXMesh-Schnittstelle,**](id3dxmesh.md) die das Gitternetz darstellt, das in einer X-Datei gespeichert werden soll.
 
 </dd> <dt>
 
-*padjacency* \[ in\]
+*pAdjacency* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**DWORD**](../winprog/windows-data-types.md) \***
+Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***
 
-Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im Mesh angibt. Dieser Parameter kann **null** sein.
+Zeiger auf ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im Gitternetz angeben. Dieser Parameter kann NULL **sein.**
 
 </dd> <dt>
 
-*pmaterials* \[ in\]
+*pMaterials* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATERIAL**](d3dxmaterial.md) \***
+Typ: **const [**D3DXMATERIAL**](d3dxmaterial.md) \***
 
-Ein Zeiger auf ein Array von [**D3DXMATERIAL**](d3dxmaterial.md) -Strukturen, die Material Informationen enthalten, die in der x-Datei gespeichert werden sollen.
+Zeiger auf ein Array von [**D3DXMATERIAL-Strukturen**](d3dxmaterial.md) mit Materialinformationen, die in der X-Datei gespeichert werden sollen.
 
 </dd> <dt>
 
-" *Peer-ectinhaltungen* \[ " in\]
+*pEffectInstances* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXEFFECTINSTANCE**](d3dxeffectinstance.md) \***
+Typ: **const [**D3DXEFFECTINSTANCE**](d3dxeffectinstance.md) \***
 
-Zeiger auf ein Array von Effekt Instanzen, eines pro Attribut Gruppe im Mesh. Dieser Parameter kann **null** sein. Eine Effekt Instanz ist eine bestimmte Instanz von Zustandsinformationen, die zum Initialisieren eines Effekts verwendet werden. Weitere Informationen finden Sie unter [**D3DXEFFECTINSTANCE**](d3dxeffectinstance.md).
-
-</dd> <dt>
-
-*Nummaterial* \[ in\]
-</dt> <dd>
-
-Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
-
-Anzahl der [**D3DXMATERIAL**](d3dxmaterial.md) -Strukturen im *pmaterials* -Array.
+Zeiger auf ein Array von Effektinstanzen, eine pro Attributgruppe im Gitternetz. Dieser Parameter kann NULL **sein.** Eine Effect-Instanz ist eine bestimmte Instanz von Zustandsinformationen, die zum Initialisieren eines Effekts verwendet wird. Weitere Informationen finden Sie unter [**D3DXEFFECTINSTANCE**](d3dxeffectinstance.md).
 
 </dd> <dt>
 
-*Format* \[ in\]
+*NumMaterials* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus Dateiformat und Speicheroptionen beim Speichern einer x-Datei. Siehe [D3DX X-Datei Konstanten](dx9-graphics-reference-d3dx-x-file-constants.md).
+Anzahl der [**D3DXMATERIAL-Strukturen**](d3dxmaterial.md) im *pMaterials-Array.*
+
+</dd> <dt>
+
+*Formatieren* \[ In\]
+</dt> <dd>
+
+Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
+
+Eine Kombination aus Dateiformat und Speicheroptionen beim Speichern einer X-Datei. Weitere Informationen [finden Sie unter D3DX X-Dateikonst constants](dx9-graphics-reference-d3dx-x-file-constants.md).
 
 </dd> </dl>
 
@@ -113,15 +113,15 @@ Eine Kombination aus Dateiformat und Speicheroptionen beim Speichern einer x-Dat
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode definiert ist, wird der Funktions aufrufin D3DXSaveMeshToXW aufgelöst. Andernfalls wird der Funktions Aufruhe in D3DXSaveMeshToXA aufgelöst, da ANSI-Zeichen folgen verwendet werden.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXSaveMeshToXW auflösen. Andernfalls wird der Funktionsaufruf in D3DXSaveMeshToXA auflösen, da ANSI-Zeichenfolgen verwendet werden.
 
-Das Standarddatei Format ist Binary. Wenn eine Datei jedoch sowohl als binäre als auch als Textdatei angegeben wird, wird Sie als Textdatei gespeichert. Unabhängig vom Dateiformat können Sie auch das komprimierte Format verwenden, um die Dateigröße zu verringern.
+Das Standarddateiformat ist binär. Wenn eine Datei jedoch sowohl als Binärdatei als auch als Textdatei angegeben wird, wird sie als Textdatei gespeichert. Unabhängig vom Dateiformat können Sie auch das komprimierte Format verwenden, um die Dateigröße zu reduzieren.
 
-Im folgenden finden Sie ein typisches Codebeispiel für die Verwendung dieser Funktion.
+Im Folgenden finden Sie ein typisches Codebeispiel für die Verwendung dieser Funktion.
 
 
 ```
@@ -155,8 +155,8 @@ D3DXSaveMeshToX(
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

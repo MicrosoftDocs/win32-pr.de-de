@@ -1,6 +1,6 @@
 ---
-title: Anzeigen von Aufgaben Namen und-Zuständen (Skripterstellung)
-description: In diesem Skript Beispiel wird gezeigt, wie Aufgaben in einem Aufgaben Ordner aufgelistet und Eigenschaftswerte aus den einzelnen Tasks angezeigt werden.
+title: Anzeigen von Tasknamen und -zuzuständen (Skripterstellung)
+description: Dieses Skriptbeispiel zeigt, wie Sie Aufgaben in einem Aufgabenordner aufzählen und Eigenschaftswerte aus jedem Task anzeigen.
 ms.assetid: 2a84a752-fbf3-4041-8b0a-304f89a49354
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,38 +9,38 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: e7a8f22977f8cfd2d40b3c37a1cc8d7bcb5259e1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f6f3ec036b1d9d61c387495b48874bf742a9479ae0608f0e5c728a029df24709
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119002488"
 ---
-# <a name="displaying-task-names-and-states-scripting"></a>Anzeigen von Aufgaben Namen und-Zuständen (Skripterstellung)
+# <a name="displaying-task-names-and-states-scripting"></a>Anzeigen von Tasknamen und -zuzuständen (Skripterstellung)
 
-In diesem Skript Beispiel wird gezeigt, wie Aufgaben in einem Aufgaben Ordner aufgelistet und Eigenschaftswerte aus den einzelnen Tasks angezeigt werden.
+Dieses Skriptbeispiel zeigt, wie Sie Aufgaben in einem Aufgabenordner aufzählen und Eigenschaftswerte aus jedem Task anzeigen.
 
-Im folgenden Verfahren wird beschrieben, wie Aufgaben Namen und Zustände für alle Aufgaben in einem Aufgaben Ordner angezeigt werden.
+Im folgenden Verfahren wird beschrieben, wie Aufgabennamen und -zustände für alle Aufgaben in einem Aufgabenordner angezeigt werden.
 
-**So zeigen Sie Aufgaben Namen und den Status für alle Aufgaben in einem Aufgaben Ordner an**
+**So zeigen Sie Aufgabennamen und -status für alle Aufgaben in einem Aufgabenordner an**
 
-1.  Erstellen Sie das [**Task Service**](taskservice.md) -Objekt.
+1.  Erstellen Sie das [**TaskService-Objekt.**](taskservice.md)
 
-    Mit diesem Objekt können Sie eine Verbindung mit dem Taskplaner-Dienst herstellen und auf einen bestimmten Aufgaben Ordner zugreifen.
+    Mit diesem Objekt können Sie eine Verbindung mit dem Taskplaner herstellen und auf einen bestimmten Aufgabenordner zugreifen.
 
-2.  Sie erhalten einen Aufgaben Ordner, der die Aufgaben enthält, über die Sie Informationen erhalten möchten.
+2.  Get a task folder that holds the tasks you want information about.
 
-    Verwenden Sie die [**TaskService. GetFolder**](taskservice-getfolder.md) -Methode, um den Ordner zu erhalten.
+    Verwenden Sie [**die TaskService.GetFolder-Methode,**](taskservice-getfolder.md) um den Ordner zu erhalten.
 
-3.  Die Auflistung von Tasks aus dem Ordner erhalten.
+3.  Sie können die Auflistung der Aufgaben aus dem Ordner erhalten.
 
-    Verwenden Sie die [**Task Folder. GetTasks**](taskfolder-gettasks.md) -Methode, um die Sammlung von Aufgaben ([**registeredtaskcollection**](registeredtaskcollection.md)) zu erhalten.
+    Verwenden Sie [**die TaskFolder.GetTasks-Methode,**](taskfolder-gettasks.md) um die Aufgabensammlung [**(RegisteredTaskCollection) zu erhalten.**](registeredtaskcollection.md)
 
-4.  Gibt die Anzahl der Aufgaben in der Auflistung an und listet die einzelnen Aufgaben in der Sammlung auf.
+4.  Sie können die Anzahl der Aufgaben in der Auflistung erhalten und die einzelnen Aufgaben in der Auflistung aufzählen.
 
-    Verwenden Sie die [**registeredtaskcollection**](registeredtaskcollection.md) -Auflistung von-Objekten, um eine [**registeredtask**](registeredtask.md) -Objektinstanz zu erhalten. Jede Instanz enthält eine Aufgabe in der Auflistung. Anschließend können Sie die Informationen (Eigenschaftswerte) für jede registrierte Aufgabe anzeigen.
+    Verwenden Sie [**die RegisteredTaskCollection-Auflistung**](registeredtaskcollection.md) von -Objekten, um eine [**RegisteredTask-Objektinstanz**](registeredtask.md) zu erhalten. Jede Instanz enthält eine Aufgabe in der Auflistung. Anschließend können Sie die Informationen (Eigenschaftswerte) jeder registrierten Aufgabe anzeigen.
 
-Im folgenden VBScript-Beispiel wird gezeigt, wie Sie eine Auflistung registrierter Tasks im Stamm Aufgaben Ordner auflisten und den Namen und den Status für die einzelnen Aufgaben anzeigen.
+Das folgende VBScript-Beispiel zeigt, wie Sie eine Auflistung registrierter Aufgaben im Stammaufgabenordner aufzählen und den Namen und Status für jede Aufgabe anzeigen.
 
 
 ```VB
@@ -99,12 +99,12 @@ End If
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

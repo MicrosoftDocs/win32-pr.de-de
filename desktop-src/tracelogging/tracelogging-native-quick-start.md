@@ -1,33 +1,33 @@
 ---
-title: Tracelogging C/C++-Schnellstart
-description: Im folgenden Abschnitt werden die grundlegenden Schritte beschrieben, die zum Hinzufügen von tracelogging zu nativem Code im Benutzermodus erforderlich sind.
+title: TraceLogging C/C++-Schnellstart
+description: Im folgenden Abschnitt werden die grundlegenden Schritte beschrieben, die zum Hinzufügen von TraceLogging zu nativem Benutzermoduscode erforderlich sind.
 ms.assetid: 444DA34B-7949-457D-A3EC-2F0CFBEDD1E2
 ms.topic: article
 ms.date: 02/20/2020
-ms.openlocfilehash: 7be18feb7f372922b7e3b811cd0c9941240e18e3
-ms.sourcegitcommit: 0aa1dd7577961438a1b3172f3a92fb11cbf359f1
+ms.openlocfilehash: cb3734e3f314270e3d8082f5c9d25d38ce065829b94c659023950e5e2709047b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "103948483"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966499"
 ---
-# <a name="tracelogging-cc-quick-start"></a>Tracelogging C/C++-Schnellstart
+# <a name="tracelogging-cc-quick-start"></a>TraceLogging C/C++-Schnellstart
 
-Im folgenden Abschnitt werden die grundlegenden Schritte beschrieben, die zum Hinzufügen von tracelogging zu nativem Code im Benutzermodus erforderlich sind.
+Im folgenden Abschnitt werden die grundlegenden Schritte beschrieben, die zum Hinzufügen von TraceLogging zu nativem Benutzermoduscode erforderlich sind.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 -   Windows 10
 -   Microsoft Visual Studio 2013
--   Das Windows 10 Software Development Kit (SDK) ist erforderlich, um einen benutzermodusanbieter zu schreiben.
--   Das Windows-Treiberkit (WDK) für Windows 10 ist erforderlich, um einen kernelmodusanbieter zu schreiben.
+-   Windows 10 Das Software Development Kit (SDK) ist erforderlich, um einen Benutzermodusanbieter zu schreiben.
+-   Windows Driver Kit (WDK) für Windows 10 ist erforderlich, um einen Kernelmodusanbieter zu schreiben.
 
 > [!IMPORTANT]
-> Verknüpfen Sie advapi32. lib, um diese Beispiele zu kompilieren.
+> Verknüpfen Sie advapi32.lib, um diese Beispiele zu kompilieren.
 
-### <a name="simpletraceloggingexampleh"></a>SimpleTraceLoggingExample. h
+### <a name="simpletraceloggingexampleh"></a>SimpleTraceLoggingExample.h
 
-Dieser Beispiel Header enthält die tracelogging-APIs, und der Forward deklariert das Anbieter handle, das zum Protokollieren von Ereignissen verwendet wird. Alle Klassen, die tracelogging verwenden möchten, enthalten diesen Header und können dann die Protokollierung starten.
+Dieser Beispielheader enthält die TraceLogging-APIs und deklariert das Anbieterhandle, das zum Protokollieren von Ereignissen verwendet wird. Jede Klasse, die TraceLogging verwenden möchte, enthält diesen Header und kann dann mit der Protokollierung beginnen.
 
 ```C++
 #pragma once
@@ -40,13 +40,13 @@ TRACELOGGING_DECLARE_PROVIDER( g_hMyComponentProvider );
 
 ```
 
-Die Header Datei enthält die Datei "traceloggingprovider. h", die die native tracelogging-API definiert. Sie müssen zuerst Windows. h einschließen, da es Konstanten definiert, die von "traceloggingprovider. h" verwendet werden.
+Die Headerdatei enthält TraceLoggingProvider.h, die die native TraceLogging-API definiert. Sie müssen zuerst Windows.h einschließen, da sie konstanten definiert, die von TraceLoggingProvider.h verwendet werden.
 
-Die Header Datei "Forward" deklariert das Anbieter Handle `g_hMyComponentProvider` , das Sie an die tracelogging-APIs übergeben, um Ereignisse zu protokollieren. Dieser Handle muss für jeden Code zugänglich sein, der tracelogging verwenden möchte.
+Die Headerdatei-Weiterleitung deklariert das Anbieterhandle, `g_hMyComponentProvider` das Sie an die TraceLogging-APIs übergeben, um Ereignisse zu protokollieren. Auf dieses Handle muss für jeden Code zugegriffen werden können, der TraceLogging verwenden möchte.
 
-[**Tracelogging \_ DECLARE \_ Provider**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-tracelogging_declare_provider) ist ein Makro, das ein `extern const TraceLoggingHProvider` Handle mit dem von Ihnen bereitgestellten Namen erstellt, das im obigen Beispiel lautet `g_hMyComponentProvider` . Die tatsächliche Anbieter handle-Variable wird in einer Codedatei zuzuordnen.
+[**TRACELOGGING \_ DECLARE \_ PROVIDER**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-tracelogging_declare_provider) ist ein Makro, das ein `extern const TraceLoggingHProvider` Handle mit dem von Ihnen angegebenen Namen erstellt, der im obigen Beispiel `g_hMyComponentProvider` lautet. Sie ordnen die tatsächliche Anbieterhandlevariable in einer Codedatei zu.
 
-### <a name="simpletraceloggingexamplecpp"></a>SimpleTraceLoggingExample. cpp
+### <a name="simpletraceloggingexamplecpp"></a>SimpleTraceLoggingExample.cpp
 
 Im folgenden Beispiel wird der Anbieter registriert, ein Ereignis protokolliert und die Registrierung des Anbieters aufgehoben.
 
@@ -77,13 +77,13 @@ void main()
 }
 ```
 
-Im obigen Beispiel ist SimpleTraceLoggingExample. h enthalten, das die globale Anbieter Variable enthält, die der Code zum Protokollieren von Ereignissen verwendet.
+Das obige Beispiel enthält SimpleTraceLoggingExample.h, das die globale Anbietervariable enthält, die Ihr Code zum Protokollieren von Ereignissen verwendet.
 
-Das [**tracelogging \_ define \_ Provider**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-tracelogging_define_provider) -Makro ordnet Speicher zu und definiert die Anbieter handle-Variable. Der Variablenname, den Sie für dieses Makro bereitstellen, muss mit dem Namen identisch sein, den Sie in der Header Datei im " [**tracelogging \_ Declare \_ Provider**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-tracelogging_declare_provider) "-Makro verwendet haben. Dieses Handle bleibt gültig, solange es sich im Gültigkeitsbereich befindet.
+Das [**TRACELOGGING \_ DEFINE \_ PROVIDER-Makro**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-tracelogging_define_provider) ordnet Speicher zu und definiert die Anbieterhandlevariable. Der Variablenname, den Sie für dieses Makro angeben, muss mit dem Namen übereinstimmen, den Sie im [**TRACELOGGING \_ DECLARE \_ PROVIDER-Makro**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-tracelogging_declare_provider) in Ihrer Headerdatei verwendet haben. Dieses Handle bleibt gültig, solange es sich im Gültigkeitsbereich befindet.
 
-### <a name="register-the-provider-handle"></a>Registrieren des Anbieter Handles
+### <a name="register-the-provider-handle"></a>Registrieren des Anbieterhandle
 
-Bevor Sie das Anbieter Handle zum Protokollieren von Ereignissen verwenden können, müssen Sie [**traceloggingregister**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-traceloggingregister) aufzurufen, um das Anbieter Handle zu registrieren. Dies erfolgt in der Regel in "Main ()" oder "DllMain ()", kann jedoch jederzeit ausgeführt werden, solange der Versuch besteht, ein Ereignis zu protokollieren. Wenn Sie ein Ereignis protokollieren, bevor Sie das Anbieter handle registrieren, tritt kein Fehler auf, aber das Ereignis wird nicht protokolliert. Der folgende Code aus dem obigen Beispiel registriert das Anbieter handle.
+Bevor Sie das Anbieterhandle zum Protokollieren von Ereignissen verwenden können, müssen Sie [**TraceLoggingRegister**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-traceloggingregister) aufrufen, um Ihr Anbieterhandle zu registrieren. Dies erfolgt in der Regel in Main() oder DLLMain(), kann aber jederzeit erfolgen, solange es jedem Versuch vorausgeht, ein Ereignis zu protokollieren. Wenn Sie ein Ereignis protokollieren, bevor Sie das Anbieterhandle registrieren, tritt kein Fehler auf, aber das Ereignis wird nicht protokolliert. Der folgende Code aus dem obigen Beispiel registriert das Anbieterhandle.
 
 ```C++
     // Define the GUID to use in TraceLoggingProviderRegister 
@@ -103,7 +103,7 @@ void main()
     TraceLoggingRegister(g_hMyComponentProvider);
 ```
 
-### <a name="log-a-tracelogging-event"></a>Protokollieren eines tracelogging-Ereignisses
+### <a name="log-a-tracelogging-event"></a>Protokollieren eines Tracelogging-Ereignisses
 
 Nachdem der Anbieter registriert wurde, protokolliert der folgende Code ein einfaches Ereignis.
 
@@ -114,19 +114,19 @@ Nachdem der Anbieter registriert wurde, protokolliert der folgende Code ein einf
         TraceLoggingValue(sampleValue, "TestMessage")); // Field for your event in the form of (value, field name).
 ```
 
-Das [**traceloggingwrite**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-traceloggingwrite) -Makro nimmt bis zu 99 Argumente an und wird als mehrere-Anweisungen ausgeführt. Dies bedeutet, dass die protokollierten Werte keine temporären C++-Objekte sein sollten. Der Ereignis Name wird im UTF-8-Format gespeichert. Sie dürfen keine eingebetteten `null` Zeichen im Ereignis oder anderen Feldnamen verwenden. Es gibt keine weiteren Beschränkungen für zulässige Zeichen.
+Das [**TraceLoggingWrite-Makro**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-traceloggingwrite) nimmt bis zu 99 Argumente entgegen und wird als mehrere Anweisungen ausgeführt. Dies bedeutet, dass es sich bei den protokollierten Werten nicht um temporäre C++-Objekte handelt. Der Ereignisname wird im UTF-8-Format gespeichert. Sie dürfen keine eingebetteten `null` Zeichen im Ereignis oder in anderen Feldnamen verwenden. Es gibt keine anderen Grenzwerte für zulässige Zeichen.
 
-Jedes Argument, das auf den Ereignis Namen folgt, muss in einem [tracelogging-Wrapper Makro](tracelogging-wrapper-macros.md)umschlossen werden. Wenn Sie C++ verwenden, können Sie das `TraceLoggingValue` Wrapper Makro verwenden, um den Typ des Arguments automatisch abzuleiten. Wenn Sie den Treiber in C schreiben, müssen Sie typspezifische Feld Makros wie `TraceLoggingInt32` , `TraceLoggingUnicodeString` , `TraceLoggingString` usw. verwenden. Die tracelogging-Wrapper Makros werden in "traceloggingprovider. h" definiert.
+Jedes Argument, das auf den Ereignisnamen folgt, muss innerhalb eines [TraceLogging Wrapper-Makros](tracelogging-wrapper-macros.md)umschlossen werden. Wenn Sie C++ verwenden, können Sie das `TraceLoggingValue` Wrappermakro verwenden, um den Typ des Arguments automatisch abzuleitung. Wenn Sie Ihren Treiber in C schreiben, müssen Sie typspezifische Feldmakros wie `TraceLoggingInt32` , `TraceLoggingUnicodeString` , `TraceLoggingString` usw. verwenden. Die TraceLogging-Wrappermakros sind in TraceLoggingProvider.h definiert.
 
-Zusätzlich zur Protokollierung einzelner Ereignisse können Sie Ereignisse auch nach Aktivität gruppieren, indem Sie die in traceloggingactivity. h gefundenen traceloggingwrite- [**Activity**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-traceloggingwriteactivity) -bzw. traceloggingwrite [**Testart**](/windows/desktop/api/traceloggingactivity/nf-traceloggingactivity-traceloggingwritestart)- / [](/windows/desktop/api/traceloggingactivity/nf-traceloggingactivity-traceloggingwritestop) Makros verwenden. Aktivitäten korrelieren Ereignisse und sind nützlich für Szenarien mit einem Anfang und einem Ende. Beispielsweise können Sie eine Aktivität zum Messen eines Szenarios verwenden, das mit dem Starten einer Anwendung beginnt, einschließlich der Zeit, die für den Begrüßungsbildschirm benötigt wird, und endet, wenn der Startbildschirm der Anwendung sichtbar wird.
+Zusätzlich zur Protokollierung einzelner Ereignisse können Sie Ereignisse auch nach Aktivität gruppieren, indem Sie die Makros [**TraceLoggingWriteActivity**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-traceloggingwriteactivity) oder [**TraceLoggingWriteStart**](/windows/desktop/api/traceloggingactivity/nf-traceloggingactivity-traceloggingwritestart) / [**TraceLoggingWriteStop**](/windows/desktop/api/traceloggingactivity/nf-traceloggingactivity-traceloggingwritestop) in TraceLoggingActivity.h verwenden. Aktivitäten korrelieren Ereignisse und sind nützlich für Szenarien, die einen Anfang und ein Ende haben. Beispielsweise können Sie eine Aktivität verwenden, um ein Szenario zu messen, das mit dem Start einer Anwendung beginnt, die Zeit einschließt, die für die Bereitstellung des Begrüßungsbildschirms benötigt wird, und endet, wenn der Anfangsbildschirm der Anwendung sichtbar wird.
 
-Aktivitäten erfassen einzelne Ereignisse und Schachteln andere Aktivitäten, die zwischen dem Anfang und dem Ende dieser Aktivität auftreten. Aktivitäten verfügen über einen prozessbezogenen Bereich und müssen vom Thread an den Thread übermittelt werden, um multithreadereignisse ordnungsgemäß zu schachteln.
+Aktivitäten erfassen einzelne Ereignisse und schachteln andere Aktivitäten, die zwischen dem Start und dem Ende dieser Aktivität auftreten. Aktivitäten haben einen Prozessbereich und müssen von Thread zu Thread übergeben werden, um Multithreadereignisse ordnungsgemäß zu schachteln.
 
-Der Gültigkeitsbereich eines Anbieter Handles ist strikt auf das Modul (dll, exe oder sys-Datei) beschränkt, in dem es definiert ist – das Handle sollte nicht an andere DLLs übermittelt werden. Wenn ein [**traceloggingwrite**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-traceloggingwrite) -Makro in A.DLL mithilfe eines in B.DLL definierten Anbieter Handles aufgerufen wird, kann dies zu Problemen führen. Die sicherste und effizienteste Methode, um diese Anforderung zu erfüllen, besteht darin, einfach direkt auf das Handle des globalen Anbieters zu verweisen und das Anbieter handle nie als Parameter zu übergeben.
+Der Bereich eines Anbieterhandle ist streng auf das Modul (DLL, EXE oder SYS-Datei) beschränkt, in dem es definiert ist. Das Handle sollte nicht an andere DLLs übergeben werden. Wenn ein [**TraceLoggingWrite-Makro**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-traceloggingwrite) in A.DLL mithilfe eines in B.DLL definierten Anbieterhandle aufgerufen wird, kann dies zu Problemen führen. Die sicherste und effizienteste Möglichkeit, diese Anforderung zu erfüllen, besteht darin, immer direkt auf das globale Anbieterhandle zu verweisen und das Anbieterhandle niemals als Parameter zu übergeben.
 
 ### <a name="unregister-the-provider"></a>Aufheben der Registrierung des Anbieters
 
-Wenn Sie mit dem Protokollieren von Ereignissen fertig sind, müssen Sie die Registrierung des tracelogging-Anbieters aufheben. Der folgende Code hebt die Registrierung des Anbieters auf.
+Wenn Sie die Protokollierung von Ereignissen abgeschlossen haben, müssen Sie die Registrierung des TraceLogging-Anbieters aufheben. Mit dem folgenden Code wird die Registrierung des Anbieters aufgehoben.
 
 ```C++
     // Stop TraceLogging and unregister the provider
@@ -135,21 +135,21 @@ Wenn Sie mit dem Protokollieren von Ereignissen fertig sind, müssen Sie die Reg
 
 ## <a name="compatibility"></a>Kompatibilität
 
-Abhängig von der Konfiguration kann traceloggingprovider. h abwärts kompatibel sein (kompatibel mit Windows Vista oder höher) oder für spätere Betriebssystemversionen optimiert werden. Traceloggingprovider. h verwendet winver (Benutzermodus) und NTDDI_VERSION (Kernel Modus), um zu bestimmen, ob es mit früheren Betriebssystemversionen kompatibel sein oder für neuere Betriebssystemversionen optimiert werden soll.
+Abhängig von der Konfiguration kann TraceLoggingProvider.h abwärtskompatibel (kompatibel mit Windows Vista oder höher) oder für höhere Betriebssystemversionen optimiert werden. TraceLoggingProvider.h verwendet WINVER (Benutzermodus) und NTDDI_VERSION (Kernelmodus), um zu bestimmen, ob es mit früheren Betriebssystemversionen kompatibel oder für neuere Betriebssystemversionen optimiert werden soll.
 
-Wenn Sie für den Benutzermodus <Windows. h-> vor der Festlegung von WINVER einschließen, legt <Windows. h> winver auf die Standardversion des SDK-Betriebssystems fest. Wenn winver auf 0x602 oder höher festgelegt ist, optimiert traceloggingprovider. h das Verhalten für Windows 8 (Ihre APP wird unter früheren Versionen von Windows nicht ausgeführt). Wenn Sie Ihr Programm auf Vista oder Windows 7 ausführen müssen, stellen Sie sicher, dass winver auf den entsprechenden Wert festgelegt ist, bevor Sie <Windows. h-> einschließen.
+Wenn Sie für den Benutzermodus <windows.h-> einschließen, bevor Sie WINVER festlegen, legt <windows.h> WINVER auf die Standardversion des ZIELbetriebssystem des SDK fest. Wenn WINVER auf 0x602 oder höher festgelegt ist, optimiert TraceLoggingProvider.h das Verhalten für Windows 8 (Ihre App wird nicht in früheren Versionen von Windows ausgeführt). Wenn Ihr Programm unter Vista oder Windows 7 ausgeführt werden soll, müssen Sie WINVER auf den entsprechenden Wert festlegen, bevor Sie <windows.h-> einschließen.
 
-Wenn Sie <WDM. h-> vor dem Festlegen von NTDDI_VERSION einschließen, wird von <WDM. h> auf einen Standardwert festgelegt. Wenn NTDDI_VERSION auf 0x06040000 oder höher festgelegt ist, optimiert traceloggingprovider. h das Verhalten für Windows 10 (der Treiber funktioniert nicht in früheren Versionen von Windows).
+Wenn Sie <wdm.h-> einschließen, bevor Sie NTDDI_VERSION festlegen, legt <wdm.h> NTDDI_VERSION auf einen Standardwert fest. Wenn NTDDI_VERSION auf 0x06040000 oder höher festgelegt ist, optimiert TraceLoggingProvider.h das Verhalten für Windows 10 (Ihr Treiber funktioniert nicht mit früheren Versionen von Windows).
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
-Informationen zum Erfassen und Anzeigen von tracelogging-Daten mit den neuesten internen Versionen der Windows Performance Tools (WPT) finden Sie unter [aufzeichnen und Anzeigen von tracelogging-Ereignissen](tracelogging-record-and-display-tracelogging-events.md).
+Informationen zum Erfassen und Anzeigen von TraceLogging-Daten mithilfe der neuesten internen Versionen der Windows Performance Tools (WPT) finden Sie unter Aufzeichnen und Anzeigen von [TraceLogging-Ereignissen.](tracelogging-record-and-display-tracelogging-events.md)
 
-Weitere C++ tracelogging-Beispiele finden Sie unter [C/C++ tracelogging-Beispiele](tracelogging-c-cpp-tracelogging-examples.md) .
+Weitere [C++-TraceLogging-Beispiele](tracelogging-c-cpp-tracelogging-examples.md) finden Sie unter C/C++-Ablaufverfolgungsbeispiele.
 
- 
+ 
 
- 
+ 
 
 
 

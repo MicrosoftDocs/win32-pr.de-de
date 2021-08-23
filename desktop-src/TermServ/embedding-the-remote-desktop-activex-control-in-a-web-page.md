@@ -1,18 +1,18 @@
 ---
-title: Einbetten des Remotedesktop ActiveX-Steuer Elements in eine Webseite
-description: Beispiel, das die Verwendung der Skript fähigen Schnittstellen veranschaulicht.
+title: Einbetten des Remotedesktop ActiveX-Steuerelements in eine Webseite
+description: Beispiel, das die Verwendung der skriptierbaren Schnittstellen veranschaulicht.
 ms.assetid: fad0f81f-bb04-4900-aeb8-0be503efa591
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d180c6ed95bc0f75f2f10305f00dc1d63be25e80
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: c8cb5fffe6bed04d99fcfac7d48f28300c3714affa3ea1df25bda27334988752
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "103723853"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001568"
 ---
-# <a name="embedding-the-remote-desktop-activex-control-in-a-webpage"></a>Einbetten des Remotedesktop ActiveX-Steuer Elements in eine Webseite
+# <a name="embedding-the-remote-desktop-activex-control-in-a-webpage"></a>Einbetten des Remotedesktop ActiveX-Steuerelements in eine Webseite
 
 Sie können das Remotedesktop ActiveX-Steuerelement in eine Webseite einbetten, indem Sie Code verwenden, der dem folgenden ähnelt.
 
@@ -466,18 +466,18 @@ end sub
 
 
 
-Die CLSID ist für das ActiveX-Steuerelement, das von Remotedesktopverbindung (RDP) 6,0 gehostet wird. Dieses ActiveX-Steuerelement implementiert [**imsrdpclient**](imsrdpclient-interface.md).
+Die CLSID ist für das ActiveX-Steuerelement, das von Remotedesktopverbindung (RDP) 6.0 gehostet wird. Dieses ActiveX implementiert [**IMsRdpClient**](imsrdpclient-interface.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des Remotedesktop ActiveX-Steuer Elements](using-remote-desktop-web-connection.md)
+[Verwenden des Remotedesktop ActiveX-Steuerelements](using-remote-desktop-web-connection.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

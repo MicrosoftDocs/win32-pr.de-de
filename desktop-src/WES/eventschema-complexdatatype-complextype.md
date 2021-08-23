@@ -1,9 +1,9 @@
 ---
-title: Komplexer complexdatatype-Typ
-description: Definiert eine-Struktur, die ein oder mehrere Datenelemente enthält.
+title: Komplexer ComplexDataType-Typ
+description: Definiert eine -Struktur, die ein oder mehrere Datenelemente enthält.
 ms.assetid: 1495daef-1dfd-4f62-9543-569cc74102f4
 keywords:
-- "\"Complexdatatype Complex Type Event Log\""
+- Komplexer ComplexDataType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 598f2cc02f1e3675ff0c8fd6eae7f9a5e02b9407
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f86b15defc32469dd1a4abd0f6366e1a93d4b83441b1e1518ff7ac999f30bd59
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339356"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055808"
 ---
-# <a name="complexdatatype-complex-type"></a>Komplexer complexdatatype-Typ
+# <a name="complexdatatype-complex-type"></a>Komplexer ComplexDataType-Typ
 
-Definiert eine-Struktur, die ein oder mehrere Datenelemente enthält.
+Definiert eine -Struktur, die ein oder mehrere Datenelemente enthält.
 
 ``` syntax
 <xs:complexType name="ComplexDataType">
@@ -44,9 +44,9 @@ Definiert eine-Struktur, die ein oder mehrere Datenelemente enthält.
 
 
 
-| Element                                                  | type                                                      | BESCHREIBUNG                                                                                                             |
+| Element                                                  | Typ                                                      | Beschreibung                                                                                                             |
 |----------------------------------------------------------|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [**Daten**](eventschema-data-complexdatatype-element.md) | [**DataType**](eventschema-datafieldtype-complextype.md) | Die Liste der Datenelemente in der-Struktur. Die Liste der Elemente wird in derselben Reihenfolge wie in der Vorlage definiert.<br/> |
+| [**Daten**](eventschema-data-complexdatatype-element.md) | [**Datatype**](eventschema-datafieldtype-complextype.md) | Die Liste der Datenelemente in der Struktur. Die Liste der Elemente hat die gleiche Reihenfolge wie in der Vorlage definiert.<br/> |
 
 
 
@@ -54,15 +54,15 @@ Definiert eine-Struktur, die ein oder mehrere Datenelemente enthält.
 
 
 
-| Name | type   | BESCHREIBUNG                                                                                                                                                                                                                  |
+| Name | Typ   | Beschreibung                                                                                                                                                                                                                  |
 |------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name | Zeichenfolge | Der Name der Struktur. Dies ist der Name, der angegeben wird, wenn Sie die Struktur in der Vorlage definiert haben (siehe den komplexen Typ " [**templateitemtype**](eventmanifestschema-templateitemtype-complextype.md) ").<br/> |
+| Name | Zeichenfolge | Der Name der -Struktur. Dies ist der Name, der angegeben wird, wenn Sie die Struktur in der Vorlage definiert haben (siehe den komplexen [**TemplateItemType-Typ).**](eventmanifestschema-templateitemtype-complextype.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**EvtRender**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) -Funktion rendert den Inhalt einer Struktur als binäres Blob. die-Funktion stellt die einzelnen Datenelemente der-Struktur nicht dar.
+Die [**EvtRender-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) rendert den Inhalt einer -Struktur als binäres Blob. Die -Funktion rendert nicht die einzelnen Datenelemente der -Struktur.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,8 +70,8 @@ Die [**EvtRender**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) -Funktion r
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

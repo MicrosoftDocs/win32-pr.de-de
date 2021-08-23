@@ -1,7 +1,7 @@
 ---
 description: Speichert Tablet-Kontextinformationen.
 ms.assetid: a9eadc83-c3dc-42ba-bd4c-24a4a95563ff
-title: Itabletcontext-Schnittstelle
+title: ITabletContext-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,24 +14,24 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: 14c1b34058ebda76f5fd21c6a5d686aa25ae41f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3642100b0b974d952dbf9c01d7362ee19f85d48923233e3356ed6e1ec7b58064
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119031898"
 ---
-# <a name="itabletcontext-interface"></a>Itabletcontext-Schnittstelle
+# <a name="itabletcontext-interface"></a>ITabletContext-Schnittstelle
 
 Speichert Tablet-Kontextinformationen.
 
 ## <a name="members"></a>Member
 
-Die **itabletcontext** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle, verfügt jedoch nicht über zusätzliche Member.
+Die **ITabletContext-Schnittstelle** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der folgende Code definiert die **itabletcontext** -Schnittstelle.
+Der folgende Code definiert die **ITabletContext-Schnittstelle.**
 
 ``` syntax
 [
@@ -159,7 +159,7 @@ interface ITabletContext : IUnknown
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 

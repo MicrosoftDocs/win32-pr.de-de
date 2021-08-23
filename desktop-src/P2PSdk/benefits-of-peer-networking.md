@@ -1,48 +1,48 @@
 ---
-description: Die Peer-to-Peer-Infrastruktur bietet eine umfassende Lösung für die Erstellung von Peer-zu-Peer-Netzwerkanwendungen.
+description: Die Peer-zu-Peer-Infrastruktur bietet eine vollständige Lösung zum Erstellen von Peer-zu-Peer-Netzwerkanwendungen.
 ms.assetid: 3aed8c13-4dc0-4242-b3de-8817ff2f4018
-title: Vorteile von Peer Netzwerken
+title: Vorteile von Peernetzwerken
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f836d8e60cb249b5a0e603f0a295a55686bc5ef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 84c9e6ab5eedd130735f4c352712e0445d29e6333b033113dfa2f90130b28c33
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865172"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011768"
 ---
-# <a name="benefits-of-peer-networking"></a>Vorteile von Peer Netzwerken
+# <a name="benefits-of-peer-networking"></a>Vorteile von Peernetzwerken
 
-Die Peer-to-Peer-Infrastruktur bietet eine umfassende Lösung für die Erstellung von Peer-zu-Peer-Netzwerkanwendungen. Mithilfe der Peer-to-Peer-Grafik-, Gruppierungs-, Identitäts-Manager-und PNRP-Namespace Anbieter-APIs können Sie neue, aufregende und robuste Peer-to-Peer-Anwendungen erstellen. Die Peer-to-Peer-Infrastruktur bietet eine solide Netzwerkinfrastruktur, sodass Sie sich auf die Anwendungs **Entwicklung** konzentrieren können, da die Infrastruktur für Sie entwickelt wurde.
+Die Peer-zu-Peer-Infrastruktur bietet eine vollständige Lösung zum Erstellen von Peer-zu-Peer-Netzwerkanwendungen. Sie können die PEER-zu-Peer-Graphing-, Gruppierungs-, Identitäts-Manager- und PNRP-Namespaceanbieter-APIs verwenden, um neue, interessante und stabile Peer-zu-Peer-Anwendungen zu erstellen. Die Peer-zu-Peer-Infrastruktur bietet eine solide Netzwerkinfrastruktur, sodass Sie sich auf die **Entwicklung von** Anwendungen konzentrieren können, da die Infrastruktur für Sie entwickelt wird.
 
-## <a name="design-features"></a>Design Features
+## <a name="design-features"></a>Entwurfsfeatures
 
-Die Peer-to-Peer-Infrastruktur bietet die folgenden Features:
+Die Peer-zu-Peer-Infrastruktur bietet die folgenden Features:
 
 | Funktion            | BESCHREIBUNG                                          |
 |--------------------|------------------------------------------------------|
-| **Sicher**         | Stabilität bei Fehlern oder gerichteten Angriffen |
-| **Skalierbar**       | Skalierbarkeit von einfachen LANs bis zum gesamten Internet  |
-| **Serverlos**     | Kein zentraler Fehlerpunkt                          |
-| **Selbstoptimierung**    | Anpassung an Änderungen innerhalb der Infrastruktur          |
-| **Selbstreparatur** | Automatisch repariert und korrigiert            |
-| **Freigabe**        | Ermöglicht die Freigabe von Endpunkten im Netzwerk       |
+| **Sicher**         | Stabilität bei Ausfällen oder gerichteten Angriffen |
+| **Skalierbar**       | Skalierbarkeit von einfachen LANs auf das gesamte Internet  |
+| **Serverlos**     | Keine zentrale Fehlerstelle                          |
+| **Selbstoptimierung**    | Passt sich an Änderungen innerhalb der Infrastruktur an.          |
+| **Selbstreparatur** | Automatische Reparatur und Korrektur            |
+| **Freigabe**        | Ermöglicht die Freigabe von Edge-of-Network-Endpunkten       |
 
 
 
  
 
-Mithilfe der Peer-to-Peer-Infrastruktur können Sie die folgenden Arten von Anwendungen erstellen:
+Mithilfe der Peer-zu-Peer-Infrastruktur können Sie die folgenden Anwendungstypen erstellen:
 
--   Echt Zeit Netzwerke und Kommunikation
+-   Echtzeitnetzwerke und -kommunikation
 -   Zusammenarbeit
 -   Inhaltsverteilung
--   Koordination verteilter Verarbeitung
--   Internet Technologien und-Protokolle
+-   Koordination der verteilten Verarbeitung
+-   Internettechnologien und -protokolle
 
 ## <a name="alternative-to-dns"></a>Alternative zu DNS
 
-Da Peer-zu-Peer-Entitäten auf Ad-hoc-Basis teilnehmen und kommunizieren, ist die Peer-to-Peer-Infrastruktur eine effektive Alternative zu DNS für die Namensauflösung. Die Peer-to-Peer-Infrastruktur verwendet die PNRP-Namespace Anbieter-API, um einen Server losen Mechanismus zum Auflösen von Peer-to-Peer-Namen bereitzustellen.
+Da Peer-zu-Peer-Entitäten ad hoc teilnehmen und kommunizieren, ist die Peer-zu-Peer-Infrastruktur eine effektive Alternative zu DNS für die Namensauflösung. Die Peer-zu-Peer-Infrastruktur verwendet die PNRP-Namespaceanbieter-API, um einen serverlosen Mechanismus zum Auflösen von Peer-zu-Peer-Namen bereitzustellen.
 
  
 

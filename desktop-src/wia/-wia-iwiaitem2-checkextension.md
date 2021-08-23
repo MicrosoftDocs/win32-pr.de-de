@@ -1,7 +1,7 @@
 ---
-description: 'Überprüft, ob eine angegebene Erweiterung auf dem Computer verfügbar ist und von der IWiaItem2:: GetExtension-Methode verwendet werden kann.'
+description: Überprüft, ob eine angegebene Erweiterung auf dem Computer verfügbar ist und von der IWiaItem2::GetExtension-Methode verwendet werden kann.
 ms.assetid: 672f6418-4ce3-4570-a412-fe639c9f5eb8
-title: 'IWiaItem2:: checkextension-Methode (WIA. h)'
+title: IWiaItem2::CheckExtension-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 65b0b5b3ace1634a20dfa63382d82099fef0686e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50240fbf10155fae555c6cd2e30bf8c86c571b8d52b86e02eab9f5bb11ac17ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357397"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965579"
 ---
-# <a name="iwiaitem2checkextension-method"></a>IWiaItem2:: checkextension-Methode
+# <a name="iwiaitem2checkextension-method"></a>IWiaItem2::CheckExtension-Methode
 
-Überprüft, ob eine angegebene Erweiterung auf dem Computer verfügbar ist und von der [**IWiaItem2:: GetExtension**](-wia-iwiaitem2-getextension.md) -Methode verwendet werden kann.
+Überprüft, ob eine angegebene Erweiterung auf dem Computer verfügbar ist und von der [**IWiaItem2::GetExtension-Methode verwendet werden**](-wia-iwiaitem2-getextension.md) kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT CheckExtension(
 
 <dl> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 Derzeit nicht verwendet. Sollte auf Null festgelegt werden.
 
 </dd> <dt>
 
-*bstrinname* \[ in\]
+*bstrName* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -60,27 +60,27 @@ Gibt den Namen der Erweiterung an.
 
 </dd> <dt>
 
-*riidextensioninterface* \[ in\]
+*riidExtensionInterface* \[ In\]
 </dt> <dd>
 
-Typ: **refID**
+Typ: **REFIID**
 
 Derzeit nicht verwendet.
 
 </dd> <dt>
 
-*pbextensionist vorhanden* \[ vorgenommen\]
+*pbExtensionExists* \[ out\]
 </dt> <dd>
 
-Typ: **bool \** _
+Typ: **BOOL \***
 
-Empfängt einen Zeiger auf einen _ * bool * *.
+Empfängt einen Zeiger auf eine **BOOL.**
 
 <dt>
 
 <span id="FALSE"></span><span id="false"></span>
 
-<span id="FALSE"></span><span id="false"></span>**Alarm**
+<span id="FALSE"></span><span id="false"></span>**FALSE**
 
 
 </dt> <dd>
@@ -91,7 +91,7 @@ Die angegebene Erweiterung ist nicht verfügbar.
 
 <span id="TRUE"></span><span id="true"></span>
 
-<span id="TRUE"></span><span id="true"></span>**Fall**
+<span id="TRUE"></span><span id="true"></span>**STIMMT**
 
 
 </dt> <dd>
@@ -104,15 +104,15 @@ Die angegebene Erweiterung ist verfügbar.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode können Anwendungen überprüfen, ob eine Erweiterung verfügbar ist, bevor Sie die [**IWiaItem2:: GetExtension**](-wia-iwiaitem2-getextension.md) -Methode aufrufen. Außerdem kann die Anwendung überprüfen, welche Erweiterungen verfügbar sind, ohne Sie gemeinsam zu erstellen, und dann entscheiden, welche Erweiterungen verwendet werden sollen.
+Mit dieser Methode können Anwendungen überprüfen, ob eine Erweiterung verfügbar ist, bevor sie die [**IWiaItem2::GetExtension-Methode**](-wia-iwiaitem2-getextension.md) aufrufen. Außerdem kann die Anwendung überprüfen, welche Erweiterungen verfügbar sind, ohne sie gemeinsam zu erstellen, und dann entscheiden, welche Erweiterungen verwendet werden sollen.
 
 ## <a name="examples"></a>Beispiele
 
-Checkimgfilter überprüft, ob der Treiber über einen Bild Verarbeitungs Filter verfügt. Vor dem Aufrufen der Vorschau Komponente sollte eine Anwendung sicherstellen, dass der Treiber über einen Bild Verarbeitungs Filter verfügt.
+CheckImgFilter überprüft, ob der Treiber über einen Bildverarbeitungsfilter verfügt. Vor dem Aufrufen der Vorschaukomponente sollte eine Anwendung sicherstellen, dass der Treiber über einen Bildverarbeitungsfilter verfügt.
 
 
 ```C++
@@ -166,10 +166,10 @@ CheckImgFilter(
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

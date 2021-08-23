@@ -1,19 +1,19 @@
 ---
-description: Die iwpcprovidersupport-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IWPCProviderSupport-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: A7282350-721C-4B12-ADC8-61E4E1F08D49
-title: Iwpcprovidersupport-Methoden
+title: IWPCProviderSupport-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1722e261a114cfd26db274bf4f861858222c2766
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 857f15808dbb33f52516bb58e781f619dfb0cb3271846d111dcfb1719dfa6d51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971729"
 ---
-# <a name="iwpcprovidersupport-methods"></a>Iwpcprovidersupport-Methoden
+# <a name="iwpcprovidersupport-methods"></a>IWPCProviderSupport-Methoden
 
-Die [**iwpcprovidersupport**](/windows/desktop/api/Wpcapi/nn-wpcapi-iwpcprovidersupport) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWPCProviderSupport-Schnittstelle**](/windows/desktop/api/Wpcapi/nn-wpcapi-iwpcprovidersupport) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

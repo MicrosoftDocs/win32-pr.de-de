@@ -1,16 +1,16 @@
 ---
-title: IMsRdpClientAdvancedSettings6 authenticationserviceclass (Eigenschaft)
-description: Gibt den Dienst Prinzipal Namen (SPN) an, der für die Authentifizierung beim Server verwendet werden soll.
+title: IMsRdpClientAdvancedSettings6 AuthenticationServiceClass-Eigenschaft
+description: Gibt den Dienstprinzipalnamen (Service Principal Name, SPN) an, der für die Authentifizierung beim Server verwendet werden soll.
 ms.assetid: 65d10b1f-295a-44b8-a790-306ae4e3e5e2
 ms.tgt_platform: multiple
 keywords:
-- Authenticationserviceclass-Eigenschaft Remotedesktopdienste
-- Authenticationserviceclass-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, authenticationserviceclass (Eigenschaft)
-- Authenticationserviceclass-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, authenticationserviceclass (Eigenschaft)
-- Authenticationserviceclass-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, authenticationserviceclass (Eigenschaft)
+- Remotedesktopdienste der AuthenticationServiceClass-Eigenschaft
+- AuthenticationServiceClass-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , AuthenticationServiceClass-Eigenschaft
+- AuthenticationServiceClass-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , AuthenticationServiceClass-Eigenschaft
+- AuthenticationServiceClass-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , AuthenticationServiceClass-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -29,16 +29,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 618b55d1489f46e0e1119186bd5003fb68dbfebb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8453c0aef1548303e653f1ba57c9f05550975d93706eae1b9d3f05ea0b611a71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001368"
 ---
-# <a name="imsrdpclientadvancedsettings6authenticationserviceclass-property"></a>IMsRdpClientAdvancedSettings6:: authenticationserviceclass (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings6authenticationserviceclass-property"></a>IMsRdpClientAdvancedSettings6::AuthenticationServiceClass-Eigenschaft
 
-Gibt den Dienst Prinzipal Namen (SPN) an, der für die Authentifizierung beim Server verwendet werden soll.
+Gibt den Dienstprinzipalnamen (Service Principal Name, SPN) an, der für die Authentifizierung beim Server verwendet werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -59,13 +59,13 @@ HRESULT get_AuthenticationServiceClass(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt den zu verwendenden Dienst Prinzipal Namen an.
+Gibt den zu verwendenden Dienstprinzipalnamen an.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wird nur von Remotedesktopverbindung 6,1-und 7,0-Clients unterstützt.
+Diese Eigenschaft wird nur von Remotedesktopverbindung 6.1- und 7.0-Clients unterstützt.
 
-Dienst Prinzipal Namen (SPNs) werden dem Sicherheits Prinzipal (Benutzer oder Gruppen) zugeordnet, in dessen Sicherheitskontext der Dienst ausgeführt wird. SPNs werden verwendet, um die gegenseitige Authentifizierung zwischen einer Client Anwendung und einem Dienst zu unterstützen.
+Dienstprinzipalnamen (SPNs) sind dem Sicherheitsprinzipal (Benutzer oder Gruppen) zugeordnet, in dessen Sicherheitskontext der Dienst ausgeführt wird. SPNs werden verwendet, um die gegenseitige Authentifizierung zwischen einer Clientanwendung und einem Dienst zu unterstützen.
 
 ## <a name="requirements"></a>Anforderungen
 

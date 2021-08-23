@@ -14,7 +14,7 @@ ms.locfileid: "119058718"
 ---
 # <a name="iwtsprotocolshadowcallback-methods"></a>IWTSProtocolShadowCallback-Methoden
 
-\[IWTSProtocolShadowCallback ist ab diesem Windows Server 2012.\]
+\[IWTSProtocolShadowCallback ist ab Windows Server 2012 nicht mehr für die Verwendung verfügbar.\]
 
 Die [**IWTSProtocolShadowCallback-Schnittstelle**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwtsprotocolshadowcallback) macht die folgenden Methoden verfügbar.
 

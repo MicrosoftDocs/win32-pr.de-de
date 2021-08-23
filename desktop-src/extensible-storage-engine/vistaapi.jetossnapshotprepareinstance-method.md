@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: vistaapi. jedessnapshotprepareinzelstance-Methode'
-title: Vistaapi. jedessnapshotpreparinstance-Methode (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: VistaApi.JetOSSnapshotPrepareInstance-Methode'
+title: VistaApi.JetOSSnapshotPrepareInstance-Methode (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'JetOSSnapshotPrepareInstance method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Vista.VistaApi.JetOSSnapshotPrepareInstance(Microsoft.Isam.Esent.Interop.JET_OSSNAPID,Microsoft.Isam.Esent.Interop.JET_INSTANCE,Microsoft.Isam.Esent.Interop.Vista.SnapshotPrepareInstanceGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistaapi.jetossnapshotprepareinstance(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 46151e2b11c669ac9635ce5974757999a8636b56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9aa33a9d6bf1aec0c5c55844c509ef50b7fe0e31da2db118044d84a4662ccb28
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131756"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978140"
 ---
-# <a name="vistaapijetossnapshotprepareinstance-method"></a>Vistaapi. jedessnapshotprepareinzelstance-Methode
+# <a name="vistaapijetossnapshotprepareinstance-method"></a>VistaApi.JetOSSnapshotPrepareInstance-Methode
 
-Wählt eine bestimmte-Instanz aus, die Teil der Momentaufnahme Sitzung sein soll.
+Wählt eine bestimmte Instanz aus, die Teil der Momentaufnahmesitzung sein soll.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,30 +65,30 @@ public static void JetOSSnapshotPrepareInstance(
 #### <a name="parameters"></a>Parameter
 
   - Momentaufnahme  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_OSSNAPID](./jet-ossnapid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_OSSNAPID](./jet-ossnapid-structure.md)  
     
-    Der Momentaufnahme Bezeichner.
+    Der Momentaufnahmebezeichner.
 
 <!-- end list -->
 
   - instance  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
-    Die-Instanz, die der Momentaufnahme hinzugefügt wird.
+    Die -Instanz, die der Momentaufnahme hinzugefügt werden soll.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. Vista. snapshotprepareinstancegrbit](./snapshotprepareinstancegrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.Vista.SnapshotPrepareInstanceGrbit](./snapshotprepareinstancegrbit-enumeration.md)  
     
-    Optionen für diesen-Befehl.
+    Optionen für diesen Aufruf.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistaapi-Klasse](./vistaapi-class.md)
+[VistaApi-Klasse](./vistaapi-class.md)
 
-[Vistaapi-Member](./vistaapi-members.md)
+[VistaApi-Member](./vistaapi-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

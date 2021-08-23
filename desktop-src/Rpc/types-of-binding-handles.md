@@ -1,34 +1,34 @@
 ---
-title: Typen von Bindungs Handles
-description: Bindungs Handles können automatisch, implizit oder explizit sein.
+title: Typen von Bindungshandles
+description: Bindungshandles können automatisch, implizit oder explizit sein.
 ms.assetid: 7f026199-6045-4f60-9002-543636cf6275
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 60a09b858dfc677d06cf5885dc7a5f7a6ba599eb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c1a3db77f01bf0228623efe9d3dca5fbeb023d97fbe00e5da4d4ba070f323ba5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011073"
 ---
-# <a name="types-of-binding-handles"></a>Typen von Bindungs Handles
+# <a name="types-of-binding-handles"></a>Typen von Bindungshandles
 
-Bindungs Handles können automatisch, implizit oder explizit sein. Sie unterscheiden sich in der Steuerungs Menge, die die Anwendung über den Bindungsprozess verfügt. Wie der Name bereits vermuten lässt, verarbeitet die automatische Bindung die automatisierte Bindung. Die Client-und Server Anwendungen benötigen keinen Code, um den Bindungsprozess zu verarbeiten. Mit impliziten Bindungs Handles können Client Programme das Bindungs handle konfigurieren, bevor die Bindung stattfindet. Nachdem der Client eine Bindung eingerichtet hat, verarbeitet die RPC-Lauf Zeit Bibliothek den Rest. Explizite Bindungs Handles verschieben die gesamte Kontrolle über den Bindungsprozess in den Quellcode des Clients und der Serverprogramme. Mit diesem Steuerelement kommt es zu erhöhter Komplexität. Die Anwendung muss RPC-Funktionen zum Verwalten der Bindung abrufen. Dies geschieht nicht automatisch. Es werden explizite Bindungs Handles empfohlen.
+Bindungshandles können automatisch, implizit oder explizit sein. Sie unterscheiden sich in der Kontrolle, die die Anwendung über den Bindungsprozess hat. Wie der Name schon sagt, automatisiert die automatische Bindung die Bindung. Die Client- und Serveranwendungen benötigen keinen Code, um den Bindungsprozess zu verarbeiten. Implizite Bindungshandles ermöglichen Clientprogrammen, das Bindungshandle zu konfigurieren, bevor die Bindung erfolgt. Nachdem der Client eine Bindung eingerichtet hat, verarbeitet die RPC-Laufzeitbibliothek den Rest. Explizite Bindungshandles verschieben die vollständige Kontrolle über den Bindungsprozess in den Quellcode des Clients und der Serverprogramme. Mit diesem Steuerelement erhöht sich die Komplexität. Ihre Anwendung muss RPC-Funktionen aufrufen, um die Bindung zu verwalten. Dies geschieht nicht automatisch. Explizite Bindungshandles werden empfohlen.
 
-Im folgenden Diagramm werden die Unterschiede zwischen automatischen, impliziten und expliziten Bindungs Handles veranschaulicht.
+Das folgende Diagramm veranschaulicht die Unterschiede zwischen automatischen, impliziten und expliziten Bindungshandles.
 
-![Unterschiede zwischen automatischen, impliziten und expliziten Bindungs Handles](images/bhand.png)
+![Unterschiede zwischen automatischen, impliziten und expliziten Bindungshandles](images/bhand.png)
 
-Außerdem ist jedes Bindungs handle entweder primitiv oder Benutzer definiert. In den folgenden Themen wird jeder Typ von Bindungs handle erläutert:
+Darüber hinaus ist jedes Bindungshandle entweder primitiv oder benutzerdefiniert. Die einzelnen Bindungshandletypen werden in den folgenden Themen erläutert:
 
--   [Automatische Bindungs Handles](automatic-binding-handles.md)
--   [Implizite Bindungs Handles](implicit-binding-handles.md)
--   [Explizite Bindungs Handles](explicit-binding-handles.md)
--   [Primitive und benutzerdefinierte Bindungs Handles](primitive-and-custom-binding-handles.md)
+-   [Automatische Bindungshandles](automatic-binding-handles.md)
+-   [Implizite Bindungshandles](implicit-binding-handles.md)
+-   [Explizite Bindungshandles](explicit-binding-handles.md)
+-   [Primitive und benutzerdefinierte Bindungshandles](primitive-and-custom-binding-handles.md)
 
- 
+ 
 
- 
+ 
 
 
 

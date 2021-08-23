@@ -1,23 +1,23 @@
 ---
-description: In diesem Thema wird veranschaulicht, wie die Pixel einer Bitmap-Quelle mithilfe der IWICBitmap-und der iwicbitmaplock-Komponente geändert werden.
+description: In diesem Thema wird veranschaulicht, wie die Pixel einer Bitmapquelle mithilfe der Komponenten IWICBitmap und IWICBitmapLock geändert werden.
 ms.assetid: a08af015-bc42-4a31-af03-106714b08d08
-title: Ändern der Pixel einer Bitmap-Quelle
+title: Ändern der Pixel einer Bitmapquelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8be623d540fcd313476ea5c7ec5e724231d33aec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dbfa25a5f09742066c4e67af1fb1735aa038f086d6a107e88ae34e7b7c597770
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358974"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965389"
 ---
-# <a name="how-to-modify-the-pixels-of-a-bitmap-source"></a>Ändern der Pixel einer Bitmap-Quelle
+# <a name="how-to-modify-the-pixels-of-a-bitmap-source"></a>Ändern der Pixel einer Bitmapquelle
 
-In diesem Thema wird veranschaulicht, wie die Pixel einer Bitmap-Quelle mithilfe der [**IWICBitmap**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap) -und der [**iwicbitmaplock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock) -Komponente geändert werden.
+In diesem Thema wird veranschaulicht, wie die Pixel einer Bitmapquelle mithilfe der Komponenten [**IWICBitmap**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap) und [**IWICBitmapLock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock) geändert werden.
 
-So ändern Sie die Pixel einer Bitmap-Quelle
+So ändern Sie die Pixel einer Bitmapquelle
 
-1.  Erstellen Sie ein [**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) -Objekt, um WIC-Objekte (Windows Imaging Component) zu erstellen.
+1.  Erstellen Sie ein [**IWICImagingFactory-Objekt,**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) um Windows WIC-Objekte (Imaging Component) zu erstellen.
 
     ```C++
     // Create WIC factory
@@ -31,7 +31,7 @@ So ändern Sie die Pixel einer Bitmap-Quelle
 
     
 
-2.  Verwenden Sie die Methode "Methode" von "| [**atedecoderfromfilename**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromfilename) ", um einen [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) aus einer Bilddatei zu erstellen.
+2.  Verwenden Sie die [**CreateDecoderFromFilename-Methode,**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromfilename) um einen [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) aus einer Bilddatei zu erstellen.
 
     ```C++
     HRESULT hr = S_OK;
@@ -50,7 +50,7 @@ So ändern Sie die Pixel einer Bitmap-Quelle
 
     
 
-3.  Holen Sie sich den ersten [**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) des Bilds.
+3.  Abrufen des ersten [**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) des Bilds.
 
     ```C++
     // Retrieve the first bitmap frame.
@@ -62,9 +62,9 @@ So ändern Sie die Pixel einer Bitmap-Quelle
 
     
 
-    Das JPEG-Dateiformat unterstützt nur einen einzelnen Frame. Da es sich bei der Datei in diesem Beispiel um eine JPEG-Datei handelt, wird der erste Frame ( `0` ) verwendet. Informationen zu Bildformaten mit mehreren Frames finden [Sie unter Abrufen der Frames eines Bilds](-wic-bitmapsources-howto-retrieveimageframes.md) für den Zugriff auf die einzelnen Frames des Bilds.
+    Das JPEG-Dateiformat unterstützt nur einen einzelnen Frame. Da die Datei in diesem Beispiel eine JPEG-Datei ist, wird der erste Frame ( `0` ) verwendet. Informationen zu Bildformaten mit mehreren Frames finden Sie unter [Abrufen der Frames eines Bilds](-wic-bitmapsources-howto-retrieveimageframes.md) für den Zugriff auf die einzelnen Frames des Bilds.
 
-4.  Erstellen Sie eine [**IWICBitmap**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap) aus dem zuvor Abbild Frame.
+4.  Erstellen Sie eine [**IWICBitmap**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap) aus dem zuvor abgerufenen Bildrahmen.
 
     ```C++
     IWICBitmap *pIBitmap = NULL;
@@ -87,7 +87,7 @@ So ändern Sie die Pixel einer Bitmap-Quelle
 
     
 
-5.  Rufen Sie eine [**iwicbitmaplock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock) für ein angegebenes Rechteck der [**IWICBitmap**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap)ab.
+5.  Rufen Sie ein [**IWICBitmapLock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock) für ein angegebenes Rechteck der [**IWICBitmap**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap)ab.
 
     ```C++
     if (SUCCEEDED(hr))
@@ -100,7 +100,7 @@ So ändern Sie die Pixel einer Bitmap-Quelle
 
     
 
-6.  Verarbeiten Sie die Pixeldaten, die jetzt vom [**iwicbitmaplock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock) -Objekt gesperrt sind.
+6.  Verarbeiten Sie die Pixeldaten, die jetzt durch das [**IWICBitmapLock-Objekt**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock) gesperrt sind.
 
     ```C++
        if (SUCCEEDED(hr))
@@ -125,9 +125,9 @@ So ändern Sie die Pixel einer Bitmap-Quelle
 
     
 
-    Um die [**IWICBitmap**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap)zu entsperren, nennen Sie [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für alle [**iwicbitmaplock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock) -Objekte, die der **IWICBitmap** zugeordnet sind.
+    Um die [**IWICBitmap**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap)zu entsperren, rufen [Sie IUnknown::Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für alle [**IWICBitmapLock-Objekte**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock) auf, die **IWICBitmap** zugeordnet sind.
 
-7.  Bereinigen Sie erstellte Objekte.
+7.  Bereinigen sie erstellte Objekte.
 
     ```C++
     SafeRelease(&pIBitmap);
@@ -142,7 +142,7 @@ So ändern Sie die Pixel einer Bitmap-Quelle
 [Programmierhandbuch](-wic-programming-guide.md)
 
 
-[Verweis](-wic-codec-reference.md)
+[Referenz](-wic-codec-reference.md)
 
 
 [Beispiele](-wic-samples.md)

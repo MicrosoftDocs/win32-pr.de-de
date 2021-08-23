@@ -1,22 +1,22 @@
 ---
-title: Text (Entwurfs Grundlagen)
-description: Text schließt jeden Text ein, den Benutzer in Ihrer APP sehen können. Lesen Sie diese Richtlinien zur Verwendung von Benutzeroberflächen Text,-Stil und-Ton für Ihre apps.
+title: Text (Grundlagen des Entwurfs)
+description: Text enthält alle Texte, die Benutzern in Ihrer App angezeigt werden können. Lesen Sie diese Richtlinien zur Verwendung von Text, Stil und Ton der Benutzeroberfläche für Ihre Apps.
 ms.assetid: C0C72078-E951-4DC1-BA55-62AF13E1BA37
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 52738845b93edee9af99f9ea9c110b1542cef42f
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: bd37be6cff5a9e95f6bbdc254f9a0df67a5ffbd298135b1d9ab4d238c3796329
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106371808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119029598"
 ---
-# <a name="text-design-basics"></a>Text (Entwurfs Grundlagen)
+# <a name="text-design-basics"></a>Text (Grundlagen des Entwurfs)
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
 
-Text schließt jeden Text ein, den Benutzer in Ihrer APP sehen können. Lesen Sie diese Richtlinien zur Verwendung von Benutzeroberflächen Text,-Stil und-Ton für Ihre apps.
+Text enthält alle Texte, die Benutzern in Ihrer App angezeigt werden können. Lesen Sie diese Richtlinien zur Verwendung von Text, Stil und Ton der Benutzeroberfläche für Ihre Apps.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -24,14 +24,14 @@ Text schließt jeden Text ein, den Benutzer in Ihrer APP sehen können. Lesen Si
 
 | Thema                                            | BESCHREIBUNG                                                                                                                                                                                                                                                                       |
 |--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Text der Benutzeroberfläche](text-ui.md)<br/>    | Der Benutzeroberflächen Text wird auf UI-Oberflächen angezeigt.<br/>                                                                                                                                                                                                                            |
-| [Stil und Ton](text-style-tone.md)<br/> | Der Ton beim Schreiben ist die Haltung, die der Writer dem Reader überträgt. Es ist nicht unbedingt das, was Sie sagen, sondern wie Sie es sagen. Der Ton dient zum Erstellen einer bestimmten Antwort oder Emotionen im Reader. Es wird eine Persönlichkeit erstellt, die Benutzer einbinden oder repliell kann.<br/> |
+| [Benutzeroberfläche Text](text-ui.md)<br/>    | Benutzeroberflächentext wird auf Benutzeroberflächenoberflächen angezeigt.<br/>                                                                                                                                                                                                                            |
+| [Stil und Ton](text-style-tone.md)<br/> | Ton beim Schreiben ist die Stimmung, die der Schreiber dem Leser vermittelt. Es ist nicht notwendigerweise, was Sie sagen, sondern wie Sie es sagen. Der Ton dient dazu, eine bestimmte Antwort oder Emotion im Reader zu erstellen. es erstellt eine Persönlichkeit, die benutzer entweder binden oder abdringen kann.<br/> |
 
 
 
  
 
-Sie können auch bestimmte Text Richtlinien in den Abschnitten Text oder Bezeichnungen für Steuer [Elemente](controls.md) und [Fenster](windows.md)suchen.
+Sie finden bestimmte Textrichtlinien auch in den Abschnitten Text oder Bezeichnungen für [Steuerelemente](controls.md) [und Windows.](windows.md)
 
  
 

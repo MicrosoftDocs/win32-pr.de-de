@@ -1,31 +1,31 @@
 ---
-title: Lesen der Animations Variablen Werte
-description: Jedes Mal, wenn die Anwendung zeichnet, sollte Sie die aktuellen Werte der Animations Variablen lesen, die die zu animierenden visuellen Merkmale darstellen.
+title: Lesen der Werte der Animationsvariablen
+description: Jedes Mal, wenn Ihre Anwendung zeichnet, sollte sie die aktuellen Werte der Animationsvariablen lesen, die die visuellen Merkmale darstellen, die animiert werden sollen.
 ms.assetid: 7abf084a-31f5-4e32-bfd1-e88fbc2bf63d
 keywords:
-- Animations Variablen Windows-Animation, lesen
+- Animationsvariablen Windows Animation , Lesen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 16187547bb3efd99a2f45a8fcc0668a6b6603efe
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fb2cc164091be9ecca292e26ab1247ba18c61d89f11dad8fc2530a3e45ca7629
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337854"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119058167"
 ---
-# <a name="read-the-animation-variable-values"></a>Lesen der Animations Variablen Werte
+# <a name="read-the-animation-variable-values"></a>Lesen der Werte der Animationsvariablen
 
-Jedes Mal, wenn die Anwendung zeichnet, sollte Sie die aktuellen Werte der Animations Variablen lesen, die die zu animierenden visuellen Merkmale darstellen.
+Jedes Mal, wenn Ihre Anwendung zeichnet, sollte sie die aktuellen Werte der Animationsvariablen lesen, die die visuellen Merkmale darstellen, die animiert werden sollen.
 
 ## <a name="overview"></a>Übersicht
 
-Beim Zeichnen eines Frames kann eine Anwendung die [**iuianimationvariable:: GetValue**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-getvalue) -Methode oder die [**iuianimationvariable:: getIntegerValue**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-getintegervalue) -Methode verwenden, um die Werte aller Animations Variablen anzufordern, die sich auf visuelle Elemente innerhalb des Frames auswirken. Es ist möglich, eine Animations Variable auf einen Wertebereich ([**setlowerbound**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-setlowerbound) und [**setupperbound**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-setupperbound)) zu setzen und ihren Wert mit einem angegebenen Rundungs Schema ([**setroundingmode**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-setroundingmode)) auf eine ganze Zahl zu setzen.
+Beim Zeichnen eines Frames kann eine Anwendung die [**IUIAnimationVariable::GetValue-**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-getvalue) oder [**IUIAnimationVariable::GetIntegerValue-Methode**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-getintegervalue) verwenden, um die Werte aller Animationsvariablen an fordern, die sich auf visuelle Elemente innerhalb des Frames auswirken. Es ist möglich, eine Animationsvariable in einen Wertebereich [**(SetLowerBound**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-setlowerbound) und [**SetUpperBound)**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-setupperbound)zu beschneiden und den Wert mithilfe eines angegebenen Rundungsschemas [**(SetRoundingMode)**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-setroundingmode)auf eine ganze Zahl zu runden.
 
-Anstatt die Werte aller Variablen für jeden Frame zu lesen, kann eine Anwendung den [**iuianimationvariable:: setvariablechangehandler**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-setvariablechangehandler) oder [**iuianimationvariable:: setvariableintegerchangehandler**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-setvariableintegerchangehandler) -Methode zum Registrieren mindestens eines Variablen Änderungs Handler für den Empfang von Benachrichtigungen, wenn eine Änderung am Wert der Variablen ([**iuianimationvariablechangehandler:: OnValueChanged**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariablechangehandler-onvaluechanged)) oder auf einem gerundeten Wert ([**iuianimationvariableintegerchangehandler:: onintegervaluechanged**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariableintegerchangehandler-onintegervaluechanged)) vorliegt. Um die an Variablen Änderungs Handler übergebenen Variablen zu identifizieren, kann eine Anwendung mithilfe der [**iuianimationvariable:: settag**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-settag) -Methode Tags auf Variablen anwenden. Dabei handelt es sich um Objekt (IUnknown \* ), ganzzahlige Paare, die von der Anwendung interpretiert werden.
+Anstatt die Werte aller Variablen für jeden Frame zu lesen, Eine Anwendung kann die [**IUIAnimationVariable::SetVariableChangeHandler-**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-setvariablechangehandler) oder [**IUIAnimationVariable::SetVariableIntegerChangeHandler-Methode**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-setvariableintegerchangehandler) verwenden, um einen oder mehrere Variablenänderungshandler zum Empfangen von Benachrichtigungen nur dann zu registrieren, wenn sich der Wert der Variablen ([**IUIAnimationVariableChangeHandler::OnValueChanged**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariablechangehandler-onvaluechanged)) oder ein gerundeter Wert ([**IUIAnimationVariableIntegerChangeHandler::OnIntegerValueChanged**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariableintegerchangehandler-onintegervaluechanged)) ändert. Um die Variablen zu identifizieren, die an Variablenänderungshandler übergeben werden, kann eine Anwendung Tags mithilfe der [**IUIAnimationVariable::SetTag-Methode**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-settag) auf Variablen anwenden. Dies sind Objektpaare (IUnknown), ganzzahlige \* Paare, die von der Anwendung interpretiert werden.
 
 ## <a name="example-code"></a>Beispielcode
 
-Der folgende Beispielcode stammt aus "Miniaturansicht. cpp" im Beispiel [Raster Layout](/windows/desktop/UIAnimation/grid-layout-sample)der Windows-Animation. Weitere Informationen finden Sie unter der CMainWindow:: Rendering-Methode. Er verwendet die [**GetValue**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-getvalue) -Methode, um die Werte als Gleit Komma Werte zu lesen.
+Der folgende Beispielcode ist aus Thumbnail.cpp im Beispiel Windows Animation [Grid Layout entnommen.](/windows/desktop/UIAnimation/grid-layout-sample) siehe CMainWindow::Render-Methode. Sie verwendet die [**GetValue-Methode,**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-getvalue) um die Werte als Gleitkommawerte zu lesen.
 
 
 ```C++
@@ -49,7 +49,7 @@ if (SUCCEEDED(hr))
 
 
 
-Der folgende Beispielcode stammt aus der Datei "MainWindow. cpp" im Windows Animation Sample [Timer-gesteuerte Animation](timer-driven-animation-sample.md). Weitere Informationen finden Sie unter CMainWindow::D rawbackground-Methode. Er verwendet die [**getIntegerValue**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-getintegervalue) -Methode, um die Werte als ganzzahlige Werte zu lesen.
+Der folgende Beispielcode wird aus MainWindow.cpp im Beispiel Windows [Animation Timer-Driven Animation ( Timergesteuerte Animation) entnommen.](timer-driven-animation-sample.md) siehe CMainWindow::D rawBackground-Methode. Sie verwendet die [**GetIntegerValue-Methode,**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-getintegervalue) um die Werte als ganzzahlige Werte zu lesen.
 
 
 ```C++
@@ -93,25 +93,25 @@ if (SUCCEEDED(hr))
 
 ## <a name="previous-step"></a>Vorheriger Schritt
 
-Bevor Sie mit diesem Schritt beginnen, sollten Sie diesen Schritt abgeschlossen haben: [Aktualisieren Sie den Animations-Manager, und zeichnen Sie Frames](introducing-windows-animation-manager.md).
+Bevor Sie mit diesem Schritt beginnen, sollten Sie diesen Schritt abgeschlossen haben: Aktualisieren des [Animations-Managers und Zeichnen von Frames](introducing-windows-animation-manager.md).
 
 ## <a name="next-step"></a>Nächster Schritt
 
-Nachdem Sie diesen Schritt abgeschlossen haben, ist der nächste Schritt: [Erstellen eines Storyboards und hinzufügen](updating---timer-driven-animation.md)von Übergängen.
+Nach Abschluss dieses Schritts ist der nächste Schritt: Erstellen eines [Storyboards und Hinzufügen von Übergängen](updating---timer-driven-animation.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iuianimationvariable:: getIntegerValue**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-getintegervalue)
+[**IUIAnimationVariable::GetIntegerValue**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-getintegervalue)
 </dt> <dt>
 
-[**Iuianimationvariable:: GetValue**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-getvalue)
+[**IUIAnimationVariable::GetValue**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationvariable-getvalue)
 </dt> <dt>
 
-[Übersicht über Windows-Animationen](scenic-animation-api-overview.md)
+[Windows Übersicht über Animationen](scenic-animation-api-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

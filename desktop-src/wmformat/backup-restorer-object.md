@@ -1,53 +1,53 @@
 ---
-title: Backup Restorer-Objekt
-description: Backup Restorer-Objekt
+title: Sicherungswiederherstellungsobjekt
+description: Sicherungswiederherstellungsobjekt
 ms.assetid: 83ce28c0-fd17-46ff-94c0-d28124a0e56a
 keywords:
-- Windows Media-Format-SDK, Backup Restorer Objects
-- Advanced Systems Format (ASF), Backup Restorer Objects
-- ASF (Advanced Systems Format), Backup Restorer Objects
-- Objekte, Backup Restorer Objects
-- Backup Restorer
+- Windows Medienformat-SDK, Sicherungswiederherstellungsobjekte
+- Advanced Systems Format (ASF), Sicherungswiederherstellungsobjekte
+- ASF (Advanced Systems Format), Sicherungswiederherstellungsobjekte
+- Objekte,Sicherungswiederherstellungsobjekte
+- Sicherungswiederherstellung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d08e8bec9bb7bbc2a45fbf632e69d230a2536633
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 8a7bf14f8afda284d8d0ae3d4f36d37fff0baa63f4f42802a98830038ec2d850
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106338043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119028128"
 ---
-# <a name="backup-restorer-object"></a>Backup Restorer-Objekt
+# <a name="backup-restorer-object"></a>Sicherungswiederherstellungsobjekt
 
-Der Backup Restorer bietet Schnittstellen zum Sichern von Lizenzen, in der Regel auf Wechselmedien und zum anschließenden Wiederherstellen dieser Lizenzen auf einem neuen Computer.
+Die Sicherungswiederherstellung stellt Schnittstellen bereit, um das Sichern von Lizenzen (in der Regel auf Wechselmedien) und das anschließende Wiederherstellen dieser Lizenzen auf einem neuen Computer zu verarbeiten.
 
-Das Backup Restorer-Objekt wird von der [**wmkreatebackuprestorer**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatebackuprestorer) -Funktion erstellt, mit der ein Zeiger auf eine [**iwmlicensebackup**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicensebackup) -Schnittstelle festgelegt wird. Die anderen Schnittstellen des Backup Restorer-Objekts können durch Aufrufen der **QueryInterface** -Methode abgerufen werden.
+Das Sicherungswiederherstellungsobjekt wird von der [**WMCreateBackupRestorer-Funktion**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatebackuprestorer) erstellt, die einen Zeiger auf eine [**IWMLicenseBackup-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicensebackup) legt. Die anderen Schnittstellen des Sicherungswiederherstellungsobjekts können durch Aufrufen der **QueryInterface-Methode ermittelt** werden.
 
-Die folgenden Schnittstellen werden vom Backup Restorer-Objekt unterstützt.
+Die folgenden Schnittstellen werden vom Sicherungswiederherstellungsobjekt unterstützt.
 
 
 
 | Schnittstelle                                              | BESCHREIBUNG                                                                                                                                               |
 |--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Iwmbackuprestore-Eigenschaften**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmbackuprestoreprops) | Legt die Eigenschaften fest, die von den Schnittstellen [**iwmlicensebackup**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicensebackup) und [**iwmlicenserestore**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicenserestore) benötigt werden, oder ruft Sie ab. |
-| [**Iwmlicenlbackup**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicensebackup)           | Sichert Lizenzen, in der Regel, damit Sie auf einem anderen Computer wieder hergestellt werden können.                                                                          |
-| [**Iwmlicenserestore**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicenserestore)         | Stellt Lizenzen wieder her.                                                                                                                                        |
+| [**IWMBackupRestoreProps**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmbackuprestoreprops) | Legt eigenschaften fest, die für die [**SCHNITTSTELLEN IWMLicenseBackup**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicensebackup) und [**IWMLicenseRestore erforderlich**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicenserestore) sind, und ruft sie ab. |
+| [**IWMLicenseBackup**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicensebackup)           | Sichern von Lizenzen, in der Regel so, dass sie auf einem anderen Computer wiederhergestellt werden können.                                                                          |
+| [**IWMLicenseRestore**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicenserestore)         | Stellt Lizenzen wieder zur Verfügung.                                                                                                                                        |
 
 
 
- 
+ 
 
-Die folgende Rückruf Schnittstelle muss von der Anwendung implementiert werden, damit das Backup Restorer-Objekt verwendet werden soll.
+Die folgende Rückrufschnittstelle muss von der Anwendung implementiert werden, um das Sicherungswiederherstellungsobjekt verwenden zu können.
 
 
 
 | Schnittstelle                                      | BESCHREIBUNG                                                                |
 |------------------------------------------------|----------------------------------------------------------------------------|
-| [**Iwmstatus Callback**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstatuscallback) | Empfängt Statusmeldungen von Prozessen, die in einem separaten Thread ausgeführt werden. |
+| [**IWMStatusCallback**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstatuscallback) | Empfängt Statusmeldungen von Prozessen, die in einem separaten Thread ausgeführt werden. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -59,9 +59,9 @@ Die folgende Rückruf Schnittstelle muss von der Anwendung implementiert werden,
 [**Objekte**](objects.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

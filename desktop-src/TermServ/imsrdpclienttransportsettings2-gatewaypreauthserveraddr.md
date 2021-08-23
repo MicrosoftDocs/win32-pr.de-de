@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientTransportSettings2 gatewaypreauthserveraddr (Eigenschaft)
-description: Gibt die Webadresse des Servers für die Vorauthentifizierung an, der für das einmalige Kennwort (RD-Gateway) von Remotedesktop Gateway verwendet wird, oder ruft Sie ab.
+title: IMsRdpClientTransportSettings2 GatewayPreAuthServerAddr (Eigenschaft)
+description: Gibt die Webadresse des Vorauthentifizierungsservers an oder ruft sie ab, die für das Einmalkennwortfeature des Remotedesktop-Gateways (RD-Gateway) verwendet wird.
 ms.assetid: 14edad82-ab19-46fe-b878-d34298763c56
 ms.tgt_platform: multiple
 keywords:
-- Gatewaypreauthserveraddr-Eigenschaft Remotedesktopdienste
-- Gatewaypreauthserveraddr-Eigenschaft Remotedesktopdienste, IMsRdpClientTransportSettings2-Schnittstelle
-- IMsRdpClientTransportSettings2 Interface Remotedesktopdienste, gatewaypreauthserveraddr (Eigenschaft)
+- GatewayPreAuthServerAddr-Eigenschaft Remotedesktopdienste
+- GatewayPreAuthServerAddr-Eigenschaft Remotedesktopdienste , IMsRdpClientTransportSettings2-Schnittstelle
+- IMsRdpClientTransportSettings2-Schnittstelle Remotedesktopdienste , GatewayPreAuthServerAddr (Eigenschaft)
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 95d6fe2f397b0d445a6300d68a89b210debd449a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 89fa3df8431f829c0dd85cd3a448965e98b4e6d5e6285ae75d18c76257ddbb00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000910"
 ---
-# <a name="imsrdpclienttransportsettings2gatewaypreauthserveraddr-property"></a>IMsRdpClientTransportSettings2:: gatewaypreauthserveraddr (Eigenschaft)
+# <a name="imsrdpclienttransportsettings2gatewaypreauthserveraddr-property"></a>IMsRdpClientTransportSettings2::GatewayPreAuthServerAddr (Eigenschaft)
 
-Gibt die Webadresse des Servers für die Vorauthentifizierung an, der für das einmalige Kennwort (RD-Gateway) von Remotedesktop Gateway verwendet wird, oder ruft Sie ab.
+Gibt die Webadresse des Vorauthentifizierungsservers an oder ruft sie ab, die für das Einmalkennwortfeature des Remotedesktop-Gateways (RD-Gateway) verwendet wird.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,11 +49,11 @@ HRESULT get_GatewayPreAuthServerAddr(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Webadresse des Servers, der vor der Authentifizierung verwendet wird. beispielsweise die Webadresse des Microsoft Internet Security and Acceleration (ISA)-Servers. Geben Sie die Webadresse im Format "https://*Hostname*" an. *Domain Name*. com/*Websitename*"oder" https://*Hostname*. *Domain Name*. com/*Websitename*".
+Die Webadresse des Vorauthentifizierungsservers; Beispiel: die Webadresse des IsA-Servers (Microsoft Internet Security and Acceleration). Geben Sie die Webadresse im Format https://*Hostname an.* *DomainName*.com/*WebsiteName*" oder "https://*HostName*. *DomainName*.com/*WebsiteName*".
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,7 +65,7 @@ Gibt bei Erfolg **S \_ OK** zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                    |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>            |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>            |
-| IID<br/>                      | IID \_ IMsRdpClientTransportSettings2 ist als 67341688-D606-4c73-A5D2-2e0489009319 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientTransportSettings2 ist als 67341688-D606-4c73-A5D2-2E0489009319 definiert.<br/> |
 
 
 
@@ -73,7 +73,7 @@ Gibt bei Erfolg **S \_ OK** zurück.
 
 <dl> <dt>
 
-[**Imsrdpclienttransportsettings**](imsrdpclienttransportsettings.md)
+[**IMsRdpClientTransportSettings**](imsrdpclienttransportsettings.md)
 </dt> <dt>
 
 [**IMsRdpClientTransportSettings2**](imsrdpclienttransportsettings2.md)

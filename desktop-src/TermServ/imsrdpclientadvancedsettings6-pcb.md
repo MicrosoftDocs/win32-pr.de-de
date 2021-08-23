@@ -1,16 +1,16 @@
 ---
-title: IMsRdpClientAdvancedSettings6 (Eigenschaft)
-description: Gibt die Einstellung für die Vorverbindungs-BLOB (Festplatte) an, die vor der Verbindungs Herstellung mit dem Server verwendet werden soll. | IMsRdpClientAdvancedSettings6 (Eigenschaft)
+title: IMsRdpClientAdvancedSettings6 –Eigenschaft
+description: Gibt die Einstellung preconnection BLOB (BOARD) an, die vor dem Herstellen einer Verbindung für die Übertragung an den Server verwendet werden soll. | IMsRdpClientAdvancedSettings6 –Eigenschaft
 ms.assetid: 3f3e6f09-2c26-44ab-9bcc-2636b71b57e2
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste der Platine-Eigenschaft
-- Eigenschaften Remotedesktopdienste der Platine, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste, Eigenschaft ' PCB '
-- Eigenschaften Remotedesktopdienste der Platine, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste, Eigenschaft ' PCB '
-- Eigenschaften Remotedesktopdienste der Platine, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste, Eigenschaft ' PCB '
+- EIGENSCHAFTEN-Remotedesktopdienste
+- EIGENSCHAFTEN-Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , EIGENSCHAFT
+- DIE-Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , EIGENSCHAFT
+- DIE-Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , EIGENSCHAFT
 topic_type:
 - apiref
 api_name:
@@ -29,16 +29,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7da9cfa12ec944ea8f745ec3399c2a53f6b7c6b5
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: a68b34a04f99d830b525cadf6e35bc4816d7a52948916dc9a3d54664752dac38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106371846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001358"
 ---
 # <a name="imsrdpclientadvancedsettings6pcb-property"></a>IMsRdpClientAdvancedSettings6::P CB-Eigenschaft
 
-Gibt die Einstellung für die Vorverbindungs-BLOB (Festplatte) an, die vor der Verbindungs Herstellung mit dem Server verwendet werden soll.
+Gibt die Einstellung preconnection BLOB (BOARD) an, die vor dem Herstellen einer Verbindung für die Übertragung an den Server verwendet werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -59,13 +59,13 @@ HRESULT get_PCB(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt die BLOB-Einstellung an, die vor der Verbindung verwendet werden soll.
+Gibt die BLOB-Einstellung an, die vor dem Herstellen der Verbindung verwendet werden soll.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wird nur von Remotedesktopverbindung 6,1-und 7,0-Clients unterstützt.
+Diese Eigenschaft wird nur von Remotedesktopverbindung 6.1- und 7.0-Clients unterstützt.
 
-Der Server verwendet die BLOB-Einstellung, um den Ziel Prozess für die Verbindung zu identifizieren.
+Der Server verwendet die BLOB-Einstellung, um den Zielprozess für die Verbindung zu identifizieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,7 +81,7 @@ Der Server verwendet die BLOB-Einstellung, um den Ziel Prozess für die Verbindu
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

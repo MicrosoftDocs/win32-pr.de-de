@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Api.JetComputeStats-Methode'
+description: Weitere Informationen finden Sie unter Api.JetComputeStats-Methode.
 title: Api.JetComputeStats-Methode
 TOCTitle: 'JetComputeStats method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetComputeStats(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID)
@@ -33,7 +33,7 @@ ms.locfileid: "118983450"
 ---
 # <a name="apijetcomputestats-method"></a>Api.JetComputeStats-Methode
 
-Durchfingt jeden Index einer Tabelle, um die Anzahl der Einträge in einem Index und die Anzahl der unterschiedlichen Schlüssel in einem Index genau zu berechnen. Diese Informationen werden zusammen mit der Anzahl der Datenbankseiten, die einem Index zugeordnet sind, und der aktuellen Zeit der Berechnung in Indexmetadaten in der Datenbank gespeichert. Diese Daten können anschließend mit Informationsvorgängen abgerufen werden.
+Führt jeden Index einer Tabelle durch, um die Anzahl der Einträge in einem Index und die Anzahl der unterschiedlichen Schlüssel in einem Index genau zu berechnen. Diese Informationen werden zusammen mit der Anzahl der Datenbankseiten, die einem Index zugeordnet sind, und der aktuellen Berechnungszeit in Indexmetadaten in der Datenbank gespeichert. Diese Daten können anschließend mit Informationsvorgängen abgerufen werden.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -70,9 +70,9 @@ public static void JetComputeStats(
   - tableid  
     Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Die Tabelle, für die die Statistiken berechnet werden.
+    Die Tabelle, in der die Statistiken berechnet werden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

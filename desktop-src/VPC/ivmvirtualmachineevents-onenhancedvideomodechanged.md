@@ -4,7 +4,7 @@ description: Empfängt eine Benachrichtigung, dass sich die Unterstützung eines
 ms.assetid: be22a859-4687-4647-9f53-f79ae8ad52a5
 keywords:
 - OnEnhancedVideoModeChanged-Methode Virtueller PC
-- OnEnhancedVideoModeChanged-Methode Virtual PC , IVMVirtualMachineEvents-Schnittstelle
+- OnEnhancedVideoModeChanged-Methode Virtual PC, IVMVirtualMachineEvents-Schnittstelle
 - IVMVirtualMachineEvents-Schnittstelle Virtueller PC, OnEnhancedVideoModeChanged-Methode
 topic_type:
 - apiref
@@ -25,7 +25,7 @@ ms.locfileid: "119056618"
 ---
 # <a name="ivmvirtualmachineeventsonenhancedvideomodechanged-method"></a>IVMVirtualMachineEvents::OnEnhancedVideoModeChanged-Methode
 
-\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Empfängt eine Benachrichtigung, dass sich die Unterstützung eines virtuellen Computers für den erweiterten Videomodus geändert hat.
 
@@ -53,7 +53,7 @@ Gibt an, ob der erweiterte Videomodus verfügbar ist.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,16 +61,16 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
 | Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 | IID<br/>                      | DIID \_ IVMVirtualMachineEvents ist als 9d84f560-bb67-4961-bd12-a4da780c67e4 definiert.<br/>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

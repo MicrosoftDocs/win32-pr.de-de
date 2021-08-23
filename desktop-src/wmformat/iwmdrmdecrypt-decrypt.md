@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmentschlüsseln-Entschlüsselungsmethode (wmdrmsdk. h)
-description: Die Entschlüsselungsmethode entschlüsselt einen Datenpuffer an Ort und Stelle.
+title: IWMDRMDecrypt Decrypt-Methode (Wmdrmsdk.h)
+description: Die Decrypt-Methode entschlüsselt einen Datenpuffer an Ort und Stelle.
 ms.assetid: ca0a5b2f-d25f-423e-8956-fca264399083
 keywords:
-- Entschlüsselungsmethode Windows Media-Format
-- Entschlüsselungsmethode Windows Media-Format, iwmdrmentschlüsselungsschnittstelle
-- Iwmdrmentschlüsselungsschnittstelle Windows Media-Format, Entschlüsselungsmethode
+- Decrypt method windows Media Format
+- Decrypt method windows Media Format , IWMDRMDecrypt interface
+- IWMDRMDecrypt interface windows Media Format , Decrypt method
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6eb3c1437bc4b4d2f442c61e54f238f176adf66b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7be82ec976da39103698b93a09b3d5235c8c8ee712783ca8284dc7b18c6a8a27
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027747"
 ---
-# <a name="iwmdrmdecryptdecrypt-method"></a>Iwmdrmentschlüsselungsmethode::D ecrypt-Methode
+# <a name="iwmdrmdecryptdecrypt-method"></a>IWMDRMDecrypt::D ecrypt-Methode
 
-Die **Entschlüsselungsmethode** entschlüsselt einen Datenpuffer an Ort und Stelle.
+Die **Decrypt-Methode** entschlüsselt einen Datenpuffer an Ort und Stelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,27 +47,27 @@ HRESULT Decrypt(
 *pbData* \[ in, out\]
 </dt> <dd>
 
-Die zu entschlüsselnden Daten. Wenn die Methode erfolgreich ausgeführt wird, werden diese Daten bei Rückgabe entschlüsselt.
+Zu entschlüsselnde Daten. Wenn die Methode erfolgreich ist, werden diese Daten bei der Rückgabe entschlüsselt.
 
 </dd> <dt>
 
-*cbData* \[ in\]
+*cbData* \[ In\]
 </dt> <dd>
 
 Größe der Daten in Bytes.
 
 </dd> <dt>
 
-*pwmcryptodata* \[ in\]
+*pWMCryptoData* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine [**wmdrmcryptodata**](wmdrmcryptodata.md) -Struktur mit zusätzlichen Parametern. Kann **null** sein, wenn der Inhalt mit den Standardparametern verschlüsselt wurde.
+Zeiger auf eine [**WMDRMCryptoData-Struktur**](wmdrmcryptodata.md) mit zusätzlichen Parametern. Kann NULL **sein,** wenn der Inhalt mit den Standardparametern verschlüsselt wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -89,7 +89,7 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
@@ -97,10 +97,10 @@ Keine.
 
 <dl> <dt>
 
-[**Iwmdrmentschlüsseln-Schnittstelle**](iwmdrmdecrypt.md)
+[**IWMDRMDecrypt-Schnittstelle**](iwmdrmdecrypt.md)
 </dt> <dt>
 
-[**Wmdrmcryptodata**](wmdrmcryptodata.md)
+[**WMDRMCryptoData**](wmdrmcryptodata.md)
 </dt> </dl>
 
  

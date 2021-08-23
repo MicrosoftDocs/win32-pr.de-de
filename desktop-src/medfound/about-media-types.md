@@ -4,12 +4,12 @@ ms.assetid: 169cdb00-0c1a-4530-90b7-bc89c71d1d04
 title: Informationen zu Medientypen (Microsoft Media Foundation)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 263c2b473e378e6ae5dc75453b20d02dce61818f
-ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
+ms.openlocfilehash: 2d3abce5d86b931a472dc07e1b6daf244f1456cfd3220f85c2b0e311f243a122
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112010903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975079"
 ---
 # <a name="about-media-types-microsoft-media-foundation"></a>Informationen zu Medientypen (Microsoft Media Foundation)
 
@@ -23,7 +23,7 @@ Eine Liste der Medientypattribute finden Sie unter [Medientypattribute.](media-t
 
 Zwei wichtige Informationen für jeden Medientyp sind der Haupttyp und der Untertyp.
 
--   Der *Haupttyp* ist eine GUID, die die Gesamtkategorie der Daten in einem Medienstream definiert. Zu den Haupttypen gehören Video und Audio. Um den Haupttyp anzugeben, legen Sie das [MF \_ MT MAJOR \_ \_ TYPE-Attribut](mf-mt-major-type-attribute.md) fest. Die [**METHODE VOMMEDIATYPE::GetMajorType**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediatype-getmajortype) gibt den Wert dieses Attributs zurück.
+-   Der *Haupttyp* ist eine GUID, die die Gesamtkategorie der Daten in einem Medienstream definiert. Zu den Haupttypen gehören Video und Audio. Um den Haupttyp anzugeben, legen Sie das [MF \_ MT MAJOR \_ \_ TYPE-Attribut](mf-mt-major-type-attribute.md) fest. Die [**ATTRIBUTESMediaType::GetMajorType-Methode**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediatype-getmajortype) gibt den Wert dieses Attributs zurück.
 -   Der *Untertyp* definiert das Format weiter. Beispielsweise gibt es innerhalb des Haupttyps des Videos Untertypen für RGB-24, RGB-32, YUY2 usw. In audio gibt es PCM-Audio, IEEE-Gleitkommaaudio und andere. Der Untertyp stellt mehr Informationen als der Haupttyp bereit, definiert aber nicht alles über das Format. Videountertypen definieren beispielsweise nicht die Bildgröße oder die Bildfrequenz. Um den Untertyp anzugeben, legen Sie das [MF \_ MT \_ SUBTYPE-Attribut](mf-mt-subtype-attribute.md) fest.
 
 Alle Medientypen sollten eine Haupttyp-GUID und eine Untertyp-GUID aufweisen. Eine Liste der Haupttyp- und Untertyp-GUIDs finden Sie unter [Medientyp-GUIDs.](media-type-guids.md)

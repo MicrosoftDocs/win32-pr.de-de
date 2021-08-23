@@ -1,7 +1,7 @@
 ---
-description: Ein float-Wert, der den aktuellen parametrischen Anfangspunkt für den Strahl darstellt.
+description: Ein Gleitkommawert, der den aktuellen parametrischen Startpunkt für den Strahl darstellt.
 ms.assetid: ''
-title: Raytmin
+title: RayTMin
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
@@ -12,16 +12,16 @@ api_name:
 - RayTMin
 api_type:
 - NA
-ms.openlocfilehash: 00db0eb46e8c011e5b31f773679e19ca6dd4a7a0
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 5429574480cfda071dfec93cea771211bab578bdaecb4513c76f43c4d820b22b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346450"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118989480"
 ---
-# <a name="raytmin"></a>Raytmin
+# <a name="raytmin"></a>RayTMin
 
-Ein float-Wert, der den aktuellen parametrischen Anfangspunkt für den Strahl darstellt. 
+Ein Gleitkommawert, der den aktuellen parametrischen Startpunkt für den Strahl darstellt. 
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,16 +30,16 @@ float RayTMin();
 
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Raytmin** definiert den Anfangspunkt des Strahls gemäß der folgenden Formel: Origin + (Direction * raytmin).  Der *Ursprung* und die *Richtung* können sich entweder in der Welt oder im Objektbereich befinden, was zu einem Ausgangspunkt der Welt oder einem Objektbereich führt.
+**RayTMin** definiert den Startpunkt des Strahls gemäß der folgenden Formel: Origin + (Direction * RayTMin).  *Ursprung* und *Richtung* können sich entweder im Welt- oder Objektbereich bewegen, was entweder zu einem Ausgangspunkt für eine Welt oder einen Objektbereich führt.
 
-**Raytmin** wird im Aufrufe von [**traceray**](traceray-function.md)angegeben und ist für die Dauer des Aufrufes konstant.
-
-
+**RayTMin** wird im Aufruf von [**TraceRay**](traceray-function.md)angegeben und ist für die Dauer dieses Aufrufs konstant.
 
 
-Diese Funktion kann von den folgenden Raytracing-shadertypen aufgerufen werden:
+
+
+Diese Funktion kann von den folgenden Raytracing-Shadertypen aufgerufen werden:
 
 * [**Any Hit-Shader**](any-hit-shader.md)
 * [**Closest Hit-Shader**](closest-hit-shader.md)
@@ -50,7 +50,7 @@ Diese Funktion kann von den folgenden Raytracing-shadertypen aufgerufen werden:
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

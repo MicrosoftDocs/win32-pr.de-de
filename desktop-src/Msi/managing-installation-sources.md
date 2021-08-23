@@ -1,84 +1,84 @@
 ---
-description: Benutzer und Anwendungen mit Administratorrechten können Netzwerk-, URL-und Medien Quell Listen Informationen für Windows Installer Anwendungen und Patches auf dem System abrufen und ändern.
+description: Benutzer und Anwendungen mit Administratorrechten können Netzwerk-, URL- und Medienquelllisteninformationen für Windows Installer-Anwendungen und Patches auf dem System abrufen und ändern.
 ms.assetid: e8c66bad-f594-4926-b3b4-c8b245dcfa83
-title: Verwalten von Installations Quellen
+title: Verwalten von Installationsquellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d7fc45253af20ae5f9792ee3a5ec7dd318c80295
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7e7555bc9595ba10d9ce569c15c2a8138a05348e503d86a025f0cfe1783843fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352325"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013068"
 ---
-# <a name="managing-installation-sources"></a>Verwalten von Installations Quellen
+# <a name="managing-installation-sources"></a>Verwalten von Installationsquellen
 
-Benutzer und Anwendungen mit Administratorrechten können Netzwerk-, URL-und Medien Quell Listen Informationen für Windows Installer Anwendungen und Patches auf dem System abrufen und ändern.
+Benutzer und Anwendungen mit Administratorrechten können Netzwerk-, URL- und Medienquelllisteninformationen für Windows Installer-Anwendungen und Patches auf dem System abrufen und ändern.
 
-**Windows Installer 2,0:** Nicht unterstützt. Administratoren können Einträge in der Quell Liste nicht lesen, neu anordnen oder ersetzen und keine Quell Listen Eigenschaften ändern oder abrufen. Es ist möglich, Netzwerk Quellen, aber keine URL-oder Medienquellen zu verwalten. Administratoren können nur Quell Listen für Computer spezifische Anwendungen oder Anwendungen verwalten, die für den aktuellen Benutzer pro Benutzer installiert sind. Dadurch wird verhindert, dass Administratoren, die frühere Versionen als Windows Installer Version 3,0 verwenden, die Quell Listen Informationen für alle Benutzer im System verwalten.
+**Windows Installer 2.0:** Wird nicht unterstützt. Administratoren können keine Einträge in der Quellliste lesen, neu anordnen oder ersetzen und können keine Quelllisteneigenschaften ändern oder abrufen. Es ist möglich, Netzwerkquellen, aber keine URL- oder Medienquellen zu verwalten. Administratoren können Quelllisten nur für Computeranwendungen oder Anwendungen verwalten, die pro Benutzer für den aktuellen Benutzer installiert sind. Dadurch wird verhindert, dass Administratoren, die frühere Versionen als Windows Installer Version 3.0 verwenden, Quelllisteninformationen für alle Benutzer im System verwalten können.
 
-**Windows Installer 3,0 und höher:** Benutzer und Anwendungen, die über Administratorrechte verfügen, können Quell Listen Informationen für Windows Installer Anwendungen und Patches, die auf dem System installiert sind, für alle Benutzer abrufen und ändern. Die Quell Listen Funktionen können zum Verwalten von Quell Listen und Quell Listen Eigenschaften für Netzwerk-, URL-und Medienquellen verwendet werden. Das Installationsprogramm kann Quell Listen von einem externen Prozess neu anordnen.
+**Windows Installer 3.0 und höher:** Benutzer und Anwendungen mit Administratorrechten können Quelllisteninformationen für Windows Installer-Anwendungen und -Patches, die auf dem System installiert sind, für alle Benutzer abrufen und ändern. Die Quelllistenfunktionen können zum Verwalten von Quelllisten und Quelllisteneigenschaften für Netzwerk-, URL- und Medienquellen verwendet werden. Das Installationsprogramm kann Quelllisten aus einem externen Prozess neu anordnen.
 
-Benutzer und Anwendungen, die über Administratorrechte verfügen, können die folgenden Typen von Quell Listen Informationen lesen und ändern:
+Benutzer und Anwendungen mit Administratorrechten können die folgenden Typen von Quelllisteninformationen lesen und ändern:
 
--   Quell Listen für Anwendungen und Patches, die für alle Benutzer des Systems installiert sind.
--   Quell Listen für patchquellen, die sich von den Anwendungs Quellen unterscheiden.
--   Quell Listen für URL-und Medienquellen, die neben den Netzwerk Quellen vorhanden sind.
--   Quell Listen Eigenschaften wie " [**mediapackagepath**](mediapackagepath.md)", " [**diskprompt**](diskprompt.md)", " **LastUsedSource**", " **lastusedtype**" und " **PackageName**".
+-   Quelllisten für Anwendungen und Patches, die für alle Benutzer auf dem System installiert sind.
+-   Quelllisten für Patchquellen, die abgesehen von den Anwendungsquellen vorhanden sind.
+-   Quelllisten für URL- und Medienquellen, die abgesehen von Netzwerkquellen vorhanden sind.
+-   Quelllisteneigenschaften wie [**MEDIAPACKAGEPATH,**](mediapackagepath.md) [**DiskPrompt,**](diskprompt.md) **LastUsedSource,** **LastUsedType** und **PackageName**.
 
-Die Quell Listen Funktionen können den Bereich der gefundenen Quell Listen einschränken, indem Sie den Installations Kontext und den Benutzer Kontext angeben. Es gibt drei mögliche Installations Kontexte: pro Benutzer (nicht verwaltet), pro Computer und pro Benutzer verwaltet. Der Benutzer Kontext kann ein bestimmter Benutzer oder alle Benutzer des Systems sein.
+Die Quelllistenfunktionen können den Bereich der gefundenen Quelllisten einschränken, indem sie den Installationskontext und den Benutzerkontext angeben. Es gibt drei mögliche Installationskontexte: pro Benutzer (nicht verwaltet), pro Computer und pro Benutzer verwaltet. Der Benutzerkontext kann ein bestimmter Benutzer oder alle Benutzer im System sein.
 
-Nicht-Administratoren können die Quell Liste einer Instanz einer Anwendung oder eines Patches nicht ändern, die unter einem Benutzer bezogenen (verwalteten oder nicht verwalteten) Kontext eines anderen Benutzers vorhanden ist. Nicht-Administratoren können die Quell Listen einer Instanz einer Anwendung oder eines Patches, die in den folgenden Kontexten installiert ist, ändern:
+Nichtadministratoren können die Quellliste einer Instanz einer Anwendung oder eines Patches, die im Kontext eines anderen Benutzers (verwaltet oder nicht verwaltet) vorhanden ist, nicht ändern. Nichtadministratoren können die Quelllisten einer Instanz einer Anwendung oder eines Patches ändern, die in den folgenden Kontexten installiert sind:
 
--   Ihr eigener Kontext pro Benutzer (nicht verwaltet).
--   Der Computer Kontext, aber nur, wenn die Richtlinien " [disablebrowse](disablebrowse.md)", " [AllowLockdownBrowse](allowlockdownbrowse.md)" und " [alwaysinstallerhöhten](alwaysinstallelevated.md) " eine Anwendung oder eine patchquelle durchsuchen können.
--   Ihr eigener, von Benutzern verwalteter Kontext, aber nur, wenn die Richtlinien " [disablebrowse](disablebrowse.md)", " [AllowLockdownBrowse](allowlockdownbrowse.md)" und " [alwaysinstallerhöhten](alwaysinstallelevated.md) " eine Anwendung oder eine patchquelle durchsuchen können.
+-   Ein eigener (nicht verwalteter) Benutzerkontext.
+-   Der Computerkontext, aber nur, wenn die Richtlinien [DisableBrowse,](disablebrowse.md) [AllowLockdownBrowse](allowlockdownbrowse.md)und [AlwaysInstallElevated](alwaysinstallelevated.md) es ihnen ermöglichen, nach einer Anwendung oder Patchquelle zu suchen.
+-   Ein eigener benutzerbasierter verwalteter Kontext, aber nur, wenn die Richtlinien [DisableBrowse,](disablebrowse.md) [AllowLockdownBrowse](allowlockdownbrowse.md)und [AlwaysInstallElevated](alwaysinstallelevated.md) es ihnen ermöglichen, nach einer Anwendung oder Patchquelle zu suchen.
 
-Administratoren können jede Quell Liste ändern, die von einem nicht--Administrator geändert werden kann. Außerdem können Administratoren und Anwendungen, die über Administratorrechte verfügen, die Quell Listen einer Anwendung oder eines Patches ändern, die in den folgenden Kontexten installiert sind:
+Administratoren können jede Quellliste ändern, die ein Nichtadministrator ändern kann. Darüber hinaus können Administratoren und Anwendungen mit Administratorrechten die Quelllisten einer Anwendung oder eines Patches ändern, die in den folgenden Kontexten installiert sind:
 
--   Pro-Computer-Kontext.
--   Ihrer eigenen, pro Benutzer (nicht verwaltet) oder eigenen, pro Benutzer verwalteten Kontext.
+-   Pro Computerkontext.
+-   Ein eigener benutzerbasierter (nicht verwalteter) oder ein eigener benutzerbasierter verwalteter Kontext.
 -   Der benutzerspezifische verwaltete Kontext eines anderen Benutzers.
 
 > [!Note]  
-> Benutzer und Anwendungen, die über Administratorrechte verfügen, können die Quell Liste einer Instanz einer Anwendung oder eines Patches, die im benutzerspezifischen Kontext eines anderen Benutzers installiert ist, nicht ändern.
+> Benutzer und Anwendungen mit Administratorrechten können die Quellliste einer Instanz einer Anwendung oder eines Patches, die bzw. der im Benutzerkontext (nicht verwaltet) eines anderen Benutzers installiert ist, nicht ändern.
 
  
 
-## <a name="managing-network-and-url-sources-for-products-and-patches"></a>Verwalten von Netzwerk-und URL-Quellen für Produkte und Patches
+## <a name="managing-network-and-url-sources-for-products-and-patches"></a>Verwalten von Netzwerk- und URL-Quellen für Produkte und Patches
 
-Verwenden Sie die [**msisourcelistaddsourceex**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddsourceexa) -Funktion, um die Quell Liste der Netzwerk-und URL-Quellen für einen Patch oder eine Anwendung in einem bestimmten Kontext hinzuzufügen oder neu anzuordnen. Verwenden Sie den *dwcontext* -Parameter, um den Installations Kontext anzugeben. Verwenden Sie den *szusersid* -Parameter, um den Benutzer Kontext anzugeben.
+Verwenden Sie die [**MsiSourceListAddSourceEx-Funktion,**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddsourceexa) um die Quellliste der Netzwerk- und URL-Quellen für einen Patch oder eine Anwendung in einem bestimmten Kontext hinzuzufügen oder neu anzuordnen. Verwenden Sie den *dwContext-Parameter,* um den Installationskontext anzugeben. Verwenden Sie den *szUserSid-Parameter,* um den Benutzerkontext anzugeben.
 
-Verwenden Sie die [**msisourcelistaddsourceex**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddsourceexa) -Funktion, um eine Quell Liste für einen Patch zu erstellen, der noch nicht auf eine Anwendung im angegebenen Kontext angewendet wurde. Dies kann hilfreich sein, wenn Sie einen Patch für erweiterte Berechtigungen registrieren. Weitere Informationen zum Registrieren erhöhter Berechtigungen für einen Patch finden Sie unter [Patching Per-User Managed Applications](patching-per-user-managed-applications.md).
+Verwenden Sie die [**MsiSourceListAddSourceEx-Funktion,**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddsourceexa) um eine Quellliste für einen Patch zu erstellen, der noch nicht auf eine Anwendung im angegebenen Kontext angewendet wurde. Dies kann nützlich sein, wenn Sie einen Patch mit erhöhten Rechten registrieren. Weitere Informationen zum Registrieren erhöhter Rechte für einen Patch finden Sie unter [Patchen Per-User Verwalteter Anwendungen.](patching-per-user-managed-applications.md)
 
-Verwenden Sie die [**msisourcelistclearsource**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearsourcea) -Funktion, um eine vorhandene Quelle für eine Anwendung oder einen Patch in einem angegebenen Kontext zu entfernen. Wenn Sie die aktuelle Quelle für eine Anwendung oder einen Patch entfernen, wird das Installationsprogramm gezwungen, die Quell Liste nach einer Quelle zu durchsuchen, wenn eine Quelle das nächste Mal benötigt wird.
+Verwenden Sie die [**MsiSourceListClearSource-Funktion,**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearsourcea) um eine vorhandene Quelle für eine Anwendung oder einen Patch in einem angegebenen Kontext zu entfernen. Das Entfernen der aktuellen Quelle für eine Anwendung oder einen Patch erzwingt, dass das Installationsprogramm die Quellliste nach einer Quelle durchsucht, wenn das nächste Mal eine Quelle erforderlich ist.
 
-Verwenden Sie die [**msisourcelistenumsources**](/windows/desktop/api/Msi/nf-msi-msisourcelistenumsourcesa) -Funktion, um Quellen in der Quell Liste eines angegebenen Patches oder einer Anwendung aufzulisten.
+Verwenden Sie die [**MsiSourceListEnumSources-Funktion,**](/windows/desktop/api/Msi/nf-msi-msisourcelistenumsourcesa) um Quellen in der Quellliste eines angegebenen Patches oder einer Anwendung aufzulisten.
 
 ## <a name="managing-media-sources-for-products-and-patches"></a>Verwalten von Medienquellen für Produkte und Patches
 
-Verwenden Sie die [**msisourcelistaddmediadisk**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddmediadiska) -Funktion, um die Datenträger Informationen der Medienquelle einer registrierten Anwendung oder eines Patches hinzuzufügen oder zu aktualisieren. Jeder Eintrag wird durch eine Datenträger-ID eindeutig identifiziert. Wenn der Datenträger bereits vorhanden ist, wird er mit der neuen Volumebezeichnung und den Werte für die Datenträger Aufforderung aktualisiert. Wenn der Datenträger nicht vorhanden ist, wird ein neuer Datenträger Eintrag mit den neuen Werten erstellt.
+Verwenden Sie die [**MsiSourceListAddMediaDisk-Funktion,**](/windows/desktop/api/Msi/nf-msi-msisourcelistaddmediadiska) um die Datenträgerinformationen der Medienquelle einer registrierten Anwendung oder eines Patches hinzuzufügen oder zu aktualisieren. Jeder Eintrag wird durch eine Datenträger-ID eindeutig identifiziert. Wenn der Datenträger bereits vorhanden ist, wird er mit der neuen Volumebezeichnung und den Eingabeaufforderungswerten des Datenträgers aktualisiert. Wenn der Datenträger nicht vorhanden ist, wird ein neuer Datenträgereintrag mit den neuen Werten erstellt.
 
-Verwenden Sie die [**msisourcelistclearmediadisk**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearmediadiska) -Funktion, um einen vorhandenen registrierten Datenträger unter der Medienquelle für eine Anwendung oder einen Patch in einem bestimmten Kontext zu entfernen.
+Verwenden Sie die [**MsiSourceListClearMediaDisk-Funktion,**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearmediadiska) um einen vorhandenen registrierten Datenträger unter der Medienquelle für eine Anwendung oder einen Patch in einem bestimmten Kontext zu entfernen.
 
-Verwenden Sie die [**msisourcelistenummediadisks**](/windows/desktop/api/Msi/nf-msi-msisourcelistenummediadisksa) -Funktion, um eine Liste von Datenträgern aufzulisten, die unter der Medienquelle für eine Anwendung oder einen Patch registriert sind.
+Verwenden Sie die [**MsiSourceListEnumMediaDisks-Funktion,**](/windows/desktop/api/Msi/nf-msi-msisourcelistenummediadisksa) um eine Liste der Datenträger aufzulisten, die unter der Medienquelle für eine Anwendung oder einen Patch registriert sind.
 
-## <a name="retrieval-and-modification-of-source-list-information"></a>Abrufen und Ändern von Quell Listen Informationen
+## <a name="retrieval-and-modification-of-source-list-information"></a>Abrufen und Ändern von Quelllisteninformationen
 
-Verwenden Sie die Funktionen [**msisourcelistgetinfo**](/windows/desktop/api/Msi/nf-msi-msisourcelistgetinfoa) und [**msisourcelistsetinfo**](/windows/desktop/api/Msi/nf-msi-msisourcelistsetinfoa) , um Informationen zur Quell Liste für eine Anwendung oder einen Patch in einem bestimmten Kontext abzurufen oder zu ändern. Verwenden Sie den *dwcontext* -Parameter, um den Installations Kontext anzugeben. Verwenden Sie den *szusersid* -Parameter, um den Benutzer Kontext anzugeben.
+Verwenden Sie die Funktionen [**MsiSourceListGetInfo**](/windows/desktop/api/Msi/nf-msi-msisourcelistgetinfoa) und [**MsiSourceListSetInfo,**](/windows/desktop/api/Msi/nf-msi-msisourcelistsetinfoa) um Informationen zur Quellliste für eine Anwendung oder einen Patch in einem bestimmten Kontext abzurufen oder zu ändern. Verwenden Sie den *dwContext-Parameter,* um den Installationskontext anzugeben. Verwenden Sie den *szUserSid-Parameter,* um den Benutzerkontext anzugeben.
 
-Der Zugriff auf Quell Listen Eigenschaften, z. b. [**mediapackagepath**](mediapackagepath.md), [**diskprompt**](diskprompt.md), **LastUsedSource**, **lastusedtype** und **PackageName** , ist möglich.
+Auf Quelllisteneigenschaften wie [**MEDIAPACKAGEPATH,**](mediapackagepath.md) [**DiskPrompt,**](diskprompt.md) **LastUsedSource,** **LastUsedType** und **PackageName** kann zugegriffen werden.
 
 > [!Note]  
-> Die " **lastusedtype** "-Quell Listen Eigenschaft kann nur gelesen werden. Sie kann nicht direkt mit der [**msisourcelistsetinfo**](/windows/desktop/api/Msi/nf-msi-msisourcelistsetinfoa) -Funktion festgelegt werden.
+> Die **LastUsedType-Quelllisteneigenschaft** kann nur gelesen werden. Sie kann nicht direkt mithilfe der [**MsiSourceListSetInfo-Funktion**](/windows/desktop/api/Msi/nf-msi-msisourcelistsetinfoa) festgelegt werden.
 
  
 
-## <a name="clearing-the-complete-source-list-or-forcing-a-source-resolution"></a>Löschen der kompletten Quell Liste oder Erzwingen einer Quell Auflösung
+## <a name="clearing-the-complete-source-list-or-forcing-a-source-resolution"></a>Löschen der vollständigen Quellliste oder Erzwingen einer Quellauflösung
 
-Verwenden Sie die [**msisourcelistclearallex**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearallexa) -Funktion, um alle vorhandenen Quellen eines bestimmten Quell Typs für die angegebene Anwendung oder patchinstanz zu entfernen. Die patchregistrierung wird auch entfernt, wenn der Patch nicht von einer Anwendung im selben Kontext installiert wird. Verwenden Sie den *dwcontext* -Parameter, um den Installations Kontext anzugeben. Verwenden Sie den *szusersid* -Parameter, um den Benutzer Kontext anzugeben.
+Verwenden Sie die [**MsiSourceListClearAllEx-Funktion,**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearallexa) um alle vorhandenen Quellen eines bestimmten Quelltyps für die angegebene Anwendung oder Patchinstanz zu entfernen. Die Patchregistrierung wird auch entfernt, wenn der Patch nicht von einer Anwendung im gleichen Kontext installiert wird. Verwenden Sie den *dwContext-Parameter,* um den Installationskontext anzugeben. Verwenden Sie den *szUserSid-Parameter,* um den Benutzerkontext anzugeben.
 
-Verwenden Sie [**msisourcelistforceresolutionex**](/windows/desktop/api/Msi/nf-msi-msisourcelistforceresolutionexa) , um den zuletzt verwendeten Quell Eintrag für eine Anwendung oder einen Patch im angegebenen Kontext zu löschen. Diese Funktion entfernt die Registrierung der Eigenschaft **LastUsedSource**. Diese Funktion hat keine Auswirkung auf die registrierte Quell Liste. Das Löschen der **LastUsedSource** -Registrierung zwingt den Installer, eine Quell Auflösung für die registrierten Quellen durchzuführen, wenn die Quelle das nächste Mal benötigt wird.
+Verwenden Sie [**MsiSourceListForceResolutionEx,**](/windows/desktop/api/Msi/nf-msi-msisourcelistforceresolutionexa) um den zuletzt verwendeten Quelleintrag für eine Anwendung oder einen Patch im angegebenen Kontext zu löschen. Diese Funktion entfernt die Registrierung der Eigenschaft **lastUsedSource**. Diese Funktion wirkt sich nicht auf die Liste der registrierten Quellen aus. Das Löschen der **LastUsedSource-Registrierung erzwingt,** dass das Installationsprogramm eine Quellauflösung für die registrierten Quellen vorgibt, wenn die Quelle das nächste Mal benötigt wird.
 
  
 

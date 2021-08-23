@@ -5,75 +5,75 @@ ms.assetid: 9d59b2f6-c3d9-40d4-be89-ae7283794eb3
 title: F (Volumeschattenkopie-Dienst)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 01f60a456ce6ea795dc8376c0f707d028523cec3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 56eef69a16a77fce7f557ae0ff02ff0e5d84d0225d082fd486af629b9804aeb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056198"
 ---
 # <a name="f-volume-shadow-copy-service"></a>F (Volumeschattenkopie-Dienst)
 
-[a](vssgloss-a.md) [B](vssgloss-b.md) [C](vssgloss-c.md) [D](vssgloss-d.md) [E](vssgloss-e.md) F [G](vssgloss-g.md) [H](vssgloss-h.md) [I](vssgloss-i.md) J K [L](vssgloss-l.md) M [N](vssgloss-n.md) [O](vssgloss-o.md) [P](vssgloss-p.md) Q [R](vssgloss-r.md) [S](vssgloss-s.md) [T](vssgloss-t.md) U [V](vssgloss-v.md) [W](vssgloss-w.md) X Y Z
+[A](vssgloss-a.md) [B](vssgloss-b.md) [C](vssgloss-c.md) [D](vssgloss-d.md) [E](vssgloss-e.md) F [G](vssgloss-g.md) [H](vssgloss-h.md) [I](vssgloss-i.md) J K [L](vssgloss-l.md) M [N](vssgloss-n.md) [O](vssgloss-o.md) [P](vssgloss-p.md) Q [R](vssgloss-r.md) [S](vssgloss-s.md) [T](vssgloss-t.md) U [V](vssgloss-v.md) [W](vssgloss-w.md) X Y Z
 
 <dl> <dt>
 
-<span id="base.vssgloss_file_group_component"></span><span id="BASE.VSSGLOSS_FILE_GROUP_COMPONENT"></span>**Dateigruppen Komponente**
+<span id="base.vssgloss_file_group_component"></span><span id="BASE.VSSGLOSS_FILE_GROUP_COMPONENT"></span>**Dateigruppenkomponente**
 </dt> <dd>
 
-Eine Gruppe von Dateien, die nicht als Datenbank verwendet und von einem Writer definiert werden, da Sie während Sicherungs-und Wiederherstellungs Vorgängen als Einheit behandelt werden müssen. Siehe auch [*Komponente*](vssgloss-c.md), [*Datenbankkomponente*](vssgloss-d.md).
+Eine Gruppe von Dateien, die nicht als Datenbank verwendet werden und von einem Writer definiert werden, die während Sicherungs- und Wiederherstellungsvorgängen als Einheit behandelt werden müssen. Siehe auch [*Komponente*](vssgloss-c.md), [*Datenbankkomponente*](vssgloss-d.md).
 
 </dd> <dt>
 
 <span id="base.vssgloss_file_set"></span><span id="BASE.VSSGLOSS_FILE_SET"></span>**Dateisatz**
 </dt> <dd>
 
-Die Kombination aus einem Pfad, einer Datei Spezifikation und einem rekursiven Flag, das eine Datei oder eine Gruppe von Dateien beschreibt. Dateien werden z. b. den Komponenten in Datei Sätzen hinzugefügt.
+Die Kombination aus Pfad, Dateispezifikation und rekursivem Flag, das eine Datei oder Gruppe von Dateien beschreibt. Beispielsweise werden Dateien komponenten in Dateisätzen hinzugefügt.
 
-Sofern nicht anders angegeben, sind die Pfade eines Datei Satzes standardmäßige Windows-Pfade und können Umgebungsvariablen (z. b .% systemroot%) enthalten. darf jedoch keine Platzhalter Zeichen enthalten. Es ist nicht erforderlich, dass der Pfad mit einem umgekehrten Schrägstrich (" \\ ") endet. Es gibt Anwendungen, die diese Informationen abrufen, um Sie zu überprüfen.
+Sofern nicht anders angegeben, sind die Pfade eines Dateisatzes standard Windows Pfade und können Umgebungsvariablen (z. B. %SystemRoot%) enthalten, aber keine Platzhalterzeichen enthalten. Es ist nicht erforderlich, dass der Pfad mit einem umgekehrten Schrägstrich \\ ("") endet. Es liegt an Anwendungen, die diese Informationen abrufen, um sie zu überprüfen.
 
-Die in einem Datei Satz enthaltene Datei Spezifikation gibt den Namen der Datei oder Dateien an, die Sie enthält. Diese Datei Spezifikation darf keine Verzeichnis Spezifikationen (z. b. keine umgekehrten Schrägstriche) enthalten, kann aber auch das enthalten? und Platzhalter \* Zeichen.
+Die in einem Dateisatz enthaltene Dateispezifikation gibt den Namen der enthaltenen Datei an. Diese Dateispezifikation darf keine Verzeichnisspezifikationen (z. B. keine umgekehrten Schrägstriche) enthalten, kann aber die ? und \* Platzhalterzeichen.
 
-Das rekursive Tag ist ein boolescher Wert, der angibt, ob der Pfad des Datei Satzes als nur ein einzelnes Verzeichnis behandelt werden soll oder ob er eine Hierarchie von Verzeichnissen angibt, die rekursiv durchlaufen werden soll. Der boolesche Wert ist **true** , wenn der Pfad als eine Hierarchie von Verzeichnissen behandelt wird, die rekursiv durchlaufen werden sollen, andernfalls **false** .
+Das rekursive Tag ist ein boolescher Wert, der angibt, ob der Pfad des Dateisatzes nur als einzelnes Verzeichnis behandelt werden soll oder ob eine Hierarchie von Verzeichnissen angegeben wird, die rekursiv durchlaufen werden sollen. Der boolesche Wert ist **TRUE,** wenn der Pfad als Hierarchie von Verzeichnissen behandelt wird, die rekursiv durchlaufen werden sollen, oder **false,** wenn dies nicht der Fall ist.
 
-Informationen zu einem Dateisatz werden durch Instanzen der **ivsswmfiledesc** -Schnittstelle zurückgegeben und können zusätzliche Informationen enthalten, einschließlich alternativer Pfade, alternativer Speicherort Zuordnungen und Schema Unterstützungs Einstellungen auf Dateiebene.
+Informationen zu einem Dateisatz werden über Instanzen der **IVssWMFiledesc-Schnittstelle** zurückgegeben und können zusätzliche Informationen enthalten, einschließlich alternativer Pfade, alternativer Speicherortzuordnungen und Schemaunterstützungseinstellungen auf Dateiebene.
 
-Siehe auch [*Alternativer Pfad*](vssgloss-a.md), [*Zuordnung alternativer Speicherorte*](vssgloss-a.md), [*Komponente*](vssgloss-c.md), *Datei Spezifikation*.
-
-</dd> <dt>
-
-<span id="base.vssgloss_file_specification"></span><span id="BASE.VSSGLOSS_FILE_SPECIFICATION"></span>**Datei Spezifikation**
-</dt> <dd>
-
-Wird verwendet, um Dateien innerhalb eines Verzeichnisses abzugleichen und einen Datei Satz zu definieren. Er darf keine Verzeichnis Spezifikationen (z. b. keine umgekehrten Schrägstriche) enthalten, kann aber auch das enthalten? und Platzhalter \* Zeichen.
+Weitere Informationen finden Sie unter [*alternativer Pfad,*](vssgloss-a.md) [*Zuordnung alternativer Speicherorte,*](vssgloss-a.md) [*Komponente*](vssgloss-c.md)und *Dateispezifikation.*
 
 </dd> <dt>
 
-<span id="base.vssgloss_file_system_replication"></span><span id="BASE.VSSGLOSS_FILE_SYSTEM_REPLICATION"></span>**Datei Replikations Dienst**
+<span id="base.vssgloss_file_specification"></span><span id="BASE.VSSGLOSS_FILE_SPECIFICATION"></span>**Dateispezifikation**
 </dt> <dd>
 
-Wird verwendet, um Systemdateien in einem SYSVOL-Verzeichnis (Redundant System Volume) zu replizieren, um die Survivability des Dateisystems zu unterstützen, insbesondere für verteilte Dateisysteme.
+Wird verwendet, um Dateien in einem Verzeichnis abzugleichen und einen Dateisatz zu definieren. Sie darf keine Verzeichnisspezifikationen (z. B. keine umgekehrten Schrägstriche) enthalten, aber sie kann die ? und \* Platzhalterzeichen.
 
 </dd> <dt>
 
-<span id="base.vssgloss_freeze"></span><span id="BASE.VSSGLOSS_FREEZE"></span>**ge**
+<span id="base.vssgloss_file_system_replication"></span><span id="BASE.VSSGLOSS_FILE_SYSTEM_REPLICATION"></span>**Dateireplikationsdienst**
 </dt> <dd>
 
-Ein Zeitraum während des Erstellungs Prozesses der Schatten Kopie, wenn alle Writer ihre Schreibvorgänge auf die Volumes geleert haben und keine weiteren Schreibvorgänge einleiten.
+Wird verwendet, um Systemdateien in einem redundanten Systemvolumeverzeichnis (SysVol) zu replizieren, um die Dateisystemüberlebenbarkeit zu unterstützen, insbesondere für verteilte Dateisysteme.
 
 </dd> <dt>
 
-<span id="base.vssgloss_freeze_event"></span><span id="BASE.VSSGLOSS_FREEZE_EVENT"></span>**Ereignis Einfrieren**
+<span id="base.vssgloss_freeze"></span><span id="BASE.VSSGLOSS_FREEZE"></span>**Einfrieren**
 </dt> <dd>
 
-Ein VSS-Ereignis, das angibt, dass eine schattenkopiesperre ausgeführt wird. Siehe auch *Einfrieren*, [*Schatten Kopie*](vssgloss-s.md).
+Ein Zeitraum während der Erstellung von Schattenkopien, in dem alle Writer ihre Schreibvorgänge auf die Volumes geleert haben und keine zusätzlichen Schreibvorgänge initiieren.
 
 </dd> <dt>
 
-<span id="base.vssgloss_front_end_level_applications"></span><span id="BASE.VSSGLOSS_FRONT_END_LEVEL_APPLICATIONS"></span>**Anwendungen auf Front-End-Ebene**
+<span id="base.vssgloss_freeze_event"></span><span id="BASE.VSSGLOSS_FREEZE_EVENT"></span>**Freeze-Ereignis**
 </dt> <dd>
 
-Gibt den Punkt an, an dem ein Writer über eine Sperre durch den VSS benachrichtigt wird. Writer, die als Anwendungen auf Front-End-Ebene initialisiert wurden, werden vor Writer benachrichtigt, die als Back-End-Ebene-Anwendungen oder als Anwendungen auf Systemebene initialisiert werden. Weitere Informationen finden Sie auch auf [*Anwendungsebene*](vssgloss-a.md), [*Back-End-Anwendungen*](vssgloss-b.md), Anwendungen auf [*Systemebene*](vssgloss-s.md)und [*Writer*](vssgloss-w.md).
+Ein VSS-Ereignis, das angibt, dass ein Einfrieren der Schattenkopie ausgeführt wird. Siehe auch *Einfrieren* von , [*Schattenkopie*](vssgloss-s.md).
+
+</dd> <dt>
+
+<span id="base.vssgloss_front_end_level_applications"></span><span id="BASE.VSSGLOSS_FRONT_END_LEVEL_APPLICATIONS"></span>**Front-End-Anwendungen**
+</dt> <dd>
+
+Gibt den Punkt an, an dem ein Writer über ein Einfrieren durch VSS benachrichtigt wird. Writer, die als Front-End-Anwendungen initialisiert wurden, werden benachrichtigt, bevor Writer entweder als Back-End-Anwendungen oder als Anwendungen auf Systemebene initialisiert werden. Siehe auch [*Anwendungsebene,*](vssgloss-a.md) [*Back-End-Anwendungen,*](vssgloss-b.md) [*Anwendungen auf Systemebene,*](vssgloss-s.md) [*Writer*](vssgloss-w.md).
 
 </dd> </dl>
 

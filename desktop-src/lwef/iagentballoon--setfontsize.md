@@ -1,19 +1,19 @@
 ---
-title: Iagentballoon SetFontSize
-description: Iagentballoon SetFontSize
+title: IAgentBalloon SetFontSize
+description: IAgentBalloon SetFontSize
 ms.assetid: c38779a6-bd7f-4d3a-9cb0-9d9fac1c7996
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4984382408739e2d093226d04b1c99582a1a25d4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fb6e19d79429ddf98f67a281cd11aefb1dc6bc2e54b1289e36c7cfb5a62bd538
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311214"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976470"
 ---
-# <a name="iagentballoonsetfontsize"></a>Iagentballoon:: SetFontSize
+# <a name="iagentballoonsetfontsize"></a>IAgentBalloon::SetFontSize
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT SetFontSize(
@@ -21,29 +21,29 @@ HRESULT SetFontSize(
 ); 
 ```
 
-Legt die Größe der Schriftart fest, die in der Word-Sprechblase angezeigt wird.
+Legt den Schriftgrad fest, der im Wort balloon angezeigt wird.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="lFontSize"></span><span id="lfontsize"></span><span id="LFONTSIZE"></span>*lfontsize*
+<span id="lFontSize"></span><span id="lfontsize"></span><span id="LFONTSIZE"></span>*lFontSize*
 </dt> <dd>
 
 Der Schriftgrad.
 
 </dd> </dl>
 
-Der Standardschrift Grad, der in der Wort Sprechblase eines Zeichens verwendet wird, wird im Microsoft-Agent-Zeichen-Editor definiert. Sie können es mit **iagentballoon:: SetFontSize** ändern. Der Benutzer kann jedoch die Einstellung für die Schriftgröße für alle Zeichen überschreiben, indem er das Eigenschaften Blatt "Microsoft-Agent" verwendet.
+Der Standardschriftgrad, der in der Wortsprechblase eines Zeichens verwendet wird, wird im Microsoft Agent-Zeichen-Editor definiert. Sie können es mit **IAgentBalloon::SetFontSize ändern.** Der Benutzer kann jedoch die Schriftgradeinstellung für alle Zeichen mithilfe des Microsoft Agent-Eigenschaftenblatts überschreiben.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentballoon:: GetFontSize**](iagentballoon--getfontsize.md)
+[**IAgentBalloon::GetFontSize**](iagentballoon--getfontsize.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

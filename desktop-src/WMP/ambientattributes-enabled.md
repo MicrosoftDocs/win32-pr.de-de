@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. aktiviert
-description: Mit dem aktivierten Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Steuerelement aktiviert oder deaktiviert ist.
+title: AmbientAttributes.enabled
+description: Das enabled-Attribut gibt einen Wert an, der angibt, ob das Steuerelement aktiviert oder deaktiviert ist, oder ruft einen Wert ab.
 ms.assetid: cf96ab7c-8acd-42b6-b7ca-d084a89c97e2
 keywords:
-- Ambientattribute. aktivierte Windows-Media Player
+- AmbientAttributes.enabled-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c34d24e86118a1cca0939d535b6da6e86c2df34
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e9d8e000d64ef92212cd7c6cf37c7fd79036107e1d3be0d7669d73b40c759de3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055178"
 ---
-# <a name="ambientattributesenabled"></a>Ambientattribute. aktiviert
+# <a name="ambientattributesenabled"></a>AmbientAttributes.enabled
 
-Mit dem **aktivierten** Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Steuerelement aktiviert oder deaktiviert ist.
+Das **enabled-Attribut** gibt einen Wert an, der angibt, ob das Steuerelement aktiviert oder deaktiviert ist, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.enabled
@@ -29,7 +29,7 @@ Mit dem **aktivierten** Attribut wird ein Wert angegeben oder abgerufen, der ang
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
@@ -42,11 +42,11 @@ Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Steuerelement aktiviert ist, kann es über einen Tabstopp verfügen, und alle Ambient-Ereignisse werden empfangen. Wenn diese Option deaktiviert ist, verfügt das Steuerelement nicht über eine Tabstopp Taste und empfängt keine Umgebungs Maus-oder Tastatur Ereignisse, die darauf ausgelöst werden. (Es werden jedoch weiterhin alle anderen Ambient-Ereignisse empfangen, die darauf ausgelöst werden.)
+Wenn das Steuerelement aktiviert ist, kann es über einen Tabstopp verfügen und alle Umgebungsereignisse empfangen. Wenn es deaktiviert ist, verfügt das Steuerelement nicht über einen Tabstopp und erhält keine Umgebungsmaus- oder Tastaturereignisse, die darauf ausgelöst werden. (Es werden jedoch weiterhin alle anderen Umgebungsereignisse empfangen, die dafür ausgelöst werden.)
 
-Dieses Attribut wird für das **subview** -Element nicht unterstützt.
+Dieses Attribut wird für das **SUBVIEW-Element nicht** unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Dieses Attribut wird für das **subview** -Element nicht unterstützt.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
