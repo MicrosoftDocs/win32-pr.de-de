@@ -1,68 +1,68 @@
 ---
-description: Informationen zu den Windows Core-audioapis
+description: Informationen zu Windows Core-Audio-APIs
 ms.assetid: 657cf75f-3d72-4a5f-ae29-299e826b2b86
-title: Informationen zu den Windows Core-audioapis
+title: Informationen zu Windows Core-Audio-APIs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 30763d70bae4340436145a303763c0aad57171f5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 07d5336522a681fc5f2d6e8ee5db0c17eacccfa46ea4cc4559bf00e6ea629031
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119018548"
 ---
-# <a name="about-the-windows-core-audio-apis"></a>Informationen zu den Windows Core-audioapis
+# <a name="about-the-windows-core-audio-apis"></a>Informationen zu Windows Core-Audio-APIs
 
-Diese Dokumentation enthält Informationen zu den Kerncode-APIs für die Microsoft Windows-Betriebssystem Familie.
+Diese Dokumentation enthält Informationen zu Core Audio-APIs für die Microsoft Windows-Betriebssystemfamilie.
 
-Die Kern-audioapis wurden in Windows Vista eingeführt. Dies ist ein neuer Satz von Audiokomponenten im Benutzermodus, der Client Anwendungen verbesserte Audiofunktionen bietet. Diese Funktionen umfassen Folgendes:
+Die Core Audio-APIs wurden in Windows Vista eingeführt. Dies ist ein neuer Satz von Audiokomponenten im Benutzermodus, der Clientanwendungen verbesserte Audiofunktionen bietet. Diese Funktionen umfassen Folgendes:
 
--   Geringe Latenz, gleitrobustes Audiostreaming.
--   Verbesserte Zuverlässigkeit (viele Audiofunktionen wurden vom Kernel Modus in den Benutzermodus verschoben).
--   Verbesserte Sicherheit (die Verarbeitung geschützter Audioinhalte findet in einem sicheren Prozess mit niedrigerer Berechtigung statt).
--   Zuweisung von bestimmten systemweiten Rollen (Konsole, Multimedia und Kommunikation) zu einzelnen Audiogeräten.
--   Software Abstraktion der audioendpunktgeräte (z. b. Sprecher, Kopfhörer und Mikrofone), die der Benutzer direkt bearbeitet.
+-   Geringe Latenz, Störungsresilienz beim Audiostreaming.
+-   Verbesserte Zuverlässigkeit (viele Audiofunktionen wurden vom Kernelmodus in den Benutzermodus verschoben).
+-   Verbesserte Sicherheit (die Verarbeitung geschützter Audioinhalte erfolgt in einem sicheren Prozess mit niedrigeren Berechtigungen).
+-   Zuweisung bestimmter systemweiter Rollen (Konsole, Multimedia und Kommunikation) zu einzelnen Audiogeräten.
+-   Softwareabstraktion der Audioendpunktgeräte (z. B. Lautsprecher, Mikrofone und Mikrofone), die der Benutzer direkt bearbeitet.
 
-Die Kern-audioapis wurden in Windows 7 verbessert. Weitere Informationen zu den Verbesserungen und neuen Features finden Sie unter [What es New for Core audioapis in Windows 7](what-s-new-for-core-audio-apis-in-windows-7.md).
+Die Core Audio-APIs wurden in Windows 7 verbessert. Weitere Informationen zu den Verbesserungen und neuen Features, die hinzugefügt wurden, finden Sie unter What [es New for Core Audio APIs in Windows 7](what-s-new-for-core-audio-apis-in-windows-7.md).
 
-In dieser Dokumentation werden die Kern-API-APIs beschrieben. Diese APIs dienen als Grundlage für die folgenden APIs auf höherer Ebene:
+In dieser Dokumentation werden die Kernaudio-APIs beschrieben. Diese APIs dienen als Grundlage für die folgenden APIs auf höherer Ebene:
 
--   DirectSound
--   DirectMusic
--   Windows Multimedia **wavexxx** -und **mixerxxx** -Funktionen
+-   Directsound
+-   Directmusic
+-   Windows multimedia **waveXxx- und** **mixerXxx-Funktionen**
 -   Media Foundation
 
-Diese APIs auf höherer Ebene verwenden die Kerndatei-APIs, um den Zugriff auf Audiogeräte freizugeben. Media Foundation in Windows Vista neu ist, während die Funktionen DirectSound, DirectMusic und **wavexxx** und **mixerxxx** in Windows 98, Windows Millennium Edition und Windows 2000 und höher unterstützt werden.
+Diese apIs auf höherer Ebene verwenden die Core Audio-APIs, um den Zugriff auf Audiogeräte zu teilen. Media Foundation ist neu in Windows Vista, während DirectSound, DirectIndex und die **Funktionen waveXxx** und **mixerXxx** in Windows 98, Windows Edition edition und in Windows 2000 und höher unterstützt werden.
 
-Die meisten Audioanwendungen kommunizieren mit den APIs auf höherer Ebene, anstatt direkt mit den Kerncode-APIs zu kommunizieren. Einige Beispiele für Anwendungen, die APIs höherer Ebene verwenden, sind:
+Die meisten Audioanwendungen kommunizieren mit den APIs der höheren Ebene, anstatt direkt mit den Core Audio-APIs zu kommunizieren. Beispiele für Anwendungen, die APIs auf höherer Ebene verwenden:
 
 -   Media Player
 -   DVD-Player
 -   Spiele
--   Geschäftsanwendungen, wie z. b. Microsoft Office PowerPoint, die Sounddateien abspielen
+-   Geschäftsanwendungen, z. B. Microsoft Office PowerPoint, die Sounddateien wiederklangen
 
-In der Regel kommunizieren diese Anwendungen mit den DirectSound-oder Media Foundation-APIs.
+In der Regel kommunizieren diese Anwendungen mit den DirectSound- oder Media Foundation-APIs.
 
-Die direkte Kommunikation mit den kernaudioapis eignet sich möglicherweise nicht für viele allgemeine Audioanwendungen. Beispielsweise erfordern die Kern-audioapis Audiostreams, um die nativen Datenformate eines Audiogeräts zu verwenden. Softwareentwickler von Drittanbietern, die die folgenden Produkttypen entwickeln, benötigen jedoch möglicherweise die speziellen Funktionen der kernaudioapis:
+Die direkte Kommunikation mit den Core Audio-APIs eignet sich möglicherweise nicht für viele allgemeine Audioanwendungen. Beispielsweise erfordern die Core Audio-APIs Audiostreams, um die nativen Datenformate eines Audiogeräts zu verwenden. Allerdings benötigen Softwareentwickler von Drittanbietern, die die folgenden Produkttypen entwickeln, möglicherweise die speziellen Funktionen der Core Audio-APIs:
 
--   Professionelle Audioanwendungen ("pro-Audiodatei")
--   Echtzeitkommunikation (RTC)-Anwendungen
--   Audioapis von Drittanbietern
+-   Professional von Audioanwendungen ("Pro Audio")
+-   Echtzeitkommunikationsanwendungen (RTC)
+-   Audio-APIs von Drittanbietern
 
-Eine "pro-Audiodatei" oder RTC-Anwendung benötigt möglicherweise direkten Zugriff auf die Low-Level-Funktionen der kernaudioapis, um eine minimale Latenz zu erzielen, indem exklusiver Zugriff auf Audiohardware erhalten wird. Für eine audioapi von Drittanbietern ist möglicherweise direkter Zugriff auf die Kerndatei-APIs erforderlich, um eine Reihe von Features zu implementieren, die von einer einzelnen, in Windows bereitgestellten audioapi mit hoher Ebene möglicherweise nicht vollständig unterstützt werden.
+Eine Pro-Audio- oder RTC-Anwendung benötigt möglicherweise direkten Zugriff auf die low-level-Features der Core Audio-APIs, um eine minimale Latenz zu erzielen, indem sie exklusiven Zugriff auf Audiohardware erhält. Eine Audio-API eines Drittanbieters erfordert möglicherweise direkten Zugriff auf die Core Audio-APIs, um eine Reihe von Features zu implementieren, die möglicherweise nicht vollständig von einer einzelnen, mit Windows.
 
-Eine Anwendung, die eine Legacy-audioapi zum Abspielen oder Aufzeichnen von Audiodaten verwendet, erfordert möglicherweise zusätzliche Funktionen, die von der Legacy-audioapi nicht unterstützt werden, aber von den kernaudioapis unterstützt werden. In vielen Fällen kann die Anwendung direkt über die wichtigsten audioapis auf diese Funktionen zugreifen, die in Verbindung mit der Legacy-audioapi verwendet werden können.
+Eine Anwendung, die eine Legacy-Audio-API zum Wieder- oder Aufzeichnen von Audio verwendet, erfordert möglicherweise zusätzliche Funktionen, die von der Legacy-Audio-API nicht unterstützt werden, aber von den Core Audio-APIs unterstützt werden. In vielen Fällen kann die Anwendung direkt über die Core Audio-APIs auf diese Funktionen zugreifen, die in Verbindung mit der Legacy-Audio-API verwendet werden können.
 
-Die Kern-audioapis lauten:
+Die Kernaudio-APIs sind:
 
--   [API für Multimedia-Geräte (mmdevice)](mmdevice-api.md). Clients verwenden diese API, um die audioendpunktgeräte im System aufzuzählen.
--   [Windows-audiositzungs-API (WASAPI)](wasapi.md). Clients verwenden diese API, um audiodatenstreams zu und von audioendpunktgeräten zu erstellen und zu verwalten.
--   Die Geräte-API (Debug- [API](devicetopology-api.md)). Clients verwenden diese API, um direkt auf die topologischen Features zuzugreifen (z. b. volumesteuerelemente und Multiplexer), die sich auf den Daten Pfaden innerhalb von Hardware Geräten in audioadaptern befinden.
--   [Endpointvolume-API](endpointvolume-api.md). Clients verwenden diese API, um direkt auf die volumesteuerelemente auf audioendpunktgeräten zuzugreifen. Diese API wird hauptsächlich von Anwendungen verwendet, die Audiostreams im exklusiven Modus verwalten.
+-   [MMDevice-API (Multimediagerät).](mmdevice-api.md) Clients verwenden diese API, um die Audioendpunktgeräte im System zu aufzählen.
+-   [Windows AudioSitzungs-API (WASAPI)](wasapi.md). Clients verwenden diese API, um Audiostreams zu und von Audioendpunktgeräten zu erstellen und zu verwalten.
+-   [DeviceTopology-API](devicetopology-api.md). Clients verwenden diese API, um direkt auf die topologien Features (z. B. Volumesteuerelemente und Multiplexer) zuzugreifen, die sich entlang der Datenpfade innerhalb von Hardwaregeräten in Audioadaptern befindet.
+-   [EndpointVolume-API](endpointvolume-api.md). Clients verwenden diese API, um direkt auf die Volumesteuerelemente auf Audioendpunktgeräten zuzugreifen. Diese API wird hauptsächlich von Anwendungen verwendet, die Audiostreams im exklusiven Modus verwalten.
 
-Diese APIs unterstützen das benutzerfreundliche Konzept eines Endpunkt Geräts, das in [audioendpunktgeräten](audio-endpoint-devices.md)beschrieben wird.
+Diese APIs unterstützen das benutzerfreundliche Konzept eines Endpunktgeräts, das unter [Audioendpunktgeräte beschrieben wird.](audio-endpoint-devices.md)
 
-Microsoft plant nicht, die hier beschriebenen kernaudioapis für die Verwendung mit früheren Versionen von Windows, einschließlich Microsoft Windows Server 2003, Windows XP, Windows Millennium Edition, Windows 2000 und Windows 98, bereitzustellen.
+Microsoft plant nicht, die hier beschriebenen Core Audio-APIs für die Verwendung mit früheren Versionen von Windows verfügbar zu machen, einschließlich Microsoft Windows Server 2003, Windows XP, Windows Edition, Windows 2000 und Windows 98.
 
 Diese Übersicht enthält die folgenden Themen.
 
@@ -70,9 +70,9 @@ Diese Übersicht enthält die folgenden Themen.
 
 | **Thema**                                                                                      | **Beschreibung**                                                                           |
 |------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [Neuerungen bei den Kerncode-APIs in Windows 7](what-s-new-for-core-audio-apis-in-windows-7.md) | Fasst die neuen Features und die Verbesserungen der kernaudioapis zusammen                   |
-| [Header Dateien und System Komponenten](header-files-and-system-components.md)                   | Beschreibt die Header Dateien und Systemkomponenten für die Kerndatei-APIs.                 |
-| [SDK-Beispiele für die Verwendung der kernaudioapis](sdk-samples-that-use-the-core-audio-apis.md)       | Listet die Beispiele in den Windows SDK auf, die die Kern-audioapis verwenden.                        |
+| [Neues bei Core Audio-APIs in Windows 7](what-s-new-for-core-audio-apis-in-windows-7.md) | Fasst die neuen Features und die Verbesserungen der Core Audio-APIs zusammen.                   |
+| [Headerdateien und Systemkomponenten](header-files-and-system-components.md)                   | Beschreibt die Headerdateien und Systemkomponenten für die Core Audio-APIs.                 |
+| [SDK-Beispiele, die die Kernaudio-APIs verwenden](sdk-samples-that-use-the-core-audio-apis.md)       | Listet die Beispiele im Windows SDK auf, die die Core Audio-APIs verwenden.                        |
 
 
 
@@ -83,7 +83,7 @@ Diese Übersicht enthält die folgenden Themen.
 
 <dl> <dt>
 
-[Kernaudioapis](core-audio-apis-in-windows-vista.md)
+[Kernaudio-APIs](core-audio-apis-in-windows-vista.md)
 </dt> </dl>
 
  

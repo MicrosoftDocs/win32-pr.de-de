@@ -1,7 +1,7 @@
 ---
-description: Importiert die Besitzer Autorisierungs Informationen für ein TPM, das bereits in der Registrierung des Betriebssystems vorhanden ist.
+description: Importiert die Autorisierungsinformationen des Besitzers für ein TPM, das sich bereits im Besitz der Betriebssystemregistrierung befindet.
 ms.assetid: 9611D363-6F10-48B9-B417-97133E975257
-title: 'Win32_Tpm:: importownerauth-Methode'
+title: Win32_Tpm::ImportOwnerAuth-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Win32_tpm.dll
-ms.openlocfilehash: c74d99ab5cf101aa424dcf1921da774f53e21de6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6e7d96a5cadf77e539d703ed95f428fa91535d49d1e7b5581300467782fce0af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119004078"
 ---
-# <a name="win32_tpmimportownerauth-method"></a>Win32 \_ TPM:: importownerauth-Methode
+# <a name="win32_tpmimportownerauth-method"></a>Win32 \_ Tpm::ImportOwnerAuth-Methode
 
-Importiert die Besitzer Autorisierungs Informationen für ein TPM, das bereits in der Registrierung des Betriebssystems vorhanden ist. Mit diesem Vorgang wird zuerst überprüft, ob die angegebenen Besitzer Autorisierungs Informationen korrekt sind. Wenn dies richtig ist, importiert die-Methode diese Informationen in die Registrierung.
+Importiert die Autorisierungsinformationen des Besitzers für ein TPM, das sich bereits im Besitz der Betriebssystemregistrierung befindet. Bei diesem Vorgang wird zunächst überprüft, ob die angegebenen Autorisierungsinformationen des Besitzers korrekt sind. Wenn dies der Fall ist, importiert die -Methode diese Informationen in die Registrierung.
 
-Diese Methode ist nur für lokale Administratoren zugänglich.
+Auf diese Methode kann nur von lokalen Administratoren zugegriffen werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,22 +41,22 @@ uint32 ImportOwnerAuth(
 
 <dl> <dt>
 
-Besitzer *des Besitzers* \[ in\]
+*OwnerAuth* \[ In\]
 </dt> <dd>
 
-Die gültigen Autorisierungs Informationen des Besitzers für das TPM.
+Die gültigen Besitzerautorisierungsinformationen für das TPM.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Alle TPM-Fehler sowie Fehler, die für die [TPM-Basisdienste](../tbs/tbs-return-codes.md) spezifisch sind, können zurückgegeben werden.
+Alle TPM-Fehler und -Fehler, die für [TPM-Basisdienste](../tbs/tbs-return-codes.md) spezifisch sind, können zurückgegeben werden.
 
 Allgemeine Rückgabecodes sind unten aufgeführt.
 
 
 
-| Rückgabecode/-wert                                                                                                                                 | BESCHREIBUNG                           |
+| Rückgabecode/-wert                                                                                                                                 | Beschreibung                           |
 |---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl> | Die Methode war erfolgreich.<br/> |
 
@@ -64,11 +64,11 @@ Allgemeine Rückgabecodes sind unten aufgeführt.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ist besonders nützlich in Szenarien, in denen sich das TPM im Zustand "bereit mit eingeschränkter Funktionalität" befindet und erfordert, dass die Autorisierung des Besitzers vollständig bereit ist, oder in einem Dual-Boot-Szenario, in dem eines der Betriebssysteme im Besitz des TPM ist und die Autorisierungs Informationen für das TPM im anderen Betriebssystem nicht verfügbar sind.
+Diese Methode ist besonders nützlich in Szenarien, in denen sich das TPM in einem "Bereit mit eingeschränktem Funktionszustand" befindet und erfordert, dass der Import der Besitzerautorisierung vollständig bereit ist, oder in Dual-Boot-Szenarien, in denen eines der Betriebssysteme das TPM besitzt und die Besitzerautorisierungsinformationen für TPM im anderen Betriebssystem nicht verfügbar sind.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,19 +76,19 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                      |
-| Namespace<br/>                | \\\\.\\ root \\ CIMV2 \\ Security- \\ mikrosofttpm<br/>                                     |
-| MOF<br/>                      | <dl> <dt>Win32- \_ TPM. MOF</dt> </dl> |
-| DLL<br/>                      | <dl> <dt>Win32- \_tpm.dll</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                      |
+| Namespace<br/>                | \\\\.\\ root \\ \\ CIMV2-Sicherheit \\ MicrosoftTpm<br/>                                     |
+| MOF<br/>                      | <dl> <dt>Win32 \_ tpm.mof</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>\_Win32-tpm.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ TPM**](win32-tpm.md)
+[**Win32 \_ Tpm**](win32-tpm.md)
 </dt> </dl>
 
  

@@ -1,30 +1,30 @@
 ---
-description: Elemente, die von Transaktions-NTFS (TxF) bereitgestellt werden.
+description: Von Transactional NTFS (TxF) bereitgestellte Elemente.
 ms.assetid: 7a610ba4-88d5-4274-b068-8cbde9a67a95
-title: Transaktions-NTFS-Referenz
+title: NTFS-Referenz für Transaktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 37457bff5de3ea781dd23d90bd2c0de2dbd0f03d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 013ee627d659d445f65f31b7c42fbf38894bac0fcd220e4d016bb26f593006ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363676"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119290270"
 ---
-# <a name="transactional-ntfs-reference"></a>Transaktions-NTFS-Referenz
+# <a name="transactional-ntfs-reference"></a>NTFS-Referenz für Transaktionen
 
-Transaktionale NTFS (TxF) stellt die folgenden Elemente bereit.
+Transactional NTFS (TxF) stellt die folgenden Elemente zur Verfügung.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                | BESCHREIBUNG                                                       |
+| Thema                                                                | Beschreibung                                                       |
 |----------------------------------------------------------------------|-------------------------------------------------------------------|
-| [TxF-Steuerungs Codes](transactional-ntfs-control-codes.md)<br/> | Steuerungs Codes für transaktionale NTFS (TxF).<br/>                |
+| [TxF-Steuerelementcodes](transactional-ntfs-control-codes.md)<br/> | Transaktions-NTFS-Steuerungscodes (TxF).<br/>                |
 | [TxF-Funktionen](txf-functions.md)<br/>                        | Transaktionale NTFS-Funktionen (TxF).<br/>                    |
 | [TxF-Strukturen](transactional-ntfs-structures.md)<br/>       | Transaktionale NTFS-Strukturen (TxF).<br/>                   |
-| [TxF-Glossar](glossary.md)<br/>                              | Terminologie, die zum Beschreiben von Transaktions-NTFS (TxF) verwendet wird.<br/> |
+| [TxF-Glossar](glossary.md)<br/>                              | Terminologie zur Beschreibung von Transaktions-NTFS (TxF).<br/> |
 
 
 

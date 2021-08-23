@@ -1,24 +1,24 @@
 ---
-description: Das Stream-Attribut gibt an, welcher Stream in einer multistreamquelldatei verwendet werden soll.
+description: Das Streamattribut gibt an, welcher Stream in einer Quelldatei mit mehreren Streams verwendet werden soll.
 ms.assetid: fd0ec0c7-97eb-422f-866f-04a2e749a3f3
-title: Stream-Attribut
+title: stream-Attribut
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e185a3603c61a5d7148e3490932c83592409b93
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa9278171b24cae4ee5c34f659d06a3d5fa1c60b0b043a966f699fab89c9d242
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119329780"
 ---
-# <a name="stream-attribute"></a>Stream-Attribut
+# <a name="stream-attribute"></a>stream-Attribut
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Das- `stream` Attribut gibt an, welcher Stream in einer multistreamquelldatei verwendet werden soll.
+Das `stream` -Attribut gibt an, welcher Stream in einer Quelldatei mit mehreren Streams verwendet werden soll.
 
 ## <a name="possible-values"></a>Mögliche Werte
 
@@ -26,16 +26,16 @@ Muss ein ganzzahliger Wert sein.
 
 ## <a name="applies-to"></a>Gilt für
 
-[**Techno**](clip-element.md)
+[**clip**](clip-element.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [XTL-Attribute](xtl-attributes.md)
 </dt> <dt>
 
-[**Iamtimelinesrc:: setstreamnumber**](iamtimelinesrc-setstreamnumber.md)
+[**IAMTimelineSrc::SetStreamNumber**](iamtimelinesrc-setstreamnumber.md)
 </dt> </dl>
 
  

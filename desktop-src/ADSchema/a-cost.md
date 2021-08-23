@@ -1,11 +1,11 @@
 ---
-title: Cost-Attribut
-description: Enthält die relativen Kosten für das Routing von Nachrichten über einen bestimmten Site-Connector.
+title: Kostenattribut
+description: Enthält die relativen Kosten für das Weiterleiten von Nachrichten über einen bestimmten Standortconnector.
 ms.assetid: eb6bc94b-4e77-4cb8-818f-bed75d2d906f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des Kosten Attributs
-- AD-Schema des Kosten Attributs
+- AD-Schema des Kostenattributs
+- AD-Schema des Kostenattributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 16385881cdddd8fabe1ff7f31a23e3347c6cd3dc
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 3c6b7df43608732df4c54c6697437d42328ef40d53cfff0ccf2989c9b8f42ce9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119327020"
 ---
-# <a name="cost-attribute"></a>Cost-Attribut
+# <a name="cost-attribute"></a>Kostenattribut
 
-Enthält die relativen Kosten für das Routing von Nachrichten über einen bestimmten Site-Connector.
+Enthält die relativen Kosten für das Weiterleiten von Nachrichten über einen bestimmten Standortconnector.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | „Cost“ (Kosten)                                 |
-| LDAP-Display-Name | cost                                 |
+| CN                | Kosten                                 |
+| Ldap-Anzeigename | cost                                 |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.2.135               |
-| System-ID-GUID    | bf967944-0de6-11d0-a285-00aa003049e2 |
+| System-Id-Guid    | bf967944-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Enthält die relativen Kosten für das Routing von Nachrichten über einen besti
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,19 +59,19 @@ Enthält die relativen Kosten für das Routing von Nachrichten über einen besti
 | Link-ID                | \-                                         |
 | MAPI-Id                | 0x8068                                     |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Is-Single-Valued       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000000                                 |
-| In verwendete Klassen        | [**Standort Link**](c-sitelink.md)<br/> |
+| In verwendete Klassen        | [**Site-Link**](c-sitelink.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,15 +80,15 @@ Enthält die relativen Kosten für das Routing von Nachrichten über einen besti
 | Link-ID                | \-                                         |
 | MAPI-Id                | 0x8068                                     |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Is-Single-Valued       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000000                                 |
-| In verwendete Klassen        | [**Standort Link**](c-sitelink.md)<br/> |
+| In verwendete Klassen        | [**Site-Link**](c-sitelink.md)<br/> |
 
 
 
@@ -101,15 +101,15 @@ Enthält die relativen Kosten für das Routing von Nachrichten über einen besti
 | Link-ID                | \-                                         |
 | MAPI-Id                | 0x8068                                     |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Is-Single-Valued       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000000                                 |
-| In verwendete Klassen        | [**Standort Link**](c-sitelink.md)<br/> |
+| In verwendete Klassen        | [**Site-Link**](c-sitelink.md)<br/> |
 
 
 
@@ -122,15 +122,15 @@ Enthält die relativen Kosten für das Routing von Nachrichten über einen besti
 | Link-ID                | \-                                         |
 | MAPI-Id                | 0x8068                                     |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Is-Single-Valued       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000000                                 |
-| In verwendete Klassen        | [**Standort Link**](c-sitelink.md)<br/> |
+| In verwendete Klassen        | [**Site-Link**](c-sitelink.md)<br/> |
 
 
 
@@ -143,15 +143,15 @@ Enthält die relativen Kosten für das Routing von Nachrichten über einen besti
 | Link-ID                | \-                                         |
 | MAPI-Id                | 0x8068                                     |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Is-Single-Valued       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000000                                 |
-| In verwendete Klassen        | [**Standort Link**](c-sitelink.md)<br/> |
+| In verwendete Klassen        | [**Site-Link**](c-sitelink.md)<br/> |
 
 
 
@@ -164,15 +164,15 @@ Enthält die relativen Kosten für das Routing von Nachrichten über einen besti
 | Link-ID                | \-                                         |
 | MAPI-Id                | 0x8068                                     |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Is-Single-Valued       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000000                                 |
-| In verwendete Klassen        | [**Standort Link**](c-sitelink.md)<br/> |
+| In verwendete Klassen        | [**Site-Link**](c-sitelink.md)<br/> |
 
 
 
@@ -185,15 +185,15 @@ Enthält die relativen Kosten für das Routing von Nachrichten über einen besti
 | Link-ID                | \-                                         |
 | MAPI-Id                | 0x8068                                     |
 | System-Only            | False                                      |
-| Ist-einwertig       | Richtig                                       |
+| Is-Single-Valued       | True                                       |
 | Ist indiziert             | False                                      |
 | Im globalen Katalog      | False                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                               |
 | Range-Lower            | \-                                         |
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000000                                 |
-| In verwendete Klassen        | [**Standort Link**](c-sitelink.md)<br/> |
+| In verwendete Klassen        | [**Site-Link**](c-sitelink.md)<br/> |
 
 
 

@@ -3,21 +3,21 @@ title: Windows Media Player Mobile Skins
 description: Windows Media Player Mobile Skins
 ms.assetid: bcab41ed-db48-4070-b462-879f56bb6606
 keywords:
-- Windows Media Player Mobile, Skins
-- Windows Media Player Mobile Skins, Informationen zu
-- Skins, Windows Media Player Mobile
+- Windows Media Player Mobil, Skins
+- Windows Media Player Mobile Skins, Informationen
+- skins,Windows Media Player Mobile
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 920a672000e7e7c3a5f470cac9e05ecb38985311
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 87196eb39fdbe0977f4d5baf5d298f339bb84f77d22f9e2e5579549c779a6b5d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119246880"
 ---
 # <a name="windows-media-player-mobile-skins"></a>Windows Media Player Mobile Skins
 
-Windows Media Player Mobile-Software umfasst eine Standard Skin, die aus verschiedenen Schaltflächen und Schieberegler besteht, mit denen Sie digitale Medien wiedergeben, Zurückspulen oder beenden können. Ein Skin ist eine anpassbare Benutzeroberfläche, die eine eindeutige Darstellung und Funktionalität für Windows Media Player Mobile bereitstellt.
+Windows Media Player Mobile Software enthält eine Standardskin, die aus verschiedenen Schaltflächen und Schiebereglern besteht, mit denen Sie digitale Medien wiedergeben, zurückspulen oder beenden können. Eine Skin ist eine anpassbare Benutzeroberfläche, die eine einzigartige Darstellung und Funktionalität für Windows Media Player Mobile bietet.
 
 In den folgenden Abschnitten wird beschrieben, wie Skins für Windows Media Player Mobile erstellt werden.
 
@@ -25,13 +25,13 @@ In den folgenden Abschnitten wird beschrieben, wie Skins für Windows Media Play
 
 | `Section`                               | BESCHREIBUNG                                                                                                   |
 |---------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| [Informationen zu Skins](about-skins-mobile.md) | Erläutert die Konzepte, die erforderlich sind, um die Skin-Architektur und die Regeln zu verstehen, die Sie zum Erstellen eines Skin befolgen müssen |
-| [Skin Guide](skin-guide.md)          | Zeigt, wie eine einfache Skin erstellt wird.                                                                            |
-| [Skin-Referenz](skin-reference.md)  | Enthält ausführliche Verweise für alle Teile eines Skin.                                                     |
+| [Informationen zu Skins](about-skins-mobile.md) | Erläutert die Konzepte, die zum Verstehen der Skinarchitektur erforderlich sind, und die Regeln, die Sie befolgen müssen, um eine Skin zu erstellen. |
+| [Skin Guide](skin-guide.md)          | Zeigt, wie sie eine einfache Skin erstellen.                                                                            |
+| [Skin Reference](skin-reference.md)  | Enthält ausführliche Verweise für alle Teile einer Skin.                                                     |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -40,9 +40,9 @@ In den folgenden Abschnitten wird beschrieben, wie Skins für Windows Media Play
 [**Windows Media Player Skins**](windows-media-player-skins.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie im folgenden Artikel: instanceparameters. maxOpenTables-Eigenschaft'
-title: Instanceparameters. maxOpenTables (Eigenschaft)
+description: Weitere Informationen finden Sie unter InstanceParameters.MaxOpenTables (Eigenschaft).
+title: InstanceParameters.MaxOpenTables(Eigenschaft)
 TOCTitle: 'MaxOpenTables property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.InstanceParameters.MaxOpenTables
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instanceparameters.maxopentables(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 623d2f1fe536fb2b5916c96e97de8904fa5a7c86
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 30129e66a05116bfaab28fe737584c89b8b74fb0c8722b3d772c643f5165cffe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119039388"
 ---
-# <a name="instanceparametersmaxopentables-property"></a>Instanceparameters. maxOpenTables (Eigenschaft)
+# <a name="instanceparametersmaxopentables-property"></a>InstanceParameters.MaxOpenTables(Eigenschaft)
 
-Ruft die Anzahl der für diese Instanz reservierten B +-strukturressourcen ab oder legt Sie fest.
+Ruft die Anzahl der für diese Instanz reservierten B+-Strukturressourcen ab oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int MaxOpenTables { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Instanceparameters-Klasse](./instanceparameters-class.md)
+[InstanceParameters-Klasse](./instanceparameters-class.md)
 
-[Instanceparameters-Elemente](./instanceparameters-members.md)
+[InstanceParameters-Member](./instanceparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

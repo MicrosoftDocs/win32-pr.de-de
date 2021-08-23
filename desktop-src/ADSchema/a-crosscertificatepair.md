@@ -1,11 +1,11 @@
 ---
-title: Cross-Certificate-Pair-Attribut
-description: V3-Kreuz Zertifikat.
+title: Attribut "Zertifikatübergreifendes Paar"
+description: V3 – Zertifikatübergreifend.
 ms.assetid: a6a2df06-4792-4874-a507-80c42b0606ec
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Attribut übergreifende Paare
-- crossCertificatePair-Attribut, AD-Schema
+- Zertifikatübergreifendes Attribut-AD-Schema
+- crossCertificatePair-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f0c2bee3501cc2116330a75e38d573f2ca2e3eb
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 1751ee6142348ca1fd8a244690bcd02a245150142136589f362b0e67b57fd379
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119326870"
 ---
-# <a name="cross-certificate-pair-attribute"></a>Cross-Certificate-Pair-Attribut
+# <a name="cross-certificate-pair-attribute"></a>Attribut "Zertifikatübergreifendes Paar"
 
-V3-Kreuz Zertifikat.
+V3 – Zertifikatübergreifend.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | Zertifikat übergreifende Paare                                |
-| LDAP-Display-Name | crossCertificatePair                                  |
+| CN                | Zertifikatübergreifendes Paar                                |
+| Ldap-Anzeigename | crossCertificatePair                                  |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 2.5.4.40                                              |
-| System-ID-GUID    | 167757b2-47F 3-11d1-a9c3-0000b C1                  |
+| System-ID-GUID    | 167757b2-47f3-11d1-a9c3-0000f80367c1                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ V3-Kreuz Zertifikat.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ V3-Kreuz Zertifikat.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | 0x8025                                                                 |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
+| Ist einwertig       | False                                                                  |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -70,7 +70,7 @@ V3-Kreuz Zertifikat.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ V3-Kreuz Zertifikat.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | 0x8025                                                                 |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
+| Ist einwertig       | False                                                                  |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -100,10 +100,10 @@ V3-Kreuz Zertifikat.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | 0x8025                                                                 |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
+| Ist einwertig       | False                                                                  |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -121,10 +121,10 @@ V3-Kreuz Zertifikat.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | 0x8025                                                                 |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
+| Ist einwertig       | False                                                                  |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -142,10 +142,10 @@ V3-Kreuz Zertifikat.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | 0x8025                                                                 |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
+| Ist einwertig       | False                                                                  |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -163,10 +163,10 @@ V3-Kreuz Zertifikat.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | 0x8025                                                                 |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | False                                                                  |
+| Ist einwertig       | False                                                                  |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |

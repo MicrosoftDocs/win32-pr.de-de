@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ videobiosfeature-Klasse stellt die Funktionen der Low-Level-Software dar, die zum Konfigurieren und Zugreifen auf den Videocontroller und die Anzeige eines Computer Systems verwendet wird.
+description: Die CIM VideoBIOSFeature-Klasse stellt die Funktionen der Low-Level-Software dar, die zum Konfigurieren und Zugreifen auf den Videocontroller und die Anzeige eines \_ Computersystems verwendet wird.
 ms.assetid: a12ca387-5b12-487f-84fd-381afe266338
 ms.tgt_platform: multiple
 title: CIM_VideoBIOSFeature-Klasse
@@ -25,23 +25,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 45f9fd2feabdcd1f9e650e7e7a913a394e8ef67d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b84ec8a1f9a00b29e21706dd7fabe978740cb756675952b061d406dad8e233c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119020758"
 ---
-# <a name="cim_videobiosfeature-class"></a>CIM \_ videobiosfeature-Klasse
+# <a name="cim_videobiosfeature-class"></a>CIM \_ VideoBIOSFeature-Klasse
 
-Die **CIM \_ videobiosfeature** -Klasse stellt die Funktionen der Low-Level-Software dar, die zum Konfigurieren und Zugreifen auf den Videocontroller und die Anzeige eines Computer Systems verwendet wird.
+Die **CIM \_ VideoBIOSFeature-Klasse** stellt die Funktionen der Low-Level-Software dar, die zum Konfigurieren und Zugreifen auf den Videocontroller und die Anzeige eines Computersystems verwendet wird.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,50 +65,50 @@ class CIM_VideoBIOSFeature : CIM_SoftwareFeature
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ videobiosfeature** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ VideoBIOSFeature-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ videobiosfeature** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ VideoBIOSFeature-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
-Kurze Textbeschreibung des-Objekts.
+Kurze Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Charakteristicbeschreibungen**
+**CharacteristicDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Video-BIOS-Merkmal \| 001,4 "), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ videobiosfeature**.**Merkmale**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Video BIOS Characteristic \| 001.4"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ VideoBIOSFeature**.**Merkmale**")
 </dt> </dl>
 
-Freiform-Zeichen folgen, die ausführliche Beschreibungen der im Array **Merkmale** angegebenen Grafik-BIOS-Funktionen bereitstellen.
+Freiformzeichenfolgen, die ausführliche Beschreibungen für die BIOS-Videofeatures bereitstellen, die im **Array Characteristics angegeben** sind.
 
 > [!Note]  
-> Jeder Eintrag dieses Arrays bezieht sich auf den Eintrag im Array **Merkmale** , der sich am selben Index befindet.
+> Jeder Eintrag dieses Arrays bezieht sich  auf den Eintrag im Characteristics-Array, das sich am gleichen Index befindet.
 
  
 
@@ -117,16 +117,16 @@ Freiform-Zeichen folgen, die ausführliche Beschreibungen der im Array **Merkmal
 **Characteristics**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Video-BIOS-Merkmal \| 001,3 "), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ videobiosfeature**.**Charakteristicbeschreibungen**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Video BIOS Characteristic \| 001.3"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ VideoBIOSFeature**.**CharacteristicDescriptions**")
 </dt> </dl>
 
-Funktionen, die vom Video-BIOS unterstützt werden. Beispielsweise kann die Unterstützung für die VESA-Energie Verwaltung oder die Video-BIOS-shadowingtung angezeigt werden. Der Wert 3 ("unknown") ist im CIM-Schema ungültig, da er angibt, dass in DMI keine BIOS-Funktionen unterstützt werden. In diesem Fall sollte das Objekt nicht instanziiert werden.
+Vom Video-BIOS unterstützte Features. Beispielsweise könnte die Unterstützung für vesa power management oder video BIOS shadowing angegeben werden. Der Wert 3 ("Unbekannt") ist im CIM-Schema ungültig, da er darstellt, dass keine BIOS-Features in DMI unterstützt werden. In diesem Fall sollte das Objekt nicht instanziiert werden.
 
 <dt>
 
@@ -146,49 +146,49 @@ Funktionen, die vom Video-BIOS unterstützt werden. Beispielsweise kann die Unte
 
 <span id="Undefined"></span><span id="undefined"></span><span id="UNDEFINED"></span>
 
-Nicht **definiert** (3)
+**Nicht definiert** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Standard_Video_BIOS"></span><span id="standard_video_bios"></span><span id="STANDARD_VIDEO_BIOS"></span>
 
-**Standard-Grafik-BIOS** (4)
+**Standardvideo-BIOS** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="VESA_BIOS_Extensions_Supported"></span><span id="vesa_bios_extensions_supported"></span><span id="VESA_BIOS_EXTENSIONS_SUPPORTED"></span>
 
-**Unterstützte VESA-BIOS-Erweiterungen** (5)
+**Unterstützte VESA BIOS-Erweiterungen** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="VESA_Power_Management_Supported"></span><span id="vesa_power_management_supported"></span><span id="VESA_POWER_MANAGEMENT_SUPPORTED"></span>
 
-**Unterstützte VESA-Energie Verwaltung** (6)
+VeSA Power Management Supported (6) **(VeSA-Energieverwaltung unterstützt** (6))
 
 
 </dt> <dd></dd> <dt>
 
 <span id="VESA_Display_Data_Channel_Supported"></span><span id="vesa_display_data_channel_supported"></span><span id="VESA_DISPLAY_DATA_CHANNEL_SUPPORTED"></span>
 
-**VESA-Anzeigedaten Kanal unterstützt** (7)
+VESA Display Data Channel Supported (7) **(VeSA-Anzeigedatenkanal unterstützt** (7))
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Video_BIOS_Shadowing_Allowed"></span><span id="video_bios_shadowing_allowed"></span><span id="VIDEO_BIOS_SHADOWING_ALLOWED"></span>
 
-**Video-BIOS-shadodown zulässig** (8)
+Video BIOS Shadowing Allowed (8) **(Video-BIOS-Shadowing zulässig** (8))
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Video_BIOS_Upgradeable"></span><span id="video_bios_upgradeable"></span><span id="VIDEO_BIOS_UPGRADEABLE"></span>
 
-**Video-BIOS-aktualisierbar** (9)
+**Video BIOS Upgradeable** (9)
 
 
 </dt> <dd></dd> </dl>
@@ -198,104 +198,104 @@ Nicht **definiert** (3)
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
 </dt> </dl>
 
-Die Textbeschreibung des Objekts.
+Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **IdentifyingNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM- \_ Produkt**](cim-product.md).**Identifyingnumber**"), [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) (" DMTF \| ComponentID \| 001,4 ")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Product**](cim-product.md).**IdentifyingNumber**"), [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("DMTF \| ComponentID \| 001.4")
 </dt> </dl>
 
-Produktidentifizierung, z. b. eine Seriennummer auf Software oder eine Zahl auf einem Hardware Chip. Diese Eigenschaft wird von [**CIM \_ Softwarefeature**](cim-softwarefeature.md)geerbt.
+Produktidentifikation, z. B. eine Seriennummer für Software oder eine Die-Nummer auf einem Hardwarechip. Diese Eigenschaft wird von [**CIM \_ SoftwareFeature geerbt.**](cim-softwarefeature.md)
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installation date")
 </dt> </dl>
 
-Datum und Uhrzeit der Installation des-Objekts. Für diese Eigenschaft ist kein Wert erforderlich, um anzugeben, dass das Objekt installiert ist.
+Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft benötigt keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Die Bezeichnung, mit der das Objekt außerhalb des Datenverarbeitungssystems bekannt ist. Diese Bezeichnung ist ein Name, der das Element im Kontext des Namespace des Elements eindeutig identifiziert.
+Bezeichnung, mit der das Objekt außerhalb des Datenverarbeitungssystems bekannt ist. Diese Bezeichnung ist ein Name, der das Element im Kontext des Namespace des Elements eindeutig identifiziert.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **ProductName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM- \_ Produkt**](cim-product.md).**Name**"), [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) (" DMTF \| ComponentID \| 001,2 ")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Product**](cim-product.md).**Name**"), [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("DMTF \| ComponentID \| 001.2")
 </dt> </dl>
 
 Häufig verwendeter Produktname.
 
-Diese Eigenschaft wird von [**CIM \_ Softwarefeature**](cim-softwarefeature.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ SoftwareFeature geerbt.**](cim-softwarefeature.md)
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Aktueller Status des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Aktueller Status des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 Folgende Werte sind gültig:
 
@@ -317,35 +317,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird** gestartet ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Wird beendet** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -359,28 +359,28 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Striche** ("Strich")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Lost Comm** ("Lost Comm")
 
 
 </dt> <dd></dd> </dl>
@@ -390,46 +390,46 @@ Wird **beendet ("wird angehalten** ")
 **Hersteller**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM- \_ Produkt**](cim-product.md).**Vendor**"), [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) (" DMTF \| ComponentID \| 001,1 ")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Product**](cim-product.md).**Hersteller**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("DMTF \| ComponentID \| 001.1")
 </dt> </dl>
 
-Der Name des Lieferanten des Produkts, der der **Vendor** -Eigenschaft im Product-Objekt der DMTF-Lösung Exchange Standard (SES) entspricht.
+Name des Lieferanten des Produkts, der der **Vendor-Eigenschaft** im Produktobjekt der DMTF Solution Exchange Standard (SES) entspricht.
 
-Diese Eigenschaft wird von [**CIM \_ Softwarefeature**](cim-softwarefeature.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ SoftwareFeature geerbt.**](cim-softwarefeature.md)
 
 </dd> <dt>
 
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM- \_ Produkt**](cim-product.md).**Version**"), [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) (" DMTF \| ComponentID \| 001,3 ")
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-Produkt**](cim-product.md).**Version**"), [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("DMTF \| ComponentID \| 001.3")
 </dt> </dl>
 
-Produkt Versionsinformationen, die der **Version** -Eigenschaft im Product-Objekt der DMTF-SES entsprechen.
+Produktversionsinformationen, die der **Version-Eigenschaft** im Produktobjekt des DMTF-SES entsprechen.
 
-Diese Eigenschaft wird von [**CIM \_ Softwarefeature**](cim-softwarefeature.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ SoftwareFeature**](cim-softwarefeature.md)geerbt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ videobiosfeature** -Klasse wird von [**CIM \_ Softwarefeature**](cim-softwarefeature.md)abgeleitet.
+Die **CIM \_ VideoBIOSFeature-Klasse** wird von [**CIM \_ SoftwareFeature**](cim-softwarefeature.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -439,17 +439,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Softwarefeature**](cim-softwarefeature.md)
+[**CIM \_ SoftwareFeature**](cim-softwarefeature.md)
 </dt> </dl>
 
  

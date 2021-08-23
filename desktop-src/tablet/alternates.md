@@ -1,29 +1,29 @@
 ---
-description: Eine Alternative ist eine potenzielle Wort Übereinstimmung für ein Erkennungs Segment. Eine Erkennung generiert Alternativen und basiert Sie auf akzeptablen Übereinstimmungen von frei Hand Eingaben oder Audioeingaben mit einem Wörterbuch oder einer Faktoid.
+description: Eine Alternative ist eine potenzielle Worterkennung für ein Erkennungssegment. Eine Recognizer generiert Alternativen und basiert auf akzeptablen Übereinstimmungen der Frei- oder Audioeingabe für ein Wörterbuch oder factoid.
 ms.assetid: 69327f1d-f240-4b8a-8bee-0a96a0c425c2
 title: Alternative Stile
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 350c9ac97f0af1451a0ded6445cf658dad4ee4c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b76faf27b82a6bfc064fddbad3d2d4ca6c2dddc098d56bca340b677cea17a319
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343204"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119337040"
 ---
 # <a name="alternates"></a>Alternative Stile
 
-Eine Alternative ist eine potenzielle Wort Übereinstimmung für ein Erkennungs Segment. Eine Erkennung generiert Alternativen und basiert Sie auf akzeptablen Übereinstimmungen von frei Hand Eingaben oder Audioeingaben mit einem Wörterbuch oder einer Faktoid.
+Eine Alternative ist eine potenzielle Worterkennung für ein Erkennungssegment. Eine Recognizer generiert Alternativen und basiert auf akzeptablen Übereinstimmungen der Frei- oder Audioeingabe für ein Wörterbuch oder factoid.
 
 > [!Note]  
-> Die vertrauensbewertung ist derzeit nur für die Microsoft English (USA)-und Gesten Erkennungs Tools verfügbar.
+> Die Konfidenzauswertung ist derzeit nur für die Microsoft English (USA) und Gestenerkennung verfügbar.
 
  
 
-Manchmal kann die frei Hand Eingabe mehrdeutige Unterschiede zwischen Segmenten aufweisen. Die Erkennung vergleicht diese Segmente mit einem Erkennungs Wörterbuch, um mögliche Übereinstimmungen zu ermitteln. Wenn die Erkennung die Segmente vergleicht, behält Sie eine Liste möglicher alternativer Übereinstimmungen bei und weist jeder jeweils einen Vertrauensgrad zu.
+Manchmal kann die Ink-Datei mehrdeutige Unterschiede zwischen Segmenten haben. Die Recognizer vergleicht diese Segmente mit einem Recognizer-Wörterbuch, um mögliche Übereinstimmungen zu bestimmen. Wenn die Recognizer die Segmente vergleicht, verwaltet sie eine Liste möglicher alternativer Übereinstimmungen und weist jedem einen Konfidenzniveau zu, und es wird eine top-Auswahl getroffen.
 
 > [!Note]  
-> Die Erkennung kann keine Alternativen für einen Teil von frei Hand Eingaben bereitstellen, der kleiner als ein Erkennungs Segment ist.
+> Die Erkennung kann keine Alternativen für einen Teil der Ink bereitstellen, der kleiner als ein Erkennungssegment ist.
 
  
 

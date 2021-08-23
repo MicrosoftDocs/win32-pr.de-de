@@ -1,9 +1,9 @@
 ---
-title: LVM_GETSTRINGWIDTH Meldung (kommstrg. h)
-description: Bestimmt die Breite einer angegebenen Zeichenfolge unter Verwendung der aktuellen Schriftart des angegebenen Listenansicht-Steuer Elements. Sie können diese Nachricht explizit oder mithilfe des ListView \_ getstringwidth-Makros senden.
+title: LVM_GETSTRINGWIDTH (Commctrl.h)
+description: Bestimmt die Breite einer angegebenen Zeichenfolge unter Verwendung der aktuellen Schriftart des angegebenen Listenansicht-Steuerelements. Sie können diese Nachricht explizit oder mithilfe des \_ ListView-Makros GetStringWidth senden.
 ms.assetid: ffe97640-d4b6-45ae-be5d-71fed69c2026
 keywords:
-- Windows-Steuerelemente für LVM_GETSTRINGWIDTH Meldung
+- LVM_GETSTRINGWIDTH meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 71e27512eb7a2a260976356ed2a128b48975f9f3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9024cab94f59e543351e06d49ec058435ae369b6b746b1dc3fb2cd0472e3d57e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019308"
 ---
-# <a name="lvm_getstringwidth-message"></a>LVM \_ getstringwidth-Nachricht
+# <a name="lvm_getstringwidth-message"></a>LVM \_ GETSTRINGWIDTH-Nachricht
 
-Bestimmt die Breite einer angegebenen Zeichenfolge unter Verwendung der aktuellen Schriftart des angegebenen Listenansicht-Steuer Elements. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ getstringwidth**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getstringwidth) -Makros senden.
+Bestimmt die Breite einer angegebenen Zeichenfolge unter Verwendung der aktuellen Schriftart des angegebenen Listenansicht-Steuerelements. Sie können diese Nachricht explizit oder mithilfe des [**\_ ListView-Makros GetStringWidth**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getstringwidth) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,17 +37,17 @@ Bestimmt die Breite einer angegebenen Zeichenfolge unter Verwendung der aktuelle
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine NULL-terminierte Zeichenfolge.
+Zeiger auf eine auf NULL beendete Zeichenfolge.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Zeichen folgen Breite zurück, wenn erfolgreich, andernfalls 0 (null).
+Gibt die Zeichenfolgenbreite zurück, wenn erfolgreich, andernfalls 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die LVM \_ getstringwidth-Nachricht gibt die exakte Breite der angegebenen Zeichenfolge in Pixel zurück. Wenn Sie die zurückgegebene Zeichen folgen Breite als Spaltenbreite in der [**LVM-Nachricht \_ setcolumnwidth**](lvm-setcolumnwidth.md) verwenden, wird die Zeichenfolge abgeschnitten. Um die Spaltenbreite abzurufen, die die Zeichenfolge enthalten kann, ohne Sie zu kürzen, müssen Sie der zurückgegebenen Zeichen folgen Breite Auffüll Zeichen hinzufügen.
+Die LVM \_ GETSTRINGWIDTH-Nachricht gibt die genaue Breite der angegebenen Zeichenfolge in Pixel zurück. Wenn Sie die zurückgegebene Zeichenfolgenbreite als Spaltenbreite in der [**LVM \_ SETCOLUMNWIDTH-Meldung**](lvm-setcolumnwidth.md) verwenden, wird die Zeichenfolge abgeschnitten. Um die Spaltenbreite abzurufen, die die Zeichenfolge enthalten kann, ohne sie zu schneiden, müssen Sie der zurückgegebenen Zeichenfolgenbreite Auf padding hinzufügen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,10 +55,10 @@ Die LVM \_ getstringwidth-Nachricht gibt die exakte Breite der angegebenen Zeich
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **LVM \_ Getstringwidthw** (Unicode) und **LVM \_ getstringwidtha** (ANSI)<br/>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **LVM \_ GETSTRINGWIDTHW** (Unicode) und **LVM \_ GETSTRINGWID WIEGE** (ANSI)<br/>     |
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: 'D3DXQuaternionNormalize-Funktion (D3DX10Math.h): Berechnet eine Einheitslängen-Quaternion.'
+description: 'D3DXQuaternionNormalize-Funktion (D3DX10Math.h): Berechnet eine Quaternion der Einheitslänge.'
 ms.assetid: 6735a632-64d7-4bc1-b63e-d0cd27f5a29b
 title: D3DXQuaternionNormalize-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 6d031dfc63cb92d43a9cca27813c9425e2ff1acb
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b6664c6f5149066822197dd8ac2f76918c204ec5cb9e479b21c9793c885aeff2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991100"
 ---
 # <a name="d3dxquaternionnormalize-function-d3dx10mathh"></a>D3DXQuaternionNormalize-Funktion (D3DX10Math.h)
 
-Berechnet eine Einheitslängen-Quaternion.
+Berechnet eine Quaternion der Einheitslänge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ D3DXQUATERNION* D3DXQuaternionNormalize(
 
 Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
-Zeiger auf [**D3DXQUATERNION,**](d3d10-d3dxquaternion.md) das das Ergebnis des Vorgangs ist.
+Zeiger auf das [**D3DXQUATERNION-Steuerelement,**](d3d10-d3dxquaternion.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
@@ -63,9 +63,9 @@ Zeiger auf die D3DXQUATERNION-Quellstruktur.
 
 Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
-Zeiger auf eine D3DXQUATERNION-Struktur, die der Normalität der Quaternion entspricht.
+Zeiger auf eine D3DXQUATERNION-Struktur, die die Normale der Quaternion ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXQuaternionNormalize-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -73,14 +73,14 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

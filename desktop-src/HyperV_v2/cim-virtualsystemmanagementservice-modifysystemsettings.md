@@ -1,7 +1,7 @@
 ---
-description: Ändert die Einstellungen des virtuellen Systems.
+description: Ändert einstellungen des virtuellen Systems.
 ms.assetid: 9c3d28f8-9806-411a-866f-d062c6d31818
-title: Modifysystemsettings-Methode der CIM_VirtualSystemManagementService-Klasse
+title: ModifySystemSettings-Methode der CIM_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: da610d03e683b06ad743d1b6d4fe413dc5b31d34
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 82b35038d3c358645478b82e5c2c5ef023941ab3fc443299b2c493522c822878
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959404"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068630"
 ---
-# <a name="modifysystemsettings-method-of-the-cim_virtualsystemmanagementservice-class"></a>Modifysystemsettings-Methode der CIM \_ virtualsystemmanagementservice-Klasse
+# <a name="modifysystemsettings-method-of-the-cim_virtualsystemmanagementservice-class"></a>ModifySystemSettings-Methode der CIM \_ VirtualSystemManagementService-Klasse
 
-Ändert die Einstellungen des virtuellen Systems.
+Ändert einstellungen des virtuellen Systems.
 
-Wenn Sie auf die Systemeinstellungen einer "aktuellen" virtuellen Systemkonfiguration angewendet werden, kann die virtuelle System Instanz als Nebeneffekt geändert werden.
+Bei Anwendung auf die Systemeinstellungen einer "aktuellen" konfiguration des virtuellen Systems kann die virtuelle Systeminstanz als Nebeneffekt geändert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ uint32 ModifySystemSettings(
 
 <dl> <dt>
 
-*SystemSettings* \[ in\]
+*SystemSettings* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die eine Instanz der Klasse [**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md) enthält, die zum Ändern der Einstellungen des virtuellen Systems verwendet wird. Die Instanz muss eine gültige **InstanceId** aufweisen, um die zu ändernde Einstellung des virtuellen Systems zu identifizieren.
+Zeichenfolge, die eine Instanz der [**Cim \_ VirtualSystemSettingData-Klasse**](cim-virtualsystemsettingdata.md) enthält, die zum Ändern der Einstellungen des virtuellen Systems verwendet wird. Die Instanz muss über eine gültige **Instanz-ID** verfügen, um die zu ändernde Einstellung des virtuellen Systems zu identifizieren.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang lange ausgeführt wird, kann optional ein [**CIM-" \_ concretejob**](cim-concretejob.md) " zurückgegeben werden, der den Auftrag darstellt.
+Wenn der Vorgang lange ausgeführt wird, kann optional ein [**CIM \_ ConcreteJob**](cim-concretejob.md) zurückgegeben werden, der den Auftrag darstellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
@@ -68,7 +68,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -77,22 +77,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-Nicht **kompatible Parameter** (6)
+**Inkompatible Parameter** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -103,17 +103,17 @@ Nicht **kompatible Parameter** (6)
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ virtualsystemmanagementservice**](cim-virtualsystemmanagementservice.md)
+[**CIM \_ VirtualSystemManagementService**](cim-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

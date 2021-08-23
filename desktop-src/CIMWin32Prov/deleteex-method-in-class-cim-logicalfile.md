@@ -1,5 +1,5 @@
 ---
-description: Die DeleteEx-Methode löscht die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist. Diese Methode ist eine erweiterte Version der Delete-Methode.
+description: Die DeleteEx-Methode löscht die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist. Diese Methode ist eine erweiterte Version der Delete-Methode.
 ms.assetid: 53785f2e-8796-446c-8228-9abc2d9a0d68
 ms.tgt_platform: multiple
 title: DeleteEx-Methode der CIM_LogicalFile-Klasse
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: e4f9799513111ff53bb97c14feaf70c922dfb085
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 715e7bbe0b6346ff6e00cc9812e9a154debe10ac8315ab74f67471ff4c1658e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080094"
 ---
-# <a name="deleteex-method-of-the-cim_logicalfile-class"></a>DeleteEx-Methode der CIM \_ LogicalFile-Klasse
+# <a name="deleteex-method-of-the-cim_logicalfile-class"></a>DeleteEx-Methode der \_ CIM LogicalFile-Klasse
 
-Die **DeleteEx** -Methode löscht die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist. Diese Methode ist eine erweiterte Version der [**Delete**](delete-method-in-class-cim-logicalfile.md) -Methode.
+Die **DeleteEx-Methode** löscht die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist. Diese Methode ist eine erweiterte Version der [**Delete-Methode.**](delete-method-in-class-cim-logicalfile.md)
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,23 +48,23 @@ uint32 DeleteEx(
 
 <dl> <dt>
 
-*Stop filename* \[ vorgenommen\]
+*StopFileName* \[ out\]
 </dt> <dd>
 
-Eine Zeichenfolge, die den Namen der Datei (oder des Verzeichnisses) darstellt, in der die Methode fehlgeschlagen ist. Dieser Parameter ist NULL, wenn die Methode erfolgreich ist.
+Zeichenfolge, die den Namen der Datei (oder des Verzeichnisses) darstellt, in der die Methode fehlgeschlagen ist. Dieser Parameter ist NULL, wenn die Methode erfolgreich ist.
 
 </dd> <dt>
 
-*Startdateiname* \[ in, optional\]
+*StartFileName* \[ in, optional\]
 </dt> <dd>
 
-Zeichenfolge, die die untergeordnete Datei (oder das Verzeichnis) benennt, die als Ausgangspunkt für die Methode verwendet werden soll. In der Regel handelt es sich bei diesem Parameter um den *StopFileName* -Parameter, der die Datei oder das Verzeichnis angibt, in dem ein Fehler aus dem vorherigen Methoden aufzurufen Wenn dieser Parameter NULL ist, wird der Vorgang für die im [**ExecMethod**](/windows/desktop/WmiSdk/swbemservices-execmethod) -Befehl angegebene Datei oder das Verzeichnis ausgeführt.
+Zeichenfolge, die die untergeordnete Datei (oder das Verzeichnis) benennt, die als Ausgangspunkt für die Methode verwendet werden soll. In der Regel ist dieser Parameter der *StopFileName-Parameter,* der die Datei oder das Verzeichnis angibt, bei der beim vorherigen Methodenaufruf ein Fehler aufgetreten ist. Wenn dieser Parameter NULL ist, wird der Vorgang für die Datei oder das Verzeichnis ausgeführt, die bzw. das im [**ExecMethod-Aufruf**](/windows/desktop/WmiSdk/swbemservices-execmethod) angegeben ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg den Wert 0 (null) zurück, und jede andere Zahl gibt einen Fehler an.
+Gibt bei Erfolg den Wert 0 (null) und eine beliebige andere Zahl zurück, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -82,16 +82,16 @@ Erfolg.
 
 2
 
-Zugriff verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
-**Nicht spezifizierter Fehler**
+**Nicht angegebener Fehler**
 </dt> <dd>
 
 8
 
-Nicht spezifizierter Fehler.
+Nicht angegebener Fehler.
 
 </dd> <dt>
 
@@ -104,7 +104,7 @@ Ungültiges Objekt.
 
 </dd> <dt>
 
-**Objekt ist bereits vorhanden.**
+**Objekt ist bereits vorhanden**
 </dt> <dd>
 
 10
@@ -118,7 +118,7 @@ Das Objekt ist bereits vorhanden.
 
 11
 
-Das Dateisystem ist nicht NTFS.
+Dateisystem nicht NTFS.
 
 </dd> <dt>
 
@@ -136,7 +136,7 @@ Plattform nicht Windows.
 
 13
 
-Das Laufwerk ist nicht identisch.
+Laufwerk nicht identisch.
 
 </dd> <dt>
 
@@ -149,7 +149,7 @@ Das Laufwerk ist nicht identisch.
 
 </dd> <dt>
 
-**Freigabe Verletzung**
+**Verletzung der Freigabe**
 </dt> <dd>
 
 15
@@ -167,12 +167,12 @@ Ungültige Startdatei.
 
 </dd> <dt>
 
-**Berechtigung nicht aufrechterhalten**
+**Berechtigung nicht gehalten**
 </dt> <dd>
 
 17
 
-Die Berechtigung wurde nicht aufrechterhalten.
+Die Berechtigung wurde nicht gehalten.
 
 </dd> <dt>
 
@@ -185,11 +185,11 @@ Ungültiger Parameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird zurzeit nicht von WMI implementiert. Um diese Methode verwenden zu können, müssen Sie Sie in Ihrem eigenen Anbieter implementieren.
+Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -199,8 +199,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

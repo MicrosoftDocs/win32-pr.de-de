@@ -1,21 +1,21 @@
 ---
-description: Die Put \_ machineaddress-Methode legt die Computer Adresse des Ursprungs Hosts fest.
+description: Die \_ Put MachineAddress-Methode legt die Computeradresse des ursprünglichen Hosts fest.
 ms.assetid: f4af55b1-e20b-4fe8-a15e-a1a68d22f1b9
-title: Itsdp::p ut_MachineAddress-Methode (sdpblb. h)
+title: ITSdp::p ut_MachineAddress-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ec09d41cb7735383f08ce8c8983331165c54fa8a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 974286e846268686423d0ebdbbd083d07e9946401cb0192713b200b2354b89c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060798"
 ---
-# <a name="itsdpput_machineaddress-method"></a>Itsdp::p UT \_ machineaddress-Methode
+# <a name="itsdpput_machineaddress-method"></a>ITSdp::p ut \_ MachineAddress-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Put \_ machineaddress** -Methode legt die Computer Adresse des Ursprungs Hosts fest.
+Die **\_ Put MachineAddress-Methode** legt die Computeradresse des ursprünglichen Hosts fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT put_MachineAddress(
 
 <dl> <dt>
 
-*pmachineaddress* \[ in\]
+*pMachineAddress* \[ In\]
 </dt> <dd>
 
-Zeiger auf einen **BSTR** -Wert, der die Computer Adresse des Konferenz Hosts enthält.
+Zeiger auf einen **BSTR,** der die Computeradresse des Konferenzhosts enthält.
 
 </dd> </dl>
 
@@ -48,22 +48,22 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                        |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                       |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *pmachineaddress* -Parameter ist kein gültiger Zeiger.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/>    |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                      |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                     |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *pMachineAddress-Parameter* ist kein gültiger Zeiger.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/>    |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                      |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung muss " [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) " verwenden, um Speicher für den *pmachineaddress* -Parameter zuzuweisen, und " [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) " verwenden, um den Arbeitsspeicher freizugeben, wenn die Variable nicht mehr benötigt wird.
+Die Anwendung muss [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) verwenden, um Arbeitsspeicher für den *pMachineAddress-Parameter* zu belegen, und [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den Arbeitsspeicher freizugeben, wenn die Variable nicht mehr benötigt wird.
 
-Der *pmachineaddress* -Parameter kann entweder ein DNS-Name ("johnsmith.workinghard.Microsoft.com") oder eine IP-Adresse ("10.111.222.111") sein.
+Der *pMachineAddress-Parameter* kann entweder ein DNS-Name ("JohnSmith.workinghard.microsoft.com") oder eine IP-Adresse ("10.111.222.111") sein.
 
-Diese Funktion kann Daten in unverschlüsselter Form über das Netzwerk senden. aus diesem Grund kann ein Benutzer, der sich im Netzwerk befindet, möglicherweise die Daten lesen. Das Sicherheitsrisiko, dass Daten im Klartext gesendet werden, sollte vor der Verwendung dieser Methode berücksichtigt werden.
+Diese Funktion kann Daten über das Kabel in unverschlüsselter Form senden. Daher kann eine Person, die im Netzwerk lauscht, die Daten lesen. Das Sicherheitsrisiko beim Senden der Daten in Klartext sollte vor der Verwendung dieser Methode berücksichtigt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,9 +71,9 @@ Diese Funktion kann Daten in unverschlüsselter Form über das Netzwerk senden. 
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
@@ -82,10 +82,10 @@ Diese Funktion kann Daten in unverschlüsselter Form über das Netzwerk senden. 
 
 <dl> <dt>
 
-[**Itsdp**](itsdp.md)
+[**ITSdp**](itsdp.md)
 </dt> <dt>
 
-[**Itsdp:: get \_ machineaddress**](itsdp-get-machineaddress.md)
+[**ITSdp::get \_ MachineAddress**](itsdp-get-machineaddress.md)
 </dt> </dl>
 
  

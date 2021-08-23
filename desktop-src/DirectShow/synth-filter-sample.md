@@ -1,73 +1,73 @@
 ---
-description: Beispiel für einen Synthesizer
+description: Synth-Filterbeispiel
 ms.assetid: 2d087967-3734-463f-bc5e-9552290ddc0b
-title: Beispiel für einen Synthesizer
+title: Synth-Filterbeispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cd569091df92eca3fbff4d8cb200150d6e6bfdca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 01a3a366a6612aadf653b5af13099dbc8a4f08c2fb828bca6e64514cb1801e4a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119291191"
 ---
-# <a name="synth-filter-sample"></a>Beispiel für einen Synthesizer
+# <a name="synth-filter-sample"></a>Synth-Filterbeispiel
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Der synfilterfilter ist ein Quell Filter, der audiowaveforms generiert.
+Der Synth-Filter ist ein Quellfilter, der Audio-Waveforms generiert.
 
-Dieser Filter veranschaulicht das dynamische Diagramm. Er kann zwischen nicht komprimiertem PCM-Audiodaten und komprimiertem MS \_ ADPCM-Format (Microsoft Adaptive Delta Pulse Code Modulation) wechseln.
+Dieser Filter veranschaulicht das Erstellen dynamischer Diagramme. Sie kann zwischen unkomprimiertem PCM-Audio und komprimiertem MS \_ ADPCM-Format (Microsoft Adaptive Delta Pulse Code Codes Codes) wechseln.
 
-Dieser Filter wird in GraphEdit als "audiosynthesizer-Filter" angezeigt.
+Dieser Filter wird in GraphEdit als "Audiosynthetizerfilter" angezeigt.
 
-Weitere Informationen zum Aufbau dynamischer Diagramme finden Sie unter [Dynamic Graph Building](dynamic-graph-building.md).
+Weitere Informationen zum Erstellen von dynamischen Diagrammen finden Sie unter [Dynamic Graph Building](dynamic-graph-building.md).
 
 ## <a name="usage"></a>Verbrauch
 
-Mithilfe des synthingfilters kann der Benutzer die Wellenform, Häufigkeit, Anzahl der Kanäle und andere Eigenschaften über die Eigenschaften Seite festlegen. Halten Sie die UMSCHALTTASTE gedrückt, während Sie den Schieberegler für die Häufigkeit anpassen. Der Filter unterstützt auch eine benutzerdefinierte Schnittstelle, ISynth2, um diese Eigenschaften festzulegen.
+Mit dem Synth-Filter kann der Benutzer die Wellenform, Häufigkeit, Anzahl von Kanälen und andere Eigenschaften über die Eigenschaftenseite festlegen. Um entweder den oberen oder unteren Endpunkt des Swept-Frequenzbereichs einzustellen, halten Sie die UMSCHALT-Schieberegler fest, während Sie den Schieberegler für die Häufigkeit anpassen. Der Filter unterstützt auch die benutzerdefinierte Schnittstelle ISynth2 zum Festlegen dieser Eigenschaften.
 
-Führen Sie die folgenden Schritte aus, um die Funktion zum entwickeln dynamischer Diagramme zu veranschaulichen:
+Gehen Sie wie folgt vor, um das Feature zum Erstellen dynamischer Graphen zu veranschaulichen:
 
-1.  Erstellen Sie den Filter, und registrieren Sie ihn mit dem regsvr32-Hilfsprogramm.
+1.  Erstellen Sie den Filter, und registrieren Sie ihn mit dem Regsvr32-Hilfsprogramm.
 2.  Starten Sie GraphEdit.
-3.  Fügen Sie den audiosynthesizer-Filter ein. Sie wird in der Kategorie DirectShow-Filter angezeigt.
-4.  Renderdas Ausgabe-PIN des Filters.
-5.  Klicken Sie auf die Schaltfläche **abspielen** .
-6.  Öffnen Sie die Eigenschaften Seite des Filters.
-7.  Wählen Sie im Bereich Ausgabe Format die Option PCM oder Microsoft ADPCM aus.
+3.  Fügen Sie den Filter AudioSynthetizer ein. Sie wird in der Kategorie DirectShow-Filter angezeigt.
+4.  Rendern Sie den Ausgabepin des Filters.
+5.  Klicken Sie auf **die Schaltfläche Wiedergabe.**
+6.  Öffnen Sie die Eigenschaftenseite des Filters.
+7.  Wählen Sie im Bereich Ausgabeformat die Option PCM oder Microsoft ADPCM aus.
 
-## <a name="programming-notes"></a>Programmier Hinweise
+## <a name="programming-notes"></a>Programmierhinweise
 
 Dieses Beispiel enthält die folgenden Dateien:
 
--   Dynsrc. h, dynsrc. cpp: enthält zwei Basisklassen für Quell Filter, die die dynamische Diagramm Erbauung, cdynamicsource und cdynamicsourcestream unterstützen.
--   Isynth. h: deklariert die benutzerdefinierte ISynth2-Schnittstelle für das Festlegen von Eigenschaften für den Filter.
--   Resource. h: enthält Ressourcen Konstanten.
--   Synth. DEF: exportiert die DLL-Funktionen, die von der com-Bibliothek benötigt werden.
--   Synth. h, Synth. cpp: enthält die caudiosynth-Klasse, die die Audiodaten generiert, und die csynthfilter-Klasse, die den Filter implementiert.
--   Synth. RC: enthält Ressourcen, die vom Filter verwendet werden.
--   Synthprp. h, synthprp. cpp: Implementiert die Eigenschaften Seite des Filters.
+-   Dynsrc.h, Dynsrc.cpp: Enthält zwei Basisklassen für Quellfilter, die das Erstellen dynamischer Diagramme unterstützen: CDynamicSource und CDynamicSourceStream.
+-   ISynth.h: Deklariert die benutzerdefinierte ISynth2-Schnittstelle zum Festlegen von Eigenschaften für den Filter.
+-   Resource.h: Enthält Ressourcenkonst constants.
+-   Synth.def: Exportiert die dll-Funktionen, die von der COM-Bibliothek benötigt werden.
+-   Synth.h, Synth.cpp: Enthält die CAudioSynth-Klasse, die die Audiodaten generiert, und die CSynthFilter-Klasse, die den Filter implementiert.
+-   Synth.rc: Enthält ressourcen, die vom Filter verwendet werden.
+-   Synthprp.h, Synthprp.cpp: Implementiert die Eigenschaftenseite des Filters.
 
-Die cdynamicsource-Klasse wird von der [**CSource**](csource.md) -Basisklasse angepasst. Sie verwendet mindestens einen aus der cdynamicsourcestream-Klasse abgeleiteten Ausgabe Pins. Die cdynamicsourcestream-Klasse wird von der [**csourcestream**](csourcestream.md) -Klasse angepasst, wird jedoch von der [**cdynamicoutputpin**](cdynamicoutputpin.md) -Klasse anstelle der [**cbaseoutputpin**](cbaseoutputpin.md) -Klasse abgeleitet.
+Die CDynamicSource-Klasse wird von der [**CSource-Basisklasse**](csource.md) angepasst. Sie verwendet einen oder mehrere Ausgabepins, die von der CDynamicSourceStream-Klasse abgeleitet wurden. Die CDynamicSourceStream-Klasse wird von der [**CSourceStream-Klasse**](csourcestream.md) angepasst, wird jedoch von der [**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md) und nicht von der [**CBaseOutputPin-Klasse**](cbaseoutputpin.md) ableiten.
 
-Die cdynamicsource-Klasse verfügt über die folgenden Methoden, die in [**CSource**](csource.md)nicht gefunden werden:
+Die CDynamicSource-Klasse verfügt über die folgenden Methoden, die in [**CSource nicht gefunden wurden:**](csource.md)
 
--   Stop: signalisiert das Stop-Ereignis ([**cdynamicoutputpin:: m \_ hstopevent**](cdynamicoutputpin-m-hstopevent.md)) und fährt den Arbeits Thread für alle nicht verbundenen Pins herunter. Bei einer verbundenen PIN wird der Arbeitsthread von der inaktiven PIN der PIN heruntergefahren.
--   Anhalten: setzt das anhalteereignis zurück.
--   Joinfiltergraph: Ruft die [**cdynamicoutputpin:: setconfiginfo**](cdynamicoutputpin-setconfiginfo.md) -Methode für jede PIN auf.
+-   Stop: Signalisiert das Stop-Ereignis ([**CDynamicOutputPin::m \_ hStopEvent**](cdynamicoutputpin-m-hstopevent.md)) und fährt den Arbeitsthread für alle nicht verbundenen Pins herunter. Bei einem verbundenen Pin fährt die Inaktiv-Methode des Pins den Arbeitsthread herunter.
+-   Anhalten: Setzt das Stoppereignis zurück.
+-   JoinFilterGraph: Ruft die [**CDynamicOutputPin::SetConfigInfo-Methode**](cdynamicoutputpin-setconfiginfo.md) für jeden Pin auf.
 
-Die cdynamicsourcestream-Klasse verfügt über die folgenden Methoden, die nicht in [**csourcestream**](csourcestream.md)gefunden wurden:
+Die CDynamicSourceStream-Klasse verfügt über die folgenden Methoden, die in [**CSourceStream nicht gefunden wurden:**](csourcestream.md)
 
--   Destroysourcethread: schließt den Arbeits Thread.
--   FatalError: signalisiert dem Filter Diagramm-Manager einen Fehler.
--   Outputpinneedstobereconnected: signalisiert, dass die Ausgabe-PIN erneut verbunden werden soll. Wenn diese Methode aufgerufen wird, ruft der Arbeits Thread die [**cdynamicoutputpin::D ynamikreconnect**](cdynamicoutputpin-dynamicreconnect.md) -Methode auf, um die PIN erneut zu verbinden.
+-   DestroySourceThread: Fährt den Arbeitsthread herunter.
+-   FatalError: Signalisiert einen Fehler an den Filtergraph-Manager.
+-   OutputPinNeedsToBeReconnected: Signalisiert, dass der Ausgabepin erneut verbunden werden soll. Wenn diese Methode aufgerufen wird, ruft der Arbeitsthread die [**CDynamicOutputPin::D ynamicReconnect-Methode**](cdynamicoutputpin-dynamicreconnect.md) auf, um die Verbindung mit dem Pin wiederherzustellen.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Zum Herunterladen der DirectShow SDK-Beispiele installieren Sie die neueste Version der [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx).
+Um die DirectShow SDK-Beispiele herunterzuladen, installieren Sie die neueste Version des [Windows SDK.](https://msdn.microsoft.com/windowsvista/bb980924.aspx)
 
-Dieses Beispiel wird unter folgendem Pfad installiert: *\[ SDK \] root* \\ Samples \\ Multimedia \\ DirectShow \\ Filters \\ Synthesizer.
+Dieses Beispiel wird unter dem folgenden Pfad installiert: *\[ SDK \] Root* Samples Multimedia \\ \\ \\ DirectShow Filters \\ \\ Synth.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

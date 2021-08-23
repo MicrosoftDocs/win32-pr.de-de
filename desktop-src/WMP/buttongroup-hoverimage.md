@@ -1,9 +1,9 @@
 ---
-title: ButtonGroup. hoverimage
-description: Das hoverimage-Attribut gibt den Namen des Bilds an, das den Hover-Zustand einer Schaltfläche in der ButtonGroup darstellt, oder ruft ihn ab. Der Hover-Zustand tritt auf, wenn sich die Schaltfläche im Zustand "up" befindet und der Benutzer mit der Maus darauf zeigt.
+title: BUTTONGROUP.hoverImage
+description: Das hoverImage-Attribut gibt den Namen des Bilds an, das den Hoverzustand einer Schaltfläche in BUTTONGROUP darstellt, oder ruft den Namen des Bilds ab. Der Hoverzustand tritt auf, wenn sich die Schaltfläche im Zustand "Up" befindet und der Benutzer mit der Maus darauf zeigen soll.
 ms.assetid: 319b8770-8c4a-441a-ad03-9ff895958cf2
 keywords:
-- ButtonGroup. hoverimage-Fenster Media Player
+- BUTTONGROUP.hoverImage Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 702a7aa73f5800628fdf14deb0dbfe142cd80dbf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3ee872c06d405d0f9cf5c09f59a86ba1962d0a5b349460c978e37fb5022f1d60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135903"
 ---
-# <a name="buttongrouphoverimage"></a>ButtonGroup. hoverimage
+# <a name="buttongrouphoverimage"></a>BUTTONGROUP.hoverImage
 
-Das **hoverimage** -Attribut gibt den Namen des Bilds an, das den Hover-Zustand einer Schaltfläche in der **ButtonGroup** darstellt, oder ruft ihn ab. Der Hover-Zustand tritt auf, wenn sich die Schaltfläche im Zustand "up" befindet und der Benutzer mit der Maus darauf zeigt.
+Das **hoverImage-Attribut** gibt den Namen des Bilds an, das den Hoverzustand einer Schaltfläche in **buttongroup darstellt,** oder ruft den Namen des Bilds ab. Der Hoverzustand tritt auf, wenn sich die Schaltfläche im Zustand "Up" befindet und der Benutzer mit der Maus darauf zeigen soll.
 
 ``` syntax
         elementID.hoverImage
@@ -29,21 +29,21 @@ Das **hoverimage** -Attribut gibt den Namen des Bilds an, das den Hover-Zustand 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die unterstützten Bildformate sind BMP, JPG, PNG und GIF. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können seine Farbton-und Sättigungswerte mithilfe der Attribute **hueshift** und **Sättigung** dynamisch geändert werden.
+Die unterstützten Bildformate sind BMP, JPG, PNG und GIF. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können die Farbton- und Sättigungswerte mithilfe der Attribute **hueShift** und **saturation** dynamisch geändert werden.
 
-Das Standardbild ist das im **Image** -Attribut angegebene oder sein Standardbild.
+Das Standardbild ist das  im Imageattribut angegebene Image oder dessen Standardbild.
 
-Wenn das Hover-Bild größer als der definierte Bereich ist, wird das Hover-Bild beschnitten.
+Wenn das Bild mit dem Mauszeiger größer als der definierte Bereich ist, wird das Bild mit dem Mauszeiger zugeschnitten.
 
-Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild) angezeigt.
+Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das bild red-x) angezeigt.
 
 ## <a name="examples"></a>Beispiele
 
-Siehe *ButtonElement*. [mappingColor](buttonelement-mappingcolor.md) -Attribut für ein Beispiel, das die Verwendung dieses Attributs veranschaulicht.
+Weitere Informationen finden Sie unter *BUTTONELEMENT*. [mappingColor-Attribut](buttonelement-mappingcolor.md) für ein Beispiel, das die Verwendung dieses Attributs veranschaulicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,24 +51,24 @@ Siehe *ButtonElement*. [mappingColor](buttonelement-mappingcolor.md) -Attribut f
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ButtonGroup-Element**](buttongroup-element.md)
+[**BUTTONGROUP-Element**](buttongroup-element.md)
 </dt> <dt>
 
-[**ButtonGroup. hueshift**](buttongroup-hueshift.md)
+[**BUTTONGROUP.hueShift**](buttongroup-hueshift.md)
 </dt> <dt>
 
-[**ButtonGroup. Image**](buttongroup-image.md)
+[**BUTTONGROUP.image**](buttongroup-image.md)
 </dt> <dt>
 
-[**ButtonGroup. Sättigung**](buttongroup-saturation.md)
+[**BUTTONGROUP.saturation**](buttongroup-saturation.md)
 </dt> </dl>
 
  

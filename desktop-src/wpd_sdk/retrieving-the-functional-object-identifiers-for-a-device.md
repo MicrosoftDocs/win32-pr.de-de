@@ -1,36 +1,36 @@
 ---
-description: Abrufen der funktionalen Objekt Bezeichner für ein Gerät
+description: Abrufen der funktionalen Objektbezeichner für ein Gerät
 ms.assetid: 9a13071a-95a1-4330-92d5-11fa72a8f211
-title: Abrufen der funktionalen Objekt Bezeichner für ein Gerät
+title: Abrufen der funktionalen Objektbezeichner für ein Gerät
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f6a753324e24a6b78625a78b4128380288b6672f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 93d0cc686a6997c10e26e3d83190503bba09fe15afc7f4e0cf75e297f0d905f2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119263000"
 ---
-# <a name="retrieving-the-functional-object-identifiers-for-a-device"></a>Abrufen der funktionalen Objekt Bezeichner für ein Gerät
+# <a name="retrieving-the-functional-object-identifiers-for-a-device"></a>Abrufen der funktionalen Objektbezeichner für ein Gerät
 
-Wie bereits im Thema [Abrufen der von einem Gerät unterstützten funktionalen Kategorien](retrieving-the-functional-categories-supported-by-a-device.md) beschrieben, unterstützen tragbare Windows-Geräte möglicherweise mindestens eine Funktions Kategorie. Eine bestimmte funktionale Kategorie unterstützt möglicherweise ein oder mehrere funktionale Objekte. Beispielsweise kann die Speicher Kategorie drei funktionale Speicher Objekte unterstützen, die jeweils durch eine eindeutige Bezeichnerzeichenfolge identifiziert werden. Das erste Speicher Objekt kann dann durch die Zeichenfolge "Storage1", die zweite durch die Zeichenfolge "Storage2" und das dritte durch die Zeichenfolge "Storage3" identifiziert werden.
+Wie im Thema [Abrufen](retrieving-the-functional-categories-supported-by-a-device.md) der von einem Gerät unterstützten funktionalen Kategorien erwähnt, unterstützt Windows portable Geräte möglicherweise mindestens eine Funktionale Kategorie. Jede funktionstüchtige Kategorie kann ein oder mehrere funktionale Objekte unterstützen. Beispielsweise kann die Speicherkategorie drei funktionale Speicherobjekte unterstützen, von denen jedes durch eine eindeutige Bezeichnerzeichenfolge identifiziert wird. Das erste Speicherobjekt kann dann durch die Zeichenfolge "Storage1", das zweite durch die Zeichenfolge "Storage2" und das dritte durch die Zeichenfolge "Storage3" identifiziert werden.
 
-Die listfunctionalobjects-Funktion im Modul devicecapabili. cpp veranschaulicht das Abrufen von Inhaltstypen für die Funktions Kategorien, die von einem ausgewählten Gerät unterstützt werden.
+Die ListFunctionalObjects-Funktion im DeviceCapabilities.cpp-Modul veranschaulicht das Abrufen von Inhaltstypen für die funktionskategorien, die von einem ausgewählten Gerät unterstützt werden.
 
-Die Anwendung kann die von einem Gerät unterstützten funktionalen Kategorien mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen abrufen.
+Ihre Anwendung kann die von einem Gerät unterstützten Funktionalen Kategorien mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen abrufen.
 
 
 
 | Schnittstelle                                                                                      | BESCHREIBUNG                                                   |
 |------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| [**Iportabledebug-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)                   | Bietet Zugriff auf die Methoden zum Abrufen von funktionalen Kategorien. |
-| [**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird zum Auflisten und Speichern von funktionalen Kategorieinformationen verwendet.         |
+| [**IPortableDeviceCapabilities-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)                   | Ermöglicht den Zugriff auf die Funktionskategorieabrufmethoden. |
+| [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird zum Aufzählen und Speichern von Daten der Funktionalen Kategorie verwendet.         |
 
 
 
  
 
-Der in der listfunctionalobjects-Funktion gefundene Code ist nahezu identisch mit dem Code in der listfunctionalcategories-Funktion. (Weitere Informationen finden Sie im Thema [Abrufen von funktionalen Kategorien, die von einem Gerät unterstützt werden](retrieving-the-functional-categories-supported-by-a-device.md) . Der einzige Unterschied besteht im Aufrufen der [**iportabledevicecapabili:: getfunctionalobjects**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecapabilities-getfunctionalobjects) -Methode, die in der Schleife angezeigt wird, die die funktionalen Kategorien durchläuft.
+Der code in der ListFunctionalObjects-Funktion ist fast identisch mit dem Code in der ListFunctionalCategories-Funktion. (Weitere Informationen finden Sie im Thema Abrufen von [funktionstüchtigen Kategorien, die von einem Gerät unterstützt](retrieving-the-functional-categories-supported-by-a-device.md) werden.) Der einzige Unterschied besteht im Aufruf der [**IPortableDeviceCapabilities::GetFunctionalObjects-Methode,**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecapabilities-getfunctionalobjects) die innerhalb der Schleife angezeigt wird, die die funktionalen Kategorien durch iteriert.
 
 
 ```C++
@@ -132,13 +132,13 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledebug-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)
+[**IPortableDeviceCapabilities-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)
 </dt> <dt>
 
-[**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
+[**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

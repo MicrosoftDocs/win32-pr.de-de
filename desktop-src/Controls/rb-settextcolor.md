@@ -1,9 +1,9 @@
 ---
-title: RB_SETTEXTCOLOR Meldung (kommstrg. h)
-description: Legt die Standard Textfarbe eines Grund leisten-Steuer Elements fest.
+title: RB_SETTEXTCOLOR (Commctrl.h)
+description: Legt die Standardtextfarbe eines Rebar-Steuerelements fest.
 ms.assetid: 85f120bd-39aa-43f8-a794-3bb4f3fe1cd4
 keywords:
-- Windows-Steuerelemente für RB_SETTEXTCOLOR Meldung
+- RB_SETTEXTCOLOR von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 68311572927f2e8dac623c697ac366d37d7ab5fb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 88458f5a131250dbb261040bf26689356c1ba5446db854839ded05ff287a14ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078614"
 ---
-# <a name="rb_settextcolor-message"></a>RB \_ SetTextColor-Meldung
+# <a name="rb_settextcolor-message"></a>RB \_ SETTEXTCOLOR-Meldung
 
-Legt die Standard Textfarbe eines Grund leisten-Steuer Elements fest.
+Legt die Standardtextfarbe eines Rebar-Steuerelements fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,17 +35,17 @@ Legt die Standard Textfarbe eines Grund leisten-Steuer Elements fest.
 *lParam* 
 </dt> <dd>
 
-[**COLORREF**](/windows/desktop/gdi/colorref) -Wert, der die neue Standard Textfarbe darstellt.
+[**COLORREF-Wert,**](/windows/desktop/gdi/colorref) der die neue Standardtextfarbe darstellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen [**COLORREF**](/windows/desktop/gdi/colorref) -Wert zurück, der die vorherige Standard Textfarbe darstellt.
+Gibt einen [**COLORREF-Wert**](/windows/desktop/gdi/colorref) zurück, der die vorherige Standardtextfarbe darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Standard Textfarbe des Grund leisten-Steuer Elements wird verwendet, um den Text in einem Grund leisten-Steuerelement und alle Bänder zu zeichnen, die nach dem Senden dieser Nachricht hinzugefügt werden. Die Standard Textfarbe für ein bestimmtes Band kann überschrieben werden, wenn ein Band hinzugefügt oder geändert wird, indem das Flag rbbim \_ Colors in der Datei **Maske** festgelegt und **clrback** in der [**REBARBANDINFO**](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfoa) -Struktur festgelegt wird.
+Die Standardtextfarbe des Rebar-Steuerelements wird verwendet, um den Text in einem Rebar-Steuerelement und alle Bänder zu zeichnen, die nach dem Senden dieser Nachricht hinzugefügt werden. Die Standardtextfarbe für ein bestimmtes Band kann überschrieben werden, wenn ein Band hinzugefügt oder geändert wird, indem das Flag RBBIM \_ COLORS in **fMask** und **clrBack** in der [**REBARBANDINFO-Struktur**](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfoa) festgelegt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Die Standard Textfarbe des Grund leisten-Steuer Elements wird verwendet, um den 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die Standard Textfarbe des Grund leisten-Steuer Elements wird verwendet, um den 
 
 <dl> <dt>
 
-[**RB \_ gettextcolor**](rb-gettextcolor.md)
+[**RB \_ GETTEXTCOLOR**](rb-gettextcolor.md)
 </dt> </dl>
 
  

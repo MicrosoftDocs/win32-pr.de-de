@@ -1,19 +1,19 @@
 ---
-description: Die TAPI-Zeilen \_ Entfernungs Nachricht wird gesendet, um eine Anwendung über das Entfernen (Löschen vom System) eines Zeilen Geräts zu informieren.
+description: Die TAPI LINE REMOVE-Meldung wird gesendet, um eine Anwendung über das Entfernen (Löschen aus dem \_ System) eines Liniengeräts zu informieren.
 ms.assetid: 21b912d6-34aa-4ac0-b019-be3c851cc96d
-title: LINE_REMOVE Meldung (TAPI. h)
+title: LINE_REMOVE (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 567ead3ad2941845dd22405f0d8706eca74bfbd8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7f13f36123cb8cb77bd2d4b78c3e69a2da1c027aef4dad1fc9dfd7f3c6a00399
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119335920"
 ---
-# <a name="line_remove-message"></a>Zeilen \_ Entfernungs Meldung
+# <a name="line_remove-message"></a>LINE \_ REMOVE-Meldung
 
-Die TAPI- **Zeilen \_ Entfernungs** Nachricht wird gesendet, um eine Anwendung über das Entfernen (Löschen vom System) eines Zeilen Geräts zu informieren. Dies wird im Allgemeinen nicht für temporäre Entfernungen verwendet, wie z. b. das Extrahieren von PCMCIA-Geräten, sondern nur für permanente Entfernungen, bei denen das Gerät nicht mehr vom Dienstanbieter gemeldet wird, wenn TAPI erneut initialisiert wurde.
+Die TAPI **LINE \_ REMOVE-Meldung** wird gesendet, um eine Anwendung über das Entfernen (Löschen aus dem System) eines Liniengeräts zu informieren. Im Allgemeinen wird dies nicht für vorübergehende Entfernungen verwendet, z. B. für die Extraktion von PCMCIA-Geräten, sondern nur für dauerhafte Entfernungen, bei denen das Gerät nicht mehr vom Dienstanbieter gemeldet wird, wenn TAPI erneut initialisiert würde.
 
 
 ```C++
@@ -26,14 +26,14 @@ Die TAPI- **Zeilen \_ Entfernungs** Nachricht wird gesendet, um eine Anwendung �
 
 <dl> <dt>
 
-*hdevice* 
+*hDevice* 
 </dt> <dd>
 
 Reserviert. Auf NULL festlegen.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
 Reserviert. Auf NULL festlegen.
@@ -43,7 +43,7 @@ Reserviert. Auf NULL festlegen.
 *dwParam1* 
 </dt> <dd>
 
-Der Bezeichner des entfernten Zeilen Geräts.
+Bezeichner des Zeilengeräts, das entfernt wurde.
 
 </dd> <dt>
 
@@ -65,16 +65,16 @@ Reserviert. Auf NULL festlegen.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen, die TAPI-Version 2,0 oder höher unterstützen, werden als **Zeilen \_ Entfernungs** Nachricht gesendet. Dadurch werden Sie darüber informiert, dass das Gerät aus dem System entfernt wurde. Der **Zeilen \_ Entfernungs** Nachricht wird eine [**Zeilen Schluss \_**](line-close.md) Nachricht für jedes Zeilen handle vorangestellt, wenn die Zeile in der Anwendung geöffnet war. Diese Nachricht wird an alle Anwendungen gesendet, die TAPI-Version 2,0 oder höher unterstützen, die [**lineinitializeex**](/windows/desktop/api/Tapi/nf-tapi-lineinitializeexa)aufgerufen haben, einschließlich derjenigen, die zu diesem Zeitpunkt keine Zeilen Geräte geöffnet haben.
+Anwendungen, die TAPI Version 2.0 oder höher unterstützen, erhalten eine **LINE \_ REMOVE-Meldung.** Dadurch werden sie darüber informiert, dass das Gerät aus dem System entfernt wurde. Der **LINE \_ REMOVE-Meldung** wird auf jedem Zeilenhand handle eine [**LINE \_ CLOSE-Meldung**](line-close.md) voranstehen, wenn die Anwendung die Zeile geöffnet hat. Diese Meldung wird an alle Anwendungen gesendet, die TAPI Version 2.0 oder höher unterstützen und [**lineInitializeEx**](/windows/desktop/api/Tapi/nf-tapi-lineinitializeexa)aufgerufen haben, einschließlich anwendungen, für die zu diesem Zeitpunkt keine Liniengeräte geöffnet sind.
 
-Älteren Anwendungen wird eine [**\_ linienlinedevstate**](line-linedevstate.md) -Nachricht gesendet, in der linedevstate \_ entfernt wird, gefolgt von einer Zeilen Schluss \_ Nachricht. Anders als bei der **Zeilen \_ Entfernungs** Nachricht können diese älteren Anwendungen diese Nachrichten jedoch nur empfangen, wenn die Zeile beim Entfernen geöffnet ist. Wenn die Zeile nicht geöffnet ist, erhalten Sie lediglich den Hinweis, dass das Gerät entfernt wurde, \_ Wenn Sie versuchen, auf das Gerät zuzugreifen.
+Älteren Anwendungen wird eine [**LINE \_ LINEDEVSTATE-Meldung**](line-linedevstate.md) gesendet, die LINEDEVSTATE REMOVED an, gefolgt \_ von einer LINE \_ CLOSE-Meldung. Im Gegensatz **zur LINE \_ REMOVE-Meldung** können diese älteren Anwendungen diese Nachrichten jedoch nur empfangen, wenn die Zeile geöffnet ist, wenn sie entfernt wird. Wenn die Leitung nicht geöffnet ist, würde der einzige Hinweis darauf, dass das Gerät entfernt wurde, beim Versuch, auf das Gerät zu zugreifen, ein LINEERR \_ NODEVICE-Fehler angezeigt.
 
-Nachdem ein Gerät entfernt wurde, führt jeder Versuch, über seine Gerätekennung auf das Gerät zuzugreifen, zu einem lineerr- \_ nodevice-Fehler. Nachdem alle TAPI-Anwendungen heruntergefahren wurden, sodass TAPI neu gestartet werden kann, und wenn TAPI erneut initialisiert wird, belegt das entfernte Gerät keinen Geräte Bezeichner mehr.
+Nachdem ein Gerät entfernt wurde, führt jeder Versuch, über seine Geräte-ID auf das Gerät zu zugreifen, zu einem LINEERR \_ NODEVICE-Fehler. Nachdem alle TAPI-Anwendungen heruntergefahren wurden, sodass TAPI neu gestartet werden kann, und wenn TAPI erneut initialisiert wird, belegt das entfernte Gerät keine Geräte-ID mehr.
 
 > [!Note]  
-> Implementierung: Es ist TAPI, die dieses lineerr- \_ nodevice zurückgibt, nachdem eine **Zeile zum \_ Entfernen von Zeilen** von einem Dienstanbieter empfangen wurde. es werden keine weiteren Aufrufe an den Dienstanbieter über diese Geräte-Geräte-ID gesendet.
+> Implementierung: TapI gibt diese LINEERR NODEVICE zurück. Nachdem eine \_ **LINE \_ REMOVE-Nachricht** von einem Dienstanbieter empfangen wurde, werden keine weiteren Aufrufe an diesen Dienstanbieter mithilfe dieser Zeilengeräte-ID ausgeführt.
 
  
 
@@ -84,8 +84,8 @@ Nachdem ein Gerät entfernt wurde, führt jeder Versuch, über seine Gerätekenn
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
@@ -93,13 +93,13 @@ Nachdem ein Gerät entfernt wurde, führt jeder Versuch, über seine Gerätekenn
 
 <dl> <dt>
 
-[**Zeilen \_ Schließen**](line-close.md)
+[**LINE \_ CLOSE**](line-close.md)
 </dt> <dt>
 
-[**\_linienlinedevstate**](line-linedevstate.md)
+[**LINE \_ LINEDEVSTATE**](line-linedevstate.md)
 </dt> <dt>
 
-[**lineinitializeex**](/windows/desktop/api/Tapi/nf-tapi-lineinitializeexa)
+[**lineInitializeEx**](/windows/desktop/api/Tapi/nf-tapi-lineinitializeexa)
 </dt> </dl>
 
  

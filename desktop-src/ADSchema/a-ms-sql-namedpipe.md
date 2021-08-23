@@ -1,11 +1,11 @@
 ---
 title: MS-SQL-NamedPipe-Attribut
-description: Die Named Pipe Verbindung.
+description: Die Named Pipe-Verbindung.
 ms.assetid: d18c911d-06ed-4d08-b584-7b2748620770
 ms.tgt_platform: multiple
 keywords:
 - AD-Schema des MS-SQL-NamedPipe-Attributs
-- AD-Schema des MS-SQL-NamedPipe-Attributs
+- AD-Schema des mS-SQL-NamedPipe-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 33e231be0561ae8c0e885911cb92954d6ff0d20d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: fd635ac599367393b479e2ebf4fa99559513d21857e25dd0692aa66ecd4980c3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104392250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119299590"
 ---
 # <a name="ms-sql-namedpipe-attribute"></a>MS-SQL-NamedPipe-Attribut
 
-Die Named Pipe Verbindung.
+Die Named Pipe-Verbindung.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | MS-SQL-NamedPipe                            |
-| LDAP-Display-Name | MS-SQL-NamedPipe                            |
+| Ldap-Anzeigename | mS-SQL-NamedPipe                            |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.            |
-| Aktualisierungshäufigkeit  | Beim Systemstart.                          |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.            |
+| Updatehäufigkeit  | Beim Systemstart.                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1374                     |
-| System-ID-GUID    | 7b91c840-CCEE-11d2-9993-0000f 87a57d4        |
+| System-Id-Guid    | 7b91c840-ccee-11d2-9993-0000f87a57d4        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Die Named Pipe Verbindung.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Die Named Pipe Verbindung.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | True                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -70,7 +70,7 @@ Die Named Pipe Verbindung.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Die Named Pipe Verbindung.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | True                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -99,11 +99,11 @@ Die Named Pipe Verbindung.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Is-Single-Valued       | True                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -120,11 +120,11 @@ Die Named Pipe Verbindung.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | Richtig                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -141,11 +141,11 @@ Die Named Pipe Verbindung.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | True                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -162,11 +162,11 @@ Die Named Pipe Verbindung.
 |------------------------|-----------------------------------------------------------|
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
-| System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
-| Ist indiziert             | False                                                     |
-| Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| System-Only            | Falsch                                                     |
+| Ist einwertig       | True                                                      |
+| Ist indiziert             | Falsch                                                     |
+| Im globalen Katalog      | Falsch                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |

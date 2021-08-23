@@ -1,62 +1,62 @@
 ---
-description: Die Peer Infrastruktur ist eine Reihe von verschiedenen APIs, die leistungsstark und flexibel sind.
+description: Die Peerinfrastruktur besteht aus mehreren APIs, die leistungsstark und flexibel sind.
 ms.assetid: aed7585a-88e5-4ca3-a8c3-e2ccfe13d35d
-title: Was ist die Peer Infrastruktur?
+title: Was ist die Peerinfrastruktur?
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 873717b3f90497fe9ab9f50bb9c18e6f0692a4e5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6e80a5cdcc190fe47ea0a37efd5348ec5f718eaff654543c68bd6e9d355d4d07
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106362472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119287640"
 ---
-# <a name="what-is-the-peer-infrastructure"></a>Was ist die Peer Infrastruktur?
+# <a name="what-is-the-peer-infrastructure"></a>Was ist die Peerinfrastruktur?
 
-Die Peer Infrastruktur ist eine Reihe von verschiedenen APIs, die leistungsstark und flexibel sind. Die Hauptkomponenten umfassen Folgendes:
+Die Peerinfrastruktur besteht aus mehreren APIs, die leistungsstark und flexibel sind. Die Hauptkomponenten umfassen Folgendes:
 
--   [Peer graphende-API](#peer-graphing-api)
--   [Peer Gruppierungs-API](#peer-grouping-api)
--   [Peer Identity Manager-API](#peer-identity-manager-api)
--   [PNRP-Namespace Anbieter-API](#pnrp-namespace-provider-api)
+-   [Peergraphing-API](#peer-graphing-api)
+-   [Peergruppierungs-API](#peer-grouping-api)
+-   [PeerIdentitäts-Manager-API](#peer-identity-manager-api)
+-   [PNRP-Namespaceanbieter-API](#pnrp-namespace-provider-api)
 
-## <a name="peer-graphing-api"></a>Peer graphende-API
+## <a name="peer-graphing-api"></a>Peergraphing-API
 
-Die Peer Infrastruktur bietet eine graphingtechnologie, die Informationen effizient und zuverlässig zwischen Peers in einem Peer Diagramm übergibt. Die [Peer graphende-API](graphing-api.md) stellt sicher, dass jeder Knoten über eine konsistente Sicht der Daten in einem Diagramm verfügt.
+Die Peerinfrastruktur bietet eine Graphingtechnologie, die Informationen effizient und zuverlässig zwischen Peers in einem Peerdiagramm übergeben kann. Die [Peergraphing-API](graphing-api.md) stellt sicher, dass jeder Knoten über eine konsistente Ansicht der Daten in einem Diagramm verfügt.
 
-Mit der [Peer graphingapi](graphing-api.md) können Sie folgende Aufgaben ausführen:
+Sie können die [Peergraphing-API](graphing-api.md) verwenden, um folgende Schritte zu erledigen:
 
--   Erstellen und Verwalten von Peer Diagrammen
--   Auflisten von und interagieren mit anderen Peers in einem Peer Diagramm
--   Senden von Daten in Form eines Daten [Satzes](records.md) an jeden Knoten in einem Peer Diagramm
+-   Erstellen und Verwalten von Peerdiagrammen
+-   Aufzählen und Interagieren mit anderen Peers in einem Peerdiagramm
+-   Senden von Daten in Form eines [Datensatzes](records.md) an jeden Knoten in einem Peerdiagramm
 
-## <a name="peer-grouping-api"></a>Peer Gruppierungs-API
+## <a name="peer-grouping-api"></a>Peergruppierungs-API
 
-Die [Peer Gruppierungs-API](grouping-api.md) kombiniert und erweitert die Peer- [PNRP](#pnrp-namespace-provider-api) -und [graphingapis](#peer-graphing-api) und fügt die folgenden beiden Komponenten hinzu:
+Die [Peergruppierungs-API](grouping-api.md) kombiniert und erweitert die [Peer-PNRP-](#pnrp-namespace-provider-api) und [Graphing-APIs](#peer-graphing-api) und fügt die folgenden beiden Komponenten hinzu:
 
--   Eine Multiplexing-Ebene, die es ermöglicht, dass mehrere Anwendungen auf einer Peer Entität eine Verbindung mit einer Gruppe herstellen.
--   Ein bestimmtes Sicherheitsmodell, das sicherstellt, dass nur Peers, die an eine Gruppe eingeladen wurden, über die Lebensdauer der Gruppe eine Verbindung mit der Gruppe herstellen
+-   Eine Multiplexingebene, die es mehreren Anwendungen, die auf einer Peerentität ausgeführt werden, ermöglicht, eine Verbindung mit einer Gruppe herzustellen
+-   Ein bestimmtes Sicherheitsmodell, das sicherstellt, dass nur Peers, die zu einer Gruppe eingeladen sind, über die Lebensdauer der Gruppe eine Verbindung mit der Gruppe herstellen können.
 
-Mit der Peer Gruppierungs-API können Sie folgende Aufgaben ausführen:
+Sie können die Peergruppierungs-API für folgende Zwecke verwenden:
 
--   Erstellen und Verwalten von sicheren Peer Gruppen
--   Auflisten von und interagieren mit anderen Peers in einer Gruppe
--   Senden von Daten in Form eines Daten [Satzes](records.md) an jeden Knoten in einer Peer Gruppe
+-   Erstellen und Verwalten sicherer Peergruppen
+-   Aufzählen und Interagieren mit anderen Peers in einer Gruppe
+-   Senden von Daten in Form eines [Datensatzes](records.md) an jeden Knoten in einer Peergruppe
 
-## <a name="peer-identity-manager-api"></a>Peer Identity Manager-API
+## <a name="peer-identity-manager-api"></a>PeerIdentitäts-Manager-API
 
-Mithilfe der [Peer Identity Manager-API](identity-manager-api.md) können Sie sichere [Peer Namen](peer-names.md) erstellen, mit denen PNRP sicherstellen kann, dass eine Person, die einen Namen veröffentlicht, den Namen offiziell besitzt. Peer Namen werden auch als Identitäten bezeichnet und in der Peer Gruppierungs-API verwendet, um die einzelnen Personen in einer Gruppe zu identifizieren.
+Mithilfe der [Peer Identity Manager-API](identity-manager-api.md) können Sie sichere [Peernamen](peer-names.md) erstellen, die PNRP verwenden kann, um sicherzustellen, dass eine Person, die einen Namen veröffentlicht, den Namen offiziell besitzt. Peernamen werden auch als Identitäten bezeichnet und in der Peergruppierungs-API verwendet, um die Personen in einer Gruppe zu identifizieren.
 
-Mit der [Peer Identity Manager-API](identity-manager-api.md) können Sie folgende Aufgaben ausführen:
+Sie können die [Peer Identity Manager-API](identity-manager-api.md) verwenden, um folgende Schritte zu erledigen:
 
--   Erstellen, auflisten und Verwalten von Peer Identitäten.
+-   Erstellen, Aufzählen und Verwalten von Peeridentitäten.
 
-## <a name="pnrp-namespace-provider-api"></a>PNRP-Namespace Anbieter-API
+## <a name="pnrp-namespace-provider-api"></a>PNRP-Namespaceanbieter-API
 
-Die Peer Infrastruktur bietet eine Server lose namens Auflösungs Technologie, die als [PNRP-Namespace Anbieter-API](pnrp-namespace-provider-api.md)bezeichnet wird. Mithilfe der Anbieter-API für den Winsock 2-PNRP-Namespace können Peer-, Dienst-, Computer-und Peer Gruppen Endpunkte einen anderen Endpunkt in einer PNRP- [Cloud](clouds.md)verwalten, registrieren, seine Registrierung aufheben und auflösen.
+Die Peerinfrastruktur stellt eine serverlose Namensauflösungstechnologie bereit, die als [PNRP-Namespaceanbieter-API](pnrp-namespace-provider-api.md)bezeichnet wird. Mithilfe der Winsock 2 PNRP-Namespaceanbieter-API kann ein Peer-, Dienst-, Computinggerät- und Peergruppenendpunkt einen anderen Endpunkt in einer [PNRP-Cloud](clouds.md)verwalten, registrieren, aufheben und auflösen.
 
 > [!Note]  
-> PNRP ist ein Akronym für das **Peer Name Resolution-Protokoll**.
+> PNRP ist ein Akronym für **das Peernamensauflösungsprotokoll**.
 
  
 

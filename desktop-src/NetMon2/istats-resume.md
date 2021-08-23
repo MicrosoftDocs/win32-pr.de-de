@@ -14,12 +14,12 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: ee7818da3d8a02e41488d473d3cf26607d3b84ff
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 72c73107ea4bf4662d4251a7c9e06ed1844feca88cb0ce6700887e65f6f08021
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119063820"
 ---
 # <a name="istatsresume-method"></a>IStats::Resume-Methode
 
@@ -50,18 +50,18 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>       | Das NPP ist nicht mit dem Netzwerk verbunden.<br/>                                                                                          |
 | <dl> <dt>**NMERR \_ CAPTURE \_ NOT \_ PAUSED**</dt> </dl> | Die Erfassung wird nicht angehalten. Rufen Sie die [IStats::P ause-Methode](istats-pause.md) auf, um die Erfassung vorübergehend zu beenden.<br/>                     |
-| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>       | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie die [IStats::Connect-Methode](istats-connect.md) auf, um die NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**NMERR \_ NOT \_ STATS \_ ONLY**</dt> </dl>     | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IStats::Connect-Methode.](istats-connect.md)<br/>                                |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>       | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie die [IStats::Verbinden-Methode](istats-connect.md) auf, um die NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NOT \_ STATS \_ ONLY**</dt> </dl>     | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IStats::Verbinden-Methode.](istats-connect.md)<br/>                                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Während sich die Erfassung in einem angehaltenen Zustand befindet, werden neue Daten erst erfasst, wenn die IStats::Resume-Methode aufgerufen wird, um die Erfassung neu zu starten.
 
-Wenn Sie die Methoden **Anhalten** und **Fortsetzen** verwenden, um die Erfassung zu steuern, fügt Netzwerkmonitor den vorhandenen Statistiken für die aktuelle Erfassung weiterhin [*Konversationsstatistiken*](c.md) hinzu.
+Bei Verwendung **der** Pause- und **Resume-Methoden** zum Steuern der Erfassung fügt Netzwerkmonitor den vorhandenen Statistiken für die aktuelle Erfassung weiterhin [*Konversationsstatistiken*](c.md) hinzu.
 
 Rufen Sie [IStats::Stop](istats-stop.md)auf, um die Erfassung zu beenden.
 
@@ -69,7 +69,7 @@ Rufen Sie [IStats::Stop](istats-stop.md)auf, um die Erfassung zu beenden.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
@@ -85,7 +85,7 @@ Rufen Sie [IStats::Stop](istats-stop.md)auf, um die Erfassung zu beenden.
 [IStats](istats.md)
 </dt> <dt>
 
-[IStats::Connect](istats-connect.md)
+[IStats::Verbinden](istats-connect.md)
 </dt> <dt>
 
 [IStats::P ause](istats-pause.md)

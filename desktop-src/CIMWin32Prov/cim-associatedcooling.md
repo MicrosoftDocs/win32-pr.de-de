@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ associatedcooling-Zuordnung gibt an, wann die Lüfter oder andere Kühlgeräte für ein Gerät spezifisch sind (im Gegensatz zur Bereitstellung von Gehäuse oder CAB-Kühlung).
+description: Die \_ CIM-Zuordnung AssociatedZusammenhängende gibt an, wann Lüfter oder andere Kühlgeräte spezifisch für ein Gerät sind (im Gegensatz zur Bereitstellung von Gehäuse- oder Gehäusekühlung).
 ms.assetid: 7b20e429-593c-4365-a340-1aef9b0fadf5
 ms.tgt_platform: multiple
 title: CIM_AssociatedCooling-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: bb838129226b225f024917e8f8e77ddc92ddf2ff
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 71f9c129a7883e5594affeefab8de9c20cf30ff092c5ce315471dbf5bc0a316a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127213"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119218940"
 ---
-# <a name="cim_associatedcooling-class"></a>CIM \_ associatedcooling-Klasse
+# <a name="cim_associatedcooling-class"></a>CIM \_ AssociatedClass
 
-Die **CIM \_ associatedcooling** -Zuordnung gibt an, wann die Lüfter oder andere Kühlgeräte für ein Gerät spezifisch sind (im Gegensatz zur Bereitstellung von Gehäuse oder CAB-Kühlung).
+Die **\_ CIM-Zuordnung AssociatedZusammenhängende** gibt an, wann Lüfter oder andere Kühlgeräte spezifisch für ein Gerät sind (im Gegensatz zur Bereitstellung von Gehäuse- oder Gehäusekühlung).
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ class CIM_AssociatedCooling : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ associatedcooling** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ AssociatedMembering-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ associatedcooling** -Klasse verfügt über diese Eigenschaften.
+Diese Eigenschaften sind in der **\_ CIM-Klasse Associated Csving** enthalten.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ coolingdevice**
+Datentyp: **CIM \_ CoolingDevice**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM \_ LogicalDevice**](cim-logicaldevice.md) , das das Kühlgerät beschreibt.
+Eine [**CIM \_ LogicalDevice,**](cim-logicaldevice.md) die das Kühlgerät beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -77,20 +77,20 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM \_ LogicalDevice**](cim-logicaldevice.md) , das auf das zu kühlende logische Gerät verweist.
+Ein [**CIM \_ LogicalDevice,**](cim-logicaldevice.md) der auf das logische Gerät verweist, das gerade ausgesperrt wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ associatedcooling** -Klasse wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **CIM \_ AssociatedClassing-Klasse** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,17 +100,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

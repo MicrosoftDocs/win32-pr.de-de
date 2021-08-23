@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Primary-Computer-Attribut
-description: Bei einem Benutzer-oder Gruppen Objekt werden die primären Computer identifiziert.
+description: Identifiziert für ein Benutzer- oder Gruppenobjekt die primären Computer.
 ms.assetid: 627e7885-4e32-4dd9-a7b4-7e8c505cac85
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-Primary-Computer\"-Attribut AD-Schema"
-- AD-Schema des msDS-primarycomputer-Attributs
+- AD-Schema des ms-DS-Primary-Computer-Attributs
+- AD-Schema des msDS-PrimaryComputer-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 47f960bccd6067b8d31e7782a0d8d46a806ee7bb
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8193ed84eab93e36d12d3ef370362df7d7b407863c921981b867525a32e3c015
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344303"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119294360"
 ---
 # <a name="ms-ds-primary-computer-attribute"></a>ms-DS-Primary-Computer-Attribut
 
-Bei einem Benutzer-oder Gruppen Objekt werden die primären Computer identifiziert.
+Identifiziert für ein Benutzer- oder Gruppenobjekt die primären Computer.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-primär-Computer                  |
-| LDAP-Display-Name | MSDS-primarycomputer                    |
+| CN                | ms-DS-Primary-Computer                  |
+| Ldap-Anzeigename | msDS-PrimaryComputer                    |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.2167                 |
-| System-ID-GUID    | a13df4e2-dbb0-4ceb-828b-8b2e143e9e81    |
+| System-Id-Guid    | a13df4e2-dbb0-4ceb-828b-8b2e143e9e81    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -53,10 +53,10 @@ Bei einem Benutzer-oder Gruppen Objekt werden die primären Computer identifizie
 | Link-ID                | 2186                                                                  |
 | MAPI-Id                | \-                                                                    |
 | System-Only            | False                                                                 |
-| Ist-einwertig       | False                                                                 |
-| Ist indiziert             | Richtig                                                                  |
-| Im globalen Katalog      | Richtig                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                          |
+| Is-Single-Valued       | False                                                                 |
+| Ist indiziert             | True                                                                  |
+| Im globalen Katalog      | True                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                          |
 | Range-Lower            | \-                                                                    |
 | Range-Upper            | \-                                                                    |
 | Search-Flags           | 0x00000001                                                            |

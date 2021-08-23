@@ -1,11 +1,11 @@
 ---
 title: RegisteredTask.XML-Eigenschaft
-description: Ruft bei der Skripterstellung die XML-formatierten Registrierungsinformationen für die registrierte Aufgabe ab.
+description: Ruft für die Skripterstellung die Registrierungsinformationen im XML-Format für den registrierten Task ab.
 ms.assetid: 59a88a19-2401-42aa-aa04-1933f16a7d7b
 keywords:
-- XML-Eigenschaften Taskplaner
-- XML-Eigenschaften Taskplaner, registeredtask-Objekt
-- Registeredtask-Objekt Taskplaner, XML-Eigenschaft
+- XML-Eigenschaft Taskplaner
+- XML-Eigenschaft Taskplaner , RegisteredTask-Objekt
+- RegisteredTask-Objekt Taskplaner , XML-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c0765613918882910b902af61d9989bfa40a513
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ee7af139100a449d8a2e8ce4ddc6098b9776d61477e1ef595aac14315a152c4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478699"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119253560"
 ---
 # <a name="registeredtaskxml-property"></a>RegisteredTask.XML-Eigenschaft
 
-Ruft bei der Skripterstellung die XML-formatierten Registrierungsinformationen für die registrierte Aufgabe ab.
+Ruft für die Skripterstellung die Registrierungsinformationen im XML-Format für den registrierten Task ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,9 +46,9 @@ Die XML-formatierten Registrierungsinformationen für den registrierten Task.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -60,7 +60,7 @@ Die XML-formatierten Registrierungsinformationen für den registrierten Task.
 [Aufgabenplanung](task-scheduler-start-page.md)
 </dt> <dt>
 
-[**Registeredtask**](registeredtask.md)
+[**RegisteredTask**](registeredtask.md)
 </dt> </dl>
 
  

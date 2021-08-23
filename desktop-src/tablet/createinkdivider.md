@@ -1,7 +1,7 @@
 ---
-description: Instanziiert eine Implementierung der InkDivider-Schnittstelle und gibt das zugehörige Handle zurück.
+description: Instanziiert eine Implementierung der InkDivider-Schnittstelle und gibt ihr Handle zurück.
 ms.assetid: 77c8504b-0b63-43dd-b487-bab2a500979b
-title: Funktion "-Funktion"
+title: CreateInkDivider-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - InkDiv.dll
 - InkDiv.dll.dll
-ms.openlocfilehash: 26e5785845f3ce8448269a821f67fcafc98bf4b3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aa63937bdf6f65ab46f012bd541eadcd7e8ef5b8a4d8957a462f2d6666e62a02
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106338955"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119266539"
 ---
-# <a name="createinkdivider-function"></a>Funktion "-Funktion"
+# <a name="createinkdivider-function"></a>CreateInkDivider-Funktion
 
-Instanziiert eine Implementierung der [**InkDivider**](inkdivider-class.md) -Schnittstelle und gibt das zugehörige Handle zurück.
+Instanziiert eine Implementierung der [**InkDivider-Schnittstelle**](inkdivider-class.md) und gibt ihr Handle zurück.
 
-Diese Funktion ist nicht für die Verwendung durch den Anwendungscode vorgesehen.
+Diese Funktion ist nicht für die Verwendung durch Anwendungscode vorgesehen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein Handle für das erstellte-Objekt zurück.
+Gibt ein Handle für das erstellte Objekt zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse erbt von der [**InkDivider**](inkdivider-class.md) -Basisklasse und implementiert virtuelle Funktionen.
+Diese Klasse erbt von der [**InkDivider-Basisklasse**](inkdivider-class.md) und implementiert virtuelle Funktionen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Diese Klasse erbt von der [**InkDivider**](inkdivider-class.md) -Basisklasse und
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
 | Bibliothek<br/>                  | <dl> <dt>InkDiv.dll</dt> </dl> |
 

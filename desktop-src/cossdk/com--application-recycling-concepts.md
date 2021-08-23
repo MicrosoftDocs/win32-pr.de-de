@@ -1,48 +1,48 @@
 ---
-description: Durch die Wiederverwendung von Anwendungen können Sie die Gesamtstabilität ihrer com+-Anwendungen beträchtlich erhöhen, indem Sie eine schnelle Lösung für bekannte Probleme bieten und Schutz vor unerwarteten Problemen bieten.
+description: Die Wiederverwendung von Anwendungen kann die Gesamtstabilität Ihrer COM+-Anwendungen erheblich erhöhen, indem eine schnelle Lösung für bekannte Probleme und der Schutz vor unerwarteten Problemen angeboten wird.
 ms.assetid: bf98318b-4d87-44cc-85a1-68faf5547e06
-title: Konzepte der com+-Anwendungs Wiederverwendung
+title: COM+-Konzepte für die Wiederverwendung von Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ab37376ff3bc6d03f454f63822641ed69fad0b47
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ba6a635487427fce3f17203f11426261996348a5e4057ab8bceebcae552d51bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119129262"
 ---
-# <a name="com-application-recycling-concepts"></a>Konzepte der com+-Anwendungs Wiederverwendung
+# <a name="com-application-recycling-concepts"></a>COM+-Konzepte für die Wiederverwendung von Anwendungen
 
-Durch die Wiederverwendung von Anwendungen können Sie die Gesamtstabilität ihrer com+-Anwendungen beträchtlich erhöhen, indem Sie eine schnelle Lösung für bekannte Probleme bieten und Schutz vor unerwarteten Problemen bieten. Beispielsweise kann die Anwendungsleistung im Lauf der Zeit aufgrund von Problemen wie Speicherlecks, nicht skalierbarer Ressourcenverwendung und Prozessfehlern beeinträchtigt werden. Com+ bietet Anwendungs Wiederverwendung als Lösung für diese Probleme. Mithilfe der Anwendungs Wiederverwendung können Sie einen Prozess automatisch Herunterfahren und neu starten. auf diese Weise können Sie einen fehlerhaften Prozess erneut initialisieren und den verwendeten Speicher neu zuordnen.
+Die Wiederverwendung von Anwendungen kann die Gesamtstabilität Ihrer COM+-Anwendungen erheblich erhöhen, indem eine schnelle Lösung für bekannte Probleme und der Schutz vor unerwarteten Problemen angeboten wird. Beispielsweise kann die Anwendungsleistung im Laufe der Zeit aufgrund von Problemen wie Speicherverlusten, nicht skalierbarer Ressourcennutzung und Prozessfehlern beeinträchtigt werden. COM+ bietet die Wiederverwendung von Anwendungen als Lösung für diese Probleme. Sie können die Wiederverwendung von Anwendungen verwenden, um einen Prozess automatisch herunter- und neu zu starten, wodurch ein fehlerhafter Prozess erneut initialisiert und der von ihm verwendete Arbeitsspeicher neu zugewiesen wird.
 
-Die Anwendungs Wiederverwendung funktioniert, indem ein Duplikat des dllhost-Prozesses erstellt wird, der einer Anwendung zugeordnet ist. Mit diesem doppelten dllhost-Prozess werden alle zukünftigen Objekt Anforderungen verarbeitet, sodass der alte dllhost die Wartung der restlichen Objekt Anforderungen verlässt. Der alte dllhost-Prozess wird heruntergefahren, wenn er das Release aller externen Verweise auf Objekte im Prozess erkennt oder wenn der Ablauf Timeout Wert erreicht wird. Durch dieses Verhalten stellt die Anwendungs Wiederverwendung sicher, dass bei einer Client Anwendung keine Dienst Unterbrechung auftritt.
+Bei der Anwendungswiederverwendung wird ein Duplikat des Dllhost-Prozesses erstellt, der einer Anwendung zugeordnet ist. Dieser doppelte Dllhost-Prozess bedient alle zukünftigen Objektanforderungen, wodurch der alte Dllhost die Verarbeitung der verbleibenden Objektanforderungen beendet. Der alte Dllhost-Prozess wird heruntergefahren, wenn er die Freigabe aller externen Verweise auf Objekte im Prozess erkennt oder wenn der Time out-Wert für den Ablauf erreicht wird. Durch dieses Verhalten wird durch die Wiederverwendung von Anwendungen sichergestellt, dass es bei einer Clientanwendung nicht zu einer Dienstunterbrechung kommt.
 
 > [!Note]  
-> Eine COM+-Anwendung, die für die Verwendung als Windows-Dienst konfiguriert wurde, kann nicht wieder verwendet werden. Außerdem verfügen Bibliotheksanwendungen über die Eigenschaften zum wieder verwenden und zum Pooling Ihres Host Prozesses.
+> Sie können keine COM+-Anwendung wiederverwerten, die für die Ausführung als Windows wurde. Darüber hinaus verfügen Bibliotheksanwendungen über die Wiederverwendungs- und Poolingeigenschaften ihres Hostprozesses.
 
  
 
-Mithilfe des Verwaltungs Tools Komponenten Dienste oder Programm gesteuert über das com+-Verwaltungs-SDK können Sie die Anwendungs Wiederverwendung administrativ konfigurieren. Sie können Prozesse auf der Grundlage verschiedener Kriterien wieder verwenden, die durch die folgenden Eigenschaften eines [**COMAdminCatalogObject**](comadmincatalogobject.md) -Objekts in der [**Anwendungs**](applications.md) Auflistung bestimmt werden:
+Sie können die Wiederverwendung von Anwendungen mithilfe des Komponentendienste-Verwaltungstools oder programmgesteuert über das COM+-Verwaltungs-SDK konfigurieren. Sie können Prozesse basierend auf mehreren Kriterien wiederverwerten, die durch die folgenden Eigenschaften eines [**COMAdminCatalogObject-Objekts**](comadmincatalogobject.md) in der [**Anwendungssammlung bestimmt**](applications.md) werden:
 
--   **"Recyclelifetimelimit".** Die maximale Anzahl von Minuten, die ein Prozess ausgeführt werden kann, bevor er wieder verwendet wird. Der gültige Bereich liegt zwischen 0 und 30.240 Minuten (21 Tage). Die Standard Anzahl von Minuten ist 0 (null). Dies bedeutet, dass der Prozess nicht wieder verwendet werden kann, um eine Lebensdauer zu erreichen.
--   **Recyclememorylimit.** Die maximale Menge an Prozess Speicherauslastung (in Kilobyte), bevor der Prozess wieder verwendet wird. Wenn die Prozess Speicherauslastung die angegebene Anzahl länger als eine Minute überschreitet, wird der Prozess wieder verwendet. Der gültige Bereich liegt zwischen 0 und 1.048.576 KB. Der Standardwert für die Speicherauslastung beträgt 0 KB. Dies bedeutet, dass der Prozess das Erreichen eines Arbeitsspeicher Limits nicht wieder verwendet.
--   **"RecycleCallLimit".** Die maximale Anzahl von aufrufen, die von Anwendungs Objekten angenommen werden können, bevor der Prozess wieder verwendet wird. Der gültige Bereich liegt zwischen 0 und 1.048.576 aufrufen. Die Standard Anzahl von Aufrufen ist 0 (null), was darauf hinweist, dass der Prozess das Erreichen eines Aufruf Limits nicht wieder verwendet.
--   **Recycleactivationlimit.** Die maximale Anzahl von Anwendungs Objekt Aktivierungen, die vor der Wiederverwendung des Prozesses akzeptiert werden sollen. Der gültige Bereich liegt zwischen 0 und 1.048.576 Aktivierungen. Die Standard Anzahl von Aktivierungen ist 0 (null), was darauf hinweist, dass der Prozess das Erreichen eines Aktivierungs Limits nicht wieder verwendet.
+-   **RecycleLifetimeLimit.** Die maximale Anzahl von Minuten, die ein Prozess ausgeführt werden kann, bevor er wiederverwendet wird. Der gültige Bereich beträgt 0 bis 30.240 Minuten (21 Tage). Die Standardanzahl von Minuten ist 0. Dies bedeutet, dass der Prozess nicht wiederverwertet wird, wenn ein Lebensdauerlimit erreicht wird.
+-   **RecycleMemoryLimit.** Die maximale Prozessspeicherauslastung (in Kilobytes), bevor der Prozess wiederverwertet wird. Wenn die Arbeitsspeicherauslastung des Prozesses länger als eine Minute die angegebene Anzahl überschreitet, wird der Prozess wiederverwendet. Der gültige Bereich liegt zwischen 0 und 1.048.576 KB. Die Standardmenge der Arbeitsspeicherauslastung beträgt 0 KB, was darauf hinweist, dass der Prozess nicht wiederverwertet wird, wenn ein Arbeitsspeicherlimit erreicht wird.
+-   **RecycleCallLimit.** Die maximale Anzahl von Aufrufen, die Anwendungsobjekte akzeptieren können, bevor der Prozess wieder verwendet wird. Der gültige Bereich liegt zwischen 0 und 1.048.576 Aufrufen. Die Standardanzahl der Aufrufe ist 0. Dies bedeutet, dass der Prozess nicht vom Erreichen eines Aufruflimits wiederverwendet wird.
+-   **RecycleActivationLimit.** Die maximale Anzahl von Anwendungsobjektaktivierungen, die vor der Wiederverwendung des Prozesses akzeptiert werden. Der gültige Bereich liegt zwischen 0 und 1.048.576 Aktivierungen. Die Standardanzahl der Aktivierungen ist 0 ( 0). Dies bedeutet, dass der Prozess nicht vom Erreichen eines Aktivierungslimits wiederverwendet wird.
 
-Außerdem wird die Eigenschaft "recycleexpirationtimeout" des Objekts " [**COMAdminCatalogObject**](comadmincatalogobject.md) " verwendet, um das Herunterfahren eines wiederverwendeten Prozesses zu erzwingen. Gibt die Anzahl von Minuten an, die auf das Release aller externen Verweise auf Objekte im wiederverwendeten Prozess gewartet werden soll, bevor der Prozess beendet wird. Der gültige Bereich liegt zwischen 1 und 1440 Minuten (24 Stunden), und das Standard Ablauf Timeout beträgt 15 Minuten. Dieser Wert wird nur verwendet, wenn bereits festgestellt wurde, dass ein Prozess basierend auf den anderen Kriterien wieder verwendet wird.
+Darüber hinaus wird die RecycleExpirationTimeout-Eigenschaft des [**COMAdminCatalogObject-Objekts**](comadmincatalogobject.md) verwendet, um das Herunterfahren eines wiederverwendeten Prozesses zu erzwingen. Gibt an, wie viele Minuten auf die Freigabe aller externen Verweise auf Objekte im wiederverwendeten Prozess gewartet werden soll, bevor der Prozess beendet wird. Der gültige Bereich beträgt 1 bis 1440 Minuten (24 Stunden), und das Standardablauf-Time out beträgt 15 Minuten. Dieser Wert wird nur verwendet, wenn bereits bestimmt wurde, dass ein Prozess basierend auf den anderen Kriterien wiederverwendet wird.
 
-Sie können mehr als ein Kriterium für die Wiederverwendung einer Anwendung auswählen. Com+ wieder verwendet die Anwendung, nachdem der erste Satz Kriterien erfüllt wurde. Sie können den Timeout Wert für den Ablauf festlegen, um zu bestimmen, wie lange ein Alter dllhost-Prozess verbleibende Dienst Anforderungen abschließen kann, bevor das Herunterfahren erzwungen wird.
+Sie können mehrere Kriterien für die Wiederverwendung einer Anwendung auswählen. COM+ verwendet die Anwendung wieder, nachdem der erste Kriteriensatz erfüllt wurde. Sie können den Wert für ablaufendes Time out festlegen, um zu bestimmen, wie lange ein alter Dllhost-Prozess verbleibende Dienstanforderungen abschließen kann, bevor er zum Herunterfahren gesperrt wird.
 
-Die [**ApplicationInstance**](applicationinstances.md) -Auflistung stellt die hasrecycelt-Eigenschaft bereit, die eine Möglichkeit bietet, zu bestimmen, ob die Anwendung jemals wieder verwendet wurde.
+Die [**ApplicationInstances-Auflistung**](applicationinstances.md) stellt die HasRecycled-Eigenschaft bereit, die eine Möglichkeit bietet, zu bestimmen, ob die Anwendung jemals wiederverwendet wurde.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Com+-Anwendungs Wiederverwendungs Tasks](com--application-recycling-tasks.md)
+[COM+-Anwendungswiederverwendungsaufgaben](com--application-recycling-tasks.md)
 </dt> <dt>
 
-[**Recycleersatz**](/windows/desktop/api/ComSvcs/nf-comsvcs-recyclesurrogate)
+[**RecycleSurrogate**](/windows/desktop/api/ComSvcs/nf-comsvcs-recyclesurrogate)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: HexInt32Type Simple Type (eventmanifest-Schema)
-description: Definiert einen 4-Byte-hexadezimal-Typ. | HexInt32Type Simple Type (eventmanifest-Schema)
+title: HexInt32Type Simple Type (EventManifest Schema)
+description: Definiert einen hexadezimalen 4-Byte-Typ. | HexInt32Type Simple Type (EventManifest-Schema)
 ms.assetid: b1006593-c6f2-4669-b242-758ce9977565
 keywords:
-- HexInt32Type einfaches Ereignisprotokoll
+- HexInt32Type simple type EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4630bc4d7d513a0fedad2191c63ca71571ce655a
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 6c78a101ec9854b8820b7c9170ea43f06258528de9fdc9d4b02bb41945ba3a7f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106353309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119248100"
 ---
-# <a name="hexint32type-simple-type-eventmanifest-schema"></a>HexInt32Type Simple Type (eventmanifest-Schema)
+# <a name="hexint32type-simple-type-eventmanifest-schema"></a>HexInt32Type Simple Type (EventManifest Schema)
 
-Definiert einen 4-Byte-hexadezimal-Typ.
+Definiert einen hexadezimalen 4-Byte-Typ.
 
 ``` syntax
 <xs:simpleType name="HexInt32Type">
@@ -38,11 +38,11 @@ Definiert einen 4-Byte-hexadezimal-Typ.
 
 ## <a name="patterns"></a>Muster
 
-Der einfache **HexInt32Type** -Typ ist eine **Zeichenfolge** , die durch das folgende Muster eingeschränkt ist:
+Der **einfache HexInt32Type-Typ** ist eine **Zeichenfolge,** die durch das folgende Muster eingeschränkt wird:
 
 -   `0[xX][0-9A-Fa-f]{1,8}`
 
-    Der Wert kann zwischen 1 und acht hexadezimal Zeichen (z. b. 0xA oder 0xac7bd361) enthalten.
+    Der Wert kann ein bis acht Hexadezimalzeichen enthalten (z. B. 0xa oder 0xac7bd361).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Der einfache **HexInt32Type** -Typ ist eine **Zeichenfolge** , die durch das fol
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

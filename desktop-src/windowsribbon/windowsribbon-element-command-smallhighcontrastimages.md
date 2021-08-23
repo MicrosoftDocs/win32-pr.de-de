@@ -1,9 +1,9 @@
 ---
-title: Command. smallhighkontra stimages-Eigenschaft
-description: Stellt einen Container von Bildern dar. in diesem Fall werden kleine Bilder für die Verwendung mit den Systemeinstellungen mit hohem Kontrast verwendet.
+title: Command.SmallHighContrastImages (Eigenschaft)
+description: Stellt einen Container von Images dar. in diesem Fall kleine Bilder für die Verwendung mit Systemeinstellungen mit hohem Kontrast.
 ms.assetid: d1c441eb-885a-4dc1-b98d-5a36cab2f837
 keywords:
-- Command. smallhighkontra stimages-Eigenschaft (Windows-Menüband)
+- Command.SmallHighContrastImages-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 56291ad4e56e5f941fe4cb2790ac6afab27ad67b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6ddee0ccadc966b89d381e02cca5ac1ae336c98671c82a3e4f39f8ebdd6cbeb5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119329290"
 ---
-# <a name="commandsmallhighcontrastimages-property"></a>Command. smallhighkontra stimages-Eigenschaft
+# <a name="commandsmallhighcontrastimages-property"></a>Command.SmallHighContrastImages (Eigenschaft)
 
-Stellt einen Container von Bildern dar. in diesem Fall werden kleine Bilder für die Verwendung mit den Systemeinstellungen mit hohem Kontrast verwendet.
+Stellt einen Container von Images dar. in diesem Fall kleine Bilder für die Verwendung mit Systemeinstellungen mit hohem Kontrast.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,7 +41,7 @@ Es gibt keine Attribute.
 
 | Element                                                 | BESCHREIBUNG                                        |
 |---------------------------------------------------------|----------------------------------------------------|
-| [**Image**](windowsribbon-element-image.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**Image**](windowsribbon-element-image.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -51,23 +51,23 @@ Es gibt keine Attribute.
 
 | Element                                                     |
 |-------------------------------------------------------------|
-| [**Get-Help**](windowsribbon-element-command.md)<br/> |
+| [**Befehl**](windowsribbon-element-command.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jeden [**Befehl**](windowsribbon-element-command.md)auftreten.
+Kann für jeden Befehl mindestens einmal [**auftreten.**](windowsribbon-element-command.md)
 
-Bild Ressourcen müssen dem standardmäßigen BMP-Grafikformat (Bitmap) entsprechen, das in Windows verwendet wird.
+Bildressourcen müssen dem standarden Bitmap-Grafikformat (BMP) entsprechen, das in der Windows.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für das [**SplitButton**](windowsribbon-element-splitbutton.md) -Element mit einem [**MenuGroup**](windowsribbon-element-menugroup.md) -Element veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für [**splitButton mit**](windowsribbon-element-splitbutton.md) einem [**MenuGroup-Element**](windowsribbon-element-menugroup.md) veranschaulicht.
 
-In diesem Code Abschnitt werden die Befehls Deklarationen [**SplitButton**](windowsribbon-element-splitbutton.md) und [**MenuGroup**](windowsribbon-element-menugroup.md) mit großen und kleinen Bild Ressourcen für hohe Kontraste angezeigt. Eine zugeordnete [**Gruppe**](windowsribbon-element-group.md) , die als übergeordneter Container für das **SplitButton** -Element fungiert, wird ebenfalls deklariert.
+Dieser Codeabschnitt zeigt die [**SplitButton-**](windowsribbon-element-splitbutton.md) und [**MenuGroup-Befehlsdeklarationen**](windowsribbon-element-menugroup.md) mit großen und kleinen Bildressourcen mit hohem Kontrast. Eine [**zugeordnete Gruppe,**](windowsribbon-element-group.md) die als übergeordneter Container für das **SplitButton-Element** fungiert, wird ebenfalls deklariert.
 
 
 ```XML
@@ -117,19 +117,19 @@ In diesem Code Abschnitt werden die Befehls Deklarationen [**SplitButton**](wind
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Angeben von Menüband-Bild Ressourcen](windowsribbon-imageformats.md)
+[Angeben von Menübandbildressourcen](windowsribbon-imageformats.md)
 </dt> <dt>
 
-[UI \_ pkey \_ smallhighkontra stimage](windowsribbon-reference-properties-uipkey-smallhighcontrastimage.md)
+[UI \_ PKEY \_ SmallHighContrastImage](windowsribbon-reference-properties-uipkey-smallhighcontrastimage.md)
 </dt> </dl>
 
  

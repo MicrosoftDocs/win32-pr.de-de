@@ -1,19 +1,19 @@
 ---
-title: IBackgroundCopyJob5-Methoden (Bits)
-description: Die IBackgroundCopyJob5-Schnittstelle stellt die folgenden Methoden zur Verfügung. | IBackgroundCopyJob5-Methoden (Bits)
+title: IBackgroundCopyJob5-Methoden (BITS)
+description: Die IBackgroundCopyJob5-Schnittstelle macht die folgenden Methoden verfügbar. | IBackgroundCopyJob5-Methoden (BITS)
 ms.assetid: 6DF8002A-2284-4102-B4DA-823792B1AC5E
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b267bb18b19edd3220e994453c897067519b09cb
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: e3187b640c13b80d634825c967c4d5046a75ddaa9e2fd12fd35d5f9f978098dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104485926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119021173"
 ---
-# <a name="ibackgroundcopyjob5-methods-bits"></a>IBackgroundCopyJob5-Methoden (Bits)
+# <a name="ibackgroundcopyjob5-methods-bits"></a>IBackgroundCopyJob5-Methoden (BITS)
 
-Die [**IBackgroundCopyJob5**](/windows/desktop/api/Bits5_0/nn-bits5_0-ibackgroundcopyjob5) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IBackgroundCopyJob5-Schnittstelle**](/windows/desktop/api/Bits5_0/nn-bits5_0-ibackgroundcopyjob5) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

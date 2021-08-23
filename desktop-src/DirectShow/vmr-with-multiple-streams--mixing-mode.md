@@ -1,46 +1,46 @@
 ---
-description: VMR mit mehreren Streams (Mischungs Modus)
+description: VMR mit mehreren Streams (Gemischter Modus)
 ms.assetid: 053edb70-8631-4fe4-a137-2fe54e02ab9e
-title: VMR mit mehreren Streams (Mischungs Modus)
+title: VMR mit mehreren Streams (Gemischter Modus)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a21a954b0ad78afbceabf0fde493f920961b90dd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 88f958d8c95372325229dffc1cc37aff579213c48940f93ad090d0fbd9359b79
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119290780"
 ---
-# <a name="vmr-with-multiple-streams-mixing-mode"></a>VMR mit mehreren Streams (Mischungs Modus)
+# <a name="vmr-with-multiple-streams-mixing-mode"></a>VMR mit mehreren Streams (Gemischter Modus)
 
-VMR kann mehrere Eingabestreams Rendering. In dieser Konfiguration, dem sogenannten Mischungs Modus, lädt der VMR seinen Mixer und den Compositor, um vor dem Rendering die Mischung und die Mischung auszuführen. Der Mischungs Modus kann verwendet werden, während sich der VMR im Fenstermodus oder im fensterlosen Modus befindet.
+Die VMR kann mehrere Eingabestreams rendern. In dieser Konfiguration, die als Mischungsmodus bezeichnet wird, lädt die VMR ihren Mixer und Compositor, um das Mischen und Mischen vor dem Rendering durchzuführen. Der Gemischtmodus kann entweder verwendet werden, während sich die VMR im Fenstermodus oder im fensterlosen Modus befindet.
 
-Der Mischungs Modus erfordert, dass der Grafiktreiber die ddcaps \_ bltfourcc-und ddcaps \_ bltstretch-funktionsflags (Farb Raum Konvertierung bzw. Stretch-blierung) unterstützt. Fast alle neuen Grafiktreiber verfügen über diese Funktionen. Außerdem muss der Treiber die Erstellung von Direct3D-Renderingzielen für die aktuelle Anzeige Pixel Tiefe unterstützen. Einige Geräte unterstützen keine Direct3D-Vorgänge, wenn die Anzeige auf 24 Bits pro Pixel festgelegt ist. Weitere Informationen finden Sie in der Dokumentation zum DirectX-Grafik-SDK.
+Der Kombinationsmodus erfordert, dass der Grafiktreiber die DDCAPS \_ BLTFOURCC- und DDCAPS \_ BLTSTRETCH-Funktionsflags unterstützt (Farbraumkonvertierung bzw. Stretch-Blitting). Fast alle neuen Grafiktreiber verfügen über diese Funktionen. Darüber hinaus muss der Treiber die Erstellung von Direct3D-Renderzielen für die aktuelle Pixeltiefe der Anzeige unterstützen. Einige Geräte unterstützen keine Direct3D-Vorgänge, wenn die Anzeige auf 24 Bits pro Pixel festgelegt ist. Weitere Informationen finden Sie in der DirectX Graphics SDK-Dokumentation.
 
 > [!Note]  
-> Wenn VMR mehrere Videostreams vermischt, sucht das Filter Diagramm nicht ordnungsgemäß. Wenn Sie mehrere Videostreams suchen müssen, müssen Sie separate Filter Diagramme erstellen, die dasselbe benutzerdefinierte "zuordcator-Presenter"-Objekt verwenden.
+> Wenn die VMR mehrere Videostreams kombiniert, sucht das Filterdiagramm nicht ordnungsgemäß. Wenn Sie mehrere Videostreams suchen müssen, müssen Sie separate Filterdiagramme erstellen, die das gleiche benutzerdefinierte Allocator-Presenter-Objekt gemeinsam nutzen.
 
  
 
 **Konfigurieren von VMR-7 für mehrere Streams**
 
-Gehen Sie folgendermaßen vor, um mehrere Eingabedaten Ströme mit VMR-7 zu erzeugen:
+Gehen Sie wie folgt vor, um mehrere Eingabestreams mit VMR-7 zu rendern:
 
-1.  Bevor Sie eine Verbindung mit den Eingabe Pins von VMR herstellen, können Sie die [**ivmrfilterconfig:: setnumofstreams**](/windows/desktop/api/Strmif/nf-strmif-ivmrfilterconfig-setnumberofstreams) -Methode mit der Anzahl der Streams aufrufen. Dies bewirkt, dass der VMR den Mixer und den Compositor lädt und die angegebene Anzahl von Eingabe Pins erstellt.
-2.  Rufen Sie [**ivmrfilterconfig:: strenderingprefs**](/windows/desktop/api/Strmif/nf-strmif-ivmrfilterconfig-setrenderingprefs) auf, um verschiedene renderingeinstellungen anzugeben.
-3.  Verbinden Sie die Pins mit den upstreamfiltern. Dies lässt sich am einfachsten durchführen, indem Sie für jeden Eingabestream [**igraphbuilder:: RenderFile**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-renderfile) aufruft. Wenn die Ausgabepin auf dem upstreamfilter (in der Regel ein Decoder) und die Eingabe-PIN in der VMR für eine Verbindung nicht übereinstimmen, wird eine neue Instanz von VMR mit Standardeinstellungen erstellt. Dies führt zu einem neuen Fenster mit "ActiveMovie" in der Titelleiste. Um dies zu verhindern, sollte die Anwendung immer überprüfen, ob die richtige Instanz von VMR durch Aufrufen einer Methode wie [**IPin:: connectedto**](/windows/desktop/api/Strmif/nf-strmif-ipin-connectedto)verwendet wird. Eine weitere Möglichkeit besteht darin, den Quell Filter hinzuzufügen und dann die Pins mithilfe von **igraphbuilder:: Connect** zu verbinden.
-4.  Verwenden Sie die [**ivmrmixercontrol**](/windows/desktop/api/Strmif/nn-strmif-ivmrmixercontrol) -Schnittstelle für den VMR, um Parameter für jeden Stream zu steuern, z. b. den Alpha-Wert, die Z-Reihenfolge und das Ausgabe Rechteck.
-5.  Führen Sie das Filter Diagramm aus.
+1.  Bevor Sie eine Verbindung mit den Eingabepins der VMR herstellen, rufen Sie die [**IVMRFilterConfig::SetNumberOfStreams-Methode**](/windows/desktop/api/Strmif/nf-strmif-ivmrfilterconfig-setnumberofstreams) mit der Anzahl der Streams auf. Dies bewirkt, dass die VMR den Mixer und den Compositor lädt und die angegebene Anzahl von Eingabepins erstellt.
+2.  Rufen Sie [**IVMRFilterConfig::SetRenderingPrefs**](/windows/desktop/api/Strmif/nf-strmif-ivmrfilterconfig-setrenderingprefs) auf, um verschiedene Renderingeinstellungen anzugeben.
+3.  Verbinden die Pins an die Upstreamfilter an. Die einfachste Möglichkeit besteht darin, [**IGraphBuilder::RenderFile**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-renderfile) für jeden Eingabestream aufzurufen. Wenn sich der Ausgabepin im Upstreamfilter (in der Regel ein Decoder) und der Eingabepin auf der VMR nicht auf eine Verbindung einigen können, wird eine neue Instanz der VMR mit Standardeinstellungen erstellt. Dies führt zu einem neuen Fenster mit "ActiveMovie" in der Titelleiste. Um dies zu verhindern, sollte die Anwendung immer überprüfen, ob die richtige Instanz der VMR verwendet wird, indem sie eine Methode wie [**IPin::ConnectedTo aufruft.**](/windows/desktop/api/Strmif/nf-strmif-ipin-connectedto) Eine weitere Möglichkeit besteht darin, den Quellfilter hinzuzufügen und dann die Pins mithilfe von **IGraphBuilder::Verbinden** zu verbinden.
+4.  Verwenden Sie die [**IVMRMixerControl-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ivmrmixercontrol) auf der VMR, um Parameter für jeden Stream zu steuern, z. B. den Alphawert, die Z-Reihenfolge und das Ausgaberechteck.
+5.  Führen Sie das Filterdiagramm aus.
 
 **Konfigurieren von VMR-9 für mehrere Streams**
 
-Standardmäßig erstellt VMR-9 vier Eingabe Pins. Wenn Sie mehr als vier Videostreams kombinieren möchten, müssen Sie vor dem Verbinden von Eingabe Pins [**IVMRFilterConfig9:: setnumofstreams**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrfilterconfig9-setnumberofstreams) aufrufen. Verwenden Sie die [**IVMRMixerControl9**](/previous-versions/windows/desktop/api/Vmr9/nn-vmr9-ivmrmixercontrol9) -Schnittstelle zum Festlegen der StreamParameter, wie Z. b. Alpha, Z-Reihenfolge und Position.
+Standardmäßig erstellt VMR-9 vier Eingabepins. Wenn Sie mehr als vier Videostreams mischen möchten, rufen Sie [**IVMRFilterConfig9::SetNumberOfStreams**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrfilterconfig9-setnumberofstreams) auf, bevor Sie eine Verbindung mit Eingabepins herstellen. Verwenden Sie die [**IVMRMixerControl9-Schnittstelle,**](/previous-versions/windows/desktop/api/Vmr9/nn-vmr9-ivmrmixercontrol9) um die Streamparameter wie Alpha, Z-Reihenfolge und Position festzulegen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des VMR-Mischungs Modus](using-vmr-mixing-mode.md)
+[Verwenden des VMR-Gemischtmodus](using-vmr-mixing-mode.md)
 </dt> </dl>
 
  

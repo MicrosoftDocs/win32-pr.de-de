@@ -1,31 +1,31 @@
 ---
-title: Wcfpublicservicesample
-description: Diese Beispiele zeigen, wie der Dienst Proxy mit http//131.107.72.15/example \_ HelloWorld- \_ Dienst \_ Indigo/HelloWorld. svc wsdl kommuniziert.
+title: WcfPublicServiceSample
+description: In diesem Beispiel wird gezeigt, wie der Dienstproxy mit http ://131.107.72.15/Example \_ HelloWorld \_ Service \_ Indigo/HelloWorld.svc wsdl spricht.
 ms.assetid: 755e645e-b39c-471c-9220-531dec4fc107
 keywords:
-- Wcfpublicservicesample-Windows-Webdienste-API
-- Wwsapi
+- WcfPublicServiceSample Windows Web Services-API
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 67a60ba10372b02a19999d227b24661248727bd6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 71fb1ce75ac6c12382019a1d5cd9dfc55c4b054e04d290bfc11fff87bf5dc906
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083064"
 ---
-# <a name="wcfpublicservicesample"></a>Wcfpublicservicesample
+# <a name="wcfpublicservicesample"></a>WcfPublicServiceSample
 
-Diese Beispiele zeigen, wie der Dienst Proxy mit kommuniziert http://131.107.72.15/Example\_HelloWorld\_Service\_Indigo/HelloWorld.svc?wsdl .
+In diesem Beispiel wird veranschaulicht, wie der Dienstproxy mit http://131.107.72.15/Example\_HelloWorld\_Service\_Indigo/HelloWorld.svc?wsdl spricht.
 
--   [Wcfpublicserviceclient. cpp](#wcfpublicserviceclientcpp)
--   [Schemas. Microsoft. com. 2003.10. Serialization. xsd](#schemasmicrosoftcom200310serializationxsd)
--   [tempuri. org. xsd](#tempuriorgxsd)
--   [tempuri. org. WSDL](#tempuriorgwsdl)
+-   [WcfPublicServiceClient.cpp](#wcfpublicserviceclientcpp)
+-   [schemas.microsoft.com.2003.10.Serialization.xsd](#schemasmicrosoftcom200310serializationxsd)
+-   [tempuri.org.xsd](#tempuriorgxsd)
+-   [tempuri.org.wsdl](#tempuriorgwsdl)
 -   [Makefile](#makefile)
 
-## <a name="wcfpublicserviceclientcpp"></a>Wcfpublicserviceclient. cpp
+## <a name="wcfpublicserviceclientcpp"></a>WcfPublicServiceClient.cpp
 
 
 ```C++
@@ -209,7 +209,7 @@ Exit:
 
 
 
-## <a name="schemasmicrosoftcom200310serializationxsd"></a>Schemas. Microsoft. com. 2003.10. Serialization. xsd
+## <a name="schemasmicrosoftcom200310serializationxsd"></a>schemas.microsoft.com.2003.10.Serialization.xsd
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8"?>
@@ -254,7 +254,7 @@ Exit:
 </xs:schema>
 ```
 
-## <a name="tempuriorgxsd"></a>tempuri. org. xsd
+## <a name="tempuriorgxsd"></a>tempuri.org.xsd
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8"?>
@@ -288,7 +288,7 @@ Exit:
 </xs:schema>
 ```
 
-## <a name="tempuriorgwsdl"></a>tempuri. org. WSDL
+## <a name="tempuriorgwsdl"></a>tempuri.org.wsdl
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8"?>
@@ -386,9 +386,9 @@ clean:
 
 ```
 
- 
+ 
 
- 
+ 
 
 
 

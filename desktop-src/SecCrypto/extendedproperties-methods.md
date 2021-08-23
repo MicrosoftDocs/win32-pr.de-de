@@ -1,19 +1,19 @@
 ---
-description: Das ExtendedProperties-Objekt stellt die folgenden Methoden zur Verfügung.
+description: Das ExtendedProperties-Objekt macht die folgenden Methoden verfügbar.
 ms.assetid: F09E45C2-F8BA-4A4E-B3EE-13C2A7AACF8A
 title: ExtendedProperties-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d31521dd63dc56c5b91eff3fda2456d455887243
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 03b9dbfceb14702c2e22adb0cbc9a45bd464542dda957d6d39f93d525c4b969a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007228"
 ---
 # <a name="extendedproperties-methods"></a>ExtendedProperties-Methoden
 
-Das [**ExtendedProperties**](extendedproperties.md) -Objekt stellt die folgenden Methoden zur Verfügung.
+Das [**ExtendedProperties-Objekt**](extendedproperties.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

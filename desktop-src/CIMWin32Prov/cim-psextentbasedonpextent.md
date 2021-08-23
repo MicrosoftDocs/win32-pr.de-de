@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ psextentbasedonpblock-Klasse ordnet Blöcke mit geschütztem Speicherplatz zu, die auf einem physischen Block basieren.
+description: Die \_ CIM-Klasse PSExtentBasedOnPExtent ordnet geschützte Leerzeichen zu, die auf einem physischen Bereich basieren.
 ms.assetid: 4b89319c-022c-4ff4-91ec-70c435a5888a
 ms.tgt_platform: multiple
 title: CIM_PSExtentBasedOnPExtent-Klasse
@@ -18,23 +18,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: d028cb99c2f2ca3c0afd8238a3c0c1c3b2e451a3
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 788d19eb2d9d11f5515f3507431498e713b3d1f98871ec79065f616cc606dea1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080324"
 ---
-# <a name="cim_psextentbasedonpextent-class"></a>CIM \_ psextentbasedonpblock-Klasse
+# <a name="cim_psextentbasedonpextent-class"></a>CIM \_ PSExtentBasedOnPExtent-Klasse
 
-Die **CIM \_ psextentbasedonpblock** -Klasse ordnet Blöcke mit geschütztem Speicherplatz zu, die auf einem physischen Block basieren.
+Die **\_ CIM-Klasse PSExtentBasedOnPExtent** ordnet geschützte Leerzeichen zu, die auf einem physischen Bereich basieren.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,89 +51,89 @@ class CIM_PSExtentBasedOnPExtent : CIM_BasedOn
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ psextentbasedonpblock** -Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-Klasse PSExtentBasedOnPExtent** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ psextentbasedonpblock** -Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse PSExtentBasedOnPExtent** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ physicalblock**
+Datentyp: **CIM \_ PhysicalExtent**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
+Qualifizierer: [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Ein [**CIM- \_ physikalischer**](cim-physicalextent.md) Wert, der den physischen Wertebereich beschreibt.
+Ein [**CIM \_ PhysicalExtent,**](cim-physicalextent.md) der den physischen Umfang beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ protectedspaceblock**
+Datentyp: **CIM \_ ProtectedSpaceExtent**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM \_ protectedspaceblock**](cim-protectedspaceextent.md) , der den geschützten Bereichs Bereich beschreibt, der auf dem physischen Block basiert.
+Ein [**CIM \_ ProtectedSpaceExtent,**](cim-protectedspaceextent.md) das den geschützten Bereich beschreibt, der auf dem physischen Bereich basiert.
 
 </dd> <dt>
 
-**"Endadresse"**
+**EndingAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt das Ende des hohen Wertebereichs in niedrigerer Speicher Ebene an. Diese Eigenschaft ist nützlich, wenn Sie nicht zusammenhängende Blöcke einer Gruppierung auf höherer Ebene zuordnen.
+Gibt das Ende des hohen Umfangs im Speicher auf niedrigerer Ebene an. Diese Eigenschaft ist nützlich, wenn nicht zusammenhängende Extent einer Gruppierung auf höherer Ebene zuordnen.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
-Diese Eigenschaft wird von [**CIM- \_ BasedOn**](cim-basedon.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ BasedOn geerbt.**](cim-basedon.md)
 
 </dd> <dt>
 
 **StartingAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Anfang des hohen Bereichs in einem Speicher auf niedrigerer Ebene an.
+Gibt den Anfang des hohen Umfangs im Speicher auf niedrigerer Ebene an.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
-Diese Eigenschaft wird von [**CIM- \_ BasedOn**](cim-basedon.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ BasedOn geerbt.**](cim-basedon.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ psextentbasedonpblock** -Klasse wird von [**CIM \_ BasedOn**](cim-basedon.md)abgeleitet.
+Die **\_ CIM-Klasse PSExtentBasedOnPExtent** wird von [**CIM \_ BasedOn abgeleitet.**](cim-basedon.md)
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -143,8 +143,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -153,7 +153,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ BasedOn**](cim-basedon.md)
+[**CIM \_ BasedOn**](cim-basedon.md)
 </dt> </dl>
 
  

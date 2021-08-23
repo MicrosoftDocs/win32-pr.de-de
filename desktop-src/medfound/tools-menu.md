@@ -4,16 +4,16 @@ ms.assetid: ed623e1c-3df8-400c-8c5b-134c8a1f2ab8
 title: Menü 'Extras'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f8e678af8c3e5179a6846c51d52f52ffa203308d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 73e23df63b14f91970208ef676aefc777ba97bdb439372c244e86463fca9f3c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119034698"
 ---
 # <a name="tools-menu"></a>Menü 'Extras'
 
-Das **Menü Extras enthält die folgenden** Befehle:
+Das **Menü Extras** enthält die folgenden Befehle:
 
 
 
@@ -24,21 +24,21 @@ Das **Menü Extras enthält die folgenden** Befehle:
 </colgroup>
 <thead>
 <tr class="header">
-<th>Get-Help</th>
-<th>BESCHREIBUNG</th>
+<th>Befehl</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Spy-ausgewählter Knoten</strong></td>
-<td>Protokolliert alle Methodenaufrufe für einen ausgewählten Transformations Knoten oder einen Ausgabe Knoten und speichert die Ergebnisse in einer Textdatei. Weitere Informationen finden Sie unter <a href="logging-topology-node-activities.md">Protokollieren von topologieknoten-Aktivitäten</a> .</td>
+<td><strong>Ausgewählte Knoten ausspionieren</strong></td>
+<td>Protokolliert alle Methodenaufrufe auf einem ausgewählten Transformationsknoten oder einem Ausgabeknoten und speichert die Ergebnisse in einer Textdatei. Weitere Informationen finden Sie unter <a href="logging-topology-node-activities.md">Protokollieren von Topologieknotenaktivitäten.</a></td>
 </tr>
 <tr class="even">
-<td><strong>Benutzerdefinierter topoloader...</strong></td>
-<td>Ermöglicht dem Benutzer das Bereitstellen eines benutzerdefinierten topologieladers.<br/>
+<td><strong>Benutzerdefinierter Topoloader...</strong></td>
+<td>Ermöglicht es dem Benutzer, ein benutzerdefiniertes Topologielader zur Verfügung zu stellen.<br/>
 <blockquote>
 [!Note]<br />
-Diese Funktion wurde für Windows 7 hinzugefügt.
+Dieses Feature wurde für Windows 7 hinzugefügt.
 </blockquote>
 <br/></td>
 </tr>
@@ -53,10 +53,10 @@ Diese Funktion wurde für Windows 7 hinzugefügt.
 
 <dl> <dt>
 
-[Topoedit-Menüs](topoedit-menus.md)
+[TopoEdit-Menüs](topoedit-menus.md)
 </dt> <dt>
 
-[Topoedit](topoedit.md)
+[TopoEdit](topoedit.md)
 </dt> </dl>
 
  

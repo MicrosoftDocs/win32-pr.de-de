@@ -1,25 +1,25 @@
 ---
-description: Die LSA stellt Funktionen bereit, die Sie verwenden können, um Benachrichtigungen zu empfangen, wenn eine Änderung der Richtlinie auf dem lokalen System vorliegt.
+description: Das LSA stellt Funktionen bereit, die Sie verwenden können, um Benachrichtigungen zu erhalten, wenn eine Änderung der Richtlinie auf dem lokalen System vorliegt.
 ms.assetid: 29c693f5-db2b-4fda-847c-4e5220eadfd3
-title: Empfangen von Richtlinien Änderungs Ereignissen
+title: Empfangen von Richtlinienänderungsereignissen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 33145974ce712f21b338ba35f1571c8f3046c42c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ba1fc2328d0467dcfe5b6f85b9b8384cf4c8271d35fcda106a61ae5bb068f74
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005048"
 ---
-# <a name="receiving-policy-change-events"></a>Empfangen von Richtlinien Änderungs Ereignissen
+# <a name="receiving-policy-change-events"></a>Empfangen von Richtlinienänderungsereignissen
 
-Die LSA stellt Funktionen bereit, die Sie verwenden können, um Benachrichtigungen zu empfangen, wenn eine Änderung der Richtlinie auf dem lokalen System vorliegt.
+Das LSA stellt Funktionen bereit, die Sie verwenden können, um Benachrichtigungen zu erhalten, wenn eine Änderung der Richtlinie auf dem lokalen System vorliegt.
 
-Um eine Benachrichtigung zu erhalten, erstellen Sie ein neues Ereignis Objekt, indem Sie die [**CreateEvent**](/windows/desktop/api/synchapi/nf-synchapi-createeventa) -Funktion aufrufen, und rufen Sie dann die [**lsaregisterpolicychangenotifi-**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaregisterpolicychangenotification) Funktion auf. Die Anwendung kann dann eine wait-Funktion aufrufen, z. b. " [**WaitForSingleObject**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)", " [**WaitForSingleObjectEx**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobjectex)" oder " [**RegisterWaitForSingleObject**](/windows/desktop/api/winbase/nf-winbase-registerwaitforsingleobject) ", um auf das Ereignis zu warten. Die wait-Funktion gibt zurück, wenn das Ereignis auftritt oder wenn der Timeout Zeitraum abläuft. In der Regel werden Benachrichtigungs Ereignisse in Multithreadanwendungen verwendet, in denen ein Thread auf ein Ereignis wartet, während andere Threads die Verarbeitung fortsetzen.
+Um Benachrichtigungen zu erhalten, erstellen Sie ein neues Ereignisobjekt, indem Sie die [**CreateEvent-Funktion**](/windows/desktop/api/synchapi/nf-synchapi-createeventa) aufrufen und dann die [**LsaRegisterPolicyChangeNotification-Funktion**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaregisterpolicychangenotification) aufrufen. Ihre Anwendung kann dann eine Wait-Funktion wie [**WaitForSingleObject,**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) [**WaitForSingleObjectEx**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobjectex)oder [**RegisterWaitForSingleObject**](/windows/desktop/api/winbase/nf-winbase-registerwaitforsingleobject) aufrufen, um auf das Eintreten des Ereignisses zu warten. Die Wait-Funktion gibt zurück, wenn das Ereignis eintritt oder der Time out-Zeitraum abläuft. In der Regel werden Benachrichtigungsereignisse in Multithreadanwendungen verwendet, in denen ein Thread auf ein Ereignis wartet, während andere Threads die Verarbeitung fortsetzen.
 
-Wenn Ihre Anwendung keine Benachrichtigungen mehr empfangen muss, sollte Sie [**lsaunregisterpolicychangenotifizierung**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaunregisterpolicychangenotification) aufrufen und dann [**CloseHandle**](/windows/desktop/api/handleapi/nf-handleapi-closehandle) aufrufen, um das Ereignis Objekt Handle freizugeben.
+Wenn Ihre Anwendung keine Benachrichtigungen mehr empfangen muss, sollte sie [**LsaUnregisterPolicyChangeNotification**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaunregisterpolicychangenotification) und dann [**CloseHandle**](/windows/desktop/api/handleapi/nf-handleapi-closehandle) aufrufen, um das Ereignisobjekthandle frei zu machen.
 
-Das folgende Beispiel zeigt, wie eine Single Thread-Anwendung Benachrichtigungs Ereignisse empfangen kann, wenn sich die Überwachungsrichtlinie des Systems ändert.
+Das folgende Beispiel zeigt, wie eine Singlethreadanwendung Benachrichtigungsereignisse empfangen kann, wenn sich die Überwachungsrichtlinie des Systems ändert.
 
 
 ```C++
@@ -86,7 +86,7 @@ void WaitForPolicyChanges()
 
 
 
-Weitere Informationen zu Ereignis Objekten, Wait-Funktionen und der Synchronisierung finden [Sie unter Verwenden von Ereignis Objekten](/windows/desktop/Sync/using-event-objects).
+Weitere Informationen zu Ereignisobjekten, Wartefunktionen und Synchronisierung finden Sie unter [Verwenden von Ereignisobjekten.](/windows/desktop/Sync/using-event-objects)
 
  
 

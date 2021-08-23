@@ -1,9 +1,9 @@
 ---
-title: gluquadricdrawstyle-Funktion (glu. h)
-description: Die Funktion "gluquadricdrawstyle" gibt die gewünschte Zeichnungs Art für viercs an.
+title: gluQuadricDrawStyle-Funktion (Glu.h)
+description: Die gluQuadricDrawStyle-Funktion gibt den gewünschten Draw-Stil für Quadrics an.
 ms.assetid: 30f6da40-9306-46bb-a815-f51722e57e18
 keywords:
-- gluquadricdrawstyle-Funktion OpenGL
+- gluQuadricDrawStyle-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8a1b44b7894ea9762b450c5a5d6c2b022c5e02f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7a873ed4f4ceaff4aa3dad678dbb4c1fd7a635b0ce41d7a9480af84278c8360c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061558"
 ---
-# <a name="gluquadricdrawstyle-function"></a>gluquadricdrawstyle-Funktion
+# <a name="gluquadricdrawstyle-function"></a>gluQuadricDrawStyle-Funktion
 
-Die Funktion " **gluquadricdrawstyle** " gibt die gewünschte Zeichnungs Art für viercs an.
+Die **gluQuadricDrawStyle-Funktion** gibt den gewünschten Draw-Stil für Quadrics an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,26 +41,26 @@ void WINAPI gluQuadricDrawStyle(
 
 <dl> <dt>
 
-*quadobject* 
+*quadObject* 
 </dt> <dd>
 
-Das Quadric-Objekt (mit [**glunewquadric**](glunewquadric.md)erstellt).
+Das quadrierte Objekt (erstellt mit [**gluNewQuadric**](glunewquadric.md)).
 
 </dd> <dt>
 
-*DrawStyle* 
+*Drawstyle* 
 </dt> <dd>
 
-Der gewünschte Zeichnungs Stil. Die folgenden Werte sind gültig.
+Der gewünschte Zeichnen-Stil. Die folgenden Werte sind gültig.
 
 
 
 | Wert                                                                                                                                                            | Bedeutung                                                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GLU_FILL"></span><span id="glu_fill"></span><dl> <dt>**Glu \_ ausfüllen**</dt> </dl>                   | Viercs werden mit Polygon primitiven gerendert. Die Polygone werden gegen den Uhrzeigersinn in Bezug auf ihre normale (wie mit " [**gluquadricorientation**](gluquadricorientation.md)" definiert) gezeichnet.<br/> |
-| <span id="GLU_LINE"></span><span id="glu_line"></span><dl> <dt>**Glu- \_ Linie**</dt> </dl>                   | Viercs werden als Zeilen Satz gerendert.<br/>                                                                                                                                                                    |
-| <span id="GLU_SILHOUETTE"></span><span id="glu_silhouette"></span><dl> <dt>**Glu- \_ Silhouette**</dt> </dl> | Viercs werden als Zeilen Satz gerendert, mit dem Unterschied, dass Kanten, die Coplanar trennen, nicht gezeichnet werden.<br/>                                                                                                     |
-| <span id="GLU_POINT"></span><span id="glu_point"></span><dl> <dt>**Glu- \_ Punkt**</dt> </dl>                | Viercs werden als eine Gruppe von Punkten gerendert.<br/>                                                                                                                                                                   |
+| <span id="GLU_FILL"></span><span id="glu_fill"></span><dl> <dt>**GLU \_ FILL**</dt> </dl>                   | Quadrics werden mit Polygonprimitiven gerendert. Die Polygone werden im Hinblick auf ihre Normalitäten gegen den Uhrzeigersinn gezeichnet (wie mit [**gluQuadricOrientation**](gluquadricorientation.md)definiert).<br/> |
+| <span id="GLU_LINE"></span><span id="glu_line"></span><dl> <dt>**GLU \_ LINE**</dt> </dl>                   | Quadrische Daten werden als Zeilen gerendert.<br/>                                                                                                                                                                    |
+| <span id="GLU_SILHOUETTE"></span><span id="glu_silhouette"></span><dl> <dt>**GLU \_ WIEDERERZ**</dt> </dl> | Quadrics werden als Linien gerendert, mit der Ausnahme, dass Kanten, die koplanare Gesichter trennen, nicht gezeichnet werden.<br/>                                                                                                     |
+| <span id="GLU_POINT"></span><span id="glu_point"></span><dl> <dt>**GLU \_ POINT**</dt> </dl>                | Quadrics werden als Satz von Punkten gerendert.<br/>                                                                                                                                                                   |
 
 
 
@@ -72,9 +72,9 @@ Der gewünschte Zeichnungs Stil. Die folgenden Werte sind gültig.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **gluquadricdrawstyle** " gibt den Zeichnungs Stil für viercs an, die mit **quadobject** gerendert werden.
+Die **gluQuadricDrawStyle-Funktion** gibt den Draw-Stil für Quadrics an, die mit **quadObject** gerendert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,26 +84,26 @@ Die Funktion " **gluquadricdrawstyle** " gibt den Zeichnungs Stil für viercs an
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glunewquadric**](glunewquadric.md)
+[**gluNewQuadric**](glunewquadric.md)
 </dt> <dt>
 
-[**gluquadricnormals**](gluquadricnormals.md)
+[**gluQuadricNormals**](gluquadricnormals.md)
 </dt> <dt>
 
-[**gluquadricorientation**](gluquadricorientation.md)
+[**gluQuadricOrientation**](gluquadricorientation.md)
 </dt> <dt>
 
-[**gluquadrictexture**](gluquadrictexture.md)
+[**gluQuadricTexture**](gluquadrictexture.md)
 </dt> </dl>
 
  

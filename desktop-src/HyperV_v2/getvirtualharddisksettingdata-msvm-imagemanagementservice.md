@@ -1,7 +1,7 @@
 ---
-description: Ruft die der virtuellen Festplatten Datei zugeordneten Einstellungsdaten ab.
+description: Ruft die Einstellungsdaten ab, die einer virtuellen Festplattendatei zugeordnet sind.
 ms.assetid: b82c018e-8d23-4615-99c1-3b622a8f41da
-title: Getvirtualharddisksettingdata-Methode der Msvm_ImageManagementService-Klasse
+title: GetVirtualHardDiskSettingData-Methode der Msvm_ImageManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: cf8f19d3bbdac593dabef0a1ff8e9c9b60027301
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 56f5e4018b76fd720f489a52cb987a8ef0c55ecaf2fe1121f9bfa7c3581f30c5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119253450"
 ---
-# <a name="getvirtualharddisksettingdata-method-of-the-msvm_imagemanagementservice-class"></a>Getvirtualharddisksettingdata-Methode der MSVM \_ imagemanagementservice-Klasse
+# <a name="getvirtualharddisksettingdata-method-of-the-msvm_imagemanagementservice-class"></a>GetVirtualHardDiskSettingData-Methode der Msvm \_ ImageManagementService-Klasse
 
-Ruft die der virtuellen Festplatten Datei zugeordneten Einstellungsdaten ab.
+Ruft die Einstellungsdaten ab, die einer virtuellen Festplattendatei zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 GetVirtualHardDiskSettingData(
 
 <dl> <dt>
 
-*Pfad* \[ in\]
+*Pfad* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Pfad der Datenträger Image Datei.
+Der vollqualifizierte Pfad der Datenträgerimagedatei.
 
 </dd> <dt>
 
-*SettingData* \[ vorgenommen\]
+*SettingData* \[ out\]
 </dt> <dd>
 
-Bei erfolgreicher Ausführung empfängt eine eingebettete Instanz der [**MSVM-Klasse " \_ virtualharddisksettingdata**](msvm-virtualharddisksettingdata.md) ", die die Einstellungsdaten für die virtuelle Festplatte enthält.
+Wenn erfolgreich, empfängt eine eingebettete Instanz der [**Msvm \_ VirtualHardDiskSettingData-Klasse,**](msvm-virtualharddisksettingdata.md) die die Einstellungsdaten für die virtuelle Festplatte enthält.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -71,10 +71,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -83,7 +83,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -95,28 +95,28 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die [**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ ImageManagementService-Klasse**](msvm-imagemanagementservice.md) kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden c#-Beispiel wird gezeigt, wie die [**getvirtualharddiskstate**](getvirtualharddiskstate-msvm-imagemanagementservice.md) -Methode aufgerufen wird. Die Dienstprogramme, auf die verwiesen wird, finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)](common-utilities-for-the-virtualization-samples-v2.md).
+Das folgende C#-Beispiel zeigt, wie die [**GetVirtualHardDiskState-Methode**](getvirtualharddiskstate-msvm-imagemanagementservice.md) aufgerufen wird. Die referenzierten Hilfsprogramme finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2).](common-utilities-for-the-virtualization-samples-v2.md)
 
 
 ```CSharp
@@ -160,19 +160,19 @@ public static void GetVirtualHardDiskSettingData(string vhdPath)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md)
+[**Msvm \_ ImageManagementService**](msvm-imagemanagementservice.md)
 </dt> </dl>
 
  

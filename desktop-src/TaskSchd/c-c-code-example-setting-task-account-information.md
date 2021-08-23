@@ -1,22 +1,22 @@
 ---
-title: C/C++-Code Beispiel Festlegen von Aufgaben Kontoinformationen
-description: In diesem Beispiel werden die Kontoinformationen für eine bekannte Aufgabe festgelegt. In diesem Beispiel wird davon ausgegangen, dass der Task \ 0034; TestTask \ 0034; auf dem lokalen Computer bereits vorhanden ist und der Taskplaner-Dienst ausgeführt wird.
+title: 'C/C++-Codebeispiel: Festlegen von Taskkontoinformationen'
+description: In diesem Beispiel werden die Kontoinformationen für eine bekannte Aufgabe festgelegt. In diesem Beispiel wird davon ausgegangen, dass der Task \ 0034;Testtask \ 0034; ist bereits auf dem lokalen Computer vorhanden, und der Taskplaner Dienst wird ausgeführt.
 ms.assetid: ab865f70-f8d1-411e-b637-b1b1028ccf62
 keywords:
 - Festlegen von Kontoinformationen Taskplaner
-- Festlegen von Arbeits Element Eigenschaften Taskplaner, Kontoinformationen
+- Festlegen von Arbeitselementeigenschaften Taskplaner , Kontoinformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb5673653fa5dfe4875fb57a00535b30ae384e91
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9efa9307e930ba8bb23813cf9a2dd588c464435fb8df5f6c71724321f0854fef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036674"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060228"
 ---
-# <a name="cc-code-example-setting-task-account-information"></a>C/C++-Code Beispiel: Festlegen von Informationen zum Task Konto
+# <a name="cc-code-example-setting-task-account-information"></a>C/C++-Codebeispiel: Festlegen von Taskkontoinformationen
 
-In diesem Beispiel werden die Kontoinformationen für eine bekannte Aufgabe festgelegt. In diesem Beispiel wird davon ausgegangen, dass der Task "Testaufgabe" bereits auf dem lokalen Computer vorhanden ist und der Taskplaner-Dienst ausgeführt wird.
+In diesem Beispiel werden die Kontoinformationen für eine bekannte Aufgabe festgelegt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe "Testaufgabe" bereits auf dem lokalen Computer vorhanden ist und dass der Taskplaner Dienst ausgeführt wird.
 
 
 ```C++
@@ -190,12 +190,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[beispiele für Taskplaner 1.0](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

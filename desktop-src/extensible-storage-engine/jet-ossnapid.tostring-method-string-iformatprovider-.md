@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_OSSNAPID. Methode "destring" (String, IFormatProvider)'
-title: JET_OSSNAPID. Methode "destring" (String, IFormatProvider)
+description: 'Erfahren Sie mehr über: JET_OSSNAPID. ToString-Methode (String, IFormatProvider)'
+title: JET_OSSNAPID. ToString-Methode (String, IFormatProvider)
 TOCTitle: ToString method (String, IFormatProvider)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_OSSNAPID.ToString(System.String,System.IFormatProvider)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_ossnapid.tostring(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 95e93fd3a6bbf7f2fa3505fcb9480367b780ecc4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 56e86765839434f2cd3a67c18f6395dd5443f21f8b905e6f86e6e85ad9915c3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119038868"
 ---
-# <a name="jet_ossnapidtostring-method-string-iformatprovider"></a>JET_OSSNAPID. Methode "destring" (String, IFormatProvider)
+# <a name="jet_ossnapidtostring-method-string-iformatprovider"></a>JET_OSSNAPID. ToString-Methode (String, IFormatProvider)
 
 Formatiert den Wert der aktuellen Instanz mit dem angegebenen Format.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,34 +62,34 @@ public string ToString(
 #### <a name="parameters"></a>Parameter
 
   - format  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
-    Die [Zeichenfolge](/dotnet/api/system.string) , die das zu verwendende Format angibt. -oder-NULL, um das für den Typ der [IFormattable](/dotnet/api/system.iformattable) -Implementierung definierte Standardformat zu verwenden.
+    Die [Zeichenfolge,](/dotnet/api/system.string) die das zu verwendende Format angibt. Oder: NULL, um das Standardformat zu verwenden, das für den Typ der [IFormattable-Implementierung](/dotnet/api/system.iformattable) definiert ist.
 
 <!-- end list -->
 
-  - Format Provider  
-    Typ: [System. IFormatProvider](/dotnet/api/system.iformatprovider)  
+  - Formatprovider  
+    Typ: [System.IFormatProvider](/dotnet/api/system.iformatprovider)  
     
-    Der [IFormatProvider](/dotnet/api/system.iformatprovider) , der zum Formatieren des Werts verwendet werden soll. -oder-NULL zum Abrufen der numerischen Formatinformationen aus der aktuellen Gebiets Schema Einstellung des Betriebssystems.
+    Der [IFormatProvider,](/dotnet/api/system.iformatprovider) der zum Formatieren des Werts verwendet werden soll. Oder: NULL, um die numerischen Formatinformationen aus der aktuellen Gebietsschemaeinstellung des Betriebssystems abzurufen.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Eine [Zeichenfolge](/dotnet/api/system.string) , die den Wert der aktuellen Instanz im angegebenen Format enthält.  
+Typ: [System.String](/dotnet/api/system.string)  
+Eine [Zeichenfolge,](/dotnet/api/system.string) die den Wert der aktuellen Instanz im angegebenen Format enthält.  
 
 #### <a name="implements"></a>Implementiert
 
-[IFormattable. to String (String, IFormatProvider)](/dotnet/api/system.iformattable.tostring#System_IFormattable_ToString_System_String_System_IFormatProvider_)  
+[IFormattable.ToString(String, IFormatProvider)](/dotnet/api/system.iformattable.tostring#System_IFormattable_ToString_System_String_System_IFormatProvider_)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_OSSNAPID Struktur](./jet-ossnapid-structure.md)
+[JET_OSSNAPID-Struktur](./jet-ossnapid-structure.md)
 
-[Mitglieder JET_OSSNAPID](./jet-ossnapid-members.md)
+[JET_OSSNAPID-Member](./jet-ossnapid-members.md)
 
-[Überladung von ""](./jet-ossnapid.tostring-method.md)
+[ToString-Überladung](./jet-ossnapid.tostring-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,23 +1,23 @@
 ---
-description: Identitätswechsel ist die Fähigkeit eines Threads, in einem anderen Sicherheitskontext als dem Prozess auszuführen, der den Thread besitzt.
+description: Identitätswechsel ist die Fähigkeit eines Threads, in einem anderen Sicherheitskontext als dem prozess, der den Thread besitzt, auszuführen.
 ms.assetid: 1bde4d4d-958e-45f4-8cdb-0572adcaa3ac
-title: Annehmen der Identität eines Named Pipe-Clients
+title: Identitätswechsel für einen Named Pipe-Client
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 586de99ae24ba9bab8b65ba4cb1a3a91922aa9d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f6f0cb51acb09be9774fd67bae7a176c75156b28fb5b03f398202ee8ad9cbc4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119350400"
 ---
-# <a name="impersonating-a-named-pipe-client"></a>Annehmen der Identität eines Named Pipe-Clients
+# <a name="impersonating-a-named-pipe-client"></a>Identitätswechsel für einen Named Pipe-Client
 
-Identitäts *Wechsel ist die* Fähigkeit eines Threads, in einem anderen Sicherheitskontext als dem Prozess auszuführen, der den Thread besitzt. Durch den Identitätswechsel kann der Server Thread Aktionen im Namen des Clients durchführen, jedoch innerhalb der Grenzen des Sicherheits Kontexts des Clients. Der Client verfügt in der Regel über weniger Zugriffsrechte. Weitere Informationen finden Sie unter Identitäts [Wechsel.](/windows/desktop/SecAuthZ/client-impersonation)
+*Identitätswechsel ist* die Fähigkeit eines Threads, in einem anderen Sicherheitskontext als dem prozess, der den Thread besitzt, auszuführen. Der Identitätswechsel ermöglicht dem Serverthread das Ausführen von Aktionen im Namen des Clients, jedoch innerhalb der Grenzen des Sicherheitskontexts des Clients. Der Client verfügt in der Regel über weniger Zugriffsrechte. Weitere Informationen finden Sie unter [Identitätswechsel.](/windows/desktop/SecAuthZ/client-impersonation)
 
-Ein Named Pipe Server Thread kann die Funktion "Identitäts- [**amedpipeclient**](/windows/desktop/api/namedpipeapi/nf-namedpipeapi-impersonatenamedpipeclient) " aufrufen, um das Zugriffs Token des Benutzers anzunehmen, der mit dem Client Ende der Pipe verbunden ist. Beispielsweise kann ein Named Pipe Server Zugriff auf eine Datenbank oder ein Dateisystem bereitstellen, für die der Pipeserver über privilegierten Zugriff verfügt. Wenn ein Pipe-Client eine Anforderung an den Server sendet, nimmt der Server die Identität des Clients an und versucht, auf die geschützte Datenbank zuzugreifen. Das System gewährt oder verweigert den Server Zugriff basierend auf der Sicherheitsstufe des Clients. Wenn der Server fertiggestellt ist, wird die Funktion [**RevertToSelf**](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-reverttoself) verwendet, um das ursprüngliche Sicherheits Token wiederherzustellen.
+Ein Named Pipe-Serverthread kann die [**ImpersonateNamedPipeClient-Funktion**](/windows/desktop/api/namedpipeapi/nf-namedpipeapi-impersonatenamedpipeclient) aufrufen, um das Zugriffstoken des Benutzers anzunehmen, der mit dem Clientende der Pipe verbunden ist. Beispielsweise kann ein Named Pipe-Server Zugriff auf eine Datenbank oder ein Dateisystem bereitstellen, auf die der Pipeserver privilegierten Zugriff hat. Wenn ein Pipeclient eine Anforderung an den Server sendet, wird vom Server die Identität des Clients angenommen und versucht, auf die geschützte Datenbank zu zugreifen. Das System gewährt oder verweigert dann den Zugriff des Servers basierend auf der Sicherheitsstufe des Clients. Wenn der Server fertig ist, verwendet er die [**RevertToSelf-Funktion,**](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-reverttoself) um das ursprüngliche Sicherheitstoken wiederherzustellen.
 
-Die Identitätswechsel [Ebene](/windows/desktop/SecAuthZ/impersonation-levels) bestimmt die Vorgänge, die der Server ausführen kann, während die Identität des Clients angenommen wird. Standardmäßig nimmt ein Server einen Identitätswechsel auf der Identitätswechsel Ebene des securityidentitäts Wechsels vor. Wenn der Client jedoch die Funktion "up- [**File**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) " aufruft, um ein Handle für das Client Ende der Pipe zu öffnen, kann der Client das \_ Flag "Security sqos Present" verwenden, um die Identitätswechsel \_ Ebene des Servers zu steuern.
+Die [Ebene des Identitätswechsels bestimmt](/windows/desktop/SecAuthZ/impersonation-levels) die Vorgänge, die der Server beim Identitätswechsel des Clients ausführen kann. Standardmäßig wird die Identität eines Servers auf der Identitätswechselebene SecurityImpersonation angenommen. Wenn der Client jedoch die [**CreateFile-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) aufruft, um ein Handle für das Clientende der Pipe zu öffnen, kann der Client das SECURITY SQOS PRESENT-Flag verwenden, um die Identitätswechselebene des Servers zu \_ \_ steuern.
 
  
 

@@ -1,8 +1,8 @@
 ---
-description: Komprimiert die im Objekt Pfad angegebene logische Verzeichniseintrags Datei (oder das angegebene Verzeichnis) (diese Methode ist eine erweiterte Version der Methode compress).
+description: Komprimiert die logische Verzeichniseintragsdatei (oder das Verzeichnis), die im Objektpfad angegeben ist (diese Methode ist eine erweiterte Version der Compress-Methode).
 ms.assetid: 6b6e559c-4ca6-49d4-b255-5e1511fdf2e2
 ms.tgt_platform: multiple
-title: CompressEx-Methode der Win32_Directory-Klasse
+title: CompressEx-Methode der Win32_Directory Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 3ee300919efa388d27ae9d594bc2b6c27def88e6
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: d6340b4fa46ddebd579ab8622d502ebdd2d8eacea215a18407f0be4c222d2d03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080224"
 ---
-# <a name="compressex-method-of-the-win32_directory-class"></a>CompressEx-Methode der Win32- \_ Verzeichnis Klasse
+# <a name="compressex-method-of-the-win32_directory-class"></a>CompressEx-Methode der Win32 \_ Directory-Klasse
 
-Die [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode **CompressEx** komprimiert die im Objekt Pfad angegebene logische Verzeichniseintrags Datei (oder das Verzeichnis) (diese Methode ist eine erweiterte Version der Methode [**Compress**](compress-method-in-class-win32-directory.md) ).
+Die **CompressEx** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) komprimiert die logische Verzeichniseintragsdatei (oder das Verzeichnis), die im Objektpfad angegeben ist (diese Methode ist eine erweiterte Version der [**Compress-Methode).**](compress-method-in-class-win32-directory.md)
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,29 +44,29 @@ uint32 CompressEx(
 
 <dl> <dt>
 
-*Stop filename* \[ vorgenommen\]
+*StopFileName* \[ out\]
 </dt> <dd>
 
-Der Name der Datei oder des Verzeichnisses, in der die **CompressEx** -Methode fehlgeschlagen ist. Dieser Parameter ist **null** , wenn die Methode erfolgreich ausgeführt wird.
+Name der Datei oder des Verzeichnisses, in der bzw. dem die **CompressEx-Methode** fehlgeschlagen ist. Dieser Parameter ist **NULL,** wenn die Methode erfolgreich ist.
 
 </dd> <dt>
 
-*Startdateiname* \[ in, optional\]
+*StartFileName* \[ in, optional\]
 </dt> <dd>
 
-Benennt die untergeordnete Datei oder das Verzeichnis, die als Ausgangspunkt für **CompressEx** verwendet werden soll. Der Parameter " *StartFileName* " ist in der Regel der " *Stop filename* "-Parameter, der die Datei oder das Verzeichnis angibt, in dem ein Fehler beim vorherigen Methoden aufzurufen Wenn dieser Parameter **null** ist, wird der Vorgang für die im **ExecMethod** -Befehl angegebene Datei oder das Verzeichnis ausgeführt.
+Benennt die untergeordnete Datei oder das untergeordnete Verzeichnis, die bzw. das als Ausgangspunkt für **CompressEx verwendet werden soll.** Der *StartFileName-Parameter* ist in der Regel der *StopFileName-Parameter,* der die Datei oder das Verzeichnis angibt, in der bzw. dem beim vorherigen Methodenaufruf ein Fehler aufgetreten ist. Wenn dieser Parameter **NULL ist,** wird der Vorgang für die Datei oder das Verzeichnis ausgeführt, die bzw. das **im ExecMethod-Aufruf angegeben** ist.
 
-Wenn *StartFileName* verwendet wird, muss *rekursive* auch auf true festgelegt werden.
+Wenn *StartFileName* verwendet wird, *muss Recursive* auch auf TRUE festgelegt werden.
 
 </dd> <dt>
 
 *Rekursiv* \[ in, optional\]
 </dt> <dd>
 
-**True** gibt an, dass die Eigentums Änderung rekursiv auf Dateien und Verzeichnisse innerhalb des Verzeichnisses angewendet wird, das von der [**CIM \_ LogicalFile**](cim-logicalfile.md) -Instanz angegeben wird.
+True **gibt an,** dass die Besitzänderung rekursiv auf Dateien und Verzeichnisse innerhalb des Verzeichnisses angewendet wird, das von der [**CIM \_ LogicalFile-Instanz angegeben**](cim-logicalfile.md) wird.
 
 > [!Note]  
-> Bei Datei Instanzen wird der *rekursive* Eingabeparameter ignoriert.
+> Bei Dateiinstanzen wird der *Rekursive Eingabeparameter* ignoriert.
 
  
 
@@ -74,7 +74,7 @@ Wenn *StartFileName* verwendet wird, muss *rekursive* auch auf true festgelegt w
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich komprimiert wurde, und jede andere Zahl gibt einen Fehler an.
+Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich komprimiert wurde, und eine beliebige andere Zahl, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -95,7 +95,7 @@ Der Zugriff wurde verweigert.
 **8**
 </dt> <dd>
 
-Ein nicht angegebener Fehler ist aufgetreten.
+Es ist ein nicht angegebener Fehler aufgetreten.
 
 </dd> <dt>
 
@@ -116,7 +116,7 @@ Das angegebene Objekt ist bereits vorhanden.
 **11**
 </dt> <dd>
 
-Das Dateisystem ist kein NTFS.
+Das Dateisystem ist kein NTFS-System.
 
 </dd> <dt>
 
@@ -144,7 +144,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist eine Freigabe Verletzung aufgetreten.
+Es ist ein Freigabeverstoß vor worden.
 
 </dd> <dt>
 
@@ -158,7 +158,7 @@ Die angegebene Startdatei war ungültig.
 **17**
 </dt> <dd>
 
-Eine für den Vorgang erforderliche Berechtigung wird nicht aufrechterhalten.
+Für den Vorgang ist keine Berechtigung erforderlich.
 
 </dd> <dt>
 
@@ -177,8 +177,8 @@ Ein angegebener Parameter ist ungültig.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -190,7 +190,7 @@ Ein angegebener Parameter ist ungültig.
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Verzeichnis**](win32-directory.md)
+[**Win32-Verzeichnis \_**](win32-directory.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Eine Zuordnung zwischen einem Objekt und einem anderen Objekt, das darauf angewendet wurde.
+description: Eine Zuordnung zwischen einem -Objekt und einem anderen -Objekt, das darauf angewendet wurde.
 ms.assetid: ee6b17b7-4f01-4731-8d6b-a3421621a75a
 ms.tgt_platform: multiple
 title: CIM_LastAppliedSettingData-Klasse
@@ -16,19 +16,19 @@ api_type:
 - Schema
 api_location:
 - Root\CIMV2
-ms.openlocfilehash: fbad71cd88992673af5dd60c04b92dd3c833e5b5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6c1e5174cb9fcaf9279d16eceda547e9e5060c4ca4f7deda09cc170cf3dd7653
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119244650"
 ---
-# <a name="cim_lastappliedsettingdata-class"></a>CIM \_ lastappliedsettingdata-Klasse
+# <a name="cim_lastappliedsettingdata-class"></a>CIM \_ LastAppliedSettingData-Klasse
 
-Eine Zuordnung zwischen einem Objekt und einem anderen Objekt, das darauf angewendet wurde.
+Eine Zuordnung zwischen einem -Objekt und einem anderen -Objekt, das darauf angewendet wurde.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -46,20 +46,20 @@ class CIM_LastAppliedSettingData
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ lastappliedsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ LastAppliedSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ lastappliedsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ LastAppliedSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Appliedobject**
+**AppliedObject**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -68,14 +68,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Das-Objekt, das auf das Zielobjekt angewendet wurde.
+Das Objekt, das auf das Zielobjekt angewendet wurde.
 
 </dd> <dt>
 
 **Target**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -94,7 +94,7 @@ Das Objekt, das das Ziel der Anwendung des Objekts war.
 
 | Anforderung | Wert |
 |----------------------|------------------------|
-| Namespace<br/> | Root \\ CIMV2<br/> |
+| Namespace<br/> | \\Stamm-CIMV2<br/> |
 
 
 

@@ -1,50 +1,50 @@
 ---
-title: Menüs (Entwurfsgrundlagen)
+title: Menüs (Designgrundkenntnisse)
 description: Menüs sind hierarchische Listen von Befehlen oder Optionen, die Benutzern im aktuellen Kontext zur Verfügung stehen.
 ms.assetid: 3772ff8e-8057-476d-b62b-efbd5e07907f
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 7d5c52e56c88f4066e8f1dc068ac89070c7d4974
-ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
+ms.openlocfilehash: e9b2c3559163ff77e8e3f08354b017c1b7cb53c95fd51802ae2565efdf71abcd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111524374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119350173"
 ---
-# <a name="menus-design-basics"></a>Menüs (Entwurfsgrundlagen)
+# <a name="menus-design-basics"></a>Menüs (Designgrundkenntnisse)
 
 > [!NOTE]
-> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
+> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
 
 Menüs sind hierarchische Listen von Befehlen oder Optionen, die Benutzern im aktuellen Kontext zur Verfügung stehen.
 
-Dropdownmenüs sind Menüs, die bei Bedarf per Mausklick oder mit dem Mauszeiger darauf angezeigt werden. Sie werden normalerweise in der Ansicht ausgeblendet und sind daher ein effizientes Mittel, um Bildschirmfläche zu sparen. Ein Untermenü oder kaskadierendes Menü ist ein sekundäres Menü, das bei Bedarf innerhalb eines Menüs angezeigt wird. Sie werden durch einen Pfeil am Ende der Untermenübezeichnung angezeigt. Ein Menüelement ist ein einzelner Befehl oder eine Option innerhalb eines Menüs.
+Dropdownmenüs sind Menüs, die bei Bedarf per Mausklick oder Mauszeiger angezeigt werden. Sie werden normalerweise nicht angezeigt und sind daher ein effizientes Mittel, um Platz auf dem Bildschirm zu sparen. Ein Untermenü oder kaskadierenden Menü ist ein sekundäres Menü, das bei Bedarf innerhalb eines Menüs angezeigt wird. Sie werden durch einen Pfeil am Ende der Untermenübezeichnung angezeigt. Ein Menüelement ist ein einzelner Befehl oder eine Option innerhalb eines Menüs.
 
-Menüs werden häufig über eine Menüleiste angezeigt, bei der es sich um eine Liste mit beschrifteten Menükategorien handelt, die sich in der Regel am oberen Rand eines Fensters befinden. Im Gegensatz dazu fällt ein Kontextmenü aus, wenn Benutzer mit der rechten Maustaste auf ein Objekt oder einen Fensterbereich klicken, der ein Kontextmenü unterstützt.
+Menüs werden häufig über eine Menüleiste angezeigt. Dabei handelt es sich um eine Liste bezeichneter Menükategorien, die sich in der Regel am oberen Fensteranfang befinden. Im Gegensatz dazu wird ein Kontextmenü heruntergefahren, wenn Benutzer mit der rechten Maustaste auf ein Objekt oder einen Fensterbereich klicken, das ein Kontextmenü unterstützt.
 
 ![Screenshot der Menüleiste mit Menü und Untermenü ](images/cmd-menus-image1.png)
 
-Eine typische Menüleiste, die ein Dropdownmenü und ein Untermenü anzeigt.
+Eine typische Menüleiste mit einem Dropdownmenü und Untermenü.
 
 > [!Note]  
-> Richtlinien für [Befehlsschaltflächen,](ctrl-command-buttons.md) [Symbolleisten](cmd-toolbars.md)und [Tastatur](inter-keyboard.md) werden in separaten Artikeln dargestellt.
+> Richtlinien für [Befehlsschaltflächen,](ctrl-command-buttons.md) [Symbolleisten](cmd-toolbars.md)und [Tastatur](inter-keyboard.md) werden in separaten Artikeln vorgestellt.
 
  
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
-Menüs weisen mehrere Verwendungsmuster auf:
+Menüs haben mehrere Verwendungsmuster:
 
 
 
 | Verwendung                                                                                                                                                |    Beispiel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |-------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Menüleisten**<br/> Eine Menüleiste zeigt Befehle und Optionen in Dropdownmenüs an. <br/>                                               | Menüleisten sind sehr häufig und leicht zu finden sowie eine effiziente Nutzung des Speicherplatzes. <br/> ![Screenshot der Menüleiste mit Dropdownmenü ](images/cmd-menus-image2.png)<br/> Eine Menüleiste aus Windows Mail.<br/>                                                                                                                                                                                                                                                                                                                                                                                                          |
-| **Symbolleistenmenüs**<br/> eine Menüleiste, die als Symbolleiste implementiert ist. <br/>                                                                   | Symbolleistenmenüs sind Symbolleisten, die in erster Linie aus Befehlen in [Menüschaltflächen](ctrl-command-buttons.md) und geteilten Schaltflächen bestehen, wobei ggf. nur wenige direkte Befehle vorhanden sind. <br/> ![Screenshot des Symbolleistenmenüs mit Dropdownmenü ](images/cmd-menus-image3.png)<br/> Ein Symbolleistenmenü in Windows Fotogalerie.<br/> Richtlinien zu diesem Muster finden Sie unter [Symbolleisten](cmd-toolbars.md).<br/>                                                                                                                                                                                                             |
-| **Registerkartenmenüs**<br/> Schaltflächen in Registerkarten, die einen kleinen Satz von Befehlen und Optionen im Zusammenhang mit einer Registerkarte in einem Dropdownmenü anzeigen. <br/> | Registerkarten mit Menüs sehen wie gewöhnliche Registerkarten aus, mit dem Unterschied, dass ihr unterer Teil eine Schaltfläche mit Dropdownpfeil enthält. Wenn Sie auf die Schaltfläche klicken, wird ein Dropdownmenü angezeigt, anstatt die Registerkarte auszuwählen. <br/> ![Screenshot des Registerkartenmenüs mit Dropdownmenü ](images/cmd-menus-image4.png)<br/> Registerkartenmenüs werden in Windows Media Player verwendet.<br/>                                                                                                                                                                                                                                                                                           |
-| **Menüschaltflächen**<br/> Befehlsschaltflächen, die einen kleinen Satz verwandter Befehle in einem Dropdownmenü anzeigen. <br/>                       | [Menüschaltflächen](ctrl-command-buttons.md) sehen wie gewöhnliche Befehlsschaltflächen aus, außer dass sie über einen Dropdownpfeil verfügen. Wenn Sie auf die Schaltfläche klicken, wird ein Dropdownmenü angezeigt, anstatt einen Befehl auszuführen.<br/> [Geteilte Schaltflächen](ctrl-command-buttons.md) ähneln Menüschaltflächen, außer dass es sich um Variationen eines Befehls handelt, und wenn Sie auf den linken Teil der Schaltfläche klicken, wird die Aktion direkt auf der Bezeichnung ausgeführt.<br/> ![Screenshot der Menüschaltfläche mit Dropdownbefehlen ](images/cmd-menus-image5.png)<br/> Eine Menüschaltfläche mit einem kleinen Satz verwandter Befehle.<br/> |
-| **Kontextmenüs**<br/> Dropdownmenüs, die einen kleinen Satz von Befehlen und Optionen im Zusammenhang mit dem aktuellen Kontext anzeigen. <br/>       | Kontextmenüs, wenn Benutzer mit der rechten Maustaste auf ein Objekt oder einen Fensterbereich klicken, der ein Kontextmenü unterstützt. <br/> ![Screenshot des Kontextmenüs mit Befehlen ](images/cmd-menus-image6.png)<br/> ein Kontextmenü aus dem Windows-Explorer.<br/> Wenn Kontextmenüs die beste Menüauswahl sind, Sie aber eine für alle Benutzer geeignete Lösung benötigen, können Sie eine Dropdownpfeilschaltfläche im Menü verwenden. <br/> ![Screenshot des Fotos mit der Dropdownmenüschaltfläche ](images/cmd-menus-image7.png)<br/> Ein Kontextmenü, das mit einer Dropdownschaltfläche des Menüs sichtbar gemacht wird.<br/>                                                   |
-| **Menüs im Aufgabenbereich**<br/> eine kleine Gruppe von Befehlen im Zusammenhang mit dem ausgewählten Objekt oder Programmmodus. <br/>                              | Im Gegensatz zu Kontextmenüs werden sie nicht bei Bedarf, sondern automatisch in einem Fensterbereich angezeigt. <br/> ![Screenshot des Fotos mit Menü "Aufgabenbereich" auf der rechten Seite ](images/cmd-menus-image8.png)<br/> Ein Aufgabenbereichsmenü im Windows Fotogalerie Viewer.<br/>                                                                                                                                                                                                                                                                                                                                                         |
+| **Menüleisten**<br/> In einer Menüleiste werden Befehle und Optionen in Dropdownmenüs angezeigt. <br/>                                               | Menüleisten sind sehr häufig und leicht zu finden sowie eine effiziente Nutzung des Platzes. <br/> ![Screenshot der Menüleiste mit Dropdownmenü ](images/cmd-menus-image2.png)<br/> Eine Menüleiste aus Windows Mail.<br/>                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Symbolleistenmenüs**<br/> eine Als Symbolleiste implementierte Menüleiste. <br/>                                                                   | Symbolleistenmenüs sind Symbolleisten, die in erster Linie aus Befehlen [in](ctrl-command-buttons.md) Menüschaltflächen und geteilten Schaltflächen bestehen, mit nur wenigen direkten Befehlen(sofern verfügbar). <br/> ![Screenshot des Symbolleistenmenüs mit Dropdownmenü ](images/cmd-menus-image3.png)<br/> Ein Symbolleistenmenü in Windows Fotogalerie.<br/> Richtlinien zu diesem Muster finden Sie unter [Symbolleisten.](cmd-toolbars.md)<br/>                                                                                                                                                                                                             |
+| **Registerkartenmenüs**<br/> Schaltflächen in Registerkarten, die eine kleine Gruppe von Befehlen und Optionen im Zusammenhang mit einer Registerkarte in einem Dropdownmenü anzeigen. <br/> | Registerkarten mit Menüs sehen wie normale Registerkarten aus, außer dass ihr unterer Teil über eine Schaltfläche mit Dropdownpfeil verfügt. Wenn Sie auf die Schaltfläche klicken, wird ein Dropdownmenü angezeigt, anstatt die Registerkarte auszuwählen. <br/> ![Screenshot des Registerkartenmenüs mit Dropdownmenü ](images/cmd-menus-image4.png)<br/> Registerkartenmenüs werden in der Windows Media Player.<br/>                                                                                                                                                                                                                                                                                           |
+| **Menüschaltflächen**<br/> -Befehlsschaltflächen, die eine kleine Gruppe verwandter Befehle in einem Dropdownmenü anzeigen. <br/>                       | [-Menüschaltflächen](ctrl-command-buttons.md) sehen wie normale Befehlsschaltflächen aus, außer dass sie einen Dropdownpfeil enthalten. Wenn Sie auf die Schaltfläche klicken, wird ein Dropdownmenü angezeigt, anstatt einen Befehl auszuführen.<br/> [Teilungsschaltflächen](ctrl-command-buttons.md) ähneln Menüschaltflächen, mit dem Ausnahme, dass es sich um Variationen eines Befehls handelt. Wenn Sie auf den linken Teil der Schaltfläche klicken, wird die Aktion direkt auf der Bezeichnung ausgeführt.<br/> ![Screenshot der Menüschaltfläche mit Dropdownbefehlen ](images/cmd-menus-image5.png)<br/> Eine Menüschaltfläche mit einem kleinen Satz verwandter Befehle.<br/> |
+| **Kontextmenüs**<br/> Dropdownmenüs, die eine kleine Gruppe von Befehlen und Optionen im Zusammenhang mit dem aktuellen Kontext anzeigen. <br/>       | Dropdownmenüs für Kontextmenüs, wenn Benutzer mit der rechten Maustaste auf ein Objekt oder einen Fensterbereich klicken, der ein Kontextmenü unterstützt. <br/> ![Screenshot des Kontextmenüs mit Befehlen ](images/cmd-menus-image6.png)<br/> ein Kontextmenü aus dem Windows-Explorer.<br/> Wenn Kontextmenüs die beste Menüauswahl sind, Sie aber eine lösung benötigen, die für alle Benutzer geeignet ist, können Sie eine Dropdownpfeil-Schaltfläche im Menü verwenden. <br/> ![Screenshot des Fotos mit Dropdownmenüschaltfläche ](images/cmd-menus-image7.png)<br/> Ein Kontextmenü, das mit einer Dropdownschaltfläche angezeigt wird.<br/>                                                   |
+| **Menüs im Aufgabenbereich**<br/> eine kleine Gruppe von Befehlen, die sich auf das ausgewählte Objekt oder den ausgewählten Programmmodus bezieht. <br/>                              | Im Gegensatz zu Kontextmenüs werden sie automatisch in einem Fensterbereich statt bei Bedarf angezeigt. <br/> ![Screenshot des Fotos mit Menü "Aufgabenbereich" auf der rechten Seite ](images/cmd-menus-image8.png)<br/> Ein Aufgabenbereichmenü im Windows Fotogalerie Viewer.<br/>                                                                                                                                                                                                                                                                                                                                                         |
 
 
 
@@ -64,7 +64,7 @@ Gehen Sie wie folgt vor:
 -   Gelten die meisten Menüelemente für das gesamte Programm und das primäre Fenster?
 -   Muss das Menü für alle Benutzer funktionieren?
 
-Falls ja, sollten Sie eine Menüleiste verwenden.
+Wenn ja, sollten Sie eine Menüleiste verwenden.
 
 ### <a name="toolbar-menus"></a>Symbolleistenmenüs
 
@@ -82,46 +82,46 @@ Falls ja, sollten Sie ein Symbolleistenmenü anstelle von oder zusätzlich zu ei
 Gehen Sie wie folgt vor:
 
 -   Ist das Fenster ein primäres Fenster?
--   Verfügt das Fenster über Registerkarten, auf denen jede Registerkarte für einen dedizierten Satz von Aufgaben verwendet wird (im Gegensatz zur Verwendung von Registerkarten zum Anzeigen verschiedener Ansichten)?
+-   Verfügt das Fenster über Registerkarten, in denen jede Registerkarte für einen dedizierten Satz von Aufgaben verwendet wird (im Gegensatz zur Verwendung von Registerkarten zum Anzeigen unterschiedlicher Ansichten)?
 -   Gibt es eine Menükategorie, die für jede Registerkarte gilt?
 -   Gibt es viele Befehle und Optionen, aber nur einen kleinen Satz für jede Registerkarte?
 
-Falls ja, sollten Sie ein Registerkartenmenü anstelle einer Menüleiste verwenden.
+Falls ja, sollten Sie anstelle einer Menüleiste ein Registerkartenmenü verwenden.
 
 ### <a name="context-menu"></a>Kontextmenü
 
 Gehen Sie wie folgt vor:
 
--   Gibt es einen kleinen Satz kontextabhängiger Befehle und Optionen, die für das ausgewählte Objekt oder den ausgewählten Fensterbereich gelten?
+-   Gibt es einen kleinen Satz kontextbezogener Befehle und Optionen, die für das ausgewählte Objekt oder den ausgewählten Fensterbereich gelten?
 -   Sind diese Menüelemente redundant?
 -   Sind die Zielbenutzer mit Kontextmenüs vertraut?
 
-Falls ja, sollten Sie Kontextmenüs für die Objekte und Fensterbereiche bereitstellen, die sie benötigen.
+Falls ja, sollten Sie Kontextmenüs für die Objekte und Fensterregionen bereitstellen, die sie benötigen.
 
-Bei browserbasierten Programmen sind Menüs im Aufgabenbereich eine häufigere Lösung für kontextbezogene Befehle. Derzeit erwarten Benutzer, dass Kontextmenüs in browserbasierten Programmen generisch und nicht hilfreich sind.
+Bei browserbasierten Programmen sind Aufgabenbereichmenüs eine gängigere Lösung für kontextbezogene Befehle. Derzeit erwarten Benutzer, dass Kontextmenüs in browserbasierten Programmen generisch und nicht hilfreich sind.
 
 ### <a name="task-pane-menu"></a>Menü "Aufgabenbereich"
 
 Gehen Sie wie folgt vor:
 
 -   Ist das Fenster ein primäres Fenster?
--   Gibt es einen kleinen Satz kontextabhängiger Befehle und Optionen, die für das ausgewählte Objekt oder den ausgewählten Programmmodus gelten?
+-   Gibt es eine kleine Gruppe von kontextbezogenen Befehlen und Optionen, die für das ausgewählte Objekt oder den ausgewählten Programmmodus gelten?
 -   Gibt es einige Menükategorien?
 -   Muss das Menü für alle Benutzer funktionieren?
 
-Falls ja, sollten Sie ein Aufgabenbereichsmenü anstelle eines Kontextmenüs verwenden.
+Falls ja, sollten Sie anstelle eines Kontextmenüs ein Aufgabenbereichmenü verwenden.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-Effektive Menüs, die eine gute Benutzererfahrung fördern:
+Effektive Menüs, die eine gute Benutzerfreundlichkeit fördern:
 
--   Verwenden Sie eine Befehlspräsentation, die ihrem Programmtyp, Den Fenstertypen, der Befehlsverwendung und den Zielbenutzern entspricht.
--   Sind gut organisiert und verwenden bei Bedarf die Standardmenüorganisation.
+-   Verwenden Sie eine Befehlspräsentation, die Ihrem Programmtyp, den Fenstertypen, der Befehlsverwendung und den Zielbenutzern entspricht.
+-   Sind gut organisiert, und verwenden Sie bei Entsprechendm die Standardmenüorganisation.
 -   Verwenden Sie Menüleisten, Symbolleisten und Kontextmenüs effektiv.
 -   Verwenden Sie Symbole effektiv.
 -   Verwenden Sie Zugriffsschlüssel und Tastenkombinationen effektiv.
 
-**Wenn Sie nur eine Sache tun...**
+**Wenn Sie nur eine Sache durchführen...**
 
 Wählen Sie eine Befehlspräsentation aus, die Ihrem Programmtyp, Den Fenstertypen, der Befehlsverwendung und den Zielbenutzern entspricht.
 
@@ -147,11 +147,11 @@ Weitere Informationen finden Sie unter [Ausblenden von Menüleisten.](#hiding-me
 
 ### <a name="hiding-menu-bars"></a>Ausblenden von Menüleisten
 
-Im Allgemeinen funktionieren Symbolleisten hervorragend zusammen mit Menüleisten, da sich beide auf ihre Stärken konzentrieren können, ohne kompromittiert zu werden.
+Im Allgemeinen funktionieren Symbolleisten hervorragend mit Menüleisten, da sich beide auf ihre Stärken konzentrieren können, ohne kompromittiert zu werden.
 
 -   Blenden Sie die Menüleiste standardmäßig aus, wenn das Symbolleistendesign eine Menüleiste redundant macht.
 -   Blenden Sie die Menüleiste aus, anstatt sie vollständig zu entfernen, da Für Tastaturbenutzer besser auf Menüleisten zugegriffen werden kann.
--   Um die Menüleiste wiederherzustellen, geben Sie eine Menüleisten-Häkchenoption in der Menükategorie Ansicht (für primäre Symbolleisten) oder Extras (für sekundäre Symbolleisten) an. Weitere Informationen finden Sie unter [Standardmenü und Unterteilte Schaltflächen.](cmd-toolbars.md)
+-   Um die Menüleiste wiederherzustellen, geben Sie eine Menüleisten-Häkchenoption in der Menükategorie Ansicht (für primäre Symbolleisten) oder Extras (für sekundäre Symbolleisten) an. Weitere Informationen finden Sie unter [Standardmenü und unterteilte Schaltflächen.](cmd-toolbars.md)
 
 ### <a name="menu-categories"></a>Menükategorien
 
@@ -182,12 +182,12 @@ In diesem Beispiel enthält Windows Media Player die Menüelemente Optionen und 
 -   **Organisieren Sie die Menüelemente in Gruppen von sieben oder weniger stark verknüpften Elementen.** Hierfür werden Untermenüs als einzelnes Menüelement im übergeordneten Menü gezählt.
 -   **Legen Sie nicht mehr als 25 Elemente innerhalb einer einzelnen Menüebene** ab (ohne Untermenüs).
 -   **Setzen Sie Trennzeichen zwischen den Gruppen in einem Menü.** Ein Trennzeichen ist eine einzelne Zeile, die die Breite des Menüs umfasst.
--   **Legen Sie in einem Menü die Gruppen in ihrer logischen Reihenfolge ab.** Wenn keine logische Reihenfolge vorhanden ist, platzieren Sie zuerst die am häufigsten verwendeten Gruppen.
+-   **Legen Sie die Gruppen in einem Menü in ihrer logischen Reihenfolge ab.** Wenn keine logische Reihenfolge vorhanden ist, platzieren Sie zuerst die am häufigsten verwendeten Gruppen.
 -   **Legen Sie die Elemente innerhalb einer Gruppe in ihrer logischen Reihenfolge ab.** Wenn keine logische Reihenfolge vorhanden ist, platzieren Sie zuerst die am häufigsten verwendeten Elemente. Legen Sie numerische Elemente (z. B. Zoomprozentsätze) in numerischer Reihenfolge ab.
 
 ### <a name="submenus"></a>Submenus
 
--   **Vermeiden Sie unnötige Untermenüs.** Untermenüs erfordern mehr physischen Aufwand und erschweren in der Regel die Suche nach Menüelementen.
+-   **Vermeiden Sie unnötige Untermenüs.** Untermenüs erfordern mehr physischen Aufwand und erschweren in der Regel das Auffinden der Menüelemente.
 -   **Legen Sie nicht häufig verwendete Menüelemente in ein Untermenü ein.** Dies würde die Verwendung dieser Befehle ineffizient machen. Sie können jedoch häufig verwendete Befehle in ein Untermenü aufnehmen, wenn normalerweise direkter auf sie zugegriffen wird, z. B. mit einer Symbolleiste.
 -   **Erwägen Sie die Verwendung eines Untermenüs, wenn:**
     -   Dadurch wird das übergeordnete Menü vereinfacht, da es über viele Elemente (20 oder mehr) verfügt oder das Untermenü Teil einer Gruppe von mehr als sieben Elementen ist.
@@ -257,7 +257,7 @@ Eigenschaften
 -   **Menüelemente, die Optionen sind, können Aufzählungszeichen und Häkchen verwenden.** Befehle können dies nicht sein.
 -   **Verwenden Sie einen Aufzählungszeichen, um eine Option aus einer kleinen Gruppe von sich gegenseitig ausschließenden Optionen auszuwählen.** In einer Gruppe sollten immer mindestens zwei Aufzählungszeichen vorhanden sein. Weitere Informationen finden Sie unter [Optionsfelder.](ctrl-radio-buttons.md)
 -   **Verwenden Sie ein Häkchen, um eine unabhängige Einstellung ein- oder auszuschalten.** Wenn die ausgewählten und gelöschten Zustände keine klaren und eindeutigen Gegensätze sind, verwenden Sie stattdessen eine Reihe von Aufzählungszeichen. Weitere Informationen finden Sie unter [Kontrollkästchen.](ctrl-check-boxes.md)
--   **Für einen gemischten Häkchenzustand zeigen Sie ein Menüelement ohne Häkchen an.** Der gemischte Zustand wird für die Mehrfachauswahl verwendet, um anzugeben, dass die Option für einige, aber nicht für alle Objekte festgelegt ist, sodass jedes einzelne Objekt entweder über den ausgewählten oder den gelöschten Zustand verfügt. Der gemischte Zustand wird nicht als dritter Zustand für ein einzelnes Element verwendet.
+-   **Für einen gemischten Häkchenzustand zeigen Sie ein Menüelement ohne Häkchen an.** Der gemischte Zustand wird für die Mehrfachauswahl verwendet, um anzugeben, dass die Option für einige, aber nicht für alle Objekte festgelegt ist, sodass jedes einzelne Objekt entweder den ausgewählten oder den gelöschten Zustand hat. Der gemischte Zustand wird nicht als dritter Zustand für ein einzelnes Element verwendet.
 -   **Setzen Sie Trennzeichen zwischen den verknüpften Sätzen von Häkchen oder Aufzählungszeichen.** Ein Trennzeichen ist eine einzelne Zeile, die die Breite des Menüs umfasst.
 
 ### <a name="icons"></a>Symbole
@@ -304,31 +304,31 @@ Weitere Richtlinien und Beispiele finden Sie unter [Tastatur.](inter-keyboard.md
 -   **Weisen Sie den am häufigsten verwendeten Menüelementen Tastenkombinationen zu.** Selten verwendete Menüelemente benötigen keine Tastenkombinationen, da Benutzer stattdessen Zugriffsschlüssel verwenden können.
 -   **Machen Sie eine Tastenkombination nicht zur einzigen Möglichkeit, eine Aufgabe auszuführen.** Benutzer sollten auch in der Lage sein, die Maus oder Tastatur mit Tabulatortasten, Pfeilen und Zugriffsschlüsseln zu verwenden.
 -   **Verwenden Sie für bekannte Tastenkombinationen die Standardzuweisungen.**
--   **Weisen Sie bekannten Tastenkombinationen keine unterschiedlichen Bedeutungen zu.** Da sie sich merken, sind inkonsistente Bedeutungen für bekannte Tastenkombinationen frustrierend und fehleranfällig. Die bekannten Tastenkombinationen, die von Windows-Programmen verwendet werden, finden Sie unter Windows-Tastenkombinationen.
+-   **Weisen Sie bekannten Tastenkombinationen keine unterschiedlichen Bedeutungen zu.** Da sie sich merken, sind inkonsistente Bedeutungen für bekannte Tastenkombinationen frustrierend und fehleranfällig. Die bekannten Tastenkombinationen, die von Windows Programmen verwendet werden, finden Sie unter Windows Tastenkombinationen.
 -   **Versuchen Sie nicht, systemweite Programmverknüpfungsschlüssel zuzuweisen.** Die Tastenkombinationen des Programms haben nur dann Auswirkungen, wenn ihr Programm den Eingabefokus besitzt.
 -   **Dokumentieren Sie alle Tastenkombinationen.** Auf diese Weise können Benutzer die Tastenkombinationszuweisungen erlernen.
     -   **Ausnahme:** Zeigen Sie keine Tastenkombinationszuweisungen in Kontextmenüs an. Kontextmenüs zeigen die Tastenkombinationszuweisungen nicht an, da sie für Effizienz optimiert sind.
 -   **Für nicht standardmäßige Schlüsselzuweisungen:**
-    -   **Wählen Sie Tastenkombinationen ohne Standardzuweisungen aus.** Weisen Sie standard-Tastenkombinationen nie neu zu.
-    -   **Verwenden Sie nicht standardmäßige Schlüsselzuweisungen konsistent im gesamten Programm.** Weisen Sie in verschiedenen Fenstern keine unterschiedlichen Bedeutungen zu.
-    -   Wählen Sie nach **Möglichkeit mnemonische Schlüsselzuweisungen aus,** insbesondere für häufig verwendete Befehle.
-    -   **Verwenden Sie Funktionstasten für Befehle, die einen kleinen Effekt haben,** z. B. Befehle, die für das ausgewählte Objekt gelten. Beispielsweise benennt F2 das ausgewählte Element um.
-    -   **Verwenden Sie Tastenkombinationen mit STRG für Befehle mit umfangreichen Auswirkungen,** z. B. Befehle, die für ein gesamtes Dokument gelten. Beispielsweise speichert STRG+S das aktuelle Dokument.
-    -   **Verwenden Sie Tastenkombinationen umschalten für Befehle, die die Aktionen der Standardtaste erweitern oder ergänzen.** Die Tastenkombination ALT+TAB durchkreist z. B. geöffnete primäre Fenster, während ALT+UMSCHALT+TAB in umgekehrter Reihenfolge zyklen. Auf ähnliche Weise zeigt F1 Hilfe an, während UMSCHALT+F1 kontextbezogene Hilfe anzeigt.
-    -   **Verwenden Sie nicht die folgenden Zeichen für Tastenkombinationen:** @ $ {} \[ \] \\  ~  \| ^ ' < >. Diese Zeichen erfordern unterschiedliche Tastenkombinationen in verschiedenen Sprachen oder sind gebietsschemaspezifisch.
-    -   **Verwenden Sie keine Tastenkombinationen mit STRG+ALT,** da Windows diese Kombination in einigen Sprachversionen als ALTGR-Taste interpretiert, die alphanumerische Zeichen generiert.
--   **Wenn Ihr Programm viele Tastenkombinationen zuweist, können Sie die Zuweisungen anpassen.** Auf diese Weise können Benutzer in Konflikt geratene Tastenkombinationen neu zuweisen und von anderen Produkten migrieren. Die meisten Programme weisen nicht genügend Tastenkombinationen zu, um dieses Feature zu benötigen.
+    -   **Wählen Sie Tastenkombinationen aus, die keine Standardzuweisungen haben.** Zuweisen von Standardtastenkombinationen nie neu.
+    -   **Verwenden Sie nicht standardmäßige Schlüsselzuweisungen im gesamten Programm konsistent.** Weisen Sie in verschiedenen Fenstern keine unterschiedlichen Bedeutungen zu.
+    -   **Wählen Sie nach Möglichkeit mnemonische Schlüsselzuweisungen aus,** insbesondere für häufig verwendete Befehle.
+    -   **Verwenden Sie Funktionsschlüssel für Befehle, die eine geringe** Auswirkung haben, z. B. Befehle, die für das ausgewählte Objekt gelten. Beispielsweise benennt F2 das ausgewählte Element um.
+    -   **Verwenden Sie STRG-Tastenkombinationen für Befehle,** die einen großen Effekt haben, z. B. Befehle, die für ein gesamtes Dokument gelten. Strg+S speichert z. B. das aktuelle Dokument.
+    -   **Verwenden Sie UMSCHALTTASTEnkombinationen für Befehle, die die Aktionen der Standardtastenkombination erweitern oder ergänzen.** Beispielsweise durchzyklen die Tastenkombination ALT+TAB geöffnete primäre Fenster, während ALT+UMSCHALT+TAB in umgekehrter Reihenfolge zyklen. Auf ähnliche Weise zeigt F1 Hilfe an, während UMSCHALT+F1 kontextorientierte Hilfe anzeigt.
+    -   **Verwenden Sie nicht die folgenden Zeichen für Tastenkombinationen:** @ $ {} \[ \] \\  ~  \| ^ ' < >. Diese Zeichen erfordern unterschiedliche Tastenkombinationen in verschiedenen Sprachen oder sind lokal spezifisch.
+    -   **Verwenden Sie keine Tastenkombinationen von STRG+ALT,** da Windows diese Kombination in einigen Sprachversionen als ALTGR-Taste interpretiert, die alphanumerische Zeichen generiert.
+-   **Wenn Ihr Programm viele Tastenkombinationen zu weist, können Sie die Zuweisungen anpassen.** Auf diese Weise können Benutzer in Konflikt stehende Tastenkombinationen neu zuweisen und von anderen Produkten migrieren. Die meisten Programme weisen nicht genügend Tastenkombinationen zu, um dieses Feature zu benötigen.
 
 Weitere Richtlinien und Standardzuweisungen für Tastenkombinationen finden Sie unter [Tastatur](inter-keyboard.md).
 
 ### <a name="standard-menus"></a>Standardmenüs
 
 -   **Verwenden Sie die Standardmenüorganisation für Programme, die Dokumente erstellen oder anzeigen.** Die Standardmenüorganisation macht allgemeine Menüelemente vorhersagbar und leichter zu finden.
--   **Verwenden Sie für andere Arten von Programmen nur dann die Standardmenüorganisation, wenn dies sinnvoll ist.** Erwägen Sie, Ihre Befehle und Optionen basierend auf dem Zweck Ihres Programms und der Art und Weise, wie Benutzer über ihre Aufgaben und Ziele denken, in nützlicheren, natürlicheren Kategorien zu organisieren.
+-   **Verwenden Sie für andere Arten von Programmen die Standardmenüorganisation nur, wenn dies sinnvoll ist.** Erwägen Sie, Ihre Befehle und Optionen in nützlichere, natürliche Kategorien zu organisieren, die auf dem Zweck Ihres Programms und der Art und Weise basieren, wie Benutzer ihre Aufgaben und Ziele betrachten.
 
 **Standardmenüleisten**
 
-Die Standardstruktur der Menüleiste lautet wie folgt. In dieser Liste werden die Menükategorie- und Elementbezeichnungen, ihre Reihenfolge mit Trennzeichen, deren Zugriffs- und Tastenkombinationen und ihre Auslassungszeichen angezeigt.
+Die Standardstruktur der Menüleiste lautet wie folgt. In dieser Liste werden die Menükategorie- und Elementbezeichnungen, ihre Reihenfolge mit Trennzeichen, ihre Zugriffs- und Tastenkombinationen und ihre Ausellipsen angezeigt.
 
 <dl> Datei<dl> Neue STRG+N  
 Öffnen... STRG+O  
@@ -340,49 +340,49 @@ Drucken... STRG+P
 Seitenansicht  
 Seiteneinrichtung <separator>  
 1 <filename> 2 <filename> 3 <filename> ... <separator>  
-Beenden Sie ALT+F4 (Verknüpfung wird normalerweise nicht angegeben)
-</dl> </dd> Edit<dl> Strg+Z rückgängig  
-Redo STRG+Y <separator>  
+Alt+F4 beenden (Tastenkombination in der Regel nicht angegeben)
+</dl> </dd> Edit<dl> Strg+Z rückgängig machen  
+Wiederholen von STRG+Y <separator>  
 Strg+X ausschneiden  
 Kopieren von STRG+C  
 Strg+V einfügen <separator>  
-Wählen Sie strg+A aus. <separator>  
+Wählen Sie alle STRG+A aus. <separator>  
 Delete Del (Verknüpfung in der Regel nicht angegeben) <separator>  
 Finden... STRG+F  
-Suche nach F3 (Befehl in der Regel nicht angegeben)  
+Suchen sie die nächste F3-Datei (Befehl in der Regel nicht angegeben)  
 Ersetzen... STRG+H  
 Gehe zu... STRG+G
 </dl> </dd> View<dl> Symbolleisten  
 Statusleiste <separator>  
 </dl> </dd> Zoom<dl> Zoomen in STRG++  
-Verkleinern Sie STRG+- <separator>  
+Verkleinern VON STRG+- <separator>  
 Vollbild F11  
 F5 aktualisieren
 </dl> </dd> <dd>Tools<dl> ... <separator>  
-Optionen
+Tastatur
 </dl> </dd> Hilfe<dl> <program name> Hilfe F1 <separator>  
 Über <program name>  
 </dl> </dd> </dl>
 
 **Standardsymbolleisten-Menüschaltflächen**
 
-Die Standardschaltflächen des Symbolleistenmenüs sind wie folgt. Diese Liste zeigt die Menükategorie- und Elementbezeichnungen, ihre Reihenfolge mit Trennzeichen, ihre Tastenkombinationen und ihre Ellipsen.
+Die Standardmenüschaltflächen der Symbolleiste lauten wie folgt. In dieser Liste werden die Menükategorie und Elementbezeichnungen, ihre Reihenfolge mit Trennzeichen, ihre Tastenkombinationen und ihre Ausellipsen angezeigt.
 
-<dl> Tools<dl> VollbildF11(Zugriffsschlüssel neu zuweisen, wenn auch Suchen verwendet wird.)  
+<dl> Tools<dl> VollbildF11 (Zugriffsschlüssel neu zuweisen, wenn auch Suchen verwendet wird.)  
 Symbolleisten (Beachten Sie, dass der Befehl Menüleiste hier angezeigt wird.) <separator>  
 Drucken...  
 Finden... <separator>  
 Zoom  
 Textgröße <separator>  
-Optionen
+Tastatur
 </dl> </dd> Organize<dl> Neuer OrdnerCtrl+N <separator>  
 CutCtrl+X  
 CopyCtrl+C  
 PasteCtrl+V <separator>  
 Wählen Sie allCtrl+A aus. <separator>  
-DeleteDel(shortcut normalerweise nicht angegeben)  
+DeleteDel(Verknüpfung in der Regel nicht angegeben)  
 Umbenennen <separator>  
-Optionen
+Tastatur
 </dl> </dd> Page<dl> Neues FensterCtrl+N <separator>  
 Zoom  
 Textgröße
@@ -390,7 +390,7 @@ Textgröße
 
 **Standardkontextmenüs**
 
-Der Standardinhalt des Kontextmenüs lautet wie folgt. In dieser Liste werden die Menüelementbezeichnungen, ihre Reihenfolge mit Trennzeichen, ihre Zugriffsschlüssel und ihre Auslassungszeichen angezeigt. Kontextmenüs zeigen keine Tastenkombinationen an.
+Die Standardinhalte des Kontextmenüs lauten wie folgt. In dieser Liste werden die Menüelementbezeichnungen, ihre Reihenfolge mit Trennzeichen, ihre Zugriffsschlüssel und ihre Ausellipsen angezeigt. Kontextmenüs zeigen keine Tastenkombinationen an.
 
 <dl> Öffnen  
 Ausführen  
@@ -406,19 +406,19 @@ Sperren des <object name> (Häkchens)
 Eigenschaften
 </dl>
 
-### <a name="using-ellipses"></a>Verwenden von Ausellipsen
+### <a name="using-ellipses"></a>Verwenden von Ellipsen
 
-Während Menübefehle für sofortige Aktionen verwendet werden, sind möglicherweise weitere Informationen erforderlich, um die Aktion auszuführen. **Geben Sie einen Befehl an, der zusätzliche Informationen (einschließlich einer Bestätigung) benötigt, indem Sie am Ende der Bezeichnung auslassungszeichen hinzufügen.**
+Während Menübefehle für sofortige Aktionen verwendet werden, sind möglicherweise weitere Informationen erforderlich, um die Aktion auszuführen. **Geben Sie einen Befehl an, der zusätzliche Informationen benötigt (einschließlich einer Bestätigung), indem Sie am Ende der Bezeichnung eine Auslassungszeichen hinzufügen.**
 
-![Screenshot des Druckbefehls und des Druckdialogfelds ](images/cmd-menus-image15.png)
+![Screenshot des Dialogfelds "Befehl drucken" und "Drucken" ](images/cmd-menus-image15.png)
 
-In diesem Beispiel wird die Druck-... -Befehl zeigt ein Dialogfeld Drucken an, um weitere Informationen zu sammeln.
+In diesem Beispiel wird der Druck... -Befehl zeigt ein Dialogfeld Drucken an, um weitere Informationen zu sammeln.
 
-**Die ordnungsgemäße Verwendung von Ausellipsen ist wichtig, um anzugeben, dass Benutzer vor dem Ausführen der Aktion weitere Entscheidungen treffen oder die Aktion sogar vollständig abbrechen können.** Die visuellen Hinweise, die durch auslassungsbare Elemente geboten werden, ermöglichen es Benutzern, Ihre Software ohne Sorge zu untersuchen.
+**Die richtige Verwendung von Ellipsen ist wichtig, um anzugeben, dass Benutzer vor dem Ausführen der Aktion weitere Entscheidungen treffen oder die Aktion sogar vollständig abbrechen können.** Die visuellen Hinweise, die von auslassungsbaren Ellipsen geboten werden, ermöglichen es Benutzern, Ihre Software ohne Sorge zu erkunden.
 
-**Dies bedeutet nicht, dass Sie** immer dann eine Auslassungsellipse verwenden sollten, wenn eine Aktion nur dann ein anderes Fenster anzeigt, wenn zusätzliche Informationen zum Ausführen der Aktion erforderlich sind. Beispielsweise müssen die Befehle Info, Erweitert, Hilfe, Optionen, Eigenschaften und Einstellungen ein weiteres Fenster anzeigen, wenn sie angeklickt werden, aber keine zusätzlichen Informationen vom Benutzer erfordern. Daher benötigen sie keine Ausellipsen.
+**Dies bedeutet nicht, dass Sie immer dann eine Auslassungszeichen verwenden sollten, wenn eine Aktion nur dann ein anderes Fenster anzeigt,** wenn zusätzliche Informationen zum Ausführen der Aktion erforderlich sind. Beispielsweise müssen die Befehle Info, Erweitert, Hilfe, Optionen, Eigenschaften und Einstellungen beim Klicken auf ein anderes Fenster anzeigen, benötigen jedoch keine zusätzlichen Informationen vom Benutzer. Daher benötigen sie keine Auslassungselpsen.
 
-**Bei Mehrdeutigkeit (z. B. fehlt in der Befehlsbezeichnung ein Verb), entscheiden Sie basierend auf der wahrscheinlichsten Benutzeraktion.** Wenn das einfache Anzeigen des Fensters eine gängige Aktion ist, verwenden Sie keine Auslassungsellipse.
+**Entscheiden Sie bei Mehrdeutigkeit (z. B. wenn die Befehlsbezeichnung kein Verb aufgibt) basierend auf der wahrscheinlichsten Benutzeraktion.** Wenn das einfache Anzeigen des Fensters eine gängige Aktion ist, verwenden Sie keine Auslassungszeichen.
 
 **Richtig:**
 
@@ -426,93 +426,93 @@ Weitere Farben...
 
 Versionsinformationen
 
-Im ersten Beispiel wählen Benutzer wahrscheinlich eine Farbe aus, daher ist die Verwendung von Ausellipsen richtig. Im zweiten Beispiel werden Benutzer wahrscheinlich die Versionsinformationen anzeigen, wodurch Ellipsen nicht erforderlich sind.
+Im ersten Beispiel wählen Benutzer höchstwahrscheinlich eine Farbe aus, sodass die Verwendung einer Ellipse richtig ist. Im zweiten Beispiel zeigen Benutzer höchstwahrscheinlich die Versionsinformationen an, sodass Ausellipsen nicht erforderlich sind.
 
 > [!Note]  
-> Wenn Sie bestimmen, ob ein Menübefehl [Auslassungspunkte](winenv-uac.md) benötigt, verwenden Sie nicht die Notwendigkeit, Berechtigungen als Faktor zu erhöhen.
+> Wenn Sie feststellen, ob ein Menübefehl auslassungszeichen erfordert, verwenden Sie nicht die Notwendigkeit, Berechtigungen als Faktor zu [erhöhen.](winenv-uac.md)
 
  
 
-Erhöhte Rechte sind keine Informationen, die zum Ausführen eines Befehls erforderlich sind (sondern aus Berechtigungsgründen), und die Notwendigkeit einer Erhöhung wird mit dem Sicherheitsschutz angezeigt.
+Erhöhte Rechte sind keine Informationen, die zum Ausführen eines Befehls erforderlich sind (stattdessen für die Berechtigung), und die Notwendigkeit, erhöhte Rechte zu erhöhen, wird mit dem Sicherheitsschild angegeben.
 
 ## <a name="labels"></a>Bezeichnungen
 
 -   **Verwenden Sie für Überschriften die Standardgroß- und kleinschreibung.**
-    -   **Ausnahme:** Bei älteren Anwendungen können Sie bei Bedarf die Groß-/Formatvorlagen verwenden, um das Mischen von Groß-/Formatvorlagen zu vermeiden.
+    -   **Ausnahme:** Bei älteren Anwendungen können Sie bei Bedarf großgeschriebene Titel verwenden, um die Kombination von Groß-/Großschreibungsstilen zu vermeiden.
 
-### <a name="menu-category-names"></a>Menükategorienamen
+### <a name="menu-category-names"></a>Namen der Menükategorie
 
--   **Verwenden Sie Menükategorienamen, bei denen es sich um Einzelwortverben oder Nomen handelt.** Eine Bezeichnung mit mehreren Wörtern kann für zwei Bezeichnungen mit einem Wort verwirrend sein.
--   **Bevorzugen Sie verbbasierte Menünamen.** Lässt das Verb jedoch weg, wenn es "Create", "Show", "View" oder "Manage" ist. Die folgenden Menükategorien verfügen beispielsweise nicht über Verben:
+-   **Verwenden Sie Menükategorienamen, bei denen es sich um Einzelwortverben oder -nomen handelt.** Eine Bezeichnung mit mehreren Wörtern kann bei zwei Ein-Wort-Bezeichnungen verwechselt werden.
+-   **Verbbasierte Menünamen bevorzugen.** Lassen Sie das Verb jedoch aus, wenn es "Erstellen", "Anzeigen", "Anzeigen" oder "Verwalten" lautet. Beispielsweise haben die folgenden Menükategorien keine Verben:
     -   Tabelle
     -   Tools
     -   Fenster
--   Verwenden Sie für nicht standardmäßige Kategorienamen **ein einzelnes, spezifisches Wort,** das den Menüinhalt eindeutig und genau beschreibt. Obwohl die Namen nicht so allgemein sein müssen, dass sie alles im Menü beschreiben, sollten sie vorhersagbar genug sein, damit Benutzer nicht von dem, was sie im Menü finden, nicht überraschend sind.
+-   Verwenden Sie für nicht standardmäßige Kategorienamen **ein einzelnes, spezifisches Wort, das den Menüinhalt klar und genau beschreibt.** Obwohl die Namen nicht so allgemein sein müssen, dass sie alles im Menü beschreiben, sollten sie vorhersagbar genug sein, damit Benutzer nicht von dem, was sie im Menü finden, überrascht werden.
 
 ### <a name="menu-item-names"></a>Menüelementnamen
 
--   **Verwenden Sie Menüelementnamen, die mit einem Verb, Nomen oder Nomenphrasen beginnen.**
--   **Bevorzugen Sie verbbasierte Menünamen.** Das Verb sollte jedoch ausgelassen werden, wenn:
-    -   **Das Verb ist "Create", "Show", "View" oder "Manage".** Die folgenden Befehle enthalten beispielsweise keine Verben:
+-   **Verwenden Sie Menüelementnamen, die mit einem Verb,Nomen oder Nomen-Ausdruck beginnen.**
+-   **Verbbasierte Menünamen bevorzugen.** Lässt das Verb jedoch aus, wenn:
+    -   **Das Verb ist "Create", "Show", "View" oder "Manage".** Die folgenden Befehle haben z. B. keine Verben:
         -   Info
         -   Fortgeschrittene
         -   Vollbildmodus
         -   Neu
-        -   Optionen
+        -   Tastatur
         -   Eigenschaften
-    -   **Das Verb ist mit dem Namen der Menükategorie identisch, um Wiederholungen zu vermeiden.** Verwenden Sie in der Menükategorie Einfügen beispielsweise Text, Tabelle und Bild anstelle von Text einfügen, Tabelle einfügen und Bild einfügen.
+    -   **Das Verb entspricht dem Namen der Menükategorie, um Wiederholungen zu vermeiden.** Verwenden Sie beispielsweise in der Menükategorie Einfügen Text, Tabelle und Bild anstelle von Text einfügen, Tabelle einfügenund Bild einfügen.
 -   **Verwenden Sie bestimmte Verben.** Vermeiden Sie generische, nicht hilfreiche Verben wie Change und Manage.
--   **Verwenden Sie singulare Nomen für Befehle, die für ein einzelnes Objekt gelten.** Verwenden Sie andernfalls Pluralnunen.
--   **Verwenden Sie nach Bedarf Modifizierer, um zwischen ähnlichen Befehlen zu unterscheiden.** Beispiele: Zeile oben einfügen, Zeile unten einfügen.
--   **Wählen Sie für Paare von ergänzenden Befehlen eindeutig ergänzende Namen aus.** Beispiele: Hinzufügen, Entfernen; Anzeigen, Ausblenden; Einfügen, Löschen.
--   **Wählen Sie Menüelementnamen basierend auf Benutzerzielen und Aufgaben aus, nicht auf Technologie.**
+-   **Verwenden Sie singulare Nomen für Befehle, die für ein einzelnes Objekt gelten.** Verwenden Sie andernfalls Plural nomen.
+-   **Verwenden Sie bei Bedarf Modifizierer, um zwischen ähnlichen Befehlen zu unterscheiden.** Beispiele: Zeile oben einfügen, Zeile unten einfügen.
+-   **Wählen Sie für Paare ergänzender Befehle eindeutig ergänzende Namen aus.** Beispiele: Hinzufügen, Entfernen; Einblenden, Ausblenden; Einfügen, Löschen.
+-   **Wählen Sie Die Namen von Menüelements basierend auf Benutzerzielen und -aufgaben aus, nicht basierend auf der Technologie.**
 
 **Richtig:**
 
-![Screenshot des Menüs "Rip" mit Formatmenüelement ](images/cmd-menus-image16.png)
+![Screenshot des Menüs "Rip" mit Menüelement "Format" ](images/cmd-menus-image16.png)
 
 **Falsch:**
 
-![Screenshot des Menüs "Rip" mit codec-Menüelement ](images/cmd-menus-image17.png)
+![Screenshot des Menüs "Rip" mit Codecmenüelement ](images/cmd-menus-image17.png)
 
 Im falschen Beispiel basiert das Menüelement auf seiner Technologie.
 
 -   Verwenden Sie die folgenden Menüelementnamen für den angegebenen Zweck:
-    -   **Optionen** So zeigen Sie Programmoptionen an.
-    -   **Anpassen** So zeigen Sie die Programmoptionen an, die sich speziell auf die Konfiguration der maschinellen Benutzeroberfläche bezieht.
-    -   **Personalisieren** So zeigen Sie eine Zusammenfassung der häufig verwendeten [Personalisierungseinstellungen](glossary.md) an.
+    -   **Optionen** So zeigen Sie Programmoptionen an
+    -   **Anpassen** Um die Programmoptionen anzuzeigen, die sich speziell auf die Konfiguration der maschinellen Benutzeroberfläche beziehen.
+    -   **Personalisieren** So zeigen Sie eine Zusammenfassung der häufig [verwendeten Personalisierungseinstellungen](glossary.md) an.
     -   **Einstellungen** Verwenden Sie nicht. Verwenden Sie stattdessen Optionen.
     -   **Eigenschaften** So zeigen Sie das Eigenschaftenfenster eines Objekts an.
     -   **Einstellungen** Verwenden Sie nicht als Menübezeichnung. Verwenden Sie stattdessen Optionen.
 
 ### <a name="submenu-names"></a>Untermenünamen
 
--   **Menüelemente, die Untermenüs anzeigen, haben nie Auslassungspunkte auf ihrer Bezeichnung.** Der Untermenüpfeil gibt an, dass eine weitere Auswahl erforderlich ist.
+-   **Menüelemente, die Untermenüs anzeigen, verfügen nie über Auslassungspunkte in ihrer Bezeichnung.** Der Untermenüpfeil gibt an, dass eine andere Auswahl erforderlich ist.
 
 **Falsch:**
 
-![Screenshot des neuen Menüelements mit Auslassungsellipsen ](images/cmd-menus-image18.png)
+![Screenshot des neuen Menüelements mit Auslassungszeichen ](images/cmd-menus-image18.png)
 
-In diesem Beispiel verfügt das Menüelement Neu fälschlicherweise über Auslassungspunkte.
+In diesem Beispiel weist das Menüelement Neu fälschlicherweise die Auslassungszeichen auf.
 
 ## <a name="documentation"></a>Dokumentation
 
 Beim Verweisen auf Menüs:
 
--   In Befehlen, die Menüs ein- oder ausblenden, verweisen Sie auf Menüleisten. Verweisen Sie nicht auf klassische Menüs.
--   Verweisen Sie auf Menüs nach ihren Bezeichnungen. Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Unterstriche, aber schließen Sie den Unterstrich oder die Auslassungszeichen der Zugriffsschlüssel nicht ein.
--   Um auf Menükategorien zu verweisen, verwenden Sie "Im <category name> Menü". Wenn die Position eines Menüelements aus dem Kontext klar ist, müssen Sie die Menükategorie nicht erwähnen.
--   Um die Benutzerinteraktion von Menüelementen zu beschreiben, verwenden Sie Click ohne das Wortmenü oder den Befehl . Verwenden Sie nicht auswählen, auswählen oder auswählen. Verweisen Sie nur in der technischen Dokumentation auf ein Menüelement als Menüelement.
+-   Informationen zu Befehlen, die Menüs anzeigen oder ausblenden, finden Sie unter Menüleisten. Sie werden nicht als klassische Menüs bezeichnet.
+-   Verweisen Sie anhand ihrer Bezeichnungen auf Menüs. Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Großschreibung, aber nicht den Zugriffsschlüsselunterstrich oder die Auslassungszeichen.
+-   Um auf Menükategorien zu verweisen, verwenden Sie "Im <category name> Menü". Wenn der Speicherort eines Menüelements aus dem Kontext klar ist, müssen Sie die Menükategorie nicht erwähnen.
+-   Um die Benutzerinteraktion von Menüelementen zu beschreiben, verwenden Sie klicken, ohne das Wort Menü oder Befehl. Verwenden Sie nicht "Auswählen", "Auswählen" oder "Auswählen". Verweisen Sie nur in der technischen Dokumentation auf ein Menüelement als Menüelement.
 -   Um das Entfernen eines Häkchens aus einer Menüoption zu beschreiben, verwenden Sie klicken, um das Häkchen zu entfernen. Verwenden Sie nicht clear.
--   Kontextmenüs werden als Kontextmenüs und nicht als Kontextmenüs bezeichnet.
+-   Verweisen Sie auf Kontextmenüs als Kontextmenüs, nicht als Kontextmenüs.
 -   Verwenden Sie keine Cascading-, Pull-Down-, Dropdown- oder Popupmenüs, um Menüs zu beschreiben, außer in der Programmierdokumentation.
--   Verweisen Sie auf nicht verfügbare Menüelemente als nicht verfügbar, nicht als abgeblendet, deaktiviert oder grau. Verwenden Sie deaktiviert in der Programmierdokumentation.
--   Formatieren Sie die Bezeichnungen nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnungen nur dann in Anführungszeichen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
+-   Beziehen Sie sich auf nicht verfügbare Menüelemente als nicht verfügbar, nicht als abgeblendet, deaktiviert oder grau. Verwenden Sie disabled in der Programmierdokumentation.
+-   Formatieren Sie die Bezeichnungen nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnungen nur in Anführungszeichen, wenn dies erforderlich ist, um Verwechslungen zu vermeiden.
 
 Beispiele:
 
--   Klicken Sie **im Menü** Datei auf **Drucken,** um das Dokument zu drucken.
--   Zeigen Sie **im Menü** Ansicht auf **Symbolleisten**, und klicken Sie dann **auf Formatieren.**
+-   Klicken Sie im Menü **Datei** auf **Drucken,** um das Dokument zu drucken.
+-   Zeigen **Sie** im Menü Ansicht auf **Symbolleisten**, und klicken Sie dann auf **Formatieren.**
 
  
 

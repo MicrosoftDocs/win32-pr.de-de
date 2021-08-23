@@ -1,7 +1,7 @@
 ---
-description: 'D3DX10_ATTRIBUTE_WEIGHTS Struktur: Gibt Die Attribute für die Netzgewichtung an.'
+description: 'D3DX10_ATTRIBUTE_WEIGHTS Struktur: Gibt Gitternetzgewichtungsattribute an.'
 ms.assetid: 554bb8f2-9e92-4e9e-b500-c3cc47d57830
-title: D3DX10_ATTRIBUTE_WEIGHTS-Struktur (D3DX10.h)
+title: D3DX10_ATTRIBUTE_WEIGHTS -Struktur (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10.h
-ms.openlocfilehash: ab163149493ad73f892a251a691ad82544d7f382
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1ef80db70d0562b000aa527afe17da43eee0eed5d6498e5da5b3d1ad964f5f87
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119282780"
 ---
 # <a name="d3dx10_attribute_weights-structure"></a>D3DX10 \_ ATTRIBUTE \_ WEIGHTS-Struktur
 
-Gibt Gitternetzgewichtungsattribute an.
+Gibt Gittergewichtungsattribute an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -97,7 +97,7 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Glanzlichtwert.
+Specular-Beleuchtungswert.
 
 </dd> <dt>
 
@@ -112,7 +112,7 @@ Acht Texturkoordinaten.
 
 </dd> <dt>
 
-**Tangente**
+**Tangens**
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -134,9 +134,9 @@ Binormal.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur beschreibt, wie bei einem Vereinfachungsvorgang Scheitelpunktdaten berücksichtigt werden, wenn relative Kosten zwischen reduzierenden Kanten berechnet werden. Wenn das Feld Normal z. B. 0,0 ist, ignoriert der Vereinfachungsvorgang die normale Scheitelpunktkomponente, wenn der Fehler für das Reduzieren berechnet wird. Wenn das Feld Normal jedoch 1,0 ist, verwendet der Vereinfachungsvorgang die Scheitelpunktnorm normal-Komponente. Wenn das Feld Normal den Wert 2.0 hat, sollten Sie die Anzahl der Fehler verdoppelt. Wenn das Feld Normal 4.0 ist, verffachen Sie die Anzahl der Fehler, und so weiter.
+Diese Struktur beschreibt, wie bei einem Vereinfachungsvorgang Scheitelpunktdaten berücksichtigt werden, wenn relative Kosten zwischen reduzierenden Kanten berechnet werden. Wenn das Feld Normal beispielsweise 0,0 ist, ignoriert der Vereinfachungsvorgang die normale Scheitelpunktkomponente, wenn der Fehler für den Reduzieren berechnet wird. Wenn das Feld Normal jedoch 1,0 ist, verwendet der Vereinfachungsvorgang die Scheitelpunkt-Normalkomponente. Wenn das Feld Normal 2.0 ist, doppelt so viele Fehler Wenn das Feld Normal 4.0 ist, ver vierfachen Sie die Anzahl der Fehler, und so weiter.
 
 Der TYP LPD3DX ATTRIBUTE WEIGHTS wird als Zeiger auf die \_ \_ D3DX \_ ATTRIBUTE \_ WEIGHTS-Struktur definiert.
 
@@ -151,13 +151,13 @@ Der TYP LPD3DX ATTRIBUTE WEIGHTS wird als Zeiger auf die \_ \_ D3DX \_ ATTRIBUTE
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

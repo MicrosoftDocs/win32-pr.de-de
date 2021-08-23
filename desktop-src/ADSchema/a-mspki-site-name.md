@@ -1,11 +1,11 @@
 ---
-title: MS-PKI-Site-Name-Attribut
-description: Active Directory-Standort, zu dem der Zertifizierungsstellen Computer gehört.
+title: ms-PKI-Site-Name-Attribut
+description: Active Directory-Standort, zu dem der Zertifizierungsstellencomputer gehört.
 ms.assetid: 62cdaa18-832d-4981-bc29-068c03dd3b09
 ms.tgt_platform: multiple
 keywords:
-- MS-PKI-Site-Name-Attribut AD-Schema
-- AD-Schema für mspki-Site-Name-Attribut
+- ms-PKI-Site-Name-Attribut AD-Schema
+- MSPKI-Site-Name-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d5d9ce7b94f983ae9e6bc413b2fbd70b874e64e8
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 2ca80dccbda813050c213a210738f96f9e6b5c619b58f6fef9fe1648d4b8b28f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957615"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119081604"
 ---
-# <a name="ms-pki-site-name-attribute"></a>MS-PKI-Site-Name-Attribut
+# <a name="ms-pki-site-name-attribute"></a>ms-PKI-Site-Name-Attribut
 
-Active Directory-Standort, zu dem der Zertifizierungsstellen Computer gehört.
+Active Directory-Standort, zu dem der Zertifizierungsstellencomputer gehört.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-PKI-Site-Name                            |
-| LDAP-Display-Name | mspki-Site-Name                             |
+| CN                | ms-PKI-Site-Name                            |
+| Ldap-Anzeigename | msPKI-Site-Name                             |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.2077                     |
-| System-ID-GUID    | 0cd8711f-0afc-4926-a4b1-09b08d3d436c        |
+| System-Id-Guid    | 0cd8711f-0afc-4926-a4b1-09b08d3d436c        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -54,15 +54,15 @@ Active Directory-Standort, zu dem der Zertifizierungsstellen Computer gehört.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
-| Im globalen Katalog      | Richtig                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| Im globalen Katalog      | True                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**PKI-Registrierung-Dienst**](c-pkienrollmentservice.md)<br/> |
+| In verwendete Klassen        | [**PKI-Enrollment-Service**](c-pkienrollmentservice.md)<br/> |
 
 
 
@@ -75,15 +75,15 @@ Active Directory-Standort, zu dem der Zertifizierungsstellen Computer gehört.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
-| Im globalen Katalog      | Richtig                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| Im globalen Katalog      | True                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**PKI-Registrierung-Dienst**](c-pkienrollmentservice.md)<br/> |
+| In verwendete Klassen        | [**PKI-Enrollment-Service**](c-pkienrollmentservice.md)<br/> |
 
 
 

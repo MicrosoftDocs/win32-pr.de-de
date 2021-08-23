@@ -1,24 +1,24 @@
 ---
-description: Die iwbemunsecuredapartment-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IWbemUnsecuredApartment-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: EE71EA69-30B3-4D98-AECA-512C147B150C
 ms.tgt_platform: multiple
-title: Iwbemunsecuredapartment-Methoden
+title: IWbemUnsecuredApartment-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 48bba9c4dba5e62c941761d910459bddb942bc36
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e112dbda166c1c2d5bd9b4ad914f319e140d84da863f50a3839c0f2b26b9b8e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350589"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119131232"
 ---
-# <a name="iwbemunsecuredapartment-methods"></a>Iwbemunsecuredapartment-Methoden
+# <a name="iwbemunsecuredapartment-methods"></a>IWbemUnsecuredApartment-Methoden
 
-Die [**iwbemunsecuredapartment**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemunsecuredapartment) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWbemUnsecuredApartment-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemunsecuredapartment) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Kreatesinkstub-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemunsecuredapartment-createsinkstub)
+-   [**CreateSinkStub-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemunsecuredapartment-createsinkstub)
 
  
 

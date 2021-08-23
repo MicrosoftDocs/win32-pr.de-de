@@ -1,9 +1,9 @@
 ---
-title: EM_GETBIDIOPTIONS Meldung (RichEdit. h)
-description: Gibt den aktuellen Zustand der bidirektionalen Optionen im Rich Edit-Steuerelement an.
+title: EM_GETBIDIOPTIONS (Richedit.h)
+description: Gibt den aktuellen Zustand der bidirektionalen Optionen im Rich-Edit-Steuerelement an.
 ms.assetid: 055581c0-ae59-4601-a3e9-416705af429a
 keywords:
-- Windows-Steuerelemente für EM_GETBIDIOPTIONS Meldung
+- EM_GETBIDIOPTIONS von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7fade63ac94007bedbf58642dc7a9451eb158fc3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 90b377e0fd3a439737fea9efbc403d2ccc64d6cf78eab1c7e31feeffd6c4b0f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019908"
 ---
-# <a name="em_getbidioptions-message"></a>EM \_ getbidioptions-Meldung
+# <a name="em_getbidioptions-message"></a>EM \_ GETBIDIOPTIONS-Nachricht
 
-Gibt den aktuellen Zustand der bidirektionalen Optionen im Rich Edit-Steuerelement an.
+Gibt den aktuellen Zustand der bidirektionalen Optionen im Rich-Edit-Steuerelement an.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Gibt den aktuellen Zustand der bidirektionalen Optionen im Rich Edit-Steuereleme
 *wParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Eine [**bidioptions**](/windows/desktop/api/Richedit/ns-richedit-bidioptions) -Struktur, die den aktuellen Zustand der bidirektionalen Optionen im Rich Edit-Steuerelement empfängt.
+Eine [**BIDIOPTIONS-Struktur,**](/windows/desktop/api/Richedit/ns-richedit-bidioptions) die den aktuellen Zustand der bidirektionalen Optionen im Rich-Edit-Steuerelement empfängt.
 
 </dd> </dl>
 
@@ -47,9 +47,9 @@ Eine [**bidioptions**](/windows/desktop/api/Richedit/ns-richedit-bidioptions) -S
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung legt die Werte der **wmask** -und **weffects** -Elemente auf den Wert des aktuellen Status der bidirektionalen Optionen im Rich Edit-Steuerelement fest.
+Diese Meldung legt die Werte der **wMask-** und **wEffects-Member** auf den Wert des aktuellen Zustands der bidirektionalen Optionen im Rich Edit-Steuerelement fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,10 +57,10 @@ Diese Meldung legt die Werte der **wmask** -und **weffects** -Elemente auf den W
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Verteilbare Komponente<br/>          | Rich Edit 3,0<br/>                                                              |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Verteilbare Komponente<br/>          | Rich Edit 3.0<br/>                                                              |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -68,13 +68,13 @@ Diese Meldung legt die Werte der **wmask** -und **weffects** -Elemente auf den W
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Bidioptions**](/windows/desktop/api/Richedit/ns-richedit-bidioptions)
+[**BIDIOPTIONS**](/windows/desktop/api/Richedit/ns-richedit-bidioptions)
 </dt> <dt>
 
-[**EM \_ setbidioptions**](em-setbidioptions.md)
+[**EM \_ SETBIDIOPTIONS**](em-setbidioptions.md)
 </dt> </dl>
 
  

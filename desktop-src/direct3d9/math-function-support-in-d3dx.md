@@ -4,12 +4,12 @@ ms.assetid: a44d25de-f79d-4132-a75a-0c22ccd84341
 title: Unterstützung mathematischer Funktionen in D3DX (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a28c32b13d185694e4ffa41c314cf9f77cbb18b7
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: c77e3d75c692d4801e6a8af64bd980e72eb88f0d3276ff4e1364302b5a62357d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112407523"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119368970"
 ---
 # <a name="math-function-support-in-d3dx-direct3d-9"></a>Unterstützung mathematischer Funktionen in D3DX (Direct3D 9)
 

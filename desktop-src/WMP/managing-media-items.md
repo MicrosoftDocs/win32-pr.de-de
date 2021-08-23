@@ -3,29 +3,29 @@ title: Verwalten von Medienelementen
 description: Verwalten von Medienelementen
 ms.assetid: fba1df60-d603-4e37-a021-8fa618144149
 keywords:
-- Windows Media Player,Bibliothek
-- Windows Media Player-Objektmodell, Bibliothek
+- Windows Media Player,Library
+- Windows Media Player-Objektmodell,Bibliothek
 - Objektmodell,Bibliothek
-- Windows Media Player Mobile,Bibliothek für Objektmodell
+- Windows Media Player Mobil, Bibliothek für Objektmodell
 - Windows Media Player ActiveX-Steuerelement, Bibliothek für Objektmodell
-- Windows Media Player Mobile ActiveX-Steuerelement, Bibliothek für Objektmodell
+- Windows Media Player Mobiles ActiveX-Steuerelement, Bibliothek für Objektmodell
 - ActiveX-Steuerelement, Bibliothek für Objektmodell
 - Windows Media Player bibliothek,Verwalten von Medienelementen
 - Bibliothek,Verwalten von Medienelementen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cf984c2f884ae828bd6426dd2a3f6da19a78ddea
-ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
+ms.openlocfilehash: ac689bd6951f09b39db20975d52f6a8ccfc08668d3266d5964c2b7eac28cfd38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111386889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054628"
 ---
 # <a name="managing-media-items"></a>Verwalten von Medienelementen
 
 Ein **Medienobjekt** stellt ein Medienelement dar. Sie verfügt über Eigenschaften und Methoden, mit deren Hilfe Sie Informationen abrufen und dem Benutzer anzeigen können, oder um basierend auf dem abgerufenen Wert unterschiedliche Aktionen durchzuführen.
 
-Ein Großteil Ihrer Arbeit mit **Medienobjekten** umfasst Metadaten zum Inhalt des Medienelements, die als Attribute bezeichnet werden. Im Thema [Media Item Attributes (Medienelementattribute)](media-item-attributes.md) wird beschrieben, wie Attributwerte gelesen und geändert werden. Weitere Informationen zu den Attributen und deren Verwendung finden Sie zusätzlich zu diesem Thema in den Richtlinien zur Verwendung von [Windows-Medienmetadaten](/previous-versions/ms867702(v=msdn.10)) auf der Microsoft-Website.
+Ein Großteil Ihrer Arbeit mit **Medienobjekten** umfasst Metadaten zum Inhalt des Medienelements, die als Attribute bezeichnet werden. Im Thema [Medienelementattribute](media-item-attributes.md) wird beschrieben, wie Attributwerte gelesen und geändert werden. Weitere Informationen zu den Attributen und deren Verwendung finden Sie zusätzlich zu diesem Thema in den Richtlinien zur Verwendung von [Windows Medienmetadaten](/previous-versions/ms867702(v=msdn.10)) auf der Microsoft-Website.
 
 Das **Media-Objekt** verfügt über Eigenschaften und Methoden, die einige Attribute direkt abrufen, z. B. den Namen oder die Dauer des Elements. Für Videoelemente können Sie die Höhe und Breite des Bilds und Markerinformationen basierend auf dem Namen oder Index eines Markers abrufen. Sie können auch bestimmen, ob ein bestimmtes Medienelement in einer bestimmten Wiedergabeliste enthalten ist.
 

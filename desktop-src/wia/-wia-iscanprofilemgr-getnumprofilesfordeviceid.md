@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der Scan Profile für das Gerät ab.
+description: Ruft die Anzahl der Scanprofile für das Gerät ab.
 ms.assetid: fb1f8884-28ef-460e-a8c4-b9608cc89dc6
-title: 'Iscanprofilemgr:: getnumprofilesfordeviceid-Methode (scanprofilemgr. h)'
+title: IScanProfileMgr::GetNumProfilesforDeviceID-Methode (Scanprofilemgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Scanprofilemgr.h
-ms.openlocfilehash: 1a65e1f6571f4ec12a9bd91749c7419f9f9641c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c2af1e4bc73afee090d947e6bcca0060521cb15cf2faff06be8c9a893534ea4b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214830"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119264390"
 ---
-# <a name="iscanprofilemgrgetnumprofilesfordeviceid-method"></a>Iscanprofilemgr:: getnumprofilesfordeviceid-Methode
+# <a name="iscanprofilemgrgetnumprofilesfordeviceid-method"></a>IScanProfileMgr::GetNumProfilesforDeviceID-Methode
 
-Ruft die Anzahl der Scan Profile für das Gerät ab.
+Ruft die Anzahl der Scanprofile für das Gerät ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT GetNumProfilesforDeviceID(
 
 <dl> <dt>
 
-*bstraude viceid* \[ in\]
+*bstrDeviceID* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -49,10 +49,10 @@ Die ID des Geräts.
 
 </dd> <dt>
 
-*pulnumprofiles* \[ vorgenommen\]
+*pulNumProfiles* \[ out\]
 </dt> <dd>
 
-Typ: **ulong \** _
+Typ: **ULONG \***
 
 Ein Zeiger auf die Anzahl der für das Gerät verfügbaren Profile.
 
@@ -60,9 +60,9 @@ Ein Zeiger auf die Anzahl der für das Gerät verfügbaren Profile.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,21 +70,21 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Scanprofilemgr. h</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofilemgr.h</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscanprofilemgr**](-wia-iscanprofilemgr.md)
+[**IScanProfileMgr**](-wia-iscanprofilemgr.md)
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scan Profile Schema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  
