@@ -22,16 +22,16 @@ ms.locfileid: "118720916"
 ---
 # <a name="ishelldispatch3-object"></a>IShellDispatch3-Objekt
 
-Erweitert das [**IShellDispatch2-Objekt.**](ishelldispatch2-object.md) **IShellDispatch3 unterstützt** zusätzlich zu den eigenschaften und methoden, die von **IShellDispatch2 unterstützt werden, eine neue Methode.**
+Erweitert das [**IShellDispatch2-Objekt.**](ishelldispatch2-object.md) **IShellDispatch3** unterstützt zusätzlich zu den Eigenschaften und Methoden, die von **IShellDispatch2** unterstützt werden, eine neue Methode.
 
 > [!Note]  
-> **IShellDispatch3 wird** implementiert und über das [**Shell-Objekt aufgerufen.**](shell.md)
+> **IShellDispatch3** wird implementiert, und der Zugriff erfolgt über das [**Shell-Objekt.**](shell.md)
 
  
 
 ## <a name="members"></a>Member
 
-Das **IShellDispatch3-Objekt** verfügt über die folgenden Membertypen:
+Das **IShellDispatch3-Objekt** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -41,9 +41,9 @@ Das **IShellDispatch3-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                             | Beschreibung                                                  |
+| Methode                                             | BESCHREIBUNG                                                  |
 |:---------------------------------------------------|:-------------------------------------------------------------|
-| [**AddToRecent**](ishelldispatch3-addtorecent.md) | Fügt der Liste der zuletzt verwendeten Dateien (MRU) eine Datei hinzu.<br/> |
+| [**AddToRecent**](ishelldispatch3-addtorecent.md) | Fügt der Liste zuletzt verwendeter Dateien (MRU) eine Datei hinzu.<br/> |
 
 
 
@@ -51,7 +51,7 @@ Das **IShellDispatch3-Objekt** verfügt über diese Methoden.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Erörterung der Windows Dienste finden Sie in der [Dokumentation zu Diensten.](../services/services.md)
+Eine Erläuterung Windows Dienste finden Sie in der [Dokumentation zu Diensten.](../services/services.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,7 +59,7 @@ Eine Erörterung der Windows Dienste finden Sie in der [Dokumentation zu Dienste
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |

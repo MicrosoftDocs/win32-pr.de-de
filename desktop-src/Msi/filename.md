@@ -1,39 +1,39 @@
 ---
-description: Der Datentyp Dateiname ist eine Text Zeichenfolge, die einen Dateinamen oder einen Ordner enthält.
+description: Der Filename-Datentyp ist eine Textzeichenfolge, die einen Dateinamen oder Ordner enthält.
 ms.assetid: af59e1b8-0699-4031-895f-415752611e21
 title: Dateiname
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5fc049fa0808efc180afbd715e311a124bfdada9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 19d125a1151520fb4d3b885bd815b0a5bf58d2b00ec61581fc7773f1da1bd29e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528190"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118636204"
 ---
 # <a name="filename"></a>Dateiname
 
-Der Datentyp Dateiname ist eine Text Zeichenfolge, die einen Dateinamen oder einen Ordner enthält. Standardmäßig wird davon ausgegangen, dass der Dateiname eine kurze Dateiname-Syntax verwendet. Dabei handelt es sich um einen achtstelligen Namen, einen Zeitraum (.) und eine Erweiterung mit drei Zeichen. Ein kurzer Dateiname muss immer angegeben werden, da die Eigenschaft [**shortfileames**](shortfilenames.md) festgelegt werden kann oder das Zielvolume für die Installation nur kurze Dateinamen unterstützt.
+Der Filename-Datentyp ist eine Textzeichenfolge, die einen Dateinamen oder Ordner enthält. Standardmäßig wird davon ausgegangen, dass für den Dateinamen die Syntax für kurze Dateinamen verwendet wird. Das heißt, der Name aus acht Zeichen, der Zeitraum (.) und die 3-zeichenfolgen-Erweiterung. Es muss immer ein kurzer Dateiname angegeben werden, da die [**SHORTFILENAMES-Eigenschaft**](shortfilenames.md) festgelegt werden kann oder das Zielvolumen für die Installation nur kurze Dateinamen unterstützt.
 
-Wenn Sie einen langen Dateinamen mit dem kurzen Dateinamen einschließen möchten, trennen Sie ihn vom kurzen Dateinamen mit einem senkrechten Strich ( \| ).
+Um einen langen Dateinamen mit dem kurzen Dateinamen einderherzustellen, trennen Sie ihn vom kurzen Dateinamen durch eine vertikale Leiste ( \| ).
 
-Die folgenden beiden Zeichen folgen sind z. b. gültig:
+Beispielsweise sind die folgenden beiden Zeichenfolgen gültig:
 
 -   status.txt
--   PROJEC ~1.txt\| Projekt Status.txt
+-   projec~1.txt\| Project Status.txt
 
-Kurze und lange Dateinamen dürfen die folgenden Zeichen nicht enthalten:
+Kurze und lange Dateinamen dürfen nicht die folgenden Zeichen enthalten:
 
 -   Schrägstrich (/) oder ( \\ )
 -   Fragezeichen (?)
--   senkrechter Strich ( \| )
--   Rechte Spitze Klammer (>)
--   öffnende spitze Klammer (<)
+-   vertikaler Balken ( \| )
+-   rechte eckige Klammer (>)
+-   linke eckige Klammer (<)
 -   Doppelpunkt (:)
 -   Sternchen ( \* )
 -   Anführungszeichen (")
 
-Außerdem dürfen kurze Dateinamen die folgenden Zeichen nicht enthalten:
+Darüber hinaus dürfen kurze Dateinamen nicht die folgenden Zeichen enthalten:
 
 -   Pluszeichen (+)
 -   Komma (,)
@@ -42,10 +42,10 @@ Außerdem dürfen kurze Dateinamen die folgenden Zeichen nicht enthalten:
 -   linke eckige Klammer ( \[ )
 -   rechte eckige Klammer ( \] )
 
-Es ist kein Leerzeichen vor dem senkrechten Strich ( \| ) für die Syntax der kurzen Dateinamen/langen Dateinamen zulässig. Kurze Dateinamen dürfen keine Leerzeichen enthalten, obwohl ein langer Dateiname möglicherweise ist. Ein Leerzeichen kann nach dem Trennzeichen nur vorhanden sein, wenn der lange Dateiname mit dem Leerzeichen beginnt. Es ist keine vollständige Pfad Syntax zulässig.
+Es ist kein Leerzeichen vor dem vertikalen Balkentrennzeichen () für die Syntax für kurze \| Dateinamen/lange Dateinamen zulässig. Kurze Dateinamen enthalten möglicherweise kein Leerzeichen, obwohl ein langer Dateiname möglicherweise ist. Ein Leerzeichen kann nur nach dem Trennzeichen vorhanden sein, wenn der lange Dateiname des Dateinamens mit dem Leerzeichen beginnt. Es ist keine vollständige Pfadsyntax zulässig.
 
 > [!Note]  
-> Das Format der Dateiname-Spalte der [msiembeddedui](msiembeddedui-table.md) -Tabelle entspricht dem Datentyp Datentyp Datentyp, mit dem Unterschied, dass das vertikale Balken \| Trennzeichen () für die Syntax kurzer Dateiname/langer Dateiname nicht verfügbar ist.
+> Das Format der FileName -Spalte der [MsiEmbeddedUI-Tabelle](msiembeddedui-table.md) ist mit dem Format Filename-Datentyp, mit der Ausnahme, dass das senkrechte Balkentrennzeichen () für die Syntax für kurze dateiname/long-Dateinamen nicht \| verfügbar ist.
 
  
 

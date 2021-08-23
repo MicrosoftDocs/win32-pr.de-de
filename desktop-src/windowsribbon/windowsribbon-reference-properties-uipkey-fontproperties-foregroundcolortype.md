@@ -27,9 +27,9 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Ui \_ PKEY \_ FontProperties \_ ForegroundColorType wird von einer Anwendung in Verbindung mit [der Benutzeroberfläche \_ PKEY \_ FontProperties \_ ForegroundColor](windowsribbon-reference-properties-uipkey-fontproperties-foregroundcolor.md)verwendet, um Einstellungen des **Textfarbkatalogs** abzufragen.
+Ui PKEY FontProperties ForegroundColorType wird von einer Anwendung in Verbindung mit UI \_ \_ \_ [ \_ PKEY \_ FontProperties \_ ForegroundColor](windowsribbon-reference-properties-uipkey-fontproperties-foregroundcolor.md)verwendet, um Einstellungen des **Textfarbkatalogs** abfragt.
 
-Der Eigenschaftswert stammt aus der [**\_ SWATCHCOLORTYPE-Enumeration der Benutzeroberfläche.**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_swatchcolortype)
+Der Eigenschaftswert ist aus der [**\_ SWATCHCOLORTYPE-Enumeration der Benutzeroberfläche.**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_swatchcolortype)
 
 Der Standardwert ist `UI_SWATCHCOLORTYPE_RGB`.
 
@@ -37,20 +37,20 @@ Die folgende Tabelle enthält eine Beschreibung der Eigenschaftswerte.
 
 
 
-|     Wert                           |     Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|     Wert                           |     BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `UI_SWATCHCOLORTYPE_NOCOLOR`   | Wird von [**FontControl**](windowsribbon-element-fontcontrol.md)nicht unterstützt.                                                                                                                                                                                                                                                                                                                                        |
-| `UI_SWATCHCOLORTYPE_AUTOMATIC` | Die Anwendung sollte die entsprechende Systemmetrik für den Farbwert abfragen, in der Regel die aktuelle Windows **Designtextfarbe,** die mit GetSysColor(COLOR \_ WINDOWTEXT) abgerufen wird.                                                                                                                                                                                                                                  |
-| `UI_SWATCHCOLORTYPE_RGB`       | Die Anwendung sollte [die \_ Ui-PKEY \_ FontProperties \_ ForegroundColor](windowsribbon-reference-properties-uipkey-fontproperties-foregroundcolor.md) nach dem Farbwert abfragen. Der Farbwert von [ \_ UI PKEY \_ FontProperties \_ ForegroundColor](windowsribbon-reference-properties-uipkey-fontproperties-foregroundcolor.md) wird auf der Schaltfläche **Textfarbe** angezeigt und im **Textfarbkatalog** ausgewählt.<br/> |
+| `UI_SWATCHCOLORTYPE_NOCOLOR`   | Wird von [**FontControl nicht unterstützt.**](windowsribbon-element-fontcontrol.md)                                                                                                                                                                                                                                                                                                                                        |
+| `UI_SWATCHCOLORTYPE_AUTOMATIC` | Die Anwendung sollte die entsprechende Systemmetrik für den Farbwert  abfragen, in der Regel die aktuelle Windows Designtextfarbe, die mit GetSysColor(COLOR \_ WINDOWTEXT) abgerufen wird.                                                                                                                                                                                                                                  |
+| `UI_SWATCHCOLORTYPE_RGB`       | Die Anwendung sollte [ \_ PKEY \_ FontProperties \_ ForegroundColor](windowsribbon-reference-properties-uipkey-fontproperties-foregroundcolor.md) für die Benutzeroberfläche nach dem Farbwert abfragen. Der Farbwert von [ \_ UI PKEY \_ FontProperties \_ ForegroundColor](windowsribbon-reference-properties-uipkey-fontproperties-foregroundcolor.md) wird auf der **Schaltfläche Textfarbe** angezeigt und im **Textfarbkatalog** ausgewählt.<br/> |
 
 
 
  
 
-Ui \_ PKEY \_ FontProperties \_ ForegroundColorType wird an die [**IUICommandHandler::Execute-Rückrufmethode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) übergeben, wenn eine Farbwatch in einem [**FontControl Text-Farbkatalog**](windowsribbon-element-fontcontrol.md)  ausgewählt ist.
+Ui \_ PKEY FontProperties ForegroundColorType wird an die \_ \_ [**IUICommandHandler::Execute-Rückrufmethode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) übergeben, wenn ein Farbmuster in einem FontControl-Textfarbkatalog [](windowsribbon-element-fontcontrol.md) **ausgewählt** wird.
 
 > [!Note]  
-> Es wird dringend empfohlen, dass die Anwendung nur einen anfänglichen **Textfarbwert** und diesen Wert nicht neu festlegen soll, wenn der Cursor innerhalb eines Dokuments neu positioniert wird. Die letzte Auswahl sollte beibehalten werden, um zu vermeiden, dass die gewünschte Farbe erneut ausgewählt werden muss.
+> Es wird dringend empfohlen, dass  die Anwendung nur einen anfänglichen Textfarbwert und diesen Wert nicht erneut festlegen sollte, wenn der Cursor innerhalb eines Dokuments neu positioniert wird. Die letzte Auswahl sollte beibehalten werden, um zu vermeiden, dass die gewünschte Farbe erneut ausgewählt werden muss.
 
  
 
@@ -58,13 +58,13 @@ Ui \_ PKEY \_ FontProperties \_ ForegroundColorType wird an die [**IUICommandHan
 
 <dl> <dt>
 
-[Eigenschaften des Schriftartsteuerelements](windowsribbon-reference-properties-fontcontrol.md)
+[Eigenschaften des Schriftart-Steuerelements](windowsribbon-reference-properties-fontcontrol.md)
 </dt> <dt>
 
 [**UI \_ SWATCHCOLORTYPE**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_swatchcolortype)
 </dt> <dt>
 
-[Schriftartsteuerelement](windowsribbon-controls-fontcontrol.md)
+[Schriftart-Steuerelement](windowsribbon-controls-fontcontrol.md)
 </dt> </dl>
 
  

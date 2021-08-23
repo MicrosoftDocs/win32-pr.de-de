@@ -1,31 +1,31 @@
 ---
-title: Nicht gekapselt Unions
-description: Eine nicht gekapselte Union ist eine Union, die nicht in einer Struktur mit Ihrem Diskriminanten enthalten ist. Die nicht gekapselte Union wird durch das vorhanden sein des Type-Attributs \ \_ Switchtyp \ und des Feld Attributs \ Switch \_ ist \ angegeben.
+title: Nicht kapselte Unions
+description: Eine nicht kapselte Union ist eine Union, die nicht in einer Struktur mit ihrer Diskriminanz enthalten ist. Die nicht kapselte Union wird durch das Vorhandensein des Typattributs \switch type\ und des Feldattributs \_ \switch \_ ist\ angegeben.
 ms.assetid: d883b0ed-ceab-49f0-bbe5-b96a503c431d
 keywords:
-- Datentypen mittlerer l, nicht gekapselte Unions
+- Datentypen MIDL , nicht kapselte Unions
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f8c69cc4fc06a217fc3dc5dff405bf87268de91c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dab3daee6a4115ebdf53b3ff0133f8d05bc2a6f0325dcc6a04d324f48eeceb17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340611"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119066900"
 ---
-# <a name="nonencapsulated-unions"></a>Nicht gekapselt Unions
+# <a name="nonencapsulated-unions"></a>Nicht kapselte Unions
 
-Eine nicht gekapselte Union ist eine Union, die nicht in einer Struktur mit Ihrem Diskriminanten enthalten ist. Die nicht gekapselte Union wird durch das vorhanden sein des **\[ typattributtyps \_ \]** und **\[ \_ \]** des Feld Attribut Schalters angegeben.
+Eine nicht kapselte Union ist eine Union, die nicht in einer Struktur mit ihrer Diskriminanz enthalten ist. Die nicht kapselte Union **\[ \_ \]** wird durch das Vorhandensein des Typattributwechseltyps und des Feldattributschalters **\[ \_ angegeben. \]**
 
-Eine Beschreibung der Form einer nicht gekapselten Union finden Sie unter [**Union**](union.md).
+Eine Beschreibung der Form einer nicht kapselten Union finden Sie unter [**union**](union.md).
 
-Die Form der Unions muss plattformübergreifend identisch sein, um die Konnektivität zu gewährleisten.
+Die Form von Unions muss plattformübergreifend identisch sein, um die Interkonnektivität sicherzustellen.
 
-Weitere Informationen finden Sie unter [gekapselte Unions](encapsulated-unions.md), [**Union**](union.md), **\[** [**Switch \_ is**](switch-is.md) **\]** und **\[** [**Switch \_ Type**](switch-type.md) **\]** .
+Weitere Informationen finden Sie unter [Gekapselte Unions](encapsulated-unions.md), [**union**](union.md), **\[** [**switch \_ is**](switch-is.md) **\]** und switch **\[** [**\_ type**](switch-type.md) **\]** .
 
- 
+ 
 
- 
+ 
 
 
 

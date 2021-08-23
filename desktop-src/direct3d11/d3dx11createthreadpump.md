@@ -1,6 +1,6 @@
 ---
 title: D3DX11CreateThreadPump-Funktion (D3DX11core.h)
-description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Siehe Hinweise. Erstellen Sie eine Threadpumpe.
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Siehe Hinweise. Erstellen Sie eine Threadpump.
 ms.assetid: 8983a2e2-185f-43c0-baf0-a4c883d91220
 keywords:
 - D3DX11CreateThreadPump-Funktion Direct3D 11
@@ -29,7 +29,7 @@ ms.locfileid: "118536101"
 
  
 
-Erstellen Sie eine Threadpumpe.
+Erstellen Sie eine Threadpump.
 
 ## <a name="syntax"></a>Syntax
 
@@ -71,7 +71,7 @@ Die Anzahl der zu erstellenden Prozessthreads. Wenn 0 angegeben ist, versucht Di
 
 Typ: **[ **ID3DX11ThreadPump**](id3dx11threadpump.md)\*\***
 
-Die erstellte Threadpumpe. Siehe [**ID3DX11ThreadPump-Schnittstelle.**](id3dx11threadpump.md)
+Die erstellte Threadpump. Siehe [**ID3DX11ThreadPump-Schnittstelle**](id3dx11threadpump.md).
 
 </dd> </dl>
 
@@ -79,17 +79,17 @@ Die erstellte Threadpumpe. Siehe [**ID3DX11ThreadPump-Schnittstelle.**](id3dx11t
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der In [Direct3D 11-Rückgabecodes aufgeführten](d3d11-graphics-reference-returnvalues.md)Werte.
+Der Rückgabewert ist einer der Werte, die unter [Direct3D 11-Rückgabecodes aufgeführt sind.](d3d11-graphics-reference-returnvalues.md)
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Threadpumpe ist ein sehr ressourcenintensives Objekt. Pro Anwendung sollte nur eine Threadpumpe erstellt werden.
+Ein Threadpump ist ein sehr ressourcenintensives Objekt. Pro Anwendung sollte nur eine Threadpump erstellt werden.
 
-Es gibt keine Implementierung des asynchronen Ladevorgangs außerhalb von D3DX 10 und D3DX 11.
+Es gibt keine Implementierung des asynchronen Ladeers außerhalb von D3DX 10 und D3DX 11.
 
 Für Windows Store-Apps enthalten die DirectX-Beispiele (z. B. das [Direct3D-Tutorialbeispiel)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Direct3D%20tutorial%20sample)das **BasicLoader-Modul,** das das asynchrone Programmiermodell Windows Runtime ([**AsyncBase**](/previous-versions/visualstudio/visual-studio-2012/br244878(v=vs.110))) verwendet.
 
-Für Win32-Desktop-Apps können Sie die [Concurrency Runtime](/previous-versions/visualstudio/visual-studio-2010/ee207192(v=vs.100)) verwenden, um etwas ähnliches wie das asynchrone Programmiermodell Windows Runtime zu implementieren.
+Für Win32-Desktop-Apps können [](/previous-versions/visualstudio/visual-studio-2010/ee207192(v=vs.100)) Sie die Concurrency Runtime verwenden, um etwas zu implementieren, das dem asynchronen Windows-Runtime-Modell ähnelt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,7 +102,7 @@ Für Win32-Desktop-Apps können Sie die [Concurrency Runtime](/previous-versions
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

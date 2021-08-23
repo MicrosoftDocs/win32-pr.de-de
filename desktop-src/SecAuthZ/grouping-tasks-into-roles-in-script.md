@@ -1,5 +1,5 @@
 ---
-description: Im Autorisierungs-Manager stellt eine Rolle eine Kategorie von Benutzern und die Aufgaben dar, die diese Benutzer für die Ausführung autorisiert haben.
+description: Im Autorisierungs-Manager stellt eine Rolle eine Kategorie von Benutzern und die Aufgaben dar, für die diese Benutzer autorisiert sind.
 ms.assetid: a4981774-0f5c-4032-8a7d-d9ef44c76abe
 title: Gruppieren von Aufgaben in Rollen in Skripts
 ms.topic: article
@@ -9,18 +9,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c84ec45bba8da9d76e2a4fe0b31324429374a74b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: db0314ad953eecb94f10c995dea28e1dc3d69b586c386a94ae4f1ed45037fdcc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118913584"
 ---
 # <a name="grouping-tasks-into-roles-in-script"></a>Gruppieren von Aufgaben in Rollen in Skripts
 
-Im Autorisierungs-Manager stellt eine Rolle eine Kategorie von Benutzern und die Aufgaben dar, die diese Benutzer für die Ausführung autorisiert haben. Tasks werden gruppiert und einer Rollendefinition zugewiesen, die durch ein [**iaztask**](/windows/desktop/api/Azroles/nn-azroles-iaztask) -Objekt dargestellt wird, dessen [**isroledefinition**](/windows/desktop/api/Azroles/nf-azroles-iaztask-get_isroledefinition) -Eigenschaft auf **true** festgelegt ist. Die Rollendefinition kann dann einem [**iazrole**](/windows/desktop/api/Azroles/nn-azroles-iazrole) -Objekt zugewiesen werden, und Benutzer oder Benutzergruppen werden dann diesem Objekt zugewiesen. Weitere Informationen zu Aufgaben und Rollen finden Sie unter [Rollen](roles.md).
+Im Autorisierungs-Manager stellt eine Rolle eine Kategorie von Benutzern und die Aufgaben dar, für die diese Benutzer autorisiert sind. Aufgaben werden gruppiert und einer Rollendefinition zugewiesen, die durch ein [**IAzTask-Objekt**](/windows/desktop/api/Azroles/nn-azroles-iaztask) dargestellt wird, dessen [**IsRoleDefinition-Eigenschaft**](/windows/desktop/api/Azroles/nf-azroles-iaztask-get_isroledefinition) auf **True** festgelegt ist. Die Rollendefinition kann dann einem [**IAzRole-Objekt**](/windows/desktop/api/Azroles/nn-azroles-iazrole) zugewiesen werden, und Benutzer oder Benutzergruppen werden dann diesem Objekt zugewiesen. Weitere Informationen zu Aufgaben und Rollen finden Sie unter [Rollen.](roles.md)
 
-Im folgenden Beispiel wird gezeigt, wie Aufgaben einer Rollendefinition zugewiesen werden, ein Rollen Objekt erstellt und die Rollendefinition dem Rollen Objekt zugewiesen wird. In diesem Beispiel wird davon ausgegangen, dass ein vorhandener XML-Richtlinien Speicher namens MyStore.xml im Stammverzeichnis des Laufwerks C vorhanden ist, dass dieser Speicher eine Anwendung mit dem Namen "Kosten" enthält und dass diese Anwendung Tasks mit dem Namen "Kosten übermitteln" und "Genehmigungskosten
+Das folgende Beispiel zeigt, wie Sie einer Rollendefinition Aufgaben zuweisen, ein Rollenobjekt erstellen und die Rollendefinition dem Rollenobjekt zuweisen. Im Beispiel wird davon ausgegangen, dass im Stammverzeichnis von Laufwerk C ein vorhandener XML-Richtlinienspeicher namens MyStore.xml vorhanden ist, dass dieser Speicher eine Anwendung mit dem Namen Expense enthält und dass diese Anwendung Aufgaben mit dem Namen Submit Expense und Approve Expense enthält.
 
 
 ```VB

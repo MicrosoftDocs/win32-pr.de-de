@@ -1,37 +1,37 @@
 ---
-description: Elliptische Kurven in Windows 10, Version 1607 und höher aktiviert.
-title: TLS-elliptische Kurven in Windows 10, Version 1607 und höher
+description: Elliptische Kurven, die in Windows 10 Version 1607 und höher aktiviert sind.
+title: TLS Elliptic Curves in Windows 10 Version 1607 und höher
 ms.topic: article
 ms.keywords: ecc curves, elliptic curves, tls elliptic curves, ECC curves, schannel, ECC, EC, Elliptic Curve Cryptography
 ms.date: 06/10/2020
-ms.openlocfilehash: 813a7c117f5f1e3fc1c6484fc57d1c9f14cf9567
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 237d0f7a7b4b2a7fecb99a91f21c55349e7d435b221e1b3297afd1ba614cc92c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217449"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118915845"
 ---
-# <a name="tls-elliptic-curves-in-windows-10-version-1607-and-later"></a>TLS-elliptische Kurven in Windows 10, Version 1607 und höher
+# <a name="tls-elliptic-curves-in-windows-10-version-1607-and-later"></a>TLS Elliptic Curves in Windows 10 Version 1607 und höher
 
-Für Windows 10, Version 1607 und höher, sind die folgenden elliptischen Kurven aktiviert, und in dieser Prioritäts Reihenfolge wird standardmäßig der Microsoft SChannel-Anbieter verwendet:
+Für Windows 10, Version 1607 und höher, sind die folgenden elliptischen Kurven aktiviert und verwenden standardmäßig den Microsoft Schannel-Anbieter in dieser Prioritätsreihenfolge:
 
-| Zeichenfolge mit elliptischer Kurve | Verfügbar im PPS-Modus |
+| Elliptische Kurvenzeichenfolge | Verfügbar im FIPS-Modus |
 |-------------|--------------|
 | curve25519 | Nein |
-| Benannte nistp256 | Ja |
-| Benannte nistp384 | Ja |
+| NistP256 | Ja |
+| NistP384 | Ja |
 
 
-Die folgenden elliptischen Kurven werden vom Microsoft SChannel-Anbieter unterstützt, sind jedoch nicht standardmäßig aktiviert:
+Die folgenden elliptischen Kurven werden vom Microsoft Schannel-Anbieter unterstützt, sind jedoch nicht standardmäßig aktiviert:
 
-| Zeichenfolge mit elliptischer Kurve | Verfügbar im PPS-Modus |
+| Elliptische Kurvenzeichenfolge | Verfügbar im FIPS-Modus |
 |-------------|--------------|
-| benannte brainpoolp256r1 | Nein |
-| benannte brainpoolp384r1 | Nein |
-| benannte brainpoolp512r1 | Nein |
+| brainpoolP256r1 | Nein |
+| brainpoolP384r1 | Nein |
+| brainpoolP512r1 | Nein |
 | nistP192 | Nein |
 | nistP224 | Nein |
-| benannte nistp521 | Ja |
+| nistP521 | Ja |
 | secP160k1 | Nein |
 | secP160r1 | Nein |
 | secP160r2 | Nein |
@@ -46,24 +46,24 @@ Die folgenden elliptischen Kurven werden vom Microsoft SChannel-Anbieter unterst
 
 
 
-## <a name="enabling-elliptic-curves"></a>Aktivieren von elliptischen Kurven
+## <a name="enabling-elliptic-curves"></a>Aktivieren elliptischer Kurven
 
 Um elliptische Kurven hinzuzufügen, stellen Sie entweder eine Gruppenrichtlinie bereit, oder verwenden Sie die TLS-Cmdlets:
-- Um die Gruppenrichtlinie zu verwenden, konfigurieren Sie die [ECC-Kurven Reihenfolge](/windows-server/security/tls/manage-tls#configuring-tls-ecc-curve-order) unter Computer Konfiguration > administrative Vorlagen > Netzwerk > SSL-Konfigurationseinstellungen mit der Prioritäts Liste für alle elliptischen Kurven, die Sie aktivieren möchten.
+- Um Gruppenrichtlinien zu verwenden, [konfigurieren Sie ECC Curve Order](/windows-server/security/tls/manage-tls#configuring-tls-ecc-curve-order) unter Computerkonfiguration > Administrative Vorlagen > Network > SSL-Konfiguration Einstellungen mit der Prioritätsliste für alle elliptischen Kurven, die Sie aktivieren möchten.
 
-- Informationen zur Verwendung von PowerShell finden Sie unter [TLS-Cmdlets](/powershell/module/tls) für eine komplette Liste der TLS-Cmdlet-Syntax und Beschreibungen.
+- Eine vollständige Liste der SYNTAX und Beschreibungen von [TLS-Cmdlets](/powershell/module/tls) finden Sie unter TLS-Cmdlets, um PowerShell zu verwenden.
 
 
 > [!NOTE]
-> Vor Windows 10 wurden Chiffre Sammlungs Zeichenfolgen mit der elliptischen Kurve angehängt, um die Kurven Priorität zu bestimmen. Windows 10 unterstützt eine Einstellung für die Prioritäts Reihenfolge der elliptischen Kurven, damit das elliptische Kurven Suffix nicht erforderlich ist und von der neuen Priorität der elliptischen Kurven Priorität außer Kraft gesetzt wird, um Organisationen die Verwendung von Gruppenrichtlinien zum Konfigurieren verschiedener Versionen von Windows mit denselben Verschlüsselungs Sammlungen zu ermöglichen.
+> Vor Windows 10 wurden Verschlüsselungssammlungszeichenfolgen mit der elliptischen Kurve angefügt, um die Kurvenpriorität zu bestimmen. Windows 10 unterstützt eine Prioritätsreihenfolgeeinstellung für elliptische Kurven, sodass das Suffix der elliptischen Kurve nicht erforderlich ist und von der neuen Prioritätsreihenfolge der elliptischen Kurve überschrieben wird, sofern angegeben, damit Organisationen gruppenrichtlinien verwenden können, um verschiedene Versionen von Windows mit denselben Verschlüsselungssammlungen zu konfigurieren.
 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Konfigurieren der TLS ECC-Kurven Reihenfolge](/windows-server/security/tls/manage-tls#configuring-tls-ecc-curve-order)
+[Konfigurieren der TLS ECC-Kurvenreihenfolge](/windows-server/security/tls/manage-tls#configuring-tls-ecc-curve-order)
 
 [Verwalten der TLS ECC-Reihenfolge](/windows-server/security/tls/manage-tls#managing-tls-ecc-order)
 
-[Verwalten von Windows ECC-Kurven mithilfe von Gruppenrichtlinie](/windows-server/security/tls/manage-tls#managing-windows-ecc-curves-using-group-policy)
+[Verwalten Windows ECC-Kurven mithilfe von Gruppenrichtlinie](/windows-server/security/tls/manage-tls#managing-windows-ecc-curves-using-group-policy)
 
 [TLS-Cmdlets](/powershell/module/tls)

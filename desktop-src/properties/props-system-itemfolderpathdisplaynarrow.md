@@ -1,5 +1,5 @@
 ---
-description: Erfahren Sie mehr über die System.ItemFolderPathDisplayNarrow-Eigenschaft, die den benutzerfreundlichen Anzeigepfad des übergeordneten Ordners eines Elements darstellt.
+description: Informieren Sie sich über die System.ItemFolderPathDisplayNarrow-Eigenschaft, die den benutzerfreundlichen Anzeigepfad des übergeordneten Ordners eines Elements darstellt.
 ms.assetid: f60b7465-bca4-4c7b-9caf-9cda1bf6eeeb
 title: System.ItemFolderPathDisplayNarrow
 ms.topic: article
@@ -35,7 +35,7 @@ propertyDescription
 
 PKEY-Werte werden in Propkey.h definiert.
 
-Das Format der Zeichenfolge sollte so angepasst werden, dass der Ordnername an erster Stelle steht, um eine Schmalansichtsspalte zu optimieren. Wenn der Ordner ein Dateiordner ist, enthält der Wert alle lokalisierten Namen. Wenn [System.ItemFolderPathDisplay](./props-system-itemfolderpathdisplay.md) VT \_ EMPTY ist, sollte diese Eigenschaft ebenfalls leer sein. Andernfalls sollte sie von der Datenquelle von System.ItemFolderPathDisplay entsprechend abgeleitet werden.
+Das Format der Zeichenfolge sollte so angepasst werden, dass der Ordnername an erster Stelle steht, um eine schmale Anzeigespalte zu optimieren. Wenn der Ordner ein Dateiordner ist, enthält der Wert alle lokalisierten Namen. Wenn [System.ItemFolderPathDisplay](./props-system-itemfolderpathdisplay.md) VT \_ EMPTY ist, sollte diese Eigenschaft ebenfalls leer sein. Andernfalls sollte sie entsprechend von der Datenquelle aus System.ItemFolderPathDisplay abgeleitet werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

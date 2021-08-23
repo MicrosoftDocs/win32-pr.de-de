@@ -1,9 +1,9 @@
 ---
-title: LVM_GETORIGIN Meldung (kommstrg. h)
-description: Ruft den aktuellen Ansichts Ursprung für ein Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des ListView \_ getorigin-Makros senden.
+title: LVM_GETORIGIN Meldung (Commctrl.h)
+description: Ruft den aktuellen Ansichtsursprung für ein Listenansichtssteuerelement ab. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetOrigin-Makros senden.
 ms.assetid: 913c8339-fbe4-43c8-a997-5a972920dc3b
 keywords:
-- Windows-Steuerelemente für LVM_GETORIGIN Meldung
+- LVM_GETORIGIN Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8af42f3d616aa609d6b9e41d3991adb9d68eb24e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a274e81c276d70eb1ab6c7f214b62ae5c346a59dda026bb13c5ab6b3ce80f68d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105495"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118411357"
 ---
-# <a name="lvm_getorigin-message"></a>LVM \_ getorigin-Nachricht
+# <a name="lvm_getorigin-message"></a>LVM \_ GETORIGIN-Nachricht
 
-Ruft den aktuellen Ansichts Ursprung für ein Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ getorigin**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getorigin) -Makros senden.
+Ruft den aktuellen Ansichtsursprung für ein Listenansichtssteuerelement ab. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ GetOrigin-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getorigin) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Ruft den aktuellen Ansichts Ursprung für ein Listenansicht-Steuerelement ab. Si
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**Punkt**](/previous-versions//dd162805(v=vs.85)) Struktur, die den Ansichts Ursprung empfängt.
+Zeiger auf eine [**POINT-Struktur,**](/previous-versions//dd162805(v=vs.85)) die den Ansichtsursprung empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, oder **false** , wenn die aktuelle Ansicht eine Listen-oder Berichtsansicht ist.
+Gibt **TRUE** zurück, wenn erfolgreich, oder **FALSE,** wenn es sich bei der aktuellen Ansicht um eine Listen- oder Berichtsansicht handelt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt **true** zurück, wenn erfolgreich, oder **false** , wenn die aktuelle Ansi
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

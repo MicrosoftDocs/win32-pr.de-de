@@ -3,7 +3,7 @@ title: CLASS-Anweisung
 description: Definiert die Klasse des Dialogfelds.
 ms.assetid: 7c4325fe-66a4-4bb2-9c99-04b3ff590e7a
 keywords:
-- CLASS-Anweisung Menüs und andere Ressourcen
+- CLASS-Anweisungsmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118734656"
 
 Definiert die Klasse des Dialogfelds.
 
-Die **CLASS-Anweisung** wird im optionalen Abschnitt vor dem Hauptteil einer [**DIALOG-Anweisung**](dialog-resource.md) angezeigt. Wenn keine Klasse angegeben wird, wird die Standarddialogklasse verwendet.
+Die **CLASS-Anweisung** wird im optionalen Abschnitt vor dem Main einer [**DIALOG-Anweisung**](dialog-resource.md) angezeigt. Wenn keine Klasse angegeben wird, wird die Standarddialogklasse verwendet.
 
 ``` syntax
 CLASS class
@@ -34,13 +34,13 @@ CLASS class
 <span id="class"></span><span id="CLASS"></span>*Klasse*
 </dt> <dd>
 
-Eine 16-Bit-Ganzzahl ohne Vorzeichen oder eine Zeichenfolge, die in doppelte Anführungszeichen () eingeschlossen ist und die Klasse des Dialogfelds identifiziert. Wenn die Fensterprozedur für die Klasse keine an sie gesendete Nachricht verarbeitet, muss sie die [**DefDlgProc-Funktion**](/windows/win32/api/winuser/nf-winuser-defdlgprocw) aufrufen, um sicherzustellen, dass alle Nachrichten ordnungsgemäß für das Dialogfeld verarbeitet werden. Eine private Klasse kann **DefDlgProc** als Standardfensterprozedur verwenden. Die -Klasse muss mit dem **cbWndExtra-Member** der [**WNDCLASS-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassa) registriert werden, die auf **DLGWINDOWEXTRA** festgelegt ist.
+Eine 16-Bit-Ganzzahl ohne Vorzeichen oder eine Zeichenfolge in doppelten Anführungszeichen (), die die Klasse des Dialogfelds identifiziert. Wenn die Fensterprozedur für die -Klasse keine an sie gesendete Nachricht verarbeitet, muss sie die [**DefDlgProc-Funktion**](/windows/win32/api/winuser/nf-winuser-defdlgprocw) aufrufen, um sicherzustellen, dass alle Nachrichten ordnungsgemäß für das Dialogfeld behandelt werden. Eine private Klasse kann **DefDlgProc als** Standardfensterprozedur verwenden. Die -Klasse muss mit dem **cbWndExtra-Member** der [**WNDCLASS-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassa) registriert werden, die auf **DLGWINDOWEXTRA festgelegt ist.**
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die **CLASS-Anweisung** sollte nur in Sonderfällen verwendet werden, da sie die normale Verarbeitung eines Dialogfelds überschreibt. Die **CLASS-Anweisung** konvertiert ein Dialogfeld in ein Fenster der angegebenen Klasse. Je nach Klasse kann dies zu unerwünschten Ergebnissen führen. Verwenden Sie die neu definierten Namen von Steuerelementklassen nicht mit dieser Anweisung.
+Die **CLASS-Anweisung** sollte nur in Sonderfällen verwendet werden, da sie die normale Verarbeitung eines Dialogfelds überschreibt. Die **CLASS-Anweisung** konvertiert ein Dialogfeld in ein Fenster der angegebenen Klasse. Je nach Klasse kann dies zu unerwünschten Ergebnissen führen. Verwenden Sie nicht die neu definierten Steuerelementklassennamen mit dieser Anweisung.
 
 ## <a name="examples"></a>Beispiele
 

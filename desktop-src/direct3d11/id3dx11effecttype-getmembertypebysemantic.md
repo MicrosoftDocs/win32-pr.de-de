@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectType getmembership typebysemantic-Methode (D3dx11effect. h)
-description: Einen Elementtyp nach Semantik erhalten.
+title: ID3DX11EffectType GetMemberTypeBySemantic-Methode (D3dx11effect.h)
+description: Abrufen eines Membertyps nach Semantik.
 ms.assetid: d5fea2d9-8d08-4e02-a9c6-dbcfaaf4a7d1
 keywords:
-- Getmembership typebysemantic-Methode Direct3D 11
-- Getmembership typebysemantic-Methode Direct3D 11, ID3DX11EffectType-Schnittstelle
-- ID3DX11EffectType-Schnittstelle Direct3D 11, getmembership typebysemantic-Methode
+- GetMemberTypeBySemantic-Methode Direct3D 11
+- GetMemberTypeBySemantic-Methode Direct3D 11 , ID3DX11EffectType-Schnittstelle
+- ID3DX11EffectType-Schnittstelle Direct3D 11 , GetMemberTypeBySemantic-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: de5f0894c83ff2d0885ae3b951e0e324343fae8e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d9e1add6ddc485f803512050795b9ba240f2a29d145fb01e864b88bc8ba84ee7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104996187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118532332"
 ---
-# <a name="id3dx11effecttypegetmembertypebysemantic-method"></a>ID3DX11EffectType:: getmembership typebysemantic-Methode
+# <a name="id3dx11effecttypegetmembertypebysemantic-method"></a>ID3DX11EffectType::GetMemberTypeBySemantic-Methode
 
-Einen Elementtyp nach Semantik erhalten.
+Abrufen eines Membertyps nach Semantik.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ ID3DX11EffectType* GetMemberTypeBySemantic(
 
 <dl> <dt>
 
-*Tischer* 
+*Semantische* 
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](/windows/desktop/WinProg/windows-data-types)**
@@ -56,27 +56,27 @@ Eine Semantik.
 
 Typ: **[ **ID3DX11EffectType**](id3dx11effecttype.md)\***
 
-Ein Zeiger auf eine [**ID3DX11EffectType**](id3dx11effecttype.md).
+Ein Zeiger auf einen [**ID3DX11EffectType**](id3dx11effecttype.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

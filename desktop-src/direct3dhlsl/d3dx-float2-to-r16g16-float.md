@@ -1,6 +1,6 @@
 ---
 title: D3DX_FLOAT2_to_R16G16_FLOAT-Funktion
-description: Packt den angegebenen XMFLOAT2 zurück in ein DXGI- \_ Format \_ R16G16 \_ float.
+description: Packt den angegebenen XMFLOAT2 wieder in ein DXGI \_ FORMAT \_ R16G16 \_ FLOAT.
 ms.assetid: 8d03fac3-68f0-4c85-afaa-ff2cb76f1b73
 keywords:
 - D3DX_FLOAT2_to_R16G16_FLOAT-Funktion HLSL
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 849eb4dde5ab11e98675a1581519aabbeeb1e8da
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f96d9c2652966ef4b35f4c07ec13d1ea5b6f92af641c2e86a1bf4e0b12ca4487
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104995787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118516606"
 ---
-# <a name="d3dx_float2_to_r16g16_float-function"></a>D3DX \_ FLOAT2 \_ to \_ R16G16 \_ float-Funktion
+# <a name="d3dx_float2_to_r16g16_float-function"></a>FLOAT2-Funktion von D3DX \_ \_ auf \_ R16G16 \_
 
-Packt den angegebenen XMFLOAT2 zurück in ein DXGI- \_ Format \_ R16G16 \_ float.
+Packt den angegebenen XMFLOAT2 wieder in ein DXGI \_ FORMAT \_ R16G16 \_ FLOAT.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,24 +37,24 @@ UINT D3DX_FLOAT2_to_R16G16_FLOAT(
 
 <dl> <dt>
 
-*unpackedinput* 
+*unpackedInput* 
 </dt> <dd>
 
-Die entpackten Shader-Daten.
+Die entpackten Shaderdaten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die gepackten Shader-Daten.
+Die gepackten Shaderdaten.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX \_ dxgiformatconvert. INL</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX \_ DXGIFormatConvert.inl</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Die gepackten Shader-Daten.
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen von DXGI \_ FORMAT für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

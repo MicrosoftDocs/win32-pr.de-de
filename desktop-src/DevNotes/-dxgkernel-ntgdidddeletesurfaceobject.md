@@ -1,7 +1,7 @@
 ---
-description: Ntgdiddgoetesurfaceobject löscht einen zuvor erstellten kernelmodusobjekt.
+description: NtGdiDdDeleteSurfaceObject löscht ein zuvor erstelltes Oberflächenobjekt im Kernelmodus.
 ms.assetid: 95ce6c73-7e41-4ac3-b849-9b8f53aa3ac3
-title: Ntgdidddelta etesurfaceobject-Funktion (ntgdi. h)
+title: NtGdiDdDeleteSurfaceObject-Funktion (Ntgdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Ext-MS-Win-GDI-Internal-Desktop-L1-1-0.dll
 - GDI32.dll
 - GDI32Full.dll
-ms.openlocfilehash: 03988b842aacc29915287490508eb9e9d057e907
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 73418993e549bc3a72f1f4bc953b4f177a4b413d62f03e0c6e8b0c58b35998e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956529"
 ---
-# <a name="ntgdidddeletesurfaceobject-function"></a>Ntgdidddelta etesurfaceobject-Funktion
+# <a name="ntgdidddeletesurfaceobject-function"></a>NtGdiDdDeleteSurfaceObject-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystem Revision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs; Diese APIs isolieren Anwendungen vor solchen Betriebssystem Änderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeige Treibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. Diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
-**Ntgdiddgoetesurfaceobject** löscht einen zuvor erstellten kernelmodusobjekt.
+**NtGdiDdDeleteSurfaceObject** löscht ein zuvor erstelltes Oberflächenobjekt im Kernelmodus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,20 +44,20 @@ BOOL APIENTRY NtGdiDdDeleteSurfaceObject(
 
 <dl> <dt>
 
-*hsurface* \[ in\]
+*hSurface* \[ In\]
 </dt> <dd>
 
-Handle für das zuvor erstellte kernelmodusetobjekt.
+Handle für das zuvor erstellte Kernelmodusoberflächenobjekt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, gibt diese Funktion **true** zurück. Andernfalls wird **false** zurückgegeben.
+Wenn dies erfolgreich ist, gibt diese Funktion **TRUE zurück.** Andernfalls wird **FALSE zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen wird empfohlen, die DirectDraw-und [Direct3D](../direct3d10/d3d10-graphics-reference.md) -APIs zu verwenden, um Grafikgeräte Objekte zu erstellen und zu verwalten. Diese Konstrukte abstrahieren den Geräte Erstellungs Prozess auf vereinfachte und betriebssystemunabhängige Weise.
+Anwendungen wird empfohlen, die DirectDraw- und [Direct3D-APIs zum](../direct3d10/d3d10-graphics-reference.md) Erstellen und Verwalten von Grafikgeräteobjekten zu verwenden. Diese Konstrukte abstrahieren den Prozess der Geräteerstellung auf vereinfachte und betriebssystemunabhängige Weise.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Anwendungen wird empfohlen, die DirectDraw-und [Direct3D](../direct3d10/d3d10-gr
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Ntgdi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntgdi.h</dt> </dl> |
 
 
 
@@ -75,13 +75,13 @@ Anwendungen wird empfohlen, die DirectDraw-und [Direct3D](../direct3d10/d3d10-gr
 
 <dl> <dt>
 
-[Unterstützung der untergeordneten Grafik Ebene](-dxgkernel-low-level-client-support.md)
+[Clientunterstützung auf niedriger Grafikebene](-dxgkernel-low-level-client-support.md)
 </dt> <dt>
 
-[**Dddelta etesurfaceobject**](/windows/desktop/api/Ddrawgdi/nf-ddrawgdi-dddeletesurfaceobject)
+[**DdDeleteSurfaceObject**](/windows/desktop/api/Ddrawgdi/nf-ddrawgdi-dddeletesurfaceobject)
 </dt> <dt>
 
-[**Ntgdiddkreatesurfaceobject**](-dxgkernel-ntgdiddcreatesurfaceobject.md)
+[**NtGdiDdCreateSurfaceObject**](-dxgkernel-ntgdiddcreatesurfaceobject.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_MBType-Klasse
-description: Die Unterklasse von MicrosoftDNS \_ resourcerecord, die einen Post Fach Ressourcen Eintrag (MB) darstellt.
+description: Die Unterklasse von MicrosoftDNS \_ ResourceRecord, die einen Postfachressourceneintrag (MB) darstellt.
 ms.assetid: b8f3b106-58f4-44b8-b2db-b00f1a495641
 keywords:
-- DNS-MicrosoftDNS_MBType Klasse
-- DNS-MicrosoftDNS_MBType Klasse, beschrieben
+- dns-Klasse MicrosoftDNS_MBType
+- MicrosoftDNS_MBType DNS-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -18,18 +18,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 89ad6599ad058f65beba961f00c1bd6c43663487
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ccea0cc9c30fb8a46debedaa2aeb0811ed63b08005919c7f189d771fd7daed2e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118163264"
 ---
-# <a name="microsoftdns_mbtype-class"></a>MicrosoftDNS- \_ mbtype-Klasse
+# <a name="microsoftdns_mbtype-class"></a>MicrosoftDNS \_ MBType-Klasse
 
-Die Unterklasse von [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) , die einen Post Fach Ressourcen Eintrag (MB) darstellt.
+Die Unterklasse von [**MicrosoftDNS \_ ResourceRecord,**](microsoftdns-resourcerecord.md) die einen Postfachressourceneintrag (MB) darstellt.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,21 +42,21 @@ class MicrosoftDNS_MBType : MicrosoftDNS_ResourceRecord
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS- \_ mbtype** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ MBType-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS- \_ mbtype** -Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ MBType-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                               |
+| Methode                             | Beschreibung                                                                                                                                                                                                                                                                                                                               |
 |:-----------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Kreateinzustancefrompropertydata"** | Instanziiert eine MB RR auf der Grundlage der Daten in den Eingabe Parametern der Methode: der DNS-Server Name des Datensatzes, der Container Name, der Besitzer Name des Postfachs, die Klasse (Standardwert = in), der Wert für die Gültigkeitsdauer und der Post Fach Host. Es wird ein Verweis auf das neue-Objekt als Output-Parameter zurückgegeben. <br/> Qualifizierer: implementiert, statisch<br/> |
-| **Modify**                         | Aktualisiert den TTL-und den MB-Host auf die Werte, die als Eingabeparameter dieser Methode angegeben werden. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die-Methode gibt einen Verweis auf das geänderte-Objekt als Output-Parameter zurück. <br/> Qualifizierer: Implementiert<br/>        |
+| **CreateInstanceFromPropertyData** | Instanziiert eine MB-RR basierend auf den Daten in den Eingabeparametern der Methode: DNS-Servername des Eintrags, Containername, Besitzername des Postfachs, Klasse (Standardeinstellung = IN), Wert für die Lebenszeit und Postfachhost. Es gibt einen Verweis auf das neue Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert, statisch<br/> |
+| **Änderung**                         | Aktualisiert die TTL und den MB-Host auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die -Methode gibt einen Verweis auf das geänderte Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert<br/>        |
 
 
 
@@ -64,20 +64,20 @@ Die **MicrosoftDNS- \_ mbtype** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS- \_ mbtype** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ MBType-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Mbhost**
+**MBHost**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein voll qualifizierter Datentyp, der einen Host des Postfachs angibt, der im Besitzer Namen des Datensatzes angegeben ist.
+FQDN, der einen Host des Postfachs angibt, das im Besitzernamen des Datensatzes angegeben ist.
 
 </dd> </dl>
 
@@ -89,8 +89,8 @@ Ein voll qualifizierter Datentyp, der einen Host des Postfachs angibt, der im Be
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -98,13 +98,13 @@ Ein voll qualifizierter Datentyp, der einen Host des Postfachs angibt, der im Be
 
 <dl> <dt>
 
-[**Die Methode "kreateinstancefrompropertydata" der Klasse "MicrosoftDNS \_ mbtype"**](microsoftdns-mbtype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ MBType-Klasse**](microsoftdns-mbtype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ Klasse von mbtype**](microsoftdns-mbtype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ MBType-Klasse**](microsoftdns-mbtype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

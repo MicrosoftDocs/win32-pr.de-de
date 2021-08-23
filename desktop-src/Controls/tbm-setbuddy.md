@@ -1,9 +1,9 @@
 ---
-title: TBM_SETBUDDY Meldung (kommstrg. h)
-description: Weist ein Fenster als Buddy-Fenster für ein TrackBar-Steuerelement zu. TrackBar-Buddy-Fenster werden automatisch an einem Speicherort relativ zur Ausrichtung des Steuer Elements angezeigt (horizontal oder vertikal).
+title: TBM_SETBUDDY Meldung (Commctrl.h)
+description: Weist ein Fenster als Fenster für ein Trackbar-Steuerelement zu. Trackbar-Fenster werden automatisch an einer Position relativ zur Ausrichtung des Steuerelements (horizontal oder vertikal) angezeigt.
 ms.assetid: ab35911f-bf81-47f3-98aa-0901aa877dea
 keywords:
-- Windows-Steuerelemente für TBM_SETBUDDY Meldung
+- TBM_SETBUDDY Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab33e53117933390d7a34ec75a49724003255108
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e4f2586c84740cb2d5e8b1f1aadfb910cd241270d3e18363accf1f166c3c35ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118167186"
 ---
-# <a name="tbm_setbuddy-message"></a>TBM- \_ SetBuddy-Nachricht
+# <a name="tbm_setbuddy-message"></a>TBM \_ SETBUDDY-Nachricht
 
-Weist ein Fenster als Buddy-Fenster für ein TrackBar-Steuerelement zu. TrackBar-Buddy-Fenster werden automatisch an einem Speicherort relativ zur Ausrichtung des Steuer Elements angezeigt (horizontal oder vertikal).
+Weist ein Fenster als Fenster für ein Trackbar-Steuerelement zu. Trackbar-Fenster werden automatisch an einer Position relativ zur Ausrichtung des Steuerelements (horizontal oder vertikal) angezeigt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Weist ein Fenster als Buddy-Fenster für ein TrackBar-Steuerelement zu. TrackBar
 *wParam* 
 </dt> <dd>
 
--Wert, der die Position angibt, an der das Buddy-Fenster angezeigt werden soll. Die folgenden Werte sind möglich:
+Wert, der den Speicherort angibt, an dem das Fenster angezeigt werden soll. Die folgenden Werte sind möglich:
 
 
 
 | Wert                                                                                                                                | Bedeutung                                                                                                                                                                                                                                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="TRUE"></span><span id="true"></span><dl> <dt>**Fall**</dt> </dl>    | Der Kumpel wird links neben der TrackBar angezeigt, wenn das TrackBar-Steuerelement den [**TSB- \_ Horz**](trackbar-control-styles.md) -Stil verwendet. Wenn die TrackBar den TSB-Stil " [**\_ Vert**](trackbar-control-styles.md) " verwendet, wird der Kumpel oberhalb des TrackBar-Steuer Elements angezeigt.<br/>  |
-| <span id="FALSE"></span><span id="false"></span><dl> <dt>**Alarm**</dt> </dl> | Der Kumpel wird rechts von der TrackBar angezeigt, wenn das TrackBar-Steuerelement den Stil von " [**TSB \_ Horz**](trackbar-control-styles.md) " verwendet. Wenn die TrackBar den TSB-Stil " [**\_ Vert**](trackbar-control-styles.md) " verwendet, wird der Buddy unterhalb des TrackBar-Steuer Elements angezeigt.<br/> |
+| <span id="TRUE"></span><span id="true"></span><dl> <dt>**STIMMT**</dt> </dl>    | Die Leiste wird links von der Trackleiste angezeigt, wenn das Trackbar-Steuerelement den [**TBS \_ HORZ-Stil**](trackbar-control-styles.md) verwendet. Wenn die Trackleiste den [**\_ TBS-VERT-Stil**](trackbar-control-styles.md) verwendet, wird die Leiste über dem Trackbar-Steuerelement angezeigt.<br/>  |
+| <span id="FALSE"></span><span id="false"></span><dl> <dt>**FALSE**</dt> </dl> | Die Leiste wird rechts neben der Trackleiste angezeigt, wenn das Trackbar-Steuerelement den [**TBS \_ HORZ-Stil**](trackbar-control-styles.md) verwendet. Wenn die Trackleiste den [**\_ TBS-VERT-Stil**](trackbar-control-styles.md) verwendet, wird die Leiste unterhalb des Trackbar-Steuerelements angezeigt.<br/> |
 
 
 
@@ -50,7 +50,7 @@ Weist ein Fenster als Buddy-Fenster für ein TrackBar-Steuerelement zu. TrackBar
 *lParam* 
 </dt> <dd>
 
-Handle für das Fenster, das als Buddy des TrackBar-Steuer Elements festgelegt wird.
+Handle für das Fenster, das als Ziehpunkt des Trackbar-Steuerelements festgelegt wird.
 
 </dd> </dl>
 
@@ -58,10 +58,10 @@ Handle für das Fenster, das als Buddy des TrackBar-Steuer Elements festgelegt w
 
 Gibt das Handle für das Fenster zurück, das zuvor dem Steuerelement an dieser Position zugewiesen wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> TrackBar-Steuerelemente unterstützen bis zu zwei Buddy-Fenster. Dies kann hilfreich sein, wenn Sie Text oder Bilder an jedem Ende des Steuer Elements anzeigen müssen.
+> Trackbar-Steuerelemente unterstützen bis zu zwei Fenster. Dies kann nützlich sein, wenn Sie Text oder Bilder an jedem Ende des Steuerelements anzeigen müssen.
 
  
 
@@ -71,9 +71,9 @@ Gibt das Handle für das Fenster zurück, das zuvor dem Steuerelement an dieser 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

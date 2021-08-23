@@ -1,7 +1,7 @@
 ---
 description: Gibt an, ob die angegebene Farbe eine RGB-Farbe ist.
 ms.assetid: 16b48644-c2d5-4383-836a-122f44504638
-title: Frgbimecolorstyle-Funktion
+title: FRGBIMEColorStyle-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Imeshare.dll
-ms.openlocfilehash: df11a2ad972791eaf7049bdef5fa927aaa4119da
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 135a53a6c531d14f03aa2bc944e076f51ec28c167bced94cc0675fe2ae7642ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368431"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118404664"
 ---
-# <a name="frgbimecolorstyle-function"></a>Frgbimecolorstyle-Funktion
+# <a name="frgbimecolorstyle-function"></a>FRGBIMEColorStyle-Funktion
 
 Gibt an, ob die angegebene Farbe eine RGB-Farbe ist.
 
@@ -39,20 +39,20 @@ BOOL __cdecl FRGBIMEColorStyle(
 
 <dl> <dt>
 
-*pcolorstyle* \[ in\]
+*pcolorstyle* \[ In\]
 </dt> <dd>
 
-Eine **imecolorsty** -Struktur, die von einer [**pcolorstylebackfromimestyle**](pcolorstylebackfromimestyle.md) -oder [**pcolorstyletextfromimestyle**](pcolorstyletextfromimestyle.md) -Funktion zur체ckgegeben wird.
+Eine **IMECOLORSTY-Struktur,** die von einer [**PColorStyleBackFromIMEStyle-**](pcolorstylebackfromimestyle.md) oder [**PColorStyleTextFromIMEStyle-Funktion**](pcolorstyletextfromimestyle.md) zur체ckgegeben wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>R체ckgabewert
 
-Gibt **true** zur체ck, wenn die Farbe eine RGB-Farbe ist.
+Gibt **TRUE** zur체ck, wenn die Farbe eine RGB-Farbe ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m체ssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie m체ssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,14 +64,14 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Pcolorstylebackfromimestyle**](pcolorstylebackfromimestyle.md)
+[**PColorStyleBackFromIMEStyle**](pcolorstylebackfromimestyle.md)
 </dt> <dt>
 
-[**Pcolorstyletextfromimestyle**](pcolorstyletextfromimestyle.md)
+[**PColorStyleTextFromIMEStyle**](pcolorstyletextfromimestyle.md)
 </dt> </dl>
 
  

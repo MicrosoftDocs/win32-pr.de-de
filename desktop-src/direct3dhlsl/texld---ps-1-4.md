@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: d956d9176a6356dc3837ee4f4d13b5bb700dda98
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: dc940379c8910b45d3dcb476054cf4362a6a96bc2c5df784c8ed5ca815a093fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113118825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118505809"
 ---
 # <a name="texld---ps_1_4"></a>texld – ps \_ 1 \_ 4
 
@@ -47,7 +47,7 @@ Bei Verwendung von r(n) als Quellregister müssen die ersten drei Komponenten (X
 
 Weitere Informationen zu Registern finden Sie unter [ps \_ 1 \_ 1 \_ \_ ps \_ 1 \_ 2 ps \_ \_ \_ 1 \_ 3 ps \_ \_ \_ 1 \_ 4 Register.](dx9-graphics-reference-asm-ps-registers-ps-1-x.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Anweisung untersucht die Textur in der Texturphase, die der Zielregisternummer zugeordnet ist. Die Textur wird mithilfe von Texturkoordinatendaten aus dem Quellregister entnommen.
 

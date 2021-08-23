@@ -13,16 +13,16 @@ ms.locfileid: "118797923"
 ---
 # <a name="representing-prt-with-textures-direct3d-9"></a>Darstellen von PRT mit Texturen (Direct3D 9)
 
-Das PRTDemo-Beispiel und der PRTCmdLine-Simulator, die im DirectX SDK enthalten sind, stellen Übertragungsvektoren an den Scheitellinien eines Gitters dar. Um das PRT-Signal genau darstellen zu können, kann dies Mosaiken erfordern, die für aktuelle Spiele möglicherweise unpraktisch sind. Die Darstellung von Übertragungsvektoren in Texturzuordnungen ist ein alternativer Ansatz, der unabhängig von der Gitternetzkomplexität die gleichen Datenkosten aufweisen kann. Es gibt mehrere Möglichkeiten zum Generieren von Übertragungsvektortexturzuordnungen mithilfe der D3DX PRT-Bibliothek.
+Das PRTDemo-Beispiel und der PRTCmdLine-Simulator, die im DirectX SDK enthalten sind, stellen Übertragungsvektoren an den Scheitellinien eines Gitters dar. Um das PRT-Signal genau darstellen zu können, kann dies Mosaiken erfordern, die für aktuelle Spiele möglicherweise unpraktisch sind. Die Darstellung von Übertragungsvektoren in Texturzuordnungen ist ein alternativer Ansatz, der unabhängig von der Gitternetzkomplexität die gleichen Datenkosten hat. Es gibt mehrere Möglichkeiten zum Generieren von Übertragungsvektortexturzuordnungen mithilfe der D3DX PRT-Bibliothek.
 
-## <a name="precomputing-transfer-vectors"></a>Vorausberechnung von Übertragungsvektoren
+## <a name="precomputing-transfer-vectors"></a>Vorberechnung von Übertragungsvektoren
 
 Ein Ansatz wäre das Ändern der PRTDemo- und PRTCmdLine-Beispiele, um einen Übertragungsvektor bei jedem Texel in einer Parametrisierung einer Oberfläche zu berechnen. Dazu ist Folgendes erforderlich:
 
 1.  Ändern Sie den Aufruf von [**D3DXCreatePRTEngine,**](d3dxcreateprtengine.md) um Texturkoordinaten aus dem Gitternetz zu extrahieren (ExtractUVs muss **TRUE sein).**
 2.  Ersetzen [**Sie D3DXCreatePRTBuffer-Aufrufe**](d3dxcreateprtbuffer.md) durch [**D3DXCreatePRTBufferTex**](d3dxcreateprtbuffertex.md) mit der gleichen Texturgröße.
 
-Alle ID3DXPRTEngine-Methoden funktionieren mit Simulationen pro Texel, mit Ausnahme von ComputeBounceAdaptive, ComputeSSAdaptive, ComputeSS und ComputeDirectLightingSHAdaptive. Die Texturraumsimulation generiert zwar das richtige Ergebnis, kann aber häufig recht langsam sein, da sie wahrscheinlich Übertragungsvektoren mit hoher Dichte berechnen wird.
+Alle ID3DXPRTEngine-Methoden funktionieren mit Simulationen pro Texel, mit Ausnahme von: ComputeBounceAdaptive, ComputeSSAdaptive, ComputeSS und ComputeDirectLightingSHAdaptive. Die Texturraumsimulation generiert zwar das richtige Ergebnis, kann aber häufig recht langsam sein, da sie wahrscheinlich Übertragungsvektoren mit hoher Dichte berechnen wird.
 
 Ein weiterer Ansatz besteht in der Berechnung einer adaptiven PRT-Simulation pro Scheitelpunkt (mit Texturkoordinaten, die für die Pro-Texel-Daten verwendet werden) und anschließendes Aufrufen von [**ID3DXPRTEngine::ResampleBuffer**](id3dxprtengine--resamplebuffer.md) (mithilfe eines Ausgabepuffers, der mit [**D3DXCreatePRTBufferTex**](d3dxcreateprtbuffertex.md) in der entsprechenden Auflösung erstellt wurde). Dies funktioniert mit allen D3DX PRT-Funktionen im SDK und kann häufig viel effizienter sein als das direkte Berechnen eines Übertragungspuffers pro Texel.
 
@@ -42,7 +42,7 @@ Pixel-Shader verfügen über wesentlich weniger konstante Register, die nicht in
 
 <dl> <dt>
 
-[Vorausberechnungs radiance transfer (Vorausberechnungsübertragung)](precomputed-radiance-transfer.md)
+[Vorausberechnungsübertragung der Radiance](precomputed-radiance-transfer.md)
 </dt> <dt>
 
 [PRT-Demobeispiel](https://msdn.microsoft.com/library/Ee418763(v=VS.85).aspx)

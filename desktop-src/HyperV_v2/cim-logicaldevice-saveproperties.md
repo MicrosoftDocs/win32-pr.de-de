@@ -22,7 +22,7 @@ ms.locfileid: "118648162"
 ---
 # <a name="saveproperties-method-of-the-cim_logicaldevice-class"></a>SaveProperties-Methode der CIM \_ LogicalDevice-Klasse
 
-Fordert an, dass das Gerät die aktuellen Konfigurations-, Einrichtungs- und/oder Zustandsinformationen in einem Hintergrundspeicher erfasst. Das Ziel wäre, diese Informationen zu einem späteren Zeitpunkt (über die RestoreProperties-Methode) zu verwenden, um ein Gerät an seine aktuelle "Bedingung" zurückderherzustellen. Diese Methode wird möglicherweise nicht von allen Geräten unterstützt. Die Methode sollte bei Erfolg 0 zurückgeben, 1, wenn die Anforderung nicht unterstützt wird, und einen anderen Wert, wenn ein anderer Fehler aufgetreten ist. In einer Unterklasse kann der Satz möglicher Rückgabecodes mithilfe eines ValueMap-Qualifizierers für die -Methode angegeben werden. Die Zeichenfolgen, in die der ValueMap-Inhalt übersetzt wird, können auch in der Unterklasse als Values-Arrayqualifizierer angegeben werden.
+Fordert an, dass das Gerät die aktuellen Konfigurations-, Einrichtungs- und/oder Zustandsinformationen in einem Hintergrundspeicher erfasst. Das Ziel wäre, diese Informationen zu einem späteren Zeitpunkt (über die RestoreProperties-Methode) zu verwenden, um ein Gerät an seine aktuelle "Bedingung" zurück zu geben. Diese Methode wird möglicherweise nicht von allen Geräten unterstützt. Die Methode sollte bei Erfolg 0 zurückgeben, 1, wenn die Anforderung nicht unterstützt wird, und einen anderen Wert, wenn ein anderer Fehler aufgetreten ist. In einer Unterklasse kann der Satz möglicher Rückgabecodes mithilfe eines ValueMap-Qualifizierers für die -Methode angegeben werden. Die Zeichenfolgen, in die der ValueMap-Inhalt übersetzt wird, können auch in der Unterklasse als Values-Arrayqualifizierer angegeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

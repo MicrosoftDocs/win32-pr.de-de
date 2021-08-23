@@ -1,11 +1,11 @@
 ---
 title: Unicode-Pwd-Attribut
-description: Das Kennwort des Benutzers im Windows NT-OWF (One-Way Format). Windows 2000 verwendet die Windows NT OWF. Diese Eigenschaft wird nur vom Betriebssystem verwendet. Beachten Sie, dass Sie das eindeutige Kennwort nicht aus der OWF-Form des Kennworts ableiten können.
+description: Das Kennwort des Benutzers im Windows one-way-Format (OWF) von NT. Windows 2000 verwendet den Windows NT OWF. Diese Eigenschaft wird nur vom Betriebssystem verwendet. Beachten Sie, dass Sie das eindeutige Kennwort nicht vom OWF-Format des Kennworts ableiten können.
 ms.assetid: 07b29a0c-aff2-4abd-8ca8-95f1ce5b566b
 ms.tgt_platform: multiple
 keywords:
-- Unicode-Pwd AD-Schema
-- unicodePwd-Attribut AD-Schema
+- Unicode-Pwd AD-Attributschema
+- UNICODEPwd-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118681087"
 ---
 # <a name="unicode-pwd-attribute"></a>Unicode-Pwd-Attribut
 
-Das Kennwort des Benutzers im Windows NT-OWF (One-Way Format). Windows 2000 verwendet die Windows NT OWF. Diese Eigenschaft wird nur vom Betriebssystem verwendet. Beachten Sie, dass Sie das eindeutige Kennwort nicht aus der OWF-Form des Kennworts ableiten können.
+Das Kennwort des Benutzers im Windows one-way-Format (OWF) von NT. Windows 2000 verwendet den Windows NT OWF. Diese Eigenschaft wird nur vom Betriebssystem verwendet. Beachten Sie, dass Sie das eindeutige Kennwort nicht vom OWF-Format des Kennworts ableiten können.
 
 
 
@@ -33,9 +33,9 @@ Das Kennwort des Benutzers im Windows NT-OWF (One-Way Format). Windows 2000 verw
 | Ldap-Anzeigename | unicodePwd                                                                   |
 | Size              | \-                                                                           |
 | Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                       |
-| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und wann immer das Kennwort geändert werden muss. |
+| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und wenn das Kennwort geändert werden muss. |
 | Attribute-Id      | 1.2.840.113556.1.4.90                                                        |
-| System-Id-Guid    | bf9679e1-0de6-11d0-a285-00aa003049e2                                         |
+| System-ID-GUID    | bf9679e1-0de6-11d0-a285-00aa003049e2                                         |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md)                        |
 
 
@@ -59,7 +59,7 @@ Das Kennwort des Benutzers im Windows NT-OWF (One-Way Format). Windows 2000 verw
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | Falsch                             |
-| Is-Single-Valued       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | Falsch                             |
 | Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -80,7 +80,7 @@ Das Kennwort des Benutzers im Windows NT-OWF (One-Way Format). Windows 2000 verw
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | Falsch                             |
-| Is-Single-Valued       | Richtig                              |
+| Ist einwertig       | Richtig                              |
 | Ist indiziert             | Falsch                             |
 | Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -101,7 +101,7 @@ Das Kennwort des Benutzers im Windows NT-OWF (One-Way Format). Windows 2000 verw
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | Falsch                                                             |
-| Is-Single-Valued       | Richtig                                                              |
+| Ist einwertig       | Richtig                                                              |
 | Ist indiziert             | Falsch                                                             |
 | Im globalen Katalog      | Falsch                                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
@@ -122,7 +122,7 @@ Das Kennwort des Benutzers im Windows NT-OWF (One-Way Format). Windows 2000 verw
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | Falsch                             |
-| Ist einwertig       | Richtig                              |
+| Is-Single-Valued       | Richtig                              |
 | Ist indiziert             | Falsch                             |
 | Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -143,7 +143,7 @@ Das Kennwort des Benutzers im Windows NT-OWF (One-Way Format). Windows 2000 verw
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | Falsch                             |
-| Ist einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | Falsch                             |
 | Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -164,7 +164,7 @@ Das Kennwort des Benutzers im Windows NT-OWF (One-Way Format). Windows 2000 verw
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | Falsch                             |
-| Ist einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | Falsch                             |
 | Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -185,7 +185,7 @@ Das Kennwort des Benutzers im Windows NT-OWF (One-Way Format). Windows 2000 verw
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | Falsch                             |
-| Ist einwertig       | Richtig                              |
+| Is-Single-Valued       | Richtig                              |
 | Ist indiziert             | Falsch                             |
 | Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |

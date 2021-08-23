@@ -18,7 +18,7 @@ Die folgenden Funktionen werden in DirectML.h deklariert.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | Beschreibung |
+| Thema | BESCHREIBUNG |
 |-|-|
 | [**DMLCreateDevice**](/windows/desktop/api/directml/nf-directml-dmlcreatedevice) | Erstellt ein DirectML-Gerät für ein bestimmtes Direct3D 12-Gerät. |
 | [**DMLCreateDevice1**](/windows/desktop/api/directml/nf-directml-dmlcreatedevice1) | Erstellt ein DirectML-Gerät für ein bestimmtes Direct3D 12-Gerät. |

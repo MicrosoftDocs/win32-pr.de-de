@@ -25,7 +25,7 @@ Enthält ein -Objekt für jedes Abonnement für die übergeordnete [**Components
 
 Diese Auflistung unterstützt die [**Add-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) und [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 Die **SubscriptionsForComponent-Auflistung erbt** von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
 
@@ -88,8 +88,8 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 |----------------|----------------------------------------------------------|
 | Beschreibung    | Gibt an, ob das Abonnement derzeit aktiviert ist. |
 | Zugriff         | ReadWrite                                                |
-| Typ           | Bool                                                     |
-| Standard        | Richtig                                                     |
+| type           | Bool                                                     |
+| Standard        | True                                                     |
 | Mindestsystem | Windows 2000                                             |
 
 
@@ -121,7 +121,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 | Beschreibung    | Die CLSID für die Ereignisklasse. Sie können eine EventCLSID oder eine PublisherID angeben, aber nicht beides. |
 | Zugriff         | WriteOnce                                                                                    |
 | type           | String                                                                                       |
-| Standard        | Nicht zutreffend                                                                                          |
+| Standard        | –                                                                                          |
 | Mindestsystem | Windows 2000                                                                                 |
 
 
@@ -137,14 +137,14 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 | Beschreibung    | Eine Zeichenfolge, die die Filterkriterien angibt. Kann eine CLSID für eine [**PublisherFilter-Klasse**](/windows/desktop/api/EventSys/nn-eventsys-ipublisherfilter) sein. |
 | Zugriff         | ReadWrite                                                                                                        |
 | type           | String                                                                                                           |
-| Standard        | Nicht zutreffend                                                                                                              |
+| Standard        | –                                                                                                              |
 | Mindestsystem | Windows 2000                                                                                                     |
 
 
 
  
 
-### <a name="id"></a>ID
+### <a name="id"></a>id
 
 
 
@@ -169,7 +169,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 | Beschreibung    | Die IID für die abonnierte Schnittstelle. |
 | Zugriff         | ReadWrite                                |
 | type           | String                                   |
-| Standard        | Nicht zutreffend                                      |
+| Standard        | –                                      |
 | Mindestsystem | Windows 2000                             |
 
 
@@ -201,7 +201,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 | Beschreibung    | Methode für die Schnittstelle, die abonniert wird. |
 | Zugriff         | ReadWrite                                    |
 | type           | String                                       |
-| Standard        | Nicht zutreffend                                          |
+| Standard        | –                                          |
 | Mindestsystem | Windows 2000                                 |
 
 
@@ -232,7 +232,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 |----------------|-----------------------------------------------------------------------------|
 | Beschreibung    | Gibt an, ob das Abonnement nur für einen bestimmten Benutzer gilt: UserName. |
 | Zugriff         | ReadWrite                                                                   |
-| Typ           | Bool                                                                        |
+| type           | Bool                                                                        |
 | Standard        | Falsch                                                                       |
 | Mindestsystem | Windows 2000                                                                |
 
@@ -264,7 +264,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 |----------------|-----------------------------------------------|
 | Beschreibung    | Gibt an, ob das Abonnement in die Warteschlange gestellt wird. |
 | Zugriff         | ReadWrite                                     |
-| Typ           | Bool                                          |
+| type           | Bool                                          |
 | Standard        | Falsch                                         |
 | Mindestsystem | Windows 2000                                  |
 
@@ -278,10 +278,10 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Ein Moniker für einen Abonnenten, der als in der Warteschlange markiert ist. Ein Standardwert wird generiert, wenn queued anfänglich auf True festgelegt ist. |
+| Beschreibung    | Ein Moniker für einen Abonnenten, der als In Warteschlange gekennzeichnet ist. Ein Standardwert wird generiert, wenn Queued anfänglich auf True festgelegt ist. |
 | Zugriff         | ReadWrite                                                                                                       |
 | type           | String                                                                                                          |
-| Standard        | Nicht zutreffend                                                                                                             |
+| Standard        | –                                                                                                             |
 | Mindestsystem | Windows 2000                                                                                                    |
 
 
@@ -294,7 +294,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beschreibung    | Beim Abonnieren einer Ereignisklasse in derselben Partition wird verwendet, um die GUID der Partitions-ID des Abonnenten darzustellen. Beim Abonnieren von Ereignisklassen hat der Abonnent die Möglichkeit, eine Ereignisklasse in derselben oder einer anderen Partition zu abonnieren. |
+| Beschreibung    | Beim Abonnieren einer Ereignisklasse in derselben Partition wird verwendet, um die GUID der Partitions-ID des Abonnenten zu darstellen. Beim Abonnieren von Ereignisklassen hat der Abonnent die Möglichkeit, eine Ereignisklasse in derselben oder einer anderen Partition zu abonnieren. |
 | Zugriff         | WriteOnce                                                                                                                                                                                                                                                       |
 | type           | String                                                                                                                                                                                                                                                          |
 | Standard        | <Generated>                                                                                                                                                                                                                                               |
@@ -313,14 +313,14 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 | Beschreibung    | Der Name des Benutzers, für den das Abonnement gilt, wenn PerUser true ist. |
 | Zugriff         | ReadWrite                                                                |
 | type           | String                                                                   |
-| Standard        | Nicht zutreffend                                                                      |
+| Standard        | –                                                                      |
 | Mindestsystem | Windows 2000                                                             |
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

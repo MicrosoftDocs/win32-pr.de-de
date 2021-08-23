@@ -1,49 +1,49 @@
 ---
-description: Das Thema enthält eine Einführung in den Bitmap-Decoder, eine Windows Imaging Component-Kernkomponente (WIC), die zum Decodieren von Bilddateien aus einem Stream verwendet wird.
+description: In diesem Thema wird der Bitmapdecoder vorgestellt, eine Kerncodeckomponente Windows Imaging Component (WIC), die zum Decodieren von Bilddateien aus einem Stream verwendet wird.
 ms.assetid: 9dc8d2ec-5cc5-45fa-8a4d-5bdc3072c90c
-title: 'Decodierung: Übersicht'
+title: Übersicht über die Decodierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a15e6a9c914cfa220e1aad5bff4badeb8fc8cc0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d14300c9857702ceff5f07fcc127a4ef4182f9e77ad46f0598edc12abf91f240
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349869"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118711403"
 ---
-# <a name="decoding-overview"></a>Decodierung: Übersicht
+# <a name="decoding-overview"></a>Übersicht über die Decodierung
 
-Das Thema enthält eine Einführung in den Bitmap-Decoder, eine Windows Imaging Component-Kernkomponente (WIC), die zum Decodieren von Bilddateien aus einem Stream verwendet wird.
+In diesem Thema wird der Bitmapdecoder vorgestellt, eine Kerncodeckomponente Windows Imaging Component (WIC), die zum Decodieren von Bilddateien aus einem Stream verwendet wird.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Introduction (Einführung)](#introduction)
--   [Native Bitmap-decoderer](#native-bitmap-decoders)
+-   [Native Bitmap-Decoder](#native-bitmap-decoders)
 -   [Erstellen eines Bitmap-Decoders](#creating-a-bitmap-decoder)
 -   [Decodererweiterbarkeit](#decoder-extensibility)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="introduction"></a>Einführung
 
-BitmapDecoder können als äußerer Container eines digitalen Bilds angezeigt werden und bieten Zugriff auf globale Eigenschaften und Bild Frames. Einige Bildformate unterstützen globale Miniaturansichten, Vorschau Versionen, Farb Kontexte oder Metadaten, während andere diese Eigenschaften nur auf Frame-Ebene bereitstellen. Beachten Sie jedoch, dass viele der Standardbild Formate diese globalen Eigenschaften nicht unterstützen. Daher unterstützen viele der systemeigenen Codec-Implementierungen, die von WIC bereitgestellt werden, nicht die Mehrzahl dieser globalen Eigenschaften. Weitere Informationen zur Unterstützung von globalen Eigenschaften finden Sie in der Tabelle im Abschnitt Native Bitmap-Decoders dieses Themas.
+Bitmapdecoder können als äußerer Container eines digitalen Bilds angezeigt werden und bieten Zugriff auf globale Eigenschaften und Bildrahmen. Einige Bildformate unterstützen globale Miniaturansichten, Vorschauen, Farbkontexte oder Metadaten, während andere diese Eigenschaften nur auf Frameebene bereitstellen. Beachten Sie jedoch, dass viele der Standardbildformate diese globalen Eigenschaften nicht unterstützen. Daher unterstützen viele der nativen Codecimplementierungen, die von WIC bereitgestellt werden, den Großteil dieser globalen Eigenschaften nicht. Informationen zur Unterstützung globaler Eigenschaften finden Sie in der Tabelle im Abschnitt Native Bitmap Decoder dieses Themas.
 
-In WIC werden Bitmap-Decoder durch die [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) -Schnittstelle dargestellt und ermöglichen den Zugriff auf diese globalen Eigenschaften der Bitmap und, was noch wichtiger ist, die darin enthaltenen Frames. Die [**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) -Schnittstelle stellt einen einzelnen BitmapFrame dar und wird in der [Übersicht über Bitmap-Quellen](-wic-bitmapsources.md)ausführlich erläutert.
+In WIC werden Bitmapdecoder durch die [**IWICBitmapDecoder-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) dargestellt und bieten Zugriff auf diese globalen Eigenschaften der Bitmap und vor allem auf die darin enthaltenen Frames. Die [**IWICBitmapFrameDecode-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) stellt einen einzelnen Bitmaprahmen dar und wird in der [Übersicht über Bitmapquellen](-wic-bitmapsources.md)ausführlich erläutert.
 
-## <a name="native-bitmap-decoders"></a>Native Bitmap-decoderer
+## <a name="native-bitmap-decoders"></a>Native Bitmap-Decoder
 
-WIC stellt mehrere systemeigene Implementierungen der [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) -Schnittstelle für die Standardweb Bildformate und das High Dynamic Range HD Photo-Format bereit. In der folgenden Tabelle sind die verfügbaren systemeigenen Decoders, der Klassen Bezeichnername und die Unterstützung für globale Eigenschaften aufgelistet. Obwohl eine Funktion eine Eigenschaft, z. b. Miniaturansichten auf globaler Ebene, nicht unterstützt, kann das Bildformat solche Eigenschaften auf der einzelnen Frame Ebene unterstützen.
+WIC bietet mehrere native Implementierungen der [**IWICBitmapDecoder-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) für die Standard-Webbildformate und das HD Photo-Format mit hohem dynamischen Bereich. In der folgenden Tabelle sind die verfügbaren nativen Decoder, der Klassenbezeichnername und die Unterstützung für globale Eigenschaften aufgeführt. Obwohl ein Feature eine Eigenschaft wie Miniaturansichten auf globaler Ebene möglicherweise nicht unterstützt, unterstützt das Bildformat diese Eigenschaften möglicherweise auf einzelner Frameebene.
 
 
 
-| Bildformat | CLSID-Name            | Miniaturbilder | Vorschau | Farb Kontexte | Metadaten |
+| Bildformat | CLSID-Name            | Miniaturbilder | Vorschau | Farbkontexte | Metadaten |
 |--------------|-----------------------|------------|----------|----------------|----------|
-| BMP          | CLSID \_ wicbmpdecoder  | Nein         | Nein       | Nein             | Nein       |
-| GIF          | CLSID- \_ wicgifdecoder  | Nein         | Nein       | Nein             | Ja      |
-| ICO          | CLSID- \_ wicikodecoder  | Nein         | Nein       | Nein             | Nein       |
-| JPEG         | CLSID \_ wicjpgdecoder | Nein         | Nein       | Nein             | Nein       |
-| PNG          | CLSID- \_ wicpngdecoder  | Nein         | Nein       | Nein             | Nein       |
-| TIFF         | CLSID \_ wictiffdecoder | Nein         | Nein       | Nein             | Nein       |
-| HD-Foto     | CLSID \_ wicwmpdecoder  | Nein         | Ja      | Nein             | Nein       |
+| BMP          | CLSID \_ WICBmpDecoder  | Nein         | Nein       | Nein             | Nein       |
+| GIF          | CLSID \_ WICGifDecoder  | Nein         | Nein       | Nein             | Ja      |
+| ICO          | CLSID \_ WICIcoDecoder  | Nein         | Nein       | Nein             | Nein       |
+| JPEG         | CLSID \_ WICJpegDecoder | Nein         | Nein       | Nein             | Nein       |
+| PNG          | CLSID \_ WICPngDecoder  | Nein         | Nein       | Nein             | Nein       |
+| TIFF         | CLSID \_ WICTiffDecoder | Nein         | Nein       | Nein             | Nein       |
+| HD-Foto     | CLSID \_ WICWmpDecoder  | Nein         | Ja      | Nein             | Nein       |
 
 
 
@@ -51,12 +51,12 @@ WIC stellt mehrere systemeigene Implementierungen der [**IWICBitmapDecoder**](/w
 
 ## <a name="creating-a-bitmap-decoder"></a>Erstellen eines Bitmap-Decoders
 
-Zum Decodieren eines Bilds mit WIC müssen Sie zunächst eine Instanz des [**iwicbitmapdecoders**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) für das Ziel Bildformat erstellen. Die decoderinstanz ermöglicht Ihnen den Zugriff auf die globalen Eigenschaften und Metadaten, sofern dies unterstützt wird, sowie auf die Bildframes. Die WIC Imaging Factory, [**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory), bietet verschiedene Methoden zum Erstellen von bitmapdecodern. Die folgenden Factorymethoden werden zum Erstellen von Bitmap-Decodern bereitgestellt.
+Um ein Bild mit WIC zu decodieren, müssen Sie zunächst eine Instanz von [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) für das Zielbildformat erstellen. Mit der Decoderinstanz können Sie auf die globalen Eigenschaften und Metadaten zugreifen, sofern unterstützt, sowie auf die Bildframes. Die WIC Imaging Factory, [**IWICImagingFactory,**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory)stellt mehrere Methoden zum Erstellen von Bitmapdecodern bereit. Die folgenden Factorymethoden werden zum Erstellen von Bitmapdecodern bereitgestellt.
 
--   [**Bilderstellungsfactory**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoder)
--   [**"Kreatedecoderfromfilehandle"**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromfilehandle)
--   [**"Kreatedecoderfromfilename"**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromfilename)
--   [**"Kreatedecoderfromstream"**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromstream)
+-   [**CreateDecoder**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoder)
+-   [**CreateDecoderFromFileHandle**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromfilehandle)
+-   [**CreateDecoderFromFilename**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromfilename)
+-   [**CreateDecoderFromStream**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromstream)
 
 Der folgende Code veranschaulicht, wie ein Bitmap-Decoder mit einem Bilddateinamen erstellt und der erste Frame des Bilds abgerufen wird.
 
@@ -86,16 +86,16 @@ Der folgende Code veranschaulicht, wie ein Bitmap-Decoder mit einem Bilddateinam
 
 ## <a name="decoder-extensibility"></a>Decodererweiterbarkeit
 
-Eines der wichtigsten Features von WIC ist ein Erweiterbarkeits Framework, mit dem Codec-Entwickler ihre eigenen Bild Codecs entwickeln und die gleiche Platt Form Unterstützung wie die systemeigenen Implementierungen von Bild Codecs erhalten können. Für alle Bildverarbeitung wird unabhängig vom Bildformat ein einzelner, einheitlicher Satz von Schnittstellen verwendet. Jede Anwendung, die WIC verwendet, erhält automatische Unterstützung für neue Bildformate, sobald der Codec installiert ist. Weitere Informationen zur Codec-Entwicklung finden Sie in den Themen unter [Komponentenentwicklung](-wic-component-development.md). Weitere Informationen zur decoderentwicklung finden Sie unter [Implementieren eines WIC-Enabled Decoders](-wic-implementingwicdecoder.md).
+Eines der Kernfeatures von WIC ist ein Erweiterbarkeitsframework, mit dem Codecentwickler ihre eigenen Bildcodecs entwickeln und die gleiche Plattformunterstützung wie die nativen Implementierungen von Bildcodecs erhalten können. Ein einzelner, konsistenter Satz von Schnittstellen wird unabhängig vom Bildformat für die gesamte Bildverarbeitung verwendet. Jede Anwendung, die WIC verwendet, erhält automatische Unterstützung für neue Bildformate, sobald der Codec installiert ist. Weitere Informationen zur Codecentwicklung finden Sie in den Themen unter [Komponentenentwicklung.](-wic-component-development.md) Weitere Informationen zur Decoderentwicklung finden Sie unter [Implementieren eines WIC-Enabled Decoders.](-wic-implementingwicdecoder.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Übersicht über die Windows Imaging-Komponente](-wic-about-windows-imaging-codec.md)
+[Windows Übersicht über Bildverarbeitungskomponenten](-wic-about-windows-imaging-codec.md)
 </dt> <dt>
 
 [Übersicht über die Codierung](-wic-creating-encoder.md)

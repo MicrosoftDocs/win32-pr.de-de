@@ -1,9 +1,9 @@
 ---
-title: Aufzählungs Attribut
-description: Die Schlüsselwort-Enumeration identifiziert einen enumerierten Typ.
+title: enum-Attribut
+description: Die Schlüsselwortenumerum identifiziert einen aufzählten Typ.
 ms.assetid: 1aaa3c36-17f7-42ff-8f4c-66133fcf4a1a
 keywords:
-- Aufzählungs Attribut-Mittell
+- enum-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 681244c9d852c25d8e63ad389b03f16e6db8148c
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 1519e6208e8bccae0288d6e0b31d7897faba4e1c9c7add8987f5dd493f4f5f3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312221"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118384489"
 ---
-# <a name="enum-attribute"></a>Aufzählungs Attribut
+# <a name="enum-attribute"></a>enum-Attribut
 
-Die Schlüssel **Wort** -Enumeration identifiziert einen enumerierten Typ.
+Die **Schlüsselwortenumerum** identifiziert einen aufzählten Typ.
 
 ``` syntax
 enum [tag ] 
@@ -35,38 +35,38 @@ enum [tag ]
 
 <dl> <dt>
 
-*Tag* 
+*Etikett* 
 </dt> <dd>
 
-Gibt ein optionales Tag für den enumerierten Typ an.
+Gibt ein optionales Tag für den aufzählten Typ an.
 
 </dd> <dt>
 
 *identifier* 
 </dt> <dd>
 
-Gibt die jeweilige Enumeration an.
+Gibt die bestimmte Enumeration an.
 
 </dd> <dt>
 
-*ganzzahliger Wert* 
+*integer-value* 
 </dt> <dd>
 
-Gibt einen Konstanten ganzzahligen Wert an.
+Gibt einen konstanten ganzzahligen Wert an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
- Enumerationstypen können als Typspezifizierer in [**typedef**](typedef.md) -Deklarationen, allgemeinen Deklarationen und Funktions Deklaratoren (entweder als Funktions Rückgabetyp oder als Parametertyp Spezifizierer) angezeigt werden. Informationen zu dem Kontext, in dem typspezifier angezeigt wird, finden Sie unter [Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md).
+**Enum-Typen** können als Typspezifizierer in Typedef-Deklarationen, allgemeinen Deklarationen und Funktionsdeklaratoren (entweder als Funktions-Rückgabetyp oder als Parametertypspezifizierer) angezeigt werden. [](typedef.md) Informationen zum Kontext, in dem Typspezifizierer angezeigt werden, finden Sie unter [Interface Definition (IDL)-Datei.](interface-definition-idl-file.md)
 
-Im Standardmodus des compl-Compilers können Enumeratoren ganzzahlige Werte zugewiesen werden. (Diese Funktion ist nicht verfügbar, wenn Sie mit dem [**/OSF**](-osf.md) -Schalter kompilieren.) Wie bei C-Language-Enumeratoren müssen Enumeratornamen eindeutig sein, aber die Enumeratorwerte müssen nicht gleich sein.
+Im Standardmodus des MIDL-Compilers können Sie Enumeratoren ganzzahlige Werte zuweisen. (Dieses Feature ist nicht verfügbar, wenn Sie mit dem [**Schalter /osf kompilieren.)**](-osf.md) Wie bei C-Enumeratoren müssen Enumeratornamen eindeutig sein, aber die Enumeratorwerte müssen nicht sein.
 
-Wenn Zuweisungs Operatoren nicht bereitgestellt werden, werden Bezeichner von links nach rechts aufeinander folgende ganzzahlige Werte zugeordnet, beginnend mit 0 (null). Wenn Zuweisungs Operatoren bereitgestellt werden, beginnen zugewiesene Werte mit dem zuletzt zugewiesenen Wert.
+Wenn keine Zuweisungsoperatoren bereitgestellt werden, werden Bezeichner aufeinanderfolgenden ganzen Zahlen von links nach rechts zugeordnet, beginnend mit null. Wenn Zuweisungsoperatoren bereitgestellt werden, beginnen zugewiesene Werte mit dem zuletzt zugewiesenen Wert.
 
-Die maximale Anzahl von Bezeichner beträgt 65.535.
+Die maximale Anzahl von Bezeichnern beträgt 65.535.
 
-Objekte vom Typ " **Enumeration** " sind [**int**](int.md) -Typen, und ihre Größe ist System abhängig. Standardmäßig werden Objekte von Enumerationstypen als 16-Bit- **Objekte vom Typ** [**Ganzzahl ohne Vorzeichen**](unsigned.md) [**Short**](short.md) behandelt, wenn Sie über ein Netzwerk übertragen werden. Werte außerhalb des Bereichs 0 bis 32.767 bewirken, dass der RPC X-Enumerationswert für die Lauf Zeit Ausnahme außerhalb \_ \_ des gültigen Bereichs liegt \_ \_ \_ \_ . Um Objekte als 32-Bit-Entitäten zu übertragen, wenden Sie das **\[** [**v1- \_ Enumeration**](v1-enum.md) - **\]** Attribut auf die **Enumeration** -typedef an.
+Objekte vom Typ **enum** sind [**int-Typen,**](int.md) und ihre Größe ist systemabhängig. Standardmäßig werden Objekte von **Enum-Typen** als 16-Bit-Objekte vom Typ [**unsigned**](unsigned.md) [**short**](short.md) behandelt, wenn sie über ein Netzwerk übertragen werden. Werte außerhalb des Bereichs von 0 bis 32.767 verursachen die Laufzeitausnahme RPC \_ X \_ ENUM \_ VALUE OUT OF \_ \_ \_ RANGE. Um Objekte als 32-Bit-Entitäten zu übertragen, wenden Sie das **\[** [**\_ v1-enum-Attribut**](v1-enum.md) auf die **\]** **enum** typedef an.
 
 ## <a name="examples"></a>Beispiele
 
@@ -80,7 +80,7 @@ typedef enum {Clemens=21, Palmer=22, Ryan=34} pitchers;
 
 <dl> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
 [**INT**](int.md)
@@ -89,18 +89,18 @@ typedef enum {Clemens=21, Palmer=22, Ryan=34} pitchers;
 [**short**](short.md)
 </dt> <dt>
 
-[**typedef**](typedef.md)
+[**Typedef**](typedef.md)
 </dt> <dt>
 
-[**Ganzzahl ohne Vorzeichen**](unsigned.md)
+[**Unsigned**](unsigned.md)
 </dt> <dt>
 
-[**v1-Aufzählung \_**](v1-enum.md)
+[**\_v1-Aufzählen**](v1-enum.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

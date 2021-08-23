@@ -1,7 +1,7 @@
 ---
-description: Stellt eine Zuordnung zwischen einem System und einem der Elemente dar, aus denen es erstellt wird.
+description: Stellt eine Zuordnung zwischen einem System und einem der Elemente dar, aus denen es besteht.
 ms.assetid: 728f25bf-3d52-4b1c-bf72-51e8ed0a4e72
-title: CIM_SystemComponent -Klasse (Hyper-V-Verwaltung)
+title: CIM_SystemComponent-Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -22,9 +22,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118646718"
 ---
-# <a name="cim_systemcomponent-class-hyper-v-management"></a>CIM_SystemComponent -Klasse (Hyper-V-Verwaltung)
+# <a name="cim_systemcomponent-class-hyper-v-management"></a>CIM_SystemComponent-Klasse (Hyper-V-Verwaltung)
 
-Stellt eine Zuordnung zwischen einem System und einem der Elemente dar, aus denen es erstellt wird.
+Stellt eine Zuordnung zwischen einem System und einem der Elemente dar, aus denen es besteht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,13 +39,13 @@ class CIM_SystemComponent : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **\_ CIM-Klasse SystemComponent** verfügt über die folgenden Membertypen:
+Die **CIM \_ SystemComponent-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ CIM-Klasse SystemComponent** verfügt über diese Eigenschaften.
+Die **\_ CIM-SystemComponent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -58,10 +58,10 @@ Datentyp: **\_ CIM-System**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Aggregieren, Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent") [](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [**Aggregieren,**](/windows/desktop/WmiSdk/standard-qualifiers) [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
 </dt> </dl>
 
-Das [**\_ CIM-System,**](cim-system.md) das **die PartComponent enthält.**
+Das [**\_ CIM-System,**](cim-system.md) das die **PartComponent** enthält.
 
 </dd> <dt>
 
@@ -89,13 +89,13 @@ Das untergeordnete [**CIM \_ ManagedSystemElement,**](cim-managedsystemelement.m
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

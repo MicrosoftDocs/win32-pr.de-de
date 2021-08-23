@@ -13,23 +13,23 @@ ms.locfileid: "118550574"
 ---
 # <a name="using-iprovideclassinfo"></a>Verwenden von IProvideClassInfo
 
-Ein verbindungsfähiges Objekt kann die Schnittstellen [**IProvideClassInfo**](/windows/desktop/api/OCIdl/nn-ocidl-iprovideclassinfo) und [**IProvideClassInfo2**](/windows/desktop/api/OCIdl/nn-ocidl-iprovideclassinfo2) anbieten, sodass seine Clients die Typinformationen leicht untersuchen können. Diese Funktion ist wichtig beim Umgang mit ausgehenden Schnittstellen, die definitionsgemäß durch ein Objekt definiert, aber von einem Client für sein eigenes Senkenobjekt implementiert werden. In einigen Fällen ist eine ausgehende Schnittstelle zur Kompilierzeit sowohl für das verbindungsfähige Objekt als auch für das Senkenobjekt bekannt. dies ist bei [**IPropertyNotifySink**](/windows/desktop/api/OCIdl/nn-ocidl-ipropertynotifysink)der Fall.
+Ein verbindungsfähiges Objekt kann die [**Schnittstellen IProvideClassInfo**](/windows/desktop/api/OCIdl/nn-ocidl-iprovideclassinfo) und [**IProvideClassInfo2**](/windows/desktop/api/OCIdl/nn-ocidl-iprovideclassinfo2) anbieten, damit seine Clients seine Typinformationen leicht untersuchen können. Diese Funktion ist wichtig beim Umgang mit ausgehenden Schnittstellen, die definitionsgemäß durch ein -Objekt definiert, aber von einem Client in einem eigenen Senkenobjekt implementiert werden. In einigen Fällen ist eine ausgehende Schnittstelle zur Kompilierzeit sowohl dem verbindungsierbaren Objekt als auch dem Senkenobjekt bekannt. dies ist bei [**IPropertyNotifySink der Fall.**](/windows/desktop/api/OCIdl/nn-ocidl-ipropertynotifysink)
 
-In anderen Fällen kennt jedoch nur das verbindungsfähige Objekt seine Ausgehende Schnittstellendefinitionen zur Kompilierzeit. In diesen Fällen muss der Client die Typinformationen für die ausgehende Schnittstelle abrufen, damit er wie folgt dynamisch eine Senke bereitstellen kann, die die richtigen Einstiegspunkte unterstützt:
+In anderen Fällen kennt jedoch nur das verbindende Objekt seine ausgehenden Schnittstellendefinitionen zur Kompilierzeit. In diesen Fällen muss der Client die Typinformationen für die ausgehende Schnittstelle abrufen, damit er wie folgt dynamisch eine Senke bereitstellen kann, die die richtigen Einstiegspunkte unterstützt:
 
-1.  Der Client listet die Verbindungspunkte auf und ruft dann [**IConnectionPoint::GetConnectionInterface**](/windows/desktop/api/OCIdl/nf-ocidl-iconnectionpoint-getconnectioninterface) für jeden Verbindungspunkt auf, um die IIDs von ausgehenden Schnittstellen abzurufen, die vom verbindungsfähigen Objekt unterstützt werden.
+1.  Der Client listet die Verbindungspunkte auf und ruft dann für jeden Verbindungspunkt [**IConnectionPoint::GetConnectionInterface**](/windows/desktop/api/OCIdl/nf-ocidl-iconnectionpoint-getconnectioninterface) auf, um die IIDs ausgehender Schnittstellen zu erhalten, die vom verbindungsierbaren Objekt unterstützt werden.
 2.  Der Client fragt das verbindungsfähige Objekt nach einer der [**IProvideClassInfo-Schnittstellen**](/windows/desktop/api/OCIdl/nn-ocidl-iprovideclassinfo) ab.
-3.  Der Client ruft Methoden in den [**IProvideClassInfo-Schnittstellen**](/windows/desktop/api/OCIdl/nn-ocidl-iprovideclassinfo) auf, um die Typinformationen für die ausgehende Schnittstelle abzurufen.
+3.  Der Client ruft Methoden in den [**IProvideClassInfo-Schnittstellen**](/windows/desktop/api/OCIdl/nn-ocidl-iprovideclassinfo) auf, um die Typinformationen für die ausgehende Schnittstelle zu erhalten.
 4.  Der Client erstellt ein Senkenobjekt, das die ausgehende Schnittstelle unterstützt.
-5.  Der Prozess wird fortgesetzt, und der Client ruft [**IConnectionPoint::Advise**](/windows/desktop/api/OCIdl/nf-ocidl-iconnectionpoint-advise) auf, um seine Senke mit dem Verbindungspunkt zu verbinden.
+5.  Der Prozess wird fortgesetzt, und der Client ruft [**IConnectionPoint::Advise auf,**](/windows/desktop/api/OCIdl/nf-ocidl-iconnectionpoint-advise) um seine Senke mit dem Verbindungspunkt zu verbinden.
 
-In den Typinformationen markiert die [**Attributquelle**](/windows/desktop/Midl/source) eine [**Schnittstelle**](/windows/desktop/Midl/interface) oder [**Dispinterface,**](/windows/desktop/Midl/dispinterface) die unter einer [**Co-Klasse**](/windows/desktop/Midl/coclass) als ausgehende Schnittstelle aufgeführt ist. Diejenigen, die ohne dieses Attribut aufgeführt werden, werden als eingehende Schnittstellen betrachtet.
+In den Typinformationen markiert die [](/windows/desktop/Midl/interface) [**Attributquelle**](/windows/desktop/Midl/source) eine Schnittstelle [**oder Disp-Schnittstelle,**](/windows/desktop/Midl/dispinterface) die unter einer [**Co-Klasse**](/windows/desktop/Midl/coclass) als ausgehende Schnittstelle aufgeführt ist. Diejenigen, die ohne dieses Attribut aufgelistet sind, werden als eingehende Schnittstellen betrachtet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verbindende Objektschnittstellen](connectable-object-interfaces.md)
+[Schnittstellen für verbindende Objekte](connectable-object-interfaces.md)
 </dt> <dt>
 
 [Bereitstellen von Klasseninformationen](providing-class-information.md)

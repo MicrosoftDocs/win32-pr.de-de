@@ -36,7 +36,7 @@ ms.locfileid: "118555170"
 ---
 # <a name="nteventlogeventconsumer-class"></a>NTEventLogEventConsumer-Klasse
 
-Die **NTEventLogEventConsumer-Klasse** protokolliert eine bestimmte Meldung im Betriebssystemereignisprotokoll, wenn ein Ereignis an das Ereignis übermittelt wird. Diese Klasse ist einer der Standardereignis-Consumers, die WMI bietet. Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern.](monitoring-and-responding-to-events-with-standard-consumers.md)
+Die **NTEventLogEventConsumer-Klasse** protokolliert eine bestimmte Meldung im Betriebssystemereignisprotokoll, wenn ein Ereignis an das Ereignis übermittelt wird. Diese Klasse ist einer der Standardereignis-Consumer, die WMI bereitstellt. Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standard-Consumern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,7 +62,7 @@ class NTEventLogEventConsumer : __EventConsumer
 
 ## <a name="members"></a>Member
 
-Die **NTEventLogEventConsumer-Klasse** verfügt über die folgenden Membertypen:
+Die **NTEventLogEventConsumer-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -81,22 +81,22 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ereigniskategorie. Dies sind quellspezifische Informationen, die einen beliebigen Wert haben können.
+Ereigniskategorie. Dies sind quellspezifische Informationen, die einen beliebigen Wert aufweisen können.
 
 </dd> <dt>
 
 **CreatorSID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **uint8 array**
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Sicherheits-ID (SID), die den Benutzer, der einen Filter erstellt, eindeutig identifiziert. WMI speichert je nach Betriebssystem die SID des Benutzers, der eine Instanz von [**\_ \_ EventConsumer**](--eventconsumer.md) oder die Administrator-SID erstellt. Weitere Informationen finden Sie unter [Binden eines Ereignisfilters](binding-an-event-filter-with-a-logical-consumer.md) mit einem logischen Consumer und Überwachen und Reagieren auf [Ereignisse mit Standardverbrauchern.](monitoring-and-responding-to-events-with-standard-consumers.md)
+Sicherheits-ID (SID), die den Benutzer eindeutig identifiziert, der einen Filter erstellt. WMI speichert die SID des Benutzers, der je nach Betriebssystem eine Instanz von [**\_ \_ EventConsumer**](--eventconsumer.md) erstellt, oder die Administrator-SID. Weitere Informationen finden Sie unter [Binden eines Ereignisfilters mit einem logischen Consumer](binding-an-event-filter-with-a-logical-consumer.md) und Überwachen und Reagieren auf Ereignisse mit [Standard-Consumern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
-Diese Eigenschaft wird von [**\_ \_ EventConsumer geerbt.**](--eventconsumer.md)
+Diese Eigenschaft wird von [**\_ \_ EventConsumer**](--eventconsumer.md)geerbt.
 
 </dd> <dt>
 
@@ -109,7 +109,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ereignismeldung in der Meldungs-DLL. Diese Eigenschaft darf nicht **NULL sein.**
+Ereignismeldung in der Nachrichten-DLL. Diese Eigenschaft darf nicht **NULL** sein.
 
 </dd> <dt>
 
@@ -183,7 +183,7 @@ Erfolgsüberwachungstyp
 
 <span id="EVENTLOG_AUDIT_FAILURE"></span><span id="eventlog_audit_failure"></span>
 
-<span id="EVENTLOG_AUDIT_FAILURE"></span><span id="eventlog_audit_failure"></span>**EVENTLOG \_ \_ÜBERWACHUNGSFEHLER** (16 (0x10))
+<span id="EVENTLOG_AUDIT_FAILURE"></span><span id="eventlog_audit_failure"></span>**EVENTLOG \_ AUDIT \_ FAILURE** (16 (0x10))
 
 
 </dt> <dd>
@@ -203,7 +203,7 @@ Datentyp: **Zeichenfolgenarray**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von Standardzeichenfolgenvorlagen, das als Einfügezeichenfolge für einen Ereignisprotokolldatensatz verwendet wird.
+Array von Standardzeichenfolgenvorlagen, die als Einfügezeichenfolge für einen Ereignisprotokolldatensatz verwendet werden.
 
 </dd> <dt>
 
@@ -216,9 +216,9 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Name des Computers, an den die Windows Management Instrumentation (WMI) Ereignisse sendet.
+Name des Computers, an den Windows Management Instrumentation (WMI) Ereignisse sendet.
 
-Diese Eigenschaft wird von [**\_ \_ EventConsumer geerbt.**](--eventconsumer.md)
+Diese Eigenschaft wird von [**\_ \_ EventConsumer**](--eventconsumer.md)geerbt.
 
 </dd> <dt>
 
@@ -233,7 +233,7 @@ Zugriffstyp: Schreibgeschützt
 
 Maximale Warteschlange für einen bestimmten Consumer in Bytes.
 
-Diese Eigenschaft wird von [**\_ \_ EventConsumer geerbt.**](--eventconsumer.md)
+Diese Eigenschaft wird von [**\_ \_ EventConsumer**](--eventconsumer.md)geerbt.
 
 </dd> <dt>
 
@@ -246,7 +246,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](key-qualifier.md)
+Qualifizierer: [ **key**](key-qualifier.md)
 </dt> </dl>
 
 Eindeutiger Name eines Consumers.
@@ -262,7 +262,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Name der Ereigniseigenschaft, die Daten enthält, die an den Parameter *lpRawData* der [**ReportEvent-Funktion**](/windows/desktop/api/winbase/nf-winbase-reporteventa) übergeben werden sollen.
+Name der Ereigniseigenschaft, die Daten enthält, die an den *LpRawData-Parameter* der [**ReportEvent-Funktion**](/windows/desktop/api/winbase/nf-winbase-reporteventa) übergeben werden sollen.
 
 </dd> <dt>
 
@@ -275,7 +275,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Name der Ereigniseigenschaft, die eine Sicherheits-ID (SID) enthält, die an die [**ReportEvent-Funktion**](/windows/desktop/api/winbase/nf-winbase-reporteventa) *lpUserSid übergeben werden* soll. Die -Eigenschaft muss entweder ein Bytearray (**uint8**) oder eine Zeichenfolge sein. Wenn es sich um ein Bytearray handelt, wird davon ausgegangen, dass es sich um eine SID handelt. Wenn es sich um eine Zeichenfolge handelt, handelt es sich um eine Zeichenfolgen-SID, die in eine SID konvertiert wird.
+Name der Ereigniseigenschaft, die eine Sicherheits-ID (SID) enthält, die an den *LpUserSid-Parameter* der [**ReportEvent-Funktion**](/windows/desktop/api/winbase/nf-winbase-reporteventa) übergeben werden soll. Die -Eigenschaft muss entweder ein Bytearray (**uint8**) oder eine Zeichenfolge sein. Wenn es sich um ein Bytearray handelt, wird davon ausgegangen, dass es sich um eine SID handelt. Wenn es sich um eine Zeichenfolge handelt, handelt es sich um eine Zeichenfolgen-SID, die in eine SID konvertiert wird.
 
 </dd> <dt>
 
@@ -288,7 +288,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der Elemente im **Array InsertionStringTemplates.**
+Anzahl der Elemente im **InsertionStringTemplates-Array.**
 
 </dd> <dt>
 
@@ -304,7 +304,7 @@ Zugriffstyp: Schreibgeschützt
 Quellname, in dem sich eine Nachricht befindet. Es wird davon ausgegangen, dass der Kunde eine DLL mit den erforderlichen Nachrichten registriert hat.
 
 > [!Note]  
-> Der Wert dieses Parameters darf keinen Doppelpunkt (:) Charakter.
+> Der Wert dieses Parameters darf keinen Doppelpunkt enthalten (:) Charakter.
 
  
 
@@ -319,19 +319,19 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Name des Computers, auf dem ein Ereignis protokolliert werden soll, oder **NULL,** wenn das Ereignis auf einem lokalen Server protokolliert werden soll.
+Der Name des Computers, auf dem ein Ereignis protokolliert werden soll, oder **NULL,** wenn das Ereignis auf einem lokalen Server protokolliert werden soll.
 
-Authentifizierte Benutzer können standardmäßig keine Ereignisse im Anwendungsprotokoll auf einem Remotecomputer protokollieren. Daher funktioniert die Verwendung dieser Eigenschaft zum Angeben eines Remotecomputers nicht. Informationen zum Ändern der Ereignisprotokollsicherheit finden Sie in diesem [KB-Artikel.](https://support.microsoft.com/kb/323076)
+Authentifizierte Benutzer können standardmäßig keine Ereignisse im Anwendungsprotokoll auf einem Remotecomputer protokollieren. Daher funktioniert die Verwendung dieser Eigenschaft zum Angeben eines Remotecomputers nicht. Informationen zum Ändern der Sicherheit von Ereignisprotokollen finden Sie in diesem [KB-Artikel.](https://support.microsoft.com/kb/323076)
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die **NTEventLogEventConsumer-Klasse** wird von der abstrakten [**\_ \_ EventConsumer-Klasse**](--eventconsumer.md) abgeleitet.
+Die **NTEventLogEventConsumer-Klasse** wird von der [**\_ \_ abstrakten EventConsumer-Klasse**](--eventconsumer.md) abgeleitet.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung **von NTEventLogEventConsumer** zum Erstellen eines Consumers finden Sie unter Protokollierung im NT-Ereignisprotokoll [basierend auf einem Ereignis.](logging-to-nt-event-log-based-on-an-event.md)
+Ein Beispiel für die Verwendung von **NTEventLogEventConsumer** zum Erstellen eines Consumers finden Sie unter [Protokollierung im NT-Ereignisprotokoll basierend auf einem Ereignis.](logging-to-nt-event-log-based-on-an-event.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -347,7 +347,7 @@ Ein Beispiel für die Verwendung **von NTEventLogEventConsumer** zum Erstellen e
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -357,7 +357,7 @@ Ein Beispiel für die Verwendung **von NTEventLogEventConsumer** zum Erstellen e
 [Erstellen eines logischen Consumers](creating-a-logical-consumer.md)
 </dt> <dt>
 
-[Empfangen von Ereignissen zu jedem Zeitpunkt](receiving-events-at-all-times.md)
+[Jederzeites Empfangen von Ereignissen](receiving-events-at-all-times.md)
 </dt> <dt>
 
 [**\_\_EventConsumer**](--eventconsumer.md)

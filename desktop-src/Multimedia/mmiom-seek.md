@@ -1,9 +1,9 @@
 ---
-title: MMIOM_SEEK Meldung (MMSYSTEM. h)
-description: Die mmiom- \_ Suchmeldung wird von der mmioseek-Funktion an eine e/a-Prozedur gesendet, um anzufordern, dass die aktuelle Dateiposition verschoben werden soll.
+title: MMIOM_SEEK (Mmsystem.h)
+description: Die MMIOM SEEK-Nachricht wird von der mmioSeek-Funktion an eine E/A-Prozedur gesendet, um an fordern, dass die aktuelle \_ Dateiposition verschoben wird.
 ms.assetid: 428b231a-6e00-4458-9ba2-e9b0b028843a
 keywords:
-- MMIOM_SEEK-Nachricht (Multimedia)
+- MMIOM_SEEK-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4855ec4e610f1456e1bf26ee05800e31933f05fd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4ea33db15de3a4617561c437f2d5086afbf4bff2155e657677b171b1413b1c96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345513"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119065300"
 ---
-# <a name="mmiom_seek-message"></a>Mmiom- \_ Suchmeldung
+# <a name="mmiom_seek-message"></a>MMIOM \_ SEEK-Nachricht
 
-Die **mmiom- \_ Such** Meldung wird von der [**mmioseek**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioseek) -Funktion an eine e/a-Prozedur gesendet, um anzufordern, dass die aktuelle Dateiposition verschoben werden soll.
+Die **MMIOM \_ SEEK-Nachricht** wird von der [**mmioSeek-Funktion**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioseek) an eine E/A-Prozedur gesendet, um an fordern, dass die aktuelle Dateiposition verschoben wird.
 
 
 ```C++
@@ -38,25 +38,25 @@ lParam2 = (LPARAM) lChangeFlag
 
 <dl> <dt>
 
-<span id="lNewFilePos"></span><span id="lnewfilepos"></span><span id="LNEWFILEPOS"></span>*lnewfilepos*
+<span id="lNewFilePos"></span><span id="lnewfilepos"></span><span id="LNEWFILEPOS"></span>*lNewFilePos*
 </dt> <dd>
 
-Neue Dateiposition. Die Bedeutung dieses Werts hängt von dem in **lchangeflag** angegebenen Flag ab.
+Neue Dateiposition. Die Bedeutung dieses Werts hängt von dem in **lChangeFlag angegebenen Flag ab.**
 
 </dd> <dt>
 
-<span id="lChangeFlag"></span><span id="lchangeflag"></span><span id="LCHANGEFLAG"></span>*lchangeflag*
+<span id="lChangeFlag"></span><span id="lchangeflag"></span><span id="LCHANGEFLAG"></span>*lChangeFlag*
 </dt> <dd>
 
-Flag, das angibt, wie die Dateiposition geändert wird. Die folgenden Werte sind definiert:
+Flag, das an gibt, wie die Dateiposition geändert wird. Die folgenden Werte sind definiert:
 
 
 
 | Anforderung | Wert |
 |-----------|------------------------------------------------------------------------------------------------------------------------|
-| \_cur suchen | Verschieben Sie die Dateiposition an der aktuellen Position in *lnewfilepos* bytes. *lnewfilepos* können positiv oder negativ sein. |
-| \_Ende suchen | Verschieben Sie die Dateiposition als *lnewfilepos* Bytes vom Dateiende.                                             |
-| \_Suchsatz | Verschieben Sie die Dateiposition vom Anfang der Datei in *lnewfilepos* bytes.                                       |
+| SEEK \_ CUR | Verschieben Sie die Dateiposition von der aktuellen Position in *lNewFilePos* Bytes. *lNewFilePos kann* positiv oder negativ sein. |
+| SEEK \_ END | Verschieben Sie die Dateiposition in *lNewFilePos* bytes vom Ende der Datei.                                             |
+| SEEK \_ SET | Verschieben Sie die Dateiposition vom Anfang der Datei in *lNewFilePos* Bytes.                                       |
 
 
 
@@ -68,9 +68,9 @@ Flag, das angibt, wie die Dateiposition geändert wird. Die folgenden Werte sind
 
 Gibt die neue Dateiposition zurück. Wenn ein Fehler auftritt, ist der Rückgabewert 1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die e/a-Prozedur ist dafür verantwortlich, die aktuelle Dateiposition im **ldiskoffset** -Member der [**mmioinfo**](/previous-versions//dd757322(v=vs.85)) -Struktur beizubehalten.
+Die E/A-Prozedur ist für die Beibehaltung der aktuellen Dateiposition im **lDiskOffset-Element** der [**MMIOINFO-Struktur**](/previous-versions//dd757322(v=vs.85)) verantwortlich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Die e/a-Prozedur ist dafür verantwortlich, die aktuelle Dateiposition im **ldis
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 

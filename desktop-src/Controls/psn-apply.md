@@ -1,9 +1,9 @@
 ---
 title: PSN_APPLY Benachrichtigungscode (Prsht.h)
-description: Wird an jede Seite im Eigenschaftenblatt gesendet, um anzugeben, dass der Benutzer auf die Schaltfläche OK, Schließen oder Übernehmen geklickt hat und möchte, dass alle Änderungen wirksam werden. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
+description: Wird an jede Seite im Eigenschaftenblatt gesendet, um anzugeben, dass der Benutzer auf die Schaltfläche OK, Schließen oder Übernehmen geklickt hat und alle Änderungen wirksam werden soll. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 18da6bdb-9409-49b6-8116-580fedd99a02
 keywords:
-- PSN_APPLY Benachrichtigungscode Windows Steuerelementen
+- PSN_APPLY Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118410036"
 ---
 # <a name="psn_apply-notification-code"></a>PSN \_ APPLY-Benachrichtigungscode
 
-Wird an jede Seite im Eigenschaftenblatt gesendet, um anzugeben, dass der Benutzer auf die Schaltfläche OK, Schließen oder Übernehmen geklickt hat und möchte, dass alle Änderungen wirksam werden. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
+Wird an jede Seite im Eigenschaftenblatt gesendet, um anzugeben, dass der Benutzer auf die Schaltfläche OK, Schließen oder Übernehmen geklickt hat und alle Änderungen wirksam werden soll. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -47,34 +47,34 @@ Zeiger auf eine [**PSHNOTIFY-Struktur,**](/windows/desktop/api/Prsht/ns-prsht-ps
 
 ## <a name="return-value"></a>Rückgabewert
 
-Legen Sie PSNRET NOERROR fest, um anzugeben, dass die an dieser Seite vorgenommenen Änderungen \_ gültig sind und angewendet wurden. Wenn auf allen Seiten PSNRET \_ NOERROR festgelegt ist, kann das Eigenschaftenblatt zerstört werden. Um anzugeben, dass die an dieser Seite vorgenommenen Änderungen ungültig sind, und um zu verhindern, dass das Eigenschaftenblatt zerstört wird, legen Sie einen der folgenden Rückgabewerte fest:
+Legen Sie PSNRET \_ NOERROR fest, um anzugeben, dass die an dieser Seite vorgenommenen Änderungen gültig sind und angewendet wurden. Wenn alle Seiten PSNRET \_ NOERROR festlegen, kann das Eigenschaftenblatt zerstört werden. Um anzugeben, dass die an dieser Seite vorgenommenen Änderungen ungültig sind, und um zu verhindern, dass das Eigenschaftenblatt zerstört wird, legen Sie einen der folgenden Rückgabewerte fest:
 
 -   PSNRET \_ UNGÜLTIG. Das Eigenschaftenblatt wird nicht zerstört, und der Fokus wird auf diese Seite zurückgegeben.
 -   PSNRET \_ INVALID \_ NOCHANGEPAGE. Das Eigenschaftenblatt wird nicht zerstört, und der Fokus wird auf die Seite zurückgegeben, die den Fokus hatte, als die Schaltfläche gedrückt wurde.
 
-Zum Festlegen des Rückgabewerts muss die Dialogfeldprozedur für die Seite die [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) mit dem DWL MSGRESULT-Wert aufrufen, und die Dialogfeldprozedur muss \_ **TRUE zurückgeben.**
+Um den Rückgabewert festzulegen, muss die Dialogfeldprozedur für die Seite die [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) mit dem \_ DWL-MSGRESULT-Wert aufrufen, und die Dialogfeldprozedur muss **TRUE** zurückgeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn der Benutzer auf die Schaltfläche OK, Übernehmen oder Schließen klickt, sendet das Eigenschaftenblatt eine [PSN \_ KILLACTIVE-Benachrichtigung](psn-killactive.md) an die aktive Seite und gibt ihm die Möglichkeit, die Änderungen des Benutzers zu überprüfen. Wenn die Änderungen gültig sind, sendet das Eigenschaftenblatt einen PSN APPLY-Benachrichtigungscode an jede Seite und leitet ihn an, die neuen Eigenschaften auf das entsprechende \_ Element anzuwenden.
+Wenn der Benutzer auf die Schaltfläche OK, Übernehmen oder Schließen klickt, sendet das Eigenschaftenblatt eine [PSN \_ KILLACTIVE-Benachrichtigung](psn-killactive.md) an die aktive Seite, sodass die Änderungen des Benutzers überprüft werden können. Wenn die Änderungen gültig sind, sendet das Eigenschaftenblatt einen PSN \_ APPLY-Benachrichtigungscode an jede Seite und weist sie an, die neuen Eigenschaften auf das entsprechende Element anzuwenden.
 
 > [!Note]  
-> Das Eigenschaftenblatt wird die Liste der Seiten bearbeiten, wenn der PSN \_ APPLY-Benachrichtigungscode gesendet wird. Versuchen Sie nicht, Seiten hinzuzufügen, zu entfernen oder hinzuzufügen, während Sie diese Benachrichtigung behandeln. Dies führt zu unvorhersehbaren Ergebnissen.
+> Das Eigenschaftenblatt wird gerade bearbeitet, wenn der PSN \_ APPLY-Benachrichtigungscode gesendet wird. Versuchen Sie nicht, Seiten hinzuzufügen, zu entfernen oder einzufügen, während Sie diese Benachrichtigung behandeln. Dies führt zu unvorhersehbaren Ergebnissen.
 
  
 
-Das **lParam-Member** der [**PSHNOTIFY-Struktur,**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) auf das *lParam* zeigt, wird auf **TRUE** festgelegt, wenn der Benutzer auf die Schaltfläche OK klickt. Sie wird auch auf **TRUE festgelegt,** wenn die [**PSM \_ CANCELTOCLOSE-Nachricht**](psm-canceltoclose.md) gesendet wurde und der Benutzer auf die Schaltfläche Schließen klickt. Sie wird auf **FALSE festgelegt,** wenn der Benutzer auf die Schaltfläche Anwenden klickt.
+Das **lParam-Element** der [**PSHNOTIFY-Struktur,**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) auf das *lParam* zeigt, wird auf **TRUE** festgelegt, wenn der Benutzer auf die Schaltfläche OK klickt. Sie wird auch auf **TRUE** festgelegt, wenn die [**PSM \_ CANCELTOCLOSE-Nachricht**](psm-canceltoclose.md) gesendet wurde und der Benutzer auf die Schaltfläche Schließen klickt. Sie wird auf **FALSE** festgelegt, wenn der Benutzer auf die Schaltfläche Anwenden klickt.
 
-Die [**PSHNOTIFY-Struktur**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) enthält eine [**NMHDR-Struktur**](/windows/desktop/api/richedit/ns-richedit-nmhdr) als ersten Member, **hdr**. Das **hwndFrom-Member** dieser **NMHDR-Struktur** enthält das Handle für das Eigenschaftenblatt.
+Die [**PSHNOTIFY-Struktur**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) enthält eine [**NMHDR-Struktur**](/windows/desktop/api/richedit/ns-richedit-nmhdr) als erstes Element, **hdr**. Der **hwndFrom-Member** dieser **NMHDR-Struktur** enthält das Handle für das Eigenschaftenblatt.
 
 Rufen Sie die [**EndDialog-Funktion**](/windows/desktop/api/winuser/nf-winuser-enddialog) nicht auf, wenn Sie diesen Benachrichtigungscode verarbeiten.
 
-Ein modales Eigenschaftenblatt wird zerstört, wenn der Benutzer auf die Schaltfläche OK klickt und jede Seite den PSNRET NOERROR-Wert als Antwort auf \_ **PSN \_ APPLY zurückgibt.** Wenn eine Seite PSNRET \_ INVALID oder PSNRET INVALID NOCHANGEPAGE zurückgibt, wird der \_ \_ Apply-Prozess sofort abgebrochen. Seiten nach der Abbrichtseite erhalten keinen PSN \_ APPLY-Benachrichtigungscode.
+Ein modales Eigenschaftenblatt wird zerstört, wenn der Benutzer auf die Schaltfläche OK klickt und jede Seite den PSNRET \_ NOERROR-Wert als Antwort auf **PSN \_ APPLY** zurückgibt. Wenn eine Seite PSNRET \_ INVALID oder PSNRET \_ INVALID \_ NOCHANGEPAGE zurückgibt, wird der Apply-Prozess sofort abgebrochen. Seiten nach der Abbruchseite erhalten keinen PSN \_ APPLY-Benachrichtigungscode.
 
-Um diesen Benachrichtigungscode zu erhalten, muss eine Seite den DWL MSGRESULT-Wert als Reaktion auf den \_ [PSN KILLACTIVE-Benachrichtigungscode \_](psn-killactive.md) auf **FALSE** festlegen.
+Um diesen Benachrichtigungscode zu erhalten, muss eine Seite den \_ DWL-MSGRESULT-Wert als Antwort auf den [PSN KILLACTIVE-Benachrichtigungscode \_](psn-killactive.md) auf **FALSE** festlegen.
 
 > [!Note]  
-> Dieser Benachrichtigungscode wird nicht unterstützt, wenn sie den Stil des Assistenten von Assistenten [**(PSHWIZARD) \_ verwenden.**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)
+> Dieser Benachrichtigungscode wird nicht unterstützt, wenn sie den Stil des Assistenten Für Dies verwendet wird ([**\_ PSHWIEWIESWIZARD**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)).
 
  
 
@@ -84,7 +84,7 @@ Um diesen Benachrichtigungscode zu erhalten, muss eine Seite den DWL MSGRESULT-W
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
 | Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 

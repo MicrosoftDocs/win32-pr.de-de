@@ -3,7 +3,7 @@ title: round (Corecrt \_ math.h)
 description: Rundet den angegebenen Wert auf die nächste ganze Zahl.
 ms.assetid: 258ce717-dca1-4ed2-ad98-1ecfdb58f939
 keywords:
-- round HLSL
+- Runden von HLSL
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118513832"
 ---
 # <a name="round"></a>round
 
-Rundet den angegebenen Wert auf die nächste ganze Zahl. Die Hälfte der Fälle wird auf die nächste gleichmäßige Zahl gerundet.
+Rundet den angegebenen Wert auf die nächste ganze Zahl. Die Hälfte der Fälle wird auf die nächste gerade gerundet.
 
 
 
@@ -38,7 +38,7 @@ Rundet den angegebenen Wert auf die nächste ganze Zahl. Die Hälfte der Fälle 
 
 
 
-| Element                                                   | BESCHREIBUNG                            |
+| Element                                                   | Beschreibung                            |
 |--------------------------------------------------------|----------------------------------------|
 | <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert.<br/> |
 
@@ -57,13 +57,13 @@ Der  x-Parameter, gerundet auf die nächste ganze Zahl innerhalb eines Gleitkomm
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
 | *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
-| *Ret* | identisch mit Eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie Eingabe *x* |
+| *Ret* | identisch mit eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(en) wie eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -71,8 +71,8 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | ja                 |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja (nur \_ im Vergleich \_ zu 1 1) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                 |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | ja (im Vergleich \_ \_ zu nur 1 1) |
 
 
 
@@ -88,7 +88,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

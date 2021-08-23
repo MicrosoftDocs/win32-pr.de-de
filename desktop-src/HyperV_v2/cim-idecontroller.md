@@ -51,7 +51,7 @@ Die **\_ CIM-IDEController-Klasse** definiert keine Member.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,10 +1,10 @@
 ---
-title: Beispielcode für die Überprüfung auf ein Steuerelementzugriffsrecht in einem ACE
-description: Im folgenden C++-Codebeispiel wird ein angegebenes Steuerelementzugriffsrecht in einem ACE in der ACL des angegebenen Objekts überprüft.
+title: Beispielcode für die Überprüfung auf ein Zugriffssteuerungsrecht in einem ACE
+description: Im folgenden C++-Codebeispiel wird ein angegebenes Steuerelementzugriffsrecht in einem ACE in der Zugriffssteuerungsliste des angegebenen Objekts überprüft.
 ms.assetid: 03a96c99-eefb-4de5-a4ab-526eca7875cc
 ms.tgt_platform: multiple
 keywords:
-- Beispielcode für die Überprüfung auf ein Steuerelementzugriffsrecht in einem ACE AD
+- Beispielcode für die Überprüfung auf ein Zugriffssteuerungsrecht in einem ACE AD
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: a8368cce0dbe492fac4cd8be4e2fed448c9a36a239c6ac0054336ae98d892f9b
@@ -14,9 +14,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118694553"
 ---
-# <a name="example-code-for-checking-for-a-control-access-right-in-an-ace"></a>Beispielcode für die Überprüfung auf ein Steuerelementzugriffsrecht in einem ACE
+# <a name="example-code-for-checking-for-a-control-access-right-in-an-ace"></a>Beispielcode für die Überprüfung auf ein Zugriffssteuerungsrecht in einem ACE
 
-Im folgenden C++-Codebeispiel wird ein angegebenes Steuerelementzugriffsrecht in einem ACE in der ACL des angegebenen Objekts überprüft.
+Im folgenden C++-Codebeispiel wird ein angegebenes Steuerelementzugriffsrecht in einem ACE in der Zugriffssteuerungsliste des angegebenen Objekts überprüft.
 
 
 ```C++

@@ -1,23 +1,23 @@
 ---
-description: Texturkoordinaten in Direct3D können ein, zwei, drei oder vier Gleit Komma Elemente enthalten, um Texturen mit unterschiedlichen Dimensions Ebenen zu behandeln.
+description: Texturkoordinaten in Direct3D können ein, zwei, drei oder vier Gleitkommaelemente enthalten, um Texturen mit unterschiedlichen Dimensionsebenen zu behandeln.
 ms.assetid: d841af62-41b0-4b80-960b-4630b9a7210c
-title: Texturkoordinaten Formate (Direct3D 9)
+title: Texturkoordinatenformate (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c95eada1cf21f0a4db38589794b08b88023e72d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6c48ec28b9c99357fe8825f5ff79da3c8869719389c4a4bc4874c5740fc71f42
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103747616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118519883"
 ---
-# <a name="texture-coordinate-formats-direct3d-9"></a>Texturkoordinaten Formate (Direct3D 9)
+# <a name="texture-coordinate-formats-direct3d-9"></a>Texturkoordinatenformate (Direct3D 9)
 
-Texturkoordinaten in Direct3D können ein, zwei, drei oder vier Gleit Komma Elemente enthalten, um Texturen mit unterschiedlichen Dimensions Ebenen zu behandeln. Eine 1D-Textur: eine Textur Oberfläche mit Dimensionen von 1-nach-n-texeln-wird von einer Textur Koordinate adressiert. Die gängigsten Fälle, 2D-Texturen, werden mit zwei Texturkoordinaten adressiert, die häufig als Sie und v bezeichnet werden. Direct3D unterstützt zwei Arten von 3D-Texturen, kubische Umgebungs Zuordnungen und volumetexturen. Kubische Umgebungs Zuordnungen sind nicht wirklich 3D, aber Sie werden mit einem Vektor mit drei Elementen adressiert. Weitere Informationen finden Sie unter [Zuordnung von kubischen Umgebungen (Direct3D 9)](cubic-environment-mapping.md).
+Texturkoordinaten in Direct3D können ein, zwei, drei oder vier Gleitkommaelemente enthalten, um Texturen mit unterschiedlichen Dimensionsebenen zu behandeln. Eine 1D-Textur – eine Texturoberfläche mit Dimensionen von 1-by-n-Texeln – wird von einer Texturkoordinate adressiert. Der häufigste Fall, 2D-Texturen, wird mit zwei Texturkoordinaten behandelt, die häufig als Sie und v bezeichnet werden. Direct3D unterstützt zwei Arten von 3D-Texturen: kubische Umgebungszuordnungen und Volumentexturen. Kubische Umgebungszuordnungen sind nicht wirklich 3D, aber sie werden mit einem 3-Element-Vektor adressiert. Weitere Informationen finden Sie unter [Kubische Umgebungszuordnung (Direct3D 9).](cubic-environment-mapping.md)
 
-Wie in " [Fixed Function f VF Codes (Direct3D 9)](fixed-function-fvf-codes.md)" beschrieben, codieren Anwendungen Texturkoordinaten im Vertex-Format. Das Vertex-Format kann mehrere Sätze von Texturkoordinaten enthalten. Verwenden Sie die D3DFVF \_ TEX0 bis D3DFVF \_ TEX8 [D3DFVF](d3dfvf.md) , um ein Scheitelpunkt Format zu beschreiben, das keine Texturkoordinaten enthält, oder bis zu acht Sets.
+Wie unter [FVF-Codes für feste Funktionen (Direct3D 9)](fixed-function-fvf-codes.md)beschrieben, codieren Anwendungen Texturkoordinaten im Scheitelpunktformat. Das Scheitelpunktformat kann mehrere Sätze von Texturkoordinaten enthalten. Verwenden Sie D3DFVF \_ TEX0 bis D3DFVF \_ TEX8 [D3DFVF,](d3dfvf.md) um ein Scheitelpunktformat zu beschreiben, das keine Texturkoordinaten oder bis zu acht Sätze enthält.
 
-Jeder Texturkoordinaten Satz kann zwischen einem und vier Elementen aufweisen. Die D3DFVF \_ TEXTUREFORMAT1 through D3DFVF \_ TEXTUREFORMAT4-Flags beschreiben die Anzahl von Elementen in einer Textur Koordinate in einer Menge, diese Flags werden jedoch nicht von sich selbst verwendet. Stattdessen verwendet der [**D3DFVF \_ texcoordsizen**](d3dfvf-texcoordsizen.md) -Satz von Makros diese Flags, um Bitmuster zu erstellen, die die Anzahl der Elemente beschreiben, die von einem bestimmten Satz von Texturkoordinaten im Vertex-Format verwendet werden. Diese Makros akzeptieren einen einzelnen Parameter, der den Index des Koordinaten Satzes identifiziert, dessen Anzahl von Elementen definiert wird. Im folgenden Beispiel wird veranschaulicht, wie diese Makros verwendet werden.
+Jeder Texturkoordinatensatz kann zwischen einem und vier Elementen enthalten. Die Flags D3DFVF \_ TEXTUREFORMAT1 bis D3DFVF \_ TEXTUREFORMAT4 beschreiben die Anzahl der Elemente in einer Texturkoordinate in einer Menge, aber diese Flags werden nicht allein verwendet. Stattdessen verwendet der [**D3DFVF \_ TEXCOORDSIZEN-Makrosatz**](d3dfvf-texcoordsizen.md) diese Flags, um Bitmuster zu erstellen, die die Anzahl der Elemente beschreiben, die von einem bestimmten Satz von Texturkoordinaten im Scheitelpunktformat verwendet werden. Diese Makros akzeptieren einen einzelnen Parameter, der den Index des Koordinatensatzes identifiziert, dessen Anzahl von Elementen definiert wird. Im folgenden Beispiel wird veranschaulicht, wie diese Makros verwendet werden.
 
 
 ```
@@ -40,7 +40,7 @@ typedef struct CVF
 
 
 > [!Note]  
-> Mit Ausnahme von kubischen Umgebungs Zuordnungen und volumetexturen können Rasterizers keine Texturen mithilfe von mehr als zwei Elementen adressieren. Anwendungen können bis zu drei Elemente für eine Textur Koordinate bereitstellen, aber nur, wenn es sich bei der Textur um eine cubemap, eine volumetextur oder das \_ Flag D3DTTFF projiziertes Textur Transform handelt. Das \_ Flag D3DTTFF projibewirkt, dass der Raster die ersten beiden Elemente durch das dritte Element (oder n) dividiert. Weitere Informationen finden Sie unter [Texturkoordinaten Transformationen (Direct3D 9)](texture-coordinate-transformations.md).
+> Mit Ausnahme von kubischen Umgebungszuordnungen und Volumentexturen können Rasterizer Texturen nicht mit mehr als zwei Elementen adressieren. Anwendungen können bis zu drei Elemente für eine Texturkoordinate bereitstellen, aber nur, wenn es sich bei der Textur um eine Cubemap, eine Volumentextur oder das D3DTTFF \_ PROJECTED-Texturtransformationsflag handelt. Das D3DTTFF \_ PROJECTED-Flag bewirkt, dass der Rasterizer die ersten beiden Elemente durch das dritte (oder n) Element dividiert. Weitere Informationen finden Sie unter [Transformationen für Texturkoordinaten (Direct3D 9).](texture-coordinate-transformations.md)
 
  
 

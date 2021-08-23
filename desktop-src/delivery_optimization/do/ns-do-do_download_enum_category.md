@@ -1,6 +1,6 @@
 ---
 title: DO_DOWNLOAD_ENUM_CATEGORY-Struktur
-description: Wird von **IDOManager::EnumDownloads verwendet,** um die Downloadsenumeration nach dem Wert der jeweiligen Eigenschaft zu filtern.
+description: Wird von **IDOManager::EnumDownloads** verwendet, um die Downloadenumeration nach dem Wert der jeweiligen Eigenschaft zu filtern.
 keywords:
 - DO_DOWNLOAD_ENUM_CATEGORY-Struktur
 topic_type:
@@ -23,7 +23,7 @@ ms.locfileid: "118543758"
 ---
 # <a name="do_download_enum_category-structure"></a>DO_DOWNLOAD_ENUM_CATEGORY-Struktur
 
-Die **DO_DOWNLOAD_ENUM_CATEGORY** wird von **IDOManager::EnumDownloads** verwendet, um die Downloadsenumeration nach dem Wert der jeweiligen Eigenschaft zu filtern.
+Die **DO_DOWNLOAD_ENUM_CATEGORY-Struktur** wird von **IDOManager::EnumDownloads** verwendet, um die Downloadenumeration nach dem Wert der jeweiligen Eigenschaft zu filtern.
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -38,7 +38,7 @@ typedef struct _DO_DOWNLOAD_ENUM_CATEGORY
 
 `Property`
 
-Der Eigenschaftsname, der für die Downloadenumeration verwendet werden soll. Diese Eigenschaften werden zu Enumerationszwecken unterstützt.
+Der Eigenschaftsname, der für die Downloadenumeration verwendet werden soll. Diese Eigenschaften werden für Enumerationszwecke unterstützt.
 - **DODownloadProperty_Id**
 - **DODownloadProperty_Uri**
 - **DODownloadProperty_ContentId**
@@ -54,5 +54,5 @@ Der Wert der Eigenschaft.
 | &nbsp; | &nbsp; |
 | ---- |:---- |
 | **Unterstützte Mindestversion (Client)** | \[Windows 10, Version 1809 Nur Win32-Anwendungen\] |
-| **Unterstützte Mindestversion (Server)** | Windows Server, version 1809 Win32 applications only (Nur \[ Win32-Anwendungen der Version 1809)\] |
+| **Unterstützte Mindestversion (Server)** | Windows Server, nur Win32-Anwendungen der Version 1809 \[\] |
 | **Header** | Do.h |

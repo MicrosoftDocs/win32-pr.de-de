@@ -17,7 +17,7 @@ Die automatische Konvertierung erfolgt in zwei Schritten:
 
 1.  Während Windows Setup. Die Konvertierung wird vom Setupprozess Windows MTSTOCOM-Hilfsprogramm verarbeitet.
     > [!Note]  
-    > Wenn Schritt 1 fehlschlägt, wurden möglicherweise einige oder alle MTS-Pakete tatsächlich konvertiert, es fehlen jedoch möglicherweise bestimmte Eigenschaften. Verwenden Sie in diesem Fall das Verwaltungstool Komponentendienste, um alle Attribute zu überprüfen. Die MTS-Attribute sind weiterhin auf dem Computer (in der Systemregistrierung unter HKEY LOCAL MACHINE Microsoft Transaction Server) vorhanden, aber nur über das Hilfsprogramm regedit.exe \_ \_ \\ \\ verfügbar.
+    > Wenn Schritt 1 fehlschlägt, wurden möglicherweise einige oder alle MTS-Pakete tatsächlich konvertiert, es fehlen jedoch möglicherweise bestimmte Eigenschaften. Verwenden Sie in diesem Fall das Verwaltungstool Komponentendienste, um alle Attribute zu überprüfen. Die MTS-Attribute sind weiterhin auf dem Computer (in der Systemregistrierung unter HKEY LOCAL MACHINE Microsoft Transaction Server) vorhanden, können jedoch nur über das Hilfsprogramm regedit.exe \_ \_ \\ \\ werden.
 
      
 

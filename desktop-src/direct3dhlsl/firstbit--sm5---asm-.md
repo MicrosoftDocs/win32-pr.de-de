@@ -1,23 +1,23 @@
 ---
-title: firstbit (SM5-ASM)
-description: Sucht das erste Bit, das in einer Zahl festgelegt ist, entweder von der LSB oder von MSB.
+title: firstbit (sm5 - asm)
+description: Sucht das erste Bit, das in einer Zahl festgelegt ist, entweder von LSB oder MSB.
 ms.assetid: E3066676-5218-470A-944A-7B221E1BF64D
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b88fa9291ce64fcc8c94510bd09bed31e7b7f96
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 8ea47c8e0674db5dc0349e5d6a8a041fa7d3623e6578eee542edeb1749577d7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104313746"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118511944"
 ---
-# <a name="firstbit-sm5---asm"></a>firstbit (SM5-ASM)
+# <a name="firstbit-sm5---asm"></a>firstbit (sm5 - asm)
 
-Sucht das erste Bit, das in einer Zahl festgelegt ist, entweder von der LSB oder von MSB.
+Sucht das erste Bit, das in einer Zahl festgelegt ist, entweder von LSB oder MSB.
 
 
 
-| firstbit { \_ Hi \|\_Siehe|\_Shi} dest \[ . mask \] , src0 \[ . Swizzle\] |
+| firstbit{ \_ hi\|\_lo\|\_shi} dest \[ .mask \] , src0 \[ .swizzle\] |
 |-------------------------------------------------------------|
 
 
@@ -26,30 +26,30 @@ Sucht das erste Bit, das in einer Zahl festgelegt ist, entweder von der LSB oder
 
 
 
-| Element                                                            | BESCHREIBUNG                                                                                                                           |
+| Element                                                            | Beschreibung                                                                                                                           |
 |-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[an \] der ganzzahligen Position des ersten Bits, das in *src0* beginnt, beginnend mit dem LSB für firstbit \_ Lo oder MSB für firstbit \_ Hi.<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] der Eingabe Ganzzahl.<br/>                                                                                                  |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in Die ganzzahlige Position des ersten in src0 festgelegten Bits, beginnend mit \] der LSB für firstbit lo oder  \_ MSB für firstbit \_ hi.<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die ganzzahlige Eingabe.<br/>                                                                                                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit diesem Vorgang wird die ganzzahlige Position des ersten Bits in der 32-Bit-Eingabe ab dem LSB für firstbit \_ Lo oder MSB für firstbit Hi zurückgegeben \_ . Beispielsweise gibt firstbit \_ Lo on 0x00000001 den Wert 0 zurück. firstbit \_ HI auf 0x10000000 gibt 3 zurück.
+Dieser Vorgang gibt die ganzzahlige Position des ersten in der 32-Bit-Eingabe festgelegten Bits zurück, beginnend mit LSB für firstbit \_ lo oder MSB für firstbit \_ hi. Beispielsweise gibt firstbit \_ lo auf 0x00000001 0 zurück. firstbit \_ hi on 0x10000000 gibt 3 zurück.
 
-firstbit \_ Shi (s für signed) gibt das erste 0 aus dem MSB zurück, wenn die Zahl negativ ist. andernfalls wird die erste 1 vom MSB zurückgegeben.
+firstbit shi (s für signed) gibt die erste 0 aus dem MSB zurück, wenn die Zahl negativ ist. Andernfalls wird die erste 1 vom \_ MSB zurückgegeben.
 
-Alle Varianten der Anweisung geben ~ 0 (0xFFFFFFFF in 32-Bit-Register) zurück, wenn keine Entsprechung gefunden wird.
+Alle Varianten der Anweisung geben ~0 zurück (0xffffffff 32-Bit-Register), wenn keine Übereinstimmung gefunden wird.
 
-Verwenden Sie diese Anweisung, um in einem Bitfeld schnell festgelegte Bits aufzulisten oder die größte Potenz von 2 in einer Zahl zu ermitteln.
+Verwenden Sie diese Anweisung, um die festgelegten Bits in einem Bitfeld schnell aufzählen oder die größte Leistung von 2 in einer Zahl zu finden.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -57,20 +57,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="mimimum-shader-model"></a>Imies Shader-Modell
+## <a name="mimimum-shader-model"></a>Mimimum-Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

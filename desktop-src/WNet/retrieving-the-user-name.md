@@ -1,21 +1,21 @@
 ---
 title: Abrufen des Benutzernamens
-description: Zum Abrufen des Namens des Benutzers, der entweder einem lokalen Gerät zugeordnet ist, das mit einer Netzwerkressource oder mit dem Namen eines Netzwerks verbunden ist, kann eine Anwendung die wnetgetuser-Funktion aufrufen.
+description: Um den Namen des Benutzers abzurufen, der entweder einem lokalen Gerät zugeordnet ist, das mit einer Netzwerkressource verbunden ist, oder mit dem Namen eines Netzwerks, kann eine Anwendung die WNetGetUser-Funktion aufrufen.
 ms.assetid: aed410af-d5f0-4389-882b-5b4338b5f900
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d0aeb8df11187828be0865d6b73e08325f2e0e7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 98aeafc849e1a66b373fcb81af46ec47b49644c4b9c753fad480876180a5592a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104209298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118566478"
 ---
 # <a name="retrieving-the-user-name"></a>Abrufen des Benutzernamens
 
-Zum Abrufen des Namens des Benutzers, der entweder einem lokalen Gerät zugeordnet ist, das mit einer Netzwerkressource oder mit dem Namen eines Netzwerks verbunden ist, kann eine Anwendung die [**wnetgetuser**](/windows/win32/api/winnetwk/nf-winnetwk-wnetgetusera) -Funktion aufrufen.
+Um den Namen des Benutzers abzurufen, der entweder einem lokalen Gerät zugeordnet ist, das mit einer Netzwerkressource verbunden ist, oder mit dem Namen eines Netzwerks, kann eine Anwendung die [**WNetGetUser-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetgetusera) aufrufen.
 
-Im folgenden Beispiel wird der Gerätename verwendet, um den Namen des Benutzers abzurufen. Das Beispiel ruft einen Anwendungs definierten Fehlerhandler zum Verarbeiten von Fehlern und die [**TextOut**](/windows/desktop/api/wingdi/nf-wingdi-textouta) -Funktion zum Drucken auf.
+Im folgenden Beispiel wird der Gerätename verwendet, um den Namen des Benutzers abzurufen. Das Beispiel ruft einen anwendungsdefinierten Fehlerhandler auf, um Fehler zu verarbeiten, und die [**TextOut-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-textouta) zum Drucken.
 
 
 ```C++
@@ -43,8 +43,8 @@ else
 
 
 
-Weitere Informationen zum Verwenden eines Anwendungs definierten Fehler Handlers finden Sie unter [Abrufen von Netzwerkfehlern](retrieving-network-errors.md).
+Weitere Informationen zur Verwendung eines anwendungsdefinierten Fehlerhandlers finden Sie unter [Retrieving Network Errors](retrieving-network-errors.md).
 
- 
+ 
 
- 
+ 

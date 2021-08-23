@@ -1,9 +1,9 @@
 ---
-title: Synkonstante-Attribut
-description: Das synkonstante-Attribut ist eine Zeichen folgen Darstellung eines booleschen Werts, den Windows Media Player verwendet, um zu bestimmen, ob eine Wiedergabeliste nur für die Synchronisierung verfügbar ist.
+title: SyncOnly-Attribut
+description: Das SyncOnly-Attribut ist eine Zeichenfolgendarstellung eines booleschen Werts, der Windows Media Player verwendet, um zu bestimmen, ob eine Wiedergabeliste nur für die Synchronisierung verfügbar ist.
 ms.assetid: 36149bb9-3a0b-4f6d-8be3-97d2a87faa83
 keywords:
-- Synkonforme Attribute (Windows Media Player)
+- SyncOnly-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,26 +12,26 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b0245ffac2c4c64717adf669fcc6ff8fd0768382
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e77fe67fe3cb943ad210f4d9beb58cfea8f32da87e6ee15955b578f07a608f39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364839"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134733"
 ---
-# <a name="synconly-attribute"></a>Synkonstante-Attribut
+# <a name="synconly-attribute"></a>SyncOnly-Attribut
 
-Das **synkonstante** -Attribut ist eine Zeichen folgen Darstellung eines **booleschen** Werts, den Windows Media Player verwendet, um zu bestimmen, ob eine Wiedergabeliste nur für die Synchronisierung verfügbar ist.
+Das **SyncOnly-Attribut** ist eine **Zeichenfolgendarstellung eines booleschen Werts,** der Windows Media Player verwendet, um zu bestimmen, ob eine Wiedergabeliste nur für die Synchronisierung verfügbar ist.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Wiedergabelisten](playlist-attributes-ref.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert 1 gibt an, dass die Wiedergabeliste nur für die Synchronisierung verfügbar ist und nicht im Knoten " **automatische Wiedergabeliste** " angezeigt werden kann. Der Wert 0 (null) gibt an, dass die Wiedergabeliste im Knoten **automatische Wiedergabeliste** angezeigt werden kann.
+Der Wert 1 gibt an, dass die Wiedergabeliste nur für die Synchronisierung verfügbar ist und nicht im Knoten **Automatische Wiedergabeliste** angezeigt werden kann. Der Wert 0 (null) gibt an, dass die Wiedergabeliste im Knoten **Automatische Wiedergabeliste** angezeigt werden kann.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,11 +43,11 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

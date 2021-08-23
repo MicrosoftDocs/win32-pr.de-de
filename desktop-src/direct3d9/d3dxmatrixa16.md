@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: 7bb14f23d041ec2634b9710d5620382d8b93da2b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a2ab3d030a2bf4c037b72e07244694c20ab7e94fb5c70f75ff0eb37e4205f70f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119407870"
 ---
 # <a name="d3dxmatrixa16-structure-d3dx9mathh"></a>D3DXMATRIXA16-Struktur (D3dx9math.h)
 
@@ -50,7 +50,7 @@ Die Komponente (i, j) der Matrix, wobei i die Zeilennummer und j die Spaltennumm
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Eine 16-Byte-ausgerichtete Matrix, die von mathematischen D3DX-Funktionen verwendet wird, wurde für eine verbesserte Leistung auf Intel Pentium 4-Prozessoren optimiert. Matrizen werden unabhängig davon ausgerichtet, wo sie erstellt werden: auf dem Programmstapel, im Heap oder im globalen Bereich. Die Ausrichtung erfolgt mit \_ \_ declspec(align(16)), die nur mit Visual C++ .NET und mit Visual C++ 6.0 funktioniert, wenn das Prozessorpaket installiert ist. Leider gibt es keine Möglichkeit, das Prozessorpaket zu erkennen, sodass die Byteausrichtung standardmäßig nur mit Visual C++ .NET aktiviert ist.
 
@@ -63,11 +63,11 @@ Vektoren und Quaternionen werden in D3DX nicht bytebündig ausgerichtet. Wenn Si
 
 
 
-Andere Compiler interpretieren D3DXMATRIXA16 als D3DXMATRIX. Die Verwendung dieser Struktur auf einem Compiler, der die Matrix nicht tatsächlich ausrichtet, kann problematisch sein, da sie keine Fehler verfügbar macht, die die Ausrichtung ignorieren. Wenn sich z. B. ein D3DXMATRIXA16-Objekt innerhalb einer Struktur oder Klasse befindet, kann ein [**Memcpy**](https://msdn.microsoft.com/library/dswaw1wk(v=VS.71).aspx) mit engem Packen (ohne 16-Byte-Grenzen) erfolgen. Dies würde zu Buildunterbrechungen führen, wenn der Compiler irgendwann eine Matrixausrichtung hinzufügen würde.
+Andere Compiler interpretieren D3DXMATRIXA16 als D3DXMATRIX. Die Verwendung dieser Struktur auf einem Compiler, der die Matrix nicht tatsächlich ausrichtet, kann problematisch sein, da sie keine Fehler verfügbar macht, die die Ausrichtung ignorieren. Wenn sich z. B. ein D3DXMATRIXA16-Objekt innerhalb einer Struktur oder Klasse befindet, kann ein [**Memcpy**](https://msdn.microsoft.com/library/dswaw1wk(v=VS.71).aspx) mit engem Komprimieren durchgeführt werden (wobei 16-Byte-Grenzen ignoriert werden). Dies würde zu Buildunterbrechungen führen, wenn der Compiler irgendwann eine Matrixausrichtung hinzufügen würde.
 
 ### <a name="d3dxmatrixa16"></a>D3DXMATRIXA16
 
-**D3DXMATRIXA16 verfügt** über die folgenden C++-Erweiterungen.
+**D3DXMATRIXA16** verfügt über die folgenden C++-Erweiterungen.
 
 
 ```
@@ -101,7 +101,7 @@ typedef D3DX_ALIGN16 _D3DXMATRIXA16 D3DXMATRIXA16, *LPD3DXMATRIXA16;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 

@@ -1,7 +1,7 @@
 ---
-description: Ruft den Text der Antwort Entität als Text ab.
+description: Ruft den Antwortentitätstext als Text ab.
 ms.assetid: 87caf64f-be11-45c9-af1e-997a55c5e76e
-title: 'Iwinhttprequest:: Response Text-Eigenschaft'
+title: IWinHttpRequest::ResponseText-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - COM
 api_location:
 - Winhttp.dll
-ms.openlocfilehash: 93e0a9b17ba356f9ce6b038be114f5f2c9804eab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e43169ee789a067b75444e5f19e5bb7985ce402efd4b89c08f049dbcad9a7049
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351418"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118563188"
 ---
-# <a name="iwinhttprequestresponsetext-property"></a>Iwinhttprequest:: Response Text-Eigenschaft
+# <a name="iwinhttprequestresponsetext-property"></a>IWinHttpRequest::ResponseText-Eigenschaft
 
-Die Response **Text** -Eigenschaft ruft den Text der Antwort Entität als Text ab.
+Die **ResponseText-Eigenschaft** ruft den Antwortentitätstext als Text ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,26 +49,26 @@ strResponseText = WinHttpRequest.ResponseText
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-**BSTR** , das den Entitäts Text der Antwort als Text empfängt.
+**BSTR,** der den Entitätstext der Antwort als Text empfängt.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der Rückgabewert ist bei Erfolg **S \_ OK** oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist **S \_ OK bei** Erfolg oder andernfalls ein Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft kann nur aufgerufen werden, nachdem die [**Send**](iwinhttprequest-send.md) -Methode aufgerufen wurde.
+Diese Eigenschaft kann nur aufgerufen werden, nachdem die [**Send-Methode**](iwinhttprequest-send.md) aufgerufen wurde.
 
-Wenn Sie diese Eigenschaft im synchronen Modus verwenden, beträgt der Grenzwert für die Anzahl der zurückgegebenen Zeichen ungefähr 2.169.895.
+Bei Verwendung dieser Eigenschaft im synchronen Modus beträgt der Grenzwert für die Anzahl der zurückgegebenen Zeichen etwa 2.169.895.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen Windows XP und Windows 2000 finden [](winhttp-start-page.md) Sie im Abschnitt Laufzeitanforderungen der WinHTTP-Startseite.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie eine HTTP-Verbindung geöffnet, eine HTTP-Anforderung gesendet und der Antworttext gelesen wird. Dieses Beispiel muss von einer Eingabeaufforderung aus ausgeführt werden.
+Das folgende Beispiel zeigt, wie Sie eine HTTP-Verbindung öffnen, eine HTTP-Anforderung senden und den Antworttext lesen. Dieses Beispiel muss über eine Eingabeaufforderung ausgeführt werden.
 
 
 ```C++
@@ -156,7 +156,7 @@ int main()
 
 
 
-Im folgenden Skript Beispiel wird gezeigt, wie eine HTTP-Verbindung geöffnet, eine HTTP-Anforderung gesendet und der Antworttext gelesen wird.
+Das folgende Skriptbeispiel zeigt, wie Sie eine HTTP-Verbindung öffnen, eine HTTP-Anforderung senden und den Antworttext lesen.
 
 
 ```JScript
@@ -181,26 +181,26 @@ WScript.Echo( WinHttpReq.ResponseText);
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WinHTTP. lib</dt> </dl>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher unter Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)
 </dt> <dt>
 
-[**Response Body**](iwinhttprequest-responsebody.md)
+[**ResponseBody**](iwinhttprequest-responsebody.md)
 </dt> <dt>
 
 [**ResponseStream**](iwinhttprequest-responsestream.md)

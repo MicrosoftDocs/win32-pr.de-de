@@ -60,19 +60,19 @@ Die Größe der Daten in Bytes.
 
 \[in, size \_ is(ulPropertyDataSize)\]
 
-Ein 8-Bit-Ganzzahlarray ohne Vorzeichen, das die hinzuzufügenden Eigenschaftsinformationen enthält.
+Ein 8-Bit-Ganzzahlarray ohne Vorzeichen, das die hinzuzufügenden Eigenschafteninformationen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden **Sie IContextNode::AddPropertyData,** um Einem Kontextknoten Daten zu zuordnen. Verwenden Sie [**IContextNode::GetPropertyData,**](icontextnode-getpropertydata.md)um die Daten später abzurufen.
+Verwenden Sie **IContextNode::AddPropertyData,** um Daten einem Kontextknoten zuzuordnen. Um die Daten später abzurufen, verwenden Sie [**IContextNode::GetPropertyData**](icontextnode-getpropertydata.md).
 
-Die Ink-Analyse kann den Knoten im Rahmen der Ink-Analyse löschen, es sei denn, der Kontextknoten wird bestätigt (siehe [**IContextNode::Confirm**](icontextnode-confirm.md)). Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Ink-Analyse.](data-proxy-with-ink-analysis.md)
+Die Freihandanalyse kann den Knoten im Rahmen der Freihandanalyse löschen, es sei denn, der Kontextknoten wird bestätigt (siehe [**IContextNode::Confirm**](icontextnode-confirm.md)). Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Freihandanalyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 

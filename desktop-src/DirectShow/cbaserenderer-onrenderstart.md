@@ -1,7 +1,7 @@
 ---
-description: Die onrenderstart-Methode wird aufgerufen, wenn das Rendering gerade gestartet wird.
+description: Die OnRenderStart-Methode wird aufgerufen, wenn das Rendering gestartet wird.
 ms.assetid: 46af24cf-9075-4ebc-a49b-85f8f0c3da6f
-title: Cbaserderderer. onrenderstart-Methode (renbase. h)
+title: CBaseRenderer.OnRenderStart-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a7838b0ba43c1e570b745541882a2f2f815dd948
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 626dc1dbcb82aeec94ebe514e686d197cb17bbdd7807ac38057412617182bf55
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118157653"
 ---
-# <a name="cbaserendereronrenderstart-method"></a>Cbaserderderer. onrenderstart-Methode
+# <a name="cbaserendereronrenderstart-method"></a>CBaseRenderer.OnRenderStart-Methode
 
-Die- `OnRenderStart` Methode wird aufgerufen, wenn das Rendering gerade gestartet wird.
+Die `OnRenderStart` -Methode wird aufgerufen, wenn das Rendering gestartet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ virtual void OnRenderStart(
 
 <dl> <dt>
 
-*pmediasample* 
+*pMediaSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels.
+Zeiger auf die [**IMediaSample-Schnittstelle des**](/windows/desktop/api/Strmif/nn-strmif-imediasample) Beispiels.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasa
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cbaserdenderer:: Rendering**](cbaserenderer-render.md) -Methode ruft diese Methode auf. Es wird keine Aktion in der Basisklasse durchführt, aber die abgeleitete Klasse kann Sie überschreiben. beispielsweise, um Qualitäts Steuerungsdaten zu erfassen.
+Die [**CBaseRenderer::Render-Methode**](cbaserenderer-render.md) ruft diese Methode auf. In der Basisklasse wird nichts verwendet, aber die abgeleitete Klasse kann sie überschreiben. beispielsweise zum Sammeln von Qualitätskontrolldaten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Die [**cbaserdenderer:: Rendering**](cbaserenderer-render.md) -Methode ruft dies
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Die [**cbaserdenderer:: Rendering**](cbaserenderer-render.md) -Methode ruft dies
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

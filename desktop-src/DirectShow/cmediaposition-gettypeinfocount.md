@@ -1,5 +1,5 @@
 ---
-description: 'CMediaPosition.GetTypeInfoCount-Methode: Die GetTypeInfoCount-Methode ruft die Anzahl der Typinformationsschnittstellen ab, die das Objekt bereitstellt.'
+description: 'CMediaPosition.GetTypeInfoCount-Methode: Die GetTypeInfoCount-Methode ruft die Anzahl der Schnittstellen für Typinformationen ab, die das Objekt zur Verfügung stellt.'
 ms.assetid: c98368f2-ae0c-4301-be30-7332b19f53ee
 title: CMediaPosition.GetTypeInfoCount-Methode (Ctlutil.h)
 ms.topic: reference
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8cfc54f414a6722f7f69a0330fad2d1a0cfab425
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 032584025d91d6e21b02ed74b26b2e59d55e3a6e044c215d586913d8417a412e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118157008"
 ---
 # <a name="cmediapositiongettypeinfocount-method"></a>CMediaPosition.GetTypeInfoCount-Methode
 
-Die `GetTypeInfoCount` -Methode ruft die Anzahl der Typinformationsschnittstellen ab, die das -Objekt bereitstellt.
+Die `GetTypeInfoCount` -Methode ruft die Anzahl der Schnittstellen mit Typinformationen ab, die das -Objekt bietet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ Gibt einen der folgenden Werte zurück.
 | Rückgabecode                                                                               | Beschreibung                           |
 |-------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg.<br/>                   |
-| <dl> <dt>**E \_ POINTER**</dt> </dl> | **NULL-Zeigerargument.**<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl> |  NULL-Zeigerargument.<br/> |
 
 
 
@@ -68,14 +68,14 @@ Gibt einen der folgenden Werte zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

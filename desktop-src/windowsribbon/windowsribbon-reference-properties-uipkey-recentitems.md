@@ -27,11 +27,11 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-[Benutzeroberfläche \_ PKEY \_ Pinned wird](windowsribbon-reference-properties-uipkey-pinned.md) von einer Anwendung verwendet, um das Array von Elementen in der Auflistung der zuletzt verwendeten Elemente (MRU) des [Anwendungsmenüs abfragt.](windowsribbon-controls-applicationmenu.md) Die Informationen für jedes MRU-Element sind in einem [**IUISimplePropertySet-Objekt**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) gekapselt und enthalten die folgenden drei Eigenschaftsschlüssel:
+[Benutzeroberfläche \_ PKEY \_ Pinned](windowsribbon-reference-properties-uipkey-pinned.md) wird von einer Anwendung verwendet, um das Array von Elementen in der sammlung zuletzt verwendeter Elemente (MRU) des [Anwendungsmenüs](windowsribbon-controls-applicationmenu.md)abzufragen. Die Informationen für jedes MRU-Element sind in einem [**IUISimplePropertySet-Objekt**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) gekapselt und enthalten die folgenden drei Eigenschaftsschlüssel:
 
--   [\_PKEY-Bezeichnung der \_ Benutzeroberfläche](windowsribbon-reference-properties-uipkey-label.md)
+-   [\_ \_ UI-PKEY-Bezeichnung](windowsribbon-reference-properties-uipkey-label.md)
 -   [UI \_ PKEY \_ LabelDescription](windowsribbon-reference-properties-uipkey-labeldescription.md)
--   [\_Benutzeroberflächen-PKEY \_ angeheftet](windowsribbon-reference-properties-uipkey-pinned.md)
+-   [\_ \_ PKEY-Benutzeroberfläche angeheftet](windowsribbon-reference-properties-uipkey-pinned.md)
 
 Die Liste der MRU-Elemente wird als **SAFEARRAY** von [**IUISimplePropertySet-Zeigern**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) auf die entsprechenden Implementierungen in der Hostanwendung an die Menübandhostanwendung übergeben.
 

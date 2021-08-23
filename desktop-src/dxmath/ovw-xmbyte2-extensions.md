@@ -24,7 +24,7 @@ Beschreibt einen 2D-Vektor, der aus ganzen Zahlen mit Vorzeichen und einer Läng
 
 
 
-| Thema                                                     | BESCHREIBUNG                                   |
+| Thema                                                     | Beschreibung                                   |
 |-----------------------------------------------------------|-----------------------------------------------|
 | [**XMBYTE2-Konstruktoren**](xmbyte2-ctor.md)<br/>   | Konstruktoren, die von verfügbar gemacht `XMBYTE2` werden.<br/> |
 | [XMBYTE2-Operatoren](ovw-xmbyte2-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMBYTE2` werden.<br/>    |

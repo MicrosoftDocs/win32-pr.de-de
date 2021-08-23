@@ -1,6 +1,6 @@
 ---
 title: InterlockedExchange-Funktion (HLSL-Referenz)
-description: Weist dest einen Wert zu und gibt den ursprünglichen Wert zurück.
+description: Weist dem Wert dest zu und gibt den ursprünglichen Wert zurück.
 ms.assetid: 1e7ce7ff-9e23-47fa-8e76-713f6bf57abf
 keywords:
 - InterlockedExchange-Funktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "118511320"
 ---
 # <a name="interlockedexchange-function-hlsl-reference"></a>InterlockedExchange-Funktion (HLSL-Referenz)
 
-Weist dest einen Wert zu und gibt den ursprünglichen Wert zurück.
+Weist dem Wert dest zu und gibt den ursprünglichen Wert zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ Die Zieladresse.
 
 </dd> <dt>
 
-*wert* \[ In\]
+*value* \[ In\]
 </dt> <dd>
 
 Typ: **T**
@@ -56,7 +56,7 @@ Der Eingabewert.
 
 </dd> <dt>
 
-*Ursprünglicher \_ Wert* \[ out\]
+*ursprünglicher \_ Wert* \[ out\]
 </dt> <dd>
 
 Typ: **T**
@@ -71,9 +71,9 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser Vorgang kann nur für skalare Ressourcen und Freigegebene Speichervariablen ausgeführt werden. Es gibt zwei mögliche Verwendungsmöglichkeiten für diese Funktion. Die erste ist, wenn R ein Variablentyp für gemeinsam genutzten Arbeitsspeicher ist. In diesem Fall führt die Funktion den Vorgang für das Shared Memory-Register aus, auf das vom Dest verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcenvariablentyp ist. In diesem Szenario führt die Funktion den Vorgang für den Ressourcenspeicherort aus, auf den vom Dest verwiesen wird. Dieser Vorgang ist nur verfügbar, wenn R lesbar und schreibbar ist.
+Dieser Vorgang kann nur für skalar typierte Ressourcen und Freigegebene Arbeitsspeichervariablen ausgeführt werden. Es gibt zwei mögliche Verwendungsmöglichkeiten für diese Funktion. Die erste ist, wenn R ein Variablentyp für freigegebenen Arbeitsspeicher ist. In diesem Fall führt die Funktion den Vorgang für das Shared Memory-Register aus, auf das vom dest verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcenvariablentyp ist. In diesem Szenario führt die Funktion den Vorgang für den Ressourcenspeicherort aus, auf den vom dest verwiesen wird. Dieser Vorgang ist nur verfügbar, wenn R lesbar und schreibbar ist.
 
-### <a name="minimum-shader-model"></a>Shader-Mindestmodell
+### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -81,7 +81,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | ja       |
 
 
 

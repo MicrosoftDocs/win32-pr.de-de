@@ -1,5 +1,5 @@
 ---
-description: Gibt die Anzahl der im Kontakt angegebenen unteren Ns an.
+description: Gibt die Anzahl der untergeordneten Elemente an, über die der Kontakt verfügt.
 ms.assetid: 44d260a1-ad42-4822-ab4d-205f6999e5aa
 title: System.Contact.Children
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118730215"
 ---
 # <a name="systemcontactchildren"></a>System.Contact.Children
 
-Gibt die Anzahl der im Kontakt angegebenen unteren Ns an.
+Gibt die Anzahl der untergeordneten Elemente an, über die der Kontakt verfügt.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

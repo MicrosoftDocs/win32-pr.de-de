@@ -24,11 +24,11 @@ ms.locfileid: "118720586"
 
 \[**IUserIdentity2** wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md).\]
 
-Macht Methoden verfügbar, die Benennung, Kennwort und Ordnungszahl für eine bestimmte Benutzeridentität bereitstellen.
+Macht Methoden verfügbar, die Benennungs-, Kennwort- und Ordnungssteuerung für eine bestimmte Benutzeridentität bereitstellen.
 
 ## <a name="members"></a>Member
 
-Die **IUserIdentity2-Schnittstelle** erbt von [**IUserIdentity**](iuseridentity.md). **IUserIdentity2** verfügt auch über diese Typen von Membern:
+Die **IUserIdentity2-Schnittstelle** erbt von [**IUserIdentity**](iuseridentity.md). **IUserIdentity2** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
