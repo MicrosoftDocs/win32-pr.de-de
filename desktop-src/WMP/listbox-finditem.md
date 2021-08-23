@@ -1,9 +1,9 @@
 ---
-title: ListBox. FindItem
-description: Die FindItem-Methode sucht nach einer angegebenen Zeichenfolge, beginnend mit dem Element, das dem angegebenen Element Index folgt.
+title: LISTBOX.findItem
+description: Die findItem-Methode sucht nach einer bestimmten Zeichenfolge, beginnend mit dem Element, das dem angegebenen Elementindex folgt.
 ms.assetid: 8d112d99-1866-45e5-b0ef-5d4a3c8b388d
 keywords:
-- ListBox. FindItem-Fenster Media Player
+- LISTBOX.findItem Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 161f4dd8b93fe4fed6a794dffde3e58e840c74e5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e3625c8d8e9993d09e7b5b41911ead8df857c257a7a2354d71c8d81c1fecc645
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356467"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135323"
 ---
-# <a name="listboxfinditem"></a>ListBox. FindItem
+# <a name="listboxfinditem"></a>LISTBOX.findItem
 
-Die **FindItem** -Methode sucht nach einer angegebenen Zeichenfolge, beginnend mit dem Element, das dem angegebenen Element Index folgt.
+Die **findItem-Methode** sucht nach einer bestimmten Zeichenfolge, beginnend mit dem Element, das dem angegebenen Elementindex folgt.
 
 ``` syntax
         elementID.findItem(startIndex, searchString)
@@ -32,27 +32,27 @@ Die **FindItem** -Methode sucht nach einer angegebenen Zeichenfolge, beginnend m
 
 <dl> <dt>
 
-<span id="startIndex"></span><span id="startindex"></span><span id="STARTINDEX"></span>*Start Index*
+<span id="startIndex"></span><span id="startindex"></span><span id="STARTINDEX"></span>*Startindex*
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index des Elements enthält, an dem die Suche beginnen soll.
+**Zahl** (**long**), die den Index des Elements enthält, an dem die Suche gestartet werden soll.
 
 </dd> <dt>
 
-<span id="searchString"></span><span id="searchstring"></span><span id="SEARCHSTRING"></span>*searchString*
+<span id="searchString"></span><span id="searchstring"></span><span id="SEARCHSTRING"></span>*Searchstring*
 </dt> <dd>
 
-**Zeichenfolge** , die den zu suchenden Text enthält.
+**Zeichenfolge,** die den zu suchden Text enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zahl** (**Long**) zurück, die den Index des Elements enthält, das die Zeichenfolge enthält.
+Diese Methode gibt eine **Zahl** (**long**) zurück, die den Index des Elements enthält, das die Zeichenfolge enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die Suche in der ersten Zeile des Listenfeld-Steuer Elements zu starten, verwenden Sie 1 als *startIndex*. Wenn Sie nach dem Suchen der ersten Zeile nach Text suchen möchten, verwenden Sie den zurückgegebenen Zeilen Index als *startIndex*, und die Suche wird in der nächsten Zeile gestartet. Diese Methode sucht nach Teil Zeichenfolgen und wird nicht zwischen Groß-und Kleinschreibung unterschieden.
+Um die Suche in der ersten Zeile des Listenfeldsteuerelements zu starten, verwenden Sie 1 als *startIndex*. Um nach dem Auffinden der ersten Zeile weiterhin nach Text zu suchen, verwenden Sie den zurückgegebenen Zeilenindex als *startIndex,* und die Suche beginnt in der nächsten Zeile. Diese Methode sucht nach Teilzeichenfolgen und berücksichtigt nicht die Groß-/Kleinschreibung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,11 +64,11 @@ Um die Suche in der ersten Zeile des Listenfeld-Steuer Elements zu starten, verw
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> </dl>
 
  

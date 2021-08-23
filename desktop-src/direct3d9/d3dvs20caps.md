@@ -4,12 +4,12 @@ ms.assetid: c1321957-4ba5-45d0-984a-4f4267221c59
 title: D3DVS20CAPS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 65bd0905a0996e2dc9df77adb0896c9397a93450
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: a199fa5e98040cf100846a4773e1077da04fa43e9d9e77a615017ecb9b32ca83
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110342945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988870"
 ---
 # <a name="d3dvs20caps"></a>D3DVS20CAPS
 
@@ -17,21 +17,21 @@ Vertex-Shader kapselt Konstanten. Diese Konstanten werden vom VS20Caps-Member vo
 
 
 
-| \#Definieren                              | Wert          | BESCHREIBUNG                                                                                                                                                                                                                                                                                                 |
+| \#Definieren                              | Wert          | Beschreibung                                                                                                                                                                                                                                                                                                 |
 |---------------------------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | D3DVS20CAPS-PRÄDIKATION \_              | (1 << 0) | Anweisungsprädikation wird unterstützt. Siehe [setp \_ comp - vs](../direct3dhlsl/setp-comp---vs.md).                                                                                                                                                                                                                   |
 | D3DVS20 \_ MAX \_ DYNAMICFLOWCONTROLDEPTH | 24             | Der maximale Grad an Schachtelung dynamischer Ablaufsteuerungsanweisungen ([break - vs](../direct3dhlsl/break---vs.md), break comp - [ \_ vs](../direct3dhlsl/break-comp---vs.md), [breakp - vs](../direct3dhlsl/breakp---vs.md), wenn comp - [ \_ vs](../direct3dhlsl/if-comp---vs.md), wenn \_ comp - vs, if [pred - vs](../direct3dhlsl/if-pred---vs.md)). |
 | D3DVS20 \_ MIN \_ DYNAMICFLOWCONTROLDEPTH | 0              | Die Mindestebene der Schachtelung dynamischer Ablaufsteuerungsanweisungen ([break - vs](../direct3dhlsl/break---vs.md), break comp - [ \_ vs](../direct3dhlsl/break-comp---vs.md), [breakp - vs](../direct3dhlsl/breakp---vs.md), if comp - [ \_ vs](../direct3dhlsl/if-comp---vs.md), wenn \_ comp - vs, if [pred - vs](../direct3dhlsl/if-pred---vs.md)). |
 | D3DVS20 \_ MAX \_ NUMTEMPS                | 32             | Die maximale Anzahl von unterstützten temporären Registern.                                                                                                                                                                                                                                                        |
 | D3DVS20 \_ MIN \_ NUMTEMPS                | 12             | Die Mindestanzahl von unterstützten temporären Registern.                                                                                                                                                                                                                                                        |
-| D3DVS20 \_ MAX \_ STATICFLOWCONTROLDEPTH  | 4              | Die maximale Tiefe der Schachtelung der Schleife [– vs](../direct3dhlsl/loop---vs.md)rep / [– vs](../direct3dhlsl/rep---vs.md) und call – [vs](../direct3dhlsl/call---vs.md) / [callnz bool – vs](../direct3dhlsl/callnz-bool---vs.md) instructions.                                                                                           |
-| D3DVS20 \_ MIN \_ STATICFLOWCONTROLDEPTH  | 1              | Die minimale Tiefe der Schachtelung der Schleife [– vs](../direct3dhlsl/loop---vs.md)rep / [– vs](../direct3dhlsl/rep---vs.md) und call – [vs](../direct3dhlsl/call---vs.md) / [callnz bool – vs](../direct3dhlsl/callnz-bool---vs.md) instructions.                                                                                           |
+| D3DVS20 \_ MAX \_ STATICFLOWCONTROLDEPTH  | 4              | Die maximale Schachtelungstiefe der [Schleife – vs](../direct3dhlsl/loop---vs.md) / [rep – vs](../direct3dhlsl/rep---vs.md) und call – [vs](../direct3dhlsl/call---vs.md) / [callnz bool – vs](../direct3dhlsl/callnz-bool---vs.md) instructions.                                                                                           |
+| D3DVS20 \_ MIN \_ STATICFLOWCONTROLDEPTH  | 1              | Die minimale Tiefe der Schachtelung der [Schleife – vs](../direct3dhlsl/loop---vs.md) / [rep – vs.](../direct3dhlsl/rep---vs.md) [und call – vs](../direct3dhlsl/call---vs.md) / [callnz bool – vs](../direct3dhlsl/callnz-bool---vs.md) instructions.                                                                                           |
 
 
 
  
 
-## <a name="constant-information"></a>Konstante Informationen
+## <a name="constant-information"></a>Konstanteninformationen
 
 
 

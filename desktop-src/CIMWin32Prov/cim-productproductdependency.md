@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ productproductdepen-Klasse stellt eine Zuordnung zwischen zwei Produkten dar, die angibt, dass eine für die andere installiert werden muss oder nicht. Dies entspricht konzeptionell der CIM \_ serviceserviceabhängigkeiten-Zuordnung.
+description: Die CIM \_ ProductProductDependency-Klasse stellt eine Zuordnung zwischen zwei Produkten dar, die angibt, dass eines installiert werden muss oder nicht vorhanden sein muss, damit das andere funktioniert. Dies entspricht konzeptionell der \_ CIM ServiceServiceDependency-Zuordnung.
 ms.assetid: 898b9993-3bdc-4a7c-98c1-ed960014ace8
 ms.tgt_platform: multiple
 title: CIM_ProductProductDependency-Klasse
@@ -17,23 +17,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 094800b3a2d50d7be4039d5850f9ac1d3f236a40
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: add5419417a640a98266ab70edf455933807a43a8fb2615e7fabb4c222fc1a7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041377"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080354"
 ---
-# <a name="cim_productproductdependency-class"></a>CIM \_ productproductdepensklasse
+# <a name="cim_productproductdependency-class"></a>CIM \_ ProductProductDependency-Klasse
 
-Die **CIM \_ productproductdepen-Klasse** stellt eine Zuordnung zwischen zwei Produkten dar, die angibt, dass eine für die andere installiert werden muss oder nicht. Dies entspricht konzeptionell der [**CIM \_ serviceserviceabhängigkeiten**](cim-serviceservicedependency.md) -Zuordnung.
+Die **CIM \_ ProductProductDependency-Klasse** stellt eine Zuordnung zwischen zwei Produkten dar, die angibt, dass eines installiert werden muss oder nicht vorhanden sein muss, damit das andere funktioniert. Dies entspricht konzeptionell der [**CIM \_ ServiceServiceDependency-Zuordnung.**](cim-serviceservicedependency.md)
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,20 +49,20 @@ class CIM_ProductProductDependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ productproductdepensklasse** verfügt über diese Typen von Membern:
+Die **CIM \_ ProductProductDependency-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ productproductdepensklasse** verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse ProductProductDependency** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Dependentproduct**
+**DependentProduct**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Produkt**
+Datentyp: **\_ CIM-Produkt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -72,10 +72,10 @@ Verweis auf das Produkt, das von einem anderen Produkt abhängig ist.
 
 </dd> <dt>
 
-**Requirements DProduct**
+**RequiredProduct**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Produkt**
+Datentyp: **\_ CIM-Produkt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -85,16 +85,16 @@ Verweis auf das erforderliche Produkt.
 
 </dd> <dt>
 
-**Typeofabhängigkeit**
+**TypeOfDependency**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Art der Produkt Abhängigkeit.
+Art der Produktabhängigkeit.
 
 <dt>
 
@@ -111,7 +111,7 @@ Unbekannt
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 
 
 </dt> <dd>
@@ -122,7 +122,7 @@ Sonstiges
 
 <span id="Product_Must_Be_Installed"></span><span id="product_must_be_installed"></span><span id="PRODUCT_MUST_BE_INSTALLED"></span>
 
-<span id="Product_Must_Be_Installed"></span><span id="product_must_be_installed"></span><span id="PRODUCT_MUST_BE_INSTALLED"></span>Das **Produkt muss installiert sein** (2).
+<span id="Product_Must_Be_Installed"></span><span id="product_must_be_installed"></span><span id="PRODUCT_MUST_BE_INSTALLED"></span>**Produkt muss installiert sein** (2)
 
 
 </dt> <dd>
@@ -133,7 +133,7 @@ Das Produkt muss installiert sein.
 
 <span id="Product_Must_Not_Be_Installed"></span><span id="product_must_not_be_installed"></span><span id="PRODUCT_MUST_NOT_BE_INSTALLED"></span>
 
-<span id="Product_Must_Not_Be_Installed"></span><span id="product_must_not_be_installed"></span><span id="PRODUCT_MUST_NOT_BE_INSTALLED"></span>Das **Produkt darf nicht installiert sein** (3).
+<span id="Product_Must_Not_Be_Installed"></span><span id="product_must_not_be_installed"></span><span id="PRODUCT_MUST_NOT_BE_INSTALLED"></span>**Produkt darf nicht installiert sein** (3)
 
 
 </dt> <dd>
@@ -144,11 +144,11 @@ Das Produkt darf nicht installiert sein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -158,8 +158,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

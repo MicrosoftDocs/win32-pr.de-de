@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentbadbackupdatabasesizeexception-Konstruktor'
-title: Esentbadbackupdatabasesizeexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentBadBackupDatabaseSizeException-Konstruktor'
+title: EsentBadBackupDatabaseSizeException-Konstruktor
 TOCTitle: 'EsentBadBackupDatabaseSizeException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentBadBackupDatabaseSizeException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbadbackupdatabasesizeexception.esentbadbackupdatabasesizeexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1211658bdb7d9d8760e718a8d7bc52c0626267ca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7aa8ce276dc0c84f7fcf5d1d26789b87c244d849800805fb8580ab4c4ac350a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042118"
 ---
-# <a name="esentbadbackupdatabasesizeexception-constructor"></a>Esentbadbackupdatabasesizeexception-Konstruktor
+# <a name="esentbadbackupdatabasesizeexception-constructor"></a>EsentBadBackupDatabaseSizeException-Konstruktor
 
-Initialisiert eine neue Instanz der esentbadbackupdatabasesizeexception-Klasse.
+Initialisiert eine neue Instanz der EsentBadBackupDatabaseSizeException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentBadBackupDatabaseSizeException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbadbackupdatabasesizeexception-Klasse](./esentbadbackupdatabasesizeexception-class.md)
+[EsentBadBackupDatabaseSizeException-Klasse](./esentbadbackupdatabasesizeexception-class.md)
 
-[Esentbadbackupdatabasesizeexception-Member](./esentbadbackupdatabasesizeexception-members.md)
+[EsentBadBackupDatabaseSizeException-Member](./esentbadbackupdatabasesizeexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

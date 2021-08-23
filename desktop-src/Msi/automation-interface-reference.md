@@ -9,32 +9,32 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 6f616d24cd1bf389c3062865359b73ebeee8e6f6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7e06aebad00f5288dacd03b2cd956b2c7bef17cd56e105243925517782b03aa5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145793"
 ---
 # <a name="automation-interface-reference"></a>Referenz zur Automatisierungsschnittstelle
 
-Im folgenden finden Sie die Windows Installer-Objekte:
+Im Folgenden werden die Windows Installer-Objekte angezeigt:
 
--   [**Client Objekt**](client.md)
--   [**Component-Objekt**](components.md)
+-   [**Clientobjekt**](client.md)
+-   [**Komponentenobjekt**](components.md)
 -   [**ComponentInfo-Objekt**](componentinfo.md)
 -   [**Datenbankobjekt**](database-object.md)
 -   [**FeatureInfo-Objekt**](featureinfo-object.md)
 -   [**Installer-Objekt**](installer-object.md)
 -   [**Patch-Objekt**](patch-object.md)
 -   [**Product-Objekt**](product-object.md)
--   [**Datensatz-Objekt**](record-object.md)
+-   [**Datensatzobjekt**](record-object.md)
 -   [**RecordList-Objekt**](recordlist-object.md)
--   [**Session-Objekt**](session-object.md)
--   [**Stringlist-Objekt**](stringlist-object.md)
+-   [**Sitzungsobjekt**](session-object.md)
+-   [**StringList-Objekt**](stringlist-object.md)
 -   [**SummaryInfo-Objekt**](summaryinfo-object.md)
--   [**Uipreview-Objekt**](uipreview-object.md)
--   [**Objekt anzeigen**](view-object.md)
+-   [**UIPreview-Objekt**](uipreview-object.md)
+-   [**View-Objekt**](view-object.md)
 
  
 

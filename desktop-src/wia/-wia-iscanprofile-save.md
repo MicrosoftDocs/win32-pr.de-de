@@ -1,7 +1,7 @@
 ---
-description: Speichert Änderungen an einem Profil auf der Festplatte.
+description: Speichert Änderungen an einem Profil auf dem Datenträger.
 ms.assetid: e844bd4c-93c3-44a3-b7d5-0beb71c9fa17
-title: 'Iscanprofile:: Save-Methode (Scanprofile. h)'
+title: IScanProfile::Save-Methode (Scanprofile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Scanprofile.h
-ms.openlocfilehash: 6d4787380344a7bf8adb70f4cb5a3eaacdea403a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7cf4201a0d149c7b529e595d7f2c2ea92a6010f6cffd3e6c5c74fb3cdc040651
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527086"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119450920"
 ---
-# <a name="iscanprofilesave-method"></a>Iscanprofile:: Save-Methode
+# <a name="iscanprofilesave-method"></a>IScanProfile::Save-Methode
 
-Speichert Änderungen an einem Profil auf der Festplatte.
+Speichert Änderungen an einem Profil auf dem Datenträger.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,27 +41,27 @@ Diese Methode hat keine Parameter.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei einem gespeicherten Überprüfungs Profil handelt es sich um eine XML-Datei, die unter% User Profile% \\ Application Data \\ Microsoft \\ Document Center \\ userscanprofiles gespeichert ist.
+Ein gespeichertes Scanprofil ist eine XML-Datei, die unter %USERPROFILE% \\ Application Data Microsoft Document Center \\ \\ \\ UserScanProfiles gespeichert ist.
 
-Wenn mehr als ein Prozess in das [**iscanprofile**](-wia-iscanprofile.md) -Objekt schreibt, ist das Objekt, das **iscanprofile:: Save** Last aufruft, der einzige Prozess, dessen Änderungen gespeichert werden.
+Wenn mehr als ein Prozess in das [**IScanProfile-Objekt**](-wia-iscanprofile.md) schreibt, ist der Prozess, der **IScanProfile::Save last aufruft,** der einzige Prozess, dessen Änderungen gespeichert werden.
 
-Die **iscanprofile:: Save** -Methode überprüft das Profil vor dem Speichern. Das Profil wird immer als gültig angesehen, es sei denn, die Kategorie des Windows-Abbild Erwerbs (WIA) 2,0-Elements, das mit dem Profil verknüpft ist, ist entweder eine Kategorie mit einem \_ \_ Flatbed oder eine \_ Kategorie- \_ Feed Wenn es sich bei der Kategorie um eine Kategorie vom Typ " \_ Kategorie für \_ flatgrades" oder um einen \_ kategorieanleger handelt \_ , müssen die folgenden Eigenschaften für das Element gültig sein, wenn die Eigenschaften im Profil enthalten sind:
+Die **IScanProfile::Save-Methode** überprüft das Profil vor dem Speichern. Das Profil gilt immer als gültig, es sei denn, die Kategorie des elements Windows Image Acquisition (WIA) 2.0, das dem Profil zugeordnet ist, ist entweder WIA \_ CATEGORY \_ FLATBED oder WIA \_ CATEGORY \_ FEEDER. Wenn die Kategorie WIA \_ CATEGORY \_ FLATBED oder WIA \_ CATEGORY \_ FEEDER ist, müssen die folgenden Eigenschaften für das Element gültig sein, wenn die Eigenschaften im Profil enthalten sind:
 
-Helligkeit der WIA- \_ IPS \_
+WIA \_ \_ IPS-HELLIGKEIT
 
-Kontrast zwischen WIA- \_ IPS \_
+\_WIA-IPS-KONTRAST \_
 
-WIA \_ IPA- \_ DataType
+WIA \_ \_ IPA-DATENTYP
 
-WIA- \_ IPS- \_ xres
+WIA \_ IPS \_ XRES
 
-WIA \_ IPA- \_ Format
+WIA \_ \_ IPA-FORMAT
 
-Wenn es sich bei der Kategorie um einen "a category"-Wert handelt \_ \_ , muss die Eigenschaft "WIA \_ IPS page size" ggf \_ \_ . gültig sein, wenn Sie im Profil vorhanden ist. Weitere Informationen zu diesen Eigenschaften finden Sie unter [**Scanner WIA Item Property Konstanten**](-wia-wiaitempropscanneritem.md).
+Wenn es sich bei der Kategorie um WIA \_ CATEGORY \_ FEEDER handelt, muss die \_ WIA IPS PAGE \_ \_ SIZE-Eigenschaft gültig sein, sofern sie im Profil vorhanden ist. Weitere Informationen zu diesen Eigenschaften finden Sie unter [**Scanner WIA Item Property Constants**](-wia-wiaitempropscanneritem.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,21 +69,21 @@ Wenn es sich bei der Kategorie um einen "a category"-Wert handelt \_ \_ , muss d
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Scanprofile. h</dt> </dl>    |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofile.h</dt> </dl>    |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscanprofile**](-wia-iscanprofile.md)
+[**IScanProfile**](-wia-iscanprofile.md)
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scanprofilschema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

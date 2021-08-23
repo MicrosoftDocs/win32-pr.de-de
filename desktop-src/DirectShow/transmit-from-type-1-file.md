@@ -1,27 +1,27 @@
 ---
-description: Übertragen von Datei vom Typ "-1"
+description: Übertragen von Einer Datei vom Typ 1
 ms.assetid: 5be2248b-7917-4c1b-9ae7-29e06779eac6
-title: Übertragen von Datei vom Typ "-1"
+title: Übertragen von Einer Datei vom Typ 1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74e38ed3e549b6cd671248ba1df9b24df8fbfe3e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e62ce67627c350c24de1bf1ee96ba7804ac3f164264e167498c597e8136ea138
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042410"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119015532"
 ---
-# <a name="transmit-from-type-1-file"></a>Übertragen von Datei vom Typ "-1"
+# <a name="transmit-from-type-1-file"></a>Übertragen von Einer Datei vom Typ 1
 
-Verwenden Sie das in der folgenden Abbildung gezeigte Filter Diagramm, um eine Datei vom Typ 1 zu übertragen, während Sie die Datei in der Vorschau anzeigen.
+Um eine Datei vom Typ 1 während der Vorschau der Datei zu übertragen, verwenden Sie das im folgenden Diagramm gezeigte Filterdiagramm.
 
 ![Type-1-Übertragung mit Vorschau](images/dv1-transmit.png)
 
-Die Filter in diesem Diagramm umfassen Folgendes:
+Filter in diesem Diagramm umfassen Folgendes:
 
--   Der [avi-Splitter](avi-splitter-filter.md) analysiert die AVI-Datei. Für eine DV-Datei vom Typ "1" liefert die Ausgabe-PIN verschachtelte DV-Beispiele.
--   Der [unendliche Pin-Tee](infinite-pin-tee-filter.md) -Filter teilt den verschachtelten DV in einen übertragungstream und einen Vorschau Datenstrom. Beide Streams enthalten die gleichen verschachtelten Daten. (Dieses Diagramm verwendet den unendlichen Pin-Tee anstelle des [intelligenten Ausstellers](smart-tee-filter.md), da es keine Gefahr gibt, Rahmen beim Lesen aus einer Datei zu löschen, wie es bei Live Capture der Fall ist.)
--   Der [DV-Splitter](dv-splitter-filter.md) teilt den verschachtelten Stream in einen DV-Videostream, der vom [DV-Video Decoder](dv-video-decoder-filter.md)und einem Audiostream decodiert wird. Beide Streams sind rendererd für die Vorschau.
+-   Der [AVI-Splitter](avi-splitter-filter.md) analysiert die AVI-Datei. Für eine DV-Datei vom Typ 1 stellt der Ausgabepin verschachtelte DV-Beispiele bereit.
+-   Der [Filter Infinite Pin Tee](infinite-pin-tee-filter.md) teilt die überlappende DV in einen Übertragungsstream und einen Vorschaudatenstrom auf. Beide Streams enthalten dieselben überlappende Daten. (In diesem Diagramm wird die Unendliche Pin Tee anstelle von [Smart Tee](smart-tee-filter.md)verwendet, da beim Lesen aus einer Datei keine Gefahr besteht, Frames zu löschen, wie es bei live capture der Fall ist.)
+-   Der [DV-Splitter](dv-splitter-filter.md) teilt den überlappenden Stream in einen DV-Videostream auf, der vom [DV-Videodecoder](dv-video-decoder-filter.md)decodiert wird, und einen Audiostream. Beide Streams werden für die Vorschau gerendert.
 
 Erstellen Sie dieses Diagramm wie folgt:
 
@@ -75,14 +75,14 @@ hr = pBuilder->RenderStream(0, 0, pTee, 0, 0);
 
 
 
-1.  Aufrufen von [**igraphbuilder:: addsourcefilter**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-addsourcefilter) zum Hinzufügen des Quell Filters zum Filter Diagramm.
-2.  Erstellen Sie den avi-Splitter und den unbegrenzten Pin-Tee, und fügen Sie Sie dem Diagramm hinzu.
-3.  Ruft [**ICaptureGraphBuilder2:: RenderStream**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream) auf, um den Quell Filter mit dem avi-Splitter zu verbinden. Angeben von MediaType \_ , um sicherzustellen, dass die Methode fehlschlägt, wenn die Quelldatei keine Type-1-DV-Datei ist. In diesem Fall können Sie den Typ-2-Übertragungs Graph stattdessen wiederherstellen und versuchen, ein Diagramm vom Typ 2 zu erstellen.
-4.  **RenderStream** erneut aufgerufen, um den überlappenden Stream vom avi-Splitter an den unbegrenzten Pin-Empfänger weiterzuleiten
-5.  RenderStream wird ein drittes Mal aufgerufen, um einen Stream vom unbegrenzten Pin-Empfänger an den msdv-Filter für die Übertragung an das Gerät weiterzuleiten.
-6.  **RenderStream** ein letztes Mal aufgerufen, um den Vorschau Abschnitt des Diagramms zu erstellen.
+1.  Rufen Sie [**IGraphBuilder::AddSourceFilter**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-addsourcefilter) auf, um dem Filterdiagramm den Quellfilter hinzuzufügen.
+2.  Erstellen Sie den AVI-Splitter und den Infinite Pin Tee, und fügen Sie sie dem Diagramm hinzu.
+3.  Rufen Sie [**ICaptureGraphBuilder2::RenderStream**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream) auf, um den Quellfilter mit dem AVI-Splitter zu verbinden. Geben Sie MEDIATYPE \_ Interleaved an, um sicherzustellen, dass die Methode fehlschlägt, wenn es sich bei der Quelldatei nicht um eine DV-Datei vom Typ 1 handelt. In diesem Fall können Sie ein Back-Out ausführen und stattdessen versuchen, ein Typ-2-Übertragungsdiagramm zu erstellen.
+4.  Rufen Sie **RenderStream** erneut auf, um den verschachtelten Stream vom AVI-Splitter an die Unendliche Pin Tee weiterzuleiten.
+5.  Rufen Sie RenderStream ein drittes Mal auf, um einen Stream vom Infinite Pin Tee an den MSDV-Filter für die Übertragung an das Gerät weiterzuleiten.
+6.  Rufen Sie **RenderStream** ein letztes Mal auf, um den Vorschauabschnitt des Diagramms zu erstellen.
 
-Wenn Sie die Vorschau nicht wünschen, verbinden Sie einfach die Datei Quelle mit dem msdv-Filter:
+Wenn Sie keine Vorschauversion wünschen, verbinden Sie einfach die Dateiquelle mit dem MSDV-Filter:
 
 
 ```C++

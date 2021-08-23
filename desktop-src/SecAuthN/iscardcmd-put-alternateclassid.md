@@ -1,7 +1,7 @@
 ---
-description: Gibt einen neuen alternativen Klassen Bezeichner in APDU (Application Protocol Data Unit) an.
+description: Gibt einen neuen alternativen Klassenbezeichner in der Application Protocol Data Unit (APDU) an.
 ms.assetid: 45a49699-41ce-439c-b896-e663a290b188
-title: Iscardcmd::p ut_AlternateClassId-Methode (scarddat. h)
+title: ISCardCmd::p ut_AlternateClassId-Methode (Discountddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: ee1ee5da5875ec2fa1f4f7f6e474f551befdaf8b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd1f74dee017cb72a67ecb4a9fc42da85153966336b25e54819be13464b3b7e6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119481560"
 ---
-# <a name="iscardcmdput_alternateclassid-method"></a>Iscardcmd::p UT \_ -Methode "alternative Methode"
+# <a name="iscardcmdput_alternateclassid-method"></a>ISCardCmd::p ut \_ AlternateClassId-Methode
 
-\[Die **Put \_ -** Methode "Alternativen" ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **\_ put AlternateClassId-Methode** steht für die Verwendung in den Betriebssystemen zur Verfügung, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **Put Alternate \_ eclassid-** Methode gibt einen neuen alternativen Klassen Bezeichner in der [*Anwendungsprotokoll Daten-Einheit*](../secgloss/a-gly.md) (APDU) an.
+Die **put \_ AlternateClassId-Methode** gibt einen neuen alternativen Klassenbezeichner in der [*Application Protocol Data Unit*](../secgloss/a-gly.md) (APDU) an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,35 +41,35 @@ HRESULT put_AlternateClassId(
 
 <dl> <dt>
 
-*byclass* \[ in\]
+*byClass* \[ In\]
 </dt> <dd>
 
-Alternativer Klassen Bezeichner. Der Standardwert ist 0 (null).
+Alternativer Klassenbezeichner. Der Standardwert ist 0 (null).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                      |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Operation erfolgreich abgeschlossen.<br/>     |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Der *byclass* -Parameter ist ungültig.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der *byClass-Parameter* ist ungültig.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Kommunikation mit dem [*T = 0-Protokoll*](../secgloss/t-gly.md)können zusätzliche Karten Befehle automatisch von APDU generiert und an die Übertragungsprotokoll-Dateneinheit gesendet werden. Die zusätzlichen Befehle verwenden normalerweise dieselbe Klassen-ID wie der ursprüngliche Befehl. durch die Angabe einer neuen Klassen-ID mithilfe dieser Methode können automatisch generierte Befehle die neue Klassen-ID verwenden.
+Bei der Kommunikation mit dem [*T=0-Protokoll*](../secgloss/t-gly.md)können zusätzliche Kartenbefehle automatisch von der APDU generiert und an die Übertragungsprotokoll-Dateneinheit (TPDU) gesendet werden. Die zusätzlichen Befehle verwenden in der Regel die gleiche Klassen-ID wie der ursprüngliche Befehl. Durch das Angeben einer neuen Klassen-ID mithilfe dieser Methode können automatisch generierte Befehle die neue Klassen-ID verwenden.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie Sie einen neuen alternativen Klassen Bezeichner in der [*Anwendungsprotokoll Daten-Einheit (Application Protocol Data Unit*](../secgloss/a-gly.md) , APDU) festlegen. Im Beispiel wird davon ausgegangen, dass "piscardcmd" ein gültiger Zeiger auf eine Instanz der [**iscardcmd**](iscardcmd.md) -Schnittstelle ist.
+Das folgende Beispiel zeigt, wie sie einen neuen alternativen Klassenbezeichner in der [*Anwendungsprotokolldateneinheit*](../secgloss/a-gly.md) (APPLICATION Protocol Data Unit, APDU) festlegen. Im Beispiel wird davon ausgegangen, dass pISCardCmd ein gültiger Zeiger auf eine Instanz der [**ISCardCmd-Schnittstelle**](iscardcmd.md) ist.
 
 
 ```C++
@@ -92,25 +92,25 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Ddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Ddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardcmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
+| IID<br/>                      | IID \_ ISCardCmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscardcmd**](iscardcmd.md)
+[**ISCardCmd**](iscardcmd.md)
 </dt> <dt>
 
-[**\_Alternative zum abwechseln**](iscardcmd-get-alternateclassid.md)
+[**Get \_ AlternateClassId**](iscardcmd-get-alternateclassid.md)
 </dt> </dl>
 
  

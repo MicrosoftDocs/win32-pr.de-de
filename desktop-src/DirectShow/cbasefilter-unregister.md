@@ -1,7 +1,7 @@
 ---
-description: Mit der Unregister-Methode wird der Filter aus der Registrierung entfernt.
+description: Die Unregister-Methode entfernt den Filter aus der Registrierung.
 ms.assetid: 2eb70e9f-1acf-433e-972f-24fb32eaeb13
-title: Cbasefilter. Unregister-Methode (amfilter. h)
+title: CBaseFilter.Unregister-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,19 +16,19 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8b46e74e4009f6767788fa120984eca0e89fb551
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c57d08c77c9c420cdc45b158a19fa610231f53f6b409d8b650953de0de8381a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370042"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119317900"
 ---
-# <a name="cbasefilterunregister-method"></a>Cbasefilter. Unregister-Methode
+# <a name="cbasefilterunregister-method"></a>CBaseFilter.Unregister-Methode
 
-Die- `Unregister` Methode entfernt den Filter aus der Registrierung.
+Die `Unregister` -Methode entfernt den Filter aus der Registrierung.
 
 > [!Note]  
-> Diese Methode ist veraltet. Die Registrierung neuer Filter sollte mithilfe der [**AMovieDllRegisterServer2**](amoviedllregisterserver2.md) -Funktion aufgehoben werden. Weitere Informationen finden Sie unter Vorgehens [Weise beim Registrieren von DirectShow-Filtern](how-to-register-directshow-filters.md).
+> Diese Methode ist veraltet. Die Registrierung neuer Filter sollte mithilfe der [**Funktion AMovieDllRegisterServer2**](amoviedllregisterserver2.md) aufgehoben werden. Weitere Informationen finden Sie unter [Registrieren von DirectShow-Filtern.](how-to-register-directshow-filters.md)
 
  
 
@@ -47,7 +47,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache des Fehlers angibt.
+Gibt bei Erfolg S \_ OK oder einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,16 +55,16 @@ Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache de
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

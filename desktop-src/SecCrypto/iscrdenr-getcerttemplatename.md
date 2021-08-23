@@ -1,7 +1,7 @@
 ---
-description: Ruft den Namen der Zertifikat Vorlage ab.
+description: Ruft den Namen der Zertifikatvorlage ab.
 ms.assetid: 26fd758a-b348-4efb-841b-c8f2ab88efea
-title: 'Iscrdenr:: getcerttemplatename-Methode'
+title: ISCrdEnr::getCertTemplateName-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Scrdenrl.dll
-ms.openlocfilehash: 4eee84140e0a23b8a0dd5d26099ca61b868a90fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aaf37f3907bc2b26ca1adbbded7be5ed7897a74ea9664d4353354d5ad9657d7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119409620"
 ---
-# <a name="iscrdenrgetcerttemplatename-method"></a>Iscrdenr:: getcerttemplatename-Methode
+# <a name="iscrdenrgetcerttemplatename-method"></a>ISCrdEnr::getCertTemplateName-Methode
 
-Die **getcerttemplatename** -Methode ruft den Namen der Zertifikat Vorlage ab.
+Die **getCertTemplateName-Methode** ruft den Namen der Zertifikatvorlage ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,17 +52,17 @@ SCrdEnr.getCertTemplateName( _
 
 <dl> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Ein-Wert, der bestimmt, ob der tatsächliche Name oder der Anzeige Name der Zertifikat Vorlage zurückgegeben wird. Wenn *dwFlags* den \_ \_ \_ \_ anzeigen Amen "Name der Zertifikat Vorlage" aufweisen \_ , wird der Anzeige Name der Zertifikat Vorlage abgerufen. andernfalls wird der tatsächliche Name der Zertifikat Vorlage angezeigt.
+Ein -Wert, der bestimmt, ob der echte Name oder Anzeigename der Zertifikatvorlage zurückgegeben wird. Wenn *dwFlags* über den Wert SCARD \_ ENROLL CERT TEMPLATE DISPLAY NAME verfügt, wird der Anzeigename der Zertifikatvorlage abgerufen. Andernfalls wird der tatsächliche Name der Zertifikatvorlage \_ \_ \_ \_ angezeigt.
 
 </dd> <dt>
 
-*pbstraucerttemplatename* \[ vorgenommen\]
+*pbstrCertTemplateName* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Zeichenfolge, die den Namen der Zertifikat Vorlage zurückgibt, die in der [*Zertifikat Anforderung*](../secgloss/c-gly.md)verwendet wird.
+Ein Zeiger auf eine Zeichenfolge, die den Namen der Zertifikatvorlage zurückgibt, die in der Zertifikatanforderung [*verwendet wird.*](../secgloss/c-gly.md)
 
 </dd> </dl>
 
@@ -70,17 +70,17 @@ Ein Zeiger auf eine Zeichenfolge, die den Namen der Zertifikat Vorlage zurückgi
 
 ### <a name="c"></a>C++
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt die Methode S \_ OK zurück.
+Wenn die Methode erfolgreich ist, gibt die Methode S \_ OK zurück.
 
-Wenn die Methode fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
+Wenn bei der Methode ein Fehler auftritt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
 
 ### <a name="vb"></a>VB
 
-Eine Zeichenfolge, die den Namen der Zertifikat Vorlage darstellt, die in der [*Zertifikat Anforderung*](../secgloss/c-gly.md)verwendet wird.
+Eine Zeichenfolge, die den Namen der Zertifikatvorlage darstellt, die in der Zertifikatanforderung [*verwendet wird.*](../secgloss/c-gly.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Namen der Zertifikat Vorlage nicht durch Aufrufen von [**iscrdenr:: setcerttemplatename**](iscrdenr-setcerttemplatename.md)festlegen, wird der Name standardmäßig auf den Vornamen in der Liste der verfügbaren Zertifikat Vorlagen festgelegt.
+Wenn Sie den Namen der Zertifikatvorlage nicht durch Aufrufen von [**ISCrdEnr::setCertTemplateName**](iscrdenr-setcerttemplatename.md)festlegen, wird der Name standardmäßig auf den Vornamen in der Liste der verfügbaren Zertifikatvorlagen festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,20 +89,20 @@ Wenn Sie den Namen der Zertifikat Vorlage nicht durch Aufrufen von [**iscrdenr::
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Scrdenrl.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscrdenr ist definiert als 753988a1-1357-436d-9cf5-f089bdd67d64<br/>             |
+| IID<br/>                      | IID \_ ISCrdEnr ist als 753988a1-1357-436d-9cf5-f089bdd67d64 definiert.<br/>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscrdenr**](iscrdenr.md)
+[**ISCrdEnr**](iscrdenr.md)
 </dt> <dt>
 
-[**Iscrdenr:: setcerttemplatename**](iscrdenr-setcerttemplatename.md)
+[**ISCrdEnr::setCertTemplateName**](iscrdenr-setcerttemplatename.md)
 </dt> </dl>
 
  

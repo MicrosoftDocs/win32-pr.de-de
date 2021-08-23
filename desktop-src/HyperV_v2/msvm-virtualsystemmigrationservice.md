@@ -1,5 +1,5 @@
 ---
-description: Stellt den Dienst für die virtuelle System Migration dar. Sie wird zum Migrieren eines virtuellen Systems oder zum Migrieren des Speichers eines virtuellen Systems von einer Virtualisierungsplattform zu einem anderen verwendet.
+description: Stellt den Migrationsdienst des virtuellen Systems dar. Es wird zum Migrieren eines virtuellen Systems oder zum Migrieren des Speichers eines virtuellen Systems von einer Virtualisierungsplattform zu einer anderen verwendet.
 ms.assetid: af25e405-4498-40a8-ba8e-4b3873c56097
 title: Msvm_VirtualSystemMigrationService-Klasse
 ms.topic: reference
@@ -44,18 +44,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1e80cb12e6e6767b49670a1aff68c9791f224068
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 87fa9fe2b15c7ed013e5e8cb8687c4d3ccb02193b48ee037c55273a50a7f84e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119147963"
 ---
-# <a name="msvm_virtualsystemmigrationservice-class"></a>MSVM \_ virtualsystemmigrationservice-Klasse
+# <a name="msvm_virtualsystemmigrationservice-class"></a>Msvm \_ VirtualSystemMigrationService-Klasse
 
-Stellt den Dienst für die virtuelle System Migration dar. Sie wird zum Migrieren eines virtuellen Systems oder zum Migrieren des Speichers eines virtuellen Systems von einer Virtualisierungsplattform zu einem anderen verwendet.
+Stellt den Migrationsdienst des virtuellen Systems dar. Es wird zum Migrieren eines virtuellen Systems oder zum Migrieren des Speichers eines virtuellen Systems von einer Virtualisierungsplattform zu einer anderen verwendet.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -99,33 +99,33 @@ class Msvm_VirtualSystemMigrationService : CIM_VirtualSystemMigrationService
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualsystemmigrationservice** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualSystemMigrationService-Klasse** verfügt über folgende Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MSVM \_ virtualsystemmigrationservice** -Klasse verfügt über diese Methoden.
+Die **Msvm \_ VirtualSystemMigrationService-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                                                  | BESCHREIBUNG                                                                                                                                                                  |
 |:------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Addnetworksettings**](addnetworksettings-msvm-virtualsystemmigrationservice.md)                                     | Fügt Subnetze für die Migration des virtuellen System Migrations Dienstanbieter hinzu.<br/>                                                                                          |
-| [**Checksystemcompatibilityinfo**](checksystemcompatibilityinfo-msvm-virtualsystemmigrationservice.md)                 | Überprüft die Kompatibilitätsinformationen auf die Kompatibilität mit dem hostingcomputersystem.<br/>                                                                          |
-| [**CheckVirtualSystemIsMigratable**](checkvirtualsystemismigratable-msvm-virtualsystemmigrationservice.md)             | Methode zum Migrieren eines virtuellen Systems oder des Speichers eines virtuellen Systems zu einem durch einen Hostnamen angegebenen Zielhost.<br/>                                              |
-| [**CheckVirtualSystemIsMigratableToHost**](checkvirtualsystemismigratabletohost-msvm-virtualsystemmigrationservice.md) | Bestimmt, ob das angegebene virtuelle System zu einem Zielhost migriert werden kann, der von einem Netzwerknamen oder einer IP-Adresse angegeben wird.<br/>                                       |
-| [**Getsystemcompatibilityinfo**](getsystemcompatibilityinfo-msvm-virtualsystemmigrationservice.md)                     | Generiert ein undurchsichtiges BLOB von Daten, das Kompatibilitätsinformationen für das angegebene System enthält.<br/>                                                                |
-| [**Getsystemcompatibilityvectors**](getsystemcompatibilityvectors-msvm-virtualsystemmigrationservice.md)               | Ruft Kompatibilitäts Vektoren für eine virtuelle Maschine oder einen Host ab.<br/> **Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.<br/> |
+| [**AddNetworkSettings**](addnetworksettings-msvm-virtualsystemmigrationservice.md)                                     | Fügt Migrationsnetzwerksubnetze für den Migrationsdienst des virtuellen Systems hinzu.<br/>                                                                                          |
+| [**CheckSystemCompatibilityInfo**](checksystemcompatibilityinfo-msvm-virtualsystemmigrationservice.md)                 | Überprüft die Kompatibilitätsinformationen auf Kompatibilität mit dem Hostcomputersystem.<br/>                                                                          |
+| [**CheckVirtualSystemIsMigratable**](checkvirtualsystemismigratable-msvm-virtualsystemmigrationservice.md)             | Methode zum Migrieren eines virtuellen Systems oder des Speichers eines virtuellen Systems zu einem Zielhost, der durch einen Hostnamen angegeben wird.<br/>                                              |
+| [**CheckVirtualSystemIsMigratableToHost**](checkvirtualsystemismigratabletohost-msvm-virtualsystemmigrationservice.md) | Bestimmt, ob das angegebene virtuelle System zu einem Zielhost migriert werden kann, der durch einen Netzwerknamen oder eine IP-Adresse angegeben wird.<br/>                                       |
+| [**GetSystemCompatibilityInfo**](getsystemcompatibilityinfo-msvm-virtualsystemmigrationservice.md)                     | Generiert ein nicht transparentes Datenblob, das Kompatibilitätsinformationen für das angegebene System enthält.<br/>                                                                |
+| [**GetSystemCompatibilityVectors**](getsystemcompatibilityvectors-msvm-virtualsystemmigrationservice.md)               | Ruft Kompatibilitätsvektoren für einen virtuellen Computer oder einen Host ab.<br/> **Windows 8.1:** Dieser Wert wird erst Windows 8.1 und Windows Server 2012 R2 unterstützt.<br/> |
 | [**MigrateVirtualSystemToHost**](migratevirtualsystemtohost-msvm-virtualsystemmigrationservice.md)                     | Migriert ein virtuelles System oder den Speicher eines virtuellen Systems zu einem Zielhost, der durch einen Hostnamen angegeben wird.<br/>                                                       |
-| [**MigrateVirtualSystemToSystem**](migratevirtualsystemtosystem-msvm-virtualsystemmigrationservice.md)                 | Verschieben, migrieren oder Verschieben eines virtuellen Systems in ein Zielsystem.<br/>                                                                                                |
-| [**Modifynetworksettings**](modifynetworksettings-msvm-virtualsystemmigrationservice.md)                               | Ändert die Migrations Netzwerksubnetze des virtuellen System Migrations Dienstanbieter.<br/>                                                                                       |
-| [**Modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmigrationservice.md)                               | Ändert die Einstellungsdaten für den Migrationsdienst.<br/>                                                                                                              |
-| [**Removenetworksettings**](removenetworksettings-msvm-virtualsystemmigrationservice.md)                               | Entfernt die Subnetze des Migrationsnetzwerks aus dem virtuellen System Migrationsdienst.<br/>                                                                                      |
-| [**RequestStateChange**](msvm-virtualsystemmigrationservice-requeststatechange.md)                                     | Fordert eine Statusänderung an.<br/>                                                                                                                                           |
-| [**Start Service**](msvm-virtualsystemmigrationservice-startservice.md)                                                 | Startet den Dienst.<br/>                                                                                                                                               |
-| [**Stop Service**](msvm-virtualsystemmigrationservice-stopservice.md)                                                   | Beendet den Dienst.<br/>                                                                                                                                                |
+| [**MigrateVirtualSystemToSystem**](migratevirtualsystemtosystem-msvm-virtualsystemmigrationservice.md)                 | Verschiebt, migriert oder verschiebt ein virtuelles System in ein Zielsystem.<br/>                                                                                                |
+| [**ModifyNetworkSettings**](modifynetworksettings-msvm-virtualsystemmigrationservice.md)                               | Ändert die Migrationsnetzwerksubnetze des Migrationsdiensts des virtuellen Systems.<br/>                                                                                       |
+| [**ModifyServiceSettings**](modifyservicesettings-msvm-virtualsystemmigrationservice.md)                               | Ändert die Einstellungsdaten für den Migrationsdienst.<br/>                                                                                                              |
+| [**RemoveNetworkSettings**](removenetworksettings-msvm-virtualsystemmigrationservice.md)                               | Entfernt Migrationsnetzwerksubnetze aus dem Migrationsdienst des virtuellen Systems.<br/>                                                                                      |
+| [**RequestStateChange**](msvm-virtualsystemmigrationservice-requeststatechange.md)                                     | Fordert eine Zustandsänderung an<br/>                                                                                                                                           |
+| [**Startservice**](msvm-virtualsystemmigrationservice-startservice.md)                                                 | Startet den Dienst.<br/>                                                                                                                                               |
+| [**StopService**](msvm-virtualsystemmigrationservice-stopservice.md)                                                   | Beendet den Dienst.<br/>                                                                                                                                                |
 
 
 
@@ -133,183 +133,183 @@ Die **MSVM \_ virtualsystemmigrationservice** -Klasse verfügt über diese Metho
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualsystemmigrationservice** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualSystemMigrationService-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Activestoragemigrationcount**
+**ActiveStorageMigrationCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der aktuellen Speicher Migrationen, die gerade ausgeführt werden.
+Die Anzahl der aktuell ausgeführten Speichermigrationen.
 
 </dd> <dt>
 
-**Activevirtualsystemmigrationcount**
+**ActiveVirtualSystemMigrationCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der aktuellen virtuellen System Migrationen, die gerade ausgeführt werden.
+Die Anzahl der aktuell ausgeführten Migrationen des virtuellen Systems.
 
 </dd> <dt>
 
-**Availablerequestedstates**
+**AvailableRequestedStates**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die möglichen Werte für den *requestedstate* -Parameter der **requestStateChange** -Methode an. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Gibt die möglichen Werte für den *RequestedState-Parameter* der **RequestStateChange-Methode** an. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Hyper-V-Migrationsdienst" festgelegt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Hyper-V Migration Service" festgelegt.
 
 </dd> <dt>
 
-**Communicationstatus**
+**CommunicationStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Klasse oder Unterklasse, die bei der Erstellung einer-Instanz verwendet wird. Diese Eigenschaft wird vom [**CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-service)geerbt und ist immer auf "MSVM \_ virtualsystemmigrationservice" festgelegt.
+Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Diese Eigenschaft wird vom [**\_ CIM-Dienst**](/windows/desktop/CIMWin32Prov/cim-service)geerbt und immer auf "Msvm \_ VirtualSystemMigrationService" festgelegt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Hyper-V-Migrationsdienst" festgelegt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Hyper-V Migration Service" festgelegt.
 
 </dd> <dt>
 
 **DetailedStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ergänzt die **primarystatus** -Eigenschaft mit zusätzlichen Status Details. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Ergänzt die **PrimaryStatus-Eigenschaft** um zusätzliche Statusdetails. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Hyper-V-Migrationsdienst" festgelegt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Hyper-V Migration Service" festgelegt.
 
 </dd> <dt>
 
-**Enableddefault**
+**EnabledDefault**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Standard-oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt und ist immer auf 2 (aktiviert) festgelegt.
+Die Standard- oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt und immer auf 2 (Aktiviert) festgelegt.
 
 </dd> <dt>
 
 **EnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktivierte und deaktivierte Status eines Elements. Diese Eigenschaft kann auch die Übergänge zwischen diesen angeforderten Zuständen angeben. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt und ist immer auf 2 (aktiviert) festgelegt.
+Der aktivierte und deaktivierte Zustände eines Elements. Diese Eigenschaft kann auch die Übergänge zwischen diesen angeforderten Zuzuständen angeben. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt**](/previous-versions//cc136818(v=vs.85))und immer auf 2 (Aktiviert) festgelegt.
 
 </dd> <dt>
 
 **HealthState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Zustand des Elements. Dieses Attribut drückt den Zustand dieses Elements aus, aber nicht notwendigerweise dessen unter Komponenten. Mögliche Werte sind 0 bis 30, wobei 5 bedeutet, dass das Element vollständig fehlerfrei ist und 30 bedeutet, dass das Element vollständig nicht funktionsfähig ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf 5 (OK) festgelegt.
+Die aktuelle Integrität des Elements. Dieses Attribut drückt die Integrität dieses Elements aus, aber nicht notwendigerweise die Integrität seiner Unterkomponenten. Die möglichen Werte sind 0 bis 30, wobei 5 bedeutet, dass das Element vollständig fehlerfrei ist, und 30 bedeutet, dass das Element vollständig nichtfunktional ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)und immer auf 5 (OK) festgelegt.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der Erstellung der Konfiguration der virtuellen Maschine. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Das Datum und die Uhrzeit der Erstellung der Konfiguration des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -318,228 +318,228 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf **null** festgelegt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
-**Migrationservicelisteneripaddresslist**
+**MigrationServiceListenerIPAddressList**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Liste der Host-IP-Adressen, die für die Migration des virtuellen Systems verwendet werden können.
+Die Liste der Host-IP-Adressen, die für die Migration virtueller Systeme verwendet werden können.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Bezeichnung, mit der das-Objekt bekannt ist. Diese Eigenschaft wird vom [**CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-service)geerbt und ist immer auf "migrationwmi" festgelegt.
+Die Bezeichnung, unter der das -Objekt bekannt ist. Diese Eigenschaft wird vom [**\_ CIM-Dienst geerbt**](/windows/desktop/CIMWin32Prov/cim-service)und immer auf "migrationwmi" festgelegt.
 
 </dd> <dt>
 
-**Operatingstatus**
+**OperatingStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit und kann verwendet werden, um weitere Details in Bezug auf den Wert der **enabledstate** -Eigenschaft bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt aktuelle Statusinformationen für die Betriebsbedingung des Elements zur Verfügung und kann verwendet werden, um weitere Details in Bezug auf den Wert der **EnabledState-Eigenschaft** zu erhalten. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 </dd> <dt>
 
 **OperationalStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die aktuellen Status des-Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, und jedes Array Element ist immer auf 2 (OK) festgelegt.
+Die aktuellen Status des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt,**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)und jedes Arrayelement ist immer auf 2 (OK) festgelegt.
 
 </dd> <dt>
 
-**Otherenabledstate**
+**OtherEnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktivierten oder deaktivierten Status des Elements beschreibt, wenn die **enabledstate** -Eigenschaft auf 1 (Sonstiges) festgelegt ist. Diese Eigenschaft muss auf **null** festgelegt werden, wenn **enabledstate** ein anderer Wert als 1 ist. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt und ist immer auf **null** festgelegt.
+Eine Zeichenfolge, die den aktivierten oder deaktivierten Zustand des Elements beschreibt, wenn die **EnabledState-Eigenschaft** auf 1 (Sonstige) festgelegt ist. Diese Eigenschaft muss auf NULL **festgelegt** werden, wenn **EnabledState** ein anderer Wert als 1 ist. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt**](/previous-versions//cc136818(v=vs.85))und immer auf NULL **festgelegt.**
 
 </dd> <dt>
 
 **PrimaryOwnerContact**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Wert, der Informationen darüber bereitstellt, wie der primäre Besitzer des Dienstanbieter erreicht werden kann (z. b. Telefonnummer, e-Mail-Adresse usw.). Diese Eigenschaft wird vom [**CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-service)geerbt und ist immer auf **null** festgelegt.
+Ein -Wert, der Informationen darüber enthält, wie der primäre Besitzer des Diensts erreicht werden kann (z. B. Telefonnummer, E-Mail-Adresse und so weiter). Diese Eigenschaft wird vom [**\_ CIM-Dienst geerbt**](/windows/desktop/CIMWin32Prov/cim-service)und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
-**Primaryownername**
+**PrimaryOwnerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des primären Besitzers für den Dienst, sofern definiert. Der primäre Besitzer ist der erste Support Kontakt für den Dienst. Diese Eigenschaft wird vom [**CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-service)geerbt und ist immer auf **null** festgelegt.
+Der Name des primären Besitzers für den Dienst, sofern definiert. Der primäre Besitzer ist der erste Supportkontakt für den Dienst. Diese Eigenschaft wird vom [**\_ CIM-Dienst geerbt**](/windows/desktop/CIMWin32Prov/cim-service)und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
-**Primarystatus**
+**PrimaryStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt Statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der Eigenschaft **detailedstatus** verwendet werden, um einen hohen und detaillierten Integritäts Status des Elements und seiner unter Komponenten bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt Statusinformationen auf hoher Ebene zur Verfügung. Diese Eigenschaft sollte in Verbindung mit der **DetailedStatus-Eigenschaft** verwendet werden, um einen hohen und detaillierten Integritätsstatus des Elements und seiner Unterkomponenten zu bieten. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 </dd> <dt>
 
 **RequestedState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der zuletzt angeforderte oder gewünschte Zustand für das Element. Der tatsächliche Zustand des Elements wird durch **enabledstate** dargestellt. Diese Eigenschaft wird bereitgestellt, um die zuletzt angeforderten und aktuell aktivierten oder deaktivierten Zustände zu vergleichen. Eine bestimmte Instanz von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85)) unterstützt möglicherweise nicht die **requestStateChange** -Methode. Wenn dies auftritt, wird der Wert 12 (nicht zutreffend) verwendet. Diese Eigenschaft wird von **CIM \_ enabledlogicalelement** geerbt und ist immer auf 12 (nicht zutreffend) festgelegt.
+Der zuletzt angeforderte oder gewünschte Zustand für das Element. Der tatsächliche Zustand des Elements wird durch **EnabledState dargestellt.** Diese Eigenschaft wird bereitgestellt, um den zuletzt angeforderten und den aktuell aktivierten oder deaktivierten Zustand zu vergleichen. Eine bestimmte Instanz von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85)) unterstützt möglicherweise die **RequestStateChange-Methode** nicht. In diesem Fall wird der Wert 12 (Nicht zutreffend) verwendet. Diese Eigenschaft wird von **CIM \_ EnabledLogicalElement geerbt** und immer auf 12 (Nicht zutreffend) festgelegt.
 
 </dd> <dt>
 
-**Gestartet**
+**Begann**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Dienst gerade ausgeführt wird. Diese Eigenschaft wird vom [**CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-service)geerbt.
+Gibt an, ob der Dienst derzeit ausgeführt wird. Diese Eigenschaft wird vom [**CIM-Dienst \_ geerbt.**](/windows/desktop/CIMWin32Prov/cim-service)
 
 </dd> <dt>
 
 **StartMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Zeichen folgen Wert, der angibt, ob der Dienst automatisch von einem System oder einem Betriebssystem gestartet oder nur nach Anforderung gestartet wird. Diese Eigenschaft wird vom [**CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-service)geerbt und ist immer auf **null** festgelegt.
+Ein Zeichenfolgenwert, der angibt, ob der Dienst automatisch von einem System, einem Betriebssystem oder nur auf Anforderung gestartet wird. Diese Eigenschaft wird vom [**\_ CIM-Dienst geerbt**](/windows/desktop/CIMWin32Prov/cim-service)und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf "OK" festgelegt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)und immer auf "OK" festgelegt.
 
 </dd> <dt>
 
-**Status Beschreibungen**
+**StatusDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeichen folgen, die die verschiedenen **OperationalStatus** -Array Werte beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, und die Zeichen folgen sind immer auf "OK" festgelegt.
+Zeichenfolgen, die die verschiedenen **OperationalStatus-Arraywerte** beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt,**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)und die Zeichenfolgen werden immer auf "OK" festgelegt.
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Bereichs Systems. Diese Eigenschaft wird vom [**CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-service)geerbt und ist immer auf "MSVM \_ Computersystem" festgelegt.
+Der Name der Erstellungsklasse des Bereichssystems. Diese Eigenschaft wird vom [**\_ CIM-Dienst geerbt**](/windows/desktop/CIMWin32Prov/cim-service)und immer auf "Msvm \_ ComputerSystem" festgelegt.
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des hostingcomputersystems. Diese Eigenschaft wird vom [**CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-service)geerbt.
+Der Name des Hostcomputersystems. Diese Eigenschaft wird vom [**CIM-Dienst \_ geerbt.**](/windows/desktop/CIMWin32Prov/cim-service)
 
 </dd> <dt>
 
-**Timeoflaststatechange**
+**TimeOfLastStateChange**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum oder die Uhrzeit, zu dem der aktivierte Status des Elements zuletzt geändert wurde. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Das Datum oder die Uhrzeit der letzten Änderung des aktivierten Zustands des Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-versions//cc136818(v=vs.85))
 
 </dd> <dt>
 
-**Transitioningumstate**
+**TransitioningToState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Ziel Status an, in den die-Instanz übergeht. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Gibt den Zielzustand an, in den die Instanz übergibt. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-versions//cc136818(v=vs.85))
 
 </dd> </dl>
 
@@ -549,10 +549,10 @@ Gibt den Ziel Status an, in den die-Instanz übergeht. Diese Eigenschaft wird vo
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

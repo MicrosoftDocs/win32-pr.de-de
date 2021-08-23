@@ -1,34 +1,34 @@
 ---
-title: GUID. CPP
-description: In der Beispiel Anbieter Komponente befinden sich die GUIDs, die für die Beispiel Anbieter-Komponenten Objekte erforderlich sind, in "GUID. cpp".
+title: Guid. Cpp
+description: In der Beispielanbieterkomponente befinden sich die für die Beispielanbieterkomponentenobjekte erforderlichen GUIDs in Guid.cpp.
 ms.assetid: 806a559d-d424-40a6-a28c-56a505605d00
 ms.tgt_platform: multiple
 keywords:
-- GUID. cpp-ADSI
+- Guid. CPP ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 896d4ee43f18796cf710f57607d66040e18a76da
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 85c2021a692df7c7b9b026d2b491879489041b3bfc3eb791e239ce081d7f5a34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082554"
 ---
-# <a name="guidcpp"></a>GUID. CPP
+# <a name="guidcpp"></a>Guid. Cpp
 
-In der Beispiel Anbieter Komponente befinden sich die GUIDs, die für die Beispiel Anbieter-Komponenten Objekte erforderlich sind, in "GUID. cpp". GUIDs sind für die folgenden Elemente definiert:
+In der Beispielanbieterkomponente befinden sich die für die Beispielanbieterkomponentenobjekte erforderlichen GUIDs in Guid.cpp. GUIDs werden für die folgenden Elemente definiert:
 
--   CLSID \_ sampledsnamespace
--   CLSID \_ sampledsprovider
--   LIBID \_ sampledsole
--   CLSID \_ sampledsgenobject
--   CLSID \_ sampledsschema
--   CLSID \_ sampledsclass
--   CLSID \_ sampledsproperty
+-   CLSID \_ SampleDSNamespace
+-   CLSID \_ SampleDSProvider
+-   LIBID \_ SampleDSOle
+-   CLSID \_ SampleDSGenObject
+-   CLSID \_ SampleDSSchema
+-   CLSID \_ SampleDSClass
+-   CLSID \_ SampleDSProperty
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,46 +1,46 @@
 ---
-title: Uiaelementdoesnotparametritor
-description: Uiaelementdoesnotparametritor
+title: UiaElementDoesNotParentToRoot
+description: UiaElementDoesNotParentToRoot
 ms.assetid: 0A1EDF46-420D-46ED-BD61-CA5E40847071
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 894104ada4906aecb4c375c82f16ed3daccf5f33
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bab858c17976637c7988d59f3ebf9e17a561a257d6856e2e85570d8dd998a48d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119413927"
 ---
-# <a name="uiaelementdoesnotparenttoroot"></a>Uiaelementdoesnotparametritor
+# <a name="uiaelementdoesnotparenttoroot"></a>UiaElementDoesNotParentToRoot
 
 ## <a name="text"></a>Text
 
-Die übergeordnete Kette des Elements wird nicht an das root-Element weitergeleitet.
+Die übergeordnete Kette des Elements wird nicht zum Stammelement wechseln.
 
-## <a name="type"></a>type
+## <a name="type"></a>Typ
 
 Warnung
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Die Navigation vom angegebenen Element zum UI-Struktur Stamm ist beschädigt.
+Die Navigation vom angegebenen Element zum Stamm der Benutzeroberflächenstruktur ist unterbrochen.
 
-Dieses Problem kann zu unvorhersehbaren Ergebnissen für eine Anwendung führen, die versucht, in der UI-Struktur zu navigieren.
+Dieses Problem kann zu unvorhersehbaren Ergebnissen für eine Anwendung führen, die versucht, durch die Benutzeroberflächenstruktur zu navigieren.
 
 ## <a name="possible-causes"></a>Mögliche Ursachen
 
-Falsche Implementierung der übergeordneten untergeordneten Hierarchie der UI-Struktur.
+Falsche Implementierung der über- und untergeordneten Hierarchie der Benutzeroberflächenstruktur.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iuiautomationtreewalker**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtreewalker)
+[**IUIAutomationTreeWalker**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtreewalker)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

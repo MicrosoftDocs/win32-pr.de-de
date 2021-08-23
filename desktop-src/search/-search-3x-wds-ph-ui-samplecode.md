@@ -1,17 +1,17 @@
 ---
 description: Der folgende Beispielcode zeigt, wie Shellerweiterungen für einen benutzerdefinierten Protokollhandler erstellt werden.
 ms.assetid: 4b65ced8-8dc9-43f6-bfe1-3703aea3459f
-title: 'Code Beispiel: Shellerweiterungen für Protokollhandler'
+title: 'Codebeispiel: Shellerweiterungen für Protokollhandler'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e436f1d7ad746181be8cb3c43375abe3656c544b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d1f2a29fb75ee6838b207648e2b58d634e19eb977f6d0abedb01ba450968756e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119033108"
 ---
-# <a name="code-sample-shell-extensions-for-protocol-handlers"></a>Code Beispiel: Shellerweiterungen für Protokollhandler
+# <a name="code-sample-shell-extensions-for-protocol-handlers"></a>Codebeispiel: Shellerweiterungen für Protokollhandler
 
 Der folgende Beispielcode zeigt, wie Shellerweiterungen für einen benutzerdefinierten Protokollhandler erstellt werden.
 
@@ -19,9 +19,9 @@ Der folgende Beispielcode zeigt, wie Shellerweiterungen für einen benutzerdefin
 
 > [!Note]
 >
-> **Dieser Code und diese Informationen werden "wie immer" bereitgestellt, ohne jegliche Gewährleistungen jeglicher Art, entweder ausgedrückt oder impliziert, einschließlich, aber nicht beschränkt auf die impliziten Gewährleistungen der Handels Üblichkeit und/oder Eignung für einen bestimmten Zweck.**
+> **DIESER CODE UND DIE INFORMATIONEN WERDEN "WIE BEFÄHRT" BEREITGESTELLT, OHNE JEGLICHE GEWÄHRLEISTUNG, ENTWEDER AUSGEDRÜCKT ODER KONKLUDENT, EINSCHLIEßLICH, ABER NICHT BESCHRÄNKT AUF DIE KONKLUDENTEN GEWÄHRLEISTUNGEN DER HANDELSIERBARKEIT UND/ODER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.**
 >
-> Copyright (c) Microsoft Corporation. Alle Rechte vorbehalten.
+> Copyright (c)Microsoft Corporation. All rights reserved.
 
  
 
@@ -499,35 +499,35 @@ STDMETHODIMP CSampleShellFolder::SetNameOf(
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
--   Informationen zu Such Codebeispielen finden Sie unter [Beispiele für Windows Search SDK](https://www.microsoft.com/downloads/details.aspx?FamilyID=645300AE-5E7A-4CE7-95F0-49793F8F76E8).
--   Shell-Codebeispiele finden Sie unter [shellsdk-Beispiele](/previous-versions/windows/desktop/legacy/dd940376(v=vs.85)).
+-   Weitere Informationen zu Suchcodebeispielen finden Sie unter Windows Search SDK Samples (Beispiele [für das Such-SDK).](https://www.microsoft.com/downloads/details.aspx?FamilyID=645300AE-5E7A-4CE7-95F0-49793F8F76E8)
+-   Shell-Codebeispiele finden Sie unter [Shell SDK Samples (Shell SDK-Beispiele).](/previous-versions/windows/desktop/legacy/dd940376(v=vs.85))
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Entwickeln von Protokoll Handlern](-search-3x-wds-phaddins.md)
+[Entwickeln von Protokollhandlern](-search-3x-wds-phaddins.md)
 </dt> <dt>
 
-[Grundlegendes zu Protokoll Handlern](-search-3x-wds-extidx-prot-implementing.md)
+[Grundlegendes zu Protokollhandlern](-search-3x-wds-extidx-prot-implementing.md)
 </dt> <dt>
 
-[Benachrichtigen des Index von Änderungen](-search-3x-wds-notifyingofchanges.md)
+[Benachrichtigen des Indexes über Änderungen](-search-3x-wds-notifyingofchanges.md)
 </dt> <dt>
 
 [Hinzufügen von Symbolen und Kontextmenüs](-search-3x-wds-ph-ui-extensions.md)
 </dt> <dt>
 
-[Installieren und Registrieren von Protokoll Handlern](-search-3x-wds-ph-install-registration.md)
+[Installieren und Registrieren von Protokollhandlern](-search-3x-wds-ph-install-registration.md)
 </dt> <dt>
 
-[Erstellen eines Suchconnector für einen Protokoll Handler](-search-3x-wds-ph-search-connector.md)
+[Erstellen eines Suchconnectors für einen Protokollhandler](-search-3x-wds-ph-search-connector.md)
 </dt> <dt>
 
-[Debuggen von Protokoll Handlern](-search-ws-protocolhandlertesting.md)
+[Debuggen von Protokollhandlern](-search-ws-protocolhandlertesting.md)
 </dt> </dl>
 
  

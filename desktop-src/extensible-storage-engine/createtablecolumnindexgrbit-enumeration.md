@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Aufzählung von "kreatetablecolumnindexgrbit"'
-title: Kreatetablecolumnindexgrbit-Enumeration
+description: 'Weitere Informationen zu: CreateTableColumnIndexGrbit-Enumeration'
+title: CreateTableColumnIndexGrbit-Enumeration
 TOCTitle: CreateTableColumnIndexGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.CreateTableColumnIndexGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.createtablecolumnindexgrbit(v=EXCHG.10)
@@ -32,21 +32,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 72f91c5d41b8262e3b2804159914b0a9ccaaaa7d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7aa142dfd642f8b339ee1fa2033e0763764d0834fd4da409a7a7c37b6e91b0d3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960785"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119238030"
 ---
-# <a name="createtablecolumnindexgrbit-enumeration"></a>Kreatetablecolumnindexgrbit-Enumeration
+# <a name="createtablecolumnindexgrbit-enumeration"></a>CreateTableColumnIndexGrbit-Enumeration
 
-Optionen für jetkreatetablecolumnindex.
+Optionen für JetCreateTableColumnIndex.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -81,25 +81,25 @@ public enum CreateTableColumnIndexGrbit
 </tr>
 <tr class="even">
 <td></td>
-<td>Fixedddl</td>
+<td>FixedDDL</td>
 <td>Die DDL ist korrigiert.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Templatetable</td>
-<td>Die DDL ist vererbbar. Impliziert fixedddl.</td>
+<td>TemplateTable</td>
+<td>Die DDL ist vererbbar. Impliziert FixedDDL.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Nofixedvarcolumnsinderivedtables</td>
-<td>Wird in Verbindung mit "templatetable" verwendet.</td>
+<td>NoFixedVarColumnsInDerivedTables</td>
+<td>Wird in Verbindung mit TemplateTable verwendet.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,9 +1,9 @@
 ---
-title: Domainchange-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das domainchange-Ereignis tritt auf, wenn die DVD-Domäne geändert wird. | Domainchange-Ereignis des AxWindowsMediaPlayer-Objekts
+title: DomainChange-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das DomainChange-Ereignis tritt auf, wenn sich die DVD-Domäne ändert. | DomainChange-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: a080082e-1ba4-4080-b39c-b84292ecacb0
 keywords:
-- Das domainchange-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- DomainChange-Ereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 342ac559f75c3bb7d65b442bfbdced5e5ed3f690
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a37f10679225fb893fad8bcf6fc6687021256e305e8c5a08e6ebe96d16b74e81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136123"
 ---
-# <a name="domainchange-event-of-the-axwindowsmediaplayer-object"></a>Domainchange-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="domainchange-event-of-the-axwindowsmediaplayer-object"></a>DomainChange-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das domainchange-Ereignis tritt auf, wenn die DVD-Domäne geändert wird.
+Das DomainChange-Ereignis tritt auf, wenn sich die DVD-Domäne ändert.
 
 ``` syntax
 [C#]
@@ -41,31 +41,31 @@ Private Sub player_DomainChange(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ domainchangeeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ domainchangeevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ DomainChangeEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ DomainChangeEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
 | Eigenschaft  | BESCHREIBUNG                                                                                     |
 |-----------|-------------------------------------------------------------------------------------------------|
-| Domäne | System. stringindikiert die neue Domäne. Mögliche Werte finden Sie im Abschnitt „Hinweise“.<br/> |
+| strDomain | System.StringIndicates die neue Domäne. Mögliche Werte finden Sie im Abschnitt „Hinweise“.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der folgenden Tabelle sind die möglichen Werte für die Eigenschaft "Eigenschaft" (Eigenschaft) aufgeführt.
+Die folgende Tabelle zeigt die möglichen Werte für die strDomain-Eigenschaft.
 
 
 
 | Zeichenfolge            | Beschreibung                                                          |
 |-------------------|----------------------------------------------------------------------|
-| FirstPlay         | Die Standard Initialisierung einer DVD-CD wird durchgeführt.                     |
-| videomanagermenu  | Anzeigen von Menüs für die gesamte Festplatte. Wird auch als "Root Menu" oder "topmenu" bezeichnet. |
-| videotitlesetmenu | Anzeigen von Menüs für den aktuellen Titel Satz. Wird auch als titlemenu bezeichnet.     |
+| firstPlay         | Ausführen der Standardin initialisierung eines DVD-Datenträgers.                     |
+| videoManagerMenu  | Anzeigen von Menüs für den gesamten Datenträger. Wird auch als Stammmenü oder topMenu bezeichnet. |
+| videoTitleSetMenu | Anzeigen von Menüs für den aktuellen Titelsatz. Wird auch als titleMenu bezeichnet.     |
 | title             | Anzeigen des aktuellen Titels.                                        |
-| stop              | Der DVD-Navigator befindet sich in der DVD-stoppdomäne.                         |
+| stop              | Der DVD-Navigator befindet sich in der Domäne DVD-Stopp.                         |
 
 
 
@@ -77,20 +77,20 @@ In der folgenden Tabelle sind die möglichen Werte für die Eigenschaft "Eigensc
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpdvd-Schnittstelle (VB und c#)**](iwmpdvd--vb-and-c.md)
+[**IWMPDVD-Schnittstelle (VB und C#)**](iwmpdvd--vb-and-c.md)
 </dt> </dl>
 
  

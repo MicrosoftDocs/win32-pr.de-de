@@ -1,7 +1,7 @@
 ---
-description: Das View-Objekt stellt ein Resultset dar, das bei der Verarbeitung einer Abfrage mit der OpenView-Methode des Datenbankobjekts abgerufen wurde.
+description: Das View-Objekt stellt ein Resultset dar, das beim Verarbeiten einer Abfrage mithilfe der OpenView-Methode des Database-Objekts abgerufen wird.
 ms.assetid: d9d6583a-1cf3-4c33-a851-83e862e2338e
-title: Objekt anzeigen
+title: View-Objekt
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,37 +13,37 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: c26cfa3c4873913d70fca63537f1d25532648a42
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f5025df952ce6e3c5ce43bf3dcb93748a241702b8c4e2f52cd9d0fd00103dc49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371164"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145273"
 ---
-# <a name="view-object"></a>Objekt anzeigen
+# <a name="view-object"></a>View-Objekt
 
-Das **View** -Objekt stellt ein Resultset dar, das bei der Verarbeitung einer Abfrage mit der [**OpenView**](database-openview.md) -Methode des [**Daten Bank**](database-object.md) Objekts abgerufen wurde. Bevor Daten übertragen werden können, muss die Abfrage mit der [**Execute**](view-execute.md) -Methode ausgeführt werden, wobei alle ersetzbaren Parameter, die in der SQL-Abfrage Zeichenfolge festgelegt sind, übergeben werden. Die Abfrage wird möglicherweise erneut ausgeführt, mit unterschiedlichen Parametern, wenn erforderlich, aber erst nach der Freigabe des Resultsets, indem alle Datensätze abgerufen oder die [**Close**](view-close.md) -Methode aufgerufen wird.
+Das **View-Objekt** stellt ein Resultset dar, das beim Verarbeiten einer Abfrage mithilfe der [**OpenView-Methode**](database-openview.md) des [**Database-Objekts**](database-object.md) abgerufen wird. Bevor Daten übertragen werden können, muss die Abfrage mit der [**Execute-Methode**](view-execute.md) ausgeführt werden, wobei alle ersetzbaren Parameter übergeben werden, die in der SQL Abfragezeichenfolge angegeben sind. Die Abfrage kann bei Bedarf erneut mit unterschiedlichen Parametern ausgeführt werden, aber erst nach dem Freigeben des Resultset, indem entweder alle Datensätze abgerufen oder die [**Close-Methode**](view-close.md) aufgerufen wird.
 
 ## <a name="members"></a>Member
 
-Das **Ansichts** Objekt enthält die folgenden Typen von Membern:
+Das **View-Objekt** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das **View** -Objekt verfügt über diese Methoden.
+Das **View-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                            | BESCHREIBUNG                                                                                                                                                                     |
+| Methode                            | Beschreibung                                                                                                                                                                     |
 |:----------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Schließen**](view-close.md)       | Beendet die Abfrage Ausführung und gibt Datenbankressourcen frei.<br/>                                                                                                          |
-| [**Auszuführen**](view-execute.md)   | Verwendet das Fragezeichen Token, um Parameter in einer SQL-Abfrage darzustellen. Die Werte dieser Parameter werden als die entsprechenden Felder eines Parameterdaten Satzes übergeben.<br/> |
-| [**Fetti**](view-fetch.md)       | Gibt ein Daten Satz Objekt zurück, das die angeforderten Spaltendaten enthält, wenn weitere Zeilen im Resultset verfügbar sind. andernfalls wird NULL zurück [**gegeben**](record-object.md) .<br/>      |
-| [**GetError**](view-geterror.md) | Gibt den Validierungs Fehler und den Spaltennamen zurück, für den der Fehler aufgetreten ist.<br/>                                                                                           |
-| [**Ändern**](view-modify.md)     | Ändert eine Datenbankzeile mit einem geänderten [**Daten Satz**](record-object.md) Objekt, das von der [**Fetch**](view-fetch.md) -Methode abgerufen wird.<br/>                                   |
+| [**Schließen**](view-close.md)       | Beendet die Abfrageausführung und gibt Datenbankressourcen frei.<br/>                                                                                                          |
+| [**Ausführen**](view-execute.md)   | Verwendet das Fragezeichentoken, um Parameter in einer SQL Abfrage darzustellen. Die Werte dieser Parameter werden als die entsprechenden Felder eines Parameterdatensatzes übergeben.<br/> |
+| [**Holen**](view-fetch.md)       | Gibt ein [**Record-Objekt**](record-object.md) zurück, das die angeforderten Spaltendaten enthält, wenn mehr Zeilen im Resultset verfügbar sind, andernfalls WIRD NULL zurückgegeben.<br/>      |
+| [**GetError**](view-geterror.md) | Gibt den Validierungsfehler und den Spaltennamen zurück, für die der Fehler aufgetreten ist.<br/>                                                                                           |
+| [**Ändern**](view-modify.md)     | Ändert eine Datenbankzeile mit einem geänderten [**Record-Objekt,**](record-object.md) das von der [**Fetch-Methode**](view-fetch.md) abgerufen wurde.<br/>                                   |
 
 
 
@@ -51,13 +51,13 @@ Das **View** -Objekt verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **Ansichts** Objekt verfügt über diese Eigenschaften.
+Das **View-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                         | BESCHREIBUNG                                                                                                                           |
+| Eigenschaft                                         | Beschreibung                                                                                                                           |
 |:-------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
-| [**ColumnInfo**](view-columninfo.md)<br/> | Gibt ein [**Daten Satz**](record-object.md) Objekt zurück, das die angeforderten Informationen zu jeder Spalte im Resultset enthält.<br/> |
+| [**Columninfo**](view-columninfo.md)<br/> | Gibt ein [**Record-Objekt**](record-object.md) zurück, das die angeforderten Informationen zu jeder Spalte im Resultset enthält.<br/> |
 
 
 
@@ -69,17 +69,17 @@ Das **Ansichts** Objekt verfügt über diese Eigenschaften.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iView ist definiert als 000c109c-0000-0000-C000-000000000046<br/>                                                                                                                                                                                |
+| IID<br/>     | IID \_ IView ist als 000C109C-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                                |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Skript Beispiele für Windows Installer](windows-installer-scripting-examples.md)
+[Windows Beispiele für Skripterstellung für Installer](windows-installer-scripting-examples.md)
 </dt> </dl>
 
  

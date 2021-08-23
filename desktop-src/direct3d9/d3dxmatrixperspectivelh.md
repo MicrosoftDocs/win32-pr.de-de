@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixPerspectiveLH-Funktion (D3dx9math.h): Erstellt eine linkshändige Perspektivische Projektionsmatrix'
+description: D3DXMatrixPerspectiveLH-Funktion (D3dx9math.h) – Erstellt eine linkshändige Projektionsmatrix für die Perspektive
 ms.assetid: 07bbbca8-ad1e-4177-97d4-601b33179b47
 title: D3DXMatrixPerspectiveLH-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d898a7d40cd1c9f7b46100c19d86573806ccb1b5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a8b379265be4bac399d746a2421d9aeb34a1559c5b18ab4f439e57d586af6d62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122870"
 ---
 # <a name="d3dxmatrixperspectivelh-function-d3dx9mathh"></a>D3DXMatrixPerspectiveLH-Funktion (D3dx9math.h)
 
-Erstellt eine linkshändige Perspektivprojektionsmatrix
+Erstellt eine linkshändige Projektionsmatrix für die Perspektive.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ Zeiger auf die [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die das Ergebnis des Vo
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Breite des Ansichtsvolumens auf der Nahansichtsebene.
+Breite des Ansichtsvolumes auf der nahezuen Ansichtsebene.
 
 </dd> <dt>
 
@@ -67,7 +67,7 @@ Breite des Ansichtsvolumens auf der Nahansichtsebene.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Höhe des Ansichtsvolumens auf der Nahansichtsebene.
+Höhe des Ansichtsvolumes auf der nahezuen Ansichtsebene.
 
 </dd> <dt>
 
@@ -76,11 +76,11 @@ Höhe des Ansichtsvolumens auf der Nahansichtsebene.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Z-Wert der Nahansichtsebene.
+Z-Wert der Near View-Plane.
 
 </dd> <dt>
 
-*( )* \[ In\]
+*NSDR* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -93,13 +93,13 @@ Z-Wert der fernen Ansichtsebene.
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) bei der es sich um eine linkshändige Perspektivprojektionsmatrix handelt.
+Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die eine linkshändige perspektivische Projektionsmatrix ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter der **D3DXMatrixPerspectiveLH-Funktion** sind Abstände im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumens.
+Alle Parameter der **D3DXMatrixPerspectiveLH-Funktion** sind Entfernungen im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumes.
 
-Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXMatrixPerspectiveLH-Funktion** als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixPerspectiveLH-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu berechnen.
 
@@ -117,7 +117,7 @@ Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu b
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

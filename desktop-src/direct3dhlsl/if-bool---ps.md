@@ -1,6 +1,6 @@
 ---
-title: Wenn bool-PS
-description: Beginn eines If-Blocks.
+title: if bool - ps
+description: Start eines if-Blocks.
 ms.assetid: cff53072-1c73-4cf8-9ecd-11032a9c4bbb
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,55 +9,55 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 92c3158a09aeb871ef367133c07278b0f3b87390
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 611ec04a5c3a53bbb8c6c35380bd0d9f824dc697a7d27a3656b262d885fb4eac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103719355"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119457510"
 ---
-# <a name="if-bool---ps"></a>Wenn bool-PS
+# <a name="if-bool---ps"></a>if bool - ps
 
-Beginn eines If-Blocks.
+Start eines if-Blocks.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| Wenn bool |
+| if bool |
 |---------|
 
 
 
- 
+ 
 
 Hierbei gilt:
 
--   bool ist eine boolesche (Boolean) Registernummer. Siehe [konstantes boolesches Register](dx9-graphics-reference-asm-ps-registers-constant-boolean.md).
+-   bool ist eine boolesche Registernummer. Weitere Informationen [finden Sie unter Konstantes boolesches Register.](dx9-graphics-reference-asm-ps-registers-constant-boolean.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| Wenn bool               |      |      |      |      |      | x    | x     | x    | x     |
+| if bool               |      |      |      |      |      | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Wenn das boolesche Quell Konto in der if-Anweisung den Wert true hat, wird der Code, der von der if-Anweisung und der entsprechenden [EndIf-PS](endif---ps.md) oder [else-PS](else---ps.md) eingeschlossen wird, ausgeführt. Andernfalls wird der Code, der von der Else-PS... EndIf-PS-Anweisungen werden ausgeführt. Diese Anweisung verwendet einen Anweisungs Slot.
+Wenn das boolesche Quellregister in der if-Anweisung true ist, wird der code ausgeführt, der von der if-Anweisung und dem entsprechenden [endif - ps](endif---ps.md) oder [else - ps eingeschlossen](else---ps.md) wird. Andernfalls wird der Code, der von else eingeschlossen ist, ps... endif: PS-Anweisungen werden ausgeführt. Diese Anweisung verwendet einen Anweisungsslot.
 
-Ein If-Block kann eingefügt werden.
+Ein if-Block kann geschachtelt werden.
 
-Ein If-Block kann einen Schleifen Block nicht verspannen.
+Ein if-Block kann einen Schleifenblock nicht umschnallen.
 
-Auf einen If-Block kann ein Anweisungsblock und/oder eine [else-PS](else---ps.md) -Anweisung und/oder eine [EndIf-PS-](endif---ps.md) Anweisung folgen.
+Auf einen if-Block kann ein Anweisungsblock und/oder eine [else - ps-Anweisung](else---ps.md) und/oder eine [endif - ps-Anweisung folgen.](endif---ps.md)
 
 ## <a name="example"></a>Beispiel
 
-Diese Anweisung stellt bedingte statische Fluss Steuerung bereit.
+Diese Anweisung bietet eine bedingte statische Flusssteuerung.
 
 
 ```
@@ -76,18 +76,18 @@ endif
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> <dt>
 
-[Else-PS](else---ps.md)
+[else – ps](else---ps.md)
 </dt> <dt>
 
-[in-PS-PS](endif---ps.md)
+[endif – ps](endif---ps.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

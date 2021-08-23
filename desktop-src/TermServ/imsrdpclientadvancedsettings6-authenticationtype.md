@@ -1,16 +1,16 @@
 ---
-title: IMsRdpClientAdvancedSettings6 AuthenticationType (Eigenschaft)
-description: Gibt den für diese Verbindung verwendeten Authentifizierungstyp an.
+title: IMsRdpClientAdvancedSettings6 AuthenticationType-Eigenschaft
+description: Gibt den Authentifizierungstyp an, der für diese Verbindung verwendet wird.
 ms.assetid: A6DAAE0A-5045-4C2C-B065-AB5BFB39F955
 ms.tgt_platform: multiple
 keywords:
-- AuthenticationType-Eigenschaft Remotedesktopdienste
-- AuthenticationType-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste, AuthenticationType-Eigenschaft
-- AuthenticationType-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste, AuthenticationType-Eigenschaft
-- AuthenticationType-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste, AuthenticationType-Eigenschaft
+- Remotedesktopdienste der AuthenticationType-Eigenschaft
+- AuthenticationType-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , AuthenticationType-Eigenschaft
+- AuthenticationType-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , AuthenticationType-Eigenschaft
+- AuthenticationType-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , AuthenticationType-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -26,16 +26,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 08c59239570538b690866e499ee942b6635055c9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f35fe580ce780a51c3a203ff22b4043bbbe423dc4e821de1aaa2ba378485e719
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103689"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119138843"
 ---
-# <a name="imsrdpclientadvancedsettings6authenticationtype-property"></a>IMsRdpClientAdvancedSettings6:: AuthenticationType (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings6authenticationtype-property"></a>IMsRdpClientAdvancedSettings6::AuthenticationType-Eigenschaft
 
-Gibt den für diese Verbindung verwendeten Authentifizierungstyp an.
+Gibt den Authentifizierungstyp an, der für diese Verbindung verwendet wird.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -52,7 +52,7 @@ HRESULT get_AuthenticationType(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Empfängt einen-Wert, der den für diese Verbindung verwendeten Authentifizierungstyp angibt. Dies kann einer der folgenden Werte sein:
+Empfängt einen Wert, der den Für diese Verbindung verwendeten Authentifizierungstyp angibt. Dies kann einer der folgenden Werte sein.
 
 <dt>
 
@@ -66,7 +66,7 @@ Es wird keine Authentifizierung verwendet.
 1
 </dt> <dd>
 
-Die Zertifikat Authentifizierung wird verwendet.
+Die Zertifikatauthentifizierung wird verwendet.
 
 </dd> <dt>
 
@@ -80,7 +80,7 @@ Die Kerberos-Authentifizierung wird verwendet.
 3
 </dt> <dd>
 
-Sowohl das Zertifikat als auch die Kerberos-Authentifizierung werden verwendet.
+Sowohl die Zertifikat- als auch die Kerberos-Authentifizierung werden verwendet.
 
 </dd> </dl>
 
@@ -98,7 +98,7 @@ Sowohl das Zertifikat als auch die Kerberos-Authentifizierung werden verwendet.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

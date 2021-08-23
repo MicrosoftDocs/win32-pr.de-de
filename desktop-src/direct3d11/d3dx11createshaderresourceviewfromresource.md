@@ -1,6 +1,6 @@
 ---
-title: D3DX11CreateShaderResourceViewFromResource-Funktion (D3DX11tex. h)
-description: Beachten Sie, dass die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) für Windows 8 veraltet ist und für Windows Store-Apps nicht unterstützt wird. Beachten Sie, dass Sie anstelle der Verwendung dieser Funktion Ressourcen Funktionen verwenden, dann diese directxtk-Bibliothek (Runtime), den Befehl "kreatexxxtexturefrommemory" (wobei xxx DDS oder WIC ist) directxtex Library (Tools), loadfromxxxmemory (hierbei ist xxx WIC, DDS oder TGA). Die WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Kunst Quellformat für Spiele), dann erstellt "anateshaderresourceview" eine Shader-Ressourcen Ansicht aus einer Ressource.
+title: D3DX11CreateShaderResourceViewFromResource-Funktion (D3DX11tex.h)
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Hinweis Anstelle dieser Funktion wird empfohlen, Ressourcenfunktionen zu verwenden, dann diese DirectXTK-Bibliothek (Runtime), CreateXXXTextureFromMemory (wobei XXX DDS oder WIC ist)DirectXTex-Bibliothek (Tools), LoadFromXXXMemory (wobei XXX für WIC, DDS oder TGA steht; WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Art-Source-Format für Spiele) und anschließend CreateShaderResourceView Erstellen einer Shader-Ressourcenansicht aus einer Ressource.
 ms.assetid: 64620e6d-fc0d-4411-8744-d9d8ffe6ccb8
 keywords:
 - D3DX11CreateShaderResourceViewFromResource-Funktion Direct3D 11
@@ -15,12 +15,12 @@ api_type:
 - LibDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cb374bd569cb58451461a7fe269c58c200895b7a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b60eb6cf54dc32b3bb860b9ef963101428cc0cc2a7e4dacd1a24781c604b2ea1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104996004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119124725"
 ---
 # <a name="d3dx11createshaderresourceviewfromresource-function"></a>D3DX11CreateShaderResourceViewFromResource-Funktion
 
@@ -30,14 +30,14 @@ ms.locfileid: "104996004"
  
 
 > [!Note]  
-> Anstatt diese Funktion zu verwenden, empfiehlt es sich, [Ressourcen Funktionen](/windows/desktop/menurc/resources-functions)zu verwenden, die dann folgende Aktionen ausführen:
+> Anstatt diese Funktion zu verwenden, empfiehlt es sich, [Ressourcenfunktionen und](/windows/desktop/menurc/resources-functions)dann die folgenden zu verwenden:
 >
-> -   [Directxtk](https://github.com/Microsoft/DirectXTK) - **Bibliothek (Runtime), "** ", "", "", "", "", "", "".
-> -   [Directxtex](https://github.com/Microsoft/DirectXTex) -Bibliothek (Tools), **loadfromxxxmemory** (hierbei ist xxx WIC, DDS oder TGA). Die WIC unterstützt DDS und TGA nicht. D3DX 9 unterstützte TGA als gängiges Kunst Quellformat für Spiele) und dann " **kreateshaderresourceview** "
+> -   [DirectXTK-Bibliothek](https://github.com/Microsoft/DirectXTK) (Runtime), **CreateXXXTextureFromMemory** (wobei XXX DDS oder WIC ist)
+> -   [DirectXTex-Bibliothek](https://github.com/Microsoft/DirectXTex) (Tools), **LoadFromXXXMemory** (wobei XXX WIC, DDS oder TGA ist; WIC unterstützt DDS und TGA nicht. Von D3DX 9 unterstützte TGA als gängiges Art Source-Format für Spiele) und **anschließend CreateShaderResourceView**
 
  
 
-Erstellen Sie eine Shader-Ressourcen Ansicht aus einer Ressource.
+Erstellen Sie eine Shader-Ressourcenansicht aus einer Ressource.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,66 +60,66 @@ HRESULT D3DX11CreateShaderResourceViewFromResource(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D11Device**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device)\***
 
-Ein Zeiger auf das Gerät (siehe [**ID3D11Device**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device)), von dem die Ressource verwendet wird.
+Ein Zeiger auf das Gerät (siehe [**ID3D11Device**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device)), das die Ressource verwendet.
 
 </dd> <dt>
 
-*hsrcmodule* \[ in\]
+*hSrcModule* \[ In\]
 </dt> <dd>
 
 Typ: **[ **HMODULE**](/windows/desktop/WinProg/windows-data-types)**
 
-Handle für das Ressourcen Modul, das die Shader-Ressourcen Ansicht enthält. HMODULE kann mit der [GetModuleHandle-Funktion](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)abgerufen werden.
+Handle für das Ressourcenmodul, das die Shader-Ressourcenansicht enthält. HMODULE kann mit der [GetModuleHandle-Funktion erhalten werden.](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)
 
 </dd> <dt>
 
-*psrkresource* \[ in\]
+*pSrcResource* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Name der Shader-Ressourcen Ansicht in hsrcmodule. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Datentyp in LPCSTR aufgelöst.
+Name der Shaderressourcenansicht in hSrcModule. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR auflösen. Andernfalls wird der Datentyp in LPCSTR auflösen.
 
 </dd> <dt>
 
-*ploadinfo* \[ in\]
+*pLoadInfo* \[ In\]
 </dt> <dd>
 
-Type: **[ **Bibliothek d3dx11 \_ Image \_ Load \_ Info**](d3dx11-image-load-info.md)\***
+Typ: **[ **D3DX11 \_ \_ \_ BILDLADEINFORMATIONEN**](d3dx11-image-load-info.md)\***
 
-Optional. Gibt die Merkmale einer Textur an (siehe [**Bibliothek d3dx11 \_ Image \_ Load \_ Info**](d3dx11-image-load-info.md)), wenn der Datenprozessor erstellt wird. Legen Sie diese Einstellung auf **null** fest, um die Merkmale einer Textur beim Laden der Textur zu lesen.
+Optional. Identifiziert die Merkmale einer Textur (siehe [**D3DX11 \_ IMAGE \_ LOAD \_ INFO),**](d3dx11-image-load-info.md)wenn der Datenprozessor erstellt wird. Legen Sie diese auf **NULL** fest, um die Merkmale einer Textur zu lesen, wenn die Textur geladen wird.
 
 </dd> <dt>
 
-*ppump* \[ in\]
+*pPump* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3DX11ThreadPump**](id3dx11threadpump.md)\***
 
-Ein Zeiger auf eine Thread-Pump Schnittstelle (siehe [**ID3DX11ThreadPump Interface**](id3dx11threadpump.md)). Wenn **null** angegeben wird, verhält sich diese Funktion synchron und wird erst nach Abschluss des Vorgangs zurückgegeben.
+Ein Zeiger auf eine Threadpumpschnittstelle (siehe [**ID3DX11ThreadPump-Schnittstelle**](id3dx11threadpump.md)). Wenn **NULL** angegeben wird, verhält sich diese Funktion synchron und gibt erst dann zurück, wenn sie abgeschlossen ist.
 
 </dd> <dt>
 
-*ppshaderresourceview* \[ vorgenommen\]
+*ppShaderResourceView* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D11ShaderResourceView**](/windows/desktop/api/D3D11/nn-d3d11-id3d11shaderresourceview)\*\***
 
-Adresse eines Zeigers auf die Shader-Ressourcen Ansicht (siehe [**ID3D11ShaderResourceView**](/windows/desktop/api/D3D11/nn-d3d11-id3d11shaderresourceview)).
+Adresse eines Zeigers auf die Shaderressourcenansicht (siehe [**ID3D11ShaderResourceView**](/windows/desktop/api/D3D11/nn-d3d11-id3d11shaderresourceview)).
 
 </dd> <dt>
 
-*phresult* \[ vorgenommen\]
+*pHResult* \[ out\]
 </dt> <dd>
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)\***
 
-Ein Zeiger auf den Rückgabewert. Kann **null** sein. Wenn *ppump* nicht **null** ist, muss *phresult* eine gültige Speicheradresse sein, bis die asynchrone Ausführung abgeschlossen ist.
+Ein Zeiger auf den Rückgabewert. Kann NULL **sein.** Wenn *pPump* nicht **NULL ist,** muss *pHResult* ein gültiger Speicherort sein, bis die asynchrone Ausführung abgeschlossen ist.
 
 </dd> </dl>
 
@@ -127,16 +127,16 @@ Ein Zeiger auf den Rückgabewert. Kann **null** sein. Wenn *ppump* nicht **null*
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Werte, die unter [Direct3D 11-Rückgabecodes aufgeführt sind.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX11tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Bibliothek d3dx11. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX11tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX11.lib</dt> </dl>  |
 
 
 

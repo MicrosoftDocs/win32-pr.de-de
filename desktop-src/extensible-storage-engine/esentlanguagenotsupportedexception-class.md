@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentlanguagenotsupportedexception-Klasse'
-title: Esentlanguagenotsupportedexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentLanguageNotSupportedException-Klasse'
+title: EsentLanguageNotSupportedException-Klasse
 TOCTitle: EsentLanguageNotSupportedException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentLanguageNotSupportedException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentlanguagenotsupportedexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4c977cab062b2ab2eedae2f278edd8168f253013
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c6d4a0a3e8dc7a1026bb53e588ad7e8d0497698ce76f6c43a9cb1b675a62fff2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353542"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119454500"
 ---
-# <a name="esentlanguagenotsupportedexception-class"></a>Esentlanguagenotsupportedexception-Klasse
+# <a name="esentlanguagenotsupportedexception-class"></a>EsentLanguageNotSupportedException-Klasse
 
-Basisklasse für JET_err. Languagenotsupported-Ausnahmen.
+Basisklasse für JET_err. LanguageNotSupported-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentobsoleteexception](./esentobsoleteexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentlanguagenotsupportedexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentObsoleteException](./esentobsoleteexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentLanguageNotSupportedException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentLanguageNotSupportedException : EsentObsoleteException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlanguagenotsupportedexception-Elemente](./esentlanguagenotsupportedexception-members.md)
+[EsentLanguageNotSupportedException-Member](./esentlanguagenotsupportedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

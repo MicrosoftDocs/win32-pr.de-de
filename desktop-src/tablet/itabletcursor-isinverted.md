@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob der Tablettstift aufwärts unten ist.
+description: Gibt an, ob der Stift auf dem Kopf steht.
 ms.assetid: 04b05287-000d-455f-88e5-821c7fdb8119
-title: 'Itabletcursor:: isinvertierte-Methode'
+title: ITabletCursor::IsInverted-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: 041b81c38f3370421c96a4c0d66201254a715e62
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 81bbb5f4f93026e0d6910cb7f23d0a7d2ddeea5595e87f816faa016d22986d0e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119223068"
 ---
-# <a name="itabletcursorisinverted-method"></a>Itabletcursor:: isinvertierte-Methode
+# <a name="itabletcursorisinverted-method"></a>ITabletCursor::IsInverted-Methode
 
-Gibt an, ob der Tablettstift aufwärts unten ist.
+Gibt an, ob der Stift auf dem Kopf steht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,9 +46,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Rückgabecode                                                                             | Beschreibung                               |
 |-----------------------------------------------------------------------------------------|-------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>    | Der Tablettstift ist invertiert.<br/>        |
-| <dl> <dt>**S \_ false**</dt> </dl> | Der Tablettstift wird nicht invertiert.<br/>    |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>  | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**S \_ OK**</dt> </dl>    | Der Stift ist invertiert.<br/>        |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Der Stift ist nicht invertiert.<br/>    |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>  | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
@@ -60,20 +60,20 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itabletcursor**](itabletcursor.md)
+[**ITabletCursor**](itabletcursor.md)
 </dt> <dt>
 
-[**Itabletcursor Button-Schnittstelle**](itabletcursorbutton.md)
+[**ITabletCursorButton-Schnittstelle**](itabletcursorbutton.md)
 </dt> </dl>
 
  

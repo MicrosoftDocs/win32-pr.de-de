@@ -1,180 +1,180 @@
 ---
-title: Entwerfen von UX für Desktop Anwendungen
-description: Eine großartige Desktop Anwendung ist leistungsstark und zugleich einfach. Durch eine sorgfältig ausgeglichene Funktionsauswahl und-Präsentation können Sie sowohl die Leistung als auch die Einfachheit erreichen.
+title: Entwerfen der Benutzererfahrung für Desktopanwendungen
+description: Eine hervorragende Desktopanwendung ist leistungsstark und gleichzeitig einfach. Durch sorgfältig ausgewogene Funktionsauswahl und -darstellung können Sie sowohl Leistungsfähigkeit als auch Einfachheit erreichen.
 ms.assetid: 0039a3ee-95bc-457f-a1a8-6a036ce22fd2
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 74433514f61b37ba1c9941c8134767be5458ebc8
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: a9c191a92ccf6147d37deca191a861220c4a925035bf39c92e7e7d062fa14184
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104351068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119221730"
 ---
-# <a name="how-to-design-a-great-user-experience-for-desktop-applications"></a>Entwerfen einer hervorragend benutzerfreundlichen Benutzer Darstellung für Desktop Anwendungen
+# <a name="how-to-design-a-great-user-experience-for-desktop-applications"></a>Entwerfen einer hervorragenden Benutzeroberfläche für Desktopanwendungen
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Eine großartige Desktop Anwendung ist leistungsstark und zugleich einfach. Durch eine sorgfältig ausgeglichene Funktionsauswahl und-Präsentation können Sie sowohl die Leistung als auch die Einfachheit erreichen.
+Eine hervorragende Desktopanwendung ist leistungsstark und gleichzeitig einfach. Durch sorgfältig ausgewogene Funktionsauswahl und -darstellung können Sie sowohl Leistungsfähigkeit als auch Einfachheit erreichen.
 
-**Vollen**
+**Leistungsstarke:**
 
-![Screenshot des Dialog Felds "Rechtschreibung und Grammatik" ](images/powerful-simple-image1.png)
+![Screenshot des Dialogfelds "Rechtschreibung und Grammatik" ](images/powerful-simple-image1.png)
 
 **Leistungsstark und einfach:**
 
-![Screenshot der Liste möglicher Rechtschreib Überarbeitungen ](images/powerful-simple-image2.png)
+![Screenshot der Liste möglicher Rechtschreibrevisionen ](images/powerful-simple-image2.png)
 
-Die ideale Windows-basierte Anwendung ist sowohl leistungsfähig als auch einfach. Natürlich möchten Sie, dass Ihre Anwendung leistungsfähig ist, und Sie möchten, dass Sie einfach ist, aber Sie können beides erreichen? Es gibt eine natürliche Spannung zwischen diesen Zielen, aber diese Spannung ist weit von der unversöhnlichen Spannung entfernt. Sie können sowohl die Leistung als auch die Einfachheit durch sorgfältig ausgeglichene Funktionsauswahl und-Präsentation erreichen.
+Die ideale Windows-basierte Anwendung ist sowohl leistungsstark als auch einfach. Natürlich möchten Sie, dass Ihre Anwendung leistungsstark und natürlich einfach ist, aber können Sie beides erreichen? Zwischen diesen Zielen gibt es eine natürliche Verzehrlichung, aber dies ist alles andere als unversentlich. Sie können sowohl Leistungsfähigkeit als auch Einfachheit durch sorgfältig ausgewogene Funktionsauswahl und -darstellung erreichen.
 
-## <a name="what-makes-an-application-powerful"></a>Was ist eine leistungsfähige Anwendung?
+## <a name="what-makes-an-application-powerful"></a>Was macht eine Anwendung leistungsfähig?
 
-Was bedeutet "Leistung" wirklich in Bezug auf Software? Eine Anwendung kann als leistungsstark angesehen werden, wenn Sie eine vollständige Fülle von Features bietet und eine enorme Bandbreite an Funktionalität hat, um allen Benutzern alle Dinge zu erleichtern. Ein solcher Entwurf ist wahrscheinlich nicht erfolgreich, weil ein nicht gezielter Featuresatz unwahrscheinlich ist, dass er die Anforderungen von beliebigen Personen erfüllt. Dabei handelt es sich nicht um die Art der Stromversorgung.
+Was bedeutet "Power" in Bezug auf Software wirklich? Eine Anwendung kann als leistungsstark angesehen werden, wenn sie voll mit Features ist, die eine enorme Bandbreite von Funktionen aufweisen, um alle Dinge für alle Benutzer zu sein. Ein solches Design ist wahrscheinlich nicht erfolgreich, da ein nicht festgelegter Featuresatz wahrscheinlich nicht die Anforderungen von Personen erfüllt. Dies ist nicht die Art von Energie, nach der wir uns befinden.
 
-Eine Anwendung ist leistungsstark, wenn Sie über die richtige Kombination dieser Merkmale verfügt:
+Eine Anwendung ist leistungsstark, wenn sie die richtige Kombination dieser Merkmale aufweist:
 
--   **Genden.** Die Anwendung erfüllt die Anforderungen der Ziel Benutzer, sodass Sie Aufgaben ausführen können, die Sie nicht anderweitig ausführen konnten, und ihre Ziele effektiv erreichen.
--   **Effizient.** Die Anwendung ermöglicht Benutzern das Ausführen von Aufgaben mit einem Maß an Produktivität und Skalierung, die zuvor nicht möglich waren.
--   **Fältig.** Die Anwendung ermöglicht es Benutzern, eine Vielzahl von Aufgaben in unterschiedlichen Situationen effektiv auszuführen.
--   **Unmittelbaren.** Die Anwendung sieht so aus, als würde Sie Benutzern direkt dabei helfen, ihre Ziele zu erreichen, anstatt sich auf den Weg zu bringen oder unnötige Schritte zu erfordern. Features wie Tastenkombinationen, Tastatur Zugriff und Makros verbessern den Sinn der Direktheit.
--   **Flexiblen.** Die Anwendung ermöglicht es Benutzern, eine genaue Kontrolle über ihre Arbeit zu erhalten.
--   **Verbund.** Die Anwendung ist gut in Microsoft Windows integriert und ermöglicht die gemeinsame Nutzung von Daten mit anderen Anwendungen.
--   **Erweitert.** Die Anwendung hat außergewöhnliche, innovative, hochmoderne Features, die in konkurrierenden Lösungen nicht gefunden werden.
+-   **Aktivieren.** Die Anwendung erfüllt die Anforderungen der Zielbenutzer, sodass sie Aufgaben ausführen können, die sie andernfalls nicht ausführen und ihre Ziele effektiv erreichen konnten.
+-   **Effizient.** Mit der Anwendung können Benutzer Aufgaben mit einem Maß an Produktivität und Skalierung ausführen, das zuvor nicht möglich war.
+-   **Vielseitig.** Mit der Anwendung können Benutzer eine Vielzahl von Aufgaben unter verschiedenen Umständen effektiv ausführen.
+-   **Direkte.** Die Anwendung scheint Benutzern direkt dabei zu helfen, ihre Ziele zu erreichen, anstatt sich in den Weg zu stellen oder unnötige Schritte zu erfordern. Features wie Tastenkombinationen, Tastaturzugriff und Makros verbessern das Gefühl der Direktheit.
+-   **Flexibel.** Die Anwendung ermöglicht Benutzern eine umfassende, differenzierte Kontrolle über ihre Arbeit.
+-   **Integrierte.** Die Anwendung ist gut in Microsoft Windows integriert, sodass sie Daten für andere Anwendungen freigeben kann.
+-   **Erweitert.** Die Anwendung verfügt über einzigartige, innovative, moderne Features, die in konkurrierenden Lösungen nicht zu finden sind.
 
-Einige dieser Merkmale hängen von der Wahrnehmung des Benutzers ab und sind relativ zu den aktuellen Funktionen der Benutzer. Was als leistungsstark angesehen wird, kann sich im Laufe der Zeit ändern, sodass die erweiterte Suchfunktion von heute heute möglicherweise üblich ist.
+Einige dieser Merkmale hängen von der Wahrnehmung des Benutzers ab und sind relativ zu den aktuellen Funktionen der Benutzer. Was als leistungsfähig angesehen wird, kann sich im Laufe der Zeit ändern, sodass das erweiterte Suchfeature von heute morgen häufig verwendet werden kann.
 
-Alle diese Merkmale können mit unserer Power-Definition kombiniert werden:
+All diese Merkmale können in unserer Definition der Leistung kombiniert werden:
 
-**Eine Anwendung ist leistungsfähig, wenn Sie Ihren Ziel Benutzern ermöglicht, Ihr vollständiges Potenzial effizient zu realisieren.**
+**Eine Anwendung ist leistungsstark, wenn sie es ihren Zielbenutzern ermöglicht, ihr volles Potenzial effizient zu nutzen.**
 
-Folglich ist das ultimative Maß an Energieproduktivität und nicht die Anzahl der Features.
+Daher ist das endgültige Maß für Die Leistung die Produktivität, nicht die Anzahl der Features.
 
-Verschiedene Benutzer benötigen unterschiedliche Möglichkeiten, um das volle Potenzial zu erreichen. Was die Aktivierung für einige Benutzer ermöglicht, kann die Flexibilität, die Direktheit und die Kontrolle für andere beeinträchtigen. Gut entworfene Software muss diese Merkmale entsprechend ausgleichen. Beispielsweise kann ein Desktop Publishing System, das für Nichtfachleute entworfen wurde, mithilfe von Assistenten die Benutzer durch komplexe Aufgaben durchlaufen. Diese Assistenten ermöglichen es den Ziel Benutzern, Aufgaben auszuführen, die andernfalls nicht durchgeführt werden könnten. Im Gegensatz dazu kann sich ein Desktop Publishing System für Fachleute auf die Direktheit, Effizienz und umfassende Kontrolle konzentrieren. Für Benutzer einer solchen Anwendung sind Assistenten möglicherweise eingeschränkt und frustrierend.
+Verschiedene Benutzer benötigen Hilfe, um ihr volles Potenzial auf unterschiedliche Weise zu erreichen. Was für einige Benutzer aktiviert wird, kann für andere Zufälligkeit, Direktheit und Kontrolle beeinträchtigen. Gut entworfene Software muss diese Merkmale entsprechend ausgleichen. Beispielsweise kann ein Desktopveröffentlichungssystem, das für Nichtprofessionen konzipiert ist, Assistenten verwenden, um Benutzer durch komplexe Aufgaben zu durchlaufen. Solche Assistenten ermöglichen es den Zielbenutzern, Aufgaben auszuführen, die sie andernfalls nicht ausführen können. Im Gegensatz dazu kann sich ein Desktopveröffentlichungssystem für Experten auf Direktheit, Effizienz und vollständige Kontrolle konzentrieren. Für Benutzer einer solchen Anwendung können Assistenten einschränkend und frustrierend sein.
 
-**Wenn Sie nur eine Aktion ausführen...**
+**Wenn Sie nur eine Sache durchführen...**
 
-Verstehen Sie die Ziele ihrer Ziel Benutzer, und erstellen Sie eine Featuregruppe, mit der Sie diese Ziele produktiv erreichen können.
+Verstehen Sie die Ziele Ihrer Zielbenutzer, und erstellen Sie einen Featuresatz, mit dem sie diese Ziele produktiv erreichen können.
 
-## <a name="what-makes-a-user-experience-simple"></a>Was macht eine Benutzer Darstellung einfach?
+## <a name="what-makes-a-user-experience-simple"></a>Was vereinfacht die Benutzerfreundlichkeit?
 
 Die Einfachheit wird wie folgt definiert:
 
-**Einfachheit ist die Reduzierung oder Eliminierung eines Attributs eines Entwurfs, den Ziel Benutzern bekannt sind, und es ist nicht zwingend erforderlich.**
+**Einfachheit ist die Reduzierung oder Beseitigung eines Attributs eines Entwurfs, das zielorientierte Benutzer kennen und als unerwähnt betrachten.**
 
-In der Praxis wird die Einfachheit erreicht, indem die richtige Funktion ausgewählt und die Features auf die richtige Weise präsentiert werden. Dadurch wird die nicht erforderliche Bedeutung, sowohl real als auch wahr, reduziert.
+In der Praxis wird die Einfachheit erreicht, indem der richtige Featuresatz ausgewählt und die Features auf die richtige Weise dargestellt werden. Dies reduziert die unwichtige, sowohl reale als auch wahrgenommene.
 
-Die Einfachheit hängt von der Wahrnehmung von Benutzern ab. Beachten Sie, wie die Auswirkungen einer automatischen Übertragung von der Perspektive eines Benutzers abhängen:
+Die Einfachheit hängt von der Wahrnehmung der Benutzer ab. Berücksichtigen Sie, wie die Auswirkung einer automatischen Übertragung von der Perspektive eines Benutzers abhängt:
 
--   Bei einem typischen Treiber (dem Ziel Benutzer) entfällt eine automatische Übertragung darauf, dass ein manueller Zahnrad Wechsel und eine schiebeanlage nicht mehr erforderlich sind. Ein manueller Zahnrad und eine manuelle Ausrüstung sind für die Aufgabe des treibungs nicht zwingend notwendig, sodass Sie entfernt werden, um Einfachheit zu erzielen.
--   Bei einem professionellen Rennwagen-Treiber ist die direkte Kontrolle über die Übertragung für die Wettbewerbsfähigkeit von entscheidender Bedeutung. Eine automatische Übertragung wirkt sich negativ auf die Fahrzeugleistung aus und wird daher nicht als Ergebnis der Einfachheit betrachtet.
--   Bei einem-Mechaniker handelt es sich bei einer automatischen Übertragung um einen komplexeren Mechanismus, der nicht einfacher zu reparieren oder zu warten ist als eine manuelle Übertragung. Im Gegensatz zum-Mechaniker kennt der Ziel Benutzer diese interne Komplexität nicht.
+-   Für den typischen Fahrer (den Zielbenutzer) entfällt durch ein automatisches Schaltwerk die Notwendigkeit einer manuellen Schalt- und Ziehkraft, sodass ein Auto viel einfacher zu fahren ist. Eine manuelle Zahnradverschiebung und Einarbeitung sind für die Aufgabe des Fahrens nicht erforderlich, daher werden sie entfernt, um Einfachheit zu erzielen.
+-   Für einen professionellen Fahrer eines Racewagens ist die direkte Kontrolle über das Transmission entscheidend, um wettbewerbsfähig zu sein. Ein autonatives Schaltnetz wirkt sich negativ auf die Leistung des Autos aus, sodass es nicht als Ergebnis der Einfachheit betrachtet wird.
+-   Bei einem Riegel ist eine automatische Übertragung ein komplexerer Mechanismus und daher nicht einfacher zu reparieren oder zu warten als eine manuelle Übertragung. Im Gegensatz zum 1:0-Vorgang ist dem Zielbenutzer diese interne Komplexität bewusst.
 
-Während unterschiedliche Benutzer die automatische Übertragung anders betrachten, ist Sie erfolgreich, da Sie die Notwendigkeit von nicht wesentlichen Kenntnissen, Kenntnissen und Aufwand von ihren Ziel Benutzern entfällt. Für den typischen Treiber ist die automatische Übertragung ein hervorragend, da Sie einfach funktioniert.
+Obwohl verschiedene Benutzer die automatische Übertragung unterschiedlich betrachten, ist sie erfolgreich, da sie den Zielbenutzern nicht mehr unwichtiges Wissen, Fähigkeiten und Aufwand abnimmt. Für den typischen Treiber ist die automatische Übertragung ein hervorragendes Feature, da sie einfach funktioniert.
 
 ### <a name="simplicity-vs-ease-of-use"></a>Einfachheit und Benutzerfreundlichkeit
 
-Die Einfachheit ist, wenn Sie ordnungsgemäß angewendet wird, einfacher zu verwenden. Einfachheit und einfache Verwendung sind jedoch nicht die gleichen Konzepte. Benutzerfreundlichkeit wird erzielt, wenn Benutzer eine Aufgabe ohne Schwierigkeiten oder Verwirrung innerhalb eines angemessenen Zeitraums erfolgreich ausführen können. Es gibt viele Methoden, um die Benutzerfreundlichkeit zu vereinfachen, und Einfachheit – die Verringerung der unwesentlichen – ist nur eine davon.
+Die Einfachheit führt bei korrekter Anwendung zu einer benutzerfreundlichkeit. Einfachheit und Benutzerfreundlichkeit sind jedoch nicht die gleichen Konzepte. Benutzerfreundlichkeit wird erreicht, wenn Benutzer eine Aufgabe innerhalb eines geeigneten Zeitraums ohne Schwierigkeiten oder Verwirrung selbst erfolgreich ausführen können. Es gibt viele Möglichkeiten, die Benutzerfreundlichkeit zu erreichen, und einfachheit – die Reduzierung der unwichtigen – ist nur eine davon.
 
-Alle Benutzer, unabhängig davon, wie ausgereift Sie Ihre Arbeit mit minimalem Aufwand erledigen möchten. Alle Benutzer – auch erweiterte Benutzer – sind hauptsächlich motiviert, ihre Arbeit zu erledigen, ohne sich über Computer oder Ihre Anwendung zu informieren.
+Alle Benutzer möchten ihre Arbeit unabhängig davon, wie ausgereift sie sind, mit einem minimalen unnötigen Aufwand erledigen. Alle Benutzer – auch fortgeschrittene Benutzer – sind in erster Linie daran ausgerichtet, ihre Arbeit zu erledigen, nicht um mehr über Computer oder Ihre Anwendung zu erfahren.
 
-Einfachheit ist die effektivste Methode, um die Benutzerfreundlichkeit zu vereinfachen und Benutzerfreundlichkeit zu verwenden. Komplexe, schwer zu verwendende Features werden einfach nicht verwendet. Im Gegensatz dazu sind einfache, elegante Entwürfe, die ihre Funktionsweise ausführen, eine Freude zu verwenden. Sie rufen eine positive, emotionale Reaktion auf.
+Einfachheit ist die effektivste Methode, um benutzerfreundlichkeit und Benutzerfreundlichkeit gleich zu erreichen. Komplexe, schwer zu verwendende Features werden einfach nicht verwendet. Im Gegensatz dazu sind einfache, elegante Entwürfe, die ihre Funktion gut erfüllen, ein Sehr gut zu verwenden. Sie rufen eine positive, emotionale Antwort auf.
 
-Sehen Sie sich beispielsweise die Unterstützung für drahtlose Netzwerke in Microsoft Windows XP an. Microsoft könnte einen Assistenten hinzugefügt haben, um die Benutzer durch den Konfigurationsprozess zu durchlaufen. Diese Vorgehensweise würde zu einer einfachen Verwendung, aber nicht zur Vereinfachung führen, da ein nicht wesentliches Feature (der Assistent) hinzugefügt worden wäre. Stattdessen hat Microsoft drahtloses Netzwerk entworfen, um sich automatisch selbst zu konfigurieren. Der Benutzer kümmert sich letztendlich nicht um die Konfigurationsdetails, solange er zuverlässig und sicher funktioniert. Diese Kombination aus Leistung und Einfachheit in drahtlosen Netzwerktechnologien hat zu seiner Beliebtheit und schnellen Akzeptanz geführt.
+Betrachten Sie z. B. die Drahtlose Netzwerkunterstützung in Microsoft Windows XP. Microsoft hätte einen Assistenten hinzufügen können, um Benutzer durch den Konfigurationsprozess zu durchlaufen. Dieser Ansatz hätte zu benutzerfreundlichkeit, aber nicht zur Einfachheit geführt, da ein unwichtiges Feature (der Assistent) hinzugefügt worden wäre. Stattdessen hat Microsoft Funknetzwerke entwickelt, um sich automatisch zu konfigurieren. Die Konfigurationsdetails sind den Benutzern letztlich egal, solange sie zuverlässig und sicher funktionieren. Diese Kombination aus Leistung und Einfachheit bei der Funknetzwerktechnologie hat zu ihrer Beliebtheit und schnellen Einführung geführt.
 
-**Wenn Sie nur eine Aktion ausführen...**
+**Wenn Sie nur eine Sache durchführen...**
 
-Starten Sie Ihren Entwurfsprozess mit den einfachsten Entwürfen, die den Auftrag gut machen.
+Starten Sie Ihren Entwurfsprozess mit den einfachsten Entwürfen, die den Auftrag gut erledigen.
 
-Wenn Sie mit dem aktuellen Design nicht zufrieden sind, können Sie zunächst alle nicht wesentlichen Elemente entfernen. Sie werden feststellen, dass es in der Regel sehr gut bleibt.
+Wenn Sie mit Ihrem aktuellen Entwurf nicht zufrieden sind, beginnen Sie damit, alle unwichtigen Elemente zu entpacken. Sie werden feststellen, dass das, was bleibt, in der Regel recht gut ist.
 
-## <a name="obtaining-simplicity-while-maintaining-power"></a>Einfachheit der Vereinfachung und Aufrechterhaltung der Leistung
+## <a name="obtaining-simplicity-while-maintaining-power"></a>Erhalten von Einfachheit bei gleichzeitiger Beibehaltung der Leistung
 
 ### <a name="design-principles"></a>Entwurfsprinzipien
 
-Um die Einfachheit zu erhalten, entwerfen Sie immer für die wahrscheinliche, nicht für die Möglichkeit.
+Um einfachheitserlangend zu sein, entwerfen Sie immer für das Wahrscheinliche, nicht für das Mögliche.
 
-Der mögliche
+Die mögliche
 
-Entwerfen Sie Entscheidungen auf der Grundlage der möglichen Ergebnisse komplexer Benutzeroberflächen, wie z. b. des Registrierungs-Editors, wobei beim Entwurf davon ausgegangen wird, dass alle Aktionen gleichermaßen möglich sind und somit der gleiche Aufwand erforderlich ist. Da alles möglich ist, werden Benutzer Ziele bei Entwurfsentscheidungen nicht berücksichtigt.
+Entwurfsentscheidungen, die auf den möglichen Möglichkeiten basieren, führen zu komplexen Benutzeroberflächen wie dem Registrierungs-Editor, wobei der Entwurf davon ausgeht, dass alle Aktionen gleich möglich sind und daher gleichen Aufwand erfordern. Da alles möglich ist, werden Benutzerziele bei Entwurfsentscheidungen nicht berücksichtigt.
 
-Das wahrscheinliche
+Die wahrscheinliche
 
-Entwurfsentscheidungen auf der Grundlage des wahrscheinlichen Leads zu vereinfachten, Ziel-und aufgabenbasierten Lösungen, bei denen die wahrscheinlichen Szenarien den Fokus erhalten und einen minimalen Aufwand benötigen.
+Entwurfsentscheidungen, die auf der wahrscheinlichen basieren, führen zu vereinfachten, ziel- und aufgabenbasierten Lösungen, bei denen die wahrscheinlichen Szenarien den Fokus erhalten und nur minimalen Aufwand erfordern.
 
-Das Entwurfs Prinzip der Einfachheit
+Das Prinzip des Einfachheitsentwurfs
 
-**Um Einfachheit zu erzielen, konzentrieren Sie sich auf das, was wahrscheinlich ist. reduzieren, ausblenden oder entfernen, was unwahrscheinlich ist. und vermeiden Sie, was unmöglich ist.**
+**Konzentrieren Sie sich auf die Wahrscheinlichkeit, um einfachheitsorientiert zu sein. reduzieren, ausblenden oder entfernen, was unwahrscheinlich ist; und beseitigen, was unmöglich ist.**
 
-Was Benutzer tun werden, ist weitaus relevanter für den Entwurf, als dies möglich wäre.
+Was Benutzer tun werden, ist wesentlich relevanter für den Entwurf als das, was sie tun könnten.
 
-### <a name="design-techniques"></a>Entwurfs Techniken
+### <a name="design-techniques"></a>Entwurfstechniken
 
-Um die Einfachheit zu gewährleisten und gleichzeitig die Leistung aufrechtzuerhalten, wählen Sie den **richtigen Satz von Features**, suchen Sie die Features **an den richtigen Stellen**, und **reduzieren Sie den Aufwand** für deren Verwendung. Dieser Abschnitt enthält einige gängige Verfahren zum Erreichen dieser Ziele.
+Um einfachheitshalber die Leistungsfähigkeit beizubehalten, wählen Sie die **richtigen Features** aus, suchen Sie die Features **an den richtigen Stellen,** und reduzieren Sie den Aufwand für **deren** Verwendung. In diesem Abschnitt werden einige gängige Verfahren zum Erreichen dieser Ziele beschrieben.
 
-Auswählen des richtigen Funktions Satzes
+Auswählen des richtigen Featuresets
 
-"Perfektion wird erzielt, nicht, wenn keine weiteren Elemente hinzugefügt werden müssen.
+"Dies wird erreicht, nicht, wenn nichts mehr hinzugefügt werden muss.
 
-aber wenn es noch nichts zu tun hat. " – Antoine de Saint-Exupery
+aber wenn nichts mehr weggelassen werden muss." – Beim De-Saint-Exupery
 
-Mithilfe der folgenden Entwurfs Techniken erhalten Ihre Benutzer die Features, die Sie benötigen, während Sie durch die tatsächliche Reduzierung oder Entfernung eine Vereinfachung erreichen:
+Die folgenden Entwurfstechniken bieten Ihren Benutzern die Features, die sie benötigen, und erreichen gleichzeitig Einfachheit durch tatsächliche Reduzierung oder Entfernung:
 
--   **Bestimmen Sie die Funktionen, die Ihre Benutzer benötigen.** Verstehen Sie die Anforderungen Ihrer Benutzer durch Ziel, Szenario und Aufgabenanalyse. Legen Sie eine Reihe von Features fest, mit denen diese Ziele realisiert werden.
--   **Entfernen Sie unnötige Elemente.** Entfernen Sie Elemente, die wahrscheinlich nicht verwendet werden oder eine bevorzugte Alternative sind.
--   **Entfernen Sie unnötige Redundanz.** Es gibt möglicherweise mehrere effektive Möglichkeiten, um eine Aufgabe auszuführen. Um die Einfachheit zu vereinfachen, treffen Sie die harte Entscheidung, und wählen Sie die beste Entscheidung für Ihre Ziel Benutzer, anstatt alle Optionen bereitzustellen und die Auswahl einer Option zu treffen.
--   **Legen Sie den Wert "just work" automatisch ab.** Das-Element ist erforderlich, aber es ist nicht möglich, eine Benutzerinteraktion zu erreichen, da es ein akzeptables Standardverhalten oder eine akzeptable Konfiguration gibt. Um Einfachheit zu gewährleisten, machen Sie es automatisch, und blenden Sie es entweder vollständig vom Benutzer aus, oder verringern Sie die Verfügbarkeit erheblich.
+-   **Bestimmen Sie die Features, die Ihre Benutzer benötigen.** Machen Sie sich mit den Anforderungen Ihrer Benutzer durch Ziel-, Szenario- und Aufgabenanalyse klar. Bestimmen Sie eine Reihe von Features, die diese Ziele erreichen.
+-   **Entfernen Sie unnötige Elemente.** Entfernen Sie Elemente, die wahrscheinlich nicht verwendet werden oder über bevorzugte Alternativen verfügen.
+-   **Entfernen sie unnötige Redundanz.** Es gibt möglicherweise mehrere effektive Möglichkeiten, eine Aufgabe auszuführen. Treffen Sie der Einfachheit halber die schwierige Entscheidung, und wählen Sie die beste Entscheidung für Ihre Zielbenutzer aus, anstatt alle Benutzer zur Verfügung zu stellen und die Auswahl zu einer Option zu machen.
+-   **Sorgen Sie dafür, dass es automatisch funktioniert.** Das -Element ist erforderlich, aber jede Benutzerinteraktion, damit es funktioniert, liegt nicht daran, dass es ein akzeptables Standardverhalten oder eine akzeptable Konfiguration gibt. Sorgen Sie zur Vereinfachung dafür, dass die Anwendung automatisch funktioniert, und blenden Sie sie entweder vollständig vor dem Benutzer aus, oder verringern Sie die Gefährdung erheblich.
 
 Optimieren der Präsentation
 
-"Die Möglichkeit zur Vereinfachung der Vermeidung der unnötigen
+"Die Möglichkeit der Vereinfachung bedeutet, unnötige
 
-Dies ist möglich, damit die erforderliche Sprache " – Hans Hofmann
+damit das erforderliche sprechen kann." – Hans Hans
 
-Verwenden Sie die folgenden Entwurfs Techniken, um die Leistung aufrechtzuerhalten, während Sie die Einfachheit durch die Wahrnehmung von Reduzierungs-oder Entfernungs Möglichkeiten erzielen
+Verwenden Sie die folgenden Entwurfstechniken, um die Leistung zu erhalten und gleichzeitig Einfachheit durch die Wahrnehmung von Reduzierung oder Entfernung zu erreichen:
 
--   **Kombinieren Sie, was kombiniert werden soll.** Fügen Sie die wesentlichen Features, die eine Aufgabe unterstützen, so ein, dass eine Aufgabe an einem Ort ausgeführt werden kann. Die Schritte der Aufgabe sollten über einen einheitlichen, optimierten Flow verfügen. Unterbrechen Sie komplexe Aufgaben in eine Reihe einfacher, klarer Schritte, damit "One" von mehreren Benutzeroberflächen Oberflächen, wie z. b. einem Assistenten, bestehen kann.
--   **Trennen Sie, was getrennt werden soll.** Es kann nicht alles an einem Ort dargestellt werden, sodass Sie immer über klare, gut ausgewählte Grenzen verfügen. Stellen Sie Features zur Unterstützung von Kern Szenarien zentral und offensichtlich dar, und blenden Sie optionale Funktionen aus, oder machen Sie Sie Peripherie Trennen Sie einzelne Aufgaben, und stellen Sie Links zu verwandten Aufgaben bereit. Beispielsweise sollten Tasks, die sich auf die Bearbeitung von Fotos beziehen, eindeutig von Aufgaben im Zusammenhang mit der Verwaltung von Fotos getrennt werden, Sie sollten jedoch problemlos voneinander zugänglich sein.
--   **Vermeiden Sie, was entfernt werden kann.** Erstellen Sie einen Ausdruck für den Entwurf, und markieren Sie die Elemente, die zum Ausführen der wichtigsten Aufgaben verwendet werden. Markieren Sie sogar die einzelnen Wörter im Benutzeroberflächen Text, die nützliche Informationen vermitteln. Überprüfen Sie nun, was nicht hervorgehoben ist, und entfernen Sie es aus dem Design. Würde es passieren, wenn Sie das Element entfernen? Wenn nicht, entfernen Sie Sie!
--   Konsistenz, Konfigurierbarkeit und Generalisierung sind häufig wünschenswert, aber Sie können zu unnötiger Komplexität führen. Überprüfen Sie den Entwurf auf unkonsistente Anstrengungen (z. b. mit redundantem Text), Generalisierung (z. b. eine beliebige Anzahl von Zeitzonen, wenn zwei ausreichen), und konfigurieren Sie die Konfiguration (z. b. Optionen, die Benutzer wahrscheinlich nicht ändern), und beseitigen Sie, was beseitigt werden kann.
--   **Platzieren Sie die Elemente an der richtigen Stelle.** Innerhalb eines Fensters sollte die Position eines Elements dem-Hilfsprogramm folgen. Wichtige Steuerelemente, Anleitungen und Erläuterungen sollten alle in der logischen Reihenfolge zueinander stehen. Wenn weitere Optionen erforderlich sind, machen Sie diese im Kontext verfügbar, indem Sie auf ein Chevron oder einen ähnlichen Mechanismus klicken. Wenn weitere Informationen erforderlich sind, zeigen Sie mit der Maus auf einen InfoTipp. Legen Sie weniger wichtige Aufgaben, Optionen und Hilfe Informationen außerhalb des Hauptflusses in einem separaten Fenster oder einer separaten Seite ab. Das Verfahren, bei Bedarf weitere Details anzuzeigen, wird als Progressive Offenlegung bezeichnet.
--   **Verwenden Sie sinnvolle allgemeine Kombinationen.** Es ist häufig einfacher und skalierbarer, Gruppen verwandter Elemente auszuwählen und zu bearbeiten, als einzelne Elemente. Beispiele für allgemeine Kombinationen sind Ordner, Designs, Stile und Benutzergruppen. Solche Kombinationen sind häufig einem Benutzer Ziel oder einer Absicht zugeordnet, das nicht aus den einzelnen Elementen ersichtlich ist. Beispielsweise ist die Absicht hinter dem hoher Kontrast Black-Farbschema weitaus deutlicher als die des Hintergrunds eines schwarzen Fensters.
--   **Wählen Sie die richtigen Steuerelemente aus.** Entwurfs Elemente werden durch die Steuerelemente, die Sie zur Darstellung verwenden, verkörpert. Daher ist die Auswahl des richtigen Steuer Elements für eine effiziente Darstellung von entscheidender Bedeutung. Das von Microsoft Word verwendete Feld Schriftart Auswahl zeigt beispielsweise sowohl eine Vorschau der Schriftart als auch die zuletzt verwendeten Schriftarten an. Ebenso ist die Art und Weise, in der Word potenzielle Rechtschreibung und Grammatikfehler anzeigt, viel einfacher als die Alternative zum Dialogfeld, wie am Anfang dieses Artikels zu sehen ist.
+-   **Kombinieren Sie, was kombiniert werden soll.** Legen Sie die wesentlichen Features, die eine Aufgabe unterstützen, zusammen, damit eine Aufgabe an einem Ort ausgeführt werden kann. Die Schritte der Aufgabe sollten einen einheitlichen, optimierten Ablauf haben. Unterlegen Sie komplexe Aufgaben in eine Reihe einfacher, klarer Schritte, sodass ein Ort aus mehreren Benutzeroberflächenoberflächen bestehen kann, z. B. einem Assistenten.
+-   **Trennen Sie, was getrennt werden soll.** Nicht alles kann an einem Ort dargestellt werden, daher verfügen Sie immer über klare, gut ausgewählte Grenzen. Machen Sie Features, die Kernszenarien unterstützen, zentral und offensichtlich, und blenden Sie optionale Funktionen aus, oder machen Sie sie zu Peripheriegeräten. Trennen Sie einzelne Aufgaben, und stellen Sie Links zu verwandten Aufgaben zur Verfügung. Beispielsweise sollten Aufgaben im Zusammenhang mit der Bearbeitung von Fotos klar von Aufgaben im Zusammenhang mit der Verwaltung von Sammlungen von Fotos getrennt werden, aber sie sollten leicht voneinander zugänglich sein.
+-   **Beseitigen Sie, was beseitigt werden kann.** Nehmen Sie einen Ausdruck Ihres Entwurfs vor, und markieren Sie die Elemente, die zum Ausführen der wichtigsten Aufgaben verwendet werden. Markieren Sie sogar die einzelnen Wörter im Benutzeroberflächentext, die nützliche Informationen kommunizieren. Überprüfen Sie nun, was nicht hervorgehoben ist, und ziehen Sie in Betracht, es aus dem Entwurf zu entfernen. Wenn Sie das Element entfernen, würde etwas Schlechtes passieren? Wenn nicht, entfernen Sie es!
+-   Konsistenz, Konfigurierbarkeit und Generalisierung sind häufig wünschenswerte Qualitäten, können aber zu unnötiger Komplexität führen. Überprüfen Sie Ihren Entwurf auf fehlgeleitete Konsistenzbemühungen (z. B. redundanten Text), Generalisierung (z. B. eine beliebige Anzahl von Zeitzonen, wenn zwei ausreichend sind) und Konfigurierbarkeit (z. B. Optionen, die Benutzer wahrscheinlich nicht ändern werden), und beseitigen Sie, was beseitigt werden kann.
+-   **Platzieren Sie die Elemente an der richtigen Stelle.** Innerhalb eines Fensters sollte die Position eines Elements seinem Hilfsprogramm folgen. Wichtige Steuerelemente, Anweisungen und Erklärungen sollten alle in logischer Reihenfolge im Kontext sein. Wenn weitere Optionen erforderlich sind, machen Sie sie im Kontext verfügbar, indem Sie auf ein Chevron oder einen ähnlichen Mechanismus klicken. Wenn weitere Informationen erforderlich sind, zeigen Sie eine Infotip an, wenn Sie mit dem Mauszeiger darauf zeigen. Platzieren Sie weniger wichtige Aufgaben, Optionen und Hilfeinformationen außerhalb des Hauptflusses in einem separaten Fenster oder einer separaten Seite. Die Technik, bei Bedarf zusätzliche Details anzuzeigen, wird als progressive Offenlegung bezeichnet.
+-   **Verwenden Sie aussagekräftige Kombinationen auf hoher Ebene.** Häufig ist es einfacher und skalierbarer, Gruppen verwandter Elemente auszuwählen und zu bearbeiten als einzelne Elemente. Beispiele für Kombinationen auf hoher Ebene sind Ordner, Designs, Stile und Benutzergruppen. Solche Kombinationen sind häufig einem Benutzerziel oder einer Absicht zuordnen, die in den einzelnen Elementen nicht offensichtlich ist. Beispielsweise ist die Absicht hinter dem farblich hoher Kontrast Schwarz viel offensichtlicher als die eines schwarzen Fensterhintergrunds.
+-   **Wählen Sie die richtigen Steuerelemente aus.** Entwurfselemente werden durch die Steuerelemente repräsentiert, die Sie zur Darstellung verwenden. Daher ist die Auswahl des richtigen Steuerelements entscheidend für eine effiziente Darstellung. Beispielsweise zeigt das von Microsoft Word verwendete Schriftartauswahlfeld sowohl eine Vorschau der Schriftart als auch die zuletzt verwendeten Schriftarten an. Ebenso ist die Art und Weise, wie Word potenzielle Rechtschreib- und Grammatikfehler zeigt, wesentlich einfacher als die Dialogfeldalternative, wie am Anfang dieses Artikels gezeigt.
 
-Verringern des Aufwands
+Reduzieren des Aufwands
 
 "Einfache Dinge sollten einfach sein.
 
-Komplexe Dinge sollten möglich sein. " – Alan Kay
+Komplexe Dinge sollten möglich sein." —Durch eine 10-0-
 
-Die folgenden Entwurfs Techniken führen zu einem geringeren Aufwand für Benutzer:
+Die folgenden Entwurfstechniken führen zu weniger Aufwand für Benutzer:
 
--   **Machen Sie Aufgaben erkennbar und sichtbar.** Alle Tasks, aber besonders häufige Aufgaben, sollten in der Benutzeroberfläche problemlos auffallen. Die Schritte, die zum Ausführen von Aufgaben erforderlich sind, sollten sichtbar sein und sollten sich nicht auf die Speicherung verlassen.
--   **Stellen Sie Aufgaben in der Domäne des Benutzers dar.** Komplexe Software erfordert, dass Benutzer ihre Probleme der Technologie zuordnen. Einfache Software führt diese Zuordnung für Sie durch, indem Sie die Natur darstellt. Beispielsweise wird ein Feature für die Red-Eye-Reduzierung direkt dem Problembereich zugeordnet, und es ist nicht erforderlich, dass Benutzer in Bezug auf Details wie Farben und Farbverläufe suchen.
--   **Fügen Sie das Domänen Wissen in das Programm ein.** Es ist nicht erforderlich, dass Benutzer auf externe Informationen zugreifen müssen, um die Anwendung erfolgreich zu verwenden. Domänen wissen können aus komplexen Daten und Algorithmen reichen, um einfach zu klären, welche Art von Eingabe gültig ist.
--   **Verwenden Sie Text, den Benutzer verstehen.** Gut erstellter Text ist für die effektive Kommunikation mit Benutzern von entscheidender Bedeutung. Verwenden Sie Konzepte und Begriffe, die Ihren Benutzern vertraut sind. Erläutern Sie vollständig, was in Klartext gefordert wird, damit Benutzer intelligente, fundierte Entscheidungen treffen können.
--   **Verwenden Sie sichere, sichere, wahrscheinliche Standardwerte.** Wenn eine Einstellung einen Wert hat, der für die meisten Benutzer in den meisten Fällen gilt und diese Einstellung sicher und sicher ist, verwenden Sie Sie als Standardwert. Legen Sie fest, dass Benutzer nur bei Bedarf Werte angeben.
--   **Verwenden Sie Einschränkungen.** Wenn es viele Möglichkeiten gibt, eine Aufgabe auszuführen, aber nur einige richtig sind, schränken Sie die Aufgabe auf die richtigen Arten ein. Benutzer sollten nicht berechtigt sein, leicht vermeidende Fehler zu machen.
+-   **Machen Sie Aufgaben erkennbar und sichtbar.** Alle Aufgaben, aber insbesondere häufige Aufgaben, sollten innerhalb der Benutzeroberfläche leicht erkennbar sein. Die schritte, die zum Ausführen von Aufgaben erforderlich sind, sollten sichtbar sein und dürfen sich nicht auf einPräzisieren verlassen.
+-   **Stellen Sie Aufgaben in der Domäne des Benutzers vor.** Komplexe Software erfordert, dass Benutzer ihre Probleme der Technologie zuordnen. Einfache Software übernimmt diese Zuordnung für sie, indem sie das Natürliche präsentiert. Beispielsweise wird eine Red Eye-Reduzierungsfunktion direkt dem Problembereich zu entnehmen und erfordert nicht, dass Benutzer in Bezug auf Details wie Farbtons und Farbverläufe denken.
+-   **Legen Sie Domänenwissen in das Programm ein.** Benutzer sollten nicht auf externe Informationen zugreifen müssen, um Ihre Anwendung erfolgreich zu verwenden. Domänenwissen kann von komplexen Daten und Algorithmen bis zur einfachen Eindeutigung reichen, welche Art von Eingabe gültig ist.
+-   **Verwenden Sie Text, den Benutzer verstehen.** Gut gestalteter Text ist entscheidend für die effektive Kommunikation mit Benutzern. Verwenden Sie Konzepte und Begriffe, die Ihren Benutzern vertraut sind. Erläutern Sie vollständig, was in einfacher Sprache gefragt wird, damit Benutzer intelligente, fundierte Entscheidungen treffen können.
+-   **Verwenden Sie sichere, wahrscheinliche Standardwerte.** Wenn eine Einstellung über einen Wert verfügt, der in den meisten Fällen für die meisten Benutzer gilt und diese Einstellung sowohl sicher als auch sicher ist, verwenden Sie sie als Standardwert. Legen Sie fest, dass Benutzer Nur bei Bedarf Werte angeben.
+-   **Verwenden Sie Einschränkungen.** Wenn es viele Möglichkeiten gibt, eine Aufgabe auszuführen, aber nur einige korrekt sind, schränken Sie die Aufgabe auf diese richtigen Methoden ein. Benutzern sollte nicht gestattet werden, leicht vermeidbare Fehler zu machen.
 
-### <a name="simplicity-does-not-mean-simplistic"></a>Einfachheit bedeutet nicht vereinfachtes
+### <a name="simplicity-does-not-mean-simplistic"></a>Einfachheit bedeutet nicht einfach
 
-"Alles sollte so einfach wie möglich gemacht werden,
+"Alles sollte so einfach wie möglich gemacht werden.
 
-aber nicht einfacher. " – Albert Einstein
+aber nicht einfacher." —Beim Ansingen von
 
-Wir sind der Meinung, dass die Einfachheit für eine effektive, wünschenswerte Benutzerfreundlichkeit entscheidend ist – aber es ist immer möglich, eine gute Sache zu haben. Der Einfachheit halber ist die Verringerung oder Beseitigung der unwesentlichen Bedeutung. Durch das Entfernen der Essentials wird nur ein schlechter Entwurf erzeugt. Wenn Ihre "Vereinfachung" dazu führt, dass Benutzer frustriert, verwirrt, nicht sicher oder nicht erfolgreich abgeschlossen werden können, haben Sie zu viele entfernt.
+Wir sind der Meinung, dass Die Einfachheit entscheidend für eine effektive, wünschenswerte Benutzererfahrung ist, aber es ist immer möglich, eine gute Sache zu weit zu gehen. Das Wesentliche der Einfachheit ist die Reduzierung oder Beseitigung der unerlädlichen . Das Entfernen des grundlegenden -Konzepts führt lediglich zu einem schlechten Design. Wenn Ihre "Vereinfachung" dazu führt, dass Benutzer frustriert, verwirrend, unauffällig sind oder aufgaben nicht erfolgreich abgeschlossen werden können, haben Sie zu viel entfernt.
 
 ### <a name="simplicity-does-mean-more-effort-for-you"></a>Einfachheit bedeutet mehr Aufwand für Sie
 
-"Ich habe diesen Buchstaben nur noch länger gemacht, weil ich
+"Ich habe diesen Buchstaben nur länger gemacht, weil ich
 
-nicht die Zeit, um sie kürzer zu machen. " – Blaise Pascal
+nicht die Zeit, um sie kürzer zu machen." – Blaise Pascal
 
-Die Einfachheit der Vereinfachung und Beibehaltung der Leistung erfordert häufig eine erhebliche interne Komplexität. Es ist in der Regel einfacher, Software zu entwerfen, die alle Technologieanlagen bereitstellt, als eine solche Technologie zu entwerfen, die Sie verbirgt – das zweite erfordert ein hervorragendes Verständnis Ihrer Ziel Benutzer und ihrer Ziele. Das Entfernen eines Features erfordert Disziplin, da es sich nicht um das Hinzufügen dieses coolen Features handelt, das wirklich nicht praktikabel ist. Der Einfachheit halber müssen Sie feststellen, dass Sie nicht alles konfigurierbare gestalten Komplexe Software resultiert häufig aus einer Fehldarstellung der Benutzer: Sie nutzen nicht verwendete Features oder übermäßig komplexe Features, die Sie nicht verstehen.
+Um einfachheit zu erhalten und gleichzeitig die Leistung zu erhalten, ist häufig eine erhebliche interne Komplexität erforderlich. In der Regel ist es einfacher, Software zu entwerfen, die die ganze Technologie zur Verfügung stellt, als eine zu entwerfen, die sie ausblendet. Letzteres erfordert ein hervorragendes Verständnis ihrer Zielbenutzer und ihrer Ziele. Das Entfernen eines Features erfordert Disziplin, ebenso wie die Entscheidung gegen das Hinzufügen dieses coolen Features, das eigentlich nicht praktikabel ist. Der Einfachheit halber müssen Sie schwierige Entwurfsentscheidungen treffen, anstatt alles konfigurierbar zu machen. Komplexe Software resultiert häufig aus einem Missverständnis von Benutzern: dass sie nicht verwendete Features oder zu komplexe Features schätzen, die sie nicht verstehen können.
 
-## <a name="powerful-and-simple"></a>Leistungsstark und einfach
+## <a name="powerful-and-simple"></a>Leistungsfähig und einfach
 
-Bei der Energieversorgung geht es um das Aktivieren Ihrer Benutzer und die Produktivität. Einfachheit geht es darum, das unwesentliche zu entfernen und Features auf die richtige Weise darzustellen. Wenn Sie Ihre Ziel Benutzer verstehen und das richtige Gleichgewicht von Features und Präsentationen erzielen, können Sie Windows-basierte Anwendungen entwickeln, die beides tun.
+Bei Power geht es darum, Ihre Benutzer zu aktivieren und produktiv zu machen. Bei der Einfachheit geht es darum, die unerlässlichen Features zu entfernen und features auf die richtige Weise zu präsentieren. Indem Sie Ihre Zielbenutzer verstehen und das richtige Gleichgewicht zwischen Features und Präsentation erreichen, können Sie Windows-basierten Anwendungen entwerfen, die beides tun.
 
  
 

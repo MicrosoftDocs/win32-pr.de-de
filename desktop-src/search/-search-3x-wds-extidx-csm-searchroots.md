@@ -1,35 +1,35 @@
 ---
-description: Mit dem Crawl Scope Manager (CSM) können Sie Such Stämme für Ihre Datenspeicher zu und aus dem Windows Search-Crawl Bereich hinzufügen und daraus entfernen.
+description: Mit dem Durchforstungsbereich-Manager (CSM) können Sie Suchstämmen für Ihre Datenspeicher dem Windows Durchforstungsbereich hinzufügen und daraus entfernen.
 ms.assetid: 0f1ff41f-7c4c-4516-bb55-bf09a8f2f3bc
-title: Verwalten von Such Stämmen
+title: Verwalten von Suchstammstamm
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cbdd63e5e71cd18d3028c6d08019890f90c0228a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 758d3c10a4c69f336202274cd1fb40528848b0ddb431fd58646cf700d2b2d736
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214467"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119095287"
 ---
-# <a name="managing-search-roots"></a>Verwalten von Such Stämmen
+# <a name="managing-search-roots"></a>Verwalten von Suchstammstamm
 
-Mit dem Crawl Scope Manager (CSM) können Sie Such Stämme für Ihre Datenspeicher zu und aus dem Windows Search-Crawl Bereich hinzufügen und daraus entfernen.
+Mit dem Durchforstungsbereich-Manager (CSM) können Sie Suchstämmen für Ihre Datenspeicher dem Windows Durchforstungsbereich hinzufügen und daraus entfernen.
 
 Dieses Thema enthält die folgenden Themen:
 
--   [Informationen zu Such Stämmen](#about-search-roots)
+-   [Informationen zu Suchstammstamm](#about-search-roots)
 -   [Vorbereitungen](#before-you-begin)
--   [Windows 7: neue Crawl Scope Manager-API](#windows-7-new-crawl-scope-manager-api)
--   [Hinzufügen von Stämmen zum Crawl Bereich](#adding-roots-to-the-crawl-scope)
--   [Entfernen von Stämmen aus dem Crawl Bereich](#removing-roots-from-the-crawl-scope)
--   [Enumerieren von Stämme im Crawl Bereich](#enumerating-roots-in-the-crawl-scope)
+-   [Windows 7: Neue Durchforstungsbereich-Manager-API](#windows-7-new-crawl-scope-manager-api)
+-   [Hinzufügen von Stämmen zum Durchforstungsbereich](#adding-roots-to-the-crawl-scope)
+-   [Entfernen von Stämmen aus dem Durchforstungsbereich](#removing-roots-from-the-crawl-scope)
+-   [Aufzählen von Stämmen im Durchforstungsbereich](#enumerating-roots-in-the-crawl-scope)
 -   [Zugehörige Themen](#related-topics)
 
  
 
-## <a name="about-search-roots"></a>Informationen zu Such Stämmen
+## <a name="about-search-roots"></a>Informationen zu Suchstammstamm
 
-Ein Such Stamm definiert die Basis eines shellnamespaces, in dem bestimmte Bereiche eingeschlossen oder ausgeschlossen werden können, und ist in der Regel der auf der höchsten Ebene enthaltene Container in einem Protokoll, das aufgelistet werden kann. Sie gibt nicht an, welche Teile dieses Stores indiziert werden sollen oder nicht. Es signalisiert lediglich, dass ein Inhalts Speicher vorhanden ist und einem registrierten Protokollhandler zugeordnet ist. Die Syntax zum Identifizieren einer Such Stamm-URL umfasst das Protokoll, die Sicherheits-ID des Stores oder Benutzers, den Pfad und optional ein bestimmtes Element (z. b. eine Datei). Die folgenden Beispiele zeigen zwei Formen der Syntax für einen Suchstamm.
+Ein Suchstamm definiert die Basis eines Shellnamespace, in dem bestimmte Bereiche eingeschlossen oder ausgeschlossen werden können, und ist in der Regel der Container der höchsten Ebene in einem Protokoll, das aufgezählt werden kann. Es wird nicht angegeben, welche Teile dieses Speichers indiziert werden sollen oder nicht. sie signalisiert lediglich, dass ein Inhaltsspeicher vorhanden ist und einem registrierten Protokollhandler zugeordnet ist. Die Syntax zum Identifizieren einer Suchstamm-URL umfasst das Protokoll, den Sicherheitsbezeichner des Speichers oder Benutzers, den Pfad und optional ein bestimmtes Element (z. B. eine Datei). Die folgenden Beispiele zeigen zwei Formen der Syntax für einen Suchstamm.
 
 
 ```
@@ -40,61 +40,61 @@ or
 
 
 
-<protocol>Auf das Segment müssen zwei (2) Schrägstriche ("/") folgen, es sei denn, es handelt sich um das file: Protocol-Protokoll, das drei Schrägstriche (file:///) erfordert. Das <site or SID> Segment stellt entweder einen Inhalts Speicher oder eine Benutzer Sicherheits-ID dar, wenn der Suchstamm für den Benutzer spezifisch ist. Das <path> Segment ist ein Satz von Containern, wie z. b. Verzeichnisse oder Ordner, und kann das Platzhalter Zeichen " \* " enthalten. Für <item> Segment ist optional und kann auch das Platzhalter Zeichen ' \* ' enthalten. Wenn Sie kein Element einschließen, stellen Sie sicher, dass Sie das Pfad Segment mit einem Schrägstrich beenden, oder der Indexer geht davon aus, dass der letzte unter Container ein Element ist.
+Auf das <protocol> Segment müssen zwei (2) Schrägstriche ("/") folgen, es sei denn, es handelt sich um die Datei "protocol", für die drei Schrägstriche (file:///) erforderlich sind. Das <site or SID> Segment stellt entweder einen Inhaltsspeicher oder eine Benutzersicherheits-ID dar, wenn der Suchstamm spezifisch für den Benutzer sein soll. Das <path> Segment besteht aus einer Gruppe von Containern, z. B. Verzeichnissen oder Ordnern, und kann das Platzhalterzeichen ' ' ' \* enthalten. Die <item> segment ist optional und kann auch das Platzhalterzeichen \* "" enthalten. Wenn Sie kein Element einschließen, stellen Sie sicher, dass Sie das Pfadsegment mit einem Schrägstrich fertig stellen, oder der Indexer geht davon aus, dass der letzte Untercontainer ein Element ist.
 
-Angenommen, Sie haben einen Protokollhandler (myph) implementiert, um Dateien des Typs " \* . myext" für eine benutzerdefinierte Anwendung zu verarbeiten. Alle diese Dateien befinden sich im Ordner workteama \\ ProjectFiles auf einem lokalen Computer. Der Suchstamm für könnte wie folgt aussehen:
+Angenommen, Sie haben einen Protokollhandler (myPH) implementiert, um Dateien vom Typ \* .myext für eine benutzerdefinierte Anwendung zu verarbeiten. Alle diese Dateien befinden sich im Ordner WorkteamA \\ ProjectFiles auf einem lokalen Computer. Der Suchstamm für könnte wie folgt aussehen:
 
--   myPH:///C: \\ workteama \\ ProjectFiles\\
+-   myPH:///C: \\ WorkteamA \\ ProjectFiles\\
 
-Angenommen, Sie planen die Einbeziehung aller myext-Dateien, aber nichts anderes aus dem Container in den Index. Der Suchstamm für könnte wie folgt aussehen:
+Angenommen, Sie planen, alle MYEXT-Dateien, aber nichts anderes aus diesem Container in den Index aufzunehmen. Der Suchstamm für könnte wie folgt aussehen:
 
--   myPH:///C: \\ workteama \\ ProjectFiles \\ \* . myext.
+-   myPH:///C: \\ WorkteamA \\ ProjectFiles \\ \* .myext.
 
-Platzhalter Muster definieren URLs mithilfe des Platzhalter Zeichens " \* " und werden als Muster und nicht als URL angesehen, aber die Terminologie wird häufig austauschbar verwendet. Beispielsweise entsprechen file:///C: \\ ProjectA- \\ \* \\ Daten \\ den folgenden URLs:
+Platzhaltermuster definieren URLs mithilfe des Platzhalterzeichens " \* " und werden als Muster und nicht als URL betrachtet, aber die Terminologie wird häufig synonym verwendet. Beispiel: file:///C: \\ \\ \* \\ \\ ProjectA-Daten entsprechen den folgenden URLs:
 
--   C: \\ ProjectA \\ **Version1** \\ Daten\\
--   C: \\ ProjectA \\ **Version2** \\ Daten\\
+-   C: \\ ProjectA \\ **version1-Daten** \\\\
+-   C: \\ ProjectA \\ **version2-Daten** \\\\
 
-Dieses Muster würde jedoch nicht mit dieser URL verglichen werden:
+Dieses Muster würde jedoch nicht mit dieser URL übereinstimmen:
 
--   C: \\ ProjectA \\ **Version1 \\** temporäre \\ Daten\\
+-   C: \\ Temporäre Daten von ProjectA \\ **version1 \\** \\\\
 
-Sie sollten neue Such Stämme für Container erstellen, die sich nicht bereits im Crawl Bereich des Indexers befinden. Wenn Pfad C: Element \\ Bereich bereits im Crawl Bereich enthalten ist, müssen Sie kein neues Such Stammverzeichnis für C: Element \\ Scope childscope hinzufügen, \\ es sei denn, Sie wissen, dass der untergeordnete Bereich zuvor ausgeschlossen wurde.
+Sie sollten neue Suchstämmen für Container erstellen, die sich nicht bereits im Durchforstungsbereich des Indexers befinden. Wenn pfad C: \\ ParentScope bereits im Durchforstungsbereich enthalten ist, müssen Sie keinen neuen Suchstamm für C: ParentScope ChildScope hinzufügen, \\ es sei \\ denn, Sie wissen, dass der untergeordnete Bereich zuvor ausgeschlossen wurde.
 
-Die Benutzeroberfläche zum Festlegen von Windows-Suchoptionen zeigt Such Stämme für Benutzer an, damit Sie die Bereichs Regeln für Ihre Suchvorgänge verfeinern können. Im Rahmen des Installationsvorgangs für Ihren benutzerdefinierten Protokollhandler, Container und/oder Ihre Anwendung können Sie einen Standard-Crawl Bereich mit Einschluss-und Ausschluss Regeln definieren. Diese Regeln werden Endbenutzern als Standorte angezeigt. Benutzer können in den Unterverzeichnissen Ihres vordefinierten Such Stamms navigieren und diejenigen auswählen, die Sie in Durchsuchen einschließen möchten, oder die auszuschließenden löschen.
+Die Benutzeroberfläche zum Festlegen Windows Suchoptionen zeigt Benutzern Suchstamminformationen an, damit sie die Bereichsregeln für ihre Suchvorgänge verfeinern können. Im Rahmen des Installationsvorgangs für Ihren benutzerdefinierten Protokollhandler, Container und/oder Ihre Anwendung können Sie einen Standard-Durchforstungsbereich mit Ein- und Ausschlussregeln definieren. Diese Regeln werden Endbenutzern als Speicherorte angezeigt. Benutzer können innerhalb der Unterverzeichnisse Ihres vordefinierten Suchstamms navigieren und diejenigen auswählen, die sie in Suchvorgänge einschließen möchten, oder diejenigen löschen, die sie ausschließen möchten.
 
  
 
 ## <a name="before-you-begin"></a>Vorbereitungen
 
-Bevor Sie eine der CSM-Schnittstellen (Crawl Scope Manager) verwenden können, müssen Sie die folgenden Schritte ausführen:
+Bevor Sie eine der csm-Schnittstellen (Durchforstungsbereich-Manager) verwenden können, müssen Sie die folgenden erforderlichen Schritte ausführen:
 
-1.  Erstellen Sie das **crawlsearchmanager** -Objekt, und rufen Sie dessen [**isearchmanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchmanager) -Schnittstelle ab.
-2.  Rufen Sie [**isearchmanager:: getCatalog**](/windows/desktop/api/Searchapi/nf-searchapi-isearchmanager-getcatalog) für "SystemIndex" auf, um eine Instanz einer [**isearchcatalogmanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcatalogmanager) -Schnittstelle zu erhalten.
-3.  Rufen Sie [**isearchcatalogmanager:: getcrawlscopemanager**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager-getcrawlscopemanager) auf, um eine Instanz der [**isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) -Schnittstelle zu erhalten.
+1.  Erstellen Sie das **CrawlSearchManager-Objekt,** und rufen Sie dessen [**ISearchManager-Schnittstelle**](/windows/desktop/api/Searchapi/nn-searchapi-isearchmanager) ab.
+2.  Rufen Sie [**ISearchManager::GetCatalog**](/windows/desktop/api/Searchapi/nf-searchapi-isearchmanager-getcatalog) für "SystemIndex" auf, um eine Instanz einer [**ISearchCatalogManager-Schnittstelle**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcatalogmanager) abzurufen.
+3.  Rufen Sie [**ISearchCatalogManager::GetCrawlScopeManager**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcatalogmanager-getcrawlscopemanager) auf, um eine Instanz der [**ISearchCrawlScopeManager-Schnittstelle**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) abzurufen.
 
-Nachdem Sie die Änderungen am Crawl Scope Manager (CSM) vorgenommen haben, müssen Sie [**isearchcrawlscopemanager:: SaveAll**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-saveall)ausführen. Diese Methode nimmt keine Parameter an und gibt \_ bei Erfolg S OK zurück.
-
- 
-
-## <a name="windows-7-new-crawl-scope-manager-api"></a>Windows 7: neue Crawl Scope Manager-API
-
-In **Windows 7 und** höher erweitert [**ISearchCrawlScopeManager2**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager2) die Funktionalität der [**isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) -Schnittstelle. Die [**ISearchCrawlScopeManager2:: GetVersion**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager2-getversion) -Methode ruft die CSM-Version ab, mit der Clients informiert werden, wenn sich der Status des CSM geändert hat. **ISearchCrawlScopeManager2:: GetVersion** führt nicht zu einem prozessübergreifenden aufrufen. Wenn die Funktion erfolgreich ausgeführt wird, bleibt der zurückgegebene Zeiger gültig, bis der Client **UnmapViewOfFile** für den Zeiger und das **CloseHandle** für das zurückgegebene Handle aufruft.
+Nachdem Sie Änderungen am Durchforstungsbereich-Manager (CSM) vorgenommen haben, müssen Sie [**ISearchCrawlScopeManager::SaveAll**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-saveall)aufrufen. Diese Methode verwendet keine Parameter und gibt bei Erfolg S \_ OK zurück.
 
  
 
-## <a name="adding-roots-to-the-crawl-scope"></a>Hinzufügen von Stämmen zum Crawl Bereich
+## <a name="windows-7-new-crawl-scope-manager-api"></a>Windows 7: Neue Durchforstungsbereich-Manager-API
 
-[**Isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) weist das Suchmodul an, die Container zu durchforsten und/oder zu überwachen, sowie Elemente unter diesen Containern, die eingeschlossen oder ausgeschlossen werden sollen. Zum Hinzufügen eines neuen Such Stamms instanziieren Sie ein [**isearchroot**](/windows/desktop/api/Searchapi/nn-searchapi-isearchroot) -Objekt, legen Sie die Stamm Attribute fest, und geben Sie dann [**isearchcrawlscopemanager:: addroot**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-addroot) an, und übergeben Sie einen Zeiger auf das **isearchroot** -Objekt. Die Stamm-URL für die Suche hat dieselbe Form wie der zuvor beschriebene Such Stamm.
+In **Windows 7 und höher** erweitert [**ISearchCrawlScopeManager2**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager2) die Funktionalität der [**ISearchCrawlScopeManager-Schnittstelle.**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) Die [**ISearchCrawlScopeManager2::GetVersion-Methode**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager2-getversion) ruft die csm-Version (Durchforstungsbereich-Manager) ab, die Clients informiert, wenn sich der Zustand des CSM geändert hat. **ISearchCrawlScopeManager2::GetVersion** führt nicht zu einem prozessübergreifenden Aufruf. Wenn die Funktion erfolgreich ausgeführt wird, bleibt der zurückgegebene Zeiger gültig, bis der Client **UnmapViewOfFile** für den Zeiger und **CloseHandle** für das zurückgegebene Handle aufruft.
 
-In der folgenden Tabelle werden die relevanten Put-Methoden für [**isearchroot**](/windows/desktop/api/Searchapi/nn-searchapi-isearchroot)beschrieben. die anderen Put-Methoden der Schnittstelle werden zurzeit nicht von Windows Search verwendet. Es wird empfohlen, die Sicherheits-IDs (SIDs) der Benutzer in alle Stämme einzubeziehen, um die Sicherheit zu verbessern. Pro-Benutzer-Stämme sind sicherer, wenn Abfragen in einem benutzerspezifischen Prozess ausgeführt werden. Dadurch wird sichergestellt, dass ein Benutzer die Elemente nicht sehen kann, die beispielsweise aus dem Posteingang eines anderen Benutzers indiziert wurden.
+ 
+
+## <a name="adding-roots-to-the-crawl-scope"></a>Hinzufügen von Stämmen zum Durchforstungsbereich
+
+Der [**ISearchCrawlScopeManager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) informiert die Suchmaschine über Container, die durchforstet und/oder überwacht werden sollen, und elemente unter diesen Containern, die eingeschlossen oder ausgeschlossen werden sollen. Um einen neuen Suchstamm hinzuzufügen, instanziieren Sie ein [**ISearchRoot-Objekt,**](/windows/desktop/api/Searchapi/nn-searchapi-isearchroot) legen Sie die Stammattribute fest, und rufen Sie dann [**ISearchCrawlScopeManager::AddRoot**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-addroot) auf, und übergeben Sie ihm einen Zeiger auf Ihr **ISearchRoot-Objekt.** Die Url des Suchstamms hat das gleiche Format wie der zuvor beschriebene Suchstamm.
+
+In der folgenden Tabelle werden die relevanten Put-Methoden für [**ISearchRoot**](/windows/desktop/api/Searchapi/nn-searchapi-isearchroot)beschrieben. Die anderen Put-Methoden der Schnittstelle werden derzeit nicht von Windows Search verwendet. Es wird empfohlen, die Sicherheits-IDs (SIDs) der Benutzer in alle Stammgruppen zu einschließen, um die Sicherheit zu verbessern. Stammelemente pro Benutzer sind sicherer, da Abfragen in einem Pro-Benutzer-Prozess ausgeführt werden. Dadurch wird sichergestellt, dass einem Benutzer beispielsweise keine Elemente angezeigt werden, die aus dem Posteingang eines anderen Benutzers indiziert wurden.
 
 
 
 | Methode                     | BESCHREIBUNG                                                                                                                                                                                         |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Bereitstellen von \_ providesbenachrichtigungen | Auf " **true** " festgelegt, wenn ein Protokollhandler oder eine andere Anwendung das Suchmodul über Änderungen an den URLs unter dem Suchstamm benachrichtigt. Die Benachrichtigung gibt an, dass die URLs neu indiziert werden müssen. |
-| \_rooturl einfügen               | Legt die Stamm-URL der aktuellen Suche fest. Die URL übernimmt das Such Stamm Formular, das zuvor beschrieben wurde.                                                                                                      |
+| put \_ ProvidesNotifications | Legen Sie diese Einstellung auf **TRUE** fest, wenn ein Protokollhandler oder eine andere Anwendung die Suchmaschine über Änderungen an den URLs unter dem Suchstamm benachrichtigt. Die Benachrichtigung gibt an, dass die URLs neu indiziert werden müssen. |
+| \_put RootURL               | Legt die Stamm-URL der aktuellen Suche fest. Die URL nimmt das zuvor beschriebene Suchstammformular an.                                                                                                      |
 
 
 
@@ -102,34 +102,34 @@ In der folgenden Tabelle werden die relevanten Put-Methoden für [**isearchroot*
 
  
 
-Standardmäßig durchsucht der Indexer einen Bereich nicht, wenn Sie einen Suchstamm hinzufügen. Außerdem müssen Sie eine include-Regel für den Stamm hinzufügen. Wenn Sie einen benutzerspezifischen Stamm für eine Anwendung hinzufügen möchten, sollte diese Anwendung beim Starten der Anwendung die entsprechenden Stämme für neue Benutzer hinzufügen.
+Standardmäßig durchforstet der Indexer beim Hinzufügen eines Suchstamms keinen Bereich. Sie müssen auch eine Includeregel für den Stamm hinzufügen. Wenn Sie einen benutzerspezifischen Stamm für eine Anwendung hinzufügen möchten, sollte diese Anwendung beim Starten der Anwendung die entsprechenden Stammverzeichnis für neue Benutzer hinzufügen.
 
-Zum Hinzufügen der entsprechenden Stämme für neue Benutzer:
+So fügen Sie die entsprechenden Stamms für neue Benutzer hinzu:
 
-1.  Die SID des Benutzers erhalten.
-2.  Listet alle Stämme auf, um zu überprüfen, ob für diese SID vorhanden ist.
-3.  Fügen Sie ggf. einen neuen Stamm mithilfe der SID hinzu.
+1.  Abrufen der SID des Benutzers.
+2.  Aufzählen aller Stämme, um zu überprüfen, ob für diese SID ein Stamm vorhanden ist.
+3.  Fügen Sie bei Bedarf mithilfe der SID einen neuen Stamm hinzu.
 
  
 
-## <a name="removing-roots-from-the-crawl-scope"></a>Entfernen von Stämmen aus dem Crawl Bereich
+## <a name="removing-roots-from-the-crawl-scope"></a>Entfernen von Stämmen aus dem Durchforstungsbereich
 
-Sie können [**isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) verwenden, um einen Stamm aus dem Crawl Bereich zu entfernen, wenn diese URL nicht mehr indiziert werden soll. Wenn Sie einen Stamm entfernen, werden auch alle Bereichs Regeln für diese URL gelöscht. Angenommen, Sie möchten einen Inhalts Speicher und/oder seinen Protokollhandler von einem System deinstallieren. Sie können die Anwendung deinstallieren, alle Daten entfernen und dann das Suchfeld aus dem Crawl Bereich entfernen, und der Crawl Scope-Manager entfernt die Stamm-und alle Bereichs Regeln, die dem Stamm zugeordnet sind.
+Sie können [**ISearchCrawlScopeManager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) verwenden, um einen Stamm aus dem Durchforstungsbereich zu entfernen, wenn diese URL nicht mehr indiziert werden soll. Beim Entfernen eines Stamms werden auch alle Bereichsregeln für diese URL gelöscht. Angenommen, Sie möchten einen Inhaltsspeicher und/oder dessen Protokollhandler von einem System deinstallieren. Sie können die Anwendung deinstallieren, alle Daten entfernen und dann den Suchstamm aus dem Durchforstungsbereich entfernen. Die Durchforstungsbereich-Manager entfernt den Stamm und alle Bereichsregeln, die dem Stamm zugeordnet sind.
 
-Um einen vorhandenen Such Stamm zu entfernen, nennen Sie [**isearchcrawlscopemanager:: removeroot**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-removeroot) mit dem Stammverzeichnis für die Suche, das Sie entfernen möchten. Die Stamm-URL für die Suche hat dieselbe Form wie der zuvor beschriebene Such Stamm. Diese Methode gibt S \_ false zurück, wenn der Stamm nicht gefunden wurde, und einen Fehlercode, wenn beim Entfernen eines gefundenen Stamms ein Fehler aufgetreten ist.
+Um einen vorhandenen Suchstamm zu entfernen, rufen Sie [**ISearchCrawlScopeManager::RemoveRoot**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-removeroot) mit dem Suchstamm auf, den Sie entfernen möchten. Die Url des Suchstamms hat das gleiche Format wie der zuvor beschriebene Suchstamm. Diese Methode gibt S \_ FALSE zurück, wenn der Stamm nicht gefunden wurde, und einen Fehlercode, wenn beim Entfernen eines gefundenen Stamms ein Fehler aufgetreten ist.
 
-Wenn Sie einen Suchstamm entfernen, wird auch die URL von der Benutzeroberfläche für Windows-Suchoptionen entfernt, sodass Benutzer diesen Container oder Speicherort möglicherweise nicht erneut über die Benutzeroberfläche hinzufügen können. Es ist auch möglich, alle Benutzer Satz Überschreibungen eines Suchstamms zu entfernen und die ursprünglichen Such Stamm-und Bereichs Regeln wiederherzustellen. Weitere Informationen finden Sie unter [Verwalten von Bereichs Regeln](-search-3x-wds-extidx-csm-scoperules.md).
+Durch das Entfernen eines Suchstamms wird auch die URL für Windows Suchoptionen aus der Benutzeroberfläche entfernt, sodass Benutzer diesen Container oder Speicherort möglicherweise nicht über die Benutzeroberfläche erneut hinzufügen können. Es ist auch möglich, alle Außerkraftsetzungen von Benutzersets eines Suchstamms zu entfernen und auf die ursprünglichen Suchstamm- und Gültigkeitsbereichsregeln zurückzusetzen. Weitere Informationen finden Sie unter [Verwalten von Bereichsregeln.](-search-3x-wds-extidx-csm-scoperules.md)
 
 > [!Note]  
-> Wenn Benutzer unter Windows Vista über Benutzerprofile in der Systemsteuerung entfernt werden, entfernt CSM alle Regeln und Stämme mit ihrer sid und entfernt ihre indizierten Elemente aus dem Katalog. Unter Windows XP müssen Sie die Stamm Elemente und Regeln der Benutzer manuell entfernen.
+> Wenn Benutzer auf Windows Vista über Benutzerprofile in Systemsteuerung entfernt werden, entfernt CSM alle Regeln und Stammelemente mit ihrer SID und entfernt ihre indizierten Elemente aus dem Katalog. Auf Windows XP müssen Sie die Stamm- und Regeln der Benutzer manuell entfernen.
 
  
 
  
 
-## <a name="enumerating-roots-in-the-crawl-scope"></a>Enumerieren von Stämme im Crawl Bereich
+## <a name="enumerating-roots-in-the-crawl-scope"></a>Aufzählen von Stämmen im Durchforstungsbereich
 
-Das CSM listet Such Stämme mithilfe einer standardmäßigen Enumeratorschnittstelle im com-Stil, [**ienumsearchroots**](/windows/desktop/api/Searchapi/nn-searchapi-ienumsearchroots), auf. Sie können diese Schnittstelle verwenden, um Such Stämme für eine Reihe von Zwecken aufzuzählen. Beispielsweise können Sie den gesamten Crawl Bereich auf einer Benutzeroberfläche anzeigen oder ermitteln, ob sich ein bestimmter Stamm oder das untergeordnete Element eines Stamms bereits im Crawl Bereich befindet.
+Der CSM listet Suchstammstamm mithilfe einer standardmäßigen Enumeratorschnittstelle im COM-Stil [**IEnumSearchRoots auf.**](/windows/desktop/api/Searchapi/nn-searchapi-ienumsearchroots) Sie können diese Schnittstelle verwenden, um Suchstämme für eine Reihe von Zwecken aufzulisten. Beispielsweise können Sie den gesamten Durchforstungsbereich auf einer Benutzeroberfläche anzeigen oder ermitteln, ob sich ein bestimmter Stamm oder das untergeordnete Element eines Stamms bereits im Durchforstungsbereich befindet.
 
  
 
@@ -140,22 +140,22 @@ Das CSM listet Such Stämme mithilfe einer standardmäßigen Enumeratorschnittst
 **Referenz**
 </dt> <dt>
 
-[**Isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager)
+[**ISearchCrawlScopeManager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager)
 </dt> <dt>
 
-[**Isearchroot**](/windows/desktop/api/Searchapi/nn-searchapi-isearchroot)
+[**ISearchRoot**](/windows/desktop/api/Searchapi/nn-searchapi-isearchroot)
 </dt> <dt>
 
-[**Ienumsearchroots**](/windows/desktop/api/Searchapi/nn-searchapi-ienumsearchroots)
+[**IEnumSearchRoots**](/windows/desktop/api/Searchapi/nn-searchapi-ienumsearchroots)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Verwenden des Crawl Scope-Managers](-search-3x-wds-extidx-csm.md)
+[Verwenden der Durchforstungsbereich-Manager](-search-3x-wds-extidx-csm.md)
 </dt> <dt>
 
-[Verwalten von Bereichs Regeln](-search-3x-wds-extidx-csm-scoperules.md)
+[Verwalten von Bereichsregeln](-search-3x-wds-extidx-csm-scoperules.md)
 </dt> </dl>
 
  

@@ -1,8 +1,8 @@
 ---
 title: sh_job-Schlüsselwort
-description: Das \ SH \_ Job \-Schlüsselwort gibt an, dass das Systemobjekt ein Handle für einen Auftrag ist.
+description: Das Schlüsselwort \sh \_ job\ gibt an, dass das Systemobjekt ein Handle für einen Auftrag ist.
 keywords:
-- sh_job-Schlüsselwort-Mittel l
+- sh_job MIDL-Schlüsselwort
 topic_type:
 - apiref
 api_name:
@@ -11,16 +11,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 02/05/2021
-ms.openlocfilehash: db24f9dc84f2bb56f57327090485b406ad1a437f
-ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.openlocfilehash: dd71db0310b450db1d9c87879e8ac10ad998d1d21e48a60eb9d816c0a0718b42
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "103961061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146283"
 ---
-# <a name="sh_job-keyword"></a>SH \_ Job-Schlüsselwort
+# <a name="sh_job-keyword"></a>sh \_ job-Schlüsselwort
 
-Das Schlüsselwort **SH \_ Job** gibt an, dass ein ein `system_handle` Handle für einen Auftrag enthält.
+Das **sh \_ job-Schlüsselwort** gibt an, dass `system_handle` ein ein Handle für einen Auftrag enthält.
 
 ``` syntax
 [system_handle(sh_job)]
@@ -32,11 +32,11 @@ Das Schlüsselwort **SH \_ Job** gibt an, dass ein ein `system_handle` Handle f�
 
 Dieses Schlüsselwort ist ein Parameter für [**system_handle**](system-handle.md).
 
-Die [**system_handle**](system-handle.md) Dokumentation enthält auch Details zur optionalen Verwendung des *Zugriffsrechte* Parameters. Das Standardverhalten entspricht den `DUPLICATE_SAME_ACCESS` Spezifikationen für [ **Duplikat-andle** -Funktionen](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle) .
+Die [**system_handle**](system-handle.md) dokumentation enthält auch Details zur optionalen Verwendung des *Access Rights-Parameters.* Das Standardverhalten entspricht `DUPLICATE_SAME_ACCESS` den [ **Spezifikationen der DuplicateHandle-Funktion.**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Schlüsselwort mit dem-Attribut zu verwenden `system_handle` , `-target` muss das-Flag `NT100` beim Ausführen von midl.exe auf (oder höher) festgelegt werden.
+Um dieses Schlüsselwort mit dem -Attribut verwenden zu können, muss das Flag auf (oder höher) festgelegt werden, `system_handle` `-target` wenn sie `NT100` midl.exe.
 
 ## <a name="examples"></a>Beispiele
 
@@ -56,18 +56,18 @@ interface MyInterface : IUnknown
 | Unterstützte Mindestversion (Client) | Windows 10 Anniversary Update (Version 1607, Build 14393) |
 | Unterstützte Mindestversion (Server) | Windows Server 2016 (Build 14393) |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**system_handle**](system-handle.md)
 </dt> <dt>
 
-[Auftrags Objekte](../procthread/job-objects.md)
+[Auftragsobjekte](../procthread/job-objects.md)
 </dt> <dt>
 
-[Sicherheit und Zugriffsrechte für das Auftrags Objekt](../procthread/job-object-security-and-access-rights.md)
+[Sicherheit und Zugriffsrechte für Auftragsobjekt](../procthread/job-object-security-and-access-rights.md)
 </dt> <dt>
 
-[Funktion " **kreatejobobject** "](/windows/win32/api/winbase/nf-winbase-createjobobjecta)
+[**CreateJobObject-Funktion**](/windows/win32/api/winbase/nf-winbase-createjobobjecta)
 </dt> </dl>

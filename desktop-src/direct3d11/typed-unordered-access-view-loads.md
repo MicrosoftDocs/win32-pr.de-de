@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die typisierte Last der ungeordneten Zugrif
 ms.assetid: BA72BF21-8621-461D-8677-9DFB7D5BC6AA
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c6d2cbfa51c8473dc3da51c5844c63bef944b50
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: 7389ba850c68129509ca6b6a835f949dd92f5541382d9fdc2243611d409ca2a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112396285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119124058"
 ---
 # <a name="typed-unordered-access-view-loads"></a>Typisiertes Laden von ungeordneten Zugriffsansichten
 
@@ -18,7 +18,7 @@ Unordered Access View (UAV) Typed Load ist die Möglichkeit für einen Shader, a
 -   [Übersicht](#overview)
 -   [Unterstützte Formate und API-Aufrufe](#supported-formats-and-api-calls)
 -   [Verwenden von typisierten UAV-Ladevorgängen aus HLSL](#using-typed-uav-loads-from-hlsl)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="overview"></a>Übersicht
 
@@ -80,7 +80,7 @@ Die folgenden Formate werden optional und einzeln auf D3D12- und D3D11.3-Hardwar
 -   B5G5R5A1 \_ UNORM
 -   B4G4R4A4 \_ UNORM
 
-Um die Unterstützung für zusätzliche Formate zu ermitteln, rufen Sie [**ID3D11Device::CheckFeatureSupport**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport) mit der [**D3D11 \_ FEATURE DATA \_ \_ D3D11 \_ OPTIONS2-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options2) als ersten Parameter auf. Das `TypedUAVLoadAdditionalFormats` Bit wird festgelegt, wenn die obige Liste "supported as a set" unterstützt wird. Führen Sie einen zweiten Aufruf von **CheckFeatureSupport** durch, indem Sie eine [**D3D11 \_ FEATURE DATA FORMAT \_ \_ \_ SUPPORT2-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_format_support2) verwenden (überprüfen Sie die zurückgegebene Struktur anhand des \_ \_ \_ UAV \_ TYPED LOAD-Members D3D12 FORMAT SUPPORT2 der \_ [**D3D11 \_ FORMAT \_ SUPPORT2-Enumeration),**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_format_support2) um die Unterstützung in der Liste der optional unterstützten Formate oben zu ermitteln, z. B.:
+Um die Unterstützung für zusätzliche Formate zu ermitteln, rufen Sie [**ID3D11Device::CheckFeatureSupport**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport) mit der [**D3D11 \_ FEATURE DATA \_ \_ D3D11 \_ OPTIONS2-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options2) als ersten Parameter auf. Das `TypedUAVLoadAdditionalFormats` Bit wird festgelegt, wenn die obige Liste "supported as a set" unterstützt wird. Führen Sie einen zweiten Aufruf von **CheckFeatureSupport** aus, indem Sie eine [**D3D11 \_ FEATURE DATA FORMAT \_ \_ \_ SUPPORT2-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_format_support2) verwenden (überprüfen Sie die zurückgegebene Struktur anhand des \_ \_ \_ UAV \_ TYPED LOAD-Members D3D12 FORMAT SUPPORT2 der \_ [**D3D11 \_ FORMAT \_ SUPPORT2-Enumeration),**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_format_support2) um die Unterstützung in der Liste der optional unterstützten Formate oben zu ermitteln, z. B.:
 
 ``` syntax
 D3D11_FEATURE_DATA_D3D11_OPTIONS2 FeatureData;

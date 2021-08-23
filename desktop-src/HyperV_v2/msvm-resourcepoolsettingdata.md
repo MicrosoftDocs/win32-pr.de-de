@@ -1,5 +1,5 @@
 ---
-description: 'Msvm_ResourcePoolSettingData Klasse: Stellt die Einstellungen einer Msvm \_ ResourcePool-Instanz dar, die nicht zuordnungsbezogen sind.'
+description: 'Msvm_ResourcePoolSettingData Klasse: Stellt die Einstellungen einer Msvm ResourcePool-Instanz dar, \_ die nicht zuordnungsbezogen sind.'
 ms.assetid: 32e0066c-7e14-454c-8aa9-06e093ef8072
 title: Msvm_ResourcePoolSettingData-Klasse
 ms.topic: reference
@@ -25,18 +25,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 4fba27ec5c12e0c3cb18b8a6dfd4a863e59cad62
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 28bb10bc8d450cc1460d8315d056afff72236470ace4c32de28621b5531a3a02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108111508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148193"
 ---
 # <a name="msvm_resourcepoolsettingdata-class"></a>Msvm \_ ResourcePoolSettingData-Klasse
 
 Stellt die Einstellungen einer [**Msvm \_ ResourcePool-Instanz**](msvm-resourcepool.md) dar, die nicht zuordnungsbezogen sind.
 
-Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -135,7 +135,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Zuordnungsstrategie an, die vom Ressourcenpool verwendet werden soll, um die Ressourcennutzung über die aggregierten Ressourcen hinweg auszugleichen. Diese Eigenschaft wird von [**Msvm \_ AbstractResourcePoolSettingData**](msvm-abstractresourcepoolsettingdata.md)geerbt.
+Gibt die Zuordnungsstrategie an, die vom Ressourcenpool verwendet werden soll, um die Ressourcennutzung über die aggregierten Ressourcen hinweg zu ausgleichen. Diese Eigenschaft wird von [**Msvm \_ AbstractResourcePoolSettingData geerbt.**](msvm-abstractresourcepoolsettingdata.md)
 
 <dl> <dt>
 
@@ -165,7 +165,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Ressourcenpool versuchen kann, andere Hostressourcen zu verwenden, um die Zuordnungsanforderung zu erfüllen, wenn die gewünschten Ressourcen nicht zugeordnet werden können. Diese Eigenschaft wird von [**Msvm \_ AbstractResourcePoolSettingData**](msvm-abstractresourcepoolsettingdata.md)geerbt.
+Gibt an, ob der Ressourcenpool versuchen kann, andere Hostressourcen zu verwenden, um die Zuordnungsanforderung zu erfüllen, wenn die gewünschten Ressourcen nicht zugeordnet werden können. Diese Eigenschaft wird von [**Msvm \_ AbstractResourcePoolSettingData geerbt.**](msvm-abstractresourcepoolsettingdata.md)
 
 <dl> <dt>
 
@@ -181,13 +181,13 @@ Gibt an, ob der Ressourcenpool versuchen kann, andere Hostressourcen zu verwende
 <span id="Soft_Affinity"></span><span id="soft_affinity"></span><span id="SOFT_AFFINITY"></span>**Soft Affinity** (4)
 </dt> <dt>
 
-<span id="Hard_Affinity"></span><span id="hard_affinity"></span><span id="HARD_AFFINITY"></span>**Harte Affinität** (5)
+<span id="Hard_Affinity"></span><span id="hard_affinity"></span><span id="HARD_AFFINITY"></span>**Hard Affinity** (5)
 </dt> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (32767..65535 )
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Vendor Reserved** (32767..65535 )
 </dt> </dl>
 
 </dd> <dt>
@@ -201,11 +201,11 @@ Datentyp: **Zeichenfolgenarray**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Reihenfolge an, in der über diesen Pool verfügbare Hostressourcen ausgewählt werden, wenn versucht wird, eine Zuordnungsanforderung zu erfüllen, und die angeforderte Hostressource nicht verfügbar ist oder keine Hostressource angegeben wird. Diese Eigenschaft wird von [**Msvm \_ AbstractResourcePoolSettingData geerbt.**](msvm-abstractresourcepoolsettingdata.md)
+Gibt die Reihenfolge an, in der über diesen Pool verfügbare Hostressourcen ausgewählt werden, wenn versucht wird, eine Zuordnungsanforderung zu erfüllen, und die angeforderte Hostressource nicht verfügbar ist oder keine Hostressource angegeben ist. Diese Eigenschaft wird von [**Msvm \_ AbstractResourcePoolSettingData geerbt.**](msvm-abstractresourcepoolsettingdata.md)
 
 </dd> <dt>
 
-**Hinweise**
+**Notizen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -266,11 +266,11 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann. Diese Eigenschaft wird von [**Msvm \_ AbstractResourcePoolSettingData**](msvm-abstractresourcepoolsettingdata.md)geerbt.
+Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann. Diese Eigenschaft wird von [**Msvm \_ AbstractResourcePoolSettingData geerbt.**](msvm-abstractresourcepoolsettingdata.md)
 
 <dl> <dt>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
 </dt> <dt>
 
 <span id="Computer_System"></span><span id="computer_system"></span><span id="COMPUTER_SYSTEM"></span>**Computersystem** (2)
@@ -291,7 +291,7 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann. Diese Eigenschaf
 <span id="FC_HBA"></span><span id="fc_hba"></span>**FC HBA** (7)
 </dt> <dt>
 
-<span id="iSCSI_HBA"></span><span id="iscsi_hba"></span><span id="ISCSI_HBA"></span>**iSCSI-HBA** (8)
+<span id="iSCSI_HBA"></span><span id="iscsi_hba"></span><span id="ISCSI_HBA"></span>**iSCSI HBA** (8)
 </dt> <dt>
 
 <span id="IB_HCA"></span><span id="ib_hca"></span>**IB HCA** (9)
@@ -324,16 +324,16 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann. Diese Eigenschaf
 <span id="Tape_Drive"></span><span id="tape_drive"></span><span id="TAPE_DRIVE"></span>**Bandlaufwerk** (18)
 </dt> <dt>
 
-<span id="Storage_Extent"></span><span id="storage_extent"></span><span id="STORAGE_EXTENT"></span>**Speicher extent** (19)
+<span id="Storage_Extent"></span><span id="storage_extent"></span><span id="STORAGE_EXTENT"></span>**Storage Extent** (19)
 </dt> <dt>
 
 <span id="Other_storage_device"></span><span id="other_storage_device"></span><span id="OTHER_STORAGE_DEVICE"></span>**Anderes Speichergerät** (20)
 </dt> <dt>
 
-<span id="Serial_port"></span><span id="serial_port"></span><span id="SERIAL_PORT"></span>**Serieller** Port (21)
+<span id="Serial_port"></span><span id="serial_port"></span><span id="SERIAL_PORT"></span>**Serieller Anschluss** (21)
 </dt> <dt>
 
-<span id="Parallel_port"></span><span id="parallel_port"></span><span id="PARALLEL_PORT"></span>**Paralleler** Port (22)
+<span id="Parallel_port"></span><span id="parallel_port"></span><span id="PARALLEL_PORT"></span>**Paralleler Port** (22)
 </dt> <dt>
 
 <span id="USB_Controller"></span><span id="usb_controller"></span><span id="USB_CONTROLLER"></span>**USB-Controller** (23)
@@ -351,7 +351,7 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann. Diese Eigenschaf
 <span id="Base_Partitionable_Unit"></span><span id="base_partitionable_unit"></span><span id="BASE_PARTITIONABLE_UNIT"></span>**Partitionierbare Basiseinheit** (27)
 </dt> <dt>
 
-<span id="Power"></span><span id="power"></span><span id="POWER"></span>**Power** (28)
+<span id="Power"></span><span id="power"></span><span id="POWER"></span>**Stromversorgung** (28)
 </dt> <dt>
 
 <span id="Cooling_Capacity"></span><span id="cooling_capacity"></span><span id="COOLING_CAPACITY"></span>**Kühlkapazität** (29)
@@ -360,19 +360,19 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann. Diese Eigenschaf
 <span id="Ethernet_Switch_Port"></span><span id="ethernet_switch_port"></span><span id="ETHERNET_SWITCH_PORT"></span>**Ethernet-Switchport** (30)
 </dt> <dt>
 
-<span id="Logical_Disk"></span><span id="logical_disk"></span><span id="LOGICAL_DISK"></span>**Logischer** Datenträger (31)
+<span id="Logical_Disk"></span><span id="logical_disk"></span><span id="LOGICAL_DISK"></span>**Logischer Datenträger** (31)
 </dt> <dt>
 
-<span id="Storage_Volume"></span><span id="storage_volume"></span><span id="STORAGE_VOLUME"></span>**Speichervolumen** (32)
+<span id="Storage_Volume"></span><span id="storage_volume"></span><span id="STORAGE_VOLUME"></span>**Storage Volume** (32)
 </dt> <dt>
 
-<span id="Ethernet_Connection"></span><span id="ethernet_connection"></span><span id="ETHERNET_CONNECTION"></span>**Ethernetverbindung** (33)
+<span id="Ethernet_Connection"></span><span id="ethernet_connection"></span><span id="ETHERNET_CONNECTION"></span>**Ethernet-Verbindung** (33)
 </dt> <dt>
 
-<span id="DMTF_reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserved** (.)
+<span id="DMTF_reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (0x8000. 0xFFFF )
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (0x8000. 0xFFFF )
 </dt> </dl>
 
 </dd> </dl>
@@ -381,10 +381,10 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann. Diese Eigenschaf
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
 | Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |

@@ -1,7 +1,7 @@
 ---
-description: Die asynchronousblockoutputpin-Methode blockiert die PIN. Die-Methode gibt möglicherweise zurück, bevor die PIN blockiert wird.
+description: Die AsynchronousBlockOutputPin-Methode blockiert die Stecknadel. Die -Methode gibt möglicherweise zurück, bevor die Stecknadel blockiert wird.
 ms.assetid: 14cdc973-f0d3-4d1b-8491-67c1421f630b
-title: Cdynamicoutputpin. asynchronousblockoutputpin-Methode (amfilter. h)
+title: CDynamicOutputPin.AsynchronousBlockOutputPin-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 67232bf1081f9c9ea088968cb6c5d02667b00eeb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c8999f6dbb42c55c036ee3d7fcd02dc34def4bd0a036cf0b5d908d3c280e297e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358145"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119317790"
 ---
-# <a name="cdynamicoutputpinasynchronousblockoutputpin-method"></a>Cdynamicoutputpin. asynchronousblockoutputpin-Methode
+# <a name="cdynamicoutputpinasynchronousblockoutputpin-method"></a>CDynamicOutputPin.AsynchronousBlockOutputPin-Methode
 
-Die- `AsynchronousBlockOutputPin` Methode blockiert die PIN. Die-Methode gibt möglicherweise zurück, bevor die PIN blockiert wird.
+Die `AsynchronousBlockOutputPin` -Methode blockiert die Stecknadel. Die -Methode gibt möglicherweise zurück, bevor die Stecknadel blockiert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,34 +42,34 @@ HRESULT AsynchronousBlockOutputPin(
 
 <dl> <dt>
 
-*hnotifycallerpinblockedevent* 
+*hNotifyCallerPinBlockedEvent* 
 </dt> <dd>
 
-Handle für ein Ereignis. Das-Ereignis wird signalisiert, wenn die Ausgabepin blockiert ist, oder, wenn der Aufrufer den Block Vorgang abbricht.
+Handle für ein Ereignis. Das Ereignis wird signalisiert, wenn der Ausgabepin blockiert wird oder wenn der Aufrufer den Blockvorgang abbricht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                                                    | Beschreibung                                              |
 |--------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                           | Erfolg.<br/>                                      |
-| <dl> <dt>**VFW \_ E \_ Pin \_ bereits \_ blockiert**</dt> </dl>                   | Die PIN ist bereits in einem anderen Thread blockiert.<br/>     |
-| <dl> <dt>**VFW \_ E \_ Pin \_ ist \_ \_ in \_ diesem \_ Thread bereits blockiert.**</dt> </dl> | Die PIN ist bereits im aufrufenden Thread blockiert.<br/> |
+| <dl> <dt>**VFW \_ \_ E-PIN \_ BEREITS \_ BLOCKIERT**</dt> </dl>                   | Das Anheften ist bereits in einem anderen Thread blockiert.<br/>     |
+| <dl> <dt>**VFW \_ \_ E-PIN \_ FÜR \_ DIESEN \_ \_ \_ THREAD BEREITS BLOCKIERT**</dt> </dl> | Pin ist im aufrufenden Thread bereits blockiert.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode nicht aus dem streamingthread aufzurufen.
+Rufen Sie diese Methode nicht aus dem Streamingthread auf.
 
-Wenn kein streamingingthread die PIN verwendet, blockiert diese Methode sofort die PIN. Andernfalls wird der PIN-Status auf "Pending" festgelegt, und es wird zurückgegeben. Wenn der Streamingvorgang abgeschlossen ist, ruft der streamingthread die [**cdynamicoutputpin:: stopusingoutputpin**](cdynamicoutputpin-stopusingoutputpin.md) -Methode auf, die die PIN blockiert und das **hnotifycallerpinblockedevent** -Ereignis signalisiert. Um einen ausstehenden Block abzubrechen, rufen Sie die [**cdynamicoutputpin:: unblockoutputpin**](cdynamicoutputpin-unblockoutputpin.md) -Methode auf.
+Wenn kein Streamingthread den Stecknadel verwendet, blockiert diese Methode den Pin sofort. Andernfalls wird der Stecknadelstatus auf "Ausstehend" festgelegt und zurückgegeben. Nach Abschluss des Streamingvorgangs ruft der Streamingthread die [**CDynamicOutputPin::StopUsingOutputPin-Methode**](cdynamicoutputpin-stopusingoutputpin.md) auf, die den Pin blockiert und das **hNotifyCallerPinBlockedEvent-Ereignis** signalisiert. Um einen ausstehenden Block abzubrechen, rufen Sie die [**CDynamicOutputPin::UnblockOutputPin-Methode**](cdynamicoutputpin-unblockoutputpin.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,16 +77,16 @@ Wenn kein streamingingthread die PIN verwendet, blockiert diese Methode sofort d
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdynamicoutputpin-Klasse**](cdynamicoutputpin.md)
+[**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
 title: Win32_TSLicenseReportSummaryEntry-Klasse
-description: Bietet eine Zusammenfassung der installierten und ausgestellten Remotedesktopdienste pro-Benutzer-Client Zugriffs Lizenzen (RDS \ 160; Pro Benutzer-CALs).
+description: Enthält eine Zusammenfassung der installierten und ausgestellten Remotedesktopdienste Clientzugriffslizenzen pro Benutzer (RDS \ 160; Pro Benutzer-CALs).
 ms.assetid: 0FD3BFFE-58B9-4037-969F-8C2323136C9D
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSLicenseReportSummaryEntry-Klasse Remotedesktopdienste
-- Win32_TSLicenseReportSummaryEntry Klasse Remotedesktopdienste, beschrieben
+- Win32_TSLicenseReportSummaryEntry-Klassen-Remotedesktopdienste
+- Win32_TSLicenseReportSummaryEntry -Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -22,16 +22,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f34482e9c6199ef6586024d43d586421a54071ca
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 58efc2c70019037219d8eca986fa8afd81e4dc2d06cd638ee24fc59947e3bf3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339122"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137798"
 ---
-# <a name="win32_tslicensereportsummaryentry-class"></a>Win32-Klasse "-Klasse (Klasse)" \_
+# <a name="win32_tslicensereportsummaryentry-class"></a>Win32 \_ TSLicenseReportSummaryEntry-Klasse
 
-Bietet eine Zusammenfassung der installierten und ausgestellten Remotedesktopdienste pro Benutzer-Client Zugriffs Lizenzen (RDS pro Benutzer-CALs).
+Enthält eine Zusammenfassung der installierten und ausgestellten Remotedesktopdienste Clientzugriffslizenzen pro Benutzer (RDS pro Benutzer-CALs).
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,66 +50,66 @@ class Win32_TSLicenseReportSummaryEntry
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ tylicensereportsummaryentry** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSLicenseReportSummaryEntry-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ stilicensereportsummaryentry** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSLicenseReportSummaryEntry-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Installedlicenses**
+**InstalledLicenses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der installierten RDS-pro-Benutzer-CALs.
+Anzahl der installierten RDS-CALs pro Benutzer.
 
 </dd> <dt>
 
-**Issuedlicenses**
+**IssuedLicenses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der ausgegebenen RDS-Client Zugriffs Lizenzen pro Benutzer.
+Anzahl der ausgestellten RDS-CALs pro Benutzer.
 
 </dd> <dt>
 
 **ProductVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Version von Remotedesktopdienste, für die die RDS-Client Zugriffslizenz pro Benutzer ausgestellt wurde.
+Version von Remotedesktopdienste, für die die RDS-CAL pro Benutzer ausgegeben wurde.
 
 <dt>
 
 "Windows Server 2012"
 </dt> <dd>
 
-Nur Server, auf denen Windows Server 2012, Windows Server 2008 R2 oder Windows Server 2008 ausgeführt wird, werden mit dieser Lizenz unterstützt.
+Mit dieser Lizenz werden nur Server unterstützt, auf denen Windows Server 2012, Windows Server 2008 R2 oder Windows Server 2008 ausgeführt wird.
 
 </dd> <dt>
 
 "Windows Server 7"
 </dt> <dd>
 
-Nur Server, auf denen Windows Server 2008 R2 oder Windows Server 2008 ausgeführt wird, werden mit dieser Lizenz unterstützt.
+Mit dieser Lizenz werden nur Server unterstützt, auf denen Windows Server 2008 R2 oder Windows Server 2008 ausgeführt wird.
 
 </dd> <dt>
 
@@ -122,16 +122,16 @@ Nur Server, auf denen Windows Server 2008 ausgeführt wird, werden mit dieser Li
 
 </dd> <dt>
 
-**Productversionid**
+**ProductVersionID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Produkt Versions Kennung für das Remotedesktopdienste License Key Pack.
+Produktversionsbezeichner für das Remotedesktopdienste Lizenzschlüsselpaket.
 
 <dt>
 
@@ -172,80 +172,80 @@ Wird nicht unterstützt.
 
 </dd> <dt>
 
-**Tscalavailability**
+**TSCALAvailability**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Verfügbarkeit der RDS pro Benutzer-CALs. Dabei handelt es sich um einen der folgenden Werte.
+Die Verfügbarkeit der RDS-CALs pro Benutzer. Dies ist einer der folgenden Werte.
 
 <dt>
 
-Frei
+"Verfügbar"
 </dt> <dd>
 
-Die RDS-Client Zugriffs Lizenzen pro Benutzer sind verfügbar.
+Die RDS-CALs pro Benutzer sind verfügbar.
 
 </dd> <dt>
 
-GmbH
+"Begrenzt"
 </dt> <dd>
 
-Die Verfügbarkeit der RDS pro Benutzer-CALs ist beschränkt.
+Die Verfügbarkeit der RDS-CALs pro Benutzer ist eingeschränkt.
 
 </dd> <dt>
 
 "None"
 </dt> <dd>
 
-Die RDS pro Benutzer-CALs sind nicht verfügbar.
+Die RDS-CALs pro Benutzer sind nicht verfügbar.
 
 </dd> <dt>
 
-"Nicht nachverfolgt"
+"Nicht nachverfolgen"
 </dt> <dd>
 
-Die Verfügbarkeit der RDS-Client Zugriffs Lizenzen pro Benutzer wird nicht nachverfolgt.
+Die Verfügbarkeit der RDS-CALs pro Benutzer wird nicht nachverfolgt.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Tscaltype**
+**TSCALType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der RDS pro Benutzer-CALs. Dabei handelt es sich um einen der folgenden Werte.
+Der Typ der RDS-CALs pro Benutzer. Dies ist einer der folgenden Werte.
 
 <dt>
 
 "Pro Gerät"
 </dt> <dd>
 
-Die RDS-Client Zugriffs Lizenzen pro Benutzer werden pro Gerät ausgestellt.
+Die RDS-CALs pro Benutzer werden pro Gerät ausgegeben.
 
 </dd> <dt>
 
 "Pro Benutzer"
 </dt> <dd>
 
-Die RDS-Client Zugriffs Lizenzen pro Benutzer werden pro Benutzer ausgegeben.
+Die RDS-CALs pro Benutzer werden pro Benutzer ausgegeben.
 
 </dd> <dt>
 
-Unbekannter
+"Unbekannt"
 </dt> <dd>
 
-Der Typ der RDS pro Benutzer-CALs ist unbekannt.
+Der Typ der RDS-CALs pro Benutzer ist unbekannt.
 
 </dd> </dl>
 
@@ -260,7 +260,7 @@ Der Typ der RDS pro Benutzer-CALs ist unbekannt.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 

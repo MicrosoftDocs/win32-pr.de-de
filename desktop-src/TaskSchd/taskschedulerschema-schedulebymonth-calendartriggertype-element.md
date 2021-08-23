@@ -1,9 +1,9 @@
 ---
-title: Schedulebymonth (calendartriggertype)-Element
+title: ScheduleByMonth (calendarTriggerType)-Element
 description: Gibt einen monatlichen Zeitplan an.
 ms.assetid: 3a23f4d0-bdaf-4f2a-81c6-8652a0849fc8
 keywords:
-- Schedulebymonth-Element Taskplaner
+- ScheduleByMonth-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6fda84a1cd4373f7988fa66a5ad70c97dd371d4d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a03fcc3b30e4fe684926baaba2815132c9f2f06bf4373b4e9fbbc181e187bf6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513810"
 ---
-# <a name="schedulebymonth-calendartriggertype-element"></a>Schedulebymonth (calendartriggertype)-Element
+# <a name="schedulebymonth-calendartriggertype-element"></a>ScheduleByMonth (calendarTriggerType)-Element
 
-Gibt einen monatlichen Zeitplan an. Der Task wird z. b. um 8:00 Uhr an bestimmten Tagen des Monats in bestimmten Monaten gestartet.
+Gibt einen monatlichen Zeitplan an. Die Aufgabe beginnt z. B. um 8:00 Uhr an bestimmten Tagen des Monats für bestimmte Monate.
 
 ``` syntax
 <xs:element name="ScheduleByMonth"
@@ -30,15 +30,15 @@ Gibt einen monatlichen Zeitplan an. Der Task wird z. b. um 8:00 Uhr an bestimmte
  />
 ```
 
-Das **schedulebymonth** -Element wird durch den komplexen Typ [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md) definiert.
+Das **ScheduleByMonth-Element** wird vom komplexen [**calendarTriggerType-Typ**](taskschedulerschema-calendartriggertype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                             | Abgeleitet von                                                                       | BESCHREIBUNG                                                                                |
+| Element                                                                             | Abgeleitet von                                                                       | Beschreibung                                                                                |
 |-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| [**Calendarausgelöst**](taskschedulerschema-calendartrigger-triggergroup-element.md) | [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md) | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen Tag-of-the-Week-(Dow-)-auslöst an.<br/> |
+| [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md) | [**calendarTriggerType**](taskschedulerschema-calendartriggertype-complextype.md) | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen DOW-Trigger (Day-of-the-Week) an.<br/> |
 
 
 
@@ -46,26 +46,26 @@ Das **schedulebymonth** -Element wird durch den komplexen Typ [**calendartrigger
 
 
 
-| Element                                                                                                  | type                                                                       | BESCHREIBUNG                                                             |
+| Element                                                                                                  | Typ                                                                       | Beschreibung                                                             |
 |----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| [**DaysOfMonth (monthlyscheduletype)**](taskschedulerschema-daysofmonth-monthlyscheduletype-element.md) | [**daysofmonthtype**](taskschedulerschema-daysofmonthtype-complextype.md) | Gibt die Tage des Monats an, in denen der Task ausgeführt wird.<br/>  |
-| [**Monate (monthlyscheduletype)**](taskschedulerschema-months-monthlyscheduletype-element.md)           | [**monthstype**](taskschedulerschema-monthstype-complextype.md)           | Gibt die Monate des Jahres an, in dem die Aufgabe ausgeführt wird.<br/> |
+| [**DaysOfMonth (monthlyScheduleType)**](taskschedulerschema-daysofmonth-monthlyscheduletype-element.md) | [**daysOfMonthType**](taskschedulerschema-daysofmonthtype-complextype.md) | Gibt die Tage des Monats an, an denen der Task ausgeführt wird.<br/>  |
+| [**Months (monthlyScheduleType)**](taskschedulerschema-months-monthlyscheduletype-element.md)           | [**monthsType**](taskschedulerschema-monthstype-complextype.md)           | Gibt die Monate des Jahres an, in dem der Task ausgeführt wird.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Uhrzeit, zu der die Aufgabe gestartet wird, wird durch das [**StartBoundary**](taskschedulerschema-startboundary-triggerbasetype-element.md) -Element festgelegt.
+Die Tageszeit, zu der der Task gestartet wird, wird vom [**StartBoundary-Element**](taskschedulerschema-startboundary-triggerbasetype-element.md) festgelegt.
 
-Bei der Skript Entwicklung wird ein monatlicher-Auslösung mit dem [**Monthly-Auslöserobjekt**](monthlytrigger.md) angegeben.
+Für die Skriptentwicklung wird ein monatlicher Trigger mit dem [**MonthlyTrigger-Objekt**](monthlytrigger.md) angegeben.
 
-Bei der C++-Entwicklung wird ein monatlicher-Auslösers mithilfe der [**imonthly-**](/windows/desktop/api/taskschd/nn-taskschd-imonthlytrigger) Schnittstelle angegeben.
+Für die C++-Entwicklung wird ein monatlicher Trigger mithilfe der [**IMonthlyTrigger-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-imonthlytrigger) angegeben.
 
-Die unten aufgeführten untergeordneten Elemente werden von den komplexen Elementtypen [**monthlyscheduletype**](taskschedulerschema-monthlyscheduletype-complextype.md) definiert.
+Die unten aufgeführten untergeordneten Elemente werden durch die komplexen [**Elementtypen monthlyScheduleType**](taskschedulerschema-monthlyscheduletype-complextype.md) definiert.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert einen monatlichen Kalender-, der einen Task (um 8:00 Uhr) am 1. und 15. Tag eines jeden Monats des Jahres startet.
+Der folgende XML-Code definiert einen monatlichen Kalendertrigger, der eine Aufgabe ( um 8:00 Uhr) am 1. und 15. Tag jedes Monats des Jahres startet.
 
 
 ```XML
@@ -103,8 +103,8 @@ Der folgende XML-Code definiert einen monatlichen Kalender-, der einen Task (um 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -112,7 +112,7 @@ Der folgende XML-Code definiert einen monatlichen Kalender-, der einen Task (um 
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

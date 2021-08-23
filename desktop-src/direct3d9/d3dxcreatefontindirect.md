@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein Schriftart Objekt indirekt für ein Gerät und eine Schriftart.
+description: Erstellt indirekt ein Schriftartobjekt für ein Gerät und eine Schriftart.
 ms.assetid: 480f3012-8495-47ca-a649-11ce53cee06c
-title: D3DXCreateFontIndirect-Funktion (D3dx9core. h)
+title: D3DXCreateFontIndirect-Funktion (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 086f9cb4cff7666fc3977551e2c9fd4a61150d46
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 555c4b1f3615639d9da01fb7a2a96aa5cb15f697235c918d5130ffcd4d43baa4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988660"
 ---
 # <a name="d3dxcreatefontindirect-function"></a>D3DXCreateFontIndirect-Funktion
 
-Erstellt ein Schriftart Objekt indirekt für ein Gerät und eine Schriftart.
+Erstellt indirekt ein Schriftartobjekt für ein Gerät und eine Schriftart.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT D3DXCreateFontIndirect(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, das Gerät, das dem Schriftart Objekt zugeordnet werden soll.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) das Gerät, das dem Schriftartobjekt zugeordnet werden soll.
 
 </dd> <dt>
 
-*PDE SC* \[ in\]
+*pDesc* \[ In\]
 </dt> <dd>
 
-Typ: **[**D3DXFONT \_ DESC**](d3dxfont-desc.md) \***
+Typ: **const [**D3DXFONT \_ DESC**](d3dxfont-desc.md) \***
 
-Ein Zeiger auf eine [**D3DXFONT \_ -Struktur**](d3dxfont-desc.md) , die die Attribute des zu erstellenden Schriftart Objekts beschreibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp D3DXFONT \_ DESC in D3DXFONT \_ descw aufgelöst; andernfalls wird der Datentyp in D3DXFONT \_ DeScA aufgelöst. Siehe Hinweise.
+Zeiger auf eine [**D3DXFONT \_ DESC-Struktur,**](d3dxfont-desc.md) die die Attribute des zu erstellenden Schriftartobjekts beschreibt. Wenn die Compilereinstellungen Unicode erfordern, wird der D3DXFONT DESC-Datentyp in D3DXFONT DESCW auflösen. Andernfalls wird der Datentyp in \_ \_ D3DXFONT \_ DESCA auflösen. Siehe Hinweise.
 
 </dd> <dt>
 
-*ppfont* \[ vorgenommen\]
+*ppFont* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXFONT**](id3dxfont.md)\***
 
-Gibt einen Zeiger auf eine [**ID3DXFont**](id3dxfont.md) -Schnittstelle zurück, die das erstellte Schriftart Objekt darstellt.
+Gibt einen Zeiger auf eine [**ID3DXFont-Schnittstelle**](id3dxfont.md) zurück, die das erstellte Schriftartobjekt darstellt.
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Gibt einen Zeiger auf eine [**ID3DXFont**](id3dxfont.md) -Schnittstelle zurück,
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode definiert ist, wird der Funktions aufrufin D3DXCreateFontIndirectW aufgelöst. Andernfalls wird der Funktions Aufruhe in D3DXCreateFontIndirectA aufgelöst, da ANSI-Zeichen folgen verwendet werden.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXCreateFontIndirectW auflösen. Andernfalls wird der Funktionsaufruf in D3DXCreateFontIndirectA auflösen, da ANSI-Zeichenfolgen verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,8 +85,8 @@ Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode defini
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -94,7 +94,7 @@ Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode defini
 
 <dl> <dt>
 
-[Universell Funktionen](dx9-graphics-reference-d3dx-functions-general-purpose.md)
+[Universell Functions](dx9-graphics-reference-d3dx-functions-general-purpose.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
 title: Prefix-Map-Attribut
-description: Das Prefix-Map-Attribut ist nur für die interne Verwendung vorgesehen.
+description: Das Prefix-Map-Attribut ist nur zur internen Verwendung.
 ms.assetid: 814b8d47-ade9-49d9-a755-a47f7a9322c4
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Prefix-Map-Attribut
-- AD-Schema des prefixmap-Attributs
+- Prefix-Map AD-Schema
+- prefixMap-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 354776b279551ae116d72a98c87cfeaa779529a3
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 109f0edaff3e693cc51cc63890b313e0821893608aa31b35f4d8c50148b5f4ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119081484"
 ---
 # <a name="prefix-map-attribute"></a>Prefix-Map-Attribut
 
-Das **prefix-Map-** Attribut ist nur für die interne Verwendung vorgesehen.
+Das **Präfixzuordnungsattribut** ist nur zur internen Verwendung.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Prefix-Map                                            |
-| LDAP-Display-Name | prefixmap                                             |
+| Ldap-Anzeigename | prefixMap                                             |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.538                                |
-| System-ID-GUID    | 52458022-ca6a-11D0-affinf-0000f 80367c1                  |
+| System-Id-Guid    | 52458022-ca6a-11d0-afff-0000f80367c1                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Das **prefix-Map-** Attribut ist nur für die interne Verwendung vorgesehen.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,20 +58,20 @@ Das **prefix-Map-** Attribut ist nur für die interne Verwendung vorgesehen.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000011                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,16 +79,16 @@ Das **prefix-Map-** Attribut ist nur für die interne Verwendung vorgesehen.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000011                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -100,16 +100,16 @@ Das **prefix-Map-** Attribut ist nur für die interne Verwendung vorgesehen.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000011                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -121,16 +121,16 @@ Das **prefix-Map-** Attribut ist nur für die interne Verwendung vorgesehen.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000011                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -142,16 +142,16 @@ Das **prefix-Map-** Attribut ist nur für die interne Verwendung vorgesehen.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000011                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -163,16 +163,16 @@ Das **prefix-Map-** Attribut ist nur für die interne Verwendung vorgesehen.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000011                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -184,16 +184,16 @@ Das **prefix-Map-** Attribut ist nur für die interne Verwendung vorgesehen.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000011                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 

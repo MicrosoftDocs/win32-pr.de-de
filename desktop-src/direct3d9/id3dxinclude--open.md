@@ -1,7 +1,7 @@
 ---
-description: Eine vom Benutzer implementierte Methode zum Öffnen und Lesen des Inhalts einer-Shader- \# Includedatei.
+description: Eine vom Benutzer implementierte Methode zum Öffnen und Lesen des Inhalts einer \# Shader-Includedatei.
 ms.assetid: ad0105f7-042d-4e96-ad4a-1ece08e519af
-title: 'ID3DXInclude:: Open-Methode (D3DX9Shader. h)'
+title: ID3DXInclude::Open-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 313b3f4845f9a46f758a40b6b315cc5b5eeecb29
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e50b4774f6ed62b1e8a6e6cb85b5732efd878302563958e25e6b9017f9acc58d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355231"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987390"
 ---
-# <a name="id3dxincludeopen-method"></a>ID3DXInclude:: Open-Methode
+# <a name="id3dxincludeopen-method"></a>ID3DXInclude::Open-Methode
 
-Eine vom Benutzer implementierte Methode zum Öffnen und Lesen des Inhalts einer-Shader- \# Includedatei.
+Eine vom Benutzer implementierte Methode zum Öffnen und Lesen des Inhalts einer \# Shader-Includedatei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,46 +44,46 @@ HRESULT Open(
 
 <dl> <dt>
 
-*IncludeType* \[ in\]
+*IncludeType* \[ In\]
 </dt> <dd>
 
-Type: **[ **D3DXINCLUDE- \_ Typ**](./d3dxinclude-type.md)**
+Typ: **[ **D3DXINCLUDE \_ TYPE**](./d3dxinclude-type.md)**
 
-Der Speicherort der \# Includedatei. Siehe [**D3DXINCLUDE \_ Type**](./d3dxinclude-type.md).
+Der Speicherort der \# Includedatei. Siehe [**D3DXINCLUDE \_ TYPE**](./d3dxinclude-type.md).
 
 </dd> <dt>
 
-*pfilename* \[ in\]
+*pFileName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Der Name der \# Includedatei.
+Name der \# Includedatei.
 
 </dd> <dt>
 
-*pparser-Daten* \[ in\]
+*pParentData* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[ **lpcvoid**](../winprog/windows-data-types.md)**
+Typ: **[ **LPCVOID**](../winprog/windows-data-types.md)**
 
-Zeiger auf den Container, der die \# Includedatei enthält. Der Compiler kann NULL in *pparameentdata* übergeben. Weitere Informationen finden Sie im Abschnitt "Suchen nach Includedateien" unter [Kompilieren eines Effekts (Direct3D 11)](../direct3d11/d3d11-graphics-programming-guide-effects-compile.md).
+Zeiger auf den Container, der die \# Includedatei enthält. Der Compiler kann NULL in *pParentData übergeben.* Weitere Informationen finden Sie im Abschnitt "Suchen nach Includedateien" unter [Kompilieren eines Effekts (Direct3D 11).](../direct3d11/d3d11-graphics-programming-guide-effects-compile.md)
 
 </dd> <dt>
 
-*ppData* \[ vorgenommen\]
+*ppData* \[ out\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[ **lpcvoid**](../winprog/windows-data-types.md)\***
+Typ: **[ **LPCVOID**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf den zurückgegebenen Puffer, der die include-Direktiven enthält. Dieser Zeiger bleibt gültig, bis [**ID3DXInclude:: Close**](id3dxinclude--close.md) aufgerufen wird.
+Zeiger auf den zurückgegebenen Puffer, der die Include-Direktiven enthält. Dieser Zeiger bleibt gültig, bis [**ID3DXInclude::Close**](id3dxinclude--close.md) aufgerufen wird.
 
 </dd> <dt>
 
-*Pbytes* \[ vorgenommen\]
+*pBytes* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
 Anzahl der in ppData zurückgegebenen Bytes.
 
@@ -93,11 +93,11 @@ Anzahl der in ppData zurückgegebenen Bytes.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn beim Lesen der Includedatei der Rückruf fehlschlägt \# , schlägt die API fehl, die den Aufruf des Rückrufs bewirkt hat. Folgende Werte sind möglich:
+Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der Rückruf beim Lesen der Includedatei fehlschlägt, schlägt die API fehl, die den Aufruf des \# Rückrufs verursacht hat. Folgende Werte sind möglich:
 
--   Der HLSL-Shader erzeugt eine der D3DXCompileShader- \* \* \* Funktionen nicht.
--   Der assemblyshader führt einen der D3DXAssembleShader- \* \* \* Funktionen aus.
--   Der Effekt führt nicht zu einer der D3DXCreateEffect- \* \* \* oder D3DXCreateEffectCompiler- \* \* \* Funktionen.
+-   Der HLSL-Shader kann nicht mit einer der D3DXCompileShader-Funktionen \* \* \* verwendet werden.
+-   Der Assemblyshader kann nicht mit einer der D3DXAssembleShader-Funktionen \* \* \* verwendet werden.
+-   Die Auswirkung tritt bei einer der Funktionen D3DXCreateEffect \* \* \* oder D3DXCreateEffectCompiler \* \* \* auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,19 +105,19 @@ Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn beim L
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXInclude](id3dxinclude.md)
 </dt> <dt>
 
-[**ID3DXInclude:: Close**](id3dxinclude--close.md)
+[**ID3DXInclude::Close**](id3dxinclude--close.md)
 </dt> </dl>
 
  

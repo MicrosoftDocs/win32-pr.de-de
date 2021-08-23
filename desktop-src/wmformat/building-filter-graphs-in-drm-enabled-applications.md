@@ -1,37 +1,37 @@
 ---
-title: Entwickeln von Filter Diagrammen in DRM-Enabled Anwendungen
-description: Entwickeln von Filter Diagrammen in DRM-Enabled Anwendungen
+title: Erstellen von Filterdiagrammen in DRM-Enabled Anwendungen
+description: Erstellen von Filterdiagrammen in DRM-Enabled Anwendungen
 ms.assetid: 447bec2a-0982-4a05-87bb-aed6db684b36
 keywords:
-- Windows Media-Format-SDK, Bausteine von Filter Diagrammen
-- Windows Media-Format-SDK, DirectShow
-- Windows Media-Format-SDK, DRM-fähige Anwendungen
-- Advanced Systems Format (ASF), Aufbau von Filter Diagrammen
-- ASF (Advanced Systems Format), Bausteine von Filter Diagrammen
-- Advanced Systems Format (ASF), DirectShow
+- Windows Medienformat-SDK, Erstellen von Filterdiagrammen
+- Windows Medienformat-SDK, DirectShow
+- Windows Medienformat-SDK, DRM-fähige Anwendungen
+- Advanced Systems Format (ASF), Erstellen von Filterdiagrammen
+- ASF (Advanced Systems Format), Erstellen von Filterdiagrammen
+- Advanced Systems Format (ASF),DirectShow
 - ASF (Advanced Systems Format), DirectShow
-- Advanced Systems Format (ASF), DRM-aktivierte Anwendungen
-- ASF (Advanced Systems Format), DRM-aktivierte Anwendungen
-- DirectShow, Bausteine von Filter Diagrammen
-- DirectShow, DRM-fähige Anwendungen
+- Advanced Systems Format (ASF), DRM-fähige Anwendungen
+- ASF (Advanced Systems Format), DRM-fähige Anwendungen
+- DirectShow,Erstellen von Filterdiagrammen
+- DirectShow,DRM-fähige Anwendungen
 - Digital Rights Management (DRM), DirectShow
 - DRM (Digital Rights Management), DirectShow
-- Digital Rights Management (DRM), Bausteine von Filter Diagrammen
-- DRM (Digital Rights Management), Bausteine von Filter Diagrammen
+- Digital Rights Management (DRM), Erstellen von Filterdiagrammen
+- DRM (Digital Rights Management), Erstellen von Filterdiagrammen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 944037a00c208e1427d3d19aa6c9dc0a352ec5fc
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 19e7f411a52c0ce7c42410c7a901787c7f6d9d7089921019639cb3f5e708dff6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104314332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119447950"
 ---
-# <a name="building-filter-graphs-in-drm-enabled-applications"></a>Entwickeln von Filter Diagrammen in DRM-Enabled Anwendungen
+# <a name="building-filter-graphs-in-drm-enabled-applications"></a>Erstellen von Filterdiagrammen in DRM-Enabled Anwendungen
 
-Wenn Ihre DirectShow-Anwendung die Wiedergabe von DRM-geschützten Dateien unterstützt, sollten Sie in der Regel **RenderFile** nicht zum Erstellen des Filter Diagramms verwenden, da es keine Möglichkeit gibt, anzugeben, welche DRM-Rechte Sie anfordern, bevor die Datei geöffnet wird. Der WM-ASF-Reader fordert standardmäßig nur Wiedergabe Rechte an. Der Filter wird dem Diagramm nicht hinzugefügt und kann daher von Anwendungen nicht gefunden werden, bis eine Datei erfolgreich geöffnet wird.
+Wenn Ihre DirectShow-Anwendung die Wiedergabe von DRM-geschützten Dateien unterstützt, sollten Sie im Allgemeinen **renderFile** nicht zum Erstellen des Filterdiagramms verwenden, da es keine Möglichkeit gibt, anzugeben, welche DRM-Rechte Sie vor dem Öffnen der Datei anfordern. Der WM ASF-Reader fordert standardmäßig nur Wiedergaberechte an. Der Filter wird dem Diagramm nicht hinzugefügt und kann daher erst von Anwendungen gefunden werden, wenn eine Datei erfolgreich geöffnet wurde.
 
-Zum Erstellen eines DRM-fähigen Wiedergabe Diagramms mithilfe des [WM-ASF-Readers](wm-asf-reader-filter.md)müssen Sie den Filter mithilfe von **cokreateinstance** instanziieren, ihn mithilfe von **igraphbuilder:: AddFilter** dem Filter Diagramm hinzufügen, ihn konfigurieren und dann seine Ausgabe Pins rendern. Dieses Verfahren wird im playwndasf-Beispiel veranschaulicht. Wenn Sie das Diagramm auf diese Weise erstellen, verfügen Sie bereits über den **ibasefilter** -Zeiger, der zum Abrufen von **iwmdrmwriter** zum Abrufen von " **QueryService** " verwendet werden kann. Diese Schnittstelle ist jedoch erst verfügbar, wenn das Windows Media Format SDK Reader-Objekt intern vom WM-ASF-Reader erstellt wird. Die erste Gelegenheit, dass die Anwendung DRM-Rechte festlegen muss, ist der WMT \_ No \_ Rights \_ Ex-Ereignishandler, wie im folgenden Code Ausschnitt gezeigt:
+Um ein DRM-fähiges Wiedergabediagramm mithilfe des [WM ASF-Readers](wm-asf-reader-filter.md)zu erstellen, müssen Sie den Filter mit **CoCreateInstance** instanziieren, ihn mithilfe von **IGraphBuilder::AddFilter** dem Filterdiagramm hinzufügen, ihn konfigurieren und dann seine Ausgabepins rendern. Diese Technik wird im PlayWndASF-Beispiel demonstriert. Wenn Sie das Diagramm auf diese Weise erstellen, verfügen Sie bereits über den **IBaseFilter-Zeiger,** mit dem QueryService aufgerufen werden **kann,** um **IWMDRMWriter zu erhalten.** Diese Schnittstelle ist jedoch erst verfügbar, wenn das Windows Media Format SDK-Readerobjekt intern vom WM ASF-Reader erstellt wurde. Die erste Gelegenheit, die die Anwendung zum Festlegen von DRM-Rechten hat, befindet sich im WMT \_ NO \_ RIGHTS EX-Ereignishandler, wie im folgenden \_ Codeausschnitt gezeigt:
 
 
 ```C++
@@ -75,27 +75,27 @@ case WMT_NO_RIGHTS_EX:
 
 <dl> <dt>
 
-[**Features digitaler Rights Management**](digital-rights-management-features.md)
+[**Digital Rights Management Features**](digital-rights-management-features.md)
 </dt> <dt>
 
-[**DRM-Attribut Liste**](drm-attribute-list.md)
+[**DRM-Attributliste**](drm-attribute-list.md)
 </dt> <dt>
 
 [**DRM-Eigenschaften**](drm-properties.md)
 </dt> <dt>
 
-[**Aktivieren DRM-Unterstützung**](enabling-drm-support.md)
+[**Aktivieren der DRM-Unterstützung**](enabling-drm-support.md)
 </dt> <dt>
 
-[**Iwmdrmreader**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmdrmreader)
+[**IWMDRMReader**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmdrmreader)
 </dt> <dt>
 
-[**Iwmdrmwriter**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmdrmwriter)
+[**IWMDRMWriter**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmdrmwriter)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

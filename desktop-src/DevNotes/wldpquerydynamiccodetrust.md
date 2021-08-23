@@ -1,7 +1,7 @@
 ---
-description: Ruft einen Wert ab, der bestimmt, ob der angegebene dynamische Code im Arbeitsspeicher oder auf dem Datenträger mit der Device Guard-Richtlinie vertrauenswürdig ist.
+description: Ruft einen Wert ab, der bestimmt, ob der angegebene dynamische Code der .NET-CRL im Arbeitsspeicher oder auf dem Datenträger von der Device Guard-Richtlinie als vertrauenswürdig eingestuft wird.
 ms.assetid: 9C12894D-98AF-4408-A11A-865E4DA1DA68
-title: Wldpquerydynamiccodetrust-Funktion (wldp. h)
+title: WldpQueryDynamicCodeTrust-Funktion (Wldp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - wldp.dll
-ms.openlocfilehash: 1b9b3cc30f5a02ae86fd8a30043a9ab417ec1ac7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 00b26c8d237a8c6d725751be064c7b82fc7a600c452598a590a747ba10ae56d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523467"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119075724"
 ---
-# <a name="wldpquerydynamiccodetrust-function"></a>Wldpquerydynamiccodetrust-Funktion
+# <a name="wldpquerydynamiccodetrust-function"></a>WldpQueryDynamicCodeTrust-Funktion
 
-Ruft einen Wert ab, der bestimmt, ob der angegebene dynamische Code im Arbeitsspeicher oder auf dem Datenträger mit der Device Guard-Richtlinie vertrauenswürdig ist.
+Ruft einen Wert ab, der bestimmt, ob der angegebene dynamische Code der .NET-CRL im Arbeitsspeicher oder auf dem Datenträger von der Device Guard-Richtlinie als vertrauenswürdig eingestuft wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ HRESULT WINAPI WldpQueryDynamicCodeTrust(
 
 <dl> <dt>
 
-*file handle* 
+*Filehandle* 
 </dt> <dd>
 
-Handle für die zu überprüfende dynamische Codedatei auf dem Datenträger. Wenn *File Handle* nicht **null** ist, sollte *baseImage* **null** sein.
+Behandeln Sie die zu überprüfende dynamische Codedatei auf dem Datenträger. Wenn *fileHandle* ungleich **NULL** ist, sollte *baseImage* **NULL** sein.
 
 </dd> <dt>
 
 *baseImage* 
 </dt> <dd>
 
-Zeiger auf die zu Überprüfung der in-Memory-PE-Datei. Wenn *baseImage* nicht **null** ist, sollte *FILEHANDLE* **null** sein.
+Zeiger auf die zu überprüfende PE-Datei im Arbeitsspeicher. Wenn *baseImage* ungleich **NULL** ist, sollte *FileHandle* **NULL** sein.
 
 </dd> <dt>
 
-*ImageSize* 
+*Imagesize* 
 </dt> <dd>
 
-Wenn *baseImage* ungleich **null** ist, gibt die Puffergröße an, auf die *baseImage* zeigt.
+Wenn *baseImage* ungleich **NULL** ist, gibt die Puffergröße an, auf die *baseImage* zeigt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt bei Erfolg **S \_ OK** zurück oder andernfalls einen Fehlercode.
+Diese Methode gibt **S \_ OK** zurück, wenn erfolgreich ist, oder andernfalls einen Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,9 +76,9 @@ Diese Methode gibt bei Erfolg **S \_ OK** zurück oder andernfalls einen Fehlerc
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Wldp. h</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Wldp.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>Wldp.dll</dt> </dl> |
 
 

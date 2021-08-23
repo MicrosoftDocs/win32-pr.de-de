@@ -1,9 +1,9 @@
 ---
-title: komplexer restarttype-Typ
-description: Definiert die untergeordneten Elemente und Sequenz Informationen für das restartonfailure-Element.
+title: restartType Complex Type
+description: Definiert die untergeordneten Elemente und Sequenzinformationen für das RestartOnFailure-Element.
 ms.assetid: 3a192955-8a33-42b9-a974-faa9a3789f58
 keywords:
-- komplexer restarttype-Typ Taskplaner
+- restartType complex type Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7f83dcac376fcdd8d2059649350502111f5a732f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 996debc2c8e3d7d00ca7b42facde582f918d72736426ed326691461d800f8562
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119516479"
 ---
-# <a name="restarttype-complex-type"></a>komplexer restarttype-Typ
+# <a name="restarttype-complex-type"></a>restartType Complex Type
 
-Definiert die untergeordneten Elemente und Sequenz Informationen für das [restartonfailure](taskschedulerschema-restartonfailure-settingstype-element.md) -Element.
+Definiert die untergeordneten Elemente und Sequenzinformationen für das [RestartOnFailure-Element.](taskschedulerschema-restartonfailure-settingstype-element.md)
 
 ``` syntax
 <xs:complexType name="restartType">
@@ -60,9 +60,9 @@ Definiert die untergeordneten Elemente und Sequenz Informationen für das [resta
 
 
 
-| Element                                                              | type | BESCHREIBUNG                                        |
+| Element                                                              | Typ | Beschreibung                                        |
 |----------------------------------------------------------------------|------|----------------------------------------------------|
-| [**Countdown**](taskschedulerschema-count-restarttype-element.md)       |      | Anzahl der Versuche, den Task neu zu starten.<br/> |
+| [**Anzahl**](taskschedulerschema-count-restarttype-element.md)       |      | Anzahl der Versuche, den Task neu zu starten.<br/> |
 | [**Intervall**](taskschedulerschema-interval-restarttype-element.md) |      | Gibt an, wie lange versucht wird, die Aufgabe zu starten.<br/>      |
 
 
@@ -73,8 +73,8 @@ Definiert die untergeordneten Elemente und Sequenz Informationen für das [resta
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -82,7 +82,7 @@ Definiert die untergeordneten Elemente und Sequenz Informationen für das [resta
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[Taskplaner Komplexe Schematypen](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

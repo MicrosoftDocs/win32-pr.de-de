@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentnobackupdirectoryexception-Konstruktor'
-title: Esentnobackupdirectoryexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentNoBackupDirectoryException-Konstruktor'
+title: EsentNoBackupDirectoryException-Konstruktor
 TOCTitle: 'EsentNoBackupDirectoryException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentNoBackupDirectoryException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentnobackupdirectoryexception.esentnobackupdirectoryexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e1c128c7cdf986f41568134ee0754a3ab402b88f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a574f14b60a3ead08da6e0dfa6577dff397d429b0972ce78a885bb4b5e5b121e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352570"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119478970"
 ---
-# <a name="esentnobackupdirectoryexception-constructor"></a>Esentnobackupdirectoryexception-Konstruktor
+# <a name="esentnobackupdirectoryexception-constructor"></a>EsentNoBackupDirectoryException-Konstruktor
 
-Initialisiert eine neue Instanz der esentnobackupdirectoryexception-Klasse.
+Initialisiert eine neue Instanz der EsentNoBackupDirectoryException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentNoBackupDirectoryException()
 public EsentNoBackupDirectoryException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentnobackupdirectoryexception-Klasse](./esentnobackupdirectoryexception-class.md)
+[EsentNoBackupDirectoryException-Klasse](./esentnobackupdirectoryexception-class.md)
 
-[Esentnobackupdirectoriyexception-Member](./esentnobackupdirectoryexception-members.md)
+[EsentNoBackupDirectoryException-Member](./esentnobackupdirectoryexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

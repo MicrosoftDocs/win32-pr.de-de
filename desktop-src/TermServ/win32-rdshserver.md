@@ -1,11 +1,11 @@
 ---
 title: Win32_RDSHServer-Klasse
-description: Verwaltet einen Remotedesktop-Sitzungshost Server (RDSH).
+description: Verwaltet einen Remotedesktop-Sitzungshost -Server (RDSH).
 ms.assetid: 2c2840d2-16aa-484a-979b-6dbb1a08bbcf
 ms.tgt_platform: multiple
 keywords:
-- Win32_RDSHServer-Klasse Remotedesktopdienste
-- Win32_RDSHServer Klasse Remotedesktopdienste, beschrieben
+- Win32_RDSHServer der Remotedesktopdienste
+- Win32_RDSHServer klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -20,16 +20,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6434a4dfe6bc1a79fdaf4576a89ef552cebd5e1c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 066cea4044330ab79122e9346f6f32999202f854245e5508448e40aea3521fe0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119422600"
 ---
-# <a name="win32_rdshserver-class"></a>Win32 \_ rdshserver-Klasse
+# <a name="win32_rdshserver-class"></a>Win32 \_ RDSHServer-Klasse
 
-Verwaltet einen Remotedesktop-Sitzungshost Server (RDSH).
+Verwaltet einen Remotedesktop-Sitzungshost -Server (RDSH).
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -48,25 +48,25 @@ class Win32_RDSHServer
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ rdshserver** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ RDSHServer-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32 \_ rdshserver** -Klasse verfügt über diese Methoden.
+Die **Win32 \_ RDSHServer-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                          | BESCHREIBUNG                                                                                                                                                                       |
+| Methode                                                                          | Beschreibung                                                                                                                                                                       |
 |:--------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**GetInt32Property**](getint32property-win32-rdshserver.md)                   | Ruft einen ganzzahligen Eigenschafts Wert eines **Win32- \_ rdshserver** -Objekts ab.<br/>                                                                                                 |
-| [**Getpdingstartserverlist**](win32-rdshserver-getpendingstartserverlist.md) | Ruft eine Liste der Server ab, die auf den Start warten.<br/>                                                                                                                           |
-| [**GetStringProperty**](getstringproperty-win32-rdshserver.md)                 | Ruft den Wert der Zeichen folgen Eigenschaft eines **Win32- \_ rdshserver** -Objekts ab.<br/>                                                                                                   |
-| [**SetInt32Property**](setint32property-win32-rdshserver.md)                   | Aktualisiert einen ganzzahligen Eigenschafts Wert eines **Win32- \_ rdshserver** -Objekts.<br/>                                                                                                   |
-| [**SetStringProperty**](setstringproperty-win32-rdshserver.md)                 | Aktualisiert den Wert der Zeichen folgen Eigenschaft eines **Win32- \_ rdshserver** -Objekts.<br/>                                                                                                     |
-| [**Testandsetstate**](win32-rdshserver-testandsetstate.md)                     | Vergleicht den aktuellen Zustand mit dem angegebenen comparand. Wenn die beiden Stimmen, wird der Zustand auf einen neuen Wert festgelegt. Unabhängig von der Übereinstimmung wird der aktuelle Zustand ebenfalls zurückgegeben.<br/> |
+| [**GetInt32Property**](getint32property-win32-rdshserver.md)                   | Ruft einen ganzzahligen Eigenschaftswert eines **Win32 \_ RDSHServer-Objekts** ab.<br/>                                                                                                 |
+| [**GetPendingStartServerList**](win32-rdshserver-getpendingstartserverlist.md) | Ruft eine Liste der Server ab, die auf den Start warten.<br/>                                                                                                                           |
+| [**GetStringProperty**](getstringproperty-win32-rdshserver.md)                 | Ruft einen Zeichenfolgeneigenschaftswert eines **Win32 \_ RDSHServer-Objekts** ab.<br/>                                                                                                   |
+| [**SetInt32Property**](setint32property-win32-rdshserver.md)                   | Aktualisiert einen ganzzahligen Eigenschaftswert eines **Win32 \_ RDSHServer-Objekts.**<br/>                                                                                                   |
+| [**SetStringProperty**](setstringproperty-win32-rdshserver.md)                 | Aktualisiert einen Zeichenfolgeneigenschaftswert eines **Win32 \_ RDSHServer-Objekts.**<br/>                                                                                                     |
+| [**TestAndSetState**](win32-rdshserver-testandsetstate.md)                     | Vergleicht den aktuellen Zustand mit dem angegebenen Vergleich. Wenn die beiden übereinstimmen, wird der Zustand auf einen neuen Wert festgelegt. Unabhängig von der Übereinstimmung wird auch der aktuelle Zustand zurückgegeben.<br/> |
 
 
 
@@ -74,14 +74,14 @@ Die **Win32 \_ rdshserver** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ rdshserver** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ RDSHServer-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Collectionalias**
+**CollectionAlias**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -90,27 +90,27 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [ **optional**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Ruft den Alias für die RDSH-Auflistung ab, der der RDSH-Server zugewiesen ist, oder legt ihn fest.
+Ruft den Alias für die RDSH-Auflistung ab, der der RDSH-Server zugewiesen ist, und legt diesen fest.
 
 </dd> <dt>
 
-**Connectionbroker**
+**ConnectionBroker**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Ruft den Namen des Remotedesktopverbindung Brokers (RDCB) ab, der den Benutzer Zugriff auf den RDSH-Server verwaltet, oder legt ihn fest.
+Ruft den Namen des RDCB (Remotedesktopverbindung Broker) ab, der den Benutzerzugriff auf den RDSH-Server verwaltet, und legt diesen fest.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -119,14 +119,14 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Ruft den Namen des RDSH-Servers ab, oder legt ihn fest.
+Ruft den Namen des RDSH-Servers ab und legt den Namen fest.
 
 </dd> <dt>
 
 **ServerState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -135,48 +135,48 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **optional**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Beschreibt den Status des Servers. Alle anderen Werte als das Ziel, das ausgeführt wird (3), sind reserviert und sollten einen ungültigen Status **\_ aufweisen** .
+Beschreibt den Status des Servers. Jeder andere Wert als **TARGET \_ RUNNING** (3) ist reserviert und sollte als ungültiger Zustand betrachtet werden.
 
-Mögliche Werte sind.
+Die möglichen Werte sind.
 
 <dt>
 
 <span id="TARGET_UNKNOWN"></span><span id="target_unknown"></span>
 
-**Ziel \_ Unbekannt** (1)
+**TARGET \_ UNKNOWN** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="TARGET_RUNNING"></span><span id="target_running"></span>
 
-**Ziel \_ Wird ausgeführt** (3)
+**TARGET \_ RUNNING** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="TARGET_INVALID"></span><span id="target_invalid"></span>
 
-**Ziel \_ Ungültig** (8)
+**TARGET \_ UNGÜLTIG** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="TARGET_STARTING"></span><span id="target_starting"></span>
 
-**Ziel \_ Wird gestartet** (9)
+**TARGET \_ STARTING** (9)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="TARGET_STOPPING"></span><span id="target_stopping"></span>
 
-**Ziel \_ Wird beendet (10** )
+**TARGET \_ WIRD BEENDET** (10)
 
 
 </dt> <dd></dd> </dl>
 
-**Windows Server 2012 R2 und Windows Server 2012:** Diese Eigenschaft ist vor Windows Server 2016 nicht verfügbar.
+**Windows Server 2012 R2 und Windows Server 2012:** Diese Eigenschaft ist vor der Windows Server 2016.
 
 </dd> </dl>
 
@@ -188,17 +188,17 @@ Mögliche Werte sind.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMV2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Remotedesktop Management Services-Anbieter](rdms-api-reference.md)
+[Remotedesktop Management Services Provider](rdms-api-reference.md)
 </dt> </dl>
 
  

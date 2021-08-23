@@ -587,7 +587,7 @@
               href: /windows/win32/api/Iprtrmib/ns-iprtrmib-tcpip_owner_module_basic_info
             - name: TCP_RESERVE_PORT_RANGE
               href: /windows/desktop/api/Ipexport/ns-ipexport-tcp_reserve_port_range
-        - name: IP-Hilfsenumeration
+        - name: IP-Hilfsenumerationen
           href: ip-helper-enumerations.md
           items:
             - name: IF_OPER_STATUS

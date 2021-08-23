@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: e8ffe325-e6ae-4fa0-9824-22721c2d97c8
-ms.openlocfilehash: f9495516ebd6f6a149d50f8ec02997b043661a64
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 4cfee6d0f26d1e21c5ba6615e208e758c9cd7641db16c57dcecf0e31e52dceef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109840661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119093070"
 ---
 # <a name="folderitems3-object"></a>FolderItems3-Objekt
 
@@ -37,7 +37,7 @@ Das **FolderItems3-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                | BESCHREIBUNG                                                       |
+| Methode                                | Beschreibung                                                       |
 |:--------------------------------------|:------------------------------------------------------------------|
 | [**Filtern**](folderitems3-filter.md) | Legt einen Platzhalterfilter fest, der auf die zurückgegebenen Elemente angewendet werden soll.<br/> |
 
@@ -51,7 +51,7 @@ Das **FolderItems3-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                       | Zugriffstyp          | BESCHREIBUNG                                                       |
+| Eigenschaft                                       | Zugriffstyp          | Beschreibung                                                       |
 |:-----------------------------------------------|:---------------------|:------------------------------------------------------------------|
 | [**Verben**](folderitems3-verbs.md)<br/> | Schreibgeschützt<br/> | Ruft die Liste der Verben ab, die allen Ordnerelementen gemeinsam sind.<br/> |
 

@@ -1,7 +1,7 @@
 ---
-description: Ruft das Handle einer Funktion ab, indem der zugehörige Name gesucht wird.
+description: Ruft das Handle einer Funktion ab, indem ihr Name gesucht wird.
 ms.assetid: 1e2e2dae-5084-47f3-9812-3dbf609bd70b
-title: 'ID3DXBaseEffect:: getfunctionbyname-Methode (D3DX9Effect. h)'
+title: ID3DXBaseEffect::GetFunctionByName-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: e1cd9ec56ff5df3bff293ade0669b4cd7c8dad5d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bcc16fa8136332e2a5d1a87956e1d4cc6a2a562b7e4e3531efbcc09f1314978b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355907"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119121973"
 ---
-# <a name="id3dxbaseeffectgetfunctionbyname-method"></a>ID3DXBaseEffect:: getfunctionbyname-Methode
+# <a name="id3dxbaseeffectgetfunctionbyname-method"></a>ID3DXBaseEffect::GetFunctionByName-Methode
 
-Ruft das Handle einer Funktion ab, indem der zugehörige Name gesucht wird.
+Ruft das Handle einer Funktion ab, indem ihr Name gesucht wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ D3DXHANDLE GetFunctionByName(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeichenfolge, die den Funktionsnamen enthält.
+Eine Zeichenfolge, die den Funktionsnamen enthält.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeichenfolge, die den Funktionsnamen enthält.
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Gibt das Handle der angegebenen Funktion zurück, oder **null** , wenn der Name nicht gefunden wurde. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Gibt das Handle der angegebenen Funktion oder **NULL zurück,** wenn der Name nicht gefunden wurde. Siehe [Handles (Direct3D 9).](handles.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Gibt das Handle der angegebenen Funktion zurück, oder **null** , wenn der Name 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

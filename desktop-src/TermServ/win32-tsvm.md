@@ -4,8 +4,8 @@ description: Stellt einen Remotedesktop virtuellen Computer dar.
 ms.assetid: 9e076963-1c02-4419-b4d5-9863a2bbb23b
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSVm-Klasse Remotedesktopdienste
-- Win32_TSVm Klasse Remotedesktopdienste, beschrieben
+- Win32_TSVm der Remotedesktopdienste
+- Win32_TSVm klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -23,14 +23,14 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 25f419a888adef946d2a7b281919a9a9293eeca5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 65bdec32d667e88d152f77c3518b02a183a794c8727c96b0772194a183e97279
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137433"
 ---
-# <a name="win32_tsvm-class"></a>Win32-Klasse "- \_ VM"
+# <a name="win32_tsvm-class"></a>Win32 \_ TSVm-Klasse
 
 Stellt einen Remotedesktop virtuellen Computer dar.
 
@@ -54,22 +54,22 @@ class Win32_TSVm : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ ZVM** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSVm-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ ZVM** " verfügt über diese Methoden.
+Die **Win32 \_ TSVm-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                | BESCHREIBUNG                                              |
+| Methode                                                                | Beschreibung                                              |
 |:----------------------------------------------------------------------|:---------------------------------------------------------|
-| [**Dumpvminfo**](dumpvminfo-win32-tsvm.md)                           | Nur für Testzwecke.<br/>                       |
-| [**Exportieren**](export-win32-tsvm.md)                                   | Ruft Informationen zur Sitzungs Überwachung des virtuellen Computers ab.<br/> |
-| [**Queryofflineinformation**](queryofflineinformation-win32-tsvm.md) | Fragt Eigenschaften nur ab, wenn Sie offline ist.<br/>   |
+| [**DumpVmInfo**](dumpvminfo-win32-tsvm.md)                           | Nur zu Testzwecken.<br/>                       |
+| [**Exportieren**](export-win32-tsvm.md)                                   | Ruft Informationen zur Sitzungsüberwachung des virtuellen Computers ab.<br/> |
+| [**QueryOfflineInformation**](queryofflineinformation-win32-tsvm.md) | Fragt Eigenschaften nur ab, wenn sie offline sind.<br/>   |
 
 
 
@@ -77,7 +77,7 @@ Die Win32-Klasse " **\_ ZVM** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_** -Klasse "t-VM" verfügt über diese Eigenschaften.
+Die **Win32 \_ TSVm-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -90,12 +90,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Beschreibung (einzeilige Zeichenfolge) des-Objekts.
+Kurze Beschreibung (einzeilenbasierte Zeichenfolge) des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
@@ -110,11 +110,11 @@ Zugriffstyp: Schreibgeschützt
 
 Eine Beschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**"Einlightmentsettings"**
+**EnlightmentSettings**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -126,25 +126,25 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [ **optional**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Ein XML-BLOB, das die Einstellungen für die Aufklärung für den virtuellen Computer enthält.
+Ein XML-BLOB, das die Einstellungen für den virtuellen Computer enthält.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert gibt nicht an, dass das Objekt nicht installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
@@ -159,7 +159,7 @@ Zugriffstyp: Schreibgeschützt
 
 Der Name des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
@@ -172,12 +172,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene betriebsbereite und nicht betriebsbereite Status definiert werden. Folgende Betriebsstatus sind möglich: "OK", "Heruntergestuft" und "Fehler vor dem Ausfall" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber es wird in naher Zukunft ein Fehler vorhergesagt). Nicht operative Status sind: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während der Spiegelung eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen administrativen Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element befindet sich weder in "OK" noch in einem der anderen Zustände.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 <dt>
 
@@ -264,7 +264,7 @@ Der Name des virtuellen Computers.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                             |
 | Namespace<br/>                | Root \\ CIMV2 \\ TerminalServices<br/>                                                   |
-| MOF<br/>                      | <dl> <dt>"Zvmhost. mof"</dt> </dl>    |
+| MOF<br/>                      | <dl> <dt>TSVmHost.mof</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>TSVmHostWmi.dll</dt> </dl> |
 
 

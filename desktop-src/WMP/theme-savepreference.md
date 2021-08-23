@@ -1,9 +1,9 @@
 ---
-title: Design. savepreference
-description: Die savepreference-Methode speichert eine bevorzugte Einstellung in der Registrierung.
+title: THEME.savePreference
+description: Die savePreference-Methode speichert eine Einstellung in der Registrierung.
 ms.assetid: 4c253d8d-15c0-4c18-bb3f-fdbcef79c999
 keywords:
-- Design. savepreference-Fenster Media Player
+- THEME.savePreference-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 89633d71dd75f4ef5e804aefddc85cf00ad5c03b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d5f9edca154ff6402028ba873c1643e330ab316a54a63f14fa4f9b5bdb244483
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134543"
 ---
-# <a name="themesavepreference"></a>Design. savepreference
+# <a name="themesavepreference"></a>THEME.savePreference
 
-Die **savepreference** -Methode speichert eine bevorzugte Einstellung in der Registrierung.
+Die **savePreference-Methode** speichert eine Einstellung in der Registrierung.
 
 ``` syntax
         theme.savePreference(theKey, theValue)
@@ -32,17 +32,17 @@ Die **savepreference** -Methode speichert eine bevorzugte Einstellung in der Reg
 
 <dl> <dt>
 
-<span id="theKey"></span><span id="thekey"></span><span id="THEKEY"></span>*der Schlüssel*
+<span id="theKey"></span><span id="thekey"></span><span id="THEKEY"></span>*theKey*
 </dt> <dd>
 
-Eine **Zeichenfolge** , die den Schlüssel des zu speichernden Einstellungs Werts angibt.
+Eine **Zeichenfolge,** die den Schlüssel des zu speichernden Einstellungswerts angibt.
 
 </dd> <dt>
 
-<span id="theValue"></span><span id="thevalue"></span><span id="THEVALUE"></span>*Parallelitätstyp*
+<span id="theValue"></span><span id="thevalue"></span><span id="THEVALUE"></span>*theValue*
 </dt> <dd>
 
-Eine **Zeichenfolge** , die den zu speichernden Wert angibt.
+Eine **Zeichenfolge,** die den zu speichernden Wert angibt.
 
 </dd> </dl>
 
@@ -50,11 +50,11 @@ Eine **Zeichenfolge** , die den zu speichernden Wert angibt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Bevorzugung ist ein Schlüssel-Wert-Paar, das in der Registrierung gespeichert werden kann, um Informationen über den Status der Windows-Media Player zwischen den Ausführungen zu erhalten. Diese Funktion kann z. b. verwendet werden, um Anpassungs Einstellungen zu speichern, sodass Sie nicht jedes Mal neu eingegeben werden müssen, wenn Windows Media Player gestartet wird.
+Eine Einstellung ist ein Schlüssel-Wert-Paar, das in der Registrierung gespeichert werden kann, um Informationen über den Zustand der Windows Media Player zwischen den Windows Media Player beibehalten. Dieses Feature kann beispielsweise verwendet werden, um Anpassungseinstellungen zu speichern, damit sie nicht jedes Mal erneut eingegeben werden müssen, wenn Windows Media Player wird.
 
-Die Einstellungen werden nicht verschlüsselt und sind daher keine sichere Methode zum Speichern von Daten. Verwenden Sie keine Einstellungen, um private Daten zu speichern.
+Einstellungen werden nicht verschlüsselt und sind daher keine sichere Methode zum Speichern von Daten. Verwenden Sie keine Einstellungen zum Speichern privater Daten.
 
 ## <a name="examples"></a>Beispiele
 
@@ -77,18 +77,18 @@ Die Einstellungen werden nicht verschlüsselt und sind daher keine sichere Metho
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Design-Element**](theme-element.md)
+[**THEME-Element**](theme-element.md)
 </dt> <dt>
 
-[**Design. loadpreference**](theme-loadpreference.md)
+[**THEME.loadPreference**](theme-loadpreference.md)
 </dt> </dl>
 
  

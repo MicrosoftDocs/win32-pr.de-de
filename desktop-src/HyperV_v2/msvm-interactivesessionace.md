@@ -1,5 +1,5 @@
 ---
-description: Stellt einen Zugriffs Steuerungs Eintrag (ACE) dar, der den Zugriff auf die interaktive Sitzung eines virtuellen Computers bestimmt.
+description: Stellt einen Zugriffssteuerungseintrag (ACE) dar, der den Zugriff auf die interaktive Sitzung eines virtuellen Computers bestimmt.
 ms.assetid: dfec83d6-8033-47b5-aa6f-fc7447a29f43
 title: Msvm_InteractiveSessionACE-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6c4b63e769b04092323cd2da7362ef6b156886b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ed7dd4c4a3742f43a3de8e919ae2200e76cacc03ba1f7da066f48bac018f0a17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148383"
 ---
-# <a name="msvm_interactivesessionace-class"></a>MSVM \_ interactivesessionace-Klasse
+# <a name="msvm_interactivesessionace-class"></a>Msvm \_ InteractiveSessionACE-Klasse
 
-Stellt einen *Zugriffs Steuerungs Eintrag* (ACE) dar, der den Zugriff auf die interaktive Sitzung eines virtuellen Computers bestimmt.
+Stellt einen *Zugriffssteuerungseintrag (ACE)* dar, der den Zugriff auf die interaktive Sitzung eines virtuellen Computers bestimmt.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,26 +41,26 @@ class Msvm_InteractiveSessionACE
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ interactivesessionace** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ InteractiveSessionACE-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ interactivesessionace** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ InteractiveSessionACE-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Access Type**
+**AccessType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der ACE dem Vertrauens nehmer den Zugriff gewährt oder verweigert.
+Gibt an, ob der ACE dem Vertrauensnehmer Zugriff gewährt oder verweigert.
 
 <dt>
 
@@ -80,16 +80,16 @@ Gibt an, ob der ACE dem Vertrauens nehmer den Zugriff gewährt oder verweigert.
 
 </dd> <dt>
 
-**Stiftungs**
+**Treuhänder**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Identifiziert den Sicherheits Prinzipal, dem der ACE den Zugriff gewährt oder verweigert. Gültige Formate für diese Eigenschaft sind das Windows Sam-kompatible Benutzernamen Format und das Windows-SID-Zeichen folgen Format.
+Identifiziert den Sicherheitsprinzipal, auf den der ACE Zugriff gewährt oder verweigert. Gültige Formate für diese Eigenschaft sind das Windows SAM-kompatiblen Benutzernamenformat und das Windows SID-Zeichenfolgenformat.
 
 </dd> </dl>
 
@@ -99,19 +99,19 @@ Identifiziert den Sicherheits Prinzipal, dem der ACE den Zugriff gewährt oder v
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Getinteractivesessionacl**](getinteractivesessionacl-msvm-terminalservice.md)
+[**GetInteractiveSessionACL**](getinteractivesessionacl-msvm-terminalservice.md)
 </dt> </dl>
 
  

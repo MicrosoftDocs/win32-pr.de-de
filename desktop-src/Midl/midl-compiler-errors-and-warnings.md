@@ -1,34 +1,34 @@
 ---
-title: Compilerfehler und-Warnungen
-description: Bei Verwendung des compl-Compilers können Fehler und Warnungen durch eine nicht ordnungsgemäße Verwendung der Befehls Zeilenschalter oder durch den Inhalt der IDL-und ACF-Dateien verursacht werden.
+title: MIDL-Compilerfehler und -Warnungen
+description: Bei Verwendung des MIDL-Compilers können Fehler und Warnungen durch eine falsche Verwendung der Befehlszeilenschalter oder durch den Inhalt der IDL- und ACF-Dateien verursacht werden.
 ms.assetid: 5c8d5a28-e559-4893-932f-b2306aefa932
 keywords:
-- Microsoft Interface Definition Language-Mittell, Referenz
-- Mittel l compilermittell, Fehler
-- compilermittell, Fehler
-- Fehler-Mittell
+- Microsoft Interface Definition Language MIDL , Referenz
+- MIDL-Compiler MIDL , Fehler
+- Compiler MIDL , Fehler
+- Fehler MIDL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ae531528f83f3731b4449c7aba012f3228edd9a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c9f6c2dfd830a1240e2af107eb4a3f1799eafcd0de35ccec7f3756b3e9de5bbf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146403"
 ---
-# <a name="midl-compiler-errors-and-warnings"></a>Compilerfehler und-Warnungen
+# <a name="midl-compiler-errors-and-warnings"></a>MIDL-Compilerfehler und -Warnungen
 
-Bei Verwendung des compl-Compilers können Fehler und Warnungen durch eine nicht ordnungsgemäße Verwendung der Befehls Zeilenschalter oder durch den Inhalt der IDL-und ACF-Dateien verursacht werden. Wenn der Fehler darauf zurückzuführen ist, dass die Befehls Zeilenschalter nicht ordnungsgemäß eingegeben werden, kann in einer Fehler-oder Warnmeldung der Name eines oder mehrerer Mittell-compilermodusschalter angegeben werden. Beispielsweise können Sie bestimmte ACF-Attribute in eine IDL-Datei einschließen, wenn Sie den Schalter/**App \_ config** verwenden. diese IDL-Datei generiert jedoch einen Fehler, wenn Sie ohne den Schalter/**App- \_ Konfiguration** verwenden.
+Bei Verwendung des MIDL-Compilers können Fehler und Warnungen durch eine falsche Verwendung der Befehlszeilenschalter oder durch den Inhalt der IDL- und ACF-Dateien verursacht werden. Wenn der Fehler auf eine nicht ordnungsgemäße Eingabe der Befehlszeilenschalter verursacht wird, kann in einer Fehler- oder Warnmeldung der Name mindestens eines MIDL-Compilermodusschalters angegeben werden. Sie können z. B. bestimmte ACF-Attribute in eine IDL-Datei einfgen, wenn Sie den Schalter **/app \_ config** verwenden. Diese IDL-Datei generiert jedoch einen Fehler, wenn Sie kompilieren, ohne den Konfigurationsschalter **/app \_ zu** verwenden.
 
-Fehler in den IDL-und ACF-Dateien werden in zwei Kategorien unterteilt: Fehler, die vom Präprozessor abgefangen wurden, und Fehler, die vom Compiler erkannt werden. In diesem Abschnitt werden die-präprozessorfehlermeldungen und-Compilerfehlermeldungen aufgeführt. Außerdem werden ihre Formate und Gründe beschrieben.
+Fehler in den IDL- und ACF-Dateien lassen sich in zwei Kategorien unterteilen: Fehler, die vom Präprozessor erfasst werden, und Fehler, die vom Compiler erkannt werden. In diesem Abschnitt werden die MIDL-Präprozessor- und Compilerfehlermeldungen aufgeführt. Außerdem werden die Formate und Ursachen beschrieben.
 
--   [Formate für Fehler-und Warnmeldungen](error-and-warning-message-formats.md)
+-   [Fehler- und Warnmeldungsformate](error-and-warning-message-formats.md)
 -   [Präprozessorfehler](preprocessor-errors.md)
 -   [Compilerfehler](compiler-errors.md)
 
- 
+ 
 
- 
+ 
 
 
 

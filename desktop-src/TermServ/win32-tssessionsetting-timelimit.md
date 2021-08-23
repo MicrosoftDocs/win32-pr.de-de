@@ -1,12 +1,12 @@
 ---
-title: Timelimit-Methode der Win32_TSSessionSetting-Klasse
-description: Legt die maximale Zeit fest, die dem angegebenen Sitzungs Beschränkungstyp zugeordnet ist.
+title: TimeLimit-Methode der Win32_TSSessionSetting-Klasse
+description: Legt die maximale Zeit fest, die dem angegebenen Sitzungslimittyp zugeordnet ist.
 ms.assetid: 55194197-ffb6-49ae-827a-478ced867ab0
 ms.tgt_platform: multiple
 keywords:
-- Timelimit-Methode Remotedesktopdienste
-- Timelimit-Methode Remotedesktopdienste, Win32_TSSessionSetting-Klasse
-- Win32_TSSessionSetting-Klasse Remotedesktopdienste, timelimit-Methode
+- TimeLimit-Remotedesktopdienste
+- TimeLimit-Methode Remotedesktopdienste , Win32_TSSessionSetting-Klasse
+- Win32_TSSessionSetting klasse Remotedesktopdienste , TimeLimit-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4016c28de50d31338d9bc6ec50ef1497c7a561da
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7f49451b1f6b7b2e63079d0bebbcd0dbb43b76352ae3609ce4138b771a01e03e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517396"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137553"
 ---
-# <a name="timelimit-method-of-the-win32_tssessionsetting-class"></a>Timelimit-Methode der Win32- \_ Klasse "tssessionsetting"
+# <a name="timelimit-method-of-the-win32_tssessionsetting-class"></a>TimeLimit-Methode der Win32 \_ TSSessionSetting-Klasse
 
-Legt die maximale Zeit fest, die dem angegebenen Sitzungs Beschränkungstyp zugeordnet ist.
+Legt die maximale Zeit fest, die dem angegebenen Sitzungslimittyp zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,10 +44,10 @@ uint32 TimeLimit(
 
 <dl> <dt>
 
-*SessionLimitType* \[ in\]
+*SessionLimitType* \[ In\]
 </dt> <dd>
 
-Gibt den Typ der Sitzungs Limit-Eigenschaft an, die von der-Methode festgelegt wird.
+Gibt den Typ der Sitzungslimiteigenschaft an, die von der -Methode festgelegt wird.
 
 <dt>
 
@@ -58,7 +58,7 @@ Gibt den Typ der Sitzungs Limit-Eigenschaft an, die von der-Methode festgelegt w
 
 </dt> <dd>
 
-Die-Methode legt die **ActiveSessionLimit** -Eigenschaft fest.
+Die -Methode setzt die **ActiveSessionLimit-Eigenschaft.**
 
 </dd> <dt>
 
@@ -69,7 +69,7 @@ Die-Methode legt die **ActiveSessionLimit** -Eigenschaft fest.
 
 </dt> <dd>
 
-Die-Methode legt die **DisconnectedSessionLimit** -Eigenschaft fest.
+Die -Methode setzt die **DisconnectedSessionLimit-Eigenschaft.**
 
 </dd> <dt>
 
@@ -80,24 +80,24 @@ Die-Methode legt die **DisconnectedSessionLimit** -Eigenschaft fest.
 
 </dt> <dd>
 
-Die-Methode legt die **IdleSessionLimit** -Eigenschaft fest.
+Die -Methode setzt die **IdleSessionLimit-Eigenschaft.**
 
 </dd> </dl> </dd> <dt>
 
-*ValueLimit* \[ in\]
+*ValueLimit* \[ In\]
 </dt> <dd>
 
-Die neue maximale Zeit (in Millisekunden) für die Eigenschaft, die vom *SessionLimitType* -Parameter angegeben wird. Der Wert 0 (null) gibt an, dass keine Sitzungs Beschränkung vorhanden ist.
+Die neue maximale Zeit in Millisekunden für die durch den *SessionLimitType-Parameter angegebene* Eigenschaft. Der Wert 0 (null) gibt an, dass kein Sitzungslimit besteht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg Erfolg zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) . Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtlinien Steuerung liegt.
+Gibt Success bei Erfolg zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter. Die -Methode gibt einen Fehler zurück, wenn sich die Einstellung unter der Gruppenrichtliniensteuerung befindet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,17 +107,17 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ tssessionsetting**](win32-tssessionsetting.md)
+[**Win32 \_ TSSessionSetting**](win32-tssessionsetting.md)
 </dt> </dl>
 
  

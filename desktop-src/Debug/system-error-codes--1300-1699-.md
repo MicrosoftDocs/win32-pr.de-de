@@ -1,26 +1,26 @@
 ---
-description: Beschreibt die in der Header Datei "Winerror. h" definierten Fehlercodes 1300-1699 und ist für Entwickler bestimmt.
+description: Beschreibt die Fehlercodes 1300-1699, die in der WinError.h-Headerdatei definiert sind und für Entwickler vorgesehen sind.
 ms.assetid: 7b04a2ba-7bf9-4bff-93c8-cbb0060e069d
-title: System Fehler Codes (1300-1699) (Winerror. h)
+title: Systemfehlercodes (1300-1699) (WinError.h)
 ms.topic: reference
 ms.date: 07/18/2019
-ms.openlocfilehash: 8fa0cbc312c8d82879322f0bc0c79533ddb961ce
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7aeb1c3642331db8ed3215d55a6d77e1e7b2a98c3859a5eb64a1d5b60350d24a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119310920"
 ---
-# <a name="system-error-codes-1300-1699"></a>System Fehler Codes (1300-1699)
+# <a name="system-error-codes-1300-1699"></a>Systemfehlercodes (1300-1699)
 
 > [!NOTE]
-> Diese Informationen sind für Entwickler gedacht, die Systemfehler Debuggen. Bei anderen Fehlern, wie z. b. Problemen mit Windows Update, finden Sie eine Liste der Ressourcen auf der Seite [Fehlercodes](system-error-codes.md) .
+> Diese Informationen sind für Entwickler gedacht, die Systemfehler debuggen. Für andere Fehler, z. B. Probleme mit Windows Update, finden Sie eine Liste der Ressourcen auf der [Seite Fehlercodes.](system-error-codes.md)
 
-In der folgenden Liste werden die [Systemfehler Codes](system-error-codes.md) für die Fehler 1300 bis 1699 beschrieben. Sie werden von der [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) -Funktion zurückgegeben, wenn viele Funktionen fehlschlagen. Um den Beschreibungstext für den Fehler in Ihrer Anwendung abzurufen, verwenden Sie die [**FormatMessage**](/windows/desktop/api/WinBase/nf-winbase-formatmessage) -Funktion mit dem Flag " **Format \_ Message \_ from \_ System** ".
+In der folgenden Liste werden [die Systemfehlercodes für](system-error-codes.md) die Fehler 1300 bis 1699 beschrieben. Sie werden von der [**GetLastError-Funktion zurückgegeben,**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) wenn viele Funktionen fehlschlagen. Verwenden Sie zum Abrufen des Beschreibungstexts für den Fehler in Ihrer Anwendung die [**Funktion FormatMessage**](/windows/desktop/api/WinBase/nf-winbase-formatmessage) mit dem **Flag FORMAT MESSAGE FROM \_ \_ \_ SYSTEM.**
 
 <dl> <dt>
 
-<span id="ERROR_NOT_ALL_ASSIGNED"></span><span id="error_not_all_assigned"></span>**Fehler \_ nicht \_ alle \_ zugewiesen**
+<span id="ERROR_NOT_ALL_ASSIGNED"></span><span id="error_not_all_assigned"></span>**FEHLER \_ NICHT \_ ALLE \_ ZUGEWIESEN**
 </dt> <dd> <dl> <dt>
 
 1300 (0x514)
@@ -33,7 +33,7 @@ Nicht alle Berechtigungen oder Gruppen, auf die verwiesen wird, werden dem Aufru
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SOME_NOT_MAPPED"></span><span id="error_some_not_mapped"></span>**Fehler \_ " \_ nicht \_ zugeordnet"**
+<span id="ERROR_SOME_NOT_MAPPED"></span><span id="error_some_not_mapped"></span>**FEHLER \_ EINIGE \_ NICHT \_ ZUGEORDNET**
 </dt> <dd> <dl> <dt>
 
 1301 (0x515)
@@ -41,12 +41,12 @@ Nicht alle Berechtigungen oder Gruppen, auf die verwiesen wird, werden dem Aufru
 
 
 
-Es wurde keine Zuordnung zwischen Kontonamen und Sicherheits-IDs vorgenommen.
+Einige Zuordnungen zwischen Kontonamen und Sicherheits-IDs wurden nicht durchgeführt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_QUOTAS_FOR_ACCOUNT"></span><span id="error_no_quotas_for_account"></span>**Fehler " \_ keine \_ Kontingente \_ für \_ Konto"**
+<span id="ERROR_NO_QUOTAS_FOR_ACCOUNT"></span><span id="error_no_quotas_for_account"></span>**FEHLER: \_ \_ KEINE \_ KONTINGENTE FÜR \_ KONTO**
 </dt> <dd> <dl> <dt>
 
 1302 (0x516)
@@ -54,12 +54,12 @@ Es wurde keine Zuordnung zwischen Kontonamen und Sicherheits-IDs vorgenommen.
 
 
 
-Für dieses Konto sind keine System Kontingent Limits festgelegt.
+Für dieses Konto sind keine Systemkontingentgrenzen festgelegt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LOCAL_USER_SESSION_KEY"></span><span id="error_local_user_session_key"></span>**Fehler beim \_ lokalen \_ Benutzer \_ Sitzungs \_ Schlüssel.**
+<span id="ERROR_LOCAL_USER_SESSION_KEY"></span><span id="error_local_user_session_key"></span>**FEHLER: \_ LOKALER \_ \_ \_ BENUTZERSITZUNGSSCHLÜSSEL**
 </dt> <dd> <dl> <dt>
 
 1303 (0x517)
@@ -67,12 +67,12 @@ Für dieses Konto sind keine System Kontingent Limits festgelegt.
 
 
 
-Es ist kein Verschlüsselungsschlüssel verfügbar. Es wurde ein bekannter Verschlüsselungsschlüssel zurückgegeben.
+Es ist kein Verschlüsselungsschlüssel verfügbar. Ein bekannter Verschlüsselungsschlüssel wurde zurückgegeben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NULL_LM_PASSWORD"></span><span id="error_null_lm_password"></span>**Fehler \_ NULL \_ LM- \_ Kennwort**
+<span id="ERROR_NULL_LM_PASSWORD"></span><span id="error_null_lm_password"></span>**FEHLER \_ NULL \_ LM \_ PASSWORD**
 </dt> <dd> <dl> <dt>
 
 1304 (0x518)
@@ -80,12 +80,12 @@ Es ist kein Verschlüsselungsschlüssel verfügbar. Es wurde ein bekannter Versc
 
 
 
-Das Kennwort ist zu komplex, um in ein LAN-Manager-Kennwort konvertiert zu werden. Das zurückgegebene LAN Manager-Kennwort ist eine **null** -Zeichenfolge.
+Das Kennwort ist zu komplex, um in ein LAN-Manager-Kennwort konvertiert zu werden. Das zurückgegebene LAN-Manager-Kennwort ist eine **NULL-Zeichenfolge.**
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_UNKNOWN_REVISION"></span><span id="error_unknown_revision"></span>**Unbekannter Fehler. \_ \_**
+<span id="ERROR_UNKNOWN_REVISION"></span><span id="error_unknown_revision"></span>**FEHLER \_ UNBEKANNTE \_ REVISION**
 </dt> <dd> <dl> <dt>
 
 1305 (0x519)
@@ -93,12 +93,12 @@ Das Kennwort ist zu komplex, um in ein LAN-Manager-Kennwort konvertiert zu werde
 
 
 
-Die Revisions Ebene ist unbekannt.
+Die Revisionsebene ist unbekannt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_REVISION_MISMATCH"></span><span id="error_revision_mismatch"></span>**Fehler \_ Revision nicht übereinstimmende \_**
+<span id="ERROR_REVISION_MISMATCH"></span><span id="error_revision_mismatch"></span>**\_FEHLERREVISIONSKONFLIKT \_**
 </dt> <dd> <dl> <dt>
 
 1306 (0x51A)
@@ -106,12 +106,12 @@ Die Revisions Ebene ist unbekannt.
 
 
 
-Gibt an, dass zwei Revisions Ebenen nicht kompatibel sind.
+Gibt an, dass zwei Revisionsebenen nicht kompatibel sind.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_OWNER"></span><span id="error_invalid_owner"></span>**Fehler \_ ungültiger \_ Besitzer**
+<span id="ERROR_INVALID_OWNER"></span><span id="error_invalid_owner"></span>**FEHLER: \_ UNGÜLTIGER \_ BESITZER**
 </dt> <dd> <dl> <dt>
 
 1307 (0x51B)
@@ -119,12 +119,12 @@ Gibt an, dass zwei Revisions Ebenen nicht kompatibel sind.
 
 
 
-Diese Sicherheits-ID kann nicht als Besitzer dieses Objekts zugewiesen werden.
+Diese Sicherheits-ID wird möglicherweise nicht als Besitzer dieses Objekts zugewiesen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_PRIMARY_GROUP"></span><span id="error_invalid_primary_group"></span>**Fehler \_ ungültige \_ primäre \_ Gruppe**
+<span id="ERROR_INVALID_PRIMARY_GROUP"></span><span id="error_invalid_primary_group"></span>**FEHLER: \_ \_ UNGÜLTIGE PRIMÄRE \_ GRUPPE**
 </dt> <dd> <dl> <dt>
 
 1308 (0x51C)
@@ -132,12 +132,12 @@ Diese Sicherheits-ID kann nicht als Besitzer dieses Objekts zugewiesen werden.
 
 
 
-Diese Sicherheits-ID darf nicht als primäre Gruppe eines Objekts zugewiesen werden.
+Diese Sicherheits-ID wird möglicherweise nicht als primäre Gruppe eines Objekts zugewiesen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_IMPERSONATION_TOKEN"></span><span id="error_no_impersonation_token"></span>**Fehler \_ ohne Identitätswechsel \_ \_ Token**
+<span id="ERROR_NO_IMPERSONATION_TOKEN"></span><span id="error_no_impersonation_token"></span>**FEHLER: \_ \_ KEIN IDENTITÄTSWECHSELTOKEN \_**
 </dt> <dd> <dl> <dt>
 
 1309 (0x51D)
@@ -145,12 +145,12 @@ Diese Sicherheits-ID darf nicht als primäre Gruppe eines Objekts zugewiesen wer
 
 
 
-Es wurde versucht, einen Identitätswechsel Token von einem Thread auszuführen, der derzeit nicht die Identität eines Clients annimmt.
+Es wurde versucht, ein Identitätswechseltoken von einem Thread zu verwenden, der derzeit nicht die Identität eines Clients antänd.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CANT_DISABLE_MANDATORY"></span><span id="error_cant_disable_mandatory"></span>**Fehler \_ beim \_ Deaktivieren \_ obligatorisch.**
+<span id="ERROR_CANT_DISABLE_MANDATORY"></span><span id="error_cant_disable_mandatory"></span>**ERROR \_ CANT \_ DISABLE \_ MANDATORY**
 </dt> <dd> <dl> <dt>
 
 1310 (0x51E)
@@ -163,7 +163,7 @@ Die Gruppe ist möglicherweise nicht deaktiviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_LOGON_SERVERS"></span><span id="error_no_logon_servers"></span>**Fehler \_ keine \_ Anmelde \_ Server**
+<span id="ERROR_NO_LOGON_SERVERS"></span><span id="error_no_logon_servers"></span>**FEHLER: \_ \_ KEINE \_ ANMELDESERVER**
 </dt> <dd> <dl> <dt>
 
 1311 (0x51F)
@@ -171,12 +171,12 @@ Die Gruppe ist möglicherweise nicht deaktiviert.
 
 
 
-Zurzeit stehen keine Anmelde Server zur Verfügung, um die Anmelde Anforderung zu bedienen.
+Derzeit sind keine Anmeldeserver verfügbar, um die Anmeldeanforderung zu verwalten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SUCH_LOGON_SESSION"></span><span id="error_no_such_logon_session"></span>**Fehler \_ keine \_ solche \_ Anmelde \_ Sitzung.**
+<span id="ERROR_NO_SUCH_LOGON_SESSION"></span><span id="error_no_such_logon_session"></span>**FEHLER: \_ \_ KEINE SOLCHE \_ \_ ANMELDESITZUNG**
 </dt> <dd> <dl> <dt>
 
 1312 (0x520)
@@ -184,12 +184,12 @@ Zurzeit stehen keine Anmelde Server zur Verfügung, um die Anmelde Anforderung z
 
 
 
-Eine angegebene Anmeldesitzung ist nicht vorhanden. Möglicherweise wurde Sie bereits beendet.
+Eine angegebene Anmeldesitzung ist nicht vorhanden. Es wurde möglicherweise bereits beendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SUCH_PRIVILEGE"></span><span id="error_no_such_privilege"></span>**Fehler \_ keine \_ solche \_ Berechtigung**
+<span id="ERROR_NO_SUCH_PRIVILEGE"></span><span id="error_no_such_privilege"></span>**FEHLER: \_ KEINE \_ SOLCHE \_ BERECHTIGUNG**
 </dt> <dd> <dl> <dt>
 
 1313 (0x521)
@@ -197,12 +197,12 @@ Eine angegebene Anmeldesitzung ist nicht vorhanden. Möglicherweise wurde Sie be
 
 
 
-Es ist kein bestimmtes Privileg vorhanden.
+Eine angegebene Berechtigung ist nicht vorhanden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRIVILEGE_NOT_HELD"></span><span id="error_privilege_not_held"></span>**Fehler \_ Berechtigungen \_ nicht \_ gespeichert**
+<span id="ERROR_PRIVILEGE_NOT_HELD"></span><span id="error_privilege_not_held"></span>**FEHLERBERECHTIGUNG \_ \_ NICHT \_ GEHALTEN**
 </dt> <dd> <dl> <dt>
 
 1314 (0x522)
@@ -215,7 +215,7 @@ Dem Client fehlt ein erforderliches Privileg.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_ACCOUNT_NAME"></span><span id="error_invalid_account_name"></span>**\_ungültiger \_ \_ Kontoname.**
+<span id="ERROR_INVALID_ACCOUNT_NAME"></span><span id="error_invalid_account_name"></span>**FEHLER: \_ \_ UNGÜLTIGER \_ KONTONAME**
 </dt> <dd> <dl> <dt>
 
 1315 (0x523)
@@ -223,12 +223,12 @@ Dem Client fehlt ein erforderliches Privileg.
 
 
 
-Der angegebene Name ist kein ordnungsgemäß formatierter Kontoname.
+Der bereitgestellte Name ist kein ordnungsgemäßer Kontoname.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_USER_EXISTS"></span><span id="error_user_exists"></span>**Fehler \_ Benutzer ist \_ vorhanden.**
+<span id="ERROR_USER_EXISTS"></span><span id="error_user_exists"></span>**FEHLER: \_ DER BENUTZER \_ IST VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 1316 (0x524)
@@ -241,7 +241,7 @@ Das angegebene Konto ist bereits vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SUCH_USER"></span><span id="error_no_such_user"></span>**Fehler " \_ kein \_ solcher \_ Benutzer"**
+<span id="ERROR_NO_SUCH_USER"></span><span id="error_no_such_user"></span>**FEHLER: \_ \_ KEIN SOLCHER \_ BENUTZER**
 </dt> <dd> <dl> <dt>
 
 1317 (0x525)
@@ -254,7 +254,7 @@ Das angegebene Konto ist nicht vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_GROUP_EXISTS"></span><span id="error_group_exists"></span>**Fehler \_ Gruppe \_ vorhanden**
+<span id="ERROR_GROUP_EXISTS"></span><span id="error_group_exists"></span>**FEHLERGRUPPE \_ \_ VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 1318 (0x526)
@@ -267,7 +267,7 @@ Die angegebene Gruppe ist bereits vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SUCH_GROUP"></span><span id="error_no_such_group"></span>**Fehler " \_ keine \_ solche \_ Gruppe"**
+<span id="ERROR_NO_SUCH_GROUP"></span><span id="error_no_such_group"></span>**FEHLER \_ KEINE \_ SOLCHE \_ GRUPPE**
 </dt> <dd> <dl> <dt>
 
 1319 (0x527)
@@ -280,7 +280,7 @@ Die angegebene Gruppe ist nicht vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_MEMBER_IN_GROUP"></span><span id="error_member_in_group"></span>**Fehler \_ Mitglied \_ in \_ Gruppe**
+<span id="ERROR_MEMBER_IN_GROUP"></span><span id="error_member_in_group"></span>**ERROR \_ MEMBER \_ IN \_ GROUP**
 </dt> <dd> <dl> <dt>
 
 1320 (0x528)
@@ -288,12 +288,12 @@ Die angegebene Gruppe ist nicht vorhanden.
 
 
 
-Das angegebene Benutzerkonto ist bereits ein Mitglied der angegebenen Gruppe, oder die angegebene Gruppe kann nicht gelöscht werden, weil Sie ein Mitglied enthält.
+Entweder ist das angegebene Benutzerkonto bereits Mitglied der angegebenen Gruppe, oder die angegebene Gruppe kann nicht gelöscht werden, da sie ein Mitglied enthält.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_MEMBER_NOT_IN_GROUP"></span><span id="error_member_not_in_group"></span>**Fehler \_ Mitglied \_ nicht \_ in \_ Gruppe**
+<span id="ERROR_MEMBER_NOT_IN_GROUP"></span><span id="error_member_not_in_group"></span>**FEHLERMITGLIED \_ \_ NICHT IN \_ \_ GRUPPE**
 </dt> <dd> <dl> <dt>
 
 1321 (0x529)
@@ -301,12 +301,12 @@ Das angegebene Benutzerkonto ist bereits ein Mitglied der angegebenen Gruppe, od
 
 
 
-Das angegebene Benutzerkonto ist kein Mitglied des angegebenen Gruppen Kontos.
+Das angegebene Benutzerkonto ist kein Mitglied des angegebenen Gruppenkontos.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LAST_ADMIN"></span><span id="error_last_admin"></span>**\_Letzter \_ Administrator des Fehlers**
+<span id="ERROR_LAST_ADMIN"></span><span id="error_last_admin"></span>**FEHLER \_ LETZTER \_ ADMINISTRATOR**
 </dt> <dd> <dl> <dt>
 
 1322 (0x52A)
@@ -314,12 +314,12 @@ Das angegebene Benutzerkonto ist kein Mitglied des angegebenen Gruppen Kontos.
 
 
 
-Dieser Vorgang ist unzulässig, da dies dazu führen könnte, dass ein Verwaltungskonto deaktiviert, gelöscht oder nicht mehr angemeldet werden kann.
+Dieser Vorgang ist nicht möglich, da er dazu führen kann, dass ein Verwaltungskonto deaktiviert oder gelöscht wird oder sich nicht anmelden kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_WRONG_PASSWORD"></span><span id="error_wrong_password"></span>**\_falsches \_ Kennwort für Fehler**
+<span id="ERROR_WRONG_PASSWORD"></span><span id="error_wrong_password"></span>**FEHLER: \_ \_ FALSCHES KENNWORT**
 </dt> <dd> <dl> <dt>
 
 1323 (0x52B)
@@ -327,12 +327,12 @@ Dieser Vorgang ist unzulässig, da dies dazu führen könnte, dass ein Verwaltun
 
 
 
-Das Kennwort kann nicht aktualisiert werden. Der als Aktuelles Kennwort angegebene Wert ist falsch.
+Das Kennwort kann nicht aktualisiert werden. Der als aktuelles Kennwort bereitgestellte Wert ist falsch.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_ILL_FORMED_PASSWORD"></span><span id="error_ill_formed_password"></span>**Fehler \_ Haft \_ geformtes \_ Kennwort**
+<span id="ERROR_ILL_FORMED_PASSWORD"></span><span id="error_ill_formed_password"></span>**FEHLER: \_ NICHT \_ GEBILDETES \_ KENNWORT**
 </dt> <dd> <dl> <dt>
 
 1324 (0x52C)
@@ -340,25 +340,25 @@ Das Kennwort kann nicht aktualisiert werden. Der als Aktuelles Kennwort angegebe
 
 
 
-Das Kennwort kann nicht aktualisiert werden. Der für das neue Kennwort angegebene Wert enthält Werte, die in Kenn Wörtern nicht zulässig sind.
+Das Kennwort kann nicht aktualisiert werden. Der für das neue Kennwort bereitgestellte Wert enthält Werte, die in Kennwörtern nicht zulässig sind.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PASSWORD_RESTRICTION"></span><span id="error_password_restriction"></span>**Einschränkung des Fehler \_ Kennworts \_**
+<span id="ERROR_PASSWORD_RESTRICTION"></span><span id="error_password_restriction"></span>**FEHLER: \_ \_ KENNWORTEINSCHRÄNKUNG**
 </dt> <dd> <dl> <dt>
 
-1325 (0x52d)
+1325 (0x52D)
 </dt> <dt>
 
 
 
-Das Kennwort kann nicht aktualisiert werden. Der für das neue Kennwort angegebene Wert entspricht nicht den Anforderungen für die Länge, Komplexität oder den Verlauf der Domäne.
+Das Kennwort kann nicht aktualisiert werden. Der für das neue Kennwort bereitgestellte Wert erfüllt nicht die Längen-, Komplexitäts- oder Verlaufsanforderungen der Domäne.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LOGON_FAILURE"></span><span id="error_logon_failure"></span>**Fehler beim \_ anmelden. \_**
+<span id="ERROR_LOGON_FAILURE"></span><span id="error_logon_failure"></span>**FEHLER \_ BEI DER \_ ANMELDUNG**
 </dt> <dd> <dl> <dt>
 
 1326 (0x52E)
@@ -371,7 +371,7 @@ Der Benutzername oder das Kennwort ist falsch.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_ACCOUNT_RESTRICTION"></span><span id="error_account_restriction"></span>**Einschränkung des Fehler \_ Kontos \_**
+<span id="ERROR_ACCOUNT_RESTRICTION"></span><span id="error_account_restriction"></span>**\_ \_ FEHLERKONTOEINSCHRÄNKUNG**
 </dt> <dd> <dl> <dt>
 
 1327 (0x52F)
@@ -379,12 +379,12 @@ Der Benutzername oder das Kennwort ist falsch.
 
 
 
-Konto Einschränkungen verhindern, dass dieser Benutzer sich anmeldet. Beispiel: leere Kenn Wörter sind nicht zulässig, Anmeldezeiten sind beschränkt, oder es wurde eine Richtlinien Einschränkung erzwungen.
+Kontoeinschränkungen verhindern, dass sich dieser Benutzer anmelden kann. Beispiel: Leere Kennwörter sind nicht zulässig, die Anmeldezeiten sind begrenzt, oder es wurde eine Richtlinieneinschränkung erzwungen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_LOGON_HOURS"></span><span id="error_invalid_logon_hours"></span>**Fehler \_ ungültige \_ Anmelde \_ Zeiten.**
+<span id="ERROR_INVALID_LOGON_HOURS"></span><span id="error_invalid_logon_hours"></span>**FEHLER \_ \_ UNGÜLTIGE \_ ANMELDESTUNDEN**
 </dt> <dd> <dl> <dt>
 
 1328 (0x530)
@@ -392,12 +392,12 @@ Konto Einschränkungen verhindern, dass dieser Benutzer sich anmeldet. Beispiel:
 
 
 
-Ihr Konto verfügt über Zeitbeschränkungen, mit denen Sie sich momentan nicht anmelden.
+Für Ihr Konto gelten Zeiteinschränkungen, mit denen Sie sich derzeit nicht anmelden können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_WORKSTATION"></span><span id="error_invalid_workstation"></span>**Fehler \_ ungültige \_ Arbeitsstation**
+<span id="ERROR_INVALID_WORKSTATION"></span><span id="error_invalid_workstation"></span>**FEHLER: \_ UNGÜLTIGE \_ ARBEITSSTATION**
 </dt> <dd> <dl> <dt>
 
 1329 (0x531)
@@ -410,7 +410,7 @@ Dieser Benutzer darf sich nicht bei diesem Computer anmelden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PASSWORD_EXPIRED"></span><span id="error_password_expired"></span>**Fehler \_ Kennwort \_ abgelaufen**
+<span id="ERROR_PASSWORD_EXPIRED"></span><span id="error_password_expired"></span>**\_FEHLERKENNWORT \_ ABGELAUFEN**
 </dt> <dd> <dl> <dt>
 
 1330 (0x532)
@@ -423,7 +423,7 @@ Das Kennwort für dieses Konto ist abgelaufen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_ACCOUNT_DISABLED"></span><span id="error_account_disabled"></span>**Fehler \_ Konto \_ deaktiviert**
+<span id="ERROR_ACCOUNT_DISABLED"></span><span id="error_account_disabled"></span>**FEHLERKONTO \_ \_ DEAKTIVIERT**
 </dt> <dd> <dl> <dt>
 
 1331 (0x533)
@@ -431,12 +431,12 @@ Das Kennwort für dieses Konto ist abgelaufen.
 
 
 
-Dieser Benutzer kann sich nicht anmelden, da dieses Konto zurzeit deaktiviert ist.
+Dieser Benutzer kann sich nicht anmelden, da dieses Konto derzeit deaktiviert ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NONE_MAPPED"></span><span id="error_none_mapped"></span>**Fehler " \_ keine \_ zugeordnet"**
+<span id="ERROR_NONE_MAPPED"></span><span id="error_none_mapped"></span>**FEHLER: \_ KEINE \_ ZUORDNUNG**
 </dt> <dd> <dl> <dt>
 
 1332 (0x534)
@@ -444,12 +444,12 @@ Dieser Benutzer kann sich nicht anmelden, da dieses Konto zurzeit deaktiviert is
 
 
 
-Es wurde keine Zuordnung zwischen den Kontonamen und den Sicherheits-IDs vorgenommen.
+Es wurde keine Zuordnung zwischen Kontonamen und Sicherheits-IDs vorgenommen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_TOO_MANY_LUIDS_REQUESTED"></span><span id="error_too_many_luids_requested"></span>**Fehler \_ zu \_ viele \_ LUIDs \_ angefordert.**
+<span id="ERROR_TOO_MANY_LUIDS_REQUESTED"></span><span id="error_too_many_luids_requested"></span>**FEHLER: \_ ZU \_ VIELE \_ LUIDS \_ ANGEFORDERT**
 </dt> <dd> <dl> <dt>
 
 1333 (0x535)
@@ -457,12 +457,12 @@ Es wurde keine Zuordnung zwischen den Kontonamen und den Sicherheits-IDs vorgeno
 
 
 
-Es wurden zu viele lokale Benutzer-IDs (LUIDs) gleichzeitig angefordert.
+Zu viele lokale Benutzerbezeichner (LUIDs) wurden gleichzeitig angefordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LUIDS_EXHAUSTED"></span><span id="error_luids_exhausted"></span>**Fehler- \_ LUIDs \_ aufgebraucht**
+<span id="ERROR_LUIDS_EXHAUSTED"></span><span id="error_luids_exhausted"></span>**\_FEHLER-LUIDS \_ ERSCHÖPFT**
 </dt> <dd> <dl> <dt>
 
 1334 (0x536)
@@ -470,12 +470,12 @@ Es wurden zu viele lokale Benutzer-IDs (LUIDs) gleichzeitig angefordert.
 
 
 
-Es sind keine weiteren lokalen Benutzer-IDs (LUIDs) verfügbar.
+Es sind keine lokalen Benutzerbezeichner (LUIDs) mehr verfügbar.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_SUB_AUTHORITY"></span><span id="error_invalid_sub_authority"></span>**Fehler \_ ungültige \_ untergeordnete \_ Autorität.**
+<span id="ERROR_INVALID_SUB_AUTHORITY"></span><span id="error_invalid_sub_authority"></span>**FEHLER: \_ UNGÜLTIGE \_ UNTERGEORDNETE \_ AUTORITÄT**
 </dt> <dd> <dl> <dt>
 
 1335 (0x537)
@@ -483,12 +483,12 @@ Es sind keine weiteren lokalen Benutzer-IDs (LUIDs) verfügbar.
 
 
 
-Der Teil der untergeordneten Instanz einer Sicherheits-ID ist für diese bestimmte Verwendung ungültig.
+Der Teil der Unterautorität einer Sicherheits-ID ist für diese spezielle Verwendung ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_ACL"></span><span id="error_invalid_acl"></span>**\_ungültige \_ ACL.**
+<span id="ERROR_INVALID_ACL"></span><span id="error_invalid_acl"></span>**FEHLER: \_ UNGÜLTIGE \_ ACL**
 </dt> <dd> <dl> <dt>
 
 1336 (0x538)
@@ -496,12 +496,12 @@ Der Teil der untergeordneten Instanz einer Sicherheits-ID ist für diese bestimm
 
 
 
-Die Struktur der Zugriffs Steuerungs Liste (ACL) ist ungültig.
+Die Struktur der Zugriffssteuerungsliste (Access Control List, ACL) ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_SID"></span><span id="error_invalid_sid"></span>**Fehler \_ ungültige \_ SID.**
+<span id="ERROR_INVALID_SID"></span><span id="error_invalid_sid"></span>**FEHLER: \_ UNGÜLTIGE \_ SID**
 </dt> <dd> <dl> <dt>
 
 1337 (0x539)
@@ -509,12 +509,12 @@ Die Struktur der Zugriffs Steuerungs Liste (ACL) ist ungültig.
 
 
 
-Die Struktur der Sicherheits-ID ist ungültig.
+Die Sicherheits-ID-Struktur ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_SECURITY_DESCR"></span><span id="error_invalid_security_descr"></span>**Fehler \_ ungültige \_ Sicherheits- \_ descr**
+<span id="ERROR_INVALID_SECURITY_DESCR"></span><span id="error_invalid_security_descr"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ SICHERHEITS-DESCR**
 </dt> <dd> <dl> <dt>
 
 1338 (0x53A)
@@ -522,25 +522,25 @@ Die Struktur der Sicherheits-ID ist ungültig.
 
 
 
-Die Sicherheits deskriptorstruktur ist ungültig.
+Die Sicherheitsbeschreibungsstruktur ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_BAD_INHERITANCE_ACL"></span><span id="error_bad_inheritance_acl"></span>**fehlerhafter \_ \_ Vererbungs- \_ ACL**
+<span id="ERROR_BAD_INHERITANCE_ACL"></span><span id="error_bad_inheritance_acl"></span>**FEHLER: \_ UNGÜLTIGE \_ VERERBUNGS-ACL \_**
 </dt> <dd> <dl> <dt>
 
-1340 (0x53c)
+1340 (0x53C)
 </dt> <dt>
 
 
 
-Die geerbte Zugriffs Steuerungs Liste (Access Control List, ACL) oder der Zugriffs Steuerungs Eintrag (ACE) konnte nicht erstellt werden.
+Die geerbte Zugriffssteuerungsliste (Access Control List, ACL) oder der Zugriffssteuerungseintrag (ACE) konnte nicht erstellt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SERVER_DISABLED"></span><span id="error_server_disabled"></span>**Fehler \_ Server \_ deaktiviert**
+<span id="ERROR_SERVER_DISABLED"></span><span id="error_server_disabled"></span>**FEHLERSERVER \_ \_ DEAKTIVIERT**
 </dt> <dd> <dl> <dt>
 
 1341 (0x53D)
@@ -548,12 +548,12 @@ Die geerbte Zugriffs Steuerungs Liste (Access Control List, ACL) oder der Zugrif
 
 
 
-Der Server ist zurzeit deaktiviert.
+Der Server ist derzeit deaktiviert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SERVER_NOT_DISABLED"></span><span id="error_server_not_disabled"></span>**Fehler \_ Server \_ nicht \_ deaktiviert**
+<span id="ERROR_SERVER_NOT_DISABLED"></span><span id="error_server_not_disabled"></span>**FEHLERSERVER \_ \_ NICHT \_ DEAKTIVIERT**
 </dt> <dd> <dl> <dt>
 
 1342 (0x53E)
@@ -561,12 +561,12 @@ Der Server ist zurzeit deaktiviert.
 
 
 
-Der Server ist zurzeit aktiviert.
+Der Server ist derzeit aktiviert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_ID_AUTHORITY"></span><span id="error_invalid_id_authority"></span>**\_ungültige \_ ID- \_ Autorität.**
+<span id="ERROR_INVALID_ID_AUTHORITY"></span><span id="error_invalid_id_authority"></span>**FEHLER: \_ \_ UNGÜLTIGE \_ ID-AUTORITÄT**
 </dt> <dd> <dl> <dt>
 
 1343 (0x53F)
@@ -574,12 +574,12 @@ Der Server ist zurzeit aktiviert.
 
 
 
-Der angegebene Wert war ein ungültiger Wert für eine bezeichnerzertifizierungs Stelle.
+Der angegebene Wert war ein ungültiger Wert für eine Bezeichnerautorität.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_ALLOTTED_SPACE_EXCEEDED"></span><span id="error_allotted_space_exceeded"></span>**nicht \_ zugewiesener \_ Speicherplatz \_ überschritten**
+<span id="ERROR_ALLOTTED_SPACE_EXCEEDED"></span><span id="error_allotted_space_exceeded"></span>**FEHLER \_ ZUGEWIESENER \_ SPEICHERPLATZ \_ ÜBERSCHRITTEN**
 </dt> <dd> <dl> <dt>
 
 1344 (0x540)
@@ -587,12 +587,12 @@ Der angegebene Wert war ein ungültiger Wert für eine bezeichnerzertifizierungs
 
 
 
-Für Aktualisierungen der Sicherheitsinformationen ist kein Arbeitsspeicher mehr verfügbar.
+Für Sicherheitsupdates ist kein Arbeitsspeicher mehr verfügbar.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_GROUP_ATTRIBUTES"></span><span id="error_invalid_group_attributes"></span>**Fehler bei \_ ungültigen \_ Gruppen \_ Attributen.**
+<span id="ERROR_INVALID_GROUP_ATTRIBUTES"></span><span id="error_invalid_group_attributes"></span>**FEHLER: \_ UNGÜLTIGE \_ \_ GRUPPENATTRIBUTE**
 </dt> <dd> <dl> <dt>
 
 1345 (0x541)
@@ -600,12 +600,12 @@ Für Aktualisierungen der Sicherheitsinformationen ist kein Arbeitsspeicher mehr
 
 
 
-Die angegebenen Attribute sind ungültig oder nicht kompatibel mit den Attributen für die Gruppe als Ganzes.
+Die angegebenen Attribute sind ungültig oder nicht mit den Attributen für die gruppe als Ganzes kompatibel.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_BAD_IMPERSONATION_LEVEL"></span><span id="error_bad_impersonation_level"></span>**fehlerhafte Identitätswechsel \_ \_ \_ Ebene**
+<span id="ERROR_BAD_IMPERSONATION_LEVEL"></span><span id="error_bad_impersonation_level"></span>**FEHLER BEI \_ UNGÜLTIGER \_ \_ IDENTITÄTSWECHSELEBENE**
 </dt> <dd> <dl> <dt>
 
 1346 (0x542)
@@ -618,7 +618,7 @@ Entweder wurde eine geforderte Identitätswechselebene nicht geliefert, oder die
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CANT_OPEN_ANONYMOUS"></span><span id="error_cant_open_anonymous"></span>**Fehler \_ beim \_ Öffnen von \_ anonym.**
+<span id="ERROR_CANT_OPEN_ANONYMOUS"></span><span id="error_cant_open_anonymous"></span>**FEHLER \_ CANT \_ OPEN \_ ANONYMOUS**
 </dt> <dd> <dl> <dt>
 
 1347 (0x543)
@@ -626,12 +626,12 @@ Entweder wurde eine geforderte Identitätswechselebene nicht geliefert, oder die
 
 
 
-Ein Sicherheits Token der anonymen Ebene kann nicht geöffnet werden.
+Ein Sicherheitstoken auf anonymer Ebene kann nicht geöffnet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_BAD_VALIDATION_CLASS"></span><span id="error_bad_validation_class"></span>**Fehler \_ hafte \_ Validierungs \_ Klasse**
+<span id="ERROR_BAD_VALIDATION_CLASS"></span><span id="error_bad_validation_class"></span>**ERROR \_ BAD \_ VALIDATION \_ CLASS**
 </dt> <dd> <dl> <dt>
 
 1348 (0x544)
@@ -639,12 +639,12 @@ Ein Sicherheits Token der anonymen Ebene kann nicht geöffnet werden.
 
 
 
-Die angeforderte Validierungs Informations Klasse war ungültig.
+Die angeforderte Validierungsinformationsklasse war ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_BAD_TOKEN_TYPE"></span><span id="error_bad_token_type"></span>**fehlerhafter \_ \_ \_ Tokentyp**
+<span id="ERROR_BAD_TOKEN_TYPE"></span><span id="error_bad_token_type"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ TOKENTYP**
 </dt> <dd> <dl> <dt>
 
 1349 (0x545)
@@ -652,12 +652,12 @@ Die angeforderte Validierungs Informations Klasse war ungültig.
 
 
 
-Der Tokentyp ist für die versuchte Verwendung ungeeignet.
+Der Typ des Tokens ist für die versuchte Verwendung ungeeignet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SECURITY_ON_OBJECT"></span><span id="error_no_security_on_object"></span>**Fehler \_ \_ \_ bei der Sicherheit des \_ Objekts.**
+<span id="ERROR_NO_SECURITY_ON_OBJECT"></span><span id="error_no_security_on_object"></span>**FEHLER \_ KEINE SICHERHEIT FÜR \_ \_ \_ OBJEKT**
 </dt> <dd> <dl> <dt>
 
 1350 (0x546)
@@ -665,12 +665,12 @@ Der Tokentyp ist für die versuchte Verwendung ungeeignet.
 
 
 
-Ein Sicherheits Vorgang für ein Objekt ohne zugeordnete Sicherheit kann nicht ausgeführt werden.
+Für ein Objekt ohne zugeordnete Sicherheit kann kein Sicherheitsvorgang ausgeführt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CANT_ACCESS_DOMAIN_INFO"></span><span id="error_cant_access_domain_info"></span>**Fehler \_ beim \_ Zugriff auf \_ Domänen \_ Informationen.**
+<span id="ERROR_CANT_ACCESS_DOMAIN_INFO"></span><span id="error_cant_access_domain_info"></span>**FEHLER: \_ KANN NICHT AUF \_ \_ \_ DOMÄNENINFORMATIONEN ZUGREIFEN**
 </dt> <dd> <dl> <dt>
 
 1351 (0x547)
@@ -678,12 +678,12 @@ Ein Sicherheits Vorgang für ein Objekt ohne zugeordnete Sicherheit kann nicht a
 
 
 
-Die Konfigurationsinformationen konnten nicht vom Domänen Controller gelesen werden, weil der Computer nicht verfügbar ist oder der Zugriff verweigert wurde.
+Konfigurationsinformationen konnten nicht vom Domänencontroller gelesen werden, weil der Computer nicht verfügbar ist oder der Zugriff verweigert wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_SERVER_STATE"></span><span id="error_invalid_server_state"></span>**Fehler \_ ungültiger \_ Server \_ Status**
+<span id="ERROR_INVALID_SERVER_STATE"></span><span id="error_invalid_server_state"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ SERVERSTATUS**
 </dt> <dd> <dl> <dt>
 
 1352 (0x548)
@@ -691,12 +691,12 @@ Die Konfigurationsinformationen konnten nicht vom Domänen Controller gelesen we
 
 
 
-Der Sicherheits Konto-Manager (Sam) oder der lokale Sicherheits Autorität (Local Security Authority, LSA) befand sich im falschen Zustand, um den Sicherheits Vorgang auszuführen.
+Der Server des Sicherheitskonto-Managers (SAM) oder der lokalen Sicherheitsautorität (LSA) befand sich im falschen Zustand, um den Sicherheitsvorgang auszuführen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_DOMAIN_STATE"></span><span id="error_invalid_domain_state"></span>**\_ungültiger \_ Domänen \_ Status**
+<span id="ERROR_INVALID_DOMAIN_STATE"></span><span id="error_invalid_domain_state"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ DOMÄNENSTATUS**
 </dt> <dd> <dl> <dt>
 
 1353 (0x549)
@@ -704,12 +704,12 @@ Der Sicherheits Konto-Manager (Sam) oder der lokale Sicherheits Autorität (Loca
 
 
 
-Die Domäne befand sich im falschen Zustand, um den Sicherheits Vorgang auszuführen.
+Die Domäne befand sich im falschen Zustand, um den Sicherheitsvorgang auszuführen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_DOMAIN_ROLE"></span><span id="error_invalid_domain_role"></span>**\_ungültige \_ Domänen \_ Rolle.**
+<span id="ERROR_INVALID_DOMAIN_ROLE"></span><span id="error_invalid_domain_role"></span>**FEHLER: \_ UNGÜLTIGE \_ \_ DOMÄNENROLLE**
 </dt> <dd> <dl> <dt>
 
 1354 (0x54A)
@@ -717,25 +717,25 @@ Die Domäne befand sich im falschen Zustand, um den Sicherheits Vorgang auszufü
 
 
 
-Dieser Vorgang ist nur für den primären Domänen Controller der Domäne zulässig.
+Dieser Vorgang ist nur für den primären Domänencontroller der Domäne zulässig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SUCH_DOMAIN"></span><span id="error_no_such_domain"></span>**Fehler bei \_ keiner \_ solchen \_ Domäne**
+<span id="ERROR_NO_SUCH_DOMAIN"></span><span id="error_no_such_domain"></span>**FEHLER: \_ KEINE \_ SOLCHE \_ DOMÄNE**
 </dt> <dd> <dl> <dt>
 
-1355 (0x54b)
+1355 (0x54B)
 </dt> <dt>
 
 
 
-Die angegebene Domäne ist entweder nicht vorhanden, oder es konnte keine Verbindung mit ihr hergestellt werden.
+Die angegebene Domäne ist entweder nicht vorhanden oder konnte nicht kontaktiert werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_DOMAIN_EXISTS"></span><span id="error_domain_exists"></span>**Fehler \_ Domäne \_ vorhanden**
+<span id="ERROR_DOMAIN_EXISTS"></span><span id="error_domain_exists"></span>**FEHLERDOMÄNE \_ \_ VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 1356 (0x54C)
@@ -748,36 +748,36 @@ Die angegebene Domäne ist bereits vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_DOMAIN_LIMIT_EXCEEDED"></span><span id="error_domain_limit_exceeded"></span>**Fehler \_ Domänen \_ Limit \_ überschritten**
+<span id="ERROR_DOMAIN_LIMIT_EXCEEDED"></span><span id="error_domain_limit_exceeded"></span>**\_ \_ FEHLERDOMÄNENLIMIT \_ ÜBERSCHRITTEN**
 </dt> <dd> <dl> <dt>
 
-1357 (0x54d)
+1357 (0x54D)
 </dt> <dt>
 
 
 
-Es wurde versucht, den Grenzwert für die Anzahl von Domänen pro Server zu überschreiten.
+Es wurde versucht, den Grenzwert für die Anzahl der Domänen pro Server zu überschreiten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INTERNAL_DB_CORRUPTION"></span><span id="error_internal_db_corruption"></span>**Fehler bei \_ interner \_ DB- \_ Datenbank.**
+<span id="ERROR_INTERNAL_DB_CORRUPTION"></span><span id="error_internal_db_corruption"></span>**FEHLER: \_ INTERNE \_ \_ DATENBANKBESCHÄDIGUNG**
 </dt> <dd> <dl> <dt>
 
-1358 (0x54e)
+1358 (0x54E)
 </dt> <dt>
 
 
 
-Der angeforderte Vorgang kann aufgrund eines schwerwiegenden Medien Fehlers oder einer Beschädigung der Datenstruktur auf dem Datenträger nicht durchgeführt werden.
+Der angeforderte Vorgang kann aufgrund eines schwerwiegenden Medienfehlers oder einer Datenstrukturbeschädigung auf dem Datenträger nicht abgeschlossen werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INTERNAL_ERROR"></span><span id="error_internal_error"></span>**\_Interner Fehler \_**
+<span id="ERROR_INTERNAL_ERROR"></span><span id="error_internal_error"></span>**\_INTERNER \_ FEHLER**
 </dt> <dd> <dl> <dt>
 
-1359 (0x54f)
+1359 (0x54F)
 </dt> <dt>
 
 
@@ -787,7 +787,7 @@ Interner Fehler.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_GENERIC_NOT_MAPPED"></span><span id="error_generic_not_mapped"></span>**Fehler \_ generisch \_ nicht \_ zugeordnet**
+<span id="ERROR_GENERIC_NOT_MAPPED"></span><span id="error_generic_not_mapped"></span>**FEHLER \_ GENERISCH \_ NICHT \_ ZUGEORDNET**
 </dt> <dd> <dl> <dt>
 
 1360 (0x550)
@@ -795,12 +795,12 @@ Interner Fehler.
 
 
 
-Generische Zugriffs Typen waren in einer Zugriffs Maske enthalten, die bereits nicht generischen Typen zugeordnet werden sollte.
+Generische Zugriffstypen waren in einer Zugriffsmaske enthalten, die bereits nicht generischen Typen zugeordnet werden sollte.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_BAD_DESCRIPTOR_FORMAT"></span><span id="error_bad_descriptor_format"></span>**fehlerhaftes \_ \_ \_ deskriptorformat**
+<span id="ERROR_BAD_DESCRIPTOR_FORMAT"></span><span id="error_bad_descriptor_format"></span>**FEHLER: \_ UNGÜLTIGES \_ DESKRIPTORFORMAT \_**
 </dt> <dd> <dl> <dt>
 
 1361 (0x551)
@@ -808,12 +808,12 @@ Generische Zugriffs Typen waren in einer Zugriffs Maske enthalten, die bereits n
 
 
 
-Eine Sicherheits Beschreibung weist nicht das richtige Format auf (absolut oder selbst bezogen).
+Eine Sicherheitsbeschreibung hat nicht das richtige Format (absolut oder selbst relativ).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NOT_LOGON_PROCESS"></span><span id="error_not_logon_process"></span>**Fehler \_ beim \_ Anmelde \_ Vorgang.**
+<span id="ERROR_NOT_LOGON_PROCESS"></span><span id="error_not_logon_process"></span>**FEHLER \_ BEIM \_ \_ ANMELDEVORGANG**
 </dt> <dd> <dl> <dt>
 
 1362 (0x552)
@@ -821,12 +821,12 @@ Eine Sicherheits Beschreibung weist nicht das richtige Format auf (absolut oder 
 
 
 
-Die angeforderte Aktion ist nur für die Verwendung durch Anmelde Prozesse eingeschränkt. Der aufrufende Prozess ist nicht als Anmeldevorgang registriert.
+Die angeforderte Aktion ist nur für die Verwendung durch Anmeldeprozesse eingeschränkt. Der aufrufende Prozess wurde nicht als Anmeldevorgang registriert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LOGON_SESSION_EXISTS"></span><span id="error_logon_session_exists"></span>**Fehler \_ Anmelde \_ Sitzung ist \_ vorhanden.**
+<span id="ERROR_LOGON_SESSION_EXISTS"></span><span id="error_logon_session_exists"></span>**FEHLER \_ BEI \_ ANMELDESITZUNG \_ VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 1363 (0x553)
@@ -834,12 +834,12 @@ Die angeforderte Aktion ist nur für die Verwendung durch Anmelde Prozesse einge
 
 
 
-Es kann keine neue Anmelde Sitzung mit einer bereits verwendeten ID gestartet werden.
+Eine neue Anmeldesitzung kann nicht mit einer ID gestartet werden, die bereits verwendet wird.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SUCH_PACKAGE"></span><span id="error_no_such_package"></span>**Fehler " \_ kein \_ solches \_ Paket"**
+<span id="ERROR_NO_SUCH_PACKAGE"></span><span id="error_no_such_package"></span>**FEHLER: \_ KEIN \_ SOLCHES \_ PAKET**
 </dt> <dd> <dl> <dt>
 
 1364 (0x554)
@@ -847,12 +847,12 @@ Es kann keine neue Anmelde Sitzung mit einer bereits verwendeten ID gestartet we
 
 
 
-Ein angegebenes Authentifizierungs Paket ist unbekannt.
+Ein angegebenes Authentifizierungspaket ist unbekannt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_BAD_LOGON_SESSION_STATE"></span><span id="error_bad_logon_session_state"></span>**Fehler bei fehlerhafter \_ \_ Anmelde \_ Sitzung \_ .**
+<span id="ERROR_BAD_LOGON_SESSION_STATE"></span><span id="error_bad_logon_session_state"></span>**FEHLER: \_ FEHLERHAFTER \_ \_ ANMELDESITZUNGSSTATUS \_**
 </dt> <dd> <dl> <dt>
 
 1365 (0x555)
@@ -860,12 +860,12 @@ Ein angegebenes Authentifizierungs Paket ist unbekannt.
 
 
 
-Die Anmelde Sitzung befindet sich nicht in einem Zustand, der mit dem angeforderten Vorgang konsistent ist.
+Die Anmeldesitzung befindet sich nicht in einem Zustand, der mit dem angeforderten Vorgang konsistent ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LOGON_SESSION_COLLISION"></span><span id="error_logon_session_collision"></span>**Fehler beim \_ Protokollierung der \_ Sitzung. \_**
+<span id="ERROR_LOGON_SESSION_COLLISION"></span><span id="error_logon_session_collision"></span>**FEHLER: \_ \_ \_ SITZUNGSKONFLIKT BEI DER ANMELDUNG**
 </dt> <dd> <dl> <dt>
 
 1366 (0x556)
@@ -873,12 +873,12 @@ Die Anmelde Sitzung befindet sich nicht in einem Zustand, der mit dem angeforder
 
 
 
-Die Anmelde Sitzungs-ID wird bereits verwendet.
+Die Anmeldesitzungs-ID wird bereits verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_LOGON_TYPE"></span><span id="error_invalid_logon_type"></span>**\_ungültiger \_ \_ Anmeldetyp.**
+<span id="ERROR_INVALID_LOGON_TYPE"></span><span id="error_invalid_logon_type"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ ANMELDETYP**
 </dt> <dd> <dl> <dt>
 
 1367 (0x557)
@@ -886,12 +886,12 @@ Die Anmelde Sitzungs-ID wird bereits verwendet.
 
 
 
-Eine Anmelde Anforderung enthielt einen ungültigen anmeldetypwert.
+Eine Anmeldeanforderung enthielt einen ungültigen Anmeldetypwert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CANNOT_IMPERSONATE"></span><span id="error_cannot_impersonate"></span>**Fehler beim Annehmen der Identität \_ \_**
+<span id="ERROR_CANNOT_IMPERSONATE"></span><span id="error_cannot_impersonate"></span>**FEHLER \_ KANN KEINE IDENTITÄT \_ ANNEHMEN**
 </dt> <dd> <dl> <dt>
 
 1368 (0x558)
@@ -899,12 +899,12 @@ Eine Anmelde Anforderung enthielt einen ungültigen anmeldetypwert.
 
 
 
-Die Identität kann nicht mithilfe einer Named Pipe angenommen werden, bis die Daten aus dieser Pipe gelesen wurden.
+Die Identität kann nicht mithilfe einer Named Pipe angenommen werden, bis Daten aus dieser Pipe gelesen wurden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_RXACT_INVALID_STATE"></span><span id="error_rxact_invalid_state"></span>**Fehler " \_ rxact" ist \_ ungültig. \_**
+<span id="ERROR_RXACT_INVALID_STATE"></span><span id="error_rxact_invalid_state"></span>**ERROR \_ RXACT \_ INVALID \_ STATE**
 </dt> <dd> <dl> <dt>
 
 1369 (0x559)
@@ -912,51 +912,51 @@ Die Identität kann nicht mithilfe einer Named Pipe angenommen werden, bis die D
 
 
 
-Der Transaktionsstatus einer Registrierungs Unterstruktur ist mit dem angeforderten Vorgang nicht kompatibel.
+Der Transaktionsstatus einer Registrierungsunterstruktur ist mit dem angeforderten Vorgang nicht kompatibel.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_RXACT_COMMIT_FAILURE"></span><span id="error_rxact_commit_failure"></span>**Fehler beim \_ rxact- \_ Commit. \_**
+<span id="ERROR_RXACT_COMMIT_FAILURE"></span><span id="error_rxact_commit_failure"></span>**FEHLER \_ \_ RXACT-COMMITFEHLER \_**
 </dt> <dd> <dl> <dt>
 
-1370 (0x55a)
+1370 (0x55A)
 </dt> <dt>
 
 
 
-Es ist eine interne Beschädigung der Sicherheitsdatenbank aufgetreten.
+Es wurde eine interne Sicherheitsdatenbankbeschädigung festgestellt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SPECIAL_ACCOUNT"></span><span id="error_special_account"></span>**\_Sonderkonto für Fehler \_**
+<span id="ERROR_SPECIAL_ACCOUNT"></span><span id="error_special_account"></span>**ERROR \_ SPECIAL \_ ACCOUNT**
 </dt> <dd> <dl> <dt>
 
-1371 (0x55b)
+1371 (0x55B)
 </dt> <dt>
 
 
 
-Dieser Vorgang kann nicht für integrierte Konten durchgeführt werden.
+Dieser Vorgang kann nicht für integrierte Konten ausgeführt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SPECIAL_GROUP"></span><span id="error_special_group"></span>**Fehler \_ spezielle \_ Gruppe**
+<span id="ERROR_SPECIAL_GROUP"></span><span id="error_special_group"></span>**ERROR \_ SPECIAL \_ GROUP**
 </dt> <dd> <dl> <dt>
 
-1372 (0x55c)
+1372 (0x55C)
 </dt> <dt>
 
 
 
-Dieser Vorgang kann für diese integrierte spezielle Gruppe nicht durchgeführt werden.
+Dieser Vorgang kann für diese integrierte spezielle Gruppe nicht ausgeführt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SPECIAL_USER"></span><span id="error_special_user"></span>**\_spezieller Fehler \_ Benutzer**
+<span id="ERROR_SPECIAL_USER"></span><span id="error_special_user"></span>**ERROR \_ SPECIAL \_ USER**
 </dt> <dd> <dl> <dt>
 
 1373 (0x55D)
@@ -964,12 +964,12 @@ Dieser Vorgang kann für diese integrierte spezielle Gruppe nicht durchgeführt 
 
 
 
-Dieser Vorgang kann für diesen integrierten speziellen Benutzer nicht durchgeführt werden.
+Dieser Vorgang kann für diesen integrierten speziellen Benutzer nicht ausgeführt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_MEMBERS_PRIMARY_GROUP"></span><span id="error_members_primary_group"></span>**Fehler \_ Mitglieder \_ primäre \_ Gruppe**
+<span id="ERROR_MEMBERS_PRIMARY_GROUP"></span><span id="error_members_primary_group"></span>**PRIMÄRE GRUPPE "FEHLERMITGLIEDER" \_ \_ \_**
 </dt> <dd> <dl> <dt>
 
 1374 (0x55E)
@@ -977,15 +977,15 @@ Dieser Vorgang kann für diesen integrierten speziellen Benutzer nicht durchgef�
 
 
 
-Der Benutzer kann nicht aus einer Gruppe entfernt werden, da es sich bei der Gruppe derzeit um die primäre Gruppe des Benutzers handelt.
+Der Benutzer kann nicht aus einer Gruppe entfernt werden, da die Gruppe derzeit die primäre Gruppe des Benutzers ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_TOKEN_ALREADY_IN_USE"></span><span id="error_token_already_in_use"></span>**das Fehler \_ Token wird \_ bereits \_ \_ verwendet.**
+<span id="ERROR_TOKEN_ALREADY_IN_USE"></span><span id="error_token_already_in_use"></span>**\_BEREITS \_ \_ VERWENDETES FEHLERTOKEN \_**
 </dt> <dd> <dl> <dt>
 
-1375 (0x55f)
+1375 (0x55F)
 </dt> <dt>
 
 
@@ -995,7 +995,7 @@ Das Token wird bereits als primäres Token verwendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SUCH_ALIAS"></span><span id="error_no_such_alias"></span>**Fehler " \_ kein \_ solcher \_ Alias"**
+<span id="ERROR_NO_SUCH_ALIAS"></span><span id="error_no_such_alias"></span>**FEHLER: \_ KEIN \_ SOLCHER \_ ALIAS**
 </dt> <dd> <dl> <dt>
 
 1376 (0x560)
@@ -1008,7 +1008,7 @@ Die angegebene lokale Gruppe ist nicht vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_MEMBER_NOT_IN_ALIAS"></span><span id="error_member_not_in_alias"></span>**\_fehlermember \_ nicht \_ im \_ Alias**
+<span id="ERROR_MEMBER_NOT_IN_ALIAS"></span><span id="error_member_not_in_alias"></span>**FEHLERMEMBER \_ \_ NICHT IM \_ \_ ALIAS**
 </dt> <dd> <dl> <dt>
 
 1377 (0x561)
@@ -1021,7 +1021,7 @@ Der angegebene Kontoname ist kein Mitglied der Gruppe.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_MEMBER_IN_ALIAS"></span><span id="error_member_in_alias"></span>**\_fehlermember \_ in \_ Alias**
+<span id="ERROR_MEMBER_IN_ALIAS"></span><span id="error_member_in_alias"></span>**ERROR \_ MEMBER \_ IN \_ ALIAS**
 </dt> <dd> <dl> <dt>
 
 1378 (0x562)
@@ -1034,7 +1034,7 @@ Der angegebene Kontoname ist bereits Mitglied der Gruppe.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_ALIAS_EXISTS"></span><span id="error_alias_exists"></span>**\_fehleralias \_ vorhanden**
+<span id="ERROR_ALIAS_EXISTS"></span><span id="error_alias_exists"></span>**\_ \_ FEHLERALIAS VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 1379 (0x563)
@@ -1047,7 +1047,7 @@ Die angegebene lokale Gruppe ist bereits vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LOGON_NOT_GRANTED"></span><span id="error_logon_not_granted"></span>**Fehler \_ Anmeldung \_ nicht \_ erteilt**
+<span id="ERROR_LOGON_NOT_GRANTED"></span><span id="error_logon_not_granted"></span>**\_FEHLERANMELDUNG \_ NICHT \_ GEWÄHRT**
 </dt> <dd> <dl> <dt>
 
 1380 (0x564)
@@ -1055,12 +1055,12 @@ Die angegebene lokale Gruppe ist bereits vorhanden.
 
 
 
-Anmeldefehler: dem Benutzer wurde der angeforderte Anmeldetyp auf diesem Computer nicht erteilt.
+Anmeldefehler: Dem Benutzer wurde der angeforderte Anmeldetyp auf diesem Computer nicht gewährt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_TOO_MANY_SECRETS"></span><span id="error_too_many_secrets"></span>**Fehler bei \_ zu \_ vielen \_ geheimen Schlüsseln.**
+<span id="ERROR_TOO_MANY_SECRETS"></span><span id="error_too_many_secrets"></span>**FEHLER \_ ZU \_ VIELE \_ GEHEIMNISSE**
 </dt> <dd> <dl> <dt>
 
 1381 (0x565)
@@ -1073,7 +1073,7 @@ Die maximale Anzahl von Geheimnissen, die in einem einzelnen System gespeichert 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SECRET_TOO_LONG"></span><span id="error_secret_too_long"></span>**Fehler \_ Geheimnis \_ zu \_ lang**
+<span id="ERROR_SECRET_TOO_LONG"></span><span id="error_secret_too_long"></span>**FEHLERGEHEIMNIS \_ \_ ZU \_ LANG**
 </dt> <dd> <dl> <dt>
 
 1382 (0x566)
@@ -1081,12 +1081,12 @@ Die maximale Anzahl von Geheimnissen, die in einem einzelnen System gespeichert 
 
 
 
-Die Länge eines geheimen Schlüssels überschreitet die maximal zulässige Länge.
+Die Länge eines Geheimnisses überschreitet die maximal zulässige Länge.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INTERNAL_DB_ERROR"></span><span id="error_internal_db_error"></span>**Fehler \_ interner \_ DB- \_ Fehler.**
+<span id="ERROR_INTERNAL_DB_ERROR"></span><span id="error_internal_db_error"></span>**FEHLER \_ INTERNER \_ \_ DATENBANKFEHLER**
 </dt> <dd> <dl> <dt>
 
 1383 (0x567)
@@ -1094,12 +1094,12 @@ Die Länge eines geheimen Schlüssels überschreitet die maximal zulässige Län
 
 
 
-Die Datenbank der lokalen Sicherheits Autorität enthält interne Inkonsistenzen.
+Die Datenbank der lokalen Sicherheitsautorität enthält eine interne Inkonsistenz.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_TOO_MANY_CONTEXT_IDS"></span><span id="error_too_many_context_ids"></span>**Fehler \_ zu \_ viele \_ Kontext- \_ IDs.**
+<span id="ERROR_TOO_MANY_CONTEXT_IDS"></span><span id="error_too_many_context_ids"></span>**FEHLER \_ ZU \_ VIELE \_ \_ KONTEXT-IDS**
 </dt> <dd> <dl> <dt>
 
 1384 (0x568)
@@ -1107,12 +1107,12 @@ Die Datenbank der lokalen Sicherheits Autorität enthält interne Inkonsistenzen
 
 
 
-Während eines Anmelde Versuchs hat der Sicherheitskontext des Benutzers zu viele Sicherheits-IDs gesammelt.
+Während eines Anmeldeversuchs hat sich der Sicherheitskontext des Benutzers zu viele Sicherheits-IDs angesammelt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LOGON_TYPE_NOT_GRANTED"></span><span id="error_logon_type_not_granted"></span>**Fehler \_ \_ Anmeldetyp \_ nicht \_ erteilt**
+<span id="ERROR_LOGON_TYPE_NOT_GRANTED"></span><span id="error_logon_type_not_granted"></span>**\_ \_ \_ FEHLERANMELDUNGSTYP NICHT \_ GEWÄHRT**
 </dt> <dd> <dl> <dt>
 
 1385 (0x569)
@@ -1120,12 +1120,12 @@ Während eines Anmelde Versuchs hat der Sicherheitskontext des Benutzers zu viel
 
 
 
-Anmeldefehler: dem Benutzer wurde der angeforderte Anmeldetyp auf diesem Computer nicht erteilt.
+Anmeldefehler: Dem Benutzer wurde der angeforderte Anmeldetyp auf diesem Computer nicht gewährt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NT_CROSS_ENCRYPTION_REQUIRED"></span><span id="error_nt_cross_encryption_required"></span>**Fehler bei \_ NT- \_ Kreuz \_ Verschlüsselung \_ erforderlich**
+<span id="ERROR_NT_CROSS_ENCRYPTION_REQUIRED"></span><span id="error_nt_cross_encryption_required"></span>**FEHLER \_ \_ NT-KREUZVERSCHLÜSSELUNG \_ \_ ERFORDERLICH**
 </dt> <dd> <dl> <dt>
 
 1386 (0x56A)
@@ -1133,12 +1133,12 @@ Anmeldefehler: dem Benutzer wurde der angeforderte Anmeldetyp auf diesem Compute
 
 
 
-Ein Kreuz verschlüsseltes Kennwort ist erforderlich, um ein Benutzer Kennwort zu ändern.
+Ein kreuzverschlüsseltes Kennwort ist erforderlich, um ein Benutzerkennwort zu ändern.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SUCH_MEMBER"></span><span id="error_no_such_member"></span>**Fehler " \_ kein \_ solcher \_ Member"**
+<span id="ERROR_NO_SUCH_MEMBER"></span><span id="error_no_such_member"></span>**ERROR \_ NO \_ SUCH \_ MEMBER**
 </dt> <dd> <dl> <dt>
 
 1387 (0x56B)
@@ -1151,7 +1151,7 @@ Ein Mitglied konnte der lokalen Gruppe nicht hinzugefügt oder daraus entfernt w
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_MEMBER"></span><span id="error_invalid_member"></span>**\_ungültiger \_ Member**
+<span id="ERROR_INVALID_MEMBER"></span><span id="error_invalid_member"></span>**ERROR \_ INVALID \_ MEMBER**
 </dt> <dd> <dl> <dt>
 
 1388 (0x56C)
@@ -1159,12 +1159,12 @@ Ein Mitglied konnte der lokalen Gruppe nicht hinzugefügt oder daraus entfernt w
 
 
 
-Ein neuer Member konnte einer lokalen Gruppe nicht hinzugefügt werden, weil der Member den falschen Kontotyp aufweist.
+Ein neues Mitglied konnte keiner lokalen Gruppe hinzugefügt werden, da das Element den falschen Kontotyp auf hat.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_TOO_MANY_SIDS"></span><span id="error_too_many_sids"></span>**Fehler \_ zu \_ viele \_ SIDs.**
+<span id="ERROR_TOO_MANY_SIDS"></span><span id="error_too_many_sids"></span>**FEHLER \_ ZU \_ VIELE \_ SIDS**
 </dt> <dd> <dl> <dt>
 
 1389 (0x56D)
@@ -1177,7 +1177,7 @@ Es wurden zu viele Sicherheits-IDs angegeben.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LM_CROSS_ENCRYPTION_REQUIRED"></span><span id="error_lm_cross_encryption_required"></span>**Fehler \_ LM- \_ Kreuz \_ Verschlüsselung \_ erforderlich**
+<span id="ERROR_LM_CROSS_ENCRYPTION_REQUIRED"></span><span id="error_lm_cross_encryption_required"></span>**FEHLER \_ \_ LM-KREUZVERSCHLÜSSELUNG \_ \_ ERFORDERLICH**
 </dt> <dd> <dl> <dt>
 
 1390 (0x56E)
@@ -1185,15 +1185,15 @@ Es wurden zu viele Sicherheits-IDs angegeben.
 
 
 
-Ein Kreuz verschlüsseltes Kennwort ist erforderlich, um dieses Benutzer Kennwort zu ändern.
+Ein kreuzverschlüsseltes Kennwort ist erforderlich, um dieses Benutzerkennwort zu ändern.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_INHERITANCE"></span><span id="error_no_inheritance"></span>**Fehler \_ keine \_ Vererbung**
+<span id="ERROR_NO_INHERITANCE"></span><span id="error_no_inheritance"></span>**FEHLER: \_ KEINE \_ VERERBUNG**
 </dt> <dd> <dl> <dt>
 
-1391 (0x56f)
+1391 (0x56F)
 </dt> <dt>
 
 
@@ -1203,7 +1203,7 @@ Gibt an, dass eine ACL keine vererbbaren Komponenten enthält.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_FILE_CORRUPT"></span><span id="error_file_corrupt"></span>**Fehler \_ Datei \_ beschädigt**
+<span id="ERROR_FILE_CORRUPT"></span><span id="error_file_corrupt"></span>**FEHLERDATEI \_ \_ BESCHÄDIGT**
 </dt> <dd> <dl> <dt>
 
 1392 (0x570)
@@ -1211,12 +1211,12 @@ Gibt an, dass eine ACL keine vererbbaren Komponenten enthält.
 
 
 
-Die Datei oder das Verzeichnis ist beschädigt und kann nicht gelesen werden.
+Die Datei oder das Verzeichnis ist beschädigt und nicht lesbar.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_DISK_CORRUPT"></span><span id="error_disk_corrupt"></span>**Fehler Datenträger \_ \_ beschädigt**
+<span id="ERROR_DISK_CORRUPT"></span><span id="error_disk_corrupt"></span>**FEHLER \_ DATENTRÄGER \_ BESCHÄDIGT**
 </dt> <dd> <dl> <dt>
 
 1393 (0x571)
@@ -1224,12 +1224,12 @@ Die Datei oder das Verzeichnis ist beschädigt und kann nicht gelesen werden.
 
 
 
-Die Datenträger Struktur ist beschädigt und kann nicht gelesen werden.
+Die Datenträgerstruktur ist beschädigt und nicht lesbar.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_USER_SESSION_KEY"></span><span id="error_no_user_session_key"></span>**Fehler " \_ kein \_ Benutzer \_ Sitzungs \_ Schlüssel"**
+<span id="ERROR_NO_USER_SESSION_KEY"></span><span id="error_no_user_session_key"></span>**FEHLER: \_ KEIN \_ \_ \_ BENUTZERSITZUNGSSCHLÜSSEL**
 </dt> <dd> <dl> <dt>
 
 1394 (0x572)
@@ -1237,12 +1237,12 @@ Die Datenträger Struktur ist beschädigt und kann nicht gelesen werden.
 
 
 
-Es ist kein Benutzer Sitzungsschlüssel für die angegebene Anmelde Sitzung vorhanden.
+Für die angegebene Anmeldesitzung ist kein Benutzersitzungsschlüssel vorhanden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LICENSE_QUOTA_EXCEEDED"></span><span id="error_license_quota_exceeded"></span>**Fehler \_ Lizenz \_ Kontingent \_ überschritten**
+<span id="ERROR_LICENSE_QUOTA_EXCEEDED"></span><span id="error_license_quota_exceeded"></span>**\_ \_ FEHLERLIZENZKONTINGENT \_ ÜBERSCHRITTEN**
 </dt> <dd> <dl> <dt>
 
 1395 (0x573)
@@ -1250,12 +1250,12 @@ Es ist kein Benutzer Sitzungsschlüssel für die angegebene Anmelde Sitzung vorh
 
 
 
-Der Dienst, auf den zugegriffen wird, ist für eine bestimmte Anzahl von Verbindungen lizenziert. Zurzeit können keine weiteren Verbindungen mit dem Dienst hergestellt werden, da bereits so viele Verbindungen vorhanden sind, wie der Dienst annehmen kann.
+Der Dienst, auf den zugegriffen wird, ist für eine bestimmte Anzahl von Verbindungen lizenziert. Zu diesem Zeitpunkt können keine weiteren Verbindungen mit dem Dienst hergestellt werden, da bereits so viele Verbindungen vorhanden sind, wie der Dienst akzeptieren kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_WRONG_TARGET_NAME"></span><span id="error_wrong_target_name"></span>**\_falscher \_ \_ Zielname für Fehler**
+<span id="ERROR_WRONG_TARGET_NAME"></span><span id="error_wrong_target_name"></span>**FEHLER: \_ \_ FALSCHER \_ ZIELNAME**
 </dt> <dd> <dl> <dt>
 
 1396 (0x574)
@@ -1263,12 +1263,12 @@ Der Dienst, auf den zugegriffen wird, ist für eine bestimmte Anzahl von Verbind
 
 
 
-Der Name des Ziel Kontos ist falsch.
+Der Name des Zielkontos ist falsch.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_MUTUAL_AUTH_FAILED"></span><span id="error_mutual_auth_failed"></span>**Fehler bei \_ gegenseitiger Authentifizierung \_ . \_**
+<span id="ERROR_MUTUAL_AUTH_FAILED"></span><span id="error_mutual_auth_failed"></span>**FEHLER \_ FEHLER BEI DER GEGENSEITIGEN \_ AUTHENTIFIZIERUNG \_**
 </dt> <dd> <dl> <dt>
 
 1397 (0x575)
@@ -1276,12 +1276,12 @@ Der Name des Ziel Kontos ist falsch.
 
 
 
-Gegenseitige Authentifizierung ist fehlgeschlagen. Das Server Kennwort ist auf dem Domänen Controller veraltet.
+Fehler bei der gegenseitigen Authentifizierung. Das Kennwort des Servers ist auf dem Domänencontroller veraltet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_TIME_SKEW"></span><span id="error_time_skew"></span>**Fehler \_ Zeit \_ Abweichung**
+<span id="ERROR_TIME_SKEW"></span><span id="error_time_skew"></span>**\_ \_ FEHLERZEITABWEICHUNG**
 </dt> <dd> <dl> <dt>
 
 1398 (0x576)
@@ -1289,12 +1289,12 @@ Gegenseitige Authentifizierung ist fehlgeschlagen. Das Server Kennwort ist auf d
 
 
 
-Zwischen dem Client und dem Server liegt ein Zeit-und/oder Datums Unterschied vor.
+Es gibt einen Zeit- und/oder Datumsunterschied zwischen Client und Server.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CURRENT_DOMAIN_NOT_ALLOWED"></span><span id="error_current_domain_not_allowed"></span>**Fehler die \_ aktuelle \_ Domäne ist \_ nicht \_ zulässig.**
+<span id="ERROR_CURRENT_DOMAIN_NOT_ALLOWED"></span><span id="error_current_domain_not_allowed"></span>**FEHLER \_ AKTUELLE DOMÄNE NICHT \_ \_ \_ ZULÄSSIG**
 </dt> <dd> <dl> <dt>
 
 1399 (0x577)
@@ -1302,12 +1302,12 @@ Zwischen dem Client und dem Server liegt ein Zeit-und/oder Datums Unterschied vo
 
 
 
-Dieser Vorgang kann für die aktuelle Domäne nicht ausgeführt werden.
+Dieser Vorgang kann nicht für die aktuelle Domäne ausgeführt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_WINDOW_HANDLE"></span><span id="error_invalid_window_handle"></span>**Fehler bei \_ ungültigem \_ Fenster \_ handle.**
+<span id="ERROR_INVALID_WINDOW_HANDLE"></span><span id="error_invalid_window_handle"></span>**FEHLER: \_ UNGÜLTIGES \_ \_ FENSTERHANDLE**
 </dt> <dd> <dl> <dt>
 
 1400 (0x578)
@@ -1315,12 +1315,12 @@ Dieser Vorgang kann für die aktuelle Domäne nicht ausgeführt werden.
 
 
 
-Ungültiges Fenster handle.
+Ungültiges Fensterhandle.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_MENU_HANDLE"></span><span id="error_invalid_menu_handle"></span>**Fehler bei \_ ungültigem \_ Menü \_ handle.**
+<span id="ERROR_INVALID_MENU_HANDLE"></span><span id="error_invalid_menu_handle"></span>**FEHLER: \_ UNGÜLTIGES \_ \_ MENÜHANDLE**
 </dt> <dd> <dl> <dt>
 
 1401 (0x579)
@@ -1328,12 +1328,12 @@ Ungültiges Fenster handle.
 
 
 
-Ungültiges Menü handle.
+Ungültiges Menühandle.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_CURSOR_HANDLE"></span><span id="error_invalid_cursor_handle"></span>**Fehler bei \_ ungültigem \_ Cursor \_ handle.**
+<span id="ERROR_INVALID_CURSOR_HANDLE"></span><span id="error_invalid_cursor_handle"></span>**FEHLER: \_ UNGÜLTIGES \_ \_ CURSORHANDLE**
 </dt> <dd> <dl> <dt>
 
 1402 (0x57A)
@@ -1341,12 +1341,12 @@ Ungültiges Menü handle.
 
 
 
-Ungültiges Cursor handle.
+Ungültiges Cursorhandle.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_ACCEL_HANDLE"></span><span id="error_invalid_accel_handle"></span>**\_ungültiger \_ Accel- \_ handle.**
+<span id="ERROR_INVALID_ACCEL_HANDLE"></span><span id="error_invalid_accel_handle"></span>**FEHLER: \_ UNGÜLTIGES \_ \_ ACCEL-HANDLE**
 </dt> <dd> <dl> <dt>
 
 1403 (0x57B)
@@ -1354,25 +1354,25 @@ Ungültiges Cursor handle.
 
 
 
-Ungültiges Zugriffstasten-Tabellen handle.
+Ungültiges Zugriffstasten-Tabellenhandle.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_HOOK_HANDLE"></span><span id="error_invalid_hook_handle"></span>**Fehler \_ ungültiges \_ Hook- \_ handle.**
+<span id="ERROR_INVALID_HOOK_HANDLE"></span><span id="error_invalid_hook_handle"></span>**FEHLER: \_ UNGÜLTIGES \_ \_ HOOKHANDLE**
 </dt> <dd> <dl> <dt>
 
-1404 (0x57c)
+1404 (0x57C)
 </dt> <dt>
 
 
 
-Ungültiges Hook-handle.
+Ungültiges Hookhandle.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_DWP_HANDLE"></span><span id="error_invalid_dwp_handle"></span>**\_ungültiger \_ DWP- \_ handle.**
+<span id="ERROR_INVALID_DWP_HANDLE"></span><span id="error_invalid_dwp_handle"></span>**FEHLER: \_ UNGÜLTIGES \_ \_ DWP-HANDLE**
 </dt> <dd> <dl> <dt>
 
 1405 (0x57D)
@@ -1380,15 +1380,15 @@ Ungültiges Hook-handle.
 
 
 
-Ungültiges Handle für eine Positions Struktur mit mehreren Fenstern.
+Ungültiges Handle für eine Positionsstruktur mit mehreren Fenstern.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_TLW_WITH_WSCHILD"></span><span id="error_tlw_with_wschild"></span>**Fehler- \_ TLW \_ mit \_ wschild**
+<span id="ERROR_TLW_WITH_WSCHILD"></span><span id="error_tlw_with_wschild"></span>**FEHLER \_ TLW \_ MIT \_ WSCHILD**
 </dt> <dd> <dl> <dt>
 
-1406 (0x57e)
+1406 (0x57E)
 </dt> <dt>
 
 
@@ -1398,20 +1398,20 @@ Ein untergeordnetes Fenster der obersten Ebene kann nicht erstellt werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CANNOT_FIND_WND_CLASS"></span><span id="error_cannot_find_wnd_class"></span>**Fehler \_ beim \_ Suchen der \_ WND- \_ Klasse.**
+<span id="ERROR_CANNOT_FIND_WND_CLASS"></span><span id="error_cannot_find_wnd_class"></span>**\_FEHLER: \_ \_ WND-KLASSE NICHT GEFUNDEN \_**
 </dt> <dd> <dl> <dt>
 
-1407 (0x57f)
+1407 (0x57F)
 </dt> <dt>
 
 
 
-Die Fenster Klasse kann nicht gefunden werden.
+Die Fensterklasse wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_WINDOW_OF_OTHER_THREAD"></span><span id="error_window_of_other_thread"></span>**Fehler \_ Fenster \_ des \_ anderen \_ Threads**
+<span id="ERROR_WINDOW_OF_OTHER_THREAD"></span><span id="error_window_of_other_thread"></span>**FEHLERFENSTER \_ \_ EINES ANDEREN \_ \_ THREADS**
 </dt> <dd> <dl> <dt>
 
 1408 (0x580)
@@ -1419,12 +1419,12 @@ Die Fenster Klasse kann nicht gefunden werden.
 
 
 
-Ungültiges Fenster Sie gehört zu einem anderen Thread.
+Ungültiges Fenster; sie gehört zu einem anderen Thread.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_HOTKEY_ALREADY_REGISTERED"></span><span id="error_hotkey_already_registered"></span>**Fehler \_ Hotkey \_ bereits \_ registriert**
+<span id="ERROR_HOTKEY_ALREADY_REGISTERED"></span><span id="error_hotkey_already_registered"></span>**FEHLER \_ HOTKEY \_ BEREITS \_ REGISTRIERT**
 </dt> <dd> <dl> <dt>
 
 1409 (0x581)
@@ -1432,12 +1432,12 @@ Ungültiges Fenster Sie gehört zu einem anderen Thread.
 
 
 
-Die Hot-Taste ist bereits registriert.
+Der hot-Schlüssel ist bereits registriert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CLASS_ALREADY_EXISTS"></span><span id="error_class_already_exists"></span>**die Fehler \_ Klasse ist \_ bereits \_ vorhanden.**
+<span id="ERROR_CLASS_ALREADY_EXISTS"></span><span id="error_class_already_exists"></span>**\_ERROR-KLASSE \_ IST BEREITS \_ VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 1410 (0x582)
@@ -1450,7 +1450,7 @@ Die Klasse ist bereits vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CLASS_DOES_NOT_EXIST"></span><span id="error_class_does_not_exist"></span>**die Fehler \_ Klasse \_ ist \_ nicht \_ vorhanden.**
+<span id="ERROR_CLASS_DOES_NOT_EXIST"></span><span id="error_class_does_not_exist"></span>**DIE \_ ERROR-KLASSE \_ IST NICHT \_ \_ VORHANDEN.**
 </dt> <dd> <dl> <dt>
 
 1411 (0x583)
@@ -1463,7 +1463,7 @@ Die Klasse ist nicht vorhanden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CLASS_HAS_WINDOWS"></span><span id="error_class_has_windows"></span>**Error- \_ Klasse \_ hat \_ Windows**
+<span id="ERROR_CLASS_HAS_WINDOWS"></span><span id="error_class_has_windows"></span>**\_ERROR-KLASSE \_ VERFÜGT ÜBER \_ WINDOWS**
 </dt> <dd> <dl> <dt>
 
 1412 (0x584)
@@ -1471,12 +1471,12 @@ Die Klasse ist nicht vorhanden.
 
 
 
-Die Klasse hat weiterhin geöffnete Fenster.
+Die Klasse verfügt weiterhin über geöffnete Fenster.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_INDEX"></span><span id="error_invalid_index"></span>**\_ungültiger \_ Index**
+<span id="ERROR_INVALID_INDEX"></span><span id="error_invalid_index"></span>**FEHLER: \_ UNGÜLTIGER \_ INDEX**
 </dt> <dd> <dl> <dt>
 
 1413 (0x585)
@@ -1489,7 +1489,7 @@ Ungültiger Index.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_ICON_HANDLE"></span><span id="error_invalid_icon_handle"></span>**Fehler bei \_ ungültigem \_ Symbol \_ handle.**
+<span id="ERROR_INVALID_ICON_HANDLE"></span><span id="error_invalid_icon_handle"></span>**FEHLER: \_ UNGÜLTIGES \_ \_ SYMBOLHANDLE**
 </dt> <dd> <dl> <dt>
 
 1414 (0x586)
@@ -1497,12 +1497,12 @@ Ungültiger Index.
 
 
 
-Ungültiges Symbol handle.
+Ungültiges Symbolhandle.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRIVATE_DIALOG_INDEX"></span><span id="error_private_dialog_index"></span>**Fehler beim \_ privaten \_ Dialog Feld \_ Index**
+<span id="ERROR_PRIVATE_DIALOG_INDEX"></span><span id="error_private_dialog_index"></span>**ERROR \_ PRIVATE \_ DIALOG \_ INDEX**
 </dt> <dd> <dl> <dt>
 
 1415 (0x587)
@@ -1510,12 +1510,12 @@ Ungültiges Symbol handle.
 
 
 
-Verwenden von privaten Dialog Feld Fenster Wörtern.
+Verwenden von privaten DIALOG-Fensterwörtern.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LISTBOX_ID_NOT_FOUND"></span><span id="error_listbox_id_not_found"></span>**Fehler \_ ListBox- \_ ID wurde \_ nicht \_ gefunden.**
+<span id="ERROR_LISTBOX_ID_NOT_FOUND"></span><span id="error_listbox_id_not_found"></span>**\_ \_ FEHLERLISTEBOX-ID \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 1416 (0x588)
@@ -1523,12 +1523,12 @@ Verwenden von privaten Dialog Feld Fenster Wörtern.
 
 
 
-Der Listenfeld Bezeichner wurde nicht gefunden.
+Der Listenfeldbezeichner wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_WILDCARD_CHARACTERS"></span><span id="error_no_wildcard_characters"></span>**Fehler \_ keine Platzhalter \_ \_ Zeichen**
+<span id="ERROR_NO_WILDCARD_CHARACTERS"></span><span id="error_no_wildcard_characters"></span>**FEHLER: \_ KEINE \_ \_ PLATZHALTERZEICHEN**
 </dt> <dd> <dl> <dt>
 
 1417 (0x589)
@@ -1541,10 +1541,10 @@ Es wurden keine Platzhalter gefunden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CLIPBOARD_NOT_OPEN"></span><span id="error_clipboard_not_open"></span>**Fehler \_ Zwischenablage \_ nicht \_ geöffnet**
+<span id="ERROR_CLIPBOARD_NOT_OPEN"></span><span id="error_clipboard_not_open"></span>**FEHLER: \_ ZWISCHENABLAGE \_ NICHT \_ GEÖFFNET**
 </dt> <dd> <dl> <dt>
 
-1418 (0x58a)
+1418 (0x58A)
 </dt> <dt>
 
 
@@ -1554,72 +1554,72 @@ Für den Thread ist keine Zwischenablage geöffnet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_HOTKEY_NOT_REGISTERED"></span><span id="error_hotkey_not_registered"></span>**Fehler \_ Hotkey \_ nicht \_ registriert**
+<span id="ERROR_HOTKEY_NOT_REGISTERED"></span><span id="error_hotkey_not_registered"></span>**FEHLER \_ HOTKEY \_ NICHT \_ REGISTRIERT**
 </dt> <dd> <dl> <dt>
 
-1419 (0x58b)
+1419 (0x58B)
 </dt> <dt>
 
 
 
-Die Hot-Taste ist nicht registriert.
+Der Hot-Schlüssel ist nicht registriert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_WINDOW_NOT_DIALOG"></span><span id="error_window_not_dialog"></span>**Fehler \_ Fenster \_ nicht \_ Dialogfeld**
+<span id="ERROR_WINDOW_NOT_DIALOG"></span><span id="error_window_not_dialog"></span>**DIALOGFELD \_ \_ "FEHLERFENSTER \_ NICHT"**
 </dt> <dd> <dl> <dt>
 
-1420 (0x58c)
+1420 (0x58C)
 </dt> <dt>
 
 
 
-Das Fenster ist kein gültiges Dialogfeld Fenster.
+Das Fenster ist kein gültiges Dialogfeld.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CONTROL_ID_NOT_FOUND"></span><span id="error_control_id_not_found"></span>**Fehler \_ Steuerungs- \_ ID wurde \_ nicht \_ gefunden.**
+<span id="ERROR_CONTROL_ID_NOT_FOUND"></span><span id="error_control_id_not_found"></span>**\_ \_ FEHLERSTEUERUNGS-ID \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
-1421 (0x58d)
+1421 (0x58D)
 </dt> <dt>
 
 
 
-Die Kontroll-ID wurde nicht gefunden.
+Die Steuerelement-ID wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_COMBOBOX_MESSAGE"></span><span id="error_invalid_combobox_message"></span>**Fehler \_ ungültige \_ ComboBox- \_ Nachricht.**
+<span id="ERROR_INVALID_COMBOBOX_MESSAGE"></span><span id="error_invalid_combobox_message"></span>**FEHLER: \_ UNGÜLTIGE \_ \_ COMBOBOX-MELDUNG**
 </dt> <dd> <dl> <dt>
 
-1422 (0x58e)
+1422 (0x58E)
 </dt> <dt>
 
 
 
-Ungültige Meldung für ein Kombinations Feld, weil Sie nicht über ein Bearbeitungs Steuerelement verfügt.
+Ungültige Meldung für ein Kombinationsfeld, da es kein Bearbeitungssteuerelement besitzt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_WINDOW_NOT_COMBOBOX"></span><span id="error_window_not_combobox"></span>**Fehler \_ Fenster \_ nicht \_ ComboBox**
+<span id="ERROR_WINDOW_NOT_COMBOBOX"></span><span id="error_window_not_combobox"></span>**FEHLERFENSTER \_ \_ NICHT \_ COMBOBOX**
 </dt> <dd> <dl> <dt>
 
-1423 (0x58f)
+1423 (0x58F)
 </dt> <dt>
 
 
 
-Das Fenster ist kein Kombinations Feld.
+Das Fenster ist kein Kombinationsfeld.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_EDIT_HEIGHT"></span><span id="error_invalid_edit_height"></span>**Fehler \_ beim \_ Bearbeiten der \_ Höhe.**
+<span id="ERROR_INVALID_EDIT_HEIGHT"></span><span id="error_invalid_edit_height"></span>**FEHLER: \_ UNGÜLTIGE \_ \_ BEARBEITUNGSHÖHE**
 </dt> <dd> <dl> <dt>
 
 1424 (0x590)
@@ -1632,7 +1632,7 @@ Die Höhe muss kleiner als 256 sein.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_DC_NOT_FOUND"></span><span id="error_dc_not_found"></span>**Fehler Domänen Controller \_ \_ nicht \_ gefunden**
+<span id="ERROR_DC_NOT_FOUND"></span><span id="error_dc_not_found"></span>**FEHLER \_ DC \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 1425 (0x591)
@@ -1640,12 +1640,12 @@ Die Höhe muss kleiner als 256 sein.
 
 
 
-Ungültiges Handle des Geräte Kontexts (DC).
+Ungültiges Gerätekontexthandle (DC).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_HOOK_FILTER"></span><span id="error_invalid_hook_filter"></span>**\_ungültiger \_ Hook- \_ Filter**
+<span id="ERROR_INVALID_HOOK_FILTER"></span><span id="error_invalid_hook_filter"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ HOOKFILTER**
 </dt> <dd> <dl> <dt>
 
 1426 (0x592)
@@ -1653,12 +1653,12 @@ Ungültiges Handle des Geräte Kontexts (DC).
 
 
 
-Ungültiger Hook-Prozedurtyp.
+Ungültiger Hookprozedurtyp.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_FILTER_PROC"></span><span id="error_invalid_filter_proc"></span>**Fehler \_ ungültige Filter Prozedur. \_ \_**
+<span id="ERROR_INVALID_FILTER_PROC"></span><span id="error_invalid_filter_proc"></span>**FEHLER: \_ UNGÜLTIGE \_ \_ FILTERPROZITÄT**
 </dt> <dd> <dl> <dt>
 
 1427 (0x593)
@@ -1666,12 +1666,12 @@ Ungültiger Hook-Prozedurtyp.
 
 
 
-Ungültige Hook-Prozedur.
+Ungültige Hookprozedur.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_HOOK_NEEDS_HMOD"></span><span id="error_hook_needs_hmod"></span>**der Fehler \_ Hook \_ benötigt \_ hMod.**
+<span id="ERROR_HOOK_NEEDS_HMOD"></span><span id="error_hook_needs_hmod"></span>**\_ \_ FEHLERHOOK BENÖTIGT \_ HMOD**
 </dt> <dd> <dl> <dt>
 
 1428 (0x594)
@@ -1679,12 +1679,12 @@ Ungültige Hook-Prozedur.
 
 
 
-Der nicht lokale Hook kann nicht ohne ein Modul handle festgelegt werden.
+Ein nichtlokaler Hook kann ohne Modulhand handle nicht festgelegt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_GLOBAL_ONLY_HOOK"></span><span id="error_global_only_hook"></span>**Fehler beim globalen reinen Fehler \_ \_ \_**
+<span id="ERROR_GLOBAL_ONLY_HOOK"></span><span id="error_global_only_hook"></span>**ERROR \_ GLOBAL \_ ONLY \_ HOOK**
 </dt> <dd> <dl> <dt>
 
 1429 (0x595)
@@ -1692,12 +1692,12 @@ Der nicht lokale Hook kann nicht ohne ein Modul handle festgelegt werden.
 
 
 
-Diese Hook-Prozedur kann nur global festgelegt werden.
+Diese Hookprozedur kann nur global festgelegt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_JOURNAL_HOOK_SET"></span><span id="error_journal_hook_set"></span>**Fehler \_ Journal- \_ Hook- \_ Satz**
+<span id="ERROR_JOURNAL_HOOK_SET"></span><span id="error_journal_hook_set"></span>**HOOKSET \_ FÜR \_ FEHLERJOURNAL \_**
 </dt> <dd> <dl> <dt>
 
 1430 (0x596)
@@ -1705,12 +1705,12 @@ Diese Hook-Prozedur kann nur global festgelegt werden.
 
 
 
-Die Journal Hook-Prozedur ist bereits installiert.
+Die Journalhookprozedur ist bereits installiert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_HOOK_NOT_INSTALLED"></span><span id="error_hook_not_installed"></span>**Fehler \_ Hook \_ nicht \_ installiert**
+<span id="ERROR_HOOK_NOT_INSTALLED"></span><span id="error_hook_not_installed"></span>**\_ \_ FEHLERHOOK NICHT \_ INSTALLIERT**
 </dt> <dd> <dl> <dt>
 
 1431 (0x597)
@@ -1718,12 +1718,12 @@ Die Journal Hook-Prozedur ist bereits installiert.
 
 
 
-Die Hook-Prozedur ist nicht installiert.
+Die Hookprozedur ist nicht installiert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_LB_MESSAGE"></span><span id="error_invalid_lb_message"></span>**Fehler \_ ungültige \_ lb- \_ Nachricht.**
+<span id="ERROR_INVALID_LB_MESSAGE"></span><span id="error_invalid_lb_message"></span>**FEHLER: \_ \_ UNGÜLTIGE \_ LB-MELDUNG**
 </dt> <dd> <dl> <dt>
 
 1432 (0x598)
@@ -1731,12 +1731,12 @@ Die Hook-Prozedur ist nicht installiert.
 
 
 
-Ungültige Meldung für das Listenfeld für die Einzel Auswahl.
+Ungültige Meldung für das Listenfeld für die Einzelauswahl.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SETCOUNT_ON_BAD_LB"></span><span id="error_setcount_on_bad_lb"></span>**Fehler \_ bei SetCount bei fehlerhafter \_ \_ \_ lb**
+<span id="ERROR_SETCOUNT_ON_BAD_LB"></span><span id="error_setcount_on_bad_lb"></span>**FEHLER: \_ SETCOUNT \_ FÜR BAD \_ \_ LB**
 </dt> <dd> <dl> <dt>
 
 1433 (0x599)
@@ -1744,15 +1744,15 @@ Ungültige Meldung für das Listenfeld für die Einzel Auswahl.
 
 
 
-\_Die an das nicht verzögerte Listenfeld gesendete lb-SetCount.
+LB \_ SETCOUNT wird an nicht verzögertes Listenfeld gesendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LB_WITHOUT_TABSTOPS"></span><span id="error_lb_without_tabstops"></span>**Fehler- \_ lb \_ ohne \_ Tabstopps**
+<span id="ERROR_LB_WITHOUT_TABSTOPS"></span><span id="error_lb_without_tabstops"></span>**FEHLER \_ LB \_ OHNE \_ TABSTOPPS**
 </dt> <dd> <dl> <dt>
 
-1434 (0x59a)
+1434 (0x59A)
 </dt> <dt>
 
 
@@ -1762,10 +1762,10 @@ Dieses Listenfeld unterstützt keine Tabstopps.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_DESTROY_OBJECT_OF_OTHER_THREAD"></span><span id="error_destroy_object_of_other_thread"></span>**Fehler \_ beim \_ zerstören \_ des Objekts eines \_ anderen \_ Threads.**
+<span id="ERROR_DESTROY_OBJECT_OF_OTHER_THREAD"></span><span id="error_destroy_object_of_other_thread"></span>**ERROR \_ DESTROY \_ OBJECT \_ OF \_ OTHER \_ THREAD**
 </dt> <dd> <dl> <dt>
 
-1435 (0x59b)
+1435 (0x59B)
 </dt> <dt>
 
 
@@ -1775,88 +1775,88 @@ Das von einem anderen Thread erstellte Objekt kann nicht zerstört werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CHILD_WINDOW_MENU"></span><span id="error_child_window_menu"></span>**Menü "Fehler untergeordneter \_ \_ Fenster" \_**
+<span id="ERROR_CHILD_WINDOW_MENU"></span><span id="error_child_window_menu"></span>**MENÜ \_ "FEHLER IM \_ UNTERGEORDNETEN \_ FENSTER"**
 </dt> <dd> <dl> <dt>
 
-1436 (0x59c)
+1436 (0x59C)
 </dt> <dt>
 
 
 
-Untergeordnete Fenster dürfen keine Menüs enthalten.
+Untergeordnete Fenster können keine Menüs haben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SYSTEM_MENU"></span><span id="error_no_system_menu"></span>**Fehler " \_ kein \_ System" \_**
+<span id="ERROR_NO_SYSTEM_MENU"></span><span id="error_no_system_menu"></span>**FEHLER: \_ \_ MENÜ "KEIN \_ SYSTEM"**
 </dt> <dd> <dl> <dt>
 
-1437 (0x59d)
+1437 (0x59D)
 </dt> <dt>
 
 
 
-Das Fenster verfügt über kein Systemmenü.
+Das Fenster verfügt nicht über ein Systemmenü.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_MSGBOX_STYLE"></span><span id="error_invalid_msgbox_style"></span>**\_ungültiger \_ MsgBox- \_ Stil.**
+<span id="ERROR_INVALID_MSGBOX_STYLE"></span><span id="error_invalid_msgbox_style"></span>**FEHLER: \_ \_ UNGÜLTIGER MSGBOX-STIL \_**
 </dt> <dd> <dl> <dt>
 
-1438 (0x59e)
+1438 (0x59E)
 </dt> <dt>
 
 
 
-Ungültiger Stil für Meldungs Feld.
+Ungültiger Meldungsfeldstil.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_SPI_VALUE"></span><span id="error_invalid_spi_value"></span>**\_ungültiger \_ SPI- \_ Wert**
+<span id="ERROR_INVALID_SPI_VALUE"></span><span id="error_invalid_spi_value"></span>**FEHLER \_ UNGÜLTIGER \_ \_ SPI-WERT**
 </dt> <dd> <dl> <dt>
 
-1439 (0x59f)
+1439 (0x59F)
 </dt> <dt>
 
 
 
-Ungültiger systemweite (SPI \_ \* )-Parameter.
+Ungültiger systemweiter Parameter \_ \* (SPI).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SCREEN_ALREADY_LOCKED"></span><span id="error_screen_already_locked"></span>**der Fehler \_ Bildschirm ist \_ bereits \_ gesperrt.**
+<span id="ERROR_SCREEN_ALREADY_LOCKED"></span><span id="error_screen_already_locked"></span>**FEHLERBILDSCHIRM \_ \_ BEREITS \_ GESPERRT**
 </dt> <dd> <dl> <dt>
 
-1440 (0x5a0)
+1440 (0x5A0)
 </dt> <dt>
 
 
 
-Der Bildschirm ist bereits gesperrt.
+Bildschirm bereits gesperrt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_HWNDS_HAVE_DIFF_PARENT"></span><span id="error_hwnds_have_diff_parent"></span>**Fehler \_ HWNDs \_ verfügen über ein über \_ \_ geordnetes Element**
+<span id="ERROR_HWNDS_HAVE_DIFF_PARENT"></span><span id="error_hwnds_have_diff_parent"></span>**\_FEHLER-HWNDS \_ VERFÜGEN ÜBER \_ ÜBERGEORDNETES \_ DIFF-ELEMENT**
 </dt> <dd> <dl> <dt>
 
-1441 (0x5a1)
+1441 (0x5A1)
 </dt> <dt>
 
 
 
-Alle Handles für Windows in einer Positions Struktur mit mehreren Fenstern müssen über das gleiche übergeordnete Element verfügen.
+Alle Handles für Fenster in einer Positionsstruktur mit mehreren Fenstern müssen das gleiche übergeordnete Element haben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NOT_CHILD_WINDOW"></span><span id="error_not_child_window"></span>**Fehler \_ nicht untergeordnetes \_ \_ Fenster**
+<span id="ERROR_NOT_CHILD_WINDOW"></span><span id="error_not_child_window"></span>**FEHLER \_ NICHT \_ UNTERGEORDNETES \_ FENSTER**
 </dt> <dd> <dl> <dt>
 
-1442 (0x5a2)
+1442 (0x5A2)
 </dt> <dt>
 
 
@@ -1866,231 +1866,231 @@ Das Fenster ist kein untergeordnetes Fenster.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_GW_COMMAND"></span><span id="error_invalid_gw_command"></span>**Fehler \_ ungültiger \_ GW- \_ Befehl.**
+<span id="ERROR_INVALID_GW_COMMAND"></span><span id="error_invalid_gw_command"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ GW-BEFEHL**
 </dt> <dd> <dl> <dt>
 
-1443 (0x5a3)
+1443 (0x5A3)
 </dt> <dt>
 
 
 
-Ungültiger GW- \_ \* Befehl.
+Ungültiger \_ \* GW-Befehl.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_THREAD_ID"></span><span id="error_invalid_thread_id"></span>**Fehler \_ ungültige \_ Thread- \_ ID.**
+<span id="ERROR_INVALID_THREAD_ID"></span><span id="error_invalid_thread_id"></span>**FEHLER: \_ \_ UNGÜLTIGE \_ THREAD-ID**
 </dt> <dd> <dl> <dt>
 
-1444 (0x5a4)
+1444 (0x5A4)
 </dt> <dt>
 
 
 
-Ungültiger Thread Bezeichner.
+Ungültiger Threadbezeichner.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NON_MDICHILD_WINDOW"></span><span id="error_non_mdichild_window"></span>**\_nicht- \_ MDIChild-Fehler \_ Fenster**
+<span id="ERROR_NON_MDICHILD_WINDOW"></span><span id="error_non_mdichild_window"></span>**FEHLERFENSTER \_ \_ "NICHT MDICHILD" \_**
 </dt> <dd> <dl> <dt>
 
-1445 (0x5a5)
+1445 (0x5A5)
 </dt> <dt>
 
 
 
-Eine Nachricht kann nicht von einem Fenster verarbeitet werden, das kein MDI-Fenster (Multiple Document Interface) ist.
+Eine Nachricht kann nicht aus einem Fenster, das kein MDI-Fenster (Multiple Document Interface) ist, verarbeiten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_POPUP_ALREADY_ACTIVE"></span><span id="error_popup_already_active"></span>**Fehler- \_ Popup ist \_ bereits \_ aktiv.**
+<span id="ERROR_POPUP_ALREADY_ACTIVE"></span><span id="error_popup_already_active"></span>**FEHLER \_ POPUP \_ BEREITS \_ AKTIV**
 </dt> <dd> <dl> <dt>
 
-1446 (0x5a6)
+1446 (0x5A6)
 </dt> <dt>
 
 
 
-Das Popup Menü ist bereits aktiv.
+Das Popupmenü ist bereits aktiv.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SCROLLBARS"></span><span id="error_no_scrollbars"></span>**Fehler \_ keine \_ Scrollleisten**
+<span id="ERROR_NO_SCROLLBARS"></span><span id="error_no_scrollbars"></span>**FEHLER: \_ KEINE \_ SCROLLLEISTEN**
 </dt> <dd> <dl> <dt>
 
-1447 (0x5a7)
+1447 (0x5A7)
 </dt> <dt>
 
 
 
-Das Fenster verfügt über keine Scrollleisten.
+Das Fenster verfügt nicht über Bildlaufleisten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_SCROLLBAR_RANGE"></span><span id="error_invalid_scrollbar_range"></span>**\_ungültiger \_ ScrollBar- \_ Bereich.**
+<span id="ERROR_INVALID_SCROLLBAR_RANGE"></span><span id="error_invalid_scrollbar_range"></span>**FEHLER: \_ \_ UNGÜLTIGER \_ SCROLLLEISTENBEREICH**
 </dt> <dd> <dl> <dt>
 
-1448 (0x5a8)
+1448 (0x5A8)
 </dt> <dt>
 
 
 
-Der Schiebe Leistenbereich darf nicht größer sein als MAXLONG.
+Der Scrollleistenbereich darf nicht größer als MAXLONG sein.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_SHOWWIN_COMMAND"></span><span id="error_invalid_showwin_command"></span>**Fehler \_ ungültiger \_ ShowWin- \_ Befehl.**
+<span id="ERROR_INVALID_SHOWWIN_COMMAND"></span><span id="error_invalid_showwin_command"></span>**FEHLER: \_ \_ UNGÜLTIGER SHOWWIN-BEFEHL \_**
 </dt> <dd> <dl> <dt>
 
-1449 (0x5a9)
+1449 (0x5A9)
 </dt> <dt>
 
 
 
-Das Fenster kann nicht in der angegebenen Weise angezeigt oder entfernt werden.
+Das Fenster kann nicht wie angegeben angezeigt oder entfernt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_SYSTEM_RESOURCES"></span><span id="error_no_system_resources"></span>**Fehler \_ keine \_ System \_ Ressourcen**
+<span id="ERROR_NO_SYSTEM_RESOURCES"></span><span id="error_no_system_resources"></span>**FEHLER: \_ \_ KEINE \_ SYSTEMRESSOURCEN**
 </dt> <dd> <dl> <dt>
 
-1450 (0x5aa)
+1450 (0x5AA)
 </dt> <dt>
 
 
 
-Es sind nicht genügend Systemressourcen vorhanden, um den angeforderten Dienst abzuschließen.
+Es sind nicht genügend Systemressourcen vorhanden, um den angeforderten Dienst fertig zu stellen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NONPAGED_SYSTEM_RESOURCES"></span><span id="error_nonpaged_system_resources"></span>**nicht auslagerbare \_ \_ System \_ Ressourcen**
+<span id="ERROR_NONPAGED_SYSTEM_RESOURCES"></span><span id="error_nonpaged_system_resources"></span>**FEHLER: \_ NICHT AUSPAGEIERTE \_ \_ SYSTEMRESSOURCEN**
 </dt> <dd> <dl> <dt>
 
-1451 (0x5ab)
+1451 (0x5AB)
 </dt> <dt>
 
 
 
-Es sind nicht genügend Systemressourcen vorhanden, um den angeforderten Dienst abzuschließen.
+Es sind nicht genügend Systemressourcen vorhanden, um den angeforderten Dienst fertig zu stellen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PAGED_SYSTEM_RESOURCES"></span><span id="error_paged_system_resources"></span>**Fehler beim auslageres \_ \_ System \_ Ressourcen.**
+<span id="ERROR_PAGED_SYSTEM_RESOURCES"></span><span id="error_paged_system_resources"></span>**SYSTEMRESSOURCEN \_ MIT \_ FEHLERSEITE \_**
 </dt> <dd> <dl> <dt>
 
-1452 (0x5ac)
+1452 (0x5AC)
 </dt> <dt>
 
 
 
-Es sind nicht genügend Systemressourcen vorhanden, um den angeforderten Dienst abzuschließen.
+Es sind nicht genügend Systemressourcen vorhanden, um den angeforderten Dienst fertig zu stellen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_WORKING_SET_QUOTA"></span><span id="error_working_set_quota"></span>**Fehler beim \_ Arbeits \_ Satz \_ Kontingent.**
+<span id="ERROR_WORKING_SET_QUOTA"></span><span id="error_working_set_quota"></span>**FEHLER BEIM \_ \_ \_ WORKINGSETKONTINGENT**
 </dt> <dd> <dl> <dt>
 
-1453 (0x5ad)
+1453 (0x5AD)
 </dt> <dt>
 
 
 
-Nicht genügend Kontingent zum Durchführen des angeforderten Dienstanbieter.
+Unzureichendes Kontingent zum Abschließen des angeforderten Diensts.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PAGEFILE_QUOTA"></span><span id="error_pagefile_quota"></span>**Fehlerseiten \_ Datei- \_ Kontingent**
+<span id="ERROR_PAGEFILE_QUOTA"></span><span id="error_pagefile_quota"></span>**FEHLER: \_ \_ PAGEFILE-KONTINGENT**
 </dt> <dd> <dl> <dt>
 
-1454 (0x5ae)
+1454 (0x5AE)
 </dt> <dt>
 
 
 
-Nicht genügend Kontingent zum Durchführen des angeforderten Dienstanbieter.
+Unzureichendes Kontingent zum Abschließen des angeforderten Diensts.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_COMMITMENT_LIMIT"></span><span id="error_commitment_limit"></span>**Fehler \_ Verpflichtungs \_ Limit**
+<span id="ERROR_COMMITMENT_LIMIT"></span><span id="error_commitment_limit"></span>**\_ \_ FEHLERBINDUNGSLIMIT**
 </dt> <dd> <dl> <dt>
 
-1455 (0x5af)
+1455 (0x5AF)
 </dt> <dt>
 
 
 
-Die Auslagerungs Datei ist zu klein, um diesen Vorgang abzuschließen.
+Die Auslagerungsdatei ist zu klein, um diesen Vorgang abschließen zu können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_MENU_ITEM_NOT_FOUND"></span><span id="error_menu_item_not_found"></span>**Fehler \_ Menü \_ Element wurde \_ nicht \_ gefunden.**
+<span id="ERROR_MENU_ITEM_NOT_FOUND"></span><span id="error_menu_item_not_found"></span>**\_ \_ FEHLERMENÜELEMENT NICHT \_ \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
-1456 (0x5b0)
+1456 (0x5B0)
 </dt> <dt>
 
 
 
-Ein Menü Element wurde nicht gefunden.
+Ein Menüelement wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_KEYBOARD_HANDLE"></span><span id="error_invalid_keyboard_handle"></span>**Fehler bei \_ ungültigem \_ Tastatur \_ handle.**
+<span id="ERROR_INVALID_KEYBOARD_HANDLE"></span><span id="error_invalid_keyboard_handle"></span>**FEHLER: \_ \_ UNGÜLTIGES \_ TASTATURHAND HANDLE**
 </dt> <dd> <dl> <dt>
 
-1457 (0x5b1)
+1457 (0x5B1)
 </dt> <dt>
 
 
 
-Ungültiges Tastaturlayout-handle.
+Ungültiges Tastaturlayouthand handle.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_HOOK_TYPE_NOT_ALLOWED"></span><span id="error_hook_type_not_allowed"></span>**Fehler- \_ Hook- \_ Typ \_ nicht \_ zulässig**
+<span id="ERROR_HOOK_TYPE_NOT_ALLOWED"></span><span id="error_hook_type_not_allowed"></span>**\_ \_ FEHLERHOOKTYP \_ NICHT \_ ZULÄSSIG**
 </dt> <dd> <dl> <dt>
 
-1458 (0x5b2)
+1458 (0x5B2)
 </dt> <dt>
 
 
 
-Der Hooks ist nicht zulässig.
+Hooktyp nicht zulässig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_REQUIRES_INTERACTIVE_WINDOWSTATION"></span><span id="error_requires_interactive_windowstation"></span>**Fehler \_ erfordert \_ interaktive \_ Fenster Station**
+<span id="ERROR_REQUIRES_INTERACTIVE_WINDOWSTATION"></span><span id="error_requires_interactive_windowstation"></span>**FEHLER \_ ERFORDERT \_ INTERAKTIVE \_ WINDOWSTATION**
 </dt> <dd> <dl> <dt>
 
-1459 (0x5b3)
+1459 (0x5B3)
 </dt> <dt>
 
 
 
-Für diesen Vorgang ist eine interaktive Fenster Station erforderlich.
+Für diesen Vorgang ist eine interaktive Fensterstation erforderlich.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_TIMEOUT"></span><span id="error_timeout"></span>**Fehler \_ Timeout**
+<span id="ERROR_TIMEOUT"></span><span id="error_timeout"></span>**\_FEHLERZEITÜBERSCHREITUNG**
 </dt> <dd> <dl> <dt>
 
-1460 (0x5b4)
+1460 (0x5B4)
 </dt> <dt>
 
 
@@ -2100,88 +2100,88 @@ Dieser Vorgang wurde wegen Zeitüberschreitung zurückgegeben.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_MONITOR_HANDLE"></span><span id="error_invalid_monitor_handle"></span>**Fehler bei \_ ungültigem \_ Monitor \_ handle.**
+<span id="ERROR_INVALID_MONITOR_HANDLE"></span><span id="error_invalid_monitor_handle"></span>**FEHLER: \_ UNGÜLTIGES \_ MONITORHAND \_ HANDLE**
 </dt> <dd> <dl> <dt>
 
-1461 (0x5b5)
+1461 (0x5B5)
 </dt> <dt>
 
 
 
-Ungültiges Monitor handle.
+Ungültiges Monitorhandle.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INCORRECT_SIZE"></span><span id="error_incorrect_size"></span>**Fehler \_ hafte \_ Größe**
+<span id="ERROR_INCORRECT_SIZE"></span><span id="error_incorrect_size"></span>**FEHLER: \_ FALSCHE \_ GRÖßE**
 </dt> <dd> <dl> <dt>
 
-1462 (0x5b6)
+1462 (0x5B6)
 </dt> <dt>
 
 
 
-Falsches Größen Argument.
+Falsches Größenargument.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SYMLINK_CLASS_DISABLED"></span><span id="error_symlink_class_disabled"></span>**Fehler- \_ symlink- \_ Klasse \_ deaktiviert**
+<span id="ERROR_SYMLINK_CLASS_DISABLED"></span><span id="error_symlink_class_disabled"></span>**ERROR \_ SYMLINK \_ CLASS \_ DISABLED**
 </dt> <dd> <dl> <dt>
 
-1463 (0x5b7)
+1463 (0x5B7)
 </dt> <dt>
 
 
 
-Die symbolische Verknüpfung kann nicht befolgt werden, da ihr Typ deaktiviert ist.
+Dem symbolischen Link kann nicht gefolgt werden, da sein Typ deaktiviert ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SYMLINK_NOT_SUPPORTED"></span><span id="error_symlink_not_supported"></span>**Fehler \_ symlink \_ \_ wird nicht unterstützt.**
+<span id="ERROR_SYMLINK_NOT_SUPPORTED"></span><span id="error_symlink_not_supported"></span>**FEHLER \_ SYMLINK \_ WIRD NICHT \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
-1464 (0x5b8)
+1464 (0x5B8)
 </dt> <dt>
 
 
 
-Diese Anwendung unterstützt nicht den aktuellen Vorgang auf symbolischen Verknüpfungen.
+Diese Anwendung unterstützt den aktuellen Vorgang für symbolische Verknüpfungen nicht.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_XML_PARSE_ERROR"></span><span id="error_xml_parse_error"></span>**Fehler beim \_ Analysieren der XML-Analyse. \_ \_**
+<span id="ERROR_XML_PARSE_ERROR"></span><span id="error_xml_parse_error"></span>**ERROR \_ XML \_ PARSE \_ ERROR**
 </dt> <dd> <dl> <dt>
 
-1465 (0x5b9)
+1465 (0x5B9)
 </dt> <dt>
 
 
 
-Die angeforderten XML-Daten konnten von Windows nicht analysiert werden.
+Windows konnte die angeforderten XML-Daten nicht analysieren.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_XMLDSIG_ERROR"></span><span id="error_xmldsig_error"></span>**Fehler bei \_ XMLDSIG. \_**
+<span id="ERROR_XMLDSIG_ERROR"></span><span id="error_xmldsig_error"></span>**FEHLER: \_ \_ XMLDSIG-FEHLER**
 </dt> <dd> <dl> <dt>
 
-1466 (0x5ba)
+1466 (0x5BA)
 </dt> <dt>
 
 
 
-Fehler beim Verarbeiten einer digitalen XML-Signatur.
+Beim Verarbeiten einer digitalen XML-Signatur ist ein Fehler aufgetreten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_RESTART_APPLICATION"></span><span id="error_restart_application"></span>**Fehler beim \_ Neustart der \_ Anwendung**
+<span id="ERROR_RESTART_APPLICATION"></span><span id="error_restart_application"></span>**FEHLER \_ BEIM \_ NEUSTARTEN DER ANWENDUNG**
 </dt> <dd> <dl> <dt>
 
-1467 (0x5bb)
+1467 (0x5BB)
 </dt> <dt>
 
 
@@ -2191,88 +2191,88 @@ Diese Anwendung muss neu gestartet werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_WRONG_COMPARTMENT"></span><span id="error_wrong_compartment"></span>**Fehler beim \_ falschen Depot \_**
+<span id="ERROR_WRONG_COMPARTMENT"></span><span id="error_wrong_compartment"></span>**FEHLER \_ IN FALSCHEM \_ DEPOT**
 </dt> <dd> <dl> <dt>
 
-1468 (0x5bc)
+1468 (0x5BC)
 </dt> <dt>
 
 
 
-Der Aufrufer hat die Verbindungsanforderung im falschen Routing Depot vorgenommen.
+Der Aufrufer hat die Verbindungsanforderung im falschen Routingde depot vorgenommen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_AUTHIP_FAILURE"></span><span id="error_authip_failure"></span>**Fehler \_ AuthIP- \_ Fehler**
+<span id="ERROR_AUTHIP_FAILURE"></span><span id="error_authip_failure"></span>**FEHLER: \_ \_ AUTHIP-FEHLER**
 </dt> <dd> <dl> <dt>
 
-1469 (0x5bd)
+1469 (0x5BD)
 </dt> <dt>
 
 
 
-AuthIP-Fehler beim Versuch, eine Verbindung mit dem Remote Host herzustellen.
+Beim Versuch, eine Verbindung mit dem Remotehost herzustellen, ist ein AuthIP-Fehler vorhanden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NO_NVRAM_RESOURCES"></span><span id="error_no_nvram_resources"></span>**Fehler \_ keine \_ NVRAM- \_ Ressourcen**
+<span id="ERROR_NO_NVRAM_RESOURCES"></span><span id="error_no_nvram_resources"></span>**FEHLER \_ KEINE \_ \_ NVRAM-RESSOURCEN**
 </dt> <dd> <dl> <dt>
 
-1470 (0x5be)
+1470 (0x5BE)
 </dt> <dt>
 
 
 
-Für den angeforderten Dienst sind nicht genügend NVRAM-Ressourcen vorhanden. Möglicherweise ist ein Neustart erforderlich.
+Es sind nicht genügend NVRAM-Ressourcen vorhanden, um den angeforderten Dienst abzuschließen. Möglicherweise ist ein Neustart erforderlich.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_NOT_GUI_PROCESS"></span><span id="error_not_gui_process"></span>**Fehler \_ nicht \_ GUI- \_ Prozess**
+<span id="ERROR_NOT_GUI_PROCESS"></span><span id="error_not_gui_process"></span>**FEHLER \_ NICHT \_ \_ GUI-PROZESS**
 </dt> <dd> <dl> <dt>
 
-1471 (0x5bf)
+1471 (0x5BF)
 </dt> <dt>
 
 
 
-Der angeforderte Vorgang kann nicht abgeschlossen werden, da es sich beim angegebenen Prozess nicht um einen GUI-Prozess handelt.
+Der angeforderte Vorgang kann nicht abgeschlossen werden, da der angegebene Prozess kein GUI-Prozess ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVENTLOG_FILE_CORRUPT"></span><span id="error_eventlog_file_corrupt"></span>**fehlerhafte \_ Ereignisprotokoll \_ Datei \_**
+<span id="ERROR_EVENTLOG_FILE_CORRUPT"></span><span id="error_eventlog_file_corrupt"></span>**\_FEHLER: \_ EREIGNISPROTOKOLLDATEI \_ BESCHÄDIGT**
 </dt> <dd> <dl> <dt>
 
-1500 (0x5dc)
+1500 (0x5DC)
 </dt> <dt>
 
 
 
-Die Ereignisprotokoll Datei ist beschädigt.
+Die Ereignisprotokolldatei ist beschädigt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVENTLOG_CANT_START"></span><span id="error_eventlog_cant_start"></span>**Fehler beim \_ Starten von EventLog. \_ \_**
+<span id="ERROR_EVENTLOG_CANT_START"></span><span id="error_eventlog_cant_start"></span>**FEHLER: \_ EVENTLOG \_ CANT \_ START**
 </dt> <dd> <dl> <dt>
 
-1501 (0x5dd)
+1501 (0x5DD)
 </dt> <dt>
 
 
 
-Es konnte keine Ereignisprotokoll Datei geöffnet werden, sodass der Ereignis Protokollierungs Dienst nicht gestartet wurde.
+Es konnte keine Ereignisprotokolldatei geöffnet werden, sodass der Ereignisprotokollierungsdienst nicht gestartet wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_LOG_FILE_FULL"></span><span id="error_log_file_full"></span>**Fehler \_ Protokoll \_ Datei \_ voll**
+<span id="ERROR_LOG_FILE_FULL"></span><span id="error_log_file_full"></span>**\_ \_ FEHLERPROTOKOLLDATEI \_ VOLLSTÄNDIG**
 </dt> <dd> <dl> <dt>
 
-1502 (0x5de)
+1502 (0x5DE)
 </dt> <dt>
 
 
@@ -2282,20 +2282,20 @@ Die Ereignisprotokolldatei ist voll.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVENTLOG_FILE_CHANGED"></span><span id="error_eventlog_file_changed"></span>**Fehler beim \_ Ändern der Ereignisprotokoll \_ Datei \_ .**
+<span id="ERROR_EVENTLOG_FILE_CHANGED"></span><span id="error_eventlog_file_changed"></span>**\_FEHLER: \_ EREIGNISPROTOKOLLDATEI \_ GEÄNDERT**
 </dt> <dd> <dl> <dt>
 
-1503 (0x5df)
+1503 (0x5DF)
 </dt> <dt>
 
 
 
-Die Ereignisprotokoll Datei wurde zwischen Lesevorgängen geändert.
+Die Ereignisprotokolldatei hat sich zwischen Lesevorgängen geändert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_TASK_NAME"></span><span id="error_invalid_task_name"></span>**Fehler \_ ungültiger \_ \_ Taskname.**
+<span id="ERROR_INVALID_TASK_NAME"></span><span id="error_invalid_task_name"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ AUFGABENNAME**
 </dt> <dd> <dl> <dt>
 
 1550 (0x60E)
@@ -2303,12 +2303,12 @@ Die Ereignisprotokoll Datei wurde zwischen Lesevorgängen geändert.
 
 
 
-Der angegebene TaskName ist ungültig.
+Der angegebene Aufgabenname ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_TASK_INDEX"></span><span id="error_invalid_task_index"></span>**Fehler bei \_ ungültigem \_ Task \_ Index.**
+<span id="ERROR_INVALID_TASK_INDEX"></span><span id="error_invalid_task_index"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ TASKINDEX**
 </dt> <dd> <dl> <dt>
 
 1551 (0x60F)
@@ -2316,12 +2316,12 @@ Der angegebene TaskName ist ungültig.
 
 
 
-Der angegebene Task Index ist ungültig.
+Der angegebene Aufgabenindex ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_THREAD_ALREADY_IN_TASK"></span><span id="error_thread_already_in_task"></span>**\_der Fehler Thread ist \_ bereits \_ in der \_ Aufgabe**
+<span id="ERROR_THREAD_ALREADY_IN_TASK"></span><span id="error_thread_already_in_task"></span>**\_FEHLERTHREAD \_ BEREITS IM \_ \_ TASK**
 </dt> <dd> <dl> <dt>
 
 1552 (0x610)
@@ -2334,7 +2334,7 @@ Der angegebene Thread wird bereits einer Aufgabe beitreten.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_SERVICE_FAILURE"></span><span id="error_install_service_failure"></span>**Fehler beim \_ Installieren des \_ Dienst \_ Fehlers.**
+<span id="ERROR_INSTALL_SERVICE_FAILURE"></span><span id="error_install_service_failure"></span>**FEHLER BEIM \_ INSTALLIEREN \_ DES \_ DIENSTS**
 </dt> <dd> <dl> <dt>
 
 1601 (0x641)
@@ -2342,12 +2342,12 @@ Der angegebene Thread wird bereits einer Aufgabe beitreten.
 
 
 
-Auf den Windows Installer Dienst konnte nicht zugegriffen werden. Dies kann vorkommen, wenn die Windows Installer nicht ordnungsgemäß installiert ist. Wenden Sie sich an den Support, um Hilfe zu erhalten.
+Auf den Windows Installer-Dienst konnte nicht zugegriffen werden. Dies kann auftreten, wenn der Windows Installer nicht ordnungsgemäß installiert ist. Wenden Sie sich an Ihr Supportpersonal, um Unterstützung zu erhalten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_USEREXIT"></span><span id="error_install_userexit"></span>**Fehler beim \_ Installieren von \_ Userexit.**
+<span id="ERROR_INSTALL_USEREXIT"></span><span id="error_install_userexit"></span>**FEHLER \_ BEI DER INSTALLATION VON \_ USEREXIT**
 </dt> <dd> <dl> <dt>
 
 1602 (0x642)
@@ -2355,12 +2355,12 @@ Auf den Windows Installer Dienst konnte nicht zugegriffen werden. Dies kann vork
 
 
 
-Benutzer hat die Installation abgebrochen.
+Der Benutzer hat die Installation abgebrochen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_FAILURE"></span><span id="error_install_failure"></span>**Fehler bei der \_ Installation. \_**
+<span id="ERROR_INSTALL_FAILURE"></span><span id="error_install_failure"></span>**FEHLER BEI \_ DER INSTALLATION \_**
 </dt> <dd> <dl> <dt>
 
 1603 (0x643)
@@ -2373,7 +2373,7 @@ Schwerwiegender Fehler bei der Installation.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_SUSPEND"></span><span id="error_install_suspend"></span>**Fehler beim \_ Installieren von \_ Suspend**
+<span id="ERROR_INSTALL_SUSPEND"></span><span id="error_install_suspend"></span>**FEHLER \_ BEIM INSTALLIEREN VON \_ "SUSPEND"**
 </dt> <dd> <dl> <dt>
 
 1604 (0x644)
@@ -2381,12 +2381,12 @@ Schwerwiegender Fehler bei der Installation.
 
 
 
-Die Installation wurde angehalten, unvollständig.
+Installation angehalten, unvollständig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_UNKNOWN_PRODUCT"></span><span id="error_unknown_product"></span>**Unbekannter Fehler. \_ \_**
+<span id="ERROR_UNKNOWN_PRODUCT"></span><span id="error_unknown_product"></span>**FEHLER \_ \_ UNBEKANNTES PRODUKT**
 </dt> <dd> <dl> <dt>
 
 1605 (0x645)
@@ -2394,12 +2394,12 @@ Die Installation wurde angehalten, unvollständig.
 
 
 
-Diese Aktion ist nur für Produkte gültig, die zurzeit installiert sind.
+Diese Aktion ist nur für Produkte gültig, die derzeit installiert sind.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_UNKNOWN_FEATURE"></span><span id="error_unknown_feature"></span>**Unbekannter Fehler. \_ \_**
+<span id="ERROR_UNKNOWN_FEATURE"></span><span id="error_unknown_feature"></span>**\_ \_ FEHLER: UNBEKANNTES FEATURE**
 </dt> <dd> <dl> <dt>
 
 1606 (0x646)
@@ -2407,12 +2407,12 @@ Diese Aktion ist nur für Produkte gültig, die zurzeit installiert sind.
 
 
 
-Die Funktions-ID ist nicht registriert.
+Feature-ID nicht registriert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_UNKNOWN_COMPONENT"></span><span id="error_unknown_component"></span>**\_unbekannter Fehler \_ Komponente.**
+<span id="ERROR_UNKNOWN_COMPONENT"></span><span id="error_unknown_component"></span>**\_FEHLER UNBEKANNTE \_ KOMPONENTE**
 </dt> <dd> <dl> <dt>
 
 1607 (0x647)
@@ -2420,12 +2420,12 @@ Die Funktions-ID ist nicht registriert.
 
 
 
-Die Komponenten-ID ist nicht registriert.
+Komponenten-ID nicht registriert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_UNKNOWN_PROPERTY"></span><span id="error_unknown_property"></span>**\_unbekannter Fehler \_ Eigenschaft.**
+<span id="ERROR_UNKNOWN_PROPERTY"></span><span id="error_unknown_property"></span>**ERROR \_ UNKNOWN \_ PROPERTY**
 </dt> <dd> <dl> <dt>
 
 1608 (0x648)
@@ -2438,7 +2438,7 @@ Unbekannte Eigenschaft.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_HANDLE_STATE"></span><span id="error_invalid_handle_state"></span>**Fehler bei \_ ungültigem \_ handle- \_ Status**
+<span id="ERROR_INVALID_HANDLE_STATE"></span><span id="error_invalid_handle_state"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ HANDLEZUSTAND**
 </dt> <dd> <dl> <dt>
 
 1609 (0x649)
@@ -2451,36 +2451,36 @@ Das Handle befindet sich in einem ungültigen Zustand.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_BAD_CONFIGURATION"></span><span id="error_bad_configuration"></span>**Fehler \_ hafte \_ Konfiguration**
+<span id="ERROR_BAD_CONFIGURATION"></span><span id="error_bad_configuration"></span>**FEHLER: \_ FEHLERHAFTE \_ KONFIGURATION**
 </dt> <dd> <dl> <dt>
 
-1610 (0x64a)
+1610 (0x64A)
 </dt> <dt>
 
 
 
-Die Konfigurationsdaten für dieses Produkt sind beschädigt. Wenden Sie sich an das Support Personal.
+Die Konfigurationsdaten für dieses Produkt sind beschädigt. Wenden Sie sich an Ihre Supportmitarbeiter.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INDEX_ABSENT"></span><span id="error_index_absent"></span>**Fehler \_ Index \_ fehlt.**
+<span id="ERROR_INDEX_ABSENT"></span><span id="error_index_absent"></span>**FEHLERINDEX \_ \_ NICHT VORHANDEN**
 </dt> <dd> <dl> <dt>
 
-1611 (0x64b)
+1611 (0x64B)
 </dt> <dt>
 
 
 
-Komponenten Qualifizierer ist nicht vorhanden.
+Komponentenqualifizierer nicht vorhanden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_SOURCE_ABSENT"></span><span id="error_install_source_absent"></span>**Fehler beim \_ Installieren der \_ Quelle. \_**
+<span id="ERROR_INSTALL_SOURCE_ABSENT"></span><span id="error_install_source_absent"></span>**FEHLER \_ BEI DER INSTALLATION DER QUELLE \_ \_ ABSENT**
 </dt> <dd> <dl> <dt>
 
-1612 (0x64c)
+1612 (0x64C)
 </dt> <dt>
 
 
@@ -2490,23 +2490,23 @@ Die Installationsquelle für dieses Produkt ist nicht verfügbar. Vergewissern S
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_PACKAGE_VERSION"></span><span id="error_install_package_version"></span>**Fehler beim \_ Installieren der \_ Paket \_ Version.**
+<span id="ERROR_INSTALL_PACKAGE_VERSION"></span><span id="error_install_package_version"></span>**FEHLER BEI \_ \_ DER \_ PAKETINSTALLATIONSVERSION**
 </dt> <dd> <dl> <dt>
 
-1613 (0x64d)
+1613 (0x64D)
 </dt> <dt>
 
 
 
-Dieses Installationspaket kann nicht vom Windows Installer-Dienst installiert werden. Sie müssen eine Windows-Service Pack installieren, die eine neuere Version des Windows Installer Dienstanbieter enthält.
+Dieses Installationspaket kann nicht vom Windows Installer-Dienst installiert werden. Sie müssen ein Windows Service Pack installieren, das eine neuere Version des Windows Installer-Diensts enthält.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRODUCT_UNINSTALLED"></span><span id="error_product_uninstalled"></span>**Fehler \_ Produkt \_ deinstalliert**
+<span id="ERROR_PRODUCT_UNINSTALLED"></span><span id="error_product_uninstalled"></span>**FEHLER \_ PRODUKT \_ DEINSTALLIERT**
 </dt> <dd> <dl> <dt>
 
-1614 (0x64e)
+1614 (0x64E)
 </dt> <dt>
 
 
@@ -2516,20 +2516,20 @@ Produkt wird deinstalliert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_BAD_QUERY_SYNTAX"></span><span id="error_bad_query_syntax"></span>**Syntax für ungültige \_ \_ Abfrage Fehler \_**
+<span id="ERROR_BAD_QUERY_SYNTAX"></span><span id="error_bad_query_syntax"></span>**FEHLER: \_ FEHLERHAFTE \_ \_ ABFRAGESYNTAX**
 </dt> <dd> <dl> <dt>
 
-1615 (0x64f)
+1615 (0x64F)
 </dt> <dt>
 
 
 
-Die SQL-Abfrage Syntax ist ungültig oder nicht unterstützt.
+SQL Abfragesyntax ungültig oder nicht unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_FIELD"></span><span id="error_invalid_field"></span>**\_ungültiges \_ Feld für Fehler**
+<span id="ERROR_INVALID_FIELD"></span><span id="error_invalid_field"></span>**FEHLER \_ UNGÜLTIGES \_ FELD**
 </dt> <dd> <dl> <dt>
 
 1616 (0x650)
@@ -2537,12 +2537,12 @@ Die SQL-Abfrage Syntax ist ungültig oder nicht unterstützt.
 
 
 
-Das Daten Satz Feld ist nicht vorhanden.
+Das Datensatzfeld ist nicht vorhanden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_DEVICE_REMOVED"></span><span id="error_device_removed"></span>**Fehler \_ Gerät \_ entfernt**
+<span id="ERROR_DEVICE_REMOVED"></span><span id="error_device_removed"></span>**FEHLER \_ GERÄT \_ ENTFERNT**
 </dt> <dd> <dl> <dt>
 
 1617 (0x651)
@@ -2555,7 +2555,7 @@ Das Gerät wurde entfernt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_ALREADY_RUNNING"></span><span id="error_install_already_running"></span>**Fehler \_ Installation wird \_ bereits \_ ausgeführt.**
+<span id="ERROR_INSTALL_ALREADY_RUNNING"></span><span id="error_install_already_running"></span>**FEHLER: \_ INSTALLATION \_ WIRD BEREITS \_ AUSGEFÜHRT**
 </dt> <dd> <dl> <dt>
 
 1618 (0x652)
@@ -2563,12 +2563,12 @@ Das Gerät wurde entfernt.
 
 
 
-Es wird bereits eine andere Installation ausgeführt. Schließen Sie diese Installation ab, bevor Sie mit der Installation fortfahren.
+Eine andere Installation wird bereits in Bearbeitung. Schließen Sie diese Installation ab, bevor Sie mit dieser Installation fortfahren.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_PACKAGE_OPEN_FAILED"></span><span id="error_install_package_open_failed"></span>**Fehler \_ beim \_ Öffnen des Pakets beim \_ Öffnen \_ .**
+<span id="ERROR_INSTALL_PACKAGE_OPEN_FAILED"></span><span id="error_install_package_open_failed"></span>**FEHLER BEIM \_ ÖFFNEN \_ DES \_ \_ INSTALLATIONSPAKETS.**
 </dt> <dd> <dl> <dt>
 
 1619 (0x653)
@@ -2576,12 +2576,12 @@ Es wird bereits eine andere Installation ausgeführt. Schließen Sie diese Insta
 
 
 
-Dieses Installationspaket konnte nicht geöffnet werden. Vergewissern Sie sich, dass das Paket vorhanden ist und Sie darauf zugreifen können, oder wenden Sie sich an den Hersteller der Anwendung, um zu überprüfen, ob dies ein gültiges Windows Installer Paket
+Dieses Installationspaket konnte nicht geöffnet werden. Vergewissern Sie sich, dass das Paket vorhanden ist und Sie darauf zugreifen können, oder wenden Sie sich an den Anwendungsanbieter, um sicherzustellen, dass es sich um ein gültiges Paket Windows Installer handelt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_PACKAGE_INVALID"></span><span id="error_install_package_invalid"></span>**Fehler beim \_ Installieren des \_ Pakets. \_**
+<span id="ERROR_INSTALL_PACKAGE_INVALID"></span><span id="error_install_package_invalid"></span>**FEHLER \_ BEIM INSTALLIEREN DES \_ \_ PAKETS UNGÜLTIG**
 </dt> <dd> <dl> <dt>
 
 1620 (0x654)
@@ -2589,12 +2589,12 @@ Dieses Installationspaket konnte nicht geöffnet werden. Vergewissern Sie sich, 
 
 
 
-Dieses Installationspaket konnte nicht geöffnet werden. Wenden Sie sich an den Hersteller der Anwendung, um sicherzustellen, dass dies ein gültiges Windows Installer Paket ist
+Dieses Installationspaket konnte nicht geöffnet werden. Wenden Sie sich an den Anwendungsanbieter, um zu überprüfen, ob es sich um ein gültiges Windows Installer-Paket handelt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_UI_FAILURE"></span><span id="error_install_ui_failure"></span>**Fehler beim \_ Installieren des \_ Benutzer \_ Oberflächen Fehlers**
+<span id="ERROR_INSTALL_UI_FAILURE"></span><span id="error_install_ui_failure"></span>**FEHLER BEIM \_ INSTALLIEREN DER \_ \_ BENUTZEROBERFLÄCHE**
 </dt> <dd> <dl> <dt>
 
 1621 (0x655)
@@ -2602,12 +2602,12 @@ Dieses Installationspaket konnte nicht geöffnet werden. Wenden Sie sich an den 
 
 
 
-Fehler beim Starten der Benutzeroberfläche des Windows Installer Dienstanbieter. Wenden Sie sich an das Support Personal.
+Fehler beim Starten der Benutzeroberfläche Windows Installer-Diensts. Wenden Sie sich an Ihre Supportmitarbeiter.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_LOG_FAILURE"></span><span id="error_install_log_failure"></span>**Fehler beim \_ Installieren des \_ Protokolls \_**
+<span id="ERROR_INSTALL_LOG_FAILURE"></span><span id="error_install_log_failure"></span>**FEHLER BEIM \_ INSTALLIEREN \_ DES PROTOKOLLS \_**
 </dt> <dd> <dl> <dt>
 
 1622 (0x656)
@@ -2615,12 +2615,12 @@ Fehler beim Starten der Benutzeroberfläche des Windows Installer Dienstanbieter
 
 
 
-Fehler beim Öffnen der Installationsprotokoll Datei. Vergewissern Sie sich, dass der angegebene Speicherort der Protokolldatei vorhanden ist und Sie darauf schreiben können.
+Fehler beim Öffnen der Installationsprotokolldatei. Vergewissern Sie sich, dass der angegebene Protokolldateispeicherort vorhanden ist und Sie in die Datei schreiben können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_LANGUAGE_UNSUPPORTED"></span><span id="error_install_language_unsupported"></span>**Fehler beim \_ Installieren der \_ Sprache \_ nicht unterstützt**
+<span id="ERROR_INSTALL_LANGUAGE_UNSUPPORTED"></span><span id="error_install_language_unsupported"></span>**FEHLER \_ BEIM INSTALLIEREN DER SPRACHE NICHT \_ \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
 1623 (0x657)
@@ -2628,12 +2628,12 @@ Fehler beim Öffnen der Installationsprotokoll Datei. Vergewissern Sie sich, das
 
 
 
-Die Sprache dieses Installationspakets wird von Ihrem System nicht unterstützt.
+Die Sprache dieses Installationspakets wird vom System nicht unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_TRANSFORM_FAILURE"></span><span id="error_install_transform_failure"></span>**Fehler beim \_ Installieren der \_ Transformation. \_**
+<span id="ERROR_INSTALL_TRANSFORM_FAILURE"></span><span id="error_install_transform_failure"></span>**FEHLER BEIM \_ INSTALLIEREN DES \_ \_ TRANSFORMATIONSFEHLERS**
 </dt> <dd> <dl> <dt>
 
 1624 (0x658)
@@ -2646,7 +2646,7 @@ Fehler beim Anwenden von Transformationen. Überprüfen Sie, ob die angegebenen 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_PACKAGE_REJECTED"></span><span id="error_install_package_rejected"></span>**Fehler beim \_ Installieren des \_ Pakets. \_**
+<span id="ERROR_INSTALL_PACKAGE_REJECTED"></span><span id="error_install_package_rejected"></span>**FEHLER \_ BEIM ABLEHNEN DES \_ \_ INSTALLATIONSPAKETS**
 </dt> <dd> <dl> <dt>
 
 1625 (0x659)
@@ -2654,15 +2654,15 @@ Fehler beim Anwenden von Transformationen. Überprüfen Sie, ob die angegebenen 
 
 
 
-Diese Installation ist durch die System Richtlinie unzulässig. Wenden Sie sich an Ihren Systemadministrator.
+Diese Installation ist durch die Systemrichtlinie unzulässig. Wenden Sie sich an Ihren Systemadministrator.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_FUNCTION_NOT_CALLED"></span><span id="error_function_not_called"></span>**Fehler \_ Funktion \_ nicht \_ aufgerufen**
+<span id="ERROR_FUNCTION_NOT_CALLED"></span><span id="error_function_not_called"></span>**FEHLERFUNKTION \_ \_ NICHT \_ AUFGERUFEN**
 </dt> <dd> <dl> <dt>
 
-1626 (0x65a)
+1626 (0x65A)
 </dt> <dt>
 
 
@@ -2672,49 +2672,49 @@ Die Funktion konnte nicht ausgeführt werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_FUNCTION_FAILED"></span><span id="error_function_failed"></span>**Fehler bei Fehler \_ Funktion \_**
+<span id="ERROR_FUNCTION_FAILED"></span><span id="error_function_failed"></span>**FEHLER \_ BEI \_ FUNKTIONSFEHLER**
 </dt> <dd> <dl> <dt>
 
-1627 (0x65b)
+1627 (0x65B)
 </dt> <dt>
 
 
 
-Fehler bei der Ausführung der Funktion.
+Fehler bei der Funktion während der Ausführung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_TABLE"></span><span id="error_invalid_table"></span>**Fehler \_ ungültige \_ Tabelle**
+<span id="ERROR_INVALID_TABLE"></span><span id="error_invalid_table"></span>**FEHLER: \_ UNGÜLTIGE \_ TABELLE**
 </dt> <dd> <dl> <dt>
 
-1628 (0x65c)
+1628 (0x65C)
 </dt> <dt>
 
 
 
-Es wurde eine ungültige oder unbekannte Tabelle angegeben.
+Ungültige oder unbekannte Tabelle angegeben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_DATATYPE_MISMATCH"></span><span id="error_datatype_mismatch"></span>**Fehler bei \_ DataType-Konflikt. \_**
+<span id="ERROR_DATATYPE_MISMATCH"></span><span id="error_datatype_mismatch"></span>**\_FEHLER: \_ DATENTYPKONFLIKT**
 </dt> <dd> <dl> <dt>
 
-1629 (0x65d)
+1629 (0x65D)
 </dt> <dt>
 
 
 
-Die bereitgestellten Daten haben einen falschen Typ.
+Die bereitgestellten Daten sind vom falschen Typ.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_UNSUPPORTED_TYPE"></span><span id="error_unsupported_type"></span>**\_nicht unterstützter Typ des Fehlers. \_**
+<span id="ERROR_UNSUPPORTED_TYPE"></span><span id="error_unsupported_type"></span>**FEHLER: \_ NICHT UNTERSTÜTZTER \_ TYP**
 </dt> <dd> <dl> <dt>
 
-1630 (0x65e)
+1630 (0x65E)
 </dt> <dt>
 
 
@@ -2724,20 +2724,20 @@ Daten dieses Typs werden nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_CREATE_FAILED"></span><span id="error_create_failed"></span>**Fehler beim \_ erstellen. \_**
+<span id="ERROR_CREATE_FAILED"></span><span id="error_create_failed"></span>**FEHLER \_ BEIM ERSTELLEN \_**
 </dt> <dd> <dl> <dt>
 
-1631 (0x65f)
+1631 (0x65F)
 </dt> <dt>
 
 
 
-Der Windows Installer-Dienst konnte nicht gestartet werden. Wenden Sie sich an das Support Personal.
+Der Windows Installer-Dienst konnte nicht gestartet werden. Wenden Sie sich an Ihre Supportmitarbeiter.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_TEMP_UNWRITABLE"></span><span id="error_install_temp_unwritable"></span>**Fehler beim Installieren der temporären \_ \_ \_ nicht Schreib baren Datei**
+<span id="ERROR_INSTALL_TEMP_UNWRITABLE"></span><span id="error_install_temp_unwritable"></span>**FEHLER: \_ \_ INSTALLATION VON TEMP \_ UNWRITABLE**
 </dt> <dd> <dl> <dt>
 
 1632 (0x660)
@@ -2745,12 +2745,12 @@ Der Windows Installer-Dienst konnte nicht gestartet werden. Wenden Sie sich an d
 
 
 
-Der Temp-Ordner befindet sich auf einem Laufwerk, das voll ist oder nicht zugänglich ist. Geben Sie Speicherplatz auf dem Laufwerk frei, oder überprüfen Sie, ob Sie über Schreibberechtigungen für den temporären Ordner verfügen.
+Der Ordner Temp befindet sich auf einem Laufwerk, das voll ist oder auf das nicht zugegriffen werden kann. Geben Sie Speicherplatz auf dem Laufwerk frei, oder vergewissern Sie sich, dass Sie über schreibberechtigungen für den Ordner Temp verfügen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_PLATFORM_UNSUPPORTED"></span><span id="error_install_platform_unsupported"></span>**Fehler beim \_ Installieren der \_ Plattform \_ nicht unterstützt**
+<span id="ERROR_INSTALL_PLATFORM_UNSUPPORTED"></span><span id="error_install_platform_unsupported"></span>**FEHLER \_ BEIM INSTALLIEREN DER PLATTFORM NICHT \_ \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
 1633 (0x661)
@@ -2763,7 +2763,7 @@ Dieses Installationspaket wird von diesem Prozessortyp nicht unterstützt. Wende
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_NOTUSED"></span><span id="error_install_notused"></span>**Fehler beim \_ Installieren von \_ notused**
+<span id="ERROR_INSTALL_NOTUSED"></span><span id="error_install_notused"></span>**FEHLER: \_ INSTALLATION \_ NICHTVERWENDT**
 </dt> <dd> <dl> <dt>
 
 1634 (0x662)
@@ -2776,7 +2776,7 @@ Die Komponente wird auf diesem Computer nicht verwendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PATCH_PACKAGE_OPEN_FAILED"></span><span id="error_patch_package_open_failed"></span>**Fehler beim \_ Öffnen des Patch- \_ Pakets \_ \_**
+<span id="ERROR_PATCH_PACKAGE_OPEN_FAILED"></span><span id="error_patch_package_open_failed"></span>**FEHLER BEIM \_ ÖFFNEN \_ DES \_ \_ PATCHPAKETS**
 </dt> <dd> <dl> <dt>
 
 1635 (0x663)
@@ -2784,12 +2784,12 @@ Die Komponente wird auf diesem Computer nicht verwendet.
 
 
 
-Dieses Update Paket konnte nicht geöffnet werden. Vergewissern Sie sich, dass das Update Paket vorhanden ist und Sie darauf zugreifen können, oder wenden Sie sich an den Hersteller der Anwendung, um zu überprüfen, ob es sich um ein gültiges Windows Installer Update
+Dieses Updatepaket konnte nicht geöffnet werden. Vergewissern Sie sich, dass das Updatepaket vorhanden ist und Sie darauf zugreifen können, oder wenden Sie sich an den Anwendungsanbieter, um sicherzustellen, dass es sich um ein gültiges Updatepaket Windows Installer handelt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PATCH_PACKAGE_INVALID"></span><span id="error_patch_package_invalid"></span>**Fehler beim \_ Patch- \_ Paket \_ ungültig**
+<span id="ERROR_PATCH_PACKAGE_INVALID"></span><span id="error_patch_package_invalid"></span>**FEHLER \_ \_ PATCHPAKET \_ UNGÜLTIG**
 </dt> <dd> <dl> <dt>
 
 1636 (0x664)
@@ -2797,12 +2797,12 @@ Dieses Update Paket konnte nicht geöffnet werden. Vergewissern Sie sich, dass d
 
 
 
-Dieses Update Paket konnte nicht geöffnet werden. Wenden Sie sich an den Hersteller der Anwendung, um zu überprüfen, ob es sich um ein gültiges Windows Installer Update
+Dieses Updatepaket konnte nicht geöffnet werden. Wenden Sie sich an den Anwendungsanbieter, um sicherzustellen, dass es sich um ein gültiges Windows Installer-Updatepaket handelt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PATCH_PACKAGE_UNSUPPORTED"></span><span id="error_patch_package_unsupported"></span>**Fehler beim \_ Patch- \_ Paket \_ nicht unterstützt**
+<span id="ERROR_PATCH_PACKAGE_UNSUPPORTED"></span><span id="error_patch_package_unsupported"></span>**FEHLER \_ \_ PATCHPAKET \_ NICHT UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
 1637 (0x665)
@@ -2810,12 +2810,12 @@ Dieses Update Paket konnte nicht geöffnet werden. Wenden Sie sich an den Herste
 
 
 
-Dieses Update Paket kann nicht vom Windows Installer-Dienst verarbeitet werden. Sie müssen eine Windows-Service Pack installieren, die eine neuere Version des Windows Installer Dienstanbieter enthält.
+Dieses Updatepaket kann nicht vom Installationsinstallationsdienst Windows verarbeitet werden. Sie müssen ein Windows Service Pack installieren, das eine neuere Version des Windows Installer-Diensts enthält.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PRODUCT_VERSION"></span><span id="error_product_version"></span>**Fehler \_ Produkt \_ Version**
+<span id="ERROR_PRODUCT_VERSION"></span><span id="error_product_version"></span>**FEHLER \_ \_ PRODUKTVERSION**
 </dt> <dd> <dl> <dt>
 
 1638 (0x666)
@@ -2823,12 +2823,12 @@ Dieses Update Paket kann nicht vom Windows Installer-Dienst verarbeitet werden. 
 
 
 
-Eine andere Version dieses Produkts ist bereits installiert. Die Installation dieser Version kann nicht fortgesetzt werden. Um die vorhandene Version dieses Produkts zu konfigurieren oder zu entfernen, verwenden Sie die Option Software in der Systemsteuerung.
+Eine andere Version dieses Produkts ist bereits installiert. Die Installation dieser Version kann nicht fortgesetzt werden. Um die vorhandene Version dieses Produkts zu konfigurieren oder zu entfernen, verwenden Sie auf der Seite Software Systemsteuerung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_COMMAND_LINE"></span><span id="error_invalid_command_line"></span>**Fehler \_ ungültige \_ Befehls \_ Zeile.**
+<span id="ERROR_INVALID_COMMAND_LINE"></span><span id="error_invalid_command_line"></span>**FEHLER: \_ \_ UNGÜLTIGE \_ BEFEHLSZEILE**
 </dt> <dd> <dl> <dt>
 
 1639 (0x667)
@@ -2836,12 +2836,12 @@ Eine andere Version dieses Produkts ist bereits installiert. Die Installation di
 
 
 
-Ungültiges Befehlszeilenargument. Ausführliche Hilfe zur Befehlszeile finden Sie im Windows Installer SDK.
+Ungültiges Befehlszeilenargument. Ausführliche Befehlszeilenhilfen Windows sie im Sdk für den Installer.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_REMOTE_DISALLOWED"></span><span id="error_install_remote_disallowed"></span>**Fehler beim \_ Installieren von \_ Remote. \_**
+<span id="ERROR_INSTALL_REMOTE_DISALLOWED"></span><span id="error_install_remote_disallowed"></span>**FEHLER \_ BEI \_ \_ REMOTEINSTALLIEREN NICHT VERFÜGBAR**
 </dt> <dd> <dl> <dt>
 
 1640 (0x668)
@@ -2849,12 +2849,12 @@ Ungültiges Befehlszeilenargument. Ausführliche Hilfe zur Befehlszeile finden S
 
 
 
-Nur Administratoren verfügen über die Berechtigung zum Hinzufügen, entfernen oder Konfigurieren von Server Software während einer Terminal Dienste-Remote Sitzung. Wenn Sie Software auf dem Server installieren oder konfigurieren möchten, wenden Sie sich an Ihren Netzwerkadministrator.
+Nur Administratoren verfügen über die Berechtigung zum Hinzufügen, Entfernen oder Konfigurieren von Serversoftware während einer Remotesitzung mit Terminaldiensten. Wenn Sie Software auf dem Server installieren oder konfigurieren möchten, wenden Sie sich an Ihren Netzwerkadministrator.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_SUCCESS_REBOOT_INITIATED"></span><span id="error_success_reboot_initiated"></span>**Fehler \_ beim \_ Neustart \_ wurde initiiert.**
+<span id="ERROR_SUCCESS_REBOOT_INITIATED"></span><span id="error_success_reboot_initiated"></span>**FEHLER: \_ \_ NEUSTART ERFOLGREICH \_ INITIIERT**
 </dt> <dd> <dl> <dt>
 
 1641 (0x669)
@@ -2867,46 +2867,46 @@ Der angeforderte Vorgang wurde erfolgreich abgeschlossen. Das System wird neu ge
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PATCH_TARGET_NOT_FOUND"></span><span id="error_patch_target_not_found"></span>**Das \_ \_ fehlerpatchziel wurde \_ nicht \_ gefunden.**
+<span id="ERROR_PATCH_TARGET_NOT_FOUND"></span><span id="error_patch_target_not_found"></span>**\_ \_ FEHLERPATCHZIEL NICHT \_ \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
-1642 (0x66a)
+1642 (0x66A)
 </dt> <dt>
 
 
 
-Das Upgrade kann nicht vom Windows Installer-Dienst installiert werden, weil das zu Aktualisier Ende Programm möglicherweise fehlt, oder das Upgrade kann eine andere Version des Programms aktualisieren. Vergewissern Sie sich, dass das zu Aktualisier Ende Programm auf dem Computer vorhanden ist und dass Sie über das richtige Upgrade verfügen.
+Das Upgrade kann nicht vom Windows Installer-Dienst installiert werden, da das zu aktualisierende Programm möglicherweise fehlt oder das Upgrade eine andere Version des Programms aktualisiert. Vergewissern Sie sich, dass das zu aktualisierende Programm auf Ihrem Computer vorhanden ist und dass Sie über das richtige Upgrade verfügen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PATCH_PACKAGE_REJECTED"></span><span id="error_patch_package_rejected"></span>**Fehler beim \_ Patch- \_ Paket \_ abgelehnt**
+<span id="ERROR_PATCH_PACKAGE_REJECTED"></span><span id="error_patch_package_rejected"></span>**\_ \_ FEHLERPATCHPAKET \_ ABGELEHNT**
 </dt> <dd> <dl> <dt>
 
-1643 (0x66b)
+1643 (0x66B)
 </dt> <dt>
 
 
 
-Das Update Paket ist von der Software Einschränkungs Richtlinie nicht zulässig.
+Das Updatepaket ist durch die Softwareeinschränkungsrichtlinie nicht zulässig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_TRANSFORM_REJECTED"></span><span id="error_install_transform_rejected"></span>**Fehler beim \_ Installieren der \_ Transformation. \_**
+<span id="ERROR_INSTALL_TRANSFORM_REJECTED"></span><span id="error_install_transform_rejected"></span>**FEHLER \_ BEIM INSTALLIEREN DER TRANSFORMATION \_ \_ ABGELEHNT**
 </dt> <dd> <dl> <dt>
 
-1644 (0x66c)
+1644 (0x66C)
 </dt> <dt>
 
 
 
-Eine oder mehrere Anpassungen sind von der Software Einschränkungs Richtlinie nicht zulässig.
+Eine oder mehrere Anpassungen sind durch die Softwareeinschränkungsrichtlinie nicht zulässig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_REMOTE_PROHIBITED"></span><span id="error_install_remote_prohibited"></span>**Fehler beim \_ Installieren der \_ Remote Installation. \_**
+<span id="ERROR_INSTALL_REMOTE_PROHIBITED"></span><span id="error_install_remote_prohibited"></span>**FEHLER \_ BEI REMOTEINSTALLATION \_ \_ UNZULÄSSIG**
 </dt> <dd> <dl> <dt>
 
 1645 (0x66D)
@@ -2914,12 +2914,12 @@ Eine oder mehrere Anpassungen sind von der Software Einschränkungs Richtlinie n
 
 
 
-In der Windows Installer ist die Installation von einem Remotedesktopverbindung nicht zulässig.
+Der Windows Installer lässt die Installation von einem Remotedesktopverbindung nicht zu.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PATCH_REMOVAL_UNSUPPORTED"></span><span id="error_patch_removal_unsupported"></span>**Entfernen des Fehler \_ Patches \_ \_ nicht unterstützt**
+<span id="ERROR_PATCH_REMOVAL_UNSUPPORTED"></span><span id="error_patch_removal_unsupported"></span>**\_ \_ FEHLERPATCHENTFERNUNG NICHT \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
 1646 (0x66E)
@@ -2927,15 +2927,15 @@ In der Windows Installer ist die Installation von einem Remotedesktopverbindung 
 
 
 
-Die Installation des Update Pakets wird nicht unterstützt.
+Die Deinstallation des Updatepakets wird nicht unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_UNKNOWN_PATCH"></span><span id="error_unknown_patch"></span>**Unbekannter Fehler beim \_ \_ Patch.**
+<span id="ERROR_UNKNOWN_PATCH"></span><span id="error_unknown_patch"></span>**FEHLER \_ UNBEKANNTER \_ PATCH**
 </dt> <dd> <dl> <dt>
 
-1647 (0x66f)
+1647 (0x66F)
 </dt> <dt>
 
 
@@ -2945,7 +2945,7 @@ Das Update wird nicht auf dieses Produkt angewendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PATCH_NO_SEQUENCE"></span><span id="error_patch_no_sequence"></span>**Fehler \_ Patch \_ keine \_ Sequenz**
+<span id="ERROR_PATCH_NO_SEQUENCE"></span><span id="error_patch_no_sequence"></span>**FEHLERPATCH \_ \_ KEINE \_ SEQUENZ**
 </dt> <dd> <dl> <dt>
 
 1648 (0x670)
@@ -2953,12 +2953,12 @@ Das Update wird nicht auf dieses Produkt angewendet.
 
 
 
-Für den Satz von Updates konnte keine gültige Sequenz gefunden werden.
+Es konnte keine gültige Sequenz für den Satz von Updates gefunden werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PATCH_REMOVAL_DISALLOWED"></span><span id="error_patch_removal_disallowed"></span>**Fehler beim Entfernen des Fehler \_ Patches. \_ \_**
+<span id="ERROR_PATCH_REMOVAL_DISALLOWED"></span><span id="error_patch_removal_disallowed"></span>**FEHLER \_ BEIM ENTFERNEN VON \_ \_ PATCHES NICHT ZULÄSSIG**
 </dt> <dd> <dl> <dt>
 
 1649 (0x671)
@@ -2971,7 +2971,7 @@ Das Entfernen von Updates wurde durch die Richtlinie nicht zugelassen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INVALID_PATCH_XML"></span><span id="error_invalid_patch_xml"></span>**Fehler \_ ungültige \_ Patch- \_ XML.**
+<span id="ERROR_INVALID_PATCH_XML"></span><span id="error_invalid_patch_xml"></span>**FEHLER: \_ UNGÜLTIGER \_ \_ PATCH-XML-CODE**
 </dt> <dd> <dl> <dt>
 
 1650 (0x672)
@@ -2979,12 +2979,12 @@ Das Entfernen von Updates wurde durch die Richtlinie nicht zugelassen.
 
 
 
-Die XML-Update Daten sind ungültig.
+Die XML-Updatedaten sind ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_PATCH_MANAGED_ADVERTISED_PRODUCT"></span><span id="error_patch_managed_advertised_product"></span>**Fehler \_ Patch für \_ verwaltete \_ angekündigte \_ Produkte**
+<span id="ERROR_PATCH_MANAGED_ADVERTISED_PRODUCT"></span><span id="error_patch_managed_advertised_product"></span>**VOM \_ FEHLERPATCH \_ \_ VERWALTETES \_ ANGEKÜNDIGTES PRODUKT**
 </dt> <dd> <dl> <dt>
 
 1651 (0x673)
@@ -2992,12 +2992,12 @@ Die XML-Update Daten sind ungültig.
 
 
 
-Windows Installer lässt keine Aktualisierung von verwalteten angekündigten Produkten zu. Vor dem Anwenden des Updates muss mindestens eine Produkt Funktion installiert werden.
+Windows Das Installationsprogramm lässt keine Aktualisierung von verwalteten angekündigten Produkten zu. Vor dem Anwenden des Updates muss mindestens ein Feature des Produkts installiert werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_SERVICE_SAFEBOOT"></span><span id="error_install_service_safeboot"></span>**Fehler beim \_ Installieren von \_ Dienst- \_ SafeBoot**
+<span id="ERROR_INSTALL_SERVICE_SAFEBOOT"></span><span id="error_install_service_safeboot"></span>**FEHLER BEIM \_ INSTALLIEREN \_ DES \_ DIENSTS SAFEBOOT**
 </dt> <dd> <dl> <dt>
 
 1652 (0x674)
@@ -3005,12 +3005,12 @@ Windows Installer lässt keine Aktualisierung von verwalteten angekündigten Pro
 
 
 
-Der Windows Installer-Dienst ist im abgesicherten Modus nicht verfügbar. Versuchen Sie es erneut, wenn sich Ihr Computer nicht im abgesicherten Modus befindet, oder Sie können die System Wiederherstellung verwenden, um den Computer in einen früheren Zustand zurückzukehren.
+Auf den Windows Installer-Dienst kann im Tresor-Modus nicht zugegriffen werden. Versuchen Sie es erneut, wenn sich Ihr Computer nicht im Tresor Modus befindet oder Sie die Systemwiederherstellung verwenden können, um den Computer wieder in einen früheren guten Zustand zu versetzen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_FAIL_FAST_EXCEPTION"></span><span id="error_fail_fast_exception"></span>**Fehler \_ bei \_ schneller \_ Ausnahme bei Fehler.**
+<span id="ERROR_FAIL_FAST_EXCEPTION"></span><span id="error_fail_fast_exception"></span>**FEHLERFEHLER \_ \_ FAST \_ AUSNAHME**
 </dt> <dd> <dl> <dt>
 
 1653 (0x675)
@@ -3018,12 +3018,12 @@ Der Windows Installer-Dienst ist im abgesicherten Modus nicht verfügbar. Versuc
 
 
 
-Es ist eine fehlerhafte Ausnahme aufgetreten. Ausnahmehandler werden nicht aufgerufen, und der Prozess wird sofort beendet.
+Es ist eine Fail-Fast-Ausnahme aufgetreten. Ausnahmehandler werden nicht aufgerufen, und der Prozess wird sofort beendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_INSTALL_REJECTED"></span><span id="error_install_rejected"></span>**Fehler \_ Installation \_ abgelehnt**
+<span id="ERROR_INSTALL_REJECTED"></span><span id="error_install_rejected"></span>**FEHLER \_ BEI DER INSTALLATION \_ ABGELEHNT**
 </dt> <dd> <dl> <dt>
 
 1654 (0x676)
@@ -3031,7 +3031,7 @@ Es ist eine fehlerhafte Ausnahme aufgetreten. Ausnahmehandler werden nicht aufge
 
 
 
-Die APP, die Sie ausführen möchten, wird in dieser Windows-Version nicht unterstützt.
+Die App, die Sie ausführen möchten, wird für diese Version von Windows nicht unterstützt.
 
 
 </dt> </dl> </dd> </dl>
@@ -3042,17 +3042,17 @@ Die APP, die Sie ausführen möchten, wird in dieser Windows-Version nicht unter
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Winerror. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>WinError.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[System Fehler Codes](system-error-codes.md)
+[Systemfehlercodes](system-error-codes.md)
 </dt> </dl>
 
  

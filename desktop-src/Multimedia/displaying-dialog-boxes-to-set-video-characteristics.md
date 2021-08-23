@@ -1,22 +1,22 @@
 ---
-title: Anzeigen von Dialog Feldern zum Festlegen von Video Merkmalen
-description: Anzeigen von Dialog Feldern zum Festlegen von Video Merkmalen
+title: Anzeigen von Dialogfeldern zum Festlegen von Videomerkmalen
+description: Anzeigen von Dialogfeldern zum Festlegen von Videomerkmalen
 ms.assetid: 8074f7d1-e8ab-46c3-acc2-a18be0eb4cc7
 keywords:
-- Capdrivercaps-Struktur
-- capdrivergetcaps-Makro
+- CAPDRIVERCAPS-Struktur
+- capDriverGetCaps-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 73eea12d69a3d23b0345bee3495d32cbb1ad0ffe
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 73e6ebfa0f75f4bcec63a693636085f16c342e53761b2cb1e67a0e2536fa5cef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144473"
 ---
-# <a name="displaying-dialog-boxes-to-set-video-characteristics"></a>Anzeigen von Dialog Feldern zum Festlegen von Video Merkmalen
+# <a name="displaying-dialog-boxes-to-set-video-characteristics"></a>Anzeigen von Dialogfeldern zum Festlegen von Videomerkmalen
 
-Jeder Aufzeichnungs Treiber kann bis zu drei verschiedene Dialogfelder bereitstellen, die zum Steuern der Aspekte der Video Digitalisierung und des Aufzeichnungsprozesses verwendet werden. Im folgenden Beispiel wird veranschaulicht, wie diese Dialogfelder angezeigt werden. Vor dem Anzeigen der einzelnen Dialogfelder wird im Beispiel das [**capdrivergetcaps**](/windows/desktop/api/Vfw/nf-vfw-capdrivergetcaps) -Makro aufgerufen und die [**capdrivercaps**](/windows/win32/api/vfw/ns-vfw-capdrivercaps) -Struktur überprüft, um festzustellen, ob der Erfassungs Treiber Sie anzeigen kann.
+Jeder Erfassungstreiber kann bis zu drei verschiedene Dialogfelder bereitstellen, um Aspekte der Videoaufnahme und des Erfassungsprozesses zu steuern. Im folgenden Beispiel wird veranschaulicht, wie diese Dialogfelder angezeigt werden. Vor dem Anzeigen der einzelnen Dialogfelder ruft das Beispiel das [**Makro capDriverGetCaps**](/windows/desktop/api/Vfw/nf-vfw-capdrivergetcaps) auf und überprüft die zurückgegebene [**CAPDRIVERCAPS-Struktur,**](/windows/win32/api/vfw/ns-vfw-capdrivercaps) um zu prüfen, ob der Erfassungstreiber sie anzeigen kann.
 
 
 ```C++
@@ -58,15 +58,15 @@ if (CapDriverCaps.fHasDlgVideoDisplay)
 
 <dl> <dt>
 
-[Verwenden der Video Erfassung](using-video-capture.md)
+[Verwenden von Video Capture](using-video-capture.md)
 </dt> <dt>
 
-[**capdrivergetcaps**](/windows/desktop/api/Vfw/nf-vfw-capdrivergetcaps)
+[**capDriverGetCaps**](/windows/desktop/api/Vfw/nf-vfw-capdrivergetcaps)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Lädt die angegebene Registrierungs Struktur Datei in den Arbeitsspeicher und überprüft die Hive.
+description: Lädt die angegebene Registrierungsstrukturdatei in den Arbeitsspeicher und überprüft die Struktur.
 ms.assetid: 5d8498b0-e1bb-4c3d-bf3d-7bfc3002eb1a
-title: Oropenhive-Funktion (offreg. h)
+title: OROpenHive-Funktion (Offreg.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Offreg.dll
-ms.openlocfilehash: ba6531e7a2ab2b0b148065d9f4666812e75f2968
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 86ff3d6ff15b030054d40ca7131e521cedb59ebf20c4942951f0e141f27a2840
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367725"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076014"
 ---
-# <a name="oropenhive-function"></a>Oropenhive-Funktion
+# <a name="oropenhive-function"></a>OROpenHive-Funktion
 
-Lädt die angegebene Registrierungs Struktur Datei in den Arbeitsspeicher und überprüft die Hive.
+Lädt die angegebene Registrierungsstrukturdatei in den Arbeitsspeicher und überprüft die Struktur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,33 +40,33 @@ DWORD OROpenHive(
 
 <dl> <dt>
 
-*lphivepath* \[ in\]
+*lpHivePath* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Unicode-Zeichenfolge, die den Namen der Hive-Registrierungsdatei angibt, die in den Arbeitsspeicher geladen werden soll. Dabei kann es sich um eine Hive-Datei handeln, die mit der [**orsavehive**](orsavehive.md) -Funktion gespeichert oder mit der [regsavekey](/windows/win32/api/winreg/nf-winreg-regsavekeya) -Funktion oder der [regsavekeyex](/windows/win32/api/winreg/nf-winreg-regsavekeyexa) -Funktion erstellt wurde. Die Datei muss weniger als 4 GB groß sein, und der Aufrufer muss über Datei \_ Lese \_ Zugriff auf die Datei verfügen. Weitere Informationen finden Sie unter [Datei Sicherheit und Zugriffsrechte](../fileio/file-security-and-access-rights.md).
+Ein Zeiger auf eine Unicode-Zeichenfolge, die den Namen der Registrierungsstrukturdatei angibt, die in den Arbeitsspeicher geladen werden soll. Dies kann eine Hive-Datei sein, die mit der [**ORSaveHive-Funktion**](orsavehive.md) gespeichert oder mit der [RegSaveKey-](/windows/win32/api/winreg/nf-winreg-regsavekeya) oder [RegSaveKeyEx-Funktion](/windows/win32/api/winreg/nf-winreg-regsavekeyexa) erstellt wurde. Die Datei muss weniger als 4 GB groß sein, und der Aufrufer muss \_ über FILE READ \_ DATA-Zugriff auf die Datei verfügen. Weitere Informationen finden Sie unter [Dateisicherheit und Zugriffsrechte.](../fileio/file-security-and-access-rights.md)
 
 </dd> <dt>
 
-*phkResult* \[ vorgenommen\]
+*phkResult* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die ein Handle für den Stamm Schlüssel der geladenen Offline Registrierungs Struktur empfängt. Wenn die Hive-Registrierungsdatei nicht geöffnet werden kann oder die Validierung fehlschlägt, legt die Funktion diesen Parameter auf **null** fest.
+Ein Zeiger auf eine Variable, die ein Handle für den Stammschlüssel der geladenen Offlineregistrierungsstruktur empfängt. Wenn die Registrierungsstrukturdatei nicht geöffnet werden kann oder die Überprüfung fehlschlägt, legt die Funktion diesen Parameter auf **NULL** fest.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WinError. h definiert ist. Sie können die [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) -Funktion mit dem \_ Flag Format Message \_ from System verwenden \_ , um eine generische Beschreibung des Fehlers zu erhalten. Folgende Fehlercodes sind möglich:
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in Winerror.h definiert ist. Sie können die [FormatMessage-Funktion](/windows/win32/api/winbase/nf-winbase-formatmessage) mit dem \_ FORMAT MESSAGE FROM \_ \_ SYSTEM-Flag verwenden, um eine generische Beschreibung des Fehlers abzurufen. Mögliche Fehlercodes sind:
 
--   Wenn die Datei leer oder größer als 4 GB ist, gibt die Funktion den Fehler \_ baddb zurück.
--   Wenn der Aufrufer nicht über die erforderlichen Zugriffsrechte verfügt, um die Datei zu öffnen, gibt die Funktion den Fehler \_ Zugriff \_ verweigert zurück.
--   Wenn die Überprüfung der Registrierungs Struktur fehlschlägt, gibt die Funktion die Fehlermeldung \_ nicht die \_ Registrierungs \_ Datei zurück.
+-   Wenn die Datei leer oder größer als 4 GB ist, gibt die Funktion ERROR \_ BADDB zurück.
+-   Wenn der Aufrufer nicht über die erforderlichen Zugriffsrechte zum Öffnen der Datei verfügt, gibt die Funktion ERROR \_ ACCESS \_ DENIED zurück.
+-   Wenn die Überprüfung der Registrierungsstruktur fehlschlägt, gibt die Funktion ERROR \_ NOT \_ REGISTRY FILE \_ zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **oropenhive** -Funktion ist die einzige Offline-Registrierungsfunktion, die eine Registrierungs Struktur überprüft. Wenn die Überprüfung fehlschlägt, wird nicht versucht, die Struktur zu reparieren.
+Die **OROpenHive-Funktion** ist die einzige Offlineregistrierungsfunktion, die eine Registrierungsstruktur überprüft. Wenn die Überprüfung fehlschlägt, wird nicht versucht, die Struktur zu reparieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,8 +74,8 @@ Die **oropenhive** -Funktion ist die einzige Offline-Registrierungsfunktion, die
 
 | Anforderung | Wert |
 |----------------------------|---------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | Windows-offline Registrierungs Bibliothek, Version 1,0 oder höher<br/>                      |
-| Header<br/>          | <dl> <dt>Offreg. h</dt> </dl>   |
+| Verteilbare Komponente<br/> | Windows Offline registry library version 1.0 or later (Offlineregistrierungsbibliothek, Version 1.0 oder höher)<br/>                      |
+| Header<br/>          | <dl> <dt>Offreg.h</dt> </dl>   |
 | DLL<br/>             | <dl> <dt>Offreg.dll</dt> </dl> |
 
 
@@ -84,19 +84,19 @@ Die **oropenhive** -Funktion ist die einzige Offline-Registrierungsfunktion, die
 
 <dl> <dt>
 
-[**Orclosehive**](orclosehive.md)
+[**ORCloseHive**](orclosehive.md)
 </dt> <dt>
 
-[**Orkreatehive**](orcreatehive.md)
+[**ORCreateHive**](orcreatehive.md)
 </dt> <dt>
 
-[**Orsavehive**](orsavehive.md)
+[**ORSaveHive**](orsavehive.md)
 </dt> <dt>
 
-[Regsavekey](/windows/win32/api/winreg/nf-winreg-regsavekeya)
+[RegSaveKey](/windows/win32/api/winreg/nf-winreg-regsavekeya)
 </dt> <dt>
 
-[Regsavekeyex](/windows/win32/api/winreg/nf-winreg-regsavekeyexa)
+[RegSaveKeyEx](/windows/win32/api/winreg/nf-winreg-regsavekeyexa)
 </dt> </dl>
 
  

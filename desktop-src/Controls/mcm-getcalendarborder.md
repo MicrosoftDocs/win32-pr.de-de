@@ -1,9 +1,9 @@
 ---
-title: MCM_GETCALENDARBORDER Meldung (kommstrg. h)
-description: Ruft die Größe des Rahmens in Pixel ab. Sie können diese Nachricht explizit oder mit dem monthcal \_ getcurrentview-Makro senden.
+title: MCM_GETCALENDARBORDER Meldung (Commctrl.h)
+description: Ruft die Größe des Rahmens in Pixel ab. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ GetCurrentView-Makros senden.
 ms.assetid: 68366ee1-7511-46a5-aab0-a42fb80c265f
 keywords:
-- Windows-Steuerelemente für MCM_GETCALENDARBORDER Meldung
+- MCM_GETCALENDARBORDER Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 581eeb5c060f725d3f884f4c19d7d3da3023c63a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c9c0755a516334b0e01827c37c6e26ebcfe270bedb2b2b089bb19ea8517aafca
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119319800"
 ---
-# <a name="mcm_getcalendarborder-message"></a>MCM \_ getcalendarborder-Meldung
+# <a name="mcm_getcalendarborder-message"></a>MCM \_ GETCALENDARBORDER-Nachricht
 
-Ruft die Größe des Rahmens in Pixel ab. Sie können diese Nachricht explizit oder mit dem [**monthcal \_ getcurrentview**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getcurrentview) -Makro senden.
+Ruft die Größe des Rahmens in Pixel ab. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ GetCurrentView-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getcurrentview) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -53,9 +53,9 @@ Rahmengröße in Pixel.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

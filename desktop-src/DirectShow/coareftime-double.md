@@ -1,7 +1,7 @@
 ---
-description: Dieser Operator konvertiert die Verweis Zeit in einen Double-Wert.
+description: Dieser Operator konvertiert die Verweiszeit in einen double-Wert.
 ms.assetid: 59de8e7d-4f1e-441a-bbdd-7393417fe74f
-title: Coaref time. Operator Double-Methode (ctlutil. h)
+title: COARefTime.operator double-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 263a5e6584ec0370c6cbf310d9f10511f130be83
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7c5734f6e180289c307837a729ff166ea5702ad305142948fb7cdb7793ac1c34
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371644"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119214090"
 ---
-# <a name="coareftimeoperator-double-method"></a>Coaref time. Operator Double-Methode
+# <a name="coareftimeoperator-double-method"></a>COARefTime.operator double-Methode
 
-Dieser Operator konvertiert die Verweis Zeit in einen **Double** -Wert.
+Dieser Operator konvertiert die Verweiszeit in einen **double-Wert.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Verweis Zeit in Sekunden zurück.
+Gibt die Verweiszeit in Sekunden zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt die Verweis Zeit in Sekunden zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Coaref Time-Klasse**](coareftime.md)
+[**COARefTime-Klasse**](coareftime.md)
 </dt> </dl>
 
  

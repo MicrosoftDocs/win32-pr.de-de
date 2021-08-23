@@ -1,7 +1,7 @@
 ---
-description: Stellt ein Dateiname-Attribut dar. Eine Datei verfügt über ein Dateiname-Attribut für jedes Verzeichnis, in das Sie eingegeben wird.
+description: Stellt ein Dateinamenattribut dar. Eine Datei verfügt über ein Dateinamenattribut für jedes Verzeichnis, in das sie eingegeben wird.
 ms.assetid: 54458eee-b786-446c-80bd-213c13bdeb4a
-title: File_name Struktur
+title: FILE_NAME-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 609725c21f0c0811a4222cd9dfd662b3e25673f3
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 9b09b9c58228c9028a5ac9d26d834bdc21a5c02201338767af84dc713bc3aa60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076144"
 ---
-# <a name="file_name-structure"></a>Datei \_ Namen Struktur
+# <a name="file_name-structure"></a>FILE \_ NAME-Struktur
 
-\[Diese Struktur gilt nur für Version 3 von NTFS-Volumes. Sie kann in zukünftigen Versionen geändert werden.\]
+\[Diese Struktur ist nur für Version 3 von NTFS-Volumes gültig. Sie kann in zukünftigen Versionen geändert werden.\]
 
-Stellt ein Dateiname-Attribut dar. Eine Datei verfügt über ein Dateiname-Attribut für jedes Verzeichnis, in das Sie eingegeben wird.
+Stellt ein Dateinamenattribut dar. Eine Datei verfügt über ein Dateinamenattribut für jedes Verzeichnis, in das sie eingegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,10 +44,10 @@ typedef struct _FILE_NAME {
 
 <dl> <dt>
 
-**"Element Verzeichnis"**
+**ParentDirectory**
 </dt> <dd>
 
-Ein Datei Verweis auf das Verzeichnis, das diesen Namen indiziert. Siehe [**\_ \_ Referenz zu MFT-Segmenten**](mft-segment-reference.md).
+Ein Dateiverweis auf das Verzeichnis, das diesen Namen indiziert. Weitere Informationen finden Sie [**unter \_ MFT-SEGMENTREFERENZ. \_**](mft-segment-reference.md)
 
 </dd> <dt>
 
@@ -58,44 +58,44 @@ Reserviert.
 
 </dd> <dt>
 
-**Datamelength**
+**FileNameLength**
 </dt> <dd>
 
-Die Länge des Datei namens in Unicode-Zeichen.
+Die Länge des Dateinamens in Unicode-Zeichen.
 
 </dd> <dt>
 
 **Flags**
 </dt> <dd>
 
-Die Dateiname-Flags.
+Die Dateinamenflags.
 
 <dl> <dt>
 
-<span id="FILE_NAME_NTFS"></span><span id="file_name_ntfs"></span>**Datei \_ Name \_ NTFS** (0x01)
+<span id="FILE_NAME_NTFS"></span><span id="file_name_ntfs"></span>**FILE \_ NAME \_ NTFS** (0x01)
 </dt> <dt>
 
-<span id="FILE_NAME_DOS"></span><span id="file_name_dos"></span>**Datei \_ Name \_ DOS** (0x02)
+<span id="FILE_NAME_DOS"></span><span id="file_name_dos"></span>**FILE \_ NAME \_ DOS** (0x02)
 </dt> </dl> </dd> <dt>
 
 **FileName**
 </dt> <dd>
 
-Das erste Zeichen des Datei namens.
+Das erste Zeichen des Dateinamens.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass es für diese Struktur keine zugeordnete Header Datei gibt.
+Beachten Sie, dass für diese Struktur keine Headerdatei zugeordnet ist.
 
-Diese Struktur Definition ist nur für die Hauptversion 3 und die neben Version 0 oder 1 gültig, wie von [**FSCTL \_ get \_ NTFS \_ Volume \_ Data**](/windows/win32/api/winioctl/ni-winioctl-fsctl_get_ntfs_volume_data)berichtet.
+Diese Strukturdefinition ist nur für Hauptversion 3 und Nebenversion 0 oder 1 gültig, wie von [**FSCTL \_ GET \_ NTFS \_ VOLUME \_ DATA**](/windows/win32/api/winioctl/ni-winioctl-fsctl_get_ntfs_volume_data)gemeldet.
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Master Dateitabelle](master-file-table.md)
+[Masterdateitabelle](master-file-table.md)
 </dt> </dl>
 
  
