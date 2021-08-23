@@ -1,12 +1,12 @@
 ---
-title: Imsrdppreferredredirectioninfo useredirectionservername-Eigenschaft
-description: Ruft ab und legt fest, ob der Umleitungs Servername verwendet werden soll.
+title: IMsRdpPreferredRedirectionInfo UseRedirectionServerName-Eigenschaft
+description: Ruft ab und legt fest, ob der Umleitungsservername verwendet werden soll.
 ms.assetid: D2239600-D75D-40FB-A6D0-4C7C4C5163E3
 ms.tgt_platform: multiple
 keywords:
-- Useredirectionservername-Eigenschaft Remotedesktopdienste
-- Useredirectionservername-Eigenschaft Remotedesktopdienste, imsrdppreferredredirectioninfo-Schnittstelle
-- Imsrdppreferredredirectioninfo-Schnittstelle Remotedesktopdienste, useredirectionservername-Eigenschaft
+- UseRedirectionServerName-Eigenschaft Remotedesktopdienste
+- UseRedirectionServerName-Eigenschaft Remotedesktopdienste , IMsRdpPreferredRedirectionInfo-Schnittstelle
+- IMsRdpPreferredRedirectionInfo-Schnittstelle Remotedesktopdienste , UseRedirectionServerName-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d1635273078a2d09ca01c219ebf7eaa482eeb7a4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d1bb57bacafbc3061cee6cb49b09a8fdbf8187026a378deff605b90472ed6394
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513250"
 ---
-# <a name="imsrdppreferredredirectioninfouseredirectionservername-property"></a>Imsrdppreferredredirectioninfo:: useredirectionservername-Eigenschaft
+# <a name="imsrdppreferredredirectioninfouseredirectionservername-property"></a>IMsRdpPreferredRedirectionInfo::UseRedirectionServerName -Eigenschaft
 
-Ruft ab und legt fest, ob der Umleitungs Servername verwendet werden soll.
+Ruft ab und legt fest, ob der Umleitungsservername verwendet werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,7 +49,7 @@ HRESULT get_UseRedirectionServerName(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt an, ob der Umleitungs Servername verwendet wird.
+Gibt an, ob der Umleitungsservername verwendet werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Gibt an, ob der Umleitungs Servername verwendet wird.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                    |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>            |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>            |
-| IID<br/>                      | IID \_ imsrdppreferredredirectioninfo ist als FDD029F9-9574-4DEF-8529-64B521CCCAA4 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpPreferredRedirectionInfo ist als FDD029F9-9574-4DEF-8529-64B521CCCAA4 definiert.<br/> |
 
 
 
@@ -69,7 +69,7 @@ Gibt an, ob der Umleitungs Servername verwendet wird.
 
 <dl> <dt>
 
-[**Imsrdppreferredredirectioninfo**](imsrdppreferredredirectioninfo.md)
+[**IMsRdpPreferredRedirectionInfo**](imsrdppreferredredirectioninfo.md)
 </dt> </dl>
 
  

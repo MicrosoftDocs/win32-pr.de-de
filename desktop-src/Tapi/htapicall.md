@@ -1,19 +1,19 @@
 ---
-description: Der Datentyp "htapicall" stellt das nicht transparente TAPI-Handle für eine Aufrufe Datenstruktur dar.
+description: Der HTAPICALL-Datentyp stellt das nicht transparente TAPI-Handle für eine Aufrufdatenstruktur dar.
 ms.assetid: a2a17b03-5779-411e-8959-6e2de5e53c5a
-title: Htapicall
+title: HTAPICALL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5abd90dc8453be5f5bec18e92b384b7ace830d14
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d5157cc75773097c869384e303c7e386fce54d7c16ac2e2dc36d0495f766d5a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119519190"
 ---
-# <a name="htapicall"></a>Htapicall
+# <a name="htapicall"></a>HTAPICALL
 
-Der Datentyp " **htapicall** " stellt das nicht transparente TAPI-Handle für eine Aufrufe Datenstruktur dar. TAPI muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstruktur Instanz auflösen. Der Dienstanbieter darf nicht versuchen, darauf zu verweisen, als ob es sich um einen Zeiger handelt, nehmen Annahmen über seine Werte vor oder interpretieren seine Darstellung in irgendeiner Weise, als er den Wert zu den entsprechenden Zeitpunkten an TAPI übergibt.
+Der **HTAPICALL-Datentyp** stellt das nicht transparente TAPI-Handle für eine Aufrufdatenstruktur dar. TAPI muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstrukturinstanz auflösen. Der Dienstanbieter darf nicht versuchen, über diesen zu verweisen, als wäre er ein Zeiger, darf Annahmen über seine Werte treffen oder seine Darstellung in einer anderen Weise interpretieren, als den Wert zu geeigneten Zeitpunkten an TAPI zu übergeben.
 
  
 

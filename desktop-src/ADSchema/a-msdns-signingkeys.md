@@ -1,11 +1,11 @@
 ---
-title: MS-DNS-Signing-Keys-Attribut
-description: Ein Attribut, das den Satz verschlüsselter DNSSEC-Signatur Schlüssel enthält, die vom DNS-Server zum Signieren der DNS-Zone verwendet werden.
+title: ms-DNS-Signing-Keys-Attribut
+description: Ein Attribut, das den Satz verschlüsselter DNSSEC-Signaturschlüssel enthält, die vom DNS-Server zum Signieren der DNS-Zone verwendet werden.
 ms.assetid: 99aa1541-eb3f-48ee-b449-a16c17e9c002
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-DNS-Signing-Keys\"-Attribut, AD-Schema"
-- "\"MSDNs-signingkeys\"-Attribut, AD-Schema"
+- MS-DNS-Signing-Keys-Attribut AD-Schema
+- MSDNS-SigningKeys-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e80d81ed984e0ac96aba1793458b5577173c7e7c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 0d84112f3bd5efe86de609eb55fd163d68b471aeb78bc9670f8a07112f35f644
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480410"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119552850"
 ---
-# <a name="ms-dns-signing-keys-attribute"></a>MS-DNS-Signing-Keys-Attribut
+# <a name="ms-dns-signing-keys-attribute"></a>ms-DNS-Signing-Keys-Attribut
 
-Ein Attribut, das den Satz verschlüsselter DNSSEC-Signatur Schlüssel enthält, die vom DNS-Server zum Signieren der DNS-Zone verwendet werden.
+Ein Attribut, das den Satz verschlüsselter DNSSEC-Signaturschlüssel enthält, die vom DNS-Server zum Signieren der DNS-Zone verwendet werden.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | MS-DNS-Signierungs Schlüssel                                   |
-| LDAP-Display-Name | MSDNs-signingkeys                                     |
+| CN                | ms-DNS-Signing-Keys                                   |
+| Ldap-Anzeigename | msDNS-SigningKeys                                     |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2144                               |
 | System-ID-GUID    | b7673e6d-cad9-4e9e-b31a-63e8098fdd63                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
@@ -53,15 +53,15 @@ Ein Attribut, das den Satz verschlüsselter DNSSEC-Signatur Schlüssel enthält,
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
+| Ist einwertig       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000008                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 

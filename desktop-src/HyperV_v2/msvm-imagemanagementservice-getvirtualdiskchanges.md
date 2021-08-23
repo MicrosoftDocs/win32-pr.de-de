@@ -1,7 +1,7 @@
 ---
-description: Ruft eine Liste der Änderungen im angegebenen Bereich eines virtuellen Datenträgers ab, die von der angegebenen robusten Änderungsnachverfolgung ID oder der vhdset-Momentaufnahme-ID bereitgestellt werden.
+description: Ruft eine Liste der Änderungen in der angegebenen Region eines virtuellen Datenträgers ab, die seit der bereitgestellten resilienten Änderungsnachverfolgung oder VHDSet-Momentaufnahme-ID vorgenommen wurden.
 ms.assetid: c1dac403-96e0-4c0d-ad71-858f04bf07cd
-title: Getvirtualdiskchanges-Methode der Msvm_ImageManagementService-Klasse
+title: GetVirtualDiskChanges-Methode der Msvm_ImageManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 55a9cb9a63e05e002f99984a306566c50d9e1d7f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8b96c5b4d2bbdff78b6f9f2bc9a1e7547742a553564e0f81547b8d998f86f14f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119522560"
 ---
-# <a name="getvirtualdiskchanges-method-of-the-msvm_imagemanagementservice-class"></a>Getvirtualdiskchanges-Methode der MSVM \_ imagemanagementservice-Klasse
+# <a name="getvirtualdiskchanges-method-of-the-msvm_imagemanagementservice-class"></a>GetVirtualDiskChanges-Methode der Msvm \_ ImageManagementService-Klasse
 
-Ruft eine Liste der Änderungen im angegebenen Bereich eines virtuellen Datenträgers ab, die von der angegebenen robusten Änderungsnachverfolgung ID oder der vhdset-Momentaufnahme-ID bereitgestellt werden.
+Ruft eine Liste der Änderungen in der angegebenen Region eines virtuellen Datenträgers ab, die seit der bereitgestellten resilienten Änderungsnachverfolgung oder VHDSet-Momentaufnahme-ID vorgenommen wurden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,66 +47,66 @@ uint32 GetVirtualDiskChanges(
 
 <dl> <dt>
 
-*Pfad* \[ in\]
+*Pfad* \[ In\]
 </dt> <dd>
 
-Ein voll qualifizierter Pfad, der den Speicherort der virtuellen Festplatten Datei angibt.
+Ein vollqualifizierter Pfad, der den Speicherort der Datei für die virtuelle Festplatte angibt.
 
 </dd> <dt>
 
-*Limitid* \[ in\]
+*LimitId* \[ In\]
 </dt> <dd>
 
-Eine robuste Änderungsnachverfolgung ID oder eine Momentaufnahme-ID des VHD-Satzes, die die Baseline für Änderungen auf dem virtuellen Datenträger angibt.
+Eine resiliente Änderungsnachverfolgung ID oder VHD Set Snapshot ID, die die Baseline für Änderungen auf dem virtuellen Datenträger angibt.
 
 </dd> <dt>
 
-*Targetinapshotid* \[ in\]
+*TargetSnapshotId* \[ In\]
 </dt> <dd>
 
-Eine vhdset-Momentaufnahme-ID, die die Momentaufnahme angibt, die beim determinimieren der virtuellen Festplatte mit der Baseline verglichen werden soll. Dieser Parameter ist nur für VHD-Set-Dateien gültig.
+Eine VHDSet-Momentaufnahme-ID, die die Momentaufnahme angibt, die mit der Baseline verglichen werden soll, wenn Änderungen in der virtuellen Festplatte bestimmt werden. Dieser Parameter ist nur für VHD-Set-Dateien gültig.
 
 </dd> <dt>
 
-*Byteoffset* \[ in\]
+*ByteOffset* \[ In\]
 </dt> <dd>
 
-Der Byte Offset der Region im virtuellen Datenträger, für die Änderungen abgefragt werden sollen.
+Der Byteoffset der Region auf dem virtuellen Datenträger, nach dem Änderungen abfragt werden.
 
 </dd> <dt>
 
-*ByteLength* \[ in\]
+*ByteLength* \[ In\]
 </dt> <dd>
 
-Die Byte Länge der Region im virtuellen Datenträger, für die Änderungen abgefragt werden sollen. Diese muss kleiner als die Größe des virtuellen Datenträgers sein.
+Die Bytelänge der Region auf dem virtuellen Datenträger, nach der Änderungen abfragt werden. Dieser muss kleiner als die Größe des virtuellen Datenträgers sein.
 
 </dd> <dt>
 
-*Processedbytelength* \[ vorgenommen\]
+*ProcessedByteLength* \[ out\]
 </dt> <dd>
 
-Die gesamte Byte Länge, die verarbeitet wurde. Dieser Wert kann gleich ByteLength oder kleiner sein.
+Die gesamte Bytelänge, die verarbeitet wurde. Dies kann byteLength oder kleiner sein.
 
 </dd> <dt>
 
-*Changedbyteoffsets* \[ vorgenommen\]
+*ChangedByteOffsets* \[ out\]
 </dt> <dd>
 
-Die Liste der Byte Offsets in der virtuellen Festplatte, die den Anfang jedes geänderten Bereichs angibt.
+Die Liste der Byteoffsets auf dem virtuellen Datenträger, die den Anfang jedes geänderten Bereichs angeben.
 
 </dd> <dt>
 
-*Changedbytelengths* \[ vorgenommen\]
+*ChangedByteLengths* \[ out\]
 </dt> <dd>
 
-Die Liste der Byte Längen der geänderten Bereiche auf dem virtuellen Datenträger.
+Die Liste der Bytelängen der geänderten Bereiche auf dem virtuellen Datenträger.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Ein Verweis auf den Auftrag (kann NULL sein, wenn die Aufgabe abgeschlossen ist).
+Ein Verweis auf den Auftrag (kann NULL sein, wenn der Task abgeschlossen ist).
 
 </dd> </dl>
 
@@ -119,10 +119,10 @@ Diese Methode gibt einen der folgenden Werte zurück:
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -131,31 +131,31 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -164,10 +164,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -176,7 +176,7 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md)
+[**Msvm \_ ImageManagementService**](msvm-imagemanagementservice.md)
 </dt> </dl>
 
  

@@ -4,16 +4,16 @@ ms.assetid: f762a571-83ea-4999-ad49-a51044bc790d
 title: Schreiben von Objekteigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 726501c986e73033437de3bee0c11b3beb66150d
-ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
+ms.openlocfilehash: 7e140563c6cf17235d3709e0d53cbfda9ab602076c3e72c010570b004429c96e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110423930"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657330"
 ---
 # <a name="writing-object-properties"></a>Schreiben von Objekteigenschaften
 
-Dienste enthalten häufig untergeordnete Objekte, die zu einem der Formate gehören, die jeder Dienst unterstützt. Ein Contacts-Dienst kann beispielsweise mehrere Kontaktobjekte im Abstrakten Kontaktformat unterstützen. Jedes Kontaktobjekt wird durch verwandte Eigenschaften (Kontaktname, Telefonnummer, E-Mail-Adresse und ähnliches) beschrieben.
+Dienste enthalten häufig untergeordnete Objekte, die zu einem der Formate gehören, die von den einzelnen Diensten unterstützt werden. Beispielsweise kann ein Kontaktdienst mehrere Kontaktobjekte im Format "Abstrakter Kontakt" unterstützen. Jedes Kontaktobjekt wird durch verwandte Eigenschaften (Kontaktname, Telefonnummer, E-Mail-Adresse usw.) beschrieben.
 
 Die WpdServicesApiSample-Anwendung enthält Code, der veranschaulicht, wie eine Anwendung die Name-Eigenschaft für ein untergeordnetes Objekt des angegebenen Contacts-Diensts aktualisieren kann. In diesem Beispiel werden die folgenden WPD-Schnittstellen verwendet.
 
@@ -21,16 +21,16 @@ Die WpdServicesApiSample-Anwendung enthält Code, der veranschaulicht, wie eine 
 
 | Schnittstelle                                                      | BESCHREIBUNG                                                                                                                                                          |
 |----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)       | Wird zum Abrufen der **IPortableDeviceContent2-Schnittstelle** für den Zugriff auf die unterstützten Dienstmethoden verwendet.                                                                  |
+| [**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)       | Wird verwendet, um die **IPortableDeviceContent2-Schnittstelle** abzurufen, um auf die unterstützten Dienstmethoden zuzugreifen.                                                                  |
 | [**IPortableDeviceContent2**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledevicecontent2)     | Ermöglicht den Zugriff auf die inhaltsspezifischen Methoden.                                                                                                                     |
 | [**IPortableDeviceProperties**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties) | Wird verwendet, um die Objekteigenschaftswerte zu schreiben und zu bestimmen, ob eine bestimmte Eigenschaft geschrieben werden kann.                                                                    |
-| [**IPortableDeviceValues**](iportabledevicevalues.md)         | Wird verwendet, um die zu schreibenden Eigenschaftswerte zu speichern, die Ergebnisse des Schreibvorganges zu bestimmen und Attribute von Eigenschaften abzurufen (bei der Bestimmung der Schreibfunktion). |
+| [**IPortableDeviceValues**](iportabledevicevalues.md)         | Wird verwendet, um die zu schreibenden Eigenschaftswerte zu speichern, die Ergebnisse des Schreibvorgangs zu bestimmen und Attribute von Eigenschaften abzurufen (beim Bestimmen der Schreibfunktion). |
 
 
 
  
 
-Wenn der Benutzer die Option "8" in der Befehlszeile auswählt, ruft die Anwendung die **WriteContentProperties-Methode** auf, die sich im ContentProperties.cpp-Modul befindet. Diese Methode fordert den Benutzer zur Eingabe eines Objektbezeichners für die zu aktualisierende Eigenschaft auf. Der Benutzer identifiziert das Objekt, und die -Methode fordert den Benutzer auf, einen neuen Namen anzugeben. Nachdem dieser Name angegeben wurde, aktualisiert die -Methode die Name-Eigenschaft für das angegebene Objekt.
+Wenn der Benutzer die Option "8" in der Befehlszeile auswählt, ruft die Anwendung die **WriteContentProperties-Methode** auf, die sich im Modul ContentProperties.cpp befindet. Diese Methode fordert den Benutzer auf, einen Objektbezeichner für die zu aktualisierende Eigenschaft einzugeben. Der Benutzer identifiziert das Objekt, und die -Methode fordert den Benutzer auf, einen neuen Namen anzugeben. Nachdem dieser Name angegeben wurde, aktualisiert die Methode die Name-Eigenschaft für das angegebene Objekt.
 
 Beachten Sie, dass die Beispielanwendung vor dem Schreiben der Objekteigenschaften einen Contacts-Dienst auf einem verbundenen Gerät öffnet.
 

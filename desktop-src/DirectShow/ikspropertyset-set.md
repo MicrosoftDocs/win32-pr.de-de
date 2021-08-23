@@ -1,7 +1,7 @@
 ---
-description: Die Set-Methode legt eine Eigenschaft fest, die durch eine Eigenschaften Satz-GUID und eine Eigenschaften-ID identifiziert wird.
+description: Die Set-Methode legt eine Eigenschaft fest, die durch eine Eigenschaftensatz-GUID und eine Eigenschaften-ID identifiziert wird.
 ms.assetid: 78f506dc-7fb4-446d-863e-cffee9da5280
-title: 'Ikspropertyset:: Set-Methode (ksproxy. h)'
+title: IKsPropertySet::Set-Methode (Ksproxy.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Strmiids.lib
 - Strmiids.dll
-ms.openlocfilehash: b233cea7e131919d94b00afeb5a6e2ea3703c738
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f3669acb7f2d3049b909a4dc2c24363bf478c9b44ad0a91528e1e8ea466399fe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119639190"
 ---
-# <a name="ikspropertysetset-method"></a>Ikspropertyset:: Set-Methode
+# <a name="ikspropertysetset-method"></a>IKsPropertySet::Set-Methode
 
-Die `Set` -Methode legt eine Eigenschaft fest, die durch eine Eigenschaften Satz-GUID und eine Eigenschaften-ID identifiziert wird.
+Die `Set` -Methode legt eine Eigenschaft fest, die durch eine Eigenschaftensatz-GUID und eine Eigenschaften-ID identifiziert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,72 +45,72 @@ HRESULT Set(
 
 <dl> <dt>
 
-*guidpropset* \[ in\]
+*guidPropSet* \[ In\]
 </dt> <dd>
 
-Eigenschaften Satz-GUID.
+Guid des Eigenschaftensatzes.
 
 </dd> <dt>
 
-*dwpropid* \[ in\]
+*dwPropID* \[ In\]
 </dt> <dd>
 
-Der Bezeichner der Eigenschaft innerhalb des Eigenschaften Satzes.
+Bezeichner der Eigenschaft innerhalb des Eigenschaftensatzes.
 
 </dd> <dt>
 
-*pinstancedata* \[ in\]
+*pInstanceData* \[ In\]
 </dt> <dd>
 
 Zeiger auf einen Puffer, der Instanzdaten für die Eigenschaft enthält.
 
 </dd> <dt>
 
-*cbinstancedata* \[ in\]
+*cbInstanceData* \[ In\]
 </dt> <dd>
 
-Größe des *pinstancedata* -Puffers in Bytes.
+Größe des *pInstanceData-Puffers* in Bytes.
 
 </dd> <dt>
 
-*ppropdata* \[ in\]
+*pPropData* \[ In\]
 </dt> <dd>
 
 Zeiger auf einen Puffer, der den Wert der Eigenschaft enthält.
 
 </dd> <dt>
 
-*cbpropdata* \[ in\]
+*cbPropData* \[ In\]
 </dt> <dd>
 
-SISE des *ppropdata* -Puffers in Bytes.
+Sise des *pPropData-Puffers* in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                              | Beschreibung                                                                 |
 |----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                     | Erfolg.<br/>                                                         |
-| <dl> <dt>**E- \_ Prop- \_ Satz \_ nicht unterstützt**</dt> </dl> | Der Eigenschaften Satz wird nicht unterstützt.<br/>                               |
-| <dl> <dt>**E- \_ Prop- \_ ID \_ nicht unterstützt**</dt> </dl>  | Die eigen schafts-ID wird für den angegebenen Eigenschaften Satz nicht unterstützt.<br/> |
+| <dl> <dt>**E \_ PROP \_ SET \_ UNSUPPORTED**</dt> </dl> | Der Eigenschaftensatz wird nicht unterstützt.<br/>                               |
+| <dl> <dt>**E \_ PROP \_ ID \_ UNSUPPORTED**</dt> </dl>  | Die Eigenschaften-ID wird für den angegebenen Eigenschaftensatz nicht unterstützt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Eine weitere Schnittstelle mit diesem Namen ist in der Header Datei "DSound. h" vorhanden. Die beiden Schnittstellen sind nicht kompatibel. Die im DirectShow-DDK dokumentierte " **ikscontrol** "-Schnittstelle ist nun die empfohlene Schnittstelle zum Übergeben von Eigenschafts Sätzen zwischen WDM-Treibern und Benutzermoduskomponenten.
+> Eine weitere Schnittstelle mit diesem Namen ist in der Headerdatei dsound.h vorhanden. Die beiden Schnittstellen sind nicht kompatibel. Die **IKsControl-Schnittstelle,** die im DirectShow DDK dokumentiert ist, ist jetzt die empfohlene Schnittstelle zum Übergeben von Eigenschaftensätzen zwischen WDM-Treibern und Benutzermoduskomponenten.
 
  
 
-Sie müssen "KS. h" vor "ksproxy. h" einschließen.
+Sie müssen Ks.h vor Ksproxy.h einschließen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -120,8 +120,8 @@ Sie müssen "KS. h" vor "ksproxy. h" einschließen.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Ksproxy. h</dt> </dl>    |
-| Bibliothek<br/>                  | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ksproxy.h</dt> </dl>    |
+| Bibliothek<br/>                  | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -129,10 +129,10 @@ Sie müssen "KS. h" vor "ksproxy. h" einschließen.
 
 <dl> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> <dt>
 
-[**"Ikspropertyset"-Schnittstelle**](ikspropertyset.md)
+[**IKsPropertySet-Schnittstelle**](ikspropertyset.md)
 </dt> <dt>
 
 [Eigenschaftensätze](property-sets.md)

@@ -1,8 +1,8 @@
 ---
-description: Übermittelt einen Auftrag an ein Betriebssystem zur Ausführung zu einem bestimmten Zeitpunkt und zum angegebenen Zeitpunkt in der Zukunft.
+description: Übermittelt einen Auftrag zur Ausführung zu einem bestimmten Zeitpunkt und einem bestimmten Datum in der Zukunft an ein Betriebssystem.
 ms.assetid: 9d582fbb-24cb-401d-8b77-af7671a24e6d
 ms.tgt_platform: multiple
-title: Create-Methode der Win32_ScheduledJob-Klasse
+title: Create-Methode der Win32_ScheduledJob Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 9f1acae94ea29d2d57b2952c0b0adc267ad3066c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a7788c894646b3ebb07fc9d3d98aeeda54b9172b5dde01e7eb65975bb2d95d61
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119547410"
 ---
 # <a name="create-method-of-the-win32_scheduledjob-class"></a>Create-Methode der Win32 \_ ScheduledJob-Klasse
 
-Die **Create** [WMI class](/windows/desktop/WmiSdk/retrieving-a-class) -Methode sendet einen Auftrag an ein Betriebssystem zur Ausführung zu einem bestimmten Zeitpunkt und Datum in der Zukunft. Diese Methode erfordert, dass der Zeit Plan Dienst auf dem Computer gestartet wird, an den der Auftrag übermittelt wird.
+Die **Methode** [WMI-Klasse erstellen](/windows/desktop/WmiSdk/retrieving-a-class) übermittelt einen Auftrag zur Ausführung zu einem bestimmten Zeitpunkt und einem bestimmten Datum in der Zukunft an ein Betriebssystem. Diese Methode erfordert, dass der Zeitplandienst auf dem Computer gestartet wird, an den der Auftrag übermittelt wird.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,35 +48,35 @@ uint32 Create(
 
 <dl> <dt>
 
-*Befehl* \[ in\]
+*Befehl* \[ In\]
 </dt> <dd>
 
-Der Name des Befehls, des Batch Programms oder der Binärdatei und Befehlszeilenparameter, die vom Zeit Plan Dienst zum Aufrufen des Auftrags verwendet werden.
+Der Name des Befehls, des Batchprogramms oder der Binärdatei sowie der Befehlszeilenparameter, die der Zeitplandienst zum Aufrufen des Auftrags verwendet.
 
-Beispiel: "Debug/q/f".
+Beispiel: "defrag /q /f".
 
 </dd> <dt>
 
-*StartTime* \[ in\]
+*StartTime* \[ In\]
 </dt> <dd>
 
-Koordinierte Weltzeit (UTC) zum Ausführen eines Auftrags. Das Formular muss wie folgt lauten: "YYYYMMDDHHMMSS. Mmmmmm (+-) OOO ", wobei" YYYYMMDD "durch" "ersetzt werden muss \* \* \* \* \* \* \* \* . Beispiel: " \* \* \* \* \* \* \* \* 143000.000000-420" gibt 14,30 (2:30 Uhr) an. PST mit Sommerzeit.
+koordinierte Weltzeit (UTC) zum Ausführen eines Auftrags. Das Formular muss sein: "YYYYMMDDHHMMSS. MMMMMM(+-)OOO", wobei "YYYYMMDD" durch " " ersetzt werden \* \* \* \* \* \* \* \* muss. Beispiel: \* \* \* \* \* \* \* \* "143000.000000-420" gibt 14,30 (14:30 Uhr) an. PST mit tatsächlicher Sommerzeit.
 
-Der Abschnitt "(+-) OOO" des StartTime-Eigenschafts Werts ist die aktuelle Abweichung für die lokale Zeit Übersetzung. Die Verschiebung ist der Unterschied zwischen der UTC-Zeit und der Ortszeit. Multiplizieren Sie die Anzahl der Stunden, die Ihre Zeitzone vor oder hinter der Ortszeit (GMT) um 60 liegen soll, um die Verschiebung für Ihre Zeitzone zu berechnen (verwenden Sie eine positive Zahl für die Anzahl von Stunden, wenn Ihre Zeitzone vor GMT liegt, und eine negative Zahl, wenn sich Ihre Zeitzone hinter GMT befindet). Fügen Sie der Berechnung eine zusätzliche 60 hinzu, wenn die Zeitzone die Sommerzeit verwendet. Die Pacific Standard Time-Zone beträgt z. b. acht Stunden hinter GMT. Daher entspricht der Bias dem Wert-420 (-8 \* 60 + 60), wenn die Sommerzeit verwendet wird, und-480 (-8 \* 60), wenn die Sommerzeit nicht in Gebrauch ist. Sie können auch den Wert der Bias ermitteln, indem Sie die Eigenschaft "Bias" der [**Win32- \_ Zeit Zonen**](win32-timezone.md) Klasse Abfragen.
+Der Abschnitt "(+-)OOO" des StartTime-Eigenschaftswerts ist die aktuelle Abweichung für die Lokale Zeitübersetzung. Die Abweichung ist der Unterschied zwischen der UTC-Zeit und der Ortszeit. Multiplizieren Sie zum Berechnen der Abweichung für Ihre Zeitzone die Anzahl der Stunden, die Ihre Zeitzone voraus oder hinter Greenwich Mean Time (GMT) liegt, mit 60 (verwenden Sie eine positive Zahl für die Anzahl der Stunden, wenn Ihre Zeitzone vor GMT liegt, und eine negative Zahl, wenn sich Ihre Zeitzone hinter GMT befindet). Fügen Sie ihrer Berechnung weitere 60 hinzu, wenn in Ihrer Zeitzone die Sommerzeit verwendet wird. Die Pacific Standard Time Zone liegt beispielsweise acht Stunden hinter GMT, daher entspricht die Abweichung -420 (-8 60 + 60), wenn Sommerzeit verwendet wird, und \* -480 (-8 60), wenn die Sommerzeit nicht \* verwendet wird. Sie können den Wert der Verzerrung auch ermitteln, indem Sie die Bias-Eigenschaft der [**Win32 \_ TimeZone-Klasse**](win32-timezone.md) abfragen.
 
 </dd> <dt>
 
-*Runwiederholtes* \[ Ausführen in, optional\]
+*RunRepeatedly* \[ in, optional\]
 </dt> <dd>
 
-**True** gibt an, dass ein geplanter Auftrag an bestimmten Tagen wiederholt ausgeführt wird. Der Standardwert ist **False**.
+True **gibt an,** dass ein geplanter Auftrag wiederholt an bestimmten Tagen ausgeführt wird. Der Standardwert ist **False**.
 
 </dd> <dt>
 
 *DaysOfWeek* \[ in, optional\]
 </dt> <dd>
 
-Tage der Woche, an denen die Ausführung eines Auftrags geplant ist. wird nur verwendet, wenn der Parameter *runwiederholter* den Wert **true** hat. Um einen Auftrag für mehr als einen Tag der Woche zu planen, verknüpfen Sie die entsprechenden Werte in einem logischen OR-Operator. Wenn Sie z. b. einen Auftrag für Dienstag und freitags planen möchten, ist der Wert von *DaysOfWeek* 2 oder 16.
+Wochentage, an denen die Ausführung eines Auftrags geplant ist; wird nur verwendet, wenn *der RunRepeatedly-Parameter* true **ist.** Um einen Auftrag für mehr als einen Tag der Woche zu planen, verbinden Sie die entsprechenden Werte in einem logischen OR. Um beispielsweise einen Auftrag für Dienstag und Freitag zu planen, ist der Wert von *DaysOfWeek* 2 ODER 16.
 
 <dt>
 
@@ -132,7 +132,7 @@ Tage der Woche, an denen die Ausführung eines Auftrags geplant ist. wird nur ve
 *DaysOfMonth* \[ in, optional\]
 </dt> <dd>
 
-Tage des Monats, an denen die Ausführung eines Auftrags geplant ist. wird nur verwendet, wenn der Parameter *runwiederholter* den Wert **true** hat.
+Tage des Monats, an denen die Ausführung eines Auftrags geplant ist; wird nur verwendet, wenn *der RunRepeatedly-Parameter* true **ist.**
 
 <dt>
 
@@ -480,11 +480,11 @@ Tag 31 eines Monats
 *InteractWithDesktop* \[ in, optional\]
 </dt> <dd>
 
-Wenn der Wert **true** ist, sollte der angegebene Auftrag interaktiv sein, was bedeutet, dass ein Benutzer während der Ausführung des Auftrags Eingaben an einen geplanten Auftrag übergeben kann. Der Standardwert ist **False**.
+True **gibt an,** dass der angegebene Auftrag interaktiv sein sollte, was bedeutet, dass ein Benutzer während der Ausführung des Auftrags Eingaben für einen geplanten Auftrag geben kann. Der Standardwert ist **False**.
 
 </dd> <dt>
 
-*JobID* \[ vorgenommen\]
+*JobId* \[ out\]
 </dt> <dd>
 
 Bezeichnernummer eines Auftrags. Dieser Parameter ist ein Handle für einen Auftrag, der auf einem Computer geplant wird.
@@ -493,7 +493,7 @@ Bezeichnernummer eines Auftrags. Dieser Parameter ist ein Handle für einen Auft
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung den Wert 0 (null) und eine andere Zahl zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt bei Erfolgreicher einen Wert von 0 (null) und eine andere Zahl zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -520,11 +520,11 @@ Die Anforderung wird nicht unterstützt.
 
 2
 
-Der Benutzer verfügt nicht über die erforderlichen Zugriffsrechte.
+Der Benutzer hat nicht den erforderlichen Zugriff.
 
 </dd> <dt>
 
-**Unbekannter Fehler.**
+**Unbekannter Fehler**
 </dt> <dd>
 
 8
@@ -538,7 +538,7 @@ Interaktiver Prozess.
 
 9
 
-Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Dienstdatei wurde nicht gefunden.
 
 </dd> <dt>
 
@@ -547,16 +547,16 @@ Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
 
 21
 
-An den Dienst wurden ungültige Parameter übermittelt.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
-**Dienst wurde nicht gestartet.**
+**Der Dienst wurde nicht gestartet.**
 </dt> <dd>
 
 22
 
-Das Konto, unter dem dieser Dienst ausgeführt wird, ist ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Dienstanbieter.
+Das Konto, unter dem dieser Dienst ausgeführt wird, ist ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Diensts.
 
 </dd> <dt>
 
@@ -567,9 +567,9 @@ Das Konto, unter dem dieser Dienst ausgeführt wird, ist ungültig oder verfügt
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der geplante Auftrag ein interaktives Programm (z. b. Notepad) startet, muss die **interactwithdeskto** -Eigenschaft auf **true** festgelegt werden, oder der Programm Bildschirm ist nicht sichtbar. Der Prozess wird weiterhin im **Task-Manager** angezeigt, auch wenn er nicht auf dem Bildschirm angezeigt wird.
+Wenn ihr geplanter Auftrag ein interaktives Programm wie Editor startet, muss die **InteractWithDeskto-Eigenschaft** auf **True** festgelegt werden, oder der Bildschirm des Programms ist nicht sichtbar. Der Prozess wird weiterhin in **der** Task-Manager auch wenn er nicht auf dem Bildschirm angezeigt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -579,8 +579,8 @@ Wenn der geplante Auftrag ein interaktives Programm (z. b. Notepad) startet, mus
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

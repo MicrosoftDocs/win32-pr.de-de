@@ -1,7 +1,7 @@
 ---
-description: Eine Liste von durch IEEE zugewiesenen organizativ eindeutigen bezeichnerbezeichner.
+description: Eine Liste der organisationsspezifischen Bezeichner (Organizationally Unique Identifiers, OUI), die von IEEE zugewiesen wurden.
 ms.assetid: 4a9885b6-2e57-4a16-8e1d-b5b0797e09db
-title: Roamingconsortium (Hotspot2)-Element
+title: RoamingConsortium (Hotspot2)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 5e53fa274cbc56de6be026ef0e466ec501cf9124
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca2ee96deaddad14d8def14c59b490eaea54803d779e288dbf826f6514d674a0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119684150"
 ---
-# <a name="roamingconsortium-hotspot2-element"></a>Roamingconsortium (Hotspot2)-Element
+# <a name="roamingconsortium-hotspot2-element"></a>RoamingConsortium (Hotspot2)-Element
 
-Eine Liste von durch IEEE zugewiesenen organizativ eindeutigen bezeichnerbezeichner.
+Eine Liste der organisationsspezifischen Bezeichner (Organizationally Unique Identifiers, OUI), die von IEEE zugewiesen wurden.
 
 ``` syntax
 <xs:element name="RoamingConsortium"
@@ -51,15 +51,15 @@ Eine Liste von durch IEEE zugewiesenen organizativ eindeutigen bezeichnerbezeich
 </xs:element>
 ```
 
-Das-Element wird durch das [**Hotspot2**](wlan-profileschema-hotspot2-element.md) -Element definiert.
+Das -Element wird durch das [**Hotspot2-Element**](wlan-profileschema-hotspot2-element.md) definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 
 
-| Element | type | BESCHREIBUNG                                                               |
+| Element | Typ | Beschreibung                                                               |
 |---------|------|---------------------------------------------------------------------------|
-| Ische     |      | Ein einzelnes Oui, das als hexadezimale Zahl variabler Größe formatiert ist.<br/> |
+| Oui     |      | Eine einzelne OUI, die als Hexadezimalzahl variabler Größe formatiert ist.<br/> |
 
 
 

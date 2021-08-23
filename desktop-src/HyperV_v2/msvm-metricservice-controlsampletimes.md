@@ -1,7 +1,7 @@
 ---
-description: Legt die Beispiel Zeiten für das Steuerelement fest.
+description: Legt die Beispielzeiten des Steuerelements fest.
 ms.assetid: 17ffa106-8b6b-4077-895c-03400505c2a0
-title: Controlsampletimes-Methode der Msvm_MetricService-Klasse
+title: ControlSampleTimes-Methode der Msvm_MetricService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1bb3797523153592610714406306035f59fc844c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ea13050c2c8e52d5786a97b3b749f10e48a73c4ecf1274e0415967ad25c9d9ba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119521480"
 ---
-# <a name="controlsampletimes-method-of-the-msvm_metricservice-class"></a>Controlsampletimes-Methode der MSVM \_ metricservice-Klasse
+# <a name="controlsampletimes-method-of-the-msvm_metricservice-class"></a>ControlSampleTimes-Methode der Msvm \_ MetricService-Klasse
 
-Legt die Beispiel Zeiten für das Steuerelement fest.
+Legt die Beispielzeiten des Steuerelements fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ uint32 ControlSampleTimes(
 
 <dl> <dt>
 
-*Startsampletime* \[ in\]
+*StartSampleTime* \[ In\]
 </dt> <dd>
 
-Der Zeitpunkt, zu dem die Stichprobenentnahme für die Metriken gestartet werden soll.
+Zeitpunkt, zu dem die Stichprobenentnahme für die Metriken gestartet werden soll.
 
-Der Wert 99990101000000.000000 + 000 gibt an, dass die Stichprobenentnahme bei der nächsten Synchronisierung mit der vollen Stunde gestartet werden soll. Die Stichprobenentnahme wird mit der vollen Stunde synchronisiert, wenn in Sekunden seit Mitternacht Modulo-Stichproben Intervall (in Sekunden) gleich 0 ist.
+Der Wert 999901010000000.000000+000 gibt an, dass die Stichprobenentnahme bei der nächsten Synchronisierung mit der vollen Stunde beginnen soll. Die Stichprobenentnahme wird mit der vollen Stunde synchronisiert, wenn sekunden seit Mitternacht modulo sample interval in seconds gleich 0 ist.
 
 </dd> <dt>
 
-*Preferredsampleingeterval* \[ in\]
+*PreferredSampleInterval* \[ In\]
 </dt> <dd>
 
-Die bevorzugte Stichproben Intervallzeit. Um korrelierbare Metriken zu erhalten, empfiehlt es sich, das Stichproben Intervall so zu wählen, dass 3600 Modulo Sample Interval Time in Sekunden gleich 0 ist.
+Bevorzugte Beispielintervallzeit. Um korrelierbare Metriken zu erhalten, wird empfohlen, das Stichprobenintervall so zu wählen, dass die Intervallzeit von 3600 Moduleo-Stichproben in Sekunden gleich 0 ist.
 
-Es liegt in der Verantwortung der CIM Metric Service-Implementierung, zu entscheiden, ob die angeforderte Stichproben Intervallzeit berücksichtigt wird.
+Es liegt in der Verantwortung der Implementierung des CIM-Metrikdiensts, zu entscheiden, ob die angeforderte Stichprobenintervallzeit verwendet wird.
 
-Der CIM-Client kann überprüfen, ob die metrikanbieter die angeforderte Stichproben Intervallzeit berücksichtigen, indem Sie verwandte basemetricdefinition-Instanzen abrufen und den Inhalt der CIM \_ basemetricdefinition. sampleinterval-Eigenschaft überprüfen.
+Der CIM-Client kann überprüfen, ob die Metrikanbieter die angeforderte Stichprobenintervallzeit verwenden, indem er verwandte BaseMetricDefinition-Instanzen abruft und den Inhalt der Eigenschaft "CIM \_ BaseMetricDefinition.SampleInterval" überprüft.
 
 </dd> <dt>
 
-*Restarterfassung* \[ in\]
+*RestartGathering* \[ In\]
 </dt> <dd>
 
-Boolescher Wert, der bei Festlegung auf "true" Anforderungen, dass das Sammeln aller Metriken, die dem metrikdienst zugeordnet sind, mit diesem Methoden Aufrufsatz neu gestartet
+Boolescher Wert, der bei Der Wert TRUE fordert, dass die Erfassung aller Metriken, die dem Metrikdienst zugeordnet sind, mit diesem Methodenaufruf neu gestartet wird.
 
 </dd> </dl>
 
@@ -80,13 +80,13 @@ Diese Methode gibt einen der folgenden Werte zurück:
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Reservierte Methode** (..)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -98,7 +98,7 @@ Fehler **(2** )
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -107,7 +107,7 @@ Fehler **(2** )
 
 <dl> <dt>
 
-[**MSVM \_ metricservice**](msvm-metricservice.md)
+[**Msvm \_ MetricService**](msvm-metricservice.md)
 </dt> </dl>
 
  

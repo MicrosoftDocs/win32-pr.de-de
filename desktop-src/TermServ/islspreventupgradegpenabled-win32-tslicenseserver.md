@@ -1,12 +1,12 @@
 ---
-title: Isllexventupgradegpabled-Methode der Win32_TSLicenseServer-Klasse
-description: Ruft ab, ob das \ 0034-Lizenz Upgrade verhindert wird \ 0034; die Gruppenrichtlinien Einstellung ist auf dem Remotedesktop-Lizenzserver aktiviert.
+title: IsLSPreventUpgradeGPEnabled-Methode der Win32_TSLicenseServer Klasse
+description: Ruft ab, ob \ 0034;Lizenzupgrade verhindern \ 0034; Die Gruppenrichtlinieneinstellung ist auf dem Remotedesktop aktiviert.
 ms.assetid: f78585b8-a50c-402b-ab20-f405eba0c079
 ms.tgt_platform: multiple
 keywords:
-- Die Methode "islspventupgradegpabled" Remotedesktopdienste
-- Remotedesktopdienste der Methode "islspventupgradegpabled", Win32_TSLicenseServer Klasse
-- Win32_TSLicenseServer Klasse Remotedesktopdienste, die Methode "islspventupgradegpabled"
+- IsLSPreventUpgradeGPEnabled-Remotedesktopdienste
+- IsLSPreventUpgradeGPEnabled-Methode Remotedesktopdienste , Win32_TSLicenseServer-Klasse
+- Win32_TSLicenseServer klasse Remotedesktopdienste , IsLSPreventUpgradeGPEnabled-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 205dc1ac05f5dca44297f8d80653ad51b7518d38
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7958df7d153db0abafd8e463f22a181f2e5a639afa5c21cb7529a9cd5c005c5b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345304"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119511695"
 ---
-# <a name="islspreventupgradegpenabled-method-of-the-win32_tslicenseserver-class"></a>Isllexventupgradegpabled-Methode der Win32- \_ Klasse "zlicenseserver"
+# <a name="islspreventupgradegpenabled-method-of-the-win32_tslicenseserver-class"></a>IsLSPreventUpgradeGPEnabled-Methode der Win32 \_ TSLicenseServer-Klasse
 
-Ruft ab, ob die Gruppenrichtlinien Einstellung "Lizenz Upgrade verhindern" auf dem Remotedesktop-Lizenzserver aktiviert ist.
+Ruft ab, ob die Gruppenrichtlinieneinstellung "Lizenzupgrade verhindern" auf dem Remotedesktop aktiviert ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,28 +43,28 @@ uint32 IsLSPreventUpgradeGPEnabled(
 
 <dl> <dt>
 
-*Aktiviert* \[ vorgenommen\]
+*Aktiviert* \[ out\]
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob die Richtlinien Einstellung "Lizenz Upgrade verhindern" aktiviert ist.
+Boolescher Wert, der angibt, ob die Richtlinieneinstellung "Lizenzupgrade verhindern" aktiviert ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Wenn die Richtlinien Einstellung "Lizenz Upgrade verhindern" aktiviert ist, stellt der Lizenzserver nur eine temporäre RDS-Client Zugriffslizenz für den Client aus, wenn keine entsprechende RDS-CAL für den Remotedesktop-Sitzungshost-Server (RD-Sitzungshost) verfügbar ist.
+Wenn die Richtlinieneinstellung "Lizenzupgrade verhindern" aktiviert ist, gibt der Lizenzserver nur dann eine temporäre RDS-CAL an den Client aus, wenn keine geeignete RDS CAL für den Remotedesktop-Sitzungshost-Server (RD-Sitzungshost) verfügbar ist.
 
-Die Richtlinien Einstellung befindet sich im folgenden Knoten des Editors für lokale Gruppenrichtlinien:
+Die Richtlinieneinstellung befindet sich im folgenden Knoten des Editors für lokale Gruppenrichtlinien:
 
-Computer Konfiguration \\ Administrative Vorlagen \\ \\ terminaldiensteterminaldienstelizenzierung von Windows-Komponenten \\
+Computerkonfiguration Administrative Vorlagen \\ \\ \\ Windows-Komponenten Terminaldienste \\ TS-Lizenzierung
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,7 +75,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
@@ -84,7 +84,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32- \_ Lizenznehmer**](win32-tslicenseserver.md)
+[**Win32 \_ TSLicenseServer**](win32-tslicenseserver.md)
 </dt> </dl>
 
  

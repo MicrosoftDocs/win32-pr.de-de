@@ -1,5 +1,5 @@
 ---
-description: Stellt den Status der Switch-Hardware Auslagerung dar.
+description: Stellt den Status der Hardware-Ausladung des Switches dar.
 ms.assetid: 77a34df7-e3c4-4d91-af5a-91a03dd8246d
 title: Msvm_EthernetSwitchHardwareOffloadData-Klasse
 ms.topic: reference
@@ -37,16 +37,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: b64762b824cea7d3b064636e7f7f87777e053daf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c729690bb2c8f59610fd1610e9123dfddf267152d1b428be308b5bd3ec23fe2f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106367251"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119524546"
 ---
-# <a name="msvm_ethernetswitchhardwareoffloaddata-class"></a>MSVM \_ ethernezwitchhardwareoffloaddata-Klasse
+# <a name="msvm_ethernetswitchhardwareoffloaddata-class"></a>Msvm \_ EthernetSwitchHardwareOffloadData-Klasse
 
-Stellt den Status der Switch-Hardware Auslagerung dar.
+Stellt den Status der Hardware-Ausladung des Switches dar.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -85,187 +85,187 @@ class Msvm_EthernetSwitchHardwareOffloadData : Msvm_EthernetSwitchData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ ethernezwitchhardwareoffloaddata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetSwitchHardwareOffloadData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ ethernezwitchhardwareoffloaddata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetSwitchHardwareOffloadData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Key**, **MaxLen** (256)
 </dt> </dl>
 
-Der Name der Klasse oder Unterklasse, die bei der Erstellung dieser Instanz verwendet wird. Diese Eigenschaft wird von [**MSVM \_ ethernetzwitchdata**](msvm-ethernetswitchdata.md)geerbt.
+Der Name der Klasse oder Unterklasse, die bei der Erstellung dieser Instanz verwendet wurde. Diese Eigenschaft wird von [**Msvm \_ EthernetSwitchData geerbt.**](msvm-ethernetswitchdata.md)
 
 </dd> <dt>
 
-**Defaultqueuevmmqaktivierte**
+**DefaultQueueVmmqEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (11), **interfacetten** (3), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (11), **InterfaceVersion** (3), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die aktuelle vmmq-Einstellung für die Standard Warteschlange
+Die aktuelle VMMQ-Einstellung für die Standardwarteschlange
 
 > [!Note]  
-> Die Eigenschaft wurde in Windows 10, Version 1703, hinzugefügt.
+> Die Eigenschaft wurde in Windows 10 Version 1703 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Defaultqueuevmmqqueuepairs**
+**DefaultQueueVmmqQueuePairs**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (12), **interfacetten** (3), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (12), **InterfaceVersion** (3), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die aktuelle Anzahl der der Standard Warteschlange zugeordneten Warteschlangen.
+Die aktuelle Anzahl von Warteschlangen, die der Standardwarteschlange zugeordnet sind
 
 > [!Note]  
-> Die Eigenschaft wurde in Windows 10, Version 1703, hinzugefügt.
+> Die Eigenschaft wurde in Windows 10 Version 1703 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Defaultqueuevrssaktivierte**
+**DefaultQueueVrssEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (10), **interfacetten** (3), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (10), **InterfaceVersion** (3), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die aktuelle vrss-Einstellung für die Standard Warteschlange
+Die aktuelle VRs-Einstellung für die Standardwarteschlange
 
 > [!Note]  
-> Die Eigenschaft wurde in Windows 10, Version 1703, hinzugefügt.
+> Die Eigenschaft wurde in Windows 10 Version 1703 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Defaultqueuevrssexcludeprimaryprocessor**
+**DefaultQueueVrssExcludePrimaryProcessor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (15), **interfacetten** (4), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (15), **InterfaceVersion** (4), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob die primäre VMQ-CPU von der vrss/vmmq-dereferenzierungstabelle ausgeschlossen wird.
+Gibt an, ob die primäre VMQ-CPU aus der VRSS/VMMQ-Deskriptionstabelle ausgeschlossen ist.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Defaultqueuevrssindependenthostverteilung**
+**DefaultQueueVrssIndependentHostSpreading**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (16), **interfacetten** (4), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (16), **InterfaceVersion** (4), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob die vrss-Verteilung für die Standard Warteschlange unabhängig vom RSS-Status des externen VPORTS immer durchzuführen ist.
+Gibt an, ob die VRSS-Verteilung immer für die Standardwarteschlange unabhängig vom RSS-Status des externen vPorts erfolgt.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Defaultqueuevrssminqueuepairs**
+**DefaultQueueVrssMinQueuePairs**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (13), **interfacetten** (4), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (13), **InterfaceVersion** (4), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die Mindestanzahl von Warteschlangen an, die für vrss/vmmq verwendet werden.
+Gibt die Mindestanzahl von Warteschlangen an, die für VRSS/VMMQ verwendet werden.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Defaultqueuevrssqueueschedulingmode**
+**DefaultQueueVrssQueueSchedulingMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (14), **interfacetten** (4), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (14), **InterfaceVersion** (4), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, wie vrss/vmmq-Warteschlangen an verschiedene Host Prozessoren geleitet werden.
+Gibt an, wie VRSS/VMMQ-Warteschlangen auf verschiedene Hostprozessoren umgesteuerte werden.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
@@ -274,33 +274,33 @@ Gibt an, wie vrss/vmmq-Warteschlangen an verschiedene Host Prozessoren geleitet 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -309,204 +309,204 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
-**Iovqueuepairren Capacity**
+**IovQueuePairCapacity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (7), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die maximale Anzahl von Warteschlangen Paaren, die vom Schalter unterstützt werden.
+Die maximale Anzahl von Warteschlangenpaaren, die vom Switch unterstützt werden.
 
 </dd> <dt>
 
-**Iovqueuepairusage**
+**IovQueuePairUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (8), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (8), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die aktuelle Anzahl der Warteschlangen Paare, die vom Switch verwendet werden.
+Die aktuelle Anzahl von Warteschlangenpaaren, die vom Switch verwendet werden.
 
 </dd> <dt>
 
-**Iovvfcapacity**
+**IovVfCapacity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (1), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die maximale Anzahl von virtuellen Funktionen, die vom Schalter unterstützt werden.
+Die maximale Anzahl virtueller Funktionen, die vom Switch unterstützt werden.
 
 </dd> <dt>
 
-**Iovvfusage**
+**IovVfUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (2), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die aktuelle Anzahl von virtuellen Funktionen, die vom Switch verwendet werden.
+Die aktuelle Anzahl virtueller Funktionen, die vom Switch verwendet werden.
 
 </dd> <dt>
 
-**Ipsecsacapacity**
+**IPsecSACapacity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (5), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die maximale Anzahl von IPSec-Sicherheits Zuordnungs Abladungen, die vom Switch unterstützt werden.
+Die maximale Anzahl von IPsec-Sicherheitsverbunden, die vom Switch unterstützt werden.
 
 </dd> <dt>
 
-**Ipsecwurst**
+**IPsecSAUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (6), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die aktuelle Anzahl von IPSec-Sicherheits Zuordnungs Abladungen, die vom Switch verwendet werden.
+Die aktuelle Anzahl von IPsec-Sicherheitsverbunden, die vom Switch verwendet werden.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **override**, **maxlen** (256)
+Qualifizierer: **Key**, **Override**, **MaxLen** (256)
 </dt> </dl>
 
-Der eindeutige Name der Ressource. Diese Eigenschaft wird von [**MSVM \_ ethernetzwitchdata**](msvm-ethernetswitchdata.md)geerbt.
+Der eindeutige Name der Ressource. Diese Eigenschaft wird von [**Msvm \_ EthernetSwitchData geerbt.**](msvm-ethernetswitchdata.md)
 
 </dd> <dt>
 
-**Packetdirectinuse**
+**PacketDirectInUse**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (9), **interfacetten** (2), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (9), **InterfaceVersion** (2), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob Paket Direct vom Switch verwendet wird.
+Gibt an, ob packet direct vom Switch verwendet wird.
 
 > [!Note]  
-> Die Eigenschaft wurde in Windows 10 hinzugefügt.
+> Eigenschaft, die in Windows 10.
 
  
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Key**, **MaxLen** (256)
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des hostingsystems. Diese Eigenschaft wird von [**MSVM \_ ethernetzwitchdata**](msvm-ethernetswitchdata.md)geerbt.
+Der Name der Erstellungsklasse des Hostsystems. Diese Eigenschaft wird von [**Msvm \_ EthernetSwitchData geerbt.**](msvm-ethernetswitchdata.md)
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Key**, **MaxLen** (256)
 </dt> </dl>
 
-Der Name des virtuellen Switchs, an den die zugeordnete Ressourcen Instanz gebunden ist. Diese Eigenschaft wird von [**MSVM \_ ethernetzwitchdata**](msvm-ethernetswitchdata.md)geerbt.
+Der Name des virtuellen Switches, an den die zugeordnete Ressourceninstanz gebunden ist. Diese Eigenschaft wird von [**Msvm \_ EthernetSwitchData geerbt.**](msvm-ethernetswitchdata.md)
 
 </dd> <dt>
 
-**Vmqcapacity**
+**VmqCapacity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (3), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die maximale Anzahl von Warteschlangen Abladungen virtueller Computer, die vom Switch unterstützt werden.
+Die maximale Anzahl von Warteschlangenlasten virtueller Computer, die vom Switch unterstützt werden.
 
 </dd> <dt>
 
-**Vmqusage**
+**VmqUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (4), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die aktuelle Anzahl der Warteschlangen Abladungen des virtuellen Computers, die vom Switch verwendet werden.
+Die aktuelle Anzahl von Warteschlangen-Ausladungen virtueller Computer, die vom Switch verwendet werden.
 
 </dd> </dl>
 
@@ -516,10 +516,10 @@ Die aktuelle Anzahl der Warteschlangen Abladungen des virtuellen Computers, die 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

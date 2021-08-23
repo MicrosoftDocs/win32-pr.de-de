@@ -1,11 +1,11 @@
 ---
-title: Monthlydowauslöst. runonlastweekosmonth (Eigenschaft)
-description: Ruft bei der Skripterstellung einen booleschen Wert ab, der angibt, dass der Task in der letzten Woche des Monats ausgeführt wird, oder legt ihn fest.
+title: MonthlyDOWTrigger.RunOnLastWeekOfMonth-Eigenschaft
+description: Ruft für die Skripterstellung einen booleschen Wert ab, der angibt, dass der Task in der letzten Woche des Monats ausgeführt wird, oder legt diesen fest.
 ms.assetid: 35e6b507-f207-412e-9669-afeaa1eca183
 keywords:
-- Runonlastweekosmonth-Eigenschaft Taskplaner
-- Runonlastweekosmonth-Eigenschaft Taskplaner, monthlydowauslöserobjekt
-- Monthlydowauslöserobjekt Taskplaner, runonlastweekosmonth (Eigenschaft)
+- RunOnLastWeekOfMonth-Eigenschaft Taskplaner
+- RunOnLastWeekOfMonth-Eigenschaft Taskplaner , MonthlyDOWTrigger-Objekt
+- MonthlyDOWTrigger-Objekt Taskplaner , RunOnLastWeekOfMonth-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c67852d305d89e7d75481c8c2080a972123bfc5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: eb04247bdb991a71f3b535e3524163549384a207aafd5e85b162aef6b5ab0198
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342191"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119659560"
 ---
-# <a name="monthlydowtriggerrunonlastweekofmonth-property"></a>Monthlydowauslöst. runonlastweekosmonth (Eigenschaft)
+# <a name="monthlydowtriggerrunonlastweekofmonth-property"></a>MonthlyDOWTrigger.RunOnLastWeekOfMonth-Eigenschaft
 
-Ruft bei der Skripterstellung einen booleschen Wert ab, der angibt, dass der Task in der letzten Woche des Monats ausgeführt wird, oder legt ihn fest.
+Ruft für die Skripterstellung einen booleschen Wert ab, der angibt, dass der Task in der letzten Woche des Monats ausgeführt wird, oder legt diesen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ MonthlyDOWTrigger.RunOnLastWeekOfMonth As Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-True gibt an, dass die Aufgabe in der letzten Woche des Monats ausgeführt wird. andernfalls false.
+True gibt an, dass der Task in der letzten Woche des Monats ausgeführt wird. Andernfalls False.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,9 +46,9 @@ True gibt an, dass die Aufgabe in der letzten Woche des Monats ausgeführt wird.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -57,7 +57,7 @@ True gibt an, dass die Aufgabe in der letzten Woche des Monats ausgeführt wird.
 
 <dl> <dt>
 
-[**Monthlydowlöst**](monthlydowtrigger.md)
+[**MonthlyDOWTrigger**](monthlydowtrigger.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

@@ -1,28 +1,28 @@
 ---
-title: Einrichtung des privaten Pools
-description: Enthält das Setup Konsolen Projekt.
+title: Einrichten eines privaten Pools
+description: Enthält das Setupkonsolenprojekt.
 ms.assetid: 0B00690C-9B13-4D8B-8AB6-F8BD2E35858C
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a661e65610e6cefb03ee9d47f70d7dc8d6d92a0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bf2f2eb309e054ef41d9b1f2842367d595ea83a2feb61880b2ea7ba606cdbe1b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119683380"
 ---
-# <a name="private-pool-setup"></a>Einrichtung des privaten Pools
+# <a name="private-pool-setup"></a>Einrichten eines privaten Pools
 
-Die folgenden Abschnitte enthalten den Code, der zum Einrichten eines privaten Sensor Pools erforderlich ist.
+Die folgenden Abschnitte enthalten den Code, der zum Einrichten eines privaten Sensorpools erforderlich ist.
 
--   [Targetver. h](#targetverh)
+-   [Targetver.h](#targetverh)
 -   [stdafx.h](#stdafxh)
--   [Privatepoolcommondefs. h](#privatepoolcommondefsh)
--   [Privatepoolsetup. cpp](#privatepoolsetupcpp)
+-   [PrivatePoolCommonDefs.h](#privatepoolcommondefsh)
+-   [PrivatePoolSetup.cpp](#privatepoolsetupcpp)
 
-## <a name="targetverh"></a>Targetver. h
+## <a name="targetverh"></a>Targetver.h
 
-Dieses Beispiel wurde für Windows 7 und spätere Betriebssysteme erstellt.
+Dieses Beispiel wurde für betriebssysteme Windows 7 und höher erstellt.
 
 
 ```C++
@@ -65,9 +65,9 @@ Dieses Beispiel wurde für Windows 7 und spätere Betriebssysteme erstellt.
 
 
 
-## <a name="privatepoolcommondefsh"></a>Privatepoolcommondefs. h
+## <a name="privatepoolcommondefsh"></a>PrivatePoolCommonDefs.h
 
-Fügen Sie den folgenden Header ein. Beachten Sie, dass Sie eine eindeutige Datenbank-ID generieren müssen. Verwenden Sie die bereitgestellte GUID nicht in einer freigegebenen Anwendung.
+Schließen Sie den folgenden Header ein. Beachten Sie, dass Sie eine eindeutige Datenbank-ID generieren müssen. Verwenden Sie die bereitgestellte GUID nicht in einer freigegebenen Anwendung.
 
 
 ```C++
@@ -99,9 +99,9 @@ static const GUID PRIVATE_POOL_DATABASE_ID =
 
 
 
-## <a name="privatepoolsetupcpp"></a>Privatepoolsetup. cpp
+## <a name="privatepoolsetupcpp"></a>PrivatePoolSetup.cpp
 
-Der folgende Quellcode zeigt den Einstiegspunkt für eine private Sensor Pool Anwendung an.
+Der folgende Quellcode zeigt den Einstiegspunkt für eine private Sensorpoolanwendung an.
 
 
 ```C++
@@ -530,9 +530,9 @@ static bool isDatabaseInstalled(
 
 
 
- 
+ 
 
- 
+ 
 
 
 

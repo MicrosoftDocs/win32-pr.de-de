@@ -1,32 +1,32 @@
 ---
-title: VML-polylinienelement
-description: VML-polylinienelement
+title: VML Polyline-Element
+description: VML Polyline-Element
 ms.assetid: 29ccbf78-af1b-475c-b2a4-e1f646db19e9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0db6342957b1aee65e1f064e0577e75f7ad466e3
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f2b1fc000da85375fbe8b80cbe7613801913a98f63d4a4e663172ae4bebfd92b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513380"
 ---
-# <a name="vml-polyline-element"></a>VML-polylinienelement
+# <a name="vml-polyline-element"></a>VML Polyline-Element
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Vordefinierte polylinienform.
+Vordefinierte Polylinienform.
 
-**Polyline** verwendet das [Points](msdn-online-vml-points-attribute.md) -Attribut.
+**Polyline** verwendet das [Punktattribut.](msdn-online-vml-points-attribute.md)
 
 **Anmerkungen**
 
-Im folgenden finden Sie den minimalen Code, der zum Entwickeln einer Polylinie erforderlich ist.
+Im Folgenden finden Sie den minimalen Code, der zum Erzeugen einer Polylinie erforderlich ist.
 
 
 ```HTML
@@ -39,6 +39,6 @@ Im folgenden finden Sie den minimalen Code, der zum Entwickeln einer Polylinie e
 
 
 
- 
+ 
 
- 
+ 

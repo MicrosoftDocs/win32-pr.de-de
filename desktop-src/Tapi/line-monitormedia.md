@@ -1,19 +1,19 @@
 ---
-description: Die TAPI-LINE_MONITORMEDIA Nachricht wird gesendet, wenn eine Änderung im Medientyp "Aufrufe" erkannt wird. Das Senden dieser Nachricht wird mit der linemonitormedia-Funktion gesteuert.
+description: Die TAPI-LINE_MONITORMEDIA Nachricht wird gesendet, wenn eine Änderung des Aufrufmedientyps erkannt wird. Das Senden dieser Nachricht wird mit der lineMonitorMedia-Funktion gesteuert.
 ms.assetid: 1cfba455-9a15-45f3-8d56-74b8348e080e
-title: LINE_MONITORMEDIA Meldung (TAPI. h)
+title: LINE_MONITORMEDIA Meldung (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7b6e3d0d2928ab3256b844a27727657978dbe0f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9fec42f0e8aa630b518f989a9237762edc71281767b281f7af78eb54210138d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352972"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119519020"
 ---
-# <a name="line_monitormedia-message"></a>Zeile \_ monitormedia-Meldung
+# <a name="line_monitormedia-message"></a>LINE \_ MONITORMEDIA-Meldung
 
-Die TAPI **- \_ Linien** Überwachung wird gesendet, wenn eine Änderung im Medientyp des Aufrufes erkannt wird. Das Senden dieser Nachricht wird mit der [**linemonitormedia**](/windows/desktop/api/Tapi/nf-tapi-linemonitormedia) -Funktion gesteuert.
+Die TAPI **LINE \_ MONITORMEDIA-Nachricht** wird gesendet, wenn eine Änderung des Medientyps des Aufrufs erkannt wird. Das Senden dieser Nachricht wird mit der [**lineMonitorMedia-Funktion**](/windows/desktop/api/Tapi/nf-tapi-linemonitormedia) gesteuert.
 
 
 ```C++
@@ -26,24 +26,24 @@ Die TAPI **- \_ Linien** Überwachung wird gesendet, wenn eine Änderung im Medi
 
 <dl> <dt>
 
-*hdevice* 
+*hDevice* 
 </dt> <dd>
 
-Ein Handle für den-Befehl.
+Ein Handle für den Aufruf.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
-Die beim Öffnen der Zeile angegebene Rückruf Instanz.
+Die Rückrufinstanz, die beim Öffnen der Zeile angegeben wird.
 
 </dd> <dt>
 
 *dwParam1* 
 </dt> <dd>
 
-Der neue Medientyp (oder-Modus). Dieser Parameter darf nur eine der [**linemediamode- \_ Konstanten**](linemediamode--constants.md)sein.
+Der neue Medientyp (oder Modus). Dieser Parameter darf nur eine der [**LINEMEDIAMODE-Konstanten \_ sein.**](linemediamode--constants.md)
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Nicht verwendet.
 *dwParam3* 
 </dt> <dd>
 
-Die "Takt Anzahl" (Anzahl der Millisekunden seit dem Start von Windows), an der das angegebene Medium erkannt wurde. Für TAPI-Versionen vor 2,0 wird dieser Parameter nicht verwendet.
+Die "Tickanzahl" (Anzahl von Millisekunden seit dem Start Windows), bei der das angegebene Medium erkannt wurde. Bei TAPI-Versionen vor 2.0 wird dieser Parameter nicht verwendet.
 
 </dd> </dl>
 
@@ -65,13 +65,13 @@ Die "Takt Anzahl" (Anzahl der Millisekunden seit dem Start von Windows), an der 
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Zeile \_ monitormedia** -Nachricht wird an die Anwendung gesendet, die die Medienüberwachung für den erkannten Medientyp aktiviert hat.
+Die **LINE \_ MONITORMEDIA-Nachricht** wird an die Anwendung gesendet, die die Medienüberwachung für den erkannten Medientyp aktiviert hat.
 
-Da dieser Zeitstempel möglicherweise auf einem anderen Computer als dem erstellt wurde, auf dem die Anwendung ausgeführt wird, ist er nur für Vergleiche mit anderen gleichzeitig auf demselben Zeilen Gerät ( [**Zeilen \_ gatherziffern**](line-gatherdigits.md), [**Zeilen \_ Generierung**](line-generate.md), [**Zeilen \_ Monitor Ziffern**](line-monitordigits.md), Zeilen Überwachung) generierten Nachrichten [**nützlich \_**](line-monitortone.md), um deren relative zeitliche Steuerung (Trennung zwischen Ereignissen) zu bestimmen. Der Tick-Zähler kann nach ungefähr 49,7 Tagen umbrochen werden. Anwendungen müssen dies beim Durchführen von Berechnungen berücksichtigen.
+Da dieser Zeitstempel möglicherweise auf einem anderen Computer als dem Computer generiert wurde, auf dem die Anwendung ausgeführt wird, ist er nur für den Vergleich mit anderen ähnlichen Nachrichten mit Zeitstempeln nützlich, die auf demselben Zeilengerät generiert wurden ( [**LINE \_ GATHERDIGITS**](line-gatherdigits.md), [**LINE \_ GENERATE**](line-generate.md), [**LINE \_ MONITORDIGITS**](line-monitordigits.md), [**LINE \_ MONITORTONE**](line-monitortone.md)), um deren relative Zeitliche Steuerung (Trennung zwischen Ereignissen) zu bestimmen. Die Tickanzahl kann nach ungefähr 49,7 Tagen "umschließen". -Anwendungen müssen dies beim Ausführen von Berechnungen berücksichtigen.
 
-Wenn der Dienstanbieter den Zeitstempel nicht generiert (z. b. wenn er mit einer früheren Version von TAPI erstellt wurde), gibt TAPI einen Zeitstempel an dem Punkt an, der dem Dienstanbieter am nächsten liegt, der das Ereignis generiert, sodass der erzeugte Zeitstempel so genau wie möglich ist.
+Wenn der Dienstanbieter den Zeitstempel nicht generiert (z. B. wenn er mit einer früheren Version von TAPI erstellt wurde), stellt TAPI einen Zeitstempel an dem Punkt bereit, der dem Dienstanbieter am nächsten liegt, der das Ereignis generiert, sodass der synthetisierte Zeitstempel so genau wie möglich ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Wenn der Dienstanbieter den Zeitstempel nicht generiert (z. b. wenn er mit einer
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
@@ -88,16 +88,16 @@ Wenn der Dienstanbieter den Zeitstempel nicht generiert (z. b. wenn er mit einer
 
 <dl> <dt>
 
-[**Zeilen \_ gatherziffern**](line-gatherdigits.md)
+[**LINE \_ GATHERDIGITS**](line-gatherdigits.md)
 </dt> <dt>
 
-[**Zeilen \_ Generierung**](line-generate.md)
+[**LINE \_ GENERATE**](line-generate.md)
 </dt> <dt>
 
-[**Zeilen \_ monitorziffern**](line-monitordigits.md)
+[**LINE \_ MONITORDIGITS**](line-monitordigits.md)
 </dt> <dt>
 
-[**\_linienmonitortone**](line-monitortone.md)
+[**LINE \_ MONITORTONE**](line-monitortone.md)
 </dt> </dl>
 
  

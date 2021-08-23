@@ -1,5 +1,5 @@
 ---
-description: Stellt ausführliche Informationen über ein manuell eingebundenes Speicher Abbild bereit.
+description: Enthält ausführliche Informationen zu einem manuell eingebundenen Speicherimage.
 ms.assetid: 40b94c5f-c277-40c8-a55d-ebc64cb231ca
 title: Msvm_MountedStorageImage-Klasse
 ms.topic: reference
@@ -34,18 +34,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1b6f00b137fc73bcf8f79d39e6f7bfb5a6d7c944
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ad8f4d8542c7478dffbc87463f9bfe1ff4c2dc31fcc0ecc3bce2d293caa3a8b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119521190"
 ---
-# <a name="msvm_mountedstorageimage-class"></a>MSVM \_ mountedstorageimage-Klasse
+# <a name="msvm_mountedstorageimage-class"></a>Msvm \_ MountedStorageImage-Klasse
 
-Stellt ausführliche Informationen über ein manuell eingebundenes Speicher Abbild bereit.
+Enthält ausführliche Informationen zu einem manuell eingebundenen Speicherimage.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -79,20 +79,20 @@ class Msvm_MountedStorageImage : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ mountedstorageimage** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ MountedStorageImage-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MSVM \_ mountedstorageimage** -Klasse verfügt über diese Methoden.
+Die **Msvm \_ MountedStorageImage-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                          | BESCHREIBUNG                                    |
+| Methode                                                                          | Beschreibung                                    |
 |:--------------------------------------------------------------------------------|:-----------------------------------------------|
-| [**Detachvirtualharddisk**](detachvirtualharddisk-msvm-mountedstorageimage.md) | Trennt das bereitgestellte Speicher Abbild.<br/> |
+| [**DetachVirtualHardDisk**](detachvirtualharddisk-msvm-mountedstorageimage.md) | Trennt das eingebundene Speicherimage.<br/> |
 
 
 
@@ -100,33 +100,33 @@ Die **MSVM \_ mountedstorageimage** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ mountedstorageimage** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ MountedStorageImage-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **zugreifen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zugriff, unter dem das Speicher Abbild bereitgestellt wird.
+Der Zugriff, unter dem das Speicherimage eingebunden wird.
 
 <dt>
 
 <span id="Read-only"></span><span id="read-only"></span><span id="READ-ONLY"></span>
 
-Schreib **geschützt (1** )
+**Schreibgeschützt** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Read_Write"></span><span id="read_write"></span><span id="READ_WRITE"></span>
 
-**Lese-/Schreibzugriff** (2)
+**Lesen/Schreiben** (2)
 
 
 </dt> <dd></dd> </dl>
@@ -136,98 +136,98 @@ Schreib **geschützt (1** )
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und enthält immer "eingebundenes Speicher Image".
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und enthält immer "Mounted Storage Image".
 
 </dd> <dt>
 
-**Communicationstatus**
+**CommunicationStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf **null** festgelegt.
+Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird vom [**CIM \_ managedelta-Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und enthält immer "Informationen über ein bereitgestelltes Speicher Image".
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und enthält immer "Informationen zu einem eingebundenen Speicherimage".
 
 </dd> <dt>
 
 **DetailedStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ergänzt die **primarystatus** -Eigenschaft mit zusätzlichen Status Details. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf **null** festgelegt.
+Ergänzt die **PrimaryStatus-Eigenschaft** um zusätzliche Statusdetails. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und enthält immer "eingebundenes Speicher Image".
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und enthält immer "Mounted Storage Image".
 
 </dd> <dt>
 
 **HealthState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Zustand des Elements. Dieses Attribut drückt den Zustand dieses Elements aus, aber nicht notwendigerweise dessen unter Komponenten. Mögliche Werte sind 0 bis 30, wobei 5 bedeutet, dass das Element vollständig fehlerfrei ist und 30 bedeutet, dass das Element vollständig nicht funktionsfähig ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf 5 festgelegt.
+Die aktuelle Integrität des Elements. Dieses Attribut drückt die Integrität dieses Elements aus, jedoch nicht notwendigerweise die Integrität seiner Unterkomponenten. Die möglichen Werte sind 0 bis 30, wobei 5 bedeutet, dass das Element vollständig fehlerfrei ist und 30 bedeutet, dass das Element vollständig nicht funktionslos ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf 5 festgelegt.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der Erstellung der Konfiguration der virtuellen Maschine. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Das Datum und die Uhrzeit der Erstellung der Konfiguration des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -236,14 +236,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer **null**.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer **NULL.**
 
 </dd> <dt>
 
-**LUN**
+**Lun**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **UINT8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -259,46 +259,46 @@ Die LUN-ID der SCSI-Adresse.
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad zur VHD, die eingebunden wird. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Der Pfad zur bereitgestellten VHD. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**Operatingstatus**
+**OperatingStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit und kann verwendet werden, um weitere Details in Bezug auf den Wert der **enabledstate** -Eigenschaft bereitzustellen. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf **null** festgelegt.
+Stellt aktuelle Statusinformationen für die Betriebsbedingung des Elements bereit und kann zum Bereitstellen weiterer Details in Bezug auf den Wert der **EnabledState-Eigenschaft** verwendet werden. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
 **OperationalStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Status des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, und jedes Array Element ist immer auf **null** festgelegt.
+Der aktuelle Status des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, und jedes Arrayelement ist immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
-**Pathid**
+**PathId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **UINT8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -307,14 +307,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Die ID der SCSI-Adress Pfad-ID.
+Die SCSI-Adresspfad-ID.
 
 </dd> <dt>
 
-**Pnpdevicepath**
+**PnpDevicePath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -322,14 +322,14 @@ Zugriffstyp: Schreibgeschützt
 
 Der PNP-Gerätepfad.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst Windows 8.1 und Windows Server 2012 R2 unterstützt.
 
 </dd> <dt>
 
-**PortNumber**
+**Portnumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **UINT8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -338,53 +338,53 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Die Portnummer für die SCSI-Adresse.
+Die Portnummer der SCSI-Adresse.
 
 </dd> <dt>
 
-**Primarystatus**
+**PrimaryStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt Statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der Eigenschaft **detailedstatus** verwendet werden, um einen hohen und detaillierten Integritäts Status des Elements und seiner unter Komponenten bereitzustellen. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf **null** festgelegt.
+Stellt statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der **DetailedStatus-Eigenschaft** verwendet werden, um einen hohen und detaillierten Integritätsstatus des Elements und seiner Unterkomponenten bereitzustellen. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf "OK" festgelegt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf "OK" festgelegt.
 
 </dd> <dt>
 
-**Status Beschreibungen**
+**StatusDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeichen folgen, die die verschiedenen **OperationalStatus** -Array Werte beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, und jedes Array Element ist immer auf "OK" festgelegt.
+Zeichenfolgen, die die verschiedenen **OperationalStatus-Arraywerte** beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, und jedes Arrayelement ist immer auf "OK" festgelegt.
 
 </dd> <dt>
 
 **TargetId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **UINT8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -393,20 +393,20 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Die ID des SCSI-Adress Ziels.
+Die Ziel-ID der SCSI-Adresse.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ des bereitgestellten Speicher Abbilds.
+Der Typ des bereitgestellten Speicherimages.
 
 <dt>
 
@@ -419,16 +419,16 @@ Der Typ des bereitgestellten Speicher Abbilds.
 
 <span id="ISO_Image"></span><span id="iso_image"></span><span id="ISO_IMAGE"></span>
 
-**ISO-Abbild** (1)
+**ISO-Image** (1)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ mountedstorageimage** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ MountedStorageImage-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -436,10 +436,10 @@ Der Zugriff auf die **MSVM \_ mountedstorageimage** -Klasse kann durch die UAC-F
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -454,7 +454,7 @@ Der Zugriff auf die **MSVM \_ mountedstorageimage** -Klasse kann durch die UAC-F
 [**CIM \_ LogicalElement**](/windows/desktop/CIMWin32Prov/cim-logicalelement)
 </dt> <dt>
 
-[Speicher Klassen](storage-classes.md)
+[Storage Klassen](storage-classes.md)
 </dt> </dl>
 
  

@@ -1,27 +1,27 @@
 ---
-description: Die msipatchsequence-Tabelle enthält alle Informationen, die das Installationsprogramm benötigt, um die Reihenfolge der Anwendung eines kleinen Update Patches relativ zu allen anderen Patches zu bestimmen.
+description: Die Tabelle MsiPatchSequence enthält alle Informationen, die das Installationsprogramm benötigt, um die Anwendungssequenz eines kleinen Updatepatches relativ zu allen anderen Patches zu bestimmen.
 ms.assetid: ae8319ad-8136-4201-9fcf-ea58ce05f88b
-title: Msipatchsequence-Tabelle
+title: MsiPatchSequence-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a1e63252b98156a5eac1ebdc5ed5d94c7a42ec93
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cc529c0f7d1a4cdd1bab568f64507922d6e28f539636600f88dea603c4fe1a52
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119519800"
 ---
-# <a name="msipatchsequence-table"></a>Msipatchsequence-Tabelle
+# <a name="msipatchsequence-table"></a>MsiPatchSequence-Tabelle
 
-Die msipatchsequence-Tabelle enthält alle Informationen, die das Installationsprogramm benötigt, um die Reihenfolge der Anwendung eines [kleinen Update](small-updates.md) Patches relativ zu allen anderen Patches zu bestimmen. Die Tabelle muss sich in der Datenbank der Patchdatei befinden und nicht in einer Transformation im Patch. Das Installationsprogramm ignoriert diese Tabelle beim Anwenden eines [wichtigen Upgradepatches](major-upgrades.md) . Beim Anwenden eines [geringfügigen Upgradepatches](minor-upgrades.md) verwendet das Installationsprogramm diese Tabelle nur, um ersetzte Patches zu identifizieren, die nicht sequenziert werden dürfen.
+Die Tabelle MsiPatchSequence enthält alle Informationen, die das Installationsprogramm benötigt, um die Anwendungssequenz eines [kleinen Updatepatches](small-updates.md) relativ zu allen anderen Patches zu bestimmen. Die Tabelle muss sich in der Datenbank der Patchdatei und nicht in einer Transformation im Patch befinden. Das Installationsprogramm ignoriert diese Tabelle, wenn ein [wichtiger Upgradepatch](major-upgrades.md) angewendet wird. Beim Anwenden eines [kleineren Upgradepatches](minor-upgrades.md) verwendet das Installationsprogramm diese Tabelle nur, um abgelöste Patches zu identifizieren, die nicht sequenziert werden dürfen.
 
-Die **msipatchsequence-Tabelle** weist die folgenden Spalten auf.
+Die **Tabelle MsiPatchSequence** weist die folgenden Spalten auf.
 
 
 
-| Spalte      | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte      | Typ                         | Key | Nullwerte zulässig |
 |-------------|------------------------------|-----|----------|
-| Patchfamilie | [Bezeichner](identifier.md) | J   | N        |
+| PatchFamily | [Identifier](identifier.md) | J   | N        |
 | ProductCode | [GUID](guid.md)             | J   | J        |
 | Sequenz    | [Version](version.md)       | N   | N        |
 | Attribute  | [Integer](integer.md)       | N   | J        |
@@ -34,42 +34,42 @@ Die **msipatchsequence-Tabelle** weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="PatchFamily"></span><span id="patchfamily"></span><span id="PATCHFAMILY"></span>Patchfamilie
+<span id="PatchFamily"></span><span id="patchfamily"></span><span id="PATCHFAMILY"></span>PatchFamily
 </dt> <dd>
 
-Gibt an, dass der Patch Mitglied der patchfamilie ist, die in diesem Feld benannt ist. Patches in derselben patchfamilie, die auf dieselbe Produktversion abzielen, werden nach den Werten in der Sequence-Spalte sortiert. Die Patches innerhalb der patchfamilie werden in der Reihenfolge der zunehmenden Reihenfolge auf das Ziel Produkt angewendet. Die patchfamilie wird auch verwendet, um zu bestimmen, welche Patches ersetzt werden sollen. Ein Patch kann in mehreren Zeilen aufgelistet werden und zu mehreren patchfamilien gehören, wenn er für mehr als ein Produkt gilt oder mehrere Korrekturen umfasst.
+Gibt an, dass der Patch Ein Mitglied der Patchfamilie namens in diesem Feld ist. Patches in der gleichen Patchfamilie, die auf die gleiche Produktversion abzielen, werden nach den Werten in der Spalte Sequenz sortiert. Die Patches innerhalb der Patchfamilie werden in der Reihenfolge der zunehmenden Reihenfolge auf das Zielprodukt angewendet. PatchFamily wird auch verwendet, um zu bestimmen, welche Patches ersetzt werden sollen. Ein Patch kann in mehreren Zeilen aufgeführt werden und zu mehreren Patchfamilien gehören, wenn er für mehrere Produkte gilt oder mehrere Fehlerbehebungen enthält.
 
-Der-Windows Installer interpretiert den Wert der patchfamilie nicht auf andere Weise als Vergleiche mit anderen patchfamilienwerten. Ein patchfamilienwert muss innerhalb von ProductCode eindeutig sein, der auf den Satz von Patches abzielt. In den komplexen patchszenarien muss der Patch-Familien Bezeichner möglicherweise global eindeutig sein.
+Der Windows Installer interpretiert den PatchFamily-Wert nur in Vergleichen auf Gleichheit mit anderen PatchFamily-Werten. Ein PatchFamily-Wert muss innerhalb des ProductCode eindeutig sein, auf den der Satz von Patches abzielt. In komplexen Patchszenarien muss der PatchFamily-Bezeichner möglicherweise global eindeutig sein.
 
 </dd> <dt>
 
-<span id="ProductCode"></span><span id="productcode"></span><span id="PRODUCTCODE"></span>ProductCode
+<span id="ProductCode"></span><span id="productcode"></span><span id="PRODUCTCODE"></span>Productcode
 </dt> <dd>
 
-Ein Wert in diesem Feld ist optional. Wenn ein [Produktcode](product-codes.md) -GUID in dieses Feld eingegeben wird und der Patch auf das angegebene Produkt angewendet wird, wird der Patch sortiert und als Mitglied der angegebenen patchfamilie angewendet. Wenn ein Produktcode-GUID in dieses Feld eingegeben wird und der Patch nicht auf das von ProductCode angegebene Produkt angewendet wird, wird diese Zeile ignoriert. Wenn der Wert in ProductCode NULL ist, wird der Patch sortiert und als Mitglied der patchfamily für alle Ziele des Patches unabhängig vom Produktcode angewendet.
+Ein Wert in diesem Feld ist optional. Wenn [](product-codes.md) eine Produktcode-GUID in dieses Feld eingegeben wird und der Patch auf das angegebene Produkt angewendet wird, wird der Patch sortiert und als Member der angegebenen PatchFamily-Datei angewendet. Wenn eine Produktcode-GUID in dieses Feld eingegeben wird und der Patch nicht auf das von ProductCode angegebene Produkt angewendet wird, wird diese Zeile ignoriert. Wenn der Wert in ProductCode NULL ist, wird der Patch unabhängig vom Produktcode sortiert und als Member von PatchFamily für alle Ziele des Patches angewendet.
 
-Ein Patch kann mehrere Zeilen in derselben patchfamilie und einen anderen ProductCode für jedes Produkt enthalten, das auf den Patch ausgerichtet ist. Eine Zeile für die patchfamilie kann NULL für ProductCode angeben. Wenn das Ziel Produkt einer Zeile mit einem ProductCode ungleich Null entspricht, verwendet das Installationsprogramm die übereinstimmende Zeile und ignoriert die Zeile mit dem NULL-ProductCode. Wenn keiner der angegebenen Produktcodes mit dem Ziel identisch ist, wird der Patch entsprechend des Produktcodes sortiert und als Mitglied der patchfamily für alle Ziele des Patches angewendet.
+Ein Patch kann mehrere Zeilen in derselben PatchFamily-Datei und einen anderen ProductCode für jedes Produkt enthalten, für das der Patch vorgesehen ist. Eine Zeile für PatchFamily kann NULL für ProductCode angeben. Wenn das Zielprodukt einer Zeile mit einem ProductCode ungleich NULL entspricht, verwendet das Installationsprogramm die entsprechende Zeile und ignoriert die Zeile mit dem NULL-ProductCode. Wenn keiner der angegebenen Produktcodes mit dem Ziel übereinstimmt, wird der Patch unabhängig vom Produktcode sortiert und als Member von PatchFamily für alle Ziele des Patches angewendet.
 
 </dd> <dt>
 
 <span id="Sequence"></span><span id="sequence"></span><span id="SEQUENCE"></span>Sequenz
 </dt> <dd>
 
-Der Wert in der Sequenz Spalte gibt die Sequenz dieses Patches in der angegebenen patchfamilie an. Der Wert in der Sequenz wird im Format der [Versions](version.md) Daten ausgedrückt. Der Wert enthält zwischen 1 und 4 Felder, und jedes Feld hat einen Bereich von 0 bis 65535. Member von patchfamily werden sortiert und auf das Ziel Produkt in der Reihenfolge der Vergrößerung von Sequenz Werten angewendet. Beispielsweise werden die folgenden sechs Werte vergrößert: 1, 1,1, 1,2, 2,01, 2.01.1, 2.01.1.1.
+Der Wert in der Spalte Sequence gibt die Sequenz dieses Patches innerhalb des angegebenen PatchFamily an. Der Wert in Sequence wird im Format [der Versionsdaten](version.md) ausgedrückt. Der Wert enthält zwischen 1 und 4 Felder, und jedes Feld hat einen Bereich von 0 bis 65535. Member von PatchFamily werden sortiert und auf das Zielprodukt in der Reihenfolge angewendet, in der Sequenzwerte erhöht werden. Beispielsweise erhöhen sich die folgenden sechs Werte: 1, 1.1, 1.2, 2.01, 2.01.1, 2.01.1.1.
 
 </dd> <dt>
 
-<span id="Attributes"></span><span id="attributes"></span><span id="ATTRIBUTES"></span>Legt
+<span id="Attributes"></span><span id="attributes"></span><span id="ATTRIBUTES"></span>Attribute
 </dt> <dd>
 
-Das vorhanden sein des **msidbpatchsequencesupersedefrühere** -Attributs in einer Zeile gibt an, dass der Patch für [kleine](small-updates.md) Updates die von allen Patches bereitgestellten Updates mit geringeren Sequenz Werten in derselben patchfamilie ablöst. Dieser Patch enthält alle Fixes, die von früheren Patches in der angegebenen patchfamilie bereitgestellt wurden. Dieses Attribut bedeutet nicht, dass dieser Patch die früheren Patches in allen Fällen ablöst, weil die früheren Patches mehreren patchfamilien angehören können.
+Das Vorhandensein des **msidbPatchSequenceSupersedeEarlier-Attributs** in einer Zeile gibt an, dass der [kleine Updatepatch](small-updates.md) die updates ersetzt, die von allen Patches mit kleineren Sequence-Werten in derselben PatchFamily bereitgestellt werden. Dieser Patch enthält alle Korrekturen, die von früheren Patches im angegebenen PatchFamily bereitgestellt wurden. Dieses Attribut bedeutet nicht, dass dieser Patch in allen Fällen die früheren Patches ersetzt, da die früheren Patches zu mehreren Patchfamilien gehören können.
 
-Ein [kleiner Update](small-updates.md) Patch kann unter keinen Umständen ein [geringfügiges Upgrade](minor-upgrades.md) oder ein [wichtiges Upgradepatch](major-upgrades.md) ersetzen, auch wenn **msidbpatchsequencesupersedefrüher** festgelegt ist. 
+Ein [kleiner Updatepatch](small-updates.md) kann unter keinen Umständen ein [kleineres Upgrade](minor-upgrades.md) oder einen [größeren Upgradepatch](major-upgrades.md) absetzen, auch wenn **msidbPatchSequenceSupersedeEarlier** festgelegt ist. 
 
 | Name                                   | Wert | Bedeutung                                                           |
 |----------------------------------------|-------|-------------------------------------------------------------------|
-|                                        | 0x00  | Gibt einen einfachen Sequenzierungs Wert an.                              |
-| **msidbpatchsequencesupersede früher** | 0x01  | Gibt einen Patch an, durch den frühere Patches in dieser Familie abgelöst werden. |
+|                                        | 0x00  | Gibt einen einfachen Sequenzwert an.                              |
+| **msidbPatchSequenceSupersedeEarlier** | 0x01  | Gibt einen Patch an, der frühere Patches in dieser Familie ersetzt. |
 
 
 
@@ -77,7 +77,7 @@ Ein [kleiner Update](small-updates.md) Patch kann unter keinen Umständen ein [g
 
 </dd> </dl>
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 
@@ -89,7 +89,7 @@ Ein [kleiner Update](small-updates.md) Patch kann unter keinen Umständen ein [g
 
 <dl> <dt>
 
-[Wird in Windows Installer 2,0 und früher nicht unterstützt.](not-supported-in-windows-installer-version-2-0.md)
+[Nicht unterstützt in Windows Installer 2.0 und früher](not-supported-in-windows-installer-version-2-0.md)
 </dt> </dl>
 
  

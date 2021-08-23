@@ -1,7 +1,7 @@
 ---
 description: Ruft ein InternetExplorer-Objekt ab, das das Shellfenster darstellt.
 ms.assetid: 32390f35-f83a-45d9-a240-282da7cb2b13
-title: Shellwindows. Item-Methode (Exdisp. h)
+title: ShellWindows.Item-Methode (Exdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: ccdb73deb1d97d9c6e1ad8c335db3c58d796a299
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fdc64659037cbdb471d7c2142ed6c096684966cd920d4e1f6ecee046d28cce8b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119660582"
 ---
-# <a name="shellwindowsitem-method"></a>Shellwindows. Item-Methode
+# <a name="shellwindowsitem-method"></a>ShellWindows.Item-Methode
 
-Ruft ein [**InternetExplorer**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752084(v=vs.85)) -Objekt ab, das das Shellfenster darstellt.
+Ruft ein [**InternetExplorer-Objekt**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752084(v=vs.85)) ab, das das Shellfenster darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ retVal = ShellWindows.Item(
 
 Typ: **Variant**
 
-Der nullbasierte Index des abzurufenden Elements. Dieser Wert muss kleiner sein als der Wert der [**count**](shellwindows-count.md) -Eigenschaft. Wenn dieser Wert weggelassen wird, wird der Standardwert 0 verwendet.
+Der nullbasierte Index des abzurufenden Elements. Dieser Wert muss kleiner als der Wert der [**Count-Eigenschaft**](shellwindows-count.md) sein. Wenn dieser Wert weggelassen wird, wird der Standardwert 0 verwendet.
 
 </dd> </dl>
 
@@ -52,13 +52,13 @@ Der nullbasierte Index des abzurufenden Elements. Dieser Wert muss kleiner sein 
 
 Typ: **[ **IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)\*\***
 
-Ein Objekt Verweis auf das [**InternetExplorer**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752084(v=vs.85)) -Objekt, das das Shellfenster darstellt.
+Ein Objektverweis auf das [**InternetExplorer-Objekt,**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752084(v=vs.85)) das das Shellfenster darstellt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das- [**Element**](folderitemverbs-item.md) verwendet, um das [**InternetExplorer**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752084(v=vs.85)) -Objekt abzurufen, das das erste shellfensterelement darstellt. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird [**Item**](folderitemverbs-item.md) verwendet, um das [**InternetExplorer-Objekt**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752084(v=vs.85)) abzurufen, das das erste Shell-Fensterelement darstellt. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+JScript:
 
 
 ```JavaScript
@@ -85,7 +85,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -145,16 +145,16 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Exdisp. h</dt> </dl>                            |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Exdisp.h</dt> </dl>                            |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

@@ -1,29 +1,29 @@
 ---
-description: Anzeigen einer Vorschau eines Projekts
+description: Vorschau einer Project
 ms.assetid: 2efa3f25-a93f-4362-b461-b67475e5d78c
-title: Anzeigen einer Vorschau eines Projekts
+title: Vorschau einer Project
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8cd9d299a99a0a7315cec986fbc044d427385647
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 159303c175c459b4d5d93ba4c7b4b2622caddac2a35d3474a3059ac703d62645
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104341729"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119583559"
 ---
-# <a name="previewing-a-project"></a>Anzeigen einer Vorschau eines Projekts
+# <a name="previewing-a-project"></a>Vorschau einer Project
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Zum Anzeigen einer Vorschau eines Projekts rufen Sie zuerst **cokreateinstance** auf, um eine Instanz der grundlegenden Renderingengine zu erstellen. Der Klassen Bezeichner ist CLSID- \_ Renderengine. Anschließend können Sie die Methode " [**irienderengine:: settimelineobject**](irenderengine-settimelineobject.md) " aufrufen, um die Zeitachse anzugeben, die Sie rendern.
+Um eine Vorschau eines Projekts anzuzeigen, rufen Sie zunächst **CoCreateInstance** auf, um eine Instanz der Basic-Render-Engine zu erstellen. Der Klassenbezeichner ist CLSID \_ RenderEngine. Rufen Sie dann die [**IRenderEngine::SetTimelineObject-Methode**](irenderengine-settimelineobject.md) auf, um die Zeitachse anzugeben, die Sie rendern.
 
-Wenn Sie die Zeitachse zum ersten Mal in der Vorschau anzeigen, führen Sie die folgenden Aufrufe in der aufgeführten Reihenfolge durch
+Wenn Sie zum ersten Mal eine Vorschau der Zeitachse anzeigen, führen Sie die folgenden Aufrufe in der aufgeführten Reihenfolge aus:
 
-1.  Geben Sie " [**irienderengine:: strenderrange**](irenderengine-setrenderrange.md) " an, um den Teil der Zeitachse für die Vorschau anzugeben. (Optional)
-2.  Zum Erstellen des Front-Ends des Diagramms müssen Sie " [**irienderengine:: connectfrontend**](irenderengine-connectfrontend.md) " ausführen.
-3.  Nennen Sie " [**irienderengine:: renderoutputpins**](irenderengine-renderoutputpins.md)". Diese Methode verbindet jede Ausgabe-PIN mit einem Videorenderer oder audiorenderer und vervollständigt das Diagramm.
+1.  Rufen Sie [**IRenderEngine::SetRenderRange**](irenderengine-setrenderrange.md) auf, um anzugeben, welcher Teil der Zeitachse in der Vorschau angezeigt werden soll. (Optional)
+2.  Rufen Sie [**IRenderEngine::ConnectFrontEnd**](irenderengine-connectfrontend.md) auf, um das Front-End des Graphen zu erstellen.
+3.  Rufen Sie [**IRenderEngine::RenderOutputPins auf.**](irenderengine-renderoutputpins.md) Diese Methode verbindet jeden Ausgabepin mit einem Videorenderer oder Audiorenderer und vervollständigt das Diagramm.
 
-Das folgende Codebeispiel zeigt die folgenden Schritte:
+Das folgende Codebeispiel zeigt diese Schritte:
 
 
 ```C++
@@ -38,7 +38,7 @@ hr = pRender->RenderOutputPins();
 
 
 
-Führen Sie nun das Filter Diagramm aus. Rufen Sie zuerst die Methode " [**unenderengine:: getfiltergraph**](irenderengine-getfiltergraph.md) " auf, um einen Zeiger auf die [**igraphbuilder**](/windows/desktop/api/Strmif/nn-strmif-igraphbuilder) -Schnittstelle des Filter Graph-Managers abzurufen. Fragen Sie anschließend den Filter Graph-Manager nach der Schnittstelle [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol) ab, und nennen Sie [**IMediaControl:: Run**](/windows/desktop/api/Control/nf-control-imediacontrol-run), wie im folgenden Code gezeigt:
+Führen Sie nun das Filterdiagramm aus. Rufen Sie zunächst die [**IRenderEngine::GetFilterGraph-Methode**](irenderengine-getfiltergraph.md) auf, um einen Zeiger auf die [**IGraphBuilder-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-igraphbuilder) von Filter Graph Manager abzurufen. Fragen Sie dann den Filter Graph Manager für die [**IMediaControl-Schnittstelle**](/windows/desktop/api/Control/nn-control-imediacontrol) ab, und rufen [**Sie IMediaControl::Run**](/windows/desktop/api/Control/nf-control-imediacontrol-run)auf, wie im folgenden Code gezeigt:
 
 
 ```C++
@@ -51,17 +51,17 @@ hr = pControl->Run();
 
 
 
-Verwenden Sie die [**imediaeventex**](/windows/desktop/api/Control/nn-control-imediaeventex) -Schnittstelle des Filter Graph-Managers, um auf den Abschluss der Vorschau zu warten. Sie können das Diagramm auch mit der [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) -Schnittstelle des Filter Diagramms suchen, genauso wie bei einem Dateiwiedergabe Diagramm.
+Verwenden Sie die [**IMediaEventEx-Schnittstelle**](/windows/desktop/api/Control/nn-control-imediaeventex) von Filter Graph Manager, um auf den Abschluss der Vorschau zu warten. Sie können das Diagramm auch mithilfe der [**IMediaSeeking-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) von Filter Graph Manager suchen, genau wie bei einem Dateiwiedergabediagramm.
 
-Um das Projekt erneut in der Vorschau anzuzeigen, suchen Sie im Diagramm nach der Zeit NULL, und **führen** Sie den Aufruf erneut aus Wenn Sie den Inhalt der Zeitachse ändern, gehen Sie folgendermaßen vor:
+Um die Vorschau des Projekts erneut anzuzeigen, suchen Sie den Graphen zurück zur Zeit 0 (null), und rufen **Sie erneut Ausführen auf.** Wenn Sie den Inhalt der Zeitachse ändern, gehen Sie wie folgt vor:
 
-1.  Ruft den "*"- **trendbereich** auf. (Optional)
-2.  Ruft **connectfrontend** auf.
-3.  Wenn die **connectfrontend** -Methode "S Warn Ausgabe" zurückgibt \_ \_ , wird " **renderoutputpins**" aufgerufen. (Wenn **connectfrontend** S \_ zurückgibt OK, Sie können diesen Schritt überspringen.)
-4.  Suchen Sie im Diagramm nach der Zeit NULL.
+1.  Rufen Sie **SetRenderRange auf.** (Optional)
+2.  Rufen Sie **ConnectFrontEnd auf.**
+3.  Wenn die **ConnectFrontEnd-Methode** S \_ WARN \_ OUTPUTRESET zurückgibt, rufen **Sie RenderOutputPins auf.** (Wenn **ConnectFrontEnd** S \_ zurückgibt OK, Sie können diesen Schritt überspringen.)
+4.  Suchen Sie den Graphen zurück zur Zeit 0 (null).
 5.  Führen Sie das Diagramm aus.
 
-Das folgende Beispiel zeigt die folgenden Schritte:
+Das folgende Beispiel zeigt diese Schritte:
 
 
 ```C++
@@ -77,16 +77,16 @@ hr = pControl->Run();
 
 
 
-Ein umfassendes Beispiel, das eine Projektdatei lädt und anzeigt, finden Sie unter [Laden und Anzeigen der Vorschau eines Projekts](loading-and-previewing-a-project.md).
+Ein vollständiges Beispiel, in dem eine Projektdatei geladen und in der Vorschau angezeigt wird, finden Sie unter [Loading and Previewing a Project](loading-and-previewing-a-project.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwalten von Video Bearbeitungs Projekten](managing-video-editing-projects.md)
+[Verwalten von Videobearbeitungsprojekten](managing-video-editing-projects.md)
 </dt> <dt>
 
-[Rendern eines Projekts](rendering-a-project.md)
+[Rendern eines Project](rendering-a-project.md)
 </dt> </dl>
 
  

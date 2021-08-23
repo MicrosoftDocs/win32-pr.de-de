@@ -1,27 +1,27 @@
 ---
-title: Die Header Datei
-description: Die Header Datei enthält Definitionen aller Datentypen und Vorgänge, die in der IDL-Datei deklariert sind, sowie alle Datentypen und Vorgänge, die in den in der \ include-Direktive enthaltenen Dateien deklariert werden.
+title: Die Headerdatei
+description: Die Headerdatei enthält Definitionen aller Datentypen und Vorgänge, die in der IDL-Datei deklariert sind, sowie alle Datentypen und Vorgänge, die in den Dateien deklariert sind, die in der \include-Direktive enthalten sind.
 ms.assetid: 51789b42-e01c-4233-97da-5e0a044f596f
 keywords:
-- Mittel l-und RPC-Mittell, Schnittstellen, Header Datei
+- MIDL und RPC MIDL, Schnittstellen, Headerdatei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61331d8bb72d322987c13d02b04632c95424e755
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3cd107bbf741f3259ac474d03a3ec1eba5c4ab8217df3ff6afa5ef45e7b4945a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582130"
 ---
-# <a name="the-header-file"></a>Die Header Datei
+# <a name="the-header-file"></a>Die Headerdatei
 
-Die Header Datei enthält Definitionen aller Datentypen und Vorgänge, die in der IDL-Datei deklariert sind, sowie alle Datentypen und Vorgänge, die in den in der include-Direktive enthaltenen Dateien deklariert werden \# . Datentypen aus den Dateien, die mit der Import-Anweisung importiert werden, werden nicht in die Header Datei repliziert. Stattdessen enthält die generierte Header Datei eine include-Zeile zur H-Datei, die aus der importierten Datei generiert wurde. Die Header Datei muss von allen Anwendungsmodulen eingeschlossen werden, die die definierten Vorgänge aufzurufen, die definierten Vorgänge implementieren oder die definierten Typen bearbeiten.
+Die Headerdatei enthält Definitionen aller Datentypen und Vorgänge, die in der IDL-Datei deklariert sind, sowie alle Datentypen und Vorgänge, die in den Dateien deklariert sind, die in der \# include-Direktive enthalten sind. Datentypen aus den mit der Importdirektive importierten Dateien werden nicht in die Headerdatei repliziert. Stattdessen enthält die generierte Headerdatei eine Includezeile zur H-Datei, die aus der importierten Datei generiert wurde. Die Headerdatei muss von allen Anwendungsmodulen eingeschlossen werden, die die definierten Vorgänge aufrufen, die definierten Vorgänge implementieren oder die definierten Typen bearbeiten.
 
-Die Mittel-Compilerschalter [**/Header**](-header.md) und [**/out**](-out.md) wirken sich auf die Header Datei aus.
+Die MIDL-Compilerschalter [**/header**](-header.md) und [**/out**](-out.md) wirken sich auf die Headerdatei aus.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,19 +1,19 @@
 ---
-description: Die spfilenotify \_ endrename-Benachrichtigung wird an die Rückruf Routine gesendet, wenn die Warteschlange einen Umbenennungs Vorgang abschließt. Diese Benachrichtigung wird gesendet, auch wenn der Benutzer abbricht oder wenn ein Fehler auftritt.
+description: Die Benachrichtigung SPFILENOTIFY ENDRENAME wird an die Rückrufroutine gesendet, wenn die \_ Warteschlange einen Umbenennungsvorgang abgeschlossen hat. Diese Benachrichtigung wird auch gesendet, wenn der Benutzer abbricht oder ein Fehler auftritt.
 ms.assetid: 8d5a8d17-de4f-4100-aa72-dfefeb8d4db9
-title: SPFILENOTIFY_ENDRENAME Meldung (Setupapi. h)
+title: SPFILENOTIFY_ENDRENAME (Setupapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a316d4dfe72ee9eb7d85fdb70eb90e1cf3d3f463
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0f34ad30cc103e8a13277d3383bad8c2e46409eaabe6f957ace27aebc9759990
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352340"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119683120"
 ---
-# <a name="spfilenotify_endrename-message"></a>Spfilenotify \_ endrename-Meldung
+# <a name="spfilenotify_endrename-message"></a>SPFILENOTIFY \_ ENDRENAME-Meldung
 
-Die **spfilenotify \_ endrename** -Benachrichtigung wird an die Rückruf Routine gesendet, wenn die Warteschlange einen Umbenennungs Vorgang abschließt. Diese Benachrichtigung wird gesendet, auch wenn der Benutzer abbricht oder wenn ein Fehler auftritt.
+Die **Benachrichtigung SPFILENOTIFY \_ ENDRENAME** wird an die Rückrufroutine gesendet, wenn die Warteschlange einen Umbenennungsvorgang abgeschlossen hat. Diese Benachrichtigung wird auch gesendet, wenn der Benutzer abbricht oder ein Fehler auftritt.
 
 
 ```C++
@@ -32,7 +32,7 @@ SPFILENOTIFY_ENDRENAME
 *Param1* 
 </dt> <dd>
 
-Zeiger auf eine [**FilePath**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a) -Struktur. Der **Win32Error** -Member der **FilePath** -Struktur gibt das Ergebnis des Kopiervorgangs an.
+Zeiger auf eine [**FILEPATHS-Struktur.**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a) Das **Win32Error-Element** der **FILEPATHS-Struktur** gibt das Ergebnis des Kopiervorgang an.
 
 </dd> <dt>
 
@@ -53,9 +53,9 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Setupapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Setupapi.h</dt> </dl> |
 
 
 
@@ -69,13 +69,13 @@ Der Rückgabewert wird ignoriert.
 [Benachrichtigungen](notifications.md)
 </dt> <dt>
 
-[**FILEPATHS**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a)
+[**Filepaths**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a)
 </dt> <dt>
 
-[**Setupcommitfilequeue**](/windows/desktop/api/Setupapi/nf-setupapi-setupcommitfilequeuea)
+[**SetupCommitFileQueue**](/windows/desktop/api/Setupapi/nf-setupapi-setupcommitfilequeuea)
 </dt> <dt>
 
-[**Setupdefaultqueuecallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupdefaultqueuecallbacka)
+[**SetupDefaultQueueCallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupdefaultqueuecallbacka)
 </dt> </dl>
 
  

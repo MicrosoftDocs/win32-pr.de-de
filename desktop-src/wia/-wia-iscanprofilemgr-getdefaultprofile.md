@@ -1,7 +1,7 @@
 ---
-description: Ruft das Standard Überprüfungs Profil ab.
+description: Ruft das Standardscanprofil ab.
 ms.assetid: 0e5ca06a-78ca-4d24-8dda-26babc3124b5
-title: 'Iscanprofilemgr:: getdefaultprofile-Methode (scanprofilemgr. h)'
+title: IScanProfileMgr::GetDefaultProfile-Methode (Scanprofilemgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Scanprofilemgr.h
-ms.openlocfilehash: e058094fc29510d6e073abc0b05374403a2b5cd9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a496a2e606e389f8b2e1dfd7808d56e4360108a27ef66fbc0937ef1040514e44
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348452"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119549760"
 ---
-# <a name="iscanprofilemgrgetdefaultprofile-method"></a>Iscanprofilemgr:: getdefaultprofile-Methode
+# <a name="iscanprofilemgrgetdefaultprofile-method"></a>IScanProfileMgr::GetDefaultProfile-Methode
 
-Ruft das Standard Überprüfungs Profil ab.
+Ruft das Standardscanprofil ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT GetDefaultProfile(
 
 <dl> <dt>
 
-*bstraude viceid* \[ in\]
+*bstrDeviceID* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -49,10 +49,10 @@ Die ID des Geräts.
 
 </dd> <dt>
 
-*ppscanprofile* \[ vorgenommen\]
+*ppScanProfile* \[ out\]
 </dt> <dd>
 
-Typ: **[ **iscanprofile**](-wia-iscanprofile.md)\*\***
+Typ: **[ **IScanProfile**](-wia-iscanprofile.md)\*\***
 
 Die Adresse eines Zeigers auf das Standardprofil des Geräts.
 
@@ -62,11 +62,11 @@ Die Adresse eines Zeigers auf das Standardprofil des Geräts.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Standardprofil weist ein- `<Default>` Element auf.
+Das Standardprofil verfügt über ein `<Default>` -Element.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,10 +74,10 @@ Das Standardprofil weist ein- `<Default>` Element auf.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Scanprofilemgr. h</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofilemgr.h</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
@@ -85,10 +85,10 @@ Das Standardprofil weist ein- `<Default>` Element auf.
 
 <dl> <dt>
 
-[**Iscanprofilemgr**](-wia-iscanprofilemgr.md)
+[**IScanProfileMgr**](-wia-iscanprofilemgr.md)
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scan Profile Schema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

@@ -4,8 +4,8 @@ description: Die Kosten für das Routing zwischen zwei Standorten.
 ms.assetid: 956de448-05d0-4fc0-8f11-a15ede120e47
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MSMQ-Cost-Attribut
-- AD-Schema des msmqcost-Attributs
+- MSMQ-Cost AD-Schema
+- AD-Schema des mSMQCost-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ba17af8eef5e00cb30207e1fd1302194f6ce6c73
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 95271dcd70a8a081d6c65ac291c8e7e5561f42613e84bf2cbc5a4ba8d9521cd5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104520119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582540"
 ---
 # <a name="msmq-cost-attribute"></a>MSMQ-Cost-Attribut
 
@@ -30,12 +30,12 @@ Die Kosten für das Routing zwischen zwei Standorten.
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | MSMQ-Cost                            |
-| LDAP-Display-Name | msmqcost                             |
+| Ldap-Anzeigename | mSMQCost                             |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.946               |
-| System-ID-GUID    | 9a0dc33a-C100-11d1-bbc5-0080c76670c0 |
+| System-Id-Guid    | 9a0dc33a-c100-11d1-laut5-0080c76670c0 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Die Kosten für das Routing zwischen zwei Standorten.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Die Kosten für das Routing zwischen zwei Standorten.
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
+| Is-Single-Valued       | True                                                |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -70,7 +70,7 @@ Die Kosten für das Routing zwischen zwei Standorten.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Die Kosten für das Routing zwischen zwei Standorten.
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
+| Is-Single-Valued       | True                                                |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -100,10 +100,10 @@ Die Kosten für das Routing zwischen zwei Standorten.
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
+| Is-Single-Valued       | True                                                |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -121,10 +121,10 @@ Die Kosten für das Routing zwischen zwei Standorten.
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
+| Is-Single-Valued       | True                                                |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -142,10 +142,10 @@ Die Kosten für das Routing zwischen zwei Standorten.
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
+| Is-Single-Valued       | True                                                |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -163,10 +163,10 @@ Die Kosten für das Routing zwischen zwei Standorten.
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
+| Is-Single-Valued       | True                                                |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |

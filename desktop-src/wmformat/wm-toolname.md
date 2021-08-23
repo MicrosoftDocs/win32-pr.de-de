@@ -1,9 +1,9 @@
 ---
 title: WM/ToolName
-description: Das WM/Toolname-Attribut enthält den Namen der Anwendung, die zum Erstellen der Datei verwendet wurde. Sie können auch die Version der Anwendung mit WM/Toolversion angeben.
+description: Das WM/ToolName-Attribut enthält den Namen der Anwendung, die zum Erstellen der Datei verwendet wird. Sie können die Version der Anwendung auch mit WM/ToolVersion angeben.
 ms.assetid: aeda650d-f0f4-4c9d-b4ed-3bc31db14e0c
 keywords:
-- WM/Toolname Windows Media-Format
+- WM/ToolName windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 68d6acb6cd56156096913c19c0efbdfd8df78f8c
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 8ba1e56109034280a65348e39da9b2c1cfcd3c40e854dbab707e71a2e322186f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106341486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119584390"
 ---
 # <a name="wmtoolname"></a>WM/ToolName
 
-Das **WM/Toolname-** Attribut enthält den Namen der Anwendung, die zum Erstellen der Datei verwendet wurde. Sie können auch die Version der Anwendung mit [**WM/Toolversion**](wm-toolversion.md)angeben.
+Das **WM/ToolName-Attribut** enthält den Namen der Anwendung, die zum Erstellen der Datei verwendet wird. Sie können die Version der Anwendung auch mit [**WM/ToolVersion angeben.**](wm-toolversion.md)
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmtoolname
+g \_ wszWMToolName
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -38,9 +38,9 @@ g \_ wszwmtoolname
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

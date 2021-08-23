@@ -1,11 +1,11 @@
 ---
-title: ZS-Web-URL-Attribut
+title: CA-WEB-URL-Attribut
 description: URL für die HTTP-Verbindung mit einer Zertifizierungsstelle.
 ms.assetid: 148bab57-25ae-467a-86a2-dbf83e69979e
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ZS-Web-URL-Attribut
-- caweburl-Attribut, AD-Schema
+- AD-Schema des CA-WEB-URL-Attributs
+- cAWEBURL-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 42b49efb851b0720499f5b641770279c12cb9563
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: dc64643627e4e0205bab5c419f5a12ae804898f504b9e86d18c044d6dec55f96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107270"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119583750"
 ---
-# <a name="ca-web-url-attribute"></a>ZS-Web-URL-Attribut
+# <a name="ca-web-url-attribute"></a>CA-WEB-URL-Attribut
 
 URL für die HTTP-Verbindung mit einer Zertifizierungsstelle.
 
@@ -29,13 +29,13 @@ URL für die HTTP-Verbindung mit einer Zertifizierungsstelle.
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | ZS-Web-URL                                  |
-| LDAP-Display-Name | caweburl                                    |
+| CN                | CA-WEB-URL                                  |
+| Ldap-Anzeigename | cAWEBURL                                    |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.688                      |
-| System-ID-GUID    | 963d2736-48be-11d1-a9c3-0000 C1        |
+| System-ID-GUID    | 963d2736-48be-11d1-a9c3-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ URL für die HTTP-Verbindung mit einer Zertifizierungsstelle.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ URL für die HTTP-Verbindung mit einer Zertifizierungsstelle.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | Richtig                                                                   |
+| Ist einwertig       | True                                                                   |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -70,7 +70,7 @@ URL für die HTTP-Verbindung mit einer Zertifizierungsstelle.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ URL für die HTTP-Verbindung mit einer Zertifizierungsstelle.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | Richtig                                                                   |
+| Ist einwertig       | True                                                                   |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -100,10 +100,10 @@ URL für die HTTP-Verbindung mit einer Zertifizierungsstelle.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | Richtig                                                                   |
+| Ist einwertig       | True                                                                   |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -121,10 +121,10 @@ URL für die HTTP-Verbindung mit einer Zertifizierungsstelle.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | Richtig                                                                   |
+| Ist einwertig       | True                                                                   |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -142,10 +142,10 @@ URL für die HTTP-Verbindung mit einer Zertifizierungsstelle.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | Richtig                                                                   |
+| Ist einwertig       | True                                                                   |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |
@@ -163,10 +163,10 @@ URL für die HTTP-Verbindung mit einer Zertifizierungsstelle.
 | Link-ID                | \-                                                                     |
 | MAPI-Id                | \-                                                                     |
 | System-Only            | False                                                                  |
-| Ist-einwertig       | Richtig                                                                   |
+| Ist einwertig       | True                                                                   |
 | Ist indiziert             | False                                                                  |
 | Im globalen Katalog      | False                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                           |
 | Range-Lower            | \-                                                                     |
 | Range-Upper            | \-                                                                     |
 | Search-Flags           | 0x00000000                                                             |

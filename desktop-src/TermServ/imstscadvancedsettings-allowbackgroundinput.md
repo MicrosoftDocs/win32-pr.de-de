@@ -1,28 +1,28 @@
 ---
-title: Imstscadvancedsettings allowbackgroundinput (Eigenschaft)
-description: Gibt an, ob der Hintergrund Eingabemodus aktiviert ist.
+title: IMsTscAdvancedSettings allowBackgroundInput-Eigenschaft
+description: Gibt an, ob der Hintergrundeingabemodus aktiviert ist.
 ms.assetid: 2b57ebe9-3aad-400c-bcfb-d01c759b453d
 ms.tgt_platform: multiple
 keywords:
-- allowbackgroundinput-Eigenschaft Remotedesktopdienste
-- allowbackgroundinput-Eigenschaft Remotedesktopdienste, imstscadvancedsettings-Schnittstelle
-- Imstscadvancedsettings-Schnittstelle Remotedesktopdienste, allowbackgroundinput-Eigenschaft
-- allowbackgroundinput-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, allowbackgroundinput-Eigenschaft
-- allowbackgroundinput-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, allowbackgroundinput (Eigenschaft)
-- allowbackgroundinput-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, allowbackgroundinput (Eigenschaft)
-- allowbackgroundinput-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, allowbackgroundinput (Eigenschaft)
-- allowbackgroundinput-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, allowbackgroundinput (Eigenschaft)
-- allowbackgroundinput-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, allowbackgroundinput (Eigenschaft)
-- allowbackgroundinput-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, allowbackgroundinput (Eigenschaft)
-- allowbackgroundinput-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, allowbackgroundinput (Eigenschaft)
+- allowBackgroundInput-Eigenschaft Remotedesktopdienste
+- allowBackgroundInput-Eigenschaft Remotedesktopdienste , IMsTscAdvancedSettings-Schnittstelle
+- IMsTscAdvancedSettings-Schnittstelle Remotedesktopdienste , allowBackgroundInput-Eigenschaft
+- allowBackgroundInput-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , allowBackgroundInput-Eigenschaft
+- allowBackgroundInput-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , allowBackgroundInput-Eigenschaft
+- allowBackgroundInput-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , allowBackgroundInput-Eigenschaft
+- allowBackgroundInput-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , allowBackgroundInput-Eigenschaft
+- allowBackgroundInput-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , allowBackgroundInput-Eigenschaft
+- allowBackgroundInput-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , allowBackgroundInput-Eigenschaft
+- allowBackgroundInput-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , allowBackgroundInput-Eigenschaft
+- allowBackgroundInput-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , allowBackgroundInput-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -59,16 +59,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 938725ea1aa3d774d5993be695ac8568963897fb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b79df16c3bcd1120344bc6189ace324e434ad4cbd7a831757e455e26f6d10902
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392206"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657430"
 ---
-# <a name="imstscadvancedsettingsallowbackgroundinput-property"></a>Imstscadvancedsettings:: allowbackgroundinput-Eigenschaft
+# <a name="imstscadvancedsettingsallowbackgroundinput-property"></a>IMsTscAdvancedSettings::allowBackgroundInput-Eigenschaft
 
-Gibt an, ob der Hintergrund Eingabemodus aktiviert ist. Wenn Hintergrund Eingaben aktiviert sind, kann der Client Eingaben akzeptieren, wenn der Client keinen Fokus hat.
+Gibt an, ob der Hintergrundeingabemodus aktiviert ist. Wenn die Hintergrundeingabe aktiviert ist, kann der Client Eingaben akzeptieren, wenn der Client nicht den Fokus besitzt.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -89,13 +89,13 @@ HRESULT get_allowBackgroundInput(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf 0 fest, um den Hintergrund Eingabemodus zu deaktivieren, oder einen Wert ungleich NULL, um den Hintergrund Eingabemodus zu aktivieren
+Legen Sie diesen Parameter auf 0 fest, um den Hintergrundeingabemodus zu deaktivieren, oder einen Wert ungleich 0 (null), um den Hintergrundeingabemodus zu aktivieren.
 
 ## <a name="error-codes"></a>Fehlercodes
 
 Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -109,7 +109,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>    |
-| IID<br/>                      | IID \_ imstscadvancedsettings ist als 809945cc-4b3b-4a92-a6b0-DBF 9b5s2ef2d definiert.<br/> |
+| IID<br/>                      | \_IID-IMsTscAdvancedSettings ist als 809945cc-4b3b-4a92-a6b0-dbf9b5f2ef2d definiert.<br/> |
 
 
 
@@ -117,7 +117,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> <dt>
 
 [**IMsRdpClientAdvancedSettings2**](imsrdpclientadvancedsettings2.md)
@@ -141,7 +141,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imstscadvancedsettings**](imstscadvancedsettings-interface.md)
+[**IMsTscAdvancedSettings**](imstscadvancedsettings-interface.md)
 </dt> </dl>
 
  

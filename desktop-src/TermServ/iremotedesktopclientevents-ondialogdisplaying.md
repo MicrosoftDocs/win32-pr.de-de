@@ -1,12 +1,12 @@
 ---
-title: Iremotedesktopclientevents ondialogdisplay-Methode
-description: Wird aufgerufen, bevor das-Steuerelement ein Dialogfeld anzeigt.
+title: IRemoteDesktopClientEvents OnDialogDisplaying-Methode
+description: Wird aufgerufen, bevor das Steuerelement ein Dialogfeld anzeigt.
 ms.assetid: 931CA49C-713C-4C90-A806-D0E88F60567A
 ms.tgt_platform: multiple
 keywords:
-- Ondialogdisplay-Methode Remotedesktopdienste
-- Ondialogdisplay-Methode Remotedesktopdienste, iremotedesktopclientevents-Schnittstelle
-- Iremotedesktopclientevents-Schnittstelle Remotedesktopdienste, ondialogdisplay-Methode
+- OnDialogDisplaying-Remotedesktopdienste
+- OnDialogDisplaying-Remotedesktopdienste , IRemoteDesktopClientEvents-Schnittstelle
+- IRemoteDesktopClientEvents-Schnittstelle Remotedesktopdienste , OnDialogDisplaying-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eaf3d69657147845dcd2114cd4a1f3b4f68a962f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4eb2351a62432118424ce3b434c3beed305dc50af8b956ff081df15f3a146f27
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119511670"
 ---
-# <a name="iremotedesktopclienteventsondialogdisplaying-method"></a>Iremotedesktopclientevents:: ondialogdisplay-Methode
+# <a name="iremotedesktopclienteventsondialogdisplaying-method"></a>IRemoteDesktopClientEvents::OnDialogDisplaying-Methode
 
-Wird aufgerufen, bevor das-Steuerelement ein Dialogfeld anzeigt.
+Wird aufgerufen, bevor das Steuerelement ein Dialogfeld anzeigt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                 |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>         |
-| IID<br/>                      | Diid \_ iremotedesktopclientevents ist als 079863b7-6d47-4105-8bfe-0cdcb360e67d definiert.<br/> |
+| IID<br/>                      | DIID \_ IRemoteDesktopClientEvents ist als 079863B7-6D47-4105-8BFE-0CDCB360E67D definiert.<br/> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Iremotedesktopclientevents**](iremotedesktopclientevents.md)
+[**IRemoteDesktopClientEvents**](iremotedesktopclientevents.md)
 </dt> </dl>
 
  

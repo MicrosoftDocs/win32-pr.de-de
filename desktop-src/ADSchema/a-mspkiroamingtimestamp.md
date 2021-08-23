@@ -1,11 +1,11 @@
 ---
-title: MS-PKI-roamingtimestamp-Attribut
-description: Zeitstempel für die letzte Änderung an roamingtoken.
+title: ms-PKI-RoamingTimeStamp-Attribut
+description: Zeitstempel für die letzte Änderung an Roamingtoken.
 ms.assetid: 43af0a4d-e9a3-4116-ba08-f76bd6cd3c6f
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-PKI-roamingtimestamp\"-Attribut, AD-Schema"
-- AD-Schema für das mspkiroamingtimestamp-Attribut
+- AD-Schema des ms-PKI-RoamingTimeStamp-Attributs
+- AD-Schema des msPKIRoamingTimeStamp-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 70d2f3747eeea79624ee6f7f72ac73b67c6f8f13
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e20d9dbb7f1902a7fd13eb2b3d8705ae29e975bb39e01d5abffceeaeb9ab1ed6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957614"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582140"
 ---
-# <a name="ms-pki-roamingtimestamp-attribute"></a>MS-PKI-roamingtimestamp-Attribut
+# <a name="ms-pki-roamingtimestamp-attribute"></a>ms-PKI-RoamingTimeStamp-Attribut
 
-Zeitstempel für die letzte Änderung an roamingtoken.
+Zeitstempel für die letzte Änderung an Roamingtoken.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | MS-PKI-roamingtimestamp                               |
-| LDAP-Display-Name | mspkiroamingtimestamp                                 |
+| CN                | ms-PKI-RoamingTimeStamp                               |
+| Ldap-Anzeigename | msPKIRoamingTimeStamp                                 |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.1892                               |
-| System-ID-GUID    | 6617e4ac-a2f 1-43ab-b60c-11                  |
+| System-Id-Guid    | 6617e4ac-a2f1-43ab-b60c-11fbd1facf05                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -55,10 +55,10 @@ Zeitstempel für die letzte Änderung an roamingtoken.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000280                        |
@@ -76,10 +76,10 @@ Zeitstempel für die letzte Änderung an roamingtoken.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000280                        |
@@ -97,10 +97,10 @@ Zeitstempel für die letzte Änderung an roamingtoken.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000280                        |

@@ -1,12 +1,12 @@
 ---
-title: Imstscaxevents onconfirmclose-Methode
-description: Wird aufgerufen, wenn der Client die Methode "imsrdpclient RequestClose" aufruft.
+title: IMsTscAxEvents OnConfirmClose-Methode
+description: Wird aufgerufen, wenn der Client die IMsRdpClient RequestClose-Methode aufruft.
 ms.assetid: fb149fbc-9415-4c4c-8d4b-e22214ac38cb
 ms.tgt_platform: multiple
 keywords:
-- Onconfirmclose-Methode Remotedesktopdienste
-- Onconfirmclose-Methode Remotedesktopdienste, imstscaxevents-Schnittstelle
-- Imstscaxevents-Schnittstelle Remotedesktopdienste, onconfirmclose-Methode
+- OnConfirmClose-Remotedesktopdienste
+- OnConfirmClose-Methode Remotedesktopdienste , IMsTscAxEvents-Schnittstelle
+- IMsTscAxEvents-Schnittstelle Remotedesktopdienste , OnConfirmClose-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 623196033e23a964857a6a604c7eca3904f32c60
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2effd50552ab227e8e065844b8b19da0e022f6b8e36d1d86701ad0614b821126
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106485"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119512470"
 ---
-# <a name="imstscaxeventsonconfirmclose-method"></a>Imstscaxevents:: onconfirmclose-Methode
+# <a name="imstscaxeventsonconfirmclose-method"></a>IMsTscAxEvents::OnConfirmClose-Methode
 
-Wird aufgerufen, wenn der Client die [**imsrdpclient:: RequestClose**](imsrdpclient-requestclose.md) -Methode aufruft. Als Reaktion auf dieses Ereignis sollte der Benutzer aufgefordert werden, das Schließen der Verbindung zu bestätigen. Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".
+Wird aufgerufen, wenn der Client die [**IMsRdpClient::RequestClose-Methode**](imsrdpclient-requestclose.md) aufruft. Als Reaktion auf dieses Ereignis sollte der Benutzer aufgefordert werden, das Schließen der Verbindung zu bestätigen. Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ void OnConfirmClose(
 
 <dl> <dt>
 
-*pfallowclose* \[ vorgenommen\]
+*pfAllowClose* \[ out\]
 </dt> <dd>
 
-Wenn **Variant \_ true** ist, bedeutet der Standardwert, dass der Benutzer die Verbindung schließen möchte. Wenn **Variant \_ false** ist, wird angegeben, dass der Benutzer die Verbindung nicht schließen möchte. Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".
+Bei **VARIANT \_ TRUE** gibt der Standardwert an, dass der Benutzer die Verbindung schließen möchte. Bei **VARIANT \_ FALSE gibt** an, dass der Benutzer die Verbindung nicht schließen möchte. Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".
 
 </dd> </dl>
 
@@ -54,9 +54,9 @@ Wenn **Variant \_ true** ist, bedeutet der Standardwert, dass der Benutzer die V
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Containeranwendung die [**imsrdpclient:: RequestClose**](imsrdpclient-requestclose.md) -Methode aufruft, gibt diese Methode einen Wert zurück, der angibt, ob der Container auf das Eintreten eines **onconfirmclose** -Ereignisses warten soll, bevor die Steuerelement Verbindung geschlossen wird. Wenn **RequestClose** " **controlclosewaitforevents**" zurückgibt und der Benutzer verbunden ist und bei seiner Remotedesktopdienste Sitzung angemeldet ist, wird das **onconfirmclose** -Ereignis ausgelöst. An diesem Punkt kann die Containeranwendung den Benutzer auffordern und Fragen, ob der Benutzer die Verbindung schließen möchte. Wenn der Benutzer die Verbindung schließen möchte, sollte die Anwendung den Parameter *pfallowclose* auf **Variant \_ true** festlegen und das Schließen der Verbindung fortsetzen. Wenn der Benutzer nicht schließen möchte, sollte die Anwendung *pfallowclose* auf **Variant \_ false** festlegen und die Verbindung geöffnet lassen.
+Wenn eine Containeranwendung die [**IMsRdpClient::RequestClose-Methode**](imsrdpclient-requestclose.md) aufruft, gibt diese Methode einen Wert zurück, der angibt, ob der Container auf ein **OnConfirmClose-Ereignis** warten soll, bevor die Steuerungsverbindung geschlossen wird. Wenn **RequestClose** **controlCloseWaitForEvents** zurückgibt und der Benutzer mit seiner Remotedesktopdienste-Sitzung verbunden und angemeldet ist, wird das **OnConfirmClose-Ereignis** ausgelöst. An diesem Punkt kann die Containeranwendung den Benutzer auffordern, zu fragen, ob der Benutzer die Verbindung schließen möchte. Wenn der Benutzer die Verbindung schließen möchte, sollte die Anwendung den *Parameter pfAllowClose* auf **VARIANT \_ TRUE** festlegen und mit dem Schließen der Verbindung fortfahren. Wenn der Benutzer nicht schließen möchte, sollte die Anwendung *pfAllowClose* auf **VARIANT \_ FALSE** festlegen und die Verbindung geöffnet lassen.
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -70,7 +70,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | Imstscaxevents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
+| IID<br/>                      | IMsTscAxEvents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
 
 
 
@@ -78,7 +78,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imstscaxevents**](imstscaxevents-interface.md)
+[**IMsTscAxEvents**](imstscaxevents-interface.md)
 </dt> </dl>
 
  

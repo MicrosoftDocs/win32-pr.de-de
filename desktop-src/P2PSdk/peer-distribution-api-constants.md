@@ -1,23 +1,23 @@
 ---
-description: 'Weitere Informationen: Peer Distribution API-Konstanten'
+description: Weitere Informationen finden Sie unter Peerverteilungs-API-Konstanten.
 ms.assetid: 61444677-2fd5-4599-a96e-be19fb019f34
-title: Peer Distribution-API-Konstanten (peerdist. h)
+title: Peerverteilungs-API-Konstanten (Peerdist.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7da13692eee7c7b18597dc46b5b7339697b660da
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4bfc858fd40582c3dec308c655694e0c39bc1537fa5fac2f924043b8646a1fc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119519320"
 ---
-# <a name="peer-distribution-api-constants"></a>Peer Distribution-API-Konstanten
+# <a name="peer-distribution-api-constants"></a>Peerverteilungs-API-Konstanten
 
-Die Peer Distribution-API definiert die folgenden Konstanten:
+Die Peerverteilungs-API definiert die folgenden Konstanten:
 
 <dl> <dt>
 
-<span id="PEERDIST_VERSION"></span><span id="peerdist_version"></span>**Version von "Peer Manager" \_**
+<span id="PEERDIST_VERSION"></span><span id="peerdist_version"></span>**PEERDIST-VERSION \_**
 </dt> <dd> <dl> <dt>
 
 WORD
@@ -25,7 +25,7 @@ WORD
 
 
 
-Die aktuellen Versionsinformationen der Peer Verteilungs-API.
+Die aktuellen Versionsinformationen der Peerverteilungs-API.
 
 
 </dt> </dl> </dd> </dl>
@@ -36,9 +36,9 @@ Die aktuellen Versionsinformationen der Peer Verteilungs-API.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 Professional \[ Desktop-Apps\]<br/>                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>"Peer. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 Professional \[ Desktop-Apps\]<br/>                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Peerdist.h</dt> </dl> |
 
 
 

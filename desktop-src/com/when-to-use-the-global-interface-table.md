@@ -1,41 +1,41 @@
 ---
-title: Verwendungszwecke der globalen Schnittstellen Tabelle
-description: Verwendungszwecke der globalen Schnittstellen Tabelle
+title: Verwendung der globalen Schnittstellentabelle
+description: Verwendung der globalen Schnittstellentabelle
 ms.assetid: def8f7f8-9d0d-49a4-9d5c-40233903eea5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f89bbd7437b65c85abe89e8d647cbd73555c2d6a
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 37457e0e1b35c0c1acb2c8f84750f3d0f08c1344eaf27e0361c442aea3be23ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104039651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119639230"
 ---
-# <a name="when-to-use-the-global-interface-table"></a>Verwendungszwecke der globalen Schnittstellen Tabelle
+# <a name="when-to-use-the-global-interface-table"></a>Verwendung der globalen Schnittstellentabelle
 
-Wenn Sie einen Schnittstellen Zeiger mehrmals zwischen den Apartments in einem Prozess wieder verwenden, können Sie die [**iglobalinterfaketable**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable) -Schnittstelle verwenden. Bei anderen Techniken müssten Sie jedes Mal einen erneuten Mars Hall durchsetzen.
+Wenn Sie einen Schnittstellenzeiger mehrmals zwischen den Apartments in einem Prozess entmarten, können Sie die [**IGlobalInterfaceTable-Schnittstelle**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable) verwenden. Mit anderen Techniken müssten Sie jedes Mal erneut einatmen.
 
 > [!Note]  
-> Wenn der Schnittstellen Zeiger nur einmal gemarshallt wird, können Sie die [**comarshalinterthreadinterfakeinstream**](/windows/desktop/api/combaseapi/nf-combaseapi-comarshalinterthreadinterfaceinstream) -Funktion verwenden. Sie kann auch verwendet werden, um einen Schnittstellen Zeiger von einem Thread an einen anderen Thread im gleichen Prozess zu übergeben.
+> Wenn der Schnittstellenzeiger nur einmal nichtmarshaliert ist, können Sie die [**CoMarshalInterThreadInterfaceInStream-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-comarshalinterthreadinterfaceinstream) verwenden. Sie kann auch verwendet werden, um einen Schnittstellenzeiger von einem Thread an einen anderen Thread im gleichen Prozess zu übergeben.
 
- 
+ 
 
-Die [**iglobalinterfaketable**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable) -Schnittstelle macht auch ein anderes, bisher schwieriges Problem für den Programmierer einfacher. Dieses Problem tritt auf, wenn die folgenden Bedingungen zutreffen:
+Die [**IGlobalInterfaceTable-Schnittstelle**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable) vereinfacht auch ein weiteres zuvor schwieriges Problem für den Programmierer. Dieses Problem tritt auf, wenn die folgenden Bedingungen erfüllt sind:
 
--   Ein in-Process-Agile-Objekt aggregiert den frei Thread-Mars Haller.
--   Das gleiche Agile-Objekt enthält auch (als Element Variablen) Schnittstellen Zeiger auf andere Objekte, die nicht agil sind und den Freethread-Mars Haller nicht aggregieren.
+-   Ein prozessübergreifendes agiles Objekt aggregiert den Marshaller mit freiem Thread.
+-   Dieses agile Objekt enthält auch (als Membervariablen) Schnittstellenzeiger auf andere Objekte, die nicht agil sind und den Marshaller mit freiem Thread nicht aggregieren.
 
-Wenn das äußere Objekt in diesem Fall an ein anderes Apartment gemarshallt wird und die Anwendung darauf aufruft, und das Objekt versucht, für einen seiner Member-Variablen Schnittstellen Zeiger aufzurufen, die nicht frei Thread sind oder für Objekte in anderen Apartments Proxys sind, erhalten Sie möglicherweise falsche Ergebnisse oder den falschen RPC-Fehler \_ \_ \_ Thread. Dieser Fehler tritt auf, weil die innere Schnittstelle nur von dem Apartment aus aufgerufen werden kann, in dem Sie zuerst in der Element Variablen gespeichert wurde.
+Wenn in diesem Fall das äußere Objekt in ein anderes Apartment gemarshallt wird und die Anwendung darauf aufruft und das Objekt versucht, für einen seiner Schnittstellenzeigenzeigen von Membervariablen aufzurufen, die nicht über Einenthread verfügen oder Proxys für Objekte in anderen Apartments sind, kann dies zu falschen Ergebnissen oder dem Fehler RPC \_ E \_ WRONG THREAD \_ führen. Dieser Fehler tritt auf, da die innere Schnittstelle so konzipiert ist, dass sie nur aus dem Apartment aufrufbar ist, in dem sie zuerst in der Membervariablen gespeichert wurde.
 
-Um dieses Problem zu beheben, sollte das äußere Objekt, das den Freethread-Mars Haller aggregiert, [**iglobalinterfaketable:: registerinterfakeinglobal**](/windows/win32/api/objidl/nf-objidl-iglobalinterfacetable-registerinterfaceinglobal) auf der inneren Schnittstelle aufrufen und das resultierende Cookie in seiner Member-Variablen speichern, anstatt den eigentlichen Schnittstellen Zeiger zu speichern. Wenn das äußere Objekt für den Schnittstellen Zeiger eines inneren Objekts aufrufen möchte, sollte es [**iglobalinterfaketable:: getinterfakefromglobal**](/windows/win32/api/objidl/nf-objidl-iglobalinterfacetable-getinterfacefromglobal)aufrufen, den zurückgegebenen Schnittstellen Zeiger verwenden und es dann freigeben. Wenn das äußere Objekt entfernt wird, sollte es [**iglobalinterfaketable:: revokeinterfakefromglobal**](/windows/win32/api/objidl/nf-objidl-iglobalinterfacetable-revokeinterfacefromglobal) aufgerufen werden, um die Schnittstelle aus der globalen Schnittstellen Tabelle zu entfernen.
+Um dieses Problem zu lösen, sollte das äußere Objekt, das den Marshaller mit Freiem Thread aggregiert, [**IGlobalInterfaceTable::RegisterInterfaceInGlobal**](/windows/win32/api/objidl/nf-objidl-iglobalinterfacetable-registerinterfaceinglobal) auf der inneren Schnittstelle aufrufen und das resultierende Cookie in seiner Membervariablen speichern, anstatt den tatsächlichen Schnittstellenzeiger zu speichern. Wenn das äußere Objekt für den Schnittstellenzeiger eines inneren Objekts aufrufen möchte, sollte es [**IGlobalInterfaceTable::GetInterfaceFromGlobal**](/windows/win32/api/objidl/nf-objidl-iglobalinterfacetable-getinterfacefromglobal)aufrufen, den zurückgegebenen Schnittstellenzeiger verwenden und ihn dann los lassen. Wenn das äußere Objekt entfernt wird, sollte es [**IGlobalInterfaceTable::RevokeInterfaceFromGlobal**](/windows/win32/api/objidl/nf-objidl-iglobalinterfacetable-revokeinterfacefromglobal) aufrufen, um die Schnittstelle aus der globalen Schnittstellentabelle zu entfernen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erstellen der globalen Schnittstellen Tabelle](creating-the-global-interface-table.md)
+[Erstellen der globalen Schnittstellentabelle](creating-the-global-interface-table.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

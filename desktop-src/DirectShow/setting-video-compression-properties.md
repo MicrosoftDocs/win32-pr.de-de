@@ -1,27 +1,27 @@
 ---
-description: Festlegen von Video Komprimierungs Eigenschaften
+description: Festlegen von Videokomprimierungseigenschaften
 ms.assetid: 2be03a2c-39a5-46da-9bbc-af42c08150ab
-title: Festlegen von Video Komprimierungs Eigenschaften
+title: Festlegen von Videokomprimierungseigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d29ed7e42745ffd51fca14b7da5f72c749281e7
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: d3f1d73d27acb99e5a197ec4501411669278a6fd5c7b857875141d8831c7173f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119583280"
 ---
-# <a name="setting-video-compression-properties"></a>Festlegen von Video Komprimierungs Eigenschaften
+# <a name="setting-video-compression-properties"></a>Festlegen von Videokomprimierungseigenschaften
 
-Video Komprimierungs Filter können die [**IAMVideoCompression**](/windows/desktop/api/Strmif/nn-strmif-iamvideocompression) -Schnittstelle auf Ihren Ausgabe Pins unterstützen. Verwenden Sie diese Schnittstelle, um Komprimierungs Eigenschaften festzulegen, z. b. die Keyframerate, die Anzahl der vorhergesagten (P) Frames pro Keyframe und die relative Komprimierungs Qualität.
+Videokomprimierungsfilter können die [**IAMVideoCompression-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iamvideocompression) auf ihren Ausgabepins unterstützen. Verwenden Sie diese Schnittstelle, um Komprimierungseigenschaften wie die Keyframerate, die Anzahl der vorhergesagten Frames (P) pro Keyframe und die relative Komprimierungsqualität zu festlegen.
 
-Zum Ermitteln der Ausgabe-PIN des Filters und zum Abfragen der PIN für die Schnittstelle müssen Sie zuerst die Methode [**ibasefilter:: umumpins**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-enumpins) abrufen. Einige Filter unterstützen die-Schnittstelle möglicherweise überhaupt nicht. Andere können die-Schnittstelle verfügbar machen, jedoch nicht jede Komprimierungs Eigenschaft. Um zu ermitteln, welche Eigenschaften unterstützt werden, nennen Sie [**IAMVideoCompression:: GetInfo**](/windows/desktop/api/Strmif/nf-strmif-iamvideocompression-getinfo). Diese Methode gibt mehrere Informationselemente zurück:
+Rufen Sie zunächst die [**IBaseFilter::EnumPins-Methode**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-enumpins) auf, um den Ausgabepin des Filters zu suchen, und fragen Sie den Pin für die Schnittstelle ab. Einige Filter unterstützen die Schnittstelle möglicherweise überhaupt nicht. Andere können die Schnittstelle verfügbar machen, aber nicht jede Komprimierungseigenschaft unterstützen. Um zu bestimmen, welche Eigenschaften unterstützt werden, rufen [**Sie IAMVideoCompression::GetInfo auf.**](/windows/desktop/api/Strmif/nf-strmif-iamvideocompression-getinfo) Diese Methode gibt mehrere Informationen zurück:
 
--   Eine Reihe von Funktionen-Flags
--   Eine beschreibende Zeichenfolge und Versionsnummern Zeichenfolge
--   Standardwerte für keyframetrate, P-Frame Rate und Qualität (falls unterstützt)
+-   Eine Reihe von Funktionenflags
+-   Eine beschreibende Zeichenfolge und versionsbasierte Zeichenfolge
+-   Standardwerte für Keyframerate, P Framerate und Qualität (falls unterstützt)
 
-Die-Methode weist die folgende Syntax auf:
+Die -Methode hat die folgende Syntax:
 
 
 ```C++
@@ -31,9 +31,9 @@ hr = pCompress->GetInfo(pszVersion, &cbVersion, pszDesc, &cbDesc,
 
 
 
-Die Parameter *pszversion* und *pszdesc* sind breit Zeichen Puffer, die die Versions Zeichenfolge und die Beschreibungs Zeichenfolge empfangen. Der *cbversion* -und der *cbdesc* -Parameter erhalten die erforderlichen Puffergrößen in Bytes (nicht Zeichen). Die Parameter " *lkeyframe*", " *lpframe*" und " *dblquality* " erhalten die Standardwerte für die Keyframerate, P-Frame Rate und Qualität. Qualität wird als Gleit Komma Zahl zwischen 0,0 und 1,0 ausgedrückt. Der *lcap* -Parameter empfängt eine bitweise **or** -Funktion der Funktionen-Flags, die vom enumerierten Typ " [**compressioncaps**](/windows/desktop/api/strmif/ne-strmif-compressioncaps) " definiert werden.
+Die *Parameter pszVersion* und *pszDesc* sind Breitzeichenpuffer, die die Versionszeichenfolge und die Beschreibungszeichenfolge empfangen. Die *Parameter cbVersion* und *cbDesc* empfangen die erforderlichen Puffergrößen in Bytes (nicht Zeichen). Die *Parameter lKeyFrame,* *lPFrame* und *dblQuality* erhalten die Standardwerte für die Keyframerate, die P-Framerate und die Qualität. Die Qualität wird als Gleitkommazahl von 0,0 bis 1,0 ausgedrückt. Der *lCap-Parameter* empfängt ein bitweises **OR** der Funktionenflags, die durch den [**aufzählten CompressionCaps-Typ**](/windows/desktop/api/strmif/ne-strmif-compressioncaps) definiert werden.
 
-Jeder dieser Parameter kann **null** sein. in diesem Fall ignoriert die Methode diesen Parameter. Wenn Sie z. b. Puffer für die Versions-und Beschreibungs Zeichenfolgen zuweisen möchten, müssen Sie zuerst die-Methode mit **null** im ersten und dritten Parameter aufzurufen Verwenden Sie die zurückgegebenen Werte für *cbversion* und *cbdesc* , um die Puffer zuzuordnen, und dann die Methode erneut aufzurufen:
+Jeder dieser Parameter kann **NULL sein.** In diesem Fall ignoriert die -Methode diesen Parameter. Um beispielsweise Puffer für die Versions- und Beschreibungszeichenfolgen zu reservieren, rufen Sie zuerst die -Methode mit **NULL** im ersten und dritten Parameter auf. Verwenden Sie die zurückgegebenen Werte für *cbVersion* und *cbDesc,* um die Puffer zu reservieren, und rufen Sie dann die -Methode erneut auf:
 
 
 ```C++
@@ -49,7 +49,7 @@ if (SUCCEEDED(hr))
 
 
 
-Der Wert von *lcap* gibt an, welche der anderen **IAMVideoCompression** -Methoden der Filter unterstützt. Wenn *lcap* z. b. das \_ kankeyframe-Flag compressioncaps enthält, können Sie [**IAMVideoCompression:: get \_ Keyframerate**](/windows/desktop/api/Strmif/nf-strmif-iamvideocompression-get_keyframerate) zum Abrufen der [**Keyframerate und IAMVideoCompression::p UT \_ Keyframerate**](/windows/desktop/api/Strmif/nf-strmif-iamvideocompression-put_keyframerate) zum Festlegen der Keyframerate abrufen. Ein negativer Wert gibt an, dass der Filter den Standardwert verwendet, wie er von [**IAMVideoCompression:: GetInfo**](/windows/desktop/api/Strmif/nf-strmif-iamvideocompression-getinfo)abgerufen wird. Beispiel:
+Der Wert von *lCap gibt* an, welche der anderen **IAMVideoCompression-Methoden** der Filter unterstützt. Wenn *lCap* beispielsweise das CompressionCaps-CanKeyFrame-Flag enthält, können Sie \_ [**IAMVideoCompression::get \_ KeyFrameRate**](/windows/desktop/api/Strmif/nf-strmif-iamvideocompression-get_keyframerate) aufrufen, um die Keyframerate und [**IAMVideoCompression::p ut \_ KeyFrameRate**](/windows/desktop/api/Strmif/nf-strmif-iamvideocompression-put_keyframerate) zum Festlegen der Keyframerate zu erhalten. Ein negativer Wert gibt an, dass der Filter den Standardwert aus [**IAMVideoCompression::GetInfo verwendet.**](/windows/desktop/api/Strmif/nf-strmif-iamvideocompression-getinfo) Beispiel:
 
 
 ```C++
@@ -65,7 +65,7 @@ if (lCap & CompressionCaps_CanKeyFrame)
 
 
 
-Im folgenden Codebeispiel wird versucht, die **IAMVideoCompression** -Schnittstelle in der Ausgabe-PIN zu finden. Wenn der Vorgang erfolgreich ist, werden die Standardwerte und die tatsächlichen Werte für die Komprimierungs Eigenschaften abgerufen:
+Im folgenden Codebeispiel wird versucht, die **IAMVideoCompression-Schnittstelle** auf dem Ausgabepin zu finden. Wenn dies erfolgreich ist, werden die Standardwerte und die tatsächlichen Werte für die Komprimierungseigenschaften abgerufen:
 
 
 ```C++
@@ -124,7 +124,7 @@ if (SUCCEEDED(hr))
 
 
 > [!Note]  
-> Wenn Sie die [**ICaptureGraphBuilder2**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) -Schnittstelle zum Erstellen des Diagramms verwenden, können Sie die **IAMVideoCompression** -Schnittstelle abrufen, indem Sie [**ICaptureGraphBuilder2:: findinterface**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-findinterface)aufrufen, anstatt **ibasefilter:: umumpins** zu verwenden. Die **findinterface** -Methode ist eine Hilfsmethode, die Filter und Pins im Diagramm für eine angegebene Schnittstelle durchsucht.
+> Wenn Sie die [**ICaptureGraphBuilder2-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) zum Erstellen Ihres Graphen verwenden, können Sie die **IAMVideoCompression-Schnittstelle** abrufen, indem Sie [**ICaptureGraphBuilder2::FindInterface**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-findinterface)aufrufen, anstatt **IBaseFilter::EnumPins** zu verwenden. Die **FindInterface-Methode** ist eine Hilfsmethode, die Filter und Stecknadeln im Diagramm nach einer angegebenen Schnittstelle durchsucht.
 
  
 

@@ -1,12 +1,12 @@
 ---
-title: Imstscaxevents onenterfullscreenmode-Methode
-description: Wird aufgerufen, wenn der Client in den Vollbildmodus wechselt. Beispielsweise wird dieses Ereignis aufgerufen, wenn der Benutzer die Tastenkombination für den Vollbildmodus drückt (Strg + Alt + untbuggung).
+title: IMsTscAxEvents OnEnterFullScreenMode-Methode
+description: Wird aufgerufen, wenn der Client in den Vollbildmodus wechselt. Dieses Ereignis wird beispielsweise aufgerufen, wenn der Benutzer die Tastenkombination im Vollbildmodus drückt (STRG+ALT+BREAK).
 ms.assetid: dc772492-59a2-4403-8b9a-0aff1801aa6f
 ms.tgt_platform: multiple
 keywords:
-- Onenterfullscreenmode-Methode Remotedesktopdienste
-- Onenterfullscreenmode-Methode Remotedesktopdienste, imstscaxevents-Schnittstelle
-- Imstscaxevents-Schnittstelle Remotedesktopdienste, onenterfullscreenmode-Methode
+- OnEnterFullScreenMode-Methode Remotedesktopdienste
+- OnEnterFullScreenMode-Methode Remotedesktopdienste , IMsTscAxEvents-Schnittstelle
+- IMsTscAxEvents-Schnittstelle Remotedesktopdienste , OnEnterFullScreenMode-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 226054fc7b1371bb088deb70ec9e87ea5a340b07
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 31e40da93f0e29fb183cea540b0f195d61c4969d65c2b7829bf86d8e3c8eba81
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119512400"
 ---
-# <a name="imstscaxeventsonenterfullscreenmode-method"></a>Imstscaxevents:: onenterfullscreenmode-Methode
+# <a name="imstscaxeventsonenterfullscreenmode-method"></a>IMsTscAxEvents::OnEnterFullScreenMode-Methode
 
-Wird aufgerufen, wenn der Client in den Vollbildmodus wechselt. Beispielsweise wird dieses Ereignis aufgerufen, wenn der Benutzer die [Tasten](terminal-services-shortcut-keys.md) Kombination für den Vollbildmodus drückt (Strg + Alt + untbuggung).
+Wird aufgerufen, wenn der Client in den Vollbildmodus wechselt. Dieses Ereignis wird beispielsweise aufgerufen, wenn der Benutzer die [Tastenkombination](terminal-services-shortcut-keys.md) im Vollbildmodus drückt (STRG+ALT+BREAK).
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -59,7 +59,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | Imstscaxevents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
+| IID<br/>                      | IMsTscAxEvents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
 
 
 
@@ -67,7 +67,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imstscaxevents**](imstscaxevents-interface.md)
+[**IMsTscAxEvents**](imstscaxevents-interface.md)
 </dt> </dl>
 
  

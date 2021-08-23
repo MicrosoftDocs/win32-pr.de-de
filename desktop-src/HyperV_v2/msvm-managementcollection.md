@@ -15,14 +15,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 2d3499bb161495152b6de4b8aebd7c64d041d069
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5d4f349e6c250c05a0eb1690ae091f7c787d2d100bc5dca0a1250292fab3d5a6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119521730"
 ---
-# <a name="msvm_managementcollection-class"></a>MSVM \_ managementcollection-Klasse
+# <a name="msvm_managementcollection-class"></a>Msvm \_ ManagementCollection-Klasse
 
 Stellt eine Auflistung anderer Auflistungen dar.
 
@@ -41,45 +41,45 @@ class Msvm_ManagementCollection : CIM_CollectionOfMSEs
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ managementcollection** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ ManagementCollection-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ managementcollection** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ ManagementCollection-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Sammlungs**
+**CollectionID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("CollectionId"), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("CollectionID"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Die eindeutige Identifikation des Auflistungs Objekts.
+Die eindeutige Identifikation des Auflistungsobjekts.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Elementname")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("ElementName")
 </dt> </dl>
 
-Ein benutzerdefinierter Name für die Auflistung. Beachten Sie, dass dies nicht unbedingt eindeutig ist.
+Ein benutzerdefinierter Name für die Auflistung. Beachten Sie, dass dies nicht garantiert eindeutig ist.
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Ein benutzerdefinierter Name für die Auflistung. Beachten Sie, dass dies nicht 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

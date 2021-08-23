@@ -1,21 +1,21 @@
 ---
-description: TSPI-Änderungen der Version 2,2 bestehen hauptsächlich aus einer Reihe von Datenstrukturen, die über zusätzliche Elemente verfügen.
+description: Änderungen an TSPI Version 2.2 bestehen in erster Linie aus einer Reihe von Datenstrukturen, die über zusätzliche Elemente verfügen.
 ms.assetid: ea3c669f-cb44-4201-974a-2bc1ff56b462
-title: Neuerungen bei TSPI Version 2,2
+title: Neuerungen bei TSPI Version 2.2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0518a86722c452eccb9ddd382fa5380bf66da5f6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c826b7eab023d1851f7031d2b632b25fde36aeb5dd1bf04706012ffb779b01bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119659799"
 ---
-# <a name="whats-new-for-tspi-version-22"></a>Neuerungen bei TSPI Version 2,2
+# <a name="whats-new-for-tspi-version-22"></a>Neuerungen bei TSPI Version 2.2
 
-TSPI-Änderungen der Version 2,2 bestehen hauptsächlich aus einer Reihe von Datenstrukturen, die über zusätzliche Elemente verfügen. Die Mehrzahl dieser Strukturen sind in TAPI. h definiert und werden von TAPI-Anwendungen und Dienstanbietern als Möglichkeit zum Übergeben von Informationen verwendet.
+Änderungen an TSPI Version 2.2 bestehen in erster Linie aus einer Reihe von Datenstrukturen, die über zusätzliche Elemente verfügen. Die meisten dieser Strukturen sind in tapi.h definiert und werden sowohl von TAPI-Anwendungen als auch von Dienstanbietern als Mittel zum Übergeben von Informationen verwendet.
 
-Funktionen und Nachrichten, die für TSPI Version 2,2 neu oder geändert wurden, lauten wie folgt:
+Funktionen und Meldungen, die für TSPI Version 2.2 neu oder geändert wurden, sind wie folgt:
 
 -   [**LINE_AGENTSESSIONSTATUS**](./line-agentsessionstatus.md)
 -   [**LINE_QUEUESTATUS**](./line-queuestatus.md)
@@ -23,7 +23,7 @@ Funktionen und Nachrichten, die für TSPI Version 2,2 neu oder geändert wurden,
 -   [**LINE_GROUPSTATUS**](./line-groupstatus.md)
 -   [**LINE_PROXYSTATUS**](./line-proxystatus.md)
 
-**LINEADDRCAPFLAGS_ACDGROUP** Mitglied [LINEADDRCAPFLAGS_ Konstanten](./lineaddrcapflags--constants.md)
+**LINEADDRCAPFLAGS_ACDGROUP** Member von [LINEADDRCAPFLAGS_ Konstanten](./lineaddrcapflags--constants.md)
 
 **LINEERR_INVALAGENTSESSIONSTATE** und **LINEERR_DISCONNECTED** Member von [LINEERR_ Konstanten](./lineerr--constants.md).
 

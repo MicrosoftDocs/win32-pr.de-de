@@ -1,7 +1,7 @@
 ---
 description: Fordert an, dass der Zustand des Elements geändert wird.
 ms.assetid: D1742588-D932-4FE1-8D2A-E410BEE371FF
-title: RequestStateChange-Methode der Msvm_Keyboard-Klasse
+title: RequestStateChange-Methode der Msvm_Keyboard Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: c3358c6c9907717e536466466dd074faf3a038a4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 457ed1e98714a2a20169fd1139b7f42475e5d893756591930b6a25147f756897
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119522240"
 ---
-# <a name="requeststatechange-method-of-the-msvm_keyboard-class"></a>RequestStateChange-Methode der MSVM- \_ Tastatur Klasse
+# <a name="requeststatechange-method-of-the-msvm_keyboard-class"></a>RequestStateChange-Methode der Msvm \_ Keyboard-Klasse
 
 Fordert an, dass der Zustand des Elements geändert wird.
 
@@ -41,10 +41,10 @@ uint32 RequestStateChange(
 
 <dl> <dt>
 
-*Requestedstate* \[ in\]
+*RequestedState* \[ In\]
 </dt> <dd>
 
-Der für das Element angeforderte neue Zustand. Diese Informationen werden in die **requestedstate** -Eigenschaft der-Instanz eingefügt, wenn der Rückgabecode 0 (' abgeschlossen ohne Fehler '), 3 (' Timeout ') oder 4096 (0x1000) (' Auftrag gestartet ') ist. Ausführliche Erläuterungen zu den *requestedstate* -Werten finden Sie in der Beschreibung der Eigenschaften **enabledstate** und **requestedstate** .
+Der für das Element angeforderte neue Zustand. Diese Informationen werden in die **RequestedState-Eigenschaft** der Instanz platziert, wenn der Rückgabecode 0 ('Completed with No Error'), 3 ('Timeout') oder 4096 (0x1000) ('Job Started') ist. Ausführliche Erläuterungen zu den *RequestedState-Werten* finden Sie in der Beschreibung der **Eigenschaften EnabledState** **und RequestedState.**
 
 <dt>
 
@@ -64,7 +64,7 @@ Der für das Element angeforderte neue Zustand. Diese Informationen werden in di
 
 <span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>
 
-**Herunter** fahren (4)
+**Herunterfahren** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -85,14 +85,14 @@ Der für das Element angeforderte neue Zustand. Diese Informationen werden in di
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-Zurück **stellen (8** )
+**Zurückern** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-Still **legung (9** )
+**Ruhe** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -113,29 +113,29 @@ Still **legung (9** )
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32768.65535)
+**Anbieter reserviert** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Ein Verweis auf den Auftrag. Dieser Parameter kann **null** sein, wenn die Aufgabe abgeschlossen ist.
+Ein Verweis auf den Auftrag. Dieser Parameter kann NULL **sein,** wenn die Aufgabe abgeschlossen ist.
 
 </dd> <dt>
 
-*Timeoutperiod* \[ in\]
+*TimeoutPeriod* \[ In\]
 </dt> <dd>
 
-Die maximale Zeitspanne, für die der Client den Übergang zum neuen Zustand erwartet. Zum Angeben dieses Timeout Zeitraums muss das Intervall Format verwendet werden. Der Wert 0 oder **null** zeigt an, dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **null** enthält und die Implementierung diesen Parameter nicht unterstützt, wird der Rückgabecode 4098 ("Use of Timeout Parameter not supported") zurückgegeben.
+Die maximale Zeitdauer, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervallformat muss verwendet werden, um diesen Time out-Zeitraum anzugeben. Der Wert 0 oder **NULL gibt an,** dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, wird der Rückgabecode 4098 ("Use Of Timeout Parameter Not Supported") zurückgegeben.
 
 </dd> </dl>
 
@@ -149,40 +149,40 @@ Die maximale Zeitspanne, für die der Client den Übergang zum neuen Zustand erw
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-**Unbekannter oder nicht** angegebener Fehler (2)
+**Unbekannter oder nicht angegebener Fehler** (2)
 </dt> <dt>
 
-**Kann nicht innerhalb des Timeout Zeitraums** (3) beendet werden.
+**Innerhalb des Timeoutzeitraums** (3) kann nicht abgeschlossen werden.
 </dt> <dt>
 
-Fehler **(4** )
+**Fehler** (4)
 </dt> <dt>
 
 **Ungültiger Parameter** (5)
 </dt> <dt>
 
-**In Gebrauch** (6)
+**Wird verwendet** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Ungültiger Status Übergang** (4097).
+**Ungültiger Zustandsübergang** (4097)
 </dt> <dt>
 
-**Verwendung des timeout-Parameters wird nicht unterstützt** (4098)
+**Verwendung des Timeoutparameters nicht unterstützt** (4098)
 </dt> <dt>
 
 **Ausgelastet** (4099)
 </dt> <dt>
 
-**Reservierte Methode** (4100.32767)
+**Reservierte Methode** (4100...32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -191,19 +191,19 @@ Fehler **(4** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM- \_ Tastatur**](msvm-keyboard.md)
+[**Msvm-Tastatur \_**](msvm-keyboard.md)
 </dt> </dl>
 
  

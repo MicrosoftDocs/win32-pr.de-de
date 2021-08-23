@@ -1,7 +1,7 @@
 ---
-description: Die setfloatvalue-Methode fügt einen neuen float-Wert (Type VT \_ R4) hinzu oder überschreibt eine vorhandene.
+description: Die SetFloatValue-Methode fügt einen neuen FLOAT-Wert (Typ VT R4) hinzu oder \_ überschreibt einen vorhandenen.
 ms.assetid: 1e0c9d19-47bf-4d93-a0c0-27e2c4897012
-title: 'Iportabledevicevalues:: setfloatvalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::SetFloatValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 60b42217c925c83e96f2c893c7bc7f11449ebdd6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 347cf93fe68e989eebb921472d1e81e4d0aa650e92d2c535dfdd93a6d823ed1d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657810"
 ---
-# <a name="iportabledevicevaluessetfloatvalue-method"></a>Iportabledevicevalues:: setfloatvalue-Methode
+# <a name="iportabledevicevaluessetfloatvalue-method"></a>IPortableDeviceValues::SetFloatValue-Methode
 
-Die **setfloatvalue** -Methode fügt einen neuen **float** -Wert (Type VT \_ R4) hinzu oder überschreibt eine vorhandene.
+Die **SetFloatValue-Methode** fügt einen neuen **FLOAT-Wert** (Typ VT R4) hinzu oder \_ überschreibt einen vorhandenen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT SetFloatValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** , der das Element angibt, das erstellt oder überschrieben werden soll.
+Ein **REFPROPERTYKEY-Objekt,** das das zu erstellende oder zu überschreibende Element angibt.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*Wert* \[ In\]
 </dt> <dd>
 
-Ein **float** -Wert, der den neuen Wert enthält.
+Ein **FLOAT-Wert,** der den neuen Wert enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -69,9 +69,9 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Schlüssel* Parameter angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben.
+Wenn ein vorhandener Wert über denselben  Schlüssel verfügt, der vom Schlüsselparameter angegeben wird, überschreibt er den vorhandenen Wert ohne Warnung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Sc
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
@@ -88,10 +88,10 @@ Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Sc
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportablede vicevalues:: getFloatValue**](iportabledevicevalues-getfloatvalue.md)
+[**IPortableDeviceValues::GetFloatValue**](iportabledevicevalues-getfloatvalue.md)
 </dt> </dl>
 
  

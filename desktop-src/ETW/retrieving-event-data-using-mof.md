@@ -4,12 +4,12 @@ ms.assetid: 13512236-c416-43ba-bf36-b05c5c08d6c9
 title: Abrufen von Ereignisdaten mithilfe von MOF
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f6086c878a0e98c0451d1ba2f1e11e2cd0e9016
-ms.sourcegitcommit: b3839bea8d55c981d53cb8802d666bf49093b428
+ms.openlocfilehash: 35ae767752facc4be6e05c3f763f87513186937da407b3cdab392a3221e09461
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "114373139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582260"
 ---
 # <a name="retrieving-event-data-using-mof"></a>Abrufen von Ereignisdaten mithilfe von MOF
 

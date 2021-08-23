@@ -1,19 +1,19 @@
 ---
-title: Iagentspeechinputproperties GetHotKey
-description: Iagentspeechinputproperties GetHotKey
+title: IAgentSpeechInputProperties GetHotKey
+description: IAgentSpeechInputProperties GetHotKey
 ms.assetid: b93e5b46-b8f8-4ca4-8417-7626b97d8928
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e672b26f97cfbe92bc71d0ceab165e100c3ecf92
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a66e4f3fe070a944ecd9800a6712e8ae4db8d333913e5cfe85c027565cf1cf77
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119609380"
 ---
-# <a name="iagentspeechinputpropertiesgethotkey"></a>Iagentspeechinputproperties:: GetHotKey
+# <a name="iagentspeechinputpropertiesgethotkey"></a>IAgentSpeechInputProperties::GetHotKey
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetHotKey(
@@ -21,29 +21,29 @@ BSTR * pbszHotCharKey  // address of variable for listening key
 );                        
 ```
 
-Ruft die aktuelle Tastatur Zuweisung für den Schlüssel für die Spracheingabe Überwachung ab.
+Ruft die aktuelle Tastaturzuweisung für die Spracheingabe-Abhörtaste ab.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="pbszHotCharKey"></span><span id="pbszhotcharkey"></span><span id="PBSZHOTCHARKEY"></span>*pbszhotcharkey*
+<span id="pbszHotCharKey"></span><span id="pbszhotcharkey"></span><span id="PBSZHOTCHARKEY"></span>*pbszHotCharKey*
 </dt> <dd>
 
-Adresse eines BSTR, das die aktuelle Hotkey-Einstellung empfängt, mit der der Audiokanal für die Spracheingabe geöffnet wird.
+Adresse eines BSTR, der die aktuelle Hotkeyeinstellung empfängt, die zum Öffnen des Audiokanals für die Spracheingabe verwendet wird.
 
 </dd> </dl>
 
-Wenn [**GetEnabled**](iagentspeechinputproperties--getenabled.md) **false** zurückgibt, löst eine Abfrage dieser Einstellung einen Fehler aus.
+Wenn [**GetEnabled False**](iagentspeechinputproperties--getenabled.md) **zurückgibt,** löst das Abfragen dieser Einstellung einen Fehler aus.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentspeechinputproperties:: GetEnabled**](iagentspeechinputproperties--getenabled.md)
+[**IAgentSpeechInputProperties::GetEnabled**](iagentspeechinputproperties--getenabled.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

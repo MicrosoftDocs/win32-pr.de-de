@@ -1,9 +1,9 @@
 ---
-title: gludeletequadric-Funktion (glu. h)
-description: Die Funktion "gludeletequadric" zerstört ein Quadric-Objekt.
+title: gluDeleteQuadric-Funktion (Glu.h)
+description: Die gluDeleteQuadric-Funktion zerstört ein quadriertes Objekt.
 ms.assetid: 09efd887-0fe8-4a56-bc6f-2177a4930035
 keywords:
-- gludeletequadric-Funktion OpenGL
+- gluDeleteQuadric-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b5ee85e943cd958e394efb191932393d228d948
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ad0c12bd77d3d8b7f7de641671916bb8a901d29d812dfa4e9af6ef116984a128
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119519620"
 ---
-# <a name="gludeletequadric-function"></a>gludeletequadric-Funktion
+# <a name="gludeletequadric-function"></a>gluDeleteQuadric-Funktion
 
-Die Funktion " **gludeletequadric** " zerstört ein Quadric-Objekt.
+Die **gluDeleteQuadric-Funktion** zerstört ein quadriertes Objekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI gluDeleteQuadric(
 *state* 
 </dt> <dd>
 
-Das zu zerstörende quadrische Objekt (mit [**glunewquadric**](glunewquadric.md)erstellt).
+Das quadrierte Objekt, das zerstört werden soll (erstellt mit [**gluNewQuadric**](glunewquadric.md)).
 
 </dd> </dl>
 
@@ -51,9 +51,9 @@ Das zu zerstörende quadrische Objekt (mit [**glunewquadric**](glunewquadric.md)
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **gludeletequadric** " zerstört das Quadric-Objekt und gibt den verwendeten Arbeitsspeicher frei. Nachdem Sie " **gludeletequadric**" aufgerufen haben, können Sie den *Zustand* nicht mehr verwenden.
+Die **gluDeleteQuadric-Funktion** zerstört das quadrierte Objekt und gibt den verwendeten Arbeitsspeicher frei. Nachdem Sie **gluDeleteQuadric** aufgerufen haben, können Sie *den Zustand* nicht mehr verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Die Funktion " **gludeletequadric** " zerstört das Quadric-Objekt und gibt den 
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -73,7 +73,7 @@ Die Funktion " **gludeletequadric** " zerstört das Quadric-Objekt und gibt den 
 
 <dl> <dt>
 
-[**glunewquadric**](glunewquadric.md)
+[**gluNewQuadric**](glunewquadric.md)
 </dt> </dl>
 
  

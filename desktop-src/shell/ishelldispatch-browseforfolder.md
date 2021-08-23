@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: ee6202c7029e2c27684e15d96dd6c38680cb0678
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e70fd50d4b08787326f93cddf7ec55a0eaacb25fa815cc2b4c8246c1934494a0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108086688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119551830"
 ---
 # <a name="ishelldispatchbrowseforfolder-method"></a>IShellDispatch.BrowseForFolder-Methode
 
-Erstellt ein Dialogfeld, in dem der Benutzer einen Ordner auswählen und dann das Ordnerobjekt des ausgewählten [**Ordners zurückgibt.**](folder.md)
+Erstellt ein Dialogfeld, in dem der Benutzer einen Ordner auswählen und dann das [**Ordnerobjekt**](folder.md) des ausgewählten Ordners zurückgibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ IShellDispatch.BrowseForFolder( _
 *Hwnd* \[ In\]
 </dt> <dd>
 
-Typ: **Integer**
+Typ: **Ganze Zahl**
 
 Das Handle für das übergeordnete Fenster des Dialogfelds. Dieser Wert kann auch 0 sein.
 
@@ -69,16 +69,16 @@ Das Handle für das übergeordnete Fenster des Dialogfelds. Dieser Wert kann auc
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Ein **Zeichenfolgenwert,** der den im Dialogfeld Durchsuchen **angezeigten Titel** darstellt.
+Ein **Zeichenfolgenwert,** der den Titel darstellt, der im Dialogfeld **Durchsuchen** angezeigt wird.
 
 </dd> <dt>
 
 *iOptions* \[ In\]
 </dt> <dd>
 
-Typ: **Integer**
+Typ: **Ganze Zahl**
 
-Ein **Ganzzahlwert,** der die Optionen für die Methode enthält. Dies kann 0 (null) oder eine Kombination der Werte sein, die unter dem **ulFlags-Element** der [**BROWSEINFO-Struktur aufgeführt**](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) sind.
+Ein **Ganzzahlwert,** der die Optionen für die -Methode enthält. Dies kann 0 (null) oder eine Kombination der Werte sein, die unter dem **ulFlags-Member** der [**BROWSEINFO-Struktur**](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) aufgeführt sind.
 
 </dd> <dt>
 
@@ -87,7 +87,7 @@ Ein **Ganzzahlwert,** der die Optionen für die Methode enthält. Dies kann 0 (n
 
 Typ: **Variant**
 
-Der Stammordner, der im Dialogfeld verwendet werden soll. Der Benutzer kann in der Struktur nicht höher als in diesem Ordner suchen. Wenn dieser Wert nicht angegeben wird, ist der Stammordner, der im Dialogfeld verwendet wird, der Desktop. Dieser Wert kann eine Zeichenfolge sein, die den Pfad des Ordners oder einen der [**ShellSpecialFolderConstants-Werte angibt.**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) Beachten Sie, dass die konstanten Namen in **ShellSpecialFolderConstants** in Visual Basic, aber nicht in VBScript oder JScript verfügbar sind. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
+Der Stammordner, der im Dialogfeld verwendet werden soll. Der Benutzer kann in der Struktur nicht weiter oben als in diesem Ordner suchen. Wenn dieser Wert nicht angegeben ist, ist der im Dialogfeld verwendete Stammordner der Desktop. Dieser Wert kann eine Zeichenfolge sein, die den Pfad des Ordners oder einen der [**ShellSpecialFolderConstants-Werte**](/windows/desktop/api/Shldisp/ne-shldisp-shellspecialfolderconstants) angibt. Beachten Sie, dass die konstanten Namen in **ShellSpecialFolderConstants** in Visual Basic, aber nicht in VBScript oder JScript verfügbar sind. In diesen Fällen müssen die numerischen Werte an ihrer Stelle verwendet werden.
 
 </dd> </dl>
 
@@ -105,15 +105,15 @@ Typ: **\* \* FOLDER**
 
 Ein Objektverweis auf das [**Folder-Objekt**](folder.md) des ausgewählten Ordners.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode wird implementiert und über die [**Shell.BrowseForFolder-Methode**](shell-browseforfolder.md) aufgerufen.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird **BrowseForFolder** verwendet, um ein Suchfenster mit dem Titel "Beispiel" anzuzeigen, das sich im Windows-Ordner befindet. Die Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+In den folgenden Beispielen wird **BrowseForFolder** verwendet, um ein Suchfenster mit dem Titel "Beispiel" anzuzeigen, das sich im Ordner Windows befindet. Die Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -185,7 +185,7 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |

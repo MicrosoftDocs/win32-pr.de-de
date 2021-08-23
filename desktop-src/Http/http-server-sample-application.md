@@ -1,19 +1,19 @@
 ---
-title: Beispielanwendung für http-Server
-description: Dieses Thema enthält eine Beispielanwendung, die zeigt, wie die HTTP-Server-API verwendet wird, um Server seitige Aufgaben auszuführen.
+title: HTTP-Serverbeispielanwendung
+description: Dieses Thema enthält eine Beispielanwendung, die zeigt, wie die HTTP-Server-API zum Ausführen serverseitiger Aufgaben verwendet wird.
 ms.assetid: 49952ff5-ac8b-4192-a446-5a117f9a8e52
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 42c659d007d6e9325c89b6cef40e8b56f22d376b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b2e6db90d82f723614f6a49f83c4a0b2a63c6bde0159d72720bd2176a98b245b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682910"
 ---
-# <a name="http-server-sample-application"></a>Beispielanwendung für http-Server
+# <a name="http-server-sample-application"></a>HTTP-Serverbeispielanwendung
 
-Die folgende Beispielanwendung zeigt, wie die HTTP-Server-API verwendet wird, um Server seitige Aufgaben auszuführen. Die im ersten Beispiel enthaltene Datei "Precomp. h" enthält alle Header, die zum Ausführen der Beispiele erforderlich sind, z. b.:
+Die folgende Beispielanwendung zeigt, wie sie die HTTP-Server-API zum Ausführen serverseitiger Aufgaben verwendet. Die datei "precomp.h", die im ersten Beispiel enthalten ist, enthält alle Header, die zum Ausführen der Beispiele erforderlich sind, z. B.:
 
 
 ```C++
@@ -38,7 +38,7 @@ Die folgende Beispielanwendung zeigt, wie die HTTP-Server-API verwendet wird, um
 
 
 
-## <a name="main-and-preliminaries"></a>Haupt-und vorbereitungsprogramme
+## <a name="main-and-preliminaries"></a>Main und Preliminaries
 
 
 ```C++
@@ -122,7 +122,7 @@ int __cdecl wmain(
 
 
 
-## <a name="initialize-the-http-service"></a>Initialisieren des HTTP-Dienstanbieter
+## <a name="initialize-the-http-service"></a>Initialisieren des HTTP-Diensts
 
 
 ```C++
@@ -158,7 +158,7 @@ int __cdecl wmain(
 
 
 
-## <a name="register-the-urls-to-listen-on"></a>Die zu überwachenden URLs registrieren
+## <a name="register-the-urls-to-listen-on"></a>Registrieren der URLs für das Lauschen
 
 
 ```C++
@@ -206,7 +206,7 @@ int __cdecl wmain(
 
 
 
-## <a name="cleanup-the-http-server-api"></a>Bereinigen der HTTP-Server-API
+## <a name="cleanup-the-http-server-api"></a>Bereinigt die HTTP-Server-API
 
 
 ```C++
@@ -241,7 +241,7 @@ CleanUp:
 
 
 
-## <a name="receive-a-request"></a>Anforderung empfangen
+## <a name="receive-a-request"></a>Empfangen einer Anforderung
 
 
 ```C++
@@ -508,7 +508,7 @@ DWORD SendHttpResponse(
 
 
 
-## <a name="send-an-http-post-response"></a>Senden einer HTTP Post-Antwort
+## <a name="send-an-http-post-response"></a>Senden einer HTTP POST-Antwort
 
 
 ```C++
@@ -813,9 +813,9 @@ Done:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

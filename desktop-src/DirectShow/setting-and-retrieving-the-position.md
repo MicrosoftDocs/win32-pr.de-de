@@ -4,23 +4,23 @@ ms.assetid: 06b0e2d7-9539-41ad-a631-7e8da556feeb
 title: Festlegen und Abrufen der Position
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 776a32eb6193ef456d693b5a133c87d800a0b64e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: fe7951ce12fe498a4f230ab3d1ac84796621e04ed025010678f1c43a39d88eb0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119683690"
 ---
 # <a name="setting-and-retrieving-the-position"></a>Festlegen und Abrufen der Position
 
-Im Filter Diagramm werden zwei Positionswerte, die aktuelle Position und die Position des Stopps, beibehalten. Diese werden wie folgt definiert:
+Das Filterdiagramm behält zwei Positionswerte bei: die aktuelle Position und die Stoppposition. Diese werden wie folgt definiert:
 
--   Wenn das Diagramm ausgeführt wird, ist die aktuelle Position die aktuelle Wiedergabe Position relativ zum Anfang der Quelle. Wenn das Diagramm beendet oder angehalten wird, ist die aktuelle Position der Punkt, an dem das Streaming mit dem Befehl für die nächste Ausführung beginnt.
--   Die Position des Stopps ist der Punkt, an dem der Stream endet. Wenn das Diagramm die Stoppposition erreicht, werden keine weiteren Daten gestreamt, und der Filter Graph-Manager stellt ein [**EC \_ Complete**](ec-complete.md) -Ereignis zur Verfügung. (Das Diagramm wechselt jedoch nicht automatisch in den Zustand "beendet". Weitere Informationen finden Sie unter [reagieren auf Ereignisse](responding-to-events.md).)
+-   Wenn das Diagramm ausgeführt wird, ist die aktuelle Position die aktuelle Wiedergabeposition relativ zum Anfang der Quelle. Wenn das Diagramm beendet oder angehalten wird, ist die aktuelle Position der Punkt, an dem das Streaming beim nächsten Ausführungsbefehl beginnt.
+-   Die Stoppposition ist der Punkt, an dem der Stream endet. Wenn das Diagramm die Stoppposition erreicht, werden keine Daten mehr gestreamt, und der Filtergraph-Manager sendet ein [**EC \_ COMPLETE-Ereignis.**](ec-complete.md) (Das Diagramm wechselt jedoch nicht automatisch in den Zustand "Beendet". Weitere Informationen finden Sie unter [Reagieren auf Ereignisse](responding-to-events.md).)
 
-Um diese Werte abzurufen, rufen Sie die [**imediaseeking:: getpositions**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getpositions) -Methode auf. Die zurückgegebenen Werte sind immer relativ zur ursprünglichen Medienquelle. Standardmäßig befinden sich die Werte in den Bezugszeit Einheiten. In einigen Fällen können Sie die Zeiteinheiten ändern. Weitere Informationen finden Sie unter [Zeitformate für Such Befehle](time-formats-for-seek-commands.md).
+Um diese Werte abzurufen, rufen Sie die [**IMediaSeeking::GetPositions-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getpositions) auf. Die zurückgegebenen Werte sind immer relativ zur ursprünglichen Medienquelle. Standardmäßig befinden sich die Werte in Bezugszeiteinheiten. In einigen Fällen können Sie die Zeiteinheiten ändern. Weitere Informationen finden Sie unter [Zeitformate für Seek-Befehle.](time-formats-for-seek-commands.md)
 
-Um an einer neuen Position zu suchen oder eine neue Halteposition festzulegen, rufen Sie die [**imediaseeking:: setpositions**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions) -Methode auf, wie im folgenden Beispiel gezeigt:
+Um eine neue Position zu suchen oder eine neue Stoppposition festzulegen, rufen Sie die [**IMediaSeeking::SetPositions-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setpositions) auf, wie im folgenden Beispiel gezeigt:
 
 
 ```C++
@@ -37,13 +37,13 @@ hr = pSeek->SetPositions(
 
 
 > [!Note]  
-> Eine Sekunde ist 10 Millionen Einheiten der Verweis Zeit. Der praktische Wert definiert dieses Beispiel als eine \_ Sekunde. Wenn Sie die DirectShow-Basisklassen Bibliothek verwenden, haben die Konstanten Einheiten denselben Wert.
+> Eine Sekunde beträgt 10.000.000 Einheiten der Referenzzeit. Der Einfachheit halber wird dieser Wert im Beispiel als ONE \_ SECOND definiert. Wenn Sie die DirectShow-Basisklassenbibliothek verwenden, hat die Konstante UNITS den gleichen Wert.
 
  
 
-Der *rtnow* -Parameter gibt die neue aktuelle Position an. Der zweite Parameter ist ein Flag, das definiert, wie *rtnow* interpretiert werden soll. In diesem Beispiel gibt das Flag für die \_ Suche nach \_ absolutepositionierung an, dass *rtnow* eine absolute Position in der Quelle angibt. Daher sucht das Filter Diagramm zwei Sekunden vom Anfang des Streams bis zu einer Position. Der *rtstoppt* -Parameter gibt die Endzeit an. Der letzte Parameter gibt an, dass *rtbeenden* auch eine absolute Position ist.
+Der *rtNow-Parameter* gibt die neue aktuelle Position an. Der zweite Parameter ist ein Flag, das definiert, wie rtNow interpretiert werden *soll.* In diesem Beispiel gibt das FLAG AM \_ SEEKING \_ AbsolutePositioning an, dass *rtNow* eine absolute Position in der Quelle angibt. Daher sucht das Filterdiagramm zwei Sekunden nach dem Start des Streams nach einer Position. Der *rtStop-Parameter* gibt die Beendigungszeit an. Der letzte Parameter gibt an, dass *rtStop* auch eine absolute Position ist.
 
-Um eine Position relativ zum vorherigen Positionswert anzugeben, verwenden Sie das \_ Flag zum Suchen der \_ relativepositionierung. Wenn Sie einen der Positionswerte unverändert lassen möchten, verwenden Sie das Flag für die \_ Suche nach \_ nopositionsflag. Der entsprechende Zeitparameter kann in diesem Fall **null** sein. Im folgenden Beispiel wird die Position um 10 Sekunden Fortschritt und die Position des Stopps unverändert gelassen:
+Um eine Position relativ zum vorherigen Positionswert anzugeben, verwenden Sie das FLAG AM \_ SEEKING \_ RelativePositioning. Um einen der Positionswerte unverändert zu lassen, verwenden Sie das AM \_ SEEKING \_ NoPositioning-Flag. Der entsprechende Zeitparameter kann in diesem Fall **NULL** sein. Im folgenden Beispiel wird nach 10 Sekunden gesucht, die Stoppposition bleibt jedoch unverändert:
 
 
 ```C++
@@ -56,7 +56,7 @@ hr = pSeek->SetPositions(
 
 
 
-Wenn das Filter Diagramm angehalten wird, aktualisiert der Videorenderer das Bild nach einem Suchvorgang nicht. Für den Benutzer wird er so angezeigt, als ob die Suche nicht durchgeführt wurde. Um das Bild zu aktualisieren, halten Sie das Diagramm nach dem Suchvorgang an. Durch Anhalten des Diagramms wird ein neuer Videoframe für den Videorenderer angezeigt. Sie können die [**IMediaControl:: stopaconready**](/windows/desktop/api/Control/nf-control-imediacontrol-stopwhenready) -Methode verwenden, die das Diagramm anhält und dann beendet.
+Wenn das Filterdiagramm beendet wird, aktualisiert der Videorenderer das Bild nach einem Suchvorgang nicht. Für den Benutzer sieht es so aus, als ob die Suche nicht erfolgt wäre. Um das Bild zu aktualisieren, halten Sie das Diagramm nach dem Suchvorgang an. Durch Anhalten des Diagramms wird ein neuer Videoframe für den Videorenderer angezeigt. Sie können die [**IMediaControl::StopWhenReady-Methode**](/windows/desktop/api/Control/nf-control-imediacontrol-stopwhenready) verwenden, die das Diagramm anhält und dann beendet.
 
  
 

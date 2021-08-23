@@ -1,11 +1,11 @@
 ---
-title: MS-KDS-rootkeydata-Attribut
-description: Der Stamm Schlüssel.
+title: ms-Kds-RootKeyData-Attribut
+description: Stammschlüssel.
 ms.assetid: 93557ba5-c1d9-4af6-91aa-c9c360aae265
 ms.tgt_platform: multiple
 keywords:
-- MS-KDS-rootkeydata-Attribut, AD-Schema
-- mskds-rootkeydata-Attribut, AD-Schema
+- MS-Kds-RootKeyData-Attribut AD-Schema
+- MSKds-RootKeyData-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 13b097a948d6e31709a270da836a6aa525fcc0ca
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: dd40220dd5fbeb3af73737f0192de60ec84a13d8d19c201ef2f09ebdf5ef85b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582850"
 ---
-# <a name="ms-kds-rootkeydata-attribute"></a>MS-KDS-rootkeydata-Attribut
+# <a name="ms-kds-rootkeydata-attribute"></a>ms-Kds-RootKeyData-Attribut
 
-Der Stamm Schlüssel.
+Stammschlüssel.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | MS-KDS-rootkeydata                                    |
-| LDAP-Display-Name | mskds-rootkeydata                                     |
+| CN                | ms-Kds-RootKeyData                                    |
+| Ldap-Anzeigename | msKds-RootKeyData                                     |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2175                               |
-| System-ID-GUID    | 26627c27-08a2-0A40-a1b1-8dce85b42993                  |
+| System-ID-GUID    | 26627c27-08a2-0a40-a1b1-8dce85b42993                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -53,15 +53,15 @@ Der Stamm Schlüssel.
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Ist-einwertig       | Richtig                                                          |
+| Ist einwertig       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
 | Search-Flags           | 0x00000280                                                    |
 | System-Flags           | 0x00000010                                                    |
-| In verwendete Klassen        | [**MS-KDS-Prov-RootKey**](c-mskds-provrootkey.md)<br/> |
+| In verwendete Klassen        | [**ms-Kds-Prov-RootKey**](c-mskds-provrootkey.md)<br/> |
 
 
 

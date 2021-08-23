@@ -1,29 +1,29 @@
 ---
-title: Registrieren eines Dienstanbieter
-description: Wenn Sie Ihren Dienst der Liste der Anbieter im Webpublishing-Assistenten oder im Assistenten für die Online-druckbestellung hinzufügen möchten, müssen Sie den entsprechenden Schlüssel und seine Werte der Windows-Registrierung hinzufügen.
+title: Registrieren eines Diensts
+description: Um Ihren Dienst der Liste der Anbieter im Webveröffentlichungs-Assistenten oder im Onlinedruckreihenfolge-Assistenten hinzuzufügen, müssen Sie der Windows Registrierung den entsprechenden Schlüssel und dessen Werte hinzufügen.
 ms.assetid: 4a6f6df8-f850-4a80-9cf9-e62f3350915f
 keywords:
-- registrieren, Dienste
-- Webpublishing-Assistent, registrieren
-- Online-druckstellungs-Assistent, registrieren
-- registrieren, Webpublishing-Assistent
-- registrieren, Assistent für Online-Druck Bestellungen
+- register,services
+- Webveröffentlichungs-Assistent,Registrieren
+- Onlinedruckreihenfolge-Assistent,Registrieren
+- Register, Webveröffentlichungs-Assistent
+- register,Online Print Ordering Wizard
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 497133d7f0a769fce987745a2341a2e501fe7a2a
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: f9f5e3f43fe981558fcbf8573eb8768646f112f4816486159cc7c16d71e40e5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "104219407"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119608640"
 ---
-# <a name="registering-a-service"></a>Registrieren eines Dienstanbieter
+# <a name="registering-a-service"></a>Registrieren eines Diensts
 
-Wenn Sie Ihren Dienst der Liste der Anbieter im Webpublishing-Assistenten oder im Assistenten für die Online-druckbestellung hinzufügen möchten, müssen Sie den entsprechenden Schlüssel und seine Werte der Windows-Registrierung hinzufügen.
+Um Ihren Dienst der Liste der Anbieter im Webveröffentlichungs-Assistenten oder im Onlinedruckreihenfolge-Assistenten hinzuzufügen, müssen Sie der Windows Registrierung den entsprechenden Schlüssel und dessen Werte hinzufügen.
 
 ## <a name="required-keys-and-values"></a>Erforderliche Schlüssel und Werte
 
-Fügen Sie einen Schlüssel hinzu, wie unten gezeigt, um den Dienst der Liste der Anbieter für den Webpublishing-Assistenten hinzuzufügen.
+Um Ihren Dienst der Liste der Anbieter für den Webveröffentlichungs-Assistenten hinzuzufügen, fügen Sie wie unten gezeigt einen Schlüssel hinzu.
 
 ```
 HKEY_CURRENT_USER
@@ -43,7 +43,7 @@ HKEY_CURRENT_USER
                               SupportedTypes
 ```
 
-Fügen Sie einen Schlüssel hinzu, wie unten gezeigt, um den Dienst der Liste der Anbieter für den Online-druckstellungs-Assistenten hinzuzufügen.
+Um Ihren Dienst der Liste der Anbieter für den Onlinedruckbestellungs-Assistenten hinzuzufügen, fügen Sie wie unten gezeigt einen Schlüssel hinzu.
 
 ```
 HKEY_CURRENT_USER
@@ -63,21 +63,21 @@ HKEY_CURRENT_USER
                               SupportedTypes
 ```
 
-Jeder Wert ist eine Zeichenfolge vom Typ reg \_ SZ. Stellen Sie die Daten wie in der folgenden Tabelle erläutert bereit. 
+Jeder der Werte ist eine Zeichenfolge vom Typ REG \_ SZ. Geben Sie die Daten wie in der folgenden Tabelle beschrieben an. 
 
 | Wertname     | Erklärung                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| IconPath       | Der vollständige Pfad zur Symbol Datei, einschließlich des Datei namens.                                                                                                                                                                                                                                                                                                                                                                        |
+| IconPath       | Der vollständige Pfad zur Symboldatei, einschließlich des Dateinamens.                                                                                                                                                                                                                                                                                                                                                                        |
 | DisplayName    | Der Name, der für Ihren Dienst in der Anbieterliste des Assistenten angezeigt wird.                                                                                                                                                                                                                                                                                                                                                             |
-| BESCHREIBUNG    | Eine kurze Beschreibung für Ihren Dienst. Diese Beschreibung wird auch in der Anbieterliste des Assistenten direkt unterhalb des Namens Ihres Dienstanbietern angezeigt.                                                                                                                                                                                                                                                                                    |
-| HREF           | Die URL der ersten Seite Ihres Dienstanbieter.                                                                                                                                                                                                                                                                                                                                                                                      |
-| SupportedTypes | Die von Ihrem Dienst unterstützten Dateitypen. Beispielsweise *\* . jpg*. Wenn Sie nur bestimmte Dateitypen angeben, wird der Dienst nur angezeigt, wenn diese Dateitypen ausgewählt wurden. Wenn mehr als ein Dateityp ausgewählt wurde, wird der Dienst angezeigt, wenn einer dieser Dateitypen von Ihrem Dienst unterstützt wird. Wenn Sie mehrere Dateitypen angeben möchten, trennen Sie diese durch Semikolons in der Liste. Beispiel: *\* . jpg; \* . BMP*. |
+| Beschreibung    | Eine kurze Beschreibung für Ihren Dienst. Diese Beschreibung wird auch in der Anbieterliste des Assistenten direkt unter dem Namen Ihres Diensts angezeigt.                                                                                                                                                                                                                                                                                    |
+| Href           | Die URL der ersten Seite Ihres Diensts.                                                                                                                                                                                                                                                                                                                                                                                      |
+| SupportedTypes | Die von Ihrem Dienst unterstützten Dateitypen. Beispiel: *\*.jpg*. Wenn Sie nur bestimmte Dateitypen angeben, wird Ihr Dienst nur angezeigt, wenn diese Dateitypen ausgewählt wurden. Wenn mehr als ein Dateityp ausgewählt wurde, wird Ihr Dienst angezeigt, wenn einer dieser Dateitypen von Ihrem Dienst unterstützt wird. Wenn Sie mehrere Dateitypen angeben möchten, trennen Sie sie in der Liste durch Semikolons. Beispiel: *\*.jpg; \*.bmp*. |
 
 
 
  
 
-Im folgenden finden Sie ein umfassendes Beispiel für einen fotoverarbeitungs Dienst mit dem Namen "MyProvider".
+Im Folgenden finden Sie ein vollständiges Beispiel für einen Fotoverarbeitungsdienst mit dem Namen "MyProvider".
 
 ```
 HKEY_CURRENT_USER
@@ -97,10 +97,10 @@ HKEY_CURRENT_USER
                               SupportedTypes = *.jpg; *.gif; *.bmp
 ```
 
-Wenn die URL des Dienes aufgerufen wird, werden zwei Werte am Ende der URL – LCID und langid hinzugefügt. Beispielsweise könnte die URL-Zeichenfolge für das obige Beispiel https: \/ /www.MyProvider.com/Intro.htm? LCID = 1033&langid = 1033 lauten. Diese Variablen werden für Sprach-und Lokalisierungs Informationen verwendet.
+Wenn die URL Ihres Diensts aufgerufen wird, werden am Ende der URL zwei Werte hinzugefügt: lcid und langid. Die URL-Zeichenfolge für das obige Beispiel kann beispielsweise https: \/ /www.MyProvider.com/Intro.htm?lcid=1033&langid=1033 sein. Diese Variablen werden für Sprach- und Lokalisierungsinformationen verwendet.
 
--   **LCID** wird verwendet, um den Server über die Land-/Regions-und Spracheinstellungen des Clients zu informieren. Er wird nicht verwendet, um die Sprache der Benutzeroberfläche des Clients zu bestimmen. er wird jedoch verwendet, um das richtige Format für Währung, Datum und Uhrzeit und andere regionsspezifische Daten zu bestimmen.
--   **LangID** wird verwendet, um den Server über die Standard Spracheinstellung des Clients zu informieren, sodass die richtige Sprache in der Benutzeroberfläche verwendet werden kann.
+-   **lcid** wird verwendet, um den Server über das Land/die Region und die Spracheinstellungen des Clients zu informieren. Sie wird nicht verwendet, um die Sprache der Benutzeroberfläche des Clients zu bestimmen, sondern wird verwendet, um das richtige Format für Währung, Datum und Uhrzeit sowie andere regionsspezifische Daten zu bestimmen.
+-   **langid** wird verwendet, um den Server über die Standardspracheinstellung des Clients zu informieren, sodass er die richtige Sprache auf der Benutzeroberfläche verwenden kann.
 
  
 

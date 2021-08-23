@@ -1,11 +1,11 @@
 ---
-title: ms-DS-Geokoordinaten-Höhen Attribut
-description: Geokoordinaten für Standortdienste, insbesondere die Höhe (in Millimeter) des Büros oder der Konferenzräume.
+title: ms-DS-GeoCoordinates-Altitude-Attribut
+description: Geokoordinaten für Standortdienste, insbesondere die Höhe (in Millimetern) des Büro- oder Konferenzraums.
 ms.assetid: ee7d756b-2bd4-4399-b573-794a331a1573
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-Geokoordinaten-Höhe-Attribut AD-Schema
-- AD-Schema des msDS-geocoordinatesaltitude-Attributs
+- MS-DS-GeoCoordinates-Altitude-Attribut AD-Schema
+- msDS-GeoCoordinatesAltitude-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f700e1bdd296019f87396f2cb5f1a919c46b3f2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e3fc5a17a3fd87070ee9e0bd94022d237fffd129ec9e895320b64c46dbb3c9a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480399"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119552372"
 ---
-# <a name="ms-ds-geocoordinates-altitude-attribute"></a>ms-DS-Geokoordinaten-Höhen Attribut
+# <a name="ms-ds-geocoordinates-altitude-attribute"></a>ms-DS-GeoCoordinates-Altitude-Attribut
 
-Geokoordinaten für Standortdienste, insbesondere die Höhe (in Millimeter) des Büros oder der Konferenzräume.
+Geokoordinaten für Standortdienste, insbesondere die Höhe (in Millimetern) des Büro- oder Konferenzraums.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-Geokoordinaten-Höhe        |
-| LDAP-Display-Name | MSDS-geocoordinatesaltitude          |
+| CN                | ms-DS-GeoCoordinates-Altitude        |
+| Ldap-Anzeigename | msDS-GeoCoordinatesAltitude          |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2183              |
 | System-ID-GUID    | a11703b7-5641-4d9c-863e-5fb3325e74e0 |
 | Syntax            | [**Intervall**](s-interval.md)       |
@@ -53,10 +53,10 @@ Geokoordinaten für Standortdienste, insbesondere die Höhe (in Millimeter) des 
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | Richtig                                                 |
+| Ist einwertig       | True                                                 |
+| Ist indiziert             | True                                                 |
 | Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000001                                           |

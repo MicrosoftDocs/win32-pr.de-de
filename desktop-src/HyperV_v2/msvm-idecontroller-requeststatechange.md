@@ -1,5 +1,5 @@
 ---
-description: 'RequestStateChange-Methode der Msvm_IDEController-Klasse: Fordert eine Zustandsänderung an.'
+description: RequestStateChange-Methode der Msvm_IDEController - Fordert eine Zustandsänderung an.
 ms.assetid: a884f3dc-21b1-4284-bb6c-75393bbda816
 title: RequestStateChange-Methode der Msvm_IDEController-Klasse
 ms.topic: reference
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 699b86c1324b0d1c35212e59e88070dbea1a4ac4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 257a9ff5f058266950f43e95d7a1a023890cd43683bb8853de4bd12793620338
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108111788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119522830"
 ---
-# <a name="requeststatechange-method-of-the-msvm_idecontroller-class"></a>RequestStateChange-Methode der \_ Msvm-IDEController-Klasse
+# <a name="requeststatechange-method-of-the-msvm_idecontroller-class"></a>RequestStateChange-Methode der Msvm \_ IDEController-Klasse
 
 Fordert eine Zustandsänderung an.
 
@@ -44,7 +44,7 @@ uint32 RequestStateChange(
 *RequestedState* \[ In\]
 </dt> <dd>
 
-Der neue Zustand. Die Informationen werden in die **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der **RequestStateChange-Methode** 0 oder 4096 ist. Weitere Informationen finden Sie in der Beschreibung der **Eigenschaften EnabledState** und **RequestedState** für das -Element. Dies muss einer der folgenden Werte sein.
+Der neue Zustand. Die Informationen werden in der **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der **RequestStateChange-Methode** 0 oder 4096 ist. Weitere Informationen finden Sie in der Beschreibung der **Eigenschaften EnabledState** und **RequestedState** für das Element. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
@@ -85,14 +85,14 @@ Der neue Zustand. Die Informationen werden in die **RequestedState-Eigenschaft**
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-**Zurückstellen** (8)
+**Zurückern** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-**Stille** (9)
+**Ruhe** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -120,7 +120,7 @@ Der neue Zustand. Die Informationen werden in die **RequestedState-Eigenschaft**
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Reservierter Anbieter** (32768..65535)
+**Anbieter reserviert** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
@@ -155,7 +155,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -165,7 +165,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

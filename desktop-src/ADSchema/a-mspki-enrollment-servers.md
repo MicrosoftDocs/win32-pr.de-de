@@ -1,11 +1,11 @@
 ---
-title: MS-PKI-registrierungsserverattribut
-description: Priorität, Authentifizierungstyp und URI jedes Zertifikatregistrierungs-Webdiensts.
+title: ms-PKI-Enrollment-Servers-Attribut
+description: Priorität, Authentifizierungstyp und URI der einzelnen Zertifikatregistrierungswebdienste.
 ms.assetid: 7125f6da-d7ca-457f-8f90-ca7f74a363ad
 ms.tgt_platform: multiple
 keywords:
-- MS-PKI-registrierungsserverattribut AD Schema
-- mspki-registrierungsserverattribut AD Schema
+- MS-PKI-Enrollment-Servers-Attribut AD-Schema
+- MSPKI-Enrollment-Servers-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 10a05f040dbe4f32df824d8f6596b515c3e1f792
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c25e11ee7b18f02dc8df79124d217f2acfea21f538f8caacb378d11b948e1fe8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582240"
 ---
-# <a name="ms-pki-enrollment-servers-attribute"></a>MS-PKI-registrierungsserverattribut
+# <a name="ms-pki-enrollment-servers-attribute"></a>ms-PKI-Enrollment-Servers-Attribut
 
-Priorität, Authentifizierungstyp und URI jedes Zertifikatregistrierungs-Webdiensts.
+Priorität, Authentifizierungstyp und URI der einzelnen Zertifikatregistrierungswebdienste.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-PKI-Einschreibung-Server                   |
-| LDAP-Display-Name | mspki-Registrierung-Server                    |
+| CN                | ms-PKI-Enrollment-Servers                   |
+| Ldap-Anzeigename | msPKI-Enrollment-Servers                    |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.2076                     |
-| System-ID-GUID    | f22bd38f-a1d0-4832-8b28-0331438886a6        |
+| System-Id-Guid    | f22bd38f-a1d0-4832-8b28-0331438886a6        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -54,15 +54,15 @@ Priorität, Authentifizierungstyp und URI jedes Zertifikatregistrierungs-Webdien
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | False                                                               |
+| Is-Single-Valued       | False                                                               |
 | Ist indiziert             | False                                                               |
-| Im globalen Katalog      | Richtig                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| Im globalen Katalog      | True                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**PKI-Registrierung-Dienst**](c-pkienrollmentservice.md)<br/> |
+| In verwendete Klassen        | [**PKI-Enrollment-Service**](c-pkienrollmentservice.md)<br/> |
 
 
 
@@ -75,15 +75,15 @@ Priorität, Authentifizierungstyp und URI jedes Zertifikatregistrierungs-Webdien
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | False                                                               |
+| Is-Single-Valued       | False                                                               |
 | Ist indiziert             | False                                                               |
-| Im globalen Katalog      | Richtig                                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| Im globalen Katalog      | True                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**PKI-Registrierung-Dienst**](c-pkienrollmentservice.md)<br/> |
+| In verwendete Klassen        | [**PKI-Enrollment-Service**](c-pkienrollmentservice.md)<br/> |
 
 
 

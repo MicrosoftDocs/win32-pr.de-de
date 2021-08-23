@@ -1,5 +1,5 @@
 ---
-description: Stellt die VFP-QoS-Einstellungen dar.
+description: Stellt die VFP-QOS-Einstellungen dar.
 ms.assetid: e58a7a8d-0301-43ea-9338-18bc8c458e2d
 title: Msvm_EthernetSwitchPortMigrationQosSettingData-Klasse
 ms.topic: reference
@@ -23,16 +23,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: e279b24178c33c760477995ff744a0699cea1aaf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fef4ef759b406facb5fbbb12d37eceb55a914d46c63a2485982f60fa151ccdaa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363543"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119524040"
 ---
-# <a name="msvm_ethernetswitchportmigrationqossettingdata-class"></a>MSVM \_ ethernetzwitchportmigrationqossettingdata-Klasse
+# <a name="msvm_ethernetswitchportmigrationqossettingdata-class"></a>Msvm \_ EthernetSwitchPortMigrationQosSettingData-Klasse
 
-Stellt die VFP-QoS-Einstellungen dar.
+Stellt die VFP-QOS-Einstellungen dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -57,173 +57,173 @@ class Msvm_EthernetSwitchPortMigrationQosSettingData : Msvm_EthernetSwitchPortFe
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ ethernetzwitchportmigrationqossettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetSwitchPortMigrationQosSettingData-Klasse** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ ethernetzwitchportmigrationqossettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetSwitchPortMigrationQosSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Inboundmaximummbit/s**
+**InboundMaximumMbps**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (10), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (10), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Wert der Bandbreiten Abdeckung für eingehenden Datenverkehr.
+Der Wert der Bandbreitenobergrenze für eingehenden Datenverkehr.
 
 </dd> <dt>
 
-**Outboundmaximummbit/s**
+**OutboundMaximumMbps**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (9), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (9), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Wert der Bandbreiten Abdeckung für ausgehenden Datenverkehr.
+Der Wert der Bandbreitenobergrenze für ausgehenden Datenverkehr.
 
 </dd> <dt>
 
-**Outboundreservedvalue**
+**OutboundReservedValue**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (8), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (8), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Wert für die Bandbreiten Reservierung.
+Der Wert der Bandbreitenreservierung.
 
 </dd> <dt>
 
-**QueueID**
+**QueueId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), **wmidataid** (1), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), **WmiDataId** (1), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die ID der QoS-Warteschlange.
+Die ID der QOS-Warteschlange.
 
 </dd> <dt>
 
-**Wechseln von \_ defaultreservation**
+**Switch \_ DefaultReservation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (4), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Standard Reservierungs Wert.
+Der Standardreservierungswert.
 
 </dd> <dt>
 
-**Schalter \_ enablehardwarelimits**
+**Switch \_ EnableHardwareLimits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: **WmiDataId** (5), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
-Gibt an, ob bei der Verfügbarkeit Hardware Abladungen für Grenzwerte versucht werden.
+Gibt an, ob Hardwareabladungen für Grenzwerte versucht werden, falls verfügbar.
 
 </dd> <dt>
 
-**Schalter \_ enablehardwarereservations**
+**Switch \_ EnableHardwareReservations**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: **WmiDataId** (6), [**Version**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Revision**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
-Gibt an, ob Hardware Abladungen für Reservierungen versucht werden, falls verfügbar.
+Gibt an, ob Hardwareabladungen für Reservierungen versucht werden, falls verfügbar.
 
 </dd> <dt>
 
-**Switch \_ enablesoftwarereservations**
+**Switch \_ EnableSoftwareReservations**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (7), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob die softwarebasierte Reservierung verfügbar ist.
+Gibt an, ob eine softwarebasierte Reservierung verfügbar ist.
 
 </dd> <dt>
 
-**\_Linkspeedprozentsatz wechseln**
+**Switch \_ LinkSpeedPercentage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (3), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Prozentsatz der Verbindungsgeschwindigkeit, der für die Reservierung verwendet werden soll.
+Der Prozentsatz der Linkgeschwindigkeit, der für die Reservierung verwendet werden soll.
 
 </dd> <dt>
 
-**\_Reservierungs Modus wechseln**
+**Umschalten von \_ ReservationMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (2), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der QoS-Reservierungs Modus auf dem Switch.
+Der QOS-Reservierungsmodus für den Switch.
 
 <dt>
 
@@ -249,10 +249,10 @@ Der QoS-Reservierungs Modus auf dem Switch.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -261,7 +261,7 @@ Der QoS-Reservierungs Modus auf dem Switch.
 
 <dl> <dt>
 
-[**MSVM \_ ethernetzwitchportfeaturesettingdata**](msvm-ethernetswitchportfeaturesettingdata.md)
+[**Msvm \_ EthernetSwitchPortFeatureSettingData**](msvm-ethernetswitchportfeaturesettingdata.md)
 </dt> </dl>
 
  

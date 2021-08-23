@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungen für den metrikdienst dar. Die Eigenschaften für diese Klasse können nicht direkt geändert werden. Der Client muss die modifyservicesettings-Methode zum Ändern dieser Eigenschaften aufruft.
+description: Stellt die Einstellungen für den Metrikdienst dar. Die Eigenschaften für diese Klasse können nicht direkt geändert werden. Der Client muss die ModifyServiceSettings-Methode aufrufen, um eine dieser Eigenschaften zu ändern.
 ms.assetid: 578ddda7-4c8e-498e-8612-29c392390b73
 title: Msvm_MetricServiceSettingData-Klasse
 ms.topic: reference
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 4a1211b19692761dd8b92de69cf42e4ad55246f7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ff0c8b9e4212624f4643efb7f7ef67ea4bc72f9488caa1b43d6260c9949011ac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119521320"
 ---
-# <a name="msvm_metricservicesettingdata-class"></a>MSVM \_ metricservicesettingdata-Klasse
+# <a name="msvm_metricservicesettingdata-class"></a>Msvm \_ MetricServiceSettingData-Klasse
 
-Stellt die Einstellungen für den metrikdienst dar. Die Eigenschaften für diese Klasse können nicht direkt geändert werden. Der Client muss die [**modifyservicesettings**](modifyservicesettings-msvm-metricservice.md) -Methode zum Ändern dieser Eigenschaften aufruft.
+Stellt die Einstellungen für den Metrikdienst dar. Die Eigenschaften für diese Klasse können nicht direkt geändert werden. Der Client muss die [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-metricservice.md) aufrufen, um eine dieser Eigenschaften zu ändern.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -47,59 +47,59 @@ class Msvm_MetricServiceSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ metricservicesettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ MetricServiceSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ metricservicesettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ MetricServiceSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Einstellungen für Hyper-V-metrikdienste" festgelegt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Hyper-V Metric Service Einstellungen" festgelegt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "definiert Hyper-V Metric Service Settings" festgelegt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Defines Hyper-V Metric Service Einstellungen" festgelegt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Einstellungen für Hyper-V-metrikdienste" festgelegt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Hyper-V Metric Service Einstellungen" festgelegt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -108,14 +108,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt.**](/previous-versions//cc136911(v=vs.85))
 
 </dd> <dt>
 
-**Metricsflushinterval**
+**MetricsFlushInterval**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -131,10 +131,10 @@ Definiert das Intervall, in dem Metriken auf den Datenträger geleert werden sol
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -143,10 +143,10 @@ Definiert das Intervall, in dem Metriken auf den Datenträger geleert werden sol
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> <dt>
 
-[**Modifyservicesettings**](modifyservicesettings-msvm-metricservice.md)
+[**ModifyServiceSettings**](modifyservicesettings-msvm-metricservice.md)
 </dt> </dl>
 
  

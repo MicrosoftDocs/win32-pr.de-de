@@ -1,5 +1,5 @@
 ---
-description: Eine Zuordnung zwischen einer Instanz der MSVM \_ ethernetungwitchport-Klasse und einer Instanz der MSVM- \_ Klasse "ethernetportdata", die die Daten darstellt, die über den Port durch eine Switcherweiterung gesammelt werden.
+description: Eine Zuordnung zwischen einer Instanz der Msvm \_ EthernetSwitchPort-Klasse und einer Instanz der Msvm \_ EthernetPortData-Klasse, die Daten darstellt, die von einer Switcherweiterung über den Port gesammelt wurden.
 ms.assetid: 08677914-af09-47b7-9d4d-406696e1f504
 title: Msvm_EthernetPortInfo-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 7c78dca7adedcf52d93530efdab0da6113855c6d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ef8f8f4ab7191400cfead94d20c4f601b97e48d46ee160d31c7b26b8e567b92
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353506"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119524890"
 ---
-# <a name="msvm_ethernetportinfo-class"></a>MSVM- \_ Klasse "ethernetportinfo"
+# <a name="msvm_ethernetportinfo-class"></a>Msvm \_ EthernetPortInfo-Klasse
 
-Eine Zuordnung zwischen einer Instanz der [**MSVM \_ ethernetungwitchport**](msvm-ethernetswitchport.md) -Klasse und einer Instanz der [**MSVM-Klasse " \_ ethernetportdata**](msvm-ethernetportdata.md) ", die die Daten darstellt, die über den Port durch eine Switcherweiterung gesammelt werden.
+Eine Zuordnung zwischen einer Instanz der [**Msvm \_ EthernetSwitchPort-Klasse**](msvm-ethernetswitchport.md) und einer Instanz der [**Msvm \_ EthernetPortData-Klasse,**](msvm-ethernetportdata.md) die Daten darstellt, die von einer Switcherweiterung über den Port gesammelt wurden.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,45 +41,45 @@ class Msvm_EthernetPortInfo : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ ethernetportinfo** " verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetPortInfo-Klasse** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM-Klasse " \_ ethernetportinfo** " verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetPortInfo-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MSVM \_ ethernetzwitchport**
+Datentyp: **Msvm \_ EthernetSwitchPort**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM- \_ Abhängigkeit. Vorgänger")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ Dependency.Antecedent")
 </dt> </dl>
 
-Eine Instanz der [**MSVM \_ ethernetzwitchport**](msvm-ethernetswitchport.md) -Klasse, die den Switchport darstellt.
+Eine Instanz der [**Msvm \_ EthernetSwitchPort-Klasse,**](msvm-ethernetswitchport.md) die den Switchport darstellt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MSVM \_ ethernetportdata**
+Datentyp: **Msvm \_ EthernetPortData**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM- \_ Abhängigkeit. abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ Dependency.Dependent")
 </dt> </dl>
 
-Eine Instanz der [**MSVM-Klasse " \_ ethernetportdata**](msvm-ethernetportdata.md) ", die die Portdaten darstellt.
+Eine Instanz der [**Msvm \_ EthernetPortData-Klasse,**](msvm-ethernetportdata.md) die die Portdaten darstellt.
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Eine Instanz der [**MSVM-Klasse " \_ ethernetportdata**](msvm-ethernetportdata.m
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

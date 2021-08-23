@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Deleted-Object-Lifetime-Attribut
-description: Die Lebensdauer eines gelöschten Objekts.
+description: Lebensdauer eines gelöschten Objekts.
 ms.assetid: e06e66d2-5240-4509-9bfb-f20091db7481
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-Deleted-Object-Lifetime\"-Attribut AD-Schema"
-- adschema des msDS-deletedObjectLifetime-Attributs
+- AD-Schema des ms-DS-Deleted-Object-Lifetime-Attributs
+- AD-Schema des msDS-DeletedObjectLifetime-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a59b2a6c635df3c150e7673abb41f135937bc8c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c6850c6dbc68ad30c6a26b6522d438fc1334d8c16f44afed96fa296b5dea4263
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119552680"
 ---
 # <a name="ms-ds-deleted-object-lifetime-attribute"></a>ms-DS-Deleted-Object-Lifetime-Attribut
 
-Die Lebensdauer eines gelöschten Objekts.
+Lebensdauer eines gelöschten Objekts.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-Deleted-Object-Lebensdauer        |
-| LDAP-Display-Name | msDS-deletedObjectLifetime           |
+| CN                | ms-DS-Deleted-Object-Lifetime        |
+| Ldap-Anzeigename | msDS-DeletedObjectLifetime           |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2068              |
-| System-ID-GUID    | a9b38cb6-189a-4def-8a70-0fcfa158148e |
+| System-Id-Guid    | a9b38cb6-189a-4def-8a70-0fcfa158148e |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -54,15 +54,15 @@ Die Lebensdauer eines gelöschten Objekts.
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
@@ -75,15 +75,15 @@ Die Lebensdauer eines gelöschten Objekts.
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 

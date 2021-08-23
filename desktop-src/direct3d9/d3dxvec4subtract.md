@@ -1,7 +1,7 @@
 ---
 description: Subtrahiert zwei 4D-Vektoren.
 ms.assetid: 3bc55b38-818e-40eb-859e-495ee28fc4ae
-title: D3DXVec4Subtract-Funktion (D3dx9math. h)
+title: D3DXVec4Subtract-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 1110930d8e37cf04f7de5129c2a72db4ecc4ac8d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f49299eab666f92b401bb3fee5ac0c828d607a38893f6bfe4a58e826f84b7493
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104356136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119607570"
 ---
 # <a name="d3dxvec4subtract-function"></a>D3DXVec4Subtract-Funktion
 
@@ -42,30 +42,30 @@ D3DXVECTOR4* D3DXVec4Subtract(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR4**](d3dxvector4.md)\***
 
-Ein Zeiger auf die [**D3DXVECTOR4**](d3dxvector4.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXVECTOR4-Struktur,**](d3dxvector4.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pV1* \[ in\]
+*pV1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](d3dxvector4.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR4**](d3dxvector4.md) -Struktur.
+Zeiger auf eine [**D3DXVECTOR4-Quellstruktur.**](d3dxvector4.md)
 
 </dd> <dt>
 
-*pV2* \[ in\]
+*pV2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](d3dxvector4.md) \***
 
-Zeiger auf eine Quell- [**D3DXVECTOR4**](d3dxvector4.md) -Struktur.
+Zeiger auf eine [**D3DXVECTOR4-Quellstruktur.**](d3dxvector4.md)
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Zeiger auf eine Quell- [**D3DXVECTOR4**](d3dxvector4.md) -Struktur.
 
 Typ: **[ **D3DXVECTOR4**](d3dxvector4.md)\***
 
-Zeiger auf eine [**D3DXVECTOR4**](d3dxvector4.md) -Struktur, die die Differenz zweier Vektoren ist.
+Zeiger auf eine [**D3DXVECTOR4-Struktur,**](d3dxvector4.md) die den Unterschied zweier Vektoren darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec4Subtract** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXVec4Subtract-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,8 +85,8 @@ Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Paramete
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

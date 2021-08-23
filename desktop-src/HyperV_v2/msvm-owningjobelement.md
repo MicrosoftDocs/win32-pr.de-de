@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung zwischen einem Auftrag und dem verwalteten Element dar, das für die Erstellung des Auftrags zuständig ist.
+description: Stellt eine Zuordnung zwischen einem Auftrag und dem verwalteten Element dar, das für die Erstellung des Auftrags verantwortlich ist.
 ms.assetid: 1a100c7e-7e17-47dd-b730-c05c5e4dccda
 title: Msvm_OwningJobElement-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 34aa6f390d21a37421e09f30f9a775784717be9e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 144a212a98b6f51b731023b5137b01f1e9d77156bddaaae187ce3f6ff2474efb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119520980"
 ---
-# <a name="msvm_owningjobelement-class"></a>MSVM \_ owningjobelements-Klasse
+# <a name="msvm_owningjobelement-class"></a>Msvm \_ OwningJobElement-Klasse
 
-Stellt eine Zuordnung zwischen einem Auftrag und dem verwalteten Element dar, das für die Erstellung des Auftrags zuständig ist.
+Stellt eine Zuordnung zwischen einem Auftrag und dem verwalteten Element dar, das für die Erstellung des Auftrags verantwortlich ist.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,39 +41,39 @@ class Msvm_OwningJobElement : CIM_OwningJobElement
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ owningjobelements** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ OwningJobElement-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ owningjobelements** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ OwningJobElement-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Owdelta-Element**
+**OwnedElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ concretejob**](msvm-concretejob.md)**
+Datentyp: **[ **Msvm \_ ConcreteJob**](msvm-concretejob.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Auftrag, der vom verwalteten Element erstellt wurde.
+Der vom verwalteten Element erstellte Auftrag.
 
 </dd> <dt>
 
 **OwningElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
+Datentyp: **[ **CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das verwaltete Element, das für die Erstellung des Auftrags zuständig ist.
+Das verwaltete Element, das für die Erstellung des Auftrags verantwortlich ist.
 
 </dd> </dl>
 
@@ -83,10 +83,10 @@ Das verwaltete Element, das für die Erstellung des Auftrags zuständig ist.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

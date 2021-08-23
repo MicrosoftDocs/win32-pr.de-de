@@ -1,80 +1,80 @@
 ---
-description: Wenn die rollenbasierte Sicherheit verwendet wird, kann das Kontext Objekt für den Sicherheits Rückruf verwendet werden, um auf Sicherheitsinformationen zum aktuellen-Befehl zuzugreifen.
+description: Wenn rollenbasierte Sicherheit verwendet wird, kann das Kontextobjekt für Sicherheitsaufrufe verwendet werden, um auf Sicherheitsinformationen zum aktuellen Aufruf zu zugreifen.
 ms.assetid: 9fc0a9e5-934c-4510-8fbb-1fb2817aa0ea
-title: Aufrufen von Kontextinformationen für den Sicherheitskontext
+title: Zugreifen auf Kontextinformationen für Sicherheitsaufrufe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e6d7e5160c766783b6d43822571d624e0a595c9e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 38e438ce3cfa137ece28bce70d2c820becede231b1b0381da38dd7c6bcc21cb1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214222"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119639120"
 ---
-# <a name="accessing-security-call-context-information"></a>Aufrufen von Kontextinformationen für den Sicherheitskontext
+# <a name="accessing-security-call-context-information"></a>Zugreifen auf Kontextinformationen für Sicherheitsaufrufe
 
-Wenn die rollenbasierte Sicherheit verwendet wird, kann das Kontext Objekt für den Sicherheits Rückruf verwendet werden, um auf Sicherheitsinformationen zum aktuellen-Befehl zuzugreifen.
+Wenn rollenbasierte Sicherheit verwendet wird, kann das Kontextobjekt für Sicherheitsaufrufe verwendet werden, um auf Sicherheitsinformationen zum aktuellen Aufruf zu zugreifen.
 
-Die folgenden Auflistungen von Eigenschaften sind im Kontext Objekt für den Sicherheits Rückruf verfügbar:
+Die folgenden Auflistungen von Eigenschaften sind über das Kontextobjekt für Sicherheitsaufrufe verfügbar:
 
--   [SecurityCallContext-Auflistung](#securitycallcontext-collection)
--   [SecurityCaller-Sammlung](#securitycallers-collection)
+-   [SecurityCallContext-Sammlung](#securitycallcontext-collection)
+-   [SecurityCallers-Auflistung](#securitycallers-collection)
 -   [SecurityIdentity-Sammlung](#securityidentity-collection)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="securitycallcontext-collection"></a>SecurityCallContext-Auflistung
+## <a name="securitycallcontext-collection"></a>SecurityCallContext-Sammlung
 
 
 
-| Eigenschaft                          | BESCHREIBUNG                                                                                                                            |
+| Eigenschaft                          | Beschreibung                                                                                                                            |
 |-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| Numaufrufer<br/>             | Die Anzahl der Aufrufer in der Aufruf Kette.<br/>                                                                                |
-| MinAuthenticationLevel<br/> | Die am wenigsten sichere Authentifizierungs Ebene aller Aufrufer in der Kette.<br/>                                                          |
-| Anrufer<br/>                | Informationen zur Identität von upstreamaufrufern in Form einer [**SecurityCaller**](securitycallers.md) -Auflistung.<br/> |
-| DirectCaller<br/>           | Der Aufrufer, der das Objekt direkt aufgerufen hat (ohne dazwischen liegende Aufrufer). <br/>                                                  |
-| OriginalCaller<br/>         | Der Aufrufer, der die Kette der Aufrufe des-Objekts ausgelöst hat. <br/>                                                               |
+| NumCallers<br/>             | Die Anzahl der Aufrufer in der Aufrufkette.<br/>                                                                                |
+| MinAuthenticationLevel<br/> | Die am wenigsten sichere Authentifizierungsebene aller Aufrufer in der Kette.<br/>                                                          |
+| Anrufer<br/>                | Informationen zur Identität von Upstreamaufrufern in Form einer [**SecurityCallers-Auflistung.**](securitycallers.md)<br/> |
+| DirectCaller<br/>           | Der Aufrufer, der das Objekt direkt aufgerufen hat (ohne intervening-Aufrufer). <br/>                                                  |
+| OriginalCaller<br/>         | Der Aufrufer, der die Kette der Aufrufe an das -Objekt ursprünglich erstellt hat. <br/>                                                               |
 
 
 
  
 
-Um weitere Informationen zur Verwendung dieser Sammlung zu erhalten, sollte Microsoft Visual Basic-Entwicklern die [**SecurityCallContext**](securitycallcontext.md) -Klasse angezeigt werden. C-und C++-Entwickler sollten auf [**ISecurityCallContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallcontext)verweisen.
+Weitere Informationen zur Verwendung dieser Sammlung finden Visual Basic Entwickler von Microsoft in der [**SecurityCallContext-Klasse.**](securitycallcontext.md) C- und C++-Entwickler sollten auf [**ISecurityCallContext verweisen.**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallcontext)
 
-## <a name="securitycallers-collection"></a>SecurityCaller-Sammlung
+## <a name="securitycallers-collection"></a>SecurityCallers-Auflistung
 
-Die [**SecurityCaller**](securitycallers.md) -Auflistung stellt Aufrufer dar, die mithilfe eines Indexes zwischen 0 und 1 weniger als numcaller, einschließlich, abgerufen werden können. Jeder Aufrufer wird durch ein [**SecurityIdentity**](securityidentity.md) -Objekt dargestellt.
+Die [**SecurityCallers-Auflistung**](securitycallers.md) stellt Aufrufer dar, die mit einem Index zwischen 0 und 1 kleiner als NumCallers (einschließlich) abgerufen werden können. Jeder Aufrufer wird durch ein [**SecurityIdentity-Objekt**](securityidentity.md) dargestellt.
 
-Weitere Informationen zu dieser Sammlung finden Visual Basic Entwicklern die [**SecurityCaller**](securitycallers.md) -Klasse. C-und C++-Entwickler sollten auf [**ISecurityCallersColl**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallerscoll)verweisen.
+Weitere Informationen zu dieser Sammlung finden Visual Basic die [**SecurityCallers-Klasse.**](securitycallers.md) C- und C++-Entwickler sollten sich auf [**ISecurityCallersColl beziehen.**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecuritycallerscoll)
 
 ## <a name="securityidentity-collection"></a>SecurityIdentity-Sammlung
 
 
 
-| Eigenschaft                         | BESCHREIBUNG                                                                                                                                                          |
+| Eigenschaft                         | Beschreibung                                                                                                                                                          |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | SID<br/>                   | Die Sicherheits-ID für den Aufrufer.<br/>                                                                                                                   |
 | AccountName<br/>           | Der Kontoname des Aufrufers.<br/>                                                                                                                           |
-| AuthenticationService<br/> | Der verwendete Authentifizierungsdienst, z. b. NTLMSSP, Kerberos oder SSL.<br/>                                                                                       |
-| AuthenticationLevel<br/>   | Die verwendete Authentifizierungs Ebene, die die für die Kommunikation mit dem-Objekt verwendete Menge an Schutz darstellt.<br/>                                         |
-| ImpersonationLevel<br/>    | Die vom Client festgelegte Ebene des Identitäts Wechsels, wenn der Identitätswechsel verwendet wurde. Diese Ebene gibt die Menge an Autorität an, die vom Client an den Server übergeben wird. <br/> |
+| Authenticationservice<br/> | Der verwendete Authentifizierungsdienst, z. B. NTLMSSP, Kerberos oder SSL.<br/>                                                                                       |
+| Authenticationlevel<br/>   | Die verwendete Authentifizierungsebene, die den Umfang des Schutzes darstellt, der bei der Kommunikation mit dem -Objekt verwendet wird.<br/>                                         |
+| ImpersonationLevel<br/>    | Die Ebene des Identitätswechsels, die vom Client festgelegt wurde, wenn ein Identitätswechsel verwendet wurde. Diese Ebene gibt die Autorität an, die dem Server vom Client erteilt wird. <br/> |
 
 
 
  
 
-Weitere Informationen zu dieser Sammlung finden Visual Basic Entwicklern die [**SecurityIdentity**](securityidentity.md) -Klasse. C-und C++-Entwickler sollten sich auf [**isecurityidentitycoll**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecurityidentitycoll)beziehen.
+Weitere Informationen zu dieser Sammlung finden Visual Basic die [**SecurityIdentity-Klasse.**](securityidentity.md) C- und C++-Entwickler sollten auf [**ISecurityIdentityColl verweisen.**](/windows/desktop/api/ComSvcs/nn-comsvcs-isecurityidentitycoll)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Überprüfen der Rollen Mitgliedschaft](checking-role-membership.md)
+[Überprüfen der Rollenmitgliedschaft](checking-role-membership.md)
 </dt> <dt>
 
 [Bestimmen, ob Role-Based Sicherheit aktiviert ist](determining-whether-role-based-security-is-enabled.md)
 </dt> <dt>
 
-[Sicherheit für programmgesteuerte Komponenten](programmatic-component-security.md)
+[Programmgesteuerte Komponentensicherheit](programmatic-component-security.md)
 </dt> </dl>
 
  

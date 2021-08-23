@@ -1,10 +1,10 @@
 ---
-title: Ivmharddiskconnection-Schnittstelle (vpccominterfaces. h)
+title: IVMHardDiskConnection-Schnittstelle (VPCCOMInterfaces.h)
 description: Definiert die Verbindung für eine Festplatte innerhalb des virtuellen Computers.
 ms.assetid: 7ba1ace5-a3af-4b97-b329-f12a0ecbf7d3
 keywords:
-- Virtuelle Computer der ivmharddiskconnection-Schnittstelle
-- Virtueller Computer für die ivmharddiskconnection-Schnittstelle, beschrieben
+- IVMHardDiskConnection-Schnittstelle Virtueller PC
+- IVMHardDiskConnection-Schnittstelle Virtueller PC , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,35 +15,35 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e53a092bdca26eee0c46db1d75f7fc040d5ce7e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8522a6f8c24f2f80728a878435b42ac4179432e1cca4234feb29261fe2c11f8c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342023"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119510790"
 ---
-# <a name="ivmharddiskconnection-interface"></a>Ivmharddiskconnection-Schnittstelle
+# <a name="ivmharddiskconnection-interface"></a>IVMHardDiskConnection-Schnittstelle
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Definiert die Verbindung für eine Festplatte innerhalb des virtuellen Computers. Ein **ivmharddiskconnection** -Objekt wird von der [**ivmvirtualmachine:: AddHardDiskConnection**](ivmvirtualmachine-addharddiskconnection.md) -Methode zurückgegeben. Sie können auch ein **ivmharddiskconnection** -Objekt aus dem [**ivmharddiskconnectioncollection**](ivmharddiskconnectioncollection.md) -Objekt abrufen, das von der [**ivmvirtualmachine:: harddiskconnections**](ivmvirtualmachine-harddiskconnections.md) -Eigenschaft zurückgegeben wird.
+Definiert die Verbindung für eine Festplatte innerhalb des virtuellen Computers. Ein **IVMHardDiskConnection-Objekt** wird von der [**IVMVirtualMachine::AddHardDiskConnection-Methode**](ivmvirtualmachine-addharddiskconnection.md) zurückgegeben. Sie können auch ein **IVMHardDiskConnection-Objekt** aus dem [**IVMHardDiskConnectionCollection-Objekt**](ivmharddiskconnectioncollection.md) abrufen, das von der [**IVMVirtualMachine::HardDiskConnections-Eigenschaft zurückgegeben**](ivmvirtualmachine-harddiskconnections.md) wird.
 
 ## <a name="members"></a>Member
 
-Die **ivmharddiskconnection** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Ivmharddiskconnection** verfügt auch über die folgenden Typen von Membern:
+Die **IVMHardDiskConnection-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **IVMHardDiskConnection** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **ivmharddiskconnection** -Schnittstelle verfügt über diese Methoden.
+Die **IVMHardDiskConnection-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                         | BESCHREIBUNG                                                           |
+| Methode                                                         | Beschreibung                                                           |
 |:---------------------------------------------------------------|:----------------------------------------------------------------------|
-| [**Setbuslokation**](ivmharddiskconnection-setbuslocation.md) | Legt den Busspeicherort fest, an den diese Festplatte angefügt ist.<br/> |
+| [**SetBusLocation**](ivmharddiskconnection-setbuslocation.md) | Legt den Busstandort fest, an den diese Festplatte angefügt ist.<br/> |
 
 
 
@@ -51,16 +51,16 @@ Die **ivmharddiskconnection** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **ivmharddiskconnection** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IVMHardDiskConnection-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                              | Zugriffstyp          | BESCHREIBUNG                                                                       |
+| Eigenschaft                                                              | Zugriffstyp          | Beschreibung                                                                       |
 |:----------------------------------------------------------------------|:---------------------|:----------------------------------------------------------------------------------|
-| [**Busnummer**](ivmharddiskconnection-busnumber.md)<br/>       | Schreibgeschützt<br/> | Die Busnummer, an die das Laufwerks Bild angefügt wird.<br/>                   |
-| [**Devicengegen ber**](ivmharddiskconnection-devicenumber.md)<br/> | Schreibgeschützt<br/> | Die Gerätenummer, an die das Laufwerks Image angefügt wird.<br/>                |
-| [**Festplatten**](ivmharddiskconnection-harddisk.md)<br/>         | Schreibgeschützt<br/> | Ein Festplatten Objekt, das dieser Verbindung entspricht.<br/>                   |
-| [**Undoharddisk**](ivmharddiskconnection-undoharddisk.md)<br/> | Schreibgeschützt<br/> | Ein Festplatten Objekt, das dem Rückgängig-Datenträger Image dieser Verbindung entspricht.<br/> |
+| [**BusNumber**](ivmharddiskconnection-busnumber.md)<br/>       | Schreibgeschützt<br/> | Die Busnummer, an die das Laufwerkimage angefügt ist.<br/>                   |
+| [**DeviceNumber**](ivmharddiskconnection-devicenumber.md)<br/> | Schreibgeschützt<br/> | Die Gerätenummer, an die das Laufwerkimage angefügt ist.<br/>                |
+| [**Festplatte**](ivmharddiskconnection-harddisk.md)<br/>         | Schreibgeschützt<br/> | Ein Festplattenobjekt, das dieser Verbindung entspricht.<br/>                   |
+| [**UndoHardDisk**](ivmharddiskconnection-undoharddisk.md)<br/> | Schreibgeschützt<br/> | Ein Festplattenobjekt, das dem Rückgängig-Datenträgerimage dieser Verbindung entspricht.<br/> |
 
 
 
@@ -72,12 +72,12 @@ Die **ivmharddiskconnection** -Schnittstelle verfügt über diese Eigenschaften.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmharddiskconnection ist als aefa36a5-463a-46AE-9e6c-a1fb4e12e671 definiert.<br/>      |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMHardDiskconnection ist als aefa36a5-463a-46ae-9e6c-a1fb4e12e671 definiert.<br/>      |
 
 
 

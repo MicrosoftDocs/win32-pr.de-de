@@ -1,59 +1,59 @@
 ---
-title: Imstscaxevents-Methoden
-description: Die imstscaxevents-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: IMsTscAxEvents-Methoden
+description: Die IMsTscAxEvents-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 976D9B30-77A5-4616-80E7-AE8F5A9F8534
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7db021cf45e38b27bbd4ed594d01878d78a0633e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: db7a0298540a820d2b23943ed1a572121a5dc6863017725dd169bad8e81ee125
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119512480"
 ---
-# <a name="imstscaxevents-methods"></a>Imstscaxevents-Methoden
+# <a name="imstscaxevents-methods"></a>IMsTscAxEvents-Methoden
 
-Die [**imstscaxevents**](imstscaxevents-interface.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IMsTscAxEvents-Schnittstelle**](imstscaxevents-interface.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Onauthenticationwarningverwerfen-Methode**](imstscaxevents-onauthenticationwarningdismissed.md)
--   [**Onauthenticationwarningangezeigte-Methode**](imstscaxevents-onauthenticationwarningdisplayed.md)
--   [**Onautoreconnected-Methode**](imstscaxevents-onautoreconnected.md)
--   [**Onautoreconnecting-Methode**](-imstscaxevents--onautoreconnecting.md)
+-   [**OnAuthenticationWarningDismissed-Methode**](imstscaxevents-onauthenticationwarningdismissed.md)
+-   [**OnAuthenticationWarningDisplayed-Methode**](imstscaxevents-onauthenticationwarningdisplayed.md)
+-   [**OnAutoReconnected-Methode**](imstscaxevents-onautoreconnected.md)
+-   [**OnAutoReconnecting-Methode**](-imstscaxevents--onautoreconnecting.md)
 -   [**OnAutoReconnecting2-Methode**](imstscaxevents-onautoreconnecting2.md)
--   [**Onchannelreceiveddata-Methode**](imstscaxevents-onchannelreceiveddata.md)
--   [**Onconfirmclose-Methode**](imstscaxevents-onconfirmclose.md)
--   [**Onconnected-Methode**](imstscaxevents-onconnected.md)
--   [**Onconnecting-Methode**](imstscaxevents-onconnecting.md)
--   [**Onconnectionbarpulldown-Methode**](imstscaxevents-onconnectionbarpulldown.md)
--   [**Ondevicesbuttonpressed-Methode**](imstscaxevents-ondevicesbuttonpressed.md)
--   [**Ongetrennte-Methode**](imstscaxevents-ondisconnected.md)
--   [**Onenterfullscreenmode-Methode**](imstscaxevents-onenterfullscreenmode.md)
--   [**Onfatalerror-Methode**](imstscaxevents-onfatalerror.md)
--   [**Onfocus Released-Methode**](imstscaxevents-onfocusreleased.md)
--   [**Onidletimeoutnotification-Methode**](imstscaxevents-onidletimeoutnotification.md)
--   [**Onleavefullscreenmode-Methode**](imstscaxevents-onleavefullscreenmode.md)
--   [**Onlogincomplete-Methode**](imstscaxevents-onlogincomplete.md)
--   [**Onlogonerror-Methode**](imstscaxevents-onlogonerror.md)
--   [**Onmouseinputmodechanged-Methode**](imstscaxevents-onmouseinputmodechanged.md)
--   [**Onnetworkstatuschge-Methode**](imstscaxevents-onnetworkstatuschanged.md)
--   [**Onreceivedtspublickey-Methode**](imstscaxevents-onreceivedtspublickey.md)
--   [**Onremotedesktopsizechange-Methode**](imstscaxevents-onremotedesktopsizechange.md)
--   [**Onremoteprogramview-Methode**](imstscaxevents-onremoteprogramdisplayed.md)
--   [**Onremoteprogramresult-Methode**](imstscaxevents-onremoteprogramresult.md)
--   [**Onremotewindowview-Methode**](imstscaxevents-onremotewindowdisplayed.md)
--   [**Onrequestcontainerminimierung-Methode**](imstscaxevents-onrequestcontainerminimize.md)
--   [**Onrequestgofullscreen-Methode**](imstscaxevents-onrequestgofullscreen.md)
--   [**Onrequestleavefullscreen-Methode**](imstscaxevents-onrequestleavefullscreen.md)
--   [**Onservicemess agereceived-Methode**](imstscaxevents-onservicemessagereceived.md)
--   [**Onusernameerwormethode**](imstscaxevents-onusernameacquired.md)
+-   [**OnChannelReceivedData-Methode**](imstscaxevents-onchannelreceiveddata.md)
+-   [**OnConfirmClose-Methode**](imstscaxevents-onconfirmclose.md)
+-   [**OnConnected-Methode**](imstscaxevents-onconnected.md)
+-   [**OnConnecting-Methode**](imstscaxevents-onconnecting.md)
+-   [**OnConnectionBarPullDown-Methode**](imstscaxevents-onconnectionbarpulldown.md)
+-   [**OnDevicesButtonPressed-Methode**](imstscaxevents-ondevicesbuttonpressed.md)
+-   [**OnDisconnected-Methode**](imstscaxevents-ondisconnected.md)
+-   [**OnEnterFullScreenMode-Methode**](imstscaxevents-onenterfullscreenmode.md)
+-   [**OnFatalError-Methode**](imstscaxevents-onfatalerror.md)
+-   [**OnFocusReleased-Methode**](imstscaxevents-onfocusreleased.md)
+-   [**OnIdleTimeoutNotification-Methode**](imstscaxevents-onidletimeoutnotification.md)
+-   [**OnLeaveFullScreenMode-Methode**](imstscaxevents-onleavefullscreenmode.md)
+-   [**OnLoginComplete-Methode**](imstscaxevents-onlogincomplete.md)
+-   [**OnLogonError-Methode**](imstscaxevents-onlogonerror.md)
+-   [**OnMouseInputModeChanged-Methode**](imstscaxevents-onmouseinputmodechanged.md)
+-   [**OnNetworkStatusChanged-Methode**](imstscaxevents-onnetworkstatuschanged.md)
+-   [**OnReceivedTSPublicKey-Methode**](imstscaxevents-onreceivedtspublickey.md)
+-   [**OnRemoteDesktopSizeChange-Methode**](imstscaxevents-onremotedesktopsizechange.md)
+-   [**OnRemoteProgramDisplayed-Methode**](imstscaxevents-onremoteprogramdisplayed.md)
+-   [**OnRemoteProgramResult-Methode**](imstscaxevents-onremoteprogramresult.md)
+-   [**OnRemoteWindowDisplayed-Methode**](imstscaxevents-onremotewindowdisplayed.md)
+-   [**OnRequestContainerMinimize-Methode**](imstscaxevents-onrequestcontainerminimize.md)
+-   [**OnRequestGoFullScreen-Methode**](imstscaxevents-onrequestgofullscreen.md)
+-   [**OnRequestLeaveFullScreen-Methode**](imstscaxevents-onrequestleavefullscreen.md)
+-   [**OnServiceMessageReceived-Methode**](imstscaxevents-onservicemessagereceived.md)
+-   [**OnUserNameAcquired-Methode**](imstscaxevents-onusernameacquired.md)
 -   [**OnWarning-Methode**](imstscaxevents-onwarning.md)
 
- 
+ 
 
- 
+ 
 
 
 

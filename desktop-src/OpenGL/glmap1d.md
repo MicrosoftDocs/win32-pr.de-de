@@ -1,6 +1,6 @@
 ---
 title: glMap1d-Funktion (Gl.h)
-description: Die glMap1d-Funktion definiert eine eindimensionale Auswertung. | glMap1d-Funktion (GL. h)
+description: Die glMap1d-Funktion definiert eine eindimensionale Auswertung. | glMap1d-Funktion (Gl.h)
 ms.assetid: 65f8b099-597c-4300-a7d1-3dabdd19e6cb
 keywords:
 - glMap1d-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 35aee409ab814f9ec2f09add79a700fde4b43998
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 90f1d17312cae14da955641d0009235a45fa23e65a3a04e35f692a4bb5418722
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103761625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119520430"
 ---
 # <a name="glmap1d-function"></a>glMap1d-Funktion
 
-Die **glMap1d** -Funktion und die [**glMap1f**](glmap1f.md) -Funktion definieren einen eindimensionalen Evaluator.
+Die **Funktionen glMap1d** und [**glMap1f**](glmap1f.md) definieren eine eindimensionale Auswertung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,21 +48,21 @@ void WINAPI glMap1d(
 *Ziel* 
 </dt> <dd>
 
-Die Art der Werte, die von der Auswertung generiert werden. Symbolische Konstanten. Der *Ziel* Parameter ist eine symbolische Konstante, die angibt, welche Art von Kontrollpunkten in *Punkten* bereitgestellt werden und welche Ausgabe generiert wird, wenn die Zuordnung ausgewertet wird. Es kann einen von neun vordefinierten Werten annehmen.
+Die Art der Werte, die von der Auswertung generiert werden. Symbolische Konstanten. Der *Zielparameter* ist eine symbolische Konstante, die angibt, welche Art von Kontrollpunkten *in* Punkten bereitgestellt werden und welche Ausgabe generiert wird, wenn die Karte ausgewertet wird. Es kann einer von neun vordefinierten Werten angenommen werden.
 
 
 
 | Wert                                                                                                                                                                                          | Bedeutung                                                                                                                                                                                                                                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_MAP1_VERTEX_3"></span><span id="gl_map1_vertex_3"></span><dl> <dt>**GL \_ zuordnung1 \_ Scheitelpunkt \_ 3**</dt> </dl>                       | Jeder Kontrollpunkt ist drei Gleit Komma Werte, die *x, y* und *z* darstellen. Interne [**glVertex3**](glvertex-functions.md) -Befehle werden generiert, wenn die Zuordnung ausgewertet wird.<br/>                                                                                                                                         |
-| <span id="GL_MAP1_VERTEX_4"></span><span id="gl_map1_vertex_4"></span><dl> <dt>**GL \_ zuordnung1 \_ Scheitelpunkt \_ 4**</dt> </dl>                       | Jeder Kontrollpunkt ist vier Gleit Komma Werte, die *x, y, z* und *w* darstellen. Interne [**glVertex4**](glvertex-functions.md) -Befehle werden generiert, wenn die Zuordnung ausgewertet wird.<br/>                                                                                                                                       |
-| <span id="GL_MAP1_INDEX"></span><span id="gl_map1_index"></span><dl> <dt>**GL \_ zuordnung1 \_ Index**</dt> </dl>                                 | Jeder Kontrollpunkt ist ein einzelner Gleit Komma Wert, der einen Farbindex darstellt. Interne [**glindex**](glindex-functions.md) -Befehle werden generiert, wenn die Zuordnung ausgewertet wird. Der aktuelle Index wird jedoch nicht mit dem Wert dieser **glindex** -Befehle aktualisiert.<br/>                                                    |
-| <span id="GL_MAP1_COLOR_4"></span><span id="gl_map1_color_4"></span><dl> <dt>**GL \_ zuordnung1 \_ Farbe \_ 4**</dt> </dl>                          | Jeder Kontrollpunkt ist vier Gleit Komma Werte, die rot, grün, blau und Alpha darstellen. Interne [**glColor4**](glcolor-functions.md) -Befehle werden generiert, wenn die Zuordnung ausgewertet wird. Die aktuelle Farbe wird jedoch nicht mit dem Wert dieser **glColor4** -Befehle aktualisiert.<br/>                                       |
-| <span id="GL_MAP1_NORMAL"></span><span id="gl_map1_normal"></span><dl> <dt>**GL \_ zuordnung1 \_ Normal**</dt> </dl>                              | Jeder Kontrollpunkt ist drei Gleit Komma Werte, die die *x-, y* -und *z* -Komponenten eines normalen Vektors darstellen. Interne [**glnormal**](glnormal-functions.md) -Befehle werden generiert, wenn die Zuordnung ausgewertet wird. Der aktuelle Normalwert wird jedoch nicht mit dem Wert dieser **glnormal** -Befehle aktualisiert.<br/>              |
-| <span id="GL_MAP1_TEXTURE_COORD_1"></span><span id="gl_map1_texture_coord_1"></span><dl> <dt>**GL \_ zuordnung1 \_ Textur \_ Koord \_ 1**</dt> </dl> | Jeder Kontrollpunkt ist ein einzelner Gleit Komma Wert, der die *s* -Textur Koordinate darstellt. Interne [**glTexCoord1**](gltexcoord-functions.md) -Befehle werden generiert, wenn die Zuordnung ausgewertet wird. Die aktuellen Texturkoordinaten werden jedoch nicht mit dem Wert dieser **gltexcoord** -Befehle aktualisiert.<br/>              |
-| <span id="GL_MAP1_TEXTURE_COORD_2"></span><span id="gl_map1_texture_coord_2"></span><dl> <dt>**GL \_ zuordnung1 \_ Textur- \_ Koord \_ 2**</dt> </dl> | Jeder Kontrollpunkt ist zwei Gleit Komma Werte, die die *s* -und *t* -Texturkoordinaten darstellen. Interne [**glTexCoord2**](gltexcoord-functions.md) -Befehle werden generiert, wenn die Zuordnung ausgewertet wird. Die aktuellen Texturkoordinaten werden jedoch nicht mit dem Wert dieser **gltexcoord** -Befehle aktualisiert.<br/>         |
-| <span id="GL_MAP1_TEXTURE_COORD_3"></span><span id="gl_map1_texture_coord_3"></span><dl> <dt>**GL \_ zuordnung1 \_ Textur \_ Koord \_ 3**</dt> </dl> | Jeder Kontrollpunkt ist drei Gleit Komma Werte, die die Texturkoordinaten *s, t* und *r* darstellen. Interne [**glTexCoord3**](gltexcoord-functions.md) -Befehle werden generiert, wenn die Zuordnung ausgewertet wird. Die aktuellen Texturkoordinaten werden jedoch nicht mit dem Wert dieser **gltexcoord** -Befehle aktualisiert.<br/>   |
-| <span id="GL_MAP1_TEXTURE_COORD_4"></span><span id="gl_map1_texture_coord_4"></span><dl> <dt>**GL \_ zuordnung1 \_ Textur- \_ Koord \_ 4**</dt> </dl> | Jeder Kontrollpunkt ist vier Gleit Komma Werte, die die Texturkoordinaten " *s", "t* ", "r" und " *q* " darstellen. Interne [**glTexCoord4**](gltexcoord-functions.md) -Befehle werden generiert, wenn die Zuordnung ausgewertet wird. Die aktuellen Texturkoordinaten werden jedoch nicht mit dem Wert dieser **gltexcoord** -Befehle aktualisiert.<br/> |
+| <span id="GL_MAP1_VERTEX_3"></span><span id="gl_map1_vertex_3"></span><dl> <dt>**GL \_ MAP1 \_ VERTEX \_ 3**</dt> </dl>                       | Jeder Kontrollpunkt besteht aus drei Gleitkommawerten, die *x, y und* *z darstellen.* Interne [**glVertex3-Befehle**](glvertex-functions.md) werden generiert, wenn die Zuordnung ausgewertet wird.<br/>                                                                                                                                         |
+| <span id="GL_MAP1_VERTEX_4"></span><span id="gl_map1_vertex_4"></span><dl> <dt>**GL \_ MAP1 \_ VERTEX \_ 4**</dt> </dl>                       | Jeder Kontrollpunkt besteht aus vier Gleitkommawerten, die *x, y, z und* *w darstellen.* Interne [**glVertex4-Befehle**](glvertex-functions.md) werden generiert, wenn die Zuordnung ausgewertet wird.<br/>                                                                                                                                       |
+| <span id="GL_MAP1_INDEX"></span><span id="gl_map1_index"></span><dl> <dt>**GL \_ MAP1 \_ INDEX**</dt> </dl>                                 | Jeder Kontrollpunkt ist ein einzelner Gleitkommawert, der einen Farbindex darstellt. Interne [**glIndex-Befehle**](glindex-functions.md) werden generiert, wenn die Zuordnung ausgewertet wird. Der aktuelle Index wird jedoch nicht mit dem Wert dieser **glIndex-Befehle** aktualisiert.<br/>                                                    |
+| <span id="GL_MAP1_COLOR_4"></span><span id="gl_map1_color_4"></span><dl> <dt>**GL \_ MAP1 \_ COLOR \_ 4**</dt> </dl>                          | Jeder Kontrollpunkt besteht aus vier Gleitkommawerten, die Rot, Grün, Blau und Alpha darstellen. Interne [**glColor4-Befehle**](glcolor-functions.md) werden generiert, wenn die Zuordnung ausgewertet wird. Die aktuelle Farbe wird jedoch nicht mit dem Wert dieser **glColor4-Befehle** aktualisiert.<br/>                                       |
+| <span id="GL_MAP1_NORMAL"></span><span id="gl_map1_normal"></span><dl> <dt>**GL \_ MAP1 \_ NORMAL**</dt> </dl>                              | Jeder Kontrollpunkt besteht aus drei Gleitkommawerten, die die *x-, y-* und *z-Komponenten* eines normalen Vektors darstellen. Interne [**glNormal-Befehle**](glnormal-functions.md) werden generiert, wenn die Zuordnung ausgewertet wird. Die aktuelle Normalität wird jedoch nicht mit dem Wert dieser **glNormal-Befehle** aktualisiert.<br/>              |
+| <span id="GL_MAP1_TEXTURE_COORD_1"></span><span id="gl_map1_texture_coord_1"></span><dl> <dt>**GL \_ MAP1 \_ \_ TEXTURKOORD \_ 1**</dt> </dl> | Jeder Kontrollpunkt ist ein einzelner Gleitkommawert, der die *Texturkoordinate* darstellt. Interne [**glTexCoord1-Befehle**](gltexcoord-functions.md) werden generiert, wenn die Zuordnung ausgewertet wird. Die aktuellen Texturkoordinaten werden jedoch nicht mit dem Wert dieser **glTexCoord-Befehle** aktualisiert.<br/>              |
+| <span id="GL_MAP1_TEXTURE_COORD_2"></span><span id="gl_map1_texture_coord_2"></span><dl> <dt>**GL \_ MAP1 \_ \_ TEXTURKOORD \_ 2**</dt> </dl> | Jeder Kontrollpunkt besteht aus zwei Gleitkommawerten, die die *Texturkoordinaten s* und *t* darstellen. Interne [**glTexCoord2-Befehle**](gltexcoord-functions.md) werden generiert, wenn die Zuordnung ausgewertet wird. Die aktuellen Texturkoordinaten werden jedoch nicht mit dem Wert dieser **glTexCoord-Befehle** aktualisiert.<br/>         |
+| <span id="GL_MAP1_TEXTURE_COORD_3"></span><span id="gl_map1_texture_coord_3"></span><dl> <dt>**GL \_ MAP1 \_ \_ TEXTURKOORD \_ 3**</dt> </dl> | Jeder Kontrollpunkt besteht aus drei Gleitkommawerten, die die *Texturkoordinaten s, t* und *r* darstellen. Interne [**glTexCoord3-Befehle**](gltexcoord-functions.md) werden generiert, wenn die Zuordnung ausgewertet wird. Die aktuellen Texturkoordinaten werden jedoch nicht mit dem Wert dieser **glTexCoord-Befehle** aktualisiert.<br/>   |
+| <span id="GL_MAP1_TEXTURE_COORD_4"></span><span id="gl_map1_texture_coord_4"></span><dl> <dt>**GL \_ MAP1 \_ \_ TEXTURKOORD \_ 4**</dt> </dl> | Jeder Kontrollpunkt besteht aus vier Gleitkommawerten, die die *Texturkoordinaten s, t, r* *und q* darstellen. Interne [**glTexCoord4-Befehle**](gltexcoord-functions.md) werden generiert, wenn die Zuordnung ausgewertet wird. Die aktuellen Texturkoordinaten werden jedoch nicht mit dem Wert dieser **glTexCoord-Befehle** aktualisiert.<br/> |
 
 
 
@@ -70,24 +70,24 @@ Die Art der Werte, die von der Auswertung generiert werden. Symbolische Konstant
 
 </dd> <dt>
 
-*U1* 
+*u1* 
 </dt> <dd>
 
-Eine lineare Zuordnung von *u*(wie [**glEvalCoord1**](glevalcoord-functions.md)) zu *u*^, der Variablen, die von den durch diesen Befehl angegebenen Gleichungen ausgewertet wird.
+Eine lineare Zuordnung von *u*, wie [**glEvalCoord1**](glevalcoord-functions.md)dargestellt, zu *u*^, der Variablen, die von den durch diesen Befehl angegebenen Gleichungen ausgewertet wird.
 
 </dd> <dt>
 
-*hinweg* 
+*u2* 
 </dt> <dd>
 
-Eine lineare Zuordnung von *u*(wie [**glEvalCoord1**](glevalcoord-functions.md)) zu *u*^, der Variablen, die von den durch diesen Befehl angegebenen Gleichungen ausgewertet wird.
+Eine lineare Zuordnung von *u*, wie [**glEvalCoord1**](glevalcoord-functions.md)dargestellt, zu *u*^, der Variablen, die von den durch diesen Befehl angegebenen Gleichungen ausgewertet wird.
 
 </dd> <dt>
 
 *Schritt* 
 </dt> <dd>
 
-Die Anzahl der Gleit Komma Zahlen oder Doppelpunkte zwischen dem Anfang eines Steuerungs Punkts und dem Anfang der nächsten in der Datenstruktur, auf die in *Points* verwiesen wird. Dadurch können Kontrollpunkte in beliebige Datenstrukturen eingebettet werden. Die einzige Einschränkung besteht darin, dass die Werte für einen bestimmten Steuerungspunkt zusammenhängende Speicherorte belegen müssen.
+Die Anzahl der Gleitkommazahlen oder Doubles zwischen dem Anfang eines Kontrollpunkts und dem Anfang des nächsten In der Datenstruktur, auf die in Punkt verwiesen *wird.* Dadurch können Steuerungspunkte in beliebige Datenstrukturen eingebettet werden. Die einzige Einschränkung ist, dass die Werte für einen bestimmten Kontrollpunkt zusammenhängende Speicherorte belegen müssen.
 
 </dd> <dt>
 
@@ -101,7 +101,7 @@ Die Anzahl der Kontrollpunkte. Muss positiv sein.
 *Punkte* 
 </dt> <dd>
 
-Ein Zeiger auf das Array von Steuerungs Punkten.
+Ein Zeiger auf das Array von Kontrollpunkten.
 
 </dd> </dl>
 
@@ -111,69 +111,69 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | Das *Ziel* war kein akzeptierter Wert.<br/>                                                                                        |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | *U1* war gleich *U2*.<br/>                                                                                                    |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | der *Stride* -Wert war kleiner als die Anzahl der Werte in einem Steuerungspunkt.<br/>                                                            |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | die *Reihen* Folge war kleiner als 1 oder GL \_ Max \_ eval \_ .<br/>                                                                         |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *target* war kein akzeptierter Wert.<br/>                                                                                        |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *u1* war gleich *u2.*<br/>                                                                                                    |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *stride* war kleiner als die Anzahl der Werte in einem Kontrollpunkt.<br/>                                                            |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *order* war kleiner als 1 oder GL \_ MAX \_ EVAL \_ ORDER.<br/>                                                                         |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Evaluatoren bieten eine Möglichkeit, Polynoms-oder rational Polynoms-Mapping zu verwenden, um Vertices, normale, Texturkoordinaten und Farben zu erstellen. Die Werte, die von einem Auswertung erzeugt werden, werden an weitere Phasen der OpenGL-Verarbeitung gesendet, so als wären Sie mit den Befehlen " [**glVertex**](glvertex-functions.md)", " [**glnormal**](glnormal-functions.md)", " [**gltexcoord**](gltexcoord-functions.md)" und " [**glcolor**](glcolor-functions.md) " dargestellt worden, mit der Ausnahme, dass die generierten Werte nicht die aktuellen normalen, Texturkoordinaten oder Farben aktualisieren
+Auswertungen bieten eine Möglichkeit, polynomiale oder rationale polynomiale Zuordnung zu verwenden, um Scheitelungen, Normals, Texturkoordinaten und Farben zu erzeugen. Die von einer Auswertung erzeugten Werte werden an weitere Phasen der OpenGL-Verarbeitung gesendet, als ob sie mithilfe der Befehle [**glVertex,**](glvertex-functions.md) [**glNormal,**](glnormal-functions.md) [**glTexCoord**](gltexcoord-functions.md)und [**glColor**](glcolor-functions.md) dargestellt worden wäre, mit der Ausnahme, dass die generierten Werte nicht die aktuelle Normal- oder Texturkoordinate oder Farbe aktualisieren.
 
-Alle polynomialen oder rationalen polynomialen Splines (bis zu dem maximalen Grad, der von der OpenGL-Implementierung unterstützt wird) können mithilfe von auswergratoren beschrieben werden. Dazu zählen fast alle in Computergrafiken verwendeten Splines, einschließlich B-Splines, Bezier-Kurven, Hermite-Splines usw.
+Alle polynomialen oder rationalen polynomialen Splines eines beliebigen Grads (bis zu dem von der OpenGL-Implementierung unterstützten maximalen Grad) können mithilfe von Auswertungen beschrieben werden. Dazu gehören fast alle Splines, die in Computergrafiken verwendet werden, einschließlich B-Splines, Bézierkurven, Hermite-Splines und so weiter.
 
-Evaluatoren definieren Kurven auf der Grundlage von Bernstein Polynomen. Definieren von **p** () als
+Auswerter definieren Kurven basierend auf Polynomen von Polynomen. Definieren **Sie p** () als .
 
-![Gleichung, die die Definition von p () anzeigt.](images/map01.png)
+![Gleichung, die die Definition von p () zeigt.](images/map01.png)
 
-Dabei ist **R**_i_ ein Steuerungspunkt, und () ist *der Bernstein* polynommial von Grad *n* (*Reihenfolge*  = *n* + 1):
+wobei **R**_i_ ein Kontrollpunkt und () das *i* das Polynom "i" des *Grads n* (*Reihenfolge*  = *n* + 1) ist:
 
-![Gleichung, die den Bernstein Polynoms von Grad n anzeigt.](images/map02.png)
+![Gleichung, die die Polynomie des Grads n zeigt.](images/map02.png)
 
-Beachten Sie, dass
+Denken Sie daran, dass
 
-![Gleichungen, die Äquivalenz zu 1 darstellen.](images/map03.png)
+![Gleichungen mit Äquivalenz zu 1.](images/map03.png)
 
-Die **glMap1** -Funktion wird verwendet, um die Basis zu definieren und anzugeben, welche Art von Werten erstellt wird. Nachdem Sie definiert wurde, kann eine Zuordnung aktiviert und deaktiviert werden, indem [**glEnable**](glenable.md) und **glEnable** mit dem Zuordnungs Namen aufgerufen wird. Dies ist einer der neun vordefinierten Werte für das oben beschriebene *Ziel* . Die [glEvalCoord1](glevalcoord-functions.md) -Funktion wertet die eindimensionalen Zuordnungen aus, die aktiviert sind. Wenn **glEvalCoord1** den Wert *u* darstellt, werden die Bernstein Funktionen mit *u*^ ausgewertet, wobei
+Die **glMap1-Funktion** wird verwendet, um die Basis zu definieren und anzugeben, welche Art von Werten erzeugt werden. Nach der Definition kann eine Zuordnung aktiviert und deaktiviert werden, indem [**glEnable**](glenable.md) und **glDisable** mit dem Kartennamen, einem der neun vordefinierten Werte für das oben beschriebene Ziel, *aufruft.* Die [glEvalCoord1-Funktion](glevalcoord-functions.md) wertet die aktivierten eindimensionalen Karten aus. Wenn **glEvalCoord1 den** Wert *u* enthält, werden die Funktionen von "Funktionen" *mithilfe* von u ^ausgewertet, wobei
 
-![Gleichung, die die Definition von Ihnen ^ anzeigt.](images/map04.png)
+![Die Gleichung zeigt die Definition Von Ihnen^.](images/map04.png)
 
-Die Parameter *Stride*, *Order* und *Points* definieren die Array Adressierung für den Zugriff auf die Steuerpunkte. Der *Points* -Parameter ist der Speicherort des ersten Kontroll Punkts, der einen, zwei, drei oder vier zusammenhängende Speicherorte einnimmt, je nachdem, welche Zuordnung definiert wird. Der *Order* -Parameter entspricht der Anzahl von Steuerungs Punkten im Array. Der *Stride* -Parameter gibt an, wie viele float-oder Double-Speicherorte den internen Speicher Zeiger zum Erreichen des nächsten Steuerungs Punkts verschieben.
+Die *Parameter stride,* *order* und *points* definieren die Array-Adressierung für den Zugriff auf die Kontrollpunkte. Der *Points-Parameter* ist die Position des ersten Kontrollpunkts, der je nachdem, welche Zuordnung definiert wird, einen, zwei, drei oder vier zusammenhängende Speicherorte einnimmt. Der *Order-Parameter* ist die Anzahl der Kontrollpunkte im Array. Der *stride-Parameter* gibt an, wie viele float- oder double-Positionen der interne Speicherzeiger so hoch schreitet, dass er den nächsten Kontrollpunkt erreicht.
 
-Wie bei allen OpenGL-Befehlen, die Zeiger auf Daten akzeptieren, ist es so, als ob der Inhalt der *Punkte* vor der Rückgabe von **glMap1** kopiert wurde. Änderungen am Inhalt von *Punkten* haben keine Auswirkung, nachdem **glMap1** aufgerufen wurde.
+Wie bei allen OpenGL-Befehlen, die Zeiger auf Daten akzeptieren,  wird der Inhalt von Punkten vor der Rückkehr von **glMap1** kopiert. Änderungen am Inhalt von *Punkten* haben nach dem Aufruf von **glMap1** keine Auswirkungen.
 
 Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glMap1** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Max \_ eval \_ Order
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ MAX \_ EVAL \_ ORDER
 
-[**glgetmap**](glgetmap.md)
+[**glGetMap**](glgetmap.md)
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ zuordnung1 \_ Vertex \_ 3
+[**glIsEnabled**](glisenabled.md) mit dem Argument GL \_ MAP1 \_ VERTEX \_ 3
 
-**glisenabled** mit dem Argument GL \_ zuordnung1 \_ Vertex \_ 4
+**glIsEnabled** mit dem Argument GL \_ MAP1 \_ VERTEX \_ 4
 
-**glisenabled** mit dem Argument GL \_ zuordnung1 \_ Index
+**glIsEnabled** mit dem Argument GL \_ MAP1 \_ INDEX
 
-**glisenabled** mit dem Argument GL \_ zuordnung1 \_ Farbe \_ 4
+**glIsEnabled** mit argument GL \_ MAP1 \_ COLOR \_ 4
 
-**glisenabled** mit dem Argument GL \_ zuordnung1 \_ Normal
+**glIsEnabled** mit dem Argument GL \_ MAP1 \_ NORMAL
 
-**glisenabled** mit dem Argument GL \_ zuordnung1 \_ Textur \_ Koord \_ 1
+**glIsEnabled** mit argument GL \_ MAP1 \_ TEXTURE \_ COORD \_ 1
 
-**glisenabled** mit dem Argument GL \_ zuordnung1 \_ Textur \_ Koord \_ 2
+**glIsEnabled** mit dem Argument GL \_ MAP1 \_ TEXTURE \_ COORD \_ 2
 
-**glisenabled** mit dem Argument GL \_ zuordnung1 \_ Textur \_ Koord \_ 3
+**glIsEnabled** mit argument GL \_ MAP1 \_ TEXTURE \_ COORD \_ 3
 
-**glisenabled** mit dem Argument GL \_ zuordnung1 \_ Textur \_ Koord \_ 4
+**glIsEnabled** mit argument GL \_ MAP1 \_ TEXTURE \_ COORD \_ 4
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -183,8 +183,8 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glMap1** ab:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -196,7 +196,7 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glMap1** ab:
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcolor**](glcolor-functions.md)
+[**glColor**](glcolor-functions.md)
 </dt> <dt>
 
 [**glEnable**](glenable.md)
@@ -205,25 +205,25 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glMap1** ab:
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glevalcoord**](glevalcoord-functions.md)
+[**glEvalCoord**](glevalcoord-functions.md)
 </dt> <dt>
 
-[**glevalmesh**](glevalmesh-functions.md)
+[**glEvalMesh**](glevalmesh-functions.md)
 </dt> <dt>
 
-[**glevalpoint**](glevalpoint.md)
+[**glEvalPoint**](glevalpoint.md)
 </dt> <dt>
 
 [**glMap2**](glmap2.md)
 </dt> <dt>
 
-[**glmapgrid**](glmapgrid-functions.md)
+[**glMapGrid**](glmapgrid-functions.md)
 </dt> <dt>
 
-[**glnormal**](glnormal-functions.md)
+[**glNormal**](glnormal-functions.md)
 </dt> <dt>
 
-[**gltexcoord**](gltexcoord-functions.md)
+[**glTexCoord**](gltexcoord-functions.md)
 </dt> <dt>
 
 [**glVertex**](glvertex-functions.md)

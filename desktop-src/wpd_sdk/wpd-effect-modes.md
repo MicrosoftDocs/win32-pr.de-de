@@ -1,7 +1,7 @@
 ---
-description: Der \_ Enumerationstyp der WPD-Effekt \_ Modi beschreibt verschiedene visuelle Effekte, die auf ein Bild angewendet werden können.
+description: Der WPD \_ EFFECT \_ MODES-Enumerationstyp beschreibt verschiedene visuelle Effekte, die auf ein Bild angewendet werden können.
 ms.assetid: 7624fccb-e416-4db4-978e-410c4c236328
-title: WPD_EFFECT_MODES-Enumeration (portabledevice. h)
+title: WPD_EFFECT_MODES -Enumeration (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 7e29f89207a74d335fbe1c2561f8dcf9cec3e923
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8ca712a758d23f70d2a1f8760272b821adeec548a1d719c9564cdc8cf17cdeb4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657420"
 ---
-# <a name="wpd_effect_modes-enumeration"></a>WPD- \_ Effekt \_ Modi-Enumeration
+# <a name="wpd_effect_modes-enumeration"></a>WPD \_ EFFECT \_ MODES-Enumeration
 
-Der Enumerationstyp der **WPD- \_ Effekt \_ Modi** beschreibt verschiedene visuelle Effekte, die auf ein Bild angewendet werden können.
+Der **WPD \_ EFFECT \_ MODES-Enumerationstyp** beschreibt verschiedene visuelle Effekte, die auf ein Bild angewendet werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ typedef enum WPD_EFFECT_MODES {
 
 <dl> <dt>
 
-<span id="WPD_EFFECT_MODE_UNDEFINED"></span><span id="wpd_effect_mode_undefined"></span>**WPD- \_ Effekt \_ Modus nicht \_ definiert**
+<span id="WPD_EFFECT_MODE_UNDEFINED"></span><span id="wpd_effect_mode_undefined"></span>**\_ \_ WPD-EFFEKTMODUS \_ NICHT DEFINIERT**
 </dt> <dd>
 
 Es wurde keine Auswirkung angegeben.
 
 </dd> <dt>
 
-<span id="WPD_EFFECT_MODE_COLOR"></span><span id="wpd_effect_mode_color"></span>**Farbe für WPD- \_ Effekt \_ Modus \_**
+<span id="WPD_EFFECT_MODE_COLOR"></span><span id="wpd_effect_mode_color"></span>**WPD \_ EFFECT \_ MODE \_ COLOR**
 </dt> <dd>
 
-Das Bild sollte "Color" lauten.
+Das Bild sollte eine Farbe haben.
 
 </dd> <dt>
 
-<span id="WPD_EFFECT_MODE_BLACK_AND_WHITE"></span><span id="wpd_effect_mode_black_and_white"></span>**WPD \_ \_ -Effekt Modus \_ schwarz \_ und \_ weiß**
+<span id="WPD_EFFECT_MODE_BLACK_AND_WHITE"></span><span id="wpd_effect_mode_black_and_white"></span>**\_ \_ WPD-EFFEKTMODUS \_ SCHWARZ UND \_ \_ WEIß**
 </dt> <dd>
 
-Das Bild sollte Schwarz und weiß sein.
+Das Bild sollte schwarz und weiß sein.
 
 </dd> <dt>
 
-<span id="WPD_EFFECT_MODE_SEPIA"></span><span id="wpd_effect_mode_sepia"></span>**WPD- \_ Effekt Modus (* \_ \_ Pia)**
+<span id="WPD_EFFECT_MODE_SEPIA"></span><span id="wpd_effect_mode_sepia"></span>**WPD \_ EFFECT \_ MODE \_ SEPIA**
 </dt> <dd>
 
-Das Bild sollte "* Pia" lauten.
+Das Bild sollte sepia sein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Enumeration wird von der Eigenschaft " [ \_ immer noch \_ Bild \_ Effekt \_ Modus](still-image-properties.md) " verwendet.
+Diese Enumeration wird von der [WPD \_ STILL IMAGE \_ EFFECT \_ \_ MODE-Eigenschaft](still-image-properties.md) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Diese Enumeration wird von der Eigenschaft " [ \_ immer noch \_ Bild \_ Effekt \
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 

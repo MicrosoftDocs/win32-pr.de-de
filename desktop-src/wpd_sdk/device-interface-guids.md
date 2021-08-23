@@ -1,7 +1,7 @@
 ---
-description: Die Geräteschnittstelle kann durch einen GUID-Wert beschrieben werden. Tragbare Windows-Geräte definieren die folgende Geräteschnittstelle.
+description: Die Geräteschnittstelle kann durch einen GUID-Wert beschrieben werden. Windows Portable Geräte definieren die folgende Geräteschnittstelle.
 ms.assetid: 47b8d3dd-ea12-461d-935d-2de2c0157f88
-title: Geräteschnittstellen-GUIDs (portabledevice. h)
+title: Geräteschnittstellen-GUIDs (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,24 +15,24 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: c2f97e050f839a268048aaaabac46b9e7698ee9d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6f4bd170aeae46f738f5ce4a5a98bc694583a19fe3e7fa6eccc21c86fdc871d3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370133"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657920"
 ---
 # <a name="device-interface-guids"></a>Geräteschnittstellen-GUIDs
 
-Die Geräteschnittstelle kann durch einen **GUID** -Wert beschrieben werden. Tragbare Windows-Geräte definieren die folgende Geräteschnittstelle.
+Die Geräteschnittstelle kann durch einen **GUID-Wert** beschrieben werden. Windows Portable Geräte definieren die folgende Geräteschnittstelle.
 
 
 
-| Konstante                                                                                                                                                                                                        | BESCHREIBUNG                                                                                                                                                                                                                                                                                   |
+| Konstante                                                                                                                                                                                                        | Beschreibung                                                                                                                                                                                                                                                                                   |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GUID_DEVINTERFACE_WPD"></span><span id="guid_devinterface_wpd"></span><dl> <dt>**GUID- \_ devinterface- \_ WPD**</dt> </dl>                          | Identifiziert Geräte, die in einer normalen WPD-Enumeration angezeigt werden. Alle Geräte, die diese Schnittstellen-GUID registrieren, werden aufgezählt, wenn eine Anwendung die [**iportabledevicemanager:: GetDevices**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicemanager-getdevices) -Methode aufruft.<br/>                                 |
-| <span id="GUID_DEVINTERFACE_WPD_PRIVATE"></span><span id="guid_devinterface_wpd_private"></span><dl> <dt>**GUID \_ devinterface- \_ WPD \_ Privat**</dt> </dl> | Identifiziert Geräte, die während einer normalen WPD-Enumeration nicht angezeigt werden. Alle Geräte, die diese Schnittstellen-GUID registrieren, werden nur aufgelistet, wenn eine Anwendung die [**iportabledevicemanager:: getprivatedevices**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicemanager-getprivatedevices) -Methode aufruft.<br/> |
-| <span id="GUID_DEVINTERFACE_WPD_SERVICE"></span><span id="guid_devinterface_wpd_service"></span><dl> <dt>**GUID- \_ devinterface- \_ WPD- \_ Dienst**</dt> </dl> | In Windows 7 können Anwendungen alle WPD-Geräte Dienste auflisten, indem Sie [**iportabledeviceservicemanager:: getdeviceservices**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicemanager-getdeviceservices) aufrufen und diese Schnittstellen Klasse als Diensttyp-GUID verwenden.<br/>                                   |
+| <span id="GUID_DEVINTERFACE_WPD"></span><span id="guid_devinterface_wpd"></span><dl> <dt>**GUID \_ DEVINTERFACE \_ WPD**</dt> </dl>                          | Identifiziert Geräte, die in einer normalen WPD-Enumeration angezeigt werden. Jedes Gerät, das diese Schnittstellen-GUID registriert, wird aufzählt, wenn eine Anwendung die [**IPortableDeviceManager::GetDevices-Methode aufruft.**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicemanager-getdevices)<br/>                                 |
+| <span id="GUID_DEVINTERFACE_WPD_PRIVATE"></span><span id="guid_devinterface_wpd_private"></span><dl> <dt>**GUID \_ DEVINTERFACE \_ WPD \_ PRIVATE**</dt> </dl> | Identifiziert Geräte, die während einer normalen WPD-Enumeration nicht angezeigt werden. Jedes Gerät, das diese Schnittstellen-GUID registriert, wird nur aufzählt, wenn eine Anwendung die [**IPortableDeviceManager::GetPrivateDevices-Methode aufruft.**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicemanager-getprivatedevices)<br/> |
+| <span id="GUID_DEVINTERFACE_WPD_SERVICE"></span><span id="guid_devinterface_wpd_service"></span><dl> <dt>**GUID \_ DEVINTERFACE \_ WPD \_ SERVICE**</dt> </dl> | In Windows 7 können Anwendungen alle WPD-Gerätedienste aufzählen, indem [**sie IPortableDeviceServiceManager::GetDeviceServices**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicemanager-getdeviceservices) aufrufen und diese Schnittstellenklasse als Diensttyp-GUID verwenden.<br/>                                   |
 
 
 
@@ -42,7 +42,7 @@ Die Geräteschnittstelle kann durch einen **GUID** -Wert beschrieben werden. Tra
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 

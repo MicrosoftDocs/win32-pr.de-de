@@ -1,22 +1,22 @@
 ---
-description: "\"Rodemdmconfigprofile\" \\/ adminenable (v4)"
+description: ModemDMConfigProfile \/ AdminEnable (v4)
 MS-HAID: WWAN\_profile\_v4.element\_1\_AdminEnable
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Adminenable (v4)
+title: AdminEnable (v4)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a20ab248c585e6f599ddb43e6c3f93183baf7373
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 49bc98dd3b3c1eb99199c2aa58ba99edaddfa8de078590aafbe57804e181b1ac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106388875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119607690"
 ---
-# <a name="span-idwwan_profile_v4element_1_adminenablespanmodemdmconfigprofileadminenable-v4"></a><span id="WWAN_profile_v4.element_1_AdminEnable"></span>"Rodemdmconfigprofile" \/ adminenable (v4)
+# <a name="span-idwwan_profile_v4element_1_adminenablespanmodemdmconfigprofileadminenable-v4"></a><span id="WWAN_profile_v4.element_1_AdminEnable"></span>ModemDMConfigProfile \/ AdminEnable (v4)
 
-Gibt an, ob das Profil administrativ aktiviert ist. Dies ist ein neues Element für v4.
+Gibt an, ob das Profil administratorisch aktiviert ist. Dies ist ein neues Element für v4.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -56,18 +56,18 @@ Keine.
 <thead>
 <tr class="header">
 <th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="element-mbnprofileext.md">MBNProfileExt</a></td>
-<td><p>Das <strong>mbnprofileext</strong> -Element ist eine Erweiterung des früheren mbnprofile-Elements. Es identifiziert ein mobiles Breitband Profil mit einem umfassenderen Satz von Optionen als das mbnprofile-Element.</p>
-<p>Es kann mehr als ein mbnprofileext-Element in einem Profil geben, das Profileinstellungen für einen bestimmten Satz von Betriebszuständen beschreibt. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>profileconditionedon</strong></a> -Element von <strong>mbnprofileext</strong> , um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
+<td><p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein Mobile Broadband-Profil mit einem vielfältigeren Satz von Optionen als das MBNProfile-Element.</p>
+<p>Es kann mehrere MbnProfileExt-Elemente in einem Profil geben, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie <a href="element-profileconditionedon.md"><strong>das untergeordnete ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
 </tr>
 <tr class="even">
 <td><a href="element-modemdmconfigprofile.md">ModemDMConfigProfile</a></td>
-<td><p>Modem-DM-Konfigurations Profil.</p></td>
+<td><p>Modem-DM-Konfigurationsprofil.</p></td>
 </tr>
 </tbody>
 </table>

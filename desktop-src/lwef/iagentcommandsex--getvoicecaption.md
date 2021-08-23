@@ -1,19 +1,19 @@
 ---
-title: Iagentcommandsex getvoicecaption
-description: Iagentcommandsex getvoicecaption
+title: IAgentCommandsEx GetVoiceCaption
+description: IAgentCommandsEx GetVoiceCaption
 ms.assetid: 0e505295-386a-421f-a43c-6da03c8a2b6a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b3a757e1c841afd62b9b6ae13f1ef34178f133ca
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 6ec2a6d5138b9b7074d1c9a2002f45a0076fe5d957ae5e47d865c693f73e8b37
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106337646"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119609432"
 ---
-# <a name="iagentcommandsexgetvoicecaption"></a>Iagentcommandsex:: getvoicecaption
+# <a name="iagentcommandsexgetvoicecaption"></a>IAgentCommandsEx::GetVoiceCaption
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT GetVoiceCaption(
@@ -21,28 +21,28 @@ HRESULT GetVoiceCaption(
 );
 ```
 
-Ruft die [**voicecaption**](voicecaption-property.md) für ein [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt ab.
+Ruft die [**VoiceCaption**](voicecaption-property.md) für ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) ab.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="pbszVoiceCaption"></span><span id="pbszvoicecaption"></span><span id="PBSZVOICECAPTION"></span>*pbszvoicecaption*
+<span id="pbszVoiceCaption"></span><span id="pbszvoicecaption"></span><span id="PBSZVOICECAPTION"></span>*pbszVoiceCaption*
 </dt> <dd>
 
-Die Adresse eines BSTR-Werts, der den Wert des [**Beschriftungs**](caption-property.md) Texts empfängt, der für einen [**Befehl**](/windows/desktop/lwef/the-command-object)angezeigt wird.
+Die Adresse eines BSTR, der den Wert des [**Beschriftungstexts**](caption-property.md) empfängt, der für einen [**Befehl**](/windows/desktop/lwef/the-command-object)angezeigt wird.
 
 </dd> </dl>
 
-Der zurückgegebene Text ist, der für das [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt festgelegt wird und im Fenster "Sprachbefehle" angezeigt wird, wenn die Client Anwendung aktiv ist.
+Der zurückgegebene Text ist für das [**Command-Objekt**](/windows/desktop/lwef/the-command-object) festgelegt und wird im Fenster Sprachbefehle angezeigt, wenn Ihre Clientanwendung eingabeaktiv ist.
 
-Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch die Client Anwendung. Diese Einstellung wirkt sich nicht auf andere Clients des Zeichens oder andere Zeichen ihrer Client Anwendung aus.
+Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch Ihre Clientanwendung. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder anderer Zeichen Ihrer Clientanwendung aus.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommandsex:: setvoicecaption**](iagentcommandsex--setvoicecaption.md)
+[**IAgentCommandsEx::SetVoiceCaption**](iagentcommandsex--setvoicecaption.md)
 
 
- 
+ 
 
- 
+ 

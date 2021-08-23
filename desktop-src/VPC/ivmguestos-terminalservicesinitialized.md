@@ -1,11 +1,11 @@
 ---
-title: Ivmguestos terminalservicesinitialized-Eigenschaft (vpccominterfaces. h)
-description: Status der Remotedesktopdienste im Gast Betriebssystem.
+title: IVMGuestOS TerminalServicesInitialized-Eigenschaft (VPCCOMInterfaces.h)
+description: Status der Remotedesktopdienste im Gastbetriebssystem.
 ms.assetid: 104d9256-6b2e-45ec-a290-21e0732c65ac
 keywords:
-- Terminalservicesinitialized-Eigenschaft virtueller PC
-- Terminalservicesinitialized-Eigenschaft Virtual PC, ivmguestos-Schnittstelle
-- Ivmguestos Interface Virtual PC, terminalservicesinitialized (Eigenschaft)
+- TerminalServicesInitialisierte Eigenschaft Virtueller PC
+- TerminalServicesInitialisierte Eigenschaft Virtueller PC, IVMGuestOS-Schnittstelle
+- IVMGuestOS-Schnittstelle Virtueller PC, TerminalServicesInitialisierte Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 92ce23b4b07f3e2d06f605f4598c8b31e4c70692
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 595ae6028bea1984a320a699d204e4d3c23c1ca44e021cbbd994bbc5b832655a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518917"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119512150"
 ---
-# <a name="ivmguestosterminalservicesinitialized-property"></a>Ivmguestos:: terminalservicesinitialized-Eigenschaft
+# <a name="ivmguestosterminalservicesinitialized-property"></a>IVMGuestOS::TerminalServicesInitialized-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft den Status Remotedesktopdienste (früher als "Terminal Services" bezeichnet) im Gast Betriebssystem ab.
+Ruft den Status von Remotedesktopdienste (früher als Terminaldienste bezeichnet) im Gastbetriebssystem ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_TerminalServicesInitialized(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Initialisierungs Status.
+Der Initialisierungsstatus.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -53,12 +53,12 @@ Der Initialisierungs Status.
 
 | Name/Wert                                                                                                                                                                       | Bedeutung                                                                                                                                                                                                     |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                                          | Der Vorgang war erfolgreich, und Remotedesktopdienste wurde initialisiert. Der zurückgegebene Eigenschafts Wert gibt an, ob Remotedesktopdienste im Gast Betriebssystem verfügbar ist.<br/> |
-| <dl> <dt>S \_ Falsch</dt> <dt>1</dt> </dl>                                       | Die Funktion "Integrations Komponenten" wird ausgeführt, aber Remotedesktopdienste noch nicht initialisiert.<br/>                                                                                               |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>                            | Der-Parameter ist **null**.<br/>                                                                                                                                                                       |
-| <dl> <dt>VM \_ E \_ - \_ VM \_ führt</dt> <dt>0xa0040206</dt> nicht aus </dl>               | Der virtuelle Computer (VM) muss für diesen Vorgang ausgeführt werden.<br/>                                                                                                                                     |
-| <dl> <dt>VM \_ E \_ ADDITIONS \_ - \_ Funktion \_ nicht</dt> " <dt>uxa0040505</dt> " </dl> | Das Feature "Integrations Komponenten" wird nicht im Gast Betriebssystem ausgeführt.<br/>                                                                                                                 |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl>                    | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                                                                |
+| <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                                          | Der Vorgang war erfolgreich, und Remotedesktopdienste wurde initialisiert. Der zurückgegebene Eigenschaftswert gibt an, ob Remotedesktopdienste im Gastbetriebssystem verfügbar ist.<br/> |
+| <dl> <dt>S \_ FALSE</dt> <dt>1</dt> </dl>                                       | Die Integrationskomponentenfunktion wird ausgeführt, aber Remotedesktopdienste ist noch nicht initialisiert.<br/>                                                                                               |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>                            | Der Parameter ist **NULL.**<br/>                                                                                                                                                                       |
+| <dl> <dt>VM \_ E \_ VM WIRD NICHT \_ \_ AUSGEFÜHRT,</dt> <dt>0xA0040206</dt> </dl>               | Der virtuelle Computer (VM) muss für diesen Vorgang ausgeführt werden.<br/>                                                                                                                                     |
+| <dl> <dt>VM \_ E \_ ADDITIONS \_ FEATURE NOT \_ \_ AVAIL</dt> <dt>0XA0040505</dt> </dl> | Die Integrationskomponentenfunktion wird im Gastbetriebssystem nicht ausgeführt.<br/>                                                                                                                 |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl>                    | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                                                                |
 
 
 
@@ -68,12 +68,12 @@ Der Initialisierungs Status.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmguestos ist als 99fea0db-4880-499a-b6d8-73dff9bc91be definiert.<br/>                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMGuestOS ist als 99fea0db-4880-499a-b6d8-73dff9bc91be definiert.<br/>                 |
 
 
 
@@ -81,7 +81,7 @@ Der Initialisierungs Status.
 
 <dl> <dt>
 
-[**Ivmguestos**](ivmguestos.md)
+[**IVMGuestOS**](ivmguestos.md)
 </dt> </dl>
 
  

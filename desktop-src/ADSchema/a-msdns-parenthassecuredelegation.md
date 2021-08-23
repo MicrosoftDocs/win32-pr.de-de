@@ -1,11 +1,11 @@
 ---
-title: MS-DNS-Parent-has-Secure-Delegation-Attribut
-description: Ein Attribut, mit dem definiert wird, ob die Delegierung der Eltern an die DNS-Zone sicher ist.
+title: ms-DNS-Parent-Has-Secure-Delegation-Attribut
+description: Ein Attribut, das verwendet wird, um zu definieren, ob die Delegierung der Eltern in der DNS-Zone sicher ist.
 ms.assetid: 92b1bb68-1d08-47d3-95a7-a75149d7313f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-DNS-Parent-has-Secure-Delegation
-- Attribut "MSDNs-parameenthassecuredelegation" AD-Schema
+- MS-DNS-Parent-Has-Secure-Delegation-Attribut AD-Schema
+- AD-Schema des msDNS-ParentHasSecureDelegation-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 30947d059f9115cbf7c63b03380e86dad72775b5
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 56160df9d77876c9c06de0a68921712099ca1d243d96f2c3da31e437c717a271
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119553010"
 ---
-# <a name="ms-dns-parent-has-secure-delegation-attribute"></a>MS-DNS-Parent-has-Secure-Delegation-Attribut
+# <a name="ms-dns-parent-has-secure-delegation-attribute"></a>ms-DNS-Parent-Has-Secure-Delegation-Attribut
 
-Ein Attribut, mit dem definiert wird, ob die Delegierung der Eltern an die DNS-Zone sicher ist.
+Ein Attribut, das verwendet wird, um zu definieren, ob die Delegierung der Eltern in der DNS-Zone sicher ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DNS-Parent-has-Secure-Delegation  |
-| LDAP-Display-Name | MSDNs-parameenthassecuredelegation      |
+| CN                | ms-DNS-Parent-Has-Secure-Delegation  |
+| Ldap-Anzeigename | msDNS-ParentHasSecureDelegation      |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2146              |
-| System-ID-GUID    | 285c6964-c11a-499e-96d8-BF 7c75a223c6 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | 285c6964-c11a-499e-96d8-bf7c75a223c6 |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 
@@ -53,10 +53,10 @@ Ein Attribut, mit dem definiert wird, ob die Delegierung der Eltern an die DNS-Z
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
+| Is-Single-Valued       | True                                     |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000008                               |

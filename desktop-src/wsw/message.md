@@ -1,44 +1,44 @@
 ---
 title: Meldung (Windows-Webdienste)
-description: Bei einer Nachricht handelt es sich um ein Objekt, das übertragene oder empfangene Daten kapselt.
+description: Eine Nachricht ist ein Objekt, das übertragene oder empfangene Daten kapselt.
 ms.assetid: edc810d9-7d78-4b79-8cbb-e87401f6ae41
 keywords:
-- Nachrichtenweb Dienste für Windows
-- Wwsapi
+- Message Web Services for Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 704df318e10521bd56e62632af16e683b7baccfc
-ms.sourcegitcommit: 5b98bf8c68922f8f03c14f793fbe17504900559c
+ms.openlocfilehash: f1722cbe4a956ef16a1b7195158b695f551419ad600c64f552e92700d3e4ee57
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "104559159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657095"
 ---
 # <a name="message-windows-web-services"></a>Meldung (Windows-Webdienste)
 
-Bei einer Nachricht handelt es sich um ein Objekt, das übertragene oder empfangene Daten kapselt. Die Struktur einer Nachricht wird von SOAP definiert und enthält eine Reihe von Headern und Text. Die Header werden immer im Arbeitsspeicher gepuffert, aber der Text wird mit einer Streaming-API gelesen und geschrieben.
+Eine Nachricht ist ein Objekt, das übertragene oder empfangene Daten kapselt. Die Struktur einer Nachricht wird durch SOAP definiert und enthält eine Reihe von Headern und einen Text. Die Header werden immer im Arbeitsspeicher gepuffert, aber der Text wird mit einer Streaming-API gelesen und geschrieben.
 
-![Das Diagramm zeigt eine Meldung mit dem gepufferten Header und dem Text, der gestreamt wird.](images/messageenvelope.png)
+![Diagramm, das eine Meldung zeigt, bei der der Header gepuffert und der Text gestreamt wird.](images/messageenvelope.png)
 
 
-Nachrichten verfügen über eine Reihe von Eigenschaften, die verwendet werden können, um optionale Einstellungen anzugeben, die das Verhalten einer Nachricht steuern, und um eine Möglichkeit bereitzustellen, zusätzliche Informationen über empfangene Nachrichten (z. b. Sicherheitsinformationen) abzurufen. Eine umfassende Liste der Nachrichten Eigenschaften finden Sie unter [**WS- \_ Nachrichten eigen schafts- \_ \_ ID**](/windows/desktop/api/WebServices/ne-webservices-ws_message_property_id) .
+Nachrichten verfügen über einen Satz von Eigenschaften, die verwendet werden können, um optionale Einstellungen anzugeben, die das Verhalten einer Nachricht steuern, und um eine Möglichkeit zum Abrufen zusätzlicher Informationen zu empfangenen Nachrichten (z. B. Sicherheitsinformationen) zu bieten. Eine vollständige Liste der Nachrichteneigenschaften finden Sie unter [**\_ \_ \_ EIGENSCHAFTEN-ID**](/windows/desktop/api/WebServices/ne-webservices-ws_message_property_id) der WS-NACHRICHT.
 
-Eine Nachricht wird an eine bestimmte [Endpunkt Adresse](endpoint-address.md)adressiert.
+Eine Nachricht wird an eine bestimmte [Endpunktadresse adressiert.](endpoint-address.md)
 
-Ein [**WS- \_ Fehler**](/windows/desktop/api/WebServices/ns-webservices-ws_fault) ist eine besondere Art von Nachrichten Inhalt, der zur Darstellung von Fehlern verwendet wird, die von einem Remote Endpunkt zurückgegeben werden.
+Ein [**WS \_ FAULT ist**](/windows/desktop/api/WebServices/ns-webservices-ws_fault) eine besondere Art von Nachrichteninhalt, mit dem Fehler von einem Remoteendpunkt zurückgegeben werden.
 
-Nachrichten werden durch eine Codierung unterzogen, die den XML-Code vor der Übertragung in ein lineares Format
+Nachrichten werden codiert, die den XML-Code vor der Übertragung in ein lineares Übertragungsformat transformieren.
 
-Weitere Informationen zu Nachrichten finden Sie im Thema Übersicht über die [Kanal Schicht](channel-layer-overview.md) .
+Weitere Informationen zu Nachrichten finden Sie im Thema [Übersicht über die Kanalebene.](channel-layer-overview.md)
 
-In den folgenden Beispielen wird die Verwendung von Nachrichten in wwsapi veranschaulicht.
+Die folgenden Beispiele veranschaulichen die Verwendung von Nachrichten in WWSAPI.
 
-| Beispiel                                              | BESCHREIBUNG                                  |
+| Beispiel                                              | Beschreibung                                  |
 |------------------------------------------------------|----------------------------------------------|
-| [Customheaderexample](customheaderexample.md)       | Veranschaulicht die Verwendung benutzerdefinierter Nachrichten Header.    |
+| [CustomHeaderExample](customheaderexample.md)       | Veranschaulicht die Verwendung benutzerdefinierter Nachrichtenheader.    |
 | [MessageEncodingExample](messageencodingexample.md) | Veranschaulicht das Codieren und Decodieren einer Nachricht. |
-| [Forwardmessageexample](forwardmessageexample.md)   | Veranschaulicht das Weiterleiten einer Nachricht.            |
+| [ForwardMessageExample](forwardmessageexample.md)   | Veranschaulicht die Weiterleitung einer Nachricht.            |
 
 
 
@@ -46,9 +46,9 @@ In den folgenden Beispielen wird die Verwendung von Nachrichten in wwsapi verans
 
 Die folgenden API-Elemente werden mit Nachrichten verwendet.
 
-| Rückruf                                                        | BESCHREIBUNG                                                                                                                                                                                                                              |
+| Rückruf                                                        | Beschreibung                                                                                                                                                                                                                              |
 |-----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Rückruf für WS- \_ Nachricht \_ abgeschlossen \_**](/windows/desktop/api/WebServices/nc-webservices-ws_message_done_callback) | Benachrichtigt den Aufrufer, dass die Nachricht die Verwendung der WS-XML-readerstruktur abgeschlossen hat, die \_ \_ für die wsleenvelopestart-Funktion bereitgestellt wurde, oder der WS \_ XML Writer-Struktur, die \_ für die wsschreiteenvelopestart-Funktion bereitgestellt wurde. |
+| [**WS \_ MESSAGE \_ \_ DONE-RÜCKRUF**](/windows/desktop/api/WebServices/nc-webservices-ws_message_done_callback) | Benachrichtigt den Aufrufer, dass die Verwendung der WS XML READER-Struktur, die für die WsReadEnvevesStart-Funktion bereitgestellt wurde, oder der WS XML WRITER-Struktur abgeschlossen wurde, die für die \_ \_ \_ \_ WsWriteEnvevesStart-Funktion bereitgestellt wurde. |
 
 
 
@@ -58,13 +58,13 @@ Die folgenden API-Elemente werden mit Nachrichten verwendet.
 
 | Enumeration                                                      | Beschreibung                                                                                              |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| [**WS- \_ Adressierungs \_ Version**](/windows/desktop/api/WebServices/ne-webservices-ws_addressing_version)         | Die Version der Spezifikation, die für die Adressierungs Header verwendet wird.                                        |
-| [**WS- \_ Umschlag \_ Version**](/windows/desktop/api/WebServices/ne-webservices-ws_envelope_version)             | Die Version der Spezifikation, die für die Umschlag Struktur verwendet wird.                                        |
-| [**WS- \_ Header \_ Attribute**](/windows/win32/api/webservices/ne-webservices-ws_xml_text_type)           | Ein Satz von Flags, die die SOAP MustUnderstand-und relayattribute eines Headers darstellen.                    |
-| [**WS \_ - \_ Headertyp**](/windows/desktop/api/WebServices/ne-webservices-ws_header_type)                       | Der Typ des Headers.                                                                                  |
-| [**WS- \_ Nachrichten \_ Initialisierung**](/windows/desktop/api/WebServices/ne-webservices-ws_message_initialization) | Gibt an, welche Header das [**wsinitializemess**](/windows/desktop/api/WebServices/nf-webservices-wsinitializemessage) der Nachricht hinzufügen soll. |
-| [**WS- \_ Nachrichten \_ Eigenschaften- \_ ID**](/windows/desktop/api/WebServices/ne-webservices-ws_message_property_id)      | Die ID der einzelnen Nachrichten Eigenschaften.                                                                         |
-| [**WS- \_ Nachrichten \_ Status**](/windows/desktop/api/WebServices/ne-webservices-ws_message_state)                   | Der Status der Nachricht.                                                                                |
+| [**\_WS-ADRESSIERUNGSVERSION \_**](/windows/desktop/api/WebServices/ne-webservices-ws_addressing_version)         | Die Version der Spezifikation, die für die Adressierungsheader verwendet wird.                                        |
+| [**\_WS-UMSCHLAGVERSION \_**](/windows/desktop/api/WebServices/ne-webservices-ws_envelope_version)             | Die Version der Spezifikation, die für die Umschlagstruktur verwendet wird.                                        |
+| [**\_WS-HEADERATTRIBUTE \_**](/windows/win32/api/webservices/ne-webservices-ws_xml_text_type)           | Ein Satz von Flags, die die SOAP-Attribute "understand" und "relay" eines Headers darstellen.                    |
+| [**\_WS-HEADERTYP \_**](/windows/desktop/api/WebServices/ne-webservices-ws_header_type)                       | Der Typ des Headers.                                                                                  |
+| [**\_WS-NACHRICHTENIN \_ INITIALISIERUNG**](/windows/desktop/api/WebServices/ne-webservices-ws_message_initialization) | Gibt an, welche Header [**WsInitializeMessage**](/windows/desktop/api/WebServices/nf-webservices-wsinitializemessage) der Nachricht hinzufügen soll. |
+| [**\_ \_ WS-NACHRICHTENEIGENSCHAFTS-ID \_**](/windows/desktop/api/WebServices/ne-webservices-ws_message_property_id)      | Die ID jeder Nachrichteneigenschaft.                                                                         |
+| [**\_WS-NACHRICHTENSTATUS \_**](/windows/desktop/api/WebServices/ne-webservices-ws_message_state)                   | Der Status der Nachricht.                                                                                |
 
 
 
@@ -72,31 +72,31 @@ Die folgenden API-Elemente werden mit Nachrichten verwendet.
 
 
 
-| Funktion                                                             | BESCHREIBUNG                                                                                                                                            |
+| Funktion                                                             | Beschreibung                                                                                                                                            |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Wsaddressmessage**](/windows/desktop/api/WebServices/nf-webservices-wsaddressmessage)                         | Weist einer Nachricht eine Zieladresse zu.                                                                                                            |
-| [**Wscheckmustverständlicherweise-Header**](/windows/desktop/api/WebServices/nf-webservices-wscheckmustunderstandheaders) | Überprüft, ob die angegebenen Header vom Empfänger entsprechend verstanden wurden.                                                                         |
-| [**Wscreatemess Age**](/windows/desktop/api/WebServices/nf-webservices-wscreatemessage)                           | Erstellt eine Instanz eines [WS- \_ Nachrichten](ws-message.md) Objekts.                                                                                         |
-| [**Wscreatemessageforchannel**](/windows/desktop/api/WebServices/nf-webservices-wscreatemessageforchannel)       | Erstellt eine Meldung, die für die Verwendung mit einem bestimmten Kanal geeignet ist.                                                                                 |
-| [**Wsfillbody**](/windows/desktop/api/WebServices/nf-webservices-wsfillbody)                                     | Stellt sicher, dass eine ausreichende Anzahl von Bytes in einer Nachricht zum Lesen verfügbar ist.                                                                |
-| [**Wsflushbody**](/windows/desktop/api/WebServices/nf-webservices-wsflushbody)                                   | Leert alle gesammelten Nachrichtentext Daten, die geschrieben wurden.                                                                                       |
-| [**Wsfreemess Age**](/windows/desktop/api/WebServices/nf-webservices-wsfreemessage)                               | Gibt die einer Nachricht zugeordnete Speicher Ressource frei.                                                                                                |
-| [**Wsgetcustomheader**](/windows/desktop/api/WebServices/nf-webservices-wsgetcustomheader)                       | Sucht den von der Anwendung definierten Header der Nachricht und deserialisiert ihn.                                                                               |
-| [**Wsgederader**](/windows/desktop/api/WebServices/nf-webservices-wsgetheader)                                   | Sucht einen bestimmten Standard Header in der Nachricht und deserialisiert ihn.                                                                                 |
-| [**Wsgetheiaderattribute**](/windows/desktop/api/WebServices/nf-webservices-wsgetheaderattributes)               | Füllt einen ULONG-Parameter mit den [**WS- \_ Header \_ Attributen**](/windows/win32/api/webservices/ne-webservices-ws_xml_text_type) aus dem Header Element auf, auf dem der Reader positioniert ist. |
-| [**Wsgetmessageproperty**](/windows/desktop/api/WebServices/nf-webservices-wsgetmessageproperty)                 | Ruft eine angegebene Nachrichten Objekt Eigenschaft ab.                                                                                                         |
-| [**Wsinitializemess**](/windows/desktop/api/WebServices/nf-webservices-wsinitializemessage)                   | Initialisiert die Header für die Nachricht zur Vorbereitung der Verarbeitung.                                                                                 |
-| [**Wsmarkheaderasverstanden**](/windows/desktop/api/WebServices/nf-webservices-wsmarkheaderasunderstood)         | Markiert einen Header so, wie er von der Anwendung verstanden wird.                                                                                                       |
-| [**Wsread Body**](/windows/desktop/api/WebServices/nf-webservices-wsreadbody)                                     | Deserialisiert einen Wert aus dem XML-Reader der Nachricht.                                                                                               |
-| [**Wsumenvelopeend**](/windows/desktop/api/WebServices/nf-webservices-wsreadenvelopeend)                       | Liest die schließenden Elemente einer Nachricht.                                                                                                               |
-| [**Wsumenvelopestart**](/windows/desktop/api/WebServices/nf-webservices-wsreadenvelopestart)                   | Liest die Header der Nachricht und bereitet das Lesen der Textelemente vor.                                                                               |
-| [**Wsremovecustomheader**](/windows/desktop/api/WebServices/nf-webservices-wsremovecustomheader)                 | Entfernt einen benutzerdefinierten Header aus der Nachricht.                                                                                                              |
-| [**Wsremoveheader**](/windows/desktop/api/WebServices/nf-webservices-wsremoveheader)                             | Entfernt das standardmäßige [**WS- \_ Header- \_ Typobjekt**](/windows/desktop/api/WebServices/ne-webservices-ws_header_type) aus einer Nachricht.                                                                 |
-| [**Wsresetmessage**](/windows/desktop/api/WebServices/nf-webservices-wsresetmessage)                             | Legt den Nachrichten Zustand auf den **WS- \_ Nachrichten \_ Zustand " \_ empty**" zurück.                                                                                          |
-| [**Wssetheiader**](/windows/desktop/api/WebServices/nf-webservices-wssetheader)                                   | Fügt den angegebenen Standard Header in der Nachricht hinzu oder ersetzt diesen.                                                                                         |
-| [**Wsschreitebody**](/windows/desktop/api/WebServices/nf-webservices-wswritebody)                                   | Schreibt einen Wert in den Text einer Nachricht.                                                                                                               |
-| [**Wsschreiteenvelopeend**](/windows/desktop/api/WebServices/nf-webservices-wswriteenvelopeend)                     | Schreibt die schließenden Elemente einer Meldung.                                                                                                              |
-| [**Wsschreiteenvelopestart**](/windows/desktop/api/WebServices/nf-webservices-wswriteenvelopestart)                 | Schreibt den Anfang der Nachricht einschließlich des aktuellen Satzes von Headern der Nachricht und bereitet das Schreiben der Textelemente vor.                           |
+| [**WsAddressMessage**](/windows/desktop/api/WebServices/nf-webservices-wsaddressmessage)                         | Weist einer Nachricht eine Zieladresse zu.                                                                                                            |
+| [**WsCheckMustUnderstandHeaders**](/windows/desktop/api/WebServices/nf-webservices-wscheckmustunderstandheaders) | Überprüft, ob der Empfänger die angegebenen Header richtig verstanden hat.                                                                         |
+| [**WsCreateMessage**](/windows/desktop/api/WebServices/nf-webservices-wscreatemessage)                           | Erstellt eine Instanz eines [WS \_ MESSAGE-Objekts.](ws-message.md)                                                                                         |
+| [**WsCreateMessageForChannel**](/windows/desktop/api/WebServices/nf-webservices-wscreatemessageforchannel)       | Erstellt eine Meldung, die für die Verwendung mit einem bestimmten Kanal geeignet ist.                                                                                 |
+| [**WsFillBody**](/windows/desktop/api/WebServices/nf-webservices-wsfillbody)                                     | Stellt sicher, dass in einer Nachricht eine ausreichende Anzahl von Bytes zum Lesen verfügbar ist.                                                                |
+| [**WsFlushBody**](/windows/desktop/api/WebServices/nf-webservices-wsflushbody)                                   | Leert alle akkumulierten Nachrichtentextdaten, die geschrieben wurden.                                                                                       |
+| [**WsFreeMessage**](/windows/desktop/api/WebServices/nf-webservices-wsfreemessage)                               | Gibt die einer Nachricht zugeordnete Speicherressource frei.                                                                                                |
+| [**WsGetCustomHeader**](/windows/desktop/api/WebServices/nf-webservices-wsgetcustomheader)                       | Sucht den anwendungsdefinierten Header der Nachricht und deserialisiert ihn.                                                                               |
+| [**WsGetHeader**](/windows/desktop/api/WebServices/nf-webservices-wsgetheader)                                   | Sucht einen bestimmten Standardheader in der Nachricht und deserialisiert ihn.                                                                                 |
+| [**WsGetHeaderAttributes**](/windows/desktop/api/WebServices/nf-webservices-wsgetheaderattributes)               | Füllt einen ULONG-Parameter mit [**den WS \_ HEADER \_ ATTRIBUTES aus**](/windows/win32/api/webservices/ne-webservices-ws_xml_text_type) dem Headerelement auf, auf dem der Reader positioniert ist. |
+| [**WsGetMessageProperty**](/windows/desktop/api/WebServices/nf-webservices-wsgetmessageproperty)                 | Ruft eine angegebene Message-Objekteigenschaft ab.                                                                                                         |
+| [**WsInitializeMessage**](/windows/desktop/api/WebServices/nf-webservices-wsinitializemessage)                   | Initialisiert die Header für die Nachricht als Vorbereitung für die Verarbeitung.                                                                                 |
+| [**WsMarkHeaderAsUnderstood**](/windows/desktop/api/WebServices/nf-webservices-wsmarkheaderasunderstood)         | Markiert einen Header als von der Anwendung verstanden.                                                                                                       |
+| [**WsReadBody**](/windows/desktop/api/WebServices/nf-webservices-wsreadbody)                                     | Deserialisiert einen Wert aus dem XML-Reader der Nachricht.                                                                                               |
+| [**WsReadEnvevesEnd**](/windows/desktop/api/WebServices/nf-webservices-wsreadenvelopeend)                       | Liest die schließenden Elemente einer Nachricht.                                                                                                               |
+| [**WsReadEnvevesStart**](/windows/desktop/api/WebServices/nf-webservices-wsreadenvelopestart)                   | Liest die Header der Nachricht und bereitet das Lesen der Textelemente vor.                                                                               |
+| [**WsRemoveCustomHeader**](/windows/desktop/api/WebServices/nf-webservices-wsremovecustomheader)                 | Entfernt einen benutzerdefinierten Header aus der Nachricht.                                                                                                              |
+| [**WsRemoveHeader**](/windows/desktop/api/WebServices/nf-webservices-wsremoveheader)                             | Entfernt das [**WS \_ HEADER \_ TYPE-Standardobjekt**](/windows/desktop/api/WebServices/ne-webservices-ws_header_type) aus einer Nachricht.                                                                 |
+| [**WsResetMessage**](/windows/desktop/api/WebServices/nf-webservices-wsresetmessage)                             | Legt den Nachrichtenzustand wieder auf **WS \_ MESSAGE STATE \_ EMPTY \_ fest.**                                                                                          |
+| [**WsSetHeader**](/windows/desktop/api/WebServices/nf-webservices-wssetheader)                                   | Fügt den angegebenen Standardheader in der Nachricht hinzu oder ersetzt ihn.                                                                                         |
+| [**WsWriteBody**](/windows/desktop/api/WebServices/nf-webservices-wswritebody)                                   | Schreibt einen Wert in den Text einer Nachricht.                                                                                                               |
+| [**WsWriteEnvevesEnd**](/windows/desktop/api/WebServices/nf-webservices-wswriteenvelopeend)                     | Schreibt die schließenden Elemente einer Nachricht.                                                                                                              |
+| [**WsWriteEnvevesStart**](/windows/desktop/api/WebServices/nf-webservices-wswriteenvelopestart)                 | Schreibt den Anfang der Nachricht einschließlich des aktuellen Sets von Headern der Nachricht und bereitet das Schreiben der Textelemente vor.                           |
 
 
 
@@ -104,9 +104,9 @@ Die folgenden API-Elemente werden mit Nachrichten verwendet.
 
 
 
-| Handle                        | BESCHREIBUNG                                         |
+| Handle                        | Beschreibung                                         |
 |-------------------------------|-----------------------------------------------------|
-| [WS- \_ Nachricht](ws-message.md) | Der nicht transparente Typ, der zum referenzieren eines Nachrichten Objekts verwendet wird. |
+| [\_WS-NACHRICHT](ws-message.md) | Der nicht transparente Typ, der verwendet wird, um auf ein Nachrichtenobjekt zu verweisen. |
 
 
 
@@ -114,13 +114,13 @@ Die folgenden API-Elemente werden mit Nachrichten verwendet.
 
 
 
-| Struktur                                                | BESCHREIBUNG                                                                          |
+| Struktur                                                | Beschreibung                                                                          |
 |----------------------------------------------------------|--------------------------------------------------------------------------------------|
-| [**WS- \_ Fehler**](/windows/desktop/api/WebServices/ns-webservices-ws_fault)                            | Ein Fehlerwert, der in den Text einer Nachricht übertragen wird, der einen Verarbeitungsfehler angibt. |
-| [**WS- \_ Fehler \_ Code**](/windows/desktop/api/WebServices/ns-webservices-ws_fault_code)                 | Stellt einen Fehlercode dar.                                                             |
-| [**WS- \_ Fehler \_ Ursache**](/windows/desktop/api/WebServices/ns-webservices-ws_fault_reason)             | Enthält eine Erläuterung des Fehlers.                                                |
-| [**WS- \_ Nachrichten \_ Eigenschaften**](/windows/desktop/api/WebServices/ns-webservices-ws_message_properties) | Gibt einen Satz von [**WS- \_ Nachrichten \_ Eigenschafts**](/windows/desktop/api/WebServices/ns-webservices-ws_message_property) Strukturen an.  |
-| [**WS- \_ Nachrichten \_ Eigenschaft**](/windows/desktop/api/WebServices/ns-webservices-ws_message_property)     | Gibt eine Nachrichten spezifische Einstellung an.                                                |
+| [**\_WS-FEHLER**](/windows/desktop/api/WebServices/ns-webservices-ws_fault)                            | Ein Fehlerwert, der im Text einer Nachricht enthalten ist und auf einen Verarbeitungsfehler hinweist. |
+| [**\_WS-FEHLERCODE \_**](/windows/desktop/api/WebServices/ns-webservices-ws_fault_code)                 | Stellt einen Fehlercode dar.                                                             |
+| [**\_WS-FEHLERURSACHE \_**](/windows/desktop/api/WebServices/ns-webservices-ws_fault_reason)             | Enthält eine Erläuterung des Fehlers.                                                |
+| [**\_WS-NACHRICHTENEIGENSCHAFTEN \_**](/windows/desktop/api/WebServices/ns-webservices-ws_message_properties) | Gibt einen Satz von [**WS \_ MESSAGE \_ PROPERTY-Strukturen**](/windows/desktop/api/WebServices/ns-webservices-ws_message_property) an.  |
+| [**WS \_ \_ MESSAGE-EIGENSCHAFT**](/windows/desktop/api/WebServices/ns-webservices-ws_message_property)     | Gibt eine nachrichtenspezifische Einstellung an.                                                |
 
 
 

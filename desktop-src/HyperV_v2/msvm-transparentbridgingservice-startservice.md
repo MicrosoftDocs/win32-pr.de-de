@@ -1,5 +1,5 @@
 ---
-description: 'StartService-Methode der Msvm_TransparentBridgingService-Klasse: Startet den Dienst.'
+description: 'StartService-Methode der Msvm_TransparentBridgingService Klasse: Startet den Dienst.'
 ms.assetid: f31f66ee-c4da-4dc2-94f2-eca0f780b053
 title: StartService-Methode der Msvm_TransparentBridgingService-Klasse
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: ef88168836d1e4a5f81efae81533036dc2b29045
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f0214c3572553d948c4cec2cf4cc55936e2030dd8da3912ffbcf5b22f8f1dd2e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582210"
 ---
 # <a name="startservice-method-of-the-msvm_transparentbridgingservice-class"></a>StartService-Methode der Msvm \_ TransparentBridgingService-Klasse
 
@@ -53,17 +53,17 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
