@@ -1,11 +1,11 @@
 ---
-title: msSFU-30-is-valid-Container-Attribut
-description: Enthält interne Daten, die vom Server für NIS verwendet werden, der speichert, ob der aktuelle Suchstamm gültig ist.
+title: msSFU-30-Is-Valid-Container-Attribut
+description: Enthält interne Daten, die vom Server für NIS verwendet werden und speichern, ob der aktuelle Suchstamm gültig ist.
 ms.assetid: 70ff1155-f8ab-48c2-900d-86664b30c59c
 ms.tgt_platform: multiple
 keywords:
-- msSFU-30-is-valid-Container Attribut AD-Schema
-- msSFU30IsValidContainer-Attribut AD-Schema
+- MSSFU-30-Is-Valid-Container-Attribut AD-Schema
+- AD-Schema des msSFU30IsValidContainer-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 22155223beca6167f3f380be6ea71ac0f3e5ef31
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b6c131d06be86cc71ebe40e63237df9bdea6caca13e9d24a69cfc80fe25b325a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761330"
 ---
-# <a name="mssfu-30-is-valid-container-attribute"></a>msSFU-30-is-valid-Container-Attribut
+# <a name="mssfu-30-is-valid-container-attribute"></a>msSFU-30-Is-Valid-Container-Attribut
 
-Enthält interne Daten, die vom Server für NIS verwendet werden, der speichert, ob der aktuelle Suchstamm gültig ist.
+Enthält interne Daten, die vom Server für NIS verwendet werden und speichern, ob der aktuelle Suchstamm gültig ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | msSFU-30-is-valid-Container          |
-| LDAP-Display-Name | msSFU30IsValidContainer              |
+| CN                | msSFU-30-Is-Valid-Container          |
+| Ldap-Anzeigename | msSFU30IsValidContainer              |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.6.18.1.350          |
-| System-ID-GUID    | 0dea42f 5-278d-4157-b4a7-49b59664915b |
+| System-Id-Guid    | 0dea42f5-278d-4157-b4a7-49b59664915b |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -55,16 +55,16 @@ Enthält interne Daten, die vom Server für NIS verwendet werden, der speichert,
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
 | System-Flags           | 0x00000000                                                     |
-| In verwendete Klassen        | [**msSFU-30-Domäne-Info**](c-mssfu30domaininfo.md)<br/> |
+| In verwendete Klassen        | [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md)<br/> |
 
 
 
@@ -76,16 +76,16 @@ Enthält interne Daten, die vom Server für NIS verwendet werden, der speichert,
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
 | System-Flags           | 0x00000000                                                     |
-| In verwendete Klassen        | [**msSFU-30-Domäne-Info**](c-mssfu30domaininfo.md)<br/> |
+| In verwendete Klassen        | [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md)<br/> |
 
 
 
@@ -97,16 +97,16 @@ Enthält interne Daten, die vom Server für NIS verwendet werden, der speichert,
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
 | System-Flags           | 0x00000000                                                     |
-| In verwendete Klassen        | [**msSFU-30-Domäne-Info**](c-mssfu30domaininfo.md)<br/> |
+| In verwendete Klassen        | [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md)<br/> |
 
 
 
@@ -118,16 +118,16 @@ Enthält interne Daten, die vom Server für NIS verwendet werden, der speichert,
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
 | Ist indiziert             | Richtig                                                           |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
 | System-Flags           | 0x00000000                                                     |
-| In verwendete Klassen        | [**msSFU-30-Domäne-Info**](c-mssfu30domaininfo.md)<br/> |
+| In verwendete Klassen        | [**msSFU-30-Domain-Info**](c-mssfu30domaininfo.md)<br/> |
 
 
 

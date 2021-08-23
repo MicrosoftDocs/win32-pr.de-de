@@ -1,9 +1,9 @@
 ---
-title: TVM_SETEXTENDEDSTYLE Meldung (kommstrg. h)
-description: Teilt dem Strukturansicht-Steuerelement mit, dass erweiterte Stile festgelegt werden. Senden Sie diese Nachricht, oder verwenden Sie das Makro TreeView-Element "- \_ textendedstyle".
+title: TVM_SETEXTENDEDSTYLE (Commctrl.h)
+description: Informiert das Strukturansicht-Steuerelement über das Festlegen erweiterter Stile. Senden Sie diese Nachricht, oder verwenden Sie das Makro TreeView \_ SetExtendedStyle.
 ms.assetid: 35cb6ac8-1c1e-4ecd-88b2-878d3f6ccaa5
 keywords:
-- Windows-Steuerelemente für TVM_SETEXTENDEDSTYLE Meldung
+- TVM_SETEXTENDEDSTYLE von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c450f72f85e40514c35f08284428feec4f7caf9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d13d99a2f7a27475c30867f007f45d7525118d3077ebdce235c6bd33e1f8aafe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517957"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119750960"
 ---
-# <a name="tvm_setextendedstyle-message"></a>TVM- \_ Meldung "abtextendedstyle"
+# <a name="tvm_setextendedstyle-message"></a>TVM \_ SETEXTENDEDSTYLE-Meldung
 
-Teilt dem Strukturansicht-Steuerelement mit, dass erweiterte Stile festgelegt werden. Senden Sie diese Nachricht, oder verwenden Sie das Makro TreeView-Element "- [**\_ textendedstyle**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setextendedstyle)".
+Informiert das Strukturansicht-Steuerelement über das Festlegen erweiterter Stile. Senden Sie diese Nachricht, oder verwenden Sie das [**Makro TreeView \_ SetExtendedStyle**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setextendedstyle).
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,24 +32,24 @@ Teilt dem Strukturansicht-Steuerelement mit, dass erweiterte Stile festgelegt we
 *wParam* 
 </dt> <dd>
 
-Maske, die verwendet wird, um die festzulegenden Stile auszuwählen.
+Maske zum Auswählen der stils, die festgelegt werden sollen.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der-Wert, der den erweiterten Stil angibt. Weitere Informationen zu Stilen finden Sie Unterstruktur [Ansicht-Steuerelement erweiterte Stile](tree-view-control-window-extended-styles.md).
+Ein Wert, der den erweiterten Stil angibt. Weitere Informationen zu Stilen finden Sie unter [Strukturansicht-Steuerelement Erweiterte Stile.](tree-view-control-window-extended-styles.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Nachricht erfolgreich ist, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Meldung erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die erweiterten Stile für ein Strukturansicht-Steuerelement haben nichts mit den erweiterten Stilen zu tun, die mit der Funktion " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " oder der Funktion " [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)" verwendet werden.
+Die erweiterten Stile für ein Strukturansicht-Steuerelement haben nichts mit den erweiterten Stilen zu tun, die mit der [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) oder der [**Funktion SetWindowLong verwendet werden.**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Die erweiterten Stile für ein Strukturansicht-Steuerelement haben nichts mit de
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

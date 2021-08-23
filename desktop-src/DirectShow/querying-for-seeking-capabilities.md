@@ -1,28 +1,28 @@
 ---
-description: Abfragen der Suchfunktionen
+description: Abfragen von Suchfunktionen
 ms.assetid: d1d8c708-75f2-4dc7-a33a-8dd2cea0ee00
-title: Abfragen der Suchfunktionen
+title: Abfragen von Suchfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2aa763ab11267da0a9a13a920285491d83273a8d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7d1d4389d9e5fcf1466a039ae48bbffb2c26a41c29281101984f6a7a291789f1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747450"
 ---
-# <a name="querying-for-seeking-capabilities"></a>Abfragen der Suchfunktionen
+# <a name="querying-for-seeking-capabilities"></a>Abfragen von Suchfunktionen
 
-Microsoft® DirectShow® unterstützt das Suchen über die [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) -Schnittstelle. Der Filter Graph-Manager macht diese Schnittstelle verfügbar, aber die Suchfunktion wird immer durch Filter im Diagramm implementiert.
+Microsoft® DirectShow® unterstützt die Suche über die [**IMediaSeeking-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) Der Filter Graph Manager macht diese Schnittstelle verfügbar, aber die Suchfunktionalität wird immer durch Filter im Diagramm implementiert.
 
-Für einige Daten kann kein Seeding durchgeführt werden. Beispielsweise können Sie keinen livevideostream von einer Kamera aus suchen. Wenn ein Datenstrom durchsuchbar ist, gibt es jedoch unterschiedliche Typen, die er unterstützen kann. Dazu gehören:
+Einige Daten können nicht gesucht werden. Beispielsweise können Sie keinen Livevideostream von einer Kamera aus suchen. Wenn ein Stream gesucht werden kann, gibt es jedoch verschiedene Suchtypen, die er unterstützen kann. Dazu zählen unter anderem folgende Einstellungen:
 
--   Suchen einer beliebigen Position im Stream.
--   Die Dauer des Streams wird abgerufen.
--   Abrufen der aktuellen Position innerhalb des Streams.
--   Spielen in umgekehrter Reihenfolge.
+-   Suchen nach einer beliebigen Position im Stream.
+-   Abrufen der Dauer des Streams.
+-   Abrufen der aktuellen Position im Stream.
+-   Wiedergabe in umgekehrter Richtung.
 
-Die **imediaseeking** -Schnittstelle definiert einen Satz von Flags, [**\_ sucht nach \_ Such \_ Funktionen**](/windows/win32/api/strmif/ne-strmif-am_seeking_seeking_capabilities), die die möglichen Suchfunktionen beschreiben. Um die Funktionen des Streams abzurufen, rufen Sie die [**imediaseeking:: getfunktionalitäten**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getcapabilities) -Methode auf. Die-Methode gibt eine bitweise Kombination von-Flags zurück. Die Anwendung kann Sie mit dem &-Operator (bitweiser **and-** Operator) testen. Der folgende Code überprüft beispielsweise, ob das Diagramm an einer beliebigen Position suchen kann:
+Die **IMediaSeeking-Schnittstelle** definiert einen Satz von Flags, [**AM SEEKING SEEKING \_ \_ \_ CAPABILITIES**](/windows/win32/api/strmif/ne-strmif-am_seeking_seeking_capabilities), die die möglichen Suchfunktionen beschreiben. Um die Funktionen des Streams abzurufen, rufen Sie die [**IMediaSeeking::GetCapabilities-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getcapabilities) auf. Die -Methode gibt eine bitweise Kombination von Flags zurück. Die Anwendung kann sie mit dem operator & (bitweises **AND)** testen. Der folgende Code überprüft beispielsweise, ob das Diagramm an einer beliebigen Position suchen kann:
 
 
 ```C++

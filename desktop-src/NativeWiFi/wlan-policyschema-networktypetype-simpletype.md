@@ -1,7 +1,7 @@
 ---
-description: Definiert die Typen von Drahtlos Netzwerken.
+description: Definiert die Funknetzwerktypen.
 ms.assetid: 03236db9-4f58-4fe3-82ff-d4b3a387490a
-title: einfacher networktypetype-Typ
+title: networkTypeType Simple Type
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: d0acb998c879e718a0e201418610bb0aa6db8c31
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 40184bb027f80826baa3ad56090755a2cd9ec630f9eb105e402d30a6ecf2661c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119800110"
 ---
-# <a name="networktypetype-simple-type"></a>einfacher networktypetype-Typ
+# <a name="networktypetype-simple-type"></a>networkTypeType Simple Type
 
-Der einfache Typ networktypetype definiert die Typen von Drahtlos Netzwerken. Es gibt zwei Arten von Netzwerken: Infrastruktur Netzwerke (ESS) und Ad-hoc-Netzwerke (IBSS).
+Der einfache NetworkTypeType-Typ definiert die Drahtlosnetzwerktypen. Es gibt zwei Arten von Netzwerken: Infrastrukturnetzwerke (ESS) und Ad-hoc-Netzwerke (IBSS).
 
 ``` syntax
 <xs:simpleType name="networkTypeType">
@@ -40,14 +40,14 @@ Der einfache Typ networktypetype definiert die Typen von Drahtlos Netzwerken. Es
 
 ## <a name="enumeration-values"></a>Enumerationswerte
 
-Der einfache Typ **Network Typetype** definiert die folgenden Werte:
+Der einfache **networkTypeType-Typ** definiert die folgenden Werte.
 
 
 
-| Wert | BESCHREIBUNG |
+| Wert | Beschreibung |
 |-------|-------------|
 | IBSS  |             |
-| Lich   |             |
+| Ess   |             |
 
 
 
@@ -57,8 +57,8 @@ Der einfache Typ **Network Typetype** definiert die folgenden Werte:
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

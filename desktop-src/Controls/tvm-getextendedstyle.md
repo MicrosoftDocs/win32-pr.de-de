@@ -1,9 +1,9 @@
 ---
-title: TVM_GETEXTENDEDSTYLE Meldung (kommstrg. h)
+title: TVM_GETEXTENDEDSTYLE (Commctrl.h)
 description: Ruft den erweiterten Stil für ein Strukturansicht-Steuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des TreeView \_ GetExtendedStyle-Makros.
 ms.assetid: adc74cc5-e741-4966-bf49-a4b0c67e645a
 keywords:
-- Windows-Steuerelemente für TVM_GETEXTENDEDSTYLE Meldung
+- TVM_GETEXTENDEDSTYLE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 579a00e125389ff56c7ff93370ab71945598dba7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a93eb22b3dfdbe05365d28a7c93bfa9df3619796f9b4ae9ec603c74da252c5a1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859234"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119834200"
 ---
-# <a name="tvm_getextendedstyle-message-commctrlh"></a>TVM_GETEXTENDEDSTYLE Meldung (kommstrg. h)
+# <a name="tvm_getextendedstyle-message-commctrlh"></a>TVM_GETEXTENDEDSTYLE (Commctrl.h)
 
-Ruft den erweiterten Stil für ein Strukturansicht-Steuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des [**TreeView \_ GetExtendedStyle**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_getextendedstyle) -Makros.
+Ruft den erweiterten Stil für ein Strukturansicht-Steuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des [**TreeView \_ GetExtendedStyle-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_getextendedstyle)
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Ruft den erweiterten Stil für ein Strukturansicht-Steuerelement ab. Senden Sie 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert des erweiterten Stils zurück. Weitere Informationen zu Stilen finden Sie Unterstruktur [Ansicht-Steuerelement erweiterte Stile](tree-view-control-window-extended-styles.md).
+Gibt den Wert des erweiterten Stils zurück. Weitere Informationen zu Stilen finden Sie unter [Strukturansicht-Steuerelement Erweiterte Stile.](tree-view-control-window-extended-styles.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die erweiterten Stile für ein Strukturansicht-Steuerelement haben nichts mit den erweiterten Stilen zu tun, die mit der Funktion " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " oder der Funktion " [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)" verwendet werden.
+Die erweiterten Stile für ein Strukturansicht-Steuerelement haben nichts mit den erweiterten Stilen zu tun, die mit der [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) oder der [**Funktion SetWindowLong verwendet werden.**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Die erweiterten Stile für ein Strukturansicht-Steuerelement haben nichts mit de
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

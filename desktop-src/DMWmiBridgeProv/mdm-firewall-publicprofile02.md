@@ -1,6 +1,6 @@
 ---
 title: MDM_Firewall_PublicProfile02-Klasse
-description: Die MDM- \_ Firewall \_ PublicProfile02-Klasse wird verwendet, um die Windows Defender Firewall-Einstellungen zu konfigurieren.
+description: Die MDM \_ Firewall \_ PublicProfile02-Klasse wird verwendet, um Windows Defender Firewalleinstellungen zu konfigurieren.
 ms.assetid: 5524b931-10fa-43dc-8901-238312ecb6a8
 keywords:
 - MDM_Firewall_PublicProfile02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 530bac28c33b9ed3937f962a7f040e82b2ee1919
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6785607dcf02dae945b7f872ab7a98dd0d4f8de20e2f6ea7f2e5e66df2888fef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119825660"
 ---
-# <a name="mdm_firewall_publicprofile02-class"></a>MDM- \_ Firewall \_ PublicProfile02-Klasse
+# <a name="mdm_firewall_publicprofile02-class"></a>MDM \_ Firewall \_ PublicProfile02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Firewall \_ PublicProfile02-Klasse wird verwendet, um die Windows Defender Firewall-Einstellungen zu konfigurieren.
+Die MDM \_ Firewall \_ PublicProfile02-Klasse wird verwendet, um Windows Defender Firewalleinstellungen zu konfigurieren.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -57,17 +57,17 @@ class MDM_Firewall_PublicProfile02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Firewall \_ PublicProfile02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Firewall \_ PublicProfile02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Firewall \_ PublicProfile02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Firewall \_ PublicProfile02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowlocalipsecpolicymerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
+[AllowLocalIpsecPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -78,7 +78,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowlocalpolicymerge](/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
+[AllowLocalPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -89,7 +89,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Authappsallowuserpräfemerge](/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
+[AuthAppsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -100,7 +100,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Defaultinboundaction](/windows/client-management/mdm/firewall-csp#defaultinboundaction)
+[DefaultInboundAction](/windows/client-management/mdm/firewall-csp#defaultinboundaction)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -111,7 +111,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Defaultoutboundaction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+[DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -122,7 +122,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableinboundbenachrichtigungen](/windows/client-management/mdm/firewall-csp#disableinboundnotifications)
+[DisableInboundNotifications](/windows/client-management/mdm/firewall-csp#disableinboundnotifications)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -133,7 +133,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablestealthmode](/windows/client-management/mdm/firewall-csp#disablestealthmode)
+[DisableStealthMode](/windows/client-management/mdm/firewall-csp#disablestealthmode)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -144,7 +144,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablestealthmodeipsecsecuredpacketexemption](/windows/client-management/mdm/firewall-csp#disablestealthmodeipsecsecuredpacketexemption)
+[DisableStealthModeIpsecSecuredPacketExemption](/windows/client-management/mdm/firewall-csp#disablestealthmodeipsecsecuredpacketexemption)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -155,7 +155,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableunicastresponabstomulticastbroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
+[DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -177,7 +177,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Globalportsallowuserpräfemerge](/windows/client-management/mdm/firewall-csp#globalportsallowuserprefmerge)
+[GlobalPortsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#globalportsallowuserprefmerge)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -191,7 +191,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -202,10 +202,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -233,10 +233,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                       |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                              |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                              |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl>  |
 
 

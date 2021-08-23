@@ -1,21 +1,21 @@
 ---
-description: Informieren Sie sich über die System.ItemFolderPathDisplay-Eigenschaft, die den benutzerfreundlichen Anzeigepfad des übergeordneten Ordners eines Elements darstellt.
+description: Erfahren Sie mehr über die System.ItemFolderPathDisplay-Eigenschaft, die den benutzerfreundlichen Anzeigepfad des übergeordneten Ordners eines Elements darstellt.
 ms.assetid: 16f67edc-ca8a-4c2e-9d9b-be8600446e51
 title: System.ItemFolderPathDisplay
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c12909b29790ea2c016154cea9fccf7c53e45630
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: e8fd2288f12073fe8e36707bf49aca2bc5e000d0bbe25d95fba0736b4e77af44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112403933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119822340"
 ---
 # <a name="systemitemfolderpathdisplay"></a>System.ItemFolderPathDisplay
 
 Der benutzerfreundliche Anzeigepfad des übergeordneten Ordners eines Elements.
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription
@@ -31,11 +31,11 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 
-Wenn [System.ItemPathDisplay](./props-system-itempathdisplay.md) VT \_ EMPTY ist, sollte diese Eigenschaft ebenfalls leer sein. Andernfalls sollte sie entsprechend von der Datenquelle aus System.ItemPathDisplay abgeleitet werden.
+Wenn [System.ItemPathDisplay](./props-system-itempathdisplay.md) VT \_ EMPTY ist, sollte diese Eigenschaft ebenfalls leer sein. Andernfalls sollte sie von der Datenquelle von System.ItemPathDisplay entsprechend abgeleitet werden.
 
 Beispielwerte:
 
@@ -43,11 +43,11 @@ Beispielwerte:
 
 | Pfad                                   | ItemFolderPathDisplay    |
 |----------------------------------------|--------------------------|
-| c: \\ dateien \\ persönlich \\hello.txt         | c: \\ Dateien \\ persönlich      |
-| \\\\\\server share \\ mydir \\goodnews.doc | \\\\Serverfreigabe \\ \\ mydir |
-| \\\\server \\ share \\numbers.xls         | \\\\\\Serverfreigabe        |
-| c: \\ food \\ MyFolder                     | c: \\ Lebensmittel                 |
-| /Mailbox Account/Inbox/'Re: Hello!'    | /Postfachkonto/Posteingang   |
+| c: \\ Persönliche \\ Dateienhello.txt \\         | c: \\ Persönliche \\ Dateien      |
+| \\\\server \\ share \\ mydir \\goodnews.doc | \\\\Serverfreigabe \\ \\ mydir |
+| \\\\\\ \\ Serverfreigabe-numbers.xls         | \\\\\\Serverfreigabe        |
+| c: \\ food \\ MyFolder                     | c: \\ Essen                 |
+| /Postfachkonto/Posteingang/'Re: Hello!    | /Postfachkonto/Posteingang   |
 
 
 

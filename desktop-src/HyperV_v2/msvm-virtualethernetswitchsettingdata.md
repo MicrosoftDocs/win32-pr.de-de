@@ -1,5 +1,5 @@
 ---
-description: Stellt die aktuelle Konfiguration eines virtuellen Ethernet-Switchs dar.
+description: Stellt die aktuelle Konfiguration eines virtuellen Ethernet-Switches dar.
 ms.assetid: a7c03517-332d-47ce-8e04-c2187bcb2977
 title: Msvm_VirtualEthernetSwitchSettingData-Klasse
 ms.topic: reference
@@ -42,16 +42,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 3eccbd9dabe853f01c54c78ca651d590afc49f17
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bbd8cd77a96301187e9b5c9f8544a23b616bf9db78af6560296660b0a3995bed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681240"
 ---
-# <a name="msvm_virtualethernetswitchsettingdata-class"></a>MSVM \_ virtualethernetzwitchsettingdata-Klasse
+# <a name="msvm_virtualethernetswitchsettingdata-class"></a>Msvm \_ VirtualEthernetSwitchSettingData-Klasse
 
-Stellt die aktuelle Konfiguration eines virtuellen Ethernet-Switchs dar.
+Stellt die aktuelle Konfiguration eines virtuellen Ethernet-Switches dar.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -95,104 +95,104 @@ class Msvm_VirtualEthernetSwitchSettingData : CIM_VirtualEthernetSwitchSettingDa
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualethernetzwitchsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualEthernetSwitchSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualethernetzwitchsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualEthernetSwitchSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Associatedresourcepool**
+**AssociatedResourcePool**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Liste der Host Ressourcenpools, die zugeordnet werden müssen oder die derzeit dem Ethernet-Switch zum Zweck der Zuordnung von Ethernet-Verbindungen zwischen einem virtuellen Computer und einem Ethernet-Switch zugeordnet sind. Jeder Wert muss dem in DSP0207 definierten produktionswbem- \_ URI \_ untypedinstancepath entsprechen. Diese Eigenschaft wird von **CIM \_ virtualethernettwitchsettingdata** geerbt.
+Eine Liste der Hostressourcenpools, die zugeordnet werden sollen oder die derzeit dem Ethernet-Switch zugeordnet sind, um Ethernetverbindungen zwischen einem virtuellen Computer und einem Ethernet-Switch zu erstellen. Jeder Wert muss dem WBEM-Produktions-URI \_ \_ UntypedInstancePath entsprechen, wie in DSP0207 definiert. Diese Eigenschaft wird von **CIM \_ VirtualEthernetSwitchSettingData geerbt.**
 
 </dd> <dt>
 
-**Automatikrecoveryaction**
+**AutomaticRecoveryAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die für den virtuellen Computer auszuführende Aktion, wenn die von der virtuellen Maschine ausgeführte Software ausfällt. Fehler sind in diesem Fall ein Fehler, der von der Host Plattform erkannt werden kann, z. b. eine nicht unter brechbare Bedingung für den Wartezustand. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Aktion, die für den virtuellen Computer ausgeführt werden soll, wenn die vom virtuellen Computer ausgeführte Software ausfällt. Fehler sind in diesem Fall ein Fehler, der von der Hostplattform erkannt werden kann, z. B. eine nicht unterbrechbare Wartezustandsbedingung. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt**](/previous-versions//cc136954(v=vs.85))und nicht verwendet.
 
 </dd> <dt>
 
-**Automaticshutdownaction**
+**AutomaticShutdownAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Aktion, die beim Herunterfahren des Hosts für die virtuelle Maschine ausgeführt werden soll. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Aktion, die für den virtuellen Computer ausgeführt werden soll, wenn der Host heruntergefahren wird. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt**](/previous-versions//cc136954(v=vs.85))und nicht verwendet.
 
 </dd> <dt>
 
-**Automaticstartupaction**
+**AutomaticStartupAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Aktion, die für den virtuellen Computer ausgeführt werden soll, wenn der Host gestartet wird. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Aktion, die für den virtuellen Computer ausgeführt werden soll, wenn der Host gestartet wird. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt**](/previous-versions//cc136954(v=vs.85))und nicht verwendet.
 
 </dd> <dt>
 
-**Automaticstartupactiondelay**
+**AutomaticStartupActionDelay**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Verzögerungszeit, bevor der virtuelle Computer automatisch gestartet wird. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Die Verzögerung bis zum automatischen Start des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt**](/previous-versions//cc136954(v=vs.85))und nicht verwendet.
 
 </dd> <dt>
 
-**Automaticstartupactionsequencenumschlag**
+**AutomaticStartupActionSequenceNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zahl, die die relative Sequenz der Aktivierung virtueller Maschinen angibt, wenn das Host System gestartet wird. Eine niedrigere Zahl deutet auf eine frühere Aktivierung hin. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Eine Zahl, die die relative Sequenz der Aktivierung virtueller Computer angibt, wenn das Hostsystem gestartet wird. Eine niedrigere Zahl gibt eine frühere Aktivierung an. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt**](/previous-versions//cc136954(v=vs.85))und nicht verwendet.
 
 </dd> <dt>
 
-**Bandwidthreservationmode**
+**BandwidthReservationMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Bandbreiten Reservierungs Modus.
+Der Bandbreitenreservierungsmodus.
 
 <dt>
 
@@ -235,11 +235,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Einstellungen für virtuelle Ethernet-Switches" festgelegt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Virtual Ethernet Switch Einstellungen" festgelegt.
 
 </dd> <dt>
 
-**Configurationdataroot**
+**ConfigurationDataRoot**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -248,7 +248,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem Informationen zur Konfiguration der virtuellen Maschine gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Der Pfad eines Verzeichnisses, in dem Informationen zur Konfiguration des virtuellen Computers gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt**](/previous-versions//cc136954(v=vs.85))und nicht verwendet.
 
 </dd> <dt>
 
@@ -261,7 +261,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der relative Pfad und der Dateiname einer Datei, in der Informationen zur Konfiguration der virtuellen Maschine gespeichert werden. Dieser Pfad ist relativ zur **configurationdataroot** -Eigenschaft. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Der relative Pfad und Dateiname einer Datei, in der Informationen zur Konfiguration des virtuellen Computers gespeichert werden. Dieser Pfad ist relativ zur **ConfigurationDataRoot-Eigenschaft.** Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt**](/previous-versions//cc136954(v=vs.85))und nicht verwendet.
 
 </dd> <dt>
 
@@ -274,20 +274,20 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der eindeutige Bezeichner der Konfiguration der virtuellen Maschine. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Der eindeutige Bezeichner der Konfiguration des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt**](/previous-versions//cc136954(v=vs.85))und nicht verwendet.
 
 </dd> <dt>
 
-**CreationTime**
+**Creationtime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der Erstellung der Einstellungen. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Das Datum und die Uhrzeit der Erstellung der Einstellungen. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
@@ -300,7 +300,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird vom [**CIM \_ managedelta-Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "aktive Einstellungen für den virtuellen Ethernet-Switch" festgelegt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Aktive Einstellungen für den virtuellen Ethernet-Switch" festgelegt.
 
 </dd> <dt>
 
@@ -313,20 +313,20 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**Extensionorder**
+**ExtensionOrder**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Ein Array von eingebetteten Instanzen der [**MSVM-Klasse " \_ ethernetzwitchextension**](msvm-ethernetswitchextension.md) ", die die an diesen Switch gebundenen switcherweiterungen in der Reihenfolge darstellt, in der Sie angewendet werden.
+Ein Array eingebetteter Instanzen der [**Msvm \_ EthernetSwitchExtension-Klasse,**](msvm-ethernetswitchextension.md) die die an diesen Switch gebundenen Switcherweiterungen in der Reihenfolge darstellen, in der sie angewendet werden.
 
 </dd> <dt>
 
@@ -342,72 +342,72 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85)) geerbt und ist immer auf "Microsoft:*GUID* Geräte-ID- \\ *Daten*" festgelegt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt**](/previous-versions//cc136911(v=vs.85)) und immer auf "Microsoft:*GUID* \\ *DeviceSpecificData"* festgelegt.
 
 </dd> <dt>
 
-**Iovbevorzugt**
+**IOVPreferred**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob eine Single-root-e/a-Virtualisierung (SR-IOV) auf dem zugrunde liegenden Adapter bevorzugt oder nicht, sofern verfügbar.
+Gibt an, ob die E/A-Virtualisierung mit einem Stamm (SINGLE Root IO Virtualization, SR-IOV) auf dem zugrunde liegenden Adapter bevorzugt wird, sofern verfügbar.
 
 </dd> <dt>
 
-**Logdataroot**
+**LogDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem Protokollinformationen für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Der Pfad eines Verzeichnisses, in dem Protokollinformationen für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85))geerbt und nicht verwendet.
 
 </dd> <dt>
 
-**Maxnummacaddress**
+**MaxNumMACAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die maximale Anzahl von eindeutigen MAC-Adressen an, die vom Switch zur Unterstützung von Mac-Adressen, wie im IEEE 802,1-Standard definiert, erlernt werden kann. Diese Eigenschaft wird von **CIM \_ virtualethernettwitchsettingdata** geerbt.
+Gibt die maximale Anzahl eindeutiger MAC-Adressen an, die durch den Schalter zur Unterstützung von MAC-Adress-Learning erlernt werden können, wie im IEEE 802.1-Standard definiert. Diese Eigenschaft wird von **CIM \_ VirtualEthernetSwitchSettingData** geerbt.
 
 </dd> <dt>
 
-**Hinweise**
+**Notizen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Vom Benutzer bereitgestellte Hinweise zum virtuellen Computer. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Vom Benutzer bereitgestellte Hinweise, die sich auf den virtuellen Computer beziehen. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85))geerbt.
 
 </dd> <dt>
 
-**Packetdirectenabled**
+**PacketDirectEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob "packetdirect" verwendet werden soll, falls verfügbar. Der Standardwert ist **false**.
+Gibt an, ob PacketDirect verwendet werden soll, falls verfügbar. Der Standardwert ist **false**.
 
 > [!Note]  
 > Diese Eigenschaft wurde in Windows 10 und Windows Server 2016 hinzugefügt.
@@ -416,62 +416,62 @@ Gibt an, ob "packetdirect" verwendet werden soll, falls verfügbar. Der Standard
 
 </dd> <dt>
 
-**Wiederherstellbare Datei**
+**RecoveryFile**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der vollständige Pfad einer Datei, in der Wiederherstellungs bezogene Informationen für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Der vollständige Pfad einer Datei, in der wiederherstellungsbezogene Informationen für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85))geerbt und nicht verwendet.
 
 </dd> <dt>
 
-**Snapshotdataroot**
+**SnapshotDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem Informationen zu den Momentaufnahmen der virtuellen Maschine gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Der Pfad eines Verzeichnisses, in dem Informationen zu den Momentaufnahmen des virtuellen Computers gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85))geerbt und nicht verwendet.
 
 </dd> <dt>
 
-**Suspenddataroot**
+**SuspendDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem Informationen zu den Informationen zum Aussetzen der virtuellen Maschine gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Der Pfad eines Verzeichnisses, in dem Informationen zu den Informationen zum virtuellen Computer gespeichert werden, die sich auf das Anhalten beziehen. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85))geerbt und nicht verwendet.
 
 </dd> <dt>
 
-**Austauschen von Daten**
+**SwapFileDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem die Auslagerungs Dateien für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird nicht verwendet.
+Der Pfad eines Verzeichnisses, in dem Auslagerungsdateien für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85))geerbt und nicht verwendet.
 
 </dd> <dt>
 
-**Teamingenabled**
+**TeamingEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -480,48 +480,48 @@ Zugriffstyp: Lesen/Schreiben
 Gibt an, ob NIC-Teaming verwendet werden soll. Der Standardwert ist **false**.
 
 > [!Note]  
-> Diese Eigenschaft wurde in Windows 10 und Windows Server 2016 hinzugefügt.
+> Diese Eigenschaft wurde inWindows 10 und Windows Server 2016 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Virtualsystemidentifier**
+**VirtualSystemIdentifier**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Objekts, zu dem diese Einstellungsdaten gehören. Diese Eigenschaft ist eine außer Kraft Setzung von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85)).
+Der Name des [**CIM \_ ComputerSystem-Objekts,**](/windows/desktop/CIMWin32Prov/cim-computersystem) zu dem diese Einstellungsdaten gehören. Diese Eigenschaft ist eine Außerkraftsetzung von [**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85)).
 
 </dd> <dt>
 
-**Virtualsystemtype**
+**VirtualSystemType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Typ der virtuellen Maschine an, die die Einstellungsdaten darstellen. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Gibt den Typ des virtuellen Computers an, den die Einstellungsdaten darstellen. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85))geerbt.
 
 </dd> <dt>
 
-**Vlanconnection**
+**VLANConnection**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Liste von VLAN-Bezeichner, auf die dieser Switch zugreifen kann. Diese Eigenschaft wird von **CIM \_ virtualethernettwitchsettingdata** geerbt.
+Eine Liste der VLAN-Bezeichner, auf die dieser Switch zugreifen kann. Diese Eigenschaft wird von **CIM \_ VirtualEthernetSwitchSettingData** geerbt.
 
 </dd> </dl>
 
@@ -531,10 +531,10 @@ Eine Liste von VLAN-Bezeichner, auf die dieser Switch zugreifen kann. Diese Eige
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

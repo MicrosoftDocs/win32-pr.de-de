@@ -1,33 +1,33 @@
 ---
-description: Die lineagentsessionstatus- \_ Konstanten beschreiben verschiedene agentsitzungszustände.
+description: Die \_ LINEAGENTSESSIONSTATUS-Konstanten beschreiben verschiedene Agent-Sitzungszustände.
 ms.assetid: a9101c51-2288-4055-9381-4c68564361f8
-title: LINEAGENTSESSIONSTATUS_ Konstanten (TAPI. h)
+title: LINEAGENTSESSIONSTATUS_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 535981b61260c10e9386e413e9af4f7a0b1d469a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 75cbcfb6c590df20248f3eb0135a52f5eda47e9c4a4de8c9de7afc6b9927eeb0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682170"
 ---
-# <a name="lineagentsessionstatus_-constants"></a>Lineagentsessionstatus- \_ Konstanten
+# <a name="lineagentsessionstatus_-constants"></a>\_LINEAGENTSESSIONSTATUS-Konstanten
 
-Die **lineagentsessionstatus- \_ Konstanten** beschreiben verschiedene agentsitzungszustände.
+Die **\_ LINEAGENTSESSIONSTATUS-Konstanten** beschreiben verschiedene Agent-Sitzungszustände.
 
 <dl> <dt>
 
-<span id="LINEAGENTSESSIONSTATUS_NEWSESSION"></span><span id="lineagentsessionstatus_newsession"></span>**lineagentsessionstatus- \_ neusitzung**
+<span id="LINEAGENTSESSIONSTATUS_NEWSESSION"></span><span id="lineagentsessionstatus_newsession"></span>**LINEAGENTSESSIONSTATUS \_ NEWSESSION**
 </dt> <dd> <dl> <dt>
 
 
 
-Es wurde eine neue Agentsitzung erstellt.
+Eine neue Agentsitzung wurde erstellt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEAGENTSESSIONSTATUS_STATE"></span><span id="lineagentsessionstatus_state"></span>**Zustand "lineagentsessionstatus" \_**
+<span id="LINEAGENTSESSIONSTATUS_STATE"></span><span id="lineagentsessionstatus_state"></span>**LINEAGENTSESSIONSTATUS-STATUS \_**
 </dt> <dd> <dl> <dt>
 
 
@@ -37,12 +37,12 @@ Status der aktuellen Agentsitzung.
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEAGENTSESSIONSTATUS_UPDATEINFO"></span><span id="lineagentsessionstatus_updateinfo"></span>**lineagentsessionstatus \_ Update Info**
+<span id="LINEAGENTSESSIONSTATUS_UPDATEINFO"></span><span id="lineagentsessionstatus_updateinfo"></span>**LINEAGENTSESSIONSTATUS \_ UPDATEINFO**
 </dt> <dd> <dl> <dt>
 
 
 
-Aktualisieren der aktuellen agentsitzungsstatistik
+Aktualisieren der aktuellen Agent-Sitzungsstatistiken
 
 
 </dt> </dl> </dd> </dl>
@@ -53,8 +53,8 @@ Aktualisieren der aktuellen agentsitzungsstatistik
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,2<br/>                                                      |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.2<br/>                                                      |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

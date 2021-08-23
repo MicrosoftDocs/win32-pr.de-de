@@ -1,23 +1,23 @@
 ---
-title: Sichern und Wiederherstellen von Hardlinks
-description: Verwenden Sie zum Sichern und Wiederherstellen von Hardlinks die Funktionen "foratefile", "foratehardlink", "findfirstfileamew", "findnextfileamew", "BackupRead", "GetFileInformationByHandle" und "BackupWrite", wie in den folgenden Pseudo Codebeispielen gezeigt.
+title: Sichern und Wiederherstellen von hard-Links
+description: Verwenden Sie zum Sichern und Wiederherstellen harter Links die Funktionen CreateFile, CreateHardLink, FindFirstFileNameW, FindNextFileNameW, BackupRead, GetFileInformationByHandle und BackupWrite, wie in den folgenden Pseudocodebeispielen gezeigt.
 ms.assetid: 129e9cf4-8ab1-45d2-8e1a-4bc85b9de668
 keywords:
-- hardlinksicherung
+- 'Hardlinks: Sicherung'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c72155231295a1eb07b6b565c018b765693c8f46
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 25e5cf5a114160456e83e39cb06f441554f998df65bed2ea8f0e63b036c33c94
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119702220"
 ---
-# <a name="backing-up-and-restoring-hard-links"></a>Sichern und Wiederherstellen von Hardlinks
+# <a name="backing-up-and-restoring-hard-links"></a>Sichern und Wiederherstellen von hard-Links
 
-Verwenden Sie zum Sichern und Wiederherstellen von Hardlinks die Funktionen " [**foratefile**](/windows/desktop/api/fileapi/nf-fileapi-createfilea)", " [**foratehardlink**](/windows/desktop/api/winbase/nf-winbase-createhardlinka)", " [**findfirstfileamew**](/windows/desktop/api/fileapi/nf-fileapi-findfirstfilenamew)", " [**findnextfileamew**](/windows/desktop/api/fileapi/nf-fileapi-findnextfilenamew)", " [**BackupRead**](/windows/desktop/api/Winbase/nf-winbase-backupread)", " [**GetFileInformationByHandle**](/windows/desktop/api/fileapi/nf-fileapi-getfileinformationbyhandle)" und " [**BackupWrite**](/windows/desktop/api/Winbase/nf-winbase-backupwrite) ", wie in den folgenden Pseudo Codebeispielen gezeigt.
+Verwenden Sie zum Sichern und Wiederherstellen harter Links die Funktionen [**CreateFile,**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) [**CreateHardLink,**](/windows/desktop/api/winbase/nf-winbase-createhardlinka) [**FindFirstFileNameW,**](/windows/desktop/api/fileapi/nf-fileapi-findfirstfilenamew) [**FindNextFileNameW,**](/windows/desktop/api/fileapi/nf-fileapi-findnextfilenamew) [**BackupRead,**](/windows/desktop/api/Winbase/nf-winbase-backupread) [**GetFileInformationByHandle**](/windows/desktop/api/fileapi/nf-fileapi-getfileinformationbyhandle)und [**BackupWrite,**](/windows/desktop/api/Winbase/nf-winbase-backupwrite) wie in den folgenden Pseudocodebeispielen gezeigt.
 
-## <a name="pseudocode-algorithm-for-backing-up-hard-links"></a>Pseudo Code Algorithmus zum Sichern von Hardlinks
+## <a name="pseudocode-algorithm-for-backing-up-hard-links"></a>Pseudocodealgorithmus zum Sichern harter Links
 
 ``` syntax
 1.  Initialize and empty a list of known links. 
@@ -49,7 +49,7 @@ Verwenden Sie zum Sichern und Wiederherstellen von Hardlinks die Funktionen " [*
 22. EndWhile
 ```
 
-## <a name="pseudocode-algorithm-for-restoring-hard-links"></a>Pseudo Code Algorithmus zum Wiederherstellen von Hardlinks
+## <a name="pseudocode-algorithm-for-restoring-hard-links"></a>Pseudocodealgorithmus zum Wiederherstellen harter Links
 
 ``` syntax
 1.  While there are more files to restore 
@@ -60,9 +60,9 @@ Verwenden Sie zum Sichern und Wiederherstellen von Hardlinks die Funktionen " [*
 6.  EndWhile
 ```
 
-**Windows Server 2003 und Windows XP:** Die Funktionen [**findfirstdateinamew**](/windows/desktop/api/fileapi/nf-fileapi-findfirstfilenamew) und [**FindNextFile amew**](/windows/desktop/api/fileapi/nf-fileapi-findnextfilenamew) werden nicht unterstützt. Sie können stattdessen die Prozedur verwenden, die im folgenden Pseudo Codebeispiel beschrieben wird.
+**Windows Server 2003 und Windows XP:** Die [**Funktionen FindFirstFileNameW**](/windows/desktop/api/fileapi/nf-fileapi-findfirstfilenamew) [**und FindNextFileNameW**](/windows/desktop/api/fileapi/nf-fileapi-findnextfilenamew) werden nicht unterstützt. Sie können stattdessen die im folgenden Pseudocodebeispiel beschriebene Prozedur verwenden.
 
-## <a name="alternate-pseudocode-algorithm-for-backing-up-hard-links"></a>Alternativer Pseudocode-Algorithmus zum Sichern von Hardlinks
+## <a name="alternate-pseudocode-algorithm-for-backing-up-hard-links"></a>Alternativer Pseudocodealgorithmus zum Sichern harter Links
 
 ``` syntax
 1.  Initialize and empty a list of known links. 
@@ -91,6 +91,6 @@ Verwenden Sie zum Sichern und Wiederherstellen von Hardlinks die Funktionen " [*
 18. EndWhile
 ```
 
- 
+ 
 
- 
+ 

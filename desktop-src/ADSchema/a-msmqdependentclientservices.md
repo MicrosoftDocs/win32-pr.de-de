@@ -1,11 +1,11 @@
 ---
-title: MSMQ-abhängige-Client-Services-Attribut
-description: Gibt an, ob MSMQ, das auf diesem Computer installiert ist, MSMQ-abhängige Client Dienste bereitstellt.
+title: MSMQ-Dependent-Client-Services-Attribut
+description: Gibt an, ob die auf diesem Computer installierte MSMQ MSMQ-abhängige Clientdienste bietet.
 ms.assetid: 6f16db7f-f328-4fe2-9ecc-b40c1c845064
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MSMQ-abhängige Client Dienst Attribute
-- AD-Schema des msmqdependentclientservices-Attributs
+- AD-Schema des MSMQ-Dependent-Client-Services-Attributs
+- mSMQDependentClientServices-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a1ea2ccae62904fd4fc25e9ffaa5f93f2de0ab9
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b48a36fab430a7f3d150ff38cff3f1f40d2cbe3696a1d3a4e0eabc74d4f697dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957492"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119762660"
 ---
-# <a name="msmq-dependent-client-services-attribute"></a>MSMQ-abhängige-Client-Services-Attribut
+# <a name="msmq-dependent-client-services-attribute"></a>MSMQ-Dependent-Client-Services-Attribut
 
-Gibt an, ob MSMQ, das auf diesem Computer installiert ist, MSMQ-abhängige Client Dienste bereitstellt.
+Gibt an, ob die auf diesem Computer installierte MSMQ MSMQ-abhängige Clientdienste bietet.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MSMQ-abhängige Client Dienste       |
-| LDAP-Display-Name | msmqdependentclientservices          |
+| CN                | MSMQ-Dependent-Client-Services       |
+| Ldap-Anzeigename | mSMQDependentClientServices          |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1226              |
-| System-ID-GUID    | 2df90d76-009F -11d2-aa4c-00c04f d83a |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | 2df90d76-009f-11d2-aa4c-00c04fd7d83a |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Gibt an, ob MSMQ, das auf diesem Computer installiert ist, MSMQ-abhängige Clien
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
-| Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| Im globalen Katalog      | True                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
@@ -70,7 +70,7 @@ Gibt an, ob MSMQ, das auf diesem Computer installiert ist, MSMQ-abhängige Clien
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Gibt an, ob MSMQ, das auf diesem Computer installiert ist, MSMQ-abhängige Clien
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
-| Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| Im globalen Katalog      | True                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
@@ -100,10 +100,10 @@ Gibt an, ob MSMQ, das auf diesem Computer installiert ist, MSMQ-abhängige Clien
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
-| Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| Im globalen Katalog      | True                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
@@ -121,15 +121,15 @@ Gibt an, ob MSMQ, das auf diesem Computer installiert ist, MSMQ-abhängige Clien
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
+| Ist einwertig       | True                                                         |
 | Ist indiziert             | False                                                        |
-| Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| Im globalen Katalog      | True                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Gibt an, ob MSMQ, das auf diesem Computer installiert ist, MSMQ-abhängige Clien
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
+| Ist einwertig       | True                                                         |
 | Ist indiziert             | False                                                        |
-| Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| Im globalen Katalog      | True                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Gibt an, ob MSMQ, das auf diesem Computer installiert ist, MSMQ-abhängige Clien
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
+| Ist einwertig       | True                                                         |
 | Ist indiziert             | False                                                        |
-| Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| Im globalen Katalog      | True                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 

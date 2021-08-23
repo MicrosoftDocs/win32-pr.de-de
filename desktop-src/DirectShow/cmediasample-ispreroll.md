@@ -1,7 +1,7 @@
 ---
-description: 'Die ispreroll-Methode bestimmt, ob es sich bei diesem Beispiel um ein vorab Beispiel handelt. Eine ein Vorlauf ausgeführt-Stichprobe sollte nicht angezeigt werden. Diese Methode implementiert die imediasample:: ispreroll-Methode.'
+description: Die IsPreroll-Methode bestimmt, ob es sich bei diesem Beispiel um ein Preroll-Beispiel handelt. Ein Vorabrollbeispiel sollte nicht angezeigt werden. Diese Methode implementiert die IMediaSample::IsPreroll-Methode.
 ms.assetid: fbcf7aab-473c-49c1-9a8f-4a619f4e28f4
-title: Cmediasample. ispreroll-Methode (amfilter. h)
+title: CMediaSample.IsPreroll-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b40cf8fd6a1adb5186309f47da0f0ae3dc30412a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7f4c4b192d72c5edcfdb9c318f7420ca6ae5797446ec4f99cb6871aad2abd241
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634640"
 ---
-# <a name="cmediasampleispreroll-method"></a>Cmediasample. ispreroll-Methode
+# <a name="cmediasampleispreroll-method"></a>CMediaSample.IsPreroll-Methode
 
-Die- `IsPreroll` Methode bestimmt, ob es sich bei diesem Beispiel um ein vorab Beispiel handelt. Eine ein Vorlauf ausgeführt-Stichprobe sollte nicht angezeigt werden. Diese Methode implementiert die [**imediasample:: ispreroll**](/windows/desktop/api/Strmif/nf-strmif-imediasample-ispreroll) -Methode.
+Die `IsPreroll` -Methode bestimmt, ob es sich bei diesem Beispiel um ein Preroll-Beispiel handelt. Ein Vorabrollbeispiel sollte nicht angezeigt werden. Diese Methode implementiert die [**IMediaSample::IsPreroll-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample-ispreroll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "s OK" zurück \_ , wenn es sich bei dem Beispiel um ein vorab Beispiel handelt, \_ andernfalls "false".
+Gibt S \_ OK zurück, wenn es sich bei dem Beispiel um ein Prerollbeispiel handelt, \_ andernfalls S FALSE.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Member-Variable [**cmediasample:: m \_ dwFlags**](cmediasample-m-dwflags.md) gibt diese Eigenschaft an.
+Die [**Membervariable cMediaSample::m \_ dwFlags**](cmediasample-m-dwflags.md) gibt diese Eigenschaft an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Die Member-Variable [**cmediasample:: m \_ dwFlags**](cmediasample-m-dwflags.md)
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die Member-Variable [**cmediasample:: m \_ dwFlags**](cmediasample-m-dwflags.md)
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

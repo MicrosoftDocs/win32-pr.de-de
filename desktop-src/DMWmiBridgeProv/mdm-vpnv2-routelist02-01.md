@@ -1,6 +1,6 @@
 ---
 title: MDM_VPNv2_RouteList02_01-Klasse
-description: Die MDM \_ VPNv2 \_ RouteList02 \_ 01-Klasse enthält eine optionale Liste der Routen, die der Routing Tabelle für die VPN-Schnittstelle hinzugefügt werden sollen.
+description: Die MDM \_ VPNv2 \_ RouteList02 \_ 01-Klasse enthält eine optionale Liste von Routen, die der Routingtabelle für die VPN-Schnittstelle hinzugefügt werden sollen.
 ms.assetid: 4271b0c4-9d29-4148-b956-ac9306316c9b
 keywords:
 - MDM_VPNv2_RouteList02_01-Klasse
@@ -17,24 +17,24 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ebc274bb3efd2bc78850dd37c95b25db35c4cbe
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 14ea9725d70d3acfe4e6831d1d386aedecfd9374728b103d50b67aa15cb61ec9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040827"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119750270"
 ---
 # <a name="mdm_vpnv2_routelist02_01-class"></a>MDM \_ VPNv2 \_ RouteList02 \_ 01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ VPNv2 \_ RouteList02 \_ 01** -Klasse enthält eine optionale Liste der Routen, die der Routing Tabelle für die VPN-Schnittstelle hinzugefügt werden sollen.
+Die **MDM \_ VPNv2 \_ RouteList02 \_ 01-Klasse** enthält eine optionale Liste von Routen, die der Routingtabelle für die VPN-Schnittstelle hinzugefügt werden sollen.
 
-Dies ist erforderlich, wenn die VPN-Serversite über mehr Subnetze verfügt, die auf der IP-Adresse basieren, die der Schnittstelle zugeordnet ist.
+Dies ist für den Fall der aufteilungsbasierten Tunnelung erforderlich, wenn der VPN-Serverstandort mehr Subnetze aufwies, als das Standardsubnetz basierend auf der IP-Adresse, die der Schnittstelle zugewiesen ist.
 
-Alle Computer, auf denen TCP/IP ausgeführt wird, treffen Routing Entscheidungen. Diese Entscheidungen werden von der IP-Routing Tabelle gesteuert. Durch das Hinzufügen von Werten unter diesem Knoten wird die Routing Tabelle mit Routen für die VPN-Schnittstelle nach Verbindung aktualisiert. Die Werte unter diesem Knoten stellen das Ziel Präfix von IP-Routen dar. Ein Ziel Präfix besteht aus einem IP-Adress Präfix und einer Präfix Länge.
+Jeder Computer, auf dem TCP/IP ausgeführt wird, trifft Routingentscheidungen. Diese Entscheidungen werden durch die IP-Routingtabelle gesteuert. Durch das Hinzufügen von Werten unter diesem Knoten wird die Routingtabelle mit Routen für die VPN-Schnittstelle nach der Verbindung aktualisiert. Die Werte unter diesem Knoten stellen das Zielpräfix von IP-Routen dar. Ein Zielpräfix besteht aus einem IP-Adresspräfix und einer Präfixlänge.
 
-Wenn Sie hier eine Route hinzufügen, kann der Netzwerk Stapel den Datenverkehr ermitteln, der über die VPN-Schnittstelle für Split-Tunnel-VPN geleitet werden muss. Einige VPN-Server können dies während der Verbindungs Verhandlung konfigurieren und benötigen diese Informationen nicht im VPN-Profil. Wenden Sie sich an den VPN-Server Administrator, um zu ermitteln, ob Sie diese Informationen im VPN-Profil benötigen.
+Wenn Sie hier eine Route hinzufügen, kann der Netzwerkstapel den Datenverkehr identifizieren, der über die VPN-Schnittstelle für ein VPN mit geteilten Tunneln geleitet werden muss. Einige VPN-Server können dies während der Verbindungsaushandlung konfigurieren und benötigen diese Informationen nicht im VPN-Profil. Wenden Sie sich an Ihren VPN-Serveradministrator, um zu ermitteln, ob Sie diese Informationen im VPN-Profil benötigen.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -53,20 +53,20 @@ class MDM_VPNv2_RouteList02_01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ VPNv2 \_ RouteList02 \_ 01** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ VPNv2 \_ RouteList02 \_ 01-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ VPNv2 \_ RouteList02 \_ 01** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ VPNv2 \_ RouteList02 \_ 01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 [Adresse](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-routelist-routerowid-address)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -77,36 +77,36 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an.
+Identifiziert den Namen des übergeordneten Knotens.
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "*./Vendor/MSFT/VPNv2/profile* Name/RouteList".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/VPNv2/*ProfileName*/RouteList".
 
 </dd> <dt>
 
-[Prefixsize](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-routelist-routerowid-prefixsize)
+[PrefixSize](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-routelist-routerowid-prefixsize)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -123,19 +123,19 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

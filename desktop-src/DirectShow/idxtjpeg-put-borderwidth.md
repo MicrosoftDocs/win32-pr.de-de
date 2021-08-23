@@ -1,7 +1,7 @@
 ---
-description: Die Put \_ BorderWidth-Methode gibt die Breite des vollständigen Rahmens entlang der Kanten des Abbild Musters an.
+description: Die \_ put BorderWidth-Methode gibt die Breite des durchgezogenen Rahmens entlang der Ränder des Zurücksetzungsmusters an.
 ms.assetid: a618926a-efa4-47a2-9ce9-ae298ed41083
-title: Idxtjpeg::p ut_BorderWidth-Methode (qedit. h)
+title: IDxtJpeg::p ut_BorderWidth-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: df7435b8a516b818b6d7c86e907ba75cce86f6c2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d5c73121c3a7f4c1db45768fde1d19865648d7ada23ad488f417812471bd9912
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361454"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697438"
 ---
-# <a name="idxtjpegput_borderwidth-method"></a>Idxtjpeg::p UT \_ BorderWidth-Methode
+# <a name="idxtjpegput_borderwidth-method"></a>IDxtJpeg::p ut \_ BorderWidth-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `put_BorderWidth` Methode gibt die Breite des vollständigen Rahmens entlang der Kanten des-Abbild Musters an.
+Die `put_BorderWidth` -Methode gibt die Breite des Rahmens des Durchgangs entlang der Ränder des Zurücksetzungsmusters an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT put_BorderWidth(
 
 <dl> <dt>
 
-*NewVal* \[ in\]
+*newVal* \[ In\]
 </dt> <dd>
 
 Die Breite des Rahmens in Pixel.
@@ -54,17 +54,17 @@ Die Breite des Rahmens in Pixel.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,8 +74,8 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Idxtjpeg-Schnittstelle**](idxtjpeg.md)
+[**IDxtJpeg-Schnittstelle**](idxtjpeg.md)
 </dt> </dl>
 
  

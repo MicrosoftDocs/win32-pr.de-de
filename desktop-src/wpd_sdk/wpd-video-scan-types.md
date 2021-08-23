@@ -1,7 +1,7 @@
 ---
-description: Der \_ Enumerationstyp der WPD-Video Überprüfung \_ beschreibt, \_ wie die Felder in einer Video Datei codiert werden.
+description: Der WPD \_ VIDEO \_ SCAN \_ TYPES-Enumerationstyp beschreibt, wie die Felder in einer Videodatei codiert werden.
 ms.assetid: ea0dab57-6783-4d02-a43c-414e313f1e80
-title: WPD_VIDEO_SCAN_TYPES-Enumeration (portabledevice. h)
+title: WPD_VIDEO_SCAN_TYPES Enumeration (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: a636bc95fd3d25de20c2df413576a504c4fa1b96
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5f2c6f8a5707780bae6c8a135e3ca940fb4a77408c3df835b321b5b190644fcc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352845"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119703720"
 ---
-# <a name="wpd_video_scan_types-enumeration"></a>WPD \_ - \_ \_ videoscantypen-Enumeration
+# <a name="wpd_video_scan_types-enumeration"></a>WPD \_ VIDEO \_ SCAN \_ TYPES-Enumeration
 
-Der Enumerationstyp der **WPD- \_ Video \_ \_** Überprüfung beschreibt, wie die Felder in einer Video Datei codiert werden.
+Der **WPD \_ VIDEO SCAN \_ TYPES-Enumerationstyp \_** beschreibt, wie die Felder in einer Videodatei codiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,67 +46,67 @@ typedef enum WPD_VIDEO_SCAN_TYPES {
 
 <dl> <dt>
 
-<span id="WPD_VIDEO_SCAN_TYPE_UNUSED"></span><span id="wpd_video_scan_type_unused"></span>**WPD \_ - \_ \_ videoscantyp nicht \_ verwendet**
+<span id="WPD_VIDEO_SCAN_TYPE_UNUSED"></span><span id="wpd_video_scan_type_unused"></span>**\_WPD-VIDEOSCANTYP \_ \_ NICHT \_ VERWENDET**
 </dt> <dd>
 
-Der Überprüfungstyp wurde für diese Videodatei nicht definiert oder ist nicht anwendbar.
+Der Scantyp wurde für diese Videodatei nicht definiert oder ist nicht anwendbar.
 
 </dd> <dt>
 
-<span id="WPD_VIDEO_SCAN_TYPE_PROGRESSIVE"></span><span id="wpd_video_scan_type_progressive"></span>**WPD \_ - \_ \_ videoscantyp \_ progressiv**
+<span id="WPD_VIDEO_SCAN_TYPE_PROGRESSIVE"></span><span id="wpd_video_scan_type_progressive"></span>**\_WPD-VIDEOSCANTYP \_ \_ \_ PROGRESSIVE**
 </dt> <dd>
 
-Eine Progressive Scan Videodatei.
+Eine Progressive Scan-Videodatei.
 
 </dd> <dt>
 
-<span id="WPD_VIDEO_SCAN_TYPE_FIELD_INTERLEAVED_UPPER_FIRST"></span><span id="wpd_video_scan_type_field_interleaved_upper_first"></span>**Feld "WPD- \_ \_ videoscantyp" überlappend \_ \_ \_ \_ \_ zuerst**
+<span id="WPD_VIDEO_SCAN_TYPE_FIELD_INTERLEAVED_UPPER_FIRST"></span><span id="wpd_video_scan_type_field_interleaved_upper_first"></span>**WPD \_ VIDEO \_ SCAN \_ TYPE \_ FIELD \_ INTERLEAVED \_ UPPER \_ FIRST**
 </dt> <dd>
 
-Eine verschachtelte Videodatei, in der die Felder Alternativen und das obere Feld (mit Zeile 1) zuerst gezeichnet werden. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+Eine überlappte Videodatei, in der die Felder wechseln und das obere Feld (mit Zeile 1) zuerst gezeichnet wird. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 </dd> <dt>
 
-<span id="WPD_VIDEO_SCAN_TYPE_FIELD_INTERLEAVED_LOWER_FIRST"></span><span id="wpd_video_scan_type_field_interleaved_lower_first"></span>**das Feld "WPD- \_ \_ \_ videoscantyp" \_ \_ interleaved \_ Lower \_ First**
+<span id="WPD_VIDEO_SCAN_TYPE_FIELD_INTERLEAVED_LOWER_FIRST"></span><span id="wpd_video_scan_type_field_interleaved_lower_first"></span>**WPD \_ VIDEO \_ SCAN \_ TYPE \_ FIELD \_ INTERLEAVED \_ LOWER \_ FIRST**
 </dt> <dd>
 
-Eine verschachtelte Videodatei, in der die Felder alternativem Feld und das untere Feld (mit Zeile 2) zuerst gezeichnet werden. Weitere Informationen finden Sie unter Hinweise in diesem Abschnitt.
+Eine überlappte Videodatei, in der die Felder wechseln und das untere Feld (mit Zeile 2) zuerst gezeichnet wird. Weitere Informationen finden Sie in den Anmerkungen in diesem Abschnitt.
 
 </dd> <dt>
 
-<span id="WPD_VIDEO_SCAN_TYPE_FIELD_SINGLE_UPPER_FIRST"></span><span id="wpd_video_scan_type_field_single_upper_first"></span>**Feld "WPD- \_ \_ \_ videoscantyp" \_ \_ Single \_ Upper \_ First**
+<span id="WPD_VIDEO_SCAN_TYPE_FIELD_SINGLE_UPPER_FIRST"></span><span id="wpd_video_scan_type_field_single_upper_first"></span>**WPD \_ VIDEO \_ SCAN \_ TYPE \_ FIELD \_ SINGLE \_ UPPER \_ FIRST**
 </dt> <dd>
 
-Eine verschachtelte Videodatei, in der die Felder als zusammenhängende Beispiele gesendet werden und das obere Feld (mit Zeile 1) zuerst gezeichnet wird. Weitere Informationen finden Sie unter Hinweise in diesem Abschnitt.
+Eine überlappte Videodatei, an die die Felder als zusammenhängende Stichproben gesendet werden und das obere Feld (mit Zeile 1) zuerst gezeichnet wird. Weitere Informationen finden Sie in den Anmerkungen in diesem Abschnitt.
 
 </dd> <dt>
 
-<span id="WPD_VIDEO_SCAN_TYPE_FIELD_SINGLE_LOWER_FIRST"></span><span id="wpd_video_scan_type_field_single_lower_first"></span>**Feld "WPD- \_ \_ VideoScan \_ Type" \_ \_ Single \_ Lower \_ First**
+<span id="WPD_VIDEO_SCAN_TYPE_FIELD_SINGLE_LOWER_FIRST"></span><span id="wpd_video_scan_type_field_single_lower_first"></span>**WPD \_ VIDEO \_ SCAN \_ TYPE \_ FIELD \_ SINGLE \_ LOWER \_ FIRST**
 </dt> <dd>
 
-Eine verschachtelte Videodatei, in der die Felder als zusammenhängende Beispiele gesendet werden und das untere Feld (mit Zeile 2) zuerst gesendet wird.
+Eine überlappte Videodatei, an die die Felder als zusammenhängende Stichproben gesendet werden, und das untere Feld (mit Zeile 2) wird zuerst gesendet.
 
 </dd> <dt>
 
-<span id="WPD_VIDEO_SCAN_TYPE_MIXED_INTERLACE"></span><span id="wpd_video_scan_type_mixed_interlace"></span>**WPD \_ - \_ \_ videoscantyp \_ gemischte \_ Interlace**
+<span id="WPD_VIDEO_SCAN_TYPE_MIXED_INTERLACE"></span><span id="wpd_video_scan_type_mixed_interlace"></span>**WPD \_ VIDEO \_ SCAN \_ TYPE \_ MIXED \_ INTERLACE**
 </dt> <dd>
 
-Eine Videodatei mit einer Mischung aus interschnür Modi.
+Eine Videodatei mit einer Mischung aus Interlacingmodi.
 
 </dd> <dt>
 
-<span id="WPD_VIDEO_SCAN_TYPE_MIXED_INTERLACE_AND_PROGRESSIVE"></span><span id="wpd_video_scan_type_mixed_interlace_and_progressive"></span>**WPD \_ \_ \_ -videoscantyp \_ gemischte \_ Interlace \_ und \_ progressiv**
+<span id="WPD_VIDEO_SCAN_TYPE_MIXED_INTERLACE_AND_PROGRESSIVE"></span><span id="wpd_video_scan_type_mixed_interlace_and_progressive"></span>**WPD \_ VIDEO \_ SCAN \_ TYPE \_ MIXED \_ INTERLACE \_ AND \_ PROGRESSIVE**
 </dt> <dd>
 
-Eine Videodatei mit einer Mischung aus Zeilen Sprung und progressivem Modus.
+Eine Videodatei mit einer Mischung aus Interlacing- und progressiven Modi.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Enumeration wird von der Eigenschaft [WPD \_ - \_ \_ videoscantyp](properties-and-attributes.md) verwendet.
+Diese Enumeration wird von der [WPD \_ VIDEO SCAN \_ \_ TYPE-Eigenschaft](properties-and-attributes.md) verwendet.
 
-Es gibt zwei Arten von verschachtelten Dateiformaten, die von dieser Enumeration angegeben werden. **WPD \_ Das überlappende \_ Feld " \_ videoscantyp \_ \_** " bezieht sich auf ein Dateiformat, in dem Frames übermittelt werden, weil Sie als Felder abgescannt werden, und die Daten werden zeilenweise angezeigt, wie hier gezeigt:
+Es gibt zwei Typen von überlappten Dateiformaten, die von dieser Enumeration angegeben werden. **WPD \_ VIDEO \_ SCAN TYPE FIELD \_ \_ \_ INTERLEAVED** bezieht sich auf ein Dateiformat, in dem Frames übermittelt werden, während sie als alternative Gescannte Felder verwendet wurden, und Daten zeilenweise übermittelt werden, wie hier gezeigt:
 
 **Frame 1**
 
@@ -124,7 +124,7 @@ Feld 2: Zeile 3
 
 ...
 
-**WPD \_ Der Video \_ Scan \_ Type \_ Field \_ Single** bezieht sich auf ein Dateiformat, in dem jedes Feld in einem einzelnen Block von Scan Zeilen gespeichert wird, und Felder werden sequenziell gespeichert, wie hier gezeigt:
+**WPD \_ VIDEO \_ SCAN TYPE FIELD \_ \_ \_ SINGLE** bezieht sich auf ein Dateiformat, in dem jedes Feld in einem einzelnen Block von Scanzeilen gespeichert und Felder sequenziell gespeichert werden, wie hier gezeigt:
 
 **Frame 1**
 
@@ -152,7 +152,7 @@ Feld 2: Zeile 3
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 

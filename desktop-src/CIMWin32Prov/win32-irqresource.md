@@ -1,5 +1,5 @@
 ---
-description: Der Win32- \_ &\# 160; Die WMI-Klasse stellt eine Anzahl von Interrupt-Anforderungs Zeilen in einem Computersystem dar, auf dem Windows ausgeführt wird.
+description: Win32 \_ IRQResource &\# 160; Die WMI-Klasse stellt eine IRQ-Nummer (Interrupt Request Line) auf einem Computersystem dar, auf dem Windows ausgeführt wird.
 ms.assetid: bae0c28e-2b66-40ac-9679-b2dfe9269306
 ms.tgt_platform: multiple
 title: Win32_IRQResource-Klasse
@@ -29,18 +29,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: cd02487fe166cd7ce55482eaca1339c8701f2b62
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f70f77fb34379a9503bc2ac0988bd855254da4d6a30042b6a8fddd41561f6f53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126254"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119699500"
 ---
-# <a name="win32_irqresource-class"></a>Win32- \_ Klasse "iriqresource"
+# <a name="win32_irqresource-class"></a>Win32 \_ IRQResource-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) für die Win32-Klasse " **\_ iriqresource**" stellt eine Anzahl von Interrupt-Anforderungs Zeilen auf einem Computersystem mit Windows dar.   Eine Interrupt-Anforderung ist ein Signal, das von einem Gerät oder Programm für zeitkritische Ereignisse an die CPU gesendet wird. Bei "UNQ" kann es sich um Hardware-oder softwarebasierte Anwendungen handeln.
+Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) **Win32 \_ IRQResource** stellt eine IRQ-Nummer (Interrupt Request Line) auf einem Computersystem dar, auf dem Windows ausgeführt wird.   Eine Interruptanforderung ist ein Signal, das von einem Gerät oder Programm für zeitkritische Ereignisse an die CPU gesendet wird. IRQ kann hardware- oder softwarebasiert sein.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,48 +68,48 @@ class Win32_IRQResource : CIM_IRQ
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ iriqresource** " verfügt über diese Typen von Membern:
+Die **Win32 \_ IRQResource-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ iriqresource** " verfügt über diese Eigenschaften.
+Die **Win32 \_ IRQResource-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Verfügbarkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| UNQ \| 001,2 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| IRQ \| 001.2")
 </dt> </dl>
 
-Verfügbarkeit von "UNQ".
+Verfügbarkeit der IRQ.
 
-Diese Eigenschaft wird von [**CIM \_ UNQ**](cim-irq.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ IRQ**](cim-irq.md)geerbt.
 
 <dt>
 
 <span id="0"></span>
 
-<span id="0"></span>**1,0**
+<span id="0"></span>**0**
 
 
 </dt> <dd>
 
-Sonstiges
+Andere
 
 </dd> <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 
 
 </dt> <dd>
@@ -142,23 +142,23 @@ In Verwendung oder nicht verfügbar
 
 <span id="In_Use_Not_Available"></span><span id="in_use_not_available"></span><span id="IN_USE_NOT_AVAILABLE"></span>
 
-<span id="In_Use_Not_Available"></span><span id="in_use_not_available"></span><span id="IN_USE_NOT_AVAILABLE"></span>**In Gebrauch/nicht verfügbar** (4)
+<span id="In_Use_Not_Available"></span><span id="in_use_not_available"></span><span id="IN_USE_NOT_AVAILABLE"></span>**In Verwendung/nicht verfügbar** (4)
 
 
 </dt> <dd>
 
-In Verwendung und verfügbar oder Sharable
+In Use and Available or Sharable
 
 </dd> <dt>
 
 <span id="In_Use_and_Available_Shareable"></span><span id="in_use_and_available_shareable"></span><span id="IN_USE_AND_AVAILABLE_SHAREABLE"></span>
 
-<span id="In_Use_and_Available_Shareable"></span><span id="in_use_and_available_shareable"></span><span id="IN_USE_AND_AVAILABLE_SHAREABLE"></span>**In Verwendung und verfügbar/frei stellbar** (5)
+<span id="In_Use_and_Available_Shareable"></span><span id="in_use_and_available_shareable"></span><span id="IN_USE_AND_AVAILABLE_SHAREABLE"></span>**In Verwendung und verfügbar/freigabefähig** (5)
 
 
 </dt> <dd>
 
-In Verwendung und verfügbar/Sharable
+In Gebrauch und verfügbar/nutzbar
 
 </dd> </dl>
 
@@ -167,88 +167,88 @@ In Verwendung und verfügbar/Sharable
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
-Kurze Beschreibung des Objekts eine einzeilige Zeichenfolge.
+Kurze Beschreibung des Objekts, eine einzeilige Zeichenfolge.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name der ersten konkreten Klasse, die in der Vererbungs Kette angezeigt werden soll, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der-Klasse ermöglicht die-Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der ersten konkreten Klasse, die in der Vererbungskette angezeigt wird, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der -Klasse ermöglicht die -Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
 
-Diese Eigenschaft wird von [**CIM \_ UNQ**](cim-irq.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ IRQ**](cim-irq.md)geerbt.
 
 </dd> <dt>
 
 **CSCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ Computersystem**](cim-computersystem.md).**"Kreationclassname**"), [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ComputerSystem**](cim-computersystem.md).**CreationClassName**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Name der System Erstellungs Klasse des Bereichs bezogenen Computers.
+Name der Bereichscomputer-Erstellungsklasse.
 
-Diese Eigenschaft wird von [**CIM \_ UNQ**](cim-irq.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ IRQ**](cim-irq.md)geerbt.
 
 </dd> <dt>
 
 **CSName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ Computersystem**](cim-computersystem.md).**Name**"), [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ComputerSystem**](cim-computersystem.md).**Name**), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Name des Bereichs Computer Systems.
+Name des Bereichscomputersystems.
 
-Diese Eigenschaft wird von [**CIM \_ UNQ**](cim-irq.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ IRQ**](cim-irq.md)geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Beschreibung")
 </dt> </dl>
 
-Die Textbeschreibung des Objekts.
+Textbeschreibung des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -257,106 +257,106 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Hardware**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| System Structures \| Ressourcen \_ Deskriptor \| interfaketype")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API-Systemstrukturen \| \| RESOURCE \_ DESCRIPTOR \| InterfaceType")
 </dt> </dl>
 
-**True** gibt an, dass die Unterbrechung Hardware-oder Software basiert ist. Bei einer Hardware-UNQ handelt es sich um ein physisches Netzwerk, das von der Peripherie auf den Chip des programmierbaren interruptcontrollers (PIC) gesendet wird, über den die CPU über zeitkritische Ereignisse benachrichtigt werden kann Einige UNQ-Zeilen sind für Standardgeräte reserviert, z. b. die Tastatur, Diskettenlaufwerke und die Systemuhr. Ein Software Interrupt ermöglicht Anwendungen, die Aufmerksamkeit des Prozessors zu erhalten.
+True gibt an, dass der Interrupt hardware- oder softwarebasiert ist. Eine Hardware-IRQ ist ein physischer Kabel vom Peripheriegerät zum PIC-Chip (Programmable Interrupt Controller), über den die CPU über zeitkritische Ereignisse benachrichtigt werden kann. Einige IRQ-Zeilen sind für Standardgeräte wie Tastatur, Diskettenlaufwerke und die Systemuhr reserviert. Durch einen Softwareunterbrechungs-Interrupt können Anwendungen die Aufmerksamkeit des Prozessors erhalten.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installationsdatum")
 </dt> </dl>
 
-Datum und Uhrzeit der Installation des-Objekts. Für diese Eigenschaft ist kein Wert erforderlich, um anzugeben, dass das Objekt installiert ist.
+Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft benötigt keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**"Unqnumber"**
+**IRQNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| UNQ \| 001,1 "), [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| IRQ \| 001.1"), [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Teil des Schlüssel Werts des Objekts.
+Teil des Schlüsselwerts des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ UNQ**](cim-irq.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ IRQ**](cim-irq.md)geerbt.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
 </dt> </dl>
 
-Die Bezeichnung, nach der das-Objekt bekannt ist. Bei einer Unterklasse kann die Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung, mit der das Objekt bekannt ist. Bei einer Unterklasse kann die Eigenschaft als Schlüsseleigenschaft überschrieben werden.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**Freigegeben**
+**Shareable**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| UNQ \| 001,4 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| IRQ \| 001.4")
 </dt> </dl>
 
-**True** gibt an, dass die UNQ freigegeben werden kann.
+True gibt an, dass die IRQ freigegeben werden kann.
 
-Diese Eigenschaft wird von [**CIM \_ UNQ**](cim-irq.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ IRQ**](cim-irq.md)geerbt.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene betriebsbereite und nicht betriebsbereite Status definiert werden. Folgende Betriebsstatus sind möglich: "OK", "Heruntergestuft" und "Fehler vor dem Ausfall" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber es wird in naher Zukunft ein Fehler vorhergesagt). Nicht operative Status sind: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während der Spiegelung eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen administrativen Aufgaben angewendet werden. Nicht alle derartigen Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 Folgende Werte sind gültig:
 
@@ -378,35 +378,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird** gestartet ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Wird beendet** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -420,49 +420,49 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Striche** ("Strich")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Lost Comm** ("Lost Comm")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Triggerlevel**
+**TriggerLevel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| System Ressource UNQ Info \| 001,3 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Systemressource IRQ Info \| 001.3")
 </dt> </dl>
 
-Die Ebene der UNQ-Trigger, die angibt, ob die Unterbrechung durch das Hardware Signal ausgelöst wird, das hoch (4) oder niedrig (3) ist.
+IRQ-Triggerebene, die angibt, ob der Interrupt ausgelöst wird, wenn das Hardwaresignal hoch (4) oder niedrig (3) wird.
 
-Diese Eigenschaft wird von [**CIM \_ UNQ**](cim-irq.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ IRQ geerbt.**](cim-irq.md)
 
 <dt>
 
@@ -482,14 +482,14 @@ Diese Eigenschaft wird von [**CIM \_ UNQ**](cim-irq.md)geerbt.
 
 <span id="Active_Low"></span><span id="active_low"></span><span id="ACTIVE_LOW"></span>
 
-**Aktiv, niedrig** (3)
+**Active Low** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Active_High"></span><span id="active_high"></span><span id="ACTIVE_HIGH"></span>
 
-**Aktiv hoch** (4)
+**Active High** (4)
 
 
 </dt> <dd></dd> </dl>
@@ -499,18 +499,18 @@ Diese Eigenschaft wird von [**CIM \_ UNQ**](cim-irq.md)geerbt.
 **TriggerType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| UNQ \| 001,3 "," MIF. DMTF- \| System Ressource UNQ Info \| 001,2 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| IRQ \| 001.3", "MIF. \|DMTF-Systemressource IRQ Info \| 001.2")
 </dt> </dl>
 
-Der Typ "UNQ-Trigger" gibt an, ob durch Edge ausgelöste (4) oder auf der Ebene ausgelöste (3) Interrupts auftreten.
+IRQ-Triggertyp, der angibt, ob durch Edge ausgelöste (4) oder durch Ebene ausgelöste (3) Unterbrechungen auftreten.
 
-Diese Eigenschaft wird von [**CIM \_ UNQ**](cim-irq.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ IRQ geerbt.**](cim-irq.md)
 
 <dt>
 
@@ -547,22 +547,22 @@ Diese Eigenschaft wird von [**CIM \_ UNQ**](cim-irq.md)geerbt.
 **Vektor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| System Structures \| [**cm \_ partiellen \_ Ressourcen \_ Deskriptor**](/windows-hardware/drivers/ddi/content/wdm/ns-wdm-_cm_partial_resource_descriptor) \| \| Interruptebene")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| System Structures CM PARTIAL RESOURCE \| [**\_ \_ \_ DESCRIPTOR**](/windows-hardware/drivers/ddi/content/wdm/ns-wdm-_cm_partial_resource_descriptor) \| Interrupt \| Level")
 </dt> </dl>
 
-Vektor der Windows-Ressource "UNQ". Ein Vektor enthält die Speicheradresse der Funktion, die ausgeführt wird, sobald die Interruptanforderung von der CPU bestätigt wird.
+Vektor der Windows IRQ-Ressource. Ein Vektor enthält die Speicheradresse der Funktion, die ausgeführt wird, sobald die Interruptanforderung von der CPU bestätigt wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Win32-Klasse " **\_ iriqresource** " wird von [**CIM \_ UNQ**](cim-irq.md)abgeleitet.
+Die **Win32 \_ IRQResource-Klasse** wird von [**CIM \_ IRQ abgeleitet.**](cim-irq.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -572,8 +572,8 @@ Die Win32-Klasse " **\_ iriqresource** " wird von [**CIM \_ UNQ**](cim-irq.md)ab
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -582,10 +582,10 @@ Die Win32-Klasse " **\_ iriqresource** " wird von [**CIM \_ UNQ**](cim-irq.md)ab
 
 <dl> <dt>
 
-[**CIM \_ -Antwort**](cim-irq.md)
+[**CIM \_ IRQ**](cim-irq.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Verschiebt einen Tablet-Kontext an die Vorder-oder Rückseite der Eingabe Warteschlange.
+description: Verschiebt einen Tablet-Kontext an den Vorder- oder Hintergrund der Eingabewarteschlange.
 ms.assetid: ef4521b5-776b-46dc-864a-625bc221054a
-title: 'Itabletcontextp:: überlappungsmethode'
+title: ITabletContextP::Overlap-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Wisptis.exe
 - Wisptis.exe.dll
-ms.openlocfilehash: b009bc08dddb15bc7aa5b12c8846ea66c4a52e56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec8b462f2d06e1613c32b795af1793776cafddd6a3531ac6a0b5385f3d3e5128
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119712240"
 ---
-# <a name="itabletcontextpoverlap-method"></a>Itabletcontextp:: überlappungsmethode
+# <a name="itabletcontextpoverlap-method"></a>ITabletContextP::Overlap-Methode
 
-Verschiebt einen Tablet-Kontext an die Vorder-oder Rückseite der Eingabe Warteschlange.
+Verschiebt einen Tablet-Kontext an den Vorder- oder Hintergrund der Eingabewarteschlange.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ HRESULT Overlap(
 
 <dl> <dt>
 
-*btop* \[ in\]
+*bTop* \[ In\]
 </dt> <dd>
 
-Gibt an, ob der Tablet-Kontext an den oberen oder unteren Rand der Eingabe Warteschlange verschoben werden soll.
+Gibt an, ob der Tablet-Kontext an den anfang oder unteren Rand der Eingabewarteschlange verschoben werden soll.
 
 </dd> <dt>
 
-*pdwtcid* \[ vorgenommen\]
+*pdwtcid* \[ out\]
 </dt> <dd>
 
-Der Tablet-Kontext Bezeichner.
+Der Tablet-Kontextbezeichner.
 
 </dd> </dl>
 
@@ -64,7 +64,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
@@ -76,17 +76,17 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itabletcontextp-Schnittstelle**](itabletcontextp.md)
+[**ITabletContextP-Schnittstelle**](itabletcontextp.md)
 </dt> </dl>
 
  

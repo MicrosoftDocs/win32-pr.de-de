@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-conflictsizeinmb-Attribut
-description: Enthält die Größe des Konflikt Verzeichnisses in Megabyte.
+title: ms-DFSR-ConflictSizeInMb-Attribut
+description: Enthält die Größe des Konfliktverzeichnisses in Megabyte.
 ms.assetid: a5afb681-4fd2-480c-9e9d-d4c7f0322bf8
 ms.tgt_platform: multiple
 keywords:
-- MS-DFSR-conflictsizeinmb-Attribut AD-Schema
-- "\"msdfsr-conflictsizeinmb\"-Attribut AD-Schema"
+- MS-DFSR-ConflictSizeInMb-Attribut AD-Schema
+- MSDFSR-ConflictSizeInMb-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e22b5f2a3ced9d50c9f930228d1e5611039741b4
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ef7744e99d5a793bb11adb2baefee397d3264a7b0fb9969e01663bfdbef2acf4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104041094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704990"
 ---
-# <a name="ms-dfsr-conflictsizeinmb-attribute"></a>MS-DFSR-conflictsizeinmb-Attribut
+# <a name="ms-dfsr-conflictsizeinmb-attribute"></a>ms-DFSR-ConflictSizeInMb-Attribut
 
-Enthält die Größe des Konflikt Verzeichnisses in Megabyte.
+Enthält die Größe des Konfliktverzeichnisses in Megabyte.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DFSR-conflictsizeinmb             |
-| LDAP-Display-Name | msdfsr-conflictsizeinmb              |
+| CN                | ms-DFSR-ConflictSizeInMb             |
+| Ldap-Anzeigename | msDFSR-ConflictSizeInMb              |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.8            |
 | System-ID-GUID    | 9ad33fc9-aacf-4299-bb3e-d1fc6ea88e49 |
 | Syntax            | [**Intervall**](s-interval.md)       |
@@ -55,16 +55,16 @@ Enthält die Größe des Konflikt Verzeichnisses in Megabyte.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Ist einwertig       | Richtig                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -76,16 +76,16 @@ Enthält die Größe des Konflikt Verzeichnisses in Megabyte.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                     |
 | MAPI-Id                | \-                                                                                                                                                                                                     |
-| System-Only            | False                                                                                                                                                                                                  |
-| Ist-einwertig       | Richtig                                                                                                                                                                                                   |
-| Ist indiziert             | False                                                                                                                                                                                                  |
-| Im globalen Katalog      | False                                                                                                                                                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                           |
+| System-Only            | Falsch                                                                                                                                                                                                  |
+| Ist einwertig       | Richtig                                                                                                                                                                                                   |
+| Ist indiziert             | Falsch                                                                                                                                                                                                  |
+| Im globalen Katalog      | Falsch                                                                                                                                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                           |
 | Range-Lower            | \-                                                                                                                                                                                                     |
 | Range-Upper            | \-                                                                                                                                                                                                     |
 | Search-Flags           | 0x00000000                                                                                                                                                                                             |
 | System-Flags           | 0x00000000                                                                                                                                                                                             |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> [**MS-DFSR-replicationgroup**](c-msdfsr-replicationgroup.md)<br/> [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> [**ms-DFSR-ReplicationGroup**](c-msdfsr-replicationgroup.md)<br/> [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> |
 
 
 
@@ -97,16 +97,16 @@ Enthält die Größe des Konflikt Verzeichnisses in Megabyte.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                     |
 | MAPI-Id                | \-                                                                                                                                                                                                     |
-| System-Only            | False                                                                                                                                                                                                  |
-| Ist-einwertig       | Richtig                                                                                                                                                                                                   |
-| Ist indiziert             | False                                                                                                                                                                                                  |
-| Im globalen Katalog      | False                                                                                                                                                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                           |
+| System-Only            | Falsch                                                                                                                                                                                                  |
+| Ist einwertig       | Richtig                                                                                                                                                                                                   |
+| Ist indiziert             | Falsch                                                                                                                                                                                                  |
+| Im globalen Katalog      | Falsch                                                                                                                                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                           |
 | Range-Lower            | \-                                                                                                                                                                                                     |
 | Range-Upper            | \-                                                                                                                                                                                                     |
 | Search-Flags           | 0x00000000                                                                                                                                                                                             |
 | System-Flags           | 0x00000000                                                                                                                                                                                             |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> [**MS-DFSR-replicationgroup**](c-msdfsr-replicationgroup.md)<br/> [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> [**ms-DFSR-ReplicationGroup**](c-msdfsr-replicationgroup.md)<br/> [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> |
 
 
 
@@ -118,22 +118,22 @@ Enthält die Größe des Konflikt Verzeichnisses in Megabyte.
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                     |
 | MAPI-Id                | \-                                                                                                                                                                                                     |
-| System-Only            | False                                                                                                                                                                                                  |
-| Ist-einwertig       | Richtig                                                                                                                                                                                                   |
-| Ist indiziert             | False                                                                                                                                                                                                  |
-| Im globalen Katalog      | False                                                                                                                                                                                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                           |
+| System-Only            | Falsch                                                                                                                                                                                                  |
+| Ist einwertig       | Richtig                                                                                                                                                                                                   |
+| Ist indiziert             | Falsch                                                                                                                                                                                                  |
+| Im globalen Katalog      | Falsch                                                                                                                                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                           |
 | Range-Lower            | \-                                                                                                                                                                                                     |
 | Range-Upper            | \-                                                                                                                                                                                                     |
 | Search-Flags           | 0x00000000                                                                                                                                                                                             |
 | System-Flags           | 0x00000000                                                                                                                                                                                             |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> [**MS-DFSR-replicationgroup**](c-msdfsr-replicationgroup.md)<br/> [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> [**ms-DFSR-ReplicationGroup**](c-msdfsr-replicationgroup.md)<br/> [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das [**MS-DFSR-directoryfilter-**](a-msdfsr-directoryfilter.md) Attribut ist ein Teil der Unterstützung für den verteiltes Dateisystem (DFS)-Replikations Dienst.
+Das [**attribut ms-DFSR-DirectoryFilter**](a-msdfsr-directoryfilter.md) ist Teil der Unterstützung des replikationsdiensts verteiltes Dateisystem (DFS).
 
  
 

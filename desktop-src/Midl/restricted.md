@@ -1,9 +1,9 @@
 ---
 title: Eingeschränktes Attribut
-description: Das Attribut \ restricted \ gibt an, dass eine Bibliothek oder ein Member eines Moduls, einer Schnittstelle oder einer dispinterface nicht willkürlich aufgerufen werden kann.
+description: Das Attribut \restricted\gibt an, dass eine Bibliothek oder ein Member eines Moduls, einer Schnittstelle oder einer Disp-Schnittstelle nicht willkürlich aufgerufen werden kann.
 ms.assetid: ad1ae84f-77f4-4028-bd71-ff01414e474e
 keywords:
-- eingeschränkte Attribute-Mittell
+- restricted attribute MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eca610c0dcf29ebc3a767005b4c22e3231947e88
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: cc68bbea9e1834fd1b1953f8dbf16a79e5356f49bf6058615904d78c244668a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119822090"
 ---
 # <a name="restricted-attribute"></a>Eingeschränktes Attribut
 
-Das **\[ restricted \]** -Attribut gibt an, dass eine Bibliothek oder ein Member eines Moduls, einer Schnittstelle oder einer dispinterface nicht willkürlich aufgerufen werden kann.
+Das **\[ eingeschränkte \]** Attribut gibt an, dass eine Bibliothek oder ein Member eines Moduls, einer Schnittstelle oder einer Disp-Schnittstelle nicht willkürlich aufgerufen werden kann.
 
 ``` syntax
 [
@@ -38,41 +38,41 @@ statement-type statement-name
 
 <dl> <dt>
 
-*andere-Attribute* 
+*other-attributes* 
 </dt> <dd>
 
-NULL oder mehr mittlere Attribute.
+Null oder mehr MIDL-Attribute.
 
 </dd> <dt>
 
-*Anweisungstyp* 
+*statement-type* 
 </dt> <dd>
 
-Eines der folgenden: [**Library**](library.md), [**Module**](module.md), [**Interface**](interface.md), [**dispinterface**](dispinterface.md).
+Eine der folgenden: [**Bibliothek,**](library.md) [**Modul,**](module.md) [**Schnittstelle,**](interface.md) [**Dispinterface**](dispinterface.md).
 
 </dd> <dt>
 
-*Anweisungs Name* 
+*Anweisungsname* 
 </dt> <dd>
 
-Der Bezeichner, mit dem sich die Software auf diese Anweisung bezieht.
+Der Bezeichner, mit dem die Software auf diese Anweisung verweist.
 
 </dd> <dt>
 
-*definiert* 
+*Definitionen* 
 </dt> <dd>
 
-Mittel l-Sprachelemente, die den Inhalt dieser Anweisung definieren.
+MIDL-Sprachelemente, die den Inhalt dieser Anweisung definieren.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit diesem Attribut können Sie den Zugriff auf Elemente von Schnittstellen, Bibliotheken, Modulen und dispinterfaces steuern. Beispielsweise kann verhindert werden, dass ein Datenelement von einem makroprogrammierer verwendet wird. Sie können dieses Attribut auf einen Member einer Co- [**Klasse**](coclass.md)anwenden, unabhängig davon, ob der Member eine dispinterface oder eine Schnittstelle ist, und unabhängig davon, ob der Member eine Senke (eingehend) oder eine Quelle (ausgehend) ist. Ein Member einer **Co-Klasse** kann nicht sowohl das **\[ restricted \]** -als auch das **\[ Default \]** -Attribut aufweisen.
+Mit diesem Attribut können Sie den Zugriff auf Elemente von Schnittstellen, Bibliotheken, Modulen und Disp-Schnittstellen steuern. So kann beispielsweise verhindert werden, dass ein Datenelement von einem Makroprogrammierer verwendet wird. Sie können dieses Attribut auf einen Member einer Co-Klasse [**anwenden,**](coclass.md)unabhängig davon, ob der Member eine Disp-Schnittstelle oder -Schnittstelle ist, und unabhängig davon, ob der Member eine Senke (eingehend) oder eine Quelle (ausgehend) ist. Ein Member einer **Co-Klasse kann** nicht sowohl das eingeschränkte als **\[ auch \]** das **\[ Standardattribut \]** haben.
 
 ### <a name="flags"></a>Flags
 
-impltypeflag " \_ frestrihiert", funkflag " \_ frestrihiert"
+IMPLTYPEFLAG \_ FRESTRICTED, FUNCFLAG \_ FRESTRICTED
 
 ## <a name="examples"></a>Beispiele
 
@@ -94,30 +94,30 @@ library MyLibrary
 
 <dl> <dt>
 
-[FUNCFLAGS](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[Typeflags](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> <dt>
 
 [**Bibliothek**](library.md)
 </dt> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
-[**dispinterface**](dispinterface.md)
+[**Dispatchschnittstelle**](dispinterface.md)
 </dt> <dt>
 
-[**Mond**](module.md)
+[**Modul**](module.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

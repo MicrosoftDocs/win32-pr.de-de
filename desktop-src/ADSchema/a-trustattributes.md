@@ -1,11 +1,11 @@
 ---
 title: Trust-Attributes-Attribut
-description: Dieses Attribut speichert die Vertrauens Attribute für eine vertrauenswürdige Domäne.
+description: Dieses Attribut speichert die Vertrauensattribute für eine vertrauenswürdige Domäne.
 ms.assetid: c85b98a6-4d09-4eb2-821b-58ef558b3460
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Trust-Attributes-Attribut
-- trustatutributes-Attribut, AD-Schema
+- Trust-Attributes AD-Attributschema
+- trustAttributes-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,33 +14,33 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d81dc06f73fbda5dab7ce8d2a07bfc90323d2b29
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 2d09104d0f32c770ba1fe3fbdde6cf56d56989a801856ba970284b2d06c96a5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744881"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704040"
 ---
 # <a name="trust-attributes-attribute"></a>Trust-Attributes-Attribut
 
-Dieses Attribut speichert die Vertrauens Attribute für eine vertrauenswürdige Domäne. Folgende Attributwerte sind möglich:
+Dieses Attribut speichert die Vertrauensattribute für eine vertrauenswürdige Domäne. Folgende Attributwerte sind möglich:
 
--   \_ \_ Nicht \_ transitives Vertrauens Attribut deaktivieren Transitivität.
--   \_ \_ \_ Die übergeordnete Vertrauensstellung der Trust-Attribut Struktur ist auf das übergeordnete Element der Organisationsstruktur
--   Vertrauensstellung des vertrauenswürdigen \_ Attribut \_ Baums \_ auf einen anderen Struktur Stamm in der Gesamtstruktur.
--   Vertrauens \_ Attribut \_ komplexer Darstellung \_ nur vertrauenswürdiger Link ist nur für den komplexer Darstellung-Client gültig.
+-   TRUST \_ ATTRIBUTE \_ NON \_ TRANSITIVE Disable transitivity.
+-   TRUST \_ ATTRIBUTE TREE PARENT Trust wird auf das übergeordnete Element der \_ \_ Organisationsstruktur festgelegt.
+-   TRUST \_ ATTRIBUTE TREE ROOT Trust wird auf einen anderen \_ \_ Strukturstamm in der Gesamtstruktur festgelegt.
+-   TRUST \_ ATTRIBUTE \_ UPLEVEL ONLY \_ Vertrauenswürdiger Link ist nur für den uplevel-Client gültig.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Trust-Attributes                     |
-| LDAP-Display-Name | trustatus Tributes                      |
+| Ldap-Anzeigename | trustAttributes                      |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.470               |
-| System-ID-GUID    | 80a67e5a-9F 22-11D0-AFDD-00c04f-930c9 |
+| System-ID-GUID    | 80a67e5a-9f22-11d0-afdd-00c04fd930c9 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -48,7 +48,7 @@ Dieses Attribut speichert die Vertrauens Attribute für eine vertrauenswürdige 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -63,10 +63,10 @@ Dieses Attribut speichert die Vertrauens Attribute für eine vertrauenswürdige 
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
+| Ist einwertig       | True                                                 |
 | Ist indiziert             | False                                                |
 | Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
@@ -75,7 +75,7 @@ Dieses Attribut speichert die Vertrauens Attribute für eine vertrauenswürdige 
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -84,10 +84,10 @@ Dieses Attribut speichert die Vertrauens Attribute für eine vertrauenswürdige 
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
+| Ist einwertig       | True                                                 |
 | Ist indiziert             | False                                                |
-| Im globalen Katalog      | Richtig                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| Im globalen Katalog      | True                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
@@ -105,10 +105,10 @@ Dieses Attribut speichert die Vertrauens Attribute für eine vertrauenswürdige 
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
+| Ist einwertig       | True                                                 |
 | Ist indiziert             | False                                                |
-| Im globalen Katalog      | Richtig                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| Im globalen Katalog      | True                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
@@ -126,10 +126,10 @@ Dieses Attribut speichert die Vertrauens Attribute für eine vertrauenswürdige 
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
+| Ist einwertig       | True                                                 |
 | Ist indiziert             | False                                                |
-| Im globalen Katalog      | Richtig                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| Im globalen Katalog      | True                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
@@ -147,10 +147,10 @@ Dieses Attribut speichert die Vertrauens Attribute für eine vertrauenswürdige 
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
+| Ist einwertig       | True                                                 |
 | Ist indiziert             | False                                                |
-| Im globalen Katalog      | Richtig                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| Im globalen Katalog      | True                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
@@ -168,10 +168,10 @@ Dieses Attribut speichert die Vertrauens Attribute für eine vertrauenswürdige 
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
 | System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
+| Ist einwertig       | True                                                 |
 | Ist indiziert             | False                                                |
-| Im globalen Katalog      | Richtig                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| Im globalen Katalog      | True                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |

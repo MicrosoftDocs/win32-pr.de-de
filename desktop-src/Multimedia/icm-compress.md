@@ -1,9 +1,9 @@
 ---
-title: ICM_COMPRESS Meldung (VFW. h)
-description: In der ICM- \_ Komprimierungs Meldung wird ein Video Komprimierungs Treiber benachrichtigt, um einen Datenrahmen in einen Anwendungs definierten Puffer zu komprimieren.
+title: ICM_COMPRESS Nachricht (Vfw.h)
+description: Die ICM \_ COMPRESS-Nachricht benachrichtigt einen Videokomprimierungstreiber, einen Frame von Daten in einen von der Anwendung definierten Puffer zu komprimieren.
 ms.assetid: d95b943f-458d-4a5e-bab1-e3648d323395
 keywords:
-- ICM_COMPRESS-Nachricht (Multimedia)
+- ICM_COMPRESS nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8021a4c18ab47c9b5b848dd1cb097358f2714bf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f1230f429eb49596dd8a450b8a384e0a69856b69c51141834458c09fa41ca54d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340359"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119678470"
 ---
-# <a name="icm_compress-message"></a>ICM- \_ Komprimierungs Meldung
+# <a name="icm_compress-message"></a>\_ICM COMPRESS-Nachricht
 
-In der **ICM- \_ Komprimierungs** Meldung wird ein Video Komprimierungs Treiber benachrichtigt, um einen Datenrahmen in einen Anwendungs definierten Puffer zu komprimieren.
+Die **ICM \_ COMPRESS-Nachricht** benachrichtigt einen Videokomprimierungstreiber, einen Frame von Daten in einen von der Anwendung definierten Puffer zu komprimieren.
 
 
 ```C++
@@ -38,23 +38,23 @@ lParam = sizeof(ICCOMPRESS);
 
 <dl> <dt>
 
-<span id="icc"></span><span id="ICC"></span>*ausgeliefert*
+<span id="icc"></span><span id="ICC"></span>*Icc*
 </dt> <dd>
 
-Zeiger auf eine [**iccompress**](/windows/desktop/api/Vfw/ns-vfw-iccompress) -Struktur. Die folgenden Member dieser Struktur geben die Komprimierungs Parameter an: **lpbiinput**, **lpinput**, **lpbioutput**, **lpoutput**, **lpbiprev**, **lpprev**, **lpckid**, **lpdwflags**, **dwframesize** und **dwquality**. Der Treiber sollte auch den **bisizeimage** -Member der [**BITMAPINFOHEADER**](/previous-versions//dd183376(v=vs.85)) -Struktur verwenden, die **lpbioutput** von **iccompress** zugeordnet ist, um die Größe des komprimierten Rahmens zurückzugeben.
+Zeiger auf eine [**ICCOMPRESS-Struktur.**](/windows/desktop/api/Vfw/ns-vfw-iccompress) Die folgenden Member dieser Struktur geben die Komprimierungsparameter an: **lpbiInput**, **lpInput**, **lpbiOutput**, **lpOutput**, **lpbiPrev**, **lpPrev**, **lplimitd**, **lpdwFlags**, **dwFrameSize** und **dwQuality**. Der Treiber sollte auch den **biSizeImage-Member** der [**BITMAPINFOHEADER-Struktur**](/previous-versions//dd183376(v=vs.85)) verwenden, die **lpbiOutput** von **ICCOMPRESS** zugeordnet ist, um die Größe des komprimierten Frames zurückzugeben.
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Größe von [**iccompress**](/windows/desktop/api/Vfw/ns-vfw-iccompress)(in Bytes).
+Größe (in Bytes) von [**ICCOMPRESS**](/windows/desktop/api/Vfw/ns-vfw-iccompress).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung von ICERR \_ OK oder andernfalls einen Fehler zurück.
+Gibt ICERR \_ OK zurück, wenn erfolgreich, oder andernfalls ein Fehler.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,7 +64,7 @@ Gibt bei erfolgreicher Ausführung von ICERR \_ OK oder andernfalls einen Fehler
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -75,7 +75,7 @@ Gibt bei erfolgreicher Ausführung von ICERR \_ OK oder andernfalls einen Fehler
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

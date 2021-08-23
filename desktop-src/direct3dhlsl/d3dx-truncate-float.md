@@ -1,9 +1,9 @@
 ---
 title: D3DX_Truncate_FLOAT-Funktion
-description: Verkürzt einen float-Wert.
+description: Schneidt einen FLOAT-Wert ab.
 ms.assetid: 47d59c96-1f2d-4878-9fe5-7817107cc837
 keywords:
-- D3DX_Truncate_FLOAT-Funktion HLSL
+- D3DX_Truncate_FLOAT HLSL-Funktion
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8768a38fbcf2ef8058c2652e177d317e5b055e90
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 296c4297b10cca14c3413dc71f1a85251fb65a83bbd1cfa0373de48dc2f5da49
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104995865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119673990"
 ---
-# <a name="d3dx_truncate_float-function"></a>D3DX \_ Truncate \_ float-Funktion
+# <a name="d3dx_truncate_float-function"></a>D3DX \_ Truncate \_ FLOAT-Funktion
 
-Verkürzt einen float-Wert.
+Schneidt einen FLOAT-Wert ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ FLOAT D3DX_Truncate_FLOAT(
 
 <dl> <dt>
 
-*\_Ramelow* 
+*\_V* 
 </dt> <dd>
 
 Der abzuschneidende Wert.
@@ -48,13 +48,13 @@ Der abzuschneidende Wert.
 
 Der abgeschnittene Wert.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX \_ dxgiformatconvert. INL</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX \_ DXGIFormatConvert.inl</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Der abgeschnittene Wert.
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen des \_ DXGI-FORMATS für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

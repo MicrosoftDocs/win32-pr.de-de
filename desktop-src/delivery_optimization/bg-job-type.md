@@ -1,6 +1,6 @@
 ---
-title: BG_JOB_TYPE-Enumeration (deliveryoptimization. h)
-description: Die BG_JOB_TYPE-Enumeration definiert konstante Werte, die den Typ des Übertragungs Auftrags angeben, z. b. den Download.
+title: BG_JOB_TYPE-Enumeration (Deliveryoptimization.h)
+description: Die BG_JOB_TYPE-Enumeration definiert konstante Werte, die den Typ des Übertragungsauftrags angeben, z. B. Download.
 ms.assetid: 696A43C3-1FA2-436D-B34A-3544E7C9A66A
 keywords:
 - BG_JOB_TYPE-Enumeration
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f1f672bcf2d2538bfaa9b9573fa1dfa71ee7b9cd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9ae722871435af316e045b293f2cf439a07600af1823202b7bfda654bf01d771
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755820"
 ---
 # <a name="bg_job_type-enumeration"></a>BG_JOB_TYPE-Enumeration
 
-Die **BG_JOB_TYPE** -Enumeration definiert konstante Werte, die den Typ des Übertragungs Auftrags angeben, z. b. den Download.
+Die **BG_JOB_TYPE-Enumeration** definiert konstante Werte, die den Typ des Übertragungsauftrags angeben, z. B. Download.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,20 +54,20 @@ Gibt an, dass der Auftrag Dateien auf den Client herunterlädt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ibackgroundcopyjob:: GetType**](ibackgroundcopyjob-gettype.md)
+[**IBackgroundCopyJob::GetType**](ibackgroundcopyjob-gettype.md)
 </dt> <dt>
 
-[**Ibackgroundcopymanager:: kreatejob**](ibackgroundcopymanager-createjob.md)
+[**IBackgroundCopyManager::CreateJob**](ibackgroundcopymanager-createjob.md)
 </dt> </dl>
 
  

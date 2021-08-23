@@ -1,5 +1,5 @@
 ---
-description: Stellt die Zuordnung zwischen einem Team externalethernetport und einem externalethernetport-Member dar.
+description: Stellt die Zuordnung zwischen einem Team ExternalEthernetPort und einem Mitglied ExternalEthernetPort dar.
 ms.assetid: e21bea94-d6a8-4788-958e-78ce255837aa
 title: Msvm_VirtualEthernetSwitchNicTeamingMember-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: cbf83f4605d6ab1b7bc9740b14c493393eb93163
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f6662e2af84b2af1d23ed9941a5ecd5199f7c757161b65933a2154817d717c10
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755110"
 ---
-# <a name="msvm_virtualethernetswitchnicteamingmember-class"></a>MSVM \_ virtualethernetzwitchnicteamingmember-Klasse
+# <a name="msvm_virtualethernetswitchnicteamingmember-class"></a>Msvm \_ VirtualEthernetSwitchNicTeamingMember-Klasse
 
-Stellt die Zuordnung zwischen einem Team externalethernetport und einem externalethernetport-Member dar.
+Stellt die Zuordnung zwischen einem Team ExternalEthernetPort und einem Mitglied ExternalEthernetPort dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,45 +41,45 @@ class Msvm_VirtualEthernetSwitchNicTeamingMember : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualethernettwitchnicteamingmember** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualEthernetSwitchNicTeamingMember-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualethernetzwitchnicteamingmember** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualEthernetSwitchNicTeamingMember-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MSVM \_ externalethernetport**
+Datentyp: **Msvm \_ ExternalEthernetPort**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Eine [**MSVM \_ externalethernetport**](msvm-externalethernetport.md) , die auf die Instanz des externen Ethernet-Ports verweist.
+Ein [**Msvm \_ ExternalEthernetPort,**](msvm-externalethernetport.md) der auf die externe Ethernet-Portinstanz des Teams verweist.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MSVM \_ externalethernetport**
+Datentyp: **Msvm \_ ExternalEthernetPort**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Verweis auf die [**MSVM \_ externalethernetport**](msvm-externalethernetport.md) -Mitglieder Instanz.
+Verweis auf die [**Msvm \_ ExternalEthernetPort-Memberinstanz.**](msvm-externalethernetport.md)
 
 </dd> </dl>
 
@@ -89,19 +89,19 @@ Verweis auf die [**MSVM \_ externalethernetport**](msvm-externalethernetport.md)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

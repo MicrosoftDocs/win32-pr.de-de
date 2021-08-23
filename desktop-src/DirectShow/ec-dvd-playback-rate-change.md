@@ -1,7 +1,7 @@
 ---
-description: Signalisiert, dass eine Änderungs Rate bei der DVD-Wiedergabe initiiert wurde.
+description: Signalisiert, dass eine Änderung der Rate bei der DVD-Wiedergabe initiiert wurde.
 ms.assetid: 2a1e3c21-1623-4e43-8c7b-1a34514442c9
-title: EC_DVD_PLAYBACK_RATE_CHANGE (dvdevcode. h)
+title: EC_DVD_PLAYBACK_RATE_CHANGE (Dvdevcode.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - dvdevcode.h
-ms.openlocfilehash: 20ddc41fd70906fabc522daa4dcb7714b71e4251
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8de40dc8fd7f70dda522f4d1faf34f8c05059c6928f80a141d7ac9ae1889ecec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119823680"
 ---
-# <a name="ec_dvd_playback_rate_change"></a>Änderung der EC- \_ DVD- \_ Wiedergabe \_ Rate \_
+# <a name="ec_dvd_playback_rate_change"></a>ÄNDERUNG DER \_ \_ WIEDERGABERATE DER \_ \_ EC-DVD
 
-Signalisiert, dass eine Änderungs Rate bei der DVD-Wiedergabe initiiert wurde.
+Signalisiert, dass eine Änderung der Rate bei der DVD-Wiedergabe initiiert wurde.
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,7 +31,7 @@ Signalisiert, dass eine Änderungs Rate bei der DVD-Wiedergabe initiiert wurde.
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-Lange Angabe der neuen Wiedergabe Rate. Der Wert ist die tatsächliche Wiedergabe Rate multipliziert mit 10.000, sodass die Wiedergabe Rate 10000,0/ *lParam1* entspricht. Werte kleiner als 0 (null) geben den umgekehrten Wiedergabemodus an, und Werte größer als 0 (null) geben den vorwärts Wiedergabemodus
+LONG gibt die neue Wiedergaberate an. Der Wert ist die tatsächliche Wiedergaberate multipliziert mit 10.000, sodass die Wiedergaberate 10000,0 */lParam1 entspricht.* Werte kleiner als 0 (null) geben den Reversewiedergabemodus an, und Werte größer als 0 (null) geben den Vorwärtswiedergabemodus an.
 
 </dd> <dt>
 
@@ -42,11 +42,11 @@ Keinen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis wird in der Titel Domäne ausgelöst.
+Dieses Ereignis wird in der Titeldomäne ausgelöst.
 
-Die Wiedergabe *Rate* ist die Umkehrung der Wiedergabe *Geschwindigkeit*. Wenn die Wiedergabegeschwindigkeit beispielsweise 2 x beträgt, ist die Rate 0,5.
+Die *Wiedergaberate* ist die Umkehrung der *Wiedergabegeschwindigkeit.* Wenn die Wiedergabegeschwindigkeit beispielsweise 2x beträgt, beträgt die Rate 0,5.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,21 +54,21 @@ Die Wiedergabe *Rate* ist die Umkehrung der Wiedergabe *Geschwindigkeit*. Wenn d
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdevcode. h (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdevcode.h (include Dshow.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [DVD-Anwendungen](dvd-applications.md)
 </dt> <dt>
 
-[DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md)
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

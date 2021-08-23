@@ -1,24 +1,24 @@
 ---
-description: Die getdvdtextlanguagelcid-Methode ruft den Gebiets Schema Bezeichner (Locale Identifier, LCID) für den angegebenen Textzeichen folgen Block ab.
+description: Die GetDVDTextLanguageLCID-Methode ruft den Locale Identifier (LCID) für den angegebenen Textzeichenfolgenblock ab.
 ms.assetid: feaa1db8-2d33-4c32-8491-f3aa5555e3d3
-title: Getdvdtextlanguagelcid-Methode
+title: GetDVDTextLanguageLCID-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f66d21b9870982b605d9deeb1e22882a525c5616
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 50c60abedc3a986bfec766cc14c2251d9bed83650ee737762a4e870af9d283a3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104520632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119748720"
 ---
-# <a name="getdvdtextlanguagelcid-method"></a>Getdvdtextlanguagelcid-Methode
+# <a name="getdvdtextlanguagelcid-method"></a>GetDVDTextLanguageLCID-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `GetDVDTextLanguageLCID` Methode ruft den Gebiets Schema Bezeichner (Locale Identifier, LCID) für den angegebenen Textzeichen folgen Block ab.
+Die `GetDVDTextLanguageLCID` -Methode ruft den Locale Identifier (LCID) für den angegebenen Textzeichenfolgenblock ab.
 
 ``` syntax
 [ iLCID = ] MSWebDVD.GetDVDTextLanguageLCID(iLangIndex)
@@ -28,29 +28,29 @@ Die- `GetDVDTextLanguageLCID` Methode ruft den Gebiets Schema Bezeichner (Locale
 
 <dl> <dt>
 
-<span id="iLangIndex"></span><span id="ilangindex"></span><span id="ILANGINDEX"></span>*ilangindex*
+<span id="iLangIndex"></span><span id="ilangindex"></span><span id="ILANGINDEX"></span>*iLangIndex*
 </dt> <dd>
 
-Gibt den Text Sprach Block auf der Festplatte als Ganzzahl an.
+Gibt den Textsprachblock auf dem Datenträger als ganze Zahl an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen LCID-Wert zurück, der Informationen zur Angabe der Sprache enthält, in der die Zeichen folgen geschrieben werden.
+Gibt einen LCID-Wert zurück, der Informationen enthält, die die Sprache angeben, in der die Zeichenfolgen geschrieben werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ergänzende Text Zeichenfolgen werden in zusammenhängenden Blöcken auf der Festplatte gespeichert. Jede Sprache verfügt über einen Block von Zeichen folgen. Eine Anwendung gibt diese Blöcke durch einen Index an, der kleiner als der von [**getdvdtextnumoflanguages**](getdvdtextnumberoflanguages-method.md)zurückgegebene Wert sein muss.
+Zusätzliche Textzeichenfolgen werden in zusammenhängenden Blöcken auf dem Datenträger gespeichert. Jede Sprache verfügt über einen Zeichenfolgenblock. Eine Anwendung gibt diese Blöcke durch einen Index an, der kleiner als der von [**GetDVDTextNumberOfLanguages zurückgegebene Wert sein muss.**](getdvdtextnumberoflanguages-method.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Mswebdvd-Objekt](mswebdvd-object.md)
+[MSWebDVD-Objekt](mswebdvd-object.md)
 </dt> <dt>
 
-[**Getlangfromlangid**](getlangfromlangid-method.md)
+[**GetLangFromLangID**](getlangfromlangid-method.md)
 </dt> </dl>
 
  

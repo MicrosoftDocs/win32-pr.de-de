@@ -1,9 +1,9 @@
 ---
-title: EM_SETUNDOLIMIT Meldung (RichEdit. h)
-description: Legt die maximale Anzahl von Aktionen fest, die in der Rückgängig-Warteschlange eines Rich-Edit-Steuer Elements gespeichert werden können.
+title: EM_SETUNDOLIMIT Nachricht (Richedit.h)
+description: Legt die maximale Anzahl von Aktionen fest, die in der Rückgängig-Warteschlange eines Rich-Edit-Steuerelements gespeichert werden können.
 ms.assetid: 485dbcda-89f4-40de-ad55-cd524958e910
 keywords:
-- Windows-Steuerelemente für EM_SETUNDOLIMIT Meldung
+- EM_SETUNDOLIMIT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c5b668d047f1de6d8720f09af5baf23e7cfc9cc2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 771e339e38437ea0299e5da6120fa555fd26148f72ff7da4e0287ed46cc4ad22
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697520"
 ---
-# <a name="em_setundolimit-message"></a>EM- \_ logdolimit-Meldung
+# <a name="em_setundolimit-message"></a>EM \_ SETUNDOLIMIT-Meldung
 
-Legt die maximale Anzahl von Aktionen fest, die in der Rückgängig-Warteschlange eines Rich-Edit-Steuer Elements gespeichert werden können.
+Legt die maximale Anzahl von Aktionen fest, die in der Rückgängig-Warteschlange eines Rich-Edit-Steuerelements gespeichert werden können.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,19 +39,19 @@ Gibt die maximale Anzahl von Aktionen an, die in der Rückgängig-Warteschlange 
 *lParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist die neue maximale Anzahl von Rückgängig-Aktionen für das Rich Edit-Steuerelement. Dieser Wert ist möglicherweise kleiner als *wParam* , wenn der Arbeitsspeicher begrenzt ist.
+Der Rückgabewert ist die neue maximale Anzahl von Rückgängig-Aktionen für das Rich Edit-Steuerelement. Dieser Wert kann kleiner als *wParam* sein, wenn der Arbeitsspeicher begrenzt ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig ist die maximale Anzahl von Aktionen in der Rückgängig-Warteschlange 100. Wenn Sie diese Zahl erhöhen, muss genügend Arbeitsspeicher zur Verfügung stehen, um die neue Zahl aufnehmen zu können. Um die Leistung zu verbessern, legen Sie den Grenzwert auf den kleinsten möglichen Wert fest.
+Standardmäßig beträgt die maximale Anzahl von Aktionen in der Rückgängig-Warteschlange 100. Wenn Sie diese Zahl erhöhen, muss genügend Arbeitsspeicher verfügbar sein, um die neue Zahl aufnehmen zu können. Um eine bessere Leistung zu erzielen, legen Sie den Grenzwert auf den kleinstmöglichen Wert fest.
 
-Wenn Sie den Grenzwert auf NULL festlegen, wird die Funktion **Rückgängig** deaktiviert.
+Wenn Sie den Grenzwert auf 0 (null) festlegen, wird die Funktion **Rückgängig** deaktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Wenn Sie den Grenzwert auf NULL festlegen, wird die Funktion **Rückgängig** de
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -69,22 +69,22 @@ Wenn Sie den Grenzwert auf NULL festlegen, wird die Funktion **Rückgängig** de
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ CanRedo**](em-canredo.md)
+[**EM \_ CANREDO**](em-canredo.md)
 </dt> <dt>
 
-[**EM \_ getredoname**](em-getredoname.md)
+[**EM \_ GETREDONAME**](em-getredoname.md)
 </dt> <dt>
 
-[**EM \_ getundoname**](em-getundoname.md)
+[**EM \_ GETUNDONAME**](em-getundoname.md)
 </dt> <dt>
 
-[**EM- \_ Wiederholung**](em-redo.md)
+[**EM \_ REDO**](em-redo.md)
 </dt> <dt>
 
-[**EM \_ rückgängig machen**](em-undo.md)
+[**EM \_ UNDO**](em-undo.md)
 </dt> </dl>
 
  

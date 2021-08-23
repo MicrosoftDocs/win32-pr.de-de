@@ -1,27 +1,27 @@
 ---
-title: Beispiele für DNS-WMI-Anbieter – Verwalten eines DNS-Servers
-description: Beispiele für DNS-WMI-Anbieter – Verwalten eines DNS-Servers
+title: DNS-WMI-Anbieterbeispiele – Verwalten eines DNS-Servers
+description: DNS-WMI-Anbieterbeispiele – Verwalten eines DNS-Servers
 ms.assetid: 7846fbaf-cc15-4cd0-aa3f-796617380bb6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c3ea632aa7e490ce77f86e314e4d949a39335fa
-ms.sourcegitcommit: 03fb201e1ea36e353c335ff063ed993fb5993e61
+ms.openlocfilehash: ac5f1becb8b9883d22eadb46357303f3cb5fdd1d61807285d8a59e21fb0e347d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104520355"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119795710"
 ---
-# <a name="dns-wmi-provider-samplesmanaging-a-dns-server"></a>Beispiele für DNS-WMI-Anbieter – Verwalten eines DNS-Servers
+# <a name="dns-wmi-provider-samplesmanaging-a-dns-server"></a>DNS-WMI-Anbieterbeispiele – Verwalten eines DNS-Servers
 
 > [!NOTE]
 > Dieser Artikel enthält Verweise auf den Begriff Slave, einen Begriff, den Microsoft nicht mehr verwendet. Sobald der Begriff aus der Software entfernt wird, wird er auch aus diesem Artikel entfernt.
 
-In diesem Abschnitt werden Skript Tasks im Zusammenhang mit der Verwaltung eines DNS-Servers veranschaulicht. Die folgenden Links springen zu Unterroutinen in der Skriptdatei:
+In diesem Abschnitt werden Skripterstellungsaufgaben für die Verwaltung eines DNS-Servers veranschaulicht. Die folgenden Links wechseln zu Unterroutinen in der Skriptdatei:
 
--   [Auflisten von DNS-Server Eigenschaften](#list-dns-server-properties)
--   [Einen DNS-Server starten, starten oder neu starten](#stop-start-or-restart-a-dns-server)
--   [Ändern der DNS-Server Eigenschaften](#modify-dns-server-properties)
--   [IP-Adresse hinzufügen](#add-an-ip-address)
+-   [Dns-Servereigenschaften auflisten](#list-dns-server-properties)
+-   [Beenden, Starten oder Neustarten eines DNS-Servers](#stop-start-or-restart-a-dns-server)
+-   [Ändern von DNS-Servereigenschaften](#modify-dns-server-properties)
+-   [Hinzufügen einer IP-Adresse](#add-an-ip-address)
 -   [Löschen einer IP-Adresse](#delete-an-ip-address)
 -   [Auflisten von Zonen](#list-zones)
 
@@ -148,7 +148,7 @@ OPTION EXPLICIT
 
 
 
-## <a name="list-dns-server-properties"></a>Auflisten von DNS-Server Eigenschaften
+## <a name="list-dns-server-properties"></a>Dns-Servereigenschaften auflisten
 
 
 ```VB
@@ -359,7 +359,7 @@ End Sub
 
 
 
-## <a name="stop-start-or-restart-a-dns-server"></a>Einen DNS-Server starten, starten oder neu starten
+## <a name="stop-start-or-restart-a-dns-server"></a>Beenden, Starten oder Neustarten eines DNS-Servers
 
 
 ```VB
@@ -491,7 +491,7 @@ End Sub
 
 
 
-## <a name="modify-dns-server-properties"></a>Ändern der DNS-Server Eigenschaften
+## <a name="modify-dns-server-properties"></a>Ändern von DNS-Servereigenschaften
 
 
 ```VB
@@ -665,7 +665,7 @@ End Sub
 
 
 
-## <a name="add-an-ip-address"></a>IP-Adresse hinzufügen
+## <a name="add-an-ip-address"></a>Hinzufügen einer IP-Adresse
 
 
 ```VB

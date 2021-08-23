@@ -1,19 +1,19 @@
 ---
-description: Die isignercertificate-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ISignerCertificate-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 04ECEC20-6AF9-4856-9187-F8FD2DBD12E2
-title: Isignercertificate-Methoden
+title: ISignerCertificate-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 089cce79e7a3e3207229f9860ad5c20ba1077914
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5264be7f6aa2f966de0bdc99b837cc7a8c74fb82afb6de1ca09fe6689a3a430b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356974"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119797860"
 ---
-# <a name="isignercertificate-methods"></a>Isignercertificate-Methoden
+# <a name="isignercertificate-methods"></a>ISignerCertificate-Methoden
 
-Die [**isignercertificate**](/windows/desktop/api/CertEnroll/nn-certenroll-isignercertificate) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ISignerCertificate-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-isignercertificate) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

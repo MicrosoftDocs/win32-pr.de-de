@@ -1,11 +1,11 @@
 ---
-title: NetBoot-IntelliMirror-OSes-Attribut
-description: Das netboot-IntelliMirror-OSes-Attribut ist für die interne Verwendung reserviert.
+title: netboot-IntelliMirror-OSes-Attribut
+description: Das Attribut netboot-IntelliMirror-OSes ist für die interne Verwendung reserviert.
 ms.assetid: 61fbe06c-9669-4ba2-89a8-446555e3aca0
 ms.tgt_platform: multiple
 keywords:
-- NetBoot-IntelliMirror-OSes-Attribut AD-Schema
-- netbootintellimirroroses-Attribut, AD-Schema
+- netboot-IntelliMirror-OSes-Attribut AD-Schema
+- netbootIntelliMirrorOSes-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 39284eec5ce3814ec8b555ed7c447d0bb94daee9
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: a77622f668979ccf46f9a5e7a072e661d52a93cf6c1cd2e956bd57ed7b75d03a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106339635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119703420"
 ---
-# <a name="netboot-intellimirror-oses-attribute"></a>NetBoot-IntelliMirror-OSes-Attribut
+# <a name="netboot-intellimirror-oses-attribute"></a>netboot-IntelliMirror-OSes-Attribut
 
-Das **netboot-IntelliMirror-OSes-** Attribut ist für die interne Verwendung reserviert.
+Das **Attribut netboot-IntelliMirror-OSes** ist für die interne Verwendung reserviert.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | NetBoot-IntelliMirror-Betriebssysteme                  |
-| LDAP-Display-Name | netbootintellimirroroses                    |
+| CN                | netboot-IntelliMirror-OSes                  |
+| Ldap-Anzeigename | netbootIntelliMirrorOSes                    |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.            |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.            |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.857                      |
-| System-ID-GUID    | 0738307e-91df-11d1-AEbc-0000l80367c1        |
+| System-ID-GUID    | 0738307e-91df-11d1-aebc-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Das **netboot-IntelliMirror-OSes-** Attribut ist für die interne Verwendung res
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Das **netboot-IntelliMirror-OSes-** Attribut ist für die interne Verwendung res
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
+| Ist einwertig       | False                                                      |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Das **netboot-IntelliMirror-OSes-** Attribut ist für die interne Verwendung res
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
+| Ist einwertig       | False                                                      |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Das **netboot-IntelliMirror-OSes-** Attribut ist für die interne Verwendung res
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
+| Ist einwertig       | False                                                      |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Das **netboot-IntelliMirror-OSes-** Attribut ist für die interne Verwendung res
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
+| Is-Single-Valued       | False                                                      |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Das **netboot-IntelliMirror-OSes-** Attribut ist für die interne Verwendung res
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
+| Is-Single-Valued       | False                                                      |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Das **netboot-IntelliMirror-OSes-** Attribut ist für die interne Verwendung res
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
+| Is-Single-Valued       | False                                                      |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 

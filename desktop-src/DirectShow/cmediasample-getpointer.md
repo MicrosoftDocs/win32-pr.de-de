@@ -1,7 +1,7 @@
 ---
-description: 'Die getpointer-Methode ruft einen Lese-/Schreib-Zeiger auf den Puffer ab. Diese Methode implementiert die imediasample:: getpointer-Methode.'
+description: Die GetPointer-Methode ruft einen Lese-/Schreibzeiger auf den Puffer ab. Diese Methode implementiert die IMediaSample::GetPointer-Methode.
 ms.assetid: dd797ad5-6066-4366-a56f-621132f2e6ea
-title: Cmediasample. getpointer-Methode (amfilter. h)
+title: CMediaSample.GetPointer-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fe8d8785bd52fbe601d9980f8fc146a2c6f41e40
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 21a39fae4f243c0a4e7305573f1b06ee2f11766729ef4933124d059b20b3a14b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832270"
 ---
-# <a name="cmediasamplegetpointer-method"></a>Cmediasample. getpointer-Methode
+# <a name="cmediasamplegetpointer-method"></a>CMediaSample.GetPointer-Methode
 
-Die `GetPointer` -Methode ruft einen Lese-/schreibzeiger auf den Puffer ab. Diese Methode implementiert die [**imediasample:: getpointer**](/windows/desktop/api/Strmif/nf-strmif-imediasample-getpointer) -Methode.
+Die `GetPointer` -Methode ruft einen Lese-/Schreibzeiger auf den Puffer ab. Diese Methode implementiert die [**IMediaSample::GetPointer-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample-getpointer)
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,16 +59,16 @@ Gibt S \_ OK zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

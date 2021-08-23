@@ -1,81 +1,81 @@
 ---
-title: YCbCr-Effekt
-description: Konvertiert planare-und Chroma-Subsampling-JPEG YCbCr-Daten in RGB.
+title: YCbCr Effect
+description: Konvertiert planare und untersampelte JPEG-YCbCr-Daten in RGB.
 ms.assetid: E4492996-54DA-4C5F-B44C-8FBE97C8DD7D
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c581effbadecc19c39161d2a2ec4af051d4195d6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d5302300cc539571fabb1c3d786686ffc514636133391e706fc5963002656764
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119636090"
 ---
-# <a name="ycbcr-effect"></a>YCbCr-Effekt
+# <a name="ycbcr-effect"></a>YCbCr Effect
 
-Konvertiert planare-und Chroma-untergeordnete JPEG Yc<sub>b</sub>C<sub>r</sub> -Daten in RGB. Dieser Effekt setzt voraus, dass die Yc<sub>b</sub>C<sub>r</sub> -Daten gemäß dem JPEG-Standard formatiert sind. Daten für die Eingaben können von iwicplanarbitmapsourcetransform abgerufen werden. Der JC<sub>b</sub>c<sub>r</sub> -Effekt erfordert zwei Eingaben: der erste muss eine Bitmap im DXGI- \_ Format \_ R8 sein, die "Luma"-Daten enthält, und die zweite muss ein DXGI- \_ Format sein \_ R8G8 Bitmap mit unter Stichproben von Chroma-Daten. Weitere Informationen zur Verwendung dieses Effekts finden Sie [unter JPEG YCbCr-Unterstützung](/windows/desktop/wic/jpeg-ycbcr-support).
+Konvertiert planare und untersampelte JPEG YC<sub>b</sub>C<sub>r-Daten</sub> in RGB. Bei diesem Effekt wird davon ausgegangen, dass die YC<sub>b</sub>C<sub>r-Daten</sub> gemäß dem JPEG-Standard formatiert sind. Daten für die Eingaben können von IWICPlanarBitmapSourceTransform abgerufen werden. Der YC<sub>b</sub>C<sub>r-Effekt</sub> erfordert zwei Eingaben: Die erste muss eine DXGI \_ FORMAT \_ R8-Bitmap mit Lumadaten und die zweite eine DXGI \_ FORMAT \_ R8G8-Bitmap sein, die subsampled-Daten enthält. Weitere Informationen zur Verwendung dieses Effekts finden Sie unter [JPEG YCbCr Support](/windows/desktop/wic/jpeg-ycbcr-support).
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1YCbCr.
 
--   [Effekt Eigenschaften](#effect-properties)
--   [Unter Stichproben Modi](#subsampling-modes)
--   [Interpolations Modi](#interpolation-modes)
--   [Ausgabe Bitmap](#output-bitmap)
--   [Anforderungen](#requirements)
+-   [Effect-Eigenschaften](#effect-properties)
+-   [Untersamplingmodi](#subsampling-modes)
+-   [Interpolationsmodi](#interpolation-modes)
+-   [Ausgabebitmap](#output-bitmap)
+-   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
 
 
-| Anzeige Name und indexenumeration                                          | BESCHREIBUNG                                                                                                                                                                                                                                                                                             |
+| Anzeigename und Indexenumeration                                          | Beschreibung                                                                                                                                                                                                                                                                                             |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Chromasubsampling<br/> D2D1 \_ YCbCr \_ Chroma- \_ Unterstichprobe<br/>    | Gibt die Chroma-Unterstichprobe des Eingabe-Chroma-Bilds an. <br/> Der Typ ist D2D1 \_ YCbCr \_ Chroma \_ Subsampling.<br/> Der Standardwert ist D2D1 \_ YCbCr \_ Chroma \_ Subsampling \_ Auto.<br/>                                                                                                |
-| TransformMatrix <br/> D2D1 \_ YCbCr- \_ Prop- \_ Transformations \_ Matrix<br/> | Eine [3 x 2-Matrix](/previous-versions/dotnet/netframework-3.0/ms750596(v=vs.85)) , die die Achsen ausgerichtete affine Transformation des Bilds angibt. Zu den Achsen ausgerichteten Transformationen zählen Skalierungen, Flips und 90-Grad-Drehungen. <br/> Der Typ ist "D2D1 \_ Matrix \_ 3x2 \_ F".<br/> Der Standardwert ist Matrix3x2F:: Identity ().<br/> |
-| InterpolationMode<br/> D2D1 \_ YCbCr- \_ Interpolations \_ Modus<br/>    | Der Interpolations Modus.<br/> Der Typ ist der D2D1 \_ YCbCr- \_ Interpolations \_ Modus.<br/>                                                                                                                                                                                                             |
+| UmschlägeSubsampling<br/> D2D1 \_ YCBCR– \_ \_ ABONNEMENTSAMPLING<br/>    | Gibt die Untersampling des Eingabebilds an. <br/> Der Typ ist "D2D1 \_ YCBCR \_ NF \_ SUBSAMPLING".<br/> Der Standardwert ist D2D1 \_ YCBCR \_ NF \_ SUBSAMPLING \_ AUTO.<br/>                                                                                                |
+| TransformMatrix <br/> D2D1 \_ YCBCR \_ PROP \_ TRANSFORM \_ MATRIX<br/> | Eine [3x2-Matrix,](/previous-versions/dotnet/netframework-3.0/ms750596(v=vs.85)) die die an der Achse ausgerichtete affine Transformation des Bilds angibt. Zu den achsenbündig ausgerichteten Transformationen gehören Skalierung, Flips und Drehungen um 90 Grad. <br/> Der Typ ist D2D1 \_ MATRIX \_ 3X2 \_ F.<br/> Der Standardwert ist Matrix3x2F::Identity().<br/> |
+| Interpolationmode<br/> D2D1 \_ YCBCR \_ INTERPOLATION \_ MODE<br/>    | Der Interpolationsmodus.<br/> Der Typ ist D2D1 \_ YCBCR \_ INTERPOLATION \_ MODE.<br/>                                                                                                                                                                                                             |
 
 
 
  
 
-## <a name="subsampling-modes"></a>Unter Stichproben Modi
+## <a name="subsampling-modes"></a>Untersamplingmodi
 
 
 
 | Enumeration                                       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D2D1 \_ YCbCr \_ Chroma \_ unter Stichproben \_ automatisch<br/> | Dieser Modus versucht, die Chroma-Unterstichprobe aus den Begrenzungen der Eingabe Bilder abzuleiten. Wenn diese Option ausgewählt ist, wird die kleinere Ebene auf die Größe der größeren Ebene hochskalieren, und dieses Ausgabe Rechteck ist die Schnittmenge der beiden Ebenen. Wenn Sie diesen Modus verwenden, sollten Sie sorgfältig vorgehen, wenn Sie Auswirkungen auf die Eingabe Ebenen anwenden, die die Bild Begrenzungen ändern, wie z. b. die Rahmen Transformation, damit das gewünschte Größenverhältnis zwischen den Ebenen beibehalten wird. <br/> |
-| D2D1 \_ YCbCr \_ Chroma- \_ Unterstichprobe \_ 420<br/>  | Die Chroma-Ebene wird horizontal von Subsampling und vertikal von untersucht. Wenn diese Option ausgewählt ist, wird die Chroma-Ebene horizontal und vertikal um 2X erhöht, und dieses Ausgabe Rechteck ist die Schnittmenge der beiden Ebenen.<br/>                                                                                                                                                                                                                          |
-| D2D1 \_ YCbCr \_ Chroma- \_ Unterstichprobe \_ 422<br/>  | Die Chroma-Ebene wird horizontal von untersucht. Wenn diese Option ausgewählt ist, wird die Chroma-Ebene horizontal um 2X hochskalierte, und dieses Ausgabe Rechteck ist die Schnittmenge der beiden Ebenen.<br/>                                                                                                                                                                                                                                                                        |
-| D2D1 \_ YCbCr \_ Chroma- \_ Unterstichprobe \_ 444<br/>  | Die Chroma-Ebene wird nicht untersucht. Wenn diese Option aktiviert ist, ist das Ausgabe Rechteck des Effekts die Schnittmenge der beiden Ebenen.<br/>                                                                                                                                                                                                                                                                                                                                            |
-| D2D1 \_ YCbCr \_ Chroma- \_ Unterstichprobe \_ 440<br/>  | Die Chroma-Ebene wird vertikal von Subsampling. Wenn diese Option ausgewählt ist, wird die Chroma-Ebene vertikal um 2X erhöht, und dieses Ausgabe Rechteck ist die Schnittmenge der beiden Ebenen.<br/>                                                                                                                                                                                                                                                                            |
+| D2D1 \_ YCBCR– \_ \_ SUBSAMPLING \_ AUTO<br/> | In diesem Modus wird versucht, die Subsampling der -Subsampling aus den Grenzen der Eingabebilder abzuleitung. Wenn diese Option ausgewählt ist, wird die kleinere Ebene auf die Größe der größeren Ebene hochsampelt, und das Ausgaberechteck dieses Effekts ist die Schnittmenge der beiden Ebenen. Wenn Sie diesen Modus verwenden, sollten Sie beim Anwenden von Effekten auf die Eingabeebenen, die die Bildgrenzen ändern, wie z. B. die Rahmentransformation, sorgfältig vorgehen, damit das gewünschte Größenverhältnis zwischen den Ebenen beibehalten wird. <br/> |
+| D2D1 \_ YCBCR– \_ \_ ABONNEMENTSAMPLING \_ 420<br/>  | Die Flächenebene wird horizontal von und vertikal durch subsampled subsampled von subsampled. Wenn diese Option ausgewählt ist, wird die Knotenebene horizontal und vertikal um 2x hochsampgt, und das Ausgaberechteck dieses Effekts ist die Schnittmenge der beiden Ebenen.<br/>                                                                                                                                                                                                                          |
+| D2D1 \_ YCBCR– \_ \_ ABONNEMENTSAMPLING \_ 422<br/>  | Die Schnittebene wird horizontal von subsampled. Wenn diese Option ausgewählt ist, wird die Knotenebene horizontal um das Zweifache hochsampgt, und das Ausgaberechteck dieses Effekts ist die Schnittmenge der beiden Ebenen.<br/>                                                                                                                                                                                                                                                                        |
+| D2D1 \_ YCBCR– \_ \_ ABONNEMENTSAMPLING \_ 444<br/>  | Die Flugzeugebene wird nicht untersampelt. Wenn diese Option ausgewählt ist, ist das Ausgaberechteck dieses Effekts die Schnittmenge der beiden Ebenen.<br/>                                                                                                                                                                                                                                                                                                                                            |
+| D2D1 \_ YCBCR– \_ \_ ABONNEMENTSAMPLING \_ 440<br/>  | Die Flächenebene wird vertikal von subsampled. Wenn diese Option ausgewählt ist, wird die Knotenebene vertikal um das Zweifache hochsampgt, und das Ausgaberechteck dieses Effekts ist die Schnittmenge der beiden Ebenen.<br/>                                                                                                                                                                                                                                                                            |
 
 
 
  
 
-## <a name="interpolation-modes"></a>Interpolations Modi
+## <a name="interpolation-modes"></a>Interpolationsmodi
 
 
 
 | Enumeration                                             | Beschreibung                                                                                                                                                                                          |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D2D1 \_ YCbCr \_ Interpolations \_ Modus \_ Nächster \_ Nachbar     | Verwendet den nächsten einzelnen Punkt und verwendet diesen. Dieser Modus verwendet weniger Verarbeitungszeit, gibt jedoch das niedrigste Qualitätsbild aus.                                                                           |
-| D2D1 \_ YCbCr \_ Interpolations \_ Modus \_ linear                | Verwendet ein vier-Punkt-Beispiel und eine lineare interpolung. Dieser Modus verwendet mehr Verarbeitungszeit als der nächstgelegene Nachbar Modus, gibt aber ein Image mit höherer Qualität aus.                                           |
-| D2D1 \_ YCbCr \_ Interpolations \_ Modus ( \_ kubisch)                 | Verwendet einen 16-beispielkubischen Kernel für Interpolationen. In diesem Modus wird die meiste Verarbeitungszeit verwendet, es wird jedoch ein Image mit höherer Qualität ausgegeben.                                                                        |
-| D2D1 \_ YCbCr \_ Interpolations \_ Modus \_ \_ Multisample \_ linear | Verwendet vier lineare Stichproben innerhalb eines einzelnen Pixels für eine gute Edge-Antialiasing. Dieser Modus eignet sich gut zum horizontalen Herunterskalieren um kleine Beträge in Bildern mit wenigen Pixeln.                                              |
-| D2D1 \_ YCbCr \_ Interpolations \_ Modus \_ anisotrope           | Verwendet anisotrope Filterung, um ein Muster entsprechend der transformierten Form der Bitmap zu modellieren.                                                                                                     |
-| D2D1 \_ YCbCr \_ Interpolations \_ Modus \_ High \_ Quality \_ kubisch  | Verwendet einen kubischen Kernel mit hoher Qualität für eine Variable Größe, um das Abbild vorab zu skalieren, wenn eine downstreamingmatrix an der Transformationsmatrix beteiligt ist. Verwendet dann den kubischen Interpolations Modus für die endgültige Ausgabe. |
+| D2D1 \_ YCBCR \_ INTERPOLATION \_ MODE \_ NEAREST \_ NEIGHBOR     | Probieren Sie den nächstgelegenen einzelnen Punkt aus, und verwendet diesen. Dieser Modus verwendet weniger Verarbeitungszeit, gibt jedoch das Bild mit der niedrigsten Qualität aus.                                                                           |
+| D2D1 \_ YCBCR \_ INTERPOLATION \_ MODE \_ LINEAR                | Verwendet eine Vier-Punkt-Stichprobe und lineare Interpolation. Dieser Modus verwendet mehr Verarbeitungszeit als der nächste Nachbarmodus, gibt jedoch ein Bild höherer Qualität aus.                                           |
+| D2D1 \_ YCBCR \_ INTERPOLATION \_ MODE \_ KUBISCH                 | Verwendet einen kubischen Kernel mit 16 Beispielen für die Interpolation. Dieser Modus verwendet die meiste Verarbeitungszeit, gibt jedoch ein Bild höherer Qualität aus.                                                                        |
+| D2D1 \_ YCBCR \_ INTERPOLATION \_ MODE \_ MULTI \_ SAMPLE \_ LINEAR | Verwendet vier lineare Stichproben innerhalb eines einzelnen Pixels für ein gutes Edge-Antialiasing. Dieser Modus eignet sich gut für das Herunterskalierung um kleine Mengen auf Bildern mit wenigen Pixeln.                                              |
+| D2D1 \_ YCBCR \_ INTERPOLATION \_ MODE \_ ANISOTROP           | Verwendet anisotrope Filterung, um ein Muster entsprechend der transformierten Form der Bitmap abzubilden.                                                                                                     |
+| D2D1 \_ YCBCR \_ INTERPOLATION \_ MODE HIGH \_ \_ QUALITY \_ KUBISCH  | Verwendet einen kubischen Kernel variabler Größe, um das Bild vorab herunterzuskalieren, wenn die Transformationsmatrix eine Downskalierung umfasst. Verwendet dann den kubischen Interpolationsmodus für die endgültige Ausgabe. |
 
 
 
  
 
-## <a name="output-bitmap"></a>Ausgabe Bitmap
+## <a name="output-bitmap"></a>Ausgabebitmap
 
-Die Größe der Ausgabe Bitmap hängt von der Transformationsmatrix ab, die auf das Bild angewendet wird.
+Die Größe der Ausgabebitmap hängt von der Transformationsmatrix ab, die auf das Bild angewendet wird.
 
-Der Effekt führt den Transformations Vorgang aus und wendet dann ein Begrenzungs Rahmen um das Ergebnis an. Die Ausgabe Bitmap ist die Größe des umgebenden Felds.
+Der Effekt führt den Transformationsvorgang aus und wendet dann einen Begrenzungsfeld um das Ergebnis an. Die Ausgabebitmap ist die Größe des umgebenden Felds.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,10 +83,10 @@ Der Effekt führt den Transformations Vorgang aus und wendet dann ein Begrenzung
 
 | Anforderung | Wert |
 |--------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | \[ \| Windows Store-Apps für Desktop-Apps Windows 8.1\]            |
-| Unterstützte Mindestversion (Server) | Windows Server 2012 R2 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects \_ 1. h                                              |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                          |
+| Unterstützte Mindestversion (Client) | \[Windows 8.1 Desktop-Apps \| Windows Store Apps\]            |
+| Unterstützte Mindestversion (Server) | Windows Server 2012 \[R2-Desktop-Apps \| Windows Store-Apps\] |
+| Header                   | d2d1effects \_ 1.h                                              |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                          |
 
 
 
@@ -99,10 +99,10 @@ Der Effekt führt den Transformations Vorgang aus und wendet dann ein Begrenzung
 [**ID2D1Effect**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1effect)
 </dt> <dt>
 
-[JPEG YCbCr-Unterstützung](/windows/desktop/wic/jpeg-ycbcr-support)
+[JPEG-YCbCr-Unterstützung](/windows/desktop/wic/jpeg-ycbcr-support)
 </dt> <dt>
 
-[**Iwicplanarbitmapsourcetransform**](/windows/desktop/api/wincodec/nn-wincodec-iwicplanarbitmapsourcetransform)
+[**IWICPlanarBitmapSourceTransform**](/windows/desktop/api/wincodec/nn-wincodec-iwicplanarbitmapsourcetransform)
 </dt> </dl>
 
  

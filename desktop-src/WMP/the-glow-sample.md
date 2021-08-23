@@ -1,43 +1,43 @@
 ---
-title: Das Glüh Beispiel
-description: Das Glüh Beispiel
+title: The Glow Sample
+description: The Glow Sample
 ms.assetid: 59e1b90c-1649-4233-8b2f-f3a876045771
 keywords:
-- Visualisierungen, Glüh Beispiel
-- benutzerdefinierte Visualisierungen, Glüh Beispiel
-- Programmier Handbuch, Visualisierungen
-- Beispiele, Glanz Visualisierung
-- Beispiel für Glanz Visualisierung
+- Visualisierungen,Leuchtbeispiel
+- Benutzerdefinierte Visualisierungen, Beispiel "Leucht"
+- Programmierhandbuch,Visualisierungen
+- Beispiele,Leuchtvisualisierung
+- Beispiel für die Visualisierung von Leuchtern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d553334e2cc145f291c61bf8dd79c430601947e7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7551caabcb5b4cf9f52353156609857a66ccde004513f8beaf05079b6b0a3f92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119762780"
 ---
-# <a name="the-glow-sample"></a>Das Glüh Beispiel
+# <a name="the-glow-sample"></a>The Glow Sample
 
-In diesem Abschnitt wird beschrieben, wie Sie eine einfache Visualisierung namens "Glanz" erstellen. Es werden drei Voreinstellungen verwendet: rot, grün und blau. Der Assistent für die benutzerdefinierte Visualisierung wurde ausgeführt, und der namens Glanz wurde ausgewählt.
+In diesem Abschnitt wird beschrieben, wie Sie eine einfache Visualisierung namens "Glow" erstellen. Es werden drei Voreinstellungen verwendet: Rot, Grün und Blau. Der Assistent für benutzerdefinierte Visualisierungen wurde ausgeführt, und der Name "Glow" wurde ausgewählt.
 
-Glanz ändert einfach die Farbe in der Musik. Das Licht Flimmern, da die audiopotenz des Waveforms manchmal 0 (null) zum Zeitpunkt der Momentaufnahme überschreitet. Dieses Beispiel wird ausgewählt, weil es eines der einfachsten möglichen Beispiele ist.
+Beim Leuchten wird die Farbe einfach im Laufe der Zeit in die Musik geändert. Der Leuchter flackert, da die Audioleistung der Wellenform zum Zeitpunkt der Momentaufnahme manchmal 0 (null) übertrifft. Dieses Beispiel wird ausgewählt, da es sich um eines der einfachsten möglichen Beispiele handelt.
 
-Die folgenden Abschnitte führen Sie durch:
+Die folgenden Abschnitte führen Sie durch Folgendes:
 
--   [Implementieren von Rendering](implementing-render-sample.md)
+-   [Implementieren von Rendern](implementing-render-sample.md)
 -   [Ändern von Voreinstellungen](changing-presets.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Programmier Handbuch zur benutzerdefinierten Visualisierung**](custom-visualization-programming-guide.md)
+[**Programmierhandbuch für benutzerdefinierte Visualisierungen**](custom-visualization-programming-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

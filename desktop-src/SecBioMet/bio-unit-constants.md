@@ -1,6 +1,6 @@
 ---
-title: BIO_UNIT Konstanten (winbio \_ types. h)
-description: Für die zukünftige Verwendung reserviert. | BIO_UNIT Konstanten (winbio \_ types. h)
+title: BIO_UNIT Konstanten (Winbio \_ types.h)
+description: Für die zukünftige Verwendung reserviert. | BIO_UNIT Konstanten (Winbio \_ types.h)
 ms.assetid: 681A7D1E-00E9-4EDD-B698-8989EB770286
 topic_type:
 - apiref
@@ -16,20 +16,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 62711fecd5a0213b5b65ecce93359a1f4a4478ac
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 12c22a2beb94545bc9904f0bbc16b72d38293a22351204f5bc69c0f7c81f0b36
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119798290"
 ---
-# <a name="bio_unit-constants"></a>Bio- \_ Einheits Konstanten
+# <a name="bio_unit-constants"></a>BIO \_ UNIT-Konstanten
 
 Die folgenden Konstanten sind für die zukünftige Verwendung reserviert.
 
 <dl> <dt>
 
-<span id="BIO_UNIT_RAW"></span><span id="bio_unit_raw"></span>**\_RAW Unit \_ RAW**
+<span id="BIO_UNIT_RAW"></span><span id="bio_unit_raw"></span>**BIO \_ UNIT \_ RAW**
 </dt> <dd> <dl> <dt>
 
 
@@ -39,7 +39,7 @@ Für die zukünftige Verwendung reserviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="BIO_UNIT_MAINTENANCE"></span><span id="bio_unit_maintenance"></span>**Wartung von Bio- \_ Einheiten \_**
+<span id="BIO_UNIT_MAINTENANCE"></span><span id="bio_unit_maintenance"></span>**WARTUNG \_ VON \_ BIO-EINHEITEN**
 </dt> <dd> <dl> <dt>
 
 
@@ -49,7 +49,7 @@ Für die zukünftige Verwendung reserviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="BIO_UNIT_OPEN_SESSION"></span><span id="bio_unit_open_session"></span>**Open-Sitzung für Bio- \_ Einheit \_ \_**
+<span id="BIO_UNIT_OPEN_SESSION"></span><span id="bio_unit_open_session"></span>**SITZUNG \_ ZUM ÖFFNEN DER \_ \_ BIO-EINHEIT**
 </dt> <dd> <dl> <dt>
 
 
@@ -59,7 +59,7 @@ Für die zukünftige Verwendung reserviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="BIO_UNIT_EXTENDED_ACCESS"></span><span id="bio_unit_extended_access"></span>**\_ \_ erweiterter \_ Zugriff auf Bio-Einheiten**
+<span id="BIO_UNIT_EXTENDED_ACCESS"></span><span id="bio_unit_extended_access"></span>**ERWEITERTER \_ ZUGRIFF \_ AUF \_ BIO-EINHEITEN**
 </dt> <dd> <dl> <dt>
 
 
@@ -69,7 +69,7 @@ Für die zukünftige Verwendung reserviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="BIO_UNIT_ENROLL"></span><span id="bio_unit_enroll"></span>**bioeinheits Registrierung \_ \_**
+<span id="BIO_UNIT_ENROLL"></span><span id="bio_unit_enroll"></span>**BIO \_ UNIT \_ ENROLL**
 </dt> <dd> <dl> <dt>
 
 
@@ -85,9 +85,9 @@ Für die zukünftige Verwendung reserviert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (einschließlich Winbio.h)</dt> </dl> |
 
 
 
@@ -95,7 +95,7 @@ Für die zukünftige Verwendung reserviert.
 
 <dl> <dt>
 
-[Client Anwendungs Konstanten](client-application-constants.md)
+[Clientanwendungskonstant](client-application-constants.md)
 </dt> </dl>
 
  

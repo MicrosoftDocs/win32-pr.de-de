@@ -1,46 +1,46 @@
 ---
-description: Die Aktion "RemoveExistingProducts" durchläuft die in der Spalte "action Property" der upgradetabelle aufgeführten Produktcodes und entfernt die Produkte nacheinander, indem parallele Installationen aufgerufen werden.
+description: Die RemoveExistingProducts-Aktion durchläuft die in der Spalte ActionProperty der Tabelle Upgrade aufgeführten Produktcodes und entfernt die Produkte nacheinander, indem gleichzeitige Installationen aufrufen.
 ms.assetid: 3e96283b-1085-4ace-b004-2fd94310eeb2
 title: RemoveExistingProducts-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dea3b792b02352277e8f29fa422b093fe876b560
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0c3118ebd01aa39b0d9a5dad29ad1c3563c869ed5e0ebc8dfefd5ecd5c89301f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106351693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119810930"
 ---
 # <a name="removeexistingproducts-action"></a>RemoveExistingProducts-Aktion
 
-Die Aktion "RemoveExistingProducts" durchläuft die in der Spalte "action Property" der [upgradetabelle](upgrade-table.md) aufgeführten Produktcodes und entfernt die Produkte nacheinander, indem parallele Installationen aufgerufen werden. Der Installer legt für jede gleichzeitige Installation die [**ProductCode**](productcode.md) -Eigenschaft auf den Produktcode fest und legt die [**Remove**](remove.md) -Eigenschaft auf den Wert im Feld entfernen der upgradetabelle fest. Wenn das Feld entfernen leer ist, lautet der Wert standardmäßig alle, und das Installationsprogramm entfernt das gesamte Produkt.
+Die RemoveExistingProducts-Aktion durchläuft die in der Spalte ActionProperty der [Tabelle Upgrade](upgrade-table.md) aufgeführten Produktcodes und entfernt die Produkte nacheinander, indem gleichzeitige Installationen aufrufen. Für jede gleichzeitige Installation legt das Installationsprogramm die [**ProductCode-Eigenschaft**](productcode.md) auf den Produktcode und die [**REMOVE-Eigenschaft**](remove.md) auf den Wert im Feld Entfernen der Tabelle Upgrade fest. Wenn das Feld Entfernen leer ist, wird der Wert standardmäßig auf ALL festgelegt, und das Installationsprogramm entfernt das gesamte Produkt.
 
-Der Installer führt die Aktion RemoveExistingProducts nur bei der erstmaligen Installation eines Produkts aus. Die Aktion wird während einer [Wartungs Installation](maintenance-installation.md) oder-Installation nicht ausgeführt.
+Das Installationsprogramm führt die RemoveExistingProducts-Aktion nur bei der ersten Installation eines Produkts aus. Die Aktion wird während einer Wartungsinstallation [oder Deinstallation](maintenance-installation.md) nicht ausgeführt.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die Aktion "RemoveExistingProducts" muss in der Aktions Sequenz an einem der folgenden Speicherorte geplant werden.
+Die RemoveExistingProducts-Aktion muss in der Aktionssequenz an einem der folgenden Speicherorte geplant werden.
 
--   Zwischen der [InstallValidate-Aktion](installvalidate-action.md) und der [InstallInitialize-Aktion](installinitialize-action.md). In diesem Fall entfernt das Installationsprogramm die alten Anwendungen vollständig, bevor die neuen Anwendungen installiert werden. Dies ist eine ineffiziente Platzierung für die Aktion, da alle wiederverwendeten Dateien neu kopiert werden müssen.
--   Nach der [InstallInitialize-Aktion](installinitialize-action.md) und vor den Aktionen, mit denen Ausführungs Skript generiert wird.
--   Zwischen der [InstallExecute-Aktion](installexecute-action.md)oder der [InstallExecuteAgain](installexecuteagain-action.md)-Aktion und der [InstallFinalize](installfinalize-action.md)-Aktion. Im Allgemeinen werden die letzten drei Aktionen direkt aufeinander geplant: InstallExecute, RemoveExistingProducts und InstallFinalize. In diesem Fall werden die aktualisierten Dateien zuerst installiert, dann werden die alten Dateien entfernt. Wenn beim Entfernen der alten Anwendung jedoch ein Fehler auftritt, führt der Installer sowohl das Entfernen der alten Anwendung als auch die Installation der neuen Anwendung aus.
--   Nach der [InstallFinalize-Aktion](installfinalize-action.md). Dies ist die effizienteste Platzierung für die Aktion. In diesem Fall aktualisiert der Installer Dateien, bevor die alten Anwendungen entfernt werden. Nur die zu Aktualisier Ende Dateien werden während der Installation installiert. Wenn das Entfernen der alten Anwendung fehlschlägt, führt das Installationsprogramm nur ein Rollback für die Deinstallation der alten Anwendung aus.
+-   Zwischen der [InstallValidate-Aktion](installvalidate-action.md) und der [InstallInitialize-Aktion](installinitialize-action.md). In diesem Fall entfernt das Installationsprogramm die alten Anwendungen vollständig, bevor die neuen Anwendungen installiert werden. Dies ist eine ineffiziente Platzierung für die Aktion, da alle wiederverwendeten Dateien erneut kopiert werden müssen.
+-   Nach der [InstallInitialize-Aktion](installinitialize-action.md) und vor allen Aktionen, die ein Ausführungsskript generieren.
+-   Zwischen der [InstallExecute-Aktion](installexecute-action.md)oder der [InstallExecuteExecuteExecin-Aktion](installexecuteagain-action.md)und der [InstallFinalize-Aktion](installfinalize-action.md). Im Allgemeinen werden die letzten drei Aktionen direkt nacheinander geplant: InstallExecute, RemoveExistingProducts und InstallFinalize. In diesem Fall werden zuerst die aktualisierten Dateien installiert, und dann werden die alten Dateien entfernt. Wenn das Entfernen der alten Anwendung jedoch fehlschlägt, führt das Installationsprogramm ein Rollback sowohl für die Entfernung der alten Anwendung als auch für die Installation der neuen Anwendung aus.
+-   Nach der [InstallFinalize-Aktion](installfinalize-action.md). Dies ist die effizienteste Platzierung für die Aktion. In diesem Fall aktualisiert das Installationsprogramm Dateien, bevor die alten Anwendungen entfernt werden. Nur die Dateien, die aktualisiert werden, werden während der Installation installiert. Wenn beim Entfernen der alten Anwendung ein Fehler auftritt, führt das Installationsprogramm nur ein Rollback für die Deinstallation der alten Anwendung aus.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
-| Feld | Beschreibung der Aktions Daten |
+| Feld | Beschreibung der Aktionsdaten |
 |-------|----------------------------|
-| \[1\] | Das Produkt wurde entfernt.           |
+| \[1\] | Produkt entfernt.           |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Windows Installer legt die [**upgradingproductcode**](upgradingproductcode.md) -Eigenschaft fest, wenn diese Aktion ausgeführt wird.
+Windows Das Installationsprogramm legt die [**UPGRADINGPRODUCTCODE-Eigenschaft**](upgradingproductcode.md) fest, wenn diese Aktion ausgeführt wird.
 
  
 

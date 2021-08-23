@@ -1,7 +1,7 @@
 ---
 description: Aktualisiert den Elementnamen für das angegebene CIM \_ CollectionOfMSEs-Objekt.
 ms.assetid: 03d3979b-f3d2-4192-8bba-bdf4a19aa47c
-title: Renamecollection-Methode der Msvm_CollectionManagementService-Klasse
+title: RenameCollection-Methode der Msvm_CollectionManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: e4bb127fc8fba528e883631602fcea8ba0b4de2c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4ddcb83c7f148ee8a3f7a25d050f3924bfd4b665c471fac1dbfd095c70e46be1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867967"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681930"
 ---
-# <a name="renamecollection-method-of-the-msvm_collectionmanagementservice-class"></a>Renamecollection-Methode der MSVM \_ collectionmanagementservice-Klasse
+# <a name="renamecollection-method-of-the-msvm_collectionmanagementservice-class"></a>RenameCollection-Methode der Msvm \_ CollectionManagementService-Klasse
 
-Aktualisiert den Elementnamen für das angegebene [**CIM \_ CollectionOfMSEs**](cim-collectionofmses.md) -Objekt.
+Aktualisiert den Elementnamen für das angegebene [**CIM \_ CollectionOfMSEs-Objekt.**](cim-collectionofmses.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,40 +41,40 @@ uint32 RenameCollection(
 
 <dl> <dt>
 
-*Sammlung* \[ in\]
+*Sammlung* \[ In\]
 </dt> <dd>
 
-Die Auflistung, die umbenannt werden soll.
+Die umzubenennende Auflistung.
 
 </dd> <dt>
 
-*NewName* \[ in\]
+*NewName* \[ In\]
 </dt> <dd>
 
-Der neue Name, der verwendet werden soll.
+Der zu verwendende neue Name.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Ein Verweis auf den Auftrag (kann NULL sein, wenn die Aufgabe abgeschlossen ist).
+Ein Verweis auf den Auftrag (kann NULL sein, wenn der Task abgeschlossen ist).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 zurück, wenn erfolgreich, oder 4096, wenn der Auftrag gestartet wurde. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg 0 oder 4096 zurück, wenn der Auftrag gestartet wurde. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -83,7 +83,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -95,19 +95,19 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -116,10 +116,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -128,7 +128,7 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**MSVM \_ collectionmanagementservice**](msvm-collectionmanagementservice.md)
+[**Msvm \_ CollectionManagementService**](msvm-collectionmanagementservice.md)
 </dt> </dl>
 
  

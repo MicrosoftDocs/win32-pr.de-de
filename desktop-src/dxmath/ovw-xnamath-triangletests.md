@@ -1,28 +1,28 @@
 ---
-description: Listet die Dreiecks Testfunktionen auf, die vom directxmath triangletests-Namespace bereitgestellt werden.
+description: Listet die Dreieckstestfunktionen auf, die vom DirectXMath TriangleTests-Namespace bereitgestellt werden.
 ms.assetid: 97c5fa38-e88c-debb-f3ed-76c5878778c4
-title: Directxmath-Dreiecks Testfunktionen
+title: DirectXMath-Dreieckstestfunktionen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 35510484edc58fa8112b23a89480b5af7f5c1f01
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c695651f8dd1e9c753516db9589f680b55b2939ea38244a3f58804d6082d2a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119740150"
 ---
-# <a name="directxmath-triangle-test-functions"></a>Directxmath-Dreiecks Testfunktionen
+# <a name="directxmath-triangle-test-functions"></a>DirectXMath-Dreieckstestfunktionen
 
-Listet die Dreiecks Testfunktionen auf, die vom directxmath **triangletests** -Namespace bereitgestellt werden.
+Listet die Dreieckstestfunktionen auf, die vom DirectXMath **TriangleTests-Namespace bereitgestellt** werden.
 
 
 
 | Begriff                                                                                                                                                                                                                 | BESCHREIBUNG                                                                                |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| <span id="ContainedBy"></span><span id="containedby"></span><span id="CONTAINEDBY"></span>[**Containedby**](/windows/desktop/api/DirectXCollision/nf-directxcollision-boundingbox-containedby)<br/>                                                                              | Testet, ob ein Dreieck in sechs Ebenen enthalten ist (in der Regel eine Frustum-Klasse). <br/> |
-| <span id="Intersects__triangle-plane_"></span><span id="intersects__triangle-plane_"></span><span id="INTERSECTS__TRIANGLE-PLANE_"></span>[**Schnittpunkte (Dreiecks Ebene)**](/previous-versions/windows/desktop/legacy/hh855919(v=vs.85))<br/>             | Testet, ob sich ein Dreieck und eine Ebene schneiden.<br/>                                 |
-| <span id="Intersects__triangle-ray_"></span><span id="intersects__triangle-ray_"></span><span id="INTERSECTS__TRIANGLE-RAY_"></span>[**Schnittpunkte (Dreieck-Ray)**](/previous-versions/windows/desktop/legacy/hh855922(v=vs.85))<br/>                     | Testet, ob sich ein Dreieck mit einem Strahl schneidet.<br/>                                  |
-| <span id="Intersects__triangle-triangle_"></span><span id="intersects__triangle-triangle_"></span><span id="INTERSECTS__TRIANGLE-TRIANGLE_"></span>[**Schnittpunkte (Dreieck Dreieck)**](/previous-versions/windows/desktop/legacy/hh855933(v=vs.85))<br/> | Testet, ob sich zwei Dreiecke überschneiden.<br/>                                           |
+| <span id="ContainedBy"></span><span id="containedby"></span><span id="CONTAINEDBY"></span>[**ContainedBy**](/windows/desktop/api/DirectXCollision/nf-directxcollision-boundingbox-containedby)<br/>                                                                              | Testet, ob ein Dreieck in sechs Ebenen (in der Regel ein Frustum) enthalten ist. <br/> |
+| <span id="Intersects__triangle-plane_"></span><span id="intersects__triangle-plane_"></span><span id="INTERSECTS__TRIANGLE-PLANE_"></span>[**Schnitte (Dreiecksebene)**](/previous-versions/windows/desktop/legacy/hh855919(v=vs.85))<br/>             | Testet, ob sich ein Dreieck und eine Ebene überschneiden.<br/>                                 |
+| <span id="Intersects__triangle-ray_"></span><span id="intersects__triangle-ray_"></span><span id="INTERSECTS__TRIANGLE-RAY_"></span>[**Schnitte (Dreiecksstrahl)**](/previous-versions/windows/desktop/legacy/hh855922(v=vs.85))<br/>                     | Testen Sie, ob sich ein Dreieck mit einem Strahl überschneidet.<br/>                                  |
+| <span id="Intersects__triangle-triangle_"></span><span id="intersects__triangle-triangle_"></span><span id="INTERSECTS__TRIANGLE-TRIANGLE_"></span>[**Schnitte (Dreieck-Dreieck)**](/previous-versions/windows/desktop/legacy/hh855933(v=vs.85))<br/> | Testen Sie, ob sich zwei Dreiecke überschneiden.<br/>                                           |
 
 
 
@@ -32,7 +32,7 @@ Listet die Dreiecks Testfunktionen auf, die vom directxmath **triangletests** -N
 
 <dl> <dt>
 
-[Directxmath-Bibliotheksfunktionen](ovw-xnamath-reference-functions.md)
+[DirectXMath-Bibliotheksfunktionen](ovw-xnamath-reference-functions.md)
 </dt> </dl>
 
  

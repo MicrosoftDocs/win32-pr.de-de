@@ -4,12 +4,12 @@ description: Komponentenweise Quadratwurzel.
 ms.assetid: B860D656-7F01-484F-909F-A5C9A61C52C3
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 628601e0a3a78784a5fd1a089ef7608a0cf9ca05
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 76e16ce8683daba19f0f0b578ccd34c9a0ea3b5d0281ccb2509d46f836a694f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996607"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119743510"
 ---
 # <a name="sqrt-sm4---asm"></a>sqrt (sm4 - asm)
 
@@ -26,10 +26,10 @@ Komponentenweise Quadratwurzel.
 
 
 
-| Element                                                            | BESCHREIBUNG                                                                     |
+| Element                                                            | Beschreibung                                                                     |
 |-----------------------------------------------------------------|---------------------------------------------------------------------------------|
 | <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Das Ergebnis des Vorgangs.<br/> *dest* = sqrt(*src0*)<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Komponenten, für die die Quadratwurzel verwendet werden soll.<br/>             |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Komponenten, für die die Quadratwurzel zu übernehmen ist.<br/>             |
 
 
 
@@ -39,9 +39,9 @@ Komponentenweise Quadratwurzel.
 
 Die Genauigkeit beträgt 1 ulp.
 
-Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit verschiedenen Zahlenklassen erzielt werden, vorausgesetzt, dass weder ein Überlauf noch ein Unterlauf auftritt.
+Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit verschiedenen Klassen von Zahlen erzielt werden, vorausgesetzt, dass weder Überlauf noch Unterlauf auftreten.
 
-F bedeutet endliche reale Zahl.
+F bedeutet endliche reelle Zahl.
 
 
 
@@ -73,12 +73,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

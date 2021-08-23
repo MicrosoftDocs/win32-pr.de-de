@@ -1,7 +1,7 @@
 ---
-description: Die Export-Methode des Datenbankobjekts kopiert die Struktur und die Daten aus einer angegebenen Tabelle in eine Textarchiv Datei.
+description: Die Export-Methode des Database-Objekts kopiert die Struktur und die Daten aus einer angegebenen Tabelle in eine Textarchivdatei.
 ms.assetid: b724595f-ef28-456e-bf0b-5df65c659d17
-title: Database. Export-Methode
+title: Database.Export-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: e9fbd5be6523db54be5f71b806bf278861f14709
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: faa5e2459eb0fe4ba04fd548bc478c9a0e2c85267e1df8e3d318f4a3f6a082ec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370025"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119745610"
 ---
-# <a name="databaseexport-method"></a>Database. Export-Methode
+# <a name="databaseexport-method"></a>Database.Export-Methode
 
-Die **Export** -Methode des [**Daten Bank**](database-object.md) Objekts kopiert die Struktur und die Daten aus einer angegebenen Tabelle in eine [Textarchiv Datei](text-archive-files.md).
+Die **Export-Methode** des [**Database-Objekts**](database-object.md) kopiert die Struktur und die Daten aus einer angegebenen Tabelle in eine [Textarchivdatei.](text-archive-files.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ Database.Export(
 *Tabelle* 
 </dt> <dd>
 
-Der erforderliche Name der Datenbanktabelle. Unterscheidung nach Groß-/Kleinschreibung bei Verwendung der Installer-Datenbank
+Erforderlicher Name der Datenbanktabelle. Bei Verwendung der Installer-Datenbank wird die Groß-/Kleinschreibung beachtet.
 
 </dd> <dt>
 
 *path* 
 </dt> <dd>
 
-Erforderliche Zeichenfolge, die der Pfad zu dem Ordner ist, in dem die Textdatei abgelegt wird.
+Erforderliche Zeichenfolge, die der Pfad zum Ordner ist, in dem die Textdatei gespeichert wird.
 
 </dd> <dt>
 
 *datei* 
 </dt> <dd>
 
-Der erforderliche Name der zu erstellenden Datei. Dies schließt den Ordner nicht ein, da dieser im Path-Objekt festgelegt werden muss.
+Erforderlicher Name der zu erstellenden Datei. Dies schließt den Ordner nicht ein, da dieser im Pfadobjekt festgelegt werden muss.
 
 </dd> </dl>
 
@@ -66,9 +66,9 @@ Der erforderliche Name der zu erstellenden Datei. Dies schließt den Ordner nich
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**lasterrorrecord**](installer-lasterrorrecord.md) -Methode abrufen.
+Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) abrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,9 +76,9 @@ Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithil
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ idatabase ist definiert als 000c109d-0000-0000-C000-000000000046<br/>                                                                                                                                                                            |
+| IID<br/>     | IID \_ IDatabase ist als 000C109D-0000-0000-C000-000000000046 definiert.<br/>                                                                                                                                                                            |
 
 
 

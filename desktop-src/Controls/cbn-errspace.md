@@ -1,9 +1,9 @@
 ---
-title: CBN_ERRSPACE Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn ein Kombinations Feld nicht genügend Arbeitsspeicher zuordnen kann, um eine bestimmte Anforderung zu erfüllen. Das übergeordnete Fenster des Kombinations Felds empfängt diesen Benachrichtigungs Code über die WM- \_ Befehls Meldung.
+title: CBN_ERRSPACE Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn ein Kombinationsfeld nicht genügend Arbeitsspeicher zuordnen kann, um eine bestimmte Anforderung zu erfüllen. Das übergeordnete Fenster des Kombinationsfelds empfängt diesen Benachrichtigungscode über die WM \_ COMMAND-Meldung.
 ms.assetid: c1c19c40-fc88-47d0-9676-7a267a48ae98
 keywords:
-- Windows-Steuerelemente für CBN_ERRSPACE Benachrichtigungs
+- CBN_ERRSPACE Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d74e46e4435a03a0233ce6591d3c36cefb4d880a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ba62469480ec4aee97670ec4346a97ba2db91ae6e57b54e0fb766f3e78dd9591
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119699060"
 ---
-# <a name="cbn_errspace-notification-code"></a>CBN- \_ errspace-Benachrichtigungs Code
+# <a name="cbn_errspace-notification-code"></a>CBN \_ ERRSPACE-Benachrichtigungscode
 
-Wird gesendet, wenn ein Kombinations Feld nicht genügend Arbeitsspeicher zuordnen kann, um eine bestimmte Anforderung zu erfüllen. Das übergeordnete Fenster des Kombinations Felds empfängt diesen Benachrichtigungs Code über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Wird gesendet, wenn ein Kombinationsfeld nicht genügend Arbeitsspeicher zuordnen kann, um eine bestimmte Anforderung zu erfüllen. Das übergeordnete Fenster des Kombinationsfelds empfängt diesen Benachrichtigungscode über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -42,14 +42,14 @@ CBN_ERRSPACE
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelement Bezeichner des Kombinations Felds. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+Das [**LOWORD enthält**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) den Steuerelementbezeichner des Kombinationsfelds. Das [**HIWORD gibt**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Handle für das Kombinations Feld.
+Handle für das Kombinationsfeld.
 
 </dd> </dl>
 
@@ -59,9 +59,9 @@ Handle für das Kombinations Feld.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -78,7 +78,7 @@ Handle für das Kombinations Feld.
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

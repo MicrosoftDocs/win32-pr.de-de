@@ -1,7 +1,7 @@
 ---
-description: Definiert ein WLAN-Richtlinien Profil, das vom systemeigenen WiFi-AutoConfig-Dienst verwendet wird.
+description: Definiert ein WLAN-Richtlinienprofil, das vom Native Wifi AutoConfig-Dienst verwendet wird.
 ms.assetid: b983df2e-95cf-41ce-929e-2bc560854f21
-title: WLAN_policy-Schema
+title: WLAN_policy Schema
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 02814762b687d93d46ed06332c3675f4e2465a16
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4c8e14c24ab7457c82faaebade127585208641ebac0379b71b990a15abd4efbe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119799950"
 ---
-# <a name="wlan_policy-schema"></a>WLAN- \_ Richtlinien Schema
+# <a name="wlan_policy-schema"></a>\_WLAN-Richtlinienschema
 
-Das WLAN- \_ Richtlinien Schema definiert ein WLAN-Richtlinien Profil, das vom systemeigenen WiFi-AutoConfig-Dienst verwendet wird.
+Das \_ WLAN-Richtlinienschema definiert ein WLAN-Richtlinienprofil, das vom Native Wifi AutoConfig-Dienst verwendet wird.
 
-Das Stamm Element eines WLAN-Richtlinien Profils ist das [**wlanpolicy**](wlan-policyschema-wlanpolicy-element.md) -Element. Jedes Profil weist genau ein Stamm Element auf. Alle WLAN- \_ Richtlinien Elemente befinden sich im-Namespace `https://www.microsoft.com/networking/WLAN/policy/v1` .
+Das Stammelement eines WLAN-Richtlinienprofils ist das [**WLANPolicy-Element.**](wlan-policyschema-wlanpolicy-element.md) Jedes Profil hat genau ein Stammelement. Alle \_ WLAN-Richtlinienelemente befinden sich im Namespace `https://www.microsoft.com/networking/WLAN/policy/v1` .
 
--   [WLAN- \_ policyschema-Elemente](wlan-policyschema-elements.md)
--   [Einfache WLAN- \_ policyschema-Typen](wlan-policyschema-simple-types.md)
--   [Komplexe Typen für das WLAN \_ policyschema](wlan-policyschema-complex-types.md)
+-   [\_WLAN-RichtlinieSchemaelemente](wlan-policyschema-elements.md)
+-   [\_WLAN-RichtlinieSchema simple types](wlan-policyschema-simple-types.md)
+-   [\_WLAN-RichtlinieSchema komplexer Typen](wlan-policyschema-complex-types.md)
 
  
 

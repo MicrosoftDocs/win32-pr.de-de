@@ -1,23 +1,23 @@
 ---
-description: Zusätzlich zur Registrierung des normalen Component Object Model (com) müssen die folgenden Schritte ausgeführt werden, um Symbol Überlagerungs Handler zu registrieren.
+description: Zusätzlich zur normalen Registrierung Component Object Model (COM) müssen die folgenden Schritte abgeschlossen werden, um Symbolüberlagerungshandler zu registrieren.
 ms.assetid: 73EE5E69-969B-409E-9E8F-5837720EA0B3
-title: Registrieren von Symbol Überlagerungs Handlern
+title: Registrieren von Symbolüberlagerungshandlern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cb58747adc9b754481f43fec825a4588e1606ed
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f5a0e62d95b224b131f03c2bd976ddf7c01d7cb3de7ad6995f21568dc7e990d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119714910"
 ---
-# <a name="how-to-register-icon-overlay-handlers"></a>Registrieren von Symbol Überlagerungs Handlern
+# <a name="how-to-register-icon-overlay-handlers"></a>Registrieren von Symbolüberlagerungshandlern
 
-Zusätzlich zur Registrierung des normalen Component Object Model (com) müssen die folgenden Schritte ausgeführt werden, um Symbol Überlagerungs Handler zu registrieren.
+Zusätzlich zur normalen Registrierung Component Object Model (COM) müssen die folgenden Schritte abgeschlossen werden, um Symbolüberlagerungshandler zu registrieren.
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-create-a-subkey-named-for-the-handler-under-this-key"></a>Schritt 1: Erstellen Sie unter diesem Schlüssel einen Unterschlüssel mit dem Namen für den Handler.
+### <a name="step-1-create-a-subkey-named-for-the-handler-under-this-key"></a>Schritt 1: Erstellen eines Unterschlüssels mit dem Namen für den Handler unter diesem Schlüssel
 
 ```
 HKEY_LOCAL_MACHINE
@@ -29,9 +29,9 @@ HKEY_LOCAL_MACHINE
                   ShellIconOverlayIdentifiers
 ```
 
-### <a name="step-2-set-the-default-value-of-the-subkey-to-the-string-form-of-the-objects-class-identifier-clsidguid"></a>Schritt 2: Legen Sie den Standardwert des unter Schlüssels auf die Zeichen folgen Form der Klassen Bezeichner-GUID (CLSID) des Objekts fest.
+### <a name="step-2-set-the-default-value-of-the-subkey-to-the-string-form-of-the-objects-class-identifier-clsidguid"></a>Schritt 2: Festlegen des Standardwerts des Unterschlüssels auf die Zeichenfolgenform des Klassenbezeichners (CLSID)GUID des Objekts
 
-Im folgenden Beispiel wird veranschaulicht, wie ein Symbol Überlagerungs Handler mit dem Namen myoverlay registriert wird.
+Im folgenden Beispiel wird veranschaulicht, wie sie einen Symbolüberlagerungshandler namens MyOverlay registrieren.
 
 ```
 HKEY_LOCAL_MACHINE

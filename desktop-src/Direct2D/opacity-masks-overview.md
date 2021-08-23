@@ -1,58 +1,58 @@
 ---
 title: Übersicht über Durchlässigkeitsmasken
-description: In diesem Thema wird beschrieben, wie Bitmaps und Pinsel zum Definieren von Deck Kraft Masken verwendet werden. Der Abschnitt ist wie folgt gegliedert.
+description: In diesem Thema wird beschrieben, wie Bitmaps und Pinsel verwendet werden, um Deckkraftmasken zu definieren. Der Abschnitt ist wie folgt gegliedert.
 ms.assetid: 869821b0-6ebe-46c2-aab6-93177d8a92c5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 49a4757a30247da465e0ae5226bd923219e3e665
-ms.sourcegitcommit: b7a1da2711221fa99072079bf52399cbdfc6bd9d
+ms.openlocfilehash: 51626fb2c76b82adeb3b12324db4652a62167db344f41e861c7b0f1d116059ac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104556524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119636309"
 ---
 # <a name="opacity-masks-overview"></a>Übersicht über Durchlässigkeitsmasken
 
-In diesem Thema wird beschrieben, wie Bitmaps und Pinsel zum Definieren von Deck Kraft Masken verwendet werden. Der Abschnitt ist wie folgt gegliedert.
+In diesem Thema wird beschrieben, wie Bitmaps und Pinsel verwendet werden, um Deckkraftmasken zu definieren. Der Abschnitt ist wie folgt gegliedert.
 
 -   [Voraussetzungen](#prerequisites)
--   [Was ist eine Deck Kraft Maske?](#what-is-an-opacity-mask)
--   [Verwenden einer Bitmap als Deck Kraft Maske mit der fillopacitymask-Methode](#use-a-bitmap-as-an-opacity-mask-with-the-fillopacitymask-method)
--   [Verwenden eines Pinsels als Deck Kraft Maske mit der fillgeometry-Methode](#use-a-brush-as-an-opacity-mask-with-the-fillgeometry-method)
-    -   [Verwenden eines linearen Farbverlaufs Pinsels als Deck Kraft Maske](#use-an-linear-gradient-brush-as-an-opacity-mask)
-    -   [Verwenden eines radialen Farbverlaufs Pinsels als Deck Kraft Maske](#use-a-radial-gradient-brush-as-an-opacity-mask)
--   [Anwenden einer Deck Kraft Maske auf eine Ebene](#apply-an-opacity-mask-to-a-layer)
+-   [Was ist eine Deckkraftmaske?](#what-is-an-opacity-mask)
+-   [Verwenden einer Bitmap als Deckkraftmaske mit der FillOpacityMask-Methode](#use-a-bitmap-as-an-opacity-mask-with-the-fillopacitymask-method)
+-   [Verwenden eines Pinsels als Deckkraftmaske mit der FillGeometry-Methode](#use-a-brush-as-an-opacity-mask-with-the-fillgeometry-method)
+    -   [Verwenden eines Pinsels mit linearem Farbverlauf als Deckkraftmaske](#use-an-linear-gradient-brush-as-an-opacity-mask)
+    -   [Verwenden eines Radialverlaufspinsels als Deckkraftmaske](#use-a-radial-gradient-brush-as-an-opacity-mask)
+-   [Anwenden einer Deckkraftmaske auf eine Ebene](#apply-an-opacity-mask-to-a-layer)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Diese Übersicht setzt voraus, dass Sie mit grundlegenden Direct2D-Zeichnungs Vorgängen vertraut sind, wie in der exemplarischen Vorgehensweise zum [Erstellen einer einfachen Direct2D-Anwendung](direct2d-quickstart.md) beschrieben. Sie sollten auch mit den verschiedenen Pinseltypen vertraut sein, wie in der [Übersicht über Pinsel](direct2d-brushes-overview.md)beschrieben.
+In dieser Übersicht wird davon ausgegangen, dass Sie mit den grundlegenden Direct2D-Zeichnungsvorgängen vertraut sind, wie in der exemplarischen Vorgehensweise Erstellen einer einfachen [Direct2D-Anwendung](direct2d-quickstart.md) beschrieben. Sie sollten auch mit den verschiedenen Pinseltypen vertraut sein, wie in [Übersicht über Pinsel beschrieben.](direct2d-brushes-overview.md)
 
-## <a name="what-is-an-opacity-mask"></a>Was ist eine Deck Kraft Maske?
+## <a name="what-is-an-opacity-mask"></a>Was ist eine Deckkraftmaske?
 
-Eine Deck Kraft Maske ist eine Maske, die durch einen Pinsel oder eine Bitmap beschrieben wird, der auf ein anderes Objekt angewendet wird, um dieses Objekt teilweise oder vollständig transparent zu machen. Eine Deck Kraft Maske verwendet Alphakanal Informationen, um anzugeben, wie die Quell Pixel des Objekts in das endgültige Ziel Ziel gemischt werden. Die transparenten Teile der Maske geben die Bereiche an, in denen das zugrunde liegende Bild ausgeblendet ist, während die nicht transparenten Teile der Maske angeben, wo das maskierte Objekt sichtbar ist.
+Eine Deckkraftmaske ist eine Maske, die von einem Pinsel oder einer Bitmap beschrieben wird und auf ein anderes Objekt angewendet wird, um dieses Objekt teilweise oder vollständig transparent zu machen. Eine Deckkraftmaske verwendet Alphakanalinformationen, um anzugeben, wie die Quellpixel des Objekts in das endgültige Zielziel gemischt werden. Die transparenten Teile der Maske geben die Bereiche an, in denen das zugrunde liegende Bild ausgeblendet ist, während die nicht transparenten Teile der Maske angeben, wo das maskierte Objekt sichtbar ist.
 
-Es gibt mehrere Möglichkeiten, eine Deck Kraft Maske anzuwenden:
+Es gibt mehrere Möglichkeiten, eine Deckkraftmaske anzuwenden:
 
--   Verwenden Sie die [**ID2D1RenderTarget:: fillopacitymask**](id2d1rendertarget-fillopacitymask.md) -Methode. Die **fillopacitymask** -Methode zeichnet einen rechteckigen Bereich eines Renderziels und wendet dann eine Deck Kraft Maske an, die durch eine Bitmap definiert wird. Verwenden Sie diese Methode, wenn die Deck Kraft Maske eine Bitmap ist und Sie einen rechteckigen Bereich auffüllen möchten.
--   Verwenden Sie die [**ID2D1RenderTarget:: fillgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) -Methode. Die **fillgeometry** -Methode zeichnet das Innere der Geometrie mit dem angegebenen [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush)und wendet dann eine Deckkraft Maske an, die durch einen Pinsel definiert wird. Verwenden Sie diese Methode, wenn Sie eine Deck Kraft Maske auf eine Geometrie anwenden möchten oder wenn Sie einen Pinsel als Deck Kraft Maske verwenden möchten.
--   Verwenden Sie eine [**ID2D1Layer**](/windows/win32/api/d2d1/nn-d2d1-id2d1layer) , um eine Deckkraft Maske anzuwenden. Verwenden Sie diesen Ansatz, wenn Sie eine Deck Kraft Maske auf eine Gruppe von Zeichnungs Inhalten anwenden möchten, nicht nur auf eine einzelne Form oder ein Bild. Weitere Informationen finden Sie in der [Übersicht über Ebenen](direct2d-layers-overview.md).
+-   Verwenden Sie [**die ID2D1RenderTarget::FillOpacityMask-Methode.**](id2d1rendertarget-fillopacitymask.md) Die **FillOpacityMask-Methode** zeichnet einen rechteckigen Bereich eines Renderziels und wendet dann eine Deckkraftmaske an, die durch eine Bitmap definiert wird. Verwenden Sie diese Methode, wenn ihre Deckkraftmaske eine Bitmap ist und Sie einen rechteckigen Bereich ausfüllen möchten.
+-   Verwenden Sie [**die ID2D1RenderTarget::FillGeometry-Methode.**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) Die **FillGeometry-Methode** zeichnet das Innere der Geometrie mit dem angegebenen [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush)und wendet dann eine Deckkraftmaske an, die durch einen Pinsel definiert wird. Verwenden Sie diese Methode, wenn Sie eine Deckkraftmaske auf eine Geometrie anwenden oder einen Pinsel als Deckkraftmaske verwenden möchten.
+-   Verwenden Sie [**einen ID2D1Layer,**](/windows/win32/api/d2d1/nn-d2d1-id2d1layer) um eine Deckkraftmaske anzuwenden. Verwenden Sie diesen Ansatz, wenn Sie eine Deckkraftmaske auf eine Gruppe von Zeichnungsinhalten anwenden möchten, nicht nur auf eine einzelne Form oder ein einzelnes Bild. Weitere Informationen finden Sie in der [Übersicht über Ebenen.](direct2d-layers-overview.md)
 
-## <a name="use-a-bitmap-as-an-opacity-mask-with-the-fillopacitymask-method"></a>Verwenden einer Bitmap als Deck Kraft Maske mit der fillopacitymask-Methode
+## <a name="use-a-bitmap-as-an-opacity-mask-with-the-fillopacitymask-method"></a>Verwenden einer Bitmap als Deckkraftmaske mit der FillOpacityMask-Methode
 
-Die [**fillopacitymask**](id2d1rendertarget-fillopacitymask.md) -Methode zeichnet einen rechteckigen Bereich eines Renderziels und wendet dann eine Deck Kraft Maske an, die durch ein [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap)definiert wird. Verwenden Sie diese Methode, wenn Sie über eine Bitmap verfügen, die Sie als Deck Kraft Maske für einen rechteckigen Bereich verwenden möchten.
+Die [**FillOpacityMask-Methode**](id2d1rendertarget-fillopacitymask.md) zeichnet einen rechteckigen Bereich eines Renderziels und wendet dann eine Deckkraftmaske an, die durch eine [**ID2D1Bitmap definiert wird.**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) Verwenden Sie diese Methode, wenn Sie über eine Bitmap verfügen, die Sie als Deckkraftmaske für einen rechteckigen Bereich verwenden möchten.
 
-Das folgende Diagramm zeigt die Auswirkung der Anwendung der Deck Kraft Maske (ein [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) mit einem Bild einer Blume) auf eine [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) mit einem Bild einer fern-Anlage. Das resultierende Bild ist eine Bitmap einer Anlage, die auf die Blumenform zugeschnitten ist.
+Das folgende Diagramm zeigt einen Effekt der Anwendung der Deckkraftmaske (eine [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) mit einem Bild einer Blume) auf einen [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) mit einem Bild einer Far-Anlage. Das resultierende Bild ist eine Bitmap einer Anlage, die auf die Form der Blume abgeschnitten ist.
 
-![Diagramm einer Blumen Bitmap, die als Deck Kraft Maske für ein Bild einer fardrource verwendet wird](images/brushes-ovw-bitmapopacity.png)
+![Diagramm einer Als Deckkraftmaske auf einem Bild einer Farn-Anlage verwendeten Bitmap](images/brushes-ovw-bitmapopacity.png)
 
 Die folgenden Codebeispiele zeigen, wie dies erreicht wird.
 
-Im ersten Beispiel wird die folgende Bitmap ( *m \_ pbitmapmask*) für die Verwendung als Bitmap-Maske geladen. Die folgende Abbildung zeigt die Ausgabe, die erstellt wird. Beachten Sie Folgendes: Obwohl der nicht transparente Teil der Bitmap schwarz erscheint, haben die Farbinformationen in der Bitmap keine Auswirkung auf die Deck Kraft Maske. nur die Deckkraft Informationen der einzelnen Pixel in der Bitmap werden verwendet. Die vollständig transparenten Pixel in dieser Bitmap sind nur zu Illustrations Zwecken schwarz gefärbt.
+Im ersten Beispiel wird die folgende Bitmap , *\_ m pBitmapMask,* zur Verwendung als Bitmapmaske geladen. Die folgende Abbildung zeigt die erzeugte Ausgabe. Beachten Sie, dass die Farbinformationen in der Bitmap keine Auswirkungen auf die Deckkraftmaske haben, obwohl der nicht transparente Teil der Bitmap schwarz erscheint. es werden nur die Deckkraftinformationen jedes Pixels in der Bitmap verwendet. Die vollständig deckenden Pixel in dieser Bitmap wurden nur zur Veranschaulichung schwarz einfärbt.
 
-![Abbildung der Blumen Bitmap-Maske](images/bitmapmask.png)
+![Abbildung der Bitmapmaske für Die Blume](images/bitmapmask.png)
 
-In diesem Beispiel wird das [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) -Hilfsprogramm von einer Hilfsmethode geladen, die an anderer Stelle im Beispiel als loadresourcebitmap definiert ist.
+In diesem Beispiel wird die [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) von der Hilfsmethode LoadResourceBitmap geladen, die an anderer Stelle im Beispiel definiert ist.
 
 
 ```C++
@@ -70,9 +70,9 @@ In diesem Beispiel wird das [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id
 
 
 
-Im nächsten Beispiel wird der Pinsel " *m \_ pfern bitmapbrush*" definiert, auf den die Deck Kraft Maske angewendet wird. In diesem Beispiel wird ein [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) verwendet, das ein Bild eines fards enthält, aber Sie können stattdessen eine [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1solidcolorbrush), [**ID2D1LinearGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1lineargradientbrush)oder [**ID2D1RadialGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush) verwenden. Die folgende Abbildung zeigt die Ausgabe, die erstellt wird.
+Im nächsten Beispiel wird der Pinsel *m \_ pFernBitmapBrush* definiert, auf den die Deckkraftmaske angewendet wird. In diesem Beispiel wird ein [**ID2D1BitmapBrush-Objekt**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) verwendet, das ein Bild eines Farns enthält. Sie können jedoch stattdessen [**id2D1SolidColorBrush,**](/windows/win32/api/d2d1/nn-d2d1-id2d1solidcolorbrush) [**ID2D1LinearGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1lineargradientbrush)oder [**ID2D1RadialGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush) verwenden. Die folgende Abbildung zeigt die erzeugte Ausgabe.
 
-![Abbildung der Bitmap, die vom bitmappinsel verwendet wird](images/fern.png)
+![Abbildung der vom Bitmappinsel verwendeten Bitmap](images/fern.png)
 
 
 ```C++
@@ -98,16 +98,16 @@ Im nächsten Beispiel wird der Pinsel " *m \_ pfern bitmapbrush*" definiert, auf
 
 
 
-Nachdem Sie nun die Deck Kraft Maske und den Pinsel definiert haben, können Sie die [**fillopacitymask**](id2d1rendertarget-fillopacitymask.md) -Methode in der Rendering-Methode Ihrer Anwendung verwenden. Wenn Sie die **fillopacitymask** -Methode aufzurufen, müssen Sie den Typ der von Ihnen verwendeten Deck Kraft Maske angeben: **\_ \_ \_ Inhalts \_ Grafiken der D2D1 Deck Kraft Mask**, **D2D1 \_ Deck Kraft \_ mask \_ Content \_ Text \_ Natural** und **D2D1 \_ Deck Kraft \_ mask \_ Content \_ Text \_ GDI \_ Compatible**. Die Bedeutung dieser drei Typen finden Sie unter [**D2D1 \_ Opacity \_ mask \_ Content**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_opacity_mask_content).
+Nachdem die Deckkraftmaske und der Pinsel definiert wurden, können Sie die [**FillOpacityMask-Methode**](id2d1rendertarget-fillopacitymask.md) in der Renderingmethode Ihrer Anwendung verwenden. Wenn Sie die **FillOpacityMask-Methode** aufrufen, müssen Sie den Typ der verwendeten Deckkraftmaske angeben: **D2D1 \_ OPACITY \_ MASK CONTENT \_ \_ GRAPHICS**, **D2D1 \_ OPACITY \_ MASK CONTENT TEXT \_ \_ \_ NATURAL** und **D2D1 \_ OPACITY \_ MASK CONTENT TEXT \_ \_ \_ GDI \_ COMPATIBLE**. Die Bedeutungen dieser drei Typen finden Sie unter [**D2D1 \_ OPACITY \_ MASK \_ CONTENT**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_opacity_mask_content).
 
 > [!Note]  
-> Ab Windows 8 ist der [**Inhalt der D2D1 \_ Opacity \_ mask \_**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_opacity_mask_content) nicht erforderlich. Weitere Informationen finden Sie unter der [**ID2D1DeviceContext:: fillopacitymask**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-fillopacitymask(id2d1bitmap_id2d1brush_constd2d1_rect_f_constd2d1_rect_f)) -Methode, die über keinen Content-Parameter der **D2D1 \_ Opacity \_ mask \_** verfügt.
+> Ab Windows 8 ist [**der D2D1-OPACITY \_ \_ \_ MASK-INHALT**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_opacity_mask_content) nicht mehr erforderlich. Weitere Informationen finden Sie unter der [**ID2D1DeviceContext::FillOpacityMask-Methode,**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-fillopacitymask(id2d1bitmap_id2d1brush_constd2d1_rect_f_constd2d1_rect_f)) die keinen **D2D1 \_ OPACITY \_ MASK \_ CONTENT-Parameter** hat.
 
  
 
-Im nächsten Beispiel wird der Antialiasing Modus des Renderziels auf [**D2D1 \_ Antialias \_ Mode \_ Aliasing**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_antialias_mode) festgelegt, sodass die Deck Kraft Maske ordnungsgemäß funktioniert. Anschließend ruft er die [**fillopacitymask**](id2d1rendertarget-fillopacitymask.md) -Methode auf und übergibt ihm die Deck Kraft Maske (*m \_ pbitmapmask*), den Pinsel, auf den die Deck Kraft Maske angewendet wird (*m \_ pfern bitmapbrush*), den Inhaltstyp in der Deck Kraft Maske ([**D2D1 \_ Deck Kraft \_ mask \_ Content \_ graphics**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_opacity_mask_content)) und den Bereich, der gezeichnet werden soll. Die folgende Abbildung zeigt die Ausgabe, die erstellt wird.
+Im nächsten Beispiel wird der Antialiasingmodus des Renderziels auf [**D2D1 \_ ANTIALIAS \_ MODE \_ ALIASED**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_antialias_mode) gesetzt, damit die Deckkraftmaske ordnungsgemäß funktioniert. Anschließend ruft sie die [**FillOpacityMask-Methode**](id2d1rendertarget-fillopacitymask.md) auf und übergibt ihr die Deckkraftmaske (*m \_ pBitmapMask*), den Pinsel, auf den die Deckkraftmaske angewendet wird (*m \_ pFernBitmapBrush*), den Inhaltstyp innerhalb der Deckkraftmaske ([**D2D1 \_ OPACITY \_ MASK CONTENT \_ \_ GRAPHICS**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_opacity_mask_content)) und den zu zeichnenden Bereich. Die folgende Abbildung zeigt die erzeugte Ausgabe.
 
-![Abbildung des fardrwerk Bilds mit angewendeter Deck Kraft Maske](images/opacitymaskoutput.png)
+![Abbildung des Fern-Pflanzenbilds mit angewendeter Deckkraftmaske](images/opacitymaskoutput.png)
 
 
 ```C++
@@ -129,29 +129,29 @@ Im nächsten Beispiel wird der Antialiasing Modus des Renderziels auf [**D2D1 \_
 
 
 
-Code wurde in diesem Beispiel ausgelassen.
+Code wurde in diesem Beispiel weggelassen.
 
-## <a name="use-a-brush-as-an-opacity-mask-with-the-fillgeometry-method"></a>Verwenden eines Pinsels als Deck Kraft Maske mit der fillgeometry-Methode
+## <a name="use-a-brush-as-an-opacity-mask-with-the-fillgeometry-method"></a>Verwenden eines Pinsels als Deckkraftmaske mit der FillGeometry-Methode
 
-Im vorherigen Abschnitt wurde beschrieben, wie ein [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) als Deck Kraft Maske verwendet wird. Direct2D bietet außerdem die [**ID2D1RenderTarget:: fillgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) -Methode, die es Ihnen ermöglicht, beim Ausfüllen eines [**ID2D1Geometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry)optional Pinsel als Deck Kraft Maske anzugeben. Dies ermöglicht es Ihnen, Deck Kraft Masken aus Farbverläufen (mit [**ID2D1LinearGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1lineargradientbrush) oder [**ID2D1RadialGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush)) und Bitmaps (mithilfe von **ID2D1Bitmap**) zu erstellen.
+Im vorherigen Abschnitt wurde beschrieben, wie Sie eine [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) als Deckkraftmaske verwenden. Direct2D bietet auch die [**ID2D1RenderTarget::FillGeometry-Methode,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) mit der Sie optional einen Pinsel als Deckkraftmaske angeben können, wenn Sie eine [**ID2D1Geometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry)ausfüllen. Dadurch können Sie Deckkraftmasken aus Farbverläufen (mit [**ID2D1LinearGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1lineargradientbrush) oder [**ID2D1RadialGradientBrush)**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush)und Bitmaps (mit **ID2D1Bitmap)** erstellen.
 
-Die [**fillgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) -Methode nimmt drei Parameter an:
+Die [**FillGeometry-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) verwendet drei Parameter:
 
--   Der erste Parameter, ein [**ID2D1Geometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry), definiert die zu zeichnende Form.
--   Der zweite Parameter, ein [**ID2D1Brush**](/windows/win32/api/d2d1/nn-d2d1-id2d1brush), gibt den Pinsel an, der zum Zeichnen der Geometrie verwendet wird. Dieser Parameter muss ein [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) sein, dessen x-und y-Erweiterungs Modi auf die [**D2D1 Erweiterungs \_ Modus \_ - \_ Klammer**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_extend_mode)festgelegt ist.
--   Der dritte Parameter, ein [**ID2D1Brush**](/windows/win32/api/d2d1/nn-d2d1-id2d1brush), gibt einen Pinsel an, der als Deck Kraft Maske verwendet werden soll. Dieser Pinsel kann ein [**ID2D1LinearGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1lineargradientbrush), [**ID2D1RadialGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush)oder ein [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush)sein. (Technisch gesehen können Sie eine [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1solidcolorbrush)verwenden, aber die Verwendung eines voll Tonfarbe-Pinsels als Deck Kraft Maske erzeugt keine interessanten Ergebnisse.)
+-   Der erste Parameter, eine [**ID2D1Geometry,**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry)definiert die zu zeichnende Form.
+-   Der zweite Parameter, ein [**ID2D1Brush,**](/windows/win32/api/d2d1/nn-d2d1-id2d1brush)gibt den Pinsel an, der zum Zeichnen der Geometrie verwendet wird. Dieser Parameter muss ein [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) sein, für den die Modi x und y-extend auf [**D2D1 \_ EXTEND MODE CLAMP festgelegt \_ \_ sind.**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_extend_mode)
+-   Der dritte Parameter, ein [**ID2D1Brush,**](/windows/win32/api/d2d1/nn-d2d1-id2d1brush)gibt einen Pinsel an, der als Deckkraftmaske verwendet werden soll. Dieser Pinsel kann ein [**ID2D1LinearGradientBrush,**](/windows/win32/api/d2d1/nn-d2d1-id2d1lineargradientbrush) [**ID2D1RadialGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush)oder [**ein ID2D1BitmapBrush sein.**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) (Technisch gesehen können Sie einen [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1solidcolorbrush)verwenden, aber die Verwendung eines Volltonfarbpinsels als Deckkraftmaske führt nicht zu interessanten Ergebnissen.)
 
-In den folgenden Abschnitten wird beschrieben, wie [**ID2D1LinearGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1lineargradientbrush) -und [**ID2D1RadialGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush) -Objekte als Deck Kraft Masken verwendet werden.
+In den folgenden Abschnitten wird beschrieben, wie [**Id2D1LinearGradientBrush-**](/windows/win32/api/d2d1/nn-d2d1-id2d1lineargradientbrush) und [**ID2D1RadialGradientBrush-Objekte**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush) als Deckkraftmasken verwendet werden.
 
-### <a name="use-an-linear-gradient-brush-as-an-opacity-mask"></a>Verwenden eines linearen Farbverlaufs Pinsels als Deck Kraft Maske
+### <a name="use-an-linear-gradient-brush-as-an-opacity-mask"></a>Verwenden eines Pinsels mit linearem Farbverlauf als Deckkraftmaske
 
-Das folgende Diagramm zeigt die Auswirkung der Anwendung eines linearen Farbverlaufs Pinsels auf ein Rechteck, das mit einer Bitmap von Blumen gefüllt ist.
+Das folgende Diagramm zeigt die Auswirkung der Anwendung eines Pinsels mit linearem Farbverlauf auf ein Rechteck, das mit einer Bitmap von Pflanzen gefüllt ist.
 
-![Diagramm einer Blumen Bitmap, auf die ein linearer Farbverlaufs Pinsel angewendet wird](images/brushes-ovw-lineargradient-opacitymask.png)
+![Diagramm einer Bitmap mit einem angewendeten linearen Farbverlaufspinsel](images/brushes-ovw-lineargradient-opacitymask.png)
 
-In den folgenden Schritten wird beschrieben, wie dieser Effekt neu erstellt wird.
+In den folgenden Schritten wird beschrieben, wie Sie diesen Effekt neu erstellen.
 
-1.  Definieren Sie den Inhalt, der maskiert werden soll. Im folgenden Beispiel wird ein [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush), *m \_ plinearfadeflowersbitmap*, erstellt. Der Erweiterungs Modus x-und y-für *m \_ plinearfadeflowersbitmap* ist auf [**D2D1 \_ Extend \_ Mode \_ Clamp**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_extend_mode) festgelegt, sodass er mit einer Deckkraft Maske von der [**fillgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) -Methode verwendet werden kann.
+1.  Definieren Sie den inhalt, der maskiert werden soll. Im folgenden Beispiel wird [**id2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush), *m \_ pLinearFadeFlowersBitmap erstellt.* Der Erweiterungsmodus x- und y- für *\_ m pLinearFadeFlowersBitmap* wird auf D2D1 EXTEND MODE CLAMP festgelegt, sodass er mit einer Deckkraftmaske von der [**FillGeometry-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) verwendet werden [**\_ \_ \_ kann.**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_extend_mode)
 
     ```cpp
     if (SUCCEEDED(hr))
@@ -219,7 +219,7 @@ In den folgenden Schritten wird beschrieben, wie dieser Effekt neu erstellt wird
 
     
 
-2.  Definieren Sie die Deckkraft Maske. Im nächsten Codebeispiel wird ein diagonaler linearer Farbverlaufs Pinsel (*m \_ plineargradientbrush*) erstellt, der von vollständig undurchsichtigem schwarz an Position 0 bis vollständig transparent weiß an Position 1 verschwindet.
+2.  Definieren Sie die Deckkraftmaske. Im nächsten Codebeispiel wird ein diagonaler linearer Farbverlaufspinsel (*m \_ pLinearGradientBrush*) erstellt, der von vollständig deckend schwarz an Position 0 zu vollständig transparentem Weiß an Position 1 ausblendet.
 ```C++
                 if (SUCCEEDED(hr))
                 {
@@ -256,7 +256,7 @@ In den folgenden Schritten wird beschrieben, wie dieser Effekt neu erstellt wird
 
     
 
-3.  Verwenden Sie die [**fillgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) -Methode. Im letzten Beispiel wird die **fillgeometry** -Methode für den Content-Pinsel verwendet, um ein [**ID2D1RectangleGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1rectanglegeometry) (*m \_ prectgeography*) mit einem [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) (*m \_ plinearfadeflowersbitmap*) zu füllen und eine Deck Kraft Maske (*m \_ plineargradientbrush*) anzuwenden.
+3.  Verwenden Sie [**die FillGeometry-Methode.**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) Im letzten Beispiel wird die **FillGeometry-Methode** zum Inhaltspinsel verwendet, um eine [**ID2D1RectangleGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1rectanglegeometry) (*m \_ pRectGeo*) mit einem [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) (*m \_ pLinearFadeFlowersBitmap*) zu füllen und eine Deckkraftmaske (*m \_ pLinearGradientBrush*) zu verwenden.
 ```C++
             m_pRenderTarget->FillGeometry(
                 m_pRectGeo, 
@@ -267,15 +267,15 @@ In den folgenden Schritten wird beschrieben, wie dieser Effekt neu erstellt wird
 
     
 
-Code wurde in diesem Beispiel ausgelassen.
+Code wurde in diesem Beispiel weggelassen.
 
-### <a name="use-a-radial-gradient-brush-as-an-opacity-mask"></a>Verwenden eines radialen Farbverlaufs Pinsels als Deck Kraft Maske
+### <a name="use-a-radial-gradient-brush-as-an-opacity-mask"></a>Verwenden eines Radialverlaufspinsels als Deckkraftmaske
 
-Das folgende Diagramm zeigt den visuellen Effekt der Anwendung eines radialen Farbverlaufs Pinsels auf ein Rechteck, das mit einer Bitmap mit einem Laub gefüllt ist.
+Das folgende Diagramm zeigt den visuellen Effekt der Anwendung eines radialen Farbverlaufspinsels auf ein Rechteck, das mit einer Bitmap von Foliage gefüllt ist.
 
-![Diagramm einer laubbitmap mit angewendetem radialen Farbverlaufs Pinsel](images/brushes-ovw-radialgradient-opacitymask.png)
+![Diagramm einer Foliagebitmap mit angewendetem Radialverlaufspinsel](images/brushes-ovw-radialgradient-opacitymask.png)
 
-Im ersten Beispiel wird ein [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush), *m \_ pradialfadeflowersbitmapbrush*, erstellt. Damit Sie mit einer Deck Kraft Maske von der [**fillgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) -Methode verwendet werden kann, wird der Erweiterungs Modus x-und y-für *m \_ pradialfadeflowersbitmapbrush* auf [**D2D1 \_ Extend \_ Mode \_ Clamp**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_extend_mode)festgelegt.
+Im ersten Beispiel wird [**id2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush), *m \_ pRadialFadeFlowersBitmapBrush erstellt.* Damit sie mit einer Deckkraftmaske von [**der FillGeometry-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) verwendet werden kann, werden die Erweiterungsmodus x- und y- für *m \_ pRadialFadeFlowersBitmapBrush* auf [**D2D1 \_ EXTEND MODE \_ \_ CLAMP**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_extend_mode)festgelegt.
 
 
 ```C++
@@ -349,7 +349,7 @@ Im ersten Beispiel wird ein [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2
 
 
 
-Im nächsten Beispiel wird der radiale Farbverlaufs Pinsel definiert, der als Deck Kraft Maske verwendet wird.
+Im nächsten Beispiel wird der Radialverlaufspinsel definiert, der als Deckkraftmaske verwendet wird.
 
 
 ```C++
@@ -390,7 +390,7 @@ Im nächsten Beispiel wird der radiale Farbverlaufs Pinsel definiert, der als De
 
 
 
-Im letzten Codebeispiel wird das [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) (*m \_ pradialfadeflowersbitmapbrush*) und die Deck Kraft Maske (*m \_ pradialgradientbrush*) zum Ausfüllen eines [**ID2D1RectangleGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1rectanglegeometry) (*m \_ prectbrush*) verwendet.
+Im letzten Codebeispiel werden [**id2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) (*m \_ pRadialFadeFlowersBitmapBrush*) und die Deckkraftmaske (*m \_ pRadialGradientBrush*) verwendet, um [**id2D1RectangleGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1rectanglegeometry) (*m \_ pRectGeo*) zu füllen.
 
 
 ```C++
@@ -403,11 +403,11 @@ Im letzten Codebeispiel wird das [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/
 
 
 
-Code wurde in diesem Beispiel ausgelassen.
+Code wurde in diesem Beispiel weggelassen.
 
-## <a name="apply-an-opacity-mask-to-a-layer"></a>Anwenden einer Deck Kraft Maske auf eine Ebene
+## <a name="apply-an-opacity-mask-to-a-layer"></a>Anwenden einer Deckkraftmaske auf eine Ebene
 
-Wenn Sie [**pushlayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) aufzurufen, um ein [**ID2D1Layer**](/windows/win32/api/d2d1/nn-d2d1-id2d1layer) -Element auf ein Renderziel zu übertragen, können Sie die [**D2D1 \_ Layer \_ Parameters**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) -Struktur verwenden, um einen Pinsel als Deck Kraft Maske zu verwenden. Im folgenden Codebeispiel wird ein [**ID2D1RadialGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush) als Deck Kraft Maske verwendet.
+Wenn Sie [**PushLayer aufrufen,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) um einen [**ID2D1Layer**](/windows/win32/api/d2d1/nn-d2d1-id2d1layer) auf ein Renderziel zu pushen, können Sie die [**D2D1 \_ LAYER \_ PARAMETERS-Struktur**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) verwenden, um einen Pinsel als Deckkraftmaske anzuwenden. Im folgenden Codebeispiel wird [**id2D1RadialGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush) als Deckkraftmaske verwendet.
 
 
 ```C++
@@ -463,7 +463,7 @@ HRESULT DemoApp::RenderWithLayerWithOpacityMask(ID2D1RenderTarget *pRT)
 
 
 
-Weitere Informationen zum Verwenden von Ebenen finden Sie unter [Übersicht über Ebenen](direct2d-layers-overview.md).
+Weitere Informationen zur Verwendung von Ebenen finden Sie in der [Übersicht über Ebenen.](direct2d-layers-overview.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -472,7 +472,7 @@ Weitere Informationen zum Verwenden von Ebenen finden Sie unter [Übersicht übe
 [Übersicht über Pinsel](direct2d-brushes-overview.md)
 </dt> <dt>
 
-[Übersicht über Schichten](direct2d-layers-overview.md)
+[Übersicht über Ebenen](direct2d-layers-overview.md)
 </dt> </dl>
 
  

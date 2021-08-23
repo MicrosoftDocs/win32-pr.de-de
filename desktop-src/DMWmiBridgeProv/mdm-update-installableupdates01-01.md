@@ -1,6 +1,6 @@
 ---
 title: MDM_Update_InstallableUpdates01_01-Klasse
-description: Die MDM \_ Update \_ InstallableUpdates01 \_ 01-Klasse wird verwendet, um das Rollout genehmigter Updates zu verwalten und zu steuern.
+description: Die MDM \_ Update \_ InstallableUpdates01 01-Klasse wird verwendet, um den Rollout genehmigter Updates zu verwalten \_ und zu steuern.
 ms.assetid: 53ca2291-a92a-46ed-948d-6d2a2dddd296
 keywords:
 - MDM_Update_InstallableUpdates01_01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c2bcb9dd3ec026e6894d4ba7155cc41f12bc01e8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6a1e8989a261ef57025210ddf15ef265df436c1a5a94166c43db38d09068ff19
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119795870"
 ---
-# <a name="mdm_update_installableupdates01_01-class"></a>MDM- \_ Update \_ InstallableUpdates01 01- \_ Klasse
+# <a name="mdm_update_installableupdates01_01-class"></a>MDM \_ Update \_ InstallableUpdates01 \_ 01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ Update \_ InstallableUpdates01 \_ 01** -Klasse wird verwendet, um das Rollout genehmigter Updates zu verwalten und zu steuern.
+Die **MDM \_ Update \_ InstallableUpdates01 \_ 01-Klasse** wird verwendet, um den Rollout genehmigter Updates zu verwalten und zu steuern.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,13 +47,13 @@ class MDM_Update_InstallableUpdates01_01
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Update- \_ InstallableUpdates01 \_ 01** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Update \_ InstallableUpdates01 \_ 01-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM-Update-Klasse \_ \_ InstallableUpdates01 \_ 01** verfügt über diese Eigenschaften.
+Die **MDM \_ Update \_ InstallableUpdates01 \_ 01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -69,11 +69,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Bei dieser Klasse ist die Zeichenfolge die GUID des genehmigten Updates.
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge die GUID des genehmigten Updates.
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -100,7 +100,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Type](/windows/client-management/mdm/update-csp#installableupdates-installable-update-guid-type)
+[Typ](/windows/client-management/mdm/update-csp#installableupdates-installable-update-guid-type)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -117,11 +117,11 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl>      |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl>      |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 4ef112c346fd222f5e25935740e47ab62273628f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 754e755b0ee6e03692bf7eabeb4e751284478621f47c912d399eb101adfd98e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119754290"
 ---
 # <a name="d3dxmatrixtransformation2d-function-d3dx10mathh"></a>D3DXMatrixTransformation2D-Funktion (D3DX10Math.h)
 
@@ -87,7 +87,7 @@ Zeiger auf eine D3DXVECTOR2-Struktur, ein Punkt, der die Skala identifiziert. We
 
 Typ: **const [**D3DXVECTOR2**](../direct3d9/d3dxvector2.md) \***
 
-Zeiger auf eine D3DXVECTOR2-Struktur, ein Punkt, der den Drehmittelpunkt identifiziert. Wenn dieses Argument **NULL** ist, wird eine M <sub>RC-Matrix</sub> der Identität auf die Formel in "Hinweise" angewendet.
+Zeiger auf eine D3DXVECTOR2-Struktur, ein Punkt, der den Drehmittelpunkt identifiziert. Wenn dieses Argument **NULL ist,** wird eine M <sub>RC-Matrix</sub> der Identität auf die Formel in "Hinweise" angewendet.
 
 </dd> <dt>
 
@@ -105,7 +105,7 @@ Der Drehwinkel im Bogenmaß.
 
 Typ: **const [**D3DXVECTOR2**](../direct3d9/d3dxvector2.md) \***
 
-Zeiger auf eine D3DXVECTOR2-Struktur, die die Übersetzung identifiziert. Wenn dieses Argument **NULL** ist, wird eine Mt-Identitätsmatrix auf die Formel in "Hinweise" angewendet.
+Zeiger auf eine D3DXVECTOR2-Struktur, die die Übersetzung identifiziert. Wenn dieses Argument **NULL ist,** wird eine Identitäts-Mt-Matrix auf die Formel in "Hinweise" angewendet.
 
 </dd> </dl>
 
@@ -115,11 +115,11 @@ Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
 Zeiger auf eine D3DXMATRIX-Struktur, die die Transformationsmatrix enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion berechnet die Transformationsmatrix mit der folgenden Formel, wobei die Matrixverkettung in der Reihenfolge von links nach rechts ausgewertet wird:
+Diese Funktion berechnet die Transformationsmatrix mit der folgenden Formel, bei der die Matrixverkettung in der Reihenfolge von links nach rechts ausgewertet wird:
 
-M<sub>out</sub> = (M<sub>sc</sub>)⁻¹ \* (M<sub>sr</sub>)⁻¹ \* Ms \* M<sub>sr</sub> \* M<sub>sc</sub> \* (M<sub>rc</sub>)⁻¹ \* M<sub>r</sub> \* M<sub>rc</sub> \* Mt
+M<sub>out</sub> = (M<sub>sc</sub>)⁻. \* (M<sub>sr</sub>)⁻. Ms \* M \* <sub>sr</sub> \* M<sub>sc</sub> \* (M<sub>rc</sub>)⁻. \* M<sub>r</sub> \* M<sub>rc</sub> \* Mt
 
 Dabei gilt:
 
@@ -145,7 +145,7 @@ Verwenden Sie für 3D-Transformationen [**D3DXMatrixTransformation**](d3d10-d3dx
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

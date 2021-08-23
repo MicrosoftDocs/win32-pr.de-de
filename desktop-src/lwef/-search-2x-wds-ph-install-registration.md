@@ -1,22 +1,22 @@
 ---
-title: Installieren und Registrieren von Protokoll Handlern (Features der Legacy-Windows-Umgebung)
-description: Das Installieren von Protokoll Handlern umfasst das Kopieren der dll (s) an einen geeigneten Speicherort im Verzeichnis "Programme" und deren Registrierung.
+title: Installieren und Registrieren von Protokollhandlern (Legacy-Windows-Umgebungsfeatures)
+description: Die Installation von Protokollhandlern umfasst das Kopieren der DLL(s) an einen geeigneten Speicherort im Verzeichnis Programme und deren Registrierung.
 ms.assetid: 3da32de1-2dc4-46d3-80d0-cc45a36f12f9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec07f96a92b04fb489aeeb76b705efb81b5754f0
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 49f6cce4337c8b2c3faf47411f76165b11ed13ff00dfebd66ac5307d6ca6a68c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104340267"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119716560"
 ---
-# <a name="installing-and-registering-protocol-handlers-legacy-windows-environment-features"></a>Installieren und Registrieren von Protokoll Handlern (Features der Legacy-Windows-Umgebung)
+# <a name="installing-and-registering-protocol-handlers-legacy-windows-environment-features"></a>Installieren und Registrieren von Protokollhandlern (Legacy-Windows-Umgebungsfeatures)
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search](../search/-search-3x-wds-overview.md) .
+> Windows DesktopSuche 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search.](../search/-search-3x-wds-overview.md)
 
-Das Installieren von **Protokoll Handlern** umfasst das Kopieren der dll (s) an einen geeigneten Speicherort im Verzeichnis "Programme" und deren Registrierung.
+Die Installation von **Protokollhandlern** umfasst das Kopieren der DLL(s) an einen geeigneten Speicherort im Verzeichnis Programme und deren Registrierung.
 
 Dieser Abschnitt enthält die folgenden Themen:
 
@@ -28,22 +28,22 @@ Dieser Abschnitt enthält die folgenden Themen:
 
 Protokollhandler sollten die Selbstregistrierung für die Installation implementieren und die folgenden Richtlinien befolgen:
 
--   Das Installationsprogramm muss entweder exe oder das MSI-Installationsprogramm verwenden.
--   Anmerkungen zu dieser Version müssen bereitgestellt werden.
--   Ein Eintrag zum **Hinzufügen/Entfernen von Programmen** muss für jedes installierte Add-in erstellt werden.
--   Das Installationsprogramm muss alle Registrierungs Einstellungen für einen bestimmten Dateityp oder-Speicher übernehmen, den das aktuelle Add-in versteht.
--   Wenn ein vorheriges Add-in überschrieben wird, sollte das Installationsprogramm den Benutzer benachrichtigen.
--   Wenn das vorherige Add-in von einem neueren Add-in überschrieben wurde, sollte es möglich sein, die vorherige Add-in-Funktionalität wiederherzustellen und das Standard-Add-in für diesen Dateityp erneut zu erstellen.
+-   Das Installationsprogramm muss entweder EXE- oder MSI-Installer verwenden.
+-   Versionshinweise müssen bereitgestellt werden.
+-   Für jedes installierte Add-In muss ein Eintrag **zum Hinzufügen/Entfernen** von Programmen erstellt werden.
+-   Das Installationsprogramm muss alle Registrierungseinstellungen für den jeweiligen Dateityp oder -speicher übernehmen, den das aktuelle Add-In versteht.
+-   Wenn ein vorheriges Add-In überschrieben wird, sollte das Installationsprogramm den Benutzer benachrichtigen.
+-   Wenn ein neueres Add-In das vorherige Add-In überschrieben hat, sollte es die Möglichkeit geben, die Funktionalität des vorherigen Add-Ins wiederherzustellen und es wieder zum Standard-Add-In für diesen Dateityp zu machen.
 
 ## <a name="to-register-protocol-handlers"></a>So registrieren Sie Protokollhandler
 
 Sie müssen 14 Einträge in der Registrierung vornehmen, um die Protokollhandlerkomponente zu registrieren, wobei Folgendes gilt:
 
--   *Ver \_ IND \_ ProgID* ist die Versions unabhängige ProgID der protokollhandlerimplementierung.
--   *Ver \_ DEP \_ ProgID* ist die Versions abhängige ProgID der protokollhandlerimplementierung.
--   *CLSID \_ 1* ist die CLSID der protokollhandlerimplementierung.
+-   *Ver \_ Ind \_ ProgID* ist die versionsunabhängige ProgID der Implementierung des Protokollhandlers.
+-   *Ver \_ Dep \_ ProgID* ist die versionsabhängige ProgID der Implementierung des Protokollhandlers.
+-   *CLSID \_ 1* ist die CLSID der Implementierung des Protokollhandlers.
 
-1.  Registrieren Sie die Versions unabhängige ProgID mit den folgenden Schlüsseln und Werten:
+1.  Registrieren Sie die versionsunabhängige ProgID mit den folgenden Schlüsseln und Werten:
 
     ```
     HKEY_CLASSES_ROOT\<Ver_Ind_ProgID>
@@ -60,7 +60,7 @@ Sie müssen 14 Einträge in der Registrierung vornehmen, um die Protokollhandler
        (Default) = <Ver_Dep_ProgID>
     ```
 
-2.  Registrieren Sie die Versions abhängige ProgID mit den folgenden Schlüsseln und Werten:
+2.  Registrieren Sie die versionsabhängige ProgID mit den folgenden Schlüsseln und Werten:
 
     ```
     HKEY_CLASSES_ROOT\<Ver_Dep_ProgID>
@@ -72,7 +72,7 @@ Sie müssen 14 Einträge in der Registrierung vornehmen, um die Protokollhandler
        (Default) = {CLSID_1}
     ```
 
-3.  Registrieren Sie die CLSID des Protokoll Handlers mit den folgenden Schlüsseln und Werten:
+3.  Registrieren Sie die CLSID des Protokollhandlers mit den folgenden Schlüsseln und Werten:
 
     ```
     HKEY_CLASSES_ROOT\{CLSID_1}
@@ -105,7 +105,7 @@ Sie müssen 14 Einträge in der Registrierung vornehmen, um die Protokollhandler
        (Default) = <Ver_Ind_ProgID>"
     ```
 
-4.  Registrieren Sie den Protokollhandler bei der Windows-Desktop Suche:
+4.  Registrieren Sie den Protokollhandler bei Windows Desktopsuche:
 
     ```
     HKEY_LOCAL_MACHINE\Software\Microsoft\RSSearch\ProtocolHandlers
@@ -125,7 +125,7 @@ Sie müssen 14 Einträge in der Registrierung vornehmen, um die Protokollhandler
 
 ## <a name="to-register-shell-extensions"></a>So registrieren Sie Shellerweiterungen
 
-Sie müssen zwei Einträge in der Registrierung vornehmen, um die Shellerweiterung des Protokoll Handlers zu registrieren.
+Sie müssen zwei Einträge in der Registrierung vornehmen, um die Shellerweiterung des Protokollhandlers zu registrieren.
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{CLSID of PH Implementation}

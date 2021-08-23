@@ -1,27 +1,27 @@
 ---
-description: VMR-Unterstützung für die DirectX-Video Beschleunigung
+description: VMR-Unterstützung für DirectX-Videobeschleunigung
 ms.assetid: 4bb5612d-3841-4920-a5ef-39ce357a6d1c
-title: VMR-Unterstützung für die DirectX-Video Beschleunigung
+title: VMR-Unterstützung für DirectX-Videobeschleunigung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ed2e9f4907fdc653ccea6b6244c744073a9d157
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f9f1998f5e55d7aa4d191ac2a312995db69d9e248349034e119ded8e99774c43
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119696730"
 ---
-# <a name="vmr-support-for-directx-video-acceleration"></a>VMR-Unterstützung für die DirectX-Video Beschleunigung
+# <a name="vmr-support-for-directx-video-acceleration"></a>VMR-Unterstützung für DirectX-Videobeschleunigung
 
-Die DirectX-Video Beschleunigung ist eine Anwendungsprogrammierschnittstelle (Application Programming Interface, API) und eine entsprechende Gerätetreiber Schnittstelle (DDI) für die Hardwarebeschleunigung der Verarbeitung digitaler Video Decodierung mit Unterstützung von Alpha Blending für solche Zwecke wie die Unterstützung von DVD-Unterbildern. DirectX VA ist im Windows-DDK dokumentiert. Die [**iamvideoaccelerator**](/previous-versions/windows/desktop/api/videoacc/nn-videoacc-iamvideoaccelerator) -Schnittstelle, die den Benutzermodus-Zugriff auf die DirectX-VA-Funktionalität auf einem Hardware Gerät bietet, ist in diesem SDK dokumentiert.
+DirectX-Videobeschleunigung ist eine Anwendungsprogrammierschnittstelle (Application Programming Interface, API) und eine entsprechende Gerätetreiberschnittstelle (Device Driver Interface, DDI) für die Hardwarebeschleunigung der Verarbeitung digitaler Videodecodierung mit Unterstützung von Alphablending für Zwecke wie die Unterstützung von DVD-Unteraufnahmen. DirectX VA ist im Windows DDK dokumentiert. Die [**IAMVideoAccelerator-Schnittstelle,**](/previous-versions/windows/desktop/api/videoacc/nn-videoacc-iamvideoaccelerator) die den Benutzermoduszugriff auf DirectX VA-Funktionen auf einem Hardwaregerät ermöglicht, ist in diesem SDK dokumentiert.
 
-VMR unterstützt [**iamvideoaccelerator**](/previous-versions/windows/desktop/api/videoacc/nn-videoacc-iamvideoaccelerator), und die Implementierung ist mit dem alten Überlagerungs-Mixer identisch, mit Ausnahme eines wichtigen Unterschieds. Der Überlagerungs Mixer garantierte, dass die Ausgabe in eine Überlagerungs Oberfläche gerendert wird, während der VMR die Ausgabe zur weiteren Verarbeitung senden kann, z. b. ein 3D-Vorgang, oder die Ausgabe an eine Offscreen-Oberfläche senden kann, die dann auf die primäre Oberfläche geblittet wird.
+Der VMR unterstützt [**IAMVideoAccelerator,**](/previous-versions/windows/desktop/api/videoacc/nn-videoacc-iamvideoaccelerator)und seine Implementierung ist mit dem alten Overlay-Mixer mit Ausnahme eines wichtigen Unterschieds identisch. Die Overlay-Mixer garantiert, dass die Ausgabe in einer Überlagerungsoberfläche gerendert wird, während der VMR die Ausgabe zur weiteren Verarbeitung senden kann, z. B. einen 3D-Vorgang, oder die Ausgabe an eine Offscreenoberfläche senden kann, die dann auf die primäre Oberfläche aufgeblittet wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Informationen zur DirectX-Video Beschleunigung](about-directx-video-acceleration.md)
+[Informationen zur DirectX-Videobeschleunigung](about-directx-video-acceleration.md)
 </dt> </dl>
 
  

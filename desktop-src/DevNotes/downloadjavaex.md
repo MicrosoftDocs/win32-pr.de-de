@@ -1,7 +1,7 @@
 ---
-description: Lädt die CAB-Datei Signatur herunter, überprüft die den Paketen zugeordneten Berechtigungen und führt Sie basierend auf der Authentifizierung aus.
+description: Lädt .cab Dateisignatur herunter, überprüft die den Paketen zugeordneten Berechtigungen und führt sie basierend auf der Authentifizierung aus.
 ms.assetid: b86a8f39-73a1-4e17-ac83-9ed095de4922
-title: Downloadjavaex-Funktion
+title: DownloadJavaEX-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Javacypt.dll
-ms.openlocfilehash: 31371e91599d604db591ee3e921b42bc809aae21
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 628fdb1b8b0ec9979d844c8f48fb02fbf8f6a642a96c925f427c868160dd6b27
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119795260"
 ---
-# <a name="downloadjavaex-function"></a>Downloadjavaex-Funktion
+# <a name="downloadjavaex-function"></a>DownloadJavaEX-Funktion
 
-Lädt die CAB-Datei Signatur herunter, überprüft die den Paketen zugeordneten Berechtigungen und führt Sie basierend auf der Authentifizierung aus.
+Lädt .cab Dateisignatur herunter, überprüft die den Paketen zugeordneten Berechtigungen und führt sie basierend auf der Authentifizierung aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,55 +44,55 @@ HRESULT WINAPI DownloadJavaEX(
 
 <dl> <dt>
 
-*Reserviert* \[ in\]
+*Reserviert* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist reserviert.
 
 </dd> <dt>
 
-*pproviderdata* \[ in\]
+*pProviderData* \[ In\]
 </dt> <dd>
 
-Eine [**\_ \_ Daten**](/windows/win32/api/wintrust/ns-wintrust-crypt_provider_data) Struktur des Crypt-Anbieters, die Zertifikat Daten wie z. b. Datei-und Zonen Berechtigungen enthält.
+Eine [**CRYPT \_ PROVIDER \_ DATA-Struktur,**](/windows/win32/api/wintrust/ns-wintrust-crypt_provider_data) die Zertifikatdaten wie Datei- und Zonenberechtigungen enthält.
 
 </dd> <dt>
 
-*pjava* \[ in\]
+*pJava* \[ In\]
 </dt> <dd>
 
-Eine [**Java- \_ Richtlinien \_ Anbieter**](/previous-versions//bb432350(v=vs.85)) Struktur, die Daten enthält, die sich auf den Richtlinien Anbieter beziehen.
+Eine [**JAVA \_ POLICY \_ PROVIDER-Struktur,**](/previous-versions//bb432350(v=vs.85)) die Daten im Zusammenhang mit dem Richtlinienanbieter enthält.
 
 </dd> <dt>
 
-*pFunctions* \[ in\]
+*pFunctions* \[ In\]
 </dt> <dd>
 
-Eine [**crypt- \_ Anbieter \_ Funktions**](/windows/win32/api/wintrust/ns-wintrust-crypt_provider_functions) Struktur, die eine Liste von Methoden zum Überprüfen von Zertifikat Objekten, Signaturen und abschließenden Richtlinien enthält.
+Eine [**CRYPT \_ PROVIDER \_ FUNCTIONS-Struktur,**](/windows/win32/api/wintrust/ns-wintrust-crypt_provider_functions) die eine Liste von Methoden zum Überprüfen von Zertifikatobjekten, Signaturen und endgültigen Richtlinien enthält.
 
 </dd> <dt>
 
-*Zertifikat* \[ in\]
+*fCertificate* \[ In\]
 </dt> <dd>
 
-Wenn ein Zertifikat vorhanden ist, ist dieser Parameter **true**. Andernfalls ist Sie **false**.
+Wenn ein Zertifikat vorhanden ist, ist dieser Parameter **TRUE.** Andernfalls ist dies **FALSE.**
 
 </dd> <dt>
 
-*ptrust* \[ in\]
+*pTrust* \[ In\]
 </dt> <dd>
 
-Eine [**Java- \_ Vertrauensstellungs**](/windows/desktop/api/Capi/ns-capi-java_trust) Struktur, die Vertrauensstellungs Informationen enthält, wie z. b. codierte Berechtigung, Codierungs Signatur und authentixes
+Eine [**JAVA \_ TRUST-Struktur,**](/windows/desktop/api/Capi/ns-capi-java_trust) die Vertrauensinformationen wie codierte Berechtigung, Encodersignatur und authentic-Rückgaberichtliniencode enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert **S \_ OK**. Andernfalls ist der Rückgabewert ein Fehlercode.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert **S \_ OK.** Andernfalls ist der Rückgabewert ein Fehlercode.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

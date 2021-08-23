@@ -1,11 +1,11 @@
 ---
 title: Trusted-Domain-Klasse
-description: Ein-Objekt, das eine Domäne darstellt, die von der lokalen Domäne als vertrauenswürdig eingestuft wird.
+description: Ein -Objekt, das eine Domäne darstellt, die von der lokalen Domäne als vertrauenswürdig eingestuft wird (oder vertrauenswürdig ist).
 ms.assetid: dd455d89-2ad0-4bc7-a84e-449b4c334bd2
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema der Trusted-Domain-Klasse
-- "\"Treuhänder Domain\"-Klasse AD-Schema"
+- Trusted-Domain AD-Schema der Klasse
+- 'trustedDomain-Klasse : AD-Schema'
 topic_type:
 - apiref
 api_name:
@@ -14,25 +14,25 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0810bde186aeacc9b7507102049f3cbdbcb084d1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d41e9d7dfb5983b3e162551e8eff755136b3becb916698096cd173dbce988728
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119702940"
 ---
 # <a name="trusted-domain-class"></a>Trusted-Domain-Klasse
 
-Ein-Objekt, das eine Domäne darstellt, die von der lokalen Domäne als vertrauenswürdig eingestuft wird.
+Ein -Objekt, das eine Domäne darstellt, die von der lokalen Domäne als vertrauenswürdig eingestuft wird (oder vertrauenswürdig ist).
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Trusted-Domain                       |
-| LDAP-Display-Name | Treuhänder Domäne                        |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.     |
-| Aktualisierungshäufigkeit  | Wenn eine neue Vertrauensstellung erstellt wird.         |
+| Ldap-Anzeigename | trustedDomain                        |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
+| Updatehäufigkeit  | Wenn eine neue Vertrauensstellung erstellt wird.         |
 | Schema-ID-GUID    | bf967ab8-0de6-11d0-a285-00aa003049e2 |
 
 
@@ -40,7 +40,7 @@ Ein-Objekt, das eine Domäne darstellt, die von der lokalen Domäne als vertraue
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,116 +58,116 @@ Ein-Objekt, das eine Domäne darstellt, die von der lokalen Domäne als vertraue
 | Object-Category             | 1                                                                                            |
 | Default-Object-Category     | \-                                                                                           |
 | Governs-Id                  | 1.2.840.113556.1.5.34                                                                        |
-| Standard-ausblenden-Wert        | 1                                                                                            |
-| RDN-ATT-ID                  | [**Gemeinsamer Name**](a-cn.md)<br/>                                                       |
+| Default-Hiding-Value        | 1                                                                                            |
+| Rdn-Att-Id                  | [**Common-Name**](a-cn.md)<br/>                                                       |
 | Unterklasse von                 | [**Leaf**](c-leaf.md)<br/>                                                            |
-| Mögliche Vorgesetzten          | [**Container**](c-container.md)                                                             |
+| Mögliche Vorgesetzte          | [**Container**](c-container.md)                                                             |
 | Zusätzlich           | \-                                                                                           |
-| NT-Security-Descriptor      | o:Bag: schlecht: S:                                                                                 |
-| Standard Sicherheits Beschreibung | D: (A;; rpwpcrccdclclorcwowdsddtsw;;;D a) (a;; Rpwpcrccdclclorcwowdsddtsw;;; SY) (A;; Rplclorc;;; Thaus |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                 |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPLCLORC;;; AU) |
 | System-Flags                | 0x00000010                                                                                   |
 
 
 
-## <a name="windows-2000-server-attributes"></a>Windows 2000-Server Attribute
+## <a name="windows-2000-server-attributes"></a>Windows 2000-Serverattribute
 
-Diese Klasse enthält die folgenden Attribute für Windows 2000 Server:
+Diese Klasse enthält die folgenden Attribute für Windows 2000-Server:
 
 
 
-| Attribut                                                                   | Obligatorisch. | Abgeleitet von                    |
+| attribute                                                                   | Obligatorisch. | Abgeleitet von                    |
 |-----------------------------------------------------------------------------|-----------|---------------------------------|
-| [**Zusätzliche-vertrauenswürdige Dienst-Namen**](a-additionaltrustedservicenames.md) | False     | **Vertrauenswürdige Domäne**              |
-| [**Administrator: Beschreibung**](a-admindescription.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Administrator-Anzeige Name**](a-admindisplayname.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige Attribute**](a-allowedattributes.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige Attribute-gültig**](a-allowedattributeseffective.md)        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige, untergeordnete Klassen**](a-allowedchildclasses.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässig-untergeordnete Klassen-gültig**](a-allowedchildclasseseffective.md)   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Zusätzliche vertrauenswürdige Dienstnamen**](a-additionaltrustedservicenames.md) | False     | **Trusted-Domain**              |
+| [**Admin-Description**](a-admindescription.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Administratoranzeigename**](a-admindisplayname.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Attributes**](a-allowedattributes.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)   | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Kanonischer Name**](a-canonicalname.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Gemeinsamer Name**](a-cn.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Create-Zeitstempel**](a-createtimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Common-Name**](a-cn.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Create-Time-Stamp**](a-createtimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Beschreibung**](a-description.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeige Name**](a-displayname.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeige Name-druckdruck**](a-displaynameprintable.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Domäne-Kreuz Verweis**](a-domaincrossref.md)                                | False     | **Vertrauenswürdige Domäne**              |
-| [**Domänen Bezeichner**](a-domainidentifier.md)                             | False     | **Vertrauenswürdige Domäne**              |
-| [**DSA-Signatur**](a-dsasignature.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**DS-Core-propagierungs Daten**](a-dscorepropagationdata.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Erweiterungs Name**](a-extensionname.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Fahren**](a-flags.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Flat-Name**](a-flatname.md)                                             | False     | **Vertrauenswürdige Domäne**              |
-| [**Aus-Eintrag**](a-fromentry.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**FRS-Computer-Reference-BL**](a-frscomputerreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Anzeigename**](a-displayname.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Display-Name-Printable**](a-displaynameprintable.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Domänenübergreifende Ref**](a-domaincrossref.md)                                | False     | **Trusted-Domain**              |
+| [**Domänenbezeichner**](a-domainidentifier.md)                             | False     | **Trusted-Domain**              |
+| [**DSA-Signature**](a-dsasignature.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Extension-Name**](a-extensionname.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Flaggen**](a-flags.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Flatname**](a-flatname.md)                                             | False     | **Trusted-Domain**              |
+| [**From-Entry**](a-fromentry.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
 | [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**"F"-Rollen Besitzer**](a-fsmoroleowner.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anfängliche Authentifizierung-eingehende**](a-initialauthincoming.md)                      | False     | **Vertrauenswürdige Domäne**              |
-| [**Anfängliche Authentifizierung: ausgehend**](a-initialauthoutgoing.md)                      | False     | **Vertrauenswürdige Domäne**              |
-| [**Instanztyp**](a-instancetype.md)                                     | Richtig      | [**Nach oben**](c-top.md)<br/> |
-| [**Is-critical-System-Object**](a-iscriticalsystemobject.md)               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Ist-gelöscht**](a-isdeleted.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Initial-Auth-Incoming**](a-initialauthincoming.md)                      | False     | **Trusted-Domain**              |
+| [**Initial-Auth-Outgoing**](a-initialauthoutgoing.md)                      | False     | **Trusted-Domain**              |
+| [**Instanztyp**](a-instancetype.md)                                     | True      | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Deleted**](a-isdeleted.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Is-Member-of-DL**](a-memberof.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Is-Privilege-Inhaber**](a-isprivilegeholder.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Letztes-bekannt/übergeordnetes Element**](a-lastknownparent.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Letztes bekanntes übergeordnetes Element**](a-lastknownparent.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Verwaltete Objekte**](a-managedobjects.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Verwaltet von**](a-masteredby.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Modify-Zeitstempel**](a-modifytimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DS-Konsistenz-untergeordnet-Anzahl**](a-ms-ds-consistencychildcount.md)      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Mastered By**](a-masteredby.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)      | False     | [**Nach oben**](c-top.md)<br/> |
 | [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**NetBoot-SCP-BL**](a-netbootscpbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Nicht sicherheitsmitglied-BL**](a-nonsecuritymemberbl.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                    | Richtig      | [**Nach oben**](c-top.md)<br/> |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                    | True      | [**Nach oben**](c-top.md)<br/> |
 | [**Obj-Dist-Name**](a-distinguishedname.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Objekt-Kategorie**](a-objectcategory.md)                                 | Richtig      | [**Nach oben**](c-top.md)<br/> |
-| [**Object-Klasse**](a-objectclass.md)                                       | Richtig      | [**Nach oben**](c-top.md)<br/> |
+| [**Objektkategorie**](a-objectcategory.md)                                 | True      | [**Nach oben**](c-top.md)<br/> |
+| [**Object-Class**](a-objectclass.md)                                       | True      | [**Nach oben**](c-top.md)<br/> |
 | [**Objekt-GUID**](a-objectguid.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Objekt-Version**](a-objectversion.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Andere-bekannte Objekte**](a-otherwellknownobjects.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Partial-Attribute-löschen-List**](a-partialattributedeletionlist.md)   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Partiell-Attribut Satz**](a-partialattributeset.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Mögliche-minderwertig**](a-possibleinferiors.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Proxy-Objekt Name**](a-proxiedobjectname.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Proxy Adressen**](a-proxyaddresses.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Abfrage-Richtlinie-BL**](a-querypolicybl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**RDN**](a-name.md)                                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**REPL-Property-Meta-Data**](a-replpropertymetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**REPL-Update-Vector**](a-repluptodatevector.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Object-Version**](a-objectversion.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Partial-Attribute-Deletion-List**](a-partialattributedeletionlist.md)   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Teilattributsatz**](a-partialattributeset.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Mögliche Hindernisse**](a-possibleinferiors.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Proxyadressen**](a-proxyaddresses.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Rdn**](a-name.md)                                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Berichte**](a-directreports.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Reps-from**](a-repsfrom.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Reps-to**](a-repsto.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Novel**](a-revision.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**SD-Rechte**](a-sdrightseffective.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Sicherheits-ID**](a-securityidentifier.md)                         | False     | **Vertrauenswürdige Domäne**              |
+| [**Reps-From**](a-repsfrom.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Reps-To**](a-repsto.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Revision**](a-revision.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Sicherheitsbezeichner**](a-securityidentifier.md)                         | False     | **Vertrauenswürdige Domäne**              |
 | [**Server-Reference-BL**](a-serverreferencebl.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeigen-in-Advanced-nur anzeigen**](a-showinadvancedviewonly.md)              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Nur in erweiterter Ansicht anzeigen**](a-showinadvancedviewonly.md)              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Site-Object-BL**](a-siteobjectbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Sub-Refs**](a-subrefs.md)                                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Subschemasubentry**](a-subschemasubentry.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**SystemFlags**](a-systemflags.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Trust-Attribute**](a-trustattributes.md)                               | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-auth-eingehender**](a-trustauthincoming.md)                          | False     | **Vertrauenswürdige Domäne**              |
-| [**Vertrauensstellung-ausgehender**](a-trustauthoutgoing.md)                          | False     | **Vertrauenswürdige Domäne**              |
-| [**Vertrauens Richtung**](a-trustdirection.md)                                 | False     | **Vertrauenswürdige Domäne**              |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Systemflags**](a-systemflags.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Trust-Attributes**](a-trustattributes.md)                               | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Auth-Incoming**](a-trustauthincoming.md)                          | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Auth-Outgoing**](a-trustauthoutgoing.md)                          | False     | **Vertrauenswürdige Domäne**              |
+| [**Vertrauensrichtung**](a-trustdirection.md)                                 | False     | **Vertrauenswürdige Domäne**              |
 | [**Trust-Partner**](a-trustpartner.md)                                     | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-POSIX-Offset**](a-trustposixoffset.md)                            | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Posix-Offset**](a-trustposixoffset.md)                            | False     | **Vertrauenswürdige Domäne**              |
 | [**Trust-Type**](a-trusttype.md)                                           | False     | **Vertrauenswürdige Domäne**              |
-| [**Die Anwendung wurde geändert.**](a-usnchanged.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Von der Anwendung erstellte**](a-usncreated.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**USA-DSA-letzte-obj-entfernt**](a-usndsalastobjremoved.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Standort-und standortübergreifende standortübergreifende**](a-usnintersite.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**"An-Last-obj-REM"**](a-usnlastobjrem.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Quell Code Quelle**](a-usnsource.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WBEM-Pfad**](a-wbempath.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN geändert**](a-usnchanged.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-erstellt**](a-usncreated.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-DSA-last-obj-removed**](a-usndsalastobjremoved.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Intersite**](a-usnintersite.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Quelle**](a-usnsource.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Wbem-Pfad**](a-wbempath.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bekannte Objekte**](a-wellknownobjects.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bei Änderung**](a-whenchanged.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Bei Erstellung**](a-whencreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WWW-Page-other**](a-url.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Bei der Erstellung**](a-whencreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**WWW-Startseite**](a-wwwhomepage.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**WWW-Page-Other**](a-url.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 -   [Attribute](#windows-server-2003-attributes)
 
@@ -179,13 +179,13 @@ Diese Klasse enthält die folgenden Attribute für Windows 2000 Server:
 | Object-Category             | 1                                                                                                                                                                                             |
 | Default-Object-Category     | \-                                                                                                                                                                                            |
 | Governs-Id                  | 1.2.840.113556.1.5.34                                                                                                                                                                         |
-| Standard-ausblenden-Wert        | 1                                                                                                                                                                                             |
-| RDN-ATT-ID                  | [**Gemeinsamer Name**](a-cn.md)<br/>                                                                                                                                                        |
+| Default-Hiding-Value        | 1                                                                                                                                                                                             |
+| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                                                                                                                        |
 | Unterklasse von                 | [**Leaf**](c-leaf.md)<br/>                                                                                                                                                             |
-| Mögliche Vorgesetzten          | [**Container**](c-container.md)                                                                                                                                                              |
+| Mögliche Übergeordnete          | [**Container**](c-container.md)                                                                                                                                                              |
 | Zusätzlich           | \-                                                                                                                                                                                            |
-| NT-Security-Descriptor      | o:Bag: schlecht: S:                                                                                                                                                                                  |
-| Standard Sicherheits Beschreibung | D: (A;; rpwpcrccdclclorcwowdsddtsw;;;D a) (a;; Rpwpcrccdclclorcwowdsddtsw;;; SY) (A;; Rplclorc;;; Au) (OA;; WP; 736e4812-AF31-11d2-b7df-00805f 48caeb; bf967ab8-0de6-11D0-A285-00aa003049e2; Co) (A;; SD;;; Erung |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                                                                                                                  |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPLCLORC;;; AU)(OA;; WP;736e4812-af31-11d2-b7df-00805f48caeb;bf967ab8-0de6-11d0-a285-00aa003049e2;CO)(A;; SD;;; CO) |
 | System-Flags                | 0x00000010                                                                                                                                                                                    |
 
 
@@ -196,115 +196,115 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2003:
 
 
 
-| Attribut                                                                   | Obligatorisch. | Abgeleitet von                    |
+| attribute                                                                   | Obligatorisch. | Abgeleitet von                    |
 |-----------------------------------------------------------------------------|-----------|---------------------------------|
-| [**Zusätzliche-vertrauenswürdige Dienst-Namen**](a-additionaltrustedservicenames.md) | False     | **Vertrauenswürdige Domäne**              |
-| [**Administrator: Beschreibung**](a-admindescription.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Administrator-Anzeige Name**](a-admindisplayname.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige Attribute**](a-allowedattributes.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige Attribute-gültig**](a-allowedattributeseffective.md)        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige, untergeordnete Klassen**](a-allowedchildclasses.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässig-untergeordnete Klassen-gültig**](a-allowedchildclasseseffective.md)   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Zusätzliche vertrauenswürdige Dienstnamen**](a-additionaltrustedservicenames.md) | False     | **Vertrauenswürdige Domäne**              |
+| [**Administratorbeschreibung**](a-admindescription.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Admin-Display-Name**](a-admindisplayname.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Attributes**](a-allowedattributes.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)   | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Kanonischer Name**](a-canonicalname.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Gemeinsamer Name**](a-cn.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Create-Zeitstempel**](a-createtimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allgemeiner Name**](a-cn.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Erstellen eines Zeitstempels**](a-createtimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Beschreibung**](a-description.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeige Name**](a-displayname.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeige Name-druckdruck**](a-displaynameprintable.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Domäne-Kreuz Verweis**](a-domaincrossref.md)                                | False     | **Vertrauenswürdige Domäne**              |
-| [**Domänen Bezeichner**](a-domainidentifier.md)                             | False     | **Vertrauenswürdige Domäne**              |
-| [**DSA-Signatur**](a-dsasignature.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**DS-Core-propagierungs Daten**](a-dscorepropagationdata.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Erweiterungs Name**](a-extensionname.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Fahren**](a-flags.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Flat-Name**](a-flatname.md)                                             | False     | **Vertrauenswürdige Domäne**              |
-| [**Aus-Eintrag**](a-fromentry.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**FRS-Computer-Reference-BL**](a-frscomputerreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Anzeigename**](a-displayname.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Anzeigename– druckbar**](a-displaynameprintable.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Domänenübergreifende Ref**](a-domaincrossref.md)                                | False     | **Vertrauenswürdige Domäne**              |
+| [**Domänenbezeichner**](a-domainidentifier.md)                             | False     | **Vertrauenswürdige Domäne**              |
+| [**DSA-Signature**](a-dsasignature.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Extension-Name**](a-extensionname.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Flaggen**](a-flags.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Flatname**](a-flatname.md)                                             | False     | **Trusted-Domain**              |
+| [**From-Entry**](a-fromentry.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
 | [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**"F"-Rollen Besitzer**](a-fsmoroleowner.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anfängliche Authentifizierung-eingehende**](a-initialauthincoming.md)                      | False     | **Vertrauenswürdige Domäne**              |
-| [**Anfängliche Authentifizierung: ausgehend**](a-initialauthoutgoing.md)                      | False     | **Vertrauenswürdige Domäne**              |
-| [**Instanztyp**](a-instancetype.md)                                     | Richtig      | [**Nach oben**](c-top.md)<br/> |
-| [**Is-critical-System-Object**](a-iscriticalsystemobject.md)               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Ist-gelöscht**](a-isdeleted.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Initial-Auth-Incoming**](a-initialauthincoming.md)                      | False     | **Trusted-Domain**              |
+| [**Initial-Auth-Outgoing**](a-initialauthoutgoing.md)                      | False     | **Trusted-Domain**              |
+| [**Instanztyp**](a-instancetype.md)                                     | True      | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Deleted**](a-isdeleted.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Is-Member-of-DL**](a-memberof.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Is-Privilege-Inhaber**](a-isprivilegeholder.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Letztes-bekannt/übergeordnetes Element**](a-lastknownparent.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Letztes bekanntes übergeordnetes Element**](a-lastknownparent.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Verwaltete Objekte**](a-managedobjects.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Verwaltet von**](a-masteredby.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Modify-Zeitstempel**](a-modifytimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-com-partitionsetlink**](a-mscom-partitionsetlink.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-com-userlink**](a-mscom-userlink.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-ca-immed-untergeordnete Elemente**](a-msds-approx-immed-subordinates.md) | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DS-Konsistenz-untergeordnet-Anzahl**](a-ms-ds-consistencychildcount.md)      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Mastered By**](a-masteredby.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-COM-PartitionSetLink**](a-mscom-partitionsetlink.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-COM-UserLink**](a-mscom-userlink.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md) | False     | [**Nach oben**](c-top.md)<br/> |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)      | False     | [**Nach oben**](c-top.md)<br/> |
 | [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DS-Creator-sid**](a-ms-ds-creatorsid.md)                             | False     | **Vertrauenswürdige Domäne**              |
-| [**ms-DS-gemastert von**](a-msds-masteredby.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Members-für-AZ-Role-BL**](a-msds-membersforazrolebl.md)           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Cursor**](a-msds-ncreplcursors.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Inbound-Nachbarn**](a-msds-ncreplinboundneighbors.md)    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Outbound-Nachbarn**](a-msds-ncreploutboundneighbors.md)  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**MS-DS-Creator-SID**](a-ms-ds-creatorsid.md)                             | False     | **Trusted-Domain**              |
+| [**ms-DS-Mastered-By**](a-msds-masteredby.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Members-For-Az-Role-BL**](a-msds-membersforazrolebl.md)           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)  | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                         | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Operations-for-AZ-Role-BL**](a-msds-operationsforazrolebl.md)     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Operations-for-AZ-Task-BL**](a-msds-operationsforaztaskbl.md)     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Tasks-für-AZ-Role-BL**](a-msds-tasksforazrolebl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Tasks-für-AZ-Task-BL**](a-msds-tasksforaztaskbl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Trust-Forest-Trust-Info**](a-msds-trustforesttrustinfo.md)        | False     | **Vertrauenswürdige Domäne**              |
+| [**ms-DS-Operations-For-Az-Role-BL**](a-msds-operationsforazrolebl.md)     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Operations-For-Az-Task-BL**](a-msds-operationsforaztaskbl.md)     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Tasks-For-Az-Role-BL**](a-msds-tasksforazrolebl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Tasks-For-Az-Task-BL**](a-msds-tasksforaztaskbl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Trust-Forest-Trust-Info**](a-msds-trustforesttrustinfo.md)        | False     | **Trusted-Domain**              |
 | [**ms-Exch-Owner-BL**](a-ownerbl.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**NetBoot-SCP-BL**](a-netbootscpbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Nicht sicherheitsmitglied-BL**](a-nonsecuritymemberbl.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                    | Richtig      | [**Nach oben**](c-top.md)<br/> |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                    | True      | [**Nach oben**](c-top.md)<br/> |
 | [**Obj-Dist-Name**](a-distinguishedname.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Objekt-Kategorie**](a-objectcategory.md)                                 | Richtig      | [**Nach oben**](c-top.md)<br/> |
-| [**Object-Klasse**](a-objectclass.md)                                       | Richtig      | [**Nach oben**](c-top.md)<br/> |
+| [**Objektkategorie**](a-objectcategory.md)                                 | True      | [**Nach oben**](c-top.md)<br/> |
+| [**Object-Class**](a-objectclass.md)                                       | True      | [**Nach oben**](c-top.md)<br/> |
 | [**Objekt-GUID**](a-objectguid.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Objekt-Version**](a-objectversion.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Andere-bekannte Objekte**](a-otherwellknownobjects.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Partial-Attribute-löschen-List**](a-partialattributedeletionlist.md)   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Partiell-Attribut Satz**](a-partialattributeset.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Mögliche-minderwertig**](a-possibleinferiors.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Proxy-Objekt Name**](a-proxiedobjectname.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Proxy Adressen**](a-proxyaddresses.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Abfrage-Richtlinie-BL**](a-querypolicybl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**RDN**](a-name.md)                                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**REPL-Property-Meta-Data**](a-replpropertymetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**REPL-Update-Vector**](a-repluptodatevector.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Object-Version**](a-objectversion.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Partial-Attribute-Deletion-List**](a-partialattributedeletionlist.md)   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Partial-Attribute-Set**](a-partialattributeset.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Mögliche 100000000000**](a-possibleinferiors.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Proxyadressen**](a-proxyaddresses.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Rdn**](a-name.md)                                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Berichte**](a-directreports.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Reps-from**](a-repsfrom.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Reps-to**](a-repsto.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Novel**](a-revision.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**SD-Rechte**](a-sdrightseffective.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Sicherheits-ID**](a-securityidentifier.md)                         | False     | **Vertrauenswürdige Domäne**              |
+| [**Reps-From**](a-repsfrom.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Reps-To**](a-repsto.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Revision**](a-revision.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Sicherheits-ID**](a-securityidentifier.md)                         | False     | **Trusted-Domain**              |
 | [**Server-Reference-BL**](a-serverreferencebl.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeigen-in-Advanced-nur anzeigen**](a-showinadvancedviewonly.md)              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Show-In-Advanced-View-Only**](a-showinadvancedviewonly.md)              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Site-Object-BL**](a-siteobjectbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Struktur-Objekt-Klasse**](a-structuralobjectclass.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Structural-Object-Class**](a-structuralobjectclass.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Sub-Refs**](a-subrefs.md)                                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Subschemasubentry**](a-subschemasubentry.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**SystemFlags**](a-systemflags.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Trust-Attribute**](a-trustattributes.md)                               | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-auth-eingehender**](a-trustauthincoming.md)                          | False     | **Vertrauenswürdige Domäne**              |
-| [**Vertrauensstellung-ausgehender**](a-trustauthoutgoing.md)                          | False     | **Vertrauenswürdige Domäne**              |
-| [**Vertrauens Richtung**](a-trustdirection.md)                                 | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-Partner**](a-trustpartner.md)                                     | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-POSIX-Offset**](a-trustposixoffset.md)                            | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-Type**](a-trusttype.md)                                           | False     | **Vertrauenswürdige Domäne**              |
-| [**Die Anwendung wurde geändert.**](a-usnchanged.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Von der Anwendung erstellte**](a-usncreated.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**USA-DSA-letzte-obj-entfernt**](a-usndsalastobjremoved.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Standort-und standortübergreifende standortübergreifende**](a-usnintersite.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**"An-Last-obj-REM"**](a-usnlastobjrem.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Quell Code Quelle**](a-usnsource.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WBEM-Pfad**](a-wbempath.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Systemflags**](a-systemflags.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Trust-Attribute**](a-trustattributes.md)                               | False     | **Trusted-Domain**              |
+| [**Trust-Auth-Incoming**](a-trustauthincoming.md)                          | False     | **Trusted-Domain**              |
+| [**Trust-Auth-Outgoing**](a-trustauthoutgoing.md)                          | False     | **Trusted-Domain**              |
+| [**Vertrauensrichtung**](a-trustdirection.md)                                 | False     | **Trusted-Domain**              |
+| [**Trust-Partner**](a-trustpartner.md)                                     | False     | **Trusted-Domain**              |
+| [**Trust-Posix-Offset**](a-trustposixoffset.md)                            | False     | **Trusted-Domain**              |
+| [**Trust-Type**](a-trusttype.md)                                           | False     | **Trusted-Domain**              |
+| [**USN-Changed**](a-usnchanged.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**VON USN erstellt**](a-usncreated.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-DSA-Last-Obj-Removed**](a-usndsalastobjremoved.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Intersite**](a-usnintersite.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Quelle**](a-usnsource.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Wbem-Path**](a-wbempath.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bekannte Objekte**](a-wellknownobjects.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Bei Änderung**](a-whenchanged.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Bei Erstellung**](a-whencreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Wenn geändert**](a-whenchanged.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Wenn erstellt**](a-whencreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
 | [**WWW-Homepage**](a-wwwhomepage.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WWW-Page-other**](a-url.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**WWW-Page-Other**](a-url.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
 
 
 
@@ -320,13 +320,13 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2003:
 | Object-Category             | 1                                                                                                                                                                                             |
 | Default-Object-Category     | \-                                                                                                                                                                                            |
 | Governs-Id                  | 1.2.840.113556.1.5.34                                                                                                                                                                         |
-| Standard-ausblenden-Wert        | 1                                                                                                                                                                                             |
-| RDN-ATT-ID                  | [**Gemeinsamer Name**](a-cn.md)<br/>                                                                                                                                                        |
+| Default-Hiding-Value        | 1                                                                                                                                                                                             |
+| Rdn-Att-Id                  | [**Common-Name**](a-cn.md)<br/>                                                                                                                                                        |
 | Unterklasse von                 | [**Leaf**](c-leaf.md)<br/>                                                                                                                                                             |
-| Mögliche Vorgesetzten          | [**Container**](c-container.md)                                                                                                                                                              |
+| Mögliche Vorgesetzte          | [**Container**](c-container.md)                                                                                                                                                              |
 | Zusätzlich           | \-                                                                                                                                                                                            |
-| NT-Security-Descriptor      | o:Bag: schlecht: S:                                                                                                                                                                                  |
-| Standard Sicherheits Beschreibung | D: (A;; rpwpcrccdclclorcwowdsddtsw;;;D a) (a;; Rpwpcrccdclclorcwowdsddtsw;;; SY) (A;; Rplclorc;;; Au) (OA;; WP; 736e4812-AF31-11d2-b7df-00805f 48caeb; bf967ab8-0de6-11D0-A285-00aa003049e2; Co) (A;; SD;;; Erung |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                                                                                                                  |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPLCLORC;;; AU)(OA;; WP;736e4812-af31-11d2-b7df-00805f48caeb;bf967ab8-0de6-11d0-a285-00aa003049e2;CO)(A;; SD;;; CO) |
 | System-Flags                | 0x00000010                                                                                                                                                                                    |
 
 
@@ -337,118 +337,118 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2003 R2:
 
 
 
-| Attribut                                                                   | Obligatorisch. | Abgeleitet von                    |
+| attribute                                                                   | Obligatorisch. | Abgeleitet von                    |
 |-----------------------------------------------------------------------------|-----------|---------------------------------|
-| [**Zusätzliche-vertrauenswürdige Dienst-Namen**](a-additionaltrustedservicenames.md) | False     | **Vertrauenswürdige Domäne**              |
-| [**Administrator: Beschreibung**](a-admindescription.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Administrator-Anzeige Name**](a-admindisplayname.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige Attribute**](a-allowedattributes.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige Attribute-gültig**](a-allowedattributeseffective.md)        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige, untergeordnete Klassen**](a-allowedchildclasses.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässig-untergeordnete Klassen-gültig**](a-allowedchildclasseseffective.md)   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Zusätzliche vertrauenswürdige Dienstnamen**](a-additionaltrustedservicenames.md) | False     | **Trusted-Domain**              |
+| [**Admin-Description**](a-admindescription.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Administratoranzeigename**](a-admindisplayname.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Attributes**](a-allowedattributes.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)   | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Kanonischer Name**](a-canonicalname.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Gemeinsamer Name**](a-cn.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Create-Zeitstempel**](a-createtimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Common-Name**](a-cn.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Create-Time-Stamp**](a-createtimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Beschreibung**](a-description.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeige Name**](a-displayname.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeige Name-druckdruck**](a-displaynameprintable.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Domäne-Kreuz Verweis**](a-domaincrossref.md)                                | False     | **Vertrauenswürdige Domäne**              |
-| [**Domänen Bezeichner**](a-domainidentifier.md)                             | False     | **Vertrauenswürdige Domäne**              |
-| [**DSA-Signatur**](a-dsasignature.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**DS-Core-propagierungs Daten**](a-dscorepropagationdata.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Erweiterungs Name**](a-extensionname.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Fahren**](a-flags.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Flat-Name**](a-flatname.md)                                             | False     | **Vertrauenswürdige Domäne**              |
-| [**Aus-Eintrag**](a-fromentry.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**FRS-Computer-Reference-BL**](a-frscomputerreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Anzeigename**](a-displayname.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Display-Name-Printable**](a-displaynameprintable.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Domänenübergreifende Ref**](a-domaincrossref.md)                                | False     | **Trusted-Domain**              |
+| [**Domänenbezeichner**](a-domainidentifier.md)                             | False     | **Trusted-Domain**              |
+| [**DSA-Signature**](a-dsasignature.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Extension-Name**](a-extensionname.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Flaggen**](a-flags.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Flatname**](a-flatname.md)                                             | False     | **Trusted-Domain**              |
+| [**From-Entry**](a-fromentry.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
 | [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**"F"-Rollen Besitzer**](a-fsmoroleowner.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anfängliche Authentifizierung-eingehende**](a-initialauthincoming.md)                      | False     | **Vertrauenswürdige Domäne**              |
-| [**Anfängliche Authentifizierung: ausgehend**](a-initialauthoutgoing.md)                      | False     | **Vertrauenswürdige Domäne**              |
-| [**Instanztyp**](a-instancetype.md)                                     | Richtig      | [**Nach oben**](c-top.md)<br/> |
-| [**Is-critical-System-Object**](a-iscriticalsystemobject.md)               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Ist-gelöscht**](a-isdeleted.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Initial-Auth-Incoming**](a-initialauthincoming.md)                      | False     | **Trusted-Domain**              |
+| [**Initial-Auth-Outgoing**](a-initialauthoutgoing.md)                      | False     | **Trusted-Domain**              |
+| [**Instanztyp**](a-instancetype.md)                                     | True      | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Deleted**](a-isdeleted.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Is-Member-of-DL**](a-memberof.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Is-Privilege-Inhaber**](a-isprivilegeholder.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Letztes-bekannt/übergeordnetes Element**](a-lastknownparent.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Letztes bekanntes übergeordnetes Element**](a-lastknownparent.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Verwaltete Objekte**](a-managedobjects.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Verwaltet von**](a-masteredby.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Modify-Zeitstempel**](a-modifytimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-com-partitionsetlink**](a-mscom-partitionsetlink.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-com-userlink**](a-mscom-userlink.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DFSR-computerreferencebl**](a-msdfsr-computerreferencebl.md)         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DFSR-mitgliedreferencebl**](a-msdfsr-memberreferencebl.md)             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-ca-immed-untergeordnete Elemente**](a-msds-approx-immed-subordinates.md) | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DS-Konsistenz-untergeordnet-Anzahl**](a-ms-ds-consistencychildcount.md)      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Mastered-By**](a-masteredby.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-COM-PartitionSetLink**](a-mscom-partitionsetlink.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-COM-UserLink**](a-mscom-userlink.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DFSR-ComputerReferenceBL**](a-msdfsr-computerreferencebl.md)         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DFSR-MemberReferenceBL**](a-msdfsr-memberreferencebl.md)             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md) | False     | [**Nach oben**](c-top.md)<br/> |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)      | False     | [**Nach oben**](c-top.md)<br/> |
 | [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DS-Creator-sid**](a-ms-ds-creatorsid.md)                             | False     | **Vertrauenswürdige Domäne**              |
-| [**ms-DS-gemastert von**](a-msds-masteredby.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Members-für-AZ-Role-BL**](a-msds-membersforazrolebl.md)           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Cursor**](a-msds-ncreplcursors.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Inbound-Nachbarn**](a-msds-ncreplinboundneighbors.md)    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Outbound-Nachbarn**](a-msds-ncreploutboundneighbors.md)  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**MS-DS-Creator-SID**](a-ms-ds-creatorsid.md)                             | False     | **Vertrauenswürdige Domäne**              |
+| [**ms-DS-Mastered-By**](a-msds-masteredby.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Members-for-Az-Role-BL**](a-msds-membersforazrolebl.md)           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)  | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                         | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Operations-for-AZ-Role-BL**](a-msds-operationsforazrolebl.md)     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Operations-for-AZ-Task-BL**](a-msds-operationsforaztaskbl.md)     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Tasks-für-AZ-Role-BL**](a-msds-tasksforazrolebl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Tasks-für-AZ-Task-BL**](a-msds-tasksforaztaskbl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Operations-for-Az-Role-BL**](a-msds-operationsforazrolebl.md)     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Operations-for-Az-Task-BL**](a-msds-operationsforaztaskbl.md)     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Tasks-for-Az-Role-BL**](a-msds-tasksforazrolebl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Tasks-for-Az-Task-BL**](a-msds-tasksforaztaskbl.md)               | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Trust-Forest-Trust-Info**](a-msds-trustforesttrustinfo.md)        | False     | **Vertrauenswürdige Domäne**              |
 | [**ms-Exch-Owner-BL**](a-ownerbl.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**msSFU-30-POSIX-Member-of**](a-mssfu30posixmemberof.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**NetBoot-SCP-BL**](a-netbootscpbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Nicht sicherheitsmitglied-BL**](a-nonsecuritymemberbl.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                    | Richtig      | [**Nach oben**](c-top.md)<br/> |
+| [**msSFU-30-Posix-Member-Of**](a-mssfu30posixmemberof.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                    | True      | [**Nach oben**](c-top.md)<br/> |
 | [**Obj-Dist-Name**](a-distinguishedname.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Objekt-Kategorie**](a-objectcategory.md)                                 | Richtig      | [**Nach oben**](c-top.md)<br/> |
-| [**Object-Klasse**](a-objectclass.md)                                       | Richtig      | [**Nach oben**](c-top.md)<br/> |
+| [**Objektkategorie**](a-objectcategory.md)                                 | True      | [**Nach oben**](c-top.md)<br/> |
+| [**Objektklasse**](a-objectclass.md)                                       | True      | [**Nach oben**](c-top.md)<br/> |
 | [**Objekt-GUID**](a-objectguid.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Objekt-Version**](a-objectversion.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Andere-bekannte Objekte**](a-otherwellknownobjects.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Partial-Attribute-löschen-List**](a-partialattributedeletionlist.md)   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Partiell-Attribut Satz**](a-partialattributeset.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Mögliche-minderwertig**](a-possibleinferiors.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Proxy-Objekt Name**](a-proxiedobjectname.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Proxy Adressen**](a-proxyaddresses.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Abfrage-Richtlinie-BL**](a-querypolicybl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**RDN**](a-name.md)                                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**REPL-Property-Meta-Data**](a-replpropertymetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**REPL-Update-Vector**](a-repluptodatevector.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Objektversion**](a-objectversion.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Teilattributlöschungsliste**](a-partialattributedeletionlist.md)   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Teilattributsatz**](a-partialattributeset.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Mögliche Hindernisse**](a-possibleinferiors.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Proxyadressen**](a-proxyaddresses.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Rdn**](a-name.md)                                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Berichte**](a-directreports.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Reps-from**](a-repsfrom.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Reps-to**](a-repsto.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Novel**](a-revision.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**SD-Rechte**](a-sdrightseffective.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Sicherheits-ID**](a-securityidentifier.md)                         | False     | **Vertrauenswürdige Domäne**              |
+| [**Reps-From**](a-repsfrom.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Reps-To**](a-repsto.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Revision**](a-revision.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Sicherheitsbezeichner**](a-securityidentifier.md)                         | False     | **Vertrauenswürdige Domäne**              |
 | [**Server-Reference-BL**](a-serverreferencebl.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeigen-in-Advanced-nur anzeigen**](a-showinadvancedviewonly.md)              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Nur in erweiterter Ansicht anzeigen**](a-showinadvancedviewonly.md)              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Site-Object-BL**](a-siteobjectbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Struktur-Objekt-Klasse**](a-structuralobjectclass.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Structural-Object-Class**](a-structuralobjectclass.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Sub-Refs**](a-subrefs.md)                                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Subschemasubentry**](a-subschemasubentry.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**SystemFlags**](a-systemflags.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Trust-Attribute**](a-trustattributes.md)                               | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-auth-eingehender**](a-trustauthincoming.md)                          | False     | **Vertrauenswürdige Domäne**              |
-| [**Vertrauensstellung-ausgehender**](a-trustauthoutgoing.md)                          | False     | **Vertrauenswürdige Domäne**              |
-| [**Vertrauens Richtung**](a-trustdirection.md)                                 | False     | **Vertrauenswürdige Domäne**              |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Systemflags**](a-systemflags.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Trust-Attributes**](a-trustattributes.md)                               | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Auth-Incoming**](a-trustauthincoming.md)                          | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Auth-Outgoing**](a-trustauthoutgoing.md)                          | False     | **Vertrauenswürdige Domäne**              |
+| [**Vertrauensrichtung**](a-trustdirection.md)                                 | False     | **Vertrauenswürdige Domäne**              |
 | [**Trust-Partner**](a-trustpartner.md)                                     | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-POSIX-Offset**](a-trustposixoffset.md)                            | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Posix-Offset**](a-trustposixoffset.md)                            | False     | **Vertrauenswürdige Domäne**              |
 | [**Trust-Type**](a-trusttype.md)                                           | False     | **Vertrauenswürdige Domäne**              |
-| [**Die Anwendung wurde geändert.**](a-usnchanged.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Von der Anwendung erstellte**](a-usncreated.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**USA-DSA-letzte-obj-entfernt**](a-usndsalastobjremoved.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Standort-und standortübergreifende standortübergreifende**](a-usnintersite.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**"An-Last-obj-REM"**](a-usnlastobjrem.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Quell Code Quelle**](a-usnsource.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WBEM-Pfad**](a-wbempath.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN geändert**](a-usnchanged.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-erstellt**](a-usncreated.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-DSA-last-obj-removed**](a-usndsalastobjremoved.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Intersite**](a-usnintersite.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Quelle**](a-usnsource.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Wbem-Pfad**](a-wbempath.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bekannte Objekte**](a-wellknownobjects.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bei Änderung**](a-whenchanged.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Bei Erstellung**](a-whencreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WWW-Page-other**](a-url.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Bei der Erstellung**](a-whencreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**WWW-Startseite**](a-wwwhomepage.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**WWW-Page-Other**](a-url.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
 
 
 
@@ -464,13 +464,13 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2003 R2:
 | Object-Category             | 1                                                                                                                                                                                             |
 | Default-Object-Category     | \-                                                                                                                                                                                            |
 | Governs-Id                  | 1.2.840.113556.1.5.34                                                                                                                                                                         |
-| Standard-ausblenden-Wert        | 1                                                                                                                                                                                             |
-| RDN-ATT-ID                  | [**Gemeinsamer Name**](a-cn.md)<br/>                                                                                                                                                        |
+| Default-Hiding-Value        | 1                                                                                                                                                                                             |
+| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                                                                                                                        |
 | Unterklasse von                 | [**Leaf**](c-leaf.md)<br/>                                                                                                                                                             |
-| Mögliche Vorgesetzten          | [**Container**](c-container.md)                                                                                                                                                              |
+| Mögliche Übergeordnete          | [**Container**](c-container.md)                                                                                                                                                              |
 | Zusätzlich           | \-                                                                                                                                                                                            |
-| NT-Security-Descriptor      | o:Bag: schlecht: S:                                                                                                                                                                                  |
-| Standard Sicherheits Beschreibung | D: (A;; rpwpcrccdclclorcwowdsddtsw;;;D a) (a;; Rpwpcrccdclclorcwowdsddtsw;;; SY) (A;; Rplclorc;;; Au) (OA;; WP; 736e4812-AF31-11d2-b7df-00805f 48caeb; bf967ab8-0de6-11D0-A285-00aa003049e2; Co) (A;; SD;;; Erung |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                                                                                                                  |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPLCLORC;;; AU)(OA;; WP;736e4812-af31-11d2-b7df-00805f48caeb;bf967ab8-0de6-11d0-a285-00aa003049e2;CO)(A;; SD;;; CO) |
 | System-Flags                | 0x00000010                                                                                                                                                                                    |
 
 
@@ -481,130 +481,130 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008:
 
 
 
-| Attribut                                                                      | Obligatorisch. | Abgeleitet von                    |
+| attribute                                                                      | Obligatorisch. | Abgeleitet von                    |
 |--------------------------------------------------------------------------------|-----------|---------------------------------|
-| [**Zusätzliche-vertrauenswürdige Dienst-Namen**](a-additionaltrustedservicenames.md)    | False     | **Vertrauenswürdige Domäne**              |
-| [**Administrator: Beschreibung**](a-admindescription.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Administrator-Anzeige Name**](a-admindisplayname.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige Attribute**](a-allowedattributes.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige Attribute-gültig**](a-allowedattributeseffective.md)           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige, untergeordnete Klassen**](a-allowedchildclasses.md)                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässig-untergeordnete Klassen-gültig**](a-allowedchildclasseseffective.md)      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Zusätzliche vertrauenswürdige Dienstnamen**](a-additionaltrustedservicenames.md)    | False     | **Vertrauenswürdige Domäne**              |
+| [**Administratorbeschreibung**](a-admindescription.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Admin-Display-Name**](a-admindisplayname.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Attributes**](a-allowedattributes.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)      | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Kanonischer Name**](a-canonicalname.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Gemeinsamer Name**](a-cn.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Create-Zeitstempel**](a-createtimestamp.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allgemeiner Name**](a-cn.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Erstellen eines Zeitstempels**](a-createtimestamp.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Beschreibung**](a-description.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeige Name**](a-displayname.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeige Name-druckdruck**](a-displaynameprintable.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Domäne-Kreuz Verweis**](a-domaincrossref.md)                                   | False     | **Vertrauenswürdige Domäne**              |
-| [**Domänen Bezeichner**](a-domainidentifier.md)                                | False     | **Vertrauenswürdige Domäne**              |
-| [**DSA-Signatur**](a-dsasignature.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**DS-Core-propagierungs Daten**](a-dscorepropagationdata.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Erweiterungs Name**](a-extensionname.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Fahren**](a-flags.md)                                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Flat-Name**](a-flatname.md)                                                | False     | **Vertrauenswürdige Domäne**              |
-| [**Aus-Eintrag**](a-fromentry.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**FRS-Computer-Reference-BL**](a-frscomputerreferencebl.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Anzeigename**](a-displayname.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Display-Name-Printable**](a-displaynameprintable.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Domänenübergreifende Ref**](a-domaincrossref.md)                                   | False     | **Trusted-Domain**              |
+| [**Domänenbezeichner**](a-domainidentifier.md)                                | False     | **Trusted-Domain**              |
+| [**DSA-Signature**](a-dsasignature.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Extension-Name**](a-extensionname.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Flaggen**](a-flags.md)                                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Flatname**](a-flatname.md)                                                | False     | **Trusted-Domain**              |
+| [**From-Entry**](a-fromentry.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
 | [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**"F"-Rollen Besitzer**](a-fsmoroleowner.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anfängliche Authentifizierung-eingehende**](a-initialauthincoming.md)                         | False     | **Vertrauenswürdige Domäne**              |
-| [**Anfängliche Authentifizierung: ausgehend**](a-initialauthoutgoing.md)                         | False     | **Vertrauenswürdige Domäne**              |
-| [**Instanztyp**](a-instancetype.md)                                        | Richtig      | [**Nach oben**](c-top.md)<br/> |
-| [**Is-critical-System-Object**](a-iscriticalsystemobject.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Ist-gelöscht**](a-isdeleted.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Initial-Auth-Incoming**](a-initialauthincoming.md)                         | False     | **Trusted-Domain**              |
+| [**Initial-Auth-Outgoing**](a-initialauthoutgoing.md)                         | False     | **Trusted-Domain**              |
+| [**Instanztyp**](a-instancetype.md)                                        | True      | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Deleted**](a-isdeleted.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Is-Member-of-DL**](a-memberof.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Is-Privilege-Inhaber**](a-isprivilegeholder.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Letztes-bekannt/übergeordnetes Element**](a-lastknownparent.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Letztes bekanntes übergeordnetes Element**](a-lastknownparent.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Verwaltete Objekte**](a-managedobjects.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Verwaltet von**](a-masteredby.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Modify-Zeitstempel**](a-modifytimestamp.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-com-partitionsetlink**](a-mscom-partitionsetlink.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-com-userlink**](a-mscom-userlink.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DFSR-computerreferencebl**](a-msdfsr-computerreferencebl.md)            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DFSR-mitgliedreferencebl**](a-msdfsr-memberreferencebl.md)                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-ca-immed-untergeordnete Elemente**](a-msds-approx-immed-subordinates.md)    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-authentieredto-accountlist**](a-msds-authenticatedtoaccountlist.md) | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DS-Konsistenz-untergeordnet-Anzahl**](a-ms-ds-consistencychildcount.md)         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Mastered By**](a-masteredby.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-COM-PartitionSetLink**](a-mscom-partitionsetlink.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-COM-UserLink**](a-mscom-userlink.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DFSR-ComputerReferenceBL**](a-msdfsr-computerreferencebl.md)            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DFSR-MemberReferenceBL**](a-msdfsr-memberreferencebl.md)                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md)    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-AuthenticatedTo-Accountlist**](a-msds-authenticatedtoaccountlist.md) | False     | [**Nach oben**](c-top.md)<br/> |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)         | False     | [**Nach oben**](c-top.md)<br/> |
 | [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DS-Creator-sid**](a-ms-ds-creatorsid.md)                                | False     | **Vertrauenswürdige Domäne**              |
+| [**MS-DS-Creator-SID**](a-ms-ds-creatorsid.md)                                | False     | **Trusted-Domain**              |
 | [**ms-DS-is-Domain-for**](a-msds-isdomainfor.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-is-full-Replica-for**](a-msds-isfullreplicafor.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-is-Partial-Replica-for**](a-msds-ispartialreplicafor.md)             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-krbtgt-Link-BL**](a-msds-krbtgtlinkbl.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-gemastert von**](a-msds-masteredby.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Members-für-AZ-Role-BL**](a-msds-membersforazrolebl.md)              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Cursor**](a-msds-ncreplcursors.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Inbound-Nachbarn**](a-msds-ncreplinboundneighbors.md)       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Outbound-Nachbarn**](a-msds-ncreploutboundneighbors.md)     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-is-full-replica-for**](a-msds-isfullreplicafor.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-is-partial-replica-for**](a-msds-ispartialreplicafor.md)             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-KrbTgt-Link-BL**](a-msds-krbtgtlinkbl.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Mastered-By**](a-msds-masteredby.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Members-For-Az-Role-BL**](a-msds-membersforazrolebl.md)              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)     | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-NC-RO-Replica-Locations-BL**](a-msds-nc-ro-replica-locations-bl.md)  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-Typ**](a-msds-nctype.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Type**](a-msds-nctype.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Operations-for-AZ-Role-BL**](a-msds-operationsforazrolebl.md)        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Operations-for-AZ-Task-BL**](a-msds-operationsforaztaskbl.md)        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Operations-For-Az-Role-BL**](a-msds-operationsforazrolebl.md)        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Operations-For-Az-Task-BL**](a-msds-operationsforaztaskbl.md)        | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Principal-Name**](a-msds-principalname.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-PSO-angewendet**](a-msds-psoapplied.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-offengelegt-DSAs**](a-msds-revealeddsas.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-enthüllt-List-BL**](a-msds-revealedlistbl.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-supported-Encryption-Types**](a-msds-supportedencryptiontypes.md)    | False     | **Vertrauenswürdige Domäne**              |
-| [**ms-DS-Tasks-für-AZ-Role-BL**](a-msds-tasksforazrolebl.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Tasks-für-AZ-Task-BL**](a-msds-tasksforaztaskbl.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Trust-Forest-Trust-Info**](a-msds-trustforesttrustinfo.md)           | False     | **Vertrauenswürdige Domäne**              |
+| [**ms-DS-PSO-Applied**](a-msds-psoapplied.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Revealed-DSAs**](a-msds-revealeddsas.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Revealed-List-BL**](a-msds-revealedlistbl.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Supported-Encryption-Types**](a-msds-supportedencryptiontypes.md)    | False     | **Trusted-Domain**              |
+| [**ms-DS-Tasks-For-Az-Role-BL**](a-msds-tasksforazrolebl.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Tasks-For-Az-Task-BL**](a-msds-tasksforaztaskbl.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Trust-Forest-Trust-Info**](a-msds-trustforesttrustinfo.md)           | False     | **Trusted-Domain**              |
 | [**ms-Exch-Owner-BL**](a-ownerbl.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**msSFU-30-POSIX-Member-of**](a-mssfu30posixmemberof.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**NetBoot-SCP-BL**](a-netbootscpbl.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Nicht sicherheitsmitglied-BL**](a-nonsecuritymemberbl.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                       | Richtig      | [**Nach oben**](c-top.md)<br/> |
+| [**msSFU-30-Posix-Member-Of**](a-mssfu30posixmemberof.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                       | True      | [**Nach oben**](c-top.md)<br/> |
 | [**Obj-Dist-Name**](a-distinguishedname.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Objekt-Kategorie**](a-objectcategory.md)                                    | Richtig      | [**Nach oben**](c-top.md)<br/> |
-| [**Object-Klasse**](a-objectclass.md)                                          | Richtig      | [**Nach oben**](c-top.md)<br/> |
+| [**Objektkategorie**](a-objectcategory.md)                                    | True      | [**Nach oben**](c-top.md)<br/> |
+| [**Object-Class**](a-objectclass.md)                                          | True      | [**Nach oben**](c-top.md)<br/> |
 | [**Objekt-GUID**](a-objectguid.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Objekt-Version**](a-objectversion.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Andere-bekannte Objekte**](a-otherwellknownobjects.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Partial-Attribute-löschen-List**](a-partialattributedeletionlist.md)      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Partiell-Attribut Satz**](a-partialattributeset.md)                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Mögliche-minderwertig**](a-possibleinferiors.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Proxy-Objekt Name**](a-proxiedobjectname.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Proxy Adressen**](a-proxyaddresses.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Abfrage-Richtlinie-BL**](a-querypolicybl.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**RDN**](a-name.md)                                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**REPL-Property-Meta-Data**](a-replpropertymetadata.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**REPL-Update-Vector**](a-repluptodatevector.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Object-Version**](a-objectversion.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Teilattributlöschungsliste**](a-partialattributedeletionlist.md)      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Teilattributsatz**](a-partialattributeset.md)                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Mögliche Hindernisse**](a-possibleinferiors.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Proxyadressen**](a-proxyaddresses.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Rdn**](a-name.md)                                                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Berichte**](a-directreports.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Reps-from**](a-repsfrom.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Reps-to**](a-repsto.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Novel**](a-revision.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**SD-Rechte**](a-sdrightseffective.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Sicherheits-ID**](a-securityidentifier.md)                            | False     | **Vertrauenswürdige Domäne**              |
+| [**Reps-From**](a-repsfrom.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Reps-To**](a-repsto.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Revision**](a-revision.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Sicherheitsbezeichner**](a-securityidentifier.md)                            | False     | **Vertrauenswürdige Domäne**              |
 | [**Server-Reference-BL**](a-serverreferencebl.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeigen-in-Advanced-nur anzeigen**](a-showinadvancedviewonly.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Nur in erweiterter Ansicht anzeigen**](a-showinadvancedviewonly.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Site-Object-BL**](a-siteobjectbl.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Struktur-Objekt-Klasse**](a-structuralobjectclass.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Structural-Object-Class**](a-structuralobjectclass.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Sub-Refs**](a-subrefs.md)                                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Subschemasubentry**](a-subschemasubentry.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**SystemFlags**](a-systemflags.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Trust-Attribute**](a-trustattributes.md)                                  | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-auth-eingehender**](a-trustauthincoming.md)                             | False     | **Vertrauenswürdige Domäne**              |
-| [**Vertrauensstellung-ausgehender**](a-trustauthoutgoing.md)                             | False     | **Vertrauenswürdige Domäne**              |
-| [**Vertrauens Richtung**](a-trustdirection.md)                                    | False     | **Vertrauenswürdige Domäne**              |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Systemflags**](a-systemflags.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Trust-Attributes**](a-trustattributes.md)                                  | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Auth-Incoming**](a-trustauthincoming.md)                             | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Auth-Outgoing**](a-trustauthoutgoing.md)                             | False     | **Vertrauenswürdige Domäne**              |
+| [**Vertrauensrichtung**](a-trustdirection.md)                                    | False     | **Vertrauenswürdige Domäne**              |
 | [**Trust-Partner**](a-trustpartner.md)                                        | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-POSIX-Offset**](a-trustposixoffset.md)                               | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Posix-Offset**](a-trustposixoffset.md)                               | False     | **Vertrauenswürdige Domäne**              |
 | [**Trust-Type**](a-trusttype.md)                                              | False     | **Vertrauenswürdige Domäne**              |
-| [**Die Anwendung wurde geändert.**](a-usnchanged.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Von der Anwendung erstellte**](a-usncreated.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**USA-DSA-letzte-obj-entfernt**](a-usndsalastobjremoved.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Standort-und standortübergreifende standortübergreifende**](a-usnintersite.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**"An-Last-obj-REM"**](a-usnlastobjrem.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Quell Code Quelle**](a-usnsource.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WBEM-Pfad**](a-wbempath.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN geändert**](a-usnchanged.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-erstellt**](a-usncreated.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-DSA-last-obj-removed**](a-usndsalastobjremoved.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Intersite**](a-usnintersite.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Quelle**](a-usnsource.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Wbem-Pfad**](a-wbempath.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bekannte Objekte**](a-wellknownobjects.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bei Änderung**](a-whenchanged.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Bei Erstellung**](a-whencreated.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WWW-Page-other**](a-url.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Bei der Erstellung**](a-whencreated.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**WWW-Startseite**](a-wwwhomepage.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**WWW-Page-Other**](a-url.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
 
 
 
@@ -620,13 +620,13 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008:
 | Object-Category             | 1                                                                                                                                                                                             |
 | Default-Object-Category     | \-                                                                                                                                                                                            |
 | Governs-Id                  | 1.2.840.113556.1.5.34                                                                                                                                                                         |
-| Standard-ausblenden-Wert        | 1                                                                                                                                                                                             |
-| RDN-ATT-ID                  | [**Gemeinsamer Name**](a-cn.md)<br/>                                                                                                                                                        |
+| Default-Hiding-Value        | 1                                                                                                                                                                                             |
+| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                                                                                                                        |
 | Unterklasse von                 | [**Leaf**](c-leaf.md)<br/>                                                                                                                                                             |
-| Mögliche Vorgesetzten          | [**Container**](c-container.md)                                                                                                                                                              |
+| Mögliche Übergeordnete          | [**Container**](c-container.md)                                                                                                                                                              |
 | Zusätzlich           | \-                                                                                                                                                                                            |
-| NT-Security-Descriptor      | o:Bag: schlecht: S:                                                                                                                                                                                  |
-| Standard Sicherheits Beschreibung | D: (A;; rpwpcrccdclclorcwowdsddtsw;;;D a) (a;; Rpwpcrccdclclorcwowdsddtsw;;; SY) (A;; Rplclorc;;; Au) (OA;; WP; 736e4812-AF31-11d2-b7df-00805f 48caeb; bf967ab8-0de6-11D0-A285-00aa003049e2; Co) (A;; SD;;; Erung |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                                                                                                                  |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPLCLORC;;; AU)(OA;; WP;736e4812-af31-11d2-b7df-00805f48caeb;bf967ab8-0de6-11d0-a285-00aa003049e2;CO)(A;; SD;;; CO) |
 | System-Flags                | 0x00000010                                                                                                                                                                                    |
 
 
@@ -637,137 +637,137 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008 R2:
 
 
 
-| Attribut                                                                        | Obligatorisch. | Abgeleitet von                    |
+| attribute                                                                        | Obligatorisch. | Abgeleitet von                    |
 |----------------------------------------------------------------------------------|-----------|---------------------------------|
-| [**Zusätzliche-vertrauenswürdige Dienst-Namen**](a-additionaltrustedservicenames.md)      | False     | **Vertrauenswürdige Domäne**              |
-| [**Administrator: Beschreibung**](a-admindescription.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Administrator-Anzeige Name**](a-admindisplayname.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige Attribute**](a-allowedattributes.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige Attribute-gültig**](a-allowedattributeseffective.md)             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige, untergeordnete Klassen**](a-allowedchildclasses.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässig-untergeordnete Klassen-gültig**](a-allowedchildclasseseffective.md)        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Zusätzliche vertrauenswürdige Dienstnamen**](a-additionaltrustedservicenames.md)      | False     | **Vertrauenswürdige Domäne**              |
+| [**Administratorbeschreibung**](a-admindescription.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Admin-Display-Name**](a-admindisplayname.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Attributes**](a-allowedattributes.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)        | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Kanonischer Name**](a-canonicalname.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Gemeinsamer Name**](a-cn.md)                                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Create-Zeitstempel**](a-createtimestamp.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allgemeiner Name**](a-cn.md)                                                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Erstellen eines Zeitstempels**](a-createtimestamp.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Beschreibung**](a-description.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeige Name**](a-displayname.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeige Name-druckdruck**](a-displaynameprintable.md)                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Domäne-Kreuz Verweis**](a-domaincrossref.md)                                     | False     | **Vertrauenswürdige Domäne**              |
-| [**Domänen Bezeichner**](a-domainidentifier.md)                                  | False     | **Vertrauenswürdige Domäne**              |
-| [**DSA-Signatur**](a-dsasignature.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**DS-Core-propagierungs Daten**](a-dscorepropagationdata.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Erweiterungs Name**](a-extensionname.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Fahren**](a-flags.md)                                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Flat-Name**](a-flatname.md)                                                  | False     | **Vertrauenswürdige Domäne**              |
-| [**Aus-Eintrag**](a-fromentry.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**FRS-Computer-Reference-BL**](a-frscomputerreferencebl.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Anzeigename**](a-displayname.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Anzeigename– druckbar**](a-displaynameprintable.md)                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Domänenübergreifende Ref**](a-domaincrossref.md)                                     | False     | **Trusted-Domain**              |
+| [**Domänenbezeichner**](a-domainidentifier.md)                                  | False     | **Trusted-Domain**              |
+| [**DSA-Signature**](a-dsasignature.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Extension-Name**](a-extensionname.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Flaggen**](a-flags.md)                                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Flatname**](a-flatname.md)                                                  | False     | **Trusted-Domain**              |
+| [**From-Entry**](a-fromentry.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
 | [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**"F"-Rollen Besitzer**](a-fsmoroleowner.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anfängliche Authentifizierung-eingehende**](a-initialauthincoming.md)                           | False     | **Vertrauenswürdige Domäne**              |
-| [**Anfängliche Authentifizierung: ausgehend**](a-initialauthoutgoing.md)                           | False     | **Vertrauenswürdige Domäne**              |
-| [**Instanztyp**](a-instancetype.md)                                          | Richtig      | [**Nach oben**](c-top.md)<br/> |
-| [**Is-critical-System-Object**](a-iscriticalsystemobject.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Ist-gelöscht**](a-isdeleted.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Initial-Auth-Incoming**](a-initialauthincoming.md)                           | False     | **Trusted-Domain**              |
+| [**Initial-Auth-Outgoing**](a-initialauthoutgoing.md)                           | False     | **Trusted-Domain**              |
+| [**Instanztyp**](a-instancetype.md)                                          | True      | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Deleted**](a-isdeleted.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Is-Member-of-DL**](a-memberof.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Is-Privilege-Inhaber**](a-isprivilegeholder.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Ist-recycelt**](a-isrecycled.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Letztes-bekannt/übergeordnetes Element**](a-lastknownparent.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Wird wiederverwendet**](a-isrecycled.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Letztes bekanntes übergeordnetes Element**](a-lastknownparent.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Verwaltete Objekte**](a-managedobjects.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Verwaltet von**](a-masteredby.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Modify-Zeitstempel**](a-modifytimestamp.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-com-partitionsetlink**](a-mscom-partitionsetlink.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-com-userlink**](a-mscom-userlink.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DFSR-computerreferencebl**](a-msdfsr-computerreferencebl.md)              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DFSR-mitgliedreferencebl**](a-msdfsr-memberreferencebl.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-ca-immed-untergeordnete Elemente**](a-msds-approx-immed-subordinates.md)      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-authentieredto-accountlist**](a-msds-authenticatedtoaccountlist.md)   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DS-Konsistenz-untergeordnet-Anzahl**](a-ms-ds-consistencychildcount.md)           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Mastered By**](a-masteredby.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-COM-PartitionSetLink**](a-mscom-partitionsetlink.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-COM-UserLink**](a-mscom-userlink.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DFSR-ComputerReferenceBL**](a-msdfsr-computerreferencebl.md)              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DFSR-MemberReferenceBL**](a-msdfsr-memberreferencebl.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md)      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-AuthenticatedTo-Accountlist**](a-msds-authenticatedtoaccountlist.md)   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)           | False     | [**Nach oben**](c-top.md)<br/> |
 | [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DS-Creator-sid**](a-ms-ds-creatorsid.md)                                  | False     | **Vertrauenswürdige Domäne**              |
-| [**ms-DS-aktiviert-Feature-BL**](a-msds-enabledfeaturebl.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**MS-DS-Creator-SID**](a-ms-ds-creatorsid.md)                                  | False     | **Trusted-Domain**              |
+| [**ms-DS-Enabled-Feature-BL**](a-msds-enabledfeaturebl.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Host-Service-Account-BL**](a-msds-hostserviceaccountbl.md)             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-is-Domain-for**](a-msds-isdomainfor.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-is-full-Replica-for**](a-msds-isfullreplicafor.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-is-Partial-Replica-for**](a-msds-ispartialreplicafor.md)               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-krbtgt-Link-BL**](a-msds-krbtgtlinkbl.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Is-Domain-For**](a-msds-isdomainfor.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-is-full-replica-for**](a-msds-isfullreplicafor.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-is-partial-replica-for**](a-msds-ispartialreplicafor.md)               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-KrbTgt-Link-BL**](a-msds-krbtgtlinkbl.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Last-Known-RDN**](a-msds-lastknownrdn.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-local-Effective-Lösch Zeit**](a-msds-localeffectivedeletiontime.md) | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-local-Effective-Papier-Time**](a-msds-localeffectiverecycletime.md)   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-gemastert von**](a-msds-masteredby.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Members-für-AZ-Role-BL**](a-msds-membersforazrolebl.md)                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Cursor**](a-msds-ncreplcursors.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Inbound-Nachbarn**](a-msds-ncreplinboundneighbors.md)         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Outbound-Nachbarn**](a-msds-ncreploutboundneighbors.md)       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-local-Effective-Deletion-Time**](a-msds-localeffectivedeletiontime.md) | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-local-Effective-Recycle-Time**](a-msds-localeffectiverecycletime.md)   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Mastered-By**](a-msds-masteredby.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Members-for-Az-Role-BL**](a-msds-membersforazrolebl.md)                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)       | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-NC-RO-Replica-Locations-BL**](a-msds-nc-ro-replica-locations-bl.md)    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-Typ**](a-msds-nctype.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Type**](a-msds-nctype.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-oidtoidgruppe-Link-BL**](a-msds-oidtogrouplinkbl.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Operations-for-AZ-Role-BL**](a-msds-operationsforazrolebl.md)          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Operations-for-AZ-Task-BL**](a-msds-operationsforaztaskbl.md)          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-OIDToGroup-Link-BL**](a-msds-oidtogrouplinkbl.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Operations-for-Az-Role-BL**](a-msds-operationsforazrolebl.md)          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Operations-for-Az-Task-BL**](a-msds-operationsforaztaskbl.md)          | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Principal-Name**](a-msds-principalname.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-PSO-angewendet**](a-msds-psoapplied.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-offengelegt-DSAs**](a-msds-revealeddsas.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-enthüllt-List-BL**](a-msds-revealedlistbl.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-supported-Encryption-Types**](a-msds-supportedencryptiontypes.md)      | False     | **Vertrauenswürdige Domäne**              |
-| [**ms-DS-Tasks-für-AZ-Role-BL**](a-msds-tasksforazrolebl.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Tasks-für-AZ-Task-BL**](a-msds-tasksforaztaskbl.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-PSO-Applied**](a-msds-psoapplied.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Revealed-DSAs**](a-msds-revealeddsas.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Revealed-List-BL**](a-msds-revealedlistbl.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Supported-Encryption-Types**](a-msds-supportedencryptiontypes.md)      | False     | **Vertrauenswürdige Domäne**              |
+| [**ms-DS-Tasks-for-Az-Role-BL**](a-msds-tasksforazrolebl.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Tasks-for-Az-Task-BL**](a-msds-tasksforaztaskbl.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Trust-Forest-Trust-Info**](a-msds-trustforesttrustinfo.md)             | False     | **Vertrauenswürdige Domäne**              |
 | [**ms-Exch-Owner-BL**](a-ownerbl.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**msSFU-30-POSIX-Member-of**](a-mssfu30posixmemberof.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**NetBoot-SCP-BL**](a-netbootscpbl.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Nicht sicherheitsmitglied-BL**](a-nonsecuritymemberbl.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                         | Richtig      | [**Nach oben**](c-top.md)<br/> |
+| [**msSFU-30-Posix-Member-Of**](a-mssfu30posixmemberof.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                         | True      | [**Nach oben**](c-top.md)<br/> |
 | [**Obj-Dist-Name**](a-distinguishedname.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Objekt-Kategorie**](a-objectcategory.md)                                      | Richtig      | [**Nach oben**](c-top.md)<br/> |
-| [**Object-Klasse**](a-objectclass.md)                                            | Richtig      | [**Nach oben**](c-top.md)<br/> |
+| [**Objektkategorie**](a-objectcategory.md)                                      | True      | [**Nach oben**](c-top.md)<br/> |
+| [**Objektklasse**](a-objectclass.md)                                            | True      | [**Nach oben**](c-top.md)<br/> |
 | [**Objekt-GUID**](a-objectguid.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Objekt-Version**](a-objectversion.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Andere-bekannte Objekte**](a-otherwellknownobjects.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Partial-Attribute-löschen-List**](a-partialattributedeletionlist.md)        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Partiell-Attribut Satz**](a-partialattributeset.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Mögliche-minderwertig**](a-possibleinferiors.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Proxy-Objekt Name**](a-proxiedobjectname.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Proxy Adressen**](a-proxyaddresses.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Abfrage-Richtlinie-BL**](a-querypolicybl.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**RDN**](a-name.md)                                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**REPL-Property-Meta-Data**](a-replpropertymetadata.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**REPL-Update-Vector**](a-repluptodatevector.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Objektversion**](a-objectversion.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Teilattributlöschungsliste**](a-partialattributedeletionlist.md)        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Teilattributsatz**](a-partialattributeset.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Mögliche Hindernisse**](a-possibleinferiors.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Proxyadressen**](a-proxyaddresses.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Rdn**](a-name.md)                                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Berichte**](a-directreports.md)                                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Reps-from**](a-repsfrom.md)                                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Reps-to**](a-repsto.md)                                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Novel**](a-revision.md)                                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**SD-Rechte**](a-sdrightseffective.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Sicherheits-ID**](a-securityidentifier.md)                              | False     | **Vertrauenswürdige Domäne**              |
+| [**Reps-From**](a-repsfrom.md)                                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Reps-To**](a-repsto.md)                                                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Revision**](a-revision.md)                                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Sicherheitsbezeichner**](a-securityidentifier.md)                              | False     | **Vertrauenswürdige Domäne**              |
 | [**Server-Reference-BL**](a-serverreferencebl.md)                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeigen-in-Advanced-nur anzeigen**](a-showinadvancedviewonly.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Nur in erweiterter Ansicht anzeigen**](a-showinadvancedviewonly.md)                   | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Site-Object-BL**](a-siteobjectbl.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Struktur-Objekt-Klasse**](a-structuralobjectclass.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Structural-Object-Class**](a-structuralobjectclass.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Sub-Refs**](a-subrefs.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Subschemasubentry**](a-subschemasubentry.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**SystemFlags**](a-systemflags.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Trust-Attribute**](a-trustattributes.md)                                    | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-auth-eingehender**](a-trustauthincoming.md)                               | False     | **Vertrauenswürdige Domäne**              |
-| [**Vertrauensstellung-ausgehender**](a-trustauthoutgoing.md)                               | False     | **Vertrauenswürdige Domäne**              |
-| [**Vertrauens Richtung**](a-trustdirection.md)                                      | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-Partner**](a-trustpartner.md)                                          | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-POSIX-Offset**](a-trustposixoffset.md)                                 | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-Type**](a-trusttype.md)                                                | False     | **Vertrauenswürdige Domäne**              |
-| [**Die Anwendung wurde geändert.**](a-usnchanged.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Von der Anwendung erstellte**](a-usncreated.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**USA-DSA-letzte-obj-entfernt**](a-usndsalastobjremoved.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Standort-und standortübergreifende standortübergreifende**](a-usnintersite.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**"An-Last-obj-REM"**](a-usnlastobjrem.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Quell Code Quelle**](a-usnsource.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WBEM-Pfad**](a-wbempath.md)                                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Systemflags**](a-systemflags.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Trust-Attributes**](a-trustattributes.md)                                    | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Auth-Incoming**](a-trustauthincoming.md)                               | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Auth-Outgoing**](a-trustauthoutgoing.md)                               | False     | **Vertrauenswürdige Domäne**              |
+| [**Vertrauensrichtung**](a-trustdirection.md)                                      | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Partner**](a-trustpartner.md)                                          | False     | **Trusted-Domain**              |
+| [**Trust-Posix-Offset**](a-trustposixoffset.md)                                 | False     | **Trusted-Domain**              |
+| [**Trust-Type**](a-trusttype.md)                                                | False     | **Trusted-Domain**              |
+| [**USN-Changed**](a-usnchanged.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**VON USN erstellt**](a-usncreated.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-DSA-Last-Obj-Removed**](a-usndsalastobjremoved.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Intersite**](a-usnintersite.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Quelle**](a-usnsource.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Wbem-Path**](a-wbempath.md)                                                  | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bekannte Objekte**](a-wellknownobjects.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Bei Änderung**](a-whenchanged.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Bei Erstellung**](a-whencreated.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Wenn geändert**](a-whenchanged.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Wenn erstellt**](a-whencreated.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
 | [**WWW-Homepage**](a-wwwhomepage.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WWW-Page-other**](a-url.md)                                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**WWW-Page-Other**](a-url.md)                                                  | False     | [**Nach oben**](c-top.md)<br/> |
 
 
 
@@ -783,162 +783,162 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008 R2:
 | Object-Category             | 1                                                                                                                                                                                             |
 | Default-Object-Category     | \-                                                                                                                                                                                            |
 | Governs-Id                  | 1.2.840.113556.1.5.34                                                                                                                                                                         |
-| Standard-ausblenden-Wert        | 1                                                                                                                                                                                             |
-| RDN-ATT-ID                  | [**Gemeinsamer Name**](a-cn.md)<br/>                                                                                                                                                        |
+| Default-Hiding-Value        | 1                                                                                                                                                                                             |
+| Rdn-Att-Id                  | [**Common-Name**](a-cn.md)<br/>                                                                                                                                                        |
 | Unterklasse von                 | [**Leaf**](c-leaf.md)<br/>                                                                                                                                                             |
-| Mögliche Vorgesetzten          | [**Container**](c-container.md)                                                                                                                                                              |
+| Mögliche Vorgesetzte          | [**Container**](c-container.md)                                                                                                                                                              |
 | Zusätzlich           | \-                                                                                                                                                                                            |
-| NT-Security-Descriptor      | o:Bag: schlecht: S:                                                                                                                                                                                  |
-| Standard Sicherheits Beschreibung | D: (A;; rpwpcrccdclclorcwowdsddtsw;;;D a) (a;; Rpwpcrccdclclorcwowdsddtsw;;; SY) (A;; Rplclorc;;; Au) (OA;; WP; 736e4812-AF31-11d2-b7df-00805f 48caeb; bf967ab8-0de6-11D0-A285-00aa003049e2; Co) (A;; SD;;; Erung |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                                                                                                                  |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPLCLORC;;; AU)(OA;; WP;736e4812-af31-11d2-b7df-00805f48caeb;bf967ab8-0de6-11d0-a285-00aa003049e2;CO)(A;; SD;;; CO) |
 | System-Flags                | 0x00000010                                                                                                                                                                                    |
 
 
 
-## <a name="windows-server-2012-attributes"></a>Windows Server 2012-Attribute
+## <a name="windows-server-2012-attributes"></a>Windows Server 2012 Attribute
 
 Diese Klasse enthält die folgenden Attribute für Windows Server 2012:
 
 
 
-| Attribut                                                                                      | Obligatorisch. | Abgeleitet von                    |
+| attribute                                                                                      | Obligatorisch. | Abgeleitet von                    |
 |------------------------------------------------------------------------------------------------|-----------|---------------------------------|
-| [**Zusätzliche-vertrauenswürdige Dienst-Namen**](a-additionaltrustedservicenames.md)                    | False     | **Vertrauenswürdige Domäne**              |
-| [**Administrator: Beschreibung**](a-admindescription.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Administrator-Anzeige Name**](a-admindisplayname.md)                                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige Attribute**](a-allowedattributes.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige Attribute-gültig**](a-allowedattributeseffective.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässige, untergeordnete Klassen**](a-allowedchildclasses.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Zulässig-untergeordnete Klassen-gültig**](a-allowedchildclasseseffective.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Zusätzliche vertrauenswürdige Dienstnamen**](a-additionaltrustedservicenames.md)                    | False     | **Trusted-Domain**              |
+| [**Admin-Description**](a-admindescription.md)                                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Administratoranzeigename**](a-admindisplayname.md)                                               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Attributes**](a-allowedattributes.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Kanonischer Name**](a-canonicalname.md)                                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Gemeinsamer Name**](a-cn.md)                                                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Create-Zeitstempel**](a-createtimestamp.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Common-Name**](a-cn.md)                                                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Create-Time-Stamp**](a-createtimestamp.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Beschreibung**](a-description.md)                                                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeige Name**](a-displayname.md)                                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeige Name-druckdruck**](a-displaynameprintable.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Domäne-Kreuz Verweis**](a-domaincrossref.md)                                                   | False     | **Vertrauenswürdige Domäne**              |
-| [**Domänen Bezeichner**](a-domainidentifier.md)                                                | False     | **Vertrauenswürdige Domäne**              |
-| [**DSA-Signatur**](a-dsasignature.md)                                                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**DS-Core-propagierungs Daten**](a-dscorepropagationdata.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Erweiterungs Name**](a-extensionname.md)                                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Fahren**](a-flags.md)                                                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Flat-Name**](a-flatname.md)                                                                | False     | **Vertrauenswürdige Domäne**              |
-| [**Aus-Eintrag**](a-fromentry.md)                                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**FRS-Computer-Reference-BL**](a-frscomputerreferencebl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Anzeigename**](a-displayname.md)                                                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Display-Name-Printable**](a-displaynameprintable.md)                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Domänenübergreifende Ref**](a-domaincrossref.md)                                                   | False     | **Trusted-Domain**              |
+| [**Domänenbezeichner**](a-domainidentifier.md)                                                | False     | **Trusted-Domain**              |
+| [**DSA-Signature**](a-dsasignature.md)                                                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Extension-Name**](a-extensionname.md)                                                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Flaggen**](a-flags.md)                                                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Flatname**](a-flatname.md)                                                                | False     | **Trusted-Domain**              |
+| [**From-Entry**](a-fromentry.md)                                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
 | [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**"F"-Rollen Besitzer**](a-fsmoroleowner.md)                                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anfängliche Authentifizierung-eingehende**](a-initialauthincoming.md)                                         | False     | **Vertrauenswürdige Domäne**              |
-| [**Anfängliche Authentifizierung: ausgehend**](a-initialauthoutgoing.md)                                         | False     | **Vertrauenswürdige Domäne**              |
-| [**Instanztyp**](a-instancetype.md)                                                        | Richtig      | [**Nach oben**](c-top.md)<br/> |
-| [**Is-critical-System-Object**](a-iscriticalsystemobject.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Ist-gelöscht**](a-isdeleted.md)                                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Initial-Auth-Incoming**](a-initialauthincoming.md)                                         | False     | **Trusted-Domain**              |
+| [**Initial-Auth-Outgoing**](a-initialauthoutgoing.md)                                         | False     | **Trusted-Domain**              |
+| [**Instanztyp**](a-instancetype.md)                                                        | True      | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Deleted**](a-isdeleted.md)                                                              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Is-Member-of-DL**](a-memberof.md)                                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Is-Privilege-Inhaber**](a-isprivilegeholder.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Ist-recycelt**](a-isrecycled.md)                                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Letztes-bekannt/übergeordnetes Element**](a-lastknownparent.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Wird wiederverwendet**](a-isrecycled.md)                                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Letztes bekanntes übergeordnetes Element**](a-lastknownparent.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Verwaltete Objekte**](a-managedobjects.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Verwaltet von**](a-masteredby.md)                                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Modify-Zeitstempel**](a-modifytimestamp.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-com-partitionsetlink**](a-mscom-partitionsetlink.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-com-userlink**](a-mscom-userlink.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DFSR-computerreferencebl**](a-msdfsr-computerreferencebl.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DFSR-mitgliedreferencebl**](a-msdfsr-memberreferencebl.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-ca-immed-untergeordnete Elemente**](a-msds-approx-immed-subordinates.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-authentieredto-accountlist**](a-msds-authenticatedtoaccountlist.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Claim-Shares-mögliche-values-with-BL**](a-msds-claimsharespossiblevalueswithbl.md)   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DS-Konsistenz-untergeordnet-Anzahl**](a-ms-ds-consistencychildcount.md)                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Mastered By**](a-masteredby.md)                                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-COM-PartitionSetLink**](a-mscom-partitionsetlink.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-COM-UserLink**](a-mscom-userlink.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DFSR-ComputerReferenceBL**](a-msdfsr-computerreferencebl.md)                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DFSR-MemberReferenceBL**](a-msdfsr-memberreferencebl.md)                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md)                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-AuthenticatedTo-Accountlist**](a-msds-authenticatedtoaccountlist.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Claim-Shares-Possible-Values-with-BL**](a-msds-claimsharespossiblevalueswithbl.md)   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)                         | False     | [**Nach oben**](c-top.md)<br/> |
 | [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**MS-DS-Creator-sid**](a-ms-ds-creatorsid.md)                                                | False     | **Vertrauenswürdige Domäne**              |
+| [**MS-DS-Creator-SID**](a-ms-ds-creatorsid.md)                                                | False     | **Vertrauenswürdige Domäne**              |
 | [**ms-DS-Egress-Claims-Transformation-Policy**](a-msds-egressclaimstransformationpolicy.md)   | False     | **Vertrauenswürdige Domäne**              |
-| [**ms-DS-aktiviert-Feature-BL**](a-msds-enabledfeaturebl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Enabled-Feature-BL**](a-msds-enabledfeaturebl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Host-Service-Account-BL**](a-msds-hostserviceaccountbl.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Ingress-Claims-Transformation-Policy**](a-msds-ingressclaimstransformationpolicy.md) | False     | **Vertrauenswürdige Domäne**              |
-| [**ms-DS-is-Domain-for**](a-msds-isdomainfor.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-is-full-Replica-for**](a-msds-isfullreplicafor.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-is-Partial-Replica-for**](a-msds-ispartialreplicafor.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-is-Primary-Computer-für**](a-msds-isprimarycomputerfor.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-krbtgt-Link-BL**](a-msds-krbtgtlinkbl.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Is-Domain-For**](a-msds-isdomainfor.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-is-full-replica-for**](a-msds-isfullreplicafor.md)                                   | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-is-partial-replica-for**](a-msds-ispartialreplicafor.md)                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Is-Primary-Computer-For**](a-msds-isprimarycomputerfor.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-KrbTgt-Link-BL**](a-msds-krbtgtlinkbl.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Last-Known-RDN**](a-msds-lastknownrdn.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-local-Effective-Lösch Zeit**](a-msds-localeffectivedeletiontime.md)               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-local-Effective-Papier-Time**](a-msds-localeffectiverecycletime.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-gemastert von**](a-msds-masteredby.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Members-für-AZ-Role-BL**](a-msds-membersforazrolebl.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-local-Effective-Deletion-Time**](a-msds-localeffectivedeletiontime.md)               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-local-Effective-Recycle-Time**](a-msds-localeffectiverecycletime.md)                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Mastered-By**](a-msds-masteredby.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Members-for-Az-Role-BL**](a-msds-membersforazrolebl.md)                              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Members-of-Resource-Property-List-BL**](a-msds-membersofresourcepropertylistbl.md)   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Cursor**](a-msds-ncreplcursors.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Inbound-Nachbarn**](a-msds-ncreplinboundneighbors.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-repl-Outbound-Nachbarn**](a-msds-ncreploutboundneighbors.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)                     | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-NC-RO-Replica-Locations-BL**](a-msds-nc-ro-replica-locations-bl.md)                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-NC-Typ**](a-msds-nctype.md)                                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-NC-Type**](a-msds-nctype.md)                                                         | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-oidtoidgruppe-Link-BL**](a-msds-oidtogrouplinkbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Operations-for-AZ-Role-BL**](a-msds-operationsforazrolebl.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Operations-for-AZ-Task-BL**](a-msds-operationsforaztaskbl.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-OIDToGroup-Link-BL**](a-msds-oidtogrouplinkbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Operations-for-Az-Role-BL**](a-msds-operationsforazrolebl.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Operations-for-Az-Task-BL**](a-msds-operationsforaztaskbl.md)                        | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-Principal-Name**](a-msds-principalname.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-PSO-angewendet**](a-msds-psoapplied.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-offengelegt-DSAs**](a-msds-revealeddsas.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-enthüllt-List-BL**](a-msds-revealedlistbl.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-supported-Encryption-Types**](a-msds-supportedencryptiontypes.md)                    | False     | **Vertrauenswürdige Domäne**              |
-| [**ms-DS-Tasks-für-AZ-Role-BL**](a-msds-tasksforazrolebl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Tasks-für-AZ-Task-BL**](a-msds-tasksforaztaskbl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-PSO-Applied**](a-msds-psoapplied.md)                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Revealed-DSAs**](a-msds-revealeddsas.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Revealed-List-BL**](a-msds-revealedlistbl.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Supported-Encryption-Types**](a-msds-supportedencryptiontypes.md)                    | False     | **Trusted-Domain**              |
+| [**ms-DS-Tasks-For-Az-Role-BL**](a-msds-tasksforazrolebl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
+| [**ms-DS-Tasks-For-Az-Task-BL**](a-msds-tasksforaztaskbl.md)                                  | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-TDO-Egress-BL**](a-msds-tdoegressbl.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-DS-TDO-Ingress-BL**](a-msds-tdoingressbl.md)                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**ms-DS-Trust-Forest-Trust-Info**](a-msds-trustforesttrustinfo.md)                           | False     | **Vertrauenswürdige Domäne**              |
+| [**ms-DS-Trust-Forest-Trust-Info**](a-msds-trustforesttrustinfo.md)                           | False     | **Trusted-Domain**              |
 | [**ms-DS-Value-Type-Reference-BL**](a-msds-valuetypereferencebl.md)                           | False     | [**Nach oben**](c-top.md)<br/> |
 | [**ms-Exch-Owner-BL**](a-ownerbl.md)                                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**msSFU-30-POSIX-Member-of**](a-mssfu30posixmemberof.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**NetBoot-SCP-BL**](a-netbootscpbl.md)                                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Nicht sicherheitsmitglied-BL**](a-nonsecuritymemberbl.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                                       | Richtig      | [**Nach oben**](c-top.md)<br/> |
+| [**msSFU-30-Posix-Member-Of**](a-mssfu30posixmemberof.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                                       | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                                       | True      | [**Nach oben**](c-top.md)<br/> |
 | [**Obj-Dist-Name**](a-distinguishedname.md)                                                   | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Objekt-Kategorie**](a-objectcategory.md)                                                    | Richtig      | [**Nach oben**](c-top.md)<br/> |
-| [**Object-Klasse**](a-objectclass.md)                                                          | Richtig      | [**Nach oben**](c-top.md)<br/> |
+| [**Objektkategorie**](a-objectcategory.md)                                                    | True      | [**Nach oben**](c-top.md)<br/> |
+| [**Object-Class**](a-objectclass.md)                                                          | True      | [**Nach oben**](c-top.md)<br/> |
 | [**Objekt-GUID**](a-objectguid.md)                                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Objekt-Version**](a-objectversion.md)                                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Andere-bekannte Objekte**](a-otherwellknownobjects.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Partial-Attribute-löschen-List**](a-partialattributedeletionlist.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Partiell-Attribut Satz**](a-partialattributeset.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Mögliche-minderwertig**](a-possibleinferiors.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Proxy-Objekt Name**](a-proxiedobjectname.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Proxy Adressen**](a-proxyaddresses.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Abfrage-Richtlinie-BL**](a-querypolicybl.md)                                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**RDN**](a-name.md)                                                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**REPL-Property-Meta-Data**](a-replpropertymetadata.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
-| [**REPL-Update-Vector**](a-repluptodatevector.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Object-Version**](a-objectversion.md)                                                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Partial-Attribute-Deletion-List**](a-partialattributedeletionlist.md)                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Partial-Attribute-Set**](a-partialattributeset.md)                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Mögliche 100000000000**](a-possibleinferiors.md)                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Proxyadressen**](a-proxyaddresses.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Rdn**](a-name.md)                                                                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                                      | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                                           | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Berichte**](a-directreports.md)                                                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Reps-from**](a-repsfrom.md)                                                                | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Reps-to**](a-repsto.md)                                                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Novel**](a-revision.md)                                                                 | False     | [**Nach oben**](c-top.md)<br/> |
-| [**SD-Rechte**](a-sdrightseffective.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Sicherheits-ID**](a-securityidentifier.md)                                            | False     | **Vertrauenswürdige Domäne**              |
+| [**Reps-From**](a-repsfrom.md)                                                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Reps-To**](a-repsto.md)                                                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Revision**](a-revision.md)                                                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Sicherheitsbezeichner**](a-securityidentifier.md)                                            | False     | **Vertrauenswürdige Domäne**              |
 | [**Server-Reference-BL**](a-serverreferencebl.md)                                             | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Anzeigen-in-Advanced-nur anzeigen**](a-showinadvancedviewonly.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Nur in erweiterter Ansicht anzeigen**](a-showinadvancedviewonly.md)                                 | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Site-Object-BL**](a-siteobjectbl.md)                                                       | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Struktur-Objekt-Klasse**](a-structuralobjectclass.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Structural-Object-Class**](a-structuralobjectclass.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Sub-Refs**](a-subrefs.md)                                                                  | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Subschemasubentry**](a-subschemasubentry.md)                                               | False     | [**Nach oben**](c-top.md)<br/> |
-| [**SystemFlags**](a-systemflags.md)                                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Trust-Attribute**](a-trustattributes.md)                                                  | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-auth-eingehender**](a-trustauthincoming.md)                                             | False     | **Vertrauenswürdige Domäne**              |
-| [**Vertrauensstellung-ausgehender**](a-trustauthoutgoing.md)                                             | False     | **Vertrauenswürdige Domäne**              |
-| [**Vertrauens Richtung**](a-trustdirection.md)                                                    | False     | **Vertrauenswürdige Domäne**              |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                                               | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Systemflags**](a-systemflags.md)                                                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Trust-Attributes**](a-trustattributes.md)                                                  | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Auth-Incoming**](a-trustauthincoming.md)                                             | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Auth-Outgoing**](a-trustauthoutgoing.md)                                             | False     | **Vertrauenswürdige Domäne**              |
+| [**Vertrauensrichtung**](a-trustdirection.md)                                                    | False     | **Vertrauenswürdige Domäne**              |
 | [**Trust-Partner**](a-trustpartner.md)                                                        | False     | **Vertrauenswürdige Domäne**              |
-| [**Trust-POSIX-Offset**](a-trustposixoffset.md)                                               | False     | **Vertrauenswürdige Domäne**              |
+| [**Trust-Posix-Offset**](a-trustposixoffset.md)                                               | False     | **Vertrauenswürdige Domäne**              |
 | [**Trust-Type**](a-trusttype.md)                                                              | False     | **Vertrauenswürdige Domäne**              |
-| [**Die Anwendung wurde geändert.**](a-usnchanged.md)                                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Von der Anwendung erstellte**](a-usncreated.md)                                                            | False     | [**Nach oben**](c-top.md)<br/> |
-| [**USA-DSA-letzte-obj-entfernt**](a-usndsalastobjremoved.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Standort-und standortübergreifende standortübergreifende**](a-usnintersite.md)                                                        | False     | [**Nach oben**](c-top.md)<br/> |
-| [**"An-Last-obj-REM"**](a-usnlastobjrem.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Quell Code Quelle**](a-usnsource.md)                                                              | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WBEM-Pfad**](a-wbempath.md)                                                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN geändert**](a-usnchanged.md)                                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-erstellt**](a-usncreated.md)                                                            | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-DSA-last-obj-removed**](a-usndsalastobjremoved.md)                                     | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Intersite**](a-usnintersite.md)                                                        | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                                    | False     | [**Nach oben**](c-top.md)<br/> |
+| [**USN-Quelle**](a-usnsource.md)                                                              | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Wbem-Pfad**](a-wbempath.md)                                                                | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bekannte Objekte**](a-wellknownobjects.md)                                               | False     | [**Nach oben**](c-top.md)<br/> |
 | [**Bei Änderung**](a-whenchanged.md)                                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**Bei Erstellung**](a-whencreated.md)                                                          | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                                         | False     | [**Nach oben**](c-top.md)<br/> |
-| [**WWW-Page-other**](a-url.md)                                                                | False     | [**Nach oben**](c-top.md)<br/> |
+| [**Bei der Erstellung**](a-whencreated.md)                                                          | False     | [**Nach oben**](c-top.md)<br/> |
+| [**WWW-Startseite**](a-wwwhomepage.md)                                                         | False     | [**Nach oben**](c-top.md)<br/> |
+| [**WWW-Page-Other**](a-url.md)                                                                | False     | [**Nach oben**](c-top.md)<br/> |
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: MS-WMI-int8Min-Attribut
-description: Der minimale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
+title: ms-WMI-int8Min-Attribut
+description: Der Mindestwert für ein WMI-64-Bit-Ganzzahlparameterobjekt.
 ms.assetid: 0505e64c-ba42-4df1-a3b4-ce0deb5591ff
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-WMI-int8Min-Attribut
-- AD-Schema für das mswap-Int8Min-Attribut
+- AD-Schema des ms-WMI-int8Min-Attributs
+- AD-Schema des msWMI-Int8Min-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2696d2eed28a671666d0d33ae3313c74be04f165
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d03b22546d0db64e74cdd9f0ee310333da4e549d8e54d382f3209db57d2e637e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119760649"
 ---
-# <a name="ms-wmi-int8min-attribute"></a>MS-WMI-int8Min-Attribut
+# <a name="ms-wmi-int8min-attribute"></a>ms-WMI-int8Min-Attribut
 
-Der minimale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
+Der Mindestwert für ein WMI-64-Bit-Ganzzahlparameterobjekt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-WMI-int8Min                       |
-| LDAP-Display-Name | mswap-Int8Min                        |
+| CN                | ms-WMI-int8Min                       |
+| Ldap-Anzeigename | msWMI-Int8Min                        |
 | Size              | 8 Bytes                              |
-| Berechtigung aktualisieren  | Gruppenrichtlinie-Administrator           |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Gruppenrichtlinie Administrator           |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1634              |
-| System-ID-GUID    | ed1489d1-54cc-4066-B368-a00daa2664f1 |
+| System-Id-Guid    | ed1489d1-54cc-4066-b368-a00daa2664f1 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,11 +56,11 @@ Der minimale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Is-Single-Valued       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -77,11 +77,11 @@ Der minimale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Is-Single-Valued       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -98,11 +98,11 @@ Der minimale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Is-Single-Valued       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -119,11 +119,11 @@ Der minimale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -140,11 +140,11 @@ Der minimale Wert für ein WMI-64-Bit-Ganzzahl-Parameter Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |

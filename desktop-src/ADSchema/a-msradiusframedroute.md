@@ -1,10 +1,10 @@
 ---
-title: msradius framedroute-Attribut
-description: Das msradiherframedroute-Attribut wird intern verwendet.
+title: msRADIUSFramedRoute-Attribut
+description: Das msRADIUSFramedRoute-Attribut wird intern verwendet.
 ms.assetid: af7a60fc-2c04-4e29-af78-3fc2b0e0f8ef
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des msradius framedroute-Attributs
+- AD-Schema des msRADIUSFramedRoute-Attributs
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f90dceef3ec14f045119ed06bb756016e3c885ec
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: bf1109779b8556f9e4ce04e1de400c73f061b9e507e07013e3c516c446c41d22
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761510"
 ---
-# <a name="msradiusframedroute-attribute"></a>msradius framedroute-Attribut
+# <a name="msradiusframedroute-attribute"></a>msRADIUSFramedRoute-Attribut
 
-Das **msradiherframedroute** -Attribut wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
+Das **msRADIUSFramedRoute-Attribut** wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | msradius framedroute                  |
-| LDAP-Display-Name | msradius framedroute                  |
+| CN                | msRADIUSFramedRoute                  |
+| Ldap-Anzeigename | msRADIUSFramedRoute                  |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1158              |
-| System-ID-GUID    | db0c90a9-c1f2-11d1-bbc5-0080c76670c0 |
+| System-Id-Guid    | db0c90a9-c1f2-11d1-bb5-0080c76670c0 |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
 
 
@@ -42,7 +42,7 @@ Das **msradiherframedroute** -Attribut wird intern verwendet. Ändern Sie diesen
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,11 +56,11 @@ Das **msradiherframedroute** -Attribut wird intern verwendet. Ändern Sie diesen
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Falsch                             |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -69,7 +69,7 @@ Das **msradiherframedroute** -Attribut wird intern verwendet. Ändern Sie diesen
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -77,11 +77,11 @@ Das **msradiherframedroute** -Attribut wird intern verwendet. Ändern Sie diesen
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Falsch                             |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -98,11 +98,11 @@ Das **msradiherframedroute** -Attribut wird intern verwendet. Ändern Sie diesen
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Falsch                             |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -119,11 +119,11 @@ Das **msradiherframedroute** -Attribut wird intern verwendet. Ändern Sie diesen
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Falsch                             |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -140,11 +140,11 @@ Das **msradiherframedroute** -Attribut wird intern verwendet. Ändern Sie diesen
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Falsch                             |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -161,11 +161,11 @@ Das **msradiherframedroute** -Attribut wird intern verwendet. Ändern Sie diesen
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Falsch                             |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -174,7 +174,7 @@ Das **msradiherframedroute** -Attribut wird intern verwendet. Ändern Sie diesen
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

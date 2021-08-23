@@ -1,52 +1,52 @@
 ---
-title: Strukturen der Windows-Bereitstellungs Dienste
-description: Die folgenden Strukturen werden mit den Windows-Bereitstellungs Diensten verwendet.
+title: Windows Bereitstellungsdienstestrukturen
+description: Die folgenden Strukturen werden mit den Windows verwendet.
 ms.assetid: 2e52a6ae-cecb-45de-b777-108836ed5264
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c20f5b369a2bbb5d68bd77dce1751e09fed2e6b6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e4315ccd3d9540334b00f43fda6522e3eae28be2d038cfdd56fcd129e9e0aed7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037460"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119760250"
 ---
-# <a name="windows-deployment-services-structures"></a>Strukturen der Windows-Bereitstellungs Dienste
+# <a name="windows-deployment-services-structures"></a>Windows Bereitstellungsdienstestrukturen
 
-Die folgenden Strukturen werden mit den Windows-Bereitstellungs Diensten verwendet.
+Die folgenden Strukturen werden mit den Windows verwendet.
 
 
 
-| Struktur                                                                         | BESCHREIBUNG                                                                                                        |
+| Struktur                                                                         | Beschreibung                                                                                                        |
 |-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| [**PXE- \_ Adresse**](/windows/win32/api/wdspxe/ns-wdspxe-pxe_address)                                               | Gibt die Netzwerkadresse für ein Paket an.                                                                        |
-| [**PXE- \_ DHCP- \_ Nachricht**](/windows/win32/api/wdspxe/ns-wdspxe-pxe_dhcp_message)                                    | Diese Struktur wird mit der PXE-Server-API der Windows-Bereitstellungs Dienste verwendet.                                        |
-| [**PXE ( \_ DHCP- \_ Option)**](/windows/win32/api/wdspxe/ns-wdspxe-pxe_dhcp_option)                                      | Diese Struktur wird mit der PXE-Server-API der Windows-Bereitstellungs Dienste verwendet.                                        |
-| [**PXE- \_ Anbieter**](/windows/win32/api/wdspxe/ns-wdspxe-pxe_provider)                                             | Beschreibt einen Anbieter.                                                                                              |
-| [**WDS- \_ CLI-Befehlszeilenschnittstelle \_**](/windows/win32/api/wdsclientapi/ns-wdsclientapi-wds_cli_cred)                                            | Enthält Anmelde Informationen, die zum Autorisieren einer Client Sitzung verwendet werden.                                                           |
-| [**WDS- \_ Transportclient- \_ Anforderung**](/windows/desktop/api/Wdstci/ns-wdstci-wds_transportclient_request)              | Wird von der [**wdstransportclientstarzession**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientstartsession) -Funktion verwendet.                     |
-| [**Transportclient- \_ Sitzungs \_ Informationen**](/windows/desktop/api/Wdstci/ns-wdstci-transportclient_session_info)            | Wird von der [*PFN \_ wdstransportclientsessionstartex*](/windows/desktop/api/Wdstci/nc-wdstci-pfn_wdstransportclientsessionstartex) -Rückruffunktion verwendet. |
-| [**WDS- \_ Transportprovider- \_ Init-Parameter \_**](/windows/desktop/api/Wdstpdi/ns-wdstpdi-wds_transportprovider_init_params) | Wird von der [**wdstransportproviderinitialize**](/windows/desktop/api/wdstpdi/nf-wdstpdi-wdstransportproviderinitialize) -Rückruffunktion verwendet.            |
-| [**WDS- \_ Transportprovider- \_ Einstellungen**](/windows/desktop/api/Wdstpdi/ns-wdstpdi-wds_transportprovider_settings)        | Wird von der [**wdstransportproviderinitialize**](/windows/desktop/api/wdstpdi/nf-wdstpdi-wdstransportproviderinitialize) -Rückruffunktion verwendet.            |
+| [**PXE-ADRESSE \_**](/windows/win32/api/wdspxe/ns-wdspxe-pxe_address)                                               | Gibt die Netzwerkadresse für ein Paket an.                                                                        |
+| [**\_PXE-DHCP-NACHRICHT \_**](/windows/win32/api/wdspxe/ns-wdspxe-pxe_dhcp_message)                                    | Diese Struktur wird mit der PXE Windows-Server-API der Bereitstellungsdienste verwendet.                                        |
+| [**\_PXE-DHCP-OPTION \_**](/windows/win32/api/wdspxe/ns-wdspxe-pxe_dhcp_option)                                      | Diese Struktur wird mit der PXE Windows-Server-API der Bereitstellungsdienste verwendet.                                        |
+| [**PXE-ANBIETER \_**](/windows/win32/api/wdspxe/ns-wdspxe-pxe_provider)                                             | Beschreibt einen Anbieter.                                                                                              |
+| [**WDS \_ CLI \_ CRED**](/windows/win32/api/wdsclientapi/ns-wdsclientapi-wds_cli_cred)                                            | Enthält Anmeldeinformationen, die zum Autorisieren einer Clientsitzung verwendet werden.                                                           |
+| [**\_WDS-TRANSPORTCLIENT-ANFORDERUNG \_**](/windows/desktop/api/Wdstci/ns-wdstci-wds_transportclient_request)              | Wird von der [**WdsTransportClientStartSession-Funktion**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientstartsession) verwendet.                     |
+| [**\_TRANSPORTCLIENT-SITZUNGSINFORMATIONEN \_**](/windows/desktop/api/Wdstci/ns-wdstci-transportclient_session_info)            | Wird von der [*\_ PFN-Rückruffunktion WdsTransportClientSessionStartEx*](/windows/desktop/api/Wdstci/nc-wdstci-pfn_wdstransportclientsessionstartex) verwendet. |
+| [**WDS \_ TRANSPORTPROVIDER \_ INIT \_ PARAMS**](/windows/desktop/api/Wdstpdi/ns-wdstpdi-wds_transportprovider_init_params) | Wird von der [**WdsTransportProviderInitialize-Rückruffunktion**](/windows/desktop/api/wdstpdi/nf-wdstpdi-wdstransportproviderinitialize) verwendet.            |
+| [**\_WDS-TRANSPORTPROVIDER-EINSTELLUNGEN \_**](/windows/desktop/api/Wdstpdi/ns-wdstpdi-wds_transportprovider_settings)        | Wird von der [**WdsTransportProviderInitialize-Rückruffunktion**](/windows/desktop/api/wdstpdi/nf-wdstpdi-wdstransportproviderinitialize) verwendet.            |
 
 
 
- 
+ 
 
-Der folgende Abschnitt ist ab Windows 8 und Windows Server 2012 verfügbar.
+Folgendes ist ab Windows 8 und Windows Server 2012.
 
-| Struktur                                          | BESCHREIBUNG                                               |
+| Struktur                                          | Beschreibung                                               |
 |----------------------------------------------------|-----------------------------------------------------------|
-| [**PXE- \_ DHCPv6 ( \_ Option)**](/windows/win32/api/wdspxe/ns-wdspxe-pxe_dhcpv6_option)   | Wird mit dem PXE-Server der Windows-Bereitstellungs Dienste verwendet. |
-| [**PXE- \_ DHCPv6- \_ Nachricht**](/windows/win32/api/wdspxe/ns-wdspxe-pxe_dhcpv6_message) | Eine DHCPv6-Meldung.                                         |
+| [**\_PXE-DHCPV6-OPTION \_**](/windows/win32/api/wdspxe/ns-wdspxe-pxe_dhcpv6_option)   | Wird mit der Windows Deployment Services-PXE-Server-API verwendet. |
+| [**\_PXE-DHCPV6-NACHRICHT \_**](/windows/win32/api/wdspxe/ns-wdspxe-pxe_dhcpv6_message) | Eine DHCPV6-Nachricht.                                         |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 
