@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die initializefrombitmap-Methode.
+description: Proxyfunktion für die InitializeFromBitmap-Methode.
 ms.assetid: 9559a56d-7201-4b39-a3cd-9c0e4eac611a
 title: IWICPalette_InitializeFromBitmap_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: cf5e119acf1efca948281a02f61d8954f4e08818
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c807e95b980a564096216727315f4a1534e8cd011cc78aa7322f670fff0876c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119088182"
 ---
-# <a name="iwicpalette_initializefrombitmap_proxy-function"></a>Iwicpalette \_ initializefrombitmap- \_ Proxy Funktion
+# <a name="iwicpalette_initializefrombitmap_proxy-function"></a>IWICPalette \_ \_ InitializeFromBitmap-Proxyfunktion
 
-Proxy Funktion für die [**initializefrombitmap**](/windows/desktop/api/Wincodec/nf-wincodec-iwicpalette-initializefrombitmap) -Methode.
+Proxyfunktion für die [**InitializeFromBitmap-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicpalette-initializefrombitmap)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT IWICPalette_InitializeFromBitmap_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwicpalette**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette) \** _
+Typ: **[ **IWICPalette**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette)\***
 
-Zeiger auf dieses [_ *iwicpalette* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette) -Objekt.
+Zeiger auf dieses [**IWICPalette-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette)
 
 </dd> <dt>
 
-*pisurface* \[ in\]
+*pISurface* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) \** _
+Typ: **[ **IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)\***
 
-Ein Zeiger auf die Quell Bitmap.
+Zeiger auf die Quellbitmap.
 
 </dd> <dt>
 
-_colorCount * \[ in\]
+*colorCount* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die Anzahl der Farben, mit denen die Palette initialisiert werden soll.
+Die Anzahl der Farben, mit der die Palette initialisiert werden soll.
 
 </dd> <dt>
 
-*faddtransparentcolor* \[ in\]
+*fAddTransparentColor* \[ In\]
 </dt> <dd>
 
-Typ: **bool**
+Typ: **BOOL**
 
-Ein Wert, der angibt, ob eine transparente Farbe hinzugefügt werden soll.
+Ein -Wert, der angibt, ob eine transparente Farbe hinzugefügt werden soll.
 
 </dd> </dl>
 
@@ -83,7 +83,7 @@ Ein Wert, der angibt, ob eine transparente Farbe hinzugefügt werden soll.
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -93,9 +93,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: Iwmpnetwork (setproxysettings-Methode)
-description: Mit der setproxysettings-Methode werden die Proxy Einstellungen für ein Protokoll angegeben.
+title: IWMPNetwork setProxySettings-Methode
+description: Die setProxySettings-Methode gibt die Proxyeinstellungen für ein Protokoll an.
 ms.assetid: 6e410812-a06c-4911-8291-1d654fcd281a
 keywords:
-- setproxysettings-Methode, Windows-Media Player
-- setproxysettings-Methode, Windows Media Player, iwmpnetwork-Schnittstelle
-- Iwmpnetwork Interface, Windows Media Player, setproxysettings-Methode
+- setProxySettings-Methode Windows Media Player
+- setProxySettings-Methode Windows Media Player , IWMPNetwork-Schnittstelle
+- IWMPNetwork-Schnittstelle Windows Media Player , setProxySettings-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b7fc36c12335cf97ad7bff34924850155f2fd747
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 258c25fb962acdac2f682ba20b3280b8baa489496046c79d7edd03b519a67b1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053468"
 ---
-# <a name="iwmpnetworksetproxysettings-method"></a>Iwmpnetwork:: setproxysettings-Methode
+# <a name="iwmpnetworksetproxysettings-method"></a>IWMPNetwork::setProxySettings-Methode
 
-Mit der **setproxysettings** -Methode werden die Proxy Einstellungen für ein Protokoll angegeben.
+Die **setProxySettings-Methode** gibt die Proxyeinstellungen für ein Protokoll an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,26 +55,26 @@ Implements IWMPNetwork.setProxySettings
 
 <dl> <dt>
 
-*bstrauprotocol* \[ in\]
+*bstrProtocol* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der der Protokoll Name ist. Eine Liste der unterstützten Protokolle finden Sie [unter Unterstützte Protokolle und Dateitypen](supported-protocols-and-file-types.md).
+Eine **System.String,die** der Protokollname ist. Eine Liste der unterstützten Protokolle finden Sie unter [Unterstützte Protokolle und Dateitypen.](supported-protocols-and-file-types.md)
 
 </dd> <dt>
 
-*lproxysetting* \[ in\]
+*lProxySetting* \[ In\]
 </dt> <dd>
 
-Ein **System. Int32** -Wert, der einem der folgenden Werte entspricht.
+Eine **System.Int32-Datei,** die einer der folgenden Werte ist.
 
 
 
-| Wert | BESCHREIBUNG                                                          |
+| Wert | Beschreibung                                                          |
 |-------|----------------------------------------------------------------------|
-| 0     | Verwenden Sie keinen Proxy Server.                                           |
-| 1     | Verwenden Sie die Proxy Einstellungen des aktuellen Browsers (nur für http gültig). |
-| 2     | Verwenden Sie die manuell angegebenen Proxy Einstellungen.                           |
-| 3     | Erkennen Sie die Proxy Einstellungen automatisch.                                      |
+| 0     | Verwenden Sie keinen Proxyserver.                                           |
+| 1     | Verwenden Sie die Proxyeinstellungen des aktuellen Browsers (nur für HTTP gültig). |
+| 2     | Verwenden Sie die manuell angegebenen Proxyeinstellungen.                           |
+| 3     | Automatische Erkennung der Proxyeinstellungen.                                      |
 
 
 
@@ -86,13 +86,13 @@ Ein **System. Int32** -Wert, der einem der folgenden Werte entspricht.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode schlägt fehl, es sei denn, die aufrufenden Anwendung wird auf dem lokalen Computer oder Intranet ausgeführt.
+Diese Methode schlägt fehl, es sei denn, die aufrufende Anwendung wird auf dem lokalen Computer oder Intranet ausgeführt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird ein Listenfeld verwendet, um dem Benutzer das Festlegen der Windows Media Player-Proxy Einstellung für das HTTP-Protokoll zu ermöglichen. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Codebeispiel wird ein Listenfeld verwendet, damit der Benutzer die Windows Media Player Proxyeinstellung für das HTTP-Protokoll festlegen kann. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -147,20 +147,20 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpnetwork-Schnittstelle (VB und c#)**](iwmpnetwork--vb-and-c.md)
+[**IWMPNetwork-Schnittstelle (VB und C#)**](iwmpnetwork--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpnetwork. getproxysettings (VB und c#)**](wmplibiwmpnetwork-iwmpnetwork-getproxysettings--vb-and-c.md)
+[**IWMPNetwork.getProxySettings (VB und C#)**](wmplibiwmpnetwork-iwmpnetwork-getproxysettings--vb-and-c.md)
 </dt> </dl>
 
  

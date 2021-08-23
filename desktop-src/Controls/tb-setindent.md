@@ -1,9 +1,9 @@
 ---
-title: TB_SETINDENT Meldung (kommstrg. h)
-description: Legt den Einzug für die erste Schaltfläche in einem Symbolleisten-Steuerelement fest.
+title: TB_SETINDENT-Nachricht (Commctrl.h)
+description: Legt den Einzug für die erste Schaltfläche in einem Symbolleistensteuerelement fest.
 ms.assetid: 2d57cd1f-2bfa-4c6e-9581-9e8ab4b8196d
 keywords:
-- Windows-Steuerelemente für TB_SETINDENT Meldung
+- TB_SETINDENT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 05dfaf8a87737e4087b11f5c5acb8e822ed7f802
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d3e800e9c61af3a22f8622fa7dc6d0ae3286f22e7403ebfc387b6a773d4d4c88
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078214"
 ---
-# <a name="tb_setindent-message"></a>TB- \_ Nachricht
+# <a name="tb_setindent-message"></a>TB \_ SETINDENT-Nachricht
 
-Legt den Einzug für die erste Schaltfläche in einem Symbolleisten-Steuerelement fest.
+Legt den Einzug für die erste Schaltfläche in einem Symbolleistensteuerelement fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt den Einzug für die erste Schaltfläche in einem Symbolleisten-Steuerelemen
 *wParam* 
 </dt> <dd>
 
-Der-Wert, der den Einzug in Pixel angibt.
+Wert, der den Einzug in Pixel angibt.
 
 </dd> <dt>
 
@@ -41,7 +41,7 @@ Der-Wert, der den Einzug in Pixel angibt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück. Andernfalls wird 0 (null) zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

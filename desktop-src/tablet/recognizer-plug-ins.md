@@ -1,69 +1,69 @@
 ---
-description: Ein Erkennungs-Plug-in ist ein Objekt, das die Bewegung des Tablettstifts für Gesten, Handschrift oder andere Objekte überwacht.
+description: Ein Recognizer-Plug-In ist ein Objekt, das die Bewegung des Tablettstifts auf Gesten, Handschrift oder andere Objekte überwacht.
 ms.assetid: 764a327e-1da0-487f-9245-b6a4f3f43502
-title: Erkennungs-Plug-ins
+title: Erkennen von Plug-Ins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bbf3ac866a211a78e2d8f347e89ca20a1906f436
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 54b64f8f9b63cdbdc7309e7d9bd303ecce7a6b59b2e3b3c0cde976d1d6eefdf4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104562266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119091525"
 ---
-# <a name="recognizer-plug-ins"></a>Erkennungs-Plug-ins
+# <a name="recognizer-plug-ins"></a>Erkennen von Plug-Ins
 
-Ein Erkennungs-Plug-in ist ein Objekt, das die Bewegung des Tablettstifts für Gesten, Handschrift oder andere Objekte überwacht.
+Ein Recognizer-Plug-In ist ein Objekt, das die Bewegung des Tablettstifts auf Gesten, Handschrift oder andere Objekte überwacht.
 
-## <a name="system-gestures"></a>System Gesten
+## <a name="system-gestures"></a>Systemgesten
 
-Das [**RealTimeStylus**](realtimestylus-class.md) -Objekt erkennt System Gesten. Das **RealTimeStylus** -Objekt fügt der [StylusQueues](/previous-versions/ms824786(v=msdn.10)) -Warteschlange ein [SystemGestureData](/previous-versions/ms824019(v=msdn.10)) -Objekt als Reaktion auf die Daten hinzu, die die Geste beenden, wie z. b. ein [StylusUpData](/previous-versions/ms824057(v=msdn.10)) -Objekt für die [System Bewegung](/previous-versions/bb345349(v=vs.100)). Weitere Informationen finden Sie unter [Plug-in-Daten und die RealTimeStylus-Klasse](plug-in-data-and-the-realtimestylus-class.md).
+Das [**RealTimeStylus-Objekt**](realtimestylus-class.md) erkennt Systemgesten. Das **RealTimeStylus-Objekt** fügt der [StylusQueues-Warteschlange](/previous-versions/ms824786(v=msdn.10)) ein [SystemGestureData-Objekt](/previous-versions/ms824019(v=msdn.10)) als Antwort auf die Daten hinzu, die die Geste beenden, z. B. ein [StylusUpData-Objekt](/previous-versions/ms824057(v=msdn.10)) für [systemGesture](/previous-versions/bb345349(v=vs.100)). Weitere Informationen finden Sie unter [Plug-In-Daten und realTimeStylus-Klasse.](plug-in-data-and-the-realtimestylus-class.md)
 
 ## <a name="the-gesturerecognizer-object"></a>Das GestureRecognizer-Objekt
 
-Das [**GestureRecognizer**](gesturerecognizer-class.md) -Objekt implementiert die [**IStylusSyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) -Schnittstelle und die [**IStylusAsyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylusasyncplugin) -Schnittstelle. Das **GestureRecognizer** -Objekt erkennt Anwendungs Gesten. Intern verwendet das **GestureRecognizer** -Objekt die Microsoft-Gestenerkennung, um Gestenerkennung auszuführen.
+Das [**GestureRecognizer-Objekt**](gesturerecognizer-class.md) implementiert die [**Schnittstellen IStylusSyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) und [**IStylusAsyncPlugin.**](/windows/win32/api/rtscom/nn-rtscom-istylusasyncplugin) Das **GestureRecognizer-Objekt** erkennt Anwendungsgesten. Intern verwendet das **GestureRecognizer-Objekt** die Microsoft-Gestenerkennung, um die Gestenerkennung durchzuführen.
 
-Wenn das [**GestureRecognizer**](gesturerecognizer-class.md) -Objekt eine Geste erkennt, fügt es der [StylusQueues](/previous-versions/ms824786(v=msdn.10)) -Warteschlange benutzerdefinierte Tablettstiftdaten als Reaktion auf das [StylusUpData](/previous-versions/ms824057(v=msdn.10)) -Objekt für den Strich hinzu. Die [CustomDataId](/previous-versions/ms824748(v=msdn.10)) -Eigenschaft des [CustomStylusData](/previous-versions/ms575208(v=vs.100)) -Objekts ist auf den [GestureRecognitionDataGuid](/previous-versions/ms826344(v=msdn.10)) -Wert festgelegt, und die [Daten](/previous-versions/ms824749(v=msdn.10)) Eigenschaft des CustomStylusData-Objekts enthält ein [GestureRecognitionData](/previous-versions/ms824594(v=msdn.10)) -Objekt.
+Wenn das [**GestureRecognizer-Objekt**](gesturerecognizer-class.md) eine Geste erkennt, fügt es der [StylusQueues-Warteschlange](/previous-versions/ms824786(v=msdn.10)) benutzerdefinierte Stiftdaten als Antwort auf das [StylusUpData-Objekt](/previous-versions/ms824057(v=msdn.10)) für den Strich hinzu. Die [CustomDataId-Eigenschaft](/previous-versions/ms824748(v=msdn.10)) des [CustomStylusData-Objekts](/previous-versions/ms575208(v=vs.100)) wird auf den [GestureRecognitionDataGuid-Wert](/previous-versions/ms826344(v=msdn.10)) festgelegt, und die [Data-Eigenschaft](/previous-versions/ms824749(v=msdn.10)) des CustomStylusData-Objekts enthält ein [GestureRecognitionData-Objekt.](/previous-versions/ms824594(v=msdn.10))
 
-Im folgenden Diagramm wird veranschaulicht, wie das [**GestureRecognizer**](gesturerecognizer-class.md) -Objekt den Tablet Pen-Daten Daten hinzufügt.
+Das folgende Diagramm veranschaulicht, wie das [**GestureRecognizer-Objekt**](gesturerecognizer-class.md) den Tablettstiftdaten Daten hinzufügt.
 
 ![Abbildung des GestureRecognizer-Datenflusses](images/c4c77c33-deee-49d0-84bc-12612575ec66.gif)
 
-In diesem Diagramm stellt der Kreis mit dem Text "SD" ein [StylusDownData](/previous-versions/ms824107(v=msdn.10)) -Objekt dar, und die Kreise "P" stellen [packepdata](/previous-versions/ms824590(v=msdn.10)) -Objekte dar, die bereits der Ausgabe Warteschlange des [**RealTimeStylus**](realtimestylus-class.md) -Objekts hinzugefügt wurden und noch nicht an die asynchrone Plug-in-Auflistung gesendet wurden. Der Kreis mit dem Titel "su" stellt ein [StylusUpData](/previous-versions/ms824057(v=msdn.10)) -Objekt dar, das das **RealTimeStylus** -Objekt gerade verarbeitet. Sie wird an die synchrone Plug-in-Auflistung gesendet und dann in der Ausgabe Warteschlange abgelegt. Die Kreise, die "GR" enthalten, stellen benutzerdefinierte Tablettstiftdaten dar, die der Eingabe Warteschlange durch das [**GestureRecognizer**](gesturerecognizer-class.md) -Plug-in als Antwort auf die tablettstiftbenachrichtigung "su" hinzugefügt werden. Die benutzerdefinierten Tablettstiftdaten, die "GR" aufweisen, werden dann an die synchronen Plug-ins und dann an die Ausgabe Warteschlange weitergeleitet, bevor die nächsten Tablet Pen-Daten verarbeitet werden. Der leere Kreis stellt die Position in der Ausgabe Warteschlange dar, an der zukünftige Tablet Pen-Daten hinzugefügt werden.
+In diesem Diagramm stellt der Kreis mit dem Buchstaben "SD" ein [StylusDownData-Objekt](/previous-versions/ms824107(v=msdn.10)) dar, und die Kreise mit dem Buchstaben "P" stellen [PacketsData-Objekte](/previous-versions/ms824590(v=msdn.10)) dar, die bereits der Ausgabewarteschlange des [**RealTimeStylus-Objekts**](realtimestylus-class.md) hinzugefügt wurden und noch nicht an die asynchrone Plug-In-Sammlung gesendet wurden. Der Kreis mit dem Buchstaben "SU" stellt ein [StylusUpData-Objekt](/previous-versions/ms824057(v=msdn.10)) dar, das derzeit vom **RealTimeStylus-Objekt** verarbeitet wird. Sie wird an die synchrone Plug-In-Sammlung gesendet und dann in der Ausgabewarteschlange platziert. Die Kreise mit dem Buchstaben "GR" stellen benutzerdefinierte Stiftdaten dar, die der Eingabewarteschlange vom [**GestureRecognizer-Plug-In**](gesturerecognizer-class.md) als Reaktion auf die dem "SU" zugeordnete Stifteingabebenachrichtigung hinzugefügt werden. Die benutzerdefinierten Tablettstiftdaten mit dem Buchstaben "GR" werden dann an die synchronen Plug-Ins und dann an die Ausgabewarteschlange übergeben, bevor die nächsten Tablettstiftdaten verarbeitet werden. Der leere Kreis stellt die Position in der Ausgabewarteschlange dar, an der zukünftige Tablettstiftdaten hinzugefügt werden.
 
-Standardmäßig erkennt das [**GestureRecognizer**](gesturerecognizer-class.md) -Objekt nur Single-Stroke-Gesten. Das **GestureRecognizer** -Objekt kann jedoch so festgelegt werden, dass Zeitgeber-Gesten erkannt werden. Bei Zeitgeber-Gesten wird das [CustomStylusData](/previous-versions/ms575208(v=vs.100)) -Objekt der [StylusQueues](/previous-versions/ms824786(v=msdn.10)) -Warteschlange als Reaktion auf das [StylusUpData](/previous-versions/ms824057(v=msdn.10)) -Objekt für den letzten Strich der Bewegung hinzugefügt. Wenn Sie mehrstufige Gesten erkennen, erhalten Sie möglicherweise Benachrichtigungen für überlappende Sätze von Strichen. Der erste und zweite Strich können z. b. als eine Bewegung erkannt werden, und der zweite Strich selbst kann als Geste erkannt werden. Weitere Informationen zur Erkennung von Zeitgeber-Gesten finden Sie unter der **GestureRecognizer** -Klasse und der [MaxStrokeCount](/previous-versions/ms826053(v=msdn.10)) -Eigenschaft.
+Standardmäßig erkennt das [**GestureRecognizer-Objekt**](gesturerecognizer-class.md) nur Gesten mit nur einem Strich. Das **GestureRecognizer-Objekt** kann jedoch so festgelegt werden, dass Es multistroke-Gesten erkennt. Bei Gesten mit mehreren Tastatureingaben wird das [CustomStylusData-Objekt](/previous-versions/ms575208(v=vs.100)) der [Warteschlange StylusQueues](/previous-versions/ms824786(v=msdn.10)) als Reaktion auf das [StylusUpData-Objekt](/previous-versions/ms824057(v=msdn.10)) für den letzten Strich der Geste hinzugefügt. Wenn Sie Gesten mit mehreren Strichen erkennen, erhalten Sie möglicherweise Benachrichtigungen zu überlappenden Strichsätzen. Beispielsweise können der erste und zweite Strich zusammen als eine Geste erkannt werden, und der zweite Strich allein kann als Geste erkannt werden. Weitere Informationen zur Multistroke-Gestenerkennung finden Sie unter **der GestureRecognizer-Klasse** und der [MaxStrokeCount-Eigenschaft.](/previous-versions/ms826053(v=msdn.10))
 
-Wenn Sie das [**GestureRecognizer**](gesturerecognizer-class.md) -Objekt für die Erkennung von Zeitgeber-Gesten verwenden, erzielen Sie möglicherweise eine optimale Leistung, indem Sie ein kaskadierenden [**RealTimeStylus**](realtimestylus-class.md) -Modell verwenden und das **GestureRecognizer** -Objekt an das sekundäre **RealTimeStylus** -Objekt anfügen. Weitere Informationen zum Cascading **RealTimeStylus** -Modell finden Sie [im Cascaded RealTimeStylus-Modell](the-cascaded-realtimestylus-model.md).
+Wenn Sie das [**GestureRecognizer-Objekt**](gesturerecognizer-class.md) für die Multistroke-Gestenerkennung verwenden, erzielen Sie möglicherweise eine optimale Leistung, indem Sie ein kaskadiertes [**RealTimeStylus-Modell**](realtimestylus-class.md) verwenden und das **GestureRecognizer-Objekt** an das sekundäre **RealTimeStylus-Objekt** anfügen. Weitere Informationen zum kaskadierenden **RealTimeStylus-Modell** finden Sie unter [Das kaskadierte RealTimeStylus-Modell](the-cascaded-realtimestylus-model.md).
 
 ### <a name="special-considerations"></a>Besondere Überlegungen
 
-In der folgenden Liste werden andere Punkte beschrieben, die bei Verwendung des [**GestureRecognizer**](gesturerecognizer-class.md) -Objekts zu berücksichtigen sind.
+In der folgenden Liste werden weitere Punkte beschrieben, die bei der Verwendung des [**GestureRecognizer-Objekts zu berücksichtigen**](gesturerecognizer-class.md) sind.
 
--   Sie sollten ein [**GestureRecognizer**](gesturerecognizer-class.md) -Objekt nicht an mehr als ein [**RealTimeStylus**](realtimestylus-class.md) -Objekt anfügen. Wenn zwei **RealTimeStylus** -Objekte aktiviert sind, an die das **GestureRecognizer** -Objekt angefügt ist, tritt Folgendes auf.
-    -   Das [**GestureRecognizer**](gesturerecognizer-class.md) -Objekt löst eine Ausnahme als Reaktion auf den zweiten Aufrufen der RealTimeStylusEnabled-Methode aus.
-    -   Das zweite " [**RealTimeStylus**](realtimestylus-class.md) "-Objekt, das aktiviert wurde, generiert ein [ErrorData](/previous-versions/ms824740(v=msdn.10)) -Objekt und benachrichtigt die übrigen Plug-ins in den Plug-in-Auflistungen des Fehlers.
-    -   Das [**GestureRecognizer**](gesturerecognizer-class.md) -Objekt beendet das Erkennen von Gesten.
--   Das [**RealTimeStylus**](realtimestylus-class.md) -Objekt löst eine Ausnahme aus, wenn die zugehörige [AddCustomStylusDataToQueue](/previous-versions/ms825761(v=msdn.10)) -Methode aufgerufen wird und der *GUID* -Parameter auf [Microsoft. StylusInput. GestureRecognizer. GestureRecognitionDataGuid](/previous-versions/ms826344(v=msdn.10)) Globally Unique Identifier (GUID) festgelegt ist.
--   Das [**GestureRecognizer**](gesturerecognizer-class.md) -Objekt wird als Component Object Model (com)-Wrapper implementiert, und Sie können die Schnittstellen Methoden [**IStylusSyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) oder [**IStylusAsyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylusasyncplugin) nicht direkt aufrufen. Weitere Informationen zur com-Implementierung und zum [**RealTimeStylus**](realtimestylus-class.md) -Objekt finden Sie unter [Implementierungs Hinweise für die StylusInput-APIs](implementation-notes-for-the-stylusinput-apis.md).
+-   Sie sollten ein [**GestureRecognizer-Objekt**](gesturerecognizer-class.md) nicht an mehr als ein [**RealTimeStylus-Objekt**](realtimestylus-class.md) anfügen. Sobald zwei **RealTimeStylus-Objekte** aktiviert sind, an die das **GestureRecognizer-Objekt** angefügt ist, geschieht Folgendes.
+    -   Das [**GestureRecognizer-Objekt**](gesturerecognizer-class.md) löst als Reaktion auf den zweiten Aufruf seiner RealTimeStylusEnabled-Methode eine Ausnahme aus.
+    -   Das zweite [**RealTimeStylus-Objekt,**](realtimestylus-class.md) das aktiviert wurde, generiert ein [ErrorData-Objekt](/previous-versions/ms824740(v=msdn.10)) und benachrichtigt die verbleibenden Plug-Ins in den Plug-In-Auflistungen über den Fehler.
+    -   Das [**GestureRecognizer-Objekt**](gesturerecognizer-class.md) beendet die Erkennung von Gesten.
+-   Das [**RealTimeStylus-Objekt**](realtimestylus-class.md) löst eine Ausnahme aus, wenn seine [AddCustomStylusDataToQueue-Methode](/previous-versions/ms825761(v=msdn.10)) mit dem *guid-Parameter* aufgerufen wird, der auf den global eindeutigen Bezeichner (Globally Unique Identifier, GUID) [Microsoft.StylusInput.GestureRecognizer.GestureRecognitionDataGuid](/previous-versions/ms826344(v=msdn.10)) festgelegt ist.
+-   Das [**GestureRecognizer-Objekt**](gesturerecognizer-class.md) wird als Component Object Model-Wrapper (COM) implementiert, und Sie können die [**IStylusSyncPlugin-**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) oder [**IStylusAsyncPlugin-Schnittstellenmethoden**](/windows/win32/api/rtscom/nn-rtscom-istylusasyncplugin) nicht direkt aufrufen. Weitere Informationen zur COM-Implementierung und zum [**RealTimeStylus-Objekt**](realtimestylus-class.md) finden Sie unter [Implementierungshinweise für die StylusInput-APIs.](implementation-notes-for-the-stylusinput-apis.md)
 
 ## <a name="custom-gesture-recognition"></a>Benutzerdefinierte Gestenerkennung
 
-Sie können ein benutzerdefiniertes Erkennungs-Plug-in erstellen, das Handschrift, Gesten oder andere Objekte wie folgt erkennt:
+Sie können ein benutzerdefiniertes Recognizer-Plug-In erstellen, das Handschrift, Gesten oder andere Objekte erkennt, indem Sie:
 
--   Übergeben der Strich Informationen an ein vorhandenes [Erkennungs](/previous-versions/ms829434(v=msdn.10)) Objekt und Verwenden der [AddCustomStylusDataToQueue](/previous-versions/ms825761(v=msdn.10)) -Methode zum Hinzufügen der Ergebnisse zum Tablet Pen-Datenstrom.
--   Durchführen der Erkennung innerhalb des Plug-ins und Verwenden der [AddCustomStylusDataToQueue](/previous-versions/ms825761(v=msdn.10)) -Methode zum Hinzufügen der Ergebnisse zum Tablet Pen-Datenstrom.
+-   Übergeben der Strichinformationen an ein vorhandenes [Recognizer-Objekt](/previous-versions/ms829434(v=msdn.10)) und Verwenden der [AddCustomStylusDataToQueue-Methode](/previous-versions/ms825761(v=msdn.10)) zum Hinzufügen der Ergebnisse zum Tablettstiftdatenstrom.
+-   Durchführen der Erkennung in Ihrem Plug-In und Verwenden der [AddCustomStylusDataToQueue-Methode,](/previous-versions/ms825761(v=msdn.10)) um die Ergebnisse dem Tablettstiftdatenstrom hinzuzufügen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Anwendungs Gesten](application-gestures.md)
+[Anwendungsgesten](application-gestures.md)
 </dt> <dt>
 
-[System Gesten](system-gestures.md)
+[Systemgesten](system-gestures.md)
 </dt> <dt>
 
-[Zeitachse von Maus Meldungen und System Ereignissen](timeline-of-mouse-messages-and-system-events.md)
+[Zeitachse von Mausnachrichten und Systemereignissen](timeline-of-mouse-messages-and-system-events.md)
 </dt> </dl>
 
  

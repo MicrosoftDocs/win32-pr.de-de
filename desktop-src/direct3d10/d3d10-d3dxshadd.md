@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 8d39940fef4ad611ea530d95efea29c74266d22a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f59d0d83424039af6d2ca5d4ea6ca25702d6fc50039502fb0af0eae3ab782ec3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990930"
 ---
 # <a name="d3dxshadd-function-d3dx10h"></a>D3DXSHAdd-Funktion (D3DX10.h)
 
@@ -85,25 +85,25 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
 Zeiger auf SH-Ausgabekoeffizienten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m + l gespeichert, wobei Folgendes gilt:
+Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition "l): + m + l" gespeichert, wobei:
 
 -   l ist der Grad der Basisfunktion.
--   m ist der Basisfunktionsindex für den angegebenen l-Wert und reicht von -l bis l einschließlich.
+-   m ist der Basisfunktionsindex für den angegebenen l-Wert und reicht von -l bis einschließlich l.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

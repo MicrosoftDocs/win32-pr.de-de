@@ -1,9 +1,9 @@
 ---
-title: Text. disabledforegroundcolor
-description: Das disabledforegroundcolor-Attribut gibt die Textfarbe an oder ruft Sie ab, die für das Text Steuerelement verwendet wird, wenn es deaktiviert ist.
+title: TEXT.disabledForegroundColor
+description: Das disabledForegroundColor-Attribut gibt die Textfarbe an, die für das Text-Steuerelement verwendet wird, wenn es deaktiviert ist, oder ruft sie ab.
 ms.assetid: 0ac2dc0c-817f-4902-b03b-072dbda45c3d
 keywords:
-- Text. disabledforegroundcolor-Fenster Media Player
+- TEXT.disabledForegroundColor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1af45ae7338ee9084e5345a480006a861a7cc4c0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7c5ffca8060c496526c3b5cc9f9229310489bdd5bbfef9467c3e2bb91992ded4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134613"
 ---
-# <a name="textdisabledforegroundcolor"></a>Text. disabledforegroundcolor
+# <a name="textdisabledforegroundcolor"></a>TEXT.disabledForegroundColor
 
-Das **disabledforegroundcolor** -Attribut gibt die Textfarbe an oder ruft Sie ab, die für das Text Steuerelement verwendet wird, wenn es deaktiviert ist.
+Das **disabledForegroundColor-Attribut** gibt die Textfarbe an, die für das Text-Steuerelement verwendet wird, wenn es deaktiviert ist, oder ruft sie ab.
 
 ``` syntax
         elementID.disabledForegroundColor
@@ -29,13 +29,13 @@ Das **disabledforegroundcolor** -Attribut gibt die Textfarbe an oder ruft Sie ab
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn **disabledforegroundcolor** nicht angegeben wird, wird **ForegroundColor** verwendet.
+Wenn **disabledForegroundColor** nicht angegeben ist, wird **foregroundColor** verwendet.
 
-Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht, wie die Attribute des **Text** -Elements verwendet werden.
+Ein Beispiel, das veranschaulicht, wie die Attribute des **TEXT-Elements** verwendet werden, finden Sie im [Value-Attribut.](text-value.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,21 +43,21 @@ Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Text-Element**](text-element.md)
+[**TEXT-Element**](text-element.md)
 </dt> <dt>
 
-[**Text. ForegroundColor**](text-foregroundcolor.md)
+[**TEXT.foregroundColor**](text-foregroundcolor.md)
 </dt> </dl>
 
  

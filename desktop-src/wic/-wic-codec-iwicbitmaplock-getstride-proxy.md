@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die getstride-Methode.
+description: Proxyfunktion für die GetStride-Methode.
 ms.assetid: 243439f3-2267-4632-b312-75c5ae5eddaa
 title: IWICBitmapLock_GetStride_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 70e42e233235b8616cf9191189ecc9e9ff01e85f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3d2635e58c8cce37a6744fe4101626c99556f5ad40fe98a88fc46fea06740edb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368982"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119088383"
 ---
-# <a name="iwicbitmaplock_getstride_proxy-function"></a>Iwicbitmaplock \_ getstride- \_ Proxy Funktion
+# <a name="iwicbitmaplock_getstride_proxy-function"></a>\_ \_ IWICBitmapLock-GetStride-Proxyfunktion
 
-Proxy Funktion für die [**getstride**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmaplock-getstride) -Methode.
+Proxyfunktion für die [**GetStride-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmaplock-getstride)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,29 +41,29 @@ HRESULT IWICBitmapLock_GetStride_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwicbitmaplock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock) \** _
+Typ: **[ **IWICBitmapLock**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock)\***
 
-Zeiger auf dieses [_ *iwicbitmaplock* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock) -Objekt.
+Zeiger auf dieses [**IWICBitmapLock-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmaplock)
 
 </dd> <dt>
 
-*pcbstride* \[ vorgenommen\]
+*pwStride* \[ out\]
 </dt> <dd>
 
-Typ: **uint \** _
+Typ: **UINT \***
 
-Der Bitmap-Schritt.
+Der Bitmapschritt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -73,9 +73,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

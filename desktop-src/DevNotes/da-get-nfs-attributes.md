@@ -1,7 +1,7 @@
 ---
-description: Der "da \_ Get NFS-Attribute"- \_ \_ Steuerungs Code fragt zusätzliche Informationen über eine NFS-Freigabe ab.
+description: Der DA \_ GET \_ NFS \_ ATTRIBUTES-Steuerungscode fragt zusätzliche Informationen zu einer NFS-Freigabe ab.
 ms.assetid: BC9E0E19-7D78-4AE7-A3E6-9FD9212B2B83
-title: DA_GET_NFS_ATTRIBUTES Steuerungs Codes
+title: DA_GET_NFS_ATTRIBUTES-Steuerelementcode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 4427dd48190bd12f7837c4841a98e15f7ddaff5f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e3e2b974d58888c35c24e18f16e1e75da46a180bb8123e9745170e074cd448de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523371"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956109"
 ---
-# <a name="da_get_nfs_attributes-control-code"></a>Steuerelement Code für da \_ Get NFS- \_ \_ Attribute
+# <a name="da_get_nfs_attributes-control-code"></a>DA \_ GET \_ NFS \_ ATTRIBUTES-Steuerungscode
 
-Der " **da \_ Get NFS- \_ \_ Attribute** "-Steuerungs Code fragt zusätzliche Informationen über eine NFS-Freigabe ab.
+Der **DA \_ GET \_ NFS \_ ATTRIBUTES-Steuerungscode** fragt zusätzliche Informationen zu einer NFS-Freigabe ab.
 
-Um diesen Vorgang auszuführen, müssen Sie die Funktion [**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) mit den folgenden Parametern abrufen.
+Um diesen Vorgang durchzuführen, rufen Sie die [**Funktion DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -45,83 +45,83 @@ BOOL
 
 <dl> <dt>
 
-*hdevice* \[ in\]
+*hDevice* \[ In\]
 </dt> <dd>
 
-Ein Handle für eine Datei auf der NFS-Freigabe. Um dieses Handle zu erhalten, rufen [**Sie die Funktion**](/windows/win32/api/fileapi/nf-fileapi-createfilea) "-Funktion" auf.
+Ein Handle für eine Datei auf der NFS-Freigabe. Um dieses Handle zu erhalten, rufen Sie die [**CreateFile-Funktion**](/windows/win32/api/fileapi/nf-fileapi-createfilea) auf.
 
 </dd> <dt>
 
-*dwIoControlCode* \[ in\]
+*dwIoControlCode* \[ In\]
 </dt> <dd>
 
-Der Steuerelement Code für den Vorgang. Verwenden Sie für diesen Vorgang " **da \_ get \_ NFS \_** "-Attribute.
+Der Steuerungscode für den Vorgang. Verwenden **Sie DA GET \_ \_ NFS \_ ATTRIBUTES** für diesen Vorgang.
 
 </dd> <dt>
 
-*lpinbuffer* 
+*lpInBuffer* 
 </dt> <dd>
 
-Wird bei diesem Vorgang nicht verwendet. auf **null** festgelegt.
+Wird mit diesem Vorgang nicht verwendet. auf **NULL festgelegt.**
 
 </dd> <dt>
 
-*nInBufferSize* \[ in\]
+*nInBufferSize* \[ In\]
 </dt> <dd>
 
-Wird bei diesem Vorgang nicht verwendet. auf NULL festgelegt.
+Wird mit diesem Vorgang nicht verwendet. auf 0 (null) festgelegt.
 
 </dd> <dt>
 
-*lpoutbuffer* \[ vorgenommen\]
+*lpOutBuffer* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf den Ausgabepuffer, der eine **NFS- \_ Datei \_ Attribute** -Struktur enthält. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+Ein Zeiger auf den Ausgabepuffer, der eine **NFS \_ FILE \_ ATTRIBUTES-Struktur** enthält. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 </dd> <dt>
 
-*nOutBufferSize* \[ in\]
+*nOutBufferSize* \[ In\]
 </dt> <dd>
 
 Die Größe des Ausgabepuffers in Bytes.
 
 </dd> <dt>
 
-*lpbyteszurück gegeben* \[ vorgenommen\]
+*lpBytesReturned* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Größe der im Ausgabepuffer gespeicherten Daten (in Bytes) empfängt.
+Ein Zeiger auf eine Variable, die die Größe der im Ausgabepuffer gespeicherten Daten in Bytes empfängt.
 
-Wenn der Ausgabepuffer zu klein ist, schlägt der-Befehl fehl, [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt einen **fehlerhaften \_ \_ Puffer** zurück, und *lpbytesreturns* ist 0 (null).
+Wenn der Ausgabepuffer zu klein ist, schlägt der Aufruf fehl, [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt **ERROR INSUFFICIENT \_ \_ BUFFER** zurück, *und lpBytesReturned* ist 0 (null).
 
-Wenn *lpoverllapp* den **Wert NULL** hat, kann *lpbytes-Rückgabe* Wert nicht **null** sein. Selbst wenn ein Vorgang keine Ausgabedaten zurückgibt und *lpoutbuffer* den Wert **null** hat, verwendet [**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) *lpbytesreturn*. Nach einem solchen Vorgang ist der Wert von *lpbytesno* bedeutungslos.
+Wenn *lpOverlapped* **NULL ist,** *kann lpBytesReturned* nicht NULL **sein.** Auch wenn ein Vorgang keine Ausgabedaten zurückgibt und *lpOutBuffer* **NULL ist,** verwendet [**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) *lpBytesReturned.* Nach einem solchen Vorgang ist der Wert *von lpBytesReturned* bedeutungslos.
 
-Wenn *lpoverllapp* nicht **null** ist, kann *lpbytesgab* **null** sein. Wenn dieser Parameter nicht **null** ist und der Vorgang Daten zurückgibt, ist *lpbytesreturns* bedeutungslos, bis der überlappende Vorgang abgeschlossen ist. Um die Anzahl der zurückgegebenen Bytes abzurufen, rufen Sie [**gezu verlappedresult**](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult)auf. Wenn der *hdevice* -Parameter einem e/a-Abschlussport zugeordnet ist, können Sie die Anzahl der zurückgegebenen Bytes abrufen, indem Sie [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus)aufrufen.
+Wenn *lpOverlapped* nicht **NULL ist,** *kann lpBytesReturned* NULL **sein.** Wenn dieser Parameter nicht **NULL ist** und der Vorgang Daten zurückgibt, *ist lpBytesReturned bedeutungslos,* bis der überlappende Vorgang abgeschlossen ist. Rufen Sie [**getOverlappedResult**](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult)auf, um die Anzahl der zurückgegebenen Bytes abzurufen. Wenn der *hDevice-Parameter* einem E/A-Abschlussport zugeordnet ist, können Sie die Anzahl der zurückgegebenen Bytes abrufen, indem Sie [**GetQueuedCompletionStatus aufrufen.**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus)
 
 </dd> <dt>
 
-*lpoverlgetauscht* \[ in\]
+*lpOverlapped* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**über**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur.
+Ein Zeiger auf eine [**OVERLAPPED-Struktur.**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)
 
-Wenn *hdevice* ohne Angabe eines überlappenden **\_ Dateiflags \_** geöffnet wurde, wird *lpoverlgetauscht* ignoriert.
+Wenn *hDevice geöffnet wurde,* ohne **FILE FLAG \_ \_ OVERLAPPED** anzugeben, *wird lpOverlapped* ignoriert.
 
-Wenn *hdevice* mit dem überlappenden Flag für das **\_ \_ Dateiflag** geöffnet wurde, wird der Vorgang als überlappende (asynchrone) Vorgang ausgeführt. In diesem Fall muss *lpoverlgetauscht* auf eine gültige [**über**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur verweisen, die ein Handle für ein Ereignis Objekt enthält. Andernfalls schlägt die Funktion auf unvorhersehbare Weise fehl.
+Wenn *hDevice mit* dem **FLAG FILE FLAG \_ \_ OVERLAPPED** geöffnet wurde, wird der Vorgang als überlappende (asynchrone) Operation ausgeführt. In diesem Fall muss *lpOverlapped* auf eine gültige [**OVERLAPPED-Struktur**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) zeigen, die ein Handle für ein Ereignisobjekt enthält. Andernfalls schlägt die Funktion auf unvorhersehbare Weise fehl.
 
-Bei überlappenden Vorgängen gibt [**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) sofort zurück, und das Ereignis Objekt wird signalisiert, wenn der Vorgang abgeschlossen wurde. Andernfalls gibt die Funktion nicht zurück, bis der Vorgang abgeschlossen ist oder ein Fehler auftritt.
+Bei überlappenden Vorgängen [**gibt DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) sofort zurück, und das Ereignisobjekt wird signalisiert, wenn der Vorgang abgeschlossen wurde. Andernfalls gibt die Funktion erst dann zurück, wenn der Vorgang abgeschlossen wurde oder ein Fehler auftritt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Vorgang erfolgreich abgeschlossen wird, gibt [**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) einen Wert ungleich 0 (null) zurück.
+Wenn der Vorgang erfolgreich abgeschlossen wurde, [**gibt DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) einen Wert ungleich 0 (null) zurück.
 
-Wenn der Vorgang fehlschlägt oder aussteht, gibt [**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) den Wert 0 (null) zurück. Um erweiterte Fehlerinformationen zu erhalten, rufen Sie [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) auf.
+Wenn der Vorgang fehlschlägt oder aussteht, [**gibt DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) 0 (null) zurück. Um erweiterte Fehlerinformationen zu erhalten, rufen Sie [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) auf.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diesem Steuerungs Code ist keine Header Datei zugeordnet. Sie müssen den Steuerungs Code und die Datenstrukturen wie folgt definieren.
+Diesem Steuerelementcode ist keine Headerdatei zugeordnet. Sie müssen den Steuerelementcode und die Datenstrukturen wie folgt definieren.
 
 ``` syntax
 #define DEVICE_DA_RDR 0x80000  
@@ -168,54 +168,54 @@ typedef struct _DA_FILE_ATTRIBUTES {
 } DA_FILE_ATTRIBUTES, *PDA_FILE_ATTRIBUTES;
 ```
 
-Die Strukturmember können wie folgt beschrieben werden.
+Die Strukturmitglieder können wie folgt beschrieben werden.
 
 <dl> <dt>
 
 <span id="SpecData1"></span><span id="specdata1"></span><span id="SPECDATA1"></span>**SpecData1**
 </dt> <dd>
 
-Ein nicht transparenter Wert, der für spezielle Dateitypen wie z. b. Block-Special-, Character-Special-und FIFO-Dateien verwendet wird.
+Ein nicht transparenter Wert, der für spezielle Dateitypen wie Block-Special-, Character-Special- und FIFO-Dateien verwendet wird.
 
 </dd> <dt>
 
 <span id="SpecData2"></span><span id="specdata2"></span><span id="SPECDATA2"></span>**SpecData2**
 </dt> <dd>
 
-Ein nicht transparenter Wert, der für spezielle Dateitypen wie z. b. Block-Special-, Character-Special-und FIFO-Dateien verwendet wird.
+Ein nicht transparenter Wert, der für spezielle Dateitypen wie Block-Special-, Character-Special- und FIFO-Dateien verwendet wird.
 
 </dd> <dt>
 
-<span id="Seconds"></span><span id="seconds"></span><span id="SECONDS"></span>**Vorsprung**
+<span id="Seconds"></span><span id="seconds"></span><span id="SECONDS"></span>**Sekunden**
 </dt> <dd>
 
 Ein 64-Bit-Wert, der die Sekunden seit dem 1. Januar 1970 (UTC) darstellt.
 
 </dd> <dt>
 
-<span id="nSeconds"></span><span id="nseconds"></span><span id="NSECONDS"></span>**nSekunden**
+<span id="nSeconds"></span><span id="nseconds"></span><span id="NSECONDS"></span>**nSeconds**
 </dt> <dd>
 
-Die Anzahl der Nanosekunden, die dem **Sekunden** -Element hinzugefügt werden sollen.
+Die Anzahl der Nanosekunden, die dem **Seconds-Member hinzugefügt werden** sollen.
 
 </dd> <dt>
 
-<span id="FileType"></span><span id="filetype"></span><span id="FILETYPE"></span>**FileType**
+<span id="FileType"></span><span id="filetype"></span><span id="FILETYPE"></span>**Filetype**
 </dt> <dd>
 
 Der NFS-Dateityp der Freigabe.
 
 
 
-| NFS-Dateityp                                                                              | BESCHREIBUNG                          |
+| NFS-Dateityp                                                                              | Beschreibung                          |
 |--------------------------------------------------------------------------------------------|--------------------------------------|
-| <span id="NFS_TYPE_REG"></span><span id="nfs_type_reg"></span>NFS- \_ Typ- \_ reg<br/>    | Eine reguläre Datei.<br/>           |
-| <span id="NFS_TYPE_DIR"></span><span id="nfs_type_dir"></span>NFS- \_ typverzeichnis \_<br/>    | Ein Verzeichnis.<br/>              |
-| <span id="NFS_TYPE_BLK"></span><span id="nfs_type_blk"></span>NFS- \_ Typ \_ BLK<br/>    | Eine Block spezifische Datei.<br/>     |
-| <span id="NFS_TYPE_CHR"></span><span id="nfs_type_chr"></span>NFS- \_ Typ \_ Chr<br/>    | Eine Zeichen spezifische Datei.<br/> |
-| <span id="NFS_TYPE_LNK"></span><span id="nfs_type_lnk"></span>NFS- \_ Typ \_ lnk<br/>    | Eine symbolische Verknüpfung.<br/>          |
-| <span id="NFS_TYPE_SOCK"></span><span id="nfs_type_sock"></span>NFS- \_ Typ- \_ Sock<br/> | Ein Windows-Socket.<br/>         |
-| <span id="NFS_TYPE_FIFO"></span><span id="nfs_type_fifo"></span>NFS- \_ Typ \_ FIFO<br/> | Eine FIFO-Datei.<br/>              |
+| <span id="NFS_TYPE_REG"></span><span id="nfs_type_reg"></span>NFS \_ TYPE \_ REG<br/>    | Eine reguläre Datei.<br/>           |
+| <span id="NFS_TYPE_DIR"></span><span id="nfs_type_dir"></span>NFS \_ TYPE \_ DIR<br/>    | Ein Verzeichnis.<br/>              |
+| <span id="NFS_TYPE_BLK"></span><span id="nfs_type_blk"></span>\_NFS-TYP \_ BLK<br/>    | Eine blockspezifische Datei.<br/>     |
+| <span id="NFS_TYPE_CHR"></span><span id="nfs_type_chr"></span>NFS \_ TYPE \_ CHR<br/>    | Eine zeichenspezifische Datei.<br/> |
+| <span id="NFS_TYPE_LNK"></span><span id="nfs_type_lnk"></span>\_NFS-TYP \_ LNK<br/>    | Eine symbolische Verknüpfung.<br/>          |
+| <span id="NFS_TYPE_SOCK"></span><span id="nfs_type_sock"></span>\_ \_ NFS-TYP-SOCK<br/> | Ein Windows Socket.<br/>         |
+| <span id="NFS_TYPE_FIFO"></span><span id="nfs_type_fifo"></span>\_NFS-TYP \_ FIFO<br/> | Eine FIFO-Datei.<br/>              |
 
 
 
@@ -223,31 +223,31 @@ Der NFS-Dateityp der Freigabe.
 
 </dd> <dt>
 
-<span id="Mode"></span><span id="mode"></span><span id="MODE"></span>**Spar**
+<span id="Mode"></span><span id="mode"></span><span id="MODE"></span>**Modus**
 </dt> <dd>
 
 Der Dateimodus.
 
 </dd> <dt>
 
-<span id="NLink"></span><span id="nlink"></span><span id="NLINK"></span>**Nlink**
+<span id="NLink"></span><span id="nlink"></span><span id="NLINK"></span>**NLink**
 </dt> <dd>
 
 Die Anzahl der Links zur Freigabe.
 
 </dd> <dt>
 
-<span id="Uid"></span><span id="uid"></span><span id="UID"></span>**UID**
+<span id="Uid"></span><span id="uid"></span><span id="UID"></span>**Uid**
 </dt> <dd>
 
-Die UNIX-Benutzer-ID (UID).
+Die UNIX Benutzer-ID (UID).
 
 </dd> <dt>
 
-<span id="Gid"></span><span id="gid"></span><span id="GID"></span>**Ü**
+<span id="Gid"></span><span id="gid"></span><span id="GID"></span>**Gid**
 </dt> <dd>
 
-Der UNIX-Gruppen Bezeichner (GID).
+Der UNIX Gruppenbezeichner (GID).
 
 </dd> <dt>
 
@@ -258,62 +258,62 @@ Die Dateigröße in Bytes.
 
 </dd> <dt>
 
-<span id="Used"></span><span id="used"></span><span id="USED"></span>**Daran**
+<span id="Used"></span><span id="used"></span><span id="USED"></span>**gebraucht**
 </dt> <dd>
 
-Die verwendete Dateigröße in Bytes. Dies entspricht der Dateigröße.
+Die verwendete Dateigröße in Bytes. Dies ist identisch mit der Dateigröße.
 
 </dd> <dt>
 
 <span id="Rdev"></span><span id="rdev"></span><span id="RDEV"></span>**Rdev**
 </dt> <dd>
 
-Der Geräte Bezeichner.
+Die Geräte-ID.
 
 </dd> <dt>
 
-<span id="Fsid"></span><span id="fsid"></span><span id="FSID"></span>**-Sid**
+<span id="Fsid"></span><span id="fsid"></span><span id="FSID"></span>**Fsid**
 </dt> <dd>
 
-Der Bezeichner des Dateisystems.
+Der Dateisystembezeichner.
 
 </dd> <dt>
 
-<span id="FileId"></span><span id="fileid"></span><span id="FILEID"></span>**FileID**
+<span id="FileId"></span><span id="fileid"></span><span id="FILEID"></span>**FileId**
 </dt> <dd>
 
 Der Dateibezeichner.
 
 </dd> <dt>
 
-<span id="AccessTime"></span><span id="accesstime"></span><span id="ACCESSTIME"></span>**ACCESSTIME**
+<span id="AccessTime"></span><span id="accesstime"></span><span id="ACCESSTIME"></span>**AccessTime**
 </dt> <dd>
 
 Der Zeitpunkt des letzten Zugriffs.
 
 </dd> <dt>
 
-<span id="ModifyTime"></span><span id="modifytime"></span><span id="MODIFYTIME"></span>**Modifytime**
+<span id="ModifyTime"></span><span id="modifytime"></span><span id="MODIFYTIME"></span>**ModifyTime**
 </dt> <dd>
 
 Der Zeitpunkt der letzten Änderung.
 
 </dd> <dt>
 
-<span id="ChangeTime"></span><span id="changetime"></span><span id="CHANGETIME"></span>**Changetime**
+<span id="ChangeTime"></span><span id="changetime"></span><span id="CHANGETIME"></span>**ChangeTime**
 </dt> <dd>
 
 Der Zeitpunkt der letzten Änderung.
 
 </dd> <dt>
 
-<span id="FileAttributes"></span><span id="fileattributes"></span><span id="FILEATTRIBUTES"></span>**File Attributes**
+<span id="FileAttributes"></span><span id="fileattributes"></span><span id="FILEATTRIBUTES"></span>**Fileattributes**
 </dt> <dd>
 
-Eine **NFS- \_ Datei \_ Attribute** -Struktur.
+Eine **NFS \_ FILE \_ ATTRIBUTES-Struktur.**
 
 > [!Note]  
-> Ausführlichere Beschreibungen der Member dieser Struktur finden Sie in der **fattr3** -Struktur in der Version 3 des NFS-Protokolls (wie in [RFC 1813](https://www.ietf.org/rfc/rfc1813.txt)definiert).
+> Ausführlichere Beschreibungen der Member dieser Struktur finden Sie in der **FATTR3-Struktur** in der NFS-Protokollspezifikation Version 3 (wie in [RFC 1813 definiert).](https://www.ietf.org/rfc/rfc1813.txt)
 
  
 
@@ -322,14 +322,14 @@ Eine **NFS- \_ Datei \_ Attribute** -Struktur.
 <span id="Version"></span><span id="version"></span><span id="VERSION"></span>**Version**
 </dt> <dd>
 
-Gibt an, ob die Verbindung, auf der das Handle für die NFS-Freigabe erstellt wurde, über NFS Version 2 oder das NFS-Protokoll (Version 3) erfolgt.
+Gibt an, ob die Verbindung, über die das Handle zur NFS-Freigabe erstellt wurde, über das NFS-Protokoll Version 2 oder NFS Version 3 erfolgt.
 
 
 
-| Wert                            | BESCHREIBUNG              |
+| Wert                            | Beschreibung              |
 |----------------------------------|--------------------------|
 | <span id="2"></span>2<br/> | NFS Version 2<br/> |
-| <span id="3"></span>€<br/> | NFS Version 3<br/> |
+| <span id="3"></span>3<br/> | NFS Version 3<br/> |
 
 
 
@@ -350,11 +350,11 @@ Gibt an, ob die Verbindung, auf der das Handle für die NFS-Freigabe erstellt wu
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)
+[**Deviceiocontrol**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)
 </dt> </dl>
 
  

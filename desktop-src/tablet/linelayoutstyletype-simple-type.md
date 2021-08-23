@@ -1,7 +1,7 @@
 ---
-description: Definiert die gültigen Werte für das Style-Attribut des linelayout-Elements.
+description: Definiert die gültigen Werte für das Style-Attribut des LineLayout-Elements.
 ms.assetid: b257f0da-1bee-4d1b-9829-70f91cdcabe0
-title: Einfacher linelayoutstyletype-Typ
+title: Einfacher LineLayoutStyleType-Typ
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 67b07d9de51e16148905768d7a6f268038bb1afa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d2aa0a42ca2f295cdcccad05931ba651d4018ba377d8d10f09f85b82dcaaea8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119031838"
 ---
-# <a name="linelayoutstyletype-simple-type"></a>Einfacher linelayoutstyletype-Typ
+# <a name="linelayoutstyletype-simple-type"></a>Einfacher LineLayoutStyleType-Typ
 
-Definiert die gültigen Werte für das **Style** -Attribut des [linelayout-Elements](linelayout-element.md).
+Definiert die gültigen Werte für das **Style-Attribut** des [LineLayout-Elements.](linelayout-element.md)
 
 ``` syntax
 <xs:simpleType name="LineLayoutStyleType">
@@ -37,13 +37,13 @@ Definiert die gültigen Werte für das **Style** -Attribut des [linelayout-Eleme
 
 ## <a name="patterns"></a>Muster
 
-Der einfache Typ **linelayoutstyletype** ist eine Zeichenfolge, die durch das folgende Muster eingeschränkt ist:
+Der einfache **LineLayoutStyleType-Typ** ist eine Zeichenfolge, die durch das folgende Muster eingeschränkt ist:
 
 -   `None|Solid|Dash|Dot|DashDot|DashDotDot|Double`
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Gültige Werte für das **Style** -Attribut des [linelayout-Elements](linelayout-element.md) sind:
+Gültige Werte für das **Style-Attribut** des [LineLayout-Elements](linelayout-element.md) sind:
 
 -   Keine
 -   Basis
@@ -59,7 +59,7 @@ Gültige Werte für das **Style** -Attribut des [linelayout-Elements](linelayout
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 

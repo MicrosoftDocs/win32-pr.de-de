@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. DOP-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.GPS.DOP-Eigenschaft.
 ms.assetid: 62efd1cc-a2ae-4e53-a0f2-4822b8c91c42
-title: System. GPS. DOP-fotometadatenrichtlinie
+title: System.GPS.DOP-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c33f3bfc6b958593748396124a8cfd1a7de73fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c7c414b7cb8648210175953e4c7b5f51a66f026cb45a06fd4d62918f2f8ac369
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119087788"
 ---
-# <a name="systemgpsdop-photo-metadata-policy"></a>System. GPS. DOP-fotometadatenrichtlinie
+# <a name="systemgpsdop-photo-metadata-policy"></a>System.GPS.DOP-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. GPS. DOP-](../properties/props-system-gps-dop.md) Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.GPS.DOP-Eigenschaft.](../properties/props-system-gps-dop.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-pkey \_ GPS- \_ DOP
+PKEY \_ GPS \_ DOP
 
 ### <a name="containers"></a>Container
 
@@ -27,24 +27,24 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ R8
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Dieser Wert kann durch Schreiben in System. GPS. dopnumerator und System. GPS. dopnenner geschrieben werden. Sie kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas sind abgestimmt.
+Dieser Wert kann durch Schreiben in System.GPS.DOPNumerator und System.GPS.DOPDenominator geschrieben werden. Sie kann nicht direkt geschrieben werden. Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="precedence-of-paths-jpeg"></a>Rangfolge von Pfaden (JPEG)
 
-Wenn die Datei im JPEG-Format vorliegt, wird der Handler die Daten in der folgenden Reihenfolge lesen, schreiben und entfernen:
+Wenn die Datei im JPEG-Format vor liegt, liest, schreibt und entfernt der Handler die Daten in der folgenden Reihenfolge:
 
 
 
-| Auftrag | Pfad                          | Datenträger Format   | Erforderlich |
+| Auftrag | Pfad                          | Datenträgerformat   | Erforderlich |
 |-------|-------------------------------|---------------|----------|
-| 1     | /XMP/EXIF: gpsdop              | XMP-rational  | Ja      |
-| 2     | /App1/IFD/GPS/ \\ {UShort = 11 \\ } | EXIF rational | Nein       |
+| 1     | /xmp/exif:GPSDOP              | XMP rational  | Ja      |
+| 2     | /app1/ifd/gps/ \\ {ushort=11 \\ } | EXIF rational | Nein       |
 
 
 
@@ -52,14 +52,14 @@ Wenn die Datei im JPEG-Format vorliegt, wird der Handler die Daten in der folgen
 
 ### <a name="precedence-of-paths-tiff"></a>Rangfolge von Pfaden (TIFF)
 
-Wenn die Datei im TIFF-Format vorliegt, wird der Handler die Daten in der folgenden Reihenfolge lesen, schreiben und entfernen:
+Wenn die Datei im TIFF-Format vor liegt, liest, schreibt und entfernt der Handler die Daten in der folgenden Reihenfolge:
 
 
 
-| Auftrag | Pfad                     | Datenträger Format   | Erforderlich |
+| Auftrag | Pfad                     | Datenträgerformat   | Erforderlich |
 |-------|--------------------------|---------------|----------|
-| 1     | /IFD/XMP/EXIF: gpsdop     | XMP-rational  | Ja      |
-| 2     | /IFD/GPS/ \\ {UShort = 11 \\ } | EXIF rational | Nein       |
+| 1     | /ifd/xmp/exif:GPSDop     | XMP rational  | Ja      |
+| 2     | /ifd/gps/ \\ {ushort=11 \\ } | EXIF rational | Nein       |
 
 
 
@@ -71,7 +71,7 @@ Wenn die Datei im TIFF-Format vorliegt, wird der Handler die Daten in der folgen
 
 <dl> <dt>
 
-[System. GPS. DOP](../properties/props-system-gps-dop.md)
+[System.GPS.DOP](../properties/props-system-gps-dop.md)
 </dt> </dl>
 
  

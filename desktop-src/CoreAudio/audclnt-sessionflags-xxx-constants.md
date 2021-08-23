@@ -1,27 +1,27 @@
 ---
-description: Die Konstanten "audclnt \_ sessionflags \_ xxx" geben Merkmale einer Audiositzung an, die dem Stream zugeordnet ist.
+description: Die AUDCLNT \_ SESSIONFLAGS XXX-Konstanten geben Merkmale einer Audiositzung an, \_ die dem Stream zugeordnet ist.
 ms.assetid: 5745d5bc-71e8-4b33-8227-c1c84226b6ee
-title: AUDCLNT_SESSIONFLAGS_XXX Konstanten (audiosessiontypes. h)
+title: AUDCLNT_SESSIONFLAGS_XXX Konstanten (Audiosessiontypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e2152c33103ca3366399995b7d11bb072f2bdd2
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 15423d24d48a98b69c4ab1651941fba639885c03e27cf9df8b1834aab830bb6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119018498"
 ---
-# <a name="audclnt_sessionflags_xxx-constants"></a>Audclnt \_ sessionflags \_ xxx-Konstanten
+# <a name="audclnt_sessionflags_xxx-constants"></a>AUDCLNT \_ SESSIONFLAGS \_ XXX-Konstanten
 
-Die Konstanten "audclnt \_ sessionflags \_ xxx" geben Merkmale einer Audiositzung an, die dem Stream zugeordnet ist. Diese Optionen können von einem Client während der Initialisierung des Datenstroms durch den *StreamFlags* -Parameter der [**iaudioclient:: Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) -Methode angegeben werden.
+Die AUDCLNT \_ SESSIONFLAGS XXX-Konstanten geben Merkmale einer Audiositzung an, \_ die dem Stream zugeordnet ist. Ein Client kann diese Optionen während der Initialisierung des Streams über den *StreamFlags-Parameter* der [**IAudioClient::Initialize-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) angeben.
 
 
 
 | Konstante/Wert                                                                                                                                                                                                                                                                                                                   | BESCHREIBUNG                                                                                                                                                                                                                                                                                                      |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="AUDCLNT_SESSIONFLAGS_EXPIREWHENUNOWNED"></span><span id="audclnt_sessionflags_expirewhenunowned"></span><dl> " <dt>**Audclnt \_ " Sessionflags \_ expireexpinicht im Besitz**</dt> von <dt>0x10000000</dt> </dl>                       | Die Sitzung läuft ab, wenn keine zugeordneten Streams vorhanden sind und die besitzenden Sitzungs Steuerungs Objekte Verweise enthalten.<br/>                                                                                                                                                                                       |
-| <span id="AUDCLNT_SESSIONFLAGS_DISPLAY_HIDE"></span><span id="audclnt_sessionflags_display_hide"></span><dl> " <dt>**Audclnt \_ " Sessionflags- \_ Anzeige \_ Ausblenden**</dt> <dt>0x20000000</dt> </dl>                                     | Wenn die Audiositzung erstellt wird, wird das Volume-Steuerelement auf der volumemixer-Benutzeroberfläche ausgeblendet. Wenn die mit dem Stream verknüpfte Sitzung bereits vorhanden ist, bevor [**iaudioclient:: Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) den Stream öffnet, wird das volumesteuerelement im volumemixer angezeigt.<br/> |
-| <span id="_AUDCLNT_SESSIONFLAGS_DISPLAY_HIDEWHENEXPIRED"></span><span id="_audclnt_sessionflags_display_hidewhenexpired"></span><dl> <dt> **Audclnt \_ sessionflags \_ Display \_ hideabgelaufabgelaufenes**</dt> <dt>0x40000000</dt> </dl> | Das volumesteuerelement ist in der volumemixer-Benutzeroberfläche ausgeblendet, nachdem die Sitzung abgelaufen ist. <br/>                                                                                                                                                                                                           |
+| <span id="AUDCLNT_SESSIONFLAGS_EXPIREWHENUNOWNED"></span><span id="audclnt_sessionflags_expirewhenunowned"></span><dl> <dt>**AUDCLNT \_ SESSIONFLAGS \_ EXPIREWHENUNOWNED**</dt> <dt>0x10000000</dt> </dl>                       | Die Sitzung läuft ab, wenn keine zugeordneten Streams und besitzenden Sitzungssteuerungsobjekte mit Verweisen enthalten sind.<br/>                                                                                                                                                                                       |
+| <span id="AUDCLNT_SESSIONFLAGS_DISPLAY_HIDE"></span><span id="audclnt_sessionflags_display_hide"></span><dl> <dt>**AUDCLNT \_ SESSIONFLAGS \_ DISPLAY \_ HIDE**</dt> <dt>0X20000000</dt> </dl>                                     | Das Volumesteuergerät wird auf der Benutzeroberfläche des Volumemixers ausgeblendet, wenn die Audiositzung erstellt wird. Wenn die dem Stream zugeordnete Sitzung bereits vorhanden ist, bevor [**IAudioClient::Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) den Stream öffnet, wird das Volumesteuerobjekt im Volumemixer angezeigt.<br/> |
+| <span id="_AUDCLNT_SESSIONFLAGS_DISPLAY_HIDEWHENEXPIRED"></span><span id="_audclnt_sessionflags_display_hidewhenexpired"></span><dl> <dt> **AUDCLNT \_ SESSIONFLAGS \_ DISPLAY \_ HIDEWHENEXPIRED**</dt> <dt>0x40000000</dt> </dl> | Das Volumesteuergerät wird auf der Benutzeroberfläche des Volumemixers ausgeblendet, nachdem die Sitzung abgelaufen ist. <br/>                                                                                                                                                                                                           |
 
 
 
@@ -31,9 +31,9 @@ Die Konstanten "audclnt \_ sessionflags \_ xxx" geben Merkmale einer Audiositzun
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Audiosessiontypes. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Audiosessiontypes.h</dt> </dl> |
 
 
 
@@ -41,10 +41,10 @@ Die Konstanten "audclnt \_ sessionflags \_ xxx" geben Merkmale einer Audiositzun
 
 <dl> <dt>
 
-[Kernaudiokonstanten](core-audio-constants.md)
+[Kernaudiokonstten](core-audio-constants.md)
 </dt> <dt>
 
-[**Iaudiosessioncontrol**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol)
+[**IAudioSessionControl**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol)
 </dt> </dl>
 
  

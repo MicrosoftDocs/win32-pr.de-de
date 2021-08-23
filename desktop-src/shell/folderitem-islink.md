@@ -1,7 +1,7 @@
 ---
 description: Gibt an, ob das Element eine Verknüpfung ist.
 ms.assetid: f3400f0b-5c7f-4d41-a162-1c35014082ac
-title: FolderItem. IsLink-Eigenschaft (Shldisp. h)
+title: FolderItem.IsLink-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: bd4357485dce3f3d236f31797d8b2df7028f3d65
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eb12c2273bb22af2df9f76c6606cad69223fa04292e0d556a65d4898bc968c75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119093124"
 ---
-# <a name="folderitemislink-property"></a>FolderItem. IsLink (Eigenschaft)
+# <a name="folderitemislink-property"></a>FolderItem.IsLink-Eigenschaft
 
 Gibt an, ob das Element eine Verknüpfung ist.
 
@@ -37,13 +37,13 @@ bIsLink = FolderItem.IsLink
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **boolescher** Wert, der **true** empfängt, wenn das Element eine Verknüpfung ist, andernfalls **false** .
+Ein **boolescher Wert,** der **TRUE** empfängt, wenn das Element eine Verknüpfung ist, **andernfalls FALSE.**
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **IsLink** verwendet, um zu bestimmen, ob ein bestimmtes-Objekt ein Link ist. In diesem Fall ist das-Objekt eine Verknüpfung zu Internet Explorer und sollte daher **true** zurückgeben. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **IsLink** verwendet, um zu bestimmen, ob ein bestimmtes Objekt ein Link ist. In diesem Fall ist das -Objekt eine Verknüpfung zum Internet Explorer und sollte daher **true** zurückgeben. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -73,7 +73,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -142,17 +142,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

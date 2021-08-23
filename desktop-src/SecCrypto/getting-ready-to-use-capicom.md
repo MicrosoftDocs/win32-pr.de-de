@@ -1,48 +1,48 @@
 ---
-description: Anwendungen, die CAPICOM-Objekte verwenden, müssen mit CAPICOM.dll erstellt werden. CAPICOM.dll müssen auch zur Laufzeit vorhanden und registriert sein, um CAPICOM-Objekte zu verwenden.
+description: Anwendungen, die CAPICOM-Objekte verwenden, müssen mithilfe von CAPICOM.dll. CAPICOM.dll müssen auch zur Laufzeit vorhanden und registriert sein, um CAPICOM-Objekte verwenden zu können.
 ms.assetid: 69de5232-e2f9-4aed-935d-5fbcd7998cc9
-title: Vorbereiten der Verwendung von CAPICOM
+title: Getting Ready to Use CAPICOM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f6fc1ad0dbfe3d4f8c4dae3286eb3ffa5e1ae03d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 83a6b76c293395fd0979cf5c304b27bae75622996279bd891b8c0c1301dca82e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119006629"
 ---
-# <a name="getting-ready-to-use-capicom"></a>Vorbereiten der Verwendung von CAPICOM
+# <a name="getting-ready-to-use-capicom"></a>Getting Ready to Use CAPICOM
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfunktionen zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfeatures zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
 
-Anwendungen, die CAPICOM-Objekte verwenden, müssen mit CAPICOM.dll erstellt werden. CAPICOM.dll müssen auch zur Laufzeit vorhanden und registriert sein, um CAPICOM-Objekte zu verwenden. CAPICOM.dll sollten Visual Basic Projekt verweisen hinzugefügt werden, um CAPICOM-Objekte zu verwenden.
+Anwendungen, die CAPICOM-Objekte verwenden, müssen mithilfe von CAPICOM.dll. CAPICOM.dll müssen auch zur Laufzeit vorhanden und registriert sein, um CAPICOM-Objekte verwenden zu können. CAPICOM.dll sollte den Projektverweisen hinzugefügt Visual Basic, um CAPICOM-Objekte zu verwenden.
 
-CAPICOM ist als verteilbare Datei verfügbar, die von [Platform SDK Redistributable: CAPICOM](https://www.microsoft.com/download/details.aspx?id=25281)heruntergeladen werden kann. Informationen zu CAPICOM-Versionen finden Sie unter [CAPICOM-Versionen](capicom-versions.md).
+CAPICOM ist als verteilbare Datei verfügbar, die unter [Platform SDK Redistributable: CAPICOM heruntergeladen werden kann.](https://www.microsoft.com/download/details.aspx?id=25281) Informationen zu CAPICOM-Versionen finden Sie unter [CAPICOM-Versionen.](capicom-versions.md)
 
 **So registrieren Sie CAPICOM.dll**
 
--   Wechseln Sie an einer Eingabeaufforderung in das Verzeichnis, in dem CAPICOM.dll gespeichert ist, und geben Sie dann den folgenden Befehl ein:
+-   Ändern Sie an einer Eingabeaufforderung das Verzeichnis in das Verzeichnis, in dem CAPICOM.dll gespeichert ist, und geben Sie dann den folgenden Befehl ein:
 
     **regsvr32 CAPICOM.dll**
 
-## <a name="example-code-limitations"></a>Einschränkungen für Code Beispiele
+## <a name="example-code-limitations"></a>Beispielcodeeinschränkungen
 
-Um präziseren, besser lesbaren Code bereitzustellen, werden die Prinzipien der bewährten Programmierpraxis nicht immer in diesen Beispielen befolgt. Insbesondere werden nur eingeschränkte Fehler Antworten angezeigt. Funktionierende Anwendungen sollten die zurückgegebenen Fehlercodes immer überprüfen und geeignete Aktionen ausführen, wenn ein Fehler auftritt.
+Um präziseren, besser lesbaren Code zu bieten, werden die Prinzipien der bewährten Programmiertechnik in diesen Beispielen nicht immer befolgt. Insbesondere werden nur eingeschränkte Fehlerantworten angezeigt. Funktionierende Anwendungen sollten immer zurückgegebene Fehlercodes überprüfen und geeignete Aktionen ausführen, wenn ein Fehler auftritt.
 
-## <a name="necessary-key-containers-keys-and-certificates-in-capicom"></a>Erforderliche Schlüssel Container, Schlüssel und Zertifikate in CAPICOM
+## <a name="necessary-key-containers-keys-and-certificates-in-capicom"></a>Erforderliche Schlüsselcontainer, Schlüssel und Zertifikate in CAPICOM
 
-Einige Vorgänge mit CAPICOM-Objekten können von jedem beliebigen Benutzer auf jedem Computer durchgeführt werden. das Erstellen [*digitaler Signaturen*](../secgloss/d-gly.md) und das Abrufen des Klartext-Inhalts einer eingeschlossenen Nachricht mithilfe von CAPICOM-Objekten sind Zertifikat basierte Vorgänge. Der Benutzer, der eine digitale Signatur erstellt, und der Benutzer, der den verschlüsselten Inhalt einer eingeschlossenen Nachricht abruft, müssen über ein digitales Zertifikat mit einem verfügbaren zugeordneten privaten Schlüssel verfügen. Wenn kein Zertifikat mit einem zugeordneten privaten Schlüssel vorhanden ist, kann der Kryptografievorgang nicht ausgeführt werden. Benutzer von CAPICOM-Anwendungen müssen sicherstellen, dass Sie über das geeignete Zertifikat und den verfügbaren privaten Schlüssel verfügen, wenn die Anwendungen ausgeführt werden.
+Während einige Vorgänge mit CAPICOM-Objekten von jedem [](../secgloss/d-gly.md) Benutzer auf jedem Computer durchgeführt werden können, sind das Erstellen digitaler Signaturen und das Abrufen des Klartextinhalts einer umschlagten Nachricht mithilfe von CAPICOM-Objekten zertifikatbasierte Vorgänge. Der Benutzer, der eine digitale Signatur erstellt, und der Benutzer, der den verschlüsselten Inhalt einer umschlagten Nachricht abruft, müssen über ein digitales Zertifikat mit einem verfügbaren zugeordneten privaten Schlüssel verfügen. Wenn kein Zertifikat mit einem zugeordneten privaten Schlüssel vorhanden ist, kann der kryptografische Vorgang nicht durchgeführt werden. Benutzer von CAPICOM-Anwendungen müssen sicherstellen, dass sie über das entsprechende Zertifikat und den verfügbaren privaten Schlüssel verfügen, wenn die Anwendungen ausgeführt werden.
 
-Einige Beispiele in den folgenden Abschnitten führen Vorgänge aus, die ein verfügbares [*öffentliches/privates Schlüsselpaar*](../secgloss/p-gly.md) zum Verschlüsseln und Entschlüsseln von Dateien, Nachrichten und Signaturen erfordern. Viele dieser Programme werden kompiliert und ausgeführt, schlagen aber zur Laufzeit fehl, ohne dass in diesen speichern ordnungsgemäße [*Schlüssel Container*](../secgloss/k-gly.md), Schlüssel, Zertifikat Speicher und [*Zertifikate*](../secgloss/c-gly.md) vorhanden sind.
+Einige Beispiele in den folgenden Abschnitten [](../secgloss/p-gly.md) führen Vorgänge aus, die ein verfügbares Paar aus öffentlichem und privatem Schlüssel zum Verschlüsseln und Entschlüsseln von Dateien, Nachrichten und Signaturen erfordern. Viele dieser Programme werden kompiliert und ausgeführt, können aber [](../secgloss/k-gly.md)zur Laufzeit nicht ausgeführt werden, ohne dass geeignete Schlüsselcontainer, Schlüssel, [*Zertifikatspeicher*](../secgloss/c-gly.md) und Zertifikate in diesen Speichern vorliegen.
 
 **So erstellen Sie ein selbstsigniertes Zertifikat**
 
-1.  Installieren Sie die Signierungs Tools. Diese werden als Teil des Microsoft Windows Software Development Kit (SDK), des Platform Software Development Kit (SDK) oder des .NET Framework SDK installiert.
-2.  Nachdem Makecert.exe heruntergeladen wurde, führen Sie den folgenden Befehl an einer Eingabeaufforderung aus, indem Sie einen Benutzernamen für *username*, einen Organisationsnamen für *OrganizationName* und einen Firmennamen für *CompanyName* ersetzen:
+1.  Installieren Sie die Signaturtools. Diese werden als Teil des Microsoft Windows Software Development Kit (SDK), des Platform Software Development Kit (SDK) oder des .NET Framework INSTALLIERT.
+2.  Nachdem Makecert.exe heruntergeladen wurde, führen Sie den folgenden Befehl an einer Eingabeaufforderung aus, und geben Sie dabei einen Benutzernamen für *UserName,* einen Organisationsnamen für *OrganizationName* und einen Unternehmensnamen für *CompanyName ein:*
 
-    **Makecert-r-n "CN =**_username_*_, ou =_*_OrganizationName_*_, o =_*_CompanyName_*_"-SS My_*
+    **makecert -r -n "cn=**_UserName_*_, ou=_*_OrganizationName_*_, o=_*_CompanyName_*_" -ss my_*
 
-3.  Das Zertifikat kann im My-Speicher des aktuellen Benutzers abgelegt werden. Importieren Sie das erstellte Zertifikat in den Stamm Speicher, damit es als vertrauenswürdig eingestuft wird.
+3.  Das Zertifikat kann im Speicher Mein des aktuellen Benutzers platziert werden. Importieren Sie das erstellte Zertifikat in den Stammspeicher, damit es vertrauenswürdig ist.
 
  
 

@@ -60,7 +60,7 @@ Gibt eine italische Schriftart an, wenn diese auf TRUE festgelegt ist.
 <span id="charset"></span><span id="CHARSET"></span>*Charset*
 </dt> <dd>
 
-Der Zeichensatz. Eine Liste der Werte finden Sie im **lfCharSet-Member** der [**LOGFONT-Struktur.**](/windows/win32/api/wingdi/ns-wingdi-logfonta)
+Der Zeichensatz. Eine Liste der Werte finden Sie unter dem **lfCharSet-Element** der [**LOGFONT-Struktur.**](/windows/win32/api/wingdi/ns-wingdi-logfonta)
 
 </dd> </dl>
 
@@ -72,7 +72,7 @@ Im folgenden Beispiel wird die Verwendung der **FONT-Anweisung** veranschaulicht
 FONT 12, "MS Shell Dlg"
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

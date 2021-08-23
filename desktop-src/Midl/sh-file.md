@@ -1,8 +1,8 @@
 ---
 title: sh_file-Schlüsselwort
-description: Das \ SH \_ File \-Schlüsselwort gibt an, dass das Systemobjekt ein Handle für eine Datei ist.
+description: Das \_ \sh file\-Schlüsselwort gibt an, dass das Systemobjekt ein Handle für eine Datei ist.
 keywords:
-- sh_file-Schlüsselwort-Mittel l
+- sh_file-Schlüsselwort MIDL
 topic_type:
 - apiref
 api_name:
@@ -11,16 +11,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 02/05/2021
-ms.openlocfilehash: f7d2ae0ef4a8166f90700267fa8459525ad4be2f
-ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.openlocfilehash: 05b76ad772ca628a28677d9b0da06252d0fec70251a4a197d39b50b9760ef931
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "104350968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013628"
 ---
-# <a name="sh_file-keyword"></a>SH \_ File-Schlüsselwort
+# <a name="sh_file-keyword"></a>\_sh file-Schlüsselwort
 
-Das Schlüsselwort **SH \_ File** gibt an, dass ein ein `system_handle` Handle für eine Datei enthält.
+Das **Schlüsselwort sh \_ file** gibt an, dass `system_handle` ein ein Handle für eine Datei enthält.
 
 ``` syntax
 [system_handle(sh_file)]
@@ -32,11 +32,11 @@ Das Schlüsselwort **SH \_ File** gibt an, dass ein ein `system_handle` Handle f
 
 Dieses Schlüsselwort ist ein Parameter für [**system_handle**](system-handle.md).
 
-Die [**system_handle**](system-handle.md) Dokumentation enthält auch Details zur optionalen Verwendung des *Zugriffsrechte* Parameters. Das Standardverhalten entspricht den `DUPLICATE_SAME_ACCESS` Spezifikationen für [ **Duplikat-andle** -Funktionen](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle) .
+Die [**system_handle-Dokumentation**](system-handle.md) enthält auch Details zur optionalen Verwendung des *Access-Rights-Parameters.* Das Standardverhalten entspricht `DUPLICATE_SAME_ACCESS` den [ **DuplicateHandle-Funktionsspezifikationen.**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Schlüsselwort mit dem-Attribut zu verwenden `system_handle` , `-target` muss das-Flag `NT100` beim Ausführen von midl.exe auf (oder höher) festgelegt werden.
+Um dieses Schlüsselwort mit dem -Attribut zu `system_handle` verwenden, muss das `-target` Flag bei der Ausführung von midl.exe auf `NT100` (oder höher) festgelegt werden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -56,18 +56,18 @@ interface MyInterface : IUnknown
 | Unterstützte Mindestversion (Client) | Windows 10 Anniversary Update (Version 1607, Build 14393) |
 | Unterstützte Mindestversion (Server) | Windows Server 2016 (Build 14393) |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**system_handle**](system-handle.md)
 </dt> <dt>
 
-[Datei Sicherheit und Zugriffsrechte](../fileio/file-security-and-access-rights.md)
+[Dateisicherheit und Zugriffsrechte](../fileio/file-security-and-access-rights.md)
 </dt> <dt>
 
 [DirectComposition](/windows/win32/api/_directcomp/)
 </dt> <dt>
 
-[**Dcompositionkreatesurfakehandle** -Funktion](/windows/win32/api/dcomp/nf-dcomp-dcompositioncreatesurfacehandle)
+[**DCompositionCreateSurfaceHandle-Funktion**](/windows/win32/api/dcomp/nf-dcomp-dcompositioncreatesurfacehandle)
 </dt> <dt>

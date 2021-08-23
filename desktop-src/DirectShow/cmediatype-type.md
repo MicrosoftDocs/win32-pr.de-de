@@ -1,7 +1,7 @@
 ---
 description: Die Type-Methode ruft den Haupttyp ab.
 ms.assetid: 9c3badb2-2d9f-44d8-a376-0918104ee431
-title: Cmediatype. Type-Methode (mtype. h)
+title: CMediaType.Type-Methode (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9931047ac6e95faa5696da4600439da00881cf6b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5653cffd9228fda2e9d7c4768d73cea8a76c9974d87c36b4436e726c0e5ada23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073954"
 ---
-# <a name="cmediatypetype-method"></a>Cmediatype. Type-Methode
+# <a name="cmediatypetype-method"></a>CMediaType.Type-Methode
 
-Die- `Type` Methode ruft den Haupttyp ab.
+Die `Type` -Methode ruft den Haupttyp ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf das **majortype** -Element zurück.
+Gibt einen Zeiger auf den **Haupttypmember zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt einen Zeiger auf das **majortype** -Element zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt einen Zeiger auf das **majortype** -Element zurück.
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectVectorVariable getfloatvector-Methode (D3dx11effect. h)
-description: Sie erhalten einen Vektor mit vier Komponenten, der Gleit Komma Daten enthält.
+title: ID3DX11EffectVectorVariable GetFloatVector-Methode (D3dx11effect.h)
+description: Abrufen eines Vektors mit vier Komponenten, der Gleitkommadaten enthält.
 ms.assetid: 980c85db-0d40-49e0-99d0-5049fdf62540
 keywords:
-- Getfloatvector-Methode Direct3D 11
-- Getfloatvector-Methode Direct3D 11, ID3DX11EffectVectorVariable-Schnittstelle
-- ID3DX11EffectVectorVariable-Schnittstelle Direct3D 11, getfloatvector-Methode
+- GetFloatVector-Methode Direct3D 11
+- GetFloatVector-Methode Direct3D 11 , ID3DX11EffectVectorVariable-Schnittstelle
+- ID3DX11EffectVectorVariable-Schnittstelle Direct3D 11, GetFloatVector-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eb0ce1ea07a2cbbb2826101e80d013b7f6bd02ed
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 861121c89bbeda277610c0c3e42d4d6e41795b5cd82b48ae8ba42a1783ee5eff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961701"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118989670"
 ---
-# <a name="id3dx11effectvectorvariablegetfloatvector-method"></a>ID3DX11EffectVectorVariable:: getfloatvector-Methode
+# <a name="id3dx11effectvectorvariablegetfloatvector-method"></a>ID3DX11EffectVectorVariable::GetFloatVector-Methode
 
-Sie erhalten einen Vektor mit vier Komponenten, der Gleit Komma Daten enthält.
+Abrufen eines Vektors mit vier Komponenten, der Gleitkommadaten enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ HRESULT GetFloatVector(
 
 <dl> <dt>
 
-*pData* 
+*Pdata* 
 </dt> <dd>
 
-Typ: **float \***
+Typ: **\* float**
 
 Ein Zeiger auf die erste Komponente.
 
@@ -56,27 +56,27 @@ Ein Zeiger auf die erste Komponente.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

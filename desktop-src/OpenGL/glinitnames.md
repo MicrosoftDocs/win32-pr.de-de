@@ -1,9 +1,9 @@
 ---
-title: glinitnames-Funktion (GL. h)
-description: Die Funktion "glinitnames" initialisiert den namens Stapel.
+title: glInitNames-Funktion (Gl.h)
+description: Die glInitNames-Funktion initialisiert den Namensstapel.
 ms.assetid: 26c134f5-c17c-4637-93b6-5293f316dd6c
 keywords:
-- glinitnames-Funktion OpenGL
+- glInitNames-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c9ebdb9d19f6c88340fd53162febe694e3566408
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0a567242431fc90be3b60d8ae08875b585ff6a81794899a6c9eb69e7a0a03daa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119012118"
 ---
-# <a name="glinitnames-function"></a>glinitnames-Funktion
+# <a name="glinitnames-function"></a>glInitNames-Funktion
 
-Die Funktion " **glinitnames** " initialisiert den namens Stapel.
+Die **glInitNames-Funktion** initialisiert den Namensstapel.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,27 +44,27 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glinitnames** " bewirkt, dass der Namen Stapel mit seinem standardmäßigen leeren Zustand initialisiert wird. Der namens Stapel wird im Auswahlmodus verwendet, damit Sätze von renderingbefehlen eindeutig identifiziert werden können. Sie besteht aus einer geordneten Menge von Ganzzahlen ohne Vorzeichen.
+Die **glInitNames-Funktion** bewirkt, dass der Namensstapel in seinen standardmäßig leeren Zustand initialisiert wird. Der Namensstapel wird im Auswahlmodus verwendet, um eine eindeutige Bezeichnung von Sätzen von Renderingbefehlen zu ermöglichen. Sie besteht aus einem geordneten Satz von ganzen Zahlen ohne Vorzeichen.
 
-Der namens Stapel ist immer leer, während der Rendermodus nicht die GL Select-Option ist \_ . Aufrufe von **glinitnames** , während der Rendermodus nicht gl SELECT ist, \_ werden ignoriert.
+Der Namensstapel ist immer leer, während der Rendermodus nicht GL \_ SELECT ist. Aufrufe **von glInitNames,** während der Rendermodus nicht GL \_ SELECT ist, werden ignoriert.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glinitnames** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glInitNames ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument "GL \_ Name \_ Stack- \_ Tiefe"
+[**glGet mit**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) Argument GL \_ NAME STACK \_ \_ DEPTH
 
-**glget** mit dem Argument GL \_ Max \_ Name Stack- \_ \_ Tiefe
+**glGet** mit Argument GL \_ MAX NAME STACK \_ \_ \_ DEPTH
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,8 +74,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glinitna
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -90,16 +90,16 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glinitna
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glloadname**](glloadname.md)
+[**glLoadName**](glloadname.md)
 </dt> <dt>
 
-[**glpushname**](glpushname.md)
+[**glPushName**](glpushname.md)
 </dt> <dt>
 
-[**glrendermode**](glrendermode.md)
+[**glRenderMode**](glrendermode.md)
 </dt> <dt>
 
-[**glselectbuffer**](glselectbuffer.md)
+[**glSelectBuffer**](glselectbuffer.md)
 </dt> </dl>
 
  

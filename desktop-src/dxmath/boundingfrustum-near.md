@@ -1,19 +1,19 @@
 ---
-description: Der Abstand der Near-Ebene des boundingfrustum von seinem Ursprung.
+description: Der Abstand der Nahebene des BoundingFrustum vom Ursprung.
 ms.assetid: e94d30e5-a63a-4dab-8947-d0c77e7db044
-title: Boundingfrustum. near (directxcollision. h)
+title: BoundingFrustum.Near (DirectXCollision.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2db0c2ff928133df279d018b4abb7ee1d3dd3465
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8d0d7335fbb180ced71ae85f97d128b32df4bd9330c673fa66e72d147098afd9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985080"
 ---
-# <a name="boundingfrustumnear"></a>Boundingfrustum. Near
+# <a name="boundingfrustumnear"></a>BoundingFrustum.Near
 
-Der Abstand der Near-Ebene des [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum) von seinem Ursprung.
+Der Abstand der Nahebene des [**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum) vom Ursprung.
 
 
 ```C++
@@ -23,7 +23,7 @@ public:
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -35,21 +35,21 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxcollision. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXCollision.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Fields](boundingfrustum-fields.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
+[**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: Open-Address-Book erweitert rechts
-description: Erweiterte Rechte beim Öffnen des Adressbuch Objekts für Adressbuch Ansichten aktiviert.
+title: Erweitertes Recht "Open-Address-Book"
+description: Erweiterte rechte Überprüfung beim Öffnen des Adressbuchobjekts für Adressbuchansichten.
 ms.assetid: b5b30fc2-6bf1-4ba8-81c1-86db9413ef24
 ms.tgt_platform: multiple
 keywords:
-- 'Open-Address-Book: AD-Schema für erweiterte Rechte'
+- Erweitertes rechtes AD-Schema für Open-Address-Book
 topic_type:
 - apiref
 api_name:
@@ -13,23 +13,23 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cb628760997484051eb219c0b4bcec90a6be7117
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: af918007992a9debe2bdef1d02fd559be4b0cdc6cd65d2900293cafdb5fc5382
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104041032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119021608"
 ---
-# <a name="open-address-book-extended-right"></a>Open-Address-Book erweitert rechts
+# <a name="open-address-book-extended-right"></a>Erweitertes Recht "Open-Address-Book"
 
-Erweiterte Rechte beim Öffnen des Adressbuch Objekts für Adressbuch Ansichten aktiviert.
+Erweiterte rechte Überprüfung beim Öffnen des Adressbuchobjekts für Adressbuchansichten.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
 | CN           | Open-Address-Book                    |
-| Anzeigename | Adressliste öffnen                    |
+| Anzeigename | Öffnen der Adressliste                    |
 | Rights-GUID  | a1990816-4298-11d1-ade2-00c04fd8d5cd |
 
 
@@ -37,7 +37,7 @@ Erweiterte Rechte beim Öffnen des Adressbuch Objekts für Adressbuch Ansichten 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -50,18 +50,18 @@ Erweiterte Rechte beim Öffnen des Adressbuch Objekts für Adressbuch Ansichten 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
 | Applies-To              | [**Address-Book-Container**](c-addressbookcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 21                                                                  |
+| Lokalisierungsanzeige-ID | 21                                                                  |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
 | Applies-To              | [**Address-Book-Container**](c-addressbookcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 21                                                                  |
+| Lokalisierungsanzeige-ID | 21                                                                  |
 
 
 
@@ -72,7 +72,7 @@ Erweiterte Rechte beim Öffnen des Adressbuch Objekts für Adressbuch Ansichten 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
 | Applies-To              | [**Address-Book-Container**](c-addressbookcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 21                                                                  |
+| Lokalisierungsanzeige-ID | 21                                                                  |
 
 
 
@@ -83,7 +83,7 @@ Erweiterte Rechte beim Öffnen des Adressbuch Objekts für Adressbuch Ansichten 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
 | Applies-To              | [**Address-Book-Container**](c-addressbookcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 21                                                                  |
+| Lokalisierungsanzeige-ID | 21                                                                  |
 
 
 
@@ -94,7 +94,7 @@ Erweiterte Rechte beim Öffnen des Adressbuch Objekts für Adressbuch Ansichten 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
 | Applies-To              | [**Address-Book-Container**](c-addressbookcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 21                                                                  |
+| Lokalisierungsanzeige-ID | 21                                                                  |
 
 
 
@@ -105,7 +105,7 @@ Erweiterte Rechte beim Öffnen des Adressbuch Objekts für Adressbuch Ansichten 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
 | Applies-To              | [**Address-Book-Container**](c-addressbookcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 21                                                                  |
+| Lokalisierungsanzeige-ID | 21                                                                  |
 
 
 

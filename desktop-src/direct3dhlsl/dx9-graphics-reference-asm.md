@@ -1,6 +1,6 @@
 ---
-title: ASM-Shader-Referenz
-description: Shader steuern die programmierbare Grafik Pipeline.
+title: Asm-Shaderreferenz
+description: Shader sind die Steuerung der programmierbaren Grafikpipeline.
 ms.assetid: 2c58815c-83b5-4ae8-a192-ba865b485bd6
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,51 +9,51 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 2941f4c32d03187ce08266bf1382cd1d94301ce0
-ms.sourcegitcommit: 477b1efe7d9c2f91d5f2ac588a20edf348b1c734
-ms.translationtype: HT
+ms.openlocfilehash: 9dbeb680b7131581b3891e59bb6bd2db0d6e5c19eb6279c47b83d22f01b5000e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "104976544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119544"
 ---
-# <a name="asm-shader-reference"></a>ASM-Shader-Referenz
+# <a name="asm-shader-reference"></a>Asm-Shaderreferenz
 
-Shader steuern die programmierbare Grafik Pipeline.
+Shader sind die Steuerung der programmierbaren Grafikpipeline.
 
-## <a name="vertex-shader-reference"></a>Vertex-Shader-Referenz
+## <a name="vertex-shader-reference"></a>Vertex-Shaderreferenz
 
 -   [vs \_ 1 \_ 1](dx9-graphics-reference-asm-vs-1-1.md)
 -   [vs \_ 2 \_ 0](dx9-graphics-reference-asm-vs-2-0.md)
--   [vs \_ 2 \_ x](dx9-graphics-reference-asm-vs-2-x.md)
+-   [Vs. \_ 2 \_ x](dx9-graphics-reference-asm-vs-2-x.md)
 -   [vs \_ 3 \_ 0](dx9-graphics-reference-asm-vs-3-0.md)
 
-[Scheitelpunkt-Shader-Unterschiede](dx9-graphics-reference-asm-vs-differences.md) fassen die Unterschiede zwischen Scheitelpunkt-shaderversionen zusammen
+[Vertex-Shader-Unterschiede](dx9-graphics-reference-asm-vs-differences.md) fasst die Unterschiede zwischen Vertex-Shaderversionen zusammen.
 
-## <a name="pixel-shader-reference"></a>Pixel-Shader-Referenz
+## <a name="pixel-shader-reference"></a>Pixel-Shaderreferenz
 
--   [PS \_ 1 \_ 1, PS \_ 1 \_ 2, PS \_ 1 \_ 3, PS \_ 1 \_ 4](dx9-graphics-reference-asm-ps-1-x.md)
--   [PS \_ 2 \_ 0](dx9-graphics-reference-asm-ps-2-0.md)
+-   [ps \_ 1 \_ 1, ps \_ 1 \_ 2, ps \_ 1 \_ 3, ps \_ 1 \_ 4](dx9-graphics-reference-asm-ps-1-x.md)
+-   [ps \_ 2 \_ 0](dx9-graphics-reference-asm-ps-2-0.md)
 -   [PS \_ 2 \_ x](dx9-graphics-reference-asm-ps-2-x.md)
 -   [PS \_ 3 \_ 0](dx9-graphics-reference-asm-ps-3-0.md)
 
-[Pixel-shaderunterschiede](dx9-graphics-reference-asm-ps-differences.md) fasst die Unterschiede zwischen den Pixel-Shader-Versionen zusammen.
+[Unter Unterschiede zwischen Pixel-Shadern](dx9-graphics-reference-asm-ps-differences.md) werden die Unterschiede zwischen den Shaderversionen von Pixeln zusammengefasst.
 
-## <a name="shader-model-4-and-5-reference"></a>Referenz zu Shadermodell 4 und 5
+## <a name="shader-model-4-and-5-reference"></a>Shadermodell 4- und 5-Referenz
 
-In den Abschnitten [Shader Model 4 Assembly](dx-graphics-hlsl-sm4-asm.md) und [Shader Model 5 Assembly](shader-model-5-assembly--directx-hlsl-.md) werden die Anweisungen beschrieben, die Shader Model 4 und 5 unterstützen.
+In [den Abschnitten Shader Model 4 Assembly](dx-graphics-hlsl-sm4-asm.md) und [Shader Model 5 Assembly](shader-model-5-assembly--directx-hlsl-.md) werden die Anweisungen beschrieben, die shader model 4 und 5 unterstützen.
 
-## <a name="behavior-of-constant-registers-in-assembly-shaders"></a>Verhalten konstanter Register in assemblyshader
+## <a name="behavior-of-constant-registers-in-assembly-shaders"></a>Verhalten konstanter Register in Assembly-Shadern
 
-Es gibt zwei Möglichkeiten, Konstante Register in einem assemblyshader festzulegen:
+Es gibt zwei Möglichkeiten zum Festlegen konstanter Register in einem Assembly-Shader:
 
--   Deklarieren Sie eine shaderkonstante in Assemblycode, indem Sie eine der DEF- \* Anweisungen verwenden.
--   Verwenden Sie eine der Set \* \* \* shaderconstant \* API-Methoden.
+-   Deklarieren Sie eine Shaderkonstation im Assemblycode mithilfe einer der \* Def-Anweisungen.
+-   Verwenden Sie eine der Set \* \* \* ShaderConstant-API-Methoden. \*
 
-### <a name="direct3d-9-shader-constants"></a>Direct3D 9-Shader-Konstanten
+### <a name="direct3d-9-shader-constants"></a>Direct3D 9 Shader-Konstanten
 
-In Direct3D 9 ist die Lebensdauer der definierten Konstanten in einem bestimmten Shader auf die Ausführung dieses Shaders beschränkt (und ist nicht über schreibbar). Definierte Konstanten in Direct3D 9 haben keine Nebeneffekte außerhalb des Shader.
+In Direct3D 9 ist die Lebensdauer definierter Konstanten in einem bestimmten Shader auf die Ausführung dieses Shaders beschränkt (und nicht überschreibbar). Definierte Konstanten in Direct3D 9 haben keine Nebeneffekte außerhalb des Shaders.
 
-Hier ist ein Beispiel für die Verwendung von Direct3D 9:
+Hier ist ein Beispiel mit Direct3D 9:
 
 
 ```
@@ -82,11 +82,11 @@ Scenario 2:
 
 
 
-In Direct3D 9 ruft der Aufruf von "get \* \* \* shaderconstant" \* nur konstante Werte ab, die über Set \* \* \* shaderconstant festgelegt werden \* .
+In Direct3D 9 ruft der Aufruf von Get ShaderConstant nur konstante Werte ab, die über \* \* \* \* Set \* \* \* ShaderConstant festgelegt \* wurden.
 
-### <a name="direct3d-8-shader-constants"></a>Direct3D 8-Shader-Konstanten
+### <a name="direct3d-8-shader-constants"></a>Direct3D 8 Shader-Konstanten
 
-Dieses Verhalten unterscheidet sich in Direct3D 8. x.
+Dieses Verhalten ist in Direct3D 8.x anders.
 
 
 ```
@@ -102,7 +102,7 @@ Scenario 1 (repeated with Direct3D 8):
 
 
 
-In Direct3D 8. x wird \* \* \* shaderconstant sofort wirksam. Betrachten Sie folgendes Szenario:
+In Direct3D 8.x wird \* \* \* Set ShaderConstant sofort wirksam. Betrachten Sie folgendes Szenario:
 
 
 ```
@@ -127,32 +127,32 @@ Scenario 4 :
 
 
 
-Das unerwünschte Ergebnis ist, dass die Reihenfolge, in der die Shader festgelegt werden, das beobachtete Verhalten einzelner Shader beeinflussen könnte.
+Das unerwünschte Ergebnis ist, dass sich die Reihenfolge, in der die Shader festgelegt werden, auf das beobachtete Verhalten einzelner Shader auswirken kann.
 
-## <a name="shader-driver-model-requirements"></a>Anforderungen an das Shader-Treibermodell
+## <a name="shader-driver-model-requirements"></a>Anforderungen an das Shadertreibermodell
 
-Direct3D 9-Schnittstellen sind auf Gerätetreiber Schnittstellen-Treiber (DDI) beschränkt, die DirectX 7-Level und höher sind. Führen Sie zum Überprüfen der DDI-Ebene das [DirectX-Diagnose Tool](https://msdn.microsoft.com/library/Ee416792(v=VS.85).aspx) aus, und untersuchen Sie die gespeicherte Textdatei.
+Direct3D 9-Schnittstellen sind auf DDI-Treiber (Device Driver Interface) beschränkt, bei denen es sich um DirectX 7-Treiber oder höher handelt. Um die DDI-Ebene zu überprüfen, führen Sie das [DirectX-Diagnosetool aus,](https://msdn.microsoft.com/library/Ee416792(v=VS.85).aspx) und untersuchen Sie die gespeicherte Textdatei.
 
-Für den Verweis funktionieren Direct3D 8-Schnittstellen nur für DDI-Treiber, die DirectX 6-Level und höher sind.
+Als Referenz können Direct3D 8-Schnittstellen nur auf DDI-Treibern mit DirectX 6-Ebene und höher verwendet werden.
 
-## <a name="shader-binary-format"></a>Binäres shaderformat
+## <a name="shader-binary-format"></a>Shader-Binärformat
 
-Das bitweise Layout des Shader-Anweisungs Datenstroms wird in D3d9types. h definiert. Wenn Sie Ihren eigenen Shader-Compiler oder die Konstruktions Tools entwerfen möchten und weitere Informationen zum Shader-Tokenstream benötigen, lesen Sie das Direct3D 9 Driver Development Kit (DDK).
+Das bitweise Layout des Shaderanweisungsstreams wird in D3d9types.h definiert. Wenn Sie Ihren eigenen Shadercompiler oder Ihre eigenen Konstruktionstools entwerfen möchten und weitere Informationen zum Shadertokenstream wünschen, lesen Sie das Direct3D 9 Driver Development Kit (DDK).
 
-## <a name="c-like-shader-language"></a>C-ähnliche Shader-Sprache
+## <a name="c-like-shader-language"></a>C-like Shader Language
 
-Weitere Informationen finden Sie in der [HLSL-Referenz](dx-graphics-hlsl-reference.md) .
+Informationen zu einer C- like-Shader-Sprache finden Sie in der [HLSL-Referenz.](dx-graphics-hlsl-reference.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verweis für HLSL](dx-graphics-hlsl-reference.md)
+[Referenz zu HLSL](dx-graphics-hlsl-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

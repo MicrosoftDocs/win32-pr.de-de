@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEX_RANGE. Methode "destring"'
-title: JET_INDEX_RANGE. Methode "destring" (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: Weitere Informationen finden Sie unter JET_INDEX_RANGE. ToString-Methode
+title: JET_INDEX_RANGE. ToString-Methode (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Windows8.JET_INDEX_RANGE.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.jet_index_range.tostring(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ad2abd23cbb8cc0937c534bcc3374d0c3291a6c5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 83df4d0bcb919e1cee9b5cd6a6c3506d5d1db7190c7ae34af823005bc392e773
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217862"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119039108"
 ---
-# <a name="jet_index_rangetostring-method"></a>JET_INDEX_RANGE. Methode "destring"
+# <a name="jet_index_rangetostring-method"></a>JET_INDEX_RANGE. ToString-Methode
 
 Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die den aktuellen [JET_INDEX_RANGE](./jet-index-range-class.md)darstellt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Eine [Zeichenfolge](/dotnet/api/system.string) , die den aktuellen [JET_INDEX_COLUMN](./jet-index-column-class.md)darstellt.  
+Typ: [System.String](/dotnet/api/system.string)  
+Eine [Zeichenfolge,](/dotnet/api/system.string) die den aktuellen [JET_INDEX_COLUMN](./jet-index-column-class.md)darstellt.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INDEX_RANGE-Klasse](./jet-index-range-class.md)
 
-[Mitglieder JET_INDEX_RANGE](./jet-index-range-members.md)
+[JET_INDEX_RANGE-Member](./jet-index-range-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

@@ -1,12 +1,12 @@
 ---
 title: GetDomain-Methode der Win32_TerminalServiceSetting-Klasse
-description: Ruft den Namen der Domäne ab, der der Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server angehört.
+description: Ruft den Namen der Domäne ab, der der Remotedesktop-Sitzungshost server (RD-Sitzungshost) angehört.
 ms.assetid: 11d58068-56df-4040-b7ba-afdd55bd417a
 ms.tgt_platform: multiple
 keywords:
 - GetDomain-Methode Remotedesktopdienste
-- GetDomain-Methode Remotedesktopdienste, Win32_TerminalServiceSetting-Klasse
-- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste, GetDomain-Methode
+- GetDomain-Methode Remotedesktopdienste , Win32_TerminalServiceSetting-Klasse
+- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste , GetDomain-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c8e9b2e5ba62f12c67a753cf8e5c41e8296b31e9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 613c3758d605727b50e8fb1bfbeebd1e475b00eb6673196c22be068bafd86499
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949506"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001558"
 ---
-# <a name="getdomain-method-of-the-win32_terminalservicesetting-class"></a>GetDomain-Methode der Win32 \_ terminalservicesetts-Klasse
+# <a name="getdomain-method-of-the-win32_terminalservicesetting-class"></a>GetDomain-Methode der Win32 \_ TerminalServiceSetting-Klasse
 
-Ruft den Namen der Domäne ab, der der Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server angehört.
+Ruft den Namen der Domäne ab, der der Remotedesktop-Sitzungshost server (RD-Sitzungshost) angehört.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ uint32 GetDomain(
 
 <dl> <dt>
 
-*Domäne* \[ vorgenommen\]
+*Domäne* \[ out\]
 </dt> <dd>
 
-Der Domänen Name des RD-Sitzungshost Servers.
+Der Domänenname des RD-Sitzungshost-Servers.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Herstellen einer Verbindung mit dem \\ root \\ CIMV2 \\ TerminalServices-Namespace muss die Authentifizierungs Ebene den Datenschutz für das Paket enthalten. Bei C/C++-aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene der **RPC- \_ c- \_ authn- \_ Ebene \_ Pkt \_ Privacy**. Bei Visual Basic-und Skript aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene von **wbemauthenticationlevelpzprivacy** oder "PKTPRIVACY" mit einem Wert von 6. Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird gezeigt, wie eine Verbindung mit einem Remote Computer mit Paket Datenschutz hergestellt wird.
+Um eine Verbindung mit dem \\ \\ CIMV2 \\ TerminalServices-Stammnamespace herzustellen, muss die Authentifizierungsebene Paketdatenschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Bei Visual Basic- und Skriptaufrufen ist dies die Authentifizierungsebene **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Beispiel Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -63,7 +63,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,7 +74,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -83,7 +83,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32 \_ terminalservicesetts**](win32-terminalservicesetting.md)
+[**Win32 \_ TerminalServiceSetting**](win32-terminalservicesetting.md)
 </dt> </dl>
 
  

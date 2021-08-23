@@ -1,27 +1,27 @@
 ---
-description: Schnittstellen Methoden Anforderungen
+description: Schnittstellenmethode – Anforderungen
 ms.assetid: 8c2afeb3-3e0b-4f8a-a2f4-df7c9ce4b098
-title: Schnittstellen Methoden Anforderungen
+title: Schnittstellenmethode – Anforderungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c9cabe02900fa789773f4104cf282ab326bd4930
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8525f7b04fe82247ecd64a38f5f1acc298be5d3ace56303072268fed6a4a3cfd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119086923"
 ---
-# <a name="interface-method-requirements"></a>Schnittstellen Methoden Anforderungen
+# <a name="interface-method-requirements"></a>Schnittstellenmethode – Anforderungen
 
-Nicht jede Methode für jede Schnittstelle muss über eine Implementierung verfügen. Einige Codecs verfügen z. b. über globale Metadaten, Miniaturansichten oder Farb Kontexte, während andere Codecs diese nur pro Frame bereitstellen. Wenn Codec-Autoren diese nur pro Frame bereitstellen, müssen Sie nur die [**Get**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getthumbnail) / [**setminiatur**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setthumbnail) -oder ColorContext-Methode implementieren oder die [**GetMetadataQueryReader**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getmetadataqueryreader) -Methode oder die [**GetMetadataQueryWriter**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-getmetadataquerywriter) -Methode für [**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) und [**iwicbitmapframecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode) anstelle von [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) und [**iwicbitmapcoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)implementieren. Ebenso verwenden einige Codecs keine indizierten Formate und sind daher nicht zum Implementieren der [**CopyPalette**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-copypalette) -und [**SetPalette**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setpalette) -Methoden erforderlich. Diese Methoden sind daher optional und bleiben dem Ermessen des Codec-Erstellers überlassen. Die meisten anderen Methoden sind erforderlich.
+Nicht jede Methode auf jeder Schnittstelle muss über eine -Implementierung verfügen. Einige Codecs verfügen beispielsweise über globale Metadaten, Miniaturansichten oder Farbkontexte, während andere Codecs diese nur pro Frame bereitstellen. Wenn Codecautoren diese nur pro Frame bereitstellen, müssen sie nur [**get**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getthumbnail) / [**SetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setthumbnail) oder ColorContexts implementieren oder die [**GetMetadataQueryReader-**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getmetadataqueryreader) oder [**GetMetadataQueryWriter-Methoden**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-getmetadataquerywriter) für [**DEN IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) und [**DEN IWICBitmapFrameEncode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode) anstelle von [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) und [**IWICBitmapEncoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)implementieren. Ebenso verwenden einige Codecs keine indizierten Formate und sind daher nicht erforderlich, um die [**Methoden CopyPalette**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-copypalette) und [**SetPalette zu**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setpalette) implementieren. Diese Methoden sind daher optional und bleiben dem Ermessen des Codec-Erstellers überlassen. Die meisten anderen Methoden sind erforderlich.
 
-Für Windows 7 sind [**Get**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getpreview) / [**SetPreview**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setpreview) und [**Get**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getthumbnail) / [**setminiatur**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setthumbnail) erforderlich. Sie müssen entweder auf den Klassen auf Klassenebene oder auf Frame-Ebene implementiert werden. Wenn Ihr Bild Dateiformat keine Vorschau oder Miniaturansichten an einem dieser Orte unterstützt, sollten Sie das Bild Dateiformat überarbeiten, um eine solche Unterstützung bereitzustellen.
+Für Windows 7 [**sind Get**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getpreview) / [**SetPreview**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setpreview) und [**Get**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getthumbnail) / [**SetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setthumbnail) erforderlich und müssen entweder für die Klassen auf Enthalten-Ebene oder für die Klassen auf Frameebene implementiert werden. Wenn Ihr Bilddateiformat keine Vorschauen oder Miniaturansichten an einem dieser Speicherorte unterstützt, sollten Sie das Bilddateiformat überarbeiten, um eine solche Unterstützung zu bieten.
 
-Wenn eine Methode nicht implementiert wird, ist es wichtig, einen entsprechenden Fehler zurückzugeben, damit der Aufrufer feststellen kann, dass die angeforderte Funktion nicht unterstützt wird. Wenn z. b. Codec-Autoren keine Miniaturansichten auf Container Ebene unterstützen, sollten Sie [wincodec \_ Err \_ codecnothumbnail](-wic-codec-error-codes.md) zurückgeben, wenn eine Anwendung [**getminiatur**](-wic-codec-iwicbitmapdecoder-getthumbnail-proxy.md)aufruft. Wenn Sie über keine Palette verfügen, sollten Sie [wincodec \_ Err \_ palettenicht verfügbar](-wic-codec-error-codes.md)zurückgeben. Wenn kein geeigneter [wincodec- \_ Err](-wic-codec-error-codes.md) -Code vorhanden ist, sollte der Codec E \_ notimpl für nicht implementierte Methoden zurückgeben.
+Wenn eine Methode nicht implementiert ist, ist es wichtig, einen entsprechenden Fehler zurück zu geben, damit der Aufrufer feststellen kann, dass das angeforderte Feature nicht unterstützt wird. Wenn Codec-Autoren beispielsweise keine Miniaturansichten auf Containerebene unterstützen, sollten sie [WINCODEC \_ ERR \_ CODECNOTHUMBNAIL](-wic-codec-error-codes.md) zurückgeben, wenn eine Anwendung [**GetThumbnail**](-wic-codec-iwicbitmapdecoder-getthumbnail-proxy.md)aufruft, und wenn sie keine Palette haben, sollten sie [WINCODEC \_ ERR \_ PALETTEUNAVAILABLE zurückgeben.](-wic-codec-error-codes.md) Wenn kein geeigneter [WINCODEC \_ ERR-Code](-wic-codec-error-codes.md) vorhanden ist, sollte der Codec E NOTIMPL für \_ nichtimplementierte Methoden zurückgeben.
 
-In den folgenden Tabellen sind die erforderlichen und optionalen Methoden für jede WIC-Schnittstelle (Windows Imaging Component) aufgelistet.
+In den folgenden Tabellen sind die erforderlichen und optionalen Methoden für jede Windows WIC-Schnittstellen (Imaging Component) aufgeführt.
 
-[**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)
+[**Iwicbitmapdecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)
 
 
 
@@ -37,15 +37,15 @@ Erforderlich
 
 [**GetFrameCount**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getframecount)
 
-[**GetFrame**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getframe)
+[**Getframe**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getframe)
 
 Optional
 
-[**GetPreview**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getpreview)¹
+[**GetPreview**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getpreview)
 
-[**GetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getthumbnail)²
+[**GetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getthumbnail)2
 
-[**Getcolorkontexte**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getcolorcontexts)
+[**GetColorContexts**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getcolorcontexts)
 
 [**GetMetadataQueryReader**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getmetadataqueryreader)
 
@@ -55,17 +55,17 @@ Optional
 
  
 
-¹ erforderlich, wenn das Image Dateiformat Vorschauen auf Container Ebene unterstützt. Wenn dies nicht der Fall ist, wird dringend empfohlen, das Bild Dateiformat zu überarbeiten, um dies zu unterstützen. Wenn Sie hier implementiert sind, ist für die Codieren-Klasse auf Container Ebene eine entsprechende [**SetPreview**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setpreview) erforderlich.
+¹Erstützt, wenn Ihr Imagedateiformat Vorschauversionen auf Containerebene unterstützt. Wenn dies nicht der Fall ist, wird dringend empfohlen, das Bilddateiformat zu überarbeiten, um dies zu unterstützen. Wenn hier implementiert, ist eine entsprechende [**SetPreview**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setpreview) für die Codierungsklasse auf Containerebene erforderlich.
 
-² ist entweder hier oder auf der decodierklasse auf Frame-Ebene erforderlich, abhängig davon, wo das Bild Dateiformat Miniaturansichten speichert. Wenn Sie hier implementiert sind, ist für die codierklasse auf Container Ebene eine entsprechende [**setminiatur**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setthumbnail) -Klasse erforderlich.
+Reliquired entweder hier oder in der Decodierungsklasse auf Frameebene, je nachdem, wo in Ihrem Bilddateiformat Miniaturansichten gespeichert werden. Wenn dies hier implementiert wird, ist eine entsprechende [**SetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setthumbnail) für die Codierungsklasse auf Containerebene erforderlich.
 
-[**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode)
+[**Iwicbitmapframedecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode)
 
 
 
 Erforderlich
 
-[**Getcolorkontexte**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getcolorcontexts)
+[**GetColorContexts**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getcolorcontexts)
 
 [**GetMetadataQueryReader**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getmetadataqueryreader)
 
@@ -75,11 +75,11 @@ Erforderlich
 
 [**GetResolution**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsource-getresolution)
 
-[**CopyPixels**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsource-copypixels)
+[**Copypixels**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsource-copypixels)
 
 Optional
 
-[**GetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getthumbnail)¹
+[**GetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getthumbnail)
 
 [**CopyPalette**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-copypalette)
 
@@ -87,9 +87,9 @@ Optional
 
  
 
-¹ erforderlich entweder hier oder in der Decodierungs Klasse auf Container Ebene, je nachdem, wo Sie das Bild Dateiformat für Miniaturansichten speichert. Wenn Sie hier implementiert sind, ist für die Encoder-Klasse auf Frame-Ebene eine entsprechende [**setminiatur**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setthumbnail) -Klasse erforderlich.
+Erforderlich, je nachdem, wo im Bilddateiformat Miniaturansichten gespeichert werden, entweder hier oder in der Decodierungsklasse auf Containerebene. Wenn dies hier implementiert wird, ist eine entsprechende [**SetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setthumbnail) für die Encoderklasse auf Frameebene erforderlich.
 
-[**IWICMetadataBlockReader**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader)
+[**Iwicmetadatablockreader**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader)
 
 
 
@@ -101,7 +101,7 @@ Erforderlich
 
 [**GetReaderByIndex**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockreader-getreaderbyindex)
 
-[**GetEnumerator**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockreader-getenumerator)
+[**Getenumerator**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockreader-getenumerator)
 
 
 
@@ -115,7 +115,7 @@ Erforderlich
 
 [**DoesSupportTransform**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsourcetransform-doessupporttransform)
 
-[**CopyPixels**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsourcetransform-copypixels)
+[**Copypixels**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsourcetransform-copypixels)
 
 Optional
 
@@ -129,9 +129,9 @@ Optional
 
 [**IWICDevelopRaw**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw)
 
-Weitere Informationen finden Sie [unter Unterstützung für IWICDevelopRaw](./-wic-rawguidelines-iwicdevelopraw.md)weiter unten in diesem Dokument.
+Siehe [Unterstützung für IWICDevelopRaw](./-wic-rawguidelines-iwicdevelopraw.md)weiter unten in diesem Dokument.
 
-[**Iwicbitmapcoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)
+[**IWICBitmapEncoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)
 
 
 
@@ -143,17 +143,17 @@ Erforderlich
 
 [**GetEncoderInfo**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-getencoderinfo)
 
-[**"Kreatenewframe"**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-createnewframe)
+[**CreateNewFrame**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-createnewframe)
 
-[**Einzusetzen**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-commit)
+[**Commit**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-commit)
 
 Optional
 
-[**SetPreview**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setpreview)¹
+[**SetPreview**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setpreview)
 
-[**SetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setthumbnail)²
+[**SetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setthumbnail)2
 
-[**Setcolorkontexte**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setcolorcontexts)
+[**SetColorContexts**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-setcolorcontexts)
 
 [**GetMetadataQueryWriter**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-getmetadataquerywriter)
 
@@ -163,9 +163,9 @@ Optional
 
  
 
-¹ erforderlich, wenn das Bild Dateiformat Vorschauen auf Frame-Ebene unterstützt.
+¹Erstützt, wenn Ihr Bilddateiformat Vorschauversionen auf Frameebene unterstützt.
 
-² ist entweder hier oder auf der codieren-Klasse auf Frame-Ebene erforderlich, abhängig davon, wo Ihr Bild Dateiformat Miniaturansichten speichert. Wenn Sie hier implementiert sind, ist für die decodierklasse auf Container Ebene eine entsprechende [**getminiatur**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getthumbnail) -Datei erforderlich.
+Je nachdem, wo in Ihrem Bilddateiformat Miniaturansichten gespeichert werden, ist dies entweder hier oder in der Codierungsklasse auf Frameebene erforderlich. Wenn dies hier implementiert wird, ist eine entsprechende [**GetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getthumbnail) für die Decodierungsklasse auf Containerebene erforderlich.
 
 [**IWICBitmapFrameEncode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode)
 
@@ -175,25 +175,25 @@ Erforderlich
 
 [**Initialisieren**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-initialize)
 
-[**Setcolorkontexte**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setcolorcontexts)
+[**SetColorContexts**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setcolorcontexts)
 
-[**Setcolorkontexte**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setcolorcontexts)
+[**SetColorContexts**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setcolorcontexts)
 
-[**SetSize**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setsize)
+[**Setsize**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setsize)
 
 [**SetPixelFormat**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setpixelformat)
 
-[**Projekt Mappe**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setresolution)
+[**SetResolution**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setresolution)
 
-[**"WritePixels"**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-writepixels)
+[**Writepixels**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-writepixels)
 
-[**Schreibgeschützte Datenquelle**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-writesource)
+[**WriteSource**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-writesource)
 
-[**Einzusetzen**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-commit)
+[**Commit**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapencoder-commit)
 
 Optional
 
-[**SetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setthumbnail)¹
+[**SetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-setthumbnail)
 
 [**CopyPalette**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsource-copypalette)
 
@@ -201,9 +201,9 @@ Optional
 
  
 
-¹ erforderlich entweder hier oder auf der Codierungs Klasse auf Container Ebene, abhängig davon, wo das Bild Dateiformat Miniaturansichten speichert. Wenn Sie hier implementiert sind, ist für die decodierklasse auf Frame-Ebene eine zugehörige [**getminiatur**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getthumbnail) -Datei erforderlich.
+Ist entweder hier oder in der Codierungsklasse auf Containerebene erforderlich, je nachdem, wo in Ihrem Bilddateiformat Miniaturansichten gespeichert werden. Wenn dies hier implementiert wird, ist eine entsprechende [**GetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getthumbnail) für die Decodierungsklasse auf Frameebene erforderlich.
 
-[**IWICMetadataBlockReader**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader)
+[**Iwicmetadatablockreader**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader)
 
 
 
@@ -213,11 +213,11 @@ Erforderlich
 
 [**AddWriter**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-addwriter)
 
-[**"Getschreiterbyindex"**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-getwriterbyindex)
+[**GetWriterByIndex**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-getwriterbyindex)
 
-[**Setschreiterbyindex**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-setwriterbyindex)
+[**SetWriterByIndex**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-setwriterbyindex)
 
-[**Removeschreiterbyindex**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-removewriterbyindex)
+[**RemoveWriterByIndex**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-removewriterbyindex)
 
 
 
@@ -227,16 +227,16 @@ Erforderlich
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Übersicht über die Windows Imaging-Komponente](-wic-about-windows-imaging-codec.md)
+[Windows Übersicht über Bildverarbeitungskomponenten](-wic-about-windows-imaging-codec.md)
 </dt> <dt>
 
-[WIC-Richtlinien für Kamera Rohbild Formate](-wic-rawguidelines.md)
+[WIC Guidelines for Camera RAW Image Formats](-wic-rawguidelines.md)
 </dt> <dt>
 
-[Schreiben eines WIC-Enabled Codecs](-wic-howtowriteacodec.md)
+[Schreiben eines WIC-Enabled CODEC](-wic-howtowriteacodec.md)
 </dt> </dl>
 
  

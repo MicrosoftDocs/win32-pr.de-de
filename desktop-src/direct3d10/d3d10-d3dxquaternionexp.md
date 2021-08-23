@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 7c022b9df4302683a184b4fc8329561b22d341d5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 61035976610cac4bb428687d9742b3a493e0ba458c8a050f4ad77891f01c26b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991130"
 ---
 # <a name="d3dxquaternionexp-function-d3dx10mathh"></a>D3DXQuaternionExp-Funktion (D3DX10Math.h)
 
@@ -65,7 +65,7 @@ Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
 Zeiger auf eine D3DXQUATERNION-Struktur, die exponentiell ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode konvertiert eine reine Quaternion in eine Einheiten quaternion. D3DXQuaternionExp erwartet eine reine Quaternion, bei der w in der Berechnung ignoriert wird (w == 0).
 
@@ -92,7 +92,7 @@ Verwenden [**Sie D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) f√
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

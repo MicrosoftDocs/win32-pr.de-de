@@ -1,21 +1,21 @@
 ---
-description: GraphEdit-Datei Format
+description: GraphEdit-Dateiformat
 ms.assetid: 84c2de05-6c8f-45f1-b789-04a24cfa3ea1
-title: GraphEdit-Datei Format
+title: GraphEdit-Dateiformat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a75421ff75c9bb26901eddf423448bbd9e4f478
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: dbce90247e710772b75ad31593ce72a1fd4c8f9bd9fabf1be786b1e7bdc5e74d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103747632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119015598"
 ---
-# <a name="graphedit-file-format"></a>GraphEdit-Datei Format
+# <a name="graphedit-file-format"></a>GraphEdit-Dateiformat
 
-Wenn das Hilfsprogramm GraphEdit ein DirectShow-Filter Diagramm speichert, werden Speicherdateien mit der Erweiterung. GRF erstellt. Die Speicherdatei enthält einen einzelnen Datenstrom mit dem Namen activemuviegraph. Dieser Stream enthält Informationen zu allen Filtern, Filternamen, Dateinamen, Verbindungen usw.
+Wenn das GraphEdit-Hilfsprogramm ein DirectShow-Filterdiagramm speichert, erstellt es speicherdateien mit der Erweiterung .grf. Die Speicherdatei enthält einen einzelnen Stream namens ActiveMovieGraph. Dieser Stream enthält Informationen zu allen Filtern, Filternamen, Dateinamen, Verbindungen usw.
 
-Die folgende Grammatik beschreibt die Syntax des Diagramms innerhalb des Streams mithilfe einer geänderten BNF-Syntax (Backus-Naur Form):
+Die folgende Grammatik beschreibt die Syntax des Graphen innerhalb des Streams mithilfe einer geänderten BNF-Syntax (Backus-Naur Form):
 
 
 ```C++
@@ -87,9 +87,9 @@ CLOCK <b><required><b><clockid>
 
 
 
-Bei der Ausgabe gibt es eine neue Zeile (" \\ r \\ n") pro Filter, eine pro Verbindung und eine für jedes der Schlüsselwort Filter und-Verbindungen. Bei jedem anderen Fall von handelt es sich um <b> ein einzelnes Leerzeichen. Die Schlüsselwörter Filter, Connections und End sind nicht lokalisierbar. Beachten Sie auch, dass die Filterdaten und die Formatierungsdaten binär sind, sodass Sie falsche Zeilenumbrüche, NULL-Werte usw. enthalten können. Der Stream verwendet breit Zeichen.
+In der Ausgabe wird eine neue Zeile (" r n") pro Filter, eine pro Verbindung und eine für jedes der Schlüsselwörter \\ \\ FILTERS und CONNECTIONS angezeigt. Jeder andere Fall <b> von ist ein einzelnes Leerzeichen. Die Schlüsselwörter FILTERS, CONNECTIONS und END sind nicht lokalisierbar. Beachten Sie auch, dass die Filterdaten und die Formatdaten binär sind, sodass sie möglicherweise falsche Zeilenumbrüche, NULL-Werte und so weiter enthalten. Der Stream verwendet Breitzeichen.
 
-Im folgenden wird ein typisches Diagramm gezeigt. (Die Verbindungs Zeilen wurden aus Gründen der Übersichtlichkeit getrennt, und die Binärdaten wurden ausgelassen.)
+Im Folgenden wird ein typisches Diagramm dargestellt. (Die Verbindungslinien wurden aus Gründen der Übersichtlichkeit unterbrochen, und die Binärdaten wurden weggelassen.)
 
 
 ```C++
@@ -122,7 +122,7 @@ END
 
 <dl> <dt>
 
-[Simulieren der Diagramm Erstellung mit GraphEdit](simulating-graph-building-with-graphedit.md)
+[Simulieren von Graph Building mit GraphEdit](simulating-graph-building-with-graphedit.md)
 </dt> </dl>
 
  

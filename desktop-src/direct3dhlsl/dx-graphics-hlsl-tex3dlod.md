@@ -1,6 +1,6 @@
 ---
 title: tex3Dlod
-description: Stichproben eine 3D-Textur mit Mipmaps. Die Mipmap-LOD wird in t.w. angegeben.
+description: Probieren Sie eine 3D-Textur mit Mipmaps aus. Die Mipmap-LOD wird in t.w angegeben.
 ms.assetid: 9bdd8fa1-8c02-4765-8f4d-61ceb532354e
 keywords:
 - tex3Dlod HLSL
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: bc25af449f7f32e94d4ca344bf5ef3a4d09b376c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
-ms.translationtype: HT
+ms.openlocfilehash: 787a9d9fff3fd997fc56a7b5820a81b4b6ab004882f378745a1c044ab6156f26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104976665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119904"
 ---
 # <a name="tex3dlod"></a>tex3Dlod
 
-Stichproben eine 3D-Textur mit Mipmaps. Die Mipmap-LOD wird in t.w. angegeben.
+Probieren Sie eine 3D-Textur mit Mipmaps aus. Die Mipmap-LOD wird in t.w angegeben.
 
 
 
-| Ret tex3Dlod (s, t) |
+| ret tex3Dlod(s, t) |
 |--------------------|
 
 
@@ -37,10 +37,10 @@ Stichproben eine 3D-Textur mit Mipmaps. Die Mipmap-LOD wird in t.w. angegeben.
 
 
 
-| Element                                                   | BESCHREIBUNG                               |
+| Element                                                   | Beschreibung                               |
 |--------------------------------------------------------|-------------------------------------------|
-| <span id="s"></span><span id="S"></span>*Hymnen*<br/> | \[im \] samplerzustand.<br/>      |
-| <span id="t"></span><span id="T"></span>*Bund*<br/> | \[in \] der Textur Koordinate.<br/> |
+| <span id="s"></span><span id="S"></span>*s*<br/> | \[im \] Samplerzustand.<br/>      |
+| <span id="t"></span><span id="T"></span>*T*<br/> | \[in \] Die Texturkoordinate.<br/> |
 
 
 
@@ -48,7 +48,7 @@ Stichproben eine 3D-Textur mit Mipmaps. Die Mipmap-LOD wird in t.w. angegeben.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert der Textur Daten.
+Der Wert der Texturdaten.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -56,26 +56,26 @@ Der Wert der Textur Daten.
 
 | Name | Ein/Aus | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                       | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size |
 |------|--------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|------|
-| s    | in     | [**Objekt**](dx-graphics-hlsl-intrinsic-functions.md) | [sampler3D](dx-graphics-hlsl-sampler.md)                      | 1    |
-| t    | in     | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
-| TZI  | out    | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
+| s    | in     | [**Objekt (object)**](dx-graphics-hlsl-intrinsic-functions.md) | [sampler3D](dx-graphics-hlsl-sampler.md)                      | 1    |
+| t    | in     | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
+| Ret  | out    | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt               |
 |-----------------------------------------------------------|-------------------------|
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja (nur Pixel-Shader) |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Ja (nur Pixel-Shader) |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein                      |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein                      |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja (nur Pixelshader) |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | ja (nur Pixelshader) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein                      |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein                      |
 
 
 
@@ -85,7 +85,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

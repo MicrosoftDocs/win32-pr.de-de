@@ -1,9 +1,9 @@
 ---
-title: Uninitializenapagentnotifier-Funktion (naputil. h)
-description: Abonniert den aufrufenden Prozess von NAPAgent-Status Änderungs Benachrichtigungen und Benachrichtigungen über Quarantäne Zustandsänderungen.
+title: UninitializeNapAgentNotifier-Funktion (NapUtil.h)
+description: Kündigen des Aufrufens von NapAgent-Statusänderungsbenachrichtigungen und Quarantänestatusänderungsbenachrichtigungen.
 ms.assetid: b676ee33-caf6-48f0-acf8-5be1b23c62fe
 keywords:
-- Uninitializenapagentnotifier-Funktion NAP
+- NAP-Funktion "UninitializeNapAgentNotifier"
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b5d68b43fba64be82908d73803113f871b08c93c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b474ea95dcb2e3bd5c756cefa825463f3384e798492ccdcf794641a16fbfc450
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119065260"
 ---
-# <a name="uninitializenapagentnotifier-function"></a>Uninitializenapagentnotifier-Funktion
+# <a name="uninitializenapagentnotifier-function"></a>UninitializeNapAgentNotifier-Funktion
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **uninitializenapagentnotifier** -Funktion hebt den aufrufenden Prozess von NAPAgent-Status Änderungs Benachrichtigungen und Benachrichtigungen über Quarantäne Zustandsänderungen auf. Diese Benachrichtigungen werden vom NAPAgent-Dienst bereitgestellt.
+Die **UninitializeNapAgentNotifier-Funktion** kündigen das Abonnement des aufrufenden Prozesses von NapAgent-Statusänderungsbenachrichtigungen und Quarantänezustandsänderungsbenachrichtigungen. Diese Benachrichtigungen werden vom NapAgent-Dienst bereitgestellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,10 +45,10 @@ NAPAPI VOID WINAPI UninitializeNapAgentNotifier(
 
 <dl> <dt>
 
-*Typ* \[ in\]
+*Type (Typ)* \[ In\]
 </dt> <dd>
 
-Ein [**napnotifytype**](/windows/win32/api/naptypes/ne-naptypes-napnotifytype) -Wert, der den Typ der Dienst Benachrichtigungen angibt, von denen abgemeldet werden soll.
+Ein [**NapNotifyType-Wert,**](/windows/win32/api/naptypes/ne-naptypes-napnotifytype) der den Typ der Dienstbenachrichtigungen angibt, von denen das Abonnement gekündigt werden soll.
 
 </dd> </dl>
 
@@ -56,13 +56,13 @@ Ein [**napnotifytype**](/windows/win32/api/naptypes/ne-naptypes-napnotifytype) -
 
 Diese Funktion verfügt über keine Rückgabewerte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Funktion ist nicht threadsicher.
 
-Jeder Prozess, der die NAPAgent-Dienst Benachrichtigungen des angegebenen *Typs* abonniert hat, muss **uninitializenapagentnotifier** anrufen, um Benachrichtigungen zu kündigen. Wenn ein Prozess mehr als einen Benachrichtigungstyp abonniert, muss er für jeden Benachrichtigungstyp einmal **uninitializenapagentnotifier** aufgerufen werden.
+Jeder Prozess, der NapAgent-Dienstbenachrichtigungen des angegebenen *Typs* abonniert hat, muss **UninitializeNapAgentNotifier** aufrufen, um das Abonnement von Benachrichtigungen zu kündigen. Wenn ein Prozess mehrere Benachrichtigungstypen abonniert hat, muss er für jeden Benachrichtigungstyp einmal **UninitializeNapAgentNotifier** aufrufen.
 
-Diese Funktion führt nicht automatisch zu einem Fehler, wenn der Prozess zuvor nicht [**initializenapagentnotifier**](initializenapagentnotifier.md) für den Benachrichtigungstyp aufgerufen hat.
+Diese Funktion schlägt im Hintergrund fehl, wenn der Prozess zuvor nicht [**InitializeNapAgentNotifier**](initializenapagentnotifier.md) für den Benachrichtigungstyp aufgerufen hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,18 +70,18 @@ Diese Funktion führt nicht automatisch zu einem Fehler, wenn der Prozess zuvor 
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Naputil. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>NapUtil.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Initializenapagentnotifier**](initializenapagentnotifier.md)
+[**InitializeNapAgentNotifier**](initializenapagentnotifier.md)
 </dt> </dl>
 
  

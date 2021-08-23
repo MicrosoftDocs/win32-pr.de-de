@@ -1,7 +1,7 @@
 ---
-description: 'Die setmediatime-Methode legt die Medien Zeiten für dieses Beispiel fest. Diese Methode implementiert die imediasample:: setmediatime-Methode.'
+description: Die SetMediaTime-Methode legt die Medienzeiten für dieses Beispiel fest. Diese Methode implementiert die IMediaSample::SetMediaTime-Methode.
 ms.assetid: 768812f8-c044-4499-9149-7c334c51e539
-title: Cmediasample. setmediatime-Methode (amfilter. h)
+title: CMediaSample.SetMediaTime-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0240ef40f4c37f6c5528c979b2e89b43b03b3451
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3709a5f487855148b8ad4042f61b74fbe6029ef64e00b751672bf478f1da866e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357555"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016368"
 ---
-# <a name="cmediasamplesetmediatime-method"></a>Cmediasample. setmediatime-Methode
+# <a name="cmediasamplesetmediatime-method"></a>CMediaSample.SetMediaTime-Methode
 
-Die- `SetMediaTime` Methode legt die Medien Zeiten für dieses Beispiel fest. Diese Methode implementiert die [**imediasample:: setmediatime**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setmediatime) -Methode.
+Die `SetMediaTime` -Methode legt die Medienzeiten für dieses Beispiel fest. Diese Methode implementiert die [**IMediaSample::SetMediaTime-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setmediatime)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ HRESULT SetMediaTime(
 
 <dl> <dt>
 
-*PStart* 
+*pStart* 
 </dt> <dd>
 
-Ein Zeiger auf die Start Zeit des Mediums oder **null**.
+Zeiger auf die Startzeit des Mediums oder **NULL.**
 
 </dd> <dt>
 
-*ausgesetzt* 
+*Pend* 
 </dt> <dd>
 
-Ein Zeiger auf die Endzeit des Mediums oder **null**.
+Zeiger auf die Medienstoppzeit oder **NULL.**
 
 </dd> </dl>
 
@@ -61,13 +61,13 @@ Ein Zeiger auf die Endzeit des Mediums oder **null**.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Zeit für das Medien Ende muss höher sein als die Start Zeit des Mediums. Verwenden Sie **null** , um die Medien Zeiten für ungültig zu erklären.
+Die Medienstoppzeit muss größer als die Startzeit des Mediums sein. Verwenden **Sie NULL,** um die Medienzeiten für ungültig zu erklären.
 
-Der *Pend* -Parameter gibt eine absolute Medien Zeit an, aber die [**cmediasample:: m \_ mediaend**](cmediasample-m-mediaend.md) -Member-Variable wird als Offset von *PStart* berechnet. Anders ausgedrückt: **m \_ mediaend**  =  \* *ptimeend* \* *ptimestart*.  
+Der *pEnd-Parameter* gibt eine absolute Medienzeit an, aber die [**CMediaSample::m \_ MediaEnd-Membervariable**](cmediasample-m-mediaend.md) wird als Offset von *pStart berechnet.* Mit anderen Worten: **m \_ MediaEnd**  =  \* *pTimeEnd* \* *pTimeStart*.  
 
-Weitere Informationen zu Medien Zeiten finden Sie unter [Zeit und Uhren in DirectShow](time-and-clocks-in-directshow.md).
+Informationen zu Medienzeiten finden Sie unter [Uhrzeit und Uhren in DirectShow.](time-and-clocks-in-directshow.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,16 +75,16 @@ Weitere Informationen zu Medien Zeiten finden Sie unter [Zeit und Uhren in Direc
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

@@ -1,31 +1,31 @@
 ---
-title: Bearbeiten von Steuerelement Benachrichtigungen
-description: Bearbeiten von Steuerelement Benachrichtigungen
+title: Bearbeiten von Steuerelementbenachrichtigungen
+description: Bearbeiten von Steuerelementbenachrichtigungen
 ms.assetid: 04ec89f4-a061-4c3f-99de-fdb42596ecca
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f595252a51ae8eaaf6249244d1ebad3a08d73f60
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 69e217fa881cf451846a0cf84758b192e9b7f0eb487fb5b3fb69fe49b4d91bd4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019958"
 ---
-# <a name="edit-control-notifications"></a>Bearbeiten von Steuerelement Benachrichtigungen
+# <a name="edit-control-notifications"></a>Bearbeiten von Steuerelementbenachrichtigungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [EN \_ Ausrichten von \_ Ltr- \_ EC](en-align-ltr-ec.md)
--   [EN \_ Ausrichten von \_ RTL \_ EC](en-align-rtl-ec.md)
--   [\_Änderung der Änderung](en-change.md)
--   [de \_ errspace](en-errspace.md)
--   [EN \_ HScroll](en-hscroll.md)
--   [EN \_ killfokus](en-killfocus.md)
--   [EN \_ maxtext](en-maxtext.md)
--   [EN \_ SetFocus](en-setfocus.md)
--   [EN \_ Aktualisieren](en-update.md)
--   [EN \_ VScroll](en-vscroll.md)
--   [**WM \_ ctlcoloredit**](wm-ctlcoloredit.md)
+-   [EN \_ ALIGN \_ LTR \_ EC](en-align-ltr-ec.md)
+-   [EN \_ ALIGN \_ RTL \_ EC](en-align-rtl-ec.md)
+-   [EN \_ CHANGE](en-change.md)
+-   [EN \_ ERRSPACE](en-errspace.md)
+-   [EN \_ HSCROLL](en-hscroll.md)
+-   [EN \_ KILLFOCUS](en-killfocus.md)
+-   [EN \_ MAXTEXT](en-maxtext.md)
+-   [EN \_ SETFOCUS](en-setfocus.md)
+-   [EN \_ UPDATE](en-update.md)
+-   [EN \_ VSCROLL](en-vscroll.md)
+-   [**WM \_ CTLCOLOREDIT**](wm-ctlcoloredit.md)
 
  
 

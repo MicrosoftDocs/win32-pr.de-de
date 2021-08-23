@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fee207d7a17f12cc81036fbd4f82ec49a99f4a31
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e31829829a99dc613cfeeeda7ad8a9871c1a3ec4fee99220b804b171bbdcdc29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074784"
 ---
 # <a name="cbasepincompleteconnect-method"></a>CBasePin.CompleteConnect-Methode
 
@@ -53,9 +53,9 @@ Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ip
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird an beiden Pins am Ende des Verbindungsprozesses aufgerufen. Der Verbindungspin ruft ihn innerhalb der [**CBasePin::Connect-Methode**](cbasepin-connect.md) auf, und der empfangende Pin ruft ihn innerhalb der [**CBasePin::ReceiveConnection-Methode**](cbasepin-receiveconnection.md) auf.
+Diese Methode wird an beiden Pins am Ende des Verbindungsprozesses aufgerufen. Der Verbindungspin ruft ihn innerhalb der [**CBasePin::Verbinden-Methode**](cbasepin-connect.md) auf, und der empfangende Pin ruft ihn innerhalb der [**CBasePin::ReceiveConnection-Methode**](cbasepin-receiveconnection.md) auf.
 
 In der Basisklasse gibt diese Methode einfach S \_ OK zurück. Wenn eine abgeleitete Klasse Anforderungen zum Abschließen einer Verbindung hat, sollte sie diese Methode überschreiben. Beispielsweise verwendet die [**CBaseOutputPin-Klasse**](cbaseoutputpin.md) diese Methode, um die Speicherzuweisung zu bestimmen.
 
@@ -65,14 +65,14 @@ Wenn bei dieser Methode ein Fehler auftritt, schlägt auch der gesamte Verbindun
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

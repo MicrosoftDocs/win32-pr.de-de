@@ -1,6 +1,6 @@
 ---
-title: Wenn bool-vs
-description: Startet eine, wenn... else... der umdif-vs-Block.
+title: if bool – vs
+description: Startet eine , wenn... oder... endif – vs block.
 ms.assetid: d77e2f81-400c-4997-9c34-426b6e6f47be
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,51 +9,51 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 261ff572cbaf519cc0099f3ab68d1a0becca706f
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
-ms.translationtype: HT
+ms.openlocfilehash: b113c806342d786d258713128bc2cadcbb000235c2639f49e5b57ce3fa3bd2e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104038306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986530"
 ---
-# <a name="if-bool---vs"></a>Wenn bool-vs
+# <a name="if-bool---vs"></a>if bool – vs
 
-Startet eine, wenn... [else](else---vs.md)... der [umdif-vs-](endif---vs.md) Block.
+Startet eine , wenn... [else](else---vs.md)... [endif – vs](endif---vs.md) block.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| Wenn bool |
+| , wenn bool |
 |---------|
 
 
 
- 
+ 
 
-Dabei ist bool eine boolesche Registernummer. Siehe [konstantes boolesches Register](dx9-graphics-reference-asm-vs-registers-constant-boolean.md).
+dabei ist bool eine bool-Registernummer. Weitere Informationen finden Sie unter [Constant Boolean Register](dx9-graphics-reference-asm-vs-registers-constant-boolean.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| Wenn bool                |      | x    | x    | x     | x    | x     |
+| , wenn bool                |      | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Wenn das boolesche Quell Konto in der if-Anweisung "true" ist, wird der Code, der von der if-Anweisung und dem entsprechenden anderen eingeschlossen wird, ausgeführt. Andernfalls wird der Code, der von der [else](else---vs.md)... [EndIf-vs-](endif---vs.md) Anweisungen werden ausgeführt. Diese Anweisung verwendet einen Anweisungs Slot.
+Wenn der boolesche Quellregister in der if-Anweisung TRUE ist, wird der in der if-Anweisung eingeschlossene Code und der entsprechende andere Code ausgeführt. Andernfalls der Code, der von der [else](else---vs.md)... [endif: Vs-Anweisungen](endif---vs.md) werden ausgeführt. Diese Anweisung verwendet einen Anweisungsslot.
 
-, wenn Blöcke eingefügt werden können.
+, wenn Blöcke geschachtelt werden können.
 
-Ein If-Block kann einen Schleifen Block nicht verspannen.
+Ein if-Block kann sich nicht über einen Schleifenblock erstreckt.
 
 ## <a name="example"></a>Beispiel
 
-Diese Anweisung stellt bedingte statische Fluss Steuerung bereit.
+Diese Anweisung stellt eine bedingte statische Flusssteuerung bereit.
 
 
 ```
@@ -76,18 +76,18 @@ endif
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> <dt>
 
-[Else-vs](else---vs.md)
+[else – im Vergleich zu](else---vs.md)
 </dt> <dt>
 
-[umdif-vs](endif---vs.md)
+[endif – im Vergleich zu](endif---vs.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

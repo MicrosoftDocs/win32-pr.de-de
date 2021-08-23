@@ -1,9 +1,9 @@
 ---
-title: 'RWTexture2D:: Operator-Funktion'
-description: 'Gibt eine Ressourcen Variable zurück. | RWTexture2D:: Operator-Funktion'
+title: RWTexture2D::Operator-Funktion
+description: Gibt eine Ressourcenvariable zurück. | RWTexture2D::Operator-Funktion
 ms.assetid: 339dba7d-b0c6-4112-ae40-555661577a3e
 keywords:
-- Operator Function HLSL
+- Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8c1ff25cdf4a0f33d041500f6a81220261f216c4
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 4da16a89eb704e924931b8d3b4e5144d7154eed50f298aa0606b9b0fb5a45f46
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986000"
 ---
-# <a name="rwtexture2doperator--function"></a>RWTexture2D:: Operator-Funktion
+# <a name="rwtexture2doperator--function"></a>RWTexture2D::Operator-Funktion
 
-Gibt eine Ressourcen Variable zurück.
+Gibt eine Ressourcenvariable zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,12 +36,12 @@ R Operator[](
 
 <dl> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint2**
 
-Die Indexposition. Enthält die (x, y)-Koordinaten.
+Die Indexposition. Enthält die Koordinaten (x, y).
 
 </dd> </dl>
 
@@ -49,15 +49,15 @@ Die Indexposition. Enthält die (x, y)-Koordinaten.
 
 Typ: **R**
 
-Eine Ressourcen Variable.
+Eine Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -65,14 +65,14 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [RWTexture2D](sm5-object-rwtexture2d.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

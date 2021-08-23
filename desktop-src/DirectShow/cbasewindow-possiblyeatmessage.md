@@ -1,7 +1,7 @@
 ---
-description: Mit der possiblyeatmessage-Methode kann eine abgeleitete Klasse Nachrichten an ein anderes Fenster weiterleiten.
+description: Die PossiblyEatMessage-Methode ermöglicht einer abgeleiteten Klasse, Nachrichten an ein anderes Fenster weiter zu senden.
 ms.assetid: d8775182-44ed-4df2-b4b8-1fdf289e2c1a
-title: Cbasewindow. possiblyeatmessage-Methode (winutil. h)
+title: CBaseWindow.PossiblyEatMessage-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f218b62ac5464da27b8596992c34ce7ae5efde46
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 851f46d14f949a49c9422256f9b2bda1ba314e5789773121387e89c011f7a424
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016458"
 ---
-# <a name="cbasewindowpossiblyeatmessage-method"></a>Cbasewindow. possiblyeatmessage-Methode
+# <a name="cbasewindowpossiblyeatmessage-method"></a>CBaseWindow.PossiblyEatMessage-Methode
 
-Mit der- `PossiblyEatMessage` Methode kann eine abgeleitete Klasse Nachrichten an ein anderes Fenster weiterleiten.
+Die `PossiblyEatMessage` -Methode ermöglicht es einer abgeleiteten Klasse, Nachrichten an ein anderes Fenster weiter zu senden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,34 +44,34 @@ virtual BOOL PossiblyEatMessage(
 
 <dl> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Nachrichten-ID.
+Nachrichtenbezeichner.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Der erste Message-Parameter.
+Erster Meldungsparameter.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der zweite Meldungs Parameter.
+Zweiter Meldungsparameter.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Nachricht weitergeleitet wurde, andernfalls **false** . Die Basisklasse gibt **false** zurück.
+Gibt **TRUE zurück,** wenn die Nachricht weitergeleitet wurde, andernfalls **FALSE.** Die Basisklasse gibt **FALSE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bevor die [**cbasewindow:: onreceivemess**](cbasewindow-onreceivemessage.md) -Methode eine Nachricht verarbeitet, ruft Sie auf `PossiblyEatMessage` . Wenn `PossiblyEatMessage` **true** zurückgibt, wird die Nachricht von **onreceivemess** ignoriert. Eine abgeleitete Klasse kann `PossiblyEatMessage` überschreiben, sodass einige Nachrichten an ein Besitzer Fenster weitergeleitet werden. Beispielsweise leitet die [**cbasecontrolwindow**](cbasecontrolwindow.md) -Klasse, die von **cbasewindow** abgeleitet wird, Tastatur-und Maus Nachrichten weiter.
+Bevor die [**CBaseWindow::OnReceiveMessage-Methode**](cbasewindow-onreceivemessage.md) eine Nachricht verarbeitet, ruft sie `PossiblyEatMessage` auf. Wenn `PossiblyEatMessage` **TRUE zurückgibt,** **ignoriert OnReceiveMessage** die Nachricht. Eine abgeleitete Klasse kann `PossiblyEatMessage` überschreiben, sodass sie einige Nachrichten an ein Besitzerfenster weiter leitet. Beispielsweise leitet die [**CBaseControlWindow-Klasse,**](cbasecontrolwindow.md) die von **CBaseWindow** ableitung, Tastatur- und Mausnachrichten weiter.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,16 +79,16 @@ Bevor die [**cbasewindow:: onreceivemess**](cbasewindow-onreceivemessage.md) -Me
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

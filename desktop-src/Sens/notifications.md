@@ -1,35 +1,35 @@
 ---
-description: Mithilfe des System Ereignis Benachrichtigungs Diensts können Anwendungen, die von der System Ereignis Benachrichtigung überwachen, Benachrichtigungen von System Ereignissen empfangen. Wenn das angeforderte Ereignis auftritt, benachrichtigt Sens die Anwendung.
+description: Der Systemereignisbenachrichtigungsdienst ermöglicht mobilen Anwendungen den Empfang von Benachrichtigungen von Systemereignissen, die SENS überwacht. Wenn das angeforderte Ereignis auftritt, benachrichtigt SENS die Anwendung.
 ms.assetid: 19311dec-4611-4104-b6e4-ff8f7c8af0e7
-title: Benachrichtigungen (System Ereignis Benachrichtigungsdienst)
+title: Benachrichtigungen (Systemereignisbenachrichtigungsdienst)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 272f0ea60369015328e34d3a83231ab0b254253a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4db908c48c38ccd39c6c9a427b77e3cefffc7b9bf8fad6e464ebdf146a138e57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359464"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003968"
 ---
-# <a name="notifications-system-event-notification-service"></a>Benachrichtigungen (System Ereignis Benachrichtigungsdienst)
+# <a name="notifications-system-event-notification-service"></a>Benachrichtigungen (Systemereignisbenachrichtigungsdienst)
 
-Mithilfe des System Ereignis Benachrichtigungs Diensts können Anwendungen, die von der System Ereignis Benachrichtigung überwachen, Benachrichtigungen von System Ereignissen empfangen. Wenn das angeforderte Ereignis auftritt, benachrichtigt Sens die Anwendung.
+Der Systemereignisbenachrichtigungsdienst ermöglicht mobilen Anwendungen den Empfang von Benachrichtigungen von Systemereignissen, die SENS überwacht. Wenn das angeforderte Ereignis auftritt, benachrichtigt SENS die Anwendung.
 
-Sens kann Anwendungen über drei Klassen von System Ereignissen Benachrichtigen:
+SENS kann Anwendungen über drei Klassen von Systemereignissen benachrichtigen:
 
--   TCP/IP-Netzwerkereignisse, z. b. der Status einer TCP/IP-Netzwerkverbindung oder die Qualität der Verbindung.
--   Benutzer Anmelde Ereignisse.
--   Akku-und Strom Leistungs Ereignisse.
+-   TCP/IP-Netzwerkereignisse, z. B. der Status einer TCP/IP-Netzwerkverbindung oder die Qualität der Verbindung.
+-   Benutzeranmeldungsereignisse.
+-   Akku- und Wechselstromereignisse.
 
 Beispielsweise kann eine Anwendung eines der folgenden Systemereignisse abonnieren:
 
--   Einrichtung der Netzwerk Konnektivität
--   Benachrichtigung, wenn ein angegebenes Ziel innerhalb der angegebenen qoc (Quality of Connection)-Parameter erreicht werden kann
--   Der Computer wurde in den Akku Betrieb gewechselt.
+-   Einrichtung der Netzwerkkonnektivität
+-   Benachrichtigung, wenn ein angegebenes Ziel innerhalb der angegebenen QOC-Parameter (Quality of Connection) erreicht werden kann
+-   Der Computer wurde in den Akkubetrieb umgeschaltet.
 -   Der Prozentsatz der verbleibenden Akkuleistung liegt innerhalb eines angegebenen Parameters.
--   Geplante Ereignisse mithilfe des Synchronisierungs-Managers
+-   Geplante Ereignisse mit dem Synchronisierungs-Manager treten auf
 
-**Windows Server 2008 R2 und Windows 7:** Der Abonnent hat maximal 3 Minuten Zeit, um auf eine Benachrichtigung über die [**isenslogon**](/windows/desktop/api/Sensevts/nn-sensevts-isenslogon) -und [**ISensLogon2**](/windows/desktop/api/Sensevts/nn-sensevts-isenslogon2) -Schnittstellen zu antworten. Nach drei Minuten bricht er den Rückruf von Abonnenten ab und hebt die Blockierung des Benachrichtigungs Threads auf. Wenn ein längerer Vorgang erforderlich ist, um auf die Benachrichtigung zu antworten, kehren Sie von **isenslogon** oder **ISensLogon2** so schnell wie möglich zurück, und öffnen Sie einen anderen Thread für die Verarbeitung.
+**Windows Server 2008 R2 und Windows 7:** Der Abonnent hat maximal drei Minuten Zeit, um auf eine Benachrichtigung über die Schnittstellen [**ISensLogon**](/windows/desktop/api/Sensevts/nn-sensevts-isenslogon) und [**ISensLogon2**](/windows/desktop/api/Sensevts/nn-sensevts-isenslogon2) zu reagieren. Nach 3 Minuten bricht SENS den Aufruf von Abonnenten ab und hebt die Blockierung des Benachrichtigungsthreads auf. Wenn ein längerer Vorgang erforderlich ist, um auf die Benachrichtigung zu reagieren, kehren Sie so schnell wie möglich von **ISensLogon** oder **ISensLogon2** zurück, und öffnen Sie einen anderen Thread für die Verarbeitung.
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: TTM_SETWINDOWTHEME Meldung (kommstrg. h)
-description: Legt den visuellen Stil eines QuickInfo-Steuer Elements fest.
+title: TTM_SETWINDOWTHEME (Commctrl.h)
+description: Legt den visuellen Stil eines QuickInfo-Steuerelements fest.
 ms.assetid: eeddb91e-8eb8-4480-9ab2-5efa9e3ef48a
 keywords:
-- Windows-Steuerelemente für TTM_SETWINDOWTHEME Meldung
+- TTM_SETWINDOWTHEME meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d9c3f25b62bf0fe38a679234183cd5046f60784f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a3eb53b9ccd56f789fef6d7a95a5e3b77010787400aa553758e04c6674813f88
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119018738"
 ---
-# <a name="ttm_setwindowtheme-message"></a>TTM- \_ SetWindowTheme-Meldung
+# <a name="ttm_setwindowtheme-message"></a>\_TTM-Nachricht "SETWINDOWTHEME"
 
-Legt den visuellen Stil eines QuickInfo-Steuer Elements fest.
+Legt den visuellen Stil eines QuickInfo-Steuerelements fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,7 +35,7 @@ Legt den visuellen Stil eines QuickInfo-Steuer Elements fest.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine Unicode-Zeichenfolge, die den festzulegenden visuellen QuickInfo-Stil enthält.
+Zeiger auf eine Unicode-Zeichenfolge, die den festgelegten visuellen Stil der QuickInfo enthält.
 
 </dd> </dl>
 
@@ -43,10 +43,10 @@ Zeiger auf eine Unicode-Zeichenfolge, die den festzulegenden visuellen QuickInfo
 
 Der Rückgabewert wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -56,9 +56,9 @@ Der Rückgabewert wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

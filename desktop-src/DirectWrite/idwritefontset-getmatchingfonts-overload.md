@@ -1,9 +1,9 @@
 ---
-title: Idwrite-FONTSET getmatchingfonts-Methoden
+title: IDWriteFontSet GetMatchingFonts-Methoden
 description: Gibt eine Teilmenge der Schriftarten zurück, die den angegebenen Kriterien entsprechen.
 ms.assetid: 9f80478e-ed45-58c7-723f-8fe9bd05097b
 keywords:
-- Getmatchingfonts-Methoden direktes Schreiben
+- Direktes Schreiben von GetMatchingFonts-Methoden
 topic_type:
 - apiref
 api_type:
@@ -12,14 +12,14 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 5b19917ebdd2c169b3a3877f03e2b81fe481f717
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 205a5debda8e53bd5bf9fb14ebb8c46917f6cf8fd54f3b3680a8bdd1d0b58ed2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119071674"
 ---
-# <a name="idwritefontsetgetmatchingfonts-methods"></a>Idwrite Test FONTSET:: getmatchingfonts-Methoden
+# <a name="idwritefontsetgetmatchingfonts-methods"></a>IDWriteFontSet::GetMatchingFonts-Methoden
 
 Gibt eine Teilmenge der Schriftarten zurück, die den angegebenen Kriterien entsprechen.
 
@@ -27,18 +27,18 @@ Gibt eine Teilmenge der Schriftarten zurück, die den angegebenen Kriterien ents
 
 
 
-| Methode                                                                                                                                                             | BESCHREIBUNG                                                                                 |
+| Methode                                                                                                                                                             | Beschreibung                                                                                 |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|
-| [**Getmatchingfonts (Konstante WCHAR \* , dwrite- \_ Schrift Breite \_ , dwrite- \_ Schriftart \_ Streckung, dwrite- \_ Schriftart \_ Stil, idschreitefontset \* \* )**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefontset-getmatchingfonts(wcharconst_dwrite_font_weight_dwrite_font_stretch_dwrite_font_style_idwritefontset)) | Gibt eine Liste von Schriftarten innerhalb der angegebenen WWS-Familie zurück, die nach WWS-Entfernung priorisiert ist.<br/> |
-| [**Getmatchingfonts (Konstante dwrite- \_ Schriftart \_ Eigenschaft \* , UInt32, idschreitefontset \* \* )**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefontset-getmatchingfonts(dwrite_font_propertyconst_uint32_idwritefontset))                                          | Gibt eine Teilmenge der Schriftarten zurück, die von den angegebenen Eigenschaften gefiltert werden.<br/>                      |
+| [**GetMatchingFonts(const \* WCHAR, DWRITE \_ FONT \_ WEIGHT, DWRITE \_ FONT \_ STRETCH, DWRITE \_ FONT \_ STYLE, IDWriteFontSet \* \* )**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefontset-getmatchingfonts(wcharconst_dwrite_font_weight_dwrite_font_stretch_dwrite_font_style_idwritefontset)) | Gibt eine Liste von Schriftarten innerhalb der angegebenen WWS-Familie zurück, die nach WWS-Entfernung priorisiert ist.<br/> |
+| [**GetMatchingFonts(const DWRITE \_ FONT \_ PROPERTY , \* UINT32, IDWriteFontSet \* \* )**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefontset-getmatchingfonts(dwrite_font_propertyconst_uint32_idwritefontset))                                          | Gibt eine Teilmenge der Schriftarten zurück, die nach den angegebenen Eigenschaften gefiltert werden.<br/>                      |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Idschreitefontset**](/windows/win32/api/dwrite_3/nn-dwrite_3-idwritefontset)
+[**IDWriteFontSet**](/windows/win32/api/dwrite_3/nn-dwrite_3-idwritefontset)
 </dt> </dl>
 
  

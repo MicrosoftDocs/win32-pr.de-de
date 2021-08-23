@@ -1,7 +1,7 @@
 ---
-description: Gibt den samplerindex zurück.
+description: Gibt den Samplerindex zurück.
 ms.assetid: vs|directx_sdk|~\id3dxconstanttable__getsamplerindex.htm
-title: 'ID3DXConstantTable:: getsamplerindex-Methode (D3DX9Shader. h)'
+title: ID3DXConstantTable::GetSamplerIndex-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f803b6e129ac20b8a22ed2393ab941698c02d3d1
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 65dac22cc15e93198e7d494986b2279ae7e1d11fdb3c8cb65b3caddf9b905595
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106366651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987570"
 ---
-# <a name="id3dxconstanttablegetsamplerindex-method"></a>ID3DXConstantTable:: getsamplerindex-Methode
+# <a name="id3dxconstanttablegetsamplerindex-method"></a>ID3DXConstantTable::GetSamplerIndex-Methode
 
-Gibt den samplerindex zurück.
+Gibt den Samplerindex zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,20 +40,20 @@ UINT GetSamplerIndex(
 
 <dl> <dt>
 
-*hconstant* \[ vorgenommen\]
+*hConstant* \[ out\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Der samplerhandle.
+Das Samplerhand handle.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Gibt die samplerindexnummer aus der Konstanten Tabelle zurück.
+Gibt die Samplerindexnummer aus der konstanten Tabelle zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Gibt die samplerindexnummer aus der Konstanten Tabelle zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: 'Copy-Methode der CIM_Directory-Klasse: Die Copy-Methode kopiert die im Objektpfad angegebene logische Datei (oder das Verzeichnis) an den speicherort, der durch den Eingabeparameter angegeben wird.'
+description: 'Copy-Methode der CIM_Directory Klasse: Die Copy-Methode kopiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist, an den vom Eingabeparameter angegebenen Speicherort.'
 ms.assetid: 71481cc8-9052-4c62-9c26-6887ea646ee1
 ms.tgt_platform: multiple
 title: Copy-Methode der CIM_Directory-Klasse
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 6aff8ce62cf0358f494d5b3d83872b831e07ec4b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: fb80c13ad25bac8a50764cd6e34127217e4476336af4690a519ba7adfc46948f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119020678"
 ---
 # <a name="copy-method-of-the-cim_directory-class"></a>Copy-Methode der CIM \_ Directory-Klasse
 
-Die **Copy-Methode** kopiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist, an den Speicherort, der durch den Eingabeparameter angegeben wird. Eine Kopie wird nicht unterstützt, wenn das Überschreiben einer vorhandenen logischen Datei erforderlich ist. Diese Methode wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Die **Copy-Methode** kopiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist, an den vom Eingabeparameter angegebenen Speicherort. Eine Kopie wird nicht unterstützt, wenn das Überschreiben einer vorhandenen logischen Datei erforderlich ist. Diese Methode wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ uint32 Copy(
 *FileName* \[ In\]
 </dt> <dd>
 
-Vollqualifizierte Name der Kopie der Zieldatei (oder des Verzeichnisses).
+Vollqualifizierter Name der Kopie der Zieldatei (oder des Zielverzeichnisses).
 
 Beispiel: "c: \\ temp \\ newdirectory"
 
@@ -72,7 +72,7 @@ Erfolg.
 **2**
 </dt> <dd>
 
-Der Zugriff wurde verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
@@ -100,7 +100,7 @@ Das Objekt ist bereits vorhanden.
 **11**
 </dt> <dd>
 
-Dateisystem nicht NTFS.
+Dateisystem, nicht NTFS.
 
 </dd> <dt>
 
@@ -153,7 +153,7 @@ Ungültiger Parameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
@@ -163,7 +163,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |

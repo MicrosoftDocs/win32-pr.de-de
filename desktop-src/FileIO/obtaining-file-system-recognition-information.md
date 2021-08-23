@@ -1,21 +1,21 @@
 ---
-description: Die Dateisystem Erkennung ist die Fähigkeit, Speichermedien zu erkennen, die ein gültiges Dateisystem-/volumenlayout enthalten, das noch nicht definiert wurde, aber die Medien können sich selbst durch das vorhanden sein der von Windows definierten Erkennungs Struktur identifizieren.
+description: Dateisystemerkennung ist die Fähigkeit, Speichermedien zu erkennen, die ein gültiges Dateisystem-/Volumelayout enthalten, das noch nicht definiert wurde, aber das Medium kann sich selbst identifizieren, indem die Erkennungsstruktur vorhanden ist, die intern durch Windows definiert wird.
 ms.assetid: 23ed6de0-25ff-4841-91f6-94b487dee613
-title: Abrufen von Informationen zur Datei System Erkennung
+title: Abrufen von Informationen zur Dateisystemerkennung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18cafa9f1c7cf6cbbe11d434aff3db424a1cd0a0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2c10b538f9e98ecab3f8f8f72784ef658c068f780388dc7b600be68b76380757
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148506"
 ---
-# <a name="obtaining-file-system-recognition-information"></a>Abrufen von Informationen zur Datei System Erkennung
+# <a name="obtaining-file-system-recognition-information"></a>Abrufen von Informationen zur Dateisystemerkennung
 
-Die [Dateisystem Erkennung](file-system-recognition.md) ist die Fähigkeit, Speichermedien zu erkennen, die ein gültiges Dateisystem-/volumenlayout enthalten, das noch nicht definiert wurde, aber die Medien können sich selbst durch das vorhanden sein der von Windows definierten Erkennungs Struktur identifizieren.
+[Dateisystemerkennung](file-system-recognition.md) ist die Fähigkeit, Speichermedien zu erkennen, die ein gültiges Dateisystem-/Volumelayout enthalten, das noch nicht definiert wurde, aber das Medium kann sich selbst identifizieren, indem die Erkennungsstruktur vorhanden ist, die intern durch Windows definiert wird.
 
-Da kein vorhandenes Dateisystem ein neues Datenträger Layout erkennt, wird das Volume vom RAW-Dateisystem bereitgestellt, und es wird direkter Zugriff auf Blockebene bereitgestellt. Das "RAW"-Dateisystem, das in *Ntoskrnl* integriert ist, kann die Dateisystem-Erkennungs Struktur lesen und Anwendungen Zugriff auf solche Strukturen über die [**FSCTL \_ Query \_ file \_ System \_ Recognition**](/windows/win32/api/winioctl/ni-winioctl-fsctl_query_file_system_recognition)der Dateisystem Steuerung anfordern, wie im folgenden Beispiel gezeigt.
+Da kein vorhandenes Dateisystem ein neues Datenträgerlayout erkennt, stellt das RAW-Dateisystem das Volume bereit und bietet direkten Zugriff auf Blockebene. Das in *NtosKrnl* integrierte "RAW"-Dateisystem kann die Dateisystemerkennungsstruktur lesen und Anwendungen über die Dateisystemsteuerungsanforderung [**FSCTL \_ QUERY FILE SYSTEM \_ \_ \_ RECOGNITION**](/windows/win32/api/winioctl/ni-winioctl-fsctl_query_file_system_recognition)Zugriff auf solche Strukturen gewähren, wie im folgenden Beispiel gezeigt.
 
 
 ```C++
@@ -92,13 +92,13 @@ exit:
 
 <dl> <dt>
 
-[Datei System Erkennung](file-system-recognition.md)
+[Dateisystemerkennung](file-system-recognition.md)
 </dt> <dt>
 
-[**Datei \_ System- \_ Erkennungs \_ Struktur**](file-system-recognition-structure.md)
+[**\_ \_ \_ DATEISYSTEMERKENNUNGSSTRUKTUR**](file-system-recognition-structure.md)
 </dt> <dt>
 
-[**FSCTL- \_ Abfrage \_ Datei \_ System \_ Erkennung**](/windows/win32/api/winioctl/ni-winioctl-fsctl_query_file_system_recognition)
+[**FSCTL \_ QUERY \_ FILE \_ SYSTEM \_ RECOGNITION**](/windows/win32/api/winioctl/ni-winioctl-fsctl_query_file_system_recognition)
 </dt> </dl>
 
  

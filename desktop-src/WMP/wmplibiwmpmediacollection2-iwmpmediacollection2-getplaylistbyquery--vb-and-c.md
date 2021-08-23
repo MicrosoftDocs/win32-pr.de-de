@@ -1,11 +1,11 @@
 ---
-title: IWMPMediaCollection2 getplaylistbyquery-Methode
-description: Die getplaylistbyquery-Methode gibt eine iwmpwiedergabe-Schnittstelle zurück, die Zugriff auf Medienelemente bietet, die den Abfragebedingungen entsprechen.
+title: IWMPMediaCollection2 getPlaylistByQuery-Methode
+description: Die getPlaylistByQuery-Methode gibt eine IWMPPlaylist-Schnittstelle zurück, die Zugriff auf Medienelemente bereitstellt, die den Abfragebedingungen entsprechen.
 ms.assetid: ebbb631f-1faa-4c89-8c1d-cc2b128126b8
 keywords:
-- getplaylistbyquery-Methode, Windows-Media Player
-- getplaylistbyquery-Methode, Windows Media Player, IWMPMediaCollection2-Schnittstelle
-- IWMPMediaCollection2 Interface, Windows Media Player, getplaylistbyquery-Methode
+- getPlaylistByQuery-Methode Windows Media Player
+- getPlaylistByQuery-Methode Windows Media Player , IWMPMediaCollection2-Schnittstelle
+- IWMPMediaCollection2-Schnittstelle Windows Media Player , getPlaylistByQuery-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 109f6e49e77d1cfa8c6d3b45bef1d011faf21a8b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: acd80467c78aac832c5ac2784281abcf07975a1956ee304c734b2b45b82901fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053578"
 ---
-# <a name="iwmpmediacollection2getplaylistbyquery-method"></a>IWMPMediaCollection2:: getplaylistbyquery-Methode
+# <a name="iwmpmediacollection2getplaylistbyquery-method"></a>IWMPMediaCollection2::getPlaylistByQuery-Methode
 
-Die- `getPlaylistByQuery` Methode gibt eine **iwmpwiedergabe** -Schnittstelle zurück, die Zugriff auf Medienelemente bietet, die den Abfragebedingungen entsprechen.
+Die `getPlaylistByQuery` -Methode gibt eine **IWMPPlaylist-Schnittstelle** zurück, die Zugriff auf Medienelemente bereitstellt, die den Abfragebedingungen entsprechen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,43 +59,43 @@ Implements IWMPMediaCollection2.getPlaylistByQuery
 
 <dl> <dt>
 
-*pquery* \[ in\]
+*pQuery* \[ In\]
 </dt> <dd>
 
-Die **WMPLib. iwmpquery** -Schnittstelle, die die Abfrage darstellt.
+Die **WMPLib.IWMPQuery-Schnittstelle,** die die Abfrage darstellt.
 
 </dd> <dt>
 
-*bstraumediatype* \[ in\]
+*bstrMediaType* \[ In\]
 </dt> <dd>
 
-Die **System. String** , die den Medientyp ist. Muss einen der folgenden Werte enthalten: "Audiodatei", "Video", "Photo", "Wiedergabeliste" oder "Other".
+Die **System.String,** bei der es sich um den Medientyp handelt. Muss einen der folgenden Werte enthalten: "audio", "video", "photo", "playlist" oder "other".
 
 </dd> <dt>
 
-*bstrausortattribute* \[ in\]
+*bstrSortAttribute* \[ In\]
 </dt> <dd>
 
-Die **System. String** , die der für die Sortierung verwendete Attribut Name ist. Eine Zeichenfolge der Länge 0 (null) bedeutet, dass keine Sortierung angewendet wird.
+Die **System.String,** bei der es sich um den Attributnamen handelt, der für die Sortierung verwendet wird. Eine Zeichenfolge der Länge 0 (null) bedeutet, dass keine Sortierung angewendet wird.
 
 </dd> <dt>
 
-*fsortascending* \[ in\]
+*fSortAscending* \[ In\]
 </dt> <dd>
 
-Der **System. Boolean** -Wert, der angibt, ob die Wiedergabeliste in aufsteigender Reihenfolge sortiert werden muss.
+Der **System.Boolean-Wert,** der angibt, ob die Wiedergabeliste in aufsteigender Reihenfolge sortiert werden muss.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmpwiedergabe** -Schnittstelle für die abgerufene Wiedergabeliste.
+Eine **WMPLib.IWMPPlaylist-Schnittstelle** für die abgerufene Wiedergabeliste.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Verbund Abfragen mit **iwmpquery** wird die Groß-/Kleinschreibung nicht beachtet
+Bei zusammengesetzten Abfragen, die **IWMPQuery** verwenden, wird die Groß-/Kleinschreibung nicht beachtet.
 
-Wenn die durch den *pquery* -Parameter angegebene Verbund Abfrage eine Bedingung enthält, die auf dem **mediaType** -Attribut basiert, wird diese Bedingung ignoriert. Der Wert für den *bstraumediatype* -Parameter wird immer verwendet. Wenn die Verbund Abfrage z. b. die Bedingung "MediaType ist mit Audiodaten" enthält und der Wert für den *botmediatype* -Parameter "Video" ist, enthält die resultierende Wiedergabeliste nur Video Elemente.
+Wenn die vom *pQuery-Parameter* angegebene Verbundabfrage eine Bedingung enthält, die auf dem **MediaType-Attribut** basiert, wird diese Bedingung ignoriert. Der Wert für den *bstrMediaType-Parameter* wird immer verwendet. Wenn die Verbundabfrage beispielsweise die Bedingung "MediaType Equals audio" enthält und der Wert für den *bstrMediaType-Parameter* "video" ist, enthält die resultierende Wiedergabeliste nur Videoelemente.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -113,13 +113,13 @@ Wenn die durch den *pquery* -Parameter angegebene Verbund Abfrage eine Bedingung
 
 <dl> <dt>
 
-[**IWMPMediaCollection2-Schnittstelle (VB und c#)**](iwmpmediacollection2--vb-and-c.md)
+[**IWMPMediaCollection2-Schnittstelle (VB und C#)**](iwmpmediacollection2--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpquery-Schnittstelle (VB und c#)**](iwmpquery--vb-and-c.md)
+[**IWMPQuery-Schnittstelle (VB und C#)**](iwmpquery--vb-and-c.md)
 </dt> <dt>
 
 [**MediaType-Attribut**](mediatype-attribute.md)

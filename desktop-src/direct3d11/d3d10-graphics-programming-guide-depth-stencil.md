@@ -1,29 +1,29 @@
 ---
-title: Konfigurieren von Depth-Stencil Funktionen
-description: In diesem Abschnitt werden die Schritte zum Einrichten des tiefen Schablone-Puffers und der Status der tiefen Schablone für die Ausgabe-Fusion-Phase behandelt.
+title: Konfigurieren Depth-Stencil Funktionalität
+description: In diesem Abschnitt werden die Schritte zum Einrichten des Tiefenschablonenpuffers und des Tiefenschablonenzustands für die Ausgabezusammenführungsphase beschrieben.
 ms.assetid: e8f52d5f-266f-4e2c-b38d-d7fd9e27fe1f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 65bf48b0ba9a782be25568ac3fc0569314dae76e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e994c5a11215d245d8101edff410a91ffb788583b07f651fdfbd1f2771d7deab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990190"
 ---
-# <a name="configuring-depth-stencil-functionality"></a>Konfigurieren von Depth-Stencil Funktionen
+# <a name="configuring-depth-stencil-functionality"></a>Konfigurieren Depth-Stencil Funktionalität
 
-In diesem Abschnitt werden die Schritte zum Einrichten des tiefen Schablone-Puffers und der Status der tiefen Schablone für die Ausgabe-Fusion-Phase behandelt.
+In diesem Abschnitt werden die Schritte zum Einrichten des Tiefenschablonenpuffers und des Tiefenschablonenzustands für die Ausgabezusammenführungsphase beschrieben.
 
--   [Erstellen einer Depth-Stencil Ressource](#create-a-depth-stencil-resource)
--   [Depth-Stencil Zustand erstellen](#create-depth-stencil-state)
--   [Binden von Depth-Stencil Daten an die OM-Phase](#bind-depth-stencil-data-to-the-om-stage)
+-   [Erstellen einer Depth-Stencil-Ressource](#create-a-depth-stencil-resource)
+-   [Erstellen Depth-Stencil Zustands](#create-depth-stencil-state)
+-   [Binden Depth-Stencil Daten an die OM-Phase](#bind-depth-stencil-data-to-the-om-stage)
 
-Wenn Sie wissen, wie Sie den tiefen Schablone-Puffer und den entsprechenden Status der tiefen Schablone verwenden, finden Sie weitere Informationen unter [Advanced-Stencil-Techniken](#advanced-stencil-techniques).
+Sobald Sie wissen, wie Sie den Tiefenschablonenpuffer und den entsprechenden Tiefenschablonenzustand verwenden, lesen Sie [erweiterte Schablonentechniken.](#advanced-stencil-techniques)
 
-## <a name="create-a-depth-stencil-resource"></a>Erstellen einer Depth-Stencil Ressource
+## <a name="create-a-depth-stencil-resource"></a>Erstellen einer Depth-Stencil-Ressource
 
-Erstellen Sie den tiefen Schablonen Puffer mithilfe einer Textur Ressource.
+Erstellen Sie den Tiefenschablonenpuffer mithilfe einer Texturressource.
 
 
 ```
@@ -45,9 +45,9 @@ hr = pd3dDevice->CreateTexture2D( &descDepth, NULL, &pDepthStencil );
 
 
 
-## <a name="create-depth-stencil-state"></a>Depth-Stencil Zustand erstellen
+## <a name="create-depth-stencil-state"></a>Erstellen Depth-Stencil Zustands
 
-Der Status der tiefen Schablone teilt der Ausgabe-Fusion-Phase mit, wie der [tiefen Schablonen Test](d3d10-graphics-programming-guide-output-merger-stage.md)durchgeführt werden soll. Der tiefen Schablone-Test bestimmt, ob ein bestimmtes Pixel gezeichnet werden soll.
+Der Tiefenschablonenzustand teilt der Ausgabezusammenführungsphase mit, wie der [Tiefenschablonentest](d3d10-graphics-programming-guide-output-merger-stage.md)ausgeführt werden soll. Der Tiefenschablonentest bestimmt, ob ein bestimmtes Pixel gezeichnet werden soll.
 
 
 ```
@@ -82,13 +82,13 @@ pd3dDevice->CreateDepthStencilState(&dsDesc, &pDSState);
 
 
 
-Depthenable und stencilenable aktivieren (und deaktivieren) tiefen-und Schablonen Tests. Legen Sie depthenable auf **false** fest, um tiefen Tests zu deaktivieren und das Schreiben in den tiefen Puffer zu verhindern. Legen Sie "Schablone" auf " **false** " fest, um Schablonen Tests zu deaktivieren und das Schreiben in den Schablonen Puffer zu verhindern (wenn "depthenable" den Wert " **false** " hat und "stencilenable" den Wert " **true**" hat, wird der tiefen Test immer in der Schablone
+DepthEnable und StencilEnable aktivieren (und deaktivieren) Tiefen- und Schablonentests. Legen Sie DepthEnable auf **FALSE** fest, um Tiefentests zu deaktivieren und das Schreiben in den Tiefenpuffer zu verhindern. Legen Sie StencilEnable auf **FALSE** fest, um Schablonentests zu deaktivieren und das Schreiben in den Schablonenpuffer zu verhindern (wenn DepthEnable **auf FALSE** und StencilEnable auf **TRUE** festgelegt ist, besteht der Tiefentest immer im Schablonenvorgang).
 
-Depthenable wirkt sich nur auf die Ausgabe-Fusion-Phase aus. es wirkt sich nicht auf das Abschneiden, die tiefen Verschiebung oder das Festlegen von Werten aus, bevor die Daten in einen PixelShader eingegeben werden.
+DepthEnable wirkt sich nur auf die Ausgabezusammenführungsphase aus. Sie wirkt sich nicht auf clipping, depth bias oder das Zusammenbinden von Werten aus, bevor die Daten in einen Pixel-Shader eingegeben werden.
 
-## <a name="bind-depth-stencil-data-to-the-om-stage"></a>Binden von Depth-Stencil Daten an die OM-Phase
+## <a name="bind-depth-stencil-data-to-the-om-stage"></a>Binden Depth-Stencil Daten an die OM-Phase
 
-Binden Sie den Status der tiefen Schablone.
+Binden Sie den Tiefenschablonenzustand.
 
 
 ```
@@ -98,7 +98,7 @@ pDevice->OMSetDepthStencilState(pDSState, 1);
 
 
 
-Binden Sie die Tiefe der tiefen Schablone mithilfe einer Ansicht.
+Binden Sie die Tiefenschablonenressource mithilfe einer Ansicht.
 
 
 ```
@@ -121,97 +121,97 @@ pd3dDeviceContext->OMSetRenderTargets( 1,          // One rendertarget view
 
 
 
-Ein Array von renderzielsichten kann an [**Verknüpfung id3d11devicecontext aus:: omantrendertargets**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-omsetrendertargets)übermittelt werden. alle renderzielsichten entsprechen jedoch einer einzelnen Ansicht der tiefen Schablone. Das renderzielarray in Direct3D 11 ist eine Funktion, die es einer Anwendung ermöglicht, auf mehreren Renderingzielen gleichzeitig auf primitiver Ebene zu renderzielen. Renderzielarrays bieten eine bessere Leistung im Vergleich zur individuellen Festlegung von renderzielen mit mehreren Aufrufen von **Verknüpfung id3d11devicecontext aus:: omsetrendertargets** (im Wesentlichen die Methode, die in Direct3D 9 verwendet wird).
+Ein Array von Renderzielansichten kann an [**ID3D11DeviceContext::OMSetRenderTargets**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-omsetrendertargets)übergeben werden. Alle diese Renderzielansichten entsprechen jedoch einer einzelnen Tiefenschablonenansicht. Das Renderzielarray in Direct3D 11 ist ein Feature, das es einer Anwendung ermöglicht, auf mehreren Renderzielen gleichzeitig auf primitiver Ebene zu rendern. Renderzielarrays bieten eine höhere Leistung als das individuelle Festlegen von Renderzielen mit mehreren Aufrufen von **ID3D11DeviceContext::OMSetRenderTargets** (im Wesentlichen die in Direct3D 9 verwendete Methode).
 
-Renderziele müssen alle den gleichen Ressourcentyp aufweisen. Wenn Multisampling-Antialiasing verwendet wird, müssen alle gebundenen Renderingziele und tiefen Puffer dieselbe Stichproben Anzahl aufweisen.
+Renderziele müssen alle denselben Ressourcentyp aufweisen. Wenn Multisample-Antialiasing verwendet wird, müssen alle gebundenen Renderziele und Tiefenpuffer die gleiche Stichprobenanzahl aufweisen.
 
-Wenn ein Puffer als Renderziel verwendet wird, werden tiefen Schablonen Tests und mehrere Renderingziele nicht unterstützt.
+Wenn ein Puffer als Renderziel verwendet wird, werden Tiefenschablonentests und mehrere Renderziele nicht unterstützt.
 
--   Bis zu 8 Renderziele können gleichzeitig gebunden werden.
--   Alle Renderziele müssen in allen Dimensionen (Breite und Höhe) und Tiefe für die 3D-oder Array Größe für Array Typen die gleiche Größe aufweisen \* .
--   Jedes Renderziel weist möglicherweise ein anderes Datenformat auf.
--   Schreib Masken steuern, welche Daten in ein Renderziel geschrieben werden. Mit dem Ausgabe Schreibvorgang werden Masken Steuerelemente für ein pro-Renderziel und jede Komponentenebene geschrieben, welche Daten in die Renderziele geschrieben werden.
+-   Bis zu acht Renderziele können gleichzeitig gebunden werden.
+-   Alle Renderziele müssen in allen Dimensionen die gleiche Größe aufweisen (Breite und Höhe und Tiefe für 3D oder Arraygröße für \* Arraytypen).
+-   Jedes Renderziel kann ein anderes Datenformat aufweisen.
+-   Schreibmasken steuern, welche Daten in ein Renderziel geschrieben werden. Das Ausgabesteuerelement "Schreibmasken" auf einem Pro-Renderziel auf Komponentenebene, welche Daten in die Renderziele geschrieben werden.
 
-## <a name="advanced-stencil-techniques"></a>Erweiterte Schablonen Techniken
+## <a name="advanced-stencil-techniques"></a>Erweiterte Schablonentechniken
 
-Der Schablone-Teil des tiefen Schablonen Puffers kann zum Erstellen von renderingeffekten wie zusammensetzen, herabstufen und Gliederung verwendet werden.
+Der Schablonenteil des Tiefenschablonenpuffers kann zum Erstellen von Renderingeffekten wie Compositing, Decaling und Gliederung verwendet werden.
 
--   [Zusammensetzung](#compositing)
--   [Wird abgebrochen](#decaling)
--   [Kontur und Silhouetten](#outlines-and-silhouettes)
+-   [Compositing](#compositing)
+-   [Decaling (Dekalieren)](#decaling)
+-   [Konturen und Umrisse](#outlines-and-silhouettes)
 -   [Zweiseitige Schablone](#two-sided-stencil)
 -   [Lesen des Depth-Stencil Puffers als Textur](#reading-the-depth-stencil-buffer-as-a-texture)
 
-### <a name="compositing"></a>Zusammensetzung
+### <a name="compositing"></a>Compositing
 
-Die Anwendung kann mit dem Schablonen Puffer 2D-oder 3D-Bilder in eine 3D-Szene zusammensetzen. Eine Maske im Schablone-Puffer wird verwendet, um einen Bereich der Renderingzieloberfläche zu okzieren. Gespeicherte 2D-Informationen, wie z. b. Text oder Bitmaps, können dann in den Bereich "okded" geschrieben werden. Alternativ kann die Anwendung zusätzliche 3D-primitive in den mit der Schablone maskierten Bereich der Renderingzieloberfläche rendern. Sie kann sogar eine ganze Szene darstellen.
+Ihre Anwendung kann den Schablonenpuffer verwenden, um 2D- oder 3D-Bilder in einer 3D-Szene zusammenzufügen. Eine Maske im Schablonenpuffer wird verwendet, um einen Bereich der Renderingzieloberfläche auszublenden. Gespeicherte 2D-Informationen, z. B. Text oder Bitmaps, können dann in den verdeckten Bereich geschrieben werden. Alternativ kann Ihre Anwendung zusätzliche 3D-Primitive in den schablonenmaskierten Bereich der Renderingzieloberfläche rendern. Es kann sogar eine ganze Szene rendern.
 
-Spiele sind häufig mehrere 3D-Szenen zusammengesetzt. Beispielsweise wird bei Fahr spielen in der Regel eine Spiegelung der Rückseite angezeigt. Die Spiegel Datenbank enthält die Ansicht der 3D-Szene hinter dem Treiber. Es handelt sich im Wesentlichen um eine zweite 3D-Szene, die mit der vorwärts Ansicht des Treibers zusammengesetzt wird
+Spiele kombinierten häufig mehrere 3D-Szenen. Beispielsweise zeigen Fahrspiele in der Regel einen Rückspiegel an. Der Spiegel enthält die Ansicht der 3D-Szene hinter dem Treiber. Es handelt sich im Wesentlichen um eine zweite 3D-Szene, die mit der Vorwärtsansicht des Treibers zusammengesetzt ist.
 
-### <a name="decaling"></a>Wird abgebrochen
+### <a name="decaling"></a>Decaling (Dekalieren)
 
-Direct3D-Anwendungen verwenden die-Verwendung, um zu steuern, welche Pixel von einem bestimmten primitiven Bild auf die Renderingzieloberfläche gezeichnet werden. Anwendungen wenden die Abbilder von primitiven an, damit Coplanar-Polygone ordnungsgemäß wieder hergestellt werden können.
+Direct3D-Anwendungen verwenden die Dekalierung, um zu steuern, welche Pixel aus einem bestimmten primitiven Bild auf die Renderingzieloberfläche gezeichnet werden. Anwendungen wenden Decals auf die Bilder von Primitiven an, damit koplanare Polygone ordnungsgemäß gerendert werden können.
 
-Wenn beispielsweise Reifen Markierungen und gelbe Linien auf eine Straßenebene angewendet werden, sollten die Markierungen direkt auf der Straße angezeigt werden. Die z-Werte der Markierungen und der Straße sind jedoch identisch. Daher erzeugt der tiefen Puffer möglicherweise keine saubere Trennung zwischen den beiden. Einige Pixel im Hintergrundtyp können über dem Front-primitiv und umgekehrt gerendert werden. Das resultierende Bild wird angezeigt, um von Frame zu Rahmen zu vershicheln. Dieser Effekt heißt z-Fighting oder Flimmern.
+Wenn Sie z. B. Reifenmarkierungen und gelbe Linien auf eine Fahrstrecke anwenden, sollten die Kennzeichnungen direkt über der Straße angezeigt werden. Die z-Werte der Markierungen und der Straße sind jedoch identisch. Daher erzeugt der Tiefenpuffer möglicherweise keine saubere Trennung zwischen den beiden. Einige Pixel im primitiven Hintergrundelement können über dem ersten Primitiven gerendert werden und umgekehrt. Das resultierende Bild scheint von Frame zu Frame zu shimmern. Dieser Effekt wird als Z-Fighting oder Flimmering bezeichnet.
 
-Um dieses Problem zu beheben, verwenden Sie eine Schablone, um den Abschnitt des hintergrundprimitivs zu maskieren, in dem die Client Zugriffslizenz angezeigt wird. Deaktivieren Sie die z-Pufferung, und Renderern Sie das Bild des Front-Primitivs in den maskierten Bereich der Renderziel-Oberfläche.
+Um dieses Problem zu beheben, verwenden Sie eine Schablone, um den Abschnitt des primitiven Hintergrundelements zu maskieren, in dem die Skalierung angezeigt wird. Deaktivieren Sie die Z-Pufferung, und rendern Sie das Bild des ersten Primitiven in den maskierten Bereich der Renderzieloberfläche.
 
-Zum lösen dieses Problems können mehrere Textur Mischungs Möglichkeiten verwendet werden.
+Mehrere Texturmischungen können verwendet werden, um dieses Problem zu lösen.
 
-### <a name="outlines-and-silhouettes"></a>Kontur und Silhouetten
+### <a name="outlines-and-silhouettes"></a>Konturen und Umrisse
 
-Sie können den Schablonen Puffer für abstraktere Effekte verwenden, z. b. Gliederung und Silhouette.
+Sie können den Schablonenpuffer für abstrakteren Effekt verwenden, z. B. Gliederung und Silhouetting.
 
-Wenn die Anwendung zwei Renderungs Ergebnisse übergibt: eine zum Generieren der Schablonen Maske und eine zweite, um die Schablonen Maske auf das Bild anzuwenden, aber mit den primitiven, die im zweiten Durchlauf etwas kleiner sind, enthält das resultierende Bild nur den Umriss des primitiven. Die Anwendung kann dann den Bereich der Schablone maskiert mit einer voll Tonfarbe ausfüllen, wodurch dem primitiven ein geprägte Bild angezeigt wird.
+Wenn Ihre Anwendung zwei Renderdurchläufe durchläuft – einen zum Generieren der Schablonenmaske und einen zweiten zum Anwenden der Schablonenmaske auf das Bild, aber mit den Primitiven, die im zweiten Durchlauf etwas kleiner sind – enthält das resultierende Bild nur die Kontur des Primitiven. Die Anwendung kann dann den Schablonenmaskenbereich des Bilds mit einer Volltonfarbe füllen, wodurch dem Primitiven ein einprägtes Aussehen gegeben wird.
 
-Wenn die Schablone-Maske dieselbe Größe und Form wie das primitive-Format aufweist, das Sie rendern, enthält das resultierende Bild eine Lücke, in der der primitive entsprechen sollte. Die Anwendung kann dann das Loch mit Black auffüllen, um eine Silhouette des primitiven zu schaffen.
+Wenn die Schablonenmaske die gleiche Größe und Form wie der primitive, den Sie rendern, enthält das resultierende Bild eine Lücke, in der sich der Primitive befinden sollte. Ihre Anwendung kann dann die Lücke mit Schwarz füllen, um eine Mischung des Primitiven zu erzeugen.
 
 ### <a name="two-sided-stencil"></a>Two-Sided Schablone
 
-Schattenvolumes werden zum Zeichnen von Schatten mit dem Schablonen Puffer verwendet. Die Anwendung berechnet die schattenvolumes, die durch die Schattierung von Geometrie umgewandelt werden, indem die Silhouette-Kanten berechnet und vom Licht in eine Gruppe von 3D-Volumes aufgeteilt werden. Diese Volumes werden dann zweimal im Schablonen Puffer gerendert.
+Schattenvolumes werden zum Zeichnen von Schatten mit dem Schablonenpuffer verwendet. Die Anwendung berechnet die Schattenvolumen, die durch verdeckende Geometrie umgewandelt werden, indem die Kanten der Kanten berechnet und vom Licht weg in eine Reihe von 3D-Volumes zusammengestellt werden. Diese Volumes werden dann zweimal in den Schablonenpuffer gerendert.
 
-Das erste Rendering zeichnet nach vorne gerichtete Polygone und erhöht die Schablonen Puffer Werte. Das zweite Rendering zeichnet die rückwärts gerichteten Polygone des Schatten Volumens und Dekremente die Schablonen Puffer Werte. Normalerweise brechen alle inkrementierten und dekrementierten Werte einander ab. Die Szene wurde jedoch bereits mit normaler Geometrie gerendert, sodass einige Pixel den z-Puffer-Test nicht bestanden haben, während das Schatten Volume gerendert wird. Werte, die im Schablonen Puffer verbleiben, entsprechen den im Schatten entsprechenden Pixeln. Diese verbleibenden Schablone-Puffer Inhalte werden als Maske verwendet, um einen großen, umfassenden, vier Vierfache in die Szene zu mischen. Wenn der Schablone-Puffer als Maske fungiert, besteht das Ergebnis darin, die Pixel in den Schatten zu verbergen.
+Das erste Rendern zeichnet vorwärts gerichtete Polygone und erhöht die Schablonenpufferwerte. Beim zweiten Rendern werden die rückwärts gerichteten Polygone des Schattenvolumens zeichnet und die Schablonenpufferwerte dekrementiert. Normalerweise brechen sich alle inkrementierten und dekrementierten Werte gegenseitig ab. Die Szene wurde jedoch bereits mit normaler Geometrie gerendert, sodass einige Pixel beim Z-Puffertest fehlschlagen, wenn das Schattenvolumen gerendert wird. Die werte, die im Schablonenpuffer übrig bleiben, entsprechen den Pixeln im Schatten. Diese verbleibenden Schablonenpufferinhalte werden als Maske verwendet, um ein großes, allumfassendes schwarzes Quader alphanumerierend in die Szene einzublenden. Wenn der Schablonenpuffer als Maske fungiert, besteht das Ergebnis darin, Pixel in den Schatten zu dunkler zu machen.
 
-Dies bedeutet, dass die Schatten Geometrie zweimal pro Lichtquelle gezeichnet wird und somit den Scheitelpunkt Durchsatz der GPU erhöht. Das zweiseitige Schablonen Feature wurde entwickelt, um diese Situation zu mindern. Bei dieser Vorgehensweise gibt es zwei Sätze von Schablone State (unten genannt), jeweils eine Menge für die Vorder-und die andere für die mit der Rückseite gerichteten Dreiecke. Auf diese Weise wird nur ein einzelner Durchlauf pro Schatten Volume pro Licht gezeichnet.
+Dies bedeutet, dass die Schattengeometrie zweimal pro Lichtquelle gezeichnet wird, wodurch der Scheitelpunktdurchsatz der GPU unter Druck gesetzt wird. Die zweiseitige Schablonenfunktion wurde entwickelt, um diese Situation zu entschärfen. Bei diesem Ansatz gibt es zwei Sätze des Schablonenzustands (unten benannt), eine für die vorderen Dreiecke und die andere für die hinteren Dreiecke. Auf diese Weise wird nur ein einzelner Durchlauf pro Schattenvolumen pro Licht gezeichnet.
 
-Ein Beispiel für die zweiseitige Schablonen Implementierung finden Sie im [ShadowVolume10](https://msdn.microsoft.com/library/Ee416427(v=VS.85).aspx)-Beispiel.
+Ein Beispiel für die Implementierung einer zweiseitigen Schablone finden Sie im [ShadowVolume10-Beispiel.](https://msdn.microsoft.com/library/Ee416427(v=VS.85).aspx)
 
 ### <a name="reading-the-depth-stencil-buffer-as-a-texture"></a>Lesen des Depth-Stencil Puffers als Textur
 
-Ein inaktiver tiefen Schablone-Puffer kann von einem Shader als Textur gelesen werden. Eine Anwendung, die einen tiefen Schablone-Puffer liest, wenn eine Textur in zwei Durchläufen gerendert wird, wird der erste Pass in den tiefen Schablone-Puffer geschrieben, und der zweite Durchlauf liest aus dem Puffer. Dadurch kann ein Shader Tiefe-oder Schablonen Werte, die zuvor in den Puffer geschrieben wurden, mit dem Wert für das Pixel vergleichen, das in der Vergangenheit gerendert wird. Das Ergebnis des Vergleichs kann verwendet werden, um Effekte wie z. b. eine Schatten Zuordnung oder weiche Partikel in einem Partikelsystem zu erstellen.
+Ein inaktiver Tiefenschablonenpuffer kann von einem Shader als Textur gelesen werden. Eine Anwendung, die einen Tiefenschablonenpuffer als Textur liest, wird in zwei Durchläufen gerendert, der erste Durchlauf schreibt in den Tiefenschablonenpuffer und der zweite Durchlauf liest aus dem Puffer. Dadurch kann ein Shader Tiefen- oder Schablonenwerte vergleichen, die zuvor in den Puffer geschrieben wurden, mit dem Wert für das geschweifte Pixel, das gerendert wird. Das Ergebnis des Vergleichs kann verwendet werden, um Effekte wie Schattenzuordnung oder weiche Partikel in einem Partikelsystem zu erstellen.
 
-Zum Erstellen eines tiefen Schablone-Puffers, der sowohl als tiefen Schablone als auch als Shaderressource verwendet werden kann, müssen einige Änderungen am Beispielcode im Abschnitt [Erstellen einer Depth-Stencil Ressource](#create-a-depth-stencil-resource) vorgenommen werden.
+Um einen Tiefenschablonenpuffer zu erstellen, der sowohl als Tiefenschablonenressource als auch als Shaderressource verwendet werden kann, müssen einige Änderungen am Beispielcode im Abschnitt [Erstellen einer Depth-Stencil Ressource](#create-a-depth-stencil-resource) vorgenommen werden.
 
--   Die tiefen Schablone-Ressource muss ein typloses Format aufweisen, wie z. b. das DXGI- \_ Format \_ R32 \_ typlose.
+-   Die Tiefenschablonenressource muss ein typloses Format wie DXGI \_ FORMAT \_ R32 \_ TYPELESS aufweisen.
     ```
     descDepth.Format = DXGI_FORMAT_R32_TYPELESS;
     ```
 
     
 
--   Die tiefen Schablone-Ressource muss sowohl die d3d10 Bind- \_ \_ \_ und d3d10 \_ Bind- \_ Shader- \_ ressourcenbindungsflags verwenden.
+-   Die Tiefenschablonenressource muss die Bindungsflags D3D10 \_ BIND \_ DEPTH \_ STENCIL und D3D10 \_ BIND \_ SHADER RESOURCE \_ verwenden.
     ```
     descDepth.BindFlags = D3D10_BIND_DEPTH_STENCIL | D3D10_BIND_SHADER_RESOURCE;
     ```
 
     
 
-Außerdem muss für den tiefen Puffer eine shaderressourcenansicht erstellt werden, die eine [**D3D11 \_ Shader- \_ Ressourcen \_ Ansicht \_**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_shader_resource_view_desc) (Debug-Struktur) und " [**ID3D11Device:: | ateshaderresourceview**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createshaderresourceview)" verwendet. Die Shader-Ressourcen Ansicht verwendet ein typisiertes Format, z. b. das **DXGI- \_ Format \_ R32 \_ float** , das dem typlosen Format entspricht, das beim Erstellen der tiefen Schablone-Ressource angegeben wurde.
+Darüber hinaus muss eine Shaderressourcenansicht für den Tiefenpuffer mithilfe einer [**D3D11 \_ SHADER \_ RESOURCE VIEW \_ \_ DESC-Struktur**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_shader_resource_view_desc) und [**ID3D11Device::CreateShaderResourceView**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createshaderresourceview)erstellt werden. Die Shaderressourcenansicht verwendet ein typisiertes Format wie **DXGI \_ FORMAT \_ R32 \_ FLOAT,** das dem typlosen Format entspricht, das beim Erstellen der Tiefenschablonenressource angegeben wurde.
 
-Im ersten renderdurchlauf wird der tiefen Puffer gebunden, wie im Abschnitt [Binden von Depth-Stencil Daten an den OM-Stufen](#bind-depth-stencil-data-to-the-om-stage) beschrieben. Beachten Sie, dass das Format an die [**D3D11- \_ tiefen \_ Schablone \_ ansichtsansicht \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_depth_stencil_view_desc). Das Format verwendet ein typisiertes Format, z. b. **DXGI- \_ Format \_ d32 \_ float**. Nach dem ersten renderdurchlauf enthält der tiefen Puffer die tiefen Werte für die Szene.
+Im ersten Renderdurchlauf wird der Tiefenpuffer wie im Abschnitt [Binden von Depth-Stencil Daten an die OM-Phase](#bind-depth-stencil-data-to-the-om-stage) beschrieben gebunden. Beachten Sie, dass das format an [**D3D11 \_ DEPTH \_ STENCIL \_ VIEW \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_depth_stencil_view_desc)übergeben wird. Format verwendet ein typisiertes Format wie **DXGI \_ FORMAT \_ D32 \_ FLOAT**. Nach dem ersten Renderdurchlauf enthält der Tiefenpuffer die Tiefenwerte für die Szene.
 
-Im zweiten Renderpass wird die [**Verknüpfung id3d11devicecontext aus:: omsetrendertargets**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-omsetrendertargets) -Funktion verwendet, um die Ansicht der tiefen Schablone auf **null** oder eine andere Tiefe der tiefen Schablone festzulegen, und die Shader-Ressourcen Ansicht wird mithilfe von [**ID3D11EffectShaderResourceVariable:: setresource**](id3dx11effectshaderresourcevariable-setresource.md)an den Shader übergeben. Dies ermöglicht es dem Shader, die tiefen Werte zu suchen, die im ersten Renderingdurchlauf berechnet wurden. Beachten Sie, dass eine Transformation zum Abrufen von tiefen Werten angewendet werden muss, wenn sich die Sicht des ersten Renderpass von dem zweiten renderdurchlauf unterscheidet. Wenn z. b. eine schattenmappenmethode verwendet wird, wird der erste renderdurchlauf aus der Perspektive einer Lichtquelle geleitet, während der zweite renderdurchlauf aus der Perspektive des Viewers erfolgt.
+Im zweiten Renderdurchlauf wird die [**Id3D11DeviceContext::OMSetRenderTargets-Funktion**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-omsetrendertargets) verwendet, um die Tiefenschablonenansicht auf **NULL** oder eine andere Tiefenschablonenressource festzulegen, und die Shaderressourcenansicht wird mit [**id3D11EffectShaderResourceVariable::SetResource**](id3dx11effectshaderresourcevariable-setresource.md)an den Shader übergeben. Dadurch kann der Shader die im ersten Renderingdurchlauf berechneten Tiefenwerte nachschlagen. Beachten Sie, dass eine Transformation angewendet werden muss, um Tiefenwerte abzurufen, wenn sich der Standpunkt des ersten Renderdurchlaufs vom zweiten Renderdurchlauf unterscheidet. Wenn z. B. eine Schattenzuordnungstechnik verwendet wird, wird der erste Renderdurchlauf aus der Perspektive einer Lichtquelle durchgeführt, während der zweite Renderdurchlauf aus sicht des Betrachters erfolgt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ausgabe-Fusion-Phase](d3d10-graphics-programming-guide-output-merger-stage.md)
+[Ausgabezusammenführungsphase](d3d10-graphics-programming-guide-output-merger-stage.md)
 </dt> <dt>
 
-[Pipeline Stufen (Direct3D 10)](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-pipeline-stages)
+[Pipelinestufen (Direct3D 10)](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-pipeline-stages)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

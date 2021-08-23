@@ -1,7 +1,7 @@
 ---
-description: Anwendungen verwenden die Methoden der ID3DXFileEnumObject-Schnittstelle, um die untergeordneten Datei Datenobjekte in der Datei zu durchlaufen und ein untergeordnetes Objekt anhand seiner Globally Unique Identifier (GUID) oder anhand seines Namens abzurufen.
+description: Anwendungen verwenden die Methoden der ID3DXFileEnumObject-Schnittstelle, um die untergeordneten Dateidatenobjekte in der Datei zu durchlaufen und ein untergeordnetes Objekt anhand seines guid (Globally Unique Identifier) oder seines Namens abzurufen.
 ms.assetid: 23b28f07-5832-4163-953b-615d20e781f6
-title: ID3DXFileEnumObject-Schnittstelle (D3DX9Xof. h)
+title: ID3DXFileEnumObject-Schnittstelle (D3DX9Xof.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,42 +14,42 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f9b28f94c8d514f81aaa51426557c825da91c4bf
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4c274a42a5e07f05af3b0b2ffe18dc3fbaf546591f23e6f24906cd1723578303
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119121359"
 ---
 # <a name="id3dxfileenumobject-interface"></a>ID3DXFileEnumObject-Schnittstelle
 
-Anwendungen verwenden die Methoden der ID3DXFileEnumObject-Schnittstelle, um die untergeordneten Datei Datenobjekte in der Datei zu durchlaufen und ein untergeordnetes Objekt anhand seiner Globally Unique Identifier (GUID) oder anhand seines Namens abzurufen.
+Anwendungen verwenden die Methoden der ID3DXFileEnumObject-Schnittstelle, um die untergeordneten Dateidatenobjekte in der Datei zu durchlaufen und ein untergeordnetes Objekt anhand seines guid (Globally Unique Identifier) oder seines Namens abzurufen.
 
 ## <a name="members"></a>Member
 
-Die **ID3DXFileEnumObject** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **ID3DXFileEnumObject** verfügt auch über die folgenden Typen von Membern:
+Die **ID3DXFileEnumObject-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **ID3DXFileEnumObject** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ID3DXFileEnumObject** -Schnittstelle verfügt über diese Methoden.
+Die **ID3DXFileEnumObject-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                  | BESCHREIBUNG                                                                |
+| Methode                                                                  | Beschreibung                                                                |
 |:------------------------------------------------------------------------|:---------------------------------------------------------------------------|
-| [**GetChild**](id3dxfileenumobject--getchild.md)                       | Ruft ein untergeordnetes-Objekt in diesem Datei Datenobjekt ab.<br/>              |
-| [**GetChildren**](id3dxfileenumobject--getchildren.md)                 | Ruft die Anzahl der untergeordneten Objekte in diesem Datei Datenobjekt ab.<br/> |
-| [**Getdataobjectbyid**](id3dxfileenumobject--getdataobjectbyid.md)     | Ruft das Datenobjekt ab, das über die angegebene GUID verfügt.<br/>          |
-| [**Getdataobjectbyname**](id3dxfileenumobject--getdataobjectbyname.md) | Ruft das Datenobjekt ab, das über den angegebenen Namen verfügt.<br/>          |
-| [**GetFile**](id3dxfileenumobject--getfile.md)                         | Ruft das [**ID3DXFile**](id3dxfile.md) -Objekt ab.<br/>            |
+| [**Getchild**](id3dxfileenumobject--getchild.md)                       | Ruft ein untergeordnetes -Objekt in diesem Dateidatenobjekt ab.<br/>              |
+| [**GetChildren**](id3dxfileenumobject--getchildren.md)                 | Ruft die Anzahl der untergeordneten Objekte in diesem Dateidatenobjekt ab.<br/> |
+| [**GetDataObjectById**](id3dxfileenumobject--getdataobjectbyid.md)     | Ruft das Datenobjekt ab, das über die angegebene GUID verfügt.<br/>          |
+| [**GetDataObjectByName**](id3dxfileenumobject--getdataobjectbyname.md) | Ruft das Datenobjekt ab, das über den angegebenen Namen verfügt.<br/>          |
+| [**Getfile**](id3dxfileenumobject--getfile.md)                         | Ruft das [**ID3DXFile-Objekt**](id3dxfile.md) ab.<br/>            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die GUID für die ID3DXFileEnumObject-Schnittstelle ist IID \_ ID3DXFileEnumObject.
 
@@ -68,16 +68,16 @@ typedef interface ID3DXFileEnumObject *LPD3DXFILEENUMOBJECT;
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Xof. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX9Xof.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[D3DX X-Datei Schnittstellen](dx9-graphics-reference-d3dx-x-file-interfaces.md)
+[D3DX X-Dateischnittstellen](dx9-graphics-reference-d3dx-x-file-interfaces.md)
 </dt> </dl>
 
  

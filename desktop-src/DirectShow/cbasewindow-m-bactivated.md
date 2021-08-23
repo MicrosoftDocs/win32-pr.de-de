@@ -1,7 +1,7 @@
 ---
-description: Flag, das angibt, ob das Fenster aktiviert wurde. TRUE gibt an, dass das Fenster aktiviert wurde.
+description: Flag, das angibt, ob das Fenster aktiviert wurde. True gibt an, dass das Fenster aktiviert wurde.
 ms.assetid: 6444c581-53a9-48eb-ba9b-fdb8f09aab5d
-title: 'Cbasewindow:: m_bActivated Member (winutil. h)'
+title: CBaseWindow::m_bActivated-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 344fe429cd6895ad0c900ef4976216a673e035e7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2346a1343e13e9007c1efde62cb18689714245b9d492c5193182915fe7d15ca0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016588"
 ---
-# <a name="cbasewindowm_bactivated-member"></a>Cbasewindow:: m, \_ bactivated-Member
+# <a name="cbasewindowm_bactivated-member"></a>CBaseWindow::m \_ bActivated-Member
 
-Flag, das angibt, ob das Fenster aktiviert wurde. **True** gibt an, dass das Fenster aktiviert wurde.
+Flag, das angibt, ob das Fenster aktiviert wurde. True **gibt an,** dass das Fenster aktiviert wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ BOOL m_bActivated;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BOOL m_bActivated;
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Vergleicht zwei Unicode-Zeichen folgen, um zu bestimmen, ob eine Zeichenfolge ein Präfix der anderen ist.
+description: Vergleicht zwei Unicode-Zeichenfolgen, um zu bestimmen, ob eine Zeichenfolge ein Präfix der anderen ist.
 ms.assetid: 7D859C0A-2F72-49A4-8B49-130DCA103F37
-title: Rtlprefixunicodestring-Funktion (ntddk. h)
+title: RtlPrefixUnicodeString-Funktion (Ntddk.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ntdll.dll
-ms.openlocfilehash: 47382daab1bac5e71098f79a601d89255f1cf0e9
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 28997f3bc85dedb9a18139cec13b9a76a8dd975e4ff57f1380053178bfaab328
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076004"
 ---
-# <a name="rtlprefixunicodestring-function"></a>Rtlprefixunicodestring-Funktion
+# <a name="rtlprefixunicodestring-function"></a>RtlPrefixUnicodeString-Funktion
 
-Vergleicht zwei Unicode-Zeichen folgen, um zu bestimmen, ob eine Zeichenfolge ein Präfix der anderen ist.
+Vergleicht zwei Unicode-Zeichenfolgen, um zu bestimmen, ob eine Zeichenfolge ein Präfix der anderen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ BOOLEAN RtlPrefixUnicodeString(
 
 <dl> <dt>
 
-*Zeichenfolge1* \[ in\]
+*String1* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die erste Zeichenfolge, die möglicherweise ein Präfix der gepufferten Unicode-Zeichenfolge in *Zeichenfolge2* ist.
+Zeiger auf die erste Zeichenfolge, die möglicherweise ein Präfix der gepufferten Unicode-Zeichenfolge bei *String2* ist.
 
 </dd> <dt>
 
-*Zeichenfolge2* \[ in\]
+*String2* \[ In\]
 </dt> <dd>
 
 Zeiger auf die zweite Zeichenfolge.
 
 </dd> <dt>
 
-*CaseInsensitive* \[ in\]
+*CaseInSensitive* \[ In\]
 </dt> <dd>
 
-**True** gibt an, dass die Groß-/Kleinschreibung beim Vergleich ignoriert werden soll.
+True gibt an, dass der Fall beim Vergleich ignoriert werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**True** , wenn *Zeichenfolge1* ein Präfix von *Zeichenfolge2* ist.
+**TRUE,** wenn *String1* ein Präfix von *String2* ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Zeiger auf die zweite Zeichenfolge.
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                    |
 | Zielplattform<br/>          | <dl> <dt>[Universell](https://msdn.microsoft.com/Library/Windows/Hardware/EB2264A4-BAE8-446B-B9A5-19893936DDCA)</dt> </dl> |
-| Header<br/>                   | <dl> <dt>Ntddk. h (einschließlich ntddk. h)</dt> </dl>                                    |
-| Bibliothek<br/>                  | <dl> <dt>Ntdll. lib</dt> </dl>                                                    |
+| Header<br/>                   | <dl> <dt>Ntddk.h (einschließlich Ntddk.h)</dt> </dl>                                    |
+| Bibliothek<br/>                  | <dl> <dt>Ntdll.lib</dt> </dl>                                                    |
 | DLL<br/>                      | <dl> <dt>Ntdll.dll</dt> </dl>                                                    |
 
 
@@ -85,7 +85,7 @@ Zeiger auf die zweite Zeichenfolge.
 
 <dl> <dt>
 
-[**Rtlcompareunicodestring**](rtlcompareunicodestring.md)
+[**RtlCompareUnicodeString**](rtlcompareunicodestring.md)
 </dt> </dl>
 
  

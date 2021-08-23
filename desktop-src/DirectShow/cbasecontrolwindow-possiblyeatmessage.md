@@ -1,7 +1,7 @@
 ---
-description: Die Methode "possiblyeatmessage" leitet Tastatur-und Maus Meldungen an das Fenster "Nachrichten Ausgleich" weiter.
+description: Die Methode PossiblyEatMessage gibt Tastatur- und Mausnachrichten an das Fenster zum Leeren von Nachrichten weiter.
 ms.assetid: 8e344c5d-2f94-454f-89b7-45c539b6e833
-title: Cbasecontrolwindow. possiblyeatmessage-Methode (ctlutil. h)
+title: CBaseControlWindow.PossiblyEatMessage-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9bfadcfbbd6833d8f3e9b65bd39d0cdbef4a006e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 403fb4d170f9c3cf0b7d68d3ac6ce1fdcc9c81a14b1c76d74e67bb64d4d9cc8e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017338"
 ---
-# <a name="cbasecontrolwindowpossiblyeatmessage-method"></a>Cbasecontrolwindow. possiblyeatmessage-Methode
+# <a name="cbasecontrolwindowpossiblyeatmessage-method"></a>CBaseControlWindow.PossiblyEatMessage-Methode
 
-Die `PossiblyEatMessage` -Methode leitet Tastatur-und Maus Meldungen an das Fenster für die Nachrichten Ableitung weiter.
+Die `PossiblyEatMessage` -Methode gibt Tastatur- und Mausnachrichten an das Fenster zum Leeren von Nachrichten weiter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,68 +44,68 @@ BOOL PossiblyEatMessage(
 
 <dl> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Fenster Meldung.
+Fenstermeldung.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Der erste Message-Parameter.
+Erster Meldungsparameter.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der zweite Meldungs Parameter.
+Zweiter Meldungsparameter.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Nachricht an das Fenster weitergeleitet wurde, andernfalls **false** .
+Gibt **TRUE zurück,** wenn die Nachricht an das Fenster weitergeleitet wurde, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Fenster für die Nachrichten Ableitung ist ein Fenster, das für den Empfang bestimmter Maus-und Tastatur Meldungen vorgesehen ist. Anfänglich ist das Fenster **null**. Sie kann durch Aufrufen von [**cbasecontrolwindow::p UT \_ messagedrain**](cbasecontrolwindow-put-messagedrain.md)festgelegt werden.
+Das Fenster zum Leeren von Nachrichten ist ein Fenster, das für den Empfang bestimmter Maus- und Tastaturmeldungen vorgesehen ist. Anfangs ist das Fenster **NULL.** Sie kann durch Aufrufen von [**CBaseControlWindow::p ut \_ MessageDrain festgelegt werden.**](cbasecontrolwindow-put-messagedrain.md)
 
-Wenn das Fenster für die Nachrichten Ableitung nicht **null** ist, werden `PossiblyEatMessage` die folgenden Meldungen an dieses Fenster gesendet:
+Wenn das Fenster zum Leeren von Nachrichten nicht **NULL ist,** `PossiblyEatMessage` werden die folgenden Meldungen an dieses Fenster gesendet:
 
--   WM \_ -Zeichen
--   WM \_ deadchar
--   WM- \_ KeyDown
--   WM- \_ KeyUp
--   WM \_ lbuttondblclk
--   WM \_ lbuttondown
--   WM- \_ lbuttonup
--   WM- \_ mbuttondblclk
--   WM- \_ mbuttondown
--   WM- \_ mbuttonup
--   WM- \_ moueinaktivierung
--   WM- \_ mouseelmove
--   WM \_ nclbuttondblclk
--   WM- \_ nclbuttondown
--   WM- \_ nclbuttonup
--   WM \_ ncmbuttondblclk
--   WM \_ ncmbuttondown
--   WM \_ ncmbuttonup
--   WM- \_ ncmouummove
--   WM \_ ncrbuttondblclk
--   WM- \_ ncrbuttondown
--   WM- \_ ncrbuttonup
--   WM- \_ rbuttondblclk
--   WM- \_ rbuttondown
--   WM- \_ rbuttonup
--   WM- \_ syschar
--   WM \_ sysdeadchar
--   WM \_ syskeydown
--   WM- \_ syskeyup
+-   WM \_ CHAR
+-   WM \_ DEADCHAR
+-   WM \_ KEYDOWN
+-   WM \_ KEYUP
+-   WM \_ LBUTTONDBLCLK
+-   WM \_ LBUTTONDOWN
+-   WM \_ LBUTTONUP
+-   WM \_ MBUTTONDBLCLK
+-   WM \_ MBUTTONDOWN
+-   WM \_ MBUTTONUP
+-   WM \_ MOUSEACTIVATE
+-   WM \_ MOUSEMOVE
+-   WM \_ NCLBUTTONDBLCLK
+-   WM \_ NCLBUTTONDOWN
+-   WM \_ NCLBUTTONUP
+-   WM \_ NCMBUTTONDBLCLK
+-   WM \_ NCMBUTTONDOWN
+-   WM \_ NCMBUTTONUP
+-   WM \_ NCMOUSEMOVE
+-   WM \_ NCRBUTTONDBLCLK
+-   WM \_ NCRBUTTONDOWN
+-   WM \_ NCRBUTTONUP
+-   WM \_ RBUTTONDBLCLK
+-   WM \_ RBUTTONDOWN
+-   WM \_ RBUTTONUP
+-   WM \_ SYSCHAR
+-   WM \_ SYSDEADCHAR
+-   WM \_ SYSKEYDOWN
+-   WM \_ SYSKEYUP
 
-Andere Meldungen werden ignoriert. Wenn das Fenster für die Nachrichten Ableitung **null** ist, ignoriert die Methode alle Fenster Meldungen. Die Methode gibt " **true** " zurück, wenn Sie die Nachricht sendet, andernfalls " **false** ". Die **cbasewindow** -Klasse ruft diese Methode auf, wenn Sie eine Fenster Meldung empfängt.
+Andere Nachrichten werden ignoriert. Wenn das Fenster zum Leeren von Nachrichten **NULL ist,** ignoriert die -Methode alle Fenstermeldungen. Die Methode gibt **TRUE zurück,** wenn sie die Nachricht veröffentlicht, andernfalls **FALSE.** Die **CBaseWindow-Klasse** ruft diese Methode auf, wenn sie eine Fensternachricht empfängt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -113,16 +113,16 @@ Andere Meldungen werden ignoriert. Wenn das Fenster für die Nachrichten Ableitu
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

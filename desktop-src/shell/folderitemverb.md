@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 22f52e3f-875e-4dde-8875-3228639bc7f1
-ms.openlocfilehash: 167fe7b48d68622b108aeb0caf0302c0cabce9f6
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 4f6eb78486516448c65ecbd67b88249251c4d215b65df6f1c6af2e8af003c7c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109840631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119032578"
 ---
 # <a name="folderitemverb-object"></a>FolderItemVerb-Objekt
 
@@ -37,7 +37,7 @@ Das **FolderItemVerb-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                              | BESCHREIBUNG                                                                                  |
+| Methode                              | Beschreibung                                                                                  |
 |:------------------------------------|:---------------------------------------------------------------------------------------------|
 | [**Doit**](folderitemverb-doit.md) | Führt ein Verb für das [**FolderItem**](folderitem.md) aus, das dem Verb zugeordnet ist.<br/> |
 
@@ -51,7 +51,7 @@ Das **FolderItemVerb-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                     | Zugriffstyp          | BESCHREIBUNG                          |
+| Eigenschaft                                                     | Zugriffstyp          | Beschreibung                          |
 |:-------------------------------------------------------------|:---------------------|:-------------------------------------|
 | [**Application**](folderitemverb-application.md)<br/> | Schreibgeschützt<br/> | Nicht implementiert.<br/>          |
 | [**Name**](folderitemverb-name.md)<br/>               | Schreibgeschützt<br/> | Enthält den Namen des Verbs.<br/> |

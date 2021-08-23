@@ -1,7 +1,7 @@
 ---
-description: Die Exportfunktion formatproperties formatiert die Daten, die im Detailbereich der Netzwerkmonitor-Benutzeroberfläche angezeigt werden. Wenn Sie Daten im Detailbereich anzeigen möchten, müssen Sie die Exportfunktion formatproperties in allen Parser-DLLs implementieren.
+description: Die Exportfunktion FormatProperties formatiert die Daten, die im Detailbereich der Netzwerkmonitor Ui angezeigt werden. Wenn Sie Daten im Detailbereich anzeigen möchten, müssen Sie die Exportfunktion FormatProperties in allen Parser-DLLs implementieren.
 ms.assetid: 78e0b4b9-f19e-41cb-8504-635f3f9ac1ee
-title: Formatproperties-Rückruffunktion (Netmon. h)
+title: FormatProperties-Rückruffunktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - UserDefined
 api_location:
 - Netmon.h
-ms.openlocfilehash: 61707b49fa88490e1aa22ac89f33dfd97ec20cbd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6bb0bc74a52569edbb922aa93edd27b53106073ffdafa3a6cacc5808aab71eef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119012248"
 ---
-# <a name="formatproperties-callback-function"></a>Formatproperties-Rückruffunktion
+# <a name="formatproperties-callback-function"></a>Rückruffunktion "FormatProperties"
 
-Die Exportfunktion **formatproperties** formatiert die Daten, die im Detailbereich der Netzwerkmonitor-Benutzeroberfläche angezeigt werden. Wenn Sie Daten im Detailbereich anzeigen möchten, müssen Sie die Exportfunktion **formatproperties** in allen Parser-DLLs implementieren.
+Die **Exportfunktion FormatProperties** formatiert die Daten, die im Detailbereich der Netzwerkmonitor Ui angezeigt werden. Wenn Sie Daten im Detailbereich anzeigen möchten, müssen Sie die **Exportfunktion FormatProperties** in allen Parser-DLLs implementieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,61 +43,61 @@ DWORD FormatProperties(
 
 <dl> <dt>
 
-*hframe* \[ in\]
+*hFrame* \[ In\]
 </dt> <dd>
 
 Handle für den Frame, der analysiert wird.
 
 </dd> <dt>
 
-*lpframe* \[ in\]
+*lpFrame* \[ In\]
 </dt> <dd>
 
 Zeiger auf das erste Byte eines Frames.
 
 </dd> <dt>
 
-*lpprotocol* \[ in\]
+*lpProtocol* \[ In\]
 </dt> <dd>
 
 Zeiger auf den Anfang der Protokolldaten in einem Frame.
 
 </dd> <dt>
 
-*npropertyinsts* \[ in\]
+*nPropertyInsts* \[ In\]
 </dt> <dd>
 
-Anzahl der [propertyinst](propertyinst.md) -Strukturen, die von *lppropinst* bereitgestellt werden.
+Anzahl der [PROPERTYINST-Strukturen,](propertyinst.md) die von *lpPropInst* bereitgestellt werden.
 
 </dd> <dt>
 
-*lppropinst* \[ in\]
+*lpPropInst* \[ In\]
 </dt> <dd>
 
-Zeiger auf ein Array von [propertyinst](propertyinst.md) -Strukturen.
+Zeiger auf ein Array von [PROPERTYINST-Strukturen.](propertyinst.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert " **true**".
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert **TRUE.**
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **false**.
+Wenn die Funktion nicht erfolgreich ist, lautet der Rückgabewert **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Netzwerkmonitor Ruft die **formatproperties** -Funktion auf, um Daten im Detailbereich der Netzwerkmonitor-Benutzeroberfläche anzuzeigen. Normalerweise wird **formatproperties** aufgerufen, um die Zusammenfassungs Zeile für ein Protokoll zu formatieren, und dann alle Eigenschaften Instanzen des Protokolls innerhalb eines Frames zu formatieren. Netzwerkmonitor garantiert jedoch nicht, wie oft **formatproperties** für einen bestimmten Parser aufgerufen wird.
+Netzwerkmonitor ruft die **FormatProperties-Funktion** auf, um Daten im Detailbereich der Netzwerkmonitor-Benutzeroberfläche anzuzeigen. In der Regel wird **FormatProperties** aufgerufen, um die Zusammenfassungszeile für ein Protokoll und dann alle Eigenschafteninstanzen des Protokolls innerhalb eines Frames zu formatieren. Netzwerkmonitor garantiert jedoch nicht, wie oft **FormatProperties** für einen bestimmten Parser aufruft.
 
-Während der Implementierung der **formatproperties** -Funktion ruft der Parser indirekt die [formatpropertyinstance](formatpropertyinstance.md) -Funktion auf, um den generischen Formatierer zu verwenden, den Netzwerkmonitor bereitstellt, oder er kann eine benutzerdefinierte formatiererprozedur aufrufen, die vom Parser definiert wird. Eines der Formatierer muss für jede [propertyinst](propertyinst.md) -Struktur aufgerufen werden, die an die Parser-DLL im *lppropinst* -Parameter übergeben wird.
+Während der Implementierung der **FormatProperties-Funktion** ruft der Parser indirekt die [FormatPropertyInstance-Funktion](formatpropertyinstance.md) auf, um den generischen Formatierer zu verwenden, den Netzwerkmonitor bereitstellt, oder er kann eine benutzerdefinierte Formatierungsprozedur aufrufen, die vom Parser definiert wird. Einer der Formatierer muss für jede [PROPERTYINST-Struktur](propertyinst.md) aufgerufen werden, die im *lpPropInst-Parameter* an die Parser-DLL übergeben wird.
 
 
 
 | Informationen zu                                          | Siehe                                                                |
 |-------------------------------------------------------------|--------------------------------------------------------------------|
-| Welche Parser sind und wie Sie mit Netzwerkmonitor funktionieren.   | [Parser](parsers.md)                                             |
-| Welche Einstiegspunkte in der Parser-DLL enthalten sind.          | [Architektur der Parser-DLL](parser-dll-architecture.md)             |
-| Zum Implementieren von **formatproperties**  gehört ein Beispiel. | [Implementieren von formatproperties](implementing-formatproperties.md) |
-| Gibt an, wie der generische Formatierer verschiedene Datentypen formatiert.  | [Generische formatiererausgabe](generic-formatter-output.md)           |
+| Was Parser sind und wie sie mit Netzwerkmonitor arbeiten.   | [Parser](parsers.md)                                             |
+| Welche Einstiegspunkte in der Parser-DLL enthalten sind.          | [Parser-DLL-Architektur](parser-dll-architecture.md)             |
+| Die Implementierung von **FormatProperties**  umfasst ein Beispiel. | [Implementieren von FormatProperties](implementing-formatproperties.md) |
+| Formatieren verschiedener Datentypen durch das generische Formatierungsformatierer  | [Generische Formatierungsausgabe](generic-formatter-output.md)           |
 
 
 
@@ -111,7 +111,7 @@ Während der Implementierung der **formatproperties** -Funktion ruft der Parser 
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
@@ -119,13 +119,13 @@ Während der Implementierung der **formatproperties** -Funktion ruft der Parser 
 
 <dl> <dt>
 
-[Formatpropertyinstance](formatpropertyinstance.md)
+[FormatPropertyInstance](formatpropertyinstance.md)
 </dt> <dt>
 
-[PROPERTYINFO](propertyinfo.md)
+[Propertyinfo](propertyinfo.md)
 </dt> <dt>
 
-[Propertyinst](propertyinst.md)
+[PROPERTYINST](propertyinst.md)
 </dt> </dl>
 
  

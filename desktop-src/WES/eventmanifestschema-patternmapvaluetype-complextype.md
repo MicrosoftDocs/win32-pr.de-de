@@ -1,9 +1,9 @@
 ---
-title: Komplexer patternmapvaluetype-Typ
-description: Nicht verwendet. Definiert die regulären Ausdrücke, mit denen eine übereinstimmende Zeichenfolge in der Meldungs Zeichenfolge gesucht und geändert wird.
+title: Komplexer PatternMapValueType-Typ
+description: Wird nicht verwendet. Definiert die regulären Ausdrücke, die verwendet werden, um eine übereinstimmende Zeichenfolge in der Meldungszeichenfolge zu suchen und zu ändern.
 ms.assetid: 2ae8a268-64c0-45d1-8339-988b13d884a3
 keywords:
-- "\"Patternmapvaluetype\"-Ereignisprotokoll"
+- Komplexer PatternMapValueType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 55b57b63f3e5c9e5a5c4cd15974c89f6d28439f5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dc36564aefd4d2f3d19f3b216d785faad888612621386037ae0e5539ce511169
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739729"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136163"
 ---
-# <a name="patternmapvaluetype-complex-type"></a>Komplexer patternmapvaluetype-Typ
+# <a name="patternmapvaluetype-complex-type"></a>Komplexer PatternMapValueType-Typ
 
-Nicht verwendet. Definiert die regulären Ausdrücke, mit denen eine übereinstimmende Zeichenfolge in der Meldungs Zeichenfolge gesucht und geändert wird.
+Wird nicht verwendet. Definiert die regulären Ausdrücke, die verwendet werden, um eine übereinstimmende Zeichenfolge in der Meldungszeichenfolge zu suchen und zu ändern.
 
 ``` syntax
 <xs:complexType name="PatternMapValueType">
@@ -47,10 +47,10 @@ Nicht verwendet. Definiert die regulären Ausdrücke, mit denen eine übereinsti
 
 
 
-| Name  | type   | BESCHREIBUNG                                                                                               |
+| Name  | type   | Beschreibung                                                                                               |
 |-------|--------|-----------------------------------------------------------------------------------------------------------|
-| name  | Zeichenfolge | Der reguläre Ausdruck, der zum Suchen einer übereinstimmenden Zeichenfolge in der Meldungs Zeichenfolge<br/>                   |
-| value | Zeichenfolge | Der reguläre Ausdruck zum Ändern der übereinstimmenden Zeichenfolge, die in der Meldungs Zeichenfolge gefunden wurde.<br/> |
+| name  | Zeichenfolge | Der reguläre Ausdruck, der verwendet wird, um eine übereinstimmende Zeichenfolge in der Meldungszeichenfolge zu finden.<br/>                   |
+| value | Zeichenfolge | Der reguläre Ausdruck, der verwendet wird, um die übereinstimmende Zeichenfolge zu ändern, die in der Meldungszeichenfolge gefunden wurde.<br/> |
 
 
 
@@ -60,8 +60,8 @@ Nicht verwendet. Definiert die regulären Ausdrücke, mit denen eine übereinsti
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

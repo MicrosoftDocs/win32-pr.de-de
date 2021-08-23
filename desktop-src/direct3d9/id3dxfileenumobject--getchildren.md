@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der untergeordneten Objekte in diesem Datei Datenobjekt ab.
+description: Ruft die Anzahl der untergeordneten Objekte in diesem Dateidatenobjekt ab.
 ms.assetid: 4409819f-a346-40b1-8e12-86e8128ece47
-title: 'ID3DXFileEnumObject:: GetChildren-Methode (D3DX9Xof. h)'
+title: ID3DXFileEnumObject::GetChildren-Methode (D3DX9Xof.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: cafa79844e89602d3b88756e04ca460f611516dd
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 857a52692fe0ef2390628f0d838129e6e00d1202e7615577f1e2e20b2ce74268
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119121406"
 ---
-# <a name="id3dxfileenumobjectgetchildren-method"></a>ID3DXFileEnumObject:: GetChildren-Methode
+# <a name="id3dxfileenumobjectgetchildren-method"></a>ID3DXFileEnumObject::GetChildren-Methode
 
-Ruft die Anzahl der untergeordneten Objekte in diesem Datei Datenobjekt ab.
+Ruft die Anzahl der untergeordneten Objekte in diesem Dateidatenobjekt ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT GetChildren(
 
 <dl> <dt>
 
-*puichildren* \[ in\]
+*puiChildren* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](../winprog/windows-data-types.md)\***
+Typ: **[ **SIZE \_ T**](../winprog/windows-data-types.md)\***
 
-Adresse eines Zeigers, der die Anzahl der untergeordneten Objekte in diesem Datei Datenobjekt empfängt.
+Adresse eines Zeigers zum Empfangen der Anzahl der untergeordneten Objekte in diesem Dateidatenobjekt.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Adresse eines Zeigers, der die Anzahl der untergeordneten Objekte in diesem Date
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DXFERR \_ badvalue.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben: D3DXFERR \_ BADVALUE.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Xof. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX9Xof.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: /sstub-Schalter
-description: Der/sstub-Schalter gibt den Namen der Server-Stub-Datei für eine RPC-Schnittstelle an.
+title: /sstub-Switch
+description: Der Schalter /sstub gibt den Namen der Serverstubdatei für eine RPC-Schnittstelle an.
 ms.assetid: 8e695e81-7c1b-40c0-aeaa-5390512fa099
 keywords:
-- /sstub-Schalter-Mittel l
+- /sstub switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 131be3dd1890967f7107bea64c3dc2634833653d
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: cdd83776939e9746103b2f12598a53832d767cebb93767142649a09b804339a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106340668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014068"
 ---
-# <a name="sstub-switch"></a>/sstub-Schalter
+# <a name="sstub-switch"></a>/sstub-Switch
 
-Der **/sstub** -Schalter gibt den Namen der Server-Stub-Datei für eine RPC-Schnittstelle an.
+Der Schalter **/sstub** gibt den Namen der Serverstubdatei für eine RPC-Schnittstelle an.
 
 ``` syntax
 midl /sstub stub_file_name
@@ -31,46 +31,46 @@ midl /sstub stub_file_name
 
 <dl> <dt>
 
-*Stub- \_ Dateiname \_* 
+*\_ \_ Stubdateiname* 
 </dt> <dd>
 
-Gibt einen Dateinamen an, der den Standard Dateinamen der Server-Stub-Datei überschreibt. Dateinamen können mit doppelten Anführungszeichen (") explizit angegeben werden, um zu verhindern, dass die Shell die Sonderzeichen interpretiert.
+Gibt einen Dateinamen an, der den Standardnamen der Serverstubdatei überschreibt. Dateinamen können explizit mit doppelten Anführungszeichen (") angegeben werden, um zu verhindern, dass die Shell die Sonderzeichen interpretiert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der angegebene Dateiname ersetzt den Standard Dateinamen. Standardmäßig wird der Dateiname abgerufen, indem \_ S. C dem Namen der IDL-Datei hinzugefügt wird. Dieser Schalter wirkt sich nicht auf OLE-Schnittstellen aus.
+Der angegebene Dateiname ersetzt den Standarddateinamen. Standardmäßig wird der Dateiname abgerufen, indem \_ S.C zum Namen der IDL-Datei hinzugefügt wird. Dieser Schalter wirkt sich nicht auf OLE-Schnittstellen aus.
 
-Wenn Sie Dateien importieren, gilt der angegebene Dateiname nur für eine Stubdatei – die Stubdatei, die der IDL-Datei entspricht, die in der Befehlszeile angegeben ist.
+Beim Importieren von Dateien gilt der angegebene Dateiname nur für eine Stubdatei– die Stubdatei, die der in der Befehlszeile angegebenen IDL-Datei entspricht.
 
-Wenn der *Stub- \_ Dateiname \_* keinen expliziten Pfad enthält, wird die Datei in das aktuelle Verzeichnis oder das durch den [**/out**](-out.md) -Schalter angegebene Verzeichnis geschrieben. Ein expliziter Pfad im *\_ stubdateinamen \_* überschreibt die **/out** -Switch-Spezifikation.
+Wenn *der \_ \_ Stubdateiname* keinen expliziten Pfad enthält, wird die Datei in das aktuelle Verzeichnis oder das verzeichnis geschrieben, das durch den Schalter [**/out**](-out.md) angegeben wird. Ein expliziter Pfad im *\_ \_ Stubdateinamen* überschreibt die **/out-Switchspezifikation.**
 
-Der Schalter **/Server** None hat Vorrang vor dem **/sstub** -Schalter.
+Der Schalter **/server** none hat Vorrang vor dem Schalter **/sstub.**
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/sstub My \_ sstub. c filename. idl**
+**midl /sstub my \_ sstub.c filename.idl**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
 [**/cstub**](-cstub.md)
 </dt> <dt>
 
-[**/Header**](-header.md)
+[**/header**](-header.md)
 </dt> <dt>
 
-[**/Out**](-out.md)
+[**/out**](-out.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

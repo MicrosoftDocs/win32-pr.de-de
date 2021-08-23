@@ -1,31 +1,31 @@
 ---
-title: Verwenden von Mosaik Objekten
-description: Wenn ein komplexes Polygon beschrieben und im Mosaik Prozess verwendet wird, werden zugeordnete Daten, wie z. b. die Scheitel Punkte, Kanten und Rückruf Funktionen, benötigt.
+title: Verwenden von Mosaikobjekten
+description: Da ein komplexes Polygon beschrieben und mosaikiert wird, sind zugeordnete Daten erforderlich, z. B. scheiteltische Ränder und Rückruffunktionen.
 ms.assetid: b6102e25-280c-4d0d-9350-d0038d1a0306
 keywords:
-- OpenGL-Hilfsprogramm (GLU), Mosaik Objekte
-- GLU (OpenGL-Hilfsprogramm), Mosaik Objekte
-- Mosaik Objekte OpenGL
+- OpenGL-Hilfsprogramm (GLU), Mosaikobjekte
+- GLU (OpenGL-Hilfsprogramm), Mosaikobjekte
+- Mosaikobjekte OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 590ab571e656fcd346da265bfa921cb965fdf540
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: efc2ca11fd037f79a88fed1568c97a24692060d723327cde0c8e8842ed21d084
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011898"
 ---
-# <a name="using-tessellation-objects"></a>Verwenden von Mosaik Objekten
+# <a name="using-tessellation-objects"></a>Verwenden von Mosaikobjekten
 
-Wenn ein komplexes Polygon beschrieben und im Mosaik Prozess verwendet wird, werden zugeordnete Daten, wie z. b. die Scheitel Punkte, Kanten und Rückruf Funktionen, benötigt. Alle diese Daten sind an ein einzelnes Mosaik Objekt gebunden. Zum Mosaik eines Polygons verwenden Sie zunächst die [**glunewtess**](glunewtess.md) -Funktion, die ein neues Mosaik Objekt erstellt und einen Zeiger darauf zurückgibt. Wenn die Funktion fehlschlägt, wird ein NULL-Zeiger zurückgegeben.
+Da ein komplexes Polygon beschrieben und mosaikiert wird, sind zugeordnete Daten erforderlich, z. B. scheiteltische Ränder und Rückruffunktionen. Alle diese Daten sind an ein einzelnes Mosaikobjekt gebunden. Um ein Polygon zu mosaiken, verwenden Sie zunächst die [**gluNewTess-Funktion,**](glunewtess.md) die ein neues Mosaikobjekt erstellt und einen Zeiger darauf zurückgibt. Ein NULL-Zeiger wird zurückgegeben, wenn die Funktion fehlschlägt.
 
-Wenn Sie kein Mosaik Objekt mehr benötigen, können Sie es löschen und den gesamten zugeordneten Arbeitsspeicher mit " [**gludeletetess**](gludeletetess.md)" freigeben.
+Wenn Sie ein Mosaikobjekt nicht mehr benötigen, können Sie es löschen und den zugeordneten Arbeitsspeicher mit [**gluDeleteTess frei geben.**](gludeletetess.md)
 
-Sie können ein einzelnes Mosaik Objekt für alle Mosaik Vorgänge wieder verwenden. Dieses Objekt ist nur erforderlich, da Bibliotheksfunktionen möglicherweise eigene Mosaik Vorgänge durchführen müssen, und Sie sollten dies tun können, ohne dass sich dies auf das von Ihrem Programm durch zuführte Mosaik beeinträchtigt. Mehrere Mosaik Objekte sind ebenfalls nützlich, wenn Sie unterschiedliche Sätze von Rückrufen für verschiedene Mosaik Vorgänge verwenden möchten. In der Regel weisen Sie jedoch ein einzelnes Mosaik Objekt zu und verwenden es für alle Mosaik Vorgänge. Es ist nicht erforderlich, es freizugeben, da es eine kleine Menge an Arbeitsspeicher verwendet. Wenn Sie dagegen eine Bibliotheksfunktion schreiben, die das-Mosaik verwendet, achten Sie darauf, dass Sie alle erstellten Mosaik Objekte freigeben.
+Sie können ein einzelnes Mosaikobjekt für alle Mosaiken wiederverwenden. Dieses Objekt ist nur erforderlich, da Bibliotheksfunktionen möglicherweise ihre eigenen Mosaiken ausführen müssen, und sie sollten dies ohne Beeinträchtigung des Mosaiks des Programms tun können. Mehrere Mosaikobjekte sind auch nützlich, wenn Sie verschiedene Sätze von Rückrufen für verschiedene Mosaiken verwenden möchten. In der Regel ordnen Sie jedoch ein einzelnes Mosaikobjekt zu und verwenden es für alle Mosaike. Es ist nicht wirklich notwendig, es frei zu geben, da es eine kleine Menge an Arbeitsspeicher verwendet. Wenn Sie hingegen eine Bibliotheksfunktion schreiben, die das GLU-Mosaik verwendet, müssen Sie darauf achten, alle von Ihnen erstellten Mosaikobjekte frei zu geben.
 
- 
+ 
 
- 
+ 
 
 
 

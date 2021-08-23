@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für ALPC SendMessage-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für ALPC-Sendenachrichtenereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 7f12259b-f737-4bef-9dea-2ffe3517e0da
 title: ALPC_Send_Message-Klasse
 ms.topic: reference
@@ -13,18 +13,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: c9437626341f0ac57136645d40a8389436e8af1a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8a3e53e514f80f89f1b1e97c1edde9b86add0db7a29de9443c5a1b48085a40fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119070330"
 ---
 # <a name="alpc_send_message-class"></a>ALPC \_ Send \_ Message-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für ALPC SendMessage-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für ALPC-Sendenachrichtenereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,37 +38,37 @@ class ALPC_Send_Message : ALPC
 
 ## <a name="members"></a>Member
 
-Die **ALPC \_ Send \_ Message** -Klasse verfügt über diese Typen von Membern:
+Die **ALPC \_ Send \_ Message-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **ALPC \_ Send \_ Message** -Klasse verfügt über diese Eigenschaften.
+Die **ALPC \_ Send \_ Message-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**MessageId**
+**MessageID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nachrichten-ID.
+Nachrichtenbezeichner.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

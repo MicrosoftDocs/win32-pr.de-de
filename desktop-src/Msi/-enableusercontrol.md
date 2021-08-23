@@ -1,19 +1,19 @@
 ---
-description: Wenn die enableusercontrol-Eigenschaft auf 1 festgelegt ist, kann das Installationsprogramm während einer verwalteten Installation mit erhöhten Rechten alle öffentlichen Eigenschaften an die Serverseite übergeben.
+description: Wenn die EnableUserControl-Eigenschaft auf 1 festgelegt ist, kann das Installationsprogramm alle öffentlichen Eigenschaften während einer verwalteten Installation mit erhöhten Rechten an die Serverseite übergeben.
 ms.assetid: 29f76c2e-1556-4d0d-a83c-24a33528156f
-title: Enableusercontrol (Eigenschaft)
+title: EnableUserControl(Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a3f1a00ed6a3dae3d5614ec427166c58464e56f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 98cc5e1b5f43718c67a059295d3bf79e1cfab08ab34e5e88d3390fe3ce22662d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357317"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013348"
 ---
-# <a name="enableusercontrol-property"></a>Enableusercontrol (Eigenschaft)
+# <a name="enableusercontrol-property"></a>EnableUserControl(Eigenschaft)
 
-Wenn die **enableusercontrol** -Eigenschaft auf 1 festgelegt ist, kann das Installationsprogramm während einer verwalteten Installation mit erhöhten Rechten alle [öffentlichen Eigenschaften](public-properties.md) an die Serverseite übergeben. Das Festlegen dieser Eigenschaft hat dieselbe Auswirkung wie das Festlegen der [System Richtlinie](system-policy.md)" [enableusercontrol](enableusercontrol.md) ".
+Wenn die **EnableUserControl-Eigenschaft** auf 1 festgelegt ist, [](public-properties.md) kann das Installationsprogramm alle öffentlichen Eigenschaften während einer verwalteten Installation mit erhöhten Rechten an die Serverseite übergeben. Das Festlegen dieser Eigenschaft hat die gleiche Auswirkung wie das Festlegen der [Systemrichtlinie EnableUserControl.](enableusercontrol.md) [](system-policy.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Wenn die **enableusercontrol** -Eigenschaft auf 1 festgelegt ist, kann das Insta
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003, Windows XP und Windows 2000. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003, Windows XP und Windows 2000. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 
@@ -35,7 +35,7 @@ Wenn die **enableusercontrol** -Eigenschaft auf 1 festgelegt ist, kann das Insta
 [Eingeschränkte öffentliche Eigenschaften](restricted-public-properties.md)
 </dt> <dt>
 
-[System Richtlinie](system-policy.md)
+[Systemrichtlinie](system-policy.md)
 </dt> </dl>
 
  

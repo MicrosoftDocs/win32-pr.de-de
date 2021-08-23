@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: dac880607cf482b409c407b43992747af4aa39a9
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: be04aa9345f8a5b932d1697dbd85c8f81072bd3087077163d4891b1c19aafbe9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991160"
 ---
 # <a name="d3dxquaternion-structure-d3dx10mathh"></a>D3DXQUATERNION-Struktur (D3DX10Math.h)
 
@@ -64,7 +64,7 @@ Die y-Komponente.
 
 </dd> <dt>
 
-**z**
+**Z**
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -82,13 +82,13 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die w-Komponente.
+Die w--Komponente.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Quaternionen fügen den \[ x-, y-, \] z-Werten, die einen Vektor definieren, ein viertes Element hinzu, was zu beliebigen 4D-Vektoren führt. Im Folgenden wird jedoch veranschaulicht, wie sich jedes Element einer Einheiten quaternion auf eine Achsenwinkelrotation bezieht (wobei q eine Einheiten quaternion (x, y, z, w) darstellt, die Achse normalisiert wird und theta die gewünschte CCW-Drehung um die Achse darstellt):
+Quaternionen fügen den \[ x-, y-, z-Werten, die einen Vektor definieren, ein viertes Element hinzu, was zu \] beliebigen 4D-Vektoren führt. Im Folgenden wird jedoch veranschaulicht, wie sich jedes Element einer Einheiten quaternion auf eine Achsenwinkelrotation bezieht (wobei q eine Einheiten quaternion (x, y, z, w), die Achse normalisiert wird und theta die gewünschte CCW-Drehung um die Achse darstellt):
 
 
 ```
@@ -104,7 +104,7 @@ q.w = cos(theta/2)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 

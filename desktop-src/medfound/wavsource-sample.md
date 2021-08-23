@@ -54,7 +54,7 @@ Sie können auch das Tool TopoEdit verwenden, um eine Wiedergabetopologie zu ers
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Dieses Beispiel ist im [github-Repository mit Windows klassischen Beispielen](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/multimedia/mediafoundation/wavsource)verfügbar.
+Dieses Beispiel ist im [github-Repository Windows klassischen Beispiele](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/multimedia/mediafoundation/wavsource)verfügbar.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

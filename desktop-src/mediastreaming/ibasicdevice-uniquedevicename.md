@@ -3,9 +3,9 @@ title: IBasicDevice UniqueDeviceName-Methode
 description: Ruft den eindeutigen Gerätenamen (UDN) des Geräts ab.
 ms.assetid: 393EFF96-69E1-4081-905D-D8CC47B5FC4A
 keywords:
-- UniqueDeviceName-Methode Media Streaming-API
-- UniqueDeviceName-Methode Media Streaming API , IBasicDevice-Schnittstelle
-- IBasicDevice-Schnittstelle Medienstreaming-API , UniqueDeviceName-Methode
+- 'UniqueDeviceName-Methode: Media Streaming-API'
+- 'UniqueDeviceName-Methode: Media Streaming-API, IBasicDevice-Schnittstelle'
+- IBasicDevice-Schnittstelle Media Streaming-API, UniqueDeviceName-Methode
 topic_type:
 - apiref
 api_name:
@@ -41,10 +41,10 @@ HRESULT UniqueDeviceName(
 
 <dl> <dt>
 
-*wert* \[ out\]
+*value* \[ out\]
 </dt> <dd>
 
-Empfängt einen Zeiger auf den Modell-UDN des Geräts.
+Empfängt einen Zeiger auf die Modell-UDN des Geräts.
 
 </dd> </dl>
 
@@ -62,7 +62,7 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

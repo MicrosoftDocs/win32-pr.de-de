@@ -1,7 +1,7 @@
 ---
-description: Die Methode "schulddrawsamplenow" bestimmt, wie ein Beispiel für das Rendering geplant wird.
+description: Die ShouldDrawSampleNow-Methode bestimmt, wie ein Beispiel für das Rendering geplant wird.
 ms.assetid: 92994f1f-53d5-42d4-90a2-2984b693e4c0
-title: Cbasererderderer. schulddrawsamplenow-Methode (renbase. h)
+title: CBaseRenderer.ShouldDrawSampleNow-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 27fbf603fd670cac2a39831114a7f141b17ffd2e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 818a7682fed504028ebee1c3a5ff5d35a268e1daad8756b110bcfcb2ca8d9f80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016868"
 ---
-# <a name="cbaserenderershoulddrawsamplenow-method"></a>Cbasererderer. schulddrawsamplenow-Methode
+# <a name="cbaserenderershoulddrawsamplenow-method"></a>CBaseRenderer.ShouldDrawSampleNow-Methode
 
-Die- `ShouldDrawSampleNow` Methode bestimmt, wie ein Beispiel für das Rendering geplant wird.
+Die `ShouldDrawSampleNow` -Methode bestimmt, wie ein Beispiel für das Rendering geplant wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,46 +44,46 @@ virtual HRESULT ShouldDrawSampleNow(
 
 <dl> <dt>
 
-*pmediasample* 
+*pMediaSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels.
+Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) des Beispiels.
 
 </dd> <dt>
 
-*pstarttime* 
+*pStartTime* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Startzeit des Beispiels enthält.
+Zeiger auf eine Variable, die die Startzeit des Beispiels enthält.
 
 </dd> <dt>
 
-*Zeit* 
+*pEndTime* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Endzeit des Beispiels enthält.
+Zeiger auf eine Variable, die die Endzeit des Beispiels enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " \_ false" zurück. Wenn die abgeleitete Klasse diese Methode überschreibt, geben Sie einen der in der folgenden Tabelle aufgeführten Werte zurück.
+Gibt S \_ FALSE zurück. Wenn die abgeleitete Klasse diese Methode überschreibt, geben Sie einen der in der folgenden Tabelle aufgeführten Werte zurück.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                                                                        |
 |-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Das Beispiel sollte sofort gerendert werden.<br/>                              |
-| <dl> <dt>**S \_ false**</dt> </dl>   | Das Beispiel sollte basierend auf den Zeitstempeln für das Rendering geplant werden.<br/> |
-| <dl> <dt>**Fehlercode**</dt> </dl> | Führen Sie dieses Beispiel nicht aus.<br/>                                              |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>   | Das Beispiel sollte basierend auf den Zeitstempeln für das Rendering geplant werden.<br/> |
+| <dl> <dt>**Fehlercode**</dt> </dl> | Rendern Sie dieses Beispiel nicht.<br/>                                              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cbaserdenderer:: getsampletimes**](cbaserenderer-getsampletimes.md) -Methode ruft diese Methode auf. Standardmäßig werden Stichproben immer basierend auf Ihren Zeitstempeln für das Rendering geplant. Diese Methode kann von der abgeleiteten Klasse überschrieben werden. So implementieren Sie z. b. die Qualitätskontrolle.
+Die [**CBaseRenderer::GetSampleTimes-Methode**](cbaserenderer-getsampletimes.md) ruft diese Methode auf. Standardmäßig werden Stichproben immer basierend auf ihren Zeitstempeln für das Rendering geplant. Die abgeleitete Klasse kann diese Methode überschreiben. beispielsweise, um die Qualitätskontrolle zu implementieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,16 +91,16 @@ Die [**cbaserdenderer:: getsampletimes**](cbaserenderer-getsampletimes.md) -Meth
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Speichert Analyseergebnisse für eine bestimmte Kontext Knoten Sammlung, die mit einem iinkanalyzer verknüpft ist.
+description: Speichert Analyseergebnisse für eine bestimmte Kontextknotenauflistung, die einem IInkAnalyzer zugeordnet ist.
 ms.assetid: 671bdb11-6e30-4254-b320-208face1f593
-title: 'Iinkanalyzer:: saveresultsfornodes-Methode (iacom. h)'
+title: IInkAnalyzer::SaveResultsForNodes-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: eb628fafb9bf479e6a011137105005e541180aec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4386f9b051bf1cfcda6ee55d7b83728b096dc6f69de4d87745ce564f19249565
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129444"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119091569"
 ---
-# <a name="iinkanalyzersaveresultsfornodes-method"></a>Iinkanalyzer:: saveresultsfornodes-Methode
+# <a name="iinkanalyzersaveresultsfornodes-method"></a>IInkAnalyzer::SaveResultsForNodes-Methode
 
-Speichert Analyseergebnisse für eine bestimmte Kontext Knoten Sammlung, die mit einem [**iinkanalyzer**](iinkanalyzer.md)verknüpft ist.
+Speichert Analyseergebnisse für eine bestimmte Kontextknotenauflistung, die einem [**IInkAnalyzer**](iinkanalyzer.md)zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SaveResultsForNodes(
 
 <dl> <dt>
 
-*pcontextnodes* \[ in\]
+*pContextNodes* \[ In\]
 </dt> <dd>
 
-Die [**icontextnode**](icontextnode.md) -Auflistung, für die Analyseergebnisse gespeichert werden sollen.
+Die [**IContextNode-Auflistung,**](icontextnode.md) für die Analyseergebnisse gespeichert werden sollen.
 
 </dd> <dt>
 
-*pulserializeddatasize* \[ in, out\]
+*pulSerializedDataSize* \[ in, out\]
 </dt> <dd>
 
-Die Anzahl der Bytes in *ppbserializeddata*.
+Die Anzahl der Bytes in *ppbSerializedData*.
 
 </dd> <dt>
 
-*ppbserializeddata* \[ vorgenommen\]
+*ppbSerializedData* \[ out\]
 </dt> <dd>
 
 Zeiger auf die serialisierten Analysedaten.
@@ -64,18 +64,18 @@ Zeiger auf die serialisierten Analysedaten.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, müssen Sie für ppbserializeddata " [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) " aufrufen, \*  Wenn Sie die Informationen nicht mehr benötigen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) für \* *ppbSerializedData* auf, wenn Sie die Informationen nicht mehr benötigen.
 
  
 
-Diese Methode speichert die aktuellen Analyseergebnisse für die [**icontextnode**](icontextnode.md) -Objekte in *pcontextnodes* und alle deren Vorgänger-und Nachfolger Kontext Knoten. Diese Methode speichert keine Strich Daten. Es liegt in der Verantwortung der Anwendung, alle Analyseergebnisse und die zugehörigen hubdaten zu synchronisieren, falls Sie weiterhin vorhanden sind.
+Diese Methode speichert die aktuellen Analyseergebnisse für die [**IContextNode-Objekte**](icontextnode.md) in *pContextNodes* und all ihren Vorgänger- und Nachfolgerkontextknoten. Diese Methode speichert keine Strichdaten. Es liegt in der Verantwortung Ihrer Anwendung, alle Analyseergebnisse und die entsprechenden Strichdaten zu synchronisieren, sofern sie beibehalten werden.
 
-Wenn das zu speichernde [**icontextnode**](icontextnode.md) -Objekt nur teilweise aufgefüllt ist, gibt diese Methode einen Fehlercode zurück (siehe [**icontextnode:: getpartiallygefüllte**](icontextnode-getpartiallypopulated.md)).
+Wenn das zu speichernde [**IContextNode-Objekt**](icontextnode.md) nur teilweise aufgefüllt wird, gibt diese Methode einen Fehlercode zurück (siehe [**IContextNode::GetPartiallyPopulated**](icontextnode-getpartiallypopulated.md)).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,33 +83,33 @@ Wenn das zu speichernde [**icontextnode**](icontextnode.md) -Objekt nur teilweis
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: loadresults-Methode**](iinkanalyzer-loadresults.md)
+[**IInkAnalyzer::LoadResults-Methode**](iinkanalyzer-loadresults.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: SaveResults-Methode**](iinkanalyzer-saveresults.md)
+[**IInkAnalyzer::SaveResults-Methode**](iinkanalyzer-saveresults.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: saveresultsforstrokes-Methode**](iinkanalyzer-saveresultsforstrokes.md)
+[**IInkAnalyzer::SaveResultsForStrokes-Methode**](iinkanalyzer-saveresultsforstrokes.md)
 </dt> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

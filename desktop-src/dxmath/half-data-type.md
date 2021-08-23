@@ -1,19 +1,19 @@
 ---
-description: Ein Alias für UInt16 \_ t mit einer 16-Bit-Gleit Komma Zahl, die aus einem Vorzeichen-Bit, einem 5-Bit-Exponenten und einer 10-Bit-Mantisse besteht.
+description: Ein Alias für uint16 t, der mit einer 16-Bit-Gleitkommazahl gepackt ist, die aus einem Vorzeichenbit, einem \_ 5-Bit-Exponenten und einer 10-Bit-Mantisse besteht.
 ms.assetid: E84E0EBA-5C34-41AA-84DB-7A65EBDCAD15
-title: Halbdatentyp (directxpackedvector. h)
+title: HALF-Datentyp (DirectXPackedVector.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9651b84675be68bd433fdeaaae588cb01dc745ee
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a59b7288324ae5935a23e67a35f402ab6041da55073915d812b39096cab30733
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985040"
 ---
-# <a name="half-data-type"></a>Halbdatentyp
+# <a name="half-data-type"></a>HALF-Datentyp
 
-Ein Alias für **UInt16 \_ t** mit einer 16-Bit-Gleit Komma Zahl, die aus einem Vorzeichen-Bit, einem 5-Bit-Exponenten und einer 10-Bit-Mantisse besteht.
+Ein Alias für **uint16 \_ t** gepackt mit einer 16-Bit-Gleitkommazahl, die aus einem Vorzeichenbit, einem 5-Bit-Exponenten und einer 10-Bit-Mantisse besteht.
 
 
 ```C++
@@ -22,17 +22,17 @@ typedef uint16_t HALF;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der half-Datentyp entspricht dem IEEE 754 binary16-Format.
+Der HALF-Datentyp entspricht dem FORMAT IEEE 754 binary16.
 
-\_Halbmin = 6.10352 e-5F
+HALF \_ MIN = 6,10352e-5f
 
-\_Halbmax = 65504. f
+HALF \_ MAX = 65504.f
 
-Weitere Informationen zum halbdatentyp finden Sie unter Gleit [Komma Format mit halber Genauigkeit](https://en.wikipedia.org/wiki/Half_precision_floating-point_format).
+Weitere Informationen zum HALF-Datentyp finden Sie unter [Gleitkommaformat mit halber Genauigkeit.](https://en.wikipedia.org/wiki/Half_precision_floating-point_format)
 
-**Namespace**: Verwenden von DirectX::P ackedvector
+**Namespace:** DirectX::P ackedVector verwenden
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -44,15 +44,15 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxpackedvector. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXPackedVector.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Directxmath-Bibliothekstypen](ovw-xnamath-reference-types.md)
+[DirectXMath-Bibliothekstypen](ovw-xnamath-reference-types.md)
 </dt> </dl>
 
  

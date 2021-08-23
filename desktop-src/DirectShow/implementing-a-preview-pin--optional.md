@@ -1,23 +1,23 @@
 ---
-description: In diesem Thema wird beschrieben, wie eine Vorschau-PIN für einen DirectShow-Erfassungs Filter implementiert wird.
+description: In diesem Thema wird beschrieben, wie Sie einen Vorschaupin für einen DirectShow-Erfassungsfilter implementieren.
 ms.assetid: 60306702-97d4-4627-8fbe-e7c8750f3902
-title: Implementieren einer Vorschau-PIN (optional)
+title: Implementieren eines Vorschaupins (optional)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d1e09d070be2aa154428cb8684ff1c405fac959
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7de47b86df70500c83c794fe1074dc927622d571e78ef6175b944702277da492
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392741"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119015558"
 ---
-# <a name="implementing-a-preview-pin-optional"></a>Implementieren einer Vorschau-PIN (optional)
+# <a name="implementing-a-preview-pin-optional"></a>Implementieren eines Vorschaupins (optional)
 
-In diesem Thema wird beschrieben, wie eine Vorschau-PIN für einen DirectShow-Erfassungs Filter implementiert wird.
+In diesem Thema wird beschrieben, wie Sie einen Vorschaupin für einen DirectShow-Erfassungsfilter implementieren.
 
-Wenn Ihr Filter über eine Vorschau-Pin verfügt, muss die Vorschau-Pin eine Kopie der von der Erfassungs-Pin übermittelten Daten senden. Wenn Sie Daten nur aus der Vorschau-Pin senden, bewirkt dies nicht, dass die Erfassungs-Pin Frames ablöscht. Die Erfassungs-Pin hat immer Vorrang vor der Vorschau-PIN.
+Wenn Ihr Filter über einen Vorschaupin verfügt, muss der Pin der Vorschau eine Kopie der vom Aufnahmepin übermittelten Daten senden. Nur wenn Daten vom Vorschaupin gesendet werden, werden durch den Aufnahmepin keine Frames entfernt. Der Aufnahmepin hat immer Priorität vor dem Vorschaupin.
 
-Die Erfassungs-PIN und die Vorschau-PIN müssen Daten im gleichen Format senden. Daher müssen Sie mit identischen Medientypen eine Verbindung herstellen. Wenn die Erfassungs-Pin zuerst eine Verbindung herstellt, sollte die Vorschau-Pin denselben Medientyp anbieten und alle anderen Typen ablehnen. Wenn die Vorschau-Pin zuerst eine Verbindung herstellt und die Erfassungs-Pin eine Verbindung mit einem anderen Medientyp herstellt, sollte die Vorschau-PIN mit dem neuen Medientyp erneut eine Verbindung herstellen. Wenn der von der Vorschau-Pin nachgelagerte Filter den neuen Typ ablehnt, sollte die Erfassungs-Pin ebenfalls den Typ ablehnen. Verwenden Sie die [**IPin:: queryaccept**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryaccept) -Methode, um den Filter nach unten über die Vorschau-Pin abzufragen, und verwenden Sie die [**ifiltergraph:: Verbindung**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-reconnect) -Methode, um die PIN erneut zu verbinden. Diese Regeln gelten auch, wenn der Filter Graph-Manager die Erfassungs-PIN erneut verbindet.
+Der Aufnahmepin und der Vorschaupin müssen Daten im gleichen Format senden. Daher müssen sie eine Verbindung mithilfe identischer Medientypen herstellen. Wenn der Erfassungspin zuerst eine Verbindung herstellt, sollte der Vorschaupin denselben Medientyp bieten und alle anderen Typen ablehnen. Wenn der Vorschaupin zuerst eine Verbindung herstellt und der Erfassungspin eine Verbindung mit einem anderen Medientyp herstellt, sollte der Vorschaupin die Verbindung mit dem neuen Medientyp wiederherstellen. Wenn der Filter, der dem Vorschaupin nachgeschaltet ist, den neuen Typ ablehnt, sollte der Erfassungspin auch den Typ ablehnen. Verwenden Sie [**die IPin::QueryAccept-Methode,**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryaccept) um den Filter downstream vom Vorschaupin abfragt, und verwenden Sie die [**IFilterGraph::Reconnect-Methode,**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-reconnect) um die Verbindung mit dem Pin wiederherzustellen. Diese Regeln gelten auch, wenn der Filter Graph Manager erneut eine Verbindung mit dem Erfassungspin herstellen kann.
 
 Das folgende Beispiel zeigt eine Gliederung dieses Prozesses:
 
@@ -88,10 +88,10 @@ CPreviewPin::CheckMediaType(CMediaType *pmt)
 
 <dl> <dt>
 
-[Herstellen der Verbindung von Filtern](how-filters-connect.md)
+[Funktionsweise von Verbinden](how-filters-connect.md)
 </dt> <dt>
 
-[Schreiben von Erfassungs Filtern](writing-capture-filters.md)
+[Schreiben von Erfassungsfiltern](writing-capture-filters.md)
 </dt> </dl>
 
  
