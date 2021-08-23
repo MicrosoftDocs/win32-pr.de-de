@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_COLUMNLIST-Konstruktor'
+description: 'Weitere Informationen zu: JET_COLUMNLIST-Konstruktor'
 title: JET_COLUMNLIST-Konstruktor
 TOCTitle: 'JET_COLUMNLIST constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_COLUMNLIST.#ctor
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a368afb652be93ea436f1b3cae403ce4cd690820
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f9bb87c394b3ff51ef6425b50b6847f79b4f4a1749b028077f08d1edd860d236
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527464"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118767065"
 ---
 # <a name="jet_columnlist-constructor"></a>JET_COLUMNLIST-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New JET_COLUMNLIST()
 public JET_COLUMNLIST()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_COLUMNLIST-Klasse](./jet-columnlist-class.md)
 
-[Mitglieder JET_COLUMNLIST](./jet-columnlist-members.md)
+[JET_COLUMNLIST-Member](./jet-columnlist-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

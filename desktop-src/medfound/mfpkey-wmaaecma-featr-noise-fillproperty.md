@@ -1,19 +1,19 @@
 ---
-description: Gibt an, ob der sprach Erfassungs-DSP Füllvorgänge durchführt.
+description: Gibt an, ob der Spracherfassungs-DSP Füllgeräusche ausführt.
 ms.assetid: 8bb64686-8f02-4e0d-a664-aeee1744fc8e
-title: MFPKEY_WMAAECMA_FEATR_NOISE_FILL-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMAAECMA_FEATR_NOISE_FILL-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea0c0af2b47767a7798d9b583ac55ad5112ddf1f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec3f2f6780157da97263bd6e68ac5f38c9448a5633fafe6481b082ed033331dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119035118"
 ---
-# <a name="mfpkey_wmaaecma_featr_noise_fill-property"></a>Mfpkey \_ wmaaecma \_ featr- \_ Rausch \_ Füll Eigenschaft
+# <a name="mfpkey_wmaaecma_featr_noise_fill-property"></a>MFPKEY \_ WMAAECMA \_ FEATR \_ NOISE \_ FILL-Eigenschaft
 
-Gibt an, ob der sprach Erfassungs-DSP Füllvorgänge durchführt.
+Gibt an, ob der Spracherfassungs-DSP Füllgeräusche ausführt.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
@@ -21,34 +21,34 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 ## <a name="data-type"></a>Datentyp
 
-VT \_ bool
+VT \_ BOOL
 
 ## <a name="default-value"></a>Standardwert
 
-Variant \_ true
+VARIANT \_ TRUE
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Sprach Erfassungs-DSP](voicecapturedmo.md)
+-   [Spracherfassungs-DSP](voicecapturedmo.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Füll Füllungs Zeichen fügt eine kleine Menge an Geräuschen zu den Teilen des Signals hinzu, bei denen das Mittel Clipping die restlichen Echo Punkte entfernt hat. Dies führt zu einer besseren Benutzererfahrung als bei der Verwendung von stillen Lücken im Signal.
+Durch die Füllfüllung wird eine kleine Menge an Rauschen zu Teilen des Signals hinzugefügt, bei denen die Restgeräusche durch zentriertes Clipping entfernt wurden. Dies führt zu einer besseren Erfahrung für den Benutzer, als stille Lücken im Signal zu hinterlassen.
 
 Diese Eigenschaft kann die folgenden Werte aufweisen.
 
 
 
-| Wert          | BESCHREIBUNG            |
+| Wert          | Beschreibung            |
 |----------------|------------------------|
-| Variant \_ true  | Aktivieren Sie Füll Füllung.  |
-| Variant \_ false | Deaktivieren Sie die Füll Füllung. |
+| VARIANT \_ TRUE  | Aktivieren Sie die Füllfüllung.  |
+| VARIANT \_ FALSE | Deaktivieren Sie das Auffüllen von Rauschen. |
 
 
 
  
 
-Der Standardwert dieser Eigenschaft ist Variant \_ true (aktiviert). Vor dem Festlegen dieser Eigenschaft müssen Sie die Eigenschaft [mfpkey \_ wmaaecma \_ Feature \_ Mode](mfpkey-wmaaecma-feature-modeproperty.md) auf Variant \_ true festlegen.
+Der Standardwert dieser Eigenschaft ist VARIANT \_ TRUE (aktiviert). Bevor Sie diese Eigenschaft festlegen, müssen Sie die [MFPKEY \_ WMAAECMA \_ FEATURE \_ MODE-Eigenschaft](mfpkey-wmaaecma-feature-modeproperty.md) auf VARIANT \_ TRUE festlegen.
 
 Der DSP verwendet diese Eigenschaft nur, wenn die AEC-Verarbeitung aktiviert ist.
 
@@ -58,9 +58,9 @@ Der DSP verwendet diese Eigenschaft nur, wenn die AEC-Verarbeitung aktiviert ist
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -68,10 +68,10 @@ Der DSP verwendet diese Eigenschaft nur, wenn die AEC-Verarbeitung aktiviert ist
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[Sprach Erfassungs-DSP](voicecapturedmo.md)
+[Spracherfassungs-DSP](voicecapturedmo.md)
 </dt> </dl>
 
  

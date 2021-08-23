@@ -1,11 +1,11 @@
 ---
-title: Network. getproxyexceptionlist-Methode
-description: Die getproxyexceptionlist-Methode ruft die Proxy Ausnahmeliste ab.
+title: Network.getProxyExceptionList-Methode
+description: Die getProxyExceptionList-Methode ruft die Proxyausnahmeliste ab.
 ms.assetid: f81d8c0f-cc75-470c-9c24-ceaf8a4b6f97
 keywords:
-- getproxyexceptionlist-Methode, Windows Media Player
-- getproxyexceptionlist-Methode, Windows Media Player, Network-Klasse
-- Network-Klasse, Windows Media Player, getproxyexceptionlist-Methode
+- getProxyExceptionList-Windows Media Player
+- getProxyExceptionList-Methode Windows Media Player , Network-Klasse
+- Netzwerkklasse Windows Media Player , getProxyExceptionList-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 34ace9bd569c1cc53a8f3d522703aee6154e68a1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c2becc6c74a5ada575f1bfa85473bd3204bf53a4a739640149cffdd57e3facf2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054572"
 ---
-# <a name="networkgetproxyexceptionlist-method"></a>Network. getproxyexceptionlist-Methode
+# <a name="networkgetproxyexceptionlist-method"></a>Network.getProxyExceptionList-Methode
 
-Die **getproxyexceptionlist** -Methode ruft die Proxy Ausnahmeliste ab.
+Die **getProxyExceptionList-Methode** ruft die Proxyausnahmeliste ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ strRetVal = Network.getProxyExceptionList(
 
 <dl> <dt>
 
-*Protokoll* \[ in\]
+*Protocol* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen des Protokolls angibt. Eine Liste der unterstützten Protokolle finden Sie [unter Unterstützte Protokolle und Dateitypen](supported-protocols-and-file-types.md).
+**Zeichenfolge,** die den Protokollnamen angibt. Eine Liste der unterstützten Protokolle finden Sie unter [Unterstützte Protokolle und Dateitypen.](supported-protocols-and-file-types.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zeichen** Folge zurück, die eine durch Semikolons getrennte Liste von Hosts angibt, für die der Proxy Server umgangen wird. Der zurückgegebene Wert ist nur dann von Bedeutung, wenn **getproxysettings** den Wert 2 zurückgibt (manuelle Einstellungen verwenden).
+Diese Methode gibt eine **Zeichenfolge** zurück, die eine durch Semikolons getrennte Liste von Hosts angibt, für die der Proxyserver umgangen wird. Der zurückgegebene Wert ist nur sinnvoll, **wenn getProxySettings** den Wert 2 zurückgibt (verwenden Sie manuelle Einstellungen).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist eine Liste von Computern, Domänen und/oder Adressen, die den Proxy Server umgehen, wenn der Hostteil der Ziel-URL mit einem Eintrag in der Liste übereinstimmt.
+Dies ist eine Liste von Computern, Domänen und/oder Adressen, die den Proxyserver umgehen, wenn der Hostteil der Ziel-URL einem Eintrag in der Liste entspricht.
 
-Das \* Zeichen kann als Platzhalter für das Auflisten von Einträgen verwendet werden. Beispielsweise \* entspricht. com allen Hosts in der com-Domäne, während 67. \* entspricht allen Hosts in der 67-Klasse als Subnetz.
+Das \* Zeichen kann als Platzhalter für das Auflisten von Einträgen verwendet werden. .com würde z. B. mit allen Hosts in der Com-Domäne übereinstimmen, während 67. mit allen Hosts \* \* im Subnetz der 67-Klasse A übereinstimmen würde.
 
-Diese Methode schlägt fehl, es sei denn, die aufrufenden Anwendung wird auf dem lokalen Computer oder Intranet ausgeführt.
+Diese Methode schlägt fehl, es sei denn, die aufrufende Anwendung wird auf dem lokalen Computer oder Intranet ausgeführt.
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *Network* verwendet. **getproxyexceptionlist** zum Anzeigen der Listen der umgangen Proxys für die MMS-und HTTP-Protokolle. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript Netzwerk *verwendet.* **getProxyExceptionList,** um die Listen der umgangenen Proxys für die MMS- und HTTP-Protokolle anzuzeigen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -97,7 +97,7 @@ document.write("The current MMS proxy exception list: " + proxyExceptionListMMS)
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -106,10 +106,10 @@ document.write("The current MMS proxy exception list: " + proxyExceptionListMMS)
 
 <dl> <dt>
 
-[**Netzwerk Objekt**](network-object.md)
+[**Netzwerkobjekt**](network-object.md)
 </dt> <dt>
 
-[**Network. getproxysettings**](network-getproxysettings.md)
+[**Network.getProxySettings**](network-getproxysettings.md)
 </dt> </dl>
 
  

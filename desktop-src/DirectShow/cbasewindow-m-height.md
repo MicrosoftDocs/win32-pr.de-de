@@ -1,7 +1,7 @@
 ---
-description: Die Höhe des Client Bereichs in Pixel.
+description: Höhe des Clientbereichs in Pixel.
 ms.assetid: 3d32c9db-71f1-4b20-ae7c-5da7dc9b7244
-title: 'Cbasewindow:: m_Height Member (winutil. h)'
+title: CBaseWindow::m_Height-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9899de99da316ffec4093a439f405f1db26b4223
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f85cef9076ce1e961a6ba07c315ff9b08a01e55b30c29dafae3eb10708d39f91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373573"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074584"
 ---
-# <a name="cbasewindowm_height-member"></a>Cbasewindow:: m-height-Element \_
+# <a name="cbasewindowm_height-member"></a>CBaseWindow::m \_ Height-Member
 
-Die Höhe des Client Bereichs in Pixel.
+Höhe des Clientbereichs in Pixel.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ LONG m_Height;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ LONG m_Height;
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

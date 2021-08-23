@@ -3,7 +3,7 @@ title: D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3-Funktion
 description: Entpackt DXGI \_ FORMAT \_ B8G8R8X8 \_ UNORM \_ SRGB-Shaderdaten in XMFLOAT3. | D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3-Funktion
 ms.assetid: 9b3c511c-95c2-454c-95b9-ff6ab0920466
 keywords:
-- D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3-Funktion HLSL
+- D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3 HLSL-Funktion
 topic_type:
 - apiref
 api_name:

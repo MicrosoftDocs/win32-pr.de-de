@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentDiskReadVerificationFailureException-Konstruktor'
+description: 'Weitere Informationen zu: EsentDiskReadVerificationFailureException-Konstruktor'
 title: EsentDiskReadVerificationFailureException-Konstruktor
 TOCTitle: 'EsentDiskReadVerificationFailureException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDiskReadVerificationFailureException.#ctor

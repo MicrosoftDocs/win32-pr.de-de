@@ -1,7 +1,7 @@
 ---
-description: Die getduehandle-Methode ruft das Ereignis Handle ab, das signalisiert werden soll.
+description: Die GetDueHandle-Methode ruft das zu signalisierende Ereignishandle ab.
 ms.assetid: 495ea76d-8b94-48a9-8025-06ab18b66693
-title: Ccmdqueue. getduehandle-Methode (winutil. h)
+title: CCmdQueue.GetDueHandle-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4cb7c8c965c72abe6343a8a75863e0e6969dc5c6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 62fbe0e38e24891add93e63e0c03d521289ed345078e8e567a376e9bd639d997
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106350769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016418"
 ---
-# <a name="ccmdqueuegetduehandle-method"></a>Ccmdqueue. getduehandle-Methode
+# <a name="ccmdqueuegetduehandle-method"></a>CCmdQueue.GetDueHandle-Methode
 
-Die- `GetDueHandle` Methode ruft das Ereignis Handle ab, das signalisiert werden soll.
+Die `GetDueHandle` -Methode ruft das Ereignishand handle ab, das signalisiert werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Ereignis Handle zurück.
+Gibt das Ereignishand handle zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Gibt das Ereignis Handle zurück, wenn verzögerte Befehle vorhanden sind, die für die Ausführung fällig sind (wenn [**ccmdqueue:: getduecommand**](ccmdqueue-getduecommand.md) nicht blockiert wird).
+Gibt das Ereignishandler zurück, wenn verzögerte Befehle zur Ausführung fällig sind (wenn [**CCmdQueue::GetDueCommand**](ccmdqueue-getduecommand.md) nicht blockiert wird).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Gibt das Ereignis Handle zurück, wenn verzögerte Befehle vorhanden sind, die f
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ccmdqueue-Klasse**](ccmdqueue.md)
+[**CCmdQueue-Klasse**](ccmdqueue.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'Registry_V1_TypeGroup1-Klasse: Diese Klasse ist die Ereignistypklasse für Registrierungsereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
+description: 'Registry_V1_TypeGroup1-Klasse: Diese Klasse ist die Ereignistypklasse für Registrierungsereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 59c455a0-af7e-4fd5-9af4-07ff72ee0545
 title: Registry_V1_TypeGroup1-Klasse
 ms.topic: reference
@@ -17,18 +17,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: ab0326f92d1b084f471f3dc1b57322f69aa645fd
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 80b6bfbac1afbe3797bd76dfa49dee6666a339eb46c336d3e6c68f6b236c0848
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069770"
 ---
 # <a name="registry_v1_typegroup1-class"></a>Registry \_ V1 \_ TypeGroup1-Klasse
 
 Diese Klasse ist die Ereignistypklasse für Registrierungsereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -107,7 +107,7 @@ Handle für den Registrierungsschlüssel.
 KeyName
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -132,7 +132,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-NTSTATUS-Wert des Registrierungsvorgang.
+NTSTATUS-Wert des Registrierungsvorgangs.
 
 </dd> </dl>
 
@@ -140,7 +140,7 @@ NTSTATUS-Wert des Registrierungsvorgang.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>       |

@@ -1,5 +1,5 @@
 ---
-description: Fungiert als übergeordnete Klasse für alle ereignisbezogenen Klassen.
+description: Dient als übergeordnete Klasse für alle ereignisbezogenen Klassen.
 ms.assetid: 61ed7984-3036-4b19-a27e-5eb079c5b230
 ms.tgt_platform: multiple
 title: __IndicationRelated-Klasse
@@ -14,18 +14,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: e349f14527d4ee40ea0eaffcd853f434850f9e32
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df27e049fb3485e41bd482fc4e2931a91b5f9cf396b078bef0f48ff5cd2b86d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362917"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118821175"
 ---
-# <a name="__indicationrelated-class"></a>\_\_"Bezeichationrelated"-Klasse
+# <a name="__indicationrelated-class"></a>\_\_IndicationRelated-Klasse
 
-Die Klasse " **\_ \_ indicationrelated** Abstract System" fungiert als übergeordnete Klasse für alle ereignisbezogenen Klassen. Die-Klasse enthält keine Eigenschaften.
+Die **\_ \_ abstrakte Systemklasse IndicationRelated** dient als übergeordnete Klasse für alle ereignisbezogenen Klassen. Die -Klasse enthält keine Eigenschaften.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,11 +38,11 @@ class __IndicationRelated : __SystemClass
 
 ## <a name="members"></a>Member
 
-Die " **\_ \_ bezeichationrelated** "-Klasse definiert keine Member.
+Die **\_ \_ IndicationRelated-Klasse** definiert keine Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die " **\_ \_ bezeichationrelated** "-Klasse wird von " [**\_ \_ System Class**](--systemclass.md)" abgeleitet, das über keine Eigenschaften verfügt.
+Die **\_ \_ IndicationRelated-Klasse** wird von [**\_ \_ SystemClass abgeleitet,**](--systemclass.md)die über keine Eigenschaften verfügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,10 +60,10 @@ Die " **\_ \_ bezeichationrelated** "-Klasse wird von " [**\_ \_ System Class**]
 
 <dl> <dt>
 
-[**\_\_System Class**](/windows/desktop/WmiSdk/--systemclass)
+[**\_\_SystemClass**](/windows/desktop/WmiSdk/--systemclass)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

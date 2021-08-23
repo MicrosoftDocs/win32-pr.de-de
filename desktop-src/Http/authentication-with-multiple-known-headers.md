@@ -1,50 +1,50 @@
 ---
 title: Authentifizierung mit mehreren bekannten Headern
-description: Die Struktur "http \_ Multiple \_ known \_ Headers" ermöglicht es Server Anwendungen, mehrere Authentifizierungs Herausforderungen an den Client zu senden.
+description: Mit der HTTP \_ MULTIPLE \_ KNOWN \_ HEADERS-Struktur können Serveranwendungen mehrere Authentifizierungsherausforderungen an den Client senden.
 ms.assetid: d517fd61-9547-4e1c-b0fd-1eb3d0098db2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8afbce3c2a41ea143003723acebc7eb83dc463d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fbb8fd2071626d8a12f046ac0c3b6c50fcffc794462d5109a89a974f441879bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950929"
 ---
 # <a name="authentication-with-multiple-known-headers"></a>Authentifizierung mit mehreren bekannten Headern
 
-Die Struktur " [**http \_ Multiple \_ known \_ Headers**](/windows/desktop/api/Http/ns-http-http_multiple_known_headers) " ermöglicht es Server Anwendungen, mehrere Authentifizierungs Herausforderungen an den Client zu senden. Anwendungen können den Client mit einem einzelnen Authentifizierungsschema herausfordern, indem Sie den Enumerationstyp **httpheaderwwwauthenticate** im **knownheaders** -Member der [**http- \_ Antwort \_ Header**](/windows/desktop/api/Http/ns-http-http_response_headers) -Struktur angeben, die in der [**http- \_ Antwort**](http-response.md)enthalten ist. Wenn der Server jedoch mit mehreren Authentifizierungs Schemas herausfordert, verwendet die Anwendung die http-Struktur mit [**\_ mehreren \_ bekannten \_ Headern**](/windows/desktop/api/Http/ns-http-http_multiple_known_headers) , um die Authentifizierungs Typen bereitzustellen.
+Mit [**der HTTP MULTIPLE KNOWN \_ \_ \_ HEADERS-Struktur**](/windows/desktop/api/Http/ns-http-http_multiple_known_headers) können Serveranwendungen mehrere Authentifizierungsherausforderungen an den Client senden. Anwendungen können den Client mit einem einzelnen Authentifizierungsschema fordern, indem sie den **HttpHeaderWwwAuthenticate-Enumerationstyp** im **KnownHeaders-Member** der [**HTTP RESPONSE \_ \_ HEADERS-Struktur**](/windows/desktop/api/Http/ns-http-http_response_headers) angeben, die in [**HTTP RESPONSE enthalten \_ ist.**](http-response.md) Wenn der Server jedoch mit mehreren Authentifizierungsschemas konfrontiert wird, verwendet die Anwendung die HTTP MULTIPLE KNOWN HEADERS-Struktur, um die [**\_ \_ \_ Authentifizierungstypen**](/windows/desktop/api/Http/ns-http-http_multiple_known_headers) zur Verfügung zu stellen.
 
-Wenn die **http- \_ Antwort- \_ \_ infoFlags das \_ \_ Order** -Flag beibehalten, sendet HTTP die Authentifizierungs Header in der angegebenen Reihenfolge. Wenn das Flag nicht vorhanden ist, ordnet http die Authentifizierungs Schemas wie folgt von der stärksten zum schwächsten an:
+Wenn das **FLAG HTTP RESPONSE INFO \_ \_ \_ FLAGS PRESERVE \_ \_ ORDER** vorhanden ist, sendet HTTP die Authentifizierungsheader in der angegebenen Reihenfolge. Wenn das Flag nicht vorhanden ist, ordnet HTTP die Authentifizierungsschemas wie folgt vom stärksten zum schwachsten an:
 
 1.  Aushandeln
 2.  NTLM
 3.  Digest
 4.  Basic
 
-Wenn es sich bei dem Authentifizierungsschema nicht um eines dieser Schemas handelt, muss die Anwendung das Flag " **\_ \_ \_ \_ \_ Reihenfolge der HTTP-Antwort-Flags beibehalten** " angeben.
+Wenn es sich bei dem Authentifizierungsschema nicht um eines dieser Schemas handelt, muss die Anwendung das **FLAG HTTP RESPONSE INFO \_ \_ \_ FLAGS PRESERVE \_ \_ ORDER** angeben.
 
-Der **knownheader** -Member von [**http \_ Multiple \_ known \_ Headers**](/windows/desktop/api/Http/ns-http-http_multiple_known_headers) verweist auf ein Array von [**bekannten http- \_ \_ Header**](/windows/desktop/api/Http/ns-http-http_known_header) Strukturen. Der **prawvalue** -Member der http-Struktur für **\_ bekannte \_ Header** muss auf eine Zeichenfolge verweisen, die den Schema Namen angibt. HTTP analysiert die Zeichenfolge, um das Schema zu bestimmen, und führt eine der folgenden Aktionen aus:
+Der **KnownHeader-Member** von [**HTTP MULTIPLE KNOWN \_ \_ \_ HEADERS**](/windows/desktop/api/Http/ns-http-http_multiple_known_headers) verweist auf ein Array von [**HTTP KNOWN \_ \_ HEADER-Strukturen.**](/windows/desktop/api/Http/ns-http-http_known_header) Der **pRawValue-Member** der **HTTP KNOWN \_ \_ HEADER-Struktur** muss auf eine Zeichenfolge zeigen, die den Schemanamen angibt. HTTP analysiert die Zeichenfolge, um das Schema zu bestimmen, und führt eine der folgenden Aktionen aus:
 
--   Wenn die Zeichenfolge einen unbekannten Authentifizierungstyp enthält oder der Authentifizierungstyp in der Konfigurations Gruppe (entweder der URL-Gruppe oder der Server Sitzung), die der Anforderung zugeordnet ist, nicht aktiviert ist, fügt die HTTP-Server-API die Zeichenfolge in " **prawvalue** " an den WWW-Authenticate-Header an. Wenn die Anwendung z. b. ein nicht unterstütztes Authentifizierungsschema angibt und " **prawvalue** " die Zeichenfolge "customauthstring" enthält, wird der folgende Text an den Authentifizierungs Header angehängt:
+-   Wenn die Zeichenfolge einen unbekannten Authentifizierungstyp enthält oder der Authentifizierungstyp in der Konfigurationsgruppe (entweder der URL-Gruppe oder der Serversitzung), die der Anforderung zugeordnet ist, nicht aktiviert ist, fügt die HTTP-Server-API die Zeichenfolge in **pRawValue** an den WWW-Authenticate-Header an. Wenn die Anwendung beispielsweise ein nicht unterstütztes Authentifizierungsschema angibt und **pRawValue** die Zeichenfolge "CustomAuthString" enthält, wird der folgende Text an den Authentifizierungsheader angefügt:
 
-    WWW-Authenticate: customauthschemecrlf
+    WWW-Authenticate: CustomAuthSchemeCRLF
 
-    Wenn für die Anwendung keine Standard Authentifizierung aktiviert ist und " **prawvalue** " die Zeichenfolge "Basic Realm =" basisalm "" enthält, enthält der Authentifizierungs Header den folgenden Text:
+    Wenn für die Anwendung die Standardauthentifizierung nicht aktiviert ist und **pRawValue** die Zeichenfolge "Basic realm="BasicRealm" enthält, enthält der Authentifizierungsheader den folgenden Text:
 
-    WWW-Authenticate: Basic Realm = "basisalm"
+    WWW-Authenticate: Basic realm="BasicRealm"
 
--   Wenn die Zeichenfolge einen bekannten Authentifizierungstyp enthält und in der Konfigurations Gruppe (entweder der URL-Gruppe oder der Server Sitzung) vorhanden ist, die der Anforderung zugeordnet ist, generiert die HTTP-Server-API den WWW-Authenticate-Header. Wenn beispielsweise die in " **prawvalue** " angegebene Zeichenfolge "Digest" und der Digest in der Server Sitzung aktiviert ist, fügt die HTTP-Server-API den folgenden Text an den Authentifizierungs Header an:
+-   Wenn die Zeichenfolge einen bekannten Authentifizierungstyp enthält und in der Konfigurationsgruppe (entweder der URL-Gruppe oder der Serversitzung) vorhanden ist, die der Anforderung zugeordnet ist, generiert die HTTP-Server-API den WWW-Authenticate Header. Wenn die in **pRawValue** angegebene Zeichenfolge beispielsweise "Digest" ist und Digest für die Serversitzung aktiviert ist, fügt die HTTP-Server-API den folgenden Text an den Authentifizierungsheader an:
 
-    WWW-Authenticate: Digest-Bereich = " testrealm@host.com "
+    WWW-Authenticate: Digest realm=" testrealm@host.com "
 
-Wenn das Schema im **prawvalue** -Member von [**http \_ known \_ Header**](/windows/desktop/api/Http/ns-http-http_known_header) Aushandlungen oder NTLM lautet, genügt der Name des Authentifizierungs Schemas. Wenn das angegebene Schema "Basic" ist, wird der Bereichs Name an den Schema Namen angehängt. die Anwendung muss den Bereichs Namen nicht in " **prawvalue**" angeben. Wenn das angegebene Schema Digest ist, ruft http " [**Accept-SecurityContext**](../SecAuthN/acceptsecuritycontext--general.md) " auf, um die Aufforderung zu generieren, die an den Schema Namen angehängt wird. Die Parameter für das Schema "Basic" (Bereich) und "Digest" (Bereich und Domänen Name) werden aus den entsprechenden Konfigurations Gruppen-Authentifizierungsinformationen abgerufen.
+Wenn das Schema im **pRawValue-Member** von [**HTTP KNOWN \_ \_ HEADER**](/windows/desktop/api/Http/ns-http-http_known_header) Negotiate oder NTLM ist, ist der Name des Authentifizierungsschemas ausreichend. Wenn das angegebene Schema Basic ist, wird der Bereichsname an den Schemanamen angefügt. Die Anwendung muss den Bereichsnamen nicht in **pRawValue angeben.** Wenn das angegebene Schema Digest ist, ruft HTTP [**AcceptSecurityContext**](../SecAuthN/acceptsecuritycontext--general.md) auf, um die Herausforderung zu generieren, die an den Schemanamen angefügt wird. Die Parameter für das Schema Basic (Bereich) und Digest (Bereich und Domänenname) werden aus den entsprechenden Konfigurationsgruppen-Authentifizierungsinformationen ermittelt.
 
-Wenn die Anwendung in unbekannten Anforderungs Headern mehrere Authentifizierungs Herausforderungen an den Client sendet, sendet die HTTP-Server-API diese ohne Eingriff an den Client. Diese Verwendung wird jedoch nicht empfohlen.
+Wenn die Anwendung mehrere Authentifizierungsanforderungen an den Client in unbekannten Anforderungsheadern sendet, sendet die HTTP-Server-API diese ohne Eingriff an den Client. Diese Verwendung wird jedoch nicht empfohlen.
 
- 
+ 
 
- 
+ 
 
 
 

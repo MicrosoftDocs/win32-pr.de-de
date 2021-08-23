@@ -1,7 +1,7 @@
 ---
-description: Speichert das vom Treiber zurückgegebene ungefilterte Bild intern zwischen.
+description: Speichert intern das vom Treiber zurückgegebene ungefilterte Image zwischen.
 ms.assetid: 09cb242d-d1d6-4130-8b49-0770940471d8
-title: 'Iwiapreview:: getnewpreview-Methode (WIA. h)'
+title: IWiaPreview::GetNewPreview-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: c3f1251e7ec1b98d43e616c1ff6f2b3b2aacd8b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2200452fe586a4755a4560f0f68094e5f107e9e7d69a823bafac4d33bc1c6ce8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965559"
 ---
-# <a name="iwiapreviewgetnewpreview-method"></a>Iwiapreview:: getnewpreview-Methode
+# <a name="iwiapreviewgetnewpreview-method"></a>IWiaPreview::GetNewPreview-Methode
 
-Speichert das vom Treiber zurückgegebene ungefilterte Bild intern zwischen.
+Speichert intern das vom Treiber zurückgegebene ungefilterte Image zwischen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ HRESULT GetNewPreview(
 
 <dl> <dt>
 
-*pWiaItem2* \[ in\]
+*pWiaItem2* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWiaItem2**](-wia-iwiaitem2.md) \** _
+Typ: **[ **IWiaItem2**](-wia-iwiaitem2.md)\***
 
-Gibt einen Zeiger auf das [_ *IWiaItem2* *](-wia-iwiaitem2.md) -Element für das Bild an.
+Gibt einen Zeiger auf das [**IWiaItem2-Element**](-wia-iwiaitem2.md) für das Bild an.
 
 </dd> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 Derzeit nicht verwendet. Sollte auf Null festgelegt werden.
 
 </dd> <dt>
 
-*pwiatransfercallback* \[ in\]
+*pWiaTransferCallback* \[ In\]
 </dt> <dd>
 
-Typ: **[**iwiatransfercallback**](-wia-iwiatransfercallback.md) \** _
+Typ: **[ **IWiaTransferCallback**](-wia-iwiatransfercallback.md)\***
 
-Gibt einen Zeiger auf die [_ *iwiatransfercallback* *](-wia-iwiatransfercallback.md) -Schnittstelle der aufrufenden Anwendung an.
+Gibt einen Zeiger auf die [**IWiaTransferCallback-Schnittstelle**](-wia-iwiatransfercallback.md) der aufrufenden Anwendung an.
 
 </dd> </dl>
 
@@ -72,21 +72,21 @@ Gibt einen Zeiger auf die [_ *iwiatransfercallback* *](-wia-iwiatransfercallback
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung muss **iwiapreview:: getnewpreview** aufrufen, bevor [**iwiapreview::D etectregions**](-wia-iwiapreview-detectregions.md)aufgerufen wird.
+Eine Anwendung muss **IWiaPreview::GetNewPreview** aufrufen, bevor sie [**IWiaPreview::D etectRegions aufruft.**](-wia-iwiapreview-detectregions.md)
 
-**Iwiapreview:: getnewpreview** legt die [**WIA-Eigenschaft \_ DPS \_ Preview**](-wia-wiaitempropscannerdevice.md) fest (und setzt Sie vor der Rückgabe zurück, es sei denn, Sie wurde zuvor festgelegt). Dadurch kann der Treiber und die Hardware sowie der Bild Verarbeitungs Filter wissen, dass es sich bei dem Element um eine Vorschauversion handelt.
+**IWiaPreview::GetNewPreview** legt die [**WIA \_ DPS \_ PREVIEW-Eigenschaft**](-wia-wiaitempropscannerdevice.md) fest (und setzt sie zurück, bevor sie zurückgegeben wird, es sei denn, sie wurde zuvor festgelegt). Dadurch können Treiber und Hardware sowie der Bildverarbeitungsfilter wissen, dass es sich bei dem Element um eine Vorschauüberprüfung handelt.
 
-Intern erstellt die Windows-Abbild Übernahme (WIA) 2,0 Preview-Komponente eine Instanz des filterverarbeitungs Filters des Treibers, indem [**GetExtension**](-wia-iwiaitem2-getextension.md) auf *pWiaItem2* aufgerufen wird. Die WIA 2,0-Vorschau Komponente führt dies aus, wenn die Anwendung **iwiapreview:: getnewpreview** aufruft. Die WIA 2,0-Vorschau Komponente initialisiert auch den Filter in **iwiapreview:: getnewpreview**. Dieselbe Filter Instanz wird von der WIA 2,0-Vorschau Komponente während eines [**iwiapreview:: updatepreview**](-wia-iwiapreview-updatepreview.md)-Aufrufes verwendet.
+Intern erstellt die komponente Windows Image Acquisition (WIA) 2.0 preview eine Instanz des Bildverarbeitungsfilters des Treibers, indem [**GetExtension**](-wia-iwiaitem2-getextension.md) auf *pWiaItem2* aufgerufen wird. Die WIA 2.0-Vorschaukomponente führt dies aus, wenn die Anwendung **IWiaPreview::GetNewPreview aufruft.** Die WIA 2.0-Vorschaukomponente initialisiert auch den Filter in **IWiaPreview::GetNewPreview.** Dieselbe Filterinstanz wird von der WIA 2.0-Vorschaukomponente während eines Aufrufs von [**IWiaPreview::UpdatePreview**](-wia-iwiapreview-updatepreview.md)verwendet.
 
-Vor dem Aufrufen der WIA 2,0-Vorschau Komponente sollte eine Anwendung [**checkextension**](-wia-iwiaitem2-checkextension.md) aufrufen, um sicherzustellen, dass der Treiber über einen Bild Verarbeitungs Filter verfügt. Er sollte **checkextension** für das Element aufrufen, das an **iwiapreview:: getnewpreview** übergeben würde. Es ist nutzlos, Live-Vorschau Versionen ohne Bild Verarbeitungs Filter bereitzustellen. Wenn eine Anwendung **iwiapreview:: getnewpreview** für einen Treiber ohne Bild Verarbeitungs Filter aufruft, schlägt der Aufruf fehl.
+Vor dem Aufrufen der WIA 2.0-Vorschaukomponente sollte eine Anwendung [**CheckExtension**](-wia-iwiaitem2-checkextension.md) aufrufen, um sicherzustellen, dass der Treiber einen Bildverarbeitungsfilter enthält. Sie sollte **CheckExtension** für das Element aufrufen, das an **IWiaPreview::GetNewPreview** übergeben wird. Es ist unbrauchbar, Livevorschauversionen ohne Bildverarbeitungsfilter bereitzustellen. Wenn eine Anwendung **IWiaPreview::GetNewPreview** für einen Treiber ohne Bildverarbeitungsfilter aufruft, schlägt der Aufruf fehl.
 
 ## <a name="examples"></a>Beispiele
 
-Checkimgfilter überprüft, ob der Treiber über einen Bild Verarbeitungs Filter verfügt. Vor dem Aufrufen der Vorschau Komponente sollte eine Anwendung sicherstellen, dass der Treiber über einen Bild Verarbeitungs Filter verfügt.
+CheckImgFilter überprüft, ob der Treiber über einen Bildverarbeitungsfilter verfügt. Vor dem Aufrufen der Vorschaukomponente sollte eine Anwendung sicherstellen, dass der Treiber über einen Bildverarbeitungsfilter verfügt.
 
 
 ```C++
@@ -134,9 +134,9 @@ CheckImgFilter(
 
 
 
-Downloadpreviewimage lädt Bilddaten aus dem Scanner herunter, indem die **iwiapreview:: getnewpreview** -Methode der Vorschau Komponente aufgerufen wird. Anschließend wird detectsubregions aufgerufen, wenn der Anwendungs Benutzer den Segmentierungs Filter aufrufen möchte, der für jeden erkannten Bereich ein untergeordnetes Element unter pWiaItem2 erstellt. Siehe [**erkenctregions**](-wia-iwiasegmentationfilter-detectregions.md) für die detectsubregions-Methode, die in diesem Beispiel verwendet wird.
+DownloadPreviewImage lädt Bilddaten vom Scanner herunter, indem die **IWiaPreview::GetNewPreview-Methode** der Vorschaukomponente aufgerufen wird. Anschließend wird DetectSubregions aufgerufen, wenn der Anwendungsbenutzer den Segmentierungsfilter aufrufen möchte, der ein untergeordnetes Element unter pWiaItem2 für jede erkannte Region erstellt. Informationen zur in diesem Beispiel verwendeten DetectSubregions-Methode finden Sie unter [**DetectRegions.**](-wia-iwiasegmentationfilter-detectregions.md)
 
-In diesem Beispiel legt der Anwendungs Benutzer fest, `m_bUseSegmentationFilter` indem Sie auf ein Kontrollkästchen klicken. Wenn die Anwendung dies unterstützt, sollte zuerst überprüft werden, ob der Treiber über einen Segmentierungs Filter verfügt, indem [**checkextension**](-wia-iwiaitem2-checkextension.md)aufgerufen wird. Unter **iwiapreview:: getnewpreview** finden Sie ein Beispiel für die checkimgfilter-Methode, das zeigt, wie dies erreicht werden kann.
+In diesem Beispiel legt der Anwendungsbenutzer `m_bUseSegmentationFilter` fest, indem er auf ein Kontrollkästchen klickt. Wenn die Anwendung dies unterstützt, sollte zunächst überprüft werden, ob der Treiber über einen Segmentierungsfilter verfügt, indem [**CheckExtension**](-wia-iwiaitem2-checkextension.md)aufgerufen wird. Unter **IWiaPreview::GetNewPreview** finden Sie das CheckImgFilter-Methodenbeispiel, das zeigt, wie dies möglich ist.
 
 
 ```C++
@@ -220,10 +220,10 @@ DownloadPreviewImage(
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

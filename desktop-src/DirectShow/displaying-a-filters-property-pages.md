@@ -1,32 +1,32 @@
 ---
-description: Anzeigen der Eigenschaften Seiten eines Filters
+description: Anzeigen der Eigenschaftenseiten eines Filters
 ms.assetid: 4a5f6938-7b33-4350-b8fa-cf78c5c44bcd
-title: Anzeigen der Eigenschaften Seiten eines Filters
+title: Anzeigen der Eigenschaftenseiten eines Filters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b0845a12b73363dc6ed93654439fd31826bf9cfc
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 0f0e29654983ee51b98666411a11f7130eb896c380ec754b5576862c313dcbc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016137"
 ---
-# <a name="displaying-a-filters-property-pages"></a>Anzeigen der Eigenschaften Seiten eines Filters
+# <a name="displaying-a-filters-property-pages"></a>Anzeigen der Eigenschaftenseiten eines Filters
 
-Eine Eigenschaften Seite ist eine Möglichkeit für einen Filter, um Eigenschaften zu unterstützen, die vom Benutzer festgelegt werden können. In diesem Artikel wird beschrieben, wie die Eigenschaften Seiten eines Filters in einer Anwendung angezeigt werden. Weitere Informationen zu Eigenschaften Seiten finden Sie in der Platform SDK-Dokumentation.
+Eine Eigenschaftenseite ist eine Möglichkeit für einen Filter, Eigenschaften zu unterstützen, die der Benutzer festlegen kann. In diesem Artikel wird beschrieben, wie Die Eigenschaftenseiten eines Filters in einer Anwendung angezeigt werden. Weitere Informationen zu Eigenschaftenseiten finden Sie in der Platform SDK-Dokumentation.
 
 > [!Note]  
-> Obwohl viele der mit DirectShow bereitgestellten Filtereigenschaften Seiten unterstützen, sind Sie für das Debuggen vorgesehen und werden für die Anwendungs Verwendung nicht empfohlen. In den meisten Fällen wird die entsprechende Funktionalität über eine benutzerdefinierte Schnittstelle für den Filter bereitgestellt. Eine Anwendung sollte diese Filterprogramm gesteuert steuern, anstatt ihre Eigenschaften Seiten für Benutzer verfügbar zu machen.
+> Obwohl viele der mit DirectShow bereitgestellten Filter Eigenschaftenseiten unterstützen, sind sie für Debugzwecke vorgesehen und werden nicht für die Anwendungsnutzung empfohlen. In den meisten Fällen wird die entsprechende Funktionalität über eine benutzerdefinierte Schnittstelle für den Filter bereitgestellt. Eine Anwendung sollte diese Filter programmgesteuert steuern, anstatt ihre Eigenschaftenseiten für Benutzer verfügbar zu machen.
 
  
 
-Filter mit Eigenschaften Seiten machen die **ISpecifyPropertyPages** -Schnittstelle verfügbar. Um zu ermitteln, ob ein Filter eine Eigenschaften Seite definiert, Fragen Sie mithilfe von **QueryInterface** den Filter für diese Schnittstelle ab.
+Filter mit Eigenschaftenseiten machen die **ISpecifyPropertyPages-Schnittstelle** verfügbar. Um zu bestimmen, ob ein Filter eine Eigenschaftenseite definiert, fragen Sie den Filter für diese Schnittstelle mit **QueryInterface ab.**
 
-Wenn Sie eine Instanz eines Filters (durch Aufrufen von **CoCreateInstance**) direkt erstellt haben, verfügen Sie bereits über einen Zeiger auf den Filter. Wenn dies nicht der Fall ist, können Sie die Filter im Diagramm mithilfe der [**ifiltergraph:: enumfilters**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-enumfilters) -Methode auflisten. Weitere Informationen finden Sie unter Auflisten von [Objekten in einem Filter Diagramm](enumerating-objects-in-a-filter-graph.md).
+Wenn Sie direkt eine Instanz eines Filters erstellt haben (durch Aufrufen von **CoCreateInstance),** verfügen Sie bereits über einen Zeiger auf den Filter. Falls nicht, können Sie die Filter im Diagramm mithilfe der [**IFilterGraph::EnumFilters-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-enumfilters) aufzählen. Weitere Informationen finden Sie unter [Enumerating Objects in a Filter Graph.](enumerating-objects-in-a-filter-graph.md)
 
-Sobald Sie über den **ISpecifyPropertyPages** -Schnittstellen Zeiger verfügen, rufen Sie die Eigenschaften Seiten des Filters ab, indem Sie die **ISpecifyPropertyPages:: GetPages** -Methode aufrufen. Diese Methode füllt ein Gezähltes Array von global eindeutigen Bezeichnern (GUIDs) mit der Klassen-ID (CLSID) der einzelnen Eigenschaften Seiten. Ein Gezähltes Array wird durch eine **cauuid** -Struktur definiert, die Sie zuordnen müssen, aber nicht initialisieren müssen. Die **GetPages** -Methode ordnet das Array zu, das im **pelems** -Member der **cauuid** -Struktur enthalten ist. Wenn Sie den Vorgang abgeschlossen haben, können Sie das Array freigeben, indem Sie die **CoTaskMemFree** -Funktion aufrufen.
+Sobald Sie über den **ISpecifyPropertyPages-Schnittstellenzeiger** verfügen, rufen Sie die Eigenschaftenseiten des Filters ab, indem Sie die **ISpecifyPropertyPages::GetPages-Methode** aufrufen. Diese Methode füllt ein gezähltes Array global eindeutiger Bezeichner (GLOBALLY UNIQUE Identifier, GUIDs) mit dem Klassenbezeichner (CLSID) jeder Eigenschaftenseite auf. Ein gezähltes Array wird durch eine **CAUUID-Struktur** definiert, die Sie zuordnen, aber nicht initialisieren müssen. Die **GetPages-Methode** ordnet das Array zu, das im **pElems-Member** der **CAUUID-Struktur enthalten** ist. Wenn Sie fertig sind, geben Sie das Array frei, indem Sie die **CoTaskMemFree-Funktion** aufrufen.
 
-Die **OleCreatePropertyFrame** -Funktion bietet eine einfache Möglichkeit, die Eigenschaften Seiten in einem modalen Dialogfeld anzuzeigen.
+Die **OleCreatePropertyFrame-Funktion** bietet eine einfache Möglichkeit, die Eigenschaftenseiten in einem modalen Dialogfeld anzuzeigen.
 
 
 ```C++

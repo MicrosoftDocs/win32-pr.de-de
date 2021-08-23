@@ -19,18 +19,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: de3b63def40cb6ead40f6f4c95625603cfc581ee
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d533eb06aca34ffdb5996bb0c08c7d40645042e7ccab7645cfd3a04adf0db2ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069660"
 ---
-# <a name="systemconfig_v0_cpu-class"></a>SystemConfig \_ V0 \_ CPU-Klasse
+# <a name="systemconfig_v0_cpu-class"></a>SystemConfig \_ \_ V0-CPU-Klasse
 
 Diese Klasse ist die Ereignistypklasse für CPU-Konfigurationsereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -76,7 +76,7 @@ Granularität, mit der virtueller Arbeitsspeicher zugeordnet wird.
 
 </dd> <dt>
 
-**Computername**
+**ComputerName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **char16-Array**
@@ -176,14 +176,14 @@ Größe einer Auslagerungsseite in Bytes.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

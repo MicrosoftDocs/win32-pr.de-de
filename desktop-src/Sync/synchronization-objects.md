@@ -1,55 +1,55 @@
 ---
-description: Ein Synchronisierungs Objekt ist ein Objekt, dessen Handle in einer der Wait-Funktionen angegeben werden kann, um die Ausführung mehrerer Threads zu koordinieren.
+description: Ein Synchronisierungsobjekt ist ein Objekt, dessen Handle in einer der Wartefunktionen angegeben werden kann, um die Ausführung mehrerer Threads zu koordinieren.
 ms.assetid: 11558ae9-1056-48bf-96f5-94a051df41c3
-title: Synchronisierungs Objekte
+title: Synchronisierungsobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 299cbd6225b3cc7629378f5fe500fc36ccbe8e86
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dfd011663e13d8d6992355d99cc643e2f7243f8385ae75f9274367bfc43fe5f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118885908"
 ---
-# <a name="synchronization-objects"></a>Synchronisierungs Objekte
+# <a name="synchronization-objects"></a>Synchronisierungsobjekte
 
-Ein *Synchronisierungs Objekt* ist ein Objekt, dessen Handle in einer der Wait- [Funktionen](wait-functions.md) angegeben werden kann, um die Ausführung mehrerer Threads zu koordinieren. Mehrere Prozesse können über ein Handle für das gleiche Synchronisierungs Objekt verfügen, sodass die prozessübergreifende Synchronisierung möglich ist.
+Ein *Synchronisierungsobjekt* ist ein Objekt, dessen Handle in einer der [Wartefunktionen](wait-functions.md) angegeben werden kann, um die Ausführung mehrerer Threads zu koordinieren. Mehrere Prozesse können über ein Handle für dasselbe Synchronisierungsobjekt verfügen, um die prozessübergreifende Synchronisierung zu ermöglichen.
 
-Die folgenden Objekttypen werden exklusiv für die Synchronisierung bereitgestellt.
+Die folgenden Objekttypen werden ausschließlich für die Synchronisierung bereitgestellt.
 
 
 
 | type           | BESCHREIBUNG                                                                                                                                                                                                      |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Ereignis          | Benachrichtigt einen oder mehrere wartende Threads über das Eintreten eines Ereignisses. Weitere Informationen finden Sie unter [Event Objects](event-objects.md).                                                                                   |
-| Mutex          | Kann im Besitz von nur einem Thread gleichzeitig sein, sodass Threads den sich gegenseitig ausschließenden Zugriff auf eine freigegebene Ressource koordinieren können. Weitere Informationen finden Sie unter [Mutex Objects](mutex-objects.md).                          |
-| Semaphore      | Behält eine Anzahl zwischen null und einem maximalen Wert bei und schränkt die Anzahl von Threads ein, die gleichzeitig auf eine freigegebene Ressource zugreifen. Weitere Informationen finden Sie unter [Semaphore-Objekte](semaphore-objects.md). |
-| Aktivierungszeit Geber | Benachrichtigt einen oder mehrere wartende Threads, dass eine angegebene Zeit erreicht wurde. Weitere Informationen finden Sie unter [wanutzbare Timer-Objekte](waitable-timer-objects.md).                                                          |
+| Ereignis          | Benachrichtigt einen oder mehrere wartende Threads über das Eintreten eines Ereignisses. Weitere Informationen finden Sie unter [Ereignisobjekte.](event-objects.md)                                                                                   |
+| Mutex          | Kann jeweils nur einem Thread gehören, sodass Threads den sich gegenseitig ausschließenden Zugriff auf eine freigegebene Ressource koordinieren können. Weitere Informationen finden Sie unter [Mutex-Objekte.](mutex-objects.md)                          |
+| Semaphore      | Behält eine Anzahl zwischen 0 (null) und einem bestimmten Höchstwert bei und begrenzt die Anzahl der Threads, die gleichzeitig auf eine freigegebene Ressource zugreifen. Weitere Informationen finden Sie unter [Semaphore Objects](semaphore-objects.md). |
+| Wartebarer Timer | Benachrichtigt mindestens einen wartenden Thread, dass eine angegebene Zeit erreicht ist. Weitere Informationen finden Sie unter [Wartebare Timerobjekte.](waitable-timer-objects.md)                                                          |
 
 
 
  
 
-Obwohl die folgenden Objekte für andere Verwendungszwecke verfügbar sind, können Sie auch für die Synchronisierung verwendet werden.
+Obwohl für andere Zwecke verfügbar, können die folgenden Objekte auch für die Synchronisierung verwendet werden.
 
 
 
 | Object                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Benachrichtigung ändern          | Der Status wird durch die [**findfirstchangenotifi-**](/windows/win32/api/fileapi/nf-fileapi-findfirstchangenotificationa) Funktion erstellt und ist auf "signalisiert" festgelegt, wenn ein bestimmter Änderungstyp innerhalb eines angegebenen Verzeichnisses oder einer Verzeichnisstruktur auftritt. Weitere Informationen finden Sie unter Abrufen von [Benachrichtigungen zu Verzeichnisänderungen](../fileio/obtaining-directory-change-notifications.md).                                                                                                                                   |
-| Konsolen Eingabe                | Wird erstellt, wenn eine-Konsole erstellt wird. Das Handle für die Konsolen Eingabe wird von der Funktion " [**reatefile**](/windows/win32/api/fileapi/nf-fileapi-createfilea) " zurückgegeben, wenn "$" oder die Funktion " [**getstdhandle**](/windows/console/getstdhandle) " angegeben wird. Der Status wird auf "signalisiert" festgelegt, wenn ungelesene Eingaben im Eingabepuffer der Konsole vorhanden sind, und auf "nicht signalisiert" festgelegt, wenn der Eingabepuffer leer ist. Weitere Informationen zu-Konsolen finden Sie unter [Zeichenmodus-Anwendungen](/windows/console/character-mode-applications) . |
-| Auftrag                          | Wird durch Aufrufen der [**CreateJobObject**](/windows/win32/api/jobapi2/nf-jobapi2-createjobobjectw) -Funktion erstellt. Der Status eines Auftrags Objekts wird auf "signalisiert" festgelegt, wenn alle zugehörigen Prozesse beendet werden, da das angegebene Zeitlimit für das Zeitlimit überschritten wurde. Weitere Informationen zu Auftrags Objekten finden Sie unter [Auftrags Objekte](../procthread/job-objects.md).                                                                                                                                                             |
-| Benachrichtigung zu Speicherressourcen | Wird von der Funktion " [**kreatememoryresourcenotifi"**](/windows/win32/api/memoryapi/nf-memoryapi-creatememoryresourcenotification) erstellt. Der Status wird auf "signalisiert" festgelegt, wenn ein angegebener Änderungstyp im physischen Speicher auftritt. Weitere Informationen zum Arbeitsspeicher finden Sie unter [Speicherverwaltung](../memory/memory-management.md).                                                                                                                                                                                  |
-| Prozess                      | Wird durch Aufrufen der [**CreateProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) -Funktion erstellt. Der Status wird auf "nicht signalisiert" festgelegt, während der Prozess ausgeführt wird, und wird beim Beenden des Prozesses auf "signalisiert" festgelegt. Weitere Informationen zu Prozessen finden Sie unter [Prozesse und Threads](../procthread/processes-and-threads.md).                                                                                                                                                                                  |
-| Thread                       | Wird erstellt, wenn ein neuer Thread erstellt wird, indem die [**CreateProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa)-, [**CreateThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)-oder [**createremotethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread) -Funktion aufgerufen wird. Der Status wird auf "nicht signalisiert" festgelegt, während der Thread ausgeführt wird, und wird beim Beenden des Threads auf "signalisiert" festgelegt. Weitere Informationen zu Threads finden Sie unter [Prozesse und Threads](../procthread/processes-and-threads.md).                                                            |
+| Änderungsbenachrichtigung          | Der von der [**FindFirstChangeNotification-Funktion**](/windows/win32/api/fileapi/nf-fileapi-findfirstchangenotificationa) erstellte Zustand wird auf signalisiert festgelegt, wenn ein angegebener Änderungstyp innerhalb eines angegebenen Verzeichnisses oder einer Verzeichnisstruktur auftritt. Weitere Informationen finden Sie unter [Abrufen von Verzeichnisänderungsbenachrichtigungen.](../fileio/obtaining-directory-change-notifications.md)                                                                                                                                   |
+| Konsoleneingabe                | Wird erstellt, wenn eine Konsole erstellt wird. Das Handle für die Konsoleneingabe wird von der [**CreateFile-Funktion**](/windows/win32/api/fileapi/nf-fileapi-createfilea) zurückgegeben, wenn CONIN$ angegeben wird, oder von der [**GetStdHandle-Funktion.**](/windows/console/getstdhandle) Der Status wird auf signalisiert festgelegt, wenn im Eingabepuffer der Konsole ungelesene Eingaben vorhanden sind, und auf Nicht signalisiert festgelegt, wenn der Eingabepuffer leer ist. Weitere Informationen zu Konsolen finden Sie unter [Zeichenmodusanwendungen.](/windows/console/character-mode-applications) |
+| Auftrag                          | Erstellt durch Aufrufen der [**CreateJobObject-Funktion.**](/windows/win32/api/jobapi2/nf-jobapi2-createjobobjectw) Der Status eines Auftragsobjekts wird auf signalisiert festgelegt, wenn alle prozesse beendet werden, da das angegebene Zeitlimit für das Ende des Auftrags überschritten wurde. Weitere Informationen zu Auftragsobjekten finden Sie unter [Auftragsobjekte.](../procthread/job-objects.md)                                                                                                                                                             |
+| Speicherressourcenbenachrichtigung | Wird von der [**CreateMemoryResourceNotification-Funktion**](/windows/win32/api/memoryapi/nf-memoryapi-creatememoryresourcenotification) erstellt. Der Zustand wird auf signalisiert festgelegt, wenn ein angegebener Änderungstyp innerhalb des physischen Arbeitsspeichers auftritt. Weitere Informationen zum Arbeitsspeicher finden Sie unter [Speicherverwaltung.](../memory/memory-management.md)                                                                                                                                                                                  |
+| Prozess                      | Wird durch Aufrufen der [**CreateProcess-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) erstellt. Sein Zustand wird auf nicht signalisiert festgelegt, während der Prozess ausgeführt wird, und auf signalisiert, wenn der Prozess beendet wird. Weitere Informationen zu Prozessen finden Sie unter [Prozesse und Threads.](../procthread/processes-and-threads.md)                                                                                                                                                                                  |
+| Thread                       | Wird erstellt, wenn ein neuer Thread durch Aufrufen der [**CreateProcess-,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) [**CreateThread-**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)oder [**CreateRemoteThread-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread) erstellt wird. Sein Zustand wird auf nicht signalisiert festgelegt, während der Thread ausgeführt wird, und auf signalisiert, wenn der Thread beendet wird. Weitere Informationen zu Threads finden Sie unter [Prozesse und Threads.](../procthread/processes-and-threads.md)                                                            |
 
 
 
  
 
-Unter bestimmten Umständen können Sie auch ein Datei-, Named Pipe-oder Kommunikationsgerät als Synchronisierungs Objekt verwenden. Allerdings wird davon abgeraten, zu diesem Zweck zu verwenden. Verwenden Sie stattdessen asynchrone e/a-Vorgänge, und warten Sie auf das Ereignis Objekt, das in der [**über**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) Lapp enden Struktur festgelegt ist. Es ist sicherer, das Ereignis Objekt aufgrund der Verwirrung zu verwenden, die auftreten kann, wenn mehrere gleichzeitig überlappende Vorgänge für dieselbe Datei, Named Pipe oder dasselbe Kommunikationsgerät ausgeführt werden. In dieser Situation gibt es keine Möglichkeit, zu ermitteln, welcher Vorgang bewirkt hat, dass der Objektzustand signalisiert wird.
+In einigen Fällen können Sie auch eine Datei, eine Named Pipe oder ein Kommunikationsgerät als Synchronisierungsobjekt verwenden. von der Verwendung zu diesem Zweck wird jedoch abgeraten. Verwenden Sie stattdessen asynchrone E/A, und warten Sie auf das Ereignisobjekt, das in der [**OVERLAPPED-Struktur**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) festgelegt ist. Aufgrund der Verwirrung, die auftreten kann, wenn mehrere gleichzeitig überlappende Vorgänge auf demselben Datei-, Named Pipe- oder Kommunikationsgerät ausgeführt werden, ist es sicherer, das Ereignisobjekt zu verwenden. In dieser Situation gibt es keine Möglichkeit zu wissen, welcher Vorgang dazu geführt hat, dass der Zustand des Objekts signalisiert wurde.
 
-Weitere Informationen zu e/a-Vorgängen für Dateien, Named Pipes oder Mitteilungen finden Sie unter [Synchronisierung und überlappende Eingabe und Ausgabe](synchronization-and-overlapped-input-and-output.md).
+Weitere Informationen zu E/A-Vorgängen für Dateien, Named Pipes oder Kommunikation finden Sie unter [Synchronization and Overlapped Input and Output](synchronization-and-overlapped-input-and-output.md).
 
  
 

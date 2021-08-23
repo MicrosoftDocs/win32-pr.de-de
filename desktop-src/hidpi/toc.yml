@@ -1,70 +1,70 @@
 - name: Hohe DPI-Werte
   href: high-dpi-desktop-application-development-on-windows.md
   items:
-    - name: Festlegen der Standard-dpi-Informationen für einen Prozess
+    - name: Festlegen der DPI-Standarderkennung für einen Prozess
       href: setting-the-default-dpi-awareness-for-a-process.md
-    - name: Mixed-Mode DPI-Skalierung und dpi-abhängige APIs
+    - name: Mixed-Mode DPI-Skalierung und DPI-fähige APIs
       href: high-dpi-improvements-for-desktop-applications.md
     - name: Entwickeln einer DPI pro Monitor-fähigen WPF-Anwendung
       href: declaring-managed-apps-dpi-aware.md
-    - name: Hoher dpi-Verweis
+    - name: Referenz zu hohen DPI-Daten
       href: high-dpi-reference.md
       items:
-        - name: '"Setting windowrectexfordpi"'
+        - name: AdjustWindowRectExForDpi
           href: /windows/desktop/api/Winuser/nf-winuser-adjustwindowrectexfordpi
-        - name: Aredpiawareness contextsequal
+        - name: AreDpiAwarenessContextsEqual
           href: /windows/desktop/api/Winuser/nf-winuser-aredpiawarenesscontextsequal
-        - name: Enablenonclientdpiscalung
+        - name: EnableNonClientDpiScaling
           href: /windows/desktop/api/Winuser/nf-winuser-enablenonclientdpiscaling
-        - name: Getawarenmefromdpiawarretecontext
+        - name: GetAwarenessFromDpiAwarenessContext
           href: /windows/desktop/api/Winuser/nf-winuser-getawarenessfromdpiawarenesscontext
-        - name: Getdpiformonitor
+        - name: GetDpiForMonitor
           href: /windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-getdpiformonitor
-        - name: Getdpiforsystem
+        - name: GetDpiForSystem
           href: /windows/desktop/api/Winuser/nf-winuser-getdpiforsystem
-        - name: Getdpiforwindow
+        - name: GetDpiForWindow
           href: /windows/desktop/api/Winuser/nf-winuser-getdpiforwindow
-        - name: Getprocessdpiawareness
+        - name: GetProcessDpiAwareness
           href: /windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-getprocessdpiawareness
-        - name: Getsystemmetricsfordpi
+        - name: GetSystemMetricsForDpi
           href: /windows/desktop/api/Winuser/nf-winuser-getsystemmetricsfordpi
-        - name: Getthreaddpiawareress Context
+        - name: GetThreadDpiAwarenessContext
           href: /windows/desktop/api/Winuser/nf-winuser-getthreaddpiawarenesscontext
-        - name: Getwindowdpiawareress Context
+        - name: GetWindowDpiAwarenessContext
           href: /windows/desktop/api/Winuser/nf-winuser-getwindowdpiawarenesscontext
-        - name: Isvaliddpiawareress Context
+        - name: IsValidDpiAwarenessContext
           href: /windows/desktop/api/Winuser/nf-winuser-isvaliddpiawarenesscontext
-        - name: Logicaltophysicalpointforpermonitordpi
+        - name: LogicalToPhysicalPointForPerMonitorDPI
           href: /windows/desktop/api/winuser/nf-winuser-logicaltophysicalpointforpermonitordpi
-        - name: Physicaltologicalpointforpermonitordpi
+        - name: PhysicalToLogicalPointForPerMonitorDPI
           href: /windows/desktop/api/winuser/nf-winuser-physicaltologicalpointforpermonitordpi
-        - name: Setprocessdpiawareness
+        - name: SetProcessDpiAwareness
           href: /windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-setprocessdpiawareness
-        - name: Setthreaddpiawareress Context
+        - name: SetThreadDpiAwarenessContext
           href: /windows/desktop/api/Winuser/nf-winuser-setthreaddpiawarenesscontext
-        - name: Systemparametersinfofordpi
+        - name: SystemParametersInfoForDpi
           href: /windows/desktop/api/Winuser/nf-winuser-systemparametersinfofordpi
-        - name: Setprocessdpiawareress Context
+        - name: SetProcessDpiAwarenessContext
           href: /windows/desktop/api/winuser/nf-winuser-setprocessdpiawarenesscontext
-        - name: Setdialodspichangebehavior
+        - name: SetDialogDpiChangeBehavior
           href: /windows/desktop/api/winuser/nf-winuser-setdialogdpichangebehavior
-        - name: Getdialodspichangebehavior
+        - name: GetDialogDpiChangeBehavior
           href: /windows/desktop/api/winuser/nf-winuser-getdialogdpichangebehavior
-        - name: Setdialogcontroldpichangebehavior
+        - name: SetDialogControlDpiChangeBehavior
           href: /windows/desktop/api/winuser/nf-winuser-setdialogcontroldpichangebehavior
-        - name: Getdialogcontroldpichangebehavior
+        - name: GetDialogControlDpiChangeBehavior
           href: /windows/desktop/api/winuser/nf-winuser-getdialogcontroldpichangebehavior
-        - name: Openfomedatafordpi
+        - name: OpenThemeDataForDpi
           href: /windows/desktop/api/uxtheme/nf-uxtheme-openthemedatafordpi
-        - name: Getsystemdpiforprocess
+        - name: GetSystemDpiForProcess
           href: /windows/desktop/api/winuser/nf-winuser-getsystemdpiforprocess
-        - name: Getdpifromdpiawareress Context
+        - name: GetDpiFromDpiAwarenessContext
           href: /windows/desktop/api/winuser/nf-winuser-getdpifromdpiawarenesscontext
-        - name: Setthreaddpihostingbehavior
+        - name: SetThreadDpiHostingBehavior
           href: /windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior
-        - name: Getthreaddpihostingbehavior
+        - name: GetThreadDpiHostingBehavior
           href: /windows/desktop/api/winuser/nf-winuser-getthreaddpihostingbehavior
-        - name: Getwindowdpihostingbehavior
+        - name: GetWindowDpiHostingBehavior
           href: /windows/desktop/api/winuser/nf-winuser-getwindowdpihostingbehavior
         - name: DPI_AWARENESS
           href: /windows/desktop/api/windef/ne-windef-dpi_awareness

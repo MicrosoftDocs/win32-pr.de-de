@@ -1,31 +1,31 @@
 ---
-description: Informationen zur Video Erfassung in DirectShow
+description: Informationen zur Videoaufnahme in DirectShow
 ms.assetid: 84d722aa-f178-4a1e-8102-c7fc3cb2efb0
-title: Informationen zur Video Erfassung in DirectShow
+title: Informationen zur Videoaufnahme in DirectShow
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b1db6c5d90dc0215711331bb8e706a47192c974c
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 4618373d30cd4906284fb68a3afb93e565c46defd9004cd9bd599a8a19772b01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103958062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074834"
 ---
-# <a name="about-video-capture-in-directshow"></a>Informationen zur Video Erfassung in DirectShow
+# <a name="about-video-capture-in-directshow"></a>Informationen zur Videoaufnahme in DirectShow
 
-Der Begriff *Video Erfassung*, wie in dieser Dokumentation verwendet, beschreibt alle Anwendungen, in denen Video von einem Hardware Gerät empfangen wird. Video Erfassungsgeräte umfassen nicht nur Kameras, sondern auch TV-Tuner-Karten, Video Band Recorder (VTRs) usw. Das erfasste Video kann auf einem Datenträger gespeichert oder Live angezeigt werden.
+Der Begriff *Videoaufnahme*, wie in dieser Dokumentation verwendet, beschreibt jede Anwendung, in der Video von einem Hardwaregerät empfangen wird. Videoaufnahmegeräte umfassen nicht nur Kameras, sondern auch TV-Tunerkarten, Videobandaufzeichnungen (Video Tape Recorders, VTRs) usw. Das erfasste Video kann auf dem Datenträger gespeichert oder als Livevorschau angezeigt werden.
 
-In diesem Abschnitt werden einige der Konzepte beschrieben, die Sie verstehen müssen, um DirectShow für die Video Erfassung zu verwenden:
+In diesem Abschnitt werden einige der Konzepte beschrieben, die Sie verstehen müssen, um DirectShow für die Videoaufnahme zu verwenden:
 
--   [Informationen zum Erfassungs Diagramm-Generator](about-the-capture-graph-builder.md)
--   [Informationen zu Video Erfassungs Geräten](about-video-capture-devices.md)
--   [DirectShow-Video Erfassungs Filter](directshow-video-capture-filters.md)
+-   [Informationen zum Capture Graph Builder](about-the-capture-graph-builder.md)
+-   [Informationen zu Videoaufnahmegeräten](about-video-capture-devices.md)
+-   [DirectShow-Videoerfassungsfilter](directshow-video-capture-filters.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> </dl>
 
  

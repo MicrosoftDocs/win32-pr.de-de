@@ -5,7 +5,7 @@ ms.assetid: 02398462-b0a4-4a17-84e3-4c6f9f26639f
 keywords:
 - Windows Medienformat-SDK, Transcodieren von Inhalt
 - Windows Medienformat-SDK, intelligente Rekomprimierung
-- Windows Media Format SDK,recompression
+- Windows Medienformat-SDK, Neukomprimierung
 - Windows Medienformat-SDK, Windows Medienaudiocodecs
 - Advanced Systems Format (ASF), Transcodinginhalt
 - ASF (Advanced Systems Format), Transcoding von Inhalt
@@ -33,7 +33,7 @@ ms.locfileid: "118699091"
 
 Sie können Inhalte mithilfe des Windows Media Format SDK von einer Bitrate in eine andere transcodieren. Normalerweise umfasst dies einfach das Decodieren des Inhalts und die Codierung wieder in die gewünschte Bitrate. Der Windows Media Audio 9-Codec unterstützt die intelligente Rekomprimierung, die eine Transcodierung ermöglicht, die eine bessere Qualität als normal erreicht.
 
-Für die intelligente Rekomprimierung muss der ursprüngliche Audiodatenstrom mit dem Windows Medienaudiocodec codiert werden. Alle Versionen des Codecs werden unterstützt, die speziellen Audiocodecs (Windows Media Audio 9 Professional und Windows Media Audio 9 Voice) jedoch nicht. Wenn die ursprüngliche Audiodatei mit dem Windows Media Audio 9 Lossless-Codec codiert wurde, ist keine intelligente Rekomprimierung notwendig, da in der ursprünglichen Codierung keine Informationen verloren gegangen sind.
+Für die intelligente Rekomprimierung muss der ursprüngliche Audiodatenstrom mit dem Windows Medienaudiocodec codiert werden. Alle Versionen des Codecs werden unterstützt, die spezialisierten Audiocodecs (Windows Media Audio 9 Professional und Windows Media Audio 9 Voice) jedoch nicht. Wenn die ursprüngliche Audiodatei mit dem Windows Media Audio 9 Lossless-Codec codiert wurde, ist keine intelligente Rekomprimierung notwendig, da in der ursprünglichen Codierung keine Informationen verloren gegangen sind.
 
 Führen Sie die folgenden Schritte aus, um die intelligente Rekomprimierung zu verwenden.
 

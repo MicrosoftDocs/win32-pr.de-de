@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Az-Biz-Rule-Attribut
-description: Der Text des Skripts, das die Geschäftsregel implementieren soll.
+description: Text des Skripts, das die Geschäftsregel implementiert.
 ms.assetid: 884513ae-9600-49b0-a371-6f77b84b54f9
 ms.tgt_platform: multiple
 keywords:
 - MS-DS-Az-Biz-Rule-Attribut AD-Schema
-- AD-Schema des msDS-AzBizRule-Attributs
+- MSDS-AzBizRule-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118685370"
 ---
 # <a name="ms-ds-az-biz-rule-attribute"></a>ms-DS-Az-Biz-Rule-Attribut
 
-Der Text des Skripts, das die Geschäftsregel implementieren soll.
+Text des Skripts, das die Geschäftsregel implementiert.
 
 
 
@@ -35,7 +35,7 @@ Der Text des Skripts, das die Geschäftsregel implementieren soll.
 | Aktualisieren von Berechtigungen  | AzRoles admin                               |
 | Updatehäufigkeit  | Während der Initialisierung oder Richtlinienänderung.     |
 | Attribute-Id      | 1.2.840.113556.1.4.1801                     |
-| System-Id-Guid    | 33d41ea8-c0c9-4c92-9494-f104878413fd        |
+| System-ID-GUID    | 33d41ea8-c0c9-4c92-9494-f104878413fd        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -57,7 +57,7 @@ Der Text des Skripts, das die Geschäftsregel implementieren soll.
 | Link-ID                | \-                                                |
 | MAPI-Id                | \-                                                |
 | System-Only            | Falsch                                             |
-| Is-Single-Valued       | Richtig                                              |
+| Ist einwertig       | Richtig                                              |
 | Ist indiziert             | Falsch                                             |
 | Im globalen Katalog      | Falsch                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                      |
@@ -78,7 +78,7 @@ Der Text des Skripts, das die Geschäftsregel implementieren soll.
 | Link-ID                | \-                                                |
 | MAPI-Id                | \-                                                |
 | System-Only            | Falsch                                             |
-| Is-Single-Valued       | Richtig                                              |
+| Ist einwertig       | Richtig                                              |
 | Ist indiziert             | Falsch                                             |
 | Im globalen Katalog      | Falsch                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                      |
@@ -99,7 +99,7 @@ Der Text des Skripts, das die Geschäftsregel implementieren soll.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | Falsch                                                                                 |
-| Is-Single-Valued       | Richtig                                                                                  |
+| Ist einwertig       | Richtig                                                                                  |
 | Ist indiziert             | Falsch                                                                                 |
 | Im globalen Katalog      | Falsch                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |

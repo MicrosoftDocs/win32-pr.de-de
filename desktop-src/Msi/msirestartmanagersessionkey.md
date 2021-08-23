@@ -1,23 +1,23 @@
 ---
-description: Das Installationsprogramm legt den Wert der msirestartmanagersessionkey-Eigenschaft auf den Sitzungsschlüssel für die Restart Manager-Sitzung fest.
+description: Das Installationsprogramm legt den Wert der MsiRestartManagerSessionKey-Eigenschaft auf den Sitzungsschlüssel für die Restart Manager-Sitzung fest.
 ms.assetid: efbf11f2-38ab-4509-aa01-23fa8cfdaa60
-title: Msirestartmanagersessionkey (Eigenschaft)
+title: MsiRestartManagerSessionKey-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 489095e0af617c7ae403811f0eab800c5502e3bd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f48fe8d2ce4b287afc5c222acdc1f71eec393ff9a1ab1773a822e30405e6a317
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118944538"
 ---
-# <a name="msirestartmanagersessionkey-property"></a>Msirestartmanagersessionkey (Eigenschaft)
+# <a name="msirestartmanagersessionkey-property"></a>MsiRestartManagerSessionKey-Eigenschaft
 
-Das Installationsprogramm legt den Wert der **msirestartmanagersessionkey** -Eigenschaft auf den Sitzungsschlüssel für die [Restart Manager](../rstmgr/restart-manager-portal.md) -Sitzung fest. Benutzerdefinierte Aktionen können den Sitzungsschlüssel verwenden, um der Sitzung für den [Neustart-Manager](../rstmgr/restart-manager-portal.md) beizutreten.
+Das Installationsprogramm legt den Wert der **MsiRestartManagerSessionKey-Eigenschaft** auf den Sitzungsschlüssel für die [Restart Manager-Sitzung](../rstmgr/restart-manager-portal.md) fest. Benutzerdefinierte Aktionen können den Sitzungsschlüssel verwenden, um der [Neustart-Manager-Sitzung](../rstmgr/restart-manager-portal.md) beizutreten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Installer legt den Wert der Eigenschaft " **msirestartmanagersessionkey** " bei der Initialisierung fest und löscht dann den Wert während der [InstallValidate](installvalidate-action.md) -Aktion. Benutzerdefinierte Aktionen, für die der Wert der **msirestartmanagersessionkey** -Eigenschaft erforderlich ist, müssen vor der InstallValidate-Aktion in der Aktions Sequenz liegen.
+Das Installationsprogramm legt den Wert der **MsiRestartManagerSessionKey-Eigenschaft** bei der Initialisierung fest und löscht den Wert dann während der [InstallValidate-Aktion.](installvalidate-action.md) Benutzerdefinierte Aktionen, die den Wert der **MsiRestartManagerSessionKey-Eigenschaft** benötigen, müssen vor der InstallValidate-Aktion in der Aktionssequenz erfolgen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -25,7 +25,7 @@ Der Installer legt den Wert der Eigenschaft " **msirestartmanagersessionkey** " 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Informationen zu den minimalen Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Informationen zum service pack-Mindestwert, der für eine Windows Installer-Version erforderlich ist, finden Sie unter Run-Time [Anforderungen](windows-installer-portal.md) für Windows Installer.<br/> |
 
 
 
@@ -36,7 +36,7 @@ Der Installer legt den Wert der Eigenschaft " **msirestartmanagersessionkey** " 
 [Eigenschaften](properties.md)
 </dt> <dt>
 
-[Wird in Windows Installer 3,1 und früheren Versionen nicht unterstützt.](not-supported-in-windows-installer-version-3-1.md)
+[Nicht unterstützt in Windows Installer 3.1 und früheren Versionen](not-supported-in-windows-installer-version-3-1.md)
 </dt> </dl>
 
  

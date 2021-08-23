@@ -1,5 +1,5 @@
 ---
-description: Hebt die Registrierung einer Fenster Klasse auf, die von linkwindow \_ registerClass registriert wird.
+description: Aufheben der Registrierung einer Von LinkWindow RegisterClass registrierten \_ Fensterklasse.
 ms.assetid: 9e5c4326-efd1-43ca-a087-a436fe3f9bbd
 title: LinkWindow_UnregisterClass-Funktion
 ms.topic: reference
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 604cea299156444a1fedf34a46c50b5b397a65da
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 05a50d5f3af72c31ee04a1a9e8264acb22327c38f79f765ce2ad7a740086747e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968939"
 ---
-# <a name="linkwindow_unregisterclass-function"></a>Linkwindow \_ unregisterclass-Funktion
+# <a name="linkwindow_unregisterclass-function"></a>LinkWindow \_ UnregisterClass-Funktion
 
-\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie wird möglicherweise in nachfolgenden Versionen von Windows geändert oder ist nicht verfügbar.\]
+\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie kann in nachfolgenden Versionen von geändert oder nicht verfügbar Windows.\]
 
-Hebt die Registrierung einer Fenster Klasse auf, die von [**linkwindow \_ registerClass**](linkwindow-registerclass.md)registriert wird.
+Aufheben der Registrierung einer Von [**LinkWindow RegisterClass registrierten \_ Fensterklasse.**](linkwindow-registerclass.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,15 +41,15 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **bool**
+Typ: **BOOL**
 
-Gibt **true** zurück, wenn der Vorgang erfolgreich war. Andernfalls **false** .
+Gibt **TRUE zurück,** wenn der Vorgang erfolgreich war. **Andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion verfügt über keine zugeordnete Header-oder Bibliotheksdatei, sodass Sie von Ordinalwerten aufgerufen werden muss. Rufen Sie [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) mit dem DLL-Namen Shell32.dll, um ein Modul Handle abzurufen. Dann rufe Sie [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) mit diesem Modul Handle und der Ordinalzahl 259 auf, um diese Funktion zu verwenden.
+Diese Funktion verfügt nicht über einen zugeordneten Header oder eine Bibliotheksdatei, daher muss sie nach Ordinalwert aufgerufen werden. Rufen [**Sie LoadLibrary mit**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) dem DLL-Namen Shell32.dll, um ein Modulhand handle zu erhalten. Rufen Sie [**dann GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) mit diesem Modulhandle und der Ordnungszahl 259 auf, um diese Funktion zu verwenden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -57,7 +57,7 @@ Diese Funktion verfügt über keine zugeordnete Header-oder Bibliotheksdatei, so
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Diese Funktion verfügt über keine zugeordnete Header-oder Bibliotheksdatei, so
 
 <dl> <dt>
 
-[Übersicht über Syslink-Steuerelemente](../controls/syslink-overview.md)
+[Übersicht über SysLink-Steuerelemente](../controls/syslink-overview.md)
 </dt> </dl>
 
  

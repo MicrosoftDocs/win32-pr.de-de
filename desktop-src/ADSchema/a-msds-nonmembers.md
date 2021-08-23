@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Non-Members-Attribut
-description: Dieses Attribut dient dem gleichen Zweck wie das Attribut "Non-Security-Member", jedoch mit angewendeten Bereichsregeln.
+description: Dieses Attribut dient demselben Zweck wie das Nicht-Sicherheitsmitglied-Attribut, jedoch mit angewendeten Bereichsregeln.
 ms.assetid: 11d3d030-3643-4ed2-a52e-a57f32e9597f
 ms.tgt_platform: multiple
 keywords:
-- MS-DS-Nicht-Member-Attribut AD-Schema
-- MSDS-NonMembers-Attribut-AD-Schema
+- AD-Schema des ms-DS-Non-Members-Attributs
+- AD-Schema des msDS-NonMembers-Attributs
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118683724"
 ---
 # <a name="ms-ds-non-members-attribute"></a>ms-DS-Non-Members-Attribut
 
-Dieses Attribut dient dem gleichen Zweck wie das Attribut "Non-Security-Member", jedoch mit angewendeten Bereichsregeln.
+Dieses Attribut dient demselben Zweck wie das Nicht-Sicherheitsmitglied-Attribut, jedoch mit angewendeten Bereichsregeln.
 
 
 
@@ -33,9 +33,9 @@ Dieses Attribut dient dem gleichen Zweck wie das Attribut "Non-Security-Member",
 | Ldap-Anzeigename | msDS-NonMembers                         |
 | Size              | \-                                      |
 | Aktualisieren von Berechtigungen  | AzRoles Admin                           |
-| Updatehäufigkeit  | Bei Initialisierung und Richtlinienänderung.    |
+| Updatehäufigkeit  | Bei der Initialisierung und Richtlinienänderung.    |
 | Attribute-Id      | 1.2.840.113556.1.4.1793                 |
-| System-ID-GUID    | cafcb1de-f23c-46b5-adf7-1e64957bd5db    |
+| System-Id-Guid    | cafcb1de-f23c-46b5-adf7-1e64957bd5db    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -57,7 +57,7 @@ Dieses Attribut dient dem gleichen Zweck wie das Attribut "Non-Security-Member",
 | Link-ID                | 2014                                |
 | MAPI-Id                | \-                                  |
 | System-Only            | Falsch                               |
-| Ist einwertig       | Falsch                               |
+| Is-Single-Valued       | Falsch                               |
 | Ist indiziert             | Falsch                               |
 | Im globalen Katalog      | Falsch                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                        |
@@ -78,7 +78,7 @@ Dieses Attribut dient dem gleichen Zweck wie das Attribut "Non-Security-Member",
 | Link-ID                | 2014                                |
 | MAPI-Id                | \-                                  |
 | System-Only            | Falsch                               |
-| Ist einwertig       | Falsch                               |
+| Is-Single-Valued       | Falsch                               |
 | Ist indiziert             | Falsch                               |
 | Im globalen Katalog      | Falsch                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                        |
@@ -99,7 +99,7 @@ Dieses Attribut dient dem gleichen Zweck wie das Attribut "Non-Security-Member",
 | Link-ID                | 2014                                |
 | MAPI-Id                | \-                                  |
 | System-Only            | Falsch                               |
-| Ist einwertig       | Falsch                               |
+| Is-Single-Valued       | Falsch                               |
 | Ist indiziert             | Falsch                               |
 | Im globalen Katalog      | Falsch                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                        |
@@ -120,7 +120,7 @@ Dieses Attribut dient dem gleichen Zweck wie das Attribut "Non-Security-Member",
 | Link-ID                | 2014                                |
 | MAPI-Id                | \-                                  |
 | System-Only            | Falsch                               |
-| Is-Single-Valued       | Falsch                               |
+| Ist einwertig       | Falsch                               |
 | Ist indiziert             | Falsch                               |
 | Im globalen Katalog      | Falsch                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                        |
@@ -141,7 +141,7 @@ Dieses Attribut dient dem gleichen Zweck wie das Attribut "Non-Security-Member",
 | Link-ID                | 2014                                |
 | MAPI-Id                | \-                                  |
 | System-Only            | Falsch                               |
-| Is-Single-Valued       | Falsch                               |
+| Ist einwertig       | Falsch                               |
 | Ist indiziert             | Falsch                               |
 | Im globalen Katalog      | Falsch                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                        |

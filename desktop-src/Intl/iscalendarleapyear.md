@@ -1,7 +1,7 @@
 ---
-description: Veraltet. Gibt an, ob das angegebene Jahr ein Schaltjahr innerhalb des angegebenen Zeitraums für den jeweiligen Kalender ist.
+description: Veraltet. Gibt an, ob das angegebene Jahr ein Schaltjahr innerhalb des angegebenen Zeitraumes für den jeweiligen Kalender ist.
 ms.assetid: 91f58915-f0c6-4c7a-9d9a-96e255d799fd
-title: Iscalendarleapyear-Funktion
+title: IsCalendarLeapYear-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_location:
 - Kernel32.dll
 - API-MS-Win-Core-calendar-l1-1-0.dll
 - kernel32legacy.dll
-ms.openlocfilehash: 484531f8107bacb70f9e24ba2537090317825e26
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe89f11bbaf41235449e882626680cf4d4af075d93f76c2d2aacd90d8d38707a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118948728"
 ---
-# <a name="iscalendarleapyear-function"></a>Iscalendarleapyear-Funktion
+# <a name="iscalendarleapyear-function"></a>IsCalendarLeapYear-Funktion
 
-Veraltet. Gibt an, ob das angegebene Jahr ein Schaltjahr innerhalb des angegebenen Zeitraums für den jeweiligen Kalender ist.
+Veraltet. Gibt an, ob das angegebene Jahr ein Schaltjahr innerhalb des angegebenen Zeitraumes für den jeweiligen Kalender ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,36 +43,36 @@ BOOL IsCalendarLeapYear(
 
 <dl> <dt>
 
-*Calid* \[ in\]
+*calId* \[ In\]
 </dt> <dd>
 
-Der für die Überprüfung des Schalt Jahrs zu verwendende [Kalender Bezeichner](calendar-identifiers.md) .
+Der [Kalenderbezeichner,](calendar-identifiers.md) der zum Überprüfen des Schaltjahrs verwendet werden soll.
 
 </dd> <dt>
 
-*Jahr* \[ in\]
+*year* \[ In\]
 </dt> <dd>
 
-Das zu überprüfen Jahr.
+Das zu überprüfende Jahr.
 
 </dd> <dt>
 
- Zeitraum \[ in\]
+*-Zeit* \[ In\]
 </dt> <dd>
 
-Der Zeitraum, der überprüft werden soll.
+Der zu überprüfende Zeitraum.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn das angegebene Jahr ein Schaltjahr ist, andernfalls **false** . Um erweiterte Fehlerinformationen abzurufen, kann die Anwendung [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)aufrufen, die einen der folgenden Fehlercodes zurückgeben kann:
+Gibt **TRUE** zurück, wenn das angegebene Jahr ein Schaltjahr ist, andernfalls **FALSE.** Um erweiterte Fehlerinformationen abzurufen, kann die Anwendung [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)aufrufen, wodurch einer der folgenden Fehlercodes zurückgegeben werden kann:
 
--   Fehler \_ : Ungültiger \_ Parameter. Jeder Parameterwert war ungültig.
+-   FEHLER: \_ UNGÜLTIGER \_ PARAMETER. Jeder der Parameterwerte war ungültig.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion verfügt über keine zugeordnete Header Datei oder Bibliotheksdatei. Die Anwendung kann [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) mit dem DLL-Namen (Kernel32.dll) aufzurufen, um ein Modul Handle zu erhalten. Anschließend kann [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) mit diesem Modul Handle und dem Namen dieser Funktion aufgerufen werden, um die Funktions Adresse abzurufen.
+Dieser Funktion ist keine Header- oder Bibliotheksdatei zugeordnet. Die Anwendung kann [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) mit dem DLL-Namen (Kernel32.dll) aufrufen, um ein Modulhandle abzurufen. Anschließend kann [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) mit diesem Modulhandle und dem Namen dieser Funktion aufgerufen werden, um die Funktionsadresse abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,8 +80,8 @@ Diese Funktion verfügt über keine zugeordnete Header Datei oder Bibliotheksdat
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Kernel32.dll</dt> </dl> |
 
 
@@ -90,10 +90,10 @@ Diese Funktion verfügt über keine zugeordnete Header Datei oder Bibliotheksdat
 
 <dl> <dt>
 
-[Unterstützung für nationale Sprache](national-language-support.md)
+[Unterstützung für nationale Sprachen](national-language-support.md)
 </dt> <dt>
 
-[Funktionen zur Unterstützung der Landessprache](national-language-support-functions.md)
+[Unterstützungsfunktionen für nationale Sprachen](national-language-support-functions.md)
 </dt> </dl>
 
  

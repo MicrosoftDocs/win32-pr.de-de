@@ -1,10 +1,10 @@
 ---
-title: Mpnotify-Enumeration (mpclient. h)
-description: Mögliche Rückruf Benachrichtigungen.
+title: MPNOTIFY-Enumeration (MpClient.h)
+description: Mögliche Rückrufbenachrichtigungen.
 ms.assetid: CCD0CD89-2C6E-453F-9437-E6ED87AD9F29
 keywords:
-- Mpnotify-Enumeration Legacy-Windows-Umgebungs Features
-- Pmpnotify-enumerationszeiger ältere Windows-Umgebungs Features
+- Funktionen der MPNOTIFY-Enumerationsumgebung Windows Legacyumgebung
+- PMPNOTIFY-Enumerationszeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: afa0eeb6cb1d610f28cc82f578617f7bd71cf886
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ed62a9f868aa39cbc0cfc7702afc99849005a22106892696eca857ffb20673af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342223"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118747788"
 ---
-# <a name="mpnotify-enumeration"></a>Mpnotify-Enumeration
+# <a name="mpnotify-enumeration"></a>MPNOTIFY-Enumeration
 
-Mögliche Rückruf Benachrichtigungen.
+Mögliche Rückrufbenachrichtigungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -115,524 +115,524 @@ typedef enum tagMPNOTIFY {
 
 <dl> <dt>
 
-<span id="MPNOTIFY_NONE"></span><span id="mpnotify_none"></span>**mpnotify \_ None**
+<span id="MPNOTIFY_NONE"></span><span id="mpnotify_none"></span>**MPNOTIFY \_ NONE**
 </dt> <dd></dd> <dt>
 
-<span id="MPNOTIFY_CALL_START"></span><span id="mpnotify_call_start"></span>**mpnotify- \_ Anrufe \_ starten**
+<span id="MPNOTIFY_CALL_START"></span><span id="mpnotify_call_start"></span>**MPNOTIFY \_ CALL \_ START**
 </dt> <dd>
 
-Der Benachrichtigungs Rückruf wird gestartet.
+Start des Benachrichtigungsaufrufs.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_CALL_COMPLETE"></span><span id="mpnotify_call_complete"></span>**mpnotify- \_ Rückruf ist \_ beendet**
+<span id="MPNOTIFY_CALL_COMPLETE"></span><span id="mpnotify_call_complete"></span>**MPNOTIFY \_ CALL \_ COMPLETE**
 </dt> <dd>
 
-Der Benachrichtigungs Rückruf wurde abgeschlossen.
+Benachrichtigungsaufruf abgeschlossen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_INTERNAL_FAILURE"></span><span id="mpnotify_internal_failure"></span>**Interner mpnotify- \_ \_ Fehler**
+<span id="MPNOTIFY_INTERNAL_FAILURE"></span><span id="mpnotify_internal_failure"></span>**INTERNER \_ MPNOTIFY-FEHLER \_**
 </dt> <dd>
 
 Allgemeiner interner Fehler.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_STATUS_SERVICE_START"></span><span id="mpnotify_status_service_start"></span>**mpnotify- \_ Status \_ Dienst \_ starten**
+<span id="MPNOTIFY_STATUS_SERVICE_START"></span><span id="mpnotify_status_service_start"></span>**MPNOTIFY \_ STATUS \_ SERVICE \_ START**
 </dt> <dd>
 
-Der Malware Schutzdienst wurde gestartet.
+Der Schutzdienst für Schadsoftware wurde gestartet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_STATUS_SERVICE_RUNNING"></span><span id="mpnotify_status_service_running"></span>**mpnotify- \_ Status \_ Dienst wird \_ ausgeführt**
+<span id="MPNOTIFY_STATUS_SERVICE_RUNNING"></span><span id="mpnotify_status_service_running"></span>**MPNOTIFY \_ STATUS SERVICE RUNNING (MPNOTIFY-STATUSDIENST WIRD \_ \_ AUSGEFÜHRT)**
 </dt> <dd>
 
-Der Malware Schutzdienst wird ausgeführt.
+Der Schutzdienst für Schadsoftware wird ausgeführt.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_STATUS_SERVICE_STOP"></span><span id="mpnotify_status_service_stop"></span>**mpnotify- \_ Status \_ Dienst \_ beendet**
+<span id="MPNOTIFY_STATUS_SERVICE_STOP"></span><span id="mpnotify_status_service_stop"></span>**MPNOTIFY \_ STATUS \_ SERVICE \_ STOP**
 </dt> <dd>
 
-Der Malware Schutzdienst wurde beendet.
+Der Schutzdienst für Schadsoftware wurde beendet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_STATUS_COMPONENT"></span><span id="mpnotify_status_component"></span>**mpnotify- \_ Status \_ Komponente**
+<span id="MPNOTIFY_STATUS_COMPONENT"></span><span id="mpnotify_status_component"></span>**\_MPNOTIFY-STATUSKOMPONENTE \_**
 </dt> <dd>
 
-Bestimmte Komponenten aktivieren/deaktivieren Sie den Status.
+Der Aktivierungs-/Deaktivierungsstatus einer bestimmten Komponente.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_STATUS_CHANGE"></span><span id="mpnotify_status_change"></span>**mpnotify- \_ Status \_ Änderung**
+<span id="MPNOTIFY_STATUS_CHANGE"></span><span id="mpnotify_status_change"></span>**\_MPNOTIFY-STATUSÄNDERUNG \_**
 </dt> <dd>
 
-Der Gesamtprodukt Status hat sich geändert. Rufen Sie [**mpmanagerstatusqueryex**](mpmanagerstatusqueryex.md) auf, um den aktuellen Status abzurufen.
+Der Allgemeine Produktstatus hat sich geändert. Rufen [**Sie MpManagerStatusQueryEx auf,**](mpmanagerstatusqueryex.md) um den aktuellen Status abzurufen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_STATUS_COMPONENT_CONFIGURATION"></span><span id="mpnotify_status_component_configuration"></span>**mpnotify- \_ Status \_ Komponenten \_ Konfiguration**
+<span id="MPNOTIFY_STATUS_COMPONENT_CONFIGURATION"></span><span id="mpnotify_status_component_configuration"></span>**KONFIGURATION DER \_ \_ MPNOTIFY-STATUSKOMPONENTE \_**
 </dt> <dd>
 
 Eine bestimmte Komponente hat die Konfiguration geändert.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_STATUS_EXPIRATION_CHANGE"></span><span id="mpnotify_status_expiration_change"></span>**mpnotify- \_ Status \_ Ablauf \_ Änderung**
+<span id="MPNOTIFY_STATUS_EXPIRATION_CHANGE"></span><span id="mpnotify_status_expiration_change"></span>**MPNOTIFY \_ STATUS \_ EXPIRATION \_ CHANGE**
 </dt> <dd>
 
-Der Produktablauf Status hat sich geändert.
+Der Produktablaufstatus wurde geändert.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_STATUS_OFFLINE_SCAN_CHANGE"></span><span id="mpnotify_status_offline_scan_change"></span>**mpnotify- \_ Status- \_ Offline \_ Scan \_ Änderung**
+<span id="MPNOTIFY_STATUS_OFFLINE_SCAN_CHANGE"></span><span id="mpnotify_status_offline_scan_change"></span>**ÄNDERUNG DES \_ \_ MPNOTIFY-STATUS \_ \_ OFFLINESCANS**
 </dt> <dd>
 
-Der Status der Offline Überprüfung wurde geändert.
+Der erforderliche Zustand der Offlineprüfung wurde geändert.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_START"></span><span id="mpnotify_scan_start"></span>**mpnotify- \_ Scan \_ Start**
+<span id="MPNOTIFY_SCAN_START"></span><span id="mpnotify_scan_start"></span>**MPNOTIFY \_ SCAN \_ START**
 </dt> <dd>
 
-Scan Vorgang gestartet.
+Die Überprüfung wurde gestartet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_PAUSED"></span><span id="mpnotify_scan_paused"></span>**mpnotify- \_ Scan \_ angehalten**
+<span id="MPNOTIFY_SCAN_PAUSED"></span><span id="mpnotify_scan_paused"></span>**\_MPNOTIFY-ÜBERPRÜFUNG \_ ANGEHALTEN**
 </dt> <dd>
 
-Scan angehalten.
+Überprüfung angehalten.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_RESUMED"></span><span id="mpnotify_scan_resumed"></span>**mpnotify-Scan wird fortgesetzt \_ \_**
+<span id="MPNOTIFY_SCAN_RESUMED"></span><span id="mpnotify_scan_resumed"></span>**\_MPNOTIFY-ÜBERPRÜFUNG \_ FORTGESETZT**
 </dt> <dd>
 
 Überprüfung fortgesetzt.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_CANCEL"></span><span id="mpnotify_scan_cancel"></span>**mpnotify- \_ Scan \_ Abbruch**
+<span id="MPNOTIFY_SCAN_CANCEL"></span><span id="mpnotify_scan_cancel"></span>**MPNOTIFY \_ SCAN \_ CANCEL**
 </dt> <dd>
 
-Scan abgebrochen.
+Überprüfung abgebrochen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_COMPLETE"></span><span id="mpnotify_scan_complete"></span>**mpnotify- \_ Scan ist \_ beendet**
+<span id="MPNOTIFY_SCAN_COMPLETE"></span><span id="mpnotify_scan_complete"></span>**MPNOTIFY \_ SCAN \_ COMPLETE**
 </dt> <dd>
 
 Überprüfung abgeschlossen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_PROGRESS"></span><span id="mpnotify_scan_progress"></span>**mpnotify- \_ Scan Status \_**
+<span id="MPNOTIFY_SCAN_PROGRESS"></span><span id="mpnotify_scan_progress"></span>**\_MPNOTIFY-ÜBERPRÜFUNGSFORTSCHRITT \_**
 </dt> <dd>
 
-Status Benachrichtigung für die zu überprüfende Ressource.
+Statusbenachrichtigung für die spezifische Ressource, die überprüft wird.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_ERROR"></span><span id="mpnotify_scan_error"></span>**mpnotify- \_ Scan \_ Fehler**
+<span id="MPNOTIFY_SCAN_ERROR"></span><span id="mpnotify_scan_error"></span>**\_MPNOTIFY-SCANFEHLER \_**
 </dt> <dd>
 
-Fehler beim Scannen einer bestimmten Ressource. Der Scan Vorgang wird trotzdem fortgesetzt.
+Fehler beim Überprüfen einer bestimmten Ressource. Die Überprüfung wird weiterhin fortgesetzt.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_INFECTED"></span><span id="mpnotify_scan_infected"></span>**mpnotify- \_ Scan \_ infiziert**
+<span id="MPNOTIFY_SCAN_INFECTED"></span><span id="mpnotify_scan_infected"></span>**MPNOTIFY \_ SCAN \_ INFECTED**
 </dt> <dd>
 
-Der Scan hat eine infizierte Ressource gefunden.
+Scan hat eine infizierte Ressource gefunden.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_MEMORYSTART"></span><span id="mpnotify_scan_memorystart"></span>**mpnotify- \_ Scan \_ memorystart**
+<span id="MPNOTIFY_SCAN_MEMORYSTART"></span><span id="mpnotify_scan_memorystart"></span>**MPNOTIFY \_ SCAN \_ MEMORYSTART**
 </dt> <dd>
 
-Der Scan Vorgang zum Benachrichtigen des Speicher Scan Teils der Systemüberprüfung wurde gestartet.
+Überprüfungsfortschritt, um den Arbeitsspeicherscanteil der Systemprüfung zu benachrichtigen, wurde gestartet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_MEMORYCOMPLETE"></span><span id="mpnotify_scan_memorycomplete"></span>**mpnotify- \_ Scan \_ memorycomplete**
+<span id="MPNOTIFY_SCAN_MEMORYCOMPLETE"></span><span id="mpnotify_scan_memorycomplete"></span>**MPNOTIFY \_ SCAN \_ MEMORYCOMPLETE**
 </dt> <dd>
 
-Der Scan Vorgang zum Benachrichtigen des Speicher Scan Teils der Systemüberprüfung wurde abgeschlossen.
+Überprüfungsfortschritt, um den Speicherscanteil des Systemscans zu benachrichtigen, wurde abgeschlossen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_SFC_BUILD_START"></span><span id="mpnotify_scan_sfc_build_start"></span>**mpnotify- \_ Scan für \_ sfc- \_ Build \_ starten**
+<span id="MPNOTIFY_SCAN_SFC_BUILD_START"></span><span id="mpnotify_scan_sfc_build_start"></span>**MPNOTIFY \_ SCAN \_ SFC \_ BUILD \_ START**
 </dt> <dd>
 
-Der Überprüfungs Fortschritt zum Benachrichtigen des SFC-buildteils wurde gestartet.
+Überprüfungsfortschritt zur Benachrichtigung, dass der Sfc-Buildteil gestartet wurde.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_SFC_BUILD_COMPLETE"></span><span id="mpnotify_scan_sfc_build_complete"></span>**mpnotify- \_ Scan, \_ sfc-Build wurde \_ \_ beendet**
+<span id="MPNOTIFY_SCAN_SFC_BUILD_COMPLETE"></span><span id="mpnotify_scan_sfc_build_complete"></span>**MPNOTIFY \_ SCAN \_ SFC \_ BUILD \_ COMPLETE**
 </dt> <dd>
 
-Der Scan Vorgang zum Benachrichtigen des SFC-buildteils wurde abgeschlossen.
+Überprüfungsfortschritt zur Benachrichtigung, dass der Sfc-Buildteil abgeschlossen wurde.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_FASTPATH_START"></span><span id="mpnotify_scan_fastpath_start"></span>**mpnotify-Überprüfung \_ \_ FastPath \_ starten**
+<span id="MPNOTIFY_SCAN_FASTPATH_START"></span><span id="mpnotify_scan_fastpath_start"></span>**MPNOTIFY \_ SCAN \_ FASTPATH \_ START**
 </dt> <dd>
 
-Der Scan Vorgang von FastPath SpyNet wurde gestartet.
+Scan fastpath spynet hat begonnen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_FASTPATH_COMPLETE"></span><span id="mpnotify_scan_fastpath_complete"></span>**mpnotify- \_ Scan für \_ FastPath ist \_ beendet**
+<span id="MPNOTIFY_SCAN_FASTPATH_COMPLETE"></span><span id="mpnotify_scan_fastpath_complete"></span>**MPNOTIFY \_ SCAN \_ FASTPATH \_ COMPLETE**
 </dt> <dd>
 
-Das Überprüfen von FastPath SpyNet wurde beendet.
+Scan fastpath spynet wurde beendet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SCAN_FASTPATH_PROGRESS"></span><span id="mpnotify_scan_fastpath_progress"></span>**mpnotify-Vorgang zum durch \_ Suchen von \_ FastPath \_**
+<span id="MPNOTIFY_SCAN_FASTPATH_PROGRESS"></span><span id="mpnotify_scan_fastpath_progress"></span>**MPNOTIFY \_ SCAN \_ FASTPATH \_ PROGRESS**
 </dt> <dd>
 
-Status Benachrichtigung für FastPath-repper, intern verwendet und in den **mpnotify- \_ Scan \_** Status für extern konvertiert.
+Statusbenachrichtigung für fastpath-Neuscans, intern verwendet und für external in **MPNOTIFY \_ SCAN \_ PROGRESS** konvertiert.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_CLEAN_START"></span><span id="mpnotify_clean_start"></span>**Löschen von mpnotify- \_ Bereinigung \_**
+<span id="MPNOTIFY_CLEAN_START"></span><span id="mpnotify_clean_start"></span>**MPNOTIFY \_ CLEAN \_ START**
 </dt> <dd>
 
-Reinigung wurde gestartet.
+Die Bereinigung wurde gestartet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_CLEAN_COMPLETE"></span><span id="mpnotify_clean_complete"></span>**Löschen von mpnotify- \_ Bereinigung \_**
+<span id="MPNOTIFY_CLEAN_COMPLETE"></span><span id="mpnotify_clean_complete"></span>**MPNOTIFY \_ CLEAN \_ COMPLETE**
 </dt> <dd>
 
-Reinigung abgeschlossen.
+Die Bereinigung wurde abgeschlossen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_CLEAN_RESTOREPOINT_START"></span><span id="mpnotify_clean_restorepoint_start"></span>**mpnotify \_ Clean \_ RestorePoint \_ Start**
+<span id="MPNOTIFY_CLEAN_RESTOREPOINT_START"></span><span id="mpnotify_clean_restorepoint_start"></span>**MPNOTIFY \_ CLEAN \_ RESTOREPOINT \_ START**
 </dt> <dd>
 
-Die Erstellung eines System Wiederherstellungs Punkts wurde gestartet.
+Die Erstellung eines Systemwiederherstellungspunkts wurde gestartet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_CLEAN_RESTOREPOINT_SUCCEEDED"></span><span id="mpnotify_clean_restorepoint_succeeded"></span>**mpnotify \_ Clean \_ RestorePoint \_ erfolgreich**
+<span id="MPNOTIFY_CLEAN_RESTOREPOINT_SUCCEEDED"></span><span id="mpnotify_clean_restorepoint_succeeded"></span>**MPNOTIFY \_ CLEAN \_ RESTOREPOINT \_ SUCCEEDED**
 </dt> <dd>
 
-Der System Wiederherstellungspunkt wurde erfolgreich erstellt.
+Der Systemwiederherstellungspunkt wurde erfolgreich erstellt.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_CLEAN_RESTOREPOINT_FAILED"></span><span id="mpnotify_clean_restorepoint_failed"></span>**Fehler beim \_ Bereinigen von Clean \_ RestorePoint. \_**
+<span id="MPNOTIFY_CLEAN_RESTOREPOINT_FAILED"></span><span id="mpnotify_clean_restorepoint_failed"></span>**FEHLER BEI MPNOTIFY \_ CLEAN \_ RESTOREPOINT \_**
 </dt> <dd>
 
-Fehler beim Erstellen des System Wiederherstellungs Punkts.
+Fehler beim Erstellen des Systemwiederherstellungspunkts.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_CLEAN_THREAT_START"></span><span id="mpnotify_clean_threat_start"></span>**mpnotify \_ Clean \_ Threat \_ Start**
+<span id="MPNOTIFY_CLEAN_THREAT_START"></span><span id="mpnotify_clean_threat_start"></span>**MPNOTIFY \_ CLEAN \_ THREAT \_ START**
 </dt> <dd>
 
 Die Bereinigung wird für eine bestimmte Bedrohung gestartet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_CLEAN_THREAT_SUCCEEDED"></span><span id="mpnotify_clean_threat_succeeded"></span>**mpnotify- \_ Bereinigung \_ \_ erfolgreich**
+<span id="MPNOTIFY_CLEAN_THREAT_SUCCEEDED"></span><span id="mpnotify_clean_threat_succeeded"></span>**MPNOTIFY \_ CLEAN \_ THREAT \_ SUCCEEDED**
 </dt> <dd>
 
 Die Bereinigung ist für eine bestimmte Bedrohung erfolgreich.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_CLEAN_THREAT_FAILED"></span><span id="mpnotify_clean_threat_failed"></span>**Fehler beim \_ Bereinigen der Bereinigung \_ \_**
+<span id="MPNOTIFY_CLEAN_THREAT_FAILED"></span><span id="mpnotify_clean_threat_failed"></span>**FEHLER BEI MPNOTIFY \_ CLEAN \_ THREAT \_**
 </dt> <dd>
 
-Fehler beim Bereinigen für eine bestimmte Bedrohung. **Fehler \_ Der Fehlercode "MP- \_ Bedrohung \_ nicht \_ gefunden** " zeigt an, dass die Bedrohung nicht gefunden wurde (und kein Fehler beim Bereinigen aufgetreten ist).
+Die Bereinigung ist für eine bestimmte Bedrohung fehlgeschlagen. **FEHLER \_ Mp \_ THREAT \_ NOT \_ FOUND-Fehlercode** gibt an, dass die Bedrohung nicht gefunden wurde (und kein Fehler bei der Bereinigung war).
 
 </dd> <dt>
 
-<span id="MPNOTIFY_CLEAN_RESOURCE_SUCCEEDED"></span><span id="mpnotify_clean_resource_succeeded"></span>**mpnotify- \_ Clean- \_ Ressource \_ erfolgreich**
+<span id="MPNOTIFY_CLEAN_RESOURCE_SUCCEEDED"></span><span id="mpnotify_clean_resource_succeeded"></span>**MPNOTIFY \_ CLEAN \_ RESOURCE \_ SUCCEEDED**
 </dt> <dd>
 
-Die Bereinigung für eine bestimmte Ressource war erfolgreich.
+Die Bereinigung ist für eine bestimmte Ressource erfolgreich.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_CLEAN_RESOURCE_FAILED"></span><span id="mpnotify_clean_resource_failed"></span>**Fehler beim Löschen der mpnotify- \_ \_ Ressource \_**
+<span id="MPNOTIFY_CLEAN_RESOURCE_FAILED"></span><span id="mpnotify_clean_resource_failed"></span>**FEHLER BEI MPNOTIFY \_ CLEAN \_ RESOURCE \_**
 </dt> <dd>
 
 Fehler beim Bereinigen für eine bestimmte Ressource.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_CLEAN_THREAT_COMPLETE"></span><span id="mpnotify_clean_threat_complete"></span>**mpnotify \_ Clean \_ Threat \_ Complete**
+<span id="MPNOTIFY_CLEAN_THREAT_COMPLETE"></span><span id="mpnotify_clean_threat_complete"></span>**MPNOTIFY \_ CLEAN \_ THREAT \_ COMPLETE**
 </dt> <dd>
 
 Die Bereinigung wurde für eine bestimmte Bedrohung abgeschlossen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_PRECHECK_START"></span><span id="mpnotify_precheck_start"></span>**mpnotify- \_ vorab Überprüfung \_ starten**
+<span id="MPNOTIFY_PRECHECK_START"></span><span id="mpnotify_precheck_start"></span>**MPNOTIFY \_ PRECHECK \_ START**
 </dt> <dd>
 
-Clean Vorüberprüfung wurde gestartet.
+Clean precheck started (Vorabprüfung für bereinigte Daten gestartet).
 
 </dd> <dt>
 
-<span id="MPNOTIFY_PRECHECK_COMPLETE"></span><span id="mpnotify_precheck_complete"></span>**mpnotify- \_ vorab Überprüfung ist \_ beendet**
+<span id="MPNOTIFY_PRECHECK_COMPLETE"></span><span id="mpnotify_precheck_complete"></span>**MPNOTIFY \_ PRECHECK \_ COMPLETE**
 </dt> <dd>
 
-Die Clean-Vorprüfung ist abgeschlossen.
+Bereinigte Vorabprüfung abgeschlossen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_PRECHECK_RESOURCE_BLOCKED"></span><span id="mpnotify_precheck_resource_blocked"></span>**mpnotify- \_ Precheck- \_ Ressource \_ blockiert**
+<span id="MPNOTIFY_PRECHECK_RESOURCE_BLOCKED"></span><span id="mpnotify_precheck_resource_blocked"></span>**MPNOTIFY \_ PRECHECK \_ RESOURCE \_ BLOCKED**
 </dt> <dd>
 
-Clean Vorüberprüfung hat blockierte Ressource erkannt.
+Clean precheck detected blocked resource. (Bereinigte Vorabprüfung erkannte blockierte Ressource.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_THREAT_DETECTED"></span><span id="mpnotify_threat_detected"></span>**mpnotify- \_ Bedrohung \_ erkannt**
+<span id="MPNOTIFY_THREAT_DETECTED"></span><span id="mpnotify_threat_detected"></span>**\_MPNOTIFY-BEDROHUNG \_ ERKANNT**
 </dt> <dd>
 
 Neue Bedrohung im System erkannt.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_THREAT_MODIFIED"></span><span id="mpnotify_threat_modified"></span>**mpnotify- \_ Bedrohung \_ geändert**
+<span id="MPNOTIFY_THREAT_MODIFIED"></span><span id="mpnotify_threat_modified"></span>**MPNOTIFY \_ THREAT \_ MODIFIED**
 </dt> <dd>
 
-Die Bedrohungs Informationen wurden geändert. Beispielsweise wurde eine neue Ressource hinzugefügt.
+Geänderte Bedrohungsinformationen. Beispielsweise wurde eine neue Ressource hinzugefügt.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_THREAT_CLEAN_SUCCEEDED"></span><span id="mpnotify_threat_clean_succeeded"></span>**mpnotify- \_ Bedrohungs \_ Bereinigung \_ erfolgreich**
+<span id="MPNOTIFY_THREAT_CLEAN_SUCCEEDED"></span><span id="mpnotify_threat_clean_succeeded"></span>**MPNOTIFY \_ THREAT \_ CLEAN \_ SUCCEEDED**
 </dt> <dd>
 
-Die Bereinigungs Aktion war erfolgreich.
+Die Bereinigungsaktion war für eine Bedrohung erfolgreich.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_THREAT_CLEAN_FAILED"></span><span id="mpnotify_threat_clean_failed"></span>**mpnotify-Fehler beim \_ \_ Bereinigen \_**
+<span id="MPNOTIFY_THREAT_CLEAN_FAILED"></span><span id="mpnotify_threat_clean_failed"></span>**FEHLER BEI DER \_ MPNOTIFY-BEDROHUNGSBEREINIGUNG \_ \_**
 </dt> <dd>
 
-Fehler beim Bereinigungs Vorgang für eine Bedrohung. **Fehler \_ Der Fehlercode "MP- \_ Bedrohung \_ nicht \_ gefunden** " zeigt an, dass die Bedrohung nicht gefunden wurde (und kein Fehler beim Bereinigen aufgetreten ist).
+Fehler bei der Bereinigungsaktion für eine Bedrohung. **FEHLER \_ MP THREAT NOT FOUND error code (MP \_ THREAT \_ NOT FOUND-Fehlercode) \_** gibt an, dass die Bedrohung nicht gefunden wurde (und kein Fehler beim Bereinigen).
 
 </dd> <dt>
 
-<span id="MPNOTIFY_THREAT_ABANDONED"></span><span id="mpnotify_threat_abandoned"></span>**mpnotify- \_ Bedrohung \_ abgebrochen**
+<span id="MPNOTIFY_THREAT_ABANDONED"></span><span id="mpnotify_threat_abandoned"></span>**MPNOTIFY \_ THREAT \_ ABANDONED**
 </dt> <dd>
 
-Es ist keine Wiederherstellung aufgetreten, bevor der Dienst angehalten wurde.
+Vor dem Anhalten des Diensts ist keine Wiederherstellung aufgetreten.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_THREAT_CLEAN_EVENT_START"></span><span id="mpnotify_threat_clean_event_start"></span>**mpnotify \_ Threat \_ Clean- \_ Ereignis \_ starten**
+<span id="MPNOTIFY_THREAT_CLEAN_EVENT_START"></span><span id="mpnotify_threat_clean_event_start"></span>**STARTEN DES MPNOTIFY \_ THREAT \_ \_ CLEAN-EREIGNISSES \_**
 </dt> <dd>
 
-Eine Reinigungsaktion wurde gestartet.
+Eine Bereinigungsaktion wurde gestartet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_THREAT_CLEAN_EVENT_COMPLETE"></span><span id="mpnotify_threat_clean_event_complete"></span>**mpnotify \_ Threat \_ Clean- \_ Ereignis wurde \_ beendet.**
+<span id="MPNOTIFY_THREAT_CLEAN_EVENT_COMPLETE"></span><span id="mpnotify_threat_clean_event_complete"></span>**MPNOTIFY \_ THREAT \_ \_ CLEAN-EREIGNIS \_ ABGESCHLOSSEN**
 </dt> <dd>
 
-Eine Reinigungsaktion wurde beendet.
+Eine Bereinigungsaktion wurde beendet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_START"></span><span id="mpnotify_sigupdate_start"></span>**mpnotify \_ sigupdate \_ Start**
+<span id="MPNOTIFY_SIGUPDATE_START"></span><span id="mpnotify_sigupdate_start"></span>**MPNOTIFY \_ SIGUPDATE \_ START**
 </dt> <dd>
 
-Das Signatur Update wurde gestartet.
+Signaturaktualisierung gestartet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_SEARCH_START"></span><span id="mpnotify_sigupdate_search_start"></span>**mpnotify \_ sigupdate- \_ Suche \_ starten**
+<span id="MPNOTIFY_SIGUPDATE_SEARCH_START"></span><span id="mpnotify_sigupdate_search_start"></span>**MPNOTIFY \_ SIGUPDATE \_ SEARCH \_ START**
 </dt> <dd>
 
-Suche nach Updates gestartet.
+Suche nach gestarteten Updates.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_SEARCH_COMPLETE"></span><span id="mpnotify_sigupdate_search_complete"></span>**mpnotify \_ sigupdate- \_ Suche ist \_ beendet**
+<span id="MPNOTIFY_SIGUPDATE_SEARCH_COMPLETE"></span><span id="mpnotify_sigupdate_search_complete"></span>**MPNOTIFY \_ SIGUPDATE \_ SEARCH \_ COMPLETE**
 </dt> <dd>
 
-Suche nach Updates wurde abgeschlossen.
+Suchen Sie nach abgeschlossenen Updates.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_SOFTWARE_UPDATE_AVAILABLE"></span><span id="mpnotify_sigupdate_software_update_available"></span>**mpnotify- \_ sigupdate- \_ Software \_ Update \_ verfügbar**
+<span id="MPNOTIFY_SIGUPDATE_SOFTWARE_UPDATE_AVAILABLE"></span><span id="mpnotify_sigupdate_software_update_available"></span>**MPNOTIFY \_ SIGUPDATE \_ SOFTWARE UPDATE \_ \_ VERFÜGBAR**
 </dt> <dd>
 
-Das Software Update ist verfügbar.
+Softwareupdate verfügbar.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_DOWNLOAD_START"></span><span id="mpnotify_sigupdate_download_start"></span>**mpnotify \_ sigupdate \_ Download \_ starten**
+<span id="MPNOTIFY_SIGUPDATE_DOWNLOAD_START"></span><span id="mpnotify_sigupdate_download_start"></span>**MPNOTIFY \_ SIGUPDATE \_ DOWNLOAD \_ START**
 </dt> <dd>
 
-Der Download wurde gestartet.
+Download gestartet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_DOWNLOAD_PROGRESS"></span><span id="mpnotify_sigupdate_download_progress"></span>**mpnotify \_ sigupdate- \_ Download \_ Fortschritt**
+<span id="MPNOTIFY_SIGUPDATE_DOWNLOAD_PROGRESS"></span><span id="mpnotify_sigupdate_download_progress"></span>**MPNOTIFY \_ \_ SIGUPDATE-DOWNLOADFORTSCHRITT \_**
 </dt> <dd>
 
-Der Download wird ausgeführt. Rückruf Daten enthalten den Fortschritt.
+Der Download wird ausgeführt. Rückrufdaten enthalten den Fortschritt.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_DOWNLOAD_COMPLETE"></span><span id="mpnotify_sigupdate_download_complete"></span>**mpnotify \_ sigupdate- \_ Download ist \_ fertiggestellt.**
+<span id="MPNOTIFY_SIGUPDATE_DOWNLOAD_COMPLETE"></span><span id="mpnotify_sigupdate_download_complete"></span>**MPNOTIFY \_ SIGUPDATE \_ DOWNLOAD \_ ABGESCHLOSSEN**
 </dt> <dd>
 
 Download abgeschlossen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_INSTALL_START"></span><span id="mpnotify_sigupdate_install_start"></span>**mpnotify \_ sigupdate \_ Installation \_ starten**
+<span id="MPNOTIFY_SIGUPDATE_INSTALL_START"></span><span id="mpnotify_sigupdate_install_start"></span>**MPNOTIFY \_ SIGUPDATE \_ INSTALL \_ START**
 </dt> <dd>
 
 Die Installation wurde gestartet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_INSTALL_PROGRESS"></span><span id="mpnotify_sigupdate_install_progress"></span>**mpnotify \_ sigupdate- \_ Installations \_ Fortschritt**
+<span id="MPNOTIFY_SIGUPDATE_INSTALL_PROGRESS"></span><span id="mpnotify_sigupdate_install_progress"></span>**MPNOTIFY \_ \_ SIGUPDATE– \_ INSTALLATIONSFORTSCHRITT**
 </dt> <dd>
 
-Installation wird ausgeführt. Rückruf Daten enthalten den Fortschritt.
+Installation wird ausgeführt. Rückrufdaten enthalten den Fortschritt.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_INSTALL_COMPLETE"></span><span id="mpnotify_sigupdate_install_complete"></span>**mpnotify \_ sigupdate- \_ Installation ist \_ fertiggestellt.**
+<span id="MPNOTIFY_SIGUPDATE_INSTALL_COMPLETE"></span><span id="mpnotify_sigupdate_install_complete"></span>**MPNOTIFY \_ SIGUPDATE \_ INSTALL \_ COMPLETE**
 </dt> <dd>
 
-Die Installation ist beendet.
+Die Installation ist abgeschlossen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_REBOOT_REQUIRED"></span><span id="mpnotify_sigupdate_reboot_required"></span>**mpnotify- \_ sigupdate- \_ Neustart \_ erforderlich**
+<span id="MPNOTIFY_SIGUPDATE_REBOOT_REQUIRED"></span><span id="mpnotify_sigupdate_reboot_required"></span>**MPNOTIFY \_ SIGUPDATE \_ REBOOT \_ ERFORDERLICH**
 </dt> <dd>
 
-Das Update erfordert einen Neustart.
+Für das Update ist ein Neustart erforderlich.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_REQUEST_PROCESSED"></span><span id="mpnotify_sigupdate_request_processed"></span>**mpnotify \_ sigupdate- \_ Anforderung \_ verarbeitet**
+<span id="MPNOTIFY_SIGUPDATE_REQUEST_PROCESSED"></span><span id="mpnotify_sigupdate_request_processed"></span>**VERARBEITETE MPNOTIFY \_ \_ SIGUPDATE-ANFORDERUNG \_**
 </dt> <dd>
 
-Der Dienst hat eine Signatur Aktualisierungs Anforderung verarbeitet. Fehler oder Erfolg wird von **HRESULT** in den Rückruf Daten angegeben.
+Der Dienst hat eine Signaturaktualisierungsanforderung verarbeitet. Fehler oder Erfolg werden durch **hResult** in den Rückrufdaten angegeben.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SIGUPDATE_COMPLETE"></span><span id="mpnotify_sigupdate_complete"></span>**mpnotify \_ sigupdate ist fertiggestellt. \_**
+<span id="MPNOTIFY_SIGUPDATE_COMPLETE"></span><span id="mpnotify_sigupdate_complete"></span>**MPNOTIFY \_ SIGUPDATE \_ COMPLETE**
 </dt> <dd>
 
-Das Update wurde beendet. **S \_** Der Status false gibt an, dass keine Updates erforderlich sind.
+Update abgeschlossen. **S \_ DER FALSE-Status** gibt an, dass keine Updates erforderlich waren.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SAMPLE_START"></span><span id="mpnotify_sample_start"></span>**mpnotify- \_ Beispiel \_ Start**
+<span id="MPNOTIFY_SAMPLE_START"></span><span id="mpnotify_sample_start"></span>**\_MPNOTIFY-BEISPIELSTART \_**
 </dt> <dd>
 
-Die Beispiel Übermittlung wurde gestartet.
+Die Beispielübermittlung wurde gestartet.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SAMPLE_COMPLETE"></span><span id="mpnotify_sample_complete"></span>**mpnotify- \_ Beispiel ist \_ fertiggestellt**
+<span id="MPNOTIFY_SAMPLE_COMPLETE"></span><span id="mpnotify_sample_complete"></span>**\_MPNOTIFY-BEISPIEL \_ ABGESCHLOSSEN**
 </dt> <dd>
 
-Die Beispiel Übermittlung wurde abgeschlossen.
+Die Beispielübermittlung wurde abgeschlossen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SAMPLE_ITEM_START"></span><span id="mpnotify_sample_item_start"></span>**mpnotify- \_ Beispiel \_ Element \_ Anfang**
+<span id="MPNOTIFY_SAMPLE_ITEM_START"></span><span id="mpnotify_sample_item_start"></span>**START DES \_ MPNOTIFY-BEISPIELELEMENTS \_ \_**
 </dt> <dd>
 
-Eine bestimmte Beispiel Element Übermittlung wurde gestartet. Der Beispiel Index für Elemente ist in [**mpsample- \_ Daten**](mpsample-data.md)verfügbar.
+Die Übermittlung eines bestimmten Beispielelements wurde gestartet. Der Beispielelementindex ist in [**MPSAMPLE \_ DATA**](mpsample-data.md)verfügbar.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SAMPLE_ITEM_SUCCEEDED"></span><span id="mpnotify_sample_item_succeeded"></span>**mpnotify- \_ Beispiel \_ Element \_ erfolgreich**
+<span id="MPNOTIFY_SAMPLE_ITEM_SUCCEEDED"></span><span id="mpnotify_sample_item_succeeded"></span>**\_MPNOTIFY-BEISPIELELEMENT \_ \_ ERFOLGREICH**
 </dt> <dd>
 
-Eine bestimmte Beispiel Element Übermittlung war erfolgreich.
+Die Übermittlung eines bestimmten Beispielelements war erfolgreich.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_SAMPLE_ITEM_FAILED"></span><span id="mpnotify_sample_item_failed"></span>**Fehler beim mpnotify- \_ Beispiel \_ Element. \_**
+<span id="MPNOTIFY_SAMPLE_ITEM_FAILED"></span><span id="mpnotify_sample_item_failed"></span>**\_FEHLER BEIM MPNOTIFY-BEISPIELELEMENT \_ \_**
 </dt> <dd>
 
-Fehler beim Einreichen eines bestimmten Beispiel Elements. Der Fehlercode ist in [**mpcallback- \_ Daten**](mpcallback-data.md)verfügbar.
+Fehler bei der Übermittlung eines bestimmten Beispielelements. Fehlercode ist in [**MPCALLBACK \_ DATA**](mpcallback-data.md)verfügbar.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_RESERVED_DATA"></span><span id="mpnotify_reserved_data"></span>**\_reservierte Daten für mpnotify \_**
+<span id="MPNOTIFY_RESERVED_DATA"></span><span id="mpnotify_reserved_data"></span>**RESERVIERTE \_ \_ MPNOTIFY-DATEN**
 </dt> <dd>
 
 Interne reservierte Daten.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_FASTPATH_SIG_ADDED"></span><span id="mpnotify_fastpath_sig_added"></span>**mpnotify \_ FastPath \_ sig \_ hinzugefügt**
+<span id="MPNOTIFY_FASTPATH_SIG_ADDED"></span><span id="mpnotify_fastpath_sig_added"></span>**MPNOTIFY \_ FASTPATH \_ SIG \_ HINZUGEFÜGT**
 </dt> <dd>
 
-Eine FastPath-Signatur hat eine Signatur entweder hinzugefügt oder deaktiviert.
+Eine Fastpath-Signatur hat eine Signatur hinzugefügt oder deaktiviert.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_FASTPATH_SIG_REMOVED"></span><span id="mpnotify_fastpath_sig_removed"></span>**mpnotify \_ FastPath \_ sig \_ entfernt**
+<span id="MPNOTIFY_FASTPATH_SIG_REMOVED"></span><span id="mpnotify_fastpath_sig_removed"></span>**MPNOTIFY \_ FASTPATH \_ SIG \_ ENTFERNT**
 </dt> <dd>
 
 Eine FastPath-Signatur wurde entfernt.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_NIS_PRIVATE"></span><span id="mpnotify_nis_private"></span>**mpnotify \_ NIS \_ private**
+<span id="MPNOTIFY_NIS_PRIVATE"></span><span id="mpnotify_nis_private"></span>**MPNOTIFY \_ NIS \_ PRIVATE**
 </dt> <dd>
 
-Private NIS-Benachrichtigungen. Hierfür sollten keine Partner registriert werden.
+Private NIS-Notifkationen. Dafür sollten sich keine Partner registrieren.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_HEALTH_CHANGE"></span><span id="mpnotify_health_change"></span>**mpnotify-Integritäts \_ \_ Änderung**
+<span id="MPNOTIFY_HEALTH_CHANGE"></span><span id="mpnotify_health_change"></span>**MPNOTIFY \_ HEALTH \_ CHANGE**
 </dt> <dd>
 
-Der am-Dienst hat einen neuen Status eingegeben.
+Der AM-Dienst wurde in einen neuen Zustand übergegangen.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_HEALTH_RECOVERY"></span><span id="mpnotify_health_recovery"></span>**mpnotify-Integritäts \_ \_ Wiederherstellung**
+<span id="MPNOTIFY_HEALTH_RECOVERY"></span><span id="mpnotify_health_recovery"></span>**MPNOTIFY \_ HEALTH \_ RECOVERY**
 </dt> <dd>
 
-Der am-Dienst wurde nach einem-Zustand wieder hergestellt.
+Der AM-Dienst wurde aus einem Zustand wiederhergestellt.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_HEALTH_START"></span><span id="mpnotify_health_start"></span>**mpnotify-Integritäts \_ \_ Beginn**
+<span id="MPNOTIFY_HEALTH_START"></span><span id="mpnotify_health_start"></span>**MPNOTIFY \_ HEALTH \_ START**
 </dt> <dd>
 
-Der am-Dienst hat den Zustand des Systems initialisiert.
+Der AM-Dienst hat die Integrität des Systems initialisiert.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_ENDOFLIFE_CHANGE"></span><span id="mpnotify_endoflife_change"></span>**Änderung der \_ Endo-Life-Änderung in mpnotify \_**
+<span id="MPNOTIFY_ENDOFLIFE_CHANGE"></span><span id="mpnotify_endoflife_change"></span>**MPNOTIFY \_ ENDOFLIFE \_ CHANGE**
 </dt> <dd>
 
-Die Ablaufdatums Angaben für den am-Dienst haben sich geändert.
+Die Ablaufdatume für den AM-Dienst "End Of Life" wurden geändert.
 
 </dd> <dt>
 
-<span id="MPNOTIFY_MALWARETOAST_DATA"></span><span id="mpnotify_malwaretoast_data"></span>**mpnotify \_ malwarepopup- \_ Daten**
+<span id="MPNOTIFY_MALWARETOAST_DATA"></span><span id="mpnotify_malwaretoast_data"></span>**MPNOTIFY \_ \_ MALWARETOAST-DATEN**
 </dt> <dd>
 
-Im Dienst "am" ist Schadsoftware aufgetreten, die möglicherweise zu einer Änderung der Änderung des Computers geführt hat.
+Der AM-Dienst hat Schadsoftware gefunden, die möglicherweise zu einer änderung kritischer Einstellungen auf dem Computer geführt hat.
 
 </dd> </dl>
 
@@ -642,23 +642,23 @@ Im Dienst "am" ist Schadsoftware aufgetreten, die möglicherweise zu einer Ände
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mpmanagerstatus-QUERYEX**](mpmanagerstatusqueryex.md)
+[**MpManagerStatusQueryEx**](mpmanagerstatusqueryex.md)
 </dt> <dt>
 
-[**mpcallback- \_ Daten**](mpcallback-data.md)
+[**\_MPCALLBACK-DATEN**](mpcallback-data.md)
 </dt> <dt>
 
-[**mpsample- \_ Daten**](mpsample-data.md)
+[**\_MPSAMPLE-DATEN**](mpsample-data.md)
 </dt> </dl>
 
  

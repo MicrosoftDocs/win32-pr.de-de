@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen über: inullablejetstruct. HasValue-Eigenschaft'
-title: Inullablejetstruct. HasValue (Eigenschaft)
+description: 'Weitere Informationen zu: INullableJetStruct.HasValue-Eigenschaft'
+title: INullableJetStruct.HasValue-Eigenschaft
 TOCTitle: 'HasValue property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.INullableJetStruct.HasValue
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.inullablejetstruct.hasvalue(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6a3bbfe7e2380c469d279b1366d0774d971819df
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cac1c05b8a60597644b84c20159a548c864f040f67fc9686611fd75634e39a3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349243"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118767385"
 ---
-# <a name="inullablejetstructhasvalue-property"></a>Inullablejetstruct. HasValue (Eigenschaft)
+# <a name="inullablejetstructhasvalue-property"></a>INullableJetStruct.HasValue-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob die-Struktur einen NULL-Wert aufweist.
+Ruft einen Wert ab, der angibt, ob die Struktur über einen NULL-Wert verfügt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ bool HasValue { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Inullablejetstruct-Schnittstelle](./inullablejetstruct-interface.md)
+[INullableJetStruct-Schnittstelle](./inullablejetstruct-interface.md)
 
-[Inullablejetstruct-Member](./inullablejetstruct-members.md)
+[INullableJetStruct-Member](./inullablejetstruct-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

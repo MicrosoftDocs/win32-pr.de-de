@@ -31,7 +31,7 @@ Beendet die Animation für das angegebene Zeichen.
 
 
 
-| Teil      | Beschreibung                                                                                   |
+| Teil      | BESCHREIBUNG                                                                                   |
 |-----------|-----------------------------------------------------------------------------------------------|
 | *Anforderung* | Optional. Ein [**Request-Objekt,**](/windows/desktop/lwef/the-request-object) das einen bestimmten Animationsaufruf an gibt. |
 

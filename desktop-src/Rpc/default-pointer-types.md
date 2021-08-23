@@ -1,26 +1,26 @@
 ---
-title: Standard Zeiger Typen
-description: Es ist nicht erforderlich, dass Zeiger über eine explizite Attribut Beschreibung verfügen. Wenn kein explizites Attribut bereitgestellt wird, verwendet der Mittell-Compiler ein Standard Zeiger Attribut.
+title: Standardzeigertypen
+description: Zeiger müssen keine explizite Attributbeschreibung aufweisen. Wenn kein explizites Attribut angegeben wird, verwendet der MIDL-Compiler ein Standardzeigerattribut.
 ms.assetid: b90619c3-70b4-44f0-ba37-293595281031
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c565fe8019567fd1fe319d7b34287d9729bbe1d3
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3020f17af6e24778c0fa5090009650f3c0832df528ba148e0a6a91928dd1dc14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039305"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118930977"
 ---
-# <a name="default-pointer-types"></a>Standard Zeiger Typen
+# <a name="default-pointer-types"></a>Standardzeigertypen
 
-Es ist nicht erforderlich, dass Zeiger über eine explizite Attribut Beschreibung verfügen. Wenn kein explizites Attribut bereitgestellt wird, verwendet der Mittell-Compiler ein Standard Zeiger Attribut.
+Zeiger müssen keine explizite Attributbeschreibung aufweisen. Wenn kein explizites Attribut angegeben wird, verwendet der MIDL-Compiler ein Standardzeigerattribut.
 
-Die Standardfälle für nicht attributierte Zeiger lauten wie folgt:
+Die Standardfälle für nicht attributierte Zeiger sind die folgenden:
 
--   Zeiger der obersten Ebene, die in Parameterlisten angezeigt werden, werden standardmäßig als Verweis \[ [](/windows/desktop/Midl/ref) \] Zeiger angezeigt.
--   Alle anderen Zeiger werden standardmäßig auf den Typ festgelegt, der vom \[ [**Zeiger \_ Standard**](/windows/desktop/Midl/pointer-default) Attribut angegeben wird \] . Wenn kein \[ **Zeiger- \_ Standard** \] Attribut angegeben wird, werden diese Zeiger standardmäßig auf das Unique-Attribut fest, \[ [](/windows/desktop/Midl/unique) \] Wenn sich der mittlerer l-Compiler im Microsoft- [Erweiterungs](microsoft-rpc-binding-handle-extensions.md) Modus befindet, oder das \[ [**ptr**](/windows/desktop/Midl/ptr) \] -Attribut, wenn sich der Mittelwert Compiler im DCE-kompatiblen Modus befindet.
+-   Zeiger der obersten Ebene, die in Parameterlisten angezeigt werden, werden standardmäßig auf \[ [](/windows/desktop/Midl/ref) \] verweiszeigert.
+-   Alle anderen Zeiger werden standardmäßig auf den Vom \[ [**\_ Zeigerstandardattribut**](/windows/desktop/Midl/pointer-default) angegebenen Typ \] festgelegt. Wenn kein \[ **\_ Zeigerstandardattribut** angegeben wird, verwenden \] diese Zeiger standardmäßig das \[ [**eindeutige**](/windows/desktop/Midl/unique) \] Attribut, wenn sich der MIDL-Compiler im [Microsoft-Erweiterungsmodus](microsoft-rpc-binding-handle-extensions.md) befindet, oder das \[ [**ptr-Attribut,**](/windows/desktop/Midl/ptr) \] wenn sich der MIDL-Compiler im DCE-kompatiblen Modus befindet.
 
-Wenn eine Remote Prozedur einen Zeiger zurückgibt, muss der Rückgabewert ein eindeutiger \[ [](/windows/desktop/Midl/unique) \] oder vollständiger ( \[ [**ptr**](/windows/desktop/Midl/ptr) - \] ) Zeiger sein.
+Wenn eine Remoteprozedur einen Zeiger zurückgibt, muss der Rückgabewert ein \[ [**eindeutiger**](/windows/desktop/Midl/unique) \] oder vollständiger Zeiger \[ [**(ptr)**](/windows/desktop/Midl/ptr) \] sein.
 
 ``` syntax
 /* IDL file compiled without /osf */
@@ -63,12 +63,12 @@ interface MyInterface2
 }
 ```
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Verwenden Sie beim Definieren eines Zeigers immer explizite Zeiger Attribute, um ein eindeutiges Zeiger Attribut Verhalten zu gewährleisten.
+Um ein eindeutiges Zeigerattributverhalten sicherzustellen, verwenden Sie beim Definieren eines Zeigers immer explizite Zeigerattribute.
 
-Es wird empfohlen, **\[** ptr **\]** nur dann zu verwenden, wenn ein Zeiger Aliasing erforderlich ist.
+Es wird empfohlen, **\[** ptr **\]** nur zu verwenden, wenn Zeigeraliasing erforderlich ist.
 
- 
+ 
 
- 
+ 

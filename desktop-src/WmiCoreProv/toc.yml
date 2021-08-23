@@ -1,4 +1,4 @@
-- name: WMI-Kern Anbieter
+- name: WMI Core-Anbieter
   href: wmi-core-provider-.md
   items:
     - name: MSMonitorClass
@@ -28,7 +28,7 @@
           href: msmcaevent-switchtocmcpolling.md
         - name: MSMCAEvent_SystemEventError
           href: msmcaevent-systemeventerror.md
-        - name: Msmcainfo
+        - name: MSMCAInfo
           href: msmcainfo.md
         - name: MSMCAInfo_Entry
           href: msmcainfo-entry.md
@@ -40,62 +40,62 @@
           href: msmcainfo-rawmcadata.md
         - name: MSMCAInfo_RawMCAEvent
           href: msmcainfo-rawmcaevent.md
-    - name: Frequencyrangedescriptor
+    - name: FrequencyRangeDescriptor
       href: frequencyrangedescriptor.md
-    - name: Supporteddisplayfeaturesdescriptor
+    - name: SupportedDisplayFeaturesDescriptor
       href: supporteddisplayfeaturesdescriptor.md
-    - name: Videomodebug Descriptor
+    - name: VideoModeDescriptor
       href: videomodedescriptor.md
     - name: WMIEvent
       href: wmievent.md
-    - name: Wmimonitoranalog gvideoinputparameams
+    - name: WmiMonitorAnalogVideoInputParams
       href: wmimonitoranalogvideoinputparams.md
-    - name: Wmimonitorbasicdisplaypara
+    - name: WmiMonitorBasicDisplayParams
       href: wmimonitorbasicdisplayparams.md
-    - name: Wmimonitorhelligkeit
+    - name: WmiMonitorBrightness
       href: wmimonitorbrightness.md
-    - name: Wmimonitorbrightnesabvent
+    - name: WmiMonitorBrightnessEvent
       href: wmimonitorbrightnessevent.md
-    - name: Wmimonitorbrightnessmethods
+    - name: WmiMonitorBrightnessMethods
       href: wmimonitorbrightnessmethods.md
       items:
-        - name: Wmimonitorbrightnessmethods-Methoden
+        - name: WmiMonitorBrightnessMethods-Methoden
           href: wmimonitorbrightnessmethods-methods.md
           items:
-            - name: Wmireverttopolicyhelligkeit-Methode
+            - name: WmiRevertToPolicyBrightness-Methode
               href: wmireverttopolicybrightness-method-in-class-wmimonitorbrightnessmethods.md
-            - name: Wmiantalsbrightnessstate-Methode
+            - name: WmiSetALSBrightnessState-Methode
               href: wmisetalsbrightnessstate-method-in-class-wmimonitorbrightnessmethods.md
-            - name: Wmistalsbrightness-Methode
+            - name: WmiSetALSBrightness-Methode
               href: wmisetalsbrightness-method-in-class-wmimonitorbrightnessmethods.md
-            - name: Wmisethelligkeit-Methode
+            - name: WmiSetBrightness-Methode
               href: wmisetbrightness-method-in-class-wmimonitorbrightnessmethods.md
-    - name: Wmimonitorcolorcharacteristics
+    - name: WmiMonitorColorCharacteristics
       href: wmimonitorcolorcharacteristics.md
-    - name: Wmimonitorconnectionpara
+    - name: WmiMonitorConnectionParams
       href: wmimonitorconnectionparams.md
-    - name: Wmimonitordescriptormethods
+    - name: WmiMonitorDescriptorMethods
       href: wmimonitordescriptormethods.md
       items:
-        - name: Wmimonitordescriptormethods-Methoden
+        - name: WmiMonitorDescriptorMethods-Methoden
           href: wmimonitordescriptormethods-methods.md
           items:
             - name: WmiGetMonitorRawEEdidV1Block-Methode
               href: wmigetmonitorraweedidv1block-wmimonitordescriptormethods.md
-    - name: Wmimonitordigitalvideoinputparameter.
+    - name: WmiMonitorDigitalVideoInputParams
       href: wmimonitordigitalvideoinputparams.md
-    - name: Wmimonitorid
+    - name: WmiMonitorID
       href: wmimonitorid.md
-    - name: Wmimonitorlistedfrequencyranges
+    - name: WmiMonitorListedFrequencyRanges
       href: wmimonitorlistedfrequencyranges.md
-    - name: Wmimonitorlistedsupportedsourcemodes
+    - name: WmiMonitorListedSupportedSourceModes
       href: wmimonitorlistedsupportedsourcemodes.md
     - name: WmiMonitorRawEEdidV1Block
       href: wmimonitorraweedidv1block.md
-    - name: Xyzincie
+    - name: XY HatCIE
       href: xyzincie.md
 - name: WDM-Anbieter
   href: wdm-provider.md
   items:
-    - name: Wmibinarymufresource
+    - name: WMIBinaryMofResource
       href: wmibinarymofresource.md

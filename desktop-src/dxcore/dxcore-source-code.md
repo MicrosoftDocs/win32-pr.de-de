@@ -1,26 +1,26 @@
 ---
 title: Minimale DXCore-Anwendung
-description: Die vollständige Quell Code Auflistung für eine minimale DXCore-Anwendung.
+description: Die vollständige Quellcodeauflistung für eine minimale DXCore-Anwendung.
 ms.custom: 19H1
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 06/21/2019
-ms.openlocfilehash: 6a1094f3fcc450fc8e5af471d79be3e3c3064fbf
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9f9d8687fa9871152504f80a917a083ce9acbd14b9bf9159bc7559865b6a7a89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106342147"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985210"
 ---
 # <a name="minimal-dxcore-application"></a>Minimale DXCore-Anwendung
 
-Dieses Thema enthält die vollständige Quell Code Auflistung für eine minimale DXCore-Anwendung (geschrieben in [C++/WinRT](/windows/uwp/cpp-and-winrt-apis)). Der größte Teil des unten gezeigten Codes wird im Thema [Verwenden von DXCore zum Aufzählen von Adaptern](dxcore-enum-adapters.md)erläutert.
+In diesem Thema wird die vollständige Quellcodeauflistung für eine minimale DXCore-Anwendung (geschrieben in [C++/WinRT) beschrieben.](/windows/uwp/cpp-and-winrt-apis) Der größte Teil des unten gezeigten Codes wird im Thema Verwenden von DXCore zum [Aufzählen von Adaptern erläutert.](dxcore-enum-adapters.md)
 
-## <a name="full-source-code-listing-of-a-minimal-dxcore-application"></a>Vollständige Quell Code Auflistung einer minimalen DXCore-Anwendung
+## <a name="full-source-code-listing-of-a-minimal-dxcore-application"></a>Vollständige Quellcodeauflistung einer minimalen DXCore-Anwendung
 
-Wenn Sie dieses Quell Codebeispiel erstellen und ausführen möchten, erstellen Sie zunächst in Visual Studio ein neues Projekt für eine **Windows-Konsolenanwendung (C++/WinRT)** . Bearbeiten `pch.h` Sie dann und `main.cpp` , um wie in den nachstehenden Listen zu sehen.
+Wenn Sie dieses Quellcodebeispiel erstellen und ausführen möchten, erstellen Sie zunächst in Visual Studio ein neues **C++/WinRT-Projekt (Windows Console Application).** Bearbeiten Sie dann `pch.h` und , um wie die folgenden `main.cpp` Auflistungen aussieht.
 
-Im folgenden Codebeispiel wird [C++/WinRT](/windows/uwp/cpp-and-winrt-apis)verwendet. Um die Verwendung der APIs weiterhin zu gewährleisten, wird jedoch die [WinRT:: com_ptr:: Capture-Funktion](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcapture-function)nicht verwendet.
+Im folgenden Codebeispiel wird [C++/WinRT verwendet.](/windows/uwp/cpp-and-winrt-apis) Um die Verwendung der APIs jedoch transparent zu halten, wird die [winrt::com_ptr::capture-Funktion nicht verwendet.](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcapture-function)
 
 ```cppwinrt
 // pch.h

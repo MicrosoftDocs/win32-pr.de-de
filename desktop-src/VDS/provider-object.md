@@ -1,45 +1,45 @@
 ---
-description: Das Anbieter Objekt modelliert das Programm, das für die Speicherverwaltung zuständig ist.
+description: Das Anbieterobjekt modelliert das Programm, das für die Speicherverwaltung verantwortlich ist.
 ms.assetid: 131e927d-d32a-44f6-8aae-28839cfa9e7d
-title: Anbieter Objekt
+title: Anbieterobjekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb36517f0091776b9429911212610134f31077a2
-ms.sourcegitcommit: 37f276b5d887a3aad04b1ba86e390dea9d87e591
+ms.openlocfilehash: 0bb64d879b8213970edd5887c2d7a217c434ec38a113d2c9f36cd9e1d73e564d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "104553091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999465"
 ---
-# <a name="provider-object"></a>Anbieter Objekt
+# <a name="provider-object"></a>Anbieterobjekt
 
-\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [virtuellen Festplatten Dienstanbieter](virtual-disk-service-portal.md) durch die [Windows-Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
+\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die Windows Storage Verwaltungs-API. [](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)\]
 
-Das Anbieter Objekt modelliert das Programm, das für die Speicherverwaltung zuständig ist. Dieses Objekt ermöglicht den Zugriff auf die Funktionalität des Softwareanbieters und des Hardware Anbieters. Anbieter Programme führen Vorgänge für Software Geräte (Volumes und Datenträger) und Hardware Geräte (Speicher Subsysteme und Arrays von Laufwerken hinter RAID-Controllern) aus.
+Das Anbieterobjekt modelliert das Programm, das für die Speicherverwaltung verantwortlich ist. Dieses Objekt ermöglicht den Zugriff sowohl auf die Funktionalität des Softwareanbieters als auch des Hardwareanbieters. Anbieterprogramme führen Vorgänge auf Softwaregeräten (Volumes und Datenträger) und Hardwaregeräten (Speichersubsysteme und Arrays von Laufwerken hinter RAID-Controllern) aus.
 
-VDS registriert ein Anbieter Objekt als COM-Objekt in der Windows-Registrierung und verwendet enthaltene Schnittstellen (keine Aggregation), um die restlichen Objekte zu implementieren, wobei alle Schnittstellen und Methoden umwickelt und Funktionen bedingt hinzugefügt werden. Die Objekte und Schnittstellen, die vom Anbieter Objekt umschließt werden, unterscheiden sich je nach Anbietertyp.
+VDS registriert ein Anbieterobjekt als COM-Objekt in der Windows-Registrierung und verwendet enthaltene Schnittstellen (keine Aggregation), um die verbleibenden Objekte zu implementieren, um alle Schnittstellen und Methoden zu umschließen und bedingt Funktionen hinzufügen. Die Objekte und Schnittstellen, die vom Anbieterobjekt umschlossen werden, unterscheiden sich je nach Anbietertyp.
 
-Es ist nicht möglich, ein Anbieter Objekt direkt aus der Anwendung zu instanziieren. Stattdessen müssen Sie VDS starten, einen Zeiger auf ein Dienst Objekt abrufen und das Dienst Objekt verwenden, um die dem Host bekannten Anbieter abzufragen. Anweisungen zum Laden von VDS finden Sie unter [Start-und Dienst Objekte](startup-and-service-objects.md).
+Sie können ein Anbieterobjekt nicht direkt aus Ihrer Anwendung instanziieren. Stattdessen müssen Sie VDS starten, einen Zeiger auf ein Dienstobjekt abrufen und das Dienstobjekt zum Abfragen der Anbieter verwenden, die dem Host bekannt sind. Anweisungen zum Laden von VDS finden Sie unter [Start- und Dienstobjekte.](startup-and-service-objects.md)
 
-Verwenden Sie die [**ivdsservice:: queryproviders**](/windows/desktop/api/Vds/nf-vds-ivdsservice-queryproviders) -Methode, um die registrierten Anbieter Programme auf einem Host aufzuzählen. Mit dem ersten Parameter der-Methode können Sie nur Softwareanbieter, nur Hardware Anbieter oder beides angeben. Mit einem Provider-Objekt können Sie Vorgänge für die Objekte ausführen, die von diesem Anbieter verwaltet werden. Wie die folgende Abbildung zeigt, können Sie die Methoden verwenden, die von der [**ivdsswprovider**](/windows/desktop/api/Vds/nn-vds-ivdsswprovider) -Schnittstelle verfügbar gemacht werden, um Paket Objekte zu erstellen und abzufragen, die mit Softwareanbietern verknüpft sind. Ebenso können Sie die Methoden der [**ivdshwprovider**](/windows/desktop/api/Vds/nn-vds-ivdshwprovider) -Schnittstelle verwenden, um mit den Subsystem-Objekten zu interagieren, die Hardwareanbietern zugeordnet sind.
+Verwenden Sie [**die IVdsService::QueryProviders-Methode,**](/windows/desktop/api/Vds/nf-vds-ivdsservice-queryproviders) um die registrierten Anbieterprogramme auf einem Host zu aufzählen. Mit dem ersten Parameter der -Methode können Sie nur Softwareanbieter, nur Hardwareanbieter oder beides angeben. Mit einem Anbieterobjekt können Sie Vorgänge für die objekte ausführen, die von diesem Anbieter verwaltet werden. Wie die folgende Abbildung zeigt, können Sie die Methoden verwenden, die von der [**IVdsSwProvider-Schnittstelle**](/windows/desktop/api/Vds/nn-vds-ivdsswprovider) verfügbar gemacht werden, um Paketobjekte zu erstellen und abfragen, die Softwareanbietern zugeordnet sind. Ebenso können Sie die Methoden auf der [**IVdsHwProvider-Schnittstelle**](/windows/desktop/api/Vds/nn-vds-ivdshwprovider) verwenden, um mit den Subsystemobjekten zu interagieren, die Hardwareanbietern zugeordnet sind.
 
-![Diagramm, das eine "Anwendung" in "Providers", dann "Pack", "Subsystem" und dann "Spindles" anzeigt.](images/vdsproviderobject.png)
+![Diagramm, das eine "Anwendung" zeigt, die in "Anbieter", dann "Pack" oder "Subsystem" und dann in "Achsen" verzweigt ist.](images/vdsproviderobject.png)
 
-Objekteigenschaften enthalten einen beständigen GUID-Objekt Bezeichner, der einen bestimmten Anbieter darstellt, und eine zweite GUID, die die Anbieter Version darstellt. Beachten Sie, dass andere Objekt Bezeichner im VDS-Objektmodell nicht permanent sind. Die restlichen Eigenschaften für dieses Objekt umfassen einen Anbieter Namen, zusätzliche Versionsinformationen, den Anbietertyp Software oder die Hardware), verschiedene Flags und eine Einstellung für die Neuerstellungs Priorität, die nur für Softwareanbieter gilt.
+Zu den Objekteigenschaften gehören ein persistenter GUID-Objektbezeichner, der einen bestimmten Anbieter darstellt, und eine zweite GUID, die die Anbieterversion darstellt. Beachten Sie, dass andere Objektbezeichner im VDS-Objektmodell nicht persistent sind. Die verbleibenden Eigenschaften für dieses Objekt umfassen einen Anbieternamen, zusätzliche Versionsinformationen, software- oder hardwarebasierten Anbietertyp, verschiedene Flags und eine Einstellung für die Neuerstellungspriorität, die nur für Softwareanbieter gilt.
 
-In der folgenden Tabelle werden verwandte Schnittstellen, Enumerationen und Strukturen aufgelistet. 
+In der folgenden Tabelle sind verwandte Schnittstellen, Enumerationen und Strukturen aufgeführt. 
 
 | type                                                                                         | Element                                                                                                                                                                                                                                                                                        |
 |----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Schnittstellen, die von diesem Objekt immer verfügbar gemacht werden                                            | [**Ivdsprovider**](/windows/desktop/api/Vds/nn-vds-ivdsprovider)                                                                                                                                                                                                                                                           |
-| Schnittstellen, die immer nur von Softwareanbietern verfügbar gemacht werden                                | [**Ivdsswprovider**](/windows/desktop/api/Vds/nn-vds-ivdsswprovider)                                                                                                                                                                                                                                                       |
-| Schnittstellen, die immer nur von Hardwareanbietern verfügbar gemacht werden                                | [**Ivdshwprovider**](/windows/desktop/api/Vds/nn-vds-ivdshwprovider)                                                                                                                                                                                                                                                       |
-| Schnittstellen, die von diesem Objekt verfügbar gemacht werden können                                                | [**Ivdsprovidersupport**](/windows/desktop/api/Vds/nn-vds-ivdsprovidersupport)                                                                                                                                                                                                                                             |
-| Schnittstellen, die möglicherweise nur von Hardwareanbietern verfügbar gemacht werden                                    | [**Ivdshwprovidertype**](/windows/desktop/api/Vds/nn-vds-ivdshwprovidertype), [**ivdshwproviderstoragepools**](/windows/desktop/api/Vds/nn-vds-ivdshwproviderstoragepools)**Windows Server 2008, Windows Vista und Windows Server 2003:** die [**ivdshwproviderstoragepools**](/windows/desktop/api/Vds/nn-vds-ivdshwproviderstoragepools) -Schnittstelle wird nicht unterstützt.<br/> |
-| Schnittstellen, die immer implementiert, aber nicht für Anwendungen verfügbar gemacht werden                       | [**Ivdsproviderprivate**](/windows/desktop/api/VdsHwPrv/nn-vdshwprv-ivdsproviderprivate)                                                                                                                                                                                                                                             |
-| Schnittstellen, die immer von Hardwareanbietern implementiert werden, aber nicht für Anwendungen verfügbar gemacht werden | [**Ivdshwproviderprivate**](/windows/desktop/api/VdsHwPrv/nn-vdshwprv-ivdshwproviderprivate)                                                                                                                                                                                                                                         |
-| Schnittstellen, die möglicherweise von Hardwareanbietern implementiert, aber nicht für Anwendungen verfügbar gemacht werden     | [**Ivdshwproviderprivatempio**](/windows/desktop/api/VdsHwPrv/nn-vdshwprv-ivdshwproviderprivatempio)                                                                                                                                                                                                                                 |
-| Zugehörige Enumerationen                                                                      | [**VDS \_ \_Anbieterflag**](/windows/desktop/api/Vds/ne-vds-vds_provider_flag), [**VDS- \_ Abfrage \_ \_ anbieterflag**](/windows/desktop/api/Vds/ne-vds-vds_query_provider_flag)und [**VDS- \_ \_ Anbietertyp**](/windows/desktop/api/Vds/ne-vds-vds_provider_type).                                                                                                                         |
+| Schnittstellen, die von diesem Objekt immer verfügbar gemacht werden                                            | [**IVdsProvider**](/windows/desktop/api/Vds/nn-vds-ivdsprovider)                                                                                                                                                                                                                                                           |
+| Schnittstellen, die immer nur von Softwareanbietern verfügbar gemacht werden                                | [**IVdsSwProvider**](/windows/desktop/api/Vds/nn-vds-ivdsswprovider)                                                                                                                                                                                                                                                       |
+| Schnittstellen, die immer nur von Hardwareanbietern verfügbar gemacht werden                                | [**IVdsHwProvider**](/windows/desktop/api/Vds/nn-vds-ivdshwprovider)                                                                                                                                                                                                                                                       |
+| Schnittstellen, die von diesem Objekt verfügbar gemacht werden können                                                | [**IVdsProviderSupport**](/windows/desktop/api/Vds/nn-vds-ivdsprovidersupport)                                                                                                                                                                                                                                             |
+| Schnittstellen, die möglicherweise nur von Hardwareanbietern verfügbar gemacht werden                                    | [**IVdsHwProviderType,**](/windows/desktop/api/Vds/nn-vds-ivdshwprovidertype) [**IVdsHwProviderStoragePools**](/windows/desktop/api/Vds/nn-vds-ivdshwproviderstoragepools)**Windows Server 2008, Windows Vista und Windows Server 2003:** Die [**IVdsHwProviderStoragePools-Schnittstelle**](/windows/desktop/api/Vds/nn-vds-ivdshwproviderstoragepools) wird nicht unterstützt.<br/> |
+| Schnittstellen, die immer implementiert, aber nicht für Anwendungen verfügbar gemacht werden                       | [**IVdsProviderPrivate**](/windows/desktop/api/VdsHwPrv/nn-vdshwprv-ivdsproviderprivate)                                                                                                                                                                                                                                             |
+| Schnittstellen, die immer von Hardwareanbietern implementiert, aber nicht für Anwendungen verfügbar gemacht werden | [**IVdsHwProviderPrivate**](/windows/desktop/api/VdsHwPrv/nn-vdshwprv-ivdshwproviderprivate)                                                                                                                                                                                                                                         |
+| Schnittstellen, die von Hardwareanbietern implementiert, aber nicht für Anwendungen verfügbar gemacht werden können     | [**IVdsHwProviderPrivateMpio**](/windows/desktop/api/VdsHwPrv/nn-vdshwprv-ivdshwproviderprivatempio)                                                                                                                                                                                                                                 |
+| Zugeordnete Enumerationen                                                                      | [**VDS \_ \_ANBIETERFLAG,**](/windows/desktop/api/Vds/ne-vds-vds_provider_flag) [**\_ VDS-ABFRAGEANBIETERFLAG \_ \_**](/windows/desktop/api/Vds/ne-vds-vds_query_provider_flag)UND [**\_ VDS-ANBIETERTYP \_**](/windows/desktop/api/Vds/ne-vds-vds_provider_type).                                                                                                                         |
 | Zugeordnete Strukturen                                                                        | Keine.                                                                                                                                                                                                                                                                                          |
 
 
@@ -53,16 +53,16 @@ In der folgenden Tabelle werden verwandte Schnittstellen, Enumerationen und Stru
 [VDS-Objektmodell](vds-object-model.md)
 </dt> <dt>
 
-[Start-und Dienst Objekte](startup-and-service-objects.md)
+[Start- und Dienstobjekte](startup-and-service-objects.md)
 </dt> <dt>
 
-[**Ivdsservice:: queryproviders**](/windows/desktop/api/Vds/nf-vds-ivdsservice-queryproviders)
+[**IVdsService::QueryProviders**](/windows/desktop/api/Vds/nf-vds-ivdsservice-queryproviders)
 </dt> <dt>
 
-[**Ivdsswprovider**](/windows/desktop/api/Vds/nn-vds-ivdsswprovider)
+[**IVdsSwProvider**](/windows/desktop/api/Vds/nn-vds-ivdsswprovider)
 </dt> <dt>
 
-[**Ivdshwprovider**](/windows/desktop/api/Vds/nn-vds-ivdshwprovider)
+[**IVdsHwProvider**](/windows/desktop/api/Vds/nn-vds-ivdshwprovider)
 </dt> </dl>
 
  

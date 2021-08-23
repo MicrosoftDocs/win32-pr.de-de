@@ -1,7 +1,7 @@
 ---
-description: Gibt eine Datei an, die signiert werden soll.
+description: Gibt eine zu signierende Datei an.
 ms.assetid: 5b45d855-ede8-43eb-9253-e3fe1716686b
-title: SIGNER_FILE_INFO Struktur
+title: SIGNER_FILE_INFO-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,19 +12,19 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 71e7c360d0034d9435386cf31579299c6d047131
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0bb1bce810d87d70e05284e3d13942c5e2e49d07bd2d829c3839f793ae6a061
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118898826"
 ---
-# <a name="signer_file_info-structure"></a>Struktur der Signatur Geber \_ Datei \_
+# <a name="signer_file_info-structure"></a>SIGNER \_ FILE \_ INFO-Struktur
 
-Die **Signatur Geber \_ Datei \_ Info** -Struktur gibt eine zu Signier ender Datei an.
+Die **SIGNER \_ FILE \_ INFO-Struktur** gibt eine zu signierende Datei an.
 
 > [!Note]  
-> Diese Struktur ist nicht in einer Header Datei definiert. Um diese Struktur verwenden zu können, müssen Sie Sie selbst definieren, wie in diesem Thema gezeigt.
+> Diese Struktur ist in einer Headerdatei nicht definiert. Um diese Struktur zu verwenden, müssen Sie sie selbst definieren, wie in diesem Thema gezeigt.
 
  
 
@@ -45,24 +45,24 @@ typedef struct _SIGNER_FILE_INFO {
 
 <dl> <dt>
 
-**CBSIZE**
+**cbSize**
 </dt> <dd>
 
-Die Größe der-Struktur in Bytes.
+Die Größe der -Struktur in Bytes.
 
 </dd> <dt>
 
 **pwszFileName**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen der zu Signier enden Datei enthält.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Namen der zu signierenden Datei enthält.
 
 </dd> <dt>
 
 **hFile**
 </dt> <dd>
 
-Ein geöffnetes Handle für die Datei, die vom **pwszFileName** -Member angegeben wird. Wenn dieser Member ein gültiges Handle enthält, wird dieser Handle für den Zugriff auf die Datei verwendet. Dieser Member kann auf **null** festgelegt werden.
+Ein geöffnetes Handle für die Datei, die vom **pwszFileName-Member angegeben** wird. Wenn dieser Member ein gültiges Handle enthält, wird dieses Handle für den Zugriff auf die Datei verwendet. Dieser Member kann auf NULL **festgelegt werden.**
 
 </dd> </dl>
 
@@ -72,8 +72,8 @@ Ein geöffnetes Handle für die Datei, die vom **pwszFileName** -Member angegebe
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -81,7 +81,7 @@ Ein geöffnetes Handle für die Datei, die vom **pwszFileName** -Member angegebe
 
 <dl> <dt>
 
-[**Betreff- \_ Informationen des Signatur Gebers \_**](signer-subject-info.md)
+[**SIGNER \_ SUBJECT \_ INFO**](signer-subject-info.md)
 </dt> </dl>
 
  

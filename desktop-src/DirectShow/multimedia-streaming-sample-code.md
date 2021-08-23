@@ -1,31 +1,31 @@
 ---
-description: Beispiel Code für Multimedia-Streaming
+description: Beispielcode für Multimediastreaming
 ms.assetid: 3fe2996b-b4de-40ad-bd02-d850a45f3a2c
-title: Beispiel Code für Multimedia-Streaming
+title: Beispielcode für Multimediastreaming
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2035e7d8038adeae19cd847801ec4c23e97485c6
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 1f720aedbfe815902d9ec935e00e6ff3f79bb67ce5129911a1ad73fc1eb3018e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104351679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072954"
 ---
-# <a name="multimedia-streaming-sample-code"></a>Beispiel Code für Multimedia-Streaming
+# <a name="multimedia-streaming-sample-code"></a>Beispielcode für Multimediastreaming
 
 > [!Note]  
-> Diese APIs sind veraltet. Anwendungen sollten den [**Beispiel-Grabber**](sample-grabber-filter.md) Filter verwenden oder einen benutzerdefinierten Filter implementieren, um Daten aus einem DirectShow-Filter Diagramm zu erhalten.
+> Diese APIs sind veraltet. Anwendungen sollten den [**Sample Grabber-Filter**](sample-grabber-filter.md) verwenden oder einen benutzerdefinierten Filter implementieren, um Daten aus einem DirectShow-Filterdiagramm zu erhalten.
 
  
 
-Dieser Artikel enthält Beispielcode, der die multimediastreamingschnittstellen implementiert. Der Video Streaming-Beispielcode veranschaulicht, wie eine Datei gelesen und auf einem primären Microsoft® DirectDraw® Oberfläche dargestellt wird. Aus Gründen der Übersichtlichkeit enthält dieser Code keine Fehlerüberprüfung.
+Dieser Artikel enthält Beispielcode, der die Multimediastreamingschnittstellen implementiert. Der Videostreaming-Beispielcode veranschaulicht, wie Eine Datei gelesen und auf einer primären Microsoft® DirectDraw®oberfläche gerendert wird. Der Kürze nach enthält dieser Code keine Fehlerüberprüfung.
 
-Im zweiten Codebeispiel wird die Verwendung der audiostreamingschnittstellen zum Streamen von Audiodaten veranschaulicht.
+Das zweite Codebeispiel veranschaulicht die Verwendung der Audiostreamingschnittstellen zum Streamen von Audiodaten.
 
 Dieser Artikel enthält folgende Abschnitte.
 
--   [Video Streaming-Beispiel Code](video-streaming-sample-code.md)
--   [Beispiel Code für Audiostreaming](audio-streaming-sample-code.md)
+-   [Beispielcode für Videostreaming](video-streaming-sample-code.md)
+-   [Beispielcode für Audiostreaming](audio-streaming-sample-code.md)
 
  
 

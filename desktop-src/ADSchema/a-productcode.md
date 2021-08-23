@@ -121,7 +121,7 @@ Dieses Attribut enthält einen eindeutigen Bezeichner für eine Anwendung für e
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | Falsch                                                            |
-| Is-Single-Valued       | Richtig                                                             |
+| Ist einwertig       | Richtig                                                             |
 | Ist indiziert             | Falsch                                                            |
 | Im globalen Katalog      | Falsch                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
@@ -142,7 +142,7 @@ Dieses Attribut enthält einen eindeutigen Bezeichner für eine Anwendung für e
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | Falsch                                                            |
-| Is-Single-Valued       | Richtig                                                             |
+| Ist einwertig       | Richtig                                                             |
 | Ist indiziert             | Falsch                                                            |
 | Im globalen Katalog      | Falsch                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
@@ -163,7 +163,7 @@ Dieses Attribut enthält einen eindeutigen Bezeichner für eine Anwendung für e
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | Falsch                                                            |
-| Is-Single-Valued       | Richtig                                                             |
+| Ist einwertig       | Richtig                                                             |
 | Ist indiziert             | Falsch                                                            |
 | Im globalen Katalog      | Falsch                                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                     |

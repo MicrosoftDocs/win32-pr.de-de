@@ -1,19 +1,19 @@
 ---
-title: Iagentnotifysink activateinputstate
-description: Iagentnotifysink activateinputstate
+title: IAgentNotifySink ActivateInputState
+description: IAgentNotifySink ActivateInputState
 ms.assetid: 2476e475-d80c-47e9-bb60-e0fca41becc9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5821f5943bb87f9c19a66125028604fa5d116a7e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 437a2d86ae3d79a51bc2adc3b3d32ee719502087c4c723e2c1778103596b97d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118749582"
 ---
-# <a name="iagentnotifysinkactivateinputstate"></a>Iagentnotifysink:: activateinputstate
+# <a name="iagentnotifysinkactivateinputstate"></a>IAgentNotifySink::ActivateInputState
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT ActivateInputState(
@@ -22,29 +22,29 @@ HRESULT ActivateInputState(
 );                          
 ```
 
-Benachrichtigt eine Client Anwendung, dass sich der aktive Eingabe Zustand eines Zeichens geändert hat.
+Benachrichtigt eine Clientanwendung, dass sich der aktive Eingabezustand eines Zeichens geändert hat.
 
 -   Kein Rückgabewert.
 
 <dl> <dt>
 
-<span id="dwCharID"></span><span id="dwcharid"></span><span id="DWCHARID"></span>*dwcharid*
+<span id="dwCharID"></span><span id="dwcharid"></span><span id="DWCHARID"></span>*dwCharID*
 </dt> <dd>
 
-Der Bezeichner des Zeichens, dessen Eingabe Aktivierungszustand geändert wurde.
+Bezeichner des Zeichens, dessen Eingabeaktivierungsstatus geändert wurde.
 
 </dd> <dt>
 
-<span id="bActivated"></span><span id="bactivated"></span><span id="BACTIVATED"></span>*bactivated*
+<span id="bActivated"></span><span id="bactivated"></span><span id="BACTIVATED"></span>*bActivated*
 </dt> <dd>
 
-Aktives Eingabe-Flag. Dieser boolesche Wert ist **true** , wenn das Zeichen, auf das von *dwcharid* verwiesen wird, aktiv wurde. und **false** , wenn das Zeichen seinen Eingang in den aktiven Zustand verliert.
+Eingabe des aktiven Flags. Dieser boolesche Wert ist **True,** wenn das Zeichen, auf das *von dwCharID* verwiesen wird, eingabeaktiv wird. und **False,** wenn das Zeichen seinen aktiven Eingabezustand verloren hat.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

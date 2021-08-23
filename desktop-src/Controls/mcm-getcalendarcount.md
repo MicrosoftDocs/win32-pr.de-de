@@ -1,9 +1,9 @@
 ---
-title: MCM_GETCALENDARCOUNT Meldung (kommstrg. h)
-description: Ruft die Anzahl der Kalender ab, die momentan im Kalender Steuerelement angezeigt werden. Sie können diese Nachricht explizit oder mit dem monthcal \_ getcalendarcount-Makro senden.
+title: MCM_GETCALENDARCOUNT Meldung (Commctrl.h)
+description: Ruft die Anzahl der Kalender ab, die derzeit im Kalendersteuerelement angezeigt werden. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ GetCalendarCount-Makros senden.
 ms.assetid: b9463f02-d37b-49b0-8387-0938020c23ee
 keywords:
-- Windows-Steuerelemente für MCM_GETCALENDARCOUNT Meldung
+- MCM_GETCALENDARCOUNT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14a3be9e9bcc5db8c1aab32cacbcc2ded82727af
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9379aa8c273451ba53c2a13d6190712212765b46dc1052a08b6d03ae4ae32e61
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104805"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019048"
 ---
-# <a name="mcm_getcalendarcount-message"></a>MCM \_ getcalendarcount-Meldung
+# <a name="mcm_getcalendarcount-message"></a>MCM \_ GETCALENDARCOUNT-Nachricht
 
-Ruft die Anzahl der Kalender ab, die momentan im Kalender Steuerelement angezeigt werden. Sie können diese Nachricht explizit oder mit dem [**monthcal \_ getcalendarcount**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getcalendarcount) -Makro senden.
+Ruft die Anzahl der Kalender ab, die derzeit im Kalendersteuerelement angezeigt werden. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ GetCalendarCount-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getcalendarcount) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,7 +45,7 @@ Muss Null sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Anzahl der derzeit im Kalender Steuerelement angezeigten Kalender. Die maximal zulässige Anzahl zulässiger Kalender ist 12.
+Anzahl von Kalendern, die derzeit im Kalendersteuerelement angezeigt werden. Die maximale Anzahl zulässiger Kalender beträgt 12.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Anzahl der derzeit im Kalender Steuerelement angezeigten Kalender. Die maximal z
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

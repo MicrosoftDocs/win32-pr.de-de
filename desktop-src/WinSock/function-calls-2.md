@@ -1,56 +1,56 @@
 ---
-description: Neue Funktionen wurden mit der Windows Sockets-Schnittstelle eingeführt, die speziell für die Vereinfachung der Windows Sockets-Programmierung konzipiert wurde. Einer der Vorteile dieser neuen Windows Sockets-Funktionen ist die integrierte Unterstützung für IPv6 und IPv4.
+description: Neue Funktionen wurden in die Windows Sockets-Schnittstelle eingeführt, die speziell entwickelt wurde, um Windows Sockets-Programmierung zu vereinfachen. Einer der Vorteile dieser neuen Windows Sockets-Funktionen ist die integrierte Unterstützung für IPv6 und IPv4.
 ms.assetid: 83262f2b-a335-4bbd-b2e3-6c7744b3ee50
 title: Funktionsaufrufe für IPv6-Winsock-Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a56fe5087e17a9a4eb1337ac803b8500b1fe9c27
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 241db1f7e07264fe4f0c776834d17c48cff4780b06e6a42816d36a50fa22cef7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359832"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051668"
 ---
 # <a name="function-calls-for-ipv6-winsock-applications"></a>Funktionsaufrufe für IPv6-Winsock-Anwendungen
 
-Neue Funktionen wurden mit der Windows Sockets-Schnittstelle eingeführt, die speziell für die Vereinfachung der Windows Sockets-Programmierung konzipiert wurde. Einer der Vorteile dieser neuen Windows Sockets-Funktionen ist die integrierte Unterstützung für IPv6 und IPv4.
+Neue Funktionen wurden in die Windows Sockets-Schnittstelle eingeführt, die speziell entwickelt wurde, um Windows Sockets-Programmierung zu vereinfachen. Einer der Vorteile dieser neuen Windows Sockets-Funktionen ist die integrierte Unterstützung für IPv6 und IPv4.
 
 Diese neuen Windows Sockets-Funktionen umfassen Folgendes:
 
 -   [**WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea)
--   [**Wsaconnectbylist**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist)
--   [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) -Funktions Familie (**getaddrinfo**, [**getaddrinfoex**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfoexa), [**getaddrinfow**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfow), [**freaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-freeaddrinfo), [**freaddrinfoex**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-freeaddrinfoex), [**freaddrinfow**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-freeaddrinfow)und [**abstaddrinfoex**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-setaddrinfoexa))
--   [**getnameingefo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo) -Funktions Familie (**getnameingefo** und [**getnameingefow**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfow))
+-   [**WSAConnectByList**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist)
+-   [**getaddrinfo-Funktionsfamilie**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) (**getaddrinfo**, [**GetAddrInfoEx**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfoexa), [**GetAddrInfoW**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfow), [**freeaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-freeaddrinfo), [**FreeAddrInfoEx**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-freeaddrinfoex), [**FreeAddrInfoW**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-freeaddrinfow)und [**SetAddrInfoEx**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-setaddrinfoexa))
+-   [**getnameinfo-Funktionsfamilie**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo) (**getnameinfo** und [**GetNameInfoW**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfow))
 
-Außerdem wurden neue IP-Hilfsfunktionen mit Unterstützung für IPv6 und IPv4 hinzugefügt, um die Windows-Socketprogrammierung zu vereinfachen. Diese neuen IP-Hilfsfunktionen umfassen Folgendes:
+Darüber hinaus wurden neue IP-Hilfsfunktionen mit Unterstützung für IPv6 und IPv4 hinzugefügt, um die Programmierung von Windows Sockets zu vereinfachen. Diese neuen IP-Hilfsfunktionen umfassen Folgendes:
 
--   [**Getadaptersadressen**](/windows/win32/api/iphlpapi/nf-iphlpapi-getadaptersaddresses)
+-   [**GetAdaptersAddresses**](/windows/win32/api/iphlpapi/nf-iphlpapi-getadaptersaddresses)
 
 Beim Hinzufügen von IPv6-Unterstützung zu einer Anwendung sollten die folgenden Richtlinien verwendet werden:
 
--   Verwenden Sie [**WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) , um eine Verbindung mit einem Endpunkt bei Angabe eines Host Namens und-Ports herzustellen. Die **WSAConnectByName** -Funktion ist unter Windows Vista und höher verfügbar.
--   Verwenden Sie [**wsaconnectbylist**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist) , um eine Verbindung mit einer aus einer Sammlung möglicher Endpunkte herzustellen, die durch eine Gruppe von Zieladressen (Hostnamen und Ports) dargestellt werden. Die **wsaconnectbylist** -Funktion ist unter Windows Vista und höher verfügbar.
--   Ersetzen Sie die [**gethostbyname**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname) -Funktionsaufrufe durch Aufrufe einer der neuen Windows Sockets-Funktionen [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) . Die **getaddrinfo** -Funktion mit Unterstützung für das IPv6-Protokoll ist unter Windows XP und höher verfügbar. Das IPv6-Protokoll wird auch unter Windows 2000 unterstützt, wenn die IPv6-Technologievorschau für Windows 2000 installiert ist.
--   Ersetzen Sie die [**gethostbyaddr**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyaddr) -Funktionsaufrufe durch Aufrufe einer der neuen Windows Sockets-Funktionen von [**GetNameInfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo) . Die **getnaminfo** -Funktion mit Unterstützung für das IPv6-Protokoll ist unter Windows XP und höher verfügbar. Das IPv6-Protokoll wird auch unter Windows 2000 unterstützt, wenn die IPv6-Technologievorschau für Windows 2000 installiert ist.
+-   Verwenden Sie [**WSAConnectByName,**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) um eine Verbindung mit einem Endpunkt unter Angabe eines Hostnamens und Ports herzustellen. Die **WSAConnectByName-Funktion** ist auf Windows Vista und höher verfügbar.
+-   Verwenden Sie [**WSAConnectByList,**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist) um eine Verbindung mit einem aus einer Sammlung möglicher Endpunkte herzustellen, die durch einen Satz von Zieladressen (Hostnamen und Ports) dargestellt werden. Die **WSAConnectByList-Funktion** ist auf Windows Vista und höher verfügbar.
+-   Ersetzen Sie [**gethostbyname-Funktionsaufrufe**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname) durch Aufrufe einer der neuen [**getaddrinfo-Windows**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) Sockets-Funktionen. Die **getaddrinfo-Funktion** mit Unterstützung für das IPv6-Protokoll ist auf Windows XP und höher verfügbar. Das IPv6-Protokoll wird auch auf Windows 2000 unterstützt, wenn die IPv6-Technologievorschau für Windows 2000 installiert ist.
+-   Ersetzen Sie [**gethostbyaddr-Funktionsaufrufe**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyaddr) durch Aufrufe einer der neuen [**getnameinfo-Windows**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo) Sockets-Funktionen. Die **getnameinfo-Funktion** mit Unterstützung für das IPv6-Protokoll ist auf Windows XP und höher verfügbar. Das IPv6-Protokoll wird auch auf Windows 2000 unterstützt, wenn die IPv6-Technologievorschau für Windows 2000 installiert ist.
 
 ## <a name="wsaconnectbyname"></a>WSAConnectByName
 
-Die [**WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) -Funktion vereinfacht das Herstellen einer Verbindung mit einem Endpunkt mithilfe eines streambasierten Sockets unter Berücksichtigung des Host Namens oder der IP-Adresse des Ziels (IPv4 oder IPv6). Diese Funktion reduziert den Quellcode, der erforderlich ist, um eine IP-Anwendung zu erstellen, die unabhängig von der verwendeten Version des IP-Protokolls ist. **WSAConnectByName** ersetzt die folgenden Schritte in einer typischen TCP-Anwendung zu einem einzelnen Funktions aufzurufen:
+Die [**WSAConnectByName-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) vereinfacht das Herstellen einer Verbindung mit einem Endpunkt mithilfe eines streambasierten Sockets, wenn der Hostname oder die IP-Adresse des Ziels (IPv4 oder IPv6) angegeben ist. Diese Funktion reduziert den Quellcode, der zum Erstellen einer IP-Anwendung erforderlich ist, die unabhängig von der Version des verwendeten IP-Protokolls ist. **WSAConnectByName** ersetzt die folgenden Schritte in einer typischen TCP-Anwendung durch einen einzelnen Funktionsaufruf:
 
 -   Lösen Sie einen Hostnamen in einen Satz von IP-Adressen auf.
 -   Für jede IP-Adresse:
     -   Erstellen Sie einen Socket der entsprechenden Adressfamilie.
-    -   Versucht, eine Verbindung mit der Remote-IP-Adresse herzustellen. Wenn die Verbindung erfolgreich hergestellt wurde, wird zurückgegeben. Andernfalls wird die nächste Remote-IP-Adresse für den Host ausprobiert.
+    -   Versucht, eine Verbindung mit der Remote-IP-Adresse herzustellen. Wenn die Verbindung erfolgreich war, wird zurückgegeben. andernfalls wird die nächste Remote-IP-Adresse für den Host versucht.
 
-Die [**WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) -Funktion geht über das Auflösen des Namens hinaus und versucht dann, eine Verbindung herzustellen. Die Funktion verwendet alle Remote Adressen, die von der Namensauflösung und allen Quell-IP-Adressen des lokalen Computers zurückgegeben werden. Zuerst wird versucht, die Verbindung mithilfe von Adress Paaren mit der höchsten Erfolgschance herzustellen. Daher stellt **WSAConnectByName** nicht nur sicher, dass nach Möglichkeit eine Verbindung hergestellt wird, sondern auch die Zeit zum Herstellen der Verbindung minimiert wird.
+Die [**WSAConnectByName-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) geht über das auflösen des Namens hinaus und versucht dann, eine Verbindung herzustellen. Die Funktion verwendet alle Remoteadressen, die von der Namensauflösung zurückgegeben werden, und alle Quell-IP-Adressen des lokalen Computers. Zunächst wird versucht, mithilfe von Adresspaaren mit der höchsten Erfolgswahrscheinlichkeit eine Verbindung herzustellen. Daher stellt **WSAConnectByName** nicht nur sicher, dass nach Möglichkeit eine Verbindung hergestellt wird, sondern minimiert auch die Zeit zum Herstellen der Verbindung.
 
-Verwenden Sie die folgende Methode, um sowohl IPv6-als auch IPv4-Kommunikation zu aktivieren:
+Verwenden Sie die folgende Methode, um die IPv6- und IPv4-Kommunikation zu aktivieren:
 
--   Die [**setsockopt**](/windows/desktop/api/winsock/nf-winsock-setsockopt) -Funktion muss für einen Socket aufgerufen werden, der für die inet6-Adressfamilie des AF erstellt wurde \_ , um die **IPv6 \_ V6ONLY** Socket-Option vor dem Aufrufen von [**WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea)zu deaktivieren. Dies wird erreicht, indem die **setsockopt** -Funktion für den Socket aufgerufen wird, wobei der *Level* -Parameter auf **ipproto \_ IPv6** festgelegt ist (siehe [ipproto \_ IPv6-Socketoptionen](ipproto-ipv6-socket-options.md)), der *optname* -Parameter auf **IPv6 \_ V6ONLY** und der *optvalue* -Parameterwert auf NULL festgelegt ist.
+-   Die [**setsockopt-Funktion**](/windows/desktop/api/winsock/nf-winsock-setsockopt) muss für einen Socket aufgerufen werden, der für die AF \_ INET6-Adressfamilie erstellt wurde, um die **IPV6 \_ V6ONLY-Socketoption** zu deaktivieren, bevor [**WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea)aufgerufen wird. Dies wird erreicht, indem die **setsockopt-Funktion** für den Socket aufgerufen wird, wobei der *Levelparameter* auf **IPPROTO \_ IPV6** festgelegt ist (siehe [IPPROTO \_ IPV6 Socket Options),](ipproto-ipv6-socket-options.md)der *optname-Parameter,* der auf **IPV6 \_ V6ONLY** festgelegt ist, und der *optvalue-Parameterwert* auf 0 (null) festgelegt wird.
 
-Wenn eine Anwendung eine Bindung an eine bestimmte lokale Adresse oder einen bestimmten Port herstellen muss, kann [**WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) nicht verwendet werden, da der socketparameter für **WSAConnectByName** ein ungebundener Socket sein muss.
+Wenn eine Anwendung eine Bindung an eine bestimmte lokale Adresse oder einen bestimmten Port herstellen muss, kann [**WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) nicht verwendet werden, da der Socketparameter an **WSAConnectByName** ein ungebundener Socket sein muss.
 
-Das folgende Codebeispiel zeigt nur einige Codezeilen, die erforderlich sind, um diese Funktion zu verwenden, um eine Anwendung zu implementieren, die für die IP-Version agnostisch ist.
+Das folgende Codebeispiel zeigt, dass nur wenige Codezeilen erforderlich sind, um diese Funktion zum Implementieren einer Anwendung zu verwenden, die unabhängig von der IP-Version ist.
 
 Herstellen einer Verbindung mithilfe von [ **WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea)
 
@@ -109,20 +109,20 @@ SOCKET OpenAndConnect(LPWSTR NodeName, LPWSTR PortName)
 
 
 
-## <a name="wsaconnectbylist"></a>Wsaconnectbylist
+## <a name="wsaconnectbylist"></a>WSAConnectByList
 
-Die [**wsaconnectbylist**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist) -Funktion stellt eine Verbindung mit einem Host fest, wenn ein Satz möglicher Hosts vorhanden ist (dargestellt durch einen Satz von Ziel-IP-Adressen und Ports). Die Funktion nimmt alle IP-Adressen und Ports für den Endpunkt und alle IP-Adressen des lokalen Computers an und versucht, eine Verbindung mit allen möglichen Adress Kombinationen herzustellen.
+Die [**WSAConnectByList-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist) stellt eine Verbindung mit einem Host her, wenn eine Reihe möglicher Hosts (dargestellt durch einen Satz von Ziel-IP-Adressen und -Ports) angegeben wird. Die Funktion verwendet alle IP-Adressen und Ports für den Endpunkt und alle IP-Adressen des lokalen Computers und versucht, eine Verbindung mit allen möglichen Adresskombinationen herzustellen.
 
-[**Wsaconnectbylist**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist) ist mit der [**WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) -Funktion verknüpft. Anstatt einen einzelnen Hostnamen zu verwenden, akzeptiert **wsaconnectbylist** eine Liste von Hosts (Zieladressen und Port Paare) und stellt eine Verbindung mit einer der Adressen und Ports in der angegebenen Liste her. Diese Funktion ist für die Unterstützung von Szenarien konzipiert, in denen eine Anwendung eine Verbindung mit einem beliebigen verfügbaren Host aus einer Liste potenzieller Hosts herstellen muss.
+[**WSAConnectByList**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist) bezieht sich auf die [**WSAConnectByName-Funktion.**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) Anstatt einen einzelnen Hostnamen zu verwenden, akzeptiert **WSAConnectByList** eine Liste von Hosts (Zieladressen und Portpaare) und stellt eine Verbindung mit einer der Adressen und Ports in der bereitgestellten Liste her. Diese Funktion wurde entwickelt, um Szenarien zu unterstützen, in denen eine Anwendung eine Verbindung mit einem beliebigen verfügbaren Host aus einer Liste potenzieller Hosts herstellen muss.
 
-Ähnlich wie [**WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea)reduziert die [**wsaconnectbylist**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist) -Funktion den Quellcode, der zum Erstellen, binden und Verbinden eines Sockets erforderlich ist, erheblich. Diese Funktion vereinfacht die Implementierung einer Anwendung, die mit der IP-Version agnostisch ist. Die Liste der Adressen eines Hosts, der von dieser Funktion akzeptiert wird, ist möglicherweise IPv6-oder IPv4-Adressen.
+Ähnlich wie [**bei WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea)reduziert die [**WSAConnectByList-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist) den Quellcode, der zum Erstellen, Binden und Verbinden eines Sockets erforderlich ist, erheblich. Diese Funktion erleichtert die Implementierung einer Anwendung, die unabhängig von der IP-Version ist. Die Liste der Adressen für einen Host, der von dieser Funktion akzeptiert wird, kann IPv6- oder IPv4-Adressen sein.
 
-Die folgenden Schritte müssen ausgeführt werden, bevor die-Funktion aufgerufen wird, damit IPv6-und IPv4-Adressen in der von der Funktion akzeptierten einzelnen Adressliste übermittelt werden können:
+Damit sowohl IPv6- als auch IPv4-Adressen in der einzelnen Adressliste übergeben werden können, die von der Funktion akzeptiert wird, müssen vor dem Aufrufen der Funktion die folgenden Schritte ausgeführt werden:
 
--   Die [**setsockopt**](/windows/desktop/api/winsock/nf-winsock-setsockopt) -Funktion muss für einen Socket aufgerufen werden, der für die inet6-Adressfamilie des AF erstellt wurde \_ , um die **IPv6 \_ V6ONLY** Socket-Option vor dem Aufrufen von [**wsaconnectbylist**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist)zu deaktivieren. Dies wird erreicht, indem die **setsockopt** -Funktion für den Socket aufgerufen wird, wobei der *Level* -Parameter auf **ipproto \_ IPv6** festgelegt ist (siehe [ipproto \_ IPv6-Socketoptionen](ipproto-ipv6-socket-options.md)), der *optname* -Parameter auf **IPv6 \_ V6ONLY** und der *optvalue* -Parameterwert auf NULL festgelegt ist.
--   Alle IPv4-Adressen müssen im IPv4-zugeordneten IPv6-Adressformat dargestellt werden, das einer reinen IPv6-Anwendung die Kommunikation mit einem IPv4-Knoten ermöglicht. Das IPv4-zugeordnete IPv6-Adressformat ermöglicht die Darstellung der IPv4-Adresse eines IPv4-Knotens als IPv6-Adresse. Die IPv4-Adresse wird in die 32 Bits der IPv6-Adresse mit niedriger Reihenfolge codiert, und die höherwertigen 96 Bits enthalten das feste Präfix 0:0: 0:0: 0: FFFF. Das IPv4-zugeordnete IPv6-Adressformat wird in RFC 4291 angegeben. Weitere Informationen finden Sie unter [www.ietf.org/RFC/rfc4291.txt](https://tools.ietf.org/html/rfc4291). Das IN6ADDR \_ SETV4MAPPED-Makro in *MSTCPIP. h* kann verwendet werden, um eine IPv4-Adresse in das erforderliche IPv4-zugeordnete IPv6-Adressformat zu konvertieren.
+-   Die [**Setsockopt-Funktion**](/windows/desktop/api/winsock/nf-winsock-setsockopt) muss für einen Socket aufgerufen werden, der für die AF \_ INET6-Adressfamilie erstellt wurde, um die **IPV6 \_ V6ONLY-Socketoption** zu deaktivieren, bevor [**WSAConnectByList**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist)aufgerufen wird. Dies wird erreicht, indem die **setsockopt-Funktion** für den Socket aufgerufen wird, wobei der *Levelparameter* auf **IPPROTO \_ IPV6** festgelegt ist (siehe [IPPROTO \_ IPV6 Socket Options),](ipproto-ipv6-socket-options.md)der *optname-Parameter,* der auf **IPV6 \_ V6ONLY** festgelegt ist, und der *optvalue-Parameterwert* auf 0 (null) festgelegt wird.
+-   Alle IPv4-Adressen müssen im IPv4-zugeordneten IPv6-Adressformat dargestellt werden, wodurch eine IPv6-Anwendung nur mit einem IPv4-Knoten kommunizieren kann. Das IPv4-zugeordnete IPv6-Adressformat ermöglicht die Darstellung der IPv4-Adresse eines IPv4-Knotens als IPv6-Adresse. Die IPv4-Adresse wird in die 32 Bits der IPv6-Adresse mit niedriger Ordnung codiert, und die 96 Bits mit hoher Ordnung enthalten das feste Präfix 0:0:0:0:0:FFFF. Das IPv4-zugeordnete IPv6-Adressformat wird in RFC 4291 angegeben. Weitere Informationen finden Sie unter [www.ietf.org/rfc/rfc4291.txt](https://tools.ietf.org/html/rfc4291). Das IN6ADDR \_ SETV4MAPPED-Makro in *Mstcpip.h* kann verwendet werden, um eine IPv4-Adresse in das erforderliche IPv4-zugeordnete IPv6-Adressformat zu konvertieren.
 
-Herstellen einer Verbindung mithilfe von [ **wsaconnectbylist**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist)
+Herstellen einer Verbindung mit [ **WSAConnectByList**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist)
 
 
 ```C++
@@ -183,9 +183,9 @@ SOCKET OpenAndConnect(SOCKET_ADDRESS_LIST *AddressList)
 
 ## <a name="getaddrinfo"></a>getaddrinfo
 
-Die **getaddrinfo** -Funktion führt auch die Verarbeitungs Arbeit vieler Funktionen aus. Zuvor waren Aufrufe an eine Reihe von Windows Sockets-Funktionen erforderlich, um eine Adresse zu erstellen, zu öffnen und anschließend an einen Socket zu binden. Mit der **getaddrinfo** -Funktion können die Zeilen des Quellcodes, die für diese Arbeit erforderlich sind, erheblich reduziert werden. Die folgenden beiden Beispiele veranschaulichen den Quellcode, der zum Ausführen dieser Aufgaben mit und ohne die **getaddrinfo** -Funktion erforderlich ist.
+Die **getaddrinfo-Funktion** führt auch die Verarbeitung vieler Funktionen aus. Zuvor waren Aufrufe einer Reihe von Windows Sockets-Funktionen erforderlich, um eine Adresse zu erstellen, zu öffnen und dann an einen Socket zu binden. Mit der **getaddrinfo-Funktion** können die Quellcodezeilen, die für solche Aufgaben erforderlich sind, erheblich reduziert werden. Die folgenden beiden Beispiele veranschaulichen den Quellcode, der zum Ausführen dieser Aufgaben mit und ohne die **getaddrinfo-Funktion** erforderlich ist.
 
-Ausführen eines öffnenden, verbinden und Binden mithilfe von **getaddrinfo**
+Ausführen einer Open-, Verbinden- und Bind-Datei mit **getaddrinfo**
 
 
 ```C++
@@ -229,7 +229,7 @@ SOCKET OpenAndConnect(char *ServerName, char *PortName, int SocketType)
 
 
 
-Ausführen eines geöffneten, verbinden und binden ohne Verwendung von **getaddrinfo**
+Ausführen eines Öffnens, Verbinden und Bindens ohne Verwendung von **getaddrinfo**
 
 
 ```C++
@@ -284,20 +284,20 @@ SOCKET OpenAndConnect(char *ServerName, unsigned short Port, int SocketType)
 
 
 
-Beachten Sie, dass beide Quell Codebeispiele dieselben Aufgaben ausführen, das erste Beispiel, bei dem die **getaddrinfo** -Funktion verwendet wird, jedoch weniger Zeilen von Quellcode erfordert und entweder IPv6-oder IPv4-Adressen verarbeiten kann. Die Anzahl der Zeilen des Quellcodes, die mit der **getaddrinfo** -Funktion eliminiert werden, variiert.
+Beachten Sie, dass beide Quellcodebeispiele die gleichen Aufgaben ausführen, aber das erste Beispiel mit der **getaddrinfo-Funktion** erfordert weniger Quellcodezeilen und kann entweder IPv6- oder IPv4-Adressen verarbeiten. Die Anzahl der Quellcodezeilen, die mithilfe der **getaddrinfo-Funktion** entfernt werden, variiert.
 
 > [!Note]  
-> In der Produktionsquelle durchläuft Ihre Anwendung den Satz von Adressen, die von der [**gethostbyname**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname) -Funktion oder der [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) -Funktion zurückgegeben werden. In diesen Beispielen wird dieser Schritt aus Gründen der Einfachheit ausgelassen.
+> Im Quellcode der Produktion durch würde Ihre Anwendung den Satz von Adressen durchlaufen, die von der [**gethostbyname-**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname) oder [**getaddrinfo-Funktion**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) zurückgegeben werden. In diesen Beispielen wird dieser Schritt zugunsten der Einfachheit weggelassen.
 
  
 
-Ein weiteres Problem, das beim Ändern einer vorhandenen IPv4-Anwendung zur Unterstützung von IPv6 behandelt werden muss, ist der Reihenfolge zugeordnet, in der Funktionen aufgerufen werden. Sowohl " [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) " als auch " [**gethostbyname**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname) " erfordern, dass eine Abfolge von Funktionsaufrufen in einer bestimmten Reihenfolge durchgeführt wird.
+Ein weiteres Problem, das Sie beim Ändern einer vorhandenen IPv4-Anwendung zur Unterstützung von IPv6 beheben müssen, ist der Reihenfolge zugeordnet, in der Funktionen aufgerufen werden. Sowohl [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) als [**auch gethostbyname**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname) erfordern, dass eine Sequenz von Funktionsaufrufen in einer bestimmten Reihenfolge erfolgt.
 
-Auf Plattformen, auf denen sowohl IPv4 als auch IPv6 verwendet werden, ist die Adressfamilie des Remote Host Namens nicht vor der Zeit bekannt. Daher muss die Adress Auflösung mit der [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) -Funktion zuerst ausgeführt werden, um die IP-Adresse und die Adressfamilie des Remote Hosts zu ermitteln. Anschließend kann die [**Socket**](/windows/desktop/api/Winsock2/nf-winsock2-socket) -Funktion aufgerufen werden, um einen Socket der von [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo)zurückgegebenen Adressfamilie zu öffnen. Dies ist eine wichtige Änderung in der Art und Weise, wie Windows Sockets-Anwendungen geschrieben werden, da viele IPv4-Anwendungen tendenziell eine andere Reihenfolge von Funktionsaufrufen verwenden.
+Auf Plattformen, auf denen sowohl IPv4 als auch IPv6 verwendet werden, ist die Adressfamilie des Remotehostnamens im Voraus nicht bekannt. Daher muss die Adressauflösung mithilfe der [**getaddrinfo-Funktion**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) zuerst ausgeführt werden, um die IP-Adresse und die Adressfamilie des Remotehosts zu bestimmen. Anschließend kann die [**Socketfunktion**](/windows/desktop/api/Winsock2/nf-winsock2-socket) aufgerufen werden, um einen Socket der Adressfamilie zu öffnen, die von [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo)zurückgegeben wird. Dies ist eine wichtige Änderung beim Schreiben Windows Sockets-Anwendungen, da viele IPv4-Anwendungen in der Regel eine andere Reihenfolge von Funktionsaufrufen verwenden.
 
-Die meisten IPv4-Anwendungen erstellen zuerst einen Socket für die AF \_ -Adressfamilie "AF" und führen dann eine Namensauflösung durch und verwenden dann den Socket, um eine Verbindung mit der aufgelösten IP-Adresse herzustellen. Wenn solche Anwendungen IPv6-fähig sind, muss der [**Socket**](/windows/desktop/api/Winsock2/nf-winsock2-socket) -Funktions Aufrufvorgang bis nach der Namensauflösung verzögert werden, wenn die Adressfamilie determiniert wurde. Beachten Sie Folgendes: Wenn die Namensauflösung IPv4-und IPv6-Adressen zurückgibt, müssen separate IPv4-und IPv6-Sockets verwendet werden, um eine Verbindung mit diesen Zieladressen herzustellen. Alle diese Komplexitäten können mithilfe der [**WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) -Funktion unter Windows Vista und höher vermieden werden, sodass Anwendungsentwicklern empfohlen wird, diese neue Funktion zu verwenden.
+Die meisten IPv4-Anwendungen erstellen zunächst einen Socket für die AF \_ INET-Adressfamilie, erstellen dann die Namensauflösung und verwenden dann den Socket, um eine Verbindung mit der aufgelösten IP-Adresse herzustellen. Wenn solche Anwendungen IPv6-fähig [](/windows/desktop/api/Winsock2/nf-winsock2-socket) sind, muss der Socketfunktionsaufruf bis nach der Namensauflösung verzögert werden, wenn die Adressfamilie abgeschreckt wurde. Beachten Sie Folgendes: Wenn die Namensauflösung sowohl IPv4- als auch IPv6-Adressen zurückgibt, müssen separate IPv4- und IPv6-Sockets verwendet werden, um eine Verbindung mit diesen Zieladressen herzustellen. All diese Komplexitäten lassen sich vermeiden, indem Sie die [**WSAConnectByName-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) auf Windows Vista und höher verwenden, sodass Anwendungsentwicklern empfohlen wird, diese neue Funktion zu verwenden.
 
-Im folgenden Codebeispiel wird die richtige Reihenfolge für die erstmalige Namensauflösung (in der vierten Zeile im folgenden Quell Codebeispiel) veranschaulicht. Anschließend wird ein Socket geöffnet (der in der 19<sup>.</sup> Zeile im folgenden Codebeispiel ausgeführt wird). Dieses Beispiel ist ein Auszug aus der Datei "Client. c", die sich im [IPv6-fähigen Client Code](ipv6-enabled-client-code-2.md) in Anhang B befindet. Die Funktion "Printerror", die im folgenden Codebeispiel aufgerufen wird, wird im Beispiel "Client. c" aufgeführt.
+Das folgende Codebeispiel zeigt die richtige Sequenz für die Durchführung der Namensauflösung (in der vierten Zeile im folgenden<sup></sup> Quellcodebeispiel), dann das Öffnen eines Sockets (ausgeführt in der 19. Zeile im folgenden Codebeispiel). Dieses Beispiel ist ein Auszug aus der Datei Client.c im [IPv6-fähigen Clientcode](ipv6-enabled-client-code-2.md) in Anhang B. Die PrintError-Funktion, die im folgenden Codebeispiel aufgerufen wird, ist im Client.c-Beispiel aufgeführt.
 
 
 ```C++
@@ -381,13 +381,13 @@ SOCKET OpenAndConnect(char *Server, char *PortName, int Family, int SocketType)
 
 ## <a name="ip-helper-functions"></a>Funktionen des IP-Hilfsprogramms
 
-Und schließlich müssen Anwendungen, die die IP-Hilfsfunktion [**getadaptersinfo**](/windows/win32/api/iphlpapi/nf-iphlpapi-getadaptersinfo)verwenden, und die zugehörigen Struktur [**-IP- \_ Adapter \_ Informationen**](/windows/win32/api/iptypes/ns-iptypes-ip_adapter_info)erkennen, dass diese Funktion und Struktur auf IPv4-Adressen beschränkt sind. IPv6-fähige Ersetzungen für diese Funktion und Struktur sind die Funktion " [**getadaptersadressen**](/windows/win32/api/iphlpapi/nf-iphlpapi-getadaptersaddresses) " und die [**IP- \_ Adapter \_ adressierte**](/windows/win32/api/iptypes/ns-iptypes-ip_adapter_addresses_lh) Struktur. IPv6-fähige Anwendungen, die die IP-hilfsprogrammapi verwenden, sollten die Funktion **getadaptersadressen** und die zugehörige Struktur IPv6-fähiger **IP- \_ Adapter \_ Adressen** verwenden, die beide im Microsoft Windows Software Development Kit (SDK) definiert sind.
+Schließlich müssen Anwendungen, die die IP-Hilfsfunktion [**GetAdaptersInfo**](/windows/win32/api/iphlpapi/nf-iphlpapi-getadaptersinfo)und die zugehörige Struktur [**IP ADAPTER \_ \_ INFO**](/windows/win32/api/iptypes/ns-iptypes-ip_adapter_info)verwenden, erkennen, dass diese Funktion und Struktur auf IPv4-Adressen beschränkt sind. IPv6-fähige Ersetzungen für diese Funktion und Struktur sind die [**GetAdaptersAddresses-Funktion**](/windows/win32/api/iphlpapi/nf-iphlpapi-getadaptersaddresses) und die [**\_ IP-Adapteradressenstruktur. \_**](/windows/win32/api/iptypes/ns-iptypes-ip_adapter_addresses_lh) IPv6-fähige Anwendungen, die die IP-Hilfs-API verwenden, sollten die **GetAdaptersAddresses-Funktion** und die entsprechende IPv6-fähige **\_ IP-ADAPTERADRESSEnstruktur \_** verwenden, die beide im Microsoft Windows Software Development Kit (SDK) definiert sind.
 
 ## <a name="recommendations"></a>Empfehlungen
 
-Der beste Ansatz, um sicherzustellen, dass Ihre Anwendung IPv6-kompatible Funktionsaufrufe verwendet, ist die Verwendung der [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) -Funktion zum Abrufen von Host-zu-Adresse-Übersetzungen. Ab Windows XP macht die Funktion " **getaddrinfo** " die Funktion " [**gethostbyname**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname) " unnötig, und die Anwendung sollte daher stattdessen die Funktion " **getaddrinfo** " für zukünftige Programmier Projekte verwenden. Microsoft unterstützt zwar weiterhin " **gethostbyname**", diese Funktion wird jedoch nicht für die Unterstützung von IPv6 erweitert. Um eine transparente Unterstützung für das Abrufen von IPv6-und IPv4-Hostinformationen zu erhalten, müssen Sie **getaddrinfo** verwenden.
+Der beste Ansatz, um sicherzustellen, dass Ihre Anwendung IPv6-kompatible Funktionsaufrufe verwendet, ist die Verwendung der [**getaddrinfo-Funktion**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) zum Abrufen der Host-zu-Adresse-Übersetzung. Ab Windows XP macht die **getaddrinfo-Funktion** die [**gethostbyname-Funktion**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname) überflüssig, und Ihre Anwendung sollte daher stattdessen die **getaddrinfo-Funktion** für zukünftige Programmierprojekte verwenden. Während Microsoft weiterhin **gethostbyname** unterstützt, wird diese Funktion nicht erweitert, um IPv6 zu unterstützen. Zur transparenten Unterstützung des Abrufens von IPv6- und IPv4-Hostinformationen müssen Sie **getaddrinfo** verwenden.
 
-Im folgenden Beispiel wird gezeigt, wie die **getaddrinfo** -Funktion am besten verwendet werden kann. Beachten Sie, dass die-Funktion bei ordnungsgemäßer Verwendung wie in diesem Beispiel sowohl IPv6-als auch IPv4-Host-zu-Adresse-Übersetzung ordnungsgemäß verarbeitet, aber auch weitere nützliche Informationen über den Host erhält, z. b. den Typ der unterstützten Sockets. Dieses Beispiel ist ein Auszug aus dem Beispiel "Client. c" in Anhang B.
+Das folgende Beispiel zeigt, wie Die **getaddrinfo-Funktion** am besten verwendet werden kann. Beachten Sie, dass die Funktion bei ordnungsgemäßer Verwendung, wie in diesem Beispiel veranschaulicht, sowohl die IPv6- als auch die IPv4-Host-zu-Adresse-Übersetzung ordnungsgemäß verarbeitet, aber auch andere nützliche Informationen zum Host erhält, z. B. den Typ der unterstützten Sockets. Dieses Beispiel ist ein Auszug aus dem Client.c-Beispiel aus Anhang B.
 
 
 ```C++
@@ -437,49 +437,49 @@ int ResolveName(char *Server, char *PortName, int Family, int SocketType)
 
 
 > [!Note]  
-> Die Version der [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) -Funktion, die IPv6 unterstützt, ist neu in der Windows XP-Version von Windows.
+> Die Version der [**getaddrinfo-Funktion,**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) die IPv6 unterstützt, ist für die Windows XP-Version von Windows neu.
 
  
 
-Zu Vermeider Code
+Zu vermeidende Code
 
-Die Host Adressübersetzung wurde bisher mithilfe der [**gethostbyname**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname) -Funktion erreicht. Ab Windows XP:
+Die Hostadressenübersetzung wurde bisher mithilfe der [**gethostbyname-Funktion**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname) erreicht. Ab Windows XP:
 
--   Die Funktion " **getaddrinfo** " macht die Funktion " **gethostbyname** " veraltet.
--   Ihre Anwendungen sollten die **getaddrinfo** -Funktion anstelle der **gethostbyname** -Funktion verwenden.
+-   Die **getaddrinfo-Funktion** macht die **gethostbyname-Funktion** veraltet.
+-   Ihre Anwendungen sollten die **getaddrinfo-Funktion** anstelle der **gethostbyname-Funktion** verwenden.
 
-Codierungs Aufgaben
+Programmieraufgaben
 
 **So ändern Sie eine vorhandene IPv4-Anwendung, um Unterstützung für IPv6 hinzuzufügen**
 
-1.  Erwerben Sie das Checkv4.exe-Hilfsprogramm. Dieses Hilfsprogramm wird als Teil des Windows SDK installiert. Der Windows SDK ist über ein MSDN-Abonnement verfügbar und kann auch von der Microsoft-Website heruntergeladen werden ( https://msdn.microsoft.com) . Eine ältere Version des *Checkv4.exe* Tools ist auch als Teil der Microsoft IPv6-Technologievorschau für Windows 2000 enthalten.
-2.  Führen Sie das *Checkv4.exe* -Hilfsprogramm für den Code aus. Weitere Informationen zum Ausführen des Versions Dienstprogramms für Ihre Dateien finden Sie unter [Verwenden des Checkv4.exe Hilfsprogramms](using-the-checkv4-exe-utility-2.md) .
-3.  Das Hilfsprogramm warnt Sie bei der Verwendung von [**gethostbyname**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname), [**gethostbyaddr**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyaddr)und anderen reinen IPv4-Funktionen und bietet Empfehlungen darüber, wie Sie diese durch die IPv6-kompatible Funktion wie [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) und [**GetNameInfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo)ersetzen können.
-4.  Ersetzen Sie alle Instanzen der **gethostbyname** -Funktion und den zugehörigen Code nach Bedarf mit der **getaddrinfo** -Funktion. Verwenden Sie unter Windows Vista die [**WSAConnectByName**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) -oder [**wsaconnectbylist**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist) -Funktion, wenn dies angebracht ist.
-5.  Ersetzen Sie alle Instanzen der [**gethostbyaddr**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyaddr) -Funktion und den zugehörigen Code nach Bedarf mit der [**GetNameInfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo) -Funktion.
+1.  Erwerben Sie das Checkv4.exe Hilfsprogramm. Dieses Hilfsprogramm wird als Teil des Windows SDK installiert. Das Windows SDK ist über ein MSDN-Abonnement verfügbar und kann auch von der Microsoft-Website ( heruntergeladen https://msdn.microsoft.com) werden. Eine ältere Version des *Checkv4.exe-Tools* war auch als Teil der Microsoft IPv6 Technology Preview für Windows 2000 enthalten.
+2.  Führen Sie *Checkv4.exe* Hilfsprogramm für Ihren Code aus. Unter [Verwenden des Checkv4.exe-Hilfsprogramms](using-the-checkv4-exe-utility-2.md) erfahren Sie, wie Sie das Versions-Hilfsprogramm für Ihre Dateien ausführen.
+3.  Das Hilfsprogramm warnt Sie vor der Verwendung der Funktionen [**gethostbyname,**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyname) [**gethostbyaddr**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyaddr)und anderer nur IPv4-ender Funktionen und bietet Empfehlungen dazu, wie sie durch die IPv6-kompatible Funktion ersetzt werden, z. B. [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) und [**getnameinfo.**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo)
+4.  Ersetzen Sie alle Instanzen der **gethostbyname-Funktion** und den zugehörigen Code entsprechend durch die **getaddrinfo-Funktion.** Verwenden Windows Vista die [**WSAConnectByName-**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbynamea) oder [**WSAConnectByList-Funktion,**](/windows/desktop/api/Winsock2/nf-winsock2-wsaconnectbylist) falls zutreffend.
+5.  Ersetzen Sie alle Instanzen der [**gethostbyaddr-Funktion**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyaddr) und den zugehörigen Code entsprechend durch die [**getnameinfo-Funktion.**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo)
 
-Alternativ dazu können Sie Ihre Codebasis nach Instanzen der Funktionen " **gethostbyname** " und " [**gethostbyaddr**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyaddr) " Durchsuchen und die gesamte Verwendung (und ggf. einen anderen zugeordneten Code) in die Funktionen " **getaddrinfo** " und " [**GetNameInfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo) " ändern.
+Alternativ können Sie Ihre Codebasis nach Instanzen der **Funktionen gethostbyname** und [**gethostbyaddr**](/windows/win32/api/wsipv6ok/nf-wsipv6ok-gethostbyaddr) durchsuchen und diese Nutzung (und gegebenenfalls anderen zugehörigen Code) in die Funktionen **getaddrinfo** und [**getnameinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getnameinfo) ändern.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[IPv6-Handbuch für Windows Sockets-Anwendungen](ipv6-guide-for-windows-sockets-applications-2.md)
+[IPv6-Leitfaden für Windows Sockets-Anwendungen](ipv6-guide-for-windows-sockets-applications-2.md)
 </dt> <dt>
 
-[Ändern von Datenstrukturen für IPv6-Winsock-Appications](changing-data-structures-2.md)
+[Ändern von Datenstrukturen für IPv6 Winsock-Appications](changing-data-structures-2.md)
 </dt> <dt>
 
 [Dual-Stack-Sockets für IPv6-Winsock-Anwendungen](dual-stack-sockets.md)
 </dt> <dt>
 
-[Verwendung von hart codierten IPv4-Adressen](use-of-hardcoded-ipv4-addresses-2.md)
+[Verwenden von hartcodierten IPv4-Adressen](use-of-hardcoded-ipv4-addresses-2.md)
 </dt> <dt>
 
-[Probleme mit der Benutzeroberfläche für IPv6-Winsock-Anwendungen](user-interface-issues-2.md)
+[Benutzeroberfläche von IPv6-Winsock-Anwendungen](user-interface-issues-2.md)
 </dt> <dt>
 
-[Zugrunde liegende Protokolle für IPv6-Winsock-Anwendungen](underlying-protocols-2.md)
+[Zugrunde liegende Protokolle für IPv6 Winsock-Anwendungen](underlying-protocols-2.md)
 </dt> </dl>
 
  

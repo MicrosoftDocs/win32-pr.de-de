@@ -1,23 +1,23 @@
 ---
-description: Eine Übersetzung Fügt einer oder mehreren der vier Farbkomponenten einen Wert hinzu. Die Farbmatrix Einträge, die Übersetzungen darstellen, werden in der folgenden Tabelle angegeben.
+description: Eine Übersetzung fügt einer oder mehrere der vier Farbkomponenten einen Wert hinzu. Die Farbmatrixeinträge, die Übersetzungen darstellen, sind in der folgenden Tabelle angegeben.
 ms.assetid: a0d89989-9b98-42fb-8d87-206581e3c91e
 title: Übersetzen von Farben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c769a24c02e977c3e32ff913852d4b6b8d54441
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 608a0653423d854e6d77bd624949f24ec03cce6c4ed063d4c740dd142b1dfb3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104567896"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119036338"
 ---
 # <a name="translating-colors"></a>Übersetzen von Farben
 
-Eine Übersetzung Fügt einer oder mehreren der vier Farbkomponenten einen Wert hinzu. Die Farbmatrix Einträge, die Übersetzungen darstellen, werden in der folgenden Tabelle angegeben.
+Eine Übersetzung fügt einer oder mehrere der vier Farbkomponenten einen Wert hinzu. Die Farbmatrixeinträge, die Übersetzungen darstellen, sind in der folgenden Tabelle angegeben.
 
 
 
-| Zu über setzende Komponente | Matrix Eintrag |
+| Zu übersetzende Komponente | Matrixeintrag |
 |----------------------------|--------------|
 | Red                        | \[4 \] \[ 0\]   |
 | Grün                      | \[4 \] \[ 1\]   |
@@ -28,7 +28,7 @@ Eine Übersetzung Fügt einer oder mehreren der vier Farbkomponenten einen Wert 
 
  
 
-Im folgenden Beispiel wird ein [**Image**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) -Objekt aus dem Datei ColorBars.bmp erstellt. Anschließend fügt der Code der roten Komponente jedes Pixels im Bild 0,75 hinzu. Das ursprüngliche Bild wird neben dem transformierten Bild gezeichnet.
+Im folgenden Beispiel wird ein [**Image-Objekt aus**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) der Datei ColorBars.bmp. Anschließend fügt der Code der roten Komponente jedes Pixels im Bild 0,75 hinzu. Das ursprüngliche Bild wird neben dem transformierten Bild gezeichnet.
 
 
 ```
@@ -63,20 +63,20 @@ graphics.DrawImage(
 
 
 
-Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und das transformierte Bild auf der rechten Seite.
+Die folgende Abbildung zeigt das ursprüngliche Bild links und das transformierte Bild auf der rechten Seite.
 
-![die Abbildung zeigt vierfarbige Balken, dann die gleichen Balken mit unterschiedlichen Farben.](images/colortrans2.png)
+![Abbildung mit vier farbigen Balken und denselben Balken mit unterschiedlichen Farben](images/colortrans2.png)
 
-In der folgenden Tabelle sind die Farb Vektoren für die vier Balken vor und nach der roten Übersetzung aufgelistet. Beachten Sie, dass die rote Komponente in der zweiten Zeile nicht geändert wird, da der Höchstwert für eine Farbkomponente 1 ist. (Auf ähnliche Weise ist der minimale Wert für eine Farbkomponente 0.)
+In der folgenden Tabelle sind die Farbvektoren für die vier Balken vor und nach der roten Übersetzung aufgeführt. Beachten Sie, dass sich die rote Komponente in der zweiten Zeile nicht ändert, da der Höchstwert für eine Farbkomponente 1 ist. (Entsprechend ist der Mindestwert für eine Farbkomponente 0.)
 
 
 
 | Ursprünglich           | Übersetzt      |
 |--------------------|-----------------|
-| Schwarz (0,0 (0, 0, 1) | (0.75, 0, 0, 1) |
+| Schwarz (0, 0, 0, 1) | (0.75, 0, 0, 1) |
 | Rot (1, 0, 0, 1)   | (1, 0, 0, 1)    |
 | Grün (0, 1, 0, 1) | (0.75, 1, 0, 1) |
-| Blau (0,0 (0, 1, 1)  | (0.75, 0, 1, 1) |
+| Blau (0, 0, 1, 1)  | (0.75, 0, 1, 1) |
 
 
 

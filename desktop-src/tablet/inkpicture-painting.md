@@ -1,19 +1,19 @@
 ---
-description: Tritt ein, bevor das InkPicture-Steuerelement sich selbst neu zeichnet.
+description: Tritt ein, bevor das InkPicture-Steuerelement sich selbst neu gedrammt.
 ms.assetid: 97d017ce-fdab-49e5-9ea6-0bcc5d7b14fb
-title: InkPicture. Paint-Ereignis (msink AUT. h)
+title: InkPicture.Painting-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3dc76bbf3079d61c84ac14d1b22690d645a7cce4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0129e5f74ee8097794112b70fb709ab9b9a3b8fadc9f3e5a2fd7d874c65c0d22
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966969"
 ---
-# <a name="inkpicturepainting-event"></a>InkPicture. Paint-Ereignis
+# <a name="inkpicturepainting-event"></a>InkPicture.Painting-Ereignis
 
-Tritt ein, bevor das [InkPicture](inkpicture-control-reference.md) -Steuerelement sich selbst neu zeichnet.
+Tritt ein, bevor das [InkPicture-Steuerelement](inkpicture-control-reference.md) sich selbst neu gedrammt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,24 +32,24 @@ void Painting(
 
 <dl> <dt>
 
-*hdc* \[ in\]
+*hDC* \[ In\]
 </dt> <dd>
 
-Der Gerätekontext, auf dem gezeichnet werden soll.
+Der Gerätekontext, in dem das Malen erfolgt.
 
 </dd> <dt>
 
-*Rect* \[ in\]
+*Rect* \[ In\]
 </dt> <dd>
 
-Das frei zuzeichnende frei Hand Rechteck.
+Das Ink-Rechteck, das neu gepaint werden soll.
 
 </dd> <dt>
 
 *Zulassen* \[ in, out\]
 </dt> <dd>
 
-Gibt an, ob der Repaint-Vorgang ausgeführt wird.
+Gibt an, ob der Neupaint auftritt.
 
 </dd> </dl>
 
@@ -57,9 +57,9 @@ Gibt an, ob der Repaint-Vorgang ausgeführt wird.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in den Dispatch-only-Schnittstellen **\_ iinkoverlayevents** und **\_ iinkpictureevents** (Dispinterfaces) mit der ID DISPID \_ ioepaint definiert.
+Diese Ereignismethode wird in den dispatch-only-Schnittstellen (dispinterfaces) **\_ von IInkOverlayEvents** und **\_ IInkPictureEvents** mit der ID DISPID \_ IOEPainting definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,9 +67,9 @@ Diese Ereignismethode wird in den Dispatch-only-Schnittstellen **\_ iinkoverlaye
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
@@ -78,7 +78,7 @@ Diese Ereignismethode wird in den Dispatch-only-Schnittstellen **\_ iinkoverlaye
 
 <dl> <dt>
 
-[InkPicture](inkpicture-control-reference.md)
+[Inkpicture](inkpicture-control-reference.md)
 </dt> </dl>
 
  

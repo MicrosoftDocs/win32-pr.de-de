@@ -1,19 +1,19 @@
 ---
-description: Die iazbizruleparameters-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IAzBizRuleParameters-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: BAACA890-DC15-4EDD-89ED-20076D7FBCAD
-title: Iazbizruleparameters-Methoden
+title: IAzBizRuleParameters-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bfae3232696830c382d4abaa624ea4ba3b3ee64a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d48b8d7999b0422052bc6c989438f182a6d175ed8573c2a1f84e798c8f6494f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118913206"
 ---
-# <a name="iazbizruleparameters-methods"></a>Iazbizruleparameters-Methoden
+# <a name="iazbizruleparameters-methods"></a>IAzBizRuleParameters-Methoden
 
-Die [**iazbizruleparameters**](/windows/desktop/api/Azroles/nn-azroles-iazbizruleparameters) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IAzBizRuleParameters-Schnittstelle**](/windows/desktop/api/Azroles/nn-azroles-iazbizruleparameters) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

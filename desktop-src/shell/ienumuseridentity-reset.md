@@ -1,7 +1,7 @@
 ---
-description: Setzt die interne Anzahl der abgerufenen Schnittstellen in der-Enumeration zurück.
+description: Setzt die interne Anzahl der abgerufenen Schnittstellen in der -Enumeration zurück.
 ms.assetid: fd79b4be-cc0c-49b3-9874-384858e21ecf
-title: 'Ienumumuseridentity:: Reset-Methode (Msident. h)'
+title: IEnumUserIdentity::Reset-Methode (Msident.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msident.dll
-ms.openlocfilehash: 05b3c5d38575fa1b2957c28070d642ad15f846ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df70048760af47b380308eddab4ef5c044c8f6881374c83002944d6d76836ed5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118969419"
 ---
-# <a name="ienumuseridentityreset-method"></a>Ienumumuseridentity:: Reset-Methode
+# <a name="ienumuseridentityreset-method"></a>IEnumUserIdentity::Reset-Methode
 
-\[**Ienumumuseridentity:: Reset** wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop](fastuserswitching.md).\]
+\[**IEnumUserIdentity::Reset** wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md).\]
 
-Setzt die interne Anzahl der abgerufenen Schnittstellen in der-Enumeration zurück.
+Setzt die interne Anzahl der abgerufenen Schnittstellen in der -Enumeration zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,42 +43,42 @@ Diese Methode hat keine Parameter.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[**Ienumumuseridentity**](ienumuseridentity.md) behält eine interne Anzahl bei, die angibt, welche Schnittstelle als nächstes abgerufen wird. Durch Aufrufen dieser Methode wird der Wert dieser Anzahl zurückgesetzt.
+[**IEnumUserIdentity behält**](ienumuseridentity.md) eine interne Anzahl bei, die angibt, welche Schnittstelle als Nächstes abgerufen werden soll. Durch Aufrufen dieser Methode wird der Wert dieser Anzahl zurückgesetzt.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                  |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Msident. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msident. idl</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
+| Header<br/>                   | <dl> <dt>Msident.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msident.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Msident.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Iumumuseridentity**](ienumuseridentity.md)
+[**IEnumUserIdentity**](ienumuseridentity.md)
 </dt> <dt>
 
-[**Iendumuseridentity:: Skip**](ienumuseridentity-skip.md)
+[**IEnumUserIdentity::Skip**](ienumuseridentity-skip.md)
 </dt> <dt>
 
-[**Iendumuseridentity:: GetCount**](ienumuseridentity-getcount.md)
+[**IEnumUserIdentity::GetCount**](ienumuseridentity-getcount.md)
 </dt> <dt>
 
-[**Ienumumuseridentity:: Next**](ienumuseridentity-next.md)
+[**IEnumUserIdentity::Next**](ienumuseridentity-next.md)
 </dt> </dl>
 
  

@@ -1,35 +1,35 @@
 ---
-title: Verbinden des Clients und des Servers
-description: Zur Kommunikation müssen Client-und Serverprogramme eine Kommunikationssitzung im Netzwerk oder in Netzwerken einrichten, die Sie miteinander verbinden.
+title: Herstellen einer Verbindung zwischen Client und Server
+description: Für die Kommunikation müssen Client- und Serverprogramme eine Kommunikationssitzung über das Netzwerk oder netzwerke hinweg einrichten, die sie verbinden.
 ms.assetid: 1164252a-7615-4958-9d2f-cf35c0db513a
 keywords:
-- Remote Prozedur Aufruf RPC, Tasks, Verbinden von Client und Server
+- Remoteprozeduraufruf RPC , Tasks, Verbinden von Client und Server
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 98a22ea7a9a6dd30f2b9495b6d2ee868aac217f0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f477802ffb4b72f33ce951bf811b1cb9b770a8272f646507dfaa450934569f32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471389"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118931227"
 ---
-# <a name="connecting-the-client-and-the-server"></a>Verbinden des Clients und des Servers
+# <a name="connecting-the-client-and-the-server"></a>Herstellen einer Verbindung zwischen Client und Server
 
-Zur Kommunikation müssen Client-und Serverprogramme eine Kommunikationssitzung im Netzwerk oder in Netzwerken einrichten, die Sie miteinander verbinden. Nachdem Sie die Verbindung hergestellt haben, kann der Client Remote Prozeduren im Serverprogramm so abrufen, als wären Sie lokal für das Client Programm.
+Für die Kommunikation müssen Client- und Serverprogramme eine Kommunikationssitzung über das Netzwerk oder netzwerke hinweg einrichten, die sie verbinden. Nachdem die Verbindung hergestellt wurde, kann der Client Remoteprozeduren im Serverprogramm aufrufen, als wären sie lokal im Clientprogramm.
 
-Dieser Abschnitt enthält eine konzeptionelle Übersicht über das Herstellen einer Verbindung zwischen Clients und Servern für Remote Prozedur Aufrufe. Es wird keine ausführliche Erörterung dieses Themas bereitgestellt. Alle Konzepte in diesem Abschnitt werden in späteren Kapiteln und im Abschnitt zur RPC-Funktionsreferenz ausführlich dargestellt.
+Dieser Abschnitt bietet eine konzeptionelle Übersicht über das Herstellen einer Verbindung zwischen Clients und Servern für Remoteprozeduraufrufe. Sie bietet keine ausführliche Erläuterung dieses Themas. Alle Konzepte in diesem Abschnitt werden in späteren Kapiteln und im Abschnitt RPC-Funktionsreferenz ausführlich vorgestellt.
 
-Die in diesem Abschnitt gezeigte Diskussion ist in die folgenden Themen unterteilt:
+Die in diesem Abschnitt vorgestellte Diskussion ist in die folgenden Themen unterteilt:
 
--   [Wichtige RPC-Bindungs Terminologie](essential-rpc-binding-terminology.md)
--   [Wie der Server eine Verbindung vorbereitet](how-the-server-prepares-for-a-connection.md)
--   [Einrichten einer Verbindung durch den Client](how-the-client-establishes-a-connection.md)
+-   [Grundlegende RPC-Bindungsterminologie](essential-rpc-binding-terminology.md)
+-   [Vorbereiten einer Verbindung durch den Server](how-the-server-prepares-for-a-connection.md)
+-   [Herstellen einer Verbindung durch den Client](how-the-client-establishes-a-connection.md)
 
-Beachten Sie, dass die Diskussion explizite Bindungs Handles annimmt. Wenn Ihre Anwendung jedoch andere Typen von Bindungs Handles verwendet, müssen Sie möglicherweise die in diesem Abschnitt beschriebenen Schritte ändern. Weitere Informationen finden Sie unter [Bindung und Handles](binding-and-handles.md).
+Beachten Sie, dass bei der Diskussion explizite Bindungshandles angenommen werden. Wenn Ihre Anwendung jedoch andere Arten von Bindungshandles verwendet, müssen Sie möglicherweise die in diesem Abschnitt beschriebenen Schritte ändern. Weitere Informationen finden Sie unter [Bindung und Handles.](binding-and-handles.md)
 
- 
+ 
 
- 
+ 
 
 
 

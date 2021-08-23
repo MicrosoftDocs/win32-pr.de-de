@@ -1,6 +1,6 @@
 ---
-title: atomic_umax (sm5 – asm)
-description: Atomarer Ganzzahlwert ohne Vorzeichen im Arbeitsspeicher.
+title: atomic_umax (sm5 - asm)
+description: Atomarer ganzzahliger Wert ohne Vorzeichen im Arbeitsspeicher.
 ms.assetid: 7255B67A-37BE-443A-BDF2-A1D4A56C5E11
 ms.topic: reference
 ms.date: 05/31/2018
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118794858"
 ---
-# <a name="atomic_umax-sm5---asm"></a>atomic \_ umax (sm5 – asm)
+# <a name="atomic_umax-sm5---asm"></a>atomic \_ umax (sm5 - asm)
 
-Atomarer Ganzzahlwert ohne Vorzeichen im Arbeitsspeicher.
+Atomarer ganzzahliger Wert ohne Vorzeichen im Arbeitsspeicher.
 
 
 
-| atomic \_ umax dst, dstAddress \[ .swizzle \] , src0 \[ .select \_ component\] |
+| atomic \_ umax dst, dstAddress \[ .swizzle, \] src0 \[ .select \_ component\] |
 |----------------------------------------------------------------------|
 
 
@@ -28,9 +28,9 @@ Atomarer Ganzzahlwert ohne Vorzeichen im Arbeitsspeicher.
 
 | Element                                                                                                           | Beschreibung                                                                                                                                                                             |
 |----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="dst"></span><span id="DST"></span>*Dst*<br/>                                                   | \[in \] Die Komponenten, die mit *src0* verglichen werden sollen. Bei diesem Wert muss es sich um eine ungeordnete Zugriffsansicht (UAV) \# (u) handelt. Im Compute-Shader kann es sich auch um freigegebenen Speicher der Threadgruppe \# (g) befinden. <br/> |
+| <span id="dst"></span><span id="DST"></span>*Dst*<br/>                                                   | \[in \] Die Komponenten, die mit *src0 verglichen werden.* Dieser Wert muss eine ungeordnete Zugriffsansicht (UAV) (u) \# sein. Im Compute-Shader kann es sich auch um gemeinsam genutzten Threadgruppenspeicher (g ) \# sein. <br/> |
 | <span id="dstAddress"></span><span id="dstaddress"></span><span id="DSTADDRESS"></span>*dstAddress*<br/> | \[in \] Die Speicheradresse.<br/>                                                                                                                                                   |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/>                                                | \[in \] Die Komponenten, die mit *dst* verglichen werden sollen.<br/>                                                                                                                                   |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/>                                                | \[in \] Die Komponenten, die mit *dst verglichen werden.*<br/>                                                                                                                                   |
 
 
 
@@ -38,21 +38,21 @@ Atomarer Ganzzahlwert ohne Vorzeichen im Arbeitsspeicher.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Anweisung führt einen 32-Bit-Maximalwert ohne Vorzeichen einer einzelnen Komponente von operand *src0* in *dst* bei 32-Bit pro Komponentenadresse *dstAddress* aus und wird atomar ausgeführt.
+Diese Anweisung führt eine einzelne Komponente mit einem 32-Bit-Maximum ohne Vorzeichen von *operand src0* in *dst* bei einer 32-Bit-Adresse pro Komponente *dstAddress* aus, die atomisch ausgeführt wird.
 
-Die Anzahl der Von der Adresse entnommenen Komponenten wird durch die Dimensionalität von dst u \# oder g \# bestimmt.
+Die Anzahl von Komponenten, die aus der Adresse genommen werden, wird durch die Dimensionalität von dst u \# oder g \# bestimmt.
 
-Wenn *dst* ein u \# ist, kann er als roh, typisiert oder strukturiert deklariert werden. Wenn sie typisiert ist, muss sie als UINT/SINT deklariert werden, wobei das gebundene Ressourcenformat R32 \_ \_ UINT/SINT ist.
+Wenn *dst* ein u ist, kann es als unformatiert, \# typisch oder strukturiert deklariert werden. Bei Typ muss es als UINT/SINT deklariert werden, und das gebundene Ressourcenformat ist R32 \_ \_ UINT/SINT.
 
-Wenn *dst* g \# ist, muss er als roh oder strukturiert deklariert werden.
+Wenn *dst* g \# ist, muss es als roh oder strukturiert deklariert werden.
 
 An den Shader wird nichts zurückgegeben.
 
-Wenn der Shaderaufruf inaktiv ist, z. B. wenn das Pixel zuvor bei seiner Ausführung verworfen wurde oder ein Pixel-/Beispielaufruf nur als Hilfselement für ein echtes Pixel/Sample für Ableitungen vorhanden ist, ändert diese Anweisung den *dst-Speicher* überhaupt nicht (im Hintergrund).
+Wenn der Shaderaufruf inaktiv ist, z. B. wenn das Pixel zuvor in seiner Ausführung verworfen wurde oder wenn ein Pixel-/Beispielaufruf nur als Hilfs für ein echtes Pixel/Beispiel für Ableitungen vorhanden ist, ändert diese Anweisung den *dst-Speicher* überhaupt nicht (im Hintergrund).
 
-Die Adressierung außerhalb der Grenzen für u bewirkt, dass nichts in \# den Arbeitsspeicher geschrieben wird, außer wenn das u strukturiert ist und der \# Byteoffset in die Struktur (zweite Komponente der Adresse) den Zugriff außerhalb der Grenzen verursacht, dann wird der gesamte Inhalt des UAV nicht definiert.
+Die Adressierung außerhalb der Grenzen für u bewirkt, dass nichts in den Arbeitsspeicher geschrieben wird, außer wenn u strukturiert ist und der Byteoffset in die Struktur (zweite Komponente der Adresse) den Zugriff außerhalb der Grenzen verursacht, dann wird der gesamte Inhalt der \# \# UAV nicht definiert.
 
-Die Adressierung außerhalb der Grenzen von g \# (die Begrenzungen dieses bestimmten g im \# Gegensatz zum gesamten freigegebenen Arbeitsspeicher) bewirkt, dass der gesamte Inhalt des gesamten freigegebenen Speichers nicht definiert wird.
+Eine Nicht-Begrenzungs-Adressierung auf g (die Grenzen dieses bestimmten g im Gegensatz zum gesamten freigegebenen Speicher) führt dazu, dass der gesamte Inhalt des gesamten freigegebenen \# Speichers \# undefiniert wird.
 
 Diese Anweisung gilt für die folgenden Shaderstufen:
 
@@ -66,7 +66,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anweisung für alle Shaderstufen für die Direct3D 11.1-Runtime, die ab Windows 8 verfügbar ist.
+Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anweisung für alle Shaderstufen für die Direct3D 11.1-Runtime, die ab Windows 8.
 
 
 
@@ -78,7 +78,7 @@ Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anw
 
  
 
-## <a name="minimum-shader-model"></a>Shader-Mindestmodell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
 Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
@@ -86,12 +86,12 @@ Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -101,7 +101,7 @@ Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

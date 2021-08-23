@@ -54,7 +54,7 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="remarks"></a>Hinweise
 
-Die -Methode gibt den ganzen Arbeitsspeicher frei, der den Elementen in der Auflistung zugeordnet ist.
+Die -Methode gibt den gesamten Arbeitsspeicher frei, der für die Elemente in der Auflistung zugeordnet ist.
 
 ## <a name="requirements"></a>Anforderungen
 

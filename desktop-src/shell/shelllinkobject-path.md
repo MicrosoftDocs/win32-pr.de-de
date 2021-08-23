@@ -1,7 +1,7 @@
 ---
-description: Ruft den Pfad zum Link Objekt ab oder legt diesen fest.
+description: Ruft den Pfad zum Linkobjekt ab oder legt diesen fest.
 ms.assetid: ddb5be91-7c21-46c8-949e-bdd973e11b6c
-title: Shelllinkobject. Path-Eigenschaft (Shldisp. h)
+title: ShellLinkObject.Path-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: ac6b6f1168724f3808462088dc7e5907ec0cec58
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d3eb2418478445dbae9b3f9a0f9e5ba3dde7013854ab3bef8b8f41188d4000e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218706"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968389"
 ---
-# <a name="shelllinkobjectpath-property"></a>Shelllinkobject. Path-Eigenschaft
+# <a name="shelllinkobjectpath-property"></a>ShellLinkObject.Path-Eigenschaft
 
-Ruft den Pfad zum Link Objekt ab oder legt diesen fest.
+Ruft den Pfad zum Linkobjekt ab oder legt diesen fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -38,13 +38,13 @@ ShellLinkObject.Path(sPath) = strPath
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-der voll qualifizierte Pfad des Link Objekts.
+der vollqualifizierte Pfad des Linkobjekts.
 
 ## <a name="examples"></a>Beispiele
 
 Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft in JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -85,7 +85,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -168,17 +168,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

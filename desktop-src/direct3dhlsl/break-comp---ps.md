@@ -1,6 +1,6 @@
 ---
-title: break_comp – ps
-description: Break out of the current loop at the nearest endloop - ps or endrep - ps, based on a per-component comparison.
+title: break_comp ps
+description: Unterbrechen Sie die aktuelle Schleife auf der nächsten Endloop-Ebene – ps oder endrep – ps, basierend auf einem Komponentenvergleich.
 ms.assetid: d21e850f-05db-4a29-b15b-85bb1c1410d0
 ms.topic: reference
 ms.date: 05/31/2018
@@ -18,7 +18,7 @@ ms.locfileid: "118794458"
 ---
 # <a name="break_comp---ps"></a>break \_ comp - ps
 
-Break out of the current loop at the nearest [endloop - ps](endloop---ps.md) or [endrep - ps](endrep---ps.md), based on a per-component comparison.
+Unterbrechen Sie die aktuelle Schleife am nächsten [Endloop – ps](endloop---ps.md) oder [endrep – ps](endrep---ps.md)– basierend auf einem Komponentenvergleich.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Hierbei gilt:
     | \_Gt   | Größer als          |
     | \_Lt   | Kleiner als             |
     | \_Ge   | Größer als oder gleich |
-    | \_Le   | Kleiner als oder gleich    |
+    | \_Le   | Kleiner oder gleich    |
     | \_Eq   | Gleich              |
     | \_Ne   | Ungleich          |
 
@@ -48,8 +48,8 @@ Hierbei gilt:
 
      
 
--   src0 ist ein Quellregister. Replizieren von Swizzle ist erforderlich, wenn Sie eine einzelne Komponente auswählen.
--   src1 ist ein Quellregister. Replizieren von Swizzle ist erforderlich, wenn Sie eine einzelne Komponente auswählen.
+-   src0 ist ein Quellregister. Die Replikation von Swizzle ist erforderlich, wenn Sie eine einzelne Komponente auswählen.
+-   src1 ist ein Quellregister. Die Replikation von Swizzle ist erforderlich, wenn Sie eine einzelne Komponente auswählen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -57,7 +57,7 @@ Diese Anweisung wird in den folgenden Versionen unterstützt.
 
 
 
-| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | break \_ comp           |      |      |      |      |      | x    | x     | x    | x     |
 
@@ -65,7 +65,7 @@ Diese Anweisung wird in den folgenden Versionen unterstützt.
 
  
 
-Wenn der Vergleich true ist, bricht er wie gezeigt aus der aktuellen Schleife auf.
+Wenn der Vergleich true ist, wird er wie gezeigt aus der aktuellen Schleife unterbrochen.
 
 
 ```
@@ -79,7 +79,7 @@ if (!(src0 comparison src1))
 
 <dl> <dt>
 
-[Anweisungen zum Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
+[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

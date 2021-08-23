@@ -1,7 +1,7 @@
 ---
-description: Die addpin-Methode fügt dem Filter eine neue Ausgabe-PIN hinzu.
+description: Die AddPin-Methode fügt dem Filter einen neuen Ausgabepin hinzu.
 ms.assetid: 48850a1f-ecb7-460c-9bfc-ce1d1103a00b
-title: CSource. addpin-Methode (Quelle. h)
+title: CSource.AddPin-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 224550756f5935ce26c106ba01c9ef64f0767140
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a1c221d2fd032445587b52b0d0ae7f7744889254983fab82c7b282d06fee195e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953779"
 ---
-# <a name="csourceaddpin-method"></a>CSource. addpin-Methode
+# <a name="csourceaddpin-method"></a>CSource.AddPin-Methode
 
-Die- `AddPin` Methode fügt dem Filter eine neue Ausgabe-PIN hinzu.
+Die `AddPin` -Methode fügt dem Filter einen neuen Ausgabepin hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ HRESULT AddPin(
 *pStream* 
 </dt> <dd>
 
-Zeiger auf das [**csourcestream**](csourcestream.md) -Objekt, das die PIN implementiert.
+Zeiger auf das [**CSourceStream-Objekt,**](csourcestream.md) das den Pin implementiert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                    |
 |-----------------------------------------------------------------------------------------------|--------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg<br/>             |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie eine neue PIN erstellen, die von **csourcestream** abgeleitet ist, ruft der **csourcestream** -Konstruktor diese Methode automatisch auf, um dem Filter die Ausgabe-PIN hinzuzufügen.
+Wenn Sie einen neuen, von **CSourceStream** abgeleiteten Pin erstellen, ruft der **CSourceStream-Konstruktor** diese Methode automatisch auf, um dem Filter den Ausgabepin hinzuzufügen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,12 +74,12 @@ Wenn Sie eine neue PIN erstellen, die von **csourcestream** abgeleitet ist, ruft
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

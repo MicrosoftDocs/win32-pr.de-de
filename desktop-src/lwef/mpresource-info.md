@@ -1,10 +1,10 @@
 ---
-title: MPRESOURCE_INFO-Struktur (MpClient.h)
-description: Struktur der Ressourceninformationen.
+title: MPRESOURCE_INFO -Struktur (MpClient.h)
+description: Ressourceninformationsstruktur.
 ms.assetid: 2D645722-3DE3-4748-B532-3E522464EA1E
 keywords:
-- MPRESOURCE_INFO struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
-- PMPRESOURCE_INFO Strukturzeiger Legacy Windows Umgebungsfeatures
+- MPRESOURCE_INFO struktur Legacy-Windows-Umgebungsfeatures
+- PMPRESOURCE_INFO strukturzeiger Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -24,7 +24,7 @@ ms.locfileid: "118747423"
 ---
 # <a name="mpresource_info-structure"></a>MPRESOURCE \_ INFO-Struktur
 
-Struktur der Ressourceninformationen.
+Ressourceninformationsstruktur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-Ressourcenschemabezeichner wie "file" oder "dir".
+Ressourcenschemabezeichner, z. B. "file" oder "dir".
 
 </dd> <dt>
 
@@ -68,21 +68,21 @@ Absoluter Pfad der Ressource, basierend auf **Schema**.
 **Klasse**
 </dt> <dd>
 
-Typ: **\_ MPRESOURCE-KLASSE**
+Typ: **MPRESOURCE-KLASSE \_**
 
 </dd> <dd>
 
-Dieses Feld wird festgelegt, wenn die Ressource als Teil der Bedrohung identifiziert wird. Sie gibt die Ressourcenklasse an, hauptsächlich konkrete im Vergleich zu latent. Dies kann eine Kombination dieser möglichen Werte sein:
+Dieses Feld wird festgelegt, wenn die Ressource als Teil der Bedrohung identifiziert wird. Sie gibt die Ressourcenklasse an, hauptsächlich konkrete und latente. Dabei kann es sich um eine Kombination dieser möglichen Werte handelt:
 
 
 
 | Wert                                                                                                                                                                                                                                                                        | Bedeutung                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| <span id="MP_RESOURCE_CLASS_UNKNOWN"></span><span id="mp_resource_class_unknown"></span><dl> <dt>**MP \_ \_ \_ RESOURCE CLASS UNKNOWN**</dt> <dt>0x0000</dt> </dl>              |                                                                       |
-| <span id="MP_RESOURCE_CLASS_CONCRETE"></span><span id="mp_resource_class_concrete"></span><dl> <dt>**MP \_ KONKRETE 0X0001 \_ DER RESSOURCENKLASSE \_**</dt> <dt></dt> </dl>           | Schließen Sie sich mit **MP \_ RESOURCE CLASS \_ \_ LATENT** gegenseitig aus.<br/>   |
-| <span id="MP_RESOURCE_CLASS_LATENT"></span><span id="mp_resource_class_latent"></span><dl> <dt>**MP \_ RESOURCE \_ CLASS \_ LATENT**</dt> <dt>0x0002</dt> </dl>                 | Schließen Sie sich mit **MP RESOURCE CLASS CONCRETE gegenseitig \_ \_ \_ aus.**<br/> |
-| <span id="MP_RESOURCE_CLASS_SAMPLE_FILE"></span><span id="mp_resource_class_sample_file"></span><dl> <dt>**MP \_ RESOURCE \_ CLASS \_ SAMPLE \_ FILE**</dt> <dt>0x0004</dt> </dl> |                                                                       |
-| <span id="MP_RESOURCE_CLASS_SHARED"></span><span id="mp_resource_class_shared"></span><dl> <dt>**MP \_ \_ \_ RESOURCE CLASS SHARED**</dt> <dt>0x0100</dt> </dl>                 |                                                                       |
+| <span id="MP_RESOURCE_CLASS_UNKNOWN"></span><span id="mp_resource_class_unknown"></span><dl> <dt>**MP \_ RESOURCE \_ CLASS \_ UNKNOWN**</dt> <dt>0x0000</dt> </dl>              |                                                                       |
+| <span id="MP_RESOURCE_CLASS_CONCRETE"></span><span id="mp_resource_class_concrete"></span><dl> <dt>**MP \_ KONKRETE \_ \_ RESSOURCENKLASSE**</dt> <dt>0X0001</dt> </dl>           | Schließen sich gegenseitig mit **MP RESOURCE CLASS LATENT \_ \_ \_ aus.**<br/>   |
+| <span id="MP_RESOURCE_CLASS_LATENT"></span><span id="mp_resource_class_latent"></span><dl> <dt>**MP \_ RESOURCE \_ CLASS \_ LATENT**</dt> <dt>0x0002</dt> </dl>                 | Schließen sich mit **MP RESOURCE CLASS CONCRETE gegenseitig \_ \_ \_ aus.**<br/> |
+| <span id="MP_RESOURCE_CLASS_SAMPLE_FILE"></span><span id="mp_resource_class_sample_file"></span><dl> <dt>**MP \_ RESOURCE \_ CLASS SAMPLE FILE \_ \_ 0X0004**</dt> <dt></dt> </dl> |                                                                       |
+| <span id="MP_RESOURCE_CLASS_SHARED"></span><span id="mp_resource_class_shared"></span><dl> <dt>**MP \_ FREIGEGEBENE \_ \_ RESSOURCENKLASSE**</dt> <dt>0x0100</dt> </dl>                 |                                                                       |
 
 
 

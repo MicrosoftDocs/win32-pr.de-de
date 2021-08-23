@@ -30,15 +30,15 @@ dcl \[ \_ pp \] dest \[ .mask\]
 
 Hierbei gilt:
 
--   \[\_pp \] ist eine optionale partielle Genauigkeit. Weitere Informationen finden Sie unter [Partielle Genauigkeit.](dx9-graphics-reference-asm-ps-instructions-modifiers-ps-2-0.md)
--   dest ist ein Zielregister. Dabei muss es sich entweder um ein [Eingabefarbregister](dx9-graphics-reference-asm-ps-registers-input-color.md) (vn) oder um ein [Texturkoordinatenregister](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md) (tn) handelt.
--   \[.mask \] ist eine optionale Schreibmaske, die steuert, in welche Komponenten des Zielregisters geschrieben werden kann. Weitere Informationen finden Sie unter [Zielregister-Schreibmaske.](dx9-graphics-reference-asm-ps-registers-modifiers-write-mask.md)
+-   \[\_pp \] ist optional partielle Genauigkeit. Weitere Informationen [finden Sie unter Partielle Genauigkeit.](dx9-graphics-reference-asm-ps-instructions-modifiers-ps-2-0.md)
+-   dest ist ein Zielregister. Es muss entweder ein [Eingabefarbregister](dx9-graphics-reference-asm-ps-registers-input-color.md) (vn) oder ein [Texturkoordinatenregister](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md) (tn) sein.
+-   \[.mask ist eine optionale Schreibmaske, die steuert, in welche Komponenten des \] Zielregisters geschrieben werden kann. Weitere Informationen finden [Sie unter Zielregister-Schreibmaske.](dx9-graphics-reference-asm-ps-registers-modifiers-write-mask.md)
 
 ## <a name="remarks"></a>Hinweise
 
 
 
-| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | Dcl                   |      |      |      |      | x    | x    | x     | x    | x     |
 
@@ -52,7 +52,7 @@ Alle dcl-Anweisungen müssen vor der ersten ausführbaren Anweisung angezeigt we
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

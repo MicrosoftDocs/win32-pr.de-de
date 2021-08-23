@@ -1,5 +1,5 @@
 ---
-description: Enthält Informationen zu den synthetischen 3D-Grafik Verarbeitungseinheiten (GPUs), die auf dem Host System verfügbar sind.
+description: Enthält Informationen zu den synthetischen 3D-Grafikprozessoren (GPUs), die auf dem Hostsystem verfügbar sind.
 ms.assetid: 771A42C3-4888-49DF-A389-161A2D0E3DBD
 title: Msvm_Synth3dVideoPool-Klasse
 ms.topic: reference
@@ -43,18 +43,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1afad0f1b2e80a747bb518cb3eafc75d494de62a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3038984180dbd0888fe4131ffa7bad972ef341a4e4312b55308769a00479e2f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959399"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950039"
 ---
-# <a name="msvm_synth3dvideopool-class"></a>MSVM \_ Synth3dVideoPool-Klasse
+# <a name="msvm_synth3dvideopool-class"></a>Msvm \_ Synth3dVideoPool-Klasse
 
-Enthält Informationen zu den synthetischen 3D-Grafik Verarbeitungseinheiten (GPUs), die auf dem Host System verfügbar sind. Diese Klasse wird nur für Host Systeme verwendet, von denen remotefx unterstützt wird.
+Enthält Informationen zu den synthetischen 3D-Grafikprozessoren (GPUs), die auf dem Hostsystem verfügbar sind. Diese Klasse wird nur mit Hostsystemen verwendet, die RemoteFX unterstützen.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -97,20 +97,20 @@ class Msvm_Synth3dVideoPool : CIM_ResourcePool
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ Synth3dVideoPool** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ Synth3dVideoPool-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MSVM- \_ Synth3dVideoPool** -Klasse verfügt über diese Methoden.
+Die **Msvm \_ Synth3dVideoPool-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                             | BESCHREIBUNG                                                                               |
+| Methode                                                                                             | Beschreibung                                                                               |
 |:---------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|
-| [**Calculatevideomemoryrequirements**](msvm-synth3dvideopool-calculatevideomemoryrequirements.md) | Berechnet die Menge an Video Arbeitsspeicher, der für einen virtuellen remotefx-Computer erforderlich ist.<br/> |
+| [**CalculateVideoMemoryRequirements**](msvm-synth3dvideopool-calculatevideomemoryrequirements.md) | Berechnet die Menge an Videospeicher, die für einen RemoteFX virtuellen Computer erforderlich ist.<br/> |
 
 
 
@@ -118,62 +118,62 @@ Die **MSVM- \_ Synth3dVideoPool** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM- \_ Synth3dVideoPool** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ Synth3dVideoPool-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Zuordnung von Einheiten**
+**AllocationUnits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Zuordnungs Einheiten, die vom Ressourcenpool verwendet werden. Diese Eigenschaft wird von [**CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))geerbt.
+Die vom Ressourcenpool verwendeten Zuordnungseinheiten. Diese Eigenschaft wird von [**CIM \_ ResourcePool**](/previous-versions//cc136903(v=vs.85))geerbt.
 
 </dd> <dt>
 
 **Capacity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der maximale Betrag (in Einheiten von " **Zuweisung**") der aktiven Reservierungen, die der Ressourcenpool unterstützen kann. Diese Eigenschaft wird von [**CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))geerbt.
+Die maximale Menge (in Einheiten von **AllocationUnits)** aktiver Reservierungen, die der Ressourcenpool unterstützen kann. Diese Eigenschaft wird von [**CIM \_ ResourcePool**](/previous-versions//cc136903(v=vs.85))geerbt.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (64)
+Qualifizierer: **MaxLen** (64)
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Communicationstatus**
+**CommunicationStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 <dl> <dt>
 
@@ -192,63 +192,63 @@ Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalte
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>**Kein Kontakt** (4)
 </dt> <dt>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (0X8000.. )
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (0x8000. )
 </dt> </dl>
 
 </dd> <dt>
 
-**Consumedresourceunits**
+**ConsumedResourceUnits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Einheiten für die Eigenschaften " **maxconsumableresource** " und " **currentlyconsumedresource** " an. Diese Eigenschaft wird von [**CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))geerbt.
+Gibt die Einheiten für die Eigenschaften **MaxConsumableResource** und **CurrentlyConsumedResource** an. Diese Eigenschaft wird von [**CIM \_ ResourcePool**](/previous-versions//cc136903(v=vs.85))geerbt.
 
 </dd> <dt>
 
-**Currentlyconsumedresource**
+**DerzeitConsumedResource**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Menge an Ressourcen an, die der Ressourcenpool aktuell für Consumer darstellt. Diese Eigenschaft unterscheidet sich von der **reservierten** Eigenschaft darin, dass Sie die Consumer-Ansicht der Ressource beschreibt, während die **reservierte** Eigenschaft die Producer-Ansicht der Ressource beschreibt. Diese Eigenschaft wird von [**CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))geerbt.
+Gibt die Menge der Ressource an, die der Ressourcenpool den Consumern derzeit präsentiert. Diese Eigenschaft unterscheidet sich von der **Reserved-Eigenschaft** darin, dass sie die Consumeransicht der Ressource beschreibt, während die **Reserved-Eigenschaft** die Produceransicht der Ressource beschreibt. Diese Eigenschaft wird von [**CIM \_ ResourcePool**](/previous-versions//cc136903(v=vs.85))geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **DetailedStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ergänzt die **primarystatus** -Eigenschaft mit zusätzlichen Status Details. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Ergänzt die **PrimaryStatus-Eigenschaft** um zusätzliche Statusdetails. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 <dl> <dt>
 
@@ -258,85 +258,85 @@ Ergänzt die **primarystatus** -Eigenschaft mit zusätzlichen Status Details. Ei
 <span id="No_Additional_Information"></span><span id="no_additional_information"></span><span id="NO_ADDITIONAL_INFORMATION"></span>**Keine zusätzlichen Informationen** (1)
 </dt> <dt>
 
-<span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>**Betont** (2)
+<span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>**Wird** (2)
 </dt> <dt>
 
 <span id="Predictive_Failure"></span><span id="predictive_failure"></span><span id="PREDICTIVE_FAILURE"></span>**Vorhersagefehler** (3)
 </dt> <dt>
 
-<span id="Non-Recoverable_Error"></span><span id="non-recoverable_error"></span><span id="NON-RECOVERABLE_ERROR"></span>**Nicht BEHEB barer Fehler** (4)
+<span id="Non-Recoverable_Error"></span><span id="non-recoverable_error"></span><span id="NON-RECOVERABLE_ERROR"></span>**Nicht wiederherstellbarer Fehler** (4)
 </dt> <dt>
 
-<span id="Supporting_Entity_in_Error"></span><span id="supporting_entity_in_error"></span><span id="SUPPORTING_ENTITY_IN_ERROR"></span>**Unterstützende Entität in Error** (5)
+<span id="Supporting_Entity_in_Error"></span><span id="supporting_entity_in_error"></span><span id="SUPPORTING_ENTITY_IN_ERROR"></span>**Unterstützende Entität im Fehler** (5)
 </dt> <dt>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (0X8000.. )
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (0x8000. )
 </dt> </dl>
 
 </dd> <dt>
 
-**Directxversion**
+**DirectXVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (1024)
+Qualifizierer: [**MAXLEN**](/windows/desktop/WmiSdk/standard-qualifiers) (1024)
 </dt> </dl>
 
-Gibt die niedrigste Version von DirectX an, die von den Karten innerhalb des Ressourcenpools unterstützt wird.
+Gibt die niedrigste Version von DirectX an, die von den Karten im Ressourcenpool unterstützt wird.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Mit dieser Eigenschaft kann jede Instanz zusätzlich zu ihren Schlüsseleigenschaften, Identitätsdaten und Beschreibungs Informationen einen anzeigen Amen definieren. Die [**Name**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement) -Eigenschaft der **CIM \_ ManagedSystemElement** -Klasse wird auch als Anzeige Name definiert, aber Sie wird häufig als ein Schlüssel eingestuft. Es ist nicht sinnvoll, dass dieselbe Eigenschaft ohne Inkonsistenzen sowohl Identität als auch einen anzeigen Amen vermitteln kann. Wenn [**Name**](msvm-keyboard.md) vorhanden und kein Schlüssel ist (z. b. für Instanzen von LogicalDevice), können dieselben Informationen in den Eigenschaften **Name** und **ElementName** vorhanden sein. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Mit dieser Eigenschaft kann jede Instanz zusätzlich zu den Schlüsseleigenschaften, Identitätsdaten und Beschreibungsinformationen einen Anzeigenamen definieren. Die [**Name-Eigenschaft**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement) der **CIM \_ ManagedSystemElement-Klasse** ist auch als Anzeigename definiert, wird jedoch häufig als Schlüssel klassifiziert. Es ist nicht sinnvoll, dass die gleiche Eigenschaft sowohl Identität als auch Anzeigename ohne Inkonsistenzen vermitteln kann. Wenn [**Name**](msvm-keyboard.md) vorhanden ist und kein Schlüssel ist (z. B. für Instanzen von LogicalDevice), können die gleichen Informationen sowohl in den Eigenschaften **Name** als auch **ElementName** vorhanden sein. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **HealthState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Zustand des Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf 5 (OK) festgelegt.
+Die aktuelle Integrität des Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf 5 (OK) festgelegt.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der Erstellung der virtuellen Maschine. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Das Datum und die Uhrzeit der Erstellung des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -345,96 +345,96 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **Is3dVideoSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob das Host System 3D-Videos unterstützt. Enthält einen Wert ungleich 0 (null), wenn 3D-Videos unterstützt werden, andernfalls 0 (null). Zur Unterstützung von 3D-Videos muss der remotefx-Host über slat (Second Level Address Translation)-Funktionen verfügen und über mindestens eine physische GPU verfügen, die remotefx unterstützt.
+Gibt an, ob 3D-Videos vom Hostsystem unterstützt werden. Enthält einen Wert ungleich 0 (null), wenn 3D-Videos unterstützt werden, andernfalls 0 (null). Um 3D-Videos zu unterstützen, muss der RemoteFX Host über SLAT-Funktionen (Second Level Address Translation) und mindestens eine physische GPU verfügen, die RemoteFX unterstützt.
 
 </dd> <dt>
 
-**Isgpufähig**
+**IsGPUCapable**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Host über GPUs verfügt, die remotefx unterstützen, und ob die DirectX-Versionen die Mindestanforderungen erfüllen.
+Gibt an, ob der Host über GPUs verfügt, die RemoteFX unterstützen und ob die DirectX-Versionen die Mindestanforderung erfüllen.
 
 </dd> <dt>
 
-**Isslatfähig**
+**IsSLATCapable**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("kein Wert")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("Kein Wert")
 </dt> </dl>
 
-Gibt an, ob der Host über eine slat (Second Level Address Translation)-fähige CPU verfügt.
+Gibt an, ob der Host über eine SLAT-fähige CPU (Second Level Address Translation) verfügt.
 
 > [!Note]  
-> Veraltet in Windows 10, Version 1703 und Windows Server 2016.
+> Veraltet in Windows 10 Version 1703 und Windows Server 2016.
 
  
 
 </dd> <dt>
 
-**Maxconsumableresource**
+**MaxConsumableResource**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die maximale Menge an nutzbaren Ressourcen an, die der Ressourcenpool für Consumer aufweisen kann. Diese Eigenschaft unterscheidet sich von der **Capacity** -Eigenschaft darin, dass Sie die Consumer-Ansicht der Ressource beschreibt, während die **Capacity** -Eigenschaft die Producer-Ansicht der Ressource beschreibt. Diese Eigenschaft wird von [**CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))geerbt.
+Gibt die maximale Menge an verwendbaren Ressourcen an, die der Ressourcenpool für Consumer darstellen kann. Diese Eigenschaft unterscheidet sich von der **Capacity-Eigenschaft** darin, dass sie die Consumeransicht der Ressource beschreibt, während die **Capacity-Eigenschaft** die Produceransicht der Ressource beschreibt. Diese Eigenschaft wird von [**CIM \_ ResourcePool**](/previous-versions//cc136903(v=vs.85))geerbt.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (1024)
+Qualifizierer: **MaxLen** (1024)
 </dt> </dl>
 
-Die Bezeichnung, mit der das-Objekt bekannt ist. Bei einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Die Bezeichnung, mit der das Objekt bekannt ist. Bei Einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**Operatingstatus**
+**OperatingStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit und kann verwendet werden, um weitere Details in Bezug auf den Wert der **enabledstate** -Eigenschaft bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt aktuelle Statusinformationen für die Betriebsbedingung des Elements bereit und kann zum Bereitstellen weiterer Details in Bezug auf den Wert der **EnabledState-Eigenschaft** verwendet werden. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 <dl> <dt>
 
@@ -447,10 +447,10 @@ Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit
 <span id="Servicing"></span><span id="servicing"></span><span id="SERVICING"></span>**Wartung** (2)
 </dt> <dt>
 
-<span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>Wird **gestartet** (3)
+<span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>**Ab** (3)
 </dt> <dt>
 
-<span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>Wird **beendet (4** )
+<span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>**Beenden** (4)
 </dt> <dt>
 
 <span id="Stopped"></span><span id="stopped"></span><span id="STOPPED"></span>**Beendet** (5)
@@ -459,7 +459,7 @@ Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit
 <span id="Aborted"></span><span id="aborted"></span><span id="ABORTED"></span>**Abgebrochen** (6)
 </dt> <dt>
 
-<span id="Dormant"></span><span id="dormant"></span><span id="DORMANT"></span>**Ruhende** (7)
+<span id="Dormant"></span><span id="dormant"></span><span id="DORMANT"></span>**Ruhend** (7)
 </dt> <dt>
 
 <span id="Completed"></span><span id="completed"></span><span id="COMPLETED"></span>**Abgeschlossen** (8)
@@ -468,16 +468,16 @@ Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit
 <span id="Migrating"></span><span id="migrating"></span><span id="MIGRATING"></span>**Migrieren** (9)
 </dt> <dt>
 
-<span id="Emigrating"></span><span id="emigrating"></span><span id="EMIGRATING"></span>**Migration** (10)
+<span id="Emigrating"></span><span id="emigrating"></span><span id="EMIGRATING"></span>**Glückwunschgrating** (10)
 </dt> <dt>
 
-<span id="Immigrating"></span><span id="immigrating"></span><span id="IMMIGRATING"></span>**Migration** (11)
+<span id="Immigrating"></span><span id="immigrating"></span><span id="IMMIGRATING"></span>**Immigrating** (11)
 </dt> <dt>
 
-<span id="Snapshotting"></span><span id="snapshotting"></span><span id="SNAPSHOTTING"></span>**Snapshotts** (12)
+<span id="Snapshotting"></span><span id="snapshotting"></span><span id="SNAPSHOTTING"></span>**Momentaufnahme** (12)
 </dt> <dt>
 
-<span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span>**Herunter** fahren (13)
+<span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span>**Herunterfahren** (13)
 </dt> <dt>
 
 <span id="In_Test"></span><span id="in_test"></span><span id="IN_TEST"></span>**In Test** (14)
@@ -486,13 +486,13 @@ Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit
 <span id="Transitioning"></span><span id="transitioning"></span><span id="TRANSITIONING"></span>**Übergang** (15)
 </dt> <dt>
 
-<span id="In_Service"></span><span id="in_service"></span><span id="IN_SERVICE"></span>**In Dienst** (16)
+<span id="In_Service"></span><span id="in_service"></span><span id="IN_SERVICE"></span>**In Service** (16)
 </dt> <dt>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (0X8000.. )
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (0x8000. )
 </dt> </dl>
 
 </dd> <dt>
@@ -500,52 +500,52 @@ Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit
 **OperationalStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Status des Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf 2 (OK) festgelegt. Hyper-V verwendet nur das erste Element dieses Arrays.
+Der aktuelle Status des Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf 2 (OK) festgelegt. Hyper-V verwendet immer nur das erste Element dieses Arrays.
 
 </dd> <dt>
 
-**Otherresourcetype**
+**OtherResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die den Ressourcentyp beschreibt, wenn ein klar definierter Wert nicht verfügbar ist und [**ResourceType**](msvm-processorpool.md) auf 0 ("Other") festgelegt ist. Diese Eigenschaft wird von [**CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))geerbt und ist auf **null** festgelegt.
+Eine Zeichenfolge, die den Ressourcentyp beschreibt, wenn kein klar definierter Wert verfügbar ist und [**ResourceType**](msvm-processorpool.md) auf 0 ("Other") festgelegt ist. Diese Eigenschaft wird von [**CIM \_ ResourcePool**](/previous-versions//cc136903(v=vs.85))geerbt und auf **NULL** festgelegt.
 
 </dd> <dt>
 
-**Poolid**
+**PoolID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Auf diesen Wert wird von den [**CIM \_ resourcezugewiescationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata) -Instanzen verwiesen, die von diesem Pool zugeordnet wurden. Diese Eigenschaft wird von [**CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))geerbt und ist immer auf "Microsoft:*GUID* \\ root" festgelegt.
+Auf diesen Wert wird von den [**CIM \_ ResourceAllocationSettingData-Instanzen**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata) verwiesen, die aus diesem Pool zugeordnet wurden. Diese Eigenschaft wird von [**CIM \_ ResourcePool**](/previous-versions//cc136903(v=vs.85))geerbt und immer auf "Microsoft:*GUID* \\ Root" festgelegt.
 
 </dd> <dt>
 
-**Primarystatus**
+**PrimaryStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt Statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der Eigenschaft **detailedstatus** verwendet werden, um einen hohen und detaillierten Integritäts Status des Elements und seiner unter Komponenten bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der **DetailedStatus-Eigenschaft** verwendet werden, um einen hohen und detaillierten Integritätsstatus des Elements und seiner Unterkomponenten bereitzustellen. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 <dl> <dt>
 
@@ -555,16 +555,16 @@ Stellt Statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in V
 <span id="OK"></span><span id="ok"></span>**OK** (1)
 </dt> <dt>
 
-<span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>Herunter **gestuft (2** )
+<span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>**Heruntergestuft** (2)
 </dt> <dt>
 
 <span id="Error"></span><span id="error"></span><span id="ERROR"></span>**Fehler** (3)
 </dt> <dt>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (0X8000.. )
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (0x8000. )
 </dt> </dl>
 
 </dd> <dt>
@@ -572,94 +572,94 @@ Stellt Statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in V
 **Ursprünglich**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** , wenn dieser Ressourcenpool die Basis ist, aus der Ressourcen in der Aktivität der Ressourcenverwaltung gezeichnet und zurückgegeben werden. andernfalls **false**. "Primordial" bedeutet, dass dieser Ressourcenpool von Consumern dieses Modells nicht erstellt oder gelöscht werden kann. Andere Aktionen, die modelliert werden, können sich jedoch auf die Merkmale oder die Größe von ursprünglichen Ressourcenpools auswirken. Diese Eigenschaft wird von [**CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))geerbt.
+**True,** wenn dieser Ressourcenpool die Basis ist, aus der Ressourcen in der Ressourcenverwaltungsaktivität gezeichnet und zurückgegeben werden; Andernfalls **False.** Unauslöschlich zu sein bedeutet, dass dieser Ressourcenpool nicht von Consumern dieses Modells erstellt oder gelöscht werden kann. Andere Aktionen, modelliert oder nicht, können sich jedoch auf die Merkmale oder die Größe von ursprünglichen Ressourcenpools auswirken. Diese Eigenschaft wird von [**CIM \_ ResourcePool**](/previous-versions//cc136903(v=vs.85))geerbt.
 
 </dd> <dt>
 
-**Requirements dminimumdirectxversion**
+**RequiredMinimumDirectXVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (1024)
+Qualifizierer: [**MAXLEN**](/windows/desktop/WmiSdk/standard-qualifiers) (1024)
 </dt> </dl>
 
-Gibt die niedrigste Version von DirectX an, die für die Karten innerhalb des Ressourcenpools erforderlich ist.
+Gibt die niedrigste Version von DirectX an, die für die Karten im Ressourcenpool erforderlich ist.
 
 </dd> <dt>
 
 **Reserved**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die aktuellen Reservierungen (in Einheiten von **allocationunits**) werden auf alle aktiven Zuweisungen aus diesem Pool verteilt. In einer hierarchischen Konfiguration stellt dies die Summe aller aktuellen Reservierungen des untergeordneten Ressourcenpools dar. Diese Eigenschaft wird von [**CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))geerbt.
+Die aktuellen Reservierungen (in Einheiten von **AllocationUnits)** sind auf alle aktiven Zuordnungen aus diesem Pool verteilt. In einer hierarchischen Konfiguration stellt dies die Summe aller aktuellen Reservierungen aller nachfolgenden Ressourcenpools dar. Diese Eigenschaft wird von [**CIM \_ ResourcePool geerbt.**](/previous-versions//cc136903(v=vs.85))
 
 </dd> <dt>
 
 **ResourceSubType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die einen Implementierungs spezifischen Untertyp für diesen Pool beschreibt. Dies kann z. b. verwendet werden, um unterschiedliche Modelle desselben Ressourcentyps zu unterscheiden. Diese Eigenschaft wird von [**CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))geerbt.
+Eine Zeichenfolge, die einen implementierungsspezifischen Untertyp für diesen Pool beschreibt. Dies kann beispielsweise verwendet werden, um verschiedene Modelle desselben Ressourcentyps zu unterscheiden. Diese Eigenschaft wird von [**CIM \_ ResourcePool geerbt.**](/previous-versions//cc136903(v=vs.85))
 
 </dd> <dt>
 
 **ResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann. Diese Eigenschaft wird von [**CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))geerbt und ist immer auf 4 ("Memory") festgelegt.
+Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann. Diese Eigenschaft wird von [**CIM \_ ResourcePool geerbt**](/previous-versions//cc136903(v=vs.85))und immer auf 4 ("Arbeitsspeicher") festgelegt.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt,**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)aber nicht verwendet.
 
 </dd> <dt>
 
-**Status Beschreibungen**
+**StatusDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeichen folgen, die die verschiedenen [**OperationalStatus**](msvm-bioselement.md) -Array Werte beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf "OK" festgelegt. Hyper-V verwendet nur das erste Element dieses Arrays.
+Zeichenfolgen, die die verschiedenen [**OperationalStatus-Arraywerte**](msvm-bioselement.md) beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)und immer auf "OK" festgelegt. Hyper-V verwendet immer nur das erste Element dieses Arrays.
 
 </dd> </dl>
 
@@ -669,19 +669,19 @@ Zeichen folgen, die die verschiedenen [**OperationalStatus**](msvm-bioselement.m
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ resourcepool**](cim-resourcepool.md)
+[**CIM \_ ResourcePool**](cim-resourcepool.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetbegintransaction-Methode.
-title: API. jetbegintransaction-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetBeginTransaction-Methode'
+title: Api.JetBeginTransaction-Methode
 TOCTitle: 'JetBeginTransaction method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetBeginTransaction(Microsoft.Isam.Esent.Interop.JET_SESID)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetbegintransaction(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0b8812df332734ee109ea52820346e433e747751
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f7dfd2e5b9c2aeac93d2099580dce69e8ca66db54b03d33477fbb0c4a918f20f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983620"
 ---
-# <a name="apijetbegintransaction-method"></a>API. jetbegintransaction-Methode
+# <a name="apijetbegintransaction-method"></a>Api.JetBeginTransaction-Methode
 
 Bewirkt, dass eine Sitzung eine Transaktion eingibt oder einen neuen Sicherungspunkt in einer vorhandenen Transaktion erstellt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,17 +57,17 @@ public static void JetBeginTransaction(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
-    Die Sitzung, für die mit der Transaktion begonnen werden soll.
+    Die Sitzung, für die die Transaktion gestartet werden soll.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

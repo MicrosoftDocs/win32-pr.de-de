@@ -1,23 +1,23 @@
 ---
-title: Client seitige Bindung
-description: Bindungs Handles bestehen aus einer Protokoll Sequenz, dem Namen oder der Adresse eines Serverprogramm-Host Computers und einem Serverprogramm Endpunkt. Daher muss das Client Programm diese Informationen abrufen oder bereitstellen, um eine Bindung zu erstellen.
+title: Clientseitige Bindung
+description: Bindungshandles bestehen aus einer Protokollsequenz, dem Namen oder der Adresse eines Serverprogrammhostcomputers und einem Serverprogrammendpunkt. Daher muss Ihr Clientprogramm diese Informationen abrufen oder bereitstellen, um eine Bindung zu erstellen.
 ms.assetid: 0a3bed37-95c7-4f4a-9ed3-9d57f69db523
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f42ed5d2af21eff1091e0ba48718426bf17501e3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fc566d408b27884cacefe07a181f26971352e1f29f9f47dfd41b3d56a8276515
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118931723"
 ---
-# <a name="client-side-binding"></a>Client seitige Bindung
+# <a name="client-side-binding"></a>Clientseitige Bindung
 
-Bindungs Handles bestehen aus einer Protokoll Sequenz, dem Namen oder der Adresse eines Serverprogramm-Host Computers und einem Serverprogramm Endpunkt. Daher muss das Client Programm diese Informationen abrufen oder bereitstellen, um eine Bindung zu erstellen.
+Bindungshandles bestehen aus einer Protokollsequenz, dem Namen oder der Adresse eines Serverprogrammhostcomputers und einem Serverprogrammendpunkt. Daher muss Ihr Clientprogramm diese Informationen abrufen oder bereitstellen, um eine Bindung zu erstellen.
 
-Wenn das Client Programm automatische Bindungs Handles verwendet, müssen Sie keinen speziellen Quellcode schreiben, um die Bindung zu erstellen oder zu verwalten. Der Client-Stub ruft RPC-Funktionen auf, die zum Einrichten und Verwalten der Bindung erforderlich sind. Sie müssen lediglich angeben, dass der Client automatische Bindungs Handles in der Anwendungs Konfigurationsdatei (ACF) verwendet, und die Schnittstelle entsprechend entwerfen. Weitere Informationen finden Sie unter [Automatische Bindungs Handles](automatic-binding-handles.md).
+Wenn Ihr Clientprogramm automatische Bindungshandles verwendet, müssen Sie keinen speziellen Quellcode schreiben, um die Bindung zu erstellen oder zu verwalten. Der Clientstub ruft RPC-Funktionen auf, die zum Einrichten und Verwalten der Bindung erforderlich sind. Sie müssen nur angeben, dass Ihr Client automatische Bindungshandles in der Anwendungskonfigurationsdatei (Application Configuration File, ACF) verwendet und die Schnittstelle entsprechend entwerfen. Weitere Informationen finden Sie unter [Automatische Bindungshandles.](automatic-binding-handles.md)
 
-Nehmen wir beispielsweise an, dass Sie ein Client Programm entwickelt haben, das Remote-Zeitstempel Funktionen aufrief. Hier werden alle Schritte ausgeführt, und der Client muss nur die generierte Header Datei "Auto. h" einschließen, um die Funktionsprototypen für die Remote Prozeduren zu erhalten. Die Client Anwendung ruft die Remote Prozeduren auf, als ob es sich um Aufrufe an lokale Prozeduren handelt, wie im folgenden Beispiel gezeigt:
+Angenommen, Sie haben ein Clientprogramm entwickelt, das Remotefunktionen für den Zeitstempel aufgerufen hat. Hier machen die Stubs die ganze Arbeit, und der Client muss nur die generierte Headerdatei Auto.h enthalten, um die Funktionsprototypen für die Remoteprozeduren zu erhalten. Die Clientanwendung ruft die Remoteverfahren auf, als ob sie Aufrufe von lokalen Prozeduren hätten, wie im folgenden Beispiel gezeigt:
 
 
 ```C++
@@ -51,23 +51,23 @@ void main(int argc, char **argv)
 
 
 
-Wie Sie im vorherigen Beispiel sehen können, muss die Client Anwendung keine expliziten Aufrufe der RPC-Lauf Zeit Bibliotheksfunktionen durchführen. Der Client-Stub verwaltet Sie.
+Wie Sie im vorherigen Beispiel sehen können, muss die Clientanwendung keine expliziten Aufrufe der RPC-Laufzeitbibliotheksfunktionen ausführen. Der Clientstub verwaltet sie.
 
-Wenn Ihre Anwendung implizite oder explizite Bindungs Handles verwendet, muss der Client die Bindungs Informationen abrufen und die RPC-Funktionen zum Erstellen der Handles abrufen. Wo der Client die Bindungs Informationen aus erhält, hängt von den Anforderungen der Anwendung ab. Das Setup Programm, mit dem die Client Anwendung installiert wird, kann Bindungs Informationen in Umgebungsvariablen speichern, die es erstellt. Außerdem können Bindungs Informationen in einer anwendungsspezifischen Konfigurationsdatei gespeichert werden. Da Bindungs Informationen in Umgebungsvariablen oder Konfigurationsdateien normalerweise als Zeichen folgen gespeichert werden, muss die Client Anwendung die Zeichenfolge in eine-Bindung konvertieren. In Umgebungen mit Windows XP/2000 können Bindungs Informationen aus Active Directory abgerufen werden. Weitere Informationen finden Sie unter [Verwenden von Zeichen folgen Bindungen](finding-server-host-systems.md).
+Wenn Ihre Anwendung implizite oder explizite Bindungshandles verwendet, muss der Client die Bindungsinformationen abrufen und die RPC-Funktionen aufrufen, um die Handles zu erstellen. Wo der Client die Bindungsinformationen von erhält, hängt von den Anforderungen Ihrer Anwendung ab. Das Setupprogramm, das Ihre Clientanwendung installiert, kann Bindungsinformationen in Umgebungsvariablen speichern, die sie erstellt. Bindungsinformationen können auch in einer anwendungsspezifischen Konfigurationsdatei gespeichert werden. Da Bindungsinformationen in Umgebungsvariablen oder Konfigurationsdateien in der Regel als Zeichenfolgen gespeichert werden, muss Ihre Clientanwendung die Zeichenfolge in eine Bindung konvertieren. In Windows XP/2000-Umgebungen können Bindungsinformationen aus Active Directory abgerufen werden. Weitere Informationen finden Sie unter [Verwenden von Zeichenfolgenbindungen.](finding-server-host-systems.md)
 
-Die meisten Netzwerke verfügen über einen Namensdienst. Server Programme können sich selbst in der Name Service-Datenbank ankündigen. Wenn ein Client mit der Ausführung beginnt, kann er seine Bindungs Informationen von der Name Service-Datenbank abrufen. Weitere Informationen finden Sie unter [Importieren aus Name Service-Datenbanken](finding-server-host-systems.md).
+Die meisten Netzwerke verfügen über einen Namensdienst. Serverprogramme können sich selbst in der Namensdienstdatenbank ankn geben. Wenn ein Client mit der Ausführung beginnt, kann er seine Bindungsinformationen aus der Namensdienstdatenbank abrufen. Weitere Informationen finden Sie unter [Importieren aus Name Service Databases](finding-server-host-systems.md).
 
-Die Schritte, die für die Bindung mit impliziten und expliziten Handles erforderlich sind, werden in den folgenden Themen erläutert:
+Die erforderlichen Schritte für die Bindung mit impliziten und expliziten Handles werden in den folgenden Themen erläutert:
 
--   [Auswählen einer Protokoll Sequenz](selecting-a-protocol-sequence.md)
--   [Auffinden von Server Host Systemen](finding-server-host-systems.md)
+-   [Auswählen einer Protokollsequenz](selecting-a-protocol-sequence.md)
+-   [Suchen von Serverhostsystemen](finding-server-host-systems.md)
 -   [Suchen von Endpunkten](finding-endpoints.md)
 
-Eine kurze Übersicht über diese Themen finden Sie unter [Verbinden des Clients und des Servers](connecting-the-client-and-the-server.md).
+Eine kurze Übersicht über diese Themen finden Sie unter [Verbinden von Client und Server.](connecting-the-client-and-the-server.md)
 
- 
+ 
 
- 
+ 
 
 
 

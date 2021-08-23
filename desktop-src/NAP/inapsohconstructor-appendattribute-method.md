@@ -1,11 +1,11 @@
 ---
-title: Inapsohconstructor appendattribute-Methode (napprotocol. h)
-description: Fügt ein TLV am Ende des SoH-Puffers hinzu.
+title: INapSoHConstructor AppendAttribute-Methode (NapProtocol.h)
+description: Fügt am Ende des SoH-Puffers einen TLV hinzu.
 ms.assetid: 5706ceaa-757f-49d2-90e0-011415853875
 keywords:
-- Appendattribute-Methode NAP
-- Appendattribute-Methode NAP, inapsohconstructor-Schnittstelle
-- Inapsohconstructor Interface NAP, appendattribute-Methode
+- AppendAttribute-Methode NAP
+- AppendAttribute-Methode NAP, INapSoHConstructor-Schnittstelle
+- INapSoHConstructor-Schnittstelle NAP, AppendAttribute-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cc10fad9c775d324822700b77afed4e65a798db6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8d7d7ca4636d0eaeea35054dc5330b17f1360dffec5231922ad0acc357231c3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939587"
 ---
-# <a name="inapsohconstructorappendattribute-method"></a>Inapsohconstructor:: appendattribute-Methode
+# <a name="inapsohconstructorappendattribute-method"></a>INapSoHConstructor::AppendAttribute-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapsohconstructor:: appendattribute** -Methode fügt ein TLV am Ende des SoH-Puffers hinzu.
+Die **INapSoHConstructor::AppendAttribute-Methode** fügt am Ende des SoH-Puffers einen TLV hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,41 +48,41 @@ HRESULT AppendAttribute(
 
 <dl> <dt>
 
-*Typ* \[ in\]
+*type* \[ In\]
 </dt> <dd>
 
-Eine [**sohattributetype**](sohattributetype-enum.md) -Enumeration, die den Attributtyp des neuen TLV angibt.
+Eine [**SoHAttributeType-Enumeration,**](sohattributetype-enum.md) die den Attributtyp des neuen TLV angibt.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*value* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**sohattributevalue**](sohattributevalue-union.md) -Struktur, die den Wert für das neue TLV enthält.
+Ein Zeiger auf eine [**SoHAttributeValue-Struktur,**](sohattributevalue-union.md) die den Wert für den neuen TLV enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Es können auch andere COM-spezifische Fehlercodes zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der TLV " [**sohattributetypesystemhealthid**](sohattributetype-enum.md) " darf nicht mit dieser Funktion hinzugefügt werden. Es wird als erstes TLV von [**inapsohconstructor:: Initialize**](inapsohconstructor-initialize-method.md) zu neu erstellten SoH-Paketen hinzugefügt.
+Das [**TLV sohAttributeTypeSystemHealthId**](sohattributetype-enum.md) darf nicht mit dieser Funktion hinzugefügt werden. Es wird als erstes TLV von [**INapSoHConstructor::Initialize**](inapsohconstructor-initialize-method.md) zu neu erstellten SOH-Paketen hinzugefügt.
 
-Wenn ein Attribut angehängt wird, das vom NAP-System genutzt wird, sollte es nicht verschlüsselt oder geändert werden. Wenn die Integritäts Entität eine Verschlüsselung/Integritäts Überprüfung (Macs) privater Informationen erfordert, sollte Sie nur in das [**sohattributetypevendorspecific**](sohattributetype-enum.md) -Attribut eingeschlossen werden.
+Beim Anfügen eines Attributs, das vom Nap-System verwendet wird, sollte es nicht verschlüsselt oder in irgendeiner Weise geändert werden. Wenn HealthEntity eine Verschlüsselungs-/Integritätsüberprüfung (ENCRYPTION/Integrity Checking, MACs) privater Informationen erfordert, sollte sie nur im [**attribut sohAttributeTypeVendorSpecific enthalten**](sohattributetype-enum.md) sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,19 +90,19 @@ Wenn ein Attribut angehängt wird, das vom NAP-System genutzt wird, sollte es ni
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Napprotocol. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napprotocol. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>NapProtocol.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapProtocol.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapsohconstructor**](inapsohconstructor.md)
+[**INapSoHConstructor**](inapsohconstructor.md)
 </dt> </dl>
 
  

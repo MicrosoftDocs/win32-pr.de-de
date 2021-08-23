@@ -6,23 +6,23 @@ ms.tgt_platform: multiple
 title: O (WMI)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2bdbc8b11c1ec31e33cf084d3e380e161216f6c0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 91bf13b91ef5e9ca51de3745ed2fa3168ab101a0315efb635a8d76a68754c97d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118819308"
 ---
 # <a name="o-wmi"></a>O (WMI)
 
-[a](gloss-a.md) B [C](gloss-c.md) [D](gloss-d.md) [E](gloss-e.md) [F](gloss-f.md) G [H](gloss-h.md) [I](gloss-i.md) J [K](gloss-k.md) [L](gloss-l.md) [M](gloss-m.md) [N](gloss-n.md) O [P](gloss-p.md) [Q](gloss-q.md) [R](gloss-r.md) [S](gloss-s.md) [T](gloss-t.md) U V [W](gloss-w.md) X Y Z
+[A](gloss-a.md) B [C](gloss-c.md) [D](gloss-d.md) [E](gloss-e.md) [F G](gloss-f.md) [H](gloss-h.md) [I](gloss-i.md) J [K](gloss-k.md) [L](gloss-l.md) [M](gloss-m.md) [N](gloss-n.md) O [P](gloss-p.md) [Q](gloss-q.md) [R](gloss-r.md) [S](gloss-s.md) T [U](gloss-t.md) V [W](gloss-w.md) X Y Z
 
 <dl> <dt>
 
-<span id="wmi.gloss_object_path"></span><span id="WMI.GLOSS_OBJECT_PATH"></span>**Objekt Pfad**
+<span id="wmi.gloss_object_path"></span><span id="WMI.GLOSS_OBJECT_PATH"></span>**Objektpfad**
 </dt> <dd>
 
-Eine formatierte Zeichenfolge, die einen WMI- [*Namespace*](gloss-n.md), eine Klasse oder eine Instanz eindeutig identifiziert. Objekt Pfade ähneln dem Konzept der URL (Uniform Resource Locators).
+Eine formatierte Zeichenfolge, die einen [](gloss-n.md)WMI-Namespace, eine Klasse oder eine Instanz eindeutig identifiziert. Objektpfade ähneln dem Konzept von Uniform Resource Locators (URL).
 
 </dd> </dl>
 

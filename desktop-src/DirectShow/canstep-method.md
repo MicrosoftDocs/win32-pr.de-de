@@ -1,24 +1,24 @@
 ---
-description: Die canstep-Methode bestimmt, ob der MPEG-2-Decoder im lokalen System einen Frame Schritt in einer angegebenen Richtung ausführen kann.
+description: Die CanStep-Methode bestimmt, ob der MPEG-2-Decoder auf dem lokalen System die Frameschritte in einer bestimmten Richtung ausführen kann.
 ms.assetid: 21721722-0bf4-4cc7-a0e4-96b353888948
-title: Canstep-Methode
+title: CanStep-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 506e7436e5ec79947aceeca69891e52074cf2ea7
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 55ff6ca29443e059cd5ebfbbb553f67cf50b1cb13e1bc8d7199ac6cfae704cee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104041157"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017588"
 ---
-# <a name="canstep-method"></a>Canstep-Methode
+# <a name="canstep-method"></a>CanStep-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die `CanStep` -Methode bestimmt, ob der MPEG-2-Decoder im lokalen System Frame-Step in einer angegebenen Richtung ausführen kann.
+Die `CanStep` -Methode bestimmt, ob der MPEG-2-Decoder auf dem lokalen System die Frameschritte in einer bestimmten Richtung ausführen kann.
 
 ``` syntax
 [ bCanStep = ] MSWebDVD.CanStep(bDirection)
@@ -28,17 +28,17 @@ Die `CanStep` -Methode bestimmt, ob der MPEG-2-Decoder im lokalen System Frame-S
 
 <dl> <dt>
 
-<span id="bDirection"></span><span id="bdirection"></span><span id="BDIRECTION"></span>*bdirection*
+<span id="bDirection"></span><span id="bdirection"></span><span id="BDIRECTION"></span>*bDirection*
 </dt> <dd>
 
-Boolescher Wert, der als Flag verwendet wird, um die Richtung (vorwärts oder rückwärts) der Rahmen Schritt Fähigkeit des Decoders anzugeben.
+Boolescher Wert, der als Flag verwendet wird, um die Richtung (vorwärts oder rückwärts) der Frameschrittfähigkeit des Decoders anzugeben.
 
 
 
 | Wert | BESCHREIBUNG                                          |
 |-------|------------------------------------------------------|
-| true  | Kann der Decoder einen Schritt rückwärts ausführen?                           |
-| false | Kann der Decoder einen Schritt vorwärts ausführen? Dies ist der Standardwert. |
+| true  | Kann der Decoder rückwärts gehen?                           |
+| false | Kann der Decoder einen Schritt nach vorn gehen? Dies ist der Standardwert. |
 
 
 
@@ -48,11 +48,11 @@ Boolescher Wert, der als Flag verwendet wird, um die Richtung (vorwärts oder r�
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den booleschen Wert true zurück, wenn der Decoder in die angegebene Richtung wechseln kann, andernfalls false.
+Gibt den booleschen Wert true zurück, wenn der Decoder in die angegebene Richtung gehen kann, andernfalls FALSE.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nicht alle Hardware-MPEG-2-Decoder unterstützen die neuen Frame Step-Funktionen in DirectShow® 8,0. Diese Methode fragt den Decoder nach seinen Frame-Step-Funktionen ab. Wenn der Decoder Frame-Stepping ausführen kann, kann eine Anwendung die [**Step**](step-method.md) -Methode verwenden, um Frames schrittweise zu durchlaufen. Diese Methode gibt immer **true** zurück, wenn ein Software Decoder verwendet wird.
+Nicht alle MPEG-2-Hardwaredecoder unterstützen die neuen Frameschrittfunktionen in DirectShow® 8.0. Diese Methode fragt den Decoder nach seinen Frameschrittfunktionen ab. Wenn der Decoder die Frameschritte ausführen kann, kann eine Anwendung die [**Step-Methode**](step-method.md) verwenden, um Frames schrittweise zu durchlaufen. Diese Methode gibt immer **TRUE** zurück, wenn ein Softwaredecoder verwendet wird.
 
  
 

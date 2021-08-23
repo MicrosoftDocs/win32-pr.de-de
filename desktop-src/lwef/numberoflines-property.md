@@ -13,14 +13,14 @@ ms.locfileid: "118746879"
 ---
 # <a name="numberoflines-property"></a>NumberOfLines-Eigenschaft
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt die Anzahl der Zeilen zurück, die für das Wort balloon für das angegebene Zeichen unterstützt werden.
+Gibt die Anzahl der Zeilen zurück, die für die Wortsprechblase für das angegebene Zeichen unterstützt werden.
 
 </dd> <dt>
 

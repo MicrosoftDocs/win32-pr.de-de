@@ -1,75 +1,75 @@
 ---
-description: Ein Namespace bezieht sich auf eine Funktion, mit der (minimal) das Protokoll und die Adressierungs Attribute eines Netzwerk Dienstanbieter mit einem oder mehreren anzeigen Amen verknüpft werden können.
+description: Ein Namespace bezieht sich auf eine Funktion zum Zuordnen (mindestens) des Protokolls und der Adressierungsattribute eines Netzwerkdiensts zu mindestens einem Benutzernamen.
 ms.assetid: 4139a8c2-d940-41e0-a3e8-fce3b70a1ff3
-title: Namens Auflösungs Modell
+title: Namensauflösungsmodell
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dcb209254dcee2419e1ed92c017fc7d37dc9c0a6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f23395cc6db5a93ec572f59e0d5ac6aaa7890c5c42a7966b86601eb190a54796
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526150"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118822781"
 ---
-# <a name="name-resolution-model"></a>Namens Auflösungs Modell
+# <a name="name-resolution-model"></a>Namensauflösungsmodell
 
-Ein *Namespace* bezieht sich auf eine Funktion, mit der (minimal) das Protokoll und die Adressierungs Attribute eines Netzwerk Dienstanbieter mit einem oder mehreren anzeigen Amen verknüpft werden können. Viele Namespaces werden zurzeit verwendet, einschließlich der [Domain Name System](../dns/dns-start-page.md) des Internets (DNS), [Active Directory Domain Services](../ad/active-directory-domain-services.md), der Bindery, NetWare-Verzeichnisdienste (NDS) von Novell und X. 500. Diese Namespaces unterscheiden sich stark von der Organisation und Implementierung. Einige der Eigenschaften sind besonders wichtig, um aus Sicht der Winsock-Namensauflösung zu verstehen.
+Ein *Namespace* bezieht sich auf eine Funktion zum Zuordnen (mindestens) des Protokolls und der Adressierungsattribute eines Netzwerkdiensts zu mindestens einem Benutzernamen. Viele Namespaces werden derzeit verwendet, z.B. das [Domain Name System](../dns/dns-start-page.md) (DNS), [Active Directory Domain Services,](../ad/active-directory-domain-services.md)die Bindery, NetWare-Verzeichnisdienste (NDS) von und X.500. Diese Namespaces unterscheiden sich stark in ihrer Organisation und Ihrer Umsetzung. Einige ihrer Eigenschaften sind aus Sicht der Winsock-Namensauflösung besonders wichtig zu verstehen.
 
-## <a name="types-of-namespaces"></a>Typen von Namespaces
+## <a name="types-of-namespaces"></a>Namespacetypen
 
-Es gibt drei verschiedene Typen von Namespaces, in denen ein Dienst registriert werden kann:
+Es gibt drei verschiedene Arten von Namespaces, in denen ein Dienst registriert werden kann:
 
 -   Dynamisch
 -   statischen
 -   Beständig
 
-Mithilfe dynamischer Namespaces können Dienste bei Bedarf beim Namespace registriert werden, und Clients können die verfügbaren Dienste zur Laufzeit ermitteln. Dynamische Namespaces basieren häufig auf Übertragungen, um die fortgesetzte Verfügbarkeit eines Netzwerk Dienstanbieter anzugeben. Zu den älteren Beispielen dynamischer Namespaces gehört der in einer NetWare-Umgebung verwendete Service Advertising Protocol (SAP)-Namespace und der von AppleTalk verwendete NBP-Namespace (Name Binding Protocol). Der PNRP-Namespace (Peer Name Resolution Protocol), der unter Windows verwendet wird, ist ein aktuelleres Beispiel für einen dynamischen Namespace.
+Dynamische Namespaces ermöglichen es Diensten, sich dynamisch beim Namespace zu registrieren und clients zur Laufzeit die verfügbaren Dienste zu entdecken. Dynamische Namespaces basieren häufig auf Broadcasts, um die weitere Verfügbarkeit eines Netzwerkdiensts anzugeben. Ältere Beispiele für dynamische Namespaces sind der SAP-Namespace (Service Advertising Protocol), der in einer NetWare-Umgebung verwendet wird, und der Namespace des Namensbindungsprotokolls (Name Binding Protocol, NBP), der von AppleTalk verwendet wird. Der PNRP-Namespace (Peer Name Resolution Protocol), der für Windows verwendet wird, ist ein aktuelleres Beispiel für einen dynamischen Namespace.
 
-Statische Namespaces erfordern, dass alle Dienste vorab registriert werden, d. h. wenn der Namespace erstellt wird. Ein Beispiel für einen statischen Namespace sind die *Hosts*, *Protokoll*-und *Dienst* Dateien, die von den meisten TCP/IP-Implementierungen verwendet werden. Unter Windows befinden sich diese Dateien in der Regel im Ordner *C: \\ Windows \\ system32 \\ Drivers \\ usw* .
+Statische Namespaces erfordern, dass alle Dienste im Voraus registriert werden, d.&a; wenn der Namespace erstellt wird. Ein Beispiel für einen statischen Namespace  sind die *Host-,* Protokoll- und Dienstdateien, die von den meisten TCP/IP-Implementierungen verwendet werden. Auf Windows befinden sich diese Dateien in der Regel im Ordner *C: \\ Windows \\ System32-Treiber \\ \\ usw.*
 
-Persistente Namespaces ermöglichen es Diensten, sich dynamisch bei dem Namespace zu registrieren. Im Gegensatz zu dynamischen Namespaces behalten persistente Namespaces jedoch die Registrierungsinformationen im nicht flüchtigen Speicher bei, wo Sie bis zu dem Zeitpunkt verbleibt, an dem der Dienst die Entfernung anfordert. Persistente Namespaces werden durch Verzeichnisdienste wie z. b. X. 500 und den NDS (NetWare-Verzeichnisdienst) typisierten. Diese Umgebungen ermöglichen das Hinzufügen, löschen und Ändern von Dienst Eigenschaften. Außerdem kann das Dienst Objekt, das den Dienst im Verzeichnisdienst darstellt, über eine Vielzahl von Attributen verfügen, die mit dem Dienst verknüpft sind. Das wichtigste Attribut für Client Anwendungen sind die Adressierungs Informationen des dienstanders. DNS ist ein weiteres Beispiel für einen persistenten Namespace. Obwohl es eine programmgesteuerte Methode zum Auflösen von DNS-Namen mithilfe von Windows Sockets gibt, unterstützt der DNS-Namespace Anbieter in Windows das Registrieren neuer DNS-Namen mit Winsock nicht. Sie müssen die DNS-Funktionen direkt verwenden, um DNS-Namen zu registrieren. Weitere Informationen finden Sie in der [DNS-Referenz](../dns/dns-reference.md).
+Persistente Namespaces ermöglichen es Diensten, sich während der Zeit beim Namespace zu registrieren. Im Gegensatz zu dynamischen Namespaces behalten persistente Namespaces die Registrierungsinformationen jedoch in einem nicht permanenten Speicher bei, in dem sie so lange beibehalten werden, bis der Dienst anfing, sie zu entfernen. Persistente Namespaces werden von Verzeichnisdiensten wie X.500 und dem NDS (NetWare Directory Service) typisiert. Diese Umgebungen ermöglichen das Hinzufügen, Löschen und Ändern von Diensteigenschaften. Darüber hinaus kann das Dienstobjekt, das den Dienst innerhalb des Verzeichnisdiensts darstellt, über eine Vielzahl von Attributen verfügen, die dem Dienst zugeordnet sind. Das wichtigste Attribut für Clientanwendungen sind die Adressierungsinformationen des Diensts. DNS ist ein weiteres Beispiel für einen persistenten Namespace. Obwohl es eine programmgesteuerte Möglichkeit gibt, DNS-Namen mithilfe von Windows Sockets aufzulösen, unterstützt der DNS-Namespaceanbieter in Windows die Registrierung neuer DNS-Namen mit Winsock nicht. Sie müssen die DNS-Funktionen direkt verwenden, um DNS-Namen zu registrieren. Weitere Informationen finden Sie in der [DNS-Referenz.](../dns/dns-reference.md)
 
-## <a name="namespace-organization"></a>Namespace Organisation
+## <a name="namespace-organization"></a>Namespaceorganisation
 
-Viele Namespaces sind hierarchisch angeordnet. Einige (z. b. X. 500 und NDS) ermöglichen eine unbegrenzte Schachtelung. Andere ermöglichen das Kombinieren von Diensten zu einer einzelnen Hierarchie-oder Gruppenebene. Dies wird in der Regel als *Arbeitsgruppe* bezeichnet. Beim Erstellen einer Abfrage ist es häufig erforderlich, einen Kontext Punkt innerhalb einer Namespace Hierarchie einzurichten, von der die Suche beginnt.
+Viele Namespaces sind hierarchisch angeordnet. Einige, z. B. X.500 und NDS, ermöglichen eine unbegrenzte Schachtelung. Andere ermöglichen die Kombination von Diensten in einer einzelnen Hierarchie- oder Gruppenebene. Dies wird in der Regel als Arbeitsgruppe *bezeichnet.* Beim Erstellen einer Abfrage ist es häufig erforderlich, einen Kontextpunkt innerhalb einer Namespacehierarchie zu erstellen, ab der die Suche beginnt.
 
-## <a name="namespace-provider-architecture"></a>Architektur von Namespace Anbietern
+## <a name="namespace-provider-architecture"></a>Architektur des Namespaceanbieters
 
-Natürlich unterscheiden sich die programmgesteuerten Schnittstellen, die verwendet werden, um die verschiedenen Typen von Namespaces abzufragen und um Informationen in einem Namespace zu registrieren (falls unterstützt). Bei einem *Namespace Anbieter* handelt es sich um eine lokal residente Software, die die Zuordnung zwischen dem Winsock-Namespace SPI und einigen vorhandenen Namespaces (die lokal implementiert werden können oder auf die über das Netzwerk zugegriffen werden kann). Die Architektur des Namespace Anbieters wird wie folgt veranschaulicht:
+Natürlich unterscheiden sich die programmgesteuerten Schnittstellen, die zum Abfragen der verschiedenen Namespacetypen und zum Registrieren von Informationen innerhalb eines Namespace (sofern unterstützt) verwendet werden, stark. Ein *Namespaceanbieter* ist eine lokal gespeicherte Software, die weiß, wie zwischen der Winsock-Namespace-SPI und einem vorhandenen Namespace (der lokal implementiert werden oder über das Netzwerk darauf zugegriffen werden kann) zuordnen kann. Die Architektur des Namespaceanbieters wird wie folgt veranschaulicht:
 
-![Architektur von Namespace Anbietern](images/ovrvw3-1.png)
+![Architektur des Namespaceanbieters](images/ovrvw3-1.png)
 
-Beachten Sie, dass es für einen bestimmten Namespace, z. a. DNS, möglich ist, mehr als einen Namespace Anbieter auf einem bestimmten Computer zu installieren.
+Beachten Sie, dass für einen bestimmten Namespace, z. B. DNS, mehrere Namespaceanbieter auf einem bestimmten Computer installiert sein können.
 
-Wie bereits erwähnt, verweist der allgemeine Begriffs *Dienst* auf den Server-die Hälfte einer Client/Server-Anwendung. In Winsock ist ein Dienst einer *Dienstklasse* zugeordnet, und jede Instanz eines bestimmten Dienstanbieter verfügt über einen *Dienstnamen* , der innerhalb der Dienstklasse eindeutig sein muss. Beispiele für Dienst Klassen sind FTP-Server, SQL Server, XYZ Corp. Employee Info Server usw. Wie das Beispiel veranschaulicht, sind einige Dienst Klassen bekannt, während andere für eine bestimmte vertikale Anwendung eindeutig und spezifisch sind. In beiden Fällen wird jede Dienstklasse durch einen Klassennamen und einen Klassen Bezeichner dargestellt. Der Klassenname muss nicht unbedingt eindeutig sein, aber der Klassen Bezeichner muss lauten. GUID (Global Unique Identifier) werden zur Darstellung von Dienst Klassen bezeichnerbezeichnerverwendet. Für bekannte Dienste wurden Klassennamen und Klassen Bezeichner (GUIDs) vorab zugeordnet, und es stehen Makros für die Konvertierung zur Verfügung, z. b. TCP-Portnummern (in der Host-Byte-Reihenfolge) und die entsprechenden klassenbezeichnerguids. Für andere Dienste wählt der Entwickler den Klassennamen aus und verwendet das Uuidgen.exe Hilfsprogramm, um eine GUID für den Klassen Bezeichner zu generieren.
+Wie bereits erwähnt, bezieht sich der generische Begriff *Dienst* auf die Serverhälfte einer Client-/Serveranwendung. In Winsock ist ein Dienst einer Dienstklasse zugeordnet, und jede  Instanz eines bestimmten Diensts hat einen Dienstnamen, der innerhalb der Dienstklasse eindeutig sein muss. Beispiele für Dienstklassen sind FTP-Server, SQL Server, XYZ Corp. Employee Info Server usw. Wie im Beispiel veranschaulicht wird, sind einige Dienstklassen bekannt, während andere eindeutig und spezifisch für eine bestimmte vertikale Anwendung sind. In beiden Fällen wird jede Dienstklasse sowohl durch einen Klassennamen als auch durch einen Klassenbezeichner dargestellt. Der Klassenname muss nicht unbedingt eindeutig sein, aber der Klassenbezeichner muss sein. Globally Unique Identifiers (GUIDs) werden verwendet, um Dienstklassenbezeichner zu darstellen. Für bekannte Dienste wurden Klassennamen und Klassenbezeichner (GUIDs) vorab zugewiesen, und Makros können z. B. zwischen TCP-Portnummern (in Host-Byte-Reihenfolge) und den entsprechenden Klassenbezeichner-GUIDs konvertiert werden. Bei anderen Diensten wählt der Entwickler den Klassennamen aus und verwendet das Hilfsprogramm Uuidgen.exe, um eine GUID für den Klassenbezeichner zu generieren.
 
-Der Begriff einer Dienstklasse gibt an, dass eine Gruppe von Attributen eingerichtet werden kann, die von allen Instanzen eines bestimmten dienstanzen gemeinsam gehalten werden. Dieser Satz von Attributen wird zu dem Zeitpunkt bereitgestellt, zu dem die Dienstklasse in Winsock definiert ist, und wird als Dienst Klassen Schema-Informationen bezeichnet. Wenn ein Dienst installiert und auf einem Host Computer verfügbar gemacht wird, wird dieser Dienst als *instanziiert* betrachtet, und der zugehörige Dienst Name wird verwendet, um eine bestimmte Instanz des Diensts von anderen Instanzen zu unterscheiden, die dem Namespace bekannt sein könnten.
+Das Konzept einer Dienstklasse ist vorhanden, um die Einrichtung einer Gruppe von Attributen zu ermöglichen, die von allen Instanzen eines bestimmten Diensts gemeinsam verwendet werden. Dieser Attributsatz wird zum Zeitpunkt der Definition der Dienstklasse für Winsock bereitgestellt und als Schemainformationen der Dienstklasse bezeichnet. Wenn ein Dienst auf einem Hostcomputer installiert und verfügbar gemacht wird, wird dieser Dienst als *instanziiert* betrachtet, und sein Dienstname wird verwendet, um eine bestimmte Instanz des Diensts von anderen Instanzen zu unterscheiden, die dem Namespace bekannt sein können.
 
-Beachten Sie, dass die Installation einer Dienstklasse nur auf Computern erfolgen muss, auf denen der Dienst ausgeführt wird, und nicht auf allen Clients, die den Dienst verwenden können. Wenn möglich, stellt das Ws2- \_32.dll zu dem Zeitpunkt, zu dem eine Instanziierung eines Dienstanbieters registriert oder eine Dienst Abfrage initiiert wird, Schema Informationen für den Dienst dar. Die Ws2- \_32.dll speichert diese Informationen natürlich nicht selbst, sondern versucht, Sie von einem Namespace Anbieter abzurufen, der die Möglichkeit zur Bereitstellung dieser Daten angegeben hat. Da es keine Garantie gibt, dass der Ws2- \_32.dll das Dienst Klassen Schema bereitstellen kann, müssen Namespace Anbieter, die diese Informationen benötigen, über einen Fall Back Mechanismus verfügen, um ihn über Namespace spezifische Mittel zu erhalten.
+Beachten Sie, dass die Installation einer Dienstklasse nur auf Computern erfolgen muss, auf denen der Dienst ausgeführt wird, nicht auf allen Clients, die den Dienst möglicherweise nutzen. Nach Möglichkeit stellt die Ws2-32.dll Dienstklassenschemainformationen für einen Namespaceanbieter zur Verfügung, wenn eine Instanziierung eines Diensts registriert oder eine Dienstabfrage \_ initiiert wird. Der Ws232.dll speichert diese Informationen natürlich nicht selbst, sondern versucht, sie von einem Namespaceanbieter abzurufen, der seine Fähigkeit zur Bereitstellung dieser \_ Daten angegeben hat. Da es keine Garantie gibt, dass die Ws2-32.dll das Dienstklassenschema angeben kann, müssen Namespaceanbieter, die diese Informationen benötigen, über einen Fallbackmechanismus verfügen, um sie mit namespacespezifischen Mittel \_ zu erhalten.
 
-Wie bereits erwähnt, hat das Internet das als Host zentrierte Dienstmodell zu bezeichnen. Anwendungen, die die Transport Adresse eines Diensts suchen müssen, müssen zunächst die Adresse eines bestimmten Hosts auflösen, der als Host für den Dienst bekannt ist. An diese Adresse fügen Sie die bekannte Portnummer hinzu und erstellen somit eine komplette Transport Adresse. Um die Auflösung von Hostnamen zu vereinfachen, wurde ein spezieller Dienst Klassen Bezeichner vorab zugeordnet (**svcid- \_ Hostname**). Eine Abfrage, die den **svcid- \_ Hostnamen** als Dienstklasse angibt und einen Hostnamen für den Dienst Instanznamen angibt, gibt die Host Adressinformationen zurück, wenn die Abfrage erfolgreich ist.
+Wie bereits erwähnt, hat das Internet ein sogenanntes hostzentriertes Dienstmodell übernommen. Anwendungen, die die Transportadresse eines Diensts suchen müssen, müssen in der Regel zuerst die Adresse eines bestimmten Hosts auflösen, der als Host für den Dienst bekannt ist. Zu dieser Adresse fügen sie die bekannte Portnummer hinzu und erstellen daher eine vollständige Transportadresse. Um die Auflösung von Hostnamen zu vereinfachen, wurde ein spezieller Dienstklassenbezeichner vorab zugewiesen (**SVCID \_ HOSTNAME**). Eine Abfrage, die **SVCID \_ HOSTNAME** als Dienstklasse und einen Hostnamen für den Dienstinstanznamen angibt, gibt Hostadresseninformationen zurück, wenn die Abfrage erfolgreich ist.
 
-In Windows Sockets 2 müssen Anwendungen, die Protokoll unabhängig sind, die internen Details einer Transport Adresse nicht verstehen. Daher ist es problematisch, zuerst eine Host Adresse zu erhalten und dann den Port hinzuzufügen. Um dies zu vermeiden, können Abfragen auch den bekannten Namen eines bestimmten dienstanens und das Protokoll enthalten, über das der Dienst betrieben wird, z. b. FTP über TCP. In diesem Fall gibt eine erfolgreiche Abfrage eine komplette Transport Adresse für den angegebenen Dienst auf dem angegebenen Host zurück, und die Anwendung muss die internale einer [**sockaddr**](sockaddr-2.md) -Struktur nicht überprüfen.
+In Windows Sockets 2 sollten protokollunabhängige Anwendungen vermeiden, die internen Details einer Transportadresse zu verstehen. Daher ist es problematisch, zuerst eine Hostadresse zu erhalten und dann im Port hinzuzufügen. Um dies zu vermeiden, können Abfragen auch den bekannten Namen eines bestimmten Diensts und das Protokoll enthalten, über das der Dienst ausgeführt wird, z. B. FTP über TCP. In diesem Fall gibt eine erfolgreiche Abfrage eine vollständige Transportadresse für den angegebenen Dienst auf dem angegebenen Host zurück, und die Anwendung muss die Internen einer [**Sockaddr-Struktur nicht**](sockaddr-2.md) überprüfen.
 
-Die Domain Name System des Internets verfügt nicht über ein klar definiertes Mittel zum Speichern von Schema Informationen für Dienst Klassen. Demzufolge können DNS-Namespace Anbieter für Winsock nur bekannte TCP/IP-Dienste unterstützen, für die eine Dienst Klassen-GUID vorab zugeordnet wurde.
+Die Internet-Domain Name System verfügt nicht über eine klar definierte Möglichkeit zum Speichern von Dienstklassenschemainformationen. Daher können DNS-Namespaceanbieter für Winsock nur bekannte TCP/IP-Dienste aufnehmen, für die eine Dienstklassen-GUID vorab zugewiesen wurde.
 
-In der Praxis ist dies keine ernsthafte Einschränkung, da Dienst Klassen-GUIDs für den gesamten Satz von TCP-und UDP-Ports vorab zugeordnet wurden und Makros verfügbar sind, um die GUID abzurufen, die einem beliebigen TCP-oder UDP-Port zugeordnet ist, wobei der Port in der Host-Byte-Reihenfolge ausgedrückt wird. Daher werden alle vertrauten Dienste wie http, FTP, Telnet, Whois usw. gut unterstützt.
+In der Praxis ist dies keine schwerwiegende Einschränkung, da Dienstklassen-GUIDs für den gesamten Satz von TCP- und UDP-Ports vorab zugeordnet wurden und Makros verfügbar sind, um die GUID abzurufen, die jedem TCP- oder UDP-Port mit dem Port zugeordnet ist, der in der Host-Byte-Reihenfolge ausgedrückt wird. Daher werden alle vertrauten Dienste wie HTTP, FTP, Telnet, Whois usw. gut unterstützt.
 
-Wenn wir mit unserem Dienst Klassen Beispiel fortfahren, können Instanznamen des FTP-Dienes "Alder.Intel.com" oder "FTP.Microsoft.com" lauten, während eine Instanz von "XYZ Corp. Employee Infoserver" den Namen "XYZ Corp. Employee Infoserver Version 3,5" hat.
+Wenn Sie mit unserem Dienstklassenbeispiel fortfahren, können Instanznamen des FTP-Diensts "alder.intel.com" oder "ftp.microsoft.com" sein, während eine Instanz des XYZ Corp. Employee Info Server den Namen "XYZ Corp. Employee Info Server Version 3.5" erhalten kann.
 
-In den ersten beiden Fällen wird der gewünschte Dienst durch die Kombination der Dienst Klassen-GUID für FTP und des Computer namens (angegeben als dienstinstanzname) eindeutig identifiziert. Im dritten Fall kann der Hostname, in dem sich der Dienst befindet, zum Zeitpunkt der Dienst Abfrage ermittelt werden, sodass der Dienst Instanzname keinen Hostnamen enthalten muss.
+In den ersten beiden Fällen wird der gewünschte Dienst durch die Kombination aus der Dienstklassen-GUID für FTP und dem Computernamen (angegeben als Dienstinstanzname) eindeutig identifiziert. Im dritten Fall kann der Hostname, in dem sich der Dienst befindet, zum Zeitpunkt der Dienstabfrage gefunden werden, sodass der Dienstinstanzname keinen Hostnamen enthalten muss.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[DNS-Verweis](../dns/dns-reference.md)
+[DNS-Referenz](../dns/dns-reference.md)
 </dt> <dt>
 
-[Datenstrukturen für die Namensauflösung](name-resolution-data-structures-2.md)
+[Namensauflösungsdatenstrukturen](name-resolution-data-structures-2.md)
 </dt> <dt>
 
-[Protokoll unabhängige Namensauflösung](protocol-independent-name-resolution-2.md)
+[Protokollunabhängige Namensauflösung](protocol-independent-name-resolution-2.md)
 </dt> <dt>
 
 [Registrierung und Namensauflösung](registration-and-name-resolution-2.md)
@@ -78,7 +78,7 @@ In den ersten beiden Fällen wird der gewünschte Dienst durch die Kombination d
 [**SOCKADDR**](sockaddr-2.md)
 </dt> <dt>
 
-[Zusammenfassung der namens Auflösungs Funktionen](summary-of-name-resolution-functions-2.md)
+[Zusammenfassung der Namensauflösungsfunktionen](summary-of-name-resolution-functions-2.md)
 </dt> </dl>
 
  

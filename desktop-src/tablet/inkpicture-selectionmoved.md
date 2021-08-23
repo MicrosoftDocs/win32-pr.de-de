@@ -4,16 +4,16 @@ ms.assetid: 669dc6c2-1620-40f3-b4b5-7ab8967e739a
 title: InkPicture.SelectionMoved-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2006b2580e8732c90187b265576b217cdbad9b02
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 906ee8b5ba76de85b16f7c7448c3f814905f4c2a8f49d57ae0ac51c4417c444c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108086448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966978"
 ---
 # <a name="inkpictureselectionmoved-event"></a>InkPicture.SelectionMoved-Ereignis
 
-Tritt ein, wenn sich die Position der aktuellen Auswahl geändert hat, z. B. durch Änderungen an der Benutzeroberfläche, durch Ausschneide- und Einfügevorgänge oder durch [**die Selection-Eigenschaft.**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_selection)
+Tritt ein, wenn sich die Position der aktuellen Auswahl geändert hat, z. B. durch Änderungen an der Benutzeroberfläche, durch Ausschneide- und Einfügevorgänge oder durch die [**Selection-Eigenschaft.**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_selection)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Das umgebundene Rechteck der ausgewählten [InkStrokes-Auflistung,](/previous-ve
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Ereignismethode wird in den dispatch-only-Schnittstellen (dispinterfaces) **\_ von IInkOverlayEvents** und **\_ IInkPictureEvents** mit der ID DISPID \_ IOESelectionMoved definiert.
 
@@ -56,16 +56,16 @@ Um das neue umgebundene Rechteck der Auflistung der verschobenen Striche zu erha
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps für Windows XP Tablet PC \[ Edition\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
 | Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Die getmemoryhdc-Methode ruft ein Handle für den Speichergeräte Kontext (DC) ab.
+description: Die GetMemoryHDC-Methode ruft ein Handle für den Speichergerätekontext (DC) ab.
 ms.assetid: 2c22015f-5948-4e1a-92c7-36f232816175
-title: Cbasewindow. getmemoryhdc-Methode (winutil. h)
+title: CBaseWindow.GetMemoryHDC-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c255ac8734f364597c09fc15b4aa543b1ec0a0da
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 36874817d2e1dd13c00577a91cff7f059c1f2441701012af202c4765cb23088a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016658"
 ---
-# <a name="cbasewindowgetmemoryhdc-method"></a>Cbasewindow. getmemoryhdc-Methode
+# <a name="cbasewindowgetmemoryhdc-method"></a>CBaseWindow.GetMemoryHDC-Methode
 
-Die- `GetMemoryHDC` Methode ruft ein Handle für den Speichergeräte Kontext (DC) ab.
+Die `GetMemoryHDC` -Methode ruft ein Handle für den Speichergerätekontext (DC) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein Handle für den Speicher-DC zurück.
+Gibt ein Handle an den Speicherdomänencontroller zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt ein Handle für den Speicher-DC zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

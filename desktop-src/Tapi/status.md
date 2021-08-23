@@ -1,23 +1,23 @@
 ---
-description: Die meisten Get-und Set-Vorgänge behandeln nur eine Komponente von Informationen. Die phonegetstatus-Funktion gibt umfassende Statusinformationen zu einem Telefongerät an eine Anwendung zurück.
+description: Die meisten Get- und Set-Vorgänge befassen sich nur mit einer Informationskomponente. Die phoneGetStatus-Funktion gibt vollständige Statusinformationen zu einem Telefongerät an eine Anwendung zurück.
 ms.assetid: ca38396c-6f97-4c1c-99fb-2bd64c74c626
-title: Status (telefonieapi)
+title: Status (Telefonie-API)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 44a9a93fdd97d32b477545ba0fb9f73f10b45021
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 32fd9191d4b1808ca2dc5ff20ce509b58ad27a78a354aeca4ca83f8aa60dafa1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118861827"
 ---
-# <a name="status-telephony-api"></a>Status (telefonieapi)
+# <a name="status-telephony-api"></a>Status (Telefonie-API)
 
-Die meisten Get-und Set-Vorgänge behandeln nur eine Komponente von Informationen. Die [**phonegetstatus**](/windows/desktop/api/Tapi/nf-tapi-phonegetstatus) -Funktion gibt umfassende Statusinformationen zu einem Telefongerät an eine Anwendung zurück.
+Die meisten Get- und Set-Vorgänge befassen sich nur mit einer Informationskomponente. Die [**phoneGetStatus-Funktion**](/windows/desktop/api/Tapi/nf-tapi-phonegetstatus) gibt vollständige Statusinformationen zu einem Telefongerät an eine Anwendung zurück.
 
-Wie bereits erwähnt, wird bei jeder Änderung eines Status Elements auf dem Telefongerät eine [**Telefon \_ Zustands**](phone-state.md) Meldung an die Anwendungsfunktion gesendet. Zu den Parametern dieser Nachricht gehören ein Handle für das Telefongerät und ein Hinweis auf das geänderte Status Element.
+Wie bereits erwähnt, wird bei jeder Änderung eines Statuselements auf dem Telefongerät eine [**PHONE \_ STATE-Nachricht**](phone-state.md) an die Anwendungsfunktion gesendet. Zu den Parametern dieser Nachricht gehören ein Handle für das Telefongerät und ein Hinweis auf das geänderte Statuselement.
 
-Eine Anwendung kann [**phonesetstatusmessages**](/windows/desktop/api/Tapi/nf-tapi-phonesetstatusmessages) verwenden, um die spezifischen Statusänderungen auszuwählen, für die Sie benachrichtigt werden möchten. Dementsprechend gibt [**phonegetstatusmessages**](/windows/desktop/api/Tapi/nf-tapi-phonegetstatusmessages) die Statusänderungen zurück, für die die Anwendung benachrichtigt werden soll.
+Eine Anwendung kann [**phoneSetStatusMessages**](/windows/desktop/api/Tapi/nf-tapi-phonesetstatusmessages) verwenden, um die spezifischen Statusänderungen auszuwählen, für die sie benachrichtigt werden möchte. Entsprechend gibt [**phoneGetStatusMessages die**](/windows/desktop/api/Tapi/nf-tapi-phonegetstatusmessages) Statusänderungen zurück, über die die Anwendung benachrichtigt werden möchte.
 
  
 

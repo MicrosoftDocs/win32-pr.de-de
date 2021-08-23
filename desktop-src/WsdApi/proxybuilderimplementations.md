@@ -1,21 +1,21 @@
 ---
-description: Generiert Funktionen, um typierte Proxys zu erstellen.
+description: Generiert Funktionen zum Erstellen typisierter Proxys.
 ms.assetid: 75a686ba-8112-4093-8a1b-13419018aa3a
 title: proxyBuilderImplementations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ad22348b33c60689adf60c029e3a08c2f4d417c
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: d18b13ddda25d8fa157b0399c7b9fba070534fb66e11b3fa63a122b1983dea06
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996467"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118815532"
 ---
 # <a name="proxybuilderimplementations-element"></a>proxyBuilderImplementations-Element
 
-Generiert Funktionen, um typierte Proxys zu erstellen.
+Generiert Funktionen zum Erstellen typisierter Proxys.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <proxyBuilderImplementations>
@@ -31,7 +31,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                     | BESCHREIBUNG                                                                                                                                                     |
+| Element                                     | Beschreibung                                                                                                                                                     |
 |---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Codename**](codename.md)<br/>     | Der Name, der für den Porttyp im generierten Code verwendet werden soll. Standardmäßig wird der Codename aus dem qualifizierten Namen des Porttyps generiert.<br/> <br/> |
 | [**Porttype**](porttype.md)<br/>     | Porttyp, für den Code generiert werden soll.<br/> <br/>                                                                                             |
@@ -53,7 +53,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                         | BESCHREIBUNG                                                    |
+| Element                         | Beschreibung                                                    |
 |---------------------------------|----------------------------------------------------------------|
 | [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 

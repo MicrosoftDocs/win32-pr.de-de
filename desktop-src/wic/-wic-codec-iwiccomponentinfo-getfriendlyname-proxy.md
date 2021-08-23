@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die getfriendlyname-Methode.
+description: Proxyfunktion für die GetFriendlyName-Methode.
 ms.assetid: 8ac8f954-c2b9-47a2-88fe-b56710b5630c
 title: IWICComponentInfo_GetFriendlyName_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 667571169818169cb7c7ea5a1f4d3d7eb6e1635e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5af41c00945550fc9e833b9324e22f522aa7a5e73dacd109d76159d5dd0173db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349974"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965249"
 ---
-# <a name="iwiccomponentinfo_getfriendlyname_proxy-function"></a>Iwiccomponentinfo \_ getfriendlyname \_ Proxy-Funktion
+# <a name="iwiccomponentinfo_getfriendlyname_proxy-function"></a>IWICComponentInfo \_ GetFriendlyName-Proxyfunktion \_
 
-Proxy Funktion für die [**getfriendlyname**](/windows/desktop/api/Wincodec/nf-wincodec-iwiccomponentinfo-getfriendlyname) -Methode.
+Proxyfunktion für die [**GetFriendlyName-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwiccomponentinfo-getfriendlyname)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,49 +43,49 @@ HRESULT IWICComponentInfo_GetFriendlyName_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwiccomponentinfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo) \** _
+Typ: **[ **IWICComponentInfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo)\***
 
-Zeiger auf dieses [_ *iwiccomponentinfo* *](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo) -Objekt.
+Zeiger auf dieses [**IWICComponentInfo-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo)
 
 </dd> <dt>
 
-*cchfriendlyname* \[ in\]
+*cchFriendlyName* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die Größe des *wzfriendlyname* -Puffers.
+Die Größe des *wzFriendlyName-Puffers.*
 
 </dd> <dt>
 
-*wzfriendlyname* \[ in, out\]
+*wzFriendlyName* \[ in, out\]
 </dt> <dd>
 
-Typ: **WCHAR \** _
+Typ: **WCHAR \***
 
-Ein Zeiger, der den anzeigen amen der Komponente empfängt.
+Ein Zeiger, der den Benutzerfreundlichen Namen der Komponente empfängt.
 
-Die zurückgegebene Zeichenfolge ist Gebiets Schema spezifisch, 1033 standardmäßig.
+Die zurückgegebene Zeichenfolge ist locale-spezifisch und standardmäßig 1033.
 
 </dd> <dt>
 
-_pcchActual * \[ out\]
+*pcchActual* \[ out\]
 </dt> <dd>
 
-Typ: **uint \** _
+Typ: **UINT \***
 
-Ein Zeiger, der die tatsächliche Länge des anzeigen Amens der Komponente empfängt.
+Ein Zeiger, der die tatsächliche Länge des Benutzerfreundlichnamens der Komponente empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -95,9 +95,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

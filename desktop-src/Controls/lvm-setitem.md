@@ -1,9 +1,9 @@
 ---
-title: LVM_SETITEM Meldung (kommstrg. h)
-description: Legt einige oder alle Attribute eines Listen Ansichts Elements fest. Sie können auch LVM \_ SetItem senden, um den Text eines unter Elements festzulegen. Sie können diese Nachricht explizit oder mithilfe des ListView-Elements "ListView" senden \_ .
+title: LVM_SETITEM Meldung (Commctrl.h)
+description: Legt einige oder alle Attribute eines Listenansichtselements fest. Sie können LVM \_ SETITEM auch senden, um den Text eines Unteritems festzulegen. Sie können diese Nachricht explizit oder mithilfe des ListView \_ SetItem-Makros senden.
 ms.assetid: f1189b5d-bce7-4569-b4b9-bd750d7ef505
 keywords:
-- Windows-Steuerelemente für LVM_SETITEM Meldung
+- LVM_SETITEM Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 623339c3d1ecc7a74cf20b5e52fb621666391bd5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 83ccc47c27ff05e75ba2633e18363c3e26e844c359b54d009101512fc837b668
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040371"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019158"
 ---
-# <a name="lvm_setitem-message"></a>LVM- \_ Nachricht
+# <a name="lvm_setitem-message"></a>LVM \_ SETITEM-Nachricht
 
-Legt einige oder alle Attribute eines Listen Ansichts Elements fest. Sie können auch LVM \_ SetItem senden, um den Text eines unter Elements festzulegen. Sie können diese Nachricht explizit oder mithilfe des [**ListView-Elements \_ "ListView**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setitem) " senden.
+Legt einige oder alle Attribute eines Listenansichtselements fest. Sie können LVM \_ SETITEM auch senden, um den Text eines Unteritems festzulegen. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ SetItem-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setitem) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,19 +37,19 @@ Legt einige oder alle Attribute eines Listen Ansichts Elements fest. Sie können
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur, die die neuen Element Attribute enthält. Die Member **iItem** und **iSubItem** identifizieren das Element oder das Unterelement, und das **Masken** Element gibt an, welche Attribute festgelegt werden sollen. Wenn das **Masken** Element den lvif \_ -Textwert angibt, ist der **pszText** -Member die Adresse einer auf NULL endenden Zeichenfolge, und das **cchtextmax** -Element wird ignoriert. Wenn das **Masken** Element den lvif- \_ Zustandswert angibt, gibt der **statemask** -Member an, welche Element Zustände  geändert werden sollen und ob das statusmember die Werte für diese Zustände enthält.
+Zeiger auf eine [**LVITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-lvitema) die die neuen Elementattribute enthält. Die **Elemente iItem** und **iSubItem** identifizieren das Element oder Unterelement, und der **Maskenmember** gibt an, welche Attribute festgelegt werden sollen. Wenn der **Maskenmember** den LVIF \_ TEXT-Wert angibt, ist der **pszText-Member** die Adresse einer auf NULL endenden Zeichenfolge, und der **cchTextMax-Member** wird ignoriert. Wenn der **Maskenmember** den LVIF \_ STATE-Wert angibt, gibt der **stateMask-Member** an, welche Elementzustände geändert werden sollen, und das **Zustandselement** enthält die Werte für diese Zustände.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die Attribute eines Listen Ansichts Elements festzulegen, legen Sie den **iItem** -Member der [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur auf den Index des Elements fest, und legen Sie den **iSubItem** -Member auf NULL fest. Für ein Element können Sie die Member **State**, **pszText**, **iImage** und **LPARAM** der **lvitem** -Struktur festlegen.
+Um die Attribute eines Listenansichtselements festzulegen, legen Sie das **iItem-Element** der [**LVITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-lvitema) auf den Index des Elements und das **iSubItem-Element** auf 0 (null) fest. Für ein Element können Sie die **Member state,** **pszText,** **iImage** und **lParam** der **LVITEM-Struktur** festlegen.
 
-Um den Text eines unter Elements festzulegen, legen Sie die Member **iItem** und **iSubItem** auf das jeweilige Unterelement fest, und verwenden Sie den Member **pszText** , um den Text anzugeben. Alternativ können Sie das [**ListView \_ setitemtext**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setitemtext) -Makro verwenden, um den Text eines unter Elements festzulegen. Sie können die **State** -oder **LPARAM** -Member nicht für unter Elemente festlegen, da unter Elemente nicht über diese Attribute verfügen. In Version 4,70 und höher können Sie den **iImage** -Member für unter Elemente festlegen. Das Unterelement-Bild wird angezeigt, wenn das Listenansicht-Steuerelement das erweiterte LVS-Format "from [**\_ \_ subitemimages**](extended-list-view-styles.md) " aufweist. In früheren Versionen wird das Unterelement-Bild ignoriert.
+Um den Text eines Unteritems festzulegen, legen Sie die Elemente **iItem** und **iSubItem** fest, um das bestimmte Unteritem anzugeben, und verwenden Sie das **pszText-Element,** um den Text anzugeben. Alternativ können Sie das [**ListView \_ SetItemText-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setitemtext) verwenden, um den Text eines Unteritems festzulegen. Sie können den **Zustand** oder die **lParam-Member** für Unteritems nicht festlegen, da untere Elemente nicht über diese Attribute verfügen. In Version 4.70 und höher können Sie das **iImage-Element** für Unteritems festlegen. Das Unterelementbild wird angezeigt, wenn das Listenansichtssteuerelement über den erweiterten [**LVS \_ EX \_ SUBITEMIMAGES-Stil**](extended-list-view-styles.md) verfügt. Frühere Versionen ignorieren das Unteritemimage.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,10 +57,10 @@ Um den Text eines unter Elements festzulegen, legen Sie die Member **iItem** und
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **LVM \_** "S" (Unicode) und " **LVM \_** " (ANSI)<br/>                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **LVM \_ SETITEMW** (Unicode) und **LVM \_ SETITEMA** (ANSI)<br/>                   |
 
 
 

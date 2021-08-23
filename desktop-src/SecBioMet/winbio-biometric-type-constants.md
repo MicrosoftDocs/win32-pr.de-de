@@ -1,6 +1,6 @@
 ---
-title: WINBIO_BIOMETRIC_TYPE Konstanten (winbio \_ types. h)
-description: Standard mäßige biometrische Typen, die vom National Institute of Standards and Technology Information (nistir) 6529-A definiert werden, auch bekannt als "Common biometrische Exchange Formats Framework (CBEFF)"-patronatformat A.
+title: WINBIO_BIOMETRIC_TYPE Konstanten (Winbio \_ types.h)
+description: Vom National Institute of Standards and Technology Information (NISTIR) 6529-A definierte biometrische Standardtypen, auch bekannt als Common Biometric Exchange Formats Framework (CBEFF) –Format A.
 ms.assetid: DCBDB5F9-FF81-44C1-B439-2B8C02483212
 topic_type:
 - apiref
@@ -36,46 +36,46 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f2d2ab5c41a3c2af26312c97a67d1179b50fd759
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9c1b6475433d2c0d1432e7501e6cbda46436c5a54fd13d5f254f79b678b3f7bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118911069"
 ---
-# <a name="winbio_biometric_type-constants"></a>Winbio- \_ biometrische \_ Typkonstanten
+# <a name="winbio_biometric_type-constants"></a>WINBIO \_ BIOMETRIC \_ TYPE-Konstanten
 
-Die folgenden Konstanten stellen die standardmäßigen biometrischen Typen dar, die durch das National Institute of Standards und Technology Information (nistir) 6529-A definiert sind. Diese werden auch als "Common biometrische Exchange Formats Framework" (CBEFF)-patronenformat A bezeichnet. Derzeit wird nur der **winbio- \_ \_ typfingerabdruck** unterstützt.
+Die folgenden Konstanten stellen die biometrischen Standardtypen dar, die vom National Institute of Standards and Technology Information (NISTIR) 6529-A definiert werden, auch bekannt als Common Biometric Exchange Formats Framework (CBEFF) Format A. Derzeit wird nur **WINBIO \_ TYPE \_ FINGERPRINT** unterstützt.
 
 
 
 | Konstante                                                                                                                                                                                                            | BESCHREIBUNG                                                                                                                              |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="WINBIO_STANDARD_TYPE_MASK"></span><span id="winbio_standard_type_mask"></span><dl> <dt>**winbio \_ - \_ Standardtyp \_ Maske**</dt> </dl>                 | Bitmaske, die den unterstützten Satz von biometrischen Faktoren angibt.<br/>                                                                |
-| <span id="WINBIO_NO_TYPE_AVAILABLE"></span><span id="winbio_no_type_available"></span><dl> <dt>**winbio \_ ist \_ nicht \_ verfügbar.**</dt> </dl>                    | Es ist kein biometrischer Typ verfügbar.<br/>                                                                                               |
-| <span id="WINBIO_TYPE_MULTIPLE"></span><span id="winbio_type_multiple"></span><dl> <dt>**winbio- \_ Typ \_ Multiple**</dt> </dl>                                 | Es wurden mehrere Typen angegeben.<br/>                                                                                                 |
-| <span id="WINBIO_TYPE_FACIAL_FEATURES"></span><span id="winbio_type_facial_features"></span><dl> <dt>**winbio \_ - \_ typgesichts \_ Merkmale**</dt> </dl>           | Gesichts Funktionen werden verwendet, um die Identität einer Person zu bestimmen.<br/>                                                          |
-| <span id="WINBIO_TYPE_VOICE"></span><span id="winbio_type_voice"></span><dl> <dt>**winbio \_ - \_ typstimme**</dt> </dl>                                          | Frequenz-und volumemuster in der Stimme einer Person werden verwendet, um die Identität einer Person zu bestimmen.<br/>              |
-| <span id="WINBIO_TYPE_FINGERPRINT"></span><span id="winbio_type_fingerprint"></span><dl> <dt>**winbio \_ - \_ typfingerabdruck**</dt> </dl>                        | Fingerabdruck Muster werden verwendet, um die Identität einer Person zu bestimmen.<br/>                                                     |
-| <span id="WINBIO_TYPE_IRIS"></span><span id="winbio_type_iris"></span><dl> <dt>**winbio- \_ Typ \_ IRIS**</dt> </dl>                                             | IRIS-Muster werden verwendet, um die Identität einer Person zu bestimmen. Dieser Wert wird ab Windows 10 unterstützt.<br/>            |
-| <span id="WINBIO_TYPE_RETINA"></span><span id="winbio_type_retina"></span><dl> <dt>**winbio- \_ Typ \_ RETINA**</dt> </dl>                                       | Mithilfe von Venen Mustern in der Retina wird die Identität einer Person bestimmt.<br/>                                              |
-| <span id="WINBIO_TYPE_HAND_GEOMETRY"></span><span id="winbio_type_hand_geometry"></span><dl> <dt>**winbio \_ Type \_ Hand \_ Geometry**</dt> </dl>                 | Die Form einer Hand einer Person wird zur Bestimmung der Identität einer Person verwendet.<br/>                                      |
-| <span id="WINBIO_TYPE_SIGNATURE_DYNAMICS"></span><span id="winbio_type_signature_dynamics"></span><dl> <dt>**winbio \_ - \_ Typsignatur \_ Dynamics**</dt> </dl>  | Die Muster von Force, die die Person beim Signieren Ihres Namens verwendet, wird verwendet, um die Identität einer Person zu bestimmen.<br/> |
-| <span id="WINBIO_TYPE_KEYSTROKE_DYNAMICS"></span><span id="winbio_type_keystroke_dynamics"></span><dl> <dt>**winbio- \_ Typ \_ KeyStroke \_ Dynamics**</dt> </dl>  | Die Geschwindigkeit und die Fehlermuster bei der Typisierung durch eine Person werden verwendet, um die Identität einer Person zu bestimmen.<br/>                  |
-| <span id="WINBIO_TYPE_LIP_MOVEMENT"></span><span id="winbio_type_lip_movement"></span><dl> <dt>**winbio \_ - \_ typlip- \_ Bewegung**</dt> </dl>                    | Die Änderungen in den Lips einer Person, die bei der Sprache auftreten, werden verwendet, um die Identität einer Person zu bestimmen.<br/>      |
-| <span id="WINBIO_TYPE_THERMAL_FACE_IMAGE"></span><span id="winbio_type_thermal_face_image"></span><dl> <dt>**Bild der winbio- \_ typgrafik \_ \_ \_**</dt> </dl> | Die Temperatur Muster im Gesicht einer Person werden verwendet, um die Identität einer Person zu bestimmen.<br/>                    |
-| <span id="WINBIO_TYPE_THERMAL_HAND_IMAGE"></span><span id="winbio_type_thermal_hand_image"></span><dl> <dt>**Farbbild des winbio- \_ Typs \_ \_ \_**</dt> </dl> | Die Temperatur Muster in der Hand einer Person werden verwendet, um die Identität einer Person zu bestimmen.<br/>                    |
-| <span id="WINBIO_TYPE_GAIT"></span><span id="winbio_type_gait"></span><dl> <dt>**winbio \_ Type \_ Gait**</dt> </dl>                                             | Die Muster der Bewegung, die auftreten, wenn die einzelnen Durchgänge zum Bestimmen der Identität einer Person verwendet werden.<br/>            |
-| <span id="WINBIO_TYPE_SCENT"></span><span id="winbio_type_scent"></span><dl> <dt>**winbio \_ - \_ typgeruch**</dt> </dl>                                          | Der Duft einer Person wird zur Bestimmung der Identität einer Person verwendet.<br/>                                                |
-| <span id="WINBIO_TYPE_DNA"></span><span id="winbio_type_dna"></span><dl> <dt>**winbio \_ \_ -Typ-DNA**</dt> </dl>                                                | Mithilfe von "inoxyribonucleic Acid"-Sequenzen (DNA) wird die Identität einer Person bestimmt.<br/>                                    |
-| <span id="WINBIO_TYPE_EAR_SHAPE"></span><span id="winbio_type_ear_shape"></span><dl> <dt>**winbio- \_ Typ ( \_ \_ Ohrform)**</dt> </dl>                             | Die Form eines Ohr der einzelnen wird verwendet, um die Identität einer Person zu bestimmen.<br/>                                     |
-| <span id="WINBIO_TYPE_FINGER_GEOMETRY"></span><span id="winbio_type_finger_geometry"></span><dl> <dt>**winbio \_ - \_ \_ typfingergeometrie**</dt> </dl>           | Die Formen der Finger eines einzelnen werden verwendet, um die Identität einer Person zu bestimmen.<br/>                               |
-| <span id="WINBIO_TYPE_PALM_PRINT"></span><span id="winbio_type_palm_print"></span><dl> <dt>**winbio- \_ Typ ( \_ Palmen \_ Druck)**</dt> </dl>                          | Die Form der Palme wird zum Bestimmen der Identität einer Person verwendet.<br/>                                                     |
-| <span id="WINBIO_TYPE_VEIN_PATTERN"></span><span id="winbio_type_vein_pattern"></span><dl> <dt>**winbio \_ - \_ \_ Typmuster**</dt> </dl>                    | Muster in den Adern unterhalb der Skin der Hand einer einzelnen Person werden verwendet, um die Identität einer Person zu bestimmen.<br/>   |
-| <span id="WINBIO_TYPE_FOOT_PRINT"></span><span id="winbio_type_foot_print"></span><dl> <dt>**winbio- \_ Typ- \_ \_ Fußabdruck**</dt> </dl>                          | Die Form des Fußes wird verwendet, um die Identität einer Person zu bestimmen.<br/>                                                     |
-| <span id="WINBIO_TYPE_OTHER"></span><span id="winbio_type_other"></span><dl> <dt>**anderer winbio- \_ Typ \_**</dt> </dl>                                          | Die unterstützten biometrischen Daten werden nicht durch die aktuellen Konstanten definiert.<br/>                                                         |
-| <span id="WINBIO_TYPE_PASSWORD"></span><span id="winbio_type_password"></span><dl> <dt>**winbio \_ - \_ typkennwort**</dt> </dl>                                 | Kenn Wort Daten werden verwendet, um die Identität einer Person zu bestimmen.<br/>                                                             |
-| <span id="WINBIO_TYPE_ANY"></span><span id="winbio_type_any"></span><dl> <dt>**winbio- \_ Typ \_ beliebig**</dt> </dl>                                                | Jeder Datentyp wird verwendet, um die Identität einer einzelnen Person zu bestimmen.<br/>                                                          |
+| <span id="WINBIO_STANDARD_TYPE_MASK"></span><span id="winbio_standard_type_mask"></span><dl> <dt>**WINBIO \_ STANDARD \_ TYPE \_ MASK**</dt> </dl>                 | Bitmaske, die den unterstützten Satz biometrischer Faktoren angibt.<br/>                                                                |
+| <span id="WINBIO_NO_TYPE_AVAILABLE"></span><span id="winbio_no_type_available"></span><dl> <dt>**WINBIO \_ KEIN \_ TYP \_ VERFÜGBAR**</dt> </dl>                    | Es ist kein biometrischer Typ verfügbar.<br/>                                                                                               |
+| <span id="WINBIO_TYPE_MULTIPLE"></span><span id="winbio_type_multiple"></span><dl> <dt>**WINBIO \_ TYPE \_ MULTIPLE**</dt> </dl>                                 | Es werden mehrere Typen angegeben.<br/>                                                                                                 |
+| <span id="WINBIO_TYPE_FACIAL_FEATURES"></span><span id="winbio_type_facial_features"></span><dl> <dt>**\_GESICHTSMERKMALE DES WINBIO-TYPS \_ \_**</dt> </dl>           | Gesichtsmerkmale werden verwendet, um die Identität einer Person zu bestimmen.<br/>                                                          |
+| <span id="WINBIO_TYPE_VOICE"></span><span id="winbio_type_voice"></span><dl> <dt>**WINBIO \_ TYPE \_ VOICE**</dt> </dl>                                          | Häufigkeits- und Lautstärkemuster in der Stimme einer Person werden verwendet, um die Identität einer Person zu bestimmen.<br/>              |
+| <span id="WINBIO_TYPE_FINGERPRINT"></span><span id="winbio_type_fingerprint"></span><dl> <dt>**\_WINBIO-FINGERABDRUCKTYP \_**</dt> </dl>                        | Fingerabdruckmuster werden verwendet, um die Identität einer Person zu bestimmen.<br/>                                                     |
+| <span id="WINBIO_TYPE_IRIS"></span><span id="winbio_type_iris"></span><dl> <dt>**\_WINBIO-TYP \_ IRIS**</dt> </dl>                                             | Irismuster werden verwendet, um die Identität einer Person zu bestimmen. Dieser Wert wird ab Windows 10 unterstützt.<br/>            |
+| <span id="WINBIO_TYPE_RETINA"></span><span id="winbio_type_retina"></span><dl> <dt>**\_WINBIO-TYP \_ NETZNETZ**</dt> </dl>                                       | Vein-Muster in der Netznetzleiste werden verwendet, um die Identität einer Person zu bestimmen.<br/>                                              |
+| <span id="WINBIO_TYPE_HAND_GEOMETRY"></span><span id="winbio_type_hand_geometry"></span><dl> <dt>**HANDGEOMETRIE DES \_ WINBIO-TYPS \_ \_**</dt> </dl>                 | Die Form einer Hand einer Person wird verwendet, um die Identität einer Person zu bestimmen.<br/>                                      |
+| <span id="WINBIO_TYPE_SIGNATURE_DYNAMICS"></span><span id="winbio_type_signature_dynamics"></span><dl> <dt>**\_WINBIO-TYPSIGNATUR \_ \_ DYNAMICS**</dt> </dl>  | Die Force-Muster, die die Person beim Signieren ihres Namens verwendet, werden verwendet, um die Identität einer Person zu bestimmen.<br/> |
+| <span id="WINBIO_TYPE_KEYSTROKE_DYNAMICS"></span><span id="winbio_type_keystroke_dynamics"></span><dl> <dt>**WINBIO \_ TYPE \_ KEYSTROKE \_ DYNAMICS**</dt> </dl>  | Die Geschwindigkeits- und Fehlermuster bei der Eingabe durch eine Person werden verwendet, um die Identität einer Person zu bestimmen.<br/>                  |
+| <span id="WINBIO_TYPE_LIP_MOVEMENT"></span><span id="winbio_type_lip_movement"></span><dl> <dt>**WINBIO \_ TYPE \_ LIP \_ MOVEMENT**</dt> </dl>                    | Die Änderungen an den Kanten einer Person, die auftreten, wenn sie sprechen, werden verwendet, um die Identität einer Person zu bestimmen.<br/>      |
+| <span id="WINBIO_TYPE_THERMAL_FACE_IMAGE"></span><span id="winbio_type_thermal_face_image"></span><dl> <dt>**BILD DES \_ WINBIO-TYPS \_ \_ "WÄRMEBILD" \_**</dt> </dl> | Die Temperaturmuster im Gesicht einer Person werden verwendet, um die Identität einer Person zu bestimmen.<br/>                    |
+| <span id="WINBIO_TYPE_THERMAL_HAND_IMAGE"></span><span id="winbio_type_thermal_hand_image"></span><dl> <dt>**\_WINBIO-TYP \_ : \_ \_ WÄRMEHANDBILD**</dt> </dl> | Die Temperaturmuster in der Hand einer Person werden verwendet, um die Identität einer Person zu bestimmen.<br/>                    |
+| <span id="WINBIO_TYPE_GAIT"></span><span id="winbio_type_gait"></span><dl> <dt>**\_WINBIO-TYP \_ GAIT**</dt> </dl>                                             | Die Bewegungsmuster, die auftreten, wenn die einzelnen Durchläufe verwendet werden, um die Identität einer Einzelperson zu bestimmen.<br/>            |
+| <span id="WINBIO_TYPE_SCENT"></span><span id="winbio_type_scent"></span><dl> <dt>**\_WINBIO-TYP \_ "FÜSSLING"**</dt> </dl>                                          | Die Identität einer Einzelperson wird verwendet, um die Identität einer Person zu bestimmen.<br/>                                                |
+| <span id="WINBIO_TYPE_DNA"></span><span id="winbio_type_dna"></span><dl> <dt>**\_ \_ WINBIO-TYP-DNA**</dt> </dl>                                                | DNA-Sequenzen (Dekreribonucleic Acid) werden verwendet, um die Identität einer Person zu bestimmen.<br/>                                    |
+| <span id="WINBIO_TYPE_EAR_SHAPE"></span><span id="winbio_type_ear_shape"></span><dl> <dt>**FORM \_ DES \_ WINBIO-TYPS \_ "EAR"**</dt> </dl>                             | Die Form eines Gehörs der Person wird verwendet, um die Identität einer Person zu bestimmen.<br/>                                     |
+| <span id="WINBIO_TYPE_FINGER_GEOMETRY"></span><span id="winbio_type_finger_geometry"></span><dl> <dt>**\_ \_ WINBIO-TYPFINGERGEOMETRIE \_**</dt> </dl>           | Die Formen der Finger einer Einzelperson werden verwendet, um die Identität einer Person zu bestimmen.<br/>                               |
+| <span id="WINBIO_TYPE_PALM_PRINT"></span><span id="winbio_type_palm_print"></span><dl> <dt>**WINBIO \_ TYPE \_ PALM \_ PRINT**</dt> </dl>                          | Die Form der Handfläche wird verwendet, um die Identität einer Person zu bestimmen.<br/>                                                     |
+| <span id="WINBIO_TYPE_VEIN_PATTERN"></span><span id="winbio_type_vein_pattern"></span><dl> <dt>**\_ \_ WINBIO-TYP-VEIN-MUSTER \_**</dt> </dl>                    | Muster in den Adern unterhalb der Skin der Hand einer Person werden verwendet, um die Identität einer Person zu bestimmen.<br/>   |
+| <span id="WINBIO_TYPE_FOOT_PRINT"></span><span id="winbio_type_foot_print"></span><dl> <dt>**\_WINBIO-TYP \_ : \_ FUßDRUCK**</dt> </dl>                          | Die Form des Fußes wird verwendet, um die Identität einer Person zu bestimmen.<br/>                                                     |
+| <span id="WINBIO_TYPE_OTHER"></span><span id="winbio_type_other"></span><dl> <dt>**WINBIO \_ TYPE \_ OTHER**</dt> </dl>                                          | Die unterstützten biometrischen Daten werden nicht durch die aktuellen Konstanten definiert.<br/>                                                         |
+| <span id="WINBIO_TYPE_PASSWORD"></span><span id="winbio_type_password"></span><dl> <dt>**\_ \_ WINBIO-TYPKENNWORT**</dt> </dl>                                 | Kennwortdaten werden verwendet, um die Identität einer Person zu bestimmen.<br/>                                                             |
+| <span id="WINBIO_TYPE_ANY"></span><span id="winbio_type_any"></span><dl> <dt>**WINBIO \_ TYPE \_ ANY**</dt> </dl>                                                | Jede Art von Daten wird verwendet, um die Identität einer Einzelperson zu bestimmen.<br/>                                                          |
 
 
 
@@ -85,17 +85,17 @@ Die folgenden Konstanten stellen die standardmäßigen biometrischen Typen dar, 
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                                                                                  |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h für Client Anwendungen oder winbio \_ Adapters. h für Adapter)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                                                                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                                                                                  |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (winbio.h für Clientanwendungen oder Winbio \_ adapters.h für Adapter einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Konstanten](client-application-constants.md)
+[Clientanwendungskonstanten](client-application-constants.md)
 </dt> </dl>
 
  

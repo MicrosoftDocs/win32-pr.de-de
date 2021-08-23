@@ -1,28 +1,28 @@
 ---
-description: 'Remotable-Version der imfmediastream:: requestsample-Methode.'
+description: Remotable-Version der METHODE "APKMediaStream::RequestSample".
 ms.assetid: 05ed4de0-fe5c-4183-8f1d-55d5a27e436a
-title: Remoterequestsample (mfobjects. h)
+title: RemoteRequestSample (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c8b06f0501de9cc041bf5776adb5e17e59a8c17
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0b572a9de9a74a744b9a9fc2c31dd816900301da623869cecdb03820ccbcf1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357430"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119034908"
 ---
-# <a name="remoterequestsample"></a>Remoterequestsample
+# <a name="remoterequestsample"></a>RemoteRequestSample
 
-Remotable-Version der [**imfmediastream:: requestsample**](/windows/desktop/api/mfidl/nf-mfidl-imfmediastream-requestsample) -Methode.
+Remotable-Version der [**METHODE "APKMediaStream::RequestSample".**](/windows/desktop/api/mfidl/nf-mfidl-imfmediastream-requestsample)
 
 ``` syntax
 [call_as(RequestSample)]
 HRESULT RemoteRequestSample();
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen können diese Methode nicht direkt aufzurufen, und-Objekte implementieren diese Methode nicht. Die-Methode wird nicht in der vtable für die-Schnittstelle angezeigt. Wenn [**requestsample**](/windows/desktop/api/mfidl/nf-mfidl-imfmediastream-requestsample) über Prozess Grenzen hinweg aufgerufen wird, übersetzt der Media Foundation Proxy/Stub-DLL den Aufruf in einen Aufruf der Remote Methode und übersetzt ihn anschließend wieder.
+Anwendungen können diese Methode nicht direkt aufrufen, und Objekte implementieren diese Methode nicht. Die -Methode wird in der vtable für die -Schnittstelle nicht angezeigt. Wenn [**RequestSample**](/windows/desktop/api/mfidl/nf-mfidl-imfmediastream-requestsample) über Prozessgrenzen hinweg aufgerufen wird, übersetzt die Media Foundation Proxy-/Stub-DLL den Aufruf in einen Aufruf der Remotemethode und übersetzt ihn dann zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -30,10 +30,10 @@ Anwendungen können diese Methode nicht direkt aufzurufen, und-Objekte implement
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                                              |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Mfuuid. lib</dt> </dl>                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                                              |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Mfuuid.lib</dt> </dl>                    |
 
 
 
@@ -41,7 +41,7 @@ Anwendungen können diese Methode nicht direkt aufzurufen, und-Objekte implement
 
 <dl> <dt>
 
-[**IMF Media Stream**](/windows/desktop/api/mfidl/nn-mfidl-imfmediastream)
+[**WFMEDIASTREAM**](/windows/desktop/api/mfidl/nn-mfidl-imfmediastream)
 </dt> </dl>
 
  

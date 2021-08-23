@@ -1,7 +1,7 @@
 ---
-description: Zeiger auf den Filter Diagramm-Manager.
+description: Zeiger auf den Filterdiagramm-Manager.
 ms.assetid: ad736a2d-1dc5-4be9-8b9b-d2cfb87f2576
-title: 'Cbasefilter:: m_pGraph Member (amfilter. h)'
+title: CBaseFilter::m_pGraph-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 03083bf76e3f9daf912cc0f15b9e1408b28c8dba
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9c7f59a9fa66525a3d3fc13cecb1f18d3860e1bdec6ad9953365acad29a97332
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367654"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017158"
 ---
-# <a name="cbasefilterm_pgraph-member"></a>Cbasefilter:: m- \_ PGraph-Member
+# <a name="cbasefilterm_pgraph-member"></a>CBaseFilter::m \_ pGraph-Member
 
-Zeiger auf den Filter Diagramm-Manager.
+Zeiger auf den Filterdiagramm-Manager.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ IFilterGraph *m_pGraph;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

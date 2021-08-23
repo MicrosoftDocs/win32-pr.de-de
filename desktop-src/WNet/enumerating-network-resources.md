@@ -1,30 +1,30 @@
 ---
-title: Auflisten von Netzwerkressourcen
-description: Das folgende Beispiel veranschaulicht eine Anwendungs definierte Funktion (enumeratefunc), die alle Ressourcen in einem Netzwerk auflistet.
+title: Aufzählen von Netzwerkressourcen
+description: Das folgende Beispiel veranschaulicht eine anwendungsdefinierte Funktion (EnumerateFunc), die alle Ressourcen in einem Netzwerk aufzählt.
 ms.assetid: f5872ee7-483d-406a-b7d8-4ce93613fd29
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2313e679746b09603d2514b418abf281fefa9bc5
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 633a8b03dd538853a0b339ee727c18fb05b2231b7690d89dea0a83264f7faf8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119053329"
 ---
-# <a name="enumerating-network-resources"></a>Auflisten von Netzwerkressourcen
+# <a name="enumerating-network-resources"></a>Aufzählen von Netzwerkressourcen
 
-Das folgende Beispiel veranschaulicht eine Anwendungs definierte Funktion (enumeratefunc), die alle Ressourcen in einem Netzwerk auflistet. Im Beispiel wird **null** für den Zeiger auf die Struktur " [**nettresource**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) " angegeben, denn wenn " [**WNetOpenEnum**](/windows/win32/api/winnetwk/nf-winnetwk-wnetopenenuma) " einen **null** -Zeiger empfängt, ruft er ein Handle an den Stamm des Netzwerks ab.
+Das folgende Beispiel veranschaulicht eine anwendungsdefinierte Funktion (EnumerateFunc), die alle Ressourcen in einem Netzwerk aufzählt. Im Beispiel wird **NULL** für den Zeiger auf die [**NETRESOURCE-Struktur**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) angegeben, da [**WNetOpenEnum**](/windows/win32/api/winnetwk/nf-winnetwk-wnetopenenuma) beim Empfangen eines **NULL-Zeigers** ein Handle zum Stamm des Netzwerks abruft.
 
-Um mit der Enumeration einer Netzwerk Container Ressource zu beginnen, sollte Ihre Anwendung die folgenden Schritte ausführen:
+Um mit der Enumeration einer Netzwerkcontainerressource zu beginnen, sollte Ihre Anwendung die folgenden Schritte ausführen:
 
-1.  Übergeben Sie die Adresse einer [**nettresource**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) -Struktur, die die Ressource darstellt, an die Funktion [**WNetOpenEnum**](/windows/win32/api/winnetwk/nf-winnetwk-wnetopenenuma) .
-2.  Weisen Sie einen Puffer zu, der groß genug ist, um das Array von [**artresource**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) -Strukturen aufzunehmen, die von der [**wnettenumschlag**](/windows/win32/api/winnetwk/nf-winnetwk-wnetenumresourcea) -Funktion zurückgegeben werden, sowie die Zeichen folgen, auf die ihre Elemente
-3.  Übergeben Sie das von [**WNetOpenEnum**](/windows/win32/api/winnetwk/nf-winnetwk-wnetopenenuma) zurückgegebene Ressourcen Handle an die [**wnettenumresource**](/windows/win32/api/winnetwk/nf-winnetwk-wnetenumresourcea) -Funktion.
-4.  Schließen Sie das Ressourcen handle, wenn es nicht mehr benötigt wird, indem Sie die [**wnetcloseenum**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcloseenum) -Funktion aufrufen.
+1.  Übergeben Sie die Adresse einer [**NETRESOURCE-Struktur,**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) die die Ressource darstellt, an die [**WNetOpenEnum-Funktion.**](/windows/win32/api/winnetwk/nf-winnetwk-wnetopenenuma)
+2.  Ordnen Sie einen Puffer zu, der groß genug ist, um das Array von [**NETRESOURCE-Strukturen**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) zu speichern, das die [**WNetEnumResource-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetenumresourcea) zurückgibt, sowie die Zeichenfolgen, auf die ihre Member zeigen.
+3.  Übergeben Sie das von [**WNetOpenEnum zurückgegebene**](/windows/win32/api/winnetwk/nf-winnetwk-wnetopenenuma) Ressourcenhand handle an die [**WNetEnumResource-Funktion.**](/windows/win32/api/winnetwk/nf-winnetwk-wnetenumresourcea)
+4.  Schließen Sie das Ressourcenhand handle, wenn es nicht mehr benötigt wird, indem Sie die [**WNetCloseEnum-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcloseenum) aufrufen.
 
-Sie können fortfahren, indem Sie eine Container Ressource auflisten, die im Array der von [**wnettenumresource**](/windows/win32/api/winnetwk/nf-winnetwk-wnetenumresourcea)abgerufenen [**artresource**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) -Strukturen beschrieben wird. Wenn der **dwusage** -Member der Struktur " **nettresource** " gleich dem ResourceUsage \_ -Container ist, übergeben Sie die Adresse der Struktur an die Funktion " [**WNetOpenEnum**](/windows/win32/api/winnetwk/nf-winnetwk-wnetopenenuma) ", um den Container zu öffnen und die Enumeration fortzusetzen. Wenn **dwusage** gleich ResourceUsage \_ Connectable ist, kann die Anwendung die Adresse der Struktur an die [**WNetAddConnection2**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection2a) -Funktion oder die [**WNetAddConnection3**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection3a) -Funktion übergeben, um eine Verbindung mit der Ressource herzustellen.
+Sie können mit dem Aufzählen einer Containerressource fortfahren, die im Array von [**NETRESOURCE-Strukturen**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) beschrieben wird, die von [**WNetEnumResource abgerufen werden.**](/windows/win32/api/winnetwk/nf-winnetwk-wnetenumresourcea) Wenn **der dwUsage-Member** der **NETRESOURCE-Struktur** gleich RESOURCEUSAGE CONTAINER ist, übergeben Sie die Adresse der Struktur an die \_ [**WNetOpenEnum-Funktion,**](/windows/win32/api/winnetwk/nf-winnetwk-wnetopenenuma) um den Container zu öffnen und die Enumeration fortzufahren. Wenn **dwUsage** gleich RESOURCEUSAGE CONNECTABLE ist, kann die Anwendung die Adresse der Struktur an die \_ [**WNetAddConnection2-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection2a) oder die [**WNetAddConnection3-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetaddconnection3a) übergeben, um eine Verbindung mit der Ressource herzustellen.
 
-Zuerst Ruft das Beispiel die [**WNetOpenEnum**](/windows/win32/api/winnetwk/nf-winnetwk-wnetopenenuma) -Funktion auf, um die-Enumeration zu starten. Das Beispiel ruft die [**GlobalAlloc**](/windows/desktop/api/winbase/nf-winbase-globalalloc) -Funktion auf, um den erforderlichen Puffer zuzuordnen, und ruft dann die [**ZeroMemory**](/previous-versions/windows/desktop/legacy/aa366920(v=vs.85)) -Funktion auf, um den Pufferinhalt auf 0 (null) festzulegen. Im Beispiel wird die [**wnettenumresource**](/windows/win32/api/winnetwk/nf-winnetwk-wnetenumresourcea) -Funktion aufgerufen, um die-Enumeration fortzusetzen. Immer wenn der **dwusage** -Member einer von **wnettenumresource** abgerufenen [**Struktur gleich**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) dem ResourceUsage \_ -Container ist, ruft die enumeratefunc-Funktion sich selbst rekursiv auf und verwendet einen Zeiger auf diese Struktur in dem Aufruf von **WNetOpenEnum**. Zum Schluss ruft das Beispiel die [**GlobalFree**](/windows/desktop/api/winbase/nf-winbase-globalfree) -Funktion auf, um den zugeordneten Arbeitsspeicher freizugeben, und die [**wnetcloseenum-Klasse**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcloseenum) zum Beenden der Enumeration.
+Zuerst ruft das Beispiel die [**WNetOpenEnum-Funktion auf,**](/windows/win32/api/winnetwk/nf-winnetwk-wnetopenenuma) um die Enumeration zu starten. Im Beispiel wird die [**GlobalAlloc-Funktion**](/windows/desktop/api/winbase/nf-winbase-globalalloc) zum Zuordnen des erforderlichen Puffers und dann die [**ZeroMemory-Funktion**](/previous-versions/windows/desktop/legacy/aa366920(v=vs.85)) zum Festlegen des Pufferinhalts auf 0 (null) aufruft. Anschließend ruft das Beispiel die [**WNetEnumResource-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetenumresourcea) auf, um die Enumeration fortzufahren. Wenn das **dwUsage-Member** einer VON **WNetEnumResource** abgerufenen [**NETRESOURCE-Struktur**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) gleich RESOURCEUSAGE CONTAINER ist, ruft sich die EnumerateFunc-Funktion rekursiv auf und verwendet einen Zeiger auf diese Struktur im Aufruf von \_ **WNetOpenEnum.** Schließlich ruft das Beispiel die [**GlobalFree-Funktion**](/windows/desktop/api/winbase/nf-winbase-globalfree) auf, um den zugeordneten Arbeitsspeicher frei zu geben, und [**das WNetCloseEnum,**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcloseenum) um die Enumeration zu beenden.
 
 
 ```C++
@@ -232,8 +232,8 @@ void DisplayStruct(int i, LPNETRESOURCE lpnrLocal)
 
 
 
-Weitere Informationen zum Verwenden eines Anwendungs definierten Fehler Handlers finden Sie unter [Abrufen von Netzwerkfehlern](retrieving-network-errors.md).
+Weitere Informationen zur Verwendung eines anwendungsdefinierten Fehlerhandlers finden Sie unter [Retrieving Network Errors](retrieving-network-errors.md).
 
- 
+ 
 
- 
+ 

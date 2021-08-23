@@ -4,7 +4,7 @@ description: Eine digital signierte oder zertifizierte Identität und eine Grupp
 ms.assetid: 46519f26-01db-4f8e-936d-9255c72cd30c
 ms.tgt_platform: multiple
 keywords:
-- attributeCertificateAttribute-Attribut-AD-Schema
+- attributeCertificateAttribute-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -34,7 +34,7 @@ Eine digital signierte oder zertifizierte Identität und eine Gruppe von Attribu
 | Aktualisieren von Berechtigungen  | \-                                                    |
 | Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 2.5.4.58                                              |
-| System-ID-GUID    | fa4693bb-7bc2-4cb9-81a8-c99c43b7905e                  |
+| System-Id-Guid    | fa4693bb-7bc2-4cb9-81a8-c99c43b7905e                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -56,7 +56,7 @@ Eine digital signierte oder zertifizierte Identität und eine Gruppe von Attribu
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | Falsch                                 |
-| Ist einwertig       | Falsch                                 |
+| Is-Single-Valued       | Falsch                                 |
 | Ist indiziert             | Falsch                                 |
 | Im globalen Katalog      | Falsch                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                          |
@@ -77,7 +77,7 @@ Eine digital signierte oder zertifizierte Identität und eine Gruppe von Attribu
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | Falsch                                 |
-| Ist einwertig       | Falsch                                 |
+| Is-Single-Valued       | Falsch                                 |
 | Ist indiziert             | Falsch                                 |
 | Im globalen Katalog      | Falsch                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                          |
@@ -98,7 +98,7 @@ Eine digital signierte oder zertifizierte Identität und eine Gruppe von Attribu
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | Falsch                                 |
-| Ist einwertig       | Falsch                                 |
+| Is-Single-Valued       | Falsch                                 |
 | Ist indiziert             | Falsch                                 |
 | Im globalen Katalog      | Falsch                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                          |
@@ -119,7 +119,7 @@ Eine digital signierte oder zertifizierte Identität und eine Gruppe von Attribu
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | Falsch                                 |
-| Is-Single-Valued       | Falsch                                 |
+| Ist einwertig       | Falsch                                 |
 | Ist indiziert             | Falsch                                 |
 | Im globalen Katalog      | Falsch                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                          |
@@ -140,7 +140,7 @@ Eine digital signierte oder zertifizierte Identität und eine Gruppe von Attribu
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
 | System-Only            | Falsch                                 |
-| Is-Single-Valued       | Falsch                                 |
+| Ist einwertig       | Falsch                                 |
 | Ist indiziert             | Falsch                                 |
 | Im globalen Katalog      | Falsch                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                          |

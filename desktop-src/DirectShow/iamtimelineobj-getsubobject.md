@@ -1,7 +1,7 @@
 ---
-description: Die getsubobject-Methode ruft das diesem Objekt zugeordnete untergeordnete Objekt ab.
+description: Die GetSubObject-Methode ruft das Unterobjekt ab, das diesem Objekt zugeordnet ist.
 ms.assetid: 478597d6-ae13-4fa9-a928-19893f378f1a
-title: 'Iamtimelineobj:: getsubobject-Methode (qedit. h)'
+title: IAMTimelineObj::GetSubObject-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 74f14658db5ffbaf100925f26573a08b592f6510
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ba3bc12e3b123768c88ce7f43955be419a0dfe84b6437701f9609e03a3fa0bdf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118155371"
 ---
-# <a name="iamtimelineobjgetsubobject-method"></a>Iamtimelineobj:: getsubobject-Methode
+# <a name="iamtimelineobjgetsubobject-method"></a>IAMTimelineObj::GetSubObject-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `GetSubObject` Methode ruft das diesem-Objekt zugeordnete untergeordnete Objekt ab.
+Die `GetSubObject` -Methode ruft das diesem -Objekt zugeordnete Unterobjekt ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ HRESULT GetSubObject(
 
 <dl> <dt>
 
-*PVal* \[ Out, retval\]
+*pVal* \[ out, retval\]
 </dt> <dd>
 
-Empfängt einen Zeiger auf die **IUnknown** -Schnittstelle des SubObject. Wenn das Objekt kein untergeordnetes Objekt hat, wird der Wert auf **null** festgelegt.
+Empfängt einen Zeiger auf die **IUnknown-Schnittstelle** des Unterobjekts. Wenn das Objekt kein Unterobjekt besitzt, wird der Wert auf **NULL** festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jedes Zeitachsen Objekt kann einen Zeiger auf ein zugeordnetes untergeordnetes Objekt enthalten.
+Jedes Zeitachsenobjekt kann einen Zeiger auf ein zugeordnetes Unterobjekt enthalten.
 
-Wenn der in *PVal* zurückgegebene Wert nicht **null** ist, weist die **IUnknown** -Schnittstelle einen ausstehenden Verweis Zähler auf. Stellen Sie sicher, dass Sie die-Schnittstelle freigeben, wenn Sie Sie nicht mehr benötigen.
+Wenn der in *pVal* zurückgegebene Wert nicht **NULL** ist, weist die **IUnknown-Schnittstelle** einen ausstehenden Verweiszähler auf. Stellen Sie sicher, dass Sie die Schnittstelle freigeben, wenn Sie sie nicht mehr verwenden.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -78,8 +78,8 @@ Wenn der in *PVal* zurückgegebene Wert nicht **null** ist, weist die **IUnknown
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -87,10 +87,10 @@ Wenn der in *PVal* zurückgegebene Wert nicht **null** ist, weist die **IUnknown
 
 <dl> <dt>
 
-[**Iamtimelineobj-Schnittstelle**](iamtimelineobj.md)
+[**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

@@ -25,7 +25,7 @@ ms.locfileid: "118701469"
 
 Die **IWMDRMIndividualizationStatus-Schnittstelle** ermöglicht das Abrufen erweiterter Statusinformationen zum Fortschritt der Individualisierung.
 
-Diese Schnittstelle wird mit MEWMDRMIndividualizationProgress-Ereignissen bereitgestellt. Viele dieser Ereignisse werden zwischen einem Aufruf von [**IWMDRMSecurity::P erformSecurityUpdate**](iwmdrmsecurity-performsecurityupdate.md) und dem Abschluss des Individualisierungsprozesses generiert, der durch die Generierung eines **MEWMDRMIndividualizationCompleted-Ereignisses** signalisiert wird.
+Diese Schnittstelle wird mit MEWMDRMIndividualizationProgress-Ereignissen bereitgestellt. Viele dieser Ereignisse werden zwischen einem Aufruf von [**IWMDRMSecurity::P erformSecurityUpdate**](iwmdrmsecurity-performsecurityupdate.md) und dem Abschluss des Individualisierungsprozesses generiert, was durch die Generierung eines **MEWMDRMIndividualizationCompleted-Ereignisses** signalisiert wird.
 
 Um einen Zeiger auf eine Instanz der **IWMDRMIndividualizationStatus-Schnittstelle** abzurufen, müssen Sie zunächst die **METHODE "POINTERMediaEvent::GetValue"** des Statusereignisses aufrufen. Der Wert, den Sie aus dem Ereignis abrufen, ist ein Zeiger auf die **IUnknown-Schnittstelle** des Objekts, das die **IWMDRMIndividualizationStatus-Schnittstelle** implementiert.
 

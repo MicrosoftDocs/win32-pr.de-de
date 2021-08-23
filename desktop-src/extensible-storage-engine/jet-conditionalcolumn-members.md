@@ -1,27 +1,27 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_CONDITIONALCOLUMN Member'
-title: Mitglieder JET_CONDITIONALCOLUMN
+description: Weitere Informationen zu JET_CONDITIONALCOLUMN Mitgliedern
+title: JET_CONDITIONALCOLUMN-Member
 TOCTitle: JET_CONDITIONALCOLUMN members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.JET_CONDITIONALCOLUMN
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_conditionalcolumn_members(v=EXCHG.10)
 ms:contentKeyID: 55103431
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: ecb132cd3fa3a313889c0a9a92fe6761da3b1cf0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c1d7a67deea257b073c6bd5135f2bb9da99f5ecc93497338557dccf485ccec6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960206"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118767873"
 ---
-# <a name="jet_conditionalcolumn-members"></a>Mitglieder JET_CONDITIONALCOLUMN
+# <a name="jet_conditionalcolumn-members"></a>JET_CONDITIONALCOLUMN-Member
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Definiert, wie die bedingte Indizierung für einen bestimmten Index ausgeführt wird. Ein bedingter Index enthält einen Index Eintrag für nur die Zeilen, die der angegebenen Bedingung entsprechen. Die bedingte Spalte ist jedoch nicht Teil des Index Schlüssels, sondern nur das vorhanden sein des Index Eintrags.
+Definiert, wie die bedingte Indizierung für einen bestimmten Index ausgeführt wird. Ein bedingter Index enthält einen Indexeintrag nur für die Zeilen, die mit der angegebenen Bedingung übereinstimmen. Die bedingte Spalte ist jedoch nicht Teil des Indexschlüssels, sondern steuert nur das Vorhandensein des Indexeintrags.
 
-Der [JET_CONDITIONALCOLUMN](./jet-conditionalcolumn-class.md) -Typ macht die folgenden Member verfügbar.
+Der [JET_CONDITIONALCOLUMN-Typ](./jet-conditionalcolumn-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="constructors"></a>Konstruktoren
 
@@ -59,12 +59,12 @@ Oben
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn335060(v=exchg.10).md">grbit</a></td>
-<td>Ruft die Optionen für den bedingten Index ab oder legt Sie fest.</td>
+<td>Ruft die Optionen für den bedingten Index ab oder legt sie fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335113(v=exchg.10).md">szcolumnname</a></td>
-<td>Ruft den Namen der bedingten Spalte ab oder legt ihn fest.</td>
+<td><a href="dn335113(v=exchg.10).md">szColumnName</a></td>
+<td>Ruft den Namen der bedingten Spalte ab oder legt den Namen fest.</td>
 </tr>
 </tbody>
 </table>
@@ -85,43 +85,43 @@ Oben
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="dn335109(v=exchg.10).md">Contentequals</a></td>
+<td><a href="dn335109(v=exchg.10).md">ContentEquals</a></td>
 <td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="dn335108(v=exchg.10).md">Deepclone</a></td>
-<td>Gibt eine tiefe Kopie des-Objekts zurück.</td>
+<td><a href="dn335108(v=exchg.10).md">DeepClone</a></td>
+<td>Gibt eine tiefe Kopie des -Objekts zurück.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Ist gleich</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
 <td><a href="/dotnet/api/system.object.finalize#System_Object_Finalize">Finalize</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">GetHashCode</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="/dotnet/api/system.object.gettype#System_Object_GetType">GetType</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.gettype#System_Object_GetType">Gettype</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Mitgliedglieder Klon</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">MemberwiseClone</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="dn335058(v=exchg.10).md">ToString</a></td>
-<td>Generiert eine Zeichen folgen Darstellung der-Instanz. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.-Zeichenfolge ()</a>.)</td>
+<td>Generieren Sie eine Zeichenfolgendarstellung der -Instanz. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -129,10 +129,10 @@ Oben
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_CONDITIONALCOLUMN-Klasse](./jet-conditionalcolumn-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

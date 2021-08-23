@@ -26,7 +26,7 @@ Texture2D-Typ ([wie er in Shader Model 4](dx-graphics-hlsl-to-type.md)vorhanden 
 
 
 
-| Methode                                                                 | Beschreibung                                                                                                                                        |
+| Methode                                                                 | BESCHREIBUNG                                                                                                                                        |
 |------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**versammeln**](texture2d-gather.md)                                      | Gibt die vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.                                                                |
 | [**GatherRed**](texture2d-gatherred.md)                                | Gibt die roten Komponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.                                          |
@@ -61,7 +61,7 @@ Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher – Shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | Ja       |
 
 
 

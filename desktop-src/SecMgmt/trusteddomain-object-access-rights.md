@@ -1,36 +1,36 @@
 ---
-description: Listet die Zugriffsrechte für das Objekt "Treuhänder Domäne" auf und erläutert diese.
+description: Listet die Zugriffsrechte des TrustedDomain-Objekts auf und erläutert sie.
 ms.assetid: eb82864c-7e69-4ed5-a55d-d6792670bcd1
-title: Zugriffsrechte für das Treuhänder-Domänen Objekt
+title: Zugriffsrechte für TrustedDomain-Objekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f79dc44b54ff907cbe3d1f700cc673f75a40d57
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5efeaf621cc3727cb936e69806bbcf89dabe5d41eb39b38dce3f9f23a0200dcf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118893008"
 ---
-# <a name="trusteddomain-object-access-rights"></a>Zugriffsrechte für das Treuhänder-Domänen Objekt
+# <a name="trusteddomain-object-access-rights"></a>Zugriffsrechte für TrustedDomain-Objekte
 
-Der-Objekttyp " [**Treuhänder**](trusteddomain-object.md) " verfügt über die folgenden Zugriffs Typen:
+Der [**TrustedDomain-Objekttyp**](trusteddomain-object.md) verfügt über die folgenden Zugriffstypen:
 
 
 
-| Zugriffstyp                  | BESCHREIBUNG                                                                      |
+| Zugriffstyp                  | Beschreibung                                                                      |
 |------------------------------|----------------------------------------------------------------------------------|
-| \_ \_ Domänen \_ Name der vertrauenswürdigen Abfrage | Dieser Zugriffstyp ist erforderlich, um den Namen der vertrauenswürdigen Domäne abzufragen.              |
-| vertrauenswürdige Gruppen \_ \_ Controller    | Dieser Zugriffstyp ist erforderlich, um die Liste der Controller der vertrauenswürdigen Domäne festzulegen. |
-| POSIX der vertrauenswürdigen \_ Abfrage \_        | Dieser Zugriffstyp ist erforderlich, um den POSIX-ID-Offset einer vertrauenswürdigen Domäne abzurufen.  |
-| \_festgelegte \_ POSIX-Menge          | Dieser Zugriffstyp ist erforderlich, um den POSIX-ID-Offset einer vertrauenswürdigen Domäne festzulegen.       |
+| DOMÄNENNAME \_ DER \_ VERTRAUENSWÜRDIGEN \_ ABFRAGE | Dieser Zugriffstyp ist erforderlich, um den Namen der vertrauenswürdigen Domäne abfragen zu können.              |
+| \_VERTRAUENSWÜRDIGE \_ SET-CONTROLLER    | Dieser Zugriffstyp ist erforderlich, um die Liste der Controller der vertrauenswürdigen Domäne festlegen zu können. |
+| TRUSTED \_ QUERY \_ POSIX        | Dieser Zugriffstyp ist erforderlich, um den Posix-ID-Offset einer vertrauenswürdigen Domäne abzurufen.  |
+| TRUSTED \_ SET \_ POSIX          | Dieser Zugriffstyp ist erforderlich, um den Posix-ID-Offset einer vertrauenswürdigen Domäne festlegen zu können.       |
 
 
 
  
 
-## <a name="generic-access-masks"></a>Generische Zugriffs Masken
+## <a name="generic-access-masks"></a>Generische Zugriffsmasken
 
-Dieser Objekttyp verfügt über die folgenden generischen Zugriffs Zuordnungen:
+Dieser Objekttyp verfügt über die folgenden generischen Zugriffszuordnungen:
 
 ``` syntax
     GENERIC_READ        STANDARD_RIGHTS_READ |
@@ -43,9 +43,9 @@ Dieser Objekttyp verfügt über die folgenden generischen Zugriffs Zuordnungen:
                     TRUSTED_QUERY_POSIX
 ```
 
-## <a name="standard-access-types"></a>Standard Zugriffs Typen
+## <a name="standard-access-types"></a>Standardzugriffstypen
 
-Dieses Objekt unterstützt den (optionalen) Standard Zugriffstyp "synchronisieren" nicht. Alle erforderlichen Zugriffs Typen werden unterstützt. Die Maske aller unterstützten Zugriffs Typen für diesen Objekttyp lautet:
+Dieses Objekt unterstützt den (optionalen) SYNCHRONIZE-Standardzugriffstyp nicht. Alle erforderlichen Zugriffstypen werden unterstützt. Die Maske aller unterstützten Zugriffstypen für diesen Objekttyp ist:
 
 ``` syntax
     TRUSTED_ALL_ACCESS    STANDARD_RIGHTS_REQUIRED |

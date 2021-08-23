@@ -1,34 +1,34 @@
 ---
-description: Die iscardfileaccess-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ISCardFileAccess-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 47A7308E-4E87-4052-A615-E28F7110761B
-title: Iscardfileaccess-Methoden
+title: ISCardFileAccess-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 53df6c8e07a950336ed3d12cd876aeea7bddf623
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c4d611807cba5d9cc84ef63053a25f6a5612ec5900332fa0ae15b0a4c30099f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118923307"
 ---
-# <a name="iscardfileaccess-methods"></a>Iscardfileaccess-Methoden
+# <a name="iscardfileaccess-methods"></a>ISCardFileAccess-Methoden
 
-Die [**iscardfileaccess**](iscardfileaccess.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ISCardFileAccess-Schnittstelle**](iscardfileaccess.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Changedir-Methode**](iscardfileaccess-changedir.md)
+-   [**ChangeDir-Methode**](iscardfileaccess-changedir.md)
 -   [**Close-Methode**](iscardfileaccess-close.md)
 -   [**Create-Methode**](iscardfileaccess-create.md)
 -   [**Delete-Methode**](iscardfileaccess-delete.md)
 -   [**Directory-Methode**](iscardfileaccess-directory.md)
--   [**Getcurrentdir-Methode**](iscardfileaccess-getcurrentdir.md)
--   [**Getfilefunktionen-Methode**](iscardfileaccess-getfilecapabilities.md)
+-   [**GetCurrentDir-Methode**](iscardfileaccess-getcurrentdir.md)
+-   [**GetFileCapabilities-Methode**](iscardfileaccess-getfilecapabilities.md)
 -   [**GetProperties-Methode**](iscardfileaccess-getproperties.md)
 -   [**Invalidate-Methode**](iscardfileaccess-invalidate.md)
 -   [**Open-Methode**](iscardfileaccess-open.md)
 -   [**Read-Methode**](iscardfileaccess-read.md)
--   [**Rehabiliingmethode**](iscardfileaccess-rehabilitate.md)
+-   [**Rehabilitate-Methode**](iscardfileaccess-rehabilitate.md)
 -   [**Seek-Methode**](iscardfileaccess-seek.md)
 -   [**SetProperties-Methode**](iscardfileaccess-setproperties.md)
 -   [**Write-Methode**](iscardfileaccess-write.md)

@@ -1,7 +1,7 @@
 ---
-description: Die findpropertyinstance-Funktion sucht die erste Instanz der Eigenschaft, die durch den hproperty-Parameter angegeben wird.
+description: Die FindPropertyInstance-Funktion sucht die erste Instanz der Eigenschaft, die durch den hProperty-Parameter angegeben wird.
 ms.assetid: e994503d-2f32-4fa2-bba9-ff66c9d558dc
-title: Findpropertyinstance-Funktion (Netmon. h)
+title: FindPropertyInstance-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 21f94a3e4a1eb9619b39cff534a778235980a278
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ac8b7d34b33bb76bfffc26b3ae6fc455857fafb65a9a2aef7e91fd0c2763adc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344662"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118938581"
 ---
-# <a name="findpropertyinstance-function"></a>Findpropertyinstance-Funktion
+# <a name="findpropertyinstance-function"></a>FindPropertyInstance-Funktion
 
-Die **findpropertyinstance** -Funktion sucht die erste Instanz der Eigenschaft, die durch den *hproperty* -Parameter angegeben wird.
+Die **FindPropertyInstance-Funktion** sucht die erste Instanz der Eigenschaft, die durch den *hProperty-Parameter angegeben* wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,31 +40,31 @@ LPPROPERTYINST WINAPI FindPropertyInstance(
 
 <dl> <dt>
 
-*hframe* \[ in\]
+*hFrame* \[ In\]
 </dt> <dd>
 
-Handle für den Frame. Das Frame Handle kann durch einen Aufrufen der [GetFrame](getframe.md) -Funktion abgerufen werden.
+Handle für den Frame. Das Framehand handle kann durch einen Aufruf der [GetFrame-Funktion abgerufen](getframe.md) werden.
 
 </dd> <dt>
 
-*hproperty* \[ in\]
+*hProperty* \[ In\]
 </dt> <dd>
 
-Handle für die Eigenschaft, die Sie suchen möchten. Das Eigenschafts Handle kann durch einen Aufrufen der [GetProperty](getproperty.md) -Funktion abgerufen werden.
+Handle für die Eigenschaft, die Sie suchen möchten. Das Eigenschaftenhand handle kann durch einen Aufruf der [GetProperty-Funktion abgerufen](getproperty.md) werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist (d. h., wenn die-Eigenschaft gefunden wird), ist der Rückgabewert ein Zeiger auf die erste Instanz der-Eigenschaft.
+Wenn die Funktion erfolgreich ist (d. h., wenn die Eigenschaft gefunden wird), ist der Rückgabewert ein Zeiger auf die erste Instanz der Eigenschaft.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Rufen Sie zum Abrufen der nächsten Instanz der Eigenschaft [findpropertyinstancerestart](findpropertyinstancerestart.md)auf.
+Um die nächste Instanz der -Eigenschaft abzurufen, rufen [Sie FindPropertyInstanceRestart auf.](findpropertyinstancerestart.md)
 
-[*Experten*](e.md) und [*Parser*](p.md)können die **findpropertyinstance** -Funktion aufrufen.
+[*Experten*](e.md) und [*Parser*](p.md)können die **Funktion FindPropertyInstance** aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,8 +74,8 @@ Rufen Sie zum Abrufen der nächsten Instanz der Eigenschaft [findpropertyinstanc
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 
@@ -84,7 +84,7 @@ Rufen Sie zum Abrufen der nächsten Instanz der Eigenschaft [findpropertyinstanc
 
 <dl> <dt>
 
-[Findpropertyinstancerestart](findpropertyinstancerestart.md)
+[FindPropertyInstanceRestart](findpropertyinstancerestart.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft einen Wert ab, der angibt, ob der an diese Methode weiter gegebene ConfirmationType für diesen icontextnode festgelegt wurde.
+description: Ruft einen Wert ab, der angibt, ob der an diese Methode übergebene ConfirmationType für diesen IContextNode festgelegt wurde.
 ms.assetid: 4a96bc46-b627-4784-ad1d-1079f49592e5
-title: 'Icontextnode:: isconfirmed-Methode (iacom. h)'
+title: IContextNode::IsConfirmed-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 300e0126b4a1ff55d372ff31deebde0eab686645
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e378aaf344e177514115c82b1179f8d1ebe25faefa0d5d840d5a0af62ff1c07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967359"
 ---
-# <a name="icontextnodeisconfirmed-method"></a>Icontextnode:: isconfirmed-Methode
+# <a name="icontextnodeisconfirmed-method"></a>IContextNode::IsConfirmed-Methode
 
-Ruft einen Wert ab, der angibt, ob der an diese Methode weiter gegebene ConfirmationType für diesen icontextnode festgelegt wurde.
+Ruft einen Wert ab, der angibt, ob der an diese Methode übergebene ConfirmationType für diesen IContextNode festgelegt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,27 +40,27 @@ HRESULT IsConfirmed(
 
 <dl> <dt>
 
-*confirmedtype* \[ in\]
+*confirmedType* \[ In\]
 </dt> <dd>
 
-Der zu testende bestätentyp.
+Der Bestätigungstyp, auf den getestet wird.
 
 </dd> <dt>
 
-*pftypebestätigt* \[ vorgenommen\]
+*pfTypeConfirmed* \[ out\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn der in confirmedtype weiter gegebene Typ für dieses [**icontextnode**](icontextnode.md) -Objekt festgelegt wurde. Andernfalls ist der Wert **\_ false**.
+**VARIANT \_ TRUE,** wenn der in confirmedType übergebene Typ für dieses [**IContextNode-Objekt festgelegt**](icontextnode.md) wurde. andernfalls **VARIANT \_ FALSE**.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Wert wird durch die [**icontextnode:: Confirm**](icontextnode-confirm.md) -Methode festgelegt.
+Dieser Wert wird von der [**IContextNode::Confirm-Methode**](icontextnode-confirm.md) festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Dieser Wert wird durch die [**icontextnode:: Confirm**](icontextnode-confirm.md)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -79,13 +79,13 @@ Dieser Wert wird durch die [**icontextnode:: Confirm**](icontextnode-confirm.md)
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextnode:: Confirm**](icontextnode-confirm.md)
+[**IContextNode::Confirm**](icontextnode-confirm.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

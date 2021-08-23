@@ -1,9 +1,9 @@
 ---
-title: Abmeldung von "sstrgbstring" (kommdlg. h)
-description: Die Hook-Prozedur eines Farb Dialogfelds, cchookproc, kann die registrierte setrgbstring-Meldung an das Dialogfeld senden, um die aktuelle Farbauswahl festzulegen.
+title: SETRGBSTRING-Nachricht (Commdlg.h)
+description: Die Hookprozedur eines Farbdialogfelds, CCHookProc, kann die registrierte SETRGBSTRING-Nachricht an das Dialogfeld senden, um die aktuelle Farbauswahl festzulegen.
 ms.assetid: 02d36248-be75-4552-853f-6ac3ec034ebe
 keywords:
-- Dialog Felder "mestrgbstring"
+- DIALOGFELDER FÜR SETRGBSTRING-Meldung
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dea5489aaa6fafcaa19a97a44d81fd85abb178d2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8322bb07300ce188684f5097232563e80721fadf0f614c24ac5f7b2d034c1fff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985310"
 ---
-# <a name="setrgbstring-message"></a>"Abmeldung"
+# <a name="setrgbstring-message"></a>SETRGBSTRING-Meldung
 
-Die Hook-Prozedur eines **Farb** Dialogfelds, [*cchookproc*](/windows/win32/api/commdlg/nc-commdlg-lpcchookproc), kann die registrierte **setrgbstring** -Meldung an das Dialogfeld senden, um die aktuelle Farbauswahl festzulegen.
+Die Hookprozedur eines Farbdialogfelds, [*CCHookProc,*](/windows/win32/api/commdlg/nc-commdlg-lpcchookproc)kann die registrierte **SETRGBSTRING-Nachricht** an das Dialogfeld senden, um die aktuelle Farbauswahl festzulegen. 
 
 
 ```C++
@@ -48,7 +48,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Der RGB-Wert der Farbe, die im Dialogfeld **Farbe** ausgewählt werden soll. Sie können das [**RGB**](/windows/desktop/api/wingdi/nf-wingdi-rgb) -Makro verwenden, um die roten, grünen und blauen Intensitäten eines RGB-Farbwerts anzugeben.
+Der RGB-Wert der Farbe, die im Dialogfeld **Farbe** ausgewählt werden soll. Sie können das [**RGB-Makro**](/windows/desktop/api/wingdi/nf-wingdi-rgb) verwenden, um die Rot-, Grün- und Blau-Intensitäten eines RGB-Farbwerts anzugeben.
 
 </dd> </dl>
 
@@ -56,15 +56,15 @@ Der RGB-Wert der Farbe, die im Dialogfeld **Farbe** ausgewählt werden soll. Sie
 
 Diese Nachricht weist keinen Rückgabewert auf.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn *LPARAM* mit einer der Grundfarben oder einer der 16 benutzerdefinierten Farben übereinstimmt, wählt die Dialogfeld Prozedur diese Farbe aus. Die Dialogfeld Prozedur aktualisiert auch alle Steuerelemente in der benutzerdefinierten Farb Erweiterung des Dialog Felds **Farbe** , wenn Sie geöffnet ist.
+Wenn *lParam* mit einer der Grundfarben oder einer der 16 benutzerdefinierten Farben übereinstimmt, wählt die Dialogfeldprozedur diese Farbe aus. Die Dialogfeldprozedur aktualisiert auch alle Steuerelemente in der benutzerdefinierten Farberweiterung des Dialogfelds **Farbe,** wenn es geöffnet ist.
 
-Wenn *LPARAM* nicht mit einer einfachen oder benutzerdefinierten Farbe identisch ist, ändert die Dialogfeld Prozedur nicht die aktuelle Farbauswahl, sondern aktualisiert die benutzerdefinierten Farb Steuerelemente, wenn Sie sichtbar sind.
+Wenn *lParam* nicht mit einer einfachen oder benutzerdefinierten Farbe übereinstimmt, ändert die Dialogfeldprozedur die aktuelle Farbauswahl nicht, aktualisiert jedoch die benutzerdefinierten Farbsteuerelemente, wenn sie sichtbar sind.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispielcode wird der **setrgbstring** -Nachrichten Bezeichner abgerufen und anschließend die Farbauswahl auf Blau festgelegt.
+Der folgende Beispielcode ruft den **SETRGBSTRING-Nachrichtenbezeichner** ab und legt dann die Farbauswahl auf Blau fest.
 
 
 ```
@@ -85,16 +85,16 @@ SendMessage(hdlg, uiSetRGB, 0, (LPARAM) RGB(0, 0, 255));
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommdlg. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | " **Btrgbstringw** (Unicode) **" und "** ABl" (ANSI)<br/>                                      |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **SETRGBSTRINGW** (Unicode) und **SETRGBSTRINGA** (ANSI)<br/>                                      |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**RegisterWindowMessage**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)
@@ -106,10 +106,10 @@ SendMessage(hdlg, uiSetRGB, 0, (LPARAM) RGB(0, 0, 255));
 [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Allgemeine Dialog Feld Bibliothek](common-dialog-box-library.md)
+[Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
 
  

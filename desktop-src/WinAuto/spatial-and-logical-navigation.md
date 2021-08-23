@@ -1,51 +1,51 @@
 ---
 title: Räumliche und logische Navigation
-description: Clients rufen Informationen zu einem Objekt, das räumlich oder logisch in der Nähe eines anderen Objekts innerhalb desselben Containers ist, durch Aufrufen von "ibarrierefreie accNavigate" und Angeben einer der Navigations Konstanten ab.
+description: Clients rufen Informationen zu einem Objekt ab, das sich räumlich oder logisch in der Nähe eines anderen Objekts innerhalb desselben Containers befindet, indem sie IAccessible accNavigate aufrufen und eine der Navigationskonstanten angeben.
 ms.assetid: a1ebb50e-76cf-472d-bb0f-3f5bf5ed30d5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b9e49772a267e49d723a04005dcbc8a369510b3
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d762352c41f2adc764ac40c052632922a25ca995b9f2ec2f5008c668d0332bfd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119052502"
 ---
 # <a name="spatial-and-logical-navigation"></a>Räumliche und logische Navigation
 
-Clients rufen Informationen zu einem Objekt, das räumlich oder logisch in der Nähe eines anderen Objekts innerhalb desselben Containers ist, durch Aufrufen von [**IAccessible:: accNavigate**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accnavigate) und Angeben einer der [Navigations Konstanten](navigation-constants.md)ab.
+Clients rufen Informationen zu einem Objekt ab, das sich räumlich oder logisch in der Nähe eines anderen Objekts innerhalb desselben Containers befindet, indem [**sie IAccessible::accNavigate**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accnavigate) aufrufen und eine der [Navigationskonstanten](navigation-constants.md)angeben.
 
-Mit *räumlichen Navigations* Clients navigieren Sie auf dem Bildschirm zu einem Objekt. Clients Navigieren nach oben, unten, Links oder rechts vom aktuellen Objekt, um Informationen über ein anderes Objekt innerhalb desselben Containers abzurufen.
+Bei *der räumlichen Navigation* navigieren Clients basierend auf seiner Position auf dem Bildschirm zu einem Objekt. Clients navigieren vom aktuellen Objekt nach oben, unten, links oder rechts, um Informationen zu einem anderen Objekt innerhalb desselben Containers abzurufen.
 
-Bei der *logischen Navigation* navigieren Clients zu dem Objekt, das einem anderen, vom Server festgelegten Objekt logisch voransteht oder diesem folgt. Clients Navigieren auf zweierlei Weise zu allen untergeordneten Elementen des Objekts:
+Mit *der logischen Navigation* navigieren Clients zu dem Objekt, das einem anderen Objekt logisch vorausgeht oder einem anderen Objekt folgt, wie vom Server bestimmt. Clients navigieren auf zwei Arten zu allen untergeordneten Objekten eines Objekts:
 
--   Starten Sie die Navigation mit [**navDir \_ FirstChild**](navigation-constants.md) , und klicken Sie dann wiederholt mit [**navDir \_ Next**](navigation-constants.md)auf die-Methode.
--   Starten Sie die Navigation mit [**navDir \_ LastChild**](navigation-constants.md) , und nennen Sie die Methode wiederholt mit [**navDir \_ Previous**](navigation-constants.md).
+-   Starten Sie die Navigation mit [**NAVDIR \_ FIRSTCHILD,**](navigation-constants.md) und rufen Sie dann wiederholt die -Methode mit [**NAVDIR \_ NEXT**](navigation-constants.md)auf.
+-   Starten Sie die Navigation mit [**NAVDIR \_ LASTCHILD,**](navigation-constants.md) und rufen Sie die -Methode wiederholt mit [**NAVDIR \_ PREVIOUS**](navigation-constants.md)auf.
 
-Unabhängig von der Richtung besucht die Navigation jedes sichtbare untergeordnete Element, das zu dem übergeordneten Objekt gehört. Unsichtbare untergeordnete Elemente können mit logischer Navigation übersprungen werden. Außerdem wird jedes untergeordnete Element nur einmal besucht, und die Navigation führt nicht zu einer Schleife. Das heißt, die Methode schlägt fehl, wenn ein Client versucht, vor dem ersten oder nach dem letzten Objekt zu navigieren.
+Unabhängig von der Richtung besucht die Navigation jedes sichtbare untergeordnete Element, das zum übergeordneten Objekt gehört. Unsichtbare untergeordnete Elemente können mit logischer Navigation übersprungen werden. Darüber hinaus wird jedes untergeordnete Element nur einmal besucht, und die Navigation führt keine Schleife durch. Das heißt, die Methode schlägt fehl, wenn ein Client versucht, vor dem ersten Objekt oder nach dem letzten Objekt zu navigieren.
 
-Räumliche und logische Navigation sind miteinander verknüpft. Beispielsweise sollte in einer horizontalen Symbolleiste das Aufrufen der-Methode mit [**navDir \_ right**](navigation-constants.md) die gleichen Ergebnisse wie das Aufrufen der-Methode mit [**navDir \_ Next**](navigation-constants.md)erzielen.
+Räumliche und logische Navigation sind verknüpft. In einer horizontalen Symbolleiste sollte beispielsweise der Aufruf der -Methode mit [**NAVDIR \_ RIGHT**](navigation-constants.md) die gleichen Ergebnisse wie der Aufruf der -Methode mit [**NAVDIR \_ NEXT**](navigation-constants.md)erzeugen.
 
-Das Start Objekt der Navigation ist entweder das Objekt, das es **selbst oder eines der unter** geordneten Elemente des Objekts ist, mit dem Unterschied, dass entweder [**navDir \_ FirstChild**](navigation-constants.md) oder [**navDir \_ LastChild**](navigation-constants.md) angegeben wird. in diesem Fall muss die Navigation mit dem Objekt selbst beginnen.
+Das Startobjekt der Navigation ist entweder das objekt selbst oder eines der untergeordneten Elemente **des Objekts, es sei denn, entweder** [**NAVDIR \_ FIRSTCHILD**](navigation-constants.md) oder [**NAVDIR \_ LASTCHILD**](navigation-constants.md) ist angegeben. In diesem Fall muss die Navigation vom Objekt selbst beginnen.
 
-Wenn ein Client von einem zugänglichen Objekt zu einem gleich geordneten Benutzeroberflächen Element navigiert oder wenn das **LVAL** -Element von *varstart* auf **childID \_ Self** und das angegebene Flag in *navDir* ein beliebiges Navigationsflag mit Ausnahme von [**navDir \_ FirstChild**](navigation-constants.md) oder [**navDir \_ LastChild**](navigation-constants.md)ist, ist das Ergebnis in *pvarend* entweder eine untergeordnete ID oder eine [**IDispatch**](idispatch-interface.md) -Schnittstelle. Wenn *pvarend* eine untergeordnete ID enthält, müssen Clients zuerst einen Zeiger auf die [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle des übergeordneten Elements abrufen, um von diesem Benutzeroberflächen Element zu navigieren oder weitere Informationen darüber zu erhalten. Um das übergeordnete Objekt zu erhalten, rufen Clients die [**IAccessible:: get \_ accParent**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent) -Eigenschaft des neben geordneten Objekts oder das Start Objekt der Navigation auf.
+Wenn ein Client von einem barrierefreien Objekt zu einem nebengeordneten Benutzeroberflächenelement navigiert oder der **lVal-Member** von *varStart* **CHILDID \_ SELF** ist und das angegebene Flag in *navDir* ein beliebiges Navigationsflag mit Ausnahme von [**NAVDIR \_ FIRSTCHILD**](navigation-constants.md) oder [**NAVDIR \_ LASTCHILD**](navigation-constants.md)ist, ist das Ergebnis in *pvarEnd* entweder eine untergeordnete ID oder eine [**IDispatch-Schnittstelle.**](idispatch-interface.md) Wenn *pvarEnd* eine untergeordnete ID enthält, müssen Clients zunächst einen Zeiger auf die [**IAccessible-Schnittstelle**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) des übergeordneten Elements abrufen, um von diesem Benutzeroberflächenelement zu navigieren oder weitere Informationen dazu zu erhalten. Um das übergeordnete Objekt abzurufen, rufen Clients die [**IAccessible::get \_ accParent-Eigenschaft**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent) des gleichgeordneten Objekts oder des Startobjekts der Navigation auf.
 
-Beachten Sie, dass Clients Informationen zu allen gleitenden Objekten erhalten müssen, indem Sie die [**enumchildwindows**](/windows/desktop/api/winuser/nf-winuser-enumchildwindows) -Funktion aufrufen. Da ein Gleit Komma Objekt nicht auf das übergeordnete Objekt zugeschnitten ist, haben Clients keine Informationen über die hierarchische Beziehung zwischen zwei Objekten auf dem Bildschirm.
+Beachten Sie, dass Clients über Informationen zu allen unverankerten Objekten verfügen müssen, indem sie die [**EnumChildWindows-Funktion**](/windows/desktop/api/winuser/nf-winuser-enumchildwindows) aufrufen. Da ein unverankerte Objekt nicht auf sein übergeordnetes Objekt abgeschnitten wird, verfügen Clients auf dem Bildschirm nicht über Informationen über die hierarchische Beziehung zwischen zwei Objekten in der Nähe.
 
-Die folgende Grafik ist ein Beispiel für ein Gleit Komma Objekt, das nicht auf das übergeordnete Element zugeschnitten ist.
+Die folgende Grafik ist ein Beispiel für ein unverankerte Objekt, das nicht auf das übergeordnete Objekt abgeschnitten wird.
 
-![Screenshot des geöffneten Fensters, das über einem größeren Microsoft Developer Studio-Fenster schwebt](images/floatob.gif)
+![Screenshot des geöffneten Fensters über einem größeren Microsoft Developer Studio-Fenster](images/floatob.gif)
 
 ## <a name="establishing-the-order-in-logical-navigation"></a>Festlegen der Reihenfolge in der logischen Navigation
 
-Bei der logischen Navigation stellen die Entwickler, die die Objekte entwerfen, die Beziehungen zwischen ihnen her. Die logische Navigation ist subjektiver als die räumliche Navigation. Außerdem ist die Reihenfolge in der logischen Navigation nicht mit der Reihenfolge identisch, in der die untergeordneten IDs verwendet werden.
+In der logischen Navigation richten die Entwickler, die die Objekte entwerfen, die Beziehungen zwischen ihnen ein. Die logische Navigation ist stärker subjektiv als die räumliche Navigation. Außerdem ist die Reihenfolge in der logischen Navigation nicht mit der Reihenfolge identisch, die mit untergeordneten IDs verwendet wird.
 
-Bei Objekten, die über Bildschirm Positionen verfügen, sollten Server Entwickler die Navigations Reihenfolge so einrichten, dass Sie logisch in Erwägung gezogen werden. In englischsprachigen Ländern bzw. Regionen bedeutet dies beispielsweise eine von links nach rechts und von oben nach unten sorordnete Reihenfolge.
+Für Objekte mit Bildschirmspeicherorten sollten Serverentwickler die Navigationsreihenfolge so einrichten, wie die meisten Benutzer dies als logisch betrachten würden. In englischsprachigen Ländern/Regionen bedeutet dies beispielsweise eine Reihenfolge von links nach rechts, von oben nach unten.
 
-Die logische Navigations Reihenfolge muss eine parallele Tastaturnavigation haben. Ein Dialogfeld enthält z. b. die Schaltflächen **OK** und **Abbrechen** und einige Bearbeitungs Steuerelemente. Ein Client, der [**IAccessible:: accNavigate**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accnavigate) aufruft, um zum nächsten oder vorherigen Objekt in diesem Dialogfeld zu navigieren, wird in derselben Reihenfolge verschoben wie ein Benutzer mit der Tab-Taste oder UMSCHALT + TAB, um den Fokus zwischen Elementen zu verschieben.
+Die logische Navigationsreihenfolge muss parallele Tastaturnavigationsreihenfolge sein. Beispielsweise enthält ein Dialogfeld die Schaltflächen **OK** und **Abbrechen** und einige Bearbeitungssteuerelemente. Ein Client, der [**IAccessible::accNavigate**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accnavigate) aufruft, um zum nächsten oder vorherigen Objekt in diesem Dialogfeld zu navigieren, wechselt in der gleichen Reihenfolge wie ein Benutzer, der DIE TAB-TASTE oder UMSCHALT+TAB drückt, um den Fokus zwischen Elementen zu verschieben.
 
-Bei Objekten, die nicht über definierte Bildschirm Positionen verfügen, wird die logische Reihenfolge von Server Entwicklern bestimmt, und Client Entwickler sollten keine Annahmen darüber treffen. Beispielsweise ist es zulässig, dass nicht sichtbare Objekte, wie z. b. Objekte, die nur vorübergehend ausgeblendet sind, mit sichtbaren Objekten vermischt werden.
+Für Objekte ohne definierte Bildschirmspeicherorte wird die logische Reihenfolge von Serverentwicklern festgelegt, und Cliententwickler sollten keine Annahmen darüber treffen. Beispielsweise ist es akzeptabel, dass nicht sichtbare Objekte, z. B. Objekte, die nur vorübergehend ausgeblendet sind, mit sichtbaren Objekten durchsetzt werden.
 
- 
+ 
 
- 
+ 

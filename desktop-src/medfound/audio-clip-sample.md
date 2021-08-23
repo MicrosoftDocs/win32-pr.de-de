@@ -1,38 +1,38 @@
 ---
-description: Zeigt, wie Microsoft Media Foundation verwendet wird, um Audiodaten aus einer Mediendatei zu decodieren.
+description: Zeigt, wie Sie Microsoft Media Foundation zum Decodieren von Audiodaten aus einer Mediendatei verwenden.
 ms.assetid: 29822e6b-8598-4133-b181-7fb0854553b7
-title: Beispiel für Audioclip
+title: Beispiel für Audioclips
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c0e4a3e515d08e2cafd2ab2ba451a528f3d5677
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f180dfb7c4b0e456f45169d36fdfb1f77701b0e82250690706208a715fdd3ce5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119035488"
 ---
-# <a name="audio-clip-sample"></a>Beispiel für Audioclip
+# <a name="audio-clip-sample"></a>Beispiel für Audioclips
 
-Zeigt, wie Microsoft Media Foundation verwendet wird, um Audiodaten aus einer Mediendatei zu decodieren.
+Zeigt, wie Sie Microsoft Media Foundation zum Decodieren von Audiodaten aus einer Mediendatei verwenden.
 
-Die Beispielanwendung Audioclip liest Audiodaten aus einer Mediendatei und schreibt die nicht komprimierte Audiodatei in eine Wave-Datei.
+Die Beispielanwendung Audioclip liest Audiodaten aus einer Mediendatei und schreibt die unkomprimierten Audiodaten in eine WAVE-Datei.
 
 ## <a name="apis-demonstrated"></a>Gezeigte APIs
 
-In diesem Beispiel werden die folgenden Media Foundation Schnittstellen veranschaulicht:
+In diesem Beispiel werden die folgenden Media Foundation veranschaulicht:
 
--   [**IMFSourceReader**](/windows/desktop/api/mfreadwrite/nn-mfreadwrite-imfsourcereader)
+-   [**VERERBUNGQuelleReader**](/windows/desktop/api/mfreadwrite/nn-mfreadwrite-imfsourcereader)
 
 ## <a name="usage"></a>Verbrauch
 
-Bei diesem Beispiel handelt es sich um eine Befehlszeilen Anwendung. Es verwendet die folgenden Befehlszeilenargumente:
+Dieses Beispiel ist eine Befehlszeilenanwendung. Es werden die folgenden Befehlszeilenargumente verwendet:
 
 ``` syntax
 audioclip.exe inputfile outputfile.wav
 ```
 
--   Input file: der Name einer Datei, die einen Audiostream enthält.
--   OutputFile. WAV: der Name der zu schreibenden Wave-Datei.
+-   inputfile: Der Name einer Datei, die einen Audiostream enthält.
+-   outputfile.wav: Der Name der zu schreibenden WAVE-Datei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,7 +48,7 @@ audioclip.exe inputfile outputfile.wav
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Dieses Beispiel ist im [GitHub-Repository für klassische Windows-Beispiele](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/multimedia/mediafoundation/AudioClip)verfügbar.
+Dieses Beispiel ist im [GitHub-Repository Windows klassischen Beispielen verfügbar.](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/multimedia/mediafoundation/AudioClip)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -57,10 +57,10 @@ Dieses Beispiel ist im [GitHub-Repository für klassische Windows-Beispiele](htt
 [Media Foundation-SDK-Beispiele](media-foundation-sdk-samples.md)
 </dt> <dt>
 
-[Quell Leser](source-reader.md)
+[Quellleser](source-reader.md)
 </dt> <dt>
 
-[Tutorial: Decodieren von Audiodaten](tutorial--decoding-audio.md)
+[Tutorial: Decodieren von Audio](tutorial--decoding-audio.md)
 </dt> </dl>
 
  

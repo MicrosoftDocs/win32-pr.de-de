@@ -121,7 +121,7 @@ Die Anzeigetabelle für einen Adresseintrag.
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8017                                                   |
 | System-Only            | Falsch                                                    |
-| Is-Single-Valued       | Richtig                                                     |
+| Ist einwertig       | Richtig                                                     |
 | Ist indiziert             | Falsch                                                    |
 | Im globalen Katalog      | Falsch                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
@@ -142,7 +142,7 @@ Die Anzeigetabelle für einen Adresseintrag.
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8017                                                   |
 | System-Only            | Falsch                                                    |
-| Is-Single-Valued       | Richtig                                                     |
+| Ist einwertig       | Richtig                                                     |
 | Ist indiziert             | Falsch                                                    |
 | Im globalen Katalog      | Falsch                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
@@ -163,7 +163,7 @@ Die Anzeigetabelle für einen Adresseintrag.
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8017                                                   |
 | System-Only            | Falsch                                                    |
-| Is-Single-Valued       | Richtig                                                     |
+| Ist einwertig       | Richtig                                                     |
 | Ist indiziert             | Falsch                                                    |
 | Im globalen Katalog      | Falsch                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |

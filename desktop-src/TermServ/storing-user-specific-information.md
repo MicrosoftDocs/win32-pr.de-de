@@ -5,27 +5,27 @@ ms.assetid: 32bd1d24-1d2e-4c0a-acdb-0cc67f275e6e
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 40c6236b7ba11a8b3149533e920b9b9413085d93
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 95aa8e60ec89c3f9d161941d01e1aa241f0bb0245d0f5b57b1cc362dd836bdb9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039154"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000430"
 ---
 # <a name="storing-user-specific-information"></a>Speichern von benutzerspezifischen Informationen
 
-In einer Remotedesktopdienste Umgebung sollten Anwendungen benutzerspezifische Informationen an benutzerspezifischen Speicherorten speichern, getrennt von globalen Informationen, die für alle Benutzer gelten. Diese Regel gilt für Informationen, die in der Registrierung gespeichert sind, sowie für Informationen, die in Dateien gespeichert sind. Nehmen Sie im Allgemeinen nicht an, dass ein Computer einem Benutzer entspricht.
+In einer Remotedesktopdienste-Umgebung sollten Anwendungen benutzerspezifische Informationen an benutzerspezifischen Speicherorten speichern, getrennt von globalen Informationen, die für alle Benutzer gelten. Diese Regel gilt für in der Registrierung gespeicherte Informationen sowie für in Dateien gespeicherte Informationen. Gehen Sie im Allgemeinen nicht davon aus, dass ein Computer einem Benutzer entspricht.
 
-Speichert benutzerspezifische Registrierungsinformationen unter dem Registrierungsschlüssel **HKEY \_ Current \_ User** . Remotedesktopdienste lädt die persönliche Registrierungs Struktur des aktuellen Benutzers in den **aktuellen HKEY- \_ \_ Benutzer** , wenn sich der Benutzer anmeldet. Remotedesktopdienste verwaltet die Registrierung natürlich, um sicherzustellen, dass jeder angemeldete Client die richtige Benutzer Struktur unter **HKEY \_ Current \_ User** erkennt. Weitere Informationen zu Registrierungs Schlüsseln finden Sie unter [Sicherheits-und Zugriffsrechte für den Registrierungsschlüssel](/windows/desktop/SysInfo/registry-key-security-and-access-rights) und [Registrierungs](/windows/desktop/SysInfo/registry-hives)Strukturen.
+Store benutzerspezifische Registrierungsinformationen unter dem **Registrierungsschlüssel HKEY \_ CURRENT \_ USER.** Remotedesktopdienste lädt die persönliche Registrierungsstruktur des aktuellen Benutzers in **HKEY \_ CURRENT \_ USER,** wenn sich der Benutzer anmeldet. Natürlich verwaltet Remotedesktopdienste registrierung, um sicherzustellen, dass jeder der angemeldeten Clients die richtige Benutzerstruktur unter **HKEY \_ CURRENT USER \_ erkennt.** Weitere Informationen zu Registrierungsschlüsseln finden Sie unter [Sicherheit und](/windows/desktop/SysInfo/registry-key-security-and-access-rights) Zugriffsrechte für Registrierungsschlüssel und [Hives-Registrierung.](/windows/desktop/SysInfo/registry-hives)
 
-Im Gegensatz dazu geben alle Benutzer den HKEY-Hive für den **\_ lokalen \_ Computer** frei. Verwenden Sie **HKEY \_ local \_ Machine** , um Computer spezifische Informationen, nicht jedoch benutzerspezifische Informationen, zu speichern.
+Im Gegensatz dazu verwenden alle Benutzer die **HKEY \_ LOCAL \_ MACHINE-Struktur.** Verwenden **Sie HKEY \_ LOCAL \_ MACHINE,** um computerspezifische Informationen und keine benutzerspezifischen Informationen zu speichern.
 
-Speichert Benutzer Einstellungsdateien oder andere benutzerspezifische Dateien im Stammverzeichnis des Benutzers oder in einem vom Benutzer angegebenen Verzeichnis. Diese Überlegungen gelten für temporäre Dateien, die zum Speichern von zwischen Informationen (z. b. zwischengespeicherte Daten) oder zum Übergeben von Daten an eine andere Anwendung verwendet werden. Benutzerspezifische temporäre Dateien müssen auch pro Benutzer gespeichert werden.
+Store Benutzereinstellungsdateien oder andere benutzerspezifische Dateien im Stammverzeichnis des Benutzers oder in einem benutzerspezifischen Verzeichnis. Dieser Aspekt gilt für temporäre Dateien, die zum Speichern von Zwischeninformationen (z. B. zwischengespeicherte Daten) oder zum Übergeben von Daten an eine andere Anwendung verwendet werden. Benutzerspezifische temporäre Dateien müssen auch benutzerspezifisch gespeichert werden.
 
-Sie können die Funktion " [**SHGetSpecialFolderLocation**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetspecialfolderlocation) " mit dem "CSIDL Personal"- \_ Flag verwenden, um den Speicherort des Verzeichnisses für persönliche Dateien des Benutzers zu erhalten. Sie können auch die [**GetWindowsDirectory**](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getwindowsdirectorya) -Funktion verwenden, um den Pfad des Windows-Verzeichnisses abzurufen. In einer Remotedesktopdienste Umgebung ist das Windows-Verzeichnis für jeden Benutzer garantiert privat. Speichern Sie keine benutzerspezifischen Dateien im System Verzeichnis, z. b. in Windows oder im Programmverzeichnis, wie z. b. Programmdateien.
+Sie können die [**SHGetSpecialFolderLocation-Funktion**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetspecialfolderlocation) mit dem CSIDL PERSONAL-Flag verwenden, um den Speicherort des persönlichen \_ Dateiverzeichnisses des Benutzers zu erhalten. Sie können auch die [**GetWindowsDirectory-Funktion**](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getwindowsdirectorya) verwenden, um den Pfad des Windows abzurufen. In einer Remotedesktopdienste ist das Windows für jeden Benutzer garantiert privat. Speichern Sie keine benutzerspezifischen Dateien im Systemverzeichnis, z. B. WINDOWS oder programmverzeichnis, z. B. Programme.
 
-Um Konflikte zwischen den Informationen und Einstellungen der Benutzer zu vermeiden, sollten Anwendungen benutzerspezifische temporäre Informationen in benutzerspezifischen temporären Dateien speichern. Benutzerspezifische temporäre Dateien verhindern auch Anwendungsfehler, die durch Datei Sperr Konflikte verursacht werden. Um den Pfad zum Speichern temporärer Informationen anzugeben, verwenden Sie die [**GetTempPath**](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha) -Funktion.
+Um Konflikte zwischen benutzerspezifischen Informationen und Einstellungen zu vermeiden, sollten Anwendungen temporäre Informationen pro Benutzer in benutzerspezifischen temporären Dateien speichern. Benutzerspezifische temporäre Dateien verhindern auch Anwendungsfehler, die durch Dateisperrkonflikte verursacht werden. Verwenden Sie die [**GetTempPath-Funktion,**](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha) um den Pfad zum Speichern temporärer Informationen anzugeben.
 
- 
+ 
 
- 
+ 

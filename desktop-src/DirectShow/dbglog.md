@@ -1,7 +1,7 @@
 ---
-description: Das dbglog-Makro sendet eine Zeichenfolge an den debugausgabeort, wenn die Protokollierung für den angegebenen Typ und die angegebene Ebene aktiviert ist. Dieses Makro wird bei Einzelhandels Builds ignoriert.
+description: Das DbgLog-Makro sendet eine Zeichenfolge an den Debugausgabespeicherort, wenn die Protokollierung für den angegebenen Typ und die angegebene Ebene aktiviert ist. Dieses Makro wird in Einzelhandels-Builds ignoriert.
 ms.assetid: 10e95d63-14f2-4fdb-a1b8-c5bf654f9819
-title: Dbglog-Makro (wxdebug. h)
+title: DbgLog-Makro (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Wxdebug.h
-ms.openlocfilehash: 1cd3f4e53c61fef1f030f654bbb0363cd7c97381
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 619a3cd277425b555bc64139c3e59c959cc6abd19d6da22c2129830c38496a24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953339"
 ---
-# <a name="dbglog-macro"></a>Dbglog-Makro
+# <a name="dbglog-macro"></a>DbgLog-Makro
 
-Das **dbglog** -Makro sendet eine Zeichenfolge an den debugausgabeort, wenn die Protokollierung für den angegebenen Typ und die angegebene Ebene aktiviert ist. Dieses Makro wird bei Einzelhandels Builds ignoriert.
+Das **DbgLog-Makro** sendet eine Zeichenfolge an den Debugausgabespeicherort, wenn die Protokollierung für den angegebenen Typ und die angegebene Ebene aktiviert ist. Dieses Makro wird in Einzelhandels-Builds ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ void DbgLog(
 *Typen* 
 </dt> <dd>
 
-Bitweise Kombination von einem oder mehreren Nachrichten Typen.
+Bitweise Kombination eines oder mehrerer Nachrichtentypen.
 
 </dd> <dt>
 
 *Level* 
 </dt> <dd>
 
-Protokolliergrad für diese Nachricht.
+Protokollierstufe für diese Meldung.
 
 </dd> <dt>
 
-*pformat* 
+*pFormat* 
 </dt> <dd>
 
-Eine Format Zeichenfolge im **printf** -Format.
+Eine **Formatzeichenfolge im Printf-Format.**
 
 </dd> <dt>
 
 *...* 
 </dt> <dd>
 
-Zusätzliche Argumente für die Format Zeichenfolge.
+Zusätzliche Argumente für die Formatzeichenfolge.
 
 </dd> </dl>
 
@@ -74,14 +74,14 @@ Zusätzliche Argumente für die Format Zeichenfolge.
 
 Dieses Makro gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Debugprotokollierung für einen der Nachrichten Typen auf die angegebene Ebene oder höher festgelegt ist, sendet dieses Makro die formatierte Zeichenfolge an den debugausgabespeicherort.
+Wenn die Debugprotokollierung für einen der Nachrichtentypen auf die angegebene Ebene oder höher festgelegt ist, sendet dieses Makro die formatierte Zeichenfolge an den Debugausgabespeicherort.
 
-Das Makro fügt der Ausgabe Zeichenfolge automatisch ein Zeilen Trennzeichen hinzu.
+Das Makro fügt der Ausgabezeichenfolge automatisch ein Neue-Zeichen hinzu.
 
 > [!Note]  
-> Ein zusätzlicher Satz Klammern muss die Makro Parameter einschließen:
+> Ein zusätzlicher Satz von Klammern muss die Makroparameter umschließen:
 
  
 
@@ -98,15 +98,15 @@ DbgLog((LOG_TRACE, 3, TEXT("Connected input pin %d"), nPinNumber));
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Debug-Ausgabefunktionen](debug-output-functions.md)
+[Debugausgabefunktionen](debug-output-functions.md)
 </dt> </dl>
 
  
