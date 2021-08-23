@@ -1,9 +1,9 @@
 ---
 title: DownloadCollection.id
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Die ID-Eigenschaft ruft die ID der Download Auflistung ab.
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die id-Eigenschaft ruft die ID der Downloadsammlung ab.
 ms.assetid: b5b17f22-913c-4055-8958-e3efac819b2b
 keywords:
-- DownloadCollection.ID Windows Media Player
+- DownloadCollection.id Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9edcca4f56c485951ca907ae228dfec7a958b308
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 97e505db2e643286f84b61bfa8604b9edc8ef36fa39cdd040bd9cc49bb98f82d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119651269"
 ---
 # <a name="downloadcollectionid"></a>DownloadCollection.id
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **ID** -Eigenschaft ruft die ID der Download Auflistung ab.
+Die **id-Eigenschaft** ruft die ID der Downloadsammlung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,13 +41,13 @@ DownloadManager.getDownloadCollection(
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Download-Manager eine neue Download Sammlung erstellt, wird der Sammlung eine ID-Nummer zugewiesen. ID-Nummern werden zwischen Windows Media Player-Sitzungen und Betriebssystem Sitzungen beibehalten.
+Wenn der Download-Manager eine neue Downloadsammlung erstellt, weist er der Sammlung eine ID-Nummer zu. ID-Nummern werden zwischen Windows Media Player sitzungen und Betriebssystemsitzungen beibehalten.
 
-Die ID-Nummern sind nicht eindeutig. Es sind jedoch genügend ID-Nummern im 32-Bit-Wert verfügbar, dass es äußerst unwahrscheinlich ist, dass eine vorhandene ID jemals durch eine neue ID überschrieben wird.
+ID-Nummern sind nicht eindeutig. Im 32-Bit-Wert sind jedoch genügend ID-Nummern verfügbar, dass es äußerst unwahrscheinlich ist, dass eine vorhandene ID-Nummer jemals durch eine neue id-Nummer überschrieben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,7 +55,7 @@ Die ID-Nummern sind nicht eindeutig. Es sind jedoch genügend ID-Nummern im 32-B
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/>                                  |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/>                                  |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -64,7 +64,7 @@ Die ID-Nummern sind nicht eindeutig. Es sind jedoch genügend ID-Nummern im 32-B
 
 <dl> <dt>
 
-[**Download Collection-Objekt**](downloadcollection-object.md)
+[**DownloadCollection-Objekt**](downloadcollection-object.md)
 </dt> </dl>
 
  

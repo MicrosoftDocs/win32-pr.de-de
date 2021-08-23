@@ -1,8 +1,8 @@
 ---
-description: Mit den Methoden des-Objekts von "Swap-Locator" können Sie ein-Objekt abrufen, das eine Verbindung mit einem Namespace auf einem lokalen Computer oder einem Remote Host Computer darstellt.
+description: Sie können die Methoden des SWbemLocator-Objekts verwenden, um ein SWbemServices-Objekt zu erhalten, das eine Verbindung mit einem Namespace auf einem lokalen Computer oder einem Remotehostcomputer darstellt.
 ms.assetid: 51ea2c01-04e8-4b1c-bc82-ac96ba8b6eee
 ms.tgt_platform: multiple
-title: Swap-Objekt (wbemdisp. h)
+title: SWbemLocator-Objekt (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,33 +15,33 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 964b040fa5046aa619dc08df92838dca343ba9b5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e93e9bd0bfb33c495b30afbde47bcb9b007acb4cd00dece42e1a8c3b88e99d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119732791"
 ---
-# <a name="swbemlocator-object"></a>Swap-Objekt
+# <a name="swbemlocator-object"></a>SWbemLocator-Objekt
 
-Mit den Methoden des-Objekts von " **Swap-Locator** " können Sie [**ein-**](swbemservices.md) Objekt abrufen, das eine Verbindung mit einem Namespace auf einem lokalen Computer oder einem Remote Host Computer darstellt. Anschließend können Sie die Methoden des WS- **Services** -Objekts verwenden, um auf WMI zuzugreifen. Dieses Objekt kann durch den VBScript-Befehl "up- **Object** " erstellt werden.
+Sie können die Methoden des **SWbemLocator-Objekts** verwenden, um ein [**SWbemServices-Objekt**](swbemservices.md) zu erhalten, das eine Verbindung mit einem Namespace auf einem lokalen Computer oder einem Remotehostcomputer darstellt. Anschließend können Sie die Methoden des **SWbemServices-Objekts** verwenden, um auf WMI zu zugreifen. Dieses Objekt kann durch den VBScript **CreateObject-Aufruf erstellt** werden.
 
 ## <a name="members"></a>Member
 
-Das Objekt " **Swap-Locator** " verfügt über diese Typen von Membern:
+Das **SWbemLocator-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das **taubemlocator** -Objekt verfügt über diese Methoden.
+Das **SWbemLocator-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                              | BESCHREIBUNG                                           |
+| Methode                                              | Beschreibung                                           |
 |:----------------------------------------------------|:------------------------------------------------------|
-| [**Server Verbindung**](swbemlocator-connectserver.md) | Stellt eine Verbindung mit WMI auf dem angegebenen Computer her.<br/> |
+| [**ConnectServer**](swbemlocator-connectserver.md) | Stellt eine Verbindung mit WMI auf dem angegebenen Computer her.<br/> |
 
 
 
@@ -49,28 +49,28 @@ Das **taubemlocator** -Objekt verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **taubemlocator** -Objekt verfügt über diese Eigenschaften.
+Das **SWbemLocator-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                | Zugriffstyp          | BESCHREIBUNG                                              |
+| Eigenschaft                                                | Zugriffstyp          | Beschreibung                                              |
 |:--------------------------------------------------------|:---------------------|:---------------------------------------------------------|
-| [**Sicherheit\_**](swbemlocator-security-.md)<br/> | Schreibgeschützt<br/> | Wird verwendet, um die Sicherheitseinstellungen zu lesen oder zu ändern.<br/> |
+| [**Sicherheit\_**](swbemlocator-security-.md)<br/> | Schreibgeschützt<br/> | Wird zum Lesen oder Ändern der Sicherheitseinstellungen verwendet.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Am Anfang des WMI-skriptingbibliotheks-Objektmodells befindet sich das Objekt "Swap-Locator". Mithilfe von "Swap-Locator" wird eine authentifizierte Verbindung mit einem WMI-Namespace hergestellt, ähnlich wie die VBScript-Funktion "GetObject" und der WMI-Moniker "winmgmts:" zum Herstellen einer authentifizierten Verbindung mit WMI. Allerdings ist der Austausch Vorgang so konzipiert, dass zwei spezifische Skript Szenarien adressiert werden, die nicht mithilfe von GetObject und dem WMI-Moniker ausgeführt werden können. Wenn Sie Folgendes benötigen, müssen Sie den folgenden Befehl verwenden:
+Am Anfang des WMI-Skriptbibliothek-Objektmodells befindet sich das SWbemLocator-Objekt. SWbemLocator wird verwendet, um eine authentifizierte Verbindung mit einem WMI-Namespace herzustellen, ähnlich wie die VBScript GetObject-Funktion und der WMI-Moniker "winmgmts:", um eine authentifizierte Verbindung mit WMI herzustellen. SWbemLocator ist jedoch für zwei spezifische Skriptszenarien konzipiert, die nicht mit GetObject und dem WMI-Moniker ausgeführt werden können. Sie müssen SWbemLocator verwenden, wenn Sie:
 
--   Geben Sie Benutzer-und Kenn Wort Anmelde Informationen für die Verbindung mit WMI auf einem Remote Computer an. Der WMI-Moniker, der mit der GetObject-Funktion verwendet wird, enthält keinen Mechanismus zum Angeben von Anmelde Informationen. Die meisten WMI-Aktivitäten (einschließlich aller auf Remote Computern ausgeführten) erfordern Administratorrechte. Wenn Sie sich in der Regel mit einem regulären Benutzerkonto anstelle eines Administrator Kontos anmelden, können Sie die meisten WMI-Aufgaben nur ausführen, wenn Sie das Skript unter Alternative Anmelde Informationen ausführen.
--   Stellen Sie eine Verbindung mit WMI her, wenn Sie ein WMI-Skript aus einer Webseite heraus ausführen. Sie können die GetObject-Funktion nicht verwenden, wenn Sie Skripts ausführen, die in einer HTML-Seite eingebettet sind, da Internet Explorer die Verwendung von GetObject aus Sicherheitsgründen nicht zulässt.
+-   Geben Sie Benutzer- und Kennwortanmeldeinformationen an, um eine Verbindung mit WMI auf einem Remotecomputer herzustellen. Der mit der GetObject-Funktion verwendete WMI-Moniker enthält keinen Mechanismus zum Angeben von Anmeldeinformationen. Die meisten WMI-Aktivitäten (einschließlich aller auf Remotecomputern ausgeführten) erfordern Administratorrechte. Wenn Sie sich in der Regel mit einem regulären Benutzerkonto anstelle eines Administratorkontos anmelden, können Sie die meisten WMI-Aufgaben nur ausführen, wenn Sie das Skript unter alternativen Anmeldeinformationen ausführen.
+-   Verbinden WMI,wenn Sie ein WMI-Skript von einer Webseite aus ausführen. Sie können die GetObject-Funktion nicht verwenden, wenn Sie Skripts ausführen, die in eine HTML-Seite eingebettet sind, da Internet Explorer die Verwendung von GetObject aus Sicherheitsgründen nicht zugelassen.
 
-Außerdem empfiehlt es sich, für die Verbindung mit WMI die Verbindung mit WMI zu verwenden, wenn Sie die WMI-Verbindungs Zeichenfolge mit "GetObject" verwirrend oder schwierig finden.
+Darüber hinaus können Sie SWbemLocator verwenden, um eine Verbindung mit WMI herzustellen, wenn Die mit GetObject verwendete WMI-Verbindungszeichenfolge verwirrend oder schwierig ist.
 
-Sie verwenden "" anstelle von "GetObject", um einen Verweis auf "Swap" zu erstellen. Um den Verweis zu erstellen, müssen Sie die Funktion "degid" ("WbemScripting. Swap") der Funktion "degid" ("WbemScripting. sexbemlocator") der Funktion "degid" übergeben, wie in Zeile 2 im folgenden Skript Beispiel gezeigt. Nachdem Sie einen Verweis auf ein Objekt vom Typ "WS-Locator" abgerufen haben, rufen Sie die ConnectServer-Methode auf, um eine Verbindung mit WMI herzustellen und einen Verweis auf ein Objekt vom Typ "WS Dies wird in Zeile 3 des folgenden Skripts veranschaulicht.
+Sie verwenden CreateObject anstelle von GetObject, um einen Verweis auf SWbemLocator zu erstellen. Um den Verweis zu erstellen, müssen Sie der CreateObject-Funktion den programmgesteuerten SWbemLocator-Bezeichner (ProgID) "WbemScripting.SWbemLocator" übergeben, wie in Zeile 2 im folgenden Skriptbeispiel gezeigt. Nachdem Sie einen Verweis auf ein SWbemLocator-Objekt erhalten haben, rufen Sie die ConnectServer-Methode auf, um eine Verbindung mit WMI herzustellen und einen Verweis auf ein SWbemServices-Objekt zu erhalten. Dies wird in Zeile 3 des folgenden Skripts gezeigt.
 
 
 ```VB
@@ -85,7 +85,7 @@ Next
 
 
 
-Wenn Sie ein Skript unter Alternativen Anmelde Informationen ausführen möchten, fügen Sie den Benutzernamen und das Kennwort als zusätzliche Parameter an ConnectServer ein. Dieses Skript wird z. b. unter den Anmelde Informationen eines Benutzers namens kenmyer mit dem Kennwort homerj ausgeführt.
+Um ein Skript unter alternativen Anmeldeinformationen auszuführen, fügen Sie den Benutzernamen und das Kennwort als zusätzliche Parameter ein, die an ConnectServer übergeben werden. Dieses Skript wird beispielsweise mit den Anmeldeinformationen eines Benutzers namens kenmyer mit dem Kennwort homerj ausgeführt.
 
 
 ```VB
@@ -101,13 +101,13 @@ Next
 
 
 
-Sie können auch das Format Domäne \\ Benutzername verwenden, um einen Benutzernamen anzugeben. Beispiel:
+Sie können auch das Format \\ Domänenbenutzername verwenden, um einen Benutzernamen anzugeben. Beispiel:
 
 `" fabrikam\kenmyer"`
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden PowerShell-Beispiel wird **SWbemLocator** verwendet, um eine Verbindung mit einem Server herzustellen.
+Im folgenden PowerShell-Beispiel wird **SWbemLocator verwendet,** um eine Verbindung mit einem Server herzustellen.
 
 
 ```PowerShell
@@ -129,11 +129,11 @@ $WbemClasses
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austausch<br/>                                                          |
-| IID<br/>                      | IID \_ iswbemlocator<br/>                                                           |
+| CLSID<br/>                    | CLSID \_ SWbemLocator<br/>                                                          |
+| IID<br/>                      | IID \_ ISWbemLocator<br/>                                                           |
 
 
 
@@ -141,7 +141,7 @@ $WbemClasses
 
 <dl> <dt>
 
-[API-Skript Objekte](scripting-api-objects.md)
+[Skripterstellung für API-Objekte](scripting-api-objects.md)
 </dt> </dl>
 
  

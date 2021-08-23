@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentpagesizemismatchexception-Klasse'
-title: Esentpagesizemismatchexception-Klasse
+description: 'Weitere Informationen zu: EsentPageSizeMismatchException-Klasse'
+title: EsentPageSizeMismatchException-Klasse
 TOCTitle: EsentPageSizeMismatchException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentPageSizeMismatchException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentpagesizemismatchexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c0573603fae445e1e5ae9d9768c3a0ffcf38f283
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0f93c5d8d36b467cbc2cf7aa5f6279173a5a7bb6f2daf75d4ed9b34f10d4174e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119733020"
 ---
-# <a name="esentpagesizemismatchexception-class"></a>Esentpagesizemismatchexception-Klasse
+# <a name="esentpagesizemismatchexception-class"></a>EsentPageSizeMismatchException-Klasse
 
-Basisklasse für JET_err. Pagesizemismatch-Ausnahmen.
+Basisklasse für JET_err. PageSizeMismatch-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentdataexception](./esentdataexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. EsentInconsistentException](./esentinconsistentexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentpagesizemismatchexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentDataException](./esentdataexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentInconsistentException](./esentinconsistentexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentPageSizeMismatchException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentpagesizemismatchexception-Member](./esentpagesizemismatchexception-members.md)
+[EsentPageSizeMismatchException-Member](./esentpagesizemismatchexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -4,25 +4,25 @@ ms.assetid: d2828269-6841-41a8-8d45-f864c7e85857
 title: Verwenden des Smart Tee-Filters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5260469634c613fe05c25eb9f55e24e108e8c434
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c8897a93e8be7582a4acce1a2822160c58cfe1df79eb2093bd5d96bad9629b64
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373141"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650775"
 ---
 # <a name="using-the-smart-tee-filter"></a>Verwenden des Smart Tee-Filters
 
-Wenn für einen Erfassungs Filter separate Erfassungs-und Vorschau Pins verfügbar sind, können Sie von einem Erfassungs Filter erfassen, während Sie die Vorschau anzeigen. Wenn der Filter jedoch keine Vorschau-Pin hat, können Sie das gleiche tun, indem Sie den [Smart Tee](smart-tee-filter.md) -Filter in das Diagramm einschließen. Dieser Filter teilt die Daten aus dem Erfassungs-PIN in zwei identische Datenströme auf, einen für Capture und einen für die Vorschau. Dieser Prozess wird anhand des folgenden Diagramms veranschaulicht.
+Wenn ein Erfassungsfilter über separate Erfassungs- und Vorschaupins verfügt, können Sie von einem erfassen, während Sie eine Vorschau anzeigen. Wenn der Filter jedoch über keine Vorschaupins verfügt, können Sie dasselbe tun, indem Sie den [Smart Tee-Filter](smart-tee-filter.md) in das Diagramm eingeben. Dieser Filter teilt Daten aus dem Erfassungspin in zwei identische Datenströme auf: einen für die Erfassung und einen für die Vorschau. Dieser Prozess wird anhand des folgenden Diagramms veranschaulicht.
 
-![Diagramm mit Smart Tee-Filter erfassen](images/vidcap05.png)
+![Erfassungsdiagramm mit intelligentem Teefilter](images/vidcap05.png)
 
-Die [**ICaptureGraphBuilder2:: RenderStream**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream) -Methode fügt ggf. automatisch den intelligenten Tee-Filter ein. Wenn Sie jedoch **igraphbuilder** -Methoden verwenden, um das Diagramm zu erstellen, und nicht **RenderStream**, müssen Sie möglicherweise den Smart Tee-Filter einfügen.
+Die [**ICaptureGraphBuilder2::RenderStream-Methode**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream) fügt bei Bedarf automatisch den Smart Tee-Filter ein. Wenn Sie jedoch **IGraphBuilder-Methoden** zum Erstellen Ihres Graphen und nicht **RenderStream** verwenden, müssen Sie möglicherweise den Smart Tee-Filter einfügen.
 
-Überprüfen Sie vor dem Rendering von Pins im Erfassungs Filter, ob der Filter eine Vorschau-PIN oder eine Videoport-Pin aufweist. Wenn dies nicht der Fall ist und Sie eine Vorschau anzeigen möchten, fügen Sie dem Diagramm den intelligenten Tee-Filter hinzu, und verbinden Sie ihn mit der Erfassungs-PIN im Erfassungs Filter.
+Überprüfen Sie vor dem Rendern von Stecknadeln auf dem Erfassungsfilter, ob der Filter über einen Vorschaupin oder einen Videoportanschluss verfügt. Wenn dies nicht der Benutzer ist und Sie eine Vorschau anzeigen möchten, fügen Sie dem Diagramm den Smart Tee-Filter hinzu, und verbinden Sie ihn mit dem Aufnahmepin des Erfassungsfilters.
 
 > [!Note]  
-> Sie können eine textport-PIN (VP) als eine Art von Vorschau-Pin behandeln, sodass ein Filter mit einer VP-Pin keinen intelligenten Tee-Filter benötigt. Allerdings haben VP Pins einige andere besondere Anforderungen. Weitere Informationen finden Sie unter [Video Port Pins](video-port-pins.md).
+> Sie können einen Videoportpin (VP) als eine Art Vorschaupin behandeln, sodass ein Filter mit einem VP-Pin keinen Smart Tee-Filter benötigt. VP-Pins haben jedoch einige andere besondere Anforderungen. Weitere Informationen finden Sie unter [Video Port Pins](video-port-pins.md).
 
  
 
@@ -30,13 +30,13 @@ Die [**ICaptureGraphBuilder2:: RenderStream**](/windows/desktop/api/Strmif/nf-st
 
 <dl> <dt>
 
-[Erweiterte Erfassungs Themen](advanced-capture-topics.md)
+[Erweiterte Erfassungsthemen](advanced-capture-topics.md)
 </dt> <dt>
 
-[Kombinieren von Video Erfassung und Vorschau](combining-video-capture-and-preview.md)
+[Kombinieren von Videoaufnahme und Vorschau](combining-video-capture-and-preview.md)
 </dt> <dt>
 
-[Arbeiten mit PIN-Kategorien](working-with-pin-categories.md)
+[Arbeiten mit Pinkategorien](working-with-pin-categories.md)
 </dt> </dl>
 
  

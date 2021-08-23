@@ -1,9 +1,9 @@
 ---
-title: Event. $ Element
-description: Das "$ Element"-Attribut ruft das Element ab, zu dem der Tastaturfokus verschoben wurde. Dieses Attribut gilt nur für das onblur-Ereignis. für alle anderen Ereignisse ist der Wert NULL.
+title: event.toElement
+description: Das toElement-Attribut ruft das Element ab, zu dem der Tastaturfokus verschoben wurde. Dieses Attribut gilt nur für das onblur-Ereignis. für alle anderen Ereignisse ist der Wert NULL.
 ms.assetid: 05d15001-2f07-421b-b66f-ea9f46a130a2
 keywords:
-- "\"Event. deelement\"-Windows-Media Player"
+- event.toElement Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 71e7690a2d585b3374bc6d7a375d8af307d0b66d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 565177e09804823eb7fb540f0ab9a2cf111af7e085b847c5992a4d63a5f37257
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359762"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650370"
 ---
-# <a name="eventtoelement"></a>Event. $ Element
+# <a name="eventtoelement"></a>event.toElement
 
-Das "$ **Element** "-Attribut ruft das Element ab, zu dem der Tastaturfokus verschoben wurde. Dieses Attribut gilt nur für das **onblur** -Ereignis. für alle anderen Ereignisse ist der Wert **null**.
+Das **toElement-Attribut** ruft das Element ab, zu dem der Tastaturfokus verschoben wurde. Dieses Attribut gilt nur für das **onblur-Ereignis.** für alle anderen Ereignisse ist der Wert **NULL.**
 
 ``` syntax
 event.toElement
@@ -29,7 +29,7 @@ event.toElement
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein Schreib geschütztes-Objekt.
+Dieses Attribut ist ein schreibgeschütztes Objekt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Dieses Attribut ist ein Schreib geschütztes-Objekt.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,7 +45,7 @@ Dieses Attribut ist ein Schreib geschütztes-Objekt.
 
 <dl> <dt>
 
-[**Ambient-Ereignis Attribute**](ambient-event-attributes.md)
+[**Ambient-Ereignisattribute**](ambient-event-attributes.md)
 </dt> </dl>
 
  

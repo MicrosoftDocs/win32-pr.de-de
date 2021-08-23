@@ -1,19 +1,19 @@
 ---
-description: Wenn dieses Stilbit festgelegt ist, beendet das Dialogfeld alle anderen Anwendungen, und es können keine anderen Anwendungen den Fokus haben. Dieser Zustand bleibt bestehen, bis das sysmodal-Dialogfeld geschlossen wird.
+description: Wenn dieses Stilbit festgelegt ist, werden alle anderen Anwendungen im Dialogfeld nicht mehr angezeigt, und andere Anwendungen können den Fokus nicht übernehmen. Dieser Zustand bleibt erhalten, bis das SysModal-Dialogfeld verworfen wird.
 ms.assetid: 7605820f-f020-47d1-8659-52e3d2bf34aa
-title: Sysmodal-Dialog Feld Stil
+title: SysModal Dialog Style Bit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8f6b505bf8086bab73d654c3d598dffdedaff61
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6d41e07c286dbecb2d764caaca88ec6e03ca737d4e8b693da7302fedc30712db
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119626940"
 ---
-# <a name="sysmodal-dialog-style-bit"></a>Sysmodal-Dialog Feld Stil
+# <a name="sysmodal-dialog-style-bit"></a>SysModal Dialog Style Bit
 
-Wenn dieses Stilbit festgelegt ist, beendet das Dialogfeld alle anderen Anwendungen, und es können keine anderen Anwendungen den Fokus haben. Dieser Zustand bleibt bestehen, bis das sysmodal-Dialogfeld geschlossen wird.
+Wenn dieses Stilbit festgelegt ist, werden alle anderen Anwendungen im Dialogfeld nicht mehr angezeigt, und andere Anwendungen können den Fokus nicht übernehmen. Dieser Zustand bleibt erhalten, bis das SysModal-Dialogfeld verworfen wird.
 
 ## <a name="value"></a>Wert
 
@@ -21,7 +21,7 @@ Wenn dieses Stilbit festgelegt ist, beendet das Dialogfeld alle anderen Anwendun
 
 | Decimal | Hexadezimal | Konstante                          |
 |---------|-------------|-----------------------------------|
-| 8       | 0x00000008  | **msidbdialogattributessysmodal** |
+| 8       | 0x00000008  | **msidbDialogAttributesSysModal** |
 
 
 

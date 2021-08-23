@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. gainLevel6
-description: Das gainLevel6-Attribut gibt die Gewinn Ebene von Band 6 an oder ruft Sie ab. Der Standardwert ist 0 (null).
+title: EQUALIZERSETTINGS.gainLevel6
+description: Das gainLevel6-Attribut gibt die Verstärkungsebene von Band 6 an oder ruft sie ab. Der Standardwert ist 0 (null).
 ms.assetid: da3e1df5-434b-44db-bcde-8ad9c9874627
 keywords:
-- Equalizersettings. gainLevel6 Windows Media Player
+- EQUALIZERSETTINGS.gainLevel6 Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1762613b54e488f1f364b13b9970104287e8cf53
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7238fc2d90828bdae8e3a4c0ca7cf3700462cd27b7a180169e4a7293c1ae3472
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364629"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650930"
 ---
-# <a name="equalizersettingsgainlevel6"></a>Equalizersettings. gainLevel6
+# <a name="equalizersettingsgainlevel6"></a>EQUALIZERSETTINGS.gainLevel6
 
-Das **gainLevel6** -Attribut gibt die Gewinn Ebene von Band 6 an oder ruft Sie ab. Der Standardwert ist 0 (null).
+Das **gainLevel6-Attribut** gibt die Verstärkungsebene von Band 6 an oder ruft sie ab. Der Standardwert ist 0 (null).
 
 ``` syntax
         elementID.gainLevel6
@@ -29,13 +29,13 @@ Das **gainLevel6** -Attribut gibt die Gewinn Ebene von Band 6 an oder ruft Sie a
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibnummer (**float**) mit einem Wert, der normalerweise zwischen 20 und + 20 liegt.  Der Standardwert ist 0 (null).
+Dieses Attribut ist eine  Lese-/Schreibnummer **(float)** mit einem Wert, der normalerweise zwischen 20 und +20 liegt. Der Standardwert ist 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit diesem Attribut wird der Teil des Frequenzbereichs für die Audiofrequenz angepasst, der sich auf 1 kHz konzentriert.
+Dieses Attribut passt den Teil des Audiofrequenzspektrums an, der auf 1 kHz zentriert ist.
 
-Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
+Wenn dieses Attribut nicht angegeben ist, wird der vorherige Wert beibehalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -51,10 +51,10 @@ Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> <dt>
 
-[**Equalizersettings. Erwerbs Stufen**](equalizersettings-gainlevels.md)
+[**EQUALIZERSETTINGS. gainLevels**](equalizersettings-gainlevels.md)
 </dt> </dl>
 
  

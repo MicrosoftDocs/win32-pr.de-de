@@ -1,8 +1,8 @@
 ---
-description: Ein "taubemnamedvalueset"-Objekt ist eine Sammlung von "taubemnamedvalue"-Objekten.
+description: Ein SWbemNamedValueSet-Objekt ist eine Sammlung von SWbemNamedValue-Objekten.
 ms.assetid: 7d1c3a28-d0d3-4108-9628-74ad483e328e
 ms.tgt_platform: multiple
-title: Taubemnamedvalueset-Objekt (wbemdisp. h)
+title: SWbemNamedValueSet-Objekt (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,48 +15,48 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 2b3048b8589666a07958251ed4c0d56100132fd0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cfdcc3ba2bde6dfdfd0cc732e4376ceb69ba60904f4d787d9030299c248ebb62
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343411"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119732670"
 ---
-# <a name="swbemnamedvalueset-object"></a>Swap-namedvalueset-Objekt
+# <a name="swbemnamedvalueset-object"></a>SWbemNamedValueSet-Objekt
 
-Ein " **taubemnamedvalueset** "-Objekt ist eine Sammlung von " [**taubemnamedvalue**](swbemnamedvalue.md) "-Objekten. Die Methoden und Eigenschaften von " **Austausch Name** " werden im Wesentlichen verwendet, um weitere Informationen an Anbieter zu senden, wenn bestimmte WMI-Aufrufe übermittelt werden. Alle Aufrufe in " [**Swap Services**](swbemservices.md)" und einige Aufrufe in " [**errbemujeject**](swbemobject.md)" akzeptieren einen optionalen Parameter, bei dem es sich um ein Objekt dieses Typs handelt. Ein Client kann einem "Swap- **namedvalueset** "-Objektinformationen hinzufügen und das " **austaubemnamedvalueset** "-Objekt mit dem-Parameter als einen der-Parameter senden. Dieses Objekt kann durch den VBScript-Befehl "up- **Object** " erstellt werden.
+Ein **SWbemNamedValueSet-Objekt** ist eine Sammlung von [**SWbemNamedValue-Objekten.**](swbemnamedvalue.md) Die Methoden und Eigenschaften von **SWbemNamedValueSet** werden hauptsächlich verwendet, um weitere Informationen an Anbieter zu senden, wenn bestimmte Aufrufe an WMI gesendet werden. Alle Aufrufe in [**SWbemServices**](swbemservices.md)und einige Aufrufe in [**SWbemObject**](swbemobject.md)verwenden einen optionalen Parameter, der ein Objekt dieses Typs ist. Ein Client kann einem **SWbemNamedValueSet-Objekt** Informationen hinzufügen und das **SWbemNamedValueSet-Objekt** mit dem Aufruf als einen der Parameter senden. Dieses Objekt kann durch den VBScript **CreateObject-Aufruf erstellt** werden.
 
-Weitere Informationen finden Sie unter [zugreifen auf eine Sammlung](accessing-a-collection.md).
+Weitere Informationen finden Sie unter [Zugreifen auf eine Auflistung.](accessing-a-collection.md)
 
 > [!Note]  
-> Wichtig: Wenn möglich, verwenden Sie diesen Mechanismus nicht, da er das einheitliche Zugriffs Modell, das die Basis von WMI ist, unterbrechen kann. Wenn ein Anbieter diesen Mechanismus verwendet, ist es wichtig, dass dieser Mechanismus so sparsam wie möglich verwendet wird. Wenn ein Anbieter eine große Menge hochspezifischer Kontextinformationen erfordert, um auf eine Anforderung zu reagieren, müssen alle Clients so codiert sein, dass diese Informationen bereitgestellt werden. Mit diesem Mechanismus können Sie bei Bedarf auf solche Anbieter zugreifen.
+> Wichtig: Verwenden Sie diesen Mechanismus nach Möglichkeit nicht, da er das einheitliche Zugriffsmodell, das die Grundlage von WMI ist, unterbricht. Wenn ein Anbieter diesen Mechanismus verwendet, ist es wichtig, dass dieser Mechanismus so wenig wie möglich verwendet wird. Wenn ein Anbieter eine große Menge hochspezifischer Kontextinformationen benötigt, um auf eine Anforderung zu reagieren, müssen alle Clients codiert werden, um diese Informationen bereitstellen zu können. Mit diesem Mechanismus können Sie bei Bedarf auf solche Anbieter zugreifen.
 
  
 
-Ein " **taubemnamedvalueset** "-Objekt ist eine Sammlung von " [**taubemnamedvalue**](swbemnamedvalue.md) "-Elementen. Diese Elemente werden der Auflistung mithilfe der Methode " [**Swap. Add**](swbemnamedvalueset-add.md) " hinzugefügt. Sie werden mithilfe der Methode " [**Swap Name. Remove**](swbemnamedvalueset-remove.md) " entfernt und mithilfe der Methode " [**Swap Name. Item**](swbemnamedvalueset-item.md) " abgerufen. Sie können auf die-Methoden zugreifen, um alle Kontextinformationen auszufüllen, die von einem dynamischen Anbieter benötigt werden. Nachdem Sie eine der Methode " [**Swap Services**](swbemservices.md) " aufgerufen haben, können Sie das Objekt " **taubemnamedvalueset** " für einen anderen-Befehl wieder verwenden.
+Ein **SWbemNamedValueSet-Objekt** ist eine Sammlung von [**SWbemNamedValue-Elementen.**](swbemnamedvalue.md) Diese Elemente werden der Auflistung mithilfe der [**SWbemNamedValueSet.Add-Methode**](swbemnamedvalueset-add.md) hinzugefügt. Sie werden mithilfe der [**SWbemNamedValueSet.Remove-Methode**](swbemnamedvalueset-remove.md) entfernt und mithilfe der [**SWbemNamedValueSet.Item-Methode**](swbemnamedvalueset-item.md) abgerufen. Sie können auf die Methoden zugreifen, um alle Kontextinformationen einfüllen zu können, die für einen dynamischen Anbieter erforderlich sind. Nachdem Sie eine der [**SWbemServices-Methoden**](swbemservices.md) aufrufen, können Sie das **SWbemNamedValueSet-Objekt** für einen anderen Aufruf wiederverwenden.
 
-Der zugrunde liegende Anbieter bestimmt die Informationen, die in einem " **Swap namedvalueset** "-Objekt enthalten sind. WMI verwendet die Informationen nicht, sondern leitet Sie einfach an den Anbieter weiter. Anbieter müssen die erforderlichen Kontextinformationen für die Dienst Anforderungen veröffentlichen.
+Der zugrunde liegende Anbieter bestimmt die Informationen, die in einem **SWbemNamedValueSet-Objekt enthalten** sind. WMI nutzt die Informationen nicht, sondern gibt sie einfach an den Anbieter weiter. Anbieter müssen die benötigten Kontextinformationen für Dienstanforderungen veröffentlichen.
 
 ## <a name="members"></a>Member
 
-Das Objekt " **taubemnamedvalueset** " verfügt über diese Typen von Membern:
+Das **SWbemNamedValueSet-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das Objekt " **Swap namedvalueset** " verfügt über diese Methoden.
+Das **SWbemNamedValueSet-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                            | BESCHREIBUNG                                                                                                                              |
+| Methode                                            | Beschreibung                                                                                                                              |
 |:--------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
-| [**Eren**](swbemnamedvalueset-add.md)             | Fügt der Auflistung ein-Objekt mit dem [**Namen**](swbemnamedvalue.md) "-Objekt" hinzu.<br/>                                                  |
-| [**Klon**](swbemnamedvalueset-clone.md)         | Erstellt eine Kopie dieser " **Swap namedvalueset** "-Auflistung.<br/>                                                                       |
-| [**DeleteAll**](swbemnamedvalueset-deleteall.md) | Entfernt alle Elemente aus der Auflistung, sodass das Objekt " **taubemnamedvalueset** " leer ist.<br/>                                        |
-| [**Element**](swbemnamedvalueset-item.md)           | Ruft [**ein-**](swbemnamedvalue.md) Objekt aus der-Auflistung ab. Dies ist die Standardmethode des-Objekts.<br/> |
-| [**Aufgeh**](swbemnamedvalueset-remove.md)       | Entfernt ein " [**pulbemnamedvalue**](swbemnamedvalue.md) "-Objekt aus der Auflistung.<br/>                                             |
+| [**Hinzufügen**](swbemnamedvalueset-add.md)             | Fügt der [**Auflistung ein SWbemNamedValue-Objekt**](swbemnamedvalue.md) hinzu.<br/>                                                  |
+| [**Klon**](swbemnamedvalueset-clone.md)         | Erstellt eine Kopie dieser **SWbemNamedValueSet-Auflistung.**<br/>                                                                       |
+| [**DeleteAll**](swbemnamedvalueset-deleteall.md) | Entfernt alle Elemente aus der Auflistung, wodurch das **SWbemNamedValueSet-Objekt** leer ist.<br/>                                        |
+| [**Element**](swbemnamedvalueset-item.md)           | Ruft ein [**SWbemNamedValue-Objekt**](swbemnamedvalue.md) aus der Auflistung ab. Dies ist die Standardmethode des -Objekts.<br/> |
+| [**Entfernen**](swbemnamedvalueset-remove.md)       | Entfernt ein [**SWbemNamedValue-Objekt**](swbemnamedvalue.md) aus der Auflistung.<br/>                                             |
 
 
 
@@ -64,13 +64,13 @@ Das Objekt " **Swap namedvalueset** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das Objekt " **Swap namedvalueset** " verfügt über diese Eigenschaften.
+Das **SWbemNamedValueSet-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                             | Zugriffstyp          | BESCHREIBUNG                                       |
+| Eigenschaft                                             | Zugriffstyp          | Beschreibung                                       |
 |:-----------------------------------------------------|:---------------------|:--------------------------------------------------|
-| [**Countdown**](swbemnamedvalueset-count.md)<br/> | Schreibgeschützt<br/> | Die Anzahl der Elemente in der Auflistung.<br/> |
+| [**Anzahl**](swbemnamedvalueset-count.md)<br/> | Schreibgeschützt<br/> | Die Anzahl der Elemente in der Auflistung.<br/> |
 
 
 
@@ -78,7 +78,7 @@ Das Objekt " **Swap namedvalueset** " verfügt über diese Eigenschaften.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende VBScript-Beispiel veranschaulicht die Bearbeitung von benannten Wert Sätzen, falls der benannte Wert ein Arraytyp ist.
+Das folgende VBScript-Beispiel veranschaulicht die Bearbeitung benannter Wertsätze, falls der benannte Wert ein Arraytyp ist.
 
 
 ```VB
@@ -137,7 +137,7 @@ End if
 
 
 
-Das folgende perl-Beispiel veranschaulicht die Bearbeitung von benannten Wert Sätzen, falls der benannte Wert ein Arraytyp ist.
+Das folgende Perl-Beispiel veranschaulicht die Bearbeitung benannter Wertsätze, falls der benannte Wert ein Arraytyp ist.
 
 
 ```
@@ -213,19 +213,19 @@ else
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-namedvalueset<br/>                                                    |
-| IID<br/>                      | IID \_ iswbemnamedvalueset<br/>                                                     |
+| CLSID<br/>                    | CLSID \_ SWbemNamedValueSet<br/>                                                    |
+| IID<br/>                      | IID \_ ISWbemNamedValueSet<br/>                                                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[API-Skript Objekte](scripting-api-objects.md)
+[Skripterstellung für API-Objekte](scripting-api-objects.md)
 </dt> </dl>
 
  

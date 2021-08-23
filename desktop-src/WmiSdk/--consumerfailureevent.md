@@ -1,5 +1,5 @@
 ---
-description: Stellt das Vorkommen eines anderen Ereignisses dar, das aufgrund eines Fehlers eines Ereignisconsumer gelöscht wird.
+description: Stellt das Auftreten eines anderen Ereignisses dar, das aufgrund des Fehlers eines Ereignisverbraucher gelöscht wird.
 ms.assetid: bb6a1ce9-72a2-4528-8bc8-71ac053b6b1d
 ms.tgt_platform: multiple
 title: __ConsumerFailureEvent-Klasse
@@ -21,18 +21,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 571785245c05d18678c10a65b192a25022fff8f9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e8276716a1ca706a0027f35f9b554b960efebadacf3d8841b23415a43a9663c5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350967"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119732938"
 ---
-# <a name="__consumerfailureevent-class"></a>\_\_Consumerfailureevent-Klasse
+# <a name="__consumerfailureevent-class"></a>\_\_ConsumerFailureEvent-Klasse
 
-Die **\_ \_ consumerfailureevent** -System Klasse stellt das Vorkommen eines anderen Ereignisses dar, das aufgrund eines Fehlers eines Ereignisconsumers gelöscht wird.
+Die **\_ \_ ConsumerFailureEvent-Systemklasse** stellt das Auftreten eines anderen Ereignisses dar, das aufgrund des Fehlers eines Ereignisverbraucher gelöscht wird.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,112 +51,112 @@ class __ConsumerFailureEvent : __EventDroppedEvent
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ consumerfailureevent** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ ConsumerFailureEvent-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ consumerfailureevent** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ ConsumerFailureEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ErrorCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der vom Consumer zurückgegebene Fehlercode.
+Vom Consumer zurückgegebener Fehlercode.
 
 </dd> <dt>
 
 **ErrorDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Erweiterte Fehlercode Beschreibung, falls verfügbar.
+Beschreibung des erweiterten Fehlercodes, falls verfügbar.
 
 </dd> <dt>
 
-**Customerrorobject**
+**Errorobject**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Objekt ist fehlerhaft.
+Fehler beim Objekt.
 
 </dd> <dt>
 
 **Event**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Ereignis ist fehlerhaft. Diese Eigenschaft wird von [**\_ \_ eventdroppedevent**](--eventdroppedevent.md)geerbt.
+Fehlerereignis. Diese Eigenschaft wird von [**\_ \_ EventDroppedEvent**](--eventdroppedevent.md)geerbt.
 
 </dd> <dt>
 
-**Intendidconsumer**
+**IntendedConsumer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **\_ \_ eventconsumer**
+Datentyp: **\_ \_ EventConsumer**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf den gewünschten Consumer. Diese Eigenschaft wird von [**\_ \_ eventdroppedevent**](--eventdroppedevent.md)geerbt.
+Verweis auf den vorgesehenen Consumer. Diese Eigenschaft wird von [**\_ \_ EventDroppedEvent**](--eventdroppedevent.md)geerbt.
 
 </dd> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSBESCHREIBUNG**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignis Anbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**TIME \_ CREATED**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (koordiniert Universal Times) vor. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (Coordinated Universal Times) vor. Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ consumerfailureevent** -Klasse wird von [**\_ \_ eventdroppedevent**](--eventdroppedevent.md)abgeleitet.
+Die **\_ \_ ConsumerFailureEvent-Klasse** wird von [**\_ \_ EventDroppedEvent**](--eventdroppedevent.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -174,10 +174,10 @@ Die **\_ \_ consumerfailureevent** -Klasse wird von [**\_ \_ eventdroppedevent**
 
 <dl> <dt>
 
-[**\_\_Eventdroppedevent**](/windows/desktop/WmiSdk/--eventdroppedevent)
+[**\_\_EventDroppedEvent**](/windows/desktop/WmiSdk/--eventdroppedevent)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

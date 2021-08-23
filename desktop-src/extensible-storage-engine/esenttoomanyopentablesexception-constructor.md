@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentesomanyopentablesexception-Konstruktor'
-title: Esentesomanyopentablesexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentTooManyOpenTablesException-Konstruktor'
+title: EsentTooManyOpenTablesException-Konstruktor
 TOCTitle: 'EsentTooManyOpenTablesException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentTooManyOpenTablesException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esenttoomanyopentablesexception.esenttoomanyopentablesexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 52ffd4d382689fe3a5dd926ffaae7d33c3f17fe6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 02d24c14c3061cdf13fb849ee8fccdd2769b08f0524c0c3151585b6d5a3b8430
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119732310"
 ---
-# <a name="esenttoomanyopentablesexception-constructor"></a>Esentesomanyopentablesexception-Konstruktor
+# <a name="esenttoomanyopentablesexception-constructor"></a>EsentTooManyOpenTablesException-Konstruktor
 
-Initialisiert eine neue Instanz der esentesomanyopentablesexception-Klasse.
+Initialisiert eine neue Instanz der EsentTooManyOpenTablesException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentTooManyOpenTablesException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentesomanyopentablesexception-Klasse](./esenttoomanyopentablesexception-class.md)
+[EsentTooManyOpenTablesException-Klasse](./esenttoomanyopentablesexception-class.md)
 
-[Esentesomanyopentablesexception-Elemente](./esenttoomanyopentablesexception-members.md)
+[EsentTooManyOpenTablesException-Member](./esenttoomanyopentablesexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

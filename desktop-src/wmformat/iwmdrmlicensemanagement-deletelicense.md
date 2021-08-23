@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmlicenabmanagement-Methode "Delta-eLicense" (wmdrmsdk. h)
-description: Mit der Methode "Delta-eLicense" wird eine Lizenz aus dem temporären lokalen Lizenz Speicher entfernt.
+title: IWMDRMLicenseManagement DeleteLicense-Methode (Wmdrmsdk.h)
+description: Die DeleteLicense-Methode entfernt eine Lizenz aus dem temporären lokalen Lizenzspeicher.
 ms.assetid: 0aa7143a-845a-41a4-8b3c-a04c68ee280a
 keywords:
-- Delta-eLicense-Methode, Windows Media-Format
-- Delta-eLicense-Methode, Windows Media-Format, iwmdrmlicencmanagement-Schnittstelle
-- Iwmdrmlicencmanagement-Schnittstelle Windows Media-Format, Delta eLicense-Methode
+- 'DeleteLicense-Methode : Windows-Medienformat'
+- DeleteLicense-Methode windows Media Format, IWMDRMLicenseManagement-Schnittstelle
+- IWMDRMLicenseManagement-Schnittstelle windows Media Format , DeleteLicense-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f5d5b52f6277459f147285f46fc791669e56061a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 977f7eaef1d6c8a505ce55d7d1683d7c9f4dabff5e59df7d8845773eefdff696
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119707940"
 ---
-# <a name="iwmdrmlicensemanagementdeletelicense-method"></a>Iwmdrmlicensmanagement::D eletelicense-Methode
+# <a name="iwmdrmlicensemanagementdeletelicense-method"></a>IWMDRMLicenseManagement::D eleteLicense-Methode
 
-Mit der Methode " **Delta-eLicense** " wird eine Lizenz aus dem temporären lokalen Lizenz Speicher entfernt.
+Die **DeleteLicense-Methode** entfernt eine Lizenz aus dem temporären lokalen Lizenzspeicher.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ HRESULT DeleteLicense(
 
 <dl> <dt>
 
-*bstrinkid* \[ in\]
+*bstrKID* \[ In\]
 </dt> <dd>
 
-Die Schlüssel-ID (Kid) der zu löschenden Lizenz.
+Schlüssel-ID (KEY ID, KID) der zu löschenden Lizenz.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Options Flags zum Löschen von Lizenzen. Legen Sie auf einen der Werte in der folgenden Tabelle fest.
+Flags für Die Option zum Löschen von Lizenzen. Legen Sie auf einen der Werte in der folgenden Tabelle fest.
 
 
 
-| Wert                                    | BESCHREIBUNG                                                                                                                                                                                           |
+| Wert                                    | Beschreibung                                                                                                                                                                                           |
 |------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WMDRM \_ - \_ Lizenz \_ sofort löschen      | Gibt an, dass die Lizenz sofort aus dem Speicher entfernt werden soll.                                                                                                                              |
-| WMDRM \_ - \_ Lizenz \_ Markierung \_ zum \_ Löschen löschen | Gibt an, dass die Lizenz zum Löschen markiert werden soll, jedoch nicht aus dem Speicher entfernt werden soll, bis die [**cleanlicencstore**](iwmdrmlicensemanagement-cleanlicensestore.md) -Methode aufgerufen wird. |
+| WMDRM: \_ LIZENZ \_ SOFORT \_ LÖSCHEN      | Gibt an, dass die Lizenz sofort aus dem Speicher entfernt werden soll.                                                                                                                              |
+| WMDRM \_ DELETE \_ LICENSE \_ MARK \_ FOR \_ PURGE | Gibt an, dass die Lizenz zum Löschen markiert, aber erst aus dem Speicher entfernt werden soll, wenn die [**CleanLicenseStore-Methode**](iwmdrmlicensemanagement-cleanlicensestore.md) aufgerufen wird. |
 
 
 
@@ -71,22 +71,22 @@ Options Flags zum Löschen von Lizenzen. Legen Sie auf einen der Werte in der fo
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                            | Beschreibung                                                                                                         |
 |--------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                                                                    |
-| <dl> <dt>**DRM- \_ E \_ licensenotfound**</dt> </dl> | Die angegebene Lizenz ist nicht im Speicher vorhanden.<br/> -ODER-<br/> Der Speicher wurde nicht gefunden.<br/> |
+| <dl> <dt>**DRM \_ E \_ LICENSENOTFOUND**</dt> </dl> | Die angegebene Lizenz ist im Speicher nicht vorhanden.<br/> -ODER-<br/> Der Speicher wurde nicht gefunden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Löschen von Lizenzen aus dem permanenten lokalen Lizenz Speicher müssen Sie die Lizenz Sperrung verwenden.
+Um Lizenzen aus dem permanenten lokalen Lizenzspeicher zu löschen, müssen Sie die Lizenzsperrung verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,16 +94,16 @@ Zum Löschen von Lizenzen aus dem permanenten lokalen Lizenz Speicher müssen Si
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmlicenabmanagement-Schnittstelle**](iwmdrmlicensemanagement.md)
+[**IWMDRMLicenseManagement-Schnittstelle**](iwmdrmlicensemanagement.md)
 </dt> </dl>
 
  

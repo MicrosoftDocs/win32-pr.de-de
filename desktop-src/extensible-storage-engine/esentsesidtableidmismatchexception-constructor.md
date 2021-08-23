@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentabsidtableidmismatchexception-Konstruktor'
-title: Esentssidtableidmismatchexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentSesidTableIdMismatchException-Konstruktor'
+title: EsentSesidTableIdMismatchException-Konstruktor
 TOCTitle: 'EsentSesidTableIdMismatchException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSesidTableIdMismatchException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentsesidtableidmismatchexception.esentsesidtableidmismatchexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 95ed9b9bb72d3d0c11248944515663913118db02
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 960c9dbb462397798f0e4bdf4a2469c2f31c08a756c41ad92460ff5b08abb704
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353992"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119732720"
 ---
-# <a name="esentsesidtableidmismatchexception-constructor"></a>Esentssidtableidmismatchexception-Konstruktor
+# <a name="esentsesidtableidmismatchexception-constructor"></a>EsentSesidTableIdMismatchException-Konstruktor
 
-Initialisiert eine neue Instanz der esentssidtableidmismatchexception-Klasse.
+Initialisiert eine neue Instanz der EsentSesidTableIdMismatchException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentSesidTableIdMismatchException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentationsidtableidmismatchexception-Klasse](./esentsesidtableidmismatchexception-class.md)
+[EsentSesidTableIdMismatchException-Klasse](./esentsesidtableidmismatchexception-class.md)
 
-[Esentationsidtableidmismatchexception-Member](./esentsesidtableidmismatchexception-members.md)
+[EsentSesidTableIdMismatchException-Member](./esentsesidtableidmismatchexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

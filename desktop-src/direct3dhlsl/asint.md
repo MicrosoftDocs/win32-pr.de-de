@@ -1,6 +1,6 @@
 ---
 title: asint-Funktion
-description: Interpretiert das Bitmuster eines Eingabe Werts als ganze Zahl. Weitere Informationen zur systeminternen asint-Funktion finden Sie unter asint (DirectX HLSL).
+description: Interpretiert das Bitmuster eines Eingabewerts als ganze Zahl. Weitere Informationen zur systeminternen asint-Funktion finden Sie unter asint (DirectX HLSL).
 ms.assetid: 28ba1a51-ce41-4bb0-8381-d91871b8236f
 keywords:
 - asint-Funktion HLSL
@@ -13,22 +13,22 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cb892389cc2428c3b12843ae24fc0370076023f1
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: f189501216c7c60d024303bdb2c47b032cec73c6c22dc6a93bff24ce596f3169
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104516377"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119626610"
 ---
 # <a name="asint-function"></a>asint-Funktion
 
-Interpretiert das Bitmuster eines Eingabe Werts als ganze Zahl. Weitere Informationen zur systeminternen **asint** -Funktion finden Sie unter [**asint (DirectX HLSL)**](dx-graphics-hlsl-asint.md).
+Interpretiert das Bitmuster eines Eingabewerts als ganze Zahl. Weitere Informationen zur **systeminternen asint-Funktion** finden Sie unter [**asint (DirectX HLSL)**](dx-graphics-hlsl-asint.md).
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 int asint(
-  in  value
+  in  value
 );
 ```
 
@@ -36,7 +36,7 @@ int asint(
 
 <dl> <dt>
 
-*Wert* \[ in\]
+*wert* \[ In\]
 </dt> <dd>
 
 Der Eingabewert.
@@ -53,12 +53,12 @@ Die als ganze Zahl interpretierte Eingabe.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

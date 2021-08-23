@@ -1,9 +1,9 @@
 ---
-title: glgetpixelmapfv-Funktion (GL. h)
-description: Die Funktionen "glgetpixelmapfv", "glgetpixelmapuiv" und "glgetpixelmapusv" geben die angegebene Pixel Map zurück. | glgetpixelmapfv-Funktion (GL. h)
+title: glGetPixelMapfv-Funktion (Gl.h)
+description: Die Funktionen glGetPixelMapfv, glGetPixelMapuiv und glGetPixelMapusv geben die angegebene Pixelzuordnung zurück. | glGetPixelMapfv-Funktion (Gl.h)
 ms.assetid: b09f4799-8e36-4d4f-90d8-4a8ed3d15718
 keywords:
-- glgetpixelmapfv-Funktion OpenGL
+- glGetPixelMapfv-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 17f73fb817c347832dfc6a09636173641e5c869b
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: aacb74cb4cc08b283b500306d3a3456807cea8b0416a3ddb4fac85bfaa6ed5a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103869783"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119554260"
 ---
-# <a name="glgetpixelmapfv-function"></a>glgetpixelmapfv-Funktion
+# <a name="glgetpixelmapfv-function"></a>glGetPixelMapfv-Funktion
 
-Die Funktionen " **glgetpixelmapfv**", " [**glgetpixelmapuiv**](glgetpixelmapuiv.md)" und " [**glgetpixelmapusv**](glgetpixelmapusv.md) " geben die angegebene Pixel Map zurück.
+Die Funktionen **glGetPixelMapfv,** [**glGetPixelMapuiv**](glgetpixelmapuiv.md)und [**glGetPixelMapusv**](glgetpixelmapusv.md) geben die angegebene Pixelzuordnung zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ void WINAPI glGetPixelMapfv(
 *map* 
 </dt> <dd>
 
-Der Name der zurück zugebende Pixel Zuordnung. Akzeptierte Werte sind GL \_ Pixel \_ map \_ i \_ to \_ i, GL \_ Pixel \_ map \_ s \_ to \_ s, GL \_ Pixel \_ map \_ i \_ to \_ r, GL \_ Pixel \_ map \_ i \_ to \_ g, GL \_ Pixel \_ map \_ i \_ to \_ b, GL \_ Pixel \_ map \_ i \_ to \_ a, GL \_ Pixel \_ map \_ r \_ to \_ r, GL \_ Pixel \_ map \_ g \_ to \_ G, GL \_ Pixel \_ map \_ b \_ to \_ b und GL \_ Pixel \_ map \_ a \_ to \_ a.
+Der Name der zurückzugebende Pixelzuordnung. Zulässige Werte sind GL \_ PIXEL MAP I TO \_ \_ \_ \_ I, GL PIXEL MAP S \_ \_ TO \_ \_ \_ S, GL PIXEL MAP I \_ TO \_ \_ \_ \_ R, GL PIXEL MAP \_ I TO \_ \_ \_ \_ G, GL PIXEL MAP I \_ TO \_ \_ \_ \_ B, GL PIXEL MAP I \_ TO \_ \_ \_ \_ A, GL PIXEL MAP R \_ TO \_ \_ \_ \_ R, GL PIXEL MAP \_ G TO \_ \_ \_ \_ G, GL PIXEL MAP \_ B TO B und GL PIXEL MAP A \_ TO \_ \_ \_ \_ \_ \_ \_ \_ A.
 
 </dd> <dt>
 
 *Werte* 
 </dt> <dd>
 
-Gibt den Pixel Karteninhalt zurück.
+Gibt den Inhalt der Pixelzuordnung zurück.
 
 </dd> </dl>
 
@@ -61,50 +61,50 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *map* war kein akzeptierter Wert.<br/>                                                                                           |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *map* war kein akzeptierter Wert.<br/>                                                                                           |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Beschreibung der zulässigen Werte für den *map* -Parameter finden Sie unter [**glpixelmap**](glpixelmap.md) . Die **glgetpixelmap** -Funktion gibt den Inhalt der in *map* angegebenen Pixel Zuordnung in den *Werten* zurück. Verwenden Sie Pixel Zuordnungen während der Ausführung von [**glread Pixel**](glreadpixels.md), [**gldrawpixels**](gldrawpixels.md), [**glcopypixels**](glcopypixels.md), [**glTexImage1D**](glteximage1d.md)und [**glTexImage2D**](glteximage2d.md) , um Farbindizes, Schablone-Indizes, Farbkomponenten und tiefen Komponenten anderen Werten zuzuordnen.
+Eine Beschreibung der zulässigen Werte für den *map-Parameter* finden Sie unter [**glPixelMap.**](glpixelmap.md) Die **glGetPixelMap-Funktion** gibt in *-Werten* den Inhalt der in *map* angegebenen Pixelzuordnung zurück. Verwenden Sie Pixelzuordnungen während der Ausführung von [**glReadPixels,**](glreadpixels.md) [**glDrawPixels,**](gldrawpixels.md) [**glCopyPixels,**](glcopypixels.md) [**glTexImage1D**](glteximage1d.md)und [**glTexImage2D,**](glteximage2d.md) um Farbindizes, Schablonenindizes, Farbkomponenten und Tiefenkomponenten anderen Werten zuzuordnen.
 
-Ganzzahlige Werte ohne Vorzeichen werden, falls angefordert, linear aus der internen Fixed-oder Gleit Komma Darstellung zugeordnet, sodass 1,0 dem größten darstellbaren ganzzahligen Wert zugeordnet ist und 0,0 0 (null) zugeordnet wird. Die Rückgabe ganzzahliger Werte ohne Vorzeichen sind nicht definiert, wenn der Zuordnungs Wert nicht im Bereich von \[ 0, 1 liegt \] .
+Ganzzahlige Werte ohne Vorzeichen werden, falls angefordert, linear aus der internen festen oder Gleitkommadarstellung zugeordnet, sodass 1,0 dem größten darstellbaren ganzzahligen Wert und 0,0 null zugeordnet wird. Rückgabewerte ganzzahliger Zahlen ohne Vorzeichen sind nicht definiert, wenn der Zuordnungswert nicht im Bereich \[ von 0,1 \] lag.
 
-Um die erforderliche Größe von *map* zu ermitteln, nennen [**Sie glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit der entsprechenden symbolischen Konstante.
+Um die erforderliche Größe der *Zuordnung* zu bestimmen, rufen [**Sie glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit der entsprechenden symbolischen Konstante auf.
 
-Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt der *Werte* vorgenommen.
+Wenn ein Fehler generiert wird, werden keine Änderungen am Inhalt der *Werte* vorgenommen.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glgetpixelmap** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glGetPixelMap** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Pixel \_ map \_ i \_ to \_ i \_ size
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ PIXEL MAP I TO I \_ \_ \_ \_ \_ SIZE
 
-**glget** mit dem Argument GL \_ Pixel \_ map \_ s \_ to \_ s \_ size
+**glGet** mit argument GL \_ PIXEL MAP S TO S \_ \_ \_ \_ \_ SIZE
 
-**glget** mit dem Argument GL \_ Pixel \_ map \_ I \_ to \_ R \_ size
+**glGet** mit argument GL \_ PIXEL MAP I TO R \_ \_ \_ \_ \_ SIZE
 
-**glget** mit dem Argument GL \_ Pixel \_ map \_ I \_ to \_ G \_ size
+**glGet** mit argument GL \_ PIXEL MAP I TO G \_ \_ \_ \_ \_ SIZE
 
-**glget** mit dem Argument GL \_ Pixel \_ map \_ I \_ to \_ B \_ size
+**glGet** mit Argument GL \_ PIXEL MAP I TO B \_ \_ \_ \_ \_ SIZE
 
-**glget** mit dem Argument GL \_ Pixel \_ map \_ I \_ to \_ A \_ size
+**glGet** mit argument GL \_ PIXEL MAP I TO A \_ \_ \_ \_ \_ SIZE
 
-**glget** mit dem Argument GL \_ Pixel \_ map \_ r \_ to \_ r \_ size
+**glGet** mit argument GL \_ PIXEL MAP R TO R \_ \_ \_ \_ \_ SIZE
 
-**glget** mit dem Argument GL \_ Pixel \_ map \_ g \_ bis \_ g \_ size
+**glGet** mit argument GL \_ PIXEL MAP G TO G \_ \_ \_ \_ \_ SIZE
 
-**glget** mit Argument GL \_ Pixel \_ map \_ b \_ bis \_ b \_ size
+**glGet** mit Argument GL \_ PIXEL MAP B TO B \_ \_ \_ \_ \_ SIZE
 
-**glget** mit dem Argument GL \_ Pixel \_ map \_ a \_ to \_ a \_ size
+**glGet** mit argument GL \_ PIXEL MAP A TO A \_ \_ \_ \_ \_ SIZE
 
-**glget** mit dem Argument GL \_ Max \_ Pixel \_ map \_ Table
+**glGet** mit argument GL \_ MAX PIXEL MAP \_ \_ \_ TABLE
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -114,8 +114,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glgetpix
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -127,25 +127,25 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glgetpix
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcopypixels**](glcopypixels.md)
+[**glCopyPixels**](glcopypixels.md)
 </dt> <dt>
 
-[**gldrawpixels**](gldrawpixels.md)
+[**glDrawPixels**](gldrawpixels.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glpixelmap**](glpixelmap.md)
+[**glPixelMap**](glpixelmap.md)
 </dt> <dt>
 
-[**glpixeltransfer**](glpixeltransfer.md)
+[**glPixelTransfer**](glpixeltransfer.md)
 </dt> <dt>
 
-[**glread Pixels**](glreadpixels.md)
+[**glReadPixels**](glreadpixels.md)
 </dt> <dt>
 
 [**glTexImage1D**](glteximage1d.md)

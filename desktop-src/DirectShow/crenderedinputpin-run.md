@@ -1,7 +1,7 @@
 ---
-description: 'Die Run-Methode benachrichtigt die PIN, dass der Filter jetzt ausgeführt wird. Diese Methode überschreibt die cbasepin:: Run-Methode.'
+description: Die Run-Methode benachrichtigt den Pin, dass der Filter jetzt ausgeführt wird. Diese Methode überschreibt die CBasePin::Run-Methode.
 ms.assetid: ee0285aa-9afd-464a-b8b4-d8b7faa49dbd
-title: Crenderedinputpin. Run-Methode (amextra. h)
+title: CRenderedInputPin.Run-Methode (Amextra.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ef3de4d5ab9a06766ccce171c9d417639ce66a42
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c372101aee2817e08545080048c98a25af7efb152f4873e54366e73571763065
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652020"
 ---
-# <a name="crenderedinputpinrun-method"></a>Crenderedinputpin. Run-Methode
+# <a name="crenderedinputpinrun-method"></a>CRenderedInputPin.Run-Methode
 
-Die- `Run` Methode benachrichtigt die PIN, dass der Filter jetzt ausgeführt wird. Diese Methode überschreibt die [**cbasepin:: Run**](cbasepin-run.md) -Methode.
+Die `Run` -Methode benachrichtigt den Pin, dass der Filter jetzt ausgeführt wird. Diese Methode überschreibt die [**CBasePin::Run-Methode.**](cbasepin-run.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ HRESULT Run(
 
 <dl> <dt>
 
-*tSTART* 
+*tStart* 
 </dt> <dd>
 
-Die Startzeit, die an die [**imediafilter:: Run**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-run) -Methode des Filters übermittelt wurde.
+Die Startzeit, die an die [**IMediaFilter::Run-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-run) des Filters übergeben wurde.
 
 </dd> </dl>
 
@@ -59,8 +59,8 @@ Gibt S \_ OK zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amextra. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amextra.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt S \_ OK zurück.
 
 <dl> <dt>
 
-[**Crenderedinputpin-Klasse**](crenderedinputpin.md)
+[**CRenderedInputPin-Klasse**](crenderedinputpin.md)
 </dt> </dl>
 
  

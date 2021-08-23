@@ -1,17 +1,17 @@
 ---
 description: Gibt die Anzahl der Audiobeispiele an, die der Encoder überspringen soll.
 ms.assetid: cc4342d4-07d1-44d9-8fa6-a5f921f7cf06
-title: Avencaudiointervalthskip-Eigenschaft (codecapi. h)
+title: AVEncAudioIntervalToSkip-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a901f30e634d25e97f04fbbc49ac288d4471a62b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 2c57b7a7943beeb59e138aa3f390e968c5fcea385a7bdb159755b1bbb02bd2af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103747241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119690300"
 ---
-# <a name="avencaudiointervaltoskip-property"></a>Avencaudiointervaldeskip (Eigenschaft)
+# <a name="avencaudiointervaltoskip-property"></a>AVEncAudioIntervalToSkip-Eigenschaft
 
 Gibt die Anzahl der Audiobeispiele an, die der Encoder überspringen soll.
 
@@ -23,7 +23,7 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencaudiointervaldeskip**
+**CODECAPI \_ AVEncAudioIntervalToSkip**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,9 +31,9 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -41,10 +41,10 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

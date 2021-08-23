@@ -1,49 +1,49 @@
 ---
-title: Übersicht über den DSP-Plug-in-Entwickler
-description: Übersicht über den DSP-Plug-in-Entwickler
+title: Übersicht über DSP-Plug-In-Entwickler
+description: Übersicht über DSP-Plug-In-Entwickler
 ms.assetid: ac3e1d7e-1f96-4f96-bddc-e72edaae31dc
 keywords:
-- Windows Media Player-Plug-ins, digitale Signalverarbeitung (DSP)
-- Plug-ins, digitale Signalverarbeitung (DSP)
-- Windows Media Player-Plug-ins, Entwickler Übersicht
-- Plug-ins, Entwickler Übersicht
-- Plug-Ins für die digitale Signalverarbeitung, Entwickler Übersicht
-- DSP-Plug-ins, Entwickler Übersicht
+- Windows Media Player-Plug-Ins, digitale Signalverarbeitung (Digital Signal Processing, DSP)
+- Plug-Ins, digitale Signalverarbeitung (DSP)
+- Windows Media Player-Plug-Ins, Entwicklerübersicht
+- Plug-Ins, Entwicklerübersicht
+- Digitale Signalverarbeitungs-Plug-Ins, Entwicklerübersicht
+- DSP-Plug-Ins, Entwicklerübersicht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 41fd85702f484ae39b1969bfde2dce2f57cac057
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 78d9bb3e5bf64f899bb24ae6f9f71cb0cdb406a119506bfc38430a5d42987f1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119651180"
 ---
-# <a name="dsp-plug-in-developer-overview"></a>Übersicht über den DSP-Plug-in-Entwickler
+# <a name="dsp-plug-in-developer-overview"></a>Übersicht über DSP-Plug-In-Entwickler
 
-Aus der Sicht des Entwicklers sind DSP-Plug-ins Softwareprogramme, die von Windows bereitgestellte Audiodaten oder Videodaten empfangen Media Player direkt vor der Renderingphase, dann diese Daten verarbeiten und die Daten zum Rendering an Windows Media Player zurückgeben.
+Aus Sicht des Entwicklers sind DSP-Plug-Ins Softwareprogramme, die Audio- oder Videodaten empfangen, die von Windows Media Player direkt vor der Renderingphase bereitgestellt werden. Anschließend werden diese Daten verarbeitet und zum Rendern an Windows Media Player zurückgegeben.
 
-Die folgenden Abschnitte enthalten allgemeine Informationen zu Windows Media Player DSP-Plug-ins:
+Die folgenden Abschnitte enthalten allgemeine Informationen zu Windows Media Player DSP-Plug-Ins:
 
--   [Plug-in-Paket für DSP](dsp-plug-in-packaging.md)
+-   [DSP-Plug-In-Paketierung](dsp-plug-in-packaging.md)
 -   [Herstellen einer Verbindung mit Windows Media Player](connecting-to-windows-media-player.md)
 -   [Dateneingabe und -ausgabe](data-input-and-output.md)
--   [Aushandlung formatieren](format-negotiation.md)
--   [Bereitstellen einer Benutzeroberfläche](providing-a-user-interface.md)
--   [DSP-Plug-in-Assistent](dsp-plug-in-wizard.md)
+-   [Formataushandlung](format-negotiation.md)
+-   [Bereitstellen eines Benutzeroberfläche](providing-a-user-interface.md)
+-   [DSP-Plug-In-Assistent](dsp-plug-in-wizard.md)
 -   [Erforderliche Schnittstellen](required-interfaces.md)
--   [Registrieren von DSP-Plug-ins](registering-dsp-plug-ins.md)
--   [Aktualisieren vorhandener DSP-Plug-ins](updating-existing-dsp-plug-ins.md)
+-   [Registrieren von DSP-Plug-Ins](registering-dsp-plug-ins.md)
+-   [Aktualisieren vorhandener DSP-Plug-Ins](updating-existing-dsp-plug-ins.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen zu DSP-Plug-ins**](about-dsp-plug-ins.md)
+[**Informationen zu DSP-Plug-Ins**](about-dsp-plug-ins.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

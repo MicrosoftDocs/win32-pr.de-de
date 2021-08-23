@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentouesf sequentialindexvaluesexception-Klasse'
-title: Esentouesf sequentialindexvaluesexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentOutOfSequentialIndexValuesException-Klasse'
+title: EsentOutOfSequentialIndexValuesException-Klasse
 TOCTitle: EsentOutOfSequentialIndexValuesException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentOutOfSequentialIndexValuesException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentoutofsequentialindexvaluesexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9e7bf70b63e4c5318f13704c176b55dfe7d98f0e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 15cae09912da03bef76464ceffef11312788ce16ec81244c168fb09cbcc09ad0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119733100"
 ---
-# <a name="esentoutofsequentialindexvaluesexception-class"></a>Esentouesf sequentialindexvaluesexception-Klasse
+# <a name="esentoutofsequentialindexvaluesexception-class"></a>EsentOutOfSequentialIndexValuesException-Klasse
 
-Basisklasse für JET_err. Outo-sequentialindexvalues-Ausnahmen.
+Basisklasse für JET_err. OutOfSequentialIndexValues-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentdataexception](./esentdataexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentfragmentationexception](./esentfragmentationexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentouesf sequentialindexvaluesexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentDataException](./esentdataexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentFragmentationException](./esentfragmentationexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentOutOfSequentialIndexValuesException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentouesfsequentialindexvaluesexception-Member](./esentoutofsequentialindexvaluesexception-members.md)
+[EsentOutOfSequentialIndexValuesException-Member](./esentoutofsequentialindexvaluesexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

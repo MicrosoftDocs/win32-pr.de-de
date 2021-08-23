@@ -1,7 +1,7 @@
 ---
-description: Die Format-Methode ruft einen Zeiger auf den Format Block ab.
+description: Die Format-Methode ruft einen Zeiger auf den Formatblock ab.
 ms.assetid: 368055cd-4592-4144-aef9-d7e830fc4de1
-title: Cmediatype. Format-Methode (mtype. h)
+title: CMediaType.Format-Methode (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: bbfa7508ac8bb7e95134231c3567a9b6d4701224
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d68b84f5c27798022dbf5c54544793a0fb053dd24c3b2e1a10edd29705420b70
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119526460"
 ---
-# <a name="cmediatypeformat-method"></a>Cmediatype. Format-Methode
+# <a name="cmediatypeformat-method"></a>CMediaType.Format-Methode
 
-Die- `Format` Methode ruft einen Zeiger auf den Format Block ab.
+Die `Format` -Methode ruft einen Zeiger auf den Formatblock ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **pbformat** -Member zurück.
+Gibt den **pbFormat-Member** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt den **pbformat** -Member zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt den **pbformat** -Member zurück.
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

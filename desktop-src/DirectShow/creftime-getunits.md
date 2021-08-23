@@ -1,7 +1,7 @@
 ---
-description: Die getunits-Methode ruft die Verweis Zeit in 100-Nanosecond-Einheiten ab.
+description: Die GetUnits-Methode ruft die Referenzzeit in Einheiten von 100 Nanosekunden ab.
 ms.assetid: f27dada1-67a6-424a-8bf5-979ad375736f
-title: Methode "Methode. getunits" (Ref time. h)
+title: CRefTime.GetUnits-Methode (Reftime.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6269b9b3aceed9251282dd728e4a48de3f180731
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c7bfa232185ce17c9198edd1e1d97874e526d6f3ee16ae5edc3dcdbd14531359
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373807"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652054"
 ---
-# <a name="creftimegetunits-method"></a>Methode "-Methode" (Methode)
+# <a name="creftimegetunits-method"></a>CRefTime.GetUnits-Methode
 
-Die `GetUnits` -Methode ruft die Verweis Zeit in 100-Nanosecond-Einheiten ab.
+Die `GetUnits` -Methode ruft die Referenzzeit in Einheiten von 100 Nanosekunden ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert von " [**krefitime:: m \_ time**](creftime-m-time.md)" zurück.
+Gibt den Wert von [**CRefTime::m \_ time zurück.**](creftime-m-time.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt den Wert von " [**krefitime:: m \_ time**](creftime-m-time.md)" zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ref time. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Reftime.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

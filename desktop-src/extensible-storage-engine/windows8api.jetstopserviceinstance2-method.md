@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen über: Windows8Api. JetStopServiceInstance2-Methode'
-title: Windows8Api. JetStopServiceInstance2-Methode (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen zu: Windows8Api.JetStopServiceInstance2-Methode'
+title: Windows8Api.JetStopServiceInstance2-Methode (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'JetStopServiceInstance2 method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Windows8.Windows8Api.JetStopServiceInstance2(Microsoft.Isam.Esent.Interop.JET_INSTANCE,Microsoft.Isam.Esent.Interop.Windows8.StopServiceGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.windows8api.jetstopserviceinstance2(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0821a00016eb9cd2c511ee37889e0ddaa0b76edb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ce4cc9f4d25b7ea1e08513442e0fe01dddb5a2fc4e3a111c79378461e5c74d9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041881"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119667410"
 ---
-# <a name="windows8apijetstopserviceinstance2-method"></a>Windows8Api. JetStopServiceInstance2-Methode
+# <a name="windows8apijetstopserviceinstance2-method"></a>Windows8Api.JetStopServiceInstance2-Methode
 
-Bereitet eine Instanz für die Beendigung vor. Kann auch verwendet werden, um ein vorheriges versetzen wieder aufzunehmen.
+Bereitet eine Instanz für die Beendigung vor. Kann auch verwendet werden, um eine vorherige Stilllegung fortzusetzen.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,23 +62,23 @@ public static void JetStopServiceInstance2(
 #### <a name="parameters"></a>Parameter
 
   - instance  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
-    Die zu verwendende (laufende) Instanz.
+    Die zu verwendende (ausgeführte) Instanz.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. Windows8. stopservicegrbit](./stopservicegrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.Windows8.StopServiceGrbit](./stopservicegrbit-enumeration.md)  
     
-    Die Optionen, mit denen die Instanz beendet oder fortgesetzt werden soll.
+    Die Optionen zum Beenden oder Fortsetzen der Instanz.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows8Api-Klasse](./windows8api-class.md)
 
 [Windows8Api-Member](./windows8api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

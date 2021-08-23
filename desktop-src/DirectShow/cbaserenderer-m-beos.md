@@ -1,7 +1,7 @@
 ---
 description: Flag, das angibt, ob das Ende des Streams erreicht wurde.
 ms.assetid: bd919aac-1e37-4693-85ab-f747bfce8994
-title: 'Cbaserenderer:: m_bEOS Member (renbase. h)'
+title: CBaseRenderer::m_bEOS-Member (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0bc311d919509b040a3176d1059225f84c90ab8d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c8b73d641d0d2f0628fb36b12e36d04906847ee05dfbbd1dcb7d058c644efef9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119526550"
 ---
-# <a name="cbaserendererm_beos-member"></a>Cbaserenderer:: m- \_ BeOS-Member
+# <a name="cbaserendererm_beos-member"></a>CBaseRenderer::m \_ bEOS-Member
 
 Flag, das angibt, ob das Ende des Streams erreicht wurde.
 
@@ -42,8 +42,8 @@ BOOL m_bEOS;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BOOL m_bEOS;
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6fbe3c9b85e0a8c9f0c6a07d1db03784c4ac15e6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 9f5a8ccd02926d781f46ef86b26873c5dad86565ac90df47a5835cdf2ca4823a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108112098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119525410"
 ---
 # <a name="msvm_devicesapimplementation-class"></a>Msvm \_ DeviceSAPImplementation-Klasse
 
-Eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und seiner Implementierung. Die Kardinalität dieser Zuordnung ist m:n. Ein SAP kann von mehreren logischen Geräten bereitgestellt werden, die in Verbindung stehen. Jedes Gerät kann mehrere SAP-Geräte bereitstellen. Wenn viele logische Geräte einem einzelnen SAP zugeordnet sind, wird davon ausgegangen, dass diese Elemente zusammen ausgeführt werden, um den Zugriffspunkt bereitzustellen. Wenn unterschiedliche Implementierungen eines SAP vorhanden sind, würde jede dieser Implementierungen zu einzelnen Instanziierungen des SAP-Objekts führen. Diese einzelnen Instanziierungen verfügen dann über Zuordnungen zu den eindeutigen Implementierungen.
+Eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und seiner Implementierung. Die Kardinalität dieser Zuordnung ist n:n. Ein SAP kann von mehr als einem logischen Gerät bereitgestellt werden, das in Verbindung ausgeführt wird. Jedes Gerät kann mehrere SAP-Daten bereitstellen. Wenn viele logische Geräte einem einzelnen SAP zugeordnet sind, wird davon ausgegangen, dass diese Elemente zusammen zum Bereitstellen des Zugriffspunkts verwendet werden. Wenn verschiedene Implementierungen eines SAP vorhanden sind, würde jede dieser Implementierungen zu einzelnen Instanziierungen des SAP-Objekts führen. Diese einzelnen Instanziierungen würden dann Zuordnungen zu den eindeutigen Implementierungen haben.
 
-Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ class Msvm_DeviceSAPImplementation : CIM_DeviceSAPImplementation
 
 ## <a name="members"></a>Member
 
-Die **Msvm \_ DeviceSAPImplementation-Klasse** verfügt über diese Typen von Membern:
+Die **Msvm \_ DeviceSAPImplementation-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -60,7 +60,7 @@ Datentyp: **[ **CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logica
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das logische Gerät. Diese Eigenschaft wird von [**CIM \_ DeviceSAPImplementation**](/windows/desktop/CIMWin32Prov/cim-devicesapimplementation)geerbt.
+Das logische Gerät. Diese Eigenschaft wird von [**CIM \_ DeviceSAPImplementation geerbt.**](/windows/desktop/CIMWin32Prov/cim-devicesapimplementation)
 
 </dd> <dt>
 
@@ -73,11 +73,11 @@ Datentyp: **[ **CIM \_ ServiceAccessPoint**](/windows/desktop/CIMWin32Prov/cim-s
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Mithilfe des logischen Geräts implementierte Dienstzugriffspunkt. Diese Eigenschaft wird von [**CIM \_ DeviceSAPImplementation geerbt.**](/windows/desktop/CIMWin32Prov/cim-devicesapimplementation)
+Der mit dem logischen Gerät implementierte Dienstzugriffspunkt. Diese Eigenschaft wird von [**CIM \_ DeviceSAPImplementation geerbt.**](/windows/desktop/CIMWin32Prov/cim-devicesapimplementation)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Zugriff auf die **Msvm \_ DeviceSAPImplementation-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
@@ -89,17 +89,17 @@ Weitere Informationen [finden Sie unter Abfragen von Netzwerkobjekten.](querying
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
 | Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

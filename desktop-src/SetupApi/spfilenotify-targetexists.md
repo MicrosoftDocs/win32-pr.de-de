@@ -1,19 +1,19 @@
 ---
-description: Die spfilenotify \_ targetexists-Benachrichtigung wird an die Rückruf Routine gesendet, wenn die zu kopierende Datei mit dem SP \_ Copy \_ noüberschreibungsflag in die Warteschlange eingereiht wurde und diese Datei bereits im Zielverzeichnis vorhanden ist.
+description: Die SPFILENOTIFY \_ TARGETEXISTS-Benachrichtigung wird an die Rückrufroutine gesendet, wenn die zu kopierende Datei mit dem SP \_ COPY NOOVERWRITE-Flag in die Warteschlange eingereiht wurde \_ und diese Datei bereits im Zielverzeichnis vorhanden ist.
 ms.assetid: 5c6e0c59-0340-4aa6-94db-8d9a5d202758
-title: SPFILENOTIFY_TARGETEXISTS Meldung (Setupapi. h)
+title: SPFILENOTIFY_TARGETEXISTS Meldung (Setupapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d1d0c1a1ffba520789113b0dc78246657a4fe324
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c51f845d7ccb41b330f6365eff269645d08e58597e7e6dd3e9acc7a7f0300c80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104393714"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119664740"
 ---
-# <a name="spfilenotify_targetexists-message"></a>Spfilenotify \_ targetexists-Meldung
+# <a name="spfilenotify_targetexists-message"></a>SPFILENOTIFY \_ TARGETEXISTS-Nachricht
 
-Die **spfilenotify \_ targetexists** -Benachrichtigung wird an die Rückruf Routine gesendet, wenn die zu kopierende Datei mit dem SP \_ Copy \_ noüberschreibungsflag in die Warteschlange eingereiht wurde und diese Datei bereits im Zielverzeichnis vorhanden ist. Sie kann mithilfe des OR-Operators allein oder mithilfe des-Operators oder mit den [**spfilenotify- \_ Fehlern (spfilenotify**](spfilenotify-langmismatch.md) ) und/oder [**spfilenotify \_ targetneueren**](spfilenotify-targetnewer.md) -Benachrichtigungen an die Rückruf Routine gesendet werden.
+Die **SPFILENOTIFY \_ TARGETEXISTS-Benachrichtigung** wird an die Rückrufroutine gesendet, wenn die zu kopierende Datei mit dem SP \_ COPY NOOVERWRITE-Flag in die Warteschlange eingereiht wurde \_ und diese Datei bereits im Zielverzeichnis vorhanden ist. Sie kann mithilfe des OR-Operators mit den Benachrichtigungen [**SPFILENOTIFY \_ LANGMISMATCH**](spfilenotify-langmismatch.md) und/oder [**SPFILENOTIFY \_ TARGETNEWER**](spfilenotify-targetnewer.md) allein oder kombiniert an die Rückrufroutine gesendet werden.
 
 
 ```C++
@@ -32,27 +32,27 @@ SPFILENOTIFY_TARGETEXISTS
 *Param1* 
 </dt> <dd>
 
-Zeiger auf eine [**FilePath**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a) -Struktur, die Informationen zu den Pfaden für die Quell-und Zieldateien enthält.
+Zeiger auf eine [**FILEPATHS-Struktur,**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a) die Informationen zu den Pfaden für die Quell- und Zieldateien enthält.
 
 </dd> <dt>
 
 *Param2* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet, es sei denn, diese Benachrichtigung wird mithilfe des OR-Operators mit der Benachrichtigung [**spfilenotify \_ langmismatch**](spfilenotify-langmismatch.md) kombiniert.
+Dieser Parameter wird nur verwendet, wenn diese Benachrichtigung mithilfe des OR-Operators mit der [**Benachrichtigung SPFILENOTIFY \_ LANGMISMATCH**](spfilenotify-langmismatch.md) kombiniert wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Rückruf Routine muss einen der folgenden Werte zurückgeben.
+Die Rückrufroutine sollte einen der folgenden Werte zurückgeben.
 
 
 
 | Rückgabecode                                                                          | Beschreibung                                            |
 |--------------------------------------------------------------------------------------|--------------------------------------------------------|
-| <dl> <dt>**Fall**</dt> </dl>  | Überschreiben Sie die Datei im Zielverzeichnis.<br/> |
-| <dl> <dt>**Alarm**</dt> </dl> | Überspringt den aktuellen Kopiervorgang.<br/>            |
+| <dl> <dt>**STIMMT**</dt> </dl>  | Überschreiben Sie die Datei im Zielverzeichnis.<br/> |
+| <dl> <dt>**FALSE**</dt> </dl> | Überspringen Sie den aktuellen Kopiervorgang.<br/>            |
 
 
 
@@ -64,9 +64,9 @@ Die Rückruf Routine muss einen der folgenden Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Setupapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Setupapi.h</dt> </dl> |
 
 
 
@@ -80,22 +80,22 @@ Die Rückruf Routine muss einen der folgenden Werte zurückgeben.
 [Benachrichtigungen](notifications.md)
 </dt> <dt>
 
-[**FILEPATHS**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a)
+[**Filepaths**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a)
 </dt> <dt>
 
-[**Setupcommitfilequeue**](/windows/desktop/api/Setupapi/nf-setupapi-setupcommitfilequeuea)
+[**SetupCommitFileQueue**](/windows/desktop/api/Setupapi/nf-setupapi-setupcommitfilequeuea)
 </dt> <dt>
 
-[**Setupdefaultqueuecallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupdefaultqueuecallbacka)
+[**SetupDefaultQueueCallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupdefaultqueuecallbacka)
 </dt> <dt>
 
-[**Setupinstallfile**](/windows/desktop/api/Setupapi/nf-setupapi-setupinstallfilea)
+[**SetupInstallFile**](/windows/desktop/api/Setupapi/nf-setupapi-setupinstallfilea)
 </dt> <dt>
 
-[**Setupinstallfileex**](/windows/desktop/api/Setupapi/nf-setupapi-setupinstallfileexa)
+[**SetupInstallFileEx**](/windows/desktop/api/Setupapi/nf-setupapi-setupinstallfileexa)
 </dt> <dt>
 
-[**Setupinstallfrominf-Abschnitt**](/windows/desktop/api/Setupapi/nf-setupapi-setupinstallfrominfsectiona)
+[**SetupInstallFromInfSection**](/windows/desktop/api/Setupapi/nf-setupapi-setupinstallfrominfsectiona)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Iresultsviewer SortProperty-Eigenschaft (wdsview. h)
-description: Diese Eigenschaft legt die indexcolumn der Eigenschaft fest, nach der die Ergebnisse sortiert werden, oder gibt Sie zurück.
+title: IResultsViewer SortProperty-Eigenschaft (WdsView.h)
+description: Diese Eigenschaft legt die IndexColumn der Eigenschaft fest oder gibt sie zurück, nach der Ergebnisse sortiert werden sollen.
 ms.assetid: 5b117f2e-52cc-43ef-9ebd-d7a800015465
 keywords:
-- SortProperty-Eigenschaft Legacy-Windows-Umgebungs Features
-- SortProperty-Eigenschaft Legacy Windows-Umgebungs Features, iresultviewer-Schnittstelle
-- Iresultviewer-Schnittstelle ältere Windows-Umgebungs Funktionen, SortProperty-Eigenschaft
+- Legacy-Windows-Umgebungsfeatures der SortProperty-Eigenschaft
+- SortProperty-Eigenschaft Legacy Windows Umgebungsfeatures, IResultsViewer-Schnittstelle
+- IResultsViewer-Schnittstelle Legacy Windows Umgebungsfeatures, SortProperty-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,19 +18,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cb75b98f1f0a726ef0d61b5c476df1485ba7189
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 99ab912dde6bdc87b2e9d05496f25de497b6fdc9c8fde4e65e3d2cb89549b1e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858860"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119610930"
 ---
-# <a name="iresultsviewersortproperty-property"></a>Iresultviewer:: SortProperty-Eigenschaft
+# <a name="iresultsviewersortproperty-property"></a>IResultsViewer::SortProperty-Eigenschaft
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows-Suche-API.](../search/-search-reference-entry-page.md) 
 
-Diese Eigenschaft legt die indexcolumn der Eigenschaft fest, nach der die Ergebnisse sortiert werden, oder gibt Sie zurück.
+Diese Eigenschaft legt die IndexColumn der Eigenschaft fest oder gibt sie zurück, nach der Ergebnisse sortiert werden sollen.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -51,7 +51,7 @@ HRESULT get_SortProperty(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt die indexcolumn-Eigenschaft fest.
+Legt die IndexColumn-Eigenschaft fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,10 +59,10 @@ Legt die indexcolumn-Eigenschaft fest.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                 |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/>                        |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 2.6.5<br/>                                        |
-| Header<br/>                   | <dl> <dt>Wdsview. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 nur mit \[ SP1-Desktop-Apps\]<br/>                        |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                        |
+| Header<br/>                   | <dl> <dt>WdsView.h</dt> </dl> |
 
 
 

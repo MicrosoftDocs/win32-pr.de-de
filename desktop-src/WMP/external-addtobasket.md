@@ -1,11 +1,11 @@
 ---
-title: Extern. adddebasket-Methode
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Extern. adddebasket-Methode
+title: External.addToBasket-Methode
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.addToBasket-Methode
 ms.assetid: c0dc8cd7-b924-47b8-b36c-caff8f1f892f
 keywords:
-- adddebasket-Methode, Windows Media Player
-- adddebasket-Methode, Windows Media Player, externe Klasse
-- Externe Klasse, Windows Media Player, adddebasket-Methode
+- addToBasket-Methode Windows Media Player
+- addToBasket-Methode Windows Media Player , External-Klasse
+- Externe Klasse Windows Media Player , addToBasket-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d2e2fab549dec9e24b0c5bbe61f5511e375c4c04
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 17f51cfc3df641b02a5aa3a0869e810f318357dd70ba67acb3ec2310f8a5a355
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361997"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650010"
 ---
-# <a name="externaladdtobasket-method"></a>Extern. adddebasket-Methode
+# <a name="externaladdtobasket-method"></a>External.addToBasket-Methode
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **adddebasket** -Methode fügt dem Listen Bereich (auch als Warenkorb bezeichnet) in Windows Media Player Medienelemente hinzu.
+Die **addToBasket-Methode** fügt medienbezogene Elemente zum Listenbereich (auch als Warenkorb bezeichnet) in Windows Media Player hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,31 +48,31 @@ External.addToBasket(
 
 <dl> <dt>
 
-*ViewType* \[ in\]
+*ViewType* \[ In\]
 </dt> <dd>
 
-Eine **Zeichenfolge** , die den Typ des Elements angibt, das dem Listen Bereich hinzugefügt wird. Der Aufrufer muss diesen Parameter auf eine der folgenden [Bibliotheks Speicherort Konstanten](library-location-constants.md)festlegen:
+**Zeichenfolge,** die den Typ des Elements angibt, das dem Listenbereich hinzugefügt wird. Der Aufrufer muss diesen Parameter auf eine der folgenden [Speicherortkonstanten](library-location-constants.md)der Bibliothek festlegen:
 
-Cplistid
+CPListID
 
-Cptrackid
+CPTrackID
 
-Cpalbumid
+CPIedID
 
-Cpartist
+CPArtist
 
-Cpgenreid
+CPGenreID
 
-Cpalbumsubgenreid
+CPIedSubGenreID
 
-Cpradioid
+CPRadioID
 
 </dd> <dt>
 
-*Viewids* \[ in\]
+*ViewIDs* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die die durch Semikolons getrennten IDs der Elemente enthält, die dem Listen Bereich hinzugefügt werden sollen.
+**Zeichenfolge,** die die durch Semikolons getrennten IDs der Elemente enthält, die dem Listenbereich hinzugefügt werden sollen.
 
 </dd> </dl>
 
@@ -95,10 +95,10 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Externalobject für Typ 1 Online Stores**](external-object-for-type-1-online-stores.md)
+[**ExternalObject für Onlineshops vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> <dt>
 
-[**Extern. baskettitle**](external-baskettitle.md)
+[**External.basketTitle**](external-baskettitle.md)
 </dt> </dl>
 
  

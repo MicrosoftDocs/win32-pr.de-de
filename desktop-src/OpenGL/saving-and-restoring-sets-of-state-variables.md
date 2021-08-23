@@ -1,6 +1,6 @@
 ---
 title: Speichern und Wiederherstellen von Sätzen von Zustandsvariablen
-description: Sie können die Werte einer Auflistung von Zustandsvariablen in einem Attribut Stapel mit den Funktionen glpushatpub und glpopatpub speichern und wiederherstellen.
+description: Sie können die Werte einer Auflistung von Zustandsvariablen in einem Attributstapel mit den Funktionen glPushAttrib und glPopAttrib speichern und wiederherstellen.
 ms.assetid: 339de633-4158-4907-b985-2d75b465fb2a
 keywords:
 - OpenGL-Zustandsvariablen
@@ -8,28 +8,28 @@ keywords:
 - Wiederherstellen von Zustandsvariablen OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b3192c228ea35005c5755802d3cd1b873f7b7fe
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 197a05d80e72479aecdade3323899464bf0b1f4afa2d9f2a8a1a1add6e56db78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338601"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119553810"
 ---
 # <a name="saving-and-restoring-sets-of-state-variables"></a>Speichern und Wiederherstellen von Sätzen von Zustandsvariablen
 
-Sie können die Werte einer Auflistung von Zustandsvariablen in einem Attribut Stapel mit den Funktionen [**glpushatpub**](glpushattrib.md) und [**glpopatpub**](glpopattrib.md) speichern und wiederherstellen. Der Attribut Stapel hat eine Tiefe von mindestens 16. Um die tatsächliche Tiefe zu erhalten, verwenden Sie die maximale Speichergröße \_ \_ von GL \_ \_ . [](glgetintegerv.md) Durch das übertragen eines vollständigen Stapels oder das Pop einer leeren wird ein Fehler generiert.
+Sie können die Werte einer Auflistung von Zustandsvariablen in einem Attributstapel mit den Funktionen [**glPushAttrib**](glpushattrib.md) und [**glPopAttrib**](glpopattrib.md) speichern und wiederherstellen. Der Attributstapel hat eine Tiefe von mindestens 16. Um die tatsächliche Tiefe zu erhalten, verwenden Sie GL \_ MAX \_ ATTRIB \_ STACK DEPTH mit \_ [**glGetIntegerv**](glgetintegerv.md). Das Pushen eines vollständigen Stapels oder das Popen eines leeren Stapels führt zu einem Fehler.
 
-Es ist in der Regel schneller, **glpushatpub** und **glpopatpub** zu verwenden, als die Werte selbst zu erhalten und wiederherzustellen. Einige Werte werden möglicherweise per pushübertragung in die Hardware übermittelt, und das Speichern und wiederherstellen kann ressourcenintensiv sein. Wenn Sie einen Remote Client verwenden, müssen alle Attributdaten bei der Speicherung und Wiederherstellung über die Netzwerkverbindung übertragen werden. Allerdings behält ihre OpenGL-Implementierung den Attribut Stapel auf dem Server bei, wodurch unnötige Netzwerkverzögerungen vermieden werden.
+Im Allgemeinen ist es schneller, **glPushAttrib** und **glPopAttrib** zu verwenden, als die Werte selbst abzurufen und wiederherzustellen. Einige Werte werden möglicherweise in die Hardware gepusht und per Pop übertragen, und das Speichern und Wiederherstellen dieser Werte kann ressourcenintensiv sein. Wenn Sie auf einem Remoteclient arbeiten, müssen außerdem alle Attributdaten über die Netzwerkverbindung und zurück übertragen werden, während sie gespeichert und wiederhergestellt werden. Ihre OpenGL-Implementierung behält jedoch den Attributstapel auf dem Server bei, um unnötige Netzwerkverzögerungen zu vermeiden.
 
-Der Prototyp von **glpushatpub** ist:
+Der Prototyp von **glPushAttrib** lautet:
 
-**void** **glpushattestb**(**GLbitfield** *Mask* );
+**void** **glPushAttrib**(**GLbitfield** *mask* );
 
-Durch die Verwendung von [**glpushatpub**](glpushattrib.md) werden alle durch Bits in der *Maske* gekennzeichneten Attribute gespeichert, indem Sie auf den Attribut Stapel übertragen werden. Eine Liste der möglichen Masken Bits, die Sie logisch oder gemeinsam zum Speichern einer beliebigen Kombination von Attributen haben, finden Sie unter [Attribut Gruppen](attribute-groups.md). Jedes Bit entspricht einer Auflistung einzelner Zustandsvariablen. Das GL-Beleuchtungs Bit bezieht sich z. b. \_ \_ auf alle Zustandsvariablen im Zusammenhang mit der Beleuchtung, einschließlich der aktuellen Material Farbe, der Ambient-, diffuse, Glanz und ausgegebene Beleuchtung, einer Liste der aktivierten Lichter und der Richtungen der Schein Lichter. Wenn Sie [**glpopatzb**](glpopattrib.md)anrufen, werden alle diese Variablen wieder hergestellt. Informationen dazu, welche Attribute für bestimmte Masken Werte gespeichert werden, finden Sie unter [OpenGL State variables](opengl-state-variables.md).
+Mit [**glPushAttrib**](glpushattrib.md) werden alle attribute gespeichert, die durch Bits in *mask* angegeben werden, indem sie auf den Attributstapel gepusht werden. Eine Liste der möglichen Maskierungsbits, die Sie logisch OR zusammen erstellen können, um eine beliebige Kombination von Attributen zu speichern, finden Sie unter [Attributgruppen.](attribute-groups.md) Jedes Bit entspricht einer Auflistung einzelner Zustandsvariablen. GL LIGHTING BIT bezieht sich z. \_ \_ B. auf alle Zustandsvariablen im Zusammenhang mit der Beleuchtung, die die aktuelle Materialfarbe, die Umgebungsfarbe, die Diffuse, das Glanzlicht und das ausgegebene Licht, eine Liste der aktivierten Beleuchtungen und die Richtungen der Spotlights enthalten. Wenn Sie [**glPopAttrib**](glpopattrib.md)aufrufen, werden alle diese Variablen wiederhergestellt. Informationen dazu, welche Attribute genau für bestimmte Maskenwerte gespeichert werden, finden Sie unter [OpenGL State Variables](opengl-state-variables.md).
 
- 
+ 
 
- 
+ 
 
 
 
