@@ -38,7 +38,7 @@ Sowohl die Ereignisquellencomputer als auch der Ereignissammlercomputer müssen 
 
     **%SYSTEMROOT% \\ System32 \\ gpedit.msc**
 
-3. Erweitern Sie unter dem  Knoten **Computerkonfiguration** den Knoten Administrative Vorlagen Knoten , erweitern Sie dann den Knoten Windows **Komponenten,** und wählen Sie dann den Knoten **Ereignisweiterleitung** aus.
+3. Erweitern Sie unter dem Knoten **Computerkonfiguration** **den** Knoten Administrative Vorlagen, erweitern Sie dann den Knoten **Windows Komponenten,** und wählen Sie dann den Knoten **Ereignisweiterleitung** aus.
 
 4. Klicken Sie mit der rechten Maustaste **auf die SubscriptionManager-Einstellung,** und wählen Sie **Eigenschaften aus.** Aktivieren Sie die **SubscriptionManager-Einstellung,** und klicken Sie auf **die Schaltfläche Anzeigen,** um der Einstellung eine Serveradresse hinzuzufügen. Fügen Sie mindestens eine Einstellung hinzu, die den Ereignissammlercomputer angibt. Das **Fenster SubscriptionManager-Eigenschaften** enthält eine **Registerkarte Erläuterung,** auf der die Syntax für die Einstellung beschrieben wird.
 
@@ -56,7 +56,7 @@ Sowohl die Ereignisquellencomputer als auch der Ereignissammlercomputer müssen 
 
     **wecutil qc /q**
 
-3. Erstellen Sie ein von der Quelle initiiertes Abonnement. Dies kann entweder programmgesteuert, mithilfe der -Ereignisanzeige oder mithilfe von [**Wecutil.exe.**](wecutil.md) Weitere Informationen zum programmgesteuerten Erstellen des Abonnements finden Sie im Codebeispiel unter [Creating a Source Initiated Subscription](creating-a-source-initiated-subscription.md). Wenn Sie Wecutil.exe verwenden, müssen Sie eine XML-Ereignisabonnementdatei erstellen und den folgenden Befehl verwenden:
+3. Erstellen Sie ein von der Quelle initiiertes Abonnement. Dies kann entweder programmgesteuert, mithilfe der -Ereignisanzeige oder mithilfe von [**Wecutil.exe.**](wecutil.md) Weitere Informationen zum programmgesteuerten Erstellen des Abonnements finden Sie im Codebeispiel unter [Creating a Source Initiated Subscription](creating-a-source-initiated-subscription.md). Wenn Sie Wecutil.exe, müssen Sie eine XML-Ereignisabonnementdatei erstellen und den folgenden Befehl verwenden:
 
     **wecutil cs** *configurationFile.xml*
 
@@ -133,7 +133,7 @@ Um das Sicherheitsprotokoll weitergeleitet zu können, müssen Sie das NETWORK S
 ## <a name="setting-up-a-source-initiated-subscription-where-the-event-sources-are-not-in-the-same-domain-as-the-event-collector-computer"></a>Einrichten eines von der Quelle initiierten Abonnements, bei dem sich die Ereignisquellen nicht in derselben Domäne wie der Ereignissammlercomputer befinden
 
 > [!Note]  
-> Bei diesen Anweisungen wird davon ausgegangen, dass Sie über Administratorzugriff auf einen Windows Server-Domänencontroller verfügen. Da sich der oder die Remoteereignissammlercomputer in diesem Fall nicht in der Domäne befinden, die vom Domänencontroller bedient wird, ist es wichtig, einen einzelnen Client zu starten, indem Sie Windows Remoteverwaltung mithilfe von Diensten (services.msc) auf "automatisch" festlegen. Alternativ können Sie "winrm quickconfig" auf jedem Remoteclient ausführen.
+> Bei diesen Anweisungen wird davon ausgegangen, dass Sie über Administratorzugriff auf einen Windows Server-Domänencontroller verfügen. Da sich die Remoteereignissammlercomputer oder -computer in diesem Fall nicht in der Domäne befinden, die vom Domänencontroller bedient wird, ist es wichtig, einen einzelnen Client zu starten, indem Sie Windows Remoteverwaltung mithilfe von Diensten (services.msc) auf "automatisch" festlegen. Alternativ können Sie "winrm quickconfig" auf jedem Remoteclient ausführen.
 
 Die folgenden Voraussetzungen müssen erfüllt sein, bevor das Abonnement erstellt wird.
 

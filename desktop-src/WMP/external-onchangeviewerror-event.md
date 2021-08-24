@@ -1,9 +1,9 @@
 ---
-title: Externes. onchangeviewerror-Ereignis
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Externes. onchangeviewerror-Ereignis
+title: External.OnChangeViewError-Ereignis
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.OnChangeViewError-Ereignis
 ms.assetid: d6370629-5f50-434d-8eb5-5b43d1b2f7fe
 keywords:
-- Externe. onchangeviewerror-Ereignisfenster Media Player
+- External.OnChangeViewError-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 91bcbb71e1c5324a9907d735492364561be49a60
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: aaa1152c753501b2e2385de8c56af614d62cfb367fcca8468aaa032e9536e8d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354715"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648830"
 ---
-# <a name="externalonchangeviewerror-event"></a>Externes. onchangeviewerror-Ereignis
+# <a name="externalonchangeviewerror-event"></a>External.OnChangeViewError-Ereignis
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Das **onchangeviewerror** -Ereignis tritt auf, wenn ein Aufrufvorgang der [externen. changeView](external-changeview.md) -Methode zu einem Fehler führt.
+Das **OnChangeViewError-Ereignis** tritt auf, wenn ein Aufruf der [External.changeView-Methode](external-changeview.md) zu einem Fehler führt.
 
 ``` syntax
 window.external.OnChangeViewError = FunctionName
@@ -36,7 +36,7 @@ window.external.OnChangeViewError = FunctionName
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die den Namen der Funktion im Skript angibt, die von Windows Media Player bei Auftreten des Ereignisses aufgerufen wird.
+Dies ist eine Schreibeigenschaft, die den Namen der Funktion im Skript angibt, Windows Media Player beim Auftreten des Ereignisses aufruft.
 
 ## <a name="parameters"></a>Parameter
 
@@ -44,38 +44,38 @@ Die Funktion, die dieses Ereignis behandelt, verfügt über die folgenden Parame
 
 <dl> <dt>
 
-<span id="hr"></span><span id="HR"></span>*HR*
+<span id="hr"></span><span id="HR"></span>*Hr*
 </dt> <dd>
 
-Ein **HRESULT** -Fehlercode, der den Grund für den Fehler angibt.
+Ein **HRESULT-Fehlercode,** der die Ursache des Fehlers angibt.
 
 </dd> <dt>
 
-<span id="LibraryLocationType"></span><span id="librarylocationtype"></span><span id="LIBRARYLOCATIONTYPE"></span>*Librarylocationtype*
+<span id="LibraryLocationType"></span><span id="librarylocationtype"></span><span id="LIBRARYLOCATIONTYPE"></span>*LibraryLocationType*
 </dt> <dd>
 
-Dieselbe Zeichenfolge, die im **librarylocationtype** -Parameter von **changeView** übergeben wurde.
+Die gleiche Zeichenfolge, die im **LibraryLocationType-Parameter** von **changeView übergeben wurde.**
 
 </dd> <dt>
 
-<span id="LibraryLocationID"></span><span id="librarylocationid"></span><span id="LIBRARYLOCATIONID"></span>*Librarylocationid*
+<span id="LibraryLocationID"></span><span id="librarylocationid"></span><span id="LIBRARYLOCATIONID"></span>*LibraryLocationID*
 </dt> <dd>
 
-Dieselbe Zeichenfolge, die im **librarylocationid** -Parameter von **changeView** übergeben wurde.
+Dieselbe Zeichenfolge, die im **LibraryLocationID-Parameter** von **changeView übergeben wurde.**
 
 </dd> <dt>
 
 <span id="Filter"></span><span id="filter"></span><span id="FILTER"></span>*Filter*
 </dt> <dd>
 
-Dieselbe Zeichenfolge, die im **Filter** -Parameter von **changeView** übergeben wurde.
+Dieselbe Zeichenfolge, die im **Filter-Parameter von** **changeView übergeben wurde.**
 
 </dd> <dt>
 
-<span id="ViewParams"></span><span id="viewparams"></span><span id="VIEWPARAMS"></span>*Viewparametriams*
+<span id="ViewParams"></span><span id="viewparams"></span><span id="VIEWPARAMS"></span>*ViewParams*
 </dt> <dd>
 
-Dieselbe Zeichenfolge, die in den **viewparameams** -Parameter von **changeView** übergeben wurde.
+Dieselbe Zeichenfolge, die im **ViewParams-Parameter** von **changeView übergeben wurde.**
 
 </dd> </dl>
 
@@ -94,7 +94,7 @@ Dieselbe Zeichenfolge, die in den **viewparameams** -Parameter von **changeView*
 
 <dl> <dt>
 
-[**Externalobject für Typ 1 Online Stores**](external-object-for-type-1-online-stores.md)
+[**ExternalObject für Onlineshops vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> </dl>
 
  

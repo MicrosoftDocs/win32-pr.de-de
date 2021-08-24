@@ -1,8 +1,8 @@
 ---
-description: Wenn ein Ereignis verfügbar ist, ruft die NextEvent-Methode des Objekts "slibemeventsource" das Ereignis aus einer Ereignis Abfrage ab.
+description: Wenn ein Ereignis verfügbar ist, ruft die NextEvent-Methode des SWbemEventSource-Objekts das Ereignis aus einer Ereignisabfrage ab.
 ms.assetid: ff2d54d4-b8ee-4bb8-b6f7-081a1ca20489
 ms.tgt_platform: multiple
-title: Errbemeventsource. NextEvent-Methode (wbemdisp. h)
+title: SWbemEventSource.NextEvent-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 02fbc32557ab29c66849a4249d26cc2ca41564e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6ce39d442b48f32c2aafcd6e24c1c214dce82a19435b6b36bce65d5426161859
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357046"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119050068"
 ---
-# <a name="swbemeventsourcenextevent-method"></a>Errbemeventsource. NextEvent-Methode
+# <a name="swbemeventsourcenextevent-method"></a>SWbemEventSource.NextEvent-Methode
 
-Wenn ein Ereignis verfügbar ist, ruft die **NextEvent** -Methode des Objekts " [**slibemeventsource**](swbemeventsource.md) " das Ereignis aus einer Ereignis Abfrage ab.
+Wenn ein Ereignis verfügbar ist, ruft die **NextEvent-Methode** des [**SWbemEventSource-Objekts**](swbemeventsource.md) das Ereignis aus einer Ereignisabfrage ab.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,27 +44,27 @@ objWbemObject = .NextEvent( _
 
 <dl> <dt>
 
-*itimeoutms* \[ in, optional\]
+*iTimeoutMs* \[ in, optional\]
 </dt> <dd>
 
-Anzahl der Millisekunden, die der Aufruf auf ein Ereignis wartet, bevor ein Timeout Fehler zurückgegeben wird. Der Standardwert für diesen Parameter ist **wbemtimeoutinfinite** (-1), der den-Vorgang anweist, unbegrenzt zu warten.
+Anzahl von Millisekunden, die der Aufruf auf ein Ereignis wartet, bevor ein Time out-Fehler zurückgegeben wird. Der Standardwert für diesen Parameter ist **wbemTimeoutInfinite** (-1), der den Aufruf anleitet, unbegrenzt zu warten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die **NextEvent** -Methode erfolgreich ist, gibt Sie ein " [**errbemujebject**](swbemobject.md) "-Objekt zurück, das das angeforderte Ereignis enthält. Wenn für den-Rückruf ein Timeout auftritt, ist das zurückgegebene-Objekt **null** , und es wird ein Fehler ausgelöst.
+Wenn die **NextEvent-Methode** erfolgreich ist, wird ein [**SWbemObject-Objekt**](swbemobject.md) zurückgegeben, das das angeforderte Ereignis enthält. Wenn für den Aufruf ein Zeitfehler auftritt, ist das zurückgegebene Objekt **NULL,** und es wird ein Fehler ausgelöst.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach dem Abschluss der **NextEvent** -Methode kann das **Err** -Objekt den Fehlercode in der folgenden Liste enthalten.
+Nach Abschluss der **NextEvent-Methode** kann das **Err-Objekt** den Fehlercode in der folgenden Liste enthalten.
 
 <dl> <dt>
 
-**wbemErrTimedOut** -0x80043001
+**wbemErrTimedOut** – 0x80043001
 </dt> <dd>
 
-Das angeforderte Ereignis wurde nicht in der in *itimeoutms* angegebenen Zeit erreicht.
+Das angeforderte Ereignis ist nicht in der in *iTimeoutMs* angegebenen Zeitspanne eingetroffen.
 
 </dd> </dl>
 
@@ -76,11 +76,11 @@ Das angeforderte Ereignis wurde nicht in der in *itimeoutms* angegebenen Zeit er
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID-austauschen von " \_ errbemeventsource"<br/>                                                      |
-| IID<br/>                      | IID \_ iswbemeventsource<br/>                                                       |
+| CLSID<br/>                    | CLSID \_ SWbemEventSource<br/>                                                      |
+| IID<br/>                      | IID \_ ISWbemEventSource<br/>                                                       |
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Beschreibt die Funktionen der zugeordneten MSVM- \_ metricservice-Instanz.
+description: Beschreibt die Funktionen der zugeordneten Msvm \_ MetricService-Instanz.
 ms.assetid: 4E24D675-8265-4B5E-9551-550510B138FE
 title: Msvm_MetricServiceCapabilities-Klasse
 ms.topic: reference
@@ -26,18 +26,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 635e153d3184e74ea581a045e3d6d54a5fea199f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 37fed3fead642ecfc5370d55c9f8b954477406b4b276cac392d9776a0cefb338
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119521330"
 ---
-# <a name="msvm_metricservicecapabilities-class"></a>MSVM \_ metricservicecapabili-Klasse
+# <a name="msvm_metricservicecapabilities-class"></a>Msvm \_ MetricServiceCapabilities-Klasse
 
-Beschreibt die Funktionen der zugeordneten [**MSVM- \_ metricservice**](msvm-metricservice.md) -Instanz.
+Beschreibt die Funktionen der zugeordneten [**Msvm \_ MetricService-Instanz.**](msvm-metricservice.md)
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,117 +63,117 @@ class Msvm_MetricServiceCapabilities : CIM_MetricServiceCapabilities
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ metricservicecapabili"** verfügt über diese Typen von Membern:
+Die **Msvm \_ MetricServiceCapabilities-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM- \_ metricservicecapabili-** Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ MetricServiceCapabilities-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Hyper-V Metric Service-Funktionen" festgelegt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Hyper-V Metric Service Capabilities" festgelegt.
 
 </dd> <dt>
 
-**Controllablemanagedelements**
+**ControllableManagedElements**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **arrayType** ("indiziert")
+Qualifizierer: **ArrayType** ("Indiziert")
 </dt> </dl>
 
-Identifiziert die Instanzen von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) , die von der zugeordneten **CIM \_ metricservice** -Instanz gesteuert werden können. Wenn diese Eigenschaft den Wert **null** hat, können alle Elemente gesteuert werden. Diese Eigenschaft wird von **CIM \_ metricservicecapabiligeerbt**.
+Identifiziert die Instanzen von [**CIM \_ ManagedElement,**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) die von der zugeordneten **CIM \_ MetricService-Instanz** gesteuert werden können. Wenn diese Eigenschaft **NULL** ist, können alle Elemente gesteuert werden. Diese Eigenschaft wird von **CIM \_ MetricServiceCapabilities** geerbt.
 
 </dd> <dt>
 
-**Controllablemetrics**
+**ControllableMetrics**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **arrayType** ("indiziert")
+Qualifizierer: **ArrayType** ("Indiziert")
 </dt> </dl>
 
-Identifiziert die Instanzen von **CIM \_ basemetricdefinition** , die von der zugeordneten **CIM \_ metricservice** -Instanz gesteuert werden können. Wenn diese Eigenschaft den Wert **null** hat, können alle Metriken gesteuert werden. Diese Eigenschaft wird von **CIM \_ metricservicecapabiligeerbt**.
+Identifiziert die Instanzen von **CIM \_ BaseMetricDefinition,** die von der zugeordneten **CIM \_ MetricService-Instanz** gesteuert werden können. Wenn diese Eigenschaft **NULL** ist, können alle Metriken gesteuert werden. Diese Eigenschaft wird von **CIM \_ MetricServiceCapabilities** geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "definiert Hyper-V Metric Service-Funktionen" festgelegt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Definiert Hyper-V-Metrikdienstfunktionen" festgelegt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Hyper-V Metric Service-Funktionen" festgelegt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Hyper-V Metric Service Capabilities" festgelegt.
 
 </dd> <dt>
 
-**Elementnameeditsupported**
+**ElementNameEditSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **ElementName** -Eigenschaft geändert werden kann. Diese Eigenschaft wird von **CIM \_ enabledlogicalelementfunktionalitäten** geerbt.
+Gibt an, ob die **ElementName-Eigenschaft** geändert werden kann. Diese Eigenschaft wird von **CIM \_ EnabledLogicalElementCapabilities** geerbt.
 
 </dd> <dt>
 
-**Elementnamemask**
+**ElementNameMask**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Einschränkungen für **ElementName** an, ausgedrückt als regulärer Ausdruck. Diese Eigenschaft wird von **CIM \_ enabledlogicalelementfunktionalitäten** geerbt.
+Gibt die Einschränkungen für **ElementName** an, ausgedrückt als regulärer Ausdruck. Diese Eigenschaft wird von **CIM \_ EnabledLogicalElementCapabilities** geerbt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -182,23 +182,23 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Managedelta Type Controller Types**
+**ManagedElementControlTypes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **arrayType** ("indiziert")
+Qualifizierer: **ArrayType** ("Indiziert")
 </dt> </dl>
 
-Gibt den Typ des Steuer Elements an, der von der zugeordneten **CIM- \_ metricservice** -Instanz für das [**CIM- \_ managedelements**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) -Objekt unterstützt wird, das durch den Wert am selben Array Index in der Eigenschaft " **controllablemanagedelements** " Wenn diese Eigenschaft **null** ist, werden alle Steuerelement Typen unterstützt. Diese Eigenschaft wird von **CIM \_ metricservicecapabiligeerbt**.
+Identifiziert den Typ des Steuerelements, das von der zugeordneten **CIM \_ MetricService-Instanz** für das [**CIM \_ ManagedElement-Objekt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) unterstützt wird, das durch den Wert am gleichen Arrayindex in der **ControllableManagedElements-Eigenschaft** identifiziert wird. Wenn diese Eigenschaft **NULL** ist, werden alle Steuerelementtypen unterstützt. Diese Eigenschaft wird von **CIM \_ MetricServiceCapabilities** geerbt.
 
 
 
@@ -207,9 +207,9 @@ Gibt den Typ des Steuer Elements an, der von der zugeordneten **CIM- \_ metricse
 | <dl> <dt>0</dt> </dl>            | Unbekannt<br/>         |
 | <dl> <dt>2</dt> </dl>            | Discrete<br/>        |
 | <dl> <dt>3</dt> </dl>            | Massenvorgang<br/>            |
-| <dl> <dt>4</dt> </dl>            | Both<br/>            |
-| <dl> <dt>5.. 32767</dt> </dl>     | DMTF reserviert<br/>   |
-| <dl> <dt>32768.. 65535</dt> </dl> | Hersteller spezifisch<br/> |
+| <dl> <dt>4</dt> </dl>            | Beide<br/>            |
+| <dl> <dt>5..32767</dt> </dl>     | DMTF reserviert<br/>   |
+| <dl> <dt>32768..65535</dt> </dl> | Anbieterspezifisch<br/> |
 
 
 
@@ -217,7 +217,7 @@ Gibt den Typ des Steuer Elements an, der von der zugeordneten **CIM- \_ metricse
 
 </dd> <dt>
 
-**Maxelementnamelen**
+**MaxElementNameLen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **unit16**
@@ -229,23 +229,23 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **MaxValue** (256)
 </dt> </dl>
 
-Gibt die maximal unterstützte Länge der **ElementName** -Eigenschaft an. Diese Eigenschaft wird von **CIM \_ enabledlogicalelementfunktionalitäten** geerbt.
+Gibt die maximal unterstützte Länge der **ElementName-Eigenschaft** an. Diese Eigenschaft wird von **CIM \_ EnabledLogicalElementCapabilities** geerbt.
 
 </dd> <dt>
 
-**Metricscontroltypes**
+**MetricsControlTypes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **arrayType** ("indiziert")
+Qualifizierer: **ArrayType** ("Indiziert")
 </dt> </dl>
 
-Gibt den Typ des Steuer Elements an, der von der zugeordneten **CIM- \_ metricservice** -Instanz für die **CIM- \_ basemetricdefinition** unterstützt wird, die durch den Wert am selben Array Index in der **controllablemetrics** -Eigenschaft identifiziert wird Wenn diese Eigenschaft **null** ist, werden alle Steuerelement Typen unterstützt. Diese Eigenschaft wird von **CIM \_ metricservicecapabiligeerbt**.
+Identifiziert den Typ des Steuerelements, das von der zugeordneten **CIM \_ MetricService-Instanz** für CIM **\_ BaseMetricDefinition** unterstützt wird, die durch den Wert am gleichen Arrayindex in der **ControllableMetrics-Eigenschaft** identifiziert wird. Wenn diese Eigenschaft **NULL** ist, werden alle Steuerelementtypen unterstützt. Diese Eigenschaft wird von **CIM \_ MetricServiceCapabilities** geerbt.
 
 
 
@@ -254,9 +254,9 @@ Gibt den Typ des Steuer Elements an, der von der zugeordneten **CIM- \_ metricse
 | <dl> <dt>0</dt> </dl>            | Unbekannt<br/>         |
 | <dl> <dt>2</dt> </dl>            | Discrete<br/>        |
 | <dl> <dt>3</dt> </dl>            | Massenvorgang<br/>            |
-| <dl> <dt>4</dt> </dl>            | Both<br/>            |
-| <dl> <dt>5.. 32767</dt> </dl>     | DMTF reserviert<br/>   |
-| <dl> <dt>32768.. 65535</dt> </dl> | Hersteller spezifisch<br/> |
+| <dl> <dt>4</dt> </dl>            | Beide<br/>            |
+| <dl> <dt>5..32767</dt> </dl>     | DMTF reserviert<br/>   |
+| <dl> <dt>32768..65535</dt> </dl> | Anbieterspezifisch<br/> |
 
 
 
@@ -264,16 +264,16 @@ Gibt den Typ des Steuer Elements an, der von der zugeordneten **CIM- \_ metricse
 
 </dd> <dt>
 
-**Requestedstaatunter stützt**
+**RequestedStatesSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **unit16** Array
+Datentyp: **unit16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die möglichen Zustände an, die bei Verwendung der **requestStateChange** -Methode für das aktivierte logische Element angefordert werden können. Diese Eigenschaft wird von **CIM \_ enabledlogicalelementfunktionalitäten** geerbt.
+Gibt die möglichen Zustände an, die angefordert werden können, wenn die **RequestStateChange-Methode** für das aktivierte logische Element verwendet wird. Diese Eigenschaft wird von **CIM \_ EnabledLogicalElementCapabilities** geerbt.
 
 
 
@@ -284,9 +284,9 @@ Gibt die möglichen Zustände an, die bei Verwendung der **requestStateChange** 
 | <dl> <dt>4</dt> </dl>  | Herunterfahren<br/> |
 | <dl> <dt>6</dt> </dl>  | Offline<br/>   |
 | <dl> <dt>7</dt> </dl>  | Test<br/>      |
-| <dl> <dt>8</dt> </dl>  | Wickeln<br/>     |
+| <dl> <dt>8</dt> </dl>  | Verschieben<br/>     |
 | <dl> <dt>9</dt> </dl>  | Stilllegen<br/>   |
-| <dl> <dt>10</dt> </dl> | Reboot<br/>    |
+| <dl> <dt>10</dt> </dl> | Neustart<br/>    |
 | <dl> <dt>11</dt> </dl> | Reset<br/>     |
 
 
@@ -298,26 +298,26 @@ Gibt die möglichen Zustände an, die bei Verwendung der **requestStateChange** 
 **SupportedMethods**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Methoden an, die vom metrikdienst unterstützt werden. Diese Eigenschaft wird von **CIM \_ metricservicecapabiligeerbt**.
+Gibt die vom Metrikdienst unterstützten Methoden an. Diese Eigenschaft wird von **CIM \_ MetricServiceCapabilities** geerbt.
 
 
 
 | Wert                                                                                   | Bedeutung                                                                                         |
 |-----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| <dl> <dt>2</dt> </dl>            | Die [**controlmetrics**](controlmetrics-msvm-metricservice.md) -Methode wird unterstützt.<br/> |
-| <dl> <dt>3</dt> </dl>            | Die **controlmetricsbyclass** -Methode wird unterstützt.<br/>                                   |
-| <dl> <dt>4</dt> </dl>            | Die **showmetrics** -Methode wird unterstützt.<br/>                                             |
-| <dl> <dt>5</dt> </dl>            | Die **showmetricsbyclass** -Methode wird unterstützt.<br/>                                      |
-| <dl> <dt>6</dt> </dl>            | Die **getmetricvalues** -Methode wird unterstützt.<br/>                                         |
-| <dl> <dt>7</dt> </dl>            | Die **controlsampletimes** -Methode wird unterstützt.<br/>                                      |
-| <dl> <dt>8.. 32767</dt> </dl>     | DMTF reserviert<br/>                                                                        |
-| <dl> <dt>32768.. 65535</dt> </dl> | Hersteller spezifisch<br/>                                                                      |
+| <dl> <dt>2</dt> </dl>            | Die [**ControlMetrics-Methode**](controlmetrics-msvm-metricservice.md) wird unterstützt.<br/> |
+| <dl> <dt>3</dt> </dl>            | Die **ControlMetricsByClass-Methode** wird unterstützt.<br/>                                   |
+| <dl> <dt>4</dt> </dl>            | Die **ShowMetrics-Methode** wird unterstützt.<br/>                                             |
+| <dl> <dt>5</dt> </dl>            | Die **ShowMetricsByClass-Methode** wird unterstützt.<br/>                                      |
+| <dl> <dt>6</dt> </dl>            | Die **GetMetricValues-Methode** wird unterstützt.<br/>                                         |
+| <dl> <dt>7</dt> </dl>            | Die **ControlSampleTimes-Methode** wird unterstützt.<br/>                                      |
+| <dl> <dt>8..32767</dt> </dl>     | DMTF reserviert<br/>                                                                        |
+| <dl> <dt>32768..65535</dt> </dl> | Anbieterspezifisch<br/>                                                                      |
 
 
 
@@ -331,10 +331,10 @@ Gibt die Methoden an, die vom metrikdienst unterstützt werden. Diese Eigenschaf
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -343,10 +343,10 @@ Gibt die Methoden an, die vom metrikdienst unterstützt werden. Diese Eigenschaf
 
 <dl> <dt>
 
-[**CIM \_ metricservicecapabilitäten**](cim-metricservicecapabilities.md)
+[**CIM \_ MetricServiceCapabilities**](cim-metricservicecapabilities.md)
 </dt> <dt>
 
-[**MSVM \_ metricservice**](msvm-metricservice.md)
+[**Msvm \_ MetricService**](msvm-metricservice.md)
 </dt> </dl>
 
  

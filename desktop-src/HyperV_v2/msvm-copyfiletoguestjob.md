@@ -1,5 +1,5 @@
 ---
-description: Stellt einen Gast Datei Dienst-Vorgangs Auftrag dar.
+description: Stellt einen Vorgangsauftrag für einen Gastdateidienst dar.
 ms.assetid: 3750707e-e8c8-4188-aed8-1a394d142140
 title: Msvm_CopyFileToGuestJob-Klasse
 ms.topic: reference
@@ -29,16 +29,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 57e27b4ba610eea4559f3b045b2d823661cf4cc9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 33fe43612425c96a5374603e6bb3a3cb6a3a56083113cc7628075ccf75c71056
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119531740"
 ---
-# <a name="msvm_copyfiletoguestjob-class"></a>MSVM \_ copyfiledeguestjob-Klasse
+# <a name="msvm_copyfiletoguestjob-class"></a>Msvm \_ CopyFileToGuestJob-Klasse
 
-Stellt einen Gast Datei Dienst-Vorgangs Auftrag dar. Diese Klasse wird von [**MSVM \_ guestfileservice**](msvm-guestfileservice.md)abgeleitet.
+Stellt einen Vorgangsauftrag für einen Gastdateidienst dar. Diese Klasse wird von [**Msvm \_ GuestFileService**](msvm-guestfileservice.md)abgeleitet.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -67,25 +67,25 @@ class Msvm_CopyFileToGuestJob : CIM_ConcreteJob
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ copyfiletoguestjob** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ CopyFileToGuestJob-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MSVM \_ copyfiledeguestjob** -Klasse verfügt über diese Methoden.
+Die **Msvm \_ CopyFileToGuestJob-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                   | BESCHREIBUNG                                                           |
+| Methode                                                                   | Beschreibung                                                           |
 |:-------------------------------------------------------------------------|:----------------------------------------------------------------------|
-| [**Copyfilestoguest**](copyfilestoguest-msvm-guestfileservice.md)       | Dateien werden vom Hyper-V-Host auf den virtuellen Computer kopiert.<br/> |
-| [**GetError**](geterror-msvm-copyfiletoguestjob.md)                     | Ruft das Fehler Objekt für den Auftrag ab.<br/>                    |
-| [**Geterrorex**](geterrorex-msvm-copyfiletoguestjob.md)                 | Ruft die Fehler Objekte für den Auftrag ab.<br/>                   |
+| [**CopyFilesToGuest**](copyfilestoguest-msvm-guestfileservice.md)       | Kopiert Dateien vom Hyper-V-Host auf den virtuellen Computer.<br/> |
+| [**GetError**](geterror-msvm-copyfiletoguestjob.md)                     | Ruft das Fehlerobjekt für den Auftrag ab.<br/>                    |
+| [**GetErrorEx**](geterrorex-msvm-copyfiletoguestjob.md)                 | Ruft die Fehlerobjekte für den Auftrag ab.<br/>                   |
 | [**RequestStateChange**](requeststatechange-msvm-copyfiletoguestjob.md) | Ändert den Status des Auftrags.<br/>                              |
-| **Start Service**                                                         | Diese Methode wird nicht unterstützt.<br/>                              |
-| **Stop Service**                                                          | Diese Methode wird nicht unterstützt.<br/>                              |
+| **Startservice**                                                         | Diese Methode wird nicht unterstützt.<br/>                              |
+| **StopService**                                                          | Diese Methode wird nicht unterstützt.<br/>                              |
 
 
 
@@ -93,40 +93,40 @@ Die **MSVM \_ copyfiledeguestjob** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ copyfiledeguestjob** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ CopyFileToGuestJob-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Abbrechbar**
+**Unkündbarem**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Auftrag abgebrochen werden kann. Der Wert dieser Eigenschaft garantiert nicht, dass eine Anforderung zum Abbrechen des Auftrags erfolgreich ist. **True** gibt an, dass der Auftrag abgebrochen werden kann. andernfalls **false**.
+Gibt an, ob der Auftrag abgebrochen werden kann. Der Wert dieser Eigenschaft garantiert nicht, dass eine Anforderung zum Abbrechen des Auftrags erfolgreich ist. True gibt an, dass der Auftrag abgebrochen werden kann. Andernfalls **FALSE**.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Kurze Textbeschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Kurze Textbeschreibung des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**Copyfilestarguestsettingdata**
+**CopyFileToGuestSettingData**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -136,106 +136,106 @@ Festlegen von Daten, die zum Kopieren einer Datei verwendet werden.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Wenn diese Eigenschaft mit anderen Schlüsseleigenschaften der-Klasse verwendet wird, können alle Instanzen der-Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit anderen Schlüsseleigenschaften der -Klasse ermöglicht diese Eigenschaft die eindeutige Identifizierung aller Instanzen der -Klasse und ihrer Unterklassen.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Textbeschreibung des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Textbeschreibung des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **ErrorSummaryDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM- \_ Auftrag**](cim-job.md)".**ErrorCode**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-Auftrag**](cim-job.md).**ErrorCode**")
 </dt> </dl>
 
-Eine zusammenfassende Beschreibung des Fehlers, falls vorhanden. Diese Eigenschaft wird vom [**CIM- \_ Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
+Eine zusammenfassende Beschreibung des Fehlers( falls vorhanden). Diese Eigenschaft wird vom [**\_ CIM-Auftrag**](/windows/desktop/CIMWin32Prov/cim-job)geerbt.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Datum und Uhrzeit der Installation des-Objekts. Für diese Eigenschaft ist kein Wert erforderlich, um anzugeben, dass das Objekt installiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft benötigt keinen Wert, um anzugeben, dass das Objekt installiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Bezeichner für den Dienst, der auch eine Angabe der verwalteten Funktionalität bereitstellt. Weitere Informationen zu den Funktionen finden Sie in der **Description** -Eigenschaft des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Eindeutiger Bezeichner für den Dienst, der auch einen Hinweis auf die funktionalität bereitstellt, die verwaltet wird. Weitere Informationen zur Funktionalität finden Sie in der **Description-Eigenschaft** des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**Gestartet**
+**Begann**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass der Dienst gestartet wurde.
+True gibt an, dass der Dienst gestartet wurde.
 
 </dd> <dt>
 
 **StartMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Dienst automatisch gestartet wird (z. b. durch ein Betriebssystem) oder nur nach Anforderung gestartet wird.
+Gibt an, ob der Dienst automatisch gestartet wird (z. B. durch ein Betriebssystem) oder nur auf Anforderung gestartet wird.
 
 Folgende Werte sind gültig:
 
 <dl><span id="Automatic"></span><span id="automatic"></span><span id="AUTOMATIC"></span><dt>
 
-**Schem**
+**"Automatisch"**
 </dt><span id="Manual"></span><span id="manual"></span><span id="MANUAL"></span><dt>
 
-**Manual**
+**"Manuell"**
 </dt> </dl>
 
 </dd> <dt>
@@ -243,7 +243,7 @@ Folgende Werte sind gültig:
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -255,74 +255,74 @@ Folgende Werte sind gültig:
 
 <dl><span id="OK"></span><span id="ok"></span><dt>
 
-**Okay**
+**"OK"**
 </dt><span id="Error"></span><span id="error"></span><span id="ERROR"></span><dt>
 
-**Zeit**
+**"Fehler"**
 </dt><span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span><dt>
 
-**Zerstört**
+**"Heruntergestuft"**
 </dt><span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span><dt>
 
-**Unbekannter**
+**"Unbekannt"**
 </dt><span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span><dt>
 
-**"Pred Fail"**
+**"Pred Fail" (Fehler vor dem Fehler)**
 </dt><span id="Starting"></span><span id="starting"></span><span id="STARTING"></span><dt>
 
-**Fahren**
+**"Starting" (Wird gestartet)**
 </dt><span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span><dt>
 
-**Hindern**
+**"Wird beendet"**
 </dt><span id="Service"></span><span id="service"></span><span id="SERVICE"></span><dt>
 
-**Leistungs**
+**"Dienst"**
 </dt><span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span><dt>
 
-**Gestresst**
+**"100"**
 </dt><span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span><dt>
 
-**"Nicht wiederherstellen"**
+**"NonRecover"**
 </dt><span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span><dt>
 
 **"Kein Kontakt"**
 </dt><span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span><dt>
 
-**"Verlorene comm"**
+**"Lost Comm"**
 </dt> </dl>
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Bereichs Systems.
+Der Name der Erstellungsklasse des Bereichssystems.
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Systems, das den Dienst hostet.
+Name des Systems, das den Dienst hostet.
 
 </dd> <dt>
 
-**Virtualsystemname**
+**VirtualSystemName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -338,10 +338,10 @@ GUID des betroffenen virtuellen Systems.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -350,13 +350,13 @@ GUID des betroffenen virtuellen Systems.
 
 <dl> <dt>
 
-[**CIM- \_ concretejob**](cim-concretejob.md)
+[**CIM \_ ConcreteJob**](cim-concretejob.md)
 </dt> <dt>
 
-[**MSVM \_ guestfileservice**](msvm-guestfileservice.md)
+[**Msvm \_ GuestFileService**](msvm-guestfileservice.md)
 </dt> <dt>
 
-[**MSVM- \_ guestservice**](msvm-guestservice.md)
+[**Msvm \_ GuestService**](msvm-guestservice.md)
 </dt> </dl>
 
  

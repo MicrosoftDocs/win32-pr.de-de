@@ -1,7 +1,7 @@
 ---
-description: Die alignup-Methode rundet einen Wert auf eine angegebene Ausrichtungs Grenze. Beachten Sie, dass in Windows 7 entfernt wurde. .
+description: Die AlignUp-Methode rundet einen Wert auf eine angegebene Ausrichtungsgrenze. Hinweis Entfernt in Windows 7. .
 ms.assetid: fa2a6567-3eb1-4aa9-b966-2e88b15c67b1
-title: Cpullpin. alignup-Methode (pullpin. h)
+title: CPullPin.AlignUp-Methode (Pullpin.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a4f33ae2b7434d90d909315edda4d49e07d8adab
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 34c45fe4a34e21647cd976adbf29dfe6723e4216d58166e7d1599d4c8d64d47e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687760"
 ---
-# <a name="cpullpinalignup-method"></a>Cpullpin. alignup-Methode
+# <a name="cpullpinalignup-method"></a>CPullPin.AlignUp-Methode
 
-Die **alignup** -Methode rundet einen Wert auf eine angegebene Ausrichtungs Grenze.
+Die **AlignUp-Methode** rundet einen Wert auf eine angegebene Ausrichtungsgrenze.
 
 > [!Note]  
 > In Windows 7 entfernt.
@@ -48,17 +48,17 @@ LONGLONG AlignUp(
 
 <dl> <dt>
 
-*ll* 
+*Ll* 
 </dt> <dd>
 
 Gibt die Zahl an, die ausgerichtet werden soll.
 
 </dd> <dt>
 
-*lalign* 
+*lAlign* 
 </dt> <dd>
 
-Gibt die Ausrichtungs Grenze an.
+Gibt die Ausrichtungsgrenze an.
 
 </dd> </dl>
 
@@ -66,10 +66,10 @@ Gibt die Ausrichtungs Grenze an.
 
 Gibt das ausgerichtete Ergebnis zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Diese Methode kann einen numerischen Überlauf verursachen, wenn *ll* + (*lalign* -1) überläuft.
+> Diese Methode kann einen numerischen Überlauf verursachen, wenn *ll* + (*lAlign* - 1) überläuft.
 
  
 
@@ -79,8 +79,8 @@ Gibt das ausgerichtete Ergebnis zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Pullpin. h</dt> </dl>                                                                                                       |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pullpin.h</dt> </dl>                                                                                                       |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -88,7 +88,7 @@ Gibt das ausgerichtete Ergebnis zurück.
 
 <dl> <dt>
 
-[**Cpullpin-Klasse**](cpullpin.md)
+[**CPullPin-Klasse**](cpullpin.md)
 </dt> </dl>
 
  

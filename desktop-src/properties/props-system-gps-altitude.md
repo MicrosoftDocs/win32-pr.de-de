@@ -1,19 +1,19 @@
 ---
-description: Gibt die Höhe an, die auf dem Verweis in pkey \_ GPS \_ altituderef basiert.
+description: Gibt die Höhe basierend auf dem Verweis in PKEY \_ GPS \_ AltitudeRef an.
 ms.assetid: 396f9c9e-4d13-4e0d-9ec5-14a1c49f059e
-title: System. GPS. Altitude
+title: System.GPS.Altitude
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 181c3c07c81f905d627169c0ca51700298860a7b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 30035cb0b99dd08ff600dbad46d1219394d3c7abcf1297c3f520c0c7b19d04df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119033538"
 ---
-# <a name="systemgpsaltitude"></a>System. GPS. Altitude
+# <a name="systemgpsaltitude"></a>System.GPS.Altitude
 
-Gibt die Höhe an, die auf dem Verweis in pkey \_ GPS \_ altituderef basiert. Berechnet aus pkey \_ GPS \_ altitudenumerator und pkey \_ GPS \_ altitudinenner.
+Gibt die Höhe basierend auf dem Verweis in PKEY \_ GPS \_ AltitudeRef an. Berechnet aus PKEY \_ \_ GPS-HöheNumerator und PKEY \_ \_ GPS-HöheDenominator.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
@@ -31,56 +31,56 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
-Die Anforderung eines bestimmten indirekten Zeichen folgen Verweises für das `label` Attribut von **Labelinfo** wurde für Windows Vista mit Service Pack 1 (SP1) hinzugefügt.
+Die Anforderung eines bestimmten indirekten Zeichenfolgenverweises für das Attribut von labelInfo wurde für Windows Vista mit `label` Service Pack 1 (SP1) hinzugefügt. 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

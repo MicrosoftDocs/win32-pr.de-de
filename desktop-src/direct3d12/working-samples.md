@@ -1,29 +1,29 @@
 ---
 title: Funktionierende Beispiele
-description: Funktionierende Beispiele sind zum Herunterladen verfügbar und zeigen die Verwendung einer Reihe von Features von Direct3D 12.
+description: Arbeitsbeispiele stehen zum Download zur Verfügung, die die Verwendung einer Reihe von Features von Direct3D 12 zeigen.
 ms.assetid: 4C4475D4-534F-484F-8D60-9ACEA09AC109
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cb1b61ec374e21c9173797121ee90ec72e789de8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6d6f8bad1d20729f4caa78952feda22378ad37526b33b668e79260ef9658da53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "74104240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119631882"
 ---
 # <a name="working-samples"></a>Funktionierende Beispiele
 
-Funktionierende Beispiele sind zum Herunterladen verfügbar und zeigen die Verwendung einer Reihe von Features von Direct3D 12.
+Arbeitsbeispiele stehen zum Download zur Verfügung, die die Verwendung einer Reihe von Features von Direct3D 12 zeigen.
 
-## <a name="working-samples"></a>Funktionierende Beispiele
+## <a name="working-samples"></a>Arbeitsbeispiele
 
-Funktionierende Beispiele (in Form von Visual Studio 2015-Projekten) können von [GitHub/Microsoft/DirectX-Graphics-Samples](https://github.com/Microsoft/DirectX-Graphics-Samples)heruntergeladen werden.
+Arbeitsbeispiele (in Form von Visual Studio 2015-Projekten) können unter [GitHub/Microsoft/DirectX-Graphics-Samples heruntergeladen werden.](https://github.com/Microsoft/DirectX-Graphics-Samples)
 
 > [!Note]  
 > Die genaue Liste der an diesem Speicherort verfügbaren Beispiele variiert, wenn Beispiele hinzugefügt und aktualisiert werden.
 
- 
+ 
 
 
 
@@ -39,17 +39,17 @@ Funktionierende Beispiele (in Form von Visual Studio 2015-Projekten) können von
 </thead>
 <tbody>
 <tr class="odd">
-<td>HelloWorld<dl> Hellowindow<br />
-Hellodreieck<br />
-Hellobundles<br />
-"Helloconstbuffers"<br />
-Hellotexture<br />
+<td>HelloWorld<dl> HelloWindow<br />
+HelloTringle<br />
+HelloBundles<br />
+HelloConstBuffers<br />
+HelloTexture<br />
 </dl></td>
-<td>Die "HelloWorld"-Beispiel Gruppe enthält die folgenden einfachen Projekte, die Ihnen beim Einstieg in Direct3D 12 helfen.<dl> Erstellt ein Fenster zur Vorbereitung des Renderings von Direct3D 12-Inhalt.<br />
-Rendert ein einfaches Dreieck mithilfe von Direct3D 12.<br />
-Veranschaulicht die Verwendung eines Pakets zum Rendern mit Direct3D 12.<br />
-Veranschaulicht, wie Konstante Puffer verwendet werden, um Daten an die GPU zu übergeben, die in Direct3D 12 zum Rendern verwendet wird.<br />
-Veranschaulicht, wie eine Textur mithilfe von Direct3D 12 auf ein Dreieck angewendet wird.<br />
+<td>Der HelloWorld-Beispielsatz enthält die folgenden einfachen Projekte für die ersten Schritte mit Direct3D 12.<dl> Erstellt ein Fenster zur Vorbereitung des Renderns von Direct3D 12-Inhalten.<br />
+Rendert ein einfaches Dreieck mit Direct3D 12.<br />
+Veranschaulicht die Verwendung eines Bündels für das Rendering mit Direct3D 12.<br />
+Veranschaulicht, wie konstante Puffer verwendet werden, um Daten an die GPU zu übergeben, die für das Rendering in Direct3D 12 verwendet wird.<br />
+Veranschaulicht, wie eine Textur mit Direct3D 12 auf ein Dreieck angewendet wird.<br />
 </dl></td>
 <td>J</td>
 <td>J</td>
@@ -57,91 +57,91 @@ Veranschaulicht, wie eine Textur mithilfe von Direct3D 12 auf ein Dreieck angewe
 </tr>
 <tr class="even">
 <td>D3D12Bundles</td>
-<td>Veranschaulicht die bewährten Methoden für Frame Pufferung und Synchronisierung sowie das Rendern eines einfachen Netzes mithilfe von bündeln.</td>
+<td>Veranschaulicht bewährte Methoden für Framepufferung und -synchronisierung sowie das Rendern eines einfachen Gitters mithilfe von Bündeln.</td>
 <td>J</td>
 <td>J</td>
 
 </tr>
 <tr class="odd">
 <td>D3D12Multithreading</td>
-<td>Ein Beispiel für das Erstellen einer Multithread fähigen Anwendung.</td>
+<td>Ein Beispiel für das Erstellen einer Multithreadanwendung.</td>
 <td>J</td>
 <td>N</td>
 
 </tr>
 <tr class="even">
-<td>D3D12nBodyGravity</td>
-<td>Veranschaulicht, wie die multiengine verwendet werden kann, um asynchrone computeaufgaben parallel zu 3D-Aufgaben auf derselben GPU auszuführen.</td>
+<td>D3D12nBodyIty</td>
+<td>Veranschaulicht, wie multi-engine verwendet werden kann, um asynchrone Computearbeit zusammen mit 3D-Arbeiten auf derselben GPU zu ermöglichen.</td>
 <td>J</td>
 <td>J</td>
-<td><a href="multi-engine-n-body-gravity-simulation.md">N-Text-Schwerkraft Simulation mit mehreren Modulen</a></td>
+<td><a href="multi-engine-n-body-gravity-simulation.md">N-Körper-Schwerkraftsimulation mit mehreren Modulen</a></td>
 </tr>
 <tr class="odd">
 <td>D3D12PredicationQueries</td>
-<td>Veranschaulicht die Verschleierung von Okklusion mithilfe von Abfrage Heaps und Prädikaten.</td>
+<td>Veranschaulicht okklusion culling mithilfe von Abfragehaps und Prädication.</td>
 <td>J</td>
 <td>J</td>
 <td><a href="predication-queries.md">Prädikationsabfragen</a></td>
 </tr>
 <tr class="even">
 <td>D3D12DynamicIndexing</td>
-<td>Veranschaulicht die dynamischen Indizierungs Funktionen von DirectX 12 und HLSL.</td>
+<td>Veranschaulicht die dynamischen Indizierungsfunktionen von DirectX 12 und HLSL.</td>
 <td>J</td>
 <td>J</td>
 <td><a href="dynamic-indexing-using-hlsl-5-1.md">Dynamische Indizierung mit HLSL 5.1</a></td>
 </tr>
 <tr class="odd">
 <td>D3D1211on12</td>
-<td>Veranschaulicht die grundlegende Verwendung der 11on12-Ebene. In diesem Beispiel wird Text mithilfe von D2D mithilfe der Direct3D 11-API auf einem Direct3D 12 11on12-Gerät gerendert.</td>
+<td>Veranschaulicht die grundlegende Verwendung der Ebene 11on12. In diesem Beispiel wird Text mithilfe von D2D mithilfe der Direct3D 11-API auf einem Direct3D 12 11on12-Gerät gerendert.</td>
 <td>J</td>
 <td>J</td>
 <td><a href="d2d-using-d3d11on12.md">D2D mit D3D11on12</a></td>
 </tr>
 <tr class="even">
 <td>D3D12ExecuteIndirect</td>
-<td>Veranschaulicht das Berechnen von computemodulen in Verbindung mit der Funktion "indirekte ausführen", um nur Objekte zu renderten, die den culck-Test bestehen.</td>
+<td>Veranschaulicht das Compute-Engine-Culling in Verbindung mit dem Indirekten Ausführungsfeature, um nur Objekte zu rendern, die den Cullingtest bestehen.</td>
 <td>J</td>
 <td>J</td>
-<td><a href="indirect-drawing-and-gpu-culling-.md">Indirektes zeichnen und GPU-culult</a></td>
+<td><a href="indirect-drawing-and-gpu-culling-.md">Indirektes Zeichnen und GPU-Culling</a></td>
 </tr>
 <tr class="odd">
 <td>D3D12PipelineStateCache</td>
-<td>Veranschaulicht das Zwischenspeichern von Pipeline Zustands Objekten (PSO).</td>
+<td>Veranschaulicht das Zwischenspeichern von Pipelinezustandsobjekten (PIPELINE State Object, PSO).</td>
 <td>J</td>
 <td>J</td>
 
 </tr>
 <tr class="even">
 <td>D3D12Fullscreen</td>
-<td>Veranschaulicht die Behandlung von voll Bild Vorgängen und Fenstergröße in DirectX 12.</td>
+<td>Veranschaulicht, wie Der Vollbildmodus in DirectX 12 mit Fensterübergängen und Deren Größe geändert wird.</td>
 <td>J</td>
 <td>J</td>
 
 </tr>
 <tr class="odd">
-<td>D3D12HeterogeneousMultiadapter</td>
-<td>Veranschaulicht das Freigeben von Arbeits Auslastungen für mehrere heterogene GPUs mithilfe von freigegebenen Heaps.</td>
+<td>D3D12Adapter</td>
+<td>Veranschaulicht, wie Workloads mithilfe von freigegebenen Heaps für mehrere heterogene GPUs freigegeben werden.</td>
 <td>J</td>
 <td>J</td>
 
 </tr>
 <tr class="even">
 <td>D3D12ReservedResources</td>
-<td>Veranschaulicht die Verwendung reservierter (gekachelter) Ressourcen. In diesem Beispiel wird ein Quad mit einer reservierten Ressource mit einer vollständigen MIP-Kette texturiert.</td>
+<td>Veranschaulicht die Verwendung reservierter (gekachelter) Ressourcen. In diesem Beispiel wird ein Quad mit einer reservierten Ressource texturiert, die eine vollständige MIP-Kette enthält.</td>
 <td>J</td>
 <td>J</td>
 
 </tr>
 <tr class="odd">
 <td>D3D12Residency</td>
-<td>Dies ist als Lösung für die kostenlose Integration für die Verwaltung Ihrer Direct3D 12 Heaps und für das committet von Ressourcen mit Speicher Verwaltungsverfahren von Direct3D 11 gedacht.</td>
+<td>Dies ist als kostengünstige Lösung für die Verwaltung Ihrer Direct3D 12-Heaps und -Ressourcen mithilfe von Speicherverwaltungstechniken von Direct3D 11 vorgesehen.</td>
 <td>J</td>
 <td>J</td>
 
 </tr>
 <tr class="even">
 <td>D3D12SmallResources</td>
-<td>Veranschaulicht die Verwendung von kleinen bereitstellten Ressourcen und zeigt die potenziellen Speicher Einsparungen, die durch die Verwendung von bereitstellten Ressourcen (mit einer Ausrichtung von 4K) über zugesicherte und reservierte Ressourcen (mit einer Ausrichtung von 64K) erzielt wurden.</td>
+<td>Veranschaulicht die Verwendung von kleinen platzierten Ressourcen und zeigt die potenziellen Speichereinsparungen, die durch platzierte Ressourcen (mit einer 4K-Ausrichtung) gegenüber gebundenen und reservierten Ressourcen (mit einer 64K-Ausrichtung) erzielt wurden.</td>
 <td>J</td>
 <td>J</td>
 
@@ -151,21 +151,21 @@ Veranschaulicht, wie eine Textur mithilfe von Direct3D 12 auf ein Dreieck angewe
 
 
 
- 
+ 
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Direct3D 12-Programmier Handbuch](directx-12-programming-guide.md)
+[Direct3D 12-Programmieranleitung](directx-12-programming-guide.md)
 </dt> <dt>
 
-[D3D12-Code Exemplarische Vorgehensweisen](d3d12-code-walk-throughs.md)
+[Exemplarische Vorgehensweisen zu D3D12-Code](d3d12-code-walk-throughs.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

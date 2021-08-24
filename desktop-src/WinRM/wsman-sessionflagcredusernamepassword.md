@@ -1,12 +1,12 @@
 ---
 title: WSMan.SessionFlagCredUsernamePassword-Methode (WSManDisp.h)
-description: Gibt den Wert des Authentifizierungsflags WSManFlagCredUsernamePassword zur Verwendung im flags-Parameter der WSMan.CreateSession-Methode zurück.
+description: Gibt den Wert des Authentifizierungsflags WSManFlagCredUsernamePassword für die Verwendung im flags-Parameter der WSMan.CreateSession-Methode zurück.
 ms.assetid: 70d12df4-f0ac-499a-8b2f-6ba83b77869e
 ms.tgt_platform: multiple
 keywords:
 - SessionFlagCredUsernamePassword-Methode Windows Remoteverwaltung
 - SessionFlagCredUsernamePassword-Methode Windows Remoteverwaltung, WSMan-Objekt
-- WSMan-Windows Remoteverwaltung, SessionFlagCredUsernamePassword-Methode
+- WSMan-Objekt Windows Remoteverwaltung , SessionFlagCredUsernamePassword-Methode
 topic_type:
 - apiref
 api_name:
@@ -26,9 +26,9 @@ ms.locfileid: "119613510"
 ---
 # <a name="wsmansessionflagcredusernamepassword-method"></a>WSMan.SessionFlagCredUsernamePassword-Methode
 
-Die **WSMan.SessionFlagCredUsernamePassword-Methode** gibt den Wert des Authentifizierungsflags **WSManFlagCredUsernamePassword** zur Verwendung im *flags-Parameter* der [**WSMan.CreateSession-Methode**](wsman-createsession.md) zurück. Diese Methode bietet eine effizientere Syntax für die Verwendung der -Konstante, sodass Skripts nicht zum Festlegen eines konstanten Werts erforderlich sind. Weitere Informationen zum Aufrufen dieser Methode finden Sie unter [Sitzungskonst constants](session-constants.md).
+Die **WSMan.SessionFlagCredUsernamePassword-Methode** gibt den Wert des Authentifizierungsflags **WSManFlagCredUsernamePassword** für die Verwendung im *flags-Parameter* der [**WSMan.CreateSession-Methode**](wsman-createsession.md) zurück. Diese Methode bietet eine effizientere Syntax für die Verwendung der -Konstante, sodass skripts nicht erforderlich sind, um einen konstanten Wert festzulegen. Weitere Informationen zum Aufrufen dieser Methode finden Sie unter [Sitzungskonstanten.](session-constants.md)
 
-**WSManFlagCredUsernamePassword** ist eine Konstante in der **\_ \_ WSManSessionFlags-Enumeration.** Weitere Informationen finden Sie unter [Authentifizierungskonst konstanten](authentication-constants.md).
+**WSManFlagCredUsernamePassword** ist eine Konstante in der **\_ \_ WSManSessionFlags-Enumeration.** Weitere Informationen finden Sie unter [Authentifizierungskonstanten.](authentication-constants.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,7 +54,7 @@ Der Wert der Konstante.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,14 +71,14 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [**Wsman**](wsman.md)
 </dt> <dt>
 
-[**Sitzungskonsistenz**](session.md)
+[**Sitzung**](session.md)
 </dt> </dl>
 
  

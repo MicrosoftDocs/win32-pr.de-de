@@ -1,9 +1,9 @@
 ---
-title: TVM_GETIMAGELIST Nachricht (Commctrl.h)
-description: Ruft das Handle der Normalen- oder Zustandsbildliste ab, die einem Strukturansichtssteuerelement zugeordnet ist. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ GetImageList-Makros senden.
+title: TVM_GETIMAGELIST (Commctrl.h)
+description: Ruft das Handle für die Normale- oder Zustandsbildliste ab, die einem Strukturansicht-Steuerelement zugeordnet ist. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ GetImageList-Makros senden.
 ms.assetid: bcf5eac8-cb07-4cf8-ad93-47319fc915a5
 keywords:
-- TVM_GETIMAGELIST Windows-Steuerelemente für Nachrichten
+- TVM_GETIMAGELIST meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119293280"
 ---
 # <a name="tvm_getimagelist-message"></a>TVM \_ GETIMAGELIST-Nachricht
 
-Ruft das Handle der Normalen- oder Zustandsbildliste ab, die einem Strukturansichtssteuerelement zugeordnet ist. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ GetImageList-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_getimagelist) senden.
+Ruft das Handle für die Normale- oder Zustandsbildliste ab, die einem Strukturansicht-Steuerelement zugeordnet ist. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ GetImageList-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_getimagelist) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Ruft das Handle der Normalen- oder Zustandsbildliste ab, die einem Strukturansic
 *wParam* 
 </dt> <dd>
 
-Typ der abzurufende Bildliste. Dieser Parameter kann einer der folgenden Werte sein:
+Typ der abzurufenden Bildliste. Dieser Parameter kann einen der folgenden Werte haben:
 
 
 
 | Wert                                                                                                                                                      | Bedeutung                                                                                                                                                                                             |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="TVSIL_NORMAL"></span><span id="tvsil_normal"></span><dl> <dt>**TVSIL \_ NORMAL**</dt> </dl> | Gibt die normale Bildliste an, die ausgewählte, nicht ausgewählte und Überlagerungsbilder für die Elemente eines Strukturansichtssteuerelements enthält.<br/>                                                          |
-| <span id="TVSIL_STATE"></span><span id="tvsil_state"></span><dl> <dt>**TVSIL \_ STATE**</dt> </dl>    | Gibt die Statusbildliste an. Sie können Zustandsbilder verwenden, um anwendungsdefinierte Elementzustände anzugeben. Links neben dem ausgewählten oder nicht ausgewählten Bild eines Elements wird ein Zustandsbild angezeigt.<br/> |
+| <span id="TVSIL_NORMAL"></span><span id="tvsil_normal"></span><dl> <dt>**TVSIL \_ NORMAL**</dt> </dl> | Gibt die normale Bildliste an, die ausgewählte, nicht ausgewählte und Überlagerungsbilder für die Elemente eines Strukturansicht-Steuerelements enthält.<br/>                                                          |
+| <span id="TVSIL_STATE"></span><span id="tvsil_state"></span><dl> <dt>**TVSIL \_ STATE**</dt> </dl>    | Gibt die Statusbildliste an. Sie können Zustandsbilder verwenden, um anwendungsdefinierte Elementzustände anzugeben. Links vom ausgewählten oder nicht ausgewählten Bild eines Elements wird ein Statusbild angezeigt.<br/> |
 
 
 
@@ -52,7 +52,7 @@ Typ der abzurufende Bildliste. Dieser Parameter kann einer der folgenden Werte s
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein HIMAGELIST-Handle für die angegebene Bildliste zurück.
+Gibt ein HIMAGELIST-Handle an die angegebene Bildliste zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,13 +60,13 @@ Gibt ein HIMAGELIST-Handle für die angegebene Bildliste zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

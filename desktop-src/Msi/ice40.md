@@ -4,12 +4,12 @@ ms.assetid: 1f2ba2a1-0170-4434-88fd-a5d1ca8b67c4
 title: ICE40
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 17617fe5748fcba5ae0edab414ad1bc83c2e5c22
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 077c44154413d9aa9e75b1c13fe2f2f80ccb52fee6459888c7bc9678ea0e935f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119528430"
 ---
 # <a name="ice40"></a>ICE40
 
@@ -17,31 +17,31 @@ ICE40 führt verschiedene Überprüfungen durch.
 
 ## <a name="result"></a>Ergebnis
 
-ICE40 gibt Warnungen zu folgenden Aktionen aus:
+ICE40 gibt Warnungen zu folgenden Themen aus:
 
--   Die Eigenschaft " [**REINSTALLMODE**](reinstallmode.md) " wurde überschrieben.
--   Die [removeinifile-Tabelle](removeinifile-table.md) enthält einen DELETE-tageintrag ohne Wert.
--   In der MSI-Datei fehlt die [Fehler Tabelle](error-table.md) , und die [**Zusammenfassungs Eigenschaft der Seitenanzahl**](page-count-summary.md) ist kleiner oder gleich 100. Diese Ice-Warnung ist veraltet, da Windows Installer nicht erfordert, dass das Paket eine Fehler Tabelle enthält. Fehlermeldungen können mit Msimsg.dll abgerufen werden.
+-   Die [**REINSTALLMODE-Eigenschaft**](reinstallmode.md) wurde überschrieben.
+-   Die [RemoveIniFile-Tabelle](removeinifile-table.md) verfügt über den Eintrag Tag löschen ohne Wert.
+-   In .msi Datei fehlt die [Tabelle Fehler,](error-table.md) und [**die**](page-count-summary.md) Eigenschaft Zusammenfassung der Seitenanzahl ist kleiner oder gleich 100. Diese ICE-Warnung ist veraltet, Windows Installer keine Fehlertabelle für das Paket erfordert. Fehlermeldungen können mithilfe von Msimsg.dll.
 
 ## <a name="example"></a>Beispiel
 
-[Eigenschaften Tabelle](property-table.md)
+[Eigenschaftentabelle](property-table.md)
 
 
 
 | Eigenschaft                               | Wert |
 |----------------------------------------|-------|
-| [**REINSTALLMODE**](reinstallmode.md) | A     |
+| [**REINSTALLMODE**](reinstallmode.md) | Ein     |
 
 
 
  
 
-[Removeinifile-Tabelle](removeinifile-table.md)
+[RemoveIniFile-Tabelle](removeinifile-table.md)
 
 
 
-| Removeinifile                          | Aktion | Wert |
+| RemoveIniFile                          | Aktion | Wert |
 |----------------------------------------|--------|-------|
 | [**REINSTALLMODE**](reinstallmode.md) | 4      |       |
 
@@ -55,11 +55,11 @@ ICE40 würde die folgenden Fehler melden.
 
 
 
-| ICE40-Fehler                                                                                           | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ICE40-Fehler                                                                                           | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**REINSTALLMODE**](reinstallmode.md) ist in der Eigenschaften Tabelle definiert. Dies kann zu Problemen führen. | Das Definieren der [**REINSTALLMODE**](reinstallmode.md) -Eigenschaft in der MSI-Datei kann zu unerwartetem Verhalten führen. Legen Sie diese Eigenschaft nicht fest, um diesen Fehler zu beheben.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Der removeinifile-Eintrag Remove1 muss über einen Wert verfügen, da die Aktion "Delete Tag" (4) ist.                | In der removeinifile-Spalte der [removeinifile-Tabelle](removeinifile-table.md) ist eine DELETE-tagaktion vorhanden, ohne dass ein zu löschende Tag in der Spalte Wert angegeben werden muss.                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Fehler Tabelle fehlt. Nur numerische Fehlermeldungen werden generiert.                              | Diese Ice-Warnung ist veraltet, da Windows Installer nicht erfordert, dass das Paket eine [Fehler Tabelle](error-table.md)enthält. Fehlermeldungen können mit Msimsg.dll abgerufen werden.<br/> Diese Warnung bedeutet, dass in der MSI-Datei die [Fehler Tabelle](error-table.md) fehlt und die [**Zusammenfassungs Eigenschaft der Seitenanzahl**](page-count-summary.md) kleiner oder gleich 100 ist. <br/> Um diesen Fehler zu beheben, verwenden Sie eine aktuelle Version der Windows Installer, oder fügen Sie dem Installationspaket eine Fehler Tabelle hinzu, und erstellen Sie Formatierungs Vorlagen in der Meldungs Spalte für Fehlermeldungen.<br/> |
+| [**REINSTALLMODE**](reinstallmode.md) wird in der Property-Tabelle definiert. Dies kann zu Schwierigkeiten führen. | Das Definieren der [**REINSTALLMODE-Eigenschaft**](reinstallmode.md) in .msi datei kann zu unerwartetem Verhalten führen. Um diesen Fehler zu beheben, definieren Sie diese Eigenschaft nicht.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Der RemoveIniFile-Eintrag Remove1 muss einen Wert haben, da die Aktion "Tag löschen" (4) ist.                | In der RemoveIniFile -Spalte der [RemoveIniFile-Tabelle](removeinifile-table.md) gibt es eine Delete Tag-Aktion, ohne ein tag anzugeben, das in der Spalte Value gelöscht werden soll.                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Fehlertabelle fehlt. Es werden nur numerische Fehlermeldungen generiert.                              | Diese ICE-Warnung ist veraltet, da Windows Installer nicht erfordert, dass das Paket über die [Fehlertabelle verfügt.](error-table.md) Fehlermeldungen können mithilfe von Msimsg.dll.<br/> Diese Warnung bedeutet, dass .msi Fehlerdatei die Tabelle [](page-count-summary.md) [Fehler](error-table.md) fehlt und die Eigenschaft Zusammenfassung der Seitenanzahl kleiner oder gleich 100 ist. <br/> Um diesen Fehler zu beheben, verwenden Sie eine aktuelle Version des Windows Installers, oder fügen Sie dem Installationspaket eine Fehlertabelle hinzu, und erstellen Sie Formatierungsvorlagen in der Spalte Meldung für Fehlermeldungen.<br/> |
 
 
 
@@ -69,7 +69,7 @@ ICE40 würde die folgenden Fehler melden.
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

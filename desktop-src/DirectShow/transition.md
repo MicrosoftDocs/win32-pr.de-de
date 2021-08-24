@@ -14,11 +14,11 @@ ms.locfileid: "119072254"
 # <a name="transition"></a>Übergang
 
 > [!Note]  
-> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Das Übergangsobjekt erstellt einen Videoübergang zwischen Spuren oder Kompositionen. Rufen Sie zum Erstellen dieses Objekts die [**IAMTimeline::CreateEmptyNode-Methode**](iamtimeline-createemptynode.md) auf.
+Das Übergangsobjekt erstellt einen Videoübergang zwischen Spuren oder Kompositionen. Um dieses Objekt zu erstellen, rufen Sie die [**IAMTimeline::CreateEmptyNode-Methode**](iamtimeline-createemptynode.md) auf.
 
 Das Übergangsobjekt macht die folgenden Schnittstellen verfügbar:
 

@@ -1,9 +1,9 @@
 ---
-title: Bestätigung für Cancel-Session
-description: Verwenden Sie die Bestätigung für Cancel-Session Paket, um die Cancel-Session Anforderung des Clients zu bestätigen. Der Server sendet die Bestätigung, nachdem alle der Uploadsitzung zugeordneten Ressourcen freigegeben wurden.
+title: Ack für Cancel-Session
+description: Verwenden Sie Ack für Cancel-Session Paket, um die Cancel-Session Anforderung des Clients zu bestätigen. Der Server sendet die Bestätigung, nachdem alle Ressourcen freigegeben wurden, die der Uploadsitzung zugeordnet sind.
 ms.assetid: 670d061e-ab73-4aa8-85ba-2c9693794235
 keywords:
-- Bestätigung für Cancel-Session Bits
+- Ack für Cancel-Session BITS
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b85ff937b720a69ee2722cef2f02b25273ea58d
-ms.sourcegitcommit: 73417d55867c804274a55abe5ca71bcba7006119
+ms.openlocfilehash: b23de0b23b0b87f559326c37ad61ecd09c38f697f0be48b45e92f5e7389b09fd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "104039814"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119588820"
 ---
-# <a name="ack-for-cancel-session"></a>Bestätigung für Cancel-Session
+# <a name="ack-for-cancel-session"></a>Ack für Cancel-Session
 
-Verwenden Sie das Paket **ACK for Cancel-Session** , um die [**Abbruch Sitzungs**](cancel-session.md) Anforderung des Clients zu bestätigen. Der Server sendet die Bestätigung, nachdem alle der Uploadsitzung zugeordneten Ressourcen freigegeben wurden.
+Verwenden Sie den **Ack für das Cancel-Session-Paket,** um die [**Cancel-Session-Anforderung**](cancel-session.md) des Clients zu bestätigen. Der Server sendet die Bestätigung, nachdem alle Ressourcen freigegeben wurden, die der Uploadsitzung zugeordnet sind.
 
 ``` syntax
 reason-code reason-description
@@ -36,72 +36,72 @@ BITS-Error-Context: error-context
 
 <dl> <dt>
 
-<span id="reason-code"></span><span id="REASON-CODE"></span>Grund: Code
+<span id="reason-code"></span><span id="REASON-CODE"></span>reason-code
 </dt> <dd>
 
-Ersetzen Sie Reason-Code durch den HTTP-Ursachen Code. Legen Sie z. b. Reason-Code auf 200 fest, wenn Erfolg. Eine Liste der http-Ursachen Codes finden Sie unter [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt).
+Ersetzen Sie reason-code durch den HTTP-Ursachencode. Legen Sie beispielsweise reason-code bei Erfolg auf 200 fest. Eine Liste der HTTP-Ursachencodes finden Sie unter [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt).
 
 </dd> <dt>
 
-<span id="reason-description"></span><span id="REASON-DESCRIPTION"></span>Ursache: Beschreibung
+<span id="reason-description"></span><span id="REASON-DESCRIPTION"></span>Ursachenbeschreibung
 </dt> <dd>
 
-Ersetzen Sie Reason-Description durch die http-Beschreibung, die dem Ursachen Code zugeordnet ist. Legen Sie beispielsweise Reason-Description auf OK fest, wenn der Grund Code 200 ist.
+Ersetzen Sie reason-description durch die HTTP-Beschreibung, die dem Ursachencode zugeordnet ist. Legen Sie beispielsweise reason-description auf OK fest, wenn reason-code 200 ist.
 
 </dd> <dt>
 
-<span id="BITS-Packet-Type"></span><span id="bits-packet-type"></span><span id="BITS-PACKET-TYPE"></span>Bits-Pakettyp
+<span id="BITS-Packet-Type"></span><span id="bits-packet-type"></span><span id="BITS-PACKET-TYPE"></span>BITS-Packet-Type
 </dt> <dd>
 
-Identifiziert dieses Antwortpaket als ACK-Paket.
+Identifiziert dieses Antwortpaket als Ack-Paket.
 
 </dd> <dt>
 
-<span id="BITS-Session-Id"></span><span id="bits-session-id"></span><span id="BITS-SESSION-ID"></span>Bits-Session-ID
+<span id="BITS-Session-Id"></span><span id="bits-session-id"></span><span id="BITS-SESSION-ID"></span>BITS-Sitzungs-ID
 </dt> <dd>
 
-Zeichen folgen-GUID, die die Sitzung für den Client identifiziert. Ersetzen Sie {GUID} durch die Sitzungs-ID, die der Client im Anforderungspaket der [**Abbruch Sitzung**](cancel-session.md) gesendet hat. Wenn Sie die Sitzungs-ID nicht erkennen, legen Sie den Bits-Error-Code-Header auf BG \_ E \_ Session \_ nicht \_ gefunden fest.
+Zeichenfolgen-GUID, die die Sitzung für den Client identifiziert. Ersetzen Sie {guid} durch den Sitzungsbezeichner, den der Client im [**Anforderungspaket Cancel-Session**](cancel-session.md) gesendet hat. Wenn Sie den Sitzungsbezeichner nicht erkennen, legen Sie den HEADER BITS-Error-Code auf BG \_ E SESSION NOT FOUND \_ \_ \_ fest.
 
 </dd> <dt>
 
-<span id="Content-Length"></span><span id="content-length"></span><span id="CONTENT-LENGTH"></span>Inhalts Länge
+<span id="Content-Length"></span><span id="content-length"></span><span id="CONTENT-LENGTH"></span>Inhaltslänge
 </dt> <dd>
 
 Ersetzen Sie length durch die Anzahl der Bytes, die im Text der Antwort enthalten sind. Erforderlich, auch wenn der Text der Antwort keinen Inhalt enthält.
 
 </dd> <dt>
 
-<span id="BITS-Error-Code"></span><span id="bits-error-code"></span><span id="BITS-ERROR-CODE"></span>Bits-Fehler Code
+<span id="BITS-Error-Code"></span><span id="bits-error-code"></span><span id="BITS-ERROR-CODE"></span>BITS-Error-Code
 </dt> <dd>
 
-Ersetzen Sie Error-Code durch eine hexadezimale Zahl, die einen HRESULT-Wert darstellt, der einem serverseitigen Fehler zugeordnet ist. Schließen Sie diesen Header nur ein, wenn Reason-Code nicht 200 oder 201 ist.
+Ersetzen Sie den Fehlercode durch eine Hexadezimalzahl, die einen HRESULT-Wert darstellt, der einem serverseitigen Fehler zugeordnet ist. Schließen Sie diesen Header nur ein, wenn reason-code nicht 200 oder 201 ist.
 
 </dd> <dt>
 
-<span id="BITS-Error-Context"></span><span id="bits-error-context"></span><span id="BITS-ERROR-CONTEXT"></span>Bits-Fehler-Kontext
+<span id="BITS-Error-Context"></span><span id="bits-error-context"></span><span id="BITS-ERROR-CONTEXT"></span>BITS-Error-Context
 </dt> <dd>
 
-Ersetzen Sie Error-Context durch eine hexadezimale Zahl, die den Kontext darstellt, in dem der Fehler aufgetreten ist. Geben Sie die hexadezimale Zahl für [**BG_ERROR_CONTEXT_REMOTE_FILE**](/windows/win32/api/bits/ne-bits-bg_error_context) (0x5) an, wenn der Server den Fehler generiert hat. Andernfalls geben Sie die hexadezimale Zahl für eine **BG- \_ Fehler \_ Kontext- \_ Remote \_ Anwendung** (0x7) an, wenn der Fehler von der Anwendung generiert wurde, an die die Uploaddatei weitergeleitet wird. Fügen Sie diesen Header nur ein, wenn der Grund Code nicht 200 oder 201 ist.
+Ersetzen Sie error-context durch eine Hexadezimalzahl, die den Kontext darstellt, in dem der Fehler aufgetreten ist. Geben Sie die Hexadezimalzahl für [**BG_ERROR_CONTEXT_REMOTE_FILE**](/windows/win32/api/bits/ne-bits-bg_error_context) (0x5) an, wenn der Server den Fehler generiert hat. Geben Sie andernfalls die Hexadezimalzahl für **BG ERROR CONTEXT REMOTE \_ \_ \_ \_ APPLICATION** (0x7) an, wenn der Fehler von der Anwendung generiert wurde, an die die Uploaddatei übergeben wird. Schließen Sie diesen Header nur ein, wenn der Reason-Code nicht 200 oder 201 ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der BITS-Client sendet das [**Cancel-Session**](cancel-session.md) -Paket erneut, wenn der Grund Code im Bereich von 500 bis 599 liegt, es sei denn, der Bits-Error-Code-Header ist mit dem Wert "BG \_ E Session" vorhanden \_ \_ \_ . Der Client versucht nicht, die Ursachen Codes 100 bis 499 zu wiederholen.
+Der BITS-Client gibt das [**Cancel-Session-Paket**](cancel-session.md) erneut zurück, wenn sich der Reason-Code im Bereich von 500 bis 599 befindet, es sei denn, der BITS-Error-Code-Header ist mit dem Wert BG \_ E SESSION NOT FOUND \_ \_ \_ vorhanden. Der Client wird aus den Ursachencodes 100 bis 499 nicht erneut versuchen.
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Bestätigung für Close-Session**](ack-for-close-session.md)
+[**Ack for Close-Session**](ack-for-close-session.md)
 </dt> <dt>
 
-[**Abbrechen-Sitzung**](cancel-session.md)
+[**Cancel-Session**](cancel-session.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

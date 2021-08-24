@@ -1,8 +1,8 @@
 ---
-description: Die bekannten Ziele, die die gesammelten Daten enthalten. Nur verfügbar, wenn der Collector mit aktiviertem Status Protokoll ausgeführt wird.
+description: Die bekannten Ziele, die die gesammelten Daten enthalten. Nur verfügbar, wenn der Collector mit aktivierten Statusprotokollen ausgeführt wird.
 ms.assetid: ab0d2949-9808-49c3-8a0c-f2ce9c300a2a
 ms.tgt_platform: multiple
-title: Targetforwardingdestination-Klasse
+title: TargetForwardingDestination-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -26,16 +26,16 @@ api_type:
 - DllExport
 api_location:
 - BEvtCol.exe
-ms.openlocfilehash: 735b6179fe9d72b5faf0cad976410aeace427f63
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 58492b8b334085a6dd03c397558c4f10bc1fa4aff441f5b7bbfc7ba7cf37b0bc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104482795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589000"
 ---
-# <a name="targetforwardingdestination-class"></a>Targetforwardingdestination-Klasse
+# <a name="targetforwardingdestination-class"></a>TargetForwardingDestination-Klasse
 
-Die bekannten Ziele, die die gesammelten Daten enthalten. Nur verfügbar, wenn der Collector mit aktiviertem Status Protokoll ausgeführt wird.
+Die bekannten Ziele, die die gesammelten Daten enthalten. Nur verfügbar, wenn der Collector mit aktivierten Statusprotokollen ausgeführt wird.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -62,205 +62,205 @@ class TargetForwardingDestination
 
 ## <a name="members"></a>Member
 
-Die Klasse " **targetforwardingdestination** " verfügt über diese Typen von Membern:
+Die **TargetForwardingDestination-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **targetforwardingdestination** -Klasse verfügt über diese Eigenschaften.
+Die **TargetForwardingDestination-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Collector Endpoint**
+**CollectorEndpoint**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Host: Port Informationen des Endpunkts auf der Collector-Seite.
+Die Host:Port-Informationen des Endpunkts auf der Collectorseite.
 
 </dd> <dt>
 
 **Computer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Name des Ziel Computers, der vom Collector entsprechend seiner Konfiguration festgelegt wurde.
+Der Name des Zielcomputers, der vom Collector gemäß seiner Konfiguration bestimmt wird.
 
 </dd> <dt>
 
-**Connectedsince**
+**ConnectedSince**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **DATETIME**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Zeitstempel, zu dem die Verbindung hergestellt wurde.
+Zeitstempel des Zeitpunkts, zu dem die Verbindung hergestellt wurde.
 
 </dd> <dt>
 
 **Ziel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Das Ziel der Daten. Die Bedeutung hängt vom Weiterleitungs Typen ab. Kann ein Dateiname oder ein anderer Identifizierungs-ID sein.
+Ziel der Daten. Die Bedeutung hängt vom Forwardertyp ab. Kann ein Dateiname oder eine andere Identifikation sein.
 
 </dd> <dt>
 
-**Destinationpattern**
+**DestinationPattern**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Muster, das verwendet wird, um das Ziel der Daten zu generieren. Die Bedeutung hängt von der Weiterleitungs Art und der Konfiguration ab. Für ein festes Ziel wäre das gleiche wie das Ziel selbst. Für das Ziel mit der Drehung der Dateien würde die Muster Zeichen enthalten, die durch den eigentlichen Index im Ziel ersetzt werden.
+Muster, das zum Generieren des Ziels der Daten verwendet wird. Die Bedeutung hängt vom Typ und der Konfiguration der Forwarder ab. Für ein festes Ziel wäre dasselbe wie das Ziel selbst. Für das Ziel mit Der Drehung der Dateien enthält die Musterzeichen, die durch den tatsächlichen Index im Ziel ersetzt werden.
 
 </dd> <dt>
 
-**Disconnectedsince**
+**DisconnectedSince**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **DATETIME**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Zeitstempel für den Zeitpunkt, zu dem die Verbindung gelöscht wurde.
+Zeitstempel des Zeitpunkts, zu dem die Verbindung gelöscht wurde.
 
 </dd> <dt>
 
 **Fehler**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Fehlermeldung, wenn ein Fehler aufgetreten ist. Andernfalls ist es leer.
+Fehlermeldung, wenn ein Fehler aufgetreten ist. Andernfalls ist leer.
 
 </dd> <dt>
 
-**Weiterforwardertyp**
+**ForwarderType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Typ der Weiterleitung (z. b. "ETL").
+Typ der Weitergeleiteten (z. B. "etl").
 
 </dd> <dt>
 
-**Targetendpoint**
+**TargetEndpoint**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Die Endpunkt Informationen des Ziel Computers in einem von menschenlesbaren Format. Diese Eigenschaft ist als *Host*:*Port* Zeichenfolge formatiert. Beispiel: "127.0.0.1:50000".
+Die Endpunktinformationen des Zielcomputers im lesbaren Format. Diese Eigenschaft wird als Hostformatiert:*Portzeichenfolge.* Beispiel: "127.0.0.1:50000".
 
 </dd> <dt>
 
-**Targetguid**
+**TargetGuid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Die SMBIOS-GUID des Ziel Computers (sofern bekannt).
+Die SMBIOS-GUID des Zielcomputers (sofern bekannt).
 
 </dd> <dt>
 
-**Targetmac**
+**TargetMac**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Die Mac-Adresse des Ziel Computers (sofern bekannt).
+Die MAC-Adresse des Zielcomputers (sofern bekannt).
 
 </dd> <dt>
 
-**Wmidatetime**
+**WmiDateTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **DATETIME**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Zeitstempel für den Zeitpunkt, zu dem diese Zustandsänderung aufgezeichnet wurde.
+Zeitstempel des Zeitpunkts, zu dem diese Zustandsänderung aufgezeichnet wurde.
 
 </dd> </dl>
 
@@ -272,8 +272,8 @@ Zeitstempel für den Zeitpunkt, zu dem diese Zustandsänderung aufgezeichnet wur
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                       |
-| Namespace<br/>                | Stammverzeichnis von \\ Microsoft \\ Windows \\ booteventcollector<br/>                                              |
-| MOF<br/>                      | <dl> <dt>Booteventcollector WMI. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ Microsoft \\ Windows \\ BootEventCollector<br/>                                              |
+| MOF<br/>                      | <dl> <dt>BootEventCollectorWMI.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>BEvtCol.exe</dt> </dl>               |
 
 

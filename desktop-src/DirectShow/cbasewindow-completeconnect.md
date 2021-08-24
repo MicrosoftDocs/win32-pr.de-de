@@ -25,7 +25,7 @@ ms.locfileid: "119016708"
 ---
 # <a name="cbasewindowcompleteconnect-method"></a>CBaseWindow.CompleteConnect-Methode
 
-Die -Methode benachrichtigt das Fenster, dass der Eingabepin des `CompleteConnect` Renderers verbunden wurde.
+Die `CompleteConnect` -Methode benachrichtigt das Fenster, dass der Eingabepin des Renderers verbunden wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Gibt S \_ OK zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode setzt das Fensteraktivierungsflag ([**CBaseWindow::m \_ bActivated**](cbasewindow-m-bactivated.md)) auf **FALSE zurück.** Wenn ein Videorenderer eine Stecknadelverbindung schließt, kann er die [**CBaseWindow::ActivateWindow-Methode**](cbasewindow-activatewindow.md) aufrufen, um die Größe und Position des Fensters zu festlegen. Um zu **erzwingen, dass ActivateWindow** diese Attribute neu berechnet, rufen Sie zuerst die -Methode `CompleteConnect` auf.
+Diese Methode setzt das Fensteraktivierungsflag ([**CBaseWindow::m \_ bActivated**](cbasewindow-m-bactivated.md)) auf **FALSE** zurück. Wenn ein Videorenderer eine Pinverbindung abschließt, kann er die [**CBaseWindow::ActivateWindow-Methode**](cbasewindow-activatewindow.md) aufrufen, um die Größe und Position des Fensters festzulegen. Um zu erzwingen, dass **ActivateWindow** diese Attribute neu berechnet, rufen Sie zuerst die `CompleteConnect` -Methode auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,11 +55,11 @@ Diese Methode setzt das Fensteraktivierungsflag ([**CBaseWindow::m \_ bActivated
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

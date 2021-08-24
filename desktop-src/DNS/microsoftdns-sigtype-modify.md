@@ -1,11 +1,11 @@
 ---
-title: Modify-Methode der MicrosoftDNS_SIGType-Klasse
+title: Modify-Methode der MicrosoftDNS_SIGType Klasse
 description: Die Modify-Methode aktualisiert eine Signatur-RR (SIG).
 ms.assetid: 6a7017da-d3f1-4aba-a53a-96f578518304
 keywords:
 - Ändern der DNS-Methode
 - Modify method DNS , MicrosoftDNS_SIGType class
-- MicrosoftDNS_SIGType-Klasse DNS, Modify-Methode
+- MicrosoftDNS_SIGType DNS-Klasse, Modify-Methode
 topic_type:
 - apiref
 api_name:
@@ -52,24 +52,24 @@ void Modify(
 
 <dl> <dt>
 
-*Gültigkeitsdauer* \[ in, optional\]
+*TTL* \[ in, optional\]
 </dt> <dd>
 
-Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, die die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
 *TypeCovered* \[ In\]
 </dt> <dd>
 
-RR-Typ, der von diesem SIG abgedeckt wird.
+Der RR-Typ, der von dieser SIG abgedeckt wird.
 
 </dd> <dt>
 
 *Algorithmus* \[ In\]
 </dt> <dd>
 
-Algorithmus, der mit dem im Ressourcendatensatz angegebenen Schlüssel verwendet wird. Die zugewiesenen Werte werden in der folgenden Tabelle angezeigt.
+Algorithmus, der mit dem im Ressourcendatensatz angegebenen Schlüssel verwendet wird. Die zugewiesenen Werte sind in der folgenden Tabelle aufgeführt.
 
 
 
@@ -78,7 +78,7 @@ Algorithmus, der mit dem im Ressourcendatensatz angegebenen Schlüssel verwendet
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | RSA/MD5 (RFC 2537)<br/>          |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | Diffie-Hellman (RFC 2539)<br/>   |
 | <span id="3"></span><dl> <dt>**3**</dt> </dl> | DSA (RFC 2536)<br/>              |
-| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Kryptografie der elliptischen Kurve<br/> |
+| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Kryptografie mit elliptischen Kurven<br/> |
 
 
 
@@ -96,28 +96,28 @@ Anzahl der Bezeichnungen ohne Vorzeichen im ursprünglichen SIG RR-Besitzernamen
 *OriginalTTL* \[ In\]
 </dt> <dd>
 
-Gültigkeitsdauer des von der SIG signierten RR-Satzes.
+TTL des RR-Sets, das vom SIG signiert wurde.
 
 </dd> <dt>
 
 *SignatureExpiration* \[ In\]
 </dt> <dd>
 
-Signaturablaufdatum, ausgedrückt in Sekunden seit dem 1. Januar 1970, Greenwich Mean Time (GMT), ohne Schaltsekunden.
+Ablaufdatum der Signatur, ausgedrückt in Sekunden seit dem Anfang des 1. Januar 1970, Greenwich Mean Time (GMT), ohne Schaltsekunden.
 
 </dd> <dt>
 
 *SignatureInception* \[ In\]
 </dt> <dd>
 
-Datum und Uhrzeit, zu der die Signatur gültig wird, ausgedrückt in Sekunden seit Dem 1. Januar 1970, Greenwich Mean Time (GMT), ohne Schaltsekunden.
+Datum und Uhrzeit der Gültigkeit der Signatur, ausgedrückt in Sekunden seit Dem Anfang des 1. Januar 1970, Greenwich Mean Time (GMT), ohne Schaltsekunden.
 
 </dd> <dt>
 
 *KeyTag* \[ In\]
 </dt> <dd>
 
-Methode zum Auswählen eines Schlüssels, der eine SIG überprüft. Informationen zur Methode zum Berechnen eines KeyTag finden Sie unter RFC 2535, Anhang C.
+Methode zum Auswählen eines Schlüssels, der eine SIG überprüft. Informationen zur Methode zum Berechnen eines KeyTags finden Sie unter RFC 2535, Anhang C.
 
 </dd> <dt>
 
@@ -138,7 +138,7 @@ Signatur, dargestellt in Basis 64, formatiert gemäß RFC 2535, Anhang A.
 *RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue Objekt.
+Verweis auf das neue -Objekt.
 
 </dd> </dl>
 
@@ -148,7 +148,7 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Alle nicht angegebenen Parameter bleiben im geänderten Datensatz unverändert.
+Nicht angegebene Parameter bleiben im geänderten Datensatz unverändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -158,12 +158,12 @@ Alle nicht angegebenen Parameter bleiben im geänderten Datensatz unverändert.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
 | MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
@@ -173,7 +173,7 @@ Alle nicht angegebenen Parameter bleiben im geänderten Datensatz unverändert.
 [**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ SIGType-Klasse**](microsoftdns-sigtype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

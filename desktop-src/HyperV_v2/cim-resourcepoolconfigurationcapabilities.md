@@ -1,5 +1,5 @@
 ---
-description: Verwaltet die Funktionen der CIM \_ resourcepoolconfigurationservice-Instanz für ein CIM- \_ resourcepool-Objekt.
+description: Verwaltet die Funktionen der CIM \_ ResourcePoolConfigurationService-Instanz für ein CIM \_ ResourcePool-Objekt.
 ms.assetid: bd2eb4da-8ecd-4adb-b657-837c8da4dcdc
 title: CIM_ResourcePoolConfigurationCapabilities-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 967b307049fa9c5f81b8deb6da96bcaa3be9acc8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 61d4154f6400c94827b5b8561e70e547235b59502a51a03e9bd9cfdb83515fa1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119561840"
 ---
-# <a name="cim_resourcepoolconfigurationcapabilities-class"></a>CIM \_ resourcepoolconfigurationfunktionalitäten-Klasse
+# <a name="cim_resourcepoolconfigurationcapabilities-class"></a>CIM \_ ResourcePoolConfigurationCapabilities-Klasse
 
-Verwaltet die Funktionen der [**CIM \_ resourcepoolconfigurationservice**](cim-resourcepoolconfigurationservice.md) -Instanz für ein [**CIM- \_ resourcepool**](cim-resourcepool.md) -Objekt.
+Verwaltet die Funktionen der [**CIM \_ ResourcePoolConfigurationService-Instanz**](cim-resourcepoolconfigurationservice.md) für ein [**CIM \_ ResourcePool-Objekt.**](cim-resourcepool.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,152 +39,152 @@ class CIM_ResourcePoolConfigurationCapabilities : CIM_Capabilities
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ resourcepoolconfigurationfunktionsklasse** verfügt über diese Typen von Membern:
+Die **CIM \_ ResourcePoolConfigurationCapabilities-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ resourcepoolconfigurationfunktionalitäten** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ResourcePoolConfigurationCapabilities-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Asynchronousmethodssupported**
+**AsynchronousMethodsSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32** Array
+Datentyp: **uint32-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Methoden des Konfigurations Dienstanbieter, die für asynchrone Vorgänge unterstützt werden.
+Die Methoden des Konfigurationsdiensts, die für asynchrone Vorgänge unterstützt werden.
 
 <dt>
 
 <span id="CreateResourcePool_is_supported"></span><span id="createresourcepool_is_supported"></span><span id="CREATERESOURCEPOOL_IS_SUPPORTED"></span>
 
-" **Kreateresourcepool" wird unterstützt** (2)
+**CreateResourcePool wird unterstützt** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CreateChild_ResourcePool_is_supported"></span><span id="createchild_resourcepool_is_supported"></span><span id="CREATECHILD_RESOURCEPOOL_IS_SUPPORTED"></span>
 
-" **Kreatechild resourcepool" wird unterstützt** (3)
+**CreateChild ResourcePool wird unterstützt** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DeleteResourcePool_is_supported"></span><span id="deleteresourcepool_is_supported"></span><span id="DELETERESOURCEPOOL_IS_SUPPORTED"></span>
 
-**Deleteresourcepool wird unterstützt** (4)
+**DeleteResourcePool wird unterstützt** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AddResourcesToResourcePool_is_supported"></span><span id="addresourcestoresourcepool_is_supported"></span><span id="ADDRESOURCESTORESOURCEPOOL_IS_SUPPORTED"></span>
 
-**Adresssourcestoresourcepool wird unterstützt** (5)
+**AddResourcesToResourcePool wird unterstützt** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="RemoveResourcesFromResourcePool_is_supported"></span><span id="removeresourcesfromresourcepool_is_supported"></span><span id="REMOVERESOURCESFROMRESOURCEPOOL_IS_SUPPORTED"></span>
 
-**Removeresourcesfromresourcepool wird unterstützt** (6)
+**RemoveResourcesFromResourcePool wird unterstützt** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ChangeParentResourcePool_is_supported"></span><span id="changeparentresourcepool_is_supported"></span><span id="CHANGEPARENTRESOURCEPOOL_IS_SUPPORTED"></span>
 
-**Changeparser-sourcepool wird unterstützt** (7)
+**ChangeParentResourcePool wird unterstützt** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32768.65535)
+**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Synchronousmethodssupported**
+**SynchronousMethodsSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32** Array
+Datentyp: **uint32-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Methoden des Konfigurations Dienstanbieter, die für synchrone Vorgänge unterstützt werden.
+Die Methoden des Konfigurationsdiensts, die für synchrone Vorgänge unterstützt werden.
 
 <dt>
 
 <span id="CreateResourcePool_is_supported"></span><span id="createresourcepool_is_supported"></span><span id="CREATERESOURCEPOOL_IS_SUPPORTED"></span>
 
-" **Kreateresourcepool" wird unterstützt** (2)
+**CreateResourcePool wird unterstützt** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CreateChild_ResourcePool_is_supported"></span><span id="createchild_resourcepool_is_supported"></span><span id="CREATECHILD_RESOURCEPOOL_IS_SUPPORTED"></span>
 
-" **Kreatechild resourcepool" wird unterstützt** (3)
+**CreateChild ResourcePool wird unterstützt** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DeleteResourcePool_is_supported"></span><span id="deleteresourcepool_is_supported"></span><span id="DELETERESOURCEPOOL_IS_SUPPORTED"></span>
 
-**Deleteresourcepool wird unterstützt** (4)
+**DeleteResourcePool wird unterstützt** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AddResourcesToResourcePool_is_supported"></span><span id="addresourcestoresourcepool_is_supported"></span><span id="ADDRESOURCESTORESOURCEPOOL_IS_SUPPORTED"></span>
 
-**Adresssourcestoresourcepool wird unterstützt** (5)
+**AddResourcesToResourcePool wird unterstützt** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="RemoveResourcesFromResourcePool_is_supported"></span><span id="removeresourcesfromresourcepool_is_supported"></span><span id="REMOVERESOURCESFROMRESOURCEPOOL_IS_SUPPORTED"></span>
 
-**Removeresourcesfromresourcepool wird unterstützt** (6)
+**RemoveResourcesFromResourcePool wird unterstützt** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CIM_ChangeParentResourcePool_is_supported"></span><span id="cim_changeparentresourcepool_is_supported"></span><span id="CIM_CHANGEPARENTRESOURCEPOOL_IS_SUPPORTED"></span>
 
-**CIM \_ Changeparser-sourcepool wird unterstützt** (7)
+**CIM \_ ChangeParentResourcePool wird unterstützt** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32768.65535)
+**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -199,8 +199,8 @@ Die Methoden des Konfigurations Dienstanbieter, die für synchrone Vorgänge unt
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -209,7 +209,7 @@ Die Methoden des Konfigurations Dienstanbieter, die für synchrone Vorgänge unt
 
 <dl> <dt>
 
-[**CIM- \_ Funktionen**](cim-capabilities.md)
+[**\_CIM-Funktionen**](cim-capabilities.md)
 </dt> </dl>
 
  

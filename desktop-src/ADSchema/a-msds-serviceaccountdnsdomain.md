@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Service-Account-DNS-Domain-Attribut
-description: Adam die Domäne, in der das Adam-Dienst Konto Mitglied ist.
+description: ADAM Die Domäne, der das ADAM-Dienstkonto zugeordnet ist.
 ms.assetid: cdb10ab2-782b-4b9b-a479-4a4e6fc8ef9f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das Attribut "ms-DS-Service-Account-DNS-Domain"
-- AD-Schema des msDS-serviceaccountdnsdomain-Attributs
+- MS-DS-Service-Account-DNS-Domain-Attribut AD-Schema
+- AD-Schema des msDS-ServiceAccountDNSDomain-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b9655ce409a6d54dd63e1f41a6e78736e44e5da9
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b527a8e4695211b54b8a14f9fc8897e354d760c33e797bcfbabdc4d7ae3b7931
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544630"
 ---
 # <a name="ms-ds-service-account-dns-domain-attribute"></a>ms-DS-Service-Account-DNS-Domain-Attribut
 
-Adam: die Domäne, in der das Adam-Dienst Konto Mitglied ist.
+ADAM: Die Domäne, der das ADAM-Dienstkonto zugeordnet ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | ms-DS-Service-Account-DNS-Domäne            |
-| LDAP-Display-Name | MSDS-serviceaccountdnsdomain                |
+| CN                | ms-DS-Service-Account-DNS-Domain            |
+| Ldap-Anzeigename | msDS-ServiceAccountDNSDomain                |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1862                     |
-| System-ID-GUID    | fba633d4-20d7-4773-8b2c-c7445f54360d        |
+| System-Id-Guid    | fba633d4-20d7-4773-8b2c-c7445f54360d        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -52,11 +52,11 @@ Adam: die Domäne, in der das Adam-Dienst Konto Mitglied ist.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
+| System-Only            | True                                     |
+| Is-Single-Valued       | True                                     |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | 0                                        |
 | Range-Upper            | 2048                                     |
 | Search-Flags           | 0x00000000                               |

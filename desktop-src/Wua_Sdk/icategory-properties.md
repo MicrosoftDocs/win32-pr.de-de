@@ -17,16 +17,16 @@ Die [**ICategory-Schnittstelle**](/windows/desktop/api/Wuapi/nn-wuapi-icategory)
 
 
 
-| Eigenschaft                                     | BESCHREIBUNG                                                                                       |
+| Eigenschaft                                     | Beschreibung                                                                                       |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------|
 | [**Categoryid**](/windows/desktop/api/Wuapi/nf-wuapi-icategory-get_categoryid)   | Ruft den Bezeichner der Kategorie ab.                                                              |
-| [**Children**](/windows/desktop/api/Wuapi/nf-wuapi-icategory-get_children)       | Ruft eine Schnittstellensammlung ab, die die untergeordneten Kategorien dieser Kategorie enthält.                 |
+| [**Children**](/windows/desktop/api/Wuapi/nf-wuapi-icategory-get_children)       | Ruft eine Schnittstellenauflistung ab, die die untergeordneten Kategorien dieser Kategorie enthält.                 |
 | [**Beschreibung**](/windows/desktop/api/Wuapi/nf-wuapi-icategory-get_description) | Ruft die Beschreibung der Kategorie ab.                                                             |
 | [**Image**](/windows/desktop/api/Wuapi/nf-wuapi-icategory-get_image)             | Ruft eine Schnittstelle ab, die Informationen über das Bild enthält, das der Kategorie zugeordnet ist. |
 | [**Name**](/windows/desktop/api/Wuapi/nf-wuapi-icategory-get_name)               | Ruft den lokalisierten Namen der Kategorie ab.                                                          |
-| [**Auftrag**](/windows/desktop/api/Wuapi/nf-wuapi-icategory-get_order)             | Ruft die empfohlene Anzeige reihenfolge dieser Kategorie unter den gleichgeordneten Kategorien ab.                 |
+| [**Auftrag**](/windows/desktop/api/Wuapi/nf-wuapi-icategory-get_order)             | Ruft die empfohlene Anzeigereihenfolge dieser Kategorie unter den nebengeordneten Kategorien ab.                 |
 | [**Parent**](/windows/desktop/api/Wuapi/nf-wuapi-icategory-get_parent)           | Ruft eine Schnittstelle ab, die die übergeordnete Kategorie dieser Kategorie beschreibt.                            |
-| [**type**](/windows/desktop/api/Wuapi/nf-wuapi-icategory-get_type)               | Ruft den Typ der Kategorie ab.                                                                    |
+| [**Typ**](/windows/desktop/api/Wuapi/nf-wuapi-icategory-get_type)               | Ruft den Typ der Kategorie ab.                                                                    |
 | [**Updates**](/windows/desktop/api/Wuapi/nf-wuapi-icategory-get_updates)         | Ruft eine Schnittstelle ab, die eine Auflistung von Updates enthält, die sofort zur Kategorie gehören.  |
 
 

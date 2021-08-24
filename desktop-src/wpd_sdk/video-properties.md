@@ -1,7 +1,7 @@
 ---
-description: Tragbare Windows-Geräte unterstützen die folgenden Videoeigenschaften.
+description: Windows Portable Geräte unterstützen die folgenden Videoeigenschaften.
 ms.assetid: e6df5b2d-ceb8-4de0-b60b-9102c77143fe
-title: Video Eigenschaften (portabledevice. h)
+title: Videoeigenschaften (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,35 +13,35 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 1f44f32ab19c5ad10cc9c8dd5bdb8816ccc944f6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6e7bbab3416f50a95d2ae29e2be0ef5ecdcad6eed0112f940e5c34b593f2b79a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083384"
 ---
-# <a name="video-properties"></a>Video Eigenschaften
+# <a name="video-properties"></a>Videoeigenschaften
 
-Tragbare Windows-Geräte unterstützen die folgenden Videoeigenschaften.
+Windows Portable Geräte unterstützen die folgenden Videoeigenschaften.
 
 
 
-| Eigenschaft                                         | VarType        | BESCHREIBUNG                                                                                                                                                                                                                                             |
+| Eigenschaft                                         | VarType        | Beschreibung                                                                                                                                                                                                                                             |
 |--------------------------------------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **WPD- \_ Video \_ Autor**                           | **VT \_ LPWSTR** | Der Autor der Videodatei.                                                                                                                                                                                                                           |
-| **WPD- \_ Video \_ Bitrate**                          | **VT \_ UI4**    | Die Bitrate der Videodatei.                                                                                                                                                                                                                         |
-| **WPD- \_ Video \_ Puffer \_ Größe**                     | **VT \_ UI4**    | Ein-Wert, der die erforderliche Video Puffergröße zum Rendering dieser Datei angibt.                                                                                                                                                                              |
-| **WPD- \_ Video \_ Gutschriften**                          | **VT \_ LPWSTR** | Das Guthaben, das die Umwandlung und die Gruppe für das Video auflistet.                                                                                                                                                                                                    |
-| **WPD- \_ Video- \_ FourCC- \_ Code**                     | **VT \_ DWORD**  | Der registrierte FourCC-Code, der den Codec angibt, der für die Videodatei verwendet wurde. Eine Auflistung von FourCC-Formaten finden Sie im Artikel [registrierte FOURCC Codes und Wave Formats](https://msdn2.microsoft.com/library/ms867195.aspx) auf der MSDN-Website. |
-| **WPD- \_ Video \_ Framerate**                        | **VT \_ UI4**    | Die Frame Rate der Videodatei in Frames/Sekunde x 1.000. Beispielsweise wird eine Frame Rate von 29,97 als 29970 dargestellt.                                                                                                                                 |
-| **WPD- \_ Video \_ Genre**                            | **VT \_ LPWSTR** | Das Genre dieser Videodatei. Es sind keine Standard Genre Definitionen vorhanden.                                                                                                                                                                                  |
-| **WPD \_ - \_ Video \_ schlüsselframe- \_ Abstand**             | **VT \_ UI4**    | Das Intervall zwischen Keyframes in Millisekunden.                                                                                                                                                                                                       |
-| **WPD- \_ Video \_ Qualitäts \_ Einstellung**                 | **VT \_ UI4**    | Die Qualitätseinstellung für die Videodatei. Dies ist Codec-abhängig.                                                                                                                                                                                        |
-| **WPD-Video recorddebug- \_ \_ \_ Kanal \_ Nummer**      | **VT \_ UI4**    | Die Nummer des Fernsehkanals, von dem das Video aufgezeichnet wurde.                                                                                                                                                                                              |
-| **WPD-Video recorddebug- \_ \_ \_ Programm \_ Beschreibung** | **VT \_ LPWSTR** | Eine Beschreibung des aufgezeichneten Fernsehprogramms.                                                                                                                                                                                                       |
-| **WPD- \_ Video \_ recordebug \_ Wiederholen**               | **VT \_ bool**   | Ein boolescher Wert, der angibt, ob das Fernsehprogramm eine Wiederholung anzeigt.                                                                                                                                                                     |
-| **WPD-Video recorddebug- \_ \_ \_ Stations \_ Name**        | **VT \_ LPWSTR** | Die Fernsehstation, von der das Video aufgezeichnet wurde.                                                                                                                                                                                                |
-| **WPD- \_ Video \_ Überprüfungstyp \_**                       | **VT \_ UI4**    | Ein [**WPD \_ - \_ \_ videoscantypes**](wpd-video-scan-types.md) -Enumerator, der das Zeilen Sprung der Video Datei angibt.                                                                                                                                  |
+| **WPD \_ VIDEO \_ AUTHOR**                           | **VT \_ LPWSTR** | Der Autor der Videodatei.                                                                                                                                                                                                                           |
+| **WPD \_ VIDEO \_ BITRATE**                          | **VT \_ UI4**    | Die Bitrate der Videodatei.                                                                                                                                                                                                                         |
+| **\_ \_ WPD-VIDEOPUFFERGRÖßE \_**                     | **VT \_ UI4**    | Ein -Wert, der die erforderliche Videopuffergröße zum Rendern dieser Datei angibt.                                                                                                                                                                              |
+| **\_WPD-VIDEOGUTHABEN \_**                          | **VT \_ LPWSTR** | Das Guthaben, in dem die Umwandlung und das Team für das Video aufgeführt sind.                                                                                                                                                                                                    |
+| **WPD \_ VIDEO \_ FOURCC \_ CODE**                     | **VT \_ DWORD**  | Der registrierte FourCC-Code, der den Codec angibt, der für die Videodatei verwendet wurde. Eine Liste der FourCC-Formate finden Sie im Artikel [Registered FOURCC Codes and WAVE Formats (Registrierte FOURCC-Codes und WAVE-Formate)](https://msdn2.microsoft.com/library/ms867195.aspx) auf der MSDN-Website. |
+| **WPD \_ VIDEO \_ FRAMERATE**                        | **VT \_ UI4**    | Die Bildfrequenz der Videodatei in Frames/Sekunde x 1.000. Beispielsweise wird eine Bildfrequenz von 29,97 als 29970 dargestellt.                                                                                                                                 |
+| **WPD \_ VIDEO \_ GENRE**                            | **VT \_ LPWSTR** | Das Genre dieser Videodatei. Es gibt keine Standardgenredefinitionen.                                                                                                                                                                                  |
+| **WPD \_ VIDEO \_ KEY \_ FRAME \_ DISTANCE**             | **VT \_ UI4**    | Das Intervall zwischen Keyframes in Millisekunden.                                                                                                                                                                                                       |
+| **EINSTELLUNG \_ FÜR WPD-VIDEOQUALITÄT \_ \_**                 | **VT \_ UI4**    | Die Qualitätseinstellung für die Videodatei. Dies ist codecabhängig.                                                                                                                                                                                        |
+| **\_WPD-VIDEO \_ \_ AUFGEZEICHNETTV-KANALNUMMER \_**      | **VT \_ UI4**    | Die Nummer des Fernsehkanals, von dem das Video aufgezeichnet wurde.                                                                                                                                                                                              |
+| **WPD \_ VIDEO \_ RECORDEDTV \_ PROGRAM \_ DESCRIPTION** | **VT \_ LPWSTR** | Eine Beschreibung des aufgezeichneten Fernsehprogramms.                                                                                                                                                                                                       |
+| **WPD \_ VIDEO \_ RECORDEDTV \_ REPEAT**               | **VT \_ BOOL**   | Ein boolescher Wert, der angibt, ob das Fernsehprogramm eine Wiederholungsshow war.                                                                                                                                                                     |
+| **WPD \_ VIDEO \_ RECORDEDTV \_ STATION \_ NAME**        | **VT \_ LPWSTR** | Die Fernsehstation, von der das Video aufgezeichnet wurde.                                                                                                                                                                                                |
+| **WPD \_ VIDEO \_ SCAN \_ TYPE**                       | **VT \_ UI4**    | Ein [**WPD \_ VIDEO SCAN \_ TYPES-Enumerator, \_**](wpd-video-scan-types.md) der das Interlacing der Videodatei angibt.                                                                                                                                  |
 
 
 
@@ -53,7 +53,7 @@ Tragbare Windows-Geräte unterstützen die folgenden Videoeigenschaften.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
@@ -61,7 +61,7 @@ Tragbare Windows-Geräte unterstützen die folgenden Videoeigenschaften.
 
 <dl> <dt>
 
-[**WPD-Eigenschaften und-Attribute**](properties-and-attributes.md)
+[**WPD-Eigenschaften und -Attribute**](properties-and-attributes.md)
 </dt> </dl>
 
  

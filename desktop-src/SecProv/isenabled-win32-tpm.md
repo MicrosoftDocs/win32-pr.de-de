@@ -1,7 +1,7 @@
 ---
-description: Die isaktivierte Methode der Win32- \_ TPM-Klasse gibt an, ob das Gerät aktiviert ist. Dieser Wert kann durch die Methoden enable und deaktivieren geändert werden.
+description: Die IsEnabled-Methode der Win32 \_ Tpm-Klasse gibt an, ob das Gerät aktiviert ist. Dieser Wert kann mit den Methoden Enable und Disable geändert werden.
 ms.assetid: e1d5513f-33eb-49e3-9582-d6c103ca5d03
-title: Isaktivierte Methode der Win32_Tpm-Klasse
+title: IsEnabled-Methode der Win32_Tpm-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Win32_tpm.dll
-ms.openlocfilehash: d808bb68e53b1a24ff668d1b7a9680b5d57b5e9a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1d61c96d9c80ae77f9869261905fb93461530b452deaf7a4709b394623a3dfab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119667500"
 ---
-# <a name="isenabled-method-of-the-win32_tpm-class"></a>Isaktivierte Methode der Win32 \_ TPM-Klasse
+# <a name="isenabled-method-of-the-win32_tpm-class"></a>IsEnabled-Methode der Win32 \_ Tpm-Klasse
 
-Die **isaktivierte** Methode der [**Win32- \_ TPM**](win32-tpm.md) -Klasse gibt an, ob das Gerät aktiviert ist. Dieser Wert kann durch die Methoden [**enable**](enable-win32-tpm.md) und [**Deaktivieren**](disable-win32-tpm.md) geändert werden.
+Die **IsEnabled-Methode** der [**Win32 \_ Tpm-Klasse**](win32-tpm.md) gibt an, ob das Gerät aktiviert ist. Dieser Wert kann mit den Methoden [**Enable und**](enable-win32-tpm.md) [**Disable geändert**](disable-win32-tpm.md) werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,26 +39,26 @@ uint32 IsEnabled(
 
 <dl> <dt>
 
-*Isaktiviert* \[ vorgenommen\]
+*IsEnabled* \[ out\]
 </dt> <dd>
 
-Typ: **booleschen**
+Typ: **boolescher Wert**
 
-**True** gibt an, dass das Gerät aktiviert ist.
+True **gibt an,** dass das Gerät aktiviert ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Alle TPM-Fehler sowie Fehler, die für die TPM-Basisdienste spezifisch sind, können zurückgegeben werden.
+Alle TPM-Fehler und -Fehler, die für TPM-Basisdienste spezifisch sind, können zurückgegeben werden.
 
 Allgemeine Rückgabecodes sind unten aufgeführt.
 
 
 
-| Rückgabecode/-wert                                                                                                                                 | BESCHREIBUNG                           |
+| Rückgabecode/-wert                                                                                                                                 | Beschreibung                           |
 |---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl> | Die Methode war erfolgreich.<br/> |
 
@@ -66,35 +66,35 @@ Allgemeine Rückgabecodes sind unten aufgeführt.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Gemäß der Trusted Computing Group (TCG) v 1.2-Spezifikation sind nur die folgenden Befehle verfügbar, wenn sich das Gerät in einem deaktivierten Zustand befindet.
+Gemäß der spezifikation Trusted Computing Group (TCG) v1.2 sind nur die folgenden Befehle verfügbar, wenn sich das Gerät in einem deaktivierten Zustand befindet.
 
--   TPM \_ continueselftest
--   TPM- \_ DSAP
--   TPM \_ flushspecific
--   TPM- \_ getcapability
--   TPM \_ gettestresult
--   TPM- \_ Init
--   TPM- \_ OIAP
--   TPM- \_ OSAP
--   TPM-Besitzer \_ setdeaktivierung
--   TPM- \_ PCR- \_ zurück Setzung
--   TPM- \_ physicaldeaktivieren
--   TPM- \_ physicalenable
--   TPM \_ physicalsetdeaktiviert
--   TPM- \_ zurück Setzung
--   TPM- \_ SaveState
--   TPM \_ selftestfull
--   TPM- \_ setcapability
+-   TPM \_ ContinueSelfTest
+-   TPM \_ DSAP
+-   TPM \_ FlushSpecific
+-   TPM \_ GetCapability
+-   TPM \_ GetTestResult
+-   \_TPM-Init
+-   \_TPM-OIAP
+-   TPM \_ OSAP
+-   TPM \_ OwnerSetDisable
+-   \_TPM-PCR-Zurücksetzung \_
+-   TPM \_ PhysicalDisable
+-   TPM \_ PhysicalEnable
+-   TPM \_ PhysicalSetDeactivated
+-   \_TPM-Zurücksetzung
+-   TPM \_ SaveState
+-   TPM \_ SelfTestFull
+-   TPM \_ SetCapability
 -   TPM \_ SHA1Complete
 -   TPM \_ SHA1Start
 -   TPM \_ SHA1Update
--   TPM- \_ Start
--   TPM- \_ Besitz
--   TPM-Beendigungs \_ \_ handle
+-   \_TPM-Start
+-   TPM \_ TakeOwnership
+-   TPM \_ Terminate \_ Handle
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,11 +102,11 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ Security- \\ mikrosofttpm<br/>                                            |
-| MOF<br/>                      | <dl> <dt>Win32- \_ TPM. MOF</dt> </dl> |
-| DLL<br/>                      | <dl> <dt>Win32- \_tpm.dll</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                      |
+| Namespace<br/>                | Root \\ CIMV2 \\ Security \\ MicrosoftTpm<br/>                                            |
+| MOF<br/>                      | <dl> <dt>Win32 \_ tpm.mof</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>\_Win32-tpm.dll</dt> </dl> |
 
 
 
@@ -114,7 +114,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32- \_ TPM**](win32-tpm.md)
+[**Win32 \_ Tpm**](win32-tpm.md)
 </dt> <dt>
 
 [**Deaktivieren**](disable-win32-tpm.md)

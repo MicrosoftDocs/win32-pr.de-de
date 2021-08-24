@@ -31,7 +31,7 @@ MSWebDVD.PlayAtTime(sTime)
 <span id="sTime"></span><span id="stime"></span><span id="STIME"></span>*sTime*
 </dt> <dd>
 
-Gibt den Zeitpunkt an, zu dem die Wiedergabe als Zeichenfolge beginnen soll. Die Zeichenfolge muss das Format "hh:mm:ss:ff" aufweisen (mit Angabe von Stunden, Minuten, Sekunden, Frames).
+Gibt den Zeitpunkt an, zu dem mit der Wiedergabe als Zeichenfolge begonnen werden soll. Die Zeichenfolge muss das Format "hh:mm:ss:ff" aufweisen (angabe von Stunden, Minuten, Sekunden, Frames).
 
 </dd> </dl>
 
@@ -39,7 +39,7 @@ Gibt den Zeitpunkt an, zu dem die Wiedergabe als Zeichenfolge beginnen soll. Die
 
 Kein Rückgabewert.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

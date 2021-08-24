@@ -1,9 +1,9 @@
 ---
-title: AxWindowsMediaPlayer.uiMode (Eigenschaft)
-description: Die uiMode-Eigenschaft ruft einen Wert ab, der angibt, welche Steuerelemente in der Benutzeroberfläche angezeigt werden, oder legt einen Wert fest.
+title: AxWindowsMediaPlayer.uiMode-Eigenschaft
+description: Die uiMode-Eigenschaft ruft einen Wert ab, der angibt, welche Steuerelemente auf der Benutzeroberfläche angezeigt werden, oder legt einen Wert fest.
 ms.assetid: 01034418-be70-44f3-8812-e529c747c9e4
 keywords:
-- uiMode-Windows Media Player
+- uiMode-Eigenschaft Windows Media Player
 - uiMode-Eigenschaft Windows Media Player , AxWindowsMediaPlayer-Klasse
 - AxWindowsMediaPlayer-Klasse Windows Media Player , uiMode-Eigenschaft
 topic_type:
@@ -23,9 +23,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119618770"
 ---
-# <a name="axwindowsmediaplayeruimode-property"></a>AxWindowsMediaPlayer.uiMode (Eigenschaft)
+# <a name="axwindowsmediaplayeruimode-property"></a>AxWindowsMediaPlayer.uiMode-Eigenschaft
 
-Die uiMode-Eigenschaft ruft einen Wert ab, der angibt, welche Steuerelemente in der Benutzeroberfläche angezeigt werden, oder legt einen Wert fest.
+Die uiMode-Eigenschaft ruft einen Wert ab, der angibt, welche Steuerelemente auf der Benutzeroberfläche angezeigt werden, oder legt einen Wert fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ Public Property uiMode As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine System.String, die einer der folgenden Werte ist.
+Eine System.String,die einer der folgenden Werte ist.
 
 
 
-| Wert     | BESCHREIBUNG                                                                                                                                                                                                     | Audiobeispiel                                                   | Videobeispiel                                                   |
+| Wert     | Beschreibung                                                                                                                                                                                                     | Audiobeispiel                                                   | Videobeispiel                                                   |
 |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------|
-| Unsichtbar | Windows Media Player ist ohne sichtbare Benutzeroberfläche (Steuerelemente, Video- oder Visualisierungsfenster) eingebettet.                                                                                                  | (Es wird nichts angezeigt.)                                         | (Es wird nichts angezeigt.)                                         |
-| Keine      | Windows Media Player wird ohne Steuerelemente eingebettet, und nur das Video- oder Visualisierungsfenster wird angezeigt.                                                                                                   | ![uimode = 'none' mit Audio](images/uimode-none-audio-v11.png) | ![uimode = 'none' mit Video](images/uimode-none-video-v11.png) |
-| Mini      | Windows Media Player wird zusätzlich zum Video- oder Visualisierungsfenster in das Statusfenster, wiedergabe/anhalten, beenden, stummschalten und Volumesteuerelemente eingebettet.                                                    | ![uimode = 'mini' mit Audio](images/uimode-mini-audio-v11.png) | ![uimode = 'mini' mit Video](images/uimode-mini-video-v11.png) |
-| Voll      | Standard. Windows Media Player wird zusätzlich zum Video- oder Visualisierungsfenster mit den Steuerelementen Statusfenster, Suchleiste, Wiedergabe/Pause, Beenden, Stummschalten, Weiter, Zurück, Schnelles Vorwärts, Zurücksenden und Lautstärke eingebettet. | ![uimode = 'full' mit Audio](images/uimode-full-audio-v11.png) | ![uimode = 'full' with video](images/uimode-full-video-v11.png) |
-| custom    | Windows Media Player ist in eine benutzerdefinierte Benutzeroberfläche eingebettet. Kann nur in C++-Programmen verwendet werden.                                                                                                                | (Benutzerdefinierte Benutzeroberfläche wird angezeigt.)                           | (Benutzerdefinierte Benutzeroberfläche wird angezeigt.)                           |
+| Unsichtbar | Windows Media Player wird ohne sichtbare Benutzeroberfläche (Steuerelemente, Video oder Visualisierungsfenster) eingebettet.                                                                                                  | (Es wird nichts angezeigt.)                                         | (Es wird nichts angezeigt.)                                         |
+| Keine      | Windows Media Player wird ohne Steuerelemente eingebettet, und nur das Video- oder Visualisierungsfenster wird angezeigt.                                                                                                   | ![uimode = 'none' with audio](images/uimode-none-audio-v11.png) | ![uimode = 'none' with video](images/uimode-none-video-v11.png) |
+| Mini      | Windows Media Player wird in die Steuerelemente Statusfenster, Wiedergabe/Pause, Beenden, Stummschalten und Lautstärke zusätzlich zum Video- oder Visualisierungsfenster eingebettet.                                                    | ![uimode = 'mini' with audio](images/uimode-mini-audio-v11.png) | ![uimode = 'mini' with video](images/uimode-mini-video-v11.png) |
+| Voll      | Standard. Windows Media Player ist zusätzlich zum Video- oder Visualisierungsfenster in das Statusfenster, suchleisten-, wiedergabe-/pausen-, stop-, mute-, next-, previous-, fast forward-, rewind- und volume-Steuerelemente eingebettet. | ![uimode = 'full' with audio](images/uimode-full-audio-v11.png) | ![uimode = 'full' with video](images/uimode-full-video-v11.png) |
+| custom    | Windows Media Player ist mit einer benutzerdefinierten Benutzeroberfläche eingebettet. Kann nur in C++-Programmen verwendet werden.                                                                                                                | (Benutzerdefinierte Benutzeroberfläche wird angezeigt.)                           | (Benutzerdefinierte Benutzeroberfläche wird angezeigt.)                           |
 
 
 
@@ -64,21 +64,21 @@ Eine System.String, die einer der folgenden Werte ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft gibt die Darstellung des eingebetteten Windows Media Player. Wenn **uiMode** auf "none", "mini" oder "full" festgelegt ist, ist ein Fenster für die Anzeige von Videoclips und Audiovisualisierungen vorhanden. Dieses Fenster kann im Mini- oder  Vollmodus ausgeblendet werden, indem das Height-Attribut des **OBJECT-Tags** auf 40 (von unten gemessen) und der Steuerelementteil der Benutzeroberfläche sichtbar bleibt. Wenn keine eingebettete Schnittstelle gewünscht  ist, legen Sie sowohl das Breiten- als auch das **Höhenattribut** auf 0 (null) fest.
+Diese Eigenschaft gibt die Darstellung des eingebetteten Windows Media Player an. Wenn **uiMode** auf "none", "mini" oder "full" festgelegt ist, ist ein Fenster für die Anzeige von Videoclips und Audiovisualisierungen vorhanden. Dieses Fenster kann im Mini- oder Vollmodus ausgeblendet werden, indem das **Height-Attribut** des **OBJECT-Tags** auf 40 festgelegt wird, das von unten gemessen wird, und lässt den Steuerelementteil der Benutzeroberfläche sichtbar. Wenn keine eingebettete Schnittstelle gewünscht wird, legen Sie sowohl das **Breiten-** als auch das **Höhenattribute** auf 0 (null) fest.
 
-Wenn **uiMode** auf "invisible" festgelegt ist, wird keine Benutzeroberfläche angezeigt, aber der Platz auf der Seite ist weiterhin reserviert, wie durch Breite **und** **Höhe angegeben.** Dies ist nützlich, um das Seitenlayout bei einer **Änderung von uiMode** zu erhalten. Darüber hinaus ist der reservierte Speicherplatz transparent, sodass alle Hinterebenenelemente des Steuerelements sichtbar sind.
+Wenn **uiMode** auf "invisible" festgelegt ist, wird keine Benutzeroberfläche angezeigt, aber der Platz auf der Seite ist weiterhin reserviert, wie durch **Breite** und **Höhe** angegeben. Dies ist nützlich, um das Seitenlayout beizubehalten, wenn **uiMode** geändert werden kann. Darüber hinaus ist der reservierte Speicherplatz transparent, sodass alle Elemente, die sich hinter dem Steuerelement befinden, sichtbar sind.
 
 Wenn **uiMode** auf "full" oder "mini" festgelegt ist, zeigt Windows Media Player Transportsteuerelemente im Vollbildmodus an. Wenn **uiMode** auf "none" festgelegt ist, werden keine Steuerelemente im Vollbildmodus angezeigt.
 
-Wenn das Fenster sichtbar ist und Audioinhalte abgespielt werden, wird die Visualisierung angezeigt, die zuletzt in der Windows Media Player.
+Wenn das Fenster sichtbar ist und Audioinhalte wiedergegeben werden, wird die Visualisierung angezeigt, die zuletzt in Windows Media Player verwendet wurde.
 
 Wenn **uiMode** in einem C++-Programm, das **IWMPRemoteMediaServices** implementiert, auf "custom" festgelegt ist, wird die durch **IWMPRemoteMediaServices.GetCustomUIMode** angegebene Skindatei angezeigt.
 
-Während der Vollbildwiedergabe blendet Windows Media Player Mauscursor aus, wenn **enableContextMenu** gleich false und **uiMode** gleich "none" ist.
+Während der Vollbildwiedergabe blendet Windows Media Player den Mauszeiger aus, wenn **enableContextMenu** gleich false und **uiMode** gleich "none" ist.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein Listenfeld erstellt, mit dem der Benutzer den Benutzeroberflächenmodus für ein eingebettetes Windows Media Player kann. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
+Im folgenden Beispiel wird ein Listenfeld erstellt, mit dem der Benutzer den Benutzeroberflächenmodus für ein eingebettetes Windows Media Player-Objekt ändern kann. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -131,13 +131,13 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player Version 7.0 oder höher. Windows Media Player 9-Serie oder höher für "unsichtbar" oder "benutzerdefiniert"<br/>   |
+| Version<br/>   | Windows Media Player Version 7.0 oder höher. Windows Media Player 9er Serie oder höher für "unsichtbar" oder "benutzerdefiniert"<br/>   |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

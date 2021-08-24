@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3d5f20fcca6e05810320af8fad7ea79035fd1591
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0ab8d2124e63be2c85f5a056e2f546f70c5441a24f427594bb775e14e4788490
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073404"
 ---
 # <a name="creftimecreftime-constructor-reftimeh"></a>CRefTime.CRefTime-Konstruktor (Reftime.h)
 
@@ -42,14 +42,14 @@ CRefTime(
 
 <dl> <dt>
 
-*rt* 
+*Rt* 
 </dt> <dd>
 
 Zeit in Einheiten von 100 Nanosekunden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Verweiszeit ist standardmäßig auf 0 (null) festgelegt.
 
@@ -57,7 +57,7 @@ Die Verweiszeit ist standardmäßig auf 0 (null) festgelegt.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Reftime.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |

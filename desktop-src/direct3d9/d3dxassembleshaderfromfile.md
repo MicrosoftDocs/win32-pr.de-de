@@ -1,5 +1,5 @@
 ---
-description: 'D3DXAssembleShaderFromFile-Funktion : Stellt einen Shader zusammen.'
+description: 'D3DXAssembleShaderFromFile-Funktion: Stellen Sie einen Shader zusammen.'
 ms.assetid: 2977b64a-b8cc-454b-8e28-291f6f2c6fc1
 title: D3DXAssembleShaderFromFile-Funktion (D3DX9Shader.h)
 ms.topic: reference
@@ -50,16 +50,16 @@ HRESULT D3DXAssembleShaderFromFile(
 
 Typ: **[ **LPCTSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR auflösen. Andernfalls wird der Zeichenfolgendatentyp in LPCSTR auflösen. Siehe Hinweise.
+Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Zeichenfolgendatentyp in LPCSTR aufgelöst. Siehe Hinweise.
 
 </dd> <dt>
 
-*pDefdefine* \[ In\]
+*pDefine* \[ In\]
 </dt> <dd>
 
 Typ: **const [**D3DXMACRO**](d3dxmacro.md) \***
 
-Ein optionales **null-terminiertes** Array [**von D3DXMACRO-Strukturen.**](d3dxmacro.md) Dieser Wert kann NULL **sein.**
+Ein **optionales** null-terminiertes Array von [**D3DXMACRO-Strukturen.**](d3dxmacro.md) Dieser Wert kann **NULL** sein.
 
 </dd> <dt>
 
@@ -68,7 +68,7 @@ Ein optionales **null-terminiertes** Array [**von D3DXMACRO-Strukturen.**](d3dxm
 
 Typ: **[ **LPD3DXINCLUDE**](id3dxinclude.md)**
 
-Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für die Behandlung von Include-Direktiven \# verwendet werden soll. Wenn dieser Wert **NULL ist,** wird includes entweder beim Kompilieren aus einer Datei oder bei der Kompilierung aus einer Ressource oder einem Arbeitsspeicher \# zu einem Fehler führen.
+Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für die Behandlung von \# Includedirektiven verwendet werden soll. Wenn dieser Wert **NULL** ist, \# wird includes entweder beim Kompilieren aus einer Datei berücksichtigt oder verursacht bei der Kompilierung aus einer Ressource oder aus dem Arbeitsspeicher einen Fehler.
 
 </dd> <dt>
 
@@ -95,7 +95,7 @@ Gibt einen Puffer zurück, der den erstellten Shader enthält. Dieser Puffer ent
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Gibt einen Puffer zurück, der eine Liste der Fehler und Warnungen enthält, die während der Kompilierung aufgetreten sind. Dies sind die gleichen Meldungen, die der Debugger anzeigt, wenn er im Debugmodus ausgeführt wird. Dieser Wert kann NULL **sein.**
+Gibt einen Puffer zurück, der eine Liste von Fehlern und Warnungen enthält, die während der Kompilierung aufgetreten sind. Dies sind die gleichen Meldungen, die der Debugger anzeigt, wenn er im Debugmodus ausgeführt wird. Dieser Wert kann **NULL** sein.
 
 </dd> </dl>
 
@@ -103,11 +103,11 @@ Gibt einen Puffer zurück, der eine Liste der Fehler und Warnungen enthält, die
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXAssembleShaderFromFileW auflösen. Andernfalls wird der Funktionsaufruf in D3DXAssembleShaderFromFileA auflösen, da ANSI-Zeichenfolgen verwendet werden.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXAssembleShaderFromFileW aufgelöst. Andernfalls wird der Funktionsaufruf in D3DXAssembleShaderFromFileA aufgelöst, da ANSI-Zeichenfolgen verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -120,7 +120,7 @@ Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definie
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,23 +1,23 @@
 ---
-title: Verwenden der Benutzeroberflächen Automatisierung zum Zugreifen auf ein fensterloses ActiveX-Steuerelement
-description: Beschreibt die Verwendung von Microsoft UI Automation \ 32; API, um sicherzustellen, dass das fensterlose Microsoft-ActiveX-Steuerelement für Hilfstechnologien (at)-Client Anwendungen zugänglich ist.
+title: So verwenden Sie Benutzeroberflächenautomatisierung, um ein fensterloses ActiveX-Steuerelement zugänglich zu machen
+description: Beschreibt die Verwendung des Microsoft Benutzeroberflächenautomatisierung \ 32; API, um sicherzustellen, dass Ihre fensterlose Microsoft ActiveX-Steuerung für AT-Clientanwendungen (Assistive Technology) zugänglich ist.
 ms.assetid: D584E90D-6537-4F48-8553-0DCA061FAF2A
 keywords:
-- Fensterlose ActiveX-Steuerelement, Barrierefreiheit
+- Fensterloses ActiveX-Steuerelement, Barrierefreiheit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ba0ada1d26463b0654c1808f6e4fd43f571687d9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 68ef56d5f3a06bbfa21502c791163f2251506a10fda7da9d07ee04941ad39de1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119570360"
 ---
-# <a name="how-to-use-ui-automation-to-make-a-windowless-activex-control-accessible"></a>Verwenden der Benutzeroberflächen Automatisierung zum Zugreifen auf ein fensterloses ActiveX-Steuerelement
+# <a name="how-to-use-ui-automation-to-make-a-windowless-activex-control-accessible"></a>So verwenden Sie Benutzeroberflächenautomatisierung, um ein fensterloses ActiveX-Steuerelement zugänglich zu machen
 
-Beschreibt die Verwendung der Microsoft UI Automation API, um sicherzustellen, dass das fensterlose Microsoft-ActiveX-Steuerelement für Hilfstechnologien (at)-Client Anwendungen zugänglich ist.
+Beschreibt die Verwendung der Microsoft Benutzeroberflächenautomatisierung-API, um sicherzustellen, dass Ihr fensterloses Microsoft ActiveX-Steuerelement für At-Clientanwendungen (Assistive Technology) zugänglich ist.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
@@ -27,21 +27,21 @@ Beschreibt die Verwendung der Microsoft UI Automation API, um sicherzustellen, d
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmierung von Microsoft Win32 und Component Object Model (com)
+-   Microsoft Win32- und Component Object Model-Programmierung (COM)
 -   Fensterlose ActiveX-Steuerelemente
--   Benutzeroberflächen-Automatisierungsanbieter
+-   Benutzeroberflächenautomatisierung-Anbieter
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-implement-the-ui-automation-provider-interfaces"></a>Schritt 1: Implementieren der Schnittstellen für Benutzeroberflächenautomatisierungs-Anbieter.
+### <a name="step-1-implement-the-ui-automation-provider-interfaces"></a>Schritt 1: Implementieren Sie die Benutzeroberflächenautomatisierung-Anbieterschnittstellen.
 
-Damit die Anwendung zugänglich ist, müssen Sie die Schnittstellen für Benutzeroberflächenautomatisierungs-Anbieter für Ihr fensterloses ActiveX-Steuerelement implementieren, einschließlich [**IRawElementProviderSimple**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementprovidersimple), [**IRawElementProviderFragment**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementproviderfragment), [**IRawElementProviderFragmentRoot**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementproviderfragmentroot)und [**irawelementprovideradviseevents**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementprovideradviseevents). Sie sollten diese Schnittstellen genauso wie für ein Fenster basiertes Steuerelement implementieren, es sei denn, dies wird in den folgenden Schritten beschrieben. Weitere Informationen zum Implementieren von UIA-Anbieter Schnittstellen finden Sie [im Programmier Handbuch für Benutzeroberflächenautomatisierungs-Anbieter](uiauto-providerportal.md).
+Damit Ihre Anwendung zugänglich ist, müssen Sie die Benutzeroberflächenautomatisierung-Anbieterschnittstellen für Ihr fensterloses ActiveX-Steuerelement implementieren, einschließlich [**IRawElementProviderSimple,**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementprovidersimple) [**IRawElementProviderFragment,**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementproviderfragment) [**IRawElementProviderFragmentRoot**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementproviderfragmentroot)und [**IRawElementProviderAdviseEvents.**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementprovideradviseevents) Sie sollten diese Schnittstellen genauso implementieren wie für ein fensterbasiertes Steuerelement, außer wie in den folgenden Schritten beschrieben. Weitere Informationen zum Implementieren von UIA-Anbieterschnittstellen finden Sie im [Benutzeroberflächenautomatisierung Anbieterprogrammiererhandbuch.](uiauto-providerportal.md)
 
-### <a name="step-2-implement-the-iserviceprovider-interface"></a>Schritt 2: Implementieren Sie die IServiceProvider-Schnittstelle.
+### <a name="step-2-implement-the-iserviceprovider-interface"></a>Schritt 2: Implementieren sie die IServiceProvider-Schnittstelle.
 
-Wenn ein Client Barrierefreiheits Informationen über das fensterlose Steuerelement benötigt, ruft der Steuerelement Container die **IServiceProvider:: QueryService** -Methode Ihres Steuer Elements auf, um den [**IRawElementProviderSimple**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementprovidersimple) -Schnittstellen Zeiger für das Steuerelement abzurufen.
+Wenn ein Client Barrierefreiheitsinformationen zu Ihrem fensterlosen Steuerelement benötigt, ruft der Steuerelementcontainer die **IServiceProvider::QueryService-Methode** Ihres Steuerelements auf, um den [**IRawElementProviderSimple-Schnittstellenzeiger**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irawelementprovidersimple) für das Steuerelement abzurufen.
 
-Im folgenden Beispiel wird gezeigt, wie die **QueryService** -Methode implementiert wird.
+Das folgende Beispiel zeigt, wie die **QueryService-Methode** implementiert wird.
 
 
 ```C++
@@ -66,11 +66,11 @@ STDMETHODIMP CMyAccessibleUIAControl::QueryService(REFGUID guidService,
 
 
 
-### <a name="step-3-implement-the-irawelementproviderfragmentnavigate-method"></a>Schritt 3: Implementieren der IRawElementProviderFragment:: Navigate-Methode.
+### <a name="step-3-implement-the-irawelementproviderfragmentnavigate-method"></a>Schritt 3: Implementieren Sie die IRawElementProviderFragment::Navigate-Methode.
 
-Wenn die [**IRawElementProviderFragment:: Navigate**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementproviderfragment-navigate) -Methode Ihres fensterlosen Steuer Elements aufgerufen wird, um zum übergeordneten Element oder zu einem gleich geordneten Element des Stamm Anbieters des fensterlosen Steuer Elements zu navigieren, sollte Ihre **Navigate** -Methode an die [**irawelementproviderwindowlesssite:: getereigentfragment**](/windows/desktop/api/uiautomationcore/nf-uiautomationcore-irawelementproviderwindowlesssite-getadjacentfragment) -Methode des Steuerelement Containers delegiert werden.
+Wenn die [**IRawElementProviderFragment::Navigate-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementproviderfragment-navigate) Ihres fensterlosen Steuerelements aufgerufen wird, um zum übergeordneten oder nebengeordneten Element des Stammanbieters des fensterlosen Steuerelements zu navigieren, sollte Ihre **Navigate-Methode** an die [**IRawElementProviderWindowlessSite::GetAdjacentFragment-Methode**](/windows/desktop/api/uiautomationcore/nf-uiautomationcore-irawelementproviderwindowlesssite-getadjacentfragment) des Steuerelementcontainers delegieren.
 
-Im folgenden Beispiel wird die Implementierung der [**Navigate**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementproviderfragment-navigate) -Methode veranschaulicht.
+Das folgende Beispiel zeigt, wie die [**Navigate-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementproviderfragment-navigate) implementiert wird.
 
 
 ```C++
@@ -116,15 +116,15 @@ STDMETHODIMP CMyAccessibleUIAControl::Navigate(NavigateDirection direction,
 
 
 
-### <a name="step-4-implement-the-irawelementproviderfragmentgetruntimeid-method"></a>Schritt 4: Implementieren Sie die Methode IRawElementProviderFragment:: GetRuntimeId.
+### <a name="step-4-implement-the-irawelementproviderfragmentgetruntimeid-method"></a>Schritt 4: Implementieren Sie die IRawElementProviderFragment::GetRuntimeId-Methode.
 
-Wenn das fensterlose Steuerelement einen Aufrufen der Methode [**IRawElementProviderFragment:: GetRuntimeId**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementproviderfragment-getruntimeid) empfängt, muss das Steuerelement folgende Aktionen ausführen:
+Wenn ihr fensterloses Steuerelement einen Aufruf der [**IRawElementProviderFragment::GetRuntimeId-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementproviderfragment-getruntimeid) empfängt, muss das Steuerelement folgende Schritte ausführen:
 
-1.  Rufen Sie ein Lauf Zeit-ID-Präfix ab, indem Sie die [**irawelementproviderwindowlesssite:: getruntimeidprefix**](/windows/desktop/api/uiautomationcore/nf-uiautomationcore-irawelementproviderwindowlesssite-getruntimeidprefix) -Methode der Steuerelement Website aufrufen.
-2.  Erstellen Sie eine eindeutige Lauf Zeit-ID für das Steuerelement, indem Sie eine ganze Zahl an das Präfix der Laufzeit-ID Anhängen
-3.  Gibt die Runtime-ID an den Aufrufer zurück.
+1.  Rufen Sie ein Laufzeit-ID-Präfix ab, indem Sie die [**IRawElementProviderWindowlessSite::GetRuntimeIdPrefix-Methode**](/windows/desktop/api/uiautomationcore/nf-uiautomationcore-irawelementproviderwindowlesssite-getruntimeidprefix) der Steuerelementsite aufrufen.
+2.  Erstellen Sie eine eindeutige Laufzeit-ID für das Steuerelement, indem Sie eine ganze Zahl an das Laufzeit-ID-Präfix anfügen.
+3.  Gibt die Laufzeit-ID an den Aufrufer zurück.
 
-Im folgenden Beispiel wird gezeigt, wie die [**GetRuntimeId-**](/windows/desktop/api/uiautomationcore/nf-uiautomationcore-irawelementproviderwindowlesssite-getruntimeidprefix) Methode implementiert wird.
+Das folgende Beispiel zeigt, wie die [**GetRuntimeId-Methode**](/windows/desktop/api/uiautomationcore/nf-uiautomationcore-irawelementproviderwindowlesssite-getruntimeidprefix) implementiert wird.
 
 
 ```C++
@@ -179,12 +179,12 @@ STDMETHODIMP CMyAccessibleUIAControl::GetRuntimeId(SAFEARRAY **ppRetVal)
 
 <dl> <dt>
 
-[Verwenden von MSAA zum Zugreifen auf ein fensterloses ActiveX-Steuerelement](use-msaa-to-make-an-windowless-activex-control-accessible.md)
+[Verwenden von MSAA, um ein fensterloses ActiveX-Steuerelement zugänglich zu machen](use-msaa-to-make-an-windowless-activex-control-accessible.md)
 </dt> <dt>
 
-[Barrierefreiheit für das fensterlose ActiveX-Steuerelement](windowless-activex-control-accessibility.md)
+[Fensterlose ActiveX Steuern der Barrierefreiheit](windowless-activex-control-accessibility.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

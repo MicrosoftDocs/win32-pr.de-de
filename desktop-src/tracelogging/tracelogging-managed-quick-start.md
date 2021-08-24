@@ -70,7 +70,7 @@ Bevor Sie Ereignisse protokollieren können, müssen Sie eine Instanz der EventS
 
 
 
-Die -Instanz ist statisch, da in Ihrer Anwendung jeweils nur eine Instanz eines bestimmten Anbieters vorhanden sein sollte.
+Die -Instanz ist statisch, da jeweils nur eine Instanz eines bestimmten Anbieters in Ihrer Anwendung vorhanden sein sollte.
 
 ### <a name="log-tracelogging-events"></a>Protokollieren von Ablaufverfolgungsprotokollierungsereignissen
 

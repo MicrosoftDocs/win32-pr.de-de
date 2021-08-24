@@ -1,7 +1,7 @@
 ---
-description: Die CheckRequest-Methode überprüft, ob eine Thread Anforderung vorhanden ist, ohne zu blockieren.
+description: Die CheckRequest-Methode überprüft, ob eine Threadanforderung ohne Blockierung vor liegt.
 ms.assetid: b4691dde-abec-4671-bea6-0f22cc4e7c61
-title: Csourcestream. CheckRequest-Methode (Quelle. h)
+title: CSourceStream.CheckRequest-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3100d449d2f29b2080541c5968cad6abc5643b26
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6bb77358ec579415439c2832b00255e7ffeb3c7eba0e387bfa0522a4a5109669
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359406"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073314"
 ---
-# <a name="csourcestreamcheckrequest-method"></a>Csourcestream. CheckRequest-Methode
+# <a name="csourcestreamcheckrequest-method"></a>CSourceStream.CheckRequest-Methode
 
-Die- `CheckRequest` Methode überprüft, ob eine Thread Anforderung vorhanden ist, ohne zu blockieren.
+Die `CheckRequest` -Methode überprüft, ob eine Threadanforderung ohne Blockierung vor liegt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ BOOL CheckRequest(
 *pCom* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die den Wert empfängt, der beim letzten Aufruf der Methode " [**camthread:: callworker**](camthread-callworker.md) " übermittelt wurde.
+Zeiger auf eine Variable, die den Wert empfängt, der beim letzten Aufruf [**derCAMThread::CallWorker-Methode übergeben**](camthread-callworker.md) wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn eine ausstehende Anforderung vorhanden ist, andernfalls **false** .
+Gibt **TRUE zurück,** wenn eine ausstehende Anforderung vorsteht, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die Methode " [**camthread:: CheckRequest**](camthread-checkrequest.md) ", um eine Typüberprüfung durchzuführen. Die **csourcestream** -Klasse definiert den folgenden enumerierten Typ für den *pCom* -Parameter:
+Diese Methode überschreibt [**dieCAMThread::CheckRequest-Methode,**](camthread-checkrequest.md) um die Typüberprüfung durchzuführen. Die **CSourceStream-Klasse** definiert den folgenden enumerierten Typ für den *pCom-Parameter:*
 
 
 ```C++
@@ -70,8 +70,8 @@ enum Command {CMD_INIT, CMD_PAUSE, CMD_RUN, CMD_STOP, CMD_EXIT};
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -79,7 +79,7 @@ enum Command {CMD_INIT, CMD_PAUSE, CMD_RUN, CMD_STOP, CMD_EXIT};
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
 title: Generated-Connection-Attribut
-description: True, wenn diese Verbindung von der automatischen Topologiegenerierung erstellt wurde.
+description: True, wenn diese Verbindung durch die automatische Topologiegenerierung erstellt wurde.
 ms.assetid: aec351d4-b17d-49e6-bbc1-787703fd600b
 ms.tgt_platform: multiple
 keywords:
-- Generated-Connection AD-Attributschema
+- Generated-Connection AD-Schema
 - generatedConnection-Attribut AD-Schema
 topic_type:
 - apiref
@@ -23,7 +23,7 @@ ms.locfileid: "119323280"
 ---
 # <a name="generated-connection-attribute"></a>Generated-Connection-Attribut
 
-**True,** wenn diese Verbindung von der automatischen Topologiegenerierung erstellt wurde.
+**True,** wenn diese Verbindung durch die automatische Topologiegenerierung erstellt wurde.
 
 
 
@@ -35,8 +35,8 @@ ms.locfileid: "119323280"
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.41                |
-| System-ID-GUID    | bf96797a-0de6-11d0-a285-00aa003049e2 |
-| Syntax            | [**Boolean**](s-boolean.md)         |
+| System-Id-Guid    | bf96797a-0de6-11d0-a285-00aa003049e2 |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 
@@ -59,7 +59,7 @@ ms.locfileid: "119323280"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Ist einwertig       | True                                                   |
+| Is-Single-Valued       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |
@@ -80,7 +80,7 @@ ms.locfileid: "119323280"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Ist einwertig       | True                                                   |
+| Is-Single-Valued       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |
@@ -101,7 +101,7 @@ ms.locfileid: "119323280"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Ist einwertig       | True                                                   |
+| Is-Single-Valued       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |
@@ -122,7 +122,7 @@ ms.locfileid: "119323280"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Is-Single-Valued       | True                                                   |
+| Ist einwertig       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |
@@ -143,7 +143,7 @@ ms.locfileid: "119323280"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Is-Single-Valued       | True                                                   |
+| Ist einwertig       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |
@@ -164,7 +164,7 @@ ms.locfileid: "119323280"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Is-Single-Valued       | True                                                   |
+| Ist einwertig       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |
@@ -185,7 +185,7 @@ ms.locfileid: "119323280"
 | Link-ID                | \-                                                     |
 | MAPI-Id                | \-                                                     |
 | System-Only            | False                                                  |
-| Is-Single-Valued       | True                                                   |
+| Ist einwertig       | True                                                   |
 | Ist indiziert             | False                                                  |
 | Im globalen Katalog      | False                                                  |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                           |

@@ -1,7 +1,7 @@
 ---
-description: Die Title-Eigenschaft ist eine schreibgeschützte Eigenschaft, die den Titel der Funktion in der Spalte Titel der Funktions Tabelle zurückgibt.
+description: Die Title-Eigenschaft ist eine schreibgeschützte Eigenschaft, die den Titel des Features in der Title -Spalte der Tabelle Feature zurückgibt.
 ms.assetid: 8369b1bb-eaf6-4ba6-98b9-424e24efdf96
-title: FeatureInfo. Title (Eigenschaft)
+title: FeatureInfo.Title-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 4e48bbc9faaa82bde60ff653ba80d69d6cc5e60e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c0e1866c401e262a76d4062b97cd057a2420ec8ec8d7f9a8f415791055a62055
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119529570"
 ---
-# <a name="featureinfotitle-property"></a>FeatureInfo. Title (Eigenschaft)
+# <a name="featureinfotitle-property"></a>FeatureInfo.Title-Eigenschaft
 
-Die **Title** -Eigenschaft ist eine schreibgeschützte Eigenschaft, die den Titel der Funktion in der Spalte Titel der [Funktions Tabelle](feature-table.md)zurückgibt.
+Die **Title-Eigenschaft** ist eine schreibgeschützte Eigenschaft, die den Titel des Features in der Title -Spalte der [Featuretabelle](feature-table.md)zurückgibt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -43,9 +43,9 @@ propVal = FeatureInfo.Title
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ ifeatureinfo ist definiert als 000c109f-0000-0000-C000-000000000046<br/>                                                                                                                                                                         |
+| IID<br/>     | IID \_ IFeatureInfo ist als 000C109F-0000-0000-C000-000000000046 definiert.<br/>                                                                                                                                                                         |
 
 
 

@@ -1,19 +1,19 @@
 ---
-description: Die icertpropertyregistriment-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ICertPropertyEnrollment-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 9314565A-6503-41CE-AEC9-A2D2989B2CD4
-title: Icertpropertyeinschreibung-Methoden
+title: ICertPropertyEnrollment-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c8679562c196b34a83ea397160f2b0d4f0deefdd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e77f26893bd51377350e70a9524406d905e3c610ecde3f0ec3c8d8e3d0162a42
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960319"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119669480"
 ---
-# <a name="icertpropertyenrollment-methods"></a>Icertpropertyeinschreibung-Methoden
+# <a name="icertpropertyenrollment-methods"></a>ICertPropertyEnrollment-Methoden
 
-Die [**icertpropertyregistriment**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyenrollment) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ICertPropertyEnrollment-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyenrollment) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

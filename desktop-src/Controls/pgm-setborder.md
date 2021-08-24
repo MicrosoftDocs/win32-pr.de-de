@@ -1,9 +1,9 @@
 ---
-title: PGM_SETBORDER Meldung (kommstrg. h)
-description: Legt die aktuelle Rahmengröße für das Pager-Steuerelement fest. Sie können diese Nachricht explizit senden oder das Pager- \_ setborder-Makro verwenden.
+title: PGM_SETBORDER-Nachricht (Commctrl.h)
+description: Legt die aktuelle Rahmengröße für das Pagersteuerelement fest. Sie können diese Nachricht explizit senden oder das \_ Pager-Makro SetBorder verwenden.
 ms.assetid: 073a1f9e-f05b-4203-9035-8106e87e55cd
 keywords:
-- Windows-Steuerelemente für PGM_SETBORDER Meldung
+- PGM_SETBORDER Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a987246a56da213098ba8632044af97ae51462df
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4c44433189c9d791aba1d50372176309682c1361c5b0efe31b11aaa99e9b322b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040504"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119540530"
 ---
-# <a name="pgm_setborder-message"></a>PGM- \_ setborder-Nachricht
+# <a name="pgm_setborder-message"></a>PGM \_ SETBORDER-Nachricht
 
-Legt die aktuelle Rahmengröße für das Pager-Steuerelement fest. Sie können diese Nachricht explizit senden oder das [**Pager- \_ setborder**](/windows/desktop/api/Commctrl/nf-commctrl-pager_setborder) -Makro verwenden.
+Legt die aktuelle Rahmengröße für das Pagersteuerelement fest. Sie können diese Nachricht explizit senden oder das [**\_ Pager-Makro SetBorder**](/windows/desktop/api/Commctrl/nf-commctrl-pager_setborder) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Legt die aktuelle Rahmengröße für das Pager-Steuerelement fest. Sie können d
 *lParam* 
 </dt> <dd>
 
-Neue Größe des Rahmens in Pixel. Dieser Wert darf nicht größer als die Schaltfläche "Pager" oder kleiner als 0 (null) sein. Wenn *LPARAM* zu groß ist, wird der Rahmen mit der gleichen Größe wie die Schaltfläche gezeichnet. Wenn *LPARAM* negativ ist, wird die Rahmengröße auf 0 (null) festgelegt.
+Neue Größe des Rahmens in Pixel. Dieser Wert darf nicht größer als die Pagerschaltfläche oder kleiner als 0 (null) sein. Wenn *lParam* zu groß ist, wird der Rahmen in der gleichen Größe wie die Schaltfläche gezeichnet. Wenn *lParam* negativ ist, wird die Rahmengröße auf 0 (null) festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen int-Wert zurück, der die vorherige Rahmengröße in Pixel enthält.
+Gibt einen INT-Wert zurück, der die vorherige Rahmengröße in Pixel enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt einen int-Wert zurück, der die vorherige Rahmengröße in Pixel enthält.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

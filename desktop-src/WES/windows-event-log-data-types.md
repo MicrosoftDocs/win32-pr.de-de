@@ -37,14 +37,14 @@ Ein Handle für ein Windows Ereignisprotokollobjekt.
 
 </dd> <dt>
 
-**\_PEVT-HANDLE**
+**PEVT-HANDLE \_**
 </dt> <dd>
 
 Ein Zeiger auf das Handle eines Windows Ereignisprotokollobjekts.
 
 </dd> <dt>
 
-**EIGENSCHAFTENHANDLE DES \_ EVT-OBJEKTARRAYS \_ \_ \_**
+**EVT \_ OBJECT \_ ARRAY \_ PROPERTY \_ HANDLE**
 </dt> <dd>
 
 Ein Handle für ein Array von Windows Ereignisprotokollobjekten.
@@ -57,7 +57,7 @@ Ein Handle für ein Array von Windows Ereignisprotokollobjekten.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
 | Header<br/>                   | <dl> <dt>WinEvt.h</dt> </dl> |
 

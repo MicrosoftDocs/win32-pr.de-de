@@ -1,25 +1,25 @@
 ---
-title: Bestimmen des Ausgabeformats eines dekompressors
-description: Bestimmen des Ausgabeformats eines dekompressors
+title: Bestimmen des Ausgabeformats eines Dekomprimierers
+description: Bestimmen des Ausgabeformats eines Dekomprimierers
 ms.assetid: afedef5e-a506-40bd-aaad-fd85b0468ed7
 keywords:
 - Videokomprimierungs-Manager (VCM), Ausgabeformat
-- VCM (Videokomprimierungs-Manager), Ausgabeformat
-- ICDE compressgetformatsize-Makro
-- Icabcompressquery-Makro
-- ICDE compressgetpalette-Makro
+- VCM (Videokomprimierungs-Manager),Ausgabeformat
+- ICDecompressGetFormatSize-Makro
+- ICDecompressQuery-Makro
+- ICDecompressGetPalette-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2fcb4140a4118cb2a36ccd75088556c53c55fdcb
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 9cc17db0d7aa015c955825840fb70d12714be3c0a44a69bf5abc59290ebc633c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119497420"
 ---
-# <a name="determining-a-decompressors-output-format"></a>Bestimmen des Ausgabeformats eines dekompressors
+# <a name="determining-a-decompressors-output-format"></a>Bestimmen des Ausgabeformats eines Dekomprimierers
 
-Im folgenden Beispiel wird die Puffergröße bestimmt, die für die Daten erforderlich ist, die das Dekomprimierungs Format mithilfe des [**icdecompressgetformatsize**](/windows/desktop/api/Vfw/nf-vfw-icdecompressgetformatsize) -Makros angeben. dabei wird ein Puffer der entsprechenden Größe mithilfe der [globalzuordc](/windows/win32/api/winbase/nf-winbase-globalalloc) -Funktion zugewiesen, und die Informationen zur Dekomprimierungs Formatierung werden mithilfe des [**icdecompressgetformat**](/windows/desktop/api/Vfw/nf-vfw-icdecompressgetformat) -Makros abgerufen.
+Im folgenden Beispiel wird die Puffergröße bestimmt, die für die Daten erforderlich ist, die das Dekomprimierungsformat mithilfe des [**ICDecompressGetFormatSize-Makros**](/windows/desktop/api/Vfw/nf-vfw-icdecompressgetformatsize) angeben, einen Puffer der entsprechenden Größe mithilfe der [GlobalAlloc-Funktion](/windows/win32/api/winbase/nf-winbase-globalalloc) zuordnet und die Dekomprimierungsformatinformationen mithilfe des [**ICDecompressGetFormat-Makros**](/windows/desktop/api/Vfw/nf-vfw-icdecompressgetformat) abruft.
 
 
 ```C++
@@ -35,7 +35,7 @@ ICDecompressGetFormat(hIC, lpbiIn, lpbiOut);
 
 
 
-Das folgende Beispiel zeigt, wie eine Anwendung das [**icdecompressquery**](/windows/desktop/api/Vfw/nf-vfw-icdecompressquery) -Makro verwenden kann, um zu bestimmen, ob ein Dekompressor die Eingabe-und Ausgabeformate verarbeiten kann.
+Das folgende Beispiel zeigt, wie eine Anwendung das [**ICDecompressQuery-Makro**](/windows/desktop/api/Vfw/nf-vfw-icdecompressquery) verwenden kann, um zu bestimmen, ob ein Dekomprimierer die Eingabe- und Ausgabeformate verarbeiten kann.
 
 
 ```C++
@@ -54,7 +54,7 @@ if (ICDecompressQuery(hIC, lpbiIn, lpbiOut) == ICERR_OK)
 
 
 
-Das folgende Code Fragment zeigt, wie die Paletteninformationen mithilfe des [**icdecompressgetpalette**](/windows/desktop/api/Vfw/nf-vfw-icdecompressgetpalette) -Makros abgerufen werden.
+Das folgende Codefragment zeigt, wie Sie die Paletteninformationen mithilfe des [**IcDecompressGetPalette-Makros**](/windows/desktop/api/Vfw/nf-vfw-icdecompressgetpalette) abrufen.
 
 
 ```C++
@@ -68,6 +68,6 @@ lpPalette = (LPBYTE)lpbiOut + lpbi->biSize;
 
 
 
- 
+ 
 
- 
+ 

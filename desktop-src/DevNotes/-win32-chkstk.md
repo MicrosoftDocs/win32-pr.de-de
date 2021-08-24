@@ -1,23 +1,23 @@
 ---
-description: Wird vom Compiler aufgerufen, wenn Sie über mehr als eine Seite lokaler Variablen in der Funktion verfügen.
+description: Wird vom Compiler aufgerufen, wenn Ihre Funktion mehrere Seiten lokaler Variablen enthält.
 ms.assetid: 154dd992-88b5-44a4-9594-5d13afb71c28
-title: _chkstk-Routine
+title: _chkstk Routine
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 02a58b31836947dfb1816bea72a54f820354c792
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b129b73801c6c18b63b10ac61898ee13a9c5d4f1f0422678bbfe5af82d5b44f8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119538834"
 ---
 # <a name="_chkstk-routine"></a>\_chkstk-Routine
 
-Wird vom Compiler aufgerufen, wenn Sie über mehr als eine Seite lokaler Variablen in der Funktion verfügen.
+Wird vom Compiler aufgerufen, wenn Ihre Funktion mehrere Seiten lokaler Variablen enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-\_die chkstk-Routine ist eine Hilfsroutine für den C-Compiler. Bei x86-Compilern \_ wird die chkstk-Routine aufgerufen, wenn die lokalen Variablen 4 KB überschreiten. für x64-Compiler beträgt der Wert 8K.
+\_chkstk Routine ist eine Hilfsroutine für den C-Compiler. Bei x86-Compilern wird chkstk Routine aufgerufen, wenn die lokalen Variablen 4K Bytes überschreiten. Bei x64-Compilern ist \_ dies 8K.
 
  
 

@@ -1,25 +1,25 @@
 ---
-description: Gibt das Medien Schutzsystem an, das für den Inhalt verwendet werden soll.
+description: Gibt das Medienschutzsystem an, das für den Inhalt verwendet werden soll.
 ms.assetid: D0380C89-872A-4863-983F-A52FBACEF4FD
 title: MFPKEY_MediaProtectionSystemId-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9817cccca002cceaf72463482aecea69aaf1ce25
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cace6ccf4cff4cd197d090584821779a0b1fe7eaceef526dd29389a9b179654f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119555440"
 ---
-# <a name="mfpkey_mediaprotectionsystemid-property"></a>Mfpkey \_ mediaschutzsystemid (Eigenschaft)
+# <a name="mfpkey_mediaprotectionsystemid-property"></a>MFPKEY \_ MediaProtectionSystemId-Eigenschaft
 
-Gibt das Medien Schutzsystem an, das für den Inhalt verwendet werden soll.
+Gibt das Medienschutzsystem an, das für den Inhalt verwendet werden soll.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
@@ -31,9 +31,9 @@ VT \_ CLSID
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert dieser Eigenschaft ist eine GUID, die das für den Inhalt zu verwendende Medien Schutzsystem identifiziert.
+Der Wert dieser Eigenschaft ist eine GUID, die das Medienschutzsystem identifiziert, das für den Inhalt verwendet werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Der Wert dieser Eigenschaft ist eine GUID, die das für den Inhalt zu verwendend
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>MFI. idl</dt> </dl> |
+| Header<br/> | <dl> <dt>Mfidl.idl</dt> </dl> |
 
 
 
@@ -49,7 +49,7 @@ Der Wert dieser Eigenschaft ist eine GUID, die das für den Inhalt zu verwendend
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

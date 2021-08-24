@@ -1,33 +1,33 @@
 ---
-description: Gibt den Telefonmodus für einen Dolby Digital-Audiodatenstrom an. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
+description: Gibt den Mode für einen Dolby Digital-Audiostream an. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
 ms.assetid: f33259f4-bb96-4d6d-8d03-6975bc32e226
-title: Avencddheadphonemode-Eigenschaft (codecapi. h)
+title: AVEncDDHeadphoneMode-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: df75a6c726fc748e623ae9bded67ca6e1197b990
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: b92b0c554bf7d6c1d6ef7c0fdd4ea1b51bf50d1beab444a8700777c3195487cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119690180"
 ---
-# <a name="avencddheadphonemode-property"></a>Avencddheadphonemode (Eigenschaft)
+# <a name="avencddheadphonemode-property"></a>AVEncDDHeadphoneMode (Eigenschaft)
 
-Gibt den Telefonmodus für einen Dolby Digital-Audiodatenstrom an. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
+Gibt den Mode für einen Dolby Digital-Audiostream an. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencddheadphonemode**
+**CODECAPI \_ AVEncDDHeadphoneMode**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavencddheadphonemode**](/windows/desktop/api/codecapi/ne-codecapi-eavencddheadphonemode) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVEncDDHeadphoneMode-Enumeration.**](/windows/desktop/api/codecapi/ne-codecapi-eavencddheadphonemode)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavencddheadphonemode**](/wind
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -45,10 +45,10 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavencddheadphonemode**](/wind
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

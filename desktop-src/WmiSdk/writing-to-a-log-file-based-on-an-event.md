@@ -1,8 +1,8 @@
 ---
-description: Die logfileeventconsumer-Klasse kann vordefinierten Text in eine Protokolldatei schreiben, wenn ein bestimmtes Ereignis auftritt. Diese Klasse ist ein Standard Ereignisconsumer, den WMI bereitstellt.
+description: Die LogFileEventConsumer-Klasse kann vordefinierten Text in eine Protokolldatei schreiben, wenn ein angegebenes Ereignis auftritt. Diese Klasse ist ein Standardereignis-Consumer, den WMI bietet.
 ms.assetid: c337e9f7-f40c-4d7d-a180-c053e24c882b
 ms.tgt_platform: multiple
-title: Schreiben in eine Protokolldatei auf Grundlage eines Ereignisses
+title: Schreiben in eine Protokolldatei basierend auf einem Ereignis
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,53 +10,53 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 33cc82925b6afc1690f2cd87607f21e9ea02fdbe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 881435986a1097c2ba97160693ed15e28bae3d86019fb703adf6bf1e8b07f8a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119049728"
 ---
-# <a name="writing-to-a-log-file-based-on-an-event"></a>Schreiben in eine Protokolldatei auf Grundlage eines Ereignisses
+# <a name="writing-to-a-log-file-based-on-an-event"></a>Schreiben in eine Protokolldatei basierend auf einem Ereignis
 
-Die [**logfileeventconsumer**](logfileeventconsumer.md) -Klasse kann vordefinierten Text in eine Protokolldatei schreiben, wenn ein bestimmtes Ereignis auftritt. Diese Klasse ist ein Standard Ereignisconsumer, den WMI bereitstellt.
+Die [**LogFileEventConsumer-Klasse**](logfileeventconsumer.md) kann vordefinierten Text in eine Protokolldatei schreiben, wenn ein angegebenes Ereignis auftritt. Diese Klasse ist ein Standardereignis-Consumer, den WMI bietet.
 
-Das grundlegende Verfahren für die Verwendung von Standardconsumern ist immer identisch und befindet sich in [Überwachung und Reaktion auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern.
+Das grundlegende Verfahren für die Verwendung von Standardverbrauchern ist immer identisch und befindet sich unter Überwachung und Reaktion auf Ereignisse [mit Standardverbrauchern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 
-Das folgende Verfahren fügt dem grundlegenden Verfahren, ist spezifisch für die [**logfileeventconsumer**](logfileeventconsumer.md) -Klasse, und beschreibt, wie ein Ereignisconsumer erstellt wird, der ein Programm ausführt.
+Die folgende Prozedur fügt der grundlegenden Prozedur hinzu, ist spezifisch für die [**LogFileEventConsumer-Klasse**](logfileeventconsumer.md) und beschreibt, wie ein Ereignisconsumer erstellt wird, der ein Programm ausgeführt.
 
-**So erstellen Sie einen Ereignisconsumer, der in eine Protokolldatei schreibt**
+**So erstellen Sie einen Ereignisverbraucher, der in eine Protokolldatei schreibt**
 
-1.  Erstellen Sie in der MOF-Datei (Managed Object Format) eine Instanz von [**logfileeventconsumer**](logfileeventconsumer.md) , um die Ereignisse zu empfangen, die Sie in der Abfrage anfordern, benennen Sie die Instanz in der **Name** -Eigenschaft, und platzieren Sie dann den Pfad zur Protokolldatei in der **filename** -Eigenschaft.
+1.  Erstellen Sie in der MOF-Datei (Managed Object Format) eine Instanz von [**LogFileEventConsumer,**](logfileeventconsumer.md) um die ereignisse zu empfangen, die Sie in der Abfrage anfordern, benennen Sie die Instanz in der **Name-Eigenschaft,** und platzieren Sie dann den Pfad zur Protokolldatei in der **Filename-Eigenschaft.**
 
-    Weitere Informationen finden Sie unter [Entwerfen von Managed Object Format-Klassen (MOF)](designing-managed-object-format--mof--classes.md).
+    Weitere Informationen finden Sie unter [Entwerfen Managed Object Format -Klassen (MOF).](designing-managed-object-format--mof--classes.md)
 
-2.  Stellen Sie die Textvorlage bereit, die in die Protokolldatei in der Text-Eigenschaft geschrieben werden soll.
+2.  Geben Sie die Textvorlage an, die in die Protokolldatei in der Text-Eigenschaft geschrieben werden soll.
 
-    Weitere Informationen finden Sie unter [Verwenden von Standard Zeichenfolgen-Vorlagen](using-standard-string-templates.md).
+    Weitere Informationen finden Sie unter [Verwenden von Standardzeichenfolgenvorlagen.](using-standard-string-templates.md)
 
-3.  Erstellen Sie eine Instanz von [**\_ \_ EventFilter**](--eventfilter.md) , und definieren Sie eine Abfrage, um die Ereignisse anzugeben, die den Consumer aktivieren.
+3.  Erstellen Sie eine Instanz von [**\_ \_ EventFilter, und**](--eventfilter.md) definieren Sie eine Abfrage, um die Ereignisse anzugeben, die den Consumer aktivieren.
 
-    Weitere Informationen finden Sie unter [Abfragen mit WQL](querying-with-wql.md).
+    Weitere Informationen finden Sie unter [Abfragen mit WQL.](querying-with-wql.md)
 
-4.  Erstellen Sie eine Instanz von [**\_ \_ filtertoconsumerbinding**](--filtertoconsumerbinding.md) , um den Filter der Instanz von [**logfileeventconsumer**](logfileeventconsumer.md)zuzuordnen.
-5.  Legen Sie die Sicherheit für das Verzeichnis, in dem sich das Protokoll befindet, auf die erforderliche Ebene fest, um zu steuern, wer die Protokolldatei liest oder in diese schreibt.
-6.  Kompilieren Sie die MOF-Datei mit [**Mofcomp.exe**](mofcomp.md).
+4.  Erstellen Sie eine Instanz von [**\_ \_ FilterToConsumerBinding,**](--filtertoconsumerbinding.md) um den Filter der Instanz von [**LogFileEventConsumer zu zuordnen.**](logfileeventconsumer.md)
+5.  Um zu steuern, wer die Protokolldatei liest oder schreibt, legen Sie die Sicherheit für das Verzeichnis, in dem sich das Protokoll befindet, auf die erforderliche Ebene fest.
+6.  Kompilieren Sie ihre MOF-Datei [**mitMofcomp.exe**](mofcomp.md).
 
 ## <a name="example"></a>Beispiel
 
-Das Beispiel in diesem Abschnitt ist ein MOF-Code, aber Sie können die Instanzen Programm gesteuert mithilfe der [Skript-API für WMI](scripting-api-for-wmi.md) oder der [com-API für WMI](com-api-for-wmi.md)erstellen. Das Beispiel verwendet den logfileeventconsumer Standard, um eine Consumerklasse mit dem Namen logfileevent zu erstellen, die eine Zeile in die Datei c: \\ logfile. Log schreibt, wenn eine Instanz der Klasse logfileevent erstellt wird.
+Das Beispiel in diesem Abschnitt befindet sich im MOF-Code, aber Sie können die Instanzen programmgesteuert erstellen, indem Sie die [Skript-API](scripting-api-for-wmi.md) für WMI oder die [COM-API für WMI verwenden.](com-api-for-wmi.md) Im Beispiel wird der LogFileEventConsumer-Standard verwendet, um eine Consumerklasse namens LogFileEvent zu erstellen, die eine Zeile in die Datei c: Logfile.log schreibt, wenn eine Instanz der \\ Klasse LogFileEvent erstellt wird.
 
-Im folgenden Verfahren wird beschrieben, wie das Beispiel verwendet wird.
+Im folgenden Verfahren wird die Verwendung des Beispiels beschrieben.
 
 **So verwenden Sie das Beispiel**
 
-1.  Kopieren Sie das unten aufgeführte MOF-Listenfeld in eine Textdatei, und speichern Sie es mit der Erweiterung MOF.
+1.  Kopieren Sie die mof-Auflistung unten in eine Textdatei, und speichern Sie sie mit der Erweiterung MOF.
 2.  Kompilieren Sie die MOF-Datei in einem Befehlsfenster mit dem folgenden Befehl.
 
-    " **Mamacomp** *filename * * *. MOF* "*
+     *Mofcomp-Dateiname**.mof**
 
-3.  Öffnen Sie Logfile. log, um die durch LogFileEvent.Name angegebene Zeile anzuzeigen: "Logfile ereignisconsumerereignis".
+3.  Öffnen Sie Logfile.log, um die zeile zu sehen, die von LogFileEvent.Name" angegeben wird: "Logfile Event Consumer event".
 
 ``` syntax
 // Set the namespace as root\subscription.
@@ -123,7 +123,7 @@ instance of LogFileEvent
 
 <dl> <dt>
 
-[Überwachen von und reagieren auf Ereignisse mit Standard Consumern](monitoring-and-responding-to-events-with-standard-consumers.md)
+[Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern](monitoring-and-responding-to-events-with-standard-consumers.md)
 </dt> </dl>
 
  

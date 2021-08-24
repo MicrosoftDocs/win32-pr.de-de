@@ -1,11 +1,11 @@
 ---
-title: msSFU-30-POSIX-Member-of-Attribut
-description: Enthält die anzeigen Amen von Gruppen, zu denen dieser Benutzer gehört.
+title: msSFU-30-Posix-Member-Of-Attribut
+description: Enthält die Anzeigenamen von Gruppen, zu denen dieser Benutzer gehört.
 ms.assetid: c29547d2-ee35-463a-9769-3d9d2260a845
 ms.tgt_platform: multiple
 keywords:
-- msSFU-30-POSIX-Member-of-Attribut AD-Schema
-- msSFU30PosixMemberOf-Attribut AD-Schema
+- msSFU-30-Posix-Member-Of-Attribut AD-Schema
+- AD-Schema des msSFU30PosixMemberOf-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 171d539464b6b1dc4aefef9b77946e66b369bcde
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 47fff54f2265394072c7eb075627a6a537c845106722d64955b0111ffeb3f675
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119508840"
 ---
-# <a name="mssfu-30-posix-member-of-attribute"></a>msSFU-30-POSIX-Member-of-Attribut
+# <a name="mssfu-30-posix-member-of-attribute"></a>msSFU-30-Posix-Member-Of-Attribut
 
-Enthält die anzeigen Amen von Gruppen, zu denen dieser Benutzer gehört.
+Enthält die Anzeigenamen von Gruppen, zu denen dieser Benutzer gehört.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | msSFU-30-POSIX-Member-of                |
-| LDAP-Display-Name | msSFU30PosixMemberOf                    |
+| CN                | msSFU-30-Posix-Member-Of                |
+| Ldap-Anzeigename | msSFU30PosixMemberOf                    |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.6.18.1.347             |
-| System-ID-GUID    | 7bd76b92-3244-438a-ada6-24b34381e    |
+| System-Id-Guid    | 7bd76b92-3244-438a-ada6-24f5ea34381e    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -56,10 +56,10 @@ Enthält die anzeigen Amen von Gruppen, zu denen dieser Benutzer gehört.
 | Link-ID                | 2031                            |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -77,10 +77,10 @@ Enthält die anzeigen Amen von Gruppen, zu denen dieser Benutzer gehört.
 | Link-ID                | 2031                            |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -98,10 +98,10 @@ Enthält die anzeigen Amen von Gruppen, zu denen dieser Benutzer gehört.
 | Link-ID                | 2031                            |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -119,10 +119,10 @@ Enthält die anzeigen Amen von Gruppen, zu denen dieser Benutzer gehört.
 | Link-ID                | 2031                            |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

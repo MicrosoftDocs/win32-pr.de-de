@@ -1,11 +1,11 @@
 ---
-title: Beispielcode für Ranging mit IDirectoryObject
-description: Im folgenden Codebeispiel wird ranging verwendet, um die Mitglieder einer Gruppe mithilfe der IDirectoryObject-Schnittstelle abzurufen.
+title: Beispielcode für ranging mit IDirectoryObject
+description: Im folgenden Codebeispiel wird ranging verwendet, um die Member einer Gruppe mithilfe der IDirectoryObject-Schnittstelle abzurufen.
 ms.assetid: 659b4c28-6534-45d2-80ee-14184433390d
 ms.tgt_platform: multiple
 keywords:
-- Beispielcode für Ranging mit IDirectoryObject ADSI
-- Bereichsabruf ADSI , Beispielcode,Verwenden von IDirectoryObject
+- Beispielcode für den Bereich mit IDirectoryObject ADSI
+- Range Retrieval ADSI , Beispielcode,Using IDirectoryObject
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: a0d049d629c347f0d85d8a4585436f4d7bbddf88b20186890643f7770070843a
@@ -15,9 +15,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119082634"
 ---
-# <a name="example-code-for-ranging-with-idirectoryobject"></a>Beispielcode für Ranging mit IDirectoryObject
+# <a name="example-code-for-ranging-with-idirectoryobject"></a>Beispielcode für ranging mit IDirectoryObject
 
-Im folgenden Codebeispiel wird ranging verwendet, um die Mitglieder einer Gruppe mithilfe der [**IDirectoryObject-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) abzurufen.
+Im folgenden Codebeispiel wird ranging verwendet, um die Member einer Gruppe mithilfe der [**IDirectoryObject-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) abzurufen.
 
 
 ```C++

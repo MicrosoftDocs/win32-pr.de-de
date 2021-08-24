@@ -1,7 +1,7 @@
 ---
-description: Die isgeleert-Methode fragt ab, ob der Filter zurzeit geleert wird.
+description: Die IsFlushing-Methode fragt ab, ob der Filter gerade geleert wird.
 ms.assetid: 366b6162-7a2c-4882-8774-8b4bf83012b4
-title: Cbaseingeputpin. isgeleert-Methode (amfilter. h)
+title: CBaseInputPin.IsFlushing-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d5af91e78d10f480596b8e0820ee6de4c4df2998
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bf14abbf20d01f5e78284b65dd1159202146437f2492423c2eaa998a65ee412f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017058"
 ---
-# <a name="cbaseinputpinisflushing-method"></a>Cbasinput PIN. isgeleert-Methode
+# <a name="cbaseinputpinisflushing-method"></a>CBaseInputPin.IsFlushing-Methode
 
-Die- `IsFlushing` Methode fragt ab, ob der Filter zurzeit geleert wird.
+Die `IsFlushing` -Methode fragt ab, ob der Filter gerade geleert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die [**cbaseingeputpin:: m \_**](cbaseinputpin-m-bflushing.md) -Member-Variable zurück.
+Gibt die [**CBaseInputPin::m \_ bFlushing-Membervariable**](cbaseinputpin-m-bflushing.md) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt die [**cbaseingeputpin:: m \_**](cbaseinputpin-m-bflushing.md) -Member-Vari
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt die [**cbaseingeputpin:: m \_**](cbaseinputpin-m-bflushing.md) -Member-Vari
 
 <dl> <dt>
 
-[**Cbaseingeputpin-Klasse**](cbaseinputpin.md)
+[**CBaseInputPin-Klasse**](cbaseinputpin.md)
 </dt> </dl>
 
  

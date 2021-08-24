@@ -3,24 +3,24 @@ title: Abrufen einer Zeichenfolge, die einen Filter beschreibt
 description: Abrufen einer Zeichenfolge, die einen Filter beschreibt
 ms.assetid: 47390448-eaa6-4bea-bd90-549fa37e739a
 keywords:
-- Audiokomprimierungs-Manager (ACM), Abrufen von Zeichen folgen, die Filter beschreiben
-- ACM (Audiokomprimierungs-Manager), Abrufen von Zeichen folgen, die Filter beschreiben
-- ACM-Beispiele, Abrufen von Zeichen folgen, die Filter beschreiben
-- Abrufen von Zeichen folgen, die Filter beschreiben
-- acmfiltertagdetails-Funktion
-- acmfilterdetails-Funktion
+- Audiokomprimierungs-Manager (ACM), Abrufen von Zeichenfolgen, die Filter beschreiben
+- ACM (Audiokomprimierungs-Manager),Abrufen von Zeichenfolgen, die Filter beschreiben
+- ACM-Beispiele,Abrufen von Zeichenfolgen, die Filter beschreiben
+- Abrufen von Zeichenfolgen, die Filter beschreiben
+- acmFilterTagDetails-Funktion
+- acmFilterDetails-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 641f2b9993d9c916113d14eaf92925e916409619
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 84bf182846da280f4810c84c75a02e76baaae9082ecaf2df8ea1797fd867e8b8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119689130"
 ---
 # <a name="retrieving-a-string-that-describes-a-filter"></a>Abrufen einer Zeichenfolge, die einen Filter beschreibt
 
-Eine Anwendung muss häufig eine Zeichenfolge anzeigen, die das aktuelle Format beschreibt. Diese Aufgabe kann problemlos mit den Funktionen [**acmfiltertagdetails**](/windows/desktop/api/Msacm/nf-msacm-acmfiltertagdetails) und [**acmfilterdetails**](/windows/desktop/api/Msacm/nf-msacm-acmfilterdetails) ausgeführt werden. Diese Funktionen müssen mit dem entsprechenden Filter oder Filtertag aufgerufen werden. Im folgenden Beispiel wird gezeigt, wie diese Funktionen verwendet werden.
+Eine Anwendung muss häufig eine Zeichenfolge anzeigen, die das aktuelle Format beschreibt. Diese Aufgabe kann problemlos mit den Funktionen [**acmFilterTagDetails**](/windows/desktop/api/Msacm/nf-msacm-acmfiltertagdetails) und [**acmFilterDetails**](/windows/desktop/api/Msacm/nf-msacm-acmfilterdetails) ausgeführt werden. Diese Funktionen müssen mit dem entsprechenden Filter- oder Filtertag aufgerufen werden. Im folgenden Beispiel wird gezeigt, wie diese Funktionen verwendet werden.
 
 
 ```C++
@@ -114,9 +114,9 @@ BOOL GetFilterDescription
 
 
 
- 
+ 
 
- 
+ 
 
 
 

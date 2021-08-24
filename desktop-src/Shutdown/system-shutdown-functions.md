@@ -1,34 +1,34 @@
 ---
-description: Die folgenden Funktionen werden mit dem Herunterfahren des Systems verwendet.
+description: Die folgenden Funktionen werden beim Herunterfahren des Systems verwendet.
 ms.assetid: 6a08a769-1acf-49eb-ba95-beaf56a374bf
-title: SystemShutdown-Funktionen
+title: Funktionen zum Herunterfahren des Systems
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dd457c86129b3e5f80d6359018c1474f837b9e33
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 36b1304a2333d817be7cbb51ee599f37cda8b3e185f56cfc5959f1646e9ab639
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119664340"
 ---
-# <a name="system-shutdown-functions"></a>SystemShutdown-Funktionen
+# <a name="system-shutdown-functions"></a>Funktionen zum Herunterfahren des Systems
 
-Die folgenden Funktionen werden mit dem Herunterfahren des Systems verwendet.
+Die folgenden Funktionen werden beim Herunterfahren des Systems verwendet.
 
 
 
-| Funktion                                                         | BESCHREIBUNG                                                                                                                         |
+| Funktion                                                         | Beschreibung                                                                                                                         |
 |------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| [**Abortsystemshutdown**](/windows/desktop/api/Winreg/nf-winreg-abortsystemshutdowna)               | Beendet das Herunterfahren eines Systems, das initiiert wurde.                                                                                    |
-| [**Exitwindows**](/windows/desktop/api/Winuser/nf-winuser-exitwindows)                               | Protokolliert den interaktiven Benutzer.                                                                                                      |
-| [**ExitWindowsEx**](/windows/desktop/api/Winuser/nf-winuser-exitwindowsex)                           | Hiermit wird der interaktive Benutzer protokolliert, das System heruntergefahren oder das System heruntergefahren und neu gestartet.                                        |
+| [**AbortSystemShutdown**](/windows/desktop/api/Winreg/nf-winreg-abortsystemshutdowna)               | Beendet das Herunterfahren des Systems, das initiiert wurde.                                                                                    |
+| [**ExitWindows**](/windows/desktop/api/Winuser/nf-winuser-exitwindows)                               | Meldet den interaktiven Benutzer ab.                                                                                                      |
+| [**ExitWindowsEx**](/windows/desktop/api/Winuser/nf-winuser-exitwindowsex)                           | Meldet den interaktiven Benutzer ab, fährt das System herunter oder fährt das System herunter und startet es neu.                                        |
 | [**InitiateShutdown**](/windows/desktop/api/Winreg/nf-winreg-initiateshutdowna)                     | Initiiert das Herunterfahren und Neustarten des angegebenen Computers und startet alle Anwendungen neu, die für den Neustart registriert wurden.    |
-| [**InitiateSystemShutdown**](/windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdowna)         | Initiiert ein Herunterfahren und einen optionalen Neustart des angegebenen Computers.                                                                |
-| [**Initiatesystemshutdownetx**](/windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdownexa)     | Initiiert ein Herunterfahren und einen optionalen Neustart des angegebenen Computers und zeichnet optional den Grund für das Herunterfahren auf.            |
-| [**Lock Workstation**](/windows/desktop/api/Winuser/nf-winuser-lockworkstation)                       | Sperrt die Anzeige der Arbeitsstation.                                                                                                    |
-| [**Shutdownblockreasoncreate**](/windows/desktop/api/Winuser/nf-winuser-shutdownblockreasoncreate)   | Gibt an, dass das System nicht heruntergefahren werden kann, und legt eine Grund Zeichenfolge fest, die dem Benutzer angezeigt wird, wenn das System heruntergefahren wird. |
-| [**Shutdownblockreasondestroy**](/windows/desktop/api/Winuser/nf-winuser-shutdownblockreasondestroy) | Gibt an, dass das System heruntergefahren werden kann, und gibt die Grund Zeichenfolge frei.                                                             |
-| [**Shutdownblockreasonquery**](/windows/desktop/api/Winuser/nf-winuser-shutdownblockreasonquery)     | Ruft die von der [**shutdownblockreasoncreate**](/windows/desktop/api/Winuser/nf-winuser-shutdownblockreasoncreate) -Funktion festgelegte Grund Zeichenfolge ab.                     |
+| [**InitiateSystemShutdown**](/windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdowna)         | Initiiert das Herunterfahren und den optionalen Neustart des angegebenen Computers.                                                                |
+| [**InitiateSystemShutdownEx**](/windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdownexa)     | Initiiert ein Herunterfahren und einen optionalen Neustart des angegebenen Computers und zeichnet optional den Grund für das Herunterfahren auf.            |
+| [**LockWorkStation**](/windows/desktop/api/Winuser/nf-winuser-lockworkstation)                       | Sperrt die Anzeige der Arbeitsstation.                                                                                                    |
+| [**ShutdownBlockReasonCreate**](/windows/desktop/api/Winuser/nf-winuser-shutdownblockreasoncreate)   | Gibt an, dass das System nicht heruntergefahren werden kann, und legt eine Ursachenzeichenfolge fest, die dem Benutzer angezeigt wird, wenn das Herunterfahren des Systems initiiert wird. |
+| [**ShutdownBlockReasonDestroy**](/windows/desktop/api/Winuser/nf-winuser-shutdownblockreasondestroy) | Gibt an, dass das System heruntergefahren werden kann, und gibt die Ursachenzeichenfolge frei.                                                             |
+| [**ShutdownBlockReasonQuery**](/windows/desktop/api/Winuser/nf-winuser-shutdownblockreasonquery)     | Ruft die von der [**ShutdownBlockReasonCreate-Funktion**](/windows/desktop/api/Winuser/nf-winuser-shutdownblockreasoncreate) festgelegte Ursachenzeichenfolge ab.                     |
 
 
 

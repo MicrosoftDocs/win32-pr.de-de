@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectTechnique getpassbyindex-Methode (D3dx11effect. h)
-description: Einen Pass-by-Index erhalten.
+title: ID3DX11EffectTechnique GetPassByIndex-Methode (D3dx11effect.h)
+description: Abrufen eines Durchlaufs nach Index.
 ms.assetid: 3c9452f5-c94a-4951-bdd2-e8891b7ceb34
 keywords:
-- Getpassbyindex-Methode Direct3D 11
-- Getpassbyindex-Methode Direct3D 11, ID3DX11EffectTechnique-Schnittstelle
-- ID3DX11EffectTechnique-Schnittstelle Direct3D 11, getpassbyindex-Methode
+- GetPassByIndex-Methode Direct3D 11
+- GetPassByIndex-Methode Direct3D 11 , ID3DX11EffectTechnique-Schnittstelle
+- ID3DX11EffectTechnique-Schnittstelle Direct3D 11 , GetPassByIndex-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b6af222298cc3d00ad87e5037f9de20139e4fc40
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: efd22cd5e7745b8e5a11018b930f6b544036780b118e9c745b67e730b693cdd3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119565790"
 ---
-# <a name="id3dx11effecttechniquegetpassbyindex-method"></a>ID3DX11EffectTechnique:: getpassbyindex-Methode
+# <a name="id3dx11effecttechniquegetpassbyindex-method"></a>ID3DX11EffectTechnique::GetPassByIndex-Methode
 
-Einen Pass-by-Index erhalten.
+Abrufen eines Durchlaufs nach Index.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,9 +46,9 @@ ID3DX11EffectPass* GetPassByIndex(
 *Index* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Ein NULL basierter Index.
+Ein nullbasierter Index.
 
 </dd> </dl>
 
@@ -56,29 +56,29 @@ Ein NULL basierter Index.
 
 Typ: **[ **ID3DX11EffectPass**](id3dx11effectpass.md)\***
 
-Ein Zeiger auf eine [**ID3DX11EffectPass**](id3dx11effectpass.md).
+Ein Zeiger auf einen [**ID3DX11EffectPass**](id3dx11effectpass.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Technik enthält einen oder mehrere Durchgänge. Sie erhalten einen Durchlauf mithilfe eines Namens oder eines Indexes.
+Eine Technik enthält einen oder mehrere Durchläufe. Abrufen eines Durchlaufs mithilfe eines Namens oder Indexes.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

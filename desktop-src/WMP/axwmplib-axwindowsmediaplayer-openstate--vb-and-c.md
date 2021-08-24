@@ -66,7 +66,7 @@ Windows Media Player Zustände werden in keiner bestimmten Reihenfolge garantier
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

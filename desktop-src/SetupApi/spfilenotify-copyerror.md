@@ -1,19 +1,19 @@
 ---
-description: Die spfilenotify- \_ copyError-Benachrichtigung wird an die Rückruf Routine gesendet, wenn während eines Datei Kopiervorgangs ein Fehler auftritt.
+description: Die SPFILENOTIFY \_ COPYERROR-Benachrichtigung wird an die Rückrufroutine gesendet, wenn während eines Dateikopiervorgangs ein Fehler auftritt.
 ms.assetid: d6096954-c6a5-44d4-a358-c1320c50730a
-title: SPFILENOTIFY_COPYERROR Meldung (Setupapi. h)
+title: SPFILENOTIFY_COPYERROR Meldung (Setupapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f6cd44daabd6a4aed5e61a716bab3df44f35fc0b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 80160af9d8053a90c1848d397da6bbb9bf41f2793756e1d5491fb0d6f5e39abc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865715"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119665150"
 ---
-# <a name="spfilenotify_copyerror-message"></a>Spfilenotify- \_ copyError-Meldung
+# <a name="spfilenotify_copyerror-message"></a>SPFILENOTIFY \_ COPYERROR-Meldung
 
-Die **spfilenotify- \_ copyError** -Benachrichtigung wird an die Rückruf Routine gesendet, wenn während eines Datei Kopiervorgangs ein Fehler auftritt.
+Die **SPFILENOTIFY \_ COPYERROR-Benachrichtigung** wird an die Rückrufroutine gesendet, wenn während eines Dateikopiervorgangs ein Fehler auftritt.
 
 
 ```C++
@@ -32,29 +32,29 @@ SPFILENOTIFY_COPYERROR
 *Param1* 
 </dt> <dd>
 
-Zeiger auf eine [**FilePath**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a) -Struktur.
+Zeiger auf eine [**FILEPATHS-Struktur.**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a)
 
 </dd> <dt>
 
 *Param2* 
 </dt> <dd>
 
-Zeiger auf einen Puffer mit einer Größe von Max. \_ Pfad Zeichen, der neue Pfadinformationen speichert, die vom Benutzer angegeben werden.
+Zeiger auf einen Puffer der Größe MAX \_ PATH-Zeichen, in dem vom Benutzer angegebene neue Pfadinformationen gespeichert werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückruf muss einen der folgenden Werte zurückgeben.
+Der Rückruf sollte einen der folgenden Werte zurückgeben.
 
 
 
 | Rückgabecode                                                                                    | Beschreibung                                                                                                                                                                                                                                                                   |
 |------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**fileOp- \_ Abbruch**</dt> </dl>   | Die Warteschlangen Verarbeitung sollte abgebrochen werden. [**Setupcommitfilequeue**](/windows/desktop/api/Setupapi/nf-setupapi-setupcommitfilequeuea) gibt 0 (null) zurück, und [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt erweiterte Fehlerinformationen zurück, wie z. b. \_ den Fehler abgebrochen (wenn der Benutzer abgebrochen hat) oder einen Fehler \_ \_ \_<br/> |
-| <dl> <dt>**fileOp \_ NewPath**</dt> </dl> | Wiederholen Sie den Kopiervorgang mit dem Pfad der Rückruffunktion, die im Puffer platziert wurde, auf den der *Param2* -Parameter verweist. Die Rückruf Routine sollte sicherstellen, dass der Pfad die Puffergröße eines TCHAR-Arrays von Max- \_ Pfad Elementen nicht überflutet.<br/>                |
-| <dl> <dt>**fileOp- \_ Wiederholung**</dt> </dl>   | Der Benutzer versucht erneut, den Kopiervorgang auszuführen.<br/>                                                                                                                                                                                                                   |
-| <dl> <dt>**fileOp-über \_ springen**</dt> </dl>    | Der Benutzer wird den Datei Kopiervorgang übersprungen.<br/>                                                                                                                                                                                                                      |
+| <dl> <dt>**FILEOP \_ ABORT**</dt> </dl>   | Die Warteschlangenverarbeitung sollte abgebrochen werden. [**SetupCommitFileQueue**](/windows/desktop/api/Setupapi/nf-setupapi-setupcommitfilequeuea) gibt 0 (null) und [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) erweiterte Fehlerinformationen wie ERROR \_ CANCELLED (wenn der Benutzer abgebrochen hat) oder ERROR \_ NOT ENOUGH MEMORY \_ \_ zurück.<br/> |
+| <dl> <dt>**FILEOP \_ NEWPATH**</dt> </dl> | Wiederholen Sie den Kopiervorgang unter Verwendung des Pfads, auf den die Rückruffunktion im Puffer platziert wird, auf den der *Parameter Param2* zeigt. Die Rückrufroutine sollte sicherstellen, dass der Pfad nicht die Puffergröße eines TCHAR-Arrays von MAX \_ PATH-Elementen überläuft.<br/>                |
+| <dl> <dt>**\_FILEOP-WIEDERHOLUNG**</dt> </dl>   | Der Benutzer versucht erneut, den Kopiervorgang zu erstellen.<br/>                                                                                                                                                                                                                   |
+| <dl> <dt>**FILEOP \_ SKIP**</dt> </dl>    | Der Benutzer überspringt den Dateikopiervorgang.<br/>                                                                                                                                                                                                                      |
 
 
 
@@ -66,9 +66,9 @@ Der Rückruf muss einen der folgenden Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Setupapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Setupapi.h</dt> </dl> |
 
 
 
@@ -82,13 +82,13 @@ Der Rückruf muss einen der folgenden Werte zurückgeben.
 [Benachrichtigungen](notifications.md)
 </dt> <dt>
 
-[**FILEPATHS**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a)
+[**Filepaths**](/windows/desktop/api/Setupapi/ns-setupapi-filepaths_a)
 </dt> <dt>
 
-[**Setupcommitfilequeue**](/windows/desktop/api/Setupapi/nf-setupapi-setupcommitfilequeuea)
+[**SetupCommitFileQueue**](/windows/desktop/api/Setupapi/nf-setupapi-setupcommitfilequeuea)
 </dt> <dt>
 
-[**Setupdefaultqueuecallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupdefaultqueuecallbacka)
+[**SetupDefaultQueueCallback**](/windows/desktop/api/Setupapi/nf-setupapi-setupdefaultqueuecallbacka)
 </dt> </dl>
 
  

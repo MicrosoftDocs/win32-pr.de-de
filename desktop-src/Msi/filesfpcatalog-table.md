@@ -1,30 +1,30 @@
 ---
-description: In der filesfpcatalog-Tabelle werden angegebene Dateien den Katalogdateien zugeordnet, die vom Systemdatei Schutz verwendet werden.
+description: Die FileSFPCatalog-Tabelle ordnet die angegebenen Dateien den Katalogdateien zu, die vom Systemdateischutz verwendet werden.
 ms.assetid: 70c8b64a-cf15-411c-8388-4a7e3051f45c
-title: Filesfpcatalog-Tabelle
+title: FileSFPCatalog-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a2300b73cc1639d8a54e206ea609043cf657c91f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41bec6e31cba93730cc65b04ffdfb4a509f0cd817ba709cc029edfb47c4c4e60
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362371"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119581590"
 ---
-# <a name="filesfpcatalog-table"></a>Filesfpcatalog-Tabelle
+# <a name="filesfpcatalog-table"></a>FileSFPCatalog-Tabelle
 
-In der filesfpcatalog-Tabelle werden angegebene Dateien den Katalogdateien zugeordnet, die vom Systemdatei Schutz verwendet werden.
+Die FileSFPCatalog-Tabelle ordnet die angegebenen Dateien den Katalogdateien zu, die vom Systemdateischutz verwendet werden.
 
-**Windows Vista, Windows Server 2003 und Windows XP:** Nicht unterstützt.
+**Windows Vista, Windows Server 2003 und Windows XP:** Wird nicht unterstützt.
 
-Die filesfpcatalog-Tabelle weist die folgenden Spalten auf.
+Die FileSFPCatalog-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte       | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte       | Typ                         | Key | Nullwerte zulässig |
 |--------------|------------------------------|-----|----------|
-| Datei\_       | [Bezeichner](identifier.md) | J   | N        |
-| Sfpcatalog\_ | [Filename](filename.md)     | J   | N        |
+| Datei\_       | [Identifier](identifier.md) | J   | N        |
+| SFPCatalog\_ | [Filename](filename.md)     | J   | N        |
 
 
 
@@ -41,18 +41,18 @@ Fremdschlüssel für die [Dateitabelle](file-table.md).
 
 </dd> <dt>
 
-<span id="SFPCatalog_"></span><span id="sfpcatalog_"></span><span id="SFPCATALOG_"></span>Sfpcatalog\_
+<span id="SFPCatalog_"></span><span id="sfpcatalog_"></span><span id="SFPCATALOG_"></span>SFPCatalog\_
 </dt> <dd>
 
-Fremdschlüssel für die [sfpcatalog-Tabelle](sfpcatalog-table.md).
+Fremdschlüssel für die [SFPCatalog-Tabelle](sfpcatalog-table.md).
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit der [Aktion installsfpcatalogfile](installsfpcatalogfile-action.md) werden die [Komponenten Tabelle](component-table.md), die [Dateitabelle](file-table.md), die filesfpcatalog-Tabelle und die [sfpcatalog-Tabelle](sfpcatalog-table.md)abgefragt.
+Die [InstallSFPCatalogFile-Aktion](installsfpcatalogfile-action.md) fragt die [Komponententabelle,](component-table.md) [die Dateitabelle,](file-table.md)die FileSFPCatalog-Tabelle und die [SFPCatalog-Tabelle ab.](sfpcatalog-table.md)
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

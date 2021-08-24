@@ -1,25 +1,25 @@
 ---
-description: Das folgende Code Fragment veranschaulicht die Änderung einer Zeitspanne für Konferenzen. Der Standard Zeitraum beträgt 30 Minuten. In diesem Fragment ist die Zeitspanne auf ein Jahr festgelegt.
+description: Das folgende Codefragment veranschaulicht die Änderung eines Konferenzzeitbereichs. Die Standardzeit beträgt 30 Minuten. In diesem Fragment ist die Zeitspanne auf ein Jahr festgelegt.
 ms.assetid: 7f05d62e-2bcc-4d98-8a71-97ed20a12af2
 title: Ändern einer bekannten Konferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e5bd58003b276bd3cdd54da2e7ed0df4f154311e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 00b139b05f70f801a28b91ecb6c2773fd740f10df7c0fd2b8e86b904b210cc50
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214367"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119575600"
 ---
 # <a name="modifying-a-known-conference"></a>Ändern einer bekannten Konferenz
 
-\[Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Das folgende Code Fragment veranschaulicht die Änderung der Zeitspanne einer Konferenz. Der Standard Zeitraum beträgt 30 Minuten. In diesem Fragment ist die Zeitspanne auf ein Jahr festgelegt.
+Das folgende Codefragment veranschaulicht die Änderung des Zeitraums einer Konferenz. Die Standardzeit beträgt 30 Minuten. In diesem Fragment ist die Zeitspanne auf ein Jahr festgelegt.
 
-Dieses Fragment geht davon aus, dass bereits eine [Verbindung mit einem ILS-Server](connecting-to-an-ils-server.md) hergestellt wurde und dass eine [Konferenz Verzeichnis Enumeration](enumerating-conference-directories.md) ausgeführt wurde, um den Verzeichniseintrag abzurufen, der geändert wird.
+Dieses Fragment setzt voraus, dass bereits [eine Verbindung mit einem ILS-Server](connecting-to-an-ils-server.md) hergestellt wurde und dass eine [Konferenzverzeichnisenumeration](enumerating-conference-directories.md) durchgeführt wurde, um den Verzeichniseintrag abzurufen, der geändert wird.
 
-Dieses Fragment geht auch davon aus, dass es sich nicht um eine Multicast Konferenz handelt. Zum Ändern der Zeiten einer Multicast Konferenz ist eine Benachrichtigung über den Multicast Adress Zuordnungs Server erforderlich. Ein Beispiel für das Arbeiten mit der Multicast Adressierung finden Sie unter Abrufen [einer Multicast Adresse](acquiring-a-multicast-address.md) .
+Dieses Fragment geht auch davon aus, dass es sich nicht um eine Multicastkonferenz handelt. Zum Ändern der Zeiten auf einer Multicastkonferenz ist eine Benachrichtigung des Multicastadresszuordnungsservers erforderlich. Ein Beispiel für die Arbeit mit Multicastadressierung finden Sie unter [Abrufen einer Multicastadresse.](acquiring-a-multicast-address.md)
 
 
 ```C++
@@ -32,7 +32,7 @@ Dieses Fragment geht auch davon aus, dass es sich nicht um eine Multicast Konfer
 
 <dl> <dt>
 
-[**Itdirectoryobjectconference**](/windows/desktop/api/Rend/nn-rend-itdirectoryobjectconference)
+[**ITDirectoryObjectConference**](/windows/desktop/api/Rend/nn-rend-itdirectoryobjectconference)
 </dt> </dl>
 
  

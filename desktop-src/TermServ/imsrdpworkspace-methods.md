@@ -1,30 +1,30 @@
 ---
-title: Imsrdpworkspace-Methoden
-description: Die imsrdpworkspace-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: IMsRdpWorkspace-Methoden
+description: Die IMsRdpWorkspace-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 0D644952-8EC4-41BB-ABD1-C3461C11045B
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 622c524457150e83694d3fe2f39f99c729d04786
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a71a79cef45f0ef2c9e7354797bac23d29f2a83263ceb9a4556b5632e55a9e47
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106342351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513225"
 ---
-# <a name="imsrdpworkspace-methods"></a>Imsrdpworkspace-Methoden
+# <a name="imsrdpworkspace-methods"></a>IMsRdpWorkspace-Methoden
 
-Die [**imsrdpworkspace**](imsrdpworkspace.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IMsRdpWorkspace-Schnittstelle**](imsrdpworkspace.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Clearworkspacecredential-Methode**](/previous-versions/windows/desktop/legacy/ee351596(v=vs.85))
--   [**Disconnectworkspace-Methode**](/previous-versions/windows/desktop/legacy/ee351597(v=vs.85))
--   [**Isworkspacecredentialspezifikmethode**](/previous-versions/windows/desktop/legacy/ee351598(v=vs.85))
--   [**Isworkspacessoaktivierte Methode**](/previous-versions/windows/desktop/legacy/ee351599(v=vs.85))
--   [**Onauthenticated-Methode**](/previous-versions/windows/desktop/legacy/ee351600(v=vs.85))
--   [**Startworkspace-Methode**](/previous-versions/windows/desktop/legacy/ee351601(v=vs.85))
+-   [**ClearWorkspaceCredential-Methode**](/previous-versions/windows/desktop/legacy/ee351596(v=vs.85))
+-   [**DisconnectWorkspace-Methode**](/previous-versions/windows/desktop/legacy/ee351597(v=vs.85))
+-   [**IsWorkspaceCredentialSpecified-Methode**](/previous-versions/windows/desktop/legacy/ee351598(v=vs.85))
+-   [**IsWorkspaceSSOEnabled-Methode**](/previous-versions/windows/desktop/legacy/ee351599(v=vs.85))
+-   [**OnAuthenticated-Methode**](/previous-versions/windows/desktop/legacy/ee351600(v=vs.85))
+-   [**StartWorkspace-Methode**](/previous-versions/windows/desktop/legacy/ee351601(v=vs.85))
 
- 
+ 
 
- 
+ 

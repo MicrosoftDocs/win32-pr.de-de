@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ memoryoncard-Klasse ordnet physischen Speicher zu, der sich auf hostingboards, Adapterkarten usw. befindet. Diese Zuordnung definiert explizit die Beziehung Zwischenspeicher und Karten.
+description: Die CIM \_ MemoryOnCard-Klasse ordnet physischen Speicher zu, der sich auf Hostboards, Adapterkarten und so weiter befindet. Diese Zuordnung definiert explizit die Beziehung zwischen Arbeitsspeicher und Karten.
 ms.assetid: 0d094cad-c542-4794-b6e1-87cdc8067668
 ms.tgt_platform: multiple
 title: CIM_MemoryOnCard-Klasse
@@ -17,23 +17,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 2094101ab0cbbbc769194793273bf080cfe52818
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a07a8894e237be24a4c7b49e8491278ffb9e9ea82109fee00c27fc4eb9d5fcb5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340124"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119506790"
 ---
-# <a name="cim_memoryoncard-class"></a>CIM \_ memoryoncard-Klasse
+# <a name="cim_memoryoncard-class"></a>CIM \_ MemoryOnCard-Klasse
 
-Die **CIM \_ memoryoncard** -Klasse ordnet physischen Speicher zu, der sich auf hostingboards, Adapterkarten usw. befindet. Diese Zuordnung definiert explizit die Beziehung Zwischenspeicher und Karten.
+Die **CIM \_ MemoryOnCard-Klasse** ordnet physischen Speicher zu, der sich auf Hostboards, Adapterkarten und so weiter befindet. Diese Zuordnung definiert explizit die Beziehung zwischen Arbeitsspeicher und Karten.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,44 +49,44 @@ class CIM_MemoryOnCard : CIM_PackagedComponent
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ memoryoncard** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ MemoryOnCard-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ memoryoncard** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ MemoryOnCard-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Karte**
+Datentyp: **\_ CIM-Karte**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("GroupComponent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Eine [**CIM- \_ Karte**](cim-card.md) , die die Karte beschreibt, die den Arbeitsspeicher enthält oder enthält.
+Eine [**\_ CIM-Karte,**](cim-card.md) die die Karte beschreibt, die den Speicher oder "enthält".
 
 </dd> <dt>
 
-**Locationwithincontainer**
+**LocationWithinContainer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die die Positionierung des physischen Elements innerhalb des physischen Pakets darstellt. Informationen in Bezug auf die stationären Elemente im Container (z. b. "Second Drive Bay from the Top"), Winkel, Höhen und andere Daten können in dieser Eigenschaft aufgezeichnet werden. Diese Zeichenfolge kann anstelle der Instanziierung des [**CIM- \_ Speicherort**](cim-location.md) Objekts ergänzt oder verwendet werden.
+Freiformzeichenfolge, die die Positionierung des physischen Elements innerhalb des physischen Pakets darstellt. Informationen relativ zu den stationären Elementen im Container (z. B. "Zweiter Laufwerksschacht von oben"), Winkel, Höhe und andere Daten können in dieser Eigenschaft aufgezeichnet werden. Diese Zeichenfolge kann das CIM Location-Objekt ergänzen oder verwenden, statt [**es \_ zu**](cim-location.md) instanziieren.
 
-Diese Eigenschaft wird vom [**CIM- \_ Container**](cim-container.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Container geerbt.**](cim-container.md)
 
 </dd> <dt>
 
@@ -99,20 +99,20 @@ Datentyp: **CIM \_ PhysicalMemory**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Ein [**CIM- \_ PhysicalMemory**](cim-physicalmemory.md) , der den physischen Speicher beschreibt, der sich auf der Karte befindet.
+Ein [**CIM \_ PhysicalMemory,**](cim-physicalmemory.md) das den physischen Speicher beschreibt, der sich auf der Karte befindet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ memoryoncard** -Klasse wird von [**CIM \_ packagedcomponent**](cim-packagedcomponent.md)abgeleitet.
+Die **CIM \_ MemoryOnCard-Klasse** wird von [**CIM \_ PackagedComponent abgeleitet.**](cim-packagedcomponent.md)
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,8 +122,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -132,7 +132,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM \_ packagedcomponent**](cim-packagedcomponent.md)
+[**CIM \_ PackagedComponent**](cim-packagedcomponent.md)
 </dt> </dl>
 
  

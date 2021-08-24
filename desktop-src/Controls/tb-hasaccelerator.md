@@ -1,9 +1,9 @@
 ---
-title: TB_HASACCELERATOR Meldung (kommstrg. h)
-description: Ruft die Anzahl der Symbolleisten Schaltflächen ab, die über das angegebene Zugriffstasten Zeichen verfügen.
+title: TB_HASACCELERATOR Meldung (Commctrl.h)
+description: Ruft die Anzahl der Symbolleistenschaltflächen ab, die das angegebene Zugriffstastenzeichen aufweisen.
 ms.assetid: 41167815-fb64-4203-a32c-b2a88ce7bce1
 keywords:
-- Windows-Steuerelemente für TB_HASACCELERATOR Meldung
+- TB_HASACCELERATOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2544eae629876e4527ea4e47477b50ea59b796c8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 420f06e71c6920c266c96d8b2580549fa0eaace2bd3abdd37524502d4039aa7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078284"
 ---
-# <a name="tb_hasaccelerator-message"></a>TB- \_ hasaccelerator-Meldung
+# <a name="tb_hasaccelerator-message"></a>\_TB-HASACCELERATOR-Nachricht
 
-\[Zur internen Verwendung vorgesehen. wird nicht für die Verwendung in Anwendungen empfohlen. Diese Meldung wird möglicherweise in zukünftigen Versionen von Windows nicht mehr unterstützt.\]
+\[Für die interne Verwendung vorgesehen; nicht für die Verwendung in Anwendungen empfohlen. Diese Meldung wird in zukünftigen Versionen von Windows möglicherweise nicht mehr unterstützt.\]
 
-Ruft die Anzahl der Symbolleisten Schaltflächen ab, die über das angegebene Zugriffstasten Zeichen verfügen.
+Ruft die Anzahl der Symbolleistenschaltflächen ab, die das angegebene Zugriffstastenzeichen aufweisen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,14 +34,14 @@ Ruft die Anzahl der Symbolleisten Schaltflächen ab, die über das angegebene Zu
 *wParam* 
 </dt> <dd>
 
-Ein **WCHAR** , das das zu überprüfende Eingabe Beschleunigungs Zeichen darstellt.
+Ein **WCHAR,** der das zu testde eingabetastenzeichen darstellt.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf einen **int** -Wert, der die Anzahl der Schaltflächen mit dem Zugriffstasten-Zeichen empfängt.
+Zeiger auf einen Wert vom Typ int, der die Anzahl der Schaltflächen mit dem Zugriffstastenzeichen **empfängt.**
 
 </dd> </dl>
 
@@ -51,11 +51,11 @@ Der Rückgabewert wird nicht verwendet.
 
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit
 
-Die Verwendung dieser Nachricht kann die Sicherheit des Programms beeinträchtigen.
+Die Verwendung dieser Meldung kann die Sicherheit Ihres Programms gefährden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zuerst fragt das System alle Symbolleisten Schaltflächen für übereinstimmende Acceleratoren ab. Wenn keine Übereinstimmungen gefunden werden, sendet das System die [TBN \_ mapaccelerator](tbn-mapaccelerator.md) -Benachrichtigung an das übergeordnete Fenster und fordert den Index der Schaltfläche an, die über das angegebene Zugriffstasten Zeichen verfügt. Wenn das übergeordnete Element einen Index bereitstellt, wird die Anzahl auf 1 festgelegt.
+Zunächst fragt das System alle Symbolleistenschaltflächen nach übereinstimmenden Zugriffstasten ab. Wenn keine Übereinstimmungen gefunden werden, sendet das System die [ \_ TBN-MAPACCELERATOR-Benachrichtigung](tbn-mapaccelerator.md) an das übergeordnete Fenster und fordert den Index der Schaltfläche mit dem angegebenen Zugriffstastenzeichen an. Wenn das übergeordnete Element einen Index bereitstellt, wird die Anzahl auf 1 festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Zuerst fragt das System alle Symbolleisten Schaltflächen für übereinstimmende
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

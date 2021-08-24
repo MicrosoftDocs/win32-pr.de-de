@@ -1,7 +1,7 @@
 ---
-description: 'Die Clone-Methode erstellt eine Kopie des Enumerators mit dem gleichen Enumerationszustand. Diese Methode implementiert die iumumpins:: Clone-Methode.'
+description: Die Clone-Methode erstellt eine Kopie des Enumerators mit dem gleichen Enumerationszustand. Diese Methode implementiert die IEnumPins::Clone-Methode.
 ms.assetid: 6e44c970-b90a-4bdb-8c60-dd8f31516249
-title: Cenumpins. Clone-Methode (amfilter. h)
+title: CEnumPins.Clone-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2aa3e4604b260779a5d203e75e8e0790a7378b11
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9a0d14f0caf30f6037d53639ff54d2e21d6d0fb0eee5cfa493aba248e84d48e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119688610"
 ---
-# <a name="cenumpinsclone-method"></a>Cenumpins. Clone-Methode
+# <a name="cenumpinsclone-method"></a>CEnumPins.Clone-Methode
 
-Die- `Clone` Methode erstellt eine Kopie des Enumerators mit dem gleichen Enumerationszustand. Diese Methode implementiert die [**iumumpins:: Clone**](/windows/desktop/api/Strmif/nf-strmif-ienumpins-clone) -Methode.
+Die `Clone` -Methode erstellt eine Kopie des Enumerators mit dem gleichen Enumerationszustand. Diese Methode implementiert die [**IEnumPins::Clone-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ienumpins-clone)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,22 +45,22 @@ HRESULT Clone(
 *ppEnum* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die [**iumumpins**](/windows/desktop/api/Strmif/nn-strmif-ienumpins) -Schnittstelle des neuen Enumerators empfängt.
+Adresse einer Variablen, die einen Zeiger auf die [**IEnumPins-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ienumpins) des neuen Enumerators empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                                                            |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Erfolg.<br/>                                                                    |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>              | Nicht genügend Arbeitsspeicher.<br/>                                                        |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>                  | **Null** -Zeigerargument.<br/>                                                  |
-| <dl> <dt>**VFW \_ E \_ Enum \_ nicht \_ \_ synchron**</dt> </dl> | Der Zustand des Filters wurde geändert und ist nun inkonsistent mit dem Enumerator.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>              | Nicht genügend Arbeitsspeicher.<br/>                                                        |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>                  | **NULL-Zeigerargument.**<br/>                                                  |
+| <dl> <dt>**VFW \_ E \_ ENUM \_ OUT \_ OF \_ SYNC**</dt> </dl> | Der Status des Filters hat sich geändert und ist nun mit dem Enumerator inkonsistent.<br/> |
 
 
 
@@ -72,8 +72,8 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -81,7 +81,7 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 <dl> <dt>
 
-[**Cenumpins-Klasse**](cenumpins.md)
+[**CEnumPins-Klasse**](cenumpins.md)
 </dt> </dl>
 
  

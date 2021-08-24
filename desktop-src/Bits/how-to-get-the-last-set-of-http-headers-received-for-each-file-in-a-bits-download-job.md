@@ -1,23 +1,23 @@
 ---
-title: So erhalten Sie den letzten Satz von HTTP-Headern, die für jede Datei in einem Bits-Download Auftrag empfangen wurden
-description: In diesem Beispiel wird gezeigt, wie die GetProperty-Methode der neuen IBackgroundCopyJob5-Schnittstelle verwendet wird, um die letzten festgelegten HTTP-Header für jede Datei in einem Background Intelligent Transfer Service (Bits)-Download Auftrag abzurufen.
+title: Abrufen des letzten Satzes von HTTP-Headern, die für jede Datei in einem BITS-Downloadauftrag empfangen wurden
+description: In diesem Beispiel wird gezeigt, wie Sie die GetProperty-Methode der neuen IBackgroundCopyJob5-Schnittstelle verwenden, um die zuletzt empfangenen HTTP-Header für jede Datei in einem BITS-Downloadauftrag (Background Intelligent Transfer Service) abzurufen.
 ms.assetid: 38808AB2-0D7A-46C6-A666-F3E0DB8A3009
 keywords:
-- Herunterladen von Bits, HTTP-Header
+- Herunterladen von BITS, HTTP-Header
 ms.topic: article
 ms.date: 10/04/2018
-ms.openlocfilehash: 0b7858d5b2467f52681b325e2bfbe65b96889e0d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 92e9fe2c1671d26854da119938b426bc662324fe701d7f24d1885ff7b88e2df1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206359"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119528529"
 ---
-# <a name="how-to-get-the-last-set-of-http-headers-received-for-each-file-in-a-bits-download-job"></a>So erhalten Sie den letzten Satz von HTTP-Headern, die für jede Datei in einem Bits-Download Auftrag empfangen wurden
+# <a name="how-to-get-the-last-set-of-http-headers-received-for-each-file-in-a-bits-download-job"></a>Abrufen des letzten Satzes von HTTP-Headern, die für jede Datei in einem BITS-Downloadauftrag empfangen wurden
 
-In diesem Beispiel wird gezeigt, wie die [**GetProperty**](/windows/desktop/api/Bits5_0/nf-bits5_0-ibackgroundcopyjob5-getproperty) -Methode der neuen [**IBackgroundCopyJob5**](/windows/desktop/api/Bits5_0/nn-bits5_0-ibackgroundcopyjob5) -Schnittstelle verwendet wird, um die letzten festgelegten HTTP-Header für jede Datei in einem Background Intelligent Transfer Service (Bits)-Download Auftrag abzurufen. Die Informationen im HTTP-Header können z. b. verwendet werden, um den Dateityp oder den Zeitpunkt der letzten Änderung auf dem Server zu ermitteln. Vor Windows 8 und Windows Server 2012 bot Bits keine Methode, mit der die Anwendung die HTTP-Antwortheader eines abgeschlossenen Downloads abrufen und überprüfen konnte. Dieses Beispiel zeigt, wie Sie mit der Bits-API einen BITS-Auftrag mit mehreren zu ladenden URLs erstellen, die URLs in einem Auftrag auflisten und die HTTP-Antwortheader für jede URL abrufen.
+In diesem Beispiel wird gezeigt, wie Sie die [**GetProperty-Methode**](/windows/desktop/api/Bits5_0/nf-bits5_0-ibackgroundcopyjob5-getproperty) der neuen [**IBackgroundCopyJob5-Schnittstelle**](/windows/desktop/api/Bits5_0/nn-bits5_0-ibackgroundcopyjob5) verwenden, um die zuletzt empfangenen HTTP-Header für jede Datei in einem BITS-Downloadauftrag (Background Intelligent Transfer Service) abzurufen. Die Informationen im HTTP-Header können beispielsweise verwendet werden, um den Dateityp zu bestimmen oder zu bestimmen, wann er sich zuletzt auf dem Server geändert hat. Vor Windows 8 und Windows Server 2012 stellte BITS keine Möglichkeit bereit, mit der die Anwendung die HTTP-Antwortheader eines abgeschlossenen Downloads abrufen und untersuchen konnte. In diesem Beispiel wird gezeigt, wie Sie die BITS-API verwenden, um einen BITS-Auftrag mit mehreren URLs zum Herunterladen zu erstellen, die URLs in einem Auftrag aufzulisten und die HTTP-Antwortheader für jede URL abzurufen.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
@@ -27,9 +27,9 @@ In diesem Beispiel wird gezeigt, wie die [**GetProperty**](/windows/desktop/api/
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-include-the-required-bits-header-files"></a>Schritt 1: einschließen der erforderlichen Bits-Header Dateien
+### <a name="step-1-include-the-required-bits-header-files"></a>Schritt 1: Einschließen der erforderlichen BITS-Headerdateien
 
-Fügen Sie die folgenden Header Direktiven am Anfang der Quelldatei ein.
+Fügen Sie die folgenden Headerdirektiven am Anfang der Quelldatei ein.
 
 
 ```C++
@@ -38,9 +38,9 @@ Fügen Sie die folgenden Header Direktiven am Anfang der Quelldatei ein.
 
 
 
-### <a name="step-2-initialize-com-and-instantiate-a-bits-background-copy-manager-object-interface"></a>Schritt 2: Initialisieren von com und Instanziieren einer BITS-Background-Kopier-Manager-Objektschnittstelle
+### <a name="step-2-initialize-com-and-instantiate-a-bits-background-copy-manager-object-interface"></a>Schritt 2: Initialisieren von COM und Instanziieren einer Bits-Hintergrundkopie-Manager-Objektschnittstelle
 
-Vor dem Instanziieren der [**ibackgroundcopymanager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) -Schnittstelle (die zum Erstellen eines Bits-Auftrags verwendet wird) müssen Sie com initialisieren und das gewünschte com-Threading Modell festlegen.
+Vor dem Instanziieren der [**IBackgroundCopyManager-Schnittstelle**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) (zum Erstellen eines BITS-Auftrags) müssen Sie COM initialisieren und das gewünschte COM-Threadingmodell festlegen.
 
 
 ```C++
@@ -60,7 +60,7 @@ if (SUCCEEDED(hr))
 
 
 
-### <a name="step-3-create-the-bits-job"></a>Schritt 3: Erstellen des Bits-Auftrags
+### <a name="step-3-create-the-bits-job"></a>Schritt 3: Erstellen des BITS-Auftrags
 
 Nur der Benutzer, der den Auftrag erstellt, oder ein Benutzer mit Administratorrechten kann dem Auftrag Dateien hinzufügen und die Eigenschaften des Auftrags ändern.
 
@@ -114,9 +114,9 @@ for (int i=0; i < ARRAY_LENGTH(FileList); ++i)
 
 
 
-### <a name="step-5-start-the-bits-job"></a>Schritt 5: Starten des Bits-Auftrags
+### <a name="step-5-start-the-bits-job"></a>Schritt 5: Starten des BITS-Auftrags
 
-Nach dem Einrichten des Bits-Auftrags können Sie die Funktion " [**Resume**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-resume) " der [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstelle zum Starten oder Fortsetzen des Downloads abrufen.
+Rufen Sie nach dem Einrichten des BITS-Auftrags die [**Resume-Funktion**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-resume) der [**IBackgroundCopyJob-Schnittstelle**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) auf, um den Download zu starten oder fortzusetzen.
 
 
 ```C++
@@ -126,9 +126,9 @@ hr = pBackgroundJob->Resume();
 
 
 
-### <a name="step-6-monitor-and-display-the-bits-jobs-progress"></a>Schritt 6: überwachen und Anzeigen des Status des Bits-Auftrags
+### <a name="step-6-monitor-and-display-the-bits-jobs-progress"></a>Schritt 6: Überwachen und Anzeigen des Fortschritts des BITS-Auftrags
 
-Die `MonitorJobProgress` Hilfsfunktion nimmt ein [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Objekt als einzigen Parameter an und fragt den Auftrag für einen Status alle 500 Millisekunden ab. Diese Funktion wird erst zurückgegeben, wenn der Auftrag abgeschlossen oder abgebrochen wurde.
+Die `MonitorJobProgress` Hilfsfunktion verwendet ein [**IBackgroundCopyJob-Objekt**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) als einzigen Parameter und fragt den Auftrag alle 500 Millisekunden nach einem Status ab. Diese Funktion gibt erst dann zurück, wenn der Auftrag abgeschlossen oder abgebrochen wurde.
 
 
 ```C++
@@ -235,7 +235,7 @@ VOID DisplayProgress(__in IBackgroundCopyJob *Job)
 
 ### <a name="step-7-display-the-downloaded-file-headers"></a>Schritt 7: Anzeigen der heruntergeladenen Dateiheader
 
-Die `DisplayFileHeaders` Hilfsfunktion listet die Aufträge auf, die für ein [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Objekt definiert sind.
+Die `DisplayFileHeaders` Hilfsfunktion listet die für ein [**IBackgroundCopyJob-Objekt**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) definierten Aufträge auf.
 
 
 ```C++
@@ -305,7 +305,7 @@ HRESULT DisplayFileHeaders(__in IBackgroundCopyJob *Job)
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Codebeispiel ist eine voll Funktions volle Konsolenanwendung, die zeigt, wie Sie mit der Bits-API einen BITS-Auftrag mit mehreren URLs zum Herunterladen erstellen, die URLs in einem Auftrag auflisten und die HTTP-Antwortheader für jede URL abrufen.
+Das folgende Codebeispiel ist eine voll funktionsfähige Konsolenanwendung, die zeigt, wie Sie mithilfe der BITS-API einen BITS-Auftrag mit mehreren URLs zum Herunterladen erstellen, die URLs in einem Auftrag auflisten und die HTTP-Antwortheader für jede URL abrufen.
 
 
 ```C++
@@ -730,9 +730,9 @@ VOID DisplayError(__in IBackgroundCopyJob *Job)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

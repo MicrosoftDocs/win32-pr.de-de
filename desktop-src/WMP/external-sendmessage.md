@@ -1,11 +1,11 @@
 ---
-title: Extern. SendMessage-Methode
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Die SendMessage-Methode sendet eine Nachricht an das Plug-in des Online Stores.
+title: External.sendMessage-Methode
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die sendMessage-Methode sendet eine Nachricht an das Plug-In des Onlineshops.
 ms.assetid: 72d34dcc-3284-4446-804f-0fc93a7d8dab
 keywords:
-- SendMessage-Methode (Windows Media Player)
-- SendMessage-Methode, Windows Media Player, externe Klasse
-- Externe Klasse, Windows Media Player, SendMessage-Methode
+- sendMessage-Windows Media Player
+- sendMessage-Methode Windows Media Player , Externe Klasse
+- Externe Klasse Windows Media Player , sendMessage-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4648f3cf433a2828d3c97604ebf9ee6e7223b7f1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4985bae2f9170bdb0db1d6cdb995f2c14fe813bcb061485c179bc058539e84c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648360"
 ---
-# <a name="externalsendmessage-method"></a>Extern. SendMessage-Methode
+# <a name="externalsendmessage-method"></a>External.sendMessage-Methode
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **SendMessage** -Methode sendet eine Nachricht an das Plug-in des Online Stores.
+Die **sendMessage-Methode** sendet eine Nachricht an das Plug-In des Onlineshops.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,17 +48,17 @@ External.sendMessage(
 
 <dl> <dt>
 
- Meldung \[ in\]
+*Msg* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die die Meldung enthält.
+**Eine Zeichenfolge,** die die Meldung enthält.
 
 </dd> <dt>
 
-*Param* \[ in\]
+*Param* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** mit Parametern, die der Meldung zugeordnet sind.
+**Eine Zeichenfolge,** die der Meldung zugeordnete Parameter enthält.
 
 </dd> </dl>
 
@@ -66,9 +66,9 @@ External.sendMessage(
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Nachricht wird asynchron gesendet. Das heißt, dass diese Methode sofort zurückgegeben wird, anstatt darauf zu warten, dass die Nachricht verarbeitet wird. Wenn das Plug-in die Verarbeitung der Nachricht abgeschlossen hat, ruft es die [iwmpcontentpartnercallback:: sendmessagecomplete](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartnercallback-sendmessagecomplete) -Methode auf, die wiederum den [onsendmessagecomplete](external-onsendmessagecomplete-event.md) -Ereignishandler des Skripts aufruft.
+Die Nachricht wird asynchron gesendet. Das heißt, diese Methode gibt sofort zurück, anstatt auf die Verarbeitung der Nachricht zu warten. Wenn das Plug-In die Verarbeitung der Nachricht abgeschlossen hat, ruft es die [IWMPContentPartnerCallback::SendMessageComplete-Methode](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartnercallback-sendmessagecomplete) auf, die wiederum den [OnSendMessageComplete-Ereignishandler](external-onsendmessagecomplete-event.md) des Skripts aufruft.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,16 +85,16 @@ Die Nachricht wird asynchron gesendet. Das heißt, dass diese Methode sofort zur
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlinespeicher vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> <dt>
 
-[**Extern. onsendmessagecomplete**](external-onsendmessagecomplete-event.md)
+[**External.OnSendMessageComplete**](external-onsendmessagecomplete-event.md)
 </dt> <dt>
 
-[**Iwmpcontentpartner:: SendMessage**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-sendmessage)
+[**IWMPContentPartner::SendMessage**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-sendmessage)
 </dt> <dt>
 
-[**Iwmpcontentpartnercallback:: sendmessagecomplete**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartnercallback-sendmessagecomplete)
+[**IWMPContentPartnerCallback::SendMessageComplete**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartnercallback-sendmessagecomplete)
 </dt> </dl>
 
  

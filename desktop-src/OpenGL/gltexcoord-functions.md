@@ -1,28 +1,28 @@
 ---
-title: gltexcoord-Funktionen
+title: glTexCoord-Funktionen
 description: Diese Funktionen legen die aktuellen Texturkoordinaten fest.
 ms.assetid: 71eb39f1-e1ad-4b97-83e0-d2670f5a7545
 keywords:
-- OpenGL-, gltexcoord-Funktionen
-- OpenGL-Referenz, gltexcoord-Funktionen
-- Referenz für OpenGL, gltexcoord-Funktionen
-- gltexcoord-Funktionen
-- OpenGL, Textur Funktionen
-- OpenGL-Referenz, Textur Funktionen
-- Referenz für OpenGL, Textur Funktionen
-- Textur Funktionen
+- OpenGL,glTexCoord-Funktionen
+- OpenGL-Referenz,glTexCoord-Funktionen
+- Referenz für OpenGL,glTexCoord-Funktionen
+- glTexCoord-Funktionen
+- OpenGL,Texturfunktionen
+- OpenGL-Referenz,Texturfunktionen
+- Referenz für OpenGL,Texturfunktionen
+- Texturfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e3e9db3aa5a8aa62ba1e581d8a005c1ea6fa72d3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: efcfbd28098ec81e6518273f222f6b04c13cb8a0c0ecfcec97f039de8074e162
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119491470"
 ---
-# <a name="gltexcoord-functions"></a>gltexcoord-Funktionen
+# <a name="gltexcoord-functions"></a>glTexCoord-Funktionen
 
-Mit diesen Funktionen werden die aktuellen Texturkoordinaten festgelegt:
+Diese Funktionen legen die aktuellen Texturkoordinaten fest:
 
 -   [**glTexCoord1d**](gltexcoord1d.md)
 -   [**glTexCoord1f**](gltexcoord1f.md)
@@ -56,9 +56,9 @@ Mit diesen Funktionen werden die aktuellen Texturkoordinaten festgelegt:
 -   [**glTexCoord4iv**](gltexcoord4iv.md)
 -   [**glTexCoord4sv**](gltexcoord4sv.md)
 
- 
+ 
 
- 
+ 
 
 
 

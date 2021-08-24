@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_User_Config01_Authentication02-Klasse
-description: Die Benutzer Config01 Authentication02-Klasse der MDM- \_ Richtlinie \_ \_ \_ stellt die verfügbaren Authentifizierungs Verwaltungsrichtlinien dar.
+description: Die Mdm \_ Policy \_ User \_ Config01 \_ Authentication02-Klasse stellt die verfügbaren Authentifizierungsverwaltungsrichtlinien dar.
 ms.assetid: 66d94f97-07ea-4025-95f9-d55282df3661
 keywords:
 - MDM_Policy_User_Config01_Authentication02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 10d278ad679f97047d0a4cf7e95eeb2eee0695e5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: db9b794127f6085c44568b1671607f54dd58dd16a4af0a4756b6e913e39ca493
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956861"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694210"
 ---
-# <a name="mdm_policy_user_config01_authentication02-class"></a>MDM- \_ Richtlinien \_ Benutzer \_ Config01 \_ Authentication02-Klasse
+# <a name="mdm_policy_user_config01_authentication02-class"></a>MDM \_ Policy \_ User \_ Config01 \_ Authentication02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **\_ \_ Benutzer \_ Config01 \_ Authentication02-Klasse der MDM-Richtlinie** stellt die verfügbaren Authentifizierungs Verwaltungsrichtlinien dar.
+Die **Mdm Policy User \_ \_ \_ Config01 \_ Authentication02-Klasse** stellt die verfügbaren Authentifizierungsverwaltungsrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,17 +46,17 @@ class MDM_Policy_User_Config01_Authentication02
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Benutzer \_ Config01 \_ Authentication02-Klasse der MDM-Richtlinie** verfügt über diese Typen von Membern:
+Die **MDM Policy User \_ \_ \_ Config01 \_ Authentication02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Benutzer \_ Config01 \_ Authentication02-Klasse der MDM-Richtlinie** verfügt über diese Eigenschaften.
+Die **MDM Policy User \_ \_ \_ Config01 \_ Authentication02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Zuweisungen](/windows/client-management/mdm/policy-csp-authentication#authentication-alloweapcertsso)
+[AllowEAPCertSSO](/windows/client-management/mdm/policy-csp-authentication#authentication-alloweapcertsso)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -70,32 +70,32 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "Authentication".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "Authentication".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./User/Vendor/MSFT/Policy/config".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./User/Vendor/MSFT/Policy/Config".
 
 </dd> </dl>
 
@@ -105,10 +105,10 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -117,7 +117,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

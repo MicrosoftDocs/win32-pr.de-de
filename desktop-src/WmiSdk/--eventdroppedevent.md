@@ -1,5 +1,5 @@
 ---
-description: Stellt das Vorkommen eines Ereignisses dar, das gelöscht wird. Ein gelöschter Ereignis ist ein Ereignis, das nicht an einen Ereignisconsumer übermittelt wird.
+description: Stellt das Auftreten eines Ereignisses dar, das gelöscht wird. Ein gelöschtes Ereignis ist ein Ereignis, das nicht an einen Ereignisverbraucher übermittelt wird.
 ms.assetid: fae267a9-e0ec-43fa-a3c3-d50345775a1d
 ms.tgt_platform: multiple
 title: __EventDroppedEvent-Klasse
@@ -18,18 +18,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 4e9f68328a3c5c455c98e85a65d53156da6eeada
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 695381a3471dcc744cae10622ee9e7935b2770941a770bd0e4e4e93e591a9220
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051088"
 ---
-# <a name="__eventdroppedevent-class"></a>\_\_Eventdroppedevent-Klasse
+# <a name="__eventdroppedevent-class"></a>\_\_EventDroppedEvent-Klasse
 
-Die **\_ \_ eventdroppedevent** -System Klasse stellt das Vorkommen eines gelöschten Ereignisses dar. Ein gelöschter Ereignis ist ein Ereignis, das nicht an einen Ereignisconsumer übermittelt wird.
+Die **\_ \_ EventDroppedEvent-Systemklasse** stellt das Vorkommen eines Ereignisses dar, das gelöscht wird. Ein gelöschtes Ereignis ist ein Ereignis, das nicht an einen Ereignisverbraucher übermittelt wird.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,13 +45,13 @@ class __EventDroppedEvent : __SystemEvent
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ eventdroppedevent** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ EventDroppedEvent-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ eventdroppedevent** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ EventDroppedEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -68,50 +68,50 @@ Das Ereignis, das gelöscht wird.
 
 </dd> <dt>
 
-**Intendidconsumer**
+**IntendedConsumer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **\_ \_ eventconsumer**
+Datentyp: **\_ \_ EventConsumer**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf eine Instanz von [**\_ \_ eventconsumer**](--eventconsumer.md) , die den permanenten Consumer darstellt, den Sie für den Empfang eines Ereignisses identifizieren. Andere permanente Consumer, die ein Ereignis abonnieren, können weiterhin das Ereignis empfangen.
+Verweis auf eine Instanz von [**\_ \_ EventConsumer,**](--eventconsumer.md) die den permanenten Consumer darstellt, den Sie zum Empfangen eines Ereignisses identifizieren. Verschiedene permanente Consumer, die ein Ereignis abonnieren, können das Ereignis weiterhin empfangen.
 
 </dd> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSBESCHREIBUNG**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der von einem Ereignis Anbieter verwendet wird, um die Benutzer zu ermitteln, die ein Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Deskriptor, den ein Ereignisanbieter verwendet, um die Benutzer zu bestimmen, die ein Ereignis empfangen können. Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**TIME \_ CREATED**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der ein Ereignis generiert wird. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (koordinierte Weltzeit) vor. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem ein Ereignis generiert wird. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen haben das format koordinierte Weltzeit (UTC). Diese Eigenschaft wird von [**\_ \_ Ereignis**](--event.md)geerbt.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ eventdroppedevent** -Klasse wird von System [**\_ \_ Event**](--systemevent.md)abgeleitet.
+Die **\_ \_ EventDroppedEvent-Klasse** wird von [**\_ \_ SystemEvent**](--systemevent.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -129,10 +129,10 @@ Die **\_ \_ eventdroppedevent** -Klasse wird von System [**\_ \_ Event**](--syst
 
 <dl> <dt>
 
-[**\_\_System Event**](/windows/desktop/WmiSdk/--systemevent)
+[**\_\_SystemEvent**](/windows/desktop/WmiSdk/--systemevent)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

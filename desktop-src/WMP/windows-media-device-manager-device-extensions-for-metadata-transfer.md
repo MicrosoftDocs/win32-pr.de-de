@@ -1,68 +1,68 @@
 ---
-title: Windows Media Device Manager-Geräte Erweiterungen für die metadatenübertragung
-description: Windows Media Device Manager-Geräte Erweiterungen für die metadatenübertragung
+title: Windows Media Geräte-Manager-Geräteerweiterungen für die Metadatenübertragung
+description: Windows Media Geräte-Manager-Geräteerweiterungen für die Metadatenübertragung
 ms.assetid: c1d84225-b5b1-4f9e-8694-a229653e53de
 keywords:
-- Windows Media Player, Geräte Erweiterungen
-- Windows-Media Player, Erweiterungen
-- Windows-Media Player, Metadaten
-- Windows Media Player, beschleunigte metadatenübertragung
-- Windows Media Player, beschleunigte metadatenübertragung
-- Metadaten, Geräte Erweiterungen
-- Metadaten, Erweiterungen
-- Geräte Erweiterungen, metadatenübertragung
-- Erweiterungen, metadatenübertragung
-- beschleunigte metadatenübertragung
-- Metadaten, beschleunigte Übertragung
-- Geräte Erweiterungen, beschleunigte metadatenübertragung
-- Erweiterungen, beschleunigte metadatenübertragung
+- Windows Media Player,Geräteerweiterungen
+- Windows Media Player,Erweiterungen
+- Windows Media Player,Metadata
+- Windows Media Player,beschleunigte Metadatenübertragung
+- Windows Media Player,beschleunigte Metadatenübertragung
+- Metadaten,Geräteerweiterungen
+- Metadaten,Erweiterungen
+- Geräteerweiterungen,Metadatenübertragung
+- Erweiterungen,Metadatenübertragung
+- Beschleunigte Metadatenübertragung
+- Metadaten,beschleunigte Übertragung
+- Geräteerweiterungen, beschleunigte Metadatenübertragung
+- Erweiterungen, beschleunigte Metadatenübertragung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d85ff7026e3395338fdf048c54b8ff7401c9ee7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9a9b37271fc9714bf3665dccf1475da1a5840c429d7df9136a50fe95789f7a02
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119571635"
 ---
-# <a name="windows-media-device-manager-device-extensions-for-metadata-transfer"></a>Windows Media Device Manager-Geräte Erweiterungen für die metadatenübertragung
+# <a name="windows-media-device-manager-device-extensions-for-metadata-transfer"></a>Windows Media Geräte-Manager-Geräteerweiterungen für die Metadatenübertragung
 
-Zum Aktivieren der beschleunigten metadatenübertragung müssen Hersteller von Geräten, die MTP nicht unterstützen, im Quellcode folgende Aktionen ausführen:
+Um die beschleunigte Metadatenübertragung zu aktivieren, müssen Hersteller von Geräten, die MTP nicht unterstützen, folgende Schritte im Quellcode ausführen:
 
--   Definieren der **WMP- \_ WMDM- \_ Geräte \_ Unterstützung**.
--   Fügen Sie wmpdevices. h ein, das als Teil des Windows Media Player SDK installiert wird.
+-   Definieren **Sie WMP \_ WMDM DEVICE SUPPORT (WMP-WMDM-GERÄTEUNTERSTÜTZUNG). \_ \_**
+-   Schließen Sie wmpdevices.h ein, die als Teil des Windows Media Player SDK installiert wird.
 
-Wmpdevices. h definiert die folgenden Strukturen.
+Wmpdevices.h definiert die folgenden Strukturen.
 
 
 
-| Struktur                                                                                 | BESCHREIBUNG                                                                                                                                       |
+| Struktur                                                                                 | Beschreibung                                                                                                                                       |
 |-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| [WMP \_ WMDM \_ - \_ \_ metadatenroundtrip \_ PC2DEVICE](/previous-versions/windows/desktop/api/wmpdevices/ns-wmpdevices-wmp_wmdm_metadata_round_trip_pc2device) | Struktur, die von Windows-Media Player verwendet wird, um beschleunigte Metadaten-Synchronisierungs Informationen von tragbaren Geräten anzufordern, die MTP nicht unterstützen. |
-| [WMP \_ WMDM \_ - \_ \_ metadatenroundtrip \_ DEVICE2PC](/previous-versions/windows/desktop/api/wmpdevices/ns-wmpdevices-wmp_wmdm_metadata_round_trip_device2pc) | Struktur, die von Windows Media Player verwendet wird, um beschleunigte Metadaten-Synchronisierungs Informationen von tragbaren Geräten zu empfangen, die MTP nicht unterstützen. |
+| [WMP \_ WMDM \_ METADATA \_ ROUND \_ TRIP \_ PC2DEVICE](/previous-versions/windows/desktop/api/wmpdevices/ns-wmpdevices-wmp_wmdm_metadata_round_trip_pc2device) | Struktur, die von Windows Media Player zum Anfordern von Informationen zur beschleunigten Metadatensynchronisierung von portablen Geräten verwendet wird, die MTP nicht unterstützen. |
+| [WMP \_ WMDM \_ METADATA \_ ROUND \_ TRIP \_ DEVICE2PC](/previous-versions/windows/desktop/api/wmpdevices/ns-wmpdevices-wmp_wmdm_metadata_round_trip_device2pc) | Struktur, die von Windows Media Player zum Empfangen von Informationen zur beschleunigten Metadatensynchronisierung von portablen Geräten verwendet wird, die MTP nicht unterstützen. |
 
 
 
- 
+ 
 
-Um Informationen von dem Gerät über geänderte Metadaten anzufordern, ruft Windows Media Player 10 oder höher die Windows Media Device Manager-Methode **IWMDMDevice3::D eviceiocontrol** auf. Wenn Sie diesen Befehl ausführen, befolgt der Player bestimmte Schritte wie folgt:
+Zum Anfordern von Informationen über geänderte Metadaten vom Gerät ruft Windows Media Player 10 oder höher die Windows Media Geräte-Manager-Methode **IWMDMDevice3::D eviceIoControl auf.** Bei diesem Aufruf folgt der Player den folgenden spezifischen Schritten:
 
--   Der erste Parameter, *dwIoControlCode*, enthält die Konstante **IOCTL \_ WMP \_ Metadata \_ \_ Roundtrip**. Diese Konstante ist in wmpdevices. h definiert.
--   Der zweite Parameter, *lpinbuffer*, verweist auf eine **WMP- \_ WMDM- \_ \_ metadatenroundtrip \_ \_ PC2DEVICE** -Struktur.
--   Der dritte Parameter *nInBufferSize* enthält die Größe des Eingabe Puffers.
--   Der vierte Parameter, *lpoutbuffer*, verweist auf eine **WMP- \_ WMDM- \_ \_ metadatenroundtrip \_ \_ DEVICE2PC** -Struktur. Das Gerät muss diese Struktur mit Informationen zu Änderungen ausfüllen.
--   Der fünfte Parameter, *pnoutbuffersize*, empfängt die Größe des Ausgabepuffers.
+-   Der erste Parameter *dwIoControlCode enthält* die Konstante **IOCTL \_ WMP \_ METADATA ROUND \_ \_ TRIP.** Diese Konstante wird in wmpdevices.h definiert.
+-   Der zweite Parameter *lpInBuffer verweist* auf eine **WMP \_ WMDM \_ METADATA ROUND TRIP \_ \_ \_ PC2DEVICE-Struktur.**
+-   Der dritte Parameter, *nInBufferSize,* enthält die Größe des Eingabepuffers.
+-   Der vierte Parameter, *lpOutBuffer,* verweist auf eine **WMP \_ WMDM \_ METADATA ROUND TRIP \_ \_ \_ DEVICE2PC-Struktur.** Das Gerät muss diese Struktur mit Informationen zu Änderungen füllen.
+-   Der fünfte Parameter, *pnOutBufferSize,* empfängt die Größe des Ausgabepuffers.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Geräte Erweiterungen für die beschleunigte metadatenübertragung**](device-extensions-for-accelerated-metadata-transfer.md)
+[**Geräteerweiterungen für die beschleunigte Metadatenübertragung**](device-extensions-for-accelerated-metadata-transfer.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

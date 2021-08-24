@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmlicense getinclusionlist-Methode (wmdrmsdk. h)
-description: Die getinclusionlist-Methode ruft die gesamte Inklusions Liste für die aktuelle Lizenz oder Lizenz Kette ab.
+title: IWMDRMLicense GetInclusionList-Methode (Wmdrmsdk.h)
+description: Die GetInclusionList-Methode ruft die gesamte Aufnahmeliste für die aktuelle Lizenz oder Lizenzkette ab.
 ms.assetid: a3cb70c5-7d20-413c-aeb8-66c9233b384e
 keywords:
-- Getinclusionlist-Methode, Windows Media-Format
-- Getinclusionlist-Methode, Windows Media-Format, iwmdrmlicense-Schnittstelle
-- Iwmdrmlicense-Schnittstelle Windows Media-Format, getinclusionlist-Methode
+- GetInclusionList-Methode windows Media Format
+- GetInclusionList-Methode windows Media Format, IWMDRMLicense-Schnittstelle
+- IWMDRMLicense-Schnittstelle windows Media Format , GetInclusionList-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f0d2837a4bb84c07214cce3e4fbc3d4d96b9583
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6389ac30d5bffeb6ad354ec6c7e83f2834921fe8fb83c1abe2bca2d0c2f43bfd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119705240"
 ---
-# <a name="iwmdrmlicensegetinclusionlist-method"></a>Iwmdrmlicense:: getinclusionlist-Methode
+# <a name="iwmdrmlicensegetinclusionlist-method"></a>IWMDRMLicense::GetInclusionList-Methode
 
-Die **getinclusionlist** -Methode ruft die gesamte Inklusions Liste für die aktuelle Lizenz oder Lizenz Kette ab.
+Die **GetInclusionList-Methode** ruft die gesamte Aufnahmeliste für die aktuelle Lizenz oder Lizenzkette ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,23 +44,23 @@ HRESULT GetInclusionList(
 
 <dl> <dt>
 
-*ppguids* \[ vorgenommen\]
+*ppGuids* \[ out\]
 </dt> <dd>
 
-Empfängt ein Array von GUIDs, das die enthaltenen Technologien identifiziert.
+Empfängt ein Array von GUIDs, die die enthaltenen Technologien identifizieren.
 
 </dd> <dt>
 
-*pcguids* \[ vorgenommen\]
+*pcGuids* \[ out\]
 </dt> <dd>
 
-Empfängt die Anzahl der Elemente im *ppguids* -Array. Das Array wird mithilfe von **cotaskmemzuzuordnungs** zugeordnet. Wenn Sie mit der Liste fertig sind, geben Sie den Arbeitsspeicher frei, indem Sie **CoTaskMemFree** aufrufen.
+Empfängt die Anzahl der Elemente im *ppGuids-Array.* Das Array wird mithilfe von **CoTaskMemAlloc zugeordnet.** Wenn Sie mit der Liste fertig sind, geben Sie den Arbeitsspeicher frei, indem **Sie CoTaskMemFree aufrufen.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -72,9 +72,9 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dem Lizenz Aussteller können andere Schutzsysteme angegeben werden, in die der verschlüsselte Inhalt konvertiert werden kann. Die Liste der von dieser Methode abgerufenen GUIDs identifiziert die zulässigen Schutzsysteme. Wenn Sie in einen Lizenzvertrag von Microsoft eingeben, um die stubbibliothek zu erhalten, erhalten Sie eine Liste der derzeit unterstützten Schutzsysteme und die GUIDs, die zur Identifizierung verwendet werden.
+Der Lizenzaussteller kann andere Schutzsysteme angeben, in die der verschlüsselte Inhalt konvertiert werden kann. Die Liste der von dieser Methode abgerufenen GUIDs identifiziert die zulässigen Schutzsysteme. Wenn Sie einen Lizenzvertrag mit Microsoft zum Erhalten der Stubbibliothek unterzeichnet haben, erhalten Sie eine Liste der derzeit unterstützten Schutzsysteme und die GUIDs, mit denen sie identifiziert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,8 +82,8 @@ Mit dem Lizenz Aussteller können andere Schutzsysteme angegeben werden, in die 
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
@@ -91,10 +91,10 @@ Mit dem Lizenz Aussteller können andere Schutzsysteme angegeben werden, in die 
 
 <dl> <dt>
 
-[**Explizite Autorisierungs-und Inklusions Listen**](explicit-authorization-and-inclusion-lists.md)
+[**Explizite Autorisierungs- und Einschlusslisten**](explicit-authorization-and-inclusion-lists.md)
 </dt> <dt>
 
-[**Iwmdrmlicense-Schnittstelle**](iwmdrmlicense.md)
+[**IWMDRMLicense-Schnittstelle**](iwmdrmlicense.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Die SubpictureStreamsAvailable-Eigenschaft ruft die Anzahl der im aktuellen Titel verfügbaren Unterbildstreams ab.
+description: Die SubpictureStreamsAvailable-Eigenschaft ruft die Anzahl der im aktuellen Titel verfügbaren Unterbilddatenströme ab.
 ms.assetid: 6a6d9d15-2f56-47fc-a7bb-2cf33f384f41
 title: SubpictureStreamsAvailable-Eigenschaft
 ms.topic: reference
@@ -18,7 +18,7 @@ ms.locfileid: "119633440"
 
  
 
-Die -Eigenschaft ruft die Anzahl der im aktuellen Titel verfügbaren `SubpictureStreamsAvailable` Unterbildstreams ab.
+Die `SubpictureStreamsAvailable` -Eigenschaft ruft die Anzahl der im aktuellen Titel verfügbaren Teilbilddatenströme ab.
 
 ``` syntax
 [ iStreams = ] MSWebDVD.SubpictureStreamsAvailable
@@ -30,9 +30,9 @@ Gibt die Anzahl der verfügbaren Streams als ganze Zahl zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist schreibgeschützt und hat keinen Standardwert. Um jeden Stream nach seinem Sprachattribut abfragt, rufen Sie zuerst diese Methode auf, um die Obergrenze zu erhalten.
+Diese Eigenschaft ist schreibgeschützt und hat keinen Standardwert. Um jeden Stream nach seinem Sprachattribut abzufragen, rufen Sie zunächst diese Methode auf, um die Obergrenze abzurufen.
 
-Die Datenstromnummerierung basiert auf null.
+Die Streamnummerierung ist nullbasiert.
 
  
 

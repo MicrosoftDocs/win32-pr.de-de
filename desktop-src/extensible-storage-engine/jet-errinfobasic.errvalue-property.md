@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_ERRINFOBASIC. errvalue-Eigenschaft'
-title: JET_ERRINFOBASIC. errvalue-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen zu: JET_ERRINFOBASIC.errValue-Eigenschaft'
+title: JET_ERRINFOBASIC.errValue-Eigenschaft (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'errValue property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Windows8.JET_ERRINFOBASIC.errValue
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.jet_errinfobasic.errvalue(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e4ecdc72c98494e84e11baad5d4df8d868448576
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2acc466eb3616f6488dbf7396b8c739d9635a342e5fb5e405302ed6444681921
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119667780"
 ---
-# <a name="jet_errinfobasicerrvalue-property"></a>JET_ERRINFOBASIC. errvalue (Eigenschaft)
+# <a name="jet_errinfobasicerrvalue-property"></a>JET_ERRINFOBASIC.errValue-Eigenschaft
 
-Ruft den Fehlerwert für die angeforderte Informationsebene ab oder legt ihn fest.
+Ruft den Fehlerwert für die angeforderte Infoebene ab oder legt den Wert fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public JET_err errValue { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_err](./jet-err-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_err](./jet-err-enumeration.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_ERRINFOBASIC-Klasse](./jet-errinfobasic-class.md)
 
-[Mitglieder JET_ERRINFOBASIC](./jet-errinfobasic-members.md)
+[JET_ERRINFOBASIC-Member](./jet-errinfobasic-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

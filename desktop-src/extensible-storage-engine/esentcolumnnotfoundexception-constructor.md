@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentcolumnnotfoundexception-Konstruktor'
-title: Esentcolumnnotfoundexception-Konstruktor
+description: 'Weitere Informationen zu: EsentColumnNotFoundException-Konstruktor'
+title: EsentColumnNotFoundException-Konstruktor
 TOCTitle: 'EsentColumnNotFoundException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentColumnNotFoundException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcolumnnotfoundexception.esentcolumnnotfoundexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f643bfa0619d78331623747c8691945448fbbf68
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7182f73c5fd049f243bdcef389b14e7dcbfe80ed78414fe026145b1b2a7eebab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119621910"
 ---
-# <a name="esentcolumnnotfoundexception-constructor"></a>Esentcolumnnotfoundexception-Konstruktor
+# <a name="esentcolumnnotfoundexception-constructor"></a>EsentColumnNotFoundException-Konstruktor
 
-Initialisiert eine neue Instanz der esentcolumnnotfoundexception-Klasse.
+Initialisiert eine neue Instanz der EsentColumnNotFoundException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentColumnNotFoundException()
 public EsentColumnNotFoundException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcolumnnotfoundexception-Klasse](./esentcolumnnotfoundexception-class.md)
+[EsentColumnNotFoundException-Klasse](./esentcolumnnotfoundexception-class.md)
 
-[Esentcolumnnotfoundexception-Elemente](./esentcolumnnotfoundexception-members.md)
+[EsentColumnNotFoundException-Member](./esentcolumnnotfoundexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

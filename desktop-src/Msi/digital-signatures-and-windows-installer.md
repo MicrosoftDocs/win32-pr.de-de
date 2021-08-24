@@ -17,7 +17,7 @@ Der Windows Installer kann digitale Signaturen verwenden, um beschädigte Ressou
 
 Mit Windows Installer können digitale Signaturen mit installer Windows Paketen, Transformationen, Patches, Mergemodulen und externen Schränkendateien verwendet werden. Windows Das Installationsprogramm ist in die Softwareeinschränkungsrichtlinie auf Microsoft Windows XP integriert. Richtlinien können erstellt werden, um Installationen basierend auf verschiedenen Kriterien zu ermöglichen oder zu verhindern, einschließlich eines bestimmten Signatorzertifikats oder Herausgebers. Der Windows Installer kann die Signaturüberprüfung externer Schränkdateien auf allen Plattformen durchführen, auf denen CryptoAPI Version 2.0 installiert ist.
 
-Beachten Sie, dass der Setup.exe-Bootstrap, der mit dem Windows Installer SDK bereitgestellt wird, vor dem Initiieren der Installation eine Signaturprüfung für ein Windows Installer-Paket ausführt.
+Beachten Sie, dass der Setup.exe-Bootstrap, der mit dem Windows Installer SDK bereitgestellt wird, vor dem Initiieren der Installation eine Signaturüberprüfung für ein Windows Installer-Paket ausführt.
 
 Beim Ausführen [einer Administratorinstallation](administrative-installation.md) wird die digitale Signatur aus dem Paket entfernt. Eine Administratorinstallation ändert das Installationspaket, um den AdminProperties-Stream hinzuzufügen, wodurch die ursprüngliche digitale Signatur ungültig wird. Ein Administrator kann das Paket bezwingen.
 
@@ -25,7 +25,7 @@ Durch anwenden eines Patches auf eine Administratorinstallation wird auch die di
 
 Ab version 3.0 des Windows Installers ermöglicht das Patchen der Benutzerkontensteuerung [(User Account Control, UAC)](user-account-control--uac--patching.md) Benutzern ohne Administratorrechte das Patchen von Anwendungen, die im Kontext pro Computer installiert sind. Das UAC-Patchen wird aktiviert, indem ein Signaturzertifikat in der [Tabelle MsiPatchCertificate](msipatchcertificate-table.md) bereitgestellt und Patches mit demselben Zertifikat signiert werden.
 
-Weitere Informationen finden Sie unter [Digitale](digital-signatures-and-external-cabinet-files.md)Signaturen und externe Schränkdateien, Windows Installer und [Softwareeinschränkungsrichtlinie,](windows-installer-and-software-restriction-policy.md) [](authoring-a-fully-verified-signed-installation.md)Erstellen einer vollständig überprüften signierten Installation und Eine URL, die auf Windows [Installer-Installationsbeispiel basiert.](a-url-based-windows-installer-installation-example.md)
+Weitere Informationen finden Sie unter [Digitale](digital-signatures-and-external-cabinet-files.md)Signaturen und externe Schränkdateien, Windows Installer und [Softwareeinschränkungsrichtlinie,](windows-installer-and-software-restriction-policy.md) [](authoring-a-fully-verified-signed-installation.md)Erstellen einer vollständig überprüften signierten Installation und Eine URL-basierte Windows [Installer-Installationsbeispiel](a-url-based-windows-installer-installation-example.md).
 
  
 

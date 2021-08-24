@@ -1,11 +1,11 @@
 ---
-title: ms-DS-managedpassword-Attribut
-description: Dieses konstruierte Attribut gibt ein BLOB zurück, das das Clear-Text Previous und das aktuelle Kennwort, timeuntilepochexpire und timeuntilnextscheduledupdate für eine Gruppen-MSA enthält.
+title: ms-DS-ManagedPassword-Attribut
+description: Dieses konstruierte Attribut gibt ein Blob zurück, das das vorherige und aktuelle Klartextkennwort, TimeUntilEpochExpires und TimeUntilNextScheduledUpdate für eine Gruppen-MSA enthält.
 ms.assetid: bcabb20f-46f3-4c15-b71b-a8dfc43678bc
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-DS-managedpassword-Attributs
-- AD-Schema des msDS-managedpassword-Attributs
+- MS-DS-ManagedPassword-Attribut AD-Schema
+- MSDS-ManagedPassword-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a440f1849e01ae4930b72441f75b17ce51a0566b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: dfdd5c8b86c07d86bf93aa1ce2c3c9887454dfbaa2be93a514bcb9c40f1f47e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119552330"
 ---
-# <a name="ms-ds-managedpassword-attribute"></a>ms-DS-managedpassword-Attribut
+# <a name="ms-ds-managedpassword-attribute"></a>ms-DS-ManagedPassword-Attribut
 
-Dieses konstruierte Attribut gibt ein BLOB zurück, das das Clear-Text Previous und das aktuelle Kennwort, timeuntilepochexpire und timeuntilnextscheduledupdate für eine Gruppen-MSA enthält.
+Dieses konstruierte Attribut gibt ein Blob zurück, das das vorherige und aktuelle Klartextkennwort, TimeUntilEpochExpires und TimeUntilNextScheduledUpdate für eine Gruppen-MSA enthält.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | ms-DS-managedpassword                                 |
-| LDAP-Display-Name | MSDS-managedpassword                                  |
+| CN                | ms-DS-ManagedPassword                                 |
+| Ldap-Anzeigename | msDS-ManagedPassword                                  |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2196                               |
 | System-ID-GUID    | e362ed86-b728-0842-b27d-2dea7a9df218                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
@@ -53,15 +53,15 @@ Dieses konstruierte Attribut gibt ein BLOB zurück, das das Clear-Text Previous 
 | Link-ID                | \-                                                                                          |
 | MAPI-Id                | \-                                                                                          |
 | System-Only            | False                                                                                       |
-| Ist-einwertig       | Richtig                                                                                        |
+| Ist einwertig       | True                                                                                        |
 | Ist indiziert             | False                                                                                       |
 | Im globalen Katalog      | False                                                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                |
 | Range-Lower            | \-                                                                                          |
 | Range-Upper            | \-                                                                                          |
 | Search-Flags           | 0x00000000                                                                                  |
 | System-Flags           | 0x00000014                                                                                  |
-| In verwendete Klassen        | [**ms-DS-Group-Managed-Service-Konto**](c-msds-groupmanagedserviceaccount.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Group-Managed-Service-Account**](c-msds-groupmanagedserviceaccount.md)<br/> |
 
 
 

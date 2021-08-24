@@ -1,6 +1,6 @@
 ---
-title: Quell Register Invert
-description: Führt für jeden Kanal des angegebenen Register eine (1-Wert)-Berechnung aus.
+title: Quellregister invertiert
+description: Führt eine Berechnung (1 – Wert) für jeden Kanal des angegebenen Registers aus.
 ms.assetid: 387e409f-d76d-4d70-be0f-fb563f542482
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: ce65960474816a91eb64ece7b754b97090903d46
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a391219f085c18a4c8bf2925a248800b6a26838cc6e2b8556551eb98b5335241
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104976168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119562770"
 ---
-# <a name="source-register-invert"></a>Quell Register Invert
+# <a name="source-register-invert"></a>Quellregister invertiert
 
-Führt für jeden Kanal des angegebenen Register eine (1-Wert)-Berechnung aus.
+Führt eine Berechnung (1 – Wert) für jeden Kanal des angegebenen Registers aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,17 +31,17 @@ Führt für jeden Kanal des angegebenen Register eine (1-Wert)-Berechnung aus.
 
 ## <a name="registers"></a>Register
 
-Quell Register. Weitere Informationen zu Register Typen finden Sie unter [PS \_ 1 1 PS 1 \_ \_ \_ \_ \_ 2 \_ \_ PS \_ 1 \_ 3 \_ \_ PS \_ 1 \_ 4 Registern](dx9-graphics-reference-asm-ps-registers-ps-1-x.md).
+Quellregister. Weitere Informationen zu Registertypen finden Sie unter [ps \_ 1 \_ 1 \_ \_ ps \_ 1 \_ 2 ps \_ \_ \_ 1 \_ 3 ps \_ \_ \_ 1 \_ 4 Register .](dx9-graphics-reference-asm-ps-registers-ps-1-x.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Inhalt des Registers wird nicht geändert. Der-Modifizierer wird nur auf die aus dem Register gelesenen Daten angewendet. Der umkehren-Vorgang wird auf alle vier Farbkanäle (RGBA) angewendet.
+Der Inhalt des Registers wird nicht geändert. Der Modifizierer wird nur auf die aus dem Register gelesenen Daten angewendet. Der Invertvorgang wird auf alle vier Farbkanäle (RGBA) angewendet.
 
-Dieser Modifizierer kann nur mit arithmetischen Anweisungen verwendet werden. Außerdem kann dieser Modifizierer nicht mit der anderen Ziel- [Schreib Maske](dx9-graphics-reference-asm-ps-registers-modifiers-write-mask.md)für das Schreiben kombiniert werden.
+Dieser Modifizierer kann nur mit arithmetischen Anweisungen verwendet werden. Darüber hinaus kann dieser Modifizierer nicht mit der anderen [Zielregister-Schreibmaske](dx9-graphics-reference-asm-ps-registers-modifiers-write-mask.md)kombiniert werden.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel wird Inversion verwendet, um das Komplement von Register R1 zu generieren.
+In diesem Beispiel wird inversion verwendet, um das Komplement des Registers r1 zu generieren.
 
 
 ```
@@ -54,12 +54,12 @@ mul r0, r0, 1-r1;
 
 <dl> <dt>
 
-[Pixel-Shader-quellregistrierungs Modifizierern](dx9-graphics-reference-asm-ps-registers-modifiers-source.md)
+[Quellregistermodifizierer für Pixelshader](dx9-graphics-reference-asm-ps-registers-modifiers-source.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -21,7 +21,7 @@ Die in der folgenden Tabelle beschriebenen Themen enthalten Hintergrund- und Auf
 
 
 
-| Thema                                                                                                 | BESCHREIBUNG                                                                                    |
+| Thema                                                                                                 | Beschreibung                                                                                    |
 |-------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | [COM+-Dienste ohne Komponentenkonzepte](com--services-without-components-concepts.md)<br/> | Bietet eine Übersicht über die Verwendung von COM+-Diensten ohne Komponenten.<br/>                     |
 | [COM+-Dienste ohne Komponententasks](com--services-without-components-tasks.md)<br/>       | Enthält Anweisungen für die Verwendung von COM+ zum Erstellen und Verwenden von Diensten ohne Komponenten.<br/> |

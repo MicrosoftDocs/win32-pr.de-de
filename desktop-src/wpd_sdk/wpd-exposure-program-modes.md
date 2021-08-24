@@ -1,7 +1,7 @@
 ---
-description: Der \_ \_ \_ Enumerationstyp der WPD-aufgabenprogrammebeschreibt einen Bereitstellungs Modus, der beim Erfassen von Bildern mit einem Gerät verwendet werden
+description: Der Enumerationstyp WPD \_ EXPOSURE PROGRAM MODES beschreibt einen Belichtungsmodus, der beim Erfassen von Bildern \_ mit einem Gerät verwendet werden \_ kann.
 ms.assetid: 68b76294-6ad3-4f4a-bf02-bc31c9e8ac62
-title: WPD_EXPOSURE_PROGRAM_MODES-Enumeration (portabledevice. h)
+title: WPD_EXPOSURE_PROGRAM_MODES -Enumeration (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: a88ce90bb9e776cd45245b32a363635c2ccf0560
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dc64012c4f13f84abef55d2426c856b931eb447e61df4f04c69781c089857930
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372101"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083274"
 ---
-# <a name="wpd_exposure_program_modes-enumeration"></a>WPD \_ - \_ \_ Aufzählungs Programmmodi-Enumeration
+# <a name="wpd_exposure_program_modes-enumeration"></a>WPD \_ EXPOSURE \_ PROGRAM \_ MODES-Enumeration
 
-Der Enumerationstyp der WPD-aufgabenprogrammebeschreibt einen Bereitstellungs Modus, der beim Erfassen von Bildern mit einem Gerät verwendet werden **\_ \_ \_**
+Der **Enumerationstyp WPD \_ EXPOSURE PROGRAM \_ \_ MODES** beschreibt einen Belichtungsmodus, der beim Erfassen von Bildern mit einem Gerät verwendet werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,65 +46,65 @@ typedef enum WPD_EXPOSURE_PROGRAM_MODES {
 
 <dl> <dt>
 
-<span id="WPD_EXPOSURE_PROGRAM_MODE_UNDEFINED"></span><span id="wpd_exposure_program_mode_undefined"></span>**WPD \_ - \_ renderingprogrammmodus nicht \_ \_ definiert**
+<span id="WPD_EXPOSURE_PROGRAM_MODE_UNDEFINED"></span><span id="wpd_exposure_program_mode_undefined"></span>**WPD \_ EXPOSURE PROGRAM MODE \_ \_ \_ UNEFINED**
 </dt> <dd>
 
-Der Anzeigemodus wurde nicht angegeben.
+Der Belichtungsmodus wurde nicht angegeben.
 
 </dd> <dt>
 
-<span id="WPD_EXPOSURE_PROGRAM_MODE_MANUAL"></span><span id="wpd_exposure_program_mode_manual"></span>**WPD \_ - \_ \_ aufstellungsprogrammmodus \_ manuell**
+<span id="WPD_EXPOSURE_PROGRAM_MODE_MANUAL"></span><span id="wpd_exposure_program_mode_manual"></span>**WPD \_ EXPOSURE \_ PROGRAM \_ MODE \_ MANUAL**
 </dt> <dd>
 
-Die Anwendung sollte alle Einstellungen für das verfügbar machen.
+Die Anwendung sollte alle Belichtungseinstellungen angeben.
 
 </dd> <dt>
 
-<span id="WPD_EXPOSURE_PROGRAM_MODE_AUTO"></span><span id="wpd_exposure_program_mode_auto"></span>**WPD \_ - \_ \_ aufwirkungs Programmmodus \_ automatisch**
+<span id="WPD_EXPOSURE_PROGRAM_MODE_AUTO"></span><span id="wpd_exposure_program_mode_auto"></span>**WPD \_ EXPOSURE \_ PROGRAM \_ MODE \_ AUTO**
 </dt> <dd>
 
-Verwenden Sie einen Geräte definierten automatischen Funktionsmodus.
+Verwenden Sie einen gerätedefinierten automatischen Belichtungsmodus.
 
 </dd> <dt>
 
-<span id="WPD_EXPOSURE_PROGRAM_MODE_APERTURE_PRIORITY"></span><span id="wpd_exposure_program_mode_aperture_priority"></span>**Öffnungs Priorität des WPD- \_ \_ renderingprogrammmodus \_ \_ \_**
+<span id="WPD_EXPOSURE_PROGRAM_MODE_APERTURE_PRIORITY"></span><span id="wpd_exposure_program_mode_aperture_priority"></span>**WPD \_ EXPOSURE \_ PROGRAM \_ MODE \_ APERTURE \_ PRIORITY**
 </dt> <dd>
 
-Ein automatisierter Anzeigemodus, der angibt, dass der Wert für die lichtöffnung festgelegt bleiben soll, aber die Auswertungs Geschwindigkeit vom Gerät bestimmt werden soll.
+Ein automatisierter Belichtungsmodus, der angibt, dass der Wert der Blende der Brille fest bleiben soll, aber die Geschwindigkeit der Drehung sollte vom Gerät bestimmt werden.
 
 </dd> <dt>
 
-<span id="WPD_EXPOSURE_PROGRAM_MODE_SHUTTER_PRIORITY"></span><span id="wpd_exposure_program_mode_shutter_priority"></span>**Auslöse Priorität für den WPD- \_ \_ auflockprogrammmodus \_ \_ \_**
+<span id="WPD_EXPOSURE_PROGRAM_MODE_SHUTTER_PRIORITY"></span><span id="wpd_exposure_program_mode_shutter_priority"></span>**WPD \_ EXPOSURE PROGRAM MODE PRIORITY \_ (PRIORITÄT DES \_ \_ WPD-BELICHTUNGSPROGRAMMSMODUS) \_**
 </dt> <dd>
 
-Ein automatisierter Anzeigemodus, der angibt, dass die Auslösegeschwindigkeit korrigiert bleiben soll, diese aber vom Gerät bestimmt werden soll.
+Ein automatisierter Belichtungsmodus, der angibt, dass die Drehgeschwindigkeit fest bleiben soll, diese Blende jedoch vom Gerät bestimmt werden sollte.
 
 </dd> <dt>
 
-<span id="WPD_EXPOSURE_PROGRAM_MODE_CREATIVE"></span><span id="wpd_exposure_program_mode_creative"></span>**WPD \_ - \_ renderingprogrammmodus- \_ \_ kreativ**
+<span id="WPD_EXPOSURE_PROGRAM_MODE_CREATIVE"></span><span id="wpd_exposure_program_mode_creative"></span>**WPD \_ EXPOSURE \_ PROGRAM \_ MODE \_ CREATIVE**
 </dt> <dd>
 
-Ein automatisierter Anzeigemodus, der versucht, die Tiefe des Felds zu maximieren.
+Ein automatisierter Belichtungsmodus, der versucht, die Feldtiefe zu maximieren.
 
 </dd> <dt>
 
-<span id="WPD_EXPOSURE_PROGRAM_MODE_ACTION"></span><span id="wpd_exposure_program_mode_action"></span>**Aktion für den WPD-aufwirkungs \_ \_ Programm \_ Modus \_**
+<span id="WPD_EXPOSURE_PROGRAM_MODE_ACTION"></span><span id="wpd_exposure_program_mode_action"></span>**AKTION "WPD \_ EXPOSURE \_ PROGRAM \_ MODE" (WPD-BELICHTUNGSPROGRAMMMODUS) \_**
 </dt> <dd>
 
-Ein automatisierter Anzeigemodus, der versucht, die Auslösegeschwindigkeit zu maximieren.
+Ein automatisierter Belichtungsmodus, der versucht, die Geschwindigkeit der Brille zu maximieren.
 
 </dd> <dt>
 
-<span id="WPD_EXPOSURE_PROGRAM_MODE_PORTRAIT"></span><span id="wpd_exposure_program_mode_portrait"></span>**Hochformat des WPD- \_ \_ \_ aufwirkungs Programms \_**
+<span id="WPD_EXPOSURE_PROGRAM_MODE_PORTRAIT"></span><span id="wpd_exposure_program_mode_portrait"></span>**WPD \_ EXPOSURE PROGRAM MODE \_ \_ \_ HOCHFORMAT**
 </dt> <dd>
 
-Ein automatisierter Anzeigemodus, der eine relativ flache Tiefe von Feldern angibt.
+Ein automatisierter Belichtungsmodus, der eine relativ flache Feldtiefe angibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Gibt den aufgeräteregistrierungs Modus des Geräts an. Diese Enumeration wird von der WPD-Eigenschaft zum [ \_ \_ \_ \_ renderingprogrammmodus \_ weiterhin](still-image-properties.md) verwendet.
+Gibt den Belichtungsprogrammmodus des Geräts an. Diese Enumeration wird von der [WPD \_ STILL IMAGE EXPOSURE PROGRAM \_ \_ \_ \_ MODE-Eigenschaft](still-image-properties.md) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -112,7 +112,7 @@ Gibt den aufgeräteregistrierungs Modus des Geräts an. Diese Enumeration wird v
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 

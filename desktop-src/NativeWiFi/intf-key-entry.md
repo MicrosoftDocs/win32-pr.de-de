@@ -1,7 +1,7 @@
 ---
-description: Speichert die Schlüsselinformationen zu einer drahtlosen LAN-Schnittstelle, die vom drahtlos Konfigurations Dienst verwaltet wird.
+description: Speichert die wichtigsten Informationen zu einer wlan-Schnittstelle, die vom Drahtloskonfigurationsdienst verwaltet wird.
 ms.assetid: 5e689fd0-27d9-48eb-8983-96d7918be1cd
-title: INTF_KEY_ENTRY Struktur (wzcsapi. h)
+title: INTF_KEY_ENTRY -Struktur (Wzcsapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - wzcsapi.h
-ms.openlocfilehash: 91f25708e79be4f85c4200bd690404ff39f567d5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8d14c65d49d7ed28e2756c2a690cb4a7efa9000417e896a206710bf4365f8cd4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343898"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119065150"
 ---
-# <a name="intf_key_entry-structure"></a>INTF- \_ Schlüssel \_ Eintrags Struktur
+# <a name="intf_key_entry-structure"></a>INTF \_ KEY \_ ENTRY-Struktur
 
-\[**INTF \_ Der Schlüssel \_ Eintrag** wird ab Windows Vista und Windows Server 2008 nicht mehr unterstützt. Verwenden Sie stattdessen die [native WiFi-API](native-wifi-reference.md), die eine ähnliche Funktionalität bietet. Weitere Informationen finden Sie unter Informationen zur [nativen WiFi-API](about-the-native-wifi-api.md).\]
+\[**INTF \_ KEY \_ ENTRY** wird ab Windows Vista und Windows Server 2008 nicht mehr unterstützt. Verwenden Sie stattdessen die [NATIVE WIFI-API,](native-wifi-reference.md)die ähnliche Funktionen bietet. Weitere Informationen finden Sie unter [Informationen zur nativen WLAN-API.](about-the-native-wifi-api.md)\]
 
-In der **INTF- \_ Schlüssel \_ Eintrags** Struktur werden die Schlüsselinformationen zu einer vom drahtlos Konfigurations Dienst verwalteten drahtlosen LAN-Schnittstelle gespeichert.
+In **der INTF \_ KEY \_ ENTRY-Struktur** werden die wichtigsten Informationen zu einer wlan-Schnittstelle gespeichert, die vom Drahtloskonfigurationsdienst verwaltet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ typedef struct {
 
 <dl> <dt>
 
-**wszguid**
+**wszGuid**
 </dt> <dd>
 
-Ein Zeiger auf die GUID der Schnittstelle, die als Unicode-Zeichenfolge im folgenden Format dargestellt wird: "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}".
+Ein Zeiger auf die Schnittstellen-GUID, die als Unicode-Zeichenfolge im folgenden Format dargestellt wird: "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}".
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei " *wzcsapi. h* " ist im Windows SDK nicht verfügbar.
+> Die *Headerdatei "Wzcsapi.h"* ist im Windows SDK nicht verfügbar.
 
  
 
@@ -61,11 +61,11 @@ Ein Zeiger auf die GUID der Schnittstelle, die als Unicode-Zeichenfolge im folge
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                 |
 | Ende des Supports (Client)<br/>    | Windows XP mit SP3<br/>                                                       |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Wzcsapi. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Wzcsapi.h</dt> </dl> |
 
 
 
@@ -73,10 +73,10 @@ Ein Zeiger auf die GUID der Schnittstelle, die als Unicode-Zeichenfolge im folge
 
 <dl> <dt>
 
-[**intfs- \_ Schlüssel \_ Tabelle**](intfs-key-table.md)
+[**INTFS \_ KEY \_ TABLE**](intfs-key-table.md)
 </dt> <dt>
 
-[**Wzcenumschlag-Schnittstellen**](wzcenuminterfaces.md)
+[**WZCEnumInterfaces**](wzcenuminterfaces.md)
 </dt> </dl>
 
  

@@ -1,34 +1,34 @@
 ---
-description: System Steuerungselemente, die in einer DLL implementiert sind, die die CPlApplet-Funktion exportiert, haben unterschiedliche Registrierungsanforderungen als exe-Dateien.
-title: Registrieren von dll-System Steuerungselementen
+description: Systemsteuerung elemente, die in einer DLL implementiert sind, die die CPlApplet-Funktion exportiert, haben andere Registrierungsanforderungen als .exe Dateien.
+title: Registrieren von DLL-Systemsteuerung Elementen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 37b82225dcb40487c60210752b2c15af23f95bd1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b25fffb3b06f93640c5ca8623fb24ffb53c6fd3ecae0b9e23cabafacdceba8f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119593190"
 ---
-# <a name="how-to-register-dll-control-panel-items"></a>Registrieren von dll-System Steuerungselementen
+# <a name="how-to-register-dll-control-panel-items"></a>Registrieren von DLL-Systemsteuerung Elementen
 
 > [!Note]  
-> Aktuelle Implementierungs Richtlinien gibt an, dass neue System Steuerungselemente als exe-Dateien anstatt als cpl-Dateien implementiert werden sollen. Die folgenden Informationen sind hauptsächlich für Legacy Zwecke enthalten.
+> Aktuelle Implementierungsrichtlinien geben an, dass neue Systemsteuerung als .exe und nicht als .cpl implementiert werden sollen. Die folgenden Informationen sind hauptsächlich für Legacyzwecke enthalten.
 
  
 
-System Steuerungselemente, die in einer DLL implementiert sind, die die [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) -Funktion exportiert, haben unterschiedliche Registrierungsanforderungen als exe-Dateien. Ab Windows XP sollten im Ordner "Programme" des Ordners der zugehörigen Anwendung neue DLLs für System Steuerungselemente installiert werden. Elemente, die im Verzeichnis "System32" mit der Erweiterung ". cpl" gespeichert sind, müssen nicht registriert werden. Sie werden automatisch in der Systemsteuerung angezeigt. Alle anderen System Steuerungselemente, die **CPlApplet** verwenden, müssen auf eine von zwei Arten registriert werden:
+Systemsteuerung elemente, die in einer DLL implementiert sind, die die [**CPlApplet-Funktion**](/windows/win32/api/cpl/nc-cpl-applet_proc) exportiert, haben andere Registrierungsanforderungen als .exe Dateien. Ab Windows XP sollten neue Systemsteuerung-Element-DLLs im Ordner der zugeordneten Anwendung unter dem Ordner Programme installiert werden. Elemente, die im System32-Verzeichnis mit einer .cpl gespeichert sind, müssen nicht registriert werden. sie werden automatisch in der Systemsteuerung. Alle anderen Systemsteuerung, die **CPlApplet** verwenden, müssen auf zwei Arten registriert werden:
 
--   Wenn das System Steuerungselement für alle Benutzer verfügbar sein soll, registrieren Sie den Pfad auf Computer Basis, indem Sie den Wert " **reg \_ Expand \_ SZ** " zu **HKEY \_ local \_ Machine** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **Systemsteuerung** \\ **CPLS** unter Key festlegen. Legen Sie dabei auf den DLL-Pfad fest.
--   Wenn das System Steuerungselement auf Benutzerbasis verfügbar sein soll, verwenden Sie den **aktuellen HKEY- \_ \_ Benutzer** als Stamm Schlüssel anstelle des **lokalen HKEY- \_ \_** Computers.
+-   Wenn das Systemsteuerung-Element für alle Benutzer verfügbar sein soll, registrieren Sie den Pfad pro Computer, indem Sie dem **Unterschlüssel HKEY \_ LOCAL \_ MACHINE** Software Microsoft Windows **\_ \_** \\  \\  \\  \\ **CurrentVersion** \\ **Systemsteuerung** \\ **Cpls** den Reg EXPAND SZ-Wert hinzufügen, der auf den DLL-Pfad festgelegt ist.
+-   Wenn das Systemsteuerung-Element pro Benutzer verfügbar sein soll, verwenden Sie **HKEY \_ CURRENT \_ USER** als Stammschlüssel anstelle von **HKEY \_ LOCAL \_ MACHINE.**
 
-In den folgenden zwei Beispielen wird das System Steuerungselement *mycplapp* registriert. Die dll wird MyCpl.cpl benannt und befindet sich im Anwendungsverzeichnis *MyCorp \\ myapp* . Dieses erste Beispiel veranschaulicht die Registrierung pro Computer.
+In den folgenden beiden Beispielen wird das *MyCplApp-Systemsteuerung* registriert. Die DLL heißt MyCpl.cpl und befindet sich im *Anwendungsverzeichnis MyCorp \\ MyApp.* Dieses erste Beispiel veranschaulicht die Computerregistrierung.
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
 ### <a name="step-1"></a>Schritt 1:
 
-Fügen Sie diese Informationen in die Registrierung ein, um das vorhanden sein der CPL-Datei zu registrieren.
+Fügen Sie diese Informationen der Registrierung hinzu, um das Vorhandensein der .cpl zu registrieren.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -43,7 +43,7 @@ HKEY_LOCAL_MACHINE
 
 ### <a name="step-2"></a>Schritt 2:
 
-**Windows Vista und höher:** Fügen Sie der Registrierung diese zusätzlichen Informationen hinzu, um eine GUID für das System Steuerungselement bereitzustellen.
+**Windows Vista und höher:** Fügen Sie der Registrierung diese zusätzlichen Informationen hinzu, um eine GUID für das Systemsteuerung bereitstellen.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -57,7 +57,7 @@ HKEY_LOCAL_MACHINE
                         %ProgramFiles%\MyCorp\MyApp\MyCpl.cpl = {A newly generated GUID}
 ```
 
-Durch das Erstellen einer GUID zur eindeutigen Identifizierung des System Steuerungs Elements können Sie der Systemsteuerung Aufgaben Verknüpfungen hinzufügen. Ohne diese GUID gibt es keine Möglichkeit, dass die Aufgaben Verknüpfungen mit dem System Steuerungselement verknüpft werden können. Weitere Informationen finden Sie unter [Erstellen durch suchbarer Aufgaben Verknüpfungen für ein System Steuerungselement](creating-searchable-task-links.md).
+Indem Sie eine GUID generieren, um das Systemsteuerung eindeutig zu identifizieren, können Sie dem -Element Aufgabenlinks Systemsteuerung. Ohne diese GUID gibt es keine Möglichkeit, dass die Aufgabenlinks dem Systemsteuerung werden. Unter [Erstellen durchsuchbarer Aufgabenlinks finden Sie Systemsteuerung Element](creating-searchable-task-links.md).
 
 ### <a name="step-3"></a>Schritt 3:
 
@@ -75,11 +75,11 @@ HKEY_LOCAL_MACHINE
                         %ProgramFiles%\MyCorp\MyApp\MyCpl.cpl = [REG_SZ] MyCorporation.MyCpl
 ```
 
-Wenn Sie einen kanonischen Namen hinzufügen, können Benutzer das System Steuerungselement über eine Befehlszeile starten, indem Sie eingeben `control.exe /name MyCorporation.MyCpl` . Dies ermöglicht es auch, eine Implementierung von einer CPL-Datei in eine exe-Datei zu einem späteren Zeitpunkt zu ändern, ohne dass Programme aufgerufen werden müssen, um Änderungen vorzunehmen, da Sie das Element weiterhin durch den kanonischen Namen öffnen können. Weitere Informationen zu kanonischen Namen finden Sie unter [Ausführen von System Steuerungselementen](executing-control-panel-items.md).
+Durch Hinzufügen eines kanonischen Namens können Benutzer das Systemsteuerung über die Befehlszeile starten, indem sie `control.exe /name MyCorporation.MyCpl` eingeben. Dies ermöglicht es auch, eine Implementierung von einer .cpl-Datei zu einem späteren Zeitpunkt in eine .exe-Datei zu ändern, ohne dass von aufrufenden Programmen Änderungen vorgenommen werden müssen, da sie das Element weiterhin über seinen kanonischen Namen öffnen können. Weitere Informationen zu kanonischen Namen finden Sie unter [Executing Systemsteuerung Items](executing-control-panel-items.md).
 
 ### <a name="step-4"></a>Schritt 4:
 
-**Windows Vista und höher:** Fügen Sie der Registrierung die folgenden Informationen hinzu, um ein System Steuerungselement einer oder mehreren Kategorien zuzuweisen.
+**Windows Vista und höher:** Fügen Sie der Registrierung die folgenden Informationen hinzu, um ein Systemsteuerung einer oder mehrere Kategorien zu zuweisen.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -93,7 +93,7 @@ HKEY_LOCAL_MACHINE
                         %ProgramFiles%\MyCorp\MyApp\MyCpl.cpl = [REG_DWORD] 3
 ```
 
-**Windows XP:** Fügen Sie der Registrierung die folgenden Informationen hinzu, um ein System Steuerungselement einer oder mehreren Kategorien zuzuweisen.
+**Windows XP:** Fügen Sie der Registrierung die folgenden Informationen hinzu, um ein Systemsteuerung einer oder mehrere Kategorien zu zuweisen.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -107,11 +107,11 @@ HKEY_LOCAL_MACHINE
                         %ProgramFiles%\MyCorp\MyApp\MyCpl.cpl = [REG_DWORD] 3
 ```
 
-In diesem Beispiel wird das Element der Kategorie 3 zugewiesen, d. h. Netzwerk und Internet. Wenn Sie ein Element mehreren Kategorien hinzufügen möchten, geben Sie die Liste als reg- \_ SZ-Wert an, der durch Kommas getrennt ist, z. b. "3, 8". Werte können als Dezimal oder hexadezimal angegeben werden. Beachten Sie, dass die Möglichkeit zum Hinzufügen eines Elements zu mehreren Kategorien nur in Windows XP Service Pack 2 (SP2) und höher möglich ist. Alle möglichen Werte finden Sie unter [Zuweisen von System Steuerungs Kategorien](assigning-control-panel-categories.md) .
+In diesem Beispiel wird das Element der Kategorie 3 (Netzwerk und Internet) zugewiesen. Um ein Element mehreren Kategorien hinzuzufügen, geben Sie die Liste als DURCH Kommas getrennten REG SZ-Wert an, z. B. \_ "3,8". Werte können entweder als dezimal oder hexadezimal angegeben werden. Beachten Sie, dass das Hinzufügen eines Elements zu mehreren Kategorien nur in Windows XP Service Pack 2 (SP2) und höher möglich ist. Unter [Zuweisen Systemsteuerung Kategorien finden](assigning-control-panel-categories.md) Sie alle möglichen Werte.
 
 ### <a name="step-5"></a>Schritt 5:
 
-**Windows Vista und höher:** Fügen Sie der Registrierung die folgenden Informationen hinzu, um auf eine XML-Datei zum Speichern von Aufgaben Verknüpfungen für das Element zu verweisen. Der Wert muss ein REG SZ-Pfad sein, \_ wie hier gezeigt, oder ein Modul und eine Ressourcen-ID (z. b. "C: \\ Program Files \\ MyCorp \\ myapp \\MyApp.exe,-31"), wenn es sich um eine eingebettete Ressource handelt. Der Speicherort der XML-Datei muss vollständig angegeben werden. Eine Umgebungsvariable, z. b .% Program Files%, kann nicht verwendet werden.
+**Windows Vista und höher:** Fügen Sie der Registrierung die folgenden Informationen hinzu, um zu erstellen und auf eine XML-Datei zu verweisen, die Aufgabenlinks für das Element enthält. Der Wert muss ein REG SZ-Pfad wie hier gezeigt oder ein Modul und eine Ressourcen-ID (z. B. \_ "C: Programme \\ \\ MyCorp \\ MyAppMyApp.exe,-31") sein, wenn es sich um eine eingebettete Ressource \\ handelt. Der Speicherort der XML-Datei sollte vollständig angegeben werden. Es kann keine Umgebungsvariable wie %ProgramFiles% verwendet werden.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -125,16 +125,16 @@ HKEY_LOCAL_MACHINE
                         %ProgramFiles%\MyCorp\MyApp\MyCpl.cpl = [REG_SZ] C:\ProgramFiles\MyCorp\MyApp\MyTasks.xml
 ```
 
-Weitere Informationen zu Aufgaben Verknüpfungen und zum Erstellen der XML-Datei, um Sie zu speichern, finden Sie unter [Erstellen von durchsuchbaren Aufgaben Verknüpfungen für ein System Steuerungselement](creating-searchable-task-links.md).
+Weitere Informationen zu Aufgabenlinks und zum Erstellen der XML-Datei, in der sie gespeichert werden, finden Sie unter [Creating Searchable Task Links for a Systemsteuerung Item](creating-searchable-task-links.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System Steuerungselemente werden registriert](registering-control-panel-items.md)
+[Registrieren Systemsteuerung Elementen](registering-control-panel-items.md)
 </dt> <dt>
 
-[Registrieren von ausführbaren System Steuerungselementen](how-to-register-an-executable-control-panel-item-registration-.md)
+[Registrieren von ausführbaren Systemsteuerung Elementen](how-to-register-an-executable-control-panel-item-registration-.md)
 </dt> </dl>
 
  

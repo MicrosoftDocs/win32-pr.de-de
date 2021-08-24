@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungen dar, die zum Testen der Netzwerk Konnektivität einer virtuellen Maschine verwendet werden.
+description: Stellt die Einstellungen dar, die zum Testen der Netzwerkkonnektivität eines virtuellen Computers verwendet werden.
 ms.assetid: d719d9c9-7ca9-40a0-ada8-185b8cd44c22
 title: Msvm_NetworkConnectionDiagnosticSettingData-Klasse
 ms.topic: reference
@@ -20,16 +20,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: ec0df1957df6c925cf12ce363c89a0bdad52d3e1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da7774e2cf9f36460b1f153d1b498e0c2fa18a19078442ffd5226b9d2dcdb174
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050490"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119521010"
 ---
-# <a name="msvm_networkconnectiondiagnosticsettingdata-class"></a>MSVM \_ networkconnectiondiagnosticsettingdata-Klasse
+# <a name="msvm_networkconnectiondiagnosticsettingdata-class"></a>Msvm \_ NetworkConnectionDiagnosticSettingData-Klasse
 
-Stellt die Einstellungen dar, die zum Testen der Netzwerk Konnektivität einer virtuellen Maschine verwendet werden. Wird von der [**diagnosenetworkconnection**](msvm-virtualsystemmanagementservice-diagnosenetworkconnection.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse verwendet.
+Stellt die Einstellungen dar, die zum Testen der Netzwerkkonnektivität eines virtuellen Computers verwendet werden. Wird von der [**DiagnoseNetworkConnection-Methode**](msvm-virtualsystemmanagementservice-diagnosenetworkconnection.md) der [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-virtualsystemmanagementservice.md) verwendet.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -51,20 +51,20 @@ class Msvm_NetworkConnectionDiagnosticSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ networkconnectiondiagnosticsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ NetworkConnectionDiagnosticSettingData-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ networkconnectiondiagnosticsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ NetworkConnectionDiagnosticSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Isolationid**
+**IsolationId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -77,7 +77,7 @@ Die Isolations-ID.
 **IsSender**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -87,10 +87,10 @@ Gibt an, ob diese Methode beim Absender oder Empfänger aufgerufen wird.
 
 </dd> <dt>
 
-**Payloadsize**
+**PayloadSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -100,49 +100,49 @@ Die Nutzlastgröße.
 
 </dd> <dt>
 
-**Receiverip**
+**ReceiverIP**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Empfänger-IP-Adresse.
+Die IP-Adresse des Empfängers.
 
 </dd> <dt>
 
-**Receivermac**
+**ReceiverMac**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Mac-Adresse des Empfängers.
+Die MAC-Empfängeradresse.
 
 </dd> <dt>
 
-**Senderip**
+**SenderIP**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Absender-IP-Adresse.
+Die ABSENDER-IP-Adresse.
 
 </dd> <dt>
 
 **SequenceNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -158,10 +158,10 @@ Die Sequenznummer.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -170,7 +170,7 @@ Die Sequenznummer.
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> </dl>
 
  

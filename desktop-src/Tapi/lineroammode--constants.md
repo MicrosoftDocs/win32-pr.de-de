@@ -1,73 +1,73 @@
 ---
-description: Die \_ Bit-Flag-Konstanten von lineroammode beschreiben den roamingstatus eines Linien Geräts.
+description: Die \_ LINEROAMMODE-Bitflagkonstanten beschreiben den Roamingstatus eines Liniengeräts.
 ms.assetid: af0eb263-8deb-44ab-8acb-00e4ff7930ab
-title: LINEROAMMODE_ Konstanten (TAPI. h)
+title: LINEROAMMODE_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3e40c40291567e7800b53070f882bf1e0bdac93
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d9c896b2d716dc1d6e57b9a2aec52c335657669a5bd0f0c20a904d725a7f5bb3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119514819"
 ---
-# <a name="lineroammode_-constants"></a>Lineroammode- \_ Konstanten
+# <a name="lineroammode_-constants"></a>LINEROAMMODE-Konstanten \_
 
-Die Bit-Flag-Konstanten von **lineroammode \_** beschreiben den roamingstatus eines Linien Geräts.
+Die **\_ LINEROAMMODE-Bitflagkonstanten** beschreiben den Roamingstatus eines Liniengeräts.
 
 <dl> <dt>
 
-<span id="LINEROAMMODE_HOME"></span><span id="lineroammode_home"></span>**lineroammode- \_ Startseite**
+<span id="LINEROAMMODE_HOME"></span><span id="lineroammode_home"></span>**LINEROAMMODE \_ HOME**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Linie ist mit dem Heimnetzwerk Knoten verbunden.
+Die Linie ist mit dem Basisnetzwerkknoten verbunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEROAMMODE_ROAMA"></span><span id="lineroammode_roama"></span>**lineroammode \_ roama**
+<span id="LINEROAMMODE_ROAMA"></span><span id="lineroammode_roama"></span>**LINEROAMMODE \_ ROAMA**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Zeile ist mit dem Roaming verbunden-ein Netzbetreiber und Anrufe werden entsprechend abgerechnet.
+Die Linie ist mit dem Transportunternehmen "Roam-A" verbunden, und Anrufe werden entsprechend in Rechnung gestellt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEROAMMODE_ROAMB"></span><span id="lineroammode_roamb"></span>**lineroammode \_ roamb**
+<span id="LINEROAMMODE_ROAMB"></span><span id="lineroammode_roamb"></span>**LINEROAMMODE \_ ROAMB**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Zeile ist mit dem Roaming-B-Netzbetreiber verbunden, und Anrufe werden entsprechend abgerechnet.
+Die Linie ist mit dem Transportunternehmen "Roam-B" verbunden, und Anrufe werden entsprechend in Rechnung gestellt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEROAMMODE_UNAVAIL"></span><span id="lineroammode_unavail"></span>**lineroammode-Debugmodus \_**
+<span id="LINEROAMMODE_UNAVAIL"></span><span id="lineroammode_unavail"></span>**LINEROAMMODE \_ UNAVAIL**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Modus "Roaming" ist nicht verfügbar und wird nicht bekannt sein.
+Der Roamingmodus ist nicht verfügbar und wird nicht bekannt sein.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEROAMMODE_UNKNOWN"></span><span id="lineroammode_unknown"></span>**lineroammode \_ unbekannt**
+<span id="LINEROAMMODE_UNKNOWN"></span><span id="lineroammode_unknown"></span>**LINEROAMMODE \_ UNKNOWN**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Modus "Roaming" ist zurzeit unbekannt, kann aber später bekannt werden.
+Der Roamingmodus ist derzeit unbekannt, kann aber später bekannt werden.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
@@ -77,8 +77,8 @@ Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
 title: readonly-Attribut
-description: Das Attribut \ schreibgeschützt \ untersagt die Zuweisung zu einer Variablen.
+description: Das \readonly\-Attribut verhindert die Zuweisung zu einer Variablen.
 ms.assetid: b81064e6-e788-48d1-9958-203f1e3c7e4d
 keywords:
-- Schreib geschütztes Attribut, Mittel l
+- readonly-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b4ef4ca5f32b96146ed5ab0ec085d32b24dca3a
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 4d0d534efe8df1f4d05cd0b536a78094f903870d896114ee8b614511e067025b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948692"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013678"
 ---
 # <a name="readonly-attribute"></a>readonly-Attribut
 
-Das **Schreib \[ geschützte Attribut verhindert die Zuweisung zu einer Variablen. \]**
+Das **\[ schreibgeschützte Attribut \]** verhindert die Zuweisung zu einer Variablen.
 
 ``` syntax
 [readonly [, optional-attributes]] data-type identifier
@@ -31,34 +31,34 @@ Das **Schreib \[ geschützte Attribut verhindert die Zuweisung zu einer Variable
 
 <dl> <dt>
 
-*optionale Attribute* 
+*optional-attributes* 
 </dt> <dd>
 
-NULL oder mehr mittlere Attribute.
+Null oder mehr MIDL-Attribute.
 
 </dd> <dt>
 
-*Datentyp* 
+*-Datentyp* 
 </dt> <dd>
 
-Der Typ der Daten, die im *Bezeichner* enthalten sind.
+Der Typ der im Bezeichner enthaltenen *Daten.*
 
 </dd> <dt>
 
 *identifier* 
 </dt> <dd>
 
-Ein Name, mit dem die Software auf den Daten Speicherort verweisen kann.
+Ein Name, mit dem die Software auf den Speicherort der Daten verweisen kann.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **Schreib \[ geschützte Attribut verhindert die Zuweisung zu einer Variablen. \]** "schreibgeschützt" wird nur auf Parameter Ebene, nicht auf Methoden Ebene unterstützt. **\[ \]**
+Das **\[ schreibgeschützte Attribut \]** verhindert die Zuweisung zu einer Variablen. **\[ readonly \]** wird nur auf Parameterebene unterstützt, nicht auf Methodenebene.
 
 ### <a name="flags"></a>Flags
 
-varflag \_ freadonly
+VARFLAG \_ FREADONLY
 
 ## <a name="examples"></a>Beispiele
 
@@ -70,18 +70,18 @@ HRESULT Method3([in, readonly] int iMmutable);
 
 <dl> <dt>
 
-[FUNCFLAGS](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[Typeflags](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
