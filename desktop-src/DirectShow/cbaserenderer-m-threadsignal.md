@@ -1,7 +1,7 @@
 ---
-description: Ereignis, das verwendet wird, um den Streaminginhalte
+description: Ereignis, das verwendet wird, um den Streamingthread frei zu geben.
 ms.assetid: 612082ec-a5c9-4b20-abda-61432e839094
-title: 'Cbaserenderer:: m_ThreadSignal Member (renbase. h)'
+title: CBaseRenderer::m_ThreadSignal-Mitglied (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: eb8fc5f20a03fa48cc7c0d5b4bd1faaefe9a5646
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b8a0cf1190d1350b868e5254acc4fe80e48c9c6faf0de76d629b5a38494ba272
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373882"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793190"
 ---
-# <a name="cbaserendererm_threadsignal-member"></a>Cbaserenderer:: m \_ threadsignal-Member
+# <a name="cbaserendererm_threadsignal-member"></a>CBaseRenderer::m \_ ThreadSignal-Member
 
-Ereignis, das verwendet wird, um den Streaminginhalte
+Ereignis, das verwendet wird, um den Streamingthread frei zu geben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ CAMEvent m_ThreadSignal;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ CAMEvent m_ThreadSignal;
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

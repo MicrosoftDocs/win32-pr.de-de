@@ -1,5 +1,5 @@
 ---
-description: 'TakeOwnerShip-Methode der Win32_Directory-Klasse: Die TakeOwnerShip-WMI-Klassenmethode erhält den Besitz der logischen Datei, die im Objektpfad angegeben ist.'
+description: 'TakeOwnerShip-Methode der Win32_Directory-Klasse: Die TakeOwnerShip WMI-Klassenmethode ruft den Besitz der logischen Datei ab, die im Objektpfad angegeben ist.'
 ms.assetid: 1112823b-0bb6-4dc0-a5c4-8d3839a47a3a
 ms.tgt_platform: multiple
 title: TakeOwnerShip-Methode der Win32_Directory-Klasse
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 178f1bf523d939883a7fc18b5bdbd7142cc4f824
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 32644632e7abe15190837244116f04f647537f987d5d6f3286930d8e26d2e230
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108086028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751680"
 ---
 # <a name="takeownership-method-of-the-win32_directory-class"></a>TakeOwnerShip-Methode der Win32 \_ Directory-Klasse
 
-Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **TakeOwnerShip** erhält den Besitz der logischen Datei, die im Objektpfad angegeben ist. Wenn die logische Datei tatsächlich ein Verzeichnis ist, verhält **sich TakeOwnerShip** rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
+Die **TakeOwnerShip** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) ruft den Besitz der logischen Datei ab, die im Objektpfad angegeben ist. Wenn die logische Datei tatsächlich ein Verzeichnis ist, verhält sich **TakeOwnerShip** rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -112,7 +112,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist ein Freigabeverstoß vor worden.
+Es ist ein Freigabeverstoß aufgetreten.
 
 </dd> <dt>
 
@@ -139,7 +139,7 @@ Ein angegebener Parameter ist ungültig.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Visual Basic Script-Code ruft die [**TakeOwnerShip-Methode**](takeownership-method-in-class-cim-directory.md) auf, um den Besitz des Ordners C: \\ temp zu übernehmen.
+Der folgende Visual Basic Skriptcode ruft die [**TakeOwnerShip-Methode**](takeownership-method-in-class-cim-directory.md) auf, um den Besitz des Ordners C: temp zu \\ übernehmen.
 
 
 ```VB
@@ -166,7 +166,7 @@ wscript.echo objOutParams.ReturnValue
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |

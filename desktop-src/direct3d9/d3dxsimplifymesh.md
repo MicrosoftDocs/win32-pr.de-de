@@ -1,7 +1,7 @@
 ---
-description: Generiert ein vereinfachtes Mesh mit den bereitgestellten Gewichtungen, die so nah wie möglich für den angegebenen MinValue sind.
+description: Generiert ein vereinfachtes Gitternetz mithilfe der bereitgestellten Gewichtungen, die dem angegebenen MinValue möglichst nahe kommen.
 ms.assetid: 589356a9-f272-4851-92ae-54dbecc0b234
-title: D3DXSimplifyMesh-Funktion (D3DX9Mesh. h)
+title: D3DXSimplifyMesh-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 0258047631a41e31d108ba45531988e4cb6a35ae
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3cc0bfe18afef7b91dbdf887500b485a446b154cb5775cbf950a7e712a332a9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355006"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749780"
 ---
 # <a name="d3dxsimplifymesh-function"></a>D3DXSimplifyMesh-Funktion
 
-Generiert ein vereinfachtes Mesh mit den bereitgestellten Gewichtungen, die so nah wie möglich für den angegebenen MinValue sind.
+Generiert ein vereinfachtes Gitternetz mithilfe der bereitgestellten Gewichtungen, die dem angegebenen MinValue möglichst nahe kommen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ HRESULT D3DXSimplifyMesh(
 
 <dl> <dt>
 
-*pmesh* \[ in\]
+*pMesh* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)**
 
-Zeiger auf eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle, die das quellmesh darstellt.
+Zeiger auf eine [**ID3DXMesh-Schnittstelle,**](id3dxmesh.md) die das Quellgitternetz darstellt.
 
 </dd> <dt>
 
-*padjacency* \[ in\]
+*pAdjacency* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**DWORD**](../winprog/windows-data-types.md) \***
+Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***
 
-Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im Mesh angibt, das vereinfacht werden soll.
+Zeiger auf ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im Gitternetz angeben, die vereinfacht werden sollen.
 
 </dd> <dt>
 
-*pvertexattributegewichtungen* \[ in\]
+*pVertexAttributeWeights* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXATTRIBUTEWEIGHTS**](d3dxattributeweights.md) \***
+Typ: **const [**D3DXATTRIBUTEWEIGHTS**](d3dxattributeweights.md) \***
 
-Zeiger auf eine [**D3DXATTRIBUTEWEIGHTS**](d3dxattributeweights.md) -Struktur, die die Gewichtung für jede Scheitelpunkt Komponente enthält. Wenn dieser Parameter auf **null** festgelegt ist, wird eine Standardstruktur verwendet. Siehe Hinweise.
+Zeiger auf eine [**D3DXATTRIBUTEWEIGHTS-Struktur,**](d3dxattributeweights.md) die die Gewichtung für jede Scheitelpunktkomponente enthält. Wenn dieser Parameter auf **NULL festgelegt ist,** wird eine Standardstruktur verwendet. Siehe Hinweise.
 
 </dd> <dt>
 
-*pvertexgewichtungen* \[ in\]
+*pVertexWeights* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Zeiger auf ein Array von Vertex-Gewichtungen. Wenn dieser Parameter auf **null** festgelegt ist, werden alle Scheitelpunkt Gewichtungen auf 1,0 festgelegt.
-
-</dd> <dt>
-
-*MinValue* \[ in\]
-</dt> <dd>
-
-Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
-
-Anzahl der Scheitel Punkte oder Gesichter, abhängig von dem im *options* -Parameter festgelegten Flag, um das quellmesh zu vereinfachen.
+Zeiger auf ein Array von Scheitelpunktgewichtungen. Wenn dieser Parameter auf **NULL festgelegt ist,** werden alle Scheitelpunktgewichtungen auf 1,0 festgelegt.
 
 </dd> <dt>
 
-*Optionen* \[ in\]
+*MinValue* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt Vereinfachungs Optionen für das Mesh an. Eines der Flags in [**D3DXMESHSIMP**](./d3dxmeshsimp.md) kann festgelegt werden.
+Anzahl von Scheitelzeichen oder Gesichtern, je nach flag, das im *Options-Parameter* festgelegt ist, um das Quellgitternetz zu vereinfachen.
 
 </dd> <dt>
 
-*ppmesh* \[ vorgenommen\]
+*Optionen* \[ In\]
+</dt> <dd>
+
+Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
+
+Gibt Vereinfachungsoptionen für das Gitternetz an. Eines der Flags in [**D3DXMESHSIMP**](./d3dxmeshsimp.md) kann festgelegt werden.
+
+</dd> <dt>
+
+*ppMesh* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle, die das zurückgegebene Vereinfachungs Mesh darstellt.
+Adresse eines Zeigers auf eine [**ID3DXMesh-Schnittstelle,**](id3dxmesh.md) die das zurückgegebene Vereinfachungsgitter darstellt.
 
 </dd> </dl>
 
@@ -113,15 +113,15 @@ Adresse eines Zeigers auf eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle, die
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion generiert ein Mesh, das über *MinValue* -Scheitel Punkte oder Gesichter verfügt.
+Diese Funktion generiert ein  Gitternetz mit MinValue-Scheitelwerten oder Gesichtern.
 
-Wenn das Mesh durch den Vereinfachungsprozess nicht auf *MinValue* reduziert werden kann, ist der-Vorgang weiterhin erfolgreich, da *MinValue* ein gewünschter Minimalwert und kein absolutes Minimalwert ist.
+Wenn der Vereinfachungsprozess das Gitternetz nicht auf *MinValue* reduzieren kann, ist der Aufruf trotzdem erfolgreich, da *MinValue* ein gewünschtes Minimum und kein absolutes Minimum ist.
 
-Wenn *pvertexattributegewichtungen* auf **null** festgelegt ist, werden die folgenden Werte der [**D3DXATTRIBUTEWEIGHTS**](d3dxattributeweights.md) -Standardstruktur zugewiesen.
+Wenn *pVertexAttributeWeights auf* **NULL** festgelegt ist, werden der [**D3DXATTRIBUTEWEIGHTS-Standardstruktur die folgenden Werte zugewiesen.**](d3dxattributeweights.md)
 
 
 ```
@@ -137,7 +137,7 @@ AttributeWeights.Tex[8]   =  {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
 
 
 
-Diese Standardstruktur sollte von den meisten Anwendungen verwendet werden, da Sie nur eine geometrische und normale Anpassung berücksichtigt. Nur in besonderen Fällen müssen die anderen Mitglieds Felder geändert werden.
+Diese Standardstruktur sollte von den meisten Anwendungen verwendet werden, da nur geometrische und normale Anpassungen berücksichtigt werden. Nur in Sonderfällen müssen die anderen Memberfelder geändert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -145,12 +145,12 @@ Diese Standardstruktur sollte von den meisten Anwendungen verwendet werden, da S
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

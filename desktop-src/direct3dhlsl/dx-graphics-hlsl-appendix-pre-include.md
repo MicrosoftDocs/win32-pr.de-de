@@ -1,9 +1,9 @@
 ---
 title: " include-Direktive"
-description: Eine Präprozessordirektive, die den Inhalt der angegebenen Datei in das Quell Programm einfügt, wenn die Anweisung angezeigt wird.
+description: Präprozessordirektive, die den Inhalt der angegebenen Datei in das Quellprogramm an dem Punkt einfügt, an dem die Direktive angezeigt wird.
 ms.assetid: 24796d89-5690-469b-950e-df56783aa05a
 keywords:
-- include-Direktive HLSL
+- include-Anweisung HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,36 +13,36 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a844459234200ca99233eb3f64a2a1c30449cdcc
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 66df429785a9fb90d2de8c89d23792c1754e2fde8eeb4770912e65a41a622c3a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104993438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119855040"
 ---
 # <a name="include-directive"></a>\#include-Direktive
 
-Eine Präprozessordirektive, die den Inhalt der angegebenen Datei in das Quell Programm einfügt, wenn die Anweisung angezeigt wird.
+Präprozessordirektive, die den Inhalt der angegebenen Datei in das Quellprogramm an dem Punkt einfügt, an dem die Direktive angezeigt wird.
 
 
-| \#"*Dateiname*" einschließen       |
+| \#include "*filename*"       |
 |------------------------------|
-| \#<*Dateiname* einschließen> |
+| \#include <*Filename*> |
 
 ## <a name="parameters"></a>Parameter
 
 | Element | Beschreibung |
 |------|-------------|
-| *filename* | Der Dateiname der einzuschließenden Datei, dem optional eine Verzeichnis Spezifikation vorangestellt. Der Dateiname muss eine vorhandene Datei angeben. |
+| *filename* | Der Dateiname der einzufügenden Datei, optional vorangestellt durch eine Verzeichnisspezifikation. Der Dateiname muss eine vorhandene Datei angeben. |
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die \# include-Direktive bewirkt, dass die-Direktive durch den gesamten Inhalt der angegebenen Datei ersetzt wird. Der Präprozessor beendet die Suche, sobald eine Datei mit dem angegebenen Namen gefunden wird. Wenn Sie eine eindeutige Pfadspezifikation für die Datei angeben, durchsucht der Präprozessor nur den angegebenen Pfad.
+Die \# include-Direktive bewirkt, dass die -Direktive durch den gesamten Inhalt der angegebenen Datei ersetzt wird. Der Präprozessor beendet die Suche, sobald er eine Datei mit dem angegebenen Namen findet. Wenn Sie eine vollständige, eindeutige Pfadspezifikation für die Datei angeben, durchsucht der Präprozessor nur den angegebenen Pfad.
 
 > [!NOTE]
-> Das [Effect-Compiler-Tool](/windows/desktop/direct3dtools/fxc) verfügt über einen integrierten include-Handler, der den/I-Schalter verwendet. Wenn Sie jedoch den Compiler über die API ausführen, können Sie einen benutzerdefinierten include-Handler bereitstellen, indem Sie die ID3DXInclude-Schnittstelle implementieren.
+> Das [Effect-Compiler-Tool](/windows/desktop/direct3dtools/fxc) verfügt über einen integrierten Includehandler, der den Schalter /I verwendet. Beim Ausführen des Compilers über die API können Sie jedoch einen benutzerdefinierten Includehandler bereitstellen, indem Sie die ID3DXInclude-Schnittstelle implementieren.
 
-Der Unterschied zwischen den beiden Syntax Formularen ist die Reihenfolge, in der der Präprozessor nach Header Dateien sucht, wenn der Pfad nicht vollständig angegeben ist, wie in der folgenden Tabelle dargestellt.
+Der Unterschied zwischen den beiden Syntaxformen ist die Reihenfolge, in der der Präprozessor nach Headerdateien sucht, wenn der Pfad unvollständig angegeben ist, wie in der folgenden Tabelle dargestellt.
 
 <table>
 <colgroup>
@@ -57,29 +57,29 @@ Der Unterschied zwischen den beiden Syntax Formularen ist die Reihenfolge, in de
 </thead>
 <tbody>
 <tr class="odd">
-<td>#<b>&quot;</b> <em>Dateiname</em> einschließen<b>&quot;</b></td>
+<td>#include <b>&quot;</b> <em>filename</em><b>&quot;</b></td>
 <td>Sucht nach der Includedatei:
 <ol>
 <li>im gleichen Verzeichnis wie die Datei, die die #include-Direktive enthält.</li>
-<li>in den Verzeichnissen von Dateien, die eine #include-Direktive für die Datei enthalten, die die #include-Direktive enthält.</li>
-<li>in der von der/I-Compileroption angegebenen Pfade in der Reihenfolge, in der Sie aufgelistet sind.</li>
-<li><p>in den Pfaden, die durch die include-Umgebungsvariable angegeben werden, in der Reihenfolge, in der Sie aufgelistet sind.</p>
+<li>in den Verzeichnissen aller Dateien, die eine #include-Direktive für die Datei enthalten, die die #include-Direktive enthält.</li>
+<li>in Pfaden, die von der Compileroption /I angegeben werden, in der Reihenfolge, in der sie aufgelistet werden.</li>
+<li><p>in Pfaden, die von der INCLUDE-Umgebungsvariablen angegeben werden, in der Reihenfolge, in der sie aufgelistet werden.</p>
 <blockquote>
 [!NOTE]<br />
-Die include-Umgebungsvariable wird in einer Entwicklungsumgebung ignoriert. Informationen zum Festlegen der Includepfade für Ihr Projekt finden Sie in der Dokumentation der Entwicklungsumgebung.
+Die INCLUDE-Umgebungsvariable wird in einer Entwicklungsumgebung ignoriert. Informationen zum Festlegen der Includepfade für Ihr Projekt finden Sie in der Dokumentation Ihrer Entwicklungsumgebung.
 </blockquote>
 <p><br/></p></li>
 </ol></td>
 </tr>
 <tr class="even">
-<td>#<b><</b> <em>Dateiname</em> einschließen<b>></b></td>
+<td>#include <b><</b> <em>filename</em><b>></b></td>
 <td>Sucht nach der Includedatei:
 <ol>
-<li>in der von der/I-Compileroption angegebenen Pfade in der Reihenfolge, in der Sie aufgelistet sind.</li>
-<li><p>in den Pfaden, die durch die include-Umgebungsvariable angegeben werden, in der Reihenfolge, in der Sie aufgelistet sind.</p>
+<li>in Pfaden, die von der Compileroption /I angegeben werden, in der Reihenfolge, in der sie aufgelistet werden.</li>
+<li><p>in Pfaden, die von der INCLUDE-Umgebungsvariablen angegeben werden, in der Reihenfolge, in der sie aufgelistet werden.</p>
 <blockquote>
 [!NOTE]<br />
-Die include-Umgebungsvariable wird in einer Entwicklungsumgebung ignoriert. Informationen zum Festlegen der Includepfade für Ihr Projekt finden Sie in der Dokumentation der Entwicklungsumgebung.
+Die INCLUDE-Umgebungsvariable wird in einer Entwicklungsumgebung ignoriert. Informationen zum Festlegen der Includepfade für Ihr Projekt finden Sie in der Dokumentation Ihrer Entwicklungsumgebung.
 </blockquote>
 <p><br/></p></li>
 </ol></td>
@@ -89,7 +89,7 @@ Die include-Umgebungsvariable wird in einer Entwicklungsumgebung ignoriert. Info
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel bewirkt, dass der Präprozessor die \# include-Direktive durch den Inhalt von "stdio. h" ersetzt. Da im Beispiel das eckige Klammern-Format verwendet wird, sucht der Präprozessor nur in den Verzeichnissen, die von der/I-Compileroption und der INCLUDE-Umgebungsvariablen aufgelistet werden.
+Das folgende Beispiel bewirkt, dass der Präprozessor die \# include-Direktive durch den Inhalt von stdio.h ersetzt. Da im Beispiel das Format der spitzen Klammern verwendet wird, sucht der Präprozessor nur in den Verzeichnissen, die von der /I-Compileroption und der INCLUDE-Umgebungsvariablen aufgelistet werden, nach der Datei.
 
 ```cpp
 #include <stdio.h>
@@ -101,4 +101,4 @@ Das folgende Beispiel bewirkt, dass der Präprozessor die \# include-Direktive d
 
 - [ID3D10Include-Schnittstelle](/previous-versions/windows/desktop/legacy/bb173775(v=vs.85))
 
-- [Effekt-Compilertool](/windows/desktop/direct3dtools/fxc)
+- [Effektcompilertool](/windows/desktop/direct3dtools/fxc)

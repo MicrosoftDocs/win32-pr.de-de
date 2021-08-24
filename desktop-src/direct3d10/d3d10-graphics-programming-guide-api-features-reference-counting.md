@@ -1,19 +1,19 @@
 ---
-description: Direct3D 10-Set-Funktionen besitzen keinen Verweis auf ein vom Gerät untergeordnetes Objekt.
+description: Direct3D 10-Set-Funktionen enthalten keinen Verweis auf ein geräte untergeordnetes Objekt.
 ms.assetid: 4f4e1af8-5830-4b2d-ba2e-dc2ec4e74a19
 title: Verweiszählung (Direct3D 10)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b3587466aa3ecaea5f3a77332c77654b0725bb1
-ms.sourcegitcommit: ca37395fd832e798375e81142b97cffcffabf184
+ms.openlocfilehash: 80745c7af251294dca279a023f541b6485d2c3e01da22d2b8432e7220ac9bbd3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110335454"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793260"
 ---
 # <a name="reference-counting-direct3d-10"></a>Verweiszählung (Direct3D 10)
 
-Direct3D 10-Set-Funktionen besitzen keinen Verweis auf ein vom Gerät untergeordnetes Objekt. Dies bedeutet, dass jede Anwendung einen Verweis auf ein vom Gerät untergeordnetes Objekt so lange speichern muss, wie das Objekt an die Pipeline gebunden werden muss. Wenn die Verweisanzahl eines Objekts auf 0 (null) fällt, wird das Objekt von der Pipeline entfernt und zerstört. Diese Art der Referenzspeicherung wird auch als Schwache-Verweis-Holding bezeichnet, da jede Pipelinebindungsposition einen schwachen Verweis auf die Schnittstelle bzw. das Objekt enthält, die bzw. das an sie gebunden ist.
+Direct3D 10-Set-Funktionen enthalten keinen Verweis auf ein geräte untergeordnetes Objekt. Dies bedeutet, dass jede Anwendung einen Verweis auf ein gerät-untergeordnetes Objekt enthalten muss, solange das Objekt an die Pipeline gebunden werden muss. Wenn der Verweiszähler eines Objekts auf 0 (null) fällt, wird das Objekt von der Pipeline ungebunden und zerstört. Diese Art der Verweisaufbewahrung wird auch als "weak-reference holding" bezeichnet, da jede Pipelinebindungsposition einen schwachen Verweis auf die Schnittstelle bzw. das Objekt enthält, die bzw. das an sie gebunden ist.
 
 Beispiel:
 
@@ -38,7 +38,7 @@ pDevice->RSGetState( &pCurRasterizerState );
 
 Unterschiede zwischen Direct3D 9 und Direct3D 10:
 
-- In Direct3D 9 enthalten set-Funktionen einen Verweis auf die Geräteobjekte. In Direct3D 10 enthalten Set-Funktionen keinen Verweis auf die untergeordneten Geräteobjekte.
+- In Direct3D 9 enthalten set-Funktionen einen Verweis auf die Geräteobjekte. In Direct3D 10 enthalten set-Funktionen keinen Verweis auf die geräte untergeordneten Objekte.
 
 
 

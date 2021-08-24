@@ -1,10 +1,10 @@
-- name: Referenz zur Installation von Geräten und Treibern
+- name: Referenz zur Geräte- und Treiberinstallation
   href: device-and-driver-installation-reference.md
   items:
-    - name: Referenz zur Installation von Geräten und Treibern in SDK-Header Dateien
+    - name: Referenz zur Geräte- und Treiberinstallation in SDK-Headerdateien
       href: device-installation-for-applications.md
       items:
-        - name: Cfg. h
+        - name: Cfg.h
           href: cfg-h.md
           items:
             - name: PNP_VETO_TYPE
@@ -299,11 +299,11 @@
         - name: Difxapi.h
           href: difxapi-h.md
           items:
-            - name: Diflogcallback
+            - name: DIFLOGCALLBACK
               href: /previous-versions/windows/hardware/difxapi/diflogcallback
-            - name: Difxapilogcallback
+            - name: DIFXAPILOGCALLBACK
               href: /previous-versions/windows/hardware/difxapi/difxapilogcallback
-            - name: Difxapisetlogcallback
+            - name: DIFXAPISetLogCallback
               href: /previous-versions/windows/hardware/difxapi/difxapisetlogcallback
             - name: DriverPackageGetPath
               href: /previous-versions/windows/hardware/difxapi/driverpackagegetpath
@@ -313,249 +313,249 @@
               href: /previous-versions/windows/hardware/difxapi/driverpackagepreinstall
             - name: DriverPackageUninstall
               href: /previous-versions/windows/hardware/difxapi/driverpackageuninstall
-            - name: Installerinfo
+            - name: INSTALLERINFO
               href: /previous-versions/windows/hardware/difxapi/installerinfo
-            - name: Setdifxlogcallback
+            - name: SetDifxLogCallback
               href: /previous-versions/windows/hardware/difxapi/setdifxlogcallback
-        - name: Newdev. h
+        - name: Newdev.h
           href: newdev-h.md
           items:
-            - name: Diinstalldevice
+            - name: DiInstallDevice
               href: /windows/desktop/api/Newdev/nf-newdev-diinstalldevice
-            - name: Diinstalldriver
+            - name: DiInstallDriver
               href: /windows/desktop/api/Newdev/nf-newdev-diinstalldrivera
-            - name: Dirollbackdriver
+            - name: DiRollbackDriver
               href: /windows/desktop/api/Newdev/nf-newdev-dirollbackdriver
-            - name: Dishowupdatedevice
+            - name: DiShowUpdateDevice
               href: /windows/desktop/api/Newdev/nf-newdev-dishowupdatedevice
-            - name: Diuninstalldevice
+            - name: DiUninstallDevice
               href: /windows/desktop/api/Newdev/nf-newdev-diuninstalldevice
             - name: UpdateDriverForPlugAndPlayDevices
               href: /windows/desktop/api/Newdev/nf-newdev-updatedriverforplugandplaydevicesa
-        - name: Setupapi. h
+        - name: Setupapi.h
           href: setupapi-h.md
           items:
-            - name: Setupdiaskforoemdisk
+            - name: SetupDiAskForOEMDisk
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiaskforoemdisk
-            - name: Setupdibuildclassinfolist
+            - name: SetupDiBuildClassInfoList
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdibuildclassinfolist
-            - name: Setupdibuildclassinfolistex
+            - name: SetupDiBuildClassInfoListEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdibuildclassinfolistexa
             - name: SetupDiBuildDriverInfoList
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdibuilddriverinfolist
-            - name: Setupdicallclassinstaller
+            - name: SetupDiCallClassInstaller
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdicallclassinstaller
-            - name: Setupdicanceldriverinfosearch
+            - name: SetupDiCancelDriverInfoSearch
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdicanceldriverinfosearch
-            - name: Setupdichangestate
+            - name: SetupDiChangeState
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdichangestate
-            - name: Setupdiclassguidsfromname
+            - name: SetupDiClassGuidsFromName
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiclassguidsfromnamea
-            - name: Setupdiclassguidsfromnameex
+            - name: SetupDiClassGuidsFromNameEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiclassguidsfromnameexa
-            - name: Setupdiclassnamefromguid
+            - name: SetupDiClassNameFromGuid
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiclassnamefromguida
-            - name: Setupdiclassnamefromguidex
+            - name: SetupDiClassNameFromGuidEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiclassnamefromguidexa
-            - name: Setupdikreatedeviceinfo
+            - name: SetupDiCreateDeviceInfo
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdicreatedeviceinfoa
-            - name: Setupdikreatedeviceinfolist
+            - name: SetupDiCreateDeviceInfoList
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdicreatedeviceinfolist
-            - name: Setupdikreatedeviceinfolistex
+            - name: SetupDiCreateDeviceInfoListEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdicreatedeviceinfolistexa
-            - name: Setupdikreatedeviceinterface
+            - name: SetupDiCreateDeviceInterface
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdicreatedeviceinterfacea
-            - name: Setupdikreatedeviceinterfakeregkey
+            - name: SetupDiCreateDeviceInterfaceRegKey
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdicreatedeviceinterfaceregkeya
-            - name: Setupdikreatedevregkey
+            - name: SetupDiCreateDevRegKey
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdicreatedevregkeya
-            - name: Setupdideletedecoeinfo
+            - name: SetupDiDeleteDeviceInfo
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdideletedeviceinfo
-            - name: Setupdideletede viceinterfacedata
+            - name: SetupDiDeleteDeviceInterfaceData
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdideletedeviceinterfacedata
-            - name: Setupdideletetoviceinterfakeregkey
+            - name: SetupDiDeleteDeviceInterfaceRegKey
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdideletedeviceinterfaceregkey
-            - name: Setupdideletedevregkey
+            - name: SetupDiDeleteDevRegKey
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdideletedevregkey
-            - name: Setupdidestroyclassimagelist
+            - name: SetupDiDestroyClassImageList
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdidestroyclassimagelist
-            - name: Setupdidestroyeinfolist
+            - name: SetupDiDestroyDeviceInfoList
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdidestroydeviceinfolist
-            - name: Setupdidestroydriverinfolist
+            - name: SetupDiDestroyDriverInfoList
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdidestroydriverinfolist
-            - name: Setupdidrawminiicon
+            - name: SetupDiDrawMiniIcon
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdidrawminiicon
-            - name: Setupdienumbinviceinfo
+            - name: SetupDiEnumDeviceInfo
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdienumdeviceinfo
-            - name: Setupdienumbinviceintergesichter
+            - name: SetupDiEnumDeviceInterfaces
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdienumdeviceinterfaces
             - name: SetupDiEnumDriverInfo
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdienumdriverinfoa
-            - name: Setupdifinishinstallaction
+            - name: SetupDiFinishInstallAction
               href: /previous-versions/windows/hardware/previsioning-framework/ff551022(v=vs.85)
-            - name: Setupdigetactualmodelssection
+            - name: SetupDiGetActualModelsSection
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetactualmodelssectiona
-            - name: Setupdigetactualsectionum install
+            - name: SetupDiGetActualSectionToInstall
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetactualsectiontoinstalla
-            - name: Setupdigetactualsectionuminstallex
+            - name: SetupDiGetActualSectionToInstallEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetactualsectiontoinstallexa
-            - name: Setupdigetclassbitmapindex
+            - name: SetupDiGetClassBitmapIndex
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclassbitmapindex
-            - name: Setupdigetclassdescription
+            - name: SetupDiGetClassDescription
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclassdescriptiona
-            - name: Setupdigetclassdescriptionex
+            - name: SetupDiGetClassDescriptionEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclassdescriptionexa
-            - name: Setupdigetclassdevpropertysheets
+            - name: SetupDiGetClassDevPropertySheets
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclassdevpropertysheetsa
-            - name: Setupdigetclassbinvs
+            - name: SetupDiGetClassDevs
               href: /windows/desktop/api/SetupAPI/nf-setupapi-setupdigetclassdevsw
-            - name: Setupdigetclassdevsex
+            - name: SetupDiGetClassDevsEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclassdevsexa
-            - name: Setupdigetclassimageindex
+            - name: SetupDiGetClassImageIndex
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclassimageindex
-            - name: Setupdigetclassimagelist
+            - name: SetupDiGetClassImageList
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclassimagelist
-            - name: Setupdigetclassimagelistex
+            - name: SetupDiGetClassImageListEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclassimagelistexa
-            - name: Setupdigetclassinstallparametriams
+            - name: SetupDiGetClassInstallParams
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclassinstallparamsa
-            - name: Setupdigetclassproperty
+            - name: SetupDiGetClassProperty
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclasspropertyw
-            - name: Setupdigetclasspropertyex
+            - name: SetupDiGetClassPropertyEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclasspropertyexw
-            - name: Setupdigetclasspropertykeys
+            - name: SetupDiGetClassPropertyKeys
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclasspropertykeys
-            - name: Setupdigetclasspropertykeysex
+            - name: SetupDiGetClassPropertyKeysEx
               href: /windows/desktop/api/setupapi/nf-setupapi-setupdigetclasspropertykeysexw
-            - name: Setupdigetclassregistryproperty
+            - name: SetupDiGetClassRegistryProperty
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetclassregistrypropertya
-            - name: Setupdigetcustomdeviceproperty
+            - name: SetupDiGetCustomDeviceProperty
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetcustomdevicepropertya
-            - name: Setupdigetdeviceinfolistclass
+            - name: SetupDiGetDeviceInfoListClass
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetdeviceinfolistclass
-            - name: Setupdigetabviceinfolistdetail
+            - name: SetupDiGetDeviceInfoListDetail
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetdeviceinfolistdetaila
-            - name: Setupdigetabviceinstallparser
+            - name: SetupDiGetDeviceInstallParams
               href: /windows/desktop/api/setupapi/nf-setupapi-setupdigetdeviceinstallparamsa
-            - name: Setupdigetabviceinstanceid
+            - name: SetupDiGetDeviceInstanceId
               href: /windows/desktop/api/setupapi/nf-setupapi-setupdigetdeviceinstanceida
-            - name: Setupdigetabviceinterfacealias
+            - name: SetupDiGetDeviceInterfaceAlias
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetdeviceinterfacealias
-            - name: Setupdigetabviceinterfacedetail
+            - name: SetupDiGetDeviceInterfaceDetail
               href: /windows/desktop/api/setupapi/nf-setupapi-setupdigetdeviceinterfacedetaila
-            - name: Setupdigetabviceinterfaceproperty
+            - name: SetupDiGetDeviceInterfaceProperty
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetdeviceinterfacepropertyw
-            - name: Setupdigetdebug Type Keys
+            - name: SetupDiGetDeviceInterfacePropertyKeys
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetdeviceinterfacepropertykeys
-            - name: Setupdigetdeviceproperty
+            - name: SetupDiGetDeviceProperty
               href: /windows/desktop/api/SetupAPI/nf-setupapi-setupdigetdevicepropertyw
-            - name: Setupdigetdevicepropertykeys
+            - name: SetupDiGetDevicePropertyKeys
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetdevicepropertykeys
-            - name: Setupdigetdeviceregistryproperty
+            - name: SetupDiGetDeviceRegistryProperty
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetdeviceregistrypropertya
-            - name: Setupdigetdriverinfodetail
+            - name: SetupDiGetDriverInfoDetail
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetdriverinfodetaila
-            - name: Setupdigetdriverinstallparametriams
+            - name: SetupDiGetDriverInstallParams
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetdriverinstallparamsa
-            - name: Setupdigethwprofilefriendlyname
+            - name: SetupDiGetHwProfileFriendlyName
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigethwprofilefriendlynamea
-            - name: Setupdigethwprofilefriendlynameex
+            - name: SetupDiGetHwProfileFriendlyNameEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigethwprofilefriendlynameexa
-            - name: Setupdigethwprofilelist
+            - name: SetupDiGetHwProfileList
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigethwprofilelist
-            - name: Setupdigethwprofilelistex
+            - name: SetupDiGetHwProfileListEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigethwprofilelistexa
-            - name: Setupdigetinf-Klasse
+            - name: SetupDiGetINFClass
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetinfclassa
-            - name: Setupdigetselecteddevice
+            - name: SetupDiGetSelectedDevice
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetselecteddevice
-            - name: Setupdigetselecteddriver
+            - name: SetupDiGetSelectedDriver
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdigetselecteddrivera
-            - name: Setupdiinstallclass
+            - name: SetupDiInstallClass
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiinstallclassa
-            - name: Setupdiinstallclassex
+            - name: SetupDiInstallClassEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiinstallclassexa
-            - name: Setupdiinstalldevice
+            - name: SetupDiInstallDevice
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiinstalldevice
-            - name: Setupdiinstallabviceintergesichter
+            - name: SetupDiInstallDeviceInterfaces
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiinstalldeviceinterfaces
-            - name: Setupdiinstalldriverfiles
+            - name: SetupDiInstallDriverFiles
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiinstalldriverfiles
-            - name: Setupdiloadclassicon
+            - name: SetupDiLoadClassIcon
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiloadclassicon
-            - name: Setupdiloadabviceicon
+            - name: SetupDiLoadDeviceIcon
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiloaddeviceicon
-            - name: Setupdiopenclassregkey
+            - name: SetupDiOpenClassRegKey
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiopenclassregkey
-            - name: Setupdiopenclassregkeyex
+            - name: SetupDiOpenClassRegKeyEx
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiopenclassregkeyexa
-            - name: Setupdiopenabviceinfo
+            - name: SetupDiOpenDeviceInfo
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiopendeviceinfoa
-            - name: Setupdiopenabviceinterface
+            - name: SetupDiOpenDeviceInterface
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiopendeviceinterfacea
-            - name: Setupdiopenabviceinterfakeregkey
+            - name: SetupDiOpenDeviceInterfaceRegKey
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiopendeviceinterfaceregkey
-            - name: Setupdiopendevregkey
+            - name: SetupDiOpenDevRegKey
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiopendevregkey
-            - name: Setupdiregistercodeviceinstallerer
+            - name: SetupDiRegisterCoDeviceInstallers
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiregistercodeviceinstallers
-            - name: Setupdiregisterabviceinfo
+            - name: SetupDiRegisterDeviceInfo
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiregisterdeviceinfo
-            - name: Setupumgeleitet-Gerät
+            - name: SetupDiRemoveDevice
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiremovedevice
-            - name: Setupdiremuveabviceinterface
+            - name: SetupDiRemoveDeviceInterface
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiremovedeviceinterface
-            - name: Setupumgeleitet startdevices
+            - name: SetupDiRestartDevices
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdirestartdevices
-            - name: Setupdiselectbestcompatdrv
+            - name: SetupDiSelectBestCompatDrv
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiselectbestcompatdrv
-            - name: Setupdiselectdevice
+            - name: SetupDiSelectDevice
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiselectdevice
-            - name: Setupdiselecumemdrv
+            - name: SetupDiSelectOEMDrv
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiselectoemdrv
-            - name: Setupdisetclassinstallpara AMS
+            - name: SetupDiSetClassInstallParams
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdisetclassinstallparamsa
-            - name: Setupdisetclassproperty
+            - name: SetupDiSetClassProperty
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdisetclasspropertyw
-            - name: Setupdisetclasspropertyex
+            - name: SetupDiSetClassPropertyEx
               href: /windows/desktop/api/setupapi/nf-setupapi-setupdisetclasspropertyexw
-            - name: Setupdisetclassregistryproperty
+            - name: SetupDiSetClassRegistryProperty
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdisetclassregistrypropertya
-            - name: Setupdisetde viceinstallparameams
+            - name: SetupDiSetDeviceInstallParams
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdisetdeviceinstallparamsa
-            - name: Setupdisetdebug default
+            - name: SetupDiSetDeviceInterfaceDefault
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdisetdeviceinterfacedefault
-            - name: 'Setupdisetdebug Property '
+            - name: 'SetupDiSetDeviceInterfaceProperty '
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdisetdeviceinterfacepropertyw
-            - name: Setupdisetdeviceproperty
+            - name: SetupDiSetDeviceProperty
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdisetdevicepropertyw
-            - name: Setupdisetdeviceregistryproperty
+            - name: SetupDiSetDeviceRegistryProperty
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdisetdeviceregistrypropertya
-            - name: Setupdisetdriverinstallparametriams
+            - name: SetupDiSetDriverInstallParams
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdisetdriverinstallparamsa
-            - name: Setupdisetselecteddevice
+            - name: SetupDiSetSelectedDevice
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdisetselecteddevice
-            - name: Setupdisetselecteddriver
+            - name: SetupDiSetSelectedDriver
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdisetselecteddrivera
-            - name: Setupdiunremovedevice
+            - name: SetupDiUnremoveDevice
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupdiunremovedevice
-            - name: Setupgetintdriverstoreloation
+            - name: SetupGetInfDriverStoreLocation
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupgetinfdriverstorelocationa
-            - name: Setupgetinf publishedname
+            - name: SetupGetInfPublishedName
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupgetinfpublishednamea
-            - name: Setupgetnoninteractivemode
+            - name: SetupGetNonInteractiveMode
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupgetnoninteractivemode
-            - name: Setupgetthreadlogtoken
+            - name: SetupGetThreadLogToken
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupgetthreadlogtoken
-            - name: Setupsetnoninteractivemode
+            - name: SetupSetNonInteractiveMode
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupsetnoninteractivemode
-            - name: Setupsetthreadlogtoken
+            - name: SetupSetThreadLogToken
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupsetthreadlogtoken
-            - name: Setupschreitetextlog
+            - name: SetupWriteTextLog
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupwritetextlog
-            - name: Setupschreitetextlogerror
+            - name: SetupWriteTextLogError
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupwritetextlogerror
-            - name: Setupschreitetextloginsline
+            - name: SetupWriteTextLogInfLine
               href: /windows/desktop/api/Setupapi/nf-setupapi-setupwritetextloginfline
             - name: SP_ADDPROPERTYPAGE_DATA
               href: /windows/win32/api/setupapi/ns-setupapi-sp_newdevicewizard_data

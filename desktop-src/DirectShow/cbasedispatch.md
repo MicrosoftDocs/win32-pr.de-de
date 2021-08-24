@@ -1,7 +1,7 @@
 ---
-description: Die cbasedispatch-Klasse ist eine Basisklasse zum Implementieren der IDispatch-Schnittstelle in einem DirectShow-Filter.
+description: Die CBaseDispatch-Klasse ist eine Basisklasse zum Implementieren der IDispatch-Schnittstelle in einem DirectShow-Filter.
 ms.assetid: 33a989be-d059-4ad7-99f8-715c55a128a2
-title: Cbasedispatch-Klasse (ctlutil. h)
+title: CBaseDispatch-Klasse (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,39 +16,39 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d115412b2b668f640834d5a3fa3b134f7a8d9c01
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1a094ad3b79dbeb8c4dfc2888de01a521738740fc19ad70b521172d3194fd9f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361910"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793315"
 ---
-# <a name="cbasedispatch-class"></a>Cbasedispatch-Klasse
+# <a name="cbasedispatch-class"></a>CBaseDispatch-Klasse
 
 ![cbasedispatch-Klassenhierarchie](images/cutil01.png)
 
-Die **cbasedispatch** -Klasse ist eine Basisklasse zum Implementieren der **IDispatch** -Schnittstelle in einem DirectShow-Filter.
+Die **CBaseDispatch-Klasse** ist eine Basisklasse zum Implementieren der **IDispatch-Schnittstelle** in einem DirectShow-Filter.
 
-Diese Klasse ist auf die Unterstützung der Automatisierungs kompatiblen Schnittstellen beschränkt, die von der DirectShow-Typbibliothek, QuartzTypeLib, exportiert werden. Beispielsweise verwenden die Klassen [**cmediacontrol**](cmediacontrol.md) und [**cmediaposition**](cmediaposition.md) **cbasedispatch** zum Implementieren von [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol) bzw. [**imediaposition**](/windows/desktop/api/Control/nn-control-imediaposition). Aufgrund dieser Einschränkung gibt es wahrscheinlich keinen Grund, **cbasedispatch** direkt in ihren eigenen Filtern zu verwenden.
+Diese Klasse ist auf die Unterstützung der Automation-kompatiblen Schnittstellen beschränkt, die von der DirectShow-Typbibliothek,TypeLib, exportiert werden. Beispielsweise verwenden die [**Klassen CMediaControl**](cmediacontrol.md) und [**CMediaPosition**](cmediaposition.md) **CBaseDispatch,** um [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol) bzw. [**IMediaPosition**](/windows/desktop/api/Control/nn-control-imediaposition)zu implementieren. Aufgrund dieser Einschränkung gibt es wahrscheinlich keinen Grund, **CBaseDispatch** direkt in Ihren eigenen Filtern zu verwenden.
 
-Gehen Sie folgendermaßen vor, um diese Klasse zu verwenden:
+Gehen Sie wie folgt vor, um diese Klasse zu verwenden:
 
--   Deklarieren Sie eine neue Klasse, die **IDispatch** unterstützt.
--   Geben Sie der neuen Klasse eine private Member-Variable vom Typ **cbasedispatch**.
--   Implementieren Sie die **IDispatch** -Methoden.
--   Nennen Sie in Ihren **IDispatch** -Methoden die **cbasedispatch** -Methoden.
+-   Deklarieren Sie eine neue Klasse, die **IDispatch unterstützt.**
+-   Geben Sie ihrer neuen Klasse eine private Membervariable vom Typ **CBaseDispatch.**
+-   Implementieren Sie die **IDispatch-Methoden.**
+-   Rufen Sie **in Ihren IDispatch-Methoden** die **CBaseDispatch-Methoden** auf.
 
-Weitere Informationen finden Sie im Quellcode für eine der in ctlutil. h deklarierten Beispiel Klassen.
+Weitere Informationen finden Sie im Quellcode für eine der In Ctlutil.h deklarierten Beispielklassen.
 
 
 
 | Öffentliche Methoden                                             | BESCHREIBUNG                                                                                                         |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| [**Cbasedispatch**](cbasedispatch-cbasedispatch.md)       | Konstruktormethode.                                                                                                 |
-| [**~ Cbasedispatch**](cbasedispatch--cbasedispatch.md)     | Dekonstruktormethode.                                                                                                  |
-| [**GetIDsOfNames**](cbasedispatch-getidsofnames.md)       | Ordnet einem entsprechenden Satz von DISPIDs einen Satz von Namen zu.                                                              |
-| [**GetTypeInfo**](cbasedispatch-gettypeinfo.md)           | Ruft die Typinformationen für das-Objekt ab, die dann zum Abrufen der Typinformationen für eine Schnittstelle verwendet werden können. |
-| [**Gettypeingefocount**](cbasedispatch-gettypeinfocount.md) | Ruft die Anzahl der Schnittstellen für Typinformationen ab, die das Objekt bereitstellt.                                            |
+| [**CBaseDispatch**](cbasedispatch-cbasedispatch.md)       | Konstruktormethode.                                                                                                 |
+| [**~CBaseDispatch**](cbasedispatch--cbasedispatch.md)     | Destruktormethode.                                                                                                  |
+| [**GetIDsOfNames**](cbasedispatch-getidsofnames.md)       | Karten einen Satz von Namen zu einem entsprechenden Satz von DISPIDs.                                                              |
+| [**GetTypeInfo**](cbasedispatch-gettypeinfo.md)           | Ruft die Typinformationen für das -Objekt ab, die dann verwendet werden können, um die Typinformationen für eine Schnittstelle abzurufen. |
+| [**GetTypeInfoCount**](cbasedispatch-gettypeinfocount.md) | Ruft die Anzahl der Schnittstellen für Typinformationen ab, die das -Objekt bietet.                                            |
 
 
 
@@ -60,8 +60,8 @@ Weitere Informationen finden Sie im Quellcode für eine der in ctlutil. h deklar
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

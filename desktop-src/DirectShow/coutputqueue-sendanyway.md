@@ -1,7 +1,7 @@
 ---
-description: Die sendanyway-Methode liefert alle ausstehenden Beispiele.
+description: Die SendAnyway-Methode stellt alle ausstehenden Beispiele bereit.
 ms.assetid: b4e3a0c6-0f72-4a00-963e-65ceed265f01
-title: Coutputqueue. sendanyway-Methode (outputq. h)
+title: COutputQueue.SendAnyway-Methode (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a6fa5495371e020310e2367aea7e7bed9ef113f2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4aed3cdd37c50f20b48922c8c711266a111680506813ab4572800abbca971343
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119831760"
 ---
-# <a name="coutputqueuesendanyway-method"></a>Coutputqueue. sendanyway-Methode
+# <a name="coutputqueuesendanyway-method"></a>COutputQueue.SendAnyway-Methode
 
-Die- `SendAnyway` Methode stellt alle ausstehenden Beispiele bereit.
+Die `SendAnyway` -Methode stellt alle ausstehenden Beispiele bereit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Element Variable [**coutputqueue:: m \_ bbatchexact**](coutputqueue-m-bbatchexact.md) den Wert **true** hat, füllt das Objekt das [**coutputqueue:: m \_ ppsamples**](coutputqueue-m-ppsamples.md) -Array aus, bevor es einen Batch von Beispielen liefert. Mit dieser Methode können Sie einen partiellen Batch bereitstellen. Beispielsweise ruft die [**coutputqueue:: EOS**](coutputqueue-eos.md) -Methode `SendAnyway` auf, um Streamende-Nachrichten zu serialisieren.
+Wenn die [**COutputQueue::m \_ bBatchExact-Membervariable**](coutputqueue-m-bbatchexact.md) **TRUE** ist, füllt das -Objekt das [**COutputQueue::m \_ ppSamples-Array**](coutputqueue-m-ppsamples.md) aus, bevor ein Batch von Stichproben übermittelt wird. Rufen Sie diese Methode auf, um einen Teilbatch zu übermitteln. Beispielsweise ruft die [**COutputQueue::EOS-Methode**](coutputqueue-eos.md) `SendAnyway` auf, um End-of-Stream-Nachrichten zu serialisieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Wenn die Element Variable [**coutputqueue:: m \_ bbatchexact**](coutputqueue-m-b
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

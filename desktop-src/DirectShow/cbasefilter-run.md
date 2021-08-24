@@ -1,7 +1,7 @@
 ---
-description: 'Die Run-Methode führt den Filter aus. Diese Methode implementiert die imediafilter:: Run-Methode.'
+description: Die Run-Methode führt den Filter aus. Diese Methode implementiert die IMediaFilter::Run-Methode.
 ms.assetid: fab2cef7-cad1-4933-92a4-5f41cd947c2f
-title: Cbasefilter. Run-Methode (amfilter. h)
+title: CBaseFilter.Run-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0555733f53b4870a43dbcbf36c69061db19490a0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6259e6ce00b0a2f93e0b71d6b44d1c6ed4aa65eaadca21ed0a78f1d16d98a42b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793280"
 ---
-# <a name="cbasefilterrun-method"></a>Cbasefilter. Run-Methode
+# <a name="cbasefilterrun-method"></a>CBaseFilter.Run-Methode
 
-Die- `Run` Methode führt den Filter aus. Diese Methode implementiert die [**imediafilter:: Run**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-run) -Methode.
+Die `Run` -Methode führt den Filter aus. Diese Methode implementiert die [**IMediaFilter::Run-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-run)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ HRESULT Run(
 
 <dl> <dt>
 
-*tSTART* 
+*tStart* 
 </dt> <dd>
 
-Verweis Zeit entsprechend der streamzeit 0.
+Die Verweiszeit, die der Streamzeit 0 entspricht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache des Fehlers angibt.
+Gibt S \_ OK zurück, wenn erfolgreich, oder ein **HRESULT-Wert,** der die Ursache des Fehlers angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Filter angehalten wurde, hält diese Methode den Filter an, indem er die [**cbasefilter::P ause**](cbasefilter-pause.md) -Methode aufrufen. Anschließend wird die [**cbasepin:: Run**](cbasepin-run.md) -Methode für jeden verbundenen Pins des Filters aufgerufen. Schließlich wird die [**cbasefilter:: m \_ State**](cbasefilter-m-state.md) Member-Variable auf State Running festgelegt \_ .
+Wenn der Filter beendet wird, hält diese Methode den Filter an, indem die [**CBaseFilter::P ause-Methode aufgerufen**](cbasefilter-pause.md) wird. Anschließend wird die [**CBasePin::Run-Methode**](cbasepin-run.md) für jeden verbundenen Pin des Filters aufruft. Schließlich wird die [**CBaseFilter::m \_ State-Membervariable**](cbasefilter-m-state.md) auf State \_ Running (Status wird ausgeführt) fest.
 
-Die streamzeit wird als aktuelle Verweis Zeit abzüglich *tSTART* berechnet. Ein Medien Beispiel mit einem Zeitstempel von NULL sollte zum Zeitpunkt *tSTART* gerendert werden.
+Die Streamzeit wird als aktuelle Referenzzeit minus *tStart berechnet.* Ein Medienbeispiel mit einem Zeitstempel von 0 (null) sollte zum Zeitpunkt *tStart gerendert werden.*
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Die streamzeit wird als aktuelle Verweis Zeit abzüglich *tSTART* berechnet. Ein
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Die streamzeit wird als aktuelle Verweis Zeit abzüglich *tSTART* berechnet. Ein
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

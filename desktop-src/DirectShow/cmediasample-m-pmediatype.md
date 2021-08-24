@@ -1,7 +1,7 @@
 ---
-description: Ein Zeiger auf den Medientyp, wenn sich der Typ aus dem vorherigen Beispiel im Datenstrom geändert hat. Andernfalls ist diese Element Variable NULL.
+description: Zeiger auf den Medientyp, wenn sich der Typ gegenüber dem vorherigen Beispiel im Datenstrom geändert hat. Andernfalls ist diese Membervariable NULL.
 ms.assetid: cde1ace1-4c7c-49c2-9a63-062da197da1b
-title: 'Cmediasample:: m_pMediaType Member (amfilter. h)'
+title: CMediaSample::m_pMediaType-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 175d67f240993988447fcdc433f75b3b3609097e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0f087bd9eedd4f7cd2043c2b3e6cf6d69d7e4daa0eb2d332baf59db3fb9544a6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832200"
 ---
-# <a name="cmediasamplem_pmediatype-member"></a>Cmediasample:: m \_ pmediatype-Member
+# <a name="cmediasamplem_pmediatype-member"></a>CMediaSample::m \_ pMediaType-Member
 
-Ein Zeiger auf den Medientyp, wenn sich der Typ aus dem vorherigen Beispiel im Datenstrom geändert hat. Andernfalls ist diese Element Variable **null**.
+Zeiger auf den Medientyp, wenn sich der Typ gegenüber dem vorherigen Beispiel im Datenstrom geändert hat. Andernfalls ist diese Membervariable **NULL.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ AM_MEDIA_TYPE *m_pMediaType;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ AM_MEDIA_TYPE *m_pMediaType;
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

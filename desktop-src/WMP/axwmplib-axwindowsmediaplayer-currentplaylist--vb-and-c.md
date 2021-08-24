@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. currentwiedergabe (Eigenschaft)
-description: Die currentwiedergabe-Eigenschaft ruft die aktuelle iwmpwiedergabe-Schnittstelle ab, die eine einfache Möglichkeit zum organisieren und Bearbeiten von Medien Elementen in einer Liste bietet, oder legt diese fest.
+title: AxWindowsMediaPlayer.currentPlaylist-Eigenschaft
+description: Die currentPlaylist-Eigenschaft ruft die aktuelle IWMPPlaylist-Schnittstelle ab, die eine einfache Möglichkeit zum Organisieren und Bearbeiten von Medienelementen in einer Liste bietet, oder legt sie fest.
 ms.assetid: d5a9f126-a628-499c-a012-8a47c6c987ef
 keywords:
-- currentwiedergabe-Eigenschaft, Windows-Media Player
-- currentwiedergabe-Eigenschaft, Windows Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, currentwiedergabe-Eigenschaft
+- currentPlaylist-Eigenschaft Windows Media Player
+- currentPlaylist-Eigenschaft Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , currentPlaylist-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a0f5b91a2e65b81fd1f13da0bad5f77c5ea1415
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f976084773a333e40c0a278878e9a35ed913e5911ec732c0dccfe6525e5f45a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119765261"
 ---
-# <a name="axwindowsmediaplayercurrentplaylist-property"></a>AxWindowsMediaPlayer. currentwiedergabe (Eigenschaft)
+# <a name="axwindowsmediaplayercurrentplaylist-property"></a>AxWindowsMediaPlayer.currentPlaylist-Eigenschaft
 
-Die currentwiedergabe-Eigenschaft ruft die aktuelle **iwmpwiedergabe** -Schnittstelle ab, die eine einfache Möglichkeit zum organisieren und Bearbeiten von Medien Elementen in einer Liste bietet, oder legt diese fest.
+Die currentPlaylist-Eigenschaft ruft die aktuelle **IWMPPlaylist-Schnittstelle** ab, die eine einfache Möglichkeit zum Organisieren und Bearbeiten von Medienelementen in einer Liste bietet, oder legt sie fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ Public Property currentPlaylist As IWMPPlaylist
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die WMPLib. iwmpwiedergabe-Schnittstelle, die Zugriff auf die aktuelle Wiedergabeliste bereitstellt.
+Die WMPLib.IWMPPlaylist-Schnittstelle, die Zugriff auf die aktuelle Wiedergabeliste bietet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-, Wenn die iwmpsettings. AutoStart-Eigenschaft (auch über AxWindowsMediaPlayer. Settings aufgerufen wird.**Autostart**) ist "true", wenn Sie " **currentwiedergabe**" festlegen, beginnt die Wiedergabe automatisch.
+Wenn die IWMPSettings.autoStart-Eigenschaft (auch über AxWindowsMediaPlayer.settings zugegriffen wird).**autoStart**) ist true, die Wiedergabe beginnt automatisch, sobald Sie **currentPlaylist** festlegen.
 
-Diese Eigenschaft nimmt eine iwmpwiedergabe-Schnittstelle an, die auf verschiedene Weise abgerufen werden kann, z. b. durch das erhalten des Werts aus dem *iwmpplaylistarray*. **Element** oder *iwmpplaylistcollection*. **newwiedergabe** -Eigenschaften. Wenn Sie ein **Wiedergabe** Listenelement mithilfe eines Datei namens laden möchten, legen Sie die URL-Eigenschaft fest, oder verwenden Sie AxWindowsMediaPlayer. **newwiedergabe**.
+Diese Eigenschaft nimmt eine IWMPPlaylist-Schnittstelle an, die auf verschiedene Weise erworben werden kann, z. B. durch Abrufen des Werts aus dem *IWMPPlaylistArray.* **Item** oder *IWMPPlaylistCollection*. **newPlaylist-Eigenschaften.** Um ein **Wiedergabelistenelement** mit einem Dateinamen zu laden, legen Sie die URL-Eigenschaft fest, oder verwenden Sie AxWindowsMediaPlayer. **newPlaylist**.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die erste Wiedergabeliste in der Bibliothek abgerufen und die currentwiedergabe-Eigenschaft verwendet, um die abgerufene Wiedergabeliste als aktuelle Wiedergabeliste festzulegen und deren Namen anzuzeigen. Das AxWMPLib. AxWindowsMediaPlayer-Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird die erste Wiedergabeliste in der Bibliothek abgerufen und die currentPlaylist-Eigenschaft verwendet, um die abgerufene Wiedergabeliste als aktuelle Wiedergabeliste festzulegen und ihren Namen anzuzeigen. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -93,7 +93,7 @@ currentPlaylistLabel.Text = (&quot;Found first playlist. Name = &quot; + player.
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -103,25 +103,25 @@ currentPlaylistLabel.Text = (&quot;Found first playlist. Name = &quot; + player.
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. newwiedergabe (VB und c#)**](axwmplib-axwindowsmediaplayer-newplaylist.md)
+[**AxWindowsMediaPlayer.newPlaylist (VB und C#)**](axwmplib-axwindowsmediaplayer-newplaylist.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. Settings (VB und c#)**](axwmplib-axwindowsmediaplayer-settings--vb-and-c.md)
+[**AxWindowsMediaPlayer.settings (VB und C#)**](axwmplib-axwindowsmediaplayer-settings--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistarray. Item (VB und c#)**](wmplibiwmpplaylistarray-iwmpplaylistarray-item--vb-and-c.md)
+[**IWMPPlaylistArray.Item (VB und C#)**](wmplibiwmpplaylistarray-iwmpplaylistarray-item--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistcollection. newwiedergabe (VB und c#)**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-newplaylist--vb-and-c.md)
+[**IWMPPlaylistCollection.newPlaylist (VB und C#)**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-newplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. Autostart (VB und c#)**](wmplibiwmpsettings-iwmpsettings-autostart--vb-and-c.md)
+[**IWMPSettings.autoStart (VB und C#)**](wmplibiwmpsettings-iwmpsettings-autostart--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: Log-PS
-description: Protokoll der vollständigen Genauigkeit (x). | Log-PS
+title: log – ps
+description: Protokoll mit vollständiger ₂(x). | log – ps
 ms.assetid: e540a082-5916-4111-b908-bb229c9e7dc8
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a8face264d5221cf4b39f99260bec476ee5742f0
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 4be7061b6e2e0bfa4fd86ffaeef1651cd114996bb9252192582f4c447aac09ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104982017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119854150"
 ---
-# <a name="log---ps"></a>Log-PS
+# <a name="log---ps"></a>log – ps
 
-Protokoll der vollständigen Genauigkeit (x).
+Protokoll mit vollständiger ₂(x).
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| Log DST, src |
+| log dst, src |
 |--------------|
 
 
@@ -33,14 +33,14 @@ Protokoll der vollständigen Genauigkeit (x).
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register. Das Quell Register erfordert die explizite Verwendung von "replizieren". Das heißt, es muss genau eine der x-, y-,. z-, w. w-, d. h. die. r-,. g-,. b-,. a-Entsprechungen) angegeben werden.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister. Das Quellregister erfordert die explizite Verwendung von "replicate swizzle". Das heißt, genau eine der .x-, .y-, .z-, .w swizzle-Komponenten (oder die Entsprechungen .r, .g, .b, .a) müssen angegeben werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | log                   |      |      |      |      | x    | x    | x     | x    | x     |
 
@@ -48,7 +48,7 @@ where
 
  
 
-Der folgende Code Ausschnitt zeigt die ausgeführten Vorgänge.
+Der folgende Codeausschnitt zeigt die ausgeführten Vorgänge.
 
 
 ```
@@ -66,13 +66,13 @@ else
 
 
 
-Diese Anweisung akzeptiert eine skalare Quelle, deren Signier Bit ignoriert wird. Das Ergebnis wird in alle vier Kanäle repliziert.
+Diese Anweisung akzeptiert eine Skalarquelle, deren Vorzeichenbit ignoriert wird. Das Ergebnis wird in alle vier Kanäle repliziert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

@@ -1,23 +1,23 @@
 ---
-title: In-Process Server
-description: In-Process Server
+title: In-Process-Server
+description: In-Process-Server
 ms.assetid: cc0c4350-fa75-4321-834f-711158776cb2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4886932b9669aa2d3cdd49979324f9ccc6e03d44
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: eccc4c65db19e4ed567a2fe6105fa4d81e9c52cc9165556d9f388d8af181eee3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119854530"
 ---
-# <a name="in-process-servers"></a>In-Process Server
+# <a name="in-process-servers"></a>In-Process-Server
 
-Wenn Sie eine OLE-Serveranwendung als in-Process-Server implementieren – eine DLL, die im Prozessbereich der Containeranwendung ausgeführt wird – anstelle eines lokalen Servers – eine exe-Datei, die in einem eigenen Prozessbereich ausgeführt wird – die Kommunikation zwischen Container und Server wird vereinfacht, da die Kommunikation zwischen den beiden die Form normaler Funktionsaufrufe annehmen kann. Remote Prozedur Aufrufe sind nicht erforderlich, da die beiden Anwendungen im gleichen Prozessbereich ausgeführt werden. Erwartungsgemäß sind die Objekte, die das Marshalling von Parametern verwalten, ebenfalls unnötig, obwohl Sie möglicherweise innerhalb der dll aggregiert werden, ohne die Kommunikation zwischen Container und Server zu beeinträchtigen.
+Wenn Sie eine OLE-Serveranwendung als In-Process-Server implementieren – eine DLL, die im Prozessbereich der Containeranwendung ausgeführt wird – und nicht als lokaler Server – eine EXE, die in einem eigenen Prozessbereich ausgeführt wird, wird die Kommunikation zwischen Container und Server vereinfacht, da die Kommunikation zwischen den beiden in Form normaler Funktionsaufrufe erfolgen kann. Remoteprozeduraufrufe sind nicht erforderlich, da die beiden Anwendungen im gleichen Prozessbereich ausgeführt werden. Wie Sie erwarten würden, sind die Objekte, die das Marshalling von Parametern verwalten, ebenfalls unnötig, obwohl sie innerhalb der DLL aggregiert werden können, ohne die Kommunikation zwischen Container und Server zu beeinträchtigen.
 
-Wenn eine OLE-Serveranwendung als Prozess interner Server implementiert wird, ist ein separater Objekt Handler nicht erforderlich, da sich der Server selbst im Prozessbereich des Clients befindet. Der Hauptunterschied zwischen einem in-Process-Server und einem Objekt Handler besteht darin, dass der Server das Objekt im Zustand "wird ausgeführt" verwalten kann, während der Handler dies nicht zulässt. Eine Folge dieses Unterschieds besteht darin, dass ein Server eine Benutzeroberfläche für die Bearbeitung des laufenden Objekts bereitstellen muss, während ein Handler diese Anforderung an den Server des Objekts delegiert. Beim Erstellen eines in-Process-Servers können Sie den OLE-Standard Handler aggregieren, sodass grundlegende Aufgaben wie Anzeige, Speicherung und Benachrichtigungen behandelt werden können, während Sie nur die Dienste implementieren, die der Handler entweder nicht bereitstellt oder nicht auf die gewünschte Weise implementiert.
+Wenn eine OLE-Serveranwendung als Prozessserver implementiert wird, ist kein separater Objekthandler erforderlich, da sich der Server selbst im Prozessbereich des Clients befindet. Der Hauptunterschied zwischen einem Prozessserver und einem Objekthandler besteht darin, dass der Server das Objekt in einem ausgeführten Zustand verwalten kann, während der Handler dies nicht kann. Eine Folge dieses Unterschieds ist, dass ein Server eine Benutzeroberfläche zum Bearbeiten des ausgeführten Objekts bereitstellen muss, während ein Handler diese Anforderung an den Server des Objekts delegiert. Beim Erstellen eines In-Process-Servers können Sie für den OLE-Standardhandler aggregieren, sodass er grundlegende Aufgaben wie Anzeige, Speicherung und Benachrichtigungen verarbeiten kann, während Sie nur die Dienste implementieren, die der Handler entweder nicht bereitstellt oder nicht in der von Ihnen benötigten Weise implementiert.
 
-Weitere Informationen finden Sie unter den folgenden Themen:
+Weitere Informationen finden Sie in den folgenden Themen:
 
 -   [Vorteile](advantages.md)
 -   [Nachteile](disadvantages.md)
@@ -26,12 +26,12 @@ Weitere Informationen finden Sie unter den folgenden Themen:
 
 <dl> <dt>
 
-[Verbund Dokumente](compound-documents.md)
+[Zusammengesetzte Dokumente](compound-documents.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

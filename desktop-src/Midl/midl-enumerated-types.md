@@ -1,25 +1,25 @@
 ---
-title: Enumerationstypen der Mitte
-description: Die Enumeration-Deklaration wird nicht vom Mittel l-Compiler in \ define-Anweisungen übersetzt, da dies von einigen DCE-Compilern erfolgt. Sie wird in der generierten Header Datei als eine Deklaration der C-Programmiersprache reproduziert.
+title: MIDL-Enumerationstypen
+description: Die Enumerationsdeklaration wird vom MIDL-Compiler nicht wie von einigen DCE-Compilern in \define-Anweisungen übersetzt. Sie wird als Enumerationsdeklaration in C-Sprache in der generierten Headerdatei reproduziert.
 ms.assetid: 778d83e6-ec99-4781-87df-46da4cc86f5a
 keywords:
-- Datentypen mittlerer l, enumerierte Typen
+- -Datentypen MIDL, aufzählte Typen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: efbb28ef95c32549a2c373af292581d09923fce8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d41c4132a9613a98fc8471409d645c8ddfd65f0993b391ebf71cae6f2c95458f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856436"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787450"
 ---
-# <a name="midl-enumerated-types"></a>Enumerationstypen der Mitte
+# <a name="midl-enumerated-types"></a>MIDL-Enumerationstypen
 
-Die [**Enumeration**](enum.md) -Deklaration wird vom Mittel l-Compiler nicht in **\# define** -Anweisungen übersetzt, da dies von einigen DCE-Compilern erfolgt. Sie wird in der generierten Header Datei als **eine Deklaration** der C-Programmiersprache reproduziert.
+Die [**Enumerationsdeklaration**](enum.md) wird vom MIDL-Compiler nicht wie von einigen DCE-Compilern in **\# define-Anweisungen** übersetzt. Sie wird als Enumerationsdeklaration in C-Sprache in der **generierten** Headerdatei reproduziert.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: gluloadsamplingmatrices-Funktion (glu. h)
-description: Die Funktion "gluloadsamplingmatrices" lädt nicht einheitliche, nicht einheitliche Rational B-Spline (NURBS)-samplingmatrizen.
+title: gluLoadSamplingMatrices-Funktion (Glu.h)
+description: Die gluLoadSamplingMatrices-Funktion lädt NON-Uniform Rational B-Spline (NURBS)-Sampling- und Cullingmatrizen.
 ms.assetid: 7fdbc4e2-a037-4f07-bb03-e51feea42775
 keywords:
-- gluloadsamplingmatrices-Funktion OpenGL
+- gluLoadSamplingMatrices-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 293b8bace0dff7d89bfcffa2af33738e0e59de7a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e41b2f6b25e0cecf0d13d87760a941d5ea68baa1fdd85495c8a316e862c77aec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119777530"
 ---
-# <a name="gluloadsamplingmatrices-function"></a>gluloadsamplingmatrices-Funktion
+# <a name="gluloadsamplingmatrices-function"></a>gluLoadSamplingMatrices-Funktion
 
-Die Funktion " **gluloadsamplingmatrices** " lädt nicht einheitliche, nicht einheitliche Rational B-Spline ([NURBS](using-nurbs-curves-and-surfaces.md))-samplingmatrizen.
+Die **gluLoadSamplingMatrices-Funktion** lädt non-Uniform Rational B-Spline ([NURBS](using-nurbs-curves-and-surfaces.md)) Sampling- und Cullingmatrizen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ void WINAPI gluLoadSamplingMatrices(
 *nobj* 
 </dt> <dd>
 
-Das NURBS-Objekt (mit [**glunewnurbsrenderer**](glunewnurbsrenderer.md)erstellt).
+Das NURBS-Objekt (erstellt mit [**gluNewNurbsRenderer**](glunewnurbsrenderer.md)).
 
 </dd> <dt>
 
-*modelmatrix* 
+*modelMatrix* 
 </dt> <dd>
 
-Eine Modelview-Matrix (wie bei einem [**glgetfloatv**](glgetfloatv.md) -Befehl).
+Eine ModelView-Matrix (wie bei einem [**glGetFloatv-Aufruf).**](glgetfloatv.md)
 
 </dd> <dt>
 
-*projmatrix* 
+*projMatrix* 
 </dt> <dd>
 
-Eine Projektions Matrix (wie bei einem **glgetfloatv** -Befehl).
+Eine Projektionsmatrix (aus einem **glGetFloatv-Aufruf).**
 
 </dd> <dt>
 
-*Viewport* 
+*Ansichtsfenster* 
 </dt> <dd>
 
-Ein Viewport (wie bei einem [**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) -Befehl).
+Ein Viewport (wie bei einem [**glGetIntegerv-Aufruf).**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 
 </dd> </dl>
 
@@ -75,11 +75,11 @@ Ein Viewport (wie bei einem [**glgetintegerv**](glgetbooleanv--glgetdoublev--glg
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **gluloadsamplingmatrices** " verwendet " *modelmatrix*", " *projmatrix*" und "Viewport", um die in *nobj* gespeicherten samplingund immatrixmatrizen neu zu berechnen.  Die Stichproben Matrix bestimmt, wie gut eine nursb-Kurve oder-Oberfläche im Mosaik Prozess berücksichtigt werden muss, um die Stichproben Toleranz zu erfüllen (wie durch die Eigenschaft für die- \_ Stichproben \_ Toleranz bestimmt). Die culult-Matrix wird bei der Entscheidung verwendet, ob eine nursb-Kurve oder-Oberfläche vor dem Rendern vor dem Rendering (bei aktivierter \_ engisteringeigenschaft) gekettet werden soll.
+Die **gluLoadSamplingMatrices-Funktion** verwendet *modelMatrix,* *projMatrix* und *viewport,* um die in *nobj* gespeicherten Sampling- und Cullingmatrizen neu zu berechnen. Die Samplingmatrix bestimmt, wie fein eine NURBS-Kurve oder -Oberfläche mosaikiert werden muss, um die Samplingtoleranz zu erfüllen (wie durch die GLU \_ SAMPLING \_ TOLERANCE-Eigenschaft festgelegt). Die Cullingmatrix wird verwendet, um zu entscheiden, ob eine NURBS-Kurve oder -Oberfläche vor dem Rendering gecullt werden soll (wenn die \_ GLU-CULLING-Eigenschaft aktiviert ist).
 
-Die Funktion " **gluloadsamplingmatrices** " ist nur erforderlich, wenn die "glu \_ \_ autoload Matrix"- \_ Eigenschaft ausgeschaltet ist (siehe [**glunurbsproperty**](glunurbsproperty.md)). Obwohl es sinnvoll sein kann, die Eigenschaften für die \_ Automatische Load-Matrix von Glu zu aktivieren \_ \_ , erfordert dies einen Roundtrip zum OpenGL-Server, um die aktuellen Werte der Modelview-Matrix, der Projektions Matrix und des Viewports abzurufen.)
+Die **gluLoadSamplingMatrices-Funktion** ist nur erforderlich, wenn die GLU AUTO LOAD MATRIX-Eigenschaft deaktiviert ist \_ \_ \_ (siehe [**gluNurbsProperty**](glunurbsproperty.md)). Obwohl es praktisch sein kann, die GLU AUTO LOAD MATRIX-Eigenschaft aktiviert zu lassen, erfordert dies einen Roundtrip zum OpenGL-Server, um die aktuellen Werte der \_ \_ \_ Modellansichtsmatrix, Projektionsmatrix und Viewports zu erhalten.)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,8 +89,8 @@ Die Funktion " **gluloadsamplingmatrices** " ist nur erforderlich, wenn die "glu
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -99,16 +99,16 @@ Die Funktion " **gluloadsamplingmatrices** " ist nur erforderlich, wenn die "glu
 
 <dl> <dt>
 
-[**glgetfloatv**](glgetfloatv.md)
+[**glGetFloatv**](glgetfloatv.md)
 </dt> <dt>
 
-[**glgetintegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glugetnurbsproperty**](glugetnurbsproperty.md)
+[**gluGetNurbsProperty**](glugetnurbsproperty.md)
 </dt> <dt>
 
-[**glunewnurbsrenderer**](glunewnurbsrenderer.md)
+[**gluNewNurbsRenderer**](glunewnurbsrenderer.md)
 </dt> </dl>
 
  

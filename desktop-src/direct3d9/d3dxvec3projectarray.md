@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 10f0e19ad5bdbff59d7386223c88ed867e8d0d88
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7ffc42934b9c341f4d07ef48a39470158155b4dfbcd352ffbc5e0ea188785752
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749390"
 ---
 # <a name="d3dxvec3projectarray-function-d3dx9mathh"></a>D3DXVec3ProjectArray-Funktion (D3dx9math.h)
 
@@ -135,15 +135,15 @@ Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
 Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) bei der es sich um das Array handelt, das vom Objektbereich in den Bildschirmbereich projiziert wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXVec3ProjectArray-Funktion** als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXVec3ProjectArray-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

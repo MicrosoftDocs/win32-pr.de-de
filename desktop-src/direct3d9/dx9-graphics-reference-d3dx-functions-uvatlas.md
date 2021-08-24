@@ -1,19 +1,19 @@
 ---
-description: 'D3DX stellt die folgenden uvatlas-Funktionen bereit:'
+description: 'D3DX stellt die folgenden UVAtlas-Funktionen zur Verfügung:'
 ms.assetid: 9c5c400e-0f00-4715-9e96-ce01a400c64d
-title: Uvatlas-Funktionen
+title: UVAtlas-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 48c2216e836fac7a17fd138f9ce5fb9b3355c771
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7a63159b5017012cb550515d33e1a9fa107b877669dd5e21ee9748a54b0df634
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104123872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749300"
 ---
-# <a name="uvatlas-functions"></a>Uvatlas-Funktionen
+# <a name="uvatlas-functions"></a>UVAtlas-Funktionen
 
-D3DX stellt die folgenden uvatlas-Funktionen bereit:
+D3DX stellt die folgenden UVAtlas-Funktionen zur Verfügung:
 
 -   [**D3DXUVAtlasCreate**](d3dxuvatlascreate.md)
 -   [**D3DXUVAtlasPack**](d3dxuvatlaspack.md)
@@ -23,7 +23,7 @@ D3DX stellt die folgenden uvatlas-Funktionen bereit:
 -   [**D3DXComputeIMTFromSignal**](d3dxcomputeimtfromsignal.md)
 -   [**D3DXComputeIMTFromTexture**](d3dxcomputeimtfromtexture.md)
 
-Die uvatlas-Funktionen berechnen eine optimale, eindeutige Textur Parametrisierung für ein Eingabe Mesh mithilfe eines pro Gesicht integrierten metriktensors.
+Die UVAtlas-Funktionen berechnen eine optimale, eindeutige Texturparametrisierung für ein Eingabegitternetz mithilfe eines integrierten Metrik-Tensors pro Gesicht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -32,7 +32,7 @@ Die uvatlas-Funktionen berechnen eine optimale, eindeutige Textur Parametrisieru
 [D3DX-Funktionen](dx9-graphics-reference-d3dx-functions.md)
 </dt> <dt>
 
-[Verwenden von uvatlas (Direct3D 9)](using-uvatlas.md)
+[Verwenden von UVAtlas (Direct3D 9)](using-uvatlas.md)
 </dt> </dl>
 
  

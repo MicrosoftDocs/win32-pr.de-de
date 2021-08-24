@@ -1,22 +1,22 @@
 ---
-description: Laden eines Diagramms aus einem externen Prozess
+description: Laden einer Graph aus einem externen Prozess
 ms.assetid: 1c657c7f-46d7-4feb-88a7-4a3227c9070b
-title: Laden eines Diagramms aus einem externen Prozess
+title: Laden einer Graph aus einem externen Prozess
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eac42db3a87b00b1cb8f3a9ae5297215ae9bd3fa
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 1e92fdaebb9ce3cb6615153daf66a8991477bf76e16ac3298e8e8b2fb59d74b4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104551414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119831055"
 ---
-# <a name="loading-a-graph-from-an-external-process"></a>Laden eines Diagramms aus einem externen Prozess
+# <a name="loading-a-graph-from-an-external-process"></a>Laden einer Graph aus einem externen Prozess
 
-GraphEdit kann ein von einem externen Prozess erstelltes Filter Diagramm laden. Mit dieser Funktion können Sie genau sehen, welches Filter Diagramm für Ihre Anwendung erstellt wird, und zwar nur über einen minimalen zusätzlichen Code in Ihrer Anwendung.
+GraphEdit kann ein Von einem externen Prozess erstelltes Filterdiagramm laden. Mit diesem Feature können Sie genau sehen, welches Filterdiagramm Ihre Anwendung erstellt, mit nur einer minimalen Menge an zusätzlichem Code in Ihrer Anwendung.
 
 > [!Note]  
-> Für dieses Feature ist Windows 2000, Windows XP oder höher erforderlich.
+> Dieses Feature erfordert Windows 2000, Windows XP oder höher.
 
  
 
@@ -25,7 +25,7 @@ GraphEdit kann ein von einem externen Prozess erstelltes Filter Diagramm laden. 
 
  
 
-Die Anwendung muss die Filter Diagramm Instanz in der laufenden Objekttabelle (rot) registrieren. Die rot ist eine Global zugängliche Nachschlage Tabelle, in der die Ausführung von Objekten nachverfolgt wird. Objekte werden im Rot von Moniker registriert. Um eine Verbindung mit dem Diagramm herzustellen, durchsucht GraphEdit die rot nach Monikern, deren Anzeige Name mit einem bestimmten Format übereinstimmt:
+Die Anwendung muss die Filterdiagramminstanz in der Running Object Table (ROT) registrieren. Rot ist eine global zugängliche Nachverfolgungstabelle, die ausgeführte Objekte nachverfolgt. Objekte werden im ROT-Moniker registriert. Um eine Verbindung mit dem Diagramm herzustellen, durchsucht GraphEdit rot nach Monikern, deren Anzeigename einem bestimmten Format entspricht:
 
 
 ```C++
@@ -34,9 +34,9 @@ Die Anwendung muss die Filter Diagramm Instanz in der laufenden Objekttabelle (r
 
 
 
-Dabei steht *X* für die hexadezimale Adresse des Filter Graph-Managers, und *Y* für die Prozess-ID, auch als hexadezimal.
+Wobei *X* die hexadezimale Adresse des Filter-Graph-Managers und *Y* die Prozess-ID ist, ebenfalls in hexadezimaler Form.
 
-Wenn Ihre Anwendung das Filter Diagramm erstmalig erstellt, müssen Sie die folgende Funktion aufzurufen:
+Wenn Ihre Anwendung das Filterdiagramm zum ersten Mal erstellt, rufen Sie die folgende Funktion auf:
 
 
 ```C++
@@ -76,7 +76,7 @@ HRESULT AddToRot(IUnknown *pUnkGraph, DWORD *pdwRegister)
 
 
 
-Diese Funktion erstellt einen Moniker und einen neuen rot-Eintrag für das Filter Diagramm. Der erste Parameter ist ein Zeiger auf das Filter Diagramm. Der zweite Parameter erhält einen Wert, der den neuen rot-Eintrag identifiziert. Bevor die Anwendung das Filter Diagramm freigibt, wird die folgende Funktion aufgerufen, um den rot-Eintrag zu entfernen. Der *pdwregister* -Parameter ist der Bezeichner, der von der addtorot-Funktion zurückgegeben wird.
+Diese Funktion erstellt einen Moniker und einen neuen ROT-Eintrag für das Filterdiagramm. Der erste Parameter ist ein Zeiger auf das Filterdiagramm. Der zweite Parameter empfängt einen Wert, der den neuen ROT-Eintrag identifiziert. Bevor die Anwendung das Filterdiagramm frei gibt, rufen Sie die folgende Funktion auf, um den ROT-Eintrag zu entfernen. Der *pdwRegister-Parameter* ist der bezeichner, der von der AddToRot-Funktion zurückgegeben wird.
 
 
 ```C++
@@ -92,7 +92,7 @@ void RemoveFromRot(DWORD pdwRegister)
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie diese Funktionen aufgerufen werden. In diesem Beispiel wird der Code, mit dem rot-Einträge hinzugefügt und entfernt werden, bedingt kompiliert, sodass er nur in Debugbuilds enthalten ist.
+Das folgende Codebeispiel zeigt, wie diese Funktionen aufruft. In diesem Beispiel wird der Code, der ROT-Einträge hinzufügt und entfernt, bedingt kompiliert, sodass er nur in Debugbuilds enthalten ist.
 
 
 ```C++
@@ -116,24 +116,24 @@ pGraph->Release();
 
 
 
-Um das Filter Diagramm in GraphEdit anzuzeigen, führen Sie Ihre Anwendung und GraphEdit gleichzeitig aus. Klicken Sie im Menü "GraphEdit- **Datei** " auf **mit Remote Diagramm verbinden...** Wählen Sie im Dialogfeld **Verbindung mit Graph herstellen** die Prozess-ID (PID) Ihrer Anwendung aus, und klicken Sie auf **OK**. GraphEdit lädt das Filter Diagramm und zeigt es an. Verwenden Sie in diesem Diagramm keine anderen GraphEdit-Funktionen – Dies kann zu unerwarteten Ergebnissen führen. Fügen Sie z. b. keine Filter hinzu, oder entfernen Sie die Filter, und starten Sie das Diagramm nicht. Schließen Sie GraphEdit, bevor Sie die Anwendung verlassen.
+Um das Filterdiagramm in GraphEdit anzeigen zu können, führen Sie ihre Anwendung und GraphEdit gleichzeitig aus. Klicken Sie im Menü GraphDatei **bearbeiten** auf Verbinden **remote Graph...** Wählen Sie **im Verbinden Dialogfeld Graph** die Prozess-ID (PID) Ihrer Anwendung aus, und klicken Sie auf **OK.** GraphEdit lädt das Filterdiagramm und zeigt es an. Verwenden Sie keine anderen GraphEdit-Features in diesem Diagramm. Dies kann zu unerwarteten Ergebnissen führen. Fügen Sie z. B. keine Filter hinzu oder entfernen Sie sie nicht, oder beenden und starten Sie den Graphen. Schließen Sie GraphEdit, bevor Sie Ihre Anwendung beenden.
 
 > [!Note]  
-> Die Anwendung kann beim Beenden verschiedene Bestätigungen erreichen. Sie können diese Fehler ignorieren.
+> Ihre Anwendung kann beim Beenden auf verschiedene Asserts treffen. Sie können diese Fehler ignorieren.
 
  
 
-Die folgende Abbildung zeigt das Dialogfeld **Verbindung mit Graph herstellen** .
+Die folgende Abbildung zeigt das **dialogfeld Verbinden To Graph** (Zu Graph).
 
-![mit Diagramm verbinden](images/gedit-spy.png)
+![Herstellen einer Verbindung mit graph](images/gedit-spy.png)
 
-Wenn GraphEdit das Diagramm lädt, wird es im Kontext der Zielanwendung ausgeführt. Daher kann GraphEdit blockieren, weil es auf den Thread wartet. Dies kann z. b. vorkommen, wenn Sie den Code im Debugger schrittweise durchlaufen.
+Wenn GraphEdit das Diagramm lädt, wird es im Kontext der Zielanwendung ausgeführt. Daher kann GraphEdit blockiert werden, da es auf den Thread wartet. Dies kann z. B. auftreten, wenn Sie den Code im Debugger ausführen.
 
-Diese Funktion sollte nur in Debugbuilds der Anwendung und nicht in Einzelhandels Builds verwendet werden, da es anderen Anwendungen ermöglicht, das Filter Diagramm anzuzeigen oder zu steuern.
+Dieses Feature sollte nur in Debugbuilds Ihrer Anwendung und nicht in Einzelhandelsbuilds verwendet werden, da es anderen Anwendungen ermöglicht, das Filterdiagramm zu anzeigen oder zu steuern.
 
-## <a name="connecting-to-a-remote-graph-from-the-command-line"></a>Herstellen einer Verbindung mit einem Remote Diagramm über die Befehlszeile
+## <a name="connecting-to-a-remote-graph-from-the-command-line"></a>Herstellen einer Verbindung mit einem remote Graph über die Befehlszeile
 
-GraphEdit unterstützt eine Befehlszeilenoption zum automatischen Laden eines Remote Diagramms beim Start. Die Syntax lautet:
+GraphEdit unterstützt eine Befehlszeilenoption zum automatischen Laden eines Remotediagramms beim Start. Die Syntax ist:
 
 
 ```C++
@@ -142,13 +142,13 @@ GraphEdt -a moniker
 
 
 
-Dabei ist der *Moniker* ein Moniker, der mithilfe der zuvor beschriebenen addtorot-Funktion erstellt wurde.
+Wobei *der Moniker* ein Moniker ist, der mit der zuvor beschriebenen AddToRot-Funktion erstellt wurde.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Simulieren der Diagramm Erstellung mit GraphEdit](simulating-graph-building-with-graphedit.md)
+[Simulieren von Graph Building mit GraphEdit](simulating-graph-building-with-graphedit.md)
 </dt> </dl>
 
  

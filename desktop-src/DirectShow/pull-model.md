@@ -1,37 +1,37 @@
 ---
-description: Pull-Modell
+description: Pullmodell
 ms.assetid: b5246dfe-e6ee-4b91-bfe3-2ec8b8723938
-title: Pull-Modell
+title: Pullmodell
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8dd4becd54bffb39acf30b6d29fca45e6a117989
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9832f719e21d85fd09fbf92303e404290d7d99efd6953ace398f77167d0263a1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747890"
 ---
-# <a name="pull-model"></a>Pull-Modell
+# <a name="pull-model"></a>Pullmodell
 
-In der [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) -Schnittstelle bestimmt der Upstream-Filter, welche Daten gesendet werden sollen, und überträgt die Daten an den downstreamfilter. Für einige Filter ist ein *Pull* -Modell besser geeignet. Hier fordert der Downstream-Filterdaten aus dem upstreamfilter an. Die Beispiele sind nach dem Wechsel nach unten, von der Ausgabe-Pin bis zur Eingabe-PIN, aber der Downstream-Filter initiiert den Datenfluss Dieser Verbindungstyp verwendet die [**iasynkreader**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) -Schnittstelle.
+In der [**IMemInputPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) bestimmt der Upstreamfilter, welche Daten gesendet werden, und pusht die Daten an den Downstreamfilter. Für einige Filter ist *ein Pullmodell* besser geeignet. Hier fordert der Downstreamfilter Daten vom Upstreamfilter an. Die Stichproben werden weiterhin nachgeschaltet, vom Ausgabepin zum Eingabepin, aber der Downstreamfilter initiiert den Datenfluss. Dieser Verbindungstyp verwendet die [**IAsyncReader-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader)
 
-Die typische Verwendung für das Pull-Modell ist die Dateiwiedergabe. Beispielsweise führt der asynchrone [Datei Quell](file-source--async--filter.md) Filter in einem AVI-Wiedergabe Diagramm generische Datei Lesevorgänge durch und übermittelt die Daten als Bytestream ohne Formatinformationen. Der [avi-Splitter](avi-splitter-filter.md) Filter liest die AVI-Header und analysiert den Stream in Video-und Audiobeispiele. Der avi-Splitter kann ermitteln, welche Daten Sie besser benötigen als der asynchrone Quell Filter für Dateien, weshalb er anstelle von **IMemInputPin** **iasynkreader** verwendet.
+Die typische Verwendung für das Pullmodell ist die Dateiwiedergabe. Beispielsweise führt der Filter [Async File Source](file-source--async--filter.md) in einem AVI-Wiedergabediagramm generische Dateilesevorgänge aus und stellt die Daten als Bytestream ohne Formatinformationen zur Verfügung. Der [AVI-Splitterfilter](avi-splitter-filter.md) liest die AVI-Header und analysiert den Stream in Video- und Audiobeispiele. Der AVI-Splitter kann bestimmen, welche Daten er besser benötigt als der Filter Async File Source und verwendet daher **IAsyncReader** anstelle von **IMemInputPin**.
 
-Um Daten aus dem Ausgabepin anzufordern, ruft die Eingabe-PIN eine der folgenden Methoden auf:
+Zum Anfordern von Daten vom Ausgabepin ruft der Eingabepin eine der folgenden Methoden auf:
 
--   [**Iasynkreader:: Request**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-request)
--   [**Iasynkreader:: synkread**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-syncread)
--   [**Iasynkreader:: synkreadausgerichtete**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-syncreadaligned).
+-   [**IAsyncReader::Request**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-request)
+-   [**IAsyncReader::SyncRead**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-syncread)
+-   [**IAsyncReader::SyncReadAligned**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-syncreadaligned).
 
-Die erste Methode ist asynchron, um mehrere überlappende Lesevorgänge zu unterstützen. Die anderen sind synchron.
+Die erste Methode ist asynchron, um mehrere überlappende Leses zu unterstützen. Die anderen sind synchron.
 
-Theoretisch kann ein beliebiger Filter **iasynkreader** unterstützen, in der Praxis ist er jedoch für Quell Filter konzipiert, die eine Verbindung mit Parserfiltern herstellen. Der Parser verhält sich sehr ähnlich wie der Quell Filter im Push-Modell. Wenn er angehalten wird, erstellt er einen streamingindthread, der Daten aus der **iasynkreader** -Verbindung abruft und diese nach unten verschiebt. Die Ausgabe Pins verwenden **IMemInputPin**, und der Rest des Diagramms verwendet das Standard-Push-Modell.
+Theoretisch kann jeder Filter **IAsyncReader** unterstützen, aber in der Praxis ist er für Quellfilter konzipiert, die eine Verbindung mit Parserfiltern herstellen. Der Parser verhält sich sehr ähnlich wie ein Quellfilter im Pushmodell. Wenn er angehalten wird, wird ein Streamingthread erstellt, der Daten aus der **IAsyncReader-Verbindung** pullt und nachgeschaltet pusht. Die Ausgabepins verwenden **IMemInputPin,** und der Rest des Diagramms verwendet das Standardmäßige Pushmodell.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Datenfluss im Filter Diagramm](data-flow-in-the-filter-graph.md)
+[Daten Flow im Filter-Graph](data-flow-in-the-filter-graph.md)
 </dt> </dl>
 
  

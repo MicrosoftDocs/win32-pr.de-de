@@ -4,20 +4,20 @@ ms.assetid: 371f91b9-d60b-477e-8f8c-a7fb01121aed
 title: NTSC (USA)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ae84c864ec1b22f375ceb7e8059edbcec815df7
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: fa44b17d571df33405b9d0e4418c531d017329a6e15a39fbc3d558f4b2873225
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104480747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119830960"
 ---
 # <a name="ntsc-united-states"></a>NTSC (USA)
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die NTSC-Tabellen sind für ein beliebiges Gebiets Schema geeignet, das die Standard Kanal Linien von NTSC verwendet. Sowohl Broadcast-als auch Kabel-Auflistungen sind standardisiert und stabil. Außerdem sind die Häufigkeits Indizes für die Verwendung als Kanalnummern geeignet.
+Die NTSC-Tabellen sind für jedes Locale geeignet, das die NTSC-Standardkanalzeilen verwendet. Sowohl Broadcast- als auch Kabellinien sind standardisiert und stabil. Außerdem sind die Häufigkeitsindizes für die Verwendung als Kanalnummern geeignet.
 
-### <a name="ntsc-broadcast-assignments"></a>NTSC-Broadcast Zuweisungen
+### <a name="ntsc-broadcast-assignments"></a>NTSC-Broadcastzuweisungen
 
 
 ```C++
@@ -99,7 +99,7 @@ Die NTSC-Tabellen sind für ein beliebiges Gebiets Schema geeignet, das die Stan
 
 
 
-### <a name="ntsc-cable-assignments"></a>NTSC-Kabel Zuweisungen
+### <a name="ntsc-cable-assignments"></a>NTSC-Kabelzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -271,7 +271,7 @@ Die NTSC-Tabellen sind für ein beliebiges Gebiets Schema geeignet, das die Stan
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale analoge TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

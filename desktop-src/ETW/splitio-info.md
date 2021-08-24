@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Split IO-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für E/A-Split-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 0eb1f712-8b1c-4de1-b701-5c7dbabb0f55
 title: SplitIo_Info-Klasse
 ms.topic: reference
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 469c8f04664f72b88e5a4378cb318b52f32fba24
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ae5623f4d05bc4c0e5460415656f59d8b91eeedfe1671cae6a36c7a33e0a86f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867980"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766420"
 ---
-# <a name="splitio_info-class"></a>Splitio- \_ Informations Klasse
+# <a name="splitio_info-class"></a>SplitIo \_ Info-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Split IO-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für E/A-Split-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,60 +40,60 @@ class SplitIo_Info : SplitIo
 
 ## <a name="members"></a>Member
 
-Die **splitio \_ Info** -Klasse verfügt über diese Typen von Membern:
+Die **SplitIo \_ Info-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **splitio \_ Info** -Klasse verfügt über diese Eigenschaften.
+Die **SplitIo \_ Info-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Childirp**
+**ChildIrp**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Zeiger
+Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-Untergeordnetes IO-Anforderungspaket.
+Untergeordnetes E/A-Anforderungspaket.
 
 </dd> <dt>
 
-**Paramel**
+**ParentIrp**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Übergeordnetes IO-Anforderungspaket.
+Übergeordnetes E/A-Anforderungspaket.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Gibt an, dass der Volumemanager das Paar in zwei unps aufteilen soll.
+Gibt an, dass der Volume-Manager das IRP in zwei IRPs aufteilt.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

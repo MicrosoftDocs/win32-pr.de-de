@@ -1,7 +1,7 @@
 ---
-description: Erstellen Sie ein Pixel-Shader-Versions Token.
+description: Erstellen Sie ein Token für die Pixels shader-Version.
 ms.assetid: 70089a93-83df-4ac4-8d98-4e1bb6ad2581
-title: D3DPS_VERSION-Makro (D3d9types. h)
+title: D3DPS_VERSION-Makro (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3d9types.h
-ms.openlocfilehash: c3f30d673145ec9dfe38bd8e2a636ac04c9a195a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a3958cfaa3afe06e22015a28e8e1ebfd8799c01e89772eb9794dd1249cc0df9d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119750900"
 ---
-# <a name="d3dps_version-macro"></a>D3DPS- \_ Versions Makro
+# <a name="d3dps_version-macro"></a>D3DPS \_ VERSION-Makro
 
-Erstellen Sie ein Pixel-Shader-Versions Token.
+Erstellen Sie ein Token für die Pixels shader-Version.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,40 +40,40 @@ DWORD D3DPS_VERSION(
 
 <dl> <dt>
 
-*\_Wichtige* 
+*\_Hauptversion* 
 </dt> <dd>
 
-Die Haupt-Pixel-Shader-Version.
+Die Hauptversion des Pixel-Shaders.
 
 </dd> <dt>
 
 *\_Nebenversion* 
 </dt> <dd>
 
-Die neben Version des Pixelshaders.
+Die Version des Nebenpixel-Shaders.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen DWORD-Wert zurück, der eine Pixel-Shader-Version ist.
+Gibt einen DWORD-Wert zurück, bei dem es sich um eine Pixel-Shaderversion handelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Versionsnummern
 
-Die Versionsnummer ist eine Kombination aus der Hauptversion und den kleineren Scheitelpunkt-Shader-Versionsnummern. In der Tabelle werden gültige Zahlen angezeigt.
+Die Versionsnummer ist eine Kombination aus den Versionsnummern der Hauptversion und der Nebenversion des Vertex-Shaders. Gültige Zahlen werden in der Tabelle angezeigt.
 
 
 
 | Hauptversion | Nebenversion | Beispiel             |
 |-------|-------|---------------------|
-| 1     | 1     | D3DPS- \_ Version (1, 1) |
-| 1     | 2     | D3DPS- \_ Version (1, 2) |
-| 1     | 3     | D3DPS- \_ Version (1, 3) |
-| 1     | 4     | D3DPS- \_ Version (1, 4) |
-| 2     | 0     | D3DPS- \_ Version (2, 0) |
-| 3     | 0     | D3DPS- \_ Version (3, 0) |
+| 1     | 1     | D3DPS \_ VERSION(1,1) |
+| 1     | 2     | D3DPS \_ VERSION(1,2) |
+| 1     | 3     | D3DPS \_ VERSION(1,3) |
+| 1     | 4     | D3DPS \_ VERSION(1,4) |
+| 2     | 0     | D3DPS \_ VERSION(2,0) |
+| 3     | 0     | D3DPS \_ VERSION(3,0) |
 
 
 
@@ -85,11 +85,11 @@ Die Versionsnummer ist eine Kombination aus der Hauptversion und den kleineren S
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3d9types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

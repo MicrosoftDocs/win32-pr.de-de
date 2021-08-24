@@ -1,21 +1,21 @@
 ---
-description: Mit den Funktionen BeginPaint und endpaint können Sie die Zeichnung im Client Bereich vorbereiten und vervollständigen.
+description: Sie verwenden die Funktionen BeginPaint und EndPaint, um die Zeichnung im Clientbereich vorzubereiten und zu vervollständigen.
 ms.assetid: ed995bfd-a791-4d73-9a0b-daf65a9f7709
-title: Zeichnen im Client Bereich
+title: Zeichnen im Clientbereich
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e1e14c8492a11a7ad9764416b2453cea3264fbf9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e5d01331ae60a7814602f6c10c0d9109ae665da39aa140223e31ac03303048b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832020"
 ---
-# <a name="drawing-in-the-client-area"></a>Zeichnen im Client Bereich
+# <a name="drawing-in-the-client-area"></a>Zeichnen im Clientbereich
 
-Mit den Funktionen [**BeginPaint**](/windows/desktop/api/Winuser/nf-winuser-beginpaint) und [**endpaint**](/windows/desktop/api/Winuser/nf-winuser-endpaint) können Sie die Zeichnung im Client Bereich vorbereiten und vervollständigen. **BeginPaint** gibt ein Handle für den Anzeigegeräte Kontext zurück, der zum Zeichnen im Client Bereich verwendet wird. **Endpaint** beendet die Zeichnungs Anforderung und gibt den Gerätekontext frei.
+Sie verwenden die [**Funktionen BeginPaint**](/windows/desktop/api/Winuser/nf-winuser-beginpaint) und [**EndPaint,**](/windows/desktop/api/Winuser/nf-winuser-endpaint) um die Zeichnung im Clientbereich vorzubereiten und zu vervollständigen. **BeginPaint gibt** ein Handle für den Anzeigegerätekontext zurück, der zum Zeichnen im Clientbereich verwendet wird. **EndPaint beendet** die Farbanforderung und gibt den Gerätekontext frei.
 
-Im folgenden Beispiel schreibt die Fenster Prozedur die Meldung "Hello, Windows!" im Client Bereich. Um sicherzustellen, dass die Zeichenfolge bei der ersten Erstellung des Fensters sichtbar ist, ruft die [**WinMain**](/windows/win32/api/winbase/nf-winbase-winmain) -Funktion [**UpdateWindow**](/windows/desktop/api/Winuser/nf-winuser-updatewindow) sofort nach dem Erstellen und Anzeigen des Fensters auf. Dies bewirkt, dass eine [**WM- \_ Paint**](wm-paint.md) -Meldung direkt an die Fenster Prozedur gesendet wird.
+Im folgenden Beispiel schreibt die Fensterprozedur die Meldung "Hello, Windows!" im Clientbereich. Um sicherzustellen, dass die Zeichenfolge beim ersten Erstellen des Fensters sichtbar ist, ruft die [**WinMain-Funktion**](/windows/win32/api/winbase/nf-winbase-winmain) [**UpdateWindow**](/windows/desktop/api/Winuser/nf-winuser-updatewindow) unmittelbar nach dem Erstellen und Anzeigen des Fensters auf. Dies bewirkt, dass [**eine WM \_ PAINT-Nachricht**](wm-paint.md) sofort an die Fensterprozedur gesendet wird.
 
 
 ```C++

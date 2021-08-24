@@ -1,23 +1,23 @@
 ---
-title: callc (SM4-ASM)
-description: Ruft bedingt eine durch markierte Unterroutine auf, wobei die Bezeichnung l \ im Programm angezeigt wird.
+title: callc (sm4 - asm)
+description: Ruft bedingt eine Unterroutine auf, die durch markiert ist, wobei die Bezeichnung l\ im Programm angezeigt wird.
 ms.assetid: 7F6E81CE-0C38-499B-B83E-FA76FA154451
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d6bc8c9d1e4a99ce25f99253518482181cdb74d8
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
-ms.translationtype: HT
+ms.openlocfilehash: dcb751b57a09704a2fec7a9c3afb69362873e3a1d2b43091efd984f67623188a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104993071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119727160"
 ---
-# <a name="callc-sm4---asm"></a>callc (SM4-ASM)
+# <a name="callc-sm4---asm"></a>callc (sm4 - asm)
 
-Ruft bedingt eine durch markierte Unterroutine auf, wobei die Bezeichnung **l \#** im Programm angezeigt wird.
+Ruft bedingt eine Unterroutine auf, die durch markiert ist, wobei die Bezeichnung **l \#** im Programm angezeigt wird.
 
 
 
-| callc { \_ z \|\_NZ} src0. Select- \_ Komponente, l\# |
+| callc{ \_ z\|\_nz} src0.select \_ component, l\# |
 |----------------------------------------------|
 
 
@@ -26,22 +26,22 @@ Ruft bedingt eine durch markierte Unterroutine auf, wobei die Bezeichnung **l \#
 
 
 
-| Element                                                            | BESCHREIBUNG                                                     |
+| Element                                                            | Beschreibung                                                     |
 |-----------------------------------------------------------------|-----------------------------------------------------------------|
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] der Komponente, für die die Bedingung getestet werden soll.<br/> |
-| <span id="l_"></span><span id="L_"></span>*int\#*<br/>      | \[in \] der Bezeichnung der Unterroutine.<br/>                  |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Komponente, für die die Bedingung zu testen ist.<br/> |
+| <span id="l_"></span><span id="L_"></span>*L\#*<br/>      | \[in \] Die Bezeichnung der Unterroutine.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein [ret](ret--sm4---asm-.md) gefunden wird, wird die Ausführung an die Anweisung nach diesem-Befehl zurückgegeben.
+Wenn ein [Ret gefunden wird,](ret--sm4---asm-.md) geben Sie die Ausführung an die Anweisung nach diesem Aufruf zurück.
 
-Das tokenformat enthält den Offset der entsprechenden Bezeichnung im Shader.
+Das Tokenformat enthält der Einfachheit halber den Offset der entsprechenden Bezeichnung im Shader.
 
-Im folgenden Beispiel wird die-Anweisung aufgerufen.
+Das folgende Beispiel zeigt die Aufrufanweisung.
 
 
 ```
@@ -62,15 +62,15 @@ Im folgenden Beispiel wird die-Anweisung aufgerufen.
 
 ### <a name="restrictions"></a>Beschränkungen
 
--   Unterroutinen können 32 tief Schachteln.
--   Der Rückgabe Adress Stapel wird von der-Implementierung transparent verwaltet.
--   Wenn im Rückgabe Adress Stapel bereits 32 Einträge vorhanden sind und ein-Befehl ausgegeben wird **, wird der** -Vorgang übersprungen.
--   Es ist kein automatischer Parameter Stapel vorhanden. Die Anwendung kann ein indizierbares temporäres Registrierungs Array (x \# \[ \] ) verwenden, um einen Stapel manuell zu implementieren. Allerdings sind die Rückgabe Adressen der Unterroutine Aufrufe nicht sichtbar und für jede manuelle Stapel Verwaltung, die von der Anwendung ausgeführt wird, orthogonal.
--   Die Indizierung *des \# l* -Parameters ist nicht zulässig.
--   Das 32-Bit-Register, das von *src0* bereitgestellt wird, wird auf einer Bitebene getestet. Wenn ein Bit ungleich 0 (null) ist, führt **callc \_ NZ** den Aufruf aus. Wenn alle Bits NULL sind, führt **callc \_ z** den Aufruf aus.
+-   Unterroutinen können 32 Tiefe schachteln.
+-   Der Rückgabeadressenstapel wird transparent von der Implementierung verwaltet.
+-   Wenn bereits 32 Einträge im Rückgabeadressenstapel vorhanden sind und ein Aufruf ausgegeben wird, wird der Aufruf übersprungen. 
+-   Es gibt keinen automatischen Parameterstapel. Die Anwendung kann ein indizierbares temporäres Registerarray (x) verwenden, \# \[ \] um einen Stapel manuell zu implementieren. Die Rückrufadressen der Unterroutine sind jedoch nicht sichtbar und sind orthogonal zu jeder manuellen Stapelverwaltung, die von der Anwendung durchgeführt wird.
+-   Die Indizierung des *l-Parameters \#* ist nicht zulässig.
+-   Das von *src0* bereitgestellte 32-Bit-Register wird auf Bitebene getestet. Wenn ein Bit ungleich 0 (null) ist, führt **callc \_ nz** den Aufruf aus. Wenn alle Bits 0 (null) sind, führt **callc \_ z** den Aufruf aus.
 -   Rekursion ist nicht zulässig.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -82,20 +82,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

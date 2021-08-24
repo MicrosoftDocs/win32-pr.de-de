@@ -1,23 +1,23 @@
 ---
-title: RETC (SM4-ASM)
-description: Bedingter Rückgabe.
+title: retc (sm4 - asm)
+description: Bedingte Rückgabe.
 ms.assetid: D936099D-4A75-4AE2-9FE3-70ED213DF4D9
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e394bc6b947d91fafb09dbfdc075b0c60be2cf8
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
-ms.translationtype: HT
+ms.openlocfilehash: 2d68d65cf64c3c1fb7945f93053f280be3eb3bd9d5fe76e34f30102316b1f1e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104976441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119853740"
 ---
-# <a name="retc-sm4---asm"></a>RETC (SM4-ASM)
+# <a name="retc-sm4---asm"></a>retc (sm4 - asm)
 
-Bedingter Rückgabe.
+Bedingte Rückgabe.
 
 
 
-| RETC { \_ z \|\_NZ} src0. Select- \_ Komponente |
+| retc{ \_ z\|\_nz} src0.select-Komponente \_ |
 |----------------------------------------|
 
 
@@ -26,19 +26,19 @@ Bedingter Rückgabe.
 
 
 
-| Element                                                            | BESCHREIBUNG                                                   |
+| Element                                                            | Beschreibung                                                   |
 |-----------------------------------------------------------------|---------------------------------------------------------------|
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[im \] Register, um die Bedingung zu testen.<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in Das Register, mit dem die Bedingung getestet werden \] soll.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn in einer Unterroutine, wird diese Anweisung bedingt an die Anweisung nach dem-Befehl zurückgegeben. Wenn Sie sich nicht innerhalb einer Unterroutine befinden, beendet diese Anweisung die Programmausführung.
+Wenn sich diese Anweisung innerhalb einer Unterroutine befindet, kehrt sie nach dem Aufruf bedingt zur Anweisung zurück. Wenn sich diese Anweisung nicht in einer Unterroutine befindet, wird die Programmausführung beendet.
 
-Das folgende Beispiel zeigt die Verwendung dieser Anweisung.
+Im folgenden Beispiel wird die Verwendung dieser Anweisung veranschaulicht.
 
 ``` syntax
            ...
@@ -55,11 +55,11 @@ Das folgende Beispiel zeigt die Verwendung dieser Anweisung.
 
 ### <a name="restrictions"></a>Beschränkungen
 
--   **RETC** kann beliebig oft in einem Programm vorkommen.
--   Die letzte Anweisung in einem Hauptprogramm oder einer Unterroutine darf keine **RETC- \_ z** -oder **RETC- \_ NZ** sein. Stattdessen kann der bedingungslose [ret](ret--sm4---asm-.md) verwendet werden.
--   Das 32-Bit-Register, das von *src0* bereitgestellt wird, wird auf einer Bitebene getestet. Wenn ein Bit ungleich 0 (null) ist, gibt **ret \_ NZ** zurück. Wenn alle Bits NULL sind, wird von **RETC \_ z** zurückgegeben.
+-   **Retc** kann beliebig oft an einer beliebigen Stelle in einem Programm angezeigt werden.
+-   Die letzte Anweisung in einem Hauptprogramm oder einer Unterroutine kann kein **retc \_ z** oder **retc \_ nz** sein. Stattdessen kann die bedingungslose [Wiederholung](ret--sm4---asm-.md) verwendet werden.
+-   Das von *src0* bereitgestellte 32-Bit-Register wird auf Bitebene getestet. Wenn ein Bit ungleich 0 (null) ist, wird **ret \_ nz** zurückgegeben. Wenn alle Bits 0 (null) sind, wird **retc \_ z** zurückgegeben.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -71,20 +71,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -94,7 +94,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

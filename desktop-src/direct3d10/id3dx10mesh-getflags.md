@@ -1,7 +1,7 @@
 ---
-description: Greifen Sie auf die erstellungsflags des Netzes zu.
+description: Greifen Sie auf die Erstellungsflags des Gitternetzes zu.
 ms.assetid: df21aa5d-d8c4-43ee-8b22-ca1ee75ecf64
-title: 'ID3DX10Mesh:: GetFlags-Methode (d3dx10. h)'
+title: ID3DX10Mesh::GetFlags-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: ac81d0f7371bd53bb05ce606f62c7ac44fb31a38
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4746f70044ce527f1a7b9290c047d495f615b076c9a5d3cd6005e335ca2fa853
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373515"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119752950"
 ---
-# <a name="id3dx10meshgetflags-method"></a>ID3DX10Mesh:: GetFlags-Methode
+# <a name="id3dx10meshgetflags-method"></a>ID3DX10Mesh::GetFlags-Methode
 
-Greifen Sie auf die erstellungsflags des Netzes zu.
+Greifen Sie auf die Erstellungsflags des Gitternetzes zu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,9 +40,9 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die erstellungsflags, die beim Erstellen des Mesh in den *options* -Parameter von [**D3DX10CreateMesh**](d3d10-d3dx10createmesh.md) übergeben wurden. Siehe [**d3dx10 \_ Mesh**](d3dx10-mesh.md).
+Die Erstellungsflags, die beim Erstellen des Gitternetzes an den *Optionsparameter* von [**D3DX10CreateMesh**](d3d10-d3dx10createmesh.md) übergeben wurden. Siehe [**D3DX10 \_ MESH**](d3dx10-mesh.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,12 +50,12 @@ Die erstellungsflags, die beim Erstellen des Mesh in den *options* -Parameter vo
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

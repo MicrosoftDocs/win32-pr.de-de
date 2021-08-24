@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 2eb10963372519827eb544371ebb0df04df2e178
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4396f060d33efef454e87d8594c2b4ca29e46cbcbc08151cacaa76a7a4965735
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119852850"
 ---
 # <a name="d3dxmatrixorthooffcenterlh-function-d3dx10mathh"></a>D3DXMatrixOrthoOffCenterLH-Funktion (D3DX10Math.h)
 
@@ -78,7 +78,7 @@ Maximaler x-Wert des Ansichtsvolumes.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimaler y-Wert des Ansichtsvolumes.
+Minimaler y-Wert des Anzeigevolumes.
 
 </dd> <dt>
 
@@ -96,16 +96,16 @@ Maximaler y-Wert des Anzeigevolumes.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimaler Z-Wert des Ansichtsvolumens.
+Minimaler Z-Wert des Ansichtsvolumes.
 
 </dd> <dt>
 
-*( )* \[ In\]
+*NSDR* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Maximaler Z-Wert des Ansichtsvolumens.
+Maximaler Z-Wert des Ansichtsvolumes.
 
 </dd> </dl>
 
@@ -115,7 +115,7 @@ Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
 Zeiger auf die resultierende [**D3DXMATRIX.**](d3d10-d3dxmatrix.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 [**D3DXMatrixOrthoLH**](d3d10-d3dxmatrixortholh.md) ist ein Sonderfall der D3DXMatrixOrthoOffCenterLH-Funktion. Verwenden Sie die folgenden Werte, um dieselbe Projektion mit D3DXMatrixOrthoOffCenterLH zu erstellen:
 
@@ -127,7 +127,7 @@ b = -h/2 und
 
 t = h/2.
 
-Alle Parameter der D3DXMatrixOrthoOffCenterLH-Funktion sind Abstände im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumens.
+Alle Parameter der D3DXMatrixOrthoOffCenterLH-Funktion sind Entfernungen im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumes.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixOrthoOffCenterLH-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -147,7 +147,7 @@ Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu b
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

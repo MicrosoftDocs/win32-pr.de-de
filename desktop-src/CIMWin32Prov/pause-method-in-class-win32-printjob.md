@@ -1,5 +1,5 @@
 ---
-description: Die Methode zum Anhalten der WMI-Klasse hält einen Druckauftrag an.
+description: Die WMI-Klassenmethode Pause hält einen Druckauftrag an.
 ms.assetid: f1e3906f-1ca2-45c0-9863-5762e4e2119a
 ms.tgt_platform: multiple
 title: Pause-Methode der Win32_PrintJob-Klasse
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 785ba54b56c65fd298b6ef763ec2d7eca0d8f61a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1448e993a88f2f5ce800de041779fb66f383c8973143b90200622758511ef337
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119752820"
 ---
 # <a name="pause-method-of-the-win32_printjob-class"></a>Pause-Methode der Win32 \_ PrintJob-Klasse
 
-Die **Methode** zum Anhalten der [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) hält einen Druckauftrag an.
+Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **Pause** hält einen Druckauftrag an.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,7 +62,7 @@ Zugriff verweigert
 
 ## <a name="examples"></a>Beispiele
 
-Das VBScript-Codebeispiel " [alle Drucker mit leeren Druck Warteschlangen](https://Gallery.TechNet.Microsoft.Com/cf2b6b61-8ffe-444b-857b-e3a205bc693c) anhalten" hält alle Drucker an, für die keine ausstehenden Druckaufträge vorhanden sind.
+Im VBScript-Codebeispiel [Alle Drucker mit leeren Druckwarteschlangen anhalten](https://Gallery.TechNet.Microsoft.Com/cf2b6b61-8ffe-444b-857b-e3a205bc693c) werden alle Drucker angehalten, für die keine Druckaufträge ausstehen.
 
 Im folgenden VBScript-Codebeispiel werden alle Druckaufträge auf einem Druckserver angehalten.
 
@@ -90,20 +90,20 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                        |
-| MOF<br/>                      | <dl> <dt>Win32 \_ Printer. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                        |
+| MOF<br/>                      | <dl> <dt>Win32 \_ Printer.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> <dt>
 
-[**Win32- \_ PrintJob**](win32-printjob.md)
+[**Win32 \_ PrintJob**](win32-printjob.md)
 </dt> </dl>
 
  

@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 978da4c7076bcf8ffe91bc2b9a4b2077d9d3d48a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ffd03bea09fb9041b91bb214287442eb59a7101be7a8841e0d38e28bcdaf3ecb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767360"
 ---
 # <a name="impeg2psiparsergetpatversionnumber-method"></a>IMpeg2PsiParser::GetPatVersionNumber-Methode
 
 Die Implementierung dieser Methode wird als Beispielcode mit dem DirectShow SDK bereitgestellt. Es handelt sich nicht um eine unterstützte DirectShow-API.
 
-Die `GetPatVersionNumber` -Methode ruft das Feld mit \_ der Versionsnummer aus dem PAT ab. Ein Transportstream enthält mindestens ein PAT. Die Versionsnummer wird erhöht, wenn sich die Informationen in der Tabelle ändern.
+Die `GetPatVersionNumber` -Methode ruft das \_ Versionsnummernfeld aus dem PAT ab. Ein Transportstream enthält höchstens ein PAT. Die Versionsnummer wird erhöht, wenn sich die Informationen in der Tabelle ändern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,13 +43,13 @@ HRESULT GetPatVersionNumber(
 *pPatVersion* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine Variable, die das Versionsnummerfeld \_ empfängt.
+Zeiger auf eine Variable, die das \_ Versionsnummernfeld empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die -Methode gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind, aber nicht beschränkt auf, die in der folgenden Tabelle gezeigten Werte.
+Die Methode gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind u. a. die in der folgenden Tabelle aufgeführten Werte.
 
 
 
@@ -68,7 +68,7 @@ Die -Methode gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind, aber nic
 [**IMpeg2PsiParser-Schnittstelle**](impeg2psiparser.md)
 </dt> <dt>
 
-[BEISPIEL FÜR PSI-Parserfilter](psi-parser-filter-sample.md)
+[PSI Parser-Filterbeispiel](psi-parser-filter-sample.md)
 </dt> </dl>
 
  

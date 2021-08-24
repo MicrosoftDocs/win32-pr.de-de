@@ -1,29 +1,29 @@
 ---
-description: Gibt an, ob eine Media Foundation Transformation (MFT) 3D-stereografievideo unterstützt.
+description: Gibt an, ob eine Media Foundation-Transformation (MFT) 3D-Stereoaufzeichnungsvideo unterstützt.
 ms.assetid: DE96FD14-5C7E-4560-99AC-B1EBDA1EBB2B
-title: MFT_SUPPORT_3DVIDEO-Attribut (MF Transform. h)
+title: MFT_SUPPORT_3DVIDEO-Attribut (Mftransform.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fdbc7208f9bbcf2c638ae83e988c6e541a4be2f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da60bac92d1274f9d9a6624e247fc24d122ec26eabc103ad2d43477ae8f6b64b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357431"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119776990"
 ---
-# <a name="mft_support_3dvideo-attribute"></a>MFT \_ -Unterstützung \_ 3dvideo-Attribut
+# <a name="mft_support_3dvideo-attribute"></a>MFT \_ SUPPORT \_ 3DVIDEO-Attribut
 
-Gibt an, ob eine Media Foundation Transformation (MFT) 3D-stereografievideo unterstützt.
+Gibt an, ob eine Media Foundation-Transformation (MFT) 3D-Stereoaufzeichnungsvideo unterstützt.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL** als **UINT32** gespeichert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Attribut abzufragen, müssen Sie [**imftransform:: GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) aufrufen, um den globalen Attribut Speicher des MFT abzurufen. Wenn **GetAttributes** erfolgreich ist, können Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)aufrufen.
+Um dieses Attribut abzufragen, rufen [**Sie ÜBERTRANSFORM::GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) auf, um den globalen Attributspeicher des MFT abzurufen. Wenn **GetAttributes** erfolgreich ist, rufen Sie [**DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Der Standardwert dieses Attributs ist **false**. Behandeln Sie dieses Attribut als schreibgeschützt. Ändern Sie den Wert nicht. die MFT ignoriert alle Änderungen am Wert.
+Der Standardwert dieses Attributs ist **FALSE.** Behandeln Sie dieses Attribut als schreibgeschützt. Ändern Sie den Wert nicht. Der MFT ignoriert alle Änderungen am Wert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,9 +31,9 @@ Der Standardwert dieses Attributs ist **false**. Behandeln Sie dieses Attribut a
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>"MF Transform. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Mftransform.h</dt> </dl> |
 
 
 

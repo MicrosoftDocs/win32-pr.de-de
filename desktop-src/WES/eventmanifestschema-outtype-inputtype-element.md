@@ -1,9 +1,9 @@
 ---
-title: outtype-Element (InputType)
-description: Eine Liste der Ausgabe Datentypen, die bestimmen, wie die Daten gerendert werden.
+title: outType (InputType)-Element
+description: Eine Liste von Ausgabedatentypen, die bestimmen, wie die Daten gerendert werden.
 ms.assetid: 66432f9f-bdcb-4d79-adda-5552b3c7caac
 keywords:
-- outtype-Element (Ereignisprotokoll)
+- outType-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2bf71977838e7fd242c993435b06797c43391f67
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 436a5b666fb46bd27124b23976bd11541a8d6ce5f2275477653b841f0302aba3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767265"
 ---
-# <a name="outtype-inputtype-element"></a>outtype-Element (InputType)
+# <a name="outtype-inputtype-element"></a>outType (InputType)-Element
 
-Eine Liste der Ausgabe Datentypen, die bestimmen, wie die Daten gerendert werden.
+Eine Liste von Ausgabedatentypen, die bestimmen, wie die Daten gerendert werden.
 
 ``` syntax
 <xs:element name="outType"
@@ -30,7 +30,7 @@ Eine Liste der Ausgabe Datentypen, die bestimmen, wie die Daten gerendert werden
  />
 ```
 
-Das **outtype** -Element wird durch den komplexen [**InputType**](eventmanifestschema-inputtype-complextype.md) -Typ definiert.
+Das **outType-Element** wird vom komplexen [**InputType-Typ**](eventmanifestschema-inputtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **outtype** -Element wird durch den komplexen [**InputType**](eventmanifests
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **outtype** -Element wird durch den komplexen [**InputType**](eventmanifests
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**intype (inputtypelisttype)**](eventmanifestschema-intype-inputtypelisttype-element.md)
+[**inType (InputTypeListType)**](eventmanifestschema-intype-inputtypelisttype-element.md)
 </dt> </dl>
 
  

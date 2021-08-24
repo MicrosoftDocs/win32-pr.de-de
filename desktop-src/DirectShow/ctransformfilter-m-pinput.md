@@ -1,7 +1,7 @@
 ---
-description: Zeiger auf die eingabepin.
+description: Zeiger auf den Eingabepin.
 ms.assetid: 0806074e-a844-40eb-b488-c00ba93f4cac
-title: 'Ctransformfilter:: m_pInput Member (Transfrm. h)'
+title: CTransformFilter::m_pInput-Member (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6f7760e445c6f15dabbf43bf7bd5b4c601e9be1b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d22228f9b808f3ca03f933db787a147e232407d5bd13337cc45285872859f2b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767740"
 ---
-# <a name="ctransformfilterm_pinput-member"></a>Ctransformfilter:: m \_ pinput-Member
+# <a name="ctransformfilterm_pinput-member"></a>CTransformFilter::m \_ pInput-Member
 
-Zeiger auf die eingabepin.
+Zeiger auf den Eingabepin.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ CTransformInputPin *m_pInput;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ CTransformInputPin *m_pInput;
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

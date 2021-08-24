@@ -1,9 +1,9 @@
 ---
-title: ID2D1Factory-Methode für die Methode "kreatetransformedgeometry" (D2d1. h)
+title: ID2D1Factory CreateTransformedGeometry-Methoden (D2d1.h)
 description: Transformiert die angegebene Geometrie und speichert das Ergebnis als ID2D1TransformedGeometry-Objekt.
 ms.assetid: 71f26200-0f35-49d7-951d-2962768d16bc
 keywords:
-- Methoden der Methode "Direct2D"
+- CreateTransformedGeometry-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,16 +12,16 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 5da3b548c3118209c915714e03fe9e4061c77e96
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8216b5b63951e3f393dc1c8a204a4a4e38ee652d79eb795ba4f4e97041aff3f3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832850"
 ---
-# <a name="id2d1factorycreatetransformedgeometry-methods"></a>ID2D1Factory:: kreatetransformedgeometry-Methoden
+# <a name="id2d1factorycreatetransformedgeometry-methods"></a>ID2D1Factory::CreateTransformedGeometry-Methoden
 
-Transformiert die angegebene Geometrie und speichert das Ergebnis als [**ID2D1TransformedGeometry**](/previous-versions/windows/desktop/legacy/dd371304(v=vs.85)) -Objekt.
+Transformiert die angegebene Geometrie und speichert das Ergebnis als [**ID2D1TransformedGeometry-Objekt.**](/previous-versions/windows/desktop/legacy/dd371304(v=vs.85))
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,20 +29,20 @@ Transformiert die angegebene Geometrie und speichert das Ergebnis als [**ID2D1Tr
 
 | Methode                                                                                                                                                                                                                  | BESCHREIBUNG                                                                                                                                    |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|
-| [**ID2D1Geometry \* , D2D \_ Matrix \_ 3x2 \_ F \* , ID2D1TransformedGeometry \* \* )**](/previous-versions/windows/desktop/legacy/dd371304(v=vs.85)) | Transformiert die angegebene Geometrie und speichert das Ergebnis als [**ID2D1TransformedGeometry**](/previous-versions/windows/desktop/legacy/dd371304(v=vs.85)) -Objekt. <br/> |
-| [**ID2D1Geometry \* , D2D \_ Matrix \_ 3x2 \_ F&, ID2D1TransformedGeometry \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createtransformedgeometry(id2d1geometry_constd2d1_matrix_3x2_f__id2d1transformedgeometry))  | Transformiert die angegebene Geometrie und speichert das Ergebnis als [**ID2D1TransformedGeometry**](/previous-versions/windows/desktop/legacy/dd371304(v=vs.85)) -Objekt. <br/> |
+| [**CreateTransformedGeometry(ID2D1Geometry \* ,D2D \_ MATRIX \_ 3X2 \_ F \* ,ID2D1TransformedGeometry \* \* )**](/previous-versions/windows/desktop/legacy/dd371304(v=vs.85)) | Transformiert die angegebene Geometrie und speichert das Ergebnis als [**ID2D1TransformedGeometry-Objekt.**](/previous-versions/windows/desktop/legacy/dd371304(v=vs.85)) <br/> |
+| [**CreateTransformedGeometry(ID2D1Geometry \* ,D2D \_ MATRIX \_ 3X2 \_ F&,ID2D1TransformedGeometry \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createtransformedgeometry(id2d1geometry_constd2d1_matrix_3x2_f__id2d1transformedgeometry))  | Transformiert die angegebene Geometrie und speichert das Ergebnis als [**ID2D1TransformedGeometry-Objekt.**](/previous-versions/windows/desktop/legacy/dd371304(v=vs.85)) <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wie andere Ressourcen erbt eine transformierte Geometrie den Ressourcenbereich und die Threading Richtlinie der Factory, von der Sie erstellt wurde. Dieses Objekt ist unveränderlich.
+Wie andere Ressourcen erbt eine transformierte Geometrie den Ressourcenraum und die Threadingrichtlinie der Factory, die sie erstellt hat. Dieses Objekt ist unveränderlich.
 
-Beim Übertragen einer transformierten Geometrie mit der [**DrawGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawgeometry) -Methode wird die Strichbreite von der auf die Geometrie angewendeten Transformation nicht beeinträchtigt. Die Strichbreite wird nur von der Welt Transformation beeinflusst.
+Beim Zusammenstellen einer transformierten Geometrie mit der [**DrawGeometry-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawgeometry) wird die Strichbreite von der auf die Geometrie angewendeten Transformation nicht beeinflusst. Die Strichbreite wird nur von der Welttransformation beeinflusst.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein [**ID2D1RectangleGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createrectanglegeometry(constd2d1_rect_f_id2d1rectanglegeometry))erstellt und dann gezeichnet, ohne es zu transformieren. Sie erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
+Das folgende Beispiel erstellt eine [**ID2D1RectangleGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createrectanglegeometry(constd2d1_rect_f_id2d1rectanglegeometry))und zeichnet sie dann, ohne sie zu transformieren. Sie erzeugt die ausgabe, die in der folgenden Abbildung dargestellt wird.
 
 ![Abbildung eines Rechtecks](images/transformedgeometry2-step1.png)
 
@@ -56,9 +56,9 @@ hr = m_pD2DFactory->CreateRectangleGeometry(
 
 
 
-Im nächsten Beispiel wird das Renderziel verwendet, um die Geometrie um den Faktor 3 zu skalieren, und dann gezeichnet. Die folgende Abbildung zeigt das Ergebnis des Zeichnens des Rechtecks ohne die Transformation und mit der Transformation. Gibt an, dass der Strich nach der Transformation dicker ist, auch wenn die Strichstärke 1 ist.
+Im nächsten Beispiel wird das Renderziel verwendet, um die Geometrie um den Faktor 3 zu skalieren und dann zu zeichnen. Die folgende Abbildung zeigt das Ergebnis des Zeichnens des Rechtecks ohne die Transformation und mit der Transformation. erkennt, dass der Strich nach der Transformation breiter ist, obwohl die Strichstärke 1 ist.
 
-![Darstellung eines kleineren Rechtecks innerhalb eines größeren Rechtecks mit einem dickeren Strich](images/transformedgeometry2-step2.png)
+![Abbildung eines kleineren Rechtecks innerhalb eines größeren Rechtecks mit einem breiteren Strich](images/transformedgeometry2-step2.png)
 
 
 ```C++
@@ -74,7 +74,7 @@ m_pRenderTarget->DrawGeometry(m_pRectangleGeometry, m_pBlackBrush, 1);
 
 
 
-Im nächsten Beispiel wird die Methode " **kreatetransformedgeometry** " verwendet, um die Geometrie mit dem Faktor 3 zu skalieren, und dann gezeichnet. Sie erzeugt die in der folgenden Abbildung gezeigte Ausgabe. Beachten Sie, dass, obwohl das Rechteck größer ist, der Strich nicht vergrößert wurde.
+Im nächsten Beispiel wird die **CreateTransformedGeometry-Methode** verwendet, um die Geometrie um den Faktor 3 zu skalieren und dann zu zeichnen. Sie erzeugt die ausgabe, die in der folgenden Abbildung dargestellt wird. Beachten Sie, dass das Rechteck zwar größer ist, aber sein Strich nicht erhöht wurde.
 
 ![Abbildung eines kleineren Rechtecks innerhalb eines größeren Rechtecks mit dem gleichen Strich](images/transformedgeometry2-step3.png)
 
@@ -111,8 +111,8 @@ m_pRenderTarget->DrawGeometry(m_pTransformedGeometry, m_pBlackBrush, 1);
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D2d1. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D2d1.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl> |
 
 

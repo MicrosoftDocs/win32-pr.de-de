@@ -1,7 +1,7 @@
 ---
-description: Fügt der Liste der im Batch verarbeiteten Sprites ein Sprite hinzu.
+description: Fügt der Liste der Batch-Sprites einen Sprite hinzu.
 ms.assetid: 8f5c43a2-68dd-44a9-be2f-f76d9fa2d900
-title: ID3DXSprite::D RAW-Methode (D3dx9core. h)
+title: ID3DXSprite::D raw-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 9cba7b12c55e7ab9f5f939347a8b500ec4965f75
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d453a2e03538b7601b5f73033a4749430e8812ef317a90816cac220e61695279
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106364391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747370"
 ---
-# <a name="id3dxspritedraw-method"></a>ID3DXSprite::D RAW-Methode
+# <a name="id3dxspritedraw-method"></a>ID3DXSprite::D raw-Methode
 
-Fügt der Liste der im Batch verarbeiteten Sprites ein Sprite hinzu.
+Fügt der Liste der Batch-Sprites einen Sprite hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT Draw(
 
 <dl> <dt>
 
-*ptexture* \[ in\]
+*pTexture* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Zeiger auf eine [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) -Schnittstelle, die die Sprite-Textur darstellt.
+Zeiger auf eine [**IDirect3DTexture9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) die die Spritetextur darstellt.
 
 </dd> <dt>
 
-*psrcrect* \[ in\]
+*pSrcRect* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**Rect**](/previous-versions//dd162897(v=vs.85)) \***
+Typ: **const [**RECT**](/previous-versions//dd162897(v=vs.85)) \***
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die den Teil der Quell Textur angibt, der für das Sprite verwendet werden soll. Wenn dieser Parameter **null** ist, wird das gesamte Quell Image für das Sprite verwendet.
+Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die den Teil der Quelltextur angibt, der für den Sprite verwendet werden soll. Wenn dieser Parameter **NULL** ist, wird das gesamte Quellbild für den Sprite verwendet.
 
 </dd> <dt>
 
-*pcenter* \[ in\]
+*pCenter* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf einen [**D3DXVECTOR3**](d3dxvector3.md) -Vektor, der die Mitte des Sprite identifiziert. Wenn dieses Argument **null** ist, wird der Punkt (0, 0, 0) verwendet. Dies ist die linke obere Ecke.
+Zeiger auf einen [**D3DXVECTOR3-Vektor,**](d3dxvector3.md) der die Mitte des Sprite identifiziert. Wenn dieses Argument **NULL** ist, wird der Punkt (0,0,0) verwendet, bei dem es sich um die linke obere Ecke handelt.
 
 </dd> <dt>
 
-*pposition* \[ in\]
+*pPosition* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf einen [**D3DXVECTOR3**](d3dxvector3.md) -Vektor, der die Position des Sprite angibt. Wenn dieses Argument **null** ist, wird der Punkt (0, 0, 0) verwendet. Dies ist die linke obere Ecke.
+Zeiger auf einen [**D3DXVECTOR3-Vektor,**](d3dxvector3.md) der die Position des Sprite identifiziert. Wenn dieses Argument **NULL** ist, wird der Punkt (0,0,0) verwendet, bei dem es sich um die linke obere Ecke handelt.
 
 </dd> <dt>
 
-*Farbe* \[ in\]
+*Farbe* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DCOLOR**](d3dcolor.md)**
 
-[**D3DCOLOR**](d3dcolor.md) -Typ. Die Farb-und Alphakanäle werden von diesem Wert moduliert. Der Wert 0xFFFFFFFF behält die ursprüngliche Quellfarbe und Alpha Daten bei. Verwenden Sie das [**D3DCOLOR \_ RGBA**](d3dcolor-rgba.md) -Makro, um diese Farbe zu generieren.
+[**D3DCOLOR-Typ.**](d3dcolor.md) Die Farb- und Alphakanäle werden durch diesen Wert moduliert. Der Wert 0xFFFFFFFF behält die ursprüngliche Quellfarbe und die Alphadaten bei. Verwenden Sie das [**D3DCOLOR \_ RGBA-Makro,**](d3dcolor-rgba.md) um diese Farbe zu generieren.
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Typ: **[ **D3DCOLOR**](d3dcolor.md)**
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um Sprite zu skalieren, zu drehen oder zu übersetzen, rufen Sie [**ID3DXSprite:: setTransform**](id3dxsprite--settransform.md) mit einer Matrix auf, die die Werte für Skala, Drehung und Übersetzung (SRT) enthält, bevor Sie ID3DXSprite::D RAW aufrufen. Weitere Informationen zum Festlegen von SRT-Werten in einer Matrix finden Sie unter [Matrix Transformationen](transforms.md).
+Um einen Sprite zu skalieren, zu drehen oder zu übersetzen, rufen Sie [**ID3DXSprite::SetTransform**](id3dxsprite--settransform.md) mit einer Matrix auf, die die SRT-Werte (Scale, Rotate, Translate) enthält, bevor Sie ID3DXSprite::D raw aufrufen. Informationen zum Festlegen von SRT-Werten in einer Matrix finden Sie unter [Matrixtransformationen.](transforms.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,8 +105,8 @@ Um Sprite zu skalieren, zu drehen oder zu übersetzen, rufen Sie [**ID3DXSprite:
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -117,7 +117,7 @@ Um Sprite zu skalieren, zu drehen oder zu übersetzen, rufen Sie [**ID3DXSprite:
 [ID3DXSprite](id3dxsprite.md)
 </dt> <dt>
 
-[**ID3DXSprite:: GetTransform**](id3dxsprite--gettransform.md)
+[**ID3DXSprite::GetTransform**](id3dxsprite--gettransform.md)
 </dt> </dl>
 
  

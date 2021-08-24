@@ -1,7 +1,7 @@
 ---
-description: Speichert ein Datenobjekt und seine untergeordneten Elemente in einer DirectX-Datei. Veraltet.
+description: Speichert ein Datenobjekt und seine children-Objekte in einer DirectX-Datei. Veraltet.
 ms.assetid: 18bd5ef6-9e17-4c21-bc14-373de8df9ffb
-title: 'Idirectxfilesaveobject:: SaveData-Methode (dxfile. h)'
+title: IDirectXFileSaveObject::SaveData-Methode (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dxof.lib
 - D3dxof.dll
-ms.openlocfilehash: cb901bd984e1fcd923d0ea172fb5f387b3a9302a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 293525d570540e00da4e8ac7680cf850b253c7e3ccbe3ffd152b639d0bc139cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106364359"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747270"
 ---
-# <a name="idirectxfilesaveobjectsavedata-method"></a>Idirectxfilesaveobject:: SaveData-Methode
+# <a name="idirectxfilesaveobjectsavedata-method"></a>IDirectXFileSaveObject::SaveData-Methode
 
-Speichert ein Datenobjekt und seine untergeordneten Elemente in einer DirectX-Datei. Veraltet.
+Speichert ein Datenobjekt und seine children-Objekte in einer DirectX-Datei. Veraltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT SaveData(
 
 <dl> <dt>
 
-*pdataobj* \[ in\]
+*pDataObj* \[ In\]
 </dt> <dd>
 
-Typ: **[ **lpdirectxfiledata**](idirectxfiledata.md)**
+Typ: **[ **LPDIRECTXFILEDATA**](idirectxfiledata.md)**
 
-Zeiger auf eine [**idirectxfiledata**](idirectxfiledata.md) -Schnittstelle, die das zu speichernde Datei Datenobjekt darstellt.
+Zeiger auf eine [**IDirectXFileData-Schnittstelle,**](idirectxfiledata.md) die das zu speichernde Dateidatenobjekt darstellt.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf eine [**idirectxfiledata**](idirectxfiledata.md) -Schnittstelle, die 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \_ . Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: dxfileerr \_ badarraysize, dxfileerr \_ badvalue.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert DXFILE \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Werte sein: DXFILEERR \_ BADARRAYSIZE, DXFILEERR \_ BADVALUE.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
@@ -70,7 +70,7 @@ Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \
 
 <dl> <dt>
 
-[Idirectxfilesaveobject](idirectxfilesaveobject.md)
+[IDirectXFileSaveObject](idirectxfilesaveobject.md)
 </dt> </dl>
 
  

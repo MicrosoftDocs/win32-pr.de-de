@@ -1,6 +1,6 @@
 ---
-title: atan2 (corecrt \_ Math. h)
-description: Gibt den Arkus Tangens von zwei Werten (x, y) zurück.
+title: atan2 (Corecrt \_ math.h)
+description: Gibt den Arangens von zwei Werten (x,y) zurück.
 ms.assetid: e7b53751-f321-4390-8f8f-ec1fa3aaa798
 keywords:
 - atan2 HLSL
@@ -14,20 +14,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 52fbc6574d0fc0d53a165ae7da87c2627a295be4
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2932f82cf6d9e8b2071446b63f84e60727aff2da2213461d3c1194b2811fe1a9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219504"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119854970"
 ---
 # <a name="atan2"></a>atan2
 
-Gibt den Arkus Tangens von zwei Werten (x, y) zurück.
+Gibt den Arangens von zwei Werten (x,y) zurück.
 
 
 
-| *ret* atan2 (*y*, *x*) |
+| *ret* atan2(*y*, *x*) |
 |-----------------------|
 
 
@@ -38,10 +38,10 @@ Gibt den Arkus Tangens von zwei Werten (x, y) zurück.
 
 
 
-| Element                                                   | BESCHREIBUNG                    |
+| Element                                                   | Beschreibung                    |
 |--------------------------------------------------------|--------------------------------|
-| <span id="y"></span><span id="Y"></span>*Teenie*<br/> | \[im \] y-Wert.<br/> |
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[im \] x-Wert.<br/> |
+| <span id="y"></span><span id="Y"></span>*Y*<br/> | \[in \] Der y-Wert.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der x-Wert.<br/> |
 
 
 
@@ -49,11 +49,11 @@ Gibt den Arkus Tangens von zwei Werten (x, y) zurück.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Arkus Tangens von (y, x).
+Der Arangens von (y,x).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Vorzeichen der *x* -und *y* -Parameter werden verwendet, um den Quadranten der Rückgabewerte innerhalb des Bereichs von bis Adressierung zu bestimmen. Die intrinsische Funktion **atan2** HLSL ist für jeden anderen Punkt als den Ursprung klar definiert, auch wenn *y* gleich 0 und *x* nicht gleich 0 ist.
+Die Vorzeichen der *x-* und *y-Parameter* werden verwendet, um den Quadranten der Rückgabewerte im Bereich von -π zu π zu bestimmen. Die systeminterne **ATAN2** HLSL-Funktion ist für jeden anderen Punkt als den Ursprung gut definiert, auch wenn *y* gleich 0 und *x* nicht gleich 0 ist.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -61,36 +61,36 @@ Die Vorzeichen der *x* -und *y* -Parameter werden verwendet, um den Quadranten d
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
-| *y*   | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
-| *x*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
-| *TZI* | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
+| *y*   | identisch mit eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(en) wie eingabe *x* |
+| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
+| *Ret* | identisch mit eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(en) wie eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt |
 |------------------------------------------------------------------------------------|-----------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja       |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | vs \_ 1 \_ 1  |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja       |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Vs \_ 1 \_ 1  |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Corecrt \_ Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Corecrt \_ math.h</dt> </dl> |
 
 
 
@@ -98,7 +98,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

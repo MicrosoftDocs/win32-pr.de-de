@@ -1,7 +1,7 @@
 ---
-description: 'Die getmediatype-Methode ruft den Medientyp ab, wenn der Medientyp vom vorherigen Beispiel abweicht. Diese Methode implementiert die imediasample:: getmediatype-Methode.'
+description: Die GetMediaType-Methode ruft den Medientyp ab, wenn sich der Medientyp vom vorherigen Beispiel unterscheidet. Diese Methode implementiert die IMediaSample::GetMediaType-Methode.
 ms.assetid: a7850381-d448-4bf6-b059-d734fb3e8e22
-title: Cmediasample. getmediatype-Methode (amfilter. h)
+title: CMediaSample.GetMediaType-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9a067494d6236b824ef8fbbcb583ad50503297b5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ee7b5464ff2620dbc0247b006dc323232131de3936d2c5e56f2232b67c00ba5c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352910"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832300"
 ---
-# <a name="cmediasamplegetmediatype-method"></a>Cmediasample. getmediatype-Methode
+# <a name="cmediasamplegetmediatype-method"></a>CMediaSample.GetMediaType-Methode
 
-Die- `GetMediaType` Methode ruft den Medientyp ab, wenn der Medientyp vom vorherigen Beispiel abweicht. Diese Methode implementiert die [**imediasample:: getmediatype**](/windows/desktop/api/Strmif/nf-strmif-imediasample-getmediatype) -Methode.
+Die `GetMediaType` -Methode ruft den Medientyp ab, wenn sich der Medientyp vom vorherigen Beispiel unterscheidet. Diese Methode implementiert die [**IMediaSample::GetMediaType-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample-getmediatype)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,34 +42,34 @@ HRESULT GetMediaType(
 
 <dl> <dt>
 
-*PpMediaType* 
+*ppMediaType* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf eine [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur von am erhält. Wenn sich der Medientyp nicht im vorherigen Beispiel geändert hat, wird *\* PpMediaType* auf **null** festgelegt.
+Adresse einer Variablen, die einen Zeiger auf eine [**AM \_ MEDIA \_ TYPE-Struktur**](/windows/win32/api/strmif/ns-strmif-am_media_type) empfängt. Wenn sich der Medientyp nicht im vorherigen Beispiel geändert hat, wird *\* ppMediaType* auf **NULL** festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                                         |
 |-----------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl>       | Der Medientyp wurde im vorherigen Beispiel nicht geändert.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>       | Der Medientyp hat sich gegenüber dem vorherigen Beispiel nicht geändert.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg.<br/>                                                 |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                                     |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Medientyp abgeschlossen haben, geben Sie den Speicherblock frei, indem Sie die Dienstprogramm Funktion [**deletemediatype**](deletemediatype.md) aufrufen.
+Wenn Sie mit dem Medientyp fertig sind, geben Sie den Speicherblock frei, indem Sie die [**DeleteMediaType-Hilfsprogrammfunktion**](deletemediatype.md) aufrufen.
 
-Die Member-Variable [**cmediasample:: m \_ pmediatype**](cmediasample-m-pmediatype.md) gibt den Medientyp an. Die Member-Variable [**cmediasample:: m \_ dwFlags**](cmediasample-m-dwflags.md) gibt an, ob sich der Medientyp geändert hat.
+Die [**CMediaSample::m \_ pMediaType-Membervariable**](cmediasample-m-pmediatype.md) gibt den Medientyp an. Die [**Membervariable CMediaSample::m \_ dwFlags**](cmediasample-m-dwflags.md) gibt an, ob sich der Medientyp geändert hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,8 +77,8 @@ Die Member-Variable [**cmediasample:: m \_ pmediatype**](cmediasample-m-pmediaty
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -86,7 +86,7 @@ Die Member-Variable [**cmediasample:: m \_ pmediatype**](cmediasample-m-pmediaty
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

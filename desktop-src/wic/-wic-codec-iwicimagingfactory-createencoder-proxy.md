@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Methode "kreateencoder".
+description: Proxyfunktion für die CreateEncoder-Methode.
 ms.assetid: e3ffad7f-eb0e-481d-81ee-caf18e14ba59
 title: IWICImagingFactory_CreateEncoder_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 38e5dd19ddc07de42f8be9e8c887a4f412a853b5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 20e1a95253c0943383842b9667d93e4fc98c48ab2abf229bae7c0b3ad3f3fe63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347420"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119812280"
 ---
-# <a name="iwicimagingfactory_createencoder_proxy-function"></a>IWICImagingFactory- \_ \_ Proxyfunktion
+# <a name="iwicimagingfactory_createencoder_proxy-function"></a>IWICImagingFactory \_ \_ CreateEncoder-Proxyfunktion
 
-Proxy Funktion für die Methode " [**kreateencoder**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createencoder) ".
+Proxyfunktion für die [**CreateEncoder-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createencoder)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ HRESULT IWICImagingFactory_CreateEncoder_Proxy(
 
 <dl> <dt>
 
-*pfactory* \[ in\]
+*pFactory* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) \** _
+Typ: **[ **IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory)\***
 
 </dd> <dt>
 
-_guidContainerFormat * \[ in\]
+*guidContainerFormat* \[ In\]
 </dt> <dd>
 
-Typ: **reguid**
+Typ: **REFGUID**
 
 Die GUID für das gewünschte Containerformat.
 
@@ -62,18 +62,18 @@ Die GUID für das gewünschte Containerformat.
 *pguidVendor* \[ in, optional\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: * Konstante *GUID \** _
+Typ: **const \* GUID**
 
-Die Anbieter-GUID für den Encoder.
+Die Hersteller-GUID für den Encoder.
 
 </dd> <dt>
 
-_ppIEncoder * \[ out\]
+*ppIEncoder* \[ out\]
 </dt> <dd>
 
-Typ: **[ **iwicbitmapcoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)\*\***
+Typ: **[ **IWICBitmapEncoder**](/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder)\*\***
 
-Ein Zeiger, der einen Zeiger auf einen neuen [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)empfängt.
+Ein Zeiger, der einen Zeiger auf einen neuen [**IWICBitmapDecoder empfängt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)
 
 </dd> </dl>
 
@@ -81,7 +81,7 @@ Ein Zeiger, der einen Zeiger auf einen neuen [**IWICBitmapDecoder**](/windows/de
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -91,9 +91,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

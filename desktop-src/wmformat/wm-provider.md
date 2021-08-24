@@ -1,9 +1,9 @@
 ---
 title: WM/Anbieter
-description: Das WM/Provider-Attribut enthält den Namen des metadateninhaltsanbieters. Metadaten werden häufig durch einen Dienst abgerufen.
+description: Das WM/Provider-Attribut enthält den Namen des Metadateninhaltsanbieters. Metadaten werden häufig über einen Dienst abgerufen.
 ms.assetid: 94d1f87e-f5b5-4898-b717-8b7494456f26
 keywords:
-- Windows Media-Format für WM/Anbieter
+- WM/Provider windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eed12817d76a8a63bf70c7dff2bea5835a46b762
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 5e45cb071d93832aa9d07025afa1fdac09b7d88a5b9c89afd1630a637bddca87
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704810"
 ---
 # <a name="wmprovider"></a>WM/Anbieter
 
-Das **WM/Provider-** Attribut enthält den Namen des metadateninhaltsanbieters. Metadaten werden häufig durch einen Dienst abgerufen.
+Das **WM/Provider-Attribut** enthält den Namen des Metadateninhaltsanbieters. Metadaten werden häufig über einen Dienst abgerufen.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmprovider
+g \_ wszWMProvider
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
 ## <a name="example"></a>Beispiel
 
@@ -37,11 +37,11 @@ g \_ wszwmprovider
 
 | Dateityp | Beispielwert |
 |-----------|---------------|
-| Alle       | AMG         |
+| Alle       | "WIEDER"         |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -50,9 +50,9 @@ g \_ wszwmprovider
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: Nebelregister
-description: Dieses Vertex-Shader-Ausgabe Register enthält eine pro-Scheitelpunkt-Nebelfarbe.
+title: Fog Register
+description: Dieses Vertex-Shader-Ausgaberegister enthält eine Scheitelpunktfarbe pro Scheitelpunkt.
 ms.assetid: b2b06aa9-ad75-48df-857d-fd8719176713
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,43 +9,43 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 3c3f0e39c0670176b6233f61f0ba50596c92ca4d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b6aeaea0e51960f8f4bf768b855ac31236b2bb330cfda3390fd9e61dab4ec1f6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104976104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119854580"
 ---
-# <a name="fog-register"></a>Nebelregister
+# <a name="fog-register"></a>Fog Register
 
-Dieses Vertex-Shader-Ausgabe Register enthält eine pro-Scheitelpunkt-Nebelfarbe.
+Dieses Vertex-Shader-Ausgaberegister enthält eine Scheitelpunktfarbe pro Scheitelpunkt.
 
-Ein Register besteht aus Eigenschaften, die bestimmen, wie sich die einzelnen Register Verhalten.
+Ein Register besteht aus Eigenschaften, die bestimmen, wie sich jedes Register verhält.
 
 
 
-| Eigenschaft        | BESCHREIBUNG                                                                                     |
+| Eigenschaft        | Beschreibung                                                                                     |
 |-----------------|-------------------------------------------------------------------------------------------------|
-| Name            | onebel                                                                                            |
-| Anzahl           | Ein Vektor, von dem nur eine Komponente verwendet werden kann und die von der Komponenten Maske angegeben werden muss |
-| E/a-Berechtigungen | Nur Schreibzugriff.                                                                                     |
+| Name            | oFog                                                                                            |
+| Anzahl           | Ein Vektor, von dem nur eine Komponente verwendet werden kann und die von der Komponentenmaske angegeben werden muss |
+| E/A-Berechtigungen | Nur Schreibzugriff.                                                                                     |
 
 
 
- 
+ 
 
-Der Ausgabe Nebel Wert wird registriert. Der Wert ist der zu interinterdende Nebel Faktor und wird dann an die Tabelle mit den Nebel geroutet. Es wird nur die skalarx-Komponente des Nebels verwendet.
+Der Ausgabewert wird registriert. Der Wert ist der Zudingfaktor, der interpoliert und dann an die Tabellentabelle "Table" (Tafel) geroutet werden soll. Es wird nur die skalare x-Komponente des Skalars verwendet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-Shader-Register](dx9-graphics-reference-asm-vs-registers.md)
+[Vertex-Shaderregister](dx9-graphics-reference-asm-vs-registers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

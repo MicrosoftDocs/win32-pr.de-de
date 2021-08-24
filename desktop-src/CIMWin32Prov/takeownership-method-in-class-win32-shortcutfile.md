@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 36364a55276842518480c3d3d37c57c3ae0a06ba
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 30e482f8c11c19abd7c9782e517b5b04a33139d5b8e2189512614317ea2123db
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085998"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751470"
 ---
-# <a name="takeownership-method-of-the-win32_shortcutfile-class"></a>TakeOwnerShip-Methode der Win32 \_ ShortcutFile-Klasse
+# <a name="takeownership-method-of-the-win32_shortcutfile-class"></a>TakeOwnerShip-Methode der \_ Win32-ShortcutFile-Klasse
 
-Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **TakeOwnerShip** ruft den Besitz der logischen Datei ab, die im Objektpfad angegeben ist. Wenn die logische Datei tatsächlich ein Verzeichnis ist, verhält **sich TakeOwnerShip** rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
+Die **TakeOwnerShip** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) ruft den Besitz der logischen Datei ab, die im Objektpfad angegeben ist. Wenn die logische Datei tatsächlich ein Verzeichnis ist, verhält **sich TakeOwnerShip** rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
 
 In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
@@ -141,17 +141,17 @@ Ein angegebener Parameter ist ungültig.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Stamm \\ CIMV2<br/>                                                                  |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
 | MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

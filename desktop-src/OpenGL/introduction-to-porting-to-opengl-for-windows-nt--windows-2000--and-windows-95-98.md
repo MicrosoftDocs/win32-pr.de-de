@@ -1,36 +1,36 @@
 ---
-title: Einführung in das Portieren in OpenGL für Windows
-description: Einführung in das Portieren in OpenGL für Windows
+title: Einführung in das Portieren zu OpenGL für Windows
+description: Einführung in das Portieren zu OpenGL für Windows
 ms.assetid: d23edcf7-d673-42b6-831b-edb3a76754e1
 keywords:
-- OpenGL, Portieren auf Windows
-- Portieren auf OpenGL OpenGL
+- OpenGL, Portieren in Windows
+- Portieren zu OpenGL OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b9b9cc013d57a6e14cc318c4f254b5369193286
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f41e690186d4bd44501efa59f5ee92b2507dbd46b273e4847e0b83a15060e786
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709726"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119777400"
 ---
-# <a name="introduction-to-porting-to-opengl-for-windows"></a>Einführung in das Portieren in OpenGL für Windows
+# <a name="introduction-to-porting-to-opengl-for-windows"></a>Einführung in das Portieren zu OpenGL für Windows
 
-In den folgenden Themen wird beschrieben, wie Sie Ihre Anwendungen auf jeder dieser Plattformen portieren. In den Themen wird nur das Portieren von OpenGL-und Fenster Verwaltungs Code erörtert. Es gibt keine Erörterung anderer betriebssystemportprobleme, z. b. das Lesen von Dateien, das Messaging, die Thread Erstellung usw. Dieser Leitfaden konzentriert sich auf bestimmte Portierungsprobleme und geht davon aus, dass Sie über ein Verständnis der OpenGL-und Windows-Programmierung verfügen.
+In den folgenden Themen wird beschrieben, wie Sie Ihre Anwendungen von jeder dieser Plattformen portieren. In den Themen wird nur das Portieren von OpenGL- und Fensterverwaltungscode behandelt. Es wird nicht über andere Probleme mit Dem Betriebssystemports wie das Lesen von Dateien, Messaging, Threaderstellung und so weiter diskutiert. Dieser Portierungsleitfaden konzentriert sich auf bestimmte Portierungsprobleme und setzt voraus, dass Sie über Kenntnisse der OpenGL- und Windows verfügen.
 
--   [Portieren von System Anwendungen für X-Fenster](porting-x-window-system-applications.md)
--   [Übersetzen der glx-Bibliothek](translating-the-glx-library.md)
--   [Portieren von Geräte Kontexten und Pixel Formaten](porting-device-contexts-and-pixel-formats.md)
--   [Portieren von renderingkontexten](porting-rendering-contexts.md)
--   [Portieren von glx-pixmap-Code](porting-glx-pixmap-code.md)
--   [Portieren von anderem glx-Code](porting-other-glx-code.md)
--   [Beispiel für eine Portierung](a-porting-sample.md)
--   [Portieren von Anwendungen von IRIS GL](porting-applications-from-iris-gl.md)
--   [Besondere IRIS GL-Portierungsprobleme](special-iris-gl-porting-issues.md)
+-   [Portieren von X-Fenstersystemanwendungen](porting-x-window-system-applications.md)
+-   [Übersetzen der GLX-Bibliothek](translating-the-glx-library.md)
+-   [Portieren von Gerätekontexten und Pixelformaten](porting-device-contexts-and-pixel-formats.md)
+-   [Portieren von Renderingkontexten](porting-rendering-contexts.md)
+-   [Portieren von GLX-Pixmap-Code](porting-glx-pixmap-code.md)
+-   [Portieren von anderem GLX-Code](porting-other-glx-code.md)
+-   [Ein Portierungsbeispiel](a-porting-sample.md)
+-   [Portieren von Anwendungen aus IRIS GL](porting-applications-from-iris-gl.md)
+-   [Spezielle Iris GL-Portierungsprobleme](special-iris-gl-porting-issues.md)
 
- 
+ 
 
- 
+ 
 
 
 

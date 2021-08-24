@@ -1,7 +1,7 @@
 ---
-description: Legt den minimalen Knochen Einfluss fest. Werte, die kleiner als dieser Wert sind, werden ignoriert.
+description: Legt den minimalen Einfluss auf Dies fest. Einflusswerte, die kleiner als diese sind, werden ignoriert.
 ms.assetid: 9af19c9e-bb6e-4f93-973f-5c38f88eea3d
-title: 'ID3DXSkinInfo:: setminboneingefluence-Methode (D3DX9Mesh. h)'
+title: ID3DXSkinInfo::SetMinBoneInfluence-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 03e3aeeed31a58231644784ba5070bc9422f7820
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: abe9f1d7f9c54b9c3086160b974e2bc7dc659eb6dae3ff647f059627ff3ef145
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354973"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747480"
 ---
-# <a name="id3dxskininfosetminboneinfluence-method"></a>ID3DXSkinInfo:: setminboneingefluence-Methode
+# <a name="id3dxskininfosetminboneinfluence-method"></a>ID3DXSkinInfo::SetMinBoneInfluence-Methode
 
-Legt den minimalen Knochen Einfluss fest. Werte, die kleiner als dieser Wert sind, werden ignoriert.
+Legt den minimalen Einfluss auf Dies fest. Einflusswerte, die kleiner als diese sind, werden ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT SetMinBoneInfluence(
 
 <dl> <dt>
 
-*Mininfl* \[ in\]
+*MinInfl* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimaler Einfluss Wert. Werte, die kleiner als dieser Wert sind, werden ignoriert.
+Minimaler Einflusswert. Einflusswerte, die kleiner als diese sind, werden ignoriert.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Minimaler Einfluss Wert. Werte, die kleiner als dieser Wert sind, werden ignorie
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -73,7 +73,7 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 [ID3DXSkinInfo](id3dxskininfo.md)
 </dt> <dt>
 
-[**ID3DXSkinInfo:: getminboneingefluence**](id3dxskininfo--getminboneinfluence.md)
+[**ID3DXSkinInfo::GetMinBoneInfluence**](id3dxskininfo--getminboneinfluence.md)
 </dt> </dl>
 
  

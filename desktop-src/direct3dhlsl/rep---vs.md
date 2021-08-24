@@ -1,6 +1,6 @@
 ---
-title: Rep-vs
-description: Rep starten... ENDREP-Block.
+title: rep – im Vergleich zu
+description: Starten eines Mitarbeiters... endrep-Block.
 ms.assetid: vs|directx_sdk|~\rep___vs.htm
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,47 +9,47 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 5441d5d134ee2d60e14db9f273ec374323f93902
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
-ms.translationtype: HT
+ms.openlocfilehash: 6e800f2ef313cd5c9a4fc90d7205502db5532ae24f51ec0f1255d05cc9a589bb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119853790"
 ---
-# <a name="rep---vs"></a>Rep-vs
+# <a name="rep---vs"></a>rep – im Vergleich zu
 
-Rep starten... [ENDREP](endrep---vs.md) -Block.
+Starten eines Mitarbeiters... [endrep-Block.](endrep---vs.md)
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| Rep i\# |
+| rep i\# |
 |---------|
 
 
 
- 
+ 
 
-\#dabei handelt es sich um ein ganzzahliges Register, das die Wiederholungs Anzahl in der. x-Komponente angibt. Siehe [konstanter ganzzahliges Register](dx9-graphics-reference-asm-vs-registers-constant-integer.md).
+dabei ist i \# ein ganzzahliges Register, das die Wiederholungsanzahl in der X-Komponente angibt. Weitere Informationen finden Sie unter [Constant Integer Register](dx9-graphics-reference-asm-vs-registers-constant-integer.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| Sprecherin                    |      | x    | x    | x     | x    | x     |
+| Rep                    |      | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
--   i \# . x gibt die Iterations Anzahl an. Der zulässige Bereich ist \[ 0, 255 \] . Beachten Sie, dass diese Anweisung den Wert von i. x nicht Inkrement oder Dekrement erhöht \# .
--   i \# . yzw wird nicht vom Wiederholungs Block verwendet.
--   Wiederholungs Blöcke können eingebettet werden. Siehe Schachtelungs [Limits der Fluss Steuerung](dx9-graphics-reference-asm-vs-instructions-flow-control.md).
--   Wiederholungs Blöcke dürfen sich entweder vollständig innerhalb eines if- \* Blocks oder vollständig umschließen. Es sind keine überspannen zulässig.
--   Die Verwendung desselben i \# -Codes für verschiedene oder schllige Rep-Anweisungen ist in Ordnung. jede Schleife wird basierend auf der angegebenen Anzahl durchlaufen.
+-   i \# .x gibt die Iterationsanzahl an. Der rechtliche Bereich ist \[ 0, 255 \] . Beachten Sie, dass diese Anweisung den Wert von i .x nicht erhöht oder dekrementiert. \#
+-   i \# .yzw werden nicht vom Wiederholungsblock verwendet.
+-   Wiederholungsblöcke können geschachtelt sein. Weitere Informationen finden Sie [unter Flow Control Nesting Limits](dx9-graphics-reference-asm-vs-instructions-flow-control.md).
+-   Wiederholungsblöcke dürfen sich entweder vollständig innerhalb eines \* if-Blocks oder vollständig um ihn herum befinden. Es ist kein Umschließen zulässig.
+-   Die Verwendung des gleichen i \# für verschiedene oder geschachtelte Rep-Anweisungen ist in Ordnung. Jede Schleife wird basierend auf der angegebenen Anzahl durchlaufen.
 
 ## <a name="example"></a>Beispiel
 
@@ -66,12 +66,12 @@ endrep
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

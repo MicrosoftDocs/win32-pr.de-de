@@ -4,20 +4,20 @@ ms.assetid: 4ce30b40-2d5d-449b-9314-45eabad16cce
 title: Japan
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e4c22f880802c2242865633c4d23aaa0ae43598
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f058443498dba2d0ba2f796f2e687182d34d6255ddc6e88daa97d22b298512a5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103746000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766980"
 ---
 # <a name="japan"></a>Japan
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die Häufigkeits Indizes in den Japan-Tabellen sind für die Verwendung als Kanalnummern geeignet.
+Die Häufigkeitsindizes in den Japan-Tabellen eignen sich für die Verwendung als Kanalnummern.
 
-### <a name="japan-broadcast-assignments"></a>Japan-Broadcast Zuweisungen
+### <a name="japan-broadcast-assignments"></a>Japan Broadcast Assignments
 
 
 ```C++
@@ -91,7 +91,7 @@ Die Häufigkeits Indizes in den Japan-Tabellen sind für die Verwendung als Kana
 
 
 
-### <a name="japan-cable-assignments"></a>Japanische Kabel Zuweisungen
+### <a name="japan-cable-assignments"></a>Japanische Kabelzuweisungen
 
 
 ```C++
@@ -214,13 +214,13 @@ Die Häufigkeits Indizes in den Japan-Tabellen sind für die Verwendung als Kana
 
 
 
-## <a name="revised-channel-assignments"></a>Überarbeitete Kanal Zuweisungen
+## <a name="revised-channel-assignments"></a>Überarbeitete Kanalzuweisungen
 
-In der folgenden Tabelle sind die Kabelkanal Zuweisungen aufgeführt, für die Windows XP Media Center Edition 1,1 und höher erforderlich ist.
+In der folgenden Tabelle sind die Kabelkanalzuweisungen aufgeführt, die Windows XP Media Center Edition 1.1 und höher erfordern.
 
-Die Häufigkeits Indizes in dieser Japan-Tabelle sind für die Verwendung als Kanalnummern geeignet.
+Die Häufigkeitsindizes in dieser Japan-Tabelle eignen sich für die Verwendung als Kanalnummern.
 
-### <a name="japan-broadcast-assignments"></a>Japan-Broadcast Zuweisungen
+### <a name="japan-broadcast-assignments"></a>Japan Broadcast Assignments
 
 
 ```C++
@@ -298,7 +298,7 @@ Die Häufigkeits Indizes in dieser Japan-Tabelle sind für die Verwendung als Ka
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale Analog TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

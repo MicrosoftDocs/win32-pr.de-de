@@ -1,55 +1,55 @@
 ---
 title: Grundlegendes zur Direct3D 11-Renderingpipeline
-description: Zuvor haben Sie sich mit dem Erstellen eines Fensters beschäftigt, das Sie zum Zeichnen in Arbeiten mit DirectX-Geräte Ressourcen verwenden können. Nun erfahren Sie, wie Sie die Grafik Pipeline erstellen und wo Sie Sie anschließen können.
+description: Zuvor haben Sie sich angesehen, wie Sie ein Fenster erstellen, das Sie zum Zeichnen in Arbeiten mit DirectX-Geräteressourcen verwenden können. Nun erfahren Sie, wie Sie die Grafikpipeline erstellen und wo Sie sie einbinden können.
 ms.assetid: 73cf62d0-7e4f-4e93-aa65-12741588d4fb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e50f9a387b2d44fe750abcf5a8856f75e6d0110e
-ms.sourcegitcommit: 07b756a2f350efa5cfd5024a723ef392274ac3d9
+ms.openlocfilehash: 41a3e0fa7e3f7775c5cd51d49f9867864e7a204975fd982565491a63db829aa7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "106371819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119727520"
 ---
 # <a name="understand-the-direct3d-11-rendering-pipeline"></a>Grundlegendes zur Direct3D 11-Renderingpipeline
 
-Zuvor haben Sie sich mit dem Erstellen eines Fensters beschäftigt, das Sie zum Zeichnen in [Arbeiten mit DirectX-Geräte Ressourcen](work-with-dxgi.md)verwenden können. Nun erfahren Sie, wie Sie die Grafik Pipeline erstellen und wo Sie Sie anschließen können.
+Zuvor haben Sie sich angesehen, wie Sie ein Fenster erstellen, das Sie zum Zeichnen in [Arbeiten mit DirectX-Geräteressourcen](work-with-dxgi.md)verwenden können. Nun erfahren Sie, wie Sie die Grafikpipeline erstellen und wo Sie sie einbinden können.
 
-Sie erinnern sich, dass es zwei Direct3D-Schnittstellen gibt, die die Grafik Pipeline definieren: [**ID3D11Device**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2), das eine virtuelle Darstellung der GPU und ihrer Ressourcen bereitstellt. und [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2), das die Grafik Verarbeitung für die Pipeline darstellt. In der Regel verwenden Sie eine Instanz von **ID3D11Device** zum Konfigurieren und Abrufen der GPU-Ressourcen, die Sie benötigen, um mit der Verarbeitung der Grafiken in einer Szene zu beginnen, und Sie verwenden **Verknüpfung id3d11devicecontext aus** , um diese Ressourcen in jeder entsprechenden Shader-Phase in der Grafik Pipeline zu verarbeiten. **ID3D11Device** -Methoden werden in der Regel nur selten aufgerufen – d. h. nur, wenn Sie eine Szene einrichten oder wenn das Gerät geändert wird. Auf der anderen Seite wird **Verknüpfung id3d11devicecontext aus** jedes Mal aufgerufen, wenn Sie einen Frame für die Anzeige verarbeiten.
+Sie werden sich erinnern, dass es zwei Direct3D-Schnittstellen gibt, die die Grafikpipeline definieren: [**ID3D11Device**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2), die eine virtuelle Darstellung der GPU und ihrer Ressourcen bereitstellt. und [**ID3D11DeviceContext**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2), die die Grafikverarbeitung für die Pipeline darstellt. In der Regel verwenden Sie eine Instanz von **ID3D11Device,** um die GPU-Ressourcen zu konfigurieren und abzurufen, die Sie benötigen, um mit der Verarbeitung der Grafiken in einer Szene zu beginnen, und sie verwenden **ID3D11DeviceContext,** um diese Ressourcen in jeder geeigneten Shaderphase in der Grafikpipeline zu verarbeiten. In der Regel rufen Sie **die ID3D11Device-Methoden** nur selten auf, d. h. nur, wenn Sie eine Szene einrichten oder das Gerät sich ändert. Auf der anderen Seite rufen Sie **ID3D11DeviceContext** jedes Mal auf, wenn Sie einen Frame für die Anzeige verarbeiten.
 
-In diesem Beispiel wird eine minimale Grafik Pipeline erstellt und konfiguriert, die für die Anzeige eines einfachen drehenden, vertexschattierten Cubes geeignet ist. Es wird ungefähr die kleinste Menge von Ressourcen veranschaulicht, die für die Anzeige notwendig ist. Beachten Sie beim Lesen der Informationen die Einschränkungen des jeweiligen Beispiels, wo Sie es möglicherweise erweitern müssen, um die Szene zu unterstützen, die Sie darstellen möchten.
+In diesem Beispiel wird eine minimale Grafikpipeline erstellt und konfiguriert, die für die Anzeige eines einfachen rotierenden, vertexschattierten Cubes geeignet ist. Es zeigt ungefähr den kleinsten Satz von Ressourcen, die für die Anzeige erforderlich sind. Wenn Sie die Informationen hier lesen, beachten Sie die Einschränkungen des angegebenen Beispiels, in dem Sie sie möglicherweise erweitern müssen, um die Szene zu unterstützen, die Sie rendern möchten.
 
-In diesem Beispiel werden zwei C++-Klassen für Grafiken behandelt: eine Geräte Ressourcen-Manager-Klasse und eine 3D-Szene-Renderer-Klasse. Dieses Thema konzentriert sich speziell auf den 3D-Szenen-Renderer.
+In diesem Beispiel werden zwei C++-Klassen für Grafiken behandelt: eine Geräteressourcen-Manager-Klasse und eine 3D-Szenenrendererklasse. Dieses Thema konzentriert sich speziell auf den 3D-Szenenrenderer.
 
-## <a name="what-does-the-cube-renderer-do"></a>Was macht der Cube-Renderer?
+## <a name="what-does-the-cube-renderer-do"></a>Was macht der Cuberenderer?
 
-Die Grafik Pipeline wird von der 3D-Szene-Renderer-Klasse definiert. Der Szenen-Renderer kann:
+Die Grafikpipeline wird von der 3D-Szenenrendererklasse definiert. Der Szenenrenderer kann folgendes:
 
--   Definieren konstanter Puffer zum Speichern der einheitlichen Daten.
--   Definieren Sie Vertex-Puffer für die Vertex-Objektdaten und die entsprechenden Index Puffer, damit der Vertex-Shader die Dreiecke ordnungsgemäß durchlaufen kann.
--   Erstellen Sie Textur Ressourcen und Ressourcen Ansichten.
--   Laden Sie die Shader-Objekte.
--   Aktualisieren Sie die Grafikdaten, sodass die einzelnen Frames angezeigt werden.
--   Rendering (zeichnen) der Grafik in der SwapChain.
+-   Definieren Sie konstante Puffer, um Ihre einheitlichen Daten zu speichern.
+-   Definieren Sie Scheitelpunktpuffer für die Objektvertexdaten und entsprechende Indexpuffer, damit der Vertex-Shader die Dreiecke ordnungsgemäß durchgehen kann.
+-   Erstellen Sie Texturressourcen und Ressourcenansichten.
+-   Laden Sie Ihre Shaderobjekte.
+-   Aktualisieren Sie die Grafikdaten, um jeden Frame anzuzeigen.
+-   Rendern (zeichnen) Sie die Grafiken in der Swapkette.
 
-Die ersten vier Prozesse verwenden normalerweise die [**ID3D11Device**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2) -Schnittstellen Methoden zum Initialisieren und Verwalten von Grafik Ressourcen. die letzten beiden Prozesse verwenden die [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) -Schnittstellen Methoden, um die Grafik Pipeline zu verwalten und auszuführen.
+Die ersten vier Prozesse verwenden in der Regel die [**ID3D11Device-Schnittstellenmethoden**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2) zum Initialisieren und Verwalten von Grafikressourcen, und die letzten beiden verwenden die [**ID3D11DeviceContext-Schnittstellenmethoden,**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) um die Grafikpipeline zu verwalten und auszuführen.
 
-Eine Instanz der **Rendererklasse** wird als Element Variable in der Hauptprojekt Klasse erstellt und verwaltet. Die **deviceresources** -Instanz wird als frei gegebener Zeiger über mehrere Klassen verwaltet, einschließlich der Hauptprojekt Klasse, der **App** -Ansichts Anbieter Klasse und des **Renderers**. Wenn Sie **Renderer** durch ihre eigene Klasse ersetzen, sollten Sie die **deviceresources** -Instanz auch deklarieren und als frei gegebenes Zeiger Element zuweisen:
+Eine Instanz der **Rendererklasse** wird als Membervariable für die Hauptprojektklasse erstellt und verwaltet. Die **DeviceResources-Instanz** wird als freigegebener Zeiger für mehrere Klassen verwaltet, einschließlich der Hauptprojektklasse, der App-Ansichtsanbieterklasse und des **Renderers**.  Wenn Sie **Renderer** durch Ihre eigene Klasse ersetzen, sollten Sie erwägen, die **DeviceResources-Instanz** auch als freigegebenen Zeigermember zu deklarieren und zuzuweisen:
 
 `std::shared_ptr<DX::DeviceResources> m_deviceResources;`
 
-Übergeben Sie den Zeiger einfach an den Klassenkonstruktor (oder eine andere Initialisierungs Methode), nachdem die **deviceresources** -Instanz in der **Initialize** -Methode der **App** -Klasse erstellt wurde. Sie können auch eine **schwache \_ ptr** -Referenz übergeben, wenn Sie stattdessen möchten, dass Ihre Hauptklasse die **deviceresources** -Instanz vollständig besitzt.
+Übergeben Sie einfach den Zeiger an den Klassenkonstruktor (oder eine andere Initialisierungsmethode), nachdem die **DeviceResources-Instanz** in der **Initialize-Methode** der **App-Klasse** erstellt wurde. Sie können auch einen **schwachen \_ ptr-Verweis** übergeben, wenn Ihre Hauptklasse stattdessen die **DeviceResources-Instanz** vollständig besitzen soll.
 
-## <a name="create-the-cube-renderer"></a>Erstellen des Cube-Renderers
+## <a name="create-the-cube-renderer"></a>Erstellen des Cuberenderers
 
-In diesem Beispiel ordnen wir die Szene-Renderer-Klasse mit den folgenden Methoden an:
+In diesem Beispiel organisieren wir die Szenenrendererklasse mit den folgenden Methoden:
 
--   **Createdevicedependentresources**: wird aufgerufen, wenn die Szene initialisiert oder neu gestartet werden muss. Diese Methode lädt Ihre anfänglichen Scheitelpunkt Daten, Texturen, Shader und andere Ressourcen und erstellt die anfängliche Konstante und den Scheitelpunkt Puffer. Der größte Teil der Arbeit erfolgt in der Regel mit [**ID3D11Device**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2) -Methoden, nicht mit [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) -Methoden.
--   **Createwindowsizedependentresources**: wird immer dann aufgerufen, wenn sich der Fenster Zustand ändert, z. b. bei einer Größenänderung oder bei einer Änderung der Ausrichtung. Mit dieser Methode werden Transformations Matrizen neu erstellt, z. b. die der Kamera.
--   **Update**: wird normalerweise von dem Teil des Programms aufgerufen, der den unmittelbaren Spielzustand verwaltet. in diesem Beispiel wird es nur aus der **Haupt** Klasse aufgerufen. Lassen Sie diese Methode aus beliebigen Spiel Zustandsinformationen lesen, die sich auf das Rendering auswirken, wie z. b. Aktualisierungen der Objektposition oder Animations Rahmen, sowie auf alle globalen Spieldaten wie leichte Ebenen oder Änderungen an der Spielphysik. Diese Eingaben werden verwendet, um die pro-Frame-Konstante Puffer und Objektdaten zu aktualisieren.
--   **Rendering**: wird normalerweise von dem Teil des Programms aufgerufen, der die Spiel Schleife verwaltet. in diesem Fall wird Sie von der **Haupt** Klasse aufgerufen. Diese Methode erstellt die Grafik Pipeline: Sie bindet Shader, bindet Puffer und Ressourcen an shaderstufen und ruft die Zeichnung für den aktuellen Frame auf.
+-   **CreateDeviceDependentResources:** Wird immer dann aufgerufen, wenn die Szene initialisiert oder neu gestartet werden muss. Diese Methode lädt Ihre anfänglichen Scheitelpunktdaten, Texturen, Shader und andere Ressourcen und erstellt die anfänglichen Konstanten- und Scheitelpunktpuffer. In der Regel erfolgt der Großteil der Arbeit hier mit [**ID3D11Device-Methoden,**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2) nicht mit [**ID3D11DeviceContext-Methoden.**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2)
+-   **CreateWindowSizeDependentResources:** Wird aufgerufen, wenn sich der Fensterzustand ändert, z. B. wenn sich die Größe ändert oder die Ausrichtung geändert wird. Diese Methode erstellt Transformationsmatrizen neu, z. B. die für Ihre Kamera.
+-   **Update:** Wird in der Regel von dem Teil des Programms aufgerufen, der den unmittelbaren Spielzustand verwaltet. In diesem Beispiel wird es einfach aus der **Main-Klasse** aufgerufen. Lassen Sie diese Methode aus allen Spielzustandsinformationen lesen, die sich auf das Rendering auswirken, z. B. Aktualisierungen der Objektposition oder Animationsframes, sowie aus allen globalen Spieldaten wie Lichtpegeln oder Änderungen an der Spielmechanik. Diese Eingaben werden verwendet, um die Pro-Frame-Konstantenpuffer und Objektdaten zu aktualisieren.
+-   **Render:** Wird in der Regel aus dem Teil des Programms aufgerufen, der die Spielschleife verwaltet. in diesem Fall wird sie aus der **Main-Klasse** aufgerufen. Diese Methode erstellt die Grafikpipeline: Sie bindet Shader, Puffer und Ressourcen an Shaderstufen und ruft Zeichnungen für den aktuellen Frame auf.
 
-Diese Methoden umfassen den Hauptteil der Verhaltensweisen zum Rendern einer Szene mit Direct3D mithilfe Ihrer Assets. Wenn Sie dieses Beispiel mit einer neuen Renderingklasse erweitern, deklarieren Sie es in der Hauptprojekt Klasse. So:
+Diese Methoden bilden den Textkörper des Verhaltens zum Rendern einer Szene mit Direct3D unter Verwendung Ihrer Objekte. Wenn Sie dieses Beispiel um eine neue Renderingklasse erweitern, deklarieren Sie es in der Hauptprojektklasse. Dies ist also:
 
 `std::unique_ptr<Sample3DSceneRenderer> m_sceneRenderer;`
 
@@ -57,15 +57,15 @@ zu
 
 `std::unique_ptr<MyAwesomeNewSceneRenderer> m_sceneRenderer;`
 
-Beachten Sie, dass in diesem Beispiel davon ausgegangen wird, dass die-Methoden in ihrer Implementierung die gleichen Signaturen aufweisen. Wenn sich die Signaturen geändert haben, überprüfen Sie die **Haupt** Schleife, und nehmen Sie die Änderungen entsprechend vor.
+Beachten Sie auch hier, dass in diesem Beispiel davon ausgegangen wird, dass die Methoden in Ihrer Implementierung die gleichen Signaturen aufweisen. Wenn sich die Signaturen  geändert haben, überprüfen Sie die Main-Schleife, und nehmen Sie die Änderungen entsprechend vor.
 
-Betrachten wir nun die Szenen Rendering-Methoden ausführlicher.
+Sehen wir uns die Methoden für das Szenenrendering genauer an.
 
-## <a name="create-device-dependent-resources"></a>Geräte abhängige Ressourcen erstellen
+## <a name="create-device-dependent-resources"></a>Erstellen von geräteabhängigen Ressourcen
 
-**Createdevicedependentresources** konsolidiert alle Vorgänge zum Initialisieren der Szene und ihrer Ressourcen mithilfe von [**ID3D11Device**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2) -aufrufen. Bei dieser Methode wird davon ausgegangen, dass das Direct3D-Gerät soeben für eine Szene initialisiert wurde (oder neu erstellt wurde). Es erstellt alle Szenen spezifischen Grafik Ressourcen, z. b. den Scheitelpunkt und die Pixel-Shader, den Vertex-und Index Puffer für Objekte und alle anderen Ressourcen (z. b. als Texturen und zugehörige Sichten) neu und lädt diese neu.
+**CreateDeviceDependentResources** konsolidiert alle Vorgänge zum Initialisieren der Szene und ihrer Ressourcen mit [**id3D11Device-Aufrufen.**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2) Bei dieser Methode wird davon ausgegangen, dass das Direct3D-Gerät soeben für eine Szene initialisiert (oder neu erstellt) wurde. Es erstellt alle szenenspezifischen Grafikressourcen neu oder lädt sie neu, z. B. die Vertex- und Pixel-Shader, den Scheitelpunkt- und Indexpuffer für Objekte und alle anderen Ressourcen (z. B. als Texturen und die entsprechenden Ansichten).
 
-Hier ist Beispielcode für **createdevicedependentresources**:
+Beispielcode für **CreateDeviceDependentResources:**
 
 
 ```C++
@@ -97,9 +97,9 @@ void Renderer::CreateWindowSizeDependentResources()
 
 
 
-Jedes Mal, wenn Sie Ressourcen von Datenträgern laden – Ressourcen wie z. b. kompilierte Shader-Objektdateien (CSO oder. CSO) oder Texturen –, führen Sie dies asynchron aus. Dies ermöglicht es Ihnen, andere Aufgaben gleichzeitig auszuführen (z. b. andere Einrichtungs Aufgaben), und da die Hauptschleife nicht blockiert ist, können Sie die Anzeige für den Benutzer visuell interessant machen (z. b. eine ladende Animation für das Spiel). In diesem Beispiel wird die parallelcurrency:: Tasks-API verwendet, die ab Windows 8 verfügbar ist. Beachten Sie die Lambda-Syntax, die zum Kapseln asynchroner Lade Tasks verwendet wird. Diese Lambdas stellen die Funktionen dar, die außerhalb des Threads aufgerufen werden. Daher wird ein Zeiger auf das aktuelle Klassenobjekt (**this**) explizit aufgezeichnet.
+Jedes Mal, wenn Sie Ressourcen von einem Datenträger laden – z. B. kompilierte Shaderobjektdateien (CSO oder CSO) oder Texturen – tun Sie dies asynchron. Dadurch können Sie andere Aufgaben gleichzeitig ausführen (wie andere Setupaufgaben), und da die Hauptschleife nicht blockiert ist, können Sie dem Benutzer weiterhin etwas visuell Interessantes anzeigen (z. B. eine Ladeanimation für Ihr Spiel). In diesem Beispiel wird die Concurrency::Tasks-API verwendet, die ab Windows 8 verfügbar ist. Beachten Sie die Lambdasyntax, die zum Kapseln asynchroner Ladetasks verwendet wird. Diese Lambdas stellen die Funktionen dar, die als off-thread bezeichnet werden, sodass ein Zeiger auf das aktuelle Klassenobjekt (**this**) explizit erfasst wird.
 
-Im folgenden finden Sie ein Beispiel dafür, wie Sie den Shader-Bytecode laden können:
+Hier ist ein Beispiel dafür, wie Sie Shader-Bytecode laden können:
 
 
 ```C++
@@ -176,7 +176,7 @@ fclose(pShader);
 
 
 
-Im folgenden finden Sie ein Beispiel zum Erstellen von Scheitelpunkt-und Index Puffern:
+Hier ist ein Beispiel für das Erstellen von Scheitelpunkt- und Indexpuffern:
 
 
 ```C++
@@ -267,19 +267,19 @@ HRESULT Renderer::CreateCube()
 
 
 
-In diesem Beispiel werden keine Netzen oder Texturen geladen. Sie müssen die Methoden zum Laden der Mesh-und Textur Typen erstellen, die für das Spiel spezifisch sind, und Sie asynchron aufzurufen.
+In diesem Beispiel werden keine Gittergitter oder Texturen geladen. Sie müssen die Methoden zum Laden der Gitternetz- und Texturtypen erstellen, die für Ihr Spiel spezifisch sind, und sie asynchron aufrufen.
 
-Füllen Sie hier auch die anfänglichen Werte für Ihre pro-Szene-Konstanten Puffer auf. Beispiele für den pro-Szene-Konstantenpuffer sind fixierte Lichter oder andere statische Szenen Elemente und-Daten.
+Füllen Sie hier auch die Anfangswerte für Die Pro-Szene-Konstantenpuffer auf. Beispiele für konstanten Puffer pro Szene sind feste Beleuchtung oder andere statische Szenenelemente und Daten.
 
-## <a name="implement-the-createwindowsizedependentresources-method"></a>Implementieren der createwindowsizedependentresources-Methode
+## <a name="implement-the-createwindowsizedependentresources-method"></a>Implementieren der CreateWindowSizeDependentResources-Methode
 
-Die **createwindowsizedependentresources** -Methoden werden jedes Mal aufgerufen, wenn die Fenstergröße, die Ausrichtung oder die Auflösung geändert wird.
+**CreateWindowSizeDependentResources-Methoden** werden jedes Mal aufgerufen, wenn sich die Fenstergröße, -ausrichtung oder -auflösung ändert.
 
-Fenstergrößen Ressourcen werden wie folgt aktualisiert: die statische Nachrichten Prozedur ruft eines von mehreren möglichen Ereignissen ab, das auf eine Änderung des Fenster Zustands hinweist. Die Hauptschleife wird dann über das Ereignis informiert und ruft **createwindowsizedependentresources** auf der Hauptklassen Instanz auf, die dann die **createwindowsizedependentresources** -Implementierung in der Scene Renderer-Klasse aufruft.
+Fenstergrößenressourcen werden wie folgt aktualisiert: Die statische Nachrichtenprozage ruft eines von mehreren möglichen Ereignissen ab, die auf eine Änderung des Fensterzustands hinweisen. Ihre Hauptschleife wird dann über das Ereignis informiert und ruft **CreateWindowSizeDependentResources** für die Hauptklasseninstanz auf, die dann die **CreateWindowSizeDependentResources-Implementierung** in der Szenenrendererklasse aufruft.
 
-Der primäre Auftrag dieser Methode besteht darin, sicherzustellen, dass die visuellen Elemente aufgrund einer Änderung der Fenster Eigenschaften nicht verwirrt oder ungültig werden. In diesem Beispiel aktualisieren wir die Projekt Matrizen mit einem neuen Feld der Ansicht (FOV) für das Fenster mit der Größe oder der Umgestaltung.
+Der primäre Auftrag dieser Methode besteht darin, sicherzustellen, dass die Visuals aufgrund einer Änderung der Fenstereigenschaften nicht verwechselt oder ungültig werden. In diesem Beispiel aktualisieren wir die Projektmatrizen mit einem neuen Sichtfeld (FOV) für das geänderte oder neu ausgerichtete Fenster.
 
-Wir haben bereits den Code zum Erstellen von Fenster Ressourcen in **deviceresources** gesehen, d. h. die Swapkette (mit dem Hintergrund Puffer) und die renderzielsicht. So erstellt der Renderer Seitenverhältnis abhängige Transformationen:
+Wir haben bereits den Code zum Erstellen von Fensterressourcen in **DeviceResources** gesehen, bei dem es sich um die Swapkette (mit Hintergrundpuffer) und die Renderzielansicht handelte. So erstellt der Renderer seitenverhältnisabhängige Transformationen:
 
 
 ```C++
@@ -321,11 +321,11 @@ void Renderer::CreateViewAndPerspective()
 
 
 
-Wenn in Ihrer Szene ein bestimmtes Layout von Komponenten vorhanden ist, die vom Seitenverhältnis abhängig sind, ist dies der Ort, an dem Sie entsprechend dem Seitenverhältnis neu angeordnet werden. Möglicherweise möchten Sie die Konfiguration des Verhaltens nach der Verarbeitung auch hier ändern.
+Wenn Ihre Szene über ein bestimmtes Layout von Komponenten verfügt, das vom Seitenverhältnis abhängt, ist dies der Ort, an dem sie neu angeordnet werden, um dieses Seitenverhältnis zuzuordnen. Möglicherweise möchten Sie auch hier die Konfiguration des Verhaltens nach der Verarbeitung ändern.
 
 ## <a name="implement-the-update-method"></a>Implementieren der Update-Methode
 
-Die **Update** -Methode wird einmal pro Spiel Schleife aufgerufen. in diesem Beispiel wird Sie von der-Methode der Main-Klasse mit demselben Namen aufgerufen. Es hat einen einfachen Zweck: Aktualisieren von Szenen Geometrie und Spielzustand basierend auf der verstrichenen Zeit (oder den verstrichenen Zeitschritten) seit dem vorherigen Frame. In diesem Beispiel drehen wir den Cube einfach einmal pro Frame. In einer realen Spielszene enthält diese Methode viel mehr Code zum Überprüfen des Spiel Zustands, zum Aktualisieren von pro-Frame (oder anderen dynamischen) Konstanten Puffern, Geometrie Puffern und anderen in-Memory-Assets entsprechend. Da die Kommunikation zwischen CPU und GPU einen mehr Aufwand verursacht, stellen Sie sicher, dass Sie nur Puffer aktualisieren, die sich seit dem letzten Frame geändert haben. die Konstanten Puffer können nach Bedarf gruppiert oder aufgeteilt werden, um dies effizienter zu gestalten.
+Die **Update-Methode** wird einmal pro Spielschleife aufgerufen. In diesem Beispiel wird sie von der -Methode der Hauptklasse mit dem gleichen Namen aufgerufen. Es hat einen einfachen Zweck: Aktualisierung der Szenengeometrie und des Spielzustands basierend auf der Menge der verstrichenen Zeit (oder der verstrichenen Zeitschritte) seit dem vorherigen Frame. In diesem Beispiel drehen wir den Würfel einfach einmal pro Frame. In einer echten Spielszene enthält diese Methode viel mehr Code zum Überprüfen des Spielzustands, zum Aktualisieren von konstanten Puffern pro Frame (oder anderen dynamischen Puffern), Geometriepuffern und anderen In-Memory-Ressourcen entsprechend. Da die Kommunikation zwischen CPU und GPU mehr Aufwand verursacht, stellen Sie sicher, dass Sie nur Puffer aktualisieren, die sich seit dem letzten Frame tatsächlich geändert haben. Ihre konstanten Puffer können nach Bedarf gruppiert oder aufgeteilt werden, um dies effizienter zu gestalten.
 
 
 ```C++
@@ -349,11 +349,11 @@ void Renderer::Update()
 
 
 
-In diesem Fall aktualisiert die **Drehung** den konstanten Puffer mit einer neuen Transformationsmatrix für den Cube. Die Matrix wird während der Vertexshader-Stufe pro Scheitelpunkt multipliziert. Da diese Methode mit jedem Frame aufgerufen wird, ist dies ein guter Ausgangspunkt, um alle Methoden zu aggregieren, die Ihre dynamische Konstante und Vertex-Puffer aktualisieren, oder um andere Vorgänge auszuführen, die die Objekte in der Szene für die Transformation durch die Grafik Pipeline vorbereiten.
+In diesem Fall aktualisiert **Rotieren** den Konstantenpuffer mit einer neuen Transformationsmatrix für den Cube. Die Matrix wird während der Vertex-Shaderphase pro Scheitelpunkt multipliziert. Da diese Methode mit jedem Frame aufgerufen wird, ist dies ein guter Ort, um alle Methoden zu aggregieren, die Ihre dynamischen Konstanten- und Scheitelpunktpuffer aktualisieren, oder um andere Vorgänge auszuführen, die die Objekte in der Szene für die Transformation durch die Grafikpipeline vorbereiten.
 
-## <a name="implement-the-render-method"></a>Implementieren der "Rendering"-Methode
+## <a name="implement-the-render-method"></a>Implementieren der Render-Methode
 
-Diese Methode wird nach dem Aufruf von **Update** einmal pro Spiel Schleife aufgerufen. Wie bei **Update** auch, wird die **Rendering** -Methode auch von der Hauptklasse aufgerufen. Dies ist die Methode, bei der die Grafik Pipeline für den Frame erstellt und mithilfe von Methoden auf der [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) -Instanz verarbeitet wird. Dies wird in einem abschließenden [**Verknüpfung id3d11devicecontext aus::D rawindebug-aufgeschachtelt**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed). Es ist wichtig zu verstehen, dass dieser Aufruf (oder andere ähnliche **Draw _-Aufrufe, die \* *für _ Verknüpfung id3d11devicecontext aus definiert*** sind) tatsächlich die Pipeline ausführt. Dies gilt insbesondere dann, wenn Direct3D mit der GPU kommuniziert, um den Zeichnungs Zustand festzulegen, jede Pipeline Phase ausführt und die Pixel Ergebnisse in die renderzielpufferressource für die Anzeige durch die Swapkette schreibt. Da die Kommunikation zwischen CPU und GPU einen mehr Aufwand verursacht, kombinieren Sie mehrere Draw-Aufrufe in einem einzigen, wenn dies möglich ist. Dies gilt insbesondere, wenn die Szene viele gerenderte Objekte enthält.
+Diese Methode wird einmal pro Spielschleife aufgerufen, nachdem **Update** aufgerufen wurde. Wie **update** wird auch die **Render-Methode** aus der Main-Klasse aufgerufen. Dies ist die Methode, bei der die Grafikpipeline mithilfe von Methoden auf der [**ID3D11DeviceContext-Instanz**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2) für den Frame erstellt und verarbeitet wird. Dies führt zu einem abschließenden Aufruf von [**ID3D11DeviceContext::D rawIndexed.**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed) Es ist wichtig zu verstehen, dass dieser Aufruf (oder andere ähnliche **\* *Draw_-Aufrufe,* die für _ ID3D11DeviceContext definiert sind)** die Pipeline tatsächlich ausführt. Dies gilt insbesondere, wenn Direct3D mit der GPU kommuniziert, um den Zeichnungszustand festzulegen, jede Pipelinephase ausführt und die Pixelergebnisse zur Anzeige durch die Swapkette in die Renderzielpufferressource schreibt. Da die Kommunikation zwischen CPU und GPU mehr Aufwand verursacht, kombinieren Sie mehrere Zeichnen-Aufrufe in einem einzigen, wenn Sie dies können, insbesondere, wenn Ihre Szene über viele gerenderte Objekte verfügt.
 
 
 ```C++
@@ -448,15 +448,15 @@ void Renderer::Render()
 
 
 
-Es empfiehlt sich, die verschiedenen Grafik Pipeline Stufen für den Kontext in der richtigen Reihenfolge festzulegen. Normalerweise ist die Reihenfolge wie folgt:
+Es ist eine bewährte Methode, die verschiedenen Grafikpipelinestufen für den Kontext in der richtigen Reihenfolge festzulegen. In der Regel lautet die Reihenfolge:
 
--   Aktualisieren konstanter Puffer Ressourcen bei Bedarf mit neuen Daten (mithilfe von Daten aus **Update**).
--   Eingabeassembly (IA): Hier fügen wir den Scheitelpunkt und Index Puffer an, die die Szene Geometrie definieren. Sie müssen jeden Scheitelpunkt und Index Puffer für jedes Objekt in der Szene anfügen. Da dieses Beispiel nur den Cube enthält, ist es recht einfach.
--   Vertex-Shader (VS): Fügen Sie alle Scheitelpunkt-Shader an, mit denen die Daten in den Scheitelpunkt Puffern transformiert werden, und fügen Sie Konstante Puffer für den Vertexshader an.
--   Pixel-Shader (PS): Fügen Sie alle Pixel-Shader an, die pro-Pixel-Vorgänge in der rasterisierten Szene ausführen, und fügen Sie Geräte Ressourcen für den Pixelshader (Konstante Puffer, Texturen usw.) an.
--   Ausgabe Zusammenführung (OM): Dies ist die Phase, in der Pixel gemischt werden, nachdem die Shader abgeschlossen sind. Dies ist eine Ausnahme von der Regel, da Sie Ihre tiefen Schablonen und Renderziele anfügen, bevor Sie eine der anderen Stufen festlegen. Sie haben möglicherweise mehrere Schablonen und Ziele, wenn Sie über zusätzliche Scheitelpunkt-und Pixel-Shader verfügen, die Texturen generieren, wie z. b. Schatten Zuordnungen, Höhen Zuordnungen oder andere samplingverfahren. in diesem Fall benötigt jeder Zeichnungs Durchlauf die entsprechenden Ziele, bevor Sie eine Draw-Funktion aufrufen.
+-   Aktualisieren Sie konstante Pufferressourcen bei Bedarf mit neuen Daten (mithilfe von Daten aus **Update**).
+-   Eingabeassembly (IA): Hier fügen wir den Scheitelpunkt und die Indexpuffer an, die die Szenengeometrie definieren. Sie müssen jeden Scheitelpunkt und Indexpuffer für jedes Objekt in der Szene anfügen. Da dieses Beispiel nur über den Cube verfügt, ist er ziemlich einfach.
+-   Vertex-Shader (VS): Fügen Sie alle Vertex-Shader an, die die Daten in den Scheitelpunktpuffern transformieren, und fügen Sie konstante Puffer für den Vertex-Shader an.
+-   Pixel-Shader (PS): Fügen Sie alle Pixel-Shader an, die pixelbasierte Vorgänge in der rasterisierten Szene ausführen, und fügen Sie Geräteressourcen für den Pixelshader an (konstante Puffer, Texturen usw.).
+-   Ausgabezusammenführung (Output Merger, OM): Dies ist die Phase, in der Pixel kombiniert werden, nachdem die Shader abgeschlossen sind. Dies ist eine Ausnahme von der Regel, da Sie Ihre Tiefenschablonen und Renderziele anfügen, bevor Sie eine der anderen Phasen festlegen. Möglicherweise verfügen Sie über mehrere Schablonen und Ziele, wenn Sie über zusätzliche Scheitelpunkt- und Pixel-Shader verfügen, die Texturen wie Schattenkarten, Höhenkarten oder andere Samplingtechniken generieren. In diesem Fall benötigt jeder Zeichnungsdurchlauf die entsprechenden Ziele, bevor Sie eine Draw-Funktion aufrufen.
 
-Im letzten Abschnitt ([Arbeiten mit Shadern und Shaderressourcen](work-with-shaders-and-shader-resources.md)) betrachten wir nun die Shader und besprechen, wie Direct3D Sie ausführt.
+Als Nächstes betrachten wir im letzten Abschnitt[(Arbeiten mit Shadern und Shaderressourcen)](work-with-shaders-and-shader-resources.md)die Shader und erläutern, wie Direct3D sie ausführt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -465,7 +465,7 @@ Im letzten Abschnitt ([Arbeiten mit Shadern und Shaderressourcen](work-with-shad
 **Als Nächstes**
 </dt> <dt>
 
-[Arbeiten mit Shader und Shaderressourcen](work-with-shaders-and-shader-resources.md)
+[Arbeiten mit Shadern und Shaderressourcen](work-with-shaders-and-shader-resources.md)
 </dt> </dl>
 
  

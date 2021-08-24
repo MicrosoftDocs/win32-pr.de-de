@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Config01_NetworkIsolation02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ NetworkIsolation02-Klasse stellt die verfügbaren Browser Richtlinien dar.
+description: Die MDM \_ Policy \_ Config01 \_ NetworkIsolation02-Klasse stellt die verfügbaren Browserrichtlinien dar.
 ms.assetid: f25ecbef-d232-4731-bac8-38a7d597db00
 keywords:
 - MDM_Policy_Config01_NetworkIsolation02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9062d150de07860fd9d5b2510269ddcc3d2f8a35
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 759b6a3abbf27e2e074cea2482bec881546c179c88ef45b9a153c21222e153ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119750540"
 ---
-# <a name="mdm_policy_config01_networkisolation02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ NetworkIsolation02-Klasse
+# <a name="mdm_policy_config01_networkisolation02-class"></a>MDM \_ Policy \_ Config01 \_ NetworkIsolation02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ NetworkIsolation02** -Klasse stellt die verfügbaren Browser Richtlinien dar.
+Die **MDM \_ Policy \_ Config01 \_ NetworkIsolation02-Klasse** stellt die verfügbaren Browserrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -53,20 +53,20 @@ class MDM_Policy_Config01_NetworkIsolation02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ NetworkIsolation02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ NetworkIsolation02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ NetworkIsolation02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ NetworkIsolation02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 [EnterpriseCloudResources](/windows/client-management/mdm/policy-csp-networkisolation#networkisolation-enterprisecloudresources)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -77,7 +77,7 @@ Zugriffstyp: Lesen/Schreiben
 [EnterpriseInternalProxyServers](/windows/client-management/mdm/policy-csp-networkisolation#networkisolation-enterpriseinternalproxyservers)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -88,7 +88,7 @@ Zugriffstyp: Lesen/Schreiben
 [EnterpriseIPRange](/windows/client-management/mdm/policy-csp-networkisolation#networkisolation-enterpriseiprange)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -96,7 +96,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Enterpriseiprangesaretative](/windows/client-management/mdm/policy-csp-networkisolation#networkisolation-enterpriseiprangesareauthoritative)
+[EnterpriseIPRangesAreAuthoritative](/windows/client-management/mdm/policy-csp-networkisolation#networkisolation-enterpriseiprangesareauthoritative)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -110,7 +110,7 @@ Zugriffstyp: Lesen/Schreiben
 [EnterpriseNetworkDomainNames](/windows/client-management/mdm/policy-csp-networkisolation#networkisolation-enterprisenetworkdomainnames)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -121,7 +121,7 @@ Zugriffstyp: Lesen/Schreiben
 [EnterpriseProxyServers](/windows/client-management/mdm/policy-csp-networkisolation#networkisolation-enterpriseproxyservers)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -129,7 +129,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Enterpriseproxyserversaretative](/windows/client-management/mdm/policy-csp-networkisolation#networkisolation-enterpriseproxyserversareauthoritative)
+[EnterpriseProxyServersAreAuthoritative](/windows/client-management/mdm/policy-csp-networkisolation#networkisolation-enterpriseproxyserversareauthoritative)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -143,23 +143,23 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "networkisolation".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "NetworkIsolation".
 
 </dd> <dt>
 
-[Neutralresources](/windows/client-management/mdm/policy-csp-networkisolation#networkisolation-neutralresources)
+[NeutralResources](/windows/client-management/mdm/policy-csp-networkisolation#networkisolation-neutralresources)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -167,19 +167,19 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/config".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/Policy/Config".
 
 </dd> </dl>
 
@@ -189,10 +189,10 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

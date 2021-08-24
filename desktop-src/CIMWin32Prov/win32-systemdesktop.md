@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse der Win32 Systemdesktop Association bezieht sich auf ein Computersystem und dessen Desktop Konfiguration.
+description: Die WMI-Klasse für die \_ Win32-SystemDesktopzuordnung bezieht sich auf ein Computersystem und dessen Desktopkonfiguration.
 ms.assetid: 2b024660-d707-4463-8207-73df74bfa7d6
 ms.tgt_platform: multiple
 title: Win32_SystemDesktop-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 3e14cab58a445fd645b9d59c1aea713bf6c40ac0
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a7158e42589018364b9d55b578941bc3e6897576c6633b2a9fa0b0d09e4fede9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751340"
 ---
-# <a name="win32_systemdesktop-class"></a>Win32 \_ Systemdesktop-Klasse
+# <a name="win32_systemdesktop-class"></a>\_Win32-SystemDesktop-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) der **Win32 \_ Systemdesktop** Association bezieht sich auf ein Computersystem und dessen Desktop Konfiguration.
+Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) für die **Win32-SystemDesktopzuordnung \_** bezieht sich auf ein Computersystem und dessen Desktopkonfiguration.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge sortiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,51 +42,51 @@ class Win32_SystemDesktop : Win32_SystemSetting
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ Systemdesktop-** Klasse verfügt über diese Typen von Membern:
+Die **\_ Win32-SystemDesktop-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ Systemdesktop-** Klasse verfügt über diese Eigenschaften.
+Die **\_ Win32-SystemDesktop-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Element**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ Computersystem**
+Datentyp: **Win32 \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**override**](../wmisdk/standard-qualifiers.md) ("Element"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ Computersystem")
+Qualifizierer: [**Überschreiben**](../wmisdk/standard-qualifiers.md) ("Element"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ ComputerSystem")
 </dt> </dl>
 
-Verweis auf die-Instanz, die das Computersystem darstellt, auf dem die Desktop Konfiguration vorhanden ist.
+Verweis auf die -Instanz, die das Computersystem darstellt, in dem die Desktopkonfiguration vorhanden ist.
 
 </dd> <dt>
 
 **Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ -Desktop**
+Datentyp: **Win32 \_ Desktop**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](../wmisdk/standard-qualifiers.md) ("Setting"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ Desktop")
+Qualifizierer: [**Außerkraftsetzung**](../wmisdk/standard-qualifiers.md) ("Einstellung"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ Desktop")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die auf dem Computersystem vorhandene Konfiguration darstellt.
+Verweis auf die -Instanz, die die auf dem Computersystem vorhandene Konfiguration darstellt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ Systemdesktop-** Klasse wird von [**Win32 \_ systemsetting**](win32-systemsetting.md)abgeleitet.
+Die **Win32 \_ SystemDesktop-Klasse** wird von [**Win32 \_ SystemSetting**](win32-systemsetting.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,17 +96,17 @@ Die **Win32- \_ Systemdesktop-** Klasse wird von [**Win32 \_ systemsetting**](wi
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ systemsetting**](win32-systemsetting.md)
+[**Win32 \_ SystemSetting**](win32-systemsetting.md)
 </dt> <dt>
 
 [Betriebssystemklassen](./operating-system-classes.md)

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: cc744536336a4a102bafeaeae3ba87bbad58eb97
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a4f044d3337a2da05eb78b027492b870f450e4309c94faa8c72db935437511dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108113358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119853480"
 ---
 # <a name="d3dx10createmesh-function"></a>D3DX10CreateMesh-Funktion
 
@@ -52,7 +52,7 @@ HRESULT D3DX10CreateMesh(
 
 Typ: **[ **ID3D10Device**](/windows/desktop/api/D3D10/nn-d3d10-id3d10device)\***
 
-Zeiger auf eine [**ID3D10Device-Schnittstelle**](/windows/desktop/api/D3D10/nn-d3d10-id3d10device), das Geräteobjekt, das dem Netz zugeordnet werden soll.
+Zeiger auf eine [**ID3D10Device-Schnittstelle**](/windows/desktop/api/D3D10/nn-d3d10-id3d10device), das Geräteobjekt, das dem Gittermodell zugeordnet werden soll.
 
 </dd> <dt>
 
@@ -61,7 +61,7 @@ Zeiger auf eine [**ID3D10Device-Schnittstelle**](/windows/desktop/api/D3D10/nn-d
 
 Typ: **const [**D3D10 \_ INPUT ELEMENT \_ \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc) \***
 
-Array von [**D3D10 \_ INPUT ELEMENT \_ \_ DESC-Elementen,**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc) das das Scheitelpunktformat für das zurückgegebene Netz beschreibt. Dieser Parameter muss direkt einem flexiblen Scheitelpunktformat (FVF) zuordnen.
+Array von [**D3D10 \_ INPUT ELEMENT \_ \_ DESC-Elementen,**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc) das das Scheitelpunktformat für das zurückgegebene Gitternetz beschreibt. Dieser Parameter muss direkt einem flexiblen Vertexformat (FVF) zugeordnet werden.
 
 </dd> <dt>
 
@@ -79,7 +79,7 @@ Die Anzahl der Elemente in pDeclaration.
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Semantik, die identifiziert, welcher Teil der Scheitelpunktdeklaration Positionsinformationen enthält.
+Semantik, die angibt, welcher Teil der Scheitelpunktdeklaration Positionsinformationen enthält.
 
 </dd> <dt>
 
@@ -88,7 +88,7 @@ Semantik, die identifiziert, welcher Teil der Scheitelpunktdeklaration Positions
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Scheitelzeichen für das Gitternetz. Dieser Parameter muss größer als 0 sein.
+Anzahl der Scheitelpunkte für das Gitternetz. Dieser Parameter muss größer als 0 sein.
 
 </dd> <dt>
 
@@ -129,18 +129,18 @@ Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Mesh-Funktionen](d3d10-graphics-reference-d3dx10-functions-mesh.md)
+[Meshfunktionen](d3d10-graphics-reference-d3dx10-functions-mesh.md)
 </dt> <dt>
 
 [D3DX-Funktionen](d3d10-graphics-reference-d3dx10-functions.md)

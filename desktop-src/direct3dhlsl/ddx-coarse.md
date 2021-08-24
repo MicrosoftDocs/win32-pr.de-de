@@ -1,6 +1,6 @@
 ---
 title: ddx_coarse-Funktion
-description: Berechnet eine partielle Ableitung mit niedriger Genauigkeit in Bezug auf die x-Koordinate des Bildschirm Raums.
+description: Berechnet eine partielle Ableitung mit niedriger Genauigkeit in Bezug auf die X-Koordinate des Bildschirmraums.
 ms.assetid: 5719f45d-b2ae-4916-8f31-c2797b661814
 keywords:
 - ddx_coarse-Funktion HLSL
@@ -13,22 +13,22 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4f9d4805a1d516a5d8980fcd8209fd6733fe86c4
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: d5521da56804156485fcacb37b43cbf27d8d4b3659cbced918eaea2c12b308ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038123"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119855370"
 ---
-# <a name="ddx_coarse-function"></a>grobe DDX- \_ Funktion
+# <a name="ddx_coarse-function"></a>DDX-Funktion \_ "coarse"
 
-Berechnet eine partielle Ableitung mit niedriger Genauigkeit in Bezug auf die x-Koordinate des Bildschirm Raums.
+Berechnet eine partielle Ableitung mit niedriger Genauigkeit in Bezug auf die X-Koordinate des Bildschirmraums.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 float ddx_coarse(
-  in float value
+  in float value
 );
 ```
 
@@ -36,7 +36,7 @@ float ddx_coarse(
 
 <dl> <dt>
 
-*Wert* \[ in\]
+*value* \[ In\]
 </dt> <dd>
 
 Typ: **float**
@@ -49,11 +49,11 @@ Der Eingabewert.
 
 Typ: **float**
 
-Die partielle Ableitung mit niedriger Genauigkeit des *Werts*.
+Die partielle Ableitung des Werts mit niedriger *Genauigkeit.*
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Außerdem sind die folgenden überladenen Versionen verfügbar:
+Die folgenden überladenen Versionen sind ebenfalls verfügbar:
 
 ``` syntax
 float2 ddx_coarse(float2 value);
@@ -61,45 +61,45 @@ float3 ddx_coarse(float3 value);
 float4 ddx_coarse(float4 value);
 ```
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     |         |
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

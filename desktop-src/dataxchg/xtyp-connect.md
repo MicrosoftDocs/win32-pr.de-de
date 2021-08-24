@@ -1,9 +1,9 @@
 ---
-title: XTYP_CONNECT Transaktion (Ddeml. h)
-description: Ein Client verwendet die xtipp \_ Connect-Transaktion zum Einrichten einer Konversation.
+title: XTYP_CONNECT Transaktion (Ddeml.h)
+description: Ein Client verwendet die XTYP \_ CONNECT-Transaktion, um eine Konversation herzustellen.
 ms.assetid: 74f43b10-f7ac-4370-9caa-7b9ddf3413ed
 keywords:
-- XTYP_CONNECT Transaktionsdaten Austausch
+- XTYP_CONNECT der Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e2268994f1be000373691d6c25dbb7220d3e109e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c1ff7a7a79d8b61deef6b5f19b829e5c8dd8f4603c5f60c3b47d0a84b0603736
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793420"
 ---
-# <a name="xtyp_connect-transaction"></a>XYP \_ Connect-Transaktion
+# <a name="xtyp_connect-transaction"></a>XTYP \_ CONNECT-Transaktion
 
-Ein Client verwendet die **xtipp \_ Connect** -Transaktion zum Einrichten einer Konversation. Eine dynamischer Datenaustausch (DDE)-Server Rückruffunktion ( [*ddecallback*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)) empfängt diese Transaktion, wenn ein Client einen Dienstnamen angibt, der vom Server unterstützt wird (und einen Themen Namen, der nicht **null** ist), wenn die [**ddeconnect**](/windows/desktop/api/Ddeml/nf-ddeml-ddeconnect) -Funktion aufgerufen wird.
+Ein Client verwendet die **XTYP \_ CONNECT-Transaktion,** um eine Konversation herzustellen. Eine dynamische Daten Exchange-Serverrückruffunktion [*(DDE), DdeCallback,*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)empfängt diese Transaktion, wenn ein Client einen Dienstnamen angibt, den der Server unterstützt (und einen Themennamen, der nicht **NULL** ist) in einem Aufruf der [**DdeConnect-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeconnect) angibt.
 
 
 ```C++
@@ -45,24 +45,24 @@ Der Transaktionstyp:
 
 </dd> <dt>
 
-*UF* 
+*uFmt* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-*has* 
+*hconv* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *hsz1* 
 </dt> <dd>
 
-Ein Handle für den Themen Namen.
+Ein Handle für den Themennamen.
 
 </dd> <dt>
 
@@ -76,33 +76,33 @@ Ein Handle für den Dienstnamen.
 *hdata* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *dwData1* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**konvcontext**](/windows/win32/api/ddeml/ns-ddeml-convcontext) -Struktur, die Kontextinformationen für die Konversation enthält. Wenn der Client keine Ddeml-Anwendung ist, ist dieser Parameter 0.
+Ein Zeiger auf eine [**CONVCONTEXT-Struktur,**](/windows/win32/api/ddeml/ns-ddeml-convcontext) die Kontextinformationen für die Konversation enthält. Wenn der Client keine DDEML-Anwendung ist, ist dieser Parameter 0.
 
 </dd> <dt>
 
 *dwData2* 
 </dt> <dd>
 
-Gibt an, ob es sich bei dem Client um dieselbe Anwendungs Instanz wie der Server handelt. Wenn der-Parameter 1 ist, ist der Client dieselbe Instanz. Wenn der-Parameter 0 ist, ist der Client eine andere-Instanz.
+Gibt an, ob der Client die gleiche Anwendungsinstanz wie der Server ist. Wenn der Parameter 1 ist, ist der Client dieselbe Instanz. Wenn der Parameter 0 ist, ist der Client eine andere Instanz.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Server Rückruffunktion sollte " **true** " zurückgeben, damit der Client eine Konversation für das angegebene Paar aus Dienst Name und Themenname einrichten kann. andernfalls sollte die Funktion " **false** " zurückgeben, um die Konversation abzulehnen. Wenn die Rückruffunktion " **true** " zurückgibt und eine Konversation erfolgreich eingerichtet wurde, übergibt das System das Konversations Handle an den Server, indem eine [**xtipp Connect-Transaktion zum \_ \_ bestätigen**](xtyp-connect-confirm.md) an die Rückruffunktion des Servers ausgegeben wird (es sei denn, der Server hat das Flag " **CBF \_ Skip \_ Connect \_ bestätigt** " in der [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) -Funktion angegeben
+Eine Serverrückruffunktion sollte **TRUE** zurückgeben, damit der Client eine Konversation mit dem angegebenen Dienstnamen- und Themennamenpaar herstellen kann, oder die Funktion sollte **FALSE** zurückgeben, um die Konversation zu verweigern. Wenn die Rückruffunktion **TRUE** zurückgibt und eine Konversation erfolgreich hergestellt wurde, übergibt das System das Konversationshand handle an den Server, indem es eine [**XTYP \_ CONNECT \_ CONFIRM-Transaktion**](xtyp-connect-confirm.md) an die Rückruffunktion des Servers ausgibt (es sei denn, der Server hat das **CBF SKIP CONNECT \_ \_ \_ CONFIRMS-Flag** in der [**DdeInitialize-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) angegeben).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Transaktion wird gefiltert, wenn von der Serveranwendung das Flag " **CBF \_ Fail \_ Connections** " in der [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) -Funktion angegeben wurde.
+Diese Transaktion wird gefiltert, wenn die Serveranwendung das **CBF \_ FAIL \_ CONNECTIONS-Flag** in der [**DdeInitialize-Funktion angegeben**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) hat.
 
-Ein Server kann diesen Transaktionstyp nicht blockieren. der Rückgabecode des **CBR- \_ Blocks** wird ignoriert.
+Ein Server kann diesen Transaktionstyp nicht blockieren. Der **CBR \_ BLOCK-Rückgabecode** wird ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -112,30 +112,30 @@ Ein Server kann diesen Transaktionstyp nicht blockieren. der Rückgabecode des *
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>Ddeml. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ddeml.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Konvcontext**](/windows/win32/api/ddeml/ns-ddeml-convcontext)
+[**CONVCONTEXT**](/windows/win32/api/ddeml/ns-ddeml-convcontext)
 </dt> <dt>
 
-[**DDE Connect**](/windows/desktop/api/Ddeml/nf-ddeml-ddeconnect)
+[**DdeConnect**](/windows/desktop/api/Ddeml/nf-ddeml-ddeconnect)
 </dt> <dt>
 
-[**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea)
+[**DdeInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[dynamischer Datenaustausch-Verwaltungs Bibliothek](dynamic-data-exchange-management-library.md)
+[dynamische Daten Exchange Management Library](dynamic-data-exchange-management-library.md)
 </dt> </dl>
 
  

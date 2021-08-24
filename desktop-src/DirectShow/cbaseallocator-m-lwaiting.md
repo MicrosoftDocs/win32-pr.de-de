@@ -1,7 +1,7 @@
 ---
 description: Anzahl der Threads, die auf Stichproben warten.
 ms.assetid: 0b383fbf-f3d4-4dcf-b33c-74b9595a3e11
-title: 'Cbasezucator:: m_lWaiting Member (amfilter. h)'
+title: CBaseAllocator::m_lWaiting Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: eadf69088e1bcfa39e9f68b6ba570c1fc2d5b64c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 31261120e32bfcb06b4ea07c4a5044ddfd70ded38eebdbc70964f21302d9d5bd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832740"
 ---
-# <a name="cbaseallocatorm_lwaiting-member"></a>Cbasezucator:: m \_ lwaiting-Member
+# <a name="cbaseallocatorm_lwaiting-member"></a>CBaseAllocator::m \_ lWaiting-Member
 
 Anzahl der Threads, die auf Stichproben warten.
 
@@ -42,8 +42,8 @@ long m_lWaiting;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ long m_lWaiting;
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

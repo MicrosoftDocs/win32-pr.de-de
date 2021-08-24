@@ -1,7 +1,7 @@
 ---
-description: Die SetProperties-Methode legt die Eigenschaften des Zielobjekts für den angegebenen Zeitraum auf den entsprechenden Zustand fest.
+description: Die SetProps-Methode legt die Eigenschaften des Zielobjekts für die angegebene Zeit auf den entsprechenden Zustand fest.
 ms.assetid: 65e701c9-d3a1-4396-9cba-a7830757701f
-title: 'Ipropertysetter:: setrequiproperemethode (qedit. h)'
+title: IPropertySetter::SetProps-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 6a36b1735ea5b8261c37bee66ac90b9a186a55f0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b3b5a1832897b52d21c57e26595b7d66c4fc9a53f2bcbee0090c53d00f8fe832
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361325"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767210"
 ---
-# <a name="ipropertysettersetprops-method"></a>Ipropertysetter:: setrequiproper-Methode
+# <a name="ipropertysettersetprops-method"></a>IPropertySetter::SetProps-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `SetProps` Methode legt die Eigenschaften des Zielobjekts für den angegebenen Zeitraum auf den entsprechenden Zustand fest.
+Die `SetProps` -Methode legt die Eigenschaften des Zielobjekts für die angegebene Zeit auf den entsprechenden Zustand fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,37 +46,37 @@ HRESULT SetProps(
 
 <dl> <dt>
 
-*pTARGET* \[ in\]
+*pTarget* \[ In\]
 </dt> <dd>
 
-Zeiger auf das Zielobjekt, für das die Eigenschaften festgelegt werden sollen.
+Zeiger auf das Zielobjekt, für das die Eigenschaften festgelegt werden.
 
 </dd> <dt>
 
-*rtnow* \[ in\]
+*rtNow* \[ In\]
 </dt> <dd>
 
-Der Zeitpunkt, zu dem die Eigenschaften festgelegt werden sollen, in 100-Nanosecond-Einheiten oder – 1, um statische Eigenschaften festzulegen (solche, die sich im Laufe der Zeit nicht unterscheiden).
+Die Zeit, zu der die Eigenschaften in Einheiten von 100 Nanosekunden oder –1 festgelegt werden, um statische Eigenschaften (die im Laufe der Zeit nicht variieren) zu setzen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird von des aufgerufen, um die Eigenschaften eines Übergangs oder Effekts festzulegen. Eine Anwendung ruft normalerweise diese Methode nicht auf.
+Diese Methode wird von DES aufgerufen, um die Eigenschaften für einen Übergang oder Effekt festlegen. Eine Anwendung wird diese Methode normalerweise nicht aufrufen.
 
-Das von *pTARGET* angegebene Objekt muss die **IDispatch** -Schnittstelle implementieren.
+Das von *pTarget angegebene Objekt* muss die **IDispatch-Schnittstelle** implementieren.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK-Update für Windows Vista und [.NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -86,8 +86,8 @@ Das von *pTARGET* angegebene Objekt muss die **IDispatch** -Schnittstelle implem
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -95,10 +95,10 @@ Das von *pTARGET* angegebene Objekt muss die **IDispatch** -Schnittstelle implem
 
 <dl> <dt>
 
-[**Ipropertysetter-Schnittstelle**](ipropertysetter.md)
+[**IPropertySetter-Schnittstelle**](ipropertysetter.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

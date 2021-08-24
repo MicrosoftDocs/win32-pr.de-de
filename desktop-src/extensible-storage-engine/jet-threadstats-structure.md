@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_THREADSTATS Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_THREADSTATS Struktur'
 title: JET_THREADSTATS Struktur
 TOCTitle: JET_THREADSTATS Structure
 ms:assetid: 37e86e14-7719-4991-aae8-bcff1baa80df
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2b84de9a4f64db5dda261b8ee177787f62fd01ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9dcf88afc4b0f01a1691f9fb287491e9adfe71521e394a0e6b278c556fb5741f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832860"
 ---
 # <a name="jet_threadstats-structure"></a>JET_THREADSTATS Struktur
 
@@ -29,9 +29,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_threadstats-structure"></a>JET_THREADSTATS Struktur
 
-Die **JET_THREADSTATS** Struktur enthält kumulative Statistiken für die Arbeit, die von der Datenbank-Engine auf dem aktuellen Thread ausgeführt wird. Diese Informationen werden über [jetgetthreadstats](./jetgetthreadstats-function.md)zurückgegeben.
+Die **JET_THREADSTATS-Struktur** enthält kumulative Statistiken zur Arbeit, die von der Datenbank-Engine im aktuellen Thread ausgeführt wird. Diese Informationen werden über [JetGetThreadStats zurückgegeben.](./jetgetthreadstats-function.md)
 
-**Windows Vista:**  Die **JET_THREADSTATS** Struktur wird in Windows Vista eingeführt.
+**Windows Vista:**  Die **JET_THREADSTATS-Struktur** wird in Windows Vista eingeführt.
 
 ```cpp
     typedef struct {
@@ -50,37 +50,37 @@ Die **JET_THREADSTATS** Struktur enthält kumulative Statistiken für die Arbeit
 
 **cbStruct**
 
-Die Größe der zurückgegebenen **JET_THREADSTATS** Struktur in Bytes.
+Die Größe der zurückgegebenen **JET_THREADSTATS-Struktur** in Bytes.
 
-**Hinweis**  Die **JET_THREADSTATS** Struktur wird in Zukunft erweitert, um mehr Statistiken zu enthalten. Neue Statistiken werden am Ende der Struktur hinzugefügt und können mit einer erweiterten Ausgabepuffergröße abgerufen werden. Das vorhanden sein zusätzlicher Statistiken kann durch einen größeren **cbStruct** -Wert abgeleitet werden.
+**Hinweis:**  Die **JET_THREADSTATS-Struktur** wird in Zukunft erweitert, um weitere Statistiken zu enthalten. Neue Statistiken werden am Ende der Struktur hinzugefügt und können mit einer erhöhten Ausgabepuffergröße abgerufen werden. Das Vorhandensein zusätzlicher Statistiken kann durch einen größeren **cbStruct-Wert abgeleitet** werden.
 
-**cpagereferenziert**
+**cPageReferenced**
 
-Die Gesamtanzahl der Datenbankseiten, die von der Datenbank-Engine im aktuellen Thread besucht wurden.
+Die Gesamtanzahl der Datenbankseiten, die von der Datenbank-Engine im aktuellen Thread besucht werden.
 
-**cpageread**
+**cPageRead**
 
-Die Gesamtanzahl der Datenbankseiten, die von der Datenbank-Engine auf dem aktuellen Thread von der Festplatte abgerufen wurden.
+Die Gesamtanzahl der Datenbankseiten, die von der Datenbank-Engine im aktuellen Thread vom Datenträger abgerufen wurden.
 
-**cpagepreread**
+**cPagePreread**
 
-Die Gesamtanzahl der Datenbankseiten, die von der Datenbank-Engine im aktuellen Thread vorab von der Festplatte abgerufen wurden.
+Die Gesamtanzahl der Datenbankseiten, die von der Datenbank-Engine im aktuellen Thread vorab vom Datenträger abgerufen wurden.
 
-**cpagedirtied**
+**cPageDirtied**
 
-Die Gesamtanzahl der Datenbankseiten ohne Änderungen, die von der Datenbank-Engine im aktuellen Thread geändert wurden.
+Die Gesamtanzahl der Datenbankseiten ohne ungeschriebene Änderungen, die von der Datenbank-Engine im aktuellen Thread geändert wurden.
 
 **cPageRedirtied**
 
-Die Gesamtanzahl der Datenbankseiten, bei denen Änderungen vorgenommen wurden, die von der Datenbank-Engine im aktuellen Thread geändert wurden.
+Die Gesamtanzahl der Datenbankseiten mit nicht geschriebenen Änderungen, die von der Datenbank-Engine im aktuellen Thread geändert wurden.
 
-**clogrecord**
+**cLogRecord**
 
-Die Gesamtanzahl der Transaktionsprotokoll-Datensätze, die von der Datenbank-Engine im aktuellen Thread generiert wurden.
+Die Gesamtanzahl der Transaktionsprotokolldatensätze, die von der Datenbank-Engine im aktuellen Thread generiert wurden.
 
-**cblogdatensatz**
+**cbLogRecord**
 
-Die Gesamtgröße der Transaktionsprotokoll Datensätze in Bytes, die von der Datenbank-Engine im aktuellen Thread generiert wurden.
+Die Gesamtgröße von Transaktionsprotokolldatensätzen in Bytes, die von der Datenbank-Engine im aktuellen Thread generiert wurden.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -100,7 +100,7 @@ Die Gesamtgröße der Transaktionsprotokoll Datensätze in Bytes, die von der Da
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>
@@ -108,4 +108,4 @@ Die Gesamtgröße der Transaktionsprotokoll Datensätze in Bytes, die von der Da
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetgetthreadstats](./jetgetthreadstats-function.md)
+[JetGetThreadStats](./jetgetthreadstats-function.md)

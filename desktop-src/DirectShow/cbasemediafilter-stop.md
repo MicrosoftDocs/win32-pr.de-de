@@ -1,7 +1,7 @@
 ---
-description: 'Die Methode "beenden" beendet das-Objekt. Diese Methode implementiert die imediafilter:: stopmethode.'
+description: Die Stop-Methode beendet das -Objekt. Diese Methode implementiert die IMediaFilter::Stop-Methode.
 ms.assetid: 9282d90a-932c-4ba0-84f1-1de2c125bfbd
-title: Cbasemediafilter. stoppt-Methode (amfilter. h)
+title: CBaseMediaFilter.Stop-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 22bb45234c8be832f8ea30ed70b50c8f4919b7e9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: effe2df53508cd9c1f6523356eb7296458208c3ee0e61c1dd12c94bd87b6ad31
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359244"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793230"
 ---
-# <a name="cbasemediafilterstop-method"></a>Cbasemediafilter. stoppt-Methode
+# <a name="cbasemediafilterstop-method"></a>CBaseMediaFilter.Stop-Methode
 
-Die- `Stop` Methode beendet das-Objekt. Diese Methode implementiert die [**imediafilter:: stopmethode**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-stop) .
+Die `Stop` -Methode beendet das -Objekt. Diese Methode implementiert die [**IMediaFilter::Stop-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-stop)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Basisklasse legt diese Methode die " [**cbasemediafilter:: m \_ State**](cbasemediafilter-m-state.md) Member"-Variable auf "beendet" fest, bewirkt \_ aber nichts anderes.
+In der Basisklasse legt diese Methode die [**CBaseMediaFilter::m \_ State-Membervariable**](cbasemediafilter-m-state.md) auf State \_ Stopped fest, führt aber nichts anderes aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ In der Basisklasse legt diese Methode die " [**cbasemediafilter:: m \_ State**](
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ In der Basisklasse legt diese Methode die " [**cbasemediafilter:: m \_ State**](
 
 <dl> <dt>
 
-[**Cbasemediafilter-Klasse**](cbasemediafilter.md)
+[**CBaseMediaFilter-Klasse**](cbasemediafilter.md)
 </dt> </dl>
 
  

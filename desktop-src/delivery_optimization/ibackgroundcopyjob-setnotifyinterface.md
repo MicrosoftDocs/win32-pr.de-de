@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopyjob setnotifyinterface-Methode (deliveryoptimization. h)
-description: Gibt die Implementierung der ibackgroundcopycallback-Schnittstelle an. Verwenden Sie die ibackgroundcopycallback-Schnittstelle zum Empfangen von Benachrichtigungen über auftragsbezogene Ereignisse.
+title: IBackgroundCopyJob SetNotifyInterface-Methode (Deliveryoptimization.h)
+description: Identifiziert Ihre Implementierung der IBackgroundCopyCallback-Schnittstelle für do. Verwenden Sie die IBackgroundCopyCallback-Schnittstelle, um Benachrichtigungen über auftragsbezogene Ereignisse zu erhalten.
 ms.assetid: 792211FC-440E-4D2C-A6C7-CE9EFB86571C
 keywords:
-- Setnotifyinterface-Methode
-- Setnotifyinterface-Methode, ibackgroundcopyjob-Schnittstelle
-- Ibackgroundcopyjob-Schnittstelle, setnotifyinterface-Methode
+- SetNotifyInterface-Methode
+- SetNotifyInterface-Methode, IBackgroundCopyJob-Schnittstelle
+- IBackgroundCopyJob-Schnittstelle, SetNotifyInterface-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f3b6e8205eb60cbd2ca645cd484e41f8f242619d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bd54255d87ee3f15f87d692e06b7a503e773634ab4ec30c3f388388233aab2b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793409"
 ---
-# <a name="ibackgroundcopyjobsetnotifyinterface-method"></a>Ibackgroundcopyjob:: setnotifyinterface-Methode
+# <a name="ibackgroundcopyjobsetnotifyinterface-method"></a>IBackgroundCopyJob::SetNotifyInterface-Methode
 
-Gibt die Implementierung der [**ibackgroundcopycallback**](ibackgroundcopycallback.md) -Schnittstelle an. Verwenden Sie die **ibackgroundcopycallback** -Schnittstelle zum Empfangen von Benachrichtigungen über auftragsbezogene Ereignisse.
+Identifiziert Ihre Implementierung der [**IBackgroundCopyCallback-Schnittstelle**](ibackgroundcopycallback.md) für do. Verwenden Sie die **IBackgroundCopyCallback-Schnittstelle,** um Benachrichtigungen über auftragsbezogene Ereignisse zu erhalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,34 +43,34 @@ HRESULT SetNotifyInterface(
 
 <dl> <dt>
 
-*pnotifyinterface* 
+*pNotifyInterface* 
 </dt> <dd>
 
-Ein [**ibackgroundcopycallback**](ibackgroundcopycallback.md) -Schnittstellen Zeiger. Legen Sie diesen Parameter auf **null** fest, um den aktuellen Rückruf Schnittstellen Zeiger zu entfernen.
+Ein [**IBackgroundCopyCallback-Schnittstellenzeiger.**](ibackgroundcopycallback.md) Um den aktuellen Rückrufschnittstellenzeiger zu entfernen, legen Sie diesen Parameter auf **NULL fest.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurück.
+Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 
 
 | Rückgabecode                                                                              | Beschreibung                                                     |
 |------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
-| <dl> <dt>S_OK * * * *</dt> </dl> | Der Benachrichtigungs Schnittstellen Zeiger wurde erfolgreich festgelegt.<br/> |
+| <dl> <dt>S_OK S_OK</dt> </dl> | Der Benachrichtigungsschnittstellenzeiger wurde erfolgreich festgelegt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode nur auf, wenn Sie die [**ibackgroundcopycallback**](ibackgroundcopycallback.md) -Schnittstelle implementieren. Verwenden Sie die **setnotifyinterface** -Methode in Verbindung mit der [**setnotifyflags**](ibackgroundcopyjob-setnotifyflags.md) -Methode, um den Typ der Benachrichtigung anzugeben, die Sie empfangen möchten.
+Rufen Sie diese Methode nur auf, wenn Sie die [**IBackgroundCopyCallback-Schnittstelle**](ibackgroundcopycallback.md) implementieren. Verwenden Sie **die SetNotifyInterface-Methode** in Verbindung mit der [**SetNotifyFlags-Methode,**](ibackgroundcopyjob-setnotifyflags.md) um den Typ der Benachrichtigung anzugeben, die Sie empfangen möchten.
 
-Die Benachrichtigungs Schnittstelle wird ungültig, wenn die Anwendung beendet wird. Behält die Benachrichtigungs Schnittstelle nicht bei. Folglich sollte der Initialisierungs Prozess ihrer Anwendung die **setnotifyinterface** -Methode für die vorhandenen Aufträge aufrufen, für die Sie eine Benachrichtigung erhalten möchten. Wenn Sie Zustands-und Statusinformationen erfassen müssen, die seit der letzten Ausführung der Anwendung aufgetreten sind, rufen Sie während der Anwendungs Initialisierung Informationen zum Status und zum Fortschritt ab.
+Die Benachrichtigungsschnittstelle wird ungültig, wenn Ihre Anwendung beendet wird. DIE Benachrichtigungsschnittstelle wird nicht beibehalten. Daher sollte der Initialisierungsprozess Ihrer Anwendung die **SetNotifyInterface-Methode** für die vorhandenen Aufträge aufrufen, für die Sie eine Benachrichtigung erhalten möchten. Wenn Sie Zustands- und Fortschrittsinformationen erfassen müssen, die seit der letzten Ausführung der Anwendung aufgetreten sind, sollten Sie während der Anwendungsin initialisierung Status- und Statusinformationen erhalten.
 
-Nur der Auftrags Besitzer/-Ersteller oder ein Administrator kann sich für Benachrichtigungen registrieren.
+Nur der Besitzer/Ersteller des Auftrags oder ein Administrator kann sich für Benachrichtigungen registrieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,13 +78,13 @@ Nur der Auftrags Besitzer/-Ersteller oder ein Administrator kann sich für Benac
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur Desktop-Apps der Version 1709) \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668d37-507E-4160-9316-26306d150b12 definiert.<br/>               |
+| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668D37-507E-4160-9316-26306D150B12 definiert.<br/>               |
 
 
 
@@ -95,13 +95,13 @@ Nur der Auftrags Besitzer/-Ersteller oder ein Administrator kann sich für Benac
 [**IBackgroundCopyJob**](ibackgroundcopyjob-.md)
 </dt> <dt>
 
-[**Ibackgroundcopycallback**](ibackgroundcopycallback.md)
+[**IBackgroundCopyCallback**](ibackgroundcopycallback.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: getnotifyinterface**](ibackgroundcopyjob-getnotifyinterface.md)
+[**IBackgroundCopyJob::GetNotifyInterface**](ibackgroundcopyjob-getnotifyinterface.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: setnotifyflags**](ibackgroundcopyjob-setnotifyflags.md)
+[**IBackgroundCopyJob::SetNotifyFlags**](ibackgroundcopyjob-setnotifyflags.md)
 </dt> </dl>
 
  

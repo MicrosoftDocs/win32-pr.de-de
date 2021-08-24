@@ -1,6 +1,6 @@
 ---
 title: Shadertyp
-description: Die Syntax zum Deklarieren einer shadervariablen in einem Effekt hat sich von Direct3D 9 auf Direct3D 10 geändert.
+description: Die Syntax zum Deklarieren einer Shadervariablen in einem Effekt wurde von Direct3D 9 in Direct3D 10 geändert.
 ms.assetid: d24ae9ad-1b3a-4a05-b28b-b6a0583c3da8
 keywords:
 - Shadertyp HLSL
@@ -13,26 +13,26 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0ca3332c441279d7f9221efe8cfa7638908ddc44
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c08c0d68a57180c8d2cf0b566caaaa383f34fc0b9f096e34484811a73a20d0fa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104976792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119854700"
 ---
 # <a name="shader-type"></a>Shadertyp
 
-Die Syntax zum Deklarieren einer shadervariablen in einem Effekt hat sich von Direct3D 9 auf Direct3D 10 geändert.
+Die Syntax zum Deklarieren einer Shadervariablen in einem Effekt wurde von Direct3D 9 in Direct3D 10 geändert.
 
 ## <a name="shader-type-for-direct3d-10"></a>Shadertyp für Direct3D 10
 
-Deklarieren Sie eine shadervariable innerhalb eines Effekts (in Direct3D 10) mithilfe der shadertypsyntax:
+Deklarieren Sie eine Shadervariable innerhalb eines Effektpasses (in Direct3D 10) mithilfe der Shadertypsyntax:
 
 
 
 |                                                                                                                                                                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Setpixelshader** Compile ( **shadertarget, shaderfunction** ); **Setgeometryshader** Compile ( **shadertarget, shaderfunction** ); **Setvertexshader** Compile ( **shadertarget, shaderfunction** ); |
+| **SetPixelShader** Compile( **ShaderTarget, ShaderFunction** ); **SetGeometryShader** Compile( **ShaderTarget, ShaderFunction** ); **SetVertexShader** Compile( **ShaderTarget, ShaderFunction** ); |
 
 
 
@@ -42,11 +42,11 @@ Deklarieren Sie eine shadervariable innerhalb eines Effekts (in Direct3D 10) mit
 
 
 
-| Element                                                                                                                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Element                                                                                                                             | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="SetXXXShader"></span><span id="setxxxshader"></span><span id="SETXXXSHADER"></span>**Setxxxshader**<br/>         | Der Direct3D-API-Befehl, der das Shader-Objekt erstellt. Kann wie folgt lauten: **setpixelshader** oder **setgeometryshader** oder **setvertexshader**.<br/>                                                                                                                                                                                                                                                                                                   |
-| <span id="ShaderTarget"></span><span id="shadertarget"></span><span id="SHADERTARGET"></span>**Shadertarget**<br/>         | Das Shader-Modell, mit dem kompiliert werden soll. Dies gilt für alle Ziele, einschließlich aller Direct3D 9-Ziele plus der [Shader Model 4](dx-graphics-hlsl-sm4.md) -Ziele: vs \_ 4 \_ 0, GS \_ 4 \_ 0 und PS \_ 4 \_ 0.<br/>                                                                                                                                                                                                                                          |
-| <span id="ShaderFunction"></span><span id="shaderfunction"></span><span id="SHADERFUNCTION"></span>**Shaderfunction**<br/> | Eine ASCII-Zeichenfolge, die den Namen der Shader-Einstiegspunkt Funktion enthält. Dies ist die Funktion, die mit der Ausführung beginnt, wenn der Shader aufgerufen wird. Der (...) stellt die Shader-Argumente dar. Dabei handelt es sich um dieselben Argumente, die an die Shader-Erstellungs-API übergeben werden: [**vssetshader**](/windows/desktop/api/d3d10/nf-d3d10-id3d10device-vssetshader) oder [**gssetshader**](/windows/desktop/api/d3d10/nf-d3d10-id3d10device-gssetshader) oder [**pssetshader**](/windows/desktop/api/d3d10/nf-d3d10-id3d10device-pssetshader).<br/> |
+| <span id="SetXXXShader"></span><span id="setxxxshader"></span><span id="SETXXXSHADER"></span>**SetXXXShader**<br/>         | Der Direct3D-API-Aufruf, der das Shaderobjekt erstellt. Kann entweder **SetPixelShader oder** **SetGeometryShader** oder **SetVertexShader sein.**<br/>                                                                                                                                                                                                                                                                                                   |
+| <span id="ShaderTarget"></span><span id="shadertarget"></span><span id="SHADERTARGET"></span>**ShaderTarget**<br/>         | Das Shadermodell, mit dem kompiliert werden soll. Dies gilt für alle Ziele, einschließlich aller Direct3D 9-Ziele sowie der Ziele des [Shadermodells 4:](dx-graphics-hlsl-sm4.md) vs \_ 4 \_ 0, gs \_ 4 \_ 0 und ps \_ 4 \_ 0.<br/>                                                                                                                                                                                                                                          |
+| <span id="ShaderFunction"></span><span id="shaderfunction"></span><span id="SHADERFUNCTION"></span>**ShaderFunction**<br/> | Eine ASCII-Zeichenfolge, die den Namen der Shadereinstiegspunktfunktion enthält. Dies ist die Funktion, die mit der Ausführung beginnt, wenn der Shader aufgerufen wird. (...) stellt die Shaderargumente dar. Dies sind die gleichen Argumente, die an die Shadererstellungs-API übergeben werden: [**VSSetShader**](/windows/desktop/api/d3d10/nf-d3d10-id3d10device-vssetshader) oder [**GSSetShader**](/windows/desktop/api/d3d10/nf-d3d10-id3d10device-gssetshader) oder [**PSSetShader**](/windows/desktop/api/d3d10/nf-d3d10-id3d10device-pssetshader).<br/> |
 
 
 
@@ -54,7 +54,7 @@ Deklarieren Sie eine shadervariable innerhalb eines Effekts (in Direct3D 10) mit
 
 ### <a name="example"></a>Beispiel
 
-Es folgt ein Beispiel, das ein Vertex-Shader-und Pixel-Shader-Objekt erstellt, das für ein bestimmtes Shader-Modell kompiliert wird. Im Beispiel Direct3D 10 gibt es keinen Geometry-Shader, sodass der Zeiger auf **null** festgelegt ist.
+Hier ist ein Beispiel, das einen Vertex-Shader und ein Pixel-Shaderobjekt erstellt, die für ein bestimmtes Shadermodell kompiliert wurden. Im Direct3D 10-Beispiel gibt es keinen Geometrie-Shader, sodass der Zeiger auf **NULL festgelegt ist.**
 
 
 ```
@@ -74,13 +74,13 @@ technique10 Render
 
 ## <a name="shader-type-for-direct3d-9"></a>Shadertyp für Direct3D 9
 
-Deklarieren Sie eine shadervariable innerhalb eines Effekts (für Direct3D 9) mithilfe der shadertypsyntax:
+Deklarieren Sie eine Shadervariable innerhalb eines Effektpasses (für Direct3D 9) mithilfe der Shadertypsyntax:
 
 
 
 |                                                                                                                             |
 |-----------------------------------------------------------------------------------------------------------------------------|
-| **Pixelshader** = **shaderziel-shaderfunktion kompilieren (...); Vertexshader** = **shaderziel-shaderfunktion kompilieren (...);** |
+| **PixelShader** = **ShaderTarget ShaderFunction(...); kompilieren VertexShader** = **ShaderTarget ShaderFunction(...); kompilieren** |
 
 
 
@@ -90,11 +90,11 @@ Deklarieren Sie eine shadervariable innerhalb eines Effekts (für Direct3D 9) mi
 
 
 
-| Element                                                                                                                                                 | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Element                                                                                                                                                 | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                       |
 |------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="XXXShader"></span><span id="xxxshader"></span><span id="XXXSHADER"></span>**Xxxshader**<br/>                                         | Eine Shader-Variable, die den kompilierten Shader darstellt. Kann entweder " **Pixelshader** " oder " **Vertexshader**" lauten.<br/>                                                                                                                                                                                                                                                                                           |
-| <span id="ShaderTarget"></span><span id="shadertarget"></span><span id="SHADERTARGET"></span>**Shadertarget**<br/>                             | Das [Shader-Modell](dx-graphics-hlsl-models.md) , mit dem kompiliert werden soll. hängt vom Typ der shadervariablen ab.<br/>                                                                                                                                                                                                                                                                                            |
-| <span id="ShaderFunction_..._"></span><span id="shaderfunction_..._"></span><span id="SHADERFUNCTION_..._"></span>**Shaderfunction (...)**<br/> | Eine ASCII-Zeichenfolge, die den Namen der Shader-Einstiegspunkt Funktion enthält. Dies ist die Funktion, die mit der Ausführung beginnt, wenn der Shader aufgerufen wird. Der (...) stellt die Shader-Argumente dar. Dabei handelt es sich um dieselben Argumente, die an die Shader-Erstellungs-API ( [**setvertexshader**](/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setvertexshader) oder [**setpixelshader**](/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setpixelshader)) übermittelt werden.<br/> |
+| <span id="XXXShader"></span><span id="xxxshader"></span><span id="XXXSHADER"></span>**XXXShader**<br/>                                         | Eine Shadervariable, die den kompilierten Shader darstellt. Kann entweder **PixelShader oder** **VertexShader sein.**<br/>                                                                                                                                                                                                                                                                                           |
+| <span id="ShaderTarget"></span><span id="shadertarget"></span><span id="SHADERTARGET"></span>**ShaderTarget**<br/>                             | Das [Shadermodell, mit](dx-graphics-hlsl-models.md) dem kompiliert werden soll. hängt vom Typ der Shadervariablen ab.<br/>                                                                                                                                                                                                                                                                                            |
+| <span id="ShaderFunction_..._"></span><span id="shaderfunction_..._"></span><span id="SHADERFUNCTION_..._"></span>**ShaderFunction(...)**<br/> | Eine ASCII-Zeichenfolge, die den Namen der Shadereinstiegspunktfunktion enthält. Dies ist die Funktion, die mit der Ausführung beginnt, wenn der Shader aufgerufen wird. (...) stellt die Shaderargumente dar. Dies sind die gleichen Argumente, die an die Shadererstellungs-API übergeben werden: [**SetVertexShader**](/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setvertexshader) oder [**SetPixelShader**](/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setpixelshader).<br/> |
 
 
 
@@ -102,7 +102,7 @@ Deklarieren Sie eine shadervariable innerhalb eines Effekts (für Direct3D 9) mi
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden finden Sie ein Beispiel für ein Vertex-Shader-und Pixel-Shader-Objekt, das für ein bestimmtes Shader-Modell kompiliert wurde.
+Hier ist ein Beispiel für einen Vertex-Shader und ein Pixel-Shaderobjekt, die für ein bestimmtes Shadermodell kompiliert wurden.
 
 
 ```

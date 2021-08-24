@@ -1,5 +1,5 @@
 ---
-description: 'TakeOwnerShip-Methode der Win32_PageFile-Klasse: TakeOwnerShip&\# 8194; Die WMI-Klassenmethode erhält den Besitz der logischen Datei, die im Objektpfad angegeben ist.'
+description: 'TakeOwnerShip-Methode der Win32_PageFile-Klasse: TakeOwnerShip&\# 8194; Die WMI-Klassenmethode ruft den Besitz der logischen Datei ab, die im Objektpfad angegeben ist.'
 ms.assetid: c4f42d54-562c-4163-a5ec-e94f76932631
 ms.tgt_platform: multiple
 title: TakeOwnerShip-Methode der Win32_PageFile-Klasse
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 3aa0b2ec9f3805f1877f86bdf86d72b921d53ac9
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3e76a30e42ca8c8d1a9a757a6b2d9d399187b7fdf2d25c607f19c572721a7d83
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108086018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751670"
 ---
 # <a name="takeownership-method-of-the-win32_pagefile-class"></a>TakeOwnerShip-Methode der Win32 \_ PageFile-Klasse
 
-Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **TakeOwnerShip** erhält den Besitz der logischen Datei, die im Objektpfad angegeben ist. Wenn die logische Datei tatsächlich ein Verzeichnis ist, verhält **sich TakeOwnerShip** rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
+Die **TakeOwnerShip** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) ruft den Besitz der logischen Datei ab, die im Objektpfad angegeben ist. Wenn die logische Datei tatsächlich ein Verzeichnis ist, verhält sich **TakeOwnerShip** rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um auf einen Fehler hindeuten zu können.
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -112,7 +112,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist ein Freigabeverstoß vor worden.
+Es ist ein Freigabeverstoß aufgetreten.
 
 </dd> <dt>
 
@@ -141,7 +141,7 @@ Ein angegebener Parameter ist ungültig.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |

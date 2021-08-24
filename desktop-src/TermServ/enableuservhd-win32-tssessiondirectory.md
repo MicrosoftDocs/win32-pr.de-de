@@ -1,12 +1,12 @@
 ---
-title: Enableuservhd-Methode der Win32_TSSessionDirectory-Klasse
+title: EnableUserVhd-Methode der Win32_TSSessionDirectory Klasse
 description: Aktiviert eine Benutzerprofil-VHD auf einem RDSH-Server.
 ms.assetid: bb39fa19-38eb-4caf-ae81-2bccd901ee2f
 ms.tgt_platform: multiple
 keywords:
-- Enableuservhd-Methode Remotedesktopdienste
-- Enableuservhd-Methode Remotedesktopdienste, Win32_TSSessionDirectory-Klasse
-- Win32_TSSessionDirectory-Klasse Remotedesktopdienste, enableuservhd-Methode
+- EnableUserVhd-Remotedesktopdienste
+- EnableUserVhd-Methode Remotedesktopdienste , Win32_TSSessionDirectory-Klasse
+- Win32_TSSessionDirectory klasse Remotedesktopdienste , EnableUserVhd-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 464e105d2f8f0c80126e6b9ca5e5a383b2d17628
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 19e042b51c7060e4d4c2a8302a87b2d27ee2cf89608a9831cb3497fd0566689a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346770"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871740"
 ---
-# <a name="enableuservhd-method-of-the-win32_tssessiondirectory-class"></a>Enableuservhd-Methode der Win32- \_ Klasse "tssessiondirectory"
+# <a name="enableuservhd-method-of-the-win32_tssessiondirectory-class"></a>EnableUserVhd-Methode der Win32 \_ TSSessionDirectory-Klasse
 
 Aktiviert eine Benutzerprofil-VHD auf einem RDSH-Server.
 
@@ -44,17 +44,17 @@ uint32 EnableUserVhd(
 
 <dl> <dt>
 
-*Uvhdshareurl* \[ in\]
+*UvhdShareUrl* \[ In\]
 </dt> <dd>
 
-Der Speicherort der Freigabe, in der alle Benutzerprofil-VHDs gespeichert sind.
+Der Speicherort der Freigabe, an dem alle Benutzerprofil-VHDs gespeichert werden.
 
 </dd> <dt>
 
-*Uvhdroamingpolicyxml* \[ in\]
+*UvhdRoamingPolicyXml* \[ In\]
 </dt> <dd>
 
-Die roamingrichtlinie für die Benutzerprofil-VHD.
+Die Roamingrichtlinie für die Benutzerprofil-VHD.
 
 </dd> </dl>
 
@@ -66,17 +66,17 @@ Die roamingrichtlinie für die Benutzerprofil-VHD.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ tssessiondirectory**](win32-tssessiondirectory.md)
+[**Win32 \_ TSSessionDirectory**](win32-tssessiondirectory.md)
 </dt> </dl>
 
  

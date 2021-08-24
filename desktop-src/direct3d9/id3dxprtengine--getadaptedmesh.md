@@ -1,7 +1,7 @@
 ---
-description: Gibt ein Mesh mit Änderungen zurück, die sich aus der Adaptive räumlichen Stichprobe ergeben Das zurückgegebene Mesh enthält nur Positionen, normale und Texturkoordinaten (sofern definiert).
+description: Gibt ein Gitternetz mit Änderungen zurück, die sich aus adaptiver räumlicher Stichprobenentnahme ergeben. Das zurückgegebene Gitternetz enthält nur Positionen, Normalstellen und Texturkoordinaten (sofern definiert).
 ms.assetid: 21447733-b27b-4906-8c0e-7089dec71b5b
-title: 'ID3DXPRTEngine:: getadaptedmesh-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::GetAdaptedMesh-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 3d012344a5dfbc1bc17780cb4ab9a53820fe34f2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e5e38937628bc36f49059bcb3e798a6d13e538c572c1c5fb6ef20865ed05385d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355696"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747670"
 ---
-# <a name="id3dxprtenginegetadaptedmesh-method"></a>ID3DXPRTEngine:: getadaptedmesh-Methode
+# <a name="id3dxprtenginegetadaptedmesh-method"></a>ID3DXPRTEngine::GetAdaptedMesh-Methode
 
-Gibt ein Mesh mit Änderungen zurück, die sich aus der Adaptive räumlichen Stichprobe ergeben Das zurückgegebene Mesh enthält nur Positionen, normale und Texturkoordinaten (sofern definiert).
+Gibt ein Gitternetz mit Änderungen zurück, die sich aus adaptiver räumlicher Stichprobenentnahme ergeben. Das zurückgegebene Gitternetz enthält nur Positionen, Normalstellen und Texturkoordinaten (sofern definiert).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT GetAdaptedMesh(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf ein [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Gerät, das zum Erstellen des Ausgabe Netzes verwendet wird.
+Zeiger auf ein [**IDirect3DDevice9-Gerät,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) das zum Erstellen des Ausgabegitters verwendet wird.
 
 </dd> <dt>
 
-*pfakeremap* \[ in, out\]
+*pFaceRemap* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf das ursprüngliche Gitter Gesicht, das geteilt wurde, um die aktuelle Seite zu generieren.
+Zeiger auf das ursprüngliche Gitternetz, das geteilt wurde, um das aktuelle Gesicht zu generieren.
 
 </dd> <dt>
 
-*pvertremap* \[ in, out\]
+*pVertRemap* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf ein Ziel Array, das die drei ursprünglichen Gitter Scheitel Punkte enthält, die die übergeordneten Elemente des aktuellen Scheitel Punkts sind.
+Zeiger auf ein Zielarray, das die drei ursprünglichen Gitternetz-Scheitelpunkte enthält, die die über-Elemente des aktuellen Scheitelpunkts sind.
 
 </dd> <dt>
 
-*pfvertgewichtungen* \[ in, out\]
+*pfVertWeights* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf ein Ziel Array, das die Mischungs Faktoren für die pvertremap-Vertices enthält.
+Zeiger auf ein Zielarray, das Blendingfaktoren für die Scheitelpunkte pVertRemap enthält.
 
 </dd> <dt>
 
-*ppmesh* \[ vorgenommen\]
+*ppMesh* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)\***
 
-Zeiger auf das Ausgabe [**ID3DXMesh**](id3dxmesh.md) Mesh-Objekt.
+Zeiger auf das [**Ausgabe-ID3DXMesh-Gittermodellobjekt.**](id3dxmesh.md)
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Zeiger auf das Ausgabe [**ID3DXMesh**](id3dxmesh.md) Mesh-Objekt.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben. D3DERR \_ invalidcall
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben. D3DERR \_ INVALIDCALL
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-pvertremap und pfvertgewichtungen können verwendet werden, um einen beliebigen pro-Vertex-Wert über das Mesh zu interpolieren.
+pVertRemap und pfVertWeights können verwendet werden, um jeden Scheitelpunktwert über das Gitternetz zu interpolieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,8 +105,8 @@ pvertremap und pfvertgewichtungen können verwendet werden, um einen beliebigen 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

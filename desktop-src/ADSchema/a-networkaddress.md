@@ -4,8 +4,8 @@ description: Die TCP/IP-Adresse für ein Netzwerksegment. Wird auch als Subnetza
 ms.assetid: caccb00f-8418-43b8-87c7-7ccb7e2ee51d
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Network-Address-Attribut
-- AD-Schema des Network Address-Attributs
+- Network-Address AD-Schema
+- networkAddress-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e869a176b2122ccb0a03c9e0920ca3dbd45f5664
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: aecb62701350c0a954a23dc403a314331920810b0b6778f90099c600ca738a60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704760"
 ---
 # <a name="network-address-attribute"></a>Network-Address-Attribut
 
@@ -30,12 +30,12 @@ Die TCP/IP-Adresse für ein Netzwerksegment. Wird auch als Subnetzadresse bezeic
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Network-Address                             |
-| LDAP-Display-Name | networkAddress                              |
+| Ldap-Anzeigename | networkAddress                              |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.2.459                      |
-| System-ID-GUID    | bf9679d9-0de6-11d0-a285-00aa003049e2        |
+| System-Id-Guid    | bf9679d9-0de6-11d0-a285-00aa003049e2        |
 | Syntax            | [**String(Teletex)**](s-string-teletex.md) |
 
 
@@ -43,7 +43,7 @@ Die TCP/IP-Adresse für ein Netzwerksegment. Wird auch als Subnetzadresse bezeic
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,11 +58,11 @@ Die TCP/IP-Adresse für ein Netzwerksegment. Wird auch als Subnetzadresse bezeic
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                |
 | MAPI-Id                | 0x8170                                                                                                                                                            |
-| System-Only            | False                                                                                                                                                             |
-| Ist-einwertig       | False                                                                                                                                                             |
-| Ist indiziert             | False                                                                                                                                                             |
-| Im globalen Katalog      | False                                                                                                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                      |
+| System-Only            | Falsch                                                                                                                                                             |
+| Is-Single-Valued       | Falsch                                                                                                                                                             |
+| Ist indiziert             | Falsch                                                                                                                                                             |
+| Im globalen Katalog      | Falsch                                                                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                      |
 | Range-Lower            | 0                                                                                                                                                                 |
 | Range-Upper            | 256                                                                                                                                                               |
 | Search-Flags           | 0x00000000                                                                                                                                                        |
@@ -71,7 +71,7 @@ Die TCP/IP-Adresse für ein Netzwerksegment. Wird auch als Subnetzadresse bezeic
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,11 +79,11 @@ Die TCP/IP-Adresse für ein Netzwerksegment. Wird auch als Subnetzadresse bezeic
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                |
 | MAPI-Id                | 0x8170                                                                                                                                                            |
-| System-Only            | False                                                                                                                                                             |
-| Ist-einwertig       | False                                                                                                                                                             |
-| Ist indiziert             | False                                                                                                                                                             |
-| Im globalen Katalog      | False                                                                                                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                      |
+| System-Only            | Falsch                                                                                                                                                             |
+| Is-Single-Valued       | Falsch                                                                                                                                                             |
+| Ist indiziert             | Falsch                                                                                                                                                             |
+| Im globalen Katalog      | Falsch                                                                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                      |
 | Range-Lower            | 0                                                                                                                                                                 |
 | Range-Upper            | 256                                                                                                                                                               |
 | Search-Flags           | 0x00000000                                                                                                                                                        |
@@ -100,11 +100,11 @@ Die TCP/IP-Adresse für ein Netzwerksegment. Wird auch als Subnetzadresse bezeic
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | 0x8170                                   |
-| System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Is-Single-Valued       | Falsch                                    |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | 0                                        |
 | Range-Upper            | 256                                      |
 | Search-Flags           | 0x00000000                               |
@@ -121,11 +121,11 @@ Die TCP/IP-Adresse für ein Netzwerksegment. Wird auch als Subnetzadresse bezeic
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                |
 | MAPI-Id                | 0x8170                                                                                                                                                            |
-| System-Only            | False                                                                                                                                                             |
-| Ist-einwertig       | False                                                                                                                                                             |
-| Ist indiziert             | False                                                                                                                                                             |
-| Im globalen Katalog      | False                                                                                                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                      |
+| System-Only            | Falsch                                                                                                                                                             |
+| Ist einwertig       | Falsch                                                                                                                                                             |
+| Ist indiziert             | Falsch                                                                                                                                                             |
+| Im globalen Katalog      | Falsch                                                                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                      |
 | Range-Lower            | 0                                                                                                                                                                 |
 | Range-Upper            | 256                                                                                                                                                               |
 | Search-Flags           | 0x00000000                                                                                                                                                        |
@@ -142,11 +142,11 @@ Die TCP/IP-Adresse für ein Netzwerksegment. Wird auch als Subnetzadresse bezeic
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                |
 | MAPI-Id                | 0x8170                                                                                                                                                            |
-| System-Only            | False                                                                                                                                                             |
-| Ist-einwertig       | False                                                                                                                                                             |
-| Ist indiziert             | False                                                                                                                                                             |
-| Im globalen Katalog      | False                                                                                                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                      |
+| System-Only            | Falsch                                                                                                                                                             |
+| Ist einwertig       | Falsch                                                                                                                                                             |
+| Ist indiziert             | Falsch                                                                                                                                                             |
+| Im globalen Katalog      | Falsch                                                                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                      |
 | Range-Lower            | 0                                                                                                                                                                 |
 | Range-Upper            | 256                                                                                                                                                               |
 | Search-Flags           | 0x00000000                                                                                                                                                        |
@@ -163,11 +163,11 @@ Die TCP/IP-Adresse für ein Netzwerksegment. Wird auch als Subnetzadresse bezeic
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                |
 | MAPI-Id                | 0x8170                                                                                                                                                            |
-| System-Only            | False                                                                                                                                                             |
-| Ist-einwertig       | False                                                                                                                                                             |
-| Ist indiziert             | False                                                                                                                                                             |
-| Im globalen Katalog      | False                                                                                                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                      |
+| System-Only            | Falsch                                                                                                                                                             |
+| Ist einwertig       | Falsch                                                                                                                                                             |
+| Ist indiziert             | Falsch                                                                                                                                                             |
+| Im globalen Katalog      | Falsch                                                                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                      |
 | Range-Lower            | 0                                                                                                                                                                 |
 | Range-Upper            | 256                                                                                                                                                               |
 | Search-Flags           | 0x00000000                                                                                                                                                        |
@@ -184,11 +184,11 @@ Die TCP/IP-Adresse für ein Netzwerksegment. Wird auch als Subnetzadresse bezeic
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                |
 | MAPI-Id                | 0x8170                                                                                                                                                            |
-| System-Only            | False                                                                                                                                                             |
-| Ist-einwertig       | False                                                                                                                                                             |
-| Ist indiziert             | False                                                                                                                                                             |
-| Im globalen Katalog      | False                                                                                                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                      |
+| System-Only            | Falsch                                                                                                                                                             |
+| Is-Single-Valued       | Falsch                                                                                                                                                             |
+| Ist indiziert             | Falsch                                                                                                                                                             |
+| Im globalen Katalog      | Falsch                                                                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                      |
 | Range-Lower            | 0                                                                                                                                                                 |
 | Range-Upper            | 256                                                                                                                                                               |
 | Search-Flags           | 0x00000000                                                                                                                                                        |
