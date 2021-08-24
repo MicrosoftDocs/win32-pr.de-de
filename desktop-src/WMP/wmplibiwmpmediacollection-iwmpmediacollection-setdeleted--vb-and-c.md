@@ -1,11 +1,11 @@
 ---
-title: "' Iwmpmediacollection ' (SetDeleted-Methode)"
-description: Die SetDeleted-Methode verschiebt das angegebene Medien Element in den Ordner "Gelöschte Elemente". | ' Iwmpmediacollection ' (SetDeleted-Methode)
+title: IWMPMediaCollection setDeleted-Methode
+description: Die setDeleted-Methode verschiebt das angegebene Medienelement in den Ordner für gelöschte Elemente. | IWMPMediaCollection setDeleted-Methode
 ms.assetid: 3fa7989e-8b98-44e1-93ca-8136aba358ea
 keywords:
-- SetDeleted-Methoden Fenster Media Player
-- SetDeleted-Methode, Windows Media Player, iwmpmediacollection-Schnittstelle
-- Iwmpmediacollection-Schnittstelle, Windows Media Player, SetDeleted-Methode
+- setDeleted-Methode Windows Media Player
+- setDeleted-Methode Windows Media Player , IWMPMediaCollection-Schnittstelle
+- IWMPMediaCollection-Schnittstelle Windows Media Player , setDeleted-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 57ccf8cf2d36ab7e4aaf76fdbe5c28582650fcda
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7516d6aab26659fa2bba57bd961671b4dca0f92d367d5d9bb1f048e8fd19eb2e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119505950"
 ---
-# <a name="iwmpmediacollectionsetdeleted-method"></a>Iwmpmediacollection:: SetDeleted-Methode
+# <a name="iwmpmediacollectionsetdeleted-method"></a>IWMPMediaCollection::setDeleted-Methode
 
-Die- `setDeleted` Methode verschiebt das angegebene Medien Element in den Ordner "Gelöschte Elemente".
+Die `setDeleted` -Methode verschiebt das angegebene Medienelement in den Ordner für gelöschte Elemente.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,17 +55,17 @@ Implements IWMPMediaCollection.setDeleted
 
 <dl> <dt>
 
-*pitem* \[ in\]
+*pItem* \[ In\]
 </dt> <dd>
 
-Eine **WMPLib. iwmpmedia** -Schnittstelle für das Element, das verschoben werden soll.
+Eine **WMPLib.IWMPMedia-Schnittstelle** für das zu verschiebende Element.
 
 </dd> <dt>
 
-*varfisdeleted* \[ in\]
+*varfIsDeleted* \[ In\]
 </dt> <dd>
 
-Ein **System. Boolean** -Wert, der angibt, ob das Element in den Ordner für gelöschte Elemente verschoben werden soll. Dieser Wert muss immer " **true**" sein.
+Ein **System.Boolean-Wert,** der angibt, ob das Element in den Ordner gelöschte Elemente verschoben werden soll. Dieser Wert muss immer **true** sein.
 
 </dd> </dl>
 
@@ -73,15 +73,15 @@ Ein **System. Boolean** -Wert, der angibt, ob das Element in den Ordner für gel
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode entfernt keine Dateien vom Computer des Benutzers, sondern verschiebt Sie lediglich in den Ordner "Gelöschte Elemente".
+Diese Methode entfernt keine Dateien vom Computer des Benutzers, sie verschiebt sie lediglich in den Ordner gelöschte Elemente.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird verwendet `setDeleted` , um ein bestimmtes Medien Element in den Ordner "Gelöschte Elemente" zu verschieben. Die **isDeleted** -Methode testet zunächst, ob das Element bereits gelöscht wurde. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird `setDeleted` verwendet, um ein bestimmtes Medienelement in den Ordner für gelöschte Elemente zu verschieben. Die **isDeleted-Methode** testet zunächst, ob das Element bereits gelöscht wurde. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -131,7 +131,7 @@ End If
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -141,10 +141,10 @@ End If
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> </dl>
 
  

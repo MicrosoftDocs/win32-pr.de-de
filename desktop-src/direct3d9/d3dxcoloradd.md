@@ -1,7 +1,7 @@
 ---
-description: Addiert zwei Farbwerte, um einen neuen Farbwert zu erstellen.
+description: Fügt zwei Farbwerte zusammen hinzu, um einen neuen Farbwert zu erstellen.
 ms.assetid: 7743392d-4676-4408-93e9-f92d4bf02411
-title: D3DXColorAdd-Funktion (D3dx9math. h)
+title: D3DXColorAdd-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f326c9bec4802a9a94accc76b825cd1c6ea28fd5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bb96d811f94975d8c7be3225349fd4412a0d1168167066001888084a4ef59136
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353742"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119631610"
 ---
 # <a name="d3dxcoloradd-function"></a>D3DXColorAdd-Funktion
 
-Addiert zwei Farbwerte, um einen neuen Farbwert zu erstellen.
+Fügt zwei Farbwerte zusammen hinzu, um einen neuen Farbwert zu erstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXCOLOR* D3DXColorAdd(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXCOLOR**](d3dxcolor.md)\***
 
-Zeiger auf eine [**D3DXCOLOR**](d3dxcolor.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf eine [**D3DXCOLOR-Struktur,**](d3dxcolor.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*pC1* \[ in\]
+*pC1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXCOLOR**](d3dxcolor.md) \***
+Typ: **const [**D3DXCOLOR**](d3dxcolor.md) \***
 
-Zeiger auf eine Quell- [**D3DXCOLOR**](d3dxcolor.md) -Struktur.
+Zeiger auf eine [**D3DXCOLOR-Quellstruktur.**](d3dxcolor.md)
 
 </dd> <dt>
 
-*pC2* \[ in\]
+*pC2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXCOLOR**](d3dxcolor.md) \***
+Typ: **const [**D3DXCOLOR**](d3dxcolor.md) \***
 
-Zeiger auf eine Quell- [**D3DXCOLOR**](d3dxcolor.md) -Struktur.
+Zeiger auf eine [**D3DXCOLOR-Quellstruktur.**](d3dxcolor.md)
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Zeiger auf eine Quell- [**D3DXCOLOR**](d3dxcolor.md) -Struktur.
 
 Typ: **[ **D3DXCOLOR**](d3dxcolor.md)\***
 
-Diese Funktion gibt einen Zeiger auf eine [**D3DXCOLOR**](d3dxcolor.md) -Struktur zurück, die die Summe von zwei Farbwerten ist.
+Diese Funktion gibt einen Zeiger auf eine [**D3DXCOLOR-Struktur**](d3dxcolor.md) zurück, die die Summe zweier Farbwerte ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der in "Pout" zurückgegeben wird. Auf diese Weise kann die **D3DXColorAdd** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der in pOut zurückgegeben wird. Auf diese Weise kann die **D3DXColorAdd-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,8 +85,8 @@ Der Rückgabewert für diese Funktion ist derselbe Wert, der in "Pout" zurückge
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

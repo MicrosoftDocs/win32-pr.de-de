@@ -1,9 +1,9 @@
 ---
-title: Media. imagesourcewidth
-description: Die imagesourcewidth-Eigenschaft ruft die Breite des aktuellen Medien Elements in Pixel ab.
+title: Media.imageSourceWidth
+description: Die imageSourceWidth-Eigenschaft ruft die Breite des aktuellen Medienelements in Pixel ab.
 ms.assetid: 6559bd51-cec2-4fc6-aab8-f2fdd1d59bae
 keywords:
-- Media. imagesourcewidth-Windows-Media Player
+- Media.imageSourceWidth Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,34 +14,34 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ff2a3fef7b74a3d033b058f0afd1f6eece007bd7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 710b6f0d91d7d734b12ad75f201fcd45037f67adf2c8ed3cb60f3ee5fcf6c222
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119508400"
 ---
-# <a name="mediaimagesourcewidth"></a>Media. imagesourcewidth
+# <a name="mediaimagesourcewidth"></a>Media.imageSourceWidth
 
-Die **imagesourcewidth** -Eigenschaft ruft die Breite des aktuellen Medien Elements in Pixel ab.
+Die **imageSourceWidth-Eigenschaft** ruft die Breite des aktuellen Medienelements in Pixel ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *currentMedia*. **imagesourcewidth**
+*Player*. *currentMedia*. **imageSourceWidth**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Medien Element nicht das aktuelle ist, gibt diese Eigenschaft 0 (null) zurück.
+Wenn das Medienelement nicht das aktuelle ist, gibt diese Eigenschaft 0 (null) zurück.
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel werden *Medien* verwendet. **imagesourcewidth** zum Anzeigen der Bildgröße des **aktuellen Medien Elements in Pixel. Die Informationen werden in einem HTML-TEXTAREA-Element namens videosize gedruckt. Das Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript Media *verwendet.* **imageSourceWidth** zum Anzeigen der Bildgröße des aktuellen **Medienelements in Pixel. Die Informationen werden in ein HTML-TEXTAREA-Element mit dem Namen VideoSize gedruckt. Das Player-Objekt** wurde mit der ID = "player" erstellt.
 
 
 ```JScript
@@ -76,7 +76,7 @@ if (NewState == 13){
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -88,13 +88,13 @@ if (NewState == 13){
 [**Medienobjekt**](media-object.md)
 </dt> <dt>
 
-[**Player. currentMedia**](player-currentmedia.md)
+[**Player.currentMedia**](player-currentmedia.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

@@ -1,55 +1,55 @@
 ---
-description: Msdv-Treiber
+description: MSDV-Treiber
 ms.assetid: 146ca753-fe41-49d3-8b1c-077e10a28192
-title: Msdv-Treiber
+title: MSDV-Treiber
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b7c1bda24980abe84a11613126476ccfe35380d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5377471f61944c60f57720df6bc64482681d64515f54c853d78cfa405842ff15
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392361"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119748620"
 ---
-# <a name="msdv-driver"></a>Msdv-Treiber
+# <a name="msdv-driver"></a>MSDV-Treiber
 
-Msdv ist der Microsoft Windows-Treibermodell (WDM)-Treiber für DV-Camcorders. Der Treiber wird als DirectShow-Filter angezeigt, wenn das Gerät angeschlossen ist. Es wird in zwei Filter Kategorien aufgezählt:
+MSDV ist der WDM-Treiber (Microsoft Windows Driver Model) für DV-Dvds. Der Treiber wird als DirectShow-Filter angezeigt, wenn das Gerät angeschlossen ist. Sie wird in zwei Filterkategorien aufgeführt:
 
--   CLSID \_ videoinputabvicecategory ("Video Erfassungs Quellen")
--   AM \_ kscategory-Rendering \_ ("WDM-Streaminggeräte")
+-   CLSID \_ VideoInputDeviceCategory ("Video Capture Sources")
+-   AM \_ KSCATEGORY \_ RENDER ("WDM Streaming Rendering Devices")
 
-Der Anzeige Name des Filters ist `Microsoft DV Camera and VCR` oder eine lokalisierte Entsprechung. Bei manchen Geräten enthält die **Description** -Eigenschaft eine Beschreibung des jeweiligen Modells, das anstelle des generischen anzeigen Amens verwendet werden kann. Weitere Informationen finden Sie unter [Auswählen eines Erfassungs Geräts](selecting-a-capture-device.md).
+Der Anzeigename des Filters ist `Microsoft DV Camera and VCR` oder eine lokalisierte Entsprechung. Auf einigen Geräten enthält die **Description-Eigenschaft** eine Beschreibung des spezifischen Modells, das anstelle des generischen Anzeigenamens verwendet werden kann. Weitere Informationen finden Sie unter [Auswählen eines Erfassungsgeräts.](selecting-a-capture-device.md)
 
-Msdv verfügt über zwei Ausgabe Pins. Eine PIN liefert DV-Frames, die verschachtelte Audiodaten und Videodaten enthalten. Die andere PIN liefert nur-Video-Frames ohne Audiodaten. Msdv kann nicht gleichzeitig von beiden Pins gestreamt werden, sodass jeweils nur eine Ausgabe-PIN verbunden werden kann. Weitere Informationen zum Erfassen von Videos von einem DV-Gerät finden [Sie unter Erfassen von DV in Dateien](capture-dv-to-file.md).
+MSDV verfügt über zwei Ausgabepins. Ein Pin stellt DV-Frames bereit, die überlappende Audio- und Videodaten enthalten. Die andere Stecknadel stellt nur Videoframes ohne Audio bereit. MSDV kann nicht gleichzeitig von beiden Pins streamen, sodass jeweils nur ein Ausgabepin verbunden werden kann. Weitere Informationen zum Erfassen von Videos von einem DV-Gerät finden Sie unter [Capture DV to File](capture-dv-to-file.md).
 
 ![Erfassen von DV-Daten vom Gerät](images/dv-filters4.png)
 
-Die meisten DV-Camcorder verfügen über eine VTR-Untereinheit (Video Tape Recorder), mit der Daten vom Band an den Computer übertragen werden können. Für die Anwendung funktioniert die Erfassung von Band genauso wie die Erfassung von Livevideos. Der einzige Unterschied besteht darin, dass die Anwendung den externen Band Transport Steuern muss – das Band starten und beenden, Zurückspulen usw. Zu diesem Zweck macht msdv die Schnittstellen [**IAMExtDevice**](/windows/desktop/api/Strmif/nn-strmif-iamextdevice), [**IAMExtTransport**](/windows/desktop/api/Strmif/nn-strmif-iamexttransport)und [**IAMTimecodeReader**](/windows/desktop/api/Strmif/nn-strmif-iamtimecodereader) verfügbar. Weitere Informationen zum Steuern eines VTR finden Sie unter [Steuern eines DV-Camcorder](controlling-a-dv-camcorder.md).
+Die meisten DV-Datenträger verfügen über eine VTR-Untereinheit (Video Tape Recorder), die Daten vom Band auf den Computer übertragen kann. Für die Anwendung funktioniert die Erfassung über Band genauso wie die Erfassung von Livevideos. Der einzige Unterschied besteht darin, dass die Anwendung den externen Bandtransport steuern muss – Starten und Beenden des Bandes, Zurückspulen usw. Zu diesem Zweck macht MSDV die Schnittstellen [**IAMExtDevice,**](/windows/desktop/api/Strmif/nn-strmif-iamextdevice) [**IAMExtTransport**](/windows/desktop/api/Strmif/nn-strmif-iamexttransport)und [**IAMTimecodeReader**](/windows/desktop/api/Strmif/nn-strmif-iamtimecodereader) verfügbar. Weitere Informationen zum Steuern eines VTR finden Sie unter [Steuern eines DV-Cameras.](controlling-a-dv-camcorder.md)
 
-Sie können auch DV vom Computer an den Camcorder übertragen. Das Video kann dann auf dem Bildschirm zum Integrieren des Camcorders angezeigt oder auf Band aufgezeichnet werden. Um diese Funktionalität zu unterstützen, verfügt msdv über eine Eingabe-PIN, die einen verschachtelten DV-Stream empfangen kann. Wenn die Eingabe-PIN verbunden ist, fungiert msdv als rendererfilter anstelle eines Erfassungs Filters. Msdv unterstützt das Suchen in diesem Modus nicht. Weitere Informationen zum Senden von DV an das Gerät finden Sie unter über [tragen von DV von der Datei auf das Band](transmit-dv-from-file-to-tape.md).
+Sie können dv auch vom Computer an den -Laptop übertragen. Das Video kann dann auf dem Onboardingbildschirm des Bands angezeigt oder auf Band aufgezeichnet werden. Zur Unterstützung dieser Funktionalität verfügt MSDV über einen Eingabepin, der einen überlappende DV-Datenstrom empfangen kann. Wenn der Eingabepin verbunden ist, fungiert MSDV als Rendererfilter anstelle eines Erfassungsfilters. MSDV unterstützt keine Suche in diesem Modus. Weitere Informationen zum Senden von DV an das Gerät finden Sie unter [Übertragen von DV von Datei zu Band.](transmit-dv-from-file-to-tape.md)
 
 ![Übertragen von DV-Daten an das Gerät](images/dv-filters5.png)
 
-Beachten Sie, dass die Eingabe-und Ausgabe Pins nicht gleichzeitig verbunden werden können, da das Gerät nicht gleichzeitig in beide Richtungen streamen kann.
+Beachten Sie, dass die Ein- und Ausgabepins nicht gleichzeitig verbunden werden können, da das Gerät nicht gleichzeitig in beide Richtungen streamen kann.
 
-In vielen Camcordern bewirkt das Wechseln zwischen dem VTR-Modus und dem Kameramodus, dass das Gerät ausgeschaltet wird. Daher kann DirectShow das Gerät verlieren, wenn der Benutzer den Modus wechselt. Informationen zu Geräte Entfernungs Ereignissen finden Sie unter [Benachrichtigung zum Entfernen](device-removal-notification.md)von Geräten.
+In vielen Modi führt der Wechsel zwischen VTR-Modus und Kameramodus dazu, dass das Gerät ausgeschaltet wird. Daher kann DirectShow das Gerät verlieren, wenn der Benutzer den Modus wechselt. Informationen zu Ereignissen zum Entfernen von Geräten finden Sie unter [Benachrichtigung zum Entfernen von Geräten.](device-removal-notification.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen dazu, welche DV-Formate vom msdv-Treiber unterstützt werden, finden Sie unter [**DV-Video Untertypen**](dv-video-subtypes.md).
+Informationen dazu, welche DV-Formate vom MSDV-Treiber unterstützt werden, finden Sie unter [**DV Video-Untertypen.**](dv-video-subtypes.md)
 
-Einige Tipps zum Entwickeln von Filter Diagrammen mit msdv:
+Einige Tipps zum Erstellen von Filterdiagrammen mit MSDV:
 
--   Sie können [**igraphbuilder:: Rendering**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-render) nicht verwenden, um eine Ausgabe-PIN auf msdv zu Rendering. (Der Filter Graph-Manager versucht, die Ausgabe-PIN mit der Eingabe-PIN von msdv zu verbinden, bei der ein Fehler auftritt.) Verwenden Sie stattdessen [**igraphbuilder:: Connect**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-connect) oder [**ICaptureGraphBuilder2:: RenderStream**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream).
--   Wenn ein Filter Diagramm msdv enthält, sollte msdv die Referenzuhr für das Diagramm bereitstellen. Ab DirectX 8,0 wählt der Filter Graph-Manager automatisch msdv als Referenzuhr aus. Bei früheren Versionen sollte die [**imediafilter:: setsyncsource**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-setsyncsource) -Methode für den Filter Graph-Manager aufgerufen werden. Weitere Informationen zu Uhren finden Sie unter [Zeit und Uhren in DirectShow](time-and-clocks-in-directshow.md).
--   Abhängig vom Gerät können einige Methoden in **IAMExtDevice**, **IAMExtTransport** und **IAMTimecodeReader** anstelle von **HRESULT** -Werten Windows-Fehlercodes zurückgeben. Folgende Fehlercodes sind möglich:
+-   Sie können [**IGraphBuilder::Render**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-render) nicht verwenden, um einen Ausgabepin auf MSDV zu rendern. (Der Filter-Graph-Manager versucht, den Ausgabepin mit dem Eingabepin von MSDV zu verbinden, wodurch ein Fehler auftritt.) Verwenden Sie stattdessen [**IGraphBuilder::Verbinden**](/windows/desktop/api/Strmif/nf-strmif-igraphbuilder-connect) oder [**ICaptureGraphBuilder2::RenderStream**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream).
+-   Wenn ein Filterdiagramm MSDV enthält, sollte MSDV die Referenzuhr für das Diagramm bereitstellen. Ab DirectX 8.0 wählt der Filter Graph Manager automatisch MSDV als Referenzuhr aus. Bei früheren Versionen sollten Sie die [**IMediaFilter::SetSyncSource-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-setsyncsource) im Filter Graph-Manager aufrufen. Weitere Informationen zu Uhren finden Sie unter [Zeit und Uhren in DirectShow.](time-and-clocks-in-directshow.md)
+-   Je nach Gerät können einige Methoden in **IAMExtDevice,** **IAMExtTransport** und **IAMTimeCodeReader** Windows Fehlercodes anstelle von **HRESULT-Werten** zurückgeben. Mögliche Fehlercodes sind:
 
     | Fehlercode              | BESCHREIBUNG                                                                                      |
     |-------------------------|--------------------------------------------------------------------------------------------------|
-    | Fehler \_ Timeout          | Timeout bei einem externen Geräte Befehl.                                                        |
-    | Fehler beim Zurücksetzen des Fehlers. \_ \_ \_  | Das Gerät hat den Befehl "externer Gerät" nicht akzeptiert.                                          |
-    | Fehler \_ nicht \_ unterstützt   | Der Befehl "externer Gerät" wird vom Gerät nicht unterstützt.                                        |
-    | Fehler \_ Anforderung \_ abgebrochen | Ein externer Geräte Befehl wurde abgebrochen. Möglicherweise wurde das Gerät entfernt, oder es ist ein buszurücksetzen aufgetreten. |
+    | \_FEHLERTIMEOUT          | Bei einem Befehl für ein externes Gerät ist ein Time out aufgetreten.                                                        |
+    | FEHLER \_ REQ \_ NOT \_ ACCEP  | Das Gerät hat diesen externen Gerätebefehl nicht akzeptiert.                                          |
+    | FEHLER \_ NICHT \_ UNTERSTÜTZT   | Das Gerät unterstützt diesen externen Gerätebefehl nicht.                                        |
+    | FEHLERANFORDERUNG \_ \_ ABGEBROCHEN | Ein externer Gerätebefehl wurde abgebrochen. Möglicherweise wurde das Gerät entfernt, oder es wurde ein Bus zurückgesetzt. |
 
     
 
@@ -57,15 +57,15 @@ Einige Tipps zum Entwickeln von Filter Diagrammen mit msdv:
 
 ### <a name="device-information"></a>Geräteinformationen
 
-In der Windows Millennium Edition und Windows XP unterstützt der gerätermoniker des DV-Filters zusätzlich zur **FriendlyName** -Eigenschaft eine **Description** -Eigenschaft. Diese Eigenschaft gibt eine Beschreibung des Geräts aus der INF-Datei zurück, die in der Regel den Markennamen des Geräts enthält. Diese Eigenschaft wird jedoch nicht für alle Gerätemodelle unterstützt.
+In Windows Edition und Windows XP unterstützt der Gerätemoniker des DV-Filters zusätzlich zur **FriendlyName-Eigenschaft** eine **Description-Eigenschaft.** Diese Eigenschaft gibt eine Beschreibung des Geräts aus der INF-Datei zurück, die in der Regel den Markennamen des Geräts enthält. Diese Eigenschaft wird jedoch nicht für alle Gerätemodelle unterstützt.
 
-Weitere Informationen zu gerätermonikern finden [Sie unter Verwenden des System Geräte Enumerators](using-the-system-device-enumerator.md).
+Weitere Informationen zu Gerätemonikern finden Sie unter [Verwenden des Systemgeräte-Enumerators.](using-the-system-device-enumerator.md)
 
 ### <a name="clock-times"></a>Uhrzeiten
 
-Der msdv-Treiber verwendet die 1394-busuhr, die in den 1394-Datenpaketen enthalten ist, um die Uhr abzuleiten. Diese Werte werden zum Zeitstempel der DV-Medien Beispiele verwendet. Da es sich bei dieser quelluhr nicht um die Systemuhr des Computers handelt, werden die Zeiten schließlich von der Computer Systemuhr abweichen. Wie bereits erwähnt, wählt der Filter Graph-Manager standardmäßig msdv als Diagramm-verweiszeit aus.
+Der MSDV-Treiber verwendet die 1394-Busuhr, die in den 1394-Datenpaketen enthalten ist, um die Uhr abzuleiten. Diese Werte werden verwendet, um die DV-Medienbeispiele mit einem Zeitstempel zu versehen. Da es sich bei dieser Quelluhr nicht um die Uhr des Computersystems handelt, werden die Zeiten letztendlich von der Uhr des Computersystems abweichen. Wie bereits erwähnt, wählt der Filter Graph Manager jedoch standardmäßig MSDV als Graphverweisuhr aus.
 
-Die [**IAMDroppedFrames**](/windows/desktop/api/Strmif/nn-strmif-iamdroppedframes) -Schnittstelle meldet das aktuelle Measure von gelöschten Frames des Treibers. Dieser Wert wird möglicherweise nicht perfekt mit der tatsächlichen Anzahl der abgelegten Frames zu einem bestimmten Zeitpunkt synchronisiert. Wenn Frames abgelegt werden, gibt dies an, dass das System nicht ausgeglichen ist (die Datenproduktion überschreitet den Datenverbrauch). Beispielsweise ist die Festplatte des Benutzers möglicherweise nicht schnell genug, um die DV-Erfassungs Raten zu unterstützen.
+Die [**IAMDroppedFrames-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iamdroppedframes) meldet das aktuelle Measure des Treibers für gelöschte Frames. Dieser Wert ist möglicherweise nicht perfekt mit der tatsächlichen Anzahl gelöschter Frames zu einem bestimmten Zeitpunkt synchronisiert. Wenn Frames gelöscht werden, gibt dies an, dass das System nicht ausgeglichen ist (die Datenproduktion überschreitet den Datenverbrauch). Beispielsweise ist die Festplatte des Benutzers möglicherweise nicht schnell genug, um DV-Erfassungsraten zu unterstützen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

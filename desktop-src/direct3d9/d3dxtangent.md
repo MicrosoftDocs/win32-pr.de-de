@@ -1,7 +1,7 @@
 ---
-description: Definiert Einstellungen, die für Gitter Tangens-Frame Berechnungen verwendet werden.
+description: Definiert Einstellungen, die für Gitter-Tangensframeberechnungen verwendet werden.
 ms.assetid: b525b4cc-9a2d-4569-bae8-7cc7f7832cbc
-title: D3DXTANGENT-Enumeration (D3dx9mesh. h)
+title: D3DXTANGENT-Enumeration (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: 43e3c5ced0eee3366b85070ce89d19154d048ab4
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5d6e57d2027a7366ec2b82ac7bd82aae4275d489c17f1922684e3ca6232be940
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749770"
 ---
 # <a name="d3dxtangent-enumeration"></a>D3DXTANGENT-Enumeration
 
-Definiert Einstellungen, die für Gitter Tangens-Frame Berechnungen verwendet werden.
+Definiert Einstellungen, die für Gitter-Tangensframeberechnungen verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,87 +50,87 @@ typedef enum D3DXTANGENT {
 
 <dl> <dt>
 
-<span id="D3DXTANGENT_WRAP_U"></span><span id="d3dxtangent_wrap_u"></span>**D3DXTANGENT \_ Wrap \_ U**
+<span id="D3DXTANGENT_WRAP_U"></span><span id="d3dxtangent_wrap_u"></span>**D3DXTANGENT \_ WRAP \_ U**
 </dt> <dd>
 
-Texturkoordinaten Werte in der u-Richtung liegen zwischen 0 und 1. In diesem Fall wird ein Texturkoordinaten Satz ausgewählt, der den Umkreis des Dreiecks minimiert. Weitere Informationen finden Sie unter [Textur Wrapping (Direct3D 9)](texture-wrapping.md).
+Texturkoordinatenwerte in u-Richtung liegen zwischen 0 und 1. In diesem Fall wird ein Texturkoordinatensatz ausgewählt, der den Umkreis des Dreiecks minimiert. Weitere [Informationen finden Sie unter Texturumbruch (Direct3D 9).](texture-wrapping.md)
 
 </dd> <dt>
 
-<span id="D3DXTANGENT_WRAP_V"></span><span id="d3dxtangent_wrap_v"></span>**D3DXTANGENT \_ Wrap \_ V**
+<span id="D3DXTANGENT_WRAP_V"></span><span id="d3dxtangent_wrap_v"></span>**D3DXTANGENT \_ WRAP \_ V**
 </dt> <dd>
 
-Texturkoordinaten Werte in der v-Richtung liegen zwischen 0 und 1. In diesem Fall wird ein Texturkoordinaten Satz ausgewählt, der den Umkreis des Dreiecks minimiert. Weitere Informationen finden Sie unter [Textur Wrapping (Direct3D 9)](texture-wrapping.md).
+Texturkoordinatenwerte in v-Richtung liegen zwischen 0 und 1. In diesem Fall wird ein Texturkoordinatensatz ausgewählt, der den Umkreis des Dreiecks minimiert. Weitere [Informationen finden Sie unter Texturumbruch (Direct3D 9).](texture-wrapping.md)
 
 </dd> <dt>
 
-<span id="D3DXTANGENT_WRAP_UV"></span><span id="d3dxtangent_wrap_uv"></span>**D3DXTANGENT \_ Wrap \_ -UV**
+<span id="D3DXTANGENT_WRAP_UV"></span><span id="d3dxtangent_wrap_uv"></span>**D3DXTANGENT \_ WRAP \_ UV**
 </dt> <dd>
 
-Die Texturkoordinaten Werte in der Richtung und der v-Richtung liegen zwischen 0 und 1. In diesem Fall wird ein Texturkoordinaten Satz ausgewählt, der den Umkreis des Dreiecks minimiert. Weitere Informationen finden Sie unter [Textur Wrapping (Direct3D 9)](texture-wrapping.md).
+Texturkoordinatenwerte in Sie- und v-Richtung liegen zwischen 0 und 1. In diesem Fall wird ein Texturkoordinatensatz ausgewählt, der den Umkreis des Dreiecks minimiert. Weitere [Informationen finden Sie unter Texturumbruch (Direct3D 9).](texture-wrapping.md)
 
 </dd> <dt>
 
-<span id="D3DXTANGENT_DONT_NORMALIZE_PARTIALS"></span><span id="d3dxtangent_dont_normalize_partials"></span>**D3DXTANGENT \_ keine \_ \_ partitionale normalisieren**
+<span id="D3DXTANGENT_DONT_NORMALIZE_PARTIALS"></span><span id="d3dxtangent_dont_normalize_partials"></span>**D3DXTANGENT \_ DONT \_ NORMALIZE \_ PARTIALS**
 </dt> <dd>
 
-Partielle Ableitungen sollten nicht in Bezug auf Texturkoordinaten normalisiert werden. Wenn nicht normalisiert, ist die Skala der partiellen Ableitungen proportional zur Skala des 3D-Modells dividiert durch die Skala des Dreiecks im (u, v)-Raum. Dieser Skalierungs Wert gibt an, wie weit die Textur in eine bestimmte Richtung gestreckt wird. Die resultierende Vektor Länge ist eine gewichtete Summe der Längen der partiellen Ableitungen.
+Normalisieren Sie partielle Ableitungen nicht in Bezug auf Texturkoordinaten. Wenn dies nicht normalisiert ist, ist die Skala der partiellen Ableitungen proportional zur Skala des 3D-Modells dividiert durch die Skala des Dreiecks im Raum (u, v). Dieser Skalierungswert gibt ein Maß dafür an, wie viel die Textur in einer bestimmten Richtung gestreckt wird. Die resultierende Vektorlänge ist eine gewichtete Summe der Längen der partiellen Ableitungen.
 
 </dd> <dt>
 
-<span id="D3DXTANGENT_DONT_ORTHOGONALIZE"></span><span id="d3dxtangent_dont_orthogonalize"></span>**D3DXTANGENT \_ nicht \_ orthogonalize**
+<span id="D3DXTANGENT_DONT_ORTHOGONALIZE"></span><span id="d3dxtangent_dont_orthogonalize"></span>**D3DXTANGENT \_ DONT \_ ORTHOGONALIZE**
 </dt> <dd>
 
-Transformieren Sie keine Texturkoordinaten in orthogonale kartesische Koordinaten. Schließen Sie sich mit D3DXTANGENT \_ orthogonalize \_ von \_ Ihnen und D3DXTANGENT \_ orthogonalize \_ von \_ V gegenseitig aus.
+Transformieren Sie Texturkoordinaten nicht in orthogonale kartesische Koordinaten. Schließen Sich gegenseitig aus mit D3DXTANGENT \_ ORTHOGONALIZE \_ FROM you und \_ D3DXTANGENT \_ ORTHOGONALIZE \_ FROM \_ V.
 
 </dd> <dt>
 
-<span id="D3DXTANGENT_ORTHOGONALIZE_FROM_V"></span><span id="d3dxtangent_orthogonalize_from_v"></span>**D3DXTANGENT \_ orthogonalize \_ von \_ V**
+<span id="D3DXTANGENT_ORTHOGONALIZE_FROM_V"></span><span id="d3dxtangent_orthogonalize_from_v"></span>**D3DXTANGENT \_ ORTHOGONALIZE \_ FROM \_ V**
 </dt> <dd>
 
-Berechnen Sie die partielle Ableitung in Bezug auf die Texturkoordinaten v unabhängig für jeden Scheitelpunkt, und berechnen Sie dann die partielle Ableitung in Bezug auf das Kreuz Produkt der partiellen Ableitung in Bezug auf v und den normalen Vektor. Schließen Sie sich mit D3DXTANGENT \_ dont \_ orthogonalize und D3DXTANGENT \_ orthogonalize aus U gegenseitig \_ aus \_ .
+Berechnen Sie die partielle Ableitung in Bezug auf Texturkoordinate v unabhängig für jeden Scheitelpunkt, und berechnen Sie dann die partielle Ableitung in Bezug auf Sie als Kreuzprodukt der partiellen Ableitung in Bezug auf v und den normalen Vektor. Schließen sich gegenseitig aus mit D3DXTANGENT \_ DONT \_ ORTHOGONALIZE und D3DXTANGENT \_ ORTHOGONALIZE \_ FROM \_ U.
 
 </dd> <dt>
 
-<span id="D3DXTANGENT_ORTHOGONALIZE_FROM_U"></span><span id="d3dxtangent_orthogonalize_from_u"></span>**D3DXTANGENT \_ orthogonalize \_ von \_ U**
+<span id="D3DXTANGENT_ORTHOGONALIZE_FROM_U"></span><span id="d3dxtangent_orthogonalize_from_u"></span>**D3DXTANGENT \_ ORTHOGONALIZE \_ FROM \_ U**
 </dt> <dd>
 
-Berechnen Sie die partielle Ableitung in Bezug auf die Textur Koordinate u unabhängig für jeden Scheitelpunkt, und berechnen Sie dann die partielle Ableitung in Bezug auf v als Kreuz Produkt des normalen Vektors und die partielle Ableitung in Bezug auf Sie. Schließen Sie sich mit D3DXTANGENT \_ dont \_ orthogonalize und D3DXTANGENT \_ orthogonalize aus V gegenseitig \_ aus \_ .
+Berechnen Sie die partielle Ableitung in Bezug auf die Texturkoordinate u unabhängig für jeden Scheitelpunkt, und berechnen Sie dann die partielle Ableitung in Bezug auf v als Kreuzprodukt des normalen Vektors und der partiellen Ableitung in Bezug auf Sie. Schließen Sich gegenseitig aus mit D3DXTANGENT \_ DONT \_ ORTHOGONALIZE und D3DXTANGENT \_ ORTHOGONALIZE \_ FROM \_ V.
 
 </dd> <dt>
 
-<span id="D3DXTANGENT_WEIGHT_BY_AREA"></span><span id="d3dxtangent_weight_by_area"></span>**D3DXTANGENT \_ Gewichtung \_ nach \_ Bereich**
+<span id="D3DXTANGENT_WEIGHT_BY_AREA"></span><span id="d3dxtangent_weight_by_area"></span>**D3DXTANGENT \_ GEWICHTUNG \_ NACH \_ BEREICH**
 </dt> <dd>
 
-Gewichtet die Richtung des berechneten pro-Vertex-normalen oder partiellen Ableitung-Vektors gemäß den Bereichen der Dreiecke, die an diesen Scheitelpunkt angefügt sind. Schließen Sie sich mit D3DXTANGENT Weight gleich gegenseitig aus \_ \_ .
+Gewichten Sie die Richtung des berechneten normalen oder partiellen abgeleiteten Vektors pro Scheitelpunkt entsprechend den Bereichen der Dreiecke, die an diesen Scheitelpunkt angefügt sind. Schließen sie sich mit D3DXTANGENT \_ WEIGHT \_ EQUAL gegenseitig aus.
 
 </dd> <dt>
 
-<span id="D3DXTANGENT_WEIGHT_EQUAL"></span><span id="d3dxtangent_weight_equal"></span>**D3DXTANGENT \_ Gewichtung \_ gleich**
+<span id="D3DXTANGENT_WEIGHT_EQUAL"></span><span id="d3dxtangent_weight_equal"></span>**D3DXTANGENT \_ WEIGHT \_ EQUAL**
 </dt> <dd>
 
-Berechnen Sie für jedes Dreieck des Eingabe Netzes einen normalen Vektor mit Einheiten Länge. Schließen Sie sich mit D3DXTANGENT \_ Weight \_ by Area gegenseitig aus \_ .
+Berechnen Sie einen Normalvektor mit Einheitenlänge für jedes Dreieck des Eingabegitters. Schließen sich mit D3DXTANGENT \_ WEIGHT BY AREA gegenseitig \_ \_ aus.
 
 </dd> <dt>
 
-<span id="D3DXTANGENT_WIND_CW"></span><span id="d3dxtangent_wind_cw"></span>**D3DXTANGENT \_ Wind \_ CW**
+<span id="D3DXTANGENT_WIND_CW"></span><span id="d3dxtangent_wind_cw"></span>**D3DXTANGENT \_ WIND \_ CW**
 </dt> <dd>
 
-Vertices werden um jedes Dreieck in einer Richtung im Uhrzeigersinn angeordnet. Die berechnete normale Vektor Richtung wird aus der Richtung, die mithilfe der Vertex-Reihenfolge gegen den Uhrzeigersinn berechnet wurde, um 180 Grad
+Scheitelungen werden im Uhrzeigersinn um jedes Dreieck herum geordnet. Die berechnete normaler Vektorrichtung wird daher um 180 Grad von der Richtung umgekehrt, die mithilfe der umgekehrten Scheitelpunkt reihenfolge berechnet wird.
 
 </dd> <dt>
 
-<span id="D3DXTANGENT_CALCULATE_NORMALS"></span><span id="d3dxtangent_calculate_normals"></span>**D3DXTANGENT \_ Berechnen von \_ normalen**
+<span id="D3DXTANGENT_CALCULATE_NORMALS"></span><span id="d3dxtangent_calculate_normals"></span>**D3DXTANGENT \_ \_ NORMALS BERECHNEN**
 </dt> <dd>
 
-Berechnen Sie den normalen Vertex-Vektor für jedes Dreieck des Eingabe Netzes, und ignorieren Sie alle normalen Vektoren, die bereits im eingabemesh vorhanden sind.
+Berechnen Sie den normalen Vektor pro Scheitelpunkt für jedes Dreieck des Eingabegitters, und ignorieren Sie alle normalen Vektoren, die bereits im Eingabegitternetz vorhanden sind.
 
 </dd> <dt>
 
-<span id="D3DXTANGENT_GENERATE_IN_PLACE"></span><span id="d3dxtangent_generate_in_place"></span>**D3DXTANGENT- \_ Generierung direkt generieren \_ \_**
+<span id="D3DXTANGENT_GENERATE_IN_PLACE"></span><span id="d3dxtangent_generate_in_place"></span>**D3DXTANGENT \_ GENERATE AN ORT UND \_ \_ STELLE**
 </dt> <dd>
 
-Die Ergebnisse werden im ursprünglichen eingabemesh gespeichert, und das Ausgabe Mesh wird nicht verwendet.
+Die Ergebnisse werden im ursprünglichen Eingabegitter gespeichert, und das Ausgabegitternetz wird nicht verwendet.
 
 </dd> </dl>
 
@@ -140,11 +140,11 @@ Die Ergebnisse werden im ursprünglichen eingabemesh gespeichert, und das Ausgab
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

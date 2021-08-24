@@ -1,19 +1,19 @@
 ---
-description: Die TAPI-Zeilen \_ Schließen-Nachricht wird gesendet, wenn das angegebene Zeilen Gerät zwangsweise geschlossen wurde. Das Zeilen Geräte handle oder alle Aufruf Handles für Aufrufe in der Zeile sind nicht mehr gültig, nachdem diese Nachricht gesendet wurde.
+description: Die TAPI LINE CLOSE-Meldung wird gesendet, wenn das angegebene Zeilengerät \_ gesperrt wurde. Das Zeilengerätehandles oder alle Aufrufhandles für Aufrufe in der Zeile sind nicht mehr gültig, nachdem diese Nachricht gesendet wurde.
 ms.assetid: f254e331-d574-4fa7-8447-6e4535d3d773
-title: LINE_CLOSE Meldung (TAPI. h)
+title: LINE_CLOSE (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7f4fde53d1017b2dcd9fe4ea833803055d9f2dd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 68fec993987bfc3ca36099d90eed2beadde9a749f965a36ebb6c513c210f387b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682400"
 ---
-# <a name="line_close-message"></a>Zeilen Schluss \_ Nachricht
+# <a name="line_close-message"></a>LINE \_ CLOSE-Meldung
 
-Die TAPI- **Zeilen \_ Schließen** -Nachricht wird gesendet, wenn das angegebene Zeilen Gerät zwangsweise geschlossen wurde. Das Zeilen Geräte handle oder alle Aufruf Handles für Aufrufe in der Zeile sind nicht mehr gültig, nachdem diese Nachricht gesendet wurde.
+Die TAPI **LINE \_ CLOSE-Meldung** wird gesendet, wenn das angegebene Zeilengerät gesperrt wurde. Das Zeilengerätehandles oder alle Aufrufhandles für Aufrufe in der Zeile sind nicht mehr gültig, nachdem diese Nachricht gesendet wurde.
 
 
 ```C++
@@ -26,17 +26,17 @@ Die TAPI- **Zeilen \_ Schließen** -Nachricht wird gesendet, wenn das angegebene
 
 <dl> <dt>
 
-*hdevice* 
+*hDevice* 
 </dt> <dd>
 
-Ein Handle für das Zeilen Gerät, das geschlossen wurde. Dieses Handle ist nicht mehr gültig.
+Ein Handle für das geschlossene Liniengerät. Dieses Handle ist nicht mehr gültig.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
-Die beim Öffnen der Zeile angegebene Rückruf Instanz.
+Die Rückrufinstanz, die beim Öffnen der Zeile angegeben wurde.
 
 </dd> <dt>
 
@@ -65,11 +65,11 @@ Nicht verwendet.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Meldung zum **\_ Schließen der Zeile** wird nur an jede Anwendung gesendet, nachdem der TAPI-Dienstanbieter (TSP) das Schließen einer geöffneten Zeile erzwungen hat. Gibt an, ob die Zeile sofort nach einer erzwungenen Schließung wieder geöffnet werden kann.
+Die **LINE \_ CLOSE-Nachricht** wird erst an eine beliebige Anwendung gesendet, nachdem der TAPI-Dienstanbieter (TSP) eine offene Zeile geschlossen hat. Ob die Zeile unmittelbar nach einem erzwungenen Schließen erneut geöffnet werden kann, ist gerätespezifisch.
 
-Die Ursache kann eine bedeutende Zustandsänderung, ein Hardwarefehler, ein Verlust der Verbindung zu einem Server oder sogar potenziell verhindern, dass eine einzelne Anwendung ein Zeilen Gerät zu lange monopolisiert. Ein liniengerät kann auch erzwungen werden, nachdem der Benutzer die Konfiguration dieser Zeile oder seines Treibers geändert hat. Wenn der Benutzer möchte, dass die Konfigurationsänderungen sofort wirksam werden (im Gegensatz zu nach dem nächsten Neustart des Systems), und Sie sich auf die aktuelle Ansicht des Geräts der Anwendung auswirken (z. b. eine Änderung der Gerätefunktionen), kann ein Dienstanbieter zwangsweise das Zeilen Gerät schließen.
+Die verursachende Bedingung kann eine erhebliche Zustandsänderung, ein Hardwarefehler, ein Verlust der Verbindung mit einem Server oder sogar eine potenzielle Verhinderung sein, dass eine einzelne Anwendung ein Liniengerät zu lange überbeschleunigen kann. Ein Liniengerät kann auch gesperrt werden, nachdem der Benutzer die Konfiguration dieser Zeile oder seines Treibers geändert hat. Wenn der Benutzer möchte, dass die Konfigurationsänderungen sofort wirksam werden (im Gegensatz zu nach dem nächsten Systemneustart), und sie sich auf die aktuelle Ansicht des Geräts der Anwendung auswirken (z. B. eine Änderung der Gerätefunktionen), kann ein Dienstanbieter das Zeilengerät ersingen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,8 +77,8 @@ Die Ursache kann eine bedeutende Zustandsänderung, ein Hardwarefehler, ein Verl
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

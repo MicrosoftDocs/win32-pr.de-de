@@ -1,39 +1,39 @@
 ---
-title: Definieren von Ereignisdaten Vorlagen
-description: Anbieter verwenden Datenvorlagen, um die ereignisspezifischen Daten zu definieren, die Sie mit einem Ereignis einschließen, und um die Filterdaten zu definieren, die eine ETW-Ablauf Verfolgungs Sitzung an den Anbieter übergeben kann, wenn Sie den Anbieter aktiviert.
+title: Definieren von Ereignisdatenvorlagen
+description: Anbieter verwenden Datenvorlagen, um die ereignisspezifischen Daten zu definieren, die sie mit einem Ereignis enthalten, und um die Filterdaten zu definieren, die eine ETW-Ablaufverfolgungssitzung an den Anbieter übergeben kann, wenn sie den Anbieter aktiviert.
 ms.assetid: 064227a2-7ce8-461a-9dc0-7519652e6628
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 067230472c8de5ce29145e221c109b3f390f0a6c
-ms.sourcegitcommit: c2a1c4314550ea9bd202d28adfcc7bfe6180932f
+ms.openlocfilehash: d5480ca158916801665943bd33b886bfcd5d73015e8730c1dd108123dadc1995
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "103858095"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652610"
 ---
-# <a name="defining-event-data-templates"></a>Definieren von Ereignisdaten Vorlagen
+# <a name="defining-event-data-templates"></a>Definieren von Ereignisdatenvorlagen
 
-Anbieter verwenden Datenvorlagen, um die ereignisspezifischen Daten zu definieren, die Sie mit einem Ereignis einschließen, und um die Filterdaten zu definieren, die eine ETW-Ablauf Verfolgungs Sitzung an den Anbieter übergeben kann, wenn Sie den Anbieter aktiviert. Wenn das Ereignis keine ereignisspezifischen Daten enthält, wird keine Vorlage definiert. Verwenden Sie das **Template** -Element, um eine Vorlage zu definieren. Eine Vorlage enthält ein Datenelement für jedes Datenelement, das der Anbieter mit dem Ereignis einschließt. Sie können ganzzahlige Typen, Zeichen folgen, Arrays und Strukturen angeben. Sie müssen die Ereignisdaten in der Reihenfolge schreiben, in der die Datenelemente in der Vorlage definiert wurden.
+Anbieter verwenden Datenvorlagen, um die ereignisspezifischen Daten zu definieren, die sie mit einem Ereignis enthalten, und um die Filterdaten zu definieren, die eine ETW-Ablaufverfolgungssitzung an den Anbieter übergeben kann, wenn sie den Anbieter aktiviert. Wenn das Ereignis keine ereignisspezifischen Daten enthält, definieren Sie keine Vorlage. Verwenden Sie zum Definieren einer Vorlage das **Vorlagenelement.** Eine Vorlage enthält ein Datenelement für jedes Datenelement, das der Anbieter in das Ereignis einfing. Sie können integrale Typen, Zeichenfolgen, Arrays und Strukturen angeben. Sie müssen die Ereignisdaten in der Reihenfolge schreiben, in der die Datenelemente in der Vorlage definiert wurden.
 
-Sie können auch in die Vorlage einschließen, ein XML-Fragment, das Consumer verwenden sollten, um zu bestimmen, wie die Ereignisdaten gerenden werden. Wenn Sie das Fragment nicht einschließen, sollten Consumer die Ereignisdaten in der Reihenfolge Rendering, in der die Datenelemente in der Vorlage definiert wurden.
+Sie können auch ein XML-Fragment in die Vorlage hinzufügen, das Von Consumers verwendet werden soll, um zu bestimmen, wie die Ereignisdaten gerendert werden sollen. Wenn Sie das Fragment nicht hinzufügen, sollten Benutzer die Ereignisdaten in der Reihenfolge rendern, in der die Datenelemente in der Vorlage definiert wurden.
 
-Wenn Sie eine Vorlage definieren, müssen Sie Ihr einen Vorlagen Bezeichner zuordnen, mit dem Sie in einer Ereignis Definition auf die Vorlage verweisen. Jedes Datenelement in der Vorlage muss einen Namen und einen Eingabe Datentyp angeben (eine Liste der Eingabetypen finden Sie im Abschnitt "Hinweise" des komplexen [**InputType**](eventmanifestschema-inputtype-complextype.md) -Typs). Wenn der Eingabe Datentyp in mehreren Formaten gerendert werden kann, sollten Sie den Ausgabedatentyp angeben, der Consumer anweist, wie das Datenelement gerendert werden soll. Beispielsweise kann ein UInt32 Input-Datentyp als ganze Zahl ohne Vorzeichen, als Thread Bezeichner, als IPv4-Adresse und als Win32-Fehlercode gerendert werden. Wenn Sie den Ausgabedatentyp nicht angeben, sollten Consumer den Standard Ausgabetyp des Eingabe Typs verwenden, um das Datenelement zu Rendering.
+Wenn Sie eine Vorlage definieren, müssen Sie ihr einen Vorlagenbezeichner geben, mit dem Sie auf die Vorlage in einer Ereignisdefinition verweisen. Jedes Datenelement in der Vorlage muss einen Namen und einen Eingabedatentyp angeben (eine Liste der Eingabetypen finden Sie im Abschnitt "Hinweise" des komplexen [**InputType-Typs).**](eventmanifestschema-inputtype-complextype.md) Wenn der Eingabedatentyp in mehreren Formaten gerendert werden kann, sollten Sie den Ausgabedatentyp angeben, der den Verbraucher darüber informiert, wie das Datenelement gerendert werden soll. Ein UInt32-Eingabedatentyp kann z. B. als ganze Zahl ohne Vorzeichen, Threadbezeichner, IPv4-Adresse und Win32-Fehlercode gerendert werden. Wenn Sie den Ausgabedatentyp nicht angeben, sollten Benutzer den Standardausgabetyp des Eingabetyps verwenden, um das Datenelement zu rendern.
 
-Um ein Array anzugeben, schließen Sie das **count** -Attribut für das Datenelement ein, und legen Sie es auf die Anzahl der Elemente im Array fest. Das Array kann ein Array variabler Größe oder ein Array mit fester Größe sein. Wenn das Array ein Array fester Größe ist, legen Sie **count** auf die Größe des Arrays fest. Wenn beispielsweise ein Array aus ganzen Zahlen eine festgelegte Größe von 10 hat, legen Sie **count** auf 10 fest. Wenn Sie das Array schreiben, müssen Sie 40 Bytes an Daten schreiben.
+Um ein Array anzugeben, schließen Sie das **count-Attribut** für das Datenelement ein, und legen Sie es auf die Anzahl der Elemente im Array fest. Das Array kann ein Array variabler Größe oder ein Array fester Größe sein. Wenn das Array ein Array mit fester Größe ist, legen Sie **count** auf die Größe des Arrays fest. Wenn ein Array von ganzen Zahlen beispielsweise eine feste Größe von 10 hat, legen Sie **count** auf 10 fest. Wenn Sie das Array schreiben, müssen Sie 40 Byte an Daten schreiben.
 
 Wenn das Array ein Array variabler Größe ist, legen Sie **count** auf den Namen des Datenelements fest, das die Größe des Arrays enthält. Wenn das Array Zeiger enthält, wird die Adresse der Zeiger als Ereignisdaten geschrieben, nicht die Daten, auf die die Zeiger zeigen.
 
-Sie müssen das **length** -Attribut angeben, wenn das Datenelement ein binäres Blob ist. Sie können auch das **length** -Attribut für Zeichen folgen mit fester Länge angeben.
+Sie müssen das **Längenattribut** angeben, wenn das Datenelement ein binäres Blob ist. Sie können auch das **Length-Attribut für Zeichenfolgen** fester Länge angeben.
 
-Geben Sie das **map** -Attribut an, wenn das Datenelement einen Enumerationswert darstellt und Sie möchten, dass der Consumer anstelle des Werts selbst eine Zeichenfolge für den Wert druckt.
+Geben Sie **das Map-Attribut** an, wenn das Datenelement einen Enumerationswert darstellt und der Consumer anstelle des Werts selbst eine Zeichenfolge für den Wert drucken soll.
 
-Wenn Sie Strukturen in die Vorlage einschließen, sollten Sie die Elemente der Struktur einzeln schreiben, anstatt die Struktur zu schreiben, es sei denn, Sie können eine 8-Byte-Begrenzungs Ausrichtung gewährleisten.
+Wenn Sie Strukturen in die Vorlage integrieren, sollten Sie die Member der Struktur einzeln schreiben, anstatt die Struktur zu schreiben, es sei denn, Sie können eine 8-Byte-Begrenzungsausrichtung garantieren.
 
-Berücksichtigen Sie die Informationen, die Sie in die Ereignisse einschließen, insbesondere dann, wenn die Ereignisse in die globalen Kanäle geschrieben werden. Als allgemeine Regel sollten Sie keine privaten Informationen in die Ereignisse einschließen. Dies schließt nur-Text-Kenn Wörter und persönliche Benutzerinformationen ein. Zusätzlich sollten Programme, die vom Benutzer ausgeführt wurden, vom Benutzer besuchte URLs und andere Informationen im Zusammenhang mit den Benutzeraktivitäten auf dem Computer als privat angesehen werden.
+Sie sollten die Informationen, die Sie in die Ereignisse einreihen, sorgfältig berücksichtigen, insbesondere, wenn die Ereignisse in die globalen Kanäle geschrieben werden. In der Regel sollten Sie keine privaten Informationen in die Ereignisse einreihen. Dies schließt Klartextkennwörter und persönliche Benutzerinformationen ein. Darüber hinaus sollten vom Benutzer ausgeführte Programme, urLs, die der Benutzer besucht hat, und andere Informationen im Zusammenhang mit den Benutzeraktivitäten auf dem Computer als privat betrachtet werden.
 
-Wenn Sie URLs und Benutzernamen in den Ereignissen aufzeichnen müssen, schreiben Sie Sie nicht in die Windows-Kanäle (System und Anwendung), da diese Kanäle für alle authentifizierten Benutzer lesbar sind. Schreiben Sie Sie stattdessen in Ihre eigenen betrieblichen oder analytischen Kanäle. Legen Sie die Zugriffsberechtigungen für diese Kanäle fest, damit nur Administratoren die Ereignisse lesen können. Möglicherweise müssen Sie eine entsprechende Offenlegung angeben, um Benutzer darüber zu benachrichtigen, dass den Administratoren private Informationen zur Verfügung gestellt werden.
+Wenn Sie URLs und Benutzernamen in den Ereignissen aufzeichnen müssen, schreiben Sie sie nicht in die Windows-Kanäle (System und Anwendung), da diese Kanäle für alle authentifizierten Benutzer lesbar sind. Schreiben Sie sie stattdessen in Ihre eigenen Betriebs- oder Analysekanäle. Legen Sie die Zugriffsberechtigungen für diese Kanäle fest, damit nur Administratoren die Ereignisse lesen können. Möglicherweise müssen Sie eine geeignete Offenlegung bereitstellen, um benutzer darüber zu informieren, dass den Administratoren private Informationen zur Verfügung gestellt werden.
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine Vorlage definieren. Sie müssen das **TID** -Attribut der Vorlage angeben, auf das Sie in der Ereignis Definition oder Filter Definition verweisen.
+Das folgende Beispiel zeigt, wie Eine Vorlage definiert wird. Sie müssen das **tid-Attribut** der Vorlage angeben, auf das Sie in der Ereignisdefinition oder Filterdefinition verweisen.
 
 
 ```XML

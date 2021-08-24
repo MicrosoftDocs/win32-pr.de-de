@@ -1,9 +1,9 @@
 ---
-title: Opcode (TaskEventDefinitionType)-Element
-description: Enthält einen aufgabenspezifischen Opcode für ein Ereignis. Für den Task, der die Ereignis Definitionen enthält, wird davon ausgegangen, dass alle Opcode-Definitionen aufgabenspezifisch sind.
+title: opcode (TaskEventDefinitionType) -Element
+description: Enthält einen aufgabenspezifischen Opcode für ein Ereignis. Es wird davon ausgegangen, dass alle Opcodedefinitionen aufgabenspezifisch für den Task sind, der die Ereignisdefinitionen enthält.
 ms.assetid: c7192772-401b-4602-918d-0e0bc4b65ca7
 keywords:
-- Opcode-Element EventLog
+- opcode-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d9f3b58353163e1ee5b9abeb04007a4a9d449e5c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7f3923e0a42375ac7d926d418943af81cc0264e111e6bdc4be56919780dfacf7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652150"
 ---
-# <a name="opcode-taskeventdefinitiontype-element"></a>Opcode (TaskEventDefinitionType)-Element
+# <a name="opcode-taskeventdefinitiontype-element"></a>opcode (TaskEventDefinitionType) -Element
 
-\[Beginnend mit dem Nachrichten Compiler, der mit der Windows 7-Version des Windows SDK ausgeliefert wird, ist dieses Element nicht mehr verfügbar.\]
+\[Ab dem Nachrichtencompiler, der im Windows 7-Version des Windows SDK enthalten ist, ist dieses Element nicht mehr verfügbar.\]
 
-Enthält einen aufgabenspezifischen Opcode für ein Ereignis. Für den Task, der die Ereignis Definitionen enthält, wird davon ausgegangen, dass alle Opcode-Definitionen aufgabenspezifisch sind.
+Enthält einen aufgabenspezifischen Opcode für ein Ereignis. Es wird davon ausgegangen, dass alle Opcodedefinitionen aufgabenspezifisch für den Task sind, der die Ereignisdefinitionen enthält.
 
 ``` syntax
 <xs:element name="opcode">
@@ -43,15 +43,15 @@ Enthält einen aufgabenspezifischen Opcode für ein Ereignis. Für den Task, der
 </xs:element>
 ```
 
-Das **Opcode** -Element wird durch den komplexen [**TaskEventDefinitionType**](eventmanifestschema-taskeventdefinitiontype-complextype.md) -Typ definiert.
+Das **opcode-Element** wird durch den komplexen [**TaskEventDefinitionType-Typ**](eventmanifestschema-taskeventdefinitiontype-complextype.md) definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 
 
-| Element                                                   | type                                                                               | BESCHREIBUNG                                        |
+| Element                                                   | Typ                                                                               | Beschreibung                                        |
 |-----------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**Veranstalter**](eventmanifestschema-event-opcode-element.md) | [**EventDefinitionType**](eventmanifestschema-eventdefinitiontype-complextype.md) | Ein Ereignis, das mit einer Aufgabe veröffentlicht wird.<br/> |
+| [**Ereignis**](eventmanifestschema-event-opcode-element.md) | [**EventDefinitionType**](eventmanifestschema-eventdefinitiontype-complextype.md) | Ein Ereignis, das mit einer Aufgabe veröffentlicht wird.<br/> |
 
 
 
@@ -59,9 +59,9 @@ Das **Opcode** -Element wird durch den komplexen [**TaskEventDefinitionType**](e
 
 
 
-| Name | type      | BESCHREIBUNG                                      |
+| Name | Typ      | Beschreibung                                      |
 |------|-----------|--------------------------------------------------|
-| name | **QName** | Der Name des aufgabenspezifischen OpCodes.<br/> |
+| name | **QName** | Der Name des aufgabenspezifischen Opcodes.<br/> |
 
 
 
@@ -71,8 +71,8 @@ Das **Opcode** -Element wird durch den komplexen [**TaskEventDefinitionType**](e
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -83,7 +83,7 @@ Das **Opcode** -Element wird durch den komplexen [**TaskEventDefinitionType**](e
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Aufgabe (DefinitionType)**](eventmanifestschema-task-definitiontype-element.md)
+[**task (DefinitionType)**](eventmanifestschema-task-definitiontype-element.md)
 </dt> </dl>
 
  

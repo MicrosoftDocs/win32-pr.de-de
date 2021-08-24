@@ -1,6 +1,6 @@
 ---
-description: Autorun und AutoPlay
-title: Autorun und AutoPlay
+description: AutoRun und AutoPlay
+title: AutoRun und AutoPlay
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: b54c9285-3274-4005-b098-446a9c74cbde
@@ -9,17 +9,17 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 63a0e2161a4c5479864116322d2c87997c4d779e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e93affa174ba51361e268bf25a978ee62c544da5de2b04cefe25bd4cf5efd4c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119593520"
 ---
-# <a name="autorun-and-autoplay"></a>Autorun und AutoPlay
+# <a name="autorun-and-autoplay"></a>AutoRun und AutoPlay
 
--   [Erstellen einer Autorun-aktivierten CD-ROM-Anwendung](autoplay.md)
--   [Verwenden der Hardware AutoPlay](autorun2k-intro.md)
+-   [Erstellen einer automatisch ausführenden CD-ROM-Anwendung](autoplay.md)
+-   [Verwenden der automatischen Hardwarewiedergabe](autorun2k-intro.md)
 
  
 

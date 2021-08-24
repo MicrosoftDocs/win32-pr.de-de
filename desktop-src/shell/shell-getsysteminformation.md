@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: b9e021e767309007cfee2cfc78268fb7d7cea042
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 23ad48c673fb0c5925e796f77bd43c77f3abd0afd4511864a5b840214861f792
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108104278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119660650"
 ---
 # <a name="shellgetsysteminformation-method"></a>Shell.GetSystemInformation-Methode
 
@@ -72,9 +72,9 @@ Typ: **Variant**
 
 Gibt den Wert der angeforderten Systeminformationen zurück. Der Rückgabetyp hängt davon ab, welche Systeminformationen angefordert werden. Weitere Informationen finden Sie im Abschnitt Hinweise.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann verwendet werden, um viele Systeminformationswerte an fordern. Die folgende Tabelle enthält den *sName-Wert,* der zum Anfordern der Informationen verwendet wird, und den zugeordneten Typ des zurückgegebenen Werts.
+Diese Methode kann verwendet werden, um viele Systeminformationswerte anzufordern. Die folgende Tabelle enthält den *sName-Wert,* der verwendet wird, um die Informationen und den zugeordneten Typ des zurückgegebenen Werts anzufordern.
 
 
 
@@ -86,9 +86,9 @@ BESCHREIBUNG
 
 DirectoryServiceAvailable
 
-**Boolescher Wert**
+**Boolean**
 
-Legen Sie auf **TRUE fest,** wenn der Verzeichnisdienst verfügbar ist. andernfalls **FALSE.**
+Legen Sie auf **TRUE** fest, wenn der Verzeichnisdienst verfügbar ist. andernfalls **FALSE.**
 
 DoubleClickTime
 
@@ -100,7 +100,7 @@ ProcessorLevel
 
 **Integer**
 
-**Windows Vista und höher.** Die Prozessorebene. Gibt für Prozessoren auf x386-, x486- und Pentium-Ebene 3, 4 oder 5 zurück.
+**Windows Vista und höher.** Die Prozessorebene. Gibt 3, 4 oder 5 für x386-, x486- bzw. Pentium-Prozessoren zurück.
 
 ProcessorSpeed
 
@@ -120,27 +120,27 @@ PhysicalMemoryInstalled
 
 Die Menge des installierten physischen Arbeitsspeichers in Bytes.
 
-Die folgenden Sind nur unter Windows XP gültig.
+Folgendes gilt nur für Windows XP.
 
 IsOS \_ Professional
 
-**Boolescher Wert**
+**Boolean**
 
-Legen Sie diese Einstellung auf **TRUE** fest, wenn das Betriebssystem Windows XP Professional Edition ist. andernfalls **FALSE.**
+Wird auf **TRUE** festgelegt, wenn das Betriebssystem Windows XP Professional Edition ist. andernfalls **FALSE.**
 
 IsOS \_ Personal
 
-**Boolescher Wert**
+**Boolean**
 
-Legen Sie diese Einstellung auf **TRUE** fest, wenn das Betriebssystem Windows XP Home Edition ist. andernfalls **FALSE.**
+Wird auf **TRUE** festgelegt, wenn das Betriebssystem Windows XP Home Edition ist. andernfalls **FALSE.**
 
-Folgendes ist nur unter Windows XP und höher gültig.
+Folgendes gilt nur für Windows XP und höher.
 
 IsOS \_ DomainMember
 
-**Boolescher Wert**
+**Boolean**
 
-Wird auf **TRUE** festgelegt, wenn der Computer Mitglied einer Domäne ist. andernfalls **FALSE.**
+Legen Sie diese Einstellung auf **TRUE** fest, wenn der Computer Mitglied einer Domäne ist. andernfalls **FALSE.**
 
 
 
@@ -152,7 +152,7 @@ Diese Methode ist derzeit in Microsoft Visual Basic nicht verfügbar.
 
 Die folgenden Beispiele zeigen die Verwendung von **GetSystemInformation** für JScript und VBScript.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -195,10 +195,10 @@ Vbscript:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |

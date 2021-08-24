@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. resizeimages
-description: Mit dem resizeimages-Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob die Größe der im Steuerelement enthaltenen Bilder automatisch geändert wird, wenn die Größe des Steuer Elements
+title: AmbientAttributes.resizeImages
+description: Das resizeImages-Attribut gibt einen Wert an, der angibt, ob die Größe der im Steuerelement enthaltenen Bilder automatisch geändert wird, wenn sich die Größe des Steuerelements ändert.
 ms.assetid: b5dab857-ad13-4be4-9fc2-c3534f2d9a84
 keywords:
-- Ambientattribute. resizeimages-Fenster Media Player
+- AmbientAttributes.resizeImages Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f3a12ef91cced8051e867389abcd750b5cbb8ecb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 070d075ef51059c05b7aa6f962a21f47632704c7ce217c370a92a5ec49568f33
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119469930"
 ---
-# <a name="ambientattributesresizeimages"></a>Ambientattribute. resizeimages
+# <a name="ambientattributesresizeimages"></a>AmbientAttributes.resizeImages
 
-Mit dem **resizeimages** -Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob die Größe der im Steuerelement enthaltenen Bilder automatisch geändert wird, wenn die Größe des Steuer Elements
+Das **resizeImages-Attribut** gibt einen Wert an, der angibt, ob die Größe der im Steuerelement enthaltenen Bilder automatisch geändert wird, wenn sich die Größe des Steuerelements ändert.
 
 ``` syntax
         elementID.resizeImages
@@ -29,14 +29,14 @@ Mit dem **resizeimages** -Attribut wird ein Wert angegeben oder abgerufen, der a
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 
 
 | Wert | BESCHREIBUNG                                           |
 |-------|-------------------------------------------------------|
-| true  | Bilder, die im Steuerelement enthalten sind, ändern die Größe automatisch. |
-| false | Bilder, die im Steuerelement enthalten sind, weisen eine Festgröße auf.    |
+| true  | Die Größe der im Steuerelement enthaltenen Bilder wird automatisch geändert. |
+| false | Bilder, die im -Steuerelement enthalten sind, haben eine feste Größe.    |
 
 
 
@@ -52,7 +52,7 @@ Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

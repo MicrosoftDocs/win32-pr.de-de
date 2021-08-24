@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 4e06b181bb512e16e9caaa0d233ebbd3472bfcf8
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6cdaedef52693810519ebb92e6f523afbfe078df68a2a13b7fae7ce0fad98fb1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634540"
 ---
 # <a name="id3dx10meshsetattributetable-method"></a>ID3DX10Mesh::SetAttributeTable-Methode
 
@@ -65,7 +65,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn eine Anwendung die Informationen in einer Attributtabelle nachverfolgt und die Tabelle infolge von Änderungen an Attributen oder Gesichtern neu ansortiert, ermöglicht diese Methode der Anwendung, die Attributtabellen zu aktualisieren, anstatt ID3DX10Mesh::Optimize erneut auf aufruft.
 
@@ -73,14 +73,14 @@ Wenn eine Anwendung die Informationen in einer Attributtabelle nachverfolgt und 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

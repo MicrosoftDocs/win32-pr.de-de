@@ -1,9 +1,9 @@
 ---
-title: ICM_SETSTATE Meldung (VFW. h)
-description: In der ICM- \_ SetState-Meldung wird ein Video Komprimierungs Treiber benachrichtigt, um den Status des-Kompressors festzulegen. Sie können diese Nachricht explizit oder mithilfe des icsetstate-Makros senden.
+title: ICM_SETSTATE Nachricht (Vfw.h)
+description: Die ICM \_ SETSTATE-Nachricht benachrichtigt einen Videokomprimierungstreiber, um den Zustand des Satzes festzulegen. Sie können diese Nachricht explizit oder mithilfe des ICSetState-Makros senden.
 ms.assetid: d1a91847-2893-4c8b-9ca1-02db71ec2c81
 keywords:
-- ICM_SETSTATE-Nachricht (Multimedia)
+- ICM_SETSTATE nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 230e0aaf3752016efd276d7d55624ee2abb4f8e0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6ea6cd7aa0314520a30e293a8f029920c22b8baa58e995eed7ff9e5a96dd1b7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339606"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119525810"
 ---
-# <a name="icm_setstate-message"></a>ICM- \_ SetState-Meldung
+# <a name="icm_setstate-message"></a>\_ICM SETSTATE-Nachricht
 
-In der **ICM- \_ SetState** -Meldung wird ein Video Komprimierungs Treiber benachrichtigt, um den Status des-Kompressors festzulegen. Sie können diese Nachricht explizit oder mithilfe des [**icsetstate**](/windows/desktop/api/Vfw/nf-vfw-icsetstate) -Makros senden.
+Die **ICM \_ SETSTATE-Nachricht** benachrichtigt einen Videokomprimierungstreiber, um den Zustand des Satzes festzulegen. Sie können diese Nachricht explizit oder mithilfe des [**ICSetState-Makros**](/windows/desktop/api/Vfw/nf-vfw-icsetstate) senden.
 
 
 ```C++
@@ -38,14 +38,14 @@ lParam = (DWORD_PTR) cb;
 
 <dl> <dt>
 
-<span id="pv"></span><span id="PV"></span>*teuren*
+<span id="pv"></span><span id="PV"></span>*Pv*
 </dt> <dd>
 
-Zeiger auf einen Speicherblock, der Konfigurationsdaten enthält. Sie können **null** für diesen Parameter angeben, um den-Kompressor auf den Standardzustand zurückzusetzen.
+Zeiger auf einen Speicherblock, der Konfigurationsdaten enthält. Sie können **NULL** für diesen Parameter angeben, um den Standardwert des -Parameters zurückzusetzen.
 
 </dd> <dt>
 
-<span id="cb"></span><span id="CB"></span>*betrieben*
+<span id="cb"></span><span id="CB"></span>*Cb*
 </dt> <dd>
 
 Größe des Speicherblocks in Bytes.
@@ -54,11 +54,11 @@ Größe des Speicherblocks in Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl der Bytes zurück, die vom-Kompressor bei erfolgreicher Ausführung verwendet werden, andernfalls NULL.
+Gibt die Anzahl von Bytes zurück, die von der -Methode verwendet werden, wenn sie erfolgreich ist, oder 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die von dieser Nachricht verwendeten Informationen sind privat und spezifisch für einen bestimmten Kompressor. Client Anwendungen sollten diese Nachricht nur zum Wiederherstellen von Informationen verwenden, die zuvor mit der [**ICM \_ GetState**](icm-getstate.md) -Nachricht abgerufen wurden, und die [**ICM \_**](icm-configure.md) -Konfigurations Nachricht verwenden, um die Konfiguration eines Video Komprimierungs Treibers anzupassen.
+Die von dieser Nachricht verwendeten Informationen sind privat und spezifisch für einen bestimmten Kunden. Clientanwendungen sollten diese Nachricht nur zum Wiederherstellen von Informationen verwenden, die zuvor mit der [**ICM \_ GETSTATE-Nachricht**](icm-getstate.md) abgerufen wurden, und die [**ICM \_ CONFIGURE-Nachricht**](icm-configure.md) verwenden, um die Konfiguration eines Videokomprimierungstreibers anzupassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Die von dieser Nachricht verwendeten Informationen sind privat und spezifisch f�
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -79,7 +79,7 @@ Die von dieser Nachricht verwendeten Informationen sind privat und spezifisch f�
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: Der \_ Netzwerktyp wird von der Get Network Type-Methode abgerufen.
+description: Die \_ methode get NetworkType ruft den Netzwerktyp ab.
 ms.assetid: 5597284a-9cc6-422b-a064-cda25aa5964b
-title: 'Itconnection:: get_NetworkType-Methode (sdpblb. h)'
+title: ITConnection::get_NetworkType-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 31189ec0e3b42e3ed249cd0c62365b1f8c793908
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5d323d7465563d0a0d400c930585c2c0df002cedfae252d205d53aea8040f337
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119660330"
 ---
-# <a name="itconnectionget_networktype-method"></a>Itconnection:: get \_ Network Type-Methode
+# <a name="itconnectionget_networktype-method"></a>ITConnection::get \_ NetworkType-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Der **\_ Netzwerktyp wird von der Get Network Type** -Methode abgerufen.
+Die **\_ methode get NetworkType** ruft den Netzwerktyp ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT get_NetworkType(
 
 <dl> <dt>
 
-*ppnetworktype* \[ vorgenommen\]
+*ppNetworkType* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen **BSTR** -Wert, der den Netzwerktyp enthält.
+Zeiger auf einen **BSTR,** der den Netzwerktyp enthält.
 
 </dd> </dl>
 
@@ -48,18 +48,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                      |
 |-----------------------------------------------------------------------------------------------|------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                     |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *ppnetworktype* -Parameter ist kein gültiger Zeiger.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/>  |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                    |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                   |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *ppNetworkType-Parameter* ist kein gültiger Zeiger.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/>  |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                    |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den für den *ppnetworktype* -Parameter zugewiesenen Arbeitsspeicher freizugeben.
+Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den für den *ppNetworkType-Parameter* belegten Arbeitsspeicher freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,9 +67,9 @@ Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sys
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
@@ -78,10 +78,10 @@ Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sys
 
 <dl> <dt>
 
-[**Itconnection**](itconnection.md)
+[**ITConnection**](itconnection.md)
 </dt> <dt>
 
-[**Itconnection::p UT- \_ NetworkType**](itconnection-put-networktype.md)
+[**ITConnection::put \_ NetworkType**](itconnection-put-networktype.md)
 </dt> </dl>
 
  

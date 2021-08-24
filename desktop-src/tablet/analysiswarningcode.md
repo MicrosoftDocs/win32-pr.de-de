@@ -1,7 +1,7 @@
 ---
-description: Gibt den Satz verfügbarer Warnungen an, die während der Handschrift Analyse auftreten können.
+description: Gibt den Satz verfügbarer Warnungen an, die während der Freik-Analyse auftreten können.
 ms.assetid: 52676f1d-8d67-4bdb-9d4f-3e409ffa8332
-title: AnalysisWarningCode-Enumeration (iacom. h)
+title: AnalysisWarningCode-Enumeration (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - IACom.h
-ms.openlocfilehash: 651408678daa64788952b2706980968ca315abf6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 48d03c0f4c479ddf6a3f1f9f371bc13b889641994f86df75b107b17ca081a97a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119660870"
 ---
 # <a name="analysiswarningcode-enumeration"></a>AnalysisWarningCode-Enumeration
 
-Gibt den Satz verfügbarer Warnungen an, die während der Handschrift Analyse auftreten können.
+Gibt den Satz verfügbarer Warnungen an, die während der Freik-Analyse auftreten können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,146 +57,146 @@ typedef enum AnalysisWarningCode {
 
 <dl> <dt>
 
-<span id="AnalysisWarningCode_Aborted"></span><span id="analysiswarningcode_aborted"></span><span id="ANALYSISWARNINGCODE_ABORTED"></span>**AnalysisWarningCode wurde \_ abgebrochen.**
+<span id="AnalysisWarningCode_Aborted"></span><span id="analysiswarningcode_aborted"></span><span id="ANALYSISWARNINGCODE_ABORTED"></span>**AnalysisWarningCode \_ Abgebrochen**
 </dt> <dd>
 
-Der Analyse Vorgang wurde abgebrochen.
+Der Analysevorgang wurde abgebrochen.
 
-Wird nur zurückgegeben, wenn der synchrone Analyse Vorgang aufgerufen wird. Beim Abbrechen eines asynchronen Vorgangs wird kein [**\_ ianalysil Vents:: results**](-ianalysisevents-results.md) -Ereignis ausgegeben.
+Wird nur zurückgegeben, wenn der synchrone Analysevorgang aufgerufen wird. Durch das Abbrechen eines asynchronen Vorgangs wird kein [**\_ IAnalysisEvents::Results-Ereignis**](-ianalysisevents-results.md) ausgelöst.
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_NoMatchingInkAnalysisRecognizerFound"></span><span id="analysiswarningcode_nomatchinginkanalysisrecognizerfound"></span><span id="ANALYSISWARNINGCODE_NOMATCHINGINKANALYSISRECOGNIZERFOUND"></span>**AnalysisWarningCode \_ nomatchinginkanalysiserkenzerfound**
+<span id="AnalysisWarningCode_NoMatchingInkAnalysisRecognizerFound"></span><span id="analysiswarningcode_nomatchinginkanalysisrecognizerfound"></span><span id="ANALYSISWARNINGCODE_NOMATCHINGINKANALYSISRECOGNIZERFOUND"></span>**AnalysisWarningCode \_ NoMatchingInkAnalysisRecognizerFound**
 </dt> <dd>
 
-Der [**iinkanalyzer**](iinkanalyzer.md) kann keine frei Handerkennung finden, die die Sprach-oder Funktionsanforderungen erfüllt, die für den Analyse Vorgang erforderlich sind.
+Der [**IInkAnalyzer kann**](iinkanalyzer.md) keine Ink-Recognizer-Funktion finden, die die Sprach- oder Funktionsanforderungen erfüllt, die zum Ausführen des Analysevorgang erforderlich sind.
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_FactoidNotSupported"></span><span id="analysiswarningcode_factoidnotsupported"></span><span id="ANALYSISWARNINGCODE_FACTOIDNOTSUPPORTED"></span>**AnalysisWarningCode \_ faktoidnotsupported**
+<span id="AnalysisWarningCode_FactoidNotSupported"></span><span id="analysiswarningcode_factoidnotsupported"></span><span id="ANALYSISWARNINGCODE_FACTOIDNOTSUPPORTED"></span>**AnalysisWarningCode \_ FactoidNotSupported**
 </dt> <dd>
 
-Die frei Handerkennung konnte den angegebenen Faktoid-Satz auf dem Knoten "Analyse Hinweis" nicht berücksichtigen (siehe [**icontextnode:: GetType**](icontextnode-gettype.md) -und [Analysis Hint-Eigenschaften](analysis-hint-properties.md)).
+Die Freik-Erkennen konnte die angegebene Factoid-Menge auf dem Analysehinweisknoten nicht erkennen (siehe [**IContextNode::GetType**](icontextnode-gettype.md) und [Analysis Hint Properties](analysis-hint-properties.md)).
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_FactoidCoercionNotSupported"></span><span id="analysiswarningcode_factoidcoercionnotsupported"></span><span id="ANALYSISWARNINGCODE_FACTOIDCOERCIONNOTSUPPORTED"></span>**AnalysisWarningCode \_ faktoidcoercionnotsupported**
+<span id="AnalysisWarningCode_FactoidCoercionNotSupported"></span><span id="analysiswarningcode_factoidcoercionnotsupported"></span><span id="ANALYSISWARNINGCODE_FACTOIDCOERCIONNOTSUPPORTED"></span>**AnalysisWarningCode \_ FactoidCoercionNotSupported**
 </dt> <dd>
 
-Die frei Handerkennung konnte die Ergebnisse nicht in den angegebenen Faktoid-Wert für den Analyse Hinweis Knoten umwandeln (siehe [**icontextnode:: GetType**](icontextnode-gettype.md) -und [Analysis Hint-Eigenschaften](analysis-hint-properties.md)).
+Die Freik-Recognizer konnte ihre Ergebnisse nicht in das angegebene Factoid setzen, das auf dem Analysehinweisknoten festgelegt wurde (siehe [**IContextNode::GetType**](icontextnode-gettype.md) und [Analysis Hint Properties](analysis-hint-properties.md)).
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_GuideNotSupported"></span><span id="analysiswarningcode_guidenotsupported"></span><span id="ANALYSISWARNINGCODE_GUIDENOTSUPPORTED"></span>**AnalysisWarningCode \_ guidenotsupported**
+<span id="AnalysisWarningCode_GuideNotSupported"></span><span id="analysiswarningcode_guidenotsupported"></span><span id="ANALYSISWARNINGCODE_GUIDENOTSUPPORTED"></span>**AnalysisWarningCode \_ GuideNotSupported**
 </dt> <dd>
 
-Die frei Handerkennung konnte den festgelegten Leitfaden für den Analyse Hinweis Knoten nicht berücksichtigen (siehe die Eigenschaften [**icontextnode:: GetType**](icontextnode-gettype.md) und [Analysis Hint](analysis-hint-properties.md)).
+Die Ink-Erkennen konnte die angegebene Anleitung, die auf dem Analysehinweisknoten festgelegt wurde, nicht verwenden (siehe [**IContextNode::GetType**](icontextnode-gettype.md) und [Analysis Hint Properties](analysis-hint-properties.md)).
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_WordlistNotSupported"></span><span id="analysiswarningcode_wordlistnotsupported"></span><span id="ANALYSISWARNINGCODE_WORDLISTNOTSUPPORTED"></span>**AnalysisWarningCode \_ wordlistnotsupported**
+<span id="AnalysisWarningCode_WordlistNotSupported"></span><span id="analysiswarningcode_wordlistnotsupported"></span><span id="ANALYSISWARNINGCODE_WORDLISTNOTSUPPORTED"></span>**AnalysisWarningCode \_ WordlistNotSupported**
 </dt> <dd>
 
-Die frei Handerkennung konnte den angegebenen Word-Listen Satz im Knoten "Analyse Hinweis" nicht beachten (siehe die Eigenschaften [**icontextnode:: GetType**](icontextnode-gettype.md) und [Analysis Hint](analysis-hint-properties.md)).
+Die Ink-Erkennen konnte den angegebenen Wortlistensatz auf dem Analysehinweisknoten nicht verwenden (siehe [**IContextNode::GetType**](icontextnode-gettype.md) und [Analysis Hint Properties](analysis-hint-properties.md)).
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_WordModeNotSupported"></span><span id="analysiswarningcode_wordmodenotsupported"></span><span id="ANALYSISWARNINGCODE_WORDMODENOTSUPPORTED"></span>**AnalysisWarningCode \_ wordmudenotsupported**
+<span id="AnalysisWarningCode_WordModeNotSupported"></span><span id="analysiswarningcode_wordmodenotsupported"></span><span id="ANALYSISWARNINGCODE_WORDMODENOTSUPPORTED"></span>**AnalysisWarningCode \_ WordModeNotSupported**
 </dt> <dd>
 
-Die frei Handerkennung konnte den im Knoten ' Analyse Hinweis ' festgelegten Wort Modus nicht berücksichtigen (siehe die Eigenschaften [**icontextnode:: GetType**](icontextnode-gettype.md) und [Analysis Hint](analysis-hint-properties.md)).
+Die Ink-Erkennen konnte den angegebenen Wortmodus, der auf dem Analysehinweisknoten festgelegt wurde, nicht verwenden (siehe [**IContextNode::GetType**](icontextnode-gettype.md) und [Analysis Hint Properties](analysis-hint-properties.md)).
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_PartialDictionaryTermsNotSupported"></span><span id="analysiswarningcode_partialdictionarytermsnotsupported"></span><span id="ANALYSISWARNINGCODE_PARTIALDICTIONARYTERMSNOTSUPPORTED"></span>**AnalysisWarningCode \_ partialdiktattionarytermsnotsupported**
+<span id="AnalysisWarningCode_PartialDictionaryTermsNotSupported"></span><span id="analysiswarningcode_partialdictionarytermsnotsupported"></span><span id="ANALYSISWARNINGCODE_PARTIALDICTIONARYTERMSNOTSUPPORTED"></span>**AnalysisWarningCode \_ PartialDictionaryTermsNotSupported**
 </dt> <dd>
 
-Gibt an, dass partielle Wörterbuch Ausdrücke von [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md)nicht zurückgegeben werden konnten.
+Gibt an, dass partielle Wörterbuchbegriffe nicht vom [**IInkAnalysisRecognizer zurückgegeben werden konnten.**](iinkanalysisrecognizer.md)
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_TextRecognitionProcessFailed"></span><span id="analysiswarningcode_textrecognitionprocessfailed"></span><span id="ANALYSISWARNINGCODE_TEXTRECOGNITIONPROCESSFAILED"></span>**AnalysisWarningCode \_ textrecognitionprocessfailed**
+<span id="AnalysisWarningCode_TextRecognitionProcessFailed"></span><span id="analysiswarningcode_textrecognitionprocessfailed"></span><span id="ANALYSISWARNINGCODE_TEXTRECOGNITIONPROCESSFAILED"></span>**AnalysisWarningCode \_ TextRecognitionProcessFailed**
 </dt> <dd>
 
-Gibt an, dass der Text Erkennungsprozess fehlgeschlagen ist.
+Gibt an, dass der Texterkennungsprozess fehlgeschlagen ist.
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_AddInkToRecognizerFailed"></span><span id="analysiswarningcode_addinktorecognizerfailed"></span><span id="ANALYSISWARNINGCODE_ADDINKTORECOGNIZERFAILED"></span>**AnalysisWarningCode \_ addinktorecognizerfailed**
+<span id="AnalysisWarningCode_AddInkToRecognizerFailed"></span><span id="analysiswarningcode_addinktorecognizerfailed"></span><span id="ANALYSISWARNINGCODE_ADDINKTORECOGNIZERFAILED"></span>**AnalysisWarningCode \_ AddInkToRecognizerFailed**
 </dt> <dd>
 
-Die frei Hand Eingaben konnten nicht zu [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md)hinzugefügt werden. Beispielsweise tritt beim Hinzufügen von Strichen, die von einer Maus in einer Gestenerkennung gesammelt werden, ein Fehler auf, da die Gestenerkennung die von einem Digitalisierer gesammelten Striche erfordert.
+Die Ink konnte dem [**IInkAnalysisRecognizer nicht hinzugefügt werden.**](iinkanalysisrecognizer.md) Beispielsweise kann das Hinzufügen von Strichen, die von einer Maus auf einer Gestenerkennung erfasst werden, fehlschlagen, da die Gestenerkennung Striche erfordert, die von einem Digitizer gesammelt werden.
 
 </dd> <dt>
 
 <span id="AnalysisWarningCode_SetPrefixSuffixFailed"></span><span id="analysiswarningcode_setprefixsuffixfailed"></span><span id="ANALYSISWARNINGCODE_SETPREFIXSUFFIXFAILED"></span>**AnalysisWarningCode \_ SetPrefixSuffixFailed**
 </dt> <dd>
 
-Das angegebene Präfix oder der Suffixtext eines Analyse Hinweis Knotens konnte von [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) nicht berücksichtigt werden (siehe [**icontextnode:: GetType**](icontextnode-gettype.md) -und [Analysis Hint-Eigenschaften](analysis-hint-properties.md)).
+Der [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) konnte den angegebenen Präfix- oder Suffixtext eines Analysehinweisknotens nicht achten (siehe [**IContextNode::GetType**](icontextnode-gettype.md) und [Analysis Hint Properties](analysis-hint-properties.md)).
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_InkAnalysisRecognizerInitializationFailed"></span><span id="analysiswarningcode_inkanalysisrecognizerinitializationfailed"></span><span id="ANALYSISWARNINGCODE_INKANALYSISRECOGNIZERINITIALIZATIONFAILED"></span>**AnalysisWarningCode \_ inkanalysiserkenzerinitializationfailed**
+<span id="AnalysisWarningCode_InkAnalysisRecognizerInitializationFailed"></span><span id="analysiswarningcode_inkanalysisrecognizerinitializationfailed"></span><span id="ANALYSISWARNINGCODE_INKANALYSISRECOGNIZERINITIALIZATIONFAILED"></span>**AnalysisWarningCode \_ InkAnalysisRecognizerInitializationFailed**
 </dt> <dd>
 
-[**Iinkanalyzer**](iinkanalyzer.md) konnte keine Striche für [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md)instanziieren, Klonen oder festlegen.
+[**IInkAnalyzer**](iinkanalyzer.md) konnte keine Striche auf dem [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md)instanziieren, klonen oder festlegen.
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_ConfirmedWithoutInkRecognition"></span><span id="analysiswarningcode_confirmedwithoutinkrecognition"></span><span id="ANALYSISWARNINGCODE_CONFIRMEDWITHOUTINKRECOGNITION"></span>**AnalysisWarningCode \_ confirmedwithoutinkrecognition**
+<span id="AnalysisWarningCode_ConfirmedWithoutInkRecognition"></span><span id="analysiswarningcode_confirmedwithoutinkrecognition"></span><span id="ANALYSISWARNINGCODE_CONFIRMEDWITHOUTINKRECOGNITION"></span>**AnalysisWarningCode \_ ConfirmedWithoutInkRecognition**
 </dt> <dd>
 
-Gibt an, dass ein [**icontextnode**](icontextnode.md) -Objekt vom Benutzer bestätigt wurde, ohne dass für den Knoten Erkennungswerte berechnet wurden.
+Gibt an, dass [**ein IContextNode-Objekt**](icontextnode.md) vom Benutzer bestätigt wurde, ohne dass erkennungswerte für den Knoten berechnet wurden.
 
 </dd> <dt>
 
 <span id="AnalysisWarningCode_BackgroundException"></span><span id="analysiswarningcode_backgroundexception"></span><span id="ANALYSISWARNINGCODE_BACKGROUNDEXCEPTION"></span>**AnalysisWarningCode \_ BackgroundException**
 </dt> <dd>
 
-Der Hintergrund Vorgang wurde aufgrund einer Ausnahme nicht durchgeführt. Dies ist ein schwerwiegender Fehler und erfordert, dass [**iinkanalyzer**](iinkanalyzer.md) vor der weiteren Verwendung erneut instanziiert wird.
+Der Hintergrundvorgang wurde aufgrund einer Ausnahme nicht abgeschlossen. Dies ist ein schwerwiegender Fehler und erfordert, dass [**IInkAnalyzer**](iinkanalyzer.md) vor der weiteren Verwendung erneut instanziiert wird.
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_ContextNodeLocationNotSet"></span><span id="analysiswarningcode_contextnodelocationnotset"></span><span id="ANALYSISWARNINGCODE_CONTEXTNODELOCATIONNOTSET"></span>**AnalysisWarningCode \_ contextnodelta ocationnotset**
+<span id="AnalysisWarningCode_ContextNodeLocationNotSet"></span><span id="analysiswarningcode_contextnodelocationnotset"></span><span id="ANALYSISWARNINGCODE_CONTEXTNODELOCATIONNOTSET"></span>**AnalysisWarningCode \_ ContextNodeLocationNotSet**
 </dt> <dd>
 
-Gibt an, dass für ein [**icontextnode**](icontextnode.md) -Objekt kein geeigneter Speicherort festgelegt ist (siehe [**icontextnode:: setLocation**](icontextnode-setlocation.md)). Die [**icontextnode:: getLocation**](icontextnode-getlocation.md) -Methode muss einen nicht leeren Wert zurückgeben, es sei denn, das **icontextnode** -Objekt ist als teilweise aufgefüllt gekennzeichnet.
+Gibt an, dass [**für ein IContextNode-Objekt**](icontextnode.md) kein ordnungsgemäßer Speicherort festgelegt ist (siehe [**IContextNode::SetLocation**](icontextnode-setlocation.md)). Die [**IContextNode::GetLocation-Methode**](icontextnode-getlocation.md) muss einen nicht leeren Wert zurückgeben, es sei denn, das **IContextNode-Objekt** ist als teilweise aufgefüllt markiert.
 
 </dd> <dt>
 
 <span id="AnalysisWarningCode_LanguageIdNotRespected"></span><span id="analysiswarningcode_languageidnotrespected"></span><span id="ANALYSISWARNINGCODE_LANGUAGEIDNOTRESPECTED"></span>**AnalysisWarningCode \_ LanguageIdNotRespected**
 </dt> <dd>
 
-Die Sprach-ID, die auf einem Strich festgelegt ist, der einem benutzerdefinierten Erkennungs Knoten (siehe [**icontextnode:: GetType**](icontextnode-gettype.md)) zugeordnet ist, entsprach nicht der Sprach-ID des verwendeten [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) . Die frei Hand Eingabe wurde mit dem angegebenen **iinkanalysiserkenzer** noch immer erkannt.
+Der Sprachbezeichner, der für einen Strich festgelegt wurde, der einem benutzerdefinierten Erkennungsknoten zugeordnet ist (siehe [**IContextNode::GetType**](icontextnode-gettype.md)), hat nicht mit dem Sprachbezeichner des [**verwendeten IInkAnalysisRecognizers**](iinkanalysisrecognizer.md) übereingestrichen. Die Ink-Datei wurde weiterhin mit dem angegebenen **IInkAnalysisRecognizer erkannt.**
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_EnableUnicodeCharacterRangesNotSupported"></span><span id="analysiswarningcode_enableunicodecharacterrangesnotsupported"></span><span id="ANALYSISWARNINGCODE_ENABLEUNICODECHARACTERRANGESNOTSUPPORTED"></span>**AnalysisWarningCode \_ enableunicodecharakterrangesnotsupported**
+<span id="AnalysisWarningCode_EnableUnicodeCharacterRangesNotSupported"></span><span id="analysiswarningcode_enableunicodecharacterrangesnotsupported"></span><span id="ANALYSISWARNINGCODE_ENABLEUNICODECHARACTERRANGESNOTSUPPORTED"></span>**AnalysisWarningCode \_ EnableUnicodeCharacterRangesNotSupported**
 </dt> <dd>
 
-Der [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) unterstützt das Aktivieren von Unicode-Zeichen Bereichen nicht wie angegeben.
+Der [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) unterstützt das Aktivieren von Unicode-Zeichenbereichen nicht wie angegeben.
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_TopInkBreaksOnlyNotSupported"></span><span id="analysiswarningcode_topinkbreaksonlynotsupported"></span><span id="ANALYSISWARNINGCODE_TOPINKBREAKSONLYNOTSUPPORTED"></span>**AnalysisWarningCode \_ topinkbreaksonlynotsupported**
+<span id="AnalysisWarningCode_TopInkBreaksOnlyNotSupported"></span><span id="analysiswarningcode_topinkbreaksonlynotsupported"></span><span id="ANALYSISWARNINGCODE_TOPINKBREAKSONLYNOTSUPPORTED"></span>**AnalysisWarningCode \_ TopInkBreaksOnlyNotSupported**
 </dt> <dd>
 
-Der [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) unterstützt keine topinkbreaks, auch wenn die Hinweise nur die Anforderung für topinkbreaks enthalten.
+Der [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) unterstützt TopInkBreaks nur dann nicht, wenn die Hinweise die Anforderung nur für TopInkBreaks enthielten.
 
 </dd> <dt>
 
-<span id="AnalysisWarningCode_AnalysisAlreadyRunning"></span><span id="analysiswarningcode_analysisalreadyrunning"></span><span id="ANALYSISWARNINGCODE_ANALYSISALREADYRUNNING"></span>**AnalysisWarningCode \_ analysisalleseryrunning**
+<span id="AnalysisWarningCode_AnalysisAlreadyRunning"></span><span id="analysiswarningcode_analysisalreadyrunning"></span><span id="ANALYSISWARNINGCODE_ANALYSISALREADYRUNNING"></span>**AnalysisWarningCode \_ AnalysisAlreadyRunning**
 </dt> <dd>
 
-Der [**iinkanalyzer**](iinkanalyzer.md) führt bereits eine Hintergrundanalyse durch.
+Der [**IInkAnalyzer wird**](iinkanalyzer.md) bereits eine Hintergrundanalyse durchführen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**AnalysisWarningCode \_ BackgroundException** ist der einzige Warnungs Codewert, der erfordert, dass das [**iinkanalyzer**](iinkanalyzer.md) -Objekt vor der weiteren Verwendung erneut instanziiert wird.
+**AnalysisWarningCode \_ BackgroundException ist** der einzige Warncodewert, der erfordert, dass das [**IInkAnalyzer-Objekt**](iinkanalyzer.md) vor der weiteren Verwendung erneut instanziiert wird.
 
-Andere Code Werte für Warnungen, wie z. b. **AnalysisWarningCode \_ inkanalysiserkenzerinitializationfailed** und **AnalysisWarningCode \_ nomatchinginkanalysiserkenzerfound**, erfordern möglicherweise, dass das [**iinkanalyzer**](iinkanalyzer.md) -Objekt eine andere Erkennung verwendet.
+Andere Codewerte für Warnungen, z. B. **AnalysisWarningCode \_ InkAnalysisRecognizerInitializationFailed** und **AnalysisWarningCode \_ NoMatchingInkAnalysisRecognizerFound,** erfordern möglicherweise, dass das [**IInkAnalyzer-Objekt**](iinkanalyzer.md) eine andere Erkennen verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -204,9 +204,9 @@ Andere Code Werte für Warnungen, wie z. b. **AnalysisWarningCode \_ inkanalysis
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 
 
 
@@ -214,10 +214,10 @@ Andere Code Werte für Warnungen, wie z. b. **AnalysisWarningCode \_ inkanalysis
 
 <dl> <dt>
 
-[**Ianalysiswarning:: getwarningcode**](ianalysiswarning-getwarningcode.md)
+[**IAnalysisWarning::GetWarningCode**](ianalysiswarning-getwarningcode.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

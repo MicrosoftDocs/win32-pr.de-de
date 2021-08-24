@@ -1,31 +1,31 @@
 ---
-description: Gibt an, ob eine ASF-Datei (Advanced Systems Format) beliebige Audiostreams enthält.
+description: Gibt an, ob eine ASF-Datei (Advanced Systems Format) Audiostreams enthält.
 ms.assetid: b7c5cd67-fd2a-49d8-8de5-61783a3b4577
-title: MF_PD_ASF_INFO_HAS_AUDIO-Attribut (wmcontainer. h)
+title: MF_PD_ASF_INFO_HAS_AUDIO -Attribut (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a5e2fbf9698e470af92cbd21fc5f26883dc5fd79
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 17be78de672b8de4e58e0aacb3cafbb8f52e1b8e43dd991a9b1f60fb709b2091
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217027"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119600350"
 ---
-# <a name="mf_pd_asf_info_has_audio-attribute"></a>MF \_ PD \_ \_ -ASF \_ -Info hat \_ audioattribut
+# <a name="mf_pd_asf_info_has_audio-attribute"></a>MF \_ PD \_ ASF INFO HAS AUDIO \_ \_ \_ attribute
 
-Gibt an, ob eine ASF-Datei (Advanced Systems Format) beliebige Audiostreams enthält.
+Gibt an, ob eine ASF-Datei (Advanced Systems Format) Audiostreams enthält.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Als booleschen Wert behandeln.
+Als boolescher Wert behandeln.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Präsentations Deskriptoren für den ASF-Inhalt. Wenn der Wert **true** ist, enthält die Datei mindestens einen Audiodatenstrom. Andernfalls enthält die Datei keine Audiodatenströme.
+Dieses Attribut gilt für Präsentationsdeskriptoren für ASF-Inhalte. Wenn der Wert **TRUE ist,** verfügt die Datei über mindestens einen Audiostream. Andernfalls enthält die Datei keine Audiostreams.
 
-Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) -Methode generiert dieses Attribut aus den ASF-Metadaten.
+Die [**IMFASFContentInfo::GeneratePresentationDescriptor-Methode**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) generiert dieses Attribut aus den ASF-Metadaten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,9 +33,9 @@ Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/a
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
@@ -43,22 +43,22 @@ Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/a
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEs::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEs::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF presentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
+[**BESCHRIFTungDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
 </dt> <dt>
 
-[Präsentations deskriptorattribute](presentation-descriptor-attributes.md)
+[Präsentationsdeskriptorattribute](presentation-descriptor-attributes.md)
 </dt> <dt>
 
-[ASF-Header Objekt](asf-file-structure.md)
+[ASF-Headerobjekt](asf-file-structure.md)
 </dt> </dl>
 
  

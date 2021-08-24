@@ -1,7 +1,7 @@
 ---
-description: Mit der setwindowfore-Methode wird das Videofenster in den Vordergrund verschoben, und der Fokus erhält optional den Fokus.
+description: Die SetWindowForeground-Methode verschiebt das Videofenster in den Vordergrund und gibt ihm optional den Fokus.
 ms.assetid: 41c26bff-0023-41ad-bca8-8f0c43c94814
-title: Cbasecontrolwindow. setwindowvorder-Methode (ctlutil. h)
+title: CBaseControlWindow.SetWindowForeground-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 52c9a37f23b555e140bfd541cf0b5e8e782f8d51
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 87a6768c8864de45d50dc630773b756dfad43759adbf4b09ed8070febd37f4d1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119635470"
 ---
-# <a name="cbasecontrolwindowsetwindowforeground-method"></a>Cbasecontrolwindow. setwindowvorder Grund-Methode
+# <a name="cbasecontrolwindowsetwindowforeground-method"></a>CBaseControlWindow.SetWindowForeground-Methode
 
 Die `SetWindowForeground` -Methode verschiebt das Videofenster in den Vordergrund und gibt ihm optional den Fokus.
 
@@ -45,7 +45,7 @@ HRESULT SetWindowForeground(
 *Fokus* 
 </dt> <dd>
 
-Ein Wert, der angibt, ob das Videofenster den Fokus erhält. Der Wert 1 gibt dem Fenster Fokus und 0 nicht.
+Wert, der angibt, ob das Videofenster den Fokus erhält. Der Wert 1 gibt den Fensterfokus und 0 nicht.
 
 </dd> </dl>
 
@@ -58,8 +58,8 @@ Gibt einen der folgenden Werte zurück.
 | Rückgabecode                                                                                           | Beschreibung                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | <dl> <dt>**NOERROR**</dt> </dl>                | Die Methode wurde erfolgreich ausgeführt.<br/>                                          |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>          | Der Fokus ist nicht gleich 1 oder 0.<br/>                                   |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Der aktuelle Filter ist nicht mit einem kompletten Filter Diagramm verbunden.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>          | Der Fokus entspricht nicht 1 oder 0.<br/>                                   |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der aktuelle Filter ist nicht mit einem vollständigen Filterdiagramm verbunden.<br/> |
 
 
 
@@ -71,16 +71,16 @@ Gibt einen der folgenden Werte zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

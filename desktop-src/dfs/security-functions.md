@@ -1,27 +1,27 @@
 ---
 title: Sicherheitsfunktionen
-description: Die Sicherheitsfunktionen für die Netzwerkverwaltung erhalten und legen Sicherheits Deskriptoren für Domänen basierte und eigenständige DFS-Stämme fest.
+description: Die Sicherheitsfunktionen für die Netzwerkverwaltung erhalten und legen Sicherheitsbeschreibungen für domänenbasierte und eigenständige DFS-Stammstrukturen fest.
 ms.assetid: 90860842-0f4d-49ad-b835-50305328a050
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 95f717ff3f5701e507087fcdac164d9357f2505a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: d31611aa650bb55ecdc29af468e0ef784b670555b247d536d27b397de356f4ec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119677800"
 ---
 # <a name="security-functions"></a>Sicherheitsfunktionen
 
-Die Sicherheitsfunktionen für die Netzwerkverwaltung erhalten und legen Sicherheits Deskriptoren für Domänen basierte und eigenständige DFS-Stämme fest.
+Die Sicherheitsfunktionen für die Netzwerkverwaltung erhalten und legen Sicherheitsbeschreibungen für domänenbasierte und eigenständige DFS-Stammstrukturen fest.
 
-Die DFS-Sicherheitsfunktionen sind nachfolgend aufgeführt.
+Die DFS-Sicherheitsfunktionen sind im Folgenden aufgeführt.
 
 | Funktion                                                               | BESCHREIBUNG                                                                                                          |
 |------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| [**Netdfsgetsecurity**](/windows/desktop/api/lmdfs/nf-lmdfs-netdfsgetsecurity)                         | Ruft die Sicherheits Beschreibung für das Stamm Objekt des angegebenen DFS-Stamms ab.                                       |
-| [**Netdfssetsecurity**](/windows/desktop/api/lmdfs/nf-lmdfs-netdfssetsecurity)                         | Sucht das Stamm Objekt für den angegebenen DFS-Stamm und legt den angegebenen Sicherheits Deskriptor darauf fest.                  |
-| [**Netdfsgetstdcontainersecurity**](/windows/desktop/api/lmdfs/nf-lmdfs-netdfssetftcontainersecurity) | Ruft die Sicherheits Beschreibung für das Container Objekt des angegebenen eigenständigen DFS-Stamms ab.                      |
-| [**Netdfssetstdcontainersecurity**](/windows/desktop/api/lmdfs/nf-lmdfs-netdfssetstdcontainersecurity) | Sucht das Container Objekt für das angegebene eigenständige DFS-Stammverzeichnis und legt die angegebene Sicherheits Beschreibung darauf fest. |
-| [**Netdfsgetftcontainersecurity**](/windows/desktop/api/lmdfs/nf-lmdfs-netdfsgetftcontainersecurity)   | Ruft die Sicherheits Beschreibung für das Container Objekt des angegebenen DFS-Domänen Stamms ab.                           |
-| [**Netdfssetftcontainersecurity**](/windows/desktop/api/lmdfs/nf-lmdfs-netdfssetftcontainersecurity)   | Sucht das Container Objekt für den angegebenen DFS-Domänen Stamm und legt die angegebene Sicherheits Beschreibung darauf fest.      |
+| [**NetDfsGetSecurity**](/windows/desktop/api/lmdfs/nf-lmdfs-netdfsgetsecurity)                         | Ruft den Sicherheitsdeskriptor für das Stammobjekt des angegebenen DFS-Stamms ab.                                       |
+| [**NetDfsSetSecurity**](/windows/desktop/api/lmdfs/nf-lmdfs-netdfssetsecurity)                         | Sucht das Stammobjekt für den angegebenen DFS-Stamm und legt den angegebenen Sicherheitsdeskriptor dafür fest.                  |
+| [**NetDfsGetStdContainerSecurity**](/windows/desktop/api/lmdfs/nf-lmdfs-netdfssetftcontainersecurity) | Ruft den Sicherheitsdeskriptor für das Containerobjekt des angegebenen eigenständigen DFS-Stamms ab.                      |
+| [**NetDfsSetStdContainerSecurity**](/windows/desktop/api/lmdfs/nf-lmdfs-netdfssetstdcontainersecurity) | Sucht das Containerobjekt für den angegebenen eigenständigen DFS-Stamm und legt den angegebenen Sicherheitsdeskriptor darauf fest. |
+| [**NetDfsGetFtContainerSecurity**](/windows/desktop/api/lmdfs/nf-lmdfs-netdfsgetftcontainersecurity)   | Ruft die Sicherheitsbeschreibung für das Containerobjekt des angegebenen DFS-Domänenstamms ab.                           |
+| [**NetDfsSetFtContainerSecurity**](/windows/desktop/api/lmdfs/nf-lmdfs-netdfssetftcontainersecurity)   | Sucht das Containerobjekt für den angegebenen DFS-Domänenstamm und legt den angegebenen Sicherheitsdeskriptor dafür fest.      |

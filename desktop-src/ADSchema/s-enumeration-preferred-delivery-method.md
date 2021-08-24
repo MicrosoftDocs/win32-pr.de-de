@@ -1,10 +1,10 @@
 ---
-title: Enumeration (bevorzugte Übermittlungs Methode)-Syntax
-description: Enumeration (bevorzugte Übermittlungs Methode)-Syntax.
+title: Enumerationssyntax (Preferred-Delivery-Method)
+description: Enumerationssyntax (preferred-delivery-method).
 ms.assetid: fab085bc-8314-4cfb-acc8-5f3ef7fd5467
 ms.tgt_platform: multiple
 keywords:
-- Syntax für Enumeration (bevorzugte Übermittlungs Methode) AD-Schema
+- Enumeration(Preferred-Delivery-Method) syntax AD Schema
 topic_type:
 - apiref
 api_name:
@@ -13,34 +13,34 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bd60f18ad796e086326058dbe7908d31d3e54bc
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: dab46225dc625b887d984ae959ecfddaade7949fd808b02d45887b55d198dbe6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104106713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119702580"
 ---
-# <a name="enumerationpreferred-delivery-method-syntax"></a>Enumeration (bevorzugte Übermittlungs Methode)-Syntax
+# <a name="enumerationpreferred-delivery-method-syntax"></a>Enumerationssyntax (Preferred-Delivery-Method)
 
-Enumeration (bevorzugte Übermittlungs Methode)-Syntax.
+Enumerationssyntax (preferred-delivery-method).
 
 
 
 | Eingabe | Wert |
 |--------------|---------------------------------------------------------------------------|
-| Name         | Enumeration (bevorzugte Zustellungs Methode)                                    |
+| Name         | Enumeration(Preferred-Delivery-Method)                                    |
 | Syntax-ID    | 2.5.5.9                                                                   |
 | OM-ID        | 10                                                                        |
 | MAPI-Typ    | LONG                                                                      |
-| ADS-Typ     | adstype- \_ Ganzzahl                                                          |
-| Varianttyp | VT \_ I4                                                                    |
+| ADS-Typ     | ADSTYPE \_ INTEGER                                                          |
+| Variant-Typ | VT \_ I4                                                                    |
 | SDS-Typ     | [System.Int32](/dotnet/api/system.int32) |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Definiert durch die ITU-. Active Directory behandelt dies als ganze Zahl.
+Definiert durch die ITU. Active Directory behandelt dies als ganze Zahl.
 
 ## <a name="see-also"></a>Siehe auch
 

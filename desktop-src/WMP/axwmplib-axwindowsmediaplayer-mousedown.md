@@ -3,7 +3,7 @@ title: MouseDown-Ereignis des AxWindowsMediaPlayer-Objekts
 description: Das MouseDown-Ereignis tritt auf, wenn der Benutzer eine Maustaste drückt. | MouseDown-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: 3dfbd034-67d4-4b7e-88d8-a77d301c5df7
 keywords:
-- MouseDown-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- MouseDown-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0779df27f406691903a0362c9eb3a1df993f595f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 73259fab6ffd268e1c9a581a4b7ba18fdfba6c1647b57ef12bcae1c3ab8c04a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119509450"
 ---
 # <a name="mousedown-event-of-the-axwindowsmediaplayer-object"></a>MouseDown-Ereignis des AxWindowsMediaPlayer-Objekts
 
@@ -41,16 +41,16 @@ Private Sub player_MouseDownEvent(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ mousdownetventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ moussdowmavent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ MouseDownEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ MouseDownEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                    |
+| Eigenschaft    | Beschreibung                                                                                                                                                                                                                                                                                                                    |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| nschaltfläche     | System. Int16A Bitfeld mit Bits, die der linken Schaltfläche (Bit 0), der rechten Schaltfläche (Bit 1) und der mittleren Schaltfläche (Bit 2) entsprechen. Diese Bits entsprechen den Werten 1, 2 und 4. Es wird nur einer der Bits festgelegt, der die Schaltfläche angibt, die das Ereignis verursacht hat.<br/>                                                |
-| nshiftstate | System. Int16A Bitfeld mit den geringsten signifikanten Bits, die der Umschalttaste (Bit 0), der STRG-Taste (Bit 1) und der Alt-Taste (Bit 2) entsprechen. Diese Bits entsprechen den Werten 1, 2 und 4. Einige, alle oder keine der Bits können festgelegt werden. Dies deutet darauf hin, dass einige, alle oder keine der Schlüssel gedrückt werden.<br/> |
-| Designer          | System. Int32The x-Koordinate des Mauszeigers relativ zur linken oberen Ecke des Steuer Elements.<br/>                                                                                                                                                                                                                 |
-| herrlichen          | System. Int32The y-Koordinate des Mauszeigers relativ zur linken oberen Ecke des Steuer Elements.<br/>                                                                                                                                                                                                                 |
+| nButton     | System.Int16A-Bitfeld mit Bits, die der linken Schaltfläche (Bit 0), der rechten Schaltfläche (Bit 1) und der mittleren Schaltfläche (Bit 2) entsprechen. Diese Bits entsprechen den Werten 1, 2 bzw. 4. Es wird nur eines der Bits festgelegt, das die Schaltfläche angibt, die das Ereignis verursacht hat.<br/>                                                |
+| nShiftState | System.Int16A-Bitfeld mit den am wenigsten signifikanten Bits, die der UMSCHALTTASTE (Bit 0), der STRG-Taste (Bit 1) und der ALT-Taste (Bit 2) entsprechen. Diese Bits entsprechen den Werten 1, 2 bzw. 4. Einige, alle oder keine der Bits können festgelegt werden, was darauf hinweist, dass einige, alle oder keine der Tasten gedrückt werden.<br/> |
+| Fx          | System.Int32Die x-Koordinate des Mauszeigers relativ zur linken oberen Ecke des Steuerelements.<br/>                                                                                                                                                                                                                 |
+| Fy          | System.Int32Die y-Koordinate des Mauszeigers relativ zur linken oberen Ecke des Steuerelements.<br/>                                                                                                                                                                                                                 |
 
 
 
@@ -62,7 +62,7 @@ Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents 
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -72,7 +72,7 @@ Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents 
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

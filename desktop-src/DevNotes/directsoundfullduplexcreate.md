@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "directsoundfullduplexcreate" ist unter einem anderen Namen dokumentiert. Eine umfassende Dokumentation zu dieser Funktion finden Sie unter DirectSoundFullDuplexCreate8.
+description: Die DirectSoundFullDuplexCreate-Funktion ist unter einem anderen Namen dokumentiert. Die vollständige Dokumentation dieser Funktion finden Sie unter DirectSoundFullDuplexCreate8.
 ms.assetid: 321d6dd5-b9bd-4cb9-93cb-8db7b7792579
-title: Directsoundfullduplexcreate-Funktion (DSound. h)
+title: DirectSoundFullDuplexCreate-Funktion (Dsound.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Dsound.dll
-ms.openlocfilehash: 947f31d67a007e050f4ed031e2a15c5964fa63a1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 52a60c3cf77d1416cfe1d096b17c0892f2590b74894e09c325ad1c530c07ac22
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654120"
 ---
-# <a name="directsoundfullduplexcreate-function"></a>Directsoundfullduplexcreate-Funktion
+# <a name="directsoundfullduplexcreate-function"></a>DirectSoundFullDuplexCreate-Funktion
 
-Die Funktion " **directsoundfullduplexcreate** " ist unter einem anderen Namen dokumentiert. Eine umfassende Dokumentation zu dieser Funktion finden Sie unter [DirectSoundFullDuplexCreate8](/previous-versions//bb219695(v=vs.85)).
+Die **DirectSoundFullDuplexCreate-Funktion** ist unter einem anderen Namen dokumentiert. Eine vollständige Dokumentation dieser Funktion finden Sie unter [DirectSoundFullDuplexCreate8](/previous-versions//bb219695(v=vs.85)).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ HRESULT DirectSoundFullDuplexCreate(
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DSound. h</dt> </dl>   |
+| Header<br/> | <dl> <dt>Dsound.h</dt> </dl>   |
 | DLL<br/>    | <dl> <dt>Dsound.dll</dt> </dl> |
 
 

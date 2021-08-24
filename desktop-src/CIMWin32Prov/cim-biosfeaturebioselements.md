@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ biosfeaturebioselements-Klasse ordnet eine BIOS-Funktion und deren aggregierte BIOS-Elemente zu.
+description: Die \_ CIM-Klasse BIOSFeatureBIOSElements ordnet ein BIOS-Feature und seine aggregierten BIOS-Elemente zu.
 ms.assetid: 84ebd6d0-af42-4e82-bad3-1f934789cbfe
 ms.tgt_platform: multiple
 title: CIM_BIOSFeatureBIOSElements-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: a5a4eecea97b4d82fadcdc521d378b5b32d986b9
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7af2928625084b84ceff8895f15b5b426ebe82105074401c4bbab7eba46f3e02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127197"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119701024"
 ---
-# <a name="cim_biosfeaturebioselements-class"></a>CIM \_ biosfeaturebioselements-Klasse
+# <a name="cim_biosfeaturebioselements-class"></a>CIM \_ BIOSFeatureBIOSElements-Klasse
 
-Die **CIM \_ biosfeaturebioselements** -Klasse ordnet eine BIOS-Funktion und deren aggregierte BIOS-Elemente zu.
+Die **\_ CIM-Klasse BIOSFeatureBIOSElements** ordnet ein BIOS-Feature und seine aggregierten BIOS-Elemente zu.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,55 +47,55 @@ class CIM_BIOSFeatureBIOSElements : CIM_SoftwareFeatureSoftwareElements
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ biosfeaturebioselements** " verfügt über diese Typen von Membern:
+Die **CIM \_ BIOSFeatureBIOSElements-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ biosfeaturebioselements** " verfügt über diese Eigenschaften.
+Die **CIM \_ BIOSFeatureBIOSElements-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ biosfeature**
+Datentyp: **CIM \_ BIOSFeature**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
 </dt> </dl>
 
-Ein [**CIM- \_ biosfeature**](cim-biosfeature.md) , das die BIOS-Funktion beschreibt.
+Ein [**\_ CIM-BIOSFeature,**](cim-biosfeature.md) das das BIOS-Feature beschreibt.
 
 </dd> <dt>
 
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ bioselements**
+Datentyp: **CIM \_ BIOSElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Ein [**CIM- \_ bioselement**](cim-bioselement.md) , das das BIOS-Element beschreibt, das die von der BIOS-Funktion beschriebenen Funktionen implementiert.
+Ein [**\_ CIM-BIOSElement,**](cim-bioselement.md) das das BIOS-Element beschreibt, das die durch das BIOS-Feature beschriebenen Funktionen implementiert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die CIM-Klasse " **\_ biosfeaturebioselements** " ist von " [**CIM \_ softwarefeaturesoftwareelements**](cim-softwarefeaturesoftwareelements.md)" abgeleitet.
+Die **CIM \_ BIOSFeatureBIOSElements-Klasse** wird von [**CIM \_ SoftwareFeatureSoftwareElements abgeleitet.**](cim-softwarefeaturesoftwareelements.md)
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,8 +105,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -115,7 +115,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ softwarefeaturesoftwareelements**](cim-softwarefeaturesoftwareelements.md)
+[**CIM \_ SoftwareFeatureSoftwareElements**](cim-softwarefeaturesoftwareelements.md)
 </dt> </dl>
 
  

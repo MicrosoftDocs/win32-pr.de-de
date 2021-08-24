@@ -1,41 +1,41 @@
 ---
-description: In diesem Abschnitt werden die Erkennungs Strukturen beschrieben.
+description: In diesem Abschnitt werden die Recognizer-Strukturen beschrieben.
 ms.assetid: 4c17391f-7af4-42ab-b77f-e3c39cadc0b6
-title: Erkennungs Strukturen
+title: Erkennen von Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: addaccf3e69f35b99379710d681fe8ac45559ea1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 37b04dbee480993a50c3ed3b8847e6595df76347f36a179d1205d8b49807c955
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119596590"
 ---
-# <a name="recognizer-structures"></a>Erkennungs Strukturen
+# <a name="recognizer-structures"></a>Erkennen von Strukturen
 
-In diesem Abschnitt werden die Erkennungs Strukturen beschrieben.
+In diesem Abschnitt werden die Recognizer-Strukturen beschrieben.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Struktur                                                    | BESCHREIBUNG                                                                                                                                                   |
+| Struktur                                                    | Beschreibung                                                                                                                                                   |
 |--------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Zeichen \_ Bereich**](/windows/win32/api/rectypes/ns-rectypes-character_range)                  | Gibt einen Bereich von Unicode-Punkten (Zeichen) an.<br/>                                                                                                  |
-| [**Gitter \_ Metriken**](/windows/win32/api/rectypes/ns-rectypes-lattice_metrics)                  | Beschreibt die Baseline und die Höhe in der Mitte.<br/>                                                                                                     |
-| [**Linien \_ Segment**](/windows/win32/api/rectypes/ns-rectypes-line_segment)                        | Beschreibt die Start-und Endpunkte eines Linien Erkennungs Segments, z. b. die Baseline oder die mittlere Linie.<br/>                                                 |
-| [**Paket \_ Beschreibung**](/windows/desktop/api/tpcshrd/ns-tpcshrd-packet_description)            | Beschreibt den Inhalt des Pakets für einen bestimmten Tablet-Kontext.<br/>                                                                               |
-| [**Paket \_ Eigenschaft**](/windows/desktop/api/tpcshrd/ns-tpcshrd-packet_property)                  | Beschreibt eine Paket Eigenschaft, die vom Tablet-Treiber gemeldet wird.<br/>                                                                                 |
-| [**\_eigenschaftsmetriken**](/windows/desktop/api/tpcshrd/ns-tpcshrd-property_metrics)                | Definiert den Bereich und die Auflösung einer Paket Eigenschaft.<br/>                                                                                             |
-| [**Reco \_**](/windows/win32/api/rectypes/ns-rectypes-reco_attrs)                            | Ruft die Attribute einer Erkennung ab oder gibt an, welche Attribute verwendet werden sollen, wenn Sie nach einer installierten Erkennung suchen.<br/>                         |
-| [**Leitfaden für die Einführung \_**](/windows/win32/api/rectypes/ns-rectypes-reco_guide)                            | Definiert die Begrenzungen der frei Hand Eingaben an die Erkennung.<br/>                                                                                               |
-| [**Reco- \_ Gitter**](/windows/win32/api/rectypes/ns-rectypes-reco_lattice)                        | Fungiert als Einstiegspunkt in ein Gitter.<br/>                                                                                                          |
-| [**Reco- \_ Gitter \_ Spalte**](/windows/win32/api/rectypes/ns-rectypes-reco_lattice_column)         | Stellt eine Spalte im Gitter dar.<br/>                                                                                                                |
-| [**Reco- \_ Gitter \_ Element**](/windows/win32/api/rectypes/ns-rectypes-reco_lattice_element)       | Entspricht einem Wort oder einem ostasiatischen Zeichen, in der Regel; ein Element kann jedoch auch einer Geste, einer Form oder einem anderen Code entsprechen.<br/> |
-| [**Eigenschaften von "Reco" \_ \_**](/windows/win32/api/rectypes/ns-rectypes-reco_lattice_properties) | Enthält ein Array von Zeigern zu Eigenschafts Strukturen.<br/>                                                                                              |
-| [**Reco- \_ Gitter \_ Eigenschaft**](/windows/win32/api/rectypes/ns-rectypes-reco_lattice_property)     | Enthält eine Eigenschaft, die im Gitter verwendet wird.<br/>                                                                                                           |
-| [**Bereich "Reco" \_**](/windows/win32/api/rectypes/ns-rectypes-reco_range)                            | Bezeichnet einen Zeichenbereich in der Ergebnis Zeichenfolge.<br/>                                                                                             |
-| [**Strich \_ Bereich**](/windows/win32/api/tpcshrd/ns-tpcshrd-stroke_range)                        | Gibt einen Bereich von Strichen im [**InkDisp**](inkdisp-class.md) -Objekt an.<br/>                                                                       |
+| [**\_ZEICHENBEREICH**](/windows/win32/api/rectypes/ns-rectypes-character_range)                  | Gibt einen Bereich von Unicode-Punkten (Zeichen) an.<br/>                                                                                                  |
+| [**LATTICE-METRIKEN \_**](/windows/win32/api/rectypes/ns-rectypes-lattice_metrics)                  | Beschreibt die Baseline und die Höhe der Mittleren.<br/>                                                                                                     |
+| [**LINE \_ SEGMENT**](/windows/win32/api/rectypes/ns-rectypes-line_segment)                        | Beschreibt die Start- und Endpunkte eines Linienerkennungssegments, z. B. die Baseline oder die Mittellinie.<br/>                                                 |
+| [**\_PAKETBESCHREIBUNG**](/windows/desktop/api/tpcshrd/ns-tpcshrd-packet_description)            | Beschreibt den Inhalt des Pakets für einen bestimmten Tablet-Kontext.<br/>                                                                               |
+| [**\_PACKET-EIGENSCHAFT**](/windows/desktop/api/tpcshrd/ns-tpcshrd-packet_property)                  | Beschreibt eine Paketeigenschaft, die vom Tablettreiber gemeldet wird.<br/>                                                                                 |
+| [**\_EIGENSCHAFTENMETRIKEN**](/windows/desktop/api/tpcshrd/ns-tpcshrd-property_metrics)                | Definiert den Bereich und die Auflösung einer Paketeigenschaft.<br/>                                                                                             |
+| [**RECO \_ ATTRS**](/windows/win32/api/rectypes/ns-rectypes-reco_attrs)                            | Ruft die Attribute einer Erkannten ab oder gibt an, welche Attribute beim Suchen nach einer installierten Recognizer verwendet werden.<br/>                         |
+| [**LEITFADEN \_ ZU RECO**](/windows/win32/api/rectypes/ns-rectypes-reco_guide)                            | Definiert die Begrenzungen der Ink-Datei für die Recognizer-Datei.<br/>                                                                                               |
+| [**\_RECO-LATTICE**](/windows/win32/api/rectypes/ns-rectypes-reco_lattice)                        | Dient als Einstiegspunkt in ein Lattice.<br/>                                                                                                          |
+| [**\_RECO-LATTICE-SPALTE \_**](/windows/win32/api/rectypes/ns-rectypes-reco_lattice_column)         | Stellt eine Spalte im Lattice dar.<br/>                                                                                                                |
+| [**RECO \_ LATTICE-ELEMENT \_**](/windows/win32/api/rectypes/ns-rectypes-reco_lattice_element)       | Entspricht in der Regel einem Wort oder einem ostasiatischen Zeichen. Ein Element kann jedoch auch einer Geste, einer Form oder einem anderen Code entsprechen.<br/> |
+| [**\_RECO-LATTICE-EIGENSCHAFTEN \_**](/windows/win32/api/rectypes/ns-rectypes-reco_lattice_properties) | Enthält ein Array von Zeigern auf Eigenschaftenstrukturen.<br/>                                                                                              |
+| [**\_RECO-LATTICE-EIGENSCHAFT \_**](/windows/win32/api/rectypes/ns-rectypes-reco_lattice_property)     | Enthält eine Eigenschaft, die im Lattice verwendet wird.<br/>                                                                                                           |
+| [**RECO \_ RANGE**](/windows/win32/api/rectypes/ns-rectypes-reco_range)                            | Identifiziert einen Zeichenbereich in der Ergebniszeichenfolge.<br/>                                                                                             |
+| [**\_STRICHBEREICH**](/windows/win32/api/tpcshrd/ns-tpcshrd-stroke_range)                        | Gibt einen Bereich von Strichen im [**InkDisp-Objekt**](inkdisp-class.md) an.<br/>                                                                       |
 
 
 

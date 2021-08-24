@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentunicodelta anguagevalidationfailureexception-Klasse'
-title: Esentunicodelta anguagevalidationfailureexception-Klasse
+description: 'Weitere Informationen zu: EsentUnicodeLanguageValidationFailureException-Klasse'
+title: EsentUnicodeLanguageValidationFailureException-Klasse
 TOCTitle: EsentUnicodeLanguageValidationFailureException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentUnicodeLanguageValidationFailureException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentunicodelanguagevalidationfailureexception(v=EXCHG.10)
@@ -24,28 +24,28 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 27ea6fdc14cb8b46edfc7d9983041d44d2361bd9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 49d4519ad95003809958dd32739ba2739a86625cfb21f8141af6fa6dc8774fe0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363490"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119618540"
 ---
-# <a name="esentunicodelanguagevalidationfailureexception-class"></a>Esentunicodelta anguagevalidationfailureexception-Klasse
+# <a name="esentunicodelanguagevalidationfailureexception-class"></a>EsentUnicodeLanguageValidationFailureException-Klasse
 
-Basisklasse für JET_err. Unicodelta anguagevalidationfailure-Ausnahmen.
+Basisklasse für JET_err. UnicodeLanguageValidationFailure-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentoperationexception](./esentoperationexception-class.md)  
-          Microsoft. ISAM. ESENT. Interop. esentunicodelta anguagevalidationfailureexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentOperationException](./esentoperationexception-class.md)  
+          Microsoft.Isam.Esent.Interop.EsentUnicodeLanguageValidationFailureException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,8 +69,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentunicodelta anguagevalidationfailureexception-Member](./esentunicodelanguagevalidationfailureexception-members.md)
+[EsentUnicodeLanguageValidationFailureException-Member](./esentunicodelanguagevalidationfailureexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

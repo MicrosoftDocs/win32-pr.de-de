@@ -1,7 +1,7 @@
 ---
 description: Legt den minimalen und maximalen Abstand der Schnittmenge zwischen 3D-Objekten fest.
 ms.assetid: da825c70-0c55-4303-b78a-a761ba037182
-title: 'ID3DXPRTEngine:: setminmaxschnitt-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::SetMinMaxIntersection-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 68845f713289c524afc844037ca305909e5b89b0
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2182714588e5d408c6928a677433e68dac44f09abf5ec6bd4cb4d6df7e4acf02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355147"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119629060"
 ---
-# <a name="id3dxprtenginesetminmaxintersection-method"></a>ID3DXPRTEngine:: setminmaxschnitt-Methode
+# <a name="id3dxprtenginesetminmaxintersection-method"></a>ID3DXPRTEngine::SetMinMaxIntersection-Methode
 
-Legt den minimalen und maximalen Abstand der Schnittmenge zwischen 3D-Objekten fest. Diese Entfernungs Werte können verwendet werden, um die minimale oder maximale Entfernung zu steuern, die Objekte durch Schatten oder Licht widerspiegeln können. Beispielsweise kann die-Methode verwendet werden, um den shadodown der in der Nähe befindlichen Funktionen eines 3D-Modells einzuschränken.
+Legt den minimalen und maximalen Abstand der Schnittmenge zwischen 3D-Objekten fest. Diese Entfernungswerte können verwendet werden, um den minimalen oder maximalen Abstand zu steuern, den Objekte überschatten oder lichtreflektionen können. Beispielsweise kann die -Methode verwendet werden, um das Schatten von Features in der Nähe eines 3D-Modells einzuschränken.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetMinMaxIntersection(
 
 <dl> <dt>
 
-der- *Administrator* \[ in\]
+*fMin* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimale Überschneidungs Abweichung. Muss positiv und kleiner als der Wert von "f" sein.
+Minimaler Schnittmengenabstand. Muss positiv und kleiner als fMax sein.
 
 </dd> <dt>
 
-mit dem Namen  \[ in\]
+*fMax* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Maximale Schnittstellen Länge. Wenn 0,0 f, wird der vorherige Wert verwendet. Andernfalls muss größer als der Wert von "f" sein.
+Maximaler Schnittmengenabstand. Bei 0,0f wird der vorherige Wert verwendet. andernfalls muss größer als fMin sein.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Maximale Schnittstellen Länge. Wenn 0,0 f, wird der vorherige Wert verwendet. A
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann nicht in PRT-Simulationen (preberechneten Radiance Transfer) verwendet werden, die in der GPU ausgeführt werden. Weitere Informationen finden Sie unter [**ID3DXPRTEngine:: computedirectlightingshgpu**](id3dxprtengine--computedirectlightingshgpu.md).
+Diese Methode kann nicht in prt-Simulationen (Precomputed Radiance Transfer) verwendet werden, die in der GPU ausgeführt werden. Siehe [**ID3DXPRTEngine::ComputeDirectLightingSWSPU**](id3dxprtengine--computedirectlightingshgpu.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,12 +75,12 @@ Diese Methode kann nicht in PRT-Simulationen (preberechneten Radiance Transfer) 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

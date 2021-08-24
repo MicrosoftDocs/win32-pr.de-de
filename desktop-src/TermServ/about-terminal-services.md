@@ -1,93 +1,93 @@
 ---
-title: Informationen zu Remotedesktopdienste
-description: Remotedesktopdienste (früher als "Terminal Services" bezeichnet) bietet ähnliche Funktionen wie eine Terminal basierte, zentralisierte Host-oder Mainframe-Umgebung, in der mehrere Terminals eine Verbindung mit einem Host Computer herstellen.
+title: Informationen Remotedesktopdienste
+description: Remotedesktopdienste (früher als Terminaldienste bezeichnet) bietet Ähnliches wie eine terminalbasierte, zentralisierte Host- oder Mainframeumgebung, in der mehrere Terminals eine Verbindung mit einem Hostcomputer herstellen.
 ms.assetid: 5b5b0f97-f973-4f52-a965-c9c2390e6c8d
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste Remotedesktopdienste, Informationen zu
+- Remotedesktopdienste Remotedesktopdienste , informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4644170cfca3b4bacdd6db647e35549d56844e9b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 680ccae3d8944c92d64da526831142d662ac5dc38157c741cf8f5426768fc745
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681460"
 ---
-# <a name="about-remote-desktop-services"></a>Informationen zu Remotedesktopdienste
+# <a name="about-remote-desktop-services"></a>Informationen Remotedesktopdienste
 
-Remotedesktopdienste (früher als "Terminal Services" bezeichnet) bietet ähnliche Funktionen wie eine Terminal basierte, zentralisierte Host-oder Mainframe-Umgebung, in der mehrere Terminals eine Verbindung mit einem Host Computer herstellen. Jedes Terminal stellt einen Kanal für die Eingabe und die Ausgabe zwischen einem Benutzer und dem Host Computer bereit. Ein Benutzer kann sich an einem Terminal anmelden und dann Anwendungen auf dem Host Computer ausführen, auf Dateien, Datenbanken, Netzwerkressourcen usw. zugreifen. Jede Terminalsitzung ist unabhängig, und das Host Betriebssystem verwaltet Konflikte zwischen mehreren Benutzern für gemeinsame Ressourcen.
+Remotedesktopdienste (früher als Terminaldienste bezeichnet) bietet Ähnliches wie eine terminalbasierte, zentralisierte Host- oder Mainframeumgebung, in der mehrere Terminals eine Verbindung mit einem Hostcomputer herstellen. Jedes Terminal stellt einen Kanal für die Eingabe und Ausgabe zwischen einem Benutzer und dem Hostcomputer zur Verfügung. Ein Benutzer kann sich an einem Terminal anmelden und dann Anwendungen auf dem Hostcomputer ausführen und auf Dateien, Datenbanken, Netzwerkressourcen und so weiter zugreifen. Jede Terminalsitzung ist unabhängig, und das Hostbetriebssystem führt Konflikte zwischen mehreren Benutzern aus, die um freigegebene Ressourcen konkurrieren.
 
-Der Hauptunterschied zwischen Remotedesktopdienste und der herkömmlichen Main Frame-Umgebung besteht darin, dass die dummyterminals in einer Main Frame-Umgebung nur zeichenbasierte Eingaben und Ausgaben bereitstellen. Ein-Remotedesktopverbindung (RDC)-Client oder-Emulator stellt eine komplette grafische Benutzeroberfläche bereit, einschließlich eines Windows-Betriebssystem Desktops und Unterstützung für eine Vielzahl von Eingabegeräten, z. b. Tastatur und Maus.
+Der Hauptunterschied zwischen Remotedesktopdienste und der herkömmlichen Mainframeumgebung ist, dass die dumb-Terminals in einer Mainframeumgebung nur zeichenbasierte Eingaben und Ausgaben bereitstellen. Ein Remotedesktopverbindung-Client oder -Emulator (RDC) bietet eine vollständige grafische Benutzeroberfläche, einschließlich eines Windows-Betriebssystemdesktops und Unterstützung für eine Vielzahl von Eingabegeräten, z. B. Tastatur und Maus.
 
-In der Remotedesktopdienste-Umgebung wird eine Anwendung vollständig auf dem Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server (ehemals Terminal Server) ausgeführt. Der RDC-Client führt keine lokale Verarbeitung der Anwendungssoftware aus. Der Server überträgt die grafische Benutzeroberfläche an den Client. Der Client überträgt die Eingabe des Benutzers an den Server zurück.
+In der Remotedesktopdienste wird eine Anwendung vollständig auf dem Remotedesktop-Sitzungshost(RD-Sitzungshost)-Server (ehemals Terminalserver) ausgeführt. Der RDC-Client führt keine lokale Verarbeitung von Anwendungssoftware durch. Der Server überträgt die grafische Benutzeroberfläche an den Client. Der Client überträgt die Eingabe des Benutzers zurück an den Server.
 
-Weitere Informationen finden Sie in den nachfolgenden Themen.
+Weitere Informationen finden Sie in den folgenden Themen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[Ändern der Standardeinstellung für Geräte Umleitung](modify-device-redirection-default-.md)
+[Ändern der Standardeinstellung für die Geräteumleitung](modify-device-redirection-default-.md)
 </dt> <dd>
 
-Da Remotedesktop Gatewayserver versuchen, sichere Geräte Umleitungs Richtlinien zu erzwingen, bevor Sie die Client Verbindung an einen Remotedesktop-Sitzungshost Server weiterleiten, müssen Sie diese Standardeinstellung möglicherweise in einigen Fällen deaktivieren.
+Da Remotedesktop Gatewayserver versuchen, sichere Richtlinien für die Geräteumleitung zu erzwingen, bevor die Clientverbindung an einen Remotedesktop-Sitzungshost-Server übergeben wird, müssen Sie diese Standardeinstellung möglicherweise in einigen Fällen deaktivieren.
 
 </dd> <dt>
 
 [Remotedesktopprotokoll](remote-desktop-protocol.md)
 </dt> <dd>
 
-Das Microsoft-Remotedesktop Protokoll (RDP) bietet Remote Anzeige-und Eingabefunktionen über Netzwerkverbindungen für Windows-basierte Anwendungen, die auf einem Server ausgeführt werden.
+Das Microsoft-Remotedesktop Protocol (RDP) bietet Remoteanzeige- und Eingabefunktionen über Netzwerkverbindungen für Windows-basierte Anwendungen, die auf einem Server ausgeführt werden.
 
 </dd> <dt>
 
 [Remotedesktopdienste-API](terminal-services-api.md)
 </dt> <dd>
 
-Die Remotedesktopdienste-API ist in erster Linie für Client/Server-Anwendungen und-Anwendungen zur Remotedesktopdienste Verwaltung nützlich.
+Die Remotedesktopdienste-API ist in erster Linie für Client-/Serveranwendungen und Anwendungen für die Remotedesktopdienste nützlich.
 
 </dd> <dt>
 
-[Remotedesktopdienste Verwaltungs Anwendungen](terminal-services-management-applications.md)
+[Remotedesktopdienste-Verwaltungsanwendungen](terminal-services-management-applications.md)
 </dt> <dd>
 
-Beschreibt die Verwaltungs Anwendungen, die von Remotedesktopdienste unterstützt werden.
+Beschreibt die Verwaltungsanwendungen, die Remotedesktopdienste werden.
 
 </dd> <dt>
 
-[Programmier Richtlinien für Remotedesktopdienste](terminal-services-programming-guidelines.md)
+[Remotedesktopdienste Programmierrichtlinien](terminal-services-programming-guidelines.md)
 </dt> <dd>
 
-Themen, in denen Richtlinien zum Entwickeln von Anwendungen in einer Remotedesktopdienste Umgebung bereitgestellt werden.
+Themen, die Richtlinien für die Entwicklung von Anwendungen in einer Remotedesktopdienste bereitstellen.
 
 </dd> <dt>
 
 [Remotedesktop Sitzungen](terminal-services-sessions.md)
 </dt> <dd>
 
-Da jede Anmeldung bei einem Remotedesktopverbindung-Client (RDC) eine separate Sitzungs-ID erhält, ist die Benutzer Darstellung ähnlich wie bei mehreren Computern gleichzeitig. beispielsweise ein Office-Computer und ein Heimcomputer.
+Da jede Anmeldung bei einem Remotedesktopverbindung-Client (RDC) eine separate Sitzungs-ID empfängt, ähnelt die Benutzererfahrung der gleichzeitigen Anmeldung bei mehreren Computern. z. B. ein Bürocomputer und ein Heimcomputer.
 
 </dd> <dt>
 
 [Remotedesktop-Webverbindung](remote-desktop-web-connection.md)
 </dt> <dd>
 
-Hier wird beschrieben, wie ein Remotedesktop-Webverbindung installiert wird.
+Beschreibt das Installieren eines Remotedesktop-Webverbindung.
 
 </dd> <dt>
 
 [Ressourcen auf einem Remotedesktop-Sitzungshost Server](resources-on-a-terminal-server.md)
 </dt> <dd>
 
-Mehrere Benutzer können sich gleichzeitig bei einem einzelnen RD-Sitzungshost Server anmelden und die Hardware-und Software Ressourcen des Servers freigeben.
+Mehrere Benutzer können sich gleichzeitig bei einem einzelnen RD-Sitzungshost anmelden und die Hardware- und Softwareressourcen des Servers gemeinsam nutzen.
 
 </dd> <dt>
 
 [Neues in Remotedesktopdienste](what-s-new-in-terminal-services.md)
 </dt> <dd>
 
-Themen, in denen die Änderungen in den einzelnen Releases der Remotedesktopdienste-API beschrieben werden.
+Themen, in denen die Änderungen in jedem Release der Remotedesktopdienste-API beschrieben werden.
 
 </dd> </dl>
 
@@ -95,12 +95,12 @@ Themen, in denen die Änderungen in den einzelnen Releases der Remotedesktopdien
 
 <dl> <dt>
 
-[Herstellen einer Verbindung mit einem anderen Computer mithilfe von Remotedesktopverbindung](https://windows.microsoft.com/windows/connect-using-remote-desktop-connection#connect-using-remote-desktop-connection=windows-7)
+[Verbinden mit einem anderen Computer Remotedesktopverbindung](https://windows.microsoft.com/windows/connect-using-remote-desktop-connection#connect-using-remote-desktop-connection=windows-7)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

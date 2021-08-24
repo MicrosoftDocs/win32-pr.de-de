@@ -1,7 +1,7 @@
 ---
-description: Erfahren Sie mehr über die Konstruktormethode cmediaposition. cmediaposition (ctlutil. h). Diese Methode verwendet die Parameter "pname" und "Punk".
+description: Erfahren Sie mehr über die CMediaPosition.CMediaPosition (Ctlutil.h)-Konstruktormethode. Diese Methode verwendet die Parameter "pName" und "pUnk".
 ms.assetid: 18a7785c-30c6-43b8-9a41-542a8424522c
-title: Cmediaposition. cmediaposition-Konstruktor (ctlutil. h)-pName, Punk-Parameter
+title: CMediaPosition.CMediaPosition-Konstruktor (Ctlutil.h)- pName, pUnk-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e65f034e5f8857b21bc706bce45aa74c3c3cf966
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 0df3337c07ed678354515bdf0c665a5d6157f158ac6c2370a8981d8e5028b27e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "106369345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634794"
 ---
-# <a name="cmediapositioncmediaposition-constructor-ctlutilh---pname-punk-parameters"></a>Cmediaposition. cmediaposition-Konstruktor (ctlutil. h)-pName, Punk-Parameter
+# <a name="cmediapositioncmediaposition-constructor-ctlutilh---pname-punk-parameters"></a>CMediaPosition.CMediaPosition-Konstruktor (Ctlutil.h) – pName, pUnk-Parameter
 
 Konstruktormethode.
 
@@ -46,14 +46,14 @@ CMediaPosition(
 *pName* 
 </dt> <dd>
 
-Zeiger auf den Namen des Objekts, zu Debuggingzwecken. Weisen Sie diesen Parameter im statischen Arbeitsspeicher zu.
+Zeiger auf den Namen des Objekts zu Debugzwecken. Ordnen Sie diesen Parameter im statischen Speicher zu.
 
 </dd> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts oder **null** , wenn das Objekt nicht aggregiert wird.
+Zeiger auf den Besitzer dieses Objekts oder **NULL,** wenn das Objekt nicht aggregiert wird.
 
 </dd> </dl>
 
@@ -61,14 +61,14 @@ Zeiger auf den Besitzer dieses Objekts oder **null** , wenn das Objekt nicht agg
 
 | Anforderung | Wert |
 |-|-|
-| Header | Ctlutil. h (Include Streams. h) |
-| Bibliothek| "Straumbase. lib" (Einzelhandels Builds); "Straumbasd. lib" (Debugbuilds) |
+| Header | Ctlutil.h (include Streams.h) |
+| Bibliothek| Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Cmediaposition-Klasse**](cmediaposition.md)
+[**CMediaPosition-Klasse**](cmediaposition.md)
 </dt> </dl>
 
  

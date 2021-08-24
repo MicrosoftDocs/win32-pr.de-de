@@ -5,55 +5,55 @@ ms.assetid: 38a290be-b915-4317-b9b1-0e49e40dc8ec
 ms.topic: article
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 0189c46f50e2ccc9ecc4523a4bb6f34006e59139
-ms.sourcegitcommit: ee06501cc29132927ade9813e0888aaa4decc487
+ms.openlocfilehash: 5fb177cbbd82ef56a03ef2c8a6faa7ef6c11f7889423ce79102d11eb42090231
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "104551813"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119636158"
 ---
 # <a name="path-geometries-overview"></a>Übersicht über Pfadgeometrien
 
-In diesem Thema wird beschrieben, wie Sie Direct2D Path Geometrien zum Erstellen komplexer Zeichnungen verwenden. Der Abschnitt ist wie folgt gegliedert.
+In diesem Thema wird beschrieben, wie Sie Direct2D-Pfadgeometrien verwenden, um komplexe Zeichnungen zu erstellen. Der Abschnitt ist wie folgt gegliedert.
 
 -   [Voraussetzungen](#prerequisites)
 -   [Pfadgeometrien in Direct2D](#path-geometries-in-direct2d)
--   [Verwenden eines ID2D1GeometrySink zum Auffüllen einer Pfad Geometrie](#using-an-id2d1geometrysink-to-populate-a-path-geometry)
+-   [Verwenden von ID2D1GeometrySink zum Auffüllen einer Pfadgeometrie](#using-an-id2d1geometrysink-to-populate-a-path-geometry)
 -   [Beispiel: Erstellen einer komplexen Zeichnung](#example-create-a-complex-drawing)
-    -   [Erstellen einer Pfad Geometrie für den linken Berg](#create-a-path-geometry-for-the-left-mountain)
-    -   [Erstellen einer Pfad Geometrie für den rechten Berg](#create-a-path-geometry-for-the-right-mountain)
-    -   [Erstellen einer Pfad Geometrie für die Sun](#create-a-path-geometry-for-the-sun)
-    -   [Erstellen einer Pfad Geometrie für den Fluss](#create-a-path-geometry-for-the-river)
-    -   [Rendering der Pfadgeometrien auf der Anzeige](#render-the-path-geometries-onto-the-display)
+    -   [Erstellen einer Pfadgeometrie für den linken Mountain](#create-a-path-geometry-for-the-left-mountain)
+    -   [Erstellen einer Pfadgeometrie für den rechten Mountain](#create-a-path-geometry-for-the-right-mountain)
+    -   [Erstellen einer Pfadgeometrie für die Sun](#create-a-path-geometry-for-the-sun)
+    -   [Erstellen einer Pfadgeometrie für den Fluss](#create-a-path-geometry-for-the-river)
+    -   [Rendern der Pfadgeometrien auf der Anzeige](#render-the-path-geometries-onto-the-display)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Diese Übersicht setzt voraus, dass Sie mit dem Erstellen von grundlegenden Direct2D-Anwendungen vertraut sind, wie unter [Erstellen einer einfachen Direct2D-Anwendung](direct2d-quickstart.md)beschrieben. Außerdem wird davon ausgegangen, dass Sie mit den grundlegenden Features von Direct2D Geometries vertraut sind, wie in [Übersicht über Geometrien](direct2d-geometries-overview.md)beschrieben.
+In dieser Übersicht wird davon ausgegangen, dass Sie mit dem Erstellen grundlegender Direct2D-Anwendungen vertraut sind, wie unter Erstellen einer einfachen [Direct2D-Anwendung beschrieben.](direct2d-quickstart.md) Außerdem wird davon ausgegangen, dass Sie mit den grundlegenden Features von Direct2D-Geometrien vertraut sind, wie in [der Übersicht über Geometrien beschrieben.](direct2d-geometries-overview.md)
 
 ## <a name="path-geometries-in-direct2d"></a>Pfadgeometrien in Direct2D
 
-Pfadgeometrien werden durch die [**ID2D1PathGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry) -Schnittstelle dargestellt. Um eine Pfad Geometrie zu instanziieren, müssen Sie die [**ID2D1Factory:: kreatepathgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createpathgeometry) -Methode aufrufen. Diese Objekte können verwendet werden, um komplexe geometrische Abbildungen zu beschreiben, die aus Segmenten wie Arcs, Kurven und Linien bestehen. Um eine Pfad Geometrie mit Abbildungen und Segmenten aufzufüllen, rufen Sie die [**Open**](/windows/win32/api/d2d1/nf-d2d1-id2d1pathgeometry-open) -Methode auf, um ein [**ID2D1GeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrysink) abzurufen, und verwenden Sie die Methoden der Geometry-Senke, um der Pfad Geometrie Abbildungen und Segmente hinzuzufügen.
+Pfadgeometrien werden durch die [**ID2D1PathGeometry-Schnittstelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry) dargestellt. Rufen Sie zum Instanziieren einer Pfadgeometrie die [**ID2D1Factory::CreatePathGeometry-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createpathgeometry) auf. Diese Objekte können verwendet werden, um komplexe geometrische Abbildungen zu beschreiben, die aus Segmenten wie Bogen, Kurven und Linien bestehen. Um eine Pfadgeometrie mit Abbildungen und Segmenten zu füllen, rufen Sie die [**Open-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1pathgeometry-open) auf, um eine [**ID2D1GeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrysink) abzurufen, und verwenden Sie die Methoden der Geometry-Senke, um der Pfadgeometrie Abbildungen und Segmente hinzuzufügen.
 
-## <a name="using-an-id2d1geometrysink-to-populate-a-path-geometry"></a>Verwenden eines ID2D1GeometrySink zum Auffüllen einer Pfad Geometrie
+## <a name="using-an-id2d1geometrysink-to-populate-a-path-geometry"></a>Verwenden von ID2D1GeometrySink zum Auffüllen einer Pfadgeometrie
 
-[**ID2D1GeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrysink) beschreibt einen geometrischen Pfad, der Linien, Arcs, kubische Bezier-Kurven und quadratische Bezier-Kurven enthalten kann.
+[**ID2D1GeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrysink) beschreibt einen geometrischen Pfad, der Linien, Bogen, kubische Bézierkurven und quadratische Bézierkurven enthalten kann.
 
-Eine Geometry-Senke besteht aus einer oder mehreren Abbildungen. Jede Abbildung besteht aus einem oder mehreren Linien-, Kurven-oder Bogen Segmenten. Rufen Sie zum Erstellen einer Abbildung die [**BeginFigure**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-beginfigure) -Methode auf, und übergeben Sie den Anfangspunkt der Abbildung. verwenden Sie dann die Add-Methoden (z. b. [**AddLine**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometrysink-addline) und [**AddBezier**](/windows/desktop/api/d2d1/nf-d2d1-id2d1factory-createdxgisurfacerendertarget(idxgisurface_constd2d1_render_target_properties__id2d1rendertarget)) ), um Segmente hinzuzufügen. Wenn Sie das Hinzufügen von Segmenten abgeschlossen haben, müssen Sie die [**endfigure**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-endfigure) -Methode abrufen. Sie können diese Sequenz wiederholen, um zusätzliche Abbildungen zu erstellen. Wenn Sie mit dem Erstellen von Abbildungen fertig sind, müssen Sie die [**Close**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-close) -Methode abrufen.
+Eine Geometriesenke besteht aus einer oder mehreren Abbildungen. Jede Abbildung besteht aus einem oder mehr Linien-, Kurven- oder Bogensegmenten. Rufen Sie zum Erstellen einer Abbildung die [**BeginFigure-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-beginfigure) auf, übergeben Sie den Ausgangspunkt der Abbildung, und verwenden Sie dann die Add-Methoden (z. B. [**AddLine**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometrysink-addline) und [**AddBezier),**](/windows/desktop/api/d2d1/nf-d2d1-id2d1factory-createdxgisurfacerendertarget(idxgisurface_constd2d1_render_target_properties__id2d1rendertarget)) um Segmente hinzuzufügen. Wenn Sie mit dem Hinzufügen von Segmenten fertig sind, rufen Sie die [**EndFigure-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-endfigure) auf. Sie können diese Sequenz wiederholen, um zusätzliche Abbildungen zu erstellen. Wenn Sie mit dem Erstellen von Abbildungen fertig sind, rufen Sie die [**Close-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-close) auf.
 
 ## <a name="example-create-a-complex-drawing"></a>Beispiel: Erstellen einer komplexen Zeichnung
 
-Die folgende Abbildung zeigt eine komplexe Zeichnung mit Linien-, Arcs-und Bezier-Kurven. Das folgende Codebeispiel zeigt, wie die Zeichnung mithilfe von vier Pfad Geometrie Objekten erstellt wird, eine für den linken Berg, eine für den rechten Berg, eine für den Fluss und eine für die Sonne mit Flares.
+Die folgende Abbildung zeigt eine komplexe Zeichnung mit Linien, Bogen und Bézierkurven. Das folgende Codebeispiel zeigt, wie die Zeichnung mithilfe von vier Pfadgeometrieobjekten erstellt wird: eines für den linken, eines für den rechten, eines für den Fluss und eines für die Sun mit Flares.
 
-![Darstellung eines Flusses, Gebirges und der Sonne mithilfe von Pfadgeometrien](images/path-geo-mnts.png)
+![Abbildung eines Flusses, einer Flüsse und der Sun mithilfe von Pfadgeometrien](images/path-geo-mnts.png)
 
-### <a name="create-a-path-geometry-for-the-left-mountain"></a>Erstellen einer Pfad Geometrie für den linken Berg
+### <a name="create-a-path-geometry-for-the-left-mountain"></a>Erstellen einer Pfadgeometrie für den linken Mountain
 
-Im Beispiel wird zuerst eine Pfad Geometrie für den linken Berg erstellt, wie in der folgenden Abbildung dargestellt.
+Im Beispiel wird zunächst eine Pfadgeometrie für den linken Mountain erstellt, wie in der folgenden Abbildung dargestellt.
 
-![Zeigt eine komplexe Zeichnung eines Polygons, das einen Berg anzeigt.](images/path-geo-leftmnt.png)
+![Zeigt eine komplexe Zeichnung eines Polygons, das einen Mountain zeigt.](images/path-geo-leftmnt.png)
 
-Um den linken Berg zu erstellen, ruft das Beispiel die [**ID2D1Factory:: kreatepathgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createpathgeometry) -Methode auf, um eine [**ID2D1PathGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry)zu erstellen.
+Um den linken Mountain zu erstellen, ruft das Beispiel die [**ID2D1Factory::CreatePathGeometry-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createpathgeometry) auf, um eine [**ID2D1PathGeometry zu erstellen.**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry)
 
 
 ```C++
@@ -62,7 +62,7 @@ hr = m_pD2DFactory->CreatePathGeometry(&m_pLeftMountainGeometry);
 
 
 
-Im Beispiel wird dann die [**Open**](/windows/win32/api/d2d1/nf-d2d1-id2d1pathgeometry-open) -Methode verwendet, um eine Geometry-Senke von einem [**ID2D1PathGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry) abzurufen und in der *psink* -Variablen zu speichern.
+Im Beispiel wird dann die [**Open-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1pathgeometry-open) verwendet, um eine geometry-Senke aus einer [**ID2D1PathGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry) zu erhalten und in der *pSink-Variablen zu* speichern.
 
 
 ```C++
@@ -72,7 +72,7 @@ hr = m_pLeftMountainGeometry->Open(&pSink);
 
 
 
-Im Beispiel wird dann [**BeginFigure**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-beginfigure)aufgerufen, wobei die [**D2D1 \_ Figure \_ Begin \_**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_figure_begin) Fill-Funktion übergeben wird, die angibt, dass diese Abbildung ausgefüllt ist. Anschließend werden [**AddLines**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-addlines)aufgerufen und ein Array von [**D2D1 \_ Point \_ 2F**](d2d1-point-2f.md) -Punkten, (267, 177), (236, 192), (212, 160), (156, 255) und (346, 255) übergeben.
+Das Beispiel ruft dann [**BeginFigure**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-beginfigure)auf, übergibt [**D2D1 \_ FIGURE BEGIN \_ \_ FILLED,**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_figure_begin) das angibt, dass diese Abbildung ausgefüllt ist, und ruft dann [**AddLines**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-addlines)auf und übergibt ein Array von [**D2D1 \_ POINT \_ 2F-Punkten,**](d2d1-point-2f.md) (267, 177), (236, 192), (212, 160), (156, 255) und (346, 255).
 
 Dies wird im folgenden Code veranschaulicht.
 
@@ -97,11 +97,11 @@ pSink->EndFigure(D2D1_FIGURE_END_CLOSED);
 
 
 
-### <a name="create-a-path-geometry-for-the-right-mountain"></a>Erstellen einer Pfad Geometrie für den rechten Berg
+### <a name="create-a-path-geometry-for-the-right-mountain"></a>Erstellen einer Pfadgeometrie für den rechten Mountain
 
-Im Beispiel wird dann eine weitere Pfad Geometrie für den rechten Berg mit Punkten (481, 146), (449, 181), (433, 159), (401, 214), (381, 199), (323, 263) und (575, 263) erstellt. Die folgende Abbildung zeigt, wie der Rechte Berg angezeigt wird.
+Im Beispiel wird dann eine weitere Pfadgeometrie für den rechten Mountain mit Punkten (481, 146), (449, 181), (433, 159), (401, 214), (381, 199), (323, 263) und (575, 263) erstellt. Die folgende Abbildung zeigt, wie der rechte Mountain angezeigt wird.
 
-![Abbildung eines Polygons, das einen Berg anzeigt](images/path-geo-rightmnt.png)
+![Abbildung eines Polygons, das einen Mountain zeigt](images/path-geo-rightmnt.png)
 
 Dies wird im folgenden Code veranschaulicht.
 
@@ -141,13 +141,13 @@ Dies wird im folgenden Code veranschaulicht.
 
 
 
-### <a name="create-a-path-geometry-for-the-sun"></a>Erstellen einer Pfad Geometrie für die Sun
+### <a name="create-a-path-geometry-for-the-sun"></a>Erstellen einer Pfadgeometrie für die Sun
 
-Das Beispiel füllt dann eine andere Pfad Geometrie für die Sun, wie in der folgenden Abbildung dargestellt.
+Im Beispiel wird dann eine andere Pfadgeometrie für die Sun aufgefüllt, wie in der folgenden Abbildung dargestellt.
 
-![Abbildung einer Bogen-und Bézier-Kurven, die die Sonne zeigen](images/path-geo-sun.png)
+![Abbildung eines Bogens und einer Bézierkurve, die die Sun zeigt](images/path-geo-sun.png)
 
-Zu diesem Zweck erstellt die Pfad Geometrie eine Senke und fügt eine Abbildung für den Bogen und eine Abbildung für jede Fackel der Senke hinzu. Durch Wiederholen der Sequenz von [**BeginFigure**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-beginfigure), der Add-Methode (z. b. [**AddBezier**](/windows/desktop/api/d2d1/nf-d2d1-id2d1factory-createdxgisurfacerendertarget(idxgisurface_constd2d1_render_target_properties__id2d1rendertarget))) und [**endfigure**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-endfigure)werden der Senke mehrere Abbildungen hinzugefügt.
+Zu diesem Grund erstellt die Pfadgeometrie eine Senke und fügt der Senke eine Abbildung für den Bogen und eine Abbildung für jedes Flare hinzu. Durch Wiederholen der Sequenz von [**BeginFigure**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-beginfigure), den Add-Methoden (z. B. [**AddBezier)**](/windows/desktop/api/d2d1/nf-d2d1-id2d1factory-createdxgisurfacerendertarget(idxgisurface_constd2d1_render_target_properties__id2d1rendertarget))und [**EndFigure**](/windows/win32/api/d2d1/nf-d2d1-id2d1simplifiedgeometrysink-endfigure)werden der Senke mehrere Abbildungen hinzugefügt.
 
 Dies wird im folgenden Code veranschaulicht.
 
@@ -275,11 +275,11 @@ Dies wird im folgenden Code veranschaulicht.
 
 
 
-### <a name="create-a-path-geometry-for-the-river"></a>Erstellen einer Pfad Geometrie für den Fluss
+### <a name="create-a-path-geometry-for-the-river"></a>Erstellen einer Pfadgeometrie für den Fluss
 
-Im Beispiel wird dann ein weiterer Geometry-Pfad für den Fluss erstellt, der Bezier-Kurven enthält. In der folgenden Abbildung wird gezeigt, wie der Fluss angezeigt wird.
+Im Beispiel wird dann ein weiterer Geometriepfad für den Fluss erstellt, der Bézierkurven enthält. Die folgende Abbildung zeigt, wie der Fluss angezeigt wird.
 
-![Abbildung der Bézier-Kurven, die einen Fluss anzeigen](images/path-geo-river.png)
+![Abbildung von Bézierkurven, die einen Fluss zeigen](images/path-geo-river.png)
 
 Dies wird im folgenden Code veranschaulicht.
 
@@ -329,9 +329,9 @@ Dies wird im folgenden Code veranschaulicht.
 
 
 
-### <a name="render-the-path-geometries-onto-the-display"></a>Rendering der Pfadgeometrien auf der Anzeige
+### <a name="render-the-path-geometries-onto-the-display"></a>Rendern der Pfadgeometrien auf der Anzeige
 
-Der folgende Code zeigt, wie die aufgefüllten Pfadgeometrien in der Anzeige dargestellt werden. Zuerst wird die Sun-Geometrie gezeichnet und gezeichnet, als nächstes die linke Mountain-Geometrie, dann die flussgeometrie und schließlich die Rechte Mountain-Geometrie.
+Der folgende Code zeigt, wie die aufgefüllten Pfadgeometrien auf der Anzeige gerendert werden. Es zeichnet zuerst die Sonnengeometrie, die linke Mountaingeometrie, dann die Flussgeometrie und schließlich die rechte Mountaingeometrie.
 
 
 ```C++
@@ -376,9 +376,9 @@ Der folgende Code zeigt, wie die aufgefüllten Pfadgeometrien in der Anzeige dar
 
 
 
-Im Beispiel wird die folgende Abbildung ausgegeben.
+Im vollständigen Beispiel wird die folgende Abbildung ausgegeben.
 
-![Darstellung eines Flusses, Gebirges und der Sonne mithilfe von Pfadgeometrien](images/path-geo-mnts.png)
+![Abbildung eines Flusses, einer Flüsse und der Sun mithilfe von Pfadgeometrien](images/path-geo-mnts.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

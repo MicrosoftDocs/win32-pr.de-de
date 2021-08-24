@@ -1,7 +1,7 @@
 ---
-description: Bei der productproperty-Eigenschaft des Session-Objekts handelt es sich um eine schreibgeschützte Eigenschaft, mit der Produkteigenschaften aus der Produktdatenbank abgerufen werden.
+description: Die ProductProperty-Eigenschaft des Session-Objekts ist eine schreibgeschützte Eigenschaft, die Produkteigenschaften aus der Produktdatenbank abruft.
 ms.assetid: 1af539e3-26e1-4c4c-be23-d1cfe4918d00
-title: Session. productproperty (Eigenschaft)
+title: Session.ProductProperty-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 5a9061e96bf8dd553d749977e827ee7ebdcb1846
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a48c108b4263fc7729927e1bf6e1155a38552eaedd1f77c7ea8ca3e968262cb5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359807"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119628900"
 ---
-# <a name="sessionproductproperty-property"></a>Session. productproperty (Eigenschaft)
+# <a name="sessionproductproperty-property"></a>Session.ProductProperty-Eigenschaft
 
-Bei der **productproperty** -Eigenschaft des [**Session**](session-object.md) -Objekts handelt es sich um eine schreibgeschützte Eigenschaft, mit der Produkteigenschaften aus der Produktdatenbank abgerufen werden.
+Die **ProductProperty-Eigenschaft** des [**Session-Objekts**](session-object.md) ist eine schreibgeschützte Eigenschaft, die Produkteigenschaften aus der Produktdatenbank abruft.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,7 +37,7 @@ propVal = Session.ProductProperty
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Name einer Eigenschaft mit Berücksichtigung von Groß-und Kleinschreibung.
+Erforderlicher Name einer Eigenschaft, bei dem die Schreibung beachtet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Der Name einer Eigenschaft mit Berücksichtigung von Groß-und Kleinschreibung.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ ISession ist definiert als 000c109e-0000-0000-C000-000000000046<br/>                                                                                                                                                                             |
+| IID<br/>     | IID ISession ist als \_ 000C109E-0000-0000-C000-000000000046 definiert.<br/>                                                                                                                                                                             |
 
 
 

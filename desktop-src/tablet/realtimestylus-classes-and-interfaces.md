@@ -1,22 +1,22 @@
 ---
-description: Dieser Abschnitt enthält Informationen zu den Schnittstellen und Klassen, die im Echt Zeit Tablettstift verwendet werden.
+description: Dieser Abschnitt enthält Informationen zu den Schnittstellen und Klassen, die im Echtzeit-Stift verwendet werden.
 ms.assetid: fc0900b4-f08b-4a93-bbc0-d3db067d7917
-title: RealTimeStylus-Klassen und-Schnittstellen
+title: RealTimeStylus-Klassen und -Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 34769b2c268bcdfe2becf9e759344d972092fe28
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ffd842219a23accc076ff7fdc8564ccb3ce0c472cb7e26ab036f1048456461f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589950"
 ---
-# <a name="realtimestylus-classes-and-interfaces"></a>RealTimeStylus-Klassen und-Schnittstellen
+# <a name="realtimestylus-classes-and-interfaces"></a>RealTimeStylus-Klassen und -Schnittstellen
 
-Dieser Abschnitt enthält Informationen zu den Schnittstellen und Klassen, die im Echt Zeit Tablettstift verwendet werden.
+Dieser Abschnitt enthält Informationen zu den Schnittstellen und Klassen, die im Echtzeit-Stift verwendet werden.
 
 > [!Note]  
-> Die Klassen und Schnittstellen für echt Zeit Stile sind nicht Automatisierungs konform.
+> Die Stylusklassen und Schnittstellen in Echtzeit sind nicht automation-kompatibel.
 
  
 
@@ -24,12 +24,12 @@ Dieser Abschnitt enthält Informationen zu den Schnittstellen und Klassen, die i
 
 
 
-| Klasse                                                      | BESCHREIBUNG                                                                                     |
+| Klasse                                                      | Beschreibung                                                                                     |
 |------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [**RealTimeStylus-Klasse**](realtimestylus-class.md)       | Implementiert die [**irealtimestylus**](/windows/desktop/api/RTSCom/nn-rtscom-irealtimestylus) -Schnittstelle.<br/>                 |
-| [**DynamicRenderer-Klasse**](/previous-versions/windows/desktop/legacy/ms701168(v=vs.85))     | Implementiert die [**Schnittstelle der idynamicrenderer-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-idynamicrenderer) .<br/>     |
-| [**GestureRecognizer-Klasse**](gesturerecognizer-class.md) | Implementiert die [**igesturerecognizer Interface**](/windows/desktop/api/RTSCom/nn-rtscom-igesturerecognizer) -Schnittstelle.<br/> |
-| [**Strokebuilder-Klasse**](strokebuilder-class.md)         | Implementiert die [**istrokebuilder-Schnittstellen**](/windows/desktop/api/RTSCom/nn-rtscom-istrokebuilder) Schnittstelle.<br/>         |
+| [**RealTimeStylus-Klasse**](realtimestylus-class.md)       | Implementiert die [**IRealTimeStylus-Schnittstelle.**](/windows/desktop/api/RTSCom/nn-rtscom-irealtimestylus)<br/>                 |
+| [**DynamicRenderer-Klasse**](/previous-versions/windows/desktop/legacy/ms701168(v=vs.85))     | Implementiert die [**IDynamicRenderer-Schnittstelle.**](/windows/desktop/api/RTSCom/nn-rtscom-idynamicrenderer)<br/>     |
+| [**GestureRecognizer-Klasse**](gesturerecognizer-class.md) | Implementiert die [**IGestureRecognizer-Schnittstelle.**](/windows/desktop/api/RTSCom/nn-rtscom-igesturerecognizer)<br/> |
+| [**StrokeBuilder-Klasse**](strokebuilder-class.md)         | Implementiert die [**Schnittstelle IStrokeBuilder-Schnittstelle.**](/windows/desktop/api/RTSCom/nn-rtscom-istrokebuilder)<br/>         |
 
 
 
@@ -41,16 +41,16 @@ Dieser Abschnitt enthält Informationen zu den Schnittstellen und Klassen, die i
 
 | Schnittstelle                                                                          | BESCHREIBUNG                                                                                                                                                                                 |
 |------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Idynamicrenderer-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-idynamicrenderer)                             | Macht Methoden verfügbar, mit denen Sie die Anzeige von Tablettstiftdaten in Echtzeit steuern können, wenn die Daten vom [**RealTimeStylus-Klassen**](realtimestylus-class.md) Objekt verarbeitet werden.<br/> |
-| [**Igesturerecognizer-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-igesturerecognizer)                         | Macht Methoden verfügbar, mit denen Sie auf Ereignisse reagieren können, indem Sie Stift Bewegungen erkennen und Daten zur Eingabe Warteschlange hinzufügen.<br/>                                                  |
-| [**Irealtimestylus**](/windows/desktop/api/RTSCom/nn-rtscom-irealtimestylus)                                         | Verarbeitet die tablettstiftpaketdaten von einem Digitalisierer in Echtzeit.<br/>                                                                                                                    |
-| [**IRealTimeStylus2**](/windows/desktop/api/RTSCom/nn-rtscom-irealtimestylus2)                                       | Erweitert die irealtimestylus-Schnittstelle.<br/>                                                                                                                                           |
-| [**IRealTimeStylus3**](/windows/desktop/api/rtscom/nn-rtscom-irealtimestylus3)                                       | Erweitert die irealtimestylus-Schnittstelle.<br/>                                                                                                                                           |
-| [**Irealtimestylussynchronization-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-irealtimestylussynchronization) | Synchronisiert den Zugriff auf das [**RealTimeStylus-Klassen**](realtimestylus-class.md) Objekt.<br/>                                                                                          |
-| [**Istrokebuilder-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-istrokebuilder)                                 | Macht Methoden verfügbar, die es Ihnen ermöglichen, Striche Programm gesteuert zu erstellen.<br/>                                                                                                              |
-| [**Istylusplugin-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-istylusplugin)                                   | Macht Methoden verfügbar, mit denen Sie Benachrichtigungen zu Ereignissen empfangen und auf der Grundlage dieser Ereignisse eine benutzerdefinierte Verarbeitung durchführen können.<br/>                                                          |
-| [**IStylusAsyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylusasyncplugin)                                   | Stellt ein asynchrones Plug-in dar, das der asynchronen Plug-in-Auflistung der [**RealTimeStylus-Klasse**](realtimestylus-class.md) hinzugefügt werden kann.<br/>                                |
-| [**IStylusSyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin)                                     | Stellt ein synchrones Plug-in dar, das der synchronen Plug-in-Auflistung der [**RealTimeStylus-Klasse**](realtimestylus-class.md) hinzugefügt werden kann.<br/>                                   |
+| [**IDynamicRenderer-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-idynamicrenderer)                             | Macht Methoden verfügbar, mit denen Sie die Anzeige von Stiftdaten in Echtzeit steuern können, während die Daten vom [**RealTimeStylus Class-Objekt**](realtimestylus-class.md) verarbeitet werden.<br/> |
+| [**IGestureRecognizer-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-igesturerecognizer)                         | Macht Methoden verfügbar, mit denen Sie auf Ereignisse reagieren können, indem Sie Stiftgesten erkennen und der Eingabewarteschlange Daten hinzufügen.<br/>                                                  |
+| [**IRealTimeStylus**](/windows/desktop/api/RTSCom/nn-rtscom-irealtimestylus)                                         | Verarbeitet die Stiftpaketdaten aus einem Digitizer in Echtzeit.<br/>                                                                                                                    |
+| [**IRealTimeStylus2**](/windows/desktop/api/RTSCom/nn-rtscom-irealtimestylus2)                                       | Erweitert die IRealTimeStylus-Schnittstelle.<br/>                                                                                                                                           |
+| [**IRealTimeStylus3**](/windows/desktop/api/rtscom/nn-rtscom-irealtimestylus3)                                       | Erweitert die IRealTimeStylus-Schnittstelle.<br/>                                                                                                                                           |
+| [**IRealTimeStylusSynchronization-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-irealtimestylussynchronization) | Synchronisiert den Zugriff auf das [**RealTimeStylus-Klassenobjekt.**](realtimestylus-class.md)<br/>                                                                                          |
+| [**IStrokeBuilder-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-istrokebuilder)                                 | Macht Methoden verfügbar, mit denen Sie Striche programmgesteuert erstellen können.<br/>                                                                                                              |
+| [**IStylusPlugin-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-istylusplugin)                                   | Macht Methoden verfügbar, mit denen Sie Benachrichtigungen über Ereignisse empfangen und basierend auf diesen Ereignissen eine benutzerdefinierte Verarbeitung durchführen können.<br/>                                                          |
+| [**Istylusasyncplugin**](/windows/win32/api/rtscom/nn-rtscom-istylusasyncplugin)                                   | Stellt ein asynchrones Plug-In dar, das der asynchronen Plug-In-Auflistung der [**RealTimeStylus-Klasse**](realtimestylus-class.md) hinzugefügt werden kann.<br/>                                |
+| [**Istylussyncplugin**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin)                                     | Stellt ein synchrones Plug-In dar, das der synchronen Plug-In-Auflistung der [**RealTimeStylus-Klasse**](realtimestylus-class.md) hinzugefügt werden kann.<br/>                                   |
 
 
 
@@ -58,22 +58,22 @@ Dieser Abschnitt enthält Informationen zu den Schnittstellen und Klassen, die i
 
 ## <a name="return-values"></a>Rückgabewerte
 
-Methoden in der com-Bibliothek geben Werte von **HRESULT** zurück. Sofern nicht anders angegeben, werden die Bedeutungen der **HRESULT** -Werte in der folgenden Tabelle beschrieben.
+Methoden in der COM-Bibliothek geben Werte von **HRESULT** zurück. Sofern nicht anders angegeben, werden die Bedeutungen der **HRESULT-Werte** in der folgenden Tabelle beschrieben.
 
 
 
-| HRESULT-Wert                                   | BESCHREIBUNG                                                                              |
+| HRESULT-Wert                                   | Beschreibung                                                                              |
 |-------------------------------------------------|------------------------------------------------------------------------------------------|
 | S \_ OK<br/>                                | Erfolg.<br/>                                                                      |
-| E- \_ Zeiger<br/>                           | Mindestens ein Zeiger (entweder für einen Eingabe-oder einen Output-Parameter) ist ungültig.<br/> |
-| E \_ invalidArg<br/>                        | Der Member hat versucht, ein ungültiges Argument zu übergeben.<br/>                              |
-| E- \_ Ink- \_ Ausnahme<br/>                    | Ausnahme.<br/>                                                           |
-| E \_ outo-Memory<br/>                       | Das System kann keinen Arbeitsspeicher zuweisen, um den Vorgang abzuschließen.<br/>                      |
-| E \_ fehlschlagen<br/>                              | Ein nicht spezifizierter Fehler ist aufgetreten.<br/>                                                 |
-| E \_ InvalidOperation<br/>                  | Der Member hat versucht, einen ungültigen Vorgang zu verwenden.<br/>                                 |
-| TPC \_ E \_ ungültiger \_ Modus<br/>                | Der Member hat versucht, einen ungültigen Modus zu verwenden.<br/>                                      |
-| TPC \_ E \_ - \_ Konfiguration ungültig<br/>       | Der Member hat versucht, eine ungültige Konfiguration zu verwenden.<br/>                             |
-| TPC \_ E \_ ungültige \_ Paket \_ Beschreibung<br/> | Der Member hat versucht, eine ungültige Paketbeschreibung zu verwenden.<br/>                        |
+| E \_ POINTER<br/>                           | Mindestens ein Zeiger (für eine Eingabe oder einen Ausgabeparameter) ist ungültig.<br/> |
+| E \_ INVALIDARG<br/>                        | Member hat versucht, ein ungültiges Argument zu übergeben.<br/>                              |
+| E \_ INK \_ EXCEPTION<br/>                    | Ausnahme.<br/>                                                           |
+| E \_ OUTOFMEMORY<br/>                       | Das System kann keinen Arbeitsspeicher belegen, um den Vorgang abzuschließen.<br/>                      |
+| E \_ FAIL<br/>                              | Es ist ein nicht angegebener Fehler aufgetreten.<br/>                                                 |
+| E \_ INVALIDOPERATION<br/>                  | Member hat versucht, einen ungültigen Vorgang zu verwenden.<br/>                                 |
+| UNGÜLTIGER TPC \_ \_ \_ E-MODUS<br/>                | Member hat versucht, einen ungültigen Modus zu verwenden.<br/>                                      |
+| TPC \_ E \_ INVALID \_ CONFIGURATION<br/>       | Der Member hat versucht, eine ungültige Konfiguration zu verwenden.<br/>                             |
+| TPC \_ E \_ INVALID \_ PACKET \_ DESCRIPTION<br/> | Member hat versucht, eine ungültige Paketbeschreibung zu verwenden.<br/>                        |
 
 
 

@@ -1,27 +1,27 @@
 ---
-description: In diesem Thema wird beschrieben, wie eine Endzeit für die Wiedergabe bei Verwendung der Medien Sitzung festgelegt wird.
+description: In diesem Thema wird beschrieben, wie Sie bei Verwendung der Mediensitzung eine Beendigungszeit für die Wiedergabe festlegen.
 ms.assetid: B8BA2154-2824-4573-AE71-853EB8AB911D
-title: Festlegen der Endzeit für die Wiedergabe Wiedergabe
+title: Festlegen der Wiedergabestoppzeit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 65269260b1e40d7907f0233fad653deb9636848b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 08c14145f798795dfeb8116195afad2f020eb4219b9c2529f96b8fa904f2e1d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347843"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119466000"
 ---
-# <a name="how-to-set-the-playback-stop-time"></a>Festlegen der Endzeit für die Wiedergabe Wiedergabe
+# <a name="how-to-set-the-playback-stop-time"></a>Festlegen der Wiedergabestoppzeit
 
-In diesem Thema wird beschrieben, wie eine Endzeit für die Wiedergabe bei Verwendung der [Medien Sitzung](media-session.md)festgelegt wird.
+In diesem Thema wird beschrieben, wie eine Beendigungszeit für die Wiedergabe festgelegt wird, wenn die [Mediensitzung](media-session.md)verwendet wird.
 
-## <a name="setting-the-stop-time-before-playback-begins"></a>Festlegen der Endzeit vor der Wiedergabe
+## <a name="setting-the-stop-time-before-playback-begins"></a>Festlegen der Beendigungszeit vor Beginn der Wiedergabe
 
-Bevor Sie eine Topologie für die Wiedergabe in die Warteschlange stellen, können Sie die Endzeit mithilfe des [MF- \_ toponode \_ mediastop](mf-toponode-mediastop-attribute.md) -Attributs angeben. Legen Sie für jeden Ausgabe Knoten in der Topologie den Wert von MF \_ toponode \_ mediastop auf die Endzeit in 100-Nanosecond-Einheiten fest.
+Bevor Sie eine Topologie für die Wiedergabe in die Warteschlange stellen, können Sie die Beendigungszeit mithilfe des [MF \_ TOPONODE \_ MEDIASTOP-Attributs](mf-toponode-mediastop-attribute.md) angeben. Legen Sie für jeden Ausgabeknoten in der Topologie den Wert von MF \_ TOPONODE \_ MEDIASTOP auf die Beendigungszeit in Einheiten von 100 Nanosekunden fest.
 
-Beachten Sie, dass das Festlegen dieses Attributs nach dem wiedergeben keine Auswirkung hat. Legen Sie daher vor dem Aufrufen von [**imfmediasession:: Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start)das-Attribut fest.
+Beachten Sie, dass das Festlegen dieses Attributs nach dem Start der Wiedergabe keine Auswirkungen hat. Legen Sie daher das -Attribut fest, bevor Sie [**DIESMEDIASession::Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start)aufrufen.
 
-Der folgende Code zeigt, wie die Endzeit für eine vorhandene Topologie festgelegt wird.
+Der folgende Code zeigt, wie die Beendigungszeit für eine vorhandene Topologie festgelegt wird.
 
 
 ```C++
@@ -70,33 +70,33 @@ HRESULT SetMediaStop(IMFTopology *pTopology, const LONGLONG& stop)
 
 
 
-## <a name="setting-the-stop-time-after-playback-has-started"></a>Festlegen der Endzeit, nachdem die Wiedergabe gestartet wurde
+## <a name="setting-the-stop-time-after-playback-has-started"></a>Festlegen der Beendigungszeit nach dem Starten der Wiedergabe
 
-Mithilfe der [**imftopologynodeattributeeditor**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynodeattributeeditor) -Schnittstelle kann die beendenden Zeit nach der Wiedergabe der [Medien Sitzung](media-session.md) festgelegt werden.
+Es gibt eine Möglichkeit, die Beendigungszeit festzulegen, nachdem die [Mediensitzung](media-session.md) mit der Wiedergabe begonnen hat, indem Sie die [**SCHNITTSTELLE VONTOPTOPOLOGYNodeAttributeEditor**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynodeattributeeditor) verwenden.
 
 > [!IMPORTANT]
-> Diese Schnittstelle hat eine ernsthafte Einschränkung, da die Endzeit als 32-Bit-Wert angegeben wird. Dies bedeutet, dass die maximale Endzeit, die Sie mithilfe dieser Schnittstelle festlegen können, 0xFFFFFFFF oder nur über 7 Minuten beträgt. Diese Einschränkung ist auf eine falsche Struktur Definition zurückzuführen.
+> Diese Schnittstelle weist eine schwerwiegende Einschränkung auf, da die Beendigungszeit als 32-Bit-Wert angegeben wird. Dies bedeutet, dass die maximale Beendigungszeit, die Sie mit dieser Schnittstelle festlegen können, 0xFFFFFFFF oder etwas mehr als 7 Minuten beträgt. Diese Einschränkung ist auf eine falsche Strukturdefinition zurückzuführen.
 
  
 
-Führen Sie die folgenden Schritte aus, um die Endzeit mithilfe der [**imftopologynodeattributeeditor**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynodeattributeeditor) -Schnittstelle festzulegen.
+Führen Sie die folgenden Schritte aus, um die Beendigungszeit mithilfe der [**SCHNITTSTELLE VONTOPTOPOLOGYNodeAttributeEditor**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynodeattributeeditor) festzulegen.
 
-1.  Aufrufen von [**mfgetservice**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) zum Abrufen der [**imftopologynodeattributeeditor**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynodeattributeeditor) -Schnittstelle aus der Medien Sitzung.
-2.  Aufrufen von [**imftopology:: gettopologyid**](/windows/desktop/api/mfidl/nf-mfidl-imftopology-gettopologyid) zum Abrufen der ID der Wiedergabe Topologie.
-3.  Nennen Sie für jeden Ausgabe Knoten in der Topologie [**imftopologynodeattributeeditor:: updatenodeattributs**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynodeattributeeditor-updatenodeattributes). Diese Methode nimmt die topologiekennung und einen Zeiger auf die Update Struktur des [**mftoponode- \_ \_ Attributs**](/windows/desktop/api/mfidl/ns-mfidl-mftoponode_attribute_update) an. Initialisieren Sie die Struktur wie folgt.
+1.  Rufen Sie [**MFGetService**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) auf, um die [**SCHNITTSTELLE VOMTOPTOPOLOGYNodeAttributeEditor**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynodeattributeeditor) aus der Mediensitzung abzurufen.
+2.  Rufen Sie [**DIE TOPOLOGIE::GetTopologyID**](/windows/desktop/api/mfidl/nf-mfidl-imftopology-gettopologyid) auf, um die ID der Wiedergabetopologie abzurufen.
+3.  Rufen Sie für jeden Ausgabeknoten in der Topologie [**DIE ATTRIBUTETopologyNodeAttributeEditor::UpdateNodeAttributes auf.**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynodeattributeeditor-updatenodeattributes) Diese Methode verwendet die Topologie-ID und einen Zeiger auf eine [**MFTOPONODE \_ ATTRIBUTE \_ UPDATE-Struktur.**](/windows/desktop/api/mfidl/ns-mfidl-mftoponode_attribute_update) Initialisieren Sie die -Struktur wie folgt.
 
     | Member               | Wert                                                                                                               |
     |----------------------|---------------------------------------------------------------------------------------------------------------------|
-    | **NodeId**           | Die Knoten-ID. Um die Knoten-ID abzurufen, wenden Sie den Befehl [**imftopologynode:: gettoponodeid**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-gettoponodeid)an. |
-    | **guidattributekey** | **MF- \_ toponode- \_ mediastop**                                                                                         |
-    | **attrtype**         | **MF- \_ Attribut \_ UINT64**                                                                                           |
-    | **u64**              | Die Endzeit in 100-Nanosecond-Einheiten.                                                                             |
+    | **NodeId**           | Die Knoten-ID. Rufen Sie ZUM Abrufen der Knoten-ID DEN AUFRUF [**VONTOPTOPOLOGYNode::GetTopoNodeID**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-gettoponodeid)auf. |
+    | **guidAttributeKey** | **MF \_ TOPONODE \_ MEDIASTOP**                                                                                         |
+    | **attrType**         | **\_MF-ATTRIBUT \_ UINT64**                                                                                           |
+    | **u64**              | Die Beendigungszeit in Einheiten von 100 Nanosekunden.                                                                             |
 
     
 
      
 
-Achten Sie darauf, den Wert von **attrtype** ordnungsgemäß festzulegen. Obwohl **U64** ein 32-Bit-Typ ist, erfordert die-Methode, dass **attrtype** auf das **MF- \_ Attribut \_ UINT64** festgelegt wird.
+Achten Sie darauf, dass Sie den Wert von **attrType** richtig festlegen. Obwohl **u64** ein 32-Bit-Typ ist, erfordert die -Methode, dass **attrType** auf **MF ATTRIBUTE \_ \_ UINT64** festgelegt wird.
 
 Der folgende Code zeigt diese Schritte.
 

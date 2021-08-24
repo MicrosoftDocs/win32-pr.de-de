@@ -1,28 +1,28 @@
 ---
-title: Beitreten zu heterogenen Daten
-description: In typischen Organisationen werden Daten in mehreren heterogenen Datenbanken gespeichert. Personaldaten können in SQL Server gespeichert werden, während die Konto Verwaltungsdaten im Verzeichnis gespeichert werden. Andere Daten können in proprietären Formaten gespeichert werden.
+title: Verknüpfen heterogener Daten
+description: Typische Organisationen speichern Daten in mehreren heterogenen Datenbanken. Personaldaten können in SQL Server gespeichert werden, während Kontoverwaltungsdaten im Verzeichnis gespeichert werden. Andere Daten können in proprietären Formaten gespeichert werden.
 ms.assetid: 45281b42-5cb2-42f9-9c7c-f3e3174b0f9d
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e1099028bc85dc6492eade0315b7308b4c6aaa9
-ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
+ms.openlocfilehash: 409ac4e82d735f5099bb8846a59683075007c3fbdf56600bc5ae01e6863ffa2a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107314613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657000"
 ---
-# <a name="joining-heterogeneous-data"></a>Beitreten zu heterogenen Daten
+# <a name="joining-heterogeneous-data"></a>Verknüpfen heterogener Daten
 
-In typischen Organisationen werden Daten in mehreren heterogenen Datenbanken gespeichert. Personaldaten können in SQL Server gespeichert werden, während die Konto Verwaltungsdaten im Verzeichnis gespeichert werden. Andere Daten können in proprietären Formaten gespeichert werden.
+Typische Organisationen speichern Daten in mehreren heterogenen Datenbanken. Personaldaten können in SQL Server gespeichert werden, während Kontoverwaltungsdaten im Verzeichnis gespeichert werden. Andere Daten können in proprietären Formaten gespeichert werden.
 
-Mit SQL Server 7,0, ADSI und der OLE DB-Anbieter ist es möglich, Daten aus Active Directory mit Daten in SQL Server zu verknüpfen und eine Ansicht der verknüpften Daten zu erstellen.
+Mit SQL Server 7.0, ADSI und dem OLE DB-Anbieter ist es möglich, Daten aus Active Directory mit Daten in SQL Server zu verbinden und eine Ansicht der verknüpften Daten zu erstellen.
 
-**So verknüpfen Sie Active Directory Daten mit SQL Server Daten**
+**So verbinden Sie Active Directory-Daten mit SQL Server Data**
 
-1.  Ausführen von **SQL Query Analyzer** ( \| Programme starten \| Microsoft SQL Server 7,0)
+1.  Ausführen der **SQL Query Analyzer** (Start Programs Microsoft SQL Server \| \| 7.0)
 2.  Melden Sie sich beim SQL Server Computer an.
-3.  Führen Sie die folgende Zeile aus (indem Sie Sie markieren und STRG + E drücken):
+3.  Führen Sie die folgende Zeile aus (indem Sie sie markieren und STRG+E drücken):
 
     ```sql
     EXEC sp_addlinkedserver 'ADSI', 'Active Directory Service Interfaces', 
@@ -32,22 +32,22 @@ Mit SQL Server 7,0, ADSI und der OLE DB-Anbieter ist es möglich, Daten aus Acti
 
     
 
-    In dieser Zeile lauten die Argumente für die gespeicherte System Prozedur [SP \_ addlinkedserver](https://msdn.microsoft.com/library/Aa259589.aspx) wie folgt:
+    In dieser Zeile sind die Argumente für die [gespeicherte Systemprozedur sp \_ addlinkedserver](https://msdn.microsoft.com/library/Aa259589.aspx) wie folgt:
 
-    -   "ADSI" ist das **Server** Argument, bei dem es sich um den Namen dieses Verbindungs Servers handelt.
-    -   "Active Directory Services" ist das **srvproduct** -Argument, bei dem es sich um den Namen der OLE DB Datenquelle handelt, die Sie als Verbindungs Server hinzufügen.
-    -   "ADSDSOObject" ist das **Anbieter \_ Namen** Argument und gibt an, dass Sie den OLE DB Anbieter verwenden.
-    -   "adsdatasource" ist das **Daten \_ Quellen Argument**, bei dem es sich um den Namen der Datenquelle handelt, die vom OLE DB Anbieter interpretiert wird.
+    -   "ADSI" ist das **Serverargument,** bei dem es sich um den Namen dieses Verbindungsservers handelt.
+    -   "Active Directory-Dienste" ist das **srvproduct-Argument,** das den Namen der OLE DB Datenquelle darstellt, die Sie als Verbindungsserver hinzufügen.
+    -   "ADSDSOObject" ist das **\_ Anbieternamenargument** und gibt an, dass Sie den OLE DB-Anbieter verwenden.
+    -   "adsdatasource" ist das **\_ Datenquellenargument**, bei dem es sich um den Namen der Datenquelle handelt, wie er vom OLE DB-Anbieter interpretiert wird.
 
-    Sie können jetzt den Verbindungs Server verwenden, um auf Active Directory aus SQL Server zuzugreifen.
+    Sie können jetzt den Verbindungsserver verwenden, um über SQL Server auf Active Directory zuzugreifen.
 
-4.  Im nächsten Beispiel wird eine Abfrage mithilfe der [OPENQUERY](https://msdn.microsoft.com/library/Aa276848.aspx) -Anweisung durchführt. Diese Anweisung hat zwei Argumente: ADSI, den Namen des soeben erstellten Verbindungs Servers und eine Abfrage Anweisung. Die Abfrage Anweisung enthält die folgenden Elemente:
+4.  Im nächsten Beispiel wird eine Abfrage mithilfe der [OPENQUERY-Anweisung](https://msdn.microsoft.com/library/Aa276848.aspx) ausgeführt. Diese Anweisung verfügt über zwei Argumente: ADSI, d. h. den Namen des gerade erstellten Verbindungsservers, und eine Abfrage-Anweisung. Die Abfrage-Anweisung enthält die folgenden Elemente:
 
-    -   Die [Select](https://msdn.microsoft.com/library/Aa259187.aspx) -Anweisung enthält die Liste der Daten, die vom Verzeichnisdienst abgerufen werden. Sie müssen den LDAP-anzeigen Amen verwenden, um anzugeben, nach welchen Daten Sie suchen.
-    -   Die [from](https://msdn.microsoft.com/library/Aa258869.aspx) -Anweisung enthält den Namen des Verbindungs Verzeichnis Servers, von dem diese Informationen abgerufen werden.
-    -   Die [Where](https://msdn.microsoft.com/library/Aa260674.aspx) -Anweisung stellt die Suchbedingungen bereit. In diesem Beispiel sucht es nach Benutzern.
+    -   Die [SELECT-Anweisung](https://msdn.microsoft.com/library/Aa259187.aspx) enthält die Liste der Daten, die vom Verzeichnisdienst abgerufen werden. Sie müssen den LDAP-Anzeigenamen verwenden, um anzugeben, nach welchen Daten Sie suchen.
+    -   Die [FROM-Anweisung](https://msdn.microsoft.com/library/Aa258869.aspx) enthält den Namen des Verbindungsverzeichnisservers, von dem diese Informationen abgerufen werden.
+    -   Die [WHERE-Anweisung](https://msdn.microsoft.com/library/Aa260674.aspx) stellt die Suchbedingungen bereit. In diesem Beispiel wird nach Benutzern gesucht.
 
-    Typ und Execute:
+    Geben Sie Ein, und führen Sie aus:
 
     ```sql
     SELECT * FROM OPENQUERY( ADSI, 
@@ -67,12 +67,12 @@ Mit SQL Server 7,0, ADSI und der OLE DB-Anbieter ist es möglich, Daten aus Acti
 
     
 
-    Im vorherigen Beispiel besteht die LDAP-Abfrage aus vier Teilen:
+    Im vorherigen Beispiel hat die LDAP-Abfrage vier Teile:
 
-    -   " \<LDAP://DC=Fabrikam,DC=COM> " ist der Distinguished Name des Verzeichnis Servers, der durchsucht werden soll.
-    -   "(& (objectCategory = Person) (objectClass = User))" ist der LDAP-Suchfilter (siehe [Syntax für Suchfilter](search-filter-syntax.md)).
-    -   "Name, ADsPath" sind die Namen (mit dem Format des LDAP-Anzeige namens) der abzurufenden Attribute.
-    -   "subtree" gibt den Such [Bereich](scope-of-query.md) an.
+    -   " \<LDAP://DC=Fabrikam,DC=COM> " ist der Distinguished Name des verzeichnisservers, der durchsucht werden soll.
+    -   "(&(objectCategory=Person)(objectClass=user))" ist der LDAP-Suchfilter (siehe [Suchfiltersyntax](search-filter-syntax.md)).
+    -   "name, adspath" sind die Namen (im LDAP-Anzeigenamenformat) der abzurufenden Attribute.
+    -   "subtree" gibt den [Bereich](scope-of-query.md) der Suche an.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

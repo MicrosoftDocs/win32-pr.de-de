@@ -1,7 +1,7 @@
 ---
 description: Beendet die IME-Freigabe.
 ms.assetid: aa33b5ed-fd4a-4829-9b7f-d545a4e7bd02
-title: Endimeshare-Funktion
+title: EndIMEShare-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Imeshare.dll
-ms.openlocfilehash: 2a0d246537f2788afbb200cd35a81f7d6809ad89
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 079a8719aa8e48e8ae880f2ce2a83d5e4d0f89fda85298ec015a3f77acebeb9c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352822"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119653440"
 ---
-# <a name="endimeshare-function"></a>Endimeshare-Funktion
+# <a name="endimeshare-function"></a>EndIMEShare-Funktion
 
 Beendet die IME-Freigabe.
 
@@ -41,11 +41,11 @@ Diese Funktion besitzt keine Parameter.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
-Diese Funktion sollte aufgerufen werden, nachdem die letzte IME-Freigabe Funktion aufgerufen wurde.
+Diese Funktion sollte aufgerufen werden, nachdem die letzte IME Share-Funktion aufgerufen wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Diese Funktion sollte aufgerufen werden, nachdem die letzte IME-Freigabe Funktio
 
 <dl> <dt>
 
-[**Finitimeshare**](finitimeshare.md)
+[**FInitIMEShare**](finitimeshare.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Übergeordnete ivmharddisk-Eigenschaft (vpccominterfaces. h)
+title: Übergeordnete IVMHardDisk-Eigenschaft (VPCCOMInterfaces.h)
 description: Übergeordnetes Element der differenzierenden virtuellen Festplatte.
 ms.assetid: 9a400fa0-ee0d-4474-a410-82756ea544fe
 keywords:
-- Virtueller PC der übergeordneten Eigenschaft
-- Übergeordnete Eigenschaft Virtual PC, ivmharddisk-Schnittstelle
-- Ivmharddisk Interface Virtual PC, Parent-Eigenschaft
+- Übergeordnete Eigenschaft Virtueller PC
+- Übergeordnete Eigenschaft Virtueller PC, IVMHardDisk-Schnittstelle
+- IVMHardDisk-Schnittstelle Virtueller PC, übergeordnete Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af9487750b67fc133f4b15f15050a74638f3d0f7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3e0ba8d56ad09f7c8263e41b17d2e107a0a441408d22ffb604e95055c57fb21d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119472100"
 ---
-# <a name="ivmharddiskparent-property"></a>Ivmharddisk::P Arent-Eigenschaft
+# <a name="ivmharddiskparent-property"></a>IVMHardDisk::P arent-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft das übergeordnete Element der differenzierenden virtuellen Festplatte ab und legt es fest.
 
@@ -50,7 +50,7 @@ HRESULT get_Parent(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt das [**ivmharddisk**](ivmharddisk.md) -Objekt fest, das dem übergeordneten Festplatten Abbild zugeordnet ist.
+Legt das [**IVMHardDisk-Objekt**](ivmharddisk.md) fest, das dem übergeordneten Festplattenimage zugeordnet ist.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -59,20 +59,20 @@ Legt das [**ivmharddisk**](ivmharddisk.md) -Objekt fest, das dem übergeordneten
 | Name/Wert                                                                                                                                                                               | Bedeutung                                                                                                                                                                                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                                                  | Der Vorgang wurde durchgeführt.<br/>                                                                                                                                                                                                                                              |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>                                    | Der-Parameter ist **null**.<br/>                                                                                                                                                                                                                                                 |
-| <dl> <dt>S \_ Falsch</dt> <dt>1</dt> </dl>                                               | Dabei handelt es sich nicht um eine differenzierende Festplatte, daher hat Sie kein übergeordnetes Element.<br/>                                                                                                                                                                                                                 |
-| <dl> <dt>HRESULT \_ Von \_ Win32 (Fehler \_ Datei \_ nicht \_ gefunden)</dt> <dt>0x80070002</dt> </dl> | Das System konnte die übergeordnete virtuelle Festplatten Datei nicht finden.<br/>                                                                                                                                                                                                               |
-| <dl> <dt>HRESULT \_ FROM \_ Win32 (Fehler \_ Pfad \_ nicht \_ gefunden)</dt> <dt>0x80070003</dt> </dl> | Das System konnte den Pfad zur übergeordneten virtuellen Festplatten Datei nicht finden.<br/>                                                                                                                                                                                                   |
-| <dl> <dt>VM \_ E \_ HD- \_ Abbild \_ Öffnen \_ fehlschlagen</dt> <dt>0xa004067c</dt> </dl>                  | Fehler beim Öffnen der aktuellen Festplatten Abbild Datei.<br/>                                                                                                                                                                                               |
-| <dl> <dt>VM \_ E \_ HD- \_ Abbild \_ Zugriff</dt> <dt>0xa0040681</dt> </dl>                      | Fehler beim Zugriff auf die aktuelle Festplatten Abbild Datei.<br/>                                                                                                                                                                                             |
-| <dl> <dt>VM \_ E \_ - \_ \_ ID \_ </dt> des übergeordneten untergeordneten Elements <dt>0xa0040685</dt> </dl>            | Das virtuelle Festplatten Abbild, das vom übergeordneten Parameter gefunden wird, hat nicht die gleiche ID wie das unter *geordnete* Datenträger Image. Stellen Sie sicher, dass das übergeordnete virtuelle Festplatten Image, das vom über *geordneten* Parameter gefunden wird, dem Image entspricht, das zum Erstellen des differenzierenden virtuellen Festplatten Abbilds verwendet wurde.<br/> |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl>                            | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                                                                                                                                          |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>                                    | Der Parameter ist **NULL.**<br/>                                                                                                                                                                                                                                                 |
+| <dl> <dt>S \_ FALSE</dt> <dt>1</dt> </dl>                                               | Dies ist keine differenzierende Festplatte, sodass sie kein übergeordnetes Element hat.<br/>                                                                                                                                                                                                                 |
+| <dl> <dt>HRESULT \_ FROM \_ WIN32(ERROR \_ FILE NOT \_ \_ FOUND)</dt> <dt>0x80070002</dt> </dl> | Das System konnte die übergeordnete virtuelle Festplattendatei nicht finden.<br/>                                                                                                                                                                                                               |
+| <dl> <dt>HRESULT \_ VON \_ WIN32(FEHLERPFAD \_ \_ NICHT \_ GEFUNDEN)</dt> <dt>0X80070003</dt> </dl> | Das System konnte den Pfad zur übergeordneten virtuellen Festplattendatei nicht finden.<br/>                                                                                                                                                                                                   |
+| <dl> <dt>VM \_ E \_ HD IMAGE OPEN \_ \_ \_ FAIL</dt> <dt>0xA004067C</dt> </dl>                  | Fehler beim Öffnen der aktuellen Festplattenimagedatei.<br/>                                                                                                                                                                                               |
+| <dl> <dt>VM \_ E \_ HD \_ IMAGE \_ ACCESS</dt> <dt>0xA0040681</dt> </dl>                      | Fehler beim Zugreifen auf die aktuelle Festplattenimagedatei.<br/>                                                                                                                                                                                             |
+| <dl> <dt>VM \_ E \_ \_ ÜBERGEORDNETE UNTERGEORDNETE \_ \_ ID– NICHT ÜBEREINSTIMMENDE</dt> <dt>0xA0040685</dt> </dl>            | Das image der virtuellen Festplatte, das sich durch den *übergeordneten* Parameter befindet, weist nicht die gleiche ID wie das untergeordnete Datenträgerimage auf. Stellen Sie sicher, dass das image der übergeordneten virtuellen Festplatte, das sich im *übergeordneten* Parameter befindet, das gleiche Image ist, das zum Erstellen des differenzierenden virtuellen Festplattenimages verwendet wird.<br/> |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl>                            | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                                                                                                                                          |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist nur mit differenzierenden Festplatten Abbildern gültig.
+Diese Eigenschaft ist nur bei differenzierenden Festplattenimages gültig.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,20 +80,20 @@ Diese Eigenschaft ist nur mit differenzierenden Festplatten Abbildern gültig.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmharddisk ist als ffa14ae6-48f5-42a4-8a22-186f2e5c7db0 definiert.<br/>                |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMHardDisk ist als ffa14ae6-48f5-42a4-8a22-186f2e5c7db0 definiert.<br/>                |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmharddisk**](ivmharddisk.md)
+[**IVMHardDisk**](ivmharddisk.md)
 </dt> </dl>
 
  

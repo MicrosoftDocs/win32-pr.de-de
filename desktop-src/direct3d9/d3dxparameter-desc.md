@@ -1,7 +1,7 @@
 ---
-description: Beschreibt einen Parameter, der für ein Effect-Objekt verwendet wird.
+description: Beschreibt einen Parameter, der für ein Effektobjekt verwendet wird.
 ms.assetid: 60d19b52-67ef-4903-bbde-922a8fac1ad8
-title: D3DXPARAMETER_DESC-Struktur (D3dx9effect. h)
+title: D3DXPARAMETER_DESC -Struktur (D3dx9effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9effect.h
-ms.openlocfilehash: 2256e24daa6dc8b6e5da1528e9a5e5aefce8ec99
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a12541e9bfb33979b11f8198e218a3eb474f948aeb8c74982a5369eed782eaa3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119631150"
 ---
-# <a name="d3dxparameter_desc-structure"></a>D3DXPARAMETER- \_ Struktur
+# <a name="d3dxparameter_desc-structure"></a>D3DXPARAMETER \_ DESC-Struktur
 
-Beschreibt einen Parameter, der für ein Effect-Objekt verwendet wird.
+Beschreibt einen Parameter, der für ein Effektobjekt verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,43 +60,43 @@ Der Name des Parameters.
 
 </dd> <dt>
 
-**Tischer**
+**Semantische**
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Semantik Bedeutung, auch als Verwendung bezeichnet.
+Semantische Bedeutung, auch als Verwendung bezeichnet.
 
 </dd> <dt>
 
 **Klasse**
 </dt> <dd>
 
-Type: **[ **D3DXPARAMETER- \_ Klasse**](./d3dxparameter-class.md)**
+Typ: **[ **D3DXPARAMETER-KLASSE \_**](./d3dxparameter-class.md)**
 
 </dd> <dd>
 
-Parameter Klasse. Legen Sie diesen Wert auf einen der Werte in der [**D3DXPARAMETER- \_ Klasse**](./d3dxparameter-class.md)fest.
+Parameterklasse. Legen Sie dies auf einen der Werte in der [**D3DXPARAMETER-KLASSE \_ fest.**](./d3dxparameter-class.md)
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd>
 
-Type: **[ **D3DXPARAMETER- \_ Typ**](./d3dxparameter-type.md)**
+Typ: **[ **D3DXPARAMETER \_ TYPE**](./d3dxparameter-type.md)**
 
 </dd> <dd>
 
-Der Parametertyp. Legen Sie diesen Wert auf einen der Werte in [**D3DXPARAMETER \_ Type**](./d3dxparameter-type.md)fest.
+Der Parametertyp. Legen Sie dies auf einen der Werte in [**D3DXPARAMETER \_ TYPE fest.**](./d3dxparameter-type.md)
 
 </dd> <dt>
 
 **Zeilen**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -107,7 +107,7 @@ Anzahl der Zeilen im Array.
 **Spalten**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -115,10 +115,10 @@ Anzahl der Spalten im Array.
 
 </dd> <dt>
 
-**Elemente**
+**CreateUiDefinition-Elemente**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -129,7 +129,7 @@ Anzahl der Elemente im Array.
 **Anmerkungen**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -137,14 +137,14 @@ Anzahl der Anmerkungen.
 
 </dd> <dt>
 
-**Structmembers**
+**StructMembers**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl von Strukturmembern.
+Anzahl der Strukturmitglieder.
 
 </dd> <dt>
 
@@ -155,18 +155,18 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Parameter Attribute. Siehe [Wirkungs Konstanten](dx9-graphics-reference-effects-constants.md).
+Parameterattribute. Weitere Informationen [finden Sie unter Effektkonst constants ( Effektkonst constants](dx9-graphics-reference-effects-constants.md)).
 
 </dd> <dt>
 
 **Byte**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Größe des Parameters in Byte.
+Die Größe des Parameters in Bytes.
 
 </dd> </dl>
 
@@ -176,15 +176,15 @@ Die Größe des Parameters in Byte.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9effect. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9effect.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Effekt Strukturen](dx9-graphics-reference-effects-structures.md)
+[Effektstrukturen](dx9-graphics-reference-effects-structures.md)
 </dt> </dl>
 
  

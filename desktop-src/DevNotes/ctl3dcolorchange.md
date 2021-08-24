@@ -1,5 +1,5 @@
 ---
-description: Behandelt System Farbänderungen für Anwendungen, die ctl3d verwenden.
+description: Verarbeitet Systemfarbänderungen für Anwendungen, die CTL3D verwenden.
 ms.assetid: b1eadb7d-39a5-47e9-9ae5-62bd33557f6b
 title: Ctl3dColorChange-Funktion
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ctl3d32.dll
-ms.openlocfilehash: 7e7b0d4480fde480ea24a6c2c0dd8a7a849fbc75
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c9c3032bb7105a27b995c236e01ce5fc5c304de4108f6c996a5cbb5799be496d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654600"
 ---
 # <a name="ctl3dcolorchange-function"></a>Ctl3dColorChange-Funktion
 
-Behandelt System Farbänderungen für Anwendungen, die ctl3d verwenden.
+Verarbeitet Systemfarbänderungen für Anwendungen, die CTL3D verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,13 +39,13 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Funktion erfolgreich ausgeführt wurde. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE zurück,** wenn die Funktion erfolgreich ist. andernfalls wird **FALSE zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
-Diese Funktion sollte in der Hauptfenster Prozedur der Anwendung für die WM- **\_ syscolorchange** -Meldung aufgerufen werden, wie unten gezeigt.
+Diese Funktion sollte in der Hauptfensterprozedur der Anwendung für die **WM \_ SYSCOLORCHANGE-Nachricht** aufgerufen werden, wie unten dargestellt.
 
 ## <a name="examples"></a>Beispiele
 

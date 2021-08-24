@@ -1,9 +1,9 @@
 ---
-title: ListBox. verwerfen
-description: Die verwerfen-Methode verbirgt das-Steuerelement.
+title: LISTBOX.dismiss
+description: Die dismiss-Methode blendet das Steuerelement aus.
 ms.assetid: 102f1223-7b03-4d60-b746-9abb4c8aef10
 keywords:
-- ListBox. Verwerfen von Windows-Media Player
+- LISTBOX.dismiss Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 54a10fc643df91d3ce066f5abcec97f04c943295
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f5f1190d1f1bb5ae0481074f96c6b7d3bd2010bbe189f950fc6228e68f4702ab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119617020"
 ---
-# <a name="listboxdismiss"></a>ListBox. verwerfen
+# <a name="listboxdismiss"></a>LISTBOX.dismiss
 
-Die **verwerfen** -Methode verbirgt das-Steuerelement.
+Die **dismiss-Methode** blendet das Steuerelement aus.
 
 ``` syntax
         elementID.dismiss()
@@ -36,9 +36,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird hauptsächlich mit dem **Popup** -Element verwendet, das ein Listenfeld-Steuerelement darstellt, das nur bei Bedarf angezeigt wird.
+Diese Methode wird in erster Linie mit dem **POPUP-Element** verwendet, das ein Listenfeld-Steuerelement darstellt, das nur bei Bedarf angezeigt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,13 +54,13 @@ Diese Methode wird hauptsächlich mit dem **Popup** -Element verwendet, das ein 
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> <dt>
 
-[**ListBox. Show**](listbox-show.md)
+[**LISTBOX.show**](listbox-show.md)
 </dt> <dt>
 
-[**Popup-Element**](popup-element.md)
+[**POPUP-Element**](popup-element.md)
 </dt> </dl>
 
  

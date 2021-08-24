@@ -1,11 +1,11 @@
 ---
-title: Basicdevice. ManufacturerUrl (Eigenschaft)
+title: BasicDevice.ManufacturerUrl-Eigenschaft
 description: Ruft die Hersteller-URL des Geräts ab.
 ms.assetid: 5D65436F-2E0B-480E-886A-5E9AC90CE8BD
 keywords:
-- ManufacturerUrl-Eigenschaft Medien Streaming-API
-- ManufacturerUrl-Eigenschaft Medien Streaming-API, basicdevice-Schnittstelle
-- Basicdevice-Schnittstelle Medien Streaming-API, ManufacturerUrl (Eigenschaft)
+- ManufacturerUrl-Eigenschaft Media Streaming-API
+- ManufacturerUrl-Eigenschaft Media Streaming API , BasicDevice-Schnittstelle
+- Media Streaming-API der BasicDevice-Schnittstelle, ManufacturerUrl-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ea2df39b5307a3eb895005630d3879c63cb11d7f
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 9bc0a5c603f7763b037344dd35b288567626cb2a0d070d35c8f29ec3d52cf9f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119721280"
 ---
-# <a name="basicdevicemanufacturerurl-property"></a>Basicdevice. ManufacturerUrl (Eigenschaft)
+# <a name="basicdevicemanufacturerurl-property"></a>BasicDevice.ManufacturerUrl-Eigenschaft
 
 Ruft die Hersteller-URL des Geräts ab.
 
@@ -33,7 +33,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ```C++
 HRESULT get_ManufacturerUrl(
-  [out] HSTRING *value
+  [out] HSTRING *value
 );
 ```
 
@@ -47,9 +47,9 @@ Ein Zeiger auf die Hersteller-URL des Geräts.
 
 <dl> <dt>
 
-[**Basicdevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
+[**BasicDevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

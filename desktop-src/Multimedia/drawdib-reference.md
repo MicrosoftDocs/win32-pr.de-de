@@ -1,62 +1,62 @@
 ---
-title: Drawdib-Referenz
-description: Drawdib-Referenz
+title: DrawDib-Referenz
+description: DrawDib-Referenz
 ms.assetid: 08489fa8-511d-4511-a158-f0cae2c6cef2
 keywords:
-- Windows Multimedia, drawdib-Referenz
-- Multimedia, drawdib-Referenz
-- Video für Windows (Vfw), drawdib-Referenz
-- VFW (Video für Windows), drawdib-Referenz
-- Drawdib, Referenz
-- Drawdib-Referenz, Informationen zu
-- Referenz für drawdib, Informationen zu
+- Windows Multimedia, DrawDib-Referenz
+- Multimedia, DrawDib-Referenz
+- Video für Windows (VFW), DrawDib-Referenz
+- VFW (Video für Windows),DrawDib-Referenz
+- DrawDib, Referenz
+- DrawDib-Referenz, Informationen
+- Referenz für DrawDib, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: be359e2d0af6de28d6a054e60e0c5cac1de55c4a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bed8a2469b473efdebbe8a3fdd55d9ba7d735328185f1d9297ddf533e61b0f02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119678769"
 ---
-# <a name="drawdib-reference"></a>Drawdib-Referenz
+# <a name="drawdib-reference"></a>DrawDib-Referenz
 
-In diesem Abschnitt werden die drawdib-Funktionen und die zugehörigen Strukturen beschrieben. Diese Elemente werden wie folgt gruppiert:
+In diesem Abschnitt werden die DrawDib-Funktionen und zugeordneten Strukturen beschrieben. Diese Elemente sind wie folgt gruppiert:
 
-## <a name="drawdib-library-operations"></a>Drawdib-Bibliotheks Vorgänge
+## <a name="drawdib-library-operations"></a>DrawDib-Bibliotheksvorgänge
 
--   [**Drawdibopen**](/windows/desktop/api/Vfw/nf-vfw-drawdibopen)
--   [**Drawdibclose**](/windows/desktop/api/Vfw/nf-vfw-drawdibclose)
--   [**Drawdibprofiledisplay**](/windows/desktop/api/Vfw/nf-vfw-drawdibprofiledisplay)
+-   [**DrawDibOpen**](/windows/desktop/api/Vfw/nf-vfw-drawdibopen)
+-   [**DrawDibClose**](/windows/desktop/api/Vfw/nf-vfw-drawdibclose)
+-   [**DrawDibProfileDisplay**](/windows/desktop/api/Vfw/nf-vfw-drawdibprofiledisplay)
 
-## <a name="image-rendering"></a>Bild Rendering
+## <a name="image-rendering"></a>Bildrendering
 
--   [**Drawdibdraw**](/windows/desktop/api/Vfw/nf-vfw-drawdibdraw)
--   [**Drawdibgetbuffer**](/windows/desktop/api/Vfw/nf-vfw-drawdibgetbuffer)
--   [**Drawdibupdate**](/windows/desktop/api/Vfw/nf-vfw-drawdibupdate)
--   [**Stretchdib**](/windows/desktop/api/Vfw/nf-vfw-stretchdib)
+-   [**DrawDibDraw**](/windows/desktop/api/Vfw/nf-vfw-drawdibdraw)
+-   [**DrawDibGetBuffer**](/windows/desktop/api/Vfw/nf-vfw-drawdibgetbuffer)
+-   [**DrawDibUpdate**](/windows/desktop/api/Vfw/nf-vfw-drawdibupdate)
+-   [**StretchDIB**](/windows/desktop/api/Vfw/nf-vfw-stretchdib)
 
 ## <a name="sequences-of-images"></a>Sequenzen von Bildern
 
--   [**Drawdibbegin**](/windows/desktop/api/Vfw/nf-vfw-drawdibbegin)
--   [**Drawdibend**](/windows/desktop/api/Vfw/nf-vfw-drawdibend)
--   [**Drawdibstart**](/windows/desktop/api/Vfw/nf-vfw-drawdibstart)
--   [**Drawdibstoppt**](/windows/desktop/api/Vfw/nf-vfw-drawdibstop)
+-   [**DrawDibBegin**](/windows/desktop/api/Vfw/nf-vfw-drawdibbegin)
+-   [**DrawDibEnd**](/windows/desktop/api/Vfw/nf-vfw-drawdibend)
+-   [**DrawDibStart**](/windows/desktop/api/Vfw/nf-vfw-drawdibstart)
+-   [**DrawDibStop**](/windows/desktop/api/Vfw/nf-vfw-drawdibstop)
 
 ## <a name="palettes"></a>Paletten
 
--   [**Drawdibrealize**](/windows/desktop/api/Vfw/nf-vfw-drawdibrealize)
--   [**Drawdibsetpalette**](/windows/desktop/api/Vfw/nf-vfw-drawdibsetpalette)
--   [**Drawdibgetpalette**](/windows/desktop/api/Vfw/nf-vfw-drawdibgetpalette)
--   [**Drawdibchangepalette**](/windows/desktop/api/Vfw/nf-vfw-drawdibchangepalette)
+-   [**DrawDibRealize**](/windows/desktop/api/Vfw/nf-vfw-drawdibrealize)
+-   [**DrawDibSetPalette**](/windows/desktop/api/Vfw/nf-vfw-drawdibsetpalette)
+-   [**DrawDibGetPalette**](/windows/desktop/api/Vfw/nf-vfw-drawdibgetpalette)
+-   [**DrawDibChangePalette**](/windows/desktop/api/Vfw/nf-vfw-drawdibchangepalette)
 
-## <a name="timing-drawdib"></a>Zeitliche drawdib
+## <a name="timing-drawdib"></a>Timing DrawDib
 
--   [**Drawdibtime**](/windows/desktop/api/Vfw/ns-vfw-drawdibtime)
+-   [**DRAWDIBTIME**](/windows/desktop/api/Vfw/ns-vfw-drawdibtime)
 
- 
+ 
 
- 
+ 
 
 
 

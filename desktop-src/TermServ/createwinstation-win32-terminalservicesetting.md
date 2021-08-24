@@ -1,12 +1,12 @@
 ---
-title: Die Methode "kreatewinstation" der Win32_TerminalServiceSetting-Klasse
-description: Erstellt einen neuen listenerstapel auf der Grundlage der eindeutigen Kombination aus Listenername und NIC.
+title: CreateWinstation-Methode der Win32_TerminalServiceSetting-Klasse
+description: Erstellt einen neuen Listenerstapel basierend auf der eindeutigen Kombination aus Listenername und NIC.
 ms.assetid: c0a25c22-e0a4-42b1-9c48-c88eebbc55b5
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste der Methode "kreatewinstation"
-- Methode Remotedesktopdienste der Methode, Win32_TerminalServiceSetting Klasse
-- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste, Methode "kreatewinstation"
+- CreateWinstation-Methode Remotedesktopdienste
+- CreateWinstation-Methode Remotedesktopdienste , Win32_TerminalServiceSetting-Klasse
+- Win32_TerminalServiceSetting Klasse Remotedesktopdienste , CreateWinstation-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 112237a00e9e92a2074ee0b95f9964d73f083e43
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bdc78266d18b73ee31634a0fc33a244aea3dd9b30d5f6c65c5d646b7aa3da0de
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339541"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681400"
 ---
-# <a name="createwinstation-method-of-the-win32_terminalservicesetting-class"></a>Die Methode "up-WinStation" der Win32- \_ Klasse "terminalservicesetts"
+# <a name="createwinstation-method-of-the-win32_terminalservicesetting-class"></a>CreateWinstation-Methode der Win32 \_ TerminalServiceSetting-Klasse
 
-Die **Methode "** Methode" erstellt einen neuen listenerstapel auf der Grundlage der eindeutigen Kombination aus Listenername und NIC.
+Die **CreateWinstation-Methode** erstellt einen neuen Listenerstapel basierend auf der eindeutigen Kombination aus Listenername und NIC.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,34 +45,34 @@ uint32 CreateWinstation(
 
 <dl> <dt>
 
-*Name* \[ in\]
+*Name* \[ In\]
 </dt> <dd>
 
-Der Listenername.
+Listenername.
 
 </dd> <dt>
 
-*Winstadrivername* \[ in\]
+*WinstaDriverName* \[ In\]
 </dt> <dd>
 
-Der Name des WinStation-Treibers.
+Der Name des Winstation-Treibers.
 
 </dd> <dt>
 
-*LanaID* \[ in\]
+*LanaId* \[ In\]
 </dt> <dd>
 
-NetBIOS-Nummer des lokalen Netzwerkadapters (Lana) für die NIC.
+NetBIOS-LANA-Nummer (Local Area Network Adapter) für die NIC.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden [Sie unter Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,7 +83,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -92,7 +92,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32 \_ terminalservicesetts**](win32-terminalservicesetting.md)
+[**Win32 \_ TerminalServiceSetting**](win32-terminalservicesetting.md)
 </dt> </dl>
 
  

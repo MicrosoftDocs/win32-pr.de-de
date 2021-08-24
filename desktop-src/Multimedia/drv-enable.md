@@ -1,9 +1,9 @@
 ---
-title: DRV_ENABLE Meldung (MMSYSTEM. h)
-description: Aktiviert den Treiber. Der Treiber sollte alle Variablen initialisieren und Geräte mit der Eingabe-und Ausgabeschnittstelle (e/a) suchen.
+title: DRV_ENABLE (Mmsystem.h)
+description: Aktiviert den Treiber. Der Treiber sollte alle Variablen initialisieren und Geräte mit der Eingabe- und Ausgabeschnittstelle (E/A) suchen.
 ms.assetid: 8aa36f3d-b36c-4460-859c-108a7a450ae5
 keywords:
-- DRV_ENABLE-Nachricht (Multimedia)
+- DRV_ENABLE-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 569b4ca5f3d0dc5f439b1e2b0e25887ffd1da4ac
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e7ab74abf08380db97a15da22fa99d58d72b6aba124a430cad665f65bc94e26c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957170"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119526280"
 ---
-# <a name="drv_enable-message"></a>DRV- \_ Aktivierungs Nachricht
+# <a name="drv_enable-message"></a>DRV \_ ENABLE-Meldung
 
-Aktiviert den Treiber. Der Treiber sollte alle Variablen initialisieren und Geräte mit der Eingabe-und Ausgabeschnittstelle (e/a) suchen.
+Aktiviert den Treiber. Der Treiber sollte alle Variablen initialisieren und Geräte mit der Eingabe- und Ausgabeschnittstelle (E/A) suchen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Aktiviert den Treiber. Der Treiber sollte alle Variablen initialisieren und Ger�
 <span id="hdrvr"></span><span id="HDRVR"></span>*hdrvr*
 </dt> <dd>
 
-Handle der installierbaren Treiber Instanz.
+Handle der installierbaren Treiberinstanz.
 
 </dd> </dl>
 
@@ -40,11 +40,11 @@ Handle der installierbaren Treiber Instanz.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Parameter " *dwdriverid*", " *lParam1*" und " *lParam2* " werden nicht verwendet.
+Die *Parameter dwDriverId,* *lParam1* und *lParam2* werden nicht verwendet.
 
-Treiber werden ab dem Zeitpunkt, an dem Sie diese Nachricht empfangen, als aktiviert eingestuft, bis Sie mithilfe der [**drv- \_**](drv-disable.md) Deaktivierungs Nachricht deaktiviert werden.
+Treiber gelten ab dem Zeitpunkt, zu dem sie diese Nachricht erhalten, als aktiviert, bis sie mithilfe der [**DRV \_ DISABLE-Meldung deaktiviert**](drv-disable.md) werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,18 +54,18 @@ Treiber werden ab dem Zeitpunkt, an dem Sie diese Nachricht empfangen, als aktiv
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Installierbare Treiber](installable-drivers.md)
 </dt> <dt>
 
-[Installierbare Treiber Meldungen](installable-driver-messages.md)
+[Installierbare Treibermeldungen](installable-driver-messages.md)
 </dt> </dl>
 
  

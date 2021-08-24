@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie im Feld Windows8Param. enabledbscanserialization.
-title: Windows8Param. enabledbscanserialization-Feld (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen zu: Feld "Windows8Param.EnableDBScanSerialization"'
+title: Feld "Windows8Param.EnableDBScanSerialization" (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: EnableDBScanSerialization field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Windows8.Windows8Param.EnableDBScanSerialization
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.windows8param.enabledbscanserialization(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2c92b0ab920354ea272e95d4aaf5bf68cf98be3b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3865bc2345278a3e5007289c5321508e85432f4481fb1a1d731197786c350d64
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368163"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119470730"
 ---
-# <a name="windows8paramenabledbscanserialization-field"></a>Windows8Param. enabledbscanserialization-Feld
+# <a name="windows8paramenabledbscanserialization-field"></a>Windows8Param.EnableDBScanSerialization-Feld
 
-Datenbankwartungs-Serialisierung ist für Datenbanken aktiviert, die denselben Datenträger gemeinsam nutzen.
+Die Serialisierung der Datenbankwartung ist für Datenbanken aktiviert, die denselben Datenträger gemeinsam nutzen.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ value = Windows8Param.EnableDBScanSerialization
 public const JET_param EnableDBScanSerialization
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows8Param-Klasse](./windows8param-class.md)
 
 [Windows8Param-Member](./windows8param-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

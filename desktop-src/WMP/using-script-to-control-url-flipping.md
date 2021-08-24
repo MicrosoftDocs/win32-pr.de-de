@@ -1,56 +1,56 @@
 ---
-title: Verwenden von Skripts zum Steuern von URL-Flipping
-description: Verwenden von Skripts zum Steuern von URL-Flipping
+title: Verwenden des Skripts zum Steuern des URL-Flippings
+description: Verwenden des Skripts zum Steuern des URL-Flippings
 ms.assetid: ec504ecf-10ef-4b90-bee6-8d149c251ee5
 keywords:
-- Windows Media Player, webbasierte Präsentationen
-- Windows Media Player-Objektmodell, webbasierte Präsentationen
+- Windows Media Player,Webbasierte Präsentationen
+- Windows Media Player Objektmodell, webbasierte Präsentationen
 - Objektmodell, webbasierte Präsentationen
 - Windows Media Player Mobile, webbasierte Präsentationen
 - Windows Media Player ActiveX-Steuerelement, webbasierte Präsentationen
 - Windows Media Player Mobile ActiveX-Steuerelement, webbasierte Präsentationen
-- ActiveX-Steuerelement, webbasierte Präsentationen
-- Windows Media Player, URL-kippen
-- Windows Media Player-Objektmodell, URL-kippen
-- Objektmodell, URL-kippen
-- Windows Media Player Mobile, URL-kippen
-- Windows Media Player ActiveX-Steuerelement, URL-kippen
-- Windows Media Player Mobile ActiveX-Steuerelement, URL-kippen
-- ActiveX-Steuerelement, URL-kippen
-- Webbasierte Präsentationen, URL-kippen
-- Erstellen von webbasierten Präsentationen, URL-kippen
-- URL-kippen
-- Windows Media Player, Rich-Media-Streaming
-- Windows Media Player-Objektmodell, Rich-Media-Streaming
-- Objektmodell, Rich-Media-Streaming
-- Windows Media Player Mobile, Rich-Media-Streaming
-- Windows Media Player ActiveX-Steuerelement, Rich-Media-Streaming
-- Windows Media Player Mobile ActiveX-Steuerelement, Rich-Media-Streaming
-- ActiveX-Steuerelement, Rich-Media-Streaming
-- Webbasierte Präsentationen, Rich-Media-Streaming
-- Erstellen von webbasierten Präsentationen, Rich-Media-Streaming
-- Rich-Media-Streaming
+- ActiveX,Webbasierte Präsentationen
+- Windows Media Player,URL-Flipping
+- Windows Media Player-Objektmodell, URL-Flipping
+- Objektmodell, URL-Flipping
+- Windows Media Player Mobil, URL-Flipping
+- Windows Media Player ActiveX,URL-Flipping
+- Windows Media Player Mobiles ActiveX-Steuerelement, URL-Flipping
+- ActiveX,URL-Flipping
+- Webbasierte Präsentationen, URL-Flipping
+- Erstellen webbasierter Präsentationen, URL-Flipping
+- URL-Flipping
+- Windows Media Player,Rich Media Streaming
+- Windows Media Player-Objektmodell, Rich Media-Streaming
+- Objektmodell, Rich Media Streaming
+- Windows Media Player Mobil,Rich Media-Streaming
+- Windows Media Player ActiveX,Rich Media Streaming
+- Windows Media Player Mobile ActiveX-Steuerelement,Rich Media-Streaming
+- ActiveX,Rich Media Streaming
+- Webbasierte Präsentationen, Rich Media Streaming
+- Erstellen webbasierter Präsentationen, Rich Media Streaming
+- Rich Media Streaming
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4815562bba92d67bb4b02ea0317d6c29accd9262
-ms.sourcegitcommit: e22adfb0dd3bb989e59455baedb4d905a877a240
+ms.openlocfilehash: 9470bf2b812d36bceb6159ab089e3b08c49bc84515320872b125ed6519568141
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "104388840"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119507130"
 ---
-# <a name="using-script-to-control-url-flipping"></a>Verwenden von Skripts zum Steuern von URL-Flipping
+# <a name="using-script-to-control-url-flipping"></a>Verwenden des Skripts zum Steuern des URL-Flippings
 
-Wenn ein Benutzer eine Verbindung mit einem Rich-Media-Stream herstellt, während der Stream bereits ausgeführt wird, ist es möglich, dass die streamingwebseite angezeigt wird, bevor alle Elemente eingetroffen sind und zwischengespeichert wurden, wenn Windows Media Player die URL automatisch aufruft. Wenn dies der Fall ist, wird dem Benutzer eine leere oder unvollständige Webseite angezeigt, bis der nächste Satz von Daten im Cache ankommt.
+Wenn ein Benutzer eine Verbindung mit einem Rich Media-Stream herstellt, während der Stream bereits ausgeführt wird, kann die gestreamte Webseite angezeigt werden, bevor alle Elemente eintreffen und zwischengespeichert wurden, wenn Windows Media Player die URL automatisch aufruft. In diesem Fall wird dem Benutzer eine leere oder unvollständige Webseite angezeigt, bis der nächste Satz von Daten im Cache eintrifft.
 
-Sie können vermeiden, dass eine leere oder unvollständige Webseite angezeigt wird, indem Sie die URL mithilfe eines Skripts aufrufen, anstatt Windows Media Player die automatische durchführen zu lassen. Auf diese Weise können Sie den ersten URL-Flip ignorieren und dann nachfolgende URLs mithilfe von Skriptcode aufrufen.
+Sie können die Anzeige einer leeren oder unvollständigen Webseite vermeiden, indem Sie die URL mithilfe eines Skripts aufrufen, anstatt Windows Media Player automatisch ausführen zu lassen. Auf diese Weise können Sie den ersten URL-Flip ignorieren und dann nachfolgende URLs mithilfe von Skriptcode aufrufen.
 
 > [!Note]  
-> In diesem Abschnitt wird davon ausgegangen, dass Sie HTML mit dem Windows Media Encoder 9-Reihe-SDK streamen und den HTML-Stream wiederholen.
+> In diesem Abschnitt wird davon ausgegangen, dass Sie HTML mit dem Windows Media Encoder 9 Series SDK streamen und dass Sie den HTML-Stream so festgelegt haben, dass er wiederholt wird.
 
- 
+ 
 
-Zunächst müssen Sie eine Frameset-Webseite erstellen, die den Frame mit dem eingebetteten Player und dem Frame enthält, in dem der Streaming-HTML-Code angezeigt wird. Bei jedem dieser beiden Frames wird anfänglich eine separate Webseite angezeigt, sodass Sie insgesamt drei Webseiten erstellen. Der folgende Beispielcode veranschaulicht die Frameset-Webseite:
+Zunächst müssen Sie eine Framesetwebseite erstellen, die den Frame mit dem eingebetteten Player und den Frame enthält, der den Streaming-HTML-Code anzeigt. Jeder dieser beiden Frames zeigt zunächst eine separate Webseite an, sodass Sie insgesamt drei Webseiten erstellen. Der folgende Beispielcode veranschaulicht die Framesetwebseite:
 
 
 ```HTML
@@ -77,7 +77,7 @@ Zunächst müssen Sie eine Frameset-Webseite erstellen, die den Frame mit dem ei
 
 
 
-Im vorherigen Beispiel für eine Webseite werden zwei Frames integriert. Der erste Frame wird in der linken Hälfte des Browserfensters angezeigt und zeigt die Webseite mit dem Namen Einbettungs \_player.htm an. Der folgende Beispielcode erstellt diese Webseite:
+Das vorherige Webseitenbeispiel enthält zwei Frames. Der erste Frame wird in der linken Hälfte des Browserfensters angezeigt, und die Webseite mit dem Namen embed \_player.htm. Mit dem folgenden Beispielcode wird diese Webseite erstellt:
 
 
 ```HTML
@@ -121,7 +121,7 @@ Im vorherigen Beispiel für eine Webseite werden zwei Frames integriert. Der ers
 
 
 
-Der zweite Frame im Frameset wird in der rechten Hälfte des Browserfensters angezeigt und zeigt eine Webseite mit dem Namen "blank.htm" an. Der folgende Beispielcode erstellt diese Webseite:
+Der zweite Frame im Frameset wird in der rechten Hälfte des Browserfensters angezeigt und zeigt eine Webseite mit dem Namen "blank.htm" an. Mit dem folgenden Beispielcode wird diese Webseite erstellt:
 
 
 ```HTML
@@ -138,23 +138,23 @@ Loading...
 
 
 
-Wenn die Frameset-Seite im Browser geladen wird, zeigt der linke Rahmen den eingebetteten Player an, und der Rechte Rahmen zeigt den Text "wird geladen..." , um den Benutzer darüber zu informieren, dass weitere Daten vorhanden sind. Wenn der erste URL-Skript Befehl aus dem HTML-Stream eintrifft, ändert der Ereignishandler einfach den Wert des **booleschen** Flags. Wenn jeder nachfolgende URL-Skript Befehl aus dem HTML-Stream eintrifft, lädt das Skript im Ereignishandler die neue URL in den Frame mit dem Namen "Content", und die gesamte Webseite wird in dem Frame angezeigt, der sich in der rechten Hälfte des Browserfensters befindet.
+Wenn die Framesetseite im Browser geladen wird, zeigt der linke Frame den eingebetteten Player und der rechte Frame den Text "Loading..." (Laden...) an. , um den Benutzer darüber zu informieren, dass weitere Daten in Kürze geplant sind. Wenn der erste URL-Skriptbefehl aus dem HTML-Stream eintrifft, ändert der Ereignishandler einfach den Wert des **booleschen Flags.** Wenn jeder nachfolgende URL-Skriptbefehl aus dem HTML-Stream eintrifft, lädt das Skript im Ereignishandler die neue URL in den Frame mit dem Namen "content", und die vollständige Webseite wird im Frame in der rechten Hälfte des Browserfensters angezeigt.
 
-Weitere Informationen zum Streaming von HTML mithilfe von Windows-Medien finden Sie im Windows Media Encoder SDK.
+Weitere Informationen zum Streamen von HTML mit Windows Media finden Sie im Windows Media Encoder SDK.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Rich-Media-Streaming**](rich-media-streaming.md)
+[**Rich Media Streaming**](rich-media-streaming.md)
 </dt> <dt>
 
 [**URL-Flipping**](url-flipping.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
