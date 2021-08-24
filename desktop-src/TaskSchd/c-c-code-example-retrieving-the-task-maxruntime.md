@@ -1,22 +1,22 @@
 ---
-title: C/C++-Code Beispiel Abrufen der Aufgabe maxruntime
-description: In diesem Beispiel wird die maximale Zeitspanne, die der Task ausgeführt werden kann (in Millisekunden), abgerufen und auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+title: C/C++-Codebeispiel zum Abrufen der Aufgabe "MaxRunTime"
+description: In diesem Beispiel wird die maximale Ausführungszeit der Aufgabe (in Millisekunden) abgerufen und diese Zahl auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 ms.assetid: 33873fef-1b67-4010-8bda-b75e1dfa80d5
 keywords:
-- der Task maxruntime-Taskplaner wird abgerufen.
-- Abrufen von Task Eigenschaften Taskplaner, maxruntime
+- Abrufen der MaxRunTime-Aufgabe Taskplaner
+- Abrufen von Aufgabeneigenschaften Taskplaner , MaxRunTime
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20fcf442e2936de48a11aea4d81de6e0bac18f92
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cbc060884be207081d56f0325d2e1f4228ef609e7733738874e61d68e1d2eec2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119738610"
 ---
-# <a name="cc-code-example-retrieving-the-task-maxruntime"></a>C/C++-Code Beispiel: Abrufen der Aufgabe maxruntime
+# <a name="cc-code-example-retrieving-the-task-maxruntime"></a>C/C++-Codebeispiel: Abrufen der Aufgabe "MaxRunTime"
 
-In diesem Beispiel wird die maximale Zeitspanne, die der Task ausgeführt werden kann (in Millisekunden), abgerufen und auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+In diesem Beispiel wird die maximale Ausführungszeit der Aufgabe (in Millisekunden) abgerufen und diese Zahl auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 
 
 ```C++
@@ -108,12 +108,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[Taskplaner 1.0-Beispiele](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,43 +1,43 @@
 ---
 description: Sie können eine Stammansicht eines Verbindungspunkts über eine Verknüpfungsdatei zu diesem Verbindungspunkt starten.
-title: Öffnen einer Stammansicht eines Verbindungspunkts durch eine Verknüpfungsdatei
+title: Öffnen einer Stammansicht eines Verbindungspunkts über eine Verknüpfungsdatei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 52096f0dbbcebadb60e2612f0304ed497199b2ed
-ms.sourcegitcommit: 822413efb4a70dd464e5db4d9e8693ef74f8132f
+ms.openlocfilehash: 9337caa955164dad36456feb7d58efd8768928429c06d22e90d9fbbf28e68bd6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113581608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119714890"
 ---
-# <a name="how-to-open-a-rooted-view-of-a-junction-point-through-a-shortcut-file"></a>Öffnen einer Stammansicht eines Verbindungspunkts durch eine Verknüpfungsdatei
+# <a name="how-to-open-a-rooted-view-of-a-junction-point-through-a-shortcut-file"></a>Öffnen einer Stammansicht eines Verbindungspunkts über eine Verknüpfungsdatei
 
-Sie können eine Stammansicht eines Verbindungspunkts über eine [Verknüpfungsdatei](./links.md) zu diesem Verbindungspunkt starten.
+Sie können eine Stammansicht eines Verbindungspunkts über eine [Verknüpfungsdatei zu](./links.md) diesem Verbindungspunkt starten.
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Legen Sie die Zielzeile der Verknüpfungsdatei auf Explorer.exe mit einem /root-Flag fest. Die genaue Form des Befehls hängt vom Speicherort des Verbindungspunkts ab:
+Legen Sie die Zeile Ziel der Verknüpfungsdatei auf Explorer.exe mit dem Flag /root fest. Die genaue Form des Befehls hängt von der Position des Verbindungspunkts ab:
 
--   Wenn der Verbindungspunkt ein Unterordner des Desktops ist, verwenden Sie Folgendes:
+-   Wenn der Verbindungspunkt ein Unterordner des Desktops ist, verwenden Sie:
 
     ``` syntax
     Explorer.exe /e,/root,::{Extension CLSID}
     ```
 
--   Wenn der Verbindungspunkt ein Dateisystemordner ist, verwenden Sie Folgendes:
+-   Wenn der Verbindungspunkt ein Dateisystemordner ist, verwenden Sie:
 
     ``` syntax
     Explorer.exe /e,/root,[Fully qualified path to the folder]
     ```
 
--   Wenn der Verbindungspunkt ein Unterordner eines virtuellen Systemordners ist, verwenden Sie Folgendes:
+-   Wenn der Verbindungspunkt ein Unterordner eines virtuellen Systemordners ist, verwenden Sie:
 
     ``` syntax
     Explorer.exe /e,/root,::{Folder CLSID}\::{Extension CLSID}
     ```
 
-    Die virtuellen Systemordner, die Verknüpfungspunkte enthalten können, verfügen über die folgenden Klassenbezeichner (CLSIDs):
+    Die virtuellen Systemordner, die Verbindungspunkte enthalten können, verfügen über die folgenden Klassenbezeichner (CLSIDs):
 
     
 

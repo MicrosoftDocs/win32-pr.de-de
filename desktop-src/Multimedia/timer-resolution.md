@@ -1,46 +1,46 @@
 ---
-title: Zeit Geber Auflösung
-description: Zeit Geber Auflösung
+title: Timerauflösung
+description: Timerauflösung
 ms.assetid: 2e5e94fe-8175-417f-8c59-9d5cf052ea89
 keywords:
-- Multimedia-Timer, Lösung
+- Multimediatimer, Auflösung
 - Timer, Auflösung
-- minimale Zeit Geber Auflösung
-- maximale Zeit Geber Auflösung
-- Multimedia-Timer, maximale Auflösung
+- Minimale Timerauflösung
+- Maximale Timerauflösung
+- Multimediatimer, maximale Auflösung
 - Timer, maximale Auflösung
-- Multimedia-Timer, minimale Auflösung
-- Timer, minimale Auflösung
-- timegetdevcaps-Funktion
-- TimeBeginPeriod-Funktion
-- timeendperiod-Funktion
+- Multimediatimer, Mindestauflösung
+- Timer, Mindestauflösung
+- timeGetDevCaps-Funktion
+- timeBeginPeriod-Funktion
+- timeEndPeriod-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 89e96f1b410f2e18203af794ea124bb6b83bccce
-ms.sourcegitcommit: a0b531d335bc691100149830b256d5af7e136c24
+ms.openlocfilehash: 948e81228acec27e41d43d41de7393ad64345acce25a450e91c815b1bbbf5164
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "103706990"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119781830"
 ---
-# <a name="timer-resolution"></a>Zeit Geber Auflösung
+# <a name="timer-resolution"></a>Timerauflösung
 
-Um die minimalen und maximalen Zeit Geber Auflösungen zu ermitteln, die von den Timer-Diensten unterstützt werden, verwenden Sie die Funktion [**timegetdevcaps**](/windows/desktop/api/TimeAPI/nf-timeapi-timegetdevcaps) . Diese Funktion füllt die **Member wperiodmin** und **wperiodmax** der [**timecaps**](/windows/desktop/api/TimeAPI/ns-timeapi-timecaps) -Struktur mit der minimalen und maximalen Auflösung aus. Dieser Bereich kann sich zwischen Computern und Windows-Plattformen unterscheiden.
+Verwenden Sie die [**timeGetDevCaps-Funktion,**](/windows/desktop/api/TimeAPI/nf-timeapi-timegetdevcaps) um die minimalen und maximalen Timerauflösungen zu bestimmen, die von den Timerdiensten unterstützt werden. Diese Funktion füllt die **wPeriodMin-** und **wPeriodMax-Member** der [**TIMECAPS-Struktur**](/windows/desktop/api/TimeAPI/ns-timeapi-timecaps) mit der minimalen und maximalen Auflösung. Dieser Bereich kann computer- und Windows Plattformen variieren.
 
-Nachdem Sie die minimale und die maximale Anzahl verfügbarer Zeit Geber Auflösungen festgelegt haben, müssen Sie die minimale Auflösung einrichten, die von der Anwendung verwendet werden soll. Verwenden Sie die [**TimeBeginPeriod**](/windows/desktop/api/TimeAPI/nf-timeapi-timebeginperiod) -und [**timeendperiod**](/windows/desktop/api/TimeAPI/nf-timeapi-timeendperiod) -Funktionen, um diese Auflösung festzulegen und zu löschen. Sie müssen jeden Aufruf von **TimeBeginPeriod** mit einem Aufruf von **timeendperiod** vergleichen und dabei dieselbe minimale Auflösung in beiden Aufrufen angeben. Eine Anwendung kann mehrere **TimeBeginPeriod** -Aufrufe durchführen, solange jeder Aufruf mit einem Aufruf von **timeendperiod** übereinstimmt.
+Nachdem Sie die minimalen und maximalen verfügbaren Timerauflösungen ermittelt haben, müssen Sie die Mindestauflösung festlegen, die ihre Anwendung verwenden soll. Verwenden Sie die Funktionen [**timeBeginPeriod**](/windows/desktop/api/TimeAPI/nf-timeapi-timebeginperiod) und [**timeEndPeriod,**](/windows/desktop/api/TimeAPI/nf-timeapi-timeendperiod) um diese Auflösung festzulegen und zu löschen. Sie müssen jeden Aufruf von **timeBeginPeriod** mit einem Aufruf von **timeEndPeriod** abgleichen und dabei die gleiche Mindestauflösung in beiden Aufrufen angeben. Eine Anwendung kann mehrere **timeBeginPeriod-Aufrufe** ausführen, solange jeder Aufruf mit einem Aufruf von **timeEndPeriod** übereinstimmt.
 
-In [**TimeBeginPeriod**](/windows/desktop/api/TimeAPI/nf-timeapi-timebeginperiod) und [**timeendperiod**](/windows/desktop/api/TimeAPI/nf-timeapi-timeendperiod)gibt der *uperiod* -Parameter die minimale Zeit Geber Auflösung in Millisekunden an. Sie können einen beliebigen Zeit Geber Auflösungswert innerhalb des Bereichs angeben, der vom Timer unterstützt wird.
+Sowohl in [**timeBeginPeriod**](/windows/desktop/api/TimeAPI/nf-timeapi-timebeginperiod) als auch [**in timeEndPeriod**](/windows/desktop/api/TimeAPI/nf-timeapi-timeendperiod)gibt der *uPeriod-Parameter* die minimale Timerauflösung in Millisekunden an. Sie können einen beliebigen Timerauflösungswert innerhalb des vom Timer unterstützten Bereichs angeben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Informationen zu multimeditimern](about-multimedia-timers.md)
+[Informationen zu Multimediatimern](about-multimedia-timers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

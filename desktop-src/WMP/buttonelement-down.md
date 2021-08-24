@@ -1,9 +1,9 @@
 ---
-title: ButtonElement. Down
-description: Mit dem Attribut "Down" wird ein Wert angegeben oder abgerufen, der angibt, ob sich das Schaltflächen Element an der nach-oben-oder der
+title: BUTTONELEMENT.down
+description: Das attribut down gibt einen Wert an oder ruft einen Wert ab, der angibt, ob sich das Schaltflächenelement an der position nach oben oder unten befindet.
 ms.assetid: 6b3633c5-84c1-48a0-bd2f-94660890d9a6
 keywords:
-- ButtonElement. Down-Windows-Media Player
+- BUTTONELEMENT.down-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 23f48b0e2ac0f4bf02f87d90bb0bd504478beb52
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ff20aebda01b24dc14eb7d5298ee0d663d903bedcb7ef6ef8b05b6211af8b567
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370163"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764470"
 ---
-# <a name="buttonelementdown"></a>ButtonElement. Down
+# <a name="buttonelementdown"></a>BUTTONELEMENT.down
 
-Mit dem Attribut " **down** " wird ein Wert angegeben oder abgerufen, der angibt, ob sich das Schaltflächen Element an der nach-oben-oder der
+Das **attribut down** gibt einen Wert an oder ruft einen Wert ab, der angibt, ob sich das Schaltflächenelement an der position nach oben oder unten befindet.
 
 ``` syntax
         elementID.down
@@ -29,22 +29,22 @@ Mit dem Attribut " **down** " wird ein Wert angegeben oder abgerufen, der angibt
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert | BESCHREIBUNG                                                     |
 |-------|-----------------------------------------------------------------|
-| true  | Gibt an, dass sich das **ButtonElement** an der Position nach unten befindet.        |
-| false | Standard. Gibt an, dass sich das **ButtonElement** in der aufwärts-Position befindet. |
+| true  | Gibt **an, dass sich BUTTONELEMENT** an der nach unten zeigenden Position befindet.        |
+| false | Standard. Gibt **an, dass sich BUTTONELEMENT** an der position up befindet. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Damit ein Button-Element an der nach-unten-Position verbleibt **, muss die** Kurznotiz auf true festgelegt werden. Standardmäßig ist die Kurznotiz false, und jeder **Versuch, auf true fest** **zulegen, wird** ignoriert.
+Damit ein Schaltflächenelement in der nach unten angezeigten Position verbleibt, muss **sticky** auf TRUE festgelegt werden. **"sticky" ist** standardmäßig "false",  und jeder Versuch, auf "true" festgelegt zu werden, wird ignoriert.
 
 Wenn ein ungültiger Wert angegeben wird, wird der vorherige Zustand beibehalten.
 
@@ -54,7 +54,7 @@ Wenn ein ungültiger Wert angegeben wird, wird der vorherige Zustand beibehalten
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -62,10 +62,10 @@ Wenn ein ungültiger Wert angegeben wird, wird der vorherige Zustand beibehalten
 
 <dl> <dt>
 
-[**ButtonElement-Element**](buttonelement-element.md)
+[**BUTTONELEMENT-Element**](buttonelement-element.md)
 </dt> <dt>
 
-[**ButtonElement. downtooltip**](buttonelement-downtooltip.md)
+[**BUTTONELEMENT.downToolTip**](buttonelement-downtooltip.md)
 </dt> </dl>
 
  

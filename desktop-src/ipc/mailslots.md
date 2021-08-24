@@ -1,25 +1,25 @@
 ---
-description: Ein Mailslot ist ein Mechanismus für die unidirektionale prozessübergreifende Kommunikation (prozessübergreifende Kommunikation, IPC). Anwendungen können Nachrichten in einem postslot speichern. Der Besitzer des postslots kann die dort gespeicherten Nachrichten abrufen.
+description: Ein Mailslot ist ein Mechanismus für die one-way interprocess communications (IPC). Anwendungen können Nachrichten in einem E-Mail-Lot speichern. Der Besitzer des Mailslots kann Nachrichten abrufen, die dort gespeichert sind.
 ms.assetid: e23894ca-edc7-49e6-bcc4-c82f357ecedf
-title: Postslots
+title: Mailslots
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6886e8d6f08206c6104db22c050aa6bb9859f96f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f72a4bc50c2cb563894ce9b7c616f9ae86cd9ae6e4abb966c78475c504c75f54
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119716830"
 ---
-# <a name="mailslots"></a>Postslots
+# <a name="mailslots"></a>Mailslots
 
-Ein *Mailslot* ist ein Mechanismus für die unidirektionale prozessübergreifende Kommunikation (prozessübergreifende Kommunikation, IPC). Anwendungen können Nachrichten in einem postslot speichern. Der Besitzer des postslots kann die dort gespeicherten Nachrichten abrufen. Diese Nachrichten werden in der Regel über ein Netzwerk an einen bestimmten Computer oder an alle Computer in einer angegebenen Domäne gesendet. Eine *Domäne* ist eine Gruppe von Arbeitsstationen und Servern, die einen Gruppennamen gemeinsam verwenden.
+Ein *Mailslot ist* ein Mechanismus für die one-way interprocess communications (IPC). Anwendungen können Nachrichten in einem E-Mail-Lot speichern. Der Besitzer des Mailslots kann Nachrichten abrufen, die dort gespeichert sind. Diese Nachrichten werden in der Regel über ein Netzwerk entweder an einen angegebenen Computer oder an alle Computer in einer angegebenen Domäne gesendet. Eine *Domäne* ist eine Gruppe von Arbeitsstationen und Servern, die einen Gruppennamen gemeinsam verwenden.
 
--   [Info Slots](about-mailslots.md)
--   [Verwenden von postslots](using-mailslots.md)
--   [Mailslotreferenz](mailslot-reference.md)
+-   [Informationen zu Mailslots](about-mailslots.md)
+-   [Verwenden von Mailslots](using-mailslots.md)
+-   [Mailslot-Referenz](mailslot-reference.md)
 
-Sie können [Named Pipes](named-pipes.md) oder [Windows Sockets](/windows/desktop/WinSock/windows-sockets-start-page-2) anstelle von Postfächern für die prozessübergreifende Kommunikation verwenden. Named Pipes sind eine einfache Möglichkeit für zwei Prozesse, Nachrichten auszutauschen. Postfächer hingegen sind eine einfache Möglichkeit für einen Prozess, Nachrichten an mehrere Prozesse zu senden. Ein wichtiger Aspekt ist, dass Mailslots Nachrichten mithilfe von datagrams übertragen. Ein *Datagramm* ist ein kleines Paket von Informationen, die das Netzwerk an die Übertragung sendet. Wie bei einer Radio-oder Fernsehübertragung bietet ein Datagramm keine Bestätigung der Bestätigung. Es gibt keine Möglichkeit, sicherzustellen, dass ein Datagramm empfangen wurde. Ebenso wie Berge, große Gebäude oder Störsignale bewirken, dass ein Radio-oder Fernsehsignal verloren geht, kann es passieren, dass ein Datagramm ein bestimmtes Ziel erreicht. Named Pipes sind wie Telefonanrufe: Sie sprechen nur mit einer Partei, aber Sie wissen, dass die Nachricht empfangen wird.
+Sie können named pipes [oder](named-pipes.md) Windows Sockets anstelle von [Mailslots](/windows/desktop/WinSock/windows-sockets-start-page-2) für die prozessübergreifende Kommunikation verwenden. Named Pipes sind eine einfache Möglichkeit für zwei Prozesse zum Austauschen von Nachrichten. Mailslots sind dagegen eine einfache Möglichkeit für einen Prozess, Nachrichten an mehrere Prozesse zu übertragen. Ein wichtiger Aspekt ist, dass mailslots Broadcastnachrichten mithilfe von Datagrammen sendet. Ein *Datagramm ist* ein kleines Informationspaket, das das Netzwerk über das Netzwerk sendet. Wie bei einer Radio- oder Fernsehsendung bietet ein Datagramm keine Bestätigung des Empfangs. es gibt keine Möglichkeit, zu garantieren, dass ein Datagramm empfangen wurde. Ebenso wie ein Funk- oder Fernsehsignal verloren gehen kann, können große Gebäude oder Beeinträchtigungssignale verhindern, dass ein Datagramm ein bestimmtes Ziel erreicht. Named Pipes sind wie Telefonanrufe: Sie sprechen nur mit einer Partei, wissen aber, dass die Nachricht empfangen wird.
 
  
 

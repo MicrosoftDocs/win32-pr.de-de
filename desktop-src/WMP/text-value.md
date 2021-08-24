@@ -1,9 +1,9 @@
 ---
-title: Text. Value
-description: Das value-Attribut gibt den Text an, der im Text Steuerelement angezeigt wird, oder ruft ihn ab.
+title: TEXT.value
+description: Das Wertattribut gibt den Text an, der im Text-Steuerelement angezeigt wird, oder ruft diesen ab.
 ms.assetid: dbc50be2-ee18-4661-a343-9e906879aba0
 keywords:
-- Text. Value-Fenster Media Player
+- TEXT.value Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d87f688f7afffeb588a37ac13ebff4cdc7cc105
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8eef6b17428831a52a0e3cf5b8f8ec3dd7f795d5d4b78e2c4700a6274b877820
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368504"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119762860"
 ---
-# <a name="textvalue"></a>Text. Value
+# <a name="textvalue"></a>TEXT.value
 
-Das **value** -Attribut gibt den Text an, der im Text Steuerelement angezeigt wird, oder ruft ihn ab.
+Das  Wertattribut gibt den Text an, der im Text-Steuerelement angezeigt wird, oder ruft diesen ab.
 
 ``` syntax
         elementID.value
@@ -29,21 +29,21 @@ Das **value** -Attribut gibt den Text an, der im Text Steuerelement angezeigt wi
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Breite des Text-Steuer Elements unzureichend ist, um den bereitgestellten Text zu enthalten, wird der Text abgeschnitten, und es wird ein Auslassungs Zeichen angezeigt, um die Tatsache zu veranschaulichen. Wenn das **ToolTip** -Attribut nicht festgelegt wurde, wird der vollständige Text dann als QuickInfo angezeigt, wenn der Cursor über das Steuerelement bewegt wird.
+Wenn die Breite des Text-Steuerelements nicht ausreicht, um den bereitgestellten Text zu enthalten, wird der Text zugeschnitten, und es wird eine Auslassungszeichen angezeigt, um die Tatsache zu veranschaulichen. Wenn das **toolTip-Attribut** nicht festgelegt wurde, wird der vollständige Text als QuickInfo angezeigt, wenn der Cursor auf das Steuerelement zeigen soll.
 
-Wenn keine Breite angegeben ist, ist die Standardbreite für das-Steuerelement die Breite der Zeichenfolge.
+Wenn keine Breite angegeben wird, ist die Standardbreite für das Steuerelement die Breite der Zeichenfolge.
 
-Wenn die Höhe des Steuer Elements nicht angegeben wird, ist die Standardhöhe eine Zeile.
+Wenn die Höhe des Steuerelements nicht angegeben ist, beträgt die Standardhöhe eine Zeile.
 
-Wenn das **WordWrap** -Attribut auf "true" festgelegt ist und die Höhe des Steuer Elements ausreichend ist, um eine andere Textzeile aufnehmen zu können, wird der Text in eine nachfolgende Zeile umschlossen. Das umwickeln erfolgt nur zwischen Wörtern. Zeilenumbrüche können auch erzwungen werden, wie unter **WordWrap** erläutert.
+Wenn das **wordWrap-Attribut** auf TRUE festgelegt ist und die Höhe des Steuerelements ausreicht, um eine andere Textzeile aufzunehmen, wird der Text in eine nachfolgende Zeile umbrochen. Das Umschließen erfolgt nur zwischen Wörtern. Zeilenumbrüche können auch erzwungen werden, wie unter **wordWrap** erläutert.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel ist eine vollständige Skin-Definitionsdatei, die veranschaulicht, wie die Attribute des **Text** -Elements verwendet werden. Sie befindet sich im Verzeichnis Samples, das mit dem SDK installiert wurde.
+Das folgende Beispiel ist eine vollständige Skindefinitionsdatei, die veranschaulicht, wie die Attribute des **TEXT-Elements** verwendet werden. Sie finden sie im Beispielverzeichnis, das mit dem SDK installiert wurde.
 
 
 ```C++
@@ -156,21 +156,21 @@ Das folgende Beispiel ist eine vollständige Skin-Definitionsdatei, die veransch
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Text-Element**](text-element.md)
+[**TEXT-Element**](text-element.md)
 </dt> <dt>
 
-[**Text. ToolTip**](text-tooltip.md)
+[**TEXT.toolTip**](text-tooltip.md)
 </dt> <dt>
 
-[**Text. WordWrap**](text-wordwrap.md)
+[**TEXT.wordWrap**](text-wordwrap.md)
 </dt> </dl>
 
  

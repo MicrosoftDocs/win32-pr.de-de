@@ -3,24 +3,24 @@ title: Trackbars
 description: Trackbars
 ms.assetid: b9676697-c3ab-465c-8b50-eb784f53bb11
 keywords:
-- Windows Media Player Mobile Skins, trackbars
-- Skins, trackbars
-- Verweis für Skins, trackbars
-- trackbars in Skins, Info
+- Windows Media Player Mobile Skins, Trackbars
+- Skins, Trackbars
+- Referenz für Skins, Trackbars
+- Trackbars in Skins,About
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cb7b64f7bada6f927b25aeecb71d584aa1ec2a68
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1eb311994ccdfb48eb1ea9e010b268cdef13fd1fc8a2154d491f6e4103a91ec3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340230"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119762670"
 ---
 # <a name="trackbars"></a>Trackbars
 
-Eine TrackBar zeigt ein Bild an, das in kleinen Schritten geändert wird. Trackbars werden für volumensteuerelemente und Wiedergabe Positions Steuerelemente verwendet. Mithilfe von trackbars können Sie Informationen zum aktuellen Medien Element anzeigen oder den Benutzern die Möglichkeit geben, Einstellungen oder Wiedergabe Positionen zu ändern. Beispielsweise können Sie eine TrackBar verwenden, um dem Benutzer das Anpassen des Volumes und eine weitere TrackBar zu ermöglichen, die dem Benutzer die aktuelle Wiedergabe Position anzeigen kann. Trackbars verfügen über ein Thumb-Bild, das die aktuelle Einstellung des TrackBar-Werts definiert.
+Eine Trackleiste zeigt ein Bild an, das sich in kleinen Schritten ändert. Trackbars werden für Lautstärke- und Wiedergabepositionssteuerelemente verwendet. Sie können Trackleisten verwenden, um Informationen zum aktuellen Medienelement anzuzeigen oder dem Benutzer das Ändern von Einstellungen oder der Wiedergabeposition zu ermöglichen. Beispielsweise können Sie eine Trackleiste verwenden, um dem Benutzer das Anpassen des Volumes zu ermöglichen, und eine andere Trackleiste, die dem Benutzer die aktuelle Wiedergabeposition anzeigen kann. Trackleisten verfügen über ein Fingerabdruckbild, das die aktuelle Einstellung des Trackbarwerts definiert.
 
-Der trackbars-Abschnitt der Skin-Definitionsdatei muss mit der folgenden Zeile beginnen:
+Der Abschnitt Trackbars der Skindefinitionsdatei muss mit dieser Zeile beginnen:
 
 
 ```C++
@@ -30,7 +30,7 @@ Der trackbars-Abschnitt der Skin-Definitionsdatei muss mit der folgenden Zeile b
 
 
 
-Anschließend müssen Sie eine oder mehrere Zeilen hinzufügen, die Informationen zu den einzelnen trackbars in der Skin enthalten.
+Anschließend müssen Sie eine oder mehrere Zeilen hinzufügen, die Informationen zu den einzelnen Trackbars in Ihrer Skin enthalten.
 
 
 ```C++
@@ -41,7 +41,7 @@ Anschließend müssen Sie eine oder mehrere Zeilen hinzufügen, die Informatione
 
 
 
-Sie können die folgende Vorlage für den trackbars-Abschnitt Ihrer Skin-Definitionsdatei verwenden:
+Sie können die folgende Vorlage für den Abschnitt Trackbars Ihrer Skindefinitionsdatei verwenden:
 
 
 ```C++
@@ -52,15 +52,15 @@ Sie können die folgende Vorlage für den trackbars-Abschnitt Ihrer Skin-Definit
 
 
 
-Sie müssen die folgende Reihenfolge für die TrackBar-Informationen für jede Zeile im Abschnitt trackbars verwenden (jeder Teil der Zeile ist erforderlich):
+Sie müssen die folgende Reihenfolge für Trackbarinformationen für jede Zeile im Abschnitt Trackbars verwenden (jeder Teil der Zeile ist erforderlich):
 
-1.  [TrackBar-Typ](trackbar-type.md)
-2.  [Position der TrackBar](trackbar-location.md)
-3.  [Bildquelle für deaktivierte TrackBar](image-source-for-disabled-trackbar.md)
-4.  [Ziehpunkt Bildquelle](thumb-image-source.md)
-5.  [Thumb-Größe](thumb-size.md)
+1.  [Trackbar-Typ](trackbar-type.md)
+2.  [Trackbar-Position](trackbar-location.md)
+3.  [Bildquelle für deaktivierte Trackleiste](image-source-for-disabled-trackbar.md)
+4.  [Thumb Image Source](thumb-image-source.md)
+5.  [Thumb Size](thumb-size.md)
 
-Ein Beispiel für trackbars-Code finden Sie im [Abschnitt "Beispiel trackbars](sample-trackbars-section.md)".
+Ein Beispiel für Trackbars-Code finden Sie im [Abschnitt "Beispiel-Trackleisten".](sample-trackbars-section.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -69,9 +69,9 @@ Ein Beispiel für trackbars-Code finden Sie im [Abschnitt "Beispiel trackbars](s
 [**Skin-Referenz**](skin-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

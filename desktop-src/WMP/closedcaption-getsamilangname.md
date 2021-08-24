@@ -1,11 +1,11 @@
 ---
-title: Closedcaption. getsamilangname-Methode
-description: Die getsamilangname-Methode ruft den Namen einer Sprache ab, die von der aktuellen Sami-Datei unterstützt wird.
+title: ClosedCaption.getSAMILangName-Methode
+description: Die getSAMILangName-Methode ruft den Namen einer Sprache ab, die von der aktuellen SAMI-Datei unterstützt wird.
 ms.assetid: 20cf8faf-3a8c-4d7b-9bd1-2366672f0e67
 keywords:
-- getsamilangname-Methode, Windows Media Player
-- getsamilangname-Methode, Windows Media Player, closedcaption-Klasse
-- Closedcaption-Klasse, Windows Media Player, getsamilangname-Methode
+- getSAMILangName-Windows Media Player
+- getSAMILangName-Methode Windows Media Player , ClosedCaption-Klasse
+- ClosedCaption-Klasse Windows Media Player , getSAMILangName-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ccd4b481de808ac8814e596cfc038aec38c7f19b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a8d4150289eb7637d1772443a5437c6d245993ea0825a37d11bd7ec5accae918
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359410"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764030"
 ---
-# <a name="closedcaptiongetsamilangname-method"></a>Closedcaption. getsamilangname-Methode
+# <a name="closedcaptiongetsamilangname-method"></a>ClosedCaption.getSAMILangName-Methode
 
-Die **getsamilangname** -Methode ruft den Namen einer Sprache ab, die von der aktuellen Sami-Datei unterstützt wird.
+Die **getSAMILangName-Methode** ruft den Namen einer Sprache ab, die von der aktuellen SAMI-Datei unterstützt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ strRetVal = ClosedCaption.getSAMILangName(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-**Number** (**Long**), der den Index des abzurufenden sprach namens angibt.
+**Number** **(long)** gibt den Index des abzurufenden Sprachnamens an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zeichenfolge** zurück, die den Namen der Sprache enthält, wie in der Sami-Datei angegeben.
+Diese Methode gibt eine **Zeichenfolge zurück,** die den Namen der Sprache enthält, wie in der SAMI-Datei angegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Sprachen in einer Sami-Datei werden in der in der Datei gezeigten Reihenfolge indiziert, beginnend mit 0 (null).
+Die Sprachen in einer SAMI-Datei werden in der Reihenfolge indiziert, die in der Datei angezeigt wird, beginnend mit 0 (null).
 
-Diese Methode kann erst verwendet werden, wenn eine digitale Mediendatei (*Player*) geöffnet ist.**openstate** ist gleich 13).
+Diese Methode kann erst verwendet werden, wenn eine digitale Mediendatei geöffnet ist (*Player*.**openState** ist gleich 13).
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
@@ -67,7 +67,7 @@ Diese Methode kann erst verwendet werden, wenn eine digitale Mediendatei (*Playe
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -79,10 +79,10 @@ Diese Methode kann erst verwendet werden, wenn eine digitale Mediendatei (*Playe
 [**Hinzufügen von Untertiteln zu digitalen Medien**](adding-closed-captions-to-digital-media.md)
 </dt> <dt>
 
-[**Closedcaption-Objekt**](closedcaption-object.md)
+[**ClosedCaption-Objekt**](closedcaption-object.md)
 </dt> <dt>
 
-[**Closedcaption. samilang**](closedcaption-samilang.md)
+[**ClosedCaption.SAMILang**](closedcaption-samilang.md)
 </dt> </dl>
 
  

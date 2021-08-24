@@ -1,7 +1,7 @@
 ---
-description: Die GetFrame-Funktion gibt ein Handle für einen angegebenen Frame in einer Erfassung zurück.
+description: Die GetFrame-Funktion gibt ein Handle für einen bestimmten Frame innerhalb einer Erfassung zurück.
 ms.assetid: d40bc364-0028-4006-a6c2-6ee100366ba3
-title: GetFrame-Funktion (Netmon. h)
+title: GetFrame-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 3f79e7fa6fc4e79f4dea804769cc9d51b8096860
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f6f992c0c61978e2de6f90755852c9e29d6ac51d7ae7f2405ef981ed695c4b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119779250"
 ---
 # <a name="getframe-function"></a>GetFrame-Funktion
 
-Die **GetFrame** -Funktion gibt ein Handle für einen angegebenen Frame in einer Erfassung zurück.
+Die **GetFrame-Funktion** gibt ein Handle für einen bestimmten Frame innerhalb einer Erfassung zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ HFRAME WINAPI GetFrame(
 
 <dl> <dt>
 
-*hcapture* \[ in\]
+*hCapture* \[ In\]
 </dt> <dd>
 
-Handle für eine Erfassung. Um das Erfassungs Handle abzurufen, rufen Sie die [getframecapturehandle](getframecapturehandle.md) -Funktion auf.
+Handle für eine Erfassung. Rufen Sie zum Abrufen des Erfassungshandles die [GetFrameCaptureHandle-Funktion](getframecapturehandle.md) auf.
 
 </dd> <dt>
 
-*Framengegen ber* \[ in\]
+*FrameNumber* \[ In\]
 </dt> <dd>
 
-Die Zahl (null basiert) des Frames. Die Nummer des ersten Frames in einer Erfassung ist 0 (null).
+Zahl (nullbasiert) des Frames. Die Nummer des ersten Frames in einer Erfassung ist 0 (null).
 
 </dd> </dl>
 
@@ -58,13 +58,13 @@ Die Zahl (null basiert) des Frames. Die Nummer des ersten Frames in einer Erfass
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Handle für den Frame.
 
-Wenn die Funktion nicht erfolgreich ist (d. h., wenn *hcapture* ungültig ist oder die Frame Nummer außerhalb des gültigen Bereichs liegt), ist der Rückgabewert **null**.
+Wenn die Funktion nicht erfolgreich ist (d. h. wenn *hCapture* ungültig ist oder die Framenummer außerhalb des Bereichs liegt), ist der Rückgabewert **NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die **GetFrame** -Funktion zum Abrufen des Frame Handles, das beim Suchen von Instanzen einer Eigenschaft erforderlich ist. Die Funktionen, die zum Suchen von Eigenschafts Instanzen verwendet werden, sind [findpropertyinstance](findpropertyinstance.md) , das die erste Instanz sucht, und [findpropertyinstancerestart](findpropertyinstancerestart.md) , die die nächste Instanz sucht.
+Verwenden Sie die **GetFrame-Funktion,** um das Framehandle abzurufen, das beim Suchen von Instanzen einer Eigenschaft erforderlich ist. Die Funktionen, die zum Suchen von Eigenschafteninstanzen verwendet werden, sind [FindPropertyInstance,](findpropertyinstance.md) die die erste Instanz sucht, und [FindPropertyInstanceRestart,](findpropertyinstancerestart.md) die die nächste Instanz sucht.
 
-[*Experten*](e.md) und [*Parser*](p.md) können die **GetFrame** -Funktion aufrufen.
+[*Experten*](e.md) und [*Parser*](p.md) können die **GetFrame-Funktion** aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,20 +74,20 @@ Verwenden Sie die **GetFrame** -Funktion zum Abrufen des Frame Handles, das beim
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Findpropertyinstance](findpropertyinstance.md)
+[FindPropertyInstance](findpropertyinstance.md)
 </dt> <dt>
 
-[Findpropertyinstancerestart](findpropertyinstancerestart.md)
+[FindPropertyInstanceRestart](findpropertyinstancerestart.md)
 </dt> </dl>
 
  

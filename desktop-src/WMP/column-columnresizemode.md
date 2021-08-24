@@ -1,9 +1,9 @@
 ---
-title: Column. columnresizemode
-description: Das columnresizemode-Attribut gibt den Größenänderung Modus für diese Spalte an oder ruft ihn ab.
+title: COLUMN.columnResizeMode
+description: Das columnResizeMode-Attribut gibt den Größenänderungsmodus für diese Spalte an oder ruft diesen ab.
 ms.assetid: 95ece2a3-20a6-4b9d-a2eb-fc69fc612f29
 keywords:
-- Column. columnresizemode-Windows-Media Player
+- COLUMN.columnResizeMode Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 52d17b1a2edd878fb15e69c595e3c061c1963a5b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c59046aa76c01a1439e5db8f0fb6850e7df74d874cba555d1f9c3829f09d9598
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764000"
 ---
-# <a name="columncolumnresizemode"></a>Column. columnresizemode
+# <a name="columncolumnresizemode"></a>COLUMN.columnResizeMode
 
-Das **columnresizemode** -Attribut gibt den Größenänderung Modus für diese Spalte an oder ruft ihn ab.
+Das **columnResizeMode-Attribut** gibt den Größenänderungsmodus für diese Spalte an oder ruft diesen ab.
 
 ``` syntax
         elementID.columnResizeMode
@@ -29,16 +29,16 @@ Das **columnresizemode** -Attribut gibt den Größenänderung Modus für diese S
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die einen der folgenden Werte enthält.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen der folgenden Werte enthält.
 
 
 
-| Wert          | BESCHREIBUNG                                                                                                    |
+| Wert          | Beschreibung                                                                                                    |
 |----------------|----------------------------------------------------------------------------------------------------------------|
-| Autosizeheader | Standard. Die Größe der Spaltengröße wird an alle Daten in der Spalte und in der Kopfzeile angepasst.                         |
-| Autosizedata   | Die Spaltengröße ändert sich, um nur alle Daten in der Spalte zu unterstützen.                                                 |
-| Fest          | Die Spalte hat eine Größe mit fester Größe.                                                                                    |
-| Dehn      | Die Größe der Spalte ändert sich, um den verbleibenden Platz im **Wiedergabe** Listen-Steuerelement zu verwenden, nachdem alle anderen Spalten geändert wurden. |
+| AutosizeHeader | Standard. Die Spaltengröße wird so angepasst, dass alle Daten in der Spalte und der Kopfzeile berücksichtigt werden.                         |
+| AutoizeData   | Die Spaltengröße wird so angepasst, dass nur alle Daten in der Spalte berücksichtigt werden.                                                 |
+| Fest          | Die Spalte ist eine feste Größe.                                                                                    |
+| Erstreckt sich      | Die Spaltengröße wird so geändert, dass der verbleibende Platz im **PLAYLIST-Steuerelement** verwendet wird, nachdem die Größe aller anderen Spalten geändert wurde. |
 
 
 
@@ -50,7 +50,7 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die einen der folgende
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -58,7 +58,7 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die einen der folgende
 
 <dl> <dt>
 
-[**Column-Element**](column-element.md)
+[**COLUMN-Element**](column-element.md)
 </dt> </dl>
 
  

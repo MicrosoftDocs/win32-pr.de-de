@@ -1,5 +1,5 @@
 ---
-description: Stellt die Statusdaten der Port Bandbreite dar.
+description: Stellt die Statusdaten der Portbandbreite dar.
 ms.assetid: 1f7be0dd-3d2f-49ef-aff0-cb162389194a
 title: Msvm_EthernetSwitchPortBandwidthData-Klasse
 ms.topic: reference
@@ -24,18 +24,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 55e8ad735d712bdd388e42b1f4174ee1a78af184
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f591c5b4f62cda04324fab6b962d7dad8873058cdb90aab2d998081578d259a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681510"
 ---
-# <a name="msvm_ethernetswitchportbandwidthdata-class"></a>MSVM \_ ethernetzwitchportbandwidthdata-Klasse
+# <a name="msvm_ethernetswitchportbandwidthdata-class"></a>Msvm \_ EthernetSwitchPortBandwidthData-Klasse
 
-Stellt die Statusdaten der Port Bandbreite dar.
+Stellt die Statusdaten der Portbandbreite dar.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,123 +59,123 @@ class Msvm_EthernetSwitchPortBandwidthData : Msvm_EthernetPortData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ ethernetzwitchportbandwidthdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetSwitchPortBandwidthData-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ ethernetzwitchportbandwidthdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetSwitchPortBandwidthData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Ethernet Switch Port Bandwidth Feature Status" festgelegt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Ethernet Switch Port Bandwidth Feature Status" festgelegt.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Schlüssel,** **MaxLen** ( 256 )
 </dt> </dl>
 
-Der Name der Unterklasse, die bei der Erstellung dieser Port Daten Instanz verwendet wird. Diese Eigenschaft wird von [**MSVM \_ ethernetportdata**](msvm-ethernetportdata.md)geerbt und ist immer auf "MSVM \_ ethernettwitchportbandwidthdata" festgelegt.
+Der Name der Unterklasse, die bei der Erstellung dieser Portdateninstanz verwendet wird. Diese Eigenschaft wird von [**Msvm \_ EthernetPortData**](msvm-ethernetportdata.md)geerbt und immer auf "Msvm \_ EthernetSwitchPortBandwidthData" festgelegt.
 
 </dd> <dt>
 
-**Currentbandwidthreservationprozentsatz**
+**CurrentBandwidthReservationPercentage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (1), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der aktuelle Prozentsatz der Bandbreite, die für diesen Port reserviert ist.
+Der aktuelle Prozentsatz der für diesen Port reservierten Bandbreite.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "stellt die Port Bandbreite-Funktionsdaten" fest.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Stellt die Statusdaten des Portbandbreitenfeatures dar" festgelegt.
 
 </dd> <dt>
 
-**Geräteklassen Name**
+**DeviceCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Schlüssel,** **MaxLen** ( 256 )
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Bereichs Systems. Diese Eigenschaft wird von [**MSVM \_ ethernetportdata**](msvm-ethernetportdata.md)geerbt und ist immer auf "MSVM \_ ethernetzwitchport" festgelegt.
+Der Name der Erstellungsklasse des Bereichssystems. Diese Eigenschaft wird von [**Msvm \_ EthernetPortData**](msvm-ethernetportdata.md)geerbt und immer auf "Msvm \_ EthernetSwitchPort" festgelegt.
 
 </dd> <dt>
 
-**DeviceID**
+**Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (64)
+Qualifizierer: **Schlüssel,** **MaxLen** ( 64 )
 </dt> </dl>
 
-Die Geräte-ID des Ports, der diese Port Daten Instanz eingibt. Diese Eigenschaft wird von [**MSVM \_ ethernetportdata**](msvm-ethernetportdata.md)geerbt.
+Die Geräte-ID des Ports, der diese Portdateninstanz eingrenzt. Diese Eigenschaft wird von [**Msvm \_ EthernetPortData**](msvm-ethernetportdata.md)geerbt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Ethernet Switch Port Bandwidth Feature Status" festgelegt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Ethernet Switch Port Bandwidth Feature Status" festgelegt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -184,55 +184,55 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Schlüssel,** **MaxLen** ( 256 )
 </dt> </dl>
 
-Eine Zeichenfolge, die diese Port Daten Instanz innerhalb des Bereichs des Schalters und des Ports eindeutig identifiziert. Diese Eigenschaft wird von [**MSVM \_ ethernetportdata**](msvm-ethernetportdata.md)geerbt.
+Eine Zeichenfolge, die diese Portdateninstanz innerhalb des Bereichs von Switch und Port eindeutig identifiziert. Diese Eigenschaft wird von [**Msvm \_ EthernetPortData**](msvm-ethernetportdata.md)geerbt.
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Schlüssel,** **MaxLen** (256)
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Bereichs Systems. Diese Eigenschaft wird von [**MSVM \_ ethernetportdata**](msvm-ethernetportdata.md)geerbt und ist immer auf "MSVM \_ virtualethernwitch" festgelegt.
+Der Name der Erstellungsklasse des Bereichssystems. Diese Eigenschaft wird von [**Msvm \_ EthernetPortData**](msvm-ethernetportdata.md)geerbt und immer auf "Msvm \_ VirtualEthernetSwitch" festgelegt.
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Schlüssel,** **MaxLen** ( 256 )
 </dt> </dl>
 
-Der Name des virtuellen Switches, der diese Port Daten Instanz eingibt. Diese Eigenschaft wird von [**MSVM \_ ethernetportdata**](msvm-ethernetportdata.md)geerbt.
+Der Name des virtuellen Switches, der diese Portdateninstanz eingrenzt. Diese Eigenschaft wird von [**Msvm \_ EthernetPortData**](msvm-ethernetportdata.md)geerbt.
 
 </dd> </dl>
 
@@ -242,10 +242,10 @@ Der Name des virtuellen Switches, der diese Port Daten Instanz eingibt. Diese Ei
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

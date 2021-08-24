@@ -1,7 +1,7 @@
 ---
 UID: ''
-title: Unicodeto Bytes-Funktion
-description: Konvertiert Unicode-Zeichen in GB18030 bytes.
+title: UnicodeToBytes-Funktion
+description: Konvertiert Unicode-Zeichen in GB18030 Bytes.
 old-location: ''
 ms.assetid: na
 ms.date: 04/10/2019
@@ -34,20 +34,20 @@ api_name:
 targetos: Windows
 req.typenames: ''
 req.redist: ''
-ms.openlocfilehash: 66ed21768c3acef7f2aa2128df057da8552b2ad2
-ms.sourcegitcommit: 1f6a1bfc1c4bb2641bc3ba44beb1f2727c94681b
+ms.openlocfilehash: 01109763644dc04aeb398e5fc64e221cd5f3d18870df2654fa5348bc163a277c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "103719952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764726"
 ---
-# <a name="unicodetobytes-function"></a>Unicodeto Bytes-Funktion
+# <a name="unicodetobytes-function"></a>UnicodeToBytes-Funktion
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Veraltet. Konvertiert Unicode-Zeichen in GB18030 bytes.
+Veraltet. Konvertiert Unicode-Zeichen in GB18030 Bytes.
 
-**Hinweis**  Beim Umrechnen von Unicode-Zeichen in GB18030 Bytes sollte eine Anwendung, die unter Windows Vista und höher ausgeführt werden soll, die [WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) -Funktion verwenden.
+**Hinweis:**  Beim Konvertieren von Unicode-Zeichen in GB18030 Bytes sollte eine Anwendung, die unter Windows Vista und höher ausgeführt werden soll, die [WideCharToMultiByte-Funktion](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) verwenden.
 
 ```cpp
 DWORD UnicodeToBytes(
@@ -60,31 +60,31 @@ DWORD UnicodeToBytes(
 
 ## <a name="parameters"></a>Parameter
 
-### <a name="lpwidecharstr-in"></a>lpwidecharstr [in]
+### <a name="lpwidecharstr-in"></a>lpWideCharStr [in]
 
 Zeiger auf die zu konvertierende Unicode-Zeichenfolge.
 
-### <a name="cchwidechar-in"></a>cchwidechar [in]
+### <a name="cchwidechar-in"></a>cchWideChar [in]
 
-Zeichen Anzahl der zu konvertierenden Unicode-Zeichenfolge.
+Zeichenanzahl der zu konvertierenden Unicode-Zeichenfolge.
 
-### <a name="lpmultibytestr-in"></a>lpmultibytestr [in]
+### <a name="lpmultibytestr-in"></a>lpMultiByteStr [in]
 
-Zeiger auf den Ziel-multibytepuffer.
-Wenn *lpmultibytestr* den Wert 0 hat, wird die Byte Anzahl des GB18030-Ergebnisses zurückgegeben, und es wird keine Konvertierung durchgeführt.
+Zeiger auf den Ziel-Multibytepuffer.
+Wenn *lpMultiByteStr* 0 ist, wird die Byteanzahl des Gb18030-Ergebnisses zurückgegeben, und es wird keine Konvertierung durchgeführt.
 
-### <a name="cchmultibyte-in"></a>cchmultibyte [in]
+### <a name="cchmultibyte-in"></a>cchMultiByte [in]
 
-Byte Anzahl des Ziel-multibytepuffers.
-Wenn *cchmultibyte* den Wert 0 hat, wird die Byte Anzahl des GB18030-Ergebnisses zurückgegeben, und es wird keine Konvertierung durchgeführt.
+Byteanzahl des Ziel-Multibytepuffers.
+Wenn *cchMultiByte* 0 ist, wird die Byteanzahl des GB18030-Ergebnisses zurückgegeben, und es wird keine Konvertierung durchgeführt.
 
 ## <a name="returns"></a>Gibt zurück
 
-Gibt die Byte Anzahl der Multibytezeichen zurück, die generiert werden, wenn erfolgreich.
+Gibt bei Erfolg die Byteanzahl der generierten Multibytezeichen zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)
 

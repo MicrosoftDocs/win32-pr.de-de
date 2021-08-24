@@ -1,9 +1,9 @@
 ---
-title: MCI_WAVE_SET_PARMS-Struktur (mciapi. h)
-description: Die Struktur von MCI \_ \_ -Wellen Satz \_ -Parametern enthält Informationen zum MCI \_ -Befehl Set für Waveform-Audiogeräte.
+title: MCI_WAVE_SET_PARMS -Struktur (Mciapi.h)
+description: Die MCI \_ WAVE \_ SET \_ PARMS-Struktur enthält Informationen zum MCI \_ SET-Befehl für Waveform-Audiogeräte.
 ms.assetid: 24c26124-274f-457e-ab87-887f3bcffce3
 keywords:
-- MCI_WAVE_SET_PARMS Struktur Windows Multimedia
+- MCI_WAVE_SET_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 11446eda931da1a645b9bb6218c93898862b59bd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 85508ec493ecdc38825b90877e608683fe6c0bb7c099365c187a434890c605d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859221"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119783750"
 ---
-# <a name="mci_wave_set_parms-structure"></a>Struktur von MCI- \_ Wellen \_ Satz- \_ Parametern
+# <a name="mci_wave_set_parms-structure"></a>MCI \_ WAVE \_ SET \_ PARMS-Struktur
 
-Die Struktur von **MCI- \_ Wellen \_ Satz- \_ Parametern** enthält Informationen zum [**MCI-Befehl \_ Set**](mci-set.md) für Waveform-Audiogeräte.
+Die **MCI \_ WAVE SET \_ \_ PARMS-Struktur** enthält Informationen zum [**MCI \_ SET-Befehl**](mci-set.md) für Waveform-Audiogeräte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,45 +54,45 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort in niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwtimeformat**
+**dwTimeFormat**
 </dt> <dd>
 
 Das Zeitformat des Geräts.
 
 </dd> <dt>
 
-**dwaudiodatei**
+**dwAudio**
 </dt> <dd>
 
-Die Kanalnummer für die Audioausgabe. Wird normalerweise verwendet, wenn ein Kanal ein-oder ausgeschaltet wird.
+Kanalnummer für Audioausgabe. Wird normalerweise verwendet, wenn ein Kanal ein- oder ausgeschaltet wird.
 
 </dd> <dt>
 
-**Winput**
+**wInput**
 </dt> <dd>
 
-Audioeingabechannel.
+Audioeingabekanal.
 
 </dd> <dt>
 
-**woutput**
+**wOutput**
 </dt> <dd>
 
-Ausgabegerät, das verwendet werden soll. Dieser Wert kann z. b. 2 lauten, wenn ein System über zwei installierte Soundkarten verfügt.
+Das zu verwendende Ausgabegerät. Dieser Wert kann beispielsweise 2 sein, wenn auf einem System zwei Soundkarten installiert sind.
 
 </dd> <dt>
 
-**wformattag**
+**wFormatTag**
 </dt> <dd>
 
-Format der Waveform-Audiodaten, z. b. Wave- \_ Format \_ PCM. Mögliche Werte sind in "mmreg. h" definiert.
+Format der Waveform-Audiodaten, z. B. WAVE \_ FORMAT \_ PCM. Mögliche Werte werden in Mmreg.h definiert.
 
 </dd> <dt>
 
@@ -103,7 +103,7 @@ Reserviert.
 
 </dd> <dt>
 
-**nchannels**
+**nChannels**
 </dt> <dd>
 
 Mono (1) oder Stereo (2).
@@ -117,24 +117,24 @@ Reserviert.
 
 </dd> <dt>
 
-**nsamplespersec**
+**nSamplesPerSec**
 </dt> <dd>
 
-Stichproben pro Sekunde.
+Beispiele pro Sekunde.
 
 </dd> <dt>
 
-**navgbytespersec**
+**nAvgBytesPerSec**
 </dt> <dd>
 
-Die Stichprobenrate in Byte pro Sekunde.
+Abtastrate in Bytes pro Sekunde.
 
 </dd> <dt>
 
 **nBlockAlign**
 </dt> <dd>
 
-Blockieren der Ausrichtung der Daten.
+Blockiert die Ausrichtung der Daten.
 
 </dd> <dt>
 
@@ -145,10 +145,10 @@ Reserviert.
 
 </dd> <dt>
 
-**wbitspersample**
+**wBitsPerSample**
 </dt> <dd>
 
-Bits pro Stichprobe.
+Bits pro Beispiel.
 
 </dd> <dt>
 
@@ -159,9 +159,9 @@ Reserviert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -171,7 +171,7 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -179,13 +179,13 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Gruppe**](mci-set.md)
+[**MCI \_ SET**](mci-set.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

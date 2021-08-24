@@ -4,37 +4,37 @@ description: VML FillType-Attribut
 ms.assetid: c6870100-8fb9-4589-9b83-cd46cc17eeb3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e880f7d13c7db647c586431f492a301ccf1aba0b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0264fe6cd8cd3dfb7592aea25ef855fda01632647b23f0ab2cffe84c4c504918
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103949092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119680800"
 ---
 # <a name="vml-filltype-attribute"></a>VML FillType-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Fülltyp, der für den Hintergrund eines Strichs verwendet wird. Lese-/Schreibzugriff. **Vgfilltype**.
+Definiert den Typ der Füllung, die für den Hintergrund eines Strichs verwendet wird. Lese-/Schreibzugriff. **VgFillType**.
 
 **Gilt für**
 
-[Stellung](msdn-online-vml-stroke-element.md)
+[Takt](msdn-online-vml-stroke-element.md)
 
 **Tagsyntax**
 
-<v: *Element* FillType = " *Expression* " >
+<v: *element* filltype=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . FillType = "*Ausdruck*"
+*element* .filltype="*expression*"
 
-*Ausdruck* = *Element*. FillType
+*expression* = *Element*.filltype
 
 **Anmerkungen**
 
@@ -42,22 +42,22 @@ Mögliche Werte:
 
 
 
-| DashStyle | BESCHREIBUNG                                    |
+| Dashstyle | Beschreibung                                    |
 |-----------|------------------------------------------------|
-| Basis     | Das Füllmuster ist vollständig. Standardwert.      |
-| Tile      | Das Füllbild wird gekachelt.                       |
+| Basis     | Das Füllmuster ist voll. Standardwert.      |
+| Tile      | Das Füllbild ist gekachelt.                       |
 | Muster   | Das Füllbild wird gestreckt, um ein Muster zu bilden. |
 | Frame     | Das Füllbild wird zu einem Rahmen für die Form. |
 
 
 
- 
+ 
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Der Strich der Form hat eine Kachel, die aus dem cylinder.gif Bild erstellt wurde.
+Der Strich der Form verfügt über eine kachelierte Textur, die aus dem cylinder.gif wird.
 
 
 ```HTML
@@ -71,6 +71,6 @@ Der Strich der Form hat eine Kachel, die aus dem cylinder.gif Bild erstellt wurd
 
 
 
- 
+ 
 
- 
+ 

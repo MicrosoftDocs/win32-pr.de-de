@@ -1,9 +1,9 @@
 ---
-title: Utilassemlestringswithzuc-Funktion (ndattributils. h)
-description: Ordnet eine Zeichenfolge zu und formatiert Sie mithilfe von Zeichen folgen, die in der Zeichen folgen Tabelle angegeben sind Diese Funktion verwendet StringCchPrintf, um die formatierte Zeichenfolge zu erstellen.
+title: UtilAssembleStringsWithAlloc-Funktion (Ndattributils.h)
+description: Ordnet eine Zeichenfolge zu und formatiert sie mithilfe von Zeichenfolgen, die von der Zeichenfolgentabelle bereitgestellt werden. Diese Funktion verwendet StringCchPrintf, um die formatierte Zeichenfolge zu erstellen.
 ms.assetid: eedc2874-b949-4cc2-ba7c-ebf1924f1156
 keywords:
-- Utilassemlestringswithzuweisung-Funktion NDF
+- UtilAssembleStringsWithAlloc-Funktion NDF
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dae121b1d5f2d968f696190c64828be91adc71da
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 38473f45e2bd4c53b964bb38ec285cdf3eea091a96d72684c1d801b949f4d0a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743881"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119801730"
 ---
-# <a name="utilassemblestringswithalloc-function"></a>Utilassemlestringswithzuweisung-Funktion
+# <a name="utilassemblestringswithalloc-function"></a>UtilAssembleStringsWithAlloc-Funktion
 
-Die **utilassemlestringswithzuweisung** -Funktion ordnet eine Zeichenfolge zu und formatiert Sie mithilfe von Zeichen folgen, die von der Zeichen folgen Tabelle bereitgestellt werden. Diese Funktion verwendet [**StringCchPrintf**](/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa) , um die formatierte Zeichenfolge zu erstellen.
+Die **UtilAssembleStringsWithAlloc-Funktion** ordnet eine Zeichenfolge zu und formatiert sie mithilfe von Zeichenfolgen, die von der Zeichenfolgentabelle bereitgestellt werden. Diese Funktion verwendet [**StringCchPrintf,**](/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa) um die formatierte Zeichenfolge zu erstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ HRESULT UtilAssembleStringsWithAlloc(
 
 <dl> <dt>
 
-*Puffer* \[ vorgenommen\]
+*Puffer* \[ out\]
 </dt> <dd>
 
-Typ: **LPWSTR \** _
+Typ: **LPWSTR \***
 
-Der Speicherort, an dem die neu zugewiesene Zeichenfolge platziert wird. Wenn die Zeichenfolge nicht mehr benötigt wird, muss Sie mit [_ *CoTaskMemFree* *](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)freigegeben werden.
+Der Speicherort, an dem die neu zugeordnete Zeichenfolge platziert wird. Wenn die Zeichenfolge nicht mehr benötigt wird, muss sie mit [**CoTaskMemFree freigegeben werden.**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)
 
 </dd> <dt>
 
-*Buffermax* \[ in\]
+*BufferMax* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die maximale Anzahl von Zeichen, die in der durch den *Puffer* zugeordneten Zeichenfolge zulässig sind. Wenn die resultierende formatierte Zeichenfolge länger als die angegebene Anzahl von Zeichen ist, wird Sie abgeschnitten und mit Null beendet.
+Die maximale Anzahl von Zeichen, die in der von Buffer zugeordneten Zeichenfolge *zulässig sind.* Wenn die resultierende formatierte Zeichenfolge länger als die angegebene Anzahl von Zeichen ist, wird sie abgeschnitten und auf NULL beendet.
 
 > [!Note]  
 > Dieser Parameter darf nicht auf 0 (null) festgelegt werden.
@@ -68,41 +68,41 @@ Die maximale Anzahl von Zeichen, die in der durch den *Puffer* zugeordneten Zeic
 
 </dd> <dt>
 
-*Input Format* \[ in\]
+*InputFormat* \[ In\]
 </dt> <dd>
 
 Typ: **LPCWSTR**
 
-Zeichen folgen Ressource aus der Zeichen folgen Tabelle, die einen an [**StringCchPrintf**](/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa)übergebenen Format Parameter darstellt. Sie wird mit [**makeintresource**](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)erstellt.
+Eine Zeichenfolgenressource aus der Zeichenfolgentabelle, die einen format-Parameter darstellt, der [**an StringCchPrintf übergeben wird.**](/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa) Sie wird mit [**MAKEINTRESOURCE erstellt.**](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)
 
-Das Format der Ressourcen Zeichenfolge muss entweder einen Format Parameter angeben, der eine Breite Zeichenfolge annimmt, oder einen Format Parameter, der eine Zeichenfolge ohne Vorzeichen und eine Breite Zeichenfolge annimmt.
+Das Format der Ressourcenzeichenfolge muss entweder einen Formatparameter angeben, der eine breite Zeichenfolge akzeptiert, oder einen Formatparameter, der eine lange und eine breite Zeichenfolge ohne Vorzeichen akzeptiert.
 
 </dd> <dt>
 
-*Input String* \[ in\]
+*InputString* \[ In\]
 </dt> <dd>
 
 Typ: **LPCWSTR**
 
-Zeichen folgen Ressource aus der Zeichen folgen Tabelle, die ein an [**StringCchPrintf**](/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa) übergebener Argument anstelle der breiten Zeichenfolge im Format-Parameter darstellt. Sie wird mit [**makeintresource**](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)erstellt.
+Eine Zeichenfolgenressource aus der Zeichenfolgentabelle, die ein Argument darstellt, das an [**StringCchPrintf**](/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa) statt der breiten Zeichenfolge im Formatparameter übergeben wird. Sie wird mit [**MAKEINTRESOURCE erstellt.**](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)
 
 </dd> <dt>
 
-*Additionalargument* \[ in\]
+*AdditionalArgument* \[ In\]
 </dt> <dd>
 
-Typ: **Boolean**
+Typ: **BOOLEAN**
 
-True, wenn *additionalvalue* als erstes Formatierungs Argument an [**StringCchPrintf**](/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa)übergeben werden soll. andernfalls false (und nur die durch *InputString* identifizierte Ressourcen Zeichenfolge).
+True, *wenn AdditionalValue* als erstes Formatierungsargument an [**StringCchPrintf übergeben werden soll.**](/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa) andernfalls false (und nur die von *InputString* identifizierte Ressourcenzeichenfolge wird übergeben).
 
 </dd> <dt>
 
-*Additionalvalue* \[ in\]
+*AdditionalValue* \[ In\]
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
-Der Wert, der als erstes Formatierungs Argument an [**StringCchPrintf**](/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa) übergeben werden soll, wenn *additionalargument* auf true festgelegt ist.
+Der Wert, der als erstes Formatierungsargument an [**StringCchPrintf übergeben**](/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa) werden soll, wenn *AdditionalArgument* true ist.
 
 </dd> </dl>
 
@@ -110,14 +110,14 @@ Der Wert, der als erstes Formatierungs Argument an [**StringCchPrintf**](/window
 
 Typ: **HRESULT**
 
-Mögliche Rückgabewerte sind u. a. die folgenden.
+Mögliche Rückgabewerte sind u. a. folgende:
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                                        |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Der Vorgang wurde erfolgreich ausgeführt.<br/>                                |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Mindestens ein Parameter wurde nicht ordnungsgemäß bereitgestellt.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Mindestens ein Parameter wurde nicht ordnungsgemäß bereitgestellt.<br/> |
 
 
 
@@ -129,9 +129,9 @@ Mögliche Rückgabewerte sind u. a. die folgenden.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Ndattributils. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Ndattributils.h</dt> </dl> |
 
 
 
@@ -139,16 +139,16 @@ Mögliche Rückgabewerte sind u. a. die folgenden.
 
 <dl> <dt>
 
-[**Utilstringcopywithzuzuweisung**](utilstringcopywithalloc.md)
+[**UtilStringCopyWithAlloc**](utilstringcopywithalloc.md)
 </dt> <dt>
 
-[**Utilloadstringwithzuordc**](utilloadstringwithalloc.md)
+[**UtilLoadStringWithAlloc**](utilloadstringwithalloc.md)
 </dt> <dt>
 
 [**StringCchPrintf**](/windows/desktop/api/strsafe/nf-strsafe-stringcchprintfa)
 </dt> <dt>
 
-[**Makeintresource**](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)
+[**MAKEINTRESOURCE**](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)
 </dt> <dt>
 
 [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)

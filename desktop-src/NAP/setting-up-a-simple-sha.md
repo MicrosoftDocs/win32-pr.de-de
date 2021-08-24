@@ -1,29 +1,29 @@
 ---
 title: Einrichten eines einfachen SHA
-description: Im folgenden Beispiel wird ein einfacher Systemintegritäts-Agent (System Health Agent, SHA) eingerichtet und zwei optionale SoH-Änderungs Benachrichtigungen (Statement of Health) und das Leeren des SoH-Caches angezeigt.
+description: Das folgende Beispiel richtet einen einfachen System health agent (SHA) ein und zeigt zwei optionale Aktionen statement of health (SoH) change notification and flushing of the SoH cache (Änderungsbenachrichtigung und Leeren des SoH-Caches).
 ms.assetid: 7c96e1ca-f9b2-40e6-bd89-c8ef77b48dfa
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ef60b7ab9e390289a9bc1a2c3a00dd81ccf46240
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 94625e99f604fd282a5b1177992f6e9e413b30d35f61767ad7231315dddfab53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855951"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119780740"
 ---
 # <a name="setting-up-a-simple-sha"></a>Einrichten eines einfachen SHA
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
- 
+ 
 
-Im folgenden Beispiel wird ein einfacher Systemintegritäts-Agent (System Health Agent, SHA) eingerichtet, und es werden zwei optionale Aktionen angezeigt: Statement of Health (SoH)-Änderungs Benachrichtigung und leeren des SoH-Caches. Beachten Sie, dass die Fehler Verarbeitung aus Gründen der Einfachheit dieses Beispiels nicht in der Main ()-Funktion enthalten ist.
+Das folgende Beispiel richtet einen einfachen System health agent (SHA) ein und zeigt zwei optionale Aktionen: SoH-Änderungsbenachrichtigung (Statement of Health) und Leeren des SoH-Caches. Beachten Sie, dass die Fehlerverarbeitung der Einfachheit halber in diesem Beispiel nicht in der main()-Funktion enthalten ist.
 
 > [!Note]  
-> Das NAP-SDK enthält außerdem einen vollständigen Satz von Beispielcode, der in der... \\ Beispiele für \\ netds- \\ NAP... Verzeichnis der SDK-Installation. Diese Beispiel Gruppe enthält einen SHA, System Integritäts Prüfungs Punkt (SHV) und einen Erzwingungs Client (EC). Es verfügt über vollständige funktionierende NAP-Szenarien zum Einrichten der Kommunikation zwischen SHA-SHV und SHA-ec.
+> Das NAP SDK enthält auch einen vollständigen Satz von Beispielcode, der im ... \\ Beispiele \\ für NetDS \\ NAP... Verzeichnis Ihrer SDK-Installation. Dieser Beispielsatz enthält eine SHA, ein System health validator (SHV) und einen Erzwingungsclient (EC). Es verfügt über vollständig funktionierende NAP-Szenarien, in denen die Kommunikation zwischen SHA-SHV und SHA-EC eingerichtet wird.
 
- 
+ 
 
 
 ```C++
@@ -221,9 +221,9 @@ STDMETHODIMP ShaCallback::GetFixupInfo(FixupInfo** ppStatus)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

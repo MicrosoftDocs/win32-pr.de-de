@@ -1,10 +1,10 @@
 ---
-title: Dienst-DNS-Name-Type-Attribut
-description: Typ des DNS-Einsatzes, der für diesen Dienst gesucht werden soll. Beispielsweise ein-oder-SRV.
+title: Attribut "Service-DNS-Name-Type"
+description: 'Typ des DNS-Eintrags, der nach diesem Dienst suchen soll. Beispiel: A oder SRV.'
 ms.assetid: 9a1ab2ae-b63f-4c70-b0df-de97c482bc5a
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des Dienst-DNS-Name-Type-Attributs
+- AD-Schema des Attributs "Service-DNS-Name-Type"
 - serviceDNSNameType-Attribut AD-Schema
 topic_type:
 - apiref
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 369bf644cac226788332cb4a2935973a5d5ffeae
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: df79e8b7a0f6034e52c56c420777602994ba0adbcc7c535340d36f3e975027ab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836630"
 ---
-# <a name="service-dns-name-type-attribute"></a>Dienst-DNS-Name-Type-Attribut
+# <a name="service-dns-name-type-attribute"></a>Attribut "Service-DNS-Name-Type"
 
-Typ des DNS-Einsatzes, der für diesen Dienst gesucht werden soll. Beispielsweise ein-oder-SRV.
+Typ des DNS-Eintrags, der nach diesem Dienst suchen soll. Beispiel: A oder SRV.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | Dienst-DNS-Name-Type                       |
-| LDAP-Display-Name | serviceDNSNameType                          |
+| CN                | Service-DNS-Name-Type                       |
+| Ldap-Anzeigename | serviceDNSNameType                          |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.659                      |
-| System-ID-GUID    | 28630eba-41d5-11d1-a9c1-0000b80367c1        |
+| System-Id-Guid    | 28630eba-41d5-11d1-a9c1-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Typ des DNS-Einsatzes, der für diesen Dienst gesucht werden soll. Beispielsweis
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Typ des DNS-Einsatzes, der für diesen Dienst gesucht werden soll. Beispielsweis
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Is-Single-Valued       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | 1                                                                       |
 | Range-Upper            | 256                                                                     |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**Dienst-Verbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Dienstverbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Typ des DNS-Einsatzes, der für diesen Dienst gesucht werden soll. Beispielsweis
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Is-Single-Valued       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | 1                                                                       |
 | Range-Upper            | 256                                                                     |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**Dienst-Verbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Dienstverbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Typ des DNS-Einsatzes, der für diesen Dienst gesucht werden soll. Beispielsweis
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Is-Single-Valued       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | 1                                                                       |
 | Range-Upper            | 256                                                                     |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**Dienst-Verbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Dienstverbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Typ des DNS-Einsatzes, der für diesen Dienst gesucht werden soll. Beispielsweis
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | 1                                                                       |
 | Range-Upper            | 256                                                                     |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**Dienst-Verbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Dienstverbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Typ des DNS-Einsatzes, der für diesen Dienst gesucht werden soll. Beispielsweis
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | 1                                                                       |
 | Range-Upper            | 256                                                                     |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**Dienst-Verbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Dienstverbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Typ des DNS-Einsatzes, der für diesen Dienst gesucht werden soll. Beispielsweis
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | 1                                                                       |
 | Range-Upper            | 256                                                                     |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**Dienst-Verbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Dienstverbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
 
 
 

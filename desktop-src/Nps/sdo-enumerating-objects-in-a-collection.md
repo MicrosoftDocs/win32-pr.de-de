@@ -1,25 +1,25 @@
 ---
-title: Auflisten von Objekten in einer Auflistung
-description: Auflisten von Objekten in einer Auflistung
+title: Aufzählen von Objekten in einer Auflistung
+description: Aufzählen von Objekten in einer Auflistung
 ms.assetid: 664e4d99-48ed-4948-b816-e92ad1ca3ece
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e5f3c543e01f3c8f154628c6e204aff53c6ad210
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 77b0399a75e9301fcdb5e88e6f30b7e0b2ef66160fa05136ed43b51fa8e80eca
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119742110"
 ---
-# <a name="enumerating-objects-in-a-collection"></a>Auflisten von Objekten in einer Auflistung
+# <a name="enumerating-objects-in-a-collection"></a>Aufzählen von Objekten in einer Auflistung
 
 > [!Note]  
-> Der Internet Authentifizierungsdienst (IAS) wurde ab Windows Server 2008 in den Netzwerk Richtlinien Server (Network Policy Server, NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Dienstanbieter zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
+> Der Internetauthentifizierungsdienst (Internet Authentication Service, IAS) wurde ab Windows Server 2008 in Netzwerkrichtlinienserver (Network Policy Server, NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Diensts zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
 
- 
+ 
 
-Der folgende Code listet die Protokolle in der NPS-Protokoll Sammlung auf.
+Der folgende Code listet die Protokolle in der NPS-Protokollauflistung auf.
 
 
 ```C++
@@ -122,41 +122,41 @@ Der folgende Code listet die Protokolle in der NPS-Protokoll Sammlung auf.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die vtname-und vtprotocol-Variablen sind vom Typ [ \_ Variant \_ t](/previous-versions/visualstudio/visual-studio-6.0/aa278648(v=vs.60)). Ein [ \_ Variant- \_ t](/previous-versions/visualstudio/visual-studio-6.0/aa278648(v=vs.60)) -Objekt kapselt bzw. schließt den **Variant** -Datentyp ein. Die-Klasse verwaltet die Zuordnung und Aufhebung der Zuordnung von Ressourcen und führt Funktionsaufrufe an [**VariantInit**](/windows/win32/api/oleauto/nf-oleauto-variantinit) und [**VariantClear**](/windows/win32/api/oleauto/nf-oleauto-variantclear) entsprechend aus.
+Die Variablen vtName und vtProtocol sind vom Typ [ \_ variant \_ t](/previous-versions/visualstudio/visual-studio-6.0/aa278648(v=vs.60)). Ein [ \_ variant \_ t-Objekt](/previous-versions/visualstudio/visual-studio-6.0/aa278648(v=vs.60)) kapselt oder umschließt den **VARIANT-Datentyp.** Die -Klasse verwaltet die Ressourcenzuordnung und -freigabe und führt Funktionsaufrufe an [**VariantInit**](/windows/win32/api/oleauto/nf-oleauto-variantinit) und [**VariantClear**](/windows/win32/api/oleauto/nf-oleauto-variantclear) nach Bedarf aus.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[\_Variant \_ t](/previous-versions/visualstudio/visual-studio-6.0/aa278648(v=vs.60))
+[\_variant \_ t](/previous-versions/visualstudio/visual-studio-6.0/aa278648(v=vs.60))
 </dt> <dt>
 
 [Hinzufügen eines Clients](/windows/desktop/Nps/sdo-adding-a-client)
 </dt> <dt>
 
-[**Iascommonproperties**](/windows/desktop/api/sdoias/ne-sdoias-iascommonproperties)
+[**IASCOMMONPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-iascommonproperties)
 </dt> <dt>
 
 [**IEnumVARIANT**](/windows/win32/api/oaidl/nn-oaidl-ienumvariant)
 </dt> <dt>
 
-[**Isdo:: GetProperty**](/windows/desktop/api/sdoias/nf-sdoias-isdo-getproperty)
+[**ISdo::GetProperty**](/windows/desktop/api/sdoias/nf-sdoias-isdo-getproperty)
 </dt> <dt>
 
-[Abrufen eines SDO-diensdo](/windows/desktop/Nps/sdo-retrieving-a-service-sdo)
+[Abrufen einer Dienst-SDO](/windows/desktop/Nps/sdo-retrieving-a-service-sdo)
 </dt> <dt>
 
 [**VariantClear**](/windows/win32/api/oleauto/nf-oleauto-variantclear)
 </dt> <dt>
 
-[**Variantit**](/windows/win32/api/oleauto/nf-oleauto-variantinit)
+[**VariantInit**](/windows/win32/api/oleauto/nf-oleauto-variantinit)
 </dt> <dt>
 
-[**Konfigur**](/windows/win32/api/oaidl/ns-oaidl-variant)
+[**Variante**](/windows/win32/api/oaidl/ns-oaidl-variant)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

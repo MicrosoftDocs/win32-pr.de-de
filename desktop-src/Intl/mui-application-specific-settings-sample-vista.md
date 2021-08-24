@@ -1,21 +1,21 @@
 ---
-description: 'Beispiel für MUI: Application-Specific Einstellungen (Windows Vista)'
+description: 'VISTA: Application-Specific Einstellungen Sample (Windows Vista)'
 ms.assetid: 348a51fb-aad1-4255-a5a2-224d5c94d762
-title: 'Beispiel für MUI: Application-Specific Einstellungen (Windows Vista)'
+title: 'VISTA: Application-Specific Einstellungen Sample (Windows Vista)'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9583e606a0f9023d02a4ef804fee22c56818a75f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 664b87af02e9c24a0eacd9191f9e007804672429d433c5d832dc0fbdd98e359b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119765020"
 ---
-# <a name="mui-application-specific-settings-sample-windows-vista"></a>Beispiel für MUI: Application-Specific Einstellungen (Windows Vista)
+# <a name="mui-application-specific-settings-sample-windows-vista"></a>VISTA: Application-Specific Einstellungen Sample (Windows Vista)
 
-Bei der in diesem Thema beschriebenen Beispielanwendung handelt es sich um eine weitere Hello MUI-Anwendung, die anwendungsspezifische Einstellungen für die Sprachen der Benutzeroberfläche unterstützt und unter Windows Vista und höher ausgeführt wird.
+Die in diesem Thema beschriebene Beispielanwendung ist eine weitere Hello HELLO-Anwendung, die anwendungsspezifische Einstellungen für die Sprachen der Benutzeroberfläche unterstützt und unter Windows Vista und höher ausgeführt wird.
 
-Diese Anwendung analysiert zunächst eine durch Trennzeichen getrennte Sprachliste in einer Textdatei und konvertiert sie in eine Sprachliste mit mehreren Zeichen folgen, um die anwendungsspezifischen Spracheinstellungen zu definieren. Die im Beispiel unterstützten Trennzeichen sind ",", ";", ":" und "". Nach dem Auswerten der Liste findet und lädt der Code die Ressourcen in der identifizierten Sprache genau wie das Beispiel für Systemeinstellungen. Dieser Code lädt Ressourcen Dateien mithilfe von Aufrufen der Ressourcen Ladefunktionen [**LoadLibraryEx**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) und [**FreeLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)und gibt Sie frei.
+Diese Anwendung analysiert zunächst eine durch Trennzeichen getrennte Sprachliste in einer Textdatei und konvertiert sie in eine Mehrzeichenfolgen-Sprachliste, um die anwendungsspezifischen Spracheinstellungen zu definieren. Die im Beispiel unterstützten Trennzeichen sind ",", ";", ":" und " ". Nach der Analyse der Liste sucht und lädt der Code die Ressourcen in der identifizierten Sprache, genau wie im Beispiel für Systemeinstellungen. Dieser Code lädt und gibt Ressourcendateien mithilfe von Aufrufen der Ressourcenladefunktion [**LoadLibraryEx**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) und [**FreeLibrary frei.**](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 
 ```C++

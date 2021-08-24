@@ -4,16 +4,16 @@ ms.assetid: 22b1eb48-e1ef-4694-a1dc-b2de326989c8
 title: ITMediaCollection::get__NewEnum-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6683ce0a00f0128cb959dd5a2c39e8b06382f65d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 759ac5a36324e80e4f2ef3ab49f7e8617aa5d3f5faecb61ca7f8c2de82827354
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682680"
 ---
 # <a name="itmediacollectionget__newenum-method"></a>ITMediaCollection::get \_ \_ NewEnum-Methode
 
-\[ Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
+\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
 Die **get \_ \_ NewEnum-Methode** gibt einen Enumerator für die Auflistung zurück.
 
@@ -61,15 +61,15 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann mit get [**\_ EnumerationIf austauschbar sein,**](itmediacollection-get-enumerationif.md) mit der Ausnahme, dass **sie IUnknown** anstelle von [**IEnumMedia zurückgibt.**](ienummedia.md)
+Diese Methode ist mit get [**\_ EnumerationIf austauschbar,**](itmediacollection-get-enumerationif.md) gibt **jedoch IUnknown** anstelle von [**IEnumMedia zurück.**](ienummedia.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
 | TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
 | Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |

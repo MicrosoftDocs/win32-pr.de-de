@@ -1,9 +1,9 @@
 ---
-title: CBEM_SETUNICODEFORMAT (Commctrl.h)
+title: CBEM_SETUNICODEFORMAT Meldung (Commctrl.h)
 description: Legt das UNICODE-Zeichenformatflag für das Steuerelement fest. Mit dieser Meldung können Sie den vom Steuerelement zur Laufzeit verwendeten Zeichensatz ändern, anstatt das Steuerelement neu erstellen zu müssen.
 ms.assetid: 4811709b-1639-4468-8598-97d9dc8d9057
 keywords:
-- CBEM_SETUNICODEFORMAT von Windows-Steuerelementen
+- CBEM_SETUNICODEFORMAT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -45,7 +45,7 @@ Gibt das vorherige Unicode-Formatflag für das Steuerelement zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Erläuterung dieser Meldung finden Sie in den Anmerkungen zu [**CCM \_ SETUNICODEFORMAT.**](ccm-setunicodeformat.md)
+Eine Erläuterung dieser Meldung finden Sie in den Hinweisen zu [**CCM \_ SETUNICODEFORMAT.**](ccm-setunicodeformat.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,13 +53,13 @@ Eine Erläuterung dieser Meldung finden Sie in den Anmerkungen zu [**CCM \_ SETU
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

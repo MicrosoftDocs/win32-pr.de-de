@@ -1,11 +1,11 @@
 ---
-title: Service-Class-ID-Attribut
-description: Die GUID für die Dienstklasse.
+title: Attribut "Service-Class-ID"
+description: Die GUID für die Service-Klasse.
 ms.assetid: 41d131cc-ef62-4937-a883-31ad6f837a76
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Dienst-Klassen-ID-Attribut
-- serviceclassid-Attribut AD-Schema
+- AD-Schema des Dienstklassen-ID-Attributs
+- serviceClassID-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e789a0e25d18ff63f1671e62772981a857335037
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b7ac3479121449ff6fc0b1bdbbb72a554d5f82a823186faa980d5c13b23253c4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346154"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836650"
 ---
-# <a name="service-class-id-attribute"></a>Service-Class-ID-Attribut
+# <a name="service-class-id-attribute"></a>Attribut "Service-Class-ID"
 
-Die GUID für die Dienstklasse.
+Die GUID für die Service-Klasse.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | Dienst-Klassen-ID                                      |
-| LDAP-Display-Name | serviceClassID                                        |
+| CN                | Dienstklassen-ID                                      |
+| Ldap-Anzeigename | serviceClassID                                        |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.122                                |
 | System-ID-GUID    | bf967a35-0de6-11d0-a285-00aa003049e2                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
@@ -43,7 +43,7 @@ Die GUID für die Dienstklasse.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Die GUID für die Dienstklasse.
 |------------------------|-------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                          |
 | MAPI-Id                | \-                                                                                                          |
-| System-Only            | False                                                                                                       |
-| Ist-einwertig       | Richtig                                                                                                        |
-| Ist indiziert             | False                                                                                                       |
+| System-Only            | Falsch                                                                                                       |
+| Ist einwertig       | Richtig                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                       |
 | Im globalen Katalog      | Richtig                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                |
 | Range-Lower            | \-                                                                                                          |
 | Range-Upper            | \-                                                                                                          |
 | Search-Flags           | 0x00000000                                                                                                  |
 | System-Flags           | 0x00000010                                                                                                  |
-| In verwendete Klassen        | [**Dienstklasse**](c-serviceclass.md)<br/> [**Dienst Instanz**](c-serviceinstance.md)<br/> |
+| In verwendete Klassen        | [**Dienstklasse**](c-serviceclass.md)<br/> [**Dienstinstanz**](c-serviceinstance.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Die GUID für die Dienstklasse.
 |------------------------|-------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                          |
 | MAPI-Id                | \-                                                                                                          |
-| System-Only            | False                                                                                                       |
-| Ist-einwertig       | Richtig                                                                                                        |
-| Ist indiziert             | False                                                                                                       |
+| System-Only            | Falsch                                                                                                       |
+| Ist einwertig       | Richtig                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                       |
 | Im globalen Katalog      | Richtig                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                |
 | Range-Lower            | \-                                                                                                          |
 | Range-Upper            | \-                                                                                                          |
 | Search-Flags           | 0x00000000                                                                                                  |
 | System-Flags           | 0x00000010                                                                                                  |
-| In verwendete Klassen        | [**Dienstklasse**](c-serviceclass.md)<br/> [**Dienst Instanz**](c-serviceinstance.md)<br/> |
+| In verwendete Klassen        | [**Dienstklasse**](c-serviceclass.md)<br/> [**Dienstinstanz**](c-serviceinstance.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Die GUID für die Dienstklasse.
 |------------------------|-------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                          |
 | MAPI-Id                | \-                                                                                                          |
-| System-Only            | False                                                                                                       |
-| Ist-einwertig       | Richtig                                                                                                        |
-| Ist indiziert             | False                                                                                                       |
+| System-Only            | Falsch                                                                                                       |
+| Ist einwertig       | Richtig                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                       |
 | Im globalen Katalog      | Richtig                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                |
 | Range-Lower            | \-                                                                                                          |
 | Range-Upper            | \-                                                                                                          |
 | Search-Flags           | 0x00000000                                                                                                  |
 | System-Flags           | 0x00000010                                                                                                  |
-| In verwendete Klassen        | [**Dienstklasse**](c-serviceclass.md)<br/> [**Dienst Instanz**](c-serviceinstance.md)<br/> |
+| In verwendete Klassen        | [**Dienstklasse**](c-serviceclass.md)<br/> [**Dienstinstanz**](c-serviceinstance.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Die GUID für die Dienstklasse.
 |------------------------|-------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                          |
 | MAPI-Id                | \-                                                                                                          |
-| System-Only            | False                                                                                                       |
-| Ist-einwertig       | Richtig                                                                                                        |
-| Ist indiziert             | False                                                                                                       |
+| System-Only            | Falsch                                                                                                       |
+| Is-Single-Valued       | Richtig                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                       |
 | Im globalen Katalog      | Richtig                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                |
 | Range-Lower            | \-                                                                                                          |
 | Range-Upper            | \-                                                                                                          |
 | Search-Flags           | 0x00000000                                                                                                  |
 | System-Flags           | 0x00000010                                                                                                  |
-| In verwendete Klassen        | [**Dienstklasse**](c-serviceclass.md)<br/> [**Dienst Instanz**](c-serviceinstance.md)<br/> |
+| In verwendete Klassen        | [**Service-Class**](c-serviceclass.md)<br/> [**Dienstinstanz**](c-serviceinstance.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Die GUID für die Dienstklasse.
 |------------------------|-------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                          |
 | MAPI-Id                | \-                                                                                                          |
-| System-Only            | False                                                                                                       |
-| Ist-einwertig       | Richtig                                                                                                        |
-| Ist indiziert             | False                                                                                                       |
+| System-Only            | Falsch                                                                                                       |
+| Is-Single-Valued       | Richtig                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                       |
 | Im globalen Katalog      | Richtig                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                |
 | Range-Lower            | \-                                                                                                          |
 | Range-Upper            | \-                                                                                                          |
 | Search-Flags           | 0x00000000                                                                                                  |
 | System-Flags           | 0x00000010                                                                                                  |
-| In verwendete Klassen        | [**Dienstklasse**](c-serviceclass.md)<br/> [**Dienst Instanz**](c-serviceinstance.md)<br/> |
+| In verwendete Klassen        | [**Service-Class**](c-serviceclass.md)<br/> [**Dienstinstanz**](c-serviceinstance.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Die GUID für die Dienstklasse.
 |------------------------|-------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                          |
 | MAPI-Id                | \-                                                                                                          |
-| System-Only            | False                                                                                                       |
-| Ist-einwertig       | Richtig                                                                                                        |
-| Ist indiziert             | False                                                                                                       |
+| System-Only            | Falsch                                                                                                       |
+| Is-Single-Valued       | Richtig                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                       |
 | Im globalen Katalog      | Richtig                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                |
 | Range-Lower            | \-                                                                                                          |
 | Range-Upper            | \-                                                                                                          |
 | Search-Flags           | 0x00000000                                                                                                  |
 | System-Flags           | 0x00000010                                                                                                  |
-| In verwendete Klassen        | [**Dienstklasse**](c-serviceclass.md)<br/> [**Dienst Instanz**](c-serviceinstance.md)<br/> |
+| In verwendete Klassen        | [**Service-Class**](c-serviceclass.md)<br/> [**Dienstinstanz**](c-serviceinstance.md)<br/> |
 
 
 

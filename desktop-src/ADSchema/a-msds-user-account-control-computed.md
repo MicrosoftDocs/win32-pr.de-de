@@ -1,11 +1,11 @@
 ---
-title: ms-DS-User-Account-Control-berechnetes Attribut
-description: die Berechnung von msDS-User-Account-Control ist ähnlich wie userAccountControl, aber der Wert des Attributs kann zusätzliche Bits enthalten, die nicht persistent sind.
+title: ms-DS-User-Account-Control-Computed-Attribut
+description: msDS-User-Account-Control-Computed ist ähnlich wie userAccountControl, aber der Wert des Attributs kann zusätzliche Bits enthalten, die nicht beibehalten werden.
 ms.assetid: 4c635c04-8d2e-41b4-809c-58ce64271a02
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-User-Account-Control-berechnetes Attribut AD Schema\""
-- AD-Schema "msDS-User-Account-Control-berechnetes Attribut"
+- AD-Schema des ms-DS-User-Account-Control-Computed-Attributs
+- AD-Schema des msDS-User-Account-Control-Computed-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,57 +14,57 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 13b5e9b047dd44d637b56cae8ded9e0991c46025
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8747bddccdfa65222072592b7f418fd35529d987f9903d71cddf5e01556fec53
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119763260"
 ---
-# <a name="ms-ds-user-account-control-computed-attribute"></a>ms-DS-User-Account-Control-berechnetes Attribut
+# <a name="ms-ds-user-account-control-computed-attribute"></a>ms-DS-User-Account-Control-Computed-Attribut
 
-die **Berechnung von msDS-User-Account-Control** ist ähnlich wie [**userAccountControl**](a-useraccountcontrol.md), aber der Wert des Attributs kann zusätzliche Bits enthalten, die nicht persistent sind. Die berechneten Bits umfassen Folgendes:
+**msDS-User-Account-Control-Computed** ist ähnlich wie [**userAccountControl,**](a-useraccountcontrol.md)aber der Wert des Attributs kann zusätzliche Bits enthalten, die nicht beibehalten werden. Die berechneten Bits umfassen Folgendes.
 
 
 
-| Wert                | Name (in IADs. h definiert)                     |
+| Wert                | Name (definiert in Iads.h)                     |
 |----------------------|----------------------------------------------|
-| 0x0010<br/>    | **UF- \_ Sperre**<br/>                   |
-| 0x800000<br/>  | **\_Kennwort ist \_ abgelaufen.**<br/>         |
-| 0x4000000<br/> | **\_Konto für partielle \_ geheimen Schlüssel \_**<br/> |
-| 0x8000000<br/> | **UF \_ Verwenden von \_ AES- \_ Schlüsseln**<br/>            |
+| 0x0010<br/>    | **UF \_ LOCKOUT**<br/>                   |
+| 0x800000<br/>  | **\_UF-KENNWORT \_ ABGELAUFEN**<br/>         |
+| 0x4000000<br/> | **UF \_ PARTIAL \_ SECRETS \_ ACCOUNT**<br/> |
+| 0x8000000<br/> | **\_UF: \_ VERWENDEN VON AES-SCHLÜSSELN \_**<br/>            |
 
 
 
  
 
-Die vollständige Liste der Bits, die [**Benutzerkontensteuerung**](a-useraccountcontrol.md) und somit auch **msDS-User-Account-Control-berechnete** Elemente enthalten können, finden Sie auch auf der Referenzseite für die **Benutzerkontensteuerung** (zugeordnet über das [ADSI](/windows/desktop/ADSI/active-directory-service-interfaces-adsi) -Flag) oder auf den Referenzseiten der Netzwerkverwaltung für die [**Benutzer \_ Info \_ 1008**](/windows/desktop/api/lmaccess/ns-lmaccess-user_info_1008) -Struktur.
+Die vollständige Liste der Bits, die [**User-Account-Control**](a-useraccountcontrol.md) und daher **msDS-User-Account-Control-Computed** enthalten können, finden Sie auch auf der Referenzseite **"User-Account-Control"** (zugeordnet durch das [ADSI-Flagset)](/windows/desktop/ADSI/active-directory-service-interfaces-adsi) oder auf den Referenzseiten zur Netzwerkverwaltung für die Struktur [**\_ \_ "Benutzerinformationen 1008".**](/windows/desktop/api/lmaccess/ns-lmaccess-user_info_1008)
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-User-Account-Control-berechnet  |
-| LDAP-Display-Name | msDS-User-Account-Control-berechnet   |
+| CN                | ms-DS-User-Account-Control-Computed  |
+| Ldap-Anzeigename | msDS-User-Account-Control-Computed   |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1460              |
-| System-ID-GUID    | 2cc4b836-B63-4940-8d23-ea7acf 06af56 |
+| System-Id-Guid    | 2cc4b836-b63f-4940-8d23-ea7acf06af56 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -73,10 +73,10 @@ Die vollständige Liste der Bits, die [**Benutzerkontensteuerung**](a-useraccoun
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -94,15 +94,15 @@ Die vollständige Liste der Bits, die [**Benutzerkontensteuerung**](a-useraccoun
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
 | System-Flags           | 0x00000014                                                        |
-| In verwendete Klassen        | [**ms-DS-Bindable-Objekt**](c-msds-bindableobject.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Bindable-Object**](c-msds-bindableobject.md)<br/> |
 
 
 
@@ -115,10 +115,10 @@ Die vollständige Liste der Bits, die [**Benutzerkontensteuerung**](a-useraccoun
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -136,10 +136,10 @@ Die vollständige Liste der Bits, die [**Benutzerkontensteuerung**](a-useraccoun
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -157,10 +157,10 @@ Die vollständige Liste der Bits, die [**Benutzerkontensteuerung**](a-useraccoun
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -178,10 +178,10 @@ Die vollständige Liste der Bits, die [**Benutzerkontensteuerung**](a-useraccoun
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |

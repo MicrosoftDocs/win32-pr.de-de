@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_AFSDBType-Klasse
-description: Die Unterklasse von MicrosoftDNS \_ resourcerecord, die einen AFSDB-Datensatz (Andrew File System Database Server) darstellt.
+description: Unterklasse von MicrosoftDNS \_ ResourceRecord, die einen AFSDB-Datensatz (Andrew File System Database Server) darstellt.
 ms.assetid: 536f4df7-bd01-458b-b8f1-36f066e9ca04
 keywords:
-- DNS-MicrosoftDNS_AFSDBType Klasse
-- DNS-MicrosoftDNS_AFSDBType Klasse, beschrieben
+- dns-Klasse MicrosoftDNS_AFSDBType
+- MicrosoftDNS_AFSDBType Dns-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -19,18 +19,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 836de50f4da9e613fb3e940b90971f38a634c804
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 74c7887d51e58b8c34374ed5ca96d0206472155872ba573b7b9f8879329910f6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040624"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119815700"
 ---
-# <a name="microsoftdns_afsdbtype-class"></a>MicrosoftDNS \_ afsdbtype-Klasse
+# <a name="microsoftdns_afsdbtype-class"></a>MicrosoftDNS \_ AFSDBType-Klasse
 
-Die Unterklasse von [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) , die einen AFSDB-Datensatz (Andrew File System Database Server) darstellt.
+Unterklasse von [**MicrosoftDNS \_ ResourceRecord,**](microsoftdns-resourcerecord.md) die einen AFSDB-Datensatz (Andrew File System Database Server) darstellt.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ class MicrosoftDNS_AFSDBType : MicrosoftDNS_ResourceRecord
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS \_ afsdbtype** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ AFSDBType-Klasse** verfügt über folgende Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS \_ afsdbtype** -Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ AFSDBType-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                   |
 |:-----------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Kreateinzustancefrompropertydata"** | Instanziiert einen AFSDB-Ressourcen Eintrag auf der Grundlage der Daten in den Eingabe Parametern der Methode: DNS-Servername des Datensatzes, Container Name, Besitzer/Zellen Name, Klasse (Standard = in), Time-to-Live-Wert und Host-AFS-Server Untertyp und-Name. Gibt einen Verweis auf das neue-Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: implementiert, statisch<br/> |
-| **Modify**                         | Diese Methode aktualisiert die TTL-, Untertyp-und Server Namen auf die Werte, die als Eingabeparameter dieser Methode angegeben werden. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die-Methode gibt einen Verweis auf das geänderte-Objekt als Output-Parameter zurück. <br/> Qualifizierer: Implementiert<br/>   |
+| **CreateInstanceFromPropertyData** | Instanziiert einen AFSDB-Ressourceneintrag basierend auf den Daten in den Eingabeparametern der Methode: DNS-Servername des Eintrags, Containername, Besitzer-/Zellenname, Klasse (Standard = IN), Wert für Lebzeit und Untertyp und Name des Host-AFS-Servers. Gibt einen Verweis auf das neue Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert, statisch<br/> |
+| **Änderung**                         | Diese Methode aktualisiert TTL, Untertyp und Servername auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die -Methode gibt einen Verweis auf das geänderte Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert<br/>   |
 
 
 
@@ -66,33 +66,33 @@ Die **MicrosoftDNS \_ afsdbtype** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS \_ afsdbtype** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ AFSDBType-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ServerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein voll qualifizierter Host, der einen Host mit einem Server für die im Besitzer Namen angegebene AFS-Zelle angibt.
+FQDN, der einen Host angibt, der über einen Server für die im Besitzernamen angegebene AFS-Zelle verfügt.
 
 </dd> <dt>
 
 **Untertyp**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Untertyp des Host-AFS-Servers. Für den Untertyp 1 (Wert = 1) verfügt der Host über einen mespeicherort-Server der Version 3,0 für die benannte AFS-Zelle. Im Fall von Untertyp 2 (Wert = 2) verfügt der Host über einen authentifizierten Namen Server, der den Zellen Stammverzeichnis-Knoten für die benannte DCE/NCA-Zelle enthält.
+Untertyp des Host-AFS-Servers. Für den Untertyp 1 (wert=1) verfügt der Host über einen AFS-Volumespeicherortserver der Version 3.0 für die benannte AFS-Zelle. Im Fall von Untertyp 2 (wert=2) verfügt der Host über einen authentifizierten Namenserver, der den Zellenstammverzeichnisknoten für die benannte DCE/NCA-Zelle enthält.
 
 </dd> </dl>
 
@@ -104,8 +104,8 @@ Der Untertyp des Host-AFS-Servers. Für den Untertyp 1 (Wert = 1) verfügt der H
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -113,13 +113,13 @@ Der Untertyp des Host-AFS-Servers. Für den Untertyp 1 (Wert = 1) verfügt der H
 
 <dl> <dt>
 
-[**Die Methode "kreateinstancefrompropertydata" der MicrosoftDNS- \_ afsdbtype-Klasse**](microsoftdns-afsdbtype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ AFSDBType-Klasse**](microsoftdns-afsdbtype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS \_ afsdbtype-Klasse**](microsoftdns-afsdbtype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ AFSDBType-Klasse**](microsoftdns-afsdbtype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

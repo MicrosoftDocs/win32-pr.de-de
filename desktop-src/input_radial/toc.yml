@@ -1,16 +1,16 @@
-- name: Eingabe des radialen Controllers
+- name: Radialcontrollereingabe
   href: radialcontroller-portal.md
   items:
-    - name: Radiale Controller Schnittstellen
+    - name: Radiale Controllerschnittstellen
       href: radial-controller-interfaces.md
       items:
-        - name: Iradialcontrollerconfigurationinterop
+        - name: IRadialControllerConfigurationInterop
           href: /windows/desktop/api/RadialControllerInterop/nn-radialcontrollerinterop-iradialcontrollerconfigurationinterop
           items:
-            - name: Getforwindow-Methode
+            - name: GetForWindow-Methode
               href: /windows/desktop/api/RadialControllerInterop/nf-radialcontrollerinterop-iradialcontrollerconfigurationinterop-getforwindow
-        - name: Iradialcontrollerinterop
+        - name: IRadialControllerInterop
           href: /windows/desktop/api/RadialControllerInterop/nn-radialcontrollerinterop-iradialcontrollerinterop
           items:
-            - name: Methode "forateforwindow"
+            - name: CreateForWindow-Methode
               href: /windows/desktop/api/RadialControllerInterop/nf-radialcontrollerinterop-iradialcontrollerinterop-createforwindow

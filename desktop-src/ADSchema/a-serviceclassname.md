@@ -1,11 +1,11 @@
 ---
 title: Service-Class-Name-Attribut
-description: Der Zeichen folgen Name des Dienstanbieter, den ein Verwaltungspunkt darstellt.
+description: Der Zeichenfolgenname des Diensts, den ein Verwaltungspunkt darstellt.
 ms.assetid: b49a9570-eda0-49ca-8dd4-7d3639a7a319
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Service-Class-Name-Attribut
-- serviceClassName-Attribut AD-Schema
+- AD-Schema des Attributs "Service-Class-Name"
+- ad-Schema des serviceClassName-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 740190d81994a5e31b3dce4dafb284a77e3c7e9a
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6d82c43e7634a2874bcbf52efe87814220554b6c21bce2b7afa4b886852462fe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859570"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836640"
 ---
 # <a name="service-class-name-attribute"></a>Service-Class-Name-Attribut
 
-Der Zeichen folgen Name des Dienstanbieter, den ein Verwaltungspunkt darstellt.
+Der Zeichenfolgenname des Diensts, den ein Verwaltungspunkt darstellt.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | Dienst-Klassen Name                          |
-| LDAP-Display-Name | serviceClassName                            |
+| CN                | Service-Class-Name                          |
+| Ldap-Anzeigename | serviceClassName                            |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.509                      |
-| System-ID-GUID    | b7b1311d-b82e-11d0-afee-0000f80367c1        |
+| System-Id-Guid    | b7b1311d-b82e-11d0-afee-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Der Zeichen folgen Name des Dienstanbieter, den ein Verwaltungspunkt darstellt.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Der Zeichen folgen Name des Dienstanbieter, den ein Verwaltungspunkt darstellt.
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| System-Only            | Falsch                                                                   |
+| Is-Single-Valued       | Richtig                                                                    |
 | Ist indiziert             | Richtig                                                                    |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000001                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**Dienst-Verbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Dienstverbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Der Zeichen folgen Name des Dienstanbieter, den ein Verwaltungspunkt darstellt.
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| System-Only            | Falsch                                                                   |
+| Is-Single-Valued       | Richtig                                                                    |
 | Ist indiziert             | Richtig                                                                    |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000001                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**Dienst-Verbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Dienstverbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Der Zeichen folgen Name des Dienstanbieter, den ein Verwaltungspunkt darstellt.
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| System-Only            | Falsch                                                                   |
+| Is-Single-Valued       | Richtig                                                                    |
 | Ist indiziert             | Richtig                                                                    |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000001                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**Dienst-Verbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Dienstverbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Der Zeichen folgen Name des Dienstanbieter, den ein Verwaltungspunkt darstellt.
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Richtig                                                                    |
 | Ist indiziert             | Richtig                                                                    |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000001                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**Dienst-Verbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Dienstverbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Der Zeichen folgen Name des Dienstanbieter, den ein Verwaltungspunkt darstellt.
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Richtig                                                                    |
 | Ist indiziert             | Richtig                                                                    |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000001                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**Dienst-Verbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Dienstverbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Der Zeichen folgen Name des Dienstanbieter, den ein Verwaltungspunkt darstellt.
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Richtig                                                                    |
 | Ist indiziert             | Richtig                                                                    |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000001                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**Dienst-Verbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
+| In verwendete Klassen        | [**Dienstverbindungspunkt**](c-serviceconnectionpoint.md)<br/> |
 
 
 

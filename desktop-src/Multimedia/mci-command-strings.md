@@ -1,69 +1,69 @@
 ---
-title: MCI-Befehls Zeichenfolgen
-description: MCI-Befehls Zeichenfolgen
+title: MCI-Befehlszeichenfolgen
+description: MCI-Befehlszeichenfolgen
 ms.assetid: 8677aed7-ee7d-4fc7-bc83-f42498f07902
 keywords:
-- MCI-Befehls Zeichenfolgen, Referenz
-- MCI-Referenz, Befehls Zeichenfolgen
+- MCI-Befehlszeichenfolgen, Referenz
+- MCI-Referenz, Befehlszeichenfolgen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d7298a1ad4d571446532f7198e5bd41ae988194e
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: cc2934f8770c7a68db7f1706705424d554bbd5f4840a7e19b0c57b695a9bad90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119784610"
 ---
-# <a name="mci-command-strings"></a>MCI-Befehls Zeichenfolgen
+# <a name="mci-command-strings"></a>MCI-Befehlszeichenfolgen
 
-Die folgenden Befehls Zeichenfolgen werden mit MCI verwendet.
+Die folgenden Befehlszeichenfolgen werden mit MCI verwendet.
 
--   [**Umbruch**](break.md)
--   [**Re**](capability.md)
--   [**einver**](capture.md)
--   [**ihrer**](close.md)
+-   [**Brechen**](break.md)
+-   [**Fähigkeit**](capability.md)
+-   [**Erfassen**](capture.md)
+-   [**Schließen**](close.md)
 -   [**Konfigurieren**](configure.md)
--   [**skopie**](copy.md)
--   [**STI**](cue.md)
--   [**Schnitts**](cut.md)
--   [**delete**](delete.md)
--   [Weg](escape.md)
--   [**ge**](freeze.md)
--   [**Sin**](./windows-multimedia-start-page.md)
--   [**Opo**](info.md)
+-   [**Kopieren**](copy.md)
+-   [**Hinweis**](cue.md)
+-   [**Schneiden**](cut.md)
+-   [**Löschen**](delete.md)
+-   [Flucht](escape.md)
+-   [**Einfrieren**](freeze.md)
+-   [**Index**](./windows-multimedia-start-page.md)
+-   [**Informationen**](info.md)
 -   [**list**](list.md)
 -   [**Laden**](load.md)
--   [**k**](mark.md)
--   [**über**](monitor.md)
--   [**eren**](open.md)
--   [**kle**](paste.md)
--   [**Brechung**](pause.md)
--   [**Theater**](play.md)
--   [**stellte**](put.md)
+-   [**Mark**](mark.md)
+-   [**Monitor**](monitor.md)
+-   [**öffnen**](open.md)
+-   [**Einfügen**](paste.md)
+-   [**pause**](pause.md)
+-   [**Spielen**](play.md)
+-   [**put**](put.md)
 -   [**Qualität**](quality.md)
--   [**erkannten**](realize.md)
--   [**Aufnahme**](record.md)
+-   [**Erkennen**](realize.md)
+-   [**Aufzeichnung**](record.md)
 -   [**Reserve**](reserve.md)
 -   [**Wiederherstellungsprozess**](restore.md)
--   [**zusetzen**](resume.md)
--   [**sicher**](save.md)
--   [**einzuholen**](seek.md)
--   [**Set**](set.md)
--   [**setaudiodatei**](setaudio.md)
+-   [**Fortsetzen**](resume.md)
+-   [**Speichern**](save.md)
+-   [**Suchen**](seek.md)
+-   [**Festgelegt**](set.md)
+-   [**Setaudio**](setaudio.md)
 -   [**settimecode**](settimecode.md)
 -   [**settuner**](settuner.md)
 -   [**setvideo**](setvideo.md)
--   [**aussendet**](signal.md)
--   [**Spirale**](spin.md)
+-   [**signal**](signal.md)
+-   [**drehen**](spin.md)
 -   [**status**](status.md)
 -   [**Schritt**](step.md)
--   [**anzuhalten**](stop.md)
--   [sysinfo](sysinfo.md)
--   [**machen**](undo.md)
--   [**Fixierung aufheben**](unfreeze.md)
--   [**alisierungs**](update.md)
--   [**Was**](where.md)
--   [**ster**](window.md)
+-   [**Stoppen**](stop.md)
+-   [Sysinfo](sysinfo.md)
+-   [**Rückgängig**](undo.md)
+-   [**Auftauen**](unfreeze.md)
+-   [**aktualisieren**](update.md)
+-   [**Wo**](where.md)
+-   [**Fenster**](window.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -72,6 +72,6 @@ Die folgenden Befehls Zeichenfolgen werden mit MCI verwendet.
 [MCI-Referenz](mci-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

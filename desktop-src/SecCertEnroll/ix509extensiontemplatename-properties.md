@@ -4,16 +4,16 @@ ms.assetid: 7BECF603-DB9C-4FBD-9E27-F961A5CDFBB0
 title: IX509ExtensionTemplateName-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 49e8fb23d50e244ce272673186c50cc617e0d8ee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7a31f4de0cddb28d0041de11083473dc3c35741fd988a1cbacbfc33996c471f1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866244"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119739720"
 ---
 # <a name="ix509extensiontemplatename-properties"></a>IX509ExtensionTemplateName-Eigenschaften
 
-Die [**IX509ExtensionTemplateName**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensiontemplatename) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**IX509ExtensionTemplateName-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensiontemplatename) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

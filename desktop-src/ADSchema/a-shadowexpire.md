@@ -1,10 +1,10 @@
 ---
-title: shadowexpire-Attribut
-description: Enthält das absolute Datum, an dem das Konto abläuft.
+title: shadowExpire-Attribut
+description: Enthält das absolute Ablaufdatum des Kontos.
 ms.assetid: a16c5c46-eafd-457f-b39c-8b7053db9195
 ms.tgt_platform: multiple
 keywords:
-- shadowexpire-Attribut AD-Schema
+- shadowExpire-Attribut–AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e647b401f47ac11dd375cb8c33571606fddd81a7
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7bc62541eba4b756fd7d9e2065216e6d6a403824beba702d738c07b57459f119
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836590"
 ---
-# <a name="shadowexpire-attribute"></a>shadowexpire-Attribut
+# <a name="shadowexpire-attribute"></a>shadowExpire-Attribut
 
-Enthält das absolute Datum, an dem das Konto abläuft.
+Enthält das absolute Ablaufdatum des Kontos.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | shadowexpire                         |
-| LDAP-Display-Name | shadowexpire                         |
+| CN                | shadowExpire                         |
+| Ldap-Anzeigename | shadowExpire                         |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.10                     |
-| System-ID-GUID    | 75159a00-1FFF-4cf4-8bff-4ef2695cf643 |
+| System-ID-GUID    | 75159a00-1fff-4cf4-8bff-4ef2695cf643 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -54,11 +54,11 @@ Enthält das absolute Datum, an dem das Konto abläuft.
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -75,11 +75,11 @@ Enthält das absolute Datum, an dem das Konto abläuft.
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -96,11 +96,11 @@ Enthält das absolute Datum, an dem das Konto abläuft.
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -117,11 +117,11 @@ Enthält das absolute Datum, an dem das Konto abläuft.
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -130,7 +130,7 @@ Enthält das absolute Datum, an dem das Konto abläuft.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

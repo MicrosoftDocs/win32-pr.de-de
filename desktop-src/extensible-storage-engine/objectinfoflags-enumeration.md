@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: objectinfoflags-Enumeration'
-title: Objectinfoflags-Enumeration
+description: 'Weitere Informationen zu: ObjectInfoFlags-Enumeration'
+title: ObjectInfoFlags-Enumeration
 TOCTitle: ObjectInfoFlags enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.ObjectInfoFlags
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.objectinfoflags(v=EXCHG.10)
@@ -36,21 +36,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b3f301f1e786d126dbd57c071fe89356e0acc891
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 06cd7cecaa536106f70cc469e3b690a46bee8301fe2d1142bc3fa1ff2c045346
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865623"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119780270"
 ---
-# <a name="objectinfoflags-enumeration"></a>Objectinfoflags-Enumeration
+# <a name="objectinfoflags-enumeration"></a>ObjectInfoFlags-Enumeration
 
 Flags für ESENT-Objekte (Tabellen). Wird in [JET_OBJECTINFO](./jet-objectinfo-class.md)verwendet.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -90,7 +90,7 @@ public enum ObjectInfoFlags
 </tr>
 <tr class="odd">
 <td></td>
-<td>Tablefixedddl</td>
+<td>TableFixedDDL</td>
 <td>Die DDL der Tabelle ist korrigiert.</td>
 </tr>
 <tr class="even">
@@ -100,13 +100,13 @@ public enum ObjectInfoFlags
 </tr>
 <tr class="odd">
 <td></td>
-<td>Tableabgeleitet</td>
-<td>Die DDL der Tabelle wird von einer Vorlagen Tabelle geerbt.</td>
+<td>TableDerived</td>
+<td>Die DDL der Tabelle wird von einer Vorlagentabelle geerbt.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Tablenofixedvarcolumnsinderivedtables</td>
-<td>Korrigiert oder Variablen Spalten in abgeleiteten Tabellen (damit der Vorlage in Zukunft festgelegte oder Variable Spalten hinzugefügt werden können). Wird in Verbindung mit TableTemplate verwendet.</td>
+<td>TableNoFixedVarColumnsInDerivedTables</td>
+<td>Feste oder variable Spalten in abgeleiteten Tabellen (sodass der Vorlage in Zukunft feste Spalten oder Variablenspalten hinzugefügt werden können). Wird in Verbindung mit TableTemplate verwendet.</td>
 </tr>
 </tbody>
 </table>
@@ -114,6 +114,6 @@ public enum ObjectInfoFlags
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
