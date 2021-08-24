@@ -1,5 +1,5 @@
 ---
-description: 'Thread_V1-Klasse: Diese Klasse ist die übergeordnete Klasse für Threadereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
+description: 'Thread_V1 Klasse: Diese Klasse ist die übergeordnete Klasse für Threadereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: a434938d-032f-46c6-a94b-3936e56e2db9
 title: Thread_V1-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 65b92ce6924b56a015fbc580cd478122688e474d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 42cc51f7d20cb5e37d10c90d342ca301cce5c0435709abcc08834029d16881e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069430"
 ---
 # <a name="thread_v1-class"></a>Thread \_ V1-Klasse
 
 Diese Klasse ist die übergeordnete Klasse für Threadereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,14 +42,14 @@ Die **Thread \_ V1-Klasse** definiert keine Member.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

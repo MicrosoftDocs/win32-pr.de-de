@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: System Parameters. columnstaggedmost-Feld'
-title: System Parameters. columnstaggedmost-Feld
+description: 'Weitere Informationen zu: SystemParameters.ColumnsTaggedMost-Feld'
+title: SystemParameters.ColumnsTaggedMost-Feld
 TOCTitle: ColumnsTaggedMost field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.SystemParameters.ColumnsTaggedMost
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.systemparameters.columnstaggedmost(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 72e832cb945101cb98efcf1cf7ccdc4ae450db45
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 120b83ec195cfff7304a9fe78bcc919cecc5a0e4880a49ecee708b87478bbc9a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107034"
 ---
-# <a name="systemparameterscolumnstaggedmost-field"></a>System Parameters. columnstaggedmost-Feld
+# <a name="systemparameterscolumnstaggedmost-field"></a>SystemParameters.ColumnsTaggedMost-Feld
 
-Die maximal zulässige Anzahl von markierten Spalten in einer Tabelle.
+Maximale Anzahl von markierten Spalten, die in einer Tabelle zulässig sind.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ value = SystemParameters.ColumnsTaggedMost
 public const int ColumnsTaggedMost
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [SystemParameters-Klasse](./systemparameters-class.md)
 
 [SystemParameters-Member](./systemparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

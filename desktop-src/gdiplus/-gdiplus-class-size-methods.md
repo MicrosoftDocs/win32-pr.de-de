@@ -1,24 +1,24 @@
 ---
-description: In diesem Thema werden die Methoden der Size-Klasse aufgelistet. Eine komplette Klassen Auflistung finden Sie unter size-Klasse.
+description: In diesem Thema werden die Methoden der Size-Klasse aufgeführt. Eine vollständige Klassenauflistung finden Sie unter Size Class.
 ms.assetid: 617626ed-9272-418a-815d-39d10b18df99
-title: Größen Methoden
+title: Size-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94b8fabca893390015027602114cc2fb0ded5937
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 63b40fcf82482a7bf751811b6dc80d1e169a4dffa77a32d94d3223a258ea862b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119036988"
 ---
-# <a name="size-methods"></a>Größen Methoden
+# <a name="size-methods"></a>Size-Methoden
 
-In diesem Thema werden die Methoden der [**size**](/windows/desktop/api/gdiplustypes/nl-gdiplustypes-size) -Klasse aufgelistet. Eine komplette Klassen Auflistung finden Sie unter **size-Klasse**.
+In diesem Thema werden die Methoden der [**Size-Klasse**](/windows/desktop/api/gdiplustypes/nl-gdiplustypes-size) aufgeführt. Eine vollständige Klassenauflistung finden Sie unter **Size Class**.
 
 -   [**Leer**](/windows/desktop/api/Gdiplustypes/nf-gdiplustypes-size-empty)
--   [**Equals**](/windows/desktop/api/Gdiplustypes/nf-gdiplustypes-size-equals)
--   [**Operator-(Größe&)**](/windows/win32/api/gdiplustypes/nf-gdiplustypes-size-operator-sub)
--   [**Operator + (Größe&)**](/windows/win32/api/gdiplustypes/nf-gdiplustypes-size-operator-add)
+-   [**Ist gleich**](/windows/desktop/api/Gdiplustypes/nf-gdiplustypes-size-equals)
+-   [**operator-(Size&)**](/windows/win32/api/gdiplustypes/nf-gdiplustypes-size-operator-sub)
+-   [**operator+(Size&)**](/windows/win32/api/gdiplustypes/nf-gdiplustypes-size-operator-add)
 
  
 

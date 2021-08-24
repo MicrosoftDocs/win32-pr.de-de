@@ -1,9 +1,9 @@
 ---
 title: defaultvtable-Attribut
-description: Das Attribut "\ defaultvtable \" definiert eine Schnittstelle als standardmäßige Vtable-Schnittstelle.
+description: Das Attribut \defaultvtable\ definiert eine Schnittstelle als Vtable-Standardschnittstelle.
 ms.assetid: 05e50935-c630-4f9e-a7ec-3bb70a9834f1
 keywords:
-- defaultvtable-Attribut-Mittel l
+- defaultvtable-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f8086d60d0936dcf56738afadea4244a5fff758b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: ffebc5907072f7fdfc539bbc2b06bf1e4ad9fb667826c6c3c5a96121b106326e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067340"
 ---
 # <a name="defaultvtable-attribute"></a>defaultvtable-Attribut
 
-Das **\[ defaultvtable \]** -Attribut definiert eine Schnittstelle als standardmäßige Vtable-Schnittstelle.
+Das **\[ \] defaultvtable-Attribut** definiert eine Schnittstelle als VTable-Standardschnittstelle.
 
 ``` syntax
 [
@@ -38,36 +38,36 @@ coclass coclass-name
 
 <dl> <dt>
 
-*coclass-Attribute-List* 
+*coclass-attribute-list* 
 </dt> <dd>
 
-Andere Attribute, die auf die-Klasse angewendet werden. Die **\[** Attribute " [**Source**](source.md) " **\]** und " **\[** [**UUID**](uuid.md) " **\]** sind erforderlich.
+Andere Attribute, die für die -Klasse gelten. Die **\[** [**Attribute source**](source.md) **\]** und **\[** [**uuid**](uuid.md) sind **\]** erforderlich.
 
 </dd> <dt>
 
-*Name der Co-Klasse* 
+*coclass-name* 
 </dt> <dd>
 
 Der Name der Klasse.
 
 </dd> <dt>
 
-*coclass-Interface-List* 
+*coclass-interface-list* 
 </dt> <dd>
 
-Eine Liste der Schnittstellen für die-Klasse.
+Eine Liste der Schnittstellen für die -Klasse.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine standardmäßige Vtable-Schnittstelle kann keine dispinterface sein – Sie muss eine Dual-oder Vtable-oder-Schnittstelle sein. Wenn die Schnittstelle eine duale Schnittstelle ist, können senken davon ausgehen, dass Sie Ereignisse über Vtable empfangen werden.
+Eine VTable-Standardschnittstelle kann keine Disp-Schnittstelle sein– sie muss eine duale, Vtable- oder -Schnittstelle sein. Wenn es sich bei der Schnittstelle um eine duale Schnittstelle handelt, können Senken davon ausgehen, dass sie Ereignisse über Vtable empfangen.
 
-Eine Klasse kann eine standardmäßige Quell Schnittstelle und eine standardmäßige Vtable-Quell Schnittstelle sein, wie im Beispiel gezeigt. In diesem Fall sollte eine Anweisungs Senke IID \_ IDispatch verwenden, um dispatchereignisse zu empfangen und den Schnittstellen Bezeichner zum Empfangen von Vtable-Ereignissen zu verwenden.
+Eine Klasse kann sowohl eine Standardquellschnittstelle als auch eine VTable-Standardquellschnittstelle sein, wie im Beispiel gezeigt. In diesem Fall sollte eine Empfehlungssenke IID \_ IDISPATCH verwenden, um Dispatchereignisse zu empfangen, und den Schnittstellenbezeichner zum Empfangen von Vtable-Ereignissen verwenden.
 
-### <a name="typeflag-representation"></a>TYPEFLAG-Darstellung
+### <a name="typeflag-representation"></a>Typflagdarstellung
 
-Das vorhanden sein von impltypeflag \_ fdefaultvtable.
+Das Vorhandensein von IMPLTYPEFLAG \_ FDEFAULTVTABLE.
 
 ## <a name="examples"></a>Beispiele
 
@@ -112,21 +112,21 @@ interface IFormEvents: IDispatch
 [**coclass**](coclass.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
-[**Ausgangs**](source.md)
+[**Quelle**](source.md)
 </dt> <dt>
 
-[**UUID**](uuid.md)
+[**Uuid**](uuid.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

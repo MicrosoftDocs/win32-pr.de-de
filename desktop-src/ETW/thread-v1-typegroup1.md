@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Thread Start Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Threadstartereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 412de56f-4f54-46e8-ab60-d47371247e79
 title: Thread_V1_TypeGroup1-Klasse
 ms.topic: reference
@@ -21,18 +21,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 13c419b417b614eb9022d1cb7c09a84ca705b3dc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 90d8f4afe9d78cc774dea3159a728ccc6d4db52314e692594d026f7e4fe2161c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959989"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069440"
 ---
-# <a name="thread_v1_typegroup1-class"></a>Thread \_ v1 \_ TypeGroup1-Klasse
+# <a name="thread_v1_typegroup1-class"></a>Thread \_ V1 \_ TypeGroup1-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Thread Start Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Threadstartereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,129 +54,129 @@ class Thread_V1_TypeGroup1 : Thread_V1
 
 ## <a name="members"></a>Member
 
-Die **Thread \_ v1 \_ TypeGroup1** -Klasse verfügt über diese Typen von Membern:
+Die **\_ Thread V1 \_ TypeGroup1-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Thread \_ v1 \_ TypeGroup1** -Klasse verfügt über diese Eigenschaften.
+Die **Thread \_ V1 \_ TypeGroup1-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 ProcessId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1)
+Qualifizierer: WmiDataId(1)
 </dt> </dl>
 
-Prozess Bezeichner des am Ereignis beteiligten Threads.
+Prozessbezeichner des am Ereignis beteiligten Threads.
 
-**Windows Server 2003:** Enthält das Format ("x") Qualifizierer.
+**Windows Server 2003:** Enthält den Format("x")-Qualifizierer.
 
 </dd> <dt>
 
 StackBase
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3), Zeiger
+Qualifizierer: WmiDataId(3), Zeiger
 </dt> </dl>
 
-Basisadresse des Thread Stapels.
+Basisadresse des Threadstapels.
 
 </dd> <dt>
 
 StackLimit
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), Zeiger
+Qualifizierer: WmiDataId(4), Zeiger
 </dt> </dl>
 
-Grenzwert für den Thread Stapel.
+Der Grenzwert des Stapels des Threads.
 
 </dd> <dt>
 
-Startaddr
+StartAddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (7), Zeiger
+Qualifizierer: WmiDataId(7), Zeiger
 </dt> </dl>
 
-Die Speicheradresse, an der die Ablauf Verfolgung gestartet wird.
+Speicheradresse, an der die Ablaufverfolgung gestartet wird.
 
 </dd> <dt>
 
-Tthreadid
+TThreadId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-Thread Bezeichner des am Ereignis beteiligten Threads.
+Threadbezeichner des Threads, der am Ereignis beteiligt ist.
 
-**Windows Server 2003:** Enthält das Format ("x") Qualifizierer.
+**Windows Server 2003:** Enthält den Format("x")-Qualifizierer.
 
 </dd> <dt>
 
-Userstackbase
+UserStackBase
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5), Zeiger
+Qualifizierer: WmiDataId(5), Zeiger
 </dt> </dl>
 
-Basisadresse für den benutzermodusstapel des Threads.
+Basisadresse des Benutzermodusstapels des Threads.
 
 </dd> <dt>
 
-Userstacklimit
+UserStackLimit
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6), Zeiger
+Qualifizierer: WmiDataId(6), Zeiger
 </dt> </dl>
 
-Limit für den benutzermodusstapel des Threads.
+Der Grenzwert des Benutzermodusstapels des Threads.
 
 </dd> <dt>
 
@@ -189,30 +189,30 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (9), Format ("c")
+Qualifizierer: WmiDataId(9), Format("c")
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 Win32StartAddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (8), Zeiger
+Qualifizierer: WmiDataId(8), Zeiger
 </dt> </dl>
 
-Die Startadresse der Funktion, die von diesem Thread ausgeführt werden soll.
+Startadresse der Funktion, die von diesem Thread ausgeführt werden soll.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -223,11 +223,11 @@ Die Startadresse der Funktion, die von diesem Thread ausgeführt werden soll.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Thread \_ v1**](thread-v1.md)
+[**Thread \_ V1**](thread-v1.md)
 </dt> </dl>
 
  

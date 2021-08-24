@@ -1,11 +1,11 @@
 ---
 title: Win32_VirtualDesktopSession-Klasse
-description: Verwaltet eine virtuelle Desktop Sitzung.
+description: Verwaltet eine virtuelle Desktopsitzung.
 ms.assetid: a5a0d2a4-6e19-42ac-988c-2d3787946325
 ms.tgt_platform: multiple
 keywords:
-- Win32_VirtualDesktopSession-Klasse Remotedesktopdienste
-- Win32_VirtualDesktopSession Klasse Remotedesktopdienste, beschrieben
+- Win32_VirtualDesktopSession-Klassen-Remotedesktopdienste
+- Win32_VirtualDesktopSession-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -24,16 +24,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f343c1dc022dcb4759f813de956ade27e1aff213
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 01e039df658ded4534e3e2582f08ba4e5f5a04530d810349fff5633730a84332
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475450"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137423"
 ---
-# <a name="win32_virtualdesktopsession-class"></a>Win32 \_ virtualdesktopsession-Klasse
+# <a name="win32_virtualdesktopsession-class"></a>Win32 \_ VirtualDesktopSession-Klasse
 
-Verwaltet eine virtuelle Desktop Sitzung.
+Verwaltet eine virtuelle Desktopsitzung.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -56,22 +56,22 @@ class Win32_VirtualDesktopSession
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ virtualdesktopsession** " verfügt über diese Typen von Membern:
+Die **Win32 \_ VirtualDesktopSession-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ virtualdesktopsession** " verfügt über diese Methoden.
+Die **Win32 \_ VirtualDesktopSession-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                         | BESCHREIBUNG                                                                |
 |:---------------------------------------------------------------|:---------------------------------------------------------------------------|
-| [**Trennen**](disconnect-win32-virtualdesktopsession.md)   | Trennt die virtuelle Desktop Sitzung.<br/>                        |
-| [**Abmeldung**](logoff-win32-virtualdesktopsession.md)           | Meldet den Benutzer von der virtuellen Desktop Sitzung ab.<br/>             |
-| [**SendMessage**](sendmessage-win32-virtualdesktopsession.md) | Senden Sie eine Nachricht über die virtuelle Desktop Sitzung an den Benutzer.<br/> |
+| [**Trennen**](disconnect-win32-virtualdesktopsession.md)   | Trennt die Sitzung des virtuellen Desktops.<br/>                        |
+| [**Abmelden**](logoff-win32-virtualdesktopsession.md)           | Meldet den Benutzer von der Sitzung des virtuellen Desktops ab.<br/>             |
+| [**SendMessage**](sendmessage-win32-virtualdesktopsession.md) | Senden Sie eine Nachricht über die Virtuelle Desktopsitzung an den Benutzer.<br/> |
 
 
 
@@ -79,82 +79,82 @@ Die Win32-Klasse " **\_ virtualdesktopsession** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ virtualdesktopsession** " verfügt über diese Eigenschaften.
+Die **Win32 \_ VirtualDesktopSession-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ClientMachineName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ruft den Namen des Client Computers ab, der mit der Sitzung verbunden ist.
+Ruft den Namen des Clientcomputers ab, der mit der Sitzung verbunden ist.
 
 </dd> <dt>
 
-**Sammlungs**
+**CollectionId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ruft den Namen der virtuellen Desktop Sammlung ab, die die virtuelle Maschine hostet.
+Ruft den Namen der virtuellen Desktopauflistung ab, die den virtuellen Computer hostet.
 
 </dd> <dt>
 
-**Connectstate**
+**ConnectState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ruft den Status der Verbindung mit der Sitzung ab.
+Ruft den Zustand der Verbindung mit der Sitzung ab.
 
 </dd> <dt>
 
 **DomainName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ruft den Domänen Namen des Benutzers ab.
+Ruft den Domänennamen des Benutzers ab.
 
 </dd> <dt>
 
 **SessionId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Ruft die ID der virtuellen Desktop Sitzung ab.
+Ruft die ID der Sitzung des virtuellen Desktops ab.
 
 </dd> <dt>
 
 **UserName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -167,23 +167,23 @@ Ruft den Namen des Benutzerkontos ab, das der Sitzung zugewiesen ist.
 **VMHostName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Ruft den Namen des Remotedesktop Virtualisierungshostservers ab, der die virtuelle Maschine hostet.
+Ruft den Namen des Remotedesktop Virtualisierungshostservers ab, der den virtuellen Computer hostet.
 
 </dd> <dt>
 
 **VMName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -201,8 +201,8 @@ Ruft den Namen des virtuellen Computers ab, der der Sitzung zugewiesen ist.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMV2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 

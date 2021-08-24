@@ -1,26 +1,26 @@
 ---
-description: In diesem Thema wird beschrieben, wie Sie die Schnittstellen verwenden, die Zugriff auf FixedDocumentSequence bereitstellen, das die oberste Ebene der Dokument Hierarchie in einem XPS-OM ist.
+description: In diesem Thema wird beschrieben, wie die Schnittstellen verwendet werden, die Zugriff auf FixedDocumentSequence ermöglichen, die oberste Ebene der Dokumenthierarchie in einer XPS OM.
 ms.assetid: e7d01f21-0b5d-4385-89e8-14021800e234
-title: Arbeiten mit ixpsomdocumentsequence-Schnittstellen
+title: Arbeiten mit IXpsOMDocumentSequence-Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f108cbadf735b334f758102915abbda239a4e974
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: edac74809de63c1ae4e688bb99214d11b091ee4e877c921e9280abc9c6868121
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119098662"
 ---
-# <a name="working-with-ixpsomdocumentsequence-interfaces"></a>Arbeiten mit ixpsomdocumentsequence-Schnittstellen
+# <a name="working-with-ixpsomdocumentsequence-interfaces"></a>Arbeiten mit IXpsOMDocumentSequence-Schnittstellen
 
-In diesem Thema wird beschrieben, wie Sie die Schnittstellen verwenden, die Zugriff auf FixedDocumentSequence bereitstellen, das die oberste Ebene der Dokument Hierarchie in einem XPS-OM ist.
+In diesem Thema wird beschrieben, wie die Schnittstellen verwendet werden, die Zugriff auf FixedDocumentSequence ermöglichen, die oberste Ebene der Dokumenthierarchie in einer XPS OM.
 
 
 
-| Schnittstellen Name                                                          | Logische untergeordnete Schnittstellen                            | BESCHREIBUNG                                                              |
+| Schnittstellenname                                                          | Logische untergeordnete Schnittstellen                            | Beschreibung                                                              |
 |-------------------------------------------------------------------------|-----------------------------------------------------|--------------------------------------------------------------------------|
-| [**Ixpsomdocumentsequence**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence)<br/>     | [**Ixpsomdocument**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocument)<br/> | Gruppiert einen Satz von fixeddocuments in eine geordnete Liste.<br/>          |
-| [**Ixpsomdocumentcollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentcollection)<br/> | Keine<br/>                                     | Die Auflistung von fixeddocuments in einer XPS-Dokument Sequenz.<br/> |
+| [**IXpsOMDocumentSequence**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence)<br/>     | [**IXpsOMDocument**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocument)<br/> | Gruppiert einen Satz von FixedDocuments in eine sortierte Liste.<br/>          |
+| [**IXpsOMDocumentCollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentcollection)<br/> | Keine<br/>                                     | Die Auflistung von FixedDocuments in einer XPS-Dokumentsequenz.<br/> |
 
 
 
@@ -28,7 +28,7 @@ In diesem Thema wird beschrieben, wie Sie die Schnittstellen verwenden, die Zugr
 
 ## <a name="code-example"></a>Codebeispiel
 
-Im folgenden Codebeispiel wird ein Zeiger auf die [**ixpsomdocumentsequence**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence) -Schnittstelle abgerufen, die die Dokument Sequenz des durch *xpspackage* dargestellten XPS-OMS enthält. Im Beispiel werden dann die Dokumente in der-Auflistung aufgelistet.
+Das folgende Codebeispiel ruft einen Zeiger auf die [**IXpsOMDocumentSequence-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence) ab, die die Dokumentsequenz der XPS OM enthält, die durch *xpsPackage* dargestellt wird. Im Beispiel werden dann die Dokumente in der Auflistung aufzählt.
 
 
 ```C++

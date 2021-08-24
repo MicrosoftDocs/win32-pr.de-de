@@ -1,23 +1,23 @@
 ---
-title: Referenz zum Statusanzeige-Steuerelement
-description: Referenz zum Statusanzeige-Steuerelement
+title: Referenz zum Statusleisten-Steuerelement
+description: Referenz zum Statusleisten-Steuerelement
 ms.assetid: 89468ecb-045a-4d30-8eb2-db33cbf0780e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 98c32a30d5c729df8af343a601e9eac5519d8f68
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 8ce46b590046be9fc79977cf4acba3617eb054374601d5a1c2dd2a349d7ee3bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219246"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119079244"
 ---
-# <a name="progress-bar-control-reference"></a>Referenz zum Statusanzeige-Steuerelement
+# <a name="progress-bar-control-reference"></a>Referenz zum Statusleisten-Steuerelement
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Statusanzeige Meldungen](bumper-progress-bar-control-reference-messages.md)
--   [Statusanzeige Strukturen](bumper-progress-bar-control-reference-structures.md)
--   [Statusanzeige Konstanten](bumper-progress-bar-control-reference-constants.md)
+-   [Statusanzeigemeldungen](bumper-progress-bar-control-reference-messages.md)
+-   [Statusanzeigestrukturen](bumper-progress-bar-control-reference-structures.md)
+-   [Statusanzeigekonstanten](bumper-progress-bar-control-reference-constants.md)
 
  
 

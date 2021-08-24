@@ -1,26 +1,26 @@
 ---
-description: ICE25 überprüft, ob eine MSI-Datei alle internen Zusammenschluss-Modul Abhängigkeiten und-Ausschlüsse erfüllt.
+description: ICE25 überprüft, ob .msi-Datei alle internen Abhängigkeiten und Ausschlüsse des Mergemoduls erfüllt.
 ms.assetid: e6e3ea44-a1d4-451a-b326-e8fb7ed4adeb
 title: ICE25
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e0d966c4c374d6e61e30b44a41ad88bed8bf907f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2715ce629ad22b872b8d38d0c6848236b9f1af9378a0a652b702e7b72cbd7dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119528950"
 ---
 # <a name="ice25"></a>ICE25
 
-ICE25 überprüft, ob eine MSI-Datei alle internen [Zusammenschluss-Modul](merge-modules.md) Abhängigkeiten und-Ausschlüsse erfüllt. Ice überprüft Folgendes:
+ICE25 überprüft, ob .msi datei alle internen Mergemodulabhängigkeiten [und](merge-modules.md) -ausschlüsse erfüllt. ICE überprüft Folgendes:
 
--   Alle mergemodulabhängigkeiten, die in der [Tabelle "moduledependen"](moduledependency-table.md) der MSI-Datei angegeben sind, werden von mindestens einem in der [Tabelle "ModuleSignature](modulesignature-table.md)" aufgelisteten Mergemodul erfüllt.
--   Keines der ausgeschlossenen Mergemodule in der [Tabelle "moduleausschluss](moduleexclusion-table.md) " ist mit den in der Tabelle " [ModuleSignature](modulesignature-table.md)" aufgelisteten Mergemodulen nicht kompatibel.
+-   Alle Mergemodulabhängigkeiten, die in der [ModuleDependency-Tabelle](moduledependency-table.md) der .msi angegeben sind, werden von mindestens einem Mergemodul erfüllt, das in der [ModuleSignature-Tabelle aufgeführt ist.](modulesignature-table.md)
+-   Dass keines der ausgeschlossenen Mergemodule in der [ModuleExclusion-Tabelle](moduleexclusion-table.md) mit den merge-Modulen in der [ModuleSignature-Tabelle inkompatibel ist.](modulesignature-table.md)
 
 ## <a name="result"></a>Ergebnis
 
-ICE25 gibt eine Fehlermeldung aus, wenn die MSI-Datei bereits mit einem inkompatiblen Mergemodul zusammengeführt wurde, oder wenn Sie nicht mit einem erforderlichen Mergemodul zusammengeführt wurde.
+ICE25 gibt eine Fehlermeldung aus, wenn .msi-Datei zuvor mit einem inkompatiblen Mergemodul zusammengeführt wurde oder wenn sie nicht mit einem erforderlichen Mergemodul zusammengeführt wurde.
 
 ## <a name="example"></a>Beispiel
 
@@ -38,31 +38,31 @@ Module ModuleB@1033 v1.0 is excluded.
 | ModuleID | Sprache | Version |
 |----------|----------|---------|
 | Modulea  | 0        | 1.0     |
-| Moduleb  | 1033     | 1.0     |
+| ModuleB  | 1033     | 1.0     |
 
 
 
  
 
-[Moduledepenptabelle](moduledependency-table.md)
+[ModuleDependency-Tabelle](moduledependency-table.md)
 
 
 
-| ModuleID | Modulelanguage | Requirements did | Requirements-Sprache | RequiredVersion |
+| ModuleID | ModuleLanguage | RequiredID | RequiredLanguage | RequiredVersion |
 |----------|----------------|------------|------------------|-----------------|
-| Modulea  | 0              | Modulex    | 0                | 2.0             |
+| Modulea  | 0              | ModuleX    | 0                | 2.0             |
 
 
 
  
 
-[Moduleausschluss-Tabelle](moduleexclusion-table.md)
+[ModuleExclusion-Tabelle](moduleexclusion-table.md)
 
 
 
-| ModuleID | Modulelanguage | Excludädid | Excludecodlanguage | Excludedminversion | Excludedmaxversion |
+| ModuleID | ModuleLanguage | ExcludedID | ExcludedLanguage | ExcludedMinVersion | ExcludedMaxVersion |
 |----------|----------------|------------|------------------|--------------------|--------------------|
-| Modulea  | 0              | Moduleb    | 1033             |                    |                    |
+| Modulea  | 0              | ModuleB    | 1033             |                    |                    |
 
 
 
@@ -72,7 +72,7 @@ Module ModuleB@1033 v1.0 is excluded.
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

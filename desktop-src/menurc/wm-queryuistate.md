@@ -1,9 +1,9 @@
 ---
-title: WM_QUERYUISTATE Meldung (Winuser. h)
-description: Eine Anwendung sendet die WM- \_ Abfrage queryuistate, um den Benutzeroberflächen Zustand für ein Fenster abzurufen.
+title: WM_QUERYUISTATE-Nachricht (Winuser.h)
+description: Eine Anwendung sendet die WM \_ QUERYUISTATE-Nachricht, um den Benutzeroberflächenzustand für ein Fenster abzurufen.
 ms.assetid: 3a9e3477-b5d7-4c55-b6d4-8a479451fee8
 keywords:
-- WM_QUERYUISTATE von Meldungs Menüs und anderen Ressourcen
+- WM_QUERYUISTATE Meldung Menüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f1574fe0dab2a0885c8012bf19eed50facfd6cce
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e62fc33fb79594f3e07c0d44d4b25fd16e980ef3a4a89b3079c69ef6eb5d1b89
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338805"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119267910"
 ---
-# <a name="wm_queryuistate-message"></a>WM \_ queryuistate-Meldung
+# <a name="wm_queryuistate-message"></a>WM \_ QUERYUISTATE-Nachricht
 
-Eine Anwendung sendet die **WM- \_ Abfrage queryuistate** , um den Benutzeroberflächen Zustand für ein Fenster abzurufen.
+Eine Anwendung sendet die **WM \_ QUERYUISTATE-Nachricht,** um den Benutzeroberflächenzustand für ein Fenster abzurufen.
 
 
 ```C++
@@ -52,15 +52,15 @@ Dieser Parameter wird nicht verwendet und muss 0 sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist **null** , wenn die Fokus Indikatoren und die Tastaturbeschleuniger sichtbar sind. Andernfalls kann der Rückgabewert einen oder mehrere der folgenden Werte aufweisen.
+Der Rückgabewert ist **NULL,** wenn die Fokusindikatoren und die Tastenkombinationen sichtbar sind. Andernfalls kann der Rückgabewert einer oder mehrere der folgenden Werte sein.
 
 
 
 | Rückgabecode/-wert                                                                                                                                       | BESCHREIBUNG                                                                 |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| <dl> <dt>**Uisf \_ Aktiv**</dt> <dt>0x4</dt> </dl>    | Ein Steuerelement sollte in dem Format gezeichnet werden, das für aktive Steuerelemente verwendet wird.<br/> |
-| <dl> <dt>**Uisf \_ Hideaccel**</dt> <dt>0x2</dt> </dl> | Tastaturbeschleuniger werden ausgeblendet.<br/>                                |
-| <dl> <dt>**Uisf \_ Hidefocus**</dt> <dt>0x1</dt> </dl> | Fokus Indikatoren werden ausgeblendet.<br/>                                     |
+| <dl> <dt>**UISF \_ ACTIVE**</dt> <dt>0x4</dt> </dl>    | Ein Steuerelement sollte im Stil gezeichnet werden, der für aktive Steuerelemente verwendet wird.<br/> |
+| <dl> <dt>**UISF \_ HIDEACCEL-0x2**</dt> <dt></dt> </dl> | Tastaturbeschleunigungen werden ausgeblendet.<br/>                                |
+| <dl> <dt>**UISF \_ HIDEFOCUS-0x1**</dt> <dt></dt> </dl> | Fokusindikatoren werden ausgeblendet.<br/>                                     |
 
 
 
@@ -74,24 +74,24 @@ Der Rückgabewert ist **null** , wenn die Fokus Indikatoren und die Tastaturbesc
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**WM \_ changeuistate**](wm-changeuistate.md)
+[**WM \_ CHANGEUISTATE**](wm-changeuistate.md)
 </dt> <dt>
 
-[**WM \_ updateuistate**](wm-updateuistate.md)
+[**WM \_ UPDATEUISTATE**](wm-updateuistate.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Tastaturkürzel](keyboard-accelerators.md)

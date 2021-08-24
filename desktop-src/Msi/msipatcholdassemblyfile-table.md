@@ -1,28 +1,28 @@
 ---
-description: Die msipatcholdassemblyfile-Tabelle verknüpft eine Datei in der Dateitabelle mit einem Assemblynamen in der msipatcholdassemblyname-Tabelle. Mehrere alte Assemblynamen können einer einzelnen Datei zugeordnet werden.
+description: Die Tabelle MsiPatchOldAssemblyFile bezieht eine Datei in der Tabelle File auf einen Assemblynamen in der Tabelle MsiPatchOldAssemblyName. Mehrere alte Assemblynamen können einer einzelnen Datei zugeordnet werden.
 ms.assetid: a3c1e7fb-5f97-41db-bdc8-bd3ddb695c42
-title: Msipatcholdassemblyfile-Tabelle
+title: MsiPatchOldAssemblyFile-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c995e4f6d6622dd3d7d1c96c9ef1297a787b66d6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c4570b862773d2dc1d5b9c7458dbc1ccd8825ce77bf504d5e0fb2bf116d7a095
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119559080"
 ---
-# <a name="msipatcholdassemblyfile-table"></a>Msipatcholdassemblyfile-Tabelle
+# <a name="msipatcholdassemblyfile-table"></a>MsiPatchOldAssemblyFile-Tabelle
 
-Die msipatcholdassemblyfile-Tabelle verknüpft eine Datei in der [Dateitabelle](file-table.md) mit einem [Assemblynamen in der msipatcholdassemblyname-Tabelle](msipatcholdassemblyname-table.md). Mehrere alte Assemblynamen können einer einzelnen Datei zugeordnet werden.
+Die Tabelle MsiPatchOldAssemblyFile bezieht eine Datei in der [Tabelle File](file-table.md) auf einen Assemblynamen in der [Tabelle MsiPatchOldAssemblyName.](msipatcholdassemblyname-table.md) Mehrere alte Assemblynamen können einer einzelnen Datei zugeordnet werden.
 
-Die msipatcholdassemblyfile-Tabelle weist die folgenden Spalten auf.
+Die Tabelle MsiPatchOldAssemblyFile enthält die folgenden Spalten.
 
 
 
-| Spalte     | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte     | Typ                         | Key | Nullwerte zulässig |
 |------------|------------------------------|-----|----------|
-| Datei\_     | [Bezeichner](identifier.md) | J   | N        |
-| Assembly\_ | [Bezeichner](identifier.md) | J   | N        |
+| Datei\_     | [Identifier](identifier.md) | J   | N        |
+| Assembly\_ | [Identifier](identifier.md) | J   | N        |
 
 
 
@@ -35,24 +35,24 @@ Die msipatcholdassemblyfile-Tabelle weist die folgenden Spalten auf.
 <span id="File_"></span><span id="file_"></span><span id="FILE_"></span>Datei\_
 </dt> <dd>
 
-Fremdschlüssel für die [Dateitabelle](file-table.md) , der die zu patchen Assembly angibt. Diese Spalte ist Teil des Primärschlüssels.
+Fremdschlüssel für die [Dateitabelle,](file-table.md) der die zu patchende Assembly angibt. Diese Spalte ist Teil des Primärschlüssels.
 
 </dd> <dt>
 
-<span id="Assembly_"></span><span id="assembly_"></span><span id="ASSEMBLY_"></span>Stadtverordneten\_
+<span id="Assembly_"></span><span id="assembly_"></span><span id="ASSEMBLY_"></span>Versammlung\_
 </dt> <dd>
 
-Der Fremdschlüssel für die [msipatcholdassemblyname-Tabelle](msipatcholdassemblyname-table.md) , der einen der alten Assemblynamen für die Assembly identifiziert. Diese Spalte ist Teil des Primärschlüssels.
+Fremdschlüssel für die [MsiPatchOldAssemblyName-Tabelle,](msipatcholdassemblyname-table.md) die einen der alten Assemblynamen für die Assembly identifiziert. Diese Spalte ist Teil des Primärschlüssels.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Patchen von Assemblys, die im globalen Assemblycache (GAC) installiert sind, verwendet Windows Installer die Tabelle msipatcholdassemblyfile und die [Tabelle msipatcholdassemblyname](msipatcholdassemblyname-table.md) . Wenn eine neuere Version einer Assembly freigegeben wird, wird der starke Name der Assembly geändert. Die beiden Tabellen identifizieren den alten Assemblynamen für eine aktualisierte Assembly. Dadurch kann der Installer den alten Assemblynamen verwenden, um die ursprüngliche Datei im GAC zu suchen und einen binären Patch anzuwenden. Ohne diese Informationen muss das Installationsprogramm möglicherweise auf die ursprüngliche Installationsquelle zugreifen, um eine im GAC installierte Assembly zu patchen.
+Windows Das Installationsprogramm verwendet die Tabelle MsiPatchOldAssemblyFile und die [Tabelle MsiPatchOldAssemblyName](msipatcholdassemblyname-table.md) beim Patchen von Assemblys, die im globalen Assemblycache (GAC) installiert sind. Beim Freigeben einer neueren Version einer Assembly wird der starke Name der Assembly geändert. Die beiden Tabellen identifizieren zusammen den alten Assemblynamen für eine aktualisierte Assembly. Dadurch kann der Installer den alten Assemblynamen verwenden, um die ursprüngliche Datei im GAC zu finden und einen binären Patch anzuwenden. Ohne diese Informationen muss das Installationsprogramm möglicherweise auf die ursprüngliche Installationsquelle zugreifen, um eine im GAC installierte Assembly zu patchen.
 
-Die msipatcholdassemblyfile-Tabelle und die [msipatcholdassemblyname-Tabelle](msipatcholdassemblyname-table.md) werden nicht automatisch von [patchwiz](patchwiz-dll.md)generiert. Das Update Paket, das in der [Tabelle "UpgradedImages](upgradedimages-table-patchwiz-dll-.md) " angegeben ist, muss diese Tabellen enthalten, damit der Patch diese Informationen enthält.
+Die Tabelle MsiPatchOldAssemblyFile und [die Tabelle MsiPatchOldAssemblyName](msipatcholdassemblyname-table.md) werden nicht automatisch von [PatchWiz generiert.](patchwiz-dll.md) Das in der [Tabelle UpgradedImages](upgradedimages-table-patchwiz-dll-.md) angegebene Updatepaket muss diese Tabellen enthalten, damit der Patch über diese Informationen verfügen kann.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

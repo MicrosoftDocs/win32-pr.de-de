@@ -1,9 +1,9 @@
 ---
-title: /NomD-Schalter
-description: Der Schalter/NomD gibt an, dass keine Metadatendatei (. winmd) generiert wird.
+title: /nomd-Schalter
+description: Der Schalter /nomd gibt an, dass keine Metadatendatei (.winmd) generiert wird.
 ms.assetid: CEEC9032-B43E-4339-AF43-14AB442BA3E6
 keywords:
-- /NomD-Schalter-Mittel l
+- /nomd switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3a97104262b6104ad8803b997e8b28f88ec1a0a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 922ed4a84cd40c42319d917573abc9c65a9e2c84ced35da1cff25f686ab7afce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373992"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067540"
 ---
-# <a name="nomd-switch"></a>/NomD-Schalter
+# <a name="nomd-switch"></a>/nomd-Schalter
 
-Der Schalter **/NomD** gibt an, dass keine Metadatendatei (. winmd) generiert wird.
+Der Schalter **/nomd** gibt an, dass keine Metadatendatei (.winmd) generiert wird.
 
 ``` syntax
 midlrt /nomd
@@ -29,13 +29,13 @@ midlrt /nomd
 
 ## <a name="switch-options"></a>Optionen wechseln
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
 ## <a name="remarks"></a>Bemerkungen
 
 ## <a name="examples"></a>Beispiele
 
-**mittlere/NomD**
+**midlrt /nomd**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Dieser Switch hat keine Parameter.
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> </dl>
 
  

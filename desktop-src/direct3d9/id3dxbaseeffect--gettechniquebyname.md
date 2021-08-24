@@ -1,7 +1,7 @@
 ---
-description: Ruft das Handle einer Technik Durchsuchen des Namens ab.
+description: Ruft das Handle einer Technik ab, indem ihr Name gesucht wird.
 ms.assetid: 34871229-ad63-4575-8c60-f27d7f7dddce
-title: 'ID3DXBaseEffect:: gettechniquebyname-Methode (D3DX9Shader. h)'
+title: ID3DXBaseEffect::GetTechniqueByName-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 5827527bf5151b121958c3f5803ef8a7e74f8d60
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 446c4625f6eee8c654991a9ed3685125e34d2de97553d328538deea0a7a4e116
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353404"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119121943"
 ---
-# <a name="id3dxbaseeffectgettechniquebyname-method"></a>ID3DXBaseEffect:: gettechniquebyname-Methode
+# <a name="id3dxbaseeffectgettechniquebyname-method"></a>ID3DXBaseEffect::GetTechniqueByName-Methode
 
-Ruft das Handle einer Technik Durchsuchen des Namens ab.
+Ruft das Handle einer Technik ab, indem ihr Name gesucht wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ D3DXHANDLE GetTechniqueByName(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeichenfolge, die den Namen der Technik enthält.
+Eine Zeichenfolge, die den Techniknamen enthält.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeichenfolge, die den Namen der Technik enthält.
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Gibt das Handle der ersten Technik mit dem angegebenen Namen zurück, oder **null** , wenn der Name nicht gefunden wurde. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Gibt das Handle der ersten Technik zurück, die über den angegebenen Namen verfügt, oder **NULL,** wenn der Name nicht gefunden wurde. Siehe [Handles (Direct3D 9).](handles.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Gibt das Handle der ersten Technik mit dem angegebenen Namen zurück, oder **nul
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

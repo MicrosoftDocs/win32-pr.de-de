@@ -1,21 +1,21 @@
 ---
-title: D2D1_MATRIX_3X2_F (D2D1. h)
-description: Stellt eine 3 x 2-Matrix dar.
+title: D2D1_MATRIX_3X2_F (D2d1.h)
+description: Stellt eine 3:2-Matrix dar.
 ms.assetid: f05d7555-6482-4eea-950f-7b443892cc1f
 keywords:
 - D2D1_MATRIX_3X2_F
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: beb252e35508c48570c96f251205fc8a54755687
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6d4e8a50e17c4c740c427d21df27e3c1d9cf8226df5edc1b98f15cbe920c401c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119260490"
 ---
-# <a name="d2d1_matrix_3x2_f"></a>D2D1 \_ Matrix \_ 3x2 \_ F
+# <a name="d2d1_matrix_3x2_f"></a>D2D1 \_ MATRIX \_ 3X2 \_ F
 
-Stellt eine 3 x 2-Matrix dar.
+Stellt eine 3:2-Matrix dar.
 
 
 ```C++
@@ -24,19 +24,19 @@ typedef D2D_MATRIX_3X2_F D2D1_MATRIX_3X2_F;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**D2D1 \_ Matrix \_ 3x2** ist ein neuer Name für die [**D2D \_ Matrix \_ 3x2- \_ F-**](/windows/desktop/api/dcommon/ns-dcommon-d2d_matrix_3x2_f) Struktur. Eine Liste der Felder, die von der Matrix bereitgestellt werden, finden Sie unter [**D2D \_ Matrix \_ 3x2 \_ F**](/windows/desktop/api/dcommon/ns-dcommon-d2d_matrix_3x2_f).
+**D2D1 \_ MATRIX \_ 3X2** ist ein neuer Name für die [**D2D \_ MATRIX \_ 3X2 \_ F-Struktur.**](/windows/desktop/api/dcommon/ns-dcommon-d2d_matrix_3x2_f) Eine Liste der von der Matrix bereitgestellten Felder finden Sie unter [**D2D \_ MATRIX \_ 3X2 \_ F**](/windows/desktop/api/dcommon/ns-dcommon-d2d_matrix_3x2_f).
 
-Zum vereinfachen allgemeiner Matrix Vorgänge stellt Direct2D die [**D2D1:: Matrix3x2F**](/windows/win32/api/d2d1helper/nl-d2d1helper-matrix3x2f) -Klasse bereit, die aus der [**D2D1 \_ Matrix \_ 3x2-**](/windows/desktop/api/dcommon/ns-dcommon-d2d_matrix_3x2_f) Struktur abgeleitet ist. Die **Matrix3x2F** -Klasse stellt einen Satz von Hilfsmethoden zum Ausführen allgemeiner Aufgaben bereit, z. b. zum Erstellen einer Übersetzungs-oder schiefe-Matrix.
+Um allgemeine Matrixoperationen zu vereinfachen, stellt Direct2D die [**D2D1::Matrix3x2F-Klasse**](/windows/win32/api/d2d1helper/nl-d2d1helper-matrix3x2f) bereit, die von der [**D2D1 \_ MATRIX \_ 3X2-Struktur**](/windows/desktop/api/dcommon/ns-dcommon-d2d_matrix_3x2_f) abgeleitet wird. Die **Matrix3x2F-Klasse** stellt eine Reihe von Hilfsmethoden zum Ausführen allgemeiner Aufgaben bereit, z. B. das Erstellen einer Übersetzungs- oder Schiefematrix.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die [**D2D1:: Matrix3x2F:: Rotation**](/windows/win32/api/d2d1helper/nf-d2d1helper-matrix3x2f-rotation) -Methode verwendet, um eine Rotations Matrix zu erstellen, die einen quadratischen Uhrzeigersinn um 45 Grad um die Mitte des Quadrats dreht und die Matrix an die [**setTransform**](/windows/win32/api/d2d1/nf-d2d1-id2d1brush-settransform(constd2d1_matrix_3x2_f_)) -Methode des Renderziels (*m \_ prendertarget*) übergibt.
+Im folgenden Beispiel wird die [**D2D1::Matrix3x2F::Rotation-Methode**](/windows/win32/api/d2d1helper/nf-d2d1helper-matrix3x2f-rotation) verwendet, um eine Drehungsmatrix zu erstellen, die ein Quadrat im Uhrzeigersinn um 45 Grad um die Mitte des Quadrats dreht und die Matrix an die [**SetTransform-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1brush-settransform(constd2d1_matrix_3x2_f_)) des Renderziels übergibt (*m \_ pRenderTarget*).
 
-Die folgende Abbildung zeigt die Auswirkung der Anwendung der vorangehenden Rotations Transformation auf das Quadrat. Das ursprüngliche Quadrat ist ein gepunkteter Umriss, und das gedrehte Quadrat ist ein voll solider Umriss.
+Die folgende Abbildung zeigt die Auswirkung der Anwendung der vorhergehenden Drehungstransformation auf das Quadrat. Das ursprüngliche Quadrat ist eine gepunktete Kontur, und das gedrehte Quadrat ist eine durchgehende Kontur.
 
-![Abbildung eines Quadrats um 45 Grad im Uhrzeigersinn um die Mitte des ursprünglichen Quadrats gedreht](images/rotate-ovw.png)
+![Abbildung eines Quadrats, das im Uhrzeigersinn um 45 Grad um die Mitte des ursprünglichen Quadrats gedreht wird](images/rotate-ovw.png)
 
 
 ```C++
@@ -68,7 +68,7 @@ Die folgende Abbildung zeigt die Auswirkung der Anwendung der vorangehenden Rota
 
 
 
-Code wurde in diesem Beispiel ausgelassen. Weitere Informationen zu Transformationen finden Sie in der [Übersicht über Transformationen](direct2d-transforms-overview.md).
+Code wurde in diesem Beispiel ausgelassen. Weitere Informationen zu Transformationen finden Sie in der [Übersicht über Transformationen.](direct2d-transforms-overview.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,14 +76,14 @@ Code wurde in diesem Beispiel ausgelassen. Weitere Informationen zu Transformati
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista mit SP2 und Platt Form Update für Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Platt Form Update für Windows Server 2008 \[ Desktop Apps \| UWP-apps\]<br/> |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8,1 \[ Windows Phone Silverlight 8,1 und Windows-Runtime apps\]<br/>                                                  |
-| Header<br/>                   | <dl> <dt>D2d1. h</dt> </dl>                                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista mit SP2 und Plattformupdate für UWP-Apps für Windows \[ \| Vista-Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Plattformupdate für Windows Server \[ 2008-Desktop-Apps \| UWP-Apps\]<br/> |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1- und Windows Runtime-Apps\]<br/>                                                  |
+| Header<br/>                   | <dl> <dt>D2d1.h</dt> </dl>                                                        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
@@ -99,13 +99,13 @@ Code wurde in diesem Beispiel ausgelassen. Weitere Informationen zu Transformati
 [Skalieren eines Objekts](how-to-scale.md)
 </dt> <dt>
 
-[Vorgehensweise beim Verzerren eines Objekts](how-to-skew.md)
+[Verzerren eines Objekts](how-to-skew.md)
 </dt> <dt>
 
 [Übersetzen eines Objekts](how-to-translate.md)
 </dt> <dt>
 
-[**D2D \_ Matrix \_ 3x2 \_ F**](/windows/desktop/api/dcommon/ns-dcommon-d2d_matrix_3x2_f)
+[**D2D \_ MATRIX \_ 3X2 \_ F**](/windows/desktop/api/dcommon/ns-dcommon-d2d_matrix_3x2_f)
 </dt> </dl>
 
  

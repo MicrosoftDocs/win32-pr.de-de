@@ -1,9 +1,9 @@
 ---
-title: Notify-Attribut
-description: Das \ notify \-Attribut weist den Mittel l-Compiler an, einen aufzurufenden Vorgang auf der Serverseite der Anwendung zu generieren.
+title: notify-Attribut
+description: Das \notify\-Attribut weist den MIDL-Compiler an, einen Aufruf einer \notify\-Prozedur auf der Serverseite der Anwendung zu generieren.
 ms.assetid: 24f9887b-04b7-491a-ab6e-7c078b967fbc
 keywords:
-- Attribut Benachrichtigen (Mitte)
+- NOTIFY-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 334223979298f54acb546bd0b9ec913afd92e286
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 9cf1bb1c4f522cecb5fe81a317267e2cffff2da638e3a8c09a412ae8d94a149d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104516214"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119066860"
 ---
-# <a name="notify-attribute"></a>Notify-Attribut
+# <a name="notify-attribute"></a>notify-Attribut
 
-Das **\[ Notify \]** -Attribut weist den Mittel l-Compiler an, einen Rückruf eines **\[ Benachrichtigungs \]** Verfahrens auf der Serverseite der Anwendung zu generieren.
+Das **\[ \] notify-Attribut** weist den MIDL-Compiler an, einen Aufruf einer **\[ Benachrichtigungsprozedur \]** auf der Serverseite der Anwendung zu generieren.
 
 ``` syntax
 [notify] procedure-name();
@@ -31,38 +31,38 @@ Das **\[ Notify \]** -Attribut weist den Mittel l-Compiler an, einen Rückruf ei
 
 <dl> <dt>
 
-*Prozedur Name* 
+*Prozedurname* 
 </dt> <dd>
 
-Der Name der Remote Prozedur, der das Benachrichtigungs Verfahren zugeordnet wird.
+Der Name der Remoteprozedur, der die Benachrichtigungsprozedur zugeordnet wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **\[ Benachrichtigungs \]** Verfahren, das als Ergebnis des **\[ Benachrichtigungs \]** Attributs aufgerufen wird, ist einer bestimmten Remote Prozedur auf dem Server zugeordnet. Dies ähnelt dem Konzept einer Rückruffunktion. Der Stub Ruft das **\[ Benachrichtigungs \]** Verfahren auf, nachdem alle Ausgabe Argumente der Remote Prozedur, mit der es verknüpft ist, gemarshallt wurde und alle mit den Parametern verknüpften Speicher freigegeben werden. Die **\[ Benachrichtigungs \]** Routine wird aufgerufen, wenn ein Aufruf fehlschlägt, bevor die Server Routine ausgeführt wird. Wenn z. b. ein Server während des Unmarshalling aufgrund der Bestätigung fehlerhafter Daten vom Client ausfällt, \[ wird die Benachrichtigungs \] Routine aufgerufen.
+Die **\[ \] Benachrichtigungsprozedur,** die als Ergebnis des **\[ \] notify-Attributs** aufgerufen wird, ist einer bestimmten Remoteprozedur auf dem Server zugeordnet. Sie ähnelt im Konzept einer Rückruffunktion. Der Stub ruft die **\[ Benachrichtigungsprozedur \]** auf, nachdem alle Ausgabeargumente der Remoteprozedur, der sie zugeordnet ist, gemarshallt wurden und alle den Parametern zugeordneten Arbeitsspeicher freigegeben wurden. Die **\[ \] Benachrichtigungsroutine** wird aufgerufen, wenn ein Aufruf fehlschlägt, bevor die Serverroutine ausgeführt wird. Wenn ein Server z. B. beim Aufheben desMarshalings aufgrund des Empfangs fehlerhafter Daten vom Client ausfällt, wird die \[ \] Benachrichtigungsroutine aufgerufen.
 
-Das **\[ Notify \]** -Attribut ist hilfreich, um Anwendungen zu entwickeln, die Ressourcen in Remote Prozeduren abrufen Diese Ressourcen werden dann im **\[ Benachrichtigungs \]** Verfahren freigegeben, nachdem die Ausgabeparameter der Remote Prozedur vollständig gemarshallt wurden.
+Das **\[ Notify-Attribut \]** ist nützlich, um Anwendungen zu entwickeln, die Ressourcen in Remoteprozeduren abrufen. Diese Ressourcen werden dann in der **\[ Benachrichtigungsprozedur \]** freigegeben, nachdem die Ausgabeparameter der Remoteprozedur vollständig gemarshallt wurden.
 
-Der Name der Prozedur **\[ Benachrichtigen \]** ist der Name des Remote Prozedur suffixt durch **\_ Benachrichtigen**. Für das **\_ Benachrichtigungs** Verfahren sind keine Parameter erforderlich, und es wird kein Ergebnis zurückgegeben. Ein Prototyp dieser Prozedur wird auch in der Header Datei generiert. Beispiel: die IDL-Datei enthält Folgendes:
+Der Name der **\[ \] Benachrichtigungsprozedur** ist der Name der Remoteprozedur mit dem Suffix **\_ notify**. Die **\_ Benachrichtigungsprozedur** erfordert keine Parameter und gibt kein Ergebnis zurück. Ein Prototyp dieser Prozedur wird auch in der Headerdatei generiert. Beispiel: Die IDL-Datei enthält Folgendes:
 
 ``` syntax
 MyProcedure([in] short S);
 ```
 
-Geben Sie Folgendes in der ACF für die mittlere Zeit an, um den **\_ Benachrichtigungs** Befehl zu generieren:
+Geben Sie im ACF für MIDL Folgendes an, um den **\_ Benachrichtigungsaufruf** zu generieren:
 
 ``` syntax
 [notify] MyProcedure();
 ```
 
-Der Mittelwert Compiler generiert Server-Stub-Code, **\_ der den folgenden aufrufungsvorgang** enthält:
+Der MIDL-Compiler generiert Serverstubcode, der den folgenden Aufruf der **\_ Benachrichtigungsprozedur** enthält:
 
 ``` syntax
 MyProcedure_notify();
 ```
 
-Die Header Datei enthält einen Prototyp:
+Die Headerdatei enthält einen Prototyp:
 
 ``` syntax
 void MyProcedure_notify(void);
@@ -78,12 +78,12 @@ void MyProcedure_notify(void);
 
 <dl> <dt>
 
-[Anwendungs Konfigurationsdatei (ACF)](application-configuration-file-acf-.md)
+[Anwendungskonfigurationsdatei (Application Configuration File, ACF)](application-configuration-file-acf-.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,22 +1,22 @@
 ---
-description: 'Nachdem Sie die Standard Aufrufe von com festgelegt haben, müssen Sie mithilfe eines Aufrufs der IWbemLocator:: ConnectServer-Methode eine Verbindung mit WMI herstellen.'
+description: Nachdem Sie die Standardaufrufe für COM festgelegt haben, müssen Sie über einen Aufruf der IWbemLocator::ConnectServer-Methode eine Verbindung mit WMI herstellen.
 ms.assetid: f0b33ff0-47b0-4aea-ab0f-9220ae367f67
 ms.tgt_platform: multiple
 title: Erstellen einer Verbindung mit einem WMI-Namespace
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ce0e1caeef15709742704570c008012feeaf8db
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2587024d7f581cd28a8fdaf339db9567b17c509599c01aca0599b701186fb786
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104485742"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119412140"
 ---
 # <a name="creating-a-connection-to-a-wmi-namespace"></a>Erstellen einer Verbindung mit einem WMI-Namespace
 
-Nachdem Sie die Standard Aufrufe von com festgelegt haben, müssen Sie mithilfe eines Aufrufs der [**IWBEMLocator:: ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) -Methode eine Verbindung mit WMI herstellen. Die **ConnectServer** -Methode gibt einen Proxy einer [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Schnittstelle zurück. Mithilfe von **IWbemServices** können Sie auf die verschiedenen Funktionen von WMI zugreifen.
+Nachdem Sie die Standardaufrufe für COM festgelegt haben, müssen Sie über einen Aufruf der [**IWbemLocator::ConnectServer-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) eine Verbindung mit WMI herstellen. Die **ConnectServer-Methode** gibt einen Proxy einer [**IWbemServices-Schnittstelle**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) zurück. Über **IWbemServices können** Sie auf die verschiedenen Funktionen von WMI zugreifen.
 
-Die Codebeispiele in diesem Thema erfordern die folgenden Verweise und \# include-Anweisungen, um ordnungsgemäß zu kompilieren.
+Die Codebeispiele in diesem Thema erfordern die folgenden Verweise und \# Include-Anweisungen, um ordnungsgemäß zu kompilieren.
 
 
 ```C++
@@ -30,15 +30,15 @@ using namespace std;
 
 
 
-Im folgenden Verfahren wird beschrieben, wie eine Verbindung mit einem WMI-Namespace erstellt wird.
+Im folgenden Verfahren wird beschrieben, wie Eine Verbindung mit einem WMI-Namespace erstellt wird.
 
 **So erstellen Sie eine Verbindung mit einem WMI-Namespace**
 
--   Initialisieren Sie die [**IWBEMLocator**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemlocator) -Schnittstelle durch einen Aufrufen von [**cokreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
+-   Initialisieren [**Sie die IWbemLocator-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemlocator) über einen Aufruf von [**CoCreateInstance.**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)
 
-    Für WMI ist es nicht erforderlich, dass Sie beim Aufrufen von [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) für [**IWBEMLocator**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemlocator)zusätzliche Prozeduren ausführen.
+    WMI erfordert keine zusätzlichen Prozeduren beim Aufrufen von [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) in [**IWbemLocator.**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemlocator)
 
-    Im folgenden Codebeispiel wird die Initialisierung von [**IWBEMLocator**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemlocator)beschrieben.
+    Im folgenden Codebeispiel wird beschrieben, wie [**IWbemLocator initialisiert wird.**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemlocator)
 
     ```C++
         IWbemLocator *pLoc = 0;
@@ -58,11 +58,11 @@ Im folgenden Verfahren wird beschrieben, wie eine Verbindung mit einem WMI-Names
 
     
 
-    -   Stellen Sie eine Verbindung mit WMI her, indem Sie die Methode [**IWBEMLocator:: ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) abrufen.
+    -   Verbinden über einen Aufruf der [**IWbemLocator::ConnectServer-Methode an WMI.**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver)
 
-        Die [**ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) -Methode gibt einen Proxy an eine [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Schnittstelle zurück, die verwendet, um auf den lokalen WMI-Namespace zuzugreifen, der in dem Aufrufen von **ConnectServer** angegeben ist.
+        Die [**ConnectServer-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) gibt einen Proxy an eine [**IWbemServices-Schnittstelle**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) zurück, die für den Zugriff auf den lokalen oder Remote-WMI-Namespace verwendet, der im Aufruf von **ConnectServer angegeben ist.**
 
-        Im folgenden Codebeispiel wird das Abrufen von [**ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver)beschrieben.
+        Im folgenden Codebeispiel wird das Aufrufen von [**ConnectServer beschrieben.**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver)
 
         ```C++
         IWbemServices *pSvc = 0;
@@ -93,16 +93,16 @@ Im folgenden Verfahren wird beschrieben, wie eine Verbindung mit einem WMI-Names
 
         
 
-Nachdem Sie einen Zeiger auf den [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Proxy erhalten haben, müssen Sie die Sicherheit des Proxys für den Zugriff auf WMI festlegen. Weitere Informationen finden Sie unter [Festlegen der Sicherheitsstufen für eine WMI-Verbindung](setting-the-security-levels-on-a-wmi-connection.md).
+Nachdem Sie einen Zeiger auf den [**IWbemServices-Proxy**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) erhalten haben, müssen Sie die Sicherheit für den Proxy für den Zugriff auf WMI festlegen. Weitere Informationen finden Sie unter [Festlegen der Sicherheitsebenen für eine WMI-Verbindung.](setting-the-security-levels-on-a-wmi-connection.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erstellen einer WMI-Anwendung mithilfe von C++](creating-a-wmi-application-using-c-.md)
+[Erstellen einer WMI-Anwendung mit C++](creating-a-wmi-application-using-c-.md)
 </dt> <dt>
 
-[IPv6-und IPv4-Unterstützung in WMI](ipv6-and-ipv4-support-in-wmi.md)
+[IPv6- und IPv4-Unterstützung in WMI](ipv6-and-ipv4-support-in-wmi.md)
 </dt> </dl>
 
  

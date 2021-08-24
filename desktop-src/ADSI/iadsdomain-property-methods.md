@@ -1,10 +1,10 @@
 ---
-title: Iadsdomain-Eigenschaften Methoden (IADs. h)
-description: Die iadsdomain-Schnittstellen Methoden lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsDomain-Eigenschaftenmethoden (Iads.h)
+description: Die Schnittstellenmethoden IADsDomain lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: ff2c4cbc-a8d5-4db5-85d4-da3367f27fa0
 ms.tgt_platform: multiple
 keywords:
-- Iadsdomain-Eigenschaften Methoden ADSI
+- IADsDomain-Eigenschaftenmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -41,32 +41,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a10c6377c7e97f83046f60d46312a03db68cadb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 90769faec8bc5e05f1aa590dd3211125665a4b07228b920e622fc5b33754e322
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082494"
 ---
-# <a name="iadsdomain-property-methods"></a>Iadsdomain-Eigenschaften Methoden
+# <a name="iadsdomain-property-methods"></a>IADsDomain-Eigenschaftenmethoden
 
-Die [**iadsdomain**](/windows/desktop/api/Iads/nn-iads-iadsdomain) -Schnittstellen Methoden lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die [**Schnittstellenmethoden IADsDomain**](/windows/desktop/api/Iads/nn-iads-iadsdomain) lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Autounlockinterval**
+**AutoUnlockInterval**
 </dt> <dd> <dl>
 
-Gibt die minimale Zeitspanne an, die ververgehen muss, bevor das Konto automatisch erneut aktiviert wird.
+Gibt die Mindestzeit an, die verstreichen muss, bevor das Konto automatisch erneut gestartet wird.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -84,17 +84,17 @@ HRESULT put_AutoUnlockInterval(
 
 </dt> </dl> </dd> <dt>
 
-**Isworkgroup**
+**IsWorkgroup**
 </dt> <dd> <dl>
 
-Diese Eigenschaft ist nicht mehr implementiert.
+Diese Eigenschaft wird nicht mehr implementiert.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Variant \_ bool**
+Skriptdatentyp: **VARIANT \_ BOOL**
 </dt> <dt>
 
 
@@ -109,17 +109,17 @@ HRESULT get_IsWorkgroup(
 
 </dt> </dl> </dd> <dt>
 
-**Lockoutobservationinterval**
+**LockoutObservationInterval**
 </dt> <dd> <dl>
 
-Gibt das Zeitfenster an, in dem die Anzahl fehlerhafter Kenn Wörter überwacht und akkumuliert wird, bevor festgestellt wird, ob das Konto gesperrt werden muss. Wenn beispielsweise die Anzahl fehlerhafter Kenn Wort Versuche eines Kontos den Schwellenwert (maximale Anzahl ungültiger Kenn Wörter) während des angegebenen Zeitraums (Sperr beobachtungsintervall) überschreitet, wird das Konto gesperrt, indem die entsprechende Eigenschaft im Eigenschaften Satz des Anmelde Parameters festgelegt wird.
+Gibt das Zeitfenster an, in dem die Anzahl fehlerhafter Kennwörter überwacht und akkumuliert wird, bevor bestimmt wird, ob das Konto gesperrt werden muss. Wenn beispielsweise die Anzahl fehlerhafter Kennwortversuche für ein Konto den Schwellenwert (Maximal zulässige fehlerhafte Kennwörter) während des angegebenen Zeitraums (Sperrungs-Beobachtungsintervall) überschreitet, wird das Konto gesperrt, indem die entsprechende Eigenschaft in der Login Parameter-Eigenschaft festgelegt wird.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -137,17 +137,17 @@ HRESULT put_LockoutObservationInterval(
 
 </dt> </dl> </dd> <dt>
 
-**Maxbadpasswordsallowed**
+**MaxBadPasswordsAllowed**
 </dt> <dd> <dl>
 
-Gibt die maximale Anzahl von Anmeldungen für ungültige Kenn Wörter an, die vor einer Kontosperrung zulässig sind.
+Gibt die maximale Anzahl von fehlerhaften Kennwortanmeldungen an, die vor einer Kontosperrung zulässig sind.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -165,7 +165,7 @@ HRESULT put_MaxBadPasswordsAllowed(
 
 </dt> </dl> </dd> <dt>
 
-**Maxpasswordage**
+**MaxPasswordAge**
 </dt> <dd> <dl>
 
 Gibt das maximale Zeitintervall in Sekunden an, nach dem das Kennwort vom Benutzer geändert werden muss.
@@ -175,7 +175,7 @@ Gibt das maximale Zeitintervall in Sekunden an, nach dem das Kennwort vom Benutz
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -193,7 +193,7 @@ RESULT put_MaxPasswordAge(
 
 </dt> </dl> </dd> <dt>
 
-**Minpasswordage**
+**MinPasswordAge**
 </dt> <dd> <dl>
 
 Gibt das minimale Zeitintervall in Sekunden an, bevor das Kennwort geändert werden kann.
@@ -203,7 +203,7 @@ Gibt das minimale Zeitintervall in Sekunden an, bevor das Kennwort geändert wer
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -221,17 +221,17 @@ HRESULT put_MinPasswordAge(
 
 </dt> </dl> </dd> <dt>
 
-**Minpasswordlength**
+**MinPasswordLength**
 </dt> <dd> <dl>
 
-Gibt die Mindestanzahl von Zeichen an, die für ein Kennwort verwendet werden muss.
+Gibt die Mindestanzahl von Zeichen an, die für ein Kennwort verwendet werden müssen.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -249,13 +249,13 @@ HRESULT put_MinPasswordLength(
 
 </dt> </dl> </dd> <dt>
 
-**Passwordattributes**
+**PasswordAttributes**
 </dt> <dd> <dl>
 
-Gibt Einschränkungen für Kenn Wörter an, wie in der folgenden Liste von Attributen und Werten definiert.
+Gibt Einschränkungen für Kennwörter an, wie in der folgenden Liste von Attributen und Werten definiert.
 
 > [!Note]  
-> Bei einem \_ komplexen Kennwort \_ muss das Kennwort mindestens ein Satzzeichen oder ein nicht druckbares Zeichen enthalten.
+> Für PASSWORD ATTR COMPLEX muss das Kennwort mindestens ein Interpunktionszeichen \_ \_ oder ein nicht druckbares Zeichen enthalten.
 
  
 
@@ -263,21 +263,21 @@ Gibt Einschränkungen für Kenn Wörter an, wie in der folgenden Liste von Attri
 
 <span id="PASSWORD_ATTR_NONE"></span><span id="password_attr_none"></span>
 
-**Kennwort \_ Attr \_ None** (0x00000000)
+**KENNWORT \_ ATTR \_ NONE** (0x00000000)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="PASSWORD_ATTR_MIXED_CASE"></span><span id="password_attr_mixed_case"></span>
 
-**Kennwort \_ "Attr \_ mixed \_ Case** " (0x00000001)
+**KENNWORT \_ ATTR \_ MIXED \_ CASE** (0x00000001)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="PASSWORD_ATTR_COMPLEX"></span><span id="password_attr_complex"></span>
 
-**Kennwort \_ Attr \_ Komplex** (0x00000002)
+**KENNWORT \_ ATTR \_ COMPLEX** (0x00000002)
 
 
 </dt> <dd></dd> </dl> <dt>
@@ -285,7 +285,7 @@ Gibt Einschränkungen für Kenn Wörter an, wie in der folgenden Liste von Attri
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -306,14 +306,14 @@ HRESULT put_PasswordAttributes(
 **PasswordHistoryLength**
 </dt> <dd> <dl>
 
-Gibt die Anzahl der vorherigen Kenn Wörter an, die in der Liste Verlauf gespeichert wurden. Der Benutzer kann ein Kennwort in der Verlaufs Liste nicht wieder verwenden.
+Gibt die Anzahl der vorherigen Kennwörter an, die in der Verlaufsliste gespeichert wurden. Der Benutzer kann ein Kennwort nicht in der Verlaufsliste wiederverwenden.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -335,7 +335,7 @@ HRESULT put_PasswordHistoryLength(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird der Wert der **PasswordHistoryLength** -Eigenschaft angezeigt.
+Im folgenden Codebeispiel wird der Wert der **PasswordHistoryLength-Eigenschaft** angezeigt.
 
 
 ```VB
@@ -349,7 +349,7 @@ debug.print "PasswordHistoryLength" & dom.PasswordHistoryLength
 
 
 
-Im folgenden Codebeispiel wird der Wert der **PasswordHistoryLength** -Eigenschaft angezeigt.
+Im folgenden Codebeispiel wird der Wert der **PasswordHistoryLength-Eigenschaft** angezeigt.
 
 
 ```C++
@@ -378,9 +378,9 @@ Cleanup:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadsdomain ist als 00e4c220-SD16-11CE-abc4-02608c9e7553 definiert.<br/>           |
+| IID<br/>                      | IID \_ IADsDomain ist als 00E4C220-FD16-11CE-ABC4-02608C9E7553 definiert.<br/>           |
 
 
 
@@ -388,10 +388,10 @@ Cleanup:
 
 <dl> <dt>
 
-[**Iadsdomain**](/windows/desktop/api/Iads/nn-iads-iadsdomain)
+[**IADsDomain**](/windows/desktop/api/Iads/nn-iads-iadsdomain)
 </dt> <dt>
 
-[Schnittstelleneigenschaften Methoden](interface-property-methods.md)
+[Schnittstelleneigenschaftsmethoden](interface-property-methods.md)
 </dt> </dl>
 
  

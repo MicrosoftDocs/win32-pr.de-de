@@ -1,52 +1,52 @@
 ---
-description: Gibt die globale Schutz Ebene für einen angegebenen Schutzmechanismus zurück.
+description: Gibt die globale Schutzebene für einen angegebenen Schutzmechanismus zurück.
 ms.assetid: 3dd4f6f0-2305-4470-bbd4-7737fa2d8eae
-title: OPM_GET_ACTUAL_PROTECTION_LEVEL (opmapi. h)
+title: OPM_GET_ACTUAL_PROTECTION_LEVEL (Opmapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 960d704fd44ca779f128795b26603698bb0ad622
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ed5d895c037fedfa97bbafab8331d685af9a7f1ce81489b8d600bd903aa2a17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119101919"
 ---
-# <a name="opm_get_actual_protection_level"></a>OPM \_ get \_ Actual \_ Protection \_ Level
+# <a name="opm_get_actual_protection_level"></a>OPM \_ GET \_ ACTUAL \_ PROTECTION \_ LEVEL
 
-Gibt die globale Schutz Ebene für einen angegebenen Schutzmechanismus zurück.
+Gibt die globale Schutzebene für einen angegebenen Schutzmechanismus zurück.
 
 
 
 | Anforderung | Wert |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Anforderungs-GUID | OPM \_ get \_ Actual \_ Protection \_ Level                                                                                                                                       |
-| Eingabedaten   | Der abzufragende Schutzmechanismus, der als 32-Bit-Ganzzahl angegeben wird. Der Wert wird als Member der [OPM-Schutztyp Flags](opm-protection-type-flags.md)interpretiert. |
-| Daten zurückgeben  | Eine [**OPM- \_ Standard \_ Informations**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_standard_information) Struktur                                                                                               |
+| Anforderungs-GUID | OPM \_ GET \_ ACTUAL \_ PROTECTION \_ LEVEL                                                                                                                                       |
+| Eingabedaten   | Der abzufragende Schutzmechanismus, der als 32-Bit-Ganzzahl angegeben wird. Der Wert wird als Member der [OPM-Schutztypflags](opm-protection-type-flags.md)interpretiert. |
+| Daten zurückgeben  | Eine [**OPM \_ STANDARD \_ INFORMATION-Struktur**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_standard_information)                                                                                               |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die globale Schutz Ebene ist die Schutz Ebene, die zurzeit auf den Connector angewendet wird, unabhängig davon, wie der Grafiktreiber angewiesen wurde, den Schutz anzuwenden. Beispielsweise kann eine Anwendung die ACP-Schutz Ebene durch Aufrufen der **changedisplaysettingsex** -Funktion festlegen. In diesem Fall würde die globale Schutz Ebene diese Einstellung widerspiegeln, auch wenn Sie nicht durch Output Protection Manager (OPM) angefordert wurde.
+Die globale Schutzebene ist die Schutzebene, die derzeit auf den Connector angewendet wird, unabhängig davon, wie der Grafiktreiber angewiesen wurde, den Schutz anzuwenden. Beispielsweise kann eine Anwendung die ACP-Schutzebene festlegen, indem sie die **ChangeDisplaySettingsEx-Funktion aufruft.** In diesem Fall würde die globale Schutzebene diese Einstellung widerspiegeln, obwohl sie nicht über den Ausgabeschutz-Manager (Output Protection Manager, OPM) angefordert wurde.
 
-Die Schutz Ebene wird im **ulinformation** -Member der [**OPM- \_ Standard \_ Informations**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_standard_information) Struktur zurückgegeben. Die Bedeutung dieses Werts hängt von dem abgefragten Schutzmechanismus ab. Für jeden Schutzmechanismus ist der Wert von **ulinformation** ein Flag aus einer anderen Enumeration, wie in der folgenden Tabelle dargestellt.
+Die Schutzebene wird im **ulInformation-Member** der [**OPM \_ STANDARD \_ INFORMATION-Struktur**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_standard_information) zurückgegeben. Die Bedeutung dieses Werts hängt vom abgefragten Schutzmechanismus ab. Für jeden Schutzmechanismus ist der Wert von **ulInformation** ein Flag aus einer anderen Enumeration, wie in der folgenden Tabelle dargestellt.
 
 
 
 | Schutzmechanismus | Enumeration                                                       |
 |----------------------|-------------------------------------------------------------------|
-| ACP                  | [**OPM \_ -ACP- \_ Schutz \_ Ebene**](/windows/desktop/api/opmapi/ne-opmapi-opm_acp_protection_level)   |
+| ACP                  | [**OPM \_ ACP \_ PROTECTION \_ LEVEL**](/windows/desktop/api/opmapi/ne-opmapi-opm_acp_protection_level)   |
 | CGMS-A               | [CGMS-A-Schutzflags](cgms-a-protection-flags.md)            |
-| Dpcp                 | [**OPM \_ dpcp- \_ Schutz \_ Ebene**](/windows/desktop/api/opmapi/ne-opmapi-opm_dpcp_protection_level) |
-| HDCP                 | [**OPM- \_ HDCP- \_ Schutz \_ Ebene**](/windows/desktop/api/opmapi/ne-opmapi-opm_hdcp_protection_level) |
+| DPCP                 | [**OPM \_ DPCP \_ PROTECTION \_ LEVEL**](/windows/desktop/api/opmapi/ne-opmapi-opm_dpcp_protection_level) |
+| Hdcp                 | [**OPM \_ HDCP \_ PROTECTION \_ LEVEL**](/windows/desktop/api/opmapi/ne-opmapi-opm_hdcp_protection_level) |
 
 
 
  
 
-Diese Abfrage entspricht der DXVA- \_ Abfrage "coppqueryglobalschutzlevel", die im Certified Output Protection Protocol (COPP) verwendet wird.
+Diese Abfrage entspricht der \_ DXVA-Abfrage COPPQueryGlobalProtectionLevel, die im Certified Output Protection Protocol (COPP) verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,23 +54,23 @@ Diese Abfrage entspricht der DXVA- \_ Abfrage "coppqueryglobalschutzlevel", die 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Opmapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Opmapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IOPMVideoOutput:: COPPCompatibleGetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-coppcompatiblegetinformation)
+[**IOPMVideoOutput::COPPCompatibleGetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-coppcompatiblegetinformation)
 </dt> <dt>
 
-[**IOPMVideoOutput:: GetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation)
+[**IOPMVideoOutput::GetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation)
 </dt> <dt>
 
-[OPM-Status Anforderungen](opm-status-requests.md)
+[OPM-Statusanforderungen](opm-status-requests.md)
 </dt> </dl>
 
  

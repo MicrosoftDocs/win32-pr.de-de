@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der System Parameters. CacheSize-Eigenschaft.
-title: System Parameters. CacheSize (Eigenschaft)
+description: 'Weitere Informationen zu: SystemParameters.CacheSize-Eigenschaft'
+title: SystemParameters.CacheSize-Eigenschaft
 TOCTitle: 'CacheSize property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.SystemParameters.CacheSize
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.systemparameters.cachesize(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0981f02df3b807ab56fa20922d1e245f00c2df34
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0d3f059a40c5ec7bb35b90ec4cddf584d586ace3a039e7c48e5957ee3606ba79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218249"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107114"
 ---
-# <a name="systemparameterscachesize-property"></a>System Parameters. CacheSize (Eigenschaft)
+# <a name="systemparameterscachesize-property"></a>SystemParameters.CacheSize-Eigenschaft
 
-Ruft die Größe des Daten Bank Caches in Seiten ab oder legt diese fest. Standardmäßig wird der Daten Bank Cache automatisch seine Größe optimieren. wenn diese Eigenschaft auf einen Wert ungleich NULL festgelegt wird, wird der Cache an die Zielgröße angepasst.
+Ruft die Größe des Datenbankcaches auf Seiten ab oder legt diese fest. Standardmäßig wird die Größe des Datenbankcaches automatisch angepasst. Wenn diese Eigenschaft auf einen Wert ungleich 0 festgelegt wird, wird der Cache an die Zielgröße angepasst.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,14 +61,14 @@ public static int CacheSize { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [SystemParameters-Klasse](./systemparameters-class.md)
 
 [SystemParameters-Member](./systemparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

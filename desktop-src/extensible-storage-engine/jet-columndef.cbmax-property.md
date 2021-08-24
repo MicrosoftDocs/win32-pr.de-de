@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_COLUMNDEF. cbmax-Eigenschaft'
-title: JET_COLUMNDEF. cbmax (Eigenschaft)
+description: 'Weitere Informationen zu: JET_COLUMNDEF.cbMax-Eigenschaft'
+title: JET_COLUMNDEF.cbMax-Eigenschaft
 TOCTitle: 'cbMax property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_COLUMNDEF.cbMax
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_columndef.cbmax(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 486507dc046617ea6689fcf1c5eac4199cfeecd0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 760d55f40eb6c95e432e72b7dac412d2f8d912a9736acffcacba9d25804fb53c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119112399"
 ---
-# <a name="jet_columndefcbmax-property"></a>JET_COLUMNDEF. cbmax (Eigenschaft)
+# <a name="jet_columndefcbmax-property"></a>JET_COLUMNDEF.cbMax-Eigenschaft
 
-Ruft die maximale Länge der Spalte ab oder legt Sie fest. Dies ist nur für Spalten vom Typ [Text](./jet-coltyp-enumeration.md), [LONGTEXT](./jet-coltyp-enumeration.md), [Binary](./jet-coltyp-enumeration.md) und [LONGBINARY](./jet-coltyp-enumeration.md)von Bedeutung.
+Ruft die maximale Länge der Spalte ab oder legt sie fest. Dies ist nur für Spalten vom Typ [Text](./jet-coltyp-enumeration.md), [LongText](./jet-coltyp-enumeration.md), [Binary](./jet-coltyp-enumeration.md) und [LongBinary](./jet-coltyp-enumeration.md)sinnvoll.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int cbMax { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_COLUMNDEF-Klasse](./jet-columndef-class.md)
 
-[Mitglieder JET_COLUMNDEF](./jet-columndef-members.md)
+[JET_COLUMNDEF-Member](./jet-columndef-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

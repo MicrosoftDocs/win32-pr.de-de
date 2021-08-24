@@ -4,16 +4,16 @@ ms.assetid: ad33b2cd-8409-4782-8eb9-5f12aca8405b
 title: JobPrimaryBannerSheetSource
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 366266576fca98762fd7d3dcb7e491a6cc94f529
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: ee9ff7caa2bb25bb9a22bc556c666545b26befdf134f35a2f9f7e0016499b41b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119099612"
 ---
 # <a name="jobprimarybannersheetsource"></a>JobPrimaryBannerSheetSource
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt die Quelle für ein primäres benutzerdefiniertes Bannerblatt für den Auftrag an.
 
@@ -28,7 +28,7 @@ Gibt die Quelle für ein primäres benutzerdefiniertes Bannerblatt für den Auft
 |----------------------------|---------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                     |
 | Bereichspräfix <br/> | Auftrag<br/>                              |
-| Hinweise <br/>          | Verknüpft mit dem JobBannerSheet-Element<br/> |
+| Hinweise <br/>          | Mit JobBannerSheet-Element verknüpft<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt die Quelle für ein primäres benutzerdefiniertes Bannerblatt für den Auft
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:JobPrimaryBannerSheetSource">
@@ -64,7 +64,7 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 

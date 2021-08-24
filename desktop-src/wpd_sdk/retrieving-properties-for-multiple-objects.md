@@ -4,36 +4,36 @@ ms.assetid: 0d0c6b3d-23bc-4628-a684-14bb9e18967f
 title: Abrufen von Eigenschaften für mehrere Objekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56c069f6a28b923339f66f8423f211eff4704ef6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2d1ad9ec397daa90c149fe950c1fc4777c407e3f5f3a359f46cf8bef56e18b9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083514"
 ---
 # <a name="retrieving-properties-for-multiple-objects"></a>Abrufen von Eigenschaften für mehrere Objekte
 
-Einige Gerätetreiber unterstützen das Abrufen von Eigenschaften für mehrere Objekte in einem einzelnen Funktionsaufrufs. Dies wird als Massen Abruf bezeichnet. Es gibt zwei Arten von Massen Abruf Vorgängen: mit dem ersten Typ werden Eigenschaften für eine Liste von Objekten abgerufen, und der zweite Typ Ruft Eigenschaften für alle Objekte eines angegebenen Formats ab. Das in diesem Abschnitt beschriebene Beispiel veranschaulicht das erste.
+Einige Gerätetreiber unterstützen das Abrufen von Eigenschaften für mehrere Objekte in einem einzelnen Funktionsaufruf. dies wird als Massenabruf bezeichnet. Es gibt zwei Arten von Massenabrufvorgängen: Der erste Typ ruft Eigenschaften für eine Liste von -Objekten ab, und der zweite Typ ruft Eigenschaften für alle Objekte eines bestimmten Formats ab. Das in diesem Abschnitt beschriebene Beispiel veranschaulicht erstere.
 
-Die Anwendung kann einen Massen Abruf mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen ausführen.
+Ihre Anwendung kann einen Massenabruf mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen ausführen.
 
 
 
 | Schnittstelle                                                                                      | BESCHREIBUNG                                                        |
 |------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| [**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)                             | Ermöglicht den Zugriff auf die Inhalts spezifischen Methoden.                   |
-| [**Iportabledevicekeycollection-Schnittstelle**](iportabledevicekeycollection.md)                 | Wird verwendet, um die abzurufenden Eigenschaften zu identifizieren.                   |
-| [**Iportabledeviceproperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)                       | Wird verwendet, um zu bestimmen, ob ein bestimmter Treiber Massen Vorgänge unterstützt. |
-| [**Iportabledevicepropertiesbulk-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk)               | Unterstützt den Massen Abruf Vorgang.                             |
-| [**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird zum Speichern der Objekt Bezeichner für den Massen Vorgang verwendet.       |
+| [**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)                             | Ermöglicht den Zugriff auf die inhaltsspezifischen Methoden.                   |
+| [**IPortableDeviceKeyCollection-Schnittstelle**](iportabledevicekeycollection.md)                 | Wird verwendet, um die abzurufenden Eigenschaften zu identifizieren.                   |
+| [**IPortableDeviceProperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)                       | Wird verwendet, um zu bestimmen, ob ein angegebener Treiber Massenvorgänge unterstützt. |
+| [**IPortableDevicePropertiesBulk-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk)               | Unterstützt den Massenabrufvorgang.                             |
+| [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird zum Speichern der Objektbezeichner für den Massenvorgang verwendet.       |
 
 
 
  
 
-Die Funktion "lesecontentpropertiesbulk" im Modul "contentproperties. cpp" der Beispielanwendung veranschaulicht einen Massen Abruf Vorgang.
+Die ReadContentPropertiesBulk-Funktion im ContentProperties.cpp-Modul der Beispielanwendung veranschaulicht einen Massenabrufvorgang.
 
-Die erste Aufgabe, die in diesem Beispiel ausgeführt wird, besteht darin, zu bestimmen, ob der angegebene Treiber Massen Vorgänge unterstützt. Dies wird erreicht, indem QueryInterface auf der iportabledeviceproperties-Schnittstelle aufgerufen und das vorhanden sein von iportabledevicepropertiesbulk überprüft wird.
+Die erste Aufgabe, die in diesem Beispiel ausgeführt wird, besteht darin, zu bestimmen, ob der gegebene Treiber Massenvorgänge unterstützt. Dies wird erreicht, indem QueryInterface auf der IPortableDeviceProperties-Schnittstelle aufruft und das Vorhandensein von IPortableDevicePropertiesBulk überprüft wird.
 
 
 ```C++
@@ -82,9 +82,9 @@ if (SUCCEEDED(hr))
 
 
 
-Wenn der Treiber Massen Vorgänge unterstützt, besteht der nächste Schritt darin, eine Instanz der [**iportabledevicekeycollection-Schnittstelle**](iportabledevicekeycollection.md) zu erstellen und die Schlüssel anzugeben, die den Eigenschaften entsprechen, die von der Anwendung abgerufen werden. Eine Beschreibung dieses Prozesses finden Sie im Thema [Abrufen von Eigenschaften für ein einzelnes Objekt](retrieving-properties-for-a-single-object.md) .
+Wenn der Treiber Massenvorgänge unterstützt, besteht der nächste Schritt im Erstellen einer Instanz der [**IPortableDeviceKeyCollection-Schnittstelle**](iportabledevicekeycollection.md) und dem Angeben der Schlüssel, die den Eigenschaften entsprechen, die die Anwendung abruft. Eine Beschreibung dieses Prozesses finden Sie im Thema [Abrufen von Eigenschaften für ein einzelnes Objekt.](retrieving-properties-for-a-single-object.md)
 
-Nachdem die entsprechenden Schlüssel angegeben wurden, erstellt die Beispielanwendung eine Instanz der [**iportabledevicepropertiesbulkcallback-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk). Die Anwendung verwendet die Methoden in dieser Schnittstelle, um den Fortschritt des asynchronen Massen Abruf Vorgangs zu verfolgen.
+Nachdem die entsprechenden Schlüssel angegeben wurden, erstellt die Beispielanwendung eine Instanz der [**IPortableDevicePropertiesBulkCallback-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk). Die Anwendung verwendet die Methoden in dieser Schnittstelle, um den Fortschritt des asynchronen Massenabrufs zu verfolgen.
 
 
 ```C++
@@ -101,9 +101,9 @@ if (SUCCEEDED(hr))
 
 
 
-Die nächste Funktion, die von der Beispielanwendung aufgerufen wird, ist die "samateiportabledevicepropvariantcollectionwithzugewiesene"-Hilfsfunktion. Diese Funktion erstellt beispielsweise eine Liste aller verfügbaren Objekt Bezeichner. (Eine reale Anwendung schränkt die Liste der Bezeichner auf einen bestimmten Satz von Objekten ein. Beispielsweise kann eine Anwendung eine Liste von Bezeichnernamen für alle Objekte erstellen, die sich derzeit in einer bestimmten Ordneransicht befinden.)
+Die nächste Funktion, die die Beispielanwendung aufruft, ist die Hilfsfunktion CreateIPortableDevicePropVariantCollectionWithAllObjectIDs. Diese Funktion erstellt eine Liste aller verfügbaren Objektbezeichner für Beispielzwecke. (Eine reale Anwendung würde die Liste der Bezeichner auf einen bestimmten Satz von Objekten beschränken. Beispielsweise kann eine Anwendung eine Liste von Bezeichnern für alle Objekte erstellen, die sich derzeit in einer bestimmten Ordneransicht befinden.)
 
-Wie bereits erwähnt, listet die Hilfsfunktion rekursiv alle Objekte auf einem bestimmten Gerät auf. Diese Liste wird in einer [**iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md) zurückgegeben, die einen Bezeichner für jedes gefundene Objekt enthält. Die Hilfsfunktion ist im Modul "contentenumeration. cpp" definiert.
+Wie bereits erwähnt, werden mit der Hilfsfunktion alle Objekte auf einem bestimmten Gerät rekursiv aufzählt. Diese Liste wird in einer [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) zurückgegeben, die einen Bezeichner für jedes gefundene Objekt enthält. Die Hilfsfunktion wird im Modul ContentEnumeration.cpp definiert.
 
 
 ```C++
@@ -120,12 +120,12 @@ if (SUCCEEDED(hr))
 
 
 
-Sobald die vorherigen Schritte ausgeführt wurden, initiiert die Beispielanwendung den Abruf der asynchronen Eigenschaften. Gehen Sie hierzu wie folgt vor:
+Nachdem die vorherigen Schritte ausgeführt wurden, initiiert die Beispielanwendung den asynchronen Eigenschaftenabruf. Dies wird wie folgt erreicht:
 
-1.  Aufrufen von iportabledevicepropertiesbulk:: queuegetvaluesbyobjectlist, die eine Anforderung für den Abruf der Massen Eigenschaft in die Warteschlange eingereiht. (Beachten Sie, dass die Anforderung zwar in die Warteschlange eingereiht ist, aber nicht gestartet wird.)
-2.  Iportabledevicepropertiesbulk:: Start wird aufgerufen, um die Anforderung in der Warteschlange zu initiieren.
+1.  Aufrufen von IPortableDevicePropertiesBulk::QueueGetValuesByObjectList, wodurch eine Anforderung für den Massenabruf von Eigenschaften in die Warteschlange gestellt wird. (Beachten Sie, dass die Anforderung zwar in der Warteschlange steht, aber nicht gestartet wird.)
+2.  Aufrufen von IPortableDevicePropertiesBulk::Start, um die Anforderung in der Warteschlange zu initiieren.
 
-Diese Schritte werden im folgenden Code Ausschnitt aus der Beispielanwendung veranschaulicht.
+Diese Schritte werden im folgenden Codeausschnitt aus der Beispielanwendung gezeigt.
 
 
 ```C++
@@ -179,22 +179,22 @@ Diese Schritte werden im folgenden Code Ausschnitt aus der Beispielanwendung ver
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
+[**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
 </dt> <dt>
 
-[**Iportabledevicekeycollection-Schnittstelle**](iportabledevicekeycollection.md)
+[**IPortableDeviceKeyCollection-Schnittstelle**](iportabledevicekeycollection.md)
 </dt> <dt>
 
-[**Iportabledeviceproperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)
+[**IPortableDeviceProperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)
 </dt> <dt>
 
-[**Iportabledevicepropertiesbulk-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk)
+[**IPortableDevicePropertiesBulk-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk)
 </dt> <dt>
 
-[**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
+[**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

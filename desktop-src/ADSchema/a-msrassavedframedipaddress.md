@@ -1,10 +1,10 @@
 ---
-title: msrassavedframedipaddress-Attribut
-description: Das msrassavedframedipaddress-Attribut wird intern verwendet.
+title: msRASSavedFramedIPAddress-Attribut
+description: Das msRASSavedFramedIPAddress-Attribut wird intern verwendet.
 ms.assetid: a3de5f52-da0c-4e04-8fc2-35549307ed61
 ms.tgt_platform: multiple
 keywords:
-- "\"msrassavedframedipaddress\"-Attribut, AD-Schema"
+- msRASSavedFramedIPAddress-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d37551293f5444e5194083bb6c9a8f620f2ee6bd
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 42238d1571a15632b8b436c646d0c5697b8360b03a46db67dbf7ddd2dc36a1e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119081554"
 ---
-# <a name="msrassavedframedipaddress-attribute"></a>msrassavedframedipaddress-Attribut
+# <a name="msrassavedframedipaddress-attribute"></a>msRASSavedFramedIPAddress-Attribut
 
-Das **msrassavedframedipaddress** -Attribut wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
+Das **msRASSavedFramedIPAddress-Attribut** wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | msrassavedframedipaddress            |
-| LDAP-Display-Name | msrassavedframedipaddress            |
+| CN                | msRASSavedFramedIPAddress            |
+| Ldap-Anzeigename | msRASSavedFramedIPAddress            |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1190              |
-| System-ID-GUID    | db0c90c6-c1f2-11d1-bbc5-0080c76670c0 |
+| System-ID-GUID    | db0c90c6-c1f2-11d1-muss5-0080c76670c0 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -42,7 +42,7 @@ Das **msrassavedframedipaddress** -Attribut wird intern verwendet. Ändern Sie d
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,10 +57,10 @@ Das **msrassavedframedipaddress** -Attribut wird intern verwendet. Ändern Sie d
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -69,7 +69,7 @@ Das **msrassavedframedipaddress** -Attribut wird intern verwendet. Ändern Sie d
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,10 +78,10 @@ Das **msrassavedframedipaddress** -Attribut wird intern verwendet. Ändern Sie d
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -99,10 +99,10 @@ Das **msrassavedframedipaddress** -Attribut wird intern verwendet. Ändern Sie d
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -120,10 +120,10 @@ Das **msrassavedframedipaddress** -Attribut wird intern verwendet. Ändern Sie d
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -141,10 +141,10 @@ Das **msrassavedframedipaddress** -Attribut wird intern verwendet. Ändern Sie d
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -162,10 +162,10 @@ Das **msrassavedframedipaddress** -Attribut wird intern verwendet. Ändern Sie d
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |

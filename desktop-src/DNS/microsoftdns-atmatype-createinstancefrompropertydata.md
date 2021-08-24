@@ -1,11 +1,11 @@
 ---
-title: Die Methode "kreateinzustancefrompropertydata" der MicrosoftDNS_ATMAType-Klasse
-description: Die Methode "kreateinstancefrompropertydata" instanziiert einen Atma-Ressourcen Eintrag (ATM Address to Name).
+title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_ATMAType-Klasse
+description: Die CreateInstanceFromPropertyData-Methode instanziiert einen ATMA-Ressourcendatensatz (ATM Address to Name).
 ms.assetid: 0f3270fe-40d0-43f7-b4fc-95d96f9dd9f9
 keywords:
-- Methode "samateinzustancefrompropertydata" (DNS)
-- Methode "-DNS", "MicrosoftDNS_ATMAType
-- DNS-MicrosoftDNS_ATMAType Klasse, Methode "Methode"
+- CreateInstanceFromPropertyData-Methode DNS
+- CreateInstanceFromPropertyData-Methode DNS , MicrosoftDNS_ATMAType-Klasse
+- MicrosoftDNS_ATMAType DNS-Klasse, CreateInstanceFromPropertyData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 39fada3759e6384ae6f42a78bd132b9b8ad16f35
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 44edf3428087da73f5ba89c32232af0ae589bc0d865642ec04953c62e16404e9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340333"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119539320"
 ---
-# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_atmatype-class"></a>Methode "kreateinzustancefrompropertydata" der MicrosoftDNS \_ atmatype-Klasse
+# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_atmatype-class"></a>CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ ATMAType-Klasse
 
-Die Methode " **kreateinstancefrompropertydata** " instanziiert einen Atma-Ressourcen Eintrag (ATM Address to Name).
+Die **CreateInstanceFromPropertyData-Methode** instanziiert einen ATMA-Ressourcendatensatz (ATM Address to Name).
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,31 +49,31 @@ void CreateInstanceFromPropertyData(
 
 <dl> <dt>
 
-*Dnsservername* \[ in\]
+*DnsServerName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name oder die IP-Adresse des DNS-Servers, der diesen RR enthält.
+FQDN oder IP-Adresse des DNS-Servers, der diese RR enthält.
 
 </dd> <dt>
 
-*Containername* \[ in\]
+*ContainerName* \[ In\]
 </dt> <dd>
 
-Der Name des Containers für die Zone, den Cache oder die roothints-Instanz, die diese RR enthält.
+Name des Containers für die Zone-, Cache- oder RootHints-Instanz, die diese RR enthält.
 
 </dd> <dt>
 
-Besitzer *Name* \[ in\]
+*OwnerName* \[ In\]
 </dt> <dd>
 
-Der Besitzer Name für die RR.
+Besitzername für die RR.
 
 </dd> <dt>
 
-*Recordclass* \[ in, optional\]
+*RecordClass* \[ in, optional\]
 </dt> <dd>
 
-Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
+Klasse der RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 
 
@@ -81,7 +81,7 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 |------------------------------------------------------------------------------------------------------|--------------------------|
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | IN (Internet)<br/> |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | CS (CSNET)<br/>    |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (Chaos)<br/>    |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (CHAOS)<br/>    |
 | <span id="4"></span><dl> <dt>**4**</dt> </dl> | HS (Hesiod)<br/>   |
 
 
@@ -90,31 +90,31 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 </dd> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*TTL* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, die die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Format* \[ in\]
+*Formatieren* \[ In\]
 </dt> <dd>
 
-ATM-Adressformat. Zwei mögliche Werte für das Format sind: 0, was das AESA-Format (ATM End System Address) angibt, und 1 gibt das E. 164-Format an.
+ATM-Adressformat. Zwei mögliche Werte für FORMAT sind: 0 , das das Format der ATM-Endsystemadresse (ATM End System Address, AESA) angibt, und 1 das E.164-Format.
 
 </dd> <dt>
 
-*Atmaddress* \[ in\]
+*ATMAddress* \[ In\]
 </dt> <dd>
 
-Zeichenfolge mit variabler Länge von Oktetten, die die ATM-Adresse des Knotens bzw. Besitzers enthält, auf den sich diese RR bezieht. Die ersten vier Bytes des Arrays werden verwendet, um die Größe der Oktett-Zeichenfolge zu speichern. Das signifikanteste Byte wird in Byte 0 gespeichert.
+Zeichenfolge variabler Länge von Oktetten, die die ATM-Adresse des Knotens/Besitzers enthalten, auf den sich diese RR bezieht. Die ersten vier Bytes des Arrays werden verwendet, um die Größe der Oktettzeichenfolge zu speichern. Das wichtigste Byte wird in Byte 0 gespeichert.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue -Objekt.
 
 </dd> </dl>
 
@@ -131,7 +131,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -139,13 +139,13 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ atmatype**](microsoftdns-atmatype.md)
+[**MicrosoftDNS \_ ATMAType**](microsoftdns-atmatype.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS \_ atmatype-Klasse**](microsoftdns-atmatype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ ATMAType-Klasse**](microsoftdns-atmatype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

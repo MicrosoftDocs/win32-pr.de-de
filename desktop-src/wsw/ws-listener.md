@@ -1,21 +1,21 @@
 ---
-title: WS_LISTENER (Webservices. h)
-description: Ein nicht transparenter Typ, mit dem auf einen Listener verwiesen wird.
+title: WS_LISTENER (WebServices.h)
+description: Ein nicht transparenter Typ, der verwendet wird, um auf einen Listener zu verweisen.
 ms.assetid: 2e771c56-4a07-4c8e-92c1-ffcbf74cd1aa
 keywords:
 - WS_LISTENER
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 803bde20292a55d1c3f2b7ca216ba3631e9116a7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 31fa7435ecea9770c2441a1c8c3d65c2d2346707c1c4e16da2f985e203d4ea3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517993"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083034"
 ---
-# <a name="ws_listener"></a>WS- \_ Listener
+# <a name="ws_listener"></a>\_WS-LISTENER
 
-Ein nicht transparenter Typ, mit dem auf einen [Listener](listener.md)verwiesen wird.
+Ein nicht transparenter Typ, der verwendet wird, um auf einen [Listener](listener.md)zu verweisen.
 
 
 ```C++
@@ -24,9 +24,9 @@ typedef struct _WS_LISTENER WS_LISTENER;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Objekt ist Thread sicher. Weitere Informationen finden Sie unter [Thread Sicherheit](thread-safety.md).
+Dieses Objekt ist threadsicher. Weitere Informationen finden Sie unter [Threadsicherheit.](thread-safety.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,9 +34,9 @@ Dieses Objekt ist Thread sicher. Weitere Informationen finden Sie unter [Thread 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Webservices. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>WebServices.h</dt> </dl> |
 
 
 

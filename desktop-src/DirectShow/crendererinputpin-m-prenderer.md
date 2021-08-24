@@ -1,7 +1,7 @@
 ---
-description: Die m- \_ prenderer-Member-Variable ist ein Zeiger auf den Filter.
+description: Die m \_ pRenderer-Membervariable ist ein Zeiger auf den Filter.
 ms.assetid: 1375baa2-554e-4027-a060-8959db491f83
-title: 'Crendererinputpin:: m_pRenderer Member (renbase. h)'
+title: CRendererInputPin::m_pRenderer Member (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1d708d4a342fc551e5e746cc2980133ff2e492e1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: db7e7886c4bb247c200c9d64819910af62dec40d6bf9890fd399a9656b1ddb43
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119213940"
 ---
-# <a name="crendererinputpinm_prenderer-member"></a>Crendererinputpin:: m- \_ prenderer-Member
+# <a name="crendererinputpinm_prenderer-member"></a>CRendererInputPin::m \_ pRenderer-Member
 
-Die `m_pRenderer` Member-Variable ist ein Zeiger auf den Filter.
+Die `m_pRenderer` Membervariable ist ein Zeiger auf den Filter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ CBaseRenderer *m_pRenderer;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Crendererinputpin-Klasse**](crendererinputpin.md)
+[**CRendererInputPin-Klasse**](crendererinputpin.md)
 </dt> </dl>
 
  

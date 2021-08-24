@@ -1,24 +1,24 @@
 ---
-title: boolescher Wert (WMI)
-description: Ein VT \_ bool-Parameter, der den Wert von Variant \_ true (&\# 8211; 1) oder Variant \_ false (0) annimmt.
+title: Boolean (WMI)
+description: Ein VT-BOOL-Parameter, der den Wert von \_ VARIANT \_ TRUE (&\# 8211;1) oder VARIANT \_ FALSE (0) angibt.
 ms.assetid: 3928ff39-ed17-4a61-bb72-a3c9be16ae45
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 569f7ce633bfb70fdba5e7055a80ad73ebd0fb6c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50422990a45dd59c2bedc3ac90bddcf06f7796cd3308daf03a11db0dca38f0b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051058"
 ---
-# <a name="boolean-wmi"></a>boolescher Wert (WMI)
+# <a name="boolean-wmi"></a>Boolean (WMI)
 
-Der boolesche Datentyp ist ein VT \_ bool-Parameter, der den Wert von Variant \_ true (– 1) oder Variant \_ false (0) annimmt. In der folgenden Tabelle werden die Unterschiede zwischen den programmgesteuerten Darstellungen von Logical **true** in C/C++ und dem Automatisierungstyp aufgelistet.
+Der boolesche Datentyp ist ein VT-BOOL-Parameter, der den Wert von \_ VARIANT \_ TRUE (–1) oder VARIANT \_ FALSE (0) übernimmt. In der folgenden Tabelle wird der Unterschied zwischen den programmgesteuerten Darstellungen des logischen **TRUE** in C/C++ und dem Automatisierungstyp aufgeführt.
 
 | Sprache   | Wert         | Numerischer Wert |
 |------------|---------------|-----------------|
 | C/C++      | **TRUE**      | 1               |
-| Automation | Variant \_ true | –1              |
+| Automation | VARIANT \_ TRUE | –1              |
 
-Beide Typen sind ungleich 0 (null) und daher nicht " **false**", aber unterschiedliche Darstellungen für " **true**".
+Beide Typen sind ungleich 0 (null) und daher **nicht FALSE,** verfügen jedoch über unterschiedliche Darstellungen für **TRUE.**

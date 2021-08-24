@@ -1,7 +1,7 @@
 ---
 description: Ruft das Handle einer Anmerkung ab.
 ms.assetid: 433d73b7-9371-4d76-8b34-a64c608eb1a3
-title: 'ID3DXBaseEffect:: GetAnnotation-Methode (D3DX9Effect. h)'
+title: ID3DXBaseEffect::GetAnnotation-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: aad446e436478c8c7673a1919879983437fd9602
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c35deeb04e7cf21be429976c102fdf7c3126b1691b3f63725fc994ef79f7ad42
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106364008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119279010"
 ---
-# <a name="id3dxbaseeffectgetannotation-method"></a>ID3DXBaseEffect:: GetAnnotation-Methode
+# <a name="id3dxbaseeffectgetannotation-method"></a>ID3DXBaseEffect::GetAnnotation-Methode
 
 Ruft das Handle einer Anmerkung ab.
 
@@ -41,21 +41,21 @@ D3DXHANDLE GetAnnotation(
 
 <dl> <dt>
 
-*hobject* \[ in\]
+*hObject* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Handle eines Verfahrens, eines bestanden oder eines Parameters der obersten Ebene. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Handle einer Technik, eines Übergebens oder eines Parameters der obersten Ebene. Siehe [Handles (Direct3D 9).](handles.md)
 
 </dd> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Annotation-Index.
+Anmerkungsindex.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Annotation-Index.
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Gibt das Handle der angegebenen Anmerkung zurück, oder **null** , wenn der Index ungültig ist. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Gibt das Handle der angegebenen Anmerkung oder **NULL zurück,** wenn der Index ungültig war. Siehe [Handles (Direct3D 9).](handles.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anmerkungen sind benutzerspezifische Daten, die an beliebige Techniken, Pass oder Parameter angefügt werden können. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Anmerkungen sind benutzerspezifische Daten, die an beliebige Verfahren, Übergeben oder Parameter angefügt werden können. Siehe [Handles (Direct3D 9).](handles.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,12 +75,12 @@ Anmerkungen sind benutzerspezifische Daten, die an beliebige Techniken, Pass ode
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

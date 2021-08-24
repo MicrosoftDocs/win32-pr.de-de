@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-stagingpath-Attribut
+title: ms-DFSR-StagingPath-Attribut
 description: Enthält den vollständigen Pfad des Stagingverzeichnisses.
 ms.assetid: c297472f-9db7-4a91-840d-08ff64c01a7a
 ms.tgt_platform: multiple
 keywords:
-- MS-DFSR-stagingpath-Attribut, AD-Schema
-- msdfsr-stagingpath-Attribut AD-Schema
+- AD-Schema des ms-DFSR-StagingPath-Attributs
+- AD-Schema des msDFSR-StagingPath-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d7c7f1a14aea58c06f03f3ba97e9c9a2f27985d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 5f49cfe563058f5bb15004a7e65940faada7f5d9282b6f19776e11bb7165db9e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106341069"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119298100"
 ---
-# <a name="ms-dfsr-stagingpath-attribute"></a>MS-DFSR-stagingpath-Attribut
+# <a name="ms-dfsr-stagingpath-attribute"></a>ms-DFSR-StagingPath-Attribut
 
 Enthält den vollständigen Pfad des Stagingverzeichnisses.
 
@@ -29,13 +29,13 @@ Enthält den vollständigen Pfad des Stagingverzeichnisses.
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-DFSR-stagingpath                         |
-| LDAP-Display-Name | msdfsr-stagingpath                          |
+| CN                | ms-DFSR-StagingPath                         |
+| Ldap-Anzeigename | msDFSR-StagingPath                          |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.5                   |
-| System-ID-GUID    | 86b9a69e-f0a6-405d-99bb-77d977992c2a        |
+| System-Id-Guid    | 86b9a69e-f0a6-405d-99bb-77d977992c2a        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -55,16 +55,16 @@ Enthält den vollständigen Pfad des Stagingverzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | True                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | 0                                                                |
 | Range-Upper            | 32767                                                            |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -76,16 +76,16 @@ Enthält den vollständigen Pfad des Stagingverzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | True                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | 0                                                                |
 | Range-Upper            | 32767                                                            |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -97,16 +97,16 @@ Enthält den vollständigen Pfad des Stagingverzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | True                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | 0                                                                |
 | Range-Upper            | 32767                                                            |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -118,22 +118,22 @@ Enthält den vollständigen Pfad des Stagingverzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | Richtig                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | 0                                                                |
 | Range-Upper            | 32767                                                            |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **MS-DFSR-stagingpath-** Attribut ist ein Teil der Unterstützung für den verteiltes Dateisystem (DFS)-Replikations Dienst.
+Das **ms-DFSR-StagingPath-Attribut** ist Teil der Unterstützung des verteiltes Dateisystem Replikationsdiensts (DFS).
 
  
 

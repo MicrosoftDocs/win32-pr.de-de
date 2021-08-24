@@ -1,17 +1,17 @@
 ---
-description: Dvdrect-Objekt
+description: DVDRect-Objekt
 ms.assetid: 8f540ac6-1c1e-43d8-a0dd-bba3b5983b02
-title: Dvdrect-Objekt
+title: DVDRect-Objekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 55d53bd821380ac9078346e99dde92d617359cbc
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f796b729d9cb6a57569ed9fc859ec40ce17cf49ecec12f8cdbaf28873387d591
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148583"
 ---
-# <a name="dvdrect-object"></a>Dvdrect-Objekt
+# <a name="dvdrect-object"></a>DVDRect-Objekt
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
@@ -19,20 +19,20 @@ ms.locfileid: "104521776"
  
 
 > [!Note]  
-> Diese API ist veraltet. Weitere Informationen zur DVD-Wiedergabe und-Navigation in DirectShow finden Sie unter [DVD-Anwendungen](dvd-applications.md).
+> Diese API ist veraltet. Informationen zur Wiedergabe und Navigation von DVD in DirectShow finden Sie unter [DVD-Anwendungen](dvd-applications.md).
 
  
 
-Mit den Eigenschaften des- `DVDRect` Objekts kann eine Skript Anwendung Rechteck Koordinaten in [mswebdvd](mswebdvd-object.md) -Methoden wie z. b. [**getbuttonrect**](getbuttonrect-method.md), [**getclipvideorect**](getclipvideorect-method.md), [**getvideosize**](getvideosize-method.md) und [**setclipvideorect**](setclipvideorect-method.md)angeben und empfangen.
+Die Eigenschaften des -Objekts ermöglichen es einer Skriptanwendung, Rechteckkoordinaten `DVDRect` in [MSWebDVD-Methoden](mswebdvd-object.md) wie [**GetButtonRect,**](getbuttonrect-method.md) [**GetClipVideoRect,**](getclipvideorect-method.md) [**GetVideoSize**](getvideosize-method.md) und [**SetClipVideoRect**](setclipvideorect-method.md)anzugeben und zu empfangen.
 
 
 
 | Eigenschaften                        | BESCHREIBUNG                                                            |
 |-----------------------------------|------------------------------------------------------------------------|
-| [**Stuben**](x-property.md)           | Legt die x-Position der linken oberen Ecke des Rechtecks fest oder ruft diese ab. |
-| [**Teenie**](y-property.md)           | Ruft die y-Position der linken oberen Ecke des Rechtecks ab oder legt diese fest. |
-| [**Breite**](width-property.md)   | Legt die Breite des Rechtecks in Pixel fest oder ruft diese ab.               |
-| [**Höhe**](height-property.md) | Legt die Höhe des Rechtecks in Pixel fest oder ruft diese ab.              |
+| [**X**](x-property.md)           | Legt die x-Position der oberen linken Ecke des Rechtecks fest oder ruft sie ab. |
+| [**y**](y-property.md)           | Legt die y-Position der oberen linken Ecke des Rechtecks fest oder ruft sie ab. |
+| [**Breite**](width-property.md)   | Legt die Breite des Rechtecks in Pixel fest oder ruft sie ab.               |
+| [**Höhe**](height-property.md) | Legt die Höhe des Rechtecks in Pixel fest oder ruft sie ab.              |
 
 
 
@@ -42,7 +42,7 @@ Mit den Eigenschaften des- `DVDRect` Objekts kann eine Skript Anwendung Rechteck
 
 <dl> <dt>
 
-[Mswebdvd-ActiveX-Steuerelement](mswebdvd-activex-control.md)
+[MSWebDVD-ActiveX-Steuerelement](mswebdvd-activex-control.md)
 </dt> </dl>
 
  

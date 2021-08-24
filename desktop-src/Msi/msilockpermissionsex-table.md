@@ -1,34 +1,34 @@
 ---
-description: Die msilockpermissionsex-Tabelle kann verwendet werden, um Dienste, Dateien, Registrierungsschlüssel und erstellte Ordner zu sichern.
+description: Die MsiLockPermissionsEx-Tabelle kann zum Sichern von Diensten, Dateien, Registrierungsschlüsseln und erstellten Ordnern verwendet werden.
 ms.assetid: c642f02d-07fa-463f-8151-769c28a71a5c
-title: Msilockpermissionsex-Tabelle
+title: MsiLockPermissionsEx-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 63d7c63e27d7a9c390e6015eb0ebe5f663de5b4c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3bff3d97bc6cd6003470b1be7d1feb20b385701d332ba852a660aa4ff6c57271
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119294800"
 ---
-# <a name="msilockpermissionsex-table"></a>Msilockpermissionsex-Tabelle
+# <a name="msilockpermissionsex-table"></a>MsiLockPermissionsEx-Tabelle
 
-Die msilockpermissionsex-Tabelle kann verwendet werden, um Dienste, Dateien, Registrierungsschlüssel und erstellte Ordner zu sichern.
+Die MsiLockPermissionsEx-Tabelle kann zum Sichern von Diensten, Dateien, Registrierungsschlüsseln und erstellten Ordnern verwendet werden.
 
-Ein Paket sollte nicht sowohl die msilockpermissionsex-Tabelle als auch die [lockberechtigungs Tabelle](lockpermissions-table.md)enthalten.
+Ein Paket darf nicht sowohl die MsiLockPermissionsEx-Tabelle als auch die [LockPermissions-Tabelle](lockpermissions-table.md)enthalten.
 
-**[Windows Installer 4,5 oder früher](not-supported-in-windows-installer-4-5.md):** Nicht unterstützt. Diese Tabelle wird für Pakete empfohlen, die für die Installation mit Windows Installer 5,0 oder höher vorgesehen sind.
+**[Windows Installer 4.5 oder früher:](not-supported-in-windows-installer-4-5.md)** Wird nicht unterstützt. Diese Tabelle wird für Pakete empfohlen, die für die Installation mit Windows Installer 5.0 oder höher vorgesehen sind.
 
-Die msilockpermissionsex-Tabelle weist die folgenden Spalten auf.
+Die MsiLockPermissionsEx-Tabelle weist die folgenden Spalten auf.
 
 
 
-| Spalte               | Typ                                       | Schlüssel | Nullwerte zulässig |
+| Spalte               | Typ                                       | Key | Nullwerte zulässig |
 |----------------------|--------------------------------------------|-----|----------|
-| Msilockpermissionsex | [Text](text.md)                           | J   | N        |
-| LockObject           | [Bezeichner](identifier.md)               | N   | N        |
+| MsiLockPermissionsEx | [Text](text.md)                           | J   | N        |
+| LockObject           | [Identifier](identifier.md)               | N   | N        |
 | Tabelle                | [Text](text.md)                           | N   | N        |
-| Sddltext             | [Formattedsddltext](formattedsddltext.md) | N   | N        |
+| SDDLText             | [FormattedSDDLText](formattedsddltext.md) | N   | N        |
 | Bedingung            | [Condition](condition.md)                 | N   | J        |
 
 
@@ -39,7 +39,7 @@ Die msilockpermissionsex-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="MsiLockPermissionsEx"></span><span id="msilockpermissionsex"></span><span id="MSILOCKPERMISSIONSEX"></span>Msilockpermissionsex
+<span id="MsiLockPermissionsEx"></span><span id="msilockpermissionsex"></span><span id="MSILOCKPERMISSIONSEX"></span>MsiLockPermissionsEx
 </dt> <dd>
 
 Dies ist der Primärschlüssel dieser Tabelle.
@@ -49,50 +49,50 @@ Dies ist der Primärschlüssel dieser Tabelle.
 <span id="LockObject"></span><span id="lockobject"></span><span id="LOCKOBJECT"></span>LockObject
 </dt> <dd>
 
-In dieser Spalte und in der Tabellenspalte werden die Datei, das Verzeichnis, der Registrierungsschlüssel oder der Dienst angegeben, der gesichert werden soll. Die LockObject-Spalte ist ein Fremdschlüssel, der auf den Primärschlüssel der Tabelle verweist, die in der Tabellenspalte angegeben ist.
+Diese Spalte und die Spalte Tabelle geben zusammen die Zu sichernde Datei, das Verzeichnis, den Registrierungsschlüssel oder den Dienst an. Die LockObject-Spalte ist ein Fremdschlüssel, der auf den Primärschlüssel der tabelle verweist, die von der Table-Spalte angegeben wird.
 
 </dd> <dt>
 
-<span id="Table"></span><span id="table"></span><span id="TABLE"></span>Glaub
+<span id="Table"></span><span id="table"></span><span id="TABLE"></span>Tabelle
 </dt> <dd>
 
-In dieser Spalte und der Spalte lockobject werden die Datei, das Verzeichnis, der Registrierungsschlüssel oder der Dienst angegeben, der gesichert werden soll. Geben Sie in der Spalte Tabelle den Eintrag File, Registry, kreatefolder oder ServiceInstall ein, um ein lockobject anzugeben, das in der [Dateitabelle](file-table.md), in der [Registrierungs Tabelle](registry-table.md), in der [Tabelle](createfolder-table.md)mit den Tabellen oder in der Tabelle " [ServiceInstall](serviceinstall-table.md)" aufgeführt ist.
+Diese Spalte und die Spalte LockObject geben die Zu sichernde Datei, das Verzeichnis, den Registrierungsschlüssel oder den Dienst an. Geben Sie in der Spalte Tabelle Datei, Registrierung, CreateFolder oder ServiceInstall ein, um ein LockObject anzugeben, das in der [Dateitabelle,](file-table.md) [der Registrierungstabelle,](registry-table.md)der [CreateFolder-Tabelle](createfolder-table.md)oder der [ServiceInstall-Tabelle](serviceinstall-table.md)aufgeführt ist.
 
 </dd> <dt>
 
-<span id="SDDLText"></span><span id="sddltext"></span><span id="SDDLTEXT"></span>Sddltext
+<span id="SDDLText"></span><span id="sddltext"></span><span id="SDDLTEXT"></span>SDDLText
 </dt> <dd>
 
-Geben Sie die SDDL-Zeichenfolge ein, um die Berechtigungen für das ausgewählte Objekt anzugeben. Die SDDL muss im Format der [Sicherheits Deskriptor-Zeichenfolge](../secauthz/security-descriptor-string-format.md)bereitgestellt werden.
+Geben Sie die SDDL-Zeichenfolge ein, um die Berechtigungen anzugeben, die auf das ausgewählte Objekt angewendet werden sollen. Die SDDL muss im [Format der Sicherheitsbeschreibungszeichenfolge](../secauthz/security-descriptor-string-format.md)angegeben werden.
 
-Dies unterstützt keine privaten oder öffentlichen Eigenschaften.
+Private oder öffentliche Eigenschaften werden nicht unterstützt.
 
 </dd> <dt>
 
-<span id="Condition"></span><span id="condition"></span><span id="CONDITION"></span>Anlage
+<span id="Condition"></span><span id="condition"></span><span id="CONDITION"></span>Zustand
 </dt> <dd>
 
-Diese Spalte enthält einen bedingten Ausdruck, der verwendet wird, um zu bestimmen, ob die angegebene Berechtigung angewendet werden soll. Wenn die Bedingung zu **false** ausgewertet wird, wird die Berechtigung nicht angewendet. Wenn die Bedingung als **true** ausgewertet wird, wird die Berechtigung angewendet.
+Diese Spalte enthält einen bedingten Ausdruck, mit dem bestimmt wird, ob die angegebene Berechtigung angewendet werden soll. Wenn die Bedingung als **FALSE** ausgewertet wird, wird die Berechtigung nicht angewendet. Wenn die Bedingung zu **TRUE** ausgewertet wird, wird die Berechtigung angewendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zum Sichern von Diensten, Dateien, Registrierungs Schlüsseln und erstellten Ordnern finden Sie unter [Sichern von Ressourcen](securing-resources-.md).
+Weitere Informationen zum Sichern von Diensten, Dateien, Registrierungsschlüsseln und erstellten Ordnern finden Sie unter Sichern von [Ressourcen.](securing-resources-.md)
 
-Verwenden Sie die msilockpermissionsex-Tabelle, um Objekte für ein Benutzerkonto zu sichern, das während der Installation erstellt wird. Das Benutzerkonto muss bereits vorhanden sein, wenn das Objekt durch die Installation gesichert wird. Erstellen Sie das Benutzerkonto, bevor Sie die zu sichernden Dateien, Registrierungsschlüssel, Ordner oder Dienste installieren.
+Verwenden Sie die MsiLockPermissionsEx-Tabelle, um Objekte für ein Benutzerkonto zu schützen, das während der Installation erstellt wird. Das Benutzerkonto muss bereits vorhanden sein, wenn die Installation das Objekt sichert. Erstellen Sie das Benutzerkonto, bevor Sie die zu sichernde Datei, den Registrierungsschlüssel, den Ordner oder den Dienst installieren.
 
-Wenn ein lockobject-und Tabellen Paar in dieser Tabelle über mehr als einen Bedingungs Ausdruck verfügt, der als true ausgewertet wird, schlägt die Installation fehl, und Windows Installer gibt eine Fehlermeldung 1942 zurück.
+Wenn ein LockObject- und Table-Paar in dieser Tabelle über mehrere bedingte Ausdrücke verfügt, die als TRUE ausgewertet werden, schlägt die Installation fehl, und Windows Installer gibt die Fehlermeldung 1942 zurück.
 
-Wenn die [formattedsddltext](formattedsddltext.md) -Zeichenfolge im sddltext-Feld nicht in eine gültige SDDL-Zeichenfolge aufgelöst werden kann, schlägt die Installation fehl, und Windows Installer gibt eine Fehlermeldung 1943 zurück.
+Wenn die [FormattedSDDLText-Zeichenfolge](formattedsddltext.md) im Feld SDDLText nicht in eine gültige SDDL-Zeichenfolge aufgelöst werden kann, schlägt die Installation fehl, und Windows Installer gibt die Fehlermeldung 1943 zurück.
 
-Wenn der Benutzer nicht über ausreichende Berechtigungen verfügt, um die vom sddltext-Feld angegebene Sicherheits Beschreibung für eine Datei oder einen Ordner festzulegen, schlägt die Installation fehl, und Windows Installer gibt die Fehlermeldung 1926 zurück.
+Wenn der Benutzer nicht über ausreichende Berechtigungen verfügt, um den sicherheitsdeskriptor festzulegen, der im Feld SDDLText für eine Datei oder einen Ordner angegeben wird, schlägt die Installation fehl, und Windows Installer gibt die Fehlermeldung 1926 zurück.
 
-Wenn der Benutzer nicht über ausreichende Berechtigungen zum Festlegen der Sicherheits Beschreibung verfügt, die im Feld sddltext eines Registrierungsschlüssels angegeben ist, tritt bei der Installation ein Fehler auf, und Windows Installer gibt die Fehlermeldung 1401 zurück.
+Wenn der Benutzer nicht über ausreichende Berechtigungen verfügt, um den sicherheitsdeskriptor festzulegen, der im Feld SDDLText für einen Registrierungsschlüssel angegeben wird, schlägt die Installation fehl, und Windows Installer gibt die Fehlermeldung 1401 zurück.
 
-Wenn der Benutzer nicht über ausreichende Berechtigungen zum Festlegen der vom sddltext-Feld für einen Dienst angegebenen Sicherheits Beschreibung verfügt, schlägt die Installation fehl, und Windows Installer gibt die Fehlermeldung 1944 zurück.
+Wenn der Benutzer nicht über ausreichende Berechtigungen zum Festlegen des Sicherheitsdeskriptors verfügt, der vom Feld SDDLText für einen Dienst angegeben wird, schlägt die Installation fehl, und Windows Installer gibt die Fehlermeldung 1944 zurück.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

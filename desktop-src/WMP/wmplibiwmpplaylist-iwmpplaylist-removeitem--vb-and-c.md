@@ -1,11 +1,11 @@
 ---
-title: Iwmpwiedergabe RemoveItem-Methode
-description: Mit der RemoveItem-Methode wird das angegebene Medien Element aus der Wiedergabeliste entfernt.
+title: IWMPPlaylist removeItem-Methode
+description: Die removeItem-Methode entfernt das angegebene Medienelement aus der Wiedergabeliste.
 ms.assetid: 8b5a4c34-863d-4963-97c8-cc5aa2223ab5
 keywords:
-- RemoveItem-Methode, Windows-Media Player
-- RemoveItem-Methode, Windows Media Player, iwmpwiedergabe-Schnittstelle
-- Iwmpwiedergabe Interface, Windows Media Player, RemoveItem-Methode
+- removeItem-Methode Windows Media Player
+- removeItem-Methode Windows Media Player , IWMPPlaylist-Schnittstelle
+- IWMPPlaylist-Schnittstelle Windows Media Player , removeItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ec845b7657e04f17c47119dd169032ebe5815786
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 01ea9250cc7e368699a916b4c87f419fc5b0b66001a4d7ca12afd5587a0adda7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364861"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119246429"
 ---
-# <a name="iwmpplaylistremoveitem-method"></a>Iwmpwiedergabe:: RemoveItem-Methode
+# <a name="iwmpplaylistremoveitem-method"></a>IWMPPlaylist::removeItem-Methode
 
-Mit der **RemoveItem** -Methode wird das angegebene Medien Element aus der Wiedergabeliste entfernt.
+Die **removeItem-Methode** entfernt das angegebene Medienelement aus der Wiedergabeliste.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,10 +53,10 @@ Implements IWMPPlaylist.removeItem
 
 <dl> <dt>
 
-*piwmpmedia* \[ in\]
+*pIWMPMedia* \[ In\]
 </dt> <dd>
 
-Eine **WMPLib. iwmpmedia** -Schnittstelle, die das Medien Element darstellt, das aus der Wiedergabeliste entfernt werden soll.
+Eine **WMPLib.IWMPMedia-Schnittstelle,** die das Medienelement darstellt, das aus der Wiedergabeliste entfernt werden soll.
 
 </dd> </dl>
 
@@ -64,13 +64,13 @@ Eine **WMPLib. iwmpmedia** -Schnittstelle, die das Medien Element darstellt, das
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das entfernte Element die aktuell Wiedergabe ist, wird die Wiedergabe angehalten, und das nächste Element in der Wiedergabeliste wird zum aktuellen Element.
+Wenn das entfernte Element die aktuell wiedergegebene Spur ist, wird die Wiedergabe beendet, und das nächste Element in der Wiedergabeliste wird zum aktuellen Element.
 
-Wenn kein nächstes Element vorhanden ist, wird das vorherige Element verwendet. Wenn keine anderen Elemente vorhanden sind, gibt die **AxWindowsMediaPlayer. currentMedia** -Eigenschaft **null** zurück.
+Wenn kein nächstes Element vorhanden ist, wird das vorherige Element verwendet. Wenn keine anderen Elemente vorhanden sind, gibt die **AxWindowsMediaPlayer.currentMedia-Eigenschaft** **NULL** zurück.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Vollzugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Vollzugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,35 +78,35 @@ Vor dem Aufrufen dieser Methode müssen Sie über Vollzugriff auf die Bibliothek
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player Serie 9 oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer. currentMedia (VB und c#)**](axwmplib-axwindowsmediaplayer-currentmedia--vb-and-c.md)
+[**AxWindowsMediaPlayer.currentMedia (VB und C#)**](axwmplib-axwindowsmediaplayer-currentmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe. InsertItem (VB und c#)**](wmplibiwmpplaylist-iwmpplaylist-insertitem--vb-and-c.md)
+[**IWMPPlaylist.insertItem (VB und C#)**](wmplibiwmpplaylist-iwmpplaylist-insertitem--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe. Item (VB und c#)**](iwmpplaylist-item--vb-and-c.md)
+[**IWMPPlaylist.Item (VB und C#)**](iwmpplaylist-item--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. mediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.mediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. requestmediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.requestMediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
 </dt> </dl>
 
  

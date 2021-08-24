@@ -1,29 +1,29 @@
 ---
-title: Win32_TSPermissionsSetting Methoden
-description: Die Win32 \_ tspermissionssetting-Klasse stellt die folgenden Methoden zur Verfügung.
+title: Win32_TSPermissionsSetting-Methoden
+description: Die Win32 \_ TSPermissionsSetting-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 7F136EB8-2866-47BC-8F1E-04DAFDB4D4D1
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7817ee817c692a9a5677d8fffe131a0a1cb60cbc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 43ab9fcf1451d0a227777046e523267fcb9392a576b0d6ed5f71e6d2f17b065b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137753"
 ---
-# <a name="win32_tspermissionssetting-methods"></a>Win32 \_ tspermissionssetting-Methoden
+# <a name="win32_tspermissionssetting-methods"></a>Win32 \_ TSPermissionsSetting-Methoden
 
-Die [**Win32 \_ tspermissionssetting**](win32-tspermissionssetting.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**Win32 \_ TSPermissionsSetting-Klasse**](win32-tspermissionssetting.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Addaccount-Methode**](win32-tspermissionssetting-addaccount.md)
--   [**Restoredefaults-Methode**](win32-tspermissionssetting-restoredefaults.md)
+-   [**AddAccount-Methode**](win32-tspermissionssetting-addaccount.md)
+-   [**RestoreDefaults-Methode**](win32-tspermissionssetting-restoredefaults.md)
 
- 
+ 
 
- 
+ 
 
 
 

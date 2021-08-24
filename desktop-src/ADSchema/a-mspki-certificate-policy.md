@@ -1,11 +1,11 @@
 ---
-title: MS-PKI-Certificate-Policy-Attribut
+title: ms-PKI-Certificate-Policy-Attribut
 description: Enthält die Liste der Richtlinien-OIDs und ihrer optionalen CSPs im ausgestellten Zertifikat.
 ms.assetid: bc84c5ff-9cb1-406c-825c-97fa479d52eb
 ms.tgt_platform: multiple
 keywords:
 - MS-PKI-Certificate-Policy-Attribut AD-Schema
-- mspki-Certificate-Policy-Attribut AD-Schema
+- MSPKI-Certificate-Policy-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d2d6857b6035cc72271c7276b679b8a497aaab9
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8abe92cda39428e397f06105a0ca8c5b151f84989615e06ec2f6c8371f87fc75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119081684"
 ---
-# <a name="ms-pki-certificate-policy-attribute"></a>MS-PKI-Certificate-Policy-Attribut
+# <a name="ms-pki-certificate-policy-attribute"></a>ms-PKI-Certificate-Policy-Attribut
 
 Enthält die Liste der Richtlinien-OIDs und ihrer optionalen CSPs im ausgestellten Zertifikat.
 
@@ -29,26 +29,26 @@ Enthält die Liste der Richtlinien-OIDs und ihrer optionalen CSPs im ausgestellt
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------------------------------------------|
-| CN                | MS-PKI-Certificate-Policy                                                                         |
-| LDAP-Display-Name | mspki-Zertifikat-Richtlinie                                                                          |
-| Size              | 64 Byte-Mal die Anzahl der Einträge.                                                             |
-| Berechtigung aktualisieren  | Domänen Administrator                                                                              |
-| Aktualisierungshäufigkeit  | Wenn das Objekt Vorlage (MS-PKI-Certificate-template) bearbeitet, erstellt oder geklont wird. |
+| CN                | ms-PKI-Certificate-Policy                                                                         |
+| Ldap-Anzeigename | msPKI-Certificate-Policy                                                                          |
+| Size              | Das 64-fache der Anzahl von Einträgen.                                                             |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                                                                              |
+| Updatehäufigkeit  | Wenn das Zertifikatvorlagenobjekt (ms-PKI-Certificate-Template) bearbeitet, erstellt oder geklont wird. |
 | Attribute-Id      | 1.2.840.113556.1.4.1439                                                                           |
-| System-ID-GUID    | 38942346-cc5b-424b-a7d8-6ffd12029c5f                                                              |
+| System-Id-Guid    | 38942346-cc5b-424b-a7d8-6ffd12029c5f                                                              |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                                       |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,15 +57,15 @@ Enthält die Liste der Richtlinien-OIDs und ihrer optionalen CSPs im ausgestellt
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -78,15 +78,15 @@ Enthält die Liste der Richtlinien-OIDs und ihrer optionalen CSPs im ausgestellt
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -99,15 +99,15 @@ Enthält die Liste der Richtlinien-OIDs und ihrer optionalen CSPs im ausgestellt
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -120,15 +120,15 @@ Enthält die Liste der Richtlinien-OIDs und ihrer optionalen CSPs im ausgestellt
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -141,15 +141,15 @@ Enthält die Liste der Richtlinien-OIDs und ihrer optionalen CSPs im ausgestellt
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 

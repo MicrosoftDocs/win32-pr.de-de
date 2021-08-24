@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentslvcolumncannotdeleteexception-Konstruktor'
-title: Esentslvcolumncannotdeleteexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSLVColumnCannotDeleteException-Konstruktor'
+title: EsentSLVColumnCannotDeleteException-Konstruktor
 TOCTitle: 'EsentSLVColumnCannotDeleteException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSLVColumnCannotDeleteException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvcolumncannotdeleteexception.esentslvcolumncannotdeleteexception(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0a9fb0b35058bf3090b75a9cdab4d2b1565e8a08
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be290a0fdbe75a3c361be84c2ff0f363f105533d36fb14d87c4c28c2298dbb8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104350029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119115180"
 ---
-# <a name="esentslvcolumncannotdeleteexception-constructor"></a>Esentslvcolumncannotdeleteexception-Konstruktor
+# <a name="esentslvcolumncannotdeleteexception-constructor"></a>EsentSLVColumnCannotDeleteException-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New EsentSLVColumnCannotDeleteException()
 public EsentSLVColumnCannotDeleteException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvcolumncannotdeleteexception-Klasse](./esentslvcolumncannotdeleteexception-class.md)
+[EsentSLVColumnCannotDeleteException-Klasse](./esentslvcolumncannotdeleteexception-class.md)
 
-[Esentslvcolumncannotdeleteexception-Member](./esentslvcolumncannotdeleteexception-members.md)
+[EsentSLVColumnCannotDeleteException-Member](./esentslvcolumncannotdeleteexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -4,12 +4,12 @@ ms.assetid: 0cbe3b02-4ade-4eaa-94a7-71fda8d15762
 title: presentationURL-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe44b1b139bf545ac183427669640fe2935bce3b
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: bb8fa48bbfb3c7022af572ff82b801a823bdd62f2fb4dececebfeb47ae2d101a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119130622"
 ---
 # <a name="presentationurl-element"></a>presentationURL-Element
 
@@ -33,7 +33,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                                                   | BESCHREIBUNG                                                                                          |
+| Element                                                   | Beschreibung                                                                                          |
 |-----------------------------------------------------------|------------------------------------------------------------------------------------------------------|
 | [**thisModelMetadata**](thismodelmetadata.md)<br/> | Definiert die Hersteller- und Modellmetadaten für das zu implementierende Gerät.<br/> <br/> |
 

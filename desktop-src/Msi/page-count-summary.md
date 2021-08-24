@@ -1,29 +1,29 @@
 ---
-description: Die Zusammenfassungs Eigenschaft Seitenanzahl enthält die für das Installationspaket erforderliche mindestinstallerversion.
+description: Die Page Count Summary -Eigenschaft enthält die mindestens erforderliche Installationsprogrammversion des Installationspakets.
 ms.assetid: ee3aaeed-166c-4591-ae3e-642c1204a5ca
-title: Zusammenfassungs Eigenschaft für Seitenanzahl
+title: Page Count Summary -Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ec5e319450bb7a7db5515587be7777ad3e657d3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 690f19db5b8b4dc4dff3c3eb30f616803754bfac199a3aa1e6656da0f1e3fa39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367674"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145413"
 ---
-# <a name="page-count-summary-property"></a>Zusammenfassungs Eigenschaft für Seitenanzahl
+# <a name="page-count-summary-property"></a>Page Count Summary -Eigenschaft
 
-Die **Zusammenfassungs Eigenschaft Seitenanzahl** enthält die für das Installationspaket erforderliche mindestinstallerversion. Für mindestens Windows Installer 2,0 muss diese Eigenschaft auf die ganze Zahl 200 festgelegt werden. Für mindestens Windows Installer 3,0 muss diese Eigenschaft auf die ganze Zahl 300 festgelegt werden. Für mindestens Windows Installer 3,1 muss diese Eigenschaft auf 301 festgelegt werden. Für mindestens Windows Installer 4,5 muss diese Eigenschaft auf 405 festgelegt werden. Für mindestens Windows Installer 5,0 muss diese Eigenschaft auf 500 festgelegt werden.
+Die Page **Count Summary** -Eigenschaft enthält die mindestens erforderliche Installationsprogrammversion des Installationspakets. Für mindestens Windows Installer 2.0 muss diese Eigenschaft auf die ganze Zahl 200 festgelegt werden. Für mindestens Windows Installer 3.0 muss diese Eigenschaft auf die ganze Zahl 300 festgelegt werden. Für mindestens Windows Installer 3.1 muss diese Eigenschaft auf 301 festgelegt werden. Für mindestens Windows Installer 4.5 muss diese Eigenschaft auf 405 festgelegt werden. Für mindestens Windows Installer 5.0 muss diese Eigenschaft auf 500 festgelegt werden.
 
-Bei [64-Bit-Windows Installer Paketen](64-bit-windows-installer-packages.md)muss diese Eigenschaft auf die ganze Zahl 200 oder höher festgelegt werden. Bei 64-Bit-Windows Installer Paketen auf der Arm64-Plattform muss diese Eigenschaft auf die ganze Zahl 500 oder höher festgelegt werden.
+Für [64-Bit-Windows-Installerpakete](64-bit-windows-installer-packages.md)muss diese Eigenschaft auf die ganze Zahl 200 oder höher festgelegt werden. Für 64-Bit-Windows-Installerpakete auf der Arm64-Plattform muss diese Eigenschaft auf die ganze Zahl 500 oder höher festgelegt werden.
 
-Bei einem Transformations Paket enthält die **Zusammenfassungs Eigenschaft Seitenanzahl** die mindestinstallerversion, die zum Verarbeiten der Transformation erforderlich ist. Legen Sie auf die größere der beiden **Zusammenfassungs** Eigenschaftswerte der Seitenanzahl fest, die zu den Datenbanken gehören, die zum Generieren der Transformation verwendet werden.
+Für ein Transformationspaket enthält die Page **Count Summary-Eigenschaft** die mindestens erforderliche Installationsprogrammversion, um die Transformation zu verarbeiten. Legen Sie auf den größeren der beiden Page **Count Summary-Eigenschaftswerte** fest, die zu den Datenbanken gehören, die zum Generieren der Transformation verwendet werden.
 
-Bei einem Patchpaket wird die **Zusammenfassungs Eigenschaft der Seitenanzahl** auf NULL festgelegt.
+Für ein Patchpaket wird die Page **Count Summary-Eigenschaft** auf NULL festgelegt.
 
-Diese Zusammenfassungs Eigenschaft ist erforderlich.
+Diese Zusammenfassungseigenschaft ist erforderlich.
 
-Diese Eigenschaft kann verwendet werden, um ein Paket zu erstellen, das nur mit der angegebenen Mindestversion oder einer höheren Version des Windows Installer installiert werden kann.
+Diese Eigenschaft kann verwendet werden, um ein Paket zu erstellen, das nur mit der angegebenen Mindestversion oder einer neueren Version des Windows Installers installiert werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,15 +31,15 @@ Diese Eigenschaft kann verwendet werden, um ein Paket zu erstellen, das nur mit 
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Beschreibungen der Zusammenfassungs Eigenschaften](summary-property-descriptions.md)
+[Zusammenfassungseigenschaftenbeschreibungen](summary-property-descriptions.md)
 </dt> </dl>
 
  

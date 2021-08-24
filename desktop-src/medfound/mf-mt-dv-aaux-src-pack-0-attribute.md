@@ -1,29 +1,29 @@
 ---
-description: Audiohilfsquelle (Aaux) Source Pack für den ersten Audioblock in einem Typ digitaler Video (DV).
+description: AAUX-Quellpaket (Audio Auxiliary) für den ersten Audioblock in einem DV-Medientyp (Digital Video).
 ms.assetid: a37d9371-0d9f-44a8-b8b3-9fbfcfad1a51
-title: MF_MT_DV_AAUX_SRC_PACK_0-Attribut (mfapi. h)
+title: MF_MT_DV_AAUX_SRC_PACK_0 -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 19f37f7f6110f6a04f025864e95488782b855128
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 34161ac9c5fbc21249fc15c4f97de6390e62581666b28001acc2fd621f5377e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119035218"
 ---
-# <a name="mf_mt_dv_aaux_src_pack_0-attribute"></a>MF \_ MT \_ DV \_ Aaux \_ src \_ Pack \_ 0-Attribut
+# <a name="mf_mt_dv_aaux_src_pack_0-attribute"></a>MF \_ MT \_ DV \_ AAUX \_ SRC PACK \_ \_ 0-Attribut
 
-Audiohilfsquelle (Aaux) Source Pack für den ersten Audioblock in einem Typ digitaler Video (DV).
+AAUX-Quellpaket (Audio Auxiliary) für den ersten Audioblock in einem DV-Medientyp (Digital Video).
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut entspricht dem **dwdvaauxsrc** -Member der DirectShow [**dvinfo**](/windows/win32/api/strmif/ns-strmif-dvinfo) -Struktur.
+Dieses Attribut entspricht dem **dwDVAAuxSrc-Element** der DirectShow [**DVINFO-Struktur.**](/windows/win32/api/strmif/ns-strmif-dvinfo)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,9 +31,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -41,19 +41,19 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEs::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEs::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**VERERBungstyp**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> </dl>
 
  

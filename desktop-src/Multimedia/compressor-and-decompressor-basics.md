@@ -1,37 +1,37 @@
 ---
-title: Grundlagen zu Kompressor und Debug
-description: Grundlagen zu Kompressor und Debug
+title: Grundlagen zu Primieren und Dekomprimieren
+description: Grundlagen zu Primieren und Dekomprimieren
 ms.assetid: 49a958c1-1798-4c6c-913c-5bf5869f926b
 keywords:
-- Videokomprimierungs-Manager (VCM), Öffnen von Kompressoren
-- VCM (Videokomprimierungs-Manager), Öffnen von Kompressoren
+- Videokomprimierungs-Manager (Video Compression Manager, VCM), Öffnen von Komprimierungsdateien
+- VCM (Videokomprimierungs-Manager), öffnende Komprimierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 08b51e0221c495d5e2d0782f4e56e0778c0d2462
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1969748949aeb023f889bc651ccd028f19c3e18fe6cf1ba088b4f4ec29292f35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856052"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144993"
 ---
-# <a name="compressor-and-decompressor-basics"></a>Grundlagen zu Kompressor und Debug
+# <a name="compressor-and-decompressor-basics"></a>Grundlagen zu Primieren und Dekomprimieren
 
-Zum Öffnen und Suchen eines Kompressors können Sie die [**iclocate**](/windows/desktop/api/Vfw/nf-vfw-iclocate) -Funktion und die [**icopen**](/windows/desktop/api/Vfw/nf-vfw-icopen) -Funktion verwenden. Sie können **iclocate** verwenden, um einen Kompressor eines bestimmten Typs zu finden und ein Handle dafür für die Verwendung in anderen VCM-Funktionen zu erhalten. Zum Öffnen eines Kompressors können Sie **icopen** verwenden. Die Anwendung verwendet das Handle, das von dieser Funktion zurückgegeben wird, um den geöffneten Kompressor zu identifizieren, wenn er andere VCM-Funktionen verwendet.
+Um eine Hülle zu öffnen und zu suchen, können Sie die [**Funktionen ICLocate**](/windows/desktop/api/Vfw/nf-vfw-iclocate) und [**ICOpen**](/windows/desktop/api/Vfw/nf-vfw-icopen) verwenden. Sie können **ICLocate verwenden,** um einen Bestimmten Typ zu finden und ein Handle dafür für die Verwendung in anderen VCM-Funktionen zu erhalten. Um eine Hülle zu öffnen, können Sie **ICOpen verwenden.** Ihre Anwendung verwendet das von dieser Funktion zurückgegebene Handle, um die geöffnete Komprimierung zu identifizieren, wenn sie andere VCM-Funktionen verwendet.
 
-Zum Öffnen und Suchen eines-Debug können Anwendungen die [**ICDE compressopen**](/windows/desktop/api/Vfw/nf-vfw-icdecompressopen) -und [**icdrawopen**](/windows/desktop/api/Vfw/nf-vfw-icdrawopen) -Makros verwenden. Diese Makros verwenden **iclocate** für den Vorgang.
+Um einen Dekomprimator zu öffnen und zu suchen, können Anwendungen die [**Makros ICDecompressOpen**](/windows/desktop/api/Vfw/nf-vfw-icdecompressopen) und [**ICDrawOpen**](/windows/desktop/api/Vfw/nf-vfw-icdrawopen) verwenden. Diese Makros verwenden **ICLocate für** den Vorgang.
 
-Wenn Ihre Anwendung die Verwendung eines Kompressors oder einer Debug-Debug abgeschlossen hat, muss Sie Sie schließen, um alle Ressourcen freizugeben, die für die Komprimierung oder die Komprimierung Die Anwendung kann die [**icclose**](/windows/desktop/api/Vfw/nf-vfw-icclose) -Funktion verwenden, um den-Kompressor oder den-Debug zu schließen.
+Wenn Ihre Anwendung die Verwendung eines Komprimierungs- oder Dekomprimierers beendet hat, muss sie sie schließen, um alle Ressourcen frei zu geben, die für die Komprimierung oder Dekomprimierung verwendet werden. Ihre Anwendung kann die [**ICClose-Funktion**](/windows/desktop/api/Vfw/nf-vfw-icclose) verwenden, um den Schließ- oder Dekomprimierer zu schließen.
 
-Außerdem kann die Anwendung die Kompressoren oder die Aufzählung auf einem System mithilfe der [**icinfo**](/windows/desktop/api/Vfw/nf-vfw-icinfo) -Funktion auflisten.
+Darüber hinaus kann Ihre Anwendung mithilfe der ICInfo-Funktion die Komprimierungs- oder Dekomprimierungsfunktionen auf einem [**System aufzählen.**](/windows/desktop/api/Vfw/nf-vfw-icinfo)
 
 > [!Note]  
-> Der Stream-Header in einer AVI-Datei enthält Informationen über den Streamtyp und den spezifischen Handler für diesen Stream. Innerhalb des Stream-Headers identifizieren die Member **fcctype** und **fccHandler** den Streamtyp und den für den Stream angegebenen Stream-Handler.
+> Der Streamheader in einer AVI-Datei enthält Informationen über den Streamtyp und den spezifischen Handler für diesen Stream. Innerhalb des Streamheaders identifizieren **die Elemente fccType** und **fccHandler** den Streamtyp und den für den Stream angegebenen Streamhandler.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Definiert die verschiedenen Fehlerzustände der Medienquellen Erweiterung.
+description: Definiert die verschiedenen Fehlerzustände der Medienquellenerweiterung.
 ms.assetid: 8FD54833-F60B-49E8-A673-6130F3B06160
-title: MF_MSE_ERROR-Enumeration
+title: MF_MSE_ERROR Enumeration
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: 6b6aaea772376b0e57c006a56a5a1bb30bc497c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 71246aaa2897540b272360a790718f8d5900934108c98dfcc6b4023898f9f2db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119104586"
 ---
-# <a name="mf_mse_error-enumeration"></a>MF- \_ MSE- \_ Fehler Enumeration
+# <a name="mf_mse_error-enumeration"></a>MF \_ MSE \_ ERROR-Enumeration
 
-Definiert die verschiedenen Fehlerzustände der Medienquellen Erweiterung.
+Definiert die verschiedenen Fehlerzustände der Medienquellenerweiterung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,28 +42,28 @@ typedef enum _MF_MSE_ERROR {
 
 <dl> <dt>
 
-<span id="MF_MSE_ERROR_NOERROR"></span><span id="mf_mse_error_noerror"></span>**MF- \_ MSE- \_ Fehler \_ noError**
+<span id="MF_MSE_ERROR_NOERROR"></span><span id="mf_mse_error_noerror"></span>**\_MF-MSE-FEHLER \_ \_ NOERROR**
 </dt> <dd>
 
 Gibt keinen Fehler an.
 
 </dd> <dt>
 
-<span id="MF_MSE_ERROR_NETWORK"></span><span id="mf_mse_error_network"></span>**Netzwerk für MF- \_ MSE- \_ Fehler \_**
+<span id="MF_MSE_ERROR_NETWORK"></span><span id="mf_mse_error_network"></span>**MF \_ MSE \_ ERROR \_ NETWORK**
 </dt> <dd>
 
-Gibt einen Fehler im Netzwerk an.
+Gibt einen Fehler mit dem Netzwerk an.
 
 </dd> <dt>
 
-<span id="MF_MSE_ERROR_DECODE"></span><span id="mf_mse_error_decode"></span>**\_ \_ Fehler beim \_ Decodieren von MF-MSE**
+<span id="MF_MSE_ERROR_DECODE"></span><span id="mf_mse_error_decode"></span>**\_ \_ MF-MSE-FEHLERDECODIERUNG \_**
 </dt> <dd>
 
-Gibt einen Fehler beim Decodieren an.
+Gibt einen Fehler bei der Decodierung an.
 
 </dd> <dt>
 
-<span id="MF_MSE_ERROR_UNKNOWN_ERROR"></span><span id="mf_mse_error_unknown_error"></span>**Unbekannter Fehler im MF-MSE-Fehler. \_ \_ \_ \_**
+<span id="MF_MSE_ERROR_UNKNOWN_ERROR"></span><span id="mf_mse_error_unknown_error"></span>**\_MF-MSE-FEHLER \_ \_ UNBEKANNTER \_ FEHLER**
 </dt> <dd>
 
 Gibt einen unbekannten Fehler an.
@@ -76,13 +76,13 @@ Gibt einen unbekannten Fehler an.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

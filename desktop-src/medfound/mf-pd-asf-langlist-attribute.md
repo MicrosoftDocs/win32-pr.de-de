@@ -1,61 +1,61 @@
 ---
-description: Gibt eine Liste von sprach Bezeichnerzeichen an, die die in einer ASF-Datei (Advanced Systems Format) enthaltenen Sprachen angibt. Dieses Attribut entspricht dem sprach Listen Objekt, das in der ASF-Spezifikation definiert ist.
+description: Gibt eine Liste von Sprachbezeichnern an, die die in einer ASF-Datei (Advanced Systems Format) enthaltenen Sprachen angeben. Dieses Attribut entspricht dem Sprachlistenobjekt, das in der ASF-Spezifikation definiert ist.
 ms.assetid: 07b8a991-b392-47c1-a6d7-a1f5dcc82e5c
-title: MF_PD_ASF_LANGLIST-Attribut (wmcontainer. h)
+title: MF_PD_ASF_LANGLIST-Attribut (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ecac5eac178c7fb315e0ca4cfdbd540a27eeac28
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ba22004001df2ba6be8fb7a173a3ea9bed1b0a73863ae111e61d36efa853e079
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119103702"
 ---
-# <a name="mf_pd_asf_langlist-attribute"></a>MF \_ PD, \_ ASF \_ langlist-Attribut
+# <a name="mf_pd_asf_langlist-attribute"></a>MF \_ PD \_ ASF \_ LANGLIST-Attribut
 
-Gibt eine Liste von sprach Bezeichnerzeichen an, die die in einer ASF-Datei (Advanced Systems Format) enthaltenen Sprachen angibt. Dieses Attribut entspricht dem sprach Listen Objekt, das in der ASF-Spezifikation definiert ist.
+Gibt eine Liste von Sprachbezeichnern an, die die in einer ASF-Datei (Advanced Systems Format) enthaltenen Sprachen angeben. Dieses Attribut entspricht dem Sprachlistenobjekt, das in der ASF-Spezifikation definiert ist.
 
 ## <a name="data-type"></a>Datentyp
 
 Bytearray
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Präsentations Deskriptoren für den ASF-Inhalt.
+Dieses Attribut gilt für Präsentationsdeskriptoren für ASF-Inhalt.
 
-Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) -Methode erstellt den Präsentations Deskriptor und generiert dieses Attribut aus dem sprach Listen Objekt-Header. In der folgenden Tabelle wird das Format des BLOBs angezeigt:
+Die [**IMFASFContentInfo::GeneratePresentationDescriptor-Methode**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) erstellt den Präsentationsdeskriptor und generiert dieses Attribut aus dem Sprachlistenobjektheader. Die folgende Tabelle zeigt das Format des Blobs:
 
 
 
-| Feld "sprach Listen Objekt" | Datentyp    | Size    | BESCHREIBUNG                            |
+| Feld "Language List Object" | Datentyp    | Size    | Beschreibung                            |
 |----------------------------|--------------|---------|----------------------------------------|
-| Anzahl der Sprach-ID-Einträge  | **DWORD**    | 4 Bytes | Anzahl von Sprachen                    |
-| Sprach-ID-Einträge        | **Hobby**\[\] | Varies  | Array von sprach Zeichenfolgen (siehe unten). |
+| Anzahl der Sprach-ID-Datensätze  | **DWORD**    | 4 Bytes | Anzahl der Sprachen                    |
+| Sprach-ID-Datensätze        | **Byte**\[\] | Varies  | Array von Sprachzeichenfolgen (siehe unten). |
 
 
 
  
 
-Der erste **DWORD** -Wert ist die Anzahl der Sprachen, gefolgt von einem Array von sprachbezeichnerzeichenfolgen. Jede Zeichenfolge weist das folgende Format auf:
+Das erste **DWORD** ist die Anzahl der Sprachen, gefolgt von einem Array von Sprachbezeichnerzeichenfolgen. Jede Zeichenfolge hat das folgende Format:
 
 
 
-| Feld "sprach Listen Objekt" | Datentyp     | Size    | BESCHREIBUNG                                                                               |
+| Feld "Language List Object" | Datentyp     | Size    | Beschreibung                                                                               |
 |----------------------------|---------------|---------|-------------------------------------------------------------------------------------------|
-| Länge der Sprach-ID         | **DWORD**     | 4 Bytes | Die Länge der Zeichenfolge in Bytes, einschließlich der Größe des nachfolgenden **null** Zeichens. |
-| Sprach-ID                | **WCHAR**\[\] | Varies  | Eine mit NULL endenden Zeichenfolge, die den Namen der RFC 1766-Sprache enthält.                           |
+| Länge der Sprach-ID         | **DWORD**     | 4 Bytes | Die Länge der Zeichenfolge in Bytes, einschließlich der Größe des nachgestellten **NULL-Zeichens.** |
+| Sprach-ID                | **Wchar**\[\] | Varies  | Eine auf NULL endende Zeichenfolge, die den RFC 1766-Sprachnamen enthält.                           |
 
 
 
  
 
-Jede Zeichenfolge ist ein sprach Kennzeichen, das mit RFC 1766 kompatibel ist.
+Jede Zeichenfolge ist ein Sprachtag, das mit RFC 1766 kompatibel ist.
 
-Um das Sprachtag für einen bestimmten Datenstrom in der ASF-Datei zu erhalten, Fragen Sie den Datenstrom Deskriptor nach dem Attribut "MF SD-ID-Attribut für die [**\_ sprach- \_ \_ \_ \_ ID \_**](mf-sd-asf-extstrmprop-language-id-index-attribute.md) " ab.
+Um das Sprachtag für einen bestimmten Stream in der ASF-Datei abzurufen, fragen Sie den Streamdeskriptor nach dem [**ATTRIBUT MF \_ SD \_ ASF \_ EXTSTRMPROP \_ LANGUAGE ID \_ \_ INDEX**](mf-sd-asf-extstrmprop-language-id-index-attribute.md) ab.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie die-Sprachliste analysiert wird.
+Das folgende Beispiel zeigt, wie die Sprachliste analysiert wird.
 
 
 ```C++
@@ -203,38 +203,38 @@ private:
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
+[**ATTRIBUTEAttributes::GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
 </dt> <dt>
 
-[**Imfattributes:: setBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
+[**ATTRIBUTEAttributes::SetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
 </dt> <dt>
 
-[**IMF presentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
+[**PRESENTPresentationDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
 </dt> <dt>
 
-[Präsentations deskriptorattribute](presentation-descriptor-attributes.md)
+[Darstellungsdeskriptorattribute](presentation-descriptor-attributes.md)
 </dt> <dt>
 
-[ASF-Header Objekt](asf-file-structure.md)
+[ASF-Headerobjekt](asf-file-structure.md)
 </dt> <dt>
 
-ASF-Header Objekt
+ASF-Headerobjekt
 </dt> <dt>
 
-[Präsentations Deskriptoren](presentation-descriptors.md)
+[Präsentationsdeskriptoren](presentation-descriptors.md)
 </dt> </dl>
 
  

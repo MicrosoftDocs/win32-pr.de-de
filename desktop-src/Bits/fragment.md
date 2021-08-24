@@ -1,9 +1,9 @@
 ---
 title: Fragment
-description: Verwenden Sie das Fragment-Paket, um ein Fragment der Uploaddatei an den Server zu senden.
+description: Verwenden Sie das Fragmentpaket, um ein Fragment der Uploaddatei an den Server zu senden.
 ms.assetid: d6df7e47-a240-4be2-a9c4-24a13e622861
 keywords:
-- Fragmentbits
+- Fragment-BITS
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f5103e90ec84a20ff4c04d9036a744919d9b1fd
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: 613acaabc017b9e673d2cba6a64f84db054a4cdc0d73a0639fcf8455edff8298
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "104101282"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119528830"
 ---
 # <a name="fragment"></a>Fragment
 
-Verwenden Sie das **Fragment** -Paket, um ein Fragment der Uploaddatei an den Server zu senden.
+Verwenden Sie das **Fragmentpaket,** um ein Fragment der Uploaddatei an den Server zu senden.
 
 ``` syntax
 BITS_POST remote-URL HTTP/1.1
@@ -37,70 +37,70 @@ Content-Encoding: encoding
 
 <dl> <dt>
 
-<span id="BITS_POST"></span><span id="bits_post"></span>Bits- \_ Post
+<span id="BITS_POST"></span><span id="bits_post"></span>BITS \_ POST
 </dt> <dd>
 
-Bits-spezifisches Verb, das dieses Paket für den BITS-Server identifiziert.
+BITS-spezifisches Verb, das dieses Paket an den BITS-Server identifiziert.
 
-Ersetzen Sie Remote-URL durch den absoluten oder relativen URI. Ersetzen Sie in der Regel Remote-URL durch den Remote Dateinamen des Auftrags. Überlegungen zum Netzwerk Lastenausgleich finden Sie im "Bits-Host-ID"-Header im Paket " [**Create-Session**](create-session.md) ".
+Ersetzen Sie remote-URL durch den absoluten oder relativen URI. Ersetzen Sie remote-URL in der Regel durch den Remotedateinamen des Auftrags. Überlegungen zum Netzwerklastenausgleich finden Sie im Bits-Host-Id-Header im [**Create-Session-Paket.**](create-session.md)
 
 </dd> <dt>
 
-<span id="BITS-Packet-Type"></span><span id="bits-packet-type"></span><span id="BITS-PACKET-TYPE"></span>Bits-Pakettyp
+<span id="BITS-Packet-Type"></span><span id="bits-packet-type"></span><span id="BITS-PACKET-TYPE"></span>BITS-Packet-Type
 </dt> <dd>
 
-Identifiziert dieses Anforderungspaket als fragmentpaket.
+Identifiziert dieses Anforderungspaket als Fragmentpaket.
 
 </dd> <dt>
 
-<span id="BITS-Session-Id"></span><span id="bits-session-id"></span><span id="BITS-SESSION-ID"></span>Bits-Session-ID
+<span id="BITS-Session-Id"></span><span id="bits-session-id"></span><span id="BITS-SESSION-ID"></span>BITS-Sitzungs-ID
 </dt> <dd>
 
-Zeichen folgen-GUID, die die Sitzung mit dem Server identifiziert. Ersetzen Sie {GUID} durch die Sitzungs-ID, die der Server in der Bestätigung für das Antwortpaket " [**Create-Session**](ack-for-create-session.md) " zurückgibt.
+Zeichenfolgen-GUID, die die Sitzung mit dem Server identifiziert. Ersetzen Sie {guid} durch den Sitzungsbezeichner, den der Server im [**Antwortpaket Ack for Create-Session**](ack-for-create-session.md) zurückgibt.
 
 </dd> <dt>
 
-<span id="Content-Name"></span><span id="content-name"></span><span id="CONTENT-NAME"></span>Inhalts Name
+<span id="Content-Name"></span><span id="content-name"></span><span id="CONTENT-NAME"></span>Content-Name
 </dt> <dd>
 
-Geben Sie diesen Header nur mit dem anfänglichen Fragment an. Ersetzen Sie filename durch den Namen des lokalen Datei namens aus dem Auftrag. Der Name enthält nicht den Pfad.
+Geben Sie diesen Header nur mit dem ursprünglichen Fragment an. Ersetzen Sie filename durch den Namen des lokalen Dateinamens aus dem Auftrag. Der Name enthält nicht den Pfad.
 
 </dd> <dt>
 
-<span id="Content-Length"></span><span id="content-length"></span><span id="CONTENT-LENGTH"></span>Inhalts Länge
+<span id="Content-Length"></span><span id="content-length"></span><span id="CONTENT-LENGTH"></span>Inhaltslänge
 </dt> <dd>
 
-Ersetzen Sie die Länge durch die Anzahl von Bytes, die im Fragmenttext gesendet werden.
+Ersetzen Sie length durch die Anzahl der im Fragmenttext gesendeten Bytes.
 
 </dd> <dt>
 
-<span id="Content-Range"></span><span id="content-range"></span><span id="CONTENT-RANGE"></span>Inhalts Bereich
+<span id="Content-Range"></span><span id="content-range"></span><span id="CONTENT-RANGE"></span>Inhaltsbereich
 </dt> <dd>
 
-Weist den Server an, wo der Bereich in der Zieldatei angewendet werden soll. Ersetzen Sie Range durch die Start-und Endoffsets des Bereichs in der Zieldatei. Die Offsets sind NULL basiert. Wenn der angegebene Bereich einen vorhandenen Bereich überlappt, schreibt Bits nur den nicht überlappenden Bereich des Bereichs. Vorhandene Inhalte werden von Bits nicht überschrieben. Wenn das erste Paket z. b. den Bereich von 0 bis 100 enthielt und das zweite Paket den Bereich 50 bis 150 enthielt, schreibt Bits nur die Bytes 101 über 150 aus dem zweiten Paket. Ersetzen Sie Total-Length durch die Gesamtzahl der Bytes in der Datei.
+Teilt dem Server mit, wo der Bereich in der Zieldatei angewendet werden soll. Ersetzen Sie range durch die Start- und Endoffsets des Bereichs in der Zieldatei. Die Offsets sind nullbasiert. Wenn der angegebene Bereich einen vorhandenen Bereich überlappt, schreibt BITS nur den nicht überlappenden Teil des Bereichs. BITS überschreibt keinen vorhandenen Inhalt. Wenn das erste Paket beispielsweise den Bereich 0 bis 100 und das zweite Paket den Bereich 50 bis 150 enthielt, schreibt BITS nur Bytes von 101 bis 150 aus dem zweiten Paket. Ersetzen Sie total-length durch die Gesamtzahl der Bytes in der Datei.
 
 </dd> <dt>
 
-<span id="Content-Encoding"></span><span id="content-encoding"></span><span id="CONTENT-ENCODING"></span>Inhalts Codierung
+<span id="Content-Encoding"></span><span id="content-encoding"></span><span id="CONTENT-ENCODING"></span>Inhaltscodierung
 </dt> <dd>
 
-Ersetzen Sie Encoding durch den Codierungstyp, den der Client für das Fragment verwendet. Der Client muss die Codierung verwenden, die der Server im Accept-Encoding-Header der Bestätigung für das Antwortpaket [**Create-Session**](ack-for-create-session.md) identifiziert. Der Server verwendet den Codierungstyp zum Decodieren des Fragments. Alle Fragmente müssen dieselbe Codierung angeben.
+Ersetzen Sie die Codierung durch den Codierungstyp, den der Client für das Fragment verwendet. Der Client muss die Codierung verwenden, die der Server im Accept-Encoding Header des [**Antwortpakets "Ack for Create-Session"**](ack-for-create-session.md) identifiziert. Der Server verwendet den Codierungstyp, um das Fragment zu decodieren. Alle Fragmente müssen dieselbe Codierung angeben.
 
-Senden Sie diesen Header nicht, wenn der Codierungstyp Identity ist. Der BITS-Server unterstützt nur die Identitäts Codierung.
+Senden Sie diesen Header nicht, wenn der Codierungstyp Identity lautet. Der BITS-Server unterstützt nur die Identitätscodierung.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Fragment ist ein Bereich von Bytes, die im Text des Pakets gesendet werden. Der Client sendet die Fragmente in sequenzieller Reihenfolge, beginnend mit Offset 0; der Server verfolgt nicht zusammenhängende Bereiche nach. Wenn der Client nicht zusammenhängende Bereiche sendet, gibt der Server in der Bestätigung [**für die fragmentantwort**](ack-for-fragment.md) einen HTTP 416-Rückgabecode (Bereichs-nicht-satis-fähig) zurück.
+Das Fragment ist ein Bytebereich, der im Text des Pakets gesendet wird. Der Client sendet die Fragmente in sequenzieller Reihenfolge, beginnend mit Offset 0 (null). Der Server verfolgt nicht zusammenhängende Bereiche nicht nach. Wenn der Client nicht zusammenhängende Bereiche sendet, gibt der Server einen HTTP 416-Rückgabecode (range-not-satisfiable) in der Antwort [**"Ack for Fragment"**](ack-for-fragment.md) zurück.
 
-Die Content-*xxxx* -Header sind HTTP 1,1-Standard Header. Weitere Informationen zu den Content-*xxxx* -Headern finden Sie in der Spezifikation von [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) .
+Die *Content-xxxx-Header* sind HTTP 1.1-Standardheader. Weitere Informationen zu den *Content-xxxx-Headern* finden Sie in der [RFC 2616-Spezifikation.](https://www.ietf.org/rfc/rfc2616.txt)
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Bestätigung für Fragment**](ack-for-fragment.md)
+[**Ack für Fragment**](ack-for-fragment.md)
 </dt> <dt>
 
 [**Sitzung schließen**](close-session.md)
@@ -109,9 +109,9 @@ Die Content-*xxxx* -Header sind HTTP 1,1-Standard Header. Weitere Informationen 
 [**Create-Session**](create-session.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

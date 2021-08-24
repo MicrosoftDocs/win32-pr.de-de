@@ -1,19 +1,19 @@
 ---
-description: Unterstützung für rohdatenverarbeitungs Modus für das Audiogerät. Wenn Variant \_ true, unterstützt das Gerät den rohverarbeitungs Modus.
+description: Unterstützung des Rohverarbeitungsmodus für das Audiogerät. Bei VARIANT \_ TRUE unterstützt das Gerät den Rohdatenverarbeitungsmodus.
 ms.assetid: c78cf43d-f60d-48a0-9957-f821f0229dfa
 title: System.Devices.AudioDevice.RawProcessingSupported
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f3b4ea1c48c7fa642f7a169f758ebb0b9671333
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2af714cbe40fe754b5d386b3f45f5ee79a38a6d561835e7d3779f14e9d8dbe00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119097879"
 ---
 # <a name="systemdevicesaudiodevicerawprocessingsupported"></a>System.Devices.AudioDevice.RawProcessingSupported
 
-Unterstützung für rohdatenverarbeitungs Modus für das Audiogerät. Wenn Variant \_ true, unterstützt das Gerät den rohverarbeitungs Modus.
+Unterstützung des Rohverarbeitungsmodus für das Audiogerät. Bei VARIANT \_ TRUE unterstützt das Gerät den Rohdatenverarbeitungsmodus.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1
 
@@ -31,54 +31,54 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

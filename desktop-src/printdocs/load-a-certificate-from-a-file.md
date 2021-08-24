@@ -1,24 +1,24 @@
 ---
-description: In diesem Thema wird beschrieben, wie Sie ein Zertifikat aus einer Zertifikatsdatei laden.
+description: In diesem Thema wird beschrieben, wie Sie ein Zertifikat aus einer Zertifikatdatei laden.
 ms.assetid: 60cced55-9fcc-4fce-a462-7abf3f4466f0
 title: Laden eines Zertifikats aus einer Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c708fb042ccdf4acd43986de1404f9ccb266148
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e73161b133fec74478643baa8453421130b3f3ad18ff4e75429d79b3312919b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359550"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119099094"
 ---
 # <a name="load-a-certificate-from-a-file"></a>Laden eines Zertifikats aus einer Datei
 
-In diesem Thema wird beschrieben, wie Sie ein Zertifikat aus einer Zertifikatsdatei laden.
+In diesem Thema wird beschrieben, wie Sie ein Zertifikat aus einer Zertifikatdatei laden.
 
-So laden Sie ein Zertifikat aus einer Zertifikatsdatei
+So laden Sie ein Zertifikat aus einer Zertifikatdatei
 
-1.  Öffnen Sie die Zertifikat Datei für den Lesezugriff.
-2.  Lesen Sie den Inhalt der Zertifikatsdatei in den Zertifikat Puffer.
+1.  Öffnen Sie die Zertifikatdatei für den Lesezugriff.
+2.  Lesen Sie den Inhalt der Zertifikatdatei in den Zertifikatpuffer.
 3.  Erstellen Sie ein Zertifikat mit dem Inhalt des Puffers.
 
 
@@ -98,16 +98,16 @@ if (NULL != certFileHandle) CloseHandle(certFileHandle);
 **Next Steps**
 </dt> <dt>
 
-[Überprüfen, ob das System eine Digest-Methode unterstützt](verify-a-certificate-supports-a-digest-method.md)
+[Überprüfen, ob das System eine Digestmethode unterstützt](verify-a-certificate-supports-a-digest-method.md)
 </dt> <dt>
 
-[Überprüfen, ob ein Zertifikat eine Signatur Methode unterstützt](verify-a-certificate-supports-a-signature-method.md)
+[Überprüfen, ob ein Zertifikat eine Signaturmethode unterstützt](verify-a-certificate-supports-a-signature-method.md)
 </dt> <dt>
 
-[Einbinden von Zertifikat Ketten in ein Dokument](embedding-certificate-trust-chains-in-a-document.md)
+[Einbetten von Zertifikatketten in ein Dokument](embedding-certificate-trust-chains-in-a-document.md)
 </dt> <dt>
 
-**In diesem Beispiel verwendet**
+**Wird in diesem Beispiel verwendet**
 </dt> <dt>
 
 [**CreateFile**](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
@@ -116,22 +116,22 @@ if (NULL != certFileHandle) CloseHandle(certFileHandle);
 [**ReadFile**](/windows/desktop/api/fileapi/nf-fileapi-readfile)
 </dt> <dt>
 
-[**Certkreatecertifi-Econtext**](/windows/desktop/api/wincrypt/nf-wincrypt-certcreatecertificatecontext)
+[**CertCreateCertificateContext**](/windows/desktop/api/wincrypt/nf-wincrypt-certcreatecertificatecontext)
 </dt> <dt>
 
 **Weitere Informationen**
 </dt> <dt>
 
-[Kryptografieapi](/windows/desktop/SecCrypto/cryptography-portal)
+[Kryptografie-API](/windows/desktop/SecCrypto/cryptography-portal)
 </dt> <dt>
 
 [Kryptografiefunktionen](/windows/desktop/SecCrypto/cryptography-functions)
 </dt> <dt>
 
-[XPS-Fehler bei der digitalen Signatur-API](xps-digital-signatures-errors.md)
+[XPS Digital Signature-API-Fehler](xps-digital-signatures-errors.md)
 </dt> <dt>
 
-[XPS-Dokument Fehler](xps-document-errors.md)
+[XPS-Dokumentfehler](xps-document-errors.md)
 </dt> <dt>
 
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

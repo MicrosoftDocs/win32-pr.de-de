@@ -1,9 +1,9 @@
 ---
-title: namedqueries (ProviderType)-Element
-description: Nicht verwendet. Definiert eine Liste benannter Abfragen, die die Ereignis Meldungs Zeichenfolge nach einem Wert Abfragen und eine angegebene Aktion ausführen, sofern gefunden. | namedqueries (ProviderType)-Element
+title: namedQueries (ProviderType)-Element
+description: Wird nicht verwendet. Definiert eine Liste benannter Abfragen, die die Ereignismeldungszeichenfolge nach einem Wert abfragen und eine angegebene Aktion ausführen, falls gefunden. | namedQueries (ProviderType)-Element
 ms.assetid: 9b45838e-aad0-4ebe-99d1-7864af07f35c
 keywords:
-- namedqueries-Element EventLog
+- namedQueries-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f4bad822cc427e9e59b15474fa893cde0a6323ce
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 5b1abc232d8efd3943bae59959d9f9aca22252e044c31afc0c46580f22c03f6b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136303"
 ---
-# <a name="namedqueries-providertype-element"></a>namedqueries (ProviderType)-Element
+# <a name="namedqueries-providertype-element"></a>namedQueries (ProviderType)-Element
 
-Nicht verwendet. Definiert eine Liste benannter Abfragen, die die Ereignis Meldungs Zeichenfolge nach einem Wert Abfragen und eine angegebene Aktion ausführen, sofern gefunden.
+Wird nicht verwendet. Definiert eine Liste benannter Abfragen, die die Ereignismeldungszeichenfolge nach einem Wert abfragen und eine angegebene Aktion ausführen, falls gefunden.
 
 ``` syntax
 <xs:element name="namedQueries"
@@ -30,7 +30,7 @@ Nicht verwendet. Definiert eine Liste benannter Abfragen, die die Ereignis Meldu
  />
 ```
 
-Das **namedqueries** -Element wird durch den komplexen [**ProviderType**](eventmanifestschema-providertype-complextype.md) -Typ definiert.
+Das **namedQueries-Element** wird durch den komplexen [**ProviderType-Typ**](eventmanifestschema-providertype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,19 +38,19 @@ Das **namedqueries** -Element wird durch den komplexen [**ProviderType**](eventm
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Anbieter (eventstype)**](eventmanifestschema-provider-eventstype-element.md)
+[**provider (EventsType)**](eventmanifestschema-provider-eventstype-element.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: LVM_GETTILEINFO Meldung (kommstrg. h)
+title: LVM_GETTILEINFO Meldung (Commctrl.h)
 description: Ruft Informationen zu einer Kachel in einem Listenansicht-Steuerelement ab.
 ms.assetid: e89a3eae-0970-488c-ba95-1072aa85bbf4
 keywords:
-- Windows-Steuerelemente für LVM_GETTILEINFO Meldung
+- LVM_GETTILEINFO Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: db5bfd085cd5cbaced0bf90b17e8862a6c0e159b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8141b3a39c47966348dfd823b557c1b0af4cca84a90ba979a358d6ac0eaa4757
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040887"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119079034"
 ---
-# <a name="lvm_gettileinfo-message"></a>LVM \_ gettileinfo-Nachricht
+# <a name="lvm_gettileinfo-message"></a>LVM \_ GETTILEINFO-Nachricht
 
 Ruft Informationen zu einer Kachel in einem Listenansicht-Steuerelement ab.
 
@@ -33,18 +33,18 @@ Ruft Informationen zu einer Kachel in einem Listenansicht-Steuerelement ab.
 </dt> <dd>Muss Null sein.</dd> <dt>
 
 *lParam* 
-</dt> <dd>Ein Zeiger auf eine <a href="/windows/win32/api/commctrl/ns-commctrl-lvtileinfo">**lvtileinfo**</a> -Struktur, die die abgerufenen Informationen empfängt.</dd> </dl>
+</dt> <dd>Zeiger auf eine <a href="/windows/win32/api/commctrl/ns-commctrl-lvtileinfo">**LVTILEINFO-Struktur,**</a> die die abgerufenen Informationen empfängt.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert wird nicht verwendet.
+Rückgabewert nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Kachel Ansicht ist eine neue Methode zum Anordnen und Anzeigen von Elementen in einem Listenansicht-Steuerelement. Die anderen Ansichten sind Icon, Small Icon, Details und List.
+Die Kachelansicht ist eine neue Möglichkeit zum Anordnen und Anzeigen von Elementen in einem Listenansichtssteuerelement. Die anderen Ansichten sind Symbol, kleines Symbol, Details und Liste.
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung verwenden zu können, müssen Sie ein Manifest angeben, das Comclt32.dll Version 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -54,9 +54,9 @@ Die Kachel Ansicht ist eine neue Methode zum Anordnen und Anzeigen von Elementen
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

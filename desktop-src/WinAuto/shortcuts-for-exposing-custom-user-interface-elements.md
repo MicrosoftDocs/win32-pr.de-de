@@ -1,33 +1,33 @@
 ---
-title: Verknüpfungen zum verfügbar machen von benutzerdefinierten Benutzeroberflächen Elementen
-description: In diesem Abschnitt werden Tastenkombinationen beschrieben, die Anwendungsentwickler verwenden können, um bestimmte Arten von benutzerdefinierten Benutzeroberflächen Elementen verfügbar zu machen.
+title: Verknüpfungen zum Verfügbar machen von benutzerdefinierten Benutzeroberfläche Elementen
+description: In diesem Abschnitt werden Verknüpfungen beschrieben, mit denen Anwendungsentwickler bestimmte Arten benutzerdefinierter Benutzeroberflächenelemente verfügbar machen können.
 ms.assetid: 024e1bfd-8cc2-4839-82ae-bd05dfec6449
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 02f5fe1943f6a7b6a44bef2e9243d1da6d55f970
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 90a3663562ca3ca48e22ae4dff6dbceab5a20b0a8453f6fd17cbb6b0439d0db0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388624"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133673"
 ---
-# <a name="shortcuts-for-exposing-custom-user-interface-elements"></a>Verknüpfungen zum verfügbar machen von benutzerdefinierten Benutzeroberflächen Elementen
+# <a name="shortcuts-for-exposing-custom-user-interface-elements"></a>Verknüpfungen zum Verfügbar machen von benutzerdefinierten Benutzeroberfläche Elementen
 
-In diesem Abschnitt werden Tastenkombinationen beschrieben, die Anwendungsentwickler verwenden können, um bestimmte Arten von benutzerdefinierten Benutzeroberflächen Elementen verfügbar zu machen. Die in diesem Abschnitt beschriebenen Techniken vereinfachen entweder die Implementierung der [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle oder bieten eine Alternative zum verfügbar machen von Informationen ohne die Implementierung von **IAccessible**.
+In diesem Abschnitt werden Verknüpfungen beschrieben, mit denen Anwendungsentwickler bestimmte Arten benutzerdefinierter Benutzeroberflächenelemente verfügbar machen können. Die in diesem Abschnitt beschriebenen Techniken vereinfachen entweder die Implementierung der [**IAccessible-Schnittstelle**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) oder stellen eine Alternative zum Verfügbar machen von Informationen ohne Implementierung von **IAccessible dar.**
 
 > [!Note]  
-> Sie sollten die Verwendung einer dynamischen Anmerkung (Direct, Value Map oder Server) in Erwägung gezogen, bevor Sie die in diesem Abschnitt beschriebenen Verfahren ausführen. Weitere Informationen finden Sie unter [Dynamic Annotation-API](dynamic-annotation-api.md).
+> Sie sollten erwägen, eine Form der dynamischen Anmerkung (Direkt, Wertzuordnung oder Server) zu verwenden, bevor Sie die in diesem Abschnitt beschriebenen Techniken verwenden. Weitere Informationen finden Sie unter [Api für dynamische Anmerkungen.](dynamic-annotation-api.md)
 
- 
+ 
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Verfügbar machen von Steuerelementen basierend auf System Steuerelementen](exposing-controls-based-on-system-controls.md)
--   [Bezeichnen von Owner-Drawn Steuerelementen](labeling-owner-drawn-controls.md)
+-   [Verfügbar machen von Steuerelementen basierend auf Systemsteuerelementen](exposing-controls-based-on-system-controls.md)
+-   [Bezeichnungssteuerelemente Owner-Drawn Steuerelementen](labeling-owner-drawn-controls.md)
 
- 
+ 
 
- 
+ 
 
 
 

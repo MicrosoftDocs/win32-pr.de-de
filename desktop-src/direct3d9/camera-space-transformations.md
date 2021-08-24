@@ -1,54 +1,54 @@
 ---
-description: Scheitel Punkte im Kamerabereich werden berechnet, indem die Objekt Scheitel Punkte mit der World View Matrix transformiert werden.
+description: Scheitelpunkte im Kameraraum werden berechnet, indem die Objektvertices mit der Weltansichtsmatrix transformiert werden.
 ms.assetid: 889dd0d8-1933-4901-9bbc-06c3caa26d3e
-title: Kamera Raum Transformationen (Direct3D 9)
+title: Kameraraumtransformationen (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e621fa8318fa45023cee13ffc6fcfc65abcf8f5b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: effb7af72decad711d9fc392e53f7aba05f48b3c69394dbfb3ae5f9f06e2def7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126884"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119241850"
 ---
-# <a name="camera-space-transformations-direct3d-9"></a>Kamera Raum Transformationen (Direct3D 9)
+# <a name="camera-space-transformations-direct3d-9"></a>Kameraraumtransformationen (Direct3D 9)
 
-Scheitel Punkte im Kamerabereich werden berechnet, indem die Objekt Scheitel Punkte mit der World View Matrix transformiert werden.
+Scheitelpunkte im Kameraraum werden berechnet, indem die Objektvertices mit der Weltansichtsmatrix transformiert werden.
 
-V = v \* wvmatrix
+V = V \* wvMatrix
 
-Vertex-Normale werden im Kamerabereich berechnet, indem die Objekt normale mit der umgekehrten Umwandlung der World View Matrix transformiert werden. Die World View Matrix ist möglicherweise orthogonal.
+Vertexnormalen werden im Kameraraum berechnet, indem die Objektnormalen mit der umgekehrten Transponierung der Weltansichtsmatrix transformiert werden. Die Weltansichtsmatrix kann orthogonal sein.
 
-N = n \* (wvmatrix ⁻ ¹)<sup>T</sup>
+N = N \* (wvMatrix⁻¹)<sup>T</sup>
 
-Die Matrix-Inversion und die Matrix werden in einer 4 x 4-Matrix verarbeitet. Das Multiplizieren kombiniert den normalen mit dem 3X3-Teil der resultierenden 4 x 4-Matrix.
+Die Matrixumkehr und matrix transponieren arbeiten mit einer 4x4-Matrix. Die Multiplikation kombiniert die Normale mit dem 3x3-Teil der resultierenden 4x4-Matrix.
 
-Wenn der Rendering-Zustand, D3DRENDERSTATE \_ normalizenormals auf **true** festgelegt ist, werden Scheitelpunkt normale Vektoren nach der Transformation wie folgt normalisiert:
+Wenn der Renderzustand D3DRENDERSTATE \_ NORMALIZENORMALS auf **TRUE** festgelegt ist, werden vertexnormale Vektoren nach der Transformation in den Kameraraum wie folgt normalisiert:
 
-N = Norm (n)
+N = norm(N)
 
-Die helle Position im Kamerabereich wird berechnet, indem die Licht Quell Position mit der Ansichts Matrix transformiert wird.
+Die Lichtposition im Kameraraum wird berechnet, indem die Position der Lichtquelle mit der Ansichtsmatrix transformiert wird.
 
-LP = LP- \* vmatrix
+Lp = Lp \* vMatrix
 
-Die Richtung des Lichts im Kamera Raum für ein Direktionales Licht wird berechnet, indem die Lichtquellen Richtung der Ansichts Matrix multipliziert, das Ergebnis normalisiert und nealisiert wird.
+Die Richtung zum Licht im Kameraraum für ein gerichtetes Licht wird berechnet, indem die Lichtquellenrichtung mit der Ansichtsmatrix multipliziert, normalisiert und das Ergebnis negiert wird.
 
-L<sub>dir</sub> =-Norm (l<sub>dir</sub> \* wvmatrix)
+L<sub>dir</sub> = -norm(L<sub>dir</sub> \* wvMatrix)
 
-Für D3DLIGHT \_ Point und D3DLIGHT \_ wird die Richtung "Light" wie folgt berechnet:
+Für D3DLIGHT \_ POINT und D3DLIGHT \_ SPOT wird die Richtung zum Licht wie folgt berechnet:
 
-L<sub>dir</sub> = Norm (V \* LP), wobei die Parameter in der folgenden Tabelle definiert sind.
+L<sub>dir</sub> = norm(V \* Lp), wobei die Parameter in der folgenden Tabelle definiert sind.
 
 
 
-| Parameter       | Standardwert | type      | BESCHREIBUNG                                               |
+| Parameter       | Standardwert | Typ      | Beschreibung                                               |
 |-----------------|---------------|-----------|-----------------------------------------------------------|
-| L-<sub>dir</sub> | –           | D3DVECTOR | Richtung Vektor vom Objekt Scheitelpunkt zum Licht          |
-| V               | –           | D3DVECTOR | Scheitelpunkt Position im Kamerabereich                           |
-| wvmatrix        | Identity      | D3DMATRIX | Zusammengesetzte Matrix mit Transformationen der Welt und Ansicht |
-| N               | –           | D3DVECTOR | Scheitelpunkt normal                                             |
-| LP              | –           | D3DVECTOR | Helle Position im Kamerabereich                            |
-| vmatrix         | Identity      | D3DMATRIX | Matrix mit der Ansichts Transformation                      |
+| L<sub>dir</sub> | Nicht zutreffend           | D3DVECTOR | Richtungsvektor vom Objektvertex zum Licht          |
+| V               | Nicht zutreffend           | D3DVECTOR | Vertexposition im Kameraraum                           |
+| wvMatrix        | Identität      | D3DMATRIX | Zusammengesetzte Matrix, die die Welt- und Ansichtstransformationen enthält |
+| N               | Nicht zutreffend           | D3DVECTOR | Vertex normal                                             |
+| Lp              | Nicht zutreffend           | D3DVECTOR | Lichtposition im Kameraraum                            |
+| vMatrix         | Identität      | D3DMATRIX | Matrix, die die Ansichtstransformation enthält                      |
 
 
 

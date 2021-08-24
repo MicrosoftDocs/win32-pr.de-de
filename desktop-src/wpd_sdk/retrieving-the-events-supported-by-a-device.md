@@ -4,16 +4,16 @@ ms.assetid: 951b300f-03de-4a3d-9356-e3a7b5b17fdb
 title: Abrufen der von einem Gerät unterstützten Ereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a542a34d0938c7e2ff86118818714f18b1224f7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4e0e24b5a4424d03c916ca73fd0192f9b6de0a80b6a2e2e67a129deb832f7bd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530251"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119263120"
 ---
 # <a name="retrieving-the-events-supported-by-a-device"></a>Abrufen der von einem Gerät unterstützten Ereignisse
 
-Einige WPD-Treiber unterstützen die Ereignis Benachrichtigung. Dies bedeutet, dass eine Anwendung beim Treiber registriert werden kann, um eine Benachrichtigung zu erhalten, wenn eine bestimmte Aktion erfolgt. Beispielsweise kann eine Anwendung registrieren, um eine Benachrichtigung zu erhalten, wenn ein Objekt hinzugefügt oder entfernt wird.
+Einige WPD-Treiber unterstützen Ereignisbenachrichtigungen. Dies bedeutet, dass sich eine Anwendung beim Treiber registrieren kann, um eine Benachrichtigung zu erhalten, wenn eine bestimmte Aktion auftritt. Beispielsweise kann sich eine Anwendung registrieren, um eine Benachrichtigung zu erhalten, wenn ein Objekt hinzugefügt oder entfernt wird.
 
 Es gibt zehn vordefinierte Ereignisse, die eine Anwendung überwachen kann. Diese werden in der folgenden Tabelle beschrieben.
 
@@ -21,37 +21,37 @@ Es gibt zehn vordefinierte Ereignisse, die eine Anwendung überwachen kann. Dies
 
 | Ereignis                       | BESCHREIBUNG                                                                                                                            |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| Gerätefunktionen aktualisiert | Tritt auf, wenn sich die Gerätefunktionen geändert haben.                                                                                      |
-| Gerät entfernt              | Tritt auf, wenn das Gerät getrennt ist.                                                                                                   |
-| Gerät zurücksetzen                | Tritt auf, wenn das Gerät zurückgesetzt wurde.                                                                                                 |
-| Objekt hinzugefügt                | Tritt auf, nachdem ein neues-Objekt auf dem Gerät verfügbar ist.                                                                             |
-| Objekt entfernt              | Tritt auf, nachdem ein Objekt vom Gerät entfernt wurde.                                                                               |
-| Objekt Übertragung angefordert   | Gibt an, dass für die Übertragung eines Objekts eine Anforderung durchgeführt wurde.                                                                          |
-| Objekt aktualisiert              | Tritt auf, nachdem entweder ein-Objekt oder seine untergeordneten Elemente aktualisiert wurden. (Verbundene Clients sollten dann Ihre Ansicht des angegebenen Objekts aktualisieren.) |
-| Speicherformat wird ausgeführt  | Tritt auf, wenn der Gerätespeicher formatiert wird.                                                                                     |
+| Gerätefunktionen aktualisiert | Tritt ein, wenn sich die Gerätefunktionen geändert haben.                                                                                      |
+| Gerät entfernt              | Tritt ein, wenn das Gerät nicht angeschlossen ist.                                                                                                   |
+| Gerät zurücksetzen                | Tritt ein, wenn das Gerät zurückgesetzt wurde.                                                                                                 |
+| Objekt hinzugefügt                | Tritt ein, nachdem ein neues -Objekt auf dem Gerät verfügbar wird.                                                                             |
+| Objekt entfernt              | Tritt ein, nachdem ein Objekt vom Gerät entfernt wurde.                                                                               |
+| Objektübertragung angefordert   | Gibt an, dass eine Anforderung zum Übertragen eines Objekts gestellt wurde.                                                                          |
+| Objekt aktualisiert              | Tritt ein, nachdem entweder ein Objekt oder dessen untere Objekte aktualisiert wurden. (Verbundene Clients sollten dann ihre Ansicht des angegebenen Objekts aktualisieren.) |
+| Storage in Bearbeitung  | Tritt auf, wenn der Gerätespeicher formatiert wird.                                                                                     |
 
 
 
  
 
-Eine Liste der Konstanten, die diesen Ereignissen zugeordnet sind, finden Sie im Thema [Ereignis Konstanten](event-constants.md) .
+Eine Liste der Konstanten, die diesen Ereignissen zugeordnet sind, finden Sie im [Thema Ereigniskonst](event-constants.md) konstanten.
 
-Die "listsupportedevents"-Funktion im Modul "devicecapabili. cpp" veranschaulicht das Abrufen von Ereignissen, die von einem bestimmten Gerät unterstützt werden.
+Die ListSupportedEvents-Funktion im DeviceCapabilities.cpp-Modul veranschaulicht das Abrufen von Ereignissen, die von einem bestimmten Gerät unterstützt werden.
 
-Die Anwendung kann die Bezeichner für Ereignisse abrufen, die von einem Gerät unterstützt werden, und zwar mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen.
+Ihre Anwendung kann die Bezeichner für Ereignisse abrufen, die von einem Gerät mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen unterstützt werden.
 
 
 
 | Schnittstelle                                                                                      | BESCHREIBUNG                                               |
 |------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| [**Iportabledebug-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)                   | Bietet Zugriff auf die unterstützten Ereignis Abruf Methoden. |
-| [**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird zum Auflisten und Speichern von funktionalen Kategorieinformationen verwendet.     |
+| [**IPortableDeviceCapabilities-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)                   | Bietet Zugriff auf die unterstützten Ereignisabrufmethoden. |
+| [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird zum Aufzählen und Speichern von Daten der Funktionalen Kategorie verwendet.     |
 
 
 
  
 
-Die erste Aufgabe, die von der Beispielanwendung durchgeführt wird, ist das Abrufen eines [**iportabledevicecapabili-**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities) Objekts, das verwendet wird, um die vom jeweiligen Gerät unterstützten Ereignisse abzurufen.
+Die erste Aufgabe, die von der Beispielanwendung ausgeführt wird, ist das Abrufen eines [**IPortableDeviceCapabilities-Objekts,**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities) das zum Abrufen der vom angegebenen Gerät unterstützten Ereignisse verwendet wird.
 
 
 ```C++
@@ -78,7 +78,7 @@ if (FAILED(hr))
 
 
 
-Die unterstützten Ereignisse werden durch Aufrufen der [**iportabledevicecapabili:: getsupportedevents**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecapabilities-getsupportedevents) -Methode abgerufen. Diese Methode ruft eine Auflistung der Ereignis Bezeichner für das angegebene Gerät ab und speichert Sie in einem [**iportabledevicepropvariantcollection**](iportabledevicepropvariantcollection.md) -Objekt, auf das durch das Peer Vents-Argument verwiesen wird.
+Die unterstützten Ereignisse werden durch Aufrufen der [**IPortableDeviceCapabilities::GetSupportedEvents-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecapabilities-getsupportedevents) abgerufen. Diese Methode ruft eine Auflistung von Ereignisbezeichnern für das gegebene Gerät ab und speichert sie in einem [**IPortableDevicePropVariantCollection-Objekt,**](iportabledevicepropvariantcollection.md) auf das das pEvents-Argument verweist.
 
 
 ```C++
@@ -94,7 +94,7 @@ if (SUCCEEDED(hr))
 
 
 
-Der nächste Schritt besteht darin, die Anzahl der unterstützten Ereignisse abzurufen, sodass die Anwendung das [**iportabledevicepropvariantcollection**](iportabledevicepropvariantcollection.md) -Objekt durchlaufen und den Bezeichner für jede abrufen kann.
+Der nächste Schritt besteht im Abrufen der Anzahl der unterstützten Ereignisse, damit die Anwendung das [**IPortableDevicePropVariantCollection-Objekt**](iportabledevicepropvariantcollection.md) durch iterieren und den Bezeichner für die einzelnen Ereignisse abrufen kann.
 
 
 ```C++
@@ -144,16 +144,16 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[**Ereignis Konstanten**](event-constants.md)
+[**Ereigniskonst constants**](event-constants.md)
 </dt> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledebug-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)
+[**IPortableDeviceCapabilities-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecapabilities)
 </dt> <dt>
 
-[**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
+[**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

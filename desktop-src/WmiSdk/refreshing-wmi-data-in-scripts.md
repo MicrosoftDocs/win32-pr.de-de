@@ -1,28 +1,28 @@
 ---
-description: In Überwachungs Skripts können Sie nachfolgende Aufrufe von GetObject vermeiden, indem Sie ein "Swap-Aktualisierungs"-Objekt verwenden. Das taubemaktualisierungs-Objekt ist ein Container, der mehrere WMI-Objekte enthalten kann, deren Daten mit einem einzigen-Befehl aktualisiert werden können.
+description: In Überwachungsskripts können Sie aufeinanderfolgende Aufrufe von GetObject vermeiden, indem Sie ein SWbemRefresher-Objekt verwenden. Das SWbemRefresher-Objekt ist ein Container, der mehrere WMI-Objekte enthalten kann, deren Daten in einem Aufruf aktualisiert werden können.
 ms.assetid: b34567f5-9349-4580-97d5-723759805d88
 ms.tgt_platform: multiple
 title: Aktualisieren von WMI-Daten in Skripts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae0f17ce718fcf5b57e4f3204337634af4129d24
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 969a97c6300ac256e08c79e4f4aaeaa8d05bda072a2c310812ce3b2061c791fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119050448"
 ---
 # <a name="refreshing-wmi-data-in-scripts"></a>Aktualisieren von WMI-Daten in Skripts
 
-In Überwachungs Skripts können Sie nachfolgende Aufrufe von **GetObject** vermeiden, indem Sie ein " [**Swap**](swbemrefresher.md) -Aktualisierungs"-Objekt verwenden. Das **taubemaktualisierungs** -Objekt ist ein Container, der mehrere WMI-Objekte enthalten kann, deren Daten mit einem einzigen-Befehl aktualisiert werden können.
+In Überwachungsskripts können Sie aufeinanderfolgende Aufrufe von **GetObject vermeiden,** indem Sie ein [**SWbemRefresher-Objekt**](swbemrefresher.md) verwenden. Das **SWbemRefresher-Objekt** ist ein Container, der mehrere WMI-Objekte enthalten kann, deren Daten in einem Aufruf aktualisiert werden können.
 
-Zum Abrufen präziser Daten von WMI-Leistungsklassen, wie z. b. [**Win32 \_ perfformatteddata \_ perfdisk \_ LogicalDisk**](./retrieving-raw-and-formatted-performance-data.md) oder anderer vorinstallierter, von [**Win32 \_ perf**](/windows/desktop/CIMWin32Prov/win32-perf)abgeleiteter Klassen, ist das Verwenden eines " [**Swap**](swbemrefresher.md) "-Objekts erforderlich.
+Die Verwendung [**eines SWbemRefresher-Objekts**](swbemrefresher.md) ist erforderlich, um genaue Daten aus WMI-Leistungsklassen wie [**Win32 \_ PerfFormattedData \_ PerfDisk \_ LogicalDisk**](./retrieving-raw-and-formatted-performance-data.md) oder anderen vorinstallierten Klassen zu erhalten, die von [**Win32 \_ Perf abgeleitet werden.**](/windows/desktop/CIMWin32Prov/win32-perf)
 
-Im folgenden Verfahren wird beschrieben, wie Daten in-Skripts aktualisiert werden.
+Im folgenden Verfahren wird beschrieben, wie Daten in Skripts aktualisiert werden.
 
 **So aktualisieren Sie Daten in Skripts**
 
-1.  Rufen Sie " **kreateobject** " auf, um ein Metadatenobjekt für " [**Swap**](swbemrefresher.md) .
+1.  Rufen **Sie CreateObject** auf, um ein [**SWbemRefresher-Aktualisierungsobjekt**](swbemrefresher.md) zu erstellen.
 
     ```VB
     Set objRefresher = CreateObject("WbemScripting.SWbemRefresher")
@@ -30,7 +30,7 @@ Im folgenden Verfahren wird beschrieben, wie Daten in-Skripts aktualisiert werde
 
     
 
-2.  Stellen Sie eine Verbindung zum WMI-Namespace her. Stellen Sie eine Verbindung mit **root \\ CIMV2** her, um vorinstallierte [**Win32 \_ perf**](/windows/desktop/CIMWin32Prov/win32-perf) -Leistungsklassen zu verwenden.
+2.  Verbinden in den WMI-Namespace. Um vorinstallierte [**Win32 \_ Perf-Klassen zu**](/windows/desktop/CIMWin32Prov/win32-perf) verwenden, stellen Sie eine Verbindung mit dem Stamm **\\ cimv2 auf.**
 
     ```VB
     Set objServicesCimv2 = GetObject("winmgmts:\\" _
@@ -39,9 +39,9 @@ Im folgenden Verfahren wird beschrieben, wie Daten in-Skripts aktualisiert werde
 
     
 
-3.  Fügen Sie ein einzelnes-Objekt (Aufrufen von " [**slibemaktualisierungs-. Add**](swbemrefresher-add.md)") oder eine Auflistung (Aufrufen von " [**slibemaktualisierungs. AddEnum**](swbemrefresher-addenum.md)") zum Aktualisierungs Programm hinzu.
+3.  Fügen Sie ein einzelnes -Objekt (rufen [**Sie SWbemRefresher.Add**](swbemrefresher-add.md)auf) oder eine -Auflistung (rufen [**Sie SWbemRefresher.AddEnum**](swbemrefresher-addenum.md)auf) zur Aktualisierung hinzu.
 
-    Verwenden Sie die von [**Win32 \_ perfformatteddata**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata)abgeleiteten vorab berechneten Daten Klassen, z. b. [**Win32 \_ perfformatteddata \_ perfdisk \_ LogicalDisk**](./retrieving-raw-and-formatted-performance-data.md) anstelle von [**Win32 \_ perfrawdata \_ perfdisk \_ LogicalDisk**](./retrieving-raw-and-formatted-performance-data.md). Andernfalls müssen Sie die Werte für alle Eigenschaften berechnen, die keine einfachen Leistungsindikatoren sind.
+    Verwenden Sie die vorab berechneten Datenklassen, die von [**Win32 \_ PerfFormattedData**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata)abgeleitet wurden, z. B. [**Win32 \_ PerfFormattedData \_ PerfDisk \_ LogicalDisk**](./retrieving-raw-and-formatted-performance-data.md) anstelle von [**Win32 \_ PerfRawData \_ PerfDisk \_ LogicalDisk.**](./retrieving-raw-and-formatted-performance-data.md) Andernfalls müssen Sie die Werte für alle Eigenschaften berechnen, die keine einfachen Leistungsindikatoren sind.
 
     ```VB
     Set objRefreshableItem = _
@@ -53,7 +53,7 @@ Im folgenden Verfahren wird beschrieben, wie Daten in-Skripts aktualisiert werde
 
 4.  Aktualisieren Sie die Daten einmal, um die anfänglichen Leistungsdaten zu erhalten.
 
-    Rufen Sie entweder die Methode " [**errbemrefresh Sher. Refresh**](swbemrefresher-refresh.md) " oder die generische Methode " [**errbemubjectex. Refresh \_**](swbemobjectex-refresh-.md) " auf.
+    Rufen Sie entweder [**die SWbemRefresher.Refresh-Methode**](swbemrefresher-refresh.md) oder die generische [**SWbemObjectEx.Refresh-Methode \_**](swbemobjectex-refresh-.md) auf.
 
     ```VB
     objRefresher.Refresh
@@ -61,7 +61,7 @@ Im folgenden Verfahren wird beschrieben, wie Daten in-Skripts aktualisiert werde
 
     
 
-5.  Wenn Sie die Leistung überwachen und eine Sammlung im Aktualisierungs Objekt enthalten, durchlaufen Sie die Auflistungs Objekte.
+5.  Wenn Sie die Leistung überwachen und über eine Auflistung im Aktualisierungsobjekt verfügen, führen Sie eine Schleife durch die Auflistungsobjekte.
 
     ```VB
     For Each Process in objRefreshableItem.ObjectSet
@@ -74,9 +74,9 @@ Im folgenden Verfahren wird beschrieben, wie Daten in-Skripts aktualisiert werde
 
     
 
-6.  Löschen Sie die Elemente aus dem Aktualisierungs Programm, indem Sie die Option " [**Swap. DeleteAll**](swbemrefresher-deleteall.md) " aufrufen oder bestimmte Elemente entfernen, indem Sie " [**Swap. Remove**](swbemrefresher-remove.md)" aufrufen.
+6.  Löschen Sie die Elemente aus der Aktualisierung, indem Sie [**SWbemRefresher.DeleteAll**](swbemrefresher-deleteall.md) aufrufen oder bestimmte Elemente entfernen, indem [**Sie SwbemRefresher.Remove aufrufen.**](swbemrefresher-remove.md)
 
-Im folgenden VBScript-Codebeispiel wird gezeigt, wie ein einzelnes Objekt auf dem lokalen Computer aktualisiert wird. Das Skript erstellt einen Aktualisierungs Container und fügt eine Instanz eines Enumerators für [**Win32 \_ perfformatteddata \_ perfproc \_ Process**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) -Instanzen hinzu. Der [**Aktualisierungs**](swbemrefresher-refresh.md) Aufruf wird dreimal durchgeführt, um die Änderungen in der Eigenschaft " **prozentuprocessortime** " für Prozesse zu veranschaulichen, die mehr als einen Prozentsatz der Prozessorzeit verwenden.
+Das folgende VBScript-Codebeispiel zeigt, wie ein einzelnes -Objekt auf dem lokalen Computer aktualisiert wird. Das Skript erstellt einen Aktualisierungscontainer und fügt eine Instanz eines Enumerators für [**Win32 \_ PerfFormattedData \_ PerfProc \_ Process-Instanzen**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) hinzu. Der [**Refresh-Aufruf**](swbemrefresher-refresh.md) wird dreimal vorgenommen, um die Änderungen an der **PercentProcessorTime-Eigenschaft** für Prozesse zu veranschaulichen, die mehr als einen Prozent der Prozessorzeit verwenden.
 
 
 ```VB
@@ -107,19 +107,19 @@ End If
 
 
 
-Die [**Index**](swbemrefreshableitem-index.md) -Eigenschaft des zurückgegebenen " [**taubemfreshableitem**](swbemrefreshableitem.md) "-Objekts stellt den Index des-Objekts in der Aktualisierungs-Auflistung dar. Sie können die Eigenschaft ' [**Swap. isset**](swbemrefreshableitem-isset.md) ' der Eigenschaft ' Swap ' aufzurufen, um zu bestimmen, ob ein Element in einem Aktualisierungs Programm ein einzelnes Element oder eine Auflistung ist. Wenn Sie auf ein einzelnes Element zugreifen möchten, verwenden Sie die Eigenschaft " [**Swap. Object**](swbemrefreshableitem-object.md) ". Wenn Sie den Aufrufvorgang für " **Swap. Object**" nicht durchführen, schlägt das Skript fehl, wenn Sie versuchen, auf das Objekt zuzugreifen. Um auf eine Auflistung zuzugreifen, verwenden Sie die Eigenschaft " [**Swap. ObjectSet**](swbemrefreshableitem-objectset.md) ".
+Die [**Index-Eigenschaft**](swbemrefreshableitem-index.md) des zurückgegebenen [**SWbemRefreshableItem**](swbemrefreshableitem.md) stellt den Index des -Objekts in der Refresher-Auflistung dar. Sie können die [**SWbemRefreshableItem.IsSet-Eigenschaft**](swbemrefreshableitem-isset.md) aufrufen, um zu bestimmen, ob ein Element in einer Aktualisierung ein einzelnes Element oder eine Sammlung ist. Verwenden Sie für den Zugriff auf ein einzelnes Element die [**Eigenschaft SWbemRefreshableItem.Object.**](swbemrefreshableitem-object.md) Wenn Sie **SWbemRefreshableItem.Object** nicht aufrufen, schlägt das Skript fehl, wenn Sie versuchen, auf das Objekt zu zugreifen. Verwenden Sie für den Zugriff auf eine Sammlung die [**Eigenschaft SWbemRefreshableItem.ObjectSet.**](swbemrefreshableitem-objectset.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Leistungs Leistungsdaten-Klassen](/windows/desktop/CIMWin32Prov/performance-counter-classes)
+[Leistungsindikatorklassen](/windows/desktop/CIMWin32Prov/performance-counter-classes)
 </dt> <dt>
 
-[Zugreifen auf Leistungsdaten im Skript](accessing-performance-data-in-script.md)
+[Zugreifen auf Leistungsdaten in Skripts](accessing-performance-data-in-script.md)
 </dt> <dt>
 
-[WMI-Tasks: Leistungsüberwachung](wmi-tasks--performance-monitoring.md)
+[WMI-Aufgaben: Leistungsüberwachung](wmi-tasks--performance-monitoring.md)
 </dt> <dt>
 
 [Überwachen von Leistungsdaten](monitoring-performance-data.md)

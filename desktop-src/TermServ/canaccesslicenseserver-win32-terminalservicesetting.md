@@ -1,12 +1,12 @@
 ---
-title: Canaccesslicenseserver-Methode der Win32_TerminalServiceSetting-Klasse
-description: Canaccesslicenseserver ist nicht mehr verfügbar.
+title: CanAccessLicenseServer-Methode der Win32_TerminalServiceSetting Klasse
+description: CanAccessLicenseServer ist nicht mehr verfügbar.
 ms.assetid: b09fa901-8ae1-431e-8d97-27ee84a84779
 ms.tgt_platform: multiple
 keywords:
-- Canaccesslicenseserver-Methode Remotedesktopdienste
-- Canaccesslicenseserver-Methode Remotedesktopdienste, Win32_TerminalServiceSetting-Klasse
-- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste, canaccesslicenseserver-Methode
+- CanAccessLicenseServer-Remotedesktopdienste
+- CanAccessLicenseServer-Methode Remotedesktopdienste , Win32_TerminalServiceSetting-Klasse
+- Win32_TerminalServiceSetting klasse Remotedesktopdienste , CanAccessLicenseServer-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,23 +17,23 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ffa5bd0e108c0ccceed6890adedea7901834804
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0f0512f42d0d814793f4ecd62fda2dd84005a4183e8db736bd16919799b4570a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119139143"
 ---
-# <a name="canaccesslicenseserver-method-of-the-win32_terminalservicesetting-class"></a>Canaccesslicenseserver-Methode der Win32 \_ terminalservicesetts-Klasse
+# <a name="canaccesslicenseserver-method-of-the-win32_terminalservicesetting-class"></a>CanAccessLicenseServer-Methode der Win32 \_ TerminalServiceSetting-Klasse
 
-\[**Canaccesslicenseserver** ist nicht mehr für die Verwendung ab Windows Server 2008 R2 verfügbar.\]
+\[**CanAccessLicenseServer** ist ab Windows Server 2008 R2 nicht mehr verfügbar.\]
 
-* * Windows Server 2008: * *
+**Windows Server 2008: **
 
-Bestimmt, ob der Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server Remotedesktopdienste Client Zugriffs Lizenzen (RDS-CALs) von einem Remotedesktop Lizenzserver basierend auf folgenden Anforderungen anfordern kann:
+Bestimmt, ob der Remotedesktop-Sitzungshost-Server (RD-Sitzungshost) Remotedesktopdienste-Clientzugriffslizenzen (RDS-CALs) von einem Remotedesktop-Lizenzserver anfordern darf, basierend auf folgendem Code:
 
--   Die Gruppenrichtlinien Einstellung "Lizenzserver-Sicherheitsgruppe" auf dem Remotedesktop-Lizenzserver.
--   Mitgliedschaft in der lokalen Gruppe "Terminal Server Computer" auf dem Lizenz Server.
+-   Die Gruppenrichtlinieneinstellung "Lizenzserversicherheitsgruppe" auf dem Remotedesktop Lizenzserver.
+-   Mitgliedschaft in der lokalen Gruppe Terminalservercomputer auf dem Lizenzserver.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,17 +51,17 @@ uint32 CanAccessLicenseServer(
 
 <dl> <dt>
 
-*Servername* \[ in\]
+*ServerName* \[ In\]
 </dt> <dd>
 
 Der Name des Remotedesktop Lizenzservers.
 
 </dd> <dt>
 
-*AccessAllowed* \[ vorgenommen\]
+*AccessAllowed* \[ out\]
 </dt> <dd>
 
-Gibt an, ob der RD-Sitzungshost Server RDS-CALs vom Lizenzserver anfordern darf.
+Gibt an RD-Sitzungshost ob der RD-Sitzungshost RDS-CALs vom Lizenzserver anfordern darf.
 
 <dt>
 
@@ -81,13 +81,13 @@ Die Anforderung ist nicht zulässig.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **S \_ OK** zurück, wenn der RD-Sitzungshost Server Zugriff auf den Lizenzserver hat. Gibt **" \_ false** " zurück, wenn der RD-Sitzungshost Server keinen Zugriff auf den Lizenzserver hat.
+Gibt **S \_ OK zurück,** wenn RD-Sitzungshost Server Zugriff auf den Lizenzserver hat. Gibt **S \_ FALSE zurück,** RD-Sitzungshost Server keinen Zugriff auf den Lizenzserver hat.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit der Richtlinien Einstellung "Lizenzserver-Sicherheitsgruppe" können Sie die RD-Sitzungshost Server angeben, die den Lizenzserver zum Abrufen von RDS-CALs kontaktieren dürfen. Wenn die Richtlinien Einstellung auf dem Lizenzserver aktiviert ist, antwortet der Lizenzserver nur auf RDS-Client Zugriffs Anforderungen von RD-Sitzungshost Servern, deren Computer Konten Mitglied der lokalen Gruppe "Terminal Server Computer" auf dem Lizenzserver sind.
+Mit der Richtlinieneinstellung "Lizenzserversicherheitsgruppe" können Sie die RD-Sitzungshost angeben, die den Lizenzserver kontaktieren dürfen, um RDS-CALs zu erhalten. Wenn die Richtlinieneinstellung auf dem Lizenzserver aktiviert ist, antwortet der Lizenzserver nur auf RDS CAL-Anforderungen von RD-Sitzungshost-Servern, deren Computerkonten Mitglieder der lokalen Gruppe Terminalservercomputer auf dem Lizenzserver sind.
 
-Zum Herstellen einer Verbindung mit dem \\ root \\ CIMV2 \\ TerminalServices-Namespace muss die Authentifizierungs Ebene den Datenschutz für das Paket enthalten. Bei C/C++-aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene der **RPC- \_ c- \_ authn- \_ Ebene \_ Pkt \_ Privacy**. Bei Visual Basic-und Skript aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene von **wbemauthenticationlevelpzprivacy** oder "PKTPRIVACY" mit einem Wert von 6. Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird gezeigt, wie eine Verbindung mit einem Remote Computer mit Paket Datenschutz hergestellt wird.
+Um eine Verbindung mit dem \\ \\ CIMV2 TerminalServices-Stammnamespace herzustellen, muss \\ die Authentifizierungsebene den Paketschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Für Visual Basic- und Skriptaufrufe ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -98,7 +98,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,17 +110,17 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Ende des Supports (Client)<br/>    | Nicht unterstützt<br/>                                                               |
 | Ende des Supports (Server)<br/>    | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32 \_ terminalservicesetts**](win32-terminalservicesetting.md)
+[**Win32 \_ TerminalServiceSetting**](win32-terminalservicesetting.md)
 </dt> </dl>
 
  

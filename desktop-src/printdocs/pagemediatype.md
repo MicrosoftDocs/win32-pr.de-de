@@ -4,12 +4,12 @@ ms.assetid: 29d7ae65-9dd3-4a29-8e5e-79708638a3bb
 title: Pagemediatype
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d3ca2299d9358e606648263ea5861f46c9be6419
-ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
+ms.openlocfilehash: 50e7da5d4cdad5b17324e5e628b5b9e8d0cac1c0ebfaded11379c836d5245a0a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113549078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119098844"
 ---
 # <a name="pagemediatype"></a>Pagemediatype
 
@@ -19,7 +19,7 @@ Beschreibt die MediaType-Optionen und die Merkmale der einzelnen Optionen.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturell](#structural-content)
--   [xml-Inhalt (Extensible Markup Language)](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -27,7 +27,7 @@ Beschreibt die MediaType-Optionen und die Merkmale der einzelnen Optionen.
 
 | Name | Wert |
 |----------------------------|--------------------|
-| Elementtyp <br/>   | Funktion<br/> |
+| Elementtyp <br/>   | Komponente<br/> |
 | Bereichspräfix <br/> | Seite<br/>    |
 | Hinweise <br/>          | Keine<br/>    |
 
@@ -83,20 +83,20 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 | Name                               | Datentyp          | Einheit                              | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                      |
 |------------------------------------|--------------------|-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
 | \_Optionname\_<br/>          | Zeichenfolge<br/>  | Buchstaben<br/>             | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
-| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/>  | n/v<br/>                    | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/> |
-| \_BackCoatingValue\_<br/>    | Zeichenfolge<br/>  | n/v<br/>                    | Noney, HighGloss, Matte, None, Satin, SemiGloss.<br/>                                                                                                                          | Gibt den Rand der Rückseite des Mediums an.<br/>              |
-| \_FrontCoatingValue\_<br/>   | Zeichenfolge<br/>  | n/v<br/>                    | Noney, HighGloss, Matte, None, Satin, SemiGloss.<br/>                                                                                                                          | Gibt den Rand der Vorderseite des Mediums an.<br/>             |
-| \_MaterialValue\_<br/>       | Zeichenfolge<br/>  | n/v<br/>                    | 1000000000000000000000000000000000000000000000000<br/>                                                                                                       | Gibt das Material an, aus dem die Medien bestehen.<br/>                  |
-| \_PrePrintedValue\_<br/>     | Zeichenfolge<br/>  | n/v<br/>                    | None, PrePrinted, Letterhead.<br/>                                                                                                                                              | Gibt vorab gedruckte Merkmale von Medien an.<br/>                       |
-| \_PrePunchedValue\_<br/>     | Zeichenfolge<br/>  | n/v<br/>                    | None, PrePunched.<br/>                                                                                                                                                          | Gibt vorab gepuhte Merkmale von Medien an.<br/>                       |
-| \_RecycledValue\_<br/>       | Zeichenfolge<br/>  | n/v<br/>                    | None, Standard.<br/>                                                                                                                                                            | Gibt wiederverwendete Merkmale von Medien an.<br/>                         |
+| \_IdentityOptionValue\_<br/> | Zeichenfolge<br/>  | –<br/>                    | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/> |
+| \_BackCoatingValue\_<br/>    | Zeichenfolge<br/>  | –<br/>                    | Noney, HighGloss, Matte, None, Satin, SemiGloss.<br/>                                                                                                                          | Gibt den Rand der Rückseite des Mediums an.<br/>              |
+| \_FrontCoatingValue\_<br/>   | Zeichenfolge<br/>  | –<br/>                    | Noney, HighGloss, Matte, None, Satin, SemiGloss.<br/>                                                                                                                          | Gibt den Rand der Vorderseite des Mediums an.<br/>             |
+| \_MaterialValue\_<br/>       | Zeichenfolge<br/>  | –<br/>                    | 1000000000000000000000000000000000000000000000000<br/>                                                                                                       | Gibt das Material an, aus dem die Medien bestehen.<br/>                  |
+| \_PrePrintedValue\_<br/>     | Zeichenfolge<br/>  | –<br/>                    | None, PrePrinted, Letterhead.<br/>                                                                                                                                              | Gibt vorab gedruckte Merkmale von Medien an.<br/>                       |
+| \_PrePunchedValue\_<br/>     | Zeichenfolge<br/>  | –<br/>                    | None, PrePunched.<br/>                                                                                                                                                          | Gibt vorab gepuhte Merkmale von Medien an.<br/>                       |
+| \_RecycledValue\_<br/>       | Zeichenfolge<br/>  | –<br/>                    | None, Standard.<br/>                                                                                                                                                            | Gibt wiederverwendete Merkmale von Medien an.<br/>                         |
 | \_WeightValue\_<br/>         | integer<br/> | Gramme pro Quadrat<br/> | Größer 0<br/>                                                                                                                                                            | Gibt Die Mediengewichtungsmerkmale an.<br/>                           |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
 Die Schlüsselwörter für das öffentliche Druckschema werden im `https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords` -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

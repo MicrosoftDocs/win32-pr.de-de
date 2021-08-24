@@ -1,25 +1,25 @@
 ---
-title: Verwenden von IADs GetInfoEx für den Bereichs Abruf
-description: Die IADs. GetInfoEx-Methode kann verwendet werden, um einen Bereich von Attributwerten abzurufen. Der Bereich der abzurufenden Werte wird im Attributnamen Array angegeben, das an die-Methode übermittelt wird.
+title: Verwenden von IADs GetInfoEx für den Bereichsabruf
+description: Die IADs.GetInfoEx-Methode kann verwendet werden, um einen Bereich von Attributwerten abzurufen. Der abzurufende Wertebereich wird im Attributnamenarray angegeben, das an die -Methode übergeben wird.
 ms.assetid: 2098862f-e5ec-4912-a941-8faceade22ee
 ms.tgt_platform: multiple
 keywords:
-- Verwenden von IADs GetInfoEx für den Bereichs Abruf von ADSI
-- IADs GetInfoEx ADSI, Verwendung für Bereichs Abruf
+- Verwenden von IADs GetInfoEx für Range Retrieval ADSI
+- IADs GetInfoEx ADSI mit für den Bereichsabruf
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 50681facd811adf26a89754fecb5490ee059eed6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 218f6cf8c0b0346a5b5554f870f5729bd55f8b221a3ebe0e425305333ee00cf0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082194"
 ---
-# <a name="using-iadsgetinfoex-for-range-retrieval"></a>Verwenden von IADs:: GetInfoEx für den Bereichs Abruf
+# <a name="using-iadsgetinfoex-for-range-retrieval"></a>Verwenden von IADs::GetInfoEx für den Bereichsabruf
 
-Die [**IADs. GetInfoEx**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) -Methode kann verwendet werden, um einen Bereich von Attributwerten abzurufen. Der Bereich der abzurufenden Werte wird im Attributnamen Array angegeben, das an die-Methode übermittelt wird.
+Die [**IADs.GetInfoEx-Methode**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) kann verwendet werden, um einen Bereich von Attributwerten abzurufen. Der abzurufende Wertebereich wird im Attributnamenarray angegeben, das an die -Methode übergeben wird.
 
-Die bereichsspezifier für eine Eigenschaften Abfrage muss folgende Form haben:
+Die Bereichsspezifizierer für eine Eigenschaftenabfrage erfordern die folgende Form:
 
 
 ```C++
@@ -28,9 +28,9 @@ Die bereichsspezifier für eine Eigenschaften Abfrage muss folgende Form haben:
 
 
 
-Wenn " &lt; Eigenschaftsname &gt; " der **ldapDisplayName** des Attributs ist, &lt; ist "niedriger Bereich &gt; " der null basierte Index des ersten Attribut Werts, der abgerufen werden soll, und " &lt; High Range &gt; " ist der null basierte Index des letzten Attribut Werts, der abgerufen werden soll. NULL wird für " &lt; niedriger Bereich &gt; " verwendet, um den ersten Eintrag anzugeben. Das Platzhalter Zeichen ( \* ) kann für " &lt; High Range" verwendet werden &gt; , um alle verbleibenden Einträge anzugeben.
+Wobei " Eigenschaftsname " der ldapDisplayName des Attributs ist, " niedriger Bereich " ist der nullbasierte Index des ersten abzurufenden Attributwerts, und " hoher Bereich " ist der nullbasierte Index des letzten abzurufenden &lt; &gt;  &lt; &gt; &lt; &gt; Attributwerts. Null wird für &lt; "niedriger &gt; Bereich" verwendet, um den ersten Eintrag anzugeben. Das Platzhalterzeichen ( ) kann für " high range " verwendet werden, \* &lt; um alle &gt; verbleibenden Einträge anzugeben.
 
-Das folgende Codebeispiel enthält eine Funktion, die zeigt, wie der Bereichs Abruf mit [**IADs:: GetInfoEx**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) zum Auflisten der Mitglieder einer Gruppe verwendet wird.
+Das folgende Codebeispiel enthält eine Funktion, die zeigt, wie der Bereichsabruf mit [**IADs::GetInfoEx**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) zum Aufzählen der Mitglieder einer Gruppe verwendet wird.
 
 
 ```C++
@@ -143,7 +143,7 @@ HRESULT EnumGroupWithGetInfoEx(LPCWSTR pwszGroupDN,
 
 
 
-Das folgende Codebeispiel enthält eine Funktion, die zeigt, wie der Bereichs Abruf mit [**IADs. GetInfoEx**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) zum Auflisten der Mitglieder einer Gruppe verwendet wird.
+Das folgende Codebeispiel enthält eine Funktion, die zeigt, wie der Bereichsabruf mit [**IADs.GetInfoEx**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) zum Aufzählen der Mitglieder einer Gruppe verwendet wird.
 
 
 ```VB
@@ -209,9 +209,9 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 
 
 
 

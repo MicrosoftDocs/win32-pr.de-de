@@ -1,31 +1,31 @@
 ---
-title: MultiThreading
-description: Direct3D 11 implementiert die Unterstützung für das Erstellen und Rendering von Objekten mithilfe mehrerer Threads.
+title: Multithreading
+description: Direct3D 11 implementiert Unterstützung für die Objekterstellung und das Rendering mit mehreren Threads.
 ms.assetid: 1bf50927-268b-4471-b059-819adf2189a9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a4de7ca3e7e00ffba0c728aef334f21efc18899
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 718d80d9b70db0d6102d746168f338ddd8099339cee349724d87036714b16580
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119124325"
 ---
-# <a name="multithreading"></a>MultiThreading
+# <a name="multithreading"></a>Multithreading
 
-Direct3D 11 implementiert die Unterstützung für das Erstellen und Rendering von Objekten mithilfe mehrerer Threads.
+Direct3D 11 implementiert Unterstützung für die Objekterstellung und das Rendering mit mehreren Threads.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                                                   | BESCHREIBUNG                                                                                                                                                                                                                          |
+| Thema                                                                                                                   | Beschreibung                                                                                                                                                                                                                          |
 |-------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Einführung in das Multithreading in Direct3D 11](overviews-direct3d-11-render-multi-thread-intro.md)<br/>         | Multithreading ist darauf ausgelegt, die Leistung zu verbessern, indem Sie die Arbeit mit einem oder mehreren Threads gleichzeitig ausführen. <br/>                                                                                                         |
-| [Objekt Erstellung mit Multithreading](overviews-direct3d-11-render-multi-thread-create.md)<br/>                  | Verwenden Sie die [**ID3D11Device**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device) -Schnittstelle zum Erstellen von Ressourcen und Objekten, und verwenden Sie [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) zum [Rendern](overviews-direct3d-11-render-multi-thread-render.md).<br/> |
-| [Sofortiges und verzögertes Rendering](overviews-direct3d-11-render-multi-thread-render.md)<br/>                     | Direct3D 11 unterstützt zwei renderingtypen: direkt und verzögert. Beide werden mithilfe der [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) -Schnittstelle implementiert.<br/>                                                      |
-| [Befehlsliste](overviews-direct3d-11-render-multi-thread-command-list.md)<br/>                                   | Eine Befehlsliste ist eine Sequenz von GPU-Befehlen, die aufgezeichnet und wiedergegeben werden können. Eine Befehlsliste kann die Leistung verbessern, indem der von der Laufzeit generierte Verwaltungsaufwand verringert wird.<br/>                                    |
-| [Threading Unterschiede zwischen Direct3D-Versionen](overviews-direct3d-11-render-multi-thread-differences.md)<br/> | Viele multithreadprogrammierungs-Modelle verwenden Synchronisierungs primitive (z. b. Mutexen), um kritische Abschnitte zu erstellen und zu verhindern, dass der Zugriff auf Code von mehreren Threads gleichzeitig erfolgt.<br/>                       |
+| [Einführung in das Multithreading in Direct3D 11](overviews-direct3d-11-render-multi-thread-intro.md)<br/>         | Multithreading wurde entwickelt, um die Leistung durch gleichzeitiges Ausführen von Arbeiten mit einem oder mehreren Threads zu verbessern. <br/>                                                                                                         |
+| [Objekterstellung mit Multithreading](overviews-direct3d-11-render-multi-thread-create.md)<br/>                  | Verwenden Sie [**die ID3D11Device-Schnittstelle,**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device) um Ressourcen und Objekte zu erstellen, und verwenden Sie [**ID3D11DeviceContext**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) zum [Rendern von](overviews-direct3d-11-render-multi-thread-render.md).<br/> |
+| [Sofortiges und verzögertes Rendering](overviews-direct3d-11-render-multi-thread-render.md)<br/>                     | Direct3D 11 unterstützt zwei Arten von Rendering: unmittelbar und verzögert. Beide werden mithilfe der [**ID3D11DeviceContext-Schnittstelle**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) implementiert.<br/>                                                      |
+| [Befehlsliste](overviews-direct3d-11-render-multi-thread-command-list.md)<br/>                                   | Eine Befehlsliste ist eine Sequenz von GPU-Befehlen, die aufgezeichnet und abgespielt werden können. Eine Befehlsliste kann die Leistung verbessern, indem der von der Laufzeit generierte Mehraufwand reduziert wird.<br/>                                    |
+| [Threadingunterschiede zwischen Direct3D-Versionen](overviews-direct3d-11-render-multi-thread-differences.md)<br/> | Viele Multithread-Programmiermodelle verwenden Synchronisierungsprimitiven (z. B. Mutexe), um kritische Abschnitte zu erstellen und zu verhindern, dass von mehreren Threads gleichzeitig auf Code zugegriffen wird.<br/>                       |
 
 
 
@@ -35,10 +35,10 @@ Direct3D 11 implementiert die Unterstützung für das Erstellen und Rendering vo
 
 <dl> <dt>
 
-[Vorgehensweise: Überprüfen der Treiberunterstützung](overviews-direct3d-11-render-multi-thread-support.md)
+[How To: Check for Driver Support](overviews-direct3d-11-render-multi-thread-support.md)
 </dt> <dt>
 
-[Darstellung](overviews-direct3d-11-render.md)
+[Rendering](overviews-direct3d-11-render.md)
 </dt> </dl>
 
  

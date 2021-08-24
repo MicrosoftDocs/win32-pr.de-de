@@ -1,31 +1,31 @@
 ---
-description: Enthält den für den Stream definierten Sami-Sprachnamen (für den verfügbaren Medienaustausch).
+description: Enthält den SAMI-Sprachnamen (Synchronized Accessible Media Interchange), der für den Stream definiert ist.
 ms.assetid: 3151c369-9d2b-4f03-9a4a-9b9267314dc1
-title: MF_SD_SAMI_LANGUAGE-Attribut (mspdl. h)
+title: MF_SD_SAMI_LANGUAGE -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cfd476c86ddde7d369265c5302192e4a7c01295f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e70436244779dddf97ef8277c5c1e2cd8c74cfaa25a90e63472d07d32c36b56d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119102326"
 ---
-# <a name="mf_sd_sami_language-attribute"></a>MF \_ SD \_ - \_ Attribut "Sami"
+# <a name="mf_sd_sami_language-attribute"></a>MF \_ SD \_ SAMI \_ LANGUAGE-Attribut
 
-Enthält den für den Stream definierten Sami-Sprachnamen (für den verfügbaren Medienaustausch).
+Enthält den SAMI-Sprachnamen (Synchronized Accessible Media Interchange), der für den Stream definiert ist.
 
-Dieses Attribut ist in den Datenstrom Deskriptoren vorhanden, die von der Sami Media-Quelle zurückgegeben wurden.
+Dieses Attribut ist in den Streamdeskriptoren vorhanden, die von der SAMI-Medienquelle zurückgegeben werden.
 
 ## <a name="data-type"></a>Datentyp
 
 Breitzeichenfolge
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Name der Sami-Sprache wird in der Sami-Datei angegeben.
+Der SAMI-Sprachname wird in der SAMI-Datei angegeben.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,32 +33,32 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)
+[**ATTRIBUTEs::GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)
 </dt> <dt>
 
-[**Imfattributes:: SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)
+[**ZEICHENFOLGEAttributes::SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)
 </dt> <dt>
 
-[**IMF-Deskriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamdescriptor)
+[**JAVASCRIPTStreamDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamdescriptor)
 </dt> <dt>
 
 [Streamdeskriptorattribute](stream-descriptor-attributes.md)
 </dt> <dt>
 
-[**Imsasamistyle**](/windows/desktop/api/mfidl/nn-mfidl-imfsamistyle)
+[**BESENSAMIStyle**](/windows/desktop/api/mfidl/nn-mfidl-imfsamistyle)
 </dt> </dl>
 
  

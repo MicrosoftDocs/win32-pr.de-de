@@ -1,33 +1,33 @@
 ---
-description: Dumpfilterbeispiel
+description: Beispiel für Dumpfilter
 ms.assetid: 2ce52e6c-a02f-4737-822a-87b2cf2d933d
-title: Dumpfilterbeispiel
+title: Beispiel für Dumpfilter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd64d1f16b0b504743890543b617a24df6bbaab8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5643f0334071b8c238a70ed31eee87de4e93e3637b5403d886d79f2816e39c97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104522416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148733"
 ---
-# <a name="dump-filter-sample"></a>Dumpfilterbeispiel
+# <a name="dump-filter-sample"></a>Beispiel für Dumpfilter
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Der dumpfilter ist ein rendererfilter, der die empfangenen Medien Beispiele in eine Textdatei schreibt.
+Der Dumpfilter ist ein Rendererfilter, der die empfangenen Medienbeispiele in eine Textdatei schreibt.
 
-In diesem Beispiel wird veranschaulicht, wie die Basis Filterklasse [**cbasefilter**](cbasefilter.md) und die gerenderte Eingabe-PIN-Klasse [**crenderedinputpin**](crenderedinputpin.md)verwendet werden. Außerdem wird veranschaulicht, wie die [**ifilesink Filter**](/windows/desktop/api/Strmif/nn-strmif-ifilesinkfilter) -Schnittstelle implementiert wird. Der dumpfilter verfügt über eine einzelne Eingabe-PIN, die jedes empfangene Beispiel direkt in eine Datei schreibt.
+In diesem Beispiel wird veranschaulicht, wie die Basisfilterklasse [**CBaseFilter**](cbasefilter.md) und die gerenderte Eingabepinklasse [**CRenderedInputPin verwendet werden.**](crenderedinputpin.md) Außerdem wird veranschaulicht, wie die [**IFileSinkFilter-Schnittstelle implementiert**](/windows/desktop/api/Strmif/nn-strmif-ifilesinkfilter) wird. Der Dumpfilter verfügt über einen einzelnen Eingabepin, der jedes empfangene Beispiel direkt in eine Datei schreibt.
 
 ## <a name="usage"></a>Verbrauch
 
-Dieser Filter ist ein nützliches Debugtool. Beispielsweise können Sie die Ergebnisse eines Transformations Filters mit Bit und Bit überprüfen. Sie können ein Diagramm manuell erstellen, indem Sie GraphEdit verwenden und den dumpfilter mit der Ausgabe eines Transformations Filters oder einer anderen Ausgabepin verbinden. Sie können auch einen Tee-Filter verbinden und den dumpfilter auf einem Teil des Tee-Filters und die typische Ausgabe in einem anderen Abschnitt platzieren, um die Ergebnisse in einem echt Zeit Szenario zu überwachen.
+Dieser Filter ist ein nützliches Debugtool. Beispielsweise können Sie die Ergebnisse eines Transformationsfilters bit für Bit überprüfen. Sie können ein Diagramm manuell mit GraphEdit erstellen und den Dumpfilter mit der Ausgabe eines Transformationsfilters oder eines anderen Ausgabepins verbinden. Sie können auch einen Teefilter verbinden und den Dumpfilter auf einem Bein des Teefilters und die typische Ausgabe auf einem anderen Bein setzen, um die Ergebnisse in einem Echtzeitszenario zu überwachen.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Zum Herunterladen der DirectShow SDK-Beispiele installieren Sie die neueste Version der [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx).
+Um die DirectShow SDK-Beispiele herunterzuladen, installieren Sie die neueste Version des [Windows SDK.](https://msdn.microsoft.com/windowsvista/bb980924.aspx)
 
-Dieses Beispiel wird unter folgendem Pfad installiert: *\[ SDK \] root* \\ Samples \\ Multimedia \\ DirectShow \\ Filters \\ Dump.
+Dieses Beispiel wird unter folgendem Pfad installiert: *\[ SDK \] Root* Samples Multimedia \\ \\ \\ DirectShow Filters \\ \\ Dump.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

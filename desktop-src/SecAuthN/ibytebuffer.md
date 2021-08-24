@@ -1,7 +1,7 @@
 ---
-description: Die ibytebuffer-Schnittstelle wird zum Lesen, schreiben und Verwalten von Streamobjekten bereitgestellt. Bei diesem Objekt handelt es sich im Wesentlichen um einen Wrapper für das IStream-Objekt.
+description: Die IByteBuffer-Schnittstelle wird zum Lesen, Schreiben und Verwalten von Streamobjekten bereitgestellt. Dieses Objekt ist im Wesentlichen ein Wrapper für das IStream-Objekt.
 ms.assetid: dbc46d53-a421-45c0-a86b-b8a0a212a672
-title: Ibytebuffer-Schnittstelle (scardssp. h)
+title: IByteBuffer-Schnittstelle (Scardssp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,44 +13,44 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: dfba15dee78134a9787bf7af994f1d4e2b064339
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8f0aa81106629142efeec7e22bdb495bea853c3c689d6b55887a62f896d89d62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960542"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119417410"
 ---
-# <a name="ibytebuffer-interface"></a>Ibytebuffer-Schnittstelle
+# <a name="ibytebuffer-interface"></a>IByteBuffer-Schnittstelle
 
-\[Die **ibytebuffer** -Schnittstelle ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [**IStream**](/windows/desktop/api/objidl/nn-objidl-istream) -Schnittstelle bietet eine ähnliche Funktionalität.\]
+\[Die **IByteBuffer-Schnittstelle** ist für die Verwendung in den Im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [**IStream-Schnittstelle**](/windows/desktop/api/objidl/nn-objidl-istream) bietet ähnliche Funktionen.\]
 
-Die **ibytebuffer** -Schnittstelle wird zum Lesen, schreiben und Verwalten von Streamobjekten bereitgestellt. Bei diesem Objekt handelt es sich im Wesentlichen um einen Wrapper für das **IStream** -Objekt.
+Die **IByteBuffer-Schnittstelle** wird zum Lesen, Schreiben und Verwalten von Streamobjekten bereitgestellt. Dieses Objekt ist im Wesentlichen ein Wrapper für das **IStream-Objekt.**
 
 ## <a name="members"></a>Member
 
-Die **ibytebuffer** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Ibytebuffer** verfügt auch über die folgenden Typen von Membern:
+Die **IByteBuffer-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **IByteBuffer** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ibytebuffer** -Schnittstelle verfügt über diese Methoden.
+Die **IByteBuffer-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                           | BESCHREIBUNG                                                                                               |
+| Methode                                           | Beschreibung                                                                                               |
 |:-------------------------------------------------|:----------------------------------------------------------------------------------------------------------|
-| [**Klon**](ibytebuffer-clone.md)               | Klont ein **ibytebuffer** -Objekt.<br/>                                                              |
-| [**Einzusetzen**](ibytebuffer-commit.md)             | Führt einen Commit einer [*Transaktion*](/windows/desktop/SecGloss/t-gly)aus.<br/> |
+| [**Klon**](ibytebuffer-clone.md)               | Klont ein **IByteBuffer-Objekt.**<br/>                                                              |
+| [**Commit**](ibytebuffer-commit.md)             | Commits für eine [*Transaktion.*](/windows/desktop/SecGloss/t-gly)<br/> |
 | [**CopyTo**](ibytebuffer-copyto.md)             | Kopiert Bytes in ein anderes Objekt.<br/>                                                                |
-| [**Initialisieren**](ibytebuffer-initialize.md)     | Initialisiert das **ibytebuffer** -Objekt.<br/>                                                        |
-| [**Lock Region**](ibytebuffer-lockregion.md)     | Schränkt den Zugriff auf einen Bereich von Bytes ein.<br/>                                                          |
-| [**Lesen**](ibytebuffer-read.md)                 | Liest Bytes in den Arbeitsspeicher.<br/>                                                                       |
-| [**Umzukehren**](ibytebuffer-revert.md)             | Verwirft Änderungen seit dem letzten [**Commit**](ibytebuffer-commit.md) -Befehl.<br/>                     |
-| [**Seek**](ibytebuffer-seek.md)                 | Ändert den Such Zeiger.<br/>                                                                      |
-| [**SetSize**](ibytebuffer-setsize.md)           | Ändert die Größe des Streamobjekts.<br/>                                                         |
+| [**Initialisieren**](ibytebuffer-initialize.md)     | Initialisiert das **IByteBuffer-Objekt.**<br/>                                                        |
+| [**LockRegion**](ibytebuffer-lockregion.md)     | Schränkt den Zugriff auf einen Bytebereich ein.<br/>                                                          |
+| [**Überwachungsdaten**](ibytebuffer-read.md)                 | Liest Bytes in den Arbeitsspeicher.<br/>                                                                       |
+| [**Zurücksetzen**](ibytebuffer-revert.md)             | Verwirft Änderungen seit dem letzten [**Commitaufruf.**](ibytebuffer-commit.md)<br/>                     |
+| [**Seek**](ibytebuffer-seek.md)                 | Ändert den Suchzeiger.<br/>                                                                      |
+| [**Setsize**](ibytebuffer-setsize.md)           | Ändert die Größe des Streamobjekts.<br/>                                                         |
 | [**Stat**](ibytebuffer-stat.md)                 | Ruft statistische Informationen zu einem Stream ab.<br/>                                              |
-| [**UnlockRegion**](ibytebuffer-unlockregion.md) | Entfernt die Zugriffs Einschränkung, die zuvor von [**LockRegion**](ibytebuffer-lockregion.md)festgelegt wurde.<br/>     |
+| [**UnlockRegion**](ibytebuffer-unlockregion.md) | Entfernt die zugriffseinschränkung, die zuvor von [**LockRegion festgelegt wurde.**](ibytebuffer-lockregion.md)<br/>     |
 | [**Schreiben**](ibytebuffer-write.md)               | Schreibt Bytes in den Stream.<br/>                                                                    |
 
 
@@ -63,14 +63,14 @@ Die **ibytebuffer** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scardssp. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scardssp. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scardssp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scardssp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ ibytebuffer ist als E126F8FE-A7AF-11D0-B88A-00C04FD424B9 definiert.<br/>          |
+| IID<br/>                      | IID \_ IByteBuffer ist als E126F8FE-A7AF-11D0-B88A-00C04FD424B9 definiert.<br/>          |
 
 
 

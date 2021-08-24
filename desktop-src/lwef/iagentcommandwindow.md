@@ -1,40 +1,40 @@
 ---
-title: Iagentcommandwindow
-description: Iagentcommandwindow
+title: IAgentCommandWindow
+description: IAgentCommandWindow
 ms.assetid: 315b24b4-110e-4373-a1ee-0317531e6008
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 517f43bf482d043b4ca36ff749e3f496ba2988b7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 80509efbe4f9d6391b3ac6ffbdf5cb02580826fd1aa7a94f1536ba5706322606
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105178"
 ---
-# <a name="iagentcommandwindow"></a>Iagentcommandwindow
+# <a name="iagentcommandwindow"></a>IAgentCommandWindow
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-**Iagentcommandwindow** definiert eine Schnittstelle, die es Anwendungen ermöglicht, die Eigenschaften des Fensters "Sprachbefehle" festzulegen und abzufragen. Das Fenster "Sprachbefehle" ist eine freigegebene Ressource, die in erster Linie so konzipiert ist, dass Benutzer sprach fähige Befehle anzeigen können. Wenn die Spracherkennung deaktiviert ist, wird das Fenster für die Sprachbefehle weiterhin angezeigt, und der Text "Spracheingabe ist deaktiviert" (in der Sprache des Zeichens). Wenn keine Sprach-Engine installiert ist, die mit der Spracheinstellung des Zeichens übereinstimmt, zeigt das Fenster an, dass die Spracheingabe nicht verfügbar ist. Wenn der Input-Active Client keine sprach Parameter für seine Befehle definiert hat und die globalen Sprachbefehle deaktiviert sind, wird im Fenster "keine Sprachbefehle" angezeigt. Sie können auch die Eigenschaften des Fensters "Sprachbefehle" Abfragen, unabhängig davon, ob die Spracheingabe deaktiviert ist oder eine kompatible Sprach-Engine installiert ist.
+**IAgentCommandWindow** definiert eine Schnittstelle, mit der Anwendungen die Eigenschaften des Fensters "Sprachbefehle" festlegen und abfragen können. Das Fenster "Sprachbefehle" ist eine freigegebene Ressource, die in erster Linie benutzern ermöglicht wird, sprachaktivierte Befehle anzuzeigen. Wenn die Spracherkennung deaktiviert ist, wird das Fenster "Sprachbefehle" weiterhin mit dem Text "Spracheingabe deaktiviert" (in der Sprache des Zeichens) angezeigt. Wenn keine Sprach-Engine installiert ist, die der Spracheinstellung des Zeichens entspricht, wird im Fenster "Speech input not available" (Spracheingabe nicht verfügbar) angezeigt. Wenn der eingabeaktive Client keine Sprachparameter für seine Befehle definiert und globale Sprachbefehle deaktiviert hat, wird im Fenster "Keine Sprachbefehle" angezeigt. Sie können auch die Eigenschaften des Fensters für Sprachbefehle abfragen, unabhängig davon, ob die Spracheingabe deaktiviert oder eine kompatible Sprach-Engine installiert ist.
 
 **Methoden in Vtable-Reihenfolge**
 
 
 
-| Iagentcommandwindow-Methoden                             | BESCHREIBUNG                                                                                         |
+| IAgentCommandWindow-Methoden                             | Beschreibung                                                                                         |
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| [**SetVisible**](iagentcommandwindow--setvisible.md)   | Legt den Wert der [**Visible**](visible-property.md) -Eigenschaft des Sprachbefehle Fensters fest.    |
-| [**GetVisible**](iagentcommandwindow--getvisible.md)   | Gibt den Wert der [**Visible**](visible-property.md) -Eigenschaft des Sprachbefehle Fensters zurück. |
-| [**GetPosition**](iagentcommandwindow--getposition.md) | Gibt die Position des Sprachbefehle Fensters zurück.                                                  |
-| [**GetSize**](iagentcommandwindow--getsize.md)         | Gibt die Größe des Sprachbefehle Fensters zurück.                                                      |
+| [**Setvisible**](iagentcommandwindow--setvisible.md)   | Legt den Wert der [**Visible-Eigenschaft**](visible-property.md) des Sprachbefehlsfensters fest.    |
+| [**Getvisible**](iagentcommandwindow--getvisible.md)   | Gibt den Wert der [**Visible-Eigenschaft**](visible-property.md) des Sprachbefehlsfensters zurück. |
+| [**Getposition**](iagentcommandwindow--getposition.md) | Gibt die Position des Fensters "Sprachbefehle" zurück.                                                  |
+| [**GetSize**](iagentcommandwindow--getsize.md)         | Gibt die Größe des Fensters "Sprachbefehle" zurück.                                                      |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

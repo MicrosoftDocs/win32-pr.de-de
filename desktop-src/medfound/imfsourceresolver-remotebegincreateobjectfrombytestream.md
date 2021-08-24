@@ -1,19 +1,19 @@
 ---
-description: 'Remote fähige Version der imfsourceresolver:: beginkreateobjectfrombytestream-Methode.'
+description: Remotable-Version der METHODE "BESOURCEResolver::BeginCreateObjectFromByteStream".
 ms.assetid: 960b5c51-b9b1-4956-a270-abfb7eedd482
-title: Remotebeginkreateobjectfromb testream (mfobjects. h)
+title: RemoteBeginCreateObjectFromByteStream (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac2cf089f0b80e83373c36731de4bd9a36d8835b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 01ac0365da83ec3f6bedc3ab45b9aef1458ed04c97ccdbfc1e00484824de47e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119268980"
 ---
-# <a name="remotebegincreateobjectfrombytestream"></a>Remotebeginkreateobjectfromb testream
+# <a name="remotebegincreateobjectfrombytestream"></a>RemoteBeginCreateObjectFromByteStream
 
-Remote fähige Version der [**imfsourceresolver:: beginkreateobjectfrombytestream**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-begincreateobjectfrombytestream) -Methode.
+Remotable-Version der [**METHODE "BESOURCEResolver::BeginCreateObjectFromByteStream".**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-begincreateobjectfrombytestream)
 
 ``` syntax
 [call_as(BeginCreateObjectFromByteStream)]
@@ -26,9 +26,9 @@ HRESULT RemoteBeginCreateObjectFromByteStream(
 );
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen können diese Methode nicht direkt aufzurufen, und-Objekte implementieren diese Methode nicht. Die-Methode wird nicht in der vtable für die-Schnittstelle angezeigt. Wenn [**beginkreateobjectfromb-testream**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-begincreateobjectfrombytestream) über Prozess Grenzen hinweg aufgerufen wird, übersetzt der Media Foundation Proxy/Stub-DLL den Aufruf in einen Aufruf der Remote Methode und übersetzt ihn anschließend wieder.
+Anwendungen können diese Methode nicht direkt aufrufen, und Objekte implementieren diese Methode nicht. Die -Methode wird nicht in der vtable für die -Schnittstelle angezeigt. Wenn [**BeginCreateObjectFromByteStream**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-begincreateobjectfrombytestream) prozessübergreifend aufgerufen wird, übersetzt die Media Foundation-Proxy-/Stub-DLL den Aufruf in einen Aufruf der Remotemethode und übersetzt ihn dann zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -36,18 +36,18 @@ Anwendungen können diese Methode nicht direkt aufzurufen, und-Objekte implement
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                                              |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Mfuuid. lib</dt> </dl>                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                                              |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Mfuuid.lib</dt> </dl>                    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IMF sourceresolver**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceresolver)
+[**VERERBUNGQuelleResolver**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceresolver)
 </dt> </dl>
 
  

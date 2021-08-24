@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f5d22b572eb9ad2f2e46b029ec242b48d5cd684
-ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
+ms.openlocfilehash: 481f005a741c6a815572f5861755f52d5921bae89e8bb2d8a3ef757a0fc42d9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111386879"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067000"
 ---
 # <a name="ncalrpc-attribute"></a>ncalrpc-Attribut
 
-Das **Schlüsselwort ncalrpc** identifiziert die lokale prozessübergreifende Kommunikation als Protokollfamilie für den Endpunkt. Dieses Schlüsselwort ist einer der gültigen Protokollfamiliennamen, die mit dem **\[** [](endpoint.md) **\]** Endpunktattribut verwendet werden müssen.
+Das **Schlüsselwort ncalrpc** identifiziert die lokale prozessübergreifende Kommunikation als Protokollfamilie für den Endpunkt. Dieses Schlüsselwort ist einer der gültigen Protokollfamiliennamen, die mit dem Endpunktattribut **\[** [**verwendet werden**](endpoint.md) **\]** müssen.
 
 ``` syntax
 endpoint("ncalrpc:[port-name]")
@@ -34,13 +34,13 @@ endpoint("ncalrpc:[port-name]")
 *Portname* 
 </dt> <dd>
 
-Eine Zeichenfolge, die den Kommunikationsport (eine Anwendung, einen Dienst oder eine Instanz eines Diensts) angibt, den ein Client verwendet, um prozessübergreifende Aufrufe an einen Server zu tätigen. Die Zeichenfolge kann bis zu 53 Zeichen enthalten und darf keinen umgekehrten Schrägstrich \\ () enthalten. Der Computername darf nicht mit dem **Schlüsselwort ncalrpc** verwendet werden.
+Eine Zeichenfolge, die den Kommunikationsport angibt (eine Anwendung, ein Dienst oder eine Instanz eines Diensts), die ein Client verwendet, um prozessübergreifende Aufrufe an einen Server zu senden. Die Zeichenfolge kann bis zu 53 Zeichen enthalten und darf keine schrägen Schrägstriche \\ () enthalten. Der Computername darf nicht mit dem **Schlüsselwort ncalrpc verwendet** werden.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die Syntax der lokalen Interprocess-Communication-Portzeichenfolge wird wie alle Portzeichenfolgen von der Transportimplementation definiert und ist unabhängig von der IDL-Spezifikation. Der MIDL-Compiler führt eine eingeschränkte Syntaxüberprüfung durch, garantiert jedoch nicht, dass die Endpunktspezifikation korrekt ist. Einige Fehlerklassen werden möglicherweise zur Laufzeit und nicht zur Kompilierzeit gemeldet.
+Die Syntax der lokalen Portzeichenfolge für die prozessübergreifende Kommunikation wird wie alle Portzeichenfolgen von der Transportimplementierung definiert und ist unabhängig von der IDL-Spezifikation. Der MIDL-Compiler führt eine eingeschränkte Syntaxüberprüfung durch, garantiert jedoch nicht, dass die Endpunktspezifikation korrekt ist. Einige Fehlerklassen werden möglicherweise zur Laufzeit und nicht zur Kompilierzeit gemeldet.
 
 ## <a name="examples"></a>Beispiele
 

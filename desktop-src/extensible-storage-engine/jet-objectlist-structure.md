@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_OBJECTLIST Struktur'
+description: 'Weitere Informationen zu: JET_OBJECTLIST-Struktur'
 title: JET_OBJECTLIST-Struktur
 TOCTitle: JET_OBJECTLIST Structure
 ms:assetid: 95f12f2a-13da-48d4-a254-fc0cb718b17d
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a7a66bb3b7f7dfbbfd1087d1fe0ce32c4144a8bf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b746a16677fd9d064eef62735f7529d3652acea95fa95e1beefe4a052aec1c01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107729"
 ---
 # <a name="jet_objectlist-structure"></a>JET_OBJECTLIST-Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_objectlist-structure"></a>JET_OBJECTLIST-Struktur
 
-Die **JET_OBJECTLIST** -Struktur durchläuft eine temporäre Tabelle, die mit [jetgetobjectinfo](./jetgetobjectinfo-function.md)erstellt wurde. Jede Zeile in der temporären Tabelle beschreibt ein Objekt in der Datenbank.
+Die **JET_OBJECTLIST-Struktur** durchläuft eine temporäre Tabelle, die mit [JetGetObjectInfo](./jetgetobjectinfo-function.md)erstellt wurde. Jede Zeile in der temporären Tabelle beschreibt ein Objekt in der Datenbank.
 
 ```cpp
     typedef struct {
@@ -52,73 +52,73 @@ Die **JET_OBJECTLIST** -Struktur durchläuft eine temporäre Tabelle, die mit [j
 
 **cbStruct**
 
-Die Größe der-Struktur in Bytes. Der API-Aufruf aktualisiert dieses Feld, sodass der Aufrufer sicherstellen muss, dass dieser Wert sizeof (JET_INDEXLIST) entspricht.
+Die Größe der -Struktur in Bytes. Durch den API-Aufruf wird dieses Feld aktualisiert, sodass der Aufrufer sicherstellen sollte, dass dieser Wert mit sizeof( JET_INDEXLIST ) übereinstimmt.
 
-**TableID**
+**tableid**
 
-Der Tabellen Bezeichner der temporären Tabelle, die erstellt wurde. Der Aufrufer muss Code enthalten, der die Tabelle schließt.
+Der Tabellenbezeichner der temporären Tabelle, die erstellt wurde. Der Aufrufer muss Code enthalten, der die Tabelle schließt.
 
-**crecord**
+**cRecord**
 
 Die Anzahl der Datensätze in der temporären Tabelle, die erstellt wurde.
 
 **columnidcontainername**
 
-Der Spalten Bezeichner des Namens des Container Typs.
+Der Spaltenbezeichner des Namens des Typs des Containers.
 
-Die einzigen derzeit unterstützten Container sind Tabellen. Diese Spalte ist eine [JET_coltypText](./jet-coltyp.md).
+Die einzigen Container, die derzeit unterstützt werden, sind Tabellen. Diese Spalte ist eine [JET_coltypText](./jet-coltyp.md).
 
 **columnidobjectname**
 
-Der Spalten Bezeichner des Namens des Objekts.
+Der Spaltenbezeichner des Namens des Objekts.
 
 Diese Spalte ist eine [JET_coltypText](./jet-coltyp.md).
 
-**columnidobjyp**
+**columnidobjtyp**
 
-Der Spalten Bezeichner des Typs des Objekts. Die einzigen derzeit unterstützten Container sind Tabellen, sodass dieses Feld JET_objtypTable wird.
+Der Spaltenbezeichner des Objekttyps. Die einzigen Container, die derzeit unterstützt werden, sind Tabellen, sodass dieses Feld JET_objtypTable wird.
 
 Diese Spalte ist eine [JET_coltypLong](./jet-coltyp.md).
 
-**columniddtcreate**
+**columniddtCreate**
 
 Veraltet. Darf nicht verwendet werden.
 
-**columniddtupdate**
+**columniddtUpdate**
 
 Veraltet. Darf nicht verwendet werden.
 
 **columnidgrbit**
 
-Der Spalten Bezeichner der **grbits** , die auf das-Objekt anwendbar sind. Eine Liste der anwendbaren **grbits** finden Sie unter [JET_TABLECREATE](./jet-tablecreate-structure.md).
+Der Spaltenbezeichner der **Grbits,** die auf das -Objekt anwendbar sind. Eine Liste der anwendbaren **Grbits** finden Sie unter [JET_TABLECREATE](./jet-tablecreate-structure.md).
 
 Diese Spalte ist eine [JET_coltypLong](./jet-coltyp.md).
 
 **columnidflags**
 
-Der Spalten Bezeichner der Flags, die auf das-Objekt anwendbar sind. Eine Liste der anwendbaren Flags finden Sie unter [JET_OBJECTINFO](./jet-objectinfo-structure.md).
+Der Spaltenbezeichner der Flags, die auf das -Objekt anwendbar sind. Eine Liste der anwendbaren Flags finden Sie unter [JET_OBJECTINFO](./jet-objectinfo-structure.md).
 
 Diese Spalte ist eine [JET_coltypLong](./jet-coltyp.md).
 
-**columnidcrecord**
+**columnidcRecord**
 
-Der Spalten Bezeichner der Anzahl von Datensätzen, die in der Tabelle vorhanden sind, die in **columnidobjectname** benannt ist.
-
-Diese Spalte ist eine [JET_coltypLong](./jet-coltyp.md).
-
-**columnidcpage**
-
-Der Spalten Bezeichner der Anzahl der Seiten, die vom-Objekt verwendet werden.
+Der Spaltenbezeichner der Anzahl von Datensätzen, die in der Tabelle mit dem Namen **columnidobjectname** vorhanden sind.
 
 Diese Spalte ist eine [JET_coltypLong](./jet-coltyp.md).
 
-### <a name="remarks"></a>Bemerkungen
+**columnidcPage**
+
+Der Spaltenbezeichner der Vom -Objekt verwendeten Seitenanzahl.
+
+Diese Spalte ist eine [JET_coltypLong](./jet-coltyp.md).
+
+### <a name="remarks"></a>Hinweise
 
 Jede Zeile in der temporären Tabelle entspricht einem Objekt in der Datenbank.
 
-Wenn die temporäre Tabelle mit dem *infolevel* -Parameter in der [jetgetobjectinfo](./jetgetobjectinfo-function.md) -Funktion auf JET_ObjInfoListNoStats festgelegt wird, enthalten die von **columnidcrecord** und **columnidcpage** identifizierten Spalten keine aussagekräftigen Informationen.
+Wenn die temporäre Tabelle mit dem *InfoLevel-Parameter* in der [JetGetObjectInfo-Funktion](./jetgetobjectinfo-function.md) erstellt wird, die auf JET_ObjInfoListNoStats festgelegt ist, enthalten die durch **columnidcRecord** und **columnidcPage** identifizierten Spalten keine aussagekräftigen Informationen.
 
-Derzeit werden nur Informationen zu Tabellen in der temporären Tabelle angezeigt.
+Derzeit befinden sich nur Informationen zu Tabellen in der temporären Tabelle.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -138,7 +138,7 @@ Derzeit werden nur Informationen zu Tabellen in der temporären Tabelle angezeig
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>
@@ -154,4 +154,4 @@ Derzeit werden nur Informationen zu Tabellen in der temporären Tabelle angezeig
 [JET_TABLEID](./jet-tableid.md)  
 [JET_OBJECTINFO](./jet-objectinfo-structure.md)  
 [JET_TABLECREATE](./jet-tablecreate-structure.md)  
-[Jetgetobjectinfo](./jetgetobjectinfo-function.md)
+[JetGetObjectInfo](./jetgetobjectinfo-function.md)

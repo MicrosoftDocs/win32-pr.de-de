@@ -1,8 +1,8 @@
 ---
-description: Der CimType-Qualifizierer enthält Text, der den Typ einer Eigenschaft beschreibt.
+description: Der CIMType-Qualifizierer enthält Text, der den Typ einer Eigenschaft beschreibt.
 ms.assetid: ae65d4c7-2150-489b-a368-fb38c0d1b3be
 ms.tgt_platform: multiple
-title: CimType-Qualifizierer
+title: CIMType-Qualifizierer
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,25 +13,25 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 522f7b3e7f5691e9552dce15b958fdb635fcae06
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 86fad829bf1b2391a9bc97d5c6281a67cadae7d03672e8a6eb8093b7ff6152b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119131672"
 ---
-# <a name="cimtype-qualifier"></a>CimType-Qualifizierer
+# <a name="cimtype-qualifier"></a>CIMType-Qualifizierer
 
-Der **CimType-Qualifizierer** enthält Text, der den Typ einer Eigenschaft beschreibt.
+Der  CIMType-Qualifizierer enthält Text, der den Typ einer Eigenschaft beschreibt.
 
-Dieser Text kann der MOF-Typ sein, z. b. "String" und "sint32", oder der CIM-Typ, z. b. "CIM \_ String" und "CIM \_ sint32". Zwischen dem **CimType-Qualifizierer** und dem Typ der Eigenschaft, der im *pvttype* -Parameter der [**IWbemClassObject:: Get**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-get) -Methode verwendet wird, besteht eine eins-zu-eins-Entsprechung.
+Dieser Text kann der MOF-Typ sein, z. B. "string" und "sint32" oder der CIM-Typ wie "CIM STRING" und \_ "CIM \_ SINT32". Es gibt eine 1:1-Entsprechung zwischen dem CIMType-Qualifizierer und dem Typ der Eigenschaft, die im *pvtType-Parameter* der  [**IWbemClassObject::Get-Methode verwendet**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-get) wird.
 
-Die beiden Ausnahmen lauten:
+Die beiden Ausnahmen sind:
 
--   [*Verweis Eigenschaften*](gloss-r.md)mit dem Type- **CIM- \_ Verweis**, der den Wert "Ref: ClassName" enthält. Der ClassName-Wert beschreibt den Klassentyp der Verweis Eigenschaft.
--   Eigenschaften von eingebetteten Objekten, die den **CIM \_ -Objekttyp** aufweisen.
+-   [*Verweiseigenschaften*](gloss-r.md)mit dem Typ **CIM \_ REFERENCE**, die den Wert "REF:classname" enthalten. Der Wert classname beschreibt den Klassentyp der Verweiseigenschaft.
+-   Eingebettete Objekteigenschaften, die den **CIM \_ OBJECT-Typ** aufweisen.
 
-Beachten Sie jedoch, dass der **CimType-Qualifizierer** und verwendet werden kann, um eine Verweis Eigenschaft genauer einzugeben. Wenn sich die-Eigenschaft beispielsweise immer auf Instanzen der [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) -Klasse bezieht, sollte der **CimType-Qualifizierer** auf Folgendes festgelegt werden:
+Beachten Sie jedoch,  dass der CIMType-Qualifizierer zum genaueren Eingeben einer Verweiseigenschaft verwendet werden kann und sollte. Wenn die Eigenschaft beispielsweise immer auf Instanzen der [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) verweist, sollte der CIMType-Qualifizierer auf Folgendes festgelegt werden: 
 
 
 ```mof
@@ -40,9 +40,9 @@ Beachten Sie jedoch, dass der **CimType-Qualifizierer** und verwendet werden kan
 
 
 
-Standardmäßig hat der **CimType-Qualifizierer** einer Verweis Eigenschaft den Typ **ref**.
+Standardmäßig weist der **CIMType-Qualifizierer** einer Verweiseigenschaft den Typ **ref auf.**
 
-Wie bei den Verweis Eigenschaften sollte der **CimType-Qualifizierer** zum Eingeben einer eingebetteten Objekt Eigenschaft genau mit der folgenden Syntax verwendet werden:
+Wie bei Verweiseigenschaften  sollte der CIMType-Qualifizierer verwendet werden, um eine eingebettete Objekteigenschaft mit der folgenden Syntax genauer ein tippen:
 
 
 ```mof
@@ -51,7 +51,7 @@ Wie bei den Verweis Eigenschaften sollte der **CimType-Qualifizierer** zum Einge
 
 
 
-Da WMI mehr Typen zulässt, als durch Standard Konstanten mit dem VT-Präfix ausgedrückt werden können \_ , kann der **CimType-Qualifizierer** helfen, Typwerte zu interpretieren. Der **CimType-Qualifizierer** wird automatisch hinzugefügt. Weitere Informationen finden Sie unter [MOF-Datentypen](mof-data-types.md).
+Da WMI mehr Typen zulässt, als durch Standardkonst constants mit dem VT-Präfix ausgedrückt werden können, kann der CIMType-Qualifizierer beim \_ Interpretieren von Typwerten helfen.  Der  CIMType-Qualifizierer wird automatisch hinzugefügt. Weitere Informationen finden Sie unter [MOF-Datentypen.](mof-data-types.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,17 +64,17 @@ Da WMI mehr Typen zulässt, als durch Standard Konstanten mit dem VT-Präfix aus
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WMI-Standard Qualifizierer**](standard-wmi-qualifiers.md)
+[**WMI-Standardqualifizierer**](standard-wmi-qualifiers.md)
 </dt> <dt>
 
-[WMI Qualifizierer](wmi-qualifiers.md)
+[WMI-Qualifizierer](wmi-qualifiers.md)
 </dt> <dt>
 
-[Fügen eines Qualifizierers](adding-a-qualifier.md)
+[Hinzufügen eines Qualifizierers](adding-a-qualifier.md)
 </dt> </dl>
 
  

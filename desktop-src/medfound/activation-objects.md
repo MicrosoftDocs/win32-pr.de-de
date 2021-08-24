@@ -1,35 +1,35 @@
 ---
-description: Aktivierungs Objekte
+description: Aktivierungsobjekte
 ms.assetid: 767d5f1c-2b8d-43b6-916b-035129e93204
-title: Aktivierungs Objekte
+title: Aktivierungsobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aa8741cbfa8bc3801a23b4976e60c0a3ad028b0e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 401b4643e7e19c8cf0b7235218eaed2e355565fdb82a9d3756558e1f11991cbe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119035598"
 ---
-# <a name="activation-objects"></a>Aktivierungs Objekte
+# <a name="activation-objects"></a>Aktivierungsobjekte
 
-Ein *Aktivierungs Objekt* ist ein Hilfsobjekt, das verwendet wird, um ein anderes Objekt zu erstellen, das einer Klassenfactory ähnelt. Aktivierungs Objekte machen die [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Schnittstelle verfügbar.
+Ein *Aktivierungsobjekt* ist ein Hilfsobjekt, das zum Erstellen eines anderen Objekts verwendet wird, ähnlich wie eine Klassen factory. Aktivierungsobjekte machen die [**BERACTIVate-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) verfügbar.
 
-Mit einem Aktivierungs Objekt können Sie die Erstellung des Zielobjekts verzögern, da Sie einen [**unfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Zeiger halten können, ohne das Zielobjekt zu erstellen. Aktivierungs Objekte können auch serialisiert und daher zum Erstellen des Zielobjekts in einem anderen Prozess verwendet werden. Beispielsweise werden Aktivierungs Objekte verwendet, um Pipeline Komponenten aus dem Anwendungsprozess in den PMP-Prozess (Protected Media Path) zu Mars Hallen. Aktivierungs Objekte werden auch von bestimmten Enumerationsfunktionen verwendet, die eine Liste von **imfaktivezeigern** zurückgeben. Bevor die Anwendung das Zielobjekt erstellt, kann Sie Informationen über das Objekt erhalten, indem die Attribute für das Aktivierungs Objekt untersucht werden.
+Mit einem Aktivierungsobjekt können Sie die Erstellung des Zielobjekts zurückhalten, da Sie sich an einem [**VERWERTer-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) halten können, ohne das Zielobjekt zu erstellen. Aktivierungsobjekte können auch serialisiert und somit verwendet werden, um das Zielobjekt in einem anderen Prozess zu erstellen. Aktivierungsobjekte werden beispielsweise verwendet, um Pipelinekomponenten aus dem Anwendungsprozess in den PMP-Prozess (Protected Media Path) zu marshallen. Aktivierungsobjekte werden auch von bestimmten Enumerationsfunktionen verwendet, die eine Liste mit **DEN -ZEIGERn VOM DATENTYP (ACTIVate)** zurückgeben. Bevor die Anwendung das Zielobjekt erstellt, kann sie Informationen zum Objekt durch Untersuchen von Attributen für das Aktivierungsobjekt erhalten.
 
-Um das Zielobjekt aus einem Aktivierungs Objekt zu erstellen, rufen Sie die [**imfactivate:: activateobject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) -Methode auf. Der Aufrufer muss [**imfaktivate:: shutdownobject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-shutdownobject) aufgerufen werden, wenn er mithilfe des erstellten Objekts abgeschlossen wurde. Häufig erstellt die Anwendung das Aktivierungs Objekt, und die Medien Sitzung ruft **activateobject** auf. In diesem Fall muss die Medien Sitzung, nicht die Anwendung, **shutdownobject** aufzurufen. In anderen Situationen erhält die Anwendung einen [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Zeiger von der Medien Sitzung, und die Anwendung ruft **activateobject** und **shutdownobject** auf. (Informationen hierzu finden Sie beispielsweise [unter Wiedergabe geschützter Mediendateien](how-to-play-protected-media-files.md).)
+Um das Zielobjekt aus einem Aktivierungsobjekt zu erstellen, rufen Sie [**die METHODEACTIVate::ActivateObject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) auf. Der Aufrufer muss [**DANNACTIVate::ShutdownObject aufrufen,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-shutdownobject) wenn es mit dem erstellten Objekt fertig ist. Häufig erstellt die Anwendung das Aktivierungsobjekt, und die Mediensitzung ruft **ActivateObject auf.** In diesem Fall muss die Mediensitzung und nicht die Anwendung **ShutdownObject aufrufen.** In anderen Situationen empfängt die Anwendung einen [**VORZEIGERAktivierungszeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) aus der Mediensitzung, und die Anwendung ruft **ActivateObject** und **ShutdownObject auf.** (Siehe z.B. [How to Play Protected Media Files](how-to-play-protected-media-files.md).)
 
-Aktivierungs Objekte können über Attribute verfügen, und die [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Schnittstelle erbt die [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle. Einige Aktivierungs Objekte verwenden Attribute, um das erstellte Objekt zu konfigurieren. Die spezifischen Attribute, die von den einzelnen Objekten unterstützt werden, sind in der Referenz für die Erstellungs Funktion dieses Aktivierungs Objekts dokumentiert. Legen Sie die Attribute mit dem **imfaktivate** -Zeiger fest, den Sie von der Funktion erhalten.
+Aktivierungsobjekte können Attribute aufweisen, und die [**SCHNITTSTELLE FÜR DIES-Aktivierung**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) erbt die [**SCHNITTSTELLE DURCHATTRIBUTAttributes.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) Einige Aktivierungsobjekte verwenden Attribute, um das erstellte Objekt zu konfigurieren. Die spezifischen Attribute, die von den einzelnen Objekten unterstützt werden, sind in der Referenz für die Erstellungsfunktion dieses Aktivierungsobjekts dokumentiert. Legen Sie die Attribute fest, indem Sie den VON der Funktion empfangenen **POINTERActivate-Zeiger** verwenden.
 
-Bei geschützter Wiedergabe werden Aktivierungs Objekte an den PMP-Prozess gemarshallt. Um das Marshalling zu unterstützen, muss ein Aktivierungs Objekt die **IPersistStream** -Schnittstelle verfügbar machen. Außerdem müssen das Aktivierungs Objekt und das erstellte Objekt vertrauenswürdige Komponenten sein, wenn das PMP in einem geschützten Prozess ausgeführt wird. Dies ist keine Anforderung, wenn das PMP in einen ungeschützten Prozess geladen wird.
+Für die geschützte Wiedergabe werden Aktivierungsobjekte an den PMP-Prozess gemarshallt. Um Marshalling zu unterstützen, muss ein Aktivierungsobjekt die **IPersistStream-Schnittstelle** verfügbar machen. Darüber hinaus müssen sowohl das Aktivierungsobjekt als auch das erstellte Objekt vertrauenswürdige Komponenten sein, wenn der PMP in einem geschützten Prozess ausgeführt wird. Dies ist nicht erforderlich, wenn der PMP in einem ungeschützten Prozess geladen wird.
 
-Wenn Sie ein benutzerdefiniertes Pipeline Objekt (z. b. eine Medien Senke) im PMP-Prozess verwenden möchten, müssen Sie ein Aktivierungs Objekt für das Pipeline Objekt implementieren:
+Um ein benutzerdefiniertes Pipelineobjekt (z. B. eine Mediensenke) innerhalb des PMP-Prozesses zu verwenden, müssen Sie ein Aktivierungsobjekt für Ihr Pipelineobjekt implementieren:
 
--   Das Aktivierungs Objekt muss [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) und **IPersistStream** verfügbar machen.
--   Die **ipersistent:: GetClassID** -Methode des Aktivierungs Objekts muss die CLSID des Aktivierungs Objekts zurückgeben.
--   Optional können Sie die **IPersistStream:: Save** -Methode und die **IPersistStream:: Load** -Methode implementieren, um alle Daten zu Mars Hallen, die Sie benötigen, um das Aktivierungs Objekt zu konfigurieren.
+-   Das Aktivierungsobjekt muss [**DIESACTIVate und**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) **IPersistStream verfügbar machen.**
+-   Die **IPersist::GetClassID-Methode** des Aktivierungsobjekts muss die CLSID des Aktivierungsobjekts zurückgeben.
+-   Optional können Sie die **Methoden IPersistStream::Save** und **IPersistStream::Load** implementieren, um alle Daten zu marshallen, die Sie zum Konfigurieren Ihres Aktivierungsobjekts benötigen.
 
-Wenn die Medien Sitzung die Topologie innerhalb des PMP-Prozesses lädt, wird **cokreateinstance** aufgerufen, um eine neue Instanz Ihres Aktivierungs Objekts zu erstellen. Anschließend wird [**imfaktivate:: activateobject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) aufgerufen, um das Pipeline Objekt zu erstellen.
+Wenn die Mediensitzung die Topologie innerhalb des PMP-Prozesses lädt, ruft sie **CoCreateInstance** auf, um eine neue Instanz Ihres Aktivierungsobjekts zu erstellen. Anschließend ruft sie ZUM Erstellen [**des Pipelineobjekts DIEACTIVATE::ActivateObject-Klasse**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) auf.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -38,7 +38,7 @@ Wenn die Medien Sitzung die Topologie innerhalb des PMP-Prozesses lädt, wird **
 [Media Foundation Plattform-APIs](media-foundation-platform-apis.md)
 </dt> <dt>
 
-[**Imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate)
+[**ACTIVate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate)
 </dt> </dl>
 
  

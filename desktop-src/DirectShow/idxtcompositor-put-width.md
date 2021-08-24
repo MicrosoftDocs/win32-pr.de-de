@@ -1,7 +1,7 @@
 ---
-description: Die Put \_ Width-Methode gibt die Breite des Ziel Rechtecks an.
+description: Die put \_ Width-Methode gibt die Breite des Zielrechtecks an.
 ms.assetid: 16a2d860-6f5d-4f36-ba54-1be2d3fef705
-title: Idxtcompositor::p ut_Width-Methode (qedit. h)
+title: IDxtCompositor::p ut_Width-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 55cc3f2f97be2176f13ce3655d3844ef94043409
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5668e483607441803e83062784a244664cf8ddd9f21f94edaa8e1bb6547a438d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119213360"
 ---
-# <a name="idxtcompositorput_width-method"></a>Idxtcompositor::p UT \_ Width-Methode
+# <a name="idxtcompositorput_width-method"></a>IDxtCompositor::p ut \_ Width-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `put_Width` Methode gibt die Breite des Ziel Rechtecks an.
+Die `put_Width` -Methode gibt die Breite des Zielrechtecks an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,26 +45,26 @@ HRESULT put_Width(
 
 <dl> <dt>
 
-*NewVal* \[ in\]
+*newVal* \[ In\]
 </dt> <dd>
 
-Die Breite des Ziel Rechtecks in Pixel.
+Die Breite des Zielrechtecks in Pixel.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,16 +74,16 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Idxtcompositor-Schnittstelle**](idxtcompositor.md)
+[**IDxtCompositor-Schnittstelle**](idxtcompositor.md)
 </dt> </dl>
 
  
