@@ -1,21 +1,21 @@
 ---
-title: Einrichten des Wiedergabe Fensters
-description: Einrichten des Wiedergabe Fensters
+title: Einrichten des Wiedergabefensters
+description: Einrichten des Wiedergabefensters
 ms.assetid: 4cf27099-e5e5-48f8-8d61-0a3d0e0d9499
 keywords:
 - mciSendCommand-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 13ed74a133f112935f9ff2ad451e84e3819cee6c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 3d612c01f0800bc70b19e0b9d7d1b83eb5654371a75720ba85828d3ed9f08f3d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106341712"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805410"
 ---
-# <a name="setting-up-the-playback-window"></a>Einrichten des Wiedergabe Fensters
+# <a name="setting-up-the-playback-window"></a>Einrichten des Wiedergabefensters
 
-Im folgenden Beispiel werden die Dimensionen gesucht, die für die Wiedergabe einer AVI-Datei benötigt werden, und es wird ein Fenster erstellt, das dieser Größe entspricht, und die Datei wird mit dem MCIAVI-Treiber im Fenster abgespielt. Es verwendet die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion
+Im folgenden Beispiel werden die dimensionen gesucht, die zum Wiederspielen einer AVI-Datei erforderlich sind, ein Fenster erstellt, das dieser Größe entspricht, und die Datei im Fenster mithilfe des MCIAVI-Treibers ab. Es wird die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) verwendet.
 
 
 ```C++
@@ -52,6 +52,6 @@ if (hwndMovie){
 
 
 
- 
+ 
 
- 
+ 

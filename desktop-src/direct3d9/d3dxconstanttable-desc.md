@@ -1,7 +1,7 @@
 ---
-description: Eine Beschreibung der Konstanten Tabelle.
+description: Eine Beschreibung der konstanten Tabelle.
 ms.assetid: 848b328a-95a4-4fd0-a7d4-4fb0e5d14f64
-title: D3DXCONSTANTTABLE_DESC-Struktur (D3dx9shader. h)
+title: D3DXCONSTANTTABLE_DESC-Struktur (D3dx9shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9shader.h
-ms.openlocfilehash: 7c53023952518182f68cf4a671ec47c6056a92a6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9fb881ce0871165d9df394bf8a76326b4f5d644692217b1bb901438b90cf7cef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119894060"
 ---
-# <a name="d3dxconstanttable_desc-structure"></a>D3DXCONSTANTTABLE- \_ Struktur
+# <a name="d3dxconstanttable_desc-structure"></a>D3DXCONSTANTTABLE \_ DESC-Struktur
 
-Eine Beschreibung der Konstanten Tabelle.
+Eine Beschreibung der konstanten Tabelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der Name des Erstellers der Konstanten Tabelle.
+Name des Erstellers der konstanten Tabelle.
 
 </dd> <dt>
 
@@ -59,18 +59,18 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Shader-Version.
+Shaderversion.
 
 </dd> <dt>
 
 **Konstanten**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der Konstanten in der Konstanten Tabelle.
+Anzahl der Konstanten in der Konstantentabelle.
 
 </dd> </dl>
 
@@ -80,7 +80,7 @@ Anzahl der Konstanten in der Konstanten Tabelle.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9shader. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9shader.h</dt> </dl> |
 
 
 
@@ -91,7 +91,7 @@ Anzahl der Konstanten in der Konstanten Tabelle.
 [D3DX-Strukturen](dx9-graphics-reference-d3dx-structures.md)
 </dt> <dt>
 
-[**D3DXCONSTANT- \_ Abteilung**](d3dxconstant-desc.md)
+[**D3DXCONSTANT \_ DESC**](d3dxconstant-desc.md)
 </dt> </dl>
 
  

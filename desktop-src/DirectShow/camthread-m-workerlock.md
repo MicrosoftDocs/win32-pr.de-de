@@ -1,7 +1,7 @@
 ---
-description: Kritischer Abschnitt, der die von Threads gemeinsam genutzten Daten sperrt.
+description: Kritischer Abschnitt zum Sperren von Daten, die von Threads gemeinsam genutzt werden.
 ms.assetid: 87966d7d-6677-462f-93bc-fedda7f0bdcf
-title: 'Camthread:: m_WorkerLock Member (wxutil. h)'
+title: CABThread::m_WorkerLock Member (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4fce6c2ff2a7857f6cb69ce3bb92fe2b6f24bcbf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4a66103843c2b636758f431a328d7e69f05b3a7c2577b65f7911af6fcfbddbeb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119824120"
 ---
-# <a name="camthreadm_workerlock-member"></a>Camthread:: m \_ workerlock-Member
+# <a name="camthreadm_workerlock-member"></a>ELEMENTSThread::m \_ WorkerLock-Member
 
-Kritischer Abschnitt, der die von Threads gemeinsam genutzten Daten sperrt.
+Kritischer Abschnitt zum Sperren von Daten, die von Threads gemeinsam genutzt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ CCritSec m_WorkerLock;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Camthread-Klasse**](camthread.md)
+[**WEBCAMThread-Klasse**](camthread.md)
 </dt> </dl>
 
  

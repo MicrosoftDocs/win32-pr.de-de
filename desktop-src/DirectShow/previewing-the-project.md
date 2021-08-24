@@ -1,23 +1,23 @@
 ---
-description: Anzeigen der Vorschau des Projekts
+description: Vorschau des Project
 ms.assetid: 00d72a39-f848-47ea-8460-8b826684eeea
-title: Anzeigen der Vorschau des Projekts
+title: Vorschau des Project
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2bdf38fe19e500cfe9bd9a8dfb77f7ff56528a2f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 1d17d5fd0c87d98db2dac0a7ace97a72e2107eeb252561bbc535a5bd8b4a56d3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103958019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119748260"
 ---
-# <a name="previewing-the-project"></a>Anzeigen der Vorschau des Projekts
+# <a name="previewing-the-project"></a>Vorschau des Project
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Zum Anzeigen einer Vorschau des Projekts benötigen Sie eine Komponente, die als *Renderengine* bezeichnet wird und ein DirectShow-Filter Diagramm aus einer Zeitachse erstellt. Das Filter Diagramm rendert das Projekt tatsächlich. Mit der Rendering-Engine können Sie eine Vorschau eines Projekts anzeigen oder die endgültige Ausgabedatei schreiben.
+Um eine Vorschau des Projekts anzuzeigen, benötigen Sie eine Komponente namens *Render-Engine,* die ein DirectShow-Filterdiagramm aus einer Zeitachse erstellt. Das Filterdiagramm rendert das Projekt tatsächlich. Sie können die Render-Engine verwenden, um eine Vorschau eines Projekts anzuzeigen oder die endgültige Ausgabedatei zu schreiben.
 
-In diesem Artikel wird die Renderingengine nicht ausführlich behandelt. Für die Vorschau benötigen Sie nur einige Methodenaufrufe. Eine ausführlichere Erörterung finden Sie unter Informationen zum Schreiben von Ausgabedateien in [Rendern eines Projekts](rendering-a-project.md). Im folgenden Codebeispiel wird das Erstellen eines Vorschau Diagramms veranschaulicht.
+In diesem Artikel wird die Render-Engine nicht ausführlich behandelt. Für die Vorschau benötigen Sie nur einige Methodenaufrufe. Eine eingehendere Erörterung, einschließlich des Schreibens von Ausgabedateien, finden Sie unter [Rendering a Project.](rendering-a-project.md) Im folgenden Codebeispiel wird das Erstellen eines Vorschaudiagramms veranschaulicht.
 
 
 ```C++
@@ -32,13 +32,13 @@ hr = pRender->RenderOutputPins( );
 
 
 
-Erstellen Sie die Renderingengine mithilfe der **cokreateinstance** -Funktion. Anschließend werden die folgenden Methoden für die " [**unenderengine**](irenderengine.md) "-Schnittstelle der Rendering-Engine aufgerufen:
+Erstellen Sie die Render-Engine mithilfe der **CoCreateInstance-Funktion.** Rufen Sie dann die folgenden Methoden auf der [**IRenderEngine-Schnittstelle der Render-Engine**](irenderengine.md) auf:
 
--   [**Settimelineobject**](irenderengine-settimelineobject.md). Gibt die zu verwendende Zeitachse an.
--   [**Connectfrontend**](irenderengine-connectfrontend.md). Erstellt ein partielles Filter Diagramm mit einem Ausgabepin für jede Gruppe in der Zeitachse.
--   [**Renderoutputpins**](irenderengine-renderoutputpins.md). Schließt das Vorschau Diagramm ab, indem jede Ausgabe-PIN mit einem Video-oder audiorenderer verbunden wird.
+-   [**SetTimelineObject**](irenderengine-settimelineobject.md). Gibt die zu verwendende Zeitachse an.
+-   [**ConnectFrontEnd**](irenderengine-connectfrontend.md). Erstellt ein partielles Filterdiagramm mit einem Ausgabepin für jede Gruppe in der Zeitachse.
+-   [**RenderOutputPins**](irenderengine-renderoutputpins.md). Schließt das Vorschaudiagramm ab, indem jeder Ausgabepin mit einem Video- oder Audiorenderer verbunden wird.
 
-Nachdem das Diagramm erstellt wurde, können Sie das Projekt in der Vorschau anzeigen, indem Sie das Diagramm wie bei jedem beliebigen DirectShow-Filter Diagramm ausführen. Rufen Sie zuerst einen Zeiger auf das Filter Diagramm ab, indem Sie die Methode " [**irienderengine:: getfiltergraph**](irenderengine-getfiltergraph.md) " aufrufen.
+Sobald das Diagramm erstellt wurde, können Sie eine Vorschau des Projekts anzeigen, indem Sie das Diagramm wie bei jedem DirectShow-Filterdiagramm ausführen. Rufen Sie zunächst einen Zeiger auf das Filterdiagramm ab, indem Sie die [**IRenderEngine::GetFilterGraph-Methode**](irenderengine-getfiltergraph.md) aufrufen.
 
 
 ```C++
@@ -48,7 +48,7 @@ hr = pRender->GetFilterGraph(&pGraph);
 
 
 
-Abfragen des Filter Diagramms für die Schnittstellen [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol) und [**imediaevent**](/windows/desktop/api/Control/nn-control-imediaevent) . Verwenden Sie diese beiden Schnittstellen zum Ausführen des Diagramms, und warten Sie auf den Abschluss der Wiedergabe. Eine Erläuterung zur Verwendung dieser Schnittstellen finden Sie unter wieder [Gabe einer Datei](how-to-play-a-file.md) und [reagieren auf Ereignisse](responding-to-events.md). Der folgende Code zeigt eine Möglichkeit, diese Schnittstellen zu verwenden.
+Fragen Sie das Filterdiagramm für die [**Schnittstellen IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol) und [**IMediaEvent**](/windows/desktop/api/Control/nn-control-imediaevent) ab. Verwenden Sie diese beiden Schnittstellen, um den Graphen ausführen und auf den Abschluss der Wiedergabe warten zu können. Eine Erläuterung der Verwendung dieser Schnittstellen finden Sie unter [How To Play a File](how-to-play-a-file.md) and [Responding to Events](responding-to-events.md). Der folgende Code zeigt eine Möglichkeit, diese Schnittstellen zu verwenden.
 
 
 ```C++
@@ -64,9 +64,9 @@ pControl->Stop();
 
 
 
-Der Code in diesem Beispiel blockiert die Ausführung des Programms, bis die Wiedergabe abgeschlossen ist, weil der unendliche Parameter im [**imediaevent:: waitforcompletion**](/windows/desktop/api/Control/nf-control-imediaevent-waitforcompletion) -Methodenaufrufe ist. Wenn während der Wiedergabe etwas schief geht, kann dies dazu führen, dass das Programm nicht mehr reagiert. Verwenden Sie in einer echten Anwendung eine Nachrichten Schleife, um auf den Abschluss der Wiedergabe zu warten. Außerdem wird empfohlen, dass Sie dem Benutzer eine Möglichkeit zur Unterbrechung der Wiedergabe bereitstellen.
+Der Code in diesem Beispiel blockiert die Programmausführung, bis die Wiedergabe abgeschlossen ist, da der INFINITE-Parameter im [**IMediaEvent::WaitForCompletion-Methodenaufruf**](/windows/desktop/api/Control/nf-control-imediaevent-waitforcompletion) verwendet wird. Wenn während der Wiedergabe jedoch etwas schief geht, kann dies dazu führen, dass das Programm nicht mehr reagiert. Verwenden Sie in einer echten Anwendung eine Meldungsschleife, um auf den Abschluss der Wiedergabe zu warten. Es wird auch empfohlen, dass Sie dem Benutzer eine Möglichkeit bieten, die Wiedergabe zu unterbrechen.
 
-Wenn Sie die Verwendung der Rendering-Engine abgeschlossen haben, müssen Sie immer die Methode " [**irienderengine:: scrapit**](irenderengine-scrapit.md) " aufzurufen. Diese Methode löscht das Filter Diagramm und gibt alle Ressourcen frei, die von der Rendering-Engine aufbewahrt werden.
+Wenn Sie die Verwendung der Render-Engine abgeschlossen haben, rufen Sie immer die [**IRenderEngine::ScrapIt-Methode**](irenderengine-scrapit.md) auf. Diese Methode löscht das Filterdiagramm und gibt alle Ressourcen frei, die von der Render-Engine gespeichert werden.
 
 
 ```C++
@@ -79,7 +79,7 @@ pRender->ScrapIt();
 
 <dl> <dt>
 
-[Laden und Anzeigen der Vorschau eines Projekts](loading-and-previewing-a-project.md)
+[Laden und Anzeigen einer Vorschau Project](loading-and-previewing-a-project.md)
 </dt> </dl>
 
  

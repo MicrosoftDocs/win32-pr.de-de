@@ -1,7 +1,7 @@
 ---
-description: Die "ikspin"-Schnittstelle bietet eine Methode zum Abrufen der von einer PIN in einem kernelmodusfilter unterstützten Medien. "Ikspin" hat neben dem hier gezeigten zusätzliche Methoden, aber Sie werden für DirectShow nicht unterstützt.
+description: Die IKsPin-Schnittstelle stellt eine Methode zum Abrufen der Medien bereit, die von einem Pin in einem Kernelmodusfilter unterstützt werden. IKsPin verfügt über zusätzliche Methoden neben der hier gezeigten, aber sie werden für DirectShow nicht unterstützt.
 ms.assetid: 14d9bef2-e8f0-49d5-bd89-69a95814cf8c
-title: Ikspin-Schnittstelle (ksproxy. h)
+title: IKsPin-Schnittstelle (Ksproxy.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,40 +14,40 @@ api_type:
 api_location:
 - Strmiids.lib
 - Strmiids.dll
-ms.openlocfilehash: 3d65e5ba5525b977ebae27da9964579614a1d653
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 8855378544bcc2ea7357af220b5d80d32edde74a50c304e973c9821aa8e9a41c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345401"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119792330"
 ---
-# <a name="ikspin-interface"></a>Ikspin-Schnittstelle
+# <a name="ikspin-interface"></a>IKsPin-Schnittstelle
 
-Die `IKsPin` -Schnittstelle stellt eine Methode zum Abrufen der von einer PIN in einem Kernel Modus-Filter unterstützten Medien bereit. `IKsPin` hat neben dem hier gezeigten zusätzliche Methoden, aber Sie werden für DirectShow nicht unterstützt.
+Die `IKsPin` -Schnittstelle stellt eine Methode zum Abrufen der Von einem Pin unterstützten Medien für einen Kernelmodusfilter bereit. `IKsPin` verfügt über zusätzliche Methoden neben der hier gezeigten, aber sie werden für DirectShow nicht unterstützt.
 
 ## <a name="members"></a>Member
 
-Die " **ikspin** "-Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. In " **ikspin** " sind auch folgende Typen von Membern aufgeführt:
+Die **IKsPin-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IKsPin** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ikspin** -Schnittstelle verfügt über diese Methoden.
+Die **IKsPin-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                          | BESCHREIBUNG                                          |
+| Methode                                          | Beschreibung                                          |
 |:------------------------------------------------|:-----------------------------------------------------|
-| [**Ksquerymediums**](ikspin-ksquerymediums.md) | Ruft die von einer PIN unterstützten Medien ab.<br/> |
+| [**KsQueryMediums**](ikspin-ksquerymediums.md) | Ruft die von einem Pin unterstützten Medien ab.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen "KS. h" vor "ksproxy. h" einschließen.
+Sie müssen Ks.h vor Ksproxy.h einschließen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,8 +57,8 @@ Sie müssen "KS. h" vor "ksproxy. h" einschließen.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Ksproxy. h</dt> </dl>    |
-| Bibliothek<br/>                  | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ksproxy.h</dt> </dl>    |
+| Bibliothek<br/>                  | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 

@@ -4,12 +4,12 @@ ms.assetid: 0de06ee1-1291-4f18-9514-cca443a3e300
 title: namespaceDefinitions-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 59ff40fb7d0d7209a85c46b50435cb3702e3a59a
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: e8bbcf13dae671f9a6ddd03f254b601f8cdc77f19d243007e3e2387ab46c724b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107994297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119897400"
 ---
 # <a name="namespacedefinitions-element"></a>namespaceDefinitions-Element
 
@@ -41,7 +41,7 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Element wird im Allgemeinen in C-Quelldateien verwendet, um die Namespacetabellen bereitzustellen, die von [**namespaceDeclarations**](namespacedeclarations.md)deklariert wurden.
+Dieses Element wird im Allgemeinen in C-Quelldateien verwendet, um die Namespacetabellen zur Verfügung zu stellen, die von [**namespaceDeclarations deklariert wurden.**](namespacedeclarations.md)
 
 ## <a name="element-information"></a>Elementinformationen
 

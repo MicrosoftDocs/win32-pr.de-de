@@ -4,29 +4,29 @@ ms.assetid: aa13bd57-69c1-462c-86e3-64026a03bfc4
 title: Vorschau von Effekten und Übergängen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 25506b7e50fe83c2e4fca7bb4166748ec43d33dd
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 8baa5f35511ca9b01990e1c3e0562a3a564204a52026c08e2e2827c154b166b4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119748300"
 ---
 # <a name="previewing-effects-and-transitions"></a>Vorschau von Effekten und Übergängen
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Einige Effekte und Übergänge nehmen zum Rendervorgang relativ lange Zeit in Anspruch. Während der Vorschau kann dies dazu führen, dass das Video mit der Audiodatei nicht mehr synchron ist. Sie können die Vorschau Geschwindigkeit erhöhen, indem Sie Effekte oder Übergänge deaktivieren:
+Einige Effekte und Übergänge dauern relativ lange, bis sie gerendert werden. Während der Vorschau kann dies dazu führen, dass das Video gehackt oder nicht mehr mit dem Audio synchronisiert wird. Sie können die Vorschaugeschwindigkeit erhöhen, indem Sie Effekte oder Übergänge deaktivieren:
 
--   Um alle Effekte zu deaktivieren, nennen Sie [**iamtimeline:: enableeffects**](iamtimeline-enableeffects.md).
--   Um alle Übergänge zu deaktivieren, nennen Sie [**iamtimeline:: enabletransitions**](iamtimeline-enabletransitions.md).
--   Um einen bestimmten Übergang zu deaktivieren, nennen Sie [**iamtimelinetrans:: setcutsonly**](iamtimelinetrans-setcutsonly.md).
+-   Um alle Effekte zu deaktivieren, rufen [**Sie IAMTimeline::EnableEffects auf.**](iamtimeline-enableeffects.md)
+-   Um alle Übergänge zu deaktivieren, rufen [**Sie IAMTimeline::EnableTransitions auf.**](iamtimeline-enabletransitions.md)
+-   Um einen bestimmten Übergang zu deaktivieren, rufen [**Sie IAMTimelineTrans::SetCutsOnly auf.**](iamtimelinetrans-setcutsonly.md)
 
-Wenn Effekte deaktiviert sind, werden Sie während der Vorschau nicht gerendert. Wenn ein Übergang deaktiviert ist, wird er als Sprung Ausschneide gerendert. Der segue zwischen den Spuren tritt immer noch auf, aber der visuelle Effekt wird nicht gerendert.
+Wenn Effekte deaktiviert sind, werden sie während der Vorschau nicht gerendert. Wenn ein Übergang deaktiviert ist, wird er als Sprungschnitt gerendert. Der Segue zwischen den Spuren tritt weiterhin auf, aber der visuelle Effekt wird nicht gerendert.
 
-Wenn ein Effekt oder Übergang nicht gerendert werden kann, ersetzt die Renderengine einen Standardeffekt oder-Übergang. Aufrufen der [**iamtimeline:: setdefaulteffect**](iamtimeline-setdefaulteffect.md) -Methode zum Festlegen des Standard Effekts und der [**iamtimeline:: setdefaulttransition**](iamtimeline-setdefaulttransition.md) -Methode, um den Standard Übergang festzulegen. Wenn Sie keinen Standardwert angeben, oder wenn der von Ihnen angegebene Wert auch einen Fehler verursacht, verwendet des einen eigenen Standardwert.
+Wenn ein Effekt oder Übergang nicht gerendert werden kann, ersetzt die Render-Engine einen Standardeffekt oder -übergang. Rufen Sie [**die IAMTimeline::SetDefaultEffect-Methode**](iamtimeline-setdefaulteffect.md) auf, um den Standardeffekt und die [**IAMTimeline::SetDefaultTransition-Methode**](iamtimeline-setdefaulttransition.md) zum Festlegen des Standardübergangs fest. Wenn Sie keinen Standardwert angeben oder wenn die von Ihnen angegebenen ebenfalls einen Fehler verursachen, verwendet DES einen eigenen Standardwert.
 
 > [!Note]  
-> Sie können auch die Vorschau Qualität verbessern, indem Sie den Umfang der Rahmen Pufferung erhöhen. Weitere Informationen finden Sie unter [**iamtimelinegroup:: setoutputbuffering.**](iamtimelinegroup-setoutputbuffering.md)
+> Sie können auch die Vorschauqualität verbessern, indem Sie die Framepufferung erhöhen. Siehe [**IAMTimelineGroup::SetOutputBuffering**](iamtimelinegroup-setoutputbuffering.md).
 
  
 

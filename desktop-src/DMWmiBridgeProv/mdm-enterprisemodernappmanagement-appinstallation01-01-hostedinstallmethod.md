@@ -1,11 +1,11 @@
 ---
-title: Die Methode "hustedinstallmethod" der MDM_EnterpriseModernAppManagement_AppInstallation01_01-Klasse
-description: Methode, mit der ein App-Paket von einem gehosteten Speicherort, z. b. einem lokalen Laufwerk, einer UNC-oder HTTPS-Datenquelle, installiert wird. Siehe auch "horstedinstall".
+title: HostedInstallMethod-Methode der MDM_EnterpriseModernAppManagement_AppInstallation01_01-Klasse
+description: Methode zum Ausführen einer Installation eines App-Pakets von einem gehosteten Speicherort, z. B. einem lokalen Laufwerk, einer UNC- oder HTTPS-Datenquelle. Siehe auch HostedInstall.
 ms.assetid: 1ec16315-75ce-4613-804e-6b587c4071d6
 keywords:
-- Methode "hustedinstallmethod"
-- Methode "" der Methode "", "MDM_EnterpriseModernAppManagement_AppInstallation01_01 Klasse"
-- MDM_EnterpriseModernAppManagement_AppInstallation01_01-Klasse, Methode "" der Methode ""
+- HostedInstallMethod-Methode
+- HostedInstallMethod-Methode, MDM_EnterpriseModernAppManagement_AppInstallation01_01 Klasse
+- MDM_EnterpriseModernAppManagement_AppInstallation01_01, HostedInstallMethod-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9597f748a2b5695fd2703f187cfe50db7ad0aa85
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 60cd27419dce09b2a0e4aa7304bb53ac63e7d205b93cbaacbf832aa4a3501338
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119750630"
 ---
-# <a name="hostedinstallmethod-method-of-the-mdm_enterprisemodernappmanagement_appinstallation01_01-class"></a>Methode "hustedinstallmethod" der MDM \_ enterprismodernappmanagement \_ AppInstallation01 \_ 01-Klasse
+# <a name="hostedinstallmethod-method-of-the-mdm_enterprisemodernappmanagement_appinstallation01_01-class"></a>HostedInstallMethod-Methode der MDM \_ EnterpriseModernAppManagement \_ AppInstallation01 \_ 01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Methode, mit der ein App-Paket von einem gehosteten Speicherort, z. b. einem lokalen Laufwerk, einer UNC-oder HTTPS-Datenquelle, installiert wird. Siehe auch " [horstedinstall](/windows/client-management/mdm/enterprisemodernappmanagement-csp)".
+Methode zum Ausführen einer Installation eines App-Pakets von einem gehosteten Speicherort, z. B. einem lokalen Laufwerk, einer UNC- oder HTTPS-Datenquelle. Siehe auch [HostedInstall](/windows/client-management/mdm/enterprisemodernappmanagement-csp).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ uint32 HostedInstallMethod(
 
 <dl> <dt>
 
-*param* \[ in\]
+*param* \[ In\]
 </dt> <dd></dd> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -53,10 +53,10 @@ uint32 HostedInstallMethod(
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -65,10 +65,10 @@ uint32 HostedInstallMethod(
 
 <dl> <dt>
 
-[**MDM \_ enterprinappmanagement \_ AppInstallation01 \_ 01**](mdm-enterprisemodernappmanagement-appinstallation01-01.md)
+[**MDM \_ EnterpriseModernAppManagement \_ AppInstallation01 \_ 01**](mdm-enterprisemodernappmanagement-appinstallation01-01.md)
 </dt> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

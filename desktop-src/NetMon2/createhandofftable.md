@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "| atehandofftable" erstellt eine Übergabe Tabelle, die die in der INI-Datei des Parsers gespeicherten Übergabe-Informationen enthält.
+description: Die CreateHandoffTable-Funktion erstellt eine Übergabetabelle, die die in der INI-Datei des Parsers gespeicherten Handoffsetinformationen enthält.
 ms.assetid: 6dbca2fa-33fb-48e8-b663-be59aec6264b
-title: Funktion "anatehandofftable" (Netmon. h)
+title: CreateHandoffTable-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 450bb4e4b158a937d48d753a5ff5c831f8fa58c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 70709223d5dcebcae819389feb8623006b793126a911fc674491b1d665268056
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355689"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911200"
 ---
-# <a name="createhandofftable-function"></a>"Anatehandofftable"-Funktion
+# <a name="createhandofftable-function"></a>CreateHandoffTable-Funktion
 
-Die Funktion "| **atehandofftable** " erstellt eine [*Übergabe Tabelle*](h.md) , die die in der INI-Datei des Parsers gespeicherten Übergabe-Informationen enthält.
+Die **CreateHandoffTable-Funktion** erstellt eine [*Übergabetabelle,*](h.md) die die in der INI-Datei des Parsers gespeicherten Handoffsetinformationen enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,52 +43,52 @@ DWORD WINAPI CreateHandoffTable(
 
 <dl> <dt>
 
-*secname* \[ in\]
+*secName* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die den Abschnitt der INI-Datei angibt, in der sich die handaus Satz Informationen befinden.
+Eine Zeichenfolge, die den Abschnitt der INI-Datei angibt, in dem sich die Informationen zum Übergabesatz befinden.
 
 </dd> <dt>
 
-*IniFile* \[ in\]
+*iniFile* \[ In\]
 </dt> <dd>
 
-Zeichenfolge, die den Namen der INI-Datei des Parsers enthält.
+Eine Zeichenfolge, die den Namen der PARSER-INI-Datei enthält.
 
 </dd> <dt>
 
-*htable* \[ vorgenommen\]
+*hTable* \[ out\]
 </dt> <dd>
 
-Handle für eine **handofftable** -Struktur, die von Netzwerkmonitor erstellt und verwaltet wird.
+Handle für eine **HANDOFFTABLE-Struktur,** die von einem -Netzwerkmonitor.
 
 </dd> <dt>
 
-*nmaxprotocolentries* \[ in\]
+*nMaxProtocolEntries* \[ In\]
 </dt> <dd>
 
-Zahl, die die maximale Anzahl von Einträgen angibt, die von der Übergabe-Tabelle verarbeitet werden können.
+Zahl, die die maximale Anzahl von Einträgen angibt, die die Übergabetabelle verarbeiten kann.
 
 </dd> <dt>
 
-*Basis* \[ in\]
+*base* \[ In\]
 </dt> <dd>
 
-Numerische Basis der Übergabe Satz Nummern, die in der INI-Datei gespeichert sind.
+Numerische Basis der in der INI-Datei gespeicherten Übergabesatznummern.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert die Anzahl der Einträge in der Übergabe-Tabelle.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert die Anzahl der Einträge in der Übergabetabelle.
 
 Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die von Netzwerkmonitor erstellte Übergabe Tabelle basiert auf Informationen, die in der-Parser-ini bereitgestellt werden. Der zurückgegebene Handle der Übergabe-Tabelle kann dann verwendet werden, um ein Handle für eines der in der Tabelle enthaltenen Protokolle abzurufen. Rufen Sie [getprotocolfromtable](getprotocolfromtable.md)auf, um ein Handle für eines dieser Protokolle zu erhalten.
+Die von Netzwerkmonitor Handofftabelle basiert auf Informationen, die im Parser-INI bereitgestellt werden. Das zurückgegebene Handle für die Übergabetabelle kann dann verwendet werden, um ein Handle für eines der in der Tabelle enthaltenen Protokolle zu erhalten. Um ein Handle eines dieser Protokolle zu erhalten, rufen [Sie GetProtocolFromTable auf.](getprotocolfromtable.md)
 
-Beachten Sie, dass die parseranwendung niemals direkt auf die **handofftable** -Struktur zugreift. Diese Struktur wird von Netzwerkmonitor erstellt und verwaltet.
+Beachten Sie, dass die Parseranwendung nie direkt auf die **HANDOFFTABLE-Struktur** zutritt. Diese Struktur wird von der -Netzwerkmonitor.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,8 +98,8 @@ Beachten Sie, dass die parseranwendung niemals direkt auf die **handofftable** -
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 
@@ -108,10 +108,10 @@ Beachten Sie, dass die parseranwendung niemals direkt auf die **handofftable** -
 
 <dl> <dt>
 
-[Getprotocolfromtable](getprotocolfromtable.md)
+[GetProtocolFromTable](getprotocolfromtable.md)
 </dt> <dt>
 
-[Handofftable](handofftable.md)
+[HANDOFFTABLE](handofftable.md)
 </dt> </dl>
 
  

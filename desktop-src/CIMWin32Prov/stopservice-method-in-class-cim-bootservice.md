@@ -1,8 +1,8 @@
 ---
-description: Beendet den Dienst, der durch das vom CIM-Bootservice abgeleitete Objekt dargestellt wird \_ .
+description: Beendet den Dienst, der durch das von CIM BootService abgeleitete \_ Objekt dargestellt wird.
 ms.assetid: 443a2afa-ed46-4378-a06f-5f9f94af51c9
 ms.tgt_platform: multiple
-title: Stop Service-Methode der CIM_BootService-Klasse (sdoias. h)
+title: StopService-Methode der CIM_BootService -Klasse (Sdoias.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: c054a9d05410ddbe7ee7d11c5bd4adba9e0ce83b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7b5c580e847146cb2c3d0ccdaadf3a6755937a7c7935f13598e94f1fcf26ac44
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119752280"
 ---
-# <a name="stopservice-method-of-the-cim_bootservice-class"></a>Stop Service-Methode der CIM \_ Bootservice-Klasse
+# <a name="stopservice-method-of-the-cim_bootservice-class"></a>StopService-Methode der CIM \_ BootService-Klasse
 
-Die **Stop Service** -Methode beendet den Dienst, der durch das vom [**CIM- \_ Bootservice**](cim-bootservice.md)abgeleitete Objekt dargestellt wird. Diese Methode wird vom [**CIM- \_ Dienst**](cim-service.md)geerbt.
+Die **StopService-Methode** beendet den Dienst, der durch das von [**CIM BootService abgeleitete \_ Objekt dargestellt wird.**](cim-bootservice.md) Diese Methode wird vom [**CIM-Dienst \_ geerbt.**](cim-service.md)
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,13 +47,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg den Wert 0 (null) zurück, 1 (eins), wenn die Anforderung nicht unterstützt wird, und jede andere Zahl gibt einen Fehler an.
+Gibt bei Erfolg den Wert 0 (null) zurück, 1 (eins), wenn die Anforderung nicht unterstützt wird, und eine beliebige andere Zahl, um einen Fehler anzugeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird zurzeit nicht von WMI implementiert. Um diese Methode verwenden zu können, müssen Sie Sie in Ihrem eigenen Anbieter implementieren.
+Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| Header<br/>                   | <dl> <dt>Sdoias. h</dt> </dl>     |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| Header<br/>                   | <dl> <dt>Sdoias.h</dt> </dl>     |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -74,10 +74,10 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[CIM- \_ Bootservice](stopservice-method-in-class-cim-bootservice.md)
+[CIM \_ BootService](stopservice-method-in-class-cim-bootservice.md)
 </dt> <dt>
 
-[**CIM- \_ Bootservice**](cim-bootservice.md)
+[**CIM \_ BootService**](cim-bootservice.md)
 </dt> </dl>
 
  

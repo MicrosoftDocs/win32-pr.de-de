@@ -4,12 +4,12 @@ ms.assetid: b54dfeda-c2a3-42ec-895f-9abbbd4dd2ec
 title: Abrufen unterstützter Dienstformate
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 73618f3450255ad470545ac472ad9f71238621e3
-ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
+ms.openlocfilehash: ccbaa5678d12e4393f377bb0ae0a399634b247ceb9bd54e1d815d4e9f7e5a763
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110423811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119806670"
 ---
 # <a name="retrieving-supported-service-formats"></a>Abrufen unterstützter Dienstformate
 
@@ -36,9 +36,9 @@ In WPD wird ein Format durch Attribute beschrieben, die den Namen und (optional)
 
 Wenn wpdServiceSampleDriver das einzige installierte Gerät ist, gibt der Treiber im Fall der Beispielanwendung zwei unterstützte Formate für den Contact-Dienst zurück: "AbstractContactFormat" und "VCard2Format". Diese Formate entsprechen den **WPD \_ OBJECT FORMAT \_ ABSTRACT \_ \_ CONTACT-** und **WPD OBJECT FORMAT \_ \_ \_ VCARD2-Attributen** in PortableDevice.h.
 
-Zwei Methoden im Modul ServiceCapabilities.cpp unterstützen das Abrufen unterstützter Formate für den Contacts-Dienst: **ListSupportedFormats** und **DisplayFormat**. Erstere ruft den GUID-Bezeichner für jedes unterstützte Format ab. Letztere konvertiert diese GUID in eine benutzerfreundliche Zeichenfolge.
+Zwei Methoden im Modul ServiceCapabilities.cpp unterstützen das Abrufen unterstützter Formate für den Contacts-Dienst: **ListSupportedFormats** und **DisplayFormat**. Ersteres ruft den GUID-Bezeichner für jedes unterstützte Format ab. Letztere konvertiert diese GUID in eine benutzerfreundliche Zeichenfolge.
 
-Die **ListSupportedFormats-Methode** ruft die [**IPortableDeviceService::Capabilities-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-capabilities) auf, um eine [**IPortableDeviceServiceCapabilities-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) abzurufen. Mit dieser Schnittstelle werden die unterstützten Formate abgerufen, indem die [**IPortableDeviceServiceCapabilities::GetSupportedFormats-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getsupportedformats) aufgerufen wird. Die **GetSupportedFormats-Methode** ruft die GUID für jedes vom Dienst unterstützte Format ab und kopiert diese GUID in ein [**IPortableDevicePropVariantCollection-Objekt.**](iportabledevicepropvariantcollection.md)
+Die **ListSupportedFormats-Methode** ruft die [**IPortableDeviceService::Capabilities-Methode auf,**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-capabilities) um eine [**IPortableDeviceServiceCapabilities-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) abzurufen. Über diese Schnittstelle werden die unterstützten Formate abgerufen, indem die [**IPortableDeviceServiceCapabilities::GetSupportedFormats-Methode aufgerufen**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getsupportedformats) wird. Die **GetSupportedFormats-Methode** ruft die GUID für jedes format ab, das vom Dienst unterstützt wird, und kopiert diese GUID in ein [**IPortableDevicePropVariantCollection-Objekt.**](iportabledevicepropvariantcollection.md)
 
 Im folgenden Code wird die **ListSupportedFormats-Methode** verwendet.
 
@@ -117,9 +117,9 @@ void ListSupportedFormats(
 
 
 
-Nachdem die **ListSupportedFormats-Methode** die GUID für jedes vom angegebenen Dienst unterstützte Format abgerufen hat, ruft sie die **DisplayFormat-Methode** auf, um den Anzeigenamen des Skripts für jedes Format anzuzeigen. Beispiel: "VCard2".
+Nachdem die **ListSupportedFormats-Methode** die GUID für jedes format abgerufen hat, das vom angegebenen Dienst unterstützt wird, ruft sie die **DisplayFormat-Methode** auf, um den Anzeigenamen des Skripts für jedes Format anzuzeigen. Beispiel: "VCard2".
 
-Die **DisplayFormat-Methode** ruft die [**IPortableDeviceServiceCapabilities::GetFormatAttributes-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getformatattributes) auf, um eine Auflistung von Attributen für die angegebene Format-GUID abzurufen. Anschließend ruft sie die [**IPortableDeviceValues::GetStringValue-Methode**](iportabledevicevalues-getstringvalue.md) auf und fordert an, dass der Treiber einen skriptfreundlichen Namen für das angegebene Format zurückgibt.
+Die **DisplayFormat-Methode** ruft die [**IPortableDeviceServiceCapabilities::GetFormatAttributes-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getformatattributes) auf, um eine Auflistung von Attributen für die formatierte GUID abzurufen. Anschließend ruft sie die [**IPortableDeviceValues::GetStringValue-Methode**](iportabledevicevalues-getstringvalue.md) auf und fordert an, dass der Treiber einen skriptfreundlichen Namen für das gegebene Format zurücksendet.
 
 Im folgenden Code wird die **DisplayFormat-Methode** verwendet.
 

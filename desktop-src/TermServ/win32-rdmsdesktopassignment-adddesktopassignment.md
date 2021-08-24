@@ -1,12 +1,12 @@
 ---
-title: Adddesktopzuweisung-Methode der Win32_RDMSDesktopAssignment-Klasse
-description: Fügen Sie eine Desktop Zuweisung hinzu.
+title: AddDesktopAssignment-Methode der Win32_RDMSDesktopAssignment-Klasse
+description: Fügen Sie eine Desktopzuweisung hinzu.
 ms.assetid: 3690f70e-d0c3-444a-a0b7-cec6994eb3b8
 ms.tgt_platform: multiple
 keywords:
-- Adddesktopzuweisung-Methode Remotedesktopdienste
-- Adddesktopzuweisung-Methode Remotedesktopdienste, Win32_RDMSDesktopAssignment-Klasse
-- Win32_RDMSDesktopAssignment-Klasse Remotedesktopdienste, adddesktopzuweisungs-Methode
+- AddDesktopAssignment-Remotedesktopdienste
+- AddDesktopAssignment-Methode Remotedesktopdienste , Win32_RDMSDesktopAssignment-Klasse
+- Win32_RDMSDesktopAssignment klasse Remotedesktopdienste , AddDesktopAssignment-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 571273e76b0bb45b748f1587e5a831fcf1e36b0e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6c0d8145318cfd749772d2dcf417b71c6a1862ee31ec363957554e06b3aa6257
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858807"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119868220"
 ---
-# <a name="adddesktopassignment-method-of-the-win32_rdmsdesktopassignment-class"></a>Adddesktopzuweisung-Methode der Win32- \_ Klasse rdmsdesktopzuweisung
+# <a name="adddesktopassignment-method-of-the-win32_rdmsdesktopassignment-class"></a>AddDesktopAssignment-Methode der Win32 \_ RDMSDesktopAssignment-Klasse
 
-Hinzufügen einer Desktop Zuweisung
+Hinzufügen einer Desktopzuweisung
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,31 +46,31 @@ uint32 AddDesktopAssignment(
 
 <dl> <dt>
 
-*Collectionalias* \[ in\]
+*CollectionAlias* \[ In\]
 </dt> <dd>
 
-Der sammlungsalias.
+Der Auflistungsalias.
 
 </dd> <dt>
 
-*Desktopname* \[ in\]
+*DesktopName* \[ In\]
 </dt> <dd>
 
 Der Name des Desktops.
 
 </dd> <dt>
 
-*Benutzer Domäne* \[ in\]
+*UserDomain* \[ In\]
 </dt> <dd>
 
-Der Domänen Name des Benutzerkontos.
+Der Domänenname des Benutzerkontos.
 
 </dd> <dt>
 
-*Benutzername* \[ in\]
+*UserName* \[ In\]
 </dt> <dd>
 
-Der Name des Benutzerkontos.
+Der Benutzername.
 
 </dd> </dl>
 
@@ -82,8 +82,8 @@ Der Name des Benutzerkontos.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMV2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -92,7 +92,7 @@ Der Name des Benutzerkontos.
 
 <dl> <dt>
 
-[**Win32- \_ rdmsdesktopzuweisung**](win32-rdmsdesktopassignment.md)
+[**Win32 \_ RDMSDesktopAssignment**](win32-rdmsdesktopassignment.md)
 </dt> </dl>
 
  

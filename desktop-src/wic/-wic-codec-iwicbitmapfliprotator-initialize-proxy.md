@@ -1,5 +1,5 @@
 ---
-description: 'IWICBitmapFlipRotator_Initialize_Proxy-Funktion: Proxyfunktion für die Initialize-Methode.'
+description: IWICBitmapFlipRotator_Initialize_Proxy- Proxyfunktion für die Initialize-Methode.
 ms.assetid: 860e8092-054d-489e-8ca1-fec43a039eca
 title: IWICBitmapFlipRotator_Initialize_Proxy-Funktion
 ms.topic: reference
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 4a260d6e60c0ffdeb05aa064ae8abbb38818ac8c
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 8c40070130f07aa1e7cd654ac995acdc8754b38357fefdd72575d59991bdba3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108091158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119812460"
 ---
-# <a name="iwicbitmapfliprotator_initialize_proxy-function"></a>IWICBitmapFlipRotator-Funktion \_ "Proxy initialisieren" \_
+# <a name="iwicbitmapfliprotator_initialize_proxy-function"></a>IWICBitmapFlipRotator Initialize \_ \_ Proxy-Funktion
 
 Proxyfunktion für die [**Initialize-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapfliprotator-initialize)
 
@@ -42,7 +42,7 @@ HRESULT IWICBitmapFlipRotator_Initialize_Proxy(
 
 <dl> <dt>
 
-*DIES \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
 Typ: **[ **IWICBitmapFlipRotator**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapfliprotator)\***
@@ -65,7 +65,7 @@ Die Eingabebitmapquelle.
 
 Typ: **[ **WICBitmapTransformOptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmaptransformoptions)**
 
-Die [**WICBitmapTransformOptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmaptransformoptions) zum Spiegeln oder Drehen des Bilds.
+Die [**WICBitmapTransformOptions zum**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmaptransformoptions) Kippen oder Drehen des Bilds.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Die [**WICBitmapTransformOptions**](/windows/desktop/api/Wincodec/ne-wincodec-wi
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -81,10 +81,10 @@ Wenn diese Funktion erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfall
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
 | DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 

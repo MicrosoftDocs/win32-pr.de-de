@@ -26,7 +26,7 @@
           href: asynchronous-operation.md
         - name: Behandeln der Authentifizierung
           href: handling-authentication.md
-        - name: Behandeln von Uniform Resource Locators
+        - name: Behandeln von einheitlichen Ressourcenlocators
           href: handling-uniform-resource-locators.md
         - name: Sicherheitsrichtlinie
           href: security-guidelines.md
@@ -54,7 +54,7 @@
         - name: Asynchrones Beispiel
           href: asynchronous-example.md
           items:
-            - name: Makefile für asynchrone Beispiele
+            - name: Asynchrones Beispiel-Makefile
               href: asynchronous-example-makefile.md
             - name: Asynchroner Beispielheader
               href: asynchronous-example-header.md
@@ -68,7 +68,7 @@
           items:
             - name: API-Flags
               href: api-flags.md
-            - name: Cachegruppenkonst constants
+            - name: Cachegruppenkonstanten
               href: cache-group-constants.md
             - name: Fehlermeldungen
               href: wininet-errors.md
@@ -345,10 +345,10 @@
               href: /windows/win32/api/wininet/ns-wininet-internetcookiehistory
             - name: URL_COMPONENTS
               href: /windows/win32/api/Wininet/ns-wininet-url_componentsa
-        - name: Proof of possession cookie API
+        - name: Cookie-API zum Nachweis des Besitzes
           href: proof-of-possession-cookie-api.md
           items:
-            - name: IOciOfPossessionCookieInfoManager
+            - name: I5OfPossessionCookieInfoManager
               href: /windows/win32/api/ProofOfPossessionCookieInfo/nn-proofofpossessioncookieinfo-iproofofpossessioncookieinfomanager
               items:
                 - name: GetCookieInfoForUri-Methode

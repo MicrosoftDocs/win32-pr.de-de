@@ -1,11 +1,11 @@
 ---
 title: ClearCache-Methode der MicrosoftDNS_Cache-Klasse
-description: Mit der ClearCache-Methode wird der DNS-Server Cache von Ressourcen Datensätzen gelöscht.
+description: Die ClearCache-Methode löscht den DNS-Servercache von Ressourceneinträgen.
 ms.assetid: ff8d24b7-e3c0-401d-ad4b-a33400f6ae21
 keywords:
-- ClearCache-Methode (DNS)
-- ClearCache-Methode (DNS), MicrosoftDNS_Cache-Klasse
-- DNS-MicrosoftDNS_Cache Klasse, ClearCache-Methode
+- ClearCache-Methode DNS
+- ClearCache-Methode DNS , MicrosoftDNS_Cache-Klasse
+- MicrosoftDNS_Cache-Klasse DNS, ClearCache-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ec9ee2edb05362c56e2f011a5fbf35592d74ebd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 913b4ae23a7e8f5e0ee9b08f48924ea44553038dabc73b2b5367786d8dd44a0c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956473"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119825240"
 ---
-# <a name="clearcache-method-of-the-microsoftdns_cache-class"></a>ClearCache-Methode der MicrosoftDNS- \_ Cache Klasse
+# <a name="clearcache-method-of-the-microsoftdns_cache-class"></a>ClearCache-Methode der MicrosoftDNS \_ Cache-Klasse
 
-Mit der **ClearCache** -Methode wird der DNS-Server Cache von Ressourcen Datensätzen gelöscht.
+Die **ClearCache-Methode** löscht den DNS-Servercache von Ressourceneinträgen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,19 +54,19 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Nicht unterstützt<br/>                                                              |
 | Ende des Supports (Server)<br/>    | Windows Server 2003 R2<br/>                                                      |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ Domäne**](microsoftdns-domain.md)
+[**\_MicrosoftDNS-Domäne**](microsoftdns-domain.md)
 </dt> <dt>
 
-[**Geterkennbar shedname-Methode der MicrosoftDNS- \_ Cache Klasse**](microsoftdns-cache-getdistinguishedname.md)
+[**GetDistinguishedName-Methode der MicrosoftDNS \_ Cache-Klasse**](microsoftdns-cache-getdistinguishedname.md)
 </dt> </dl>
 
  

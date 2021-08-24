@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_User_Config01_Experience02-Klasse
-description: Die Benutzer Config01 Experience02-Klasse der MDM- \_ Richtlinie \_ \_ \_ stellt die verfügbaren Erfahrungs Richtlinien dar.
+description: Die MDM \_ Policy \_ User \_ Config01 \_ Experience02-Klasse stellt die verfügbaren Benutzeroberflächenrichtlinien dar.
 ms.assetid: 61a5f093-812a-4fcb-940d-d5f0de7f8c5f
 keywords:
 - MDM_Policy_User_Config01_Experience02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a982728a3b2f2a899cdbdbd6239a29c5310a258e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9b96c0504dfaad0e496a56a023da0e26a8dfcbb501ff851d5c1b5fc7921add65
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477844"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119750490"
 ---
-# <a name="mdm_policy_user_config01_experience02-class"></a>MDM- \_ Richtlinien \_ Benutzer \_ Config01 \_ Experience02-Klasse
+# <a name="mdm_policy_user_config01_experience02-class"></a>MDM \_ Policy \_ User \_ Config01 \_ Experience02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **\_ \_ Benutzer \_ Config01 \_ Experience02-Klasse der MDM-Richtlinie** stellt die verfügbaren Erfahrungs Richtlinien dar.
+Die **MDM Policy User \_ \_ \_ Config01 \_ Experience02-Klasse** stellt die verfügbaren Benutzeroberflächenrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -52,17 +52,17 @@ class MDM_Policy_User_Config01_Experience02
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Benutzer \_ Config01 \_ Experience02-Klasse der MDM-Richtlinie** verfügt über diese Typen von Membern:
+Die **MDM Policy User \_ \_ \_ Config01 \_ Experience02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Benutzer \_ Config01 \_ Experience02-Klasse der MDM-Richtlinie** verfügt über diese Eigenschaften.
+Die **MDM Policy User \_ \_ \_ Config01 \_ Experience02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowtailoredexperienceswithdiagnosticdata](/windows/client-management/mdm/policy-csp-experience#experience-allowtailoredexperienceswithdiagnosticdata)
+[AllowTailoredExperiencesWithDiagnosticData](/windows/client-management/mdm/policy-csp-experience#experience-allowtailoredexperienceswithdiagnosticdata)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -73,7 +73,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowthirdpartysuggestionsinwindowsspotlight](/windows/client-management/mdm/policy-csp-experience#experience-allowthirdpartysuggestionsinwindowsspotlight)
+[AllowThirdPartySuggestionsInWindowsSpotlight](/windows/client-management/mdm/policy-csp-experience#experience-allowthirdpartysuggestionsinwindowsspotlight)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -84,7 +84,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowwindowsconsumerfeatures](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsconsumerfeatures)
+[AllowWindowsConsumerFeatures](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsconsumerfeatures)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -95,7 +95,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowwindowsspotlight](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlight)
+[AllowWindowsSpotlight](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlight)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -106,7 +106,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowwindowsspotlightonaktioncenter](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlightonactioncenter)
+[AllowWindowsSpotlightOnActionCenter](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlightonactioncenter)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -117,7 +117,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowwindowsspotlightwindowswelcomeerlebnis](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlightwindowswelcomeexperience)
+[AllowWindowsSpotlightWindowsWelcomeExperience](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlightwindowswelcomeexperience)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -128,7 +128,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Konfigurieren von "Konfigurieren von rewindowsspotlightonlockscreen"](/windows/client-management/mdm/policy-csp-experience#experience-configurewindowsspotlightonlockscreen)
+[ConfigureWindowsSpotlightOnLockScreen](/windows/client-management/mdm/policy-csp-experience#experience-configurewindowsspotlightonlockscreen)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -142,7 +142,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -151,14 +151,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "erleben".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "Experience".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -167,7 +167,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./User/Vendor/MSFT/Policy/config".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./User/Vendor/MSFT/Policy/Config".
 
 </dd> </dl>
 
@@ -177,11 +177,11 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl>       |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl>       |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Idcompositionshadoweffect setstandardabweichung-Methode (Dcomp. h)
-description: Legt den auf den Alpha-Kanal des Bilds anzuwendenden weichwert fest.
+title: IDCompositionShadowEffect SetStandardDeviation-Methoden (Dcomp.h)
+description: Legt den Weichbildwert fest, der auf den Alphakanal des Bilds angewendet werden soll.
 ms.assetid: c688967e-9daf-63f7-9275-aa7b4b871246
 keywords:
-- Setstandardabweichung-Methoden directcomposition
+- SetStandardDeviation-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,25 +12,25 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: d92f9efae044368b689a4b3d4e1802c0c4a71993
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3a0bd4de7297cd080397406cd26a636869ce176b1d9e85bfcaeba7d799361108
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366870"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119844250"
 ---
-# <a name="idcompositionshadoweffectsetstandarddeviation-methods"></a>Idcompositionshadoweffect:: setstandardabweichung-Methoden
+# <a name="idcompositionshadoweffectsetstandarddeviation-methods"></a>IDCompositionShadowEffect::SetStandardDeviation-Methoden
 
-Legt den auf den Alpha-Kanal des Bilds anzuwendenden weichwert fest.
+Legt den Weichbildwert fest, der auf den Alphakanal des Bilds angewendet werden soll.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                       | BESCHREIBUNG                                                                         |
+| Methode                                                                                                       | Beschreibung                                                                         |
 |:-------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|
-| [**Setstandardabweichung**](/windows/win32/api/dcomp/nf-dcomp-idcompositionshadoweffect-setstandarddeviation(float))                               | Legt den auf den Alpha-Kanal des Bilds anzuwendenden weichwert fest.<br/> |
-| [**Setstandardabweichung (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionshadoweffect-setstandarddeviation(idcompositionanimation)) | Legt den auf den Alpha-Kanal des Bilds anzuwendenden weichwert fest.<br/> |
+| [**SetStandardDeviation**](/windows/win32/api/dcomp/nf-dcomp-idcompositionshadoweffect-setstandarddeviation(float))                               | Legt den Weichbildwert fest, der auf den Alphakanal des Bilds angewendet werden soll.<br/> |
+| [**SetStandardDeviation (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionshadoweffect-setstandarddeviation(idcompositionanimation)) | Legt den Weichbildwert fest, der auf den Alphakanal des Bilds angewendet werden soll.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Legt den auf den Alpha-Kanal des Bilds anzuwendenden weichwert fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
@@ -48,7 +48,7 @@ Legt den auf den Alpha-Kanal des Bilds anzuwendenden weichwert fest.
 
 <dl> <dt>
 
-[**Idcompositionshadoweffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionshadoweffect)
+[**IDCompositionShadowEffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionshadoweffect)
 </dt> </dl>
 
 �

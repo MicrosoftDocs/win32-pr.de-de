@@ -1,9 +1,9 @@
 ---
-title: Menuex-Ressource
-description: Definiert den Inhalt einer Menü Ressource. | Menuex-Ressource
+title: MENUEX-Ressource
+description: Definiert den Inhalt einer Menüressource. | MENUEX-Ressource
 ms.assetid: a83e1e78-2af4-4257-906e-7eb6d98bcbc8
 keywords:
-- Menuex-Ressourcen Menüs und weitere Ressourcen
+- MENUEX-Ressourcenmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -12,20 +12,20 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ed379fb97d2795a166571fb48cde2c233021a33
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: ec78bd0d33b48b11de77fe7742affb4265160752ffad30d72ecf3e9c173bb77c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106363100"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119825940"
 ---
-# <a name="menuex-resource"></a>Menuex-Ressource
+# <a name="menuex-resource"></a>MENUEX-Ressource
 
-Definiert den Inhalt einer Menü Ressource. Eine Menü Ressource ist eine Auflistung von Informationen, die das Aussehen und die Funktion eines Anwendungs Menüs definiert. Ein Menü ist ein spezielles Eingabe Tool, mit dem ein Benutzer Befehle auswählen und Untermenüs aus einer Liste von Menü Elementen öffnen kann. Außerdem wird Folgendes definiert:
+Definiert den Inhalt einer Menüressource. Eine Menüressource ist eine Sammlung von Informationen, die die Darstellung und Funktion eines Anwendungsmenüs definieren. Ein Menü ist ein spezielles Eingabetool, mit dem ein Benutzer Befehle auswählen und Untermenüs aus einer Liste von Menüelementen öffnen kann. Außerdem wird Folgendes definiert:
 
--   Hilfe Bezeichner in Menüs.
+-   Hilfebezeichner in Menüs.
 -   Bezeichner in Menüs.
--   Verwendung der **MFT \_ \** _-Typflags und _*MFS \_ \**_ -Statusflags. Weitere Informationen zu diesen Flags finden Sie in der [_ *menuiteminfo* *](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) -Struktur.
+-   Verwendung der *\_ \* *MFT_-Typflags* und _*\_ \* MFS-Zustandsflags.*_ Weitere Informationen zu diesen Flags finden Sie in der [*_MENUITEMINFO-Struktur.* *](/windows/win32/api/winuser/ns-winuser-menuiteminfoa)
 
 ``` syntax
 menuID MENUEX{ [{[MENUITEM itemText [,[id][, [type][, state]]]] | 
@@ -36,102 +36,102 @@ menuID MENUEX{ [{[MENUITEM itemText [,[id][, [type][, state]]]] |
 
 <dl> <dt>
 
-<span id="MENUITEM"></span><span id="menuitem"></span>[**MENUITEM**](menuitem-statement.md)
+<span id="MENUITEM"></span><span id="menuitem"></span>[**Menuitem**](menuitem-statement.md)
 </dt> <dd>
 
-Definiert ein Menü Element.
+Definiert ein Menüelement.
 
 <dl> <dt>
 
-<span id="itemText"></span><span id="itemtext"></span><span id="ITEMTEXT"></span>*ItemText*
+<span id="itemText"></span><span id="itemtext"></span><span id="ITEMTEXT"></span>*itemText*
 </dt> <dd>
 
-Zeichenfolge, die den Text für das Menü Element enthält. Weitere Informationen finden Sie unter [**MenuItem**](menuitem-statement.md).
+Eine Zeichenfolge, die den Text für das Menüelement enthält. Weitere Informationen finden Sie unter [**MENUITEM**](menuitem-statement.md).
 
 </dd> <dt>
 
-<span id="id"></span><span id="ID"></span>*Name*
+<span id="id"></span><span id="ID"></span>*Id*
 </dt> <dd>
 
-Numerischer Ausdruck, der den Bezeichner des Menü Elements angibt.
+Numerischer Ausdruck, der den Bezeichner des Menüelements angibt.
 
 </dd> <dt>
 
-<span id="type"></span><span id="TYPE"></span>*Sorte*
+<span id="type"></span><span id="TYPE"></span>*Typ*
 </dt> <dd>
 
-Numerischer Ausdruck, der den Typ des Menü Elements angibt, für das die vordefinierten MFT- \_ \* Typwerte verwendet werden sollen. Fügen Sie die folgende Anweisung in die RC-Datei ein:`#include "winuser.h"`
+Numerischer Ausdruck, der den Typ des Menüelements angibt. Um die vordefinierten MFT-Typwerte zu verwenden, schließen Sie die folgende Anweisung \_ \* in die RC-Datei ein:`#include "winuser.h"`
 
 </dd> <dt>
 
-<span id="state"></span><span id="STATE"></span>*Land*
+<span id="state"></span><span id="STATE"></span>*Staat*
 </dt> <dd>
 
-Numerischer Ausdruck, der den Zustand des Menü Elements angibt, in dem die vordefinierten MFS- \_ \* Zustands Werte verwendet werden sollen. Fügen Sie die folgende Anweisung in den ein. RC-Datei:`#include "winuser.h"`
+Numerischer Ausdruck, der den Zustand des Menüelements angibt. Um die vordefinierten MFS-Statuswerte zu verwenden, schließen Sie die \_ \* folgende Anweisung in Ihre ein. RC-Datei:`#include "winuser.h"`
 
 </dd> </dl> </dd> <dt>
 
-<span id="POPUP"></span><span id="popup"></span>[**Up**](popup-resource.md)
+<span id="POPUP"></span><span id="popup"></span>[**Popup**](popup-resource.md)
 </dt> <dd>
 
-Definiert ein Menü Element, das über ein zugeordnetes Untermenü verfügt.
+Definiert ein Menüelement, dem ein Untermenü zugeordnet ist.
 
 <dl> <dt>
 
-<span id="itemText"></span><span id="itemtext"></span><span id="ITEMTEXT"></span>*ItemText*
+<span id="itemText"></span><span id="itemtext"></span><span id="ITEMTEXT"></span>*itemText*
 </dt> <dd>
 
-Zeichenfolge, die den Text für das Menü Element enthält.
+Eine Zeichenfolge, die den Text für das Menüelement enthält.
 
 </dd> <dt>
 
-<span id="id"></span><span id="ID"></span>*Name*
+<span id="id"></span><span id="ID"></span>*Id*
 </dt> <dd>
 
-Numerischer Ausdruck, der den Bezeichner des Menü Elements angibt.
+Numerischer Ausdruck, der den Bezeichner des Menüelements angibt.
 
 </dd> <dt>
 
-<span id="type"></span><span id="TYPE"></span>*Sorte*
+<span id="type"></span><span id="TYPE"></span>*Typ*
 </dt> <dd>
 
-Numerischer Ausdruck, der den Typ des Menü Elements angibt, für das die vordefinierten MFT- \_ \* Typwerte verwendet werden sollen. Fügen Sie die folgende Anweisung in ihr ein. RC-Datei:`#include "winuser.h"`
+Numerischer Ausdruck, der den Typ des Menüelements angibt Um die vordefinierten MFT-Typwerte zu verwenden, schließen Sie die \_ \* folgende Anweisung in Ihre ein. RC-Datei:`#include "winuser.h"`
 
 </dd> <dt>
 
-<span id="state"></span><span id="STATE"></span>*Land*
+<span id="state"></span><span id="STATE"></span>*Staat*
 </dt> <dd>
 
-Numerischer Ausdruck, der den Zustand des Menü Elements angibt, in dem die vordefinierten MFS- \_ \* Zustands Werte verwendet werden sollen. Fügen Sie die folgende Anweisung in die RC-Datei ein:`#include "winuser.h"`
+Numerischer Ausdruck, der den Status des Menüelements angibt: Fügen Sie die folgende Anweisung \_ in die RC-Datei ein. Um die vordefinierten MFS-Statuswerte \* zu verwenden:`#include "winuser.h"`
 
 </dd> <dt>
 
-<span id="helpID"></span><span id="helpid"></span><span id="HELPID"></span>*HelpID*
+<span id="helpID"></span><span id="helpid"></span><span id="HELPID"></span>*helpID*
 </dt> <dd>
 
-Numerischer Ausdruck, der den Bezeichner angibt, mit dem das Menü während der [**WM- \_ Hilfe**](../shell/wm-help.md) Verarbeitung identifiziert wird
+Numerischer Ausdruck, der den Bezeichner angibt, mit dem das Menü während der [**WM \_ HELP-Verarbeitung identifiziert**](../shell/wm-help.md) wird.
 
 </dd> </dl> </dd> <dt>
 
-<span id="popupBody"></span><span id="popupbody"></span><span id="POPUPBODY"></span>*popupbody*
+<span id="popupBody"></span><span id="popupbody"></span><span id="POPUPBODY"></span>*popupBody*
 </dt> <dd>
 
-Enthält eine beliebige Kombination der [**MenuItem**](menuitem-statement.md) -und [**Popup**](popup-resource.md) -Anweisungen.
+Enthält eine beliebige Kombination der [**MENUITEM- und**](menuitem-statement.md) [**POPUP-Anweisungen.**](popup-resource.md)
 
 </dd> </dl>
 
-Bestimmte Attribute werden auch aus Gründen der Abwärtskompatibilität unterstützt. Weitere Informationen finden Sie unter [allgemeine Ressourcen Attribute](common-resource-attributes.md).
+Bestimmte Attribute werden auch aus Gründen der Abwärtskompatibilität unterstützt. Weitere Informationen finden Sie unter [Allgemeine Ressourcenattribute.](common-resource-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die gültigen arithmetischen und booleschen Vorgänge, die in einem der numerischen Ausdrücke in den Anweisungen von **menuex** enthalten sein können, lauten wie folgt:
+Die gültigen arithmetischen und booleschen Operationen, die in einem der numerischen Ausdrücke in den **MENUEX-Anweisungen** enthalten sein können, lauten wie folgt:
 
--   Hinzufügen ("+")
--   Subtraktion ("-")
--   Unäres Minuszeichen ("-")
--   Unärer Not (' ~ ')
--   Und (' & ')
--   Oder (' \| ')
+-   Hinzufügen ('+')
+-   Subtrahieren ('-')
+-   Unäres Minus ("-")
+-   Unär NOT ('~')
+-   AND ('&')
+-   OR (' \| ')
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -140,31 +140,31 @@ Die gültigen arithmetischen und booleschen Vorgänge, die in einem der numerisc
 [Verwenden von Menüs](./using-menus.md)
 </dt> <dt>
 
-[**Accelerators**](accelerators-resource.md)
+[**Beschleuniger**](accelerators-resource.md)
 </dt> <dt>
 
-[**Charakteristik**](characteristics-statement.md)
+[**Merkmale**](characteristics-statement.md)
 </dt> <dt>
 
-[**Dialog**](dialog-resource.md)
+[**DIALOG**](dialog-resource.md)
 </dt> <dt>
 
-[**Kurse**](language-statement.md)
+[**Sprache**](language-statement.md)
 </dt> <dt>
 
-[**Stehen**](menu-resource.md)
+[**Menü**](menu-resource.md)
 </dt> <dt>
 
-[**MENUITEM**](menuitem-statement.md)
+[**Menuitem**](menuitem-statement.md)
 </dt> <dt>
 
-[**Up**](popup-resource.md)
+[**Popup**](popup-resource.md)
 </dt> <dt>
 
-[**RCDATA**](rcdata-resource.md)
+[**Rcdata**](rcdata-resource.md)
 </dt> <dt>
 
-[**STRINGTABLE**](stringtable-resource.md)
+[**Stringtable**](stringtable-resource.md)
 </dt> <dt>
 
 [**Version**](version-statement.md)

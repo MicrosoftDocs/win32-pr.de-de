@@ -1,28 +1,28 @@
 ---
-description: Just-in-Time-Aktivierung von com+
+description: COM+ Just-in-Time-Aktivierung
 ms.assetid: 47b23cae-d5fc-4788-ab1c-93d6d8ee3f01
-title: Just-in-Time-Aktivierung von com+
+title: COM+ Just-in-Time-Aktivierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 16c18d7916e815c6f5f71a44c26c968f53777597
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 832db356f8fe52efe6730923be3265b8189cda054eb581053229e1fce7430e6b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346014"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119859190"
 ---
-# <a name="com-just-in-time-activation"></a>Just-in-Time-Aktivierung von com+
+# <a name="com-just-in-time-activation"></a>COM+ Just-in-Time-Aktivierung
 
-Die Just-in-time (JIT)-Aktivierung ist ein automatischer com+-Dienst, der Sie bei der effizienteren Verwendung von Server Ressourcen unterstützt. Dies gilt insbesondere, wenn Sie Ihre Anwendung für Transaktionen mit hohem Volumen zentral hochskalieren.
+Die Just-in-Time-Aktivierung (JIT) ist ein automatischer COM+-Dienst, mit dem Sie Serverressourcen effizienter nutzen können, insbesondere wenn Sie Ihre Anwendung hochskalieren, um Transaktionen mit hohem Volumen durchzuführen.
 
-Die folgenden Themen enthalten Hintergrundinformationen und Aufgabeninformationen zur Just-in-Time-Aktivierung von com+.
+Die folgenden Themen enthalten Hintergrund- und Aufgabeninformationen zur Just-in-Time-Aktivierung von COM+.
 
 
 
 | Thema                                                                              | BESCHREIBUNG                                                                                                        |
 |------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| [Konzepte für die Just-in-Time-Aktivierung in com+](com--just-in-time-activation-concepts.md) | Bietet einen Überblick über die Features und Vorteile der Aktivierung des JIT-Aktivierungs Dienstanbieter für die COM+-Komponenten. |
-| [Com+-Just-in-Time-Aktivierungs Tasks](com--just-in-time-activation-tasks.md)       | Enthält Anweisungen zum Konfigurieren der JIT-Aktivierung für COM+-Anwendungen.                                       |
+| [COM+ Just-in-Time-Aktivierungskonzepte](com--just-in-time-activation-concepts.md) | Bietet eine Übersicht über die Features und Vorteile der Aktivierung des JIT-Aktivierungsdiensts für Ihre COM+-Komponenten. |
+| [COM+ Just-in-Time-Aktivierungsaufgaben](com--just-in-time-activation-tasks.md)       | Enthält Anweisungen zum Konfigurieren der JIT-Aktivierung für Ihre COM+-Anwendungen.                                       |
 
 
 
@@ -32,10 +32,10 @@ Die folgenden Themen enthalten Hintergrundinformationen und Aufgabeninformatione
 
 <dl> <dt>
 
-[Com+-Objekt Pooling](com--object-pooling.md)
+[COM+-Objektpooling](com--object-pooling.md)
 </dt> <dt>
 
-[Com+-Transaktionen](com--transactions.md)
+[COM+-Transaktionen](com--transactions.md)
 </dt> </dl>
 
  

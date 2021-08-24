@@ -23,7 +23,7 @@ ms.locfileid: "119704440"
 ---
 # <a name="other-mailbox-attribute"></a>Other-Mailbox-Attribut
 
-Enthält weitere zusätzliche E-Mail-Adressen in einem Formular, z. B. CCMAIL:IttKeever.
+Enthält weitere zusätzliche E-Mail-Adressen in einem Formular, z.B. CCMAIL: ):): Sollekeever.
 
 
 
@@ -121,7 +121,7 @@ Enthält weitere zusätzliche E-Mail-Adressen in einem Formular, z. B. CCMAIL:It
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Is-Single-Valued       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -142,7 +142,7 @@ Enthält weitere zusätzliche E-Mail-Adressen in einem Formular, z. B. CCMAIL:It
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Is-Single-Valued       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -163,7 +163,7 @@ Enthält weitere zusätzliche E-Mail-Adressen in einem Formular, z. B. CCMAIL:It
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Is-Single-Valued       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |

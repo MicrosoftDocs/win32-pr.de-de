@@ -1,76 +1,76 @@
 ---
-description: Bei einem Installationspaket gibt die Eigenschaft Vorlagen Zusammenfassung die Plattform-und Sprachversionen an, die mit dieser Installations Datenbank kompatibel sind.
+description: Bei einem Installationspaket gibt die Eigenschaft Vorlagenzusammenfassung die Plattform- und Sprachversionen an, die mit dieser Installationsdatenbank kompatibel sind.
 ms.assetid: a1015ddb-8d5c-40f7-97ac-4a1347644ae6
-title: Vorlagen Zusammenfassungs Eigenschaft
+title: Template Summary-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 36b3949e7028fd0b1b5f9ff3112f1a3d03c9b87e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: da93d2d3a38f3c1853f3f936fe6f97b8550dcaeac70d4b553b8cb0362f41ee41
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373682"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119893450"
 ---
-# <a name="template-summary-property"></a>Vorlagen Zusammenfassungs Eigenschaft
+# <a name="template-summary-property"></a>Template Summary-Eigenschaft
 
-Bei einem Installationspaket gibt die Eigenschaft **Vorlagen Zusammenfassung** die Plattform-und Sprachversionen an, die mit dieser Installations Datenbank kompatibel sind. Die Syntax der Eigenschaften Informationen für die **Vorlagen Zusammenfassung** für eine Installations Datenbank lautet wie folgt:
+Bei einem Installationspaket gibt die **Eigenschaft Vorlagenzusammenfassung** die Plattform- und Sprachversionen an, die mit dieser Installationsdatenbank kompatibel sind. Die Syntax der Eigenschafteninformationen der **Vorlagenzusammenfassung** für eine Installationsdatenbank lautet wie folgt:
 
-\[*Platt Form Eigenschaft* \] ; \[ *Sprach-ID* \] \[ ,*Sprach-ID* \] \[ ,... \] .
+\[*platform-Eigenschaft* \] ; \[ *Sprach-ID,* \] \[ *Sprach-ID* \] \[ ,... \] .
 
-Die folgenden Beispiele sind gültige Werte für die Eigenschaft **Vorlagen Zusammenfassung** :
+Die folgenden Beispiele sind gültige Werte für die **Eigenschaft Vorlagenzusammenfassung:**
 
--   x64; 1033
--   Intel; 1033
--   Intel64; 1033
--   ; 1033
--   Intel; 1033, 2046
--   Intel64; 1033, 2046
--   Intel; 0
--   Arm; 1033, 2046
--   Arm; 0
--   Arm64; 1033, 2046
--   Arm64; 0
+-   x64;1033
+-   Intel;1033
+-   Intel64;1033
+-   ;1033
+-   Intel ;1033,2046
+-   Intel64;1033,2046
+-   Intel;0
+-   Arm;1033,2046
+-   Arm;0
+-   Arm64;1033,2046
+-   Arm64;0
 
-Die **Vorlagen Zusammenfassungs** Eigenschaft einer Transformation gibt die Plattform-und Sprachversionen an, die mit der Transformation kompatibel sind. In einer Transformations Datei kann nur eine Sprache angegeben werden. Die angegebene Plattform und Sprache bestimmen, ob eine Transformation auf eine bestimmte Datenbank angewendet werden kann. Die Platform-Eigenschaft und die Language-Eigenschaft können leer gelassen werden, wenn keine Transformations Einschränkung zur Validierung der Transformation erforderlich ist.
+Die **Template Summary-Eigenschaft** einer Transformation gibt die Plattform- und Sprachversionen an, die mit der Transformation kompatibel sind. In einer Transformationsdatei kann nur eine Sprache angegeben werden. Die angegebene Plattform und Sprache bestimmen, ob eine Transformation auf eine bestimmte Datenbank angewendet werden kann. Die Plattformeigenschaft und die Spracheigenschaft können leer gelassen werden, wenn keine Transformationseinschränkung von ihnen abhängt, um die Transformation zu überprüfen.
 
-Die **Vorlagen Zusammenfassungs** Eigenschaft eines Patchpakets ist eine durch Semikolons getrennte Liste der Produktcodes, die den Patch akzeptieren können. Wenn Sie [Msimsp.exe](msimsp-exe.md) und [Patchwiz.dll](patchwiz-dll.md) verwenden, um das Patchpaket zu generieren, wird diese Liste aus der [TargetImages-Tabelle](targetimages-table-patchwiz-dll-.md) der patcherstellungs-Datei abgerufen.
+Die **Template Summary-Eigenschaft** eines Patchpakets ist eine durch Semikolons getrennte Liste der Produktcodes, die den Patch akzeptieren können. Wenn Sie [Msimsp.exe](msimsp-exe.md) und [Patchwiz.dll](patchwiz-dll.md) verwenden, um das Patchpaket zu generieren, wird diese Liste aus der [Tabelle TargetImages](targetimages-table-patchwiz-dll-.md) der Patcherstellungsdatei abgerufen.
 
-Diese Zusammenfassungs Eigenschaft ist erforderlich.
+Diese Zusammenfassungseigenschaft ist erforderlich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die aktuelle Plattform nicht mit einer der in der **Vorlagen Zusammenfassungs** Eigenschaft angegebenen Plattformen identisch ist, wird das Paket vom Installationsprogramm nicht verarbeitet.
+Wenn die aktuelle Plattform nicht mit einer der in der **Eigenschaft Vorlagenzusammenfassung** angegebenen Plattformen übereinstimmt, verarbeitet das Installationsprogramm das Paket nicht.
 
-Wenn die Platt Form Spezifikation im Eigenschafts Wert für die **Vorlagen Zusammenfassung** fehlt, nimmt das Installationsprogramm die Intel-Architektur an.
+Wenn die Plattformspezifikation im Eigenschaftswert **Vorlagenzusammenfassung** fehlt, geht das Installationsprogramm von der Intel-Architektur aus.
 
-Wenn es sich um ein 64-Bit-Windows Installer Paket handelt, das auf einer Itanium-Plattform (Intel64) ausgeführt wird, geben Sie in der Eigenschaft **Vorlagen Zusammenfassung** Intel64 ein.
+Wenn es sich um ein 64-Bit-Windows Installer-Paket handelt, das auf einer Intel64-Plattform (Itanium) ausgeführt wird, geben Sie Intel64 in die Eigenschaft **Vorlagenzusammenfassung** ein.
 
-Wenn es sich um ein 64-Bit-Windows Installer Paket handelt, das auf einer x64-Plattform ausgeführt wird, geben Sie x64 in der Eigenschaft **Vorlagen Zusammenfassung** ein.
+Wenn es sich um ein 64-Bit-Windows Installer-Paket handelt, das auf einer x64-Plattform ausgeführt wird, geben Sie x64 in die **Eigenschaft Vorlagenzusammenfassung** ein.
 
-Wenn es sich um ein 64-Bit-Windows Installer Paket handelt, das auf einer Arm64-Plattform ausgeführt wird, geben Sie in der Eigenschaft **Vorlagen Zusammenfassung** Arm64 ein.
+Wenn es sich um ein 64-Bit-Windows Installer-Paket handelt, das auf einer Arm64-Plattform ausgeführt wird, geben Sie Arm64 in die Eigenschaft **Vorlagenzusammenfassung** ein.
 
-Ein Windows Installer Paket kann nicht als Unterstützung sowohl für Intel64 als auch für x64 gekennzeichnet werden. Beispielsweise ist der Wert für die **Vorlagen Zusammenfassungs** Eigenschaft Intel64, x64 ungültig.
+Ein Windows Installer-Paket kann nicht als Unterstützung für Intel64 und x64 markiert werden. Beispielsweise ist der Template **Summary-Eigenschaftswert** von Intel64,x64 ungültig.
 
-Ein Windows Installer Paket kann nicht als Unterstützung für 32-Bit-und 64-Bit-Plattformen gekennzeichnet werden. Beispielsweise sind **Vorlagen Zusammenfassungs** Eigenschaftswerte wie Intel, x64 oder Intel, Intel64 ungültig.
+Ein Windows Installer-Paket kann nicht als Unterstützung für 32-Bit- und 64-Bit-Plattformen markiert werden. Beispielsweise sind Eigenschaftswerte der **Vorlagenzusammenfassung** wie Intel, x64 oder Intel,Intel64 ungültig.
 
-Wenn Sie im Feld "Sprache-ID" der Eigenschaft " **Vorlagen Zusammenfassung** " den Wert 0 (null) eingeben oder dieses Feld leer gelassen wird, wird angegeben, dass das Paket sprachneutral ist.
+Wenn Sie 0 (null) in das Sprach-ID-Feld der **Eigenschaft Vorlagenzusammenfassung** eingeben oder dieses Feld leer lassen, bedeutet dies, dass das Paket sprachneutral ist.
 
-Wenn dies ein Windows Installer Paket ist, das unter Windows RT ausgeführt wird, geben Sie den Wert Arm in der Eigenschaft **Vorlagen Zusammenfassung** ein.
+Wenn es sich um ein Windows Installer-Paket handelt, das auf Windows RT ausgeführt wird, geben Sie in der Eigenschaft **Vorlagenzusammenfassung** den Wert Arm ein.
 
-Mergemodule sind die einzigen Pakete, die mehrere Sprachen aufweisen können. In einer quellinstallerdatenbank kann nur eine Sprache angegeben werden. Weitere Informationen finden Sie unter [mehrere sprachmergemodule](multiple-language-merge-modules.md).
+Mergemodule sind die einzigen Pakete, die mehrere Sprachen aufweisen können. In einer Quellinstallationsdatenbank kann nur eine Sprache angegeben werden. Weitere Informationen finden Sie unter [Multiple Language Merge Modules](multiple-language-merge-modules.md).
 
-Die Alpha Plattform wird von Windows Installer nicht unterstützt.
+Die Alphaplattform wird von Windows Installer nicht unterstützt.
 
 **Windows Installer:** Die folgende Syntax wird nicht unterstützt:
 
-\[*Platt Form Eigenschaft* \] \[ ,*Platt Form Eigenschaft* \] \[ ,... \] \[ *Sprach-ID* \] \[ ,*Sprach-ID* \] \[ ,... \] .
+\[*platform-Eigenschaft,* \] \[ *Plattformeigenschaft* \] \[ ,... \] \[ *Sprach-ID,* \] \[ *Sprach-ID* \] \[ ,... \] .
 
-Die folgenden Beispiele sind keine gültigen Werte für die **Vorlagen Zusammenfassungs** Eigenschaft:
+Die folgenden Beispiele sind keine gültigen Werte für die **Eigenschaft Vorlagenzusammenfassung:**
 
--   Alpha, Intel; 1033
--   Intel, Alpha; 1033
--   Alpha; 1033
--   Alpha; 1033, 2046
+-   Alpha, Intel;1033
+-   Intel,Alpha;1033
+-   Alpha;1033
+-   Alpha;1033,2046
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,7 +78,7 @@ Die folgenden Beispiele sind keine gültigen Werte für die **Vorlagen Zusammenf
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 
 
 
@@ -86,7 +86,7 @@ Die folgenden Beispiele sind keine gültigen Werte für die **Vorlagen Zusammenf
 
 <dl> <dt>
 
-[Beschreibungen der Zusammenfassungs Eigenschaften](summary-property-descriptions.md)
+[Zusammenfassungseigenschaftenbeschreibungen](summary-property-descriptions.md)
 </dt> </dl>
 
  

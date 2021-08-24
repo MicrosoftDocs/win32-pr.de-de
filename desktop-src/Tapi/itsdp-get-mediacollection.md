@@ -1,21 +1,21 @@
 ---
-description: Die get \_ mediacollection-Methode erhält einen Zeiger auf die itmediacollection-Schnittstelle für die Konferenz.
+description: Die Methode get \_ MediaCollection ruft einen Zeiger auf die ITMediaCollection-Schnittstelle für die Konferenz ab.
 ms.assetid: 8109582a-74f0-47e8-91d1-0d89c3d3c331
-title: 'Itsdp:: get_MediaCollection-Methode (sdpblb. h)'
+title: ITSdp::get_MediaCollection-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f8812debf8c04fe022f24061660d6ea3bb5f162
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4cf358089a394775c753adc0642897021e91df5bfcd5f23418e638df82db03a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119774510"
 ---
-# <a name="itsdpget_mediacollection-method"></a>Itsdp:: get \_ mediacollection-Methode
+# <a name="itsdpget_mediacollection-method"></a>ITSdp::get \_ MediaCollection-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **get \_ mediacollection** -Methode erhält einen Zeiger auf die [**itmediacollection**](itmediacollection.md) -Schnittstelle für die Konferenz.
+Die **Methode get \_ MediaCollection** ruft einen Zeiger auf die [**ITMediaCollection-Schnittstelle**](itmediacollection.md) für die Konferenz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT get_MediaCollection(
 
 <dl> <dt>
 
-*ppmediacollection* \[ vorgenommen\]
+*ppMediaCollection* \[ out\]
 </dt> <dd>
 
-Zeiger auf [**itmediacollection**](itmediacollection.md).
+Zeiger auf [**ITMediaCollection**](itmediacollection.md).
 
 </dd> </dl>
 
@@ -48,21 +48,21 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Wert                                                                                                                           | Bedeutung                                                                                     |
 |---------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                            | Methode war erfolgreich.<br/>                                                                |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>                                    | Der *ppmediacollection* -Parameter ist kein gültiger Zeiger.<br/>                        |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>                                   | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/>                             |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>                                          | Unbekannter Fehler.<br/>                                                               |
-| <dl> <dt>**HRESULT \_ aus \_ Fehler \_ Code ( \_ ungültige \_ Daten)**</dt> </dl> | Ein interner Fehler ist aufgetreten, normalerweise aufgrund des Fehlers einer vorherigen Methode.<br/> |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>                                       | Diese Methode ist noch nicht implementiert.<br/>                                              |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>                                    | Der *ppMediaCollection-Parameter* ist kein gültiger Zeiger.<br/>                        |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>                                   | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/>                             |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>                                          | Unbekannter Fehler.<br/>                                                               |
+| <dl> <dt>**HRESULT \_ FROM \_ ERROR \_ CODE(ERROR \_ INVALID \_ DATA)**</dt> </dl> | Ein interner Fehler ist in der Regel aufgrund des Fehlers einer vorherigen Methode aufgetreten.<br/> |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>                                       | Diese Methode ist noch nicht implementiert.<br/>                                              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein [**itmediacollection**](itmediacollection.md) -Zeiger kann auch mithilfe von **QueryInterface** abgerufen werden.
+Ein [**ITMediaCollection-Zeiger**](itmediacollection.md) kann auch mit **QueryInterface** abgerufen werden.
 
-TAPI Ruft die **adressf** -Methode für die [**itmediacollection**](itmediacollection.md) -Schnittstelle auf, die von **itsdp:: get \_ mediacollection** zurückgegeben wurde. Die Anwendung muss Release auf der **itmediacollection** -Schnittstelle aufzurufen, um Ressourcen frei **zugeben** , die ihr zugeordnet sind.
+TAPI ruft die **AddRef-Methode** auf der [**ITMediaCollection-Schnittstelle**](itmediacollection.md) auf, die von **ITSdp::get \_ MediaCollection** zurückgegeben wird. Die Anwendung muss **Release** auf der **ITMediaCollection-Schnittstelle** aufrufen, um zugeordnete Ressourcen freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,21 +70,21 @@ TAPI Ruft die **adressf** -Methode für die [**itmediacollection**](itmediacolle
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itsdp**](itsdp.md)
+[**ITSdp**](itsdp.md)
 </dt> <dt>
 
-[**Itmediacollection**](itmediacollection.md)
+[**ITMediaCollection**](itmediacollection.md)
 </dt> </dl>
 
  

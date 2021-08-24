@@ -1,11 +1,11 @@
 ---
 title: Object-Classes-Attribut
-description: Eine mehrwertige Eigenschaft, die Zeichen folgen enthält, die jede Klasse im Schema darstellen. Jeder Wert enthält die governsID, den ldapDisplayName, mustare, mayare und so weiter.
+description: Eine mehrwertige Eigenschaft, die Zeichenfolgen enthält, die jede Klasse im Schema darstellen. Jeder Wert enthält governsID, lDAPDisplayName, mustContain, mayContain usw.
 ms.assetid: 7e3eda48-8e64-4a52-8d92-7a0d37e513ef
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Object-Classes-Attribut
-- AD-Schema des ObjectClasses-Attributs
+- Object-Classes AD-Attributschema
+- objectClasses-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b799c725790115152ac70c0214d82a8c242ea600
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c20c11ff547c24b37edab7f88a2854c9bc26ff133e7acba3a381971ededc3d90
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859797"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119925190"
 ---
 # <a name="object-classes-attribute"></a>Object-Classes-Attribut
 
-Eine mehrwertige Eigenschaft, die Zeichen folgen enthält, die jede Klasse im Schema darstellen. Jeder Wert enthält die governsID, den ldapDisplayName, mustare, mayare und so weiter.
+Eine mehrwertige Eigenschaft, die Zeichenfolgen enthält, die jede Klasse im Schema darstellen. Jeder Wert enthält governsID, lDAPDisplayName, mustContain, mayContain usw.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------------------|
 | CN                | Object-Classes                                   |
-| LDAP-Display-Name | ObjectClasses                                    |
-| Size              | Etwa 20 Bytes im Durchschnitt pro Klassenname.        |
-| Berechtigung aktualisieren  | Dieser Wert wird vom Designer des-Objekts festgelegt. |
-| Aktualisierungshäufigkeit  | Wenn der Entwurf der-Klasse geändert wird.        |
+| Ldap-Anzeigename | objectClasses                                    |
+| Size              | Durchschnittlich ca. 20 Bytes pro Klassenname.        |
+| Aktualisieren von Berechtigungen  | Der Designer des -Objekts würde diesen Wert festlegen. |
+| Updatehäufigkeit  | Immer dann, wenn sich der Entwurf der Klasse ändert.        |
 | Attribute-Id      | 2.5.21.6                                         |
 | System-ID-GUID    | 9a7ad94b-ca53-11d1-bbd0-0080c76670c0             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)      |
@@ -43,7 +43,7 @@ Eine mehrwertige Eigenschaft, die Zeichen folgen enthält, die jede Klasse im Sc
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,19 +59,19 @@ Eine mehrwertige Eigenschaft, die Zeichen folgen enthält, die jede Klasse im Sc
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
 | System-Only            | Richtig                                        |
-| Ist-einwertig       | False                                       |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| Ist einwertig       | Falsch                                       |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x08000014                                  |
-| In verwendete Klassen        | [**Unter Schema**](c-subschema.md)<br/> |
+| In verwendete Klassen        | [**SubSchema**](c-subschema.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,15 +80,15 @@ Eine mehrwertige Eigenschaft, die Zeichen folgen enthält, die jede Klasse im Sc
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
 | System-Only            | Richtig                                        |
-| Ist-einwertig       | False                                       |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| Ist einwertig       | Falsch                                       |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x08000014                                  |
-| In verwendete Klassen        | [**Unter Schema**](c-subschema.md)<br/> |
+| In verwendete Klassen        | [**SubSchema**](c-subschema.md)<br/> |
 
 
 
@@ -101,15 +101,15 @@ Eine mehrwertige Eigenschaft, die Zeichen folgen enthält, die jede Klasse im Sc
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
 | System-Only            | Richtig                                        |
-| Ist-einwertig       | False                                       |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| Ist einwertig       | Falsch                                       |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x08000014                                  |
-| In verwendete Klassen        | [**Unter Schema**](c-subschema.md)<br/> |
+| In verwendete Klassen        | [**SubSchema**](c-subschema.md)<br/> |
 
 
 
@@ -122,15 +122,15 @@ Eine mehrwertige Eigenschaft, die Zeichen folgen enthält, die jede Klasse im Sc
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
 | System-Only            | Richtig                                        |
-| Ist-einwertig       | False                                       |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| Is-Single-Valued       | Falsch                                       |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x08000014                                  |
-| In verwendete Klassen        | [**Unter Schema**](c-subschema.md)<br/> |
+| In verwendete Klassen        | [**SubSchema**](c-subschema.md)<br/> |
 
 
 
@@ -143,15 +143,15 @@ Eine mehrwertige Eigenschaft, die Zeichen folgen enthält, die jede Klasse im Sc
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
 | System-Only            | Richtig                                        |
-| Ist-einwertig       | False                                       |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| Is-Single-Valued       | Falsch                                       |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x08000014                                  |
-| In verwendete Klassen        | [**Unter Schema**](c-subschema.md)<br/> |
+| In verwendete Klassen        | [**SubSchema**](c-subschema.md)<br/> |
 
 
 
@@ -164,15 +164,15 @@ Eine mehrwertige Eigenschaft, die Zeichen folgen enthält, die jede Klasse im Sc
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
 | System-Only            | Richtig                                        |
-| Ist-einwertig       | False                                       |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| Is-Single-Valued       | Falsch                                       |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x08000014                                  |
-| In verwendete Klassen        | [**Unter Schema**](c-subschema.md)<br/> |
+| In verwendete Klassen        | [**SubSchema**](c-subschema.md)<br/> |
 
 
 
@@ -185,15 +185,15 @@ Eine mehrwertige Eigenschaft, die Zeichen folgen enthält, die jede Klasse im Sc
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
 | System-Only            | Richtig                                        |
-| Ist-einwertig       | False                                       |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| Is-Single-Valued       | Falsch                                       |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x08000014                                  |
-| In verwendete Klassen        | [**Unter Schema**](c-subschema.md)<br/> |
+| In verwendete Klassen        | [**SubSchema**](c-subschema.md)<br/> |
 
 
 

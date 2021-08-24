@@ -1,46 +1,46 @@
 ---
-description: Com+-Threading Modelle werden um eine Objektsammlung entworfen, die als Apartment bezeichnet wird. Ein Apartment ist eine Sammlung von Kontexten, die in einem Prozess enthalten sind.
+description: COM+-Threadingmodelle sind für eine Objektsammlung konzipiert, die als Apartment bezeichnet wird. Ein Apartment ist eine Sammlung von Kontexten, die in einem Prozess enthalten sind.
 ms.assetid: c73fb4c5-20ae-4873-afd2-4f40eb47bade
-title: Com+-Threading Modelle
+title: COM+-Threadingmodelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5f07b065861c042e68add633368a9c8b8ba41b2
-ms.sourcegitcommit: bf526e267d3991892733bdd229c66d5365cf244a
+ms.openlocfilehash: cd0949a27291be43b5981f24f4985fac6911937b2c9fa85785b4d662bd1bf546
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "103761115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793675"
 ---
-# <a name="com-threading-models"></a>Com+-Threading Modelle
+# <a name="com-threading-models"></a>COM+-Threadingmodelle
 
-Com+-Threading Modelle werden um eine Objektsammlung entworfen, die als Apartment bezeichnet wird. Ein Apartment ist eine Auflistung von Kontexten, die in einem Prozess enthalten sind, wie in der folgenden Abbildung dargestellt.
+COM+-Threadingmodelle sind für eine Objektsammlung konzipiert, die als Apartment bezeichnet wird. Ein Apartment ist eine Sammlung von Kontexten, die in einem Prozess enthalten sind, wie in der folgenden Abbildung dargestellt.
 
-![Diagramm, das eine Auflistung von Kontexten in einer Aktivität in einem Apartment innerhalb eines Prozesses anzeigt.](images/6b86fe3b-262a-483a-a418-67d60f9a5d68.png)
+![Diagramm, das eine Auflistung von Kontexten in einer Aktivität innerhalb eines Apartments innerhalb eines Prozesses zeigt.](images/6b86fe3b-262a-483a-a418-67d60f9a5d68.png)
 
-Aufrufe innerhalb eines Apartment sind direkt, während Aufrufe über mehrere Apartments hinweg (Prozess übergreifend) indirekt sind und Proxy-und Stub-Code erfordern. Apartments lassen Objekte mit unterschiedlichen Synchronisierungs-und Eintritts Eigenschaften zu und haben zwei Kategorien: Single Thread und Multithreaded. Objekte in einem Single Thread-Apartment (STA) werden auf dem jeweiligen Thread ausgeführt, in dem Sie erstellt wurden. Mit Stas kann jeweils nur eine Methode gleichzeitig ausgeführt werden. Sie sind auf Benutzeroberflächen ausgelegt und verlassen sich auf die Microsoft Windows-Nachrichten Warteschlange, um eingehende Aufrufe zu verarbeiten.
+Aufrufe innerhalb eines Apartments sind direkt, während Aufrufe zwischen Apartments (out-of-process) indirekt sind und Proxy- und Stubcode erfordern. Apartments ermöglichen Objekte mit unterschiedlichen Synchronisierungs- und Wiederinvarianzeigenschaften und weisen zwei Kategorien auf: Singlethread und Multithread. Objekte in einem Singlethread-Apartment (STA) werden für den bestimmten Thread ausgeführt, in dem sie erstellt wurden. STAs ermöglichen jeweils nur die Gleichzeitige Ausführung einer Methode. Sie sind für Benutzeroberflächen konzipiert und basieren auf der Microsoft Windows Nachrichtenwarteschlange, um eingehende Anrufe zu verarbeiten.
 
-Objekte in einem Multithread-Apartment (MTA) werden in einem beliebigen Thread ausgeführt, sodass eine beliebige Anzahl von Methoden gleichzeitig erfolgen kann. MTAs unterstützen implizit den erneuten Zutritt.
+Objekte in einem Multithread-Apartment (MTA) werden in einem beliebigen Thread ausgeführt und ermöglichen die gleichzeitige Ausführung einer beliebigen Anzahl von Methoden. MTAs unterstützen die Reentrance implizit.
 
-Com+-Klassen sind mit einer **ThreadingModel** -Eigenschaft gekennzeichnet, mit der com+ das Objekt im richtigen Apartment erstellen kann. Um zu ermitteln, in welchem Apartment ein Objekt erstellt wird, verwendet [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) die **ThreadingModel** -Eigenschaft.
+COM+-Klassen sind mit einer **ThreadingModel-Eigenschaft** markiert, die es COM+ ermöglicht, das Objekt im richtigen Apartment zu erstellen. Um zu bestimmen, in welchem Apartment ein Objekt erstellt wird, verwendet [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) die **ThreadingModel-Eigenschaft.**
 
-Threads müssen [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) aufrufen, bevor Sie com+ verwenden können. Dadurch werden Sie im richtigen Apartment und Kontext erstellt. Das Haupt Thread Apartment wird als erster von **CoInitializeEx** aufgerufener STA festgelegt. Dies ist normalerweise dem Haupt Thread eines Prozesses zugeordnet. **CoInitializeEx** gibt den Typ des Apartment an, das für den Thread erforderlich ist, indem die folgenden Flags festgelegt werden:
+Threads müssen [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) aufrufen, bevor sie COM+ verwenden können. Dadurch werden sie im richtigen Apartment und Kontext erstellt. Das Hauptthread-Apartment wird als erstes STA bestimmt, das von **CoInitializeEx** aufgerufen wird. Dies ist normalerweise dem Hauptthread eines Prozesses zugeordnet. **CoInitializeEx** gibt den Typ des Apartments an, der vom Thread benötigt wird, indem die folgenden Flags festgelegt werden:
 
--   **Coinit \_ Multithread**– der Thread wird im einzelnen Multithread-Apartment lokalisiert.
--   **Coinit \_ Apartmentthreaded**– platziert den Thread in einem neuen Sta.
+-   **COINIT \_ MULTITHREADED**– Sucht den Thread im einzelnen Multithread-Apartment.
+-   **COINIT \_ APARTMENTTHREADED**– Platziert den Thread in ein neues STA.
 
-Die folgenden Themen in diesem Abschnitt enthalten weitere Informationen zur Verwendung von Threading Modellen und-Apartments in com+:
+Die folgenden Themen in diesem Abschnitt enthalten weitere Informationen zur Verwendung von Threadingmodellen und Apartment in COM+:
 
--   [Threading Modell-Attribut](threading-model-attribute.md)
+-   [Threadingmodellattribut](threading-model-attribute.md)
 -   [Neutrale Apartments](neutral-apartments.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Prozesse, Threads und Apartments](/windows/desktop/com/processes--threads--and-apartments)
+[Prozesse, Threads und Apartment](/windows/desktop/com/processes--threads--and-apartments)
 </dt> <dt>
 
-[**Threading Model**](components.md)
+[**ThreadingModel**](components.md)
 </dt> </dl>
 
  

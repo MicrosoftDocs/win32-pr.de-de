@@ -1,9 +1,9 @@
 ---
-title: WM/medianetworkzugehörigkeit
-description: Das WM/medianetworkzugehörigkeit-Attribut enthält die Netzwerk Zugehörigkeit des Kanals, der den Inhalt überträgt.
+title: WM/MediaNetworkAffiliation
+description: Das WM/MediaNetworkAffiliation-Attribut enthält die Netzwerkmitgliedschaft des Kanals, der den Inhalt überträgt.
 ms.assetid: a8abdada-5a36-4be0-b71c-351ad6d7c326
 keywords:
-- WM/medianetworkzugehörigkeit Windows Media-Format
+- WM/MediaNetworkAffiliation windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,39 +12,39 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: acbb189a35816b115333a8af02d3f9f7ed259eb0
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: e1b4f8ce4a65f1738bc1a56e91a7082f9697e0e6278ea346dae29b0d9a6fc9ba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857371"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119771170"
 ---
-# <a name="wmmedianetworkaffiliation"></a>WM/medianetworkzugehörigkeit
+# <a name="wmmedianetworkaffiliation"></a>WM/MediaNetworkAffiliation
 
-Das **WM/medianetworkzugehörigkeit-** Attribut enthält die Netzwerk Zugehörigkeit des Kanals, der den Inhalt überträgt.
+Das **WM/MediaNetworkAffiliation-Attribut** enthält die Netzwerkmitgliedschaft des Kanals, der den Inhalt überträgt.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmmedianetworkzugehörigkeit
+g \_ wszWMMediaNetworkAffiliation
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird für Broadcast-TV verwendet.
+Dieses Attribut wird für Fernsehsendungen verwendet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

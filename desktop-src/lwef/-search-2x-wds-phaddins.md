@@ -1,59 +1,59 @@
 ---
-title: Entwickeln von Protokoll Handler-Add-ins
-description: Sie können Microsoft Windows Desktop Search (WDS) erweitern, um neue Datenspeicher einzuschließen, indem Sie einen benutzerdefinierten Protokollhandler implementieren.
+title: Entwickeln von Protokollhandler-Add-Ins
+description: Sie können Microsoft Windows DesktopSuche (WDS) erweitern, um neue Datenspeicher einzubeziehen, indem Sie einen benutzerdefinierten Protokollhandler implementieren.
 ms.assetid: 2447d95f-5832-453c-8857-3b4f4c158177
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45a8688621f7d2fda653d769c0e1dfdadd240f49
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: fc107c8ca51d43e2602206eb993cea6cac6dd9ec866670235daf7fb81452f5e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104516787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119726500"
 ---
-# <a name="developing-protocol-handler-add-ins"></a>Entwickeln von Protokoll Handler-Add-ins
+# <a name="developing-protocol-handler-add-ins"></a>Entwickeln von Protokollhandler-Add-Ins
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search](../search/-search-3x-wds-overview.md) .
+> Windows DesktopSuche 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search.](../search/-search-3x-wds-overview.md)
 
-Sie können Microsoft Windows Desktop Search (WDS) erweitern, um neue Datenspeicher einzuschließen, indem Sie einen benutzerdefinierten Protokollhandler implementieren.
+Sie können Microsoft Windows DesktopSuche (WDS) erweitern, um neue Datenspeicher einzubeziehen, indem Sie einen benutzerdefinierten Protokollhandler implementieren.
 
-## <a name="indexing-data-stores-with-protocol-handlers"></a>Indizieren von Daten speichern mit Protokoll Handlern
+## <a name="indexing-data-stores-with-protocol-handlers"></a>Indizieren von Datenspeichern mit Protokollhandlern
 
-Bei einem Datenspeicher handelt es sich um eine Inhaltsquelle (ein Datenbanksystem, ein Verzeichnis, ein Dateisystem), in der Daten gespeichert und vom WDS-Indexer durchsucht werden können. Der Speicher kann hierarchisch (z. b. eine Datenbank) oder ein Link basiertes (z. b. eine Website) sein. Ein Protokollhandler ermöglicht das Indizieren von Anwendungen wie WDS zum systematischen durchforsten der Knoten eines Datenspeicher, um relevante Informationen zu extrahieren, die in den Index aufgenommen werden sollen. Jeder Protokollhandler wird verwendet, um einen bestimmten Typ von Datenspeicher zu indizieren. WDS wird mit Protokoll Handlern für Dateisystem Speicher und sowohl für Microsoft Outlook-als auch für Microsoft Outlook Express-Datenspeicher (e-Mail-Speicher) ausgeliefert. PST-Dateien usw.). Beim Indizieren von Outlook-e-Mails durchsucht der Protokollhandler z. b. alle Nachrichten in allen Ordnern, die Informationen aus jeder Nachricht und Anlage extrahieren. Diese Informationen werden an den Indexer für die Einbeziehung in den WDS-Katalog übermittelt.
+Ein Datenspeicher ist eine Inhaltsquelle (ein Datenbanksystem, ein Verzeichnis, ein Dateisystem), in der Daten gespeichert werden und vom WDS-Indexer durchforstet werden können. Der Speicher kann hierarchisch (z. B. eine Datenbank) oder linkbasiert (z. B. eine Website) sein. Ein Protokollhandler ermöglicht es Indizierungsanwendungen wie WDS, die Knoten eines Datenspeichers systematisch zu durchforsten, um relevante Informationen zu extrahieren, die in den Index eingeschlossen werden sollen. Jeder Protokollhandler wird zum Indizierung eines bestimmten Datenspeichertyps verwendet. WDS wird mit Protokollhandlern für Dateisystemspeicher und sowohl für Microsoft Outlook als auch für Microsoft Outlook Express-Datenspeicher (E-Mail-Speicher, ) ausgeliefert. PST-Dateien usw.). Beim Indizieren Outlook E-Mail durchforstet der Protokollhandler beispielsweise alle Nachrichten in allen Ordnern und extrahiert Informationen aus jeder Nachricht und Anlage. Diese Informationen werden an den Indexer übergeben, der in den WDS-Katalog aufgenommen werden soll.
 
-Häufig müssen Benutzer andere Datenspeicher wie Legacy Datenbanken, e-Mail-Speicher oder Datenstrukturen durchsuchen, die nicht von WDS unterstützt werden. Sie können WDS zum durchforsten eines neuen Datenspeicher erweitern, indem Sie verwenden oder einen Protokollhandler speziell für diesen Datenspeicher implementieren. Zuerst sollten Sie zunächst feststellen, ob bereits ein Protokollhandler für Ihren Datenspeicher vorhanden ist, z. b. für die Verwendung mit einer anderen Anwendung wie SharePoint Services. Wenn dies der Fall ist, können Sie diesen Protokollhandler auf dem System installieren. Wenn jedoch kein anderer Protokollhandler vorhanden ist, müssen Sie einen implementieren. WDS-Protokollhandler verwenden die gleichen Designspezifikationen wie SharePoint Services, und Sie können häufig austauschbar verwendet werden.
+Häufig müssen Benutzer andere Datenspeicher durchsuchen, z. B. Legacydatenbanken, E-Mail-Speicher oder Datenstrukturen, die von WDS nicht unterstützt werden. Sie können WDS erweitern, um einen neuen Datenspeicher zu durchforsten, indem Sie einen Protokollhandler speziell für diesen Datenspeicher verwenden oder implementieren. Zunächst sollten Sie ermitteln, ob bereits ein Protokollhandler für Ihren Datenspeicher vorhanden ist, möglicherweise für die Verwendung mit einer anderen Anwendung wie SharePoint Services. Wenn ja, können Sie diesen Protokollhandler auf dem System installieren. Wenn jedoch kein anderer Protokollhandler vorhanden ist, müssen Sie einen implementieren. WDS-Protokollhandler verwenden die gleichen Entwurfsspezifikationen wie SharePoint Services und können häufig austauschbar verwendet werden.
 
-Außerdem müssen Sie einen Filter implementieren, um auf den Inhalt von Elementen im Speicher zuzugreifen und ihn zu indizieren, wenn der Datenspeicher andere Daten oder andere Dateitypen als einen der von WDS unterstützten 200-Dateitypen enthält. WDS 2. x verwendet den Protokollhandler und die [**IFilter**](/windows/desktop/api/filter/nn-filter-ifilter)-Technologie, die von SharePoint Services verwendet werden. Wenn Sie bereits Filter für einen bestimmten Speicher und Dateityp auf dem System installiert haben, der indiziert wird, werden die Daten von WDS mithilfe der vorhandenen Schnittstellen indiziert.
+Wenn der Datenspeicher andere Daten- oder Dateitypen als einen der 200 Dateitypen enthält, die von WDS unterstützt werden, müssen Sie außerdem einen Filter implementieren, um auf den Inhalt von Elementen im Speicher zuzugreifen und diese zu indiziert. WDS 2.x verwendet den Protokollhandler und die [**IFilter-Technologie,**](/windows/desktop/api/filter/nn-filter-ifilter)die von SharePoint Services verwendet werden. Wenn Sie bereits Filter für einen bestimmten Speicher und Dateityp auf dem zu indizierten System installiert haben, verwendet WDS die vorhandenen Schnittstellen zum Indizierung dieser Daten.
 
- 
+ 
 
 ## <a name="roadmap-to-adding-new-data-stores"></a>Roadmap zum Hinzufügen neuer Datenspeicher
 
-Zum Erweitern von WDS für die durch Forstung neuer Datenspeicher können Sie einen Protokollhandler und mindestens eines der folgenden Add-Ins erstellen: Kontextmenü Handler, Symbol Handler und ein searchprotocoloptions-Add-in.
+Um WDS zum Durchforsten neuer Datenspeicher zu erweitern, können Sie einen Protokollhandler und mindestens eines der folgenden Add-Ins erstellen: Kontextmenühandler, Symbolhandler und ein SearchProtocolOptions-Add-In.
 
-1.  Erstellen und registrieren Sie einen Multithread-Protokollhandler für den Datenspeicher:
-    -   **Isearchprotocol** : Diese Schnittstelle greift auf ein Protokoll zu und ordnet einer iurlaccessor eine URL zu.
-    -   **Iurlaccessor** : Dies ist die Hauptschnittstelle, die für den Zugriff auf Elemente aus der Inhaltsquelle und zum Binden des Inhalts an den entsprechenden Filter verwendet wird.
-    -   **Iprotocolhandlersite** : Diese Schnittstelle wird verwendet, um zusätzliche Filter anzufordern und zu laden.
-    -   **IFilter** : Diese Schnittstelle gibt die URL der einzelnen Elemente in einem Ordner als Wert Eigenschaften für die Verarbeitung zurück.
+1.  Erstellen und registrieren Sie einen Multithreadprotokollhandler für den Datenspeicher:
+    -   **ISearchProtocol:** Diese Schnittstelle greift auf ein Protokoll zu und ordnet eine URL einem IUrlAccessor zu.
+    -   **IUrlAccessor:** Dies ist die Hauptschnittstelle, die für den Zugriff auf Elemente aus der Inhaltsquelle und das Binden des Inhalts an den entsprechenden Filter verwendet wird.
+    -   **IProtocolHandlerSite:** Diese Schnittstelle wird verwendet, um zusätzliche Filter anzufordern und zu laden.
+    -   **IFilter:** Diese Schnittstelle gibt die URL jedes Elements in einem Ordner als Werteigenschaften für die Verarbeitung zurück.
 
     > [!Note]
     >
-    > Die minimale Add-in-Funktionalität, die benötigt wird, um Suchergebnisse aus einem nicht hierarchischen Datenspeicher zurückzugeben, ist eine Implementierung der Schnittstellen isearchprotocol und iurlaccessor.
+    > Die mindest erforderliche Add-In-Funktionalität zum Zurückgeben von Suchergebnissen aus einem nicht hierarchischen Datenspeicher ist eine Implementierung von ISearchProtocol- und IUrlAccessor-Schnittstellen.
 
-     
+     
 
-2.  Implementieren Sie die isearchprotocoloptions-Schnittstelle, um angepasste protokollhandleroptionen wie vordefinierte Startseiten einzuschließen:
-    -   **Isearchprotocoloptions** : Diese Schnittstelle definiert Standard-URLs für den Protokollhandler, die verarbeitet werden sollen, bestimmt, welche Anforderungen für einen Protokollhandler gelten, und bestimmt, ob die Anforderungen für ein bestimmtes System erfüllt sind.
-3.  Erweitern Sie Shell, indem Sie die folgenden Schnittstellen implementieren, um Benutzeroberflächen Elemente, wie z. b. Kontextmenüs und Datei spezifische Symbole, einzubeziehen:
-    -   **IShellFolder** : Diese Schnittstelle, die zum Verwalten von Ordnern verwendet wird, ist erforderlich, um die IContextMenu-und iextracticon-Schnittstellen für eine URL in einem neuen Speicher bereitzustellen.
-    -   **Ipersistfolder** : Diese Schnittstelle ist erforderlich, um ein shellordnerobjekt anzuweisen, sich selbst zu initialisieren.
-    -   **Ipersistent** : Diese Schnittstelle stellt den Klassen Bezeichner (CLSID) eines Objekts bereit, das im System dauerhaft gespeichert werden kann.
-    -   **IContextMenu** : Diese Schnittstelle definiert das Kontextmenü des Rechtsklick für ein Element, auf das von URL verwiesen wird.
-    -   **Iextracticon** : Diese Schnittstelle definiert das Symbol, das für ein Element angezeigt wird, auf das von URL verwiesen wird.
+2.  Implementieren Sie die ISearchProtocolOptions-Schnittstelle, um benutzerdefinierte Protokollhandleroptionen wie vordefinierte Startseiten einzubeziehen:
+    -   **ISearchProtocolOptions:** Diese Schnittstelle definiert Standard-URLs für den zu verarbeitenden Protokollhandler, bestimmt die Anforderungen für einen Protokollhandler und bestimmt, ob die Anforderungen für ein bestimmtes System erfüllt wurden.
+3.  Erweitern Sie die Shell, um Benutzeroberflächenelemente wie Kontextmenüs und dateispezifische Symbole einzuschließen, indem Sie die folgenden Schnittstellen implementieren:
+    -   **IShellFolder:** Diese Schnittstelle, die zum Verwalten von Ordnern verwendet wird, ist erforderlich, um die Schnittstellen IContextMenu und IExtractIcon für eine URL in einem neuen Speicher bereitzustellen.
+    -   **IPersistFolder:** Diese Schnittstelle ist erforderlich, um ein Shell-Ordnerobjekt anzuweisen, sich selbst zu initialisieren.
+    -   **IPersist:** Diese Schnittstelle stellt den Klassenbezeichner (CLSID) eines Objekts zur Verfügung, das dauerhaft im System gespeichert werden kann.
+    -   **IContextMenu:** Diese Schnittstelle definiert das Kontextmenü mit der rechten Maustaste für ein Element, auf das über die URL verwiesen wird.
+    -   **IExtractIcon:** Diese Schnittstelle definiert das Symbol, das für ein Element angezeigt werden soll, auf das über die URL verwiesen wird.
 4.  Implementieren Sie einen Mechanismus, um den Indexer über Änderungen an Ihrem Datenspeicher zu benachrichtigen:
-    -   **Isearchitemschangedsink** : Diese Schnittstelle ermöglicht dem Protokollhandler, den Index von Änderungen an Ihrem Datenspeicher zu benachrichtigen. Dadurch wird die Leistung verbessert, da der Indexer nicht den gesamten Speicher auf inkrementellen Indizes durchsucht.
+    -   **ISearchItemsChangedSink:** Mit dieser Schnittstelle kann Ihr Protokollhandler den Index über Änderungen an Ihrem Datenspeicher benachrichtigen. Dadurch wird die Leistung verbessert, indem sichergestellt wird, dass der Indexer nicht den gesamten Speicher in inkrementellen Indizes durchforstet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -62,18 +62,18 @@ Zum Erweitern von WDS für die durch Forstung neuer Datenspeicher können Sie ei
 **Referenz**
 </dt> <dt>
 
-[Implementieren eines Protokoll Handlers für WDS](-search-2x-wds-phimplementing.md)
+[Implementieren eines Protokollhandlers für WDS](-search-2x-wds-phimplementing.md)
 </dt> <dt>
 
 [Hinzufügen von Symbolen, Vorschauen und Kontextmenüs mit Shellerweiterungen](-search-2x-wds-ph-ui-extensions.md)
 </dt> <dt>
 
-[Benachrichtigen des Index von Änderungen](-search-2x-wds-notifyingofchanges.md)
+[Benachrichtigen des Änderungsindexes](-search-2x-wds-notifyingofchanges.md)
 </dt> <dt>
 
-[Installieren und Registrieren von Protokoll Handlern](-search-2x-wds-ph-install-registration.md)
+[Installieren und Registrieren von Protokollhandlern](-search-2x-wds-ph-install-registration.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

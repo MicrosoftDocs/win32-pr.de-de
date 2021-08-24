@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Result01_CredentialProviders02-Klasse
-description: Die MDM- \_ Richtlinie \_ Result01 \_ CredentialProviders02-Klasse stellt die verfügbaren Richtlinien für Anmelde Informationsanbieter dar.
+description: Die Klasse MDM \_ Policy \_ Result01 \_ CredentialProviders02 stellt die verfügbaren Richtlinien für Anmeldeinformationsanbieter dar.
 ms.assetid: dc9e276b-8813-46cf-8e5a-0d41a93331ea
 keywords:
 - MDM_Policy_Result01_CredentialProviders02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 98a2e6c0ababbf2706e82606ddb7c7c13a9087a2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8c29fd13a456f46e51c4f0027d36d6b46f1937fc3f5d11e31706e146138ade51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119796380"
 ---
-# <a name="mdm_policy_result01_credentialproviders02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ CredentialProviders02-Klasse
+# <a name="mdm_policy_result01_credentialproviders02-class"></a>MDM \_ Policy \_ Result01 \_ CredentialProviders02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Richtlinie \_ Result01 \_ CredentialProviders02-Klasse stellt die verfügbaren Richtlinien für Anmelde Informationsanbieter dar.
+Die Klasse MDM \_ Policy \_ Result01 \_ CredentialProviders02 stellt die verfügbaren Richtlinien für Anmeldeinformationsanbieter dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -48,20 +48,20 @@ class MDM_Policy_Result01_CredentialProviders02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ CredentialProviders02** -Klasse verfügt über diese Typen von Membern:
+Die **Mdm \_ Policy \_ Result01 \_ CredentialProviders02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ CredentialProviders02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Result01 \_ CredentialProviders02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowpinlogon](/windows/client-management/mdm/policy-csp-credentialproviders#credentialproviders-allowpinlogon)
+[AllowPINLogon](/windows/client-management/mdm/policy-csp-credentialproviders#credentialproviders-allowpinlogon)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -69,10 +69,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Blockpicturepassword](/windows/client-management/mdm/policy-csp-credentialproviders#credentialproviders-blockpicturepassword)
+[BlockPicturePassword](/windows/client-management/mdm/policy-csp-credentialproviders#credentialproviders-blockpicturepassword)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -80,7 +80,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableautomatikredeploymentanmelde Informationen](/windows/client-management/mdm/policy-csp-credentialproviders#credentialproviders-disableautomaticredeploymentcredentials)
+[DisableAutomaticReDeploymentCredentials](/windows/client-management/mdm/policy-csp-credentialproviders#credentialproviders-disableautomaticredeploymentcredentials)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -94,27 +94,27 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> </dl>
@@ -125,10 +125,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

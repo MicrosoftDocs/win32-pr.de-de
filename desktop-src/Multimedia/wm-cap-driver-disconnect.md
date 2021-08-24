@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_DRIVER_DISCONNECT Meldung (VFW. h)
-description: Die "WM Cap Driver Disconnect"-Nachricht trennt die Verbindung \_ \_ \_ eines Aufzeichnungs Treibers von einem Aufzeichnungs Fenster. Sie können diese Nachricht explizit oder mithilfe des "capdriverdisconnect"-Makros senden.
+title: WM_CAP_DRIVER_DISCONNECT Meldung (Vfw.h)
+description: Die MELDUNG WM \_ CAP DRIVER DISCONNECT trennt einen \_ \_ Erfassungstreiber von einem Erfassungsfenster. Sie können diese Nachricht explizit oder mithilfe des Makros capDriverDisconnect senden.
 ms.assetid: a420f24a-aa7d-4788-9120-2c11e5e2c14c
 keywords:
-- WM_CAP_DRIVER_DISCONNECT-Nachricht (Multimedia)
+- WM_CAP_DRIVER_DISCONNECT nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: acad628cc61bbb50c56f68fda91ac87be4feb728
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f6365366c6ea37b36734262d1d7a8412a7729406ff3fcc12e10ae9ba55d9ba84
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803860"
 ---
-# <a name="wm_cap_driver_disconnect-message"></a>WM- \_ Cap- \_ Treiber Disconnect- \_ Nachricht
+# <a name="wm_cap_driver_disconnect-message"></a>WM \_ CAP \_ DRIVER \_ DISCONNECT-Meldung
 
-Die " **WM \_ Cap \_ Driver \_ Disconnect** "-Nachricht trennt die Verbindung eines Aufzeichnungs Treibers von einem Aufzeichnungs Fenster. Sie können diese Nachricht explizit oder mithilfe des " [**capdriverdisconnect**](/windows/desktop/api/Vfw/nf-vfw-capdriverdisconnect) "-Makros senden.
+Die **MELDUNG WM CAP DRIVER \_ \_ \_ DISCONNECT** trennt einen Erfassungstreiber von einem Erfassungsfenster. Sie können diese Nachricht explizit oder mithilfe des [**Makros capDriverDisconnect**](/windows/desktop/api/Vfw/nf-vfw-capdriverdisconnect) senden.
 
 
 ```C++
@@ -36,7 +36,7 @@ lParam = 0L;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich oder **false** , wenn das Aufzeichnungs Fenster nicht mit einem Aufzeichnungs Treiber verbunden ist.
+Gibt **TRUE** zurück, wenn erfolgreich, oder **FALSE,** wenn das Erfassungsfenster nicht mit einem Erfassungstreiber verbunden ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Gibt **true** zurück, wenn erfolgreich oder **false** , wenn das Aufzeichnungs 
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -54,10 +54,10 @@ Gibt **true** zurück, wenn erfolgreich oder **false** , wenn das Aufzeichnungs 
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Video Capture Messages](video-capture-messages.md)
 </dt> </dl>
 
  

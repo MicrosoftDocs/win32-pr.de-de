@@ -1,19 +1,19 @@
 ---
 title: IDXCoreAdapterFactory::GetAdapterByLuid
-description: Ruft das DXCore-Adapter Objekt ([idxcoreadapter](./nn-dxcore_interface-idxcoreadapter.md)) für eine angegebene LUID ab, falls verfügbar.
+description: Ruft das DXCore-Adapterobjekt ([IDXCoreAdapter](./nn-dxcore_interface-idxcoreadapter.md)) für eine angegebene LUID ab, falls verfügbar.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: 30835948978e5c7f3f11f903322e4fa41f71d210
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d8f72aba23b9a1f57094b39e5afba3740f8749348c6a2da6a8753f72a7a0e6ef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390742"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787051"
 ---
-# <a name="idxcoreadapterfactorygetadapterbyluid-method"></a>Idxcoreadapterfactory:: getadapterbyluid-Methode
+# <a name="idxcoreadapterfactorygetadapterbyluid-method"></a>IDXCoreAdapterFactory::GetAdapterByLuid-Methode
 
-Ruft das DXCore-Adapter Objekt ([idxcoreadapter](./nn-dxcore_interface-idxcoreadapter.md)) für eine angegebene LUID ab, falls verfügbar. Programmieranleitungen und Codebeispiele finden [Sie unter Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md).
+Ruft das DXCore-Adapterobjekt ([IDXCoreAdapter](./nn-dxcore_interface-idxcoreadapter.md)) für eine angegebene LUID ab, falls verfügbar. Programmieranleitungen und Codebeispiele finden Sie unter [Using DXCore to enumerate adapters](../dxcore-enum-adapters.md)(Verwenden von DXCore zum Aufzählen von Adaptern).
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,41 +31,41 @@ HRESULT STDMETHODCALLTYPE GetAdapterByLuid(
 
 ## <a name="parameters"></a>Parameter
 
-### <a name="adapterluid"></a>adapterluid
+### <a name="adapterluid"></a>adapterLUID
 
-Typ: **[LUID](/windows/win32/api/winnt/ns-winnt-luid) -Konstante\&**
+Typ: **[LUID](/windows/win32/api/winnt/ns-winnt-luid) const\&**
 
-Der lokal eindeutige Wert, der die Adapter Instanz identifiziert.
+Der lokal eindeutige Wert, der die Adapterinstanz identifiziert.
 
 ### <a name="riid-in"></a>riid [in]
 
-Typ: **refID**
+Typ: **REFIID**
 
-Ein Verweis auf die Globally Unique Identifier (GUID) der Schnittstelle, die in *ppvadapter* zurückgegeben werden soll. Dies wird als Schnittstellen Bezeichner (IID) von [idxcoreadapter](./nn-dxcore_interface-idxcoreadapter.md)erwartet.
+Ein Verweis auf die GUID (Globally Unique Identifier) der Schnittstelle, die in *ppvAdapter zurückgegeben werden soll.* Es wird erwartet, dass dies der Schnittstellenbezeichner (IID) von [IDXCoreAdapter ist.](./nn-dxcore_interface-idxcoreadapter.md)
 
-### <a name="ppvadapter-out"></a>ppvadapter [out]
+### <a name="ppvadapter-out"></a>ppvAdapter [out]
 
-Typ: **void \* \***
+Typ: **\* \* void**
 
-Die Adresse eines Zeigers auf eine Schnittstelle mit der im *riid* -Parameter angegebenen IID. Bei erfolgreicher Rückgabe enthält *\* ppvadapter* (die Dereferenzierte Adresse) einen Zeiger auf den erstellten DXCore-Adapter.
+Die Adresse eines Zeigers auf eine Schnittstelle mit der IID, die im *riid-Parameter angegeben* ist. Nach erfolgreicher Rückgabe enthält *\* ppvAdapter* (die dereferenzierte Adresse) einen Zeiger auf den erstellten DXCore-Adapter.
 
 ## <a name="returns"></a>Gibt zurück
 
 Typ: **[HRESULT](../../com/structure-of-com-error-codes.md)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT**](../../com/structure-of-com-error-codes.md) - [Fehlercode](../../com/com-error-codes-10.md)zurückgegeben.
+Wenn die Funktion erfolgreich ist, gibt **sie** S_OK. Andernfalls wird ein [**HRESULT-Fehlercode**](../../com/structure-of-com-error-codes.md) [zurückgegeben.](../../com/com-error-codes-10.md)
 
-|Rückgabewert|BESCHREIBUNG|
+|Rückgabewert|Beschreibung|
 |-|-|
-|DXGI_ERROR_DEVICE_REMOVED|Die in *adapterluid* weiter gegebene Adapter-LUID wird erkannt, aber der Adapter befindet sich nicht mehr in einem gültigen Zustand.|
-|E_INVALIDARG|Keine solche Adapter-LUID, da der in *adapterluid* über gegebene Wert über DXCore verfügbar ist.|
-|E_NOINTERFACE|Für *riid* wurde ein ungültiger Wert angegeben.|
-|E_POINTER|`nullptr` wurde für *ppvadapter* bereitgestellt.|
+|DXGI_ERROR_DEVICE_REMOVED|Die in adapterLUID übergebene *Adapter-LUID* wird erkannt, aber der Adapter befindet sich nicht mehr in einem gültigen Zustand.|
+|E_INVALIDARG|Es ist keine solche Adapter-LUID verfügbar, da der in *adapterLUID* übergebene Wert über DXCore verfügbar ist.|
+|E_NOINTERFACE|Für riid wurde ein *ungültiger Wert angegeben.*|
+|E_POINTER|`nullptr`wurde für *ppvAdapter bereitgestellt.*|
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mehrere Aufrufe, die dieselbe [LUID](/windows/win32/api/winnt/ns-winnt-luid) übergeben, geben identische Schnittstellen Zeiger zurück. Daher ist es sicher, Schnittstellen Zeiger zu vergleichen, um zu bestimmen, ob mehrere Zeiger auf dasselbe Adapter Objekt verweisen.
+Mehrere Aufrufe, die dieselbe [LUID übergeben,](/windows/win32/api/winnt/ns-winnt-luid) geben identische Schnittstellenzeige zurück. Daher ist es sicher, Schnittstellenzeker zu vergleichen, um zu bestimmen, ob mehrere Zeiger auf das gleiche Adapterobjekt verweisen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Idxcoreadapterfactory](./nn-dxcore_interface-idxcoreadapterfactory.md), [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Auflisten von Adaptern](../dxcore-enum-adapters.md)
+[IDXCoreAdapterFactory](./nn-dxcore_interface-idxcoreadapterfactory.md), [DXCore-Referenz](../dxcore-reference.md), Verwenden von DXCore zum [Aufzählen von Adaptern](../dxcore-enum-adapters.md)

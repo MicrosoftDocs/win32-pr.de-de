@@ -1,21 +1,21 @@
 ---
-description: Die itterminal-Schnittstelle ist die Basisschnittstelle für ein Terminal Objekt. Es bietet Methoden zum Abrufen von Informationen, wie z. b. die Terminal Klasse und die unterstützten Medien.
+description: Die ITTerminal-Schnittstelle ist die Basisschnittstelle für ein Terminalobjekt. Sie stellt Methoden zum Abrufen von Informationen wie der Terminalklasse und den unterstützten Medien zur Verfügung.
 ms.assetid: d76f22c1-3d7c-48cf-bd37-388482929676
-title: Itterminal (MSPi)
+title: ITTerminal (MSPI)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c52d25ecb37d3b9df560282d69d0f3df470ca8e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b4958d8032579d91580621b1ec93bf54976a06905c6f3d18b4787b7f465a96f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960742"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119774410"
 ---
-# <a name="itterminal-mspi"></a>Itterminal (MSPi)
+# <a name="itterminal-mspi"></a>ITTerminal (MSPI)
 
-Die [**itterminal**](/windows/win32/api/tapi3if/nn-tapi3if-itterminal) -Schnittstelle ist die Basisschnittstelle für ein [Terminal Objekt](terminal-object.md). Es bietet Methoden zum Abrufen von Informationen, wie z. b. die Terminal Klasse und die unterstützten Medien.
+Die [**ITTerminal-Schnittstelle**](/windows/win32/api/tapi3if/nn-tapi3if-itterminal) ist die Basisschnittstelle für ein [Terminalobjekt.](terminal-object.md) Sie stellt Methoden zum Abrufen von Informationen wie der Terminalklasse und den unterstützten Medien zur Verfügung.
 
-Die [**itterminal**](/windows/win32/api/tapi3if/nn-tapi3if-itterminal) -Schnittstelle wird von einem MSP implementiert und ist nicht verfügbar, wenn der Adresse kein Medien Dienstanbieter zugeordnet ist. Ausführliche Informationen zu dieser Schnittstelle finden Sie im Abschnitt **itterminal** im Abschnitt MSP-Schnittstelle.
+Die [**ITTerminal-Schnittstelle**](/windows/win32/api/tapi3if/nn-tapi3if-itterminal) wird von einem MSP implementiert und ist nicht verfügbar, wenn der Adresse kein Mediendienstanbieter zugeordnet ist. Weitere Informationen zu dieser Schnittstelle finden Sie unter **ITTerminal** im Abschnitt MSP-Schnittstelle.
 
  
 

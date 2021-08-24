@@ -12,12 +12,12 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: a24253b021abacf398a3a169b63bbb2f01ec2354
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e78eabce23633029e4ef3dfe6c6777c586a5d74ed28ccfe466c89064851f8197
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119791900"
 ---
 # <a name="impeg2psiparsergettransportstreamid-method"></a>IMpeg2PsiParser::GetTransportStreamId-Methode
 
@@ -49,7 +49,7 @@ Zeiger auf eine Variable, die das Feld für die \_ \_ Transportstream-ID empfän
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die -Methode gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind, aber nicht beschränkt auf, die in der folgenden Tabelle gezeigten Werte.
+Die -Methode gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind u. a. die in der folgenden Tabelle gezeigten Werte.
 
 
 
@@ -61,7 +61,7 @@ Die -Methode gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind, aber nic
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

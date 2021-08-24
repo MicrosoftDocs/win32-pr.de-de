@@ -42,19 +42,19 @@
             - name: IDXCoreAdapter
               href: ./dxcore_interface/nn-dxcore_interface-idxcoreadapter.md
               items:
-                - name: GetFactory
+                - name: Getfactory
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-getfactory.md
                 - name: GetProperty
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-getproperty.md
-                - name: Getpropertysize
+                - name: GetPropertySize
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-getpropertysize.md
-                - name: Isattributesupportiert
+                - name: IsAttributeSupported
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-isattributesupported.md
-                - name: Ispropertysupported
+                - name: IsPropertySupported
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-ispropertysupported.md
-                - name: Isquerystaatupportiert
+                - name: IsQueryStateSupported
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-isquerystatesupported.md
-                - name: Issetstaatupportiert
+                - name: IsSetStateSupported
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-issetstatesupported.md
                 - name: IsValid
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapter-isvalid.md
@@ -65,28 +65,28 @@
             - name: IDXCoreAdapterFactory
               href: ./dxcore_interface/nn-dxcore_interface-idxcoreadapterfactory.md
               items:
-                - name: '"Kreateadapterlist"'
+                - name: CreateAdapterList
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterfactory-createadapterlist.md
-                - name: Getadapterbyluid
+                - name: GetAdapterByLuid
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterfactory-getadapterbyluid.md
-                - name: Isnotificationtypesupportiert
+                - name: IsNotificationTypeSupported
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterfactory-isnotificationtypesupported.md
-                - name: Registereventnotification
+                - name: RegisterEventNotification
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterfactory-registereventnotification.md
-                - name: Unregistereventnotification
+                - name: UnregisterEventNotification
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterfactory-unregistereventnotification.md
             - name: IDXCoreAdapterList
               href: ./dxcore_interface/nn-dxcore_interface-idxcoreadapterlist.md
               items:
                 - name: GetAdapter
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-getadapter.md
-                - name: Getadaptercount
+                - name: GetAdapterCount
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-getadaptercount.md
-                - name: GetFactory
+                - name: Getfactory
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-getfactory.md
-                - name: Isadapterpreferkocesupportiert
+                - name: IsAdapterPreferenceSupported
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-isadapterpreferencesupported.md
-                - name: Isstale
+                - name: IsStale
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-isstale.md
                 - name: Sortieren
                   href: ./dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-sort.md

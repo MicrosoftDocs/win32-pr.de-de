@@ -1,30 +1,30 @@
 ---
-title: Imstscax-Server Eigenschaft (asptlb. h)
+title: IMsTscAx-Servereigenschaft (Asptlb.h)
 description: Gibt den Namen des Servers an, mit dem das aktuelle Steuerelement verbunden ist.
 ms.assetid: 81118ddd-2662-47f5-8e9d-9c2a5056820b
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste der Server Eigenschaft
-- Server Eigenschaft Remotedesktopdienste, imstscax-Schnittstelle
-- Imstscax-Schnittstelle Remotedesktopdienste, Server Eigenschaft
-- Server Eigenschaft Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient-Schnittstelle Remotedesktopdienste, Server Eigenschaft
-- Server Eigenschaft Remotedesktopdienste, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2-Schnittstelle Remotedesktopdienste, Server Eigenschaft
-- Server Eigenschaft Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3-Schnittstelle Remotedesktopdienste, Server Eigenschaft
-- Server Eigenschaft Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4-Schnittstelle Remotedesktopdienste, Server Eigenschaft
-- Server Eigenschaft Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5-Schnittstelle Remotedesktopdienste, Server Eigenschaft
-- Server Eigenschaft Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6-Schnittstelle Remotedesktopdienste, Server Eigenschaft
-- Server Eigenschaft Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, Server Eigenschaft
-- Server Eigenschaft Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, Server Eigenschaft
-- Server Eigenschaft Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, Server Eigenschaft
+- Remotedesktopdienste der Servereigenschaft
+- Servereigenschaft Remotedesktopdienste , IMsTscAx-Schnittstelle
+- IMsTscAx-Schnittstelle Remotedesktopdienste , Servereigenschaft
+- Servereigenschaft Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , Servereigenschaft
+- Servereigenschaft Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste , Servereigenschaft
+- Servereigenschaft Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , Servereigenschaft
+- Servereigenschaft Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , Servereigenschaft
+- Servereigenschaft Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , Servereigenschaft
+- Servereigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , Servereigenschaft
+- Servereigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , Servereigenschaft
+- Servereigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , Servereigenschaft
+- Servereigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , Servereigenschaft
 topic_type:
 - apiref
 api_name:
@@ -64,14 +64,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d7b7be04c149e2ac10c1a3e905678bd2b5f663cd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c8ce72d7cc26dc3fd7b60b7f1d4f26d2737980dfde88a1b31c79a59fb4335f96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949499"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119771000"
 ---
-# <a name="imstscaxserver-property"></a>Imstscax:: Server-Eigenschaft
+# <a name="imstscaxserver-property"></a>IMsTscAx::Server-Eigenschaft
 
 Gibt den Namen des Servers an, mit dem das aktuelle Steuerelement verbunden ist.
 
@@ -94,19 +94,19 @@ HRESULT get_Server(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Name des neuen Servers. Dieser Parameter kann ein DNS-Name oder eine IP-Adresse sein.
+Der neue Servername. Dieser Parameter kann ein DNS-Name oder eine IP-Adresse sein.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Wenn die Methoden erfolgreich sind, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT** -Wert gibt an, dass der-Fehler aufgetreten ist.
+Wenn die Methoden erfolgreich sind, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT-Wert** gibt an, dass der Aufruf fehlgeschlagen ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft muss festgelegt werden, bevor die [**Connect**](imstscax-connect.md) -Methode aufgerufen wird. Es ist die einzige Eigenschaft, die vor dem Herstellen einer Verbindung festgelegt werden muss.
+Diese Eigenschaft muss festgelegt werden, bevor die [**Verbinden-Methode**](imstscax-connect.md) aufgerufen wird. Es ist die einzige Eigenschaft, die vor dem Herstellen einer Verbindung festgelegt werden muss.
 
-Diese Eigenschaft kann nur festgelegt werden, wenn sich das Steuerelement nicht im verbundenen Zustand befindet. Diese Eigenschaft gibt **E \_ Fail** zurück, wenn Sie aufgerufen wird, wenn das Steuerelement verbunden ist. Mithilfe der [**verbundenen**](imstscax-connected.md) Eigenschaft können Sie den Status "verbunden" überprüfen.
+Diese Eigenschaft kann nur festgelegt werden, wenn sich das Steuerelement nicht im verbundenen Zustand befindet. Diese Eigenschaft gibt **E \_ FAIL** zurück, wenn sie aufgerufen wird, wenn das Steuerelement verbunden ist. Sie können den verbundenen Zustand mithilfe der [**Connected-Eigenschaft**](imstscax-connected.md) überprüfen.
 
-Mit dieser Methode wird der erforderliche Arbeitsspeicher für den Puffer zugewiesen, auf den der *pserver* -Parameter verweist. Beim Aufrufen von C/C++-Anwendungen muss der Arbeitsspeicher durch einen Aufruf der [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) -Funktion freigegeben werden. Dies ist für Visual Basic-und Skript Clients nicht erforderlich.
+Diese Methode belegt den Arbeitsspeicher, der für den Puffer erforderlich ist, auf den der *pServer-Parameter* zeigt. Beim Aufrufen von C/C++-Anwendungen muss der Arbeitsspeicher durch einen Aufruf der [**SysFreeString-Funktion**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) freigegeben werden. Dies ist für Visual Basic- und Skriptclients nicht erforderlich.
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -118,18 +118,18 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Asptlb. h</dt> </dl>    |
+| Header<br/>                   | <dl> <dt>Asptlb.h</dt> </dl>    |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imstscax ist als 8c11efae-92c3-11d1-bc1e-00c04fa31489 definiert.<br/>            |
+| IID<br/>                      | IID \_ IMsTscAx ist als 8C11EFAE-92C3-11D1-BC1E-00C04FA31489 definiert.<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)
@@ -156,7 +156,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClient9**](imsrdpclient9.md)
 </dt> <dt>
 
-[**Imstscax**](imstscax-interface.md)
+[**IMsTscAx**](imstscax-interface.md)
 </dt> </dl>
 
  

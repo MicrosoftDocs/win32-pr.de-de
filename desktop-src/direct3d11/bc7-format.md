@@ -1,78 +1,78 @@
 ---
-title: Bzw bc7-Format
-description: Das bzw bc7-Format ist ein Textur Komprimierungs Format, das für die hochwertige Komprimierung von RGB-und RGBA-Daten verwendet wird.
+title: BC7-Format
+description: Das BC7-Format ist ein Texturkomprimierungsformat, das für die hochwertige Komprimierung von RGB- und RGBA-Daten verwendet wird.
 ms.assetid: DF333106-293E-4B3E-A1EB-B0BF0ADBAC72
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b9b64c3d4a8b5e960077a9f33de82ff08cd4bbc
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0bd48826cc0c02be6d15a837c272442c0931e9660f507a90cb491acf4d5820ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390814"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119858220"
 ---
-# <a name="bc7-format"></a>Bzw bc7-Format
+# <a name="bc7-format"></a>BC7-Format
 
-Das bzw bc7-Format ist ein Textur Komprimierungs Format, das für die hochwertige Komprimierung von RGB-und RGBA-Daten verwendet wird.
+Das BC7-Format ist ein Texturkomprimierungsformat, das für die hochwertige Komprimierung von RGB- und RGBA-Daten verwendet wird.
 
--   [Informationen zum bzw bc7/DXGI- \_ Format \_ bzw bc7](/windows)
--   [Bzw bc7-Implementierung](#bc7-implementation)
--   [Decodieren des bzw bc7-Formats](#decoding-the-bc7-format)
+-   [Informationen zum BC7/DXGI-FORMAT \_ \_ BC7](/windows)
+-   [BC7-Implementierung](#bc7-implementation)
+-   [Decodieren des BC7-Formats](#decoding-the-bc7-format)
 -   [Zugehörige Themen](#related-topics)
 
-Informationen zu den Block Modi des bzw bc7-Formats finden Sie unter [bzw bc7 formatmode Reference](bc7-format-mode-reference.md).
+Informationen zu den Blockmodi des BC7-Formats finden Sie in der [Referenz zum BC7-Formatmodus.](bc7-format-mode-reference.md)
 
-## <a name="about-bc7dxgi_format_bc7"></a>Informationen zum bzw bc7/DXGI- \_ Format \_ bzw bc7
+## <a name="about-bc7dxgi_format_bc7"></a>Informationen zum BC7/DXGI-FORMAT \_ \_ BC7
 
-Bzw bc7 wird durch die folgenden DXGI- \_ formatenumerationswerte angegeben:
+BC7 wird durch die folgenden DXGI \_ FORMAT-Enumerationswerte angegeben:
 
--   **DXGI \_ Format \_ bzw bc7 \_ typlose Formatierung**.
--   **DXGI \_ Formatieren Sie \_ bzw bc7 \_ unorm**.
--   **DXGI \_ Format \_ bzw bc7 \_ unorm \_ sRGB**.
+-   **DXGI \_ FORMAT \_ BC7 \_ TYPELESS**.
+-   **DXGI \_ FORMAT \_ BC7 \_ UNORM**.
+-   **DXGI \_ FORMAT \_ BC7 \_ UNORM \_ SRGB**.
 
-Das bzw bc7-Format kann für die Textur Ressourcen [Texture2D](/windows/desktop/direct3d10/d3d10-graphics-reference-resource-structures) (einschließlich Arrays), Texture3D oder texturecube (einschließlich Arrays) verwendet werden. Ebenso gilt dieses Format für alle mit diesen Ressourcen verknüpften MIP-Map-Oberflächen.
+Das BC7-Format kann für Texturressourcen von [Texture2D](/windows/desktop/direct3d10/d3d10-graphics-reference-resource-structures) (einschließlich Arrays), Texture3D oder TextureCube (einschließlich Arrays) verwendet werden. Ebenso gilt dieses Format für alle MIP-Kartenoberflächen, die diesen Ressourcen zugeordnet sind.
 
-Bzw bc7 verwendet eine fester Blockgröße von 16 Bytes (128 Bits) und eine fixierte Kachel Größe von 4 x 4 texeln. Wie bei früheren BC-Formaten werden Textur Bilder, die größer als die unterstützte Kachel Größe (4X4) sind, mithilfe mehrerer Blöcke komprimiert. Diese Adressierungs Identität gilt auch für dreidimensionale Bilder und MIP-Maps, Cubemaps und Textur Arrays. Alle Bildkacheln müssen das gleiche Format aufweisen.
+BC7 verwendet eine feste Blockgröße von 16 Bytes (128 Bits) und eine feste Kachelgröße von 4x4 Texels. Wie bei vorherigen BC-Formaten werden Texturbilder, die größer als die unterstützte Kachelgröße (4 x 4) sind, mithilfe mehrerer Blöcke komprimiert. Diese Adressierungsidentität gilt auch für dreidimensionale Bilder und MIP-Zuordnungen, Cubemaps und Texturarrays. Alle Bildkacheln müssen das gleiche Format haben.
 
-Bzw bc7 komprimiert sowohl Daten Abbilder mit drei Kanälen (RGB) als auch mit vier Kanälen (RGBA). Normalerweise handelt es sich bei den Quelldaten um 8 Bits pro Farbkomponente (Channel), obwohl das Format Quelldaten mit einer höheren Bits pro Color-Komponente codieren kann. Alle Bildkacheln müssen das gleiche Format aufweisen.
+BC7 komprimiert sowohl RGB-Datenbilder (Dreikanal) als auch RGBA-Festpunktdatenbilder(4-Kanal). In der Regel sind Quelldaten 8 Bits pro Farbkomponente (Kanal), obwohl das Format Quelldaten mit höheren Bits pro Farbkomponente codieren kann. Alle Bildkacheln müssen das gleiche Format haben.
 
-Der bzw bc7-Decoder führt vor dem Anwenden der Textur Filterung eine Komprimierung durch.
+Der BC7-Decoder führt eine Dekomprimierung durch, bevor Texturfilterung angewendet wird.
 
-Bzw bc7-Komprimierungs Hardware muss etwas genau sein. Das heißt, dass die Hardware Ergebnisse zurückgeben muss, die mit den Ergebnissen identisch sind, die von dem in diesem Dokument beschriebenen Decoder zurückgegeben werden.
+BC7-Dekomprimierungshardware muss bitgenau sein. Das heißt, die Hardware muss Ergebnisse zurückgeben, die mit den Ergebnissen identisch sind, die vom in diesem Dokument beschriebenen Decoder zurückgegeben werden.
 
-## <a name="bc7-implementation"></a>Bzw bc7-Implementierung
+## <a name="bc7-implementation"></a>BC7-Implementierung
 
-Eine bzw bc7-Implementierung kann einen von 8 Modi angeben, wobei der Modus im unwichtigsten Bit des 16-Byte-Blocks (128 Bit) angegeben wird. Der-Modus wird von 0 (null) oder mehr Bits mit einem Wert von 0 (null) gefolgt von einem 1 codiert.
+Eine BC7-Implementierung kann einen von acht Modi angeben, bei dem der Modus im am wenigsten signifikanten Bit des 16-Byte-Blocks (128 Bit) angegeben ist. Der Modus wird durch null oder mehr Bits mit dem Wert 0 gefolgt von 1 codiert.
 
-Ein bzw bc7-Block kann mehrere Endpunkt Paare enthalten. Im Rahmen dieser Dokumentation kann der Satz von Indizes, die einem Endpunkt paar entsprechen, als "Teilmenge" bezeichnet werden. Außerdem wird die Endpunkt Darstellung in einigen Block Modi in einem Formular codiert, das für die Zwecke dieser Dokumentation wieder als "rbgp" bezeichnet wird. Hierbei steht das "P"-Bit für die Farbkomponenten des Endpunkts für ein gemeinsam genutztes Bit. Wenn die Endpunkt Darstellung für das Format z. b. "RGB 5.5.5.1" ist, wird der Endpunkt als RGB 6.6.6-Wert interpretiert, wobei der Status des P-Bits das unwichtigste Bit der einzelnen Komponenten definiert. Ebenso gilt für Quelldaten mit einem Alphakanal, wenn die Darstellung im Format "rgbap 5.5.5.5.1" ist, der Endpunkt als RGBA 6.6.6.6. Abhängig vom Block Modus können Sie das gemeinsame, unwichtigste Bit entweder für beide Endpunkte einer Teilmenge einzeln (2 p-Bits pro Teilmenge) oder für die gemeinsame Nutzung zwischen Endpunkten einer Teilmenge (1 p-Bit pro Teilmenge) angeben.
+Ein BC7-Block kann mehrere Endpunktpaare enthalten. Im Rahmen dieser Dokumentation kann der Satz von Indizes, die einem Endpunktpaar entsprechen, als "Teilmenge" bezeichnet werden. Außerdem wird die Endpunktdarstellung in einigen Blockmodi in einer Form codiert, die – auch hier im Rahmen dieser Dokumentation – als "RBGP" bezeichnet wird, wobei das "P"-Bit ein gemeinsam genutztes, am wenigsten signifikantes Bit für die Farbkomponenten des Endpunkts darstellt. Wenn die Endpunktdarstellung für das Format beispielsweise "RGB 5.5.5.1" ist, wird der Endpunkt als RGB 6.6.6-Wert interpretiert, wobei der Zustand des P-Bit das am wenigsten signifikante Bit jeder Komponente definiert. Wenn für Quelldaten mit einem Alphakanal die Darstellung für das Format "RGBAP 5.5.5.5.1" ist, wird der Endpunkt als RGBA 6.6.6.6 interpretiert. Abhängig vom Blockmodus können Sie das am wenigsten signifikante Bit für beide Endpunkte einer Teilmenge einzeln (2 P-Bits pro Teilmenge) oder für Endpunkte einer Teilmenge (1 P-Bit pro Teilmenge) angeben.
 
-Für bzw bc7-Blöcke, die die Alpha Komponente nicht explizit codieren, besteht ein bzw bc7-Block aus modusbits, Partitions Bits, komprimierten Endpunkten, komprimierten Indizes und einem optionalen P-Bit. In diesen Blöcken verfügen die Endpunkte über eine nur-RGB-Darstellung, und die Alpha Komponente wird als 1,0 für alle texeln in den Quelldaten decodiert.
+Bei BC7-Blöcken, die die Alphakomponente nicht explizit codieren, besteht ein BC7-Block aus Modusbits, Partitionsbits, komprimierten Endpunkten, komprimierten Indizes und einem optionalen P-Bit. In diesen Blöcken verfügen die Endpunkte über eine ausschließliche RGB-Darstellung, und die Alphakomponente wird für alle Texel in den Quelldaten als 1.0 decodiert.
 
-Für bzw bc7-Blöcke mit kombinierten Farben und Alpha Komponenten besteht ein Block aus modusbits, komprimierten Endpunkten, komprimierten Indizes und optionalen Partitions Bits und einem P-Bit. In diesen Blöcken werden die Endpunkt Farben im RGBA-Format ausgedrückt, und Alpha Komponentenwerte werden zusammen mit den Farbkomponenten Werten interpoliert.
+Bei BC7-Blöcken mit kombinierten Farb- und Alphakomponenten besteht ein Block aus Modusbits, komprimierten Endpunkten, komprimierten Indizes und optionalen Partitionsbits und einem P-Bit. In diesen Blöcken werden die Endpunktfarben im RGBA-Format ausgedrückt, und Alphakomponentenwerte werden zusammen mit den Farbkomponentenwerten interpoliert.
 
-Für bzw bc7-Blöcke mit separaten Farb-und Alpha Komponenten besteht ein-Block aus modusbits, Rotations Bits, komprimierten Endpunkten, komprimierten Indizes und einem optionalen indexselektor-Bit. Diese Blöcke verfügen über einen effektiven RGB \[ -Vektor R, G, B \] und einen skalaren Alphakanal, der \[ \] separat codiert ist.
+Bei BC7-Blöcken mit separaten Farb- und Alphakomponenten besteht ein Block aus Modusbits, Drehungsbits, komprimierten Endpunkten, komprimierten Indizes und einem optionalen Indexauswahlbit. Diese Blöcke verfügen über einen effektiven \[ RGB-Vektor R, G, B und \] einen skalaren Alphakanal \[ A separat \] codiert.
 
 In der folgenden Tabelle sind die Komponenten der einzelnen Blocktypen aufgeführt.
 
 
 
-| Bzw bc7-Block enthält...     | modusbits | Drehungs Bits | Index Auswahl Bit | Partitions Bits | komprimierte Endpunkte | P-Bit    | komprimierte Indizes |
+| BC7-Block enthält...     | Modusbits | Drehungsbits | Indexauswahlbit | Partitionsbits | Komprimierte Endpunkte | P-Bit    | Komprimierte Indizes |
 |---------------------------|-----------|---------------|--------------------|----------------|----------------------|----------|--------------------|
-| nur Farbkomponenten     | required  | –           | –                | required       | required             | Optional | required           |
-| Farbe + Alpha, kombiniert    | required  | –           | –                | Optional       | required             | Optional | required           |
-| Farbe und Alpha getrennt | required  | required      | Optional           | –            | required             | –      | required           |
+| Nur Farbkomponenten     | Erforderlich  | Nicht zutreffend           | Nicht zutreffend                | Erforderlich       | Erforderlich             | optional | Erforderlich           |
+| Color + Alpha kombiniert    | Erforderlich  | Nicht zutreffend           | Nicht zutreffend                | optional       | Erforderlich             | optional | Erforderlich           |
+| Farbe und Alpha getrennt | Erforderlich  | Erforderlich      | optional           | Nicht zutreffend            | Erforderlich             | Nicht zutreffend      | Erforderlich           |
 
 
 
- 
+ 
 
-Bzw bc7 definiert eine Palette von Farben in einer ungefähren Linie zwischen zwei Endpunkten. Der Mode-Wert bestimmt die Anzahl der interinterpolenden Endpunkt-Paare pro Block. Bzw bc7 speichert einen Palettenindex pro Texel.
+BC7 definiert eine Palette von Farben auf einer ungefähren Linie zwischen zwei Endpunkten. Der Moduswert bestimmt die Anzahl der interpolierenden Endpunktpaare pro Block. BC7 speichert einen Palettenindex pro Texel.
 
-Für jede Teilmenge von Indizes, die einem Paar von Endpunkten entspricht, korrigiert der Encoder den Zustand der komprimierten Indexdaten für diese Teilmenge. Dies geschieht, indem eine Endpunkt Reihenfolge ausgewählt wird, die es dem Index für den festgelegten "Fixup"-Index ermöglicht, das signifikanteste Bit auf 0 festzulegen, und das dann verworfen werden kann, wobei ein Bit pro Teilmenge gespeichert wird. Bei Block Modi mit nur einer einzelnen Teilmenge ist der fixupindex immer Index 0.
+Für jede Teilmenge von Indizes, die einem Endpunktpaar entspricht, korrigiert der Encoder den Zustand eines Bits der komprimierten Indexdaten für diese Teilmenge. Wählen Sie dazu eine Endpunkt reihenfolge aus, die es dem Index für den festgelegten "Fix up"-Index ermöglicht, das wichtigste Bit auf 0 zu setzen, und die dann verworfen werden kann, wodurch ein Bit pro Teilmenge spart. Bei Blockmodi mit nur einer Teilmenge ist der Fix up-Index immer Index 0.
 
-## <a name="decoding-the-bc7-format"></a>Decodieren des bzw bc7-Formats
+## <a name="decoding-the-bc7-format"></a>Decodieren des BC7-Formats
 
-Der folgende Pseudo Code beschreibt die Schritte zum Dekomprimieren des Pixels bei (x, y), wenn der 16-Byte-bzw bc7-Block angegeben wird.
+Der folgende Pseudocode beschreibt die Schritte zum Dekomprimieren des Pixels bei (x,y) unter 16 Byte BC7-Block.
 
 ``` syntax
 decompress_bc7(x, y, block)
@@ -125,7 +125,7 @@ decompress_bc7(x, y, block)
 }
 ```
 
-Der folgende Pseudo Code beschreibt die Schritte zum vollständigen Decodieren der Endpunktfarbe und der Alpha Komponenten für jede Teilmenge, wenn ein 16-Byte-bzw bc7-Block angegeben wird.
+Der folgende Pseudocode beschreibt die Schritte zum vollständigen Decodieren von Endpunktfarbe und Alphakomponenten für jede Teilmenge mit einem BC7-Block mit 16 Byte.
 
 ``` syntax
 fully_decode_endpoints(endpoint_array, mode, block)
@@ -185,7 +185,7 @@ fully_decode_endpoints(endpoint_array, mode, block)
 }
 ```
 
-Verwenden Sie den folgenden Algorithmus, um jede interpoliert Komponente für jede Teilmenge zu generieren: Let "c" ist die Komponente, die generiert werden soll. "E0" ist die Komponente von Endpunkt 0 der Teilmenge. und lassen Sie "E1" als Komponente von Endpunkt 1 der Teilmenge fest.
+Um jede interpolierte Komponente für jede Teilmenge zu generieren, verwenden Sie den folgenden Algorithmus: "c" soll die zu generierende Komponente sein. "e0" ist die Komponente von Endpunkt 0 der Teilmenge; und lassen Sie "e1" die Komponente von Endpunkt 1 der Teilmenge sein.
 
 ``` syntax
 UINT16 aWeight2[] = {0, 21, 43, 64};
@@ -203,7 +203,7 @@ UINT8 interpolate(UINT8 e0, UINT8 e1, UINT8 index, UINT8 indexprecision)
 }
 ```
 
-Der folgende Pseudo Code veranschaulicht, wie Indizes und Bitwerte für die Farb-und Alpha Komponenten extrahiert werden. Blöcke mit separater Farbe und Alpha haben ebenfalls zwei Sätze von Indexdaten: eine für den Vektor Kanal und eine für den skalaren Kanal. Für Modus 4 sind diese Indizes von unterschiedlichen breiten (2 oder 3 Bits), und es gibt eine Einbit-Auswahl, die angibt, ob der Vektor oder die skalaren Daten die 3-Bit-Indizes verwenden. (Das Extrahieren der Alpha Bitzahl ähnelt dem Extrahieren der farbbit-Anzahl, aber mit umgekehrtem Verhalten auf der Grundlage des **idxmode** -Bits.)
+Der folgende Pseudocode veranschaulicht, wie Indizes und Bitanzahlen für Farb- und Alphakomponenten extrahiert werden. Blöcke mit separater Farbe und Alpha verfügen ebenfalls über zwei Sätze von Indexdaten: einen für den Vektorkanal und einen für den Skalarkanal. Für Modus 4 haben diese Indizes unterschiedliche Breiten (2 oder 3 Bits), und es gibt einen Ein-Bit-Selektor, der angibt, ob die Vektor- oder Skalardaten die 3-Bit-Indizes verwenden. (Das Extrahieren der Alphabitanzahl ähnelt dem Extrahieren der Anzahl von Farbbits, jedoch mit umgekehrten Verhalten, das auf dem **idxMode-Bit** basiert.)
 
 ``` syntax
 bitcount get_color_bitcount(block, mode)
@@ -230,9 +230,9 @@ bitcount get_color_bitcount(block, mode)
 
 <dl> <dt>
 
-[Textur Block Komprimierung in Direct3D 11](texture-block-compression-in-direct3d-11.md)
+[Texturblockkomprimierung in Direct3D 11](texture-block-compression-in-direct3d-11.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

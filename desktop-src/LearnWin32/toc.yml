@@ -5,15 +5,15 @@
       items:
         - name: Übersicht
           href: introduction-to-windows-programming-in-c--.md
-        - name: Vorbereiten der Entwicklungsumgebung
+        - name: Vorbereiten ihrer Entwicklungsumgebung
           href: prepare-your-development-environment.md
-        - name: Windows-Codierungs Konventionen
+        - name: Windows Codierungskonventionen
           href: windows-coding-conventions.md
         - name: Arbeiten mit Zeichenfolgen
           href: working-with-strings.md
         - name: Was ist ein Fenster?
           href: what-is-a-window-.md
-        - name: 'WinMain: der Einstiegspunkt der Anwendung'
+        - name: 'WinMain: Der Einstiegspunkt für die Anwendung'
           href: winmain--the-application-entry-point.md
     - name: Modul 1. Ihr erstes Windows-Programm
       items:
@@ -21,9 +21,9 @@
           href: your-first-windows-program.md
         - name: Erstellen eines Fensters
           href: creating-a-window.md
-        - name: Fenster Meldungen
+        - name: Fenstermeldungen
           href: window-messages.md
-        - name: Schreiben der Fenster Prozedur
+        - name: Schreiben der Fensterprozedur
           href: writing-the-window-procedure.md
         - name: Zeichnen des Fensters
           href: painting-the-window.md
@@ -31,39 +31,39 @@
           href: closing-the-window.md
         - name: Managing Application State (Verwalten eines Anwendungszustands)
           href: managing-application-state-.md
-    - name: Modul 2. Verwenden von com in Ihrem Windows-Programm
+    - name: Modul 2. Verwenden von COM in Ihrem Windows-Programm
       items:
         - name: Übersicht
           href: module-2--using-com-in-your-windows-program.md
         - name: Was ist eine COM-Schnittstelle?
           href: what-is-a-com-interface-.md
-        - name: Initialisieren der com-Bibliothek
+        - name: Initialisieren der COM-Bibliothek
           href: initializing-the-com-library.md
-        - name: Fehler Codes in com
+        - name: Fehlercodes in COM
           href: error-codes-in-com.md
-        - name: Erstellen eines Objekts in com
+        - name: Erstellen eines Objekts in COM
           href: creating-an-object-in-com.md
-        - name: 'Beispiel: das Dialog Feld "Öffnen"'
+        - name: 'Beispiel: Das Dialogfeld "Öffnen"'
           href: example--the-open-dialog-box.md
         - name: Verwalten der Lebensdauer eines Objekts
           href: managing-the-lifetime-of-an-object.md
-        - name: Anfordern eines Objekts für eine Schnittstelle
+        - name: Fragen eines Objekts nach einer Schnittstelle
           href: asking-an-object-for-an-interface.md
-        - name: Speicher Belegung in com
+        - name: Speicherbelegung in COM
           href: memory-allocation-in-com.md
-        - name: COM-Codierungs Methoden
+        - name: COM-Codierungsmethoden
           href: com-coding-practices.md
-        - name: Fehlerbehandlung in com
+        - name: Fehlerbehandlung in COM
           href: error-handling-in-com.md
-    - name: Modul 3. Windows-Grafiken
+    - name: Modul 3. Windows Graphics
       items:
         - name: Übersicht
           href: module-3---windows-graphics.md
-        - name: Übersicht über die Windows-Grafik Architektur
+        - name: Übersicht über die Windows-Grafikarchitektur
           href: overview-of-the-windows-graphics-architecture.md
-        - name: Der Desktopfenster-Manager
+        - name: Die Desktopfenster-Manager
           href: the-desktop-window-manager.md
-        - name: Modus für beibehaltene Modus und unmittelbarer
+        - name: Beibehaltener Modus im Vergleich zum unmittelbaren Modus
           href: retained-mode-versus-immediate-mode.md
         - name: Ihr erstes Direct2D-Programm
           href: your-first-direct2d-program.md
@@ -71,13 +71,13 @@
           href: render-targets--devices--and-resources.md
         - name: Zeichnen mit Direct2D
           href: drawing-with-direct2d.md
-        - name: DPI-und Device-Independent Pixel
+        - name: DPI und Device-Independent Pixel
           href: dpi-and-device-independent-pixels.md
-        - name: Verwenden von Color in Direct2D
+        - name: Verwenden von Farben in Direct2D
           href: using-color-in-direct2d.md
         - name: Anwenden von Transformationen in Direct2D
           href: applying-transforms-in-direct2d.md
-        - name: 'Anhang: Matrix Transformationen'
+        - name: 'Anhang: Matrixtransformationen'
           href: appendix--matrix-transforms.md
     - name: Modul 4. Benutzereingaben
       items:
@@ -85,35 +85,35 @@
           href: module-4--user-input.md
         - name: Mauseingabe
           href: mouse-input.md
-        - name: Antworten auf Mausklicks
+        - name: Reagieren auf Mausklicks
           href: mouse-clicks.md
         - name: Mausbewegung
           href: mouse-movement.md
-        - name: Verschiedene Maus Vorgänge
+        - name: Verschiedene Mausvorgänge
           href: other-mouse-operations.md
-        - name: Tastatureingabe
+        - name: Tastatureingaben
           href: keyboard-input.md
-        - name: Zugriffstasten Tabellen
+        - name: Zugriffstastentabellen
           href: accelerator-tables.md
-        - name: Festlegen des Cursor Bilds
+        - name: Festlegen des Cursorbilds
           href: setting-the-cursor-image.md
-        - name: 'Benutzereingabe: erweitertes Beispiel'
+        - name: 'Benutzereingabe: Erweitertes Beispiel'
           href: user-input--extended-example.md
-    - name: 'Einstieg in Win32: Beispiel Code'
+    - name: 'Erste Schritte mit Win32: Beispielcode'
       items:
         - name: Übersicht
           href: learn-to-program-for-windows--sample-code.md
-        - name: Windows Hallo Welt-Beispiel
+        - name: Windows Hello World Sample
           href: windows-hello-world-sample.md
-        - name: Basewindow-Beispiel
+        - name: BaseWindow-Beispiel
           href: basewindow-sample.md
-        - name: Dialog Feld Öffnen (Beispiel)
+        - name: Beispiel zum Öffnen des Dialogfelds
           href: open-dialog-box-sample.md
-        - name: Direct2D Circle-Beispiel
+        - name: Direct2D-Kreisbeispiel
           href: direct2d-circle-sample.md
-        - name: Direct2D Uhr-Beispiel
+        - name: Beispiel für Direct2D-Uhr
           href: direct2d-clock-sample.md
-        - name: Beispiel zum Zeichnen eines Kreises
+        - name: Zeichnen eines Kreisbeispiels
           href: draw-circle-sample.md
-        - name: Einfaches Zeichnungs Beispiel
+        - name: Einfaches Zeichnungsbeispiel
           href: simple-drawing-sample.md

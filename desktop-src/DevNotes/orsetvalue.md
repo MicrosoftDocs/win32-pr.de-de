@@ -1,7 +1,7 @@
 ---
-description: Legt die Daten für den Wert eines angegebenen Registrierungsschlüssels in einer Offline Registrierungs Struktur fest.
+description: Legt die Daten für den Wert eines angegebenen Registrierungsschlüssels in einer Offlineregistrierungsstruktur fest.
 ms.assetid: 62fd3a3a-6ce3-4313-b0e7-37ceea0ce302
-title: Orsetvalue-Funktion (offreg. h)
+title: ORSetValue-Funktion (Offreg.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Offreg.dll
-ms.openlocfilehash: 3b11e9cb9a8425989e4ee513e0cfc18d2619ec4b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ae677a5dff2bcb7189b17c7d1477c95df5a5ae32b0065104b92e426e364d775d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749640"
 ---
-# <a name="orsetvalue-function"></a>Orsetvalue-Funktion
+# <a name="orsetvalue-function"></a>ORSetValue-Funktion
 
-Legt die Daten für den Wert eines angegebenen Registrierungsschlüssels in einer Offline Registrierungs Struktur fest.
+Legt die Daten für den Wert eines angegebenen Registrierungsschlüssels in einer Offlineregistrierungsstruktur fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,58 +43,58 @@ DWORD ORSetValue(
 
 <dl> <dt>
 
-*Handle* \[ in\]
+*Handle* \[ In\]
 </dt> <dd>
 
-Ein Handle für einen geöffneten Registrierungsschlüssel in einer Offline Registrierungs Struktur.
+Ein Handle für einen geöffneten Registrierungsschlüssel in einer Offlineregistrierungsstruktur.
 
 </dd> <dt>
 
-*lpvaluename* \[ in, optional\]
+*lpValueName* \[ in, optional\]
 </dt> <dd>
 
-Der Name des festzulegenden Werts. Wenn ein Wert mit diesem Namen im Schlüssel nicht bereits vorhanden ist, fügt die Funktion ihn dem Schlüssel hinzu.
+Der Name des festzulegenden Werts. Wenn ein Wert mit diesem Namen nicht bereits im Schlüssel vorhanden ist, fügt die Funktion ihn dem Schlüssel hinzu.
 
-Wenn *lpvaluename* **null** oder eine leere Zeichenfolge ("") ist, legt die Funktion den Typ und die Daten für den unbenannten oder Standardwert des Schlüssels fest.
+Wenn *lpValueName* **NULL** oder eine leere Zeichenfolge "" ist, legt die Funktion den Typ und die Daten für den unbenannten oder Standardwert des Schlüssels fest.
 
-Weitere Informationen finden Sie unter [Größenbeschränkungen für das Registrierungs Element](../sysinfo/registry-element-size-limits.md).
+Weitere Informationen finden Sie unter [Größenbeschränkungen für Registrierungselemente.](../sysinfo/registry-element-size-limits.md)
 
-Registrierungsschlüssel haben keine Standardwerte, Sie können jedoch einen unbenannten Wert aufweisen, der einen beliebigen Typ aufweisen kann.
+Registrierungsschlüssel haben keine Standardwerte, aber sie können einen unbenannten Wert aufweisen, der einen beliebigen Typ aufweisen kann.
 
 </dd> <dt>
 
-*dwType* \[ in\]
+*dwType* \[ In\]
 </dt> <dd>
 
-Der Typ der Daten, auf die durch den *lpdata* -Parameter verwiesen wird. Eine Liste der möglichen Typen finden Sie unter [Registrierungs Werttypen](../sysinfo/registry-value-types.md).
+Der Datentyp, auf den der *lpData-Parameter* zeigt. Eine Liste der möglichen Typen finden Sie unter [Registrierungswerttypen.](../sysinfo/registry-value-types.md)
 
 </dd> <dt>
 
-*lpdata* \[ in, optional\]
+*lpData* \[ in, optional\]
 </dt> <dd>
 
 Die zu speichernden Daten.
 
-Bei Zeichen folgen basierten Typen, z. b. reg \_ SZ, muss die Zeichenfolge mit Null enden. Für den reg \_ \_ MultiSZ-Datentyp muss die Zeichenfolge mit zwei NULL-Zeichen beendet werden.
+Bei zeichenfolgenbasierten Typen, z. B. REG \_ SZ, muss die Zeichenfolge NULL-terminiert sein. Für den REG \_ MULTI \_ SZ-Datentyp muss die Zeichenfolge mit zwei NULL-Zeichen beendet werden.
 
 </dd> <dt>
 
-*cbData* \[ in\]
+*cbData* \[ In\]
 </dt> <dd>
 
-Die Größe der Informationen, auf die durch den *lpdata* -Parameter verwiesen wird (in Bytes). Wenn die Daten vom Typ reg \_ SZ, reg \_ Expand \_ SZ oder reg \_ \_ MultiSZ sind, müssen *cbData* die Größe des abschließenden NULL-Zeichens oder der Zeichen enthalten.
+Die Größe der Informationen, auf die der *lpData-Parameter* zeigt, in Bytes. Wenn die Daten vom Typ REG \_ SZ, REG \_ EXPAND SZ oder REG MULTI SZ \_ \_ \_ sind, muss *cbData* die Größe des abschließenden NULL-Zeichens oder der abschließenden Zeichen enthalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WinError. h definiert ist. Sie können die [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) -Funktion mit dem \_ Flag Format Message \_ from System verwenden \_ , um eine generische Beschreibung des Fehlers zu erhalten.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in Winerror.h definiert ist. Sie können die [FormatMessage-Funktion](/windows/win32/api/winbase/nf-winbase-formatmessage) mit dem \_ FORMAT MESSAGE FROM \_ \_ SYSTEM-Flag verwenden, um eine generische Beschreibung des Fehlers abzurufen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wert Größen werden durch den verfügbaren Arbeitsspeicher begrenzt. Lange Werte (mehr als 2048 Bytes) müssen als Dateien mit den Dateinamen gespeichert werden, die in der Registrierung gespeichert sind. Dadurch kann die Registrierung effizient durchgeführt werden. Anwendungs Elemente wie Symbole, Bitmaps und ausführbare Dateien sollten als Dateien gespeichert und nicht in der Registrierung abgelegt werden.
+Wertgrößen sind durch den verfügbaren Arbeitsspeicher beschränkt. Lange Werte (mehr als 2.048 Bytes) sollten als Dateien mit den Dateinamen gespeichert werden, die in der Registrierung gespeichert sind. Dies hilft der Registrierung, effizient zu arbeiten. Anwendungselemente wie Symbole, Bitmaps und ausführbare Dateien sollten als Dateien gespeichert und nicht in der Registrierung platziert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,20 +102,20 @@ Wert Größen werden durch den verfügbaren Arbeitsspeicher begrenzt. Lange Wert
 
 | Anforderung | Wert |
 |----------------------------|---------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | Windows-offline Registrierungs Bibliothek, Version 1,0 oder höher<br/>                      |
-| Header<br/>          | <dl> <dt>Offreg. h</dt> </dl>   |
+| Verteilbare Komponente<br/> | Windows Offline registry library version 1.0 or later (Offlineregistrierungsbibliothek, Version 1.0 oder höher)<br/>                      |
+| Header<br/>          | <dl> <dt>Offreg.h</dt> </dl>   |
 | DLL<br/>             | <dl> <dt>Offreg.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Orkreatekey**](orcreatekey.md)
+[**ORCreateKey**](orcreatekey.md)
 </dt> <dt>
 
-[**Oropenkey**](oropenkey.md)
+[**OROpenKey**](oropenkey.md)
 </dt> </dl>
 
  

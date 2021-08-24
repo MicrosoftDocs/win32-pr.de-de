@@ -1,19 +1,19 @@
 ---
-description: Gibt den Quantisierungsparameter (QP) an, der zum Codieren eines Video Beispiels verwendet wurde.
+description: Gibt den Quantisierungsparameter (QP) an, der zum Codieren eines Videobeispiels verwendet wurde.
 ms.assetid: F7C4FEFC-FEE7-4614-BC90-4F9D5D878F49
-title: MFSampleExtension_VideoEncodeQP-Attribut (mfapi. h)
+title: MFSampleExtension_VideoEncodeQP -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 721f5df00ff24b307daed2ccbcbf61a04b129db2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f86253b29dfa93b3699d5175b5c5ef198b4ab24e862901572caafcc55fd62d1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119777020"
 ---
-# <a name="mfsampleextension_videoencodeqp-attribute"></a>MF Sample Extension- \_ videoencodeqp-Attribut
+# <a name="mfsampleextension_videoencodeqp-attribute"></a>MFSampleExtension \_ VideoEncodeQP-Attribut
 
-Gibt den Quantisierungsparameter (QP) an, der zum Codieren eines Video Beispiels verwendet wurde.
+Gibt den Quantisierungsparameter (QP) an, der zum Codieren eines Videobeispiels verwendet wurde.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,17 +21,17 @@ Gibt den Quantisierungsparameter (QP) an, der zum Codieren eines Video Beispiels
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT64 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT64 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+[**DURCHSCHN.Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der [**H. 264-Video Encoder**](h-264-video-encoder.md) legt dieses Attribut für die generierten Ausgabe Beispiele fest.
+Der [**H.264 Video Encoder legt**](h-264-video-encoder.md) dieses Attribut für die von ihm generierten Ausgabebeispiele fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Der [**H. 264-Video Encoder**](h-264-video-encoder.md) legt dieses Attribut für
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                  |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -49,16 +49,16 @@ Der [**H. 264-Video Encoder**](h-264-video-encoder.md) legt dieses Attribut für
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**H. 264-Video Encoder**](h-264-video-encoder.md)
+[**H.264 Video Encoder**](h-264-video-encoder.md)
 </dt> <dt>
 
-[Beispiel Attribute](sample-attributes.md)
+[Beispielattribute](sample-attributes.md)
 </dt> <dt>
 
-[Medien Beispiele](media-samples.md)
+[Medienbeispiele](media-samples.md)
 </dt> </dl>
 
  

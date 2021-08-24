@@ -1,47 +1,47 @@
 ---
-title: Anpassen von Geschwindigkeit, Volume und Zoom
-description: Anpassen von Geschwindigkeit, Volume und Zoom
+title: Anpassen von Geschwindigkeit, Lautstärke und Zoom
+description: Anpassen von Geschwindigkeit, Lautstärke und Zoom
 ms.assetid: 16cfbf86-911e-4cf3-9640-69fffc09c1ed
 keywords:
-- Mciwndsetspeed-Makro
-- Mciwndgetspeed-Makro
-- Mciwndsetvolume-Makro
-- Mciwndgetvolume-Makro
-- Mciwndsetzoom-Makro
-- Mciwndgetzoom-Makro
+- MCIWndSetSpeed-Makro
+- MCIWndGetSpeed-Makro
+- MCIWndSetVolume-Makro
+- MCIWndGetVolume-Makro
+- MCIWndSetZoom-Makro
+- MCIWndGetZoom-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f02b1e14a5153e279e3cfdf6989beade31cf6f3e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fbed63549683a92d457b9b91ac967ff9098235bf8d9cbd60b1ea332624886d9a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119808570"
 ---
-# <a name="adjusting-speed-volume-and-zoom"></a>Anpassen von Geschwindigkeit, Volume und Zoom
+# <a name="adjusting-speed-volume-and-zoom"></a>Anpassen von Geschwindigkeit, Lautstärke und Zoom
 
-Die Makros "Geschwindigkeit", "Volume" und "Zoom" stellen die Funktionalität der Befehle " **View**", " **Volume**" und " **Speed** " im mciwnd-Menü bereit. Die in diesem Abschnitt beschriebenen Makros werden im Allgemeinen mit Videos und anderen Geräten verwendet, die während der Wiedergabe Bilder anzeigen.
+Die Makros für Geschwindigkeit, Lautstärke und Zoom stellen die Funktionen der Befehle **Ansicht,** **Volume** und **Geschwindigkeit** im Menü MCIWnd zur Verfügung. Die in diesem Abschnitt beschriebenen Makros werden im Allgemeinen mit Videos und anderen Geräten verwendet, die Bilder während der Wiedergabe anzeigen.
 
-Einige Geräte unterstützen mehrere Wiedergabe Geschwindigkeitsänderungen. Sie können die Wiedergabegeschwindigkeit für diese Geräte mit dem [**mciwndsetspeed**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetspeed) -Makro festlegen. Dieses Makro definiert die Wiedergabegeschwindigkeit als 1000. Höhere Werte weisen auf schnellere Geschwindigkeiten hin. Niedrigere Werte weisen auf eine langsamere Geschwindigkeit hin.
+Einige Geräte unterstützen mehrere Änderungen der Wiedergabegeschwindigkeit. Sie können die Wiedergabegeschwindigkeit für diese Geräte mithilfe des [**Makros MCIWndSetSpeed**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetspeed) festlegen. Dieses Makro definiert die Wiedergabegeschwindigkeit als 1000. Höhere Werte weisen auf schnellere Geschwindigkeiten hin. Niedrigere Werte weisen auf langsamere Geschwindigkeiten hin.
 
-Sie können die aktuelle Wiedergabegeschwindigkeit abrufen, indem Sie das [**mciwndgetspeed**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetspeed) -Makro verwenden. Dieses Makro verwendet dieselben Werte und denselben Bereich wie die von **mciwndsetspeed** verwendeten Werte.
+Sie können die aktuelle Wiedergabegeschwindigkeit mithilfe des [**MCIWndGetSpeed-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetspeed) abrufen. Dieses Makro verwendet die gleichen Werte und den gleichen Bereich wie die von **MCIWndSetSpeed** verwendeten Werte.
 
-Einige Geräte unterstützen volumeänderungen. Sie können das Volume anpassen oder festlegen, indem Sie das [**mciwndsetvolume**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetvolume) -Makro verwenden. Dieses Makro definiert die normale Volumeebene als 1000. Höhere Werte weisen auf lauter Volumes hin. Niedrigere Werte weisen auf ruhigere Volumes hin.
+Einige Geräte unterstützen Volumeänderungen. Sie können das Volume mithilfe des [**Makros MCIWndSetVolume**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetvolume) anpassen oder festlegen. Dieses Makro definiert die normale Volumeebene als 1000. Höhere Werte geben lautere Volumes an. Niedrigere Werte geben stillere Volumes an.
 
-Sie können die aktuelle Volumeebene abrufen, indem Sie das [**mciwndgetvolume**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetvolume) -Makro verwenden. Dieses Makro verwendet dieselben numerischen Werte und denselben Bereich wie die von **mciwndsetvolume** verwendeten Werte.
+Sie können die aktuelle Volumeebene mithilfe des [**Makros MCIWndGetVolume**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetvolume) abrufen. Dieses Makro verwendet die gleichen numerischen Werte und den gleichen Bereich wie die von **MCIWndSetVolume.**
 
-Bei Geräten, die ein Wiedergabe Fenster verwenden, unterstützt mciwnd eine Zoomfunktion, mit der die Größe des Wiedergabe Bilds festgelegt wird. Sie können die Wiedergabe Bildgröße mit dem [**mciwndsetzoom**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetzoom) -Makro festlegen. Das Makro definiert die Wiedergabe Bildgröße neu, während gleichzeitig ein konstantes Seitenverhältnis für das Bild beibehalten wird. Der Zoomwert wird als Prozentsatz der ursprünglichen Bildgröße definiert. Daher stellt 100 die ursprüngliche Bildgröße dar, 50 gibt an, dass das angezeigte Bild eine halbe Originalgröße hat, und 200, dass das angezeigte Bild doppelt so groß wie die ursprüngliche Größe ist.
+Für Geräte, die ein Wiedergabefenster verwenden, unterstützt MCIWnd eine Zoomfunktion, mit der die Größe des Wiedergabebilds bestimmt wird. Sie können die Größe des Wiedergabebilds mithilfe des [**Makros MCIWndSetZoom**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetzoom) festlegen. Das Makro definiert die Größe des Wiedergabebilds neu, während gleichzeitig ein konstantes Seitenverhältnis für das Bild beibehalten wird. Der Zoomwert wird als Prozentsatz der ursprünglichen Bildgröße definiert. Daher stellt 100 die ursprüngliche Bildgröße dar, 50 gibt an, dass das angezeigte Bild halb so groß wie die ursprüngliche Größe ist, und 200 gibt an, dass das dargestellte Bild doppelt so groß ist wie das originale Bild.
 
-Sie können den aktuellen Zoomwert abrufen, indem Sie das [**mciwndgetzoom**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetzoom) -Makro verwenden. Dieses Makro verwendet dieselben Werte und denselben Bereich wie die von **mciwndsetzoom** verwendeten Werte.
+Sie können den aktuellen Zoomwert mithilfe des [**MCIWndGetZoom-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetzoom) abrufen. Dieses Makro verwendet die gleichen Werte und den gleichen Bereich wie die von **MCIWndSetZoom** verwendeten Werte.
 
 > [!Note]  
-> Die standardmäßigen MCI-CD-Audiodaten und Waveform-Audiotreiber unterstützen keine Volumen-oder Geschwindigkeitsänderungen.
+> Die standardmäßigen MCI-CD-Audio- und Waveform-Audiotreiber unterstützen keine Volume- oder Geschwindigkeitsänderungen.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

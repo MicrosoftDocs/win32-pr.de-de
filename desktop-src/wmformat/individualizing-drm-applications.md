@@ -3,55 +3,55 @@ title: Individualisieren von DRM-Anwendungen
 description: Individualisieren von DRM-Anwendungen
 ms.assetid: 8d87c663-bc54-4928-9eee-d09c358e61f8
 keywords:
-- Windows Media-Format-SDK, Individualisieren von DRM-Anwendungen
-- Windows Media-Format-SDK, Anwendungs Individualisierung
+- Windows Medienformat-SDK, Individualisieren von DRM-Anwendungen
+- Windows Medienformat-SDK, Individualisierung der Anwendung
 - Advanced Systems Format (ASF), Individualisieren von DRM-Anwendungen
 - ASF (Advanced Systems Format), Individualisieren von DRM-Anwendungen
-- Advanced Systems Format (ASF), Anwendungs Individualisierung
-- ASF (Advanced Systems Format), Anwendungs Individualisierung
-- Digital Rights Management (DRM), Individual Anwendungen
-- DRM (Digital Rights Management), Individual Anwendungen
-- Digital Rights Management (DRM), Anwendungs Individualisierung
-- DRM (Digital Rights Management), Anwendungs Individualisierung
-- Anwendungs Individualisierung
+- Advanced Systems Format (ASF), Individualisieren von Anwendungen
+- ASF (Advanced Systems Format), Individualisieren von Anwendungen
+- Digital Rights Management (DRM), Individualisieren von Anwendungen
+- DRM (Digital Rights Management), Individualisieren von Anwendungen
+- Digital Rights Management (DRM), Individualisierung von Anwendungen
+- DRM (Digital Rights Management), Individualisierung von Anwendungen
+- Individualisierung der Anwendung
 - Individualisieren von DRM-Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 50c3fc0166332c52e39fc0882238fa9009aa0cc1
-ms.sourcegitcommit: b04e152a7f51618fc174ffa872654623fe088db2
+ms.openlocfilehash: 0c57b6f884e2304508243180cc536899f991b1baab6f7f540f04f12fb805d6f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "103948502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119809020"
 ---
 # <a name="individualizing-drm-applications"></a>Individualisieren von DRM-Anwendungen
 
-Um die Sicherheit zu erhöhen, kann die DRM-Komponente der Anwendungen *individuell individualisiert* werden. Eine individualisierte Anwendung ist eine Anwendung, die ein Upgrade auf die DRM-Komponenten erhalten hat, die Sie von allen anderen Kopien der gleichen Anwendung unterscheiden. Inhalts Besitzer können verlangen, dass Ihre geschützten Dateien nur in einer Anwendung wiedergegeben werden, die individuell ist.
+Um die Sicherheit zu erhöhen, kann die DRM-Komponente von Anwendungen *individualisiert* werden. Eine individualisierte Anwendung ist eine Anwendung, die ein Upgrade auf ihre DRM-Komponenten erhalten hat, die sie von allen anderen Kopien derselben Anwendung unterscheidet. Inhaltsbesitzer können verlangen, dass ihre geschützten Dateien nur in einer Anwendung wiedergegeben werden, die individualisiert wurde.
 
-Der Individualisierungsprozess wird gestartet, wenn die Anwendung den Microsoft-Individualisierungs Dienst kontaktiert, der dann ein Sicherheits Upgrade auf dem Computer des Benutzers installiert. Da der Individualisierungs Dienst Informationen vom Benutzer verarbeitet, müssen Sie die Microsoft-Datenschutzrichtlinie anzeigen oder einen Link zu dieser Seite auf der Microsoft-Website angeben: <https://privacy.microsoft.com/privacystatement> .
+Der Individualisierungsprozess wird gestartet, wenn die Anwendung den Microsoft Individualization Service kontaktiert, der dann ein Sicherheitsupgrade auf dem Computer des Benutzers installiert. Da der Individualisierungsdienst Informationen des Benutzers verarbeitet, müssen Sie die Microsoft-Datenschutzrichtlinie anzeigen oder einen Link zu dieser Seite auf der Microsoft-Website bereitstellen: <https://privacy.microsoft.com/privacystatement> .
 
-Die Individualisierung kann auf unterschiedliche Weise durchgeführt werden. So kann z. b. eine Individualisierung erfolgen, wenn ein Benutzer eine geschützte Datei spielt. Die Lizenz Anforderung wird an den [*Windows Media License Service*](wmformat-glossary.md)gesendet, der das Zertifikat der Anwendung überprüft, die die [*Lizenz*](wmformat-glossary.md)anfordert. Wenn die DRM-Komponente der Anwendung nicht individualisiert wurde, lehnt der Windows Media License Service die Lizenz ab, da es sich hierbei um die Richtlinie von Windows Media License Service handelt, die nur für individualisierte Spieler Lizenzen ausgibt. Die Anwendung kann dann den Benutzer benachrichtigen, dass ein Upgrade der Anwendung ausgeführt werden muss. Wenn der Benutzer zustimmt, wird ein Sicherheits Upgrade bereitgestellt, um die DRM-Komponente der Anwendung zu individualisieren.
+Die Individualisierung kann auf unterschiedliche Weise erfolgen. Die Individualisierung kann beispielsweise erfolgen, wenn ein Benutzer eine geschützte Datei wiedergibt. Die Lizenzanforderung wird an den [*Windows Media License Service*](wmformat-glossary.md)gesendet, der das Zertifikat der Anwendung überprüft, die die [*Lizenz*](wmformat-glossary.md)anfordert. Wenn die DRM-Komponente der Anwendung nicht individualisiert wurde, lehnt Windows Media License Service die Lizenz aus, da es die Richtlinie von Windows Media License Service ist, Lizenzen nur für individualisierte Player auszustellen. Die Anwendung kann den Benutzer dann benachrichtigen, dass ein Upgrade der Anwendung durchgeführt werden muss. Wenn der Benutzer zustimmt, wird ein Sicherheitsupgrade bereitgestellt, um die DRM-Komponente der Anwendung zu individualisieren.
 
-Um eine bessere Benutzer Leistung zu erzielen, können Sie den Individualisierungsprozess während des Setups als Sicherheits upgradeschritt initiieren. Anschließend wird der Benutzer nicht unterbrochen, um beim Versuch, eine geschützte Datei wiederzugeben, ein Sicherheits Upgrade zu erhalten. Sie können die Individualisierung auch durch Hinzufügen eines Menübefehls oder einer Schaltfläche zur **Sicherheitsaktualisierung** zur Anwendung aktiv fördern.
+Um die Benutzerfreundlichkeit zu verbessern, können Sie den Individualisierungsprozess während des Setups als Sicherheitsupgradeschritt initiieren. dann wird der Benutzer nicht unterbrochen, um beim Versuch, eine geschützte Datei wiederzuspielen, ein Sicherheitsupgrade zu erhalten. Sie können die Individualisierung auch aktiv fördern, indem Sie der Anwendung einen Menübefehl oder eine Schaltfläche für das **Sicherheitsupgrade** hinzufügen.
 
 > [!Note]  
 > DRM wird von der x64-basierten Version dieses SDK nicht unterstützt.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Features digitaler Rights Management**](digital-rights-management-features.md)
+[**Digital Rights Management Features**](digital-rights-management-features.md)
 </dt> <dt>
 
-[**Aktivieren DRM-Unterstützung**](enabling-drm-support.md)
+[**Aktivieren der DRM-Unterstützung**](enabling-drm-support.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,19 +1,19 @@
 ---
-description: Eine Symbol Datei kann verschiedene Größen desselben Symbol Bilds enthalten.
+description: Eine Symboldatei kann mehrere verschiedene Größen desselben Symbolbilds enthalten.
 ms.assetid: 2d4d3689-a45a-4088-b466-e2b3bf4c8fb5
-title: Ikonsistze-Steuerelement Attribut
+title: IconSize-Steuerelementattribut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cb615a53c589ebc2ad2cafb8a2ff7dec902865e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9f7323d9c3d8dc9bef1bfd4cd275a20dfcadaa3be946bc78fd358a2d6484db53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042145"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119894200"
 ---
-# <a name="iconsize-control-attribute"></a>Ikonsistze-Steuerelement Attribut
+# <a name="iconsize-control-attribute"></a>IconSize-Steuerelementattribut
 
-Eine Symbol Datei kann verschiedene Größen desselben Symbol Bilds enthalten. Diese Bits geben an, welche Größe des Symbol Bilds geladen werden soll. Wenn keines der Bits festgelegt ist, wird das erste Bild geladen. Wenn nur **msidbControlAttributesIconSize16** festgelegt ist, wird das erste 16x16-Bild geladen. Wenn nur **msidbControlAttributesIconSize32** festgelegt ist, wird das erste 32x32-Bild geladen. Wenn **msidbControlAttributesIconSize48** festgelegt ist, wird das erste 48-Bild geladen.
+Eine Symboldatei kann mehrere verschiedene Größen desselben Symbolbilds enthalten. Diese Bits geben an, welche Größe des Symbolbilds geladen werden soll. Wenn keines der Bits festgelegt ist, wird das erste Bild geladen. Wenn nur **msidbControlAttributesIconSize16** festgelegt ist, wird das erste 16x16-Image geladen. Wenn nur **msidbControlAttributesIconSize32** festgelegt ist, wird das erste 32x32-Image geladen. Wenn **msidbControlAttributesIconSize48** festgelegt ist, wird das erste 48x48-Image geladen.
 
 ## <a name="valid-controls"></a>Gültige Steuerelemente
 
@@ -21,7 +21,7 @@ Eine Symbol Datei kann verschiedene Größen desselben Symbol Bilds enthalten. D
 
 [Symbol:](icon-control.md)
 
-[PUSHBUTTON](pushbutton-control.md)
+[Pushbutton](pushbutton-control.md)
 
 [RadioButtonGroup](radiobuttongroup-control.md)
 
@@ -39,13 +39,13 @@ Eine Symbol Datei kann verschiedene Größen desselben Symbol Bilds enthalten. D
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Attribut für ein Steuerelement festzulegen, schließen Sie die ikonsistze-Bits in die Spalte Attribute des Datensatzes des Steuer Elements in der [Steuerelement Tabelle](control-table.md)ein.
+Um dieses Attribut für ein Steuerelement festzulegen, schließen Sie die IconSize-Bits in die Spalte Attribute des Datensatzes des Steuerelements in die [Control-Tabelle ein.](control-table.md)
 
-Wenn das [FixedSize](fixedsize-control-attribute.md) -Bit nicht festgelegt ist, wird das geladene Bild verkleinert oder gestreckt, um es an das Symbol Steuerelement anzupassen. Wenn das [FixedSize](fixedsize-control-attribute.md) -Bit festgelegt ist und das geladene Bild kleiner als das Symbol Steuerelement ist, wird das Bild im-Steuerelement zentriert angezeigt. Wenn das [FixedSize](fixedsize-control-attribute.md) -Bit festgelegt ist und das geladene Bild größer als das Symbol Steuerelement ist, wird das Bild so reduziert, dass es dem Steuerelement entspricht.
+Wenn das [FixedSize-Bit](fixedsize-control-attribute.md) nicht festgelegt ist, wird das geladene Bild verkleinern oder gestreckt, um es an das Symbolsteuerelement anzupassen. Wenn das [FixedSize-Bit](fixedsize-control-attribute.md) festgelegt ist und das geladene Bild kleiner als das Symbolsteuerelement ist, wird das Bild im Steuerelement zentriert angezeigt. Wenn das [FixedSize-Bit](fixedsize-control-attribute.md) festgelegt ist und das geladene Bild größer als das Symbolsteuerelement ist, wird das Bild auf das Steuerelement reduziert.
 
-Siehe [Steuerelement Attribute](control-attributes.md) und das Steuerelement, das Sie unter Steuer [Elementen](controls.md)erstellen müssen.
+Weitere Informationen finden Sie unter [Steuerelementattribute](control-attributes.md) und das Steuerelement, das Sie unter [Steuerelemente](controls.md)erstellen müssen.
 
  
 

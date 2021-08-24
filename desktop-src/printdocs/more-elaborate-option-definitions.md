@@ -1,17 +1,17 @@
 ---
 description: Erfahren Sie mehr über ausführliche Optionsdefinitionen. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: fafced09-97fd-44f6-a41b-e17757c85c38
-title: Weitere ausführliche Optionsdefinitionen
+title: Ausführliche Optionsdefinitionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c8118a94308664b7e5e22f2f21e4a0cc9fe944d
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 8b735b8db7de1965124c184d0ccb9b1e3087102c9d2cb804661ca424e3a49132
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113118455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119776640"
 ---
-# <a name="more-elaborate-option-definitions"></a>Weitere ausführliche Optionsdefinitionen
+# <a name="more-elaborate-option-definitions"></a>Ausführliche Optionsdefinitionen
 
 Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 

@@ -1,7 +1,7 @@
 ---
-description: Initialisiert eine Farbe mit den angegebenen Gleit Komma Werten für Rot, grün, blau und alpha.
+description: Initialisiert eine Farbe mit den angegebenen Rot-, Grün-, Blau- und Alpha-Gleitkommawerten.
 ms.assetid: 61825e33-4150-47cd-97f2-2144434a45e2
-title: D3DCOLOR_COLORVALUE-Makro (D3d9types. h)
+title: D3DCOLOR_COLORVALUE -Makro (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3d9types.h
-ms.openlocfilehash: 3d5bb780a5999d8931335da1e9f49ad8af88dc12
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f4ee10003e0f4fdeae937d8ac786b4d389a91ec0326c2d6288d10af2a63e2286
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103761955"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751230"
 ---
-# <a name="d3dcolor_colorvalue-macro"></a>D3DCOLOR \_ ColorValue-Makro
+# <a name="d3dcolor_colorvalue-macro"></a>D3DCOLOR \_ COLORVALUE-Makro
 
-Initialisiert eine Farbe mit den angegebenen Gleit Komma Werten für Rot, grün, blau und alpha.
+Initialisiert eine Farbe mit den angegebenen Rot-, Grün-, Blau- und Alpha-Gleitkommawerten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,34 +45,34 @@ D3DCOLOR D3DCOLOR_COLORVALUE(
 *r* 
 </dt> <dd>
 
-Rote Komponente der Farbe. Dieser Wert muss ein Gleit Komma Wert im Bereich zwischen 0,0 und 1,0 sein.
+Rote Komponente der Farbe. Dieser Wert muss ein Gleitkommawert im Bereich von 0,0 bis 1,0 sein.
 
 </dd> <dt>
 
 *g* 
 </dt> <dd>
 
-Grüne Komponente der Farbe. Dieser Wert muss ein Gleit Komma Wert im Bereich zwischen 0,0 und 1,0 sein.
+Grüne Komponente der Farbe. Dieser Wert muss ein Gleitkommawert im Bereich von 0,0 bis 1,0 sein.
 
 </dd> <dt>
 
 *b* 
 </dt> <dd>
 
-Blaue Komponente der Farbe. Dieser Wert muss ein Gleit Komma Wert im Bereich zwischen 0,0 und 1,0 sein.
+Blaue Komponente der Farbe. Dieser Wert muss ein Gleitkommawert im Bereich von 0,0 bis 1,0 sein.
 
 </dd> <dt>
 
-*ein* 
+*Eine* 
 </dt> <dd>
 
-Alpha Komponente der Farbe. Dieser Wert muss ein Gleit Komma Wert im Bereich zwischen 0,0 und 1,0 sein.
+Alphakomponente der Farbe. Dieser Wert muss ein Gleitkommawert im Bereich von 0,0 bis 1,0 sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den [**D3DCOLOR**](d3dcolor.md) -Wert zurück, der den angegebenen RGBA-Werten entspricht.
+Gibt den [**D3DCOLOR-Wert**](d3dcolor.md) zurück, der den angegebenen RGBA-Werten entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,11 +80,11 @@ Gibt den [**D3DCOLOR**](d3dcolor.md) -Wert zurück, der den angegebenen RGBA-Wer
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3d9types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

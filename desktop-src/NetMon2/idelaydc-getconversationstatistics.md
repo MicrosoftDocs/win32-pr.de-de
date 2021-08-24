@@ -14,12 +14,12 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: d4d4c1bb1ad7ecb45b640c16322e297f9f640ef1
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 60fc768a1b93a752a91d431e79fb3e875416ac2b82b2bad5603e3d4cddaccbaf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119910570"
 ---
 # <a name="idelaydcgetconversationstatistics-method"></a>IDelaydC::GetConversationStatistics-Methode
 
@@ -89,26 +89,26 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                                   | Beschreibung                                                                                                                                                                                                                            |
 |---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>          | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen [Sie IDelaydC::Connect auf,](idelaydc-connect.md) um das NPP mit dem Netzwerk zu verbinden.<br/>                                                                                                  |
-| <dl> <dt>**NMERR NOT CAPTURING (NMERR \_ WIRD NICHT \_ ERFASST)**</dt> </dl>          | Das NPP erfasst keine Daten. Rufen Sie [IDelaydC::Start](idelaydc-start.md) auf, um die Erfassung zu starten.<br/>                                                                                                                             |
-| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>            | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IDelaydC::Connect-Methode.](idelaydc-connect.md)<br/>                                                                                                                      |
-| <dl> <dt>**NMERR \_ NO \_ CONVERSATION \_ STATS**</dt> </dl> | Die Konfiguration für diese Verbindung ist so festgelegt, dass keine Konversationsstatistiken gespeichert werden. Um Konversationsstatistiken zu speichern, beenden Sie die Erfassung, legen Sie NoConversationStats = YES im Konfigurations-BLOB fest, und starten Sie dann die Erfassung neu.<br/> |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>          | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen [Sie IDelaydC::Verbinden,](idelaydc-connect.md) um das NPP mit dem Netzwerk zu verbinden.<br/>                                                                                                  |
+| <dl> <dt>**NMERR NOT CAPTURING (NMERR \_ WIRD NICHT \_ ERFASST)**</dt> </dl>          | Der NPP erfasst keine Daten. Rufen [Sie IDelaydC::Start auf,](idelaydc-start.md) um die Erfassung zu starten.<br/>                                                                                                                             |
+| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>            | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IDelaydC::Verbinden-Methode.](idelaydc-connect.md)<br/>                                                                                                                      |
+| <dl> <dt>**NMERR \_ NO \_ CONVERSATION \_ STATS**</dt> </dl> | Die Konfiguration für diese Verbindung ist so festgelegt, dass konversationsstatistiken nicht gespeichert werden. Um Konversationsstatistiken zu speichern, beenden Sie die Erfassung, legen Sie NoConversationStats = YES im Konfigurationsblob fest, und starten Sie die Erfassung neu.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann nur aufgerufen werden, während die Datenerfassung ausgeführt wird. Wenn die aktuelle Erfassung angehalten wird, sind Aufrufe dieser Methode nicht erfolgreich. Um eine Erfassung zu starten, rufen Sie die [IDelaydC::Start-Methode](idelaydc-start.md) auf.
+Diese Methode kann nur während der Datenerfassung aufgerufen werden. Wenn die aktuelle Erfassung angehalten wird, sind Aufrufe dieser Methode nicht erfolgreich. Um eine Erfassung zu starten, rufen Sie die [IDelaydC::Start-Methode](idelaydc-start.md) auf.
 
-Um andere Arten von Statistiken abzurufen, rufen [Sie IDelaydC::GetTotalStatistics auf.](idelaydc-gettotalstatistics.md)
+Rufen Sie zum Abrufen anderer Statistiktypen [IDelaydC::GetTotalStatistics auf.](idelaydc-gettotalstatistics.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
@@ -117,14 +117,14 @@ Um andere Arten von Statistiken abzurufen, rufen [Sie IDelaydC::GetTotalStatisti
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [IDelaydC](idelaydc.md)
 </dt> <dt>
 
-[IDelaydC::Connect](idelaydc-connect.md)
+[IDelaydC::Verbinden](idelaydc-connect.md)
 </dt> <dt>
 
 [IDelaydC::GetTotalStatistics](idelaydc-gettotalstatistics.md)

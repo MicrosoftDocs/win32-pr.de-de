@@ -1,7 +1,7 @@
 ---
-description: Tritt auf, bevor die Analyseergebnisse von iinkanalyzer so synchronisiert werden, dass eine Anwendung Daten mit dem iinkanalyzer synchronisieren kann.
+description: Tritt ein, bevor IInkAnalyzer Analyseergebnisse abgleicht, sodass eine Anwendung Daten mit dem IInkAnalyzer synchronisieren kann.
 ms.assetid: 9daa8723-5234-40d9-ac41-6dcca988a8b4
-title: '_IAnalysisProxyEvents:: InkAnalyzerStateChanging-Ereignis (iacom. h)'
+title: _IAnalysisProxyEvents::InkAnalyzerStateChanging-Ereignis (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 92535c34b5d107fb1e435e9abe229df46204f236
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: d4e32685e25e4c942b3c723df2152b1064bed59599fda54fcac00e22aab04206
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106355731"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119884080"
 ---
-# <a name="_ianalysisproxyeventsinkanalyzerstatechanging-event"></a>\_Ianalysisproxyevents:: InkAnalyzerStateChanging-Ereignis
+# <a name="_ianalysisproxyeventsinkanalyzerstatechanging-event"></a>\_IAnalysisProxyEvents::InkAnalyzerStateChanging-Ereignis
 
-Tritt auf, bevor die Analyseergebnisse von [**iinkanalyzer**](iinkanalyzer.md) so synchronisiert werden, dass eine Anwendung Daten mit dem **iinkanalyzer** synchronisieren kann.
+Tritt auf, bevor [**IInkAnalyzer**](iinkanalyzer.md) Analyseergebnisse abgleicht, sodass eine Anwendung Daten mit dem **IInkAnalyzer** synchronisieren kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,26 +39,26 @@ HRESULT InkAnalyzerStateChanging(
 
 <dl> <dt>
 
-*pinkanalyzer* \[ in\]
+*pInkAnalyzer* \[ In\]
 </dt> <dd>
 
-Der [**iinkanalyzer**](iinkanalyzer.md) , der seine Analyseergebnisse abgleicht.
+Der [**IInkAnalyzer,**](iinkanalyzer.md) der seine Analyseergebnisse abstimmen soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der von [**iinkanalyzer**](iinkanalyzer.md)synchronisiert wird. Wenn das **iinkanalyzer** -Ereignis dieses Ereignis auslöst, sollte Ihre Anwendung die untergeordneten Knoten des Stamm Knotens der Ink Analyzer Auffüllen (siehe [**icontextnode:: getsubnodes**](icontextnode-getsubnodes.md) und [**iinkanalyzer:: GetRootNode-Methode**](iinkanalyzer-getrootnode.md)).
+Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der des [**IInkAnalyzer**](iinkanalyzer.md)synchronisiert wird. Wenn **IInkAnalyzer** dieses Ereignis auslöst, sollte Ihre Anwendung die Unterknoten des Stammknotens des Freihandanalysetools auffüllen (siehe [**IContextNode::GetSubNodes**](icontextnode-getsubnodes.md) und [**IInkAnalyzer::GetRootNode-Methode).**](iinkanalyzer-getrootnode.md)
 
-Das [**iinkanalyzer**](iinkanalyzer.md) -Ereignis löst dieses Ereignis aus, nachdem es das [**\_ ianalysitsvents:: leserytoricile**](-ianalysisevents-readytoreconcile.md) -Ereignis ausgelöst hat. Dieses Ereignis wird nur ausgelöst, wenn eine Hintergrundanalyse durchgeführt wird.
+[**IInkAnalyzer**](iinkanalyzer.md) löst dieses Ereignis aus, nachdem es das [**\_ IAnalysisEvents::ReadyToReconcile-Ereignis**](-ianalysisevents-readytoreconcile.md) auslöst. Dieses Ereignis wird nur bei der Hintergrundanalyse auslöst.
 
-Sperren Sie die Datenstruktur, wenn [**iinkanalyzer**](iinkanalyzer.md) das **\_ ianalysisproxyevents:: InkAnalyzerStateChanging** -Ereignis auslöst. Änderungen an der Datenstruktur während dieser Analysephase können bei der frei Hand Analyse und-Synchronisierung zu Fehlern führen. Entsperren Sie Ihre Datenstruktur, wenn **iinkanalyzer** das [**\_ ianalysitsvents:: IntermediateResults**](-ianalysisevents-intermediateresults.md) -oder [**\_ ianalysilvents:: results**](-ianalysisevents-results.md) -Ereignis auslöst.
+Sperren Sie Ihre Datenstruktur, wenn [**IInkAnalyzer**](iinkanalyzer.md) das **\_ IAnalysisProxyEvents::InkAnalyzerStateChanging-Ereignis** auslöst. Änderungen an der Datenstruktur während dieser Phase der Analyse können Fehler bei der Ink-Analyse und -Synchronisierung verursachen. Entsperren Sie Ihre Datenstruktur, wenn **IInkAnalyzer** das [**\_ Ereignis IAnalysisEvents::IntermediateResults**](-ianalysisevents-intermediateresults.md) oder [**\_ IAnalysisEvents::Results**](-ianalysisevents-results.md) auslöst.
 
-Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyzer**](iinkanalyzer.md)finden Sie unter [Daten Proxy mit Ink-Analyse](data-proxy-with-ink-analysis.md).
+Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Freihandanalyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,33 +66,33 @@ Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyze
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_Ianalysisproxyevents**](-ianalysisproxyevents.md)
+[**\_IAnalysisProxyEvents**](-ianalysisproxyevents.md)
 </dt> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: analysierungsmethode**](iinkanalyzer-analyze.md)
+[**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
+[**IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

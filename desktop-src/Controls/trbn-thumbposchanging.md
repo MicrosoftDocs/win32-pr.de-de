@@ -1,9 +1,9 @@
 ---
-title: TRBN_THUMBPOSCHANGING Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt, dass sich die Position des Zieh Punkts auf einer TrackBar ändert. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TRBN_THUMBPOSCHANGING Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt, dass sich die Position des Fingerabdrucks auf einer Trackleiste ändert. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 0876e026-bc07-409d-b174-b97ed704fc11
 keywords:
-- Windows-Steuerelemente für TRBN_THUMBPOSCHANGING Benachrichtigungs
+- TRBN_THUMBPOSCHANGING Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f23722b68f28a5157948ac6277858193366242fe
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 48f05f67eb20c78f764957e73d2293d32e88f25a73d44d6b58f9a1c310b8d9d8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751040"
 ---
-# <a name="trbn_thumbposchanging-notification-code"></a>Trbn- \_ thumbposchanging-Benachrichtigungs Code
+# <a name="trbn_thumbposchanging-notification-code"></a>TRBN \_ THUMBPOSCHANGING-Benachrichtigungscode
 
-Benachrichtigt, dass sich die Position des Zieh Punkts auf einer TrackBar ändert. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt, dass sich die Position des Fingerabdrucks auf einer Trackleiste ändert. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,17 +41,17 @@ TRBN_THUMBPOSCHANGING
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmtrbthumbposchanging**](/windows/win32/api/commctrl/ns-commctrl-nmtrbthumbposchanging) -Struktur. Der Aufrufer ist dafür verantwortlich, diese Struktur zuzuordnen und seine Member festzulegen, einschließlich der Member der enthaltenen [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur.
+Zeiger auf eine [**NMTRBTHUMBPOSCHANGING-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmtrbthumbposchanging) Der Aufrufer ist dafür verantwortlich, diese Struktur zu zuordnen und ihre Member, einschließlich der Member der enthaltenen [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) zu setzen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, um zu verhindern, dass der Ziehpunkt an die angegebene Position verschoben wird.
+Geben **Sie TRUE** zurück, um zu verhindern, dass sich der Daumen an die angegebene Position bewegt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Senden Sie diese Benachrichtigung an Clients, die nicht auf " [**WM \_ HScroll**](wm-hscroll.md) "-oder " [**WM \_ VScroll**](wm-vscroll.md) "-Nachrichten lauschen.
+Senden Sie diese Benachrichtigung an Clients, die nicht auf [**WM \_ HSCROLL-**](wm-hscroll.md) oder [**WM \_ VSCROLL-Nachrichten**](wm-vscroll.md) lauschen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Senden Sie diese Benachrichtigung an Clients, die nicht auf " [**WM \_ HScroll**
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

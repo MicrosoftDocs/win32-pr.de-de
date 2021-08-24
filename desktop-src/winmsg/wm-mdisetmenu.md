@@ -1,19 +1,19 @@
 ---
-description: Eine Anwendung sendet die WM- \_ mdisetmenu-Nachricht an ein MDI-Client Fenster (Multiple Document Interface), um das gesamte Menü eines MDI-Rahmen Fensters zu ersetzen, um das Fenstermenü des Rahmen Fensters oder beides zu ersetzen.
+description: Eine Anwendung sendet die WM \_ MDISETMENU-Nachricht an ein Clientfenster mit mehreren Dokumenten (Multiple Document Interface, MDI), um das gesamte Menü eines MDI-Rahmenfensters, das Fenstermenü des Rahmenfensters oder beides zu ersetzen.
 ms.assetid: 5cc85032-5378-44a0-abd4-d583deaa3294
-title: WM_MDISETMENU Meldung (Winuser. h)
+title: WM_MDISETMENU-Nachricht (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 74b90aed079482e2d2b666432f72c15d6ca27896
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5fe87682691c5f113034c20c68cefd81ca3a7018bd44eb868c4f18551cacacd8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368756"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119772070"
 ---
-# <a name="wm_mdisetmenu-message"></a>WM- \_ mdisetmenu-Meldung
+# <a name="wm_mdisetmenu-message"></a>WM \_ MDISETMENU-Nachricht
 
-Eine Anwendung sendet die **WM- \_ mdisetmenu** -Nachricht an ein MDI-Client Fenster (Multiple Document Interface), um das gesamte Menü eines MDI-Rahmen Fensters zu ersetzen, um das Fenstermenü des Rahmen Fensters oder beides zu ersetzen.
+Eine Anwendung sendet die **WM \_ MDISETMENU-Nachricht** an ein Clientfenster mit mehreren Dokumenten (Multiple Document Interface, MDI), um das gesamte Menü eines MDI-Rahmenfensters, das Fenstermenü des Rahmenfensters oder beides zu ersetzen.
 
 
 ```C++
@@ -29,14 +29,14 @@ Eine Anwendung sendet die **WM- \_ mdisetmenu** -Nachricht an ein MDI-Client Fen
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das neue Rahmen Fenstermenü. Wenn dieser Parameter **null** ist, wird das Menü Rahmen Fenster nicht geändert.
+Ein Handle für das neue Rahmenfenstermenü. Wenn dieser Parameter **NULL** ist, wird das Rahmenfenstermenü nicht geändert.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Handle für das neue Fenstermenü. Wenn dieser Parameter **null** ist, wird das Menü Fenster nicht geändert.
+Ein Handle für das neue Fenstermenü. Wenn dieser Parameter **NULL** ist, wird das Fenstermenü nicht geändert.
 
 </dd> </dl>
 
@@ -44,17 +44,17 @@ Ein Handle für das neue Fenstermenü. Wenn dieser Parameter **null** ist, wird 
 
 Typ: **HMENU**
 
-Wenn die Nachricht erfolgreich ist, ist der Rückgabewert das Handle für das alte Rahmen Fenstermenü.
+Wenn die Meldung erfolgreich ist, ist der Rückgabewert das Handle für das alte Framefenstermenü.
 
-Wenn die Meldung fehlschlägt, ist der Rückgabewert 0 (null).
+Wenn die Nachricht fehlschlägt, ist der Rückgabewert 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nach dem Senden dieser Nachricht muss eine Anwendung die [**DrawMenuBar**](/windows/win32/api/winuser/nf-winuser-drawmenubar) -Funktion zum Aktualisieren der Menüleiste aufruft.
+Nach dem Senden dieser Nachricht muss eine Anwendung die [**DrawMenuBar-Funktion**](/windows/win32/api/winuser/nf-winuser-drawmenubar) aufrufen, um die Menüleiste zu aktualisieren.
 
-Wenn diese Meldung das Fenstermenü ersetzt, werden die Menü Elemente des untergeordneten MDI-Fensters aus dem vorherigen Fenstermenü entfernt und dem Menü neues Fenster hinzugefügt.
+Wenn diese Meldung das Fenstermenü ersetzt, werden die Menüelemente des untergeordneten MDI-Fensters aus dem vorherigen Fenstermenü entfernt und dem neuen Fenstermenü hinzugefügt.
 
-Wenn ein untergeordnetes MDI-Fenster maximiert ist und diese Meldung das MDI-Frame Fenster-Menü ersetzt, werden das Fenstermenü Symbol und das Wiederherstellungs Symbol aus dem vorherigen Menü Fenster des Frames entfernt und dem Menü neues Rahmen Fenster hinzugefügt.
+Wenn ein untergeordnetes MDI-Fenster maximiert ist und diese Meldung das MDI-Rahmenfenstermenü ersetzt, werden das Fenstermenüsymbol und das Wiederherstellungssymbol aus dem vorherigen Framefenstermenü entfernt und dem neuen Rahmenfenstermenü hinzugefügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,27 +64,27 @@ Wenn ein untergeordnetes MDI-Fenster maximiert ist und diese Meldung das MDI-Fra
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**DrawMenuBar**](/windows/win32/api/winuser/nf-winuser-drawmenubar)
 </dt> <dt>
 
-[**WM- \_ mumgeleitet-freshmenu**](wm-mdirefreshmenu.md)
+[**WM \_ MD JRFRESHMENU**](wm-mdirefreshmenu.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Mehrere Dokument Schnittstellen](multiple-document-interface.md)
+[Schnittstelle für mehrere Dokumente](multiple-document-interface.md)
 </dt> </dl>
 
  

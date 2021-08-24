@@ -1,34 +1,34 @@
 ---
-description: Die msidigitalcertificate-Tabelle speichert Zertifikate im binären Streamformat und ordnet jedes Zertifikat einem Primärschlüssel zu.
+description: Die Tabelle MsiDigitalCertificate speichert Zertifikate im Binärdatenstromformat und ordnet jedes Zertifikat einem Primärschlüssel zu.
 ms.assetid: 834534b8-540a-48c2-8eb0-3511d5a20cb4
-title: Msidigitalcertificate-Tabelle
+title: MsiDigitalCertificate-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ff4765dee433cfab989e79c7ef4663d8939381ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 443e5f27d13ebd823fa8e5362de474082d39e4b09b9e240b9ee16e9924342e41
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119828780"
 ---
-# <a name="msidigitalcertificate-table"></a>Msidigitalcertificate-Tabelle
+# <a name="msidigitalcertificate-table"></a>MsiDigitalCertificate-Tabelle
 
-Die msidigitalcertificate-Tabelle speichert Zertifikate im binären Streamformat und ordnet jedes Zertifikat einem Primärschlüssel zu. Der Primärschlüssel wird zum Freigeben von Zertifikaten für mehrere Digital signierte Objekte verwendet. Ein digitales Zertifikat ist eine Anmelde Information, die eine Möglichkeit zum Überprüfen der Identität bereitstellt. Weitere Informationen finden Sie im Abschnitt zur [Kryptografie](../seccrypto/cryptography-portal.md) [im Microsoft](../seccrypto/digital-certificates.md) Windows Software Development Kit (SDK).
+Die Tabelle MsiDigitalCertificate speichert Zertifikate im Binärdatenstromformat und ordnet jedes Zertifikat einem Primärschlüssel zu. Der Primärschlüssel wird verwendet, um Zertifikate für mehrere digital signierte Objekte freizugeben. Ein digitales Zertifikat ist ein Anmeldeinformationszertifikat, mit dem die Identität überprüft werden kann. Weitere Informationen finden Sie unter [Digitale Zertifikate](../seccrypto/digital-certificates.md) im Abschnitt [Kryptografie](../seccrypto/cryptography-portal.md) des Microsoft Windows Software Development Kit (SDK).
 
-Die Tabellen [msidigitalsignature](msidigitalsignature-table.md) und msidigitalcertificate sind ab Windows Installer Version 2,0 verfügbar.
+Die Tabellen [MsiDigitalSignature](msidigitalsignature-table.md) und MsiDigitalCertificate sind ab Windows Installer Version 2.0 verfügbar.
 
-Windows Installer können digitale Signaturen als Mittel zum erkennen beschädigter Ressourcen verwenden. In Windows Installer Version 2,0 können nur die digitalen Signaturen externer Schränke und nur die Verwendung der Tabellen [msidigitalsignature](msidigitalsignature-table.md) und msidigitalcertificate überprüft werden.
+Windows Das Installationsprogramm kann digitale Signaturen verwenden, um beschädigte Ressourcen zu erkennen. Windows Installationsprogrammversion 2.0 kann nur die digitalen Signaturen externer Schränke überprüfen, und zwar nur mithilfe der Tabellen [MsiDigitalSignature](msidigitalsignature-table.md) und MsiDigitalCertificate.
 
-Ab Windows Installer Version 3,0 können die Windows Installer die digitalen Signaturen von Patches (MSP-Dateien) mithilfe der [MsiPatchCertificate](msipatchcertificate-table.md) -und msidigitalcertificate-Tabellen überprüfen. Weitere Informationen finden Sie unter [Richtlinien zum Erstellen von sicheren Installationen](guidelines-for-authoring-secure-installations.md) und zum [Patchen von Benutzerkontensteuerung (User Account Control, UAC)](user-account-control--uac--patching.md).
+Ab Windows Installer Version 3.0 kann der Windows Installer die digitalen Signaturen von Patches (MSP-Dateien) mithilfe der Tabellen [MsiPatchCertificate](msipatchcertificate-table.md) und MsiDigitalCertificate überprüfen. Weitere Informationen finden Sie unter [Guidelines for Authoring Secure Installations](guidelines-for-authoring-secure-installations.md) and User Account Control [(UAC) Patching .](user-account-control--uac--patching.md)
 
-Die msidigitalcertificate-Tabelle weist die folgenden Spalten auf.
+Die Tabelle MsiDigitalCertificate weist die folgenden Spalten auf.
 
 
 
-| Spalte             | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte             | Typ                         | Key | Nullwerte zulässig |
 |--------------------|------------------------------|-----|----------|
-| Digitalcertificate | [Bezeichner](identifier.md) | J   | N        |
-| Certdata           | [Binär (Binary)](binary.md)         | N   | N        |
+| DigitalCertificate | [Identifier](identifier.md) | J   | N        |
+| CertData           | [Binär (Binary)](binary.md)         | N   | N        |
 
 
 
@@ -38,21 +38,21 @@ Die msidigitalcertificate-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="DigitalCertificate"></span><span id="digitalcertificate"></span><span id="DIGITALCERTIFICATE"></span>Digitalcertificate
+<span id="DigitalCertificate"></span><span id="digitalcertificate"></span><span id="DIGITALCERTIFICATE"></span>DigitalCertificate
 </dt> <dd>
 
 Identifiziert das digitale Signaturzertifikat. Primärschlüssel der Tabelle.
 
 </dd> <dt>
 
-<span id="CertData"></span><span id="certdata"></span><span id="CERTDATA"></span>Certdata
+<span id="CertData"></span><span id="certdata"></span><span id="CERTDATA"></span>CertData
 </dt> <dd>
 
-Die binäre Darstellung des digitalen Zertifikats. Die certdata-Spalte enthält das codierte Bytearray eines Zertifikat Kontexts. Dies ist der **pbcertencoded** -Member der [**CERT- \_ Kontext**](/windows/win32/api/wincrypt/ns-wincrypt-cert_context) Struktur. Der Zertifikat Kontext kann durch Aufrufen von [**WinVerifyTrust**](/windows/win32/api/wintrust/nf-wintrust-winverifytrust), [**msigetfilesignatureinformation**](/windows/desktop/api/Msi/nf-msi-msigetfilesignatureinformationa)oder durch Importieren einer CER-Datei abgerufen werden.
+Die binäre Darstellung des digitalen Zertifikats. Die Spalte CertData enthält das codierte Bytearray eines Zertifikatkontexts. Dies ist der **pbCertEncoded-Member** der [**CERT \_ CONTEXT-Struktur.**](/windows/win32/api/wincrypt/ns-wincrypt-cert_context) Der Zertifikatkontext kann durch Aufrufen von [**WinVerifyTrust,**](/windows/win32/api/wintrust/nf-wintrust-winverifytrust) [**MsiGetFileSignatureInformation**](/windows/desktop/api/Msi/nf-msi-msigetfilesignatureinformationa)oder durch Importieren einer CER-Datei abgerufen werden.
 
 </dd> </dl>
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 
@@ -68,10 +68,10 @@ Die binäre Darstellung des digitalen Zertifikats. Die certdata-Spalte enthält 
 
 <dl> <dt>
 
-[**Msigetfilesignatureinformation**](/windows/desktop/api/Msi/nf-msi-msigetfilesignatureinformationa)
+[**MsiGetFileSignatureInformation**](/windows/desktop/api/Msi/nf-msi-msigetfilesignatureinformationa)
 </dt> <dt>
 
-[Msidigitalsignature-Tabelle](msidigitalsignature-table.md)
+[MsiDigitalSignature-Tabelle](msidigitalsignature-table.md)
 </dt> <dt>
 
 [Digitale Signaturen und Windows Installer](digital-signatures-and-windows-installer.md)

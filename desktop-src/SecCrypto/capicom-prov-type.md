@@ -1,7 +1,7 @@
 ---
-description: Gibt den Typ des Kryptografiedienstanbieters (CSP) an.
+description: Gibt den Typ des Kryptografiedienstanbieters (Cryptographic Service Provider, CSP) an.
 ms.assetid: faf2390d-bf78-4943-91f3-1db9939fedfb
-title: CAPICOM_PROV_TYPE-Enumeration (CAPICOM. h)
+title: CAPICOM_PROV_TYPE-Enumeration (Capicom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Capicom.h
-ms.openlocfilehash: d9c701b453656a68573fe391775c5b27fdd2461a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bf85d2eb01ffd4290c5200e09c842f280cd5418dc5203bba068ecb5bcd65c355
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119879020"
 ---
-# <a name="capicom_prov_type-enumeration"></a>CAPICOM \_ Prov \_ Type-Enumeration
+# <a name="capicom_prov_type-enumeration"></a>CAPICOM \_ PROV \_ TYPE-Enumeration
 
-Die **CAPICOM \_ Prov \_ Type** -Enumeration gibt den Typ des [*Kryptografiedienstanbieters*](../secgloss/c-gly.md) (CSP) an.
+Die **CAPICOM \_ PROV \_ TYPE-Enumeration** gibt den Typ des [*Kryptografiedienstanbieters (Cryptographic Service Provider,*](../secgloss/c-gly.md) CSP) an.
 
 ## <a name="members"></a>Member
 
@@ -30,33 +30,33 @@ Die **CAPICOM \_ Prov \_ Type** -Enumeration gibt den Typ des [*Kryptografiedien
 
 | Member                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                        | Wert |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|
-| **CAPICOM \_ Prov \_ RSA \_ Full**       | Der vollständige [*RSA*](../secgloss/r-gly.md) -CSP. Dieser Anbietertyp unterstützt sowohl [*digitale Signaturen*](../secgloss/d-gly.md) als auch Daten [*Verschlüsselung*](../secgloss/e-gly.md).<br/>                                                            | 1     |
-| **CAPICOM \_ Prov \_ RSA \_ sig**        | Die Teilmenge des RSA-CSP, die nur die Funktionen und Algorithmen unterstützt, die für Hashes und digitale Signaturen erforderlich sind.<br/>                                                                                                                                                                                                                                        | 2     |
-| **CAPICOM \_ Prov \_ DSS**             | Der DSS-CSP ( [*Digital Signature Standard*](../secgloss/d-gly.md) ). Dieser Anbietertyp unterstützt nur Hashes und digitale Signaturen. DSS verwendet den [*Digital Signature-Algorithmus*](../secgloss/d-gly.md) (DSA).<br/> | 3     |
-| **CAPICOM \_ Prov \_ Fortezza**        | Der CSP, der die Kryptografieprotokolle und-Algorithmen im Besitz des [*National Institute of Standards and Technology*](../secgloss/n-gly.md) (NIST) enthält.<br/>                                                                                      | 4     |
-| **CAPICOM \_ Prov \_ MS \_ Exchange**    | Der CSP, der für die kryptografischen Anforderungen von Exchange und anderen Anwendungen entworfen wurde, die mit Microsoft Mail kompatibel sind.<br/>                                                                                                                                                                                                                                       | 5     |
-| **CAPICOM \_ Prov \_ SSL**             | Der CSP, der das [*Secure Sockets Layer*](../secgloss/s-gly.md) (SSL)-Protokoll unterstützt.<br/>                                                                                                                                                                                              | 6     |
-| **CAPICOM \_ Prov \_ RSA \_ SChannel**   | Der CSP, der sowohl [*RSA*](../secgloss/r-gly.md) -als auch [*SChannel*](../secgloss/s-gly.md) -Protokolle unterstützt.<br/>                                                                                                                                                                                        | 12    |
-| **CAPICOM \_ Prov \_ DSS \_ dh**         | Der CSP, der sowohl DSS-als auch [*Diffie-Hellman-*](../secgloss/d-gly.md) Protokolle unterstützt.<br/>                                                                                                                                                                                                          | 13    |
-| **CAPICOM \_ Prov \_ EC \_ ECDSA \_ sig**  | Der CSP, der die ECDSA (Elliptic Curve Digital Signature Algorithmus)-Funktionen und-Algorithmen unterstützt, die für digitale Signaturen erforderlich sind.<br/>                                                                                                                                                                                                                                  | 14    |
-| **CAPICOM \_ Prov \_ EC \_ ecnra \_ sig**  | Der CSP, der die ecnra-Funktionen (Elliptic Curve Nyberg-Rueppel analog) und die für digitale Signaturen erforderlichen Algorithmen unterstützt.<br/>                                                                                                                                                                                                                                        | 15    |
-| **CAPICOM \_ Prov \_ EC \_ ECDSA \_ vollständig** | Der CSP, der den vollständigen ECDSA unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                   | 16    |
-| **CAPICOM \_ Prov \_ EC \_ ecnra \_ Full** | Der CSP, der den vollständigen ecnra-unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                   | 17    |
-| **CAPICOM \_ Prov \_ dh \_ SChannel**    | Der CSP, der sowohl [*Diffie-Hellman-*](../secgloss/d-gly.md) als auch [*SChannel*](../secgloss/s-gly.md) -Protokolle unterstützt.<br/>                                                                                                                                   | 18    |
-| **CAPICOM \_ Prov \_ spyrus \_ Lynchs**   | Der CSP, der das spyrus lynert-Karten Gerät unterstützt.<br/>                                                                                                                                                                                                                                                                                                                     | 20    |
-| **CAPICOM \_ Prov \_ RNG**             | Der CSP, der die Zufallszahlengenerierung verarbeitet.<br/>                                                                                                                                                                                                                                                                                                                          | 21    |
-| **CAPICOM \_ Prov \_ Intel \_ sec**      | Der CSP, der Intel Security bereitstellt.<br/>                                                                                                                                                                                                                                                                                                                                   | 22    |
-| **CAPICOM \_ Prov \_ Replace \_ owf**    | Der CSP, der die Ersetzung der Art und Weise unterstützt, in der unidirektionale Formate von Kenn Wörtern generiert werden.<br/>                                                                                                                                                                                                                                                                  | 23    |
-| **CAPICOM \_ Prov \_ RSA \_ AES**        | Der CSP, der sowohl digitale Signaturen als auch Datenverschlüsselung unterstützt, mithilfe des-Advanced Encryption Standard ([*AES*](../secgloss/a-gly.md))-Algorithmus.<br/>                                                                                                                                                                                       | 24    |
+| **CAPICOM \_ PROV \_ RSA \_ FULL**       | Der vollständige [*RSA-CSP.*](../secgloss/r-gly.md) Dieser Anbietertyp unterstützt sowohl [*digitale Signaturen*](../secgloss/d-gly.md) als auch die [*Datenverschlüsselung.*](../secgloss/e-gly.md)<br/>                                                            | 1     |
+| **CAPICOM \_ PROV \_ RSA \_ SIG**        | Die Teilmenge des RSA-CSP, die nur die Funktionen und Algorithmen unterstützt, die für Hashes und digitale Signaturen erforderlich sind.<br/>                                                                                                                                                                                                                                        | 2     |
+| **CAPICOM \_ PROV \_ DSS**             | Der [*DSS-CSP (Digital Signature Standard).*](../secgloss/d-gly.md) Dieser Anbietertyp unterstützt nur Hashes und digitale Signaturen. DSS verwendet den [*Digital Signature Algorithm*](../secgloss/d-gly.md) (DSA).<br/> | 3     |
+| **CAPICOM \_ PROV \_ FORTEZZA**        | Der CSP, der die kryptografischen Protokolle und Algorithmen des [*National Institute of Standards and Technology*](../secgloss/n-gly.md) (NIST) enthält.<br/>                                                                                      | 4     |
+| **CAPICOM \_ PROV \_ MS \_ EXCHANGE**    | Der CSP, der für die kryptografischen Anforderungen von Exchange und anderen Anwendungen konzipiert wurde, die mit Microsoft Mail kompatibel sind.<br/>                                                                                                                                                                                                                                       | 5     |
+| **CAPICOM \_ PROV \_ SSL**             | Der CSP, der das [*ssl-Protokoll (Secure Sockets Layer)*](../secgloss/s-gly.md) unterstützt.<br/>                                                                                                                                                                                              | 6     |
+| **CAPICOM \_ PROV \_ RSA \_ SCHANNEL**   | Der CSP, der sowohl [*RSA-*](../secgloss/r-gly.md) als auch [*Schannel-Protokolle*](../secgloss/s-gly.md) unterstützt.<br/>                                                                                                                                                                                        | 12    |
+| **CAPICOM \_ PROV \_ DSS \_ DH**         | Der CSP, der sowohl DSS- als auch [*Diffie-Hellman-Protokolle*](../secgloss/d-gly.md) unterstützt.<br/>                                                                                                                                                                                                          | 13    |
+| **CAPICOM \_ PROV \_ EC \_ ECDSA \_ SIG**  | Der CSP, der die ECDSA-Funktionen (Elliptic Curve Digital Signature Algorithm) und algorithmen unterstützt, die für digitale Signaturen erforderlich sind.<br/>                                                                                                                                                                                                                                  | 14    |
+| **CAPICOM \_ PROV \_ EC \_ ECNRA \_ SIG**  | Der CSP, der die ECNRA-Funktionen (Elliptic Curve Nyberg-Rueppel Analog) und Algorithmen unterstützt, die für digitale Signaturen erforderlich sind.<br/>                                                                                                                                                                                                                                        | 15    |
+| **CAPICOM \_ PROV \_ EC \_ ECDSA \_ FULL** | Der CSP, der das vollständige ECDSA unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                   | 16    |
+| **CAPICOM \_ PROV \_ EC \_ ECNRA \_ FULL** | Der CSP, der die vollständige ECNRA unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                   | 17    |
+| **CAPICOM \_ PROV \_ DH \_ SCHANNEL**    | Der CSP, der sowohl [*Diffie-Hellman-*](../secgloss/d-gly.md) als [*auch Schannel-Protokolle*](../secgloss/s-gly.md) unterstützt.<br/>                                                                                                                                   | 18    |
+| **CAPICOM \_ PROV \_ SPYRUS \_ LYNKS**   | Der CSP, der das SPYRUS LYNKS-Kartengerät unterstützt.<br/>                                                                                                                                                                                                                                                                                                                     | 20    |
+| **CAPICOM \_ PROV \_ RNG**             | Der CSP, der die Zufallszahlengenerierung verarbeitet.<br/>                                                                                                                                                                                                                                                                                                                          | 21    |
+| **CAPICOM \_ PROV \_ INTEL \_ SEC**      | Der CSP, der Intel-Sicherheit bietet.<br/>                                                                                                                                                                                                                                                                                                                                   | 22    |
+| **CAPICOM \_ PROV \_ REPLACE \_ OWF**    | Der CSP, der die Ersetzung der Art und Weise unterstützt, in der aus Kennwörtern one-way-Formate generiert werden.<br/>                                                                                                                                                                                                                                                                  | 23    |
+| **CAPICOM \_ PROV \_ RSA \_ AES**        | Der CSP, der sowohl digitale Signaturen als auch die Datenverschlüsselung mithilfe des [*AES-Algorithmus*](../secgloss/a-gly.md)(Advanced Encryption Standard) unterstützt.<br/>                                                                                                                                                                                       | 24    |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CAPICOM \_ Prov \_ Type** -Enumeration wird von den folgenden Methoden und Eigenschaften verwendet:
+Die **CAPICOM \_ PROV \_ TYPE-Enumeration** wird von den folgenden Methoden und Eigenschaften verwendet:
 
--   [**PrivateKey. ProviderType**](privatekey-providertype.md) -Eigenschaft.
--   [**PrivateKey. Open**](privatekey-open.md) -Methode.
+-   [**PrivateKey.ProviderType-Eigenschaft.**](privatekey-providertype.md)
+-   [**PrivateKey.Open-Methode.**](privatekey-open.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,8 +64,8 @@ Die **CAPICOM \_ Prov \_ Type** -Enumeration wird von den folgenden Methoden und
 
 | Anforderung | Wert |
 |----------------------------|--------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                |
-| Header<br/>          | <dl> <dt>CAPICOM. h</dt> </dl> |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                |
+| Header<br/>          | <dl> <dt>Capicom.h</dt> </dl> |
 
 
 

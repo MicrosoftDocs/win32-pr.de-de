@@ -1,10 +1,10 @@
 ---
-title: Virtualchannelgetinstance-Einstiegspunkt
-description: Wird aufgerufen, damit das Plug-in eine Instanz der iwtsplugin-Schnittstelle für alle Plug-Ins erstellt, die von der dll implementiert werden.
+title: VirtualChannelGetInstance-Einstiegspunkt
+description: Wird aufgerufen, damit das Plug-In eine Instanz der IWTSPlugin-Schnittstelle für alle Plug-Ins erstellt, die von der DLL implementiert werden.
 ms.assetid: B81BD61E-1F43-42C9-8839-30F4F4C3973C
 ms.tgt_platform: multiple
 keywords:
-- Virtualchannelgetinstance-Einstiegspunkt Remotedesktopdienste
+- VirtualChannelGetInstance-Einstiegspunkt Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -14,22 +14,22 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 535ebdc8928cceb282dd62de56f8c6fbadc94e90
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f96eac56f737d6f945c3d59d5cdf844e9cc65058a0460f620e6051830806ab99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119868620"
 ---
-# <a name="virtualchannelgetinstance-entry-point"></a>Virtualchannelgetinstance-Einstiegspunkt
+# <a name="virtualchannelgetinstance-entry-point"></a>VirtualChannelGetInstance-Einstiegspunkt
 
-Wird aufgerufen, damit das Plug-in eine Instanz der [**iwtsplugin**](/windows/desktop/api/TsVirtualChannels/nn-tsvirtualchannels-iwtsplugin) -Schnittstelle für alle Plug-Ins erstellt, die von der dll implementiert werden.
+Wird aufgerufen, damit das Plug-In eine Instanz der [**IWTSPlugin-Schnittstelle**](/windows/desktop/api/TsVirtualChannels/nn-tsvirtualchannels-iwtsplugin) für alle Plug-Ins erstellt, die von der DLL implementiert werden.
 
 > [!Note]
 >
-> Diese Funktion wird vom Plug-in implementiert und muss nach Namen exportiert werden, damit eine Anwendung die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden kann, um dynamisch mit der Funktion zu verknüpfen.
+> Diese Funktion wird vom Plug-In implementiert und muss anhand des Namens exportiert werden, damit eine Anwendung die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden kann, um dynamisch eine Verknüpfung mit der Funktion zu erstellen.
 >
-> Der Prototyp für diese Funktion ist in keiner öffentlichen Header Datei enthalten, daher müssen Sie Sie genau wie gezeigt deklarieren.
+> Der Prototyp für diese Funktion ist in keiner öffentlichen Headerdatei enthalten, daher müssen Sie ihn genau wie gezeigt deklarieren.
 
  
 
@@ -50,30 +50,30 @@ HRESULT VCAPITYPE VirtualChannelGetInstance(
 
 <dl> <dt>
 
-*refi-ID* \[ in\]
+*refiid* \[ In\]
 </dt> <dd>
 
-Gibt den Typ der zurück zugebende Schnittstelle an. Dabei muss es sich um **IID \_ iwtsplugin** handeln.
+Gibt den Typ der zurückzugebenden Schnittstelle an. Dies muss **IID \_ IWTSPlugin** sein.
 
 </dd> <dt>
 
-*pnumubjs* \[ in, out\]
+*pNumObjs* \[ in, out\]
 </dt> <dd>
 
-Die Adresse einer **ulong** -Variablen, die die Anzahl der abgerufenen Schnittstellen empfängt.
+Die Adresse einer **ULONG-Variablen,** die die Anzahl der abgerufenen Schnittstellen empfängt.
 
 </dd> <dt>
 
-*ppobjarray* \[ vorgenommen\]
+*ppObjArray* \[ out\]
 </dt> <dd>
 
-Die Adresse eines Array von Zeigern, das die Schnittstellen Zeiger empfängt. Wenn dieser Parameter **null** ist, muss die Implementierung die Anzahl der Plug-ins, die von der dll implementiert werden, im *pnumubjs* -Parameter platzieren. Dies ermöglicht es dem Aufrufer, das richtige Größen Array für *ppobjarray* zuzuordnen.
+Die Adresse eines Arrays von Zeigern, das die Schnittstellenzeiger empfängt. Wenn dieser Parameter **NULL** ist, muss die Implementierung die Anzahl der von der DLL implementierten Plug-Ins im *pNumObjs-Parameter* angeben. Dadurch kann der Aufrufer das richtige Größenarray für *ppObjArray* zuordnen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn dieser Einstiegspunkt erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn dieser Einstiegspunkt erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 

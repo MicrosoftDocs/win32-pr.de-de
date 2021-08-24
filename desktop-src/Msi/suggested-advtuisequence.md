@@ -1,19 +1,19 @@
 ---
-description: Erstellen Sie die advtuisequence-Tabelle nicht.
+description: Erstellen Sie nicht die Tabelle AdvtUISequence.
 ms.assetid: b915abc1-da53-4b39-a026-3ba76eaf9510
-title: Vorgeschlagene advtuisequence
+title: Vorgeschlagene AdvtUISequence
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e43a92ab594fedf8194e0a5818c96c891a24b9f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 65f11f1106a6088d9dcdf16ef8b583e8d9421534d972af7695ac0954e56fc158
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119893660"
 ---
-# <a name="suggested-advtuisequence"></a>Vorgeschlagene advtuisequence
+# <a name="suggested-advtuisequence"></a>Vorgeschlagene AdvtUISequence
 
-Erstellen Sie die advtuisequence-Tabelle nicht. Diese Tabelle wird vom Installer nicht verwendet. Die advtuisequence-Tabelle sollte nicht in der Installations Datenbank vorhanden sein, oder Sie sollte leer gelassen werden. Der Name der Ankündigung, die angekündigt werden soll, sollte während der Initialisierung an das Installationsprogramm übermittelt werden.
+Erstellen Sie nicht die Tabelle AdvtUISequence. Das Installationsprogramm verwendet diese Tabelle nicht. Die AdvtUISequence-Tabelle sollte nicht in der Installationsdatenbank vorhanden sein, oder sie sollte leer bleiben. Der Name der anwendung, die angekündigt werden soll, sollte während der Initialisierung an das Installationsprogramm übergeben werden.
 
  
 

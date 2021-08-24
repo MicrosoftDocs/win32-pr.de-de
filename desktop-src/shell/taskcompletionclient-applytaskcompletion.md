@@ -1,7 +1,7 @@
 ---
-description: Startet den Abschluss der Aufgabe.
+description: Beginnt den Abschluss der Aufgabe.
 ms.assetid: 75C84DD9-D815-45C2-A28E-EAE437EAFF89
-title: 'Taskcompletionclient:: applytaskcompletion-Methode'
+title: TaskCompletionClient::ApplyTaskCompletion-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - ExecModelClient.dll
-ms.openlocfilehash: 950d96ac46c18d741d5cf2337326f116fb79e36a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 58c95144077697f1655547a58571ce3475355aa96040ce1815bd3178bc9a1290
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104994966"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119773670"
 ---
-# <a name="taskcompletionclientapplytaskcompletion-method"></a>Taskcompletionclient:: applytaskcompletion-Methode
+# <a name="taskcompletionclientapplytaskcompletion-method"></a>TaskCompletionClient::ApplyTaskCompletion-Methode
 
-Startet den Abschluss der Aufgabe.
+Beginnt den Abschluss der Aufgabe.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,29 +39,29 @@ HRESULT ApplyTaskCompletion(
 
 <dl> <dt>
 
-*ptcfcategory* 
+*ptcfCategory* 
 </dt> <dd>
 
-Ein-Wert, der die Kategorie der Aufgabe angibt.
+Ein -Wert, der die Kategorie der Aufgabe angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der einzige unterstützte Wert für *ptcfcategory* ist 0x08000000.
+Der einzige unterstützte Wert für *ptcfCategory* ist 0x08000000.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                           |
 | DLL<br/>                      | <dl> <dt>ExecModelClient.dll</dt> </dl> |
 
 
@@ -70,7 +70,7 @@ Der einzige unterstützte Wert für *ptcfcategory* ist 0x08000000.
 
 <dl> <dt>
 
-[**Taskcompletionclient**](taskcompletionclient.md)
+[**TaskCompletionClient**](taskcompletionclient.md)
 </dt> </dl>
 
  

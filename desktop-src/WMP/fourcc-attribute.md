@@ -1,9 +1,9 @@
 ---
 title: FourCC-Attribut
-description: Das FourCC-Attribut ist ein Hexadezimalwert, der den Codec identifiziert, der zum Rendering einer Videodatei erforderlich ist.
+description: Das FourCC-Attribut ist ein Hexadezimalwert, der den Codec identifiziert, der zum Rendern einer Videodatei erforderlich ist.
 ms.assetid: 05424bd2-fffc-4c42-84d6-215458ccbf19
 keywords:
-- FourCC-Attribut (Windows Media Player)
+- FourCC-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f052c76e664cd68153e9c395aed9224ba9ba90c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f308479e9dcf39a0fc54c5b6f22251eac3accd9eba3bf4730274898c6044d1a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862650"
 ---
 # <a name="fourcc-attribute"></a>FourCC-Attribut
 
-Das **FourCC** -Attribut ist ein Hexadezimalwert, der den Codec identifiziert, der zum Rendering einer Videodatei erforderlich ist.
+Das **FourCC-Attribut** ist ein Hexadezimalwert, der den Codec identifiziert, der zum Rendern einer Videodatei erforderlich ist.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

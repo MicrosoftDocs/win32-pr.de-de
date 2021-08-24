@@ -1,31 +1,31 @@
 ---
-description: Auflisten von Audiotypen für bestimmte Codierungs Modi
+description: Aufzählen von Audiotypen für bestimmte Codierungsmodi
 ms.assetid: d44960eb-da5e-4379-ba9d-cb804559dc53
-title: Auflisten von Audiotypen für bestimmte Codierungs Modi (Microsoft Media Foundation)
+title: Aufzählen von Audiotypen für bestimmte Codierungsmodi (Microsoft Media Foundation)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a16a8b97afdd48cb1d7828f80778aa9fcf8dc1ab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ec311c9ac4d879f8834d50353913e7fad1b6e50a9292a44444bc45376247636
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119828240"
 ---
-# <a name="enumerating-audio-types-for-specific-encoding-modes-microsoft-media-foundation"></a>Auflisten von Audiotypen für bestimmte Codierungs Modi (Microsoft Media Foundation)
+# <a name="enumerating-audio-types-for-specific-encoding-modes-microsoft-media-foundation"></a>Aufzählen von Audiotypen für bestimmte Codierungsmodi (Microsoft Media Foundation)
 
-Die vom Audioencoder akzeptierten Eingabe-und Ausgabemedien Typen sind sehr strukturiert. Sie müssen unterstützte Ausgabetypen abrufen, indem Sie die **imediaobject:: getoutputtype** -Methode oder **imftransform:: getoutputtype** aufrufen. Nachdem Sie einen Ausgabetyp erhalten haben, dürfen Sie ihn nicht mehr ändern.
+Die vom Audioencoder akzeptierten Eingabe- und Ausgabemedientypen sind sehr strukturiert. Sie müssen unterstützte Ausgabetypen abrufen, indem Sie **die IMediaObject::GetOutputType-Methode** oder **DIETRANSFORM::GetOutputType aufrufen.** Nachdem Sie einen Ausgabetyp erhalten haben, dürfen Sie ihn nicht mehr ändern.
 
-Wenn Sie einen anderen Codierungs Modus als einen einzigen Pass-CBR verwenden möchten, müssen Sie den-Modus festlegen und dann die Ausgabetypen für diesen Modus auflisten. der Encoder ändert die unterstützten Ausgabetypen, je nachdem, welcher Modus festgelegt wurde. Die Eigenschaften, die den Codierungs Modus steuern, sind [**mfpkey \_ vbrenabled**](mfpkey-vbrenabledproperty.md) und [**mfpkey \_ passesused**](mfpkey-passesusedproperty.md). Wenn der Modus im Encoder festgelegt ist, müssen Sie einen Ausgabetyp ohne Änderung auflisten und auswählen, ebenso wie bei CBR.
+Wenn Sie einen anderen Codierungsmodus als 1-Pass-CBR verwenden möchten, müssen Sie den Modus festlegen und dann die Ausgabetypen für diesen Modus aufzählen. Der Encoder ändert die unterstützten Ausgabetypen abhängig vom festgelegten Modus. Die Eigenschaften, die den Codierungsmodus steuern, sind [**MFPKEY \_ VBRENABLED**](mfpkey-vbrenabledproperty.md) und [**MFPKEY \_ PASSESUSED.**](mfpkey-passesusedproperty.md) Wenn der Modus im Encoder festgelegt ist, müssen Sie einen Ausgabetyp aufzählen und auswählen und ihn ohne Änderung verwenden, genau wie bei CBR.
 
-## <a name="identifying-quality-based-vbr-types"></a>Identifizieren von Qualitäts basierten VBR-Typen
+## <a name="identifying-quality-based-vbr-types"></a>Identifizieren qualitätsbasierter VBR-Typen
 
-Die Vorgehensweise zum Identifizieren von Qualitäts basierten VBR-Typen hängt davon ab, ob der Encoder als DirectX Media Object (DMO) fungiert oder als Media Foundation Transform (MFT) fungiert. Informationen dazu, wann ein Encoder als DMO oder MFT fungiert, finden Sie auf den einzelnen Codec-Referenzseiten unter [Codec-Objekte](codecobjects.md).
+Das Verfahren zum Identifizieren qualitätsbasierter VBR-Typen hängt davon ab, ob der Encoder als DirectX-Medienobjekt (DMO) oder als Media Foundation Transform (MFT) agiert. Informationen dazu, wann ein Encoder als DMO oder MFT fungiert, finden Sie auf den einzelnen Codec-Referenzseiten unter [Codec-Objekte.](codecobjects.md)
 
-Wenn ein Audioencoder als DMO fungiert und Sie den Encoder für die Verwendung von One-Pass-VBR konfigurieren, listet er alle unterstützten Ausgabetypen auf. Allerdings möchten Sie in der Regel einen 1-Pass-VBR-Typ auf Grundlage des Quality-Parameters auswählen. Der Encoder legt den Qualitäts Wert für einstufige VBR-Ausgabetypen im **navgbytespersec** -Member der **WaveFormatEx** -Struktur ab, auf die durch **DMO \_ Media \_ Type. pbformat** verwiesen wird.
+Wenn ein Audioencoder als DMO und Sie den Encoder für die Verwendung von VBR mit einem Durchgang konfigurieren, werden alle unterstützten Ausgabetypen aufzählt. Sie sollten jedoch in der Regel einen VBR-Typ mit einem Durchgang basierend auf dem Qualitätsparameter auswählen. Der Encoder legt den Qualitätswert für VBR-Ausgabetypen mit einem Durchgang im **nAvgBytesPerSec-Member** der **WAVEFORMATEX-Struktur** ab, auf die DMO **MEDIA \_ \_ TYPE.pbFormat verweist.**
 
-Dieser Wert wird in folgendem Format gespeichert: 0x7fffffxx, wobei XX der Qualitäts Wert ist (von 0 bis 100). Beispielsweise wird mit dem **navgbytespersec** -Wert 0x7fffff62 der Qualitätsgrad 98 (0x62 = 98) angegeben.
+Dieser Wert wird im folgenden Format gespeichert: 0x7FFFFFXX, wobei XX der Qualitätswert ist (von 0 bis 100). Beispielsweise gibt der **nAvgBytesPerSec-Wert** 0x7FFFFF62 Qualitätsstufe 98 an (0x62 = 98).
 
-Im folgenden Beispiel wird gezeigt, wie die Qualitätsstufe eines Formats überprüft wird, wenn der Encoder als DMO fungiert.
+Das folgende Beispiel zeigt, wie sie die Qualitätsstufe eines Formats überprüfen, wenn der Encoder als ein DMO.
 
 
 ```
@@ -46,11 +46,11 @@ void ShowQuality(WAVEFORMATEX* pWave)
 
 
 
-Wenn der Encoder als MFT fungiert und einen Ausgabetyp bei einem Aufrufen von **getavailableoutputtype** auflistet, können Sie die MFT für die zuletzt **\_ \_ \_ aufgelistete \_ vbrquality-Eigenschaft von mfpkey** Abfragen. Der zurückgegebene Wert gibt die VBR-Qualität des zuletzt zurückgegebenen Ausgabemedien Typs an. Anschließend können Sie diesen Wert verwenden, um die [**\_ gewünschte \_ Eigenschaft "mfpkey**](mfpkey-desired-vbrqualityproperty.md) " des Encoders festzulegen.
+Wenn der Encoder als MFT agiert und bei einem Aufruf von **GetAvailableOutputType** einen Ausgabetyp aufzählt, können Sie MFT nach der **MFPKEY \_ MOST RECENTLY \_ \_ ENUMERATED \_ VBRQUALITY-Eigenschaft** abfragen. Der zurückgegebene Wert gibt die VBR-Qualität des zuletzt zurückgegebenen Ausgabemedientyps an. Anschließend können Sie mit diesem Wert die [**MFPKEY \_ DESIRED \_ VBRQUALITY-Eigenschaft**](mfpkey-desired-vbrqualityproperty.md) des Encoders festlegen.
 
-## <a name="setting-peak-constraints"></a>Festlegen von Spitzen Einschränkungen
+## <a name="setting-peak-constraints"></a>Festlegen von Spitzeneinschränkungen
 
-Bei Qualitäts basierter VBR (One-Pass) und uneingeschränkter 2-Pass-VBR sind nach dem Abrufen des Ausgabe Typs keine weiteren Einstellungen erforderlich. Wenn Sie VBR mit hoher Last verwenden möchten, rufen Sie einen Ausgabetyp mit aktiviertem VBR und zwei Durchläufen ab. Dieser Typ beschreibt ohne Änderung die nicht eingeschränkten VBR-Einstellungen. Legen Sie zum Festlegen von Spitzen Einschränkungen die Eigenschaften [mfpkey \_ Rmax](mfpkey-rmaxproperty.md) und [mfpkey \_ bmax](mfpkey-bmaxproperty.md) fest.
+Für eine qualitätsbasierte VBR (One-Pass) und eine nicht gestützte VBR mit zwei Durchgängen sind nach dem Abrufen des Ausgabetyps keine zusätzlichen Einstellungen erforderlich. Rufen Sie einen Ausgabetyp mit aktivierter VBR und zwei festgelegten Durchläufen ab, um vbr mit Eingeschränkter Spitzenlast zu verwenden. Dieser Typ beschreibt ohne Änderung die nicht trainierten VBR-Einstellungen. Legen Sie zum Festlegen von Spitzeneinschränkungen die [Eigenschaften MFPKEY \_ RMAX](mfpkey-rmaxproperty.md) und [MFPKEY \_ BMAX](mfpkey-bmaxproperty.md) fest.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -62,7 +62,7 @@ Bei Qualitäts basierter VBR (One-Pass) und uneingeschränkter 2-Pass-VBR sind n
 [Suchen von Audioencoder-Ausgabetypen](findingaudioencoderoutputtypes.md)
 </dt> <dt>
 
-[Verwenden von Two-Pass Codierung](usingtwoencodingpasses.md)
+[Verwenden Two-Pass Codierung](usingtwoencodingpasses.md)
 </dt> <dt>
 
 [Verwenden der VBR-Codierung](usingvbrencoding.md)

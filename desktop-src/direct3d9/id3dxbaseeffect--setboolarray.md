@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: cad6846914d348dd49d6362d70271c5af078e35d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: beceff1f6364b22a2cef96b37979fea6b361d4cecde7e720b4274fcc1adce28c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749020"
 ---
 # <a name="id3dxbaseeffectsetboolarray-method"></a>ID3DXBaseEffect::SetBoolArray-Methode
 
@@ -79,7 +79,7 @@ Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die M
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |

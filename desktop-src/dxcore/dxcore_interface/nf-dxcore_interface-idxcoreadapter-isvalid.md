@@ -1,19 +1,19 @@
 ---
 title: IDXCoreAdapter::IsValid
-description: Bestimmt, ob dieses DXCore-Adapter Objekt noch gültig ist.
+description: Bestimmt, ob dieses DXCore-Adapterobjekt noch gültig ist.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: f58d8607b75253efda2e111eb358f576d36b65f0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6b8a0ccadb46f20db9c5f2a23ac8709b391254ee453f05424dadee309f33fc40
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119842540"
 ---
-# <a name="idxcoreadapterisvalid-method"></a>Idxcoreadapter:: IsValid-Methode
+# <a name="idxcoreadapterisvalid-method"></a>IDXCoreAdapter::IsValid-Methode
 
-Bestimmt, ob dieses DXCore-Adapter Objekt noch gültig ist. Programmieranleitungen und Codebeispiele finden [Sie unter Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md).
+Bestimmt, ob dieses DXCore-Adapterobjekt noch gültig ist. Programmieranleitungen und Codebeispiele finden Sie unter [Using DXCore to enumerate adapters](../dxcore-enum-adapters.md)(Verwenden von DXCore zum Aufzählen von Adaptern).
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,12 +21,12 @@ Bestimmt, ob dieses DXCore-Adapter Objekt noch gültig ist. Programmieranleitung
 virtual bool STDMETHODCALLTYPE IsValid() = 0;
 ```
 
-## <a name="returns"></a>Gibt zurück
+## <a name="returns"></a>Rückgabe
 
 Typ: **bool**
 
-Gibt zurück,  `true`   Wenn dieses DXCore-Adapter Objekt noch gültig ist. Andernfalls wird zurückgegeben  `false` .
+Gibt `true` zurück, wenn dieses DXCore-Adapterobjekt noch gültig ist. Andernfalls wird `false`zurückgegeben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Idxcoreadapter](./nn-dxcore_interface-idxcoreadapter.md), [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Auflisten von Adaptern](../dxcore-enum-adapters.md)
+[IDXCoreAdapter](./nn-dxcore_interface-idxcoreadapter.md), [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md)

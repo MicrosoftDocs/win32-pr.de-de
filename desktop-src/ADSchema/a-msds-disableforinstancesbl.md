@@ -1,11 +1,11 @@
 ---
-title: ms-DS-deaktivieren-for-instance-BL-Attribut
-description: Rückwärts Verknüpfungs Verweis auf das ms-DS-Service-Connection-Point-Publication-Service-Objekt.
+title: ms-DS-Disable-For-Instances-BL-Attribut
+description: Rückwärtsverknüpfungsverweis auf das Ms-DS-Service-Connection-Point-Publication-Service-Objekt.
 ms.assetid: b089b824-b76e-4195-86c2-b4cd4e5d0a98
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-deaktivieren-für-Instanzen-BL-Attribut AD-Schema
-- AD-Schema des msDS-disableforinstancesbl-Attributs
+- MS-DS-Disable-For-Instances-BL-Attribut AD-Schema
+- MSDS-DisableForInstancesBL-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 270d34d26117a7d615b133c46e00e913f1831500
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 664b5728d73aefc4a64d15e7ae444171e24b1b1e439eb04deb2b2e5cb57f5a22
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106345555"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119804210"
 ---
-# <a name="ms-ds-disable-for-instances-bl-attribute"></a>ms-DS-deaktivieren-for-instance-BL-Attribut
+# <a name="ms-ds-disable-for-instances-bl-attribute"></a>ms-DS-Disable-For-Instances-BL-Attribut
 
-Rückwärts Verknüpfungs Verweis auf das [**ms-DS-Service-Connection-Point-Publication-Service-**](c-msds-serviceconnectionpointpublicationservice.md) Objekt.
+Rückwärtsverknüpfungsverweis auf das [**Ms-DS-Service-Connection-Point-Publication-Service-Objekt.**](c-msds-serviceconnectionpointpublicationservice.md)
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-deaktivieren-für-Instanzen-BL          |
-| LDAP-Display-Name | MSDS-disableforinstancesbl              |
+| CN                | ms-DS-Disable-For-Instances-BL          |
+| Ldap-Anzeigename | msDS-DisableForInstancesBL              |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.1871                 |
-| System-ID-GUID    | 8b9d31dd-67ea-cd42-9b88-7cddb36c21f 4    |
+| System-ID-GUID    | 8f9d31dd-67ea-cd42-9b88-7cddb36c21f4    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -52,11 +52,11 @@ Rückwärts Verknüpfungs Verweis auf das [**ms-DS-Service-Connection-Point-Publ
 |------------------------|---------------------------------|
 | Link-ID                | 2043                            |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

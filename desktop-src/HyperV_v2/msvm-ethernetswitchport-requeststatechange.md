@@ -1,7 +1,7 @@
 ---
 description: RequestStateChange-Methode der Msvm_EthernetSwitchPort - Fordert eine Zustandsänderung an.
 ms.assetid: 967c1256-d44e-476f-a24e-edcca2b083d2
-title: RequestStateChange-Methode der Msvm_EthernetSwitchPort-Klasse
+title: RequestStateChange-Methode der Msvm_EthernetSwitchPort Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: f83cf73af26e4118a342cce4059dab0a58b4f4c6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7538d24218d2cb4a9abc5087b47cae588e02bd40729565a180a13dd1e19edac0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789970"
 ---
 # <a name="requeststatechange-method-of-the-msvm_ethernetswitchport-class"></a>RequestStateChange-Methode der Msvm \_ EthernetSwitchPort-Klasse
 
@@ -155,7 +155,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |

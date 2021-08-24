@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse der Win32-idecontrollerdevice-Zuordnung bezieht einen IDE-Controller (Integrated Drive Electronics) und das mit verbundene logische Gerät (z. b. ein Laufwerk) in Beziehung.
+description: Die \_ WMI-Klasse der Win32-IDEControllerDevice-Zuordnung verknüpft einen IDE-Controller (Integrated Drive Electronics) und das logische Gerät, das mit einem Datenträgerlaufwerk verbunden ist.
 ms.assetid: 1b0a551c-d836-4147-91ed-a0a7d97f4a5b
 ms.tgt_platform: multiple
 title: Win32_IDEControllerDevice-Klasse
@@ -21,18 +21,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: bc690aadd442d656132b2d9e4539cc27961c3ef9
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: d4cd05f3915e23b3fb03fec232e51596b435dddcd8d529c85343255125eee38a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393198"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119828040"
 ---
-# <a name="win32_idecontrollerdevice-class"></a>Win32- \_ idecontrollerdevice-Klasse
+# <a name="win32_idecontrollerdevice-class"></a>Win32 \_ IDEControllerDevice-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) der **Win32- \_ idecontrollerdevice** -Zuordnung bezieht einen IDE-Controller (Integrated Drive Electronics) und das mit verbundene logische Gerät (z. b. ein Laufwerk) in Beziehung.
+Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) der **Win32-IDEControllerDevice-Zuordnung \_** verknüpft einen IDE-Controller (Integrated Drive Electronics) und das logische Gerät, das mit einem Datenträgerlaufwerk verbunden ist.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,28 +52,28 @@ class Win32_IDEControllerDevice : CIM_ControlledBy
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ idecontrollerdevice** -Klasse verfügt über diese Typen von Membern:
+Die **\_ Win32-IDEControllerDevice-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ idecontrollerdevice** -Klasse verfügt über diese Eigenschaften.
+Die **\_ Win32-IDEControllerDevice-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Accessstate**
+**AccessState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Controller aktiv auf das Gerät zugreift oder darauf zugreift. Diese Informationen sind erforderlich, wenn ein logisches Gerät durch mehrere Controller befohlen werden kann oder darauf zugegriffen werden kann.
+Gibt an, ob der Controller aktiv befehlet oder auf das Gerät zugreift. Diese Informationen sind erforderlich, wenn ein logisches Gerät von mehreren Controllern befehlsgesteuert oder über diese aufgerufen werden kann.
 
-Diese Eigenschaft wird von [**CIM \_ controlledby**](cim-controlledby.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ControlledBy**](cim-controlledby.md)geerbt.
 
 <dt>
 
@@ -100,23 +100,23 @@ Diese Eigenschaft wird von [**CIM \_ controlledby**](cim-controlledby.md)geerbt.
 
 </dd> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32- \_ idecontroller**
+Datentyp: **\_ Win32-IDEController**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \| Win32 \_ idecontroller")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \| Win32 \_ IDEController")
 </dt> </dl>
 
-Ein [**Win32- \_ idecontroller**](win32-idecontroller.md) , der den IDE-Controller darstellt, der diesem Gerät zugeordnet ist.
+Ein [**\_ Win32-IDEController,**](win32-idecontroller.md) der den diesem Gerät zugeordneten IDE-Controller darstellt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -125,17 +125,17 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \| CIM \_ LogicalDevice")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \| CIM \_ LogicalDevice")
 </dt> </dl>
 
-Ein [**CIM \_ LogicalDevice**](cim-logicaldevice.md) , das das logische Gerät darstellt, das mit dem IDE-Controller verbunden ist.
+Ein [**CIM \_ LogicalDevice,**](cim-logicaldevice.md) das das logische Gerät darstellt, das mit dem IDE-Controller verbunden ist.
 
 </dd> <dt>
 
-**Aushandateddatawidth**
+**NegotiatedDataWidth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -144,16 +144,16 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits")
 </dt> </dl>
 
-Wenn mehrere Bus-oder Verbindungsdaten breiten möglich sind, definiert diese Eigenschaft die jeweils verwendete Eigenschaft zwischen den Geräten. Die Daten Breite wird in Bits angegeben. Wenn die Daten Breite nicht ausgehandelt wird oder diese Informationen für die Geräteverwaltung nicht verfügbar oder wichtig sind, sollte die-Eigenschaft auf 0 (null) festgelegt werden.
+Wenn mehrere Bus- oder Verbindungsdatenbreiten möglich sind, definiert diese Eigenschaft den zwischen den Geräten verwendeten. Die Datenbreite wird in Bits angegeben. Wenn die Datenbreite nicht ausgehandelt wird oder diese Informationen für die Geräteverwaltung nicht verfügbar oder wichtig sind, sollte die -Eigenschaft auf 0 (null) festgelegt werden.
 
-Diese Eigenschaft wird von CIM-Geräte [**\_ erviceconnetction**](cim-deviceconnection.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ DeviceConnection**](cim-deviceconnection.md)geerbt.
 
 </dd> <dt>
 
-**Aushandatedspeed**
+**NegotiatedSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -162,47 +162,47 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde")
 </dt> </dl>
 
-Wenn mehrere Bus-oder Verbindungsgeschwindigkeiten möglich sind, definiert diese Eigenschaft die zwischen den Geräten verwendete. Die Geschwindigkeit wird in Bits pro Sekunde angegeben. Wenn Verbindungs-oder Busgeschwindigkeiten nicht ausgehandelt werden oder diese Informationen für die Geräteverwaltung nicht verfügbar oder wichtig sind, sollte die-Eigenschaft auf 0 (null) festgelegt werden.
+Wenn mehrere Bus- oder Verbindungsgeschwindigkeiten möglich sind, definiert diese Eigenschaft die zwischen den Geräten verwendete. Die Geschwindigkeit wird in Bits pro Sekunde angegeben. Wenn keine Verbindungs- oder Busgeschwindigkeiten ausgehandelt werden oder diese Informationen für die Geräteverwaltung nicht verfügbar oder wichtig sind, sollte die -Eigenschaft auf 0 (null) festgelegt werden.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
-Diese Eigenschaft wird von CIM-Geräte [**\_ erviceconnetction**](cim-deviceconnection.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ DeviceConnection**](cim-deviceconnection.md)geerbt.
 
 </dd> <dt>
 
-**Anzahlersätze**
+**NumberOfHardResets**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl von Festplatten, die vom Controller ausgegeben werden. Bei einer festen zurück setzung wird das Gerät wieder in den Initialisierungs-oder Startzustand versetzt. Alle internen Geräte Zustandsinformationen und Daten gehen verloren.
+Die Anzahl der vom Controller ausgegebenen hard resets. Durch eine harte Zurücksetzung wird das Gerät in den Initialisierungs- oder Startzustand zurückgesetzt. Alle informationen und Daten zum internen Gerätezustand gehen verloren.
 
-Diese Eigenschaft wird von [**CIM \_ controlledby**](cim-controlledby.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ControlledBy**](cim-controlledby.md)geerbt.
 
 </dd> <dt>
 
-**Anzahlermengen**
+**NumberOfSoftResets**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der vom Controller ausgestellten Soft-zurück Stellungen. Eine weiche zurück Setzung löscht den aktuellen Gerätestatus und die Daten nicht vollständig. Die genaue Semantik ist abhängig vom Gerät und den Protokollen und Mechanismen, die für die Kommunikation mit dem Gerät verwendet werden.
+Anzahl der vom Controller ausgestellten soft resets. Bei einem soft reset werden der aktuelle Gerätezustand und die Aktuellen Daten nicht vollständig gelöscht. Die genaue Semantik hängt vom Gerät sowie von den Protokollen und Mechanismen ab, die für die Kommunikation mit dem Gerät verwendet werden.
 
-Diese Eigenschaft wird von [**CIM \_ controlledby**](cim-controlledby.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ControlledBy**](cim-controlledby.md)geerbt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ idecontrollerdevice** -Klasse wird von [**CIM \_ controlledby**](cim-controlledby.md)abgeleitet.
+Die **\_ Win32-IDEControllerDevice-Klasse** wird von [**CIM \_ ControlledBy**](cim-controlledby.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -212,20 +212,20 @@ Die **Win32- \_ idecontrollerdevice** -Klasse wird von [**CIM \_ controlledby**]
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ controlledby**](cim-controlledby.md)
+[**CIM \_ ControlledBy**](cim-controlledby.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Ein Gerätefehler ist in einem audiorendererfilter aufgetreten.
+description: In einem Audiorendererfilter ist ein Gerätefehler aufgetreten.
 ms.assetid: 60e36476-f553-468d-a28d-351fdf4a02f1
-title: EC_SNDDEV_OUT_ERROR (DShow. h)
+title: EC_SNDDEV_OUT_ERROR (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a1182aaba7bb30ad27511b47ba8e4432d8fd33da
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: eefe6dbe57b26bf167a7fbc668010930bacffc321d42d2847ae6776696e009fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119792410"
 ---
-# <a name="ec_snddev_out_error"></a>EC \_ snddev \_ out- \_ Fehler
+# <a name="ec_snddev_out_error"></a>EC \_ SNDDEV \_ OUT \_ ERROR
 
-Ein Gerätefehler ist in einem audiorendererfilter aufgetreten.
+In einem Audiorendererfilter ist ein Gerätefehler aufgetreten.
 
 ## <a name="parameters"></a>Parameter
 
@@ -22,14 +22,14 @@ Ein Gerätefehler ist in einem audiorendererfilter aufgetreten.
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-DWORD-Wert aus dem " [**snddev \_ Err**](/previous-versions/windows/desktop/api/audevcod/ne-audevcod-snddev_err) "-enumerierten Typ, der angibt, wie auf das Gerät zugegriffen wurde, als der Fehler aufgetreten ist.
+DWORD-Wert aus dem [**aufzählten SNDDEV \_ ERR-Typ,**](/previous-versions/windows/desktop/api/audevcod/ne-audevcod-snddev_err) der angibt, wie auf das Gerät zugegriffen wurde, als der Fehler aufgetreten ist.
 
 </dd> <dt>
 
 <span id="lParam2"></span><span id="lparam2"></span><span id="LPARAM2"></span>*lParam2*
 </dt> <dd>
 
-DWORD-Wert, der den Fehler angibt, der vom Sound-Geräte Rückruf zurückgegeben wurde
+DWORD-Wert, der den Vom Soundgeräteaufruf zurückgegebenen Fehler angibt.
 
 </dd> </dl>
 
@@ -43,18 +43,18 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

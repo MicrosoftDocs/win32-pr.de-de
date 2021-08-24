@@ -1,7 +1,7 @@
 ---
-description: Enthält Informationen für die cryptuidlgviewsignerinfo-Funktion.
+description: Enthält Informationen für die CryptUIDlgViewSignerInfo-Funktion.
 ms.assetid: 2b76de4f-4b35-477e-a67e-435434e066c6
-title: CRYPTUI_VIEWSIGNERINFO_STRUCT Struktur
+title: CRYPTUI_VIEWSIGNERINFO_STRUCT-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: da150da6b5115e20a78a4edca64a5c9a97f66132
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bf35b4475047548e1744174717c238e99c6a744c17ef2fa76ce48217a4fc72aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119875860"
 ---
-# <a name="cryptui_viewsignerinfo_struct-structure"></a>Cryptui \_ viewsignerinfo- \_ Struktur Struktur
+# <a name="cryptui_viewsignerinfo_struct-structure"></a>CRYPTUI \_ \_ VIEWSIGNERINFO-STRUKTUR
 
-\[Die **cryptui \_ viewsignerinfo \_** -Struktur ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
+\[Die **CRYPTUI \_ VIEWSIGNERINFO-Struktur \_** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
 
-Die **cryptui \_ viewsignerinfo \_** -Struktur Struktur enthält Informationen für die [**cryptuidlgviewsignerinfo**](cryptuidlgviewsignerinfo.md) -Funktion.
+Die **CRYPTUI \_ VIEWSIGNERINFO-Struktur \_** enthält Informationen für die [**CryptUIDlgViewSignerInfo-Funktion.**](cryptuidlgviewsignerinfo.md)
 
 > [!Note]  
-> Diese Struktur ist nicht in einer veröffentlichten Header Datei deklariert. Um diese Struktur zu verwenden, deklarieren Sie Sie im exakten Format.
+> Diese Struktur wird nicht in einer veröffentlichten Headerdatei deklariert. Um diese Struktur zu verwenden, deklarieren Sie sie im genauen angezeigten Format.
 
  
 
@@ -68,77 +68,77 @@ Die Größe (in Bytes) dieser Struktur.
 **hwndParent**
 </dt> <dd>
 
-Das Handle des Fensters, das als übergeordnetes Element des Dialog Felds angezeigt werden soll. Dieser Member kann **null** sein, wenn das Dialogfeld kein übergeordnetes Element aufweisen soll.
+Das Handle des Fensters, das dem Dialogfeld über-übergeordnetes Element sein soll. Dieser Member kann NULL **sein,** wenn das Dialogfeld kein übergeordnetes Element enthalten soll.
 
 </dd> <dt>
 
 **dwFlags**
 </dt> <dd>
 
-Ein Satz von Flags, der das Verhalten der [**cryptuidlgviewsignerinfo**](cryptuidlgviewsignerinfo.md) -Funktion ändert. Zurzeit sind keine Flags definiert, daher muss dieser Member 0 (null) sein.
+Ein Satz von Flags, der das Verhalten der [**CryptUIDlgViewSignerInfo-Funktion**](cryptuidlgviewsignerinfo.md) ändert. Derzeit sind keine Flags definiert, daher muss dieser Member 0 (null) sein.
 
 </dd> <dt>
 
-**sztitle**
+**szTitle**
 </dt> <dd>
 
-Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Titel enthält, der im Dialogfeld angezeigt werden soll. Wenn dieser Member **null** ist, wird ein Standard Titel verwendet.
+Ein Zeiger auf eine auf NULL terminierte Zeichenfolge, die den Titel enthält, der im Dialogfeld angezeigt werden soll. Wenn dieser Member NULL **ist,** wird ein Standardtitel verwendet.
 
 </dd> <dt>
 
-**psignerinfo**
+**pSignerInfo**
 </dt> <dd>
 
-Ein Zeiger auf eine [**CMSG- \_ Signatur Geber \_ Info**](/windows/desktop/api/Wincrypt/ns-wincrypt-cmsg_signer_info) -Struktur, die die anzuzeigenden Signatur Geber Informationen enthält.
+Ein Zeiger auf eine [**CMSG \_ SIGNER \_ INFO-Struktur,**](/windows/desktop/api/Wincrypt/ns-wincrypt-cmsg_signer_info) die die anzuzeigenden Signaturinformationen enthält.
 
 </dd> <dt>
 
-**hmsg**
+**hMsg**
 </dt> <dd>
 
-Das Handle der Nachricht, aus der die Signatur Geber Informationen extrahiert wurden.
+Das Handle der Nachricht, aus der die Signatorinformationen extrahiert wurden.
 
 </dd> <dt>
 
-**pszoid**
+**pszOID**
 </dt> <dd>
 
-Ein Zeiger auf eine mit NULL endende ANSI-Zeichenfolge, die die Zeichen folgen Darstellung des [*Objekt Bezeichners*](../secgloss/o-gly.md) (OID) enthält, der angibt, wofür das Zertifikat, das die Signatur durchgeführt hat, überprüft werden soll. Wenn diese z. b. aufgerufen wird, um die Signatur einer [*Zertifikat Vertrauens Liste (Certificate Trust List*](../secgloss/c-gly.md) , CTL) anzuzeigen, sollte die **szoid \_ KP \_ CTL- \_ Verwendungs \_ Signatur** -OID-Zeichenfolge übergeben werden. Wenn dieser Member **null** ist, wird das Zertifikat nicht für die Verwendung überprüft.
+Ein Zeiger auf eine NULL-terminierte ANSI-Zeichenfolge, die die Zeichenfolgendarstellung des Objektbezeichners [](../secgloss/o-gly.md) (OID) enthält, die angibt, auf welches Zertifikat die Signatur überprüft werden soll. Wenn dies beispielsweise aufgerufen wird, um die Signatur einer Zertifikatvertrauensliste (Certificate [*Trust List,*](../secgloss/c-gly.md) CTL) anzeigen zu können, sollte die **OID-Zeichenfolge szOID \_ KP \_ CTL USAGE \_ \_ SIGNING** übergeben werden. Wenn dieser Member **NULL ist,** wird das Zertifikat nicht auf Verwendungen überprüft.
 
 </dd> <dt>
 
 **dwReserved**
 </dt> <dd>
 
-Dieser Parameter wird derzeit nicht verwendet. Dieser Member muss **null** sein.
+Dieser Parameter wird derzeit nicht verwendet. Dieser Member muss NULL **sein.**
 
 </dd> <dt>
 
-**cstores**
+**cStores**
 </dt> <dd>
 
-Die Anzahl der Elemente im **rghstores** -Array.
+Die Anzahl der Elemente im **rghStores-Array.**
 
 </dd> <dt>
 
-**rghstores**
+**rghStores**
 </dt> <dd>
 
-Ein Array von **HCERTSTORE** -Werten, die die anderen Zertifikat Speicher für die Suche nach dem Zertifikat darstellen, mit dem die Nachricht signiert wurde. Wenn dieser Member **null** ist, werden keine weiteren Speicher durchsucht. Der **cstores** -Member enthält die Anzahl der Elemente in diesem Array.
+Ein Array von **HCERTSTORE-Werten,** die die anderen Zertifikatspeicher darstellen, die nach dem Zertifikat suchen, das die Nachricht signiert hat. Wenn dieser Member NULL **ist,** werden keine zusätzlichen Speicher durchsucht. Das **cStores-Element** enthält die Anzahl der Elemente in diesem Array.
 
 </dd> <dt>
 
-**cpropsheetpages**
+**cPropSheetPages**
 </dt> <dd>
 
-Die Anzahl der Elemente im **rgpropsheetpages** -Array.
+Die Anzahl der Elemente im **rgPropSheetPages-Array.**
 
 </dd> <dt>
 
-**rgpropsheetpages**
+**rgPropSheetPages**
 </dt> <dd>
 
-Ein Array von [**PROPSHEETPAGE**](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) -Struktur Zeigern, die alle zusätzlichen Seiten definieren, die im Standard Dialogfeld angezeigt werden sollen. Wenn dieser Member **null** ist, werden keine weiteren Seiten angezeigt. Der **cpropsheetpages** -Member enthält die Anzahl der Elemente in diesem Array.
+Ein Array von [**PROPSHEETPAGE-Strukturze0ern,**](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) die zusätzliche Seiten definieren, die im Standarddialogfeld angezeigt werden. Wenn dieser Member **NULL ist,** werden keine zusätzlichen Seiten angezeigt. Das **cPropSheetPages-Element** enthält die Anzahl der Elemente in diesem Array.
 
 </dd> </dl>
 
@@ -148,9 +148,9 @@ Ein Array von [**PROPSHEETPAGE**](/windows/win32/api/prsht/ns-prsht-propsheetpag
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                      |
-| Unicode- und ANSI-Name<br/>   | **Cryptui \_ Viewsignerinfo \_ structw** (Unicode) und **cryptui \_ viewsignerinfo \_ Structa** (ANSI)<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                      |
+| Unicode- und ANSI-Name<br/>   | **CRYPTUI \_ VIEWSIGNERINFO \_ STRUCTW** (Unicode) und **CRYPTUI \_ VIEWSIGNERINFO \_ STRUCTA** (ANSI)<br/> |
 
 
 
@@ -158,7 +158,7 @@ Ein Array von [**PROPSHEETPAGE**](/windows/win32/api/prsht/ns-prsht-propsheetpag
 
 <dl> <dt>
 
-[**Cryptuidlgviewsignerinfo**](cryptuidlgviewsignerinfo.md)
+[**CryptUIDlgViewSignerInfo**](cryptuidlgviewsignerinfo.md)
 </dt> </dl>
 
  

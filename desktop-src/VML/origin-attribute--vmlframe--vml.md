@@ -1,50 +1,50 @@
 ---
-title: Origin-Attribut (vmlframe) (VML)
-description: Origin-Attribut (vmlframe) (VML)
+title: Origin-Attribut (VMLFrame)(VML)
+description: Origin-Attribut (VMLFrame)(VML)
 ms.assetid: 317c027e-5054-4543-ad98-2c21d1cf7154
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae9341eecea9ec1eae8aaf1d7b1ad729986a8249
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 874b857a2408927e296f82f0f9aa0a5e15f6da69b1e2af6eaf6ebe2c5df746d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729992"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119768260"
 ---
-# <a name="origin-attribute-vmlframevml"></a>Origin-Attribut (vmlframe) (VML)
+# <a name="origin-attribute-vmlframevml"></a>Origin-Attribut (VMLFrame)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Ursprung des Clippingbereichs des Frames. Lese-/Schreibzugriff. **VgVector2D**.
+Definiert den Ursprung des Ausschneidebereichs des Frames. Lese-/Schreibzugriff. **VgVector2D**.
 
 **Gilt für**
 
-[Vmlframe](msdn-online-vml-vmlframe-element.md)
+[VMLFrame](msdn-online-vml-vmlframe-element.md)
 
 **Tagsyntax**
 
-<v: *Element* Origin = " *Expression* " >
+<v: *element* origin="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Origin = "*Ausdruck*"
+*element* .origin="*expression*"
 
-*Ausdruck* = *Element*. Origin
+*expression* = *Element*.origin
 
 **Anmerkungen**
 
-Der Standardwert ist 0,0. Beachten Sie, dass **Origin** nur funktioniert, wenn [Clip](msdn-online-vml-clip-attribute.md) den Wert **true** hat. In diesem Attribut wird der Ursprung als die linke obere Ecke des Frames definiert.
+Der Standardwert ist 0,0. Beachten Sie, **dass Origin** nur funktioniert, wenn [Clip](msdn-online-vml-clip-attribute.md) true **ist.** In diesem Attribut wird der Ursprung als die obere linke Ecke des Frames definiert.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Der Ursprung des Clippingbereichs beträgt 100 PT, 100 PT.
+Der Ursprung des Clippingbereichs ist 100pt,100pt.
 
 
 ```HTML
@@ -57,6 +57,6 @@ Der Ursprung des Clippingbereichs beträgt 100 PT, 100 PT.
 
 
 
- 
+ 
 
- 
+ 

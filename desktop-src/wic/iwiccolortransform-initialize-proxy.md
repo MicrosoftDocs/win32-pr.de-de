@@ -1,5 +1,5 @@
 ---
-description: Initialisiert eine iwiccolortransform mit einer IWICBitmapSource und wandelt sie von einem IWICColorContext in einen anderen um.
+description: Initialisiert eine IWICColorTransform mit einer IWICBitmapSource und transformiert sie von einem IWICColorContext in einen anderen.
 ms.assetid: 68C8EF36-DFFF-4FF3-BD9A-583508F9C2B1
 title: IWICColorTransform_Initialize_Proxy-Funktion
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - WindowsCodecsExt.dll
-ms.openlocfilehash: 29d29bfd925d979897b22711c748083b94673142
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fcfe124d03e9ad41edb49554613bc18b2cd15818b3f52db7ca368e27f5c4fcc9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119841370"
 ---
-# <a name="iwiccolortransform_initialize_proxy-function"></a>Iwiccolortransform- \_ \_ Proxy Funktion initialisieren
+# <a name="iwiccolortransform_initialize_proxy-function"></a>IWICColorTransform Initialize \_ \_ Proxy-Funktion
 
-Initialisiert eine [**iwiccolortransform**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolortransform) mit einer [**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) und wandelt sie von einem [**IWICColorContext**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolorcontext) in einen anderen um.
+Initialisiert eine [**IWICColorTransform mit**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolortransform) [**einer IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) und transformiert sie [**von einem IWICColorContext in**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolorcontext) einen anderen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,48 +43,48 @@ HRESULT IWICColorTransform_Initialize_Proxy(
 
 <dl> <dt>
 
-*picolortransform* \[ in\]
+*pIColorTransform* \[ In\]
 </dt> <dd>
 
-Typ: **[ **iwiccolortransform**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolortransform)\***
+Typ: **[ **IWICColorTransform**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolortransform)\***
 
-Die Farb Transformation, die initialisiert werden soll.
+Die zu initialisierende Farbtransformation.
 
 </dd> <dt>
 
-*pibitmapsource* \[ in\]
+*pIBitmapSource* \[ In\]
 </dt> <dd>
 
 Typ: **[ **IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)\***
 
-Die Bitmapquelle, die zum Initialisieren der Farb Transformation verwendet wird.
+Die Bitmapquelle, die zum Initialisieren der Farbtransformation verwendet wird.
 
 </dd> <dt>
 
-*picontextsource* \[ in\]
+*pIContextSource* \[ In\]
 </dt> <dd>
 
 Typ: **[ **IWICColorContext**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolorcontext)\***
 
-Die Farb Kontext Quelle.
+Die Farbkontextquelle.
 
 </dd> <dt>
 
-*picontextdest* \[ in\]
+*pIContextDest* \[ In\]
 </dt> <dd>
 
 Typ: **[ **IWICColorContext**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolorcontext)\***
 
-Das Farb Kontext Ziel.
+Das Farbkontextziel.
 
 </dd> <dt>
 
-*pixelfmtdest* \[ in\]
+*pixelFmtDest* \[ In\]
 </dt> <dd>
 
-Typ: **reberwicpixelformatguid**
+Typ: **REFWICPixelFormatGUID**
 
-Die GUID des gewünschten Pixel Formats.
+Die GUID des gewünschten Pixelformats.
 
 </dd> </dl>
 
@@ -92,7 +92,7 @@ Die GUID des gewünschten Pixel Formats.
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,27 +1,27 @@
 ---
-description: In diesem Thema wird beschrieben, wie Sie die Schnittstellen verwenden, die den Zugriff auf XPS-Dokument Teile in einem XPS-OM ermöglichen.
+description: In diesem Thema wird beschrieben, wie die Schnittstellen verwendet werden, die Zugriff auf XPS-Dokumentteile in einer XPS OM ermöglichen.
 ms.assetid: c52f7044-890d-47d1-83f8-bae1f8d83139
-title: XPS-OM-Teil Schnittstellen
+title: XPS OM-Teilschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d81cbf17c26e4ba6c80199ee787b1ee11b28d260
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cc93023f251d96f557dfc351949b58f7b9a0b67d308903d83b182de8f710e110
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119823900"
 ---
-# <a name="xps-om-part-interfaces"></a>XPS-OM-Teil Schnittstellen
+# <a name="xps-om-part-interfaces"></a>XPS OM-Teilschnittstellen
 
-In diesem Thema wird beschrieben, wie Sie die Schnittstellen verwenden, die den Zugriff auf XPS-Dokument Teile in einem XPS-OM ermöglichen.
+In diesem Thema wird beschrieben, wie die Schnittstellen verwendet werden, die Zugriff auf XPS-Dokumentteile in einer XPS OM ermöglichen.
 
 
 
-| Schnittstellen Name                                                                                                    | Logische untergeordnete Schnittstellen                                                                                                                                                                                                                                                                                     | BESCHREIBUNG                                                                                                  |
+| Schnittstellenname                                                                                                    | Logische untergeordnete Schnittstellen                                                                                                                                                                                                                                                                                     | Beschreibung                                                                                                  |
 |-------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| [**Ixpsompart**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompart)<br/>                                                                       | [**Ixpsomdocumentsequence**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence)<br/> [**Ixpsomdocument**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocument)<br/> [**Ixpsompagereferenzierung**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference)<br/> [**Ixpsomcoreproperties**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcoreproperties)<br/> [**Ixpsomresource**](/windows/win32/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomresource)<br/>    | Dokument Komponenten, aus denen die Dokumentstruktur besteht.<br/>                                          |
-| [**Ixpsomresource**](/windows/win32/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomresource)<br/> [**Ixpsomparametresources**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompartresources)<br/> | Ixpsomfontresource<br/> Ixpsomimageresource<br/> Ixpsomcolorprofileresource<br/> Ixpsomprintticketresource<br/> Ixpsomremotediktattionaryresource<br/> Ixpsomdocumentstructureresource<br/> Ixpsomstoryfragmentsresource<br/> Ixpsomsignatureblockresource<br/> | Dokument Komponenten, die Elemente enthalten, die in einer Seite oder einem Dokument verwendet werden oder auf die verwiesen wird.<br/> |
-| [**Ixpsomparamecollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomparturicollection)<br/>                                             | Keine<br/>                                                                                                                                                                                                                                                                                              | Eine Auflistung von Teil-URIs.<br/>                                                                        |
+| [**IXpsOMPart**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompart)<br/>                                                                       | [**IXpsOMDocumentSequence**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence)<br/> [**IXpsOMDocument**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocument)<br/> [**IXpsOMPageReference**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompagereference)<br/> [**IXpsOMCoreProperties**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcoreproperties)<br/> [**IXpsOMResource**](/windows/win32/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomresource)<br/>    | Dokumentkomponenten, aus denen sich die Dokumentstruktur zusammensetzt.<br/>                                          |
+| [**IXpsOMResource**](/windows/win32/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomresource)<br/> [**IXpsOMPartResources**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompartresources)<br/> | IXpsOMFontResource<br/> IXpsOMImageResource<br/> IXpsOMColorProfileResource<br/> IXpsOMPrintTicketResource<br/> IXpsOMRemoteDictionaryResource<br/> IXpsOMDocumentStructureResource<br/> IXpsOMStoryFragmentsResource<br/> IXpsOMSignatureBlockResource<br/> | Dokumentkomponenten, die Elemente enthalten, die in einer Seite oder einem Dokument verwendet werden oder auf die von einer Seite oder einem Dokument verwiesen wird.<br/> |
+| [**IXpsOMPartUriCollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomparturicollection)<br/>                                             | Keine<br/>                                                                                                                                                                                                                                                                                              | Eine Auflistung von Teil-URIs.<br/>                                                                        |
 
 
 
@@ -29,11 +29,11 @@ In diesem Thema wird beschrieben, wie Sie die Schnittstellen verwenden, die den 
 
 ## <a name="code-examples"></a>Codebeispiele
 
-Die folgenden Codebeispiele zeigen zwei Beispiele für die Verwendung der Part-Schnittstellen für den Zugriff auf XPS OM-Inhalt.
+Die folgenden Codebeispiele zeigen zwei Beispiele für die Verwendung der Teilschnittstellen für den Zugriff auf XPS OM-Inhalte.
 
-### <a name="get-the-name-of-a-document-part"></a>Den Namen eines Dokument Teils erhalten
+### <a name="get-the-name-of-a-document-part"></a>Abrufen des Namens eines Dokumentteils
 
-Im folgenden Codebeispiel wird zu einem Dokument Teil navigiert und der Name des Teils abgerufen.
+Das folgende Codebeispiel navigiert zu einem Dokumentteil und ruft den Namen des Teils ab.
 
 
 ```C++
@@ -107,9 +107,9 @@ Im folgenden Codebeispiel wird zu einem Dokument Teil navigiert und der Name des
 
 
 
-### <a name="get-the-part-resources-that-are-associated-with-this-page"></a>Hiermit werden die Teil Ressourcen angezeigt, die dieser Seite zugeordnet sind.
+### <a name="get-the-part-resources-that-are-associated-with-this-page"></a>Abrufen der Teilressourcen, die dieser Seite zugeordnet sind
 
-Im folgenden Codebeispiel werden die Listen der verschiedenen Ressourcen abgerufen, die von dieser Seite verwendet werden.
+Das folgende Codebeispiel ruft die Listen der verschiedenen Ressourcen ab, die von dieser Seite verwendet werden.
 
 
 ```C++

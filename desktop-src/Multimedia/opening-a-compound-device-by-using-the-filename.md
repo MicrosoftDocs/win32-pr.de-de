@@ -1,21 +1,21 @@
 ---
-title: Öffnen eines Verbund Geräts mit dem Dateinamen
-description: Öffnen eines Verbund Geräts mit dem Dateinamen
+title: Öffnen eines Verbundgeräts mithilfe des Dateinamens
+description: Öffnen eines Verbundgeräts mithilfe des Dateinamens
 ms.assetid: 5199bb68-44be-4fad-af5b-8fe89f27caee
 keywords:
 - mciSendCommand-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20eb271658f77c5af4d35db96dd7bdbe6753af08
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 9c5ef021c283337c0cea2085d79fefa91667ce1dac095ff7ae17fcc448c9461c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119806360"
 ---
-# <a name="opening-a-compound-device-by-using-the-filename"></a>Öffnen eines Verbund Geräts mit dem Dateinamen
+# <a name="opening-a-compound-device-by-using-the-filename"></a>Öffnen eines Verbundgeräts mithilfe des Dateinamens
 
-Im folgenden Beispiel wird das Waveform-Audiogerät durch Angeben einer Waveform-Audiodatei mit dem Namen "Timpani" geöffnet. WAV "using the [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) function.
+Im folgenden Beispiel wird das Waveform-Audio-Gerät geöffnet, indem eine Waveform-Audiodatei mit dem Namen "TIM SINUS" angegeben wird. WAV" mithilfe der [**mciSendCommand-Funktion.**](/previous-versions//dd757160(v=vs.85))
 
 
 ```C++
@@ -43,6 +43,6 @@ wDeviceID = mciOpenParms.wDeviceID;
 
 
 
- 
+ 
 
- 
+ 

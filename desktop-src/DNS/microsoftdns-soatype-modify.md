@@ -1,11 +1,11 @@
 ---
 title: Modify-Methode der MicrosoftDNS_SOAType-Klasse
-description: Die Modify-Methode aktualisiert einen Start of Authority (SOA)-Ressourcen Daten Satz.
+description: Die Modify-Methode aktualisiert einen SOA-Ressourceneintrag (Start Of Authority).
 ms.assetid: 531b770d-9ac9-43da-8595-fbc175b51b23
 keywords:
-- DNS-Methode ändern
-- Modify-Methode (DNS), MicrosoftDNS_SOAType-Klasse
-- DNS-MicrosoftDNS_SOAType Klasse, Methode ändern
+- Ändern der DNS-Methode
+- Modify method DNS , MicrosoftDNS_SOAType class
+- MicrosoftDNS_SOAType-Klasse DNS, Modify-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ff40abc7f4e93b7122a1c48889c17f9efc4f625
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 74785804ebed8266443f0dd708a5d122e350a6cf88b91f228d2ce266481dffaa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119825080"
 ---
-# <a name="modify-method-of-the-microsoftdns_soatype-class"></a>Modify-Methode der MicrosoftDNS- \_ soatype-Klasse
+# <a name="modify-method-of-the-microsoftdns_soatype-class"></a>Modify-Methode der \_ MicrosoftDNS-SOAType-Klasse
 
-Die **Modify** -Methode aktualisiert einen Start of Authority (SOA)-Ressourcen Daten Satz.
+Die **Modify-Methode** aktualisiert einen SOA-Ressourceneintrag (Start Of Authority).
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,63 +50,63 @@ void Modify(
 
 <dl> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*Gültigkeitsdauer* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
 *SerialNumber* \[ in, optional\]
 </dt> <dd>
 
-Eine SOA-Seriennummer, die angibt, wie oft die Zone aktualisiert wurde, und wird von [*sekundären Servern*](s-gly.md) verwendet, um zu bestimmen, ob eine Zonen Übertragung notwendig ist.
+SOA-Seriennummer, die die Anzahl der Aktualisierungen der Zone darstellt und von [*sekundären Servern*](s-gly.md) verwendet wird, um zu bestimmen, ob eine Zonenübertragung erforderlich ist.
 
 </dd> <dt>
 
-*Primaryserver* \[ in, optional\]
+*PrimaryServer* \[ in, optional\]
 </dt> <dd>
 
-Der Name des primären Servers.
+Name des primären Servers.
 
 </dd> <dt>
 
-*Verantwortliche Partei* \[ in, optional\]
+*ResponsibleParty* \[ in, optional\]
 </dt> <dd>
 
-Post Fach Adresse der verantwortlichen Partei in Form von Alias. Domain, z. b. xyz.Microsoft.com. Beachten Sie die Verwendung eines Zeitraums anstelle eines bei-Symbol (@).
+Postfachadresse der verantwortlichen Partei in Form von alias.domain, z. B. xyz.microsoft.com. Beachten Sie die Verwendung eines Punkts anstelle eines at-Symbols (@).
 
 </dd> <dt>
 
-*Aktuerfrischendes Intervall* \[ in, optional\]
+*RefreshInterval* \[ in, optional\]
 </dt> <dd>
 
-Zeit in Sekunden, bevor die Zone, in der dieser Datensatz enthalten ist, aktualisiert werden soll.
+Zeit in Sekunden, bevor die Zone, die diesen Datensatz enthält, aktualisiert werden soll.
 
 </dd> <dt>
 
 *RetryDelay* \[ in, optional\]
 </dt> <dd>
 
-Die Zeit (in Sekunden), die der DNS-Server zwischen namens Auflösungs versuchen verzögert werden soll.
+Die Zeit in Sekunden, die der DNS-Server zwischen den Namensauflösungsversuchen verzögern sollte.
 
 </dd> <dt>
 
-*Expirelimit* \[ in, optional\]
+*ExpireLimit* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die sekundäre Server auf eine Antwort vom primären Server warten sollten, bevor die Kopien der Zonendatei als ungültig verworfen werden.
+Zeit in Sekunden, in der sekundäre Server auf eine Antwort vom primären Server warten sollten, bevor ihre Kopien der Zonendatei als ungültig verworfen werden.
 
 </dd> <dt>
 
-*Minimumttl* \[ in, optional\]
+*MinimumTTL* \[ in, optional\]
 </dt> <dd>
 
-TTL-Zeit (in Sekunden), die auf Ressourcen Einträge in der Zone angewendet wird, die nicht Ihre eigene Gültigkeitsdauer angeben.
+Die Gültigkeitsdauer (in Sekunden) wird auf Ressourcendatensätze in der Zone angewendet, die keine eigene Gültigkeitsdauer angeben.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
 Verweis auf das geänderte Objekt
@@ -117,9 +117,9 @@ Verweis auf das geänderte Objekt
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unverändert.
+Alle nicht angegebenen Parameter bleiben im geänderten Datensatz unverändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -129,8 +129,8 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -138,10 +138,10 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ soatype**](microsoftdns-soatype.md)
+[**MicrosoftDNS \_ SOAType**](microsoftdns-soatype.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  
