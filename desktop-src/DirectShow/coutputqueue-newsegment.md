@@ -1,7 +1,7 @@
 ---
-description: Die newsegment-Methode übergibt ein neues Segment an die eingabepin.
+description: Die NewSegment-Methode übergibt ein neues Segment an den Eingabepin.
 ms.assetid: 53189729-9f47-425e-9df6-faea01dd4482
-title: Coutputqueue. newsegment-Methode (outputq. h)
+title: COutputQueue.NewSegment-Methode (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e682211a98f4409fda35687160c88b121fa93898
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4057cafa3962c85fbca9342debbf7bb0e92355fc083e693889df298e53509259
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119768140"
 ---
-# <a name="coutputqueuenewsegment-method"></a>Coutputqueue. newsegment-Methode
+# <a name="coutputqueuenewsegment-method"></a>COutputQueue.NewSegment-Methode
 
-Die- `NewSegment` Methode übergibt ein neues Segment an die eingabepin.
+Die `NewSegment` -Methode übergibt ein neues Segment an den Eingabepin.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,39 +44,39 @@ HRESULT NewSegment(
 
 <dl> <dt>
 
-*tSTART* 
+*tStart* 
 </dt> <dd>
 
-Start Medien Position des Segments in 100-Nanosecond-Einheiten.
+Startmedienposition des Segments in Einheiten von 100 Nanosekunden.
 
 </dd> <dt>
 
-*tstopps* 
+*tStop* 
 </dt> <dd>
 
-Die endmedien Position des Segments in 100-Nanosecond-Einheiten.
+Endmedienposition des Segments in Einheiten von 100 Nanosekunden.
 
 </dd> <dt>
 
-*drate* 
+*dRate* 
 </dt> <dd>
 
-Die Rate, mit der dieses Segment verarbeitet werden soll, als Prozentsatz der ursprünglichen Rate.
+Rate, mit der dieses Segment verarbeitet werden soll, als Prozentsatz der ursprünglichen Rate.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Objekt einen Thread verwendet, werden die folgenden Elemente in der angegebenen Reihenfolge in die Warteschlange eingereiht:
+Wenn das Objekt einen Thread verwendet, werden die folgenden Elemente in der Reihenfolge in die Warteschlange gestellt:
 
--   Eine neue \_ Segment Steuerungs Meldung.
--   Die Segment Daten.
+-   Eine NEUE \_ SEGMENT-Steuermeldung.
+-   Die Segmentdaten.
 
-Die neue \_ Segment Nachricht benachrichtigt den Thread, dass das nächste Element in der Warteschlange Segment Daten enthält. Die Segment Daten werden in einer Struktur gebündelt, die wie folgt deklariert wird:
+Die Meldung NEW SEGMENT benachrichtigt den Thread, dass das nächste Element in der Warteschlange \_ Segmentdaten enthält. Die Segmentdaten werden in einer -Struktur gebündelt, die wie folgt deklariert wird:
 
 
 ```C++
@@ -89,9 +89,9 @@ struct NewSegmentPacket {
 
 
 
-Der Thread ruft die [**IPin:: newsegment**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment) -Methode für die Eingabe-PIN auf, wobei die in der Struktur angegebenen Daten verwendet werden.
+Der Thread ruft die [**IPin::NewSegment-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment) auf dem Eingabepin unter Verwendung der in der -Struktur angegebenen Daten auf.
 
-Wenn das Objekt keinen Thread verwendet, ruft es die [**coutputqueue:: sendanyway**](coutputqueue-sendanyway.md) -Methode auf, um alle ausstehenden Beispiele bereitzustellen. Anschließend wird **IPin:: newsegment** für die Eingabe-PIN aufgerufen.
+Wenn das Objekt keinen Thread verwendet, ruft es die [**COutputQueue::SendAnyway-Methode**](coutputqueue-sendanyway.md) auf, um ausstehende Stichproben zu übermitteln. Anschließend ruft sie **IPin::NewSegment auf** dem Eingabepin auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -99,8 +99,8 @@ Wenn das Objekt keinen Thread verwendet, ruft es die [**coutputqueue:: sendanywa
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -108,7 +108,7 @@ Wenn das Objekt keinen Thread verwendet, ruft es die [**coutputqueue:: sendanywa
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

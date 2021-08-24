@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungen eines virtuellen Akku Geräts dar.
+description: Stellt die Einstellungen eines virtuellen Akkugeräts dar.
 ms.assetid: 04fbad81-119d-437c-a0f8-5d2f073c465e
 title: Msvm_BatterySettingData-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6d4eb221ef6a9ce46d2017773e215c6525e4e7b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cef653779d2226e2d7a0451ccbbc2b9d09de0b958f5d6185c76c1341f5d9e7f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119790200"
 ---
-# <a name="msvm_batterysettingdata-class"></a>MSVM- \_ Klasse "batterysettingdata"
+# <a name="msvm_batterysettingdata-class"></a>Msvm \_ BatterySettingData-Klasse
 
-Stellt die Einstellungen eines virtuellen Akku Geräts dar.
+Stellt die Einstellungen eines virtuellen Akkugeräts dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -37,7 +37,7 @@ class Msvm_BatterySettingData : CIM_ResourceAllocationSettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ batterysettingdata** " definiert keine Member.
+Die **Msvm \_ BatterySettingData-Klasse** definiert keine Member.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,10 +45,10 @@ Die **MSVM-Klasse " \_ batterysettingdata** " definiert keine Member.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -57,7 +57,7 @@ Die **MSVM-Klasse " \_ batterysettingdata** " definiert keine Member.
 
 <dl> <dt>
 
-[**CIM \_ resourcezubesettingdata**](cim-resourceallocationsettingdata.md)
+[**CIM \_ ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md)
 </dt> </dl>
 
  

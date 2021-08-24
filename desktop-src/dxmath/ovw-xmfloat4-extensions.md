@@ -1,19 +1,19 @@
 ---
-description: XMFLOAT4 beschreibt eine Struktur mit einem 4D-Vektor, der aus vier Gleit Komma Werten mit einfacher Genauigkeit besteht.
+description: XMFLOAT4 beschreibt eine Struktur, die einen 4D-Vektor enthält, der aus vier Gleitkommawerten mit einfacher Genauigkeit besteht.
 ms.assetid: 79c3abc5-1896-4c51-b6a9-a97031961e8e
 title: XMFLOAT4-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: db2b1d958c3ced24f791a6f6f9a02381ed218807
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 739d47395e7b181fb559bb26b8b28cf9bbe482ce3c17151197024dacbfbd7b2f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119740629"
 ---
 # <a name="xmfloat4-extensions"></a>XMFLOAT4-Erweiterungen
 
-[**XMFLOAT4**](/windows/win32/api/directxmath/ns-directxmath-xmfloat4) beschreibt eine Struktur mit einem 4D-Vektor, der aus vier Gleit Komma Werten mit einfacher Genauigkeit besteht.
+[**XMFLOAT4**](/windows/win32/api/directxmath/ns-directxmath-xmfloat4) beschreibt eine Struktur, die einen 4D-Vektor enthält, der aus vier Gleitkommawerten mit einfacher Genauigkeit besteht.
 
 > [!Note]  
 > Die hier aufgeführten Features sind nur bei der Entwicklung mit C++ verfügbar.
@@ -24,10 +24,10 @@ ms.locfileid: "104130632"
 
 
 
-| Thema                                                       | BESCHREIBUNG                                    |
+| Thema                                                       | Beschreibung                                    |
 |-------------------------------------------------------------|------------------------------------------------|
-| [**XMFLOAT4-Konstruktoren**](/windows/win32/api/directxmath/nf-directxmath-xmfloat4-xmfloat4(constfloat))<br/>   | Von verfügbar gemachte Konstruktoren `XMFLOAT4` .<br/> |
-| [XMFLOAT4-Operatoren](ovw-xmfloat4-operators.md)<br/> | Von verfügbar gemachte Operatoren `XMFLOAT4` .<br/>    |
+| [**XMFLOAT4-Konstruktoren**](/windows/win32/api/directxmath/nf-directxmath-xmfloat4-xmfloat4(constfloat))<br/>   | Konstruktoren, die von verfügbar gemacht `XMFLOAT4` werden.<br/> |
+| [XMFLOAT4-Operatoren](ovw-xmfloat4-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMFLOAT4` werden.<br/>    |
 
 
 

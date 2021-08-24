@@ -1,15 +1,15 @@
 ---
-description: In diesem Thema wird beschrieben, wie eine Media Foundation Transformation (MFT) geschrieben wird, die als Proxy für einen Hardware Encoder, Decoder oder einen Port (Digital Signal Processor, DSP) fungiert.
+description: In diesem Thema wird beschrieben, wie Sie eine Media Foundation Transform (MFT) schreiben, die als Proxy für einen Hardwareencoder, Decoder oder digital signal processor (DSP) fungiert.
 ms.assetid: 9922d403-5d0d-433f-ad9f-c86142ac0f46
 title: Hardware-MFTs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ac5ce05b4fdad6040b51f66f543c1737fc3918d2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 532fef959e2c2b5946d5a27ad98106a2e25cc77f8426c0a871e821c7298a69f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214966"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119724932"
 ---
 # <a name="hardware-mfts"></a>Hardware-MFTs
 
@@ -18,10 +18,10 @@ ms.locfileid: "104214966"
 
  
 
-In diesem Thema wird beschrieben, wie eine Media Foundation Transformation (MFT) geschrieben wird, die als Proxy für einen Hardware Encoder, Decoder oder einen Port (Digital Signal Processor, DSP) fungiert.
+In diesem Thema wird beschrieben, wie Sie eine Media Foundation Transform (MFT) schreiben, die als Proxy für einen Hardwareencoder, Decoder oder digital signal processor (DSP) fungiert.
 
 > [!IMPORTANT]
-> Wenn ein Hardware Codec den AVStream-Multimedia-Klassen Treiber verwendet, ist kein benutzerdefiniertes MFT erforderlich. Media Foundation stellt zu diesem Zweck einen AVStream-Proxy bereit. Die Informationen in diesem Thema gelten nur für Sonderfälle, in denen der Hardware Codec AVStream nicht verwendet. Weitere Informationen finden Sie [unter Unterstützung für Hardware Codec in AVStream](https://msdn.microsoft.com/library/dd568169.aspx).
+> Wenn ein Hardwarecodec den AVStream-Multimediaklassentreiber verwendet, ist kein benutzerdefinierter MFT erforderlich. Media Foundation stellt zu diesem Zweck einen AVStream-Proxy zur Verfügung. Die Informationen in diesem Thema gelten nur für den Sonderfall, in dem der Hardwarecodec AVStream nicht verwendet. Weitere Informationen finden Sie unter [HardwareCodec-Unterstützung in AVStream.](https://msdn.microsoft.com/library/dd568169.aspx)
 
  
 
@@ -29,113 +29,113 @@ Dieses Thema enthält folgende Abschnitte:
 
 -   [Introduction (Einführung)](#introduction)
 -   [Hardware-MFT-Attribute](#hardware-mft-attributes)
--   [Hardware Hand Shake Sequenz](#hardware-handshake-sequence)
+-   [Hardwarehandshakesequenz](#hardware-handshake-sequence)
 -   [Datenverarbeitung](#data-processing)
--   [Paarweise Decoder/Encoder](#paired-decoderencoder)
+-   [Gekoppelter Decoder/Encoder](#paired-decoderencoder)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="introduction"></a>Einführung
 
-Jeder Hardware-Codec, der nicht auf AVStream basiert, muss eine eigene MFT bereitstellen, die als Proxy für den Treiber fungiert. Ein Hardwarecodec kann mehrere unterschiedliche funktionale Blöcke enthalten:
+Jeder Hardwarecodec, der nicht auf AVStream basiert, muss einen eigenen MFT bereitstellen, um als Proxy für den Treiber zu fungieren. Ein Hardwarecodec kann mehrere verschiedene Funktionsblöcke enthalten:
 
 -   Encoder
 -   Decoder
--   Frame Skalierung/Formatkonvertierung
+-   Frameskalierung/Formatkonvertierung
 
-Jede dieser Funktionen sollte von einem separaten MFT verwaltet werden. Eine Hardware-MFT sollte nie als "Transcoder" für mehrere Zwecke fungieren. Fügen Sie Codierungs Funktionen stattdessen in einem MFT-Codierer ein. Wenn die Hardware Frame Skalierung und Formatkonvertierungen bietet, platzieren Sie diese Funktionen in einem separaten Videoprozessor, der in der Kategorie **\_ \_ Video \_ Prozessor Kategorie der MFT-Kategorie** registriert ist. Wenn die Hardware keine Frame Skalierung oder Formatkonvertierung unterstützt, stellt Media Foundation einen Software-Videoprozessor bereit.
+Jede dieser Funktionen sollte von einem separaten MFT verwaltet werden. Ein Hardware-MFT sollte nie als mehrzweckigen "Transcoder" fungieren. Legen Sie stattdessen Codierungsfunktionen in einen Encoder MFT und Decodierungsfunktionen in einen Decoder-MFT ab. Wenn die Hardware Frameskalierung und Formatkonvertierungen bietet, platzieren Sie diese Funktionen in einem separaten Videoprozessor, der in der **Kategorie MFT \_ CATEGORY VIDEO \_ PROCESSOR \_ registriert** ist. Wenn die Hardware keine Frameskalierung oder Formatkonvertierung unterstützt, stellt Media Foundation einen Softwarevideoprozessor zur Verfügung.
 
-Für Hardware-MFTs gelten die folgenden allgemeinen Anforderungen:
+Hardware-MFTs haben die folgenden allgemeinen Anforderungen:
 
--   Hardware-MFTs müssen das neue asynchrone Verarbeitungsmodell verwenden, wie in [asynchroner MFTs](asynchronous-mfts.md)beschrieben.
--   Hardware-MFTs müssen dynamische Formatänderungen unterstützen, wie in [dynamische Formatänderungen](basic-mft-processing-model.md)beschrieben.
+-   Hardware-MFTs müssen das neue asynchrone Verarbeitungsmodell verwenden, wie unter [Asynchrone MFTs beschrieben.](asynchronous-mfts.md)
+-   Hardware-MFTs müssen dynamische Formatänderungen unterstützen, wie unter [Dynamische Formatänderungen beschrieben.](basic-mft-processing-model.md)
 
 ## <a name="hardware-mft-attributes"></a>Hardware-MFT-Attribute
 
-Eine Hardware-MFT muss folgende Methoden im Zusammenhang mit Attributen implementieren:
+Ein Hardware-MFT muss die folgenden Methoden im Zusammenhang mit Attributen implementieren:
 
--   [**Imftransform:: GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes): gibt einen Attribut Speicher für globale MFT-Attribute zurück.
--   [**IMF Transform:: getinputstreamattributs**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getinputstreamattributes): gibt einen Attribut Speicher für einen Eingabestream zurück.
--   [**IMF Transform:: getoutputstreamattributs**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputstreamattributes): gibt einen Attribut Speicher für einen Ausgabestream zurück.
+-   [**FALSETransform::GetAttributes:**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes)Gibt einen Attributspeicher für globale MFT-Attribute zurück.
+-   [**FALSETransform::GetInputStreamAttributes:**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getinputstreamattributes)Gibt einen Attributspeicher für einen Eingabestream zurück.
+-   [**FALSETransform::GetOutputStreamAttributes:**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputstreamattributes)Gibt einen Attributspeicher für einen Ausgabestream zurück.
 
-Wenn der MFT erstmalig erstellt wird, muss er die folgenden Attribute für seinen eigenen globalen Attribut Speicher festlegen (d. h. den von [**GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes)zurückgegebenen Attribut Speicher):
+Wenn der MFT zum ersten Mal erstellt wird, muss er die folgenden Attribute für seinen eigenen globalen Attributspeicher (d. h. den von GetAttributes zurückgegebenen [**Attributspeicher) festlegen:**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes)
 
 
 
-| Attribut                                                                                    | BESCHREIBUNG                                                                                                                                                                            |
+| attribute                                                                                    | Beschreibung                                                                                                                                                                            |
 |----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [MF- \_ Transformation \_ Async](mf-transform-async.md)                                               | Muss auf " **true**" festgelegt werden. Gibt an, dass die MFT asynchrone Verarbeitung ausführt.                                                                                                      |
-| [MFT-Aufzählungs \_ \_ Hardware-URL- \_ \_ Attribut](mft-enum-hardware-url-attribute.md)                   | Enthält den symbolischen Link für das Hardware Gerät.<br/> Das topologielader verwendet dieses Attribut, um zu testen, ob ein MFT ein Hardware Gerät darstellt.<br/> |
-| [**MFT- \_ Unterstützung für \_ dynamisches \_ Format \_ ändern**](mft-support-dynamic-format-change-attribute.md) | Muss auf " **true**" festgelegt werden. Gibt an, dass der MFT dynamische Formatänderungen unterstützt.                                                                                                       |
+| [MF \_ TRANSFORM \_ ASYNC](mf-transform-async.md)                                               | Muss auf TRUE festgelegt **werden.** Gibt an, dass MFT eine asynchrone Verarbeitung ausführt.                                                                                                      |
+| [\_ \_ \_ MFT-ENUM-HARDWARE-URL-Attribut \_](mft-enum-hardware-url-attribute.md)                   | Enthält die symbolische Verknüpfung für das Hardwaregerät.<br/> Das Topologielader verwendet das Vorhandensein dieses Attributs, um zu testen, ob ein MFT ein Hardwaregerät darstellt.<br/> |
+| [**MFT-UNTERSTÜTZUNG \_ \_ FÜR DYNAMISCHE \_ \_ FORMATÄNDERUNG**](mft-support-dynamic-format-change-attribute.md) | Muss auf TRUE festgelegt **werden.** Gibt an, dass MFT dynamische Formatänderungen unterstützt.                                                                                                       |
 
 
 
  
 
-## <a name="hardware-handshake-sequence"></a>Hardware Hand Shake Sequenz
+## <a name="hardware-handshake-sequence"></a>Hardwarehandshakesequenz
 
-Wenn zwei MFTs dasselbe physische Gerät darstellen, können Sie Daten innerhalb der Hardware austauschen – beispielsweise über einen Hardwarebus. Es ist nicht erforderlich, die Daten in den Systemspeicher und dann zurück auf das Gerät zu kopieren.
+Wenn zwei MFTs dasselbe physische Gerät darstellen, können sie Daten innerhalb der Hardware austauschen, z. B. über einen Hardwarebus. Es ist nicht notwendig, die Daten in den Systemspeicher und dann zurück auf das Gerät zu kopieren.
 
-In der folgenden Abbildung stellen die MFTs mit der Bezeichnung "A" und "B" funktionale Blöcke innerhalb derselben Hardware dar. Beispielsweise kann in einem Transcodierungs Szenario "a" einen Hardware Decoder und "B" einen Hardware Encoder darstellen. Der Datenfluss zwischen "A" und "B" erfolgt innerhalb der Hardware. Die MFT-Bezeichnung "C" ist eine Software-MFT. Der Datenfluss von "B" zu "C" verwendet den System Arbeitsspeicher.
+Im folgenden Diagramm stellen die MFTs mit den Bezeichnungen "A" und "B" Funktionsblöcke innerhalb derselben Hardware dar. In einem Transcodierungsszenario kann "A" beispielsweise einen Hardwaredecoder und "B" einen Hardwareencoder darstellen. Der Datenfluss zwischen "A" und "B" erfolgt innerhalb der Hardware. MFT mit der Bezeichnung "C" ist eine Software-MFT. Der Datenfluss von "B" zu "C" verwendet Systemspeicher.
 
-![Diagramm, das Felder mit der Bezeichnung a bis c und einen Hardwarecodec anzeigt: a zeigt auf b und den Codec, der Codec zeigt auf b und b auf c](images/proxy-mft.png)
+![Diagramm mit Feldern mit der Bezeichnung "a" bis "c" und einem Hardwarecodec: ein Punkt auf b und der Codec, der Codec zeigt auf b und b auf c.](images/proxy-mft.png)
 
-Zum Herstellen einer Hardware Verbindung müssen die beiden Hardware-MFTs einen privaten Kommunikationskanal verwenden. Diese Verbindung wird während der Format Aushandlung hergestellt, bevor die Medientypen festgelegt werden, und vor dem ersten Aufrufen von [**ProcessInput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput). Der Verbindungsprozess funktioniert wie folgt:
+Um eine Hardwareverbindung herzustellen, müssen die beiden Hardware-MFTs einen privaten Kommunikationskanal verwenden. Diese Verbindung wird während der Formataushandlung vor dem Festlegen der Medientypen und vor dem ersten Aufruf von [**ProcessInput hergestellt.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput) Der Verbindungsprozess funktioniert wie folgt:
 
-1.  Das topologielader überprüft beide MFTs auf das vorhanden sein des [MFT \_ Enum- \_ Hardware-URL- \_ \_ Attribut](mft-enum-hardware-url-attribute.md) Attributs. Beachten Sie, dass der Wert dieses Attributs nicht untersucht wird.
-2.  Wenn das [MFT- \_ Enum- \_ Hardware-URL- \_ \_ Attribut](mft-enum-hardware-url-attribute.md) in beiden MFTs vorhanden ist, führt das topologielader Folgendes aus:
-    1.  Das topologielader ruft [**imftransform:: getoutputstreamattributs**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputstreamattributes) für den upstreammft (A) auf. Diese Methode gibt einen [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Zeiger zurück. Lassen Sie diesen Zeiger als " *pupstream*" bezeichnen.
-    2.  Das topologielader ruft [**imftransform:: getinputstreamattributs für die downstreammft**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getinputstreamattributes) (B) auf. Dieser Befehl gibt auch einen [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Zeiger zurück. Lassen Sie diesen Zeiger als " *pdownstream*" bezeichnet.
-    3.  Das topologielader legt das Attribut Attribut des [verbundenen MFT- \_ \_ Streams \_](mft-connected-stream-attribute.md) auf *pdownstream* fest, indem [**imfattributes:: setunknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown)aufgerufen wird. Der Wert des-Attributs ist der *pupstream* -Zeiger.
-    4.  Der topologielader legt die mit dem [ \_ HW- \_ \_ \_ streamattribut verbundene MFT](mft-connected-to-hw-stream.md) für *pdownstream* und *pupstream* auf **true** fest.
-3.  An diesem Punkt hat das downstreammft einen Zeiger auf den Attribut Speicher der Upstream-MFT, wie in der folgenden Abbildung dargestellt.
+1.  Das Topologielader überprüft beide MFTs auf das Vorhandensein des [Attributs \_ MFT-ENUM-HARDWARE-URL-Attribut. \_ \_ \_ ](mft-enum-hardware-url-attribute.md) Beachten Sie, dass der Wert dieses Attributs nicht untersucht wird.
+2.  Wenn [das \_ MFT-ENUM-HARDWARE-URL-Attribut \_ \_ \_ ](mft-enum-hardware-url-attribute.md) auf beiden MFTs vorhanden ist, führt das Topologielader folgende Schritte aus:
+    1.  Das Topologielader ruft auf dem Upstream-MFT (A) [**DIE ATTRIBUTETransform::GetOutputStreamAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputstreamattributes) auf. Diese Methode gibt einen [**ATTRIBUTEAttributes-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) zurück. Lassen Sie diesen Zeiger als *pUpstream bezeichnet werden.*
+    2.  Das Topologielader ruft AUF dem Downstream-MFT (B) [**DIE ATTRIBUTETransform::GetInputStreamAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getinputstreamattributes) auf. Dieser Aufruf gibt auch einen [**ATTRIBUTEAttributes-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) zurück. Lassen Sie diesen Zeiger als *pDownstream bezeichnet werden.*
+    3.  Das Topologielader legt das [MFT \_ CONNECTED STREAM \_ \_ ATTRIBUTE-Attribut](mft-connected-stream-attribute.md) auf *pDownstream fest,* indem [**ESATTRIBUTEs::SetUnknown aufruft.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown) Der Wert des Attributs ist der *pUpstream-Zeiger.*
+    4.  Das Topologielader legt das [MFT \_ CONNECTED TO \_ \_ HW \_ STREAM-Attribut](mft-connected-to-hw-stream.md) sowohl für *pDownstream* als auch *für pUpstream* auf **TRUE** fest.
+3.  An diesem Punkt verfügt der Downstream-MFT über einen Zeiger auf den Attributspeicher des Upstream-MFT, wie im folgenden Diagramm dargestellt.
 
-    ![Diagramm mit jedem MFTs, der auf seinen Stream zeigt, jeder Stream, der auf seinen Speicher zeigt, und der Eingabe Speicher mit einer gestrichelten Linie in den Ausgabe Speicher](images/proxy-mft2.png)
+    ![Diagramm mit jedem Mfts,der auf seinen Stream zeigt, jeder Stream zeigt auf seinen Speicher und der Eingabespeicher mit einer gestrichelten Linie zum Ausgabespeicher](images/proxy-mft2.png)
 
     > [!Note]  
-    > Aus Gründen der Übersichtlichkeit zeigt dieses Diagramm die Datenströme und die Attribut Speicher als unterschiedliche Objekte an, dies ist für die Implementierung jedoch nicht erforderlich.
+    > Aus Gründen der Übersichtlichkeit zeigt dieses Diagramm die Datenströme und die Attributspeicher als unterschiedliche Objekte an, dies ist jedoch für die Implementierung nicht erforderlich.
 
      
 
-4.  Der Downstream-MFT verwendet den [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Zeiger, um einen privaten Kommunikationskanal mit der upstreammft einzurichten. Da der Kanal privat ist, wird der genaue Mechanismus durch die-Implementierung definiert. Beispielsweise könnte die MFT eine private com-Schnittstelle Abfragen.
+4.  Der Downstream-MFT verwendet den [**ZEIGER AUF ATTRIBUTEattribute,**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) um einen privaten Kommunikationskanal mit dem Upstream-MFT zu erstellen. Da der Kanal privat ist, wird der genaue Mechanismus von der Implementierung definiert. Beispielsweise kann MFT eine private COM-Schnittstelle abfragen.
 
-In Schritt 4 muss das downstreammft überprüfen, ob die beiden MFTs dasselbe physische Gerät gemeinsam verwenden. Wenn dies nicht der Fall ist, müssen Sie auf den System Arbeitsspeicher für den Datentransport zurückgreifen. Dies ermöglicht die korrekte Funktionsweise des MFT mit Software-MFTs und anderen Hardware Geräten.
+In Schritt 4 muss der nachgeschaltete MFT überprüfen, ob sich die beiden MFTs dasselbe physische Gerät teilen. Wenn dies nicht der Fall ist, müssen sie auf die Verwendung des Systemspeichers für den Datentransport zurückfallen. Dadurch kann MFT ordnungsgemäß mit Software-MFTs und anderen Hardwaregeräten arbeiten.
 
-Wenn der Handshake erfolgreich ist und die beiden MFTs einen privaten Datenkanal gemeinsam verwenden, verwenden Sie nicht das standardmäßige Datenverarbeitungs Modell (im nächsten Abschnitt beschrieben) am Verbindungspunkt. Insbesondere das downstreammft sendet keine [metransformneedinput](metransformneedinput.md) -Ereignisse. Weitere Informationen finden Sie im nächsten Abschnitt in diesem Thema.
+Wenn der Handshake erfolgreich ist und die beiden MFTs einen privaten Datenkanal gemeinsam nutzen, verwenden sie nicht das Standarddatenverarbeitungsmodell (im nächsten Abschnitt beschrieben) am Verbindungspunkt. Insbesondere sendet der Downstream-MFT keine [METransformNeedInput-Ereignisse.](metransformneedinput.md) Weitere Informationen finden Sie im nächsten Abschnitt dieses Themas.
 
 ## <a name="data-processing"></a>Datenverarbeitung
 
-Wenn eine Hardware-MFT den Systemspeicher für den Datentransport verwendet, funktioniert der Prozess wie folgt:
+Wenn ein Hardware-MFT Systemspeicher für den Datentransport verwendet, funktioniert der Prozess wie folgt:
 
-1.  Um weitere Eingaben anzufordern, sendet der MFT ein [metransformneedinput](metransformneedinput.md) -Ereignis.
-2.  Das [metransformneedinput](metransformneedinput.md) -Ereignis bewirkt, dass die Pipeline [**imftransform::P rocessinput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput)aufruft.
-3.  Wenn der MFT Ausgabedaten enthält, sendet der MFT ein [metransformhaveoutput](metransformhaveoutput.md) -Ereignis.
-4.  Das [metransformhaveoutput](metransformhaveoutput.md) -Ereignis bewirkt, dass die Pipeline [**imftransform::P rocess Output**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput)aufruft.
+1.  Um weitere Eingaben an fordern zu können, sendet MFT ein [METransformNeedInput-Ereignis.](metransformneedinput.md)
+2.  Das [METransformNeedInput-Ereignis](metransformneedinput.md) bewirkt, dass die Pipeline [**DENKtransform::P rocessInput aufruft.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput)
+3.  Wenn MFT Ausgabedaten enthält, sendet MFT ein [METransformHaveOutput-Ereignis.](metransformhaveoutput.md)
+4.  Das [METransformHaveOutput-Ereignis](metransformhaveoutput.md) bewirkt, dass die Pipeline [**DENKtransform::P rocessOutput aufruft.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput)
 
-Weitere Informationen finden Sie unter [asynchrone MFTs](asynchronous-mfts.md).
+Weitere Informationen finden Sie unter [Asynchrone MFTs.](asynchronous-mfts.md)
 
-Wenn die MFT jedoch einen Hardware Kanal verwendet, sendet Sie diese Ereignisse nicht an den Hardware Verbindungspunkt, da die gesamte Datenübertragung intern innerhalb der Hardware erfolgt. Daher ruft die Pipeline nicht [**ProcessInput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput) oder [**ProcessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) am Verbindungspunkt auf.
+Wenn der MFT jedoch einen Hardwarekanal verwendet, sendet er diese Ereignisse nicht an den Hardwareverbindungspunkt, da alle Datenübertragungen intern innerhalb der Hardware erfolgt. Daher ruft die Pipeline am Verbindungspunkt [**weder ProcessInput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput) noch [**ProcessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) auf.
 
-Sehen Sie sich beispielsweise das erste Diagramm in diesem Thema an. Bei dieser Konfiguration erfolgt die Datenverarbeitung wie folgt:
+Betrachten Sie beispielsweise das erste Diagramm in diesem Thema. Bei dieser Konfiguration würde die Datenverarbeitung wie folgt erfolgen:
 
-1.  "A" sendet [metransformneedinput](metransformneedinput.md) , um Daten anzufordern.
-2.  Die Pipeline ruft [**ProcessInput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput) für "A" auf.
-3.  "A" und "B" verarbeiten die Daten in der Hardware.
-4.  Wenn die Verarbeitung fertig ist, sendet "B" ein [metransformhaveoutput](metransformhaveoutput.md) -Ereignis.
-5.  Die Pipeline ruft [**ProcessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) für "B" auf.
+1.  "A" sendet [METransformNeedInput zum](metransformneedinput.md) Anfordern von Daten.
+2.  Die Pipeline ruft [**ProcessInput auf**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput) "A" auf.
+3.  "A" und "B" verarbeiten die Daten auf Hardware.
+4.  Wenn die Verarbeitung abgeschlossen ist, sendet "B" ein [METransformHaveOutput-Ereignis.](metransformhaveoutput.md)
+5.  Die Pipeline ruft [**ProcessOutput auf**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) "B" auf.
 
-## <a name="paired-decoderencoder"></a>Paarweise Decoder/Encoder
+## <a name="paired-decoderencoder"></a>Gekoppelter Decoder/Encoder
 
-Wenn sich ein Decoder und ein Encoder auf demselben Hardware Chip befinden, ist es möglicherweise besser, Sie bei der Transcodierung zusammen zu verwenden. Das heißt, wenn Sie eine auswählen, sollte die andere in der Transcodierung-Pipeline ausgewählt werden. Um sicherzustellen, dass übereinstimmende Hardware Codecs ausgewählt werden, sollten beide Codec-MFTs einen benutzerdefinierten Medientyp anbieten. So erstellen Sie einen benutzerdefinierten Medientyp:
+Wenn sich ein Decoder und ein Encoder auf demselben Hardwarechip befinden, ist es möglicherweise vorzuziehen, sie bei der Transcodierung zusammen zu verwenden. Das heißt, die Auswahl einer option sollte dazu führen, dass die andere in der Transcodierungspipeline ausgewählt wird. Um sicherzustellen, dass übereinstimmende Hardwarecodecs ausgewählt werden, sollten beide Codec-MFTs einen benutzerdefinierten Medientyp bieten. So erstellen Sie einen benutzerdefinierten Medientyp:
 
--   Legen Sie ggf. das Attribut " [**MF- \_ \_ Haupt \_**](mf-mt-major-type-attribute.md) Attribut" auf **mfmediatype \_ -Audiodatei** oder **mfmediatype- \_ Video** fest.
--   Legen Sie das Attribut " [**MF \_ MT \_ SubType**](mf-mt-subtype-attribute.md) " auf einen benutzerdefinierten GUID-Wert fest.
+-   Legen Sie das [**MF \_ MT MAJOR \_ \_ TYPE-Attribut**](mf-mt-major-type-attribute.md) je nach Bedarf auf **MFMediaType \_ Audio** oder **MFMediaType \_ Video** fest.
+-   Legen Sie das [**MF \_ MT \_ SUBTYPE-Attribut**](mf-mt-subtype-attribute.md) auf einen benutzerdefinierten GUID-Wert fest.
 
-Andere Typattribute sind optional. Der Decoder gibt den benutzerdefinierten Typ aus seinem [**imftransform:: getoutputavailabletype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype)zurück, und der Encoder gibt den benutzerdefinierten Typ aus der [**imftransform:: getinputavailabletype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getinputavailabletype) -Methode zurück. In beiden Fällen muss der benutzerdefinierte Typ der erste Eintrag in der Liste (*dwtypeindex* = 0) sein.
+Andere Typattribute sind optional. Der Decoder gibt den benutzerdefinierten Typ aus seinem [**TYPSTRANSFORM::GetOutputAvailableType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype)zurück, und der Encoder gibt den benutzerdefinierten Typ aus seiner [**ENTRANSTRANSFORM::GetInputAvailableType-Methode**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getinputavailabletype) zurück. In beiden Fällen muss der benutzerdefinierte Typ der erste Eintrag in der Liste sein (*dwTypeIndex* = 0).
 
-Zum Arbeiten mit Software Codecs sollte der Codec auch mindestens ein Standardformat (z. b. NV12 for Video) zurückgeben. Standard Formate sollten nach dem benutzerdefinierten Typ (*dwtypeindex* > 0) angezeigt werden. Wenn die beiden Codecs immer paarweise gekoppelt werden müssen und nicht mit Software Codecs interagieren können, sollten die MFTs nur das benutzerdefinierte Format zurückgeben und keine Standardformate zurückgeben.
+Für die Arbeit mit Softwarecodecs sollte der Codec auch mindestens ein Standardformat zurückgeben, z. B. NV12 für Videos. Standardformate sollten nach dem benutzerdefinierten Typ *(dwTypeIndex* > 0) angezeigt werden. Wenn die beiden Codecs immer gekoppelt sein müssen und nicht mit Softwarecodecs zusammenarbeiten können, sollten die MFTs nur das benutzerdefinierte Format und keine Standardformate zurückgeben.
 
 > [!Note]  
-> Wenn ein Decoder keine Standardformate zurückgibt, kann er nicht für die Wiedergabe mit dem [erweiterten Videorenderer](enhanced-video-renderer.md)verwendet werden. In diesem Fall sollte Sie als ein nur-transcode-Decoder registriert werden. Siehe [nur-transcode-Decoders](implementing-a-codec-mft.md).
+> Wenn ein Decoder keine Standardformate zurückgibt, kann er nicht für die Wiedergabe mit dem [Erweiterten Videorenderer](enhanced-video-renderer.md)verwendet werden. In diesem Fall sollte es als nur transcodierten Decoder registriert werden. Weitere Informationen finden Sie unter [Nur-Transcode-Decoder.](implementing-a-codec-mft.md)
 
  
 

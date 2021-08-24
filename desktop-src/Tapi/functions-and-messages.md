@@ -1,21 +1,21 @@
 ---
-description: Die phonedevspecific-Funktion und die zugehörige Phone \_ DevSpecific-Nachricht ermöglichen einer Anwendung den Zugriff auf gerätespezifische Telefon Features, die über die gemeinsamen Telefoniedienste für Smartphones nicht verfügbar sind.
+description: Die phoneDevSpecific-Funktion und die zugehörige PHONE DEVSPECIFIC-Nachricht ermöglichen einer Anwendung den Zugriff auf gerätespezifische Telefonfunktionen, die über die allgemeinen Telefoniedienste für Telefone nicht verfügbar \_ sind.
 ms.assetid: b4c8d721-26e4-4895-9f09-0f67fe4d346b
-title: Funktionen und Nachrichten
+title: Funktionen und Meldungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 292f85e2ea57ac11da8150d4d0a183c7c4fd2c88
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 61cabdc271548e42b20de695296321f5f5ab0fdbe45a246be2b7ccb1993ee5d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959715"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119660734"
 ---
-# <a name="functions-and-messages"></a>Funktionen und Nachrichten
+# <a name="functions-and-messages"></a>Funktionen und Meldungen
 
-Die [**phonedevspecific**](/windows/desktop/api/Tapi/nf-tapi-phonedevspecific) -Funktion und die zugehörige [**Phone \_ DevSpecific**](phone-devspecific.md) -Nachricht ermöglichen einer Anwendung den Zugriff auf gerätespezifische Telefon Features, die über die gemeinsamen Telefoniedienste für Smartphones nicht verfügbar sind. Mit anderen Worten: **phonedevspecific** ist die gerätespezifische Escape-Funktion, die Hersteller abhängige Erweiterungen zulässt, und Phone \_ DevSpecific ist die gerätespezifische Nachricht, die an die Anwendung gesendet wird.
+Die [**phoneDevSpecific-Funktion**](/windows/desktop/api/Tapi/nf-tapi-phonedevspecific) und die zugehörige [**PHONE \_ DEVSPECIFIC-Nachricht**](phone-devspecific.md) ermöglichen einer Anwendung den Zugriff auf gerätespezifische Telefonfunktionen, die über die allgemeinen Telefoniedienste für Telefone nicht verfügbar sind. Anders ausgedrückt: **phoneDevSpecific** ist die gerätespezifische Escapefunktion, die anbieterabhängige Erweiterungen zulässt, und PHONE DEVSPECIFIC ist die gerätespezifische Nachricht, die an die Anwendung gesendet \_ wird.
 
-Das Parameter Profil der [**phonedevspecific**](/windows/desktop/api/Tapi/nf-tapi-phonedevspecific) -Funktion ist generisch, da die Parameter von TAPI nicht interpretiert werden. Stattdessen wird die Interpretation der Parameter vom Dienstanbieter definiert und muss von einer Anwendung verstanden werden, die Sie verwendet. Die Parameter werden einfach von TAPI von der Anwendung an den Dienstanbieter übermittelt. Eine Anwendung, die auf gerätespezifischen Erweiterungen basiert, funktioniert in der Regel nicht mit anderen Dienstanbietern, aber Anwendungen, die in die üblichen Telefoniedienste geschrieben werden, funktionieren mit dem erweiterten Dienstanbieter.
+Das Parameterprofil der [**phoneDevSpecific-Funktion**](/windows/desktop/api/Tapi/nf-tapi-phonedevspecific) ist generisch, da tapI nur eine geringe Interpretation der Parameter vorgibt. Stattdessen wird die Interpretation der Parameter vom Dienstanbieter definiert und muss von einer Anwendung verstanden werden, die sie verwendet. Die Parameter werden einfach von TAPI von der Anwendung an den Dienstanbieter übergeben. Eine Anwendung, die auf gerätespezifischen Erweiterungen basiert, funktioniert in der Regel nicht mit anderen Dienstanbietern, aber Anwendungen, die in die allgemeinen Telefonietelefondienste geschrieben werden, funktionieren mit dem erweiterten Dienstanbieter.
 
  
 

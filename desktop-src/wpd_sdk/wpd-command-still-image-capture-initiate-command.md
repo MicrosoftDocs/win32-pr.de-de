@@ -1,7 +1,7 @@
 ---
-description: Der Befehl zum \_ Initiieren der Image Erfassung durch den WPD-Befehl initiiert immer noch \_ \_ \_ \_ eine Image Erfassung durch ein Bild Funktions Objekt. Wenn ein neues Objekt erstellt wird, weil ein Bild erstellt wurde, sollte der Treiber das Ereignis Ereignis hinzufügen des WPD- \_ Ereignisses senden \_ \_ .
+description: Der \_ WPD COMMAND \_ STILL IMAGE \_ CAPTURE \_ \_ INITIATE-Befehl initiiert eine Standbilderfassung durch ein funktionstüchtiger Objekt des Stillbilds. Wenn ein neues -Objekt als Ergebnis der Aufnahme eines Bilds erstellt wird, sollte der Treiber das WPD \_ EVENT \_ OBJECT \_ ADDED-Ereignis senden.
 ms.assetid: 2968b96e-c9d8-42a7-a32a-dea5fdf064b5
-title: WPD_COMMAND_STILL_IMAGE_CAPTURE_INITIATE Befehl (portabledevice. h)
+title: WPD_COMMAND_STILL_IMAGE_CAPTURE_INITIATE-Befehl (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: c51c2b4a483588389e9986768a2c617e0fd0dd63
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5c5490a5af583753f504decacaccf4b4373890fdb7f0e5b099389df29cdc0571
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364550"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119806280"
 ---
-# <a name="wpd_command_still_image_capture_initiate-command"></a>Befehl zum \_ \_ Initiieren der \_ Image \_ Erfassung \_ für den WPD-Befehl
+# <a name="wpd_command_still_image_capture_initiate-command"></a>\_WPD-BEFEHL \_ STILL IMAGE \_ CAPTURE \_ \_ INITIATE-Befehl
 
-Der Befehl zum **Initiieren der \_ \_ \_ Image \_ Erfassung \_ durch den WPD-Befehl** initiiert immer noch eine Image Erfassung durch ein Bild Funktions Objekt. Wenn ein neues Objekt erstellt wird, weil ein Bild erstellt wurde, sollte der Treiber das Ereignis Ereignis **\_ \_ \_ Hinzufügen des WPD-Ereignisses** senden.
+Der **WPD \_ COMMAND STILL IMAGE CAPTURE \_ \_ \_ \_ INITIATE-Befehl** initiiert eine Standbilderfassung durch ein funktionstüchtiger Objekt des Stillbilds. Wenn ein neues -Objekt als Ergebnis der Aufnahme eines Bilds erstellt wird, sollte der Treiber das **WPD \_ EVENT OBJECT \_ \_ ADDED-Ereignis** senden.
 
 ## <a name="command-category"></a>Befehlskategorie
 
-**WPD- \_ Kategorie \_ trotzdem \_ Image \_ Erfassung**
+**WPD \_ CATEGORY \_ STILL \_ IMAGE \_ CAPTURE**
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,9 +34,9 @@ Der Treiber erwartet die folgenden Parameter.
 
 
 
-| Parameter                              | VarType    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                         |
+| Parameter                              | VarType    | Beschreibung                                                                                                                                                                                                                                                                                                                                         |
 |----------------------------------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Allgemeine WPD- \_ Eigenschaft ( \_ \_ Befehls \_ Ziel) | VT \_ LPWSTR | Erforderlich. Die Objekt-ID des noch Funktions Objekts der Bild Erfassung auf dem Gerät, das das Bild aufnehmen soll. Jedes funktionale Objekt für die Bild Erfassung kann über unterschiedliche Einstellungen verfügen, und es kann auf eine andere Hardware auf einem Gerät (z. b. eine Vorder-oder rückwärts Kamera eines Telefons) verweisen, und dieser Parameter gibt an, welcher Wert verwendet werden soll.<br/> |
+| \_ \_ ALLGEMEINES \_ \_ BEFEHLSZIEL DER WPD-EIGENSCHAFT | VT \_ LPWSTR | Erforderlich. Die Objekt-ID des Funktionsobjekts für die Aufzeichnung des Stillbilds auf dem Gerät, das das Bild aufnehmen soll. Jedes Funktionsobjekt für die Bildaufnahme kann unterschiedliche Einstellungen aufweisen und kann auf verschiedene Hardware auf einem Gerät verweisen (z. B. eine Vorder- oder Rückkamera eines Telefons), und dieser Parameter gibt an, welche Verwendet werden soll.<br/> |
 
 
 
@@ -48,10 +48,10 @@ Als Ergebnisse des Treibers werden erwartet:
 
 
 
-| Ergebnis                                         | VarType   | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                            |
+| Ergebnis                                         | VarType   | Beschreibung                                                                                                                                                                                                                                                                                                                                                                            |
 |------------------------------------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **WPD- \_ Eigenschaft allgemeiner \_ \_ HRESULT**             | VT- \_ Fehler | Erforderlich. Ein **HRESULT** , das den Erfolg oder Fehler beim Ausführen des Befehls angibt. Wenn der Aufrufer eine ungültige Anforderung sendet, sollte der Treiber **HRESULT \_ aus Win32 zurückgeben \_ (Fehler \_ nicht \_ unterstützt)** , und es ist nicht erforderlich, andere Ergebnis Werte zurückzugeben. Fehlercodes enthalten [Fehlercodes für tragbare Windows-Geräte](error-constants.md) oder andere geeignete Fehlercodes. |
-| **WPD- \_ Eigenschaft allgemeiner \_ \_ Treiber \_ Fehler \_ Code** | VT \_ UI4   | Dies ist optional. Ein Treiber spezifischer Fehlercode. Dieser Wert wird in der Regel von Geräte Anbietern verwendet, um die Diagnose von Gerätefehlern bei der Verwendung Ihrer Anwendungen zu verbessern. Anwendungen, die universell verwendet werden, würden Sie ignorieren und \_ \_ verwenden stattdessen ausschließlich das allgemeine HRESULT der WPD-Eigenschaft \_ .                                                                                                                   |
+| **\_WPD-EIGENSCHAFT \_ COMMON \_ HRESULT**             | \_VT-FEHLER | Erforderlich. Ein **HRESULT,** das angibt, ob der Befehl erfolgreich ausgeführt wurde oder nicht ausgeführt werden kann. Wenn der Aufrufer eine ungültige Anforderung stellt, sollte der Treiber **HRESULT \_ FROM \_ WIN32(ERROR \_ NOT \_ SUPPORTED)** zurückgeben und muss keine anderen Ergebniswerte zurückgeben. Fehlercodes umfassen [Windows Fehlercodes für portable Geräte](error-constants.md) oder andere geeignete Fehlercodes. |
+| **ALLGEMEINER \_ \_ \_ \_ TREIBERFEHLERCODE \_ FÜR WPD-EIGENSCHAFTEN** | VT \_ UI4   | Optional. Ein treiberspezifischer Fehlercode. Dieser Wert wird in der Regel von Geräteanbietern verwendet, um die Diagnose von Gerätefehlern bei der Verwendung ihrer Anwendungen zu verbessern. Allgemeine Anwendungen würden dies ignorieren und sich stattdessen ausschließlich auf WPD \_ PROPERTY \_ COMMON \_ HRESULT verlassen.                                                                                                                   |
 
 
 
@@ -59,7 +59,7 @@ Als Ergebnisse des Treibers werden erwartet:
 
 ## <a name="calling-methods"></a>Aufrufen von Methoden
 
-Kann nur direkt mit [**iportabledevice:: Send Command**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-sendcommand)aufgerufen werden.
+Kann nur direkt mit [**IPortableDevice::SendCommand**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-sendcommand)aufgerufen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Kann nur direkt mit [**iportabledevice:: Send Command**](/windows/desktop/api/Po
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 

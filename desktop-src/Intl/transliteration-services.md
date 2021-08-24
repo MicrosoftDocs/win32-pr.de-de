@@ -1,44 +1,44 @@
 ---
-description: Die Els-Transliterations Dienste ordnen UTF-16-Text von einem Schreibsystem einem anderen Schreibsystem zu.
+description: Die ELS-Transliterationsdienste ordnen UTF-16-Text von einem Schreibsystem zu einem anderen Schreibsystem zu.
 ms.assetid: 32e46c52-5c3c-4e22-8f4e-05286ee213ba
-title: Transliterations Dienste
+title: Transliteration Services
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cc00b96d56e6b05e70b352c81da0280e9ef35043
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d442ed0a9c45d5fb40ffa3f84438f6b2a46ad0a5a6587e3a9fd16dd2f2fd9cff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131736"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119788270"
 ---
-# <a name="transliteration-services"></a>Transliterations Dienste
+# <a name="transliteration-services"></a>Transliteration Services
 
-Die Els-Transliterations Dienste ordnen UTF-16-Text von einem Schreibsystem einem anderen Schreibsystem zu. Bei jedem Dienst handelt es sich um Daten, die auf einen bestimmten Satz von Eingabe-und Ausgabe-Unicode-Skripts angewendet werden, und die tatsächliche Transliterierung ist intern für die Els-Plattform Die Anwendung kann optional die verfügbaren Dienste für bestimmte Eingabe-und Ausgabe Skripts auflisten und den erforderlichen Dienst auswählen.
+Die ELS-Transliterationsdienste ordnen UTF-16-Text von einem Schreibsystem zu einem anderen Schreibsystem zu. Bei jedem Dienst handelt es sich tatsächlich um Daten, die auf einen bestimmten Satz von Unicode-Eingabe- und -Ausgabeskripts angewendet werden, und die eigentliche Transliteration ist für die ELS-Plattform intern. Die Anwendung kann optional die verfügbaren Dienste für bestimmte Eingabe- und Ausgabeskripts aufzählen und den gewünschten Dienst auswählen.
 
-Die Plattform verwaltet die Metadaten für die Els-Transliterations Dienste. Die Metadaten für jeden Dienststellen eine Beschreibung des Dienes bereit und listet die Eingabe-und Ausgabe Skripts auf, die der Dienst unterstützt. Die Metadaten werden durch eine [**Mapping \_ Service \_ Info**](/windows/desktop/api/Elscore/ns-elscore-mapping_service_info) -Struktur dargestellt, die von der [**mappinggetservices**](/windows/desktop/api/Elscore/nf-elscore-mappinggetservices) -Funktion abgerufen wird.
+Die Plattform verwaltet Metadaten für die ELS-Transliterationsdienste. Metadaten für jeden Dienst enthalten eine Beschreibung des Diensts und listen die Vom Dienst unterstützten Eingabe- und Ausgabeskripts auf. Die Metadaten werden durch eine [**MAPPING \_ SERVICE \_ INFO-Struktur**](/windows/desktop/api/Elscore/ns-elscore-mapping_service_info) dargestellt, die von der [**MappingGetServices-Funktion**](/windows/desktop/api/Elscore/nf-elscore-mappinggetservices) abgerufen wird.
 
-## <a name="input-to-a-transliteration-service"></a>Eingabe in einen Transliterations Dienst
+## <a name="input-to-a-transliteration-service"></a>Eingabe für einen Transliterationsdienst
 
-Die Eingabe für einen Transliterations Dienst ist UTF-16-Text in einem Schreibsystem.
+Die Eingabe für einen Transliterationsdienst ist UTF-16-Text in einem Schreibsystem.
 
-## <a name="output-of-a-transliteration-service"></a>Ausgabe eines-Transaktions Dienstanbieter
+## <a name="output-of-a-transliteration-service"></a>Ausgabe eines Transliterationsdiensts
 
-Die Ausgabe eines-Transaktions Dienstanbieter ist UTF-16-Text, der einem zweiten Schreibsystem zugeordnet ist. Wenn keine passende Transaktions Zuordnung für einen bestimmten Teil des Eingabe Texts verfügbar ist, bleibt der Block unverändert.
+Die Ausgabe eines Transliterationsdiensts ist UTF-16-Text, der einem zweiten Schreibsystem zugeordnet ist. Wenn für einen bestimmten Block des Eingabetexts keine geeignete Transliterationszuordnung verfügbar ist, bleibt der Block unverändert.
 
-## <a name="transliteration-service-operation"></a>Vorgang für den Transaktions Dienst
+## <a name="transliteration-service-operation"></a>Transliterationsdienstvorgang
 
-Ein-Transaktions Dienst ordnet Unicode-Text von einem Eingabe Skript nach Bedarf einem Ausgabe Skript zu. Die Anwendung kann den spezifischen zu berücksichtigenden Transaktions Dienst abrufen, indem Sie beim Aufrufen von [**mappinggetservices**](/windows/desktop/api/Elscore/nf-elscore-mappinggetservices)Eingabe-und Ausgabe Skripts angibt oder die Dienst-GUID bereitstellt. Eine weitere Option für die Anwendung besteht darin, alle verfügbaren Transaktionsdienste aufzulisten, indem die Dienst Kategorie "Transliterierung" angegeben wird, wenn **mappinggetservices** aufgerufen wird. In diesem Fall ruft die Anwendung jeden Dienst auf und vergleicht die Ergebnisse mit dem ursprünglichen Text, um festzustellen, ob die Ergebnisse durch den Vorgang eines bestimmten dienstanens geändert wurden.
+Ein Transliterationsdienst ordnet Unicode-Text aus einem Eingabeskript einem Ausgabeskript nach Zeichen oder Begriff nach Bedarf zu. Die Anwendung kann den spezifischen gewünschten Transliterationsdienst durch Angeben von Eingabe- und Ausgabeskripts beim Aufrufen von [**MappingGetServices**](/windows/desktop/api/Elscore/nf-elscore-mappinggetservices)oder durch Bereitstellen der Dienst-GUID abrufen. Eine weitere Option für die Anwendung besteht darin, alle verfügbaren Transliterationsdienste aufzuzählen, indem die Dienstkategorie "Transliteration" beim Aufrufen von **MappingGetServices** angegeben wird. In diesem Fall ruft die Anwendung jeden Dienst auf und vergleicht die Ergebnisse mit dem ursprünglichen Text, um festzustellen, ob die Ergebnisse durch den Vorgang eines bestimmten Diensts geändert wurden.
 
-Die Anwendung kann die Texterkennung für einen Els-Transaktions Dienst mit einem Rückruf von [**mappingrecognizetext**](/windows/desktop/api/Elscore/nf-elscore-mappingrecognizetext)anfordern. Beim Empfang der Anforderung ordnet der-Transaktions Dienst einen Puffer zu, der die Transaktionsdaten enthält, und führt dann eine Texterkennung für jeden Codepunkt in der von der Anwendung bereitgestellten Eingabe Zeichenfolge aus.
+Die Anwendung kann die Texterkennung für einen ELS-Transliterationsdienst mit einem Aufruf von [**MappingRecognizeText**](/windows/desktop/api/Elscore/nf-elscore-mappingrecognizetext)anfordern. Wenn die Anforderung empfangen wird, ordnet der Transliterationsdienst einen Puffer zu, der die transliterierten Daten enthält, und führt dann die Texterkennung für jeden Codepunkt in der von der Anwendung bereitgestellten Eingabezeichenfolge aus.
 
 > [!Note]  
-> Der ursprüngliche Text und der transliterierte Text können eine unterschiedliche Länge aufweisen.
+> Der ursprüngliche Text und der transliterierte Text können unterschiedliche Längen aufweisen.
 
  
 
-## <a name="transliteration-service-guids"></a>Dienst-GUIDs für Transliterationen
+## <a name="transliteration-service-guids"></a>GUIDs des Transliterationsdiensts
 
-Die GUIDs für die-Transliterations Dienste werden in elssrvc. h deklariert, wie im folgenden Code gezeigt.
+Die GUIDs für die Transliterationsdienste werden in Elssrvc.h deklariert, wie im folgenden Code gezeigt.
 
 
 ```C++

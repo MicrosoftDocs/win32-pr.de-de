@@ -1,7 +1,7 @@
 ---
-description: Stellt das angegebene PCI-Gerät bereit, sodass es vom Host Computersystem verwendet werden kann.
+description: Lädt das angegebene PCI-Gerät ein, damit es vom Hostcomputersystem verwendet werden kann.
 ms.assetid: 2a07174e-c221-4c04-81b8-5968aa67e235
-title: Mountassignabledevice-Methode der Msvm_AssignableDeviceService-Klasse
+title: MountAssignableDevice-Methode der Msvm_AssignableDeviceService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: df5f8a337fbf4baf47a4f695322944ed0b97e82e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: af7848306a289703717919f6e3407218774a8eba96814677cad9d7bf6f694aca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119790310"
 ---
-# <a name="mountassignabledevice-method-of-the-msvm_assignabledeviceservice-class"></a>Mountassignabledevice-Methode der MSVM- \_ Klasse "accessabledeviceservice"
+# <a name="mountassignabledevice-method-of-the-msvm_assignabledeviceservice-class"></a>MountAssignableDevice-Methode der Msvm \_ AssignableDeviceService-Klasse
 
-Stellt das angegebene PCI-Gerät bereit, sodass es vom Host Computersystem verwendet werden kann.
+Lädt das angegebene PCI-Gerät ein, damit es vom Hostcomputersystem verwendet werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,47 +42,47 @@ uint32 MountAssignableDevice(
 
 <dl> <dt>
 
-Geräte *Pfad* \[ in\]
+*DeviceInstancePath* \[ In\]
 </dt> <dd>
 
-Zeichenfolge, die den geräteinstanzpfad zu einem Gerät enthält.
+Zeichenfolge, die den Geräteinstanzpfad zu einem Gerät enthält.
 
 </dd> <dt>
 
-*Devicelocationpath* \[ in\]
+*DeviceLocationPath* \[ In\]
 </dt> <dd>
 
-Zeichenfolge, die den Geräte Speicherort Pfad zu einem Gerät enthält.
+Zeichenfolge, die den Pfad des Gerätestandorts zu einem Gerät enthält.
 
 </dd> <dt>
 
-*Mountedbinviceinstancepath* \[ vorgenommen\]
+*MountedDeviceInstancePath* \[ out\]
 </dt> <dd>
 
-Zeichenfolge, die den geräteinstanzpfad zum eingebundenen Gerät enthält.
+Zeichenfolge, die den Pfad der Geräteinstanz zum eingebundenen Gerät enthält.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Ein Verweis auf den Auftrag (kann NULL sein, wenn die Aufgabe abgeschlossen ist).
+Ein Verweis auf den Auftrag (kann NULL sein, wenn der Task abgeschlossen ist).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird 0 oder 4096 zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg 0 oder 4096 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -91,7 +91,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -103,19 +103,19 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -124,10 +124,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -136,7 +136,7 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**MSVM zugewiesen \_ abledebug Service**](msvm-assignabledeviceservice.md)
+[**Msvm \_ AssignableDeviceService**](msvm-assignabledeviceservice.md)
 </dt> </dl>
 
  

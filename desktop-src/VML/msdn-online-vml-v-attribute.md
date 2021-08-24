@@ -1,50 +1,50 @@
 ---
-title: VML V-Attribut
-description: VML V-Attribut
+title: VML-V-Attribut
+description: VML-V-Attribut
 ms.assetid: be55704f-71f3-4c0b-8a1b-d7de5efa85dc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 690518e998163f7e47fb326b3037e6a4ec397e8f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5cbf2f8654d32714d20e9b0c5a36fb939173698749569692120c04b89e84b6e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101831"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119768330"
 ---
-# <a name="vml-v-attribute"></a>VML V-Attribut
+# <a name="vml-v-attribute"></a>VML-V-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
 Definiert die Befehle, die einen Pfad bilden. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
-[Pfad](msdn-online-vml-path-element.md)
+[Path](msdn-online-vml-path-element.md)
 
 **Tagsyntax**
 
-<v: *Element* v = " *Ausdruck* " >
+<v: *element* v=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . v = "*Ausdruck*"
+*element* .v="*expression*"
 
-*Ausdruck* = *Element*. v
+*expression* = *.v-Element*
 
 **Anmerkungen**
 
-Überschreibt das **path** -Attribut einer Form. Koordinaten können fest Ziffern, relative Zahlen oder Verweise auf Formeln sein (mit dem Format " @n ", wobei "n" eine Formel Nummer ist, z. b. " @2 " bezieht sich auf die zweite Formel im Formel Array).
+Überschreibt das **Path-Attribut** einer Form. Koordinaten können feste Zahlen, relative Zahlen oder Verweise auf Formeln sein (mithilfe des Formats " @n " ", wobei n eine Formelnummer ist, z. B. @2 " " bezieht sich auf die zweite Formel im Formelarray).
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Ein Rechteck wird mit dem **V** -Attribut erstellt. Beachten Sie, dass nach dem ersten Satz von durch Trennzeichen getrennten Koordinaten ein Kleinbuchstabe L (**LineTo** -Befehl) verwendet wird.
+Ein Rechteck wird  mithilfe des V-Attributs erstellt. Beachten Sie, dass nach dem ersten Satz durch Kommas getrennter Koordinaten ein Kleinbuchstabe L **(lineto-Befehl)** verwendet wird.
 
 
 ```HTML
@@ -60,6 +60,6 @@ Ein Rechteck wird mit dem **V** -Attribut erstellt. Beachten Sie, dass nach dem 
 
 
 
- 
+ 
 
- 
+ 

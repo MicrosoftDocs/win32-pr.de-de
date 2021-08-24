@@ -1,9 +1,9 @@
 ---
-title: IDCompositionScaleTransform3D setscaley-Methoden (Dcomp. h)
-description: Ändert oder animiert den Wert der ScaleY-Eigenschaft einer Skalierungs Transformation.
+title: IDCompositionScaleTransform3D SetScaleY-Methoden (Dcomp.h)
+description: Ändert oder animiert den Wert der ScaleY-Eigenschaft einer Skalierungstransformation.
 ms.assetid: 90E48F55-B9A3-464D-9FB2-03AA27AA5A08
 keywords:
-- Setscaley-Methoden directcomposition
+- SetScaleY-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,25 +12,25 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 4ee5212631178ce97174d0b993f2c318bc134cc5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3ef20c014eb1f3426b9f63392787c673a280914d317db1e25e42361edfcb3a29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119844330"
 ---
-# <a name="idcompositionscaletransform3dsetscaley-methods"></a>IDCompositionScaleTransform3D:: setscaley-Methoden
+# <a name="idcompositionscaletransform3dsetscaley-methods"></a>IDCompositionScaleTransform3D::SetScaleY-Methoden
 
-Ändert oder animiert den Wert der ScaleY-Eigenschaft einer Skalierungs Transformation. Die ScaleY-Eigenschaft gibt den Skalierungsfaktor entlang der y-Achse an.
+Ändert oder animiert den Wert der ScaleY-Eigenschaft einer Skalierungstransformation. Die ScaleY-Eigenschaft gibt den Skalierungsfaktor entlang der y-Achse an.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                        | BESCHREIBUNG                                           |
+| Methode                                                                                                        | Beschreibung                                           |
 |:--------------------------------------------------------------------------------------------------------------|:------------------------------------------------------|
-| [**Setscaley (float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscaley(float))                                     | Ändert den Wert der ScaleY-Eigenschaft.<br/>  |
-| [**Setscaley (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscaley(idcompositionanimation)) | Animiert den Wert der ScaleY-Eigenschaft.<br/> |
+| [**SetScaleY(float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscaley(float))                                     | Ändert den Wert der ScaleY-Eigenschaft.<br/>  |
+| [**SetScaleY(IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscaley(idcompositionanimation)) | Animiert den Wert der ScaleY-Eigenschaft.<br/> |
 
 
 
@@ -40,10 +40,10 @@ ms.locfileid: "104106017"
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Dcomp. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Dcomp. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2012-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Dcomp.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Dcomp.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Dcomp.dll</dt> </dl> |
 
 
@@ -55,7 +55,7 @@ ms.locfileid: "104106017"
 [**IDCompositionScaleTransform3D**](/windows/win32/api/dcomp/nn-dcomp-idcompositionscaletransform)
 </dt> <dt>
 
-[**IDCompositionScaleTransform3D:: setscalex**](idcompositionscaletransform3d-setscalex-overloaded.md)
+[**IDCompositionScaleTransform3D::SetScaleX**](idcompositionscaletransform3d-setscalex-overloaded.md)
 </dt> <dt>
 
 [**IDCompositionScaleTransform3D::SetScaleZ**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscalez(float))

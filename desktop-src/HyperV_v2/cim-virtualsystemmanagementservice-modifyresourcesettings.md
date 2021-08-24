@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 26971c80ce6f7d0ffcdcef069d76aef5fdc15138
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: bc001d87a95e54682f6b6b4ffdecd3c53d3288b58a6dcb5b6e9a8a4d2dc528e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108112288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682730"
 ---
 # <a name="modifyresourcesettings-method-of-the-cim_virtualsystemmanagementservice-class"></a>ModifyResourceSettings-Methode der CIM \_ VirtualSystemManagementService-Klasse
 
-Ändert die Einstellungen für virtuelle Ressourcen.
+Ändert einstellungen für virtuelle Ressourcen.
 
-Wenn sie auf Teile einer "aktuellen" Konfiguration des virtuellen Systems angewendet werden, können Als Nebeneffekt Ressourcen des aktiven virtuellen Systems geändert werden.
+Wenn sie auf Teile einer "aktuellen" Konfiguration des virtuellen Systems angewendet wird, können Als Nebeneffekt Ressourcen des aktiven virtuellen Systems geändert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,7 +60,7 @@ Array von Verweisen auf Instanzen der Klasse [**CIM \_ ResourceAllocationSetting
 *Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang lange ausgeführt wird, wird optional ein Auftrag zurückgegeben. In diesem Fall sind die Instanzen der [**Klasse CIM \_ ResourceAllocationSettingData,**](cim-resourceallocationsettingdata.md) die die geänderten Ressourceneinstellungen darstellen, über die Zuordnung **CIM \_ ConreteComponent aus** der Instanz der Klasse CIM [**\_ VirtualSystemSettingData**](cim-virtualsystemsettingdata.md) verfügbar, die die betroffene konfiguration des virtuellen Systems darstellt.
+Wenn der Vorgang lange ausgeführt wird, wird optional ein Auftrag zurückgegeben. In diesem Fall sind die Instanzen der [**Klasse CIM \_ ResourceAllocationSettingData,**](cim-resourceallocationsettingdata.md) die die geänderten Ressourceneinstellungen darstellen, über die Zuordnung **CIM \_ ConreteComponent** aus der Instanz der [**Klasse CIM \_ VirtualSystemSettingData**](cim-virtualsystemsettingdata.md) verfügbar, die die betroffene Konfiguration des virtuellen Systems darstellt.
 
 </dd> </dl>
 
@@ -88,13 +88,13 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 **Ungültiger Zustand** (5)
 </dt> <dt>
 
-**Inkompatible Parameter** (6)
+**Inkompatible** Parameter (6)
 </dt> <dt>
 
 **DMTF Reserved** (..)
 </dt> <dt>
 
-**Methodenparameter überprüft** – Auftrag gestartet (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
 **Reservierte Methode** (4097..32767)
@@ -107,17 +107,17 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

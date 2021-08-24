@@ -1,67 +1,67 @@
 ---
-description: Dieses Thema enthält einige Anweisungen für die Handhabung von benutzerdefinierten Gebiets Schemas in Ihren Anwendungen.
+description: Dieses Thema enthält einige Anweisungen für die Behandlung benutzerdefinierter Locales in Ihren Anwendungen.
 ms.assetid: 2622e2b3-b952-4666-a440-85d73d11c5e0
-title: Arbeiten mit benutzerdefinierten Gebiets Schemas
+title: Arbeiten mit benutzerdefinierten Locales
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ab0e59446496ae2985860c0fd6b1bd5bddde084
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8a969681e685a7044f9c583c907515a51559866d28d997cf43fa639127eee27f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959222"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119680930"
 ---
-# <a name="working-with-custom-locales"></a>Arbeiten mit benutzerdefinierten Gebiets Schemas
+# <a name="working-with-custom-locales"></a>Arbeiten mit benutzerdefinierten Locales
 
-Dieses Thema enthält einige Anweisungen für die Handhabung von [benutzerdefinierten](custom-locales.md) Gebiets Schemas in Ihren Anwendungen. Es empfiehlt sich, den gesamten Quellcode mit diesen Überlegungen vorzubereiten, da die Anwendung nicht steuert, ob benutzerdefinierte Gebiets Schemas auf dem Betriebssystem installiert werden.
+Dieses Thema enthält einige Anweisungen für die Behandlung [benutzerdefinierter Locales](custom-locales.md) in Ihren Anwendungen. Es ist am besten, den Quellcode unter Berücksichtigung dieser Überlegungen vorzubereiten, da Ihre Anwendung nicht kontrolliert, ob benutzerdefinierte Lokale auf dem Betriebssystem installiert sind.
 
-## <a name="handle-locale_stime-constant-correctly"></a>Ordnungsgemäße Handhabung der Schema- \_ stime-Konstante
+## <a name="handle-locale_stime-constant-correctly"></a>Korrektes Behandeln der \_ LOCALE-STIME-Konstante
 
-Wenn Sie über eine ältere Anwendung verfügen, die [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) zum Abrufen des veralteten Zeit Trennzeichens verwendet, das durch [locale \_ stime](locale-stime-constants.md)angegeben wird, kann die Anwendung das Zeitformat nicht analysieren. Beachten Sie, dass das Zeichen, das Stunden von Minuten trennt, sich von dem Zeichen unterscheidet, das Minuten von Sekunden trennt.
+Wenn Sie über eine ältere Anwendung verfügen, die [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) verwendet, um das durch [LOCALE \_ STIME](locale-stime-constants.md)angegebene veraltete Zeittrennzeichen zu erhalten, kann die Anwendung das Zeitformat nicht analysieren. Beachten Sie, dass sich das Zeichen, das Stunden von Minuten trennt, von dem Zeichen abtrennt, das Minuten von Sekunden trennt.
 
 > [!Note]  
-> Beachten Sie beim Programmieren für benutzerdefinierte Gebiets Schemas, dass Sie ungewöhnlich sind. Praktisch jedes Feld, das für NLS verfügbar ist, muss mit ungewöhnlichem Verhalten zurechtkommen. Beispielsweise ist das Zeitformat 12h34 ' 12 ' ' legitim und im allgemeinen verständlich. Dennoch treffen viele Anwendungen Annahmen über die Zeit Trennzeichen, die Puffer Längen oder Anzeigefelder unterbrechen können.
+> Beachten Sie bei der Programmierung für benutzerdefinierte Lokales, dass sie ungewöhnlich sind. Praktisch jedes für NLS verfügbare Feld muss mit ungewöhnlichem Verhalten umgehen. Beispielsweise ist das Zeitformat 12H34'12'' legitim und allgemein verständlich. Viele Anwendungen machen jedoch Annahmen über die Zeittrennzeichen, die Pufferlängen oder Anzeigefelder unterbricht.
 
  
 
-## <a name="distinguish-among-supplemental-locales"></a>Unterscheidung zwischen zusätzlichen Gebiets Schemata
+## <a name="distinguish-among-supplemental-locales"></a>Unterscheiden zwischen ergänzenden Locales
 
-Alle ergänzenden Gebiets Schemas verwenden die benutzerdefinierte Gebiets Schema- [ \_ \_ nicht angegebene](locale-custom-constants.md) Konstante für den Gebiets Schema [Bezeichner](locale-identifiers.md). Als Regel kann [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) nicht zwischen zusätzlichen Gebiets Schemas unterscheiden, sondern [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex) , da dabei Gebiets Schema [Namen](locale-names.md) anstelle von Gebiets Schema Bezeichnerzeichen verwendet werden. Die Anwendung kann Informationen zu einem bestimmten ergänzenden Gebiets Schema nur abrufen, wenn dieses Gebiets Schema das aktuell ausgewählte Benutzer Gebiets Schema ist. Anschließend kann die Anwendung [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) aufrufen und den konstanten Gebiets Schema [- \_ Benutzer \_ Standard](locale-user-default.md) als Gebiets Schema Bezeichner übergeben.
+Alle zusätzlichen Locales verwenden die [LOCALE \_ CUSTOM \_ UNSPECIFIED-Konstante](locale-custom-constants.md) für den [Locale Identifier](locale-identifiers.md). In der Regel kann [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) nicht zwischen ergänzenden Locales unterscheiden, [](locale-names.md) aber [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex) kann, da es Anstelle von Locale-Bezeichnern Locale-Namen verwendet. Ihre Anwendung kann Informationen zu einem bestimmten zusätzlichen Locale nur abrufen, wenn es sich bei diesem Locale um das aktuell ausgewählte Benutzer-Locale handelt. Anschließend kann die Anwendung [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) aufrufen und die Konstante [LOCALE \_ USER \_ DEFAULT](locale-user-default.md) als Locale Identifier übergeben.
 
-## <a name="handle-replacement-locales"></a>Austausch Gebiets Schemas behandeln
+## <a name="handle-replacement-locales"></a>HandleErsetzungs-Locales
 
-Um die Zuverlässigkeit von Windows beizubehalten, denken Sie daran, dass ein von Ihrer Anwendung unterstütztes Ersetzungs Gebiets Schema den Gebiets Schema Bezeichner für das ersetzte Gebiets Schema nicht ändern kann Keines der beiden Ersetzungs Gebiets Schemas kann die Sortierungs Eigenschaften von Windows ändern.
+Denken Sie daran, dass ein Windows, das von Ihrer Anwendung unterstützt wird, den Locale Identifier des ersetzten Locale nicht ändern kann, um die Zuverlässigkeit des ersetzten Windows zu gewährleisten. Kein Ersatz-Locale kann die Sortiereigenschaften der Windows.
 
-Obwohl ein Ersatz Gebiets Schema den Standardkalender ändern kann, muss es den ursprünglichen Standardwert an einer beliebigen Stelle in der Liste der verfügbaren Kalender beibehalten. Beispielsweise wird für das thailändische Gebiets Schema (Thailand) der buddhistische Thai-Kalender als Standard verwendet. Ein Administrator kann ein Ersatz Gebiets Schema erstellen, in dem der gregorianische lokalisierte Kalender verwendet wird. Die Liste der verfügbaren Kalender enthält jedoch weiterhin einen Eintrag für den thailändischen Thai-Kalender.
+Obwohl ein Ersatz-Locale den Standardkalender ändern kann, muss der ursprüngliche Standardwert an einer bestimmten Stelle in der Liste der verfügbaren Kalender beibehalten werden. Das Thailändisch -Locale (Thai) verwendet beispielsweise den thailändisch-Kalender als Standard. Ein Administrator kann ein Ersatz-Locale erstellen, das den gregorianischen lokalisierten Kalender verwendet. Die Liste der verfügbaren Kalender enthält jedoch weiterhin einen Eintrag für den Thai-Kalender.
 
-Für Ersatz Gebiets Schemata sollte Ihre Anwendung normalerweise Gebiets Schema spezifische Informationen einsehen, anstatt eine "Verknüpfung" basierend auf den Kenntnissen eines bestimmten Gebiets Schemas zu versuchen. Wenn [**getthreadlocale**](/windows/desktop/api/Winnls/nf-winnls-getthreadlocale) beispielsweise das aktuelle Gebiets Schema als Englisch (USA) abruft, kann es sich tatsächlich um ein Ersatz Gebiets Schema handeln, das in Kraft treten darf.
+Für Ersetzungs-Locales sollte Ihre Anwendung in der Regel die für das Lokale spezifischen Informationen lesen, anstatt basierend auf dem Wissen über ein bestimmtes Locale eine "Verknüpfung" zu versuchen. Wenn [**GetThreadLocale**](/windows/desktop/api/Winnls/nf-winnls-getthreadlocale) z. B. das aktuelle Locale als Englisch (USA) abruft, kann es tatsächlich ein Ersatz-Locale sein, das wirksam werden soll.
 
-## <a name="customize-calendars"></a>Kalender anpassen
+## <a name="customize-calendars"></a>Anpassen von Kalendern
 
-Ihre Anwendungen können Tag-und Monatsnamen für gregorianische Kalender, aber nicht für nicht gregorianische Kalender anpassen. Ebenso unterstützt nls die Erstellung benutzerdefinierter Kalender nicht. Weitere Informationen finden Sie unter [Datum und Kalender](date-and-calendar.md).
+Ihre Anwendungen können Tag- und Monatsnamen für gregorianische Kalender anpassen, jedoch nicht für nicht gregorianische Kalender. Ebenso unterstützt NLS die Erstellung benutzerdefinierter Kalender nicht. Weitere Informationen finden Sie unter [Datum und Kalender.](date-and-calendar.md)
 
-## <a name="handle-sorting-sequences"></a>Behandeln von Sortier Sequenzen
+## <a name="handle-sorting-sequences"></a>Verarbeiten von Sortiersequenzen
 
-Ein zusätzliches Gebiets Schema kann eine beliebige von Microsoft definierte Sortierreihenfolge verwenden. Ein Ersatz Gebiets Schema muss dieselbe Sortierreihenfolge wie das Gebiets Schema verwenden, das es ersetzt. NLS unterstützt das Erstellen von benutzerdefinierten Sortier Sequenzen nicht. Weitere Informationen finden Sie unter [Handling Sortieren in Ihren Anwendungen](handling-sorting-in-your-applications.md).
+Ein zusätzliches Locale kann eine beliebige von Microsoft definierte Sortierreihenfolge verwenden. Ein Ersatz-Locale muss dieselbe Sortierreihenfolge wie das von ihm ersetzte Locale verwenden. NLS unterstützt die Erstellung benutzerdefinierter Sortiersequenzen nicht. Weitere Informationen finden Sie unter [Handling Sorting in Your Applications](handling-sorting-in-your-applications.md).
 
-## <a name="localize-custom-locale-information"></a>Lokalisieren von benutzerdefinierten Gebiets Schema Informationen
+## <a name="localize-custom-locale-information"></a>Lokalisieren benutzerdefinierter Locale-Informationen
 
-NLS stellt keinen Mechanismus zum Lokalisieren von benutzerdefinierten Gebiets Schema Informationen bereit. Daher ruft die [Konstante locale \_ SLanguage](locale-slanguage.md) oder das Gebiets Schema [ \_ slocalizedlanguagename](locale-slocalized-constants.md) , das als Gebiets Schema Bezeichner für ein benutzerdefiniertes Gebiets Schema verwendet wird, immer Werte ab, die dem Gebiets [ \_ Schema snativelangname](locale-snative-constants.md) oder [locale \_ snativelanguagename](locale-snative-constants.md)zugeordnet sind
+NLS bietet keinen Mechanismus zum Lokalisieren benutzerdefinierter Locale-Informationen. Daher ruft die Konstante [LOCALE \_ SLANGUAGE](locale-slanguage.md) oder [LOCALE \_ SLOCALIZEDLANGUAGENAME,](locale-slocalized-constants.md) die als Locale Identifier für ein benutzerdefiniertes Locale verwendet wird, immer Werte ab, die [LOCALE \_ SNATIVELANGNAME](locale-snative-constants.md) oder [LOCALE \_ SNATIVELANGUAGENAME zugeordnet](locale-snative-constants.md)sind.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden der Unterstützung für nationale Sprache](using-national-language-support.md)
+[Verwenden der Unterstützung der Landessprache](using-national-language-support.md)
 </dt> <dt>
 
-[Benutzerdefinierte Gebiets Schemata](custom-locales.md)
+[Benutzerdefinierte Locales](custom-locales.md)
 </dt> <dt>
 
 [Datum und Kalender](date-and-calendar.md)
 </dt> <dt>
 
-[Behandeln von Sortierungen in Ihren Anwendungen](handling-sorting-in-your-applications.md)
+[Behandeln der Sortierung in Ihren Anwendungen](handling-sorting-in-your-applications.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Playlistcollectionplaylistsetasdeleted-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das playlistcollectionplaylisteintasdeleted-Ereignis ist für die zukünftige Verwendung reserviert.
+title: PlaylistCollectionPlaylistSetAsDeleted-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das PlaylistCollectionPlaylistSetAsDeleted-Ereignis ist für die zukünftige Verwendung reserviert.
 ms.assetid: 6c0a4d2c-e965-4a88-acd4-2a2a12265e36
 keywords:
-- Playlistcollectionplaylistsetasdeleted-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- PlaylistCollectionPlaylistSetAsDeleted-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf432ede40298abed98cdf0c5b02b0a192f7b3a9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b11187ffaf6e16612ba7edb573e0b0bc71e9d2abf44ee509db2404026e3ed570
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358741"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119864579"
 ---
-# <a name="playlistcollectionplaylistsetasdeleted-event-of-the-axwindowsmediaplayer-object"></a>Playlistcollectionplaylistsetasdeleted-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="playlistcollectionplaylistsetasdeleted-event-of-the-axwindowsmediaplayer-object"></a>PlaylistCollectionPlaylistSetAsDeleted-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das playlistcollectionplaylisteintasdeleted-Ereignis ist für die zukünftige Verwendung reserviert.
+Das PlaylistCollectionPlaylistSetAsDeleted-Ereignis ist für die zukünftige Verwendung reserviert.
 
 ``` syntax
 [C#]
@@ -41,20 +41,20 @@ Private Sub player_PlaylistCollectionPlaylistSetAsDeleted(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ playlistcollectionplaylistentasdeletedeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ playlistcollectionplaylistentasdeletedevent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ PlaylistCollectionPlaylistSetAsDeletedEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ PlaylistCollectionPlaylistSetAsDeletedEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
 | Eigenschaft         | BESCHREIBUNG                                 |
 |------------------|---------------------------------------------|
-| bstrauplaylistname | **System. String** Nicht unterstützt.<br/>  |
-| varfisdeleted    | **System. Boolean** Nicht unterstützt.<br/> |
+| bstrPlaylistName | **System.String** Wird nicht unterstützt.<br/>  |
+| varfIsDeleted    | **System.Boolean** Wird nicht unterstützt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Ereignis ist für die zukünftige Verwendung reserviert.
 
@@ -64,7 +64,7 @@ Dieses Ereignis ist für die zukünftige Verwendung reserviert.
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -74,7 +74,7 @@ Dieses Ereignis ist für die zukünftige Verwendung reserviert.
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

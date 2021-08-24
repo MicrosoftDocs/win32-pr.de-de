@@ -1,43 +1,43 @@
 ---
-description: Bereitstellen eines benutzerdefinierten Videos zum Ändern der Größe
+description: Bereitstellen eines benutzerdefinierten Video resizer
 ms.assetid: 4009f93f-cd50-440f-b943-7e3700e0e2cb
-title: Bereitstellen eines benutzerdefinierten Videos zum Ändern der Größe
+title: Bereitstellen eines benutzerdefinierten Video resizer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5247727cf16ef3c94a699db2907ff240b1d8a289
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: a006f4620accc3917ae3072846f99f7537a1eadfaab21da36aab17f17d94e433
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124106"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747900"
 ---
-# <a name="providing-a-custom-video-resizer"></a>Bereitstellen eines benutzerdefinierten Videos zum Ändern der Größe
+# <a name="providing-a-custom-video-resizer"></a>Bereitstellen eines benutzerdefinierten Video resizer
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
 > [!Note]  
-> Für dieses Feature ist DirectX 9,0 oder höher erforderlich.
+> Für dieses Feature ist DirectX 9.0 oder höher erforderlich.
 
  
 
-Wenn [DirectShow-Bearbeitungs Dienste](directshow-editing-services.md) (von) die Größe eines Video Quell Clips ändern, ist das Standardverhalten eine *StretchBlt*, die schnell, aber nicht mit Antialiasing versehen ist. Sie können das Größen Änderungs Verhalten ändern, indem Sie eine benutzerdefinierte resialisierung als DirectShow-Transformations Filter implementieren. Der Filter muss die Schnittstelle [**iresize**](iresize.md) verfügbar machen, die es ermöglicht, die Videogröße für die Eingabe und die Ausgabe anzugeben. Weitere Informationen zum Schreiben eines Transformations Filters finden Sie unter [Schreiben von Transformations Filtern](writing-transform-filters.md). Die **ctransformfilter** -Basisklasse wird als Ausgangspunkt empfohlen. Beachten Sie beim Implementieren des Filters Folgendes:
+Wenn [DirectShow Editing Services](directshow-editing-services.md) (DES) die Größe eines Videoquellenclips geändert, ist das Standardverhalten *stretchBlt*, das schnell, aber nicht gegen Aliase ist. Sie können das Größenänderungsverhalten ändern, indem Sie einen benutzerdefinierten Resizer als DirectShow-Transformationsfilter implementieren. Der Filter muss die [**IResize-Schnittstelle**](iresize.md) verfügbar machen, mit der DES die Größe des Eingabe- und Ausgabevideos angeben kann. Informationen zum Schreiben eines Transformationsfilters finden Sie unter [Schreiben von Transformationsfiltern.](writing-transform-filters.md) Die **CTransformFilter-Basisklasse** wird als Ausgangspunkt empfohlen. Beachten Sie beim Implementieren des Filters Folgendes:
 
--   Unterstützung der **iresize** -Schnittstelle für den Filter (nicht die Pins).
--   Der Filter sollte nur [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Formate ( \_ Video Info Format) akzeptieren. Ablehnen anderer Format Typen.
--   Das Videoformat von des kann ein beliebiger nicht komprimierter RGB-Typ sein, einschließlich 32-Bit-RGB mit Alpha (mediasubtype \_ ARGB32). Der Filter kann Formate mit **biheight** < 0 (null) auf sichere Weise ablehnen.
--   Bevor die Renderingengine die Ausgabepin des Filters verbindet, wird [**iresize::p UT \_ mediaType**](iresize-put-mediatype.md) aufgerufen, um den Ausgabetyp festzulegen. Es kann auch " [**iresize::p UT \_ size**](iresize-put-size.md) " aufgerufen werden, um die Ausgabegröße anzupassen. Diese beiden Methoden können beliebig oft in beliebiger Reihenfolge aufgerufen werden, bevor die Ausgabe-PIN verbunden wird.
--   Nachdem die Renderingengine eine Verbindung mit der Ausgabe-PIN hergestellt hat, kann Sie die **Put- \_ Größe** erneut Der Filter für die Größenänderung sollte die Ausgabe-PIN erneut mit der neuen Größe verbinden.
--   Strecken Sie in der [**ctransformfilter:: Transform**](ctransformfilter-transform.md) -Methode des Filters das Eingabe Video auf die Ausgabegröße.
--   Der Filter sollte niemals das Diskontinuität-Flag für das Ausgabe Beispiel festlegen oder einen Medientyp an das Ausgabe Beispiel anfügen.
--   Implementieren Sie die **IPersistStream** -Schnittstelle, um den Status des Filters in einer GraphEdit-Datei (grf-Datei) zu speichern. (Dies ist optional, aber zum Testen hilfreich.)
+-   Unterstützen Sie **die IResize-Schnittstelle** für den Filter (nicht die Stecknadeln).
+-   Der Filter sollte nur [**VIDEOINFOHEADER-Formate**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) (FORMAT \_ VideoInfo) akzeptieren. Lehnen Sie andere Formattypen ab.
+-   Das Videoformat von DES kann ein beliebiger nicht komprimierter RGB-Typ sein, einschließlich 32-Bit-RGB mit Alpha (MEDIASUBTYPE \_ ARGB32). Ihr Filter kann Formate mit **biHeight** < 0 problemlos ablehnen.
+-   Bevor die Render-Engine eine Verbindung mit dem Ausgabepin des Filters herstellt, ruft sie [**IResize::p ut \_ MediaType**](iresize-put-mediatype.md) auf, um den Ausgabetyp fest zu legen. Sie kann auch [**IResize::p ut \_ Size aufrufen,**](iresize-put-size.md) um die Ausgabegröße anzupassen. Sie kann diese beiden Methoden in beliebiger Reihenfolge und so oft aufrufen, bevor der Ausgabepin miteinander verknüpft wird.
+-   Nachdem die Render-Engine die Verbindung mit dem Ausgabepin herstellt, kann sie **put \_ Size erneut** aufrufen. Der Größenfilter sollte seine Ausgabepins erneut mit der neuen Größe verbinden.
+-   Strecken Sie in der [**CTransformFilter::Transform-Methode**](ctransformfilter-transform.md) des Filters das Eingabevideo auf die Ausgabegröße.
+-   Ihr Filter sollte niemals das Flag für die Diskontinuität im Ausgabebeispiel festlegen oder einen Medientyp an das Ausgabebeispiel anfügen.
+-   Implementieren Sie die **IPersistStream-Schnittstelle,** um den Zustand des Filters in einer GraphEdit-Datei (.grf) zu speichern. (Dies ist optional, aber nützlich für Tests.)
 
-Um den Filter zum Ändern der Größe zu verwenden, muss der Filter als COM-Objekt im System des Benutzers registriert werden. Bevor die Anwendung das Videoprojekt rendert, Fragen Sie die Rendering-Engine nach der [**IRenderEngine2**](irenderengine2.md) -Schnittstelle ab, und nennen Sie [**IRenderEngine2:: setresizerguid**](irenderengine2-setresizerguid.md) mit der CLSID des resizerfilterfilters.
+Um den Größenfilter verwenden zu können, muss der Filter als COM-Objekt im System des Benutzers registriert werden. Bevor die Anwendung das Videoprojekt rendert, fragen Sie die Render-Engine nach der [**IRenderEngine2-Schnittstelle**](irenderengine2.md) ab, und rufen [**Sie IRenderEngine2::SetResizerGUID**](irenderengine2-setresizerguid.md) mit der CLSID des Resizerfilters auf.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Rendern eines Projekts](rendering-a-project.md)
+[Rendern eines Project](rendering-a-project.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: vmfloppydriveevent-Enumeration (vpccominterfaces. h)
-description: Gibt die Disketten Laufwerks Ereignisse an.
+title: vmFloppyDriveEvent-Enumeration (VPCCOMInterfaces.h)
+description: Gibt die Diskettenlaufwerkereignisse an.
 ms.assetid: 31d0c748-609a-4e03-8b5c-0a17a2587242
 keywords:
-- virtueller PC der vmfloppydriveevent-Enumeration
+- vmFloppyDriveEvent-Enumeration Virtueller PC
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a11b1485f91264713cf96a4f95cab8286261eea4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f9f8ded5cf87d740f113bab54d9f7587c8f8927e5ae37352dceb4a30be09d104
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743080"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767900"
 ---
-# <a name="vmfloppydriveevent-enumeration"></a>vmfloppydriveevent-Enumeration
+# <a name="vmfloppydriveevent-enumeration"></a>vmFloppyDriveEvent-Enumeration
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Gibt die Disketten Laufwerks Ereignisse an.
+Gibt die Diskettenlaufwerkereignisse an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="vmFloppyDriveEvent_OnInsert"></span><span id="vmfloppydriveevent_oninsert"></span><span id="VMFLOPPYDRIVEEVENT_ONINSERT"></span>**vmfloppydriveevent \_ OnInsert**
+<span id="vmFloppyDriveEvent_OnInsert"></span><span id="vmfloppydriveevent_oninsert"></span><span id="VMFLOPPYDRIVEEVENT_ONINSERT"></span>**vmFloppyDriveEvent \_ OnInsert**
 </dt> <dd>
 
-Ein Disketten Image ist angefügt oder echte Medien werden in ein Host Laufwerk eingefügt.
+Ein Diskettenimage wird angefügt, oder es werden echte Medien in ein Hostlaufwerk eingefügt.
 
 </dd> <dt>
 
-<span id="vmFloppyDriveEvent_OnEject"></span><span id="vmfloppydriveevent_oneject"></span><span id="VMFLOPPYDRIVEEVENT_ONEJECT"></span>**vmfloppydriveevent \_ oneject**
+<span id="vmFloppyDriveEvent_OnEject"></span><span id="vmfloppydriveevent_oneject"></span><span id="VMFLOPPYDRIVEEVENT_ONEJECT"></span>**vmFloppyDriveEvent \_ OnEject**
 </dt> <dd>
 
-Medien wurden aussteht.
+Medien wurden eingefügt.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Medien wurden aussteht.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 
 
 
@@ -75,7 +75,7 @@ Medien wurden aussteht.
 
 <dl> <dt>
 
-[**Ivmfloppydriveevents**](ivmfloppydriveevents.md)
+[**IVMFloppyDriveEvents**](ivmfloppydriveevents.md)
 </dt> </dl>
 
  

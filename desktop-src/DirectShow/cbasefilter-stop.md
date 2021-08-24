@@ -1,7 +1,7 @@
 ---
-description: 'Die Methode "beenden" beendet den Filter. Diese Methode implementiert die imediafilter:: stopmethode.'
+description: Die Stop-Methode beendet den Filter. Diese Methode implementiert die IMediaFilter::Stop-Methode.
 ms.assetid: 68d77f9a-95a2-4a71-bbe1-28be76fbc538
-title: Cbasefilter. stoppt-Methode (amfilter. h)
+title: CBaseFilter.Stop-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b4c4893edcf02fa18da3dc207a49f87c91b2a9ad
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 659ad34c01ca6c74a24f6bbf5f5bef42df46f94f06b7e03541f9caf3398b39e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119768190"
 ---
-# <a name="cbasefilterstop-method"></a>Cbasefilter. stoppt-Methode
+# <a name="cbasefilterstop-method"></a>CBaseFilter.Stop-Methode
 
-Die- `Stop` Methode beendet den Filter. Diese Methode implementiert die [**imediafilter:: stopmethode**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-stop) .
+Die `Stop` -Methode beendet den Filter. Diese Methode implementiert die [**IMediaFilter::Stop-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-stop)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache des Fehlers angibt.
+Gibt bei Erfolg S \_ OK oder einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**cbasepin:: inaktive**](cbasepin-inactive.md) -Methode für jeden verbundenen Pins des Filters auf. Außerdem wird der Zustand des Filters auf "beendet" festgelegt \_ .
+Diese Methode ruft die [**CBasePin::Inactive-Methode**](cbasepin-inactive.md) für jeden der verbundenen Pins des Filters auf. Außerdem wird der Status des Filters auf State \_ Stopped festgelegt.
 
-Wenn der Filter angehalten wird, sollte er Beispiele von Upstream ablehnen, die Bereitstellung von Beispielen nach unten beenden, Arbeitsthreads Herunterfahren und alle Ressourcen freigeben, die für das Streaming verwendet wurden.
+Wenn der Filter beendet wird, sollte er Stichproben aus upstream ablehnen, die Übermittlung von Stichproben nachgeschaltet beenden, Arbeitsthreads herunterfahren und alle Ressourcen freigeben, die für das Streaming verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Wenn der Filter angehalten wird, sollte er Beispiele von Upstream ablehnen, die 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Wenn der Filter angehalten wird, sollte er Beispiele von Upstream ablehnen, die 
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Analysiert Text, um die Wörter zu identifizieren, und stellt die Ergebnisse für das wordsink-Objekt bereit.
+description: Analysiert Text, um Wörter zu identifizieren, und stellt die Ergebnisse für das WordSink-Objekt zur Wahl.
 ms.assetid: 42bfc961-c095-4380-9b55-b58a0d9f2c00
-title: 'Iwordinfo:: breaktext-Methode'
+title: IWordInfo::BreakText-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msir3jp.dll
-ms.openlocfilehash: f6f71e92137490d56c93d9443506c2d7ffa2688a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 4cb4e4b27b52a4fb22a65f382a20c51a43ca5c77feb14828a7ea252e75c3b0f1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749740"
 ---
-# <a name="iwordinfobreaktext-method"></a>Iwordinfo:: breaktext-Methode
+# <a name="iwordinfobreaktext-method"></a>IWordInfo::BreakText-Methode
 
-\[Diese Methode ist veraltet und wird unter Windows Vista nicht unterstützt.\]
+\[Diese Methode ist veraltet und wird auf Windows Vista nicht unterstützt.\]
 
-Analysiert Text, um die Wörter zu identifizieren, und stellt die Ergebnisse für das [wordsink](/previous-versions//ms691570(v=vs.85)) -Objekt bereit.
+Analysiert Text, um Wörter zu identifizieren, und stellt die Ergebnisse für das [WordSink-Objekt](/previous-versions//ms691570(v=vs.85)) zur Wahl.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,31 +43,31 @@ HRESULT BreakText(
 
 <dl> <dt>
 
-*ptextsource* \[ in\]
+*pTextSource* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [Text \_ Quellen](/previous-versions//ms690919(v=vs.85)) Struktur, die den Unicode-Text enthält.
+Ein Zeiger auf eine [TEXT \_ SOURCE-Struktur,](/previous-versions//ms690919(v=vs.85)) die den Unicode-Text enthält.
 
 </dd> <dt>
 
-*pwordsink* \[ in\]
+*pWordSink* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf das [wordsink](/previous-versions//ms691570(v=vs.85)) -Objekt, das die von dieser Methode generierten Wörter empfängt und verarbeitet. Wenn dieser Parameter **null** ist, unterbricht die Methode die Zeichenfolge nicht in Wörter.
+Ein Zeiger auf das [WordSink-Objekt,](/previous-versions//ms691570(v=vs.85)) das die von dieser Methode generierten Wörter empfängt und behandelt. Wenn dieser Parameter **NULL ist,** unterbricht die Methode die Zeichenfolge nicht in Wörter.
 
 </dd> <dt>
 
-Modus "f"  \[ in\]
+*fBreakMode* \[ In\]
 </dt> <dd>
 
-Der Break-Modus. Dieser Parameter kann einen der folgenden Werte annehmen.
+Der Unterbrechungsmodus. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 
 
 | Wert                                                                                                                                                                                                                                                                                   | Bedeutung                                                                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| <span id="IWORDINFO_BREAKTEXTMODE_DICTFORM"></span><span id="iwordinfo_breaktextmode_dictform"></span><dl> <dt>**Iwordinfo \_ Breaktextmode- \_ Wörter Form**</dt> <dt>0x00000002</dt> </dl> | Word unterbrechen die Text Zeichenfolge und übergeben das Wörterbuch Formular der Wörter an das **wordsink** -Objekt.<br/> |
-| <span id="IWORDINFO_BREAKTEXTMODE_SMARTSEL"></span><span id="iwordinfo_breaktextmode_smartsel"></span><dl> <dt>**Iwordinfo \_ Breaktextmode \_ smartsel**</dt> <dt>0x00000001</dt> </dl> | Word unterbricht die Text Zeichenfolge und übergibt die Wörter an das **wordsink** -Objekt.<br/>                        |
+| <span id="IWORDINFO_BREAKTEXTMODE_DICTFORM"></span><span id="iwordinfo_breaktextmode_dictform"></span><dl> <dt>**IWORDINFO \_ BREAKTEXTMODE \_ DICTFORM-0x00000002**</dt> <dt></dt> </dl> | Durch wörterbrechen Sie die Textzeichenfolge, und übergeben Sie die Wörterbuchform der Wörter an das **WordSink-Objekt.**<br/> |
+| <span id="IWORDINFO_BREAKTEXTMODE_SMARTSEL"></span><span id="iwordinfo_breaktextmode_smartsel"></span><dl> <dt>**IWORDINFO \_ BREAKTEXTMODE \_ SMARTSEL-0x00000001**</dt> <dt></dt> </dl> | Word bricht die Textzeichenfolge auf und übergibt die Wörter an das **WordSink-Objekt.**<br/>                        |
 
 
 
@@ -83,16 +83,16 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 | Rückgabecode                                                                            | Beschreibung                                                                                             |
 |----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>   | Der Vorgang wurde erfolgreich ausgeführt. Zum Auffüllen des *ptextsource* -Puffers steht kein Text mehr zur Verfügung.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Der *ptextsource* -Parameter ist **null**.<br/>                                                     |
+| <dl> <dt>**S \_ OK**</dt> </dl>   | Der Vorgang wurde erfolgreich ausgeführt. Es ist kein Text mehr verfügbar, um den *pTextSource-Puffer erneut* aufzufüllen.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Der *pTextSource-Parameter* ist **NULL.**<br/>                                                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie das **pfnfilltextbuffer** -Element der **Text \_ Quellen** Struktur, um den Quelltext aufzufüllen. Diese Methode muss alle Rückgabewerte der **pfnfilltextbuffer** -Rückruffunktion verarbeiten. Wenn ein Fehler auftritt, beenden Sie die Verarbeitung des Texts im Puffer, bevor Sie den Fehler behandeln.
+Verwenden Sie **das pfnFillTextBuffer-Member** der **TEXT \_ SOURCE-Struktur,** um den Quelltext aufzufüllen. Diese Methode muss alle Rückgabewerte der **Rückruffunktion pfnFillTextBuffer** verarbeiten. Wenn ein Fehler auftritt, beenden Sie die Verarbeitung des Texts im Puffer, bevor Sie den Fehler behandeln.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,28 +100,28 @@ Verwenden Sie das **pfnfilltextbuffer** -Element der **Text \_ Quellen** Struktu
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                  |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
 | DLL<br/>                      | <dl> <dt>Msir3jp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwordinfo**](iwordinfo.md)
+[**IWordInfo**](iwordinfo.md)
 </dt> <dt>
 
-[Text \_ Quelle](/previous-versions//ms690919(v=vs.85))
+[\_TEXTQUELLE](/previous-versions//ms690919(v=vs.85))
 </dt> <dt>
 
 [**WordInfo**](wordinfo-coclass.md)
 </dt> <dt>
 
-[Wordsink](/previous-versions//ms691570(v=vs.85))
+[WordSink](/previous-versions//ms691570(v=vs.85))
 </dt> </dl>
 
  

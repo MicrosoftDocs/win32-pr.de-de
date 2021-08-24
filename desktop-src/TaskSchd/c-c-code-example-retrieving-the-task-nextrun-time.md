@@ -1,22 +1,22 @@
 ---
-title: C/C++-Code Beispiel Abrufen der Task-nextrun-Zeit
-description: Dieses Beispiel ruft den Zeitpunkt ab, zu dem die Ausführung der Aufgabe geplant ist, und zeigt diese Uhrzeit auf dem Bildschirm an. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+title: C/C++-Codebeispiel zum Abrufen der Aufgabe NextRun Time
+description: In diesem Beispiel wird das nächste Mal abgerufen, wenn die Ausführung der Aufgabe geplant ist, und diese Uhrzeit auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 ms.assetid: 2134a188-2fd4-4b55-bd9e-3363772080c0
 keywords:
-- Abrufen der nächsten Aufgabe Taskplaner
-- Abrufen von Arbeits Element Eigenschaften Taskplaner, Aufgabe Nächste Ausführungszeit
+- Abrufen der nächsten Laufzeit der Aufgabe Taskplaner
+- Abrufen von Arbeitselementeigenschaften Taskplaner , nächste Ausführungszeit der Aufgabe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d57341db57debb0270668c1236e5b353c7f703a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0472f867aea83457bbb4cb77a5a092b8c302f793b0df052e4addb0422adedb5d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388411"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119738500"
 ---
-# <a name="cc-code-example-retrieving-the-task-nextrun-time"></a>C/C++-Code Beispiel: Abrufen der Task-nextrun-Zeit
+# <a name="cc-code-example-retrieving-the-task-nextrun-time"></a>C/C++-Codebeispiel: Abrufen der Aufgabe NextRun Time
 
-Dieses Beispiel ruft den Zeitpunkt ab, zu dem die Ausführung der Aufgabe geplant ist, und zeigt diese Uhrzeit auf dem Bildschirm an. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+In diesem Beispiel wird das nächste Mal abgerufen, wenn die Ausführung der Aufgabe geplant ist, und diese Uhrzeit auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 
 
 ```C++
@@ -120,12 +120,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[Taskplaner 1.0-Beispiele](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

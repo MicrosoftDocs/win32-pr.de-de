@@ -1,24 +1,24 @@
 ---
-description: Das selectoractivatbutton-Ereignis wird gesendet, wenn die Festplatte die Auswahl oder Aktivierung von Menü Schaltflächen aktiviert oder deaktiviert.
+description: Das SelectOrActivatButton-Ereignis wird gesendet, wenn der Datenträger die Auswahl oder Aktivierung von Menüschaltflächen aktiviert oder deaktiviert.
 ms.assetid: 23d49847-36d2-4cfe-bfcf-8b9ac4b920f3
-title: Selectoractivatbutton
+title: SelectOrActivatButton
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1cf119ad6555592ee63afbff2a773f7ac2a6c241
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 16161e25a1ef2cac6932f20c171fc388568f3fdc15c7fa103c6a821dc9f5688e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119684080"
 ---
-# <a name="selectoractivatbutton"></a>Selectoractivatbutton
+# <a name="selectoractivatbutton"></a>SelectOrActivatButton
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Das `SelectOrActivatButton` Ereignis wird gesendet, wenn der Disc die Auswahl oder Aktivierung von Menü Schaltflächen aktiviert oder deaktiviert.
+Das `SelectOrActivatButton` Ereignis wird gesendet, wenn der Datenträger die Auswahl oder Aktivierung von Menüschaltflächen aktiviert oder deaktiviert.
 
 ``` syntax
 SelectOrActivatButton(bEnabled)
@@ -28,7 +28,7 @@ SelectOrActivatButton(bEnabled)
 
 <dl> <dt>
 
-<span id="bEnabled"></span><span id="benabled"></span><span id="BENABLED"></span>*benabled*
+<span id="bEnabled"></span><span id="benabled"></span><span id="BENABLED"></span>*bEnabled*
 </dt> <dd>
 
 Gibt an, ob der Vorgang als boolescher Wert aktiviert oder deaktiviert ist.

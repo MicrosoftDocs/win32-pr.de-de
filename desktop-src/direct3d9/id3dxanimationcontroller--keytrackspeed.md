@@ -1,7 +1,7 @@
 ---
-description: Legt einen Ereignis Schlüssel fest, der die Geschwindigkeit eines Animations Titels ändert.
+description: Legt einen Ereignisschlüssel fest, der die Wiedergaberate einer Animationsspur ändert.
 ms.assetid: 217d3a2d-0fb7-4995-86ec-7a4e8420e338
-title: 'ID3DXAnimationController:: keytrackspeed-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::KeyTrackSpeed-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 09705dd03e7767e94b1508cf4951186a509a3c5b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 21ad7b0b1423a25ede319a623cad0a8b453af481d4aac5fae4e5bcce252dd31e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119791190"
 ---
-# <a name="id3dxanimationcontrollerkeytrackspeed-method"></a>ID3DXAnimationController:: keytrackspeed-Methode
+# <a name="id3dxanimationcontrollerkeytrackspeed-method"></a>ID3DXAnimationController::KeyTrackSpeed-Methode
 
-Legt einen Ereignis Schlüssel fest, der die Geschwindigkeit eines Animations Titels ändert.
+Legt einen Ereignisschlüssel fest, der die Wiedergaberate einer Animationsspur ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ D3DXEVENTHANDLE KeyTrackSpeed(
 
 <dl> <dt>
 
-Nach *verfolgen* \[ in\]
+*Nachverfolgen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Bezeichner des zu ändernden Titels.
+Bezeichner der zu ändernden Spur.
 
 </dd> <dt>
 
-*Neugeschwindigkeit* \[ in\]
+*NewSpeed* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Neue Geschwindigkeit des Animations Titels.
+Neue Geschwindigkeit der Animationsspur.
 
 </dd> <dt>
 
-*StartTime* \[ in\]
+*StartTime* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Globaler Zeit Schlüssel. Gibt die globale Zeit an, zu der die Änderung stattfindet.
+Globaler Zeitschlüssel. Gibt die globale Zeit an, zu der die Änderung stattfindet.
 
 </dd> <dt>
 
-*Dauer* \[ in\]
+*Dauer* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Übergangszeit, die angibt, wie lange der reibungslose Übergang dauert.
+Übergangszeit, die angibt, wie lange der reibungslose Übergang dauern wird.
 
 </dd> <dt>
 
-*Übergang* \[ in\]
+*Übergang* \[ In\]
 </dt> <dd>
 
-Type: **[ **D3DXTRANSITION- \_ Typ**](./d3dxtransition-type.md)**
+Typ: **[ **D3DXTRANSITION \_ TYPE**](./d3dxtransition-type.md)**
 
-Gibt den für den Übergang zwischen Geschwindigkeiten verwendeten transitionstyp an. Siehe [**D3DXTRANSITION \_ Type**](./d3dxtransition-type.md).
+Gibt den Übergangstyp an, der für den Übergang zwischen Geschwindigkeiten verwendet wird. Siehe [**D3DXTRANSITION \_ TYPE**](./d3dxtransition-type.md).
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Gibt den für den Übergang zwischen Geschwindigkeiten verwendeten transitionsty
 
 Typ: **[ **D3DXEVENTHANDLE**](id3dxanimationcontroller.md)**
 
-Ereignis Handle für das Priority Blend-Ereignis. **Null** wird zurückgegeben, wenn mindestens ein Eingabeparameter ungültig ist oder kein freies Ereignis verfügbar ist.
+Ereignishand handle für das Prioritätsmischungsereignis. **NULL** wird zurückgegeben, wenn mindestens einer der Eingabeparameter ungültig ist oder kein kostenloses Ereignis verfügbar ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,8 +101,8 @@ Ereignis Handle für das Priority Blend-Ereignis. **Null** wird zurückgegeben, 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

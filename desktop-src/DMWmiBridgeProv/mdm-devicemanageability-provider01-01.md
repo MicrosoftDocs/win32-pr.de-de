@@ -1,6 +1,6 @@
 ---
 title: MDM_DeviceManageability_Provider01_01-Klasse
-description: Die MDM- \_ Klasse devicemanageability \_ Provider01 \_ 01 dient zum Abrufen der allgemeinen Informationen zu MDM-Konfigurationsfunktionen auf dem Gerät.
+description: Die MDM \_ DeviceManageability Provider01 01-Klasse wird verwendet, um die allgemeinen Informationen zu \_ \_ MDM-Konfigurationsfunktionen auf dem Gerät abzurufen.
 ms.assetid: 080e5cdd-4509-42d6-b5f8-36df6f8d9b45
 keywords:
 - MDM_DeviceManageability_Provider01_01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d1ef064bcffd5303a3ef820dc0b463a3b5e622b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e45fa96c71902bae9f6c7a98be8004b6f632fa0dad04952720f9a9c598879a03
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119825740"
 ---
-# <a name="mdm_devicemanageability_provider01_01-class"></a>MDM \_ devicemanageability \_ Provider01 \_ 01-Klasse
+# <a name="mdm_devicemanageability_provider01_01-class"></a>MDM \_ DeviceManageability \_ Provider01 \_ 01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Klasse devicemanageability \_ Provider01 \_ 01 dient zum Abrufen der allgemeinen Informationen zu MDM-Konfigurationsfunktionen auf dem Gerät.
+Die MDM \_ DeviceManageability Provider01 01-Klasse wird verwendet, um die allgemeinen Informationen zu \_ \_ MDM-Konfigurationsfunktionen auf dem Gerät abzurufen.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,33 +47,33 @@ class MDM_DeviceManageability_Provider01_01
 
 ## <a name="members"></a>Member
 
-Die **MDM-Klasse \_ devicemanageability \_ Provider01 \_ 01** verfügt über diese Typen von Membern:
+Die **MDM \_ DeviceManageability \_ Provider01 \_ 01-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM-Klasse \_ devicemanageability \_ Provider01 \_ 01** verfügt über diese Eigenschaften.
+Die **MDM \_ DeviceManageability \_ Provider01 \_ 01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Configinfo](/windows/client-management/mdm/devicemanageability-csp#capabilities-cspversions)
+[ConfigInfo](/windows/client-management/mdm/devicemanageability-csp#capabilities-cspversions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Sie müssen den Wert auf WMI \_ Bridge \_ Server festlegen. Der Aufrufer kann die Anbieter-ID nicht dynamisch festlegen.
+Sie müssen den Wert auf \_ WMI-Bridge-Server \_ festlegen. Der Aufrufer kann die Anbieter-ID nicht dynamisch festlegen.
 
 </dd> <dt>
 
-[Registrierungs Info](/windows/client-management/mdm/devicemanageability-csp#capabilities-cspversions)
+[EnrollmentInfo](/windows/client-management/mdm/devicemanageability-csp#capabilities-cspversions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -84,7 +84,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -95,10 +95,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -115,10 +115,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                       |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                              |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                              |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl>  |
 
 

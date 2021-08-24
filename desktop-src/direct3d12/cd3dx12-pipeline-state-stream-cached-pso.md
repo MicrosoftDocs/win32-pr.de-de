@@ -1,6 +1,6 @@
 ---
-title: CD3DX12_PIPELINE_STATE_STREAM_CACHED_PSO-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, die verwendet wird, um ein zwischengespeichertes PSO als einzelnes Objekt zu beschreiben, das für eine Datenstrom Beschreibung
+title: CD3DX12_PIPELINE_STATE_STREAM_CACHED_PSO-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, die verwendet wird, um eine zwischengespeicherte PSO als einzelnes Objekt zu beschreiben, das für eine Streambeschreibung geeignet ist.
 ms.assetid: 86CDC60A-275D-4B71-BE6D-C863C72E9C05
 keywords:
 - CD3DX12_PIPELINE_STATE_STREAM_CACHED_PSO Struktur
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 78ddb223dfd2baa7bc6bee1b5a36950fc47d65d0
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a11cb4e7a784b89a825f1e1b64083c50cc77731bbadf84d248106d69da9cf737
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355786"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751920"
 ---
-# <a name="cd3dx12_pipeline_state_stream_cached_pso-structure"></a>CD3DX12 \_ - \_ \_ \_ PSO-Struktur zwischengespeicherten Pipeline Zustandsdaten Strom \_
+# <a name="cd3dx12_pipeline_state_stream_cached_pso-structure"></a>CD3DX12 \_ PIPELINE STATE STREAM \_ \_ \_ CACHED \_ PSO-Struktur
 
-Eine hilfsstruktur, die verwendet wird, um ein zwischengespeichertes PSO als einzelnes Objekt zu beschreiben, das für eine Datenstrom Beschreibung
+Eine Hilfsstruktur, die verwendet wird, um eine zwischengespeicherte PSO als einzelnes Objekt zu beschreiben, das für eine Streambeschreibung geeignet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,37 +44,37 @@ struct CD3DX12_PIPELINE_STATE_STREAM_CACHED_PSO {
 
 <dl> <dt>
 
-**CD3DX12 \_ - \_ \_ \_ PSO zwischen gespeicherter Pipeline Zustandsdaten Strom \_**
+**CD3DX12 \_ PIPELINE \_ STATE \_ STREAM \_ CACHED \_ PSO**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12-Pipeline-Statusdaten Stroms, der \_ \_ \_ \_ zwischengespeichert wird \_ .
+Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 \_ PIPELINE \_ STATE STREAM \_ \_ CACHED \_ PSO.
 
 </dd> <dt>
 
-**CD3DX12- \_ Pipeline- \_ \_ \_ \_ StatusStream zwischengespeichert PSO (D3D12 \_ zwischen gespeicherter \_ Pipeline \_ Status konstant &i)**
+**CD3DX12 \_ PIPELINE STATE STREAM \_ \_ \_ CACHED \_ PSO(D3D12 \_ CACHED PIPELINE STATE \_ \_ const &i)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ -Pipeline- \_ Statusdaten \_ Stroms \_ zwischengespeicherten \_ PSO, initialisiert mit einem untergeordneten Typ von **D3D12 \_ Pipeline \_ State \_ unter Objekt \_ Type \_ Cache \_ PSO** und unter unter Objekt-Daten, die aus *i* kopiert wurden, einer [**D3D12 \_ zwischengespeicherten \_ Pipeline \_ Zustands**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_cached_pipeline_state) Struktur.
+Erstellt eine neue Instanz eines CD3DX12 \_ PIPELINE \_ STATE STREAM \_ \_ CACHED \_ PSO, initialisiert mit dem Unterobjekttyp **D3D12 \_ PIPELINE STATE \_ \_ SUBOBJECT TYPE \_ \_ CACHED \_ PSO** und den aus *i* kopierten Unterobjektdaten, einer [**D3D12 \_ CACHED \_ PIPELINE \_ STATE-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_cached_pipeline_state)
 
 </dd> <dt>
 
-**Operator = (D3D12 \_ zwischen gespeicherter \_ Pipeline \_ Status konstant& i)**
+**operator=(D3D12 \_ CACHED \_ PIPELINE STATE \_ const& i)**
 </dt> <dd>
 
-Kopier Zuweisungs Operator.
+Kopierzuweisungsoperator.
 
 </dd> <dt>
 
-**Operator D3D12 \_ zwischen gespeicherter \_ Pipeline \_ Zustand () konstant**
+**Operator D3D12 \_ CACHED \_ PIPELINE \_ STATE() const**
 </dt> <dd>
 
-Implizite Konvertierung in eine [**\_ zwischengespeicherte D3D12- \_ Pipeline \_ Zustands**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_cached_pipeline_state) Struktur.
+Implizite Konvertierung in eine [**D3D12 \_ CACHED \_ PIPELINE \_ STATE-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_cached_pipeline_state)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-CD3DX12 \_ \_ -Pipeline \_ -StatusStream \_ , der zwischengespeichert \_ ist, ist eine typedef-Spezialisierung der untergeordneten Pipeline für den [**CD3DX12 \_ Pipeline \_ State \_ Stream \_**](cd3dx12-pipeline-state-stream-subobject.md) und wird wie folgt definiert:
+CD3DX12 \_ PIPELINE STATE STREAM \_ \_ \_ CACHED \_ PSO ist eine Typedef-Spezialisierung der [**CD3DX12 \_ PIPELINE STATE STREAM \_ \_ \_ SUBOBJECT-Vorlage**](cd3dx12-pipeline-state-stream-subobject.md) und wird wie folgt definiert:
 
 
 ```C++
@@ -91,21 +91,21 @@ typedef CD3DX12_PIPELINE_STATE_STREAM_SUBOBJECT<D3D12_CACHED_PIPELINE_STATE, D3D
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)
 </dt> <dt>
 
-[**CD3DX12 \_ Pipeline State-Datenstrom-unter \_ \_ \_ Objekt**](cd3dx12-pipeline-state-stream-subobject.md)
+[**CD3DX12 \_ PIPELINE \_ STATE \_ STREAM \_ SUBOBJECT**](cd3dx12-pipeline-state-stream-subobject.md)
 </dt> <dt>
 
-[**D3D12 \_ Pipeline \_ Status-unter Objekt- \_ \_ Typ**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_subobject_type)
+[**D3D12 \_ PIPELINE \_ STATE \_ SUBOBJECT \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_subobject_type)
 </dt> </dl>
 
  

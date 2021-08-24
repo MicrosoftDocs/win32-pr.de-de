@@ -18,14 +18,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: a510c4195c538ab9735e7544acec2c88beeaa1de
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 443d7b50ae8fe727a95464ec4e7fa589d7a08db770ce4c5090f37e5c988bfa4b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103869280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682610"
 ---
-# <a name="cim_vlanendpointsettingdata-class"></a>CIM- \_ vlanendpointsettingdata-Klasse
+# <a name="cim_vlanendpointsettingdata-class"></a>CIM \_ VLANEndpointSettingData-Klasse
 
 Stellt Konfigurationsdaten für einen VLAN-Endpunkt dar.
 
@@ -45,90 +45,90 @@ class CIM_VLANEndpointSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ vlanendpointsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ VLANEndpointSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ vlanendpointsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ VLANEndpointSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AccessVLAN**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ vlanendpoint**](cim-vlanendpoint.md)".**Operationalendpointmode**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VLANEndpoint**](cim-vlanendpoint.md).**OperationalEndpointMode**")
 </dt> </dl>
 
-Das Access-VLAN für den Endpunkt.
+Das Zugriffs-VLAN für den Endpunkt.
 
 </dd> <dt>
 
-**Defaultvlan**
+**DefaultVLAN**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ vlanendpoint**](cim-vlanendpoint.md)".**Operationalendpointmode**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VLANEndpoint**](cim-vlanendpoint.md).**OperationalEndpointMode**")
 </dt> </dl>
 
-Der Standardwert für das native VLAN auf dem trunk Endpunkt.
+Der Standardwert für das native VLAN auf dem Trunkendpunkt.
 
 > [!Note]  
-> Diese Eigenschaft wird nur verwendet, wenn der VLAN-Endpunkt im trunkingmodus betrieben wird, der in der **operationalendpointmode** -Eigenschaft angegeben ist.
+> Diese Eigenschaft wird nur verwendet, wenn der VLAN-Endpunkt im Trunkingmodus ausgeführt wird, der in der **OperationalEndpointMode-Eigenschaft angegeben** ist.
 
  
 
 </dd> <dt>
 
-**Nativevlan**
+**NativeVLAN**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ vlanendpoint**](cim-vlanendpoint.md)".**Operationalendpointmode**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VLANEndpoint**](cim-vlanendpoint.md).**OperationalEndpointMode**")
 </dt> </dl>
 
-Die VLAN-ID, die verwendet wird, um nicht markierten Datenverkehr zu markieren, der auf dem trunk Endpunkt empfangen wurde
+Die VLAN-ID, die verwendet wird, um nicht mit Tags versehenen Datenverkehr zu kennzeichnen, der am Trunkendpunkt empfangen wird.
 
 > [!Note]  
-> Diese Eigenschaft wird nur verwendet, wenn der VLAN-Endpunkt im trunkingmodus betrieben wird, der in der **switchendpointmode** -Eigenschaft angegeben ist.
+> Diese Eigenschaft wird nur verwendet, wenn der VLAN-Endpunkt im Trunkingmodus ausgeführt wird, der in der **SwitchEndpointMode-Eigenschaft angegeben** ist.
 
  
 
 </dd> <dt>
 
-**Pruneeligiblevlanlist**
+**PruneEligibleVLANList**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ vlanendpoint**](cim-vlanendpoint.md)".**Operationalendpointmode**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VLANEndpoint**](cim-vlanendpoint.md).**OperationalEndpointMode**")
 </dt> </dl>
 
-Ein Array, das IDs von VLANs enthält, die vom System aus dem trunk Endpunkt entfernt werden können.
+Ein Array, das IDs von VLANs enthält, die das System möglicherweise vom Trunkendpunkt entfernt.
 
 > [!Note]  
-> Diese Eigenschaft wird nur verwendet, wenn der VLAN-Endpunkt im trunkingmodus betrieben wird, der in der **operationalendpointmode** -Eigenschaft angegeben ist.
+> Diese Eigenschaft wird nur verwendet, wenn der VLAN-Endpunkt im Trunkingmodus ausgeführt wird, der in der **OperationalEndpointMode-Eigenschaft angegeben** ist.
 
  
 
@@ -137,19 +137,19 @@ Ein Array, das IDs von VLANs enthält, die vom System aus dem trunk Endpunkt ent
 **TrunkedVLANList**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ vlanendpoint**](cim-vlanendpoint.md)".**Operationalendpointmode**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VLANEndpoint**](cim-vlanendpoint.md).**OperationalEndpointMode**")
 </dt> </dl>
 
-Ein Array, das IDs von VLAN-Endpunkten mit aktiviertem Trunking enthält.
+Ein Array, das IDs von VLAN-Endpunkten mit aktivierter Trunking enthält.
 
 > [!Note]  
-> Diese Eigenschaft wird nur verwendet, wenn der VLAN-Endpunkt im trunkingmodus betrieben wird, der in der **operationalendpointmode** -Eigenschaft angegeben ist.
+> Diese Eigenschaft wird nur verwendet, wenn der VLAN-Endpunkt im Trunkingmodus ausgeführt wird, der in der **OperationalEndpointMode-Eigenschaft angegeben** ist.
 
  
 
@@ -164,7 +164,7 @@ Ein Array, das IDs von VLAN-Endpunkten mit aktiviertem Trunking enthält.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -173,7 +173,7 @@ Ein Array, das IDs von VLAN-Endpunkten mit aktiviertem Trunking enthält.
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> </dl>
 
  

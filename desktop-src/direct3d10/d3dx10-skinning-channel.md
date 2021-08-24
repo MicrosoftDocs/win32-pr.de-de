@@ -1,7 +1,7 @@
 ---
-description: Der Member der Vertex-decl, an dem die Software angezeigt werden soll. Dies wird mit der ID3DX10SkinInfo::D osoftwareskinning-API verwendet.
+description: Der Member der Scheitelpunkt-Decl, auf dem die Softwares skinning wird. Dies wird mit der ID3DX10SkinInfo::D oSoftwareSkinning-API verwendet.
 ms.assetid: 67c817cd-ce78-4e8b-bdc3-7c4d6670dee1
-title: D3DX10_SKINNING_CHANNEL-Struktur (d3dx10. h)
+title: D3DX10_SKINNING_CHANNEL -Struktur (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10.h
-ms.openlocfilehash: 79f5807dc2539d770d3caa41bddf7aa4960ce682
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b8e976ba1aecdeb792ba45fc4f60f25e7feb5a7dde3f7fc845a22962e441bf2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119753530"
 ---
-# <a name="d3dx10_skinning_channel-structure"></a>D3dx10 \_ Skinning \_ Channel-Struktur
+# <a name="d3dx10_skinning_channel-structure"></a>D3DX10 \_ SKINNING \_ CHANNEL-Struktur
 
-Der Member der Vertex-decl, an dem die Software angezeigt werden soll. Dies wird mit der [**ID3DX10SkinInfo::D osoftwareskinning**](id3dx10skininfo-dosoftwareskinning.md) -API verwendet.
+Der Member der Scheitelpunkt-Decl, auf dem die Softwares skinning wird. Dies wird mit der [**ID3DX10SkinInfo::D oSoftwareSkinning-API**](id3dx10skininfo-dosoftwareskinning.md) verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,36 +41,36 @@ typedef struct D3DX10_SKINNING_CHANNEL {
 
 <dl> <dt>
 
-**SrcOffset**
+**Srcoffset**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Offset vom Anfang jedes Quell Scheitel Punkts.
+Offset vom Anfang jedes Quellvertex.
 
 </dd> <dt>
 
-**Destoffset**
+**DestOffset**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Offset vom Anfang jedes Ziel Scheitel Punkts.
+Offset vom Anfang jedes Ziel-Scheitelpunkts.
 
 </dd> <dt>
 
 **IsNormal**
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Bestimmt, welches Array von Matrizen in der [**ID3DX10SkinInfo::D osoftwareskinning**](id3dx10skininfo-dosoftwareskinning.md) -API verwendet werden soll. Wenn dieser Wert true ist, wird *pinverpinversiot bonematrices* verwendet; andernfalls werden *pbonematrices* verwendet.
+Bestimmt, welches Array von Matrizen in der [**ID3DX10SkinInfo::D oSoftwareSkinning-API verwendet werden**](id3dx10skininfo-dosoftwareskinning.md) soll. Wenn dies zutrifft, wird *pInverseTransposeBoneMatrices* verwendet, *andernfalls pBoneMatrices.*
 
 </dd> </dl>
 
@@ -80,7 +80,7 @@ Bestimmt, welches Array von Matrizen in der [**ID3DX10SkinInfo::D osoftwareskinn
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx10. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10.h</dt> </dl> |
 
 
 

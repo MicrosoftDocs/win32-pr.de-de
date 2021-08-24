@@ -1,22 +1,22 @@
 ---
-title: C/C++-Code Beispiel Abrufen der Aufgaben Priorität
-description: Dieses Beispiel ruft die Prioritäts Ebene einer Aufgabe ab und zeigt den Pfad zum Arbeitsverzeichnis auf dem Bildschirm an. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+title: C/C++-Codebeispiel zum Abrufen der Aufgabenpriorität
+description: In diesem Beispiel wird die Prioritätsstufe einer Aufgabe abgerufen und der Pfad zum Arbeitsverzeichnis auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 ms.assetid: 6e7eccce-406a-4827-8fe2-abe93251668a
 keywords:
-- Abrufen der Aufgaben Prioritäts Taskplaner
-- Abrufen von Task Eigenschaften Taskplaner, Priorität
+- Abrufen der Aufgabenpriorität Taskplaner
+- Abrufen von Taskeigenschaften Taskplaner , Priorität
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed9b32b5b4a6e66539ce1a65ab41488f96418d29
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 24b9a746f956131954b7e048b416f6e1c348aff8893417d0bd872f6750c43ce7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338586"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119738660"
 ---
-# <a name="cc-code-example-retrieving-task-priority"></a>C/C++-Code Beispiel: Abrufen der Aufgaben Priorität
+# <a name="cc-code-example-retrieving-task-priority"></a>C/C++-Codebeispiel: Abrufen der Aufgabenpriorität
 
-Dieses Beispiel ruft die Prioritäts Ebene einer Aufgabe ab und zeigt den Pfad zum Arbeitsverzeichnis auf dem Bildschirm an. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+In diesem Beispiel wird die Prioritätsstufe einer Aufgabe abgerufen und der Pfad zum Arbeitsverzeichnis auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 
 
 ```C++
@@ -113,12 +113,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[beispiele für Taskplaner 1.0](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

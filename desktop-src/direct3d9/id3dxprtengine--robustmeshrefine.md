@@ -1,7 +1,7 @@
 ---
-description: Unterteilt Gesichter in einem Mesh und ermöglicht eine konservative Adaptive Stichprobenentnahme, bei der keine Features im Mesh entfernt werden.
+description: Unterteilt Gesichter in ein Gitternetz, sodass eine konservative adaptive Stichprobenentnahme ermöglicht wird, bei der keine Merkmale im Gitternetz entfernt werden.
 ms.assetid: 0d74a01a-de67-4607-99eb-ed98e239f199
-title: 'ID3DXPRTEngine:: RobustMeshRefine-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::RobustMeshRefine-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 65d49fcec3072956365ce1ed8dc5d7a11ce6c826
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 280e4552af6de13995ed81afab4d743232485e92446c72b61fd10ae17fea7b07
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119790560"
 ---
-# <a name="id3dxprtenginerobustmeshrefine-method"></a>ID3DXPRTEngine:: RobustMeshRefine-Methode
+# <a name="id3dxprtenginerobustmeshrefine-method"></a>ID3DXPRTEngine::RobustMeshRefine-Methode
 
-Unterteilt Gesichter in einem Mesh und ermöglicht eine konservative Adaptive Stichprobenentnahme, bei der keine Features im Mesh entfernt werden.
+Unterteilt Gesichter in ein Gitternetz, sodass eine konservative adaptive Stichprobenentnahme ermöglicht wird, bei der keine Merkmale im Gitternetz entfernt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT RobustMeshRefine(
 
 <dl> <dt>
 
-*Minedgelength* \[ in\]
+*MinEdgeLength* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimale Vorderseiten Länge, die bei der adaptiven Stichproben Erstellung generiert wird. Wenn 0 (null), wird ein angemessener Standardwert ersetzt.
+Minimale Länge des Gesichtsrands, die bei adaptiver Stichprobenentnahme generiert wird. Bei 0 (null) wird ein angemessener Standardwert ersetzt.
 
 </dd> <dt>
 
-*Maxsubdiv* \[ in\]
+*MaxSubdiv* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Maximale Ebene der Unterteilung einer Fläche, die bei der adaptiven Stichprobenentnahme verwendet wird. Wenn der Wert 0 (null) ist, wird der Standardwert 5 ersetzt.
+Maximale Unterteilung eines Gesichts, das bei der adaptiven Stichprobenentnahme verwendet wird. Wenn 0 (null) ist, wird der Standardwert 5 ersetzt.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Maximale Ebene der Unterteilung einer Fläche, die bei der adaptiven Stichproben
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -83,10 +83,10 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 [ID3DXPRTEngine](id3dxprtengine.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: computebounceadaptive**](id3dxprtengine--computebounceadaptive.md)
+[**ID3DXPRTEngine::ComputeBounceAdaptive**](id3dxprtengine--computebounceadaptive.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: computedirectlightingshadaptive**](id3dxprtengine--computedirectlightingshadaptive.md)
+[**ID3DXPRTEngine::ComputeDirectLightingSHAdaptive**](id3dxprtengine--computedirectlightingshadaptive.md)
 </dt> </dl>
 
  

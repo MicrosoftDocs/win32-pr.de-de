@@ -1,12 +1,12 @@
 ---
 title: SetInt32Property-Methode der Win32_RDMSDeploymentSettings-Klasse
-description: Aktualisiert eine ganzzahlige Eigenschaft für die Bereitstellungs Einstellungen einer Sammlung virtueller Desktops.
+description: Aktualisiert eine ganzzahlige Eigenschaft für die Bereitstellungseinstellungen einer Sammlung virtueller Desktops.
 ms.assetid: c5e6dbd5-7db7-4409-bf53-c2680e4a5319
 ms.tgt_platform: multiple
 keywords:
 - SetInt32Property-Methode Remotedesktopdienste
-- SetInt32Property-Methode Remotedesktopdienste, Win32_RDMSDeploymentSettings-Klasse
-- Win32_RDMSDeploymentSettings-Klasse Remotedesktopdienste, SetInt32Property-Methode
+- SetInt32Property-Methode Remotedesktopdienste , Win32_RDMSDeploymentSettings-Klasse
+- Win32_RDMSDeploymentSettings-Klasse Remotedesktopdienste , SetInt32Property-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3fecdc42031514d5219fc03172b951602ad021ba
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 73fa8f9ad7560e4d0eeeb8708feb547da00a8e9804e242ceb94666da211b03a5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346333"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119865380"
 ---
-# <a name="setint32property-method-of-the-win32_rdmsdeploymentsettings-class"></a>SetInt32Property-Methode der Win32 \_ rdmsdeploymentsettings-Klasse
+# <a name="setint32property-method-of-the-win32_rdmsdeploymentsettings-class"></a>SetInt32Property-Methode der Win32 \_ RDMSDeploymentSettings-Klasse
 
-Aktualisiert eine ganzzahlige Eigenschaft für die Bereitstellungs Einstellungen einer Sammlung virtueller Desktops.
+Aktualisiert eine ganzzahlige Eigenschaft für die Bereitstellungseinstellungen einer Sammlung virtueller Desktops.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ uint32 SetInt32Property(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
 Der Alias für die Sammlung virtueller Desktops.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*Wert* \[ In\]
 </dt> <dd>
 
 Der neue Eigenschaftswert.
@@ -66,8 +66,8 @@ Der neue Eigenschaftswert.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -76,7 +76,7 @@ Der neue Eigenschaftswert.
 
 <dl> <dt>
 
-[**Win32 \_ rdmsdeploymentsettings**](win32-rdmsdeploymentsettings.md)
+[**Win32 \_ RDMSDeploymentSettings**](win32-rdmsdeploymentsettings.md)
 </dt> </dl>
 
  

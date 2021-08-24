@@ -1,9 +1,9 @@
 ---
-title: Menuhelpid-Struktur
-description: Enthält die abschließenden Daten, die in die RT- \_ Menü Ressource für ein Menü oder ein Untermenü geschrieben werden, wenn der ResInfo-Member der popupmenuitem-Struktur auf MFR-Popup festgelegt ist \_ .
+title: MENUHELPID-Struktur
+description: Enthält die endgültigen Daten, die in die RT MENU-Ressource für ein Menü oder Untermenü geschrieben werden, wenn das resInfo-Element der \_ POPUPMENUITEM-Struktur auf POPUP \_ POPUP festgelegt ist.
 ms.assetid: f17fdaaa-b37c-4902-bad4-a1181ffee9f9
 keywords:
-- Menuhelpid-Struktur Menüs und weitere Ressourcen
+- MENUHELPID-Strukturmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0b90b5a4745433c92a859a168611aa1c14f1fa45
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4831074d5e7b663210f880bf6684cbc6484ad3487a0c6c9e5be308aebc66291a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119825950"
 ---
-# <a name="menuhelpid-structure"></a>Menuhelpid-Struktur
+# <a name="menuhelpid-structure"></a>MENUHELPID-Struktur
 
-Enthält die abschließenden Daten, die in die [**RT- \_ Menü**](/windows/desktop/menurc/resource-types) Ressource für ein Menü oder ein Untermenü geschrieben werden, wenn der **ResInfo** -Member der [**popupmenuitem**](popupmenuitem.md) -Struktur auf **MFR- \_ Popup** festgelegt ist. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+Enthält die endgültigen Daten, die in die [**RT \_ MENU-Ressource**](/windows/desktop/menurc/resource-types) für ein Menü oder Untermenü geschrieben werden, wenn das **resInfo-Element** der [**POPUPMENUITEM-Struktur**](popupmenuitem.md) auf **POPUP POPUP festgelegt \_ ist.** Die hier bereitgestellte Strukturdefinition ist nur zur Erklärung vorgesehen. sie ist in einer Standardheaderdatei nicht vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,14 +39,14 @@ typedef struct {
 
 <dl> <dt>
 
-**HelpID**
+**helpID**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Der Bezeichner, der zum Identifizieren des Menüs während der [**WM- \_ Hilfe**](/windows/desktop/shell/wm-help) Verarbeitung verwendet wird.
+Der Bezeichner, der verwendet wird, um das Menü während der [**WM \_ HELP-Verarbeitung zu**](/windows/desktop/shell/wm-help) identifizieren.
 
 </dd> </dl>
 
@@ -65,16 +65,16 @@ Der Bezeichner, der zum Identifizieren des Menüs während der [**WM- \_ Hilfe**
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Menuheader**](menuheader.md)
+[**MENUHEADER**](menuheader.md)
 </dt> <dt>
 
-[**Popupmenuitem**](popupmenuitem.md)
+[**POPUPMENUITEM**](popupmenuitem.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Ressourcen](resources.md)

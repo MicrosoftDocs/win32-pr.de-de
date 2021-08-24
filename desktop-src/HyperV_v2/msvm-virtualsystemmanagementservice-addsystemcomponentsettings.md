@@ -1,7 +1,7 @@
 ---
-description: Fügt der Konfiguration eines virtuellen Systems generische Einstellungen hinzu.
+description: Fügt einer Konfiguration des virtuellen Systems generische Einstellungen hinzu.
 ms.assetid: ae04be39-0401-43e9-b19b-3539ca1786ec
-title: Addsystemcomponentsettings-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: AddSystemComponentSettings-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 56ca8bed752bab52f6a82e18975dd5df72dbe12d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 43bc224a0ab81732c24c581bbb0142d2121c93f0dbe5f6b80da0efb02227340a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789190"
 ---
-# <a name="addsystemcomponentsettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Addsystemcomponentsettings-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="addsystemcomponentsettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>AddSystemComponentSettings-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Fügt der Konfiguration eines virtuellen Systems generische Einstellungen hinzu.
+Fügt einer Konfiguration des virtuellen Systems generische Einstellungen hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ uint32 AddSystemComponentSettings(
 
 <dl> <dt>
 
-*Affectedconfiguration* \[ in\]
+*AffectedConfiguration* \[ In\]
 </dt> <dd></dd> <dt>
 
-*Componentsettings* \[ in\]
+*ComponentSettings* \[ In\]
 </dt> <dd>
 
-Die hinzu zufügenden Komponenten Einstellungen.
+Die hinzuzufügende Komponente.
 
 </dd> <dt>
 
-*Resultingcomponentsettings* \[ vorgenommen\]
+*ResultingComponentSettings* \[ out\]
 </dt> <dd>
 
-Bei Erfolg verweist auf ein [**MSVM \_ systemcomponentsettingdata**](msvm-systemcomponentsettingdata.md) -Element, das die resultierenden Komponenten Einstellungen enthält.
+Bei Erfolg verweist auf ein [**Msvm \_ SystemComponentSettingData-Element,**](msvm-systemcomponentsettingdata.md) das die resultierenden Komponenteneinstellungen enthält.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird 0 oder 4096 zurückgegeben. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg 0 oder 4096 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
@@ -78,7 +78,7 @@ Bei Erfolg wird 0 oder 4096 zurückgegeben. Andernfalls wird ein Fehler zurückg
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -87,16 +87,16 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -105,10 +105,10 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -117,7 +117,7 @@ Fehler **(2** )
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

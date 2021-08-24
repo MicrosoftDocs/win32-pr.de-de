@@ -1,22 +1,22 @@
 ---
-description: Das Windows-Betriebssystem enthält eine Reihe von VSS-Writern, die für das Auflisten der Daten verantwortlich sind, die für die verschiedenen Windows-Features erforderlich sind. Diese werden als &\# 0034, in-Box-&\# 0034; Writer bezeichnet.
+description: Das Windows-Betriebssystem enthält eine Reihe von VSS-Writern, die für das Auflisten der Daten verantwortlich sind, die für die verschiedenen Windows-Features erforderlich sind. Diese werden als &\# 0034;in-box&\# 0034; Writers bezeichnet.
 ms.assetid: e20a303d-9440-42be-b383-85f6fad89157
 title: In-Box-VSS-Writer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ddc256cfe72f3653d4af282148c87c2b45bcac51
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e34591cb046a8cc702d32452c159e5b8877f2e66603cbd1b048a0841a04e3bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357506"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767799"
 ---
 # <a name="in-box-vss-writers"></a>In-Box-VSS-Writer
 
-Das Windows-Betriebssystem enthält eine Reihe von VSS-Writern, die für das Auflisten der Daten verantwortlich sind, die für die verschiedenen Windows-Features erforderlich sind. Diese werden als "in-Box"-Writer bezeichnet.
+Das Windows-Betriebssystem enthält eine Reihe von VSS-Writern, die für das Auflisten der Daten verantwortlich sind, die für die verschiedenen Windows-Features erforderlich sind. Diese werden als "In-Box"-Writer bezeichnet.
 
 > [!Note]  
-> Der MSDE-in-Box-Writer ist in Windows Vista, Windows Server 2008 und höher nicht verfügbar. Stattdessen sollte der SQL Writer verwendet werden, um SQL Server-Datenbanken zu sichern. Nur SQL Server 2005 SP2 und höher werden unter Windows Vista, Windows Server 2008 und höher unterstützt.
+> Der MSDE-In-Box-Writer ist in Windows Vista, Windows Server 2008 und höher nicht verfügbar. Stattdessen sollte der SQL Writer zum Sichern von Datenbanken SQL Server werden. Nur SQL Server 2005 SP2 und höher werden unter Windows Vista, Windows Server 2008 und höher unterstützt.
 
  
 
@@ -24,42 +24,42 @@ Das Windows-Betriebssystem enthält eine Reihe von VSS-Writern, die für das Auf
 -   [Active Directory-Verbunddienste (AD FS) Writer](#active-directory-federation-services-writer)
 -   [Active Directory Lightweight Directory Services (LDS) VSS Writer](#active-directory-lightweight-directory-services-lds-vss-writer)
 -   [Active Directory Rights Management Services (AD RMS) Writer](#active-directory-rights-management-services-ad-rms-writer)
--   [ASR-Writer (Automated System Recovery)](#automated-system-recovery-asr-writer)
--   [Background Intelligent Transfer Service (Bits) Writer](#background-intelligent-transfer-service-bits-writer)
--   [Zertifikatauthority-Writer](#certificate-authority-writer)
--   [Cluster Dienstanbieter](#cluster-service-writer)
--   [Freigegebenes Clustervolume (CSV) VSS Writer](#cluster-shared-volume-csv-vss-writer)
--   [Datenbank-Writer der com+-Klassen Registrierung](#com-class-registration-database-writer)
--   [Datendeduplizierungswriter](#data-deduplication-writer)
+-   [Automatisierter ASR-Writer (System Recovery)](#automated-system-recovery-asr-writer)
+-   [Background Intelligent Transfer Service (BITS) Writer](#background-intelligent-transfer-service-bits-writer)
+-   [Certificate Authority Writer](#certificate-authority-writer)
+-   [Cluster Service Writer](#cluster-service-writer)
+-   [Freigegebenes Clustervolume VSS Writer (CSV)](#cluster-shared-volume-csv-vss-writer)
+-   [COM+-Klassenregistrierung – Datenbankwriter](#com-class-registration-database-writer)
+-   [Datendeduplizierungs-Writer](#data-deduplication-writer)
 -   [DFS-Replikation (DFSR)](#distributed-file-system-replication-dfsr)
--   [DHCP-Writer (Dynamic Host Configuration-Protokoll)](#dynamic-host-configuration-protocol-dhcp-writer)
+-   [DHCP-Writer (Dynamic Host Configuration Protocol)](#dynamic-host-configuration-protocol-dhcp-writer)
 -   [Dateireplikationsdienst (File Replication Service, FRS)](#file-replication-service-frs)
--   [Datei Server Ressourcen-Manager Writer (File Server, f)](#file-server-resource-manager-fsrm-writer)
--   [Hyper-V-Writer](#hyper-v-writer)
--   [IIS-konfigurationswriter](#iis-configuration-writer)
--   [IIS-metabasiswriter](#iis-metabase-writer)
+-   [File Server Resource Manager (FSRM) Writer](#file-server-resource-manager-fsrm-writer)
+-   [Hyper-V Writer](#hyper-v-writer)
+-   [IIS Configuration Writer](#iis-configuration-writer)
+-   [IIS Metabase Writer](#iis-metabase-writer)
 -   [Microsoft Message Queuing (MSMQ) Writer](#microsoft-message-queuing-msmq-writer)
--   [MSSearch-dienstwriter](#mssearch-service-writer)
--   [NPS-VSS-Writer](#nps-vss-writer)
--   [Leistungsindikatoren Writer](#performance-counters-writer)
--   [Registrierungswriter](#registry-writer)
--   [Remotedesktopdienste (Terminal Dienste) Gateway VSS Writer](#remote-desktop-services-terminal-services-gateway-vss-writer)
--   [Remotedesktopdienste (Terminal Dienste) Lizenzierungs-VSS Writer](#remote-desktop-services-terminal-services-licensing-vss-writer)
--   [Writer zur Optimierung der Schatten Kopie](#shadow-copy-optimization-writer)
--   [Synchronisierungs Freigabe Dienst-Writer](#sync-share-service-writer)
--   [Systemwriter](#system-writer)
+-   [MSSearch Service Writer](#mssearch-service-writer)
+-   [NPS VSS Writer](#nps-vss-writer)
+-   [Leistungsindikator-Writer](#performance-counters-writer)
+-   [Registrierungs-Writer](#registry-writer)
+-   [Remotedesktopdienste (Terminal Services) Gateway VSS Writer](#remote-desktop-services-terminal-services-gateway-vss-writer)
+-   [Remotedesktopdienste (Terminal Services) Licensing VSS Writer](#remote-desktop-services-terminal-services-licensing-vss-writer)
+-   [Shadow Copy Optimization Writer](#shadow-copy-optimization-writer)
+-   [Sync Share Service Writer](#sync-share-service-writer)
+-   [System Writer](#system-writer)
 -   [Taskplaner Writer](#task-scheduler-writer)
--   [VSS-Metadatenspeicher-Writer](#vss-metadata-store-writer)
--   [Windows-Bereitstellungs Dienste (WDS) Writer](#windows-deployment-services-wds-writer)
--   [Interner Windows-Daten Bank Schreiber (WID)](#windows-internal-database-wid-writer)
--   [WINS-Writer (Windows Internet Name Service)](#windows-internet-name-service-wins-writer)
--   [WMI-Writer](#wmi-writer)
+-   [VSS Metadata Store Writer](#vss-metadata-store-writer)
+-   [Windows Deployment Services (WDS) Writer](#windows-deployment-services-wds-writer)
+-   [interne Windows-Datenbank Writer (WID)](#windows-internal-database-wid-writer)
+-   [Windows WINS-Writer (Internet Name Service)](#windows-internet-name-service-wins-writer)
+-   [WMI Writer](#wmi-writer)
 
 ## <a name="active-directory-domain-services-ntds-vss-writer"></a>Active Directory Domain Services (NTDS) VSS Writer
 
-Dieser Writer meldet die NTDS-Datenbankdatei (NTDS. dit) und die zugehörigen Protokolldateien. Diese Dateien sind erforderlich, um die Active Directory ordnungsgemäß wiederherzustellen.
+Dieser Writer meldet die NTDS-Datenbankdatei (ntds.dit) und die zugeordneten Protokolldateien. Diese Dateien sind erforderlich, um Active Directory ordnungsgemäß wiederherzustellen.
 
-Pro Domänen Controller ist nur eine NTDS. dit-Datei vorhanden, und Sie wird in den Writer-Metadaten wie im folgenden Beispiel berichtet:
+Es gibt nur eine ntds.dit-Datei pro Domänencontroller, und sie wird in den Writer-Metadaten wie im folgenden Beispiel gemeldet:
 
 ``` syntax
     <DATABASE_FILES path="C:\Windows\NTDS" 
@@ -67,7 +67,7 @@ Pro Domänen Controller ist nur eine NTDS. dit-Datei vorhanden, und Sie wird in 
                      filespecBackupType="3855"/>
 ```
 
-Es folgt ein Beispiel, das zeigt, wie Sie Komponenten in den Metadaten des Writers auflisten:
+Hier ist ein Beispiel, das zeigt, wie Komponenten in den Metadaten des Writers aufgeführt werden:
 
 ``` syntax
     <BACKUP_LOCATIONS>
@@ -91,31 +91,31 @@ Es folgt ein Beispiel, das zeigt, wie Sie Komponenten in den Metadaten des Write
     </BACKUP_LOCATIONS>
 ```
 
-Zum Zeitpunkt der Sicherung legt der Writer den Ablauf Zeitpunkt der Sicherung in den Sicherungs Metadaten des Writers fest. Anforderer sollten diese Metadaten mithilfe von [**IVssComponent:: getbackupmetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupmetadata) abrufen, um zu bestimmen, ob die Datenbank abgelaufen ist. Abgelaufene Datenbanken können nicht wieder hergestellt werden.
+Zum Zeitpunkt der Sicherung legt der Writer die Ablaufzeit der Sicherung in den Sicherungsmetadaten des Writers fest. Anfordernde Benutzer sollten diese Metadaten mithilfe von [**IVssComponent::GetBackupMetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupmetadata) abrufen, um zu bestimmen, ob die Datenbank abgelaufen ist. Abgelaufene Datenbanken können nicht wiederhergestellt werden.
 
-Wenn es sich bei dem Computer, der die NTDS-Datenbank enthält, um einen Domänen Controller handelt, sollte die Sicherungs Anwendung immer eine Systemstatus Sicherung auf allen Volumes mit kritischen Systemstatus Informationen ausführen. Zum Zeitpunkt der Wiederherstellung sollte die Anwendung den Computer zunächst im Verzeichnisdienst-Wiederherstellungs Modus neu starten und dann eine Systemstatus Wiederherstellung durchführen.
+Wenn der Computer, der die NTDS-Datenbank enthält, ein Domänencontroller ist, sollte die Sicherungsanwendung immer eine Systemstatussicherung auf allen Volumes durchführen, die wichtige Systemstatusinformationen enthalten. Zur Wiederherstellungszeit sollte die Anwendung zunächst den Computer im Verzeichnisdienst-Wiederherstellungsmodus neu starten und dann eine Wiederherstellung des Systemstatus durchführen.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "NTDS".
+Die Zeichenfolge für den Writernamen für diesen Writer ist "NTDS".
 
 Die Writer-ID für diesen Writer ist B2014C9E-8711-4C5C-A5A9-3CF384484757.
 
 ## <a name="active-directory-federation-services-writer"></a>Active Directory-Verbunddienste (AD FS) Writer
 
-Dieser Writer meldet die Active Directory-Verbunddienste (AD FS) (ADFS)-Datendateien.
+Dieser Writer meldet die Active Directory-Verbunddienste (AD FS) (AD FS)-Datendateien.
 
-**Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
+**Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003** und Windows XP: Dieser Writer wird nicht unterstützt.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "ADFS VSS Writer".
+Die Writer-Namenszeichenfolge für diesen Writer ist "AD FS VSS Writer".
 
-Die Writer-ID für diesen Writer lautet 772c45b8-AE01-4l94-940c-94961864acad.
+Die Writer-ID für diesen Writer ist 772C45F8-AE01-4F94-940C-94961864ACAD.
 
 ## <a name="active-directory-lightweight-directory-services-lds-vss-writer"></a>Active Directory Lightweight Directory Services (LDS) VSS Writer
 
-Dieser Writer meldet die Adam-Datenbankdatei (Adamntds. dit) und die zugehörigen Protokolldateien für jede Instanz in% Program Files% \\ Microsoft Adam \\ instance *N* \\ Data, wobei *N* für die Adam-Instanznummer steht. Diese Daten Bank Protokolldateien sind erforderlich, um ADAM-Instanzen wiederherzustellen.
+Dieser Writer meldet die ADAM-Datenbankdatei (adamntds.dit) und die zugehörigen Protokolldateien für jede Instanz in %program files% \\ Microsoft ADAM \\ instance *N* data, wobei \\ *N* die ADAM-Instanznummer ist. Diese Datenbankprotokolldateien sind erforderlich, um ADAM-Instanzen wiederherzustellen.
 
 **Windows XP:** Dieser Writer wird nicht unterstützt.
 
-Es folgt ein Beispiel, das zeigt, wie Sie Komponenten in den Metadaten des Writers auflisten:
+Hier ist ein Beispiel, das zeigt, wie Komponenten in den Metadaten des Writers aufgeführt werden:
 
 ``` syntax
     <BACKUP_LOCATIONS>
@@ -140,336 +140,336 @@ Es folgt ein Beispiel, das zeigt, wie Sie Komponenten in den Metadaten des Write
     </BACKUP_LOCATIONS>
 ```
 
-Zum Zeitpunkt der Sicherung legt der Writer den Ablauf Zeitpunkt der Sicherung in den Sicherungs Metadaten fest. Sicherungs Anwendungen sollten diese Metadaten mithilfe der [**IVssComponent:: getbackupmetadata**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupmetadata) -Methode abrufen, um zu bestimmen, ob die Datenbank abgelaufen ist. Abgelaufene Datenbanken können nicht wieder hergestellt werden.
+Zur Sicherungszeit legt der Writer die Ablaufzeit der Sicherung in den Sicherungsmetadaten fest. Sicherungsanwendungen sollten diese Metadaten mithilfe der [**IVssComponent::GetBackupMetadata-Methode**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupmetadata) abrufen, um zu bestimmen, ob die Datenbank abgelaufen ist. Abgelaufene Datenbanken können nicht wiederhergestellt werden.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "Adam (Instance *N*) Writer", wobei *N* die Adam-Instanznummer ist, z. b. "Adam (instance1) Writer", "Adam (Instance2) Writer" usw.
+Die Zeichenfolge für den Writernamen für diesen Writer ist "ADAM (Instanz *N*) Writer", wobei *N* die ADAM-Instanznummer ist, z.B. "ADAM (instance1) Writer", "ADAM (instance2) Writer" und so weiter.
 
 Die Writer-ID für diesen Writer ist DD846AAA-A1B6-42A8-AAF8-03DCB6114BFD. Diese Writer-ID ist für alle Instanzen identisch.
 
 ## <a name="active-directory-rights-management-services-ad-rms-writer"></a>Active Directory Rights Management Services (AD RMS) Writer
 
-Dieser Writer meldet die Datendateien des Active Directory Rights Management-Diensts (AD RMS).
+Dieser Writer meldet die Active Directory Rights Management-Datendateien (AD RMS Service).
 
-**Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
+**Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003** und Windows XP: Dieser Writer wird nicht unterstützt.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "AD RMS Writer".
+Die Writer-Namenszeichenfolge für diesen Writer ist "AD RMS Writer".
 
-Die Writer-ID für diesen Writer lautet 886c43b1-D455-4428-a37b-4d6b9e43f.
+Die Writer-ID für diesen Writer ist 886C43B1-D455-4428-A37F-4D6B9E43F50F.
 
-## <a name="automated-system-recovery-asr-writer"></a>ASR-Writer (Automated System Recovery)
+## <a name="automated-system-recovery-asr-writer"></a>Automatisierter ASR-Writer (System Recovery)
 
-Der ASR Writer speichert die Konfiguration der Datenträger auf dem System. Dieser Writer meldet die Start Konfigurations Datenbank (Boot Configuration Database, BCD) und ist auch für das Aufheben der Bereitstellung der Registrierungs Struktur zuständig, die die BCD während der Erstellung von Schatten Kopien darstellt. Der ASR Writer muss in alle Sicherungen eingeschlossen werden, die für die Bare-Metal-Wiederherstellung erforderlich sind. Weitere Informationen zu ASR finden Sie unter [Verwenden der automatisierten VSS-System Wiederherstellung für die Notfall Wiederherstellung](using-vss-automated-system-recovery-for-disaster-recovery.md).
-
-**Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
-
-Die Zeichenfolge des Writer-namens für diesen Writer ist "ASR Writer".
-
-Die Writer-ID für den ASR-Writer lautet BE000CBE-11FE-4426-9C58-531AA6355FC4.
-
-## <a name="background-intelligent-transfer-service-bits-writer"></a>Background Intelligent Transfer Service (Bits) Writer
-
-Der Bits-Writer verwendet den Registrierungsschlüssel **FilesNotToBackup** , um Dateien aus dem Bits-Cache Ordner auszuschließen. Der Standard Cache Speicherort ist% ALLUSERSPROFILE% \\ Microsoft \\ Network \\ Downloader \\ Cache.
+Der ASR Writer speichert die Konfiguration von Datenträgern auf dem System. Dieser Writer meldet die Startkonfigurationsdatenbank (Boot Configuration Database, BCD) und ist auch für die Bereitstellung der Registrierungsstruktur verantwortlich, die die BCD während der Erstellung von Schattenkopien darstellt. Der ASR-Writer muss in allen Sicherungen enthalten sein, die für die Bare-Metal-Wiederherstellung erforderlich sind. Weitere Informationen zu ASR finden Sie unter [Using VSS Automated System Recovery for Disaster Recovery](using-vss-automated-system-recovery-for-disaster-recovery.md).
 
 **Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
 
-Außerdem schließt der Bits-Writer die folgenden Dateien von der Sicherung aus: die Bits-Zustands Dateien (qmgr0. dat und qmgr1. dat), die Bits-Debugprotokolldatei und die Bits-Dateien, die teilweise heruntergeladen wurden.
+Die Zeichenfolge für den Writernamen für diesen Writer ist "ASR Writer".
 
-Wenn es sich bei der Bits-Download Zieldatei um eine SMB-Datei handelt, muss das Client Konto eine Vertrauensstellung mit dem Server aufweisen, andernfalls können Sicherungen fehlschlagen.
+Die Writer-ID für den ASR-Writer ist BE000CBE-11FE-4426-9C58-531AA6355FC4.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "Bits Writer".
+## <a name="background-intelligent-transfer-service-bits-writer"></a>Background Intelligent Transfer Service (BITS) Writer
 
-Die Writer-ID für den Bits-Writer lautet 4969d978-be47-48b0-b100f 328l07ac1e0.
+Der BITS-Writer verwendet den **Registrierungsschlüssel FilesNotToBackup,** um Dateien aus dem BITS-Cacheordner auszuschließen. Der Standardcachespeicherort ist %AllUsersProfile% \\ Microsoft \\ Network \\ Downloader \\ Cache.
 
-## <a name="certificate-authority-writer"></a>Zertifikatauthority-Writer
+**Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
 
-Dieser Writer ist für das Auflisten der Datendateien für den Zertifikat Server zuständig.
+Darüber hinaus schließt der BITS-Writer die folgenden Dateien aus der Sicherung aus: die BITS-Zustandsdateien (qmgr0.dat und qmgr1.dat), die BITS-Debugprotokolldatei und teilweise heruntergeladene BITS-Dateien.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "Zertifizierungsstelle".
+Wenn es sich bei der BITS-Downloadzieldatei um eine SMB-Datei handelt, muss das Clientkonto eine Vertrauensstellung mit dem Server haben. Ander denn, bei Sicherungen kann ein Fehler auftauen.
 
-**Windows XP:** Die Zeichenfolge des Writer-namens für diesen Writer ist "Certificate Server Writer".
+Die Zeichenfolge für den Writernamen für diesen Writer ist "BITS Writer".
 
-Die Writer-ID für den Writer ist 6b5b15b5-da24-4d88-B737-63063e3a1f.
+Die Writer-ID für den BITS-Writer ist 4969D978-BE47-48B0-B100-F328F07AC1E0.
 
-## <a name="cluster-service-writer"></a>Cluster Dienstanbieter
+## <a name="certificate-authority-writer"></a>Certificate Authority Writer
 
-Der Cluster Dienst VSS Writer ist in der Dokumentation zur [Cluster Dienst](/previous-versions/windows/desktop/mscs/backing-up-and-restoring-the-failover-cluster-configuration-using-vss) -API dokumentiert.
+Dieser Writer ist für das Aufzählen der Datendateien für den Zertifikatserver verantwortlich.
 
-**Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird erst ab Windows Vista mit Service Pack 1 (SP1) und Windows Server 2008 unterstützt.
+Die Zeichenfolge für den Writernamen für diesen Writer ist "Certificate Authority".
 
-## <a name="cluster-shared-volume-csv-vss-writer"></a>Freigegebenes Clustervolume (CSV) VSS Writer
+**Windows XP:** Die Writer-Namenszeichenfolge für diesen Writer ist "Certificate Server Writer".
 
-Dieser Writer meldet die freigegebenes Clustervolume (CSV)-Datendateien. Dieser Writer ist ein in-Box-Writer für Windows Server-Betriebssystemversionen. Er wird nicht im Windows-Client ausgeliefert.
+Die Writer-ID für den Writer ist 6F5B15B5-DA24-4D88-B737-63063E3A1F86.
+
+## <a name="cluster-service-writer"></a>Cluster Service Writer
+
+Der Clusterdienst-VSS Writer ist in der Dokumentation zur [Clusterdienst-API](/previous-versions/windows/desktop/mscs/backing-up-and-restoring-the-failover-cluster-configuration-using-vss) dokumentiert.
+
+**Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird erst nach Windows Vista mit Service Pack 1 (SP1) und Windows Server 2008 unterstützt.
+
+## <a name="cluster-shared-volume-csv-vss-writer"></a>Freigegebenes Clustervolume VSS Writer (CSV)
+
+Dieser Writer meldet die csv-Datendateien (Freigegebenes Clustervolume). Dieser Writer ist ein in der Box enthaltener Writer für Windows Server-Betriebssystemversionen. sie wird nicht in Windows Client versendet.
 
 **Windows Server 2008 R2, Windows Server 2008 und Windows Server 2003:** Dieser Writer wird nicht unterstützt.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "freigegebenes Clustervolume VSS Writer".
+Die Writer-Namenszeichenfolge für diesen Writer lautet "Freigegebenes Clustervolume VSS Writer".
 
-Die Writer-ID für den Writer lautet 1072ae1c-e5a7-4ea1-9e4a-6l7964656570.
+Die Writer-ID für den Writer lautet 1072AE1C-E5A7-4EA1-9E4A-6F7964656570.
 
-## <a name="com-class-registration-database-writer"></a>Datenbank-Writer der com+-Klassen Registrierung
+## <a name="com-class-registration-database-writer"></a>COM+-Klassenregistrierungsdatenbank-Writer
 
-Dieser Writer ist verantwortlich für den Inhalt des Registrierungs Verzeichnisses% systemroot% \\ . Der com+-Katalog ist eine Datei in der% systemroot%- \\ Registrierung mit einem Namen, der dem Muster R *xxxxxxxxxxxx*. CLB folgt, wobei *xxxxxxxxxxxx* eine 12-stellige hexadezimal Zahl ist. Es können möglicherweise mehrere Dateien vorhanden sein, wenn com+-Anwendungen auf dem Computer konfiguriert wurden. Die Datei, die den aktuellen com+-Katalog enthält, ist die Datei mit dem größten Wert *xxxxxxxxxxxx*.
+Dieser Writer ist für den Inhalt des Verzeichnisses %SystemRoot% \\ Registration verantwortlich. Der COM+-Katalog ist eine Datei in %SystemRoot% \\ Registration mit einem Namen, der dem Muster R *xxxxxxxxxxxxxx*.clb folgt, wobei *xxxxxxxxxxxxxx* eine 12-stellige Hexadezimalzahl ist. Es kann mehrere solcher Dateien geben, wenn COM+-Anwendungen auf dem Computer konfiguriert wurden. Die Datei, die den aktuellen COM+-Katalog enthält, ist die Datei mit dem größten Wert von *xxxxxxxxxxxx.*
 
 **Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
 
-Die com+-Klassen Registrierungsdatenbank hängt von einem Registrierungsschlüssel ab, der gesichert wird, und muss daher zusammen mit der Registrierung gesichert und wieder hergestellt werden.
+Die COM+-Klassenregistrierungsdatenbank hängt davon ab, dass ein Registrierungsschlüssel gesichert wird und daher zusammen mit der Registrierung gesichert und wiederhergestellt werden muss.
 
-Zum Wiederherstellen der COM+-Registrierungsdatenbank muss eine Sicherungs Anwendung (Requester) die [**icomadmincatalog:: restoreregdb**](/windows/win32/api/comadmin/nf-comadmin-icomadmincatalog-restoreregdb) -Methode abrufen.
+Um die COM+-Registrierungsdatenbank wiederherzustellen, muss eine Sicherungsanwendung (Anfordernde) die [**ICOMAdminCatalog::RestoreREGDB-Methode**](/windows/win32/api/comadmin/nf-comadmin-icomadmincatalog-restoreregdb) aufrufen.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "com+ RegDB Writer".
+Die Writer-Namenszeichenfolge für diesen Writer lautet "COM+ REGDB Writer".
 
-Die Writer-ID für den Datenbank-Writer der com+-Klassen Registrierung lautet 542da469-d3e1-473c-9F 4f -7847s01fc64f.
+Die Writer-ID für den COM+-Klassenregistrierungsdatenbank-Writer lautet 542DA469-D3E1-473C-9F4F-7847F01FC64F.
 
-## <a name="data-deduplication-writer"></a>Datendeduplizierungswriter
+## <a name="data-deduplication-writer"></a>Data Deduplication Writer
 
-Die VSS Writer für die Datendeduplizierung ist in der Dokumentation zur [Datendeduplizierung](/previous-versions/windows/desktop/dedup/backup-and-restore-of-data-deduplication-enabled-volumes) -API dokumentiert. Dieser Writer ist ein in-Box-Writer für Windows Server-Betriebssystemversionen. Er wird nicht im Windows-Client ausgeliefert.
+Der VSS Writer für die Datendeduplizierung ist in der Dokumentation zur [Datendeduplizierungs-API](/previous-versions/windows/desktop/dedup/backup-and-restore-of-data-deduplication-enabled-volumes) dokumentiert. Dieser Writer ist ein in der Box enthaltener Writer für Windows Server-Betriebssystemversionen. sie wird nicht in Windows Client versendet.
 
 **Windows Server 2008 R2, Windows Server 2008 und Windows Server 2003:** Dieser Writer wird nicht unterstützt.
 
 ## <a name="distributed-file-system-replication-dfsr"></a>DFS-Replikation (DFSR)
 
-Die folgende Komponente enthält eine VSS Writer: [verteiltes Dateisystem Replication (DFSR)](/previous-versions/windows/desktop/dfsr/dfsr-replicated-folders) .
+Die folgende Komponente enthält einen VSS Writer: [verteiltes Dateisystem Replication (DFSR)](/previous-versions/windows/desktop/dfsr/dfsr-replicated-folders)
 
-**Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird bis Windows Vista mit SP1 und Windows Server 2008 nicht unterstützt.
+**Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird erst Windows Vista mit SP1 und Windows Server 2008 unterstützt.
 
-## <a name="dynamic-host-configuration-protocol-dhcp-writer"></a>DHCP-Writer (Dynamic Host Configuration-Protokoll)
+## <a name="dynamic-host-configuration-protocol-dhcp-writer"></a>DHCP-Writer (Dynamic Host Configuration Protocol)
 
-Dieser Writer ist für das Auflisten von Dateien zuständig, die für die DHCP-Server Rolle erforderlich sind. Dieser Writer ist ein in-Box-Writer für Windows Server-Betriebssystemversionen. Er wird nicht im Windows-Client ausgeliefert.
+Dieser Writer ist für das Aufzählen von Dateien zuständig, die für die DHCP-Serverrolle erforderlich sind. Dieser Writer ist ein in der Box enthaltener Writer für Windows Server-Betriebssystemversionen. sie wird nicht in Windows Client versendet.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "DHCP Jet Writer".
+Die Writer-Namenszeichenfolge für diesen Writer lautet "Dhcp Jet Writer".
 
-Die Writer-ID für diesen Writer ist BE9AC81E-3619-421F-920F-4C6FEA9E93AD.
+Die Writer-ID für diesen Writer lautet BE9AC81E-3619-421F-920F-4C6FEA9E93AD.
 
 ## <a name="file-replication-service-frs"></a>Dateireplikationsdienst (File Replication Service, FRS)
 
-Der Datei Replikations Dienst-Writer ist in [Sichern und Wiederherstellen eines FRS-Replicated SYSVOL-Ordners](backing-up-and-restoring-an-frs-replicated-sysvol-folder.md)dokumentiert.
+Der Dateireplikationsdienst-Writer ist unter [Sichern und Wiederherstellen eines FRS-Replicated SYSVOL-Ordners](backing-up-and-restoring-an-frs-replicated-sysvol-folder.md)dokumentiert.
 
-**Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird bis Windows Vista mit SP1 und Windows Server 2008 nicht unterstützt.
+**Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird erst Windows Vista mit SP1 und Windows Server 2008 unterstützt.
 
-## <a name="file-server-resource-manager-fsrm-writer"></a>Datei Server Ressourcen-Manager Writer (File Server, f)
+## <a name="file-server-resource-manager-fsrm-writer"></a>FsRM-Writer (File Server Resource Manager)
 
-Dieser Writer listet die für die Systemstatus Sicherung verwendeten f-Konfigurationsdateien auf. Während des Wiederherstellungs Vorgangs wird verhindert, dass Änderungen an der Konfiguration der voll Funktions Konfiguration vorgenommen werden und die Erzwingung von Kontingenten Nachdem die Wiederherstellung durchgeführt wurde, aktualisiert der Writer den vollständigen Dienst mit der wiederhergestellten Konfiguration. Dieser Writer ist nur vorhanden, wenn "f" (Teil der Rolle "Dateidienste") installiert ist und ausgeführt wird. Dieser Writer ist ein in-Box-Writer für Windows Server-Betriebssystemversionen. Er wird nicht im Windows-Client ausgeliefert.
+Dieser Writer listet die FSRM-Konfigurationsdateien auf, die für die Systemstatussicherung verwendet werden. Während Wiederherstellungsvorgängen werden Änderungen an der FSRM-Konfiguration verhindert, und die Erzwingung von Kontingenten und Dateibildschirmen wird vorübergehend angehalten. Nach Abschluss der Wiederherstellung aktualisiert der Writer FSRM mit der wiederhergestellten Konfiguration. Dieser Writer ist nur vorhanden, wenn FSRM (Teil der Dateidiensterolle) installiert ist und ausgeführt wird. Dieser Writer ist ein in der Box enthaltener Writer für Windows Server-Betriebssystemversionen. sie wird nicht in Windows Client versendet.
 
-**Windows Server 2003:** Dieser Writer wird bis Windows Server 2003 R2 nicht unterstützt.
+**Windows Server 2003:** Dieser Writer wird erst Windows Server 2003 R2 unterstützt.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "f-Writer".
+Die Writer-Namenszeichenfolge für diesen Writer lautet "FSRM Writer".
 
-Die Writer-ID für diesen Writer ist 12ce4370-5bb7-4C58-a76a-e5d5097e3674.
+Die Writer-ID für diesen Writer lautet 12CE4370-5BB7-4C58-A76A-E5D5097E3674.
 
-## <a name="hyper-v-writer"></a>Hyper-V-Writer
+## <a name="hyper-v-writer"></a>Hyper-V Writer
 
-Die Hyper-v-VSS Writer ist in der Dokumentation zur [Hyper-v-](/previous-versions/windows/desktop/virtual/backing-up-and-restoring-virtual-machines) API dokumentiert. Dieser Writer ist ein in-Box-Writer für Windows Server-Betriebssystemversionen. Er wird nicht im Windows-Client ausgeliefert.
+Der Hyper-V VSS Writer ist in der Dokumentation zur [Hyper-V-API](/previous-versions/windows/desktop/virtual/backing-up-and-restoring-virtual-machines) dokumentiert. Dieser Writer ist ein in der Box enthaltener Writer für Windows Server-Betriebssystemversionen. sie wird nicht in Windows Client versendet.
 
-**Windows Server 2003:** Dieser Writer wird bis Windows Server 2008 nicht unterstützt.
+**Windows Server 2003:** Dieser Writer wird erst Windows Server 2008 unterstützt.
 
-## <a name="iis-configuration-writer"></a>IIS-konfigurationswriter
+## <a name="iis-configuration-writer"></a>IIS-Konfigurationswriter
 
-Der IIS-konfigurationswriter ist für das Auflisten der IIS-Konfigurationsdateien verantwortlich.
+Der IIS-Konfigurationswriter ist für das Aufzählen der IIS-Konfigurationsdateien verantwortlich.
 
-**Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird bis Windows Vista mit SP1 und Windows Server 2008 nicht unterstützt. Anforderer ist erforderlich, um die IIS-Konfigurationsdateien zu sichern, einschließlich der .net FX machine.config-Datei oder der ASP.net-Stamm web.config Datei.
+**Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird erst Windows Vista mit SP1 und Windows Server 2008 unterstützt. Anforderer müssen die IIS-Konfigurationsdateien sichern, einschließlich der .NET FX-machine.config datei oder der ASP.NET Stammdatei web.config.
 
-Dieser Writer sichert keine Sicherungskopie der .net FX-machine.config Datei oder der ASP.net-Stamm web.config Datei, da diese Dateien vom System-Writer aufgelistet werden.
+Dieser Writer gesichert nicht die .NET FX-machine.config datei oder die ASP.NET Stammdatei web.config, da diese Dateien vom SystemWriter aufzählt werden.
 
-Dieser Writer sichert alle Dateien, die sich im Verzeichnis% windir% \\ system32 \\ inetsrv \\ config \\ und% windir% \\ system32 \\ inetsrv \\ config befinden, mit Ausnahme der Dateien, die vom System-Writer aufgelistet werden.
+Dieser Writer gesichert alle Dateien, die sich im Konfigurationsschema %windir% \\ system32 \\ inetsrv \\ \\ und %windir% \\ system32 \\ inetsrv \\ inetsrv-Konfigurationsverzeichnissen befinden, mit Ausnahme von Dateien, die vom Systemwriter aufzählt werden.
 
-Die Writer-ID für den IIS-konfigurationswriter ist 2a40f D15-dfca-4aa8-a654-1F 8c654603.
+Die Writer-ID für den IIS-Konfigurationswriter lautet 2A40FD15-DFCA-4aa8-A654-1F8C654603F6.
 
-## <a name="iis-metabase-writer"></a>IIS-metabasiswriter
+## <a name="iis-metabase-writer"></a>IIS Metabase Writer
 
-Der IIS-metabasewriter (Internet Information Server) ist für das Auflisten der IIS-Metabasisdatei verantwortlich.
+Der IiS-Metabasiswriter (Internet Information Server) ist für das Aufzählen der IIS-Metabasisdatei verantwortlich.
 
-**Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird bis Windows Vista mit SP1 und Windows Server 2008 nicht unterstützt. Anforderer ist erforderlich, um die IIS-Metabasisdatei zu sichern.
+**Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird erst Windows Vista mit SP1 und Windows Server 2008 unterstützt. Anforderer müssen die IIS-Metabasisdatei sichern.
 
-Die Writer-ID für den IIS-metabasiswriter lautet 59b1f0cf-90EF-465F-9609-6ca8b2938366.
+Die Writer-ID für den IIS-Metabasiswriter lautet 59B1f0CF-90EF-465F-9609-6CA8B2938366.
 
 ## <a name="microsoft-message-queuing-msmq-writer"></a>Microsoft Message Queuing (MSMQ) Writer
 
-Dieser Writer meldet die Microsoft Message Queuing Datendateien (MSMQ).
+Dieser Writer meldet die MSMQ-Datendateien (Microsoft Message Queuing).
 
 **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
 
-Die Zeichenfolge des Writer-namens für diesen Writer lautet "MSMQ Writer (*SvcName*)", wobei *SvcName* der Name des MSMQ-Diensts ist, dem der Writer zugeordnet ist. Bei der Standardinstallation lautet der Dienst Name "MSMQ". Bei gruppierten Instanzen lautet der Dienst Name MSMQ $*resourceName*, wobei *resourceName* der geclusterte MSMQ-Ressourcen Name ist.
+Die Writer-Namenszeichenfolge für diesen Writer lautet "MSMQ Writer (*SvcName*)", wobei *SvcName* der Name des MSMQ-Diensts ist, dem der Writer zugeordnet ist. Bei der Standardinstallation lautet der Dienstname "MSMQ". Bei gruppierten Instanzen lautet der Dienstname MSMQ$*ResourceName*, wobei *ResourceName* der gruppierte MSMQ-Ressourcenname ist.
 
-Die Writer-ID für diesen Writer lautet 7e47b561-971a-46e6-96b9-696eeaa53b2a.
+Die Writer-ID für diesen Writer lautet 7E47B561-971A-46E6-96B9-696EEAA53B2A.
 
-## <a name="mssearch-service-writer"></a>MSSearch-dienstwriter
+## <a name="mssearch-service-writer"></a>MSSearch Service Writer
 
-Dieser Writer ist vorhanden, um Such Indexdateien aus Schatten Kopien nach der Erstellung zu löschen. Dadurch wird die Auswirkung der e/a-Vorgänge für die e/a-Kopiervorgänge während der regulären e/a-Vorgänge auf den Dateien auf dem schattenkopierten Volume minimiert.
-
-**Windows Server 2003:** Dieser Writer wird nicht unterstützt.
-
-Um diesen Writer auf dem Server zu installieren, müssen Sie die Rolle "Dateidienste" installieren und den Windows-Suchdienst aktivieren.
-
-Die Zeichenfolge des Writer-namens für diesen Writer ist "MSSearch-dienstwriter".
-
-Die Writer-ID für den MSSearch-Dienst Schreiber lautet CD3F2362-8BEF-46C7-9181-D62844CDC0B2.
-
-## <a name="nps-vss-writer"></a>NPS-VSS-Writer
-
-Der NPS-Writer ist für das Auflisten der Netzwerk Richtlinien Server-Konfigurationsdateien (Network Policy Server, NPS) für Server zuständig, auf denen die Rolle "Netzwerk Richtlinien-und Zugriffs Dienste" installiert ist.
-
-**Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird bis Windows Vista mit SP1 und Windows Server 2008 nicht unterstützt.
-
-Die Zeichenfolge des Writer-namens für diesen Writer ist "NPS VSS Writer".
-
-Die Writer-ID für den NPS-VSS Writer lautet 0x35e81631-13e1-48dB-97fc-D5BC721BB18A.
-
-## <a name="performance-counters-writer"></a>Leistungsindikatoren Writer
-
-Dieser Writer meldet die Konfigurationsdateien des Leistungs Zählers. Diese Dateien werden nur während der Anwendungs Installation geändert und sollten während der Sicherung und Wiederherstellung des Systemstatus gesichert und wieder hergestellt werden.
-
-**Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt. Anfordernde Personen müssen diese Dateien manuell sichern. (Weitere Informationen finden [Sie unter Sichern und Wiederherstellen des System Status](locating-additional-system-files.md).)
-
-Die Zeichenfolge des Writer-namens für diesen Writer ist "Performance Counters Writer".
-
-Die Writer-ID für den leistungsindikatwriter lautet 0bada1bin-01A9-4625-8278-69e735fi39dd2.
-
-## <a name="registry-writer"></a>Registrierungswriter
-
-Der registrierungswriter meldet die Windows-Registrierungsdateien, um direkte Sicherungen und Wiederherstellungen der Registrierung zu ermöglichen. Benutzer Strukturen werden nicht gemeldet.
-
-**Windows Server 2003:** In Windows Server 2003 verwendet dieser Writer eine zwischenrepository-Datei (manchmal auch als "Spit file" bezeichnet) zum Speichern von Registrierungsdaten. (Weitere Informationen finden Sie [unter Registrierungs Sicherungs-und Wiederherstellungs Vorgänge unter VSS](registry-backup-and-restore-operations-under-vss.md).)
-
-**Windows XP:** Dieser Writer wird nicht unterstützt. (Weitere Informationen finden Sie [unter Registrierungs Sicherungs-und Wiederherstellungs Vorgänge unter VSS](registry-backup-and-restore-operations-under-vss.md).)
-
-Die Zeichenfolge des Writer-namens für diesen Writer ist "Registry Writer".
-
-Die Writer-ID für den Registrierungs Schreiber lautet AFBAB4A2-367D-4D15-A586-71DBB18F8485.
-
-## <a name="remote-desktop-services-terminal-services-gateway-vss-writer"></a>Remotedesktopdienste (Terminal Dienste) Gateway VSS Writer
-
-Dieser Writer ist dafür verantwortlich, die Remotedesktopdienste (Terminaldienstegateway)-Gatewaydateien für Server aufzulisten, die Remotedesktop Gateway, eine unter Rolle Remotedesktopdienste Rolle, installiert haben.
+Dieser Writer ist zum Löschen von Suchindexdateien aus Schattenkopien nach der Erstellung vorhanden. Dies wird durchgeführt, um die Auswirkungen von E/A-Kopie bei Schreibzugriff während regulärer E/A-Vorgänge auf diese Dateien auf dem durch Schatten kopierten Volume zu minimieren.
 
 **Windows Server 2003:** Dieser Writer wird nicht unterstützt.
 
-Dieser Writer ist ein in-Box-Writer für Windows Server-Betriebssystemversionen. Er wird nicht im Windows-Client ausgeliefert.
+Um diesen Writer auf dem Server zu installieren, müssen Sie die Rolle Dateidienste installieren und den Windows-Suchdienst aktivieren.
 
-Das Remotedesktopdienste Gateway hängt von mehreren Registrierungs Schlüsseln ab, die gesichert werden und daher mit der Registrierung gesichert und wieder hergestellt werden müssen.
+Die Writer-Namenszeichenfolge für diesen Writer lautet "MSSearch Service Writer".
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "Terminaldienstegateway-Writer".
+Die Writer-ID für den MSSearch-Dienstwriter lautet CD3F2362-8BEF-46C7-9181-D62844CDC0B2.
 
-Die Writer-ID für diesen Writer lautet 368753ec-572e-4fc7-b4b9-ccd9bdc624cb.
+## <a name="nps-vss-writer"></a>NPS VSS Writer
 
-## <a name="remote-desktop-services-terminal-services-licensing-vss-writer"></a>Remotedesktopdienste (Terminal Dienste) Lizenzierungs-VSS Writer
+Der NPS Writer ist für das Aufzählen der NPS-Konfigurationsdateien (Netzwerkrichtlinienserver) für Server verantwortlich, auf denen die Netzwerkrichtlinie und Access Services-Rolle installiert sind.
 
-Dieser Writer ist für das Auflisten der Remotedesktopdienste Lizenzierungs Dateien (RD-Lizenzierung) bzw. Terminaldienstelizenzierungs-Dateien (Terminaldienstelizenzierung) für Server zuständig, die Remotedesktop Lizenzierung, eine unter Rolle Remotedesktopdienste Rolle, installiert haben.
+**Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird erst Windows Vista mit SP1 und Windows Server 2008 unterstützt.
+
+Die Writer-Namenszeichenfolge für diesen Writer lautet "NPS VSS Writer".
+
+Die Writer-ID für den NPS VSS Writer lautet 0x35E81631-13E1-48DB-97FC-D5BC721BB18A.
+
+## <a name="performance-counters-writer"></a>Performance Counters Writer
+
+Dieser Writer meldet die Konfigurationsdateien des Leistungsindikators. Diese Dateien werden nur während der Anwendungsinstallation geändert und sollten bei Systemstatussicherungen und -wiederherstellungen gesichert und wiederhergestellt werden.
+
+**Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt. Anforderer müssen diese Dateien manuell sichern. (Siehe [Sichern und Wiederherstellen des Systemstatus](locating-additional-system-files.md).)
+
+Die Writer-Namenszeichenfolge für diesen Writer lautet "Performance Counters Writer".
+
+Die Writer-ID für den Leistungsindikatorwriter lautet 0BADA1DE-01A9-4625-8278-69E735F39DD2.
+
+## <a name="registry-writer"></a>Registry Writer
+
+Der Registrierungswriter meldet die Windows Registrierungsdateien, um die sicherungen und Wiederherstellungen der Registrierung zu ermöglichen. Es werden keine Benutzerstrukturen berichtet.
+
+**Windows Server 2003:** In Windows Server 2003 verwendet dieser Writer eine Zwischen-Repositorydatei (manchmal auch als "Spit-Datei" bezeichnet), um Registrierungsdaten zu speichern. (Siehe [Registrierungssicherungs- und -wiederherstellungsvorgänge unter VSS](registry-backup-and-restore-operations-under-vss.md).)
+
+**Windows XP:** Dieser Writer wird nicht unterstützt. (Siehe [Registrierungssicherungs- und -wiederherstellungsvorgänge unter VSS](registry-backup-and-restore-operations-under-vss.md).)
+
+Die Writer-Namenszeichenfolge für diesen Writer lautet "Registry Writer".
+
+Die Writer-ID für den Registrierungswriter lautet AFBAB4A2-367D-4D15-A586-71DBB18F8485.
+
+## <a name="remote-desktop-services-terminal-services-gateway-vss-writer"></a>Remotedesktopdienste Gateway VSS Writer (Terminaldienste)
+
+Dieser Writer ist für das Aufzählen der Remotedesktopdienste (Terminaldienste)-Gatewaydateien für Server verantwortlich, auf denen Remotedesktop Gateway, eine Unterrolle Remotedesktopdienste Rolle, installiert ist.
 
 **Windows Server 2003:** Dieser Writer wird nicht unterstützt.
 
-Dieser Writer ist ein in-Box-Writer für Windows Server-Betriebssystemversionen. Er wird nicht im Windows-Client ausgeliefert.
+Dieser Writer ist ein in der Box enthaltener Writer für Windows Server-Betriebssystemversionen. sie wird nicht in Windows Client versendet.
 
-Remotedesktopdienste Lizenzierung hängt von mehreren Registrierungs Schlüsseln ab, die gesichert werden, und muss daher mit der Registrierung gesichert und wieder hergestellt werden.
+Das Remotedesktopdienste Gateway hängt von mehreren Registrierungsschlüsseln ab, die gesichert werden, und muss daher zusammen mit der Registrierung gesichert und wiederhergestellt werden.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "termservlicensing".
+Die Writer-Namenszeichenfolge für diesen Writer lautet "TS Gateway Writer".
 
-Die Writer-ID für diesen Writer lautet 5382579c-98df-47a7-ac6c-98a6d7106e09.
+Die Writer-ID für diesen Writer lautet 368753EC-572E-4FC7-B4B9-CCD9BDC624CB.
 
-## <a name="shadow-copy-optimization-writer"></a>Writer zur Optimierung der Schatten Kopie
+## <a name="remote-desktop-services-terminal-services-licensing-vss-writer"></a>Remotedesktopdienste (Terminaldienste) – Lizenzierung von VSS Writer
 
-Dieser Writer löscht bestimmte Dateien aus Volumeschattenkopien. Dadurch wird die Auswirkung der e/a-Vorgänge für die e/a-Kopiervorgänge während der regulären e/a-Vorgänge auf den Dateien auf dem schattenkopierten Volume minimiert. Bei den gelöschten Dateien handelt es sich in der Regel um temporäre Dateien oder Dateien, die keinen Benutzer-oder Systemstatus enthalten.
+Dieser Writer ist für das Aufzählen der Dateien Remotedesktopdienste Licensing (RD Licensing) oder Terminal Services Licensing (TS Licensing) für Server verantwortlich, auf denen Remotedesktop Licensing, eine Unterrolle der Remotedesktopdienste-Rolle, installiert ist.
+
+**Windows Server 2003:** Dieser Writer wird nicht unterstützt.
+
+Dieser Writer ist ein In-Box-Writer für Windows Server-Betriebssystemversionen. es wird nicht im Windows.
+
+Remotedesktopdienste Lizenzierung hängt davon ab, dass mehrere Registrierungsschlüssel sichern werden und daher zusammen mit der Registrierung sichern und wiederhergestellt werden müssen.
+
+Die Writer-Namenszeichenfolge für diesen Writer ist "TermServLicensing".
+
+Die Writer-ID für diesen Writer ist 5382579C-98DF-47A7-AC6C-98A6D7106E09.
+
+## <a name="shadow-copy-optimization-writer"></a>Shadow Copy Optimization Writer
+
+Dieser Writer löscht bestimmte Dateien aus Volumeschattenkopien. Dies wird durchgeführt, um die Auswirkungen von E/A beim Kopieren beim Schreiben während der regulären E/A auf diese Dateien auf dem Schattenkopie-Volume zu minimieren. Die gelöschten Dateien sind in der Regel temporäre Dateien oder Dateien, die keinen Benutzer- oder Systemstatus enthalten.
 
 **Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "schattenkopieoptimierungs-Writer".
+Die Writer-Namenszeichenfolge für diesen Writer ist "Shadow Copy Optimization Writer".
 
-Die Writer-ID für den Writer der schattenkopieoptimierung lautet 4dc3bdd4-AB48-4d07-adb0-3bee2926berd7f.
+Die Writer-ID für den Writer für die Schattenkopieoptimierung ist 4DC3BDD4-AB48-4D07-ADB0-3BEE2926FD7F.
 
-## <a name="sync-share-service-writer"></a>Synchronisierungs Freigabe Dienst-Writer
+## <a name="sync-share-service-writer"></a>Sync Share Service Writer
 
-**Windows Server 2012 R2:** Dieser Writer ist in Windows Server 2012 R2 und neueren Server Versionen enthalten. Es ist nicht kompatibel mit Desktop Versionen.
+**Windows Server 2012 R2:** Dieser Writer ist in Windows Server 2012 R2 und neueren Serverversionen enthalten. Sie ist nicht mit Desktopversionen kompatibel.
 
-Dieser Writer ist verantwortlich für das Auflisten der Synchronisierungs Freigaben auf Servern, auf denen der Synchronisierungs Freigabe Dienst installiert ist, und um sicherzustellen, dass Ihre Metadaten und Daten während der Sicherung und Wiederherstellung konsistent bleiben.
+Dieser Writer ist für das Aufzählen der Synchronisierungsfreigaben auf Servern verantwortlich, auf denen der Synchronisierungsfreigabedienst installiert ist, und dafür sicherzustellen, dass die Metadaten und Daten während der Sicherung und Wiederherstellung konsistent bleiben.
 
-Dieser Writer ist nur vorhanden, wenn der Synchronisierungs Freigabe Dienst installiert ist und ausgeführt wird.
+Dieser Writer ist nur vorhanden, wenn der Synchronisierungsfreigabedienst installiert ist und ausgeführt wird.
 
-Es gibt eine VSS Writer Komponente für jede Synchronisierungs Freigabe. Dies schließt die Metadaten und Daten Pfade ein. Diese müssen aus Gründen der Konsistenz gesichert werden.
+Es gibt eine VSS Writer-Komponente für jede Synchronisierungsfreigabe. Dies schließt die Metadaten und Datenpfade ein. Diese müssen zur Konsistenz zusammen sichern werden.
 
-Die Zeichenfolge des Writer-namens lautet "Sync Share Service VSS Writer".
+Die Zeichenfolge für den Writernamen ist "Sync Share Service VSS Writer".
 
 Die Writer-ID ist D46BF321-FDBA-4A35-8EC3-454DF03BC86A.
 
-## <a name="system-writer"></a>Systemwriter
+## <a name="system-writer"></a>System Writer
 
-Der System-Writer listet alle Binärdateien des Betriebssystems und des Treibers auf und ist für eine Systemstatus Sicherung erforderlich.
+Der Systemwriter aufzählt alle Betriebssystem- und Treiberbinärdateien und ist für eine Systemstatussicherung erforderlich.
 
 **Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
 
-Dieser Writer wird als Teil des Kryptografiediensts (crypzvc) ausgeführt. Der System Schreiber generiert eine Datei Liste, die die folgenden Dateien enthält:
+Dieser Writer wird als Teil des Kryptografiediensts (CryptSvc) ausgeführt. Der SystemWriter generiert eine Dateiliste, die die folgenden Dateien enthält:
 
--   Alle statischen Dateien, die installiert wurden. Eine statische Datei ist eine Datei, die im Komponenten Manifest aufgelistet ist, wobei das Attribut " **Write Type** file" auf "static" oder "" festgelegt ist. Statische Dateien enthalten alle Dateien, die durch Windows-Ressourcenschutz (WRP) geschützt sind. Allerdings sind nicht alle statischen Dateien durch WRP geschützte Dateien. Beispielsweise sind Spieldateien statisch, aber nicht durch WRP geschützt, sodass Administratoren die Einstellungen für die Jugend Steuerung ändern können.
--   Der Inhalt des parallelen Windows-Verzeichnisses (WinSxS), einschließlich aller Manifeste, optionaler Komponenten und Win32-Dateien von Drittanbietern.
+-   Alle statischen Dateien, die installiert wurden. Eine statische Datei ist eine Datei, die im Komponentenmanifest aufgeführt ist, bei der das **WriteableType-Dateiattribut** auf "static" oder "" festgelegt ist. Statische Dateien enthalten alle Dateien, die durch Windows Resource Protection (WRP) geschützt sind. Allerdings sind nicht alle statischen Dateien WRP-geschützte Dateien. Beispielsweise sind Spieldateien statisch, aber nicht WRP-geschützt, sodass Administratoren einstellungen für die Jugendschutzverwaltung ändern können.
+-   Der Inhalt des Windows WinSxS-Verzeichnisses (Side-by-Side), einschließlich aller Manifeste, optionalen Komponenten und Win32-Drittanbieterdateien.
     > [!Note]  
-    > Viele Dateien im Verzeichnis% windir% \\ system32 sind feste Links zu Dateien im WinSxS-Verzeichnis.
+    > Viele der Dateien im Verzeichnis %windir% system32 sind harte Links zu Dateien \\ im WinSxS-Verzeichnis.
 
      
 
--   Alle PNP-Dateien für installierte Treiber (im Besitz von PNP).
--   Alle benutzermodusdienste und nicht-PnP-Treiber.
--   Alle Kataloge im Besitz von CRYP-VC.
+-   Alle PnP-Dateien für installierte Treiber (im Besitz von PnP).
+-   Alle Benutzermodusdienste und Nicht-PnP-Treiber.
+-   Alle Kataloge im Besitz von CryptSvc.
 
-Die Wiederherstellungs Anwendung ist dafür verantwortlich, die Dateien und die Registrierung zu schließen und die ACLs so festzulegen, dass Sie der System Schatten Kopie entsprechen. Die entsprechenden Hardlinks müssen auch erstellt werden, damit eine Systemstatus Wiederherstellung erfolgreich ist.
+Die Wiederherstellungsanwendung ist dafür verantwortlich, die Dateien und die Registrierung zu erstellen und ACLs so zu konfigurieren, dass sie mit der Schattenkopie des Systems übereinstimmen. Die entsprechenden hard-Links müssen auch erstellt werden, damit eine Wiederherstellung des Systemstatus erfolgreich ist.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "System-Writer".
+Die Zeichenfolge für den Writernamen für diesen Writer ist "System Writer".
 
-Die Writer-ID für den System Schreiber lautet E8132975-6F93-4464-A53E-1050253AE220.
+Die Writer-ID für den Systemwriter ist E8132975-6F93-4464-A53E-1050253AE220.
 
 ## <a name="task-scheduler-writer"></a>Taskplaner Writer
 
-Dieser Writer meldet die Aufgaben Dateien des Aufgaben Planers.
+Dieser Writer meldet die Aufgabendateien des Aufgabenplaners.
 
-**Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt. Anfordernde Personen müssen diese Dateien manuell sichern. (Weitere Informationen finden [Sie unter Sichern und Wiederherstellen des System Status](locating-additional-system-files.md).)
+**Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt. An anfordernde Benutzer müssen diese Dateien manuell sichern. (Siehe [Sichern und Wiederherstellen des Systemstatus](locating-additional-system-files.md).)
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "Taskplaner Writer".
+Die Writer-Namenszeichenfolge für diesen Writer ist "Taskplaner Writer".
 
 Die Writer-ID für den Writer ist D61D61C8-D73A-4EEE-8CDD-F6F9786B7124.
 
-## <a name="vss-metadata-store-writer"></a>VSS-Metadatenspeicher-Writer
+## <a name="vss-metadata-store-writer"></a>VSS Metadata Store Writer
 
-Dieser Writer meldet die Writer-Metadatendateien für alle VSS Express-Writer.
-
-**Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
-
-Die Zeichenfolge des Writer-namens für diesen Writer ist "VSS Express Writer Metadata Store Writer".
-
-Die Writer-ID für den Writer ist 75dfb225-e2e4-4d39-9ac9-ffaff65ddf06.
-
-## <a name="windows-deployment-services-wds-writer"></a>Windows-Bereitstellungs Dienste (WDS) Writer
-
-Dieser Writer meldet die Datendateien der Windows-Bereitstellungs Dienste (WDS).
+Dieser Writer meldet die Writermetadatendateien für alle VSS Express Writer.
 
 **Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
 
-Die Zeichenfolge des Writer-namens für diesen Writer lautet "WDS VSS Writer".
+Die Writer-Namenszeichenfolge für diesen Writer ist "VSS Express Writer Metadata Store Writer".
 
-Die Writer-ID für diesen Writer ist 82cb5521-68dB-4626-83a4-7fc6f 88853e9.
+Die Writer-ID für den Writer ist 75DFB225-E2E4-4D39-9AC9-FFAFF65DDF06.
 
-## <a name="windows-internal-database-wid-writer"></a>Interner Windows-Daten Bank Schreiber (WID)
+## <a name="windows-deployment-services-wds-writer"></a>Windows Deployment Services (WDS) Writer
 
-Dieser Writer meldet die internen Windows-Daten Bank Datendateien (WID).
+Dieser Writer meldet die Windows WDS-Datendateien (Deployment Services).
 
-**Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
+**Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "widwriter".
+Die Writer-Namenszeichenfolge für diesen Writer ist "WDS VSS Writer".
 
-Die Writer-ID für diesen Writer lautet 8d5194e1-e455-434a-b2e5-51296cce67df.
+Die Writer-ID für diesen Writer ist 82CB5521-68DB-4626-83A4-7FC6F88853E9.
 
-## <a name="windows-internet-name-service-wins-writer"></a>WINS-Writer (Windows Internet Name Service)
+## <a name="windows-internal-database-wid-writer"></a>interne Windows-Datenbank Writer (WID)
 
-Dieser Writer ist für das Auflisten der für WINS erforderlichen Dateien verantwortlich.
+Dieser Writer meldet die interne Windows-Datenbank -Datendateien (WID).
+
+**Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003** und Windows XP: Dieser Writer wird nicht unterstützt.
+
+Die Zeichenfolge für den Writernamen für diesen Writer ist "WIDWriter".
+
+Die Writer-ID für diesen Writer ist 8D5194E1-E455-434A-B2E5-51296CCE67DF.
+
+## <a name="windows-internet-name-service-wins-writer"></a>Windows WINS-Writer (Internet Name Service)
+
+Dieser Writer ist für das Aufzählen von Dateien verantwortlich, die für WINS erforderlich sind.
 
 **Windows XP:** Dieser Writer wird nicht unterstützt.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "WINS Jet Writer".
+Die Zeichenfolge für den Writernamen für diesen Writer ist "WINS Jet Writer".
 
 Die Writer-ID für diesen Writer ist F08C1483-8407-4A26-8C26-6C267A629741.
 
-## <a name="wmi-writer"></a>WMI-Writer
+## <a name="wmi-writer"></a>WMI Writer
 
-Dieser Writer wird zum Identifizieren des WMI-spezifischen Zustands und der Daten während Sicherungs Vorgängen verwendet. Die Daten enthalten Dateien aus dem WBEM-Repository.
+Dieser Writer wird verwendet, um WMI-spezifische Status und Daten während Sicherungsvorgängen zu identifizieren. Die Daten enthalten Dateien aus dem WBEM-Repository.
 
 **Windows Server 2003 und Windows XP:** Dieser Writer wird nicht unterstützt.
 
-Die Zeichenfolge des Writer-namens für diesen Writer ist "WMI Writer".
+Die Zeichenfolge für den Writernamen für diesen Writer ist "WMI Writer".
 
 Die Writer-ID für diesen Writer ist A6AD56C2-B509-4E6C-BB19-49D8F43532F0.
 

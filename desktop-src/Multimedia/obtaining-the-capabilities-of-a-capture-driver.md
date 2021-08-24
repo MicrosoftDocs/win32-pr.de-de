@@ -1,23 +1,23 @@
 ---
-title: Abrufen der Funktionen eines Erfassungs Treibers
-description: Abrufen der Funktionen eines Erfassungs Treibers
+title: Abrufen der Funktionen eines Erfassungstreibers
+description: Abrufen der Funktionen eines Erfassungstreibers
 ms.assetid: 17e90ca6-3646-41cb-8d7a-a2102bc16cc5
 keywords:
 - WM_CAP_DRIVER_GET_CAPS Meldung
-- capdrivergetcaps-Makro
-- Capdrivercaps-Struktur
+- capDriverGetCaps-Makro
+- CAPDRIVERCAPS-Struktur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d15a3b1e01ccff738494f287126b7e1ab033056
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bf6f717f1a7c19878ceeca2cccc2db309be3e62e0febf90dcb23376db73eed17
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119806570"
 ---
-# <a name="obtaining-the-capabilities-of-a-capture-driver"></a>Abrufen der Funktionen eines Erfassungs Treibers
+# <a name="obtaining-the-capabilities-of-a-capture-driver"></a>Abrufen der Funktionen eines Erfassungstreibers
 
-Die Meldung " [**WM- \_ Cap- \_ Treiber \_ get \_ Caps**](wm-cap-driver-get-caps.md) " gibt die Funktionen des Aufzeichnungs Treibers und der zugrunde liegenden Hardware in der [**capdrivercaps**](/windows/win32/api/vfw/ns-vfw-capdrivercaps) -Struktur zurück. Jedes Mal, wenn eine Anwendung einen neuen Aufzeichnungs Treiber mit dem Erfassungsfenster verbindet, sollte Sie die **capdrivercaps** -Struktur aktualisieren. Im folgenden Beispiel wird das [**capdrivergetcaps**](/windows/desktop/api/Vfw/nf-vfw-capdrivergetcaps) -Makro verwendet, um die Aufzeichnungs Treiberfunktionen zu erhalten.
+Die [**MELDUNG WM CAP DRIVER GET \_ \_ \_ \_ CAPS**](wm-cap-driver-get-caps.md) gibt die Funktionen des Erfassungstreibers und der zugrunde liegenden Hardware in der [**CAPDRIVERCAPS-Struktur**](/windows/win32/api/vfw/ns-vfw-capdrivercaps) zurück. Jedes Mal, wenn eine Anwendung einen neuen Erfassungstreiber mit dem Erfassungsfenster verbindet, sollte die **CAPDRIVERCAPS-Struktur** aktualisiert werden. Im folgenden Beispiel wird das [**CapDriverGetCaps-Makro**](/windows/desktop/api/Vfw/nf-vfw-capdrivergetcaps) verwendet, um die Funktionen des Erfassungstreibers abzurufen.
 
 
 ```C++
@@ -36,12 +36,12 @@ SendMessage (hWndC, WM_CAP_DRIVER_GET_CAPS,
 
 <dl> <dt>
 
-[Verwenden der Video Erfassung](using-video-capture.md)
+[Verwenden von Video capture](using-video-capture.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

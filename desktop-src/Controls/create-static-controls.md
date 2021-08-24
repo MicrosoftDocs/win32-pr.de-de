@@ -4,33 +4,33 @@ description: Das Beispiel in diesem Abschnitt veranschaulicht, wie ein animierte
 ms.assetid: D2DA38CB-360C-49EC-90BC-9AFA88C4B751
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 217135a6590fcee60286d21f00233916c4eba967
-ms.sourcegitcommit: f0ca63c18dc52c357d3398af7be766d2bdd40be7
+ms.openlocfilehash: 3ef4bdb4cce808ab3f8f8133a731c7f4ef5638bb1fbf9fd45370e4304d0138d0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "104472429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119826381"
 ---
 # <a name="how-to-create-static-controls"></a>Erstellen statischer Steuerelemente
 
 Das Beispiel in diesem Abschnitt veranschaulicht, wie ein animiertes statisches Steuerelement erstellt wird.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="create-a-static-control"></a>Erstellen eines statischen Steuer Elements
+### <a name="create-a-static-control"></a>Erstellen eines statischen Steuerelements
 
-Im folgenden Codebeispiel wird ein Timer und die [**STM \_ SetIcon**](stm-seticon.md) -Nachricht verwendet, um ein statisches Symbol Steuerelement in einem Dialogfeld zu animieren.
+Im folgenden Codebeispiel werden ein Timer und die [**STM \_ SETICON-Nachricht**](stm-seticon.md) verwendet, um ein statisches Symbolsteuerelement in einem Dialogfeld zu animieren.
 
 
 ```C++
@@ -98,9 +98,9 @@ INT_PTR CALLBACK StaticDlgProc(HWND hDlg, UINT message, WPARAM wParam,
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Bezeichner des statischen Symbol Steuer Elements ( \_ statisches IDI \_ -Symbol) ist in einer globalen Header Datei definiert, und die Symbole werden aus den Anwendungs Ressourcen geladen.
+Der Bezeichner des statischen Symbolsteuerelements (IDI \_ STATIC \_ ICON) wird in einer globalen Headerdatei definiert, und die Symbole werden aus den Anwendungsressourcen geladen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -109,12 +109,12 @@ Der Bezeichner des statischen Symbol Steuer Elements ( \_ statisches IDI \_ -Sym
 [Verwenden statischer Steuerelemente](using-static-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Demo zu Windows allgemeinen Steuerelementen (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

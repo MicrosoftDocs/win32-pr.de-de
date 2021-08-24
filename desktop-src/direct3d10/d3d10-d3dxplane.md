@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 440246fb47a851f9f5339c72a484a2cb59e8f662
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ccdc8644f63bdb048f6caa97ef635165a11a4473f549214410558583c8f807c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119754260"
 ---
 # <a name="d3dxplane-structure-d3dx10mathh"></a>D3DXPLANE-Struktur (D3DX10Math.h)
 
@@ -86,7 +86,7 @@ Der d-Koeffizient der Clippingebene in der allgemeinen Ebenengleichung. Siehe Hi
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Elemente der **D3DXPLANE-Struktur** haben die Form der allgemeinen Ebenengleichung. Sie passen in die allgemeine Ebenengleichung, sodass ax + by + alle + dw = 0 ist.
 
@@ -94,13 +94,13 @@ Die Elemente der **D3DXPLANE-Struktur** haben die Form der allgemeinen Ebenengle
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

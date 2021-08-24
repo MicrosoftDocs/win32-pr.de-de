@@ -1,34 +1,34 @@
 ---
-description: Die Tabelle bbcontrol listet die Steuerelemente auf, die auf jedem Billboard angezeigt werden sollen.
+description: In der TABELLE BBControl sind die Steuerelemente aufgeführt, die auf jedem Schild angezeigt werden sollen.
 ms.assetid: 2ab31a32-6d33-46b7-a295-199560efa7fb
-title: Bbcontrol-Tabelle
+title: BBControl-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dfebbdbc474ef88cbf26f34555deb4874840d005
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 70198167c866195204ec6cbcf644b92f3489a4ff44e14e719efbf5c6647e30c2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119754370"
 ---
-# <a name="bbcontrol-table"></a>Bbcontrol-Tabelle
+# <a name="bbcontrol-table"></a>BBControl-Tabelle
 
-Die Tabelle bbcontrol listet die Steuerelemente auf, die auf jedem Billboard angezeigt werden sollen.
+In der TABELLE BBControl sind die Steuerelemente aufgeführt, die auf jedem Schild angezeigt werden sollen.
 
-Die Tabelle "bbcontrol" weist die folgenden Spalten auf.
+Die BBControl-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte      | Typ                               | Schlüssel | Nullwerte zulässig |
+| Spalte      | Typ                               | Key | Nullwerte zulässig |
 |-------------|------------------------------------|-----|----------|
-| Billboard\_ | [Bezeichner](identifier.md)       | J   | N        |
-| Bbcontrol   | [Bezeichner](identifier.md)       | J   | N        |
-| type        | [Bezeichner](identifier.md)       | N   | N        |
+| Billboard\_ | [Identifier](identifier.md)       | J   | N        |
+| BBControl   | [Identifier](identifier.md)       | J   | N        |
+| type        | [Identifier](identifier.md)       | N   | N        |
 | X           | [Integer](integer.md)             | N   | N        |
 | J           | [Integer](integer.md)             | N   | N        |
 | Breite       | [Integer](integer.md)             | N   | N        |
 | Höhe      | [Integer](integer.md)             | N   | N        |
-| Attribute  | [Doubleiteger](doubleinteger.md) | N   | J        |
+| Attribute  | [DoubleInteger](doubleinteger.md) | N   | J        |
 | Text        | [Text](text.md)                   | N   | J        |
 
 
@@ -42,73 +42,73 @@ Die Tabelle "bbcontrol" weist die folgenden Spalten auf.
 <span id="Billboard_"></span><span id="billboard_"></span><span id="BILLBOARD_"></span>Billboard\_
 </dt> <dd>
 
-Der Name des Billboard.
+Name des Schilds.
 
-Externer Schlüssel für Spalte 1 der [Billboard-Tabelle](billboard-table.md).
-
-</dd> <dt>
-
-<span id="BBControl"></span><span id="bbcontrol"></span><span id="BBCONTROL"></span>Bbcontrol
-</dt> <dd>
-
-Der Name des Steuer Elements. Dieser Name muss innerhalb eines Billboard eindeutig sein, kann jedoch auf unterschiedlichen Plakaten wiederholt werden. Diese Spalte in Kombination mit der \_ Spalte Billboard bildet den Primärschlüssel für die Tabelle.
+Externer Schlüssel zu Spalte 1 der [Tabelle "Der Tabellenname".](billboard-table.md)
 
 </dd> <dt>
 
-<span id="Type"></span><span id="type"></span><span id="TYPE"></span>Sorte
+<span id="BBControl"></span><span id="bbcontrol"></span><span id="BBCONTROL"></span>BBControl
 </dt> <dd>
 
-Der Typ des Steuerelements. Nur statische Steuerelemente, z. b. ein [Text](text-control.md), eine [Bitmap](bitmap-control.md), ein [Symbol](icon-control.md)oder ein benutzerdefiniertes Steuerelement, können in einem Billboard abgelegt werden. Eine umfassende Liste der Steuerelemente finden Sie im Abschnitt "Steuer [Elemente](controls.md) ".
+Name des Steuerelements. Dieser Name muss innerhalb eines Schilds eindeutig sein, kann aber auf verschiedenen Tafeln wiederholt werden. Diese Spalte bildet in Kombination mit der Spalte \_ "Spaltenname" den Primärschlüssel für die Tabelle.
 
 </dd> <dt>
 
-<span id="X"></span><span id="x"></span>Stuben
+<span id="Type"></span><span id="type"></span><span id="TYPE"></span>Typ
 </dt> <dd>
 
-Die horizontale Koordinate der oberen linken Ecke der rechteckigen Begrenzung des Steuer Elements. Die Einheiten sind [Installer-Einheiten](installer-units.md). Diese Koordinate wird relativ zum Billboard-Steuerelement und nicht relativ zum Dialogfeld gemessen. Verwenden Sie nur nicht negative Zahlen.
+Der Typ des Steuerelements. Nur statische Steuerelemente, z. B. [ein Text-,](text-control.md) [Bitmap-,](bitmap-control.md) [Symbol-](icon-control.md)oder benutzerdefiniertes Steuerelement, können auf einer Leiste platziert werden. Eine vollständige Liste der Steuerelemente finden Sie im [Abschnitt Steuerelemente.](controls.md)
 
 </dd> <dt>
 
-<span id="Y"></span><span id="y"></span>Teenie
+<span id="X"></span><span id="x"></span>X
 </dt> <dd>
 
-Vertikale Koordinate der oberen linken Ecke der rechteckigen Begrenzung des Steuer Elements. Die Einheiten sind [Installer-Einheiten](installer-units.md). Diese Koordinate wird relativ zum Billboard-Steuerelement und nicht relativ zum Dialogfeld gemessen. Diese Zahl darf nicht negativ sein.
+Horizontale Koordinate der oberen linken Ecke der rechteckigen Begrenzung des Steuerelements. Die Einheiten sind [Installationseinheiten.](installer-units.md) Diese Koordinate wird relativ zum Steuerungssteuerfeld und nicht relativ zum Dialog gemessen. Verwenden Sie nur nicht negative Zahlen.
+
+</dd> <dt>
+
+<span id="Y"></span><span id="y"></span>Y
+</dt> <dd>
+
+Vertikale Koordinate der oberen linken Ecke der rechteckigen Begrenzung des Steuerelements. Die Einheiten sind [Installationseinheiten.](installer-units.md) Diese Koordinate wird relativ zum Steuerungssteuerfeld und nicht relativ zum Dialog gemessen. Diese Zahl darf nicht negativ sein.
 
 </dd> <dt>
 
 <span id="Width"></span><span id="width"></span><span id="WIDTH"></span>Breite
 </dt> <dd>
 
-Breite der rechteckigen Begrenzung des Steuer Elements. Die Einheiten sind [Installer-Einheiten](installer-units.md). Diese Zahl darf nicht negativ sein.
+Breite der rechteckigen Begrenzung des Steuerelements. Die Einheiten sind [Installationseinheiten.](installer-units.md) Diese Zahl darf nicht negativ sein.
 
 </dd> <dt>
 
-<span id="Height"></span><span id="height"></span><span id="HEIGHT"></span>Flugh
+<span id="Height"></span><span id="height"></span><span id="HEIGHT"></span>Höhe
 </dt> <dd>
 
-Höhe der rechteckigen Begrenzung des Steuer Elements. Die Einheiten sind [Installer-Einheiten](installer-units.md). Diese Zahl darf nicht negativ sein.
+Höhe der rechteckigen Begrenzung des Steuerelements. Die Einheiten sind [Installationseinheiten.](installer-units.md) Diese Zahl darf nicht negativ sein.
 
 </dd> <dt>
 
-<span id="Attributes"></span><span id="attributes"></span><span id="ATTRIBUTES"></span>Legt
+<span id="Attributes"></span><span id="attributes"></span><span id="ATTRIBUTES"></span>Attribute
 </dt> <dd>
 
-Ein 32-Bit-Wort, das die Attributflags angibt, die auf dieses Steuerelement angewendet werden sollen. Diese Zahl darf nicht negativ sein und ein Attribut für ein statisches Steuerelement angeben, das für die Platzierung in einem Billboard gültig ist. Informationen zu den numerischen Werten, die in dieses Feld eingegeben werden sollen, finden Sie unter das Attribut "Attribut" unter " [Steuer Attribute](control-attributes.md)".
+Ein 32-Bit-Wort, das die Attributflags an gibt, die auf dieses Steuerelement angewendet werden sollen. Diese Zahl muss nicht negativ sein und ein Attribut für ein statisches Steuerelement angeben, das für die Platzierung auf einem Schild gültig ist. Informationen zu den numerischen Werten, die in dieses Feld eingegeben werden sollen, finden Sie im jeweiligen Attribut unter [Steuerelementattribute.](control-attributes.md)
 
 </dd> <dt>
 
 <span id="Text"></span><span id="text"></span><span id="TEXT"></span>Text
 </dt> <dd>
 
-Diese Spalte enthält eine lokalisierbare Zeichenfolge, mit der der anfängliche Text im Steuerelement festgelegt wird, wenn das Steuerelement Text anzeigt. Die Zeichenfolge wird abgeschnitten, wenn der Text zu lang ist, um auf das Steuerelement zu passen. Diese Spalte enthält einen Schlüssel in die [binäre Tabelle](binary-table.md) , wenn das Steuerelement eine pushschaltfläche oder ein Kontrollkästchen ist, das ein Symbol oder eine Bitmap enthält. Es ist nicht möglich, sowohl Text als auch ein Bild auf derselben Schaltfläche anzuzeigen. Diese Spalte kann leer gelassen werden.
+Diese Spalte enthält eine lokalisierbare Zeichenfolge, mit der der ursprüngliche Text im Steuerelement festgelegt wird, wenn das Steuerelement Text anzeigt. Die Zeichenfolge wird abgeschnitten, wenn der Text zu lang ist, um auf das Steuerelement zu passen. Diese Spalte enthält einen Schlüssel in der [Binärtabelle,](binary-table.md) wenn das Steuerelement eine Pushschaltfläche oder ein Kontrollkästchen mit einem Symbol oder einer Bitmap ist. Es ist nicht möglich, sowohl Text als auch ein Bild auf derselben Schaltfläche zu zeigen. Diese Spalte bleibt möglicherweise leer.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die ganzzahligen Werte für x, y, Width und Height befinden sich in den [Installations Einheiten](installer-units.md)und nicht in den Dialog Einheiten. Eine installereinheit ist gleich 1-zwölfte Höhe des 10-Punkt-MS Sans Serif-Schrift Grads. Die Koordinaten für die Steuerelemente sind relativ zum Billboard-Steuerelement, nicht zum Dialogfeld.
+Die ganzzahligen Werte für x, y, width und height befinden sich in den [Installationseinheiten,](installer-units.md)nicht in Dialogeinheiten. Eine Installationseinheit entspricht der Zwölftelhöhe des 10-Punkt-MS Sans Serif-Schriftgrads. Die Koordinaten für die Steuerelemente sind relativ zum Steuerelement des Steuerelements , nicht zum Dialogfeld.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 
@@ -123,7 +123,7 @@ Die ganzzahligen Werte für x, y, Width und Height befinden sich in den [Install
 
 <dl> <dt>
 
-[**Msiseeltexternalui**](/windows/desktop/api/Msi/nf-msi-msisetexternaluia)
+[**MsiSetExternalUI**](/windows/desktop/api/Msi/nf-msi-msisetexternaluia)
 </dt> </dl>
 
  

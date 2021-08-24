@@ -1,19 +1,19 @@
 ---
-description: Der Verweis \_ Zeit-Datentyp definiert die Einheiten für Verweis Zeiten in DirectShow. Jede Einheit der Verweis Zeit beträgt 100 Nanosekunden.
+description: Der REFERENCE \_ TIME-Datentyp definiert die Einheiten für Verweiszeiten in DirectShow. Jede Einheit der Referenzzeit beträgt 100 Nanosekunden.
 ms.assetid: 862c95bc-2e0a-42c0-b907-45f64f27bd41
-title: REFERENCE_TIME ("strinmif. h")
+title: REFERENCE_TIME (Strmif.h)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ab88576f611674f5b208c5c39d328c77dcf57aec
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 08f1600e820ac59c53144743933701a61e4a7b753f814dde06c5c663a760938d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373960"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747320"
 ---
-# <a name="reference_time"></a>Verweis \_ Zeit
+# <a name="reference_time"></a>\_REFERENZZEIT
 
-Der **Verweis \_ Zeit** -Datentyp definiert die Einheiten für Verweis Zeiten in DirectShow. Jede Einheit der Verweis Zeit beträgt 100 Nanosekunden.
+Der **REFERENCE \_ TIME-Datentyp** definiert die Einheiten für Verweiszeiten in DirectShow. Jede Einheit der Referenzzeit beträgt 100 Nanosekunden.
 
 
 ```C++
@@ -22,16 +22,16 @@ typedef LONGLONG REFERENCE_TIME;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **Verweis \_ Zeit** -Datentyp ist eine ganze Zahl mit 64 Bit.
+Der **REFERENCE \_ TIME-Datentyp** ist eine 64-Bit-Ganzzahl.
 
-Verweis Zeiten werden normalerweise von einer der folgenden Baselines gemessen:
+Referenzzeiten werden in der Regel anhand einer der folgenden Baselines gemessen:
 
--   Eine absolute Uhrzeitangabe. In diesem Fall hängt die Baseline von der Implementierung der Uhr ab. Weitere Informationen finden Sie unter [Referenzuhren](reference-clocks.md).
--   Relativ zum Anfang der Wiedergabe.
+-   Eine absolute Uhrzeit. In diesem Fall hängt die Baseline von der Implementierung der Uhr ab. Weitere Informationen finden Sie unter [Referenzuhren.](reference-clocks.md)
+-   Relativ zum Beginn der Wiedergabe.
 
-Weitere Informationen zu Referenz Zeiten finden Sie unter [Zeit und Uhren in DirectShow](time-and-clocks-in-directshow.md).
+Weitere Informationen zu Referenzzeiten finden Sie unter [Uhrzeit und Uhren in DirectShow.](time-and-clocks-in-directshow.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,11 +39,11 @@ Weitere Informationen zu Referenz Zeiten finden Sie unter [Zeit und Uhren in Dir
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>"Strinmif. h" (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Strmif.h (include Dshow.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

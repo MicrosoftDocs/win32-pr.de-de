@@ -1,9 +1,9 @@
 ---
-title: DM_SETDEFID Meldung (Winuser. h)
-description: Ändert den Bezeichner der Standard-pushschaltfläche für ein Dialogfeld.
+title: DM_SETDEFID (Winuser.h)
+description: Ändert den Bezeichner der Standardschaltfläche für ein Dialogfeld.
 ms.assetid: 30720fa1-48cb-42d4-8370-87bdbaa34600
 keywords:
-- Dialog Felder DM_SETDEFID Meldung
+- DM_SETDEFID meldungsdialogfelder
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 73ceda9ac9e8fd399604e9c55431b8fcd74646f1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 92749cc7eca569b57d239a36bb6559e59a6a7ebc31c63787a93d0720b334d1ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119741750"
 ---
-# <a name="dm_setdefid-message"></a>DM \_ -setdefid-Meldung
+# <a name="dm_setdefid-message"></a>DM \_ SETDEFID-Nachricht
 
-Ändert den Bezeichner der Standard-pushschaltfläche für ein Dialogfeld.
+Ändert den Bezeichner der Standardschaltfläche für ein Dialogfeld.
 
 
 ```C++
@@ -40,7 +40,7 @@ ms.locfileid: "104518878"
 *wParam* 
 </dt> <dd>
 
-Der Bezeichner eines Push Button-Steuer Elements, das zum Standard wird.
+Der Bezeichner eines Schaltflächen-Steuerelements, das zum Standard wird.
 
 </dd> <dt>
 
@@ -53,13 +53,13 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist immer " **true**".
+Der Rückgabewert ist immer **TRUE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird von der [**defdlgproc**](/windows/desktop/api/Winuser/nf-winuser-defdlgprocw) -Funktion verarbeitet. Um die Standard Schaltfläche Push festzulegen, kann die Funktion die Nachrichten [**WM \_ getdlgcode**](wm-getdlgcode.md) und [**BM \_ SetStyle**](../controls/bm-setstyle.md) an das angegebene Steuerelement und die aktuelle Standard-Schaltfläche Push senden.
+Diese Nachricht wird von der [**DefDlgProc-Funktion**](/windows/desktop/api/Winuser/nf-winuser-defdlgprocw) verarbeitet. Zum Festlegen der Standardschaltfläche kann die Funktion [**WM \_ GETDLGCODE-**](wm-getdlgcode.md) und [**BM \_ SETSTYLE-Nachrichten**](../controls/bm-setstyle.md) an das angegebene Steuerelement und die aktuelle Standardschaltfläche senden.
 
-Die Verwendung der **DM \_ setdefid-** Nachricht kann dazu führen, dass mehr als eine Schaltfläche den Standardzustand der pushschaltfläche aufweist. Wenn das System ein Dialogfeld öffnet, wird die erste Schaltfläche "Push" in der Dialogfeld Vorlage mit dem standardmäßigen Zustands Rahmen gezeichnet. Durch das Senden einer **DM \_ setdefid-** Meldung zum Ändern der Standard Schaltfläche wird nicht immer der standardmäßige Zustands Rahmen aus der ersten Schaltfläche "Push" entfernt. In diesen Fällen sollte die Anwendung eine BM- [**\_ SetStyle**](../controls/bm-setstyle.md) -Nachricht senden, um die Rahmenart der ersten pushschaltfläche zu ändern.
+Die Verwendung **der DM \_ SETDEFID-Nachricht** kann dazu führen, dass mehrere Schaltflächen den Standardzustand der Pushschaltfläche haben. Wenn das System einen Dialog öffnet, zeichnet es die erste Pushschaltfläche in der Dialogvorlage mit dem Standardzustands border. Wenn Sie eine **DM \_ SETDEFID-Nachricht** senden, um die Standardschaltfläche zu ändern, wird der Standardzustandsgrenzgrad nicht immer von der ersten Pushschaltfläche entfernt. In diesen Fällen sollte die Anwendung eine [**BM \_ SETSTYLE-Nachricht**](../controls/bm-setstyle.md) senden, um den Rahmenstil der ersten Schaltfläche zu ändern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,39 +69,39 @@ Die Verwendung der **DM \_ setdefid-** Nachricht kann dazu führen, dass mehr al
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Defdlgproc**](/windows/desktop/api/Winuser/nf-winuser-defdlgprocw)
+[**DefDlgProc**](/windows/desktop/api/Winuser/nf-winuser-defdlgprocw)
 </dt> <dt>
 
-[**DM \_ getdefid**](dm-getdefid.md)
+[**DM \_ GETDEFID**](dm-getdefid.md)
 </dt> <dt>
 
-[**WM \_ getdlgcode**](wm-getdlgcode.md)
+[**WM \_ GETDLGCODE**](wm-getdlgcode.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Dialog Felder](dialog-boxes.md)
+[Dialogfelder](dialog-boxes.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**BM- \_ SetStyle**](../controls/bm-setstyle.md)
+[**BM \_ SETSTYLE**](../controls/bm-setstyle.md)
 </dt> <dt>
 
-[**EM \_ SetLimitText**](../controls/em-setlimittext.md)
+[**EM \_ SETLIMITTEXT**](../controls/em-setlimittext.md)
 </dt> </dl>
 
  

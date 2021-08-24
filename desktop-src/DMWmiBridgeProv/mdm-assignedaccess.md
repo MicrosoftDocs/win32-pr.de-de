@@ -1,6 +1,6 @@
 ---
 title: MDM_AssignedAccess-Klasse
-description: Die MDM \_ assignedaccess-Klasse wird verwendet, um festzulegen, dass das Gerät im Kiosk Modus ausgeführt wird.
+description: Die KLASSE MDM \_ AssignedAccess wird verwendet, um festzulegen, dass das Gerät im Kioskmodus ausgeführt wird.
 ms.assetid: b9837f91-3c13-4a80-bf6d-66d8b53dfa70
 keywords:
 - MDM_AssignedAccess-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b5f03f99183400d4e7672323072415918e8e58e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 994b4b106d2f6d8ed87298b50a4eec202e725985b3b2ba1b00d3b35cda1517f4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119825730"
 ---
-# <a name="mdm_assignedaccess-class"></a>MDM- \_ assignedaccess-Klasse
+# <a name="mdm_assignedaccess-class"></a>MDM \_ AssignedAccess-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ assignedaccess** -Klasse wird verwendet, um festzulegen, dass das Gerät im Kiosk Modus ausgeführt wird. Nachdem die Klasse ausgeführt wurde, versetzt die nächste Benutzeranmeldung, die dem Kiosk Modus zugeordnet ist, das Gerät in den Kiosk Modus, in dem die im Bereitstellungs Paket angegebene Anwendung ausgeführt wird.
+Die **KLASSE MDM \_ AssignedAccess** wird verwendet, um festzulegen, dass das Gerät im Kioskmodus ausgeführt wird. Nachdem die -Klasse ausgeführt wurde, versetzt die nächste Benutzeranmeldung, die dem Kioskmodus zugeordnet ist, das Gerät in den Kioskmodus, in dem die im Bereitstellungspaket angegebene Anwendung ausgeführt wird.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,20 +47,20 @@ class MDM_AssignedAccess
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ assignedaccess** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ AssignedAccess-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ assignedaccess** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ AssignedAccess-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 [Configuration](/windows/client-management/mdm/assignedaccess-csp#assignedaccess-configuration)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -71,23 +71,23 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse lautet die Zeichenfolge "assignedaccess".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "AssignedAccess".
 
 </dd> <dt>
 
-[Kioskmodeapp](/windows/client-management/mdm/assignedaccess-csp#assignedaccess-kioskmodeapp)
+[KioskModeApp](/windows/client-management/mdm/assignedaccess-csp#assignedaccess-kioskmodeapp)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -95,19 +95,19 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/msft/".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/".
 
 </dd> </dl>
 
@@ -117,10 +117,10 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -129,7 +129,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

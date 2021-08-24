@@ -1,23 +1,23 @@
 ---
-description: Öffnen und schließen Sie Kommunikationsressourcen Handles, und führen Sie Lese-/Schreibvorgänge mit Dateieingabe-und-Ausgabefunktionen aus.
+description: Öffnen und Schließen von Kommunikationsressourcenhandles und Ausführen von Lese-/Schreibvorgängen mit Dateieingabe- und -ausgabefunktionen.
 ms.assetid: 7faf7d55-e30f-4be2-917b-e057265b81b2
 title: Kommunikationsressourcen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f58d3fe5fadc8a5ca83c9252ef426b3296e73f0
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 88f9442594fc79d49c0d12c21b8a0f9614e5ceacc65867220b139b820e5c291a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119750170"
 ---
 # <a name="communications-resources"></a>Kommunikationsressourcen
 
-Eine *Kommunikations Ressource* ist ein physisches oder logisches Gerät, das einen einzelnen bidirektionalen, asynchronen Datenstream bereitstellt. Serielle Anschlüsse, parallele Ports, faxcomputer und Modems sind Beispiele für Kommunikationsressourcen. Für jede Kommunikations Ressource ist ein Dienstanbieter vorhanden, bestehend aus einer Bibliothek oder einem Treiber, der Anwendungen den Zugriff auf die Ressource ermöglicht.
+Eine *Kommunikationsressource* ist ein physisches oder logisches Gerät, das einen einzelnen bidirektionalen, asynchronen Datenstrom bietet. Serielle Anschlüsse, parallele Anschlüsse, Faxgeräte und Modems sind Beispiele für Kommunikationsressourcen. Für jede Kommunikationsressource gibt es einen Dienstanbieter, der aus einer Bibliothek oder einem Treiber besteht, der Anwendungen den Zugriff auf die Ressource ermöglicht.
 
 -   [Informationen zu Kommunikationsressourcen](about-communications-resources.md)
 -   [Verwenden von Kommunikationsressourcen](using-communications-resources.md)
--   [Kommunikations Referenz](communications-reference.md)
+-   [Kommunikationsreferenz](communications-reference.md)
 
  
 

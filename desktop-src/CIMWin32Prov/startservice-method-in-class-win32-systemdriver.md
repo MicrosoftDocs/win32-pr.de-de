@@ -1,8 +1,8 @@
 ---
-description: Versucht, den vom System Treiber verwalteten Dienst in seinen Startzustand zu versetzen.
+description: Versucht, den vom Systemtreiber verwalteten Dienst in den Startzustand zu bringen.
 ms.assetid: 3f9d29aa-b549-4a55-be9c-01fad4932fe6
 ms.tgt_platform: multiple
-title: Start Service-Methode der Win32_SystemDriver-Klasse
+title: StartService-Methode der Win32_SystemDriver-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 2c189d9b5f24a3ccc803a588abb94337ee65a1da
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 21f6814ef8c96e88b11b6e998da7b3e24334b56782929e37c3d6d97965887af7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214164"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119752270"
 ---
-# <a name="startservice-method-of-the-win32_systemdriver-class"></a>Start Service-Methode der Win32 \_ systemdriver-Klasse
+# <a name="startservice-method-of-the-win32_systemdriver-class"></a>StartService-Methode der \_ Win32-SystemDriver-Klasse
 
-Die **Start Service** -Methode versucht, den vom System Treiber verwalteten Dienst in den Startzustand zu versetzen.
+Die **StartService-Methode** versucht, den vom Systemtreiber verwalteten Dienst in den Startzustand zu bringen.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,7 +63,7 @@ Die Anforderung wird nicht unterstützt.
 **2**
 </dt> <dd>
 
-Der Benutzer verfügte nicht über die erforderlichen Zugriffsrechte.
+Der Benutzer hatte nicht den erforderlichen Zugriff.
 
 </dd> <dt>
 
@@ -84,7 +84,7 @@ Der angeforderte Steuerungscode ist nicht gültig, oder es ist für den Dienst n
 **5**
 </dt> <dd>
 
-Der angeforderte Steuerungs Code kann nicht an den Dienst gesendet werden, weil der Status des Diensts ([**Win32- \_ baseservice**](win32-baseservice.md).**State** -Eigenschaft) ist gleich 0, 1 oder 2.
+Der angeforderte Steuerungscode kann nicht an den Dienst gesendet werden, da der Zustand des Diensts ([**Win32 \_ BaseService**](win32-baseservice.md)) ist.**State-Eigenschaft)** ist gleich 0, 1 oder 2.
 
 </dd> <dt>
 
@@ -112,7 +112,7 @@ Beim Starten des Diensts ist ein unbekannter Fehler aufgetreten.
 **9**
 </dt> <dd>
 
-Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Dienstdatei wurde nicht gefunden.
 
 </dd> <dt>
 
@@ -172,7 +172,7 @@ Es gibt keinen Ausführungsthread für den Dienst.
 
 </dd> <dt>
 
-**Jahren**
+**18**
 </dt> <dd>
 
 Es gibt Ringabhängigkeiten beim Starten des Diensts.
@@ -189,21 +189,21 @@ Es wird ein Dienst unter dem gleichen Namen ausgeführt.
 **20**
 </dt> <dd>
 
-Der Name des diensdienstanbieter enthält ungültige Zeichen.
+Der Name des Diensts enthält ungültige Zeichen.
 
 </dd> <dt>
 
 **21**
 </dt> <dd>
 
-An den Dienst wurden ungültige Parameter übermittelt.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
 **22**
 </dt> <dd>
 
-Das Konto, unter dem dieser Dienst ausgeführt werden soll, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Dienstanbieter.
+Das Konto, unter dem dieser Dienst ausgeführt werden soll, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Diensts.
 
 </dd> <dt>
 
@@ -223,7 +223,7 @@ Der Dienst ist im System derzeitig angehalten.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende PowerShell-Code startet den Dienst "Microsoft USB Printer Class".
+Mit dem folgenden PowerShell-Code wird der Dienst "Microsoft USB Printer Class" gestartet.
 
 
 ```PowerShell
@@ -243,20 +243,20 @@ $Return = $usbPrintDriver.StartService()
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ System Treiber**](win32-systemdriver.md)
+[**Win32 \_ SystemDriver**](win32-systemdriver.md)
 </dt> </dl>
 
  

@@ -1,97 +1,97 @@
 ---
-title: UDP-paketflows
-description: Die Reihenfolge, in der die Ebenen der Filter-Engine der Windows-Filter Plattform (WFP) während einer typischen UDP-Sitzung durchlaufen werden.
+title: UDP-Paketflüsse
+description: Die Reihenfolge, in der die Ebenen der WFP-Filter-Engine (Windows Filtering Platform) während einer typischen UDP-Sitzung durchlaufen werden.
 ms.assetid: ab618c1f-3e7c-4f4b-b4ff-9e396d3258d9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 790de49e971d5506c1732b9c4d30b88643c7af0e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f9e850f67bce9a001d41ebb54b17d3d0d86b94b22f083529e4589d6b69841b7e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119746640"
 ---
-# <a name="udp-packet-flows"></a>UDP-paketflows
+# <a name="udp-packet-flows"></a>UDP-Paketflüsse
 
-In diesem Abschnitt wird die Reihenfolge beschrieben, in der die Ebenen der Filter-Engine der Windows-Filter Plattform (WFP) während einer typischen UDP-Sitzung durchlaufen werden.
-
-> [!Note]  
-> UDP-paketflows für IPv6 folgen dem gleichen Muster wie für IPv4.
-
- 
+In diesem Abschnitt wird die Reihenfolge beschrieben, in der die Ebenen der WFP-Filter-Engine (Windows Filtering Platform) während einer typischen UDP-Sitzung durchlaufen werden.
 
 > [!Note]  
-> Alle nicht-TCP-Paket Flüsse folgen dem gleichen Muster wie UDP-paketflows.
+> UDP-Paketflüsse für IPv6 folgen dem gleichen Muster wie für IPv4.
 
- 
+ 
 
-## <a name="udp-connection-establishment"></a>UDP-Verbindungs Einrichtung
+> [!Note]  
+> Alle Nicht-TCP-Paketflüsse folgen dem gleichen Muster wie UDP-Paketflüsse.
 
-<dl> Der Server (Empfänger) führt ein passives öffnen aus.
+ 
 
--   BIND: auf der swpm \_ -Schicht ist die \_ \_ \_ Umleitung \_ V4 (nur Windows 7/Windows Server 2008 R2)
--   BIND: f- \_ \_ \_ Ressourcen \_ Zuweisung \_ der Ebene "f"
+## <a name="udp-connection-establishment"></a>Einrichtung der UDP-Verbindung
+
+<dl> Server (Empfänger) führt passives Öffnen aus
+
+-   bind: FWPM \_ LAYER \_ ALE \_ BIND REDIRECT \_ \_ V4 (nur Windows 7/Windows Server 2008 R2)
+-   bind: FWPM \_ LAYER \_ ALE \_ RESOURCE ASSIGNMENT \_ \_ V4
 
   
-Der Client (Absender) führt aktive offene Vorgänge aus.
+Client (Absender) führt Active Open aus
 
--   BIND: auf der swpm \_ -Schicht ist die \_ \_ \_ Umleitung \_ V4 (nur Windows 7/Windows Server 2008 R2)
--   BIND: f- \_ \_ \_ Ressourcen \_ Zuweisung \_ der Ebene "f"
--   SendTo: fwpm \_ Layer \_ ALE \_ Verbindungs \_ Umleitung \_ V4 (nur Windows 7/Windows Server 2008 R2)
--   SendTo: fwpm \_ Layer \_ ALE \_ auth \_ Connect \_ v4
--   Lwpm- \_ Schicht- \_ ALE Daten \_ Fluss \_ festgelegt \_
--   Daten: \_ \_ Datagramm-Daten von Datagramm-Daten, \_ \_ v4
--   UDP-Meldung: ausgehender Transport-WPM- \_ \_ \_ Transport \_ v4
--   IP-Datagramme: WPM-Ebene ausgehend von \_ \_ \_ ippacket \_ v4
+-   bind: FWPM \_ LAYER \_ ALE \_ BIND REDIRECT \_ \_ V4 (nur Windows 7/Windows Server 2008 R2)
+-   bind: FWPM \_ LAYER \_ ALE \_ RESOURCE ASSIGNMENT \_ \_ V4
+-   sendto: FWPM \_ LAYER \_ ALE \_ CONNECT REDIRECT \_ \_ V4 (nur Windows 7/Windows Server 2008 R2)
+-   sendto: FWPM \_ LAYER \_ ALE \_ AUTH \_ CONNECT \_ V4
+-   FWPM \_ LAYER \_ ALE \_ FLOW \_ ESTABLISHED \_ V4
+-   data: FWPM \_ LAYER \_ DATAGRAM \_ DATA \_ V4
+-   UDP-Nachricht: FWPM \_ LAYER \_ OUTBOUND \_ TRANSPORT \_ V4
+-   IP-Datagramme: FWPM \_ LAYER \_ OUTBOUND \_ IPPACKET \_ V4
 
   
 Server
 
--   IP-Datagramme: WPM- \_ Schicht \_ eingehender \_ ippacket \_ v4
--   UDP-Nachricht: \_ \_ eingehender \_ Transport \_ von der WPM-Schicht
--   UDP-Nachricht: Abbild-e/a-Version der \_ \_ \_ \_ v \_ \_ -Version
--   Lwpm- \_ Schicht- \_ ALE Daten \_ Fluss \_ festgelegt \_
--   Daten: \_ \_ Datagramm-Daten von Datagramm-Daten, \_ \_ v4
+-   IP-Datagramme: FWPM \_ LAYER \_ INBOUND \_ IPPACKET \_ V4
+-   UDP-Nachricht: FWPM \_ LAYER \_ INBOUND \_ TRANSPORT \_ V4
+-   UDP-Nachricht: FWPM \_ LAYER \_ ALE \_ AUTH \_ RECV \_ ACCEPT \_ V4
+-   FWPM \_ LAYER \_ ALE \_ FLOW \_ ESTABLISHED \_ V4
+-   data: FWPM \_ LAYER \_ DATAGRAM \_ DATA \_ V4
 
   
 </dl>
 
-## <a name="udp-message-received-with-no-one-listening-on-the-port-or-protocol"></a>Es wurde eine UDP-Nachricht empfangen, die nicht auf dem Port oder Protokoll lauscht.
+## <a name="udp-message-received-with-no-one-listening-on-the-port-or-protocol"></a>Empfangene UDP-Nachricht ohne Überwachung des Ports oder Protokolls
 
 Server (Empfänger)
 
--   IP-Datagramme: WPM- \_ Schicht \_ eingehender \_ ippacket \_ v4
--   IP-Datagramme: auf der WPM- \_ Schicht \_ eingehende \_ ippacket \_ V4 \_ verwerfen
--   ICMP dest nicht erreichbar: \_ \_ \_ ICMP- \_ Fehler \_ V4 in fwpm-Schicht
--   ICMP dest nicht erreichbar: ausgehender Transport-fwpm- \_ \_ \_ Transport \_ v4
--   ICMP dest nicht erreichbar: fwpm-Schicht ausgehend von \_ \_ \_ ippacket \_ v4
+-   IP-Datagramme: FWPM \_ LAYER \_ INBOUND \_ IPPACKET \_ V4
+-   IP-Datagramme: FWPM \_ LAYER \_ INBOUND \_ IPPACKET \_ V4 \_ DISCARD
+-   ICMP Dest Unreachable: FWPM \_ LAYER \_ OUTBOUND \_ ICMP \_ ERROR \_ V4
+-   ICMP Dest Unreachable: FWPM \_ LAYER \_ OUTBOUND \_ TRANSPORT \_ V4
+-   ICMP Dest Unreachable: FWPM \_ LAYER \_ OUTBOUND \_ IPPACKET \_ V4
 
 > [!Note]  
-> UDP ohne Endpunkt wird mit einem bestimmten Fehlerzustand in "ippacket Discard" angegeben. Blockieren Sie dieses Paket bei der "ippacket"-Verwerfungs Methode, damit der Stapel das entsprechende Ereignis nicht sendet (ICMP-Fehler).
+> UDP ohne Endpunkt wird bei DER IPPACKET-Verwerfung mit einer bestimmten Fehlerbedingung angegeben. Blockieren Sie dieses Paket bei DER IPPACKET-Verwerfung, damit der Stapel das entsprechende Ereignis nicht sendet (ICMP-Fehler).
 
- 
+ 
 
-## <a name="successful-reauthorization-of-a-udp-packet"></a>Erfolgreiche erneute Autorisierung eines UDP-Pakets
-
-Server (Empfänger)
-
--   IP-Datagramme: WPM- \_ Schicht \_ eingehender \_ ippacket \_ v4
--   UDP-Nachricht: \_ \_ eingehender \_ Transport \_ von der WPM-Schicht
--   UDP-Nachricht: Abbild-e/a-Version der \_ \_ \_ \_ v \_ \_ -Version
--   UDP-Nachricht: \_ \_ Datagramm-Datagramm-Datagrammdaten \_ \_ V4 (eingehend)
-
-## <a name="failed-reauthorization-of-a-udp-packet"></a>Fehler bei der erneuten Autorisierung eines UDP-Pakets.
+## <a name="successful-reauthorization-of-a-udp-packet"></a>Erfolgreiche erneute Authentifizierung eines UDP-Pakets
 
 Server (Empfänger)
 
--   IP-Datagramme: WPM- \_ Schicht \_ eingehender \_ ippacket \_ v4
--   UDP-Nachricht: \_ \_ eingehender \_ Transport \_ von der WPM-Schicht
--   UDP-Nachricht: Abbild-e/a-Version der \_ \_ \_ \_ v \_ \_ -Version
--   UDP-Nachricht: die Standard Authentifizierung der \_ v-Layer- \_ \_ \_ v \_ \_ \_ -Version
+-   IP-Datagramme: FWPM \_ LAYER \_ INBOUND \_ IPPACKET \_ V4
+-   UDP-Nachricht: FWPM \_ LAYER \_ INBOUND \_ TRANSPORT \_ V4
+-   UDP-Nachricht: FWPM \_ LAYER \_ ALE \_ AUTH \_ RECV \_ ACCEPT \_ V4
+-   UDP-Nachricht: FWPM \_ LAYER \_ DATAGRAM \_ DATA \_ V4(INBOUND)
 
-## <a name="udp-connection-termination"></a>Beenden der UDP-Verbindung
+## <a name="failed-reauthorization-of-a-udp-packet"></a>Fehler bei der erneuten Authentifizierung eines UDP-Pakets
 
-Die UDP-Verbindungs Beendigung wird in keiner WFP-Schicht angegeben.
+Server (Empfänger)
+
+-   IP-Datagramme: FWPM \_ LAYER \_ INBOUND \_ IPPACKET \_ V4
+-   UDP-Nachricht: FWPM \_ LAYER \_ INBOUND \_ TRANSPORT \_ V4
+-   UDP-Nachricht: FWPM \_ LAYER \_ ALE \_ AUTH \_ RECV \_ ACCEPT \_ V4
+-   UDP-Nachricht: FWPM \_ LAYER \_ ALE \_ AUTH \_ RECV \_ ACCEPT \_ V4 \_ DISCARD
+
+## <a name="udp-connection-termination"></a>UDP-Verbindungsbeendigung
+
+UDP-Verbindungsbeendigung ist auf keiner WFP-Ebene angegeben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -100,12 +100,12 @@ Die UDP-Verbindungs Beendigung wird in keiner WFP-Schicht angegeben.
 [Erneute ALE-Autorisierung](ale-re-authorization.md)
 </dt> <dt>
 
-[**Filtern von ebenenbezeichgern**](management-filtering-layer-identifiers-.md)
+[**Filtern von Ebenenbezeichnern**](management-filtering-layer-identifiers-.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

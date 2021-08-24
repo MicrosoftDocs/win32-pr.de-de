@@ -1,10 +1,10 @@
 ---
-title: Task Service-Objekt
-description: Bietet für die Skripterstellung Zugriff auf den Taskplaner-Dienst zum Verwalten registrierter Tasks.
+title: TaskService-Objekt
+description: Für die Skripterstellung bietet Zugriff auf den Taskplaner zum Verwalten registrierter Aufgaben.
 ms.assetid: 6ddd43dc-d027-4792-a53b-07fe4d4a3576
 keywords:
-- Task Service-Objekt Taskplaner
-- Task Service-Objekt Taskplaner, beschrieben
+- TaskService-Taskplaner
+- TaskService-Objekt Taskplaner , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,38 +16,38 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 762cd2445c3c6b720bba0f01ae48b787abc1fb38
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 74f20840a5580d0188354ca6b65ab3ce5b7402d57ea7346462d2f990ecfe34cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119658650"
 ---
-# <a name="taskservice-object"></a>Task Service-Objekt
+# <a name="taskservice-object"></a>TaskService-Objekt
 
-Bietet für die Skripterstellung Zugriff auf den Taskplaner-Dienst zum Verwalten registrierter Tasks.
+Für die Skripterstellung bietet Zugriff auf den Taskplaner zum Verwalten registrierter Aufgaben.
 
-Die [**TaskService. Connect**](taskservice-connect.md) -Methode sollte aufgerufen werden, bevor eine der anderen **Task Service** -Methoden aufgerufen wird.
+Die [**TaskService.Verbinden-Methode**](taskservice-connect.md) sollte aufgerufen werden, bevor eine der anderen **TaskService-Methoden aufgerufen** wird.
 
 ## <a name="members"></a>Member
 
-Das **TaskService** -Objekt verfügt über folgende Typen von Membern:
+Das **TaskService-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das **Task Service** -Objekt verfügt über diese Methoden.
+Das **TaskService-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                                 | BESCHREIBUNG                                                                                                                                                                                                          |
+| Methode                                                 | Beschreibung                                                                                                                                                                                                          |
 |:-------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Verbinden**](taskservice-connect.md)                 | Stellt eine Verbindung mit einem Remote Computer her und ordnet alle nachfolgenden Aufrufe für diese Schnittstelle einer Remote Sitzung zu.<br/>                                                                                                 |
-| [**GetFolder**](taskservice-getfolder.md)             | Ruft den Pfad zu einem Ordner registrierter Tasks ab.<br/>                                                                                                                                                            |
-| [**Getrunningtasks**](taskservice-getrunningtasks.md) | Ruft eine Auflistung von Tasks ab, die ausgeführt werden.<br/>                                                                                                                                                                       |
-| [**NewTask**](taskservice-newtask.md)                 | Gibt ein leeres Aufgaben Definitions Objekt zurück, das mit Einstellungen und Eigenschaften ausgefüllt und dann mithilfe der [**Task Folder. RegisterTaskDefinition**](taskfolder-registertaskdefinition.md) -Methode registriert werden soll.<br/> |
+| [**Verbinden**](taskservice-connect.md)                 | Stellt eine Verbindung mit einem Remotecomputer und ordnet alle nachfolgenden Aufrufe dieser Schnittstelle einer Remotesitzung zu.<br/>                                                                                                 |
+| [**GetFolder**](taskservice-getfolder.md)             | Ruft den Pfad zu einem Ordner registrierter Aufgaben ab.<br/>                                                                                                                                                            |
+| [**GetRunningTasks**](taskservice-getrunningtasks.md) | Ruft eine Auflistung ausgeführter Aufgaben ab.<br/>                                                                                                                                                                       |
+| [**NewTask**](taskservice-newtask.md)                 | Gibt ein leeres Aufgabendefinitionsobjekt zurück, das mit Einstellungen und Eigenschaften ausgefüllt und dann mithilfe der [**TaskFolder.RegisterTaskDefinition-Methode registriert werden**](taskfolder-registertaskdefinition.md) soll.<br/> |
 
 
 
@@ -55,17 +55,17 @@ Das **Task Service** -Objekt verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **Task Service** -Objekt verfügt über diese Eigenschaften.
+Das **TaskService-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                          | BESCHREIBUNG                                                                                                                 |
+| Eigenschaft                                                          | Beschreibung                                                                                                                 |
 |:------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------|
-| [**Verbunden**](taskservice-connected.md)<br/>             | Ruft einen booleschen Wert ab, der angibt, ob eine Verbindung mit dem Taskplaner-Dienst besteht.<br/>                          |
-| [**Connecteddomain**](taskservice-connecteddomain.md)<br/> | Ruft den Namen der Domäne ab, mit der der [**TargetServer**](taskservice-targetserver.md) -Computer verbunden ist.<br/> |
-| [**ConnectedUser**](taskservice-connecteduser.md)<br/>     | Ruft den Namen des Benutzers ab, der mit dem Taskplaner-Dienst verbunden ist.<br/>                                       |
-| Highestversion<br/>                                         | Ruft die höchste Version von Taskplaner ab, die von einem Computer unterstützt wird.<br/>                                             |
-| [**TargetServer**](taskservice-targetserver.md)<br/>       | Ruft den Namen des Computers ab, auf dem der Taskplaner-Dienst ausgeführt wird, mit dem der Benutzer verbunden ist.<br/>          |
+| [**Verbunden**](taskservice-connected.md)<br/>             | Ruft einen booleschen Wert ab, der angibt, ob Sie mit dem Taskplaner sind.<br/>                          |
+| [**ConnectedDomain**](taskservice-connecteddomain.md)<br/> | Ruft den Namen der Domäne ab, mit der der [**TargetServer-Computer**](taskservice-targetserver.md) verbunden ist.<br/> |
+| [**ConnectedUser**](taskservice-connecteduser.md)<br/>     | Ruft den Namen des Benutzers ab, der mit dem Taskplaner verbunden ist.<br/>                                       |
+| HighestVersion<br/>                                         | Ruft die höchste Version der Taskplaner, die ein Computer unterstützt.<br/>                                             |
+| [**TargetServer**](taskservice-targetserver.md)<br/>       | Ruft den Namen des Computers ab, auf dem der Taskplaner ausgeführt wird, mit dem der Benutzer verbunden ist.<br/>          |
 
 
 
@@ -73,7 +73,7 @@ Das **Task Service** -Objekt verfügt über diese Eigenschaften.
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen und Beispielcode für dieses Skript Objekt finden Sie unter [time-auslöserbeispiel (Skripterstellung)](time-trigger-example--scripting-.md), [Ereignis auslöserbeispiel (Skripterstellung)](https://www.bing.com/search?q=Event+Trigger+Example+(Scripting)), Beispiel für den [täglichen Aufruf (Skripterstellung)](daily-trigger-example--scripting-.md), Registrierungs- [auslöserbeispiel (Skripterstellung)](registration-trigger-example--scripting-.md), Beispiel für einen [wöchentlichen](weekly-trigger-example--scripting-.md)Vorgang (Skripterstellung), Beispiel für den Logon-Vorgang [(Skripterstellung)](logon-trigger-example--scripting-.md), Beispiel für den [Start](boot-trigger-example--scripting-.md) [-](displaying-task-names-and-state--scripting-.md)
+Weitere Informationen und Beispielcode für dieses Skriptobjekt finden Sie unter Time [Trigger Example (Scripting)](time-trigger-example--scripting-.md), Event [Trigger Example (Scripting)](https://www.bing.com/search?q=Event+Trigger+Example+(Scripting)), [Daily Trigger Example (Scripting)](daily-trigger-example--scripting-.md), Registration Trigger [Example (Scripting)](registration-trigger-example--scripting-.md), [Weekly Trigger Example (Scripting)](weekly-trigger-example--scripting-.md), [Logon Trigger Example (Scripting)](logon-trigger-example--scripting-.md), [Boot Trigger Example (Scripting)](boot-trigger-example--scripting-.md)oder [Displaying Task Names and States (Scripting)](displaying-task-names-and-state--scripting-.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,9 +81,9 @@ Weitere Informationen und Beispielcode für dieses Skript Objekt finden Sie unte
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

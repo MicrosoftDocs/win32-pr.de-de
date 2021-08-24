@@ -1,15 +1,15 @@
 ---
-description: Die y-Eigenschaft legt die y-Position der oberen linken Ecke des Rechtecks fest oder ruft Sie ab.
+description: Die y-Eigenschaft legt die y-Position der oberen linken Ecke des Rechtecks fest oder ruft sie ab.
 ms.assetid: 7865d6c8-8375-44b3-b4e1-197a592dcf83
 title: y-Eigenschaft
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 65d77e6af3bd76a6747b89694b96dab0c5054ce7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 206616c0cf6e03e3af3d74369d459bd0b9ef81c4cc0a4386afc85c45429a9147
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863380"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119696700"
 ---
 # <a name="y-property"></a>y-Eigenschaft
 
@@ -18,7 +18,7 @@ ms.locfileid: "103863380"
 
  
 
-Die `y` -Eigenschaft ruft die y-Position der linken oberen Ecke des Rechtecks ab oder legt Sie fest.
+Die `y` -Eigenschaft legt die y-Position der oberen linken Ecke des Rechtecks fest oder ruft sie ab.
 
 ``` syntax
 [ iYPos = ] DVDRect.y
@@ -26,11 +26,11 @@ Die `y` -Eigenschaft ruft die y-Position der linken oberen Ecke des Rechtecks ab
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Y-Position der linken oberen Ecke des Rechtecks als Ganzzahl zurück.
+Gibt die Y-Position der oberen linken Ecke des Rechtecks als ganze Zahl zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist Lese-/Schreibzugriff und hat keinen Standardwert.
+Diese Eigenschaft ist Lese-/Schreibzugriff ohne Standardwert.
 
  
 

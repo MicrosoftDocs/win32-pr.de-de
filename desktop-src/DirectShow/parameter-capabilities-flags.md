@@ -1,29 +1,29 @@
 ---
-description: Diese Flags geben an, welche umschlagkurven von einem Medien Parameter unterstützt werden.
+description: Diese Flags geben an, welche Umschlagkurven von einem Medienparameter unterstützt werden.
 ms.assetid: 6f3b7666-d245-41fc-b6e4-9e1ed264dfdc
-title: Parameter Funktionen Flags (medparam. h)
+title: Parameterfunktionsflags (Mediparam.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8fd0899bdff5f8e23e1dc49a6567efaeffc860c7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d8272a748676f019967d44d9e819c20c3b38e20bb54beb20a9e276a23bb636a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119790890"
 ---
-# <a name="parameter-capabilities-flags"></a>Parameter Funktionen-Flags
+# <a name="parameter-capabilities-flags"></a>Parameterfunktionsflags
 
-Diese Flags geben an, welche umschlagkurven von einem Medien Parameter unterstützt werden.
+Diese Flags geben an, welche Umschlagkurven von einem Medienparameter unterstützt werden.
 
 
 
-| Konstante                                                                                                                                                                                      | BESCHREIBUNG                                              |
+| Konstante                                                                                                                                                                                      | Beschreibung                                              |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------|
-| <span id="MP_CAPS_CURVE_INVSQUARE"></span><span id="mp_caps_curve_invsquare"></span><dl> <dt>**MP- \_ Caps- \_ Kurve \_**</dt> </dl> | Umgekehrte eckige Kurve.<br/>                         |
-| <span id="MP_CAPS_CURVE_JUMP"></span><span id="mp_caps_curve_jump"></span><dl> <dt>**MP- \_ Caps- \_ Kurven \_ Sprung**</dt> </dl>                | Zum nächsten Punkt ohne Interpolations Punkt springen.<br/> |
-| <span id="MP_CAPS_CURVE_LINEAR"></span><span id="mp_caps_curve_linear"></span><dl> <dt>**MP \_ - \_ Kurven-Kurve \_ linear**</dt> </dl>          | Lineare interpolung.<br/>                         |
-| <span id="MP_CAPS_CURVE_SINE"></span><span id="mp_caps_curve_sine"></span><dl> <dt>**MP- \_ Caps- \_ Kurven \_ Sinus**</dt> </dl>                | Sinuskurve.<br/>                                   |
-| <span id="MP_CAPS_CURVE_SQUARE"></span><span id="mp_caps_curve_square"></span><dl> <dt>**MP- \_ Caps- \_ Kurven \_ Quadrat**</dt> </dl>          | Die parameolkurve.<br/>                              |
+| <span id="MP_CAPS_CURVE_INVSQUARE"></span><span id="mp_caps_curve_invsquare"></span><dl> <dt>**MP \_ \_ CAPS-KURVE \_ INVSQUARE**</dt> </dl> | Inverse Quadratkurve.<br/>                         |
+| <span id="MP_CAPS_CURVE_JUMP"></span><span id="mp_caps_curve_jump"></span><dl> <dt>**MP \_ CAPS \_ CURVE \_ JUMP**</dt> </dl>                | Wechseln Sie ohne Interpolation zum nächsten Punkt.<br/> |
+| <span id="MP_CAPS_CURVE_LINEAR"></span><span id="mp_caps_curve_linear"></span><dl> <dt>**MP \_ CAPS \_ CURVE \_ LINEAR**</dt> </dl>          | Lineare Interpolation.<br/>                         |
+| <span id="MP_CAPS_CURVE_SINE"></span><span id="mp_caps_curve_sine"></span><dl> <dt>**MP \_ CAPS \_ CURVE \_ SINE**</dt> </dl>                | Sinuskurve.<br/>                                   |
+| <span id="MP_CAPS_CURVE_SQUARE"></span><span id="mp_caps_curve_square"></span><dl> <dt>**MP \_ CAPS \_ CURVE \_ SQUARE**</dt> </dl>          | Parabolische Kurve.<br/>                              |
 
 
 
@@ -33,15 +33,15 @@ Diese Flags geben an, welche umschlagkurven von einem Medien Parameter unterstü
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Medparam. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Mediparam.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[DMO-Konstanten](dmo-constants.md)
+[DMO Konstanten](dmo-constants.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Tragbare Windows-Geräte unterstützen die folgenden Abschnitts Daten Eigenschaften.
+description: Windows Portable Geräte unterstützen die dateneigenschaften im folgenden Abschnitt.
 ms.assetid: 8760d963-fc07-4b54-aa24-5725f4b95ed2
-title: Abschnitts Attribut Eigenschaften (portabledevice. h)
+title: Eigenschaften des Abschnittsattributs (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,25 +13,25 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 383e2e50aa5d2a922ad50609e316b3dc9905cc38
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 21c2386175fe2c3117afd722bd9a6762b605acbc51e299d33934d161974db796
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371741"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704330"
 ---
-# <a name="section-attribute-properties"></a>Eigenschaften des Abschnitts Attributs
+# <a name="section-attribute-properties"></a>Abschnittsattributeigenschaften
 
-Tragbare Windows-Geräte unterstützen die folgenden Abschnitts Daten Eigenschaften.
+Windows Portable Geräte unterstützen die dateneigenschaften im folgenden Abschnitt.
 
 
 
-| Eigenschaft                                             | VarType         | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                 |
+| Eigenschaft                                             | VarType         | Beschreibung                                                                                                                                                                                                                                                                                                                                 |
 |------------------------------------------------------|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **\_ \_ Daten \_ Länge des WPD-Abschnitts**                       | **VT \_ UI8**     | Gibt die Länge des Objekts an, auf das verwiesen wird.                                                                                                                                                                                                                                                                                              |
-| **\_ \_ Daten \_ Offset für WPD-Abschnitt**                       | **VT \_ UI8**     | Gibt den NULL basierten Offset der Daten für das Objekt an, auf das verwiesen wird.                                                                                                                                                                                                                                                                      |
-| **\_ \_ \_ referenzierte \_ Objekt \_ Ressource für WPD-Abschnitts Daten** | **VT \_ unbekannt** | Eine [**iportabledevicekeycollection**](iportabledevicekeycollection.md) mit einem einzelnen Wert, der den Schlüssel für eine bestimmte Ressource angibt. Diese Ressource ist das Objekt, auf das im WPD-Abschnitts Daten \_ \_ \_ Offset und der WPD- \_ Abschnitts \_ Daten \_ Länge verwiesen wird.<br/> Wenn diese Eigenschaft nicht vorhanden ist, wird der Standardwert für die WPD- \_ Ressource \_ angenommen.<br/> |
-| **\_ \_ Daten \_ Einheiten für WPD-Abschnitt**                        | **VT \_ UI4**     | Gibt die für diesen Offset verwendeten Einheiten an, z. b. bytes, Millisekunden usw. Die möglichen Werte für diese Eigenschaft werden im **WPD- \_ Abschnitt \_ \_ Dateneinheiten \_ Werte** Enumeration in der Datei portabledevice. h definiert.<br/> Wenn keine Einheiten angegeben werden, werden die Bytes angenommen.<br/>                                          |
+| **\_DATENLÄNGE DES WPD-ABSCHNITTS \_ \_**                       | **VT \_ UI8**     | Gibt die Länge des Objekts an, auf das verwiesen wird.                                                                                                                                                                                                                                                                                              |
+| **\_DATENOFFSET DES WPD-ABSCHNITTS \_ \_**                       | **VT \_ UI8**     | Gibt den nullbasierten Offset der Daten für das Objekt an, auf das verwiesen wird.                                                                                                                                                                                                                                                                      |
+| **OBJEKTRESSOURCE IM \_ WPD-ABSCHNITTSDATENVERWEIS \_ \_ \_ \_** | **VT \_ UNKNOWN** | Eine [**IPortableDeviceKeyCollection,**](iportabledevicekeycollection.md) die einen einzelnen Wert enthält, der den Schlüssel für eine bestimmte Ressource angibt. Diese Ressource ist das Objekt, auf das von WPD SECTION DATA OFFSET und WPD SECTION DATA LENGTH verwiesen \_ \_ \_ \_ \_ \_ wird.<br/> Wenn diese Eigenschaft nicht vorhanden ist, wird WPD \_ RESOURCE \_ DEFAULT angenommen.<br/> |
+| **\_DATENEINHEITEN IM WPD-ABSCHNITT \_ \_**                        | **VT \_ UI4**     | Gibt die für diesen Offset verwendeten Einheiten an, z. B. Bytes, Millisekunden usw. Die möglichen Werte für diese Eigenschaft werden in der **WPD \_ SECTION DATA \_ UNITS \_ \_ VALUES-Enumeration** in der Datei PortableDevice.h definiert.<br/> Wenn keine Einheiten angegeben werden, werden Bytes angenommen.<br/>                                          |
 
 
 
@@ -43,15 +43,15 @@ Tragbare Windows-Geräte unterstützen die folgenden Abschnitts Daten Eigenschaf
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WPD-Eigenschaften und-Attribute**](properties-and-attributes.md)
+[**WPD-Eigenschaften und -Attribute**](properties-and-attributes.md)
 </dt> </dl>
 
  

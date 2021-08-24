@@ -1,32 +1,32 @@
 ---
-description: Gibt einen Ressourcentyp an, der nicht anderweitig von tragbaren Windows-Geräten definiert wird.
+description: Gibt einen Ressourcentyp an, der nicht anderweitig von portablen Windows definiert wird.
 ms.assetid: a4d812fe-f050-450a-acee-20b4152e8d76
 title: WPD_RESOURCE_GENERIC
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b5cdf3e9ae615529f441a20d885980b601d3c24
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c418299474373d8b960d15c429ea98d887cc404be49c8d38c7d2bb83611c4ca1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805870"
 ---
-# <a name="wpd_resource_generic"></a>WPD- \_ Ressource \_ generisch
+# <a name="wpd_resource_generic"></a>WPD \_ RESOURCE \_ GENERIC
 
-Gibt einen Ressourcentyp an, der nicht anderweitig von tragbaren Windows-Geräten definiert wird. Sie können eigene benutzerdefinierte Ressourcen definieren, die beliebige benutzerdefinierte oder von Windows Portable Geräte definierte Attribute unterstützen. Jede Ressource, die Sie erstellen, muss jedoch die folgenden Attribute unterstützen.
+Gibt einen Ressourcentyp an, der nicht anderweitig von portablen Windows definiert wird. Sie können eigene benutzerdefinierte Ressourcen definieren, die benutzerdefinierte oder Windows portable Geräte definierte Attribute unterstützen. Jede Ressource, die Sie erstellen, muss jedoch die folgenden Attribute unterstützen.
 
 
 
 | Attributname                                                                                                            | Erforderlich oder optional                                   |
 |---------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| [Gesamtgröße des WPD- \_ Ressourcen \_ Attributs \_ \_](resource-attribute-properties.md)              | Erforderlich.                                              |
-| [WPD- \_ Ressourcen \_ Attribut \_ kann \_ Lesen](attributes.md)                                     | Erforderlich, wenn diese Ressource von Clients gelesen werden kann.            |
-| [WPD- \_ Ressourcen \_ Attribut \_ kann \_ schreiben](attributes.md)                                   | Erforderlich, wenn Clients in diese Ressource schreiben können.        |
-| [Das WPD- \_ Ressourcen \_ Attribut \_ kann \_ gelöscht werden.](attributes.md)                                 | Erforderlich, wenn von Clients diese Ressource gelöscht werden kann.          |
-| [WPD- \_ Ressourcen \_ Attribut \_ optimale \_ Lese \_ Puffer \_ Größe](attributes.md)   | Erforderlich, wenn Clients über Lesezugriff auf die Ressource verfügen.  |
-| [Größe des WPD- \_ Ressourcen \_ Attributs für \_ optimalen \_ Schreib \_ Puffer \_](attributes.md) | Erforderlich, wenn Clients Schreibzugriff auf die Ressource haben. |
-| [WPD- \_ Ressourcen \_ Attribut \_ Format](resource-attribute-properties.md)                       | Erforderlich.                                              |
-| [Ressourcen Schlüssel für WPD- \_ Ressourcen \_ Attribut \_ \_](resource-attribute-properties.md)                                              | Empfohlen.                                           |
+| [\_ \_ WPD-RESSOURCENATTRIBUT \_ \_ GESAMTGRÖßE](resource-attribute-properties.md)              | Erforderlich.                                              |
+| [\_ \_ WPD-RESSOURCENATTRIBUT \_ KANN \_ LESEN](attributes.md)                                     | Erforderlich, wenn Clients diese Ressource lesen können.            |
+| [\_ \_ WPD-RESSOURCENATTRIBUT \_ KANN \_ SCHREIBEN](attributes.md)                                   | Erforderlich, wenn Clients in diese Ressource schreiben können.        |
+| [\_ \_ WPD-RESSOURCENATTRIBUT \_ KANN LÖSCHEN \_](attributes.md)                                 | Erforderlich, wenn Clients diese Ressource löschen können.          |
+| [WPD \_ RESOURCE \_ ATTRIBUTE \_ OPTIMAL \_ READ \_ BUFFER \_ SIZE](attributes.md)   | Erforderlich, wenn Clients Über Lesezugriff auf die Ressource haben.  |
+| [\_ \_ WPD-RESSOURCENATTRIBUT \_ OPTIMALE \_ \_ \_ SCHREIBPUFFERGRÖßE](attributes.md) | Erforderlich, wenn Clients Schreibzugriff auf die Ressource haben. |
+| [\_ \_ WPD-RESSOURCENATTRIBUTFORMAT \_](resource-attribute-properties.md)                       | Erforderlich.                                              |
+| [RESSOURCENSCHLÜSSEL DES \_ \_ WPD-RESSOURCENATTRIBUTS \_ \_](resource-attribute-properties.md)                                              | Empfohlen.                                           |
 
 
 

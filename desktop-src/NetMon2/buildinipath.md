@@ -1,7 +1,7 @@
 ---
-description: Die buildinipath-Funktion gibt einen voll qualifizierten Pfad zu einer INI-Datei zurück, die den von Ihnen eingegebenen Informationen entspricht.
+description: Die BuildINIPath-Funktion gibt einen vollqualifizierten Pfad zu einer INI-Datei zurück, die den von Ihnen eingeben Informationen entspricht.
 ms.assetid: 214ce89c-8bb2-4e1a-872a-026743a3e3a6
-title: Buildinipath-Funktion (Netmon. h)
+title: BuildINIPath-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 3f715e740319515fe4772d1a9905a2f9b563f3cb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b75df338142ab0ec97db3e60cbba1b5f68df3e0e67947d4c13cdccccd409bdf8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368023"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119744691"
 ---
-# <a name="buildinipath-function"></a>Buildinipath-Funktion
+# <a name="buildinipath-function"></a>BuildINIPath-Funktion
 
-Die **buildinipath** -Funktion gibt einen voll qualifizierten Pfad zu einer INI-Datei zurück, die den von Ihnen eingegebenen Informationen entspricht.
+Die **BuildINIPath-Funktion** gibt einen vollqualifizierten Pfad zu einer INI-Datei zurück, die den von Ihnen eingeben Informationen entspricht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,26 +43,26 @@ LPSTR BuildINIPath(
 *FullPath* 
 </dt> <dd>
 
-Puffer, der den voll qualifizierten Namen der INI-Datei empfängt.
+Puffer, der den vollqualifizierten INI-Dateinamen empfängt.
 
 </dd> <dt>
 
-*Dateiname* 
+*IniFileName* 
 </dt> <dd>
 
-Name der INI-Datei (der vollständige Dateiname abzüglich der Dateinamenerweiterung).
+Name der INI-Datei (der vollständige Dateiname abzüglich der Dateierweiterung).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Zeiger auf den voll qualifizierten Namen der INI-Datei.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Zeiger auf den vollqualifizierten INI-Dateinamen.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der von dieser Funktion zurückgegebene Pfad ist ein voll qualifizierter Pfad zu einer INI-Datei, die den von Ihnen eingegebenen Informationen entspricht. Wenn Sie z. b. XNS oder TCP eingeben, generiert die Funktion einen Pfad zu Xns.ini bzw. Tcp.ini.
+Der Pfad, den diese Funktion zurückgibt, ist ein vollqualifizierter Pfad zu einer INI-Datei, die den von Ihnen eingeben Informationen entspricht. Wenn Sie beispielsweise XNS oder TCP eingeben, generiert die Funktion einen Pfad zu Xns.ini oder Tcp.ini bzw.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,8 +72,8 @@ Der von dieser Funktion zurückgegebene Pfad ist ein voll qualifizierter Pfad zu
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Parser. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Parser.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl>  |
 
 

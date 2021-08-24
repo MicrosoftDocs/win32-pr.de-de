@@ -1,19 +1,19 @@
 ---
 title: " define"
-description: Die Anweisung \ define weist den angegebenen Wert dem angegebenen Namen zu. Alle nachfolgenden Vorkommen des Namens werden durch den-Wert ersetzt.
+description: Die \define-Direktive weist den angegebenen Wert dem angegebenen Namen zu. Alle nachfolgenden Vorkommen des Namens werden durch den Wert ersetzt.
 ms.assetid: 2699d2dc-caf8-47d6-8b2e-526357962532
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 557c6b486d9c2bd07b0b012c17e806f5d9eaae91
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2a8e8f99dc592eefb1fb79201883e8a32837633814b79d7819e84d283709a46f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711951"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119826050"
 ---
-# <a name="define"></a>\#definieren
+# <a name="define"></a>\#Definieren
 
-Die **\# define** -Direktive weist den angegebenen Wert dem angegebenen Namen zu. Alle nachfolgenden Vorkommen des Namens werden durch den-Wert ersetzt.
+Die **\# define-Direktive** weist den angegebenen Wert dem angegebenen Namen zu. Alle nachfolgenden Vorkommen des Namens werden durch den Wert ersetzt.
 
 ``` syntax
 #define name value
@@ -21,23 +21,23 @@ Die **\# define** -Direktive weist den angegebenen Wert dem angegebenen Namen zu
 
 <dl> <dt>
 
-<span id="name"></span><span id="NAME"></span>*Benennen*
+<span id="name"></span><span id="NAME"></span>*Namen*
 </dt> <dd>
 
-Name, der definiert werden soll. Dieser Wert ist eine beliebige Kombination aus Buchstaben, Ziffern und Interpunktions Zeichen, die für den C/C++-Präprozessor gültig ist.
+Der name, der definiert werden soll. Dieser Wert ist eine beliebige Kombination aus Buchstaben, Ziffern und Interpunktion, die für den C/C++-Präprozessor gültig ist.
 
 </dd> <dt>
 
 <span id="value"></span><span id="VALUE"></span>*Wert*
 </dt> <dd>
 
-Eine ganze Zahl, eine Zeichenfolge oder eine Textzeile.
+Ganze Zahl, Zeichenfolge oder Textzeile.
 
 </dd> </dl>
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel werden den Namen "Nonzero" und "userclass" Werte zugewiesen:
+In diesem Beispiel werden den Namen NONZERO und USERCLASS Werte zugewiesen:
 
 ``` syntax
 #define     NONZERO     1
@@ -51,9 +51,9 @@ In diesem Beispiel werden den Namen "Nonzero" und "userclass" Werte zugewiesen:
 [Präprozessordirektiven](preprocessor-directives.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

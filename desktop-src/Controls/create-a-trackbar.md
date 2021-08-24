@@ -1,36 +1,36 @@
 ---
-title: Erstellen einer TrackBar
-description: Wenn die TrackBar erstellt wird, werden sowohl der Bereich als auch der zugehörige Auswahlbereich initialisiert. Die Seitengröße wird auch zu diesem Zeitpunkt festgelegt.
+title: Erstellen einer Trackleiste
+description: Wenn die Trackleiste erstellt wird, werden sowohl ihr Bereich als auch ihr Auswahlbereich initialisiert. Die Seitengröße wird zu diesem Zeitpunkt ebenfalls festgelegt.
 ms.assetid: FA110B4A-D3D7-49D8-A3DC-368099F6DA1E
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c9468ff044b94837f54d04cda4a9105f15410692
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 71713e09167812786a5d5f57986242ef5fcf016931cdff40d5190cd6e0daafea
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119826550"
 ---
-# <a name="how-to-create-a-trackbar"></a>Erstellen einer TrackBar
+# <a name="how-to-create-a-trackbar"></a>Erstellen einer Trackleiste
 
-Wenn die TrackBar erstellt wird, werden sowohl der Bereich als auch der zugehörige Auswahlbereich initialisiert. Die Seitengröße wird auch zu diesem Zeitpunkt festgelegt.
+Wenn die Trackleiste erstellt wird, werden sowohl ihr Bereich als auch ihr Auswahlbereich initialisiert. Die Seitengröße wird zu diesem Zeitpunkt ebenfalls festgelegt.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="create-a-trackbar"></a>Erstellen einer TrackBar
+### <a name="create-a-trackbar"></a>Erstellen einer Trackleiste
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine TrackBar mit den Formaten [**TSB \_ autoticks**](trackbar-control-styles.md) und [**TB \_ enableselrange**](trackbar-control-styles.md) erstellen.
+Das folgende Beispiel zeigt, wie Sie eine Trackbar mit den [**FORMATen TBS \_ AUTOTICKS**](trackbar-control-styles.md) und [**TBS \_ ENABLESELRANGE**](trackbar-control-styles.md) erstellen.
 
 
 ```
@@ -92,12 +92,12 @@ HWND WINAPI CreateTrackbar(
 
 <dl> <dt>
 
-[Verwenden von TrackBar-Steuerelementen](using-trackbar-controls.md)
+[Verwenden von Trackbar-Steuerelementen](using-trackbar-controls.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

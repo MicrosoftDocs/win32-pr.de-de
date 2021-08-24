@@ -1,11 +1,11 @@
 ---
-title: MS-spp-config-License-Attribut
-description: Die Product Key-Konfigurations Lizenz, die während der Online-/Telefon-Aktivierung der Active Directory Gesamtstruktur verwendet wird.
+title: ms-SPP-Config-License-Attribut
+description: Produktschlüssel-Konfigurationslizenz, die während der Online-/Telefonaktivierung der Active Directory-Gesamtstruktur verwendet wird.
 ms.assetid: deb313c2-6309-4268-8ff1-28d89cd469ca
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-spp-config-License-Attribut
-- msspp-configlicense-Attribut AD-Schema
+- MS-SPP-Config-License-Attribut AD-Schema
+- MSSPP-ConfigLicense-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 75d0fb22161218bd718a09f95dadf6aca6c9e12c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e8a7cda331191428648daa333a2efe296374d7206e44565a1728afea6bc2d47f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704830"
 ---
-# <a name="ms-spp-config-license-attribute"></a>MS-spp-config-License-Attribut
+# <a name="ms-spp-config-license-attribute"></a>ms-SPP-Config-License-Attribut
 
-Die Product Key-Konfigurations Lizenz, die während der Online-/Telefon-Aktivierung der Active Directory Gesamtstruktur verwendet wird.
+Produktschlüssel-Konfigurationslizenz, die während der Online-/Telefonaktivierung der Active Directory-Gesamtstruktur verwendet wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | MS-spp-config-License                                 |
-| LDAP-Display-Name | msspp-configlicense                                   |
+| CN                | ms-SPP-Config-License                                 |
+| Ldap-Anzeigename | msSPP-ConfigLicense                                   |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2087                               |
-| System-ID-GUID    | 0353c4b5-d199-40b0-b3c5-deb32od9ec06                  |
+| System-ID-GUID    | 0353c4b5-d199-40b0-b3c5-deb32fd9ec06                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -53,15 +53,15 @@ Die Product Key-Konfigurations Lizenz, die während der Online-/Telefon-Aktivier
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Ist einwertig       | True                                                                    |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**MS-spp-Activation-Object**](c-msspp-activationobject.md)<br/> |
+| In verwendete Klassen        | [**ms-SPP-Activation-Object**](c-msspp-activationobject.md)<br/> |
 
 
 

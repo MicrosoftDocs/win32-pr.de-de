@@ -1,52 +1,52 @@
 ---
-title: Kunstdateien (mobil)
-description: Kunstdateien (mobil)
+title: Art Files (Mobil)
+description: Art Files (Mobil)
 ms.assetid: 90393c3c-7952-4f77-96f6-0a0541bded9e
 keywords:
-- Windows Media Player Mobile Skins, Art Dateien
-- Skins, Art Dateien
+- Windows Media Player Mobile Skins, Grafikdateien
+- Skins, Art-Dateien
 - Dateien für Skins, Art
-- kunstdateien für Skins, Informationen zu
-- kunstdateien für Skins, Windows Media Player Mobile
+- Grafikdateien für Skins, Informationen
+- Grafikdateien für Skins, Windows Media Player Mobile
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b84ad1e78a18b84e8836e3a1c3324702945a7fd9
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 9c88dbe11b93314274df2efe6ce1ecc12803963b265b459d7766313c6dc7b902
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104213692"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119864999"
 ---
-# <a name="art-files-mobile"></a>Kunstdateien (mobil)
+# <a name="art-files-mobile"></a>Art Files (Mobil)
 
-Sie müssen für Ihre Skin kunstdateien erstellen. Es gibt mehrere Typen von kunstdateien, die Sie erstellen können, und Sie müssen sich in einem bestimmten Format der Kunst Datei befinden.
+Sie müssen Grafikdateien für Ihre Skin erstellen. Es gibt verschiedene Arten von Grafikdateien, die Sie erstellen können, und sie müssen in einem bestimmten Artdateiformat vorliegen.
 
-In der folgenden Tabelle werden sieben Typen von kunstdateien beschrieben, die Sie für Ihre Skin erstellen können.
+In der folgenden Tabelle werden sieben Arten von Grafikdateien beschrieben, die Sie für Ihre Skin erstellen können.
 
 
 
-| Art Dateityp                            | BESCHREIBUNG                                                                                                |
+| Art-Dateityp                            | BESCHREIBUNG                                                                                                |
 |------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [Hintergrund Datei](background-file.md)   | Erforderlich. Der Hintergrund ist das Bild, auf dem alle Schaltflächen Bilder überlagert werden.                        |
-| [Deaktivierte Datei](disabled-file.md)       | Erforderlich. Bilder, mit denen angegeben wird, dass die pushschaltflächen keine Auswirkung haben.                                |
-| [Datei mit pushübertragung](pushed-file.md)           | Erforderlich. Definiert die Bilder, die angezeigt werden, wenn der Benutzer Schaltflächen drückt.                              |
-| [Regions Dateien](region-files.md)         | Definiert Bitmaps, die Farbbereiche verwenden, um die Tap-Response-Speicherorte für die Schaltflächen des Treffer Typs darzustellen.      |
-| [Super Dateien](super-files.md)           | Definiert die deaktivierten Bilder für trackbars.                                                                 |
-| [Seekthumb-Datei](seekthumb-file.md)     | Definiert ein Bild, das in Verbindung mit einer TrackBar verwendet werden soll, um die aktuelle Position im Medien Element anzugeben. |
-| [Volumethumschlag Datei](volumethumb-file.md) | Definiert ein Bild, das in Verbindung mit einer TrackBar verwendet werden soll, um die Position des volumesteuerelements anzugeben.            |
+| [Hintergrunddatei](background-file.md)   | Erforderlich. Der Hintergrund ist das Bild, auf dem alle Schaltflächenbilder überlagert werden.                        |
+| [Deaktivierte Datei](disabled-file.md)       | Erforderlich. Bilder, die darauf hinweisen, dass das Drücken von Schaltflächen keine Auswirkungen hat.                                |
+| [Datei mit Push übertragen](pushed-file.md)           | Erforderlich. Definiert die Bilder, die angezeigt werden, wenn der Benutzer Schaltflächen drückt.                              |
+| [Regionsdateien](region-files.md)         | Definiert Bitmaps, die Farbbereiche verwenden, um die Tap-Response-Positionen für die Schaltflächen vom Typ "Treffer" darzustellen.      |
+| [Superdateien](super-files.md)           | Definiert die deaktivierten Bilder für Trackleisten.                                                                 |
+| [SeekThumb-Datei](seekthumb-file.md)     | Definiert ein Bild, das in Verbindung mit einer Trackleiste verwendet werden soll, um die aktuelle Position im Medienelement anzugeben. |
+| [VolumeThumb-Datei](volumethumb-file.md) | Definiert ein Bild, das in Verbindung mit einer Trackleiste verwendet werden soll, um die Position des Volumesteuerelements anzugeben.            |
 
 
 
  
 
-In den folgenden Abschnitten finden Sie weitere Informationen zu kunstdateien.
+Die folgenden Abschnitte enthalten weitere Informationen zu Grafikdateien.
 
--   [Kunst Dateiformate](art-file-formats-mobile.md)
+-   [Art-Dateiformate](art-file-formats-mobile.md)
 -   [Farbpaletten](color-palettes.md)
 -   [Bildgrößen](image-sizes.md)
--   [Schaltflächen Platzierung](button-placement.md)
+-   [Schaltflächenplatzierung](button-placement.md)
 
-Weitere Informationen zu Typen von kunstdateien und deren Identifizierung in der Skin-Definitionsdatei finden Sie im Abschnitt [Bitmaps](bitmaps.md) der Skin-Referenz.
+Weitere Informationen zu Typen von Grafikdateien und deren Identifizierung in der [Skindefinitionsdatei](bitmaps.md) finden Sie im Abschnitt Bitmaps der Skin-Referenz.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

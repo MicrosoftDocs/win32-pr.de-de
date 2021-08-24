@@ -1,7 +1,7 @@
 ---
-description: Legt einen Ereignis Schlüssel fest, mit dem die Ortszeit eines Animations Titels geändert wird.
+description: Legt einen Ereignisschlüssel fest, der die Ortszeit einer Animationsspur ändert.
 ms.assetid: b527e960-8ab9-42a0-bb4d-bea5aaf83424
-title: 'ID3DXAnimationController:: keytrackposition-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::KeyTrackPosition-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d027069efa9fb49cad3d2344da593eae4c3c844c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9e66bac7b5aaa8da87b0cb88e3bfd12469d8aa8b6ec755eaa47268c70da5eadf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119791230"
 ---
-# <a name="id3dxanimationcontrollerkeytrackposition-method"></a>ID3DXAnimationController:: keytrackposition-Methode
+# <a name="id3dxanimationcontrollerkeytrackposition-method"></a>ID3DXAnimationController::KeyTrackPosition-Methode
 
-Legt einen Ereignis Schlüssel fest, mit dem die Ortszeit eines Animations Titels geändert wird.
+Legt einen Ereignisschlüssel fest, der die Ortszeit einer Animationsspur ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ D3DXEVENTHANDLE KeyTrackPosition(
 
 <dl> <dt>
 
-Nach *verfolgen* \[ in\]
+*Nachverfolgen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Bezeichner des zu ändernden Titels.
+Bezeichner der zu ändernden Spur.
 
 </dd> <dt>
 
-*Neuposition* \[ in\]
+*NewPosition* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Neue lokale Zeit des Animations Titels.
+Neue Ortszeit der Animationsspur.
 
 </dd> <dt>
 
-*StartTime* \[ in\]
+*StartTime* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Globaler Zeit Schlüssel. Gibt die globale Zeit an, zu der die Änderung stattfindet.
+Globaler Zeitschlüssel. Gibt die globale Zeit an, zu der die Änderung erfolgt.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Globaler Zeit Schlüssel. Gibt die globale Zeit an, zu der die Änderung stattfi
 
 Typ: **[ **D3DXEVENTHANDLE**](id3dxanimationcontroller.md)**
 
-Ereignis Handle für das Priority Blend-Ereignis. **Null** wird zurückgegeben, wenn Track ungültig ist, oder, wenn kein freies Ereignis verfügbar ist.
+Ereignishandle für das Prioritätsmischungsereignis. **NULL** wird zurückgegeben, wenn Track ungültig ist oder wenn kein kostenloses Ereignis verfügbar ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Ereignis Handle für das Priority Blend-Ereignis. **Null** wird zurückgegeben, 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

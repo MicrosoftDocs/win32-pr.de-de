@@ -12,12 +12,12 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: fc81c0a66751751a73a3895fd31fe8651aee8caf
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e241697884a4b665c160dc9991e4cb7f02c76f1ba32bc7a0656515faf1117a58
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767380"
 ---
 # <a name="impeg2psiparsergetcountofelementarystreams-method"></a>IMpeg2PsiParser::GetCountOfElementaryStreams-Methode
 
@@ -51,7 +51,7 @@ Gibt das \_ Programmnummernfeld für das Programm an, wie im PAT angegeben.
 *pwVal* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine Variable, die die Anzahl elementarer Streams im Programm empfängt.
+Zeiger auf eine Variable, die die Anzahl der elementaren Streams im Programm empfängt.
 
 </dd> </dl>
 
@@ -69,11 +69,11 @@ Die Methode gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind u. a. die 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Verwenden Sie die **GetRecordProgramNumber-Methode,** um die Programmnummer abzurufen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

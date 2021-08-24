@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über Ressourcendatensätze. Ein Ressourceneintra
 ms.assetid: c64907c2-ebd3-4550-9454-13f51a6d7ca6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a84bd000e2d88884bbb387748eaced1d0d58a324
-ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
+ms.openlocfilehash: 606d74f41e18fefa144ff21d3ed88d9683938304b0c8aa0bc7d94e2fbaa624cd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112010673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119825060"
 ---
 # <a name="resource-records"></a>Ressourcendatensätze
 
@@ -22,7 +22,7 @@ microsoft.com. 600 IN A 150.150.150.1
 ```
 
 -   Das erste Feld (microsoft.com) gibt den Besitzer an.
--   Das zweite Feld (600) ist der Parameter für die Gültigkeitsdauer (Time-to-Live, TTL) in Sekunden.
+-   Das zweite Feld (600) ist der TTL-Parameter (Time-to-Live, Gültigkeitsdauer) in Sekunden.
 -   Das dritte Feld (IN) ist das Klassenfeld, das die Protokollfamilie (fast immer IN) für die Internetklasse darstellt.
 -   Das vierte Feld (A) ist der Typ der Ressource, die RR darstellt.
 -   Das fünfte Feld (150.150.150.1) ist die Ressourcendaten oder RDATA. Dieses Feld ist ein Variablentyp, der Informationen bereitstellt, die für den Typ der Ressource geeignet sind. In diesem Fall handelt es sich um eine 32-Bit-IP-Adresse.

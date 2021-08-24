@@ -1,29 +1,29 @@
 ---
-description: Diverse Hilfsfunktionen
+description: Verschiedene Hilfsfunktionen
 ms.assetid: 6d022907-6838-4d22-81ca-57c35bcb8b0d
-title: Diverse Hilfsfunktionen
+title: Verschiedene Hilfsfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1294681b2cccd7d0eaa96e599de4639b959f5b0a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 81bccd4027467e350c2deec92647546c67d7c55c1f1446dcf69ff5f0b5733a3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119791400"
 ---
-# <a name="miscellaneous-helper-functions"></a>Diverse Hilfsfunktionen
+# <a name="miscellaneous-helper-functions"></a>Verschiedene Hilfsfunktionen
 
-Im folgenden finden Sie verschiedene Hilfsfunktionen.
+Im Folgenden sind verschiedene Hilfsfunktionen zu suchen.
 
 
 
-| Funktion                                                   | BESCHREIBUNG                                                                                                   |
+| Funktion                                                   | Beschreibung                                                                                                   |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| [**Equalpins**](equalpins.md)                             | Überprüft, ob sich zwei Pins auf demselben Objekt befinden.                                                                    |
-| [**Int64x32Div32**](int64x32div32.md)                     | Implementiert die Formel `((a*b)+rnd)/c` , bei der `a` es sich um einen 64-Bit-Wert handelt und `b` , `c` und `rnd` 32-Bit-Werte sind. |
-| [**Isequalobject**](isequalobject.md)                     | Überprüft, ob sich zwei Schnittstellen auf demselben Objekt befinden.                                                              |
-| [**llmuldiv**](llmuldiv.md)                               | Implementiert die Formel, `((a*b)+rnd)/c` bei der jeder Begriff ein 64-Bit-Wert ist.                                     |
-| [**Waitdispatchingmessages**](waitdispatchingmessages.md) | Wartet, bis ein Objekt signalisiert wird, während Fenster Meldungen verteilt werden.                                        |
+| [**EqualPins**](equalpins.md)                             | Überprüft, ob sich zwei Stecknadeln auf demselben Objekt befinden.                                                                    |
+| [**Int64x32Div32**](int64x32div32.md)                     | Implementiert die `((a*b)+rnd)/c` Formel, bei der `a` ein 64-Bit-Wert und `b` , und `c` `rnd` 32-Bit-Werte sind. |
+| [**IsEqualObject**](isequalobject.md)                     | Überprüft, ob sich zwei Schnittstellen auf demselben Objekt befinden.                                                              |
+| [**llMulDiv**](llmuldiv.md)                               | Implementiert die `((a*b)+rnd)/c` Formel, bei der jeder Begriff ein 64-Bit-Wert ist.                                     |
+| [**WaitDispatchingMessages**](waitdispatchingmessages.md) | Wartet, bis ein Objekt signalisiert wird, während Fenstermeldungen gesendet werden.                                        |
 
 
 

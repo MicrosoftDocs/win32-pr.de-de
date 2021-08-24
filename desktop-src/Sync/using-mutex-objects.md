@@ -1,27 +1,27 @@
 ---
-description: Sie können ein Mutex-Objekt verwenden, um eine freigegebene Ressource vor gleichzeitigem Zugriff durch mehrere Threads oder Prozesse zu schützen.
+description: Sie können ein Mutexobjekt verwenden, um eine freigegebene Ressource vor dem gleichzeitigen Zugriff durch mehrere Threads oder Prozesse zu schützen.
 ms.assetid: 0f69ba50-69ce-467a-b068-8fd8f07c6c78
 title: Verwenden von Mutex-Objekten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fbd68f41319125613e8569e7b343c0b1601a7735
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c629d90e1cd811c62f62e1151cee4c3e2af77b84133e142fcfe7f93a35b2e5bb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119739260"
 ---
 # <a name="using-mutex-objects"></a>Verwenden von Mutex-Objekten
 
-Sie können ein [Mutex-Objekt](mutex-objects.md) verwenden, um eine freigegebene Ressource vor gleichzeitigem Zugriff durch mehrere Threads oder Prozesse zu schützen. Jeder Thread muss auf den Besitz des Mutex warten, bevor er den Code ausführen kann, der auf die freigegebene Ressource zugreift. Wenn z. b. mehrere Threads den Zugriff auf eine Datenbank gemeinsam nutzen, können die Threads ein Mutex-Objekt verwenden, um jeweils nur einen Thread zum Schreiben in die Datenbank zuzulassen.
+Sie können ein [Mutexobjekt](mutex-objects.md) verwenden, um eine freigegebene Ressource vor dem gleichzeitigen Zugriff durch mehrere Threads oder Prozesse zu schützen. Jeder Thread muss auf den Besitz des Mutex warten, bevor er den Code ausführen kann, der auf die freigegebene Ressource zugreift. Wenn z. B. mehrere Threads den Zugriff auf eine Datenbank gemeinsam nutzen, können die Threads ein Mutex-Objekt verwenden, um jeweils nur einem Thread das Schreiben in die Datenbank zu gestatten.
 
-Im folgenden Beispiel wird die Funktion " [**kreatemutex**](/windows/win32/api/synchapi/nf-synchapi-createmutexa) " verwendet, um ein Mutex-Objekt und die Funktion " [**kreatethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) " zum Erstellen von Arbeitsthreads zu erstellen.
+Im folgenden Beispiel wird die [**CreateMutex-Funktion**](/windows/win32/api/synchapi/nf-synchapi-createmutexa) verwendet, um ein Mutex-Objekt zu erstellen, und die [**CreateThread-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) zum Erstellen von Arbeitsthreads.
 
-Wenn ein Thread dieses Prozesses in die Datenbank schreibt, fordert er zuerst den Besitz des Mutex mithilfe der [**WaitForSingleObject**](/windows/win32/api/winbase/nf-winbase-registerwaitforsingleobject) -Funktion an. Wenn der Thread in den Besitz des Mutex gelangt, schreibt er in die Datenbank und gibt den Besitz des Mutex mithilfe der [**ReleaseMutex**](/windows/win32/api/synchapi/nf-synchapi-releasemutex) -Funktion frei.
+Wenn ein Thread dieses Prozesses in die Datenbank schreibt, fordert er zunächst den Besitz des Mutex mithilfe der [**WaitForSingleObject-Funktion**](/windows/win32/api/winbase/nf-winbase-registerwaitforsingleobject) an. Wenn der Thread den Besitz des Mutex erhält, schreibt er in die Datenbank und gibt dann den Besitz des Mutex mithilfe der [**ReleaseMutex-Funktion**](/windows/win32/api/synchapi/nf-synchapi-releasemutex) frei.
 
-Dieses Beispiel verwendet die strukturierte Ausnahmebehandlung, um sicherzustellen, dass der Thread das Mutex-Objekt ordnungsgemäß freigibt. Der letzte Codeblock wird ausgeführt, unabhängig davon, wie der **\_ \_ try** -Block beendet wird (es sei denn, der **\_ \_ try** -Block enthält einen Aufrufen der [**TerminateThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) -Funktion). **\_ \_** Dadurch wird verhindert, dass das Mutex-Objekt versehentlich abgebrochen wird.
+In diesem Beispiel wird die strukturierte Ausnahmebehandlung verwendet, um sicherzustellen, dass der Thread das Mutex-Objekt ordnungsgemäß freigibt. Der **\_ \_ finally-Codeblock** wird unabhängig davon ausgeführt, wie der **\_ \_ try-Block** beendet wird (es sei denn, der **\_ \_ try-Block** enthält einen Aufruf der [**TerminateThread-Funktion).**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) Dadurch wird verhindert, dass das Mutex-Objekt versehentlich abgebrochen wird.
 
-Wenn ein Mutex abgebrochen wird, hat der Thread, der im Besitz des Mutex war, ihn vor dem Beenden nicht ordnungsgemäß freigegeben. In diesem Fall ist der Status der freigegebenen Ressource unbestimmt, und die Verwendung des Mutex kann einen potenziell schwerwiegenden Fehler verbergen. Einige Anwendungen versuchen möglicherweise, die Ressource in einem konsistenten Zustand wiederherzustellen. Dieses Beispiel gibt einfach einen Fehler zurück und beendet die Verwendung des Mutex. Weitere Informationen finden Sie unter [Mutex Objects](mutex-objects.md).
+Wenn ein Mutex abgebrochen wird, hat der Thread, der den Mutex besitzt, ihn vor dem Beenden nicht ordnungsgemäß freigeben. In diesem Fall ist der Status der freigegebenen Ressource unbestimmt, und die weitere Verwendung des Mutex kann einen potenziell schwerwiegenden Fehler verbergen. Einige Anwendungen versuchen möglicherweise, die Ressource in einem konsistenten Zustand wiederherzustellen. Dieses Beispiel gibt einfach einen Fehler zurück und beendet die Verwendung des Mutex. Weitere Informationen finden Sie unter [Mutex-Objekte.](mutex-objects.md)
 
 
 ```C++

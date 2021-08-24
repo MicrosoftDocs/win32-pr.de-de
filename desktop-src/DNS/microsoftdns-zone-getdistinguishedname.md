@@ -1,11 +1,11 @@
 ---
-title: Geterkennbar shedname-Methode der MicrosoftDNS_Zone-Klasse
-description: Die getdistinguished shedname-Methode ruft den Distinguished Name für die Zone ab. | Geterkennbar shedname-Methode der MicrosoftDNS_Zone-Klasse
+title: GetDistinguishedName-Methode der MicrosoftDNS_Zone-Klasse
+description: Die GetDistinguishedName-Methode ruft den Distinguished Name für die Zone ab. | GetDistinguishedName-Methode der MicrosoftDNS_Zone-Klasse
 ms.assetid: 234dbb43-913e-43e2-b09d-d0c3e449af82
 keywords:
-- Getscheiden shedname-Methode (DNS)
-- Geterkennbar shedname-Methode, DNS, MicrosoftDNS_Zone-Klasse
-- DNS-MicrosoftDNS_Zone Klasse, getchilshedname-Methode
+- GetDistinguishedName-Methode DNS
+- GetDistinguishedName-Methode DNS , MicrosoftDNS_Zone-Klasse
+- MicrosoftDNS_Zone DNS-Klasse, GetDistinguishedName-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a73ed620761e4b7a07e7aeaf20d85f646a1aab6b
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 55eb8c361c54813c36ef7b07c8fd2418b00599234861fa2fc09ab82d777c6a71
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106367327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119825070"
 ---
-# <a name="getdistinguishedname-method-of-the-microsoftdns_zone-class"></a>Geterkennbar shedname-Methode der MicrosoftDNS- \_ Zonen Klasse
+# <a name="getdistinguishedname-method-of-the-microsoftdns_zone-class"></a>GetDistinguishedName-Methode der MicrosoftDNS \_ Zone-Klasse
 
-Die **getdistinguished shedname** -Methode ruft den Distinguished Name für die Zone ab.
+Die **GetDistinguishedName-Methode** ruft den Distinguished Name für die Zone ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +53,7 @@ Gibt den Namen der Zone zurück.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -61,37 +61,37 @@ Gibt den Namen der Zone zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ Zone**](microsoftdns-zone.md)
+[**MicrosoftDNS-Zone \_**](microsoftdns-zone.md)
 </dt> <dt>
 
-[**AgeAllRecords-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-ageallrecords.md)
+[**AgeAllRecords-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-ageallrecords.md)
 </dt> <dt>
 
-[**Changezonetype-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-changezonetype.md)
+[**ChangeZoneType-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-changezonetype.md)
 </dt> <dt>
 
-[**Die Methode "kreatezone" der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-createzone.md)
+[**CreateZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-createzone.md)
 </dt> <dt>
 
-[**ForceRefresh-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-forcerefresh.md)
+[**ForceRefresh-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-forcerefresh.md)
 </dt> <dt>
 
-[**Pauzzone-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-pausezone.md)
+[**PauseZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-pausezone.md)
 </dt> <dt>
 
-[**Reloadzone-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-reloadzone.md)
+[**ReloadZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-reloadzone.md)
 </dt> <dt>
 
-[**Resetsecon-Replikats-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-resetsecondaries.md)
+[**ResetSecondaries-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-resetsecondaries.md)
 </dt> <dt>
 
-[**Resumezone-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-resumezone.md)
+[**ResumeZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-resumezone.md)
 </dt> <dt>
 
-[**Updatefromds-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-updatefromds.md)
+[**UpdateFromDS-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-updatefromds.md)
 </dt> <dt>
 
-[**"Write Backzone"-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-writebackzone.md)
+[**WriteBackZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-writebackzone.md)
 </dt> </dl>
 
  

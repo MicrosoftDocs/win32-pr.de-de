@@ -1,26 +1,26 @@
 ---
-title: Offset-Attribut (schiefe) (VML)
-description: Offset-Attribut (schiefe) (VML)
+title: Offsetattribut (Schiefe)(VML)
+description: Offsetattribut (Schiefe)(VML)
 ms.assetid: 3d4b08c5-e29b-4ace-9c3e-75598068ff18
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f6dbabad6429ad82d4a5aa5cb9187fb1326d4900
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ab3d6012389dfd07a21fd4d6aa0361fd869307427b40e504d42dc1f2ce06e534
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119680690"
 ---
-# <a name="offset-attribute-skewvml"></a>Offset-Attribut (schiefe) (VML)
+# <a name="offset-attribute-skewvml"></a>Offsetattribut (Schiefe)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Offset der Schiefe. Lese-/Schreib-VgVector2D. 
+Definiert den Offset der Schiefe. Lese-/Schreibzugriff **auf VgVector2D.**
 
 **Gilt für**
 
@@ -28,20 +28,20 @@ Definiert den Offset der Schiefe. Lese-/Schreib-VgVector2D.
 
 **Tagsyntax**
 
-<o: *Element* Offset = " *Ausdruck* " >
+<o: *element* offset=" *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Offset = "*Ausdruck*"
+*element* .offset="*expression*"
 
-*Ausdruck* = *Element*. Offset
+*expression* = *Element*.offset
 
 **Anmerkungen**
 
-Bestimmt die Menge des x-und y-Offsets von der ursprünglichen Position der Form. Werte werden in absoluten Messwerten oder Bruchteilen einer Form (im Bereich von-0,5 bis + 0,5) definiert. Der Standardwert ist 0, 0.
+Bestimmt die Menge des x- und y-Offsets von der ursprünglichen Position der Form. Werte werden in absoluten Maß- oder Bruchwerten einer Form definiert (im Bereich von -0,5 bis +0,5). Der Standardwert ist 0,0.
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 
