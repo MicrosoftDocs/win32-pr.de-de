@@ -2,7 +2,7 @@
 description: 'TakeOwnerShip-Methode der CIM_DeviceFile-Klasse: Die TakeOwnerShip-Methode erhält den Besitz der logischen Datei, die im Objektpfad angegeben ist.'
 ms.assetid: ef7d5ce7-99fb-464f-9739-ec9189148f94
 ms.tgt_platform: multiple
-title: TakeOwnerShip-Methode der CIM_DeviceFile Klasse
+title: TakeOwnerShip-Methode der CIM_DeviceFile-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 4e7c745df18e1725199c4027d22882a00f6143a1
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 03d629a3b547074c6543635646a5335e6e5b13bddabc539be6918641e19dc536
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108086048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751850"
 ---
 # <a name="takeownership-method-of-the-cim_devicefile-class"></a>TakeOwnerShip-Methode der CIM \_ DeviceFile-Klasse
 
-Die **TakeOwnerShip-Methode** erhält den Besitz der logischen Datei, die im Objektpfad angegeben ist. Wenn die logische Datei ein Verzeichnis ist, handelt diese Methode rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält. Diese Methode wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
+Die **TakeOwnerShip-Methode** ruft den Besitz der logischen Datei ab, die im Objektpfad angegeben ist. Wenn es sich bei der logischen Datei um ein Verzeichnis handelt, handelt diese Methode rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält. Diese Methode wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,7 +61,7 @@ Erfolg.
 **2**
 </dt> <dd>
 
-Der Zugriff wurde verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
@@ -89,14 +89,14 @@ Das Objekt ist bereits vorhanden.
 **11**
 </dt> <dd>
 
-Dateisystem, nicht NTFS.
+Dateisystem nicht NTFS.
 
 </dd> <dt>
 
 **12**
 </dt> <dd>
 
-Plattform, nicht Windows.
+Plattform nicht Windows.
 
 </dd> <dt>
 
@@ -142,7 +142,7 @@ Ungültiger Parameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
@@ -152,11 +152,11 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von d
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Stamm \\ CIMV2<br/>                                                                  |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
 | MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 

@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. messremode-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.GPS.MeasureMode-Eigenschaft.
 ms.assetid: 911a0d81-bd12-4155-b45a-ae1a18f2dd07
-title: System. GPS. messremode Photo Metadata-Richtlinie
+title: System.GPS.MeasureMode-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a9449ca9a7d1ee5ef213c37562392be2842a09f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 827cd278a71b23934fb0475e78d98b25a9f2b72d413b70f9abc60ba3dbe2c3fd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119882320"
 ---
-# <a name="systemgpsmeasuremode-photo-metadata-policy"></a>System. GPS. messremode Photo Metadata-Richtlinie
+# <a name="systemgpsmeasuremode-photo-metadata-policy"></a>System.GPS.MeasureMode-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. GPS. messremode](../properties/props-system-gps-measuremode.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.GPS.MeasureMode-Eigenschaft.](../properties/props-system-gps-measuremode.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ GPS \_ messremode
+PKEY \_ GPS \_ MeasureMode
 
 ### <a name="containers"></a>Container
 
@@ -27,54 +27,54 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
-### <a name="input-propvariant-type"></a>Eingabe-PROPVARIANT-Typ
+### <a name="input-propvariant-type"></a>PROPVARIANT-Eingabetyp
 
-VT \_ LPWSTR wird bevorzugt, aber VT \_ LPSTR wird ebenfalls akzeptiert.
+VT \_ LPWSTR wird bevorzugt, aber auch VT \_ LPSTR wird akzeptiert.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policies"></a>JPEG-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 10} | ascii       |
-| 2     | /XMP/EXIF: gpsmessremode  | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=10} | ascii       |
+| 2     | /xmp/exif:GPSMeasureMode  | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 10} | ascii       |
-| 2     | /XMP/EXIF: gpsmessremode  | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=10} | ascii       |
+| 2     | /xmp/exif:GPSMeasureMode  | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                      |
 |-------|---------------------------|
-| 1     | /App1/IFD/GPS/{ushort = 10} |
-| 2     | /XMP/EXIF: gpsmessremode  |
+| 1     | /app1/ifd/gps/{ushort=10} |
+| 2     | /xmp/exif:gpsmeasuremode  |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                         | Datenträger Format |
+| Auftrag | Pfad                         | Datenträgerformat |
 |-------|------------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 10}         | ascii       |
-| 2     | /IFD/XMP/EXIF: gpsmessremode | Unicode     |
+| 1     | /ifd/gps/{ushort=10}         | ascii       |
+| 2     | /ifd/xmp/exif:GPSMeasureMode | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                         | Datenträger Format |
+| Auftrag | Pfad                         | Datenträgerformat |
 |-------|------------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 10}         | ascii       |
-| 2     | /IFD/XMP/EXIF: gpsmessremode | Unicode     |
+| 1     | /ifd/gps/{ushort=10}         | ascii       |
+| 2     | /ifd/xmp/exif:GPSMeasureMode | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                         |
 |-------|------------------------------|
-| 1     | /IFD/GPS/{ushort = 10}         |
-| 2     | /IFD/XMP/EXIF: gpsmessremode |
+| 1     | /ifd/gps/{ushort=10}         |
+| 2     | /ifd/xmp/exif:gpsmeasuremode |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. GPS. messremode](../properties/props-system-gps-measuremode.md)
+[System.GPS.MeasureMode](../properties/props-system-gps-measuremode.md)
 </dt> </dl>
 
  

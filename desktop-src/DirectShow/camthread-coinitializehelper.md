@@ -1,7 +1,7 @@
 ---
-description: Die coinitializehelper-Methode ruft die CoInitializeEx-Funktion am Anfang des Threads auf.
+description: Die CoInitializeHelper-Methode ruft die CoInitializeEx-Funktion am Anfang des Threads auf.
 ms.assetid: 1a981e1e-c059-4e51-81d8-33bcb39ee580
-title: Camthread. coinitializehelper-Methode (wxutil. h)
+title: WEBCAMThread.CoInitializeHelper-Methode (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a6c3eb7fbcb9e4abada43098339a29d208ded0d4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 41a763a4b9151f22615aa0af3dae57af8281751209a016dc3135f3572e9d8ef3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356422"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119768290"
 ---
-# <a name="camthreadcoinitializehelper-method"></a>Camthread. coinitializehelper-Methode
+# <a name="camthreadcoinitializehelper-method"></a>CAMThread.CoInitializeHelper-Methode
 
-Die- `CoInitializeHelper` Methode ruft die CoInitializeEx-Funktion am Anfang des Threads auf.
+Die `CoInitializeHelper` -Methode ruft die CoInitializeEx-Funktion am Anfang des Threads auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Im Folgenden finden Sie mögliche Werte.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                              |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | Die CoInitializeEx-Funktion ist nicht verfügbar.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Die CoInitializeEx-Funktion ist nicht verfügbar.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                                      |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>  | Fehler.<br/>                                      |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>  | Fehler.<br/>                                      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Methode " [**camthread:: initialthread proc**](camthread-initialthreadproc.md) " ruft diese Hilfsmethode auf, die die Funktion "CoInitializeEx" aufruft. Er verwendet das coinit- \_ Flag "deaktivierte \_ OLE1DDE", um dynamischer Datenaustausch (DDE) zu deaktivieren. Weitere Informationen finden Sie unter Platform SDK.
+Die [**METHODECAMThread::InitialThreadProc**](camthread-initialthreadproc.md) ruft diese Hilfsmethode auf, die die CoInitializeEx-Funktion aufruft. Es verwendet das FLAG COINIT \_ DISABLE \_ OLE1DDE, um dynamische Daten Exchange (DDE) zu deaktivieren. Weitere Informationen finden Sie im Plattform-SDK.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,16 +66,16 @@ Die Methode " [**camthread:: initialthread proc**](camthread-initialthreadproc.m
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Camthread-Klasse**](camthread.md)
+[**CAMThread-Klasse**](camthread.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmdevice-cleandatastore-Methode
-description: Die cleandatastore-Methode startet das Bereinigen des DRM-Datenspeicher auf dem Gerät.
+title: IWMDRMDevice CleanDataStore-Methode
+description: Die CleanDataStore-Methode startet den Prozess der Bereinigung des DRM-Datenspeichers auf dem Gerät.
 ms.assetid: aad99137-6d2b-4612-8014-9783035af929
 keywords:
-- Cleandatastore-Methode Windows Media Device Manager
-- Cleandatastore-Methode Windows Media Device Manager, iwmdrmdevice-Schnittstelle
-- Iwmdrmdevice-Schnittstelle Windows Media Device Manager, cleandatastore-Methode
+- CleanDataStore-Methode windows Media Geräte-Manager
+- CleanDataStore-Methode windows Media Geräte-Manager , IWMDRMDevice-Schnittstelle
+- IWMDRMDevice interface windows Media Geräte-Manager , CleanDataStore method
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e5aed9608a7428245edd84602ea5e7252861d938
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9decc999d1ecb6c97359d1c4c169b84e7f67da88f5fa25bfe2cb17b2c31f9fd1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365160"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766640"
 ---
-# <a name="iwmdrmdevicecleandatastore-method"></a>Iwmdrmdevice:: cleandatastore-Methode
+# <a name="iwmdrmdevicecleandatastore-method"></a>IWMDRMDevice::CleanDataStore-Methode
 
-Die **cleandatastore** -Methode startet das Bereinigen des DRM-Datenspeicher auf dem Gerät.
+Die **CleanDataStore-Methode** startet den Prozess der Bereinigung des DRM-Datenspeichers auf dem Gerät.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ HRESULT CleanDataStore(
 
 <dl> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Flags für die Speicher Bereinigungs Kriterien.
+Flags für Bereinigungskriterien des Speichers.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -70,8 +70,8 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmddrmsp. idl</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Mssachlp. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>WMDDRMSP.idl</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Mssachlp.lib</dt> </dl> |
 
 
 
@@ -79,7 +79,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Iwmdrmdevice-Schnittstelle**](iwmdrmdevice.md)
+[**IWMDRMDevice-Schnittstelle**](iwmdrmdevice.md)
 </dt> </dl>
 
  

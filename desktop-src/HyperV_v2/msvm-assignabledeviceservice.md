@@ -1,5 +1,5 @@
 ---
-description: Verwaltet die zustellbaren Geräte auf einem Host Computersystem.
+description: Verwaltet die zu weisenden Geräte auf einem Hostcomputersystem.
 ms.assetid: d958e978-682e-49eb-bd10-d31d9563fdbf
 title: Msvm_AssignableDeviceService-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: c8aff620e9227000b2c4a03069f8a5f900a5fc82
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 55ed0dc2cfdaa3f351537e18994a0b45c8490097f93c2cfaddbdf575d07e03c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369100"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119790300"
 ---
-# <a name="msvm_assignabledeviceservice-class"></a>MSVM-Klasse ' zuder \_ Zustell barkeit '
+# <a name="msvm_assignabledeviceservice-class"></a>Msvm \_ AssignableDeviceService-Klasse
 
-Verwaltet die zustellbaren Geräte auf einem Host Computersystem.
+Verwaltet die zu weisenden Geräte auf einem Hostcomputersystem.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -37,20 +37,20 @@ class Msvm_AssignableDeviceService : CIM_Service
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_** -Klasse "zuder Klasse" weist die folgenden Member auf:
+Die **Msvm \_ AssignableDeviceService-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **MSVM-Klasse " \_ accessabledeviceservice** " verfügt über diese Methoden.
+Die **Msvm \_ AssignableDeviceService-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                    | BESCHREIBUNG                                                                                    |
+| Methode                                                                                    | Beschreibung                                                                                    |
 |:------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|
-| [**Dismountassignabledevice**](msvm-assignabledeviceservice-dismountassignabledevice.md) | Hebt die Einbindung des angegebenen PCI-Geräts auf, sodass es zugewiesen werden kann.<br/>                      |
-| [**Mountassignabledevice**](msvm-assignabledeviceservice-mountassignabledevice.md)       | Stellt das angegebene PCI-Gerät bereit, sodass es vom Host Computersystem verwendet werden kann.<br/> |
+| [**DismountAssignableDevice**](msvm-assignabledeviceservice-dismountassignabledevice.md) | Löst die Bereitstellung des angegebenen PCI-Geräts auf, damit es zugewiesen werden kann.<br/>                      |
+| [**MountAssignableDevice**](msvm-assignabledeviceservice-mountassignabledevice.md)       | Das angegebene PCI-Gerät wird so integriert, dass es vom Hostcomputersystem verwendet werden kann.<br/> |
 
 
 
@@ -62,10 +62,10 @@ Die **MSVM-Klasse " \_ accessabledeviceservice** " verfügt über diese Methoden
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -74,7 +74,7 @@ Die **MSVM-Klasse " \_ accessabledeviceservice** " verfügt über diese Methoden
 
 <dl> <dt>
 
-[**CIM- \_ Dienst**](cim-service.md)
+[**\_CIM-Dienst**](cim-service.md)
 </dt> </dl>
 
  

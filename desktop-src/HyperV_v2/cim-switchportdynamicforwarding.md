@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung dar, in der ein Eintrag einer Weiterleitungs Datenbank auf einen Switchport angewendet wird.
+description: Stellt eine Zuordnung dar, bei der ein Eintrag einer Weiterleitungsdatenbank auf einen Switchport angewendet wird.
 ms.assetid: e63ac61d-ed0c-49e9-b056-4fcb6d1d5455
 title: CIM_SwitchPortDynamicForwarding-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0e0d87e2ee5df6a7564d92fd1f8421dfa09abe20
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8ccf3b6cd9ac1fcc97c8e409df792069c02652d5e0bf92ef8bbbec9f88e36cf3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119899530"
 ---
-# <a name="cim_switchportdynamicforwarding-class"></a>CIM \_ switchportdynamicforwarding-Klasse
+# <a name="cim_switchportdynamicforwarding-class"></a>CIM \_ SwitchPortDynamicForwarding-Klasse
 
-Stellt eine Zuordnung dar, in der ein Eintrag einer Weiterleitungs Datenbank auf einen Switchport angewendet wird.
+Stellt eine Zuordnung dar, bei der ein Eintrag einer Weiterleitungsdatenbank auf einen Switchport angewendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,49 +39,49 @@ class CIM_SwitchPortDynamicForwarding : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ switchportdynamicforwarding** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ SwitchPortDynamicForwarding-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ switchportdynamicforwarding** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ SwitchPortDynamicForwarding-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Switchport**
+Datentyp: **CIM \_ SwitchPort**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Ein [**CIM- \_ switchportverweis auf den Switchport**](cim-switchport.md) .
+Ein [**CIM \_ SwitchPort-Verweis**](cim-switchport.md) auf den Switchport.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ dynamicforwardingentry**
+Datentyp: **CIM \_ DynamicForwardingEntry**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM \_ dynamicforwardingentry**](cim-dynamicforwardingentry.md) -Verweis auf den Eintrag der Weiterleitungs Datenbank.
+Ein [**CIM \_ DynamicForwardingEntry-Verweis**](cim-dynamicforwardingentry.md) auf den Eintrag der Weiterleitungsdatenbank.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -90,7 +90,7 @@ Ein [**CIM \_ dynamicforwardingentry**](cim-dynamicforwardingentry.md) -Verweis 
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Ein [**CIM \_ dynamicforwardingentry**](cim-dynamicforwardingentry.md) -Verweis 
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

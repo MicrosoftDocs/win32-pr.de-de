@@ -1,6 +1,6 @@
 ---
-title: CD3DX12_PACKED_MIP_INFO-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, um die einfache Initialisierung einer D3D12- \_ gepackten \_ MIP Info-Struktur zu ermöglichen \_ .
+title: CD3DX12_PACKED_MIP_INFO-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um eine einfache Initialisierung einer D3D12 \_ PACKED \_ MIP \_ INFO-Struktur zu ermöglichen.
 ms.assetid: B3549D78-C354-48FC-A012-1F835DBD585E
 keywords:
 - CD3DX12_PACKED_MIP_INFO Struktur
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f4565bbac6189cffc5358213437463b4abc0322
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b32a4b0516560ac553b3ce6acb6972def5d0e3f84a2eb84026a0635f779a2c8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106357223"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119752160"
 ---
-# <a name="cd3dx12_packed_mip_info-structure"></a>CD3DX12- \_ gepackte \_ MIP- \_ Informationsstruktur
+# <a name="cd3dx12_packed_mip_info-structure"></a>CD3DX12 \_ PACKED \_ MIP \_ INFO-Struktur
 
-Eine hilfsstruktur, um die einfache Initialisierung einer [**D3D12- \_ gepackten \_ MIP \_ Info**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_packed_mip_info) -Struktur zu ermöglichen.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ PACKED \_ MIP \_ INFO-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_packed_mip_info) zu ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,39 +44,39 @@ struct CD3DX12_PACKED_MIP_INFO  : public D3D12_PACKED_MIP_INFO{
 
 <dl> <dt>
 
-**CD3DX12- \_ gepackte \_ MIP- \_ Informationen ()**
+**CD3DX12 \_ PACKED \_ MIP \_ INFO()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12- \_ gepackten \_ MIP- \_ Info.
+Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ PACKED \_ MIP \_ INFO.
 
 </dd> <dt>
 
-**explizites CD3DX12 \_ gepackte \_ MIP- \_ Informationen (konstant D3D12 \_ gepackte \_ MIP \_ Info &o)**
+**Explicit CD3DX12 \_ PACKED \_ MIP \_ INFO(const D3D12 \_ PACKED \_ MIP \_ INFO &o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz einer CD3DX12- \_ gepackten \_ MIP- \_ Info, die mit dem Inhalt einer anderen [**D3D12- \_ gepackten \_ MIP \_ Info**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_packed_mip_info) -Struktur initialisiert wird.
+Erstellt eine neue Instanz einer CD3DX12 \_ PACKED \_ MIP \_ INFO, initialisiert mit dem Inhalt einer anderen [**D3D12 \_ PACKED \_ MIP \_ INFO-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_packed_mip_info)
 
 </dd> <dt>
 
-**CD3DX12- \_ gepackte \_ MIP- \_ Informationen (Uint8 numstandardmips, Uint8 numpackedmips, uint numtilesforpackedmips, uint starttileindexinoverallresource)**
+**CD3DX12 \_ PACKED \_ MIP \_ INFO(UINT8 numStandardMips, UINT8 numPackedMips, UINT numTilesForPackedMips, UINT startTileIndexInOverallResource)**
 </dt> <dd>
 
-Erstellt eine neue Instanz einer CD3DX12- \_ gepackten \_ MIP- \_ Info und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz eines CD3DX12 \_ PACKED \_ MIP \_ INFO und initialisiert die folgenden Parameter:
 
-Uint8 numstandardmips
+UINT8 numStandardMips
 
-Uint8 numpackedmips
+UINT8 numPackedMips
 
-Uint numtilesforpackedmips
+UINT numTilesForPackedMips
 
-Uint starttileingede xinoverallresource
+UINT startTileIndexInOverallResource
 
 </dd> <dt>
 
-**Operator konstant D3D12 \_ gepackte \_ MIP- \_ Info& () Konstanten**
+**operator const D3D12 \_ PACKED \_ MIP \_ INFO&() const**
 </dt> <dd>
 
-Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturtyp.
+Definiert den & Pass-by-Reference-Operator für den übergeordneten Strukturtyp.
 
 </dd> </dl>
 
@@ -86,15 +86,15 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**D3D12- \_ gepackte \_ MIP- \_ Informationen**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_packed_mip_info)
+[**D3D12 \_ PACKED \_ MIP \_ INFO**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_packed_mip_info)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

@@ -1,9 +1,9 @@
 ---
-title: TVM_ENSUREVISIBLE Meldung (kommstrg. h)
-description: Stellt sicher, dass ein Struktur Ansichts Element sichtbar ist, erweitert das übergeordnete Element und führt ggf. einen Bildlauf im Strukturansicht-Steuerelement aus. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ EnsureVisible-Makros senden.
+title: TVM_ENSUREVISIBLE (Commctrl.h)
+description: Stellt sicher, dass ein Strukturansichtselement sichtbar ist, das übergeordnete Element erweitert oder das Strukturansichtssteuerelement bei Bedarf scrollt. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ EnsureVisible-Makros senden.
 ms.assetid: 7053438a-f9ca-4c4c-9da6-46b99fe1e4f8
 keywords:
-- Windows-Steuerelemente für TVM_ENSUREVISIBLE Meldung
+- TVM_ENSUREVISIBLE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 06100ee33106736076608aa216d2aebc03b76ebe
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c1072c7213eb2172896980662bcd7a22a3c41fccf34eea2f7a107ab7ff894b32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119797250"
 ---
-# <a name="tvm_ensurevisible-message"></a>TVM \_ EnsureVisible-Meldung
+# <a name="tvm_ensurevisible-message"></a>TVM \_ ENSUREVISIBLE-Meldung
 
-Stellt sicher, dass ein Struktur Ansichts Element sichtbar ist, erweitert das übergeordnete Element und führt ggf. einen Bildlauf im Strukturansicht-Steuerelement aus. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ EnsureVisible**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_ensurevisible) -Makros senden.
+Stellt sicher, dass ein Strukturansichtselement sichtbar ist, das übergeordnete Element erweitert oder das Strukturansichtssteuerelement bei Bedarf scrollt. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ EnsureVisible-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_ensurevisible) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,11 +41,11 @@ Handle für das Element.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, wenn das System die Elemente im Strukturansicht-Steuerelement aufscrollt und keine Elemente erweitert wurden. Andernfalls gibt die Meldung 0 (null) zurück.
+Gibt einen Wert ungleich 0 (null) zurück, wenn das System einen Bildlauf für die Elemente im Strukturansicht-Steuerelement durchführen und keine Elemente erweitert wurden. Andernfalls gibt die Meldung 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die TVM- \_ Meldung "ensureVisible" das übergeordnete Element erweitert, empfängt das übergeordnete Fenster die [TVN \_ itemexpandeing](tvn-itemexpanding.md) -und [TVN \_ itemexpanded](tvn-itemexpanded.md) -Benachrichtigungs Codes.
+Wenn die NACHRICHT TVM ENSUREVISIBLE das übergeordnete Element erweitert, empfängt das übergeordnete Fenster die \_ Benachrichtigungscodes [TVN \_ ITEMEXPANDING](tvn-itemexpanding.md) und [TVN \_ ITEMEXPANDED.](tvn-itemexpanded.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Wenn die TVM- \_ Meldung "ensureVisible" das übergeordnete Element erweitert, e
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

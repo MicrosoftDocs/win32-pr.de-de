@@ -1,9 +1,9 @@
 ---
-title: WM/wmshadowfilesourcefiletype (Windows Media Format 11 SDK)
-description: Der WM/wmshadowfilesourcefiletype enthält den Dateityp der ursprünglichen Datei, von der die ASF-Datei abgeleitet ist.
+title: WM/WMShadowFileSourceFileType (Windows Media Format 11 SDK)
+description: WM/WMShadowFileSourceFileType enthält den Dateityp der ursprünglichen Datei, von der die ASF-Datei abgeleitet wird.
 ms.assetid: e6543f07-b1dd-4a3d-9472-ebedf42e9599
 keywords:
-- WM/wmshadowfilesourcefiletype Windows Media-Format
+- WM/WMShadowFileSourceFileType windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b9d54fea57e6dbdf3d6a1fba618062ecf73fdae
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: faea00527377001d41a738485b135f37141f87c512dd649ad850dbe9f1495d93
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104039998"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807130"
 ---
-# <a name="wmwmshadowfilesourcefiletype-windows-media-format-11-sdk"></a>WM/wmshadowfilesourcefiletype (Windows Media Format 11 SDK)
+# <a name="wmwmshadowfilesourcefiletype-windows-media-format-11-sdk"></a>WM/WMShadowFileSourceFileType (Windows Media Format 11 SDK)
 
-Der **WM/wmshadowfilesourcefiletype** enthält den Dateityp der ursprünglichen Datei, von der die ASF-Datei abgeleitet ist.
+**WM/WMShadowFileSourceFileType** enthält den Dateityp der ursprünglichen Datei, von der die ASF-Datei abgeleitet wird.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmwmshadowfilesourcefiletype
+g \_ wszWMWMShadowFileSourceFileType
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Inhalte, die sich in einem anderen Dateiformat als "ASF" befinden und durch eine Art von Rights Management geschützt sind, können durch einen Prozess namens "Lizenz Import" in eine Windows Media-Datei konvertiert werden, die von Windows Media DRM geschützt wird. Eine solche ASF-Datei sollte dieses Attribut sowie WM/wmshadowfilesourcedrmtype enthalten, um zu verfolgen, woher der Inhalt stammt.
+Inhalte, die in einem anderen Dateiformat als ASF vorhanden sind und mit einer Art von Rechteverwaltung geschützt sind, können über einen Prozess namens Lizenzimport in eine Windows Media-Datei konvertiert werden, die durch Windows Media DRM geschützt wird. Eine solche ASF-Datei sollte dieses Attribut sowie WM/WMShadowFileSourceDRMType enthalten, um zu verfolgen, woher der Inhalt stammt.
 
 ## <a name="see-also"></a>Siehe auch
 

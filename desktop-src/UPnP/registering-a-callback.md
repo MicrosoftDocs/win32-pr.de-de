@@ -1,38 +1,38 @@
 ---
 title: Registrieren eines Rückrufs
-description: Wenn die Anwendung eine Benachrichtigung erfordert, wenn sich der Wert einer Zustandsvariablen ändert oder die Dienst Instanz, die Sie darstellt, nicht mehr verfügbar ist, muss die Anwendung eine Rückruffunktion registrieren.
+description: Wenn die Anwendung eine Benachrichtigung erfordert, wenn sich der Wert einer Zustandsvariablen ändert oder die dienstinstanz, die sie darstellt, nicht mehr verfügbar ist, muss die Anwendung eine Rückruffunktion registrieren.
 ms.assetid: 881e71f7-39e6-4847-bdf2-78e54d1750cb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b9095ab4b5b2d43a12f7e806eabc24b174a0311
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5a3dca603e6226d3171aed920311bafcf6844ec9fab5c7aa05deafee7a13fd8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119768530"
 ---
 # <a name="registering-a-callback"></a>Registrieren eines Rückrufs
 
-Wenn die Anwendung eine Benachrichtigung erfordert, wenn sich der Wert einer Zustandsvariablen ändert oder die Dienst Instanz, die Sie darstellt, nicht mehr verfügbar ist, muss die Anwendung eine Rückruffunktion registrieren. Verwenden Sie die [**iupnpservice:: addCallback**](/windows/desktop/api/Upnp/nf-upnp-iupnpservice-addcallback) -Methode, um eine Rückruffunktion für das aufzurufende Dienst Objekt zu registrieren. Diese Methode kann verwendet werden, um mehr als einen Rückruf zu registrieren.
+Wenn die Anwendung eine Benachrichtigung erfordert, wenn sich der Wert einer Zustandsvariablen ändert oder die dienstinstanz, die sie darstellt, nicht mehr verfügbar ist, muss die Anwendung eine Rückruffunktion registrieren. Verwenden Sie zum Registrieren einer Rückruffunktion für das auf aufrufende Dienstobjekt die [**IUPnPService::AddCallback-Methode.**](/windows/desktop/api/Upnp/nf-upnp-iupnpservice-addcallback) Diese Methode kann verwendet werden, um mehrere Rückrufe zu registrieren.
 
-Entwickler sollten einen asynchronen Vorgang nicht innerhalb eines asynchronen Rückrufs abbrechen.
+Entwickler sollten einen asynchronen Vorgang innerhalb eines asynchronen Rückrufs nicht abbrechen.
 
 > [!Note]  
-> Das Hinzufügen eines Rückrufs in Visual Basic unterscheidet sich von der in VBScript verwendeten Methode. Die im VBScript verwendete **getref** -Funktion ist in Visual Basic nicht verfügbar. Daher muss ein Entwickler ein [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Objekt erstellen, das über die Rückruffunktion als Standardmethode verfügt. Weitere Informationen finden Sie [unter Registrieren eines Rückrufs in Visual Basic](registering-a-callback-in-visual-basic.md).
+> Das Hinzufügen eines Rückrufs in Visual Basic sich von der in VBScript verwendeten Methode ab. Die im VBScript verwendete **GetRef-Funktion** ist in der Datei nicht Visual Basic. Daher muss ein Entwickler ein [**IDispatch-Objekt**](/windows/win32/api/oaidl/nn-oaidl-idispatch) erstellen, das über die Rückruffunktion als Standardmethode verfügt. Weitere [Informationen finden Sie unter Registrieren eines Rückrufs in Visual Basic](registering-a-callback-in-visual-basic.md).
 
- 
+ 
 
 ## <a name="vbscript-example"></a>VBScript-Beispiel
 
-Der folgende VBScript-Code definiert die Rückruffunktion **servicechangecallback**, die aufgerufen werden soll, wenn die Werte von Zustandsvariablen geändert werden oder wenn die Dienst Instanz nicht mehr verfügbar ist. Die Funktion verfügt über vier Argumente.
+Der folgende VBScript-Code definiert die Rückruffunktion **serviceChangeCallback,** die aufgerufen wird, wenn sich die Werte der Zustandsvariablen ändern oder wenn die Dienstinstanz nicht mehr verfügbar ist. Die Funktion verfügt über vier Argumente.
 
-Das erste Argument für die Funktion gibt den Grund an, warum der Rückruf aufgerufen wird. Sie wird entweder aufgerufen, weil eine Status Variable geändert wurde, oder weil die Dienst Instanz nicht mehr verfügbar ist.
+Das erste Argument für die Funktion gibt den Grund an, aus dem der Rückruf aufgerufen wird. Sie wird entweder aufgerufen, weil eine Zustandsvariable geändert wurde oder weil die Dienstinstanz nicht mehr verfügbar ist.
 
-Das zweite Argument ist das Dienst Objekt, für das der Rückruf aufgerufen wird. Wenn der Rückruf für eine Änderung der Statusvariablen aufgerufen wird, wird der Funktion zwei weitere Argumente an die Funktion weitergegeben: der Name der geänderten Variable und der neue Wert.
+Das zweite Argument ist das Dienstobjekt, für das der Rückruf aufgerufen wird. Wenn der Rückruf für eine Änderung der Zustandsvariablen aufgerufen wird, werden der Funktion zwei zusätzliche Argumente übergeben: der Name der geänderten Variablen und ihr neuer Wert.
 
-In diesem Beispiel zeigt der Rückruf einfach ein Meldungs Feld an, das den Namen der geänderten Variablen und ihren neuen Wert anzeigt, und, wenn der Rückruf für eine Änderung der Statusvariablen aufgerufen wurde. Andernfalls wird eine Meldung angezeigt, die angibt, dass die Dienst Instanz nicht mehr verfügbar ist.
+In diesem Beispiel zeigt der Rückruf einfach ein Meldungsfeld an, in dem der Name der geänderten Variablen und deren neuer Wert angezeigt werden und der Rückruf für eine Änderung der Zustandsvariablen aufgerufen wurde. Andernfalls wird eine Meldung angezeigt, die angibt, dass die Dienstinstanz nicht mehr verfügbar ist.
 
-Der letzte Teil des Code Fragments zeigt, wie die Rückruffunktion mithilfe der [**addCallback**](/windows/desktop/api/Upnp/nf-upnp-iupnpservice-addcallback) -Methode registriert wird. Es wird davon ausgegangen, dass die Dienst Objektvariablen, *Appservice* und *xportservice* , wie unter Abrufen von [Dienst Objekten](obtaining-service-objects.md)gezeigt, initialisiert wurden.
+Der letzte Teil des Codefragments zeigt, wie die Rückruffunktion mithilfe der [**AddCallback-Methode registriert**](/windows/desktop/api/Upnp/nf-upnp-iupnpservice-addcallback) wird. Es wird davon ausgegangen, dass die Dienstobjektvariablen *appService* und *xportService* initialisiert wurden, wie unter [Abrufen von Dienstobjekten gezeigt.](obtaining-service-objects.md)
 
 
 ```VB
@@ -188,6 +188,6 @@ HRESULT AddCallbackToService(IUPnPService* pUPnPService)
 
 
 
- 
+ 
 
- 
+ 

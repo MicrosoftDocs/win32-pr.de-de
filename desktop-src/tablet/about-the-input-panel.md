@@ -1,102 +1,102 @@
 ---
-description: Ab Microsoft Windows XP Tablet PC Edition Software Development Kit (SDK), Version 1,0, bietet der System-Level Tablet PC Input Panel einen universellen Mechanismus zum Ausführen von Texteingaben auf der Windows-Plattform, obwohl dieser keinen programmgesteuerten Zugriff bietet. Das Tablet PC SDK, Version 1,5, "tzinputpanel"-Objekt integriert Texteingabe Tools in Anwendungen.
+description: Ab Version 1.0 des Microsoft Windows XP Tablet PC Edition Software Development Kit (SDK) bietet der Tablet PC-Eingabebereich auf Systemebene einen universellen Mechanismus zum Ausführen von Texteingaben auf der Windows-Plattform, obwohl er keinen programmgesteuerten Zugriff bietet. Das PenInputPanel-Objekt des Tablet PC SDK, Version 1.5, integriert Texteingabetools in Anwendungen.
 ms.assetid: 14fe4963-ab9b-4c78-9f17-791c68378ef0
 title: Informationen zum Eingabebereich
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7db733e49e49d428b5ff8072a1315787d9fafd25
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 044e8c3a43127bd765fd5004329352956e4be8bb9f214f8dda8896fa318832a9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393245"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119844410"
 ---
 # <a name="about-the-input-panel"></a>Informationen zum Eingabebereich
 
-\[" [**Pinputpanel**](peninputpanel-class.md) " wurde durch [**TextInput**](/windows/desktop/api/peninputpanel/nn-peninputpanel-itextinputpanel)ersetzt. Weitere Informationen finden Sie unter [Programmieren des Text Eingabe Panels](programming-the-text-input-panel.md).\]
+\[[**PenInputPanel**](peninputpanel-class.md) wurde durch [**TextInput ersetzt.**](/windows/desktop/api/peninputpanel/nn-peninputpanel-itextinputpanel) Weitere Informationen finden Sie unter [Programmieren des Texteingabebereichs.](programming-the-text-input-panel.md)\]
 
-Ab Microsoft Windows XP Tablet PC Edition Software Development Kit (SDK), Version 1,0, bietet der System-Level Tablet PC Input Panel einen universellen Mechanismus zum Ausführen von Texteingaben auf der Windows-Plattform, obwohl dieser keinen programmgesteuerten Zugriff bietet. Das Tablet PC SDK, Version 1,5, " [**tzinputpanel**](peninputpanel-class.md) "-Objekt integriert Texteingabe Tools in Anwendungen.
+Ab Version 1.0 des Microsoft Windows XP Tablet PC Edition Software Development Kit (SDK) bietet der Tablet PC-Eingabebereich auf Systemebene einen universellen Mechanismus zum Ausführen von Texteingaben auf der Windows-Plattform, obwohl er keinen programmgesteuerten Zugriff bietet. Das [**PenInputPanel-Objekt**](peninputpanel-class.md) des Tablet PC SDK, Version 1.5, integriert Texteingabetools in Anwendungen.
 
-In der folgenden Abbildung wird der Stift Eingabebereich angezeigt, der über dem Beispiel " [Auto Claims Form Sample](auto-claims-form-sample.md) " angezeigt wird.
+Die folgende Grafik zeigt den Stifteingabebereich, der über dem Beispiel für das [Formular für automatische Ansprüche angezeigt](auto-claims-form-sample.md) wird.
 
-![Stift Eingabebereich wird über automatisches Anspruchsformular Beispiel Beispiel angezeigt](images/36eaa36b-1b0c-4363-96fa-092f70663ffa.jpg)
+![Stifteingabebereich, der im Beispielbeispiel für das Formular für automatische Ansprüche angezeigt wird](images/36eaa36b-1b0c-4363-96fa-092f70663ffa.jpg)
 
-Das [**Objekt**](peninputpanel-class.md) "" "" "" "ist für Anwendungsentwickler praktisch. Es ist nicht erforderlich, Steuerelemente für vorhandene Formulare zu ersetzen. Sie können an vorhandene Steuerelemente, die Texteingaben empfangen, einfach " **cuinputpanel** "-Objekte anfügen, und Sie können damit beginnen, Eingaben **aus dem "** "-Objekt "" ""
+Das [**PenInputPanel-Objekt**](peninputpanel-class.md) ist praktisch für Anwendungsentwickler. Es ist nicht notwendig, Steuerelemente in vorhandenen Formularen zu ersetzen. Sie können **PenInputPanel-Objekte** einfach an vorhandene Steuerelemente anfügen, die Texteingaben empfangen, und sie können beginnen, Eingaben vom **PenInputPanel-Objekt zu** empfangen.
 
-Das Objekt " [**pinputpanel**](peninputpanel-class.md) " übernimmt die Einstellungen aus dem Eingabe Panel für die folgenden Eigenschaften:
+Das [**PenInputPanel-Objekt**](peninputpanel-class.md) übernimmt die Einstellungen aus dem Eingabebereich für die folgenden Eigenschaften:
 
 -   Layout
--   Frei Handstärke
--   Erkennungs Timeout
--   Feldgröße, Sendemodus und andere Einstellungen, die speziell für die ostasiatische einfügende Eingabe gelten
+-   Breite der Ink-Daten
+-   Erkennungs-Timeout
+-   Feldgröße, Sendemodus und andere Einstellungen für ostasiatische Boxeingaben
 
-Das Objekt " [**pinputpanel**](peninputpanel-class.md) " bietet keinen Zugriff auf die zugrunde liegende frei Hand Eingabe. Um frei Hand Eingaben zu erhalten, verwenden Sie das [InkPicture](inkpicture-control-reference.md) -Steuerelement.
+Das [**PenInputPanel-Objekt**](peninputpanel-class.md) bietet keinen Zugriff auf die zugrunde liegende Ink-Datei. Verwenden Sie das Steuerelement [InkPicture, um die InkPicture-Datei](inkpicture-control-reference.md) zu erhalten.
 
-Das Objekt " [**pinputpanel**](peninputpanel-class.md) " stellt eine direkte Benutzeroberfläche (User Interface, UI) bereit, die von Endbenutzern Ihrer Anwendungen problemlos erkannt werden kann. Sie wird automatisch aktiviert, wenn der Benutzer auf ein Fenster mit einem **PenInputPanel** -Objekt tippt, das den Tablettstift verwendet. Der Stift Eingabebereich wird automatisch angezeigt, wenn das System ein Cursor Button up-Ereignis für das Fenster erkennt, an das das **PenInputPanel** -Objekt angefügt wird. Die automatische Aktivierung kann deaktiviert werden, indem die [**AutoShow**](/windows/win32/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_autoshow) -Eigenschaft auf **false** festgelegt wird.
+Das [**PenInputPanel-Objekt**](peninputpanel-class.md) stellt eine benutzeroberfläche bereit, die von Endbenutzern Ihrer Anwendungen leicht gefunden werden kann. Sie wird automatisch aktiviert, wenn der Benutzer mithilfe des Tablettstifts auf ein Fenster mit einem **PenInputPanel-Objekt** tippt. Der Stifteingabebereich wird automatisch angezeigt, wenn das System ein CursorButtonUp-Ereignis für das Fenster erkennt, an das das **PenInputPanel-Objekt** angefügt ist. Die automatische Aktivierung kann deaktiviert werden, indem die [**AutoShow-Eigenschaft**](/windows/win32/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_autoshow) auf **FALSE festgelegt wird.**
 
-Der Stift Eingabe Panel wird bei Mausereignissen nicht automatisch angezeigt. Pen-Ereignisse werden bei der Verwendung von Terminal Diensten in Mausereignisse konvertiert. Das Objekt " [**pinputpanel**](peninputpanel-class.md) " funktioniert nicht über eine Terminal Dienste-Verbindung.
+Der Stifteingabebereich wird bei Mausereignissen nicht automatisch angezeigt. Stiftereignisse werden bei Verwendung von Terminaldiensten in Mausereignisse konvertiert. Das [**PenInputPanel-Objekt**](peninputpanel-class.md) funktioniert nicht über eine Terminaldiensteverbindung.
 
-## <a name="pen-input-panel-input-modes"></a>Eingabemodi für Stift Eingabebereich
+## <a name="pen-input-panel-input-modes"></a>Eingabemodi des Stifteingabebereichs
 
-Das Objekt " [**pinputpanel**](peninputpanel-class.md) " ermöglicht die Tastatur-oder Handschrift Eingabe mit zusätzlichen normalen zur Unterstützung der Eingabe. Die Benutzeroberfläche zum Stift Eingabe Panel umfasst Folgendes:
+Das [**PenInputPanel-Objekt**](peninputpanel-class.md) ermöglicht entweder Tastaturfunktionen oder Handschrifteingaben mit zusätzlichen Tastaturen, die die Eingabe unterstützen. Die Benutzeroberfläche für den Stifteingabebereich umfasst Folgendes:
 
--   Schreiben von Pad
--   Schreiben von Pad für ostasiatische Sprachen
--   QuickKeys-normalen
--   Direkte Tastatur
+-   Schreibblock
+-   Schreibpad für ostasiatische Sprachen
+-   QuickKeys-Tastaturen
+-   Tastatur an Ort und Stelle
 
-Die Verfügbarkeit des Schreib Bereichs im Vergleich zum Schreibvorgang für ostasiatische Sprachen hängt von der Standardeinstellung für das Gebiets Schema des Benutzers im Betriebssystem ab.
+Die Verfügbarkeit des Schreibpads im Vergleich zum Schreibpad für ostasiatische Sprachen hängt von der Standardeinstellung des Benutzer-Locale im Betriebssystem ab.
 
-### <a name="writing-pad"></a>Schreiben von Pad
+### <a name="writing-pad"></a>Schreibblock
 
-Der Schreibbereich ähnelt der vertrauten Benutzeroberfläche des Eingabe Panels.
+Das Schreibpad ähnelt der vertrauten Benutzeroberfläche des Eingabebereichs.
 
-Das Schreiben von Pad sammelt Handschrift vom Endbenutzer. Die grundlegende Benutzeroberfläche enthält eine einzelne Schreib Zeile, in der der Benutzer Text mit einem digitalen Stift schreiben kann. Wenn der Benutzer das Schreiben beendet und entweder auf die Schaltfläche "Senden" tippt oder darauf wartet, dass ein Timeout auftritt, wird die Handschrift an die Erkennung gesendet.
+Das Schreibpad erfasst Handschrift vom Endbenutzer. Die grundlegende Benutzeroberfläche enthält eine einzelne Schreibzeile, in der der Benutzer Text mit einem digitalen Stift schreiben kann. Wenn der Benutzer mit dem Schreiben fertig ist und entweder auf die Schaltfläche Senden tippt oder auf ein Timeout wartet, wird die Handschrift an die Erkennenden gesendet.
 
-Frei Hand Eingaben werden erkannt, nachdem eine angegebene Zeitspanne seit dem Zeitpunkt der letzten Erfassung des frei Hand Strichs verstrichen ist. Wenn das Timeout auftritt, wird die frei Hand Eingabe aus der Auflistungs Oberfläche entfernt und die Erkennung erfolgt. Der erkannte Text wird dann in das Steuerelement eingefügt, an das das Objekt " [**tzinputpanel**](peninputpanel-class.md) " angefügt wird.
+Ink wird erkannt, nachdem seit dem Sammeln des letzten Ink-Strichs ein angegebener Zeitraum verstrichen ist. Wenn das Timeout auftritt, wird ink von der Auflistungsoberfläche entfernt, und die Erkennung erfolgt. Der erkannte Text wird dann in das Steuerelement eingefügt, an das das [**PenInputPanel-Objekt**](peninputpanel-class.md) angefügt ist.
 
-### <a name="east-asian-multibox-pad"></a>Ostasiatische Multibox-Pad
+### <a name="east-asian-multibox-pad"></a>Ostasiatisches Multiboxpad
 
-Die ostasiatische Version des Stift Eingabe Panels zeigt eine Multibox-Schnittstelle für die Eingabe asiatischer Zeichen an. Es stellt Alternativen bereit und ähnelt der Benutzeroberfläche des Eingabe Panels. Benutzer können falsch erkannte Zeichen korrigieren, indem Sie auf ein Schreib Feld tippen und das richtige Zeichen aus einer Liste von Alternativen in der Leiste oben im Stift Eingabe Panel auswählen. Filter Schaltflächen sind verfügbar, um die Liste der Erkennungs Alternativen auf angegebene Zeichen Typen, z. b. Symbole, einzugrenzen.
+Die ostasiatische Version des Stifteingabebereichs zeigt eine Multibox-Schnittstelle für die Eingabe von asiatisch-zeichen an. Sie bietet Alternativen und ähnelt der Benutzeroberfläche des Eingabebereichs. Benutzer können falsch korrigierte Zeichen korrigieren, indem sie auf ein Schreibfeld tippen und das richtige Zeichen aus einer Liste von Alternativen in der Leiste oben im Stifteingabebereich auswählen. Filterschaltflächen stehen zur Verfügung, um die Liste der Erkennungs alternativer Zeichen auf bestimmte Zeichentypen wie Symbole zu verengen.
 
-Die koreanischen und japanischen Versionen des Schreib Rasters verfügen zusätzlich zu den kleinen Tastenkombinationen, die für alle sprach Skins gemeinsam sind.
+Die koreanischen und japanischen Versionen des Schreibpads verfügen über einen Konvertierungsschlüssel zusätzlich zu den Mini-Quicktasten, die allen Sprachs skins gemeinsam sind.
 
-Um lateinische Zeichen im Schreib-Pad für ostasiatische Sprachen zu erhalten, legen Sie die Eigenschaft " [**Faktoid**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_factoid) " fest, um die Genauigkeit der lateinischen Zeichenerkennung zu erhöhen. Legen Sie den **Digit** -Member des [**Faktoid**](factoid-constants.md) -Objekts für numerische Zeichen oder den **OneChar** -Member des **Faktoid** -Objekts für alphabetische und numerische Zeichen fest.
+Um lateinische Zeichen im Schreibpad für ostasiatische Sprachen zu erhalten, legen Sie die [**Factoid-Eigenschaft**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_factoid) fest, um die Genauigkeit der lateinischen Zeichenerkennung zu erhöhen. Legen Sie **das Digit-Member** des [**Factoid-Objekts**](factoid-constants.md) für numerische Zeichen oder das **OneChar-Member** des **Factoid-Objekts** für alphabetische und numerische Zeichen fest.
 
-### <a name="quickkeys-keypads"></a>QuickKeys-Keypads
+### <a name="quickkeys-keypads"></a>QuickKeys-Tastaturen
 
-Der Stift Eingabe Panel bietet zwei kleine normalen zum Eingeben von Symbolen und Zahlen.
+Der Stifteingabebereich bietet zwei kleine Tastaturen zum Eingeben von Symbolen und Zahlen.
 
-### <a name="in-place-keyboard"></a>Direkte Tastatur
+### <a name="in-place-keyboard"></a>In-Place-Tastatur
 
-Der Stift Eingabe Panel bietet einen Tastaturmodus für Situationen, in denen die Handschrifterkennung nicht ausreicht. Wenn Sie beispielsweise ein Kennwort oder eine Teilenummer eingeben, haben die Benutzer wahrscheinlich mehr Erfolg, wenn Sie die Tastatur für den Stift Eingabebereich verwenden, als dies beim Schreiben des Pads der Fall wäre. Dies liegt daran, dass es unwahrscheinlich ist, dass Kenn Wörter oder Teilenummern im Erkennungs Wörterbuch des Schreibvorgangs enthalten sind.
+Der Stifteingabebereich bietet einen Tastaturmodus für Situationen, in denen die Handschrifterkennung nicht ausreicht. Wenn Sie z. B. ein Kennwort oder eine Teilnummer eingeben, werden Benutzer wahrscheinlich mehr Erfolg bei der Verwendung der Tastatur des Stifteingabebereichs als beim Schreibpad haben. Dies liegt daran, dass Kennwörter oder Teilenummern wahrscheinlich nicht im Wörterbuch der Schreibauflage enthalten sind.
 
-## <a name="recognizer-support"></a>Erkennungs Unterstützung
+## <a name="recognizer-support"></a>Unterstützung für die Wiedererkennung
 
-Das Objekt " [**pinputpanel**](peninputpanel-class.md) " unterstützt Versand erkenungen für Windows XP Tablet PC Edition Version 1,0 und das Tablet PC SDK Version 1,5.
+Das [**PenInputPanel-Objekt**](peninputpanel-class.md) unterstützt die Windows XP Tablet PC Edition Version 1.0 und das Tablet PC SDK Version 1.5.
 
 ## <a name="automatic-positioning"></a>Automatische Positionierung
 
-Standardmäßig wird der Stift Eingabebereich automatisch relativ zu dem Steuerelement positioniert, an das es angefügt ist. Das Steuerelement überschneidet sich nicht, es sei denn, für den Stift Eingabebereich und das Steuerelement ist nicht genügend Bildschirm vorhanden, oder der Entwickler legt die Position des Stift Eingabe Panels nicht explizit fest.
+Standardmäßig wird der Stifteingabebereich automatisch relativ zum Steuerelement positioniert, an das er angefügt ist. Es überlappt das Steuerelement nicht, es sei denn, es ist nicht genügend Bildschirmfläche sowohl für den Stifteingabebereich als auch für das Steuerelement vorhanden, oder es sei denn, der Entwickler legt die Position des Stifteingabebereichs explizit fest.
 
-Automatisches Positionieren von Funktionen nur, wenn der Entwickler die Position nicht explizit mithilfe der Methode " [**muveto**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-moveto) " festgelegt hat. Zum Überschreiben der automatischen Positionierung ändern Sie die Werte der Eigenschaften [**oben**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_top) und [**Links**](/windows/win32/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_left) in einem [**PanelMoving**](peninputpanel-panelmoving.md) -Ereignishandler.
+Automatische Positionierungsfunktionen nur, wenn der Entwickler die Position nicht explizit mit der [**MoveTo-Methode festgelegt**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-moveto) hat. Um die automatische Positionierung zu überschreiben, ändern Sie die Werte der [**Eigenschaften Top**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_top) und [**Left**](/windows/win32/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_left) in einem [**PanelMoving-Ereignishandler.**](peninputpanel-panelmoving.md)
 
-Die Position des Stift Eingabe Panels wird durch die Ränder des Bildschirms eingeschränkt. Kein Rand des Stift Eingabe Bereichs kann von jedem Rahmen des Bildschirms über 0,25 Zoll liegen.
+Die Position des Stifteingabebereichs wird durch die Ränder des Bildschirms eingeschränkt. Kein Rand des Stifteingabebereichs kann näher als 0,25 Zoll von einem Rand des Bildschirms entfernt sein.
 
-Standardmäßig wird der obere Rand des Stift Eingabe Bereichs am unteren Rand des Steuer Elements angezeigt, an das es angefügt ist, und wird vom-Steuerelement durch den Wert der [**VerticalOffset**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_verticaloffset) -Eigenschaft getrennt. Wenn unter dem Steuerelement nicht genügend Platz vorhanden ist, wird der untere Teil des Stift Eingabe Bereichs am oberen Rand des Steuer Elements angezeigt, an das es angefügt ist. es wird durch den Wert der **VerticalOffset** -Eigenschaft vom-Steuerelement getrennt. Wenn der Platz immer noch nicht ausreicht, wie bei einem voll Bild Bearbeitungs Steuerelement, überlappt der Stift Eingabebereich das Steuerelement.
+Standardmäßig wird der obere Rand des Stifteingabebereichs am unteren Rand des Steuerelements angezeigt, an das es angefügt ist, und durch den Wert der [**VerticalOffset-Eigenschaft**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_verticaloffset) vom Steuerelement getrennt. Wenn unter dem Steuerelement nicht genügend Platz vorhanden ist, wird der untere Rand des Stifteingabebereichs am oberen Rand des Steuerelements angezeigt, an das es angefügt ist, und durch den Wert der **VerticalOffset-Eigenschaft** vom Steuerelement getrennt. Wenn immer noch nicht genügend Platz vorhanden ist, wie bei einem Vollbild-Bearbeitungssteuerfeld, überlappt der Stifteingabebereich das Steuerelement.
 
-Der Eingabebereich des linken Edge-Stifts wird am linken Rand des Steuer Elements angezeigt, an das es angefügt ist, und wird vom-Steuerelement durch den Wert der [**HorizontalOffset**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_horizontaloffset) -Eigenschaft getrennt, mit Ausnahme der vom Bildschirm begrenzten. Wenn die gewünschte Position den Stift Eingabebereich hinter den verfügbaren Bildschirm Begrenzungen platziert, nimmt der Stift Eingabe Panel die nächstmögliche horizontale Position an.
+Der Eingabebereich des linken Randstifts wird am linken Rand des Steuerelements angezeigt, an das es angefügt ist, und wird durch den Wert der [**HorizontalOffset-Eigenschaft**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_horizontaloffset) vom Steuerelement getrennt, außer als durch den Bildschirm gebunden. Wenn die gewünschte Position den Stifteingabebereich über die verfügbaren Bildschirmgrenzen hinaus platziert, nimmt der Stifteingabebereich die nächste mögliche horizontale Position an.
 
-### <a name="forced-overlap"></a>Erzwungene Überschneidung
+### <a name="forced-overlap"></a>Erzwungene Überlappung
 
-Manchmal ist es erforderlich, dass der Stift Eingabebereich das angefügte Steuerelement überlappt, wie bei einem voll Bild Bearbeitungs Steuerelement. In solchen Fällen wird die automatische Positionierung des Stift Eingabe Bereichs anhand der folgenden Regeln bestimmt:
+Manchmal ist es erforderlich, dass sich der Stifteingabebereich mit dem angefügten Steuerelement überschneidet, wie es bei einem Vollbildbearbeitungssteuerfeld der Fall ist. In solchen Fällen wird die automatische Positionierung des Stifteingabebereichs anhand der folgenden Regeln bestimmt:
 
--   Wenn sich die Einfügemarke in der oberen Hälfte des angefügten Steuer Elements befindet, befindet sich die vertikale Position des Stift Eingabe Bereichs am unteren Rand des Bildschirms, was möglicherweise über dem unteren Teil des Steuer Elements liegt.
--   Wenn sich die Einfügemarke in der unteren Hälfte des angefügten Steuer Elements befindet, befindet sich die vertikale Position des Stift Eingabe Bereichs am oberen Rand des Bildschirms und kann Sie möglicherweise über der oberen Hälfte des Steuer Elements platzieren.
+-   Wenn sich die Einfügemarke in der oberen Hälfte des angefügten Steuerelements befindet, befindet sich die vertikale Position des Stifteingabebereichs am unteren Bildschirmrand und platziert sie möglicherweise über dem unteren Teil des Steuerelements.
+-   Wenn sich die Einfügemarke in der unteren Hälfte des angefügten Steuerelements befindet, befindet sich die vertikale Position des Stifteingabebereichs am oberen Bildschirmrand und platziert sie möglicherweise über der oberen Hälfte des Steuerelements.
 
 ### <a name="windowless-controls"></a>Fensterlose Steuerelemente
 
-Wenn ein [**PenInputPanel**](peninputpanel-class.md) -Objekt an ein fensterloses Steuerelement angefügt ist, wird der Stift Eingabebereich relativ zum übergeordneten Element des fensterlosen Steuer Elements positioniert. Legen Sie die Eigenschaften [**oben**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_top) und [**Links**](/windows/win32/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_left) in einem [**PanelMoving**](peninputpanel-panelmoving.md) -Ereignishandler fest, oder verwenden Sie die Methode " [**muveto**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-moveto) ", um den Stift Eingabebereich manuell zu positionieren.
+Wenn ein [**PenInputPanel-Objekt**](peninputpanel-class.md) an ein fensterloses Steuerelement angefügt wird, wird der Stifteingabebereich relativ zum übergeordneten Element des fensterlosen Steuerelements positioniert. Legen Sie [**die Eigenschaften Oben**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_top) und [**Links**](/windows/win32/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_left) in einem [**PanelMoving-Ereignishandler**](peninputpanel-panelmoving.md) fest, oder verwenden Sie die [**MoveTo-Methode,**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-moveto) um den Stifteingabebereich manuell zu positionieren.
 
  
 

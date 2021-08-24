@@ -1,7 +1,7 @@
 ---
-description: Berechnet den Quell Strahl, der sich aus einem einzelnen Sprung der interreflektierten hell ergibt. Diese Methode kann für jede beleuchtete Szene verwendet werden, einschließlich eines auf einer kugelförmigen Harmonika (SH) basierenden PRT-Modells.
+description: Berechnet die Quellspiegelung, die sich aus einem einzelnen Bounce des gespiegelten Lichts ergibt. Diese Methode kann für jede litierte Szene verwendet werden, einschließlich eines SH-basierten PRT-Modells (Precomputed Radiance Transfer).
 ms.assetid: 91a6b503-acd2-459b-9d60-de68c879c61b
-title: 'ID3DXPRTEngine:: computebounce-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::ComputeBounce-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d40d4b2686087864cad17df0feb99dbc890033b0
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cc4f362555c8cc86857733ecc3e75279dc68cc6b339f641f70c592f0e3576a96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355706"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847420"
 ---
-# <a name="id3dxprtenginecomputebounce-method"></a>ID3DXPRTEngine:: computebounce-Methode
+# <a name="id3dxprtenginecomputebounce-method"></a>ID3DXPRTEngine::ComputeBounce-Methode
 
-Berechnet den Quell Strahl, der sich aus einem einzelnen Sprung der interreflektierten hell ergibt. Diese Methode kann für jede beleuchtete Szene verwendet werden, einschließlich eines auf einer kugelförmigen Harmonika (SH) basierenden PRT-Modells.
+Berechnet die Quellspiegelung, die sich aus einem einzelnen Bounce des gespiegelten Lichts ergibt. Diese Methode kann für jede litierte Szene verwendet werden, einschließlich eines SH-basierten PRT-Modells (Precomputed Radiance Transfer).
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT ComputeBounce(
 
 <dl> <dt>
 
-*pdatain* \[ in\]
+*pDataIn* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Eingabe Objekt, das das 3D-Objekt aus dem vorherigen Licht Sprung darstellt. Dieser Eingabepuffer muss über die richtige Anzahl von Farbkanälen verfügen, die für die Simulation reserviert werden.
+Zeiger auf ein [**EINGABE-ID3DXPRTBuffer-Objekt,**](id3dxprtbuffer.md) das das 3D-Objekt aus dem vorherigen Lichtsprung darstellt. Für diesen Eingabepuffer muss die richtige Anzahl von Farbkanälen für die Simulation zugeordnet sein.
 
 </dd> <dt>
 
-*pdataout* \[ in, out\]
+*pDataOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein Output [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, das einen einzelnen Sprung des interreflektierten Lichts modelliert. Dieser Ausgabepuffer muss über die richtige Anzahl von Farbkanälen verfügen, die für die Simulation reserviert werden.
+Zeiger auf ein [**ID3DXPRTBuffer-Ausgabeobjekt,**](id3dxprtbuffer.md) das einen einzelnen Bounce des gespiegelten Lichts modelliert. Für diesen Ausgabepuffer muss die richtige Anzahl von Farbkanälen für die Simulation zugeordnet sein.
 
 </dd> <dt>
 
-*pdatatotal* \[ in, out\]
+*pDataTotal* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein optionales [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, bei dem es sich um die laufende Summe aller vorherigen pdataout-Ausgaben handelt. Kann **null** sein.
+Zeiger auf ein optionales [**ID3DXPRTBuffer-Objekt,**](id3dxprtbuffer.md) das die laufende Summe aller vorherigen pDataOut-Ausgaben ist. Kann NULL **sein.**
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Zeiger auf ein optionales [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, bei d
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die folgende Aufruf Sequenz, um mehrere Licht Sprünge mit direkter Beleuchtung zu modellieren.
+Verwenden Sie die folgende Aufrufsequenz, um mehrere Lichtabsprungseffekte mit direkter Beleuchtung zu modellieren.
 
 
 ```
@@ -97,7 +97,7 @@ hr = m_pPRTEngine->ComputeBounce( pDataB, pDataA, pDataC ); // fourth bounce
 
 
 
-Verwenden Sie die folgende Aufruf Sequenz, um mehrere Licht Sprünge mit unter Oberflächendaten zu modellieren.
+Verwenden Sie die folgende Aufrufsequenz, um mehrere lichte Bounces mit Unteroberflächen-Punktung zu modellieren.
 
 
 ```
@@ -119,9 +119,9 @@ hr = m_pPRTEngine->ComputeSS    ( pDataA, pDataB, pDataC );
 
 
 
-Die Ausgabe dieser Methode enthält nicht "Albedo", und nur das eingehende Licht ist in den Simulator integriert. Indem Sie Albedo nicht multiplizieren, können Sie Albedo-Variation in einer präziseren Skalierung als die Quell Strahlung modellieren und dadurch genauere Ergebnisse aus der Komprimierung erzielen.
+Die Ausgabe dieser Methode enthält kein Albedo, und nur eingehendes Licht ist in den Simulator integriert. Wenn Sie die Albedo nicht multiplizieren, können Sie Albedo-Variationen mit einer feineren Skala als die Quellbreite modellieren, wodurch genauere Ergebnisse der Komprimierung erzielt werden.
 
-[**ID3DXPRTEngine:: multiplyalbedo**](id3dxprtengine--multiplyalbedo.md) aufzurufen, um jeden PRT-Vektor von Albedo zu multiplizieren.
+Rufen [**Sie ID3DXPRTEngine::MultiplyAlbedo**](id3dxprtengine--multiplyalbedo.md) auf, um jeden PRT-Vektor mit dem Albedo zu multiplizieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -129,19 +129,19 @@ Die Ausgabe dieser Methode enthält nicht "Albedo", und nur das eingehende Licht
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXPRTEngine](id3dxprtengine.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: computess**](id3dxprtengine--computess.md)
+[**ID3DXPRTEngine::ComputeSS**](id3dxprtengine--computess.md)
 </dt> </dl>
 
  

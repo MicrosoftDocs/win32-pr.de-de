@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 910eaff70d16f76fd510a256e256d008821859fb
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: 45e0acb88df2c2e6780fc0aee6931cc76bc7986f0bb1e4abbbc5722b2bd1527a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122626096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119845040"
 ---
 # <a name="span-idvspixengineisingleeventrequest_requestsupportedcolumnsasync_iframeeventscallback_ptr_dwordspanisingleeventrequestrequestsupportedcolumnsasync-method"></a><span id="vspixengine.isingleeventrequest_requestsupportedcolumnsasync_iframeeventscallback_ptr_dword"></span>ISingleEventRequest::RequestSupportedColumnsAsync-Methode
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,18 +41,18 @@ HRESULT RequestSupportedColumnsAsync(
 ## <a name="parameters"></a>Parameter
 
 *requestCallback*   
-Nicht verwendet.
+Wird nicht verwendet.
 
 *progressIntervalMsecs*   
-Nicht verwendet.
+Wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

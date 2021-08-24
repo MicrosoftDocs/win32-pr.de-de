@@ -1,46 +1,46 @@
 ---
-title: Schema Verwaltung
-description: Die ADSI-Beispiel Anbieter Komponente definiert die Schema Klassen \ 0034; Organisationseinheit \ 0034; und \ 0034; Benutzer \ 0034; und verwaltet diese Schema Klassen auf folgende Weise.
+title: Schemaverwaltung
+description: Die ADSI-Beispielanbieterkomponente definiert die Schemaklassen \ 0034;Organisationseinheit \ 0034; und \ 0034; User \ 0034; und verwaltet diese Schemaklassen auf folgende Weise.
 ms.assetid: c3e07846-a11e-46d4-9863-a89810896ad7
 ms.tgt_platform: multiple
 keywords:
-- Schema Verwaltung ADSI
-- Schema Verwaltung ADSI
+- Schemaverwaltung ADSI
+- Schemaverwaltung ADSI
 - Verwalten von Schemas ADSI
 - Schemas, Verwalten von ADSI
-- Verwalten eines Schema-ADSI
+- Verwalten eines Schemas ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 99d398f8eb056498977f886e836c0f97c95f0b9b
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 4ddb8fcc3d29dce27ac2b74c9c8e79d1cef2f9d2a23307e9b7626861ed3e7dd4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104556703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119770485"
 ---
-# <a name="schema-management"></a>Schema Verwaltung
+# <a name="schema-management"></a>Schemaverwaltung
 
-Die ADSI-Beispiel Anbieter Komponente definiert die Schema Klassen "Organisationseinheit" und "Benutzer" und verwaltet diese Schema Klassen wie folgt.
+Die ADSI-Beispielanbieterkomponente definiert die Schemaklassen "Organisationseinheit" und "Benutzer" und verwaltet diese Schemaklassen auf folgende Weise.
 
-Die Schema Klasse "Organisationseinheit" wird durch ein ADS-Container Objekt dargestellt und kann andere "Organisationseinheiten" und "Benutzer" enthalten. Das Container Objekt unterstützt die Schnittstellen [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown), [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch), [**IADs**](/windows/desktop/api/Iads/nn-iads-iads)und [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer). Die Schema Klasse "User" wird durch ein generisches Active Directory Objekt dargestellt und enthält keine anderen Typen von Objekten. In der Beispiel Anbieter Komponente wird das User-Objekt als generisches Active Directory Objekt implementiert, das die Schnittstellen **IUnknown**, **IDispatch** und **IADs** unterstützt. Beachten Sie, dass das Benutzerobjekt, in diesem Fall, die [**IADsUser**](/windows/desktop/api/Iads/nn-iads-iadsuser) -Schnittstelle nicht unterstützt.
+Die Schemaklasse "Organisationseinheit" wird durch ein ADs-Containerobjekt dargestellt und kann andere "Organisationseinheiten" und "Benutzer" enthalten. Das Containerobjekt unterstützt die Schnittstellen [**IUnknown,**](/windows/win32/api/unknwn/nn-unknwn-iunknown) [**IDispatch,**](/windows/win32/api/oaidl/nn-oaidl-idispatch) [**IADs**](/windows/desktop/api/Iads/nn-iads-iads)und [**IADsContainer.**](/windows/desktop/api/Iads/nn-iads-iadscontainer) Die Schemaklasse "User" wird durch ein generisches Active Directory-Objekt dargestellt und enthält keine anderen Objekttypen. In der Beispielanbieterkomponente wird das User-Objekt als generisches Active Directory-Objekt implementiert, das die Schnittstellen **IUnknown,** **IDispatch** und **IADs unterstützt.** Beachten Sie, dass das User-Objekt in diesem Fall die [**IADsUser-Schnittstelle nicht**](/windows/desktop/api/Iads/nn-iads-iadsuser) unterstützt.
 
-Die Beispiel Anbieter Komponente muss auch das ADS-Namespace Objekt implementieren, das die Schnittstellen [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown), [**IADs**](/windows/desktop/api/Iads/nn-iads-iads), [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer), [**iadsopendsobject**](/windows/desktop/api/Iads/nn-iads-iadsopendsobject)und [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)unterstützt.
+Die Beispielanbieterkomponente muss auch das ADs-Namespaceobjekt implementieren, das die Schnittstellen [**IUnknown,**](/windows/win32/api/unknwn/nn-unknwn-iunknown) [**IADs,**](/windows/desktop/api/Iads/nn-iads-iads) [**IADsContainer,**](/windows/desktop/api/Iads/nn-iads-iadscontainer) [**IADsOpenDSObject**](/windows/desktop/api/Iads/nn-iads-iadsopendsobject)und [**IDispatch unterstützt.**](/windows/win32/api/oaidl/nn-oaidl-idispatch)
 
-In der folgenden Abbildung werden die Details des Schemas veranschaulicht, das die beiden Beispiel Schema Klassen für Anbieter Komponenten darstellt.
+Die folgende Abbildung zeigt die Details des Schemas, das die schema-Klassen der beiden Beispielanbieterkomponenten darstellt.
 
-![ADSI-Beispiel Anbieter-Komponenten Schema](images/dssmsch.png)
+![Adsi-Beispiel für Das Komponentenschema des Anbieters](images/dssmsch.png)
 
-Beachten Sie, dass in der obigen Abbildung die Schema Klasse "Organisationseinheit" drei Eigenschaften definiert: "Description", "Headcounts" und "ID". Die Schema Klasse "User" definiert vier Eigenschaften: "ID", "Name", "PhoneNumber" und "Title". Die "ID"-Eigenschaft wird von beiden Schema Klassen gemeinsam verwendet. Jede Eigenschaft wird entweder durch das Zeichen "String" oder das "Integer"-Syntax Objekt definiert.
+Beachten Sie, dass in der obigen Abbildung die Schemaklasse "Organisationseinheit" drei Eigenschaften definiert: "Beschreibung", "Mitarbeiterzahl" und "ID". Die Schemaklasse "User" definiert vier Eigenschaften: "ID", "Name", "PhoneNumber" und "Title". Die "ID"-Eigenschaft wird von beiden Schemaklassen gemeinsam verwendet. Jede Eigenschaft wird entweder durch das Syntaxobjekt "String" oder "Integer" definiert.
 
 > [!Note]  
-> Syntax Objekte sind nicht in der ersten Version der Beispiel Anbieter Komponente vorhanden. In den meisten Microsoft ADSI-Schema Implementierungen sind die Syntax Objekte jedoch im Schema Container Objekt enthalten, genauso wie die Schema Klasse und die Eigenschafts Objekte. Aus diesem Grund werden Sie hier angezeigt.
+> Syntaxobjekte sind in der ersten Version der Beispielanbieterkomponente nicht vorhanden. In den meisten Microsoft ADSI-Schemaimplementierungen sind die Syntaxobjekte jedoch im Schemacontainerobjekt enthalten, genau wie die Schemaklasse und die Eigenschaftenobjekte. Aus diesem Grund werden sie hier angezeigt.
 
- 
+ 
 
-Diese Anbieter Komponente macht Schema Daten für die ADSI-Client Anwendung in Form von ADS-Klassen Objekten, ADS-Eigenschafts Objekten und ADS-Syntax Objekten verfügbar, sodass Schema Daten zur Laufzeit abgerufen werden können.
+Diese Anbieterkomponente ermöglicht der ADSI-Clientanwendung den Zugriff auf Schemadaten in Form von ADs-Klassenobjekten, ADs-Eigenschaftenobjekten und ADs-Syntaxobjekten innerhalb eines Schemaklassencontainerobjekts, sodass Schemadaten zur Laufzeit abgerufen werden können.
 
-Die für die Beispiel Anbieter Komponente definierten adspaths für die Schema Klassen-Containerobjekte sind "Sample://Seattle/Schema" und "Sample://Toronto/Schema". In diesem Beispiel sind die Inhalte der Schemas identisch.
+Die für die Beispielanbieterkomponente definierten ADsPaths für die Schemaklassencontainerobjekte sind "Sample://Seattle/schema" und "Sample://Toronto/schema". In diesem Beispiel sind die Inhalte der Schemas identisch.
 
- 
+ 
 
- 
+ 

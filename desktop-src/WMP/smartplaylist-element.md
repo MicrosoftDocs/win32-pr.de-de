@@ -37,7 +37,7 @@ Das **smartPlaylist-Element** enthält den dynamisch definierten Teil einer Wied
 
 | Begriff                                                                                                                                   | BESCHREIBUNG                                                                                                 |
 |----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| <span id="version__required______________"></span><span id="VERSION__REQUIRED______________"></span>**Version** (erforderlich) <br/> | Die Dezimalzahl, die die Versionsnummer des Schemas für intelligente Wiedergabelisten darstellt. Legen Sie auf 1.0.0.0 fest.<br/> |
+| <span id="version__required______________"></span><span id="VERSION__REQUIRED______________"></span>**Version** (erforderlich) <br/> | Die Dezimalzahl, die die Versionsnummer des Schemas der intelligenten Wiedergabeliste darstellt. Legen Sie auf 1.0.0.0 fest.<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **smartPlaylist-Element** enthält den dynamisch definierten Teil einer Wied
 | Hierarchy | Elemente                                                       |
 |-----------|----------------------------------------------------------------|
 | Parent    | [Seq](seq-element.md)                                         |
-| Untergeordnet     | [querySet,](queryset-element.md) [filter](filter-element.md) |
+| Untergeordnet     | [querySet](queryset-element.md), [filter](filter-element.md) |
 
 
 
@@ -93,11 +93,11 @@ Ein **smartPlaylist-Element** enthält in der Regel ein **querySet-Element** und
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher.<br/> |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

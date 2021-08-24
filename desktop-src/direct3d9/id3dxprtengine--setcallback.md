@@ -1,7 +1,7 @@
 ---
-description: Legt einen Zeiger auf eine optionale Rückruffunktion fest, die den Prozentsatz der abzurufenden sphärischen (SH) Berechnungen berechnet und dem Aufrufer die Möglichkeit gibt, den Simulator abzubrechen.
+description: Legt einen Zeiger auf eine optionale Rückruffunktion fest, die den Prozentsatz der abgeschlossenen SH-Berechnungen berechnet und dem Aufrufer die Möglichkeit gibt, den Simulator abzubricht.
 ms.assetid: 0a47610d-fa4e-4094-9adb-4fd9306b8a12
-title: 'ID3DXPRTEngine:: SetCallback-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::SetCallBack-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e9c2cfe710bc41ff71267e381fa0bf576688f9df
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e1ed2570c45380ce4faa0be42ddb9231d6420940dd9a6d669d6f2540154dc644
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106350698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847359"
 ---
-# <a name="id3dxprtenginesetcallback-method"></a>ID3DXPRTEngine:: SetCallback-Methode
+# <a name="id3dxprtenginesetcallback-method"></a>ID3DXPRTEngine::SetCallBack-Methode
 
-Legt einen Zeiger auf eine optionale Rückruffunktion fest, die den Prozentsatz der abzurufenden sphärischen (SH) Berechnungen berechnet und dem Aufrufer die Möglichkeit gibt, den Simulator abzubrechen.
+Legt einen Zeiger auf eine optionale Rückruffunktion fest, die den Prozentsatz der abgeschlossenen SH-Berechnungen berechnet und dem Aufrufer die Möglichkeit gibt, den Simulator abzubricht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT SetCallBack(
 
 <dl> <dt>
 
-*Platine* \[ in\]
+*pCB* \[ In\]
 </dt> <dd>
 
 Typ: **[LPD3DXSHPRTSIMCB](lpd3dxshprtsimcb.md)**
 
-Ein Zeiger auf die [LPD3DXSHPRTSIMCB](lpd3dxshprtsimcb.md) -Rückruffunktion, die den Prozentsatz der abgeschlossenen SH-Berechnungen berechnet. Die Rückruffunktion muss implementiert werden, damit S OK zurückgegeben wird \_ , um den Simulator weiterhin ausführen zu können. Bei jedem anderen Wert wird der Simulator abgebrochen.
+Zeiger auf die [Rückruffunktion LPD3DXSHPRTSIMCB,](lpd3dxshprtsimcb.md) die den Prozentsatz der abgeschlossenen SH-Berechnungen berechnet. Die Rückruffunktion muss implementiert werden, um S \_ OK zurückzugeben, um den Simulator weiter auszuführen. Jeder andere Wert bricht den Simulator ab.
 
 </dd> <dt>
 
-*Häufigkeit* \[ in\]
+*Häufigkeit* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Häufigkeit von Rückruf aufrufen. Die Umkehrung der Häufigkeit entspricht ungefähr der Häufigkeit, mit der die Rückruffunktion aufgerufen wird.
+Häufigkeit von Rückrufaufrufen. Die Umkehrung von Frequency entspricht ungefähr der Häufigkeit, mit der die Rückruffunktion aufgerufen wird.
 
 </dd> <dt>
 
-*lpusercontext* \[ in\]
+*lpUserContext* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPVOID**](../winprog/windows-data-types.md)**
 
-Ein Zeiger auf einen benutzerdefinierten Wert, der an die Rückruffunktion übermittelt wird. Wird normalerweise von einer Anwendung verwendet, um einen Zeiger auf eine Datenstruktur zu übergeben, die Kontextinformationen für die Rückruffunktion bereitstellt.
+Zeiger auf einen benutzerdefinierten Wert, der an die Rückruffunktion übergeben wird. Wird in der Regel von einer Anwendung verwendet, um einen Zeiger auf eine Datenstruktur zu übergeben, die Kontextinformationen für die Rückruffunktion bereitstellt.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Ein Zeiger auf einen benutzerdefinierten Wert, der an die Rückruffunktion über
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist "S \_ OK".
+Der Rückgabewert ist S \_ OK.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,12 +81,12 @@ Der Rückgabewert ist "S \_ OK".
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

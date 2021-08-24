@@ -1,49 +1,49 @@
 ---
-title: Implementieren des Eigenschaften Satzes für Zusammenfassungs Informationen
-description: Es gibt Richtlinien, die Sie beachten müssen, wenn Sie eine Zusammenfassungs Informations Eigenschaft für den strukturierten Speicher implementieren.
+title: Implementieren des Eigenschaftensatzes für Zusammenfassungsinformationen
+description: Beim Implementieren eines Zusammenfassungsinformationseigenschaftensatzes für strukturierte Storage müssen Richtlinien befolgt werden.
 ms.assetid: e1204de5-b712-4bd5-bffb-6a12ec8d7052
 keywords:
-- Implementieren des Eigenschaften Satzes für Zusammenfassungs Informationen
+- Implementieren des Eigenschaftensatzes für Zusammenfassungsinformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 69e5ae6208aa5cb7a325d1cccf77f17e969c5b75
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dbe847d9a7353074727c94250d0f1ec1fec2194b5b7d250099464a86667861f6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707301"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119796910"
 ---
-# <a name="implementing-the-summary-information-property-set"></a>Implementieren des Eigenschaften Satzes für Zusammenfassungs Informationen
+# <a name="implementing-the-summary-information-property-set"></a>Implementieren des Eigenschaftensatzes für Zusammenfassungsinformationen
 
-Es gibt Richtlinien, die Sie beachten müssen, wenn Sie eine Zusammenfassungs Informations Eigenschaft für den strukturierten Speicher implementieren.
+Beim Implementieren eines Zusammenfassungsinformationseigenschaftensatzes für strukturierte Storage müssen Richtlinien befolgt werden.
 
-Im folgenden sind die Richtlinien für die Implementierung [des Eigenschaften Satzes für Zusammenfassungs Informationen](the-summary-information-property-set.md)aufgeführt:
+Im Folgenden sind die Richtlinien für die Implementierung des [Eigenschaftensatzes für Zusammenfassungsinformationen aufgeführt:](the-summary-information-property-set.md)
 
--   **PID \_ Die Vorlage** verweist auf ein externes Dokument, das Format-und Stil Informationen enthält. Der Prozess, mit dem sich die Vorlage befindet, ist Implementierungs definiert.
--   **PID \_ Lastauthor** ist der Name, der von der Anwendung in Benutzerinformationen gespeichert wird. Mary erstellt z. b. ein Dokument auf dem Computer und übergibt es John, das es dann ändert und speichert. Mary ist Autor, John ist der letzte gespeicherte Wert.
--   **PID \_ "Revnumber** " gibt an, wie oft der Datei-/Speicherbefehl für dieses Dokument aufgerufen wurde.
--   Alle Datums-/Uhrzeitwerte müssen in UTC (Universal koordinierte Time) gespeichert werden.
--   **PID \_ Create \_ DTM** ist eine schreibgeschützte Eigenschaft. Diese Eigenschaft sollte beim Erstellen eines Dokuments festgelegt werden, sollte jedoch nicht später geändert werden.
--   Für die **PID- \_ Miniaturansicht** sollten Anwendungen Daten im **CF- \_ DIB** -oder **CF- \_ MetafilePict** -Format speichern. **CF \_ MetafilePict** wird empfohlen.
--   **PID \_ Sicherheit** ist die empfohlene Sicherheitsstufe für das Dokument. Durch die Angabe der Sicherheitsstufe für das Dokument kann eine andere Anwendung als der Absender des Dokuments die Benutzeroberfläche an die Eigenschaften anpassen. In einer Anwendung sollten keine Informationen zu einem Kenn Wort geschützten Dokument angezeigt werden, oder es sollten keine Änderungen an den Erzwingung Read-Only oder auf Dokumente mit gesperrten Anmerkungen vorgenommen werden. Wenn der Benutzer versucht, Eigenschaften zu ändern, sollte die Anwendung den Benutzer über den Read-Only empfohlenen Status warnen.
+-   **PID \_ TEMPLATE** bezieht sich auf ein externes Dokument, das Format- und Formatinformationen enthält. Der Prozess, in dem sich die Vorlage befindet, ist implementierungsdefiniert.
+-   **PID \_ LASTAUTHOR** ist der Name, der von der Anwendung in Benutzerinformationen gespeichert wird. Mary erstellt beispielsweise ein Dokument auf ihrem Computer und übergibt es John, der es dann ändert und speichert. Mary ist die Autorin, John ist die letzte, die als Wert gespeichert wurde.
+-   **PID \_ REVNUMBER** ist die Anzahl, mit der der Befehl Datei/Speichern für dieses Dokument aufgerufen wurde.
+-   Jeder der Datums-/Uhrzeitwerte muss in der koordinierten Weltzeit (UTC) gespeichert werden.
+-   **PID \_ CREATE \_ MF** ist eine schreibgeschützte Eigenschaft. Diese Eigenschaft sollte festgelegt werden, wenn ein Dokument erstellt wird, aber nicht später geändert werden.
+-   Für **PID \_ THUMBNAIL** sollten Anwendungen Daten im **CF \_ DIB-** oder **CF \_ METAFILEPICT-Format** speichern. **CF \_ METAFILEPICT** wird empfohlen.
+-   **PID \_ SICHERHEIT** ist die empfohlene Sicherheitsstufe für das Dokument. Durch Notieren der Sicherheitsstufe für das Dokument kann eine andere Anwendung als der Absender des Dokuments seine Benutzeroberfläche an die Eigenschaften anpassen. Eine Anwendung sollte keine Informationen zu einem kennwortgeschützten Dokument anzeigen oder Änderungen an erzwungenen Read-Only- oder Locked-for-Annotations-Dokumenten aktivieren. Wenn der Benutzer versucht, Eigenschaften zu ändern, sollte die Anwendung den Benutzer über den Read-Only Empfohlenen Status warnen.
 
 
 
 | Sicherheitsstufe         | Wert |
 |------------------------|-------|
 | Keine                   | 0     |
-| Kennwort geschützt     | 1     |
-| Nur Lesen empfohlen  | 2     |
+| Kennwortgeschützt     | 1     |
+| Schreibgeschützt empfohlen  | 2     |
 | Schreibgeschützt erzwungen     | 4     |
-| Für Anmerkungen gesperrt | 8     |
+| Gesperrt für Anmerkungen | 8     |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

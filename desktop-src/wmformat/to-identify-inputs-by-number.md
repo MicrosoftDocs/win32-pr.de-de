@@ -8,26 +8,26 @@ keywords:
 - Profile, Identifizieren von Eingaben nach Zahl
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0629776eaaff4252a690c0e31cd6002f5de42b31
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 36ff09a81cac98edc6f14ded98ba9852501bfdfef4c5e40affa908c0ff710e1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104038545"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807530"
 ---
 # <a name="to-identify-inputs-by-number"></a>So identifizieren Sie Eingaben nach Zahl
 
-Jedes Beispiel, das Sie an den Writer übergeben, muss einer Eingabe Nummer zugeordnet werden. Jede Eingabe Nummer entspricht einem oder mehreren Datenströmen in dem Profil, das der Writer zum Schreiben der Datei verwendet. In einem Profil werden Medienquellen anhand eines Verbindungs Namens identifiziert. Der Writer ordnet dem einzelnen Verbindungs Namen eine Eingabe Nummer zu, wenn Sie das Profil für den Writer festlegen. Bevor Sie Beispiele an den Writer übergeben können, müssen Sie bestimmen, welche Daten von den einzelnen Eingaben erwartet werden. Sie können nicht davon ausgehen, dass die Eingaben in derselben Reihenfolge wie die Datenströme in einem Profil vorliegen, auch wenn dies häufig der Fall ist. Daher ist die einzige zuverlässige Möglichkeit, Eingaben mit Streams abzugleichen, der Verbindungs Name der Eingabe mit dem Verbindungs Namen des Streams zu vergleichen.
+Jedes Beispiel, das Sie an den Writer übergeben, muss einer Eingabenummer zugeordnet sein. Jede Eingabenummer entspricht einem oder mehreren Datenströmen im Profil, die der Writer zum Schreiben der Datei verwendet. In einem Profil werden Medienquellen durch einen Verbindungsnamen identifiziert. Der Writer ordnet jedem Verbindungsnamen eine Eingabenummer zu, wenn Sie das Profil für den Writer festlegen. Bevor Sie Beispiele an den Writer übergeben können, müssen Sie bestimmen, welche Daten die einzelnen Eingaben erwarten. Sie können nicht davon ausgehen, dass die Eingaben in derselben Reihenfolge wie die Streams in einem Profil vorliegen, auch wenn dies häufig der Fall ist. Daher besteht die einzige zuverlässige Möglichkeit zum Abgleichen von Eingaben mit Streams darin, den Verbindungsnamen der Eingabe mit dem Verbindungsnamen des Streams zu vergleichen.
 
-Führen Sie die folgenden Schritte aus, um die Verbindungs Namen und die zugehörigen Eingabe Nummern für ein geladenes Profil zu identifizieren:
+Führen Sie die folgenden Schritte aus, um die Verbindungsnamen und die entsprechenden Eingabenummern für ein geladenes Profil zu identifizieren:
 
-1.  Erstellen Sie ein Writer-Objekt, und legen Sie ein Profil zur Verwendung fest. Weitere Informationen zum Festlegen von Profilen im Writer finden [Sie unter So verwenden Sie Profile mit dem Writer](to-use-profiles-with-the-writer.md). Sie sollten die Verbindungs Namen kennen, die für die Datenströme im Profil verwendet werden. Sie können den Verbindungs Namen innerhalb des Profils abrufen, indem Sie das Datenstrom-Konfigurationsobjekt für jeden Stream abrufen und [**iwmstreamconfig:: getConnectionName**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstreamconfig-getconnectionname)aufrufen. Weitere Informationen zu Profilen und Stream-Konfigurationsobjekten finden Sie unter [Arbeiten mit Profilen](working-with-profiles.md).
-2.  Rufen Sie die Gesamtzahl der Eingaben durch Aufrufen von [**iwmwriter:: getinputcount**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-getinputcount)ab.
+1.  Erstellen Sie ein Writer-Objekt, und legen Sie ein profil fest, das verwendet werden soll. Weitere Informationen zum Festlegen von Profilen im Writer finden Sie unter [So verwenden Sie Profile mit dem Writer](to-use-profiles-with-the-writer.md). Sie sollten die Verbindungsnamen kennen, die für die Streams im Profil verwendet werden. Sie können den Verbindungsnamen aus dem Profil abrufen, indem Sie das Streamkonfigurationsobjekt für jeden Stream abrufen und [**IWMStreamConfig::GetConnectionName**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstreamconfig-getconnectionname)aufrufen. Weitere Informationen zu Profilen und Streamkonfigurationsobjekten finden Sie unter [Arbeiten mit Profilen.](working-with-profiles.md)
+2.  Rufen Sie die Gesamtzahl der Eingaben ab, indem [**Sie IWMWriter::GetInputCount**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-getinputcount)aufrufen.
 3.  Durchlaufen Sie alle Eingaben, und führen Sie jeweils die folgenden Schritte aus.
-    -   Rufen Sie die [**iwminputmediarequicenschnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwminputmediaprops) für die Eingabe ab, indem Sie [**iwmwriter:: GetInput-**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-getinputprops)Eigenschaften aufrufen.
-    -   Rufen Sie den Verbindungs Namen ab, der der Eingabe Nummer entspricht, indem Sie [**iwminputmedia-Eigenschaften:: getConnectionName**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwminputmediaprops-getconnectionname)aufrufen. Nachdem Sie den Verbindungs Namen eingegeben haben, kennen Sie die Streams, die mit den vom Writer zugewiesenen Eingabe Nummern verknüpft sind.
+    -   Rufen Sie die [**IWMInputMediaProps-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwminputmediaprops) für die Eingabe ab, indem [**Sie IWMWriter::GetInputProps**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-getinputprops)aufrufen.
+    -   Rufen Sie den Verbindungsnamen ab, der der Eingabenummer entspricht, indem [**Sie IWMInputMediaProps::GetConnectionName**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwminputmediaprops-getconnectionname)aufrufen. Nachdem Sie über den Verbindungsnamen verfügen, kennen Sie die Streams, die den vom Writer zugewiesenen Eingabenummern zugeordnet sind.
 
-Der folgende Beispielcode zeigt den Verbindungs Namen für jede Eingabe an. Weitere Informationen zur Verwendung dieses Codes finden Sie unter [Verwenden der Codebeispiele](using-the-code-examples.md).
+Im folgenden Beispielcode wird der Verbindungsname für jede Eingabe angezeigt. Weitere Informationen zur Verwendung dieses Codes finden Sie unter [Verwenden der Codebeispiele.](using-the-code-examples.md)
 
 
 ```C++
@@ -92,15 +92,15 @@ Exit:
 
 <dl> <dt>
 
-[**Iwmwriter-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriter)
+[**IWMWriter-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriter)
 </dt> <dt>
 
 [**Schreiben von ASF-Dateien**](writing-asf-files.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

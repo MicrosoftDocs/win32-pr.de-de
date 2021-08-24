@@ -1,53 +1,53 @@
 ---
 description: Typspezifische Daten für einen binären Stream in einer ASF-Datei (Advanced Systems Format).
 ms.assetid: 45608dde-894b-4204-80dc-505f068fb158
-title: MF_MT_ARBITRARY_HEADER-Attribut (mfapi. h)
+title: MF_MT_ARBITRARY_HEADER -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: abd559ede3506335378ae1d56bf5b886e1407946
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 55d824aad4f76947786f991807d2f7b301703e3e356d2d1cfb416aa634d49f93
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041955"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119826520"
 ---
-# <a name="mf_mt_arbitrary_header-attribute"></a>Beliebiges "MF MT"- \_ \_ \_ Attribut
+# <a name="mf_mt_arbitrary_header-attribute"></a>MF \_ MT \_ ARBITRARY \_ HEADER-Attribut
 
 Typspezifische Daten für einen binären Stream in einer ASF-Datei (Advanced Systems Format).
 
 ## <a name="data-type"></a>Datentyp
 
-**[**MT \_ Beliebiger \_ Header**](/windows/desktop/api/mfapi/ns-mfapi-mt_arbitrary_header)** , gespeichert als **Byte \[ \]**
+**[**MT \_ ARBITRARY \_ HEADER als**](/windows/desktop/api/mfapi/ns-mfapi-mt_arbitrary_header)** **BYTE gespeichert \[ \]**
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Zum Abrufen dieses Attributs müssen Sie [**imfattributes:: GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)aufrufen.
+Um dieses Attribut zu erhalten, rufen [**Sie DEN ATTRIBUTEAttributes::GetBlob auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
 
-Um dieses Attribut festzulegen, müssen Sie [**imfattributes:: setBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)aufrufen.
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetBlob auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-ASF-Dateien können Streams mit Binärdaten enthalten. Das MF \_ MT \_ - \_ Attribut beliebiges Header im Medientyp enthält [**eine \_ beliebige MT- \_ Header**](/windows/desktop/api/mfapi/ns-mfapi-mt_arbitrary_header) Struktur, die den Datenstrom beschreibt.
+ASF-Dateien können Streams mit Binärdaten enthalten. Das MF \_ MT \_ ARBITRARY \_ HEADER-Attribut im Medientyp enthält eine [**MT \_ ARBITRARY \_ HEADER-Struktur,**](/windows/desktop/api/mfapi/ns-mfapi-mt_arbitrary_header) die den Stream beschreibt.
 
-Zusätzlich zum "MF MT"- \_ \_ Attribut beliebiger \_ Header enthält der Medientyp für einen binären ASF-Stream die folgenden Attribute:
+Zusätzlich zum MF MT ARBITRARY HEADER-Attribut enthält der Medientyp für einen \_ \_ \_ ASF-Binärdatenstrom die folgenden Attribute:
 
 
 
-| Attribut                                                 | BESCHREIBUNG                                            |
+| attribute                                                 | Beschreibung                                            |
 |-----------------------------------------------------------|--------------------------------------------------------|
-| [**Haupt-Typ des MF- \_ MT \_ \_**](mf-mt-major-type-attribute.md) | Der Wert des-Attributs ist **MF MediaType \_ Binary**. |
-| [\_ \_ beliebiges \_ Format der MF-MT](mf-mt-arbitrary-format.md)   | Enthält zusätzliche Formatierungsdaten.                       |
+| [**MF \_ \_ MT-HAUPTTYP \_**](mf-mt-major-type-attribute.md) | Der Wert des Attributs ist **MFMediaType \_ Binary**. |
+| [MF \_ MT \_ ARBITRARY \_ FORMAT](mf-mt-arbitrary-format.md)   | Enthält zusätzliche Formatdaten.                       |
 
 
 
  
 
 > [!Note]  
-> Im Windows Media-Format-SDK werden binäre Streams als *beliebige Streams* oder *beliebige Datenströme* bezeichnet.
+> Im Windows Media Format SDK werden binäre Streams als *beliebige Streams* oder *beliebige Datenströme bezeichnet.*
 
  
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,20 +55,20 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> </dl>
 
  

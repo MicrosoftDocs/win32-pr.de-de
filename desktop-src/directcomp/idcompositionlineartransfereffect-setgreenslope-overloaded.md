@@ -1,9 +1,9 @@
 ---
-title: Idcompositionlineartransfereffect setgreenslope-Methode (Dcomp. h)
+title: IDCompositionLinearTransferEffect SetGreenSiva-Methoden (Dcomp.h)
 description: Legt die Steigung der linearen Funktion für den grünen Kanal fest.
 ms.assetid: e7e92544-dbc5-91ce-b818-056b7b572a7c
 keywords:
-- setgreenslope-Methoden directcomposition
+- setgreenstine-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 913944ab7d15e1f0d54edf49bb2587b7905ef7a1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 42a1c7636d115d8c187173a9d0998cd9b6d9108ea25c91f8f60dcfb5d42c218d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361967"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787760"
 ---
-# <a name="idcompositionlineartransfereffectsetgreenslope-methods"></a>Idcompositionlineartransfereffect:: setgreenslope-Methoden
+# <a name="idcompositionlineartransfereffectsetgreenslope-methods"></a>IDCompositionLinearTransferEffect::SetGreenSiva-Methoden
 
 Legt die Steigung der linearen Funktion für den grünen Kanal fest.
 
@@ -27,10 +27,10 @@ Legt die Steigung der linearen Funktion für den grünen Kanal fest.
 
 
 
-| Methode                                                                                                 | BESCHREIBUNG                                                             |
+| Methode                                                                                                 | Beschreibung                                                             |
 |:-------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
-| [**Setgreenslope**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setgreenslope(float))                               | Legt die Steigung der linearen Funktion für den grünen Kanal fest.<br/> |
-| [**Setgreenslope (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setgreenslope(idcompositionanimation)) | Legt die Steigung der linearen Funktion für den grünen Kanal fest.<br/> |
+| [**SetGreenShaven**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setgreenslope(float))                               | Legt die Steigung der linearen Funktion für den grünen Kanal fest.<br/> |
+| [**SetGreenS disposition (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setgreenslope(idcompositionanimation)) | Legt die Steigung der linearen Funktion für den grünen Kanal fest.<br/> |
 
 
 
@@ -40,15 +40,15 @@ Legt die Steigung der linearen Funktion für den grünen Kanal fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Idcompositionlineartransfereffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionlineartransfereffect)
+[**IDCompositionLinearTransferEffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionlineartransfereffect)
 </dt> </dl>
 
 �

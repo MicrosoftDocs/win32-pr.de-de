@@ -1,25 +1,25 @@
 ---
-description: Wenn ein Client beginnt, wählt er ein Sicherheitspaket für seine Transaktionen mit einem Server aus und kontaktiert dann den Server. Ein Server wählt mindestens ein Sicherheitspaket aus und wartet auf eine Client Verbindung.
+description: Wenn ein Client beginnt, wählt er ein Sicherheitspaket für seine Transaktionen mit einem Server aus und kontaktiert dann diesen Server. Ein Server wählt mindestens ein Sicherheitspaket aus und wartet auf eine Clientverbindung.
 ms.assetid: eaed162b-ef07-4295-93d9-6be91232a82e
-title: Informationen zu Sicherheitspaketen erhalten
+title: Abrufen von Informationen zu Sicherheitspaketen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ca690575ff7f46ef5a5b1d971b1ab9fdd91f95e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 626b5bf53ddc9ef20f0110dc7695a7245245604ca9e11baa3cbb50b2c1bd393f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119883100"
 ---
-# <a name="getting-information-about-security-packages"></a>Informationen zu Sicherheitspaketen erhalten
+# <a name="getting-information-about-security-packages"></a>Abrufen von Informationen zu Sicherheitspaketen
 
-Wenn ein Client beginnt, wählt er ein [*Sicherheitspaket*](/windows/desktop/SecGloss/s-gly) für seine Transaktionen mit einem Server aus und kontaktiert dann den Server. Ein Server wählt mindestens ein Sicherheitspaket aus und wartet auf eine Client Verbindung.
+Wenn ein Client beginnt, wählt [](/windows/desktop/SecGloss/s-gly) er ein Sicherheitspaket für seine Transaktionen mit einem Server aus und kontaktiert dann diesen Server. Ein Server wählt mindestens ein Sicherheitspaket aus und wartet auf eine Clientverbindung.
 
-Für spezifische Informationen zu den SSPI-Sicherheitspaketen, die mit einem bestimmten SSP verfügbar sind, kann die [**enumeratesecuritypackages**](/windows/desktop/api/Sspi/nf-sspi-enumeratesecuritypackagesa) -Funktion aufgerufen werden, um eine [**secpkginfo**](/windows/desktop/api/Sspi/ns-sspi-secpkginfoa) -Struktur abzurufen.
+Für spezifische Informationen zu den SSPI-Sicherheitspaketen, die für einen bestimmten SSP verfügbar sind, kann die [**EnumerateSecurityPackages-Funktion**](/windows/desktop/api/Sspi/nf-sspi-enumeratesecuritypackagesa) aufgerufen werden, um eine [**SecPkgInfo-Struktur**](/windows/desktop/api/Sspi/ns-sspi-secpkginfoa) abzurufen.
 
-Zum Abrufen der Ausgabestruktur übergibt der Aufrufer die Adresse eines Zeigers auf den Typ der Rückgabe Struktur an die Funktion. Die-Funktion ordnet Speicher zu und gibt die Daten an den Aufrufer zurück, indem die Adresse des Rückgabe Daten Puffers dem-Argument zugewiesen wird. Die SSPI-Konvention ist, dass die Funktion Arbeitsspeicher für die Struktur zuweist, und die aufrufenden Anwendung gibt diesen Speicher mit [**freecontextbuffer frei**](/windows/desktop/api/Sspi/nf-sspi-freecontextbuffer).
+Um die Ausgabestruktur abzurufen, übergibt der Aufrufer die Adresse eines Zeigers auf den Typ der Rückgabestruktur an die Funktion. Die Funktion weist Arbeitsspeicher zu und gibt die Daten an den Aufrufer zurück, indem dem Argument die Adresse des Rückgabedatenpuffers zugewiesen wird. Die SSPI-Konvention ist, dass die Funktion Speicher für die Struktur zuordnt, und die aufrufende Anwendung gibt diesen Arbeitsspeicher mithilfe von [**FreeContextBuffer frei.**](/windows/desktop/api/Sspi/nf-sspi-freecontextbuffer)
 
-Durch Aufrufen der [**querysecuritypackageinfo**](/windows/desktop/api/Sspi/nf-sspi-querysecuritypackageinfoa) -Funktion werden die Attribute eines [*Sicherheitspakets*](/windows/desktop/SecGloss/s-gly)abgerufen. Sowohl der Server als auch der Client können die **querysecuritypackageinfo** -Funktion aufgerufen werden, um die maximale Länge des Sicherheits Tokens vom **cbmaxtoken** -Member der [**secpkginfo**](/windows/desktop/api/Sspi/ns-sspi-secpkginfoa) -Struktur abzurufen. Ein Beispiel finden Sie unter Verwenden der Funktion " **querysecuritypackageinfo** ", die in [Verwenden von SSPI mit einem Windows Sockets-Server](using-sspi-with-a-windows-sockets-server.md)gezeigt wird.
+Durch Aufrufen [**der QuerySecurityPackageInfo-Funktion**](/windows/desktop/api/Sspi/nf-sspi-querysecuritypackageinfoa) werden die Attribute eines [*Sicherheitspakets abgerufen.*](/windows/desktop/SecGloss/s-gly) Sowohl der Server als auch der Client können die **QuerySecurityPackageInfo-Funktion** aufrufen, um die maximale Länge des Sicherheitstokens vom **cbMaxToken-Member** der [**SecPkgInfo-Struktur abzurufen.**](/windows/desktop/api/Sspi/ns-sspi-secpkginfoa) Ein Beispiel finden Sie im Aufruf der **QuerySecurityPackageInfo-Funktion** unter Verwenden von SSPI mit einem Windows [Sockets Server.](using-sspi-with-a-windows-sockets-server.md)
 
 Weitere Informationen zu Paketfunktionen finden Sie unter [Paketverwaltung](authentication-functions.md).
 

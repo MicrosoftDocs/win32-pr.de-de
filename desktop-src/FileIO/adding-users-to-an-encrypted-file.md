@@ -1,21 +1,21 @@
 ---
-description: Beispielcode, der zeigt, wie Sie einer vorhandenen verschlüsselten Datei mithilfe der Funktion "adduserstoverschlüsseltedfile" einen neuen Benutzer hinzufügen können.
+description: Beispielcode, der zeigt, wie sie einer vorhandenen verschlüsselten Datei mithilfe der AddUsersToEncryptedFile-Funktion einen neuen Benutzer hinzufügen.
 ms.assetid: 39260882-dc02-4f08-9d9b-f170c1e391df
 title: Hinzufügen von Benutzern zu einer verschlüsselten Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0e211b0b2052e9f170d1392773d65091a0625815
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f697fbbc16c9f05516229120f8ed41c7e732b519ddfdeeab0ce192cd28a41cf8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766290"
 ---
 # <a name="adding-users-to-an-encrypted-file"></a>Hinzufügen von Benutzern zu einer verschlüsselten Datei
 
-Das Codebeispiel in diesem Thema fügt mithilfe der Funktion " [**adduserstoverschlüsseltedfile**](/windows/desktop/api/Winefs/nf-winefs-adduserstoencryptedfile) " einen neuen Benutzer zu einer vorhandenen verschlüsselten Datei hinzu. Hierfür muss das Verschlüsselndes Dateisystem EFS-Zertifikat (von der Active Directory) im Benutzerzertifikat Speicher für vertrauenswürdige Personen vorhanden sein.
+Im Codebeispiel in diesem Thema wird einer vorhandenen verschlüsselten Datei mithilfe der [**AddUsersToEncryptedFile-Funktion**](/windows/desktop/api/Winefs/nf-winefs-adduserstoencryptedfile) ein neuer Benutzer hinzugefügt. Das EFS-Zertifikat (verschlüsselndes Dateisystem Active Directory) des Benutzers muss im Benutzerzertifikatspeicher für vertrauenswürdige Personen vorhanden sein.
 
-In diesem Beispiel wird der verschlüsselten Datei ein neues Feld für die Datenwiederherstellung hinzugefügt. Folglich kann der neu hinzugefügte Benutzer die verschlüsselte Datei entschlüsseln. Der Aufrufer muss bereits Zugriff auf die verschlüsselte Datei haben, entweder als ursprünglicher Besitzer, Datenwiederherstellungs-Agent oder als Benutzer, der zuvor der verschlüsselten Datei hinzugefügt wurde.
+In diesem Beispiel wird der verschlüsselten Datei ein neues Datenwiederherstellungsfeld hinzufügt. Daher kann der neu hinzugefügte Benutzer die verschlüsselte Datei entschlüsseln. Der Aufrufer muss bereits Zugriff auf die verschlüsselte Datei haben, entweder als ursprünglicher Besitzer, als Datenwiederherstellungs-Agent oder als Benutzer, der der verschlüsselten Datei zuvor hinzugefügt wurde.
 
 
 ```C++
@@ -235,16 +235,16 @@ VOID ErrorExit(LPWSTR wszErrorMessage, DWORD dwErrorCode)
 
 <dl> <dt>
 
-[**Certclosestore**](/windows/desktop/api/wincrypt/nf-wincrypt-certclosestore)
+[**CertCloseStore**](/windows/desktop/api/wincrypt/nf-wincrypt-certclosestore)
 </dt> <dt>
 
-[**Certfindcertifi. Store**](/windows/desktop/api/wincrypt/nf-wincrypt-certfindcertificateinstore)
+[**CertFindCertificateInStore**](/windows/desktop/api/wincrypt/nf-wincrypt-certfindcertificateinstore)
 </dt> <dt>
 
-[**Certfreecertififeecontext**](/windows/desktop/api/wincrypt/nf-wincrypt-certfreecertificatecontext)
+[**CertFreeCertificateContext**](/windows/desktop/api/wincrypt/nf-wincrypt-certfreecertificatecontext)
 </dt> <dt>
 
-[**Certopeinsystemstore**](/windows/desktop/api/wincrypt/nf-wincrypt-certopensystemstorea)
+[**CertOpenSystemStore**](/windows/desktop/api/wincrypt/nf-wincrypt-certopensystemstorea)
 </dt> <dt>
 
 [Dateiverschlüsselung](file-encryption.md)

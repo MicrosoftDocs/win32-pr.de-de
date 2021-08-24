@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentinvalidinstanceexception-Konstruktor'
-title: Esentinvalidinstanceexception-Konstruktor
+description: 'Weitere Informationen zu: EsentInvalidInstanceException-Konstruktor'
+title: EsentInvalidInstanceException-Konstruktor
 TOCTitle: 'EsentInvalidInstanceException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidInstanceException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidinstanceexception.esentinvalidinstanceexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8b6d5211dbfd2e6b025e393e592ff4dc99997357
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 496861f4744fbe2840d3a734e08a654c86a0ed26aa04e1c79116b55ee3c6dd99
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119723650"
 ---
-# <a name="esentinvalidinstanceexception-constructor"></a>Esentinvalidinstanceexception-Konstruktor
+# <a name="esentinvalidinstanceexception-constructor"></a>EsentInvalidInstanceException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidinstanceexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidInstanceException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentInvalidInstanceException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidinstanceexception-Klasse](./esentinvalidinstanceexception-class.md)
+[EsentInvalidInstanceException-Klasse](./esentinvalidinstanceexception-class.md)
 
-[Esentinvalidinstanceexception-Member](./esentinvalidinstanceexception-members.md)
+[EsentInvalidInstanceException-Member](./esentinvalidinstanceexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,7 +1,7 @@
 ---
 description: Ruft die Parameter der Renderoberfläche ab.
 ms.assetid: 4f46a4c6-7c50-479c-b2f5-24edff590c57
-title: 'ID3DXRenderToSurface:: getdesc-Methode (D3dx9core. h)'
+title: ID3DXRenderToSurface::GetDesc-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 00824c6b418a3e6707ebfd588d8d32d4e38f173d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7dd6787ad8a81491e92af2a5ec1a16253af4cd0a0f8cb075dde01461b0010d45
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119790480"
 ---
-# <a name="id3dxrendertosurfacegetdesc-method"></a>ID3DXRenderToSurface:: getdesc-Methode
+# <a name="id3dxrendertosurfacegetdesc-method"></a>ID3DXRenderToSurface::GetDesc-Methode
 
 Ruft die Parameter der Renderoberfläche ab.
 
@@ -40,12 +40,12 @@ HRESULT GetDesc(
 
 <dl> <dt>
 
-*pparameters* \[ vorgenommen\]
+*pParameters* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXRTS \_ DESC**](d3dxrts-desc.md)\***
 
-Zeiger auf eine [**D3DXRTS \_ DESC**](d3dxrts-desc.md) -Struktur, in der die Parameter der Renderoberfläche beschrieben werden.
+Zeiger auf eine [**D3DXRTS \_ DESC-Struktur,**](d3dxrts-desc.md) die die Parameter der Renderoberfläche beschreibt.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf eine [**D3DXRTS \_ DESC**](d3dxrts-desc.md) -Struktur, in der die Par
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

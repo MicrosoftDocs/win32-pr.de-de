@@ -1,21 +1,21 @@
 ---
-description: Wenn ein Netzwerkanbieter installiert wird, sollte Ihre Anwendung die in diesem Thema beschriebenen Registrierungsschlüssel und-Werte erstellen.
+description: Wenn ein Netzwerkanbieter installiert wird, sollte Ihre Anwendung die registrierungsschlüssel und -werte erstellen, die in diesem Thema beschrieben werden.
 ms.assetid: cc5a4a7b-02b5-4ecd-967c-de0656f00846
-title: Registrierungsschlüssel für die Authentifizierung
+title: Authentifizierungsregistrierungsschlüssel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ee2e42febe7516060dd61a7b751a33dcf62cb9c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a3c245cdb27a0d661e7e6df82ed0d1d0ed35a59ea05bf74bf98ebd39ba3dc791
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119883680"
 ---
-# <a name="authentication-registry-keys"></a>Registrierungsschlüssel für die Authentifizierung
+# <a name="authentication-registry-keys"></a>Authentifizierungsregistrierungsschlüssel
 
-Wenn ein Netzwerkanbieter installiert wird, sollte Ihre Anwendung die in diesem Thema beschriebenen Registrierungsschlüssel und-Werte erstellen. Diese Schlüssel und Werte stellen dem MPR Informationen zu den Netzwerkanbietern bereit, die auf dem System installiert sind. Die MPR prüft diese Schlüssel beim Start und lädt die gefundenen DLLs für den Netzwerkanbieter.
+Wenn ein Netzwerkanbieter installiert wird, sollte Ihre Anwendung die registrierungsschlüssel und -werte erstellen, die in diesem Thema beschrieben werden. Diese Schlüssel und Werte stellen dem MPR Informationen zu den auf dem System installierten Netzwerkanbietern bereit. Die MPR überprüft diese Schlüssel beim Starten und lädt die gefundenen Netzwerkanbieter-DLLs.
 
-Bevor Sie eine Reihe von Schlüsseln erstellen, die Informationen über Ihren Netzwerkanbieter enthalten, sollten Sie den Namen Ihres Netzwerk Anbieters dem **Bestell** Schlüssel hinzufügen. Dieser Schlüssel ist ein Unterschlüssel des folgenden Schlüssels:
+Bevor Sie einen Satz von Schlüsseln zum Speichern von Informationen zu Ihrem Netzwerkanbieter erstellen, sollten Sie dem **Bestellschlüssel** den Namen Ihres Netzwerkanbieters hinzufügen. Dieser Schlüssel ist ein Unterschlüssel des folgenden Schlüssels:
 
 ```
 HKEY_LOCAL_MACHINE
@@ -25,20 +25,11 @@ HKEY_LOCAL_MACHINE
             NetworkProvider
 ```
 
-Der **Bestell** Schlüssel enthält einen einzelnen Wert, **ProviderOrder**, der die installierten Anbieter auflistet und die Reihenfolge angibt, in der Sie während des Vorgangs ausprobiert werden sollen, der die Anbieter durchläuft, bis ein akzeptier barer Anbieter gefunden wird.
+Der **Bestellschlüssel** enthält einen einzelnen Wert, **ProviderOrder**, der die installierten Anbieter auflistet und die Reihenfolge angibt, in der sie bei Vorgängen versucht werden sollen, die Anbieter durchlaufen, bis ein akzeptierenden Anbieter gefunden wird.
 
-Der **ProviderOrder** -Wert enthält eine durch Trennzeichen getrennte Liste von Schlüsselnamen. Jeder Schlüssel Name in **ProviderOrder** identifiziert einen Netzwerkanbieter. Wenn MPR die Anbieter durchläuft, werden diese in der Reihenfolge aufgerufen, in der Sie in der Liste angezeigt werden.
+Der **ProviderOrder-Wert** enthält eine durch Trennzeichen getrennte Liste von Schlüsselnamen. Jeder Schlüsselname in **ProviderOrder** identifiziert einen Netzwerkanbieter. Wenn MPR durch die Anbieter zyklen, werden sie in der Reihenfolge angezeigt, in der sie in dieser Liste angezeigt werden.
 
-Der in **ProviderOrder** festgelegte Anbieter Name sollte auch als Name des Registrierungsschlüssels verwendet werden, der Informationen zu diesem Anbieter enthält. Die anbieterspezifischen Registrierungsschlüssel werden als Unterschlüssel des folgenden Schlüssels erstellt:
-
-```
-HKEY_LOCAL_MACHINE
-   SYSTEM
-      CurrentControlSet
-         Services
-```
-
-Anders ausgedrückt: die in **ProviderOrder** angegebenen Anbieter Namen sind der Pfad zur Registrierung der Netzwerkanbieter spezifischen Schlüssel relativ zum folgenden Pfad:
+Der in **ProviderOrder** festgelegte Anbietername sollte auch als Name des Registrierungsschlüssels verwendet werden, der Informationen zu diesem Anbieter enthält. Die anbieterspezifischen Registrierungsschlüssel werden als Unterschlüssel des folgenden Schlüssels erstellt:
 
 ```
 HKEY_LOCAL_MACHINE
@@ -47,7 +38,16 @@ HKEY_LOCAL_MACHINE
          Services
 ```
 
-Wenn Ihr Netzwerkanbieter Dienst installiert ist, sollte die Installationsanwendung einen Schlüssel wie folgt hinzufügen:
+Anders ausgedrückt: Die in **ProviderOrder** angegebenen Anbieternamen sind der Pfad zur Registrierung der netzwerkanbieterspezifischen Schlüssel relativ zum folgenden Pfad:
+
+```
+HKEY_LOCAL_MACHINE
+   SYSTEM
+      CurrentControlSet
+         Services
+```
+
+Wenn der Netzwerkanbieterdienst installiert ist, sollte die Installationsanwendung einen Schlüssel wie folgt hinzufügen:
 
 ```
 HKEY_LOCAL_MACHINE
@@ -57,35 +57,35 @@ HKEY_LOCAL_MACHINE
             ProviderName
 ```
 
-Dabei steht *providerName* für den Namen des Netzwerk Anbieters, der im **ProviderOrder** -Wert des **Auftrags** Schlüssels angegeben ist. Der **Gruppen** Wert unter dem *providerName* -Schlüssel sollte auf "Network Provider" festgelegt werden. Dadurch wird der Dienst als in der Netzwerkanbieter Gruppe festgelegt.
+Dabei ist *ProviderName* der Name des Netzwerkanbieters, wie im **ProviderOrder-Wert** des **Bestellschlüssels** angegeben. Der **Group-Wert** unter dem *ProviderName-Schlüssel* sollte auf "NetworkProvider" festgelegt werden. Dadurch wird der Dienst als in der Netzwerkanbietergruppe identifiziert.
 
-Sie müssen auch einen Unterschlüssel von *providerName*, **Network Provider**, erstellen. Dieser Schlüssel enthält die folgenden Werte, die den Netzwerkanbieter beschreiben.
+Sie müssen auch einen Unterschlüssel von *ProviderName*, **networkprovider** erstellen. Dieser Schlüssel enthält die folgenden Werte, die den Netzwerkanbieter beschreiben.
 
 
 
 | Wert                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Name**<br/>         | Enthält den Namen des Anbieters. Dieser Name wird dem Benutzer als Name des Netzwerks in den Dialogfeldern zum Durchsuchen angezeigt und sollte mit dem Feld **lpprovider** , das in den Strukturen von " [**nettresource**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) " zurückgegeben wird, identisch sein. Dieser Name muss eine Variation des Produkt namens sein, vorzugsweise mit einem Hinweis auf das Unternehmen, sodass er eindeutig und eindeutig ist. "MS-LanMan" ist beispielsweise ein guter Name, während "the net" eine schlechte Wahl wäre.<br/> |
-| **ProviderPath**<br/> | Enthält den vollständigen Pfad der dll, die den Netzwerkanbieter implementiert. MPR ruft [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) auf diesem Pfad auf.<br/>                                                                                                                                                                                                                                                                                                                                |
+| **Name**<br/>         | Enthält den Namen des Anbieters. Dieser Name wird dem Benutzer als Name des Netzwerks in den Dialogfeldern zum Durchsuchen angezeigt und sollte mit dem **lpProvider-Feld** übereinstimmen, das in [**NETRESOURCE-Strukturen**](/windows/desktop/api/Winnetwk/ns-winnetwk-netresourcea) zurückgegeben wird. Dieser Name sollte eine Variation des Produktnamens sein, vorzugsweise mit einem Hinweis auf das Unternehmen, damit er klar und eindeutig ist. "MS-LanMan" ist beispielsweise ein guter Name, während "The Net" eine schlechte Wahl wäre.<br/> |
+| **ProviderPath**<br/> | Enthält den vollständigen Pfad der DLL, die den Netzwerkanbieter implementiert. MPR ruft [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) für diesen Pfad auf.<br/>                                                                                                                                                                                                                                                                                                                                |
 
 
 
  
 
-Die folgenden Werte werden nur von Netzwerkanbietern verwendet, die die Funktionen für die Verwaltung von Anmelde Informationen, [**nplogonnotify**](/windows/desktop/api/Npapi/nf-npapi-nplogonnotify) und [**nppasswordchangenotify**](/windows/desktop/api/Npapi/nf-npapi-nppasswordchangenotify), unterstützen.
+Die folgenden Werte werden nur von Netzwerkanbietern verwendet, die die Anmeldeinformationsverwaltungsfunktionen [**NPLogonNotify**](/windows/desktop/api/Npapi/nf-npapi-nplogonnotify) und [**NPPasswordChangeNotify**](/windows/desktop/api/Npapi/nf-npapi-nppasswordchangenotify)unterstützen.
 
 
 
 | Wert                              | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Klasse**<br/>               | Ein **DWORD** , das die Klasse oder den Typ der Anbieter Funktionalität identifiziert, die dieser Anbieter unterstützt. Werte können ggf. durch den **or** -Operator verknüpft werden. Gültige Werte hierfür sind "WN \_ Network \_ Class", "WN \_ Credential \_ Class", "WN \_ Primary \_ Authent \_ Class" und "WN \_ Service Class" \_ .<br/> Obwohl ein Anbieter möglicherweise die primäre Authenticator-Funktionalität unterstützt, wird ein weiterer Mittelwert verwendet, um zu bestimmen, welcher Authentifikator primär ist.<br/> **Windows XP/2000:** Das wechseln primärer Authentifikatoren wird nicht unterstützt, daher wird dieser Wert ignoriert. <br/> |
-| **Authentproviderpath**<br/> | Dies ist der voll qualifizierte Dateiname für die dll, von der die Funktionen zur Verwaltung von Anmelde Informationen exportiert werden. Dieser Wert ist nur nützlich (aber nicht erforderlich), wenn der Anbieter als Anmelde Informations \_ Klasse oder primärer \_ Authent- \_ Klassen Anbieter identifiziert wird. Wenn dieser Wert für einen Anbieter dieser Klasse nicht vorhanden ist, wird erwartet, dass die Anmelde Informations Verwaltungsfunktionen aus der durch den ProviderPath-Wert identifizierten dll exportiert werden. Dieser Wert wird nur verwendet, wenn es wünschenswert ist, die Netzwerkfunktionen und die Funktionen der Anmelde Informationsverwaltung in separaten DLLs zu verpacken.<br/>  |
+| **Klasse**<br/>               | Ein **DWORD,** das die Klasse oder den Typ der Anbieterfunktionalität identifiziert, die dieser Anbieter unterstützt. Werte können ggf. vom **OR-Operator** verknüpft werden. Gültige Werte hierfür sind WN \_ NETWORK \_ CLASS, WN \_ CREDENTIAL \_ CLASS, WN \_ PRIMARY \_ AUTHENT \_ CLASS und WN SERVICE \_ \_ CLASS.<br/> Obwohl ein Anbieter primäre Authentifikatorfunktionen unterstützen kann, wird eine andere Möglichkeit verwendet, um zu bestimmen, welcher Authentifikator primär ist.<br/> **Windows XP/2000:** Das Wechseln primärer Authentifikatoren wird nicht unterstützt, sodass dieser Wert ignoriert wird. <br/> |
+| **AuthentProviderPath**<br/> | Dies ist der vollqualifizierte Dateiname für die DLL, die die Anmeldeinformationsverwaltungsfunktionen exportiert. Dieser Wert ist nur nützlich (aber nicht erforderlich), wenn der Anbieter als CREDENTIAL \_ CLASS- oder PRIMARY \_ AUTHENT \_ CLASS-Anbieter identifiziert wird. Wenn dieser Wert für einen Anbieter dieser Klasse nicht vorhanden ist, wird erwartet, dass die Anmeldeinformationsverwaltungsfunktionen aus der DLL exportiert werden, die durch den ProviderPath-Wert identifiziert wird. Dieser Wert wird nur verwendet, wenn es wünschenswert ist, die Netzwerkfunktionen und die Anmeldeinformations-Manager-Funktionen in separaten DLLs zu packen.<br/>  |
 
 
 
  
 
-Zusätzlich zu den Werten, die zum Registrieren von Netzwerkanbietern und Anmelde Informations Managern verwendet werden, können Sie der Registrierung einen Wert hinzufügen, um eine DLL für den Empfang von Verbindungs Benachrichtigungen zu registrieren. Erstellen Sie hierzu \_ \_ den Wert reg Expand SZ unter folgendem Schlüssel:
+Zusätzlich zu den Werten, die zum Registrieren von Netzwerkanbietern und Anmeldeinformations-Managern verwendet werden, können Sie der Registrierung einen Wert hinzufügen, um eine DLL für den Empfang von Verbindungsbenachrichtigungen zu registrieren. Erstellen Sie hierzu einen REG \_ EXPAND \_ SZ-Wert unter dem folgenden Schlüssel:
 
 ```
 HKEY_LOCAL_MACHINE
@@ -96,41 +96,41 @@ HKEY_LOCAL_MACHINE
                Notifyees
 ```
 
-Dieser Wert sollte den Pfad zu einer DLL angeben, die die [Verbindungs Benachrichtigungs-API](connection-notification-api.md)implementiert. Der Name dieses Werts kann beliebig sein, solange er nicht mit bereits vorhandenen Wertnamen in Konflikt steht.
+Dieser Wert sollte den Pfad zu einer DLL angeben, die die [Verbindung Benachrichtigungs-API](connection-notification-api.md)implementiert. Der Name dieses Werts kann beliebig sein, solange er nicht mit bereits vorhandenen Wertnamen in Konflikt steht.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt die Registrierungsschlüssel für ein System, das zwei Netzwerkanbieter installiert hat: "LanmanWorkstation" und "anothernetzvc". Anothernetzvc ist auch eine Anmelde Informationsverwaltung. Im Beispiel sind die Schlüsselnamen fett formatiert, und Wertnamen sind kursiv formatiert.
+Das folgende Beispiel zeigt die Registrierungsschlüssel für ein System, auf dem zwei Netzwerkanbieter installiert sind: LanmanWorkStation und AnotherNetSvc. AnotherNetSvc ist auch ein Anmeldeinformations-Manager. Im Beispiel sind Schlüsselnamen fett formatiert und Wertnamen kursiv.
 
-**HKEY \_ Lokales \_ Computer** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **Network Provider** \\ **Order**
+**HKEY \_ LOCAL \_ MACHINE** \\ **SYSTEM** \\ **CurrentControlSet** \\ **Control** \\ **NetworkProvider-Reihenfolge** \\ 
 
-*ProviderOrder* = "LanmanWorkstation, anothernetzvc"
+*ProviderOrder* = "LanmanWorkStation,AnotherNetSvc"
 
-**HKEY \_ Lokales \_ Computer** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **Network Provider** \\ **notififyees**
+**HKEY \_ LOCAL \_ MACHINE** \\ **SYSTEM** \\ **CurrentControlSet** \\ **Control** \\ **NetworkProvider** \\ **Notifyees**
 
-*Mynotifyapp* = "c: \\ Connect \\connect.dll"
+*MyNotifyApp* = "c: \\ connect \\connect.dll"
 
-**HKEY \_ Lokales \_ Computer** \\ **System** \\ **CurrentControlSet** \\ **Services** \\ **LanmanWorkstation**\\
+**HKEY \_ LOCAL \_ MACHINE** \\ **SYSTEM** \\ **CurrentControlSet** \\ **Services** \\ **LanmanWorkStation**\\
 
-*Group* = "Network Provider"
+*Group* = "NetworkProvider"
 
-**HKEY \_ Lokales \_ Computer** \\ **System** \\ **CurrentControlSet** \\ **Services** \\ **LanmanWorkstation** \\ **Network Provider**
+**HKEY \_ LOCAL \_ MACHINE** \\ **SYSTEM** \\ **CurrentControlSet** \\ **Services** \\ **LanmanWorkStation** \\ **NetworkProvider**
 
 *Name* = "NT LanMan"*ProviderPath* = "ntlanman.dll"
 
-*Class* = 0x00000001 (WN- \_ Netzwerk \_ Klasse)
+*Klasse* = 0x00000001 (WN-NETZWERKKLASSE) \_ \_
 
-**HKEY \_ Lokales \_ Computer** \\ **System** \\ **CurrentControlSet** \\ **Services** \\ **anothernetzvc**\\
+**HKEY \_ LOCAL \_ MACHINE** \\ **SYSTEM** \\ **CurrentControlSet** \\ **Services** \\ **AnotherNetSvc**\\
 
-*Group* = "Network Provider"
+*Group* = "NetworkProvider"
 
-**HKEY \_ Lokales \_ Computer** \\ **System** \\ **CurrentControlSet** \\ **Services** \\ **anothernetzwerkvc** \\ **Network Provider**
+**HKEY \_ LOCAL \_ MACHINE** \\ **SYSTEM** \\ **CurrentControlSet** \\ **Services** \\ **AnotherNetSvc** \\ **NetworkProvider**
 
-*Name* = "ein anderes Netzwerk"*ProviderPath* = "c: \\ andere \\anet.dll"
+*Name* = "Another Network"*ProviderPath* = "c: \\ another \\anet.dll"
 
-*Class* = 0x00000003 (WN- \_ Netzwerk \_ Klasse \| WN \_ Credential \_ Class)
+*Klasse* = 0x00000003 (WN-NETZWERKKLASSE \_ \_ \| WN \_ CREDENTIAL \_ CLASS)
 
-*Authentproviderpath* = "c: \\ andere \\anetCM.dll"
+*AuthentProviderPath* = "c: \\ another \\anetCM.dll"
 
  
 

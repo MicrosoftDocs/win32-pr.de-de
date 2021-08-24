@@ -1,38 +1,38 @@
 ---
-title: So rufen Sie Medien Beispiele mit dem synchronen Reader ab
-description: So rufen Sie Medien Beispiele mit dem synchronen Reader ab
+title: So rufen Sie Medienbeispiele mit dem synchronen Reader ab
+description: So rufen Sie Medienbeispiele mit dem synchronen Reader ab
 ms.assetid: 7e228a0b-e29d-485e-b2ef-81c0311ca828
 keywords:
-- Advanced Systems Format (ASF), Abrufen von Medien Beispielen
-- ASF (Advanced Systems Format), Abrufen von Medien Beispielen
+- Advanced Systems Format (ASF), Abrufen von Medienbeispielen
+- ASF (Advanced Systems Format), Abrufen von Medienbeispielen
 - Advanced Systems Format (ASF), synchrone Reader
 - ASF (Advanced Systems Format), synchrone Reader
-- synchrone Leser, Abrufen von Medien Beispielen
+- Synchrone Reader,Abrufen von Medienbeispielen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f1fd341ea9616b18a5e65cfa8c1134e0f1be44b5
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 2e1ec4fc7e8a894de304ea828cef9d8e019f4cdedfd2fbd851a427382ba741a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104389875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807430"
 ---
-# <a name="to-retrieve-media-samples-with-the-synchronous-reader"></a>So rufen Sie Medien Beispiele mit dem synchronen Reader ab
+# <a name="to-retrieve-media-samples-with-the-synchronous-reader"></a>So rufen Sie Medienbeispiele mit dem synchronen Reader ab
 
-Sie müssen jede Stichprobe einzeln vom synchronen Reader anfordern. Dadurch erhalten Sie mehr Kontrolle über die Beispiele, die Sie erhalten und wann Sie empfangen werden.
+Sie müssen jedes Beispiel nacheinander vom synchronen Reader anfordern. Dies bietet Ihnen mehr Kontrolle über die Beispiele, die Sie erhalten, und wann Sie sie erhalten.
 
-Verwenden Sie die [**iwmsynkreader:: getnextsample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmsyncreader-getnextsample) -Methode, um ein Beispiel abzurufen. Sie müssen hauptsächlich Zeiger auf Variablen übergeben, die mit Informationen zu dem Beispiel gefüllt werden, das als Parameter abgerufen wird. Der einzige Eingabeparameter ist *wstreamnum*. Wenn Sie eine streamnummer übergeben, ruft **getnextsample** das nächste Beispiel mit der angegebenen streamnummer ab. Wenn Sie 0 (null) für *wstreamnum* übergeben, wird das nächste Beispiel, das in der Datei chronologisch vorkommt, abgerufen.
+Verwenden Sie [**die IWMSyncReader::GetNextSample-Methode,**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmsyncreader-getnextsample) um ein Beispiel abzurufen. Sie müssen hauptsächlich Zeiger auf Variablen übergeben, die mit Informationen über das als Parameter abgerufene Beispiel gefüllt werden. Der einzige Eingabeparameter ist *wStreamNum.* Wenn Sie eine Streamnummer übergeben, **ruft GetNextSample** das nächste Beispiel mit der angegebenen Streamnummer ab. Wenn Sie 0 (null) für *wStreamNum übergeben,* wird das nächste Beispiel abgerufen, das chronologisch in der Datei auftritt.
 
-Standardmäßig ruft der synchrone Reader alle Beispiele aus den Ausgaben in einer Datei in chronologischer Reihenfolge ab. Wenn Sie **getnextsample** aufrufen und keine weiteren abzurufenden Beispiele vorhanden sind, werden keine weiteren Beispiele zurückgegeben, bei denen es sich um \_ \_ \_ \_ einen Fehlercode handelt. Wenn Sie daher codieren, können Sie einfach Beispiele durchlaufen, bis die Methode fehlschlägt.
+Standardmäßig ruft der synchrone Reader alle Stichproben aus den Ausgaben in einer Datei in chronologischer Reihenfolge ab. Wenn Sie **GetNextSample** aufrufen und keine Beispiele mehr zu erhalten sind, wird NS E NO MORE SAMPLES zurückgegeben. Dies ist ein \_ \_ \_ \_ Fehlercode. Beim Codieren können Sie daher einfach Stichproben durchschleifen, bis die Methode fehlschlägt.
 
 > [!Note]  
-> Um sicherzustellen, dass der synchrone Reader korrekte Beispiel dauern für Videostreams bereitstellt, müssen Sie zuerst die Datenstrom Ausgabe konfigurieren. Nennen Sie die [**iwmsyncreader:: setoutputsetting**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmsyncreader-setoutputsetting) -Methode, um die g \_ wszvideosampledurations-Einstellung auf " **true**" festzulegen.
+> Um sicherzustellen, dass der synchrone Reader die richtige Beispieldauer für Videostreams liefert, müssen Sie zuerst die Streamausgabe konfigurieren. Rufen Sie [**die IWMSyncReader::SetOutputSetting-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmsyncreader-setoutputsetting) auf, um die g \_ wszVideoSampleDurations-Einstellung auf **TRUE zu setzen.**
 
- 
+ 
 
 Beispielcode
 
-Im folgenden Beispielcode wird gezeigt, wie **getnextsample** zum Abrufen aller Beispiele in einer Datei verwendet wird.
+Der folgende Beispielcode zeigt, wie **GetNextSample verwendet** wird, um alle Beispiele in einer Datei abzurufen.
 
 
 ```C++
@@ -70,15 +70,15 @@ while (SUCCEEDED(hr));
 
 <dl> <dt>
 
-[**Iwmsynkreader-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmsyncreader)
+[**IWMSyncReader-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmsyncreader)
 </dt> <dt>
 
 [**Lesen von Dateien mit dem synchronen Reader**](reading-files-with-the-synchronous-reader.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

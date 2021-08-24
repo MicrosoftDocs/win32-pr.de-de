@@ -1,21 +1,21 @@
 ---
-description: Wenn ein Gerät erstellt wird, erstellt die Windows-Abbild Beschaffung (WIA) eine hierarchische Struktur von WIA-Elementen, die das Gerät und die diesem Gerät zugeordneten Ordner und Bilder darstellen.
+description: Wenn ein Gerät erstellt wird, erstellt Windows Image Acquisition (WIA) eine hierarchische Struktur von WIA-Elementen, die das Gerät und die diesem Gerät zugeordneten Ordner und Bilder darstellen.
 ms.assetid: ab7246e8-47bb-4b94-8d91-1c22010ebd9f
-title: Auflisten von Elementen
+title: Aufzählen von Elementen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c216e658b7105f6b3d88d01bd55a3200af7e45c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5438e5cb65b701fcbc24d61aa888ac6c88347cacdaca8fa0a861f8c452a1ebc6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104216053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119772880"
 ---
-# <a name="enumerating-items"></a>Auflisten von Elementen
+# <a name="enumerating-items"></a>Aufzählen von Elementen
 
-Wenn ein Gerät erstellt wird, erstellt die Windows-Abbild Beschaffung (WIA) eine hierarchische Struktur von WIA-Elementen, die das Gerät und die diesem Gerät zugeordneten Ordner und Bilder darstellen. Verwenden Sie das Stamm Element (das Element im Stamm der Struktur, das das Gerät darstellt) [**iwiaitem:: enumchilditems**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiaitem-enumchilditems) (oder [**IWiaItem2:: enumchilditems**](-wia-iwiaitem2-enumchilditems.md))-Methode, um ein Enumeratorobjekt zu erstellen und einen Zeiger auf seine [**ienumwiaitem**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwiaitem) -Schnittstelle (oder [**IEnumWiaItem2**](-wia-ienumwiaitem2.md)) zu erhalten, die zum Navigieren in der Elementstruktur und zum Abrufen des Zugriffs auf die dem Gerät zugeordneten Bilder verwendet wird.
+Wenn ein Gerät erstellt wird, erstellt Windows Image Acquisition (WIA) eine hierarchische Struktur von WIA-Elementen, die das Gerät und die diesem Gerät zugeordneten Ordner und Bilder darstellen. Verwenden Sie die [**IWiaItem::EnumChildItems(oder**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiaitem-enumchilditems) [**IWiaItem2::EnumChildItems)-Methode**](-wia-iwiaitem2-enumchilditems.md)des Stammelements (das Element im Stamm der Struktur, das das Gerät darstellt), um ein Enumeratorobjekt zu erstellen und einen Zeiger auf die [**IEnumWiaItem-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-ienumwiaitem) (oder [**IEnumWiaItem2)**](-wia-ienumwiaitem2.md)zu erhalten. , die verwendet wird, um durch die Elementstruktur zu navigieren und Zugriff auf die Bilder oder Scanbilder zu erhalten, die dem Gerät zugeordnet sind.
 
-Das folgende Beispiel zeigt eine Funktion, die rekursiv alle Elemente einer Struktur auflistet, beginnend mit einem Stamm Element, das an die Funktion weitergeleitet wird.
+Das folgende Beispiel zeigt eine Funktion, die rekursiv alle Elemente einer Struktur aufzählt, beginnend mit einem Stammelement, das an die Funktion übergeben wird.
 
 
 ```
@@ -108,11 +108,11 @@ Das folgende Beispiel zeigt eine Funktion, die rekursiv alle Elemente einer Stru
 
 
 
-Die-Funktion übernimmt den-Parameter **pwiaitem**, einen Zeiger auf die [**iwiaitem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) -Schnittstelle (oder [**IWiaItem2**](-wia-iwiaitem2.md)) des Stamm Elements der Elementstruktur zum auflisten.
+Die Funktion verwendet den **Parameter pWiaItem,** einen Zeiger auf die [**IWiaItem-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) (oder [**IWiaItem2)**](-wia-iwiaitem2.md)des Stammelements der Elementstruktur, das aufzählt werden soll.
 
-Zuerst überprüft die Funktion, ob es sich bei dem Element um einen Ordner oder Anlagen handelt. Wenn dies der Fall ist, wird die [**iwiaitem:: enumchilditems**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiaitem-enumchilditems) (oder [**IWiaItem2:: enumchilditems**](-wia-iwiaitem2-enumchilditems.md))-Methode von **pwiaitem** aufgerufen, um ein Enumeratorobjekt für die Elementstruktur zu erstellen. Wenn dieser Aufruf erfolgreich ist und der Enumerator gültig ist, durchläuft die Funktion die untergeordneten Elemente und ruft rekursiv für jedes Element auf, wobei die einzelnen Elemente als potenzielles Stamm Element für die nächste Ebene untergeordneter Elemente behandelt werden.
+Zunächst überprüft die Funktion, ob es sich bei dem Element um einen Ordner handelt oder ob es über Anlagen verfügt. In diesem Beispiel wird die [**IWiaItem::EnumChildItems-Methode**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiaitem-enumchilditems) (oder [**IWiaItem2::EnumChildItems)**](-wia-iwiaitem2-enumchilditems.md)von **pWiaItem** zum Erstellen eines Enumeratorobjekts für die Elementstruktur aufruft. Wenn dieser Aufruf erfolgreich ist und der Enumerator gültig ist, durchfingt die Funktion die untergeordneten Elemente und ruft sich rekursiv für jedes Element auf und behandelt jedes element als potenzielles Stammelement für die nächste Ebene untergeordneter Elemente.
 
-Auf diese Weise listet die-Funktion alle Verzweigungen der Elementstruktur unterhalb des Stamm Elements auf, das an **EnumerateItems** weitergegeben wurde.
+Auf diese Weise listet die Funktion alle Verzweigungen der Elementstruktur unterhalb des Stammelements auf, das an **EnumerateItems übergeben wird.**
 
  
 

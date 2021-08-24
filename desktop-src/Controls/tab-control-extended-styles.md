@@ -1,6 +1,6 @@
 ---
-title: Erweiterte Stile des Register Steuer Elements (kommstrg. h)
-description: Das Registerkarten-Steuerelement unterstützt jetzt erweiterte Stile. Diese Stile werden mithilfe der \_ Nachrichten TCM GetExtendedStyle und TCM- \_ textendedstyle manipuliert und sollten nicht mit erweiterten Fenster Stilen verwechselt werden, die an "kreatewindowex" übergeben werden.
+title: Erweiterte Stile des Registerkarten-Steuerelements (CommCtrl.h)
+description: Das Registerkarten-Steuerelement unterstützt jetzt erweiterte Stile. Diese Stile werden mithilfe der \_ TCM-Meldungen GETEXTENDEDSTYLE und TCM SETEXTENDEDSTYLE bearbeitet und sollten nicht mit erweiterten Fensterstilen verwechselt werden, die an \_ CreateWindowEx übergeben werden.
 ms.assetid: 24294037-598c-4fcd-8a7c-8647ccfb1d81
 topic_type:
 - apiref
@@ -13,23 +13,23 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c4e16b40a394bc9b808386d3cbdc3abf9b3d928
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bd057a1ced7c2f594b9e4a7a2c67abe963caa270e770eebecd2f36b50f309aef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119769920"
 ---
-# <a name="tab-control-extended-styles"></a>Erweiterte Stile des Register Steuer Elements
+# <a name="tab-control-extended-styles"></a>Erweiterte Stile des Registerkarten-Steuerelements
 
-Das Registerkarten-Steuerelement unterstützt jetzt erweiterte Stile. Diese Stile werden mithilfe der Nachrichten [**TCM \_ GetExtendedStyle**](tcm-getextendedstyle.md) und [**TCM- \_ textendedstyle**](tcm-setextendedstyle.md) manipuliert und sollten nicht mit erweiterten Fenster Stilen verwechselt werden, die an " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa)" übergeben werden.
+Das Registerkarten-Steuerelement unterstützt jetzt erweiterte Stile. Diese Stile werden mithilfe der [**\_ TCM-Meldungen GETEXTENDEDSTYLE**](tcm-getextendedstyle.md) und [**TCM \_ SETEXTENDEDSTYLE**](tcm-setextendedstyle.md) bearbeitet und sollten nicht mit erweiterten Fensterstilen verwechselt werden, die an [**CreateWindowEx übergeben werden.**](/windows/desktop/api/winuser/nf-winuser-createwindowexa)
 
 
 
-| Konstante                                                                                                                                                                               | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Konstante                                                                                                                                                                               | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="TCS_EX_FLATSEPARATORS"></span><span id="tcs_ex_flatseparators"></span><dl> <dt>**TCS \_ Ex- \_ flatseparatoren**</dt> </dl> | [Version 4,71](common-control-versions.md). Das Registerkarten-Steuerelement zeichnet Trennzeichen zwischen den Registerkarten Elementen. Dieser erweiterte Stil wirkt sich nur auf Registerkarten Steuerelemente aus, die über die [**TCS- \_ Schalt**](tab-control-styles.md) Flächen und die [**TCS- \_ FlatButtons**](tab-control-styles.md) Standardmäßig wird durch das Erstellen des Registerkarten-Steuer Elements mit dem **TCS- \_ FlatButtons** -Stil dieser erweiterte Stil festgelegt. Wenn Sie keine Trennzeichen benötigen, sollten Sie diese erweiterte Formatvorlage nach dem Erstellen des Steuer Elements entfernen.<br/> |
-| <span id="TCS_EX_REGISTERDROP"></span><span id="tcs_ex_registerdrop"></span><dl> <dt>**TCS \_ Ex \_ registerdrop**</dt> </dl>       | [Version 4,71](common-control-versions.md). Das Registerkarten-Steuerelement generiert [TCN \_ GetObject](tcn-getobject.md) -Benachrichtigungs Codes, um ein Ablage Zielobjekt anzufordern, wenn ein Objekt über die Registerkarten Elemente im Steuerelement gezogen wird. Die Anwendung muss vor dem Festlegen dieses Stils [**CoInitialize**](/windows/desktop/api/objbase/nf-objbase-coinitialize) oder [**OleInitialize**](/windows/desktop/api/ole2/nf-ole2-oleinitialize) aufruft. <br/>                                                                                                                                               |
+| <span id="TCS_EX_FLATSEPARATORS"></span><span id="tcs_ex_flatseparators"></span><dl> <dt>**TCS \_ EX \_ FLATSEPARATORS**</dt> </dl> | [Version 4.71](common-control-versions.md). Das Registerkarten-Steuerelement zeichnen Trennzeichen zwischen den Registerkartenelementen. Dieser erweiterte Stil wirkt sich nur auf Registerkartensteuerelemente aus, die [**die STILE TCS \_ BUTTONS**](tab-control-styles.md) und [**TCS \_ FLATBUTTONS**](tab-control-styles.md) haben. Durch das Erstellen des Registerkarten-Steuerelements mit dem **TCS \_ FLATBUTTONS-Stil** wird dieser erweiterte Stil standardmäßig festgelegt. Wenn Sie keine Trennzeichen benötigen, sollten Sie diesen erweiterten Stil nach dem Erstellen des Steuerelements entfernen.<br/> |
+| <span id="TCS_EX_REGISTERDROP"></span><span id="tcs_ex_registerdrop"></span><dl> <dt>**TCS \_ EX \_ REGISTERDROP**</dt> </dl>       | [Version 4.71](common-control-versions.md). Das Registerkarten-Steuerelement generiert [TCN GETOBJECT-Benachrichtigungscodes, \_ ](tcn-getobject.md) um ein Abbruchzielobjekt an fordern, wenn ein Objekt über die Registerkartenelemente im Steuerelement gezogen wird. Die Anwendung muss Vor dem [**Festlegen dieses Stils CoInitialize**](/windows/desktop/api/objbase/nf-objbase-coinitialize) oder [**OleInitialize**](/windows/desktop/api/ole2/nf-ole2-oleinitialize) aufrufen. <br/>                                                                                                                                               |
 
 
 
@@ -39,7 +39,7 @@ Das Registerkarten-Steuerelement unterstützt jetzt erweiterte Stile. Diese Stil
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Header<br/> | <dl> <dt>CommCtrl.h</dt> </dl> |
 
 
 

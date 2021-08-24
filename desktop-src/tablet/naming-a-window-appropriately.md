@@ -1,29 +1,29 @@
 ---
-description: Übersicht über das Ordnungs gerechte Benennen eines Fensters und Festlegen der Fenster Beschriftung für den Tablet PC.
+description: Übersicht über die richtige Benennung eines Fensters und das Festlegen der Fensterbeschriftung für den Tablet PC.
 ms.assetid: 9d064188-53a1-4cb5-b516-99610d7b8134
-title: Entsprechendes Benennen eines Fensters
+title: Benennen eines Fensters entsprechend
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eaee320f621acf834d7c0ec5978a9e42f0811e31
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41f2109568306e8817c518eecd8761ab00a2b1ecb8c54d4388b78e3eb456278d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356931"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119883400"
 ---
-# <a name="naming-a-window-appropriately"></a>Entsprechendes Benennen eines Fensters
+# <a name="naming-a-window-appropriately"></a>Benennen eines Fensters entsprechend
 
-Weisen Sie jedem Fenster eine benutzerfreundliche Beschriftung zu, auch wenn das Fenster oder die Beschriftung unsichtbar ist. Dies ermöglicht es der Sprachfunktion, das Fenster und die Fenster Hierarchie zu identifizieren. Diese Empfehlung gilt für alle Fenster: Fenster der obersten Ebene mit sichtbaren Frames. untergeordnete Fenster, z. b. Gleit Komma Zahlen; benutzerdefinierte Steuerelemente; Symbolleisten und Bereiche innerhalb eines Fensters, wenn Sie als untergeordnete Fenster implementiert werden.
+Weisen Sie jedem Fenster eine benutzerfreundliche Beschriftung zu, auch wenn das Fenster oder seine Beschriftung unsichtbar ist. Dadurch kann die Sprachfunktion das Fenster und die Fensterhierarchie identifizieren. Diese Empfehlung gilt für alle Fenster: Fenster der obersten Ebene mit sichtbaren Frames; untergeordnete Fenster, z. B. unverankerte Paletten; benutzerdefinierte Steuerelemente; Symbolleisten; und bereiche innerhalb eines Fensters, wenn sie als untergeordnete Fenster implementiert werden.
 
-Es gibt drei Möglichkeiten, die Fenster Beschriftung festzulegen:
+Es gibt drei Möglichkeiten, die Fensterbeschriftung festzulegen:
 
--   Legen Sie die Zeichenfolge im Ressourcen Skript fest, wenn Sie [**CreateWindow**](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder verwandte Funktionen aufrufen.
--   Aufrufen der [**SetWindowText**](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) -Funktion.
--   Definieren Sie den Namen der Steuerelemente in Dialogfeldern, indem Sie die unter Benennen von Steuer [Elementen in Dialogfeldern](naming-controls-in-dialog-boxes.md)beschriebenen Verfahren verwenden. Dies ist die einzige Methode für die Bezeichnung eines Bearbeitungs Steuer Elements, da der Inhalt der Steuerelemente durch Festlegen der systeminternen Bezeichnung Steuerelemente geändert wird.
+-   Legen Sie die Zeichenfolge im Ressourcenskript fest, wenn [**Sie CreateWindow**](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder verwandte Funktionen aufrufen.
+-   Rufen Sie die [**SetWindowText-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) auf.
+-   Definieren Sie den Namen von Steuerelementen in Dialogfeldern mithilfe der unter Benennen von [Steuerelementen in Dialogfeldern beschriebenen](naming-controls-in-dialog-boxes.md)Verfahren. Dies ist die einzige Methode zum Bezeichnen eines Bearbeitungssteuerelements, da das Festlegen der systeminternen Bezeichnung der Steuerelemente den Inhalt der Steuerelemente ändert.
 
-Sie können die Beschriftung entweder mithilfe von Microsoft Active Accessibility oder der WM \_ gettext-Nachricht Abfragen.
+Sie können die Beschriftung abfragen, indem Sie entweder Microsoft Active Accessibility oder die WM \_ GETTEXT-Nachricht verwenden.
 
-Weitere Informationen zum Abfragen der Beschriftung mithilfe Active Accessibility finden Sie im Abschnitt zur [Barrierefreiheit](/windows/desktop/accessibility) .
+Weitere Informationen zum Abfragen der Beschriftung mit Active Accessibility finden Sie im Abschnitt [Barrierefreiheit.](/windows/desktop/accessibility)
 
  
 

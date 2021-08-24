@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 2ad10a7b9cc3c252a0cee4cb71df05cb108e0a18
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 089c6c5c523b6f05f91efb5524904c942a539a7ebbb3cd863c1c07d413cdf1a9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704630"
 ---
 # <a name="iportabledevicevaluescollectiongetat-method"></a>IPortableDeviceValuesCollection::GetAt-Methode
 
-Die **GetAt-Methode** ruft ein Element von einem nullbasierten Index aus der Auflistung ab.
+Die **GetAt-Methode** ruft ein Element durch einen nullbasierten Index aus der Auflistung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,43 +51,43 @@ HRESULT GetAt(
 *ppValues* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf eine [**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md) aus der Auflistung empfängt. Der Aufrufer ist für den Aufruf von **Release auf** dieser Schnittstelle verantwortlich, wenn er damit fertig ist.
+Adresse einer Variablen, die einen Zeiger auf eine [**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md) aus der Auflistung empfängt. Der Aufrufer ist dafür verantwortlich, **Release** für diese Schnittstelle aufzurufen, wenn er damit fertig ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die -Methode gibt ein **HRESULT zurück.** Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                                                      |
 |----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Methode wurde erfolgreich ausgeführt.<br/>                                                 |
-| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der nullbasierte Index, der übergeben wurde, lag nicht im Bereich.<br/>             |
-| <dl> <dt>**\_E-ZEIGER**</dt> </dl>    | Ein erforderliches Zeigerargument war **NULL.**<br/>                             |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der übergebene nullbasierte Index lag außerhalb des Bereichs.<br/>             |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>    | Ein erforderliches Zeigerargument war **NULL.**<br/>                             |
 | <dl> <dt>**E \_ UNEXPECTED**</dt> </dl> | Die Auflistung enthält einen  **NULL-IPortableDeviceValues-Zeiger.**<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Änderungen, die an Werten in der abgerufenen Schnittstelle vorgenommen werden, werden an der in der Auflistung gespeicherten Version vorgenommen.
+Alle Änderungen, die an Werten in der abgerufenen Schnittstelle vorgenommen werden, werden an der version vorgenommen, die in der Auflistung gespeichert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

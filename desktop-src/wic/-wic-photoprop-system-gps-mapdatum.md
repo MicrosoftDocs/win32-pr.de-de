@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. mapdatum-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.GPS.MapDatum-Eigenschaft.
 ms.assetid: be31e98f-5114-4693-a9ef-37fea334875b
-title: System. GPS. mapdatum-metadatenrichtlinie
+title: System.GPS.MapDatum-Fotometadatenrichtlinie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bb7a279c79da3d2b1dd20563af35bd34233a1a2a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a8bbd3671ec9e025dd2c5ea98fc36f4937abab315b09a2227fb6249d74e577da
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119882340"
 ---
-# <a name="systemgpsmapdatum-photo-metadata-policy"></a>System. GPS. mapdatum-metadatenrichtlinie
+# <a name="systemgpsmapdatum-photo-metadata-policy"></a>System.GPS.MapDatum-Fotometadatenrichtlinie
 
-Die fotometadatenrichtlinie für die [System. GPS. mapdatum](../properties/props-system-gps-mapdatum.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.GPS.MapDatum-Eigenschaft.](../properties/props-system-gps-mapdatum.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ GPS \_ mapdatum
+PKEY \_ GPS \_ MapDatum
 
 ### <a name="containers"></a>Container
 
@@ -27,43 +27,43 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
 ### <a name="input-type"></a>Eingabetyp
 
-VT \_ LPWSTR wird bevorzugt, aber VT \_ LPSTR wird ebenfalls akzeptiert.
+VT \_ LPWSTR wird bevorzugt, aber auch VT \_ LPSTR wird akzeptiert.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="precedence-of-paths-jpeg"></a>Rangfolge von Pfaden (JPEG)
 
-Wenn die Datei im JPEG-Format vorliegt, wird der Handler die Daten in der folgenden Reihenfolge lesen, schreiben und entfernen:
+Wenn die Datei im JPEG-Format vorliegt, liest, schreibt und entfernt der Handler die Daten in der folgenden Reihenfolge:
 
 
 
-| Auftrag | Pfad                          | Datenträger Format | Erforderlich |
+| Auftrag | Pfad                          | Datenträgerformat | Erforderlich |
 |-------|-------------------------------|-------------|----------|
-| 1     | /XMP/EXIF: gpsmapdatum         | Unicode     | Ja      |
-| 2     | /App1/IFD/GPS/ \\ {UShort = 18 \\ } | ASCII       | Nein       |
+| 1     | /xmp/exif:GPSMapDatum         | Unicode     | Ja      |
+| 2     | /app1/ifd/gps/ \\ {ushort=18 \\ } | ASCII       | Nein       |
 
 
 
  
 
-### <a name="precedence-of-paths-tiff"></a>Rangfolge von Pfaden (TIFF)
+### <a name="precedence-of-paths-tiff"></a>Rangfolge von Pfaden (Precedence of Paths, TIFF)
 
-Wenn die Datei im TIFF-Format vorliegt, wird der Handler die Daten in der folgenden Reihenfolge lesen, schreiben und entfernen:
+Wenn die Datei im TIFF-Format vorliegt, liest, schreibt und entfernt der Handler die Daten in der folgenden Reihenfolge:
 
 
 
-| Auftrag | Pfad                      | Datenträger Format | Erforderlich |
+| Auftrag | Pfad                      | Datenträgerformat | Erforderlich |
 |-------|---------------------------|-------------|----------|
-| 1     | /IFD/XMP/EXIF: gpsmapdatum | Unicode     | Ja      |
-| 2     | /IFD/GPS/ \\ {UShort = 18 \\ }  | ASCII       | Nein       |
+| 1     | /ifd/xmp/exif:GPSMapDatum | Unicode     | Ja      |
+| 2     | /ifd/gps/ \\ {ushort=18 \\ }  | ASCII       | Nein       |
 
 
 
@@ -75,7 +75,7 @@ Wenn die Datei im TIFF-Format vorliegt, wird der Handler die Daten in der folgen
 
 <dl> <dt>
 
-[System. GPS. mapdatum](../properties/props-system-gps-mapdatum.md)
+[System.GPS.MapDatum](../properties/props-system-gps-mapdatum.md)
 </dt> </dl>
 
  

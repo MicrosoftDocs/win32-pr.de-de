@@ -1,12 +1,12 @@
 ---
-title: Selectnetworkadapter-Methode der Win32_TSVirtualIP-Klasse
-description: Legt die Mac-Adresse des Netzwerkadapters fest, der für die IP-Virtualisierung verwendet werden soll.
+title: SelectNetworkAdapter-Methode der Win32_TSVirtualIP-Klasse
+description: Legt die MAC-Adresse des Netzwerkadapters fest, der für die IP-Virtualisierung verwendet werden soll.
 ms.assetid: ad67445c-6a8b-4980-997a-56aceb70965f
 ms.tgt_platform: multiple
 keywords:
-- Selectnetworkadapter-Methode Remotedesktopdienste
-- Selectnetworkadapter-Methode Remotedesktopdienste, Win32_TSVirtualIP-Klasse
-- Win32_TSVirtualIP-Klasse Remotedesktopdienste, selectnetworkadapter-Methode
+- SelectNetworkAdapter-Methode Remotedesktopdienste
+- SelectNetworkAdapter-Methode Remotedesktopdienste , Win32_TSVirtualIP-Klasse
+- Win32_TSVirtualIP Klasse Remotedesktopdienste , SelectNetworkAdapter-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a3a362bea1a5cacbfd727f23504f19164c79ce65
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7d27df38f8314720c4ed16d675cdbd06424611d2ccd127a45069586875c82d77
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949796"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119865520"
 ---
-# <a name="selectnetworkadapter-method-of-the-win32_tsvirtualip-class"></a>Selectnetworkadapter-Methode der Win32- \_ Klasse "tvirtualip"
+# <a name="selectnetworkadapter-method-of-the-win32_tsvirtualip-class"></a>SelectNetworkAdapter-Methode der Win32 \_ TSVirtualIP-Klasse
 
-Legt die Mac-Adresse des Netzwerkadapters fest, der für die IP-Virtualisierung verwendet werden soll.
+Legt die MAC-Adresse des Netzwerkadapters fest, der für die IP-Virtualisierung verwendet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ uint32 SelectNetworkAdapter(
 
 <dl> <dt>
 
-*Networkadaptermacaddress* \[ in\]
+*NetworkAdapterMacAddress* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Gibt die Mac-Adresse des Netzwerkadapters an.
+Gibt die MAC-Adresse des Netzwerkadapters an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-Wenn die Mac-Adresse ungültig ist oder nicht vorhanden ist oder der IP-Virtualisierungsmodus pro Sitzung erfolgt, wird ein Fehler zurückgegeben.
+Wenn die MAC-Adresse ungültig ist oder nicht vorhanden ist oder der IP-Virtualisierungsmodus pro Sitzung erfolgt, wird ein Fehler zurückgegeben.
 
-Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtlinien Steuerung liegt.
+Die -Methode gibt einen Fehler zurück, wenn die Einstellung der Gruppenrichtliniensteuerung unterliegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,7 +71,7 @@ Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtli
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                       |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -80,7 +80,7 @@ Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtli
 
 <dl> <dt>
 
-[**Win32- \_ virtualialip**](win32-tsvirtualip.md)
+[**Win32 \_ TSVirtualIP**](win32-tsvirtualip.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-title: isinf (corecrt \_ Math. h)
+title: isinf (Corecrt \_ math.h)
 description: Bestimmt, ob der angegebene Wert unendlich ist.
 ms.assetid: 2028dc5a-e48b-4081-a0ec-35901113aab6
 keywords:
@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4df738438d62d5a66dd3b08ad769d475df562d5f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
-ms.translationtype: HT
+ms.openlocfilehash: 30384cb4463f5751394f45bf521529a1afc79d1b9262cf007ceeaa7d790c3f0e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789650"
 ---
 # <a name="isinf"></a>isinf
 
@@ -27,7 +27,7 @@ Bestimmt, ob der angegebene Wert unendlich ist.
 
 
 
-| *ret* isinf (*x*) |
+| *ret* isinf(*x*) |
 |------------------|
 
 
@@ -38,9 +38,9 @@ Bestimmt, ob der angegebene Wert unendlich ist.
 
 
 
-| Element                                                   | BESCHREIBUNG                            |
+| Element                                                   | Beschreibung                            |
 |--------------------------------------------------------|----------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[im \] angegebenen Wert.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert.<br/> |
 
 
 
@@ -48,7 +48,7 @@ Bestimmt, ob der angegebene Wert unendlich ist.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert mit der gleichen Größe wie die Eingabe zurück, wobei ein Wert auf **true** festgelegt ist, wenn der *x* -Parameter + INF oder-INF ist. Andernfalls **false**.
+Gibt einen Wert der gleichen Größe wie die Eingabe zurück, bei dem der Wert auf **True** festgelegt ist, wenn der *x-Parameter* +INF oder -INF ist. Andernfalls **FALSE.**
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -56,43 +56,43 @@ Gibt einen Wert mit der gleichen Größe wie die Eingabe zurück, wobei ein Wert
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size     |
 |-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|----------|
-| *x*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any      |
-| *TZI* | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**bool**](/windows/desktop/WinProg/windows-data-types)                         | als Eingabe |
+| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any      |
+| *Ret* | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**bool**](/windows/desktop/WinProg/windows-data-types)                         | als Eingabe |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja                 |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja ( \_ nur vs 1 \_ 1) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                 |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja (nur \_ im Vergleich \_ zu 1 1) |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Corecrt \_ Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Corecrt \_ math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

@@ -1,49 +1,49 @@
 ---
-title: Remotefx-medienumleitungs-API-Referenz
-description: Die remotefx-Medien Umleitungs-API wird von Drittanbietern zur Implementierung der serverseitigen Anforderungen zur Unterstützung eines virtuellen remotefx-Kanals verwendet.
+title: RemoteFX Referenz zur Medienumleitungs-API
+description: Die RemoteFX Media Redirection-API wird von Drittanbietern verwendet, um die serverseitigen Anforderungen zur Unterstützung eines RemoteFX virtuellen Kanals zu implementieren.
 ms.assetid: 927b3c17-4ac3-4640-8042-648a283abe64
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b23612d0ca417783837bdf95e3d22f34052ff6a6
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 13c89f89f10b88b9b92ab2f561ce8771c2d8148d3a13d08265257cdedd06c008
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106337198"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119865746"
 ---
-# <a name="remotefx-media-redirection-api-reference"></a>Remotefx-medienumleitungs-API-Referenz
+# <a name="remotefx-media-redirection-api-reference"></a>RemoteFX Referenz zur Medienumleitungs-API
 
-Die remotefx-Medien Umleitungs-API wird von Drittanbietern zur Implementierung der serverseitigen Anforderungen zur Unterstützung eines virtuellen remotefx-Kanals verwendet. Weitere Informationen finden Sie unter den folgenden Themen:
+Die RemoteFX Media Redirection-API wird von Drittanbietern verwendet, um die serverseitigen Anforderungen zur Unterstützung eines RemoteFX virtuellen Kanals zu implementieren. Weitere Informationen finden Sie in den folgenden Themen:
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[Remotefx-Medien Umleitungs-API-Funktionen](remotefx-media-redirection-api-functions.md)
+[RemoteFX Funktionen der Medienumleitungs-API](remotefx-media-redirection-api-functions.md)
 </dt> <dd>
 
-Die remotefx-medienumleitungs-API unterstützt die folgenden Funktionen.
+Die RemoteFX-Medienumleitungs-API unterstützt die folgenden Funktionen.
 
 </dd> <dt>
 
-[Remotefx-Medien Umleitungs-API-Schnittstellen](remotefx-media-redirection-api-interfaces.md)
+[RemoteFX Schnittstellen der Medienumleitungs-API](remotefx-media-redirection-api-interfaces.md)
 </dt> <dd>
 
-Die remotefx-Medien Umleitungs-API unterstützt die folgenden Schnittstellen.
+Die RemoteFX-Medienumleitungs-API unterstützt die folgenden Schnittstellen.
 
 </dd> <dt>
 
-[Remotefx-Medien Umleitungs-API-Strukturen](remotefx-media-redirection-api-structures.md)
+[RemoteFX Medienumleitungs-API-Strukturen](remotefx-media-redirection-api-structures.md)
 </dt> <dd>
 
-Die remotefx-Medien Umleitungs-API definiert die folgenden Strukturen.
+Die RemoteFX Medienumleitungs-API definiert die folgenden Strukturen.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

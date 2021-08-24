@@ -1,31 +1,31 @@
 ---
-description: Verwenden Sie das folgende Verfahren in Legacy Anwendungen, um eine x-Datei zu laden.
+description: Verwenden Sie das folgende Verfahren in Legacyanwendungen, um eine X-Datei zu laden.
 ms.assetid: 2b975873-2e5d-4c64-a022-d2098c3d95b8
 title: Laden einer X-Datei (Legacy) (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 716ed54afdc7d1aa18fdde992a0799a8990a49c6
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: ab8ac27c43ba33f6bd0408403d6390d4855f2644182d82f1ad8e84e5939f98ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119846520"
 ---
 # <a name="loading-an-x-file-legacy-direct3d-9"></a>Laden einer X-Datei (Legacy) (Direct3D 9)
 
-Verwenden Sie das folgende Verfahren in Legacy Anwendungen, um eine x-Datei zu laden.
+Verwenden Sie das folgende Verfahren in Legacyanwendungen, um eine X-Datei zu laden.
 
-1.  Verwenden Sie die Funktion [**directxfilecreate**](directxfilecreate.md) zum Erstellen eines [**idirectxfile**](idirectxfile.md) -Objekts.
-2.  Wenn Vorlagen in der DirectX-Datei vorhanden sind, die Sie laden möchten, verwenden Sie die [**idirectxfile:: registertemplates**](idirectxfile--registertemplates.md) -Methode, um diese Vorlagen zu registrieren.
-3.  Verwenden Sie die [**idirectxfile:: kreateenumuject**](idirectxfile--createenumobject.md) -Methode, um ein [**idirectxfileenumubject**](idirectxfileenumobject.md) -Enumeratorobjekt zu erstellen.
-4.  Durchlaufen Sie die Objekte in der Datei. Führen Sie für jedes-Objekt die folgenden Schritte aus.
-    1.  Verwenden Sie die [**idirectxfileenufibject:: getnextdataobject**](idirectxfileenumobject--getnextdataobject.md) -Methode, um die einzelnen [**idirectxfiledata**](idirectxfiledata.md) -Objekte abzurufen.
-    2.  Verwenden Sie die [**idirectxfiledata:: GetType**](idirectxfiledata--gettype.md) -Methode, um den Datentyp abzurufen.
-    3.  Laden Sie die Daten mithilfe der [**idirectxfiledata:: GetData**](idirectxfiledata--getdata.md) -Methode.
-    4.  Wenn das Objekt über optionale Member verfügt, rufen Sie die optionalen Member ab, indem Sie die [**idirectxfiledata:: getnextobject**](idirectxfiledata--getnextobject.md) -Methode aufrufen.
-    5.  Geben Sie das [**idirectxfiledata**](idirectxfiledata.md) -Objekt frei.
-5.  Geben Sie das [**idirectxfileenumubject**](idirectxfileenumobject.md) -Objekt frei.
-6.  Geben Sie das [**idirectxfile**](idirectxfile.md) -Objekt frei.
+1.  Verwenden Sie die [**DirectXFileCreate-Funktion,**](directxfilecreate.md) um ein [**IDirectXFile-Objekt zu**](idirectxfile.md) erstellen.
+2.  Wenn Vorlagen in der DirectX-Datei vorhanden sind, die Sie laden möchten, verwenden Sie die [**IDirectXFile::RegisterTemplates-Methode,**](idirectxfile--registertemplates.md) um diese Vorlagen zu registrieren.
+3.  Verwenden Sie [**die IDirectXFile::CreateEnumObject-Methode,**](idirectxfile--createenumobject.md) um ein [**IDirectXFileEnumObject-Enumeratorobjekt**](idirectxfileenumobject.md) zu erstellen.
+4.  Schleife durch die Objekte in der Datei. Führen Sie für jedes Objekt die folgenden Schritte aus.
+    1.  Verwenden Sie [**die IDirectXFileEnumObject::GetNextDataObject-Methode,**](idirectxfileenumobject--getnextdataobject.md) um jedes [**IDirectXFileData-Objekt**](idirectxfiledata.md) abzurufen.
+    2.  Verwenden Sie [**die IDirectXFileData::GetType-Methode,**](idirectxfiledata--gettype.md) um den Datentyp der Daten abzurufen.
+    3.  Laden Sie die Daten mithilfe der [**IDirectXFileData::GetData-Methode.**](idirectxfiledata--getdata.md)
+    4.  Wenn das Objekt über optionale Member verfügt, rufen Sie die optionalen Member ab, indem Sie die [**IDirectXFileData::GetNextObject-Methode**](idirectxfiledata--getnextobject.md) aufrufen.
+    5.  Geben Sie das [**IDirectXFileData-Objekt**](idirectxfiledata.md) frei.
+5.  Geben Sie das [**IDirectXFileEnumObject-Objekt**](idirectxfileenumobject.md) frei.
+6.  Geben Sie das [**IDirectXFile-Objekt**](idirectxfile.md) frei.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

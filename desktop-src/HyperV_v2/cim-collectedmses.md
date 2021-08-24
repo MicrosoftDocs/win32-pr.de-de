@@ -1,7 +1,7 @@
 ---
 description: Stellt eine generische Zuordnung zwischen einer Auflistung verwalteter Systemelemente und den Membern der Auflistung dar.
 ms.assetid: c9e2bbca-67be-41f2-a94c-cf4eaf5f4694
-title: CIM_CollectedMSEs-Klasse (Hyper-V-Verwaltung)
+title: CIM_CollectedMSEs -Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,14 +15,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: bdf5c5d682f1b6e1b47b64100b3e00f5f79cebfd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 74486e12eb4b4ee155554db8ba9f6f8774728217ca6d0ac70b5faac11958726a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373198"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119790530"
 ---
-# <a name="cim_collectedmses-class-hyper-v-management"></a>CIM_CollectedMSEs-Klasse (Hyper-V-Verwaltung)
+# <a name="cim_collectedmses-class-hyper-v-management"></a>CIM_CollectedMSEs -Klasse (Hyper-V-Verwaltung)
 
 Stellt eine generische Zuordnung zwischen einer Auflistung verwalteter Systemelemente und den Membern der Auflistung dar.
 
@@ -39,13 +39,13 @@ class CIM_CollectedMSEs : CIM_MemberOfCollection
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ collectedmses** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ CollectedMSEs-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ collectedmses** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ CollectedMSEs-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -58,7 +58,7 @@ Datentyp: **CIM \_ CollectionOfMSEs**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Collection")
+Qualifizierer: [**Aggregieren,**](/windows/desktop/WmiSdk/standard-qualifiers) [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Collection")
 </dt> </dl>
 
 Die Auflistung.
@@ -74,10 +74,10 @@ Datentyp: **CIM \_ ManagedSystemElement**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Member")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Member")
 </dt> </dl>
 
-Die Member der Auflistung.
+Die Elemente der Auflistung.
 
 </dd> </dl>
 
@@ -87,10 +87,10 @@ Die Member der Auflistung.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Die Member der Auflistung.
 
 <dl> <dt>
 
-[**CIM- \_ mitgliedfassungs Sammlung**](cim-memberofcollection.md)
+[**CIM \_ MemberOfCollection**](cim-memberofcollection.md)
 </dt> </dl>
 
  

@@ -3,25 +3,25 @@ title: Verwenden komplexer Metadatenattribute
 description: Verwenden komplexer Metadatenattribute
 ms.assetid: 8269efe4-331f-4b4b-b888-66b45c638153
 keywords:
-- Windows Media-Format-SDK, komplexe Metadatenattribute
+- Windows Medienformat-SDK, komplexe Metadatenattribute
 - Advanced Systems Format (ASF), komplexe Metadatenattribute
 - ASF (Advanced Systems Format), komplexe Metadatenattribute
 - Metadaten, komplexe Attribute
-- komplexe Metadatenattribute
+- Komplexe Metadatenattribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0cd03c656a8cba5342d21e41932365455daa8bfa
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 8245d2fbc07878a73e304cfc573e05e93b605185ece93655dae7a8bdeff0d9d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104314279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807250"
 ---
 # <a name="using-complex-metadata-attributes"></a>Verwenden komplexer Metadatenattribute
 
-Das Windows Media Format SDK unterstützt komplexe Metadatenattribute, bei denen es sich um Attribute mit Werten handelt, die durch eine Struktur dargestellt werden. Da alle Attribute einen Datentyp aufweisen müssen, der in der [**WMT \_ attr \_ DataType**](/previous-versions/windows/desktop/api/Wmsdkidl/ne-wmsdkidl-wmt_attr_datatype) -Enumeration definiert ist, werden alle komplexen Metadatenattribute als **WMT- \_ \_ typbinär Datei** behandelt. Wenn Sie ein komplexes Attribut schreiben, wandeln Sie den Zeiger in die-Struktur als Byte Zeiger um. Wenn Sie ein komplexes Attribut abrufen, wandeln Sie das [**Bytearray, das von IWMHeaderInfo3:: getattributebyindexex**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmheaderinfo3-getattributebyindexex) festgelegt wurde, als die entsprechende Struktur um.
+Das Windows Media Format SDK unterstützt komplexe Metadatenattribute, bei denen es sich um Attribute handelt, deren Werte von einer -Struktur dargestellt werden. Da alle Attribute über einen in der [**WMT \_ ATTR \_ DATATYPE-Enumeration**](/previous-versions/windows/desktop/api/Wmsdkidl/ne-wmsdkidl-wmt_attr_datatype) definierten Datentyp verfügen müssen, werden alle komplexen Metadatenattribute als **WMT \_ TYPE \_ BINARY** behandelt. Wenn Sie ein komplexes Attribut schreiben, casten Sie den Zeiger in die -Struktur als Bytezeiger. Wenn Sie ein komplexes Attribut abrufen, legen Sie das by [**IWMHeaderInfo3::GetAttributeByIndexEx**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmheaderinfo3-getattributebyindexex) festgelegte Bytearray in die entsprechende Struktur um.
 
-In den folgenden Codebeispielen wird gezeigt, wie ein komplexes Metadatenattribut festgelegt und abgerufen wird. Mit der ersten Funktion wird ein Benutzer Text Attribut hinzugefügt, die zweite Funktion Ruft eine ab. Weitere Informationen zur Verwendung dieser Beispiele finden [Sie unter Verwenden der Code Beispiele](using-the-code-examples.md).
+Die folgenden Codebeispiele zeigen, wie Sie ein komplexes Metadatenattribut festlegen und abrufen. Die erste Funktion fügt ein Benutzertextattribut hinzu, die zweite Funktion ruft eins ab. Weitere Informationen zur Verwendung dieser Beispiele finden Sie unter [Verwenden der Codebeispiele.](using-the-code-examples.md)
 
 
 ```C++
@@ -136,9 +136,9 @@ Exit:
 [**Arbeiten mit Metadaten**](working-with-metadata.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

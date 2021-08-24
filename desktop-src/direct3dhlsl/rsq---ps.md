@@ -1,6 +1,6 @@
 ---
-title: RSQ-PS
-description: Berechnet die gegenseitige Quadratwurzel (nur positiv) des Quell Skalars. | RSQ-PS
+title: rsq – ps
+description: Berechnet die reziproke Quadratwurzel (nur positiv) des Quellskalars. | rsq – ps
 ms.assetid: deb1bd12-6347-4b1e-b21b-f3ef48da4c13
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 13777810c67ba38b2c8f47f0c0db0cf9b70771ad
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
-ms.translationtype: HT
+ms.openlocfilehash: 48a36715113678e199b3da22be9cdf118f385c15397a16ddd39bdd83622f76f2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119788700"
 ---
-# <a name="rsq---ps"></a>RSQ-PS
+# <a name="rsq---ps"></a>rsq – ps
 
-Berechnet die gegenseitige Quadratwurzel (nur positiv) des Quell Skalars.
+Berechnet die reziproke Quadratwurzel (nur positiv) des Quellskalars.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| RSQ DST, src |
+| rsq dst, src |
 |--------------|
 
 
@@ -33,16 +33,16 @@ Berechnet die gegenseitige Quadratwurzel (nur positiv) des Quell Skalars.
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register. Das Quell Register erfordert die explizite Verwendung von replizierten Strichen, d. h. genau einer der x-, y-,. z-,. w-Swizzle-Komponenten (oder r,. g,. b,. a-äquivalente) muss angegeben werden.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister. Das Quellregister erfordert die explizite Verwendung von "replicate swizzle", d.h. genau eine der .x-, .y-, .z-, .w swizzle-Komponenten (oder die Entsprechungen .r, .g, .b, .a) muss angegeben werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| RSQ                   |      |      |      |      | x    | x    | x     | x    | x     |
+| rsq                   |      |      |      |      | x    | x    | x     | x    | x     |
 
 
 
@@ -50,7 +50,7 @@ where
 
 Der absolute Wert wird vor der Verarbeitung übernommen.
 
-Die Genauigkeit muss mindestens 1.0/(2 ² ²) absolute Fehler im Bereich (1,0, 4,0) betragen, da allgemeine Implementierungen die Mantisse und den Exponenten voneinander trennen.
+Die Genauigkeit sollte mindestens 1,0/(2): absoluter Fehler über dem Bereich (1,0, 4,0) sein, da allgemeine Implementierungen Mantisse und Exponent trennen.
 
 Die Ausgabe muss genau 1,0 sein, wenn die Eingabe genau 1,0 ist. Eine Quelle von 0,0 ergibt unendlich.
 
@@ -58,7 +58,7 @@ Die Ausgabe muss genau 1,0 sein, wenn die Eingabe genau 1,0 ist. Eine Quelle von
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

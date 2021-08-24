@@ -1,12 +1,12 @@
 ---
-title: Pinglicenseserver-Methode der Win32_TerminalServiceSetting-Klasse
-description: Pinglicenseserver ist nicht mehr verfügbar.
+title: PingLicenseServer-Methode der Win32_TerminalServiceSetting-Klasse
+description: PingLicenseServer ist nicht mehr verfügbar.
 ms.assetid: d2a9f273-1ff9-4391-889b-a3b9c9f95c3b
 ms.tgt_platform: multiple
 keywords:
-- Pinglicenseserver-Methode Remotedesktopdienste
-- Pinglicenseserver-Methode Remotedesktopdienste, Win32_TerminalServiceSetting-Klasse
-- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste, pinglicenseserver-Methode
+- PingLicenseServer-Remotedesktopdienste
+- PingLicenseServer-Methode Remotedesktopdienste , Win32_TerminalServiceSetting-Klasse
+- Win32_TerminalServiceSetting klasse Remotedesktopdienste , PingLicenseServer-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2fe7277b3130c88c1aec7716c1a3bf560b81db64
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4e5a52268073a076c5dada44b7f34c6a6b3e0c820c0b9819f65d23081f4f6c37
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391870"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119866100"
 ---
-# <a name="pinglicenseserver-method-of-the-win32_terminalservicesetting-class"></a>Pinglicenseserver-Methode der Win32 \_ terminalservicesetts-Klasse
+# <a name="pinglicenseserver-method-of-the-win32_terminalservicesetting-class"></a>PingLicenseServer-Methode der Win32 \_ TerminalServiceSetting-Klasse
 
-\[**Pinglicenseserver** ist nicht mehr für die Verwendung ab Windows Server 2008 R2 verfügbar.\]
+\[**PingLicenseServer** ist ab Windows Server 2008 R2 nicht mehr verfügbar.\]
 
-**Windows Server 2008:** Pings an den Lizenzserver, um zu ermitteln, ob es sich um einen gültigen Lizenzserver handelt.
+**Windows Server 2008:** Pingt den Lizenzserver, um zu ermitteln, ob es sich um einen gültigen Lizenzserver handelt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,10 +45,10 @@ uint32 PingLicenseServer(
 
 <dl> <dt>
 
-*Servername* \[ in\]
+*ServerName* \[ In\]
 </dt> <dd>
 
-Der Name des Lizenzservers.
+Name des Lizenzservers.
 
 </dd> </dl>
 
@@ -63,16 +63,16 @@ Der Server ist ein gültiger Lizenzserver.
 
 </dd> <dt>
 
-**S \_ false**
+**S \_ FALSE**
 </dt> <dd>
 
 Der Lizenzserver ist ungültig.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,8 +84,8 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Ende des Supports (Client)<br/>    | Nicht unterstützt<br/>                                                               |
 | Ende des Supports (Server)<br/>    | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -94,7 +94,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32 \_ terminalservicesetts**](win32-terminalservicesetting.md)
+[**Win32 \_ TerminalServiceSetting**](win32-terminalservicesetting.md)
 </dt> </dl>
 
  

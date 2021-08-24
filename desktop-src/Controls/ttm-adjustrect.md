@@ -1,9 +1,9 @@
 ---
-title: TTM_ADJUSTRECT Meldung (kommstrg. h)
-description: Berechnet das Textanzeige Rechteck eines QuickInfo-Steuer Elements aus dem Fenster Rechteck oder das QuickInfo-Fenster Rechteck, das zum Anzeigen eines angegebenen Textanzeige Rechtecks erforderlich ist.
+title: TTM_ADJUSTRECT-Nachricht (Commctrl.h)
+description: Berechnet das Textanzeigerechteck eines QuickInfo-Steuerelements aus seinem Fensterrechteck oder das QuickInfo-Fensterrechteck, das zum Anzeigen eines angegebenen Textanzeigerechtecks benötigt wird.
 ms.assetid: b848c16f-9f41-4ed2-918a-9c03aebe535c
 keywords:
-- Windows-Steuerelemente für TTM_ADJUSTRECT Meldung
+- TTM_ADJUSTRECT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af89374161d5e3f9d9ab6affc2b3b498a39cbf68
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bba5a6719bcbd820d94b6d736a12644f8b2539cc81064f942616c62bce55823f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956492"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119769530"
 ---
-# <a name="ttm_adjustrect-message"></a>TTM- \_ Nachricht
+# <a name="ttm_adjustrect-message"></a>TTM \_ ADJUSTRECT-Nachricht
 
-Berechnet das Textanzeige Rechteck eines QuickInfo-Steuer Elements aus dem Fenster Rechteck oder das QuickInfo-Fenster Rechteck, das zum Anzeigen eines angegebenen Textanzeige Rechtecks erforderlich ist.
+Berechnet das Textanzeigerechteck eines QuickInfo-Steuerelements aus seinem Fensterrechteck oder das QuickInfo-Fensterrechteck, das zum Anzeigen eines angegebenen Textanzeigerechtecks benötigt wird.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,30 +32,30 @@ Berechnet das Textanzeige Rechteck eines QuickInfo-Steuer Elements aus dem Fenst
 *wParam* 
 </dt> <dd>
 
-Wert, der angibt, welcher Vorgang durchgeführt werden soll. **True** gibt an, dass *LPARAM* zum Angeben eines Textanzeige Rechtecks verwendet wird und das entsprechende Fenster Rechteck empfängt. Wenn **false**, wird *LPARAM* zum Angeben eines Fenster Rechtecks verwendet, und das entsprechende Textanzeige Rechteck wird empfangen.
+Wert, der angibt, welcher Vorgang ausgeführt werden soll. True gibt an, dass *lParam* zum Angeben eines Textanzeigerechtecks verwendet wird und das entsprechende Fensterrechteck empfängt. **False** gibt an, dass *lParam* zum Angeben eines Fensterrechtecks verwendet wird und das entsprechende Textanzeigerechteck empfängt.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-**Rect** -Struktur, um entweder ein QuickInfo-Fenster Rechteck oder ein Textanzeige Rechteck zu halten.
+**RECT-Struktur** zum Speichern eines QuickInfo-Fensterrechtecks oder eines Rechtecks für die Textanzeige.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, wenn das Rechteck erfolgreich angepasst wurde, und gibt NULL zurück, wenn ein Fehler auftritt.
+Gibt einen Wert ungleich 0 (null) zurück, wenn das Rechteck erfolgreich angepasst wurde, und gibt 0 (null) zurück, wenn ein Fehler auftritt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung ist besonders nützlich, wenn Sie ein QuickInfo-Steuerelement verwenden möchten, um den vollständigen Text einer Zeichenfolge anzuzeigen, die in der Regel abgeschnitten wird. Sie wird häufig mit ListView-und TreeView-Steuerelementen verwendet. Normalerweise senden Sie diese Nachricht als Antwort auf einen TTN-Benachrichtigungs Code [ \_ anzeigen](ttn-show.md) , damit Sie das QuickInfo-Steuerelement ordnungsgemäß positionieren können.
+Diese Meldung ist besonders nützlich, wenn Sie ein QuickInfo-Steuerelement verwenden möchten, um den Volltext einer Zeichenfolge anzuzeigen, die normalerweise abgeschnitten wird. Es wird häufig mit ListView- und Treeview-Steuerelementen verwendet. In der Regel senden Sie diese Nachricht als Reaktion auf einen [TTN \_ SHOW-Benachrichtigungscode,](ttn-show.md) damit Sie das QuickInfo-Steuerelement ordnungsgemäß positionieren können.
 
-Das QuickInfo-Fenster Rechteck ist etwas größer als das Textanzeige Rechteck, das die QuickInfo-Zeichenfolge umschließt. Der Fenster Ursprung wird auch nach links vom Ursprung des Textanzeige Rechtecks verschoben. Zum Positionieren des Textanzeige Rechtecks müssen Sie das entsprechende Fenster Rechteck berechnen und dieses Rechteck verwenden, um die QuickInfo zu positionieren. **TTM \_** "Anpassungen" verarbeitet diese Berechnung für Sie.
+Das QuickInfo-Fensterrechteck ist etwas größer als das Textanzeigerechteck, das die QuickInfo-Zeichenfolge umgrenzt. Der Fensterursprung wird auch nach oben und links vom Ursprung des Rechtecks für die Textanzeige versetzt. Um das Textanzeigerechteck zu positionieren, müssen Sie das entsprechende Fensterrechteck berechnen und dieses Rechteck verwenden, um die QuickInfo zu positionieren. **TTM \_ ADJUSTRECT** übernimmt diese Berechnung für Sie.
 
-Wenn Sie " *wParam* " auf " **true**" festlegen, nimmt die Größe und Position des gewünschten QuickInfo-Textanzeige Rechtecks an, und die Größe und Position des QuickInfo-Fensters wird zurück **gegeben, um \_** den Text an der angegebenen Position anzuzeigen. Wenn Sie " *wParam* " auf " **false**" festlegen, können Sie ein QuickInfo-Fenster Rechteck angeben, und die Größe und Position des Text Rechtecks werden von **TTM \_** "-Wert-",
+Wenn Sie *wParam* auf **TRUE** festlegen, übernimmt **TTM \_ ADJUSTRECT** die Größe und Position des gewünschten QuickInfo-Textanzeigerechtecks und übergibt die Größe und Position des QuickInfo-Fensters zurück, das zum Anzeigen des Texts an der angegebenen Position erforderlich ist. Wenn Sie *wParam* auf **FALSE** festlegen, können Sie ein QuickInfo-Fensterrechteck angeben, und **TTM \_ ADJUSTRECT** gibt die Größe und Position des Textrechtecks zurück.
 
-Das folgende Code Fragment veranschaulicht die Verwendung der **TTM- \_** Nachricht, um ein QuickInfo-Steuerelement zu positionieren, um den vollständigen Text der Zeichenfolge eines Steuer Elements anstelle einer abgeschnittene Zeichenfolge anzuzeigen. Die von der Anwendung definierte **getmyitemrect** -Funktion gibt das Text Rechteck zurück, das benötigt wird, um den QuickInfo-Text direkt über die abgeschnittene Zeichenfolge anzuzeigen. Die Details, wie diese Funktion implementiert wird, hängen vom jeweiligen Steuerelement ab. **TTM \_** Mithilfe von "" wird "" "" "" Er gibt ein entsprechend großes und positioniertes Fenster Rechteck zurück, das dann verwendet wird, um das QuickInfo-Fenster zu positionieren.
+Das folgende Codefragment veranschaulicht die Verwendung der **TTM \_ ADJUSTRECT-Nachricht** zum Positionieren eines QuickInfo-Steuerelements, um den Volltext der Zeichenfolge eines Steuerelements anstelle einer abgeschnittenen Zeichenfolge anzuzeigen. Die anwendungsdefinierte **GetMyItemRect-Funktion** gibt das Textrechteck zurück, das benötigt wird, um den QuickInfo-Text direkt über der abgeschnittenen Zeichenfolge anzuzeigen. Die Details zur Implementierung dieser Funktion hängen vom jeweiligen Steuerelement ab. **TTM \_ ADJUSTRECT** wird verwendet, um dieses Textrechteck an das QuickInfo-Steuerelement zu senden. Sie gibt ein entsprechend dimensioniertes und positioniertes Fensterrechteck zurück, das dann zum Positionieren des QuickInfo-Fensters verwendet wird.
 
 
 ```
@@ -82,9 +82,9 @@ if (MyStringIsTruncated) {
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

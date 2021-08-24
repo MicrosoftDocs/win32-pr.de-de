@@ -1,40 +1,40 @@
 ---
-title: Erstellen eines Owner-Drawn Kombinations Felds
-description: In diesem Thema wird veranschaulicht, wie ein vom Besitzer gezeichnetes Kombinations Feld verwendet wird.
+title: Erstellen eines Owner-Drawn Kombinationsfelds
+description: In diesem Thema wird die Verwendung eines vom Besitzer gezeichneten Kombinationsfelds veranschaulicht.
 ms.assetid: D866DE82-9734-4E8A-A366-5870C25B7C7B
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5355dd33fe0067165308e9e6e5885b76edbe7ceb
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: e90d82192e485e4f833157a1c3ab75e8e39446e1e80f7f9cc27baf5444b4e0bc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104039641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119826465"
 ---
-# <a name="how-to-create-an-owner-drawn-combo-box"></a>Erstellen eines Owner-Drawn Kombinations Felds
+# <a name="how-to-create-an-owner-drawn-combo-box"></a>Erstellen eines Owner-Drawn Kombinationsfelds
 
-In diesem Thema wird veranschaulicht, wie ein vom Besitzer gezeichnetes Kombinations Feld verwendet wird. Das C++-Codebeispiel verwendet ein vom Besitzer gezeichnetes Dropdown-Listenfeld, um die vier Nahrungsmittelgruppen anzuzeigen, die jeweils durch eine Bitmap und einen Namen dargestellt werden. Wenn Sie eine Nahrungsmittel Gruppe auswählen, werden die Nahrungsmittel in dieser Gruppe in einer Liste angezeigt.
+In diesem Thema wird die Verwendung eines vom Besitzer gezeichneten Kombinationsfelds veranschaulicht. Im C++-Codebeispiel wird ein vom Besitzer gezeichnetes Dropdownlistenfeld verwendet, um die vier Lebensmittelgruppen anzuzeigen, die jeweils durch eine Bitmap und einen Namen dargestellt werden. Wenn Sie eine Lebensmittelgruppe auswählen, werden die Lebensmittel in dieser Gruppe in einer Liste angezeigt.
 
-![Screenshot mit einem Dialogfeld mit einem Listenfeld und einem erweiterten Dropdown-Listenfeld, in dem ein Symbol und eine Bezeichnung für die einzelnen Elemente angezeigt werden](images/cscbx-01.png)
+![Screenshot eines Dialogfelds mit einem Listenfeld und einem erweiterten Dropdownlistenfeld mit einem Symbol und einer Bezeichnung für jedes Element](images/cscbx-01.png)
 
-Das Dialogfeld enthält auch ein Listenfeld (idlist) und zwei Schaltflächen: **OK** (IDOK) und **Abbrechen** (IDCANCEL). Die IDOK-und IDCANCEL-Konstanten werden durch die SDK-Header Dateien definiert. Die idlist-Konstante ist in der Header Datei der Anwendung definiert, ebenso wie der Steuerelement Bezeichner idcombo. Weitere Informationen zu Dialogfeldern finden Sie unter [Dialogfelder](/windows/desktop/dlgbox/dialog-boxes).
+Das Dialogfeld enthält auch ein Listenfeld (IDLIST) und zwei Schaltflächen: **OK** (IDOK) und **Abbrechen** (IDCANCEL). Die KONSTANTEN IDOK und IDCANCEL werden durch die SDK-Headerdateien definiert. Die konstante IDLIST wird in der Headerdatei der Anwendung definiert, ebenso wie der Steuerelementbezeichner IDCOMBO. Weitere Informationen zu Dialogfeldern finden Sie unter [Dialogfelder.](/windows/desktop/dlgbox/dialog-boxes)
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-create-the-owner-drawn-dialog-box"></a>Schritt 1: Erstellen des Dialog Felds "Owner-Drawn"
+### <a name="step-1-create-the-owner-drawn-dialog-box"></a>Schritt 1: Erstellen des dialogfelds "Owner-Drawn"
 
-Das Codebeispiel verwendet die [**Dialogbox**](/windows/desktop/api/winuser/nf-winuser-dialogboxa) -Funktion, um ein modales Dialogfeld zu erstellen. In der Dialogfeld Vorlage IDD \_ sqmahlzeit werden die Fenster Stile, Schaltflächen und Steuerelement Bezeichner für das Kombinations Feld definiert. Im Kombinations Feld in diesem Beispiel werden die [**Stile \_ CBS DropDownList**](combo-box-styles.md), [**CBS \_ besitzdrawfixed**](combo-box-styles.md), [**CBS \_ Sort**](combo-box-styles.md), [**CBS \_ hasstrings**](combo-box-styles.md), [**WS \_ VScroll**](/windows/desktop/winmsg/window-styles)und [**WS \_ Tabstopp**](/windows/desktop/winmsg/window-styles) verwendet.
+Im Codebeispiel wird die [**DialogBox-Funktion**](/windows/desktop/api/winuser/nf-winuser-dialogboxa) verwendet, um ein modales Dialogfeld zu erstellen. Die Dialogfeldvorlage IDD \_ SQMEAL definiert die Fensterstile, Schaltflächen und Steuerelementbezeichner für das Kombinationsfeld. Das Kombinationsfeld in diesem Beispiel verwendet die Formate [**CBS \_ DROPDOWNLIST,**](combo-box-styles.md) [**CBS \_ OWNERDRAWFIXED,**](combo-box-styles.md) [**CBS \_ SORT,**](combo-box-styles.md) [**CBS \_ HASSTRINGS,**](combo-box-styles.md) [**WS \_ VSCROLL**](/windows/desktop/winmsg/window-styles)und [**WS \_ TABSTOP.**](/windows/desktop/winmsg/window-styles)
 
 
 ```C++
@@ -44,13 +44,13 @@ DialogBox(hInst, MAKEINTRESOURCE(IDD_SQMEAL),
 
 
 
-### <a name="step-2-process-the-wm_initdialog-and-wm_destroy-messages-in-a-dialog-box"></a>Schritt 2: Verarbeiten der "WM \_ InitDialog"-und "WM Destroy"- \_ Meldungen in einem Dialogfeld.
+### <a name="step-2-process-the-wm_initdialog-and-wm_destroy-messages-in-a-dialog-box"></a>Schritt 2: Verarbeiten der \_ WM INITDIALOG- und WM \_ DESTROY-Meldungen in einem Dialogfeld.
 
-Wenn Sie ein Kombinations Feld in einem Dialogfeld verwenden, reagieren Sie in der Regel auf eine " [**WM \_ InitDialog**](/windows/desktop/dlgbox/wm-initdialog) "-Meldung, indem Sie das Kombinations Feld initialisieren. Die Anwendung lädt die für das vom Besitzer gezeichneten Kombinations Feld verwendeten Bitmaps und ruft dann die Anwendungs definierte `InitGroupList` Funktion auf, um das Kombinations Feld zu initialisieren. Außerdem wählt Sie das erste Listenelement im Kombinations Feld aus und ruft dann die Anwendungs definierte `InitFoodList` Funktion auf, um das Listenfeld zu initialisieren.
+Wenn Sie ein Kombinationsfeld in einem Dialogfeld verwenden, reagieren Sie in der Regel auf eine [**WM \_ INITDIALOG-Meldung,**](/windows/desktop/dlgbox/wm-initdialog) indem Sie das Kombinationsfeld initialisieren. Die Anwendung lädt die Bitmaps, die für das vom Besitzer gezeichnete Kombinationsfeld verwendet werden, und ruft dann die anwendungsdefinierte `InitGroupList` Funktion auf, um das Kombinationsfeld zu initialisieren. Außerdem wählt er das erste Listenelement im Kombinationsfeld aus und ruft dann die anwendungsdefinierte `InitFoodList` Funktion auf, um das Listenfeld zu initialisieren.
 
-Im Beispiel handelt es sich bei dem vom Besitzer gezeichneten Kombinations Feld um ein Dropdown-Listenfeld, das die Namen der jeweiligen vier Lebensmittelgruppen enthält. `InitGroupList` Fügt den Namen der einzelnen Nahrungsmittelgruppen hinzu und verwendet die [**CB \_ -Nachricht**](cb-setitemdata.md) , um jedem Listenelement, das eine Nahrungsmittel Gruppe identifiziert, ein Bitmap-Handle zuzuordnen.
+Im Beispiel ist das vom Besitzer gezeichnete Kombinationsfeld ein Dropdownlistenfeld, das die Namen jeder der vier Lebensmittelgruppen enthält. `InitGroupList` fügt den Namen jeder Lebensmittelgruppe hinzu und verwendet die [**CB \_ SETITEMDATA-Nachricht,**](cb-setitemdata.md) um jedem Listenelement, das eine Lebensmittelgruppe identifiziert, ein Bitmaphandle zuzuordnen.
 
-Das Listenfeld im Beispiel enthält die Namen der Nahrungsmittel in der ausgewählten Lebensmittelgruppe. **Initfoodlist** setzt den Inhalt des Listen Felds zurück und fügt dann die Namen der aktuellen nahrungsmittelauswahl in das Dropdown-Listenfeld aktuelle Nahrungsmittel Gruppe ein.
+Das Listenfeld im Beispiel enthält die Namen der Lebensmittel in der ausgewählten Lebensmittelgruppe. **InitAturList** setzt den Inhalt des Listenfelds zurück und fügt dann die Namen der aktuellen Lebensmittelauswahl in das Dropdown-Listenfeld der aktuellen Lebensmittelgruppe ein.
 
 
 ```C++
@@ -76,7 +76,7 @@ case WM_INITDIALOG:
 
 
 
-Beim Empfang der [**WM- \_**](/windows/desktop/winmsg/wm-destroy) Lösch Nachricht löscht die Anwendung die Bitmaps im vom Besitzer gezeichneten Kombinations Feld.
+Wenn die [**WM \_ DESTROY-Nachricht**](/windows/desktop/winmsg/wm-destroy) empfangen wird, löscht die Anwendung die Bitmaps im vom Besitzer gezeichneten Kombinationsfeld.
 
 
 ```C++
@@ -89,11 +89,11 @@ case WM_DESTROY:
 
 
 
-### <a name="step-3-process-the-wm_measureitem-message"></a>Schritt 3: Verarbeiten der "WM \_ MeasureItem"-Nachricht.
+### <a name="step-3-process-the-wm_measureitem-message"></a>Schritt 3: Verarbeiten der WM \_ MEASUREITEM-Nachricht.
 
-Ein vom Besitzer gezeichnetes Kombinations Feld sendet die [**WM \_ MeasureItem**](wm-measureitem.md) -Nachricht an das übergeordnete Fenster oder die entsprechende Dialogfeld Prozedur, sodass die Anwendung die Dimensionen der einzelnen Listenelemente festlegen kann. Da das Kombinations Feld "Beispiel" den Typ " [**CBS \_ besitzdrawfixed**](combo-box-styles.md) " hat, sendet das System die " **WM \_ MeasureItem** "-Meldung nur einmal. Kombinations Felder mit dem CBS-Besitzer " [**\_ besitzdrawvariable**](combo-box-styles.md) " senden eine **WM \_ MeasureItem** -Nachricht für jedes Listenelement.
+Ein vom Besitzer gezeichnetes Kombinationsfeld sendet die [**WM \_ MEASUREITEM-Meldung**](wm-measureitem.md) an das übergeordnete Fenster oder die Dialogfeldprozedur, sodass die Anwendung die Dimensionen der einzelnen Listenelement festlegen kann. Da das Beispielkombinationsfeld den [**CBS \_ OWNERDRAWFIXED-Stil aufwies,**](combo-box-styles.md) sendet das System die **WM \_ MEASUREITEM-Nachricht** nur einmal. Kombinationsfelder mit dem [**FORMAT CBS \_ OWNERDRAWVARIABLE**](combo-box-styles.md) senden eine **WM \_ MEASUREITEM-Nachricht** für jedes Listenelement.
 
-Der *LPARAM* -Parameter ist ein Zeiger auf eine [**measureitemstruct**](/windows/win32/api/winuser/ns-winuser-measureitemstruct) -Struktur, die das Steuerelement und das Listenelement identifiziert. Sie enthält auch die Standardabmessungen des Listen Elements. Im Beispiel wird der **ItemHeight** -Strukturmember geändert, um sicherzustellen, dass die Listenelemente hoch genug sind, um die Bitmaps der Nahrungsmittel Gruppe aufzunehmen.
+Der *lParam-Parameter* ist ein Zeiger auf eine [**MEASUREITEMSTRUCT-Struktur,**](/windows/win32/api/winuser/ns-winuser-measureitemstruct) die das Steuerelement und das Listenelement identifiziert. Sie enthält auch die Standarddimensionen des Listenelements. Im Beispiel wird das **elementHeight-Strukturelement** geändert, um sicherzustellen, dass die Listenelemente hoch genug sind, um die Bitmaps für Lebensmittelgruppen aufzunehmen.
 
 
 ```C++
@@ -111,13 +111,13 @@ case WM_MEASUREITEM:
 
 
 
-### <a name="step-4-process-the-wm_drawitem-message"></a>Schritt 4: Verarbeiten der WM- \_ DrawItem-Nachricht.
+### <a name="step-4-process-the-wm_drawitem-message"></a>Schritt 4: Verarbeiten der WM \_ DRAWITEM-Nachricht.
 
-Ein vom Besitzer gezeichnetes Kombinations Feld sendet die [**WM \_ DrawItem**](wm-drawitem.md) -Nachricht an das übergeordnete Fenster oder die entsprechende Dialogfeld Prozedur, wenn die Anwendung ein Listenelement neu zeichnen muss. Der *LPARAM* -Parameter ist ein Zeiger auf eine [**drawitemstruct**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) -Struktur, die das Steuerelement und das Listenelement identifiziert. Sie enthält außerdem Informationen, die zum Zeichnen des Elements erforderlich sind.
+Ein vom Besitzer gezeichnetes Kombinationsfeld sendet die [**WM \_ DRAWITEM-Meldung**](wm-drawitem.md) jedes Mal an das übergeordnete Fenster oder die Dialogfeldprozedur, wenn die Anwendung ein Listenelement neu zeichnen muss. Der *lParam-Parameter* ist ein Zeiger auf eine [**DRAWITEMSTRUCT-Struktur,**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) die das Steuerelement und das Listenelement identifiziert. Sie enthält auch Informationen, die zum Zeichnen des Elements erforderlich sind.
 
-Die Beispielanwendung zeigt den Listenelement Text und die Bitmap an, die der Nahrungsmittel Gruppe zugeordnet ist. Wenn das Element den Fokus besitzt, zeichnet es auch ein Fokus Rechteck. Bevor der Text angezeigt wird, werden im Beispiel die Vordergrund-und Hintergrundfarben basierend auf dem ausgewählten Element festgelegt. Da das Kombinations Feld den [**CBS \_ hasstrings**](combo-box-styles.md) -Stil hat, verwaltet das Kombinations Feld den Text für jedes Listenelement, das mithilfe der [**CB \_ getlbtext**](cb-getlbtext.md) -Nachricht abgerufen werden kann.
+Die Beispielanwendung zeigt den Listenelementtext und die Bitmap an, die der Lebensmittelgruppe zugeordnet ist. Wenn das Element den Fokus besitzt, zeichnet es auch ein Fokusrechteck. Bevor der Text angezeigt wird, legt das Beispiel die Vordergrund- und Hintergrundfarben basierend auf dem ausgewählten Element fest. Da das Kombinationsfeld den [**CBS \_ HASSTRINGS-Stil**](combo-box-styles.md) hat, behält das Kombinationsfeld den Text für jedes Listenelement bei, das mithilfe der [**CB \_ GETLBTEXT-Nachricht**](cb-getlbtext.md) abgerufen werden kann.
 
-Welche Bitmaps für das Listenelement verwendet werden, hängt von der Nahrungsmittel Gruppe ab. `InitGroupList` verwendet die CB-Eigenschaft " [**\_ logdata**](cb-setitemdata.md) ", um jedem Listenelement ein Bitmap-Handle zuzuordnen. Die Fenster Prozedur ruft das Bitmap-Handle aus dem **ItemData** -Member der [**drawitemstruct**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) -Struktur ab. Das System verwendet zwei Bitmaps für jedes Lebensmittelgruppen Symbol: eine monochrome Bitmap mit dem srcand-Raster Vorgang zum Löschen des unregelmäßigen Bereichs hinter dem Bild und eine Farb Bitmap mit dem srcpaint-Raster Vorgang zum Zeichnen des Bilds.
+Welche Bitmaps für das Listenelement verwendet werden, hängt von der Lebensmittelgruppe ab. `InitGroupList` verwendet die [**CB \_ SETITEMDATA-Nachricht,**](cb-setitemdata.md) um jedem Listenelement ein Bitmaphandle zuzuordnen. Die Fensterprozedur ruft das Bitmaphandle aus dem **itemData-Member** der [**DRAWITEMSTRUCT-Struktur**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) ab. Das System verwendet zwei Bitmaps für jedes Lebensmittelgruppensymbol: eine monocolore Bitmap mit dem SRCAND-Rastervorgang, um den unregelmäßigen Bereich hinter dem Bild zu löschen, und eine Farbbitmap mit dem SRCPAINT-Rastervorgang, um das Bild zu zeichnen.
 
 
 ```C++
@@ -196,17 +196,17 @@ case WM_DRAWITEM:
 
 
 
-### <a name="step-5-process-the-wm_command-message"></a>Schritt 5: Verarbeiten der WM- \_ Befehls Meldung.
+### <a name="step-5-process-the-wm_command-message"></a>Schritt 5: Verarbeiten der WM \_ COMMAND-Nachricht.
 
-Wenn ein Ereignis in einem Dialogfeld-Steuerelement auftritt, benachrichtigt das-Steuerelement die Dialogfeld Prozedur mithilfe einer [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung. Im Beispiel werden Benachrichtigungs Meldungen aus dem Kombinations Feld, dem Listenfeld und der Schaltfläche **OK** verarbeitet. Der Bezeichner des Steuer Elements befindet sich im nieder wertigen Wort von *wParam*, und der Benachrichtigungs Code befindet sich im höherwertigen Wort von *wParam*.
+Wenn ein Ereignis in einem Dialogfeldsteuerelement auftritt, benachrichtigt das Steuerelement die Dialogfeldprozedur mithilfe einer [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command) Im Beispiel werden Benachrichtigungsmeldungen aus dem Kombinationsfeld, dem Listenfeld und der Schaltfläche **OK** verarbeitet. Der Steuerelementbezeichner befindet sich im Wort mit niedriger Reihenfolge von *wParam,* und der Benachrichtigungscode befindet sich im Wort in hoher Reihenfolge von *wParam.*
 
-Wenn der Steuerelement Bezeichner idcombo ist, ist im Kombinations Feld ein Ereignis aufgetreten. In der Antwort ignoriert die Dialogfeld Prozedur alle anderen Kombinations Feld Ereignisse außer [**CBN \_ selendok**](cbn-selendok.md), das angibt, dass eine Auswahl getroffen wurde, das Dropdown-Listenfeld geschlossen wurde und die vorgenommenen Änderungen akzeptiert werden sollen. Die Dialogfeld Prozedur ruft `InitFoodList` auf, um den Inhalt des Listen Felds zurückzusetzen und die Namen der aktuellen Auswahl im Dropdown-Listenfeld hinzuzufügen.
+Wenn der Steuerelementbezeichner IDCOMBO ist, ist im Kombinationsfeld ein Ereignis aufgetreten. Als Reaktion ignoriert die Dialogfeldprozedur alle anderen Kombinationsfeldereignisse außer [**CBN \_ SELENDOK.**](cbn-selendok.md)Dies gibt an, dass eine Auswahl getroffen wurde, das Dropdownlistenfeld geschlossen wurde und die vorgenommenen Änderungen akzeptiert werden sollten. Die Dialogfeldprozedur ruft `InitFoodList` auf, um den Inhalt des Listenfelds zurückzusetzen und die Namen der aktuellen Auswahl im Dropdownlistenfeld hinzuzufügen.
 
-Wenn der Steuerelement Bezeichner "idlist" ist, ist im Listenfeld ein Ereignis aufgetreten. Dies bewirkt, dass die Dialogfeld Prozedur alle Listenfeld Ereignisse außer [**LBN \_ dblclk**](lbn-dblclk.md)ignoriert, was darauf hinweist, dass der Benutzer auf ein Listenelement Doppel geklickt hat. Dieses Ereignis wird auf die gleiche Weise verarbeitet, wie wenn eine Schaltfläche " **OK** " ausgewählt wurde.
+Wenn der Steuerelementbezeichner IDLIST ist, ist ein Ereignis im Listenfeld aufgetreten. Dies bewirkt, dass die Dialogfeldprozedur alle Listenfeldereignisse außer [**LBN \_ DBLCLK**](lbn-dblclk.md)ignoriert. Dies gibt an, dass der Benutzer auf ein Listenelement doppelklickt. Dieses Ereignis wird auf die gleiche Weise verarbeitet, als ob eine SCHALTFLÄCHE **OK** ausgewählt worden wäre.
 
-Wenn der Steuerelement Bezeichner IDOK ist, hat der Benutzer die Schaltfläche **OK** ausgewählt. In der Antwort fügt die Dialogfeld Prozedur den Namen des ausgewählten Nahrungsmittel in das mehrzeilige Bearbeitungs Steuerelement der Anwendung ein und ruft dann die [**EndDialog**](/windows/desktop/api/winuser/nf-winuser-enddialog) -Funktion auf, um das Dialogfeld zu schließen.
+Wenn der Steuerelementbezeichner IDOK ist, hat der Benutzer die Schaltfläche **OK** ausgewählt. Als Antwort fügt die Dialogfeldprozedur den Namen des ausgewählten Essens in das Mehrzeilen-Bearbeitungssteuerelement der Anwendung ein und ruft dann die [**EndDialog-Funktion**](/windows/desktop/api/winuser/nf-winuser-enddialog) auf, um das Dialogfeld zu schließen.
 
-Wenn der Steuerelement Bezeichner IDCANCEL ist, hat der Benutzer auf die Schaltfläche " **Abbrechen** " geklickt. In der Antwort Ruft die Dialogfeld Prozedur [**EndDialog**](/windows/desktop/api/winuser/nf-winuser-enddialog) auf, um das Dialogfeld zu schließen.
+Wenn der Steuerelementbezeichner IDCANCEL ist, hat der Benutzer auf die Schaltfläche **Abbrechen** geklickt. Als Antwort ruft die Dialogfeldprozedur [**EndDialog auf,**](/windows/desktop/api/winuser/nf-winuser-enddialog) um das Dialogfeld zu schließen.
 
 
 ```C++
@@ -256,7 +256,7 @@ case WM_COMMAND:
 
 ## <a name="complete-example"></a>Vollständiges Beispiel
 
-Im folgenden finden Sie die Dialogfeld Prozedur und die unterstützenden Funktionen für das Dialogfeld **quadratische Mahlzeit** .
+Im Folgenden werden die Dialogfeldprozedur und die unterstützenden Funktionen für das Dialogfeld **Square Menu** angezeigt.
 
 
 ```C++
@@ -586,9 +586,9 @@ void DeleteIconBitmaps(void)
 
 <dl> <dt>
 
-[Verwenden von Kombinations Feldern](using-combo-boxes.md)
+[Verwenden von Kombinationsfeldern](using-combo-boxes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

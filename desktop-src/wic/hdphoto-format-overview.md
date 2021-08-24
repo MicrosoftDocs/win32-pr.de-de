@@ -1,19 +1,19 @@
 ---
-description: Dieses Thema enthält Informationen zum nativen HD-Fotocodec, der über die Windows-Bilderstellungskomponente (WIC) verfügbar ist.
+description: Dieses Thema enthält Informationen zum nativen HD-Fotocodec, der über die Windows Imaging Component (WIC) verfügbar ist.
 ms.assetid: C73752AB-3D6E-4D92-9FDE-CB68B6A9743C
 title: Übersicht über das HD-Fotoformat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62c526667c6bf77d340e895bdb66dc073134c33d
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 772c295051186069dd7be1a3efa3bfbb4e6ea919b2ab9fbe77ffd52cad1676a1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111444871"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119881950"
 ---
 # <a name="hd-photo-format-overview"></a>Übersicht über das HD-Fotoformat
 
-Dieses Thema enthält Informationen zum nativen HD-Fotocodec, der über die Windows-Bilderstellungskomponente (WIC) verfügbar ist.
+Dieses Thema enthält Informationen zum nativen HD-Fotocodec, der über die Windows Imaging Component (WIC) verfügbar ist.
 
 > [!IMPORTANT]
 >
@@ -37,7 +37,7 @@ Die folgende Tabelle enthält Informationen zur Codecidentifikation.
 
 |   Komponente            | BESCHREIBUNG                                                                     |
 |------------------------|---------------------------------------------------------------------------------|
-| Formale Namen         | HD-Foto, Windows-Medienfoto                                                   |
+| Formale Namen         | HD-Foto, Windows Medienfoto                                                   |
 | Dateinamenerweiterungen | Wdp                                                                             |
 | MIME-Typ (MIME type)              | image/vnd.ms-photo                                                              |
 | Dateisignatur(en)      | Erste vier Bytes: 0x4949bc00 (Version 0; Vorabversion), 0x4949bc01 (Version 1.0) |
@@ -66,7 +66,7 @@ Die WIC-Codierungs-API ist so konzipiert, dass sie codecunabhängig ist, und die
 
 ### <a name="encoder-options"></a>Encoderoptionen
 
-WIC-fähige Codecs unterscheiden sich auf Codierungsoptionenebene. Encoderoptionen spiegeln die Funktionen eines Bildencoders wider, und jeder native Codec unterstützt eine Reihe dieser Encoderoptionen. Encoderoptionen können grundlegende WIC-unterstützte Optionen sein, die für alle WIC-fähigen Codes (jedoch nicht unbedingt unterstützt) oder codecspezifische Optionen verfügbar sind, die vom Bildformatcodec entworfen wurden. Um diese Codierungsoptionen während des Codierungsprozesses zu verwalten, verwendet WIC die [**IPropertyBag2-Schnittstelle**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768192(v=vs.85)) . Weitere Informationen zur Verwendung der **IPropertyBag2-Schnittstelle** für die WIC-Codierung finden Sie in der Übersicht über die [Codierung.](-wic-creating-encoder.md)
+WIC-fähige Codecs unterscheiden sich auf Codierungsoptionenebene. Encoderoptionen spiegeln die Funktionen eines Bildencoders wider, und jeder native Codec unterstützt eine Reihe dieser Encoderoptionen. Encoderoptionen können einfache WIC-unterstützte Optionen sein, die für alle WIC-fähigen Codes verfügbar sind (obwohl sie nicht unbedingt unterstützt werden) oder codecspezifische Optionen, die vom Bildformatcodec entworfen wurden. Um diese Codierungsoptionen während des Codierungsprozesses zu verwalten, verwendet WIC die [**IPropertyBag2-Schnittstelle**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768192(v=vs.85)) . Weitere Informationen zur Verwendung der **IPropertyBag2-Schnittstelle** für die WIC-Codierung finden Sie in der Übersicht über die [Codierung.](-wic-creating-encoder.md)
 
 Der HD-Fotocodec verwendet beide grundlegenden WIC-Optionen und bietet mehrere HD Photo-spezifische Codierungsoptionen. In der folgenden Tabelle sind die Encoderoptionen aufgeführt, die vom nativen HD Photo-Codec unterstützt werden.
 
@@ -131,7 +131,7 @@ Der Standardwert ist **FALSE**.
 
 ### <a name="quality-option"></a>Quality-Option
 
-Gibt die Komprimierungsqualität für das Bild an. Der Wert 1 gibt den verlustlosen Modus an. Das Erhöhen von Werten führt zu einem höheren Komprimierungsverhältnis und einer geringeren Imagequalität.
+Gibt die Komprimierungsqualität für das Bild an. Der Wert 1 gibt den verlustlosen Modus an. Das Erhöhen von Werten führt zu einem höheren Komprimierungsverhältnis und einer niedrigeren Bildqualität.
 
 Der Standardwert ist 10.
 
@@ -153,7 +153,7 @@ In der folgenden Tabelle sind die verfügbaren Überlappungsverarbeitungsebenen 
 
  
 
-Der Standardwert ist 1.
+Der Standardwert ist 1.
 
 ### <a name="subsampling-option"></a>Subsamplingoption
 
@@ -166,9 +166,9 @@ In der folgenden Tabelle sind die verfügbaren Unterbeispieloptionen aufgeführt
 | Wert | BESCHREIBUNG                                                                                                                                                                                                                                                                                 |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 3     | Die 4:4:4-Codierung behält die vollständige Auflösung bei.                                                                                                                                                                                                                                            |
-| 2     | Die 4:2:2-Codierung reduziert die Farbauflösung auf 1/2 der Leuchtdichteauflösung.                                                                                                                                                                                                                      |
+| 2     | Die 4:2:2-Codierung reduziert die Auflösung der Farbauflösung auf 1/2 der Leuchtdichteauflösung.                                                                                                                                                                                                                      |
 | 1     | Die 4:2:0-Codierung reduziert die Auflösung der Farbauflösung auf 1/4 der Leuchtdichteauflösung.                                                                                                                                                                                                                      |
-| 0     | Bei der 4:0:0-Codierung werden alle Inhalte verworfen und nur die Leuchtdichte beibehalten. Da der Codec eine leicht geänderte Definition der Leuchtdichte verwendet, um die Leistung zu verbessern, wird empfohlen, ein RGB-Bild vor der Codierung in monofarbig zu konvertieren, anstatt diesen Subsamplingmodus zu verwenden. |
+| 0     | Die 4:0:0-Codierung verwirft alle Inhalte und behält nur die Leuchtdichte bei. Da der Codec eine leicht geänderte Definition der Leuchtdichte verwendet, um die Leistung zu verbessern, empfiehlt es sich, ein RGB-Bild vor der Codierung in monofarbig zu konvertieren, anstatt diesen Subsamplingmodus zu verwenden. |
 
 
 
@@ -178,7 +178,7 @@ Der Standardwert ist 3, wenn [ImageQuality](#imagequality-option) > 0,8; andernf
 
 ### <a name="horizontaltileslices-verticaltileslices-options"></a>HorizontalTileSlices, VerticalTileSlices-Optionen
 
-Geben Sie die horizontale und vertikale Kacheln des Bilds an, bevor Sie die Komprimierungscodierung durchführen, um die optimale Leistung der Bereichsdecodierung zu erzielen. Indem Sie das Bild während der Codierung in rechteckige Kacheln unterteilen, können Sie Bereiche des Bilds decodieren, ohne den gesamten komprimierten Datenstrom zu verarbeiten. Der Standardwert 0 gibt keine Unterteilung an, sodass das gesamte Bild als einzelne Kachel behandelt wird. Der Wert 1 für jeden Parameter erstellt eine einzelne horizontale und eine einzelne vertikale Division, die das Bild effektiv in vier gleich große Kacheln aufteilt. Der Maximalwert 4095 für jeden Parameter teilt das Bild in 4096 Kachelzeilen mit 4.096 Kacheln pro Zeile auf. Anders ausgedrückt: Die Parameterwerte sind gleich der Anzahl der horizontalen und vertikalen Kacheln (bzw. minus 1). Eine Kachel darf nie kleiner als 16 Pixel in Breite oder Höhe sein, daher kann der HD-Fotoencoder diesen Parameter anpassen, um die erforderliche minimale Kachelgröße zu erhalten. Da jeder Kachel Speicher- und Verarbeitungsaufwand zugeordnet ist, sollten Sie diese Werte sorgfältig auswählen, um das spezifische Szenario zu erfüllen.
+Geben Sie die horizontale und vertikale Kacheln des Bilds an, bevor Sie die Komprimierungscodierung durchführen, um die optimale Leistung der Bereichsdecodierung zu erzielen. Indem Sie das Bild während der Codierung in rechteckige Kacheln unterteilen, können Sie Bereiche des Bilds decodieren, ohne den gesamten komprimierten Datenstrom zu verarbeiten. Der Standardwert 0 gibt keine Unterteilung an, sodass das gesamte Bild als einzelne Kachel behandelt wird. Der Wert 1 für jeden Parameter erstellt eine einzelne horizontale und eine einzelne vertikale Division, die das Bild effektiv in vier gleich große Kacheln aufteilt. Der Maximalwert 4095 für jeden Parameter teilt das Bild in 4096 Kachelzeilen mit 4096 Kacheln pro Zeile auf. Anders ausgedrückt: Die Parameterwerte sind gleich der Anzahl der horizontalen und vertikalen Kacheln (bzw. minus 1). Eine Kachel darf nie kleiner als 16 Pixel in Breite oder Höhe sein, daher kann der HD-Fotoencoder diesen Parameter anpassen, um die erforderliche Minimale Kachelgröße zu erhalten. Da jeder Kachel Speicher- und Verarbeitungsaufwand zugeordnet ist, sollten Sie diese Werte sorgfältig auswählen, um das spezifische Szenario zu erfüllen.
 
 [HorizontalTileSlices:](/windows)Der Standardwert ist (Bildbreite – 1)  >> 8.
 
@@ -192,7 +192,7 @@ Der Standardwert ist **TRUE,** und es wird empfohlen, dass Anwendungen und Gerä
 
 ### <a name="interleavedalpha-option"></a>InterleavedAlpha-Option
 
-Wenn Sie diese Option auf **TRUE** festlegen, wird der Codec angewiesen, die Alphakanalinformationen als zusätzlichen überlappenden Kanal ohne Korrelation mit den Bildinhaltskanälen zu codieren. Dieser Modus ist nützlich, wenn Sie Alpha gleichzeitig mit dem Bild in einem Streamingszenario decodieren müssen.
+Wenn Sie diese Option auf **TRUE** festlegen, wird der Codec angewiesen, die Alphakanalinformationen als zusätzlichen verschachtelten Kanal ohne Korrelation mit den Bildinhaltskanälen zu codieren. Dieser Modus ist nützlich, wenn Sie Alpha gleichzeitig mit dem Bild in einem Streamingszenario decodieren müssen.
 
 Das Festlegen dieses Parameters auf **FALSE** führt zu einem planaren Alphakanal, der als separates Bild mit einem eigenen optionalen Quality-Wert codiert ist. Mithilfe eines planaren Alphakanals können Sie die Bilddaten und den Alphakanal unabhängig decodieren. Verschachtelte Alphakanäle werden nur für bestimmte RGB-Pixelformate unterstützt. Sie können einen planaren Alphakanal einem beliebigen Bildformat zuordnen, das einen Alphakanal definiert.
 
@@ -202,7 +202,7 @@ Der Standardwert ist **FALSE**.
 
 Gibt die Komprimierungsqualität für das planare Alphakanalbild an. Der Wert 1 legt den verlustfreien Modus fest. Steigende Werte führen zu höheren Komprimierungsverhältnissen und einer niedrigeren Imagequalität.
 
-Der Standardwert ist 1.
+Der Standardwert ist 1.
 
 ### <a name="compresseddomaintranscode-option"></a>CompressedDomainTranscode-Option
 
@@ -242,7 +242,7 @@ Die folgenden Werte sind zulässig.
 | 0     | Es werden keine Bildfrequenzdaten verworfen.                                                                                                                                                                                                                                                                                                                                                                                        |
 | 1     | Die FlexBits werden verworfen, wodurch die Qualität des transcodierten Bilds willkürlich reduziert wird, ohne die effektive Auflösung des Bilds zu ändern. Die genaue Verringerung der Dateigröße oder die spezifische Qualitätsreduzierung hängt von zahlreichen Faktoren ab und kann nicht angegeben oder vorhergesagt werden. Dieser Wert gibt einen Fehler zurück, wenn Sie ihn für einen überlappenden Alphakanal angeben.                                                    |
 | 2     | Das HighPass-Frequenzdatenband wird verworfen (einschließlich flexBits), wodurch die Auflösung des transcodierten Bilds in beiden Dimensionen um den Faktor 4 reduziert wird. Die tatsächlichen Abmessungen des transcodierten Bilds bleiben gleich, verlieren jedoch alle Details in jedem 4x4-Pixelblock. Daher sollten Sie das transcodierte Bild bei jeder Decodierung entsprechend downsampling.                            |
-| 3     | Sowohl die HighPass- als auch die LowPass-Frequenzband werden verworfen (einschließlich flexBits), wodurch die Auflösung des transcodierten Bilds in beiden Dimensionen um den Faktor 16 reduziert wird. Die tatsächlichen Abmessungen des transcodierten Bilds bleiben gleich, verlieren jedoch alle Details in jedem 16x16-Makroblock von Pixeln. Daher sollten Sie das transcodierte Bild bei jeder Decodierung entsprechend downsampling. |
+| 3     | Sowohl die HighPass- als auch die LowPass-Frequenzband werden verworfen (einschließlich der FlexBits), wodurch die Auflösung des transcodierten Bilds in beiden Dimensionen um den Faktor 16 reduziert wird. Die tatsächlichen Abmessungen des transcodierten Bilds bleiben gleich, verlieren jedoch alle Details in jedem 16x16-Makroblock von Pixeln. Daher sollten Sie das transcodierte Bild bei jeder Decodierung entsprechend downsampling. |
 
 
 
@@ -260,8 +260,8 @@ Diese Option ist nur gültig, wenn die [CompressedDomainTranscode-Eigenschaft](#
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0     | Es werden keine Bildfrequenzdaten verworfen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | 1     | Die FlexBits werden verworfen, wodurch die Qualität des planaren Alphakanals für das transcodierte Bild willkürlich reduziert wird, ohne die effektive Auflösung zu ändern. Die genaue Verringerung der Dateigröße oder die spezifische Qualitätsreduzierung hängt von zahlreichen Faktoren ab und kann nicht angegeben oder vorhergesagt werden.                                                                                                                                                                                                                                                |
-| 2     | Das HighPass-Frequenzdatenband wird verworfen (einschließlich flexBits), wodurch die Auflösung des planaren Alphakanals für transcodierte Bilder in beiden Dimensionen um den Faktor 4 reduziert wird. Die tatsächlichen Abmessungen des transcodierten Bilds bleiben gleich, aber das Bild verliert alle planaren Alphakanaldetails in jedem 4x4-Pixelblock. Daher sollte das transcodierte Bild bei jeder Decodierung entsprechend heruntersamplingt werden. In der Regel sollten Sie diesen Wert nur festlegen, wenn Sie die ImageDataDiscard-Eigenschaft auf denselben Wert festlegen. |
-| 3     | Sowohl die HighPass- als auch die LowPass-Frequenzband werden verworfen (einschließlich flexBits), wodurch die Auflösung des transcodierten Bilds in beiden Dimensionen um den Faktor 16 reduziert wird. Die tatsächlichen Abmessungen des transcodierten Bilds bleiben gleich, aber das Bild verliert alle Details in jedem 16x16-Makroblock von Pixeln. Daher sollte das transcodierte Bild bei jeder Decodierung entsprechend heruntersamplingt werden. In der Regel sollten Sie diesen Wert nur festlegen, wenn Sie die ImageDataDiscard-Eigenschaft auf denselben Wert festlegen.               |
+| 2     | Das HighPass-Frequenzdatenband wird verworfen (einschließlich FlexBits), wodurch die Auflösung des planaren Alphakanals des transcodierten Bilds in beiden Dimensionen um den Faktor 4 reduziert wird. Die tatsächlichen Abmessungen des transcodierten Bilds bleiben gleich, aber das Bild verliert alle planaren Alphakanaldetails in jedem 4x4-Pixelblock. Daher sollte das transcodierte Bild bei jeder Decodierung entsprechend heruntersamplingt werden. In der Regel sollten Sie diesen Wert nur festlegen, wenn Sie die ImageDataDiscard-Eigenschaft auf denselben Wert festlegen. |
+| 3     | Sowohl die HighPass- als auch die LowPass-Frequenzband werden verworfen (einschließlich der FlexBits), wodurch die Auflösung des transcodierten Bilds in beiden Dimensionen um den Faktor 16 reduziert wird. Die tatsächlichen Abmessungen des transcodierten Bilds bleiben gleich, aber das Bild verliert alle Details in jedem 16x16-Makroblock von Pixeln. Daher sollte das transcodierte Bild bei jeder Decodierung entsprechend heruntersamplingt werden. In der Regel sollten Sie diesen Wert nur festlegen, wenn Sie die ImageDataDiscard-Eigenschaft auf denselben Wert festlegen.               |
 | 4     | Der Alphakanal wird vollständig verworfen. Das Pixelformat des transcodierten Bilds wird geändert, um das Entfernen des Alphakanals widerzuspiegeln.                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 
@@ -284,14 +284,14 @@ Die WIC-Decodierungs-API ist so konzipiert, dass sie codecunabhängig ist, und d
 
 ### <a name="iwicbitmapsourcetransform-support"></a>IWICBitmapSourceTransform-Unterstützung
 
-Zusätzlich zu den Schnittstellen, die als WIC-fähiger Codec erforderlich sind, unterstützt der native HD-Fotodecoder auch [**IWICBitmapSourceTransform.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsourcetransform) Die **IWICBitmapSourceTransform-Schnittstelle** bietet eine erweiterte Option zum Decodieren eines Bildbitstreams. Anstatt nur ein vollständiges Bild mithilfe von [**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode)zurückzugeben, aktiviert die **IWICBitmapSourceTransform-Schnittstelle** die folgenden Decoderoptionen.
+Zusätzlich zu den Schnittstellen, die als WIC-fähiger Codec erforderlich sind, unterstützt der native HD-Fotodecoder auch [**IWICBitmapSourceTransform.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsourcetransform) Die **IWICBitmapSourceTransform-Schnittstelle** bietet eine erweiterte Option zum Decodieren eines Bildbitstreams. Anstatt nur ein vollständiges Bild mit [**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode)zurückzugeben, aktiviert die **IWICBitmapSourceTransform-Schnittstelle** die folgenden Decoderoptionen.
 
 -   Decodieren Sie einen rechteckigen Unterbereich des Bilds.
 -   Decodieren in eine niedrigere Auflösung
 -   Decodieren in ein anderes Pixelformat
--   Durchführen einer Transformation (Drehung/Flip) während der Decodierung
+-   Durchführen einer Transformation (Drehung/Kippen) während der Decodierung
 
-Der native HD Photo-Codec bietet die folgende Unterstützungsebene für die [**IWICBitmapSourceTransform-Schnittstelle.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsourcetransform)
+Der native HD-Fotocodec bietet die folgende Unterstützungsebene für die [**IWICBitmapSourceTransform-Schnittstelle.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsourcetransform)
 
 ### <a name="doessupporttransform"></a>DoesSupportTransform
 
@@ -299,7 +299,7 @@ Die native Implementierung unterstützt alle [**WICBitmapTransformOptions-Transf
 
 ### <a name="getclosestsize"></a>GetClosestSize
 
-Bei Anforderungen, die weniger als 1/2 der Dimension des Quellbilds in beiden Dimensionen sind, gibt HD Photo die nächstgrößerste ganzzahlige Bildgröße zurück, die durch den Faktor 2 gleichmäßig geteilt werden kann. Für alle anderen angeforderten Größen gibt HD Photo die ursprünglichen Bilddimensionen zurück.
+Für Anforderungen, die kleiner als 1/2 die Dimension des Quellbilds in beiden Dimensionen sind, gibt HD Photo die nächste größte ganzzahlige Bildgröße zurück, die gleichmäßig um den Faktor 2 teilbar ist. Für alle anderen angeforderten Größen gibt HD Photo die ursprünglichen Bilddimensionen zurück.
 
 ### <a name="getclosestpixelformat"></a>GetClosestPixelFormat
 
@@ -307,13 +307,13 @@ HD Photo gibt das Pixelformat des codierten Bilds zurück.
 
 ### <a name="copypixels"></a>Copypixels
 
-HD Photo akzeptiert jeden vom [**WICRect-Parameter**](/windows/desktop/api/Wincodec/ns-wincodec-wicrect) angegebenen angeforderten Bereich und gibt diesen Teil des Bilds zurück.
+HD Photo akzeptiert alle angeforderten Bereiche, die durch den [**WICRect-Parameter**](/windows/desktop/api/Wincodec/ns-wincodec-wicrect) angegeben werden, und gibt diesen Teil des Bilds zurück.
 
-Die Parameter *uiWidth* und *uiHeight* müssen Dimensionen angeben, die von der [**GetClosestSize-Funktion**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsourcetransform-getclosestsize) zurückgegeben werden. Alle anderen Werte geben einen Fehler zurück.
+Die *Parameter uiWidth* und *uiHeight* müssen Dimensionen angeben, wie sie von der [**GetClosestSize-Funktion zurückgegeben**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsourcetransform-getclosestsize) werden. Alle anderen Werte geben einen Fehler zurück.
 
 Der *pguidDstFormat-Parameter* muss das von der [**GetClosestPixelFormat-Funktion**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsourcetransform-getclosestpixelformat) zurückgegebene Pixelformat angeben. Jeder andere Wert gibt einen Fehler zurück.
 
-HD Photo akzeptiert jeden zulässigen Wert für den *dstTransform-Parameter.* Beachten Sie, dass sich die von WIC für diesen Parameter zulässigen Werte von den Werten unterscheiden, die von HD Photo für das Transformation-Metadatentag verwendet werden.
+HD Photo akzeptiert jeden zulässigen Wert für den *dstTransform-Parameter.* Beachten Sie, dass sich die von WIC für diesen Parameter zulässigen Werte von den Werten unterscheiden, die von HD Photo für das Transformationsmetadatentag verwendet werden.
 
  
 

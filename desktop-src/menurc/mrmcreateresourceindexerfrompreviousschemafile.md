@@ -1,9 +1,9 @@
 ---
-title: Mrmkreateresourceindexerfrompreviousschemafile-Funktion (mrmresourceindexer. h)
-description: Erstellt einen ressourcenindexer aus einer Schema Datei, die mit einem vorherigen Aufruf von mrmdumpprifile erstellt wurde. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme.
+title: MrmCreateResourceIndexerFromPreviousSchemaFile-Funktion (MrmResourceIndexer.h)
+description: Erstellt einen Ressourcenindexer aus einer Schemadatei, die mit einem vorherigen Aufruf von MrmDumpPriFile erstellt wurde. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung (Package Resource Indexing, PRI) und benutzerdefinierte Buildsysteme.
 ms.assetid: 2ECF355C-C6FD-4949-B455-52E3FF455005
 keywords:
-- Mrmcreateresourceindexerfrompreviousschemafile-Funktions Menüs und weitere Ressourcen
+- MrmCreateResourceIndexerFromPreviousSchemaFile-Funktionsmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 304e0aebe75ac416623cb1ec1053a7b6ae504194
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 622fe76c9206b4a8223d27d810f3d02bc0dca1d08730623b595ead24eab719d6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847370"
 ---
-# <a name="mrmcreateresourceindexerfrompreviousschemafile-function"></a>Mrmkreateresourceindexerfrompreviousschemafile-Funktion
+# <a name="mrmcreateresourceindexerfrompreviousschemafile-function"></a>MrmCreateResourceIndexerFromPreviousSchemaFile-Funktion
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Erstellt einen ressourcenindexer aus einer Schema Datei, die mit einem vorherigen Aufruf von [**mrmdumpprifile**](mrmdumpprifile.md)erstellt wurde. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für [Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme](/windows/uwp/app-resources/pri-apis-custom-build-systems).
+Erstellt einen Ressourcenindexer aus einer Schemadatei, die mit einem vorherigen Aufruf von [**MrmDumpPriFile erstellt wurde.**](mrmdumpprifile.md) Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung und benutzerdefinierte [Buildsysteme.](/windows/uwp/app-resources/pri-apis-custom-build-systems)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,56 +46,56 @@ HRESULT HRESULT MrmCreateResourceIndexerFromPreviousSchemaFile(
 
 <dl> <dt>
 
-*projectroot* \[ in\]
+*projectRoot* \[ In\]
 </dt> <dd>
 
-Typ: **pcwstr**
+Typ: **PCWSTR**
 
-Der Projektstamm der UWP-APP, für die Sie pri-Dateien erstellen. Anders ausgedrückt: der Pfad zu den Ressourcen Dateien dieser app. Sie geben diese Angabe an, damit Sie in nachfolgenden API-aufrufen desselben ressourcenindexers Pfade relativ zu diesem Stamm angeben können.
+Der Projektstamm der UWP-App, für die Sie PRI-Dateien generieren. Das heißt, der Pfad zu den Ressourcendateien dieser App. Sie geben dies an, damit Sie in nachfolgenden API-Aufrufen desselben Ressourcenindexers Pfade relativ zu diesem Stamm angeben können.
 
 </dd> <dt>
 
-*platformversion* \[ in\]
+*platformVersion* \[ In\]
 </dt> <dd>
 
-Typ: **[ **mrmplatformversion**](mrmplatformversion.md)**
+Typ: **[ **MrmPlatformVersion**](mrmplatformversion.md)**
 
-Die Version der Zielplattform für den ressourcenindexer.
+Die Zielplattformversion für den Ressourcenindexer.
 
 </dd> <dt>
 
-*defaultqualifizierer* \[ in, optional\]
+*defaultQualifiers* \[ in, optional\]
 </dt> <dd>
 
-Typ: **pcwstr**
+Typ: **PCWSTR**
 
-Eine Liste der Standard Ressourcen Qualifizierer. Beispiel: L "language-en-US \_ Scale-100 \_ Contrast-Standard"
+Eine Liste der Standardressourcenqualifizierer. Beispiel: L"language-en-US \_ scale-100 \_ contrast-standard"
 
 </dd> <dt>
 
-*SchemaFile* \[ in\]
+*schemaFile* \[ In\]
 </dt> <dd>
 
-Typ: **pcwstr**
+Typ: **PCWSTR**
 
-Ein vollständiger Dateipfad zu einer Schema Datei, die durch einen vorherigen-Befehl von [**mrmdumpprifile**](mrmdumpprifile.md)erstellt wurde.
+Ein vollständiger Dateipfad zu einer Schemadatei, die durch einen vorherigen Aufruf von [**MrmDumpPriFile erstellt wurde.**](mrmdumpprifile.md)
 
 </dd> <dt>
 
 *Indexer* \[ in, out\]
 </dt> <dd>
 
-Typ: **[**mrmresourceindexerhandle**](mrmresourceindexerhandle.md) \** _
+Typ: **[ **MrmResourceIndexerHandle**](mrmresourceindexerhandle.md)\***
 
-Ein Zeiger auf ein ressourcenindexer-handle.
+Ein Zeiger auf ein Ressourcenindexerhand handle.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros Success () oder failed () (in WinError. h definiert), um den Erfolg oder Misserfolg zu ermitteln.
+S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros SUCCEEDED() oder FAILED() (definiert in winerror.h), um den Erfolg oder Fehler zu bestimmen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,10 +103,10 @@ S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwen
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1803, \[ nur Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ -Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Mrmresourceingedexer. h</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Mrmsupport. lib</dt> </dl>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1803 desktop apps only (Nur \[ Desktop-Apps der Version 1803)\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur \[ Serverdesktop-Apps\]<br/>                                                 |
+| Header<br/>                   | <dl> <dt>MrmResourceIndexer.h</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Mrmsupport.lib</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Mrmsupport.dll</dt> </dl>       |
 
 

@@ -1,7 +1,7 @@
 ---
-description: Ruft Mesh-Geometrie-Verschiebungs Parameter ab.
+description: Ruft Gittergeometrieverschiebungsparameter ab.
 ms.assetid: 155724ba-71be-4e9f-8c84-bb04f8eec578
-title: 'ID3DXPatchMesh:: getverdräneparam-Methode (D3DX9Mesh. h)'
+title: ID3DXPatchMesh::GetDisplaceParam-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 3ce6891af8a15aa8f4af5c85312f124db6c05321
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f079e66f20bfd9b2fab673a0f8c2310a9fd85d84fe4e7d0b8c5ad59d1d61e9e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106369342"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847450"
 ---
-# <a name="id3dxpatchmeshgetdisplaceparam-method"></a>ID3DXPatchMesh:: getverdräneparam-Methode
+# <a name="id3dxpatchmeshgetdisplaceparam-method"></a>ID3DXPatchMesh::GetDisplaceParam-Methode
 
-Ruft Mesh-Geometrie-Verschiebungs Parameter ab.
+Ruft Gittergeometrieverschiebungsparameter ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,57 +45,57 @@ HRESULT GetDisplaceParam(
 
 <dl> <dt>
 
-*Textur* \[ in\]
+*Textur* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DBASETEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9)\***
 
-Textur, die die Verschiebungs Daten enthält.
+Textur, die die Verschiebungsdaten enthält.
 
 </dd> <dt>
 
-*MinFilter* \[ in\]
+*MinFilter* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md)\***
 
-Minizierungsebene. Weitere Informationen finden Sie unter [**D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md).
+Minierungsstufe. Weitere Informationen finden Sie unter [**D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md).
 
 </dd> <dt>
 
-*MagFilter* \[ in\]
+*MagFilter* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md)\***
 
-Vergrößerungs Stufe. Weitere Informationen finden Sie unter [**D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md).
+Vergrößerungsstufe. Weitere Informationen finden Sie unter [**D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md).
 
 </dd> <dt>
 
-*MipFilter* \[ in\]
+*MipFilter* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md)\***
 
-MIP-Filter Ebene. Weitere Informationen finden Sie unter [**D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md).
+MIP-Filterebene. Weitere Informationen finden Sie unter [**D3DTEXTUREFILTERTYPE**](./d3dtexturefiltertype.md).
 
 </dd> <dt>
 
- Umbruch \[ in\]
+*Umschließen* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DTEXTUREADDRESS**](./d3dtextureaddress.md)\***
 
-Der Textur Adress Umbruch Modus. Weitere Informationen finden Sie unter [**D3DTEXTUREADDRESS**](./d3dtextureaddress.md).
+Texturadressen-Wrap-Modus. Weitere Informationen finden Sie unter [**D3DTEXTUREADDRESS**](./d3dtextureaddress.md).
 
 </dd> <dt>
 
-*dwlodbias* \[ in\]
+*dwLODBias* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Grad des Detail-Bias-Werts.
+Wert der Detailvoreingenommenheit.
 
 </dd> </dl>
 
@@ -103,11 +103,11 @@ Grad des Detail-Bias-Werts.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verschiebungs Zuordnungen können nur 2D-Texturen sein. Mipmapping wird für nicht Adaptive Mosaik ignoriert.
+Verschiebungszuordnungen können nur 2D-Texturen sein. Mipmapping wird bei nichtadaptivem Mosaik ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,8 +115,8 @@ Verschiebungs Zuordnungen können nur 2D-Texturen sein. Mipmapping wird für nic
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

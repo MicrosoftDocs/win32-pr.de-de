@@ -1,23 +1,23 @@
 ---
-title: EQ (SM4-ASM)
-description: Vergleichspunkt-Gleichheits Vergleich in Komponenten weiser Vektor.
+title: eq (sm4 - asm)
+description: Komponentenweiser Vektor-Gleitkommagleichheitsvergleich.
 ms.assetid: 925578E4-0161-45A9-840F-14AA65FF4F33
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f47dc7bda7b1c61c251ace061fc75897788b968
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 5a90af3fd6f65a6a81c32592650c4be33996c96a1d99415ec1dfecb0b0f83ac9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389482"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789040"
 ---
-# <a name="eq-sm4---asm"></a>EQ (SM4-ASM)
+# <a name="eq-sm4---asm"></a>eq (sm4 - asm)
 
-Vergleichspunkt-Gleichheits Vergleich in Komponenten weiser Vektor.
+Komponentenweiser Vektor-Gleitkommagleichheitsvergleich.
 
 
 
-| EQ dest \[ . mask \] , \[ - \] src0 \[ \_ ABS \] \[ . Swizzle \] , \[ - \] Quelle1 \[ \_ ABS \] \[ . Swizzle\] |
+| eq dest \[ .mask \] , \[ - \] src0 \[ \_ abs \] \[ .swizzle \] , \[ - \] src1 abs \[ \_ \] \[ .swizzle\] |
 |----------------------------------------------------------------------------------|
 
 
@@ -26,25 +26,25 @@ Vergleichspunkt-Gleichheits Vergleich in Komponenten weiser Vektor.
 
 
 
-| Element                                                            | BESCHREIBUNG                                                   |
+| Element                                                            | Beschreibung                                                   |
 |-----------------------------------------------------------------|---------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[in \] der Adresse des Vorgangs Ergebnisses.<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] der Komponente, die an *Quelle1* comapre ausgeführt werden soll.<br/>         |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/> | \[in \] der Komponente, die an *src0* comapre ausgeführt werden soll.<br/>         |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse des Ergebnisses des Vorgangs.<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Komponente, die für *src1 verwendet werden soll.*<br/>         |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in \] Die Komponente, die für *src0 verwendet werden soll.*<br/>         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Führt den float-Vergleich (*src0*  ==  *Quelle1*) für jede Komponente aus und schreibt das Ergebnis in *dest*.
+Führt den Float-Vergleich (*src0*  ==  *src1*) für jede Komponente aus und schreibt das Ergebnis in *dest.*
 
-Wenn der Vergleich true ist, wird 0xFFFFFFFF für diese Komponente zurückgegeben. Andernfalls wird 0x0000000 zurückgegeben.
+Wenn der Vergleich true ist, 0xFFFFFFFF für diese Komponente zurückgegeben. Andernfalls 0x0000000 zurückgegeben.
 
-Denorms werden vor dem Vergleich geleert (die ursprüngliche Quelle wird unverändert registriert). + 0 ist 0 (null). Der Vergleich mit Nan gibt false zurück.
+Denormale werden vor dem Vergleich geleert (ursprüngliche Quellregister unverändert). +0 ist gleich -0. Der Vergleich mit NaN gibt false zurück.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -56,20 +56,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

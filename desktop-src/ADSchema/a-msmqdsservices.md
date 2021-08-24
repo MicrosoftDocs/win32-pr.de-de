@@ -1,11 +1,11 @@
 ---
-title: MSMQ-DS-Services-Attribut
-description: Gibt an, ob die auf diesem Computer installierte MSMQ MSMQ DS-Dienste bereitstellt.
+title: MSMQ-Ds-Services-Attribut
+description: Gibt an, ob das auf diesem Computer installierte MSMQ MSMQ DS-Dienste bereitstellt.
 ms.assetid: 33d7ddb0-b0ce-468c-9090-93be71bdedae
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des MSMQ-DS-Services-Attributs
-- AD-Schema des msmqdsservices-Attributs
+- AD-Schema des MSMQ-Ds-Services-Attributs
+- mSMQDsServices-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ecef77677184626579acd1c7e7462099b0497603
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 0fd6ffa5b678af92a02054e97fa17a7713ad955635b481d9141417f71ab7e6a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343090"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803290"
 ---
-# <a name="msmq-ds-services-attribute"></a>MSMQ-DS-Services-Attribut
+# <a name="msmq-ds-services-attribute"></a>MSMQ-Ds-Services-Attribut
 
-Gibt an, ob die auf diesem Computer installierte MSMQ MSMQ DS-Dienste bereitstellt.
+Gibt an, ob das auf diesem Computer installierte MSMQ MSMQ DS-Dienste bereitstellt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MSMQ-DS-Dienste                     |
-| LDAP-Display-Name | msmqdsservices                       |
+| CN                | MSMQ-Ds-Services                     |
+| Ldap-Anzeigename | mSMQDsServices                       |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1228              |
-| System-ID-GUID    | 2df90d78-009F -11d2-aa4c-00c04f d83a |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-ID-GUID    | 2df90d78-009f-11d2-aa4c-00c04fd7d83a |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Gibt an, ob die auf diesem Computer installierte MSMQ MSMQ DS-Dienste bereitstel
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
+| Ist einwertig       | True                                                         |
 | Ist indiziert             | False                                                        |
-| Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| Im globalen Katalog      | True                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Gibt an, ob die auf diesem Computer installierte MSMQ MSMQ DS-Dienste bereitstel
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
+| Ist einwertig       | True                                                         |
 | Ist indiziert             | False                                                        |
-| Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| Im globalen Katalog      | True                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Gibt an, ob die auf diesem Computer installierte MSMQ MSMQ DS-Dienste bereitstel
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
+| Ist einwertig       | True                                                         |
 | Ist indiziert             | False                                                        |
-| Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| Im globalen Katalog      | True                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 
@@ -121,10 +121,10 @@ Gibt an, ob die auf diesem Computer installierte MSMQ MSMQ DS-Dienste bereitstel
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
-| Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| Im globalen Katalog      | True                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
@@ -142,10 +142,10 @@ Gibt an, ob die auf diesem Computer installierte MSMQ MSMQ DS-Dienste bereitstel
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
-| Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| Im globalen Katalog      | True                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
@@ -163,10 +163,10 @@ Gibt an, ob die auf diesem Computer installierte MSMQ MSMQ DS-Dienste bereitstel
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
+| Is-Single-Valued       | True                                                         |
 | Ist indiziert             | False                                                        |
-| Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| Im globalen Katalog      | True                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |

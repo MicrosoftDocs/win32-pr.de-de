@@ -1,30 +1,30 @@
 ---
-title: Calendar-Steuer Element (MSAA-Benutzeroberflächen Element-Referenz)
-description: Kalender Steuerelemente bieten eine einfache und intuitive Möglichkeit für einen Benutzer, ein Datum aus einer vertrauten Oberfläche auszuwählen.
+title: Calendar-Steuerelement (REFERENZ ZUM MSAA-UI-Element)
+description: Kalendersteuerelemente bieten einem Benutzer eine einfache und intuitive Möglichkeit, ein Datum über eine vertraute Benutzeroberfläche auszuwählen.
 ms.assetid: cfb1e420-bb8f-4100-9c83-304d11573c0e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 63acb3ca83f6b7e71740acee4232e081e11594e4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 02f41daf9e86f178f4b22a7908e4d9d10d1dab1a2f867ca2d09c62d111cbc806
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119899554"
 ---
-# <a name="calendar-control-msaa-ui-element-reference"></a>Calendar-Steuer Element (MSAA-Benutzeroberflächen Element-Referenz)
+# <a name="calendar-control-msaa-ui-element-reference"></a>Calendar-Steuerelement (REFERENZ ZUM MSAA-UI-Element)
 
 > [!Note]  
-> In diesem Thema werden **Kalender Steuer** Element Objekte für den MSAA-Benutzeroberflächen-Element Verweis beschrieben. Die Vorgehensweise zum Erstellen von **Kalender Steuer** Objekten in verschiedenen Benutzeroberflächen-Frameworks wird hier nicht beschrieben. Weitere Informationen finden Sie in der API-Referenz Dokumentation für das von Ihnen verwendete UI-Framework.
+> In diesem Thema werden **Calendar Control-Objekte** für die MsAA-Benutzeroberflächenelementreferenz beschrieben. Das Erstellen von **Calendar Control-Objekten** in verschiedenen Benutzeroberflächenframeworks wird hier nicht beschrieben. Weitere Informationen finden Sie in der API-Referenzdokumentation für das benutzeroberflächenframework, das Sie verwenden.
 
  
 
-Kalender Steuerelemente bieten eine einfache und intuitive Möglichkeit für einen Benutzer, ein Datum aus einer vertrauten Oberfläche auszuwählen.
+Kalendersteuerelemente bieten einem Benutzer eine einfache und intuitive Möglichkeit, ein Datum über eine vertraute Benutzeroberfläche auszuwählen.
 
-Der Fenster Klassenname für ein Monatskalender-Steuerelement ist eine monthcal- \_ Klasse, die in "kommctrl. h" als "SysMonthCal32" definiert ist. Die Informationen in diesem Thema gelten für das Month Calendar-Steuerelement in Version 5 von "kommctrl. h".
+Der Fensterklassenname für ein Monatskalender-Steuerelement ist MONTHCAL CLASS, die \_ in Commctrl.h als "SysMonthCal32" definiert ist. Die Informationen in diesem Thema gelten für das Monatskalender-Steuerelement in Version 5 von Commctrl.h.
 
 ## <a name="iaccessible-methods"></a>IAccessible-Methoden
 
-Kalender Steuerelemente unterstützen die folgenden [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Methoden:
+Kalendersteuerelemente unterstützen die folgenden [**IAccessible-Methoden:**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 -   [**accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)
 -   [**accLocation**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acclocation)
@@ -33,18 +33,18 @@ Kalender Steuerelemente unterstützen die folgenden [**IAccessible**](/windows/d
 
 ## <a name="iaccessible-properties"></a>IAccessible-Eigenschaften
 
-Kalender Steuerelemente unterstützen die folgenden [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Eigenschaften:
+Kalendersteuerelemente unterstützen die folgenden [**IAccessible-Eigenschaften:**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 
 
 | Eigenschaft                                                                 | Kommentare                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount) | Die **childCount** -Eigenschaft ist 0 (null).                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| [**\_Zugriffs Fokus erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| [**\_accName erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)             | Die **Name** -Eigenschaft wird aus dem statischen Text Steuerelement abgerufen, das das Kalender Steuerelement bezeichnet. Beim Erstellen von Steuerelementen müssen Server Entwickler sicherstellen, dass ein statisches Text Steuerelement unmittelbar vor dem Steuerelement liegt, das es in der Aktivier Reihenfolge bezeichnet                                                                                                                                                                                                                 |
-| [**\_accParent erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent)         | Die über **geordnete** Eigenschaft ist ein Fenster ( [**Rollen \_ System \_ Fenster**](object-roles.md) ), das das Steuerelement umgibt und die gleiche **Name** -Eigenschaft und den Fenster Klassennamen wie das Steuerelement aufweist.                                                                                                                                                                                                                                                             |
-| [**get- \_ Zugriffs Rolle**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)             | Die **Role** -Eigenschaft ist [**role \_ System \_ Client**](object-roles.md).                                                                                                                                                                                                                                                                                                                                                                               |
-| [**\_accState erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)           | Die **State** -Eigenschaft ist eine Kombination aus einem oder mehreren der folgenden [Werte](object-state-constants.md)[**Zustands \_ System nicht \_**](object-state-constants.md) \| [**\_ \_ verfüg**](object-state-constants.md) bares Zustands System mit \| [**\_ \_ Fokus**](object-state-constants.md) \| [**\_ \_**](object-state-constants.md)<br/> |
+| [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount) | Die **ChildCount-Eigenschaft** ist 0 (null).                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| [**get \_ accFocus**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [**get \_ accName**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)             | Die **Name-Eigenschaft** wird aus dem statischen Textsteuerfeld erhalten, das das Kalendersteuerfeld bezeichnet. Beim Erstellen von Steuerelementen müssen Serverentwickler sicherstellen, dass ein statisches Textsteuerfeld unmittelbar vor dem Steuerelement ausgeführt wird, das in der Registerkartenfolge bezeichnet wird.                                                                                                                                                                                                                 |
+| [**get \_ accParent**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent)         | Die **Parent-Eigenschaft** ist ein Fenster ( [**ROLE SYSTEM \_ \_ WINDOW**](object-roles.md) ), das das Steuerelement umschließt und über die gleiche **Name-Eigenschaft** und den gleichen Fensterklassennamen wie das -Steuerelement verfügt.                                                                                                                                                                                                                                                             |
+| [**get \_ accRole**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)             | Die **Role-Eigenschaft** ist [**ROLE SYSTEM \_ \_ CLIENT.**](object-roles.md)                                                                                                                                                                                                                                                                                                                                                                               |
+| [**get \_ accState**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)           | Die **State-Eigenschaft** ist eine Kombination aus [](object-state-constants.md)mindestens einem der folgenden Werte [**STATE SYSTEM \_ \_ INVISIBLE**](object-state-constants.md) \| [**STATE SYSTEM \_ \_ UNAVAILABLE**](object-state-constants.md) \| [**STATE SYSTEM \_ \_ FOCUSED**](object-state-constants.md) \| [**STATE SYSTEM \_ \_ FOCUSABLE**](object-state-constants.md)<br/> |
 
 
 

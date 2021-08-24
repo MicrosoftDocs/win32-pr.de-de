@@ -1,26 +1,26 @@
 ---
-title: IMsRdpClientNonScriptable3 showredirectionwarningdialog (Eigenschaft)
-description: Gibt an oder Ruft ab, ob das Dialogfeld für die Weiterleitungs Warnung angezeigt werden soll.
+title: IMsRdpClientNonScriptable3 ShowRedirectionWarningDialog (Eigenschaft)
+description: Gibt an oder ruft ab, ob das Dialogfeld für die Umleitungswarnung angezeigt werden soll.
 ms.assetid: 7ed37288-77c3-4551-a553-1ca679e1047a
 ms.tgt_platform: multiple
 keywords:
-- Showredirectionwarningdialog-Eigenschaft Remotedesktopdienste
-- Showredirectionwarningdialog-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, showredirectionwarningdialog-Eigenschaft
-- Showredirectionwarningdialog-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, showredirectionwarningdialog-Eigenschaft
-- Showredirectionwarningdialog-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, showredirectionwarningdialog-Eigenschaft
-- Showredirectionwarningdialog-Eigenschaft Remotedesktopdienste, MsRdpClient5-Objekt
-- MsRdpClient5-Objekt Remotedesktopdienste, showredirectionwarningdialog-Eigenschaft
-- Showredirectionwarningdialog-Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6-Objekt Remotedesktopdienste, showredirectionwarningdialog-Eigenschaft
-- Showredirectionwarningdialog-Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7-Objekt Remotedesktopdienste, showredirectionwarningdialog-Eigenschaft
-- Showredirectionwarningdialog-Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8-Objekt Remotedesktopdienste, showredirectionwarningdialog-Eigenschaft
-- Showredirectionwarningdialog-Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9-Objekt Remotedesktopdienste, showredirectionwarningdialog-Eigenschaft
+- ShowRedirectionWarningDialog-Remotedesktopdienste
+- ShowRedirectionWarningDialog-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , ShowRedirectionWarningDialog-Eigenschaft
+- ShowRedirectionWarningDialog Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , ShowRedirectionWarningDialog-Eigenschaft
+- ShowRedirectionWarningDialog-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , ShowRedirectionWarningDialog(Eigenschaft)
+- ShowRedirectionWarningDialog-Eigenschaft Remotedesktopdienste , MsRdpClient5-Objekt
+- MsRdpClient5-Objekt Remotedesktopdienste , ShowRedirectionWarningDialog-Eigenschaft
+- ShowRedirectionWarningDialog-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , ShowRedirectionWarningDialog-Eigenschaft
+- ShowRedirectionWarningDialog-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , ShowRedirectionWarningDialog-Eigenschaft
+- ShowRedirectionWarningDialog-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , ShowRedirectionWarningDialog-Eigenschaft
+- ShowRedirectionWarningDialog-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , ShowRedirectionWarningDialog-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -44,16 +44,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 468e1721de3395067ca570c2051f3906df626071
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b1f8145712a4e29c0ef16ca4f3da6e2ba3870389896434669aa5134e7b037da9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040330"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119771480"
 ---
-# <a name="imsrdpclientnonscriptable3showredirectionwarningdialog-property"></a>IMsRdpClientNonScriptable3:: showredirectionwarningdialog-Eigenschaft
+# <a name="imsrdpclientnonscriptable3showredirectionwarningdialog-property"></a>IMsRdpClientNonScriptable3::ShowRedirectionWarningDialog (Eigenschaft)
 
-Gibt an oder Ruft ab, ob das Dialogfeld für die Weiterleitungs Warnung angezeigt werden soll.
+Gibt an oder ruft ab, ob das Dialogfeld für die Umleitungswarnung angezeigt werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -74,7 +74,7 @@ HRESULT get_ShowRedirectionWarningDialog(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt an, ob das Dialogfeld für die Weiterleitungs Warnung angezeigt werden soll.
+Gibt an, ob das Dialogfeld "Umleitungswarnung" angezeigt werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,9 +1,9 @@
 ---
-title: komplexer registrationtriggertype-Typ
-description: Definiert untergeordnete Elemente und Sequenzierungs Informationen für das Registration-Auslöserelement.
+title: 'registrationTriggerType : Komplexer Typ'
+description: Definiert untergeordnete Elemente und Sequenzinformationen für das RegistrationTrigger-Element.
 ms.assetid: 3663c015-67cf-4775-a1a6-4429cce93b96
 keywords:
-- komplexer registrationtriggertype-Typ Taskplaner
+- 'registrationTriggerType: komplexer Typ Taskplaner'
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2ddb55436a0a6980a8909da636a02ca59244ca85
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2dab91ecc0eed065a4ce3eea9d64bebae2e10560a43ab57308ea68e82dc17dc4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392082"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119772280"
 ---
-# <a name="registrationtriggertype-complex-type"></a>komplexer registrationtriggertype-Typ
+# <a name="registrationtriggertype-complex-type"></a>registrationTriggerType : Komplexer Typ
 
-Definiert untergeordnete Elemente und Sequenzierungs Informationen für das [**Registration-Auslöserelement**](taskschedulerschema-registrationtrigger-triggergroup-element.md) .
+Definiert untergeordnete Elemente und Sequenzinformationen für das [**RegistrationTrigger-Element.**](taskschedulerschema-registrationtrigger-triggergroup-element.md)
 
 ``` syntax
 <xs:complexType name="registrationTriggerType">
@@ -46,15 +46,15 @@ Definiert untergeordnete Elemente und Sequenzierungs Informationen für das [**R
 
 
 
-| Element                                                                    | type     | BESCHREIBUNG                                                                                               |
+| Element                                                                    | Typ     | Beschreibung                                                                                               |
 |----------------------------------------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------|
-| [**Verzögern**](taskschedulerschema-delay-registrationtriggertype-element.md) | duration | Gibt die Zeitspanne zwischen dem Registrieren der Aufgabe und dem Start der Aufgabe an.<br/> |
+| [**Verzögern**](taskschedulerschema-delay-registrationtriggertype-element.md) | duration | Gibt die Zeitspanne zwischen der Registrierung des Tasks und dem Start des Tasks an.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zusätzlich zu den hier definierten untergeordneten Elementen verwendet das [**registrationtrigger**](taskschedulerschema-registrationtrigger-triggergroup-element.md) -Element auch untergeordnete Elemente, die durch den komplexen [**triggerbasetype**](taskschedulerschema-triggerbasetype-complextype.md) -Typ definiert werden.
+Zusätzlich zu den hier definierten untergeordneten Elementen verwendet das [**RegistrationTrigger-Element**](taskschedulerschema-registrationtrigger-triggergroup-element.md) auch untergeordnete Elemente, die vom komplexen [**triggerBaseType-Typ**](taskschedulerschema-triggerbasetype-complextype.md) definiert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,8 +62,8 @@ Zusätzlich zu den hier definierten untergeordneten Elementen verwendet das [**r
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -71,7 +71,7 @@ Zusätzlich zu den hier definierten untergeordneten Elementen verwendet das [**r
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[komplexe Typen Taskplaner Schemas](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

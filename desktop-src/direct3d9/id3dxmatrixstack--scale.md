@@ -1,5 +1,5 @@
 ---
-description: 'ID3DXMATRIXStack::Scale-Methode (D3dx9math.h): Skaliert die aktuelle Matrix über den Ursprung der Weltkoordinaten.'
+description: 'ID3DXMATRIXStack::Scale-Methode (D3dx9math.h): Skalieren Sie die aktuelle Matrix über den Ursprung der Weltkoordinaten.'
 ms.assetid: 6c4ef625-736e-41a0-8a79-4d71e8685754
 title: ID3DXMATRIXStack::Scale-Methode (D3dx9math.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 6d877fccf5bfebfdc1f9cf3943c4334e5b8c7fff
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c140e1a4b39d79c3d28b13fa8ad3bf357b3beb903132d16f7221d52e8ed11eb1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847540"
 ---
 # <a name="id3dxmatrixstackscale-method-d3dx9mathh"></a>ID3DXMATRIXStack::Scale-Methode (D3dx9math.h)
 
@@ -65,7 +65,7 @@ Die Skalierungskomponente in y-Richtung.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Die Skalierungskomponente in Z-Richtung.
+Die Skalierungskomponente in z-Richtung.
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Die Skalierungskomponente in Z-Richtung.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode multipliziert die aktuelle Matrix mit der berechneten Skalierungsmatrix. Bei der Transformation geht es um den aktuellen Ursprung der Welt.
+Diese Methode multipliziert die aktuelle Matrix rechts mit der berechneten Skalierungsmatrix. Bei der Transformation geht es um den aktuellen Ursprung der Welt.
 
 
 ```
@@ -92,14 +92,14 @@ m_stack[m_currentPos] = m_stack[m_currentPos] * tmp;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

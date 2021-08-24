@@ -1,9 +1,9 @@
 ---
-title: 'Byteaddressbuffer:: Load2 (uint)-Funktion'
-description: 'Ruft zwei Werte ab. | Byteaddressbuffer:: Load2 (uint)-Funktion'
+title: ByteAddressBuffer::Load2(uint)-Funktion
+description: Ruft zwei Werte ab. | ByteAddressBuffer::Load2(uint)-Funktion
 ms.assetid: 696ce310-4d65-4382-97ec-046160197c67
 keywords:
-- Load2-Funktion (HLSL)
+- Load2-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 78204fc3d41daf07a54974fbf103685e718ab79d
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: fac3b1cd0fffca1a68089c3c21bfd5d6aea5f270493319b044a0bbe290d88a5f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103761616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119845730"
 ---
-# <a name="byteaddressbufferload2uint-function"></a>Byteaddressbuffer:: Load2 (uint)-Funktion
+# <a name="byteaddressbufferload2uint-function"></a>ByteAddressBuffer::Load2(uint)-Funktion
 
 Ruft zwei Werte ab.
 
@@ -36,12 +36,12 @@ uint2 Load2(
 
 <dl> <dt>
 
-*Adresse* \[ in\]
+*Adresse* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Die Eingabe Adresse in Byte, bei der es sich um ein Vielfaches von 4 handeln muss.
+Die Eingabeadresse in Bytes, die ein Vielfaches von 4 sein muss.
 
 </dd> </dl>
 
@@ -49,15 +49,15 @@ Die Eingabe Adresse in Byte, bei der es sich um ein Vielfaches von 4 handeln mus
 
 Typ: **uint2**
 
-Zwei-Werte.
+Zwei Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -72,7 +72,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Load2-Methoden](byteaddressbuffer-load2.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: CND-PS
-description: Wählt bedingt zwischen Quelle1 und Quelle2 basierend auf dem Vergleich src0 0,5 aus.
+title: cnd – ps
+description: Wählt basierend auf dem Vergleich src0 0.5 bedingt zwischen src1 und src2.
 ms.assetid: 7a3b49e9-d146-47dc-99a8-4f336db7d0d5
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,48 +9,48 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 1fd3a14e2ac4bd283a4e67724fbb42ac965ea707
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: cb31c873bf3a4e38048f57d75a30cec70021716d2aab43b683cb29aef25f7f23
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104101082"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119726960"
 ---
-# <a name="cnd---ps"></a>CND-PS
+# <a name="cnd---ps"></a>cnd – ps
 
-Wählt bedingt zwischen Quelle1 und Quelle2 basierend auf dem Vergleich src0 > 0,5 aus.
+Wählt basierend auf dem Vergleich src0 > 0.5 bedingt zwischen src1 und src2.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| CND DST, src0, Quelle1, Quelle2 |
+| cnd dst, src0, src1, src2 |
 |---------------------------|
 
 
 
- 
+ 
 
 where
 
--   DST ist das Ziel Register.
--   src0 ist ein Quell Register.
--   Quelle1 ist ein Quell Register.
--   Quelle2 ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src0 ist ein Quellregister.
+-   src1 ist ein Quellregister.
+-   src2 ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| CND                   | x    | x    | x    | x    |      |      |       |      |       |
+| Cnd                   | x    | x    | x    | x    |      |      |       |      |       |
 
 
 
- 
+ 
 
-Für die Versionen 1 \_ 1 bis 1 \_ 3 muss src0 r0. a lauten.
+Für die Versionen \_ 1 1 bis 1 \_ 3 muss src0 r0.a sein.
 
 
 ```
@@ -78,7 +78,7 @@ for each component in src0
 
 
 
-Diese Beispiele zeigen einen Vergleich mit vier Kanälen, der in einem Shader der Version 1 \_ 4 ausgeführt wird, sowie einen Vergleich mit einem einzelnen Kanal, der in einem Shader der Version 1 1 möglich ist \_ .
+Diese Beispiele zeigen einen Vergleich mit vier Kanälen, der in einem Shader der Version \_ 1 4 durchgeführt wurde, sowie einen möglichen Einzelkanalvergleich in einem Shader der Version \_ 1 1.
 
 
 ```
@@ -96,7 +96,7 @@ cnd r1, c0, c1, c2   // r0 contains 1,1,1,0 because
 
 
 
-Version 1 \_ 1 bis 1 \_ 3 vergleicht nur mit dem replizierten Alphakanal von r0.
+Version \_ 1 1 bis 1 \_ 3 wird nur mit dem replizierten Alphakanal von r0 verglichen.
 
 
 ```
@@ -111,7 +111,7 @@ cnd r1, r0.a, c1, c2   // r1 gets assigned 0,0,0,0 because
 
 
 
-In diesem Beispiel werden zwei Werte verglichen: A und B. Im Beispiel wird davon ausgegangen, dass ein in V0 geladen und B in v1 geladen wird. A und B müssen im Bereich von-1 bis + 1 liegen, und da die Farbregister (VN) zwischen 0 und 1 liegen, wird die Einschränkung in diesem Beispiel erfüllt.
+In diesem Beispiel werden die beiden Werte A und B verglichen. Im Beispiel wird davon ausgegangen, dass A in v0 und B in v1 geladen wird. Sowohl A als auch B müssen im Bereich von -1 bis +1 liegen, und da die Farbregister (vn) als zwischen 0 und 1 definiert sind, wird die Einschränkung in diesem Beispiel erfüllt.
 
 
 ```
@@ -131,9 +131,9 @@ cnd r0, r0.a, c0, c1  // r0 = ( A > B ? c0 : c1 )
 [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

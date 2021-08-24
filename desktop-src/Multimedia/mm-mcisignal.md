@@ -1,9 +1,9 @@
 ---
-title: MM_MCISIGNAL Meldung (MMSYSTEM. h)
-description: Die mm \_ mcisignal-Nachricht wird an ein Fenster gesendet, um eine Anwendung zu benachrichtigen, dass ein MCI-Gerät eine in einem vorherigen Signal (MCI-Signal)-Befehl definierte Position erreicht hat \_ .
+title: MM_MCISIGNAL Meldung (Mmsystem.h)
+description: Die MM \_ MCISIGNAL-Nachricht wird an ein Fenster gesendet, um eine Anwendung darüber zu informieren, dass ein MCI-Gerät eine position erreicht hat, die in einem vorherigen Signal (MCI \_ SIGNAL)-Befehl definiert wurde.
 ms.assetid: 12512d23-9a89-4e38-9ec5-88845766f4f6
 keywords:
-- MM_MCISIGNAL-Nachricht (Multimedia)
+- MM_MCISIGNAL nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c6d42d4d39f31b82c7461a5bd8d8561b0da1b6bf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cb54b56d35ad34d10d95c2a34b52b370fb856d9c958dd42223c7f0a08ddbdfb4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392093"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807440"
 ---
-# <a name="mm_mcisignal-message"></a>MM- \_ mcisignal-Meldung
+# <a name="mm_mcisignal-message"></a>\_MM-MCISIGNAL-Nachricht
 
-Die **mm \_ mcisignal** -Nachricht wird an ein Fenster gesendet, um eine Anwendung zu benachrichtigen, dass ein MCI-Gerät eine in einem vorherigen [**Signal**](signal.md) ( [**MCI- \_ Signal**](mci-signal.md))-Befehl definierte Position erreicht hat.
+Die **MM \_ MCISIGNAL-Nachricht** wird an ein Fenster gesendet, um eine Anwendung darüber zu informieren, dass ein MCI-Gerät eine position erreicht hat, die in einem vorherigen [**Signalbefehl**](signal.md) [**(MCI \_ SIGNAL**](mci-signal.md)) definiert wurde.
 
 
 ```C++
@@ -38,17 +38,17 @@ lParam = (LONG) lUserParm
 
 <dl> <dt>
 
-<span id="wID"></span><span id="wid"></span><span id="WID"></span>*wID*
+<span id="wID"></span><span id="wid"></span><span id="WID"></span>*Wid*
 </dt> <dd>
 
-Der Bezeichner des Geräts, von dem die Signal Meldung initiiert wird.
+Bezeichner des Geräts, das die Signalmeldung initiiert.
 
 </dd> <dt>
 
-<span id="lUserParm"></span><span id="luserparm"></span><span id="LUSERPARM"></span>*luserparamem*
+<span id="lUserParm"></span><span id="luserparm"></span><span id="LUSERPARM"></span>*lUserParm*
 </dt> <dd>
 
-Der Wert, der im **dwuserparamem** -Member der **MCI \_ DGV-Signal \_ parametriams \_** -Struktur übermittelt wird, wenn der **Signal** -Befehl diese Rückruffunktion definiert hat. Alternativ kann Sie auch den Positionswert enthalten.
+Wert, der im **dwUserParm-Member** der **\_ MCI-DGV \_ SIGNAL \_ PARAMS-Struktur** übergeben wird, wenn der **Signalbefehl** diese Rückruffunktion definiert hat. Alternativ kann er den Positionswert enthalten.
 
 </dd> </dl>
 
@@ -60,7 +60,7 @@ Der Wert, der im **dwuserparamem** -Member der **MCI \_ DGV-Signal \_ parametria
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -68,13 +68,13 @@ Der Wert, der im **dwuserparamem** -Member der **MCI \_ DGV-Signal \_ parametria
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Nachrichten](mci-messages.md)
 </dt> <dt>
 
-[**aussendet**](signal.md)
+[**Signal**](signal.md)
 </dt> </dl>
 
  

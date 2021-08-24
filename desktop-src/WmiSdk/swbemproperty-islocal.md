@@ -1,8 +1,8 @@
 ---
-description: Die IsLocal-Eigenschaft des "Swap Property"-Objekts ist ein boolescher Wert, der verwendet werden kann, um zu bestimmen, ob diese Eigenschaft lokal ist. Der Wert false gibt an, dass diese Eigenschaft von einer anderen Klasse geerbt wurde. Diese Eigenschaft ist schreibgeschützt.
+description: Die IsLocal-Eigenschaft des SWbemProperty-Objekts ist ein boolescher Wert, mit dem bestimmt werden kann, ob diese Eigenschaft lokal ist. Der Wert FALSE gibt an, dass diese Eigenschaft von einer anderen Klasse geerbt wurde. Diese Eigenschaft ist schreibgeschützt.
 ms.assetid: eda1f962-03b5-4322-bb06-c27aedf94be1
 ms.tgt_platform: multiple
-title: Swap Property. IsLocal-Eigenschaft (wbemdisp. h)
+title: SWbemProperty.IsLocal-Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 187613a0111c7ad482c55e3d294d77fddb5b0941
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 02eadf46143d2b7d029619839152e2393787d9eb420676b7cd56010b3f2ed578
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119898310"
 ---
-# <a name="swbempropertyislocal-property"></a>Swap Property. IsLocal (Eigenschaft)
+# <a name="swbempropertyislocal-property"></a>SWbemProperty.IsLocal-Eigenschaft
 
-Die **IsLocal** -Eigenschaft des " [**Swap Property**](swbemproperty.md) "-Objekts ist ein boolescher Wert, der verwendet werden kann, um zu bestimmen, ob diese Eigenschaft lokal ist. Der Wert **false** gibt an, dass diese Eigenschaft von einer anderen Klasse geerbt wurde. Diese Eigenschaft ist schreibgeschützt.
+Die **IsLocal-Eigenschaft** des [**SWbemProperty-Objekts**](swbemproperty.md) ist ein boolescher Wert, mit dem bestimmt werden kann, ob diese Eigenschaft lokal ist. Der Wert **FALSE** gibt an, dass diese Eigenschaft von einer anderen Klasse geerbt wurde. Diese Eigenschaft ist schreibgeschützt.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -50,11 +50,11 @@ SWbemProperty.IsLocal As Boolean
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-Eigenschaft<br/>                                                         |
-| IID<br/>                      | IID \_ iswbemproperty<br/>                                                          |
+| CLSID<br/>                    | CLSID \_ SWbemProperty<br/>                                                         |
+| IID<br/>                      | IID \_ ISWbemProperty<br/>                                                          |
 
 
 

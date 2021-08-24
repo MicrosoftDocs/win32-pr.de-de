@@ -1,7 +1,7 @@
 ---
-description: Die GetStringValue-Methode ruft einen Zeichen folgen Wert (Typ VT \_ LPWSTR) ab, der von einem Schlüssel angegeben wird.
+description: Die GetStringValue-Methode ruft einen Zeichenfolgenwert (Typ VT \_ LPWSTR) ab, der durch einen Schlüssel angegeben wird.
 ms.assetid: c6feecc0-7a06-4f78-9cf1-e2897333b62e
-title: 'Iportabledevicevalues:: GetStringValue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::GetStringValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: fdb4741c36445af686b7721e1f5f04dd3e45f1e9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7d8a9703a359a2de13ec96ff3faf46ea9e49fb1fc467cdade56d799503f1b8cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119806960"
 ---
-# <a name="iportabledevicevaluesgetstringvalue-method"></a>Iportabledevicevalues:: GetStringValue-Methode
+# <a name="iportabledevicevaluesgetstringvalue-method"></a>IPortableDeviceValues::GetStringValue-Methode
 
-Die **GetStringValue** -Methode ruft einen Zeichen folgen Wert (Typ VT \_ LPWSTR) ab, der von einem Schlüssel angegeben wird.
+Die **GetStringValue-Methode** ruft einen Zeichenfolgenwert (Typ VT \_ LPWSTR) ab, der durch einen Schlüssel angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,31 +41,31 @@ HRESULT GetStringValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** -Schlüssel, der das abzurufende Element angibt.
+Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
 
 </dd> <dt>
 
-*pValue* \[ vorgenommen\]
+*pValue* \[ out\]
 </dt> <dd>
 
-Zeiger auf den abgerufenen **LPWSTR** -Wert. Der Aufrufer ist verantwortlich für den Aufruf von **CoTaskMemFree** , um den Arbeitsspeicher freizugeben.
+Zeiger auf den abgerufenen **LPWSTR-Wert.** Der Aufrufer ist für den Aufruf **von CoTaskMemFree** verantwortlich, um den Arbeitsspeicher freizugeben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                            | Beschreibung                                                           |
 |------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                      |
-| <dl> <dt>**DISP \_ E \_ typemismatch**</dt> </dl>                   | Die von *Key* angegebene Eigenschaft ist kein **LPWSTR** -Typ.<br/> |
-| <dl> <dt>**HRESULT \_ von \_ Win32 (Fehler \_ nicht \_ gefunden)**</dt> </dl> | Die von *Key* angegebene Eigenschaft ist nicht in der Auflistung.<br/>  |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die vom *Schlüssel* angegebene Eigenschaft ist kein **LPWSTR-Typ.**<br/> |
+| <dl> <dt>**HRESULT \_ AUS \_ WIN32 (FEHLER \_ NICHT \_ GEFUNDEN)**</dt> </dl> | Die vom *Schlüssel* angegebene Eigenschaft befindet sich nicht in der Auflistung.<br/>  |
 
 
 
@@ -73,7 +73,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieser Methode finden Sie [unter Abrufen unterstützter Dienst Ereignisse](retrieving-supported-events.md).
+Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Abrufen von unterstützten Dienstereignissen.](retrieving-supported-events.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie [unter Abrufen unters
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
@@ -90,22 +90,22 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie [unter Abrufen unters
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportablede vicevalues:: GetAt**](iportabledevicevalues-getat.md)
+[**IPortableDeviceValues::GetAt**](iportabledevicevalues-getat.md)
 </dt> <dt>
 
-[**Iportabledebug:: SetStringValue**](iportabledevicevalues-setstringvalue.md)
+[**IPortableDeviceValues::SetStringValue**](iportabledevicevalues-setstringvalue.md)
 </dt> <dt>
 
-[Abrufen unterstützter Dienst Ereignisse](retrieving-supported-events.md)
+[Abrufen von unterstützten Dienstereignissen](retrieving-supported-events.md)
 </dt> <dt>
 
-[Abrufen unterstützter Dienst Formate](retrieving-supported-formats.md)
+[Abrufen unterstützter Dienstformate](retrieving-supported-formats.md)
 </dt> <dt>
 
-[Abrufen unterstützter Dienst Methoden](retrieving-supported-methods.md)
+[Abrufen unterstützter Dienstmethoden](retrieving-supported-methods.md)
 </dt> </dl>
 
  

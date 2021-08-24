@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung zwischen den Eigenschaften einer CIM \_ -SettingData-Instanz und einer CIM-Funktions \_ Instanz dar.
+description: Stellt eine Zuordnung zwischen Eigenschaften einer CIM \_ SettingData-Instanz und einer CIM \_ Capabilities-Instanz dar.
 ms.assetid: f3364779-baeb-4b84-a0e6-b2a60d1661bd
 title: CIM_SettingsDefineCapabilities-Klasse
 ms.topic: reference
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: d3c36e7c24702578704e849820abf2b1769c91c2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b53f0e72e21b73932c144602308ee599c523ea755b45dae12774109f6a9e010f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119899660"
 ---
-# <a name="cim_settingsdefinecapabilities-class"></a>CIM \_ settingsdefinecapabili-Klasse
+# <a name="cim_settingsdefinecapabilities-class"></a>CIM \_ SettingsDefineCapabilities-Klasse
 
-Stellt eine Zuordnung zwischen den Eigenschaften einer [**CIM- \_ SettingData**](cim-settingdata.md) -Instanz und einer CIM-Funktions Instanz dar. [**\_**](cim-capabilities.md)
+Stellt eine Zuordnung zwischen Eigenschaften einer [**CIM \_ SettingData-Instanz**](cim-settingdata.md) und einer [**CIM \_ Capabilities-Instanz**](cim-capabilities.md) dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,29 +45,29 @@ class CIM_SettingsDefineCapabilities : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ settingsdefinecapabili-** Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ SettingsDefineCapabilities-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ settingsdefinecapabili-** Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ SettingsDefineCapabilities-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Funktionen**
+Datentyp: **\_ CIM-Funktionen**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Aggregieren, Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1) [](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Ein Verweis auf die [**CIM- \_ Funktionen**](cim-capabilities.md) -Instanz.
+Ein Verweis auf die [**CIM \_ Capabilities-Instanz.**](cim-capabilities.md)
 
 </dd> <dt>
 
@@ -80,26 +80,26 @@ Datentyp: **CIM \_ SettingData**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Ein Verweis auf die [**CIM \_ SettingData**](cim-settingdata.md) -Instanz, die verwendet wird, um die CIM-Funktions Instanz zu definieren. [**\_**](cim-capabilities.md)
+Ein Verweis auf die [**CIM \_ SettingData-Instanz,**](cim-settingdata.md) die zum Definieren der [**CIM \_ Capabilities-Instanz**](cim-capabilities.md) verwendet wird.
 
 </dd> <dt>
 
-**Propertypolicy**
+**PropertyPolicy**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ settingsdefinecapabili.****Valuerole**","**CIM \_ settingsdefinecapabili.****ValueRange**")
+Qualifizierer: [**Erforderlich,**](/windows/desktop/WmiSdk/standard-qualifiers) [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-EinstellungenDefineCapabilities**.**ValueRole**", "**\_ CIM-EinstellungenDefineCapabilities**.**ValueRange**")
 </dt> </dl>
 
-Gibt an, ob nicht-NULL nicht-Schlüsseleigenschaften der zugeordneten [**CIM \_ SettingData**](cim-settingdata.md) -Instanz unabhängig voneinander behandelt werden. Beispielsweise kann ein unabhängiger Satz von maximalen Eigenschaften definiert werden, wenn keine Beziehung zwischen den einzelnen Eigenschaften besteht. Im Gegensatz dazu müssen möglicherweise mehrere korrelierte Sätze von maximalen Eigenschaften definiert werden, wenn die maximalen Werte der einzelnen von einigen der anderen abhängig sind.
+Gibt an, ob die Nicht-NULL-Eigenschaften der zugeordneten [**CIM \_ SettingData-Instanz**](cim-settingdata.md) unabhängig oder als korrelierte Gruppe behandelt werden. Beispielsweise kann ein unabhängiger Satz maximaler Eigenschaften definiert werden, wenn keine Beziehung zwischen den einzelnen Eigenschaften besteht. Im Gegensatz dazu müssen möglicherweise mehrere korrelierte Sätze von maximalen Eigenschaften definiert werden, wenn die maximalen Werte der einzelnen von einigen der anderen abhängig sind.
 
 <dt>
 
@@ -119,7 +119,7 @@ Gibt an, ob nicht-NULL nicht-Schlüsseleigenschaften der zugeordneten [**CIM \_ 
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> </dl>
@@ -129,16 +129,16 @@ Gibt an, ob nicht-NULL nicht-Schlüsseleigenschaften der zugeordneten [**CIM \_ 
 **ValueRange**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ settingsdefinecapabili.****Propertypolicy**","**CIM \_ settingsdefinecapabili.****Valuerole**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-EinstellungenDefineCapabilities**.**PropertyPolicy**", "**\_ CIM-EinstellungenDefineCapabilities**.**ValueRole**")
 </dt> </dl>
 
-Gibt den Typ des Wertebereichs an, der von Eigenschaften der nicht--Schlüsseleigenschaften der [**CIM- \_ SettingData**](cim-settingdata.md) -Instanz verwendet wird, die nicht NULL sind.
+Gibt den Typ des Wertbereichs an, der von Eigenschaften der Nicht-NULL-Eigenschaften der [**CIM \_ SettingData-Instanz verwendet**](cim-settingdata.md) wird.
 
 <dt>
 
@@ -151,7 +151,7 @@ Gibt den Typ des Wertebereichs an, der von Eigenschaften der nicht--Schlüsselei
 
 <span id="Minimums"></span><span id="minimums"></span><span id="MINIMUMS"></span>
 
-**Minimums** (1)
+**Mindestanzahl** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -172,32 +172,32 @@ Gibt den Typ des Wertebereichs an, der von Eigenschaften der nicht--Schlüsselei
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Valuerole**
+**ValueRole**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ settingsdefinecapabili.****Propertypolicy**","**CIM \_ settingsdefinecapabili.****ValueRange**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-EinstellungenDefineCapabilities**.**PropertyPolicy**", "**\_ CIM-EinstellungenDefineCapabilities**.**ValueRange**")
 </dt> </dl>
 
-Die zusätzliche Semantik für die Interpretation der nicht auf NULL festgelegte, nicht Schlüsseleigenschaften der [**CIM \_ SettingData**](cim-settingdata.md) -Instanz.
+Die zusätzliche Semantik für die Interpretation der Nicht-NULL-Eigenschaften, die keine Schlüsseleigenschaften der [**CIM \_ SettingData-Instanz**](cim-settingdata.md) sind.
 
-"Default" gibt an, dass Eigenschaftswerte der SettingData-Komponenteninstanz als Standardwerte verwendet werden, wenn eine neue SettingData-Instanz für Elemente erstellt wird, deren Funktionen von der zugeordneten Funktionen-Instanz definiert werden.
+"Default" gibt an, dass Eigenschaftswerte der SettingData-Instanz der Komponente als Standardwerte verwendet werden, wenn eine neue SettingData-Instanz für Elemente erstellt wird, deren Funktionen von der zugeordneten Capabilities-Instanz definiert werden.
 
-Zwischen den einzelnen Instanzen von SettingData muss für bestimmte Eigenschaften, die denselben semantischen Zweck aufweisen, höchstens eine solche SettingData-Instanz als Standard angegeben werden.
+Für bestimmte Eigenschaften, die denselben semantischen Zweck haben, muss in Instanzen von settingdata nur eine solche settingdata-Instanz als Standard angegeben werden.
 
-"Optimal" gibt an, dass die SettingData-Instanz optimale Einstellungs Werte für Elemente darstellt, die der zugeordneten Funktionen-Instanz zugeordnet sind. Mehrere komponentensettingdata-Instanzen können als optimal deklariert werden. " Mean "gibt an, dass die nicht-Schlüssel-, nicht-Schlüssel-und nicht-enumerierten, nicht-booleschen numerischen Eigenschaften der zugeordneten SettingData-Instanz einen durchschnittlichen Punkt entlang einer Dimension darstellen. Für verschiedene Kombinationen von SettingData-Eigenschaften können mehrere komponentensettingdata-Instanzen als "Mean" deklariert werden. "Supported" gibt an, dass die nicht-NULL-Eigenschaften der SettingData-Komponente, die nicht NULL sind, einen Satz unterstützter Eigenschaftswerte darstellen, die ansonsten nicht qualifiziert sind.
+"Optimal" gibt an, dass die SettingData-Instanz optimale Einstellungswerte für Elemente darstellt, die der zugeordneten Capabilities-Instanz zugeordnet sind. SettingData-Instanzen mit mehreren Komponenten können als optimal deklariert werden." Mean" gibt an, dass die numerischen Eigenschaften der zugeordneten SettingData-Instanz, die nicht NULL sind, keine Schlüssel, nicht aufzählen und nicht boolesch sind, einen durchschnittlichen Punkt entlang einer Dimension darstellt. Für verschiedene Kombinationen von SettingData-Eigenschaften können mehrere SettingData-Komponenteninstanzen als "Mean" deklariert werden. "Supported" gibt an, dass die Nicht-NULL-Eigenschaften der Component SettingData-Instanz einen Satz unterstützter Eigenschaftswerte darstellt, die andernfalls nicht qualifiziert sind.
 
 <dt>
 
@@ -231,7 +231,7 @@ Zwischen den einzelnen Instanzen von SettingData muss für bestimmte Eigenschaft
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> </dl>
@@ -247,7 +247,7 @@ Zwischen den einzelnen Instanzen von SettingData muss für bestimmte Eigenschaft
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -256,7 +256,7 @@ Zwischen den einzelnen Instanzen von SettingData muss für bestimmte Eigenschaft
 
 <dl> <dt>
 
-[**CIM- \_ Komponente**](cim-component.md)
+[**\_CIM-Komponente**](cim-component.md)
 </dt> </dl>
 
  

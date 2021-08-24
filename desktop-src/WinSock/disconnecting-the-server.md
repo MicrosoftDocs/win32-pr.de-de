@@ -1,23 +1,23 @@
 ---
-description: Nachdem der Server den Empfang von Daten vom Client abgeschlossen und die Daten an den Client zurückgesendet hat, trennt der Server die Verbindung mit dem Client und beendet den Socket.
+description: Sobald der Server den Empfang von Daten vom Client und das Zurücksenden von Daten an den Client abgeschlossen hat, trennt der Server die Verbindung mit dem Client und beendet den Socket.
 ms.assetid: 67f33645-d57a-48bd-9f0c-9e816f528204
-title: Trennen der Verbindung mit dem Server
+title: Trennen des Servers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6abf7754da39a891b3d29c69f6c835706debd36
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f644b8727898a9d77ab5aa5fb10b0a0ae5b58cdf88a3beb1b9642215d142b6b0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119898360"
 ---
-# <a name="disconnecting-the-server"></a>Trennen der Verbindung mit dem Server
+# <a name="disconnecting-the-server"></a>Trennen des Servers
 
-Nachdem der Server den Empfang von Daten vom Client abgeschlossen und die Daten an den Client zurückgesendet hat, trennt der Server die Verbindung mit dem Client und beendet den Socket.
+Sobald der Server den Empfang von Daten vom Client und das Zurücksenden von Daten an den Client abgeschlossen hat, trennt der Server die Verbindung mit dem Client und beendet den Socket.
 
-**So trennen Sie einen Socket und fahren ihn herunter**
+**So trennen Sie einen Socket und fahren es herunter**
 
-1.  Wenn der Server das Senden von Daten an den Client abgeschlossen hat, kann die Funktion zum [**herunter**](/windows/desktop/api/winsock/nf-winsock-shutdown) fahren aufgerufen werden, wobei SD \_ Send zum Herunterfahren der Sendeseite des Sockets aufgerufen wird. Dadurch kann der Client einige der Ressourcen für diesen Socket freigeben. Die Serveranwendung kann weiterhin Daten auf dem Socket empfangen.
+1.  Wenn der Server mit dem Senden von Daten an den Client fertig ist, kann die Funktion zum [**Herunterfahren**](/windows/desktop/api/winsock/nf-winsock-shutdown) aufgerufen werden, die SD SEND \_ angibt, um die sendende Seite des Sockets herunterzufahren. Dadurch kann der Client einige der Ressourcen für diesen Socket freigeben. Die Serveranwendung kann weiterhin Daten auf dem Socket empfangen.
     ```C++
     // shutdown the send half of the connection since no more data will be sent
     iResult = shutdown(ClientSocket, SD_SEND);
@@ -31,9 +31,9 @@ Nachdem der Server den Empfang von Daten vom Client abgeschlossen und die Daten 
 
     
 
-2.  Wenn die Client Anwendung mit dem empfangen von Daten abgeschlossen ist, wird die [**closesocket**](/windows/desktop/api/winsock/nf-winsock-closesocket) -Funktion aufgerufen, um den Socket zu schließen.
+2.  Wenn die Clientanwendung mit dem Empfangen von Daten fertig ist, wird die [**Closesocket-Funktion**](/windows/desktop/api/winsock/nf-winsock-closesocket) aufgerufen, um den Socket zu schließen.
 
-    Wenn die Client Anwendung mit der Windows Sockets-DLL abgeschlossen ist, wird die [**WSACleanup**](/windows/desktop/api/winsock/nf-winsock-wsacleanup) -Funktion aufgerufen, um Ressourcen freizugeben.
+    Wenn die Clientanwendung mithilfe der Windows Sockets-DLL abgeschlossen ist, wird die [**WSACleanup-Funktion**](/windows/desktop/api/winsock/nf-winsock-wsacleanup) aufgerufen, um Ressourcen freizugeben.
 
     ```C++
     // cleanup
@@ -45,24 +45,24 @@ Nachdem der Server den Empfang von Daten vom Client abgeschlossen und die Daten 
 
     
 
-## <a name="complete-server-source-code"></a>Vervollständigen des Server Quellcodes
+## <a name="complete-server-source-code"></a>Vollständiger Serverquellcode
 
--   [Vervollständigen des Server Codes](complete-server-code.md)
+-   [Servercode vervollständigen](complete-server-code.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Einstieg in Winsock](getting-started-with-winsock.md)
+[Erste Schritte mit Winsock](getting-started-with-winsock.md)
 </dt> <dt>
 
-[Winsock-Server Anwendung](winsock-server-application.md)
+[Winsock-Serveranwendung](winsock-server-application.md)
 </dt> <dt>
 
 [Empfangen und Senden von Daten auf dem Server](receiving-and-sending-data-on-the-server.md)
 </dt> <dt>
 
-[Ausführen des WinSock-Client-und Server Code Beispiels](finished-server-and-client-code.md)
+[Ausführen des Winsock-Client- und Servercodebeispiels](finished-server-and-client-code.md)
 </dt> </dl>
 
  

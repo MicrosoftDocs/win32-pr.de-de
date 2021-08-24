@@ -1,5 +1,5 @@
 ---
-description: Ordnet dem virtuellen System eine Momentaufnahme des virtuellen Systems zu.
+description: Ordnet einem virtuellen System eine Momentaufnahme des virtuellen Systems zu.
 ms.assetid: f85f6914-dbb8-42c9-a732-11d48613c15c
 title: CIM_SnapshotOfVirtualSystem-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6e8e0929f1198ececea5ea5ec144e2f7313ec35c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 598ee11064872653ec216cef5751312e02809fb1cc45e4831fa50e01b1af46a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119899632"
 ---
-# <a name="cim_snapshotofvirtualsystem-class"></a>CIM \_ snapshodesvirtualsystem-Klasse
+# <a name="cim_snapshotofvirtualsystem-class"></a>CIM \_ SnapshotOfVirtualSystem-Klasse
 
-Ordnet dem virtuellen System eine Momentaufnahme des virtuellen Systems zu.
+Ordnet einem virtuellen System eine Momentaufnahme des virtuellen Systems zu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,49 +39,49 @@ class CIM_SnapshotOfVirtualSystem : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ snapshotofvirtualsystem** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ SnapshotOfVirtualSystem-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ snapshodesvirtualsystem** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ SnapshotOfVirtualSystem-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Computersystem**
+Datentyp: **CIM \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (0), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**Min(**](/windows/desktop/WmiSdk/standard-qualifiers) 0), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
 Ein Verweis auf das Computersystem, das das virtuelle System darstellt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ virtualsystemsettingdata**
+Datentyp: **CIM \_ VirtualSystemSettingData**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein Verweis auf das Einstellungsdaten Objekt, das die Momentaufnahme des virtuellen Systems darstellt.
+Ein Verweis auf das Einstellungsdatenobjekt, das die Momentaufnahme des virtuellen Systems darstellt.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -89,8 +89,8 @@ Ein Verweis auf das Einstellungsdaten Objekt, das die Momentaufnahme des virtuel
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Ein Verweis auf das Einstellungsdaten Objekt, das die Momentaufnahme des virtuel
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

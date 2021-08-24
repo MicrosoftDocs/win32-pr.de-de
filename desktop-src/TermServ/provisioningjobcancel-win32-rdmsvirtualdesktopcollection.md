@@ -1,12 +1,12 @@
 ---
-title: Provisioningjobcancel-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
-description: Bricht einen Bereitstellungs Auftrag für virtuelle Desktops ab.
+title: ProvisioningJobCancel-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
+description: Bricht einen Bereitstellungsauftrag für virtuelle Desktops ab.
 ms.assetid: 933ea0f3-b916-4e70-89de-597f9eb23976
 ms.tgt_platform: multiple
 keywords:
-- Provisioningjobcancel-Methode Remotedesktopdienste
-- Provisioningjobcancel-Methode Remotedesktopdienste, Win32_RDMSVirtualDesktopCollection-Klasse
-- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste, provisioningjobcancel-Methode
+- ProvisioningJobCancel-Methode Remotedesktopdienste
+- ProvisioningJobCancel-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktopCollection-Klasse
+- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste , ProvisioningJobCancel-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a8f414bcdc264d682817898bae98fcf60a716452
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1e62e3305cdb544d0a45ee299c8bc5508bbef4915134fbf2d09f1c0b4884cc51
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119866080"
 ---
-# <a name="provisioningjobcancel-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>Provisioningjobcancel-Methode der Win32 \_ rdmsvirtualdesktopcollection-Klasse
+# <a name="provisioningjobcancel-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>ProvisioningJobCancel-Methode der Win32 \_ RDMSVirtualDesktopCollection-Klasse
 
-Bricht einen Bereitstellungs Auftrag für virtuelle Desktops ab.
+Bricht einen Bereitstellungsauftrag für virtuelle Desktops ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ uint32 ProvisioningJobCancel(
 
 <dl> <dt>
 
-*Jobguid* \[ in\]
+*JobGuid* \[ In\]
 </dt> <dd>
 
-Die **GUID** , die den Abbruch des Bereitstellungs Auftrags eindeutig identifiziert.
+Die **GUID,** die den abzubrechenden Bereitstellungsauftrag eindeutig identifiziert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,8 +62,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -72,7 +72,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32 \_ rdmsvirtualdesktopcollection**](win32-rdmsvirtualdesktopcollection.md)
+[**Win32 \_ RDMSVirtualDesktopCollection**](win32-rdmsvirtualdesktopcollection.md)
 </dt> </dl>
 
  

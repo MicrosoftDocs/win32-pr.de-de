@@ -1,11 +1,11 @@
 ---
 title: Win32_TerminalServiceSetting-Klasse
-description: Stellt die Konfiguration für einen Remotedesktop-Sitzungshost-Server (RD-Sitzungshost) dar.
+description: Stellt die Konfiguration für einen Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server dar.
 ms.assetid: 4cd047db-921f-4ccb-946b-d2c7b8d6beea
 ms.tgt_platform: multiple
 keywords:
-- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste
-- Win32_TerminalServiceSetting Klasse Remotedesktopdienste, beschrieben
+- Win32_TerminalServiceSetting-Remotedesktopdienste
+- Win32_TerminalServiceSetting klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -70,18 +70,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bc03f02028a331a3688152a1ce8c57ada7269d07
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5a4d7aefdd3f0a684c91fda3ab73d17de32327f34e8d20d5a7f844ea07e21906
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119769890"
 ---
-# <a name="win32_terminalservicesetting-class"></a>Win32 \_ terminalservicesetts-Klasse
+# <a name="win32_terminalservicesetting-class"></a>Win32 \_ TerminalServiceSetting-Klasse
 
-Die **Win32 \_ terminalserviceseten** -WMI-Klasse stellt die Konfiguration für einen Remotedesktop-Sitzungshost Server (RD-Sitzungshost) dar. Zu den Einstellungen gehören Funktionen wie RD-Sitzungshost Server Modus, Lizenzierung, aktiver Desktop, Berechtigungen, Löschen temporärer Ordner und temporäre Verzeichnisse für Sitzungen.
+Die **WMI-Klasse \_ Win32 TerminalServiceSetting** stellt die Konfiguration für einen Remotedesktop-Sitzungshost(RD-Sitzungshost) Server dar. Einstellungen umfassen Funktionen wie RD-Sitzungshost Servermodus, Lizenzierung, Active Desktop, Berechtigungen, Löschen temporärer Ordner und temporäre Verzeichnisse für Sitzungen.
 
-Die folgende Syntax wird aus dem MOF-Code vereinfacht und umfasst alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu-Methoden finden Sie in der Tabelle mit den Methoden weiter unten in diesem Thema.
+Die folgende Syntax wird von MOF-Code vereinfacht und enthält alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu Methoden finden Sie in der Tabelle der Methoden weiter unten in diesem Thema.
 
 ## <a name="syntax"></a>Syntax
 
@@ -148,47 +148,47 @@ class Win32_TerminalServiceSetting : CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ terminalservicesetts** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ TerminalServiceSetting-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32 \_ terminalservicesetts** -Klasse verfügt über diese Methoden.
+Die **Win32 \_ TerminalServiceSetting-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                                | BESCHREIBUNG                                                                                                                                                                    |
+| Methode                                                                                                                | Beschreibung                                                                                                                                                                    |
 |:----------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Adddirectconnectlicenseserver**](win32-terminalservicesetting-adddirectconnectlicenseserver.md)                   | Konfiguriert einen neuen Lizenzserver im Unternehmen.<br/>                                                                                                                  |
-| [**Addlstospecifiedlicenseserverlist**](addlstospecifiedlicenseserverlist-win32-terminalservicesetting.md)           | Fügt den angegebenen Lizenzserver am Ende der Liste der angegebenen Lizenzserver hinzu.<br/>                                                                                  |
-| [**Canaccesslicenseserver**](canaccesslicenseserver-win32-terminalservicesetting.md)                                 | Bestimmt, ob auf dem RD-Sitzungshost Server Remotedesktopdienste Client Zugriffs Lizenzen (RDS-CALs) von einem Remotedesktop Lizenzserver angefordert werden können.<br/> |
-| [**ChangeMode**](win32-terminalservicesetting-changemode.md)                                                         | Legt den Lizenztyp des Remotedesktop Lizenzservers fest.<br/>                                                                                                       |
-| [**"Kreatewinstation"**](createwinstation-win32-terminalservicesetting.md)                                             | Erstellt einen neuen listenerstapel auf der Grundlage der eindeutigen Kombination aus Listenername und NIC.<br/>                                                                              |
-| [**Deletedirectconnectlicenseserver**](win32-terminalservicesetting-deletedirectconnectlicenseserver.md)             | Löscht den angegebenen Lizenzserver aus dem Unternehmen.<br/>                                                                                                           |
-| [**Emptyspecifiedlicenseserverlist**](emptyspecifiedlicenseserverlist-win32-terminalservicesetting.md)               | Entfernt alle Lizenzserver aus der Liste der angegebenen Lizenzserver.<br/>                                                                                             |
-| [**Findlicenseservers**](findlicenseservers-win32-terminalservicesetting.md)                                         | Listet alle Remotedesktop Lizenzserver und die Ermittlungsmethode auf.<br/>                                                                                   |
-| [**GetDomain**](getdomain-win32-terminalservicesetting.md)                                                           | Ruft den Namen der Domäne ab, der der RD-Sitzungshost Server angehört.<br/>                                                                                    |
-| [**Getgraceperioddays**](getgraceperioddays-win32-terminalservicesetting.md)                                         | Ruft die Anzahl der Tage ab, die in der RD-Lizenzierung Toleranz Periode für einen RD-Sitzungshost Server verbleiben.<br/>                                                     |
-| [**Getregisteredlicenseserverlist**](getregisteredlicenseserverlist-win32-terminalservicesetting.md)                 | Ruft die Liste der registrierten Lizenzserver ab.<br/>                                                                                                                        |
-| [**Getspecifiedlicenseserverlist**](getspecifiedlicenseserverlist-win32-terminalservicesetting.md)                   | Ruft die Liste der angegebenen Lizenzserver ab.<br/>                                                                                                                    |
-| [**Gettslanaids**](gettslanaids-win32-terminalservicesetting.md)                                                     | Ruft die IDs und Beschreibungen Remotedesktopdienste Netzwerkadapter ab.<br/>                                                                                          |
-| [**Gettstolsconnectivitystatus**](gettstolsconnectivitystatus-win32-terminalservicesetting.md)                       | Bestimmt den Konnektivitätsstatus zwischen Remotedesktopdienste und einem Lizenzserver.<br/>                                                                            |
-| [**Getwinstationdrivernames**](getwinstationdrivernames-win32-terminalservicesetting.md)                             | Ruft eine Liste der Namen von WinStation-Treibern ab.<br/>                                                                                                                        |
-| [**Pinglicenseserver**](pinglicenseserver-win32-terminalservicesetting.md)                                           | Pings an den Lizenzserver, um zu bestimmen, ob es sich um einen gültigen Lizenzserver handelt.<br/>                                                                                         |
-| [**Removelsfromspecifiedlicenseserverlist**](removelsfromspecifiedlicenseserverlist-win32-terminalservicesetting.md) | Entfernt den angegebenen Lizenzserver aus der Liste der angegebenen Lizenzserver.<br/>                                                                                        |
-| [**"Aballow-Connections"**](win32-terminalservicesetting-setallowtsconnections.md)                                   | Legt die **allowtconnections** -Eigenschaft fest.<br/>                                                                                                                           |
-| [**Setdisableforciblelogoff**](win32-terminalservicesetting-setdisableforciblelogoff.md)                             | Legt die **disablezwangs blelogoff** -Eigenschaft fest.<br/>                                                                                                                        |
-| [**Setfallbackprintdrivertype**](win32-terminalservicesetting-setfallbackprintdrivertype.md)                         | Legt die **fallbackprintdrivertype** -Eigenschaft fest.<br/>                                                                                                                      |
-| [**Verzeichnis ""**](win32-terminalservicesetting-sethomedirectory.md)                                             | Legt die **Homedirectory** -Eigenschaft fest.<br/>                                                                                                                                |
-| [**Setpolicypropertyname**](win32-terminalservicesetting-setpolicypropertyname.md)                                   | Legt eine der folgenden Eigenschaften fest: **deletetempfolders** oder **usetempfolders**.<br/>                                                                                  |
-| [**Setprimarylicenseserver**](setprimarylicenseserver-win32-terminalservicesetting.md)                               | Legt den angegebenen Lizenzserver als ersten Eintrag in der Liste der angegebenen Lizenzserver fest.<br/>                                                                          |
-| [**Setprofilepath**](win32-terminalservicesetting-setprofilepath.md)                                                 | Legt die **ProfilePath** -Eigenschaft fest.<br/>                                                                                                                                  |
-| [**Setsinglesession**](win32-terminalservicesetting-setsinglesession.md)                                             | Legt die **SingleSession** -Eigenschaft fest.<br/>                                                                                                                                |
-| [**Setspecifiedlicenseserverlist**](setspecifiedlicenseserverlist-win32-terminalservicesetting.md)                   | Aktualisiert die Liste der angegebenen Lizenzserver, wobei alle vorhandenen angegebenen Lizenzserver ersetzt werden.<br/>                                                                    |
-| [**Settimezoneredirection**](win32-terminalservicesetting-settimezoneredirection.md)                                 | Legt die **timezoneredirection** -Eigenschaft fest.<br/>                                                                                                                          |
-| [**Updatedirectconnectlicenseserver**](updatedirectconnectlicenseserver-win32-terminalservicesetting.md)             | Aktualisiert die Liste der Discovery-Lizenzserver.<br/>                                                                                                                      |
+| [**AddDirectConnectLicenseServer**](win32-terminalservicesetting-adddirectconnectlicenseserver.md)                   | Konfiguriert einen neuen Lizenzserver im Unternehmen.<br/>                                                                                                                  |
+| [**AddLSToSpecifiedLicenseServerList**](addlstospecifiedlicenseserverlist-win32-terminalservicesetting.md)           | Fügt den angegebenen Lizenzserver am Ende der Liste der angegebenen Lizenzserver hinzu.<br/>                                                                                  |
+| [**CanAccessLicenseServer**](canaccesslicenseserver-win32-terminalservicesetting.md)                                 | Bestimmt, ob der RD-Sitzungshost-Server Remotedesktopdienste Clientzugriffslizenzen (RDS CALs) von einem Remotedesktop anfordern darf.<br/> |
+| [**ChangeMode**](win32-terminalservicesetting-changemode.md)                                                         | Legt den Lizenzierungstyp des Lizenzservers Remotedesktop fest.<br/>                                                                                                       |
+| [**CreateWinstation**](createwinstation-win32-terminalservicesetting.md)                                             | Erstellt einen neuen Listenerstapel basierend auf der eindeutigen Kombination aus Listenername und NIC.<br/>                                                                              |
+| [**DeleteDirectConnectLicenseServer**](win32-terminalservicesetting-deletedirectconnectlicenseserver.md)             | Löscht den angegebenen Lizenzserver aus dem Unternehmen.<br/>                                                                                                           |
+| [**EmptySpecifiedLicenseServerList**](emptyspecifiedlicenseserverlist-win32-terminalservicesetting.md)               | Entfernt alle Lizenzserver aus der Liste der angegebenen Lizenzserver.<br/>                                                                                             |
+| [**FindLicenseServers**](findlicenseservers-win32-terminalservicesetting.md)                                         | Enumeriert alle Remotedesktop Lizenzserver und die Ermittlungsmethode.<br/>                                                                                   |
+| [**GetDomain**](getdomain-win32-terminalservicesetting.md)                                                           | Ruft den Namen der Domäne ab, zu der RD-Sitzungshost Server gehört.<br/>                                                                                    |
+| [**GetGracePeriodDays**](getgraceperioddays-win32-terminalservicesetting.md)                                         | Ruft die Anzahl der Tage ab, die in der RD-Lizenzierungs-Toleranzperiode für einen RD-Sitzungshost bleiben.<br/>                                                     |
+| [**GetRegisteredLicenseServerList**](getregisteredlicenseserverlist-win32-terminalservicesetting.md)                 | Ruft die Liste der registrierten Lizenzserver ab.<br/>                                                                                                                        |
+| [**GetSpecifiedLicenseServerList**](getspecifiedlicenseserverlist-win32-terminalservicesetting.md)                   | Ruft die Liste der angegebenen Lizenzserver ab.<br/>                                                                                                                    |
+| [**GetTSLanaIds**](gettslanaids-win32-terminalservicesetting.md)                                                     | Ruft die IDs und Beschreibungen Remotedesktopdienste Netzwerkadaptern ab.<br/>                                                                                          |
+| [**GetTStoLSConnectivityStatus**](gettstolsconnectivitystatus-win32-terminalservicesetting.md)                       | Bestimmt den Konnektivitätsstatus zwischen Remotedesktopdienste und einem Lizenzserver.<br/>                                                                            |
+| [**GetWinstationDriverNames**](getwinstationdrivernames-win32-terminalservicesetting.md)                             | Ruft eine Liste der Winstation-Treibernamen ab.<br/>                                                                                                                        |
+| [**PingLicenseServer**](pinglicenseserver-win32-terminalservicesetting.md)                                           | Pingt den Lizenzserver, um zu ermitteln, ob es sich um einen gültigen Lizenzserver handelt.<br/>                                                                                         |
+| [**RemoveLSFromSpecifiedLicenseServerList**](removelsfromspecifiedlicenseserverlist-win32-terminalservicesetting.md) | Entfernt den angegebenen Lizenzserver aus der Liste der angegebenen Lizenzserver.<br/>                                                                                        |
+| [**SetAllowTSConnections**](win32-terminalservicesetting-setallowtsconnections.md)                                   | Legt die **AllowTSConnections-Eigenschaft** fest.<br/>                                                                                                                           |
+| [**SetDisableForcibleLogoff**](win32-terminalservicesetting-setdisableforciblelogoff.md)                             | Legt die **DisableForcibleLogoff-Eigenschaft** fest.<br/>                                                                                                                        |
+| [**SetFallbackPrintDriverType**](win32-terminalservicesetting-setfallbackprintdrivertype.md)                         | Legt die **FallbackPrintDriverType-Eigenschaft** fest.<br/>                                                                                                                      |
+| [**SetHomeDirectory**](win32-terminalservicesetting-sethomedirectory.md)                                             | Legt die **HomeDirectory-Eigenschaft** fest.<br/>                                                                                                                                |
+| [**SetPolicyPropertyName**](win32-terminalservicesetting-setpolicypropertyname.md)                                   | Legt eine der folgenden Eigenschaften fest: **DeleteTempFolders** oder **UseTempFolders**.<br/>                                                                                  |
+| [**SetPrimaryLicenseServer**](setprimarylicenseserver-win32-terminalservicesetting.md)                               | Legt den angegebenen Lizenzserver als ersten Eintrag in der Liste der angegebenen Lizenzserver fest.<br/>                                                                          |
+| [**SetProfilePath**](win32-terminalservicesetting-setprofilepath.md)                                                 | Legt die **ProfilePath-Eigenschaft** fest.<br/>                                                                                                                                  |
+| [**SetSingleSession**](win32-terminalservicesetting-setsinglesession.md)                                             | Legt die **SingleSession-Eigenschaft** fest.<br/>                                                                                                                                |
+| [**SetSpecifiedLicenseServerList**](setspecifiedlicenseserverlist-win32-terminalservicesetting.md)                   | Aktualisiert die Liste der angegebenen Lizenzserver und ersetzt dabei alle vorhandenen angegebenen Lizenzserver.<br/>                                                                    |
+| [**SetTimeZoneRedirection**](win32-terminalservicesetting-settimezoneredirection.md)                                 | Legt die **TimeZoneRedirection-Eigenschaft** fest.<br/>                                                                                                                          |
+| [**UpdateDirectConnectLicenseServer**](updatedirectconnectlicenseserver-win32-terminalservicesetting.md)             | Aktualisiert die Liste der Ermittlungslizenzserver.<br/>                                                                                                                      |
 
 
 
@@ -196,63 +196,63 @@ Die **Win32 \_ terminalservicesetts** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ terminalservicesetts** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ TerminalServiceSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Activedesktop**
+**ActiveDesktop**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob Active Desktop in jeder Benutzersitzung zulässig ist.
+Gibt an, Active Desktop in jeder Benutzersitzung zulässig ist.
 
 <dt>
 
 <span id="TRUE"></span><span id="true"></span>
 
-<span id="TRUE"></span><span id="true"></span>**True** (0)
+<span id="TRUE"></span><span id="true"></span>**TRUE** (0)
 
 
 </dt> <dd>
 
-Active Desktop ist in jeder Benutzersitzung nicht zulässig.
+Active Desktop ist nicht in jeder Benutzersitzung zulässig.
 
 </dd> <dt>
 
 <span id="FALSE"></span><span id="false"></span>
 
-<span id="FALSE"></span><span id="false"></span>**False** (1)
+<span id="FALSE"></span><span id="false"></span>**FALSE** (1)
 
 
 </dt> <dd>
 
-Aktiver Desktop ist in jeder Benutzersitzung zulässig.
+Active Desktop ist in jeder Benutzersitzung zulässig.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Allow-connections**
+**AllowTSConnections**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob neue Remotedesktopdienste Verbindungen zulässig sind.
+Gibt an, ob neue Remotedesktopdienste verbindungen zulässig sind.
 
 <dt>
 
 <span id="FALSE"></span><span id="false"></span>
 
-<span id="FALSE"></span><span id="false"></span>**False** (0)
+<span id="FALSE"></span><span id="false"></span>**FALSE** (0)
 
 
 </dt> <dd>
@@ -263,7 +263,7 @@ Neue Verbindungen sind nicht zulässig.
 
 <span id="TRUE"></span><span id="true"></span>
 
-<span id="TRUE"></span><span id="true"></span>**True** (1)
+<span id="TRUE"></span><span id="true"></span>**TRUE** (1)
 
 
 </dt> <dd>
@@ -283,19 +283,19 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Beschreibung (einzeilige Zeichenfolge) des-Objekts.
+Kurze Beschreibung (einzeilenbasierte Zeichenfolge) des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Deletetempfolders**
+**DeleteTempFolders**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -307,7 +307,7 @@ Gibt an, ob temporäre Verzeichnisse beim Beenden gelöscht werden.
 
 <span id="FALSE"></span><span id="false"></span>
 
-<span id="FALSE"></span><span id="false"></span>**False** (0)
+<span id="FALSE"></span><span id="false"></span>**FALSE** (0)
 
 
 </dt> <dd>
@@ -318,7 +318,7 @@ Das Löschen temporärer Verzeichnisse ist deaktiviert.
 
 <span id="TRUE"></span><span id="true"></span>
 
-<span id="TRUE"></span><span id="true"></span>**True** (1)
+<span id="TRUE"></span><span id="true"></span>**TRUE** (1)
 
 
 </dt> <dd>
@@ -332,7 +332,7 @@ Das Löschen temporärer Verzeichnisse ist aktiviert.
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -347,13 +347,13 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **DirectConnectLicenseServers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **VERALTET**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
 Diese Eigenschaft ist nicht verfügbar.
@@ -362,59 +362,59 @@ Diese Eigenschaft ist nicht verfügbar.
 
 </dd> <dt>
 
-**Disableforciblelogoff**
+**DisableForcibleLogoff**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Bestimmt, ob ein Administrator, der bei der Konsole angemeldet ist, erzwungen werden kann.
+Bestimmt, ob ein Administrator, der bei der Konsole angemeldet ist, abgemeldet werden kann.
 
 <dt>
 
 0
 </dt> <dd>
 
-Der Administrator kann erzwungen werden.
+Der Administrator kann abgemeldet werden.
 
 </dd> <dt>
 
 1
 </dt> <dd>
 
-Der Administrator kann nicht erzwungen werden.
+Der Administrator kann nicht abgemeldet werden.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Enableautomatikreconnection**
+**EnableAutomaticReconnection**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob Remotedesktop Verbindungs Clients die automatische erneute Verbindung mit Sitzungen auf einem RD-Sitzungshost Server zulassen, wenn die Netzwerkverbindung vorübergehend unterbrochen wird.
+Gibt an, ob Remotedesktop Verbindungsclients automatisch eine erneute Verbindung mit Sitzungen auf einem RD-Sitzungshost Server herstellen soll, wenn die Netzwerkverbindung vorübergehend unterbrochen wird.
 
 <dt>
 
 0 (0x0)
 </dt> <dd>
 
-Das automatische erneute Herstellen der Verbindung ist deaktiviert.
+Die automatische wiederherzustellende Verbindung ist deaktiviert.
 
 </dd> <dt>
 
 1 (0x1)
 </dt> <dd>
 
-Die automatische erneute Verbindungs Herstellung ist aktiviert.
+Die automatische wiederherzustellende Verbindung ist aktiviert.
 
 </dd> </dl>
 
@@ -422,16 +422,16 @@ Die automatische erneute Verbindungs Herstellung ist aktiviert.
 
 </dd> <dt>
 
-**Enabledfss**
+**EnableDFSS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob Dynamic Fair-Share Scheduling (DfSS) aktiviert oder deaktiviert ist. Dies kann einer der folgenden Werte sein:
+Gibt an, ob die dynamische Zeitplanung mit fairer Freigabe (DFSS) aktiviert oder deaktiviert ist. Dies kann einer der folgenden Werte sein.
 
 **Windows Server 2008:** Diese Eigenschaft ist vor Windows Server 2008 R2 nicht verfügbar.
 
@@ -453,30 +453,30 @@ DFSS ist aktiviert.
 
 </dd> <dt>
 
-**Enablediskf**
+**EnableDiskFSS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Zeitplanung für die gleichmäßige Datenträger-
+Gibt an, ob die Zeitplanung für die teilungsfähige Datenträgerfreigabe aktiviert ist.
 
 <dt>
 
 0 (0x0)
 </dt> <dd>
 
-Die Datenträger-planmäßige Freigabe Planung ist deaktiviert.
+Die Zeitplanung für faire Freigaben auf Datenträgern ist deaktiviert.
 
 </dd> <dt>
 
 1 (0x1)
 </dt> <dd>
 
-Die gemeinsame Nutzung von Datenträger Plänen ist aktiviert.
+Die Zeitplanung für die teilungsfähige Datenträgerfreigabe ist aktiviert.
 
 </dd> </dl>
 
@@ -484,30 +484,30 @@ Die gemeinsame Nutzung von Datenträger Plänen ist aktiviert.
 
 </dd> <dt>
 
-**Enablenetworkf**
+**EnableNetworkFSS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Planung der Netzwerk gerechten Freigabe aktiviert ist.
+Gibt an, ob die Zeitplanung für die faire Netzwerkfreigabe aktiviert ist.
 
 <dt>
 
 0 (0x0)
 </dt> <dd>
 
-Die Planung der Netzwerk gerechten Freigabe ist deaktiviert.
+Die Zeitplanung für eine angemessene Netzwerkfreigabe ist deaktiviert.
 
 </dd> <dt>
 
 1 (0x1)
 </dt> <dd>
 
-Die Planung der Netzwerk gerechten Freigabe ist aktiviert.
+Die Zeitplanung für eine angemessene Netzwerkfreigabe ist aktiviert.
 
 </dd> </dl>
 
@@ -515,16 +515,16 @@ Die Planung der Netzwerk gerechten Freigabe ist aktiviert.
 
 </dd> <dt>
 
-**Enableremotedesktopmsi**
+**EnableRemoteDesktopMSI**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Remotedesktop-MSI aktiviert oder deaktiviert ist.
+Gibt an, ob die Remotedesktop MSI aktiviert oder deaktiviert ist.
 
 <dt>
 
@@ -546,33 +546,33 @@ Aktiviert
 
 </dd> <dt>
 
-**Fallbackprintdrivertype**
+**FallbackPrintDriverType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, auf welchen Druckertreiber ein Fall Back durch ein Fall Back
+Gibt an, auf welchen Druckertreiber ein Fallback stattfindet.
 
 <dt>
 
 <span id="No_fallback_dirvers_0"></span><span id="no_fallback_dirvers_0"></span><span id="NO_FALLBACK_DIRVERS_0"></span>
 
-<span id="No_fallback_dirvers_0"></span><span id="no_fallback_dirvers_0"></span><span id="NO_FALLBACK_DIRVERS_0"></span>**Keine Fall Back-dirvers = 0** (0)
+<span id="No_fallback_dirvers_0"></span><span id="no_fallback_dirvers_0"></span><span id="NO_FALLBACK_DIRVERS_0"></span>**Kein Fallback-Dirvers=0** (0)
 
 
 </dt> <dd>
 
-Keine Fall Back Treiber.
+Keine Fallbacktreiber.
 
 </dd> <dt>
 
 <span id="Best_guess_1"></span><span id="best_guess_1"></span><span id="BEST_GUESS_1"></span>
 
-<span id="Best_guess_1"></span><span id="best_guess_1"></span><span id="BEST_GUESS_1"></span>**Beste Vermutung = 1** (1)
+<span id="Best_guess_1"></span><span id="best_guess_1"></span><span id="BEST_GUESS_1"></span>**Best Guess=1** (1)
 
 
 </dt> <dd>
@@ -583,56 +583,56 @@ Beste Schätzung.
 
 <span id="Best_guess__if_no_match_is_found_fallback_to_PCL_2"></span><span id="best_guess__if_no_match_is_found_fallback_to_pcl_2"></span><span id="BEST_GUESS__IF_NO_MATCH_IS_FOUND_FALLBACK_TO_PCL_2"></span>
 
-<span id="Best_guess__if_no_match_is_found_fallback_to_PCL_2"></span><span id="best_guess__if_no_match_is_found_fallback_to_pcl_2"></span><span id="BEST_GUESS__IF_NO_MATCH_IS_FOUND_FALLBACK_TO_PCL_2"></span>**Beste Schätzung, wenn keine Entsprechung für die PCL gefunden wird = 2** (2)
+<span id="Best_guess__if_no_match_is_found_fallback_to_PCL_2"></span><span id="best_guess__if_no_match_is_found_fallback_to_pcl_2"></span><span id="BEST_GUESS__IF_NO_MATCH_IS_FOUND_FALLBACK_TO_PCL_2"></span>**Beste Schätzung, wenn keine Übereinstimmung gefunden wird Fallback auf PCL=2** (2)
 
 
 </dt> <dd>
 
-Beste Schätzung. Wenn keine Entsprechung gefunden wird, Fall Back auf Hewlett-Packard-druckersteuerungsprache (PCL).
+Beste Schätzung. Wenn keine Übereinstimmung gefunden wird, wird ein Fallback auf Hewlett-Packard Printer Control Language (PCL) angezeigt.
 
 </dd> <dt>
 
 <span id="Best_guess__if_no_match_is_found_fallback_to_PS_3"></span><span id="best_guess__if_no_match_is_found_fallback_to_ps_3"></span><span id="BEST_GUESS__IF_NO_MATCH_IS_FOUND_FALLBACK_TO_PS_3"></span>
 
-<span id="Best_guess__if_no_match_is_found_fallback_to_PS_3"></span><span id="best_guess__if_no_match_is_found_fallback_to_ps_3"></span><span id="BEST_GUESS__IF_NO_MATCH_IS_FOUND_FALLBACK_TO_PS_3"></span>**Beste Schätzung, wenn keine Entsprechung gefunden wird, Fall Back auf PS = 3** (3)
+<span id="Best_guess__if_no_match_is_found_fallback_to_PS_3"></span><span id="best_guess__if_no_match_is_found_fallback_to_ps_3"></span><span id="BEST_GUESS__IF_NO_MATCH_IS_FOUND_FALLBACK_TO_PS_3"></span>**Best guess, if no match is found fallback to PS=3 (3) (Fallback auf PS=3 (3))**
 
 
 </dt> <dd>
 
-Beste Schätzung. Wenn keine Entsprechung gefunden wird, Fall Back auf PostScript (PS).
+Beste Schätzung. Wenn keine Übereinstimmung gefunden wird, fallbacken Sie auf Postscript (PS).
 
 </dd> <dt>
 
 <span id="Best_guess__if_no_match_is_found_show_both_PCL_and_PS_drivers_4"></span><span id="best_guess__if_no_match_is_found_show_both_pcl_and_ps_drivers_4"></span><span id="BEST_GUESS__IF_NO_MATCH_IS_FOUND_SHOW_BOTH_PCL_AND_PS_DRIVERS_4"></span>
 
-<span id="Best_guess__if_no_match_is_found_show_both_PCL_and_PS_drivers_4"></span><span id="best_guess__if_no_match_is_found_show_both_pcl_and_ps_drivers_4"></span><span id="BEST_GUESS__IF_NO_MATCH_IS_FOUND_SHOW_BOTH_PCL_AND_PS_DRIVERS_4"></span>**Wenn keine Entsprechung gefunden wird, wird empfohlen, sowohl PCL-als auch PS-Treiber = 4** (4) anzuzeigen.
+<span id="Best_guess__if_no_match_is_found_show_both_PCL_and_PS_drivers_4"></span><span id="best_guess__if_no_match_is_found_show_both_pcl_and_ps_drivers_4"></span><span id="BEST_GUESS__IF_NO_MATCH_IS_FOUND_SHOW_BOTH_PCL_AND_PS_DRIVERS_4"></span>**Best guess, if no match is found both PCL and PS drivers=4 (4) (PCL- und PS-Treiber =4)**
 
 
 </dt> <dd>
 
-Beste Schätzung. Wenn keine Entsprechung gefunden wird, zeigen Sie sowohl PS-als auch PCL-Treiber an.
+Beste Schätzung. Wenn keine Übereinstimmung gefunden wird, zeigen Sie sowohl PS- als auch PCL-Treiber an.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Getcapabilitiesid**
+**GetCapabilitiesID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Funktions-ID für den Anbieter.
+Funktionen-ID für den Anbieter.
 
 </dd> <dt>
 
 **HomeDirectory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -645,68 +645,68 @@ Das Stammverzeichnis für den Computer.
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Das Datum, an dem das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**Licensingdescription**
+**LicensingDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des Lizenzierungs Modus.
+Eine kurze Beschreibung des Lizenzierungsmodus.
 
 </dd> <dt>
 
-**Licensingname**
+**LicensingName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Lizenzierungs Modus.
+Der Name des Lizenzierungsmodus.
 
 </dd> <dt>
 
 **LicensingType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Lizenzierungstyp für den angegebenen Server Modus.
+Der Lizenzierungstyp für den angegebenen Servermodus.
 
 <dt>
 
 <span id="Personal_Terminal_Server"></span><span id="personal_terminal_server"></span><span id="PERSONAL_TERMINAL_SERVER"></span>
 
-<span id="Personal_Terminal_Server"></span><span id="personal_terminal_server"></span><span id="PERSONAL_TERMINAL_SERVER"></span>**Persönlicher Terminal Server** (0)
+<span id="Personal_Terminal_Server"></span><span id="personal_terminal_server"></span><span id="PERSONAL_TERMINAL_SERVER"></span>**Personal Terminal Server** (0)
 
 
 </dt> <dd>
 
-Persönlicher RD-Sitzungshost Server.
+Persönlicher RD-Sitzungshost-Server.
 
 </dd> <dt>
 
@@ -756,26 +756,26 @@ Nicht konfiguriert.
 
 </dd> <dt>
 
-**Limitedusersessions**
+**LimitedUserSessions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Funktion zum Begrenzen der Anzahl aktiver und inaktiver Sitzungen, die auf einem RD-Sitzungshost Server zulässig sind, aktiviert ist. Beispielsweise können Sie " **limitedusersessions** " festlegen, um die Lizenz Konformität für eine bestimmte Anwendung zu gewährleisten, die auf dem RD-Sitzungshost Server installiert ist. Möglicherweise möchten Sie die maximale Anzahl von Sitzungen auf einem RD-Sitzungshost Server in einer Farm mit Lastenausgleich einschränken, damit der Server nicht überladen wird, wenn ein anderer Server in der Farm ausfällt.
+Gibt an, ob das Feature zum Begrenzen der Anzahl aktiver und inaktiver Sitzungen, die auf einem RD-Sitzungshost Server zulässig sind, aktiviert ist. Beispielsweise können Sie **LimitedUserSessions** festlegen, um die Lizenzkonformität für eine bestimmte Anwendung zu gewährleisten, die auf dem RD-Sitzungshost-Server installiert ist. Sie können auch die maximale Anzahl von Sitzungen auf einem RD-Sitzungshost Server in einer Farm mit Lastenausgleich begrenzen, damit der Server nicht überlastet wird, wenn ein anderer Server in der Farm ausfällt.
 
 > [!Note]
 >
-> Die Sitzung, die zum Herstellen einer Verbindung mit dem Server zu Verwaltungszwecken verwendet wird, wird von " **limitedusersessions**" nicht beeinträchtigt.
+> Die Sitzung, die zum Herstellen einer Verbindung mit dem Server zu Administrativen Zwecken verwendet wird, ist von **LimitedUserSessions** nicht betroffen.
 >
-> Wenn ein Benutzer in einer RD-Sitzungshost Serverfarm das Sitzungs Limit überschreitet, wird die Sitzung durch RD-Verbindungsbroker Lastenausgleich an einen anderen Server weitergeleitet. Wenn es sich bei dem Server um einen eigenständigen Server handelt, ist der Benutzer nicht in der Lage, eine Verbindung herzustellen.
+> Wenn ein Benutzer in einer RD-Sitzungshost Serverfarm das Sitzungslimit überschreitet, wird die Sitzung durch den Lastenausgleich des RD-Verbindungsbrokers an einen anderen Server weitergeleitet. Wenn der Server ein eigenständiger Server ist, kann der Benutzer keine Verbindung herstellen.
 >
-> Aufgrund der Sitzung, die zum Herstellen einer Verbindung mit dem Server zu Verwaltungszwecken verwendet wird, und der zeitlichen Steuerung der Anzahl der Sitzungen während des Anmeldevorgangs wird empfohlen, dass Sie " **limitedusersessions** " auf einen Wert festlegen, der den physischen Grenzwert für die Anzahl der Sitzungen auf einem Server etwas niedriger ist.
+> Aufgrund der Sitzung, die zum Herstellen einer Verbindung mit dem Server zu Administrativen Zwecken verwendet wird, und aufgrund des Zeitlichen Ablaufs der Erzwingung der Anzahl von Sitzungen während des Anmeldezyklus wird empfohlen, **LimitedUserSessions** auf einen Wert festzulegen, der etwas niedriger ist als der physische Grenzwert für die Anzahl der Sitzungen auf einem Server.
 >
-> Die **limitedusersessions** -Eigenschaft ist nur gültig, wenn der RD-Sitzungshost-Rollen Dienst installiert ist.
+> Die **LimitedUserSessions-Eigenschaft** ist nur gültig, wenn der RD-Sitzungshost Rollendienst installiert ist.
 
  
 
@@ -791,7 +791,7 @@ Die Funktion ist deaktiviert.
 1 oder höher
 </dt> <dd>
 
-Der Wert 1 oder höher stellt die maximale Anzahl von Sitzungen (sowohl aktive als auch inaktive) dar, die auf dem RD-Sitzungshost Server zulässig sind.
+Der Wert mindestens stellt die maximale Anzahl von Sitzungen (sowohl aktiv als auch inaktiv) dar, die auf dem RD-Sitzungshost-Server zulässig sind.
 
 </dd> </dl>
 
@@ -800,7 +800,7 @@ Der Wert 1 oder höher stellt die maximale Anzahl von Sitzungen (sowohl aktive a
 **Anmeldungen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -829,7 +829,7 @@ Neue Sitzungen sind nicht zulässig.
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -841,61 +841,61 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Networkf-Klasse**
+**NetworkFSSCatchAllWeight**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt die standardmäßige Netzwerk Last für den gesamten Netzwerk Datenverkehr an. Gültige Werte sind 1 bis 9.
+Gibt die Standardgewichtung der Netzwerk-Fair Share für den gesamten Netzwerkdatenverkehr an. Gültige Werte sind 1 bis 9.
 
 **Windows Server 2008 R2 und Windows Server 2008:** Diese Eigenschaft ist nicht verfügbar.
 
 </dd> <dt>
 
-**Networkf-localsystemweight**
+**NetworkFSSLocalSystemWeight**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt die standardmäßige Netzwerk Last für lokale System Prozesse an. Gültige Werte sind 1 bis 9.
+Gibt die Standardgewichtung der Netzwerk-Fair Share für lokale Systemprozesse an. Gültige Werte sind 1 bis 9.
 
 **Windows Server 2008 R2 und Windows Server 2008:** Diese Eigenschaft ist nicht verfügbar.
 
 </dd> <dt>
 
-**Networksssusersessionweight**
+**NetworkFSSUserSessionWeight**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt die standardmäßige Netzwerk Last für eine Benutzersitzung an. Gültige Werte sind 1 bis 9.
+Gibt die Standardgewichtung für die netzwerkeinheitliche Freigabe für eine Benutzersitzung an. Gültige Werte sind 1 bis 9.
 
 **Windows Server 2008 R2 und Windows Server 2008:** Diese Eigenschaft ist nicht verfügbar.
 
 </dd> <dt>
 
-**Policysourceallow-Connections**
+**PolicySourceAllowTSConnections**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **allowtconnections** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob die **AllowTSConnections-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -915,16 +915,16 @@ Gruppenrichtlinie
 
 </dd> <dt>
 
-**Policysourceconfiguredlicenseservers**
+**PolicySourceConfiguredLicenseServers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die von der [**getspecifiedlicenseserverlist**](getspecifiedlicenseserverlist-win32-terminalservicesetting.md) -Methode zurückgegebenen Lizenzserver vom Server oder von der Gruppenrichtlinie konfiguriert werden.
+Gibt an, ob die von der [**GetSpecifiedLicenseServerList-Methode zurückgegebenen**](getspecifiedlicenseserverlist-win32-terminalservicesetting.md) Lizenzserver vom Server oder von der Gruppenrichtlinie konfiguriert werden.
 
 **Windows Server 2008:** Diese Eigenschaft ist nicht verfügbar.
 
@@ -946,16 +946,16 @@ Gruppenrichtlinie
 
 </dd> <dt>
 
-**Policysourcedeletetempfolders**
+**PolicySourceDeleteTempFolders**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **deletetempfolders** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob die **DeleteTempFolders-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -978,18 +978,18 @@ Gruppenrichtlinie
 **PolicySourceDirectConnectLicenseServers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **VERALTET**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
 Diese Eigenschaft ist nicht verfügbar.
 
-**Windows Server 2008:** Gibt an, ob die **DirectConnectLicenseServers** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+**Windows Server 2008:** Gibt an, ob **die DirectConnectLicenseServers-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1009,10 +1009,10 @@ Gruppenrichtlinie
 
 </dd> <dt>
 
-**Policysourcedisableforciblelogoff**
+**PolicySourceDisableForcibleLogoff**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1020,7 +1020,7 @@ Zugriffstyp: Schreibgeschützt
 
 Diese Eigenschaft wird nicht unterstützt.
 
-**Windows Server 2008:** Bestimmt, ob die **disableforciblelogoff** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+**Windows Server 2008:** Bestimmt, ob **die DisableForcibleLogoff-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1040,16 +1040,16 @@ Gruppenrichtlinie:
 
 </dd> <dt>
 
-**Policysourceenableautomatikreconnection**
+**PolicySourceEnableAutomaticReconnection**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **enableautomatikreconnection** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob **die EnableAutomaticReconnection-Eigenschaft** von der Server- oder Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1071,16 +1071,16 @@ Gruppenrichtlinie
 
 </dd> <dt>
 
-**Policysourceenabledfss**
+**PolicySourceEnableDFSS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **enabledfss** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob **die EnableDFSS-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1102,16 +1102,16 @@ Gruppenrichtlinie
 
 </dd> <dt>
 
-**Policysourceenableremotedesktopmsi**
+**PolicySourceEnableRemoteDesktopMSI**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **enableremotedesktopmsi** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob **die EnableRemoteDesktopMSI-Eigenschaft** von der Server- oder Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1133,16 +1133,16 @@ Gruppenrichtlinie
 
 </dd> <dt>
 
-**Policysourcefallbackprintdrivertype**
+**PolicySourceFallbackPrintDriverType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **fallbackprintdrivertype** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob **die FallbackPrintDriverType-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1162,16 +1162,16 @@ Gruppenrichtlinie
 
 </dd> <dt>
 
-**Policysourcehomedirectory**
+**PolicySourceHomeDirectory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **Homedirectory** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob **die HomeDirectory-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1194,13 +1194,13 @@ Gruppenrichtlinie
 **PolicySourceLicensingType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **LicensingType** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob **die LicensingType-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1223,13 +1223,13 @@ Gruppenrichtlinie
 **PolicySourceProfilePath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **ProfilePath** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob **die ProfilePath-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1249,16 +1249,16 @@ Gruppenrichtlinie
 
 </dd> <dt>
 
-**Policysourceredirec\martcards**
+**PolicySourceRedirectSmartCards**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **redirectmartcards** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob **die RedirectSmartCards-Eigenschaft** von der Server- oder Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1283,13 +1283,13 @@ Gruppenrichtlinie
 **PolicySourceSingleSession**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **SingleSession** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob die **SingleSession-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1309,16 +1309,16 @@ Gruppenrichtlinie
 
 </dd> <dt>
 
-**Policysourcetimezoneredirection**
+**PolicySourceTimeZoneRedirection**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **timezoneredirection** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob die **TimeZoneRedirection-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1338,16 +1338,16 @@ Gruppenrichtlinie
 
 </dd> <dt>
 
-**Policysourceuserdecoasyprintdriver**
+**PolicySourceUseRD FootprintPrintDriver**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **userenasyprintdriver** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob die **UseRD FootprintPrintDriver-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1369,16 +1369,16 @@ Gruppenrichtlinie
 
 </dd> <dt>
 
-**Policysourceu-tempfolders**
+**PolicySourceUseTempFolders**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **usetempfolders** -Eigenschaft vom Server oder von der Gruppenrichtlinie konfiguriert wird.
+Gibt an, ob die **UseTempFolders-Eigenschaft** vom Server oder von der Gruppenrichtlinie konfiguriert wird.
 
 <dt>
 
@@ -1398,26 +1398,26 @@ Gruppenrichtlinie
 
 </dd> <dt>
 
-**Possiblelicensingtypes**
+**PossibleLicensingTypes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Bitmap**](/windows/desktop/WmiSdk/standard-qualifiers) ("0", "1", "2", "4", "5"), [**BitValues**](/windows/desktop/WmiSdk/standard-qualifiers) ("persönlicher Terminal Server", "Remotedesktop für die Verwaltung", "pro Gerät", "pro Benutzer", "nicht konfiguriert")
+Qualifizierer: [**BitMap**](/windows/desktop/WmiSdk/standard-qualifiers) ("0", "1", "2", "4", "5"), [**BitValues**](/windows/desktop/WmiSdk/standard-qualifiers) ("Personal Terminal Server", "Remotedesktop for Administration", "Per Device", "Per User", "Not Configured")
 </dt> </dl>
 
-Eine Bitmaske, die die verfügbaren Lizenzierungs Typen angibt. Dies kann eine Kombination aus einem oder mehreren der folgenden Werte sein.
+Eine Bitmaske, die die verfügbaren Lizenzierungstypen angibt. Dies kann eine Kombination aus einem oder mehreren der folgenden Werte sein.
 
 <dt>
 
 1 (0x1)
 </dt> <dd>
 
-Persönliche RD-Sitzungshost Server-Lizenzen werden unterstützt.
+Persönliche RD-Sitzungshost Serverlizenzen werden unterstützt.
 
 </dd> <dt>
 
@@ -1431,23 +1431,23 @@ Remotedesktop Lizenzen werden unterstützt.
 4 (0x4)
 </dt> <dd>
 
-Pro-Gerät-Lizenzen werden unterstützt.
+Pro Gerät werden Lizenzen unterstützt.
 
 </dd> <dt>
 
 8 (0x8)
 </dt> <dd>
 
-Pro-Benutzer-Lizenzen werden unterstützt.
+Lizenzen pro Benutzer werden unterstützt.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Profilpfad**
+**ProfilePath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1457,30 +1457,30 @@ Profilpfad für den Computer.
 
 </dd> <dt>
 
-**Redirecrichmartcards**
+**RedirectSmartCards**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Umleitung von smartcardgeräten in einer Remote Sitzung zulässig ist.
+Gibt an, ob die Umleitung von Smartcardgeräten in einer Remotesitzung zulässig ist.
 
 <dt>
 
 0 (0x0)
 </dt> <dd>
 
-Eine Smartcard-Geräte Umleitung ist nicht zulässig.
+Die Umleitung von Smartcardgeräten ist nicht zulässig.
 
 </dd> <dt>
 
 1 (0x1)
 </dt> <dd>
 
-Eine Smartcard-Geräte Umleitung ist zulässig.
+Die Umleitung von Smartcardgeräten ist zulässig.
 
 </dd> </dl>
 
@@ -1491,50 +1491,50 @@ Eine Smartcard-Geräte Umleitung ist zulässig.
 **ServerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der Name des RD-Sitzungshost Servers, dessen Eigenschaften von Interesse sind.
+Name des RD-Sitzungshost Servers, dessen Eigenschaften von Interesse sind.
 
 </dd> <dt>
 
-**Sessionbrokerdrainmode**
+**SessionBrokerDrainMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der RD-Verbindungsbroker Benutzer Anmeldemodus.
+Der Benutzeranmeldemodus des RD-Verbindungsbrokers.
 
 <dt>
 
 0
 </dt> <dd>
 
-Lässt alle Verbindungen zu.
+Lassen Sie alle Verbindungen zu.
 
 </dd> <dt>
 
 1
 </dt> <dd>
 
-Zulassen von erneuten Verbindungen, aber verhindern von neuen Anmeldungen, bis der Server neu gestartet wird.
+Lassen Sie erneute Verbindungen zu, verhindern Sie jedoch neue Anmeldungen, bis der Server neu gestartet wird.
 
 </dd> <dt>
 
 2
 </dt> <dd>
 
-Lässt erneute Verbindungen zu, verhindert jedoch neue Anmeldungen.
+Lassen Sie erneute Verbindungen zu, verhindern Sie jedoch neue Anmeldungen.
 
 </dd> </dl>
 
@@ -1543,13 +1543,13 @@ Lässt erneute Verbindungen zu, verhindert jedoch neue Anmeldungen.
 **SingleSession**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob pro Benutzer eine oder mehrere Remotedesktopdienste Sitzungen zulässig sind.
+Gibt an, ob eine oder mehrere Remotedesktopdienste Sitzungen pro Benutzer zulässig sind.
 
 <dt>
 
@@ -1560,7 +1560,7 @@ Gibt an, ob pro Benutzer eine oder mehrere Remotedesktopdienste Sitzungen zuläs
 
 </dt> <dd>
 
-Pro Benutzer ist mehr als eine Sitzung zulässig.
+Pro Benutzer sind mehr als eine Sitzung zulässig.
 
 </dd> <dt>
 
@@ -1580,16 +1580,16 @@ Pro Benutzer ist nur eine Sitzung zulässig.
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -1653,22 +1653,22 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Terminalservermode**
+**TerminalServerMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der RD-Sitzungshost Server-Betriebsmodus des Remotedesktopdienste Dienstanbieter. Dieser Modus steuert die anwendbaren Lizenzierungsrichtlinien und ob die Anwendungs Kompatibilitäts Features aktiviert sind.
+Der RD-Sitzungshost Serverbetriebsmodus des Remotedesktopdienste-Diensts. Dieser Modus steuert die lizenzierungsrichtlinien, die anwendbar sind, sowie, ob Anwendungskompatibilitätsfeatures aktiviert sind.
 
 <dt>
 
 <span id="AppServer"></span><span id="appserver"></span><span id="APPSERVER"></span>
 
-<span id="AppServer"></span><span id="appserver"></span><span id="APPSERVER"></span>**Appserver** (1)
+<span id="AppServer"></span><span id="appserver"></span><span id="APPSERVER"></span>**AppServer** (1)
 
 
 </dt> <dd>
@@ -1684,22 +1684,22 @@ Der Server fungiert als Anwendungsserver.
 
 </dt> <dd>
 
-Die Sitzung wird Remote verwaltet.
+Die Sitzung wird remote verwaltet.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Timezoneredirection**
+**TimeZoneRedirection**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Client Computer seine Zeitzoneneinstellungen an die Remotedesktopdienste Sitzung umleiten kann.
+Gibt an, ob der Clientcomputer seine Zeitzoneneinstellungen an die Remotedesktopdienste Sitzung umleiten kann.
 
 <dt>
 
@@ -1719,30 +1719,30 @@ Die Umleitung ist aktiviert.
 
 </dd> <dt>
 
-**Userdebug PrintDriver**
+**UseRD FootprintPrintDriver**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der Easy Print für Remotedesktop Druckertreiber zuerst zum Installieren aller Client Drucker verwendet wird.
+Gibt an, ob der Easy Print für Remotedesktop Druckertreiber zuerst verwendet wird, um alle Clientdrucker zu installieren.
 
 <dt>
 
 0
 </dt> <dd>
 
-Der RD-Sitzungshost Server versucht, einen geeigneten Druckertreiber zu finden, um den Client Drucker zu installieren. Wenn der RD-Sitzungshost Server keinen Druckertreiber hat, der mit dem Client Drucker übereinstimmt, versucht der Server, den-Easy Print für Remotedesktop Treiber zu verwenden, um den Client Drucker zu installieren.
+Der RD-Sitzungshost-Server versucht, einen geeigneten Druckertreiber für die Installation des Clientdruckers zu finden. Wenn der RD-Sitzungshost Server nicht über einen Druckertreiber verfügt, der mit dem Clientdrucker übereinstimmt, versucht der Server, den Easy Print für Remotedesktop Treiber zum Installieren des Clientdruckers zu verwenden.
 
 </dd> <dt>
 
 1
 </dt> <dd>
 
-Der RD-Sitzungshost Server versucht zunächst, den Easy Print für Remotedesktop Druckertreiber zu verwenden, um alle Client Drucker zu installieren. Wenn der Easy Print für Remotedesktop Druckertreiber nicht verwendet werden kann, wird ein Druckertreiber auf dem RD-Sitzungshost Server verwendet, der mit dem Client Drucker übereinstimmt.
+Der RD-Sitzungshost-Server versucht zunächst, den Easy Print für Remotedesktop Druckertreiber zu verwenden, um alle Clientdrucker zu installieren. Wenn der Easy Print für Remotedesktop Druckertreiber aus irgendeinem Grund nicht verwendet werden kann, wird ein Druckertreiber auf dem RD-Sitzungshost-Server verwendet, der dem Clientdrucker entspricht.
 
 </dd> </dl>
 
@@ -1750,47 +1750,47 @@ Der RD-Sitzungshost Server versucht zunächst, den Easy Print für Remotedesktop
 
 </dd> <dt>
 
-**Userberechtigung**
+**Userpermission**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob jede Benutzersitzung eine strenge oder gelockerte Sicherheit aufweist.
+Gibt an, ob jede Benutzersitzung eine enge oder gelockerte Sicherheit hat.
 
 <dt>
 
 <span id="FALSE"></span><span id="false"></span>
 
-<span id="FALSE"></span><span id="false"></span>**False** (0)
+<span id="FALSE"></span><span id="false"></span>**FALSE** (0)
 
 
 </dt> <dd>
 
-Sicherheit ist sehr streng.
+Die Sicherheit ist streng.
 
 </dd> <dt>
 
 <span id="TRUE"></span><span id="true"></span>
 
-<span id="TRUE"></span><span id="true"></span>**True** (1)
+<span id="TRUE"></span><span id="true"></span>**TRUE** (1)
 
 
 </dt> <dd>
 
-Sicherheit ist gelockert.
+Die Sicherheit ist gelockert.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Usetempfolders**
+**UseTempFolders**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1802,18 +1802,18 @@ Gibt an, ob temporäre Verzeichnisse pro Sitzung erstellt und gelöscht werden.
 
 <span id="FALSE"></span><span id="false"></span>
 
-<span id="FALSE"></span><span id="false"></span>**False** (0)
+<span id="FALSE"></span><span id="false"></span>**FALSE** (0)
 
 
 </dt> <dd>
 
-Temporäre Verzeichnisse werden für jede Sitzung nicht erstellt und gelöscht. Eine wird für die erste Sitzung erstellt und nie gelöscht.
+Temporäre Verzeichnisse werden nicht für jede Sitzung erstellt und gelöscht. Eine wird für die erste Sitzung erstellt und nie gelöscht.
 
 </dd> <dt>
 
 <span id="TRUE"></span><span id="true"></span>
 
-<span id="TRUE"></span><span id="true"></span>**True** (1)
+<span id="TRUE"></span><span id="true"></span>**TRUE** (1)
 
 
 </dt> <dd>
@@ -1824,15 +1824,15 @@ Temporäre Verzeichnisse werden für jede Sitzung erstellt und gelöscht.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Win32 \_ Terminalservicesete** ist [**Win32 \_ Terminalservice**](win32-terminalservice.md) als **Einstellungs** Eigenschaft der [**Win32 \_ terminalservicedesetting**](win32-terminalservicetosetting.md) -Zuordnung zugeordnet.
+**Win32 \_ TerminalServiceSetting** ist [**Win32 \_ TerminalService**](win32-terminalservice.md) als **Einstellungseigenschaft** der [**Win32 \_ TerminalServiceToSetting-Zuordnung**](win32-terminalservicetosetting.md) zugeordnet.
 
-[**Win32 \_ TerminalSetting**](win32-terminalsetting.md) ist dem [**Win32- \_ Terminal**](win32-terminal.md) als **Setting** -Eigenschaft der [**Win32 \_ terminalterminalsetting**](win32-terminalterminalsetting.md) -Zuordnung zugeordnet.
+[**Win32 \_ TerminalSetting**](win32-terminalsetting.md) ist [**Win32 \_ Terminal**](win32-terminal.md) als **Einstellungseigenschaft** der [**Win32 \_ TerminalTerminalSetting-Zuordnung**](win32-terminalterminalsetting.md) zugeordnet.
 
-Zum Herstellen einer Verbindung mit dem root \\ CIMV2 \\ TerminalServices-Namespace muss die Authentifizierungs Ebene den Datenschutz für das Paket enthalten. Bei C/C++-aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene der **RPC- \_ c- \_ authn- \_ Ebene \_ Pkt \_ Privacy**. Bei Visual Basic-und Skript aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene von **wbemauthenticationlevelpzprivacy** oder "PKTPRIVACY" mit einem Wert von sechs.
+Um eine Verbindung mit dem \\ Root CIMV2 \\ TerminalServices-Namespace herzustellen, muss die Authentifizierungsebene Paketdatenschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Bei Visual Basic- und Skriptaufrufen ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert sechs.
 
-Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird gezeigt, wie eine Verbindung mit einem Remote Computer mit Paket Datenschutz hergestellt wird.
+Das folgende Beispiel Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -1843,7 +1843,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -1854,7 +1854,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -1863,22 +1863,22 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**CIM- \_ Einstellung**](cim-setting.md)
+[**\_CIM-Einstellung**](cim-setting.md)
 </dt> <dt>
 
-[**Win32- \_ Terminal**](win32-terminal.md)
+[**\_Win32-Terminal**](win32-terminal.md)
 </dt> <dt>
 
-[**Win32 \_ Terminalservice**](win32-terminalservice.md)
+[**Win32 \_ TerminalService**](win32-terminalservice.md)
 </dt> <dt>
 
-[**Win32 \_ terminalservicede Setting**](win32-terminalservicetosetting.md)
+[**Win32 \_ TerminalServiceToSetting**](win32-terminalservicetosetting.md)
 </dt> <dt>
 
-[**Win32 \_ terminalterminalsetting**](win32-terminalterminalsetting.md)
+[**Win32 \_ TerminalTerminalSetting**](win32-terminalterminalsetting.md)
 </dt> <dt>
 
-[**CIM- \_ Einstellung**](/windows/desktop/CIMWin32Prov/cim-setting)
+[**\_CIM-Einstellung**](/windows/desktop/CIMWin32Prov/cim-setting)
 </dt> </dl>
 
  

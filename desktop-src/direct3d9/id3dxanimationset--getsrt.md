@@ -1,7 +1,7 @@
 ---
-description: Ruft die Skalierungs-, Drehungs-und Übersetzungs Werte des Animations Satzes ab.
+description: Ruft die Skalierungs-, Drehungs- und Übersetzungswerte der Animationsmenge ab.
 ms.assetid: 84fc56f3-15bf-4e27-ad06-57fab94f3a33
-title: 'ID3DXAnimationSet:: getrt-Methode (D3dx9anim. h)'
+title: ID3DXAnimationSet::GetSRT-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: b70243dd9aa2f304d80eaff2e2cc7695dad43379
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: baa1b882972a91626b19194f83655ea1839877943f7463be8991167eb72d17fa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355842"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119791070"
 ---
-# <a name="id3dxanimationsetgetsrt-method"></a>ID3DXAnimationSet:: gezrt-Methode
+# <a name="id3dxanimationsetgetsrt-method"></a>ID3DXAnimationSet::GetSRT-Methode
 
-Ruft die Skalierungs-, Drehungs-und Übersetzungs Werte des Animations Satzes ab.
+Ruft die Skalierungs-, Drehungs- und Übersetzungswerte der Animationsmenge ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT GetSRT(
 
 <dl> <dt>
 
-*PeriodicPosition* \[ in\]
+*PeriodicPosition* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Die Position des Animations Satzes. Die Position kann durch Aufrufen von [**ID3DXAnimationSet:: GetPeriodicPosition**](id3dxanimationset--getperiodicposition.md)abgerufen werden.
+Position des Animationssatzes. Die Position kann durch Aufrufen von [**ID3DXAnimationSet::GetPeriodicPosition**](id3dxanimationset--getperiodicposition.md)abgerufen werden.
 
 </dd> <dt>
 
-*Animation* \[ in\]
+*Animation* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Animations Index.
+Animationsindex.
 
 </dd> <dt>
 
-*pscale* \[ vorgenommen\]
+*pScale* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-Ein Zeiger auf den [**D3DXVECTOR3**](d3dxvector3.md) -Vektor, der die Skala des Animations Satzes beschreibt.
+Zeiger auf den [**D3DXVECTOR3-Vektor,**](d3dxvector3.md) der die Skalierung der Animationsmenge beschreibt.
 
 </dd> <dt>
 
-*protation* \[ vorgenommen\]
+*pRotation* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
-Ein Zeiger auf die [**D3DXQUATERNION**](d3dxquaternion.md) Quaternion, die die Drehung des Animations Satzes beschreibt.
+Zeiger auf die [**D3DXQUATERNION-Quaternion,**](d3dxquaternion.md) die die Drehung des Animationssatzes beschreibt.
 
 </dd> <dt>
 
-*ptranslation* \[ vorgenommen\]
+*pTranslation* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-Ein Zeiger auf den [**D3DXVECTOR3**](d3dxvector3.md) -Vektor, der die Übersetzung des Animations Satzes beschreibt.
+Zeiger auf den [**D3DXVECTOR3-Vektor,**](d3dxvector3.md) der die Übersetzung des Animationssatzes beschreibt.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Ein Zeiger auf den [**D3DXVECTOR3**](d3dxvector3.md) -Vektor, der die Übersetzu
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die-Methode, um D3D OK zurückzugeben \_ . Andernfalls programmieren Sie die-Methode, um eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR**](./d3dxerr.md)zurückzugeben.
+Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die -Methode, um D3D \_ OK zurückzugeben. Programmieren Sie andernfalls die -Methode, um eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR**](./d3dxerr.md)zurückzugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,8 +101,8 @@ Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer imple
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

@@ -1,30 +1,30 @@
 ---
-title: Imsrdpclient SecuredSettings2 (Eigenschaft)
-description: Ruft einen Zeiger auf die imsrdpclientsecuredsettings-Schnittstelle ab. Diese Schnittstelle kann verwendet werden, um gesicherte Einstellungen für das Client Steuerelement festzulegen.
+title: IMsRdpClient SecuredSettings2 (Eigenschaft)
+description: Ruft einen Zeiger auf die IMsRdpClientSecuredSettings-Schnittstelle ab. Diese Schnittstelle kann verwendet werden, um gesicherte Einstellungen für das Clientsteuer steuerelement zu festlegen.
 ms.assetid: f570a3f6-70ae-45fd-ba20-75c9f4d2f5ca
 ms.tgt_platform: multiple
 keywords:
-- SecuredSettings2-Eigenschaft Remotedesktopdienste
-- SecuredSettings2-Eigenschaft Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient-Schnittstelle Remotedesktopdienste, SecuredSettings2-Eigenschaft
-- SecuredSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2-Schnittstelle Remotedesktopdienste, SecuredSettings2-Eigenschaft
-- SecuredSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3-Schnittstelle Remotedesktopdienste, SecuredSettings2-Eigenschaft
-- SecuredSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4-Schnittstelle Remotedesktopdienste, SecuredSettings2-Eigenschaft
-- SecuredSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5-Schnittstelle Remotedesktopdienste, SecuredSettings2-Eigenschaft
-- SecuredSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6-Schnittstelle Remotedesktopdienste, SecuredSettings2-Eigenschaft
-- SecuredSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, SecuredSettings2-Eigenschaft
-- SecuredSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, SecuredSettings2-Eigenschaft
-- SecuredSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, SecuredSettings2-Eigenschaft
-- SecuredSettings2-Eigenschaften Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10-Schnittstelle Remotedesktopdienste, SecuredSettings2-Eigenschaft
+- SecuredSettings2-Remotedesktopdienste
+- SecuredSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , SecuredSettings2-Eigenschaft
+- SecuredSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste , SecuredSettings2-Eigenschaft
+- SecuredSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , SecuredSettings2-Eigenschaft
+- SecuredSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , SecuredSettings2-Eigenschaft
+- SecuredSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , SecuredSettings2-Eigenschaft
+- SecuredSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , SecuredSettings2-Eigenschaft
+- SecuredSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , SecuredSettings2-Eigenschaft
+- SecuredSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , SecuredSettings2-Eigenschaft
+- SecuredSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , SecuredSettings2-Eigenschaft
+- SecuredSettings2-Eigenschaft Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , SecuredSettings2-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 39e26d9d7a7b2ac776166c251e5a2ab9923297f0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ea0dff321eed8da198cafeb2fd58cf37661f100b08fbc52ac7c90be9c2575c7a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119771780"
 ---
-# <a name="imsrdpclientsecuredsettings2-property"></a>Imsrdpclient:: SecuredSettings2-Eigenschaft
+# <a name="imsrdpclientsecuredsettings2-property"></a>IMsRdpClient::SecuredSettings2 (Eigenschaft)
 
-Ruft einen Zeiger auf die [**imsrdpclientsecuredsettings**](imsrdpclientsecuredsettings-interface.md) -Schnittstelle ab. Diese Schnittstelle kann verwendet werden, um gesicherte Einstellungen für das Client Steuerelement festzulegen.
+Ruft einen Zeiger auf die [**IMsRdpClientSecuredSettings-Schnittstelle**](imsrdpclientsecuredsettings-interface.md) ab. Diese Schnittstelle kann verwendet werden, um gesicherte Einstellungen für das Clientsteuer steuerelement zu festlegen.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -80,15 +80,15 @@ HRESULT get_SecuredSettings2(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein [**imsrdpclientsecuredsettings**](imsrdpclientsecuredsettings-interface.md) -Schnittstellen Zeiger.
+Ein [**IMsRdpClientSecuredSettings-Schnittstellenzeiger.**](imsrdpclientsecuredsettings-interface.md)
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT** -Wert gibt an, dass der-Fehler aufgetreten ist.
+Wenn die Methode erfolgreich ist, **wird S \_ OK** zurückgegeben. Jeder andere **HRESULT-Wert** gibt an, dass der Aufruf fehlgeschlagen ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter der [**imsrdpclientsecuredsettings**](imsrdpclientsecuredsettings-interface.md) -Schnittstelle und unter [Bereitstellen von RDP-Client Sicherheit](providing-for-rdp-client-security.md).
+Weitere Informationen finden Sie unter [**IMsRdpClientSecuredSettings-Schnittstelle**](imsrdpclientsecuredsettings-interface.md) und [Bereitstellen für RDP-Clientsicherheit.](providing-for-rdp-client-security.md)
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -102,15 +102,15 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imsrdpclient ist als 92b4a539-7115-4b7c-a5a9-e5d9efc2780a definiert.<br/>        |
+| IID<br/>                      | IID \_ IMsRdpClient ist als 92b4a539-7115-4b7c-a5a9-e5d9efc2780a definiert.<br/>        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)
