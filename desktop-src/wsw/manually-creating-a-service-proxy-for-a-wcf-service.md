@@ -1,25 +1,25 @@
 ---
-title: Manuelles Erstellen eines Dienst Proxys für einen WCF-Dienst
-description: Die einfachste Möglichkeit zum Erstellen eines Client Dienst Proxys für einen Windows Communication Foundation (WCF)-Dienst befindet sich auf der Dienstmodell Ebene mit dem wsutil-Tool, wie im Thema Erstellen eines Clients beschrieben.
+title: Manuelles Erstellen eines Dienstproxys für einen WCF-Dienst
+description: Die einfachste Möglichkeit zum Erstellen eines Clientdienstproxys für einen WCF-Dienst (Windows Communication Foundation) ist die Dienstmodellebene mit dem WsUtil-Tool, wie im Thema Erstellen eines Clients beschrieben.
 ms.assetid: ef545090-382b-44bd-b7ab-f5a285b6e202
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e061fda95298986ee6336dee0662d80c89a0a5a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 33133ae48dee89e72871712d445453e237116f6f1fa08cf66a76381ea8d3d424
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337796"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119927250"
 ---
-# <a name="manually-creating-a-service-proxy-for-a-wcf-service"></a>Manuelles Erstellen eines Dienst Proxys für einen WCF-Dienst
+# <a name="manually-creating-a-service-proxy-for-a-wcf-service"></a>Manuelles Erstellen eines Dienstproxys für einen WCF-Dienst
 
-Die einfachste Möglichkeit zum Erstellen eines Client Dienst Proxys für einen Windows Communication Foundation (WCF)-Dienst befindet sich auf der [Dienstmodell](service-model-layer-overview.md) Ebene mit dem wsutil-Tool, wie im Thema [Erstellen eines Clients](creating-a-client.md) beschrieben. Falls erforderlich, können Sie einen Dienst Proxy jedoch auch manuell erstellen. Diese API enthält eine [**wscreateserviceproxy**](/windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxy) -Funktion zum Erstellen des Dienst Proxys sowie Strukturen, Enumerationen usw., um die Eigenschaften festzulegen, die für die Zusammenarbeit mit WCF erforderlich sind.
+Die einfachste Möglichkeit zum Erstellen eines Clientdienstproxys für einen WCF-Dienst (Windows Communication Foundation) ist die [Dienstmodellebene](service-model-layer-overview.md) mit dem WsUtil-Tool, wie im Thema [Erstellen eines Clients](creating-a-client.md) beschrieben. Bei Bedarf können Sie jedoch auch manuell einen Dienstproxy erstellen. Diese API enthält eine [**WsCreateServiceProxy-Funktion**](/windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxy) zum Erstellen des Dienstproxys sowie Strukturen, Enumerationen usw. zum Festlegen der Eigenschaften, die für die Interoperabilität mit WCF erforderlich sind.
 
-WCF bietet eine Reihe von Standard Bindungen, die jeweils auf ein bestimmtes Verwendungs Szenario abzielen. Die Bindung des Dienstanbieter, mit dem Sie eine Verbindung herstellen möchten, bestimmt wiederum, welche Channeleigenschaften Sie für Ihren Dienst Proxy für die Kommunikation mit dem Dienst anpassen müssen.
+WCF stellt eine Reihe von Standardbindungen bereit, die jeweils auf ein bestimmtes Verwendungsszenario ausgerichtet sind. Welche Bindung der Dienst verwendet, mit dem Sie eine Verbindung herstellen möchten, bestimmt wiederum, welche Kanaleigenschaften Sie anpassen müssen, damit Ihr Dienstproxy mit dem Dienst kommunizieren kann.
 
-## <a name="creating-a-service-proxy-for-wcfs-wshttpbinding"></a>Erstellen eines Dienst Proxys für die WSHttpBinding von WCF
+## <a name="creating-a-service-proxy-for-wcfs-wshttpbinding"></a>Erstellen eines Dienstproxys für WSHttpBinding von WCF
 
-WSHttpBinding ist für das Hauptszenario der Internet-Webdienste. Es verwendet die neuere SOAP-Version 1,2 und WS-Addressing Version 1,0 und ermöglicht eine Vielzahl von Sicherheitseinstellungen über die öffentlichen http-und HTTPS-Transporte. Wwsapi verfügt nicht über eine Entsprechung von "WSHttpBinding" (oder eine der WCF-Standard Bindungen), aber da die standardmäßige SOAP-Version, WS-Addressing Version und das Codierungsformat mit denen in wsHttpBinding übereinstimmen, ist das Erstellen eines Dienst Proxys für einen Dienst, der die WSHttpBinding verwendet, unkompliziert. Wenn Sie z. b. einen Dienst Proxy für die Kommunikation mit einem WSHttpBinding-Endpunkt ohne Sicherheit erstellen möchten, können Sie einfach Code wie den folgenden Code Ausschnitt verwenden (Variablen Deklaration und Heap-und Fehler Erstellung werden weggelassen). Beachten Sie, dass im Aufrufen der [**wscreateserviceproxy**](/windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxy) -Funktion keine Kanaleigenschaften oder Sicherheits Beschreibung angegeben ist.
+WSHttpBinding ist für das Hauptszenario für Internetwebdienste vorgesehen. Sie verwendet die neuere SOAP-Version 1.2 und WS-Addressing Version 1.0 und ermöglicht eine Vielzahl von Sicherheitseinstellungen über die öffentlichen HTTP- und HTTPS-Transporte. WWSAPI verfügt nicht über eine Entsprechung von WSHttpBinding (oder einer der WCF-Standardbindungen), aber da die SOAP-Standardversion, WS-Addressing Version und das Codierungsformat mit denen in WSHttpBinding übereinstimmen, ist das Erstellen eines Dienstproxys für einen Dienst, der WSHttpBinding verwendet, einfach. Wenn Sie beispielsweise einen Dienstproxy erstellen möchten, um ohne Sicherheit mit einem WSHttpBinding-Endpunkt zu kommunizieren, können Sie einfach Code wie den folgenden Codeausschnitt verwenden (Variablendeklaration und Heap- und Fehlererstellung werden weggelassen). Beachten Sie, dass im Aufruf der [**WsCreateServiceProxy-Funktion**](/windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxy) keine Kanaleigenschaften oder Sicherheitsbeschreibungen angegeben sind.
 
 
 ```C++
@@ -39,13 +39,13 @@ hr = WsCreateServiceProxy(
 
 
 
-Die-Funktion erstellt den Dienst Proxy und gibt einen Zeiger darauf im *Service Proxy* -Parameter (&Proxy im obigen Funktionsaufrufen) zurück.
+Die Funktion erstellt den Dienstproxy und gibt im *parameter serviceProxy* einen Zeiger darauf zurück (&Proxy im obigen Funktionsaufruf).
 
-## <a name="creating-a-service-proxy-for-wcfs-basichttpbinding"></a>Erstellen eines Dienst Proxys für die BasicHttpBinding von WCF
+## <a name="creating-a-service-proxy-for-wcfs-basichttpbinding"></a>Erstellen eines Dienstproxys für basicHttpBinding von WCF
 
-Wenn Sie einen Dienst Proxy für einen WCF-Dienst, der eine basicHttpBinding-Bindung verwendet, manuell erstellen, müssen Sie jedoch die SOAP-Version und WS-Addressing Eigenschaften des Kanals festlegen. Der Grund hierfür ist, dass wwsapi standardmäßig SOAP-Version 1,2 und WS-Addressing 1,0 verwendet. Die BasicHttpBinding von WCF hingegen verwendet SOAP-Version 1,1 und keine WS-Adressierung.
+Wenn Sie manuell einen Dienstproxy für einen WCF-Dienst erstellen, der eine BasicHttpBinding-Bindung verwendet, müssen Sie jedoch die SOAP-Version und WS-Addressing Eigenschaften des Kanals festlegen. Dies liegt daran, dass WWSAPI standardmäßig SOAP-Version 1.2 und WS-Addressing 1.0 verwendet. Die BasicHttpBinding von WCF verwendet dagegen SOAP-Version 1.1 und keine WS-Adressierung.
 
-Zum Festlegen der SOAP-Version und der WS-Addrssing Eigenschaften des Kanals deklarieren Sie ein Array von [**WS- \_ \_ channeleigenschaftenstrukturen**](/windows/desktop/api/WebServices/ns-webservices-ws_channel_property) , die die Channeleigenschaften und die zugehörigen Informationen enthalten sollen.
+Um die SOAP-Version und WS-Addrssing Eigenschaften des Kanals festzulegen, deklarieren Sie ein Array von [**WS \_ CHANNEL \_ PROPERTY-Strukturen,**](/windows/desktop/api/WebServices/ns-webservices-ws_channel_property) das die Kanaleigenschaften und zugehörigen Informationen enthalten soll.
 
 
 ```
@@ -71,7 +71,7 @@ channelPropertyCount++; // Increment property count
 
 
 
-Übergeben Sie dann das Array der Channeleigenschaften (channelproperties) und die Anzahl der Eigenschaften (channelpropertycount) an den [**wscreateserviceproxy**](/windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxy) (oder an [**wscreatechannel**](/windows/desktop/api/WebServices/nf-webservices-wscreatechannel) , wenn Sie auf der Kanal Ebene arbeiten).
+Übergeben Sie dann das Array der Kanaleigenschaften (channelProperties) und die Anzahl der Eigenschaften (channelPropertyCount) an [**WsCreateServiceProxy**](/windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxy) (oder [**WsCreateChannel,**](/windows/desktop/api/WebServices/nf-webservices-wscreatechannel) wenn Sie auf Kanalebene arbeiten).
 
 
 ```
@@ -91,15 +91,15 @@ hr = WsCreateServiceProxy(
 
 
 
-Das Array, das Sie zum Speichern der Eigenschaften deklariert haben, wird in **wscreateserviceproxy** kopiert. Daher können Sie den Speicher für das Eigenschafts Array sofort nach dem Aufrufen der Funktion freigeben. Wenn Sie den Arbeitsspeicher aus dem Stapel zuordnen (wie z. b. den obigen Code Ausschnitt), können Sie auch direkt nach dem-Befehl von der-Funktion zurückgeben.
+Das Array, das Sie zum Speichern der Eigenschaften deklariert haben, wird in **WsCreateServiceProxy** kopiert. Daher können Sie den Arbeitsspeicher für das Eigenschaftenarray sofort nach dem Aufruf der Funktion freigeben. Wenn Sie den Arbeitsspeicher aus dem Stapel zuordnen (wie im obigen Codeausschnitt), können Sie auch direkt nach dem Aufruf von der Funktion zurückgeben.
 
 ## <a name="other-bindings"></a>Andere Bindungen
 
-Außerdem bietet wwsapi Mechanismen zum Erstellen von Dienst Proxys für die Kommunikation mit WCF-Diensten mit anderen Bindungen, wie z. b. NetTcpBinding und WSFederationHttpBinding. Viele dieser Bindungen erfordern das Festlegen zusätzlicher Channeleigenschaften, z. b. Sicherheits Deskriptoren. Beispiele, die die Verwendung anderer Bindungen veranschaulichen, finden Sie im Abschnitt [Beispiele für Windows-Webdienste](windows-web-services-examples.md), insbesondere in den Beispielen für die [TCP-channelschicht](tcp-channel-layer-examples.md), Beispiele für die [http-Kanal Schicht](http-channel-layer-examples.md)und [Beispiele für Sicherheits Kanal Ebenen](security-channel-layer-examples.md) .
+Darüber hinaus bietet WWSAPI Mechanismen zum Erstellen von Dienstproxys für die Kommunikation mit WCF-Diensten mithilfe anderer Bindungen wie NetTcpBinding und WSFederationHttpBinding. Viele dieser Bindungen erfordern das Festlegen zusätzlicher Kanaleigenschaften, z. B. Sicherheitsbeschreibungen. Beispiele, die die Verwendung anderer Bindungen veranschaulichen, finden Sie im Abschnitt [beispiele für Windows Webdienste,](windows-web-services-examples.md)insbesondere die Unterabschnitte [TCP-Kanalebenenbeispiele,](tcp-channel-layer-examples.md) [BEISPIELE FÜR HTTP-Kanalebene](http-channel-layer-examples.md)und [Beispiele für Sicherheitskanalebenen.](security-channel-layer-examples.md)
 
- 
+ 
 
- 
+ 
 
 
 

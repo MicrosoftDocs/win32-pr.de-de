@@ -4,44 +4,44 @@ description: Insert-Methode
 ms.assetid: d58cfe50-ace7-4b0f-8539-c2e13a180c96
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74eb6d76c1be9b83b7742255ee5a771ed93c64d8
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: d94b63da0477ee048239afa34ff57475dcce8f0d1129f4574d6b7b6543d75e49
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106338058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114630"
 ---
 # <a name="insert-method"></a>Insert-Methode
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Fügt ein **Befehls** Objekt in die **Commands** -Auflistung ein.
+Fügt ein **Command-Objekt** in die **Commands-Auflistung** ein.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen ("*** Merkmal-ID * * *"). Commands. Insert* *  *Name*, *ref Name*, *before*\_
+*agent***. Zeichen ("**_CharacterID_*_"). Commands.Insert_ *  *Name*, *RefName*, *Before*\_
 
-*Beschriftung*, *Stimme, aktiviert, sichtbar*
+*Caption,* *Voice, Enabled, Visible*
 
 
 
 | Teil      | BESCHREIBUNG                                                                                                                                                                                                                                                                                          |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Name*    | Erforderlich. Ein Zeichen folgen Wert, der der ID entspricht, die Sie dem [**Befehl**](/windows/desktop/lwef/the-command-object)zuweisen.                                                                                                                                                                                               |
-| *RefName* | Erforderlich. Ein Zeichen folgen Wert, der dem Namen (ID) des Befehls direkt oberhalb oder unterhalb des Befehls entspricht, an dem der neue Befehl eingefügt werden soll.                                                                                                                                                                 |
-| *Vorher*  | Dies ist optional. Ein boolescher Wert, der angibt, ob der neue Befehl vor dem Befehl eingefügt werden soll, der von *refname* angegeben wird. **True** (Standard). Der neue Befehl wird vor dem Befehl eingefügt, auf den verwiesen wird.<br/> **False** Der neue Befehl wird nach dem Befehl eingefügt, auf den verwiesen wird.<br/> |
-| *Caption* | Dies ist optional. Ein Zeichen folgen Wert, der dem Namen entspricht, der im Popupmenü des Zeichens und im Befehlsfenster angezeigt wird, wenn die Client Anwendung aktiv ist. Weitere Informationen finden Sie in der [**Beschriftung**](caption-property.md)-Eigenschaft des [**Befehls**](/windows/desktop/lwef/the-command-object) Objekts.    |
-| *Voice*   | Dies ist optional. Ein Zeichen folgen Wert, der den Wörtern oder Ausdrücken entspricht, die von der Sprach-Engine zum erkennen dieses Befehls verwendet werden sollen. Weitere Informationen zum Formatieren von Alternativen für die Zeichenfolge finden Sie in der **Voice** -Eigenschaft des [**Befehls**](/windows/desktop/lwef/the-command-object) Objekts.                                  |
-| *Aktiviert* | Dies ist optional. Ein boolescher Wert, der angibt, ob der Befehl aktiviert ist. Der Standardwert ist **True**. Weitere Informationen finden Sie unter der **aktivierten** Eigenschaft des [**Befehls**](/windows/desktop/lwef/the-command-object) Objekts.                                                                                                  |
-| *Visible* | Dies ist optional. Ein boolescher Wert, der angibt, ob der Befehl im Befehlsfenster sichtbar ist, wenn die Client Anwendung aktiv ist. Der Standardwert ist **True**. Weitere Informationen finden Sie in der [**Visible**](visible-property.md) -Eigenschaft des [**Befehls**](/windows/desktop/lwef/the-command-object) Objekts.       |
+| *Name*    | Erforderlich. Ein Zeichenfolgenwert, der der ID entspricht, die Sie dem [**Befehl**](/windows/desktop/lwef/the-command-object)zuweisen.                                                                                                                                                                                               |
+| *Refname* | Erforderlich. Ein Zeichenfolgenwert, der dem Namen (ID) des Befehls direkt oberhalb oder unterhalb des Befehls entspricht, in den Sie den neuen Befehl einfügen möchten.                                                                                                                                                                 |
+| *Vorher*  | Optional. Ein boolescher Wert, der angibt, ob der neue Befehl vor dem von RefName angegebenen Befehl eingefügt werden *soll.* **True** (Standard). Der neue Befehl wird vor dem Befehl eingefügt, auf den verwiesen wird.<br/> **False** Der neue Befehl wird nach dem Befehl eingefügt, auf den verwiesen wird.<br/> |
+| *Caption* | Optional. Ein Zeichenfolgenwert, der dem Namen entspricht, der im Popupmenü des Zeichens und im Befehlsfenster angezeigt wird, wenn die Clientanwendung eingabeaktiv ist. Weitere Informationen finden Sie in der [**Caption-Eigenschaft**](caption-property.md)des [**Command-Objekts.**](/windows/desktop/lwef/the-command-object)    |
+| *Voice*   | Optional. Ein Zeichenfolgenwert, der den Wörtern oder Ausdrücken entspricht, die von der Sprach-Engine zum Erkennen dieses Befehls verwendet werden sollen. Weitere Informationen zum Formatieren von Alternativen für die Zeichenfolge finden Sie in der **Voice-Eigenschaft** des [**Command-Objekts.**](/windows/desktop/lwef/the-command-object)                                  |
+| *Aktiviert* | Optional. Ein boolescher Wert, der angibt, ob der Befehl aktiviert ist. Der Standardwert ist **True**. Weitere Informationen finden Sie in der **Enabled-Eigenschaft** des [**Command-Objekts.**](/windows/desktop/lwef/the-command-object)                                                                                                  |
+| *Visible* | Optional. Ein boolescher Wert, der angibt, ob der Befehl im Befehlsfenster sichtbar ist, wenn die Clientanwendung eingabeaktiv ist. Der Standardwert ist **True**. Weitere Informationen finden Sie in der [**Visible-Eigenschaft**](visible-property.md) des [**Command-Objekts.**](/windows/desktop/lwef/the-command-object)       |
 
 
 
@@ -49,11 +49,11 @@ Fügt ein **Befehls** Objekt in die **Commands** -Auflistung ein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft " [**Name**](name-property.md) " eines [**Befehls**](/windows/desktop/lwef/the-command-object) Objekts muss [**innerhalb der Befehls**](/windows/desktop/lwef/the-commands-collection-object) Auflistung eindeutig sein. Sie müssen einen **Befehl** entfernen, bevor Sie einen neuen **Befehl** mit der gleichen **namens** Eigenschafts Einstellung erstellen können. Wenn Sie versuchen, einen **Befehl** mit einer bereits vorhandenen **Name** -Eigenschaft zu erstellen, wird ein Fehler ausgelöst.
+Der Wert der [**Name-Eigenschaft**](name-property.md) eines [**Command-Objekts**](/windows/desktop/lwef/the-command-object) muss innerhalb seiner [**Commands-Auflistung**](/windows/desktop/lwef/the-commands-collection-object) eindeutig sein. Sie müssen einen **Befehl** entfernen, bevor Sie einen neuen **Befehl** mit der gleichen Einstellung für die **Name-Eigenschaft** erstellen können. Der Versuch, einen **Befehl** mit einer bereits vorhandenen **Name-Eigenschaft** zu erstellen, löst einen Fehler aus.
 
-Diese Methode gibt auch ein [**Command**](/windows/desktop/lwef/the-command-object) -Objekt zurück. Dies ermöglicht es Ihnen, ein Objekt zu deklarieren und ihm einen **Befehl** zuzuweisen, wenn Sie die **Insert** -Methode aufzurufen.
+Diese Methode gibt auch ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) zurück. Dadurch können Sie ein Objekt deklarieren und ihm einen **Befehl** zuweisen, wenn Sie die **Insert-Methode** aufrufen.
 
 
 ```
@@ -66,7 +66,7 @@ Diese Methode gibt auch ein [**Command**](/windows/desktop/lwef/the-command-obje
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Add-Methode**](add-method.md), [**Remove**](remove-method.md)-Methode, [**RemoveAll-Methode**](removeall-method.md)
+[**Methode hinzufügen,**](add-method.md) [**Methode entfernen,**](remove-method.md) [**RemoveAll-Methode**](removeall-method.md)
 
 
  

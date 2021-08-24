@@ -1,9 +1,9 @@
 ---
-title: glgetcolortableparameterivext-Funktion (GL. h)
-description: Die Funktionen "glgetcolortableparameterfvext" und "glgetcolortableparameterivext" erhalten palettenparameter aus Farbtabellen. | glgetcolortableparameterivext-Funktion (GL. h)
+title: glGetColorTableParameterivEXT-Funktion (Gl.h)
+description: Die Funktionen glGetColorTableParameterfvEXT und glGetColorTableParameterivEXT erhalten Palettenparameter aus Farbtabellen. | glGetColorTableParameterivEXT-Funktion (Gl.h)
 ms.assetid: 39a0b346-d103-4426-8536-95e7e1548f7a
 keywords:
-- glgetcolortableparameterivext-Funktion OpenGL
+- glGetColorTableParameterivEXT-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 897dd11781968838bb8c26a716e3857acc119e9c
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: bc45217d420aab9c5db3b1ceb416c369b5fb948df2911ea20e6e174eeed0649f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106351897"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119742032"
 ---
-# <a name="glgetcolortableparameterivext-function"></a>glgetcolortableparameterivext-Funktion
+# <a name="glgetcolortableparameterivext-function"></a>glGetColorTableParameterivEXT-Funktion
 
-Die Funktionen " [**glgetcolortableparameterfvext**](glgetcolortableparameterfvext.md) " und " **glgetcolortableparameterivext** " erhalten palettenparameter aus Farbtabellen.
+Die Funktionen [**glGetColorTableParameterfvEXT**](glgetcolortableparameterfvext.md) und **glGetColorTableParameterivEXT** erhalten Palettenparameter aus Farbtabellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,27 +45,27 @@ void WINAPI glGetColorTableParameterivEXT(
 *Ziel* 
 </dt> <dd>
 
-Die Ziel Textur der Palette, für die Sie Parameterdaten benötigen. Muss Textur \_ 1D, Textur \_ 2D, Proxy \_ Textur \_ 1D oder Proxy \_ Textur \_ 2D sein.
+Die Zieltextur der Palette, für die Parameterdaten verwendet werden sollen. Muss TEXTURE \_ 1D, TEXTURE \_ 2D, PROXY \_ TEXTURE \_ 1D oder PROXY \_ TEXTURE \_ 2D sein.
 
 </dd> <dt>
 
-*pName* 
+*pname* 
 </dt> <dd>
 
-Eine symbolische Konstante für den Typ der palettenparameterdaten, auf die von *para* Metern verwiesen wird.
+Eine symbolische Konstante für den Typ der Palettenparameterdaten, auf die *params* zeigt.
 
-Im folgenden finden Sie die akzeptierten symbolischen Konstanten und ihre Bedeutung.
+Im Folgenden sind die akzeptierten symbolischen Konstanten und ihre Bedeutungen.
 
 
 
 | Wert                                                                                                                                                                                                             | Bedeutung                                                                                                                                     |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_COLOR_TABLE_FORMAT_EXT"></span><span id="gl_color_table_format_ext"></span><dl> <dt>**GL- \_ Farb \_ Tabellen Format ( \_ \_ ext)**</dt> </dl>              | Gibt das interne Format zurück, das durch den letzten Aufrufe von [**glcolortableext**](glcolortableext.md) oder den Standardwert angegeben wird.<br/> |
-| <span id="GL_COLOR_TABLE_WIDTH_EXT"></span><span id="gl_color_table_width_ext"></span><dl> <dt>**GL- \_ Farb \_ Tabellenbreite ( \_ \_ ext)**</dt> </dl>                 | Gibt die Breite der aktuellen Palette zurück.<br/>                                                                                         |
-| <span id="GL_COLOR_TABLE_RED_SIZE_EXT"></span><span id="gl_color_table_red_size_ext"></span><dl> <dt>**GL \_ Color \_ Table \_ Red \_ size \_ ext**</dt> </dl>       | Gibt die tatsächliche Größe zurück, die intern verwendet wird, um die rote Komponente der Palettendaten zu speichern.<br/>                                           |
-| <span id="GL_COLOR_TABLE_GREEN_SIZE_EXT"></span><span id="gl_color_table_green_size_ext"></span><dl> <dt>**GL \_ Color \_ Table \_ Green \_ size \_ ext**</dt> </dl> | Gibt die tatsächliche Größe zurück, die zum Speichern der grünen Komponente der Palettendaten intern verwendet wird.<br/>                                         |
-| <span id="GL_COLOR_TABLE_BLUE_SIZE_EXT"></span><span id="gl_color_table_blue_size_ext"></span><dl> <dt>**GL \_ Color \_ Table \_ Blue \_ size \_ ext**</dt> </dl>    | Gibt die tatsächliche Größe zurück, die intern verwendet wird, um die blaue Komponente der Palettendaten zu speichern.<br/>                                          |
-| <span id="GL_COLOR_TABLE_ALPHA_SIZE_EXT"></span><span id="gl_color_table_alpha_size_ext"></span><dl> <dt>**GL \_ Color \_ Table \_ alpha \_ size \_ ext**</dt> </dl> | Gibt die tatsächliche Größe zurück, die zum Speichern der Alpha Komponente der Palettendaten intern verwendet wird.<br/>                                         |
+| <span id="GL_COLOR_TABLE_FORMAT_EXT"></span><span id="gl_color_table_format_ext"></span><dl> <dt>**GL \_ COLOR \_ TABLE \_ FORMAT \_ EXT**</dt> </dl>              | Gibt das interne Format zurück, das durch den letzten Aufruf von [**glColorTableEXT**](glcolortableext.md) oder den Standardwert angegeben wird.<br/> |
+| <span id="GL_COLOR_TABLE_WIDTH_EXT"></span><span id="gl_color_table_width_ext"></span><dl> <dt>**GL \_ COLOR \_ TABLE \_ WIDTH \_ EXT**</dt> </dl>                 | Gibt die Breite der aktuellen Palette zurück.<br/>                                                                                         |
+| <span id="GL_COLOR_TABLE_RED_SIZE_EXT"></span><span id="gl_color_table_red_size_ext"></span><dl> <dt>**GL \_ COLOR \_ TABLE \_ RED \_ SIZE \_ EXT**</dt> </dl>       | Gibt die tatsächliche Größe zurück, die intern zum Speichern der roten Komponente der Palettendaten verwendet wird.<br/>                                           |
+| <span id="GL_COLOR_TABLE_GREEN_SIZE_EXT"></span><span id="gl_color_table_green_size_ext"></span><dl> <dt>**GL \_ COLOR \_ TABLE \_ GREEN \_ SIZE \_ EXT**</dt> </dl> | Gibt die tatsächliche Größe zurück, die intern zum Speichern der grünen Komponente der Palettendaten verwendet wird.<br/>                                         |
+| <span id="GL_COLOR_TABLE_BLUE_SIZE_EXT"></span><span id="gl_color_table_blue_size_ext"></span><dl> <dt>**GL \_ COLOR \_ TABLE \_ BLUE \_ SIZE \_ EXT**</dt> </dl>    | Gibt die tatsächliche Größe zurück, die intern zum Speichern der blauen Komponente der Palettendaten verwendet wird.<br/>                                          |
+| <span id="GL_COLOR_TABLE_ALPHA_SIZE_EXT"></span><span id="gl_color_table_alpha_size_ext"></span><dl> <dt>**GL \_ COLOR \_ TABLE \_ ALPHA \_ SIZE \_ EXT**</dt> </dl> | Gibt die tatsächliche Größe zurück, die intern zum Speichern der Alphakomponente der Palettendaten verwendet wird.<br/>                                         |
 
 
 
@@ -76,7 +76,7 @@ Im folgenden finden Sie die akzeptierten symbolischen Konstanten und ihre Bedeut
 *params* 
 </dt> <dd>
 
-Verweist auf die farbtabellenparameterdaten, die durch den *PName* -Parameter angegeben werden.
+Zeigt auf die vom *pname-Parameter* angegebenen Farbtabellenparameterdaten.
 
 </dd> </dl>
 
@@ -84,13 +84,13 @@ Verweist auf die farbtabellenparameterdaten, die durch den *PName* -Parameter an
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die Funktionen " **glgetcolortableparameterivext** " und " [**glgetcolortableparameterfvext**](glgetcolortableparameterfvext.md) ", um bestimmte Parameterdaten aus Farbtabellen abzurufen, die mit " [**glcolortableext**](glcolortableext.md) " für gezielte Textur Paletten festgelegt sind. Außerdem können Sie diese Funktionen verwenden, um die Anzahl der Farb Tabelleneinträge zu bestimmen, die von **glgetcolortableext** zurückgegeben werden.
+Sie verwenden die Funktionen **glGetColorTableParameterivEXT** und [**glGetColorTableParameterfvEXT,**](glgetcolortableparameterfvext.md) um bestimmte Parameterdaten aus Farbtabellen abzurufen, die mit [**glColorTableEXT**](glcolortableext.md) für Zieltexturpaletten festgelegt wurden. Sie können diese Funktionen auch verwenden, um die Anzahl der Farbtabelleneinträge zu bestimmen, die **glGetColorTableEXT** zurückgibt.
 
-Wenn der *Ziel* Parameter GL- \_ Proxy \_ Textur \_ 1D oder GL \_ \_ -Proxy Textur \_ 2D ist, und die-Implementierung die für *Format* oder *Width* angegebenen Werte nicht unter  stützt, kann bei der Erstellung der angeforderten Farbtabelle ein Fehler auftreten. In diesem Fall ist die Farbtabelle leer, und alle abgerufenen Parameter haben den Wert 0 (null). Sie können bestimmen, ob OpenGL ein bestimmtes Farbtabellen Format und eine bestimmte Größe unterstützt, indem Sie **glcolortableext** mit einem Proxy Ziel aufrufen und dann **glgetcolortableparameterivext** oder [**glgetcolortableparameterfvext**](glgetcolortableparameterfvext.md) aufrufen, um zu bestimmen, ob der Width-Parameter mit dem von **glcolortableext** festgelegten width-Parameter übereinstimmt. Wenn die abgerufene Breite 0 (null) ist, ist die Farbtabellen Anforderung von **glcolortable** fehlgeschlagen. Wenn die abgerufene Breite nicht NULL ist, können Sie **glcolortable** mit dem echten Ziel mit Textur \_ 1D oder Textur \_ 2D zum Festlegen der Farbtabelle abrufen.
+Wenn der *Zielparameter* GL \_ PROXY TEXTURE \_ \_ 1D oder GL \_ PROXY TEXTURE 2D ist und die Implementierung die für \_ format oder \_ *width* angegebenen Werte nicht unterstützt, kann **glColorTableEXT** die angeforderte Farbtabelle nicht erstellen.  In diesem Fall ist die Farbtabelle leer, und alle abgerufenen Parameter sind 0 (null). Sie können bestimmen, ob OpenGL ein bestimmtes Farbtabellenformat und eine bestimmte Größe unterstützt, indem **Sie glColorTableEXT** mit einem Proxyziel aufrufen und dann **glGetColorTableParameterivEXT** oder [**glGetColorTableParameterfvEXT**](glgetcolortableparameterfvext.md) aufrufen, um zu bestimmen, ob der Width-Parameter mit dem von **glColorTableEXT** festgelegten übereinstimmt. Wenn die abgerufene Breite 0 (null) ist, ist die Farbtabellenanforderung von **glColorTable** fehlgeschlagen. Wenn die abgerufene Breite nicht 0 (null) ist, können Sie **glColorTable** mit dem echten Ziel mit TEXTURE \_ 1D oder TEXTURE \_ 2D aufrufen, um die Farbtabelle festzulegen.
 
-Die Funktionen " **glgetcolortableparameterivext** " und " [**glgetcolortableparameterfvext**](glgetcolortableparameterfvext.md) " sind Erweiterungsfunktionen, die nicht Teil der OpenGL-Standardbibliothek sind, aber Teil der Erweiterung "GL \_ Ext- \_ \_ Textur Erweiterung" sind. Um zu überprüfen, ob die Implementierung von OpenGL **glgetcolortableparameterivext** und **glgetcolortableparameterfvext** unterstützt, nennen Sie [**glgetstring**](glgetstring.md)**(** GL \_ Extensions **)**. Wenn Sie \_ die Struktur von GL Ext \_ -Struktur zurückgibt \_ , werden **glgetcolortableparameterivext** und **glgetcolortableparameterfvext** unterstützt. Rufen Sie zum Abrufen der Funktions Adresse einer Erweiterungs Funktion [**wglgetprocaddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)auf.
+Die Funktionen **glGetColorTableParameterivEXT** und [**glGetColorTableParameterfvEXT**](glgetcolortableparameterfvext.md) sind Erweiterungsfunktionen, die nicht Teil der OpenGL-Standardbibliothek sind, sondern Teil der GL \_ \_ EXT-Palettentexturerweiterung \_ sind. Um zu überprüfen, ob Ihre Implementierung von OpenGL **glGetColorTableParameterivEXT** und **glGetColorTableParameterfvEXT** unterstützt, rufen Sie [**glGetString**](glgetstring.md)**(** GL EXTENSIONS \_ )**auf.** Wenn eine GL \_ \_ EXT-Palettentextur zurückgegeben \_ wird, werden **glGetColorTableParameterivEXT** und **glGetColorTableParameterfvEXT** unterstützt. Rufen Sie [**wglGetProcAddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)auf, um die Funktionsadresse einer Erweiterungsfunktion abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,27 +100,27 @@ Die Funktionen " **glgetcolortableparameterivext** " und " [**glgetcolortablepar
 |-------------------------------------|---------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glcolorsubtableext**](glcolorsubtableext.md)
+[**glColorSubTableEXT**](glcolorsubtableext.md)
 </dt> <dt>
 
-[**glcolortableext**](glcolortableext.md)
+[**glColorTableEXT**](glcolortableext.md)
 </dt> <dt>
 
-[**glgetcolortableext**](glgetcolortableext.md)
+[**glGetColorTableEXT**](glgetcolortableext.md)
 </dt> <dt>
 
-[**glgetcolortableparameterfvext**](glgetcolortableparameterfvext.md)
+[**glGetColorTableParameterfvEXT**](glgetcolortableparameterfvext.md)
 </dt> <dt>
 
-[**wglgetprocaddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)
+[**wglGetProcAddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)
 </dt> </dl>
 
  

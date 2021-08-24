@@ -1,25 +1,25 @@
 ---
-description: Verwenden der Bump-Zuordnung (Direct3D 9)
+description: Verwenden der Bumpzuordnung (Direct3D 9)
 ms.assetid: ded07764-1a11-42df-9a16-e4c3a328fb23
-title: Verwenden der Bump-Zuordnung (Direct3D 9)
+title: Verwenden der Bumpzuordnung (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b4bc96f78ffb19dda04ff6b2bc3d0e46800b04b8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 195a99ffaa29d416aea93c5599f1fb461cd78a9961bd9c69f3f02ae3e8fe4719
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120025830"
 ---
-# <a name="using-bump-mapping-direct3d-9"></a>Verwenden der Bump-Zuordnung (Direct3D 9)
+# <a name="using-bump-mapping-direct3d-9"></a>Verwenden der Bumpzuordnung (Direct3D 9)
 
-## <a name="detecting-support-for-bump-mapping"></a>Unterstützung für die Zuordnung von Bump
+## <a name="detecting-support-for-bump-mapping"></a>Erkennen der Unterstützung für die Bumpzuordnung
 
-Ein Gerät kann eine Zuordnungs Zuordnung durchführen, wenn es entweder den D3DTOP \_ bumpenvmap-oder D3DTOP \_ bumpenvmapluminance-Textur Mischungs Vorgang unterstützt. Verwenden Sie [**IDirect3D9:: CheckDeviceFormat**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdeviceformat) mit D3DUSAGE \_ Query \_ legacybumpmap, um festzustellen, ob ein Format für die Bump-Zuordnung unterstützt wird.
+Ein Gerät kann eine Bumpzuordnung durchführen, wenn es entweder den Texturmischungsvorgang \_ D3DTOP BUMPENVMAP oder D3DTOP \_ BUMPENVMAPLUMINANCE unterstützt. Verwenden [**Sie IDirect3D9::CheckDeviceFormat**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdeviceformat) mit D3DUSAGE \_ QUERY LEGACYBUMPMAP, um zu überprüfen, ob ein Format für die Bumpzuordnung \_ unterstützt wird.
 
-Darüber hinaus sollten die Anwendungen die Gerätefunktionen überprüfen, um sicherzustellen, dass das Gerät eine geeignete Anzahl von Mischungs Stufen unterstützt (in der Regel mindestens drei) und mindestens ein "Bump-Mapping"-Pixel Format verfügbar macht.
+Darüber hinaus sollten Anwendungen die Gerätefunktionen überprüfen, um sicherzustellen, dass das Gerät eine geeignete Anzahl von Mischungsphasen unterstützt (in der Regel mindestens drei) und mindestens ein Pixelformat für die Bumpzuordnung verfügbar macht.
 
-Im folgenden Codebeispiel werden die Gerätefunktionen zum Erkennen der Unterstützung für die Bump-Zuordnung auf dem aktuellen Gerät mithilfe der angegebenen Kriterien überprüft.
+Im folgenden Codebeispiel werden die Gerätefunktionen überprüft, um die Unterstützung für die Bumpzuordnung auf dem aktuellen Gerät anhand der angegebenen Kriterien zu erkennen.
 
 
 ```
@@ -44,22 +44,22 @@ BOOL SupportsBumpMapping()
 
 
 
-## <a name="creating-a-bump-map-texture"></a>Erstellen einer Bump-Karten Textur
+## <a name="creating-a-bump-map-texture"></a>Erstellen einer BumpMap-Textur
 
-Sie erstellen eine Stoß Karten Textur wie jede andere Textur. Die Anwendung überprüft die Unterstützung für die Zuordnung von Bump und ruft ein gültiges Pixel Format ab, wie unter Erkennen der Unterstützung für die Bump-Zuordnung erläutert.
+Sie erstellen wie jede andere Textur eine Bump-Kartentextur. Ihre Anwendung überprüft die Unterstützung für die Bumpzuordnung und ruft ein gültiges Pixelformat ab, wie unter Detecting Support for Bump Mapping (Erkennen der Unterstützung für die Bumpzuordnung) erläutert.
 
-Nachdem die Oberfläche erstellt wurde, können Sie jedes Pixel mit den entsprechenden Delta Werten und der Leuchtkraft laden, wenn das Oberflächen Format eine Leuchtkraft enthält. Die Werte für die einzelnen Pixel Komponenten werden in [Bump Map-Pixel Formaten (Direct3D 9)](bump-map-pixel-formats.md)beschrieben.
+Nachdem die Oberfläche erstellt wurde, können Sie jedes Pixel mit den entsprechenden Deltawerten und Leuchtdichte laden, wenn das Oberflächenformat Leuchtdichte enthält. Die Werte für jede Pixelkomponente werden unter [Bump Map Pixel Formats (Direct3D 9) beschrieben.](bump-map-pixel-formats.md)
 
-## <a name="configuring-bump-mapping-parameters"></a>Konfigurieren von Parameter der Bump-Zuordnung
+## <a name="configuring-bump-mapping-parameters"></a>Konfigurieren von Parametern für die Bumpzuordnung
 
-Wenn Ihre Anwendung eine Bump Map erstellt und den Inhalt der einzelnen Pixel festgelegt hat, können Sie das Rendering vorbereiten, indem Sie die Parameter für die Bump-Zuordnung konfigurieren. Zu den Bump-Zuordnungs Parametern zählen das Festlegen der erforderlichen Texturen und ihrer Mischungs Vorgänge sowie die Transformations-und Leuchtkraft Steuerelemente für die Bump-Karte selbst.
+Wenn Ihre Anwendung eine Bumpmap erstellt und den Inhalt der einzelnen Pixel festgelegt hat, können Sie sich auf das Rendering vorbereiten, indem Sie Parameter für die Bumpzuordnung konfigurieren. Zu den Parametern für die Bumpzuordnung gehören das Festlegen der erforderlichen Texturen und deren Blendingvorgänge sowie die Transformations- und Leuchtdichtesteuerelemente für die Bumpmap selbst.
 
-1.  Legen Sie die Basis Textur Map bei Verwendung, Bump Map und Umgebungskarten Texturen in Textur Mischungs Stufen fest.
-2.  Legen Sie die Farb-und Alpha Mischungs Vorgänge für jede Textur Phase fest.
-3.  Legen Sie die Transformationsmatrix der Bump Map fest.
-4.  Legen Sie die Werte für die Glanz Skala und den Offset nach Bedarf fest.
+1.  Legen Sie bei Verwendung die Basistexturzuordnung fest, und legen Sie die Textur der Umgebungszuordnung in Texturmischungsphasen fest.
+2.  Legen Sie die Farb- und Alphablendingvorgänge für jede Texturphase fest.
+3.  Legen Sie die Transformationsmatrix für die Bumpzuordnung fest.
+4.  Legen Sie die Werte für Leuchtdichteskala und Offset nach Bedarf fest.
 
-Im folgenden Codebeispiel werden drei Texturen (die Basis Textur Zuordnung, die Bump Map und eine Glanz Umgebungs Zuordnung) zu den entsprechenden Textur Mischungs Stufen festgelegt.
+Im folgenden Codebeispiel werden drei Texturen (die Basistexturkarte, die Bumpmap und eine Specular Environment Map) auf die entsprechenden Texturmischungsphasen fest.
 
 
 ```
@@ -71,7 +71,7 @@ d3dDevice->SetTexture( 2, d3dEnvMap );
 
 
 
-Nachdem Sie die Texturen auf Ihre Mischungs Stufen festgelegt haben, bereitet das folgende Codebeispiel die Mischungs Vorgänge und Argumente für jede Stufe vor.
+Nach dem Festlegen der Texturen auf ihre Mischungsphasen bereitet das folgende Codebeispiel die Blendingvorgänge und Argumente für jede Phase vor.
 
 
 ```
@@ -101,7 +101,7 @@ d3dDevice->SetTextureStageState( 2, D3DTSS_COLORARG2, D3DTA_CURRENT );
 
 
 
-Wenn die Mischungs Vorgänge und-Argumente festgelegt sind, wird im folgenden Codebeispiel die 2 x 2-Bump-Zuordnungsmatrix auf die Identitätsmatrix festgelegt, indem die D3DTSS \_ BUMPENVMAPMAT00-und D3DTSS BUMPENVMAPMAT11-Member \_ von [**D3DTEXTURESTAGESTATETYPE**](./d3dtexturestagestatetype.md) auf 1,0 festgelegt werden Das Festlegen der Matrix auf die Identität bewirkt, dass das System die Delta Werte in der Bump Map unverändert verwendet, dies ist jedoch nicht zwingend erforderlich.
+Wenn die Blendingvorgänge und Argumente festgelegt werden, legt das folgende Codebeispiel die 2x2-Bumpzuordnungsmatrix auf die Identitätsmatrix fest, indem \_ D3DTSS BUMPENVMAPMAT00 und die D3DTSS \_ BUMPENVMAPMAT11-Member von [**D3DTEXTURESTAGESTATETYPE**](./d3dtexturestagestatetype.md) auf 1.0 festgelegt werden. Das Festlegen der Matrix auf die Identität bewirkt, dass das System die Deltawerte in der Bumpmap unverändert verwendet, aber dies ist keine Anforderung.
 
 
 ```
@@ -117,7 +117,7 @@ d3dDevice->SetTextureStageState( 1, D3DTSS_BUMPENVMAT11, F2DW(1.0f) );
 
 
 
-Wenn Sie den Vorgang für die Bump-Zuordnung so einrichten, dass Sie "Leuchtkraft (D3DTOP \_ bumpenvmapluminance)" enthält, müssen Sie die Leuchtkraft Steuerelemente festlegen. Die Beleuchtungs Steuerelemente konfigurieren, wie das System die Leuchtkraft berechnet, bevor Sie die Farbe aus der Textur in der nächsten Phase modulieren. Weitere Informationen finden Sie unter [Bump Mapping-Formeln (Direct3D 9)](bump-mapping-formulas.md).
+Wenn Sie den Vorgang für die Bumpzuordnung so festlegen, dass die Leuchtdichte (D3DTOP \_ BUMPENVMAPLUMINANCE) enthalten ist, müssen Sie die Ludominanzsteuerelemente festlegen. Die Leuchtdichtesteuerelemente konfigurieren, wie das System die Leuchtdichte berechnet, bevor die Farbe in der nächsten Phase aus der Textur moduliert wird. Weitere Informationen finden Sie unter [Formeln für die Bumpzuordnung (Direct3D 9).](bump-mapping-formulas.md)
 
 
 ```
@@ -134,9 +134,9 @@ d3dDevice->SetTextureStageState( 1, D3DTSS_BUMPENVLOFFSET, F2DW(0.0f) );
 
 
 
-Nachdem die Anwendung die Parameter für die Bump-Zuordnung konfiguriert hat, kann Sie wie gewohnt gerendert werden, und die gerenderten Polygone empfangen die Auswirkungen auf die
+Nachdem Ihre Anwendung Parameter für die Bumpzuordnung konfiguriert hat, kann sie wie gewohnt gerendert werden, und die gerenderten Polygone erhalten Auswirkungen auf die Bumpzuordnung.
 
-Beachten Sie, dass im vorangehenden Beispiel Parameter für die Glanz Umgebungs Zuordnung angezeigt werden. Beim Durchführen der diffuses Licht Zuordnung legen Anwendungen den Textur Mischungs Vorgang für die letzte Stufe auf D3DTOP \_ modulate fest. Weitere Informationen finden Sie unter [diffuses Light Maps (Direct3D 9)](diffuse-light-maps.md).
+Beachten Sie, dass das vorherige Beispiel Parameter zeigt, die für die Specular-Umgebungszuordnung festgelegt wurden. Beim Durchführen einer diffusen Lichtzuordnung legen Anwendungen den Texturmischungsvorgang für die letzte Stufe auf D3DTOP \_ MODULATE fest. Weitere Informationen finden Sie unter [Diffuse Light Karten (Direct3D 9)](diffuse-light-maps.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

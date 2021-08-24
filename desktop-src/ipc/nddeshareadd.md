@@ -24,7 +24,7 @@ ms.locfileid: "119602140"
 ---
 # <a name="nddeshareadd-function"></a>NDdeShareAdd-Funktion
 
-\[Netzwerk-DDE wird nicht mehr unterstützt. Nddeapi.dll ist auf Windows Vista vorhanden, aber alle Funktionsaufrufe geben NDDE \_ NICHT \_ IMPLEMENTIERT zurück.\]
+\[Netzwerk-DDE wird nicht mehr unterstützt. Nddeapi.dll ist auf Windows Vista vorhanden, aber alle Funktionsaufrufe geben NDDE \_ NOT \_ IMPLEMENTED zurück.\]
 
 Erstellt eine neue DDE-Freigabe und fügt sie dem DDE-Freigabedatenbank-Manager (DSDM) hinzu.
 
@@ -64,14 +64,14 @@ Die Informationsebene. Dieser Parameter muss 2 sein.
 *pSD* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**SECURITY \_ DESCRIPTOR-Struktur,**](/windows/desktop/api/winnt/ns-winnt-security_descriptor) die dieser Freigabe zugeordnet werden soll und für die bei nachfolgenden Initiierten dieser Freigabe Zugriffsüberprüfungen durchgeführt werden. Dieser Parameter kann **NULL** sein. In diesem Fall erstellt das DSDM einen Standardsicherheitsdeskriptor, der dem Besitzer "Vollsteuerung" und "Lesen und Verknüpfen" für alle Benutzer gewährt.
+Ein Zeiger auf eine [**SECURITY \_ DESCRIPTOR-Struktur,**](/windows/desktop/api/winnt/ns-winnt-security_descriptor) die dieser Freigabe zugeordnet werden soll und für die Zugriffsüberprüfungen bei nachfolgenden Initiierten dieser Freigabe ausgeführt werden. Dieser Parameter kann **NULL** sein. In diesem Fall erstellt das DSDM einen Standardsicherheitsdeskriptor, der dem Besitzer "Vollsteuerung" und "Lesen und Verknüpfen" für alle Benutzer gewährt.
 
 </dd> <dt>
 
 *lpBuffer* \[in\]
 </dt> <dd>
 
-Ein Zeiger auf die [**NDDESHAREINFO-Struktur,**](nddeshareinfo-str.md) die die ApplicationTopic-Liste definiert, die der zu erstellenden DDE-Freigabe zugeordnet ist, sowie andere Parameter. Dieser Parameter darf nicht **NULL sein.**
+Ein Zeiger auf die [**NDDESHAREINFO-Struktur,**](nddeshareinfo-str.md) die die ApplicationTopic-Liste definiert, die der erstellten DDE-Freigabe sowie anderen Parametern zugeordnet ist. Dieser Parameter darf nicht **NULL** sein.
 
 </dd> <dt>
 
@@ -84,13 +84,13 @@ Die Größe der *lpBuffer-Struktur* in Bytes. Dieser Parameter darf nicht 0 (nul
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert NDDE \_ NO \_ ERROR.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert NDDE \_ NO \_ ERROR.
 
 Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch Aufrufen von [**NDdeGetErrorString**](nddegeterrorstring.md)in eine Textfehlermeldung übersetzt werden kann.
 
 ## <a name="remarks"></a>Hinweise
 
-Bevor ein Client eine Verbindung mit der DDE-Freigabe herstellen kann, muss er [**mit NDdeSetTrustedShare als vertrauenswürdig eingestuft werden.**](nddesettrustedshare.md)
+Bevor ein Client eine Verbindung mit der DDE-Freigabe herstellen kann, muss er mit [**NDdeSetTrustedShare als vertrauenswürdig**](nddesettrustedshare.md)eingestuft werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,14 +107,14 @@ Bevor ein Client eine Verbindung mit der DDE-Freigabe herstellen kann, muss er [
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Übersicht dynamische Daten Exchange Netzwerksicherheit](network-dynamic-data-exchange.md)
+[Network dynamische Daten Exchange Overview (Übersicht über Netzwerk-dynamische Daten Exchange)](network-dynamic-data-exchange.md)
 </dt> <dt>
 
-[DDE-Netzwerkfunktionen](network-dde-functions.md)
+[Netzwerk-DDE-Funktionen](network-dde-functions.md)
 </dt> <dt>
 
 [**NDDESHAREINFO**](nddeshareinfo-str.md)

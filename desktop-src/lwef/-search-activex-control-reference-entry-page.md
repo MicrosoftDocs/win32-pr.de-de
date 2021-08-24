@@ -4,17 +4,17 @@ description: WDS 2.x ActiveX-Steuerelementschnittstellen
 ms.assetid: dec40a14-46eb-4370-adc8-c1d8aec7bfee
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bf3f0426325fac2be0e3c576485dff7bd6f389b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: bed6bb68024c549e5878d65fc05e9b7f155eb4b0839630b4adf09e027cc5440c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108087628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114990"
 ---
 # <a name="wds-2x-activex-control-interfaces"></a>WDS 2.x ActiveX-Steuerelementschnittstellen
 
 > [!NOTE]
-> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren [Versionen Windows Search.](../search/-search-3x-wds-overview.md)
+> Windows DesktopSuche 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search.](../search/-search-3x-wds-overview.md)
 
 
 [**IPropertyFilter**](-search-2x-ipropertyfilter.md)

@@ -1,6 +1,6 @@
 ---
-title: D3D12CalcSubresource-Funktion (D3dx12. h)
-description: Berechnet einen subresource-Index für eine Textur.
+title: D3D12CalcSubresource-Funktion (D3dx12.h)
+description: Berechnet einen Unterressourcenindex für eine Textur.
 ms.assetid: 5C63A315-E21E-498B-A832-6BA2D17FF9A7
 keywords:
 - D3D12CalcSubresource-Funktion
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e872d13ba5221ad50003d789b87f65fc64821dd0
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 08c704be7087d95d739685bc2823ec1c31a027b4406a3110986220927fdbbffa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371884"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751720"
 ---
 # <a name="d3d12calcsubresource-function"></a>D3D12CalcSubresource-Funktion
 
-Berechnet einen subresource-Index für eine Textur.
+Berechnet einen Unterressourcenindex für eine Textur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,46 +45,46 @@ UINT inline D3D12CalcSubresource(
 
 <dl> <dt>
 
-*Mipslice* 
+*MipSlice* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Der null basierte Index für die zu Adressier nende MipMap-Ebene. 0 gibt die erste, ausführlichste MipMap-Ebene an.
+Der nullbasierte Index für die zu adressierende Mipmapebene. 0 gibt die erste, ausführlichste Mipmapebene an.
 
 </dd> <dt>
 
-*Arrayslice* 
+*ArraySlice* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Der null basierte Index für die zu Adressier gende Array Ebene. Verwenden Sie immer 0 für volumenvolumes (3D).
+Der nullbasierte Index für die zu adressierende Arrayebene. Verwenden Sie immer 0 für Volumetexturen (3D).
 
 </dd> <dt>
 
-*Planeslice* 
+*PlaneSlice* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Der null basierte Index für die zu Adressier Ebene der Ebene.
+Der nullbasierte Index für die ebene Ebene, die adressiert werden soll.
 
 </dd> <dt>
 
 *MipLevels* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl von MipMap-Ebenen in der Ressource.
+Die Anzahl der Mipmapebenen in der Ressource.
 
 </dd> <dt>
 
 *ArraySize* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Die Anzahl der Elemente im Array.
 
@@ -92,15 +92,15 @@ Die Anzahl der Elemente im Array.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Der Index, der mipslice + (arrayslice- \* miplevels) gleicht.
+Der Index, der MipSlice + (ArraySlice \* MipLevels) entspricht.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Puffer ist eine unstrukturierte Ressource und wird daher als eine einzelne untergeordnete Quelle definiert. APIs, die Puffer akzeptieren, benötigen keinen unter Quell Index. Eine Textur auf der anderen Seite ist stark strukturiert. Jedes Textur Objekt kann abhängig von der Größe des Arrays und der Anzahl von MipMap-Ebenen eine oder mehrere unter Ressourcen enthalten.
+Ein Puffer ist eine unstrukturierte Ressource und daher so definiert, dass er eine einzelne Unterressource enthält. APIs, die Puffer verwenden, benötigen keinen Unterressourcenindex. Eine Textur ist dagegen stark strukturiert. Jedes Texturobjekt kann abhängig von der Größe des Arrays und der Anzahl der Mipmap-Ebenen eine oder mehrere Unterressourcen enthalten.
 
-Bei volumevolumes (3D) handelt es sich bei allen Slices für eine bestimmte MipMap-Ebene um einen einzelnen subresource-Index.
+Bei Volumetexturen (3D) sind alle Slices für eine bestimmte mipmap-Ebene ein einzelner Unterressourcenindex.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,8 +108,8 @@ Bei volumevolumes (3D) handelt es sich bei allen Slices für eine bestimmte MipM
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx12. h</dt> </dl>  |
-| Bibliothek<br/> | <dl> <dt>D3D12. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx12.h</dt> </dl>  |
+| Bibliothek<br/> | <dl> <dt>D3D12.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3D12.dll</dt> </dl> |
 
 

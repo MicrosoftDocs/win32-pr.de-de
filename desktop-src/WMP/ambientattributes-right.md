@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. Right
-description: Das Rechte Attribut gibt die rechte Koordinate des Steuer Elements an oder ruft diese ab.
+title: AmbientAttributes.right
+description: Das rechte Attribut gibt die rechte Koordinate des Steuerelements an oder ruft sie ab.
 ms.assetid: 32f6c9ff-9b2f-4e24-abbb-548a0601d3d7
 keywords:
-- Ambientattribute. Right Windows Media Player
+- AmbientAttributes.right Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 17a1df57e95072329eb3420189297e83821f1501
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2575286ebc912f3bde6489d43b411dd48b2faef640784bd64c52ab47c3950042
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371733"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902820"
 ---
-# <a name="ambientattributesright"></a>Ambientattribute. Right
+# <a name="ambientattributesright"></a>AmbientAttributes.right
 
-Das **Rechte** Attribut gibt die rechte Koordinate des Steuer Elements an oder ruft diese ab.
+Das **rechte** Attribut gibt die rechte Koordinate des Steuerelements an oder ruft sie ab.
 
 ``` syntax
         elementID.right
@@ -29,7 +29,7 @@ Das **Rechte** Attribut gibt die rechte Koordinate des Steuer Elements an oder r
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine Lese-/schreibzahl (**Long**), die den Abstand zwischen dem Steuerelement und dem rechten Rand der übergeordneten **Ansicht** oder **unter Ansicht** darstellt.  Das Verhalten für negative Werte oder, wenn [ambientattribute. Width](ambientattributes-width.md) nicht angegeben wird, ist nicht definiert.
+Dieses Attribut ist eine Lese-/Schreibnummer (**long**), die den Abstand zwischen dem Steuerelement und dem rechten Rand der übergeordneten **VIEW-** oder  **SUBVIEW-Ansicht** in Pixel darstellt. Das Verhalten für negative Werte oder , wenn [AmbientAttributes.width](ambientattributes-width.md) nicht angegeben ist, ist nicht definiert.
 
 ## <a name="requirements"></a>Anforderungen
 

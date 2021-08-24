@@ -1,19 +1,19 @@
 ---
-description: Wird nicht unterstützt. Wird intern von DirectX zum darstellen und Speichern eines progressiven Netzes verwendet. Diese Vorlage sollte nur mit D3DX-Funktionen verwendet werden, um. x-Dateien zu lesen und zu schreiben.
+description: Wird nicht unterstützt. Wird intern von DirectX verwendet, um ein progressives Gitternetz darzustellen und zu speichern. Diese Vorlage sollte nur mit D3DX-Funktionen zum Lesen und Schreiben von X-Dateien verwendet werden.
 ms.assetid: 32f431d0-1efc-4f0d-8c54-8746c56b4c57
-title: Pmattributerange
+title: PMAttributeRange
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1673ddca48721828ad4e184860fba27868b02af0
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 8d1c9d680d600a53c1eafacdc00683cded380d070ad403e9b8483a9354c71879
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120026150"
 ---
-# <a name="pmattributerange"></a>Pmattributerange
+# <a name="pmattributerange"></a>PMAttributeRange
 
-Wird nicht unterstützt. Wird intern von DirectX zum darstellen und Speichern eines progressiven Netzes verwendet. Diese Vorlage sollte nur mit D3DX-Funktionen verwendet werden, um. x-Dateien zu lesen und zu schreiben.
+Wird nicht unterstützt. Wird intern von DirectX verwendet, um ein progressives Gitternetz darzustellen und zu speichern. Diese Vorlage sollte nur mit D3DX-Funktionen zum Lesen und Schreiben von X-Dateien verwendet werden.
 
 ``` syntax
 template PMAttributeRange

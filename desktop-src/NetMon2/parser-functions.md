@@ -1,71 +1,71 @@
 ---
-description: Die folgenden Hilfsfunktionen werden von den-Parametern aufgerufen.
+description: Die folgenden Hilfsfunktionen werden von Parsern aufgerufen.
 ms.assetid: 4e9a9314-8d64-46c0-ad98-bdb9dc4c225a
-title: Parser-Funktionen
+title: Parserfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: db9a502778247a3daad5f11dd8d0e2a3312d586d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9d70c3ad44ad809a323af8acde732af3b142759d3686d78c496f47e92cb8e209
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128317"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119676840"
 ---
-# <a name="parser-functions"></a>Parser-Funktionen
+# <a name="parser-functions"></a>Parserfunktionen
 
-Die folgenden Hilfsfunktionen werden von den-Parametern aufgerufen.
+Die folgenden Hilfsfunktionen werden von Parsern aufgerufen.
 
 
 
-| Funktion                                                 | BESCHREIBUNG                                                                                                    |
+| Funktion                                                 | Beschreibung                                                                                                    |
 |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| ["Adresssstostring"](addresstostring.md)                   | Konvertiert eine Adresse in eine Zeichenfolge.                                                                               |
-| [Lookupbytesetstring](lookupbytesetstring.md)           | Ruft die Zeichenfolge ab, die dem angegebenen Wert einer gekennzeichneten Menge entspricht.                                    |
-| [Setccinstptr](setccinstptr.md)                         | Erfasst einen Kontext Instanz-Zeiger.                                                                           |
-| [Stringto Address](stringtoaddress.md)                   | Konvertiert eine Zeichenfolge in eine Adresse.                                                                               |
-| [Varlensmallinttodword](varlensmallinttodword.md)       | Konvertiert eine kleine Ganzzahl mit variabler Länge in ein **DWORD**-Zeichen.                                                      |
-| [Lookupdwordsetstring](lookupdwordsetstring.md)         | Ruft die Zeichenfolge ab, die dem angegebenen Wert einer gekennzeichneten Menge entspricht.                                    |
-| [Lookupwordsetstring](lookupwordsetstring.md)           | Ruft die Zeichenfolge ab, die dem angegebenen Wert aus einer gekennzeichneten Menge entspricht.                                      |
-| [Bergedorfer Leser](bergetheader.md)                         | Decodiert einen Auswahl Header.                                                                                       |
-| [Bergetinteger](bergetinteger.md)                       | Decodiert eine BER-codierte Ganzzahl.                                                                                 |
-| [Bergetstring](bergetstring.md)                         | Decodiert eine BER-codierte Zeichenfolge.                                                                                  |
-| [Ccheap-Zuweisung](ccheapalloc.md)                           | Belegt Speicher auf Erfassungs Basis.                                                                |
-| [Ccheapfree](ccheapfree.md)                             | Gibt den Arbeitsspeicher frei, der von der **ccheap-Zuordnungs** Funktion zugeordnet wurde.                                                 |
-| [Ccheaprezuweisung](ccheaprealloc.md)                       | Reserviert den von der **ccheapbelegc** -Funktion zugewiesenen Arbeitsspeicher neu.                                                  |
-| [Ccheapsize](ccheapsize.md)                             | Ruft die Größe des Arbeitsspeichers ab, der von der **ccheap-Zuordnungs** Funktion zugeordnet wurde.                                    |
-| [Getccinstptr](getccinstptr.md)                         | Ruft den Zeiger auf die Instanzdaten ab, die dem Aufzeichnungs Kontext hinzugefügt wurden.                                       |
-| ["Kreateprotocol"](createprotocol.md)                     | Informiert den Netzwerkmonitor-API, dass ein bestimmter Protokoll Parser vorhanden ist.                                        |
-| [Destroyprotocol](destroyprotocol.md)                   | Zerstört das Protokoll **, das von der Funktion "** -Funktion" erstellt wurde.                                              |
-| [Buildinipath](buildinipath.md)                         | Ruft einen voll qualifizierten Pfad zur-Initialisierungsdatei (INI-Datei) ab, die den von Ihnen eingegebenen Informationen entspricht.   |
-| ["Kreatehandofftable"](createhandofftable.md)             | Erstellt eine Übergabe Tabelle basierend auf Informationen in einer angegebenen ini-Datei.                                             |
-| [Destroyhandofftable](destroyhandofftable.md)           | Zerstört eine mit der Funktion "-Funktion" erstellte **handofftabelle** .                                     |
-| [Getprotocolfromtable](getprotocolfromtable.md)         | Ruft das Protokoll einer gegebenen Übergabe-Tabelle ab.                                                               |
-| [AddProperty](/previous-versions/bb251873(v=msdn.10))                           | Fügt der Eigenschaften Datenbank eine **PropertyInfo** -Struktur hinzu.                                                    |
-| [Attachpropertyinstance](attachpropertyinstance.md)     | Fügt eine Eigenschaften Instanz an einen Frame an.                                                                       |
-| [Attachpropertyinstanceex](attachpropertyinstanceex.md) | Fügt eine Eigenschaften Instanz an einen Frame an.                                                                       |
-| ["Kreatepropertydatabase"](createpropertydatabase.md)     | Erstellt eine Eigenschaften Datenbank, in der die Eigenschaften beschrieben werden, die der Parser zum Beschreiben der Daten verwendet.               |
-| [Destroypropertydatabase](destroypropertydatabase.md)   | Zerstört eine Eigenschaften Datenbank, die durch Aufrufe der Funktionen " **deatepropertydatabase** " und " **AddProperty** " erstellt wurde. |
-| [Findnextframe](findnextframe.md)                       | Sucht den nächsten Frame im aktuellen Aufzeichnungs Kontext, der mit einem angegebenen Filter übereinstimmt.                               |
-| [Findpreviousframe](findpreviousframe.md)               | Sucht den vorherigen Frame im aktuellen Aufzeichnungs Kontext, der mit einem angegebenen Filter übereinstimmt.                           |
-| [Formatpropertyinstance](formatpropertyinstance.md)     | Formatiert die Eigenschaften Instanz auf generische Weise.                                                             |
-| [Getframeumstaddress](getframedestaddress.md)           | Ruft die Zieladresse eines Frames ab.                                                                  |
-| [Getframesourceaddress](getframesourceaddress.md)       | Ruft die Quelladresse eines Frames ab.                                                                       |
-| [Getprotocolstartffset](getprotocolstartoffset.md)     | Ruft den Offset für ein bestimmtes Protokoll im Frame ab.                                                         |
-| [Parametertemporarylockframe](parsertemporarylockframe.md) | Sperrt einen Frame, wenn er in einen Parser Eintritt und entsperrt den Frame, wenn er beendet wird.                                     |
+| [AddressToString](addresstostring.md)                   | Konvertiert eine Adresse in eine Zeichenfolge.                                                                               |
+| [LookupByteSetString](lookupbytesetstring.md)           | Ruft die Zeichenfolge ab, die dem angegebenen Wert eines bezeichneten Sets entspricht.                                    |
+| [SetCCInstPtr](setccinstptr.md)                         | Erfasst einen Kontextinstanzzeiger.                                                                           |
+| [StringToAddress](stringtoaddress.md)                   | Konvertiert eine Zeichenfolge in eine Adresse.                                                                               |
+| [VarLenSmallIntToDword](varlensmallinttodword.md)       | Konvertiert eine kleine ganze Zahl variabler Länge in einen **DWORD-Wert.**                                                      |
+| [LookupDwordSetString](lookupdwordsetstring.md)         | Ruft die Zeichenfolge ab, die dem angegebenen Wert eines bezeichneten Sets entspricht.                                    |
+| [LookupWordSetString](lookupwordsetstring.md)           | Ruft die Zeichenfolge ab, die dem angegebenen Wert aus einem bezeichneten Satz entspricht.                                      |
+| [BERGetHeader](bergetheader.md)                         | Decodiert einen Auswahlheader.                                                                                       |
+| [BERGetInteger](bergetinteger.md)                       | Decodiert eine BER-codierte ganze Zahl.                                                                                 |
+| [BERGetString](bergetstring.md)                         | Decodiert eine BER-codierte Zeichenfolge.                                                                                  |
+| [CCHeapAlloc](ccheapalloc.md)                           | Ordnet Arbeitsspeicher auf Capture-by-Capture-Basis zu.                                                                |
+| [CCHeapFree](ccheapfree.md)                             | Gibt den von der **CCHeapAlloc-Funktion zugeordneten Arbeitsspeicher** frei.                                                 |
+| [CCHeapReAlloc](ccheaprealloc.md)                       | Reserviert den von der **CCHeapAlloc-Funktion zugewiesenen Arbeitsspeicher neu.**                                                  |
+| [CCHeapSize](ccheapsize.md)                             | Ruft die Größe des von der **CCHeapAlloc-Funktion zugeordneten Arbeitsspeichers** ab.                                    |
+| [GetCCInstPtr](getccinstptr.md)                         | Ruft den Zeiger auf die Instanzdaten ab, die dem Erfassungskontext hinzugefügt wurden.                                       |
+| [CreateProtocol](createprotocol.md)                     | Informiert die Netzwerkmonitor-API darüber, dass ein bestimmter Protokollparser vorhanden ist.                                        |
+| [DestroyProtocol](destroyprotocol.md)                   | Zerstört das von der **CreateProtocol-Funktion erstellte** Protokoll.                                              |
+| [BuildINIPath](buildinipath.md)                         | Ruft einen vollqualifizierten Pfad zur Initialisierungsdatei (INI) ab, der den von Ihnen eingeben Informationen entspricht.   |
+| [CreateHandoffTable](createhandofftable.md)             | Erstellt eine Übergabetabelle basierend auf Informationen in einer bestimmten INI-Datei.                                             |
+| [DestroyHandoffTable](destroyhandofftable.md)           | Zerstört eine mit der **CreateHandoffTable-Funktion erstellte Übergabetabelle.**                                     |
+| [GetProtocolFromTable](getprotocolfromtable.md)         | Ruft das Protokoll einer angegebenen Übergabetabelle ab.                                                               |
+| [Addproperty](/previous-versions/bb251873(v=msdn.10))                           | Fügt der Eigenschaftendatenbank eine **PROPERTYINFO-Struktur** hinzu.                                                    |
+| [AttachPropertyInstance](attachpropertyinstance.md)     | Angefügt eine Eigenschafteninstanz an einen Frame.                                                                       |
+| [AttachPropertyInstanceEx](attachpropertyinstanceex.md) | Angefügt eine Eigenschafteninstanz an einen Frame.                                                                       |
+| [CreatePropertyDatabase](createpropertydatabase.md)     | Erstellt eine Eigenschaftendatenbank, die Eigenschaften beschreibt, die der Parser zum Beschreiben seiner Daten verwendet.               |
+| [DestroyPropertyDatabase](destroypropertydatabase.md)   | Zerstört eine Eigenschaftendatenbank, die durch Aufrufe der **Funktionen CreatePropertyDatabase und** **AddProperty erstellt** wurde. |
+| [FindNextFrame](findnextframe.md)                       | Sucht den nächsten Frame im aktuellen Erfassungskontext, der einem bestimmten Filter entspricht.                               |
+| [FindPreviousFrame](findpreviousframe.md)               | Sucht den vorherigen Frame im aktuellen Erfassungskontext, der einem bestimmten Filter entspricht.                           |
+| [FormatPropertyInstance](formatpropertyinstance.md)     | Formatiert die Eigenschafteninstanz auf generische Weise.                                                             |
+| [GetFrameDestAddress](getframedestaddress.md)           | Ruft die Zieladresse eines Frames ab.                                                                  |
+| [GetFrameSourceAddress](getframesourceaddress.md)       | Ruft die Quelladresse eines Frames ab.                                                                       |
+| [GetProtocolStartOffset](getprotocolstartoffset.md)     | Ruft den Offset zu einem bestimmten Protokoll im Frame ab.                                                         |
+| [ParserTemporaryLockFrame](parsertemporarylockframe.md) | Sperrt einen Frame, wenn er in einen Parser eintritt, und entsperrt den Frame, wenn er beendet wird.                                     |
 
 
 
  
 
-Informationen zu Exportfunktionen (Hilfsfunktionen, die von Experten und Parser aufgerufen werden können), Strukturen und Enumerationen finden Sie in den folgenden Themen.
+Informationen zu Exportfunktionen (Hilfsfunktionen, die von Experten und Parsern aufgerufen werden können), Strukturen und Enumerationen finden Sie in den folgenden Themen.
 
 
 
 | Informationen über                                  | Finden Sie unter                                                                          |
 |--------------------------------------------------------|------------------------------------------------------------------------------|
-| Funktionen, mit denen der Export exportiert wird.                         | [Export Funktionen der Parser-DLL](parser-dll-export-functions.md)               |
+| Funktionen, die Parser exportieren.                         | [Parser-DLL-Exportfunktionen](parser-dll-export-functions.md)               |
 | Strukturen, die von Parserfunktionen verwendet werden.                  | [Parserstrukturen](parser-structures.md)                                   |
-| Allgemeine Hilfsfunktionen, die von Parser und Experten aufgerufen werden. | [Allgemeine Funktionen für Experten und Parser](expert-and-parser-common-functions.md) |
+| Allgemeine Hilfsfunktionen, die Parser und Experten aufrufen. | [Allgemeine Funktionen von Experten und Parsern](expert-and-parser-common-functions.md) |
 
 
 

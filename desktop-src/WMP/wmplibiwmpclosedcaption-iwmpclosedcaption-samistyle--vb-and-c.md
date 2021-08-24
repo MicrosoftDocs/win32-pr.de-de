@@ -1,11 +1,11 @@
 ---
-title: Iwmpclosedcaption samistyle (Eigenschaft)
-description: Die samistyle-Eigenschaft ruft den Untertitel Stil ab oder legt ihn fest.
+title: IWMPClosedCaption-SAMIStyle-Eigenschaft
+description: Die SAMIStyle-Eigenschaft ruft den Untertitelstil ab oder legt diese fest.
 ms.assetid: 0b1f92c6-b659-4ade-90c8-62a06e475f5c
 keywords:
-- Samistyle-Eigenschaften Fenster Media Player
-- Samistyle-Eigenschaft, Windows Media Player, iwmpclosedcaption-Schnittstelle
-- Iwmpclosedcaption-Schnittstelle, Windows Media Player, samistyle (Eigenschaft)
+- SAMIStyle-Windows Media Player
+- SAMIStyle-Eigenschaft Windows Media Player , IWMPClosedCaption-Schnittstelle
+- IWMPClosedCaption-Schnittstelle Windows Media Player , SAMIStyle-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9bd0b48fc1807d6ca1854651c7f222183a845be3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2cede8964636073c393cb34bfa1be22855467f4cb243834bd1e11a4ffc492665
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365650"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120031420"
 ---
-# <a name="iwmpclosedcaptionsamistyle-property"></a>Iwmpclosedcaption:: samistyle (Eigenschaft)
+# <a name="iwmpclosedcaptionsamistyle-property"></a>IWMPClosedCaption::SAMIStyle -Eigenschaft
 
-Die **samistyle** -Eigenschaft ruft den Untertitel Stil ab oder legt ihn fest.
+Die **SAMIStyle-Eigenschaft** ruft den Untertitelstil ab oder legt diese fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,11 +46,11 @@ Public Property SAMIStyle As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der **System. String** -Wert, der dem Namen entspricht, der im Stil Bezeichner einer Sami-Datei angegeben ist.
+Die **System.String-Datei,** bei der es sich um den im Stilbezeichner einer SAMI-Datei angegebenen Namen handelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Sami-Datei kann mehrere Format Definitionen enthalten. Sami-Stile werden zwischen den Tags und in der Sami <STYLE> - </STYLE> Datei definiert. Ein Stil wird mit einer Text Zeichenfolge mit vorangestelltem \# Zeichen definiert. Beispiel:
+Eine SAMI-Datei kann mehrere Formatformatdefinitionen enthalten. SAMI-Stile werden zwischen den Tags <STYLE> und </STYLE> in der SAMI-Datei definiert. Ein Stil wird mit einer Textzeichenfolge definiert, der ein Zeichen \# voran steht. Beispiel:
 
 
 ```
@@ -61,9 +61,9 @@ Eine Sami-Datei kann mehrere Format Definitionen enthalten. Sami-Stile werden zw
 
 
 
-Gibt einen Stil an, der eine bestimmte Schriftart erzeugt.
+Dies gibt einen Stil an, der eine bestimmte Schriftart erzeugt.
 
-Wenn kein Sami-Format angegeben ist, wird standardmäßig das erste Format verwendet, das in der Sami-Datei definiert ist.
+Wenn kein SAMI-Stil angegeben ist, wird standardmäßig der erste in der SAMI-Datei definierte Stil verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,7 +71,7 @@ Wenn kein Sami-Format angegeben ist, wird standardmäßig das erste Format verwe
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -84,10 +84,10 @@ Wenn kein Sami-Format angegeben ist, wird standardmäßig das erste Format verwe
 [**Hinzufügen von Untertiteln zu digitalen Medien**](adding-closed-captions-to-digital-media.md)
 </dt> <dt>
 
-[**Iwmpclosedcaption-Schnittstelle (VB und c#)**](iwmpclosedcaption--vb-and-c.md)
+[**IWMPClosedCaption-Schnittstelle (VB und C#)**](iwmpclosedcaption--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPClosedCaption2-Schnittstelle (VB und c#)**](iwmpclosedcaption2--vb-and-c.md)
+[**IWMPClosedCaption2-Schnittstelle (VB und C#)**](iwmpclosedcaption2--vb-and-c.md)
 </dt> </dl>
 
  

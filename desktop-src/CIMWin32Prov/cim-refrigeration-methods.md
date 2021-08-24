@@ -1,23 +1,23 @@
 ---
-description: Die CIM- \_ kühl Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die \_ CIM-Klasse 1 macht die folgenden Methoden verfügbar.
 ms.assetid: B8687944-E034-4C21-B469-4B0195C72B91
 ms.tgt_platform: multiple
-title: CIM_Refrigeration Methoden
+title: CIM_Refrigeration-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f0777bf0ed5963549d21e36058c338b54e4b6dc9
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: fccec7246c9252ce8c1a305f20a9315de09575b5138993bd8ea196be13f52911
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345422"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920750"
 ---
-# <a name="cim_refrigeration-methods"></a>CIM- \_ Kühlmethoden
+# <a name="cim_refrigeration-methods"></a>\_CIM-Methoden
 
-Die [**CIM- \_ kühl**](cim-refrigeration.md) Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**\_ CIM-Klasse 1**](cim-refrigeration.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

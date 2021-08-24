@@ -1,26 +1,26 @@
 ---
-title: ID-Attribut (schiefe) (VML)
-description: ID-Attribut (schiefe) (VML)
+title: ID-Attribut (Schiefe)(VML)
+description: ID-Attribut (Schiefe)(VML)
 ms.assetid: b418bf0b-341c-40e2-8077-e2746ccb3a06
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 30028ef114f7375f525e3317ea229a07e5628b65
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 49e502dfbf12d64dcc54110799ea456a34c14ef8e41e488ec145c4ba9de77490
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119905460"
 ---
-# <a name="id-attribute-skewvml"></a>ID-Attribut (schiefe) (VML)
+# <a name="id-attribute-skewvml"></a>ID-Attribut (Schiefe)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert einen Namen, der einen eindeutigen Bezeichner für eine schiefe bereitstellt. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert einen Namen, der einen eindeutigen Bezeichner für eine Schiefe bereitstellt. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
@@ -28,20 +28,20 @@ Definiert einen Namen, der einen eindeutigen Bezeichner für eine schiefe bereit
 
 **Tagsyntax**
 
-<o: *Element* -ID = " *Ausdruck* " >
+<o: *element* id=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . ID = "*Ausdruck*"
+*element* .id="*expression*"
 
-*Ausdruck* = *Element*. ID
+*expression* = *.id-Element*
 
 **Anmerkungen**
 
-Verwenden Sie **ID** , um auf eine bestimmte Schiefe zu verweisen. Nachdem Sie eine schiefe erstellt und ihr eine ID zugewiesen haben, können Sie den ID-Namen verwenden, wenn Sie die Schiefe bearbeiten möchten.
+Verwenden Sie **die ID,** um auf eine bestimmte Schiefe zu verweisen. Nachdem Sie eine Schiefe erstellt und eine ID erhalten haben, können Sie den ID-Namen verwenden, wenn Sie die Schiefe bearbeiten möchten.
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

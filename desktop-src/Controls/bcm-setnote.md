@@ -1,9 +1,9 @@
 ---
-title: BCM_SETNOTE Meldung (kommstrg. h)
-description: Legt den Text des Hinweises fest, der einer Befehls Link Schaltfläche zugeordnet ist. Sie können diese Nachricht explizit senden oder das Schaltflächen- \_ setnote-Makro verwenden.
+title: BCM_SETNOTE (Commctrl.h)
+description: Legt den Text der Notiz fest, die einer Befehlslinkschaltfläche zugeordnet ist. Sie können diese Nachricht explizit senden oder das Button \_ SetNote-Makro verwenden.
 ms.assetid: c167072a-8207-4744-ac66-247141d726ab
 keywords:
-- Windows-Steuerelemente für BCM_SETNOTE Meldung
+- BCM_SETNOTE von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f544a7fb9dd89346cc2aa9725d36122746a8f608
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 82f0f049c1ad8a9837695a1f5d7327883e1dabfb7dd077bd6efce78fa6a0a708
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119921550"
 ---
-# <a name="bcm_setnote-message"></a>BCM- \_ setnote-Meldung
+# <a name="bcm_setnote-message"></a>BCM \_ SETNOTE-Meldung
 
-Legt den Text des Hinweises fest, der einer Befehls Link Schaltfläche zugeordnet ist. Sie können diese Nachricht explizit senden oder das Schaltflächen- [**\_ setnote**](/windows/desktop/api/Commctrl/nf-commctrl-button_setnote) -Makro verwenden.
+Legt den Text der Notiz fest, die einer Befehlslinkschaltfläche zugeordnet ist. Sie können diese Nachricht explizit senden oder das [**Button \_ SetNote-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-button_setnote) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,19 +39,19 @@ Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine NULL terminierte **WCHAR** -Zeichenfolge, die den Hinweis enthält.
+Ein Zeiger auf eine auf NULL beendete **WCHAR-Zeichenfolge,** die die Notiz enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ab ComCtl32 dll, Version 6,01, können Befehls Link Schaltflächen einen Hinweis enthalten.
+Ab comctl32 DLL Version 6.01 können Befehlslinkschaltflächen eine Notiz enthalten.
 
-Die **BCM- \_ setnote** -Nachricht funktioniert nur mit den Schaltflächen Formaten " [**SB \_ CommandLink**](button-styles.md) " und " [**b" \_ defcommandlink**](button-styles.md) .
+Die **BCM \_ SETNOTE-Nachricht** funktioniert nur mit den [**Schaltflächenstilen BS \_ COMMANDLINK**](button-styles.md) und [**BS \_ DEFCOMMANDLINK.**](button-styles.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Die **BCM- \_ setnote** -Nachricht funktioniert nur mit den Schaltflächen Forma
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -69,13 +69,13 @@ Die **BCM- \_ setnote** -Nachricht funktioniert nur mit den Schaltflächen Forma
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [Schaltflächenstile](button-styles.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Schaltflächentypen](button-types-and-styles.md)

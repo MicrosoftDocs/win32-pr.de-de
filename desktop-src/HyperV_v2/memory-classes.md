@@ -1,32 +1,32 @@
 ---
-description: Die Speicher Klassen modellieren den Arbeitsspeicher für eine virtuelle Maschine.
+description: Die Speicherklassen modellieren den Arbeitsspeicher für einen virtuellen Computer.
 ms.assetid: 4AB58CC3-476E-4214-B0A3-32BF05160753
-title: Speicher Klassen
+title: Speicherklassen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6273734eb4fc0219f9221c5e299cca57283780dc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b70248cf8cd1e6627ae12a5e444d12c8ae684e194b4e2185f2983f6fdbb76274
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694300"
 ---
-# <a name="memory-classes"></a>Speicher Klassen
+# <a name="memory-classes"></a>Speicherklassen
 
-Die Speicher Klassen modellieren den Arbeitsspeicher für eine virtuelle Maschine.
+Die Speicherklassen modellieren den Arbeitsspeicher für einen virtuellen Computer.
 
-Im folgenden finden Sie WMI-Klassen, die mit dem Arbeitsspeicher verknüpft sind.
+Im Folgenden finden Sie Virtualisierungs-WMI-Klassen im Zusammenhang mit dem Arbeitsspeicher.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                      | BESCHREIBUNG                                                                                                         |
+| Thema                                                                                      | Beschreibung                                                                                                         |
 |--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| [**MSVM \_ Element Zuordnung**](msvm-elementallocatedfromnumanode.md)<br/> | Ordnet eine Instanz einer zugeordneten Ressource dem physischen NUMA-Knoten zu, von dem Sie zugeordnet wurde.<br/> |
-| [**MSVM- \_ Speicher**](msvm-memory.md)<br/>                                             | Stellt den Arbeitsspeicher dar, der einem virtuellen Computer zurzeit zugeordnet ist.<br/>                                          |
-| [**MSVM \_ memorysettingdata**](msvm-memorysettingdata.md)<br/>                       | Stellt den konfigurierten Zustand des Arbeitsspeichers für einen virtuellen Computer dar.<br/>                                     |
-| [**MSVM \_ numanode**](msvm-numanode.md)<br/>                                         | Stellt einen Non-Uniform Memory Access (NUMA)-Knoten eines virtuellen Systems dar.<br/>                                  |
+| [**\_Msvm-ElementAllocatedFromNumaNode**](msvm-elementallocatedfromnumanode.md)<br/> | Ordnet eine Instanz einer zugeordneten Ressource dem physischen NUMA-Knoten zu, von dem sie zugeordnet wurde.<br/> |
+| [**Msvm-Arbeitsspeicher \_**](msvm-memory.md)<br/>                                             | Stellt den Arbeitsspeicher dar, der derzeit einem virtuellen Computer zugeordnet ist.<br/>                                          |
+| [**Msvm \_ MemorySettingData**](msvm-memorysettingdata.md)<br/>                       | Stellt den konfigurierten Zustand des Arbeitsspeichers für einen virtuellen Computer dar.<br/>                                     |
+| [**Msvm \_ NumaNode**](msvm-numanode.md)<br/>                                         | Stellt einen NUMA-Knoten (Non-Uniform Memory Access) eines virtuellen Systems dar.<br/>                                  |
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentrollbackrequirements dexception-Konstruktor'
-title: Esentrollbackrequirements dexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentRollbackRequiredException-Konstruktor'
+title: EsentRollbackRequiredException-Konstruktor
 TOCTitle: 'EsentRollbackRequiredException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentRollbackRequiredException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentrollbackrequiredexception.esentrollbackrequiredexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 61176bea3e09e664ae669704a58e35a7a40400ae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6d4f66ef317219f3d2e8af022a3ee2be983097ad657f837f6114adac6c7d5cfe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120116990"
 ---
-# <a name="esentrollbackrequiredexception-constructor"></a>Esentrollbackrequirements dexception-Konstruktor
+# <a name="esentrollbackrequiredexception-constructor"></a>EsentRollbackRequiredException-Konstruktor
 
-Initialisiert eine neue Instanz der esentrollbackrequirements dexception-Klasse.
+Initialisiert eine neue Instanz der EsentRollbackRequiredException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentRollbackRequiredException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentrollbackrequirements dexception-Klasse](./esentrollbackrequiredexception-class.md)
+[EsentRollbackRequiredException-Klasse](./esentrollbackrequiredexception-class.md)
 
-[Esentrollbackrequirements dexception-Member](./esentrollbackrequiredexception-members.md)
+[EsentRollbackRequiredException-Member](./esentrollbackrequiredexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

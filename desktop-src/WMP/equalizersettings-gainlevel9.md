@@ -1,6 +1,6 @@
 ---
 title: EQUALIZERSETTINGS.gainLevel9
-description: Das gainLevel9-Attribut gibt die Verstärkungsebene von Band 9 an oder ruft sie ab.
+description: Das gainLevel9-Attribut gibt die Verstärkungsstufe von Band 9 an oder ruft sie ab.
 ms.assetid: 2bed7486-4d4c-4c71-8bab-8dd0c4f56911
 keywords:
 - EQUALIZERSETTINGS.gainLevel9 Windows Media Player
@@ -21,7 +21,7 @@ ms.locfileid: "119650721"
 ---
 # <a name="equalizersettingsgainlevel9"></a>EQUALIZERSETTINGS.gainLevel9
 
-Das **gainLevel9-Attribut** gibt die Verstärkungsebene von Band 9 an oder ruft sie ab.
+Das **gainLevel9-Attribut** gibt die Verstärkungsstufe von Band 9 an oder ruft sie ab.
 
 ``` syntax
         elementID.gainLevel9
@@ -29,13 +29,13 @@ Das **gainLevel9-Attribut** gibt die Verstärkungsebene von Band 9 an oder ruft 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine  Lese-/Schreibnummer **(float)** mit einem Wert, der normalerweise zwischen 20 und +20 liegt. Der Standardwert ist 0 (null).
+Dieses Attribut ist eine Lese-/Schreibnummer (**float**), deren Wert normalerweise zwischen 20 und +20 liegt.  Der Standardwert ist 0 (null).
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Attribut passt den Teil des Audiofrequenzspektrums an, der auf 8kHz zentriert ist.
+Dieses Attribut passt den Teil des Audiofrequenzspektrums an, der auf 8 kHz zentriert ist.
 
-Wenn dieses Attribut nicht angegeben ist, wird der vorherige Wert beibehalten.
+Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Wenn dieses Attribut nicht angegeben ist, wird der vorherige Wert beibehalten.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,25 +1,25 @@
 ---
-title: Synchronisierungs Punkte
-description: Wenn Eigenschaften Sätze für dasselbe Objekt wie IStorage unterstützt werden, ist es wichtig, die Synchronisierungs Punkte zwischen dem Basis Speicher und dem Eigenschaften Speicher zu beachten.
+title: Synchronisierungspunkte
+description: Wenn Eigenschaftensätze für dasselbe Objekt wie IStorage unterstützt werden, ist es wichtig, Synchronisierungspunkte zwischen dem Basisspeicher und dem Eigenschaftenspeicher zu beachten.
 ms.assetid: 34cc4338-b29f-43f9-946d-14b2b235ccec
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fa156efbb1573b2954c1f7da07a58ed663c71781
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cf924458d81003e2cc211ff810ebb714399ac28e91189586491b584cff6a3390
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103714567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034880"
 ---
-# <a name="synchronization-points"></a>Synchronisierungs Punkte
+# <a name="synchronization-points"></a>Synchronisierungspunkte
 
-Wenn Eigenschaften Sätze für dasselbe Objekt wie [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage)unterstützt werden, ist es wichtig, die Synchronisierungs Punkte zwischen dem Basis Speicher und dem Eigenschaften Speicher zu beachten.
+Wenn Eigenschaftensätze für dasselbe Objekt wie [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage)unterstützt werden, ist es wichtig, Synchronisierungspunkte zwischen dem Basisspeicher und dem Eigenschaftenspeicher zu beachten.
 
-Der Eigenschaften Satz Speicher speichert den Eigenschaften Satz-Stream in einem internen Puffer, bis für den Puffer ein Commit durch die [**IPropertyStorage:: Commit**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-commit) -Methode ausgeführt wird. Dies gilt unabhängig davon, ob [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) im transaktiven oder im direkten Modus geöffnet wurde.
+Der Eigenschaftensatzspeicher enthält den Eigenschaftensatzstream in einem internen Puffer, bis für diesen Puffer ein Commit über die [**IPropertyStorage::Commit-Methode**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-commit) ausgeführt wird. Dies gilt unabhängig davon, ob [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) im Transaktionsmodus oder im direkten Modus geöffnet wurde.
 
- 
+ 
 
- 
+ 
 
 
 

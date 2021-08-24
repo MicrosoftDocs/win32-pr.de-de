@@ -1,9 +1,9 @@
 ---
-title: CB_INITSTORAGE Meldung (Winuser. h)
-description: Eine Anwendung sendet die CB \_ InitStorage-Nachricht, bevor eine große Anzahl von Elementen zum Listenfeld Teil eines Kombinations Felds hinzugefügt wird. Diese Meldung weist Speicher zum Speichern von Listenfeld Elementen zu.
+title: CB_INITSTORAGE Meldung (Winuser.h)
+description: Eine Anwendung sendet die CB \_ INITSTORAGE-Nachricht, bevor dem Listenfeldteil eines Kombinationsfelds eine große Anzahl von Elementen hinzugefügt wird. Diese Meldung belegt Arbeitsspeicher zum Speichern von Listenfeldelementen.
 ms.assetid: fb289968-a95b-4ca0-977d-b8651166f357
 keywords:
-- Windows-Steuerelemente für CB_INITSTORAGE Meldung
+- CB_INITSTORAGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e78c2ae2592d89ba7a0f6392666dac0404d52e39
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1be1aeccdde2c81c87956a42e72440732ff9eb2732cbd066f51308816c01f64a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103627"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089090"
 ---
-# <a name="cb_initstorage-message"></a>CB- \_ InitStorage-Nachricht
+# <a name="cb_initstorage-message"></a>CB \_ INITSTORAGE-Meldung
 
-Eine Anwendung sendet die **CB \_ InitStorage** -Nachricht, bevor eine große Anzahl von Elementen zum Listenfeld Teil eines Kombinations Felds hinzugefügt wird. Diese Meldung weist Speicher zum Speichern von Listenfeld Elementen zu.
+Eine Anwendung sendet die **CB \_ INITSTORAGE-Nachricht,** bevor dem Listenfeldteil eines Kombinationsfelds eine große Anzahl von Elementen hinzugefügt wird. Diese Meldung belegt Arbeitsspeicher zum Speichern von Listenfeldelementen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,28 +32,28 @@ Eine Anwendung sendet die **CB \_ InitStorage** -Nachricht, bevor eine große An
 *wParam* 
 </dt> <dd>
 
-Die Anzahl der hinzu zufügenden Elemente.
+Die Anzahl der hinzuzufügende Elemente.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Die Menge an Arbeitsspeicher, die für Element Zeichenfolgen in Bytes belegt werden soll.
+Die Menge an Arbeitsspeicher, die für Elementzeichenfolgen in Bytes zugeordnet werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht erfolgreich ist, ist der Rückgabewert die Gesamtzahl der Elemente, für die Speicher reserviert wurde, d. h. die Gesamtanzahl der Elemente, die von allen erfolgreichen **CB- \_ InitStorage** -Nachrichten hinzugefügt wurden.
+Wenn die Nachricht erfolgreich ist, ist der Rückgabewert die Gesamtzahl der Elemente, für die Speicher vorab zugeordnet wurde, d. h. die Gesamtzahl der Elemente, die von allen erfolgreichen **CB \_ INITSTORAGE-Nachrichten** hinzugefügt wurden.
 
-Wenn die Meldung fehlschlägt, ist der Rückgabewert CB \_ errspace.
+Wenn die Nachricht fehlschlägt, lautet der Rückgabewert CB \_ ERRSPACE.
 
-Die Meldung weist Arbeitsspeicher zu und gibt die oben beschriebenen Erfolgs-und Fehler Werte zurück.
+Die Meldung belegt Arbeitsspeicher und gibt die oben beschriebenen Erfolgs- und Fehlerwerte zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CB \_ InitStorage** -Nachricht beschleunigt die Initialisierung von Kombinations Feldern, die über eine große Anzahl von Elementen (über 100) verfügen. Sie reserviert die angegebene Menge an Arbeitsspeicher, sodass nachfolgende [**CB \_ AddString**](cb-addstring.md)-, [**CB \_ InsertString**](cb-insertstring.md)-und [**CB- \_ dir**](cb-dir.md) -Nachrichten die kürzeste Zeit in Anspruch nehmen. Sie können Schätzwerte für den *wParam* -Parameter und den *LPARAM* -Parameter verwenden. Wenn Sie die Schätzung überschätzen, wird der zusätzliche Arbeitsspeicher zugeordnet. Wenn Sie dies unterschätzen, wird die normale Zuordnung für Elemente verwendet, die den angeforderten Betrag überschreiten.
+Die **CB \_ INITSTORAGE-Nachricht** beschleunigt die Initialisierung von Kombinationsfeldern mit einer großen Anzahl von Elementen (über 100). Sie reserviert die angegebene Arbeitsspeichermenge, sodass nachfolgende [**CB \_ ADDSTRING-,**](cb-addstring.md) [**CB \_ INSERTSTRING-**](cb-insertstring.md)und [**CB \_ DIR-Nachrichten**](cb-dir.md) so kurz wie möglich dauern. Sie können Schätzungen für die *Parameter wParam* und *lParam* verwenden. Wenn Sie dies überschätzen, wird der zusätzliche Arbeitsspeicher belegt. Wenn Sie dies dezimieren, wird die normale Zuordnung für Elemente verwendet, die die angeforderte Menge überschreiten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,9 +61,9 @@ Die **CB \_ InitStorage** -Nachricht beschleunigt die Initialisierung von Kombin
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -71,16 +71,16 @@ Die **CB \_ InitStorage** -Nachricht beschleunigt die Initialisierung von Kombin
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB \_ AddString**](cb-addstring.md)
+[**CB \_ ADDSTRING**](cb-addstring.md)
 </dt> <dt>
 
-[**CB- \_ dir**](cb-dir.md)
+[**CB \_ DIR**](cb-dir.md)
 </dt> <dt>
 
-[**CB \_ InsertString**](cb-insertstring.md)
+[**CB \_ INSERTSTRING**](cb-insertstring.md)
 </dt> </dl>
 
  

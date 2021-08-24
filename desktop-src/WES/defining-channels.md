@@ -1,27 +1,27 @@
 ---
 title: Definieren von Kanälen
-description: Ereignisse können in Ereignisprotokoll Kanäle, Ereignis Ablauf Verfolgungs Protokolldateien oder beides geschrieben werden. Ein Kanal ist im Grunde genommen eine Senke, die Ereignisse sammelt.
+description: Ereignisse können in Ereignisprotokollkanäle, Protokolldateien für die Ereignisablaufverfolgung oder beides geschrieben werden. Ein Kanal ist im Grunde eine Senke, die Ereignisse sammelt.
 ms.assetid: 3c2f39ee-fbc0-40ae-8279-566905250f47
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ab3c73697aa11e7b63ace0ece33be23ca7a1b883
-ms.sourcegitcommit: c2a1c4314550ea9bd202d28adfcc7bfe6180932f
+ms.openlocfilehash: 89c2f932616a131e478c100996fd0b76034b3cccdebf4e3714fd5b9b38ba9678
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "104101362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032480"
 ---
 # <a name="defining-channels"></a>Definieren von Kanälen
 
-Ereignisse können in Ereignisprotokoll Kanäle, Ereignis Ablauf Verfolgungs Protokolldateien oder beides geschrieben werden. Ein Kanal ist im Grunde genommen eine Senke, die Ereignisse sammelt. Wenn die Zielgruppe für Ihre Ereignisse Ereignisconsumer verwendet, z. b. die Windows-Ereignisanzeige, müssen Sie neue Kanäle definieren, um die Ereignisse zu erfassen oder einen von einem anderen Anbieter definierten vorhandenen Kanal zu importieren.
+Ereignisse können in Ereignisprotokollkanäle, Protokolldateien für die Ereignisablaufverfolgung oder beides geschrieben werden. Ein Kanal ist im Grunde eine Senke, die Ereignisse sammelt. Wenn die Zielgruppe für Ihre Ereignisse Ereignisverbraucher wie die Windows Ereignisanzeige verwendet, müssen Sie neue Kanäle definieren, um Ihre Ereignisse zu erfassen oder einen vorhandenen Kanal zu importieren, den ein anderer Anbieter definiert hat.
 
-Verwenden Sie das **Channel** -Element, um eigene Kanäle zu definieren. Verwenden Sie das **importchannel** -Element, um einen importierten Kanal zu definieren. Sie können bis zu acht Kanäle in einer beliebigen Kombination aus importierten Kanälen oder Kanälen angeben, die Sie definieren.
+Verwenden Sie das **Channelelement,** um ihre eigenen Kanäle zu definieren. Um einen importierten Kanal zu definieren, verwenden Sie das **importChannel-Element.** Sie können bis zu acht Kanäle in einer beliebigen Kombination aus importierten Kanälen oder Kanälen angeben, die Sie definieren.
 
-Der Kanal muss einen von vier Typen aufweisen: "admin", "Operational", "Analytic" und "Debug". Jeder Kanaltyp verfügt über eine beabsichtigte Zielgruppe, die den Typ der Ereignisse bestimmt, die Sie in den Kanal schreiben. Eine Beschreibung der einzelnen Typen finden Sie unter der komplexe [**channelType**](eventmanifestschema-channeltype-complextype.md) -Typ.
+Der Kanal muss einen von vier Typen aufweisen: Admin, Operational, Analytics und Debug. Jeder Kanaltyp verfügt über eine zielgruppe, die den Typ der Ereignisse bestimmt, die Sie in den Kanal schreiben. Eine Beschreibung der einzelnen Typen finden Sie unter [**Komplexer ChannelType-Typ.**](eventmanifestschema-channeltype-complextype.md)
 
-Legen Sie zum Angeben des Kanals, auf den ein Ereignis geschrieben wird, das **Channel** -Attribut der Ereignis Definition auf denselben Wert wie das **Chid** -Attribut der Channeldefinition fest. Ereignisse können jeweils nur in einen Kanal geschrieben werden, können jedoch auch von bis zu 7 anderen ETW-Sitzungen gleichzeitig gesammelt werden.
+Um den Kanal anzugeben, in den ein Ereignis  geschrieben wird, legen Sie das Kanalattribut der Ereignisdefinition auf den gleichen Wert wie das **Chid-Attribut** der Kanaldefinition fest. Ereignisse können jeweils nur in einen Kanal geschrieben, aber auch von bis zu sieben anderen ETW-Sitzungen gleichzeitig gesammelt werden.
 
-Im folgenden Beispiel wird gezeigt, wie ein Kanal importiert wird. Sie müssen die Attribute " **Chid** " und " **Name** " festlegen. Das **Chid** -Attribut identifiziert den Channel eindeutig – jeder Kanal Bezeichner in der Liste der Channels muss eindeutig sein. Legen Sie das **Name** -Attribut auf den Namen fest, der vom Anbieter beim Definieren des Kanals verwendet wurde.
+Das folgende Beispiel zeigt, wie ein Kanal importiert wird. Sie müssen die **Chid-** und **Namensattribute** festlegen. Das **Chid-Attribut** identifiziert den Kanal eindeutig. Jeder Kanalbezeichner in der Liste der Kanäle muss eindeutig sein. Legen Sie das **Name-Attribut** auf den gleichen Namen fest, den der Anbieter beim Definieren des Kanals verwendet hat.
 
 
 ```XML
@@ -64,9 +64,9 @@ Im folgenden Beispiel wird gezeigt, wie ein Kanal importiert wird. Sie müssen d
 </instrumentationManifest>
 ```
 
-Obwohl Winmeta.xml Legacy Kanäle definiert, die importiert werden können, sollten Sie Sie nicht verwenden, es sei denn, Sie unterstützen Legacy-Consumer, die Ereignisse aus den Legacy Kanälen (z. b. Anwendung oder System) nutzen. Die Winmeta.xml-Datei ist im Windows SDK enthalten.
+Obwohl Winmeta.xml Legacykanäle definiert, die Sie importieren können, sollten Sie sie nur verwenden, wenn Sie Legacy-Consumer unterstützen, die Ereignisse aus den Legacykanälen nutzen (z. B. Anwendung oder System). Die Winmeta.xml-Datei ist im Windows SDK enthalten.
 
-Im folgenden Beispiel wird gezeigt, wie ein Kanal definiert wird. Sie müssen die Attribute " **Chid**", " **Name**" und " **Type** " festlegen. Das **Chid** -Attribut identifiziert den Channel eindeutig – jeder Kanal Bezeichner in der Liste der Channels muss eindeutig sein. Legen Sie das **Chid** -Attribut auf einen Wert fest, der für die Kanäle eindeutig ist, die Ihr Anbieter auflistet. auf den Kanal Bezeichner wird in einer oder mehreren Ereignis Definitionen verwiesen. Die Konvention für die Benennung des Kanals besteht darin, den Anbieter Namen und den Kanaltyp in der Form *Provider Name* / *channelType* zu verwenden.
+Das folgende Beispiel zeigt, wie ein Kanal definiert wird. Sie müssen die **Chid-,** **Namens-** und **Typattribute** festlegen. Das **Chid-Attribut** identifiziert den Kanal eindeutig. Jeder Kanalbezeichner in der Liste der Kanäle muss eindeutig sein. Legen Sie das **Chid-Attribut** auf einen Wert fest, der für die Kanäle eindeutig ist, die Ihr Anbieter auflistet. Auf den Kanalbezeichner wird in einer oder mehreren Ihrer Ereignisdefinitionen verwiesen. Die Konvention für die Benennung des Kanals ist die Verwendung des Anbieternamens und Kanaltyps im Format *providername* / *channeltype.*
 
 ```XML
 <instrumentationManifest

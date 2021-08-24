@@ -1,5 +1,5 @@
 ---
-description: Führt die angegebene Systemsteuerung ( \* .cpl) aus.
+description: Führt die angegebene Systemsteuerung \* (.cpl)-Anwendung aus.
 title: Shell.ControlPanelItem-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
@@ -13,19 +13,19 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 54979bbd-b36b-4b5b-a8a0-5f63e9526fa5
-ms.openlocfilehash: 04d2493f5d0ec5b86d19689cb8e7c2a02a82e536
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: d78cb161f8d89de53d491d113f141d63c28ae58ab359cc0198ff4aaa54e6062f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119709800"
 ---
 # <a name="shellcontrolpanelitem-method"></a>Shell.ControlPanelItem-Methode
 
-Führt die angegebene Systemsteuerung ( \* .cpl) aus. Wenn die Anwendung bereits geöffnet ist, wird die ausgeführte Instanz aktiviert.
+Führt die angegebene Systemsteuerung \* (.cpl)-Anwendung aus. Wenn die Anwendung bereits geöffnet ist, wird die ausgeführte Instanz aktiviert.
 
 > [!Note]  
-> Ab Windows Vista sind die meisten Systemsteuerung Shell-Elemente und können mit dieser Funktion nicht geöffnet werden. Um diese anwendungen Systemsteuerung öffnen, übergeben Sie den kanonischen Namen an control.exe. Zum Beispiel:
+> Ab Windows Vista sind die meisten Systemsteuerung Anwendungen Shellelemente und können nicht mit dieser Funktion geöffnet werden. Um diese Systemsteuerung Anwendungen zu öffnen, übergeben Sie den kanonischen Namen an control.exe. Zum Beispiel:
 >
 > ``` syntax
 > control.exe /name Microsoft.Personalization
@@ -63,7 +63,7 @@ Shell.ControlPanelItem( _
 
 Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)**
 
-Der Systemsteuerung dateiname der Anwendung. Alle Systemsteuerung haben die Erweiterung .cpl.
+Der Dateiname der Systemsteuerung Anwendung. Alle Systemsteuerung Anwendungen verfügen über die erweiterung .cpl.
 
 </dd> </dl>
 
@@ -79,9 +79,9 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **ControlPanelItem** verwendet, um das Systemsteuerung **des** Anzeigeeigenschaften ausführen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
+Im folgenden Beispiel wird **ControlPanelItem** verwendet, um das **Anzeigeeigenschaften-Element** der Systemsteuerung auszuführen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -137,7 +137,7 @@ End Sub
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |

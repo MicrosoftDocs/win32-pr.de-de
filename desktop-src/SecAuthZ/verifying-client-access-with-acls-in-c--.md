@@ -1,21 +1,21 @@
 ---
-description: Überprüfen Sie die Zugriffsrechte, die eine Sicherheits Beschreibung für einen Client zulässt.
+description: Überprüfen Sie die Zugriffsrechte, die ein Sicherheitsdeskriptor für einen Client zulässt.
 ms.assetid: de21968e-4590-4798-9152-43204d55521f
-title: Überprüfen des Client Zugriffs mit ACLs in C++
+title: Überprüfen des Clientzugriffs mit ACLs in C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cda629338d731d6e93f316fc15a6338c99bc1609
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1d2160b48a3b88a617eaaea1e8fae63168db5a85e82cad62be5aef248ff51581
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119906690"
 ---
-# <a name="verifying-client-access-with-acls-in-c"></a>Überprüfen des Client Zugriffs mit ACLs in C++
+# <a name="verifying-client-access-with-acls-in-c"></a>Überprüfen des Clientzugriffs mit ACLs in C++
 
-Das folgende Beispiel zeigt, wie ein Server die Zugriffsrechte überprüfen könnte, die eine [*Sicherheits Beschreibung*](/windows/desktop/SecGloss/s-gly) für einen Client zulässt. Im Beispiel wird die Funktion "Identitäts- [**amedpipeclient**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-impersonatenamedpipeclient) " verwendet. Allerdings würde dies mit den anderen Identitätswechsel Funktionen identisch funktionieren. Nach dem annehmen der Identität des Clients wird im Beispiel die [**openthumtotokenfunktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openthreadtoken) aufgerufen, um das Identitätswechsel [*Token*](/windows/desktop/SecGloss/i-gly)zu erhalten. Anschließend wird die [**mapgenericmask**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-mapgenericmask) -Funktion aufgerufen, um alle generischen Zugriffsrechte entsprechend der in der [**generischen \_**](/windows/desktop/api/Winnt/ns-winnt-generic_mapping) Zuordnungs Struktur angegebenen Zuordnung in die entsprechenden spezifischen und Standardrechte umzuwandeln.
+Das folgende Beispiel zeigt, wie ein Server die Zugriffsrechte überprüfen kann, die ein [*Sicherheitsdeskriptor*](/windows/desktop/SecGloss/s-gly) für einen Client zulässt. Im Beispiel wird die [**ImpersonateNamedPipeClient-Funktion**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-impersonatenamedpipeclient) verwendet. Dies funktioniert jedoch mithilfe einer der anderen Identitätswechselfunktionen gleich. Nach dem Identitätswechsel des Clients ruft das Beispiel die [**OpenThreadToken-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openthreadtoken) auf, um das [*Identitätswechseltoken abzurufen.*](/windows/desktop/SecGloss/i-gly) Anschließend ruft sie die [**MapGenericMask-Funktion**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-mapgenericmask) auf, um alle generischen Zugriffsrechte gemäß der in der GENERIC MAPPING-Struktur angegebenen Zuordnung in die entsprechenden spezifischen und [**\_ Standardrechte zu**](/windows/desktop/api/Winnt/ns-winnt-generic_mapping) konvertieren.
 
-Die [**AccessCheck**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-accesscheck) -Funktion überprüft die angeforderten Zugriffsrechte auf die Rechte, die für den Client in der DACL der Sicherheits Beschreibung zulässig sind. Um den Zugriff zu überprüfen und einen Eintrag im Sicherheits Ereignisprotokoll zu generieren, verwenden Sie die Funktion [**accesscheckandauditalarm**](/windows/desktop/api/Winbase/nf-winbase-accesscheckandauditalarma) .
+Die [**AccessCheck-Funktion**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-accesscheck) überprüft die angeforderten Zugriffsrechte auf die Rechte, die für den Client in der DACL des Sicherheitsdeskriptors zulässig sind. Verwenden Sie die [**AccessCheckAndAuditAlarm-Funktion,**](/windows/desktop/api/Winbase/nf-winbase-accesscheckandauditalarma) um den Zugriff zu überprüfen und einen Eintrag im Sicherheitsereignisprotokoll zu generieren.
 
 
 ```C++

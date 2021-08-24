@@ -1,7 +1,7 @@
 ---
-description: Ruft eine nicht übersetzte Matrix ab.
+description: Ruft eine nicht transposed Matrix ab.
 ms.assetid: d507c82c-b1a5-4e83-8921-5d45f52faba0
-title: 'ID3DXBaseEffect:: getMatrix-Methode (D3DX9Shader. h)'
+title: ID3DXBaseEffect::GetMatrix-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 17d59700d8752526f3f4c48efeaf7f3e6bd985bb
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f7733f37ae5db4bfdaf504f5e0925b89cea7a8f2e54f4546feb4141fddd246ae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106360239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120118860"
 ---
-# <a name="id3dxbaseeffectgetmatrix-method"></a>ID3DXBaseEffect:: getMatrix-Methode
+# <a name="id3dxbaseeffectgetmatrix-method"></a>ID3DXBaseEffect::GetMatrix-Methode
 
-Ruft eine nicht übersetzte Matrix ab.
+Ruft eine nicht transposed Matrix ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetMatrix(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9)](handles.md).
 
 </dd> <dt>
 
-*pmatrix* \[ vorgenommen\]
+*pMatrix* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Gibt eine nicht übersetzte Matrix zurück. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
+Gibt eine nicht transposed Matrix zurück. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
 
 </dd> </dl>
 
@@ -63,13 +63,13 @@ Gibt eine nicht übersetzte Matrix zurück. Siehe [**D3DXMATRIX**](d3dxmatrix.md
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine nicht umgesetzte Matrix enthält Zeilen Hauptdaten; Das heißt, jeder Vektor ist in einer Zeile enthalten.
+Eine nicht transposed Matrix enthält Zeilen-Hauptdaten. Das heißt, jeder Vektor ist in einer Zeile enthalten.
 
-Wenn die Ziel Matrix größer als die Quell Matrix ist, werden nur die linken oberen Komponenten der Ziel Matrix gefüllt, und die restlichen Komponenten werden auf 0 (null) festgelegt.
+Wenn die Zielmatrix größer als die Quellmatrix ist, werden nur die linken oberen Komponenten der Zielmatrix gefüllt, und die übrigen Komponenten werden auf 0 (null) festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,8 +77,8 @@ Wenn die Ziel Matrix größer als die Quell Matrix ist, werden nur die linken ob
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 

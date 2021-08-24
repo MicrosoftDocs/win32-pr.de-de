@@ -1,19 +1,19 @@
 ---
-description: Wenn der Benutzer auf Clip Bereich definieren klickt, gibt das System eine WM- \_ Befehls Meldung aus.
+description: Wenn der Benutzer auf Clipbereich definieren klickt, gibt das System eine WM \_ COMMAND-Meldung aus.
 ms.assetid: 4b20f310-98c0-42c1-b3b3-eadf9bb2003c
-title: Definieren des Clippingbereichs
+title: Definieren des Ausschneidebereichs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45e49693c0e94ab9b43af817f80985af98ae2ede
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: caa56c2eb036430b90e3c8f7b6fc0894abdc37306edef77438afae796cb1cc04
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528379"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120115310"
 ---
-# <a name="defining-the-clipping-region"></a>Definieren des Clippingbereichs
+# <a name="defining-the-clipping-region"></a>Definieren des Ausschneidebereichs
 
-Wenn der Benutzer auf Clip Bereich definieren klickt, gibt das System eine [**WM- \_ Befehls**](../menurc/wm-command.md) Meldung aus. Der *wParam* -Parameter dieser Nachricht enthält eine Anwendungs definierte Konstante, IDM- \_ Definition, die angibt, dass der Benutzer diese Option im Menü ausgewählt hat. Die Anwendung verarbeitet diese Eingabe, indem Sie wie im folgenden Codebeispiel gezeigt ein boolesches Flag ("f defineregion") festlegt.
+Wenn der Benutzer auf Clipbereich definieren klickt, gibt das System eine [**WM \_ COMMAND-Meldung**](../menurc/wm-command.md) aus. Der *wParam-Parameter* dieser Nachricht enthält eine anwendungsdefinierte Konstante IDM \_ DEFINE, die angibt, dass der Benutzer diese Option im Menü ausgewählt hat. Die Anwendung verarbeitet diese Eingabe durch Festlegen des booleschen Flags fDefineRegion, wie im folgenden Codebeispiel gezeigt.
 
 
 ```C++
@@ -28,9 +28,9 @@ case WM_COMMAND:
 
 
 
-Nachdem Sie auf **Clippingbereich definieren** geklickt haben, kann der Benutzer mit dem Zeichnen des Rechtecks beginnen, indem er auf die Maus klickt, während sich der Cursor im Client Bereich der Anwendung befindet.
+Nach dem Klicken auf **Clippingbereich definieren** kann der Benutzer mit dem Zeichnen des Rechtecks beginnen, indem er klickt und die Maus zieht, während sich der Cursor im Clientbereich der Anwendung befindet.
 
-Wenn der Benutzer die linke Maustaste drückt, gibt das System eine [**WM- \_ lbuttondown**](../inputdev/wm-lbuttondown.md) -Meldung aus. Der *LPARAM* -Parameter dieser Nachricht enthält die Cursor Koordinaten, die der oberen linken Ecke eines Rechtecks entsprechen, das zum Definieren des Clippingbereichs verwendet wird. Die Anwendung verarbeitet die **WM \_ lbuttondown** -Nachricht wie folgt.
+Wenn der Benutzer die linke Schaltfläche drückt, gibt das System eine [**\_ WM-LBUTTONDOWN-Meldung**](../inputdev/wm-lbuttondown.md) aus. Der *lParam-Parameter* dieser Nachricht enthält die Cursorkoordinaten, die der oberen linken Ecke eines Rechtecks entsprechen, das zum Definieren des Ausschneidebereichs verwendet wird. Die Anwendung verarbeitet die **\_ WM-LBUTTONDOWN-Nachricht** wie folgt.
 
 
 ```C++
@@ -108,7 +108,7 @@ switch (message)
 
 
 
-Wenn der Benutzer die Maus zieht, gibt das System [**WM- \_ MouseMove**](../inputdev/wm-mousemove.md) -Nachrichten aus und speichert die neuen Cursor Koordinaten im *LPARAM* -Parameter. Jedes Mal, wenn die Anwendung eine neue **WM- \_ MouseMove** -Nachricht empfängt, löscht Sie das vorherige Rechteck (sofern vorhanden) und zeichnet das neue Rechteck durch Aufrufen der [**polylinienfunktion**](/windows/desktop/api/Wingdi/nf-wingdi-polyline) , wobei die Koordinaten der vier Ecken des Rechtecks übergeben werden. Die Anwendung führt die folgenden Aufgaben aus:
+Wenn der Benutzer die Maus zieht, gibt das System [**WM \_ MOUSEMOVE-Meldungen**](../inputdev/wm-mousemove.md) aus und speichert die neuen Cursorkoordinaten im *lParam-Parameter.* Jedes Mal, wenn die Anwendung eine neue **WM \_ MOUSEMOVE-Nachricht** empfängt, löscht sie das vorherige Rechteck (sofern vorhanden) und zeichnet das neue Rechteck, indem sie die [**Polyline-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-polyline) aufruft und die Koordinaten der vier Ecken des Rechtecks übergibt. Die Anwendung führt die folgenden Aufgaben aus.
 
 
 ```C++

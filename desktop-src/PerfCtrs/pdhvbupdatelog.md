@@ -1,7 +1,7 @@
 ---
-description: Die Funktion pdhvbupdatelog Functions aktualisiert die aktuelle Abfrage und schreibt neue Daten in die Protokolldatei. Diese Funktion ruft pdhupdatelog auf.
+description: Die Funktion PdhVbUpdateLog aktualisiert die aktuelle Abfrage und schreibt neue Daten in die Protokolldatei. Diese Funktion ruft PdhUpdateLog auf.
 ms.assetid: a7a3ad18-2d61-448e-9764-ba363398e804
-title: Pdhvbupdatelog-Funktion
+title: PdhVbUpdateLog-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,63 +13,63 @@ api_type:
 - DllExport
 api_location:
 - Pdh.dll
-ms.openlocfilehash: c02e533f57481004b0a7de9f779399b20bddc0af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c7bf8af71d3a0f5cd20a84ef0f1532806e3d3e8d268bd2d322d617534b533cc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349221"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033610"
 ---
-# <a name="pdhvbupdatelog-function"></a>Pdhvbupdatelog-Funktion
+# <a name="pdhvbupdatelog-function"></a>PdhVbUpdateLog-Funktion
 
-Die Funktion **pdhvbupdatelog** Functions aktualisiert die aktuelle Abfrage und schreibt neue Daten in die Protokolldatei. Diese Funktion ruft [**pdhupdatelog**](/windows/desktop/api/Pdh/nf-pdh-pdhupdateloga)auf.
+Die **Funktion PdhVbUpdateLog** aktualisiert die aktuelle Abfrage und schreibt neue Daten in die Protokolldatei. Diese Funktion ruft [**PdhUpdateLog**](/windows/desktop/api/Pdh/nf-pdh-pdhupdateloga)auf.
 
 > [!IMPORTANT]
-> Die Funktion, die in diesem Thema beschrieben wird, kann in Zukunft geändert oder nicht mehr verfügbar sein. Stattdessen empfiehlt Microsoft die Verwendung der Funktionen, die unter [Funktionen von Leistungsindikatoren](performance-counters-functions.md)beschrieben werden.
+> Die in diesem Thema beschriebene Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Stattdessen empfiehlt Microsoft die Verwendung der in [Leistungsindikatorfunktionen beschriebenen](performance-counters-functions.md)Funktionen.
 
-Funktion pdhvbupdatelog ( \_ ByVal hlog as PDH \_ hlog, \_ ByVal szuserstring as LPCTSTR \_ )
+Funktion PdhVbUpdateLog( \_ ByVal hLog as PDH \_ HLOG, \_ ByVal szUserString As LPCTSTR \_ )
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*hlog* \[ in\]
+*hLog* \[ In\]
 </dt> <dd>
 
-Handle für die zu Aktualisier Ende Protokolldatei. Dieses Handle wird von der [**pdhvbopenlog**](pdhvbopenlog.md) -Funktion zurückgegeben.
+Behandeln Sie die zu aktualisierende Protokolldatei. Dieses Handle wird von der [**PdhVbOpenLog-Funktion**](pdhvbopenlog.md) zurückgegeben.
 
 </dd> <dt>
 
-*szuserstring* \[ in\]
+*szUserString* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Zeichenfolge, die die Daten angibt, die der Protokolldatei hinzugefügt werden sollen. Dies wird im Allgemeinen für Kommentare in der Protokolldatei verwendet.
+Zeiger auf eine Zeichenfolge, die die Daten angibt, die der Protokolldatei hinzugefügt werden sollen. Dies wird in der Regel für Kommentare in der Protokolldatei verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird 0 zurückgegeben.
+Wenn die Funktion erfolgreich ist, wird 0 zurückgegeben.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein [Systemfehler Code](/windows/desktop/Debug/system-error-codes) oder ein [PDH-Fehlercode](pdh-error-codes.md). Die folgenden Werte sind möglich.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein [Systemfehlercode](/windows/desktop/Debug/system-error-codes) oder ein [PDH-Fehlercode.](pdh-error-codes.md) Im Folgenden sind mögliche Werte angegeben.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                                                                            |
 |------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nicht genügend PDH- \_ \_ Puffer**</dt> </dl>   | Die angeforderten Daten sind größer als der angegebene Puffer. Die angeforderten Daten können nicht zurückgegeben werden.<br/> |
-| <dl> <dt>**Ungültiges PDH- \_ \_ Argument**</dt> </dl>      | Mindestens ein Zeichen folgen Puffer weist nicht die richtige Größe auf.<br/>                                  |
-| <dl> <dt>**Ungültiges PDH- \_ \_ handle**</dt> </dl>        | Das Handle ist kein gültiges PDH-Objekt.<br/>                                                       |
-| <dl> <dt>**Fehler beim Öffnen der PDH- \_ Protokoll \_ Datei. \_ \_**</dt> </dl> | Die angegebene Protokolldatei kann nicht geöffnet werden.<br/>                                                      |
-| <dl> <dt>**PDH- \_ Datei wurde \_ nicht \_ gefunden.**</dt> </dl>       | Die angegebene Datei wurde nicht gefunden.<br/>                                                          |
+| <dl> <dt>**PDH \_ INSUFFICIENT \_ BUFFER**</dt> </dl>   | Die angeforderten Daten sind größer als der bereitgestellte Puffer. Die angeforderten Daten können nicht zurückgegeben werden.<br/> |
+| <dl> <dt>**\_UNGÜLTIGES \_ PDH-ARGUMENT**</dt> </dl>      | Mindestens einer der Zeichenfolgenpuffer ist nicht die richtige Größe.<br/>                                  |
+| <dl> <dt>**\_UNGÜLTIGES \_ PDH-HANDLE**</dt> </dl>        | Das Handle ist kein gültiges PDH-Objekt.<br/>                                                       |
+| <dl> <dt>**FEHLER BEIM \_ ÖFFNEN DER PDH-PROTOKOLLDATEI \_ \_ \_**</dt> </dl> | Die angegebene Protokolldatei kann nicht geöffnet werden.<br/>                                                      |
+| <dl> <dt>**\_PDH-DATEI \_ NICHT \_ GEFUNDEN**</dt> </dl>       | Die angegebene Datei konnte nicht gefunden werden.<br/>                                                          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es muss eine aktuell geöffnete Abfrage vorhanden sein, und die gewünschten Zähler müssen hinzugefügt werden, bevor diese Funktion aufgerufen wird.
+Es muss eine derzeit geöffnete Abfrage vorhanden sein, und die gewünschten Leistungsindikatoren müssen ihr hinzugefügt werden, bevor diese Funktion aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,9 +77,9 @@ Es muss eine aktuell geöffnete Abfrage vorhanden sein, und die gewünschten Zä
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Bibliothek<br/>                  | <dl> <dt>PDH. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Bibliothek<br/>                  | <dl> <dt>Pdh.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Pdh.dll</dt> </dl> |
 
 
@@ -88,13 +88,13 @@ Es muss eine aktuell geöffnete Abfrage vorhanden sein, und die gewünschten Zä
 
 <dl> <dt>
 
-[**Pdhupdatelog**](/windows/desktop/api/Pdh/nf-pdh-pdhupdateloga)
+[**PdhUpdateLog**](/windows/desktop/api/Pdh/nf-pdh-pdhupdateloga)
 </dt> <dt>
 
-[**Pdhvbgetlogfilesize**](pdhvbgetlogfilesize.md)
+[**PdhVbGetLogFileSize**](pdhvbgetlogfilesize.md)
 </dt> <dt>
 
-[**Pdhvbopenlog**](pdhvbopenlog.md)
+[**PdhVbOpenLog**](pdhvbopenlog.md)
 </dt> </dl>
 
  

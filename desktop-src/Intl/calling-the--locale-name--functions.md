@@ -1,7 +1,7 @@
 ---
-description: Windows Vista führt eine große Anzahl von Funktionen ein, die Locale-Namen anstelle von Locale Identifiers verwenden.
+description: Windows Vista führt eine große Anzahl von Funktionen ein, die Gebietsschemanamen anstelle von Gebietsschemabezeichnern verwenden.
 ms.assetid: e88c31b2-b1da-40ae-b512-67b8ad409b95
-title: Aufrufen der "Locale Name"-Funktionen
+title: Aufrufen der Funktionen "Gebietsschemaname"
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: bc97490f21c54a187f2db31c6ee5c7eaa6c45e64069f9be9594c99e2376ef04e
@@ -11,20 +11,20 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119754890"
 ---
-# <a name="calling-the-locale-name-functions"></a>Aufrufen der "Locale Name"-Funktionen
+# <a name="calling-the-locale-name-functions"></a>Aufrufen der Funktionen "Gebietsschemaname"
 
-Windows Vista führt eine große Anzahl von Funktionen ein, die [Locale-Namen anstelle](locale-names.md) von [Locale Identifiers verwenden.](locale-identifiers.md) Diese neuen Funktionen bieten gute Unterstützung für zusätzliche [Locales,](custom-locales.md)und einige davon bieten zusätzliche Funktionen, die in den älteren NLS-Funktionen nicht verfügbar sind. Einige davon, z. B. die neuen Enumerationsfunktionen, stellen auch Entwurfsverbesserungen dar.
+Windows Vista führt eine große Anzahl von Funktionen ein, die [Gebietsschemanamen](locale-names.md) anstelle von [Gebietsschemabezeichnern](locale-identifiers.md)verwenden. Diese neuen Funktionen bieten eine gute Unterstützung für [zusätzliche Gebietsschemas,](custom-locales.md)und einige von ihnen bieten zusätzliche Funktionen, die in den älteren NLS-Funktionen nicht verfügbar sind. Einige davon, z. B. die neuen Enumerationsfunktionen, stellen auch Entwurfsverbesserungen dar.
 
 > [!Note]  
-> Anwendungen, die nur unter Windows Vista und höher ausgeführt werden sollen, sollten die "Locale Name"-Funktionen vor den NLS-Funktionen verwenden, die Locale Identifiers verwenden.
+> Anwendungen, die nur auf Windows Vista und höher ausgeführt werden sollen, sollten die Gebietsschemanamenfunktionen vor den NLS-Funktionen verwenden, die Gebietsschemabezeichner verwenden.
 
  
 
-In der folgenden Tabelle sind die Namensfunktionen des Locale sowie die älteren Funktionen aufgeführt, die sie ersetzen können.
+In der folgenden Tabelle sind die Gebietsschemanamenfunktionen zusammen mit den älteren Funktionen aufgeführt, die sie ersetzen können.
 
 
 
-| Funktionen mitHilfe von Locale-Namen                                     | Funktionen mitHilfe von Locale Identifiers                                                             |
+| Funktionen mit Gebietsschemanamen                                     | Funktionen mit Gebietsschemabezeichnern                                                             |
 |------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | [**CompareStringEx**](/windows/desktop/api/Stringapiset/nf-stringapiset-comparestringex)                       | [**CompareString**](/windows/win32/api/stringapiset/nf-stringapiset-comparestringw)                                                         |
 | [**EnumCalendarInfoExEx**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoexex)             | [**EnumCalendarInfo**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoa), [ **EnumCalendarInfoEx**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoexa) |
@@ -51,13 +51,13 @@ In der folgenden Tabelle sind die Namensfunktionen des Locale sowie die älteren
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel für die Verwendung mehrerer Funktionen, die auf Den namen des Lokalen basieren, finden Sie unter [NLS: Name-based APIs Sample](nls--name-based-apis-sample.md)(Beispiel für namensbasierte APIs).
+Ein Beispiel für die Verwendung mehrerer Funktionen, die auf Gebietsschemanamen basieren, finden Sie unter [NLS: Name-based APIs Sample](nls--name-based-apis-sample.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden der Unterstützung der Landessprache](using-national-language-support.md)
+[Verwenden der Unterstützung für nationale Sprachen](using-national-language-support.md)
 </dt> </dl>
 
  

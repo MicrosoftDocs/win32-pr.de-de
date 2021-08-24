@@ -1,58 +1,58 @@
 ---
-title: Video Bild Übergänge
-description: Video Bild Übergänge
+title: Videobildübergänge
+description: Videobildübergänge
 ms.assetid: 201ddbfb-567b-4893-b754-569f1e7d8466
 keywords:
-- Windows Media-Format-SDK, Video Bild Übergänge
-- Advanced Systems Format (ASF), Video Bild Übergänge
-- ASF (Advanced Systems Format), Video Bild Übergänge
-- Video Bild Übergänge
-- Windows Media Video 9 Abbild v2-Codec
-- Codecs, Windows Media Video 9 Abbild v2-Codec
-- Videostreams, Windows Media Video 9-Abbild v2-Codec
-- Videostreams, Bild Übergänge
+- Windows Medienformat-SDK, Videobildübergänge
+- Advanced Systems Format (ASF), Videobildübergänge
+- ASF (Advanced Systems Format), Videobildübergänge
+- Videobildübergänge
+- Windows Media Video 9– Image v2-Codec
+- Codecs,Windows Media Video 9 Image v2-Codec
+- Videostreams,Windows Media Video 9 Image v2-Codec
+- Videostreams, Bildübergänge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cbfd02628a78196a73750c2c0ff6b9e9c3d6729c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3b0a915f34ac9a2dcc00f8bcec739d48051361c1744e8e455166d56238529d9c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036770"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119771240"
 ---
-# <a name="video-image-transitions"></a>Video Bild Übergänge
+# <a name="video-image-transitions"></a>Videobildübergänge
 
-Der Windows Media Video 9-Abbild v2-Codec animiert eine Reihe von Bildern, was zu einem Videostream führt. Der Codec kann zwei Abbilder gleichzeitig bearbeiten, diese miteinander kombinieren und einen Übergang von einem zum anderen entsprechend der von Ihnen bereitgestellten Konfiguration erstellen. In diesem Abschnitt werden die unterstützten Übergänge und die erforderlichen Parameter beschrieben.
+Der Windows Media Video 9 Image v2-Codec animiert eine Reihe von Bildern, was zu einem Videostream führt. Der Codec kann zwei Bilder gleichzeitig bearbeiten, sie miteinander mischen und einen Übergang von einem zum anderen gemäß der von Ihnen verwendeten Konfiguration erstellen. In diesem Abschnitt werden die unterstützten Übergänge und die benötigten Parameter beschrieben.
 
-Die Übergänge sind in der folgenden Tabelle nach ihren globalen bezeichlern aufgeführt.
+Die Übergänge sind in der folgenden Tabelle nach ihren globalen Bezeichnern aufgeführt.
 
 
 
-| Übergangs Bezeichner                                                                           | BESCHREIBUNG                                                                                                                                  |
+| Übergangsbezeichner                                                                           | Beschreibung                                                                                                                                  |
 |-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| [**WMT \_ Videoimage- \_ Übergangs \_ Bogen \_ Tie**](wmt-videoimage-transition-bow-tie.md)              | Ein neues Bild wird in einer Reihe von Dreiecken auf gegenüberliegenden Seiten des Frames angezeigt.                                                                  |
-| [**WMT \_ Videoimage- \_ Übergangs \_ Kreis**](wmt-videoimage-transition-circle.md)                 | Ein neues Bild wird in einem Kreis angezeigt.                                                                                                           |
-| [**Kreuz Ausblenden des WMT- \_ Videobilds \_ \_ \_**](wmt-videoimage-transition-cross-fade.md)        | Kein spezieller Übergang, die Blend-Koeffizienten der beiden Bilder bestimmen das Kreuz ausblenden (auflösen).                                         |
-| [**Übergang von WMT \_ Videoimage \_ \_ Diagonal**](wmt-videoimage-transition-diagonal.md)             | Ein neues Bild wird entlang einer diagonalen Linie angezeigt, die in einer Ecke des Frames steht.                                                          |
-| [**WMT \_ Videoimage- \_ Übergangs Raute \_**](wmt-videoimage-transition-diamond.md)               | Ein neues Bild wird in einem Rautensymbol angezeigt.                                                                                                          |
-| [**WMT \_ Videoimage \_ - \_ Übergang \_ in \_ Farbe ausblenden**](wmt-videoimage-transition-fade-to-color.md) | Löst von dem Bild bis zu einem Frame mit voll Tonfarbe auf.                                                                                          |
-| [**WMT \_ Videoimage- \_ Übergang mit \_ ausgefülltem \_ V**](wmt-videoimage-transition-filled-v.md)            | Ein neues Bild wird in einem Dreieck angezeigt, das von einer Seite des Frames stammt.                                                                  |
-| [**WMT \_ Videoimage- \_ Übergang \_ kippen**](wmt-videoimage-transition-flip.md)                     | Das alte Bild wird auf einer y-Achse durch die Mitte des Frames gedreht. Das neue Bild wird als Rückseite des alten Bilds angezeigt.                    |
-| [**WMT \_ Videoimage- \_ Übergangs \_ inmenge**](wmt-videoimage-transition-inset.md)                   | Ein neues Bild wird durch ein Rechteck angezeigt, das aus einer Ecke des Frames stammt.                                                               |
-| [**WMT \_ Videoimage- \_ Übergangs \_ IRIS**](wmt-videoimage-transition-iris.md)                     | Ein neues Bild wird auf einer x-Achse und einer y-Achse angezeigt.                                                                                          |
-| [**WMT \_ Videoimage- \_ Übergangs \_ Seite \_ (Rollup)**](wmt-videoimage-transition-page-roll.md)          | Das alte Bild wird in einem Seiten flippingeffekt transformiert und zeigt das neue Bild darunter.                                                      |
-| [**WMT \_ Videoimage- \_ Übergangs \_ Rechteck**](wmt-videoimage-transition-rectangle.md)           | Ein neues Bild wird durch ein Rechteck innerhalb des Frames angezeigt.                                                                                       |
-| [**WMT \_ Videoimage- \_ Übergang \_ offenlegen**](wmt-videoimage-transition-reveal.md)                 | Ein neues Bild wird an einer geraden Linie angezeigt, die von einer Seite des Frames stammt.                                                          |
-| [**Folie für WMT \_ Videoimage- \_ Übergang \_**](wmt-videoimage-transition-slide.md)                   | Das alte Bild wird aus dem Frame heraus bewegt und zeigt das neue Bild unterhalb an.                                                                       |
-| [**Teilung des WMT \_ Videoimage- \_ Übergangs \_**](wmt-videoimage-transition-split.md)                   | Ein neues Bild wird durch eine horizontale oder vertikale Aufteilung im alten Bild angezeigt. Die Teilung wird entlang einer geraden Linie angezeigt, beginnend innerhalb des Frames. |
-| [**WMT \_ Videoimage \_ \_ -Übergangs Stern**](wmt-videoimage-transition-star.md)                     | Ein neues Bild wird von einem fünf-Spitze-Stern innerhalb des Frames angezeigt.                                                                               |
-| [**WMT \_ Videoimage- \_ Übergangs \_ Rad**](wmt-videoimage-transition-wheel.md)                   | Ein neues Bild wird von vier rotierenden Spokes mit einem gemeinsamen Pivotpunkt offengelegt.                                                                     |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ BOW \_ TIE**](wmt-videoimage-transition-bow-tie.md)              | Ein neues Bild wird in einer Reihe von Dreiecken auf gegenüberliegenden Seiten des Rahmens angezeigt.                                                                  |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ CIRCLE**](wmt-videoimage-transition-circle.md)                 | Ein neues Bild wird in einem Kreis angezeigt.                                                                                                           |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ CROSS \_ FADE**](wmt-videoimage-transition-cross-fade.md)        | Kein spezieller Übergang, die Überblendungskoeffizienten der beiden Bilder bestimmen die Kreuzblendung (Übergänge).                                         |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ DIAGONAL**](wmt-videoimage-transition-diagonal.md)             | Ein neues Bild wird entlang einer diagonalen Linie aus einer Ecke des Rahmens angezeigt.                                                          |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ DIAMOND**](wmt-videoimage-transition-diamond.md)               | Ein neues Bild wird in einer Raute angezeigt.                                                                                                          |
+| [**WMT \_ VIDEOIMAGE \_ ÜBERGANG IN \_ FARBE \_ \_ AUSBLENDEN**](wmt-videoimage-transition-fade-to-color.md) | Überrennt das Bild in einen Rahmen mit Volltonfarbe.                                                                                          |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ FILLED \_ V**](wmt-videoimage-transition-filled-v.md)            | Ein neues Bild wird in einem Dreieck angezeigt, das von einer Seite des Rahmens stammt.                                                                  |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ FLIP**](wmt-videoimage-transition-flip.md)                     | Das alte Bild wird auf einer y-Achse durch die Mitte des Rahmens gedreht. Das neue Bild wird als Rückseite des alten Bilds angezeigt.                    |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ INSET**](wmt-videoimage-transition-inset.md)                   | Ein neues Bild wird durch ein Rechteck aus einer Ecke des Rahmens angezeigt.                                                               |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ IRIS**](wmt-videoimage-transition-iris.md)                     | Entlang einer X-Achse und einer y-Achse wird ein neues Bild angezeigt.                                                                                          |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ PAGE \_ ROLL**](wmt-videoimage-transition-page-roll.md)          | Das alte Bild wird in einen Seitenumkehreffekt transformiert, der das neue Bild darunter zeigt.                                                      |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ RECTANGLE**](wmt-videoimage-transition-rectangle.md)           | Ein neues Bild wird durch ein Rechteck innerhalb des Frames angezeigt.                                                                                       |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ REVEAL**](wmt-videoimage-transition-reveal.md)                 | Ein neues Bild wird entlang einer geraden Linie angezeigt, die von einer Seite des Rahmens stammt.                                                          |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ SLIDE**](wmt-videoimage-transition-slide.md)                   | Altes Bild wird aus dem Rahmen geschiebet und zeigt das neue Bild darunter an.                                                                       |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ SPLIT**](wmt-videoimage-transition-split.md)                   | Ein neues Bild wird durch eine horizontale oder vertikale Aufteilung im alten Bild angezeigt. Die Aufteilung wird entlang einer geraden Linie angezeigt, die innerhalb des Rahmens beginnt. |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ STAR**](wmt-videoimage-transition-star.md)                     | Ein neues Bild wird durch einen Fünf-Punkte-Stern innerhalb des Frames angezeigt.                                                                               |
+| [**WMT \_ VIDEOIMAGE \_ TRANSITION \_ WHEEL**](wmt-videoimage-transition-wheel.md)                   | Ein neues Bild wird durch vier rotierende Spokes mit einem gemeinsamen Pivotpunkt angezeigt.                                                                     |
 
 
 
- 
+ 
 
-Jeder Übergang wird in einem eigenen Thema ausführlich beschrieben.
+Jeder Übergang wird vollständig in einem eigenen Thema beschrieben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -61,12 +61,12 @@ Jeder Übergang wird in einem eigenen Thema ausführlich beschrieben.
 [**Programmierverzeichnis**](programming-reference.md)
 </dt> <dt>
 
-[**WMT \_ Videoimage \_ SAMPLE2**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2)
+[**WMT \_ VIDEOIMAGE \_ SAMPLE2**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

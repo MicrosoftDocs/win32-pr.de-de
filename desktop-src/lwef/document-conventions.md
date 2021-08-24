@@ -13,29 +13,29 @@ ms.locfileid: "119601610"
 ---
 # <a name="document-conventions"></a>Dokumentkonventionen
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 In dieser Dokumentation werden die folgenden typografischen Konventionen verwendet:
 
 
 
-| Konvention                       | BESCHREIBUNG                                                                    |
+| Konvention                       | Beschreibung                                                                    |
 |----------------------------------|--------------------------------------------------------------------------------|
-| **Sub, Visible, Caption**        | Fett formatierte Wörter mit großgeschriebenem Anfangsbuchstaben geben Schlüsselwörter an.               |
-| *agent, String, Now*             | Italische Wörter geben Platzhalter für informationen an, die Sie angeben.                 |
+| **Sub, Visible, Caption**        | Fett formatierte Wörter mit groß geschriebenem Anfangsbuchstaben geben Schlüsselwörter an.               |
+| *agent, String, Now*             | In italischen Wörtern werden Platzhalter für von Ihnen angegebenen Informationen angegeben.                 |
 | EINGABETASTE, F1                        | Wörter in Großbuchstaben geben Dateinamen, Schlüsselnamen und Schlüsselsequenzen an. |
 | `Agent1.Commands.Enabled = True` | Text in dieser Schriftart gibt Codebeispiele an.                                       |
 | `' This is a comment`            | Ein Apostroph ( `'` ) gibt einen Codekommentar an.                                  |
 | `Agent1.Commands.Add "Test1", _` | Ein Leerzeichen und ein Unterstrich ( \_ ) setzt eine Codezeile fort.                       |
 | `[words or expression]`          | Elemente in eckigen Klammern sind optional.                                     |
 | `This | That`                    | Ein vertikaler Balken gibt eine Auswahl zwischen zwei oder mehr Elementen an.                   |
-| *Agent*                          | Das wort "agent" in Kursivschrift stellt den Namen des von Ihnen verwendeten Agent-Steuerelements dar.  |
+| *Agent*                          | Das wort "agent" in italic stellt den Namen des agent-Steuerelements dar, das Sie verwenden.  |
 
 
 
  
 
-Die Beschreibungen der Programmierschnittstellen in diesem Dokument folgen den Konventionen für Microsoft VBScript. Sie sollten jedoch auch für andere Sprachen allgemein gelten.
+Die Beschreibungen der Programmierschnittstellen in diesem Dokument entsprechen den Konventionen für Microsoft VBScript. Sie sollten jedoch auch allgemein auf andere Sprachen anwendbar sein.
 
  
 

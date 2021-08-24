@@ -1,39 +1,39 @@
 ---
-title: Single-Finger Drehung
-description: In diesem Abschnitt wird erläutert, wie ein Objekt mithilfe eines pivotpunkts gedreht wird.
+title: Single-Finger Rotation
+description: In diesem Abschnitt wird erläutert, wie Sie ein Objekt mithilfe eines Pivotpunkts drehen.
 ms.assetid: b9c19009-8ac0-4168-bf26-393280fc589f
 keywords:
-- Windows-Fingereingabe, Drehung
-- Windows-Fingereingabe, Manipulationen
-- Windows Touch, Einzel Finger Drehung
-- Windows-Fingereingabe, pivotpunktdrehung
+- Windows Touch,Drehung
+- Windows Touch,Manipulationen
+- Windows Touch, Drehung mit einem Finger
+- Windows Touch,Pivotpunktrotation
 - Manipulationen, Drehung
-- Drehung, pivotpunkte
-- Drehung, Einzel Finger
-- Gesten, Einzel Finger Drehung
-- Rotation mit einem Finger
+- Drehung, Pivotpunkte
+- Drehung, einzelfinger
+- Gesten, Drehung mit einem Finger
+- Drehung mit einem Finger
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 93d74263f502749e2aaf942c4bbec5aa0a284e76
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 36fe7e92f6d68515e1d13b39c32ee4af5b6b03e675479242210fe302b84e6395
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855739"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120110650"
 ---
-# <a name="single-finger-rotation"></a>Single-Finger Drehung
+# <a name="single-finger-rotation"></a>Single-Finger Rotation
 
-In diesem Abschnitt wird erläutert, wie ein Objekt mithilfe eines pivotpunkts gedreht wird.
+In diesem Abschnitt wird erläutert, wie Sie ein Objekt mithilfe eines Pivotpunkts drehen.
 
-In der folgenden Abbildung wird die Rotation mit einem Finger veranschaulicht.
+Die folgende Abbildung veranschaulicht die Drehung mit einem Finger.
 
-![Abbildung mit zwei Arten von Einzel fingerdrehung: um das Zentrum oder um den Rand herum](images/sfrotation.png)
+![Abbildung, die zwei Arten der Drehung mit einem Finger zeigt: um die Mitte oder um den Rand](images/sfrotation.png)
 
-In Beispiel A wird das Objekt um den Mittelpunkt des Objekts mit der Drehungs Bewegung gedreht. In Beispiel B wird das Objekt gedreht, indem ein einzelner Finger um den Rand des Objekts bewegt wird. Der Manipulations Prozessor ermöglicht diese Rotation mithilfe von Pivotpunkt-und Pivot-RADIUS-Werten. In der folgenden Abbildung werden die Komponenten der Einzel Finger Drehung veranschaulicht.
+In Beispiel A wird das -Objekt mithilfe der Drehbewegung um den Mittelpunkt des Objekts gedreht. In Beispiel B wird das Objekt gedreht, indem ein einzelner Finger um den Rand des Objekts bewegt wird. Der Manipulationsprozessor ermöglicht diese Drehung mithilfe von Pivotpunkt- und Pivotradiuswerten. Die folgende Abbildung veranschaulicht die Komponenten der Drehung mit einem Finger.
 
-![die Abbildung zeigt die Komponenten der Einzel Finger Drehung: pivotpointx, pivotpointy und pivotradius.](images/sfrotation-components.png)
+![Abbildung der Komponenten der Drehung mit einem Finger: pivotpointx, pivotpointy und pivotradius](images/sfrotation-components.png)
 
-Nachdem Sie die Werte [**pivotpointx**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotpointx), [**pivotpointy**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotpointy)und [**pivotradius**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotradius) festgelegt haben, enthalten nachfolgende Übersetzungs Meldungen die Drehung. Je größer der pivotradius ist, desto größer ist die Änderung in x und y, um das Objekt zu drehen. Der folgende Code zeigt, wie diese Werte im Bearbeitungs Prozessor festgelegt werden können.
+Nachdem Sie die [**Werte PivotPointX,**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotpointx) [**PivotPointY**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotpointy)und [**PivotRadius**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotradius) festgelegt haben, enthalten nachfolgende Übersetzungsmeldungen die Drehung. Je größer der Pivotradius, desto größer muss die Änderung in x und y sein, um das Objekt zu drehen. Der folgende Code zeigt, wie diese Werte im Bearbeitungsprozessor festgelegt werden können.
 
 
 ```C++
@@ -60,12 +60,12 @@ HRESULT STDMETHODCALLTYPE CManipulationEventSink::ManipulationDelta(
 
 
 
-Im vorherigen Beispiel wird der Abstand zum Rand des Objekts (auf 40 Prozent skaliert) als pivotradius verwendet. Da die Objektgröße berücksichtigt wird, ist diese Berechnung für jedes Objekt Delta gültig. Beim Skalieren des Objekts wächst der pivotradius. Dieser Wert und die x-und y-Werte des-Objekts werden an den Manipulations Prozessor übermittelt, um das Objekt um den Pivotpunkt zu drehen.
+Im vorherigen Beispiel wird der Abstand zum Rand des Objekts (auf 40 Prozent skaliert) als Pivotradius verwendet. Da die Objektgröße berücksichtigt wird, ist diese Berechnung für jedes Objektdelta gültig. Wenn das Objekt skaliert wird, wächst der Pivotradius. Dieser Wert und die x- und y-Werte in der Mitte des Objekts werden an den Bearbeitungsprozessor übergeben, um das Objekt um den Pivotpunkt zu drehen.
 
 > [!Note]  
-> Der [**pivotradius**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotradius) -Wert darf niemals zwischen 0,0 und 1,0 liegen.
+> Der [**PivotRadius-Wert**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotradius) sollte nie zwischen 0,0 und 1,0 liegen.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -74,18 +74,18 @@ Im vorherigen Beispiel wird der Abstand zum Rand des Objekts (auf 40 Prozent ska
 [Manipulationen](getting-started-with-manipulations.md)
 </dt> <dt>
 
-[**Pivotradius**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotradius)
+[**PivotRadius**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotradius)
 </dt> <dt>
 
-[**Pivotpointx**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotpointx)
+[**PivotPointX**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotpointx)
 </dt> <dt>
 
-[**Pivotpointy**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotpointy)
+[**PivotPointY**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-get_pivotpointy)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

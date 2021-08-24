@@ -1,11 +1,11 @@
 ---
-title: RegistrationInfo. Uri (Eigenschaft)
-description: Bei der Skripterstellung wird der URI der Aufgabe abgerufen oder festgelegt.
+title: RegistrationInfo.URI(Eigenschaft)
+description: Für die Skripterstellung ruft den URI der Aufgabe ab oder legt diesen fest.
 ms.assetid: 49085ee4-65e1-412c-ac1c-9c0f9efe5679
 keywords:
-- Uri-Eigenschaft Taskplaner
-- Uri-Eigenschaft Taskplaner, RegistrationInfo-Objekt
-- RegistrationInfo-Objekt Taskplaner, Uri-Eigenschaft
+- URI-Taskplaner
+- URI-Eigenschaft Taskplaner , RegistrationInfo-Objekt
+- RegistrationInfo-Taskplaner , URI-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 77598d556fdec29f41004529471c8098314a6faf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 94c34c5dee30115ee430ad072d26e4bd67879988a9f2633cf9da9304e31324b2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518494"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034080"
 ---
-# <a name="registrationinfouri-property"></a>RegistrationInfo. Uri (Eigenschaft)
+# <a name="registrationinfouri-property"></a>RegistrationInfo.URI(Eigenschaft)
 
-Bei der Skripterstellung wird der URI der Aufgabe abgerufen oder festgelegt.
+Für die Skripterstellung ruft den URI der Aufgabe ab oder legt diesen fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -42,9 +42,9 @@ RegistrationInfo.URI As String
 
 Der URI der Aufgabe.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe wird der Task-URI mit dem [**URI**](taskschedulerschema-uri-registrationinfotype-element.md) -Element des Taskplaner Schemas angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe wird der Task-URI mithilfe des [**URI-Elements**](taskschedulerschema-uri-registrationinfotype-element.md) des Taskplaner angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,9 +52,9 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe wird der Task-URI mit dem [*
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

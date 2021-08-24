@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_ResourceRecord-Klasse
-description: Die MicrosoftDNS \_ resourcerecord-Klasse stellt die allgemeinen Eigenschaften eines DNS RR dar. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Die MicrosoftDNS \_ ResourceRecord-Klasse stellt die allgemeinen Eigenschaften einer DNS-RR dar. Die folgende Syntax wird durch MOF-Code vereinfacht.
 ms.assetid: 84d6d106-fcc9-44ae-8db2-181c60489aec
 keywords:
-- DNS-MicrosoftDNS_ResourceRecord Klasse
-- DNS-MicrosoftDNS_ResourceRecord Klasse, beschrieben
+- MicrosoftDNS_ResourceRecord DNS-Klasse
+- MicrosoftDNS_ResourceRecord DNS-Klasse , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -26,18 +26,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: abe546ceabb5590ccd4907448af5efd5e2d4fe2f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8b54d23ae522291a2a38ad5d3f046fc444efdefd4d270519fbc3a2ee5739ba47
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119874800"
 ---
-# <a name="microsoftdns_resourcerecord-class"></a>MicrosoftDNS \_ resourcerecord-Klasse
+# <a name="microsoftdns_resourcerecord-class"></a>MicrosoftDNS \_ ResourceRecord-Klasse
 
-Die **MicrosoftDNS \_ resourcerecord** -Klasse stellt die allgemeinen Eigenschaften eines DNS RR dar.
+Die **MicrosoftDNS \_ ResourceRecord-Klasse** stellt die allgemeinen Eigenschaften einer DNS-RR dar.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,21 +58,21 @@ class MicrosoftDNS_ResourceRecord : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS \_ resourcerecord** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ ResourceRecord-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS \_ resourcerecord** -Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ ResourceRecord-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                   | BESCHREIBUNG                                                                                                                                                                                                                                                            |
 |:-----------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Kreateingestancefromtextrepresentation"** | Analysiert den RR in der textrepresentation-Zeichenfolge und mit dem eingegebenen DNS-Server und den Container Namen, definiert und instanziiert ein resourcerecord-Objekt. Die-Methode gibt einen Verweis auf das neue-Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: keine<br/> |
-| **Getobjectbytextrepresentation**        | Ruft eine vorhandene Instanz der MicrosoftDNS \_ resourcerecord-Unterklasse ab, die von der textrepresentation-Zeichenfolge zusammen mit dem DNS-Server und dem Container Namen dargestellt wird. <br/> Qualifizierer: keine<br/>                                                        |
+| **CreateInstanceFromTextRepresentation** | Analysiert die RR in der TextRepresentation-Zeichenfolge und mit den EINGABE-DNS-Server- und Containernamen, definiert und instanziiert ein ResourceRecord-Objekt. Die -Methode gibt einen Verweis auf das neue -Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: keine<br/> |
+| **GetObjectByTextRepresentation**        | Ruft eine vorhandene Instanz der MicrosoftDns ResourceRecord-Unterklasse ab, die durch die TextRepresentation-Zeichenfolge zusammen mit dem \_ DNS-Server und dem Containernamen dargestellt wird. <br/> Qualifizierer: keine<br/>                                                        |
 
 
 
@@ -80,134 +80,134 @@ Die **MicrosoftDNS \_ resourcerecord** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS \_ resourcerecord** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ ResourceRecord-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Container Name**
+**ContainerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Namen des Containers für die Zone, den Cache oder die roothints-Instanz an, die das RR enthält.
+Gibt den Namen des Containers für die Zone-, Cache- oder RootHints-Instanz an, die die RR enthält.
 
 </dd> <dt>
 
-**Dnsservername**
+**DnsServerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den voll qualifizierten Namen oder die IP-Adresse des DNS-Servers an, der den RR enthält.
+Gibt den FQDN oder die IP-Adresse des DNS-Servers an, der die RR enthält.
 
 </dd> <dt>
 
 **DomainName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt den voll qualifizierten Domänen Namen der Domäne dar, die den RR enthält. Diese Eigenschaft kann die Zeichen folgen enthalten \\ . Cache \\ oder \\ .. Roothints \\ , wenn der interne Cache oder die roothints den RR-bzw. den RR enthalten.
+Stellt den FQDN der Domäne dar, die die RR enthält. Diese Eigenschaft kann die Zeichenfolgen \\ enthalten. Cache \\ oder \\ . RootHints, \\ wenn der interne Cache bzw. RootHints die RR enthalten.
 
 </dd> <dt>
 
 **OwnerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Besitzer Name für die RR.
+Besitzername für die RR.
 
 </dd> <dt>
 
-**Recordclass = 1**
+**RecordClass=1**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-* * Windows Server 2003: * *
+**Windows Server 2003: **
 
-Diese Zeichenfolge stellt die Klasse des Ressourcen Datensatzes dar. Gültige Werte:
+Diese Zeichenfolge stellt die Klasse des Ressourcendatensatz dar. Gültige Werte:
 
-1: in (Internet)
+1: IN (Internet)
 
 2: CS (CSNET)
 
-3: ch (Chaos)
+3: CH (CHAOS)
 
 4: HS (Hesiod)
 
 </dd> <dt>
 
-**Recorddata**
+**RecordData**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ressourcen Daten Satz Daten.
+Ressourcendatensatzdaten.
 
 </dd> <dt>
 
-**Textrepresentation**
+**TextRepresentation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Text Darstellung des gesamten RR-Werts.
+Textdarstellung der gesamten RR.
 
 </dd> <dt>
 
-**Zeitstempel**
+**Timestamp**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitpunkt, zu dem die RR zuletzt aktualisiert wurde, ausgedrückt in verstrichenen Stunden seit dem 1. Januar 1601, Greenwich Mean Time (GMT).
+Zeitpunkt der letzten Aktualisierung der RR, ausgedrückt in verstrichenen Stunden seit dem 1. Januar 1601, Greenwich Mean Time (GMT).
 
 </dd> <dt>
 
 **TTL**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeit (in Sekunden), die der RR von einem DNS- [*Konflikt Löser*](r-gly.md)zwischengespeichert werden kann.
+Zeit in Sekunden, die die RR von einem DNS-Resolver [*zwischengespeichert werden kann.*](r-gly.md)
 
 </dd> </dl>
 
@@ -220,7 +220,7 @@ Zeit (in Sekunden), die der RR von einem DNS- [*Konflikt Löser*](r-gly.md)zwisc
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -228,10 +228,10 @@ Zeit (in Sekunden), die der RR von einem DNS- [*Konflikt Löser*](r-gly.md)zwisc
 
 <dl> <dt>
 
-[**Methode "kreateinzustancefromtextrepresentation" der MicrosoftDNS \_ resourcerecord-Klasse**](microsoftdns-resourcerecord-createinstancefromtextrepresentation.md)
+[**CreateInstanceFromTextRepresentation-Methode der MicrosoftDNS \_ ResourceRecord-Klasse**](microsoftdns-resourcerecord-createinstancefromtextrepresentation.md)
 </dt> <dt>
 
-[**Getobjectbytextrepresentation-Methode der MicrosoftDNS \_ resourcerecord-Klasse**](microsoftdns-resourcerecord-getobjectbytextrepresentation.md)
+[**GetObjectByTextRepresentation-Methode der MicrosoftDNS \_ ResourceRecord-Klasse**](microsoftdns-resourcerecord-getobjectbytextrepresentation.md)
 </dt> </dl>
 
  

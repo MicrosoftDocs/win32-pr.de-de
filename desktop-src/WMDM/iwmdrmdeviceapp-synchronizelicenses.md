@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmdeviceapp-synchronizelicenses-Methode (wmdrmdeviceapp. h)
-description: Die synchronizelicenses-Methode aktualisiert Lizenzen auf einem Gerät, wenn Sie fast abgelaufen sind.
+title: IWMDRMDeviceApp SynchronizeLicenses-Methode (WMDRMDeviceApp.h)
+description: Die SynchronizeLicenses-Methode aktualisiert Lizenzen auf einem Gerät, wenn sie demnächst ablaufen.
 ms.assetid: 352378c1-7432-476c-98e9-d811165c020e
 keywords:
-- Synchronizelicenses-Methode Windows Media Device Manager
-- Synchronizelicenses-Methode, Windows Media Device Manager, iwmdrmdeviceapp-Schnittstelle
-- Iwmdrmdeviceapp-Schnittstelle Windows Media Device Manager, synchronizelicenses-Methode
+- SynchronizeLicenses-Methodenfenster Media Geräte-Manager
+- SynchronizeLicenses-Methodenfenster Media Geräte-Manager , IWMDRMDeviceApp-Schnittstelle
+- IWMDRMDeviceApp-Schnittstelle windows Media Geräte-Manager , SynchronizeLicenses-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b08f3457fec55a0eb519419feddf4594a2cbfac0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 91ec48743bf52d990c64ce1aecf30897a7ee2f51664e88695a181f9d4f758140
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120031740"
 ---
-# <a name="iwmdrmdeviceappsynchronizelicenses-method"></a>Iwmdrmdeviceapp:: synchronizelicenses-Methode
+# <a name="iwmdrmdeviceappsynchronizelicenses-method"></a>IWMDRMDeviceApp::SynchronizeLicenses-Methode
 
-Die **synchronizelicenses** -Methode aktualisiert Lizenzen auf einem Gerät, wenn Sie fast abgelaufen sind.
+Die **SynchronizeLicenses-Methode** aktualisiert Lizenzen auf einem Gerät, wenn sie demnächst ablaufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,60 +46,60 @@ HRESULT SynchronizeLicenses(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
-Zeiger auf ein [**iwmdmdevice**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmdevice) -Objekt.
+Zeiger auf ein [**IWMDMDevice-Objekt.**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmdevice)
 
 </dd> <dt>
 
-*pprogresscallback* \[ in\]
+*pProgressCallback* \[ In\]
 </dt> <dd>
 
-Status Rückruf, der den Fortschritt von eventuell auszuführenden Schritten empfängt. Der Schritt wird durch den *EventID-* Parameter der [**IWMDMProgress3**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress3) -Methode identifiziert, die aufgerufen wird.
+Statusrückruf, der den Fortschritt aller Schritte empfängt, die ggf. ausgeführt werden müssen. Der Schritt wird durch den *EventId-Parameter* der aufgerufenen [**IWMDMProgress3-Methode**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress3) identifiziert.
 
 </dd> <dt>
 
-*cminzählthreshold* \[ in\]
+*cMinCountThreshold* \[ In\]
 </dt> <dd>
 
-Optionale minimale Anzahl von verbleibenden spielen für eine Geräte Lizenz.
+Optionale Mindestanzahl verbleibender Wiedergaben für eine Gerätelizenz.
 
 </dd> <dt>
 
-*cminhoursthreshold* \[ in\]
+*cMinHoursThreshold* \[ In\]
 </dt> <dd>
 
-Die optionalen minimalen verbleibenden Stunden für eine Geräte Lizenz.
+Optionale verbleibende Mindeststunden für eine Gerätelizenz.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                         | Beschreibung                                                                                                                                                 |
 |---------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                | Die Methode wurde erfolgreich ausgeführt.<br/>                                                                                                                            |
-| <dl> <dt>**DRM \_ E \_ invalidArg**</dt> </dl>                   | Mindestens ein Argument ist ungültig.<br/>                                                                                                             |
-| <dl> <dt>**DRM \_ E \_ invalidxmltag**</dt> </dl>                | XML ist nicht ordnungsgemäß formatiert.<br/>                                                                                                                        |
-| <dl> <dt>**DRM \_ E \_ notimpl**</dt> </dl>                      | Diese Funktion ist zurzeit nicht implementiert. (Synclicenses w/ *pdevice* = null)<br/>                                                               |
-| <dl> <dt>**DRM \_ E \_ noxmlclosetag**</dt> </dl>                | Die Lizenz-XML-Datei wurde nicht ordnungsgemäß formatiert.<br/>                                                                                                           |
-| <dl> <dt>**DRM \_ E \_ noxmlopentag**</dt> </dl>                 | Die Lizenz-XML-Datei wurde nicht ordnungsgemäß formatiert.<br/>                                                                                                           |
-| <dl> <dt>**DRM- \_ E- \_ outo-Speicher**</dt> </dl>                  | Nicht genügend Arbeitsspeicher.<br/>                                                                                                                                   |
-| <dl> <dt>**DRM \_ E \_ xmlnotfound**</dt> </dl>                  | Fehler beim Suchen eines erforderlichen XML-Tags in der Lizenz.<br/>                                                                                                |
-| <dl> <dt>**NS \_ E \_ Gerät \_ nicht \_ WMDRM- \_ Gerät**</dt> </dl>    | Das angegebene Gerät ist kein Windows Media DRM-kompatibles Gerät.<br/>                                                                               |
-| <dl> <dt>**NS \_ E \_ DRM \_ benötigt \_ Individualisierung**</dt> </dl> | Das DRM erfordert ein individualisiertes schwarzes Kästchen, um diese Funktion auszuführen. Anders ausgedrückt: für das Windows Media-Format-SDK ist ein Sicherheits Upgrade erforderlich.<br/> |
+| <dl> <dt>**DRM \_ E \_ INVALIDARG**</dt> </dl>                   | Mindestens ein Argument ist ungültig.<br/>                                                                                                             |
+| <dl> <dt>**DRM \_ E \_ INVALIDXMLTAG**</dt> </dl>                | XML ist nicht ordnungsgemäß formatiert.<br/>                                                                                                                        |
+| <dl> <dt>**DRM \_ E \_ NOTIMPL**</dt> </dl>                      | Diese Funktionalität ist derzeit nicht implementiert. (SyncLicenses w/ *pDevice* =NULL)<br/>                                                               |
+| <dl> <dt>**DRM \_ E \_ NOXMLCLOSETAG**</dt> </dl>                | Die Lizenz-XML wurde nicht ordnungsgemäß formatiert.<br/>                                                                                                           |
+| <dl> <dt>**DRM \_ E \_ NOXMLOPENTAG**</dt> </dl>                 | Die Lizenz-XML wurde nicht ordnungsgemäß formatiert.<br/>                                                                                                           |
+| <dl> <dt>**DRM \_ E \_ OUTOFMEMORY**</dt> </dl>                  | Nicht genügend Arbeitsspeicher.<br/>                                                                                                                                   |
+| <dl> <dt>**DRM \_ E \_ XMLNOTFOUND**</dt> </dl>                  | Fehler beim Suchen eines erforderlichen XML-Tags in der Lizenz.<br/>                                                                                                |
+| <dl> <dt>**NS \_ E \_ DEVICE \_ NOT \_ WMDRM \_ DEVICE**</dt> </dl>    | Das angegebene Gerät ist kein Windows Medien-DRM-kompatibles Gerät.<br/>                                                                               |
+| <dl> <dt>**NS \_ E \_ DRM ERFORDERT \_ \_ INDIVIDUALISIERUNG**</dt> </dl> | Das DRM erfordert eine individualisierte Blackbox, um diese Funktion auszuführen. Anders ausgedrückt: Das Windows Media Format SDK erfordert ein Sicherheitsupgrade.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Rückruf kann nur auf einem Gerät erfolgen, das Windows Media DRM 10 für tragbare Geräte unterstützt. Sie müssen mindestens einen Schwellenwert Parameter angeben.
+Dieser Aufruf kann nur auf einem Gerät erfolgen, das Windows Media DRM 10 für portable Geräte unterstützt. Sie müssen mindestens einen Schwellenwertparameter angeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,8 +107,8 @@ Dieser Rückruf kann nur auf einem Gerät erfolgen, das Windows Media DRM 10 fü
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmdeviceapp. h (erfordert auch wmdrmdeviceapp \_ i. c, erstellt von wmdrmdeviceapp. idl)</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Mssachlp. lib</dt> </dl>                                                                        |
+| Header<br/>  | <dl> <dt>WMDRMDeviceApp.h (erfordert auch Wmdrmdeviceapp \_ i.c, erstellt aus WMDRMDeviceApp.idl)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Mssachlp.lib</dt> </dl>                                                                        |
 
 
 
@@ -116,13 +116,13 @@ Dieser Rückruf kann nur auf einem Gerät erfolgen, das Windows Media DRM 10 fü
 
 <dl> <dt>
 
-[**Behandeln geschützter Inhalte in der Anwendung**](handling-protected-content-in-the-application.md)
+[**Behandeln von geschützten Inhalten in der Anwendung**](handling-protected-content-in-the-application.md)
 </dt> <dt>
 
 [**IWMDMProgress3-Schnittstelle**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmprogress3)
 </dt> <dt>
 
-[**Iwmdrmdeviceapp-Schnittstelle**](iwmdrmdeviceapp.md)
+[**IWMDRMDeviceApp-Schnittstelle**](iwmdrmdeviceapp.md)
 </dt> </dl>
 
  

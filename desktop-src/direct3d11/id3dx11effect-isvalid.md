@@ -1,11 +1,11 @@
 ---
 title: ID3DX11Effect IsValid-Methode (D3dx11effect.h)
-description: Testen Sie einen Effekt, um zu überprüfen, ob er eine gültige Syntax enthält. | ID3DX11Effect IsValid-Methode (D3dx11effect.h)
+description: Testen Sie einen Effekt, um festzustellen, ob er eine gültige Syntax enthält. | ID3DX11Effect IsValid-Methode (D3dx11effect.h)
 ms.assetid: 42bf0069-1828-4f55-99f5-d0f81eb04336
 keywords:
 - IsValid-Methode Direct3D 11
-- IsValid-Methode Direct3D 11, ID3DX11Effect-Schnittstelle
-- ID3DX11Effect-Schnittstelle Direct3D 11, IsValid-Methode
+- IsValid-Methode Direct3D 11 , ID3DX11Effect-Schnittstelle
+- ID3DX11Effect-Schnittstelle Direct3D 11 , IsValid-Methode
 topic_type:
 - apiref
 api_name:
@@ -26,7 +26,7 @@ ms.locfileid: "119608790"
 ---
 # <a name="id3dx11effectisvalid-method"></a>ID3DX11Effect::IsValid-Methode
 
-Testen Sie einen Effekt, um zu überprüfen, ob er eine gültige Syntax enthält.
+Testen Sie einen Effekt, um festzustellen, ob er eine gültige Syntax enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,12 +45,12 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **BOOL**](/windows/desktop/WinProg/windows-data-types)**
 
-**TRUE,** wenn die Codesyntax gültig ist; **andernfalls FALSE**.
+**TRUE,** wenn die Codesyntax gültig ist; andernfalls **FALSE**.
 
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -61,11 +61,11 @@ Typ: **[ **BOOL**](/windows/desktop/WinProg/windows-data-types)**
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

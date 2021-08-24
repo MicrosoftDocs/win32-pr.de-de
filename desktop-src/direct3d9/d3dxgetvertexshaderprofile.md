@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 70d6cdf79fdd91e819d54702682515aa3e4810b4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e5c646fb9779ca923480487cb96f184c76eff9ea
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114458"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473626"
 ---
 # <a name="d3dxgetvertexshaderprofile-function"></a>D3DXGetVertexShaderProfile-Funktion
 
@@ -57,59 +57,32 @@ Der HLSL-Profilname.
 
 Wenn das Gerät keine Vertex-Shader unterstützt, gibt die Funktion **NULL** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Ein Shaderprofil gibt die zu verwendende Assembly-Shaderversion und die Funktionen an, die dem HLSL-Compiler beim Kompilieren eines Shaders zur Verfügung stehen. In der folgenden Tabelle sind die unterstützten Vertex-Shaderprofile aufgeführt.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Shaderprofil</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>vs_1_1</td>
-<td>Kompilieren Sie in vs_1_1 Version.</td>
-</tr>
-<tr class="even">
-<td>vs_2_0</td>
-<td>Kompilieren Sie in vs_2_0 Version.</td>
-</tr>
-<tr class="odd">
-<td>vs_2_a</td>
-<td>Entspricht dem vs_2_0 Profil mit den folgenden zusätzlichen Funktionen, die der Compiler als Ziel hat:
-<ul>
-<li>Die Anzahl temporärer Register (r#) ist größer oder gleich 13.</li>
-<li>Anweisung zur dynamischen Flusssteuerung.</li>
-<li>Prädication.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>vs_3_0</td>
-<td>Kompilieren Sie vs_3_0 Version.</td>
-</tr>
-</tbody>
-</table>
+
+| Shaderprofil | BESCHREIBUNG | 
+|----------------|-------------|
+| vs_1_1 | Kompilieren Sie in vs_1_1 Version. | 
+| vs_2_0 | Kompilieren Sie in vs_2_0 Version. | 
+| vs_2_a | Identisch mit dem vs_2_0-Profil, mit den folgenden zusätzlichen Funktionen, die der Compiler als Ziel hat:<ul><li>Die Anzahl temporärer Register (r#) ist größer oder gleich 13.</li><li>Dynamische Flusssteuerungsanweisung.</li><li>Prädikation.</li></ul> | 
+| vs_3_0 | Kompilieren Sie in vs_3_0 Version. | 
+
 
 
 
  
 
-Weitere Informationen zu den Unterschieden zwischen shader-Versionen finden Sie unter [Vertex Shader Differences](../direct3dhlsl/dx9-graphics-reference-asm-vs-differences.md).
+Weitere Informationen zu den Unterschieden zwischen Shaderversionen finden Sie unter [Vertex-Shaderunterschiede.](../direct3dhlsl/dx9-graphics-reference-asm-vs-differences.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |

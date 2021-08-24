@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: I/O-Parametern'
-title: I/O-Parameter
+description: Weitere Informationen finden Sie unter E/A-Parameter.
+title: E/A-Parameter
 TOCTitle: I/O Parameters
 ms:assetid: 5df3c106-52ac-4ca0-9a6a-d5d62576bb23
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269260(v=EXCHG.10)
@@ -15,590 +15,130 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 13ba0e89602f7e5d4b9df395e89c73c8dc735692
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0a980e436dacc020a0606e6a9466492fe687ca0e
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753985"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473536"
 ---
-# <a name="io-parameters"></a>I/O-Parameter
+# <a name="io-parameters"></a>E/A-Parameter
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="io-parameters"></a>I/O-Parameter
+## <a name="io-parameters"></a>E/A-Parameter
 
-Dieses Thema enthält Parameter, die für die Eingabe und Ausgabe (e/a) verwendet werden.
+Dieses Thema enthält Parameter, die für die Eingabe und Ausgabe (E/A) verwendet werden.
 
 *JET_paramAccessDeniedRetryPeriod*  
 53  
 
-**Windows XP und höher:**  Dieser Parameter konfiguriert die Dauer (in Millisekunden), die von der Datenbank-Engine für den Zugriff auf eine gesperrte Datei verwendet wird, bevor ein Fehler mit Jet_errFileAccessDenied auftritt. Diese Zeitverzögerung ist so konzipiert, dass Antivirensoftware verwendet wird, die möglicherweise einige der Dateien der Datenbank-Engine kurz nach dem Schließen offen hält.
+**Windows XP und höher:**  Dieser Parameter konfiguriert die Dauer (in Millisekunden), die die Datenbank-Engine für den Zugriff auf eine Datei verwendet, die gesperrt ist, bevor ein Fehler JET_errFileAccessDenied. Diese Zeitverzögerung wurde entwickelt, um Antivirensoftware zu verhindern, die einige der Dateien der Datenbank-Engine kurz nach dem Schließen geöffnet halten kann.
 
-**Hinweis**  Aufgrund der obigen Wiederholungs Logik führt jeder Versuch, eine Datenbank anzufügen oder eine Protokolldatei zu verwenden, die bereits von der Datenbank-Engine verwendet wird, zu einer Verzögerung dieser Größe, bevor der API-Rückruf einen (legitimen) Fehler zurückgibt. Dieser Parameter kann verwendet werden, um diese Verzögerung zu deaktivieren, falls es sich hierbei um ein häufiges Szenario handelt.
+**Hinweis:**  Als Ergebnis der obigen Wiederholungslogik führt jeder Versuch, an eine Datenbank angefügt oder eine Protokolldatei zu verwenden, die bereits von der Datenbank-Engine verwendet wird, zu einer Verzögerung dieser Größe, bevor der API-Aufruf einen (legitimen) Fehler zurückgibt. Dieser Parameter kann verwendet werden, um diese Verzögerung für den Fall zu deaktivieren, dass dies ein häufiges Szenario ist.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>10000</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Integer</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>0 – 4294967295</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Global</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Windows XP und höher</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>10000</p> | | <p>Typ:</p> | <p>Integer</p> | | <p>Gültiger Bereich:</p> | <p>0 – 4294967295</p> | | <p>Umfang:</p> | <p>Global</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Ja</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Ja</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Ja</p> | | <p>Betrifft Ressourcen:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>Windows XP und höher</p> | 
+
 
 
 *JET_paramCreatePathIfNotExist*  
 100  
 
-Wenn dieser Parameter auf true festgelegt ist, wird jeder Ordner, der in einem Dateisystempfad fehlt, der von der Datenbank-Engine verwendet wird, automatisch erstellt. Andernfalls schlägt der Vorgang, der den fehlenden Dateisystempfad verwendet, mit Jet_errInvalidPath fehl.
+Wenn dieser Parameter auf TRUE festgelegt ist, werden alle Ordner, die in einem Dateisystempfad fehlen, der von der Datenbank-Engine verwendet wird, automatisch erstellt. Andernfalls kann der Vorgang, der den fehlenden Dateisystempfad verwendet, nicht JET_errInvalidPath.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>False</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Boolean</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>False, True</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Instanz</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Alle</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>False</p> | | <p>Typ:</p> | <p>Boolesch</p> | | <p>Gültiger Bereich:</p> | <p>False, True</p> | | <p>Umfang:</p> | <p>Instanz</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Ja</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Nein</p> | | <p>Betrifft Ressourcen:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>All</p> | 
+
 
 
 *JET_paramEnableFileCache*  
 126  
 
-Wenn dieser Parameter **true** ist, verwendet die Datenbank-Engine den Windows-Dateicache als Lese Cache für alle verschiedenen Dateien. Sie wird auch als Schreib Cache für die temporäre Datenbank oder für Datenbanken verwendet, die mit deaktivierter Wiederherstellung geöffnet wurden. Die Datenbank-Engine muss das Schreiben Zwischenspeichern für normale Datenbanken, Transaktionsprotokoll Dateien und Prüf Punkt Dateien deaktivieren, um die Transaktions Integrität der Datenbanken zu schützen.
+Wenn dieser Parameter **true ist,** verwendet die Datenbank-Engine den Windows-Dateicache als Lesecache für alle seine verschiedenen Dateien. Sie wird auch als Schreibcache für die temporäre Datenbank oder für Datenbanken verwendet, die mit deaktivierter Wiederherstellung geöffnet werden. Die Datenbank-Engine muss die Schreibzwischenspeicherung für normale Datenbanken, Transaktionsprotokolldateien und Prüfpunktdateien deaktivieren, um die Transaktionsintegrität der Datenbanken zu schützen.
 
-Beachten Sie, dass durch die Verwendung des Windows-Datei Caches eine zweite Schicht der Zwischenspeicherung für Datenbankdateien hinzugefügt wird. Der Daten Bank Cache verwendet weiterhin seinen eigenen Arbeitsspeicher, um die Datenbankdateien zwischenzuspeichern. Der Zweck dieses Modus besteht darin, die Anwendung zu ermöglichen, die Datenbank-Engine mit einem kleinen dedizierten Cache zu konfigurieren und Windows das Spenden von Speicherplatz zu ermöglichen, um das Zwischenspeichern von Datenbankdaten weiter zu verbessern.
+Beachten Sie, dass durch die Verwendung des Windows-Dateicaches eine zweite Zwischenspeicherungsebene für Datenbankdateien hinzugefügt wird. Der Datenbankcache verwendet weiterhin seinen eigenen Arbeitsspeicher, um die Datenbankdateien zwischenspeichern zu können. Dieser Modus soll es der Anwendung ermöglichen, die Datenbank-Engine mit einem kleinen dedizierten Cache zu konfigurieren und es Windows zu ermöglichen, freien Arbeitsspeicher zu besparen, um die Zwischenspeicherung von Datenbankdaten weiter zu verbessern.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>False</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Boolean</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>False, True</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Global</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Windows Vista und höher</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>False</p> | | <p>Typ:</p> | <p>Boolesch</p> | | <p>Gültiger Bereich:</p> | <p>False, True</p> | | <p>Umfang:</p> | <p>Global</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Nein</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Ja</p> | | <p>Betrifft Ressourcen:</p> | <p>Ja</p> | | <p>Verfügbarkeit:</p> | <p>Windows Vista und höher</p> | 
+
 
 
 *JET_paramIOPriority*  
 152  
 
-Dieser Parameter steuert, wie ESE e/a-Vorgänge behandelt. Die Werte können auf 0 (JET_IOPriorityNormal) für den normalen Betrieb oder 1 (JET_IOPriorityLow) für einen Vorgang mit niedriger Priorität festgelegt werden. Wenn die Priorität auf JET_IOPriorityLow festgelegt ist, verwendet ESE die neue, in Windows Vista verfügbare Thread-e/a-Prioritäts Funktion, um die e/a-Priorität für den Thread zu verringern, sodass nachfolgende e/a-Vorgänge mit der neuen niedrigen Priorität ausgegeben werden.
+Dieser Parameter steuert, wie ESE E/A-Vorgänge behandelt. Die Werte können für den normalen Betrieb auf 0 (JET_IOPriorityNormal) oder auf 1 (JET_IOPriorityLow) für den Vorgang mit niedriger Priorität festgelegt werden. Wenn die Priorität auf JET_IOPriorityLow festgelegt ist, verwendet ESE die neue Thread-E/A-Prioritätsfunktion, die in Windows Vista verfügbar ist, um die E/A-Priorität für den Thread zu verringern, sodass nachfolgende E/A-Vorgänge mit der neuen niedrigen Priorität ausgegeben werden.
 
 **Windows Vista:**  JET_paramIOPriority wird in Windows Vista eingeführt.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Integer</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>0 - 1</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Instanz</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Windows Vista</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>0</p> | | <p>Typ:</p> | <p>Integer</p> | | <p>Gültiger Bereich:</p> | <p>0 - 1</p> | | <p>Umfang:</p> | <p>Instanz</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Ja</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Ja</p> | | <p>Betrifft Ressourcen:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>Windows Vista</p> | 
+
 
 
 *JET_paramOutstandingIOMax*  
 30 
 
-Mit diesem Parameter wird gesteuert, wie viele Datenbankdatei-e/a-Vorgängen im Host Betriebssystem gleichzeitig in eine Warteschlange gestellt werden können.
+Dieser Parameter steuert, wie viele Datenbankdatei-E/A-Dateien gleichzeitig im Hostbetriebssystem in die Warteschlange gestellt werden können.
 
-Ein größerer Wert für diesen Parameter kann die Leistung einer großen Datenbankanwendung erheblich unterstützen.
+Ein größerer Wert für diesen Parameter kann die Leistung einer großen Datenbankanwendung erheblich verbessern.
 
-**Windows XP und Windows Server 2003:**  Dieser Parameter wird unter Windows XP und Windows Server 2003 ignoriert und wirkt sich nicht auf den Betrieb der Datenbank-Engine aus.
+**Windows XP und Windows Server 2003:**  Dieser Parameter wird auf Windows XP und Windows Server 2003 ignoriert und wirkt sich nicht auf den Betrieb der Datenbank-Engine aus.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p><strong>Windows 2000: </strong>  64</p>
-<p><strong>Windows Vista:</strong>   1024</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Integer</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000:</strong>  8 – 2147483647</p>
-<p><strong>Windows Vista:</strong>  0 – 65536</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Global</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Alle</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p><strong>Windows 2000:</strong> 64</p><p><strong>Windows Vista:</strong> 1024</p> | | <p>Typ:</p> | <p>Integer</p> | | <p>Gültiger Bereich:</p> | <p><strong>Windows 2000:</strong> 8 – 2147483647</p><p><strong>Windows Vista:</strong> 0 – 65536</p> | | <p>Umfang:</p> | <p>Global</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Nein</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Ja</p> | | <p>Betrifft Ressourcen:</p> | <p>Ja</p> | | <p>Verfügbarkeit:</p> | <p>Alle</p> | 
+
 
 
 *JET_paramMaxCoalesceReadSize*  
 164  
 
-Maximale Anzahl von Bytes, die nach einem zusammengefügten Lesevorgang gruppiert werden können.
+Maximale Anzahl von Bytes, die für einen zusammenfingierten Lesevorgang gruppiert werden können.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>262144</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Integer</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>0-1073741824</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Global</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Windows 7</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>262144</p> | | <p>Typ:</p> | <p>Integer</p> | | <p>Gültiger Bereich:</p> | <p>0-1073741824</p> | | <p>Umfang:</p> | <p>Global</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Ja</p> | | <p>Betrifft Ressourcen:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>Windows 7</p> | 
+
 
 
 *JET_paramMaxCoalesceWriteSize*  
 165  
 
-Maximale Anzahl von Bytes, die für einen zusammengefügten Schreibvorgang gruppiert werden können.
+Maximale Anzahl von Bytes, die für einen zusammenfingierten Schreibvorgang gruppiert werden können.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>393216</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Integer</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>0-1073741824</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Global</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Windows 7</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>393216</p> | | <p>Typ:</p> | <p>Integer</p> | | <p>Gültiger Bereich:</p> | <p>0-1073741824</p> | | <p>Umfang:</p> | <p>Global</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Ja</p> | | <p>Betrifft Ressourcen:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>Windows 7</p> | 
+
 
 
 *JET_paramMaxCoalesceReadGapSize*  
 166  
 
-Maximale Anzahl von Bytes, die für einen zusammengefügten Schreib-e/a-Vorgang geändert werden können.
+Maximale Anzahl von Bytes, die für einen zusammenfingierten Schreib-E/A-Vorgang gelücket werden können.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>262144</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Integer</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>0-1073741824</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Global</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Windows 7</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>262144</p> | | <p>Typ:</p> | <p>Integer</p> | | <p>Gültiger Bereich:</p> | <p>0-1073741824</p> | | <p>Umfang:</p> | <p>Global</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Leistung aus:</p> | <p>Ja</p> | | <p>Wirkt sich auf Ressourcen aus:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>Windows 7</p> | 
+
 
 
 *JET_paramMaxCoalesceWriteGapSize*  
 167  
 
-Maximale Anzahl von Bytes, die für einen zusammengefügten Lese-e/a-Vorgang geändert werden können.
+Maximale Anzahl von Bytes, die für einen zusammengefügten Lese-E/A-Vorgang abgespalt werden können.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>393216</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Integer</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>0-1073741824</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Global</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Windows 7</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>393216</p> | | <p>Typ:</p> | <p>Integer</p> | | <p>Gültiger Bereich:</p> | <p>0-1073741824</p> | | <p>Umfang:</p> | <p>Global</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Leistung aus:</p> | <p>Ja</p> | | <p>Wirkt sich auf Ressourcen aus:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>Windows 7</p> | 
+
 
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetkreateingestance](./jetcreateinstance-function.md)  
+[JetCreateInstance](./jetcreateinstance-function.md)  
 [JetInit](./jetinit-function.md)

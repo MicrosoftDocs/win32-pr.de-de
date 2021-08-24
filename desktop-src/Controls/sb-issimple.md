@@ -1,9 +1,9 @@
 ---
-title: SB_ISSIMPLE Meldung (kommstrg. h)
-description: Überprüft ein Status leisten-Steuerelement, um zu bestimmen, ob es sich im einfachen Modus befindet.
+title: SB_ISSIMPLE (Commctrl.h)
+description: Überprüft ein Statusleisten-Steuerelement, um festzustellen, ob es sich im einfachen Modus befindet.
 ms.assetid: f4362bc3-1852-4569-af9b-96d2da4f0606
 keywords:
-- Windows-Steuerelemente für SB_ISSIMPLE Meldung
+- SB_ISSIMPLE von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 71a5c523bef45065b103051962d7f147816c505d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1e983da6ebec42131800b9faa168c0d2cb6c247da936951a8eb933f8b80af03f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119825890"
 ---
-# <a name="sb_issimple-message"></a>SB- \_ IsSimple-Meldung
+# <a name="sb_issimple-message"></a>SB \_ ISSIMPLE-Nachricht
 
-Überprüft ein Status leisten-Steuerelement, um zu bestimmen, ob es sich im einfachen Modus befindet.
+Überprüft ein Statusleisten-Steuerelement, um festzustellen, ob es sich im einfachen Modus befindet.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ ms.locfileid: "104105075"
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, wenn sich das Status leisten Steuerelement im einfachen Modus befindet, andernfalls NULL
+Gibt einen Wert ungleich 0 (null) zurück, wenn sich das Statusleisten-Steuerelement im einfachen Modus befindet, andernfalls 0 (null).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt einen Wert ungleich 0 (null) zurück, wenn sich das Status leisten Steuerel
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: PSM_ISDIALOGMESSAGE Meldung (prsht. h)
-description: Übergibt eine Meldung an ein Eigenschaften Blatt und gibt an, ob das Dialogfeld die Nachricht verarbeitet hat. Sie können diese Nachricht explizit oder mithilfe des propsheet \_ IsDialogMessage-Makros senden.
+title: PSM_ISDIALOGMESSAGE (Prsht.h)
+description: Übergibt eine Meldung an ein Eigenschaftenblattdialogfeld und gibt an, ob die Nachricht vom Dialogfeld verarbeitet wurde. Sie können diese Nachricht explizit oder mithilfe des PropSheet \_ IsDialogMessage-Makros senden.
 ms.assetid: 7629c3f8-0b10-4585-8a95-9309c75b3ebb
 keywords:
-- Windows-Steuerelemente für PSM_ISDIALOGMESSAGE Meldung
+- PSM_ISDIALOGMESSAGE von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b753fc849d76e3ac5071dd85bdd94950460fbb10
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 12f28d63e5586d3b083282db4e029551ce4e61d0ef997e36e3e874e9f032095b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088680"
 ---
-# <a name="psm_isdialogmessage-message"></a>PSM \_ IsDialogMessage-Nachricht
+# <a name="psm_isdialogmessage-message"></a>PSM \_ ISDIALOGMESSAGE-Nachricht
 
-Übergibt eine Meldung an ein Eigenschaften Blatt und gibt an, ob das Dialogfeld die Nachricht verarbeitet hat. Sie können diese Nachricht explizit oder mithilfe des [**propsheet \_ IsDialogMessage**](/windows/desktop/api/Prsht/nf-prsht-propsheet_isdialogmessage) -Makros senden.
+Übergibt eine Meldung an ein Eigenschaftenblattdialogfeld und gibt an, ob die Nachricht vom Dialogfeld verarbeitet wurde. Sie können diese Nachricht explizit oder mithilfe des [**PropSheet \_ IsDialogMessage-Makros**](/windows/desktop/api/Prsht/nf-prsht-propsheet_isdialogmessage) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,22 +39,22 @@ Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**msg**](/windows/win32/api/winuser/ns-winuser-msg) -Struktur, die die zu überprüfende Nachricht enthält.
+Zeiger auf eine [**MSG-Struktur,**](/windows/win32/api/winuser/ns-winuser-msg) die die zu überprüfende Meldung enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " **true** " zurück, wenn die Nachricht verarbeitet wurde, oder " **false** ", wenn die Meldung nicht verarbeitet wurde.
+Gibt **TRUE zurück,** wenn die Nachricht verarbeitet wurde, oder **FALSE,** wenn die Nachricht nicht verarbeitet wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Nachrichten Schleife sollte die **PSM \_ IsDialogMessage** -Nachricht mit nicht modalem Eigenschaften Blättern verwenden, um Nachrichten an das Eigenschaften Blatt zu übergeben. Verwenden Sie auf Systemen, die Unicode unterstützen, die Unicode-Versionen der Funktionen [**GetMessage**](/windows/desktop/api/winuser/nf-winuser-getmessage) und [**PeekMessage**](/windows/desktop/api/winuser/nf-winuser-peekmessagea) (**getmessagew** und **peekmessagew**) zum Abrufen von Nachrichten.
+Ihre Nachrichtenschleife sollte die **PSM \_ ISDIALOGMESSAGE-Nachricht** mit nicht moduslosen Eigenschaftenblättern verwenden, um Nachrichten an das Eigenschaftenblattdialogfeld zu übergeben. Verwenden Sie auf Systemen, die Unicode unterstützen, die Unicode-Versionen der [**GetMessage-**](/windows/desktop/api/winuser/nf-winuser-getmessage) und [**PeekMessage-Funktionen**](/windows/desktop/api/winuser/nf-winuser-peekmessagea) (**GetMessageW** und **PeekMessageW**), um Nachrichten abzurufen.
 
-Wenn der Rückgabewert angibt, dass die Nachricht verarbeitet wurde, darf Sie nicht an die Funktion [**translatemess**](/windows/desktop/api/winuser/nf-winuser-translatemessage) oder [**DispatchMessage**](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) weitergegeben werden.
+Wenn der Rückgabewert angibt, dass die Nachricht verarbeitet wurde, darf sie nicht an die [**TranslateMessage-**](/windows/desktop/api/winuser/nf-winuser-translatemessage) oder [**DispatchMessage-Funktion übergeben**](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) werden.
 
 > [!Note]  
-> Diese Meldung wird nicht unterstützt, wenn der Aero Wizard Style ([**PSH \_ aerowizard**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)) verwendet wird.
+> This message is not supported when using the Aero wizard style ([**PSH\_AEROWIZARD**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)).
 
  
 
@@ -64,9 +64,9 @@ Wenn der Rückgabewert angibt, dass die Nachricht verarbeitet wurde, darf Sie ni
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Wenn der Rückgabewert angibt, dass die Nachricht verarbeitet wurde, darf Sie ni
 
 <dl> <dt>
 
-[**Eigenschaften Blatt**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta)
+[**Propertysheet.showdialog**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta)
 </dt> </dl>
 
  

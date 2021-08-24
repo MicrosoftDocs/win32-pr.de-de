@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - windows.ui.xaml.documents.h
-ms.openlocfilehash: 2f246294c80814ec809c0a1ca035fcb4741c30c5
-ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
+ms.openlocfilehash: 877bede54ef714a011903424b1f323f004264affefedbcfae0ab44f2dcf58816
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111432232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119843400"
 ---
 # <a name="paragraph-element"></a>Paragraph-Element
 
@@ -46,7 +46,7 @@ Enthält einen Absatz.
 
 
 
-| attribute       | Typ                      | Erforderlich | BESCHREIBUNG                                                                             | Mögliche Werte           |
+| attribute       | Typ                      | Erforderlich | Beschreibung                                                                             | Mögliche Werte           |
 |-----------------|---------------------------|----------|-----------------------------------------------------------------------------------------|---------------------------|
 | **Left**        | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem äußersten linken Punkt im Begrenzungsfeld für das Element. | Eine beliebige ganze Zahl.              |
 | **Top**         | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem obersten Punkt im Begrenzungsfeld für das Element.  | Eine beliebige ganze Zahl.              |
@@ -73,7 +73,7 @@ Enthält einen Absatz.
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

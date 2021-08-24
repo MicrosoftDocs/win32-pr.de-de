@@ -1,9 +1,9 @@
 ---
-title: Acquisitiontimeyear-Attribut
-description: Das acquisitiontimeyear-Attribut ist der Jahres Teil des Datums und der Uhrzeit, zu der das Element der Bibliothek hinzugefügt wurde.
+title: AcquisitionTimeYear-Attribut
+description: Das AcquisitionTimeYear-Attribut ist der Jahresteil des Datums und der Uhrzeit, zu der das Element der Bibliothek hinzugefügt wurde.
 ms.assetid: f2efdaaf-3b1d-4d04-861a-a58895dd0769
 keywords:
-- Acquisitiontimeyear-Attribut, Windows Media Player
+- Windows Media Player des AcquisitionTimeYear-Attributs
 topic_type:
 - apiref
 api_name:
@@ -12,31 +12,31 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 60f325d4bdfe7c1dce8e110ac052e42b07b37245
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d2ff9e8ae1e7af18b6831dc264f1dfe86c278585bbf37b3b8c7ee8a169294df6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902840"
 ---
-# <a name="acquisitiontimeyear-attribute"></a>Acquisitiontimeyear-Attribut
+# <a name="acquisitiontimeyear-attribute"></a>AcquisitionTimeYear-Attribut
 
-Das **acquisitiontimeyear** -Attribut ist der Jahres Teil des Datums und der Uhrzeit, zu der das Element der Bibliothek hinzugefügt wurde.
+Das **AcquisitionTimeYear-Attribut** ist der Jahresteil des Datums und der Uhrzeit, zu der das Element der Bibliothek hinzugefügt wurde.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 -   [Andere Elemente](other-item-attributes.md)
--   [Foto Elemente](photo-item-attributes.md)
+-   [Fotoelemente](photo-item-attributes.md)
 -   [Wiedergabelisten](playlist-attributes-ref.md)
--   [Options Felder](radio-item-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Funkelemente](radio-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

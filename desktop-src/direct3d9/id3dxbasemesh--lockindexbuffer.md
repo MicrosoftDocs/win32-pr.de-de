@@ -1,7 +1,7 @@
 ---
-description: Sperrt einen Index Puffer und erhält einen Zeiger auf den Speicher des Index Puffers.
+description: Sperrt einen Indexpuffer und erhält einen Zeiger auf den Indexpufferspeicher.
 ms.assetid: c8941164-1f2a-4aed-b0bd-8130aac61da4
-title: 'ID3DXBaseMesh:: LockIndexBuffer-Methode (D3DX9Mesh. h)'
+title: ID3DXBaseMesh::LockIndexBuffer-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 388915d0d11ff910c19a2c70b305597a79cd04bb
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c2eab2806775572cb4e4c4a50899d48263c6ddf0d55138c37bcaff8367225c3f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050832"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120118820"
 ---
-# <a name="id3dxbasemeshlockindexbuffer-method"></a>ID3DXBaseMesh:: LockIndexBuffer-Methode
+# <a name="id3dxbasemeshlockindexbuffer-method"></a>ID3DXBaseMesh::LockIndexBuffer-Methode
 
-Sperrt einen Index Puffer und erhält einen Zeiger auf den Speicher des Index Puffers.
+Sperrt einen Indexpuffer und erhält einen Zeiger auf den Indexpufferspeicher.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,28 +41,28 @@ HRESULT LockIndexBuffer(
 
 <dl> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Kombination von 0 (null) oder mehreren Sperr Flags, die den Typ der auszuführenden Sperre beschreiben. Für diese Methode sind die gültigen Flags:
+Kombination von null oder mehr Sperrflags, die den Typ der durchzuführenden Sperre beschreiben. Für diese Methode sind die gültigen Flags:
 
--   D3DLOCK \_ verwerfen
--   D3DLOCK \_ kein \_ Dirty \_ Update
--   D3DLOCK \_ nosyslock
--   D3DLOCK \_ schreibgeschützt
+-   D3DLOCK \_ DISCARD
+-   D3DLOCK \_ KEIN \_ GEÄNDERTES \_ UPDATE
+-   D3DLOCK \_ NOSYSLOCK
+-   D3DLOCK \_ READONLY
 
 Eine Beschreibung der Flags finden Sie unter [D3DLOCK](d3dlock.md).
 
 </dd> <dt>
 
-*ppData* \[ Out, retval\]
+*ppData* \[ out, retval\]
 </dt> <dd>
 
 Typ: **[ **LPVOID**](../winprog/windows-data-types.md)\***
 
-VOID- \* Zeiger auf einen Puffer, der die Indexdaten enthält. Die Anzahl der Indizes in diesem Puffer ist gleich [**ID3DXBaseMesh:: getnumgesichter**](id3dxbasemesh--getnumfaces.md) \* 3.
+\*VOID-Zeiger auf einen Puffer, der die Indexdaten enthält. Die Anzahl der Indizes in diesem Puffer entspricht [**ID3DXBaseMesh::GetNumFaces**](id3dxbasemesh--getnumfaces.md) \* 3.
 
 </dd> </dl>
 
@@ -70,11 +70,11 @@ VOID- \* Zeiger auf einen Puffer, der die Indexdaten enthält. Die Anzahl der In
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Arbeiten mit Index Puffern können Sie mehrere Sperr Aufrufe durchführen. Sie müssen jedoch sicherstellen, dass die Anzahl der Sperr Aufrufe mit der Anzahl der entsperrungs Aufrufe identisch ist. Drawprimitive-Aufrufe können nicht mit einer ausstehenden Sperr Anzahl für einen aktuell festgelegten Index Puffer ausgeführt werden.
+Wenn Sie mit Indexpuffern arbeiten, können Sie mehrere Sperraufrufe tätigen. Sie müssen jedoch sicherstellen, dass die Anzahl der Sperraufrufe mit der Anzahl der Entsperraufrufe übereinstimmen. DrawPrimitive-Aufrufe sind mit ausstehender Sperranzahl für einen aktuell festgelegten Indexpuffer nicht erfolgreich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,8 +82,8 @@ Beim Arbeiten mit Index Puffern können Sie mehrere Sperr Aufrufe durchführen. 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

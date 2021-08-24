@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 7d24e19d49a8a96f91847892f519ef6c06d25ef5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: dc609e742a4f780f3cb8c34e4dbc4cc40842ee51
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114437"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473656"
 ---
 # <a name="d3dxgetpixelshaderprofile-function"></a>D3DXGetPixelShaderProfile-Funktion
 
@@ -57,70 +57,24 @@ Der HLSL-Profilname.
 
 Wenn das Gerät keine Pixelshader unterstützt, gibt die Funktion **NULL** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Ein Shaderprofil gibt die zu verwendende Assembly-Shaderversion und die Funktionen an, die dem HLSL-Compiler beim Kompilieren eines Shaders zur Verfügung stehen. In der folgenden Tabelle sind die unterstützten Pixel-Shaderprofile aufgeführt.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Shaderprofil</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>ps_1_1</td>
-<td>Kompilieren Sie in ps_1_1 Version.</td>
-</tr>
-<tr class="even">
-<td>ps_1_2</td>
-<td>Kompilieren Sie in ps_1_2 Version.</td>
-</tr>
-<tr class="odd">
-<td>ps_1_3</td>
-<td>Kompilieren Sie in ps_1_3 Version.</td>
-</tr>
-<tr class="even">
-<td>ps_1_4</td>
-<td>Kompilieren Sie in ps_1_4 Version.</td>
-</tr>
-<tr class="odd">
-<td>ps_2_0</td>
-<td>Kompilieren Sie in ps_2_0 Version.</td>
-</tr>
-<tr class="even">
-<td>ps_2_a</td>
-<td>Entspricht dem ps_2_0 Profil mit den folgenden zusätzlichen Funktionen, die der Compiler als Ziel hat:
-<ul>
-<li>Die Anzahl temporärer Register (r#) ist größer oder gleich 22.</li>
-<li>Beliebige Quellwizzle.</li>
-<li>Farbverlaufsanweisungen: dsx, dsy.</li>
-<li>Prädikation:</li>
-<li>Kein Leselimit für abhängige Textur.</li>
-<li>Keine Beschränkung für die Anzahl der Texturanweisungen.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>ps_2_b</td>
-<td>Entspricht dem ps_2_0 Profil mit den folgenden zusätzlichen Funktionen, die der Compiler als Ziel hat:
-<ul>
-<li>Die Anzahl temporärer Register (r#) ist größer oder gleich 32.</li>
-<li>Keine Beschränkung für die Anzahl der Texturanweisungen.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>ps_3_0</td>
-<td>Kompilieren Sie in ps_3_0 Version.</td>
-</tr>
-</tbody>
-</table>
+
+| Shaderprofil | BESCHREIBUNG | 
+|----------------|-------------|
+| ps_1_1 | Kompilieren Sie in ps_1_1 Version. | 
+| ps_1_2 | Kompilieren Sie in ps_1_2 Version. | 
+| ps_1_3 | Kompilieren Sie in ps_1_3 Version. | 
+| ps_1_4 | Kompilieren Sie in ps_1_4 Version. | 
+| ps_2_0 | Kompilieren Sie in ps_2_0 Version. | 
+| ps_2_a | Identisch mit dem ps_2_0-Profil, mit den folgenden zusätzlichen Funktionen, die der Compiler als Ziel hat:<ul><li>Die Anzahl temporärer Register (r#) ist größer oder gleich 22.</li><li>Beliebige Quelle swizzle.</li><li>Farbverlaufsanweisungen: dsx, dsy.</li><li>Prädikation.</li><li>Kein Leselimit für abhängige Textur.</li><li>Keine Beschränkung für die Anzahl der Texturanweisungen.</li></ul> | 
+| ps_2_b | Identisch mit dem ps_2_0-Profil, mit den folgenden zusätzlichen Funktionen, die der Compiler als Ziel hat:<ul><li>Die Anzahl temporärer Register (r#) ist größer oder gleich 32.</li><li>Keine Beschränkung für die Anzahl der Texturanweisungen.</li></ul> | 
+| ps_3_0 | Kompilieren Sie in ps_3_0 Version. | 
+
 
 
 
@@ -132,7 +86,7 @@ Weitere Informationen zu den Unterschieden zwischen Shaderversionen finden Sie u
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |

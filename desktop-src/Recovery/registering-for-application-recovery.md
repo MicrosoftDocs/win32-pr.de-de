@@ -1,45 +1,45 @@
 ---
-title: Registrieren für die Anwendungs Wiederherstellung
+title: Registrieren für die Anwendungswiederherstellung
 ms.assetid: 2940b1b2-a0ca-4f81-a576-ae6d53ffd4a8
-description: 'Weitere Informationen finden Sie hier: Registrieren für die Anwendungs Wiederherstellung'
+description: Weitere Informationen finden Sie unter Registrieren für Application Recovery.
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 056232bc2a8a10857ff07900ce261d95ed719b81
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ce2a67a36b26895fdc16652dd271b3b244d0860c14c268144c1357fa3cf51c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120024586"
 ---
-# <a name="registering-for-application-recovery"></a>Registrieren für die Anwendungs Wiederherstellung
+# <a name="registering-for-application-recovery"></a>Registrieren für die Anwendungswiederherstellung
 
-Dieser Abschnitt enthält ausführliche Informationen zum Implementieren eines Wiederherstellungs Features in Ihrer Anwendung. Sie sollten die Implementierung dieser Funktion in Erwägung gezogen, um die folgenden Fälle zu behandeln:
+Dieser Abschnitt enthält Details zum Implementieren eines Wiederherstellungsfeatures in Ihrer Anwendung. Sie sollten erwägen, dieses Feature zu implementieren, um die folgenden Fälle zu behandeln:
 
--   [Wiederherstellung, wenn eine Anwendung eine nicht behandelte Ausnahme hat oder nicht mehr reagiert](#recovering-when-an-application-experiences-an-unhandled-exception-or-stops-responding)
+-   [Wiederherstellung, wenn eine Anwendung eine nicht behandelte Ausnahme aufzeichnet oder nicht mehr reagiert](#recovering-when-an-application-experiences-an-unhandled-exception-or-stops-responding)
 
-    Verhindert, dass Daten verloren gehen, wenn die Anwendung unerwartet nicht mehr funktioniert.
+    Verhindert datenverlust, wenn die Anwendung unerwartet nicht mehr funktioniert.
 
--   [Speichern des Daten-und Anwendungs Zustands, wenn die Anwendung aufgrund eines Software Updates geschlossen wird](#saving-data-and-application-state-when-application-is-being-closed-due-to-a-software-update)
+-   [Speichern von Daten und Anwendungsstatus, wenn die Anwendung aufgrund eines Softwareupdates geschlossen wird](#saving-data-and-application-state-when-application-is-being-closed-due-to-a-software-update)
 
-    Ermöglicht einem Benutzer das nahtlose zurückgeben von Anwendungsdaten, wenn die Anwendung aufgrund einer Software Update Installation geschlossen wird (was geschieht, ohne dass der Benutzer die Möglichkeit hat, Daten zu speichern).
+    Ermöglicht einem Benutzer das nahtlose Abrufen von Anwendungsdaten, wenn die Anwendung aufgrund einer Softwareupdateinstallation geschlossen wird (was möglicherweise geschieht, ohne dem Benutzer die Möglichkeit zu geben, Daten zu speichern).
 
-## <a name="recovering-when-an-application-experiences-an-unhandled-exception-or-stops-responding"></a>Wiederherstellung, wenn eine Anwendung eine nicht behandelte Ausnahme hat oder nicht mehr reagiert
+## <a name="recovering-when-an-application-experiences-an-unhandled-exception-or-stops-responding"></a>Wiederherstellung, wenn eine Anwendung eine nicht behandelte Ausnahme aufzeichnet oder nicht mehr reagiert
 
-Um einen Wiederherstellungs Rückruf zu registrieren, rufen Sie die [**registerapplicationherstellungscallback**](/windows/win32/api/winbase/nf-winbase-registerapplicationrecoverycallback) -Funktion auf. [Windows-Fehlerberichterstattung (wer)](/windows/desktop/wer/windows-error-reporting) Ruft den Wiederherstellungs Rückruf auf, bevor die Anwendung aufgrund einer nicht behandelten Ausnahme beendet wird, oder wenn die Anwendung nicht reagiert.
+Um einen Wiederherstellungsrückruf zu registrieren, rufen Sie die [**RegisterApplicationRecoveryCallback-Funktion**](/windows/win32/api/winbase/nf-winbase-registerapplicationrecoverycallback) auf. [Windows-Fehlerberichterstattung (WER)](/windows/desktop/wer/windows-error-reporting) ruft Ihren Wiederherstellungsrückruf auf, bevor die Anwendung aufgrund einer nicht behandelten Ausnahme beendet wird oder die Anwendung nicht reagiert.
 
-Verwenden Sie den Wiederherstellungs Rückruf, um Daten und Zustandsinformationen zu speichern, bevor die Anwendung beendet wird. Sie können dann die gespeicherten Daten und Zustandsinformationen verwenden, wenn die Anwendung neu gestartet wird.
+Sie verwenden den Wiederherstellungsrückruf, um daten- und zustandsinformationen zu speichern, bevor die Anwendung beendet wird. Sie können dann die gespeicherten Daten und Zustandsinformationen verwenden, wenn die Anwendung neu gestartet wird.
 
-Während des Wiederherstellungs Vorgangs müssen Sie die [**applicationwiederherstellungsinprogress**](/windows/win32/api/winbase/nf-winbase-applicationrecoveryinprogress) -Funktion innerhalb des angegebenen pingintervalls abrufen. Andernfalls wird der Wiederherstellungs Vorgang beendet. Durch das Aufrufen von **applicationwiederherstellungsinprogress** können Sie wissen, dass Sie weiterhin aktiv Daten wiederherstellen. Wenn der Wiederherstellungs Vorgang abgeschlossen ist, wenden Sie die [**applicationwiederherstellungsfertige**](/windows/win32/api/winbase/nf-winbase-applicationrecoveryfinished) -Funktion an. Beachten Sie, dass die **applicationherstellycomplete** -Funktion der letzte von Ihnen vorgestellte Aufruf vor dem Beenden sein sollte, da die Funktion die Anwendung sofort beendet.
+Während des Wiederherstellungsprozesses müssen Sie die [**ApplicationRecoveryInProgress-Funktion**](/windows/win32/api/winbase/nf-winbase-applicationrecoveryinprogress) innerhalb des angegebenen Pingintervalls aufrufen. Andernfalls wird der Wiederherstellungsprozess beendet. Wenn **Sie ApplicationRecoveryInProgress** aufrufen, teilt WER mit, dass Sie weiterhin aktiv Daten wiederherstellen. Wenn der Wiederherstellungsprozess abgeschlossen ist, rufen Sie die [**ApplicationRecoveryFinished-Funktion**](/windows/win32/api/winbase/nf-winbase-applicationrecoveryfinished) auf. Beachten Sie, dass die **ApplicationRecoveryFinished-Funktion** der letzte Aufruf sein sollte, den Sie vor dem Beenden vornehmen, da die Funktion die Anwendung sofort beendet.
 
-Sie sollten in regelmäßigen Abständen temporäre Kopien der Daten und Zustandsinformationen im normalen Verlauf des Anwendungsprozesses speichern. Durch die regelmäßige Speicherung der Daten kann beim Wiederherstellungs Vorgang Zeit gespart werden.
+Sie sollten erwägen, während des normalen Verlaufs des Anwendungsprozesses regelmäßig temporäre Kopien der Daten und Zustandsinformationen zu speichern. Das regelmäßige Speichern der Daten kann Zeit im Wiederherstellungsprozess sparen.
 
-## <a name="saving-data-and-application-state-when-application-is-being-closed-due-to-a-software-update"></a>Speichern des Daten-und Anwendungs Zustands, wenn die Anwendung aufgrund eines Software Updates geschlossen wird
+## <a name="saving-data-and-application-state-when-application-is-being-closed-due-to-a-software-update"></a>Speichern von Daten und Anwendungsstatus, wenn die Anwendung aufgrund eines Softwareupdates geschlossen wird
 
-Wenn eine Windows-Anwendung aktualisiert werden kann, sollte die Anwendung auch die Nachrichten " [**WM \_ queryendsession**](/windows/desktop/Shutdown/wm-queryendsession) " und " [**WM \_ EndSession**](/windows/desktop/Shutdown/wm-endsession) " verarbeiten. Das Installationsprogramm sendet diese Nachrichten, wenn das Installationsprogramm die Anwendung Herunterfahren muss, um die Installation abzuschließen, oder wenn ein Neustart erforderlich ist, um die Installation abzuschließen. Beachten Sie, dass in diesem Fall die Anwendung weniger Zeit zum Ausführen der Wiederherstellung hat. Beispielsweise muss die Anwendung innerhalb von fünf Sekunden auf jede Nachricht antworten.
+Wenn eine Windows Anwendung aktualisiert werden kann, sollte die Anwendung auch die [**WM \_ QUERYENDSESSION-**](/windows/desktop/Shutdown/wm-queryendsession) und [**WM \_ ENDSESSION-Meldungen**](/windows/desktop/Shutdown/wm-endsession) verarbeiten. Das Installationsprogramm sendet diese Meldungen, wenn das Installationsprogramm die Anwendung herunterfahren muss, um die Installation abzuschließen, oder wenn ein Neustart erforderlich ist, um die Installation abzuschließen. Beachten Sie, dass die Anwendung in diesem Fall weniger Zeit für die Wiederherstellung hat. Beispielsweise muss die Anwendung innerhalb von fünf Sekunden auf jede Nachricht reagieren.
 
-Für Konsolen Anwendungen, die aktualisiert werden könnten, sollten Sie die Verarbeitung von STRG \_ C-Ereignis Benachrichtigungen in Erwägung gezogen \_ . Ein Beispiel finden Sie unter [registrieren für den Neustart der Anwendung](registering-for-application-restart.md). Der Installer sendet diese Benachrichtigung, wenn die Anwendung heruntergefahren werden muss, um das Update abzuschließen. Die Anwendung verfügt über 30 Sekunden, um die Benachrichtigung zu verarbeiten.
+Für Konsolenanwendungen, die aktualisiert werden können, sollten Sie die Behandlung von STRG-C-EREIGNISbenachrichtigungen in Betracht \_ \_ ziehen. Ein Beispiel finden Sie unter [Registrieren für Anwendungsneustart.](registering-for-application-restart.md) Das Installationsprogramm sendet diese Benachrichtigung, wenn die Anwendung heruntergefahren werden muss, um das Update abzuschließen. Die Anwendung hat 30 Sekunden Zeit, um die Benachrichtigung zu verarbeiten.
 
-Im folgenden Beispiel wird gezeigt, wie die Registrierung für die Wiederherstellung, eine einfache Implementierung des Wiederherstellungs Rückrufs und die Verarbeitung der " [**WM \_ queryendsession**](/windows/desktop/Shutdown/wm-queryendsession) "-und " [**WM \_ EndSession**](/windows/desktop/Shutdown/wm-endsession) "-Nachrichten
+Das folgende Beispiel zeigt, wie Sie sich für die Wiederherstellung registrieren, eine einfache Wiederherstellungsrückrufimplementierung und die [**WM \_ QUERYENDSESSION-**](/windows/desktop/Shutdown/wm-queryendsession) und [**WM \_ ENDSESSION-Meldungen**](/windows/desktop/Shutdown/wm-endsession) verarbeiten.
 
 
 ```C++
@@ -556,7 +556,7 @@ BOOL IsRestartSelected()
 
 
 
-Im folgenden finden Sie die Include-Datei "Recovery. h" für das Wiederherstellungs Beispiel.
+Im Folgenden wird die include-Datei recover.h für das Wiederherstellungsbeispiel beschrieben.
 
 
 ```C++
@@ -567,7 +567,7 @@ Im folgenden finden Sie die Include-Datei "Recovery. h" für das Wiederherstellu
 
 
 
-Im folgenden finden Sie die Ressourcen Datei "Recover. RC" für das Wiederherstellungs Beispiel.
+Im Folgenden wird die Ressourcendatei recover.rc für das Wiederherstellungsbeispiel beschrieben.
 
 
 ```C++
@@ -657,7 +657,7 @@ END
 
 
 
-Im folgenden finden Sie die Include-Datei "Resource. h" für das Wiederherstellungs Beispiel.
+Im Folgenden wird die Includedatei resource.h für das Wiederherstellungsbeispiel beschrieben.
 
 
 ```C++

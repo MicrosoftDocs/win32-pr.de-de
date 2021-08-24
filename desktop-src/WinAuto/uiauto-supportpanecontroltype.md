@@ -8,7 +8,7 @@ keywords:
 - Benutzeroberflächenautomatisierung,Struktur für Bereich-Steuerelementtyp
 - Benutzeroberflächenautomatisierung,Eigenschaften für den Steuerelementtyp "Bereich"
 - Benutzeroberflächenautomatisierung,Steuerelementmuster für den Steuerelementtyp "Bereich"
-- Benutzeroberflächenautomatisierung,Events für den Steuerelementtyp "Bereich"
+- Benutzeroberflächenautomatisierung,Ereignisse für den Steuerelementtyp "Bereich"
 - Strukturstrukturen,Steuerelementtyp "Bereich"
 - Eigenschaften,Steuerelementtyp "Bereich"
 - Steuerelementmuster, Steuerelementtyp "Bereich"
@@ -21,18 +21,18 @@ keywords:
 - Steuerelementtypen, Bereich
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 15e4a7225869c0752e65aece7e4eca00a416614315c8d5af810bdeb57d29aae0
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 6b335496d8d40d20ccc68f6bc2b048c87ff608dd
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118825526"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122474256"
 ---
 # <a name="pane-control-type"></a>Bereichssteuerungstyp
 
-Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung-Unterstützung für den **Steuerelementtyp Bereich.**
+Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den **Steuerelementtyp Bereich.**
 
-Der **Steuerelementtyp** Bereich ist für potenziell bildlauffähige Bereiche mit unterschiedlichen Inhalten. Es wird verwendet, um ein Objekt in einem Frame oder Dokumentfenster zu darstellen. Benutzer können zwischen Bereichssteuerelementen und innerhalb des Inhalts des aktuellen Bereichs navigieren. Bereichssteuerelemente stellen eine Gruppierungsebene dar, die niedriger als Fenster oder Dokumente, aber über einzelnen Steuerelementen ist. Der Benutzer kann je nach Kontext durch Drücken von TAB, F6 oder STRG+TAB zwischen den Bereichen navigieren.
+Der **Steuerelementtyp** Bereich ist für potenziell bildlauffähige Bereiche mit unterschiedlichen Inhalten. Es wird verwendet, um ein Objekt innerhalb eines Rahmens oder Dokumentfensters zu darstellen. Benutzer können zwischen Bereichssteuerelementen und innerhalb des Inhalts des aktuellen Bereichs navigieren. Bereichssteuerelemente stellen eine Gruppierungsebene dar, die niedriger als Fenster oder Dokumente, aber über einzelnen Steuerelementen ist. Der Benutzer kann je nach Kontext durch Drücken von TAB, F6 oder STRG+TAB zwischen den Bereichen navigieren.
 
 In den folgenden Abschnitten werden die Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **Steuerelementtyp Bereich** definiert. Die Benutzeroberflächenautomatisierung gelten für alle Bereichssteuerelemente, bei denen das Benutzeroberflächenframework/die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
@@ -51,28 +51,11 @@ Die folgende Tabelle zeigt ein typisches Steuerelement und eine Inhaltsansicht d
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>Bereich</li>
-</ul></td>
-<td><ul>
-<li>Bereich</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>Bereich</li></ul> | <ul><li>Bereich</li></ul> | 
+
 
 
 
@@ -82,14 +65,14 @@ Ein Bereichssteuerfeld wird immer in den Steuerelement- und Inhaltsansichten ang
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, deren Wert oder Definition für Bereichssteuerelemente besonders relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, deren Wert oder Definition für Bereichssteuerelemente besonders relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
 
 
 
 | Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert      | Hinweise                                                                                                                                                                                                                                                                                                                 |
 |---------------------------------------------------------------------------------------------------------------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**UIA \_ AccessKeyPropertyId**](uiauto-automation-element-propids.md)                       | Siehe Hinweise. | Wenn eine bestimmte Tastenkombination den Fokus auf den Bereich erhält, sollten diese Informationen über diese Eigenschaft verfügbar gemacht werden.                                                                                                                                                                                                      |
-| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise. | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Struktur der Benutzeroberflächenautomatisierung sein.                                                                                                                                                                                                          |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise. | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung sein.                                                                                                                                                                                                          |
 | [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise. | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                                                                                                                                              |
 | [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise. | Diese Eigenschaft macht einen durch Klicken aktivierbaren Punkt des Bereichssteuerelements verfügbar, durch den der Bereich den Fokus erhält, wenn auf den Punkt geklickt wird.                                                                                                                                                                                                |
 | [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **Bereich**   |                                                                                                                                                                                                                                                                                                                       |
@@ -115,8 +98,8 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die von B
 |---------------------------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**IDockProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-idockprovider)           | Depends (Abhängig) | Implementieren [](uiauto-implementingdock.md) Sie das Dock-Steuerelementmuster, wenn das Bereichssteuerfeld angedockt werden kann.                                                                                          |
 | [**IScrollProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iscrollprovider)       | Depends (Abhängig) | Implementieren [](uiauto-implementingscroll.md) Sie das Bildlauf-Steuerelementmuster, wenn für das Bereichssteuerfeld ein Bildlauf möglich ist.                                                                                    |
-| [**ITransformProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itransformprovider) | Depends (Abhängig) | Implementieren Sie das [Steuerelementmuster Transformieren,](uiauto-implementingtransform.md) wenn das Bereichssteuerelement auf dem Bildschirm verschoben, geändert oder gedreht werden kann.                                              |
-| [**IWindowProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iwindowprovider)       | Nie   | Wenn das Element das [Window-Steuerelementmuster](uiauto-implementingwindow.md) implementieren muss, sollte das Steuerelement auf dem [Steuerelementtyp Fenster](uiauto-supportwindowcontroltype.md) basieren. |
+| [**ITransformProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itransformprovider) | Depends (Abhängig) | Implementieren Sie [das Steuerelementmuster](uiauto-implementingtransform.md) Transformieren, wenn das Bereichssteuerfeld auf dem Bildschirm verschoben, seine Größe geändert oder gedreht werden kann.                                              |
+| [**IWindowProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iwindowprovider)       | Nie   | Wenn das Element das [](uiauto-implementingwindow.md) Window-Steuerelementmuster implementieren muss, sollte das Steuerelement auf dem [Steuerelementtyp Window](uiauto-supportwindowcontroltype.md) basieren. |
 
 
 
@@ -124,7 +107,7 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die von B
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Ereignisse aufgeführt, die bereichssteuerelemente unterstützen müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die Bereichssteuerelemente unterstützen müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
@@ -132,14 +115,14 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Ereignisse
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | [**UIA \_ AsyncContentLoadedEventId**](uiauto-event-ids.md)                                                                   |                                                                                                                            |
 | [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                                           |                                                                                                                            |
-| [**UIA \_ Das BoundingRectanglePropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md)                      |                                                                                                                            |
-| [**UIA \_ IsOffscreenPropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md)                                  | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft**](uiauto-automation-element-propids.md) unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ ScrollHorizontallyScrollablePropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md)   | Wenn das Steuerelement [](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.           |
-| [**UIA \_ ScrollHorizontalScrollPercentPropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md) | Wenn das Steuerelement [](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.           |
-| [**UIA \_ ScrollHorizontalViewSizePropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md)           | Wenn das Steuerelement [](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.           |
-| [**UIA \_ ScrollVerticallyScrollablePropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md)       | Wenn das Steuerelement [](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.           |
-| [**UIA \_ ScrollVerticalScrollPercentPropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md)     | Wenn das Steuerelement [](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.           |
-| [**UIA \_ ScrollVerticalViewSizePropertyId-Eigenschaftswechselereignis.**](uiauto-control-pattern-propids.md)               | Wenn das Steuerelement [](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.           |
+| [**UIA \_ BoundingRectanglePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                      |                                                                                                                            |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                                  | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen. |
+| [**UIA \_ ScrollHorizontallyScrollablePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)   | Wenn das Steuerelement das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) unterstützt, muss es dieses Ereignis unterstützen.           |
+| [**UIA \_ ScrollHorizontalScrollPercentPropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md) | Wenn das Steuerelement das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) unterstützt, muss es dieses Ereignis unterstützen.           |
+| [**UIA \_ ScrollHorizontalViewSizePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)           | Wenn das Steuerelement das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) unterstützt, muss es dieses Ereignis unterstützen.           |
+| [**UIA \_ ScrollVerticallyScrollablePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)       | Wenn das Steuerelement das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) unterstützt, muss es dieses Ereignis unterstützen.           |
+| [**UIA \_ ScrollVerticalScrollPercentPropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)     | Wenn das Steuerelement das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) unterstützt, muss es dieses Ereignis unterstützen.           |
+| [**UIA \_ ScrollVerticalViewSizePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)               | Wenn das Steuerelement das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) unterstützt, muss es dieses Ereignis unterstützen.           |
 | [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                                       |                                                                                                                            |
 
 
@@ -148,56 +131,17 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Ereignisse
 
 ## <a name="pane-control-type-example"></a>Beispiel für Pane-Steuerelementtyp
 
-Die folgende Abbildung zeigt ein Steuerelement, das den **Steuerelementtyp Bereich** implementiert.
+Die folgende Abbildung veranschaulicht ein Steuerelement, das den **Steuerelementtyp Bereich** implementiert.
 
-![Screenshot: Beispiel für ein Bereichssteuerelement](images/panexmpl.jpg)
+![Screenshot, der ein Beispiel für ein Bereichssteuerfeld zeigt](images/panexmpl.jpg)
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Benutzeroberflächenautomatisierung-Struktur – Steuerelementansicht</th>
-<th>Benutzeroberflächenautomatisierung-Struktur – Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>Bereich
-<ul>
-<li>Struktur (Scroll-Muster)
-<ul>
-<li>TreeItem</li>
-<li>...</li>
-</ul></li>
-</ul></li>
-<li>Bereich
-<ul>
-<li>Bearbeiten (Scrollmuster)</li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>Bereich
-<ul>
-<li>Struktur (Scroll-Muster)
-<ul>
-<li>TreeItem</li>
-<li>...</li>
-</ul></li>
-<li>Bereich
-<ul>
-<li>Bearbeiten (Scrollmuster)</li>
-</ul></li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Benutzeroberflächenautomatisierung Struktur – Steuerelementansicht | Benutzeroberflächenautomatisierung Struktur – Inhaltsansicht | 
+|-----------------------------------|-----------------------------------|
+| <ul><li>Bereich<ul><li>Struktur (Scroll-Muster)<ul><li>TreeItem</li><li>...</li></ul></li></ul></li><li>Bereich<ul><li>Bearbeiten (Bildlaufmuster)</li></ul></li></ul> | <ul><li>Bereich<ul><li>Struktur (Scroll-Muster)<ul><li>TreeItem</li><li>...</li></ul></li><li>Bereich<ul><li>Bearbeiten (Bildlaufmuster)</li></ul></li></ul></li></ul> | 
+
 
 
 

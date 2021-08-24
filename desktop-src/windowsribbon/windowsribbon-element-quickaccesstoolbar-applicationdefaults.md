@@ -1,9 +1,9 @@
 ---
-title: Quickaccesstoolbar. ApplicationDefaults (Eigenschaft)
-description: Stellt einen Container für Standard Befehle in der Symbolleiste für den schnell Zugriff (QAT) dar.
+title: QuickAccessToolbar.ApplicationDefaults-Eigenschaft
+description: Stellt einen Container für Standardbefehle in der Schnellzugriffssymbolleiste (Quick Access Toolbar, QAT) dar.
 ms.assetid: 8f44d7c0-1a39-4a88-ae01-7d7d1bb6bf7e
 keywords:
-- Quickaccesstoolbar. ApplicationDefaults-Eigenschaften Fenster (Menüband)
+- QuickAccessToolbar.ApplicationDefaults-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 084ea334441cb0cf545adaa3d1016f7d02da1b88
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 701a7c72e40b1efe9104d6794fa739c556b0fb4b
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337912"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473746"
 ---
-# <a name="quickaccesstoolbarapplicationdefaults-property"></a>Quickaccesstoolbar. ApplicationDefaults (Eigenschaft)
+# <a name="quickaccesstoolbarapplicationdefaults-property"></a>QuickAccessToolbar.ApplicationDefaults-Eigenschaft
 
-Stellt einen Container für Standard Befehle in der [Symbolleiste für den schnell Zugriff (QAT)](windowsribbon-controls-quickaccesstoolbar.md)dar.
+Stellt einen Container für Standardbefehle in der [Quick Access Toolbar (QAT)](windowsribbon-controls-quickaccesstoolbar.md)dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -39,68 +39,17 @@ Es gibt keine Attribute.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="windowsribbon-element-button.md"><strong>Schaltfläche</strong></a><br/></td>
-<td>Muss mindestens einmal vorkommen.<br/> <br/></td>
-</tr>
-<tr class="even">
-<td><a href="windowsribbon-element-checkbox.md"><strong>CheckBox</strong></a><br/></td>
-<td>Muss mindestens einmal vorkommen.<br/> <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="windowsribbon-element-combobox.md"><strong>ComboBox</strong></a><br/></td>
-<td>Muss mindestens einmal vorkommen.<br/>
-<blockquote>
-[!Note]<br />
-Windows 8 und höher.
-</blockquote>
-<br/> <br/></td>
-</tr>
-<tr class="even">
-<td><a href="windowsribbon-element-dropdowngallery.md"><strong>Dropdown Gallery</strong></a><br/></td>
-<td>Muss mindestens einmal vorkommen.<br/>
-<blockquote>
-[!Note]<br />
-Windows 8 und höher.
-</blockquote>
-<br/> <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="windowsribbon-element-inribbongallery.md"><strong>Inribbongallery</strong></a><br/></td>
-<td>Muss mindestens einmal vorkommen.<br/>
-<blockquote>
-[!Note]<br />
-Windows 8 und höher.
-</blockquote>
-<br/> <br/></td>
-</tr>
-<tr class="even">
-<td><a href="windowsribbon-element-splitbuttongallery.md"><strong>Splitbuttongallery</strong></a><br/></td>
-<td>Muss mindestens einmal vorkommen.<br/>
-<blockquote>
-[!Note]<br />
-Windows 8 und höher.
-</blockquote>
-<br/> <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="windowsribbon-element-togglebutton.md"><strong>ToggleButton</strong></a><br/></td>
-<td>Muss mindestens einmal vorkommen.<br/> <br/></td>
-</tr>
-</tbody>
-</table>
+
+| Element | BESCHREIBUNG | 
+|---------|-------------|
+| <a href="windowsribbon-element-button.md"><strong>Schaltfläche</strong></a><br /> | Muss mindestens einmal vorkommen.<br /><br /> | 
+| <a href="windowsribbon-element-checkbox.md"><strong>CheckBox</strong></a><br /> | Muss mindestens einmal vorkommen.<br /><br /> | 
+| <a href="windowsribbon-element-combobox.md"><strong>Kombinationsfeld</strong></a><br /> | Muss mindestens einmal vorkommen.<br /><blockquote>[!Note]<br />Windows 8 und neuer.</blockquote><br /><br /> | 
+| <a href="windowsribbon-element-dropdowngallery.md"><strong>DropDownGallery</strong></a><br /> | Muss mindestens einmal vorkommen.<br /><blockquote>[!Note]<br />Windows 8 und neuer.</blockquote><br /><br /> | 
+| <a href="windowsribbon-element-inribbongallery.md"><strong>InRibbonGallery</strong></a><br /> | Muss mindestens einmal vorkommen.<br /><blockquote>[!Note]<br />Windows 8 und neuer.</blockquote><br /><br /> | 
+| <a href="windowsribbon-element-splitbuttongallery.md"><strong>SplitButtonGallery</strong></a><br /> | Muss mindestens einmal vorkommen.<br /><blockquote>[!Note]<br />Windows 8 und neuer.</blockquote><br /><br /> | 
+| <a href="windowsribbon-element-togglebutton.md"><strong>ToggleButton</strong></a><br /> | Muss mindestens einmal vorkommen.<br /><br /> | 
+
 
 
 
@@ -110,25 +59,25 @@ Windows 8 und höher.
 
 | Element                                                                           |
 |-----------------------------------------------------------------------------------|
-| [**Quickaccesstoolbar**](windowsribbon-element-quickaccesstoolbar.md)<br/> |
+| [**QuickAccessToolbar**](windowsribbon-element-quickaccesstoolbar.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jede [**quickaccesstoolbar**](windowsribbon-element-quickaccesstoolbar.md)auftreten.
+Kann höchstens einmal für jede [**QuickAccessToolbar**](windowsribbon-element-quickaccesstoolbar.md)auftreten.
 
-Es muss mindestens ein untergeordnetes Element angegeben werden.
+Mindestens ein untergeordnetes Element muss angegeben werden.
 
 Es können maximal 20 untergeordnete Elemente angegeben werden.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für die [**quickaccesstoolbar**](windowsribbon-element-quickaccesstoolbar.md)veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für [**quickAccessToolbar**](windowsribbon-element-quickaccesstoolbar.md)veranschaulicht.
 
-In diesem Code Abschnitt wird die Deklaration des **quickaccesstoolbar. ApplicationDefaults** -Steuer Elements veranschaulicht.
+Dieser Codeabschnitt zeigt die **QuickAccessToolbar.ApplicationDefaults-Steuerelementdeklaration.**
 
 
 ```XML
@@ -152,16 +101,16 @@ In diesem Code Abschnitt wird die Deklaration des **quickaccesstoolbar. Applicat
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Symbolleisten-Steuerelement schnell Zugriff](windowsribbon-controls-quickaccesstoolbar.md)
+[Symbolleisten-Steuerelement für den Schnellzugriff](windowsribbon-controls-quickaccesstoolbar.md)
 </dt> </dl>
 
  

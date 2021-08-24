@@ -1,9 +1,9 @@
 ---
-title: CBEM_SETIMAGELIST Meldung (kommstrg. h)
+title: CBEM_SETIMAGELIST (Commctrl.h)
 description: Legt eine Bildliste für ein ComboBoxEx-Steuerelement fest.
 ms.assetid: a4a8ed61-a532-4cf8-8291-c157ab0e7f31
 keywords:
-- Windows-Steuerelemente für CBEM_SETIMAGELIST Meldung
+- CBEM_SETIMAGELIST der Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 33816abe36e2d1e1593e6365061a500d072c155b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fbd83336d27bf8e47900554a6f3c36d2d767e5e8ddd4b8680b50050d87da79bc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957109"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119699260"
 ---
-# <a name="cbem_setimagelist-message"></a>CBEM \_ SetImageList-Meldung
+# <a name="cbem_setimagelist-message"></a>CBEM \_ SETIMAGELIST-Nachricht
 
 Legt eine Bildliste für ein ComboBoxEx-Steuerelement fest.
 
@@ -35,18 +35,18 @@ Legt eine Bildliste für ein ComboBoxEx-Steuerelement fest.
 *lParam* 
 </dt> <dd>
 
-Ein Handle für die Bildliste, die für das-Steuerelement festgelegt werden soll.
+Ein Handle für die Bildliste, die für das Steuerelement festgelegt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für die Bildliste zurück, die dem Steuerelement zuvor zugeordnet ist, oder gibt **null** zurück, wenn zuvor keine Bildliste festgelegt wurde.
+Gibt das Handle für die Bildliste zurück, die dem Steuerelement zuvor zugeordnet war, oder gibt **NULL** zurück, wenn zuvor keine Bildliste festgelegt wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!IMPORTANT]
-> Die Höhe der Bilder in der Bildliste kann die Größenanforderungen des ComboBoxEx-Steuer Elements ändern. Es wird empfohlen, die Größe des Steuer Elements nach dem Senden dieser Nachricht zu ändern, um sicherzustellen, dass Sie ordnungsgemäß angezeigt wird.
+> Die Höhe der Bilder in der Bildliste kann die Größenanforderungen des ComboBoxEx-Steuerelements ändern. Es wird empfohlen, die Größe des Steuerelements nach dem Senden dieser Meldung zu ändern, um sicherzustellen, dass es ordnungsgemäß angezeigt wird.
 
  
 
@@ -56,9 +56,9 @@ Gibt das Handle für die Bildliste zurück, die dem Steuerelement zuvor zugeordn
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

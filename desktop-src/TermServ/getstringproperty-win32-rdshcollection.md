@@ -1,12 +1,12 @@
 ---
 title: GetStringProperty-Methode der Win32_RDSHCollection-Klasse
-description: Ruft den Wert der Zeichen folgen Eigenschaft eines Win32- \_ rdshcollection-Objekts ab.
+description: Ruft einen Zeichenfolgeneigenschaftswert eines Win32 \_ RDSHCollection-Objekts ab.
 ms.assetid: 8e97cd91-0e45-4d87-acfb-ee7d70376ce0
 ms.tgt_platform: multiple
 keywords:
 - GetStringProperty-Methode Remotedesktopdienste
-- GetStringProperty-Methode Remotedesktopdienste, Win32_RDSHCollection-Klasse
-- Win32_RDSHCollection-Klasse Remotedesktopdienste, GetStringProperty-Methode
+- GetStringProperty-Methode Remotedesktopdienste , Win32_RDSHCollection-Klasse
+- Win32_RDSHCollection Klasse Remotedesktopdienste , GetStringProperty-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1895f05317850374a4f4b24d407a4c4ace9c5db7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 81aa383e339bda2620c4accf42f3cd810d867ae6f1e9c0d2716ed688583a1972
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119771830"
 ---
-# <a name="getstringproperty-method-of-the-win32_rdshcollection-class"></a>GetStringProperty-Methode der Win32 \_ rdshcollection-Klasse
+# <a name="getstringproperty-method-of-the-win32_rdshcollection-class"></a>GetStringProperty-Methode der Win32 \_ RDSHCollection-Klasse
 
-Ruft den Wert der Zeichen folgen Eigenschaft eines [**Win32- \_ rdshcollection**](win32-rdshcollection.md) -Objekts ab.
+Ruft einen Zeichenfolgeneigenschaftswert eines [**Win32 \_ RDSHCollection-Objekts**](win32-rdshcollection.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,23 +44,23 @@ uint32 GetStringProperty(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
 Der Schlüssel, der die abzurufende Eigenschaft identifiziert.
 
 </dd> <dt>
 
-*Wert* \[ vorgenommen\]
+*Wert* \[ out\]
 </dt> <dd>
 
-Empfängt den abgerufenen Eigenschafts Wert.
+Empfängt den abgerufenen Eigenschaftswert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,8 +70,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -80,7 +80,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32- \_ rdshcollection**](win32-rdshcollection.md)
+[**Win32 \_ RDSHCollection**](win32-rdshcollection.md)
 </dt> </dl>
 
  

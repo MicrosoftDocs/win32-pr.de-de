@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: jetupdate-Funktion'
+description: 'Weitere Informationen zu: JetUpdate-Funktion'
 title: JetUpdate-Funktion
 TOCTitle: JetUpdate Function
 ms:assetid: 6c9a53d0-46bc-403b-bdba-9020e023c14a
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 38e17c5bc5ac32ab3b904456f2d97aa465fca670
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e02550fb40987906e21d588263daed9dc68aa5d
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862892"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122478246"
 ---
 # <a name="jetupdate-function"></a>JetUpdate-Funktion
 
@@ -32,9 +32,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetupdate-function"></a>JetUpdate-Funktion
 
-Die **jetupdate** -Funktion führt einen Aktualisierungs Vorgang aus, einschließlich des Einfügens einer neuen Zeile in eine Tabelle oder der Aktualisierung einer vorhandenen Zeile. Das Löschen einer Tabellenzeile erfolgt durch Aufrufen von [jetdelete](./jetdelete-function.md).
+Die **JetUpdate-Funktion** führt einen Aktualisierungsvorgang aus, einschließlich einfügen einer neuen Zeile in eine Tabelle oder Aktualisieren einer vorhandenen Zeile. Das Löschen einer Tabellenzeile erfolgt durch Aufrufen von [JetDelete.](./jetdelete-function.md)
 
-**Jetupdate** ist der letzte Schritt beim Ausführen eines Einfügevorgangs oder eines Updates. Das Update wird zunächst durch Aufrufen von [jetprepareupdate](./jetprepareupdate-function.md) und anschließendes Aufrufen von [jetsetcolumn](./jetsetcolumn-function.md) oder [jetsetcolumns](./jetsetcolumns-function.md) gestartet, um den Daten Satz Status festzulegen. Schließlich wird **jetupdate** aufgerufen, um den Aktualisierungs Vorgang abzuschließen. Indizes werden nur von **jetupdate** oder [JetUpdate2](./jetupdate2-function.md)und nicht von [jetsetcolumn](./jetsetcolumn-function.md) oder [jetsetcolumns](./jetsetcolumns-function.md)aktualisiert.
+**JetUpdate** ist der letzte Schritt beim Ausführen eines Einfüge- oder Aktualisierungsschritts. Das Update wird gestartet, indem [JetPrepareUpdate](./jetprepareupdate-function.md) und dann [jetSetColumns](./jetsetcolumn-function.md) oder [JetSetColumns](./jetsetcolumns-function.md) einmal oder mehrmals aufgerufen werden, um den Datensatzzustand festzulegen. Schließlich wird **JetUpdate** aufgerufen, um den Updatevorgang abzuschließen. Indizes werden nur von **JetUpdate** oder [JetUpdate2](./jetupdate2-function.md)und nicht während [JetSetColumns](./jetsetcolumn-function.md) oder [JetSetColumns](./jetsetcolumns-function.md)aktualisiert.
 
 ```cpp
     JET_ERR JET_API JetUpdate(
@@ -48,175 +48,74 @@ Die **jetupdate** -Funktion führt einen Aktualisierungs Vorgang aus, einschlie�
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
-*TableID*
+*tableid*
 
-Der Cursor, der für diesen-Befehl verwendet werden soll.
+Der Cursor, der für diesen Aufruf verwendet werden soll.
 
-*pvbookmark*
+*pvBookmark*
 
-Zeiger auf ein zurück gegebenes Lesezeichen für eine eingefügte Zeile.
+Zeiger auf ein zurückgegebenes Lesezeichen für eine eingefügte Zeile.
 
-*cbbookmark*
+*cbBookmark*
 
-Größe des Puffers, auf den *pvbookmark* zeigt.
+Größe des Puffers, auf den *von pvBookmark* gezeigt wird.
 
-*pcbactual*
+*actual*
 
-Die zurückgegebene Größe des Lesezeichens für die eingefügte Zeile, die in *pvbookmark* zurückgegeben wurde.
+Die zurückgegebene Größe des Lesezeichens für die eingefügte Zeile, die in *pvBookmark* zurückgegeben wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errBufferTooSmall</p></td>
-<td><p>Der angegebene Puffer für das Daten Satz-Lesezeichen ist nicht ausreichend groß genug zum Speichern des Daten Satz-Lesezeichens.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errColumnIllegalNull</p></td>
-<td><p>Identisch mit JET_errNullInvalid.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errDiskFull</p></td>
-<td><p>Der Aktualisierungs Vorgang erfordert eine Vergrößerung der Datenbankdatei oder die Protokolldatei Zuordnung, aber das Laufwerk, auf dem sich die Datenbankdatei oder die Protokoll Reihe befindet, ist voll. Alternativ dazu befindet sich die Datenbankdatei auf einem auf FAT32 formatierten Volume, und die Datenbankdatei ist bereits 4gbytes, der Grenzwert pro Datei für FAT32.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen.</p>
-<p><strong>Windows XP:</strong>  Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Der angegebene <em>prep</em> -Parameter in der <a href="gg269339(v=exchg.10).md">jetprepareupdate</a> -Funktion ist kein gültiges Flag.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errKeyDuplicate</p></td>
-<td><p>Ein Index Schlüssel für diesen Datensatz ist ein Duplikat eines anderen Index Schlüssels für einen anderen Datensatz, der bereits in der Tabelle vorhanden ist, und der Index lässt keine Duplikate zu.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errKeyTruncated</p></td>
-<td><p>Der eingefügte oder aktualisierte Datensatz weist mindestens einen Index auf, für den der generierte Schlüssel die maximal zulässige Größe überschreiten würde. Dies hat zur Folge, dass der Vorgang das Abschneiden von Schlüsseln nicht verhindern konnte.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errMultiValuedIndexViolation</p></td>
-<td><p>Der eingefügte oder aktualisierte Datensatz verfügt über eine indizierte mehrwertige Spalte mit zwei oder Mehrwerten, die innerhalb der für den Index festgelegten maximalen Längen Schlüsselgröße identisch sind. Folglich hat der Datensatz zwei identische Einträge im Index, die ungültig sind.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNullInvalid</p></td>
-<td><p>Mindestens eine Spalte im Datensatz, die eingefügt werden soll, oder der aktualisierte Zustand eines zu ersetzenden Datensatzes ist <strong>null</strong> . Dies verstößt gegen die definierte Einschränkung für diese Spalten.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errNullKeyDisallowed</p></td>
-<td><p>Mindestens ein Index ist so definiert, dass kein <strong>null</strong> -Schlüssel zulässig ist, und der eingefügte oder aktualisierte Status eines Datensatzes, der ersetzt wird, verstößt gegen diese definierte Einschränkung.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errRecordPrimaryChanged</p></td>
-<td><p>Der Primärschlüssel wurde durch einen Daten Satz Ersetzungs Vorgang aktualisiert. Aktualisierungen an Primärschlüssel Spalten müssen durch Löschen des vorhandenen Datensatzes und Einfügen eines neuen Datensatzes mit den gewünschten Daten erfolgen.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieselbe Sitzung kann nicht für mehr als einen Thread gleichzeitig verwendet werden.</p>
-<p><strong>Windows XP:</strong>  Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errTransReadOnly</p></td>
-<td><p>Es ist nicht zulässig, ein Update zu versuchen, wenn es innerhalb des Gültigkeits Bereichs einer schreibgeschützten Transaktion liegt. Eine schreibgeschützte Transaktion ist eine Transaktion, die mit einem <a href="gg269268(v=exchg.10).md">JetBeginTransaction2</a> -Aufrufvorgang mit JET_bitTransactionReadOnly gestartet wurde.</p>
-<p><strong>Windows XP:</strong>  Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errUpdateNotPrepared</p></td>
-<td><p><a href="gg269339(v=exchg.10).md">Jetprepareupdate</a> wurde mit JET_prepCancel aufgerufen, aber der Cursor befand sich nicht im vorbereiteten Zustand.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errVersionStoreOutOfMemory</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, da nicht genügend Arbeitsspeicher vorhanden ist, um transaktionale Informationen zum Update beizubehalten.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errWriteConflict</p></td>
-<td><p>Eine andere Sitzung hat den Datensatz bereits für das Update gesperrt. Das von dieser Sitzung versuchte Update schlägt fehl.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Bei Erfolg ist der Aktualisierungs Vorgang für den Cursor abgeschlossen. Wenn für die Tabelle eine automatische Inkrement-Spalte definiert ist, wird dieser Wert für eingefügte Datensätze festgelegt. Wenn für die Tabelle eine Versions Spalte definiert ist, wird der Wert für neu eingefügte Datensätze initialisiert oder jedes Mal, wenn ein Datensatz ersetzt wird, um 1 erhöht. Alle Indizes, einschließlich gruppierter und nicht gruppierter Indizes, werden aktualisiert.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errBufferTooSmall</p> | <p>Der angegebene Puffer für das Datensatzlesezeichen ist nicht groß genug, um das Datensatzlesezeichen zu speichern.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>aufgetreten sind.</p> | 
+| <p>JET_errColumnIllegalNull</p> | <p>Entspricht JET_errNullInvalid.</p> | 
+| <p>JET_errDiskFull</p> | <p>Der Aktualisierungsvorgang erfordert eine Vergrößerung der Datenbankdatei oder eine Protokolldateizuordnung, aber das Laufwerk, auf dem sich die Datenbankdatei oder Protokollreihe befindet, ist voll. Alternativ befindet sich die Datenbankdatei auf einem FAT32-formatierten Volume, und die Datenbankdatei ist bereits auf 4 GB festgelegt. Dies ist der Grenzwert pro Datei für FAT32.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da für die Instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p><p><strong>Windows XP:</strong>  Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Der angegebene <em>prep-Parameter</em> in der <a href="gg269339(v=exchg.10).md">JetPrepareUpdate-Funktion</a> ist kein gültiges Flag.</p> | 
+| <p>JET_errKeyDuplicate</p> | <p>Ein Indexschlüssel für diesen Datensatz ist ein Duplikat eines anderen Indexschlüssels für einen anderen Datensatz, der sich bereits in der Tabelle befindet, und der Index lässt keine Duplikate zu.</p> | 
+| <p>JET_errKeyTruncated</p> | <p>Der eingefügte oder aktualisierte Datensatz verfügt über einen oder mehrere Indizes, für die der generierte Schlüssel die maximal zulässige Größe überschritten hätte. Daher konnte der Vorgang das Abschneiden von Schlüsseln nicht verhindern.</p> | 
+| <p>JET_errMultiValuedIndexViolation</p> | <p>Der eingefügte oder aktualisierte Datensatz verfügt über eine indizierte Mehrwertspalte mit zwei oder mehr Werten, die innerhalb der für den Index festgelegten Schlüsselgröße der maximalen Länge identisch sind. Daher weist der Datensatz zwei identische Einträge im Index auf, die ungültig sind.</p> | 
+| <p>JET_errNotInitialized</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
+| <p>JET_errNullInvalid</p> | <p>Mindestens eine Spalte im einzufügenden Datensatz oder im aktualisierten Zustand eines zu ersetzenden Datensatzes ist <strong>NULL,</strong> was gegen die definierte Einschränkung für diese Spalten verstößt.</p> | 
+| <p>JET_errNullKeyDisallowed</p> | <p>Mindestens ein Index ist so definiert, dass kein <strong>NULL-Schlüssel</strong> zulässig ist, und der eingefügte oder aktualisierte Zustand eines ersetzten Datensatzes verstößt gegen diese definierte Einschränkung.</p> | 
+| <p>JET_errRecordPrimaryChanged</p> | <p>Durch einen Datensatzersetzungsvorgang wurde der Primärschlüssel aktualisiert. Aktualisierungen an Primärschlüsselspalten müssen durch Löschen des vorhandenen Datensatzes und Einfügen eines neuen Datensatzes mit den gewünschten Daten erfolgen.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Dieselbe Sitzung kann nicht für mehrere Threads gleichzeitig verwendet werden.</p><p><strong>Windows XP:</strong>  Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
+| <p>JET_errTransReadOnly</p> | <p>Es ist unzulässig, ein Update zu versuchen, wenn es sich innerhalb des Bereichs einer schreibgeschützten Transaktion befindet. Eine schreibgeschützte Transaktion ist eine Transaktion, die mithilfe eines Aufrufs von <a href="gg269268(v=exchg.10).md">JetBeginTransaction2</a> mit JET_bitTransactionReadOnly gestartet wurde.</p><p><strong>Windows XP:</strong>  Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errUpdateNotPrepared</p> | <p><a href="gg269339(v=exchg.10).md">JetPrepareUpdate</a> wurde mit JET_prepCancel aufgerufen, aber der Cursor befand sich nicht im vorbereiteten Zustand.</p> | 
+| <p>JET_errVersionStoreOutOfMemory</p> | <p>Fehler beim Vorgang, weil nicht genügend Arbeitsspeicher vorhanden ist, um Transaktionsinformationen zum Update beizubehalten.</p> | 
+| <p>JET_errWriteConflict</p> | <p>In einer anderen Sitzung wurde der Datensatz zuvor für das Update gesperrt. Das von dieser Sitzung versuchten Update schlägt fehl.</p> | 
 
-Bei einem Fehler werden keine Änderungen an der Datenbank vorgenommen. Vor dem Einfügen und vor dem ersetzen wurden möglicherweise Rückruf Funktionen aufgerufen, aber nach INSERT-und After-replace-Rückrufe wurden die Rückrufe nicht aufgerufen, da letztere nicht bewirken kann, dass ein Update fehlschlägt. Der Kopier Puffer des Cursors verbleibt im vorbereiteten Zustand, sodass die Möglichkeit besteht, die Probleme, die zu Fehlern geführt haben, inkrementell zu korrigieren und den Aktualisierungs Vorgang zu wiederholen.
 
-#### <a name="remarks"></a>Bemerkungen
 
-Rückruf Funktionen können registriert werden, um vor oder nach dem Einfügen und vor oder nach dem Update aufgerufen zu werden.
+Bei Erfolg wird der Vorgang zum Öffnen des Updates für den Cursor abgeschlossen. Wenn für die Tabelle eine Spalte mit automatischem Inkrement definiert ist, wird dieser Wert für eingefügte Datensätze festgelegt. Wenn eine Versionsspalte für die Tabelle definiert ist, wird ihr Wert für neu eingefügte Datensätze initialisiert oder jedes Mal erhöht, wenn ein Datensatz ersetzt wird. Alle Indizes, einschließlich gruppierter und nicht gruppierter Indizes, werden aktualisiert.
 
-Einschränkungen der Daten Satz Größe werden von [jetsetcolumn](./jetsetcolumn-function.md)erzwungen, nicht im Allgemeinen durch **jetupdate**.
+Bei einem Fehler werden keineRlei Änderungen an der Datenbank vorgenommen. Vor dem Einfügen und vor dem Ersetzen wurden möglicherweise Rückruffunktionen aufgerufen, aber nach dem Einfügen und nach dem Ersetzen wurden rückrufe nicht aufgerufen, da letzteres nicht dazu führen kann, dass ein Update fehlschlägt. Der Cursorkopierpuffer befindet sich im vorbereiteten Zustand, sodass die Möglichkeit besteht, die Probleme, die Fehler verursacht haben, inkrementell zu beheben und den Updatevorgang zu wiederholen.
 
-Es ist wichtig, die Auswirkungen der Ausführung einer großen Anzahl von Aktualisierungs Vorgängen in einer einzelnen Transaktion zu verstehen. Jedes Update der Datenbank muss von der Datenbank-Engine im Versionsspeicher nachverfolgt werden. Der Versionsspeicher enthält einen Live Datensatz aller verschiedenen Versionen der einzelnen Datensatz-oder Indexeinträge in der Datenbank, die von allen aktiven Transaktionen angezeigt werden können. Diese Versionen werden zur Unterstützung der Parallelitäts Steuerung mit mehreren Versionsverwaltung verwendet, die von der Datenbank-Engine verwendet wird, um Transaktionen mithilfe der Momentaufnahme Isolation zu unterstützen. Sobald die Datenbank-Engine die Ressourcen erschöpft hat, die zum Speichern dieser Versionen verwendet werden, kann Sie keine weiteren Änderungen mehr akzeptieren, bis einige Transaktionen abgeschlossen sind, damit diese Ressourcen freigegeben werden können. Wenn sich die Engine in diesem Zustand befindet, schlagen alle Updates mit Jet_errVersionStoreOutOfMemory fehl. Die Ressourcen, die für die Datenbank-Engine zum Speichern dieser Versionen verfügbar sind, können mithilfe von [jetsetsystemparameter](./jetsetsystemparameter-function.md) mit [JET_paramMaxVerPages](./resource-parameters.md) und [JET_paramGlobalMinVerPages](./resource-parameters.md)gesteuert werden.
+#### <a name="remarks"></a>Hinweise
+
+Rückruffunktionen können registriert werden, um vor oder nach dem Einfügen und vor oder nach dem Update aufgerufen zu werden.
+
+Einschränkungen der Datensatzgröße werden von [JetSetColumn](./jetsetcolumn-function.md)erzwungen, nicht im Allgemeinen durch **JetUpdate.**
+
+Es ist wichtig, die Auswirkungen einer großen Anzahl von Updatevorgängen innerhalb einer einzelnen Transaktion zu verstehen. Jedes Update der Datenbank muss von der Datenbank-Engine im Versionsspeicher nachverfolgt werden. Der Versionsspeicher enthält einen Livedatensatz aller verschiedenen Versionen jedes Datensatzes oder Indexeintrags in der Datenbank, der von allen aktiven Transaktionen angezeigt werden kann. Diese Versionen werden verwendet, um die parallele Steuerung mit mehreren Versionen zu unterstützen, die von der Datenbank-Engine verwendet wird, um Transaktionen mit Momentaufnahmeisolation zu unterstützen. Sobald die Datenbank-Engine die Zum Speichern dieser Versionen verwendeten Ressourcen erschöpft hat, kann sie keine weiteren Änderungen mehr akzeptieren, bis einige Transaktionen abgeschlossen sind, um die Wiederverwendung dieser Ressourcen zu ermöglichen. Wenn sich die Engine in diesem Zustand befindet, schlagen alle Updates mit JET_errVersionStoreOutOfMemory fehl. Die ressourcen, die der Datenbank-Engine zum Speichern dieser Versionen zur Verfügung stehen, können mit [JetSetSystemParameter](./jetsetsystemparameter-function.md) mit [JET_paramMaxVerPages](./resource-parameters.md) und [JET_paramGlobalMinVerPages](./resource-parameters.md)gesteuert werden.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -224,12 +123,12 @@ Es ist wichtig, die Auswirkungen der Ausführung einer großen Anzahl von Aktual
 [JET_ERR](./jet-err.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetdelete](./jetdelete-function.md)  
-[Jetprepareupdate](./jetprepareupdate-function.md)  
-[Jetregistercallback](./jetregistercallback-function.md)  
-[Jetretrievecolumschlag](./jetretrievecolumn-function.md)  
-[Jetretrievecolumschlag](./jetretrievecolumns-function.md)  
-[Jetsetcolumn](./jetsetcolumn-function.md)  
-[Jetsetcolumns](./jetsetcolumns-function.md)  
-[Jetsetsystemparameter](./jetsetsystemparameter-function.md)  
-[System Parameter](./extensible-storage-engine-system-parameters.md)
+[JetDelete](./jetdelete-function.md)  
+[JetPrepareUpdate](./jetprepareupdate-function.md)  
+[JetRegisterCallback](./jetregistercallback-function.md)  
+[JetRetrieveColumn](./jetretrievecolumn-function.md)  
+[JetRetrieveColumns](./jetretrievecolumns-function.md)  
+[JetSetColumn](./jetsetcolumn-function.md)  
+[JetSetColumns](./jetsetcolumns-function.md)  
+[JetSetSystemParameter](./jetsetsystemparameter-function.md)  
+[Systemparameter](./extensible-storage-engine-system-parameters.md)

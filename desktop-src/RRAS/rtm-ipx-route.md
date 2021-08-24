@@ -1,10 +1,10 @@
 ---
-title: RTM_IPX_ROUTE Struktur (RTM. h)
-description: Die RTM- \_ IPX- \_ Routen Struktur enthält Informationen, die eine Route für die IPX-Protokollfamilie beschreiben.
+title: RTM_IPX_ROUTE -Struktur (Rtm.h)
+description: Die RTM \_ IPX \_ ROUTE-Struktur enthält Informationen, die eine Route für die IPX-Protokollfamilie beschreiben.
 ms.assetid: ffa0637c-2197-4ebd-a5ef-e174dd0ccb15
 keywords:
-- RTM_IPX_ROUTE Struktur-RAS
-- PRTM_IPX_ROUTE-Struktur Zeiger RAS
+- RTM_IPX_ROUTE structure RAS
+- PRTM_IPX_ROUTE Strukturzeiger RAS
 topic_type:
 - apiref
 api_name:
@@ -15,18 +15,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d32333dd6a6b53ee4600dda388a318bdf9404b6d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1e3d14de623fe8d0b3a85118b39d764baa00d2ca5930cfe711be21a91057b6db
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101830"
 ---
-# <a name="rtm_ipx_route-structure"></a>RTM- \_ IPX- \_ Routen Struktur
+# <a name="rtm_ipx_route-structure"></a>RTM \_ IPX \_ ROUTE-Struktur
 
-\[Diese API wurde durch die API für [Routing Table Manager, Version 2](about-routing-table-manager-version-2.md) , ersetzt und ist nicht über Windows Server 2003 verfügbar. Anwendungen sollten die API für Routing Table Manager Version 2 verwenden.\]
+\[Diese API wurde durch die [RoutingTabellen-Manager-API Version 2](about-routing-table-manager-version-2.md) ersetzt und ist über Windows Server 2003 hinaus nicht mehr verfügbar. Anwendungen sollten die Routingtabellen-Manager-API Version 2 verwenden.\]
 
-Die **RTM- \_ IPX- \_ Routen** Struktur enthält Informationen, die eine Route für die IPX-Protokollfamilie beschreiben.
+Die **RTM \_ IPX \_ ROUTE-Struktur** enthält Informationen, die eine Route für die IPX-Protokollfamilie beschreiben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,58 +49,58 @@ typedef struct _RTM_IPX_ROUTE {
 
 <dl> <dt>
 
-**RR- \_ Zeitstempel**
+**\_RR-Zeitstempel**
 </dt> <dd>
 
-Gibt die Uhrzeit an, zu der der Routen Eintrag erstellt oder zuletzt aktualisiert wurde. Dieser Member wird vom Routing Tabellen-Manager festgelegt. Die Zeit wird als FILETIME-Struktur ausgedrückt.
+Gibt den Zeitpunkt an, zu dem der Routeneintrag erstellt oder zuletzt aktualisiert wurde. Dieser Member wird vom Routingtabellen-Manager festgelegt. Die Zeit wird als FILETIME-Struktur ausgedrückt.
 
 </dd> <dt>
 
-**RR \_ routingprotocol**
+**RR \_ RoutingProtocol**
 </dt> <dd>
 
-Gibt das Routing Protokoll an, das die Route hinzugefügt hat.
+Gibt das Routingprotokoll an, das die Route hinzugefügt hat.
 
 </dd> <dt>
 
-**RR- \_ interfakeid**
+**\_RR-Schnittstellen-ID**
 </dt> <dd>
 
-Gibt die Schnittstelle an, über die die Route abgerufen wurde.
+Gibt die Schnittstelle an, über die die Route erhalten wurde.
 
 </dd> <dt>
 
-**RR \_ protocolspecificdata**
+**RR \_ ProtocolSpecificData**
 </dt> <dd>
 
-Gibt eine [**Protokoll \_ spezifische \_ Daten**](protocol-specific-data.md) Struktur mit Arbeitsspeicher an, der für die für Routing Protokolle spezifischen Daten reserviert ist.
+Gibt eine [**PROTOKOLLSPEZIFISCHE \_ \_ DATENstruktur an,**](protocol-specific-data.md) die Arbeitsspeicher enthält, der für Routingprotokolle spezifische Daten reserviert ist.
 
 </dd> <dt>
 
-**RR- \_ Netzwerk**
+**\_RR-Netzwerk**
 </dt> <dd>
 
-Gibt eine [**IPX- \_ Netzwerk**](ipx-network.md) Struktur an, die eine IP-Netzwerkadresse enthält.
+Gibt eine [**IPX-NETZWERKstruktur \_ an,**](ipx-network.md) die eine IP-Netzwerkadresse enthält.
 
 </dd> <dt>
 
 **RR \_ NextHopAddress**
 </dt> <dd>
 
-Gibt eine [**IPX \_ - \_ \_ Adresse für den nächsten Hop**](ipx-next-hop-address.md) an, die die Adresse des Routers für den nächsten Hop enthält.
+Gibt eine [**IPX \_ NEXT HOP \_ \_ ADDRESS-Struktur**](ipx-next-hop-address.md) an, die die Adresse des Routers des nächsten Hops enthält.
 
 </dd> <dt>
 
-**RR \_ familyspecificdata**
+**RR \_ FamilySpecificData**
 </dt> <dd>
 
-Gibt eine [**IPX- \_ spezifische \_ Daten**](ipx-specific-data.md) Struktur an, die für die IPX-Protokollfamilie spezifische Daten enthält.
+Gibt eine [**\_ IPX-SPEZIFISCHE \_ DATENstruktur**](ipx-specific-data.md) an, die spezifische Daten für die IPX-Protokollfamilie enthält.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Elemente der **RTM- \_ IPX- \_ Routen** Struktur sind alle **DWORD** -Elemente ausgerichtet.
+Die Member der **RTM \_ IPX \_ ROUTE-Struktur** sind alle **DWORD-ausgerichtet.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,8 +110,8 @@ Die Elemente der **RTM- \_ IPX- \_ Routen** Struktur sind alle **DWORD** -Elemen
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                   |
-| Header<br/>                   | <dl> <dt>RTM. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Rtm.h</dt> </dl> |
 
 
 
@@ -119,19 +119,19 @@ Die Elemente der **RTM- \_ IPX- \_ Routen** Struktur sind alle **DWORD** -Elemen
 
 <dl> <dt>
 
-[Referenz für Routing Tabellen-Manager Version 1](routing-table-manager-version-1-reference.md)
+[Routing Table Manager Version 1 Reference](routing-table-manager-version-1-reference.md)
 </dt> <dt>
 
-[Routing Tabellen-Manager, Version \_ 1, \_ Strukturen](routing-table-manager-version-1-structures.md)
+[Routingtabellen-Manager- Version \_ \_ 1-Strukturen](routing-table-manager-version-1-structures.md)
 </dt> <dt>
 
-[**IPX- \_ Netzwerk**](ipx-network.md)
+[**\_IPX-NETZWERK**](ipx-network.md)
 </dt> <dt>
 
-[**IPX- \_ Adresse für nächsten \_ Hop \_**](ipx-next-hop-address.md)
+[**\_IPX-ADRESSE \_ DES NÄCHSTEN \_ HOPS**](ipx-next-hop-address.md)
 </dt> <dt>
 
-[**IPX- \_ spezifische \_ Daten**](ipx-specific-data.md)
+[**\_IPX-SPEZIFISCHE \_ DATEN**](ipx-specific-data.md)
 </dt> </dl>
 
  

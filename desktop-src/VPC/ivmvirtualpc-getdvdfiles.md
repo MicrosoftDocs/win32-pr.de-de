@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualpc getdvdfiles-Methode (vpccominterfaces. h)
+title: IVMVirtualPC GetDVDFiles-Methode (VPCCOMInterfaces.h)
 description: Ruft ein Array bekannter DVD-Dateien ab.
 ms.assetid: 9fe2191f-c5c0-464d-a190-29b2aba69682
 keywords:
-- Getdvdfiles-Methode Virtual PC
-- Getdvdfiles-Methode Virtual PC, ivmvirtualpc-Schnittstelle
-- Ivmvirtualpc Interface Virtual PC, getdvdfiles-Methode
+- GetDVDFiles-Methode Virtueller PC
+- GetDVDFiles-Methode Virtual PC , IVMVirtualPC-Schnittstelle
+- IVMVirtualPC-Schnittstelle Virtueller PC, GetDVDFiles-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a91d7f0d65d1f62feb21d41bd9b27bf6ce112ab
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 585b1558c5a0692d4f9a3d5d8371cd0b7e5a692596c06605e7d86eadf377cf45
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119864120"
 ---
-# <a name="ivmvirtualpcgetdvdfiles-method"></a>Ivmvirtualpc:: getdvdfiles-Methode
+# <a name="ivmvirtualpcgetdvdfiles-method"></a>IVMVirtualPC::GetDVDFiles-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft ein Array bekannter DVD-Dateien ab.
 
@@ -45,17 +45,17 @@ HRESULT GetDVDFiles(
 
 <dl> <dt>
 
-*inadditionalsearchpath* \[ in\]
+*inAdditionalSearchPaths* \[ In\]
 </dt> <dd>
 
-Diese Pfade werden zusammen mit den Pfaden durchsucht, die in der [**ivmvirtualpc:: SearchPath**](ivmvirtualpc-searchpaths.md) -Eigenschaft festgelegt sind.
+Diese Pfade werden zusammen mit den Pfaden durchsucht, die in der [**IVMVirtualPC::SearchPaths-Eigenschaft**](ivmvirtualpc-searchpaths.md) festgelegt sind.
 
 </dd> <dt>
 
-*outdvdfilelist* \[ Out, retval\]
+*outDVDFileList* \[ out, retval\]
 </dt> <dd>
 
-Ein Array von virtuellen DVD-Dateien, die in den angegebenen Suchpfaden gefunden werden.
+Ein Array von virtuellen DVD-Dateien, die in den angegebenen Suchpfaden gefunden wurden.
 
 </dd> </dl>
 
@@ -68,18 +68,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                                        | BESCHREIBUNG                                                                                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                              | Der Vorgang wurde durchgeführt.<br/>                                                        |
-| <dl> <dt>**E \_ Zeiger**</dt> <dt>0x80004003</dt> </dl>                                | Der *outdvdfilelist* -Parameter ist **null**.<br/>                                          |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>                             | Der *inadditionalsearchpath* -Parameter ist kein Array von Zeichen folgen.<br/>                  |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
-| <dl> <dt>**VM \_ E \_ \_ Hardwarevirtualisierung \_ deaktiviert**</dt> <dt>0xa0040951</dt> </dl> | Der Prozessor bietet keine Unterstützung für hav-Erweiterungen (Hardware Beschleunigung Virtualization).<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> <dt>0x80004003</dt> </dl>                                | Der *outDVDFileList-Parameter* ist **NULL.**<br/>                                          |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>                             | Der *inAdditionalSearchPaths-Parameter* ist kein Array von Zeichenfolgen.<br/>                  |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
+| <dl> <dt>**VM \_ E \_ \_ HARDWAREVIRTUALISIERUNG \_ DEAKTIVIERT**</dt> <dt>0xA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Suchpfade, die zum Abrufen des Arrays von Dateien verwendet werden, [**enthalten zusätzlich zu**](ivmvirtualpc-searchpaths.md) den durch den *inadditionalsearchpath* -Parameter angegebenen und den installerspeicherort für das Integrations Komponenten Modul festgelegte.
+Die Suchpfade, die zum Abrufen des Dateiarrays verwendet werden, enthalten die zuvor von [**IVMVirtualPC::SearchPaths**](ivmvirtualpc-searchpaths.md) festgelegten Zusätzlich zu den durch den *inAdditionalSearchPaths-Parameter* und den Installationsprogrammspeicherort für das Integrationskomponentenmodul angegebenen Pfaden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,12 +87,12 @@ Die Suchpfade, die zum Abrufen des Arrays von Dateien verwendet werden, [**entha
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualpc ist als 236ba0d9-a24a-4292-A132-27c1421dfd01 definiert.<br/>               |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualPC ist als 236ba0d9-a24a-4292-a132-27c1421dfd01 definiert.<br/>               |
 
 
 
@@ -100,7 +100,7 @@ Die Suchpfade, die zum Abrufen des Arrays von Dateien verwendet werden, [**entha
 
 <dl> <dt>
 
-[**Ivmvirtualpc**](ivmvirtualpc.md)
+[**IVMVirtualPC**](ivmvirtualpc.md)
 </dt> </dl>
 
  

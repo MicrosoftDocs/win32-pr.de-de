@@ -1,9 +1,9 @@
 ---
-title: CB_GETCUEBANNER Meldung (Winuser. h)
-description: Ruft den Hinweis Banner Text ab, der im Bearbeitungs Steuerelement eines Kombinations Felds angezeigt wird. Senden Sie diese Nachricht explizit oder mithilfe des ComboBox \_ getcuebannertext-Makros.
+title: CB_GETCUEBANNER Meldung (Winuser.h)
+description: Ruft den Im Bearbeitungssteuerelement eines Kombinationsfelds angezeigten Text des Cue-Banners ab. Senden Sie diese Nachricht explizit oder mithilfe des ComboBox \_ GetCueBannerText-Makros.
 ms.assetid: 38959228-9f07-4636-a1ea-681efe77b9ec
 keywords:
-- Windows-Steuerelemente für CB_GETCUEBANNER Meldung
+- CB_GETCUEBANNER Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,40 +14,40 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 866f51df0083c4cd72c3f34bb3ce045e0f577a24
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c81ddcd8123f28317726f412255f440d47f53310aa035ab34d25190658550163
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089270"
 ---
-# <a name="cb_getcuebanner-message"></a>CB \_ getcuebanner-Meldung
+# <a name="cb_getcuebanner-message"></a>CB \_ GETCUEBANNER-Nachricht
 
-Ruft den Hinweis Banner Text ab, der im Bearbeitungs Steuerelement eines Kombinations Felds angezeigt wird. Senden Sie diese Nachricht explizit oder mithilfe des [**ComboBox \_ getcuebannertext**](/windows/desktop/api/Commctrl/nf-commctrl-combobox_getcuebannertext) -Makros.
+Ruft den Im Bearbeitungssteuerelement eines Kombinationsfelds angezeigten Text des Cue-Banners ab. Senden Sie diese Nachricht explizit oder mithilfe des [**ComboBox \_ GetCueBannerText-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-combobox_getcuebannertext)
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf einen Unicode-Zeichen folgen Puffer, der den Hinweis Banner Text empfängt. Die aufrufenden Anwendung ist dafür verantwortlich, den Speicher für den Puffer zuzuweisen. Die Puffergröße muss gleich der Länge der Hinweis Banner Zeichenfolge in **WCHARs** Plus 1 für das abschließende Null-  **WCHAR** sein.
+Ein Zeiger auf einen Unicode-Zeichenfolgenpuffer, der den Text des Hinweisbanners empfängt. Die aufrufende Anwendung ist für die Zuweisung des Arbeitsspeichers für den Puffer verantwortlich. Die Puffergröße muss der Länge der Cue-Bannerzeichenfolge in **WCHARs** und 1 für den abschließenden **NULL-WCHAR-Wert** entsprechen. 
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Die Größe des Puffers, auf den von *lpcwtext* in **WCHARs** verwiesen wird.
+Die Größe des Puffers, auf den *lpcwText* in **WCHARs** zeigt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 1 zurück, wenn erfolgreich, oder andernfalls einen Fehlerwert.
+Gibt bei Erfolg 1 zurück, andernfalls einen Fehlerwert.
 
-Wenn kein Hinweis Banner Text vorhanden ist, ist der Rückgabewert 0. Wenn die aufrufende Anwendung keinen Puffer zuweist oder *LPARAM* vor dem Senden dieser Nachricht festgelegt wird, kann es zu einem nicht definierten Verhalten kommen, und der Rückgabewert ist möglicherweise nicht zuverlässig.
+Wenn kein Hinweisbannertext abzurufen ist, ist der Rückgabewert 0. Wenn die aufrufende Anwendung keinen Puffer zuordnet oder *lParam* vor dem Senden dieser Nachricht festgelegt hat, kann das nicht definierte Verhalten auftreten, und der Rückgabewert ist möglicherweise nicht zuverlässig.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Wenn kein Hinweis Banner Text vorhanden ist, ist der Rückgabewert 0. Wenn die a
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>CommCtrl.h</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Wenn kein Hinweis Banner Text vorhanden ist, ist der Rückgabewert 0. Wenn die a
 
 <dl> <dt>
 
-[Kombinations Feld-Features](combo-box-features.md)
+[Kombinationsfeldfeatures](combo-box-features.md)
 </dt> </dl>
 
  

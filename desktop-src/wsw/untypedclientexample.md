@@ -1,6 +1,6 @@
 ---
 title: UnTypedClientExample
-description: Überprüfen Sie ein beispiel für einen nicht typierten Client, der die Windows Web Services-API (WWSAPI) verwendet. Dieses Beispiel zeigt einen HTTP-Client, der Anforderung-Antwort-Nachrichten sendet.
+description: Überprüfen Sie ein beispiel für einen nicht typierten Client, der die Windows-Webdienst-API (WWSAPI) verwendet. Dieses Beispiel zeigt einen HTTP-Client, der Anforderung-Antwort-Nachrichten sendet.
 ms.assetid: ea6d8696-fd43-4d3c-bfec-3602658a08a7
 keywords:
 - UnTypedClientExample Native-Web-Services

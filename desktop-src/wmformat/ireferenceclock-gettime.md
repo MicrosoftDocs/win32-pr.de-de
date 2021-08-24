@@ -1,11 +1,11 @@
 ---
-title: IReferenceClock getTime-Methode
-description: Die getTime-Methode ruft die aktuelle Verweis Zeit ab.
+title: IReferenceClock GetTime-Methode
+description: Die GetTime-Methode ruft die aktuelle Verweiszeit ab.
 ms.assetid: 9bf5050a-ae09-4a72-a3f2-3df8339d99b9
 keywords:
-- GetTime-Methode Windows Media-Format
-- GetTime-Methode Windows Media-Format, IReferenceClock-Schnittstelle
-- IReferenceClock-Schnittstelle Windows Media-Format, GetTime-Methode
+- GetTime-Methode windows Media Format
+- GetTime-Methode windows Media Format , IReferenceClock-Schnittstelle
+- IReferenceClock-Schnittstelle windows Media Format , GetTime-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c679ce0adbbc6cc7ddc014c12f1b0ace4be6b4b0
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: f7756240e8987199e1f1b5d79e3f0b676d4808520781fbac18dfa18dd75e88d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055440"
 ---
-# <a name="ireferenceclockgettime-method"></a>IReferenceClock:: getTime-Methode
+# <a name="ireferenceclockgettime-method"></a>IReferenceClock::GetTime-Methode
 
-Die **GetTime** -Methode ruft die aktuelle Verweis Zeit ab.
+Die **GetTime-Methode** ruft die aktuelle Verweiszeit ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT GetTime(
 
 <dl> <dt>
 
-*PTIME* \[ vorgenommen\]
+*pTime* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die aktuelle Uhrzeit in 100-Nanosecond-Einheiten empfängt.
+Zeiger auf eine Variable, die die aktuelle Zeit in Einheiten von 100 Nanosekunden empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                                   |
 |-------------------------------------------------------------------------------------------|-----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Die Methode wurde erfolgreich ausgeführt.<br/>              |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | Der *PTIME* -Parameter ist **null**.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl> | Der *pTime-Parameter* ist **NULL.**<br/> |
 
 
 

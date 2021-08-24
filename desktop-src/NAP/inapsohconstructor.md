@@ -1,10 +1,10 @@
 ---
-title: Inapsohconstructor-Schnittstelle (napprotocol. h)
-description: Werden von SHAs zum Erstellen von sohrequests und von SHVs zum Erstellen von sohantworten verwendet.
+title: INapSoHConstructor-Schnittstelle (NapProtocol.h)
+description: Werden von SHAs zum Erstellen von SoHRequests und von SHVs zum Erstellen von SoHResponses verwendet.
 ms.assetid: ad79c80a-3003-4465-b350-77890c217d63
 keywords:
-- Inapsohconstructor-Schnittstelle NAP
-- Inapsohconstructor Interface NAP, beschrieben
+- INapSoHConstructor-Schnittstelle NAP
+- INapSoHConstructor-Schnittstelle NAP , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,40 +15,40 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 546a6d3b4ec262fdd725af24211338e848b2b848
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0ceb9e927e1ac65f21a3ff457922e1bd475b8327ac2525b2af7afefa6cb173f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037850"
 ---
-# <a name="inapsohconstructor-interface"></a>Inapsohconstructor-Schnittstelle
+# <a name="inapsohconstructor-interface"></a>INapSoHConstructor-Schnittstelle
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Der **inapsohconstructor** stellt Methoden bereit, die von SHAs zum Erstellen von [**sohrequests**](/windows/win32/api/naptypes/ns-naptypes-soh) und von SHVs zum Erstellen von **sohantworten** verwendet werden.
+Der **INapSoHConstructor** bietet Methoden, die von SHAs zum Erstellen von [**SoHRequests**](/windows/win32/api/naptypes/ns-naptypes-soh) und von SHVs zum Erstellen von **SoHResponses verwendet werden.**
 
 ## <a name="members"></a>Member
 
-Die **inapsohconstructor** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Inapsohconstructor** verfügt auch über die folgenden Typen von Membern:
+Die **INapSoHConstructor-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **INapSoHConstructor** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **inapsohconstructor** -Schnittstelle verfügt über diese Methoden.
+Die **INapSoHConstructor-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                   | BESCHREIBUNG                                         |
 |:-----------------------------------------------------------------------------------------|:----------------------------------------------------|
-| [**Inapsohconstructor:: appendattribute**](inapsohconstructor-appendattribute-method.md) | Fügt ein TLV am Ende des SoH-Puffers hinzu.<br/> |
-| [**Inapsohconstructor:: getsoh**](inapsohconstructor-getsoh-method.md)                   | Ruft das erstellte SoH-Paket ab.<br/>    |
-| [**Inapsohconstructor:: Initialize**](inapsohconstructor-initialize-method.md)           | Initialisiert das SoH-Paket.<br/>              |
-| [**Inapsohconstructor:: Validate**](inapsohconstructor-validate-method.md)               | Überprüft die Gültigkeit des SoH-Pakets.<br/>   |
+| [**INapSoHConstructor::AppendAttribute**](inapsohconstructor-appendattribute-method.md) | Fügt am Ende des SoH-Puffers einen TLV hinzu.<br/> |
+| [**INapSoHConstructor::GetSoH**](inapsohconstructor-getsoh-method.md)                   | Ruft das konstruierte SoH-Paket ab.<br/>    |
+| [**INapSoHConstructor::Initialize**](inapsohconstructor-initialize-method.md)           | Initialisiert das SoH-Paket.<br/>              |
+| [**INapSoHConstructor::Validate**](inapsohconstructor-validate-method.md)               | Überprüft die Gültigkeit des SoH-Pakets.<br/>   |
 
 
 
@@ -60,10 +60,10 @@ Die **inapsohconstructor** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Napprotocol. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napprotocol. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>NapProtocol.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapProtocol.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl>       |
 
 

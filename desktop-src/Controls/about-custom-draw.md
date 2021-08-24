@@ -1,151 +1,151 @@
 ---
 title: Informationen zum benutzerdefinierten Zeichnen
-description: Dieser Abschnitt enthält allgemeine Informationen über benutzerdefinierte Zeichnungsfunktionen und bietet eine konzeptionelle Übersicht darüber, wie eine Anwendung benutzerdefiniertes Zeichnen unterstützen kann.
+description: Dieser Abschnitt enthält allgemeine Informationen zur benutzerdefinierten Zeichnen-Funktionalität und bietet eine konzeptionelle Übersicht darüber, wie eine Anwendung benutzerdefiniertes Zeichnen unterstützen kann.
 ms.assetid: dd104661-1e0c-4569-9753-817bcded1894
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 121a4df5aa6fab222a5c4387ebdcfba51a7977b2
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: 7f4961d80c04f8fa570286666511c04b1208c940369cd13b836095b8899505de
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "104474553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922490"
 ---
 # <a name="about-custom-draw"></a>Informationen zum benutzerdefinierten Zeichnen
 
-Dieser Abschnitt enthält allgemeine Informationen über benutzerdefinierte Zeichnungsfunktionen und bietet eine konzeptionelle Übersicht darüber, wie eine Anwendung benutzerdefiniertes Zeichnen unterstützen kann. Derzeit unterstützen die folgenden Steuerelemente benutzerdefinierte Zeichnungsfunktionen:
+Dieser Abschnitt enthält allgemeine Informationen zur benutzerdefinierten Zeichnen-Funktionalität und bietet eine konzeptionelle Übersicht darüber, wie eine Anwendung benutzerdefiniertes Zeichnen unterstützen kann. Derzeit unterstützen die folgenden Steuerelemente benutzerdefinierte Zeichnen-Funktionen:
 
--   Header Steuerelemente
--   Listenansicht-Steuerelemente
--   Grund leisten-Steuerelemente
+-   Headersteuerelemente
+-   Steuerelemente für Listenansichten
+-   Rebar-Steuerelemente
 -   Symbolleisten-Steuerelemente
--   ToolTip-Steuerelemente
--   TrackBar-Steuerelemente
--   Strukturansicht-Steuerelemente
+-   QuickInfo-Steuerelemente
+-   Trackbar-Steuerelemente
+-   Strukturansichtssteuerelemente
 
 <!-- -->
 
--   [Informationen zu benutzerdefinierten Zeichnungs Benachrichtigungen](#about-custom-draw-notification-messages)
--   [Zeichnungs Zyklen, Zeichnungs Phasen und Benachrichtigungs Meldungen](#paint-cycles-drawing-stages-and-notification-messages)
+-   [Informationen zu benutzerdefinierten Draw-Benachrichtigungsmeldungen](#about-custom-draw-notification-messages)
+-   [Paint Zyklen, Zeichnungsphasen und Benachrichtigungsmeldungen](#paint-cycles-drawing-stages-and-notification-messages)
 -   [Nutzen benutzerdefinierter Draw-Dienste](#taking-advantage-of-custom-draw-services)
-    -   [Antworten auf die PrePaint-Benachrichtigung](#responding-to-the-prepaint-notification)
-    -   [Anfordern von Element spezifischen Benachrichtigungen](#requesting-item-specific-notifications)
-    -   [Eigenes Zeichnen des Elements](#drawing-the-item-yourself)
+    -   [Reagieren auf die Präpaintbenachrichtigung](#responding-to-the-prepaint-notification)
+    -   [Anfordern elementspezifischer Benachrichtigungen](#requesting-item-specific-notifications)
+    -   [Zeichnen des Elements selbst](#drawing-the-item-yourself)
     -   [Ändern von Schriftarten und Farben](#changing-fonts-and-colors)
 -   [Benutzerdefiniertes Zeichnen mit List-View und Tree-View Steuerelementen](#custom-draw-with-list-view-and-tree-view-controls)
     -   [Benutzerdefiniertes Zeichnen mit List-View Steuerelementen](#custom-draw-with-list-view-controls)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="about-custom-draw-notification-messages"></a>Informationen zu benutzerdefinierten Zeichnungs Benachrichtigungen
+## <a name="about-custom-draw-notification-messages"></a>Informationen zu benutzerdefinierten Draw-Benachrichtigungsmeldungen
 
-Alle allgemeinen Steuerelemente, die benutzerdefinierte Zeichen unterstützen, senden bei Zeichnungs Vorgängen an bestimmten Punkten die Benachrichtigungs Codes von [nm \_ ](nm-customdraw.md) . Diese Benachrichtigungs Codes beschreiben Zeichnungsvorgänge, die für das gesamte Steuerelement gelten, sowie Zeichnungsvorgänge, die für Elemente innerhalb des Steuer Elements spezifisch sind. Wie viele Benachrichtigungs Codes \_ werden nm customdraw-Benachrichtigungen als [**WM \_**](wm-notify.md) -Benachrichtigungs Nachrichten gesendet.
+Alle gängigen Steuerelemente, die benutzerdefiniertes Zeichnen unterstützen, [senden NM \_ CUSTOMDRAW-Benachrichtigungscodes](nm-customdraw.md) an bestimmten Punkten während Zeichnungsvorgängen. Diese Benachrichtigungscodes beschreiben Zeichnungsvorgänge, die für das gesamte Steuerelement gelten, sowie Zeichnungsvorgänge, die für Elemente innerhalb des Steuerelements spezifisch sind. Wie viele Benachrichtigungscodes werden NM \_ CUSTOMDRAW-Benachrichtigungen als [**WM \_ NOTIFY-Nachrichten**](wm-notify.md) gesendet.
 
-Der *LPARAM* -Parameter einer benutzerdefinierten Zeichnungs Benachrichtigung ist die Adresse einer [**nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) -Struktur oder eine Steuerelement spezifische Struktur, die eine **nmcustomdraw** -Struktur als ersten Member enthält. In der folgenden Tabelle wird die Beziehung zwischen den Steuerelementen und den von Ihnen verwendeten Strukturen veranschaulicht.
+Der *lParam-Parameter* einer benutzerdefinierten Zeichnen-Benachrichtigung ist die Adresse einer [**NMCUSTOMDRAW-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) oder einer steuerelementspezifischen Struktur, die eine **NMCUSTOMDRAW-Struktur** als ersten Member enthält. Die folgende Tabelle veranschaulicht die Beziehung zwischen den Steuerelementen und den strukturen, die sie verwenden.
 
 
 
 | Struktur                                | Verwendet von                              |
 |------------------------------------------|--------------------------------------|
-| [**Nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw)     | Info Leiste, TrackBar und Header Steuerelemente |
-| [**Nmlvcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmlvcustomdraw) | Listenansicht-Steuerelemente                   |
-| [**Nmtbcustomdraw**](/windows/desktop/api/Commctrl/ns-commctrl-nmtbcustomdraw) | Symbolleisten-Steuerelemente                     |
-| [**Nmttcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmttcustomdraw) | ToolTip-Steuerelemente                     |
-| [**Nmtvcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmtvcustomdraw) | Strukturansicht-Steuerelemente                   |
+| [**NMCUSTOMDRAW**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw)     | Rebar-, Trackbar- und Header-Steuerelemente |
+| [**NMLVCUSTOMDRAW**](/windows/win32/api/commctrl/ns-commctrl-nmlvcustomdraw) | Steuerelemente für Listenansichten                   |
+| [**NMTBCUSTOMDRAW**](/windows/desktop/api/Commctrl/ns-commctrl-nmtbcustomdraw) | Symbolleisten-Steuerelemente                     |
+| [**NMTTCUSTOMDRAW**](/windows/win32/api/commctrl/ns-commctrl-nmttcustomdraw) | QuickInfo-Steuerelemente                     |
+| [**NMTVCUSTOMDRAW**](/windows/win32/api/commctrl/ns-commctrl-nmtvcustomdraw) | Strukturansichtssteuerelemente                   |
 
 
 
- 
+ 
 
-## <a name="paint-cycles-drawing-stages-and-notification-messages"></a>Zeichnungs Zyklen, Zeichnungs Phasen und Benachrichtigungs Meldungen
+## <a name="paint-cycles-drawing-stages-and-notification-messages"></a>Paint Zyklen, Zeichnungsphasen und Benachrichtigungsmeldungen
 
-Wie bei allen Windows-Anwendungen zeichnen sich allgemeine Steuerelemente in regelmäßigen Abständen auf der Grundlage von Nachrichten aus dem System oder anderen Anwendungen ab. Der Prozess eines Steuer Elements, das das Zeichnen oder löschen selbst bezeichnet, wird als Zeichnungs *Kreis* bezeichnet. Steuerelemente, die benutzerdefinierte [Zeichnungs \_ Codes](nm-customdraw.md) unterstützen Dieser Benachrichtigungs Code wird von einer [**nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) -Struktur oder einer anderen Struktur begleitet, die eine **nmcustomdraw** -Struktur als ersten Member enthält.
+Wie bei Windows Anwendungen zeichnen und löschen sich allgemeine Steuerelemente in regelmäßigen Abständen auf der Grundlage von Nachrichten, die vom System oder anderen Anwendungen empfangen werden. Der Prozess des Zeichnens oder Löschens eines Steuerelements selbst wird als *Farbzyklus bezeichnet.* Steuerelemente, die benutzerdefiniertes Zeichnen unterstützen, senden in regelmäßigen Abständen [NM \_ CUSTOMDRAW-Benachrichtigungscodes](nm-customdraw.md) über jeden Farbzyklus. Dieser Benachrichtigungscode wird von einer [**NMCUSTOMDRAW-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) oder einer anderen Struktur begleitet, die eine **NMCUSTOMDRAW-Struktur** als ersten Member enthält.
 
-Ein Informationselement, das die [**nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) -Struktur enthält, ist die aktuelle Phase des Zeichnungs Zyklen. Dies wird als *Zeichnungsphase* bezeichnet und wird durch den Wert im **dwdrawstage** -Member der Struktur dargestellt. Ein Steuerelement informiert das übergeordnete Element über vier grundlegende Zeichnungs Stufen. Diese grundlegenden oder globalen Zeichnungs Phasen werden in der Struktur durch die folgenden Flagwerte dargestellt (definiert in "kommctrl. h").
+Eine Information, die die [**NMCUSTOMDRAW-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) enthält, ist die aktuelle Phase des Farbzyklus. Dies wird als Zeichnen-Phase *bezeichnet* und durch den Wert im **dwDrawStage-Member der -Struktur** dargestellt. Ein Steuerelement informiert sein übergeordnetes Element über vier grundlegende Zeichnen-Phasen. Diese grundlegenden oder globalen Zeichnen-Phasen werden in der Struktur durch die folgenden Flagwerte dargestellt (definiert in Commctrl.h).
 
 
 
-| Globale Werte für zeichnen-Stufen | BESCHREIBUNG                        |
+| Globale Werte für die Zeichnen-Phase | BESCHREIBUNG                        |
 |--------------------------|------------------------------------|
-| CDDs- \_ präpaint           | Vor Beginn des Farb Zyklen.     |
-| CDDs \_ PostPaint          | Nachdem der Farb Durchlauf fertiggestellt wurde. |
-| CDDs- \_ vorlöschung           | Vor Beginn des Löschvorgangs.     |
-| CDDs- \_ posterase          | Nach Abschluss des Löschvorgangs. |
+| CDDS \_ PREPAINT           | Bevor der Farbzyklus beginnt.     |
+| CDDS \_ POSTPAINT          | Nach Abschluss des Farbzyklus. |
+| \_CDDS-VORABVERSION           | Bevor der Löschzyklus beginnt.     |
+| CDDS \_ POSTERASE          | Nach Abschluss des Löschzyklus. |
 
 
 
- 
+ 
 
-Jeder der vorangehenden Werte kann mit dem CDDs- \_ elementflag kombiniert werden, um für Elemente spezifische Zeichnungs Stufen anzugeben. Der praktische Wert enthält "kommctrl. h" die folgenden Element spezifischen Werte.
+Jeder der oben genannten Werte kann mit dem CDDS ITEM-Flag kombiniert werden, um für \_ Elemente spezifische Zeichnen-Phasen anzugeben. Commctrl.h enthält der Einfachheit halber die folgenden elementspezifischen Werte.
 
 
 
-| Element spezifische Zeichnungs Stufen Werte | BESCHREIBUNG                                                                                                                                                                                                                                                                         |
+| Elementspezifische Werte für die Zeichnen-Phase | BESCHREIBUNG                                                                                                                                                                                                                                                                         |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CDDs \_ itemprepaint              | Vor dem Zeichnen eines Elements.                                                                                                                                                                                                                                                            |
-| CDDs \_ itempostpaint             | Nachdem ein Element gezeichnet wurde.                                                                                                                                                                                                                                                       |
-| CDDs \_ itempreerase              | Vor dem Löschen eines Elements.                                                                                                                                                                                                                                                           |
-| CDDs \_ itemposterase             | Nachdem ein Element gelöscht wurde.                                                                                                                                                                                                                                                      |
-| CDDs-Unterelement \_                   | [Allgemeine Steuerelement Versionen](common-control-versions.md) 4,71. Flag, das mit CDDs \_ itemprepaint oder CDDs \_ itempostpaint kombiniert wird, wenn ein Unterelement gezeichnet wird. Dieser Wert wird nur festgelegt, wenn [**cdrf \_ noticyitemdraw**](cdrf-constants.md) von CDDs \_ PrePaint zurückgegeben wird. |
+| CDDS \_ ITEMPREPAINT              | Bevor ein Element gezeichnet wird.                                                                                                                                                                                                                                                            |
+| CDDS \_ ITEMPOSTPAINT             | Nachdem ein Element gezeichnet wurde.                                                                                                                                                                                                                                                       |
+| CDDS \_ ITEMPREERASE              | Bevor ein Element gelöscht wird.                                                                                                                                                                                                                                                           |
+| CDDS \_ ITEMPOSTERASE             | Nachdem ein Element gelöscht wurde.                                                                                                                                                                                                                                                      |
+| \_CDDS-UNTERITEM                   | [Allgemeine Steuerelementversionen](common-control-versions.md) 4.71. Flag in Kombination mit CDDS \_ ITEMPREPAINT oder CDDS \_ ITEMPOSTPAINT, wenn ein Unterelement gezeichnet wird. Dies wird nur festgelegt, wenn [**CDRF \_ NOTIFYITEMDRAW**](cdrf-constants.md) von CDDS \_ PREPAINT zurückgegeben wird. |
 
 
 
- 
+ 
 
-Die Anwendung muss den " [nm \_ customdraw](nm-customdraw.md) "-Benachrichtigungs Code verarbeiten und dann einen bestimmten Wert zurückgeben, der dem Steuerelement mitteilt, was es tun muss. Weitere Informationen zu diesen Rückgabe Werten finden Sie in den folgenden Abschnitten.
+Ihre Anwendung muss den [NM \_ CUSTOMDRAW-Benachrichtigungscode](nm-customdraw.md) verarbeiten und dann einen bestimmten Wert zurückgeben, der das Steuerelement darüber informiert, was es tun muss. Weitere Informationen zu diesen Rückgabewerten finden Sie in den folgenden Abschnitten.
 
 ## <a name="taking-advantage-of-custom-draw-services"></a>Nutzen benutzerdefinierter Draw-Dienste
 
-Der Schlüssel für die benutzerdefinierte Zeichnungs Funktionalität besteht darin, auf die von einem Steuerelement gesendeten [nm \_ customdraw](nm-customdraw.md) -Benachrichtigungs Codes zu reagieren. Die Rückgabewerte, die Ihre Anwendung als Antwort auf diese Benachrichtigungen sendet, bestimmen das Verhalten des Steuer Elements für diesen Zeichnungs Kreis.
+Der Schlüssel zur Nutzung benutzerdefinierter Zeichnen-Funktionen besteht in der Reaktion auf die [NM CUSTOMDRAW-Benachrichtigungscodes, \_ ](nm-customdraw.md) die ein Steuerelement sendet. Die Rückgabewerte, die Ihre Anwendung als Antwort auf diese Benachrichtigungen sendet, bestimmen das Verhalten des Steuerelements für diesen Farbzyklus.
 
-Dieser Abschnitt enthält Informationen darüber, wie die Anwendung die Rückgabewerte des Steuer Elements mithilfe von [nm \_ customdraw](nm-customdraw.md) -Benachrichtigungs Rückgabe Werten bestimmen kann.
+Dieser Abschnitt enthält Informationen dazu, wie Ihre Anwendung [NM CUSTOMDRAW-Benachrichtigungs-Rückgabewerte \_ ](nm-customdraw.md) verwenden kann, um das Verhalten des Steuerelements zu bestimmen.
 
-Details werden in die folgenden Themen unterteilt:
+Die Details sind in die folgenden Themen aufgeschlüsselt:
 
--   [Antworten auf die PrePaint-Benachrichtigung](#responding-to-the-prepaint-notification)
--   [Anfordern von Element spezifischen Benachrichtigungen](#requesting-item-specific-notifications)
--   [Eigenes Zeichnen des Elements](#drawing-the-item-yourself)
+-   [Reagieren auf die Präpaintbenachrichtigung](#responding-to-the-prepaint-notification)
+-   [Anfordern elementspezifischer Benachrichtigungen](#requesting-item-specific-notifications)
+-   [Zeichnen des Elements selbst](#drawing-the-item-yourself)
 -   [Ändern von Schriftarten und Farben](#changing-fonts-and-colors)
 
-### <a name="responding-to-the-prepaint-notification"></a>Antworten auf die PrePaint-Benachrichtigung
+### <a name="responding-to-the-prepaint-notification"></a>Reagieren auf die Präpaintbenachrichtigung
 
-Am Anfang jedes Zeichnungs Zyklen sendet das Steuerelement den " [nm \_ customdraw](nm-customdraw.md) "-Benachrichtigungs Code, wobei der CDDs- \_ PrePaint-Wert im **dwdrawstage** -Member der zugehörigen nm- \_ customdraw-Struktur angegeben wird. Der Wert, den die Anwendung an diese erste Benachrichtigung zurückgibt, legt fest, wie und wann das Steuerelement nachfolgende benutzerdefinierte Zeichnungs Benachrichtigungen für den Rest dieses Zeichnungs Zyklen sendet. Die Anwendung kann eine Kombination der folgenden Flags als Antwort auf die erste Benachrichtigung zurückgeben.
+Am Anfang jedes Farbzyklus sendet das Steuerelement den [NM \_ CUSTOMDRAW-Benachrichtigungscode](nm-customdraw.md) und gibt den CDDS \_ PREPAINT-Wert im **dwDrawStage-Member** der zugehörigen NM \_ CUSTOMDRAW-Struktur an. Der Wert, den Ihre Anwendung an diese erste Benachrichtigung zurückgibt, bestimmt, wie und wann das Steuerelement nachfolgende benutzerdefinierte Zeichnen-Benachrichtigungen für den Rest dieses Farbzyklus sendet. Ihre Anwendung kann als Reaktion auf die erste Benachrichtigung eine Kombination der folgenden Flags zurückgeben.
 
 
 
 | Rückgabewert            | Wirkung                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| cdrf \_ DODEFAULT         | Das Steuerelement zeichnet sich selbst auf. Für diesen Zeichnungs Kreis werden keine zusätzlichen [nm- \_ customdraw](nm-customdraw.md) -Benachrichtigungen gesendet. Dieses Flag kann nicht mit einem anderen Flag verwendet werden.                                                                                                                                                                                                                                                                               |
-| cdrf \_ doerase           | Das-Steuerelement zeichnet nur den Hintergrund.                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| cdrf \_ newFont           | Ihre Anwendung hat eine neue Schriftart für das Element angegeben. das-Steuerelement verwendet die neue Schriftart. Weitere Informationen zum Ändern von Schriftarten finden Sie unter [Ändern von Schriftarten und Farben](#changing-fonts-and-colors). Dies tritt auf, wenn **dwdrawstage** auf CDDs \_ itemprepaint zugreift.                                                                                                                                                                                                       |
-| cdrf \_ notiteyitemdraw    | Das-Steuerelement benachrichtigt das übergeordnete Element über Element spezifische Zeichnungsvorgänge. Sie sendet vor und nach dem Zeichnen von Elementen [nm \_ customdraw](nm-customdraw.md) -Benachrichtigungs Codes. Dies tritt auf, wenn **dwdrawstage** dem CDDs- \_ präpaint gleicht.                                                                                                                                                                                                                       |
-| cdrf \_ notifyposterase   | Das-Steuerelement benachrichtigt das übergeordnete Element nach dem Löschen eines Elements. Dies tritt auf, wenn **dwdrawstage** dem CDDs- \_ präpaint gleicht.                                                                                                                                                                                                                                                                                                                                             |
-| cdrf \_ notifypostpaint   | Das-Steuerelement sendet eine [nm- \_ customdraw](nm-customdraw.md) -Benachrichtigung, wenn der Zeichnungs Kreis für das gesamte-Steuerelement vollständig ist. Dies tritt auf, wenn **dwdrawstage** dem CDDs- \_ präpaint gleicht.                                                                                                                                                                                                                                                                 |
-| cdrf \_ notifysubitemdraw | [Version 4,71](common-control-versions.md). Die Anwendung empfängt eine [nm \_ customdraw](nm-customdraw.md) -Benachrichtigung, wobei **dwdrawstage** auf CDDs \_ itemprepaint \| CDDs \_ Unterelement festgelegt ist, bevor die einzelnen Listen Ansichts unter Elemente gezeichnet werden. Anschließend können Sie Schriftart und Farbe für jedes Unterelement separat angeben oder [**cdrf \_ DODEFAULT**](cdrf-constants.md) für die Standard Verarbeitung zurückgeben. Dies tritt auf, wenn **dwdrawstage** auf CDDs \_ itemprepaint zugreift. |
-| cdrf \_ skipdefault       | Die Anwendung hat das Element manuell gezeichnet. Das-Steuerelement zeichnet das Element nicht. Dies tritt auf, wenn **dwdrawstage** auf CDDs \_ itemprepaint zugreift.                                                                                                                                                                                                                                                                                                                      |
-| cdrf \_ skippostpaint     | Das-Steuerelement zeichnet das Fokus Rechteck nicht um ein Element.                                                                                                                                                                                                                                                                                                                                                                                                 |
+| CDRF \_ DODEFAULT         | Das Steuerelement wird sich selbst zeichnen. Es werden keine [zusätzlichen NM \_ CUSTOMDRAW-Benachrichtigungen](nm-customdraw.md) für diesen Farbzyklus gesendet. Dieses Flag kann nicht mit einem anderen Flag verwendet werden.                                                                                                                                                                                                                                                                               |
+| CDRF \_ DOERASE           | Das Steuerelement zeichnen nur den Hintergrund.                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| CDRF \_ NEWFONT           | Ihre Anwendung hat eine neue Schriftart für das Element angegeben. Das -Steuerelement verwendet die neue Schriftart. Weitere Informationen zum Ändern von Schriftarten finden Sie unter [Ändern von Schriftarten und Farben.](#changing-fonts-and-colors) Dies tritt auf, **wenn dwDrawStage** gleich CDDS \_ ITEMPREPAINT ist.                                                                                                                                                                                                       |
+| CDRF \_ NOTIFYITEMDRAW    | Das -Steuerelement benachrichtigt das übergeordnete Element über elementspezifische Zeichnungsvorgänge. Sie sendet [NM \_ CUSTOMDRAW-Benachrichtigungscodes](nm-customdraw.md) vor und nach dem Zeichnet von Elementen. Dies tritt auf, **wenn dwDrawStage** gleich CDDS \_ PREPAINT ist.                                                                                                                                                                                                                       |
+| CDRF \_ NOTIFYPOSTERASE   | Das -Steuerelement benachrichtigt das übergeordnete Element nach dem Löschen eines Elements. Dies tritt auf, **wenn dwDrawStage** gleich CDDS \_ PREPAINT ist.                                                                                                                                                                                                                                                                                                                                             |
+| CDRF \_ NOTIFYPOSTPAINT   | Das Steuerelement sendet eine [NM \_ CUSTOMDRAW-Benachrichtigung,](nm-customdraw.md) wenn der Malzyklus für das gesamte Steuerelement abgeschlossen ist. Dies tritt auf, **wenn dwDrawStage** gleich CDDS \_ PREPAINT ist.                                                                                                                                                                                                                                                                 |
+| CDRF \_ NOTIFYSUBITEMDRAW | [Version 4.71](common-control-versions.md). Ihre Anwendung erhält eine [NM \_ CUSTOMDRAW-Benachrichtigung,](nm-customdraw.md) bei der **dwDrawStage** auf CDDS ITEMPREPAINT CDDS SUBITEM festgelegt ist, bevor jedes \_ Listenansichtsunterelement \| \_ gezeichnet wird. Anschließend können Sie Schriftart und Farbe für jedes Unterem separat angeben oder [**CDRF \_ DODEFAULT**](cdrf-constants.md) für die Standardverarbeitung zurückgeben. Dies tritt auf, **wenn dwDrawStage** gleich CDDS \_ ITEMPREPAINT ist. |
+| CDRF \_ SKIPDEFAULT       | Ihre Anwendung hat das Element manuell geerbt. Das -Steuerelement zeichnen das Element nicht. Dies tritt auf, **wenn dwDrawStage** gleich CDDS \_ ITEMPREPAINT ist.                                                                                                                                                                                                                                                                                                                      |
+| CDRF \_ SKIPPOSTPAINT     | Das Steuerelement zeichnen das Fokusrechteck um ein Element nicht.                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 
 
- 
+ 
 
-### <a name="requesting-item-specific-notifications"></a>Anfordern von Element spezifischen Benachrichtigungen
+### <a name="requesting-item-specific-notifications"></a>Anfordern elementspezifischer Benachrichtigungen
 
-Wenn Ihre Anwendung [**cdrf \_ notifyitemdraw**](cdrf-constants.md) an die anfängliche benutzerdefinierte Zeichnen-Benachrichtigung von PrePaint zurückgibt, sendet das Steuerelement Benachrichtigungen für jedes Element, das während dieses Zeichnungs Zyklen gezeichnet wird. Diese Element spezifischen Benachrichtigungen erhalten den CDDs- \_ itemprepaint-Wert im **dwdrawstage** -Member der zugehörigen [**nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) -Struktur. Sie können anfordern, dass das Steuerelement eine andere Benachrichtigung sendet, wenn das Zeichnen des Elements abgeschlossen ist, indem Sie [**cdrf \_ notifypostpaint**](cdrf-constants.md) an diese Element spezifischen Benachrichtigungen zurückgeben. Andernfalls wird [**cdrf \_ DODEFAULT**](cdrf-constants.md) zurückgegeben, und das Steuerelement benachrichtigt das übergeordnete Fenster erst, wenn es beginnt, das nächste Element zu zeichnen.
+Wenn Ihre Anwendung [**CDRF \_ NOTIFYITEMDRAW**](cdrf-constants.md) an die anfängliche benutzerdefinierte Zeichnen-Benachrichtigung für präpaint zurückgibt, sendet das Steuerelement Benachrichtigungen für jedes Element, das während dieses Farbzyklus ge zeichnet wird. Diese elementspezifischen Benachrichtigungen verfügen über den CDDS \_ ITEMPREPAINT-Wert im **dwDrawStage-Element** der [**zugehörigen NMCUSTOMDRAW-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) Sie können anfordern, dass das Steuerelement eine weitere Benachrichtigung sendet, wenn das Zeichnen des Elements abgeschlossen ist, indem [**Sie CDRF \_ NOTIFYPOSTPAINT**](cdrf-constants.md) an diese elementspezifischen Benachrichtigungen zurückgeben. Andernfalls geben [**Sie CDRF \_ DODEFAULT zurück,**](cdrf-constants.md) und das Steuerelement benachrichtigt das übergeordnete Fenster erst, wenn es mit dem Zeichnen des nächsten Elements beginnt.
 
-### <a name="drawing-the-item-yourself"></a>Eigenes Zeichnen des Elements
+### <a name="drawing-the-item-yourself"></a>Zeichnen des Elements selbst
 
-Wenn die Anwendung das gesamte Element zeichnet, wird [**cdrf \_ skipdefault**](cdrf-constants.md)zurückgegeben. Dies ermöglicht es dem Steuerelement, Elemente zu überspringen, die nicht gezeichnet werden müssen, wodurch der System Aufwand verringert wird. Beachten Sie, dass das zurückgeben dieses Werts bedeutet, dass das Steuerelement keinen Teil des Elements zeichnet.
+Wenn Ihre Anwendung das gesamte Element zeichnet, geben [**Sie CDRF \_ SKIPDEFAULT zurück.**](cdrf-constants.md) Dadurch kann das Steuerelement Elemente überspringen, die es nicht zeichnen muss, wodurch der Systemaufwand verringert wird. Beachten Sie, dass die Rückgabe dieses Werts bedeutet, dass das Steuerelement keinen Teil des Elements zeichnen wird.
 
 ### <a name="changing-fonts-and-colors"></a>Ändern von Schriftarten und Farben
 
-Die Anwendung kann mit benutzerdefiniertem zeichnen die Schriftart eines Elements ändern. Wählen Sie einfach das gewünschte hFont in den Gerätekontext aus, der vom **hdc** -Mitglied der [**nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) -Struktur angegeben wird, die der benutzerdefinierten Zeichnungs Benachrichtigung zugeordnet ist. Da die von Ihnen gewählte Schriftart möglicherweise andere Metriken als die Standard Schriftart enthält, sollten Sie sicherstellen, dass Sie das [**cdrf \_ newFont**](cdrf-constants.md) -Bit in den Rückgabewert für die Benachrichtigungsnachricht einschließen. Weitere Informationen zur Verwendung dieser Funktion finden Sie im Beispielcode in [Verwenden von benutzerdefiniertem zeichnen](using-custom-draw.md). Die Schriftart, die von der Anwendung angegeben wird, wird verwendet, um das Element anzuzeigen, wenn es nicht ausgewählt ist. Benutzerdefinierte Zeichnen ermöglicht keine Änderung der Schriftart Attribute für ausgewählte Elemente.
+Ihre Anwendung kann das benutzerdefinierte Zeichnen verwenden, um die Schriftart eines Elements zu ändern. Wählen Sie einfach das HFONT aus, das Sie in dem Gerätekontext auswählen möchten, der vom **hdc-Member** der [**NMCUSTOMDRAW-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) angegeben wird, die der benutzerdefinierten Zeichnen-Benachrichtigung zugeordnet ist. Da die schriftart, die Sie auswählen, möglicherweise andere Metriken als die Standardschriftart auft, stellen Sie sicher, dass Sie das [**CDRF \_ NEWFONT-Bit**](cdrf-constants.md) in den Rückgabewert für die Benachrichtigungsmeldung einwählen. Weitere Informationen zur Verwendung dieser Funktion finden Sie im Beispielcode unter [Verwenden von Custom Draw](using-custom-draw.md). Die Schriftart, die ihre Anwendung angibt, wird verwendet, um dieses Element anzuzeigen, wenn es nicht ausgewählt ist. Beim benutzerdefinierten Zeichnen können Sie die Schriftartattribute für ausgewählte Elemente nicht ändern.
 
-Um die Textfarben für alle Steuerelemente zu ändern, die eine benutzerdefinierte Zeichnung mit Ausnahme der Listenansicht und der Strukturansicht unterstützen, legen Sie einfach die gewünschten Text-und Hintergrundfarben im Gerätekontext fest, der in der benutzerdefinierten Zeichnen-Benachrichtigungs Struktur mit den Funktionen [**SetTextColor**](/windows/desktop/api/wingdi/nf-wingdi-settextcolor) und [**SetBkColor**](/windows/desktop/api/wingdi/nf-wingdi-setbkcolor) Um die Textfarben in der Listenansicht oder Strukturansicht zu ändern, müssen Sie die gewünschten Farbwerte in die Member **clrtext** und **clrtextbk** der [**nmlvcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmlvcustomdraw) -oder [**nmtvcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmtvcustomdraw) -Struktur platzieren.
+Um Textfarben für alle Steuerelemente zu ändern, die benutzerdefiniertes Zeichnen unterstützen, mit Ausnahme der Listenansicht und Strukturansicht, legen Sie einfach den gewünschten Text und die gewünschten Hintergrundfarben im Gerätekontext fest, der in der benutzerdefinierten Draw-Benachrichtigungsstruktur mit den [**Funktionen SetTextColor**](/windows/desktop/api/wingdi/nf-wingdi-settextcolor) und [**SetBkColor**](/windows/desktop/api/wingdi/nf-wingdi-setbkcolor) bereitgestellt wird. Um die Textfarben in der Listenansicht oder Strukturansicht zu ändern, müssen Sie die gewünschten Farbwerte in den **ClrText-** und **clrTextBk-Membern** der [**NMLVCUSTOMDRAW-**](/windows/win32/api/commctrl/ns-commctrl-nmlvcustomdraw) oder [**NMTVCUSTOMDRAW-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmtvcustomdraw) platzieren.
 
 > [!Note]  
-> Vor [Version 6,0](common-control-versions.md) der allgemeinen Steuerelemente ignorieren Symbolleisten das [**cdrf \_ newFont**](cdrf-constants.md) -Flag. Version 6,0 unterstützt das **cdrf \_ newFont** -Flag, und Sie können es verwenden, um eine andere Schriftart für die Symbolleiste auszuwählen. Es ist jedoch nicht möglich, die Farbe einer Symbolleiste zu ändern, wenn ein visueller Stil aktiv ist. Um die Farbe einer Symbolleiste in Version 6,0 zu ändern, müssen Sie zuerst visuelle Stile deaktivieren, indem Sie [**SetWindowTheme**](/windows/desktop/api/Uxtheme/nf-uxtheme-setwindowtheme) aufrufen und keinen visuellen Stil angeben:
+> Vor Version [6.0 der](common-control-versions.md) allgemeinen Steuerelemente ignorieren Symbolleisten das [**CDRF \_ NEWFONT-Flag.**](cdrf-constants.md) Version 6.0 unterstützt das **CDRF \_ NEWFONT-Flag,** und Sie können es verwenden, um eine andere Schriftart für die Symbolleiste auszuwählen. Sie können die Farbe einer Symbolleiste jedoch nicht ändern, wenn ein visueller Stil aktiv ist. Um die Farbe einer Symbolleiste in Version 6.0 zu ändern, müssen Sie zuerst visuelle Stile deaktivieren, indem Sie [**SetWindowTheme**](/windows/desktop/api/Uxtheme/nf-uxtheme-setwindowtheme) aufrufen und keinen visuellen Stil angeben:
 
- 
+ 
 
 
 ```
@@ -156,46 +156,46 @@ SetWindowTheme (hwnd, "", "");
 
 ## <a name="custom-draw-with-list-view-and-tree-view-controls"></a>Benutzerdefiniertes Zeichnen mit List-View und Tree-View Steuerelementen
 
-Die gängigsten Steuerelemente können im Wesentlichen auf die gleiche Weise behandelt werden. Die Listenansicht-und Strukturansicht-Steuerelemente verfügen jedoch über einige Funktionen, die einen etwas anderen Ansatz für die benutzerdefinierte Zeichnung erfordern.
+Die meisten gängigen Steuerelemente können im Wesentlichen auf die gleiche Weise behandelt werden. Die Steuerelemente für Listenansichten und Strukturansichten verfügen jedoch über einige Features, die einen etwas anderen Ansatz für das benutzerdefinierte Zeichnen erfordern.
 
-Bei [Version 5,0](common-control-versions.md)können diese beiden Steuerelemente den ausgeschnittenen Text anzeigen, wenn Sie die Schriftart ändern, indem Sie [**cdrf \_ newFont**](cdrf-constants.md)zurückgeben. Dieses Verhalten ist aus Gründen der Abwärtskompatibilität mit früheren Versionen der allgemeinen Steuerelemente erforderlich. Wenn Sie die Schriftart einer Listenansicht oder eines Strukturansicht-Steuer Elements ändern möchten, erhalten Sie bessere Ergebnisse, wenn Sie eine ccm- [**\_ setVersion**](ccm-setversion.md) -Nachricht mit dem *wParam* -Wert 5 senden, bevor Sie dem Steuerelement Elemente hinzufügen. Ein Beispiel für ein Strukturansicht-Steuerelement, das benutzerdefiniertes Zeichnen verwendet, finden Sie im Knowledge Base-Artikel [Beispiel: custdtv veranschaulicht benutzerdefiniertes Zeichnen in einer TreeView (Q248496)]( https://support.microsoft.com/default.aspx?scid=kb;EN-US;q248496).
+Für [Version 5.0 können](common-control-versions.md)diese beiden Steuerelemente abgeschnittenen Text anzeigen, wenn Sie die Schriftart ändern, indem Sie [**CDRF \_ NEWFONT zurückgeben.**](cdrf-constants.md) Dieses Verhalten ist aus Gründen der Abwärtskompatibilität mit früheren Versionen der allgemeinen Steuerelemente erforderlich. Wenn Sie die Schriftart eines Listenansichts- oder Strukturansicht-Steuerelements ändern möchten, erhalten Sie bessere Ergebnisse, wenn Sie eine [**CCM \_ SETVERSION-Nachricht**](ccm-setversion.md) senden, bei der der *wParam-Wert* auf 5 festgelegt ist, bevor Sie dem Steuerelement Elemente hinzufügen. Ein Beispiel für ein Strukturansicht-Steuerelement, das benutzerdefiniertes Zeichnen verwendet, finden Sie im Knowledge Base-Artikel [SAMPLE: CustDTv Illustrates Custom Draw in a TreeView (Q248496) .]( https://support.microsoft.com/default.aspx?scid=kb;EN-US;q248496)
 
 ### <a name="custom-draw-with-list-view-controls"></a>Benutzerdefiniertes Zeichnen mit List-View Steuerelementen
 
-Da Listenansicht-Steuerelemente über unter Elemente und mehrere Anzeigemodi verfügen, müssen Sie die [nm \_ customdraw](nm-customdraw.md) -Benachrichtigung etwas anders behandeln als bei den anderen allgemeinen Steuerelementen.
+Da Listenansichtssteuerelemente Unterelemente und mehrere Anzeigemodi aufweisen, müssen Sie die [NM \_ CUSTOMDRAW-Benachrichtigung](nm-customdraw.md) etwas anders behandeln als für die anderen gängigen Steuerelemente.
 
 Verwenden Sie für den Berichtsmodus das folgende Verfahren.
 
-1.  In der ersten [nm- \_ customdraw](nm-customdraw.md) -Benachrichtigung wird der **dwdrawstage** -Member der zugeordneten [**nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) -Struktur auf CDDs \_ PrePaint festgelegt. Gibt [**cdrf \_ notityyitemdraw**](cdrf-constants.md)zurück.
-2.  Sie erhalten dann eine [nm \_ customdraw](nm-customdraw.md) -Benachrichtigung, bei der **dwdrawstage** auf CDDs \_ itemprepaint festgelegt ist. Wenn Sie neue Schriftarten oder Farben angeben und [**cdrf \_ newFont**](cdrf-constants.md)zurückgeben, werden alle unter Elemente des Elements geändert. Wenn Sie stattdessen jedes Unterelement separat behandeln möchten, geben Sie [**cdrf \_ notifysubitemdraw**](cdrf-constants.md)zurück.
-3.  Wenn Sie im vorherigen Schritt [**cdrf \_ notifysubitemdraw**](cdrf-constants.md) zurückgegeben haben, erhalten Sie eine [nm \_ customdraw](nm-customdraw.md) -Benachrichtigung für jedes Unterelement, wobei **dwdrawstage** auf CDDs \_ Unterelement \| CDDs \_ itemprepaint festgelegt ist. Wenn Sie die Schriftart oder Farbe für dieses Unterelement ändern möchten, geben Sie eine neue Schriftart oder Farbe an, und geben Sie [**cdrf \_ newFont**](cdrf-constants.md)zurück.
+1.  Bei der ersten [NM \_ CUSTOMDRAW-Benachrichtigung](nm-customdraw.md) ist **das dwDrawStage-Member** der zugeordneten [**NMCUSTOMDRAW-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) auf CDDS \_ PREPAINT festgelegt. Gibt [**CDRF \_ NOTIFYITEMDRAW zurück.**](cdrf-constants.md)
+2.  Anschließend erhalten Sie eine [NM \_ CUSTOMDRAW-Benachrichtigung,](nm-customdraw.md) bei der **dwDrawStage** auf CDDS \_ ITEMPREPAINT festgelegt ist. Wenn Sie neue Schriftarten oder Farben angeben und [**CDRF \_ NEWFONT**](cdrf-constants.md)zurückgeben, werden alle Unteritems des Elements geändert. Wenn Sie stattdessen jedes Unterem separat behandeln möchten, geben Sie [**CDRF \_ NOTIFYSUBITEMDRAW zurück.**](cdrf-constants.md)
+3.  Wenn Sie im vorherigen Schritt [**CDRF \_ NOTIFYSUBITEMDRAW**](cdrf-constants.md) zurückgegeben haben, erhalten Sie eine [NM \_ CUSTOMDRAW-Benachrichtigung](nm-customdraw.md) für jedes Unterelement, bei dem **dwDrawStage** auf CDDS \_ SUBITEM \| CDDS \_ ITEMPREPAINT festgelegt ist. Um die Schriftart oder Farbe für dieses Unterem zu ändern, geben Sie eine neue Schriftart oder Farbe an und geben [**CDRF \_ NEWFONT zurück.**](cdrf-constants.md)
 
-Verwenden Sie das folgende Verfahren für große Symbole, kleine Symbole und Listen Modi.
+Verwenden Sie für die Modi "Großes Symbol", "Kleines Symbol" und "Liste" das folgende Verfahren.
 
-1.  In der ersten [nm- \_ customdraw](nm-customdraw.md) -Benachrichtigung wird der **dwdrawstage** -Member der zugeordneten [**nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) -Struktur auf CDDs \_ PrePaint festgelegt. Gibt [**cdrf \_ notityyitemdraw**](cdrf-constants.md)zurück.
-2.  Sie erhalten dann eine [nm \_ customdraw](nm-customdraw.md) -Benachrichtigung, bei der **dwdrawstage** auf CDDs \_ itemprepaint festgelegt ist. Sie können die Schriftarten oder Farben eines Elements ändern, indem Sie neue Schriftarten und Farben angeben und [**cdrf \_ newFont**](cdrf-constants.md)zurückgeben. Da diese Modi keine unter Elemente aufweisen, erhalten Sie keine zusätzlichen nm \_ customdraw-Benachrichtigungen.
+1.  Bei der ersten [NM \_ CUSTOMDRAW-Benachrichtigung](nm-customdraw.md) ist **das dwDrawStage-Member** der zugeordneten [**NMCUSTOMDRAW-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) auf CDDS \_ PREPAINT festgelegt. Gibt [**CDRF \_ NOTIFYITEMDRAW zurück.**](cdrf-constants.md)
+2.  Anschließend erhalten Sie eine [NM \_ CUSTOMDRAW-Benachrichtigung,](nm-customdraw.md) bei der **dwDrawStage** auf CDDS \_ ITEMPREPAINT festgelegt ist. Sie können die Schriftarten oder Farben eines Elements ändern, indem Sie neue Schriftarten und Farben angeben und [**CDRF \_ NEWFONT zurückgeben.**](cdrf-constants.md) Da diese Modi keine Unteritems aufweisen, erhalten Sie keine zusätzlichen NM \_ CUSTOMDRAW-Benachrichtigungen.
 
-Ein Beispiel für einen "List-View [nm \_ customdraw](nm-customdraw.md) "-Benachrichtigungs Handler finden [Sie unter Verwenden von benutzerdefiniertem zeichnen](using-custom-draw.md).
+Ein Beispiel für einen NM [ \_ CUSTOMDRAW-Benachrichtigungshandler](nm-customdraw.md) für Listenansichten finden Sie unter [Verwenden von Custom Draw](using-custom-draw.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Verwenden benutzerdefinierter zeichnen](using-custom-draw.md)
+[Verwenden von benutzerdefiniertem Zeichnen](using-custom-draw.md)
 </dt> <dt>
 
-[Benutzerdefinierter Zeichnungs Verweis](custom-draw-reference.md)
+[Benutzerdefinierter Draw-Verweis](custom-draw-reference.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[Beispiel: custdtv veranschaulicht benutzerdefiniertes Zeichnen in einer TreeView (Q248496)]( https://support.microsoft.com/default.aspx?scid=kb;EN-US;q248496)
+[BEISPIEL: CustDTv veranschaulicht benutzerdefiniertes Zeichnen in einer TreeView (Q248496)]( https://support.microsoft.com/default.aspx?scid=kb;EN-US;q248496)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,19 +1,19 @@
 ---
-description: Dieser Abschnitt enthält das Referenzmaterial zur Verwendung der Mobile Breitband Client-Programmierschnittstelle.
+description: Dieser Abschnitt enthält das Referenzmaterial zur Verwendung der Programmierschnittstelle für mobile Breitbandclients.
 ms.assetid: fae22b08-a63d-4a28-9cdd-ab9135d6e07a
-title: Mobile Breitband-API-Referenz
+title: Api-Referenz für mobiles Breitband
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: adbc79ff25fe4add17cbaec5f2497d94ea7faf5c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4c511441e080981882bdef76a9224cae4e050efa20e705e794841cba3dd4e8bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526030"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119959919"
 ---
-# <a name="mobile-broadband-api-reference"></a>Mobile Breitband-API-Referenz
+# <a name="mobile-broadband-api-reference"></a>Api-Referenz für mobiles Breitband
 
-Dieser Abschnitt enthält das Referenzmaterial zur Verwendung der Mobile Breitband Client-Programmierschnittstelle.
+Dieser Abschnitt enthält das Referenzmaterial zur Verwendung der Programmierschnittstelle für mobile Breitbandclients.
 
 -   [Mobile Breitband-API-Enumerationen](mobile-broadband-networks-api-enumerations.md)
 -   [Mobile Breitband-API-Schnittstellen](mobile-broadband-networks-api-interfaces.md)

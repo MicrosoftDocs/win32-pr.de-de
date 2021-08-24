@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetresizedatabase-Funktion'
-title: Jetresizedatabase-Funktion
+description: Weitere Informationen finden Sie unter JetResizeDatabase-Funktion.
+title: JetResizeDatabase-Funktion
 TOCTitle: JetResizeDatabase Function
 ms:assetid: b6420de7-acff-480e-838b-f0e5acc29c65
 ms:mtpsurl: https://msdn.microsoft.com/library/JJ835047(v=EXCHG.10)
@@ -19,21 +19,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: dadaa7eaa310c5b3a6a2730d316218bc2607d100
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3dd7faf1a28d6cafe7b33e4df49f32c631bb699e
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362749"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122477526"
 ---
-# <a name="jetresizedatabase-function"></a>Jetresizedatabase-Funktion
+# <a name="jetresizedatabase-function"></a>JetResizeDatabase-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-Die **jetresizedatabase** -Funktion erweitert oder verkleinert die Größe einer Datenbank, die derzeit geöffnet ist.
+Die **JetResizeDatabase-Funktion** erweitert oder verkleinert die Größe einer derzeit geöffneten Datenbank.
 
-Die **jetresizedatabase** -Funktion wurde im Windows 8-Betriebssystem eingeführt.
+Die **JetResizeDatabase-Funktion** wurde im Windows 8 eingeführt.
 
 ``` c++
 JET_ERR JET_API JetResizeDatabase(
@@ -47,119 +47,62 @@ JET_ERR JET_API JetResizeDatabase(
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Der für den API-Befehl zu verwendende Daten Bank Sitzungs Kontext.
+Der Datenbanksitzungskontext, der für den API-Aufruf verwendet werden soll.
 
-*DBID*
+*Dbid*
 
 Die Datenbank, die erweitert wird.
 
-*Verbrauchsgüter*
+*Cpg*
 
 Die angeforderte Größe der Datenbank in Seiten.
 
-*pcpgactual*
+*pcpgActual*
 
-Ein Zeiger auf eine Zahl, die die Größe der Datenbank in Seiten nach dem API-Befehl erhält. Wenn der API-Rückruf fehlschlägt, ist der Inhalt des *pcpgactual* -Parameters nicht definiert.
+Ein Zeiger auf eine Zahl, die die Größe der Datenbank in Seiten nach dem API-Aufruf empfängt. Wenn der API-Aufruf fehlschlägt, ist der Inhalt des *parameters pcpgActual* nicht definiert.
 
 *grbit*
 
-Eine Gruppe von Bits, die 0 (null) oder mehr der in der folgenden Tabelle aufgeführten Werte angibt.
+Eine Gruppe von Bits, die null oder mehr der in der folgenden Tabelle aufgeführten Werte angibt.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitResizeDatabaseOnlyGrow</p></td>
-<td><p>Vergrößern Sie nur die Datenbank. Wenn der Größenänderung die Datenbank verkleinern würde, führen Sie keine Aktion aus.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitResizeDatabaseOnlyGrow</p> | <p>Verwächst nur die Datenbank. Wenn der Aufruf zum Ändern der Größe die Datenbank verkleinert, unternehmen Sie nichts.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der in der folgenden Tabelle aufgelisteten Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern (Extensible Storage Engine) finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Fehler Behandlungsparameter](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errDiskFull</p></td>
-<td><p>Auf dem Volume ist nicht genügend freier Speicherplatz vorhanden, um die Vergrößerung auszuführen.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errDiskIO</p></td>
-<td><p>Von der <a href="gg269242(v=exchg.10).md">jetsetdatabasesize</a> -Funktion wurde ein Datei bezogener Fehler zurückgegeben. Weitere Informationen zu anderen Datei bezogenen Fehlern, die zurückgegeben werden können, finden Sie unter <a href="gg269242(v=exchg.10).md">jetsetdatabasesize</a>.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der in der folgenden Tabelle aufgeführten Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern (Extensible Storage Engine) finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-#### <a name="remarks"></a>Bemerkungen
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errDiskFull</p> | <p>Es ist nicht genügend freier Speicherplatz auf dem Volume zum Ausführen des Verwächste-Vorgangs zur Verfügung.</p> | 
+| <p>JET_errDiskIO</p> | <p>Von der <a href="gg269242(v=exchg.10).md">JetSetDatabaseSize-Funktion</a> wurde ein dateibezogener Fehler zurückgegeben. Weitere Informationen zu anderen dateibezogenen Fehlern, die möglicherweise zurückgegeben werden, finden Sie unter <a href="gg269242(v=exchg.10).md">JetSetDatabaseSize</a>.</p> | 
 
-Wenn die **jetresizedatabase** -Funktion vor dem Einfügen großer Datenmengen aufgerufen wird, wird die Datenbankdatei in einem Vorgang vergrößert. Dadurch wird die Wahrscheinlichkeit verringert, dass die Datenbankdatei auf Dateisystem Ebene fragmentiert wird. Außerdem wird die Häufigkeit reduziert, mit der die Datenbankdatei vergrößert werden muss. Wenn Sie die Datenbankdatei einmal vergrößern, kann Sie schneller sein, als Sie mehrmals anwachsen.
 
-Informationen zum Festlegen der Größe einer Datenbank, die nicht geöffnet wird, finden Sie unter [jetsetdatabasesize](./jetsetdatabasesize-function.md).
 
-Die Dateigröße stimmt möglicherweise nicht mit der Anzahl der Seiten, die im *pcpgreal* -Parameter zurückgegeben werden, ab. Zwei weitere reservierte Seiten können im *pcpgreal* -Parameter nicht gezählt werden.
+#### <a name="remarks"></a>Hinweise
+
+Wenn die **JetResizeDatabase-Funktion** vor dem Einfügen großer Datenmengen aufgerufen wird, wird die Datenbankdatei in einem Vorgang größer. Dies verringert die Wahrscheinlichkeit, dass die Datenbankdatei auf Dateisystemebene fragmentiert wird, und verringert auch die Anzahl, mit der die Datenbankdatei wachsen muss. Das once-Anwachsen der Datenbankdatei kann schneller sein, als sie mehrmals zu wachsen.
+
+Informationen zum Festlegen der Größe einer nicht geöffneten Datenbank finden Sie unter [JetSetDatabaseSize](./jetsetdatabasesize-function.md).
+
+Die Dateigröße passt möglicherweise nicht zur Anzahl der Seiten, die im *pcpgReal-Parameter zurückgegeben* werden. Zwei zusätzliche reservierte Seiten werden im parameter *pcpgReal möglicherweise nicht* gezählt.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows 8.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2012.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows 8.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2012.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
-#### <a name="see-also"></a>Siehe auch
+
+#### <a name="see-also"></a>Weitere Informationen
 
 [JET_ERR](./jet-err.md)  
 [JET_GRBIT](./jet-grbit.md)  
@@ -167,4 +110,4 @@ Die Dateigröße stimmt möglicherweise nicht mit der Anzahl der Seiten, die im 
 [JET_TABLEID](./jet-tableid.md)  
 [JET_OBJECTINFO](./jet-objectinfo-structure.md)  
 [JET_OBJECTLIST](./jet-objectlist-structure.md)  
-[Jetsetdatabasesize](./jetsetdatabasesize-function.md)
+[JetSetDatabaseSize](./jetsetdatabasesize-function.md)

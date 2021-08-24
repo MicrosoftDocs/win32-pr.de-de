@@ -1,24 +1,24 @@
 ---
-description: 'Die Kombination aus Pfad, Datei Spezifikation und Rekursions Flag (wszpath, wszfilespec, und bRecursive müssen mit dem Wert eines der Datei Sätze, die einer der Writer-Komponenten hinzugefügt werden, mithilfe von ivsskreateschreitermetadata:: addfilestofilegroup, ivsskreateschreitermetadata:: adddatabasefiles oder ivsskreateschreitermetadata:: adddatabaselogfiles in folgenden Reihen entsprechen:'
+description: 'Die Kombination aus Pfad, Dateispezifikation und Rekursionsflag (wszPath, wszFileSpec bzw. bRecursive) muss mit denen eines der Dateisätze übereinstimmen, die einer der Komponenten des Writers mithilfe von IVssCreateWriterMetadata::AddFilesToFileGroup, IVssCreateWriterMetadata::AddDatabaseFiles oder IVssCreateWriterMetadata::AddDatabaseLogFiles hinzugefügt wurden, wenn:'
 ms.assetid: debf181a-1579-46f2-86ef-a1d2a850e99e
-title: Semantik Änderungen an Windows Server 2003
+title: Semantische Änderungen Windows Server 2003
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 53b9d2edc56f215f554b497eebff9f76a1da53dd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8319259dc27c981822bb242d20243264ca9025d959693aafcb3836976fd7754d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215542"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119866260"
 ---
-# <a name="semantic-changes-to-windows-server-2003"></a>Semantik Änderungen an Windows Server 2003
+# <a name="semantic-changes-to-windows-server-2003"></a>Semantische Änderungen Windows Server 2003
 
-Die Kombination aus Pfad, Datei Spezifikation und Rekursions Flag (*wszpath*, *wszfilespec*, und *bRecursive* müssen mit dem Wert eines der Datei Sätze, die einer der Writer-Komponenten hinzugefügt werden, mithilfe von [**ivsskreateschreitermetadata:: addfilestofilegroup**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addfilestofilegroup), [**ivsskreateschreitermetadata:: adddatabasefiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-adddatabasefiles)oder [**ivsskreateschreitermetadata:: adddatabaselogfiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-adddatabaselogfiles) in folgenden Reihen entsprechen:
+Die Kombination aus Pfad, Dateispezifikation und Rekursionsflag (*wszPath*, *wszFileSpec* und *bRecursive*) muss mit dem eines der Dateisätze übereinstimmen, die mithilfe von [**IVssCreateWriterMetadata::AddFilesToFileGroup,**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addfilestofilegroup) [**IVssCreateWriterMetadata::AddDatabaseFiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-adddatabasefiles)oder [**IVssCreateWriterMetadata::AddDatabaseFiles oder IVssCreateWriterMetadata::AddDatabaseLogFiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-adddatabaselogfiles) hinzugefügt wurden, wenn:
 
--   Ein Anforderer fügt mithilfe von [**IVssBackupComponents:: addnewtarget**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addnewtarget)ein neues Ziel hinzu.
--   Ein Writer fügt mithilfe von [**ivsskreateschreitermetadata:: addalternate elocationmapping**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addalternatelocationmapping)eine Alternative Speicherort Zuordnung hinzu.
--   Vorhandene Dateien werden mithilfe von [**IVssComponent:: AddDifferencedFilesByLastModifyTime**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-adddifferencedfilesbylastmodifytime)als differenzierte Dateien hinzugefügt.
--   Ein Anforderer gibt an, dass eine Alternative Speicherort Zuordnung verwendet wurde, um einen Datei Satz mithilfe von [**IVssBackupComponents:: addalternativelocationmapping**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addalternativelocationmapping)wiederherzustellen.
+-   Eine Anfordernde fügt mithilfe von [**IVssBackupComponents::AddNewTarget ein neues Ziel hinzu.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addnewtarget)
+-   Ein Writer fügt mithilfe von [**IVssCreateWriterMetadata::AddAlternateLocationMapping**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addalternatelocationmapping)eine alternative Speicherortzuordnung hinzu.
+-   Vorhandene Dateien werden mithilfe von [**IVssComponent::AddDifferencedFilesByLastModifyTime**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-adddifferencedfilesbylastmodifytime)als differenzierte Dateien hinzugefügt.
+-   Eine Anfordernde gibt an, dass eine alternative Speicherortzuordnung verwendet wurde, um einen Dateisatz mithilfe von [**IVssBackupComponents::AddAlternativeLocationMapping wiederherzustellen.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addalternativelocationmapping)
 
  
 

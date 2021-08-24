@@ -1,25 +1,25 @@
 ---
-description: Wenn Sie einen programmierten Vertex-Shader verwenden, werden die Elemente, die im Ziel Vertex-Puffer aktualisiert werden, vom Shader-Funktionsprogramm gesteuert.
+description: Bei Verwendung eines programmierten Vertex-Shaders werden die im Zielvertexpuffer aktualisierten Elemente vom Shaderfunktionsprogramm gesteuert.
 ms.assetid: c75564ef-528b-4af5-9ed7-a32b9120bf6a
-title: Programmierbare Vertex-Verarbeitung (Direct3D 9)
+title: Programmierbare Scheitelpunktverarbeitung (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5108792350aebbca4f58924fde81d191b062591b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 56ee1e781aa811d8d85a8865bdf07a8811e26d027f6d385b40126a8321172a3b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344794"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120118590"
 ---
-# <a name="programmable-vertex-processing-direct3d-9"></a>Programmierbare Vertex-Verarbeitung (Direct3D 9)
+# <a name="programmable-vertex-processing-direct3d-9"></a>Programmierbare Scheitelpunktverarbeitung (Direct3D 9)
 
-Wenn Sie einen programmierten Vertex-Shader verwenden, werden die Elemente, die im Ziel Vertex-Puffer aktualisiert werden, vom Shader-Funktionsprogramm gesteuert. Wenn die Anwendung in eines der Ziel-Vertex-Register schreibt, wird das entsprechende Element in jedem Scheitelpunkt des Ziel Vertex-Puffers aktualisiert. Elemente im Ziel Vertex-Puffer, auf die nicht von der Anwendung geschrieben wird, werden nicht geändert. [**IDirect3DDevice9::P rocess Vertices**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-processvertices) schlägt fehl, wenn die Anwendung in Elemente schreibt, die nicht im Ziel Vertex-Puffer vorhanden sind.
+Bei Verwendung eines programmierten Vertex-Shaders werden die im Zielvertexpuffer aktualisierten Elemente vom Shaderfunktionsprogramm gesteuert. Wenn die Anwendung in eines der Zielvertexregister schreibt, wird das entsprechende Element innerhalb jedes Scheitelpunkts des Zielvertexpuffers aktualisiert. Elemente im Zielvertexpuffer, die nicht von der Anwendung in geschrieben werden, werden nicht geändert. [**IDirect3DDevice9::P rocessVertices**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-processvertices) schlägt fehl, wenn die Anwendung in Elemente schreibt, die nicht im Zielvertexpuffer vorhanden sind.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-Puffer](vertex-buffers.md)
+[Scheitelpunktpuffer](vertex-buffers.md)
 </dt> </dl>
 
  

@@ -97,7 +97,7 @@ Wenn der *pmt-Parameter* ungleich **NULL** ist, überspringt der Pin Medientypen
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

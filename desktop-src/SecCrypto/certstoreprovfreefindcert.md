@@ -1,7 +1,7 @@
 ---
-description: Wird aufgerufen, wenn das vom certstoreprovfindcert-Rückruf zurückgegebene Zertifikat in einem nachfolgenden Aufruf von certstoreprovfindcert nicht verwendet und daher freigegeben wurde.
+description: Wird aufgerufen, wenn das vom CertStoreProvFindCert-Rückruf zurückgegebene Zertifikat nicht verwendet und daher in einem nachfolgenden Aufruf von CertStoreProvFindCert freigegeben wurde.
 ms.assetid: be882b56-027c-4540-9426-27d3c2b262e9
-title: Certstoreprovfrefindcert-Rückruffunktion
+title: CertStoreProvFreeFindCert-Rückruffunktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: 320145ebfe95d1e678193ea1b11e7cb0d5294c69
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ab2a6ae1bd8199e7bed97626c83241223fc3943b94fcb387868331329d8740a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119877300"
 ---
-# <a name="certstoreprovfreefindcert-callback-function"></a>Certstoreprovfrefindcert-Rückruffunktion
+# <a name="certstoreprovfreefindcert-callback-function"></a>CertStoreProvFreeFindCert-Rückruffunktion
 
-Die **certstoreprovfrefindcert** -Rückruffunktion wird aufgerufen, wenn das vom [**certstoreprovfindcert**](certstoreprovfindcert.md) -Rückruf zurückgegebene Zertifikat nicht verwendet und daher in einem nachfolgenden Aufruf von **certstoreprovfindcert** freigegeben wurde. Bevor der Close-Rückruf aufgerufen wird, müssen alle vom [**certstoreprovfindcert**](certstoreprovfindcert.md) -Rückruf zurückgegebenen Zertifikate vom Anbieter mithilfe von **certstoreprovfindcert** oder **certstoreprovfreifindcert** freigegeben werden.
+Die **Rückruffunktion CertStoreProvFreeFindCert** wird aufgerufen, wenn das vom [**CertStoreProvFindCert-Rückruf**](certstoreprovfindcert.md) zurückgegebene Zertifikat nicht verwendet und daher in einem nachfolgenden Aufruf von **CertStoreProvFindCert** freigegeben wurde. Bevor der CLOSE-Rückruf aufgerufen wird, müssen alle vom [**CertStoreProvFindCert-Rückruf**](certstoreprovfindcert.md) zurückgegebenen Zertifikate vom Anbieter mithilfe von **CertStoreProvFindCert** oder **CertStoreProvFreeFindCert** freigegeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,37 +41,37 @@ BOOL WINAPI CertStoreProvFreeFindCert(
 
 <dl> <dt>
 
-*hstoreprov* \[ in\]
+*hStoreProv* \[ In\]
 </dt> <dd>
 
-**Hcertstoreprov** -Handle für einen [*Zertifikat Speicher*](../secgloss/c-gly.md).
+**HCERTSTOREPROV-Handle** für einen [*Zertifikatspeicher.*](../secgloss/c-gly.md)
 
 </dd> <dt>
 
-*pcertcontext* \[ in\]
+*pCertContext* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf einen [**CERT- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context).
+Ein Zeiger auf einen [**CERT \_ CONTEXT.**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context)
 
 </dd> <dt>
 
-*pvstoreprovfindinfo* \[ in\]
+*pvStoreProvFindInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der Informationen zu suchen enthält.
+Ein Zeiger auf einen Puffer, der Findinformationen enthält.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Alle benötigten Flagwerte.
+Alle erforderlichen Flagwerte.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Funktion erfolgreich ist, oder **false** , wenn Sie fehlschlägt.
+Gibt **TRUE zurück,** wenn die Funktion erfolgreich ist, oder **FALSE,** wenn sie fehlschlägt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Gibt **true** zurück, wenn die Funktion erfolgreich ist, oder **false** , wenn 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -88,10 +88,10 @@ Gibt **true** zurück, wenn die Funktion erfolgreich ist, oder **false** , wenn 
 
 <dl> <dt>
 
-[**CERT- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context)
+[**\_CERT-KONTEXT**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context)
 </dt> <dt>
 
-[**Certstoreprovfindcert**](certstoreprovfindcert.md)
+[**CertStoreProvFindCert**](certstoreprovfindcert.md)
 </dt> </dl>
 
  

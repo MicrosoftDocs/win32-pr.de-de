@@ -1,10 +1,10 @@
 ---
-title: MPCONFIGURATION_DATA Struktur (mpclient. h)
+title: MPCONFIGURATION_DATA -Struktur (MpClient.h)
 description: Enthält Daten zu Konfigurationsänderungen, einschließlich der alten und neuen Werte.
 ms.assetid: AB70B1C0-C148-44BC-8C0E-CC5D2A66BCA5
 keywords:
-- MPCONFIGURATION_DATA Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPCONFIGURATION_DATA Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPCONFIGURATION_DATA struktur Legacy Windows Umgebungsfeatures
+- PMPCONFIGURATION_DATA strukturzeiger Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bb54ae4e323f2144dd25c52005d8484b0a207e6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 192cb4d2e35d1b471ef92fb976535bb1e6ed733e2f29ebf86d357f722904514c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040459"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114580"
 ---
-# <a name="mpconfiguration_data-structure"></a>Mpconfiguration- \_ Datenstruktur
+# <a name="mpconfiguration_data-structure"></a>\_MPCONFIGURATION-DATENstruktur
 
 Enthält Daten zu Konfigurationsänderungen, einschließlich der alten und neuen Werte.
 
@@ -49,11 +49,11 @@ typedef struct tagMPCONFIGURATION_DATA {
 **ConfigurationName**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-Der Name der geänderten Konfiguration.
+Name der geänderten Konfiguration.
 
 </dd> <dt>
 
@@ -68,7 +68,7 @@ Der Typ der verwendeten Daten.
 
 </dd> <dt>
 
-**Previousdatasize**
+**PreviousDataSize**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -79,10 +79,10 @@ Größe der vorherigen Daten in Bytes.
 
 </dd> <dt>
 
-**ppreviousdata**
+**pPreviousData**
 </dt> <dd>
 
-Typ: **Byte \** _
+Typ: **BYTE \***
 
 </dd> <dd>
 
@@ -90,7 +90,7 @@ Zeiger auf vorherige Daten.
 
 </dd> <dt>
 
-_ *Currentdatasize**
+**CurrentDataSize**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -101,10 +101,10 @@ Größe der neuen Daten in Bytes.
 
 </dd> <dt>
 
-**pcurrentdata**
+**pCurrentData**
 </dt> <dd>
 
-Type: **Byte \***
+Typ: **BYTE \***
 
 </dd> <dd>
 
@@ -118,9 +118,9 @@ Zeiger auf neue Daten.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

@@ -5,16 +5,16 @@ ms.assetid: 312A23FC-6E02-4459-AC8B-A2542CC782D5
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d0bc061c69d7f332269650c0ae2a8b7664f6c0a0
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 81910f83440a1c460bf31f0c14519d7afc717c9ff27c3b32c07bf9c5a249a834
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033390"
 ---
 # <a name="imsrdpclient7-properties"></a>IMsRdpClient7-Eigenschaften
 
-Die [**IMsRdpClient7**](imsrdpclient7.md) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**IMsRdpClient7-Schnittstelle**](imsrdpclient7.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -23,9 +23,9 @@ Die [**IMsRdpClient7**](imsrdpclient7.md) -Schnittstelle macht die folgenden Eig
 -   [**SecuredSettings3-Eigenschaft**](imsrdpclient7-securedsettings3.md)
 -   [**TransportSettings3-Eigenschaft**](imsrdpclient7-transportsettings3.md)
 
- 
+ 
 
- 
+ 
 
 
 

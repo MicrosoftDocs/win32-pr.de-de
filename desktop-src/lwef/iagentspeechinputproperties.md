@@ -15,13 +15,13 @@ ms.locfileid: "119609330"
 
 \[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-IAgentSpeechInputProperties bietet Zugriff auf die Vom Server verwalteten Spracheingabeeigenschaften. Die meisten Eigenschaften sind für Clientanwendungen schreibgeschützt, aber der Benutzer kann sie im Eigenschaftenblatt des Microsoft-Agents ändern. Der Microsoft Agent-Server gibt Nur Werte zurück, wenn eine kompatible Sprach-Engine installiert und aktiviert wurde. Beim Abfragen dieser Eigenschaften wird versucht, die Sprach-Engine zu starten.
+IAgentSpeechInputProperties bietet Zugriff auf die Vom Server verwalteten Spracheingabeeigenschaften. Die meisten Eigenschaften sind für Clientanwendungen schreibgeschützt, aber der Benutzer kann sie auf dem Microsoft Agent-Eigenschaftenblatt ändern. Der Microsoft Agent-Server gibt Nur Werte zurück, wenn eine kompatible Sprach-Engine installiert und aktiviert wurde. Beim Abfragen dieser Eigenschaften wird versucht, die Sprach-Engine zu starten.
 
 **Methoden in Vtable-Reihenfolge**
 
 
 
-| IAgentSpeechInputProperties-Methoden                                     | BESCHREIBUNG                                               |
+| IAgentSpeechInputProperties-Methoden                                     | Beschreibung                                               |
 |-------------------------------------------------------------------------|-----------------------------------------------------------|
 | [**Getenabled**](iagentspeechinputproperties--getenabled.md)           | Gibt zurück, ob die Spracherkennungs-Engine aktiviert ist. |
 | [**GetHotKey**](iagentspeechinputproperties--gethotkey.md)             | Gibt die aktuelle Schlüsselzuweisung des Lauschen-Schlüssels zurück.  |

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetdupcursor-Methode.
-title: API. jetdupcursor-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetDupCursor-Methode'
+title: Api.JetDupCursor-Methode
 TOCTitle: 'JetDupCursor method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetDupCursor(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_TABLEID@,Microsoft.Isam.Esent.Interop.DupCursorGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetdupcursor(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5fce19d23838f3dfeab5317bfa7ea1aaacfcb508
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 031257200376b35fbde2d958cf5e6528abb340d1d63424d8308258281bd449ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119605650"
 ---
-# <a name="apijetdupcursor-method"></a>API. jetdupcursor-Methode
+# <a name="apijetdupcursor-method"></a>Api.JetDupCursor-Methode
 
-Dupliziert einen geöffneten Cursor und gibt ein Handle für den duplizierten Cursor zurück. Wenn der duplizierte Cursor ein Schreib geschützter Cursor war, ist der duplizierte Cursor ebenfalls ein Schreib geschützter Cursor. Jeder Status im Zusammenhang mit dem Erstellen eines Suchschlüssels oder dem Aktualisieren eines Datensatzes wird nicht in den doppelten Cursor kopiert. Außerdem wird der Speicherort des ursprünglichen Cursors nicht in den doppelten Cursor dupliziert. Der doppelte Cursor wird immer auf dem gruppierten Index geöffnet, und sein Speicherort ist immer in der ersten Zeile der Tabelle.
+Dupliziert einen geöffneten Cursor und gibt ein Handle an den duplizierten Cursor zurück. Wenn der cursor, der dupliziert wurde, ein schreibgeschützter Cursor war, ist der duplizierte Cursor auch ein schreibgeschützter Cursor. Jeder Zustand im Zusammenhang mit der Konstruktion eines Suchschlüssels oder dem Aktualisieren eines Datensatzes wird nicht in den duplizierten Cursor kopiert. Darüber hinaus wird die Position des ursprünglichen Cursors nicht im duplizierten Cursor dupliziert. Der duplizierte Cursor wird immer für den gruppierten Index geöffnet, und seine Position befindet sich immer in der ersten Zeile der Tabelle.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,38 +67,38 @@ public static void JetDupCursor(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
     Der zu duplizierende Cursor.
 
 <!-- end list -->
 
-  - newtableid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - newTableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der doppelte Cursor.
+    Der duplizierte Cursor.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. dupcurrsorgrbit](./dupcursorgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.DupCursorGrbit](./dupcursorgrbit-enumeration.md)  
     
     Für die zukünftige Verwendung reserviert.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

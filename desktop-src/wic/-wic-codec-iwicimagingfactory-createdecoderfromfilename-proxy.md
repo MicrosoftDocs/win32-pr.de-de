@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Methode "samatedecoderfromfilename".
+description: Proxyfunktion für die CreateDecoderFromFilename-Methode.
 ms.assetid: 12c60899-0fe0-47d0-9026-48c74df328ef
 title: IWICImagingFactory_CreateDecoderFromFilename_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 3497d71475198d035a496909e65c47df6c5f8b8b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dabc24d17fdac881537d45e47a8cc6808a1cf805ac14025d7fdfcfa50eea8500
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120056630"
 ---
-# <a name="iwicimagingfactory_createdecoderfromfilename_proxy-function"></a>IWICImagingFactory | \_ atedecoderfromfilename- \_ Proxy Funktion
+# <a name="iwicimagingfactory_createdecoderfromfilename_proxy-function"></a>Proxyfunktion "IWICImagingFactory \_ CreateDecoderFromFilename" \_
 
-Proxy Funktion für die Methode " [**samatedecoderfromfilename**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromfilename) ".
+Proxyfunktion für die [**CreateDecoderFromFilename-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromfilename)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,57 +45,57 @@ HRESULT IWICImagingFactory_CreateDecoderFromFilename_Proxy(
 
 <dl> <dt>
 
-*pfactory* \[ in\]
+*pFactory* \[ In\]
 </dt> <dd>
 
-Typ: **IWICImagingFactory \** _
+Typ: **IWICImagingFactory \***
 
 </dd> <dt>
 
-_wzFilename * \[ in\]
+*wzFilename* \[ In\]
 </dt> <dd>
 
 Typ: **LPCWSTR**
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen eines zu erstellenden oder zu öffnenden Objekts angibt.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen eines zu erstellenden oder zu öffnenden Objekts angibt.
 
 </dd> <dt>
 
-*pguidVendor* \[ in\]
+*pguidVendor* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: * Konstante *GUID \** _
+Typ: **const \* GUID**
 
-Die Anbieter-GUID für den Decoder.
+Die Hersteller-GUID für den Decoder.
 
 </dd> <dt>
 
-_dwDesiredAccess * \[ in\]
+*dwDesiredAccess* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
 
-Der Zugriff auf das-Objekt, das gelesen oder geschrieben werden kann, oder beides.
+Der Zugriff auf das -Objekt, das gelesen, geschrieben oder beides sein kann.
 
-Weitere Informationen finden Sie unter [Datei Sicherheit und Zugriffsrechte \[ Dateien \] ](../fileio/file-security-and-access-rights.md).
+Weitere Informationen finden Sie unter [Dateisicherheits- und \[ Zugriffsberechtigungsdateien. \] ](../fileio/file-security-and-access-rights.md)
 
 </dd> <dt>
 
-*metadataOptions* \[ in\]
+*metadataOptions* \[ In\]
 </dt> <dd>
 
-Typ: **[ **wicdecodeoptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions)**
+Typ: **[ **WICDecodeOptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions)**
 
-Die [**wicdecodeoptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions) , die beim Erstellen des Decoders verwendet werden sollen.
+Die [**WICDecodeOptions,**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions) die beim Erstellen des Decoders verwendet werden sollen.
 
 </dd> <dt>
 
-*ppidecoder* \[ vorgenommen\]
+*ppIDecoder* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)\*\***
 
-Ein Zeiger, der einen Zeiger auf den neuen [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)empfängt.
+Ein Zeiger, der einen Zeiger auf den neuen [**IWICBitmapDecoder empfängt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)
 
 </dd> </dl>
 
@@ -103,7 +103,7 @@ Ein Zeiger, der einen Zeiger auf den neuen [**IWICBitmapDecoder**](/windows/desk
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -113,9 +113,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

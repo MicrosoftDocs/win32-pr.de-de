@@ -1,42 +1,42 @@
 ---
-description: So erhalten Sie Ereignisse aus der Netzwerkquelle
+description: How to Get Events from the Network Source
 ms.assetid: 46869f52-323c-41ec-95f7-e7e5d177b782
-title: So erhalten Sie Ereignisse aus der Netzwerkquelle
+title: How to Get Events from the Network Source
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 100241b069ae8976c20c68b6055571d5ff1e5c1f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ec85877a928a2f63648ec0dedded1c383988bf80a4182f83062fd296e68bcb1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119958320"
 ---
-# <a name="how-to-get-events-from-the-network-source"></a>So erhalten Sie Ereignisse aus der Netzwerkquelle
+# <a name="how-to-get-events-from-the-network-source"></a>How to Get Events from the Network Source
 
-Der Quell Konflikt Löser ermöglicht einer Anwendung das Erstellen einer Netzwerkquelle und das Öffnen einer Verbindung mit einer bestimmten URL. Die Netzwerkquelle löst Ereignisse aus, um den Anfang und das Ende des asynchronen Vorgangs zum Öffnen einer Verbindung zu markieren. Eine Anwendung kann sich für diese Ereignisse mithilfe der [**IMF sourceopenmonitor**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceopenmonitor) -Schnittstelle registrieren.
+Mit dem Quellre resolver kann eine Anwendung eine Netzwerkquelle erstellen und eine Verbindung mit einer bestimmten URL herstellen. Die Netzwerkquelle löst Ereignisse aus, um den Anfang und das Ende des asynchronen Vorgangs zum Öffnen einer Verbindung zu markieren. Eine Anwendung kann sich für diese Ereignisse registrieren, indem [**sie die BENUTZEROBERFLÄCHENQUELLEOpenMonitor**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceopenmonitor) verwendet.
 
-Diese Schnittstelle macht die [**IMF sourceopenmonitor:: onsourceevent**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceopenmonitor-onsourceevent) -Methode verfügbar, die von der Netzwerkquelle direkt aufgerufen wird, wenn die URL asynchron geöffnet wird. Die Netzwerkquelle benachrichtigt die Anwendung, wenn Sie mit dem Öffnen der URL beginnt, indem das [meconnectstart](meconnectstart.md) -Ereignis aufgerufen wird. Die Netzwerkquelle löst dann das [meconnectend](meconnectend.md) -Ereignis aus, wenn der Öffnungsvorgang abgeschlossen ist.
+Diese Schnittstelle macht die [**METHODE ASYNCHRONOUSSourceOpenMonitor::OnSourceEvent**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceopenmonitor-onsourceevent) verfügbar, die die Netzwerkquelle direkt aufruft, wenn sie die URL asynchron öffnet. Die Netzwerkquelle benachrichtigt die Anwendung, wenn sie mit dem Öffnen der URL beginnt, indem sie das [MEConnectStart-Ereignis ausdrängt.](meconnectstart.md) Die Netzwerkquelle löst dann das [MEConnectEnd-Ereignis](meconnectend.md) aus, wenn der Open-Vorgang abgeschlossen ist.
 
 > [!Note]  
-> Um diese Ereignisse an die Anwendung zu senden, verwendet die Netzwerkquelle die [**imfmediaeventgenerator**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) -Schnittstelle nicht, da diese Ereignisse vor der Erstellung der Netzwerkquelle ausgelöst werden. Die Anwendung kann alle anderen Netzwerk Quell Ereignisse mithilfe der **IMF mediaeventgenerator** -Schnittstelle der Medien Sitzung erhalten.
+> Um diese Ereignisse an die Anwendung zu senden, verwendet die Netzwerkquelle nicht die [**BENUTZEROBERFLÄCHEMEDIAEventGenerator-Schnittstelle,**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) da diese Ereignisse ausgelöst werden, bevor die Netzwerkquelle erstellt wird. Die Anwendung kann alle anderen Netzwerkquellenereignisse mithilfe der **MEDIAMediaEventGenerator-Schnittstelle** der Media Session erhalten.
 
  
 
 ## <a name="to-get-events-from-the-network-source"></a>So erhalten Sie Ereignisse aus der Netzwerkquelle
 
-1.  Implementieren Sie die [**IMF sourceopenmonitor**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceopenmonitor) -Schnittstelle. Führen Sie in ihrer Implementierung der [**IMF sourceopenmonitor:: onsourceevent**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceopenmonitor-onsourceevent) -Methode die folgenden Schritte aus:
-    1.  Rufen Sie den Ereignis Status durch Aufrufen von [**imfmediaevent:: GetStatus**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getstatus)ab. Diese Methode gibt an, ob der Vorgang, der das Ereignis ausgelöst hat, z. b. ein quellresolver-Methodenaufrufe, erfolgreich war. Wenn der Vorgang nicht erfolgreich ist, ist der Status ein Fehlercode.
-    2.  Verarbeiten Sie das Ereignis basierend auf dem Ereignistyp: [meconnectstart](meconnectstart.md) oder [meconnectend](meconnectend.md), den die Anwendung durch Aufrufen von [**imfmediaevent:: GetType**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-gettype)abrufen kann.
-2.  Konfigurieren Sie ein Schlüssel-Wert-Paar in einem Eigenschaften Speicher Objekt zum Speichern eines Zeigers auf die [**imfsourceopenmonitor**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceopenmonitor) -Implementierung, die in Schritt 1 beschrieben wird.
-    1.  Erstellen Sie ein Eigenschaften Speicher Objekt, indem Sie die **pscreatememorypropertystore** -Funktion aufrufen.
-    2.  Legen Sie die [**mfpkey \_ sourceopenmonitor**](mfpkey-sourceopenmonitor-property.md) -Eigenschaft in einer **PropertyKey** -Struktur fest.
-    3.  Geben Sie den \_ Wert "VT Unknown Type Data" in einer **PROPVARIANT** -Struktur an, indem Sie den **IUnknown** -Zeiger auf die Implementierung der Anwendung der [**imfsourceopenmonitor**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceopenmonitor) -Schnittstelle festlegen.
-    4.  Legen Sie das Schlüssel-Wert-Paar im Eigenschaften Speicher durch Aufrufen von **IPropertyStore:: SetValue** fest.
-3.  Übergeben Sie den Eigenschafts Speicher Zeiger an die Quell Auflösungs Methoden, die die Anwendung verwendet, um die Netzwerkquelle zu erstellen, z. b. [**imfsourceresolver:: deateobjectfromurl**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-createobjectfromurl) und andere.
+1.  Implementieren Sie [**die SCHNITTSTELLE VERFSourceOpenMonitor.**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceopenmonitor) Gehen Sie in Ihrer [**Implementierung der METHODE DURCHSOURCEOpenMonitor::OnSourceEvent**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceopenmonitor-onsourceevent) wie folgt vor:
+    1.  Rufen Sie den Ereignisstatus ab, indem [**Sie DENKMediaEvent::GetStatus aufrufen.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getstatus) Diese Methode gibt an, ob der Vorgang, der das Ereignis ausgelöst hat, z. B. ein Aufruf der Quellrelösermethode, erfolgreich war. Wenn der Vorgang nicht erfolgreich ist, ist der Status ein Fehlercode.
+    2.  Verarbeiten Sie das Ereignis basierend auf dem [Ereignistyp: MEConnectStart](meconnectstart.md) oder [MEConnectEnd,](meconnectend.md)den die Anwendung durch Aufrufen von [**ZUEgeMediaEvent::GetType erhalten kann.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-gettype)
+2.  Konfigurieren Sie ein Schlüssel-Wert-Paar in einem Eigenschaftsspeicherobjekt, um einen Zeiger auf die IN Schritt 1 beschriebene [**IMPLEMENTIERUNG VON DURCHSSOURCEOpenMonitor**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceopenmonitor) zu speichern.
+    1.  Erstellen Sie ein Eigenschaftenspeicherobjekt, indem Sie die **PSCreateMemoryPropertyStore-Funktion** aufrufen.
+    2.  Legen Sie die [**MFPKEY \_ SourceOpenMonitor-Eigenschaft**](mfpkey-sourceopenmonitor-property.md) in einer **PROPERTYKEY-Struktur** fest.
+    3.  Geben Sie den VT UNKNOWN-Typdatenwert in einer PROPVARIANT-Struktur an, indem Sie den IUnknown-Zeiger auf die Anwendungsimplementierung der \_ [**BESSOURCEOpenMonitor-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceopenmonitor)  festlegen. 
+    4.  Legen Sie das Schlüssel-Wert-Paar im Eigenschaftenspeicher fest, indem **Sie IPropertyStore::SetValue aufrufen.**
+3.  Übergeben Sie den Eigenschaftsspeicherzeiger an die Methoden des Quellresolvers, die die Anwendung zum Erstellen der Netzwerkquelle verwendet, z. B. [**DURCHSOURCEResolver::CreateObjectFromURL**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-createobjectfromurl) und andere.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird gezeigt, wie Sie die [**imfsourceopenmonitor**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceopenmonitor) -Schnittstelle implementieren, um Ereignisse aus der Netzwerkquelle abzurufen.
+Das folgende Beispiel zeigt, wie sie die [**BENUTZEROBERFLÄCHESourceOpenMonitor-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceopenmonitor) implementiert, um Ereignisse aus der Netzwerkquelle zu erhalten.
 
 
 ```C++
@@ -122,7 +122,7 @@ private:
 
 
 
-Im folgenden Beispiel wird gezeigt, wie die [**mfpkey \_ sourceopenmonitor**](mfpkey-sourceopenmonitor-property.md) -Eigenschaft in der Netzwerkquelle festgelegt wird, wenn Sie die URL öffnen:
+Das folgende Beispiel zeigt, wie die [**MFPKEY \_ SourceOpenMonitor-Eigenschaft**](mfpkey-sourceopenmonitor-property.md) für die Netzwerkquelle festgelegt wird, wenn Sie die URL öffnen:
 
 
 ```C++

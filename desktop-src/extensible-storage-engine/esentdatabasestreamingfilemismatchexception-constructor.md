@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentdatabasestreamingfilemismatchexception-Konstruktor'
-title: Esentdatabasestreamingfilemismatchexception-Konstruktor
+description: 'Weitere Informationen zu: EsentDatabaseStreamingFileMismatchException-Konstruktor'
+title: EsentDatabaseStreamingFileMismatchException-Konstruktor
 TOCTitle: 'EsentDatabaseStreamingFileMismatchException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDatabaseStreamingFileMismatchException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabasestreamingfilemismatchexception.esentdatabasestreamingfilemismatchexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 11324cc6aeb1b7480481c5e2f1ae13aab550f1f1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d79fd070a28649773c658f4566aa2c465086d49a61cb4497daaf7a0c74fcb130
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119947630"
 ---
-# <a name="esentdatabasestreamingfilemismatchexception-constructor"></a>Esentdatabasestreamingfilemismatchexception-Konstruktor
+# <a name="esentdatabasestreamingfilemismatchexception-constructor"></a>EsentDatabaseStreamingFileMismatchException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdatabasestreamingfilemismatchexception-Klasse.
+Initialisiert eine neue Instanz der EsentDatabaseStreamingFileMismatchException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentDatabaseStreamingFileMismatchException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabasestreamingfilemismatchexception-Klasse](./esentdatabasestreamingfilemismatchexception-class.md)
+[EsentDatabaseStreamingFileMismatchException-Klasse](./esentdatabasestreamingfilemismatchexception-class.md)
 
-[Esentdatabasestreamingfilemismatchexception-Member](./esentdatabasestreamingfilemismatchexception-members.md)
+[EsentDatabaseStreamingFileMismatchException-Member](./esentdatabasestreamingfilemismatchexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

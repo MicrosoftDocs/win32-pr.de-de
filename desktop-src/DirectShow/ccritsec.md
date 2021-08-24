@@ -1,7 +1,7 @@
 ---
-description: Die ccritsec-Klasse stellt eine Thread Sperre bereit.
+description: Die CCritSec-Klasse bietet eine Threadsperre.
 ms.assetid: ecc60afe-15d0-4780-8133-1dfc558c6325
-title: Ccritsec-Klasse (wxutil. h)
+title: CCritSec-Klasse (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,31 +16,31 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8db0243ecfecd47655f547d40390e602c04d5b88
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: eb57004935a85392057120c0ec369d19217148780079ab4be83088dd3de3ea8d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119872190"
 ---
-# <a name="ccritsec-class"></a>Ccritsec-Klasse
+# <a name="ccritsec-class"></a>CCritSec-Klasse
 
-Die **ccritsec** -Klasse stellt eine Thread Sperre bereit.
+Die **CCritSec-Klasse** bietet eine Threadsperre.
 
-Diese Klasse ist ein schlanker Wrapper für ein kritisches Windows- **\_ Abschnitts** Objekt. Sie können den Thread Sperren und entsperren, indem Sie die [**ccritsec:: Lock**](ccritsec-lock.md) -Methode und die [**ccritsec:: Unlock**](ccritsec-unlock.md) -Methode aufrufen. Es ist jedoch sicherer, diese Klasse in Verbindung mit der [**cautolock**](cautolock.md) -Klasse zu verwenden. Wenn die **cautolock** -Klasse den Gültigkeitsbereich verlässt, entsperrt Sie automatisch das **ccritsec** -Objekt. Außerdem wird es in effizienten Inline Code kompiliert.
+Diese Klasse ist ein schlanker Wrapper für ein Windows **CRITICAL \_ SECTION-Objekt.** Sie können den Thread sperren und entsperren, indem Sie die [**Methoden CCritSec::Lock**](ccritsec-lock.md) und [**CCritSec::Unlock**](ccritsec-unlock.md) aufrufen. Es ist jedoch sicherer, diese Klasse in Verbindung mit der [**CAutoLock-Klasse zu**](cautolock.md) verwenden. Wenn die **CAutoLock-Klasse** den Gültigkeitsbereich übergeht, entsperrt sie automatisch das **CCritSec-Objekt.** Darüber hinaus wird er zu effizientem Inlinecode kompiliert.
 
 
 
-| Öffentliche Element Variablen                            | BESCHREIBUNG                                              |
+| Öffentliche Membervariablen                            | BESCHREIBUNG                                              |
 |----------------------------------------------------|----------------------------------------------------------|
-| [**m \_ currentowner**](ccritsec-m-currentowner.md) | Thread Bezeichner des besitzenden Threads.                  |
-| [**m \_ Sperr Anzahl**](ccritsec-m-lockcount.md)       | Anzahl der ausstehenden Sperren für dieses Objekt.              |
-| [**m-nach \_ Verfolgung**](ccritsec-m-ftrace.md)             | Boolescher Wert, der angibt, ob diese Sperre verfolgt werden soll. |
+| [**m \_ currentOwner**](ccritsec-m-currentowner.md) | Threadbezeichner des besitzenden Threads.                  |
+| [**m \_ lockCount**](ccritsec-m-lockcount.md)       | Anzahl ausstehender Sperren für dieses Objekt.              |
+| [**m \_ fTrace**](ccritsec-m-ftrace.md)             | Boolescher Wert, der angibt, ob diese Sperre verfolgt werden soll. |
 | Öffentliche Methoden                                     | BESCHREIBUNG                                              |
-| [**Ccritsec**](ccritsec-ccritsec.md)              | Konstruktormethode.                                      |
-| [**~ Ccritsec**](ccritsec--ccritsec.md)            | Dekonstruktormethode.                                       |
-| [**Sperre**](ccritsec-lock.md)                      | Sperrt das kritische Abschnitts Objekt.                       |
-| [**Entsperren**](ccritsec-unlock.md)                  | Entsperrt das Objekt des kritischen Abschnitts.                     |
+| [**CCritSec**](ccritsec-ccritsec.md)              | Konstruktormethode.                                      |
+| [**~CCritSec**](ccritsec--ccritsec.md)            | Destruktormethode.                                       |
+| [**Sperre**](ccritsec-lock.md)                      | Sperrt das kritische Abschnittsobjekt.                       |
+| [**Entsperren**](ccritsec-unlock.md)                  | Entsperrt das kritische Abschnittsobjekt.                     |
 
 
 
@@ -52,8 +52,8 @@ Diese Klasse ist ein schlanker Wrapper für ein kritisches Windows- **\_ Abschni
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -61,10 +61,10 @@ Diese Klasse ist ein schlanker Wrapper für ein kritisches Windows- **\_ Abschni
 
 <dl> <dt>
 
-[Kritische Abschnitts Objekte](/windows/desktop/Sync/critical-section-objects)
+[Kritische Abschnittsobjekte](/windows/desktop/Sync/critical-section-objects)
 </dt> <dt>
 
-[Referenz zur DirectShow-Basisklasse](base-class-reference.md)
+[DirectShow-Basisklassenreferenz](base-class-reference.md)
 </dt> </dl>
 
  

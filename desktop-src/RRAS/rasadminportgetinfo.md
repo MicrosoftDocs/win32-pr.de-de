@@ -1,9 +1,9 @@
 ---
-title: Rasadminportgetinfo-Funktion (rassapi. h)
-description: Die rasadminportgetinfo-Funktion Ruft Informationen zu einem angegebenen Port auf einem angegebenen Server ab.
+title: RasAdminPortGetInfo-Funktion (Rassapi.h)
+description: Die RasAdminPortGetInfo-Funktion ruft Informationen zu einem angegebenen Port auf einem angegebenen Server ab.
 ms.assetid: 22837685-62a4-4e55-b88f-11019d5d4154
 keywords:
-- Rasadminportgetinfo-Funktion (RAS)
+- RasAdminPortGetInfo-Funktion RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b8d80c55b3182ec930732344cb7857f99c0dc411
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e633b663e9c4b35810585a2ac738c79ae2d39be06d7b91be0df75fd0455a5213
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120028510"
 ---
-# <a name="rasadminportgetinfo-function"></a>Rasadminportgetinfo-Funktion
+# <a name="rasadminportgetinfo-function"></a>RasAdminPortGetInfo-Funktion
 
-\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4,0 bereitgestellt. Es wird ein Fehler zurückgegeben, \_ \_ \_ der auf Windows Server 2003 nicht implementiert ist. Anwendungen sollten die [**mpradminportgetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminportgetinfo) -Funktion verwenden.\]
+\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4.0 bereitgestellt. Auf \_ Windows \_ Server 2003 wird ERROR CALL NOT \_ IMPLEMENTED zurückgegeben. Anwendungen sollten die [**MprAdminPortGetInfo-Funktion**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminportgetinfo) verwenden.\]
 
-Die **rasadminportgetinfo** -Funktion Ruft Informationen zu einem angegebenen Port auf einem angegebenen Server ab.
+Die **RasAdminPortGetInfo-Funktion** ruft Informationen zu einem angegebenen Port auf einem angegebenen Server ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,44 +46,44 @@ DWORD RasAdminPortGetInfo(
 
 <dl> <dt>
 
-*lpszserver* \[ in\]
+*lpszServer* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Unicode-Zeichenfolge, die den Namen des RAS-Servers angibt. Geben Sie den Namen mit führenden " \\ \\ " Zeichen im folgenden Format an: \\ \\ *Servername*.
+Zeiger auf eine auf NULL endende Unicode-Zeichenfolge, die den Namen des RAS-Servers angibt. Geben Sie den Namen mit führenden Zeichen vom Typ \\ \\ " " im Format \\ \\ *Servername an.*
 
 </dd> <dt>
 
-*lpszport* \[ in\]
+*lpszPort* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Unicode-Zeichenfolge, die den Namen des Ports auf dem Server angibt.
+Zeiger auf eine auf NULL endende Unicode-Zeichenfolge, die den Namen des Ports auf dem Server angibt.
 
 </dd> <dt>
 
-*pRasPort1* \[ vorgenommen\]
+*pRasPort1* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die [**RAS- \_ Port- \_ 1**](ras-port-1-str.md) -Struktur, die die Funktion mit Informationen über den Status des Ports füllt.
+Zeiger auf die [**RAS \_ PORT \_ 1-Struktur,**](ras-port-1-str.md) die die Funktion mit Informationen zum Zustand des Ports ausfüllt.
 
 </dd> <dt>
 
-" *prasstats* \[ " vorgenommen\]
+*pRasStats* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die Struktur der [**RAS- \_ Port \_ Statistik**](ras-port-statistics-str.md) , die die Funktion mit Statistiken zum Port füllt.
+Zeiger auf die [**RAS \_ PORT \_ STATISTICS-Struktur,**](ras-port-statistics-str.md) die die Funktion mit Statistiken zum Port auffüllt.
 
 </dd> <dt>
 
-*pprasparams* \[ vorgenommen\]
+*ppRasParams* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine Zeiger Variable, die die Adresse eines Arrays von [**RAS- \_ Parameter**](ras-parameters-str.md) Strukturen empfängt. Jede Struktur enthält den Namen eines medienspezifischen Schlüssels (z. b. maxconnectbit/s) und den zugehörigen Wert. Wenn die Anwendung mit diesem Arbeitsspeicher fertig ist, können Sie Sie freigeben, indem Sie die [**rasadminfreebuffer**](rasadminfreebuffer.md) -Funktion aufrufen.
+Zeiger auf eine Zeigervariable, die die Adresse eines Arrays von [**RAS \_ PARAMETERS-Strukturen**](ras-parameters-str.md) empfängt. Jede Struktur enthält den Namen eines medienspezifischen Schlüssels, z. B. MAXCONNECTBPS, und den zugehörigen Wert. Wenn die Anwendung mit diesem Arbeitsspeicher fertig ist, können Sie sie freigeben, indem Sie die [**RasAdminFreeBuffer-Funktion**](rasadminfreebuffer.md) aufrufen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert ERROR \_ SUCCESS.
 
 Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Fehlercodes sein.
 
@@ -91,14 +91,14 @@ Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Fehle
 
 | Wert                                                                                                     | Bedeutung                                                                          |
 |-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| <dl> <dt>**Fehler \_ dev ist \_ nicht \_ vorhanden.**</dt> </dl>     | Der angegebene Port ist ungültig.<br/>                                        |
-| <dl> <dt>**Fehler \_ nicht \_ genügend Arbeits \_ Speicher**</dt> </dl> | Nicht genügend Arbeitsspeicher, um einen Puffer für das *pprasparams* -Array zuzuordnen.<br/> |
+| <dl> <dt>**FEHLER \_ BEI \_ NICHT \_ VORHANDENER ENTWICKLUNG**</dt> </dl>     | Der angegebene Port ist ungültig.<br/>                                        |
+| <dl> <dt>**FEHLER \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**</dt> </dl> | Nicht genügend Arbeitsspeicher zum Zuordnen eines Puffers für das *ppRasParams-Array.*<br/> |
 
 
 
  
 
-Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)" nicht aufrufen.
+Für diese Funktion sind keine erweiterten Fehlerinformationen vorhanden. Rufen [**Sie getLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)nicht auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,8 +108,8 @@ Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows 2000 Professional<br/>                                                   |
 | Ende des Supports (Server)<br/> | Windows 2000 Server<br/>                                                         |
-| Header<br/>                | <dl> <dt>Rassapi. h</dt> </dl>   |
-| Bibliothek<br/>               | <dl> <dt>Rassapi. lib</dt> </dl> |
+| Header<br/>                | <dl> <dt>Rassapi.h</dt> </dl>   |
+| Bibliothek<br/>               | <dl> <dt>Rassapi.lib</dt> </dl> |
 | DLL<br/>                   | <dl> <dt>Rassapi.dll</dt> </dl> |
 
 
@@ -118,22 +118,22 @@ Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Remotezugriffsdienst (RAS) – Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server-Verwaltungsfunktionen](ras-server-administration-functions.md)
+[RAS-Serververwaltungsfunktionen](ras-server-administration-functions.md)
 </dt> <dt>
 
-[**RAS- \_ Parameter**](ras-parameters-str.md)
+[**\_RAS-PARAMETER**](ras-parameters-str.md)
 </dt> <dt>
 
-[**RAS- \_ Port \_ 1**](ras-port-1-str.md)
+[**\_RAS-PORT \_ 1**](ras-port-1-str.md)
 </dt> <dt>
 
-[**RAS- \_ Port \_ Statistik**](ras-port-statistics-str.md)
+[**\_ \_ RAS-PORTSTATISTIKEN**](ras-port-statistics-str.md)
 </dt> <dt>
 
-[**Rasadminfrebuffer**](rasadminfreebuffer.md)
+[**RasAdminFreeBuffer**](rasadminfreebuffer.md)
 </dt> </dl>
 
  
