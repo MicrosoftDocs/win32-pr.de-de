@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cc99d9b38ab43327b4a435c4128378d49682935
-ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
+ms.openlocfilehash: 69a8a22257aea0f30d2620d610a2ef3745c9c2a640f034bd1c30d1f582a6c9a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111386709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119512300"
 ---
 # <a name="ivmguestossetparameter-method"></a>IVMGuestOS::SetParameter-Methode
 
-\[Der virtuelle Windows-PC kann ab diesem Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Legt einen benannten Parameter innerhalb des Gastbetriebssystems fest.
 
@@ -65,7 +65,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                                    | BESCHREIBUNG                                                     |
+| Rückgabecode/-wert                                                                                                                                                                    | Beschreibung                                                     |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                          | Der Vorgang wurde durchgeführt.<br/>                        |
 | <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>                         | Ein Parameter ist ungültig oder nicht angegeben.<br/>           |
@@ -81,28 +81,28 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die VM muss ausgeführt werden, und Integrationskomponenten müssen installiert werden, wenn diese Methode aufgerufen wird. Diese Methode wird nur für Windows-basierte Gastbetriebssysteme unterstützt.
+Die VM muss ausgeführt werden, und Integrationskomponenten müssen installiert werden, wenn diese Methode aufgerufen wird. Diese Methode wird nur für Windows Gastbetriebssysteme unterstützt.
 
 Wenn Integrationskomponenten installiert sind, wird der folgende Schlüssel automatisch zur Registrierung des Gastbetriebssystems hinzugefügt:
 
 **HKEY \_ LOCAL \_ MACHINE \\ SOFTWARE \\ Microsoft \\ Virtual Machine \\ Guest \\ Parameters**
 
-Wenn das Gastbetriebssystem gestartet wird, werden die folgenden Registrierungszeichenfolgenwerte im Schlüssel **Parameter aufgefüllt:**
+Wenn das Gastbetriebssystem gestartet wird, werden die folgenden Registrierungszeichenfolgenwerte im **Parameterschlüssel aufgefüllt:**
 
 -   **HostName**
 -   **PhysicalHostName**
 -   **PhysicalHostNameFullyQualified**
 -   **VirtualMachineName**
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ 7-Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
-| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
+| Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
 | Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 | IID<br/>                      | IID \_ IVMGuestOS ist als 99fea0db-4880-499a-b6d8-73dff9bc91be definiert.<br/>                 |

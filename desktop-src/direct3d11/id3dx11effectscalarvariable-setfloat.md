@@ -1,10 +1,10 @@
 ---
-title: ID3DX11EffectScalarVariable SetFloat-Methode (D3dx11effect. h)
-description: Legen Sie eine Gleit Komma Variable fest.
+title: ID3DX11EffectScalarVariable SetFloat-Methode (D3dx11effect.h)
+description: Legen Sie eine Gleitkommavariable fest.
 ms.assetid: e13f3ba1-437a-47f0-bd08-4423ffc25ddb
 keywords:
 - SetFloat-Methode Direct3D 11
-- SetFloat-Methode Direct3D 11, ID3DX11EffectScalarVariable-Schnittstelle
+- SetFloat-Methode Direct3D 11 , ID3DX11EffectScalarVariable-Schnittstelle
 - ID3DX11EffectScalarVariable-Schnittstelle Direct3D 11, SetFloat-Methode
 topic_type:
 - apiref
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dad3c3e9f020e5094cd03f7b25ee907dcc6e2c2b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 573880f07752e353e7a623d249353f7e0f020902443fde23538f38a2227e7d4a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119460850"
 ---
-# <a name="id3dx11effectscalarvariablesetfloat-method"></a>ID3DX11EffectScalarVariable:: SetFloat-Methode
+# <a name="id3dx11effectscalarvariablesetfloat-method"></a>ID3DX11EffectScalarVariable::SetFloat-Methode
 
-Legen Sie eine Gleit Komma Variable fest.
+Legen Sie eine Gleitkommavariable fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,23 +56,23 @@ Ein Zeiger auf die Variable.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: TTM_UPDATETIPTEXT Meldung (kommstrg. h)
+title: TTM_UPDATETIPTEXT Meldung (Commctrl.h)
 description: Legt den QuickInfo-Text für ein Tool fest.
 ms.assetid: 2a7432dd-76f9-42b4-b639-178dce1d89ef
 keywords:
-- Windows-Steuerelemente für TTM_UPDATETIPTEXT Meldung
+- TTM_UPDATETIPTEXT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f6c94b14ec83c190ce019ecba1413d2fa05f0103
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7c44b28d4913e4ae502db4d48268de945660610b374b7a1b98c0754fe99bafc8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119542849"
 ---
-# <a name="ttm_updatetiptext-message"></a>TTM- \_ updatetiptext-Nachricht
+# <a name="ttm_updatetiptext-message"></a>TTM \_ UPDATETIPTEXT-Nachricht
 
 Legt den QuickInfo-Text für ein Tool fest.
 
@@ -37,7 +37,7 @@ Legt den QuickInfo-Text für ein Tool fest.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**toolinfo**](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) -Struktur. Die **hInst** -und **lpszText** -Member müssen den Instanzhandle und die Adresse des Texts angeben. Das zu aktualisierenden Tool wird durch die **HWND** -und **UID** -Mitglieder identifiziert Der **CBSIZE** -Member dieser Struktur muss ausgefüllt werden, bevor diese Nachricht gesendet wird.
+Zeiger auf eine [**TOOLINFO-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) Die **Hinst-** und **lpszText-Member** müssen das Instanzhandle und die Adresse des Texts angeben. Die **Member hwnd** und **uId** identifizieren das zu aktualisierende Tool. Der **cbSize-Member** dieser Struktur muss ausgefüllt werden, bevor diese Nachricht gesendet wird.
 
 </dd> </dl>
 
@@ -51,10 +51,10 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TTM \_ Updatetiptextw** (Unicode) und **TTM \_ updatetiptexta** (ANSI)<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TTM \_ UPDATETIPTEXTW** (Unicode) und **TTM \_ UPDATETIPTEXTA** (ANSI)<br/>       |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: TB_SETEXTENDEDSTYLE Meldung (kommstrg. h)
+title: TB_SETEXTENDEDSTYLE (Commctrl.h)
 description: Legt die erweiterten Stile für ein Symbolleisten-Steuerelement fest.
 ms.assetid: aec64bc7-74b4-4efc-9864-2c8a9fbd35c2
 keywords:
-- Windows-Steuerelemente für TB_SETEXTENDEDSTYLE Meldung
+- TB_SETEXTENDEDSTYLE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b9a540aaeff61bd81b649f0509e064a29282f598
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 600e5904637215eeb052c85ec0203c9b86c75ed6b179be643dc9a213156b3afd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119318880"
 ---
-# <a name="tb_setextendedstyle-message"></a>TB- \_ /textendedstyle-Nachricht
+# <a name="tb_setextendedstyle-message"></a>TB \_ SETEXTENDEDSTYLE-Meldung
 
 Legt die erweiterten Stile für ein Symbolleisten-Steuerelement fest.
 
@@ -35,13 +35,13 @@ Legt die erweiterten Stile für ein Symbolleisten-Steuerelement fest.
 *lParam* 
 </dt> <dd>
 
-Ein-Wert, der die neuen erweiterten Stile angibt. Dieser Parameter kann eine Kombination aus [erweiterten Stilen](toolbar-extended-styles.md)sein.
+Wert, der die neuen erweiterten Stile an gibt. Dieser Parameter kann eine Kombination aus erweiterten [Stilen sein.](toolbar-extended-styles.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein **DWORD** zurück, das die vorherigen erweiterten Stile darstellt. Bei diesem Wert kann es sich um eine Kombination [erweiterter Stile](toolbar-extended-styles.md)handeln.
+Gibt ein **DWORD zurück,** das die vorherigen erweiterten Stile darstellt. Dieser Wert kann eine Kombination aus erweiterten [Stilen sein.](toolbar-extended-styles.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,17 +49,17 @@ Gibt ein **DWORD** zurück, das die vorherigen erweiterten Stile darstellt. Bei 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TB \_ getextendecodstyle**](tb-getextendedstyle.md)
+[**TB \_ GETEXTENDEDSTYLE**](tb-getextendedstyle.md)
 </dt> </dl>
 
  

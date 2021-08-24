@@ -1,23 +1,23 @@
 ---
-title: Bestimmen des Fortschritts eines Auftrags
-description: Bits verwaltet Statusinformationen für jeden Auftrag. Verwenden Sie die Statusinformationen, um zu bestimmen, wie viele Bytes und Dateien übertragen wurden.
+title: Bestimmen des Status eines Auftrags
+description: BITS verwaltet Statusinformationen für jeden Auftrag. Verwenden Sie die Statusinformationen, um zu bestimmen, wie viele Bytes und Dateien übertragen wurden.
 ms.assetid: 8bac62b3-cb7e-45ba-85f0-95f3a7e8bffd
 keywords:
-- Übertragen von Auftrags Bits, Fortschritt
+- Übertragungsauftrag BITS , Status
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 085ddcdeea106be2998f828879bc92273f22b328
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 09da4791bffd075d1fb0dd5868f0b78c1b949a0384ff9203555bf18c10ff39cc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119323250"
 ---
-# <a name="determining-the-progress-of-a-job"></a>Bestimmen des Fortschritts eines Auftrags
+# <a name="determining-the-progress-of-a-job"></a>Bestimmen des Status eines Auftrags
 
-Bits verwaltet Statusinformationen für jeden Auftrag. Verwenden Sie die Statusinformationen, um zu bestimmen, wie viele Bytes und Dateien übertragen wurden.
+BITS verwaltet Statusinformationen für jeden Auftrag. Verwenden Sie die Statusinformationen, um zu bestimmen, wie viele Bytes und Dateien übertragen wurden.
 
-Um Statusinformationen für den Auftrag abzurufen, rufen Sie die [**ibackgroundcopyjob:: GetProgress**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getprogress) -Methode auf, wie im folgenden Beispiel gezeigt. Im Beispiel wird davon ausgegangen, dass der [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstellen Zeiger gültig ist.
+Um Statusinformationen für den Auftrag abzurufen, rufen Sie die [**IBackgroundCopyJob::GetProgress-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getprogress) auf, wie im folgenden Beispiel gezeigt. Im Beispiel wird davon ausgegangen, dass [**der IBackgroundCopyJob-Schnittstellenzeiger**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) gültig ist.
 
 
 ```C++
@@ -52,7 +52,7 @@ else
 
 
 
-Rufen Sie die [**IBackgroundCopyJob2:: getreplyprogress**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplyprogress) -Methode auf, wie im folgenden Beispiel gezeigt, um Statusinformationen zum Antwort Teil eines uploadantwortauftrags abzurufen. Im Beispiel wird davon ausgegangen, dass der [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstellen Zeiger gültig ist.
+Um Statusinformationen zum Antwortteil eines Uploadantwortauftrags abzurufen, rufen Sie die [**IBackgroundCopyJob2::GetReplyProgress-Methode**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplyprogress) auf, wie im folgenden Beispiel gezeigt. Im Beispiel wird davon ausgegangen, dass [**der IBackgroundCopyJob-Schnittstellenzeiger**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) gültig ist.
 
 
 ```C++
@@ -86,11 +86,11 @@ if (SUCCEEDED(hr))
 
 
 
-Dateien enthalten auch Statusinformationen. Verwenden Sie die [**ibackgroundcopyfile:: GetProgress**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyfile-getprogress) -Methode, um die Statusinformationen abzurufen. Informationen zum Abrufen der Dateien eines Auftrags finden Sie unter Auflisten von [Dateien in einem Auftrag](enumerating-files-in-a-job.md).
+Dateien enthalten auch Statusinformationen. Verwenden Sie zum Abrufen der Statusinformationen die [**IBackgroundCopyFile::GetProgress-Methode.**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyfile-getprogress) Informationen zum Abrufen der Dateien eines Auftrags finden Sie unter [Aufzählen](enumerating-files-in-a-job.md)von Dateien in einem Auftrag.
 
- 
+ 
 
- 
+ 
 
 
 

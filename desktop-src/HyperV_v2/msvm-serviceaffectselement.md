@@ -1,5 +1,5 @@
 ---
-description: Ordnet dem Verwaltungsdienst eine Instanz des virtuellen Computers zu, der den Zustand steuert.
+description: Ordnet dem Verwaltungsdienst, der seinen Zustand steuert, eine Instanz eines virtuellen Computers zu.
 ms.assetid: 12EB3951-74D4-477F-8B55-69FAA3B14631
 title: Msvm_ServiceAffectsElement-Klasse
 ms.topic: reference
@@ -17,16 +17,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: eadb9f33015091999776b73c83d792ccd29396b0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: db9ab0ff0aa3eab6f0268f7e85cb5f4efd0e7d2624c7e97a95abb3dd3b414ab2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582280"
 ---
-# <a name="msvm_serviceaffectselement-class"></a>MSVM \_ serviceaffectselements-Klasse
+# <a name="msvm_serviceaffectselement-class"></a>Msvm \_ ServiceAffectsElement-Klasse
 
-Ordnet dem Verwaltungsdienst eine Instanz des virtuellen Computers zu, der den Zustand steuert.
+Ordnet dem Verwaltungsdienst, der seinen Zustand steuert, eine Instanz eines virtuellen Computers zu.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -45,52 +45,52 @@ class Msvm_ServiceAffectsElement : CIM_ServiceAffectsElement
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ serviceaffectselements** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ ServiceAffectsElement-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ serviceaffectselements** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ ServiceAffectsElement-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Affectedelta-Element**
+**AffectedElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
+Datentyp: **[ **CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf den virtuellen Computer. Diese Eigenschaft wird von [**CIM \_ serviceaffectselements**](/previous-versions//cc136907(v=vs.85))geerbt.
+Ein Verweis auf den virtuellen Computer. Diese Eigenschaft wird von [**CIM \_ ServiceAffectsElement geerbt.**](/previous-versions//cc136907(v=vs.85))
 
 </dd> <dt>
 
-**Affectingelement**
+**AffectingElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM- \_ Dienst**](/windows/desktop/CIMWin32Prov/cim-service)**
+Datentyp: **[ **\_ CIM-Dienst**](/windows/desktop/CIMWin32Prov/cim-service)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf den Dienst, der den virtuellen Computer steuert. Diese Eigenschaft wird von [**CIM \_ serviceaffectselements**](/previous-versions//cc136907(v=vs.85))geerbt.
+Ein Verweis auf den Dienst, der den virtuellen Computer steuert. Diese Eigenschaft wird von [**CIM \_ ServiceAffectsElement geerbt.**](/previous-versions//cc136907(v=vs.85))
 
 </dd> <dt>
 
-**Elementeffects**
+**ElementEffects**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Typ des Steuer Elements an, das die Zuordnung darstellt. Diese Eigenschaft wird von [**CIM \_ serviceaffectselements**](/previous-versions//cc136907(v=vs.85))geerbt und ist immer auf den folgenden Wert festgelegt.
+Gibt den Typ des Steuerelements an, das die Zuordnung darstellt. Diese Eigenschaft wird von [**CIM \_ ServiceAffectsElement geerbt**](/previous-versions//cc136907(v=vs.85))und immer auf den folgenden Wert festgelegt.
 
 
 
@@ -104,22 +104,22 @@ Gibt den Typ des Steuer Elements an, das die Zuordnung darstellt. Diese Eigensch
 
 </dd> <dt>
 
-**Otherelementeffect-Beschreibungen**
+**OtherElementEffectsDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Details für den Typ der Zuordnung an der entsprechenden Array Position in der **Element beeinflusst** das Eigenschafts Array. Diese Informationen sind erforderlich, wenn **Element Affekte** auf 1 (Sonstiges) festgelegt ist. Diese Eigenschaft wird von [**CIM \_ serviceaffectselements**](/previous-versions//cc136907(v=vs.85))geerbt und ist immer auf **null** festgelegt.
+Die Details für den Zuordnungstyp an der entsprechenden Arrayposition im **ElementAffects-Eigenschaftenarray.** Diese Informationen sind erforderlich, **wenn ElementAffects** auf 1 (Sonstige) festgelegt ist. Diese Eigenschaft wird von [**CIM \_ ServiceAffectsElement geerbt**](/previous-versions//cc136907(v=vs.85))und immer auf NULL **festgelegt.**
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ serviceaffectselements** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ ServiceAffectsElement-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -127,10 +127,10 @@ Der Zugriff auf die **MSVM \_ serviceaffectselements** -Klasse kann durch die UA
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -139,10 +139,10 @@ Der Zugriff auf die **MSVM \_ serviceaffectselements** -Klasse kann durch die UA
 
 <dl> <dt>
 
-[**CIM \_ serviceaffectselements**](cim-serviceaffectselement.md)
+[**CIM \_ ServiceAffectsElement**](cim-serviceaffectselement.md)
 </dt> <dt>
 
-[**CIM \_ serviceaffectselements**](/previous-versions//cc136907(v=vs.85))
+[**CIM \_ ServiceAffectsElement**](/previous-versions//cc136907(v=vs.85))
 </dt> </dl>
 
  

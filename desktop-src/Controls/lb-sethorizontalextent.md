@@ -1,9 +1,9 @@
 ---
-title: LB_SETHORIZONTALEXTENT Meldung (Winuser. h)
-description: Legt die Breite (in Pixel) fest, um die ein Listenfeld Horizontal (die scrollbare Breite) gescrollt werden kann.
+title: LB_SETHORIZONTALEXTENT Meldung (Winuser.h)
+description: Legt die Breite in Pixel fest, mit der ein Listenfeld horizontal gescrollt werden kann (die bildlauffähige Breite).
 ms.assetid: 7d59b6de-2a22-4246-936b-4c669d285392
 keywords:
-- Windows-Steuerelemente für LB_SETHORIZONTALEXTENT Meldung
+- LB_SETHORIZONTALEXTENT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ded17b9ea2d78a77b030950877047256d0e2a1a1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ce248354b853dd3be15e76646958ed25068648182970d748da35fb5c596ca49e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859163"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119433879"
 ---
-# <a name="lb_sethorizontalextent-message"></a>LB- \_ Nachricht
+# <a name="lb_sethorizontalextent-message"></a>LB \_ SETHORIZONTALEXTENT-Nachricht
 
-Legt die Breite (in Pixel) fest, um die ein Listenfeld Horizontal (die scrollbare Breite) gescrollt werden kann. Wenn die Breite des Listen Felds kleiner als dieser Wert ist, führt die horizontale Schiebe Leiste einen horizontalen Bildlauf durch Elemente im Listenfeld aus. Wenn die Breite des Listen Felds größer oder gleich diesem Wert ist, wird die horizontale Schiebe Leiste ausgeblendet.
+Legt die Breite in Pixel fest, mit der ein Listenfeld horizontal gescrollt werden kann (die bildlauffähige Breite). Wenn die Breite des Listenfelds kleiner als dieser Wert ist, führt die horizontale Scrollleiste einen horizontalen Bildlauf für Elemente im Listenfeld aus. Wenn die Breite des Listenfelds gleich oder größer als dieser Wert ist, wird die horizontale Bildlaufleiste ausgeblendet.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,7 +34,7 @@ Legt die Breite (in Pixel) fest, um die ein Listenfeld Horizontal (die scrollbar
 
 Gibt die Anzahl der Pixel an, um die das Listenfeld gescrollt werden kann.
 
-Windows 95/Windows 98/Windows Millennium Edition (Windows Me): der *wParam* -Parameter ist auf 16-Bit-Werte beschränkt.
+Windows 95/Windows 98/Windows Edition (Windows Me): Der *wParam-Parameter* ist auf 16-Bit-Werte beschränkt.
 
 </dd> <dt>
 
@@ -49,13 +49,13 @@ Dieser Parameter wird nicht verwendet.
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um auf die **lb- \_ lthorizontalblock** -Nachricht zu reagieren, muss das Listenfeld mit dem [**WS- \_ HScroll**](/windows/desktop/winmsg/window-styles) -Stil definiert worden sein.
+Um auf die **LB \_ SETHORIZONTALEXTENT-Nachricht** zu reagieren, muss das Listenfeld mit dem [**WS \_ HSCROLL-Stil**](/windows/desktop/winmsg/window-styles) definiert worden sein.
 
-Beachten Sie, dass ein Listenfeld seinen horizontalen Block nicht dynamisch aktualisiert.
+Beachten Sie, dass ein Listenfeld seinen horizontalen Umfang nicht dynamisch aktualisiert.
 
-Diese Meldung hat keine Auswirkung auf ein Listenfeld mit mehreren Spalten.
+Diese Meldung hat keine Auswirkungen auf ein Listenfeld mit mehreren Spalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,17 +63,17 @@ Diese Meldung hat keine Auswirkung auf ein Listenfeld mit mehreren Spalten.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**LB- \_ gethorizontalblock**](lb-gethorizontalextent.md)
+[**LB \_ GETHORIZONTALEXTENT**](lb-gethorizontalextent.md)
 </dt> </dl>
 
  

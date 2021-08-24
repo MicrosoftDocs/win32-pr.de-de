@@ -1,6 +1,6 @@
 ---
-title: gluBuild2DMipmaps-Funktion (glu. h)
-description: Die gluBuild2DMipmaps-Funktion erstellt 2-D-Mipmaps.
+title: gluBuild2DMipmaps-Funktion (Glu.h)
+description: Die gluBuild2DMipmaps-Funktion erstellt 2D-Mipmaps.
 ms.assetid: ea19a9b0-baf7-436f-afd5-609bc364b3ba
 keywords:
 - gluBuild2DMipmaps-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 92402792e41701711e99f469ead67410d6a8c1b5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f27dcf3d0e95b0b52d5b7f4c4ce0e5692f3fc856b81d9c1d82c9661a70e2f818
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949579"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119489650"
 ---
 # <a name="glubuild2dmipmaps-function"></a>gluBuild2DMipmaps-Funktion
 
-Die **gluBuild2DMipmaps** -Funktion erstellt 2-D-Mipmaps.
+Die **gluBuild2DMipmaps-Funktion** erstellt 2D-Mipmaps.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ void WINAPI gluBuild2DMipmaps(
 *Ziel* 
 </dt> <dd>
 
-Die Ziel Textur. Muss "GL \_ Texture \_ 2D" lauten.
+Die Zieltextur. Muss GL \_ TEXTURE \_ 2D sein.
 
 </dd> <dt>
 
@@ -63,28 +63,28 @@ Die Anzahl der Farbkomponenten in der Textur. Muss 1, 2, 3 oder 4 sein.
 *width* 
 </dt> <dd>
 
-Die Breite des Textur Bilds.
+Die Breite des Texturbilds.
 
 </dd> <dt>
 
 *height* 
 </dt> <dd>
 
-Die Höhe des Textur Bilds.
+Die Höhe des Texturbilds.
 
 </dd> <dt>
 
 *format* 
 </dt> <dd>
 
-Das Format der Pixeldaten. Muss einer der folgenden sein: GL \_ Color \_ Index, GL \_ red, GL \_ Green, GL \_ Blue, GL \_ Alpha, GL \_ RGB, GL \_ RGBA, GL \_ BGR \_ ext, GL \_ BGRA \_ ext, GL \_ Luminance oder GL \_ Luminance \_ alpha.
+Das Format der Pixeldaten. Es muss eine der folgenden Werte vorhanden sein: GL \_ COLOR \_ INDEX, GL \_ RED, GL \_ \_ GREEN, GL BLUE, GL \_ ALPHA, GL \_ RGB, GL \_ RGBA, GL \_ BGR \_ EXT, GL \_ BGRA \_ EXT, GL \_ LUMINANCE oder GL \_ LUMINANCE \_ ALPHA.
 
 </dd> <dt>
 
 *type* 
 </dt> <dd>
 
-Der Datentyp für *Daten*. Muss eines der folgenden sein: GL \_ unsigned \_ Byte, GL \_ Byte, GL \_ Bitmap, GL \_ unsigned \_ Short, GL \_ Short, GL \_ unsigned \_ int, GL \_ int oder GL \_ float.
+Der Datentyp für *die Daten*. Folgendes muss sein: GL \_ \_ UNSIGNED BYTE, GL \_ BYTE, GL \_ BITMAP, GL \_ UNSIGNED \_ SHORT, GL \_ SHORT, GL \_ UNSIGNED \_ INT, GL \_ INT oder GL \_ FLOAT.
 
 </dd> <dt>
 
@@ -99,13 +99,13 @@ Ein Zeiger auf die Bilddaten im Arbeitsspeicher.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **gluBuild2DMipmaps** -Funktion Ruft das Eingabebild ab und generiert alle MipMap-Bilder (mit " [**gluscaleimage**](gluscaleimage.md)"), sodass das Eingabebild als ein mipzugeordnetes Textur Bild verwendet werden kann. Um jedes Abbild zu laden, wenden Sie [**glTexImage2D**](glteximage2d.md)an. Wenn die Dimensionen des Eingabe Bilds keine Kräfte von zwei sind, wird das Bild so skaliert, dass sowohl die Breite als auch die Höhe die Kräfte von zwei sind, bevor die Mipmaps generiert werden.
+Die **gluBuild2DMipmaps-Funktion** ruft das Eingabebild ab und generiert alle Mipmapbilder [**(mithilfe von gluScaleImage),**](gluscaleimage.md)damit das Eingabebild als mipmappeniertes Texturbild verwendet werden kann. Rufen Sie [**glTexImage2D**](glteximage2d.md)auf, um die einzelnen Bilder zu laden. Wenn die Abmessungen des Eingabebilds keine Zweierstärken sind, wird das Bild so skaliert, dass sowohl die Breite als auch die Höhe die Zweierleistung sind, bevor die Mipmaps generiert werden.
 
-Der Rückgabewert 0 (null) gibt den Erfolg an. Andernfalls wird ein glu-Fehlercode zurückgegeben (siehe [**gluerrorstring**](gluerrorstring.md)).
+Der Rückgabewert 0 (null) gibt den Erfolg an. Andernfalls wird ein GLU-Fehlercode zurückgegeben (siehe [**gluErrorString**](gluerrorstring.md)).
 
-Eine Beschreibung der zulässigen Werte für den *Format* -Parameter finden Sie unter **glTexImage2D**. Eine Beschreibung der zulässigen Werte für *Type* finden Sie unter [**gldrawpixels**](gldrawpixels.md).
+Eine Beschreibung der zulässigen Werte für den *Formatparameter* finden Sie unter **glTexImage2D**. Eine Beschreibung der zulässigen Werte für *den Typ finden Sie* unter [**glDrawPixels**](gldrawpixels.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,8 +115,8 @@ Eine Beschreibung der zulässigen Werte für den *Format* -Parameter finden Sie 
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -125,7 +125,7 @@ Eine Beschreibung der zulässigen Werte für den *Format* -Parameter finden Sie 
 
 <dl> <dt>
 
-[**gldrawpixels**](gldrawpixels.md)
+[**glDrawPixels**](gldrawpixels.md)
 </dt> <dt>
 
 [**glTexImage2D**](glteximage2d.md)
@@ -134,7 +134,7 @@ Eine Beschreibung der zulässigen Werte für den *Format* -Parameter finden Sie 
 [**gluBuild1DMipmaps**](glubuild1dmipmaps.md)
 </dt> <dt>
 
-[**gluscaleimage**](gluscaleimage.md)
+[**gluScaleImage**](gluscaleimage.md)
 </dt> </dl>
 
  

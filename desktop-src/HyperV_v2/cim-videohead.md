@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Kopfzeile eines CIM- \_ Displaycontroller-Objekts dar.
+description: Stellt einen Kopf eines CIM \_ DisplayController-Objekts dar.
 ms.assetid: 2bb034d9-d1df-4cc8-a6a8-b6ad7289f582
 title: CIM_VideoHead-Klasse
 ms.topic: reference
@@ -24,16 +24,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 22f8176c9bdbeae460dfa22ca395e7ed8dd8351e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f9576f3b1e9e1c6279067e7ddc8878fdb33ef62e2aea917937d50358069ef38a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343832"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119427670"
 ---
-# <a name="cim_videohead-class"></a>CIM- \_ videoheadklasse
+# <a name="cim_videohead-class"></a>CIM \_ VideoHead-Klasse
 
-Stellt eine Kopfzeile eines [**CIM- \_ Displaycontroller**](cim-displaycontroller.md) -Objekts dar.
+Stellt einen Kopf eines [**CIM \_ DisplayController-Objekts**](cim-displaycontroller.md) dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,125 +57,125 @@ class CIM_VideoHead : CIM_LogicalDevice
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ videoheadklasse** verfügt über diese Typen von Membern:
+Die **CIM \_ VideoHead-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ videoheadklasse** verfügt über diese Eigenschaften.
+Die **CIM \_ VideoHead-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Currentbitsperpixel**
+**CurrentBitsPerPixel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Video \| 004,12 "), **Punit** (" Bit ")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Video \| 004.12"), **PUnit** ("bit")
 </dt> </dl>
 
 Die Anzahl der Bits, die zum Anzeigen der einzelnen Pixel verwendet werden.
 
 </dd> <dt>
 
-**Ereignis Auflösung**
+**CurrentHorizontalResolution**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Pixel"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Video \| 004,11 "), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) (" CIM \_ videoheadresolution. HorizontalResolution "), **Punit** (" Pixel ")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Pixel"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Video \| 004.11"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ VideoHeadResolution.HorizontalResolution"), **PUnit** ("pixel")
 </dt> </dl>
 
-Die aktuelle Anzahl von horizontalen Pixeln.
+Die aktuelle Anzahl horizontaler Pixel.
 
 </dd> <dt>
 
-**Currentzahlofcolors**
+**CurrentNumberOfColors**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ videoheadresolution. numofcolors")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ VideoHeadResolution.NumberOfColors")
 </dt> </dl>
 
 Die Anzahl von Farben, die bei der aktuellen Auflösung unterstützt werden.
 
 </dd> <dt>
 
-**Currentzahlofcolumns**
+**CurrentNumberOfColumns**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Video \| 004,14 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Video \| 004.14")
 </dt> </dl>
 
-Im Zeichenmodus die Anzahl der Spalten für den Anzeige Controller. andernfalls "0".
+Im Zeichenmodus die Anzahl der Spalten für den Anzeigecontroller; andernfalls "0".
 
 </dd> <dt>
 
-**Currentnumofrows**
+**CurrentNumberOfRows**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Video \| 004,13 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Video \| 004.13")
 </dt> </dl>
 
-Im Zeichenmodus die Anzahl der Zeilen für den Anzeige Controller. andernfalls "0".
+Im Zeichenmodus die Anzahl der Zeilen für den Anzeigecontroller; andernfalls "0".
 
 </dd> <dt>
 
 **CurrentRefreshRate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Hertz"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Video \| 004,15 "), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) (" CIM \_ videoheadresolution. freshshrate "), **Punit** (" Hertz ")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Hertz"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Video \| 004.15"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ VideoHeadResolution.RefreshRate"), **PUnit** ("hertz")
 </dt> </dl>
 
-Die aktuelle Aktualisierungsrate des Anzeige Controllers in Hertz.
+Die aktuelle Aktualisierungsrate des Anzeigecontrollers in Hertz.
 
 </dd> <dt>
 
-**Currentscanmode**
+**CurrentScanMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Video \| 004,8 "), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ videohead**.**Othercurrentscanmode**, CIM \_ videoheadresolution. scanmode ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Video \| 004.8"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ VideoHead**.**OtherCurrentScanMode**, CIM \_ VideoHeadResolution.ScanMode")
 </dt> </dl>
 
-Der aktuelle Scanmodus des Anzeige Controllers.
+Der aktuelle Scanmodus des Anzeigecontrollers.
 
 <dt>
 
@@ -202,81 +202,81 @@ Der aktuelle Scanmodus des Anzeige Controllers.
 
 <span id="Non-Interlaced_Operation"></span><span id="non-interlaced_operation"></span><span id="NON-INTERLACED_OPERATION"></span>
 
-**Nicht-Interlacing-Vorgang** (3)
+**Nicht verschachtelter Vorgang** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Interlaced_Operation"></span><span id="interlaced_operation"></span><span id="INTERLACED_OPERATION"></span>
 
-Zeilen Sprung **Vorgang** (4)
+**Interlaced-Vorgang** (4)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Currentverticalresolution**
+**CurrentVerticalResolution**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Pixel"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Video \| 004,10 "), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) (" CIM \_ videoheadresolution. VerticalResolution "), **Punit** (" Pixel ")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Pixel"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Video \| 004.10"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ VideoHeadResolution.VerticalResolution"), **PUnit** ("pixel")
 </dt> </dl>
 
 Die aktuelle Anzahl vertikaler Pixel.
 
 </dd> <dt>
 
-**Maxfreshshrate**
+**MaxRefreshRate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Hertz"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Video \| 004,5 "), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) (" CIM \_ videoheadresolution. maxfreshshrate "), **Punit** (" Hertz ")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Hertz"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Video \| 004.5"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ VideoHeadResolution.MaxRefreshRate"), **PUnit** ("hertz")
 </dt> </dl>
 
-Die maximale Aktualisierungsrate des Anzeige Controllers in Hertz.
+Die maximale Aktualisierungsrate des Anzeigecontrollers in Hertz.
 
 </dd> <dt>
 
-**Minfreshshrate**
+**MinRefreshRate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Hertz"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Video \| 004,4 "), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) (" CIM \_ videoheadresolution. minfreshshrate "), **Punit** (" Hertz ")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Hertz"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Video \| 004.4"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ VideoHeadResolution.MinRefreshRate"), **PUnit** ("hertz")
 </dt> </dl>
 
-Die minimale Aktualisierungsrate des Anzeige Controllers in Hertz.
+Die minimale Aktualisierungsrate des Anzeigecontrollers in Hertz.
 
 </dd> <dt>
 
-**Othercurrentscanmode**
+**OtherCurrentScanMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ videohead**.**Currentscanmode**, CIM \_ videoheadresolution. otherscanmode ")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ VideoHead**.**CurrentScanMode**, CIM \_ VideoHeadResolution.OtherScanMode")
 </dt> </dl>
 
-Eine Beschreibung des aktuellen Überprüfungs Modus, wenn die **currentscanmode** -Eigenschaft den Wert "1" (sonstige) hat.
+Eine Beschreibung des aktuellen Scanmodus, wenn die **CurrentScanMode-Eigenschaft** "1" (andere) ist.
 
 </dd> </dl>
 
@@ -289,12 +289,12 @@ Eine Beschreibung des aktuellen Überprüfungs Modus, wenn die **currentscanmode
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

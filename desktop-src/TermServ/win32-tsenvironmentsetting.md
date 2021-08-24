@@ -1,11 +1,11 @@
 ---
 title: Win32_TSEnvironmentSetting-Klasse
-description: Definiert die Konfigurationseinstellungen für die Win32- \_ Terminal Klasse einschließlich der ersten Programm Richtlinie.
+description: Definiert die Konfigurationseinstellungen für die Win32 \_ Terminal-Klasse einschließlich der anfänglichen Programmrichtlinie.
 ms.assetid: 2d310a1e-a1bd-4ccb-965e-8389aaa2e4c1
 ms.tgt_platform: multiple
 keywords:
 - Win32_TSEnvironmentSetting-Klasse Remotedesktopdienste
-- Win32_TSEnvironmentSetting Klasse Remotedesktopdienste, beschrieben
+- Win32_TSEnvironmentSetting-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -29,18 +29,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0689536385644ae3ef95d106e50ab198e5a57f93
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 91ede3347581267d9fcec00a82c016c273c239c9673b536843753e6b59ec2341
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518815"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119514320"
 ---
-# <a name="win32_tsenvironmentsetting-class"></a>Win32- \_ Klasse "tsenvironmentsetting"
+# <a name="win32_tsenvironmentsetting-class"></a>Win32 \_ TSEnvironmentSetting-Klasse
 
-Die **Win32 \_ tsenvironmentsetting** -WMI-Klasse definiert die Konfigurationseinstellungen für die [**Win32- \_ Terminal**](win32-terminal.md) Klasse einschließlich der ersten Programm Richtlinie.
+Die WMI-Klasse **Win32 \_ TSEnvironmentSetting** definiert die Konfigurationseinstellungen für die [**Win32 \_ Terminal-Klasse**](win32-terminal.md) einschließlich der anfänglichen Programmrichtlinie.
 
-Die folgende Syntax wird aus dem MOF-Code vereinfacht und umfasst alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu-Methoden finden Sie in der Tabelle mit den Methoden weiter unten in diesem Thema.
+Die folgende Syntax wird aus MOF-Code vereinfacht und enthält alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu Methoden finden Sie in der Tabelle der Methoden weiter unten in diesem Thema.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,21 +66,21 @@ class Win32_TSEnvironmentSetting : Win32_TerminalSetting
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ tsenvironmentsetting** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSEnvironmentSetting-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ tsenvironmentsetting** " verfügt über diese Methoden.
+Die **Win32 \_ TSEnvironmentSetting-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                      | BESCHREIBUNG                                                            |
+| Methode                                                                      | Beschreibung                                                            |
 |:----------------------------------------------------------------------------|:-----------------------------------------------------------------------|
-| [**InitialProgram**](win32-tsenvironmentsetting-initialprogram.md)         | Legt die Eigenschaften des Start Programms fest, die in dieser Klasse enthalten sind.<br/> |
-| [**Setclientwallpaper**](win32-tsenvironmentsetting-setclientwallpaper.md) | Legt die **ClientWallPaper** -Eigenschaft fest.<br/>                      |
+| [**InitialProgram**](win32-tsenvironmentsetting-initialprogram.md)         | Legt die in dieser Klasse enthaltenen Startprogrammeigenschaften fest.<br/> |
+| [**SetClientWallPaper**](win32-tsenvironmentsetting-setclientwallpaper.md) | Legt die **ClientWallPaper-Eigenschaft** fest.<br/>                      |
 
 
 
@@ -88,23 +88,23 @@ Die Win32-Klasse " **\_ tsenvironmentsetting** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ tsenvironmentsetting** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSEnvironmentSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Beschreibung (einzeilige Zeichenfolge) des-Objekts.
+Kurze Beschreibung (einzeilige Zeichenfolge) des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -113,13 +113,13 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **ClientWallPaper**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob das Hintergrundbild auf dem Client angezeigt wird. Wenn Sie das Hintergrundbild nicht anzeigen, können Sie Systemressourcen sparen, indem Sie die zum Neuzeichnen des Bildschirms benötigte Zeit verringern.
+Gibt an, ob das Hintergrundbild auf dem Client angezeigt wird. Wenn das Hintergrundbild nicht angezeigt wird, können Systemressourcen gespart werden, indem die zeitaufwendige Zeit zum erneuten Bemalen des Bildschirms verringert wird.
 
 <dt>
 
@@ -150,7 +150,7 @@ Das Hintergrundbild wird auf dem Client angezeigt.
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -162,29 +162,29 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Initialprogrampath**
+**InitialProgramPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name und der Pfad des Programms, das der Benutzer unmittelbar nach der Anmeldung beim RD-Sitzungshost Server ausgeführt wird.
+Der Name und der Pfad des Programms, das der Benutzer unmittelbar nach der Anmeldung beim RD-Sitzungshost-Server ausführen wird.
 
 </dd> <dt>
 
-**Initialprogrampolicy**
+**InitialProgramPolicy**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Richtlinie, die der Server verwendet, um den Pfad und den Dateinamen des Start Programms sowie den Namen des Ordners zu bestimmen, in dem er sich befindet.
+Die Richtlinie, die der Server verwendet, um den Startprogrammpfad und den Dateinamen sowie den Namen des Ordners zu bestimmen, in dem er sich befindet.
 
 <dt>
 
@@ -195,29 +195,29 @@ Die Richtlinie, die der Server verwendet, um den Pfad und den Dateinamen des Sta
 
 </dt> <dd>
 
-Die Start Programmeinstellungen des Benutzers sind wirksam.
+Die Einstellungen des Startprogramms des Benutzers sind wirksam.
 
 </dd> <dt>
 
 <span id="Server-Override"></span><span id="server-override"></span><span id="SERVER-OVERRIDE"></span>
 
-<span id="Server-Override"></span><span id="server-override"></span><span id="SERVER-OVERRIDE"></span>**Server-override** (1)
+<span id="Server-Override"></span><span id="server-override"></span><span id="SERVER-OVERRIDE"></span>**Serverüberschreibung** (1)
 
 
 </dt> <dd>
 
-Die Start Programmeinstellungen des Benutzers werden vom Server überschrieben.
+Die Einstellungen des Startprogramms des Benutzers werden vom Server überschrieben.
 
 </dd> <dt>
 
 <span id="Single-App_Mode"></span><span id="single-app_mode"></span><span id="SINGLE-APP_MODE"></span>
 
-<span id="Single-App_Mode"></span><span id="single-app_mode"></span><span id="SINGLE-APP_MODE"></span>**Einzel Anwendungsmodus** (2)
+<span id="Single-App_Mode"></span><span id="single-app_mode"></span><span id="SINGLE-APP_MODE"></span>**Einzel-App-Modus** (2)
 
 
 </dt> <dd>
 
-In dieser Sitzung wird nur eine einzige Anwendung ausgeführt. Die Informationen zum Start Programm werden ignoriert.
+In dieser Sitzung wird nur eine anwendung ausgeführt. Die Informationen zum Startprogramm werden ignoriert.
 
 </dd> </dl>
 
@@ -226,16 +226,16 @@ In dieser Sitzung wird nur eine einzige Anwendung ausgeführt. Die Informationen
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Das Datum, an dem das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -244,7 +244,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -256,16 +256,16 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Policysourceclientwallpaper**
+**PolicySourceClientWallPaper**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **ClientWallPaper** -Eigenschaft vom Server, von der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **ClientWallPaper-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -292,16 +292,16 @@ Standard
 
 </dd> <dt>
 
-**Policysourceinitialprogrampath**
+**PolicySourceInitialProgramPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **initialprogrampath** -Eigenschaft vom Server, von der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **InitialProgramPath-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -331,13 +331,13 @@ Standard
 **PolicySourceStartIn**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **Startin** -Eigenschaft vom Server, von der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, ob die **StartIn-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -367,29 +367,29 @@ Standard
 **Startin**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad des Arbeitsverzeichnisses des Programms, das der Benutzer unmittelbar nach der Anmeldung beim RD-Sitzungshost Server ausgeführt wird.
+Der Pfad des Arbeitsverzeichnisses des Programms, das der Benutzer unmittelbar nach der Anmeldung beim RD-Sitzungshost-Server ausführen wird.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -453,10 +453,10 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Terminal Name**
+**TerminalName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -468,11 +468,11 @@ Diese Eigenschaft wird von [**Win32 \_ TerminalSetting**](win32-terminalsetting.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass die der Konsolen Sitzung zugeordneten Winstations nicht auf die Methoden und Eigenschaften dieser Klasse zugreifen können. Wenn ein Versuch unternommen wird, indem "Console" als Wert der **Terminalname** -Eigenschaft angegeben wird, geben die Methoden dieses Objekts **WBEM \_ E \_ nicht \_ unterstützt** zurück. Dieser Fehlercode wird auch zurückgegeben, wenn eine Fenster Station versucht, Methoden dieses Objekts aufzurufen, um die Sicherheitseigenschaften der Konten "LocalSystem", "LocalService" oder "Network Service" hinzuzufügen oder zu ändern.
+Beachten Sie, dass Winstations, die der Konsolensitzung zugeordnet sind, nicht auf die Methoden und Eigenschaften dieser Klasse zugreifen können. Wenn dies versucht wird, indem "Console" als Wert der **TerminalName-Eigenschaft** angegeben wird, geben Methoden dieses Objekts **WBEM \_ E NOT SUPPORTED \_ \_ zurück.** Dieser Fehlercode wird auch zurückgegeben, wenn eine Fensterstation versucht, Methoden dieses Objekts aufzurufen, um die Sicherheitseigenschaften der Konten LocalSystem, LocalService oder NetworkService hinzuzufügen oder zu ändern.
 
-Zum Herstellen einer Verbindung mit dem \\ root \\ CIMV2 \\ TerminalServices-Namespace muss die Authentifizierungs Ebene den Datenschutz für das Paket enthalten. Bei C/C++-aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene der **RPC- \_ c- \_ authn- \_ Ebene \_ Pkt \_ Privacy**. Bei Visual Basic-und Skript aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene von **wbemauthenticationlevelpzprivacy** oder "PKTPRIVACY" mit einem Wert von 6. Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird gezeigt, wie eine Verbindung mit einem Remote Computer mit Paket Datenschutz hergestellt wird.
+Um eine Verbindung mit dem \\ \\ CIMV2 \\ TerminalServices-Stammnamespace herzustellen, muss die Authentifizierungsebene Paketdatenschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Bei Visual Basic- und Skriptaufrufen ist dies die Authentifizierungsebene **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Beispiel Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -483,7 +483,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -494,7 +494,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 

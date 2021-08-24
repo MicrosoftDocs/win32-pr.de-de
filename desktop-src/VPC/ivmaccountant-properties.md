@@ -1,32 +1,32 @@
 ---
-title: Ivmaccountant-Eigenschaften
-description: Die ivmaccountant-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+title: IVMAccountant-Eigenschaften
+description: Die IVMAccountant-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 3297D239-86B9-4DD3-A828-FFE22BAFFDE7
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 23714da86229df25c8eff074a70293053c13c825
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 600fdb32b0555d44799d0d0726c8dd7a83a6991711745998470c23870d4cd85a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119473680"
 ---
-# <a name="ivmaccountant-properties"></a>Ivmaccountant-Eigenschaften
+# <a name="ivmaccountant-properties"></a>IVMAccountant-Eigenschaften
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Die [**ivmaccountant**](ivmaccountant.md) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**IVMAccountant-Schnittstelle**](ivmaccountant.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Cpunutzungseigenschaft**](ivmaccountant-cpuutilization.md)
--   [**Cpuutilizationhistory (Eigenschaft)**](ivmaccountant-cpuutilizationhistory.md)
--   [**Diskbytesread (Eigenschaft)**](ivmaccountant-diskbytesread.md)
--   [**Diskbyteswritten (Eigenschaft)**](ivmaccountant-diskbyteswritten.md)
--   [**Networkbytesempfangene Eigenschaft**](ivmaccountant-networkbytesreceived.md)
--   [**Networkbytess-Eigenschaft**](ivmaccountant-networkbytessent.md)
--   [**Uptime-Eigenschaft**](ivmaccountant-uptime.md)
+-   [**CPUUtilization-Eigenschaft**](ivmaccountant-cpuutilization.md)
+-   [**CPUUtilizationHistory-Eigenschaft**](ivmaccountant-cpuutilizationhistory.md)
+-   [**DiskBytesRead-Eigenschaft**](ivmaccountant-diskbytesread.md)
+-   [**DiskBytesWritten-Eigenschaft**](ivmaccountant-diskbyteswritten.md)
+-   [**NetworkBytesReceived-Eigenschaft**](ivmaccountant-networkbytesreceived.md)
+-   [**NetworkBytesSent-Eigenschaft**](ivmaccountant-networkbytessent.md)
+-   [**UpTime-Eigenschaft**](ivmaccountant-uptime.md)
 
- 
+ 
 
- 
+ 

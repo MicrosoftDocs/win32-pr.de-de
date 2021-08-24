@@ -1,9 +1,9 @@
 ---
-title: glindexfv-Funktion (GL. h)
-description: Die Funktion "glindexfv" legt den aktuellen Farbindex fest.
+title: glIndexfv-Funktion (Gl.h)
+description: Die funktion glIndexfv legt den aktuellen Farbindex fest.
 ms.assetid: 355d1896-ea9d-4a80-9dee-285f3bf638e5
 keywords:
-- glindexfv-Funktion OpenGL
+- glIndexfv-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a649f15dd6fad637d9e742a97235fdcd99d82794
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 77a64c7c51d442d5e0dff14d8377e387b8da183bb3b74e7f2c8a1bceef189cad
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040342"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493480"
 ---
-# <a name="glindexfv-function"></a>glindexfv-Funktion
+# <a name="glindexfv-function"></a>glIndexfv-Funktion
 
-Die Funktion " **glindexfv** " legt den aktuellen Farbindex fest.
+Die **funktion glIndexfv** legt den aktuellen Farbindex fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI glIndexfv(
 *c* 
 </dt> <dd>
 
-Ein Zeiger auf ein Array mit einem Element, das den neuen Wert für den aktuellen Farb Index enthält.
+Ein Zeiger auf ein Ein-Element-Array, das den neuen Wert für den aktuellen Farbindex enthält.
 
 </dd> </dl>
 
@@ -51,19 +51,19 @@ Ein Zeiger auf ein Array mit einem Element, das den neuen Wert für den aktuelle
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glindexfv** " aktualisiert den aktuellen Farbindex (mit einem Wert). Es wird ein Argument benötigt: der neue Wert für den aktuellen Farbindex.
+Die **glIndexfv-Funktion** aktualisiert den aktuellen (einwertigen) Farbindex. Es wird ein Argument verwendet: der neue Wert für den aktuellen Farbindex.
 
-Der aktuelle Index wird als Gleit Komma Wert gespeichert. Ganzzahlige Werte werden ohne besondere Zuordnung direkt in Gleit Komma Werte konvertiert.
+Der aktuelle Index wird als Gleitkommawert gespeichert. Ganzzahlige Werte werden ohne spezielle Zuordnung direkt in Gleitkommawerte konvertiert.
 
-Index Werte außerhalb des darstellbaren Bereichs des Farb Index Puffers werden nicht gebunden. Vor der Deaktivierung eines Indexes (sofern aktiviert) und dem Schreiben in den Framebuffer wird der Index jedoch in ein festes Punkt Format konvertiert. Alle Bits im ganzzahligen Teil des resultierenden fest Komma Werts, die nicht Bits im Frame Puffer entsprechen, werden maskiert.
+Indexwerte außerhalb des darstellbaren Bereichs des Farbindexpuffers werden nicht geklammert. Bevor ein Index jedoch gedithert (sofern aktiviert) und in den Framepuffer geschrieben wird, wird er in das Festpunktformat konvertiert. Alle Bits im ganzzahligen Teil des resultierenden Festpunktwerts, die bits im Framepuffer nicht entsprechen, werden maskiert.
 
-Der aktuelle Index kann jederzeit aktualisiert werden. Insbesondere kann **glindexfv** zwischen einem Aufruf von [**glBegin**](/windows/desktop/OpenGL/glbegin) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen werden.
+Der aktuelle Index kann jederzeit aktualisiert werden. Insbesondere kann **glIndexfv** zwischen einem Aufruf von [**glBegin**](/windows/desktop/OpenGL/glbegin) und dem entsprechenden Aufruf von [**glEnd aufgerufen werden.**](glend.md)
 
-Die folgende Funktion Ruft Informationen im Zusammenhang mit **glindexfv** ab:
+Die folgende Funktion ruft Informationen im Zusammenhang mit **glIndexfv ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument "GL \_ Current \_ Index"
+[**glGet mit**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) argument GL \_ CURRENT \_ INDEX
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,8 +73,8 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **glindexfv** ab:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -86,13 +86,13 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **glindexfv** ab:
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcolor**](glcolor-functions.md)
+[**glColor**](glcolor-functions.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> </dl>
 
  

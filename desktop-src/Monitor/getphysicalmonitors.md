@@ -1,9 +1,9 @@
 ---
-title: Getphysicalmonitors-Funktion
+title: GetPhysicalMonitors-Funktion
 description: Ruft die physischen Monitore ab, die einem Anzeigegerät zugeordnet sind.
 ms.assetid: 8bbbad0a-2e45-439c-9312-f922a920c7fd
 keywords:
-- Getphysicalmonitors-Funktions Monitor Konfiguration
+- GetPhysicalMonitors-Funktion Monitorkonfiguration
 topic_type:
 - apiref
 api_name:
@@ -14,17 +14,17 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d95ccb801dbf06e096534754bd0adffbe36b5084
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f94cef0352aae75f95b1ff7ee9e65937f82c7b598a19cdce768028173dc97331
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338334"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146153"
 ---
-# <a name="getphysicalmonitors-function"></a>Getphysicalmonitors-Funktion
+# <a name="getphysicalmonitors-function"></a>GetPhysicalMonitors-Funktion
 
 > [!IMPORTANT]
-> Diese Funktion wird von der Monitor Konfigurations-API verwendet, um auf die Funktionalität des Anzeige Treibers zuzugreifen. Anwendungen sollten diese Funktion nicht aufzurufen.
+> Diese Funktion wird von der Überwachungskonfigurations-API verwendet, um auf funktionen im Anzeigetreiber zuzugreifen. Anwendungen sollten diese Funktion nicht aufrufen.
 
  
 
@@ -48,46 +48,46 @@ NTSTATUS WINAPI GetPhysicalMonitors(
 
 <dl> <dt>
 
-*pstrindevicename* \[ in\]
+*pstrDeviceName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**Unicode- \_ Zeichen**](/windows/desktop/api/subauth/ns-subauth-unicode_string) folgen Struktur, die den Namen des Anzeige Geräts enthält, wie von der [**getmonitorinfo**](/windows/desktop/api/winuser/nf-winuser-getmonitorinfoa) -Funktion zurückgegeben.
+Ein Zeiger auf eine [**UNICODE \_ STRING-Struktur,**](/windows/desktop/api/subauth/ns-subauth-unicode_string) die den Namen des Anzeigegeräts enthält, wie von der [**GetMonitorInfo-Funktion**](/windows/desktop/api/winuser/nf-winuser-getmonitorinfoa) zurückgegeben.
 
 </dd> <dt>
 
-*dwphysicalmonitorarraysize* \[ in\]
+*dwPhysicalMonitorArraySize* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Elemente im *pdwnumphysicalmonitorlenker* -Array. Um die erforderliche Größe des Arrays abzurufen, nennen Sie [**getnumofphysicalmonitors**](getnumberofphysicalmonitors.md).
+Die Anzahl der Elemente im *array pdwNumPhysicalMonitorHandlesInArray.* Rufen [**Sie GetNumberOfPhysicalMonitors**](getnumberofphysicalmonitors.md)auf, um die erforderliche Größe des Arrays abzurufen.
 
 </dd> <dt>
 
-*pdwnumphysicalmonitorlenker-Array* \[ vorgenommen\]
+*pdwNumPhysicalMonitorHandlesInArray* \[ out\]
 </dt> <dd>
 
-Empfängt die Anzahl der Elemente, die die Funktion in das *phphysicalmonitorarray* -Array kopiert.
+Empfängt die Anzahl der Elemente, die die Funktion in das *array phPhysicalMonitorArray* kopiert.
 
 </dd> <dt>
 
-*phphysicalmonitorarray* \[ vorgenommen\]
+*phPhysicalMonitorArray* \[ out\]
 </dt> <dd>
 
-Ein Array, das Handles für die physischen Monitore empfängt. Jedes Handle muss durch Aufrufen von [**destroyphysicalmonitor**](/windows/desktop/api/PhysicalMonitorEnumerationAPI/nf-physicalmonitorenumerationapi-destroyphysicalmonitor)freigegeben werden.
+Ein Array, das Handles für die physischen Monitore empfängt. Jedes Handle muss durch Aufrufen von [**DestroyPhysicalMonitor**](/windows/desktop/api/PhysicalMonitorEnumerationAPI/nf-physicalmonitorenumerationapi-destroyphysicalmonitor)freigegeben werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, wird der **Status \_ erfolgreich** zurückgegeben. Andernfalls wird ein **NTSTATUS** -Fehlercode zurückgegeben.
+Wenn die Methode erfolgreich ist, wird **STATUS \_ SUCCESS** zurückgegeben. Andernfalls wird ein **NTSTATUS-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anstatt diese Funktion zu verwenden, sollten Anwendungen eine der folgenden Funktionen aufzurufen:
+Anstatt diese Funktion zu verwenden, sollten Anwendungen eine der folgenden Funktionen aufrufen:
 
--   [**Getphysicalmonitorsfromhmonitor**](/windows/desktop/api/PhysicalMonitorEnumerationAPI/nf-physicalmonitorenumerationapi-getphysicalmonitorsfromhmonitor)
+-   [**GetPhysicalMonitorsFromHMONITOR**](/windows/desktop/api/PhysicalMonitorEnumerationAPI/nf-physicalmonitorenumerationapi-getphysicalmonitorsfromhmonitor)
 -   [**GetPhysicalMonitorsFromIDirect3DDevice9**](/windows/desktop/api/PhysicalMonitorEnumerationAPI/nf-physicalmonitorenumerationapi-getphysicalmonitorsfromidirect3ddevice9)
 
-Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Gdi32.dll zu verknüpfen.
+Dieser Funktion ist keine Importbibliothek zugeordnet. Um diese Funktion aufzurufen, müssen Sie die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch mit Gdi32.dll zu verknüpfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,13 +95,13 @@ Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Um diese Funk
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | DLL<br/>                      | <dl> <dt>Gdi32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

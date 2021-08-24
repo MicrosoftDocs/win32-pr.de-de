@@ -1,25 +1,25 @@
 ---
-description: Das taubemprivilegeset-Objekt stellt die folgenden Methoden zur Verfügung.
+description: Das SWbemPrivilegeSet-Objekt macht die folgenden Methoden verfügbar.
 ms.assetid: 5675FEF0-B1C6-4C63-A190-957DF363547C
 ms.tgt_platform: multiple
-title: "' Swap-privilegeset '-Methoden"
+title: SWbemPrivilegeSet-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 888b599467aab9c104674ed2d4c70abb843a1a52
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 193d9c271c3b6bbdcf1dadb979ff59425d08384b13b22e81aff647a69a3aaf4f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352737"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119611660"
 ---
-# <a name="swbemprivilegeset-methods"></a>' Swap-privilegeset '-Methoden
+# <a name="swbemprivilegeset-methods"></a>SWbemPrivilegeSet-Methoden
 
-Das [**taubemprivilegeset**](swbemprivilegeset.md) -Objekt stellt die folgenden Methoden zur Verfügung.
+Das [**SWbemPrivilegeSet-Objekt**](swbemprivilegeset.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Add-Methode**](swbemprivilegeset-add.md)
--   [**Addasstring-Methode**](swbemprivilegeset-addasstring.md)
+-   [**Methode hinzufügen**](swbemprivilegeset-add.md)
+-   [**AddAsString-Methode**](swbemprivilegeset-addasstring.md)
 -   [**DeleteAll-Methode**](swbemprivilegeset-deleteall.md)
 -   [**Item-Methode**](swbemprivilegeset-item.md)
 -   [**Remove-Methode**](swbemprivilegeset-remove.md)

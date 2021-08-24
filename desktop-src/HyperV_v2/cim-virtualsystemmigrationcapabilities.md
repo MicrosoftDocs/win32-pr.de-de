@@ -1,5 +1,5 @@
 ---
-description: Stellt die Funktionen eines CIM \_ virtualsystemmigrationservice-Objekts dar.
+description: Stellt die Funktionen eines CIM \_ VirtualSystemMigrationService-Objekts dar.
 ms.assetid: 5fe3a10b-c075-4c45-838d-0b5c2e491584
 title: CIM_VirtualSystemMigrationCapabilities-Klasse
 ms.topic: reference
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1a9a9a0a0f8e9ea344c7a37ad1168dcb5e059093
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1caa9809bda8d90c6bcb51439745c5fafb213383a298d0f37e064521ae184945
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528895"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119427650"
 ---
-# <a name="cim_virtualsystemmigrationcapabilities-class"></a>CIM \_ virtualsystemmigrationfunktionalitäten-Klasse
+# <a name="cim_virtualsystemmigrationcapabilities-class"></a>CIM \_ VirtualSystemMigrationCapabilities-Klasse
 
-Stellt die Funktionen eines [**CIM \_ virtualsystemmigrationservice**](cim-virtualsystemmigrationservice.md) -Objekts dar.
+Stellt die Funktionen eines [**CIM \_ VirtualSystemMigrationService-Objekts**](cim-virtualsystemmigrationservice.md) dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,26 +41,26 @@ class CIM_VirtualSystemMigrationCapabilities : CIM_Capabilities
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ virtualsystemmigrationfunktionsklasse** verfügt über diese Typen von Membern:
+Die **CIM \_ VirtualSystemMigrationCapabilities-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ virtualsystemmigrationfunktionalitäten** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ VirtualSystemMigrationCapabilities-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Asynchronousmethodssupported**
+**AsynchronousMethodsSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array, das die [**CIM \_ virtualsystemmigrationservice**](cim-virtualsystemmigrationservice.md) -Methoden angibt, die für asynchrone Vorgänge unterstützt werden.
+Ein Array, das die [**CIM \_ VirtualSystemMigrationService-Methoden**](cim-virtualsystemmigrationservice.md) angibt, die für asynchrone Vorgänge unterstützt werden.
 
 <dt>
 
@@ -80,37 +80,37 @@ Ein Array, das die [**CIM \_ virtualsystemmigrationservice**](cim-virtualsystemm
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Destinationhostformatssupported**
+**DestinationHostFormatsSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ virtualsystemmigrationservice**](cim-virtualsystemmigrationservice.md)".**MigrateVirtualSystemToHost (destinationhost)**","**CIM \_ virtualsystemmigrationservice**.**CheckVirtualSystemIsMigratableToHost (destinationhost)**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VirtualSystemMigrationService**](cim-virtualsystemmigrationservice.md).**MigrateVirtualSystemToHost(DestinationHost)**", "**CIM \_ VirtualSystemMigrationService**.**CheckVirtualSystemIsMigratableToHost(DestinationHost)**")
 </dt> </dl>
 
-Ein Array, das die unterstützten Formate für den *destinationhost* -Parameter der [**MigrateVirtualSystemToHost**](cim-virtualsystemmigrationservice-migratevirtualsystemtohost.md) -Methode und der [**CheckVirtualSystemIsMigratableToHost**](cim-virtualsystemmigrationservice-checkvirtualsystemismigratabletohost.md) -Methode für das [**CIM \_ virtualsystemmigrationservice**](cim-virtualsystemmigrationservice.md) -Objekt enthält.
+Ein Array, das die unterstützten Formate für den *DestinationHost-Parameter* der [**Methoden MigrateVirtualSystemToHost**](cim-virtualsystemmigrationservice-migratevirtualsystemtohost.md) und [**CheckVirtualSystemIsMigratableToHost**](cim-virtualsystemmigrationservice-checkvirtualsystemismigratabletohost.md) für das [**CIM \_ VirtualSystemMigrationService-Objekt**](cim-virtualsystemmigrationservice.md) enthält.
 
 <dt>
 
 <span id="DomainNameFormatSupported"></span><span id="domainnameformatsupported"></span><span id="DOMAINNAMEFORMATSUPPORTED"></span>
 
-<span id="DomainNameFormatSupported"></span><span id="domainnameformatsupported"></span><span id="DOMAINNAMEFORMATSUPPORTED"></span>**Domainnameformatsupported** (2)
+<span id="DomainNameFormatSupported"></span><span id="domainnameformatsupported"></span><span id="DOMAINNAMEFORMATSUPPORTED"></span>**DomainNameFormatSupported** (2)
 
 
 </dt> <dd>
 
-Unterstützung des Domänen Namen-Text Formats gemäß RFC 1035.
+Unterstützung des Domänennamen-Textformats gemäß RFC 1035.
 
 </dd> <dt>
 
@@ -121,7 +121,7 @@ Unterstützung des Domänen Namen-Text Formats gemäß RFC 1035.
 
 </dt> <dd>
 
-Unterstützung des IPv4-gepunkteten Dezimal Formats gemäß RFC 1208.
+Unterstützung des gepunkteten IPv4-Dezimalformats gemäß RFC 1208.
 
 </dd> <dt>
 
@@ -132,31 +132,31 @@ Unterstützung des IPv4-gepunkteten Dezimal Formats gemäß RFC 1208.
 
 </dt> <dd>
 
-Unterstützung des IPv6-Text Formats gemäß RFC 4291
+Unterstützung des IPv6-Textformats gemäß RFC 4291
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Synchronousmethodssupported**
+**SynchronousMethodsSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array, das die [**CIM \_ virtualsystemmigrationservice**](cim-virtualsystemmigrationservice.md) -Methoden angibt, die für synchrone Vorgänge unterstützt werden.
+Ein Array, das die [**CIM \_ VirtualSystemMigrationService-Methoden**](cim-virtualsystemmigrationservice.md) angibt, die für synchrone Vorgänge unterstützt werden.
 
-Enumeration von Methoden bezeichlern, deren Implementierung synchron sein kann; Das heißt, der Vorgang kann sofort durchgeführt werden. Daher gibt die Methode möglicherweise keinen Auftrag zurück.
+Enumeration von Methodenbezeichnern, deren Implementierung synchron sein kann; Das heißt, der Vorgang kann sofort abgeschlossen werden, sodass die Methode möglicherweise keinen Auftrag zurückgibt.
 
 <dt>
 
@@ -190,7 +190,7 @@ Enumeration von Methoden bezeichlern, deren Implementierung synchron sein kann; 
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> </dl>
@@ -205,17 +205,17 @@ Enumeration von Methoden bezeichlern, deren Implementierung synchron sein kann; 
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ Funktionen**](cim-capabilities.md)
+[**\_CIM-Funktionen**](cim-capabilities.md)
 </dt> </dl>
 
  

@@ -1,57 +1,57 @@
 ---
-title: Übersicht über die Entwicklung von Benutzeroberflächen
-description: In diesem Abschnitt werden die drei Phasen des Entwurfs von Benutzeroberflächen beschrieben und die Aufgaben eingeführt, die in der Regel mit den einzelnen Phasen verknüpft sind.
+title: Übersicht über die Entwicklung der Benutzeroberfläche
+description: In diesem Abschnitt werden die drei Phasen des Benutzeroberflächenentwurfs beschrieben und die Aufgaben vorgestellt, die in der Regel den einzelnen Phasen zugeordnet sind.
 ms.assetid: ab544cb9-eed3-4575-a8dd-2f5d7b5c575f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b531fb07a1805c14441c81777bbdddad0739e7cb
-ms.sourcegitcommit: e5c43274e96cb8fd1b60fc187ef16723e9258367
+ms.openlocfilehash: a3c7c965c5c7bfd0250c2116ee23bd91b2125ae5ea6bf15bd714ed13d58e000d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "104038471"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119589140"
 ---
-# <a name="overview-of-the-user-interface-development-process"></a>Übersicht über den Entwicklungsprozess der Benutzeroberfläche
+# <a name="overview-of-the-user-interface-development-process"></a>Übersicht über den Benutzeroberfläche-Entwicklungsprozess
 
-In diesem Abschnitt werden die drei Phasen des Entwurfs von Benutzeroberflächen beschrieben und die Aufgaben eingeführt, die in der Regel mit den einzelnen Phasen verknüpft sind.
+In diesem Abschnitt werden die drei Phasen des Benutzeroberflächenentwurfs beschrieben und die Aufgaben vorgestellt, die in der Regel den einzelnen Phasen zugeordnet sind.
 
-## <a name="the-application-user-interface-and-the-user-experience"></a>Die Benutzeroberfläche der Anwendung und die Benutzeroberfläche
+## <a name="the-application-user-interface-and-the-user-experience"></a>Die Anwendungs-Benutzeroberfläche und die Benutzeroberfläche
 
-Zunächst müssen die Begriffe "Benutzeroberfläche" und "Benutzeroberfläche" erläutert werden.
+Zunächst müssen die Begriffe "Benutzeroberfläche" und "Benutzererfahrung" verdeutlicht werden.
 
-Die Benutzeroberfläche einer Anwendung umfasst in der Regel die Objekte, die einem Benutzer direkt auf dem Bildschirm angezeigt werden und mit denen er interagiert. Zu diesen Objekten gehören z. b. der Dokument Raum, Menüs, Dialogfelder, Symbole, Bilder und Animationen.
+Die Benutzeroberfläche einer Anwendung umfasst in der Regel die Objekte, die ein Benutzer direkt auf dem Bildschirm sieht und mit denen er interagiert. Solche Objekte umfassen beispielsweise den Dokumentbereich, Menüs, Dialogfelder, Symbole, Bilder und Animationen.
 
-Die Benutzeroberfläche einer Anwendung ist jedoch nur ein Aspekt der gesamten Benutzeroberfläche. Weitere Aspekte der Benutzerfreundlichkeit, die für den Benutzer nicht sichtbar sind, aber für eine Anwendung von entscheidender Bedeutung sind, und für die Benutzerfreundlichkeit wichtig sind, sind Start Zeit, Latenz, Fehlerbehandlung und automatisierte Aufgaben, die ohne direkte Benutzerinteraktion abgeschlossen werden.
+Die Benutzeroberfläche einer Anwendung ist jedoch nur ein Aspekt der gesamten Benutzeroberfläche. Andere Aspekte der Benutzeroberfläche, die für den Benutzer nicht sichtbar sind, aber für eine Anwendung von entscheidender Bedeutung für die Benutzerfreundlichkeit sind, umfassen Startzeit, Latenz, Fehlerbehandlung und automatisierte Aufgaben, die ohne direkte Benutzerinteraktion abgeschlossen werden.
 
-Im Allgemeinen erfordert eine Benutzeroberfläche eine Aktion durch einen Benutzer, um eine Aufgabe auszuführen, während eine großartige Benutzeroberfläche ohne Benutzeroberfläche erreicht werden kann.
+Im Allgemeinen erfordert eine Benutzeroberfläche aktionen von einem Benutzer, um eine Aufgabe auszuführen, während eine hervorragende Benutzeroberfläche ohne benutzeroberfläche erreicht werden kann.
 
-## <a name="user-interface-development"></a>Benutzeroberflächen Entwicklung
+## <a name="user-interface-development"></a>Benutzeroberfläche-Entwicklung
 
-Die Bereitstellung eines erfolgreichen Benutzer Erlebnisses erfordert während des gesamten Entwicklungs Lebenszyklus einen ausgeglichenen Ansatz. Um diesen Saldo sicherzustellen, dürfen Sie sich nicht nur auf die Implementierung der Funktionen konzentrieren, die zum Ausführen einer Aufgabe erforderlich sind, sondern auch darauf, wie die Aufgabe über die Benutzeroberfläche verfügbar gemacht wird. Beachten Sie, dass die Benutzeroberfläche nicht nur funktionsfähig sein muss, sondern auch verwendet werden kann.
+Für eine erfolgreiche Benutzererfahrung ist ein ausgewogener Ansatz während des gesamten Entwicklungslebenszyklus erforderlich. Um dieses Gleichgewicht sicherzustellen, müssen Sie sich nicht nur auf die Implementierung der Funktionalität konzentrieren, die zum Abschließen einer Aufgabe erforderlich ist, sondern auch darauf, wie die Aufgabe über die Benutzeroberfläche verfügbar gemacht wird. Beachten Sie, dass die Benutzeroberfläche nicht nur funktionsfähig, sondern auch verwendbar sein muss.
 
-Im folgenden werden die typischen Phasen des dvelopment-Prozesses der Benutzeroberfläche erläutert:
+Im Folgenden werden die typischen Phasen des Benutzeroberflächen-Dvelopment-Prozesses beschrieben:
 
 ### <a name="designing"></a>Entwerfen
 
--   Funktionale Anforderungen – bestimmen Sie die anfänglichen Anforderungen und Ziele für die Anwendung.
--   Benutzer Analyse – identifizieren Sie die Benutzer Szenarios, und verstehen Sie die Anforderungen und Erwartungen der Benutzer für jedes Szenario.
--   Konzeptioneller Entwurf – modellieren Sie das zugrunde liegende Unternehmen, das die Anwendung unterstützen muss.
--   Logischer Entwurf – entwerfen Sie den Prozess und den Informationsfluss der Anwendung.
--   Physischer Entwurf – legen Sie fest, wie der logische Entwurf auf bestimmten physischen Plattformen implementiert wird.
+-   Funktionale Anforderungen: Bestimmen Sie die anfänglichen Anforderungen und Ziele für die Anwendung.
+-   Benutzeranalyse: Identifizieren Sie die Benutzerszenarien, und verstehen Sie die Anforderungen und Erwartungen der Benutzer für jedes Szenario.
+-   Konzeptioneller Entwurf: Modellieren Sie das zugrunde liegende Unternehmen, das von der Anwendung unterstützt werden muss.
+-   Logischer Entwurf: Entwerfen Sie den Prozess und den Informationsfluss der Anwendung.
+-   Physischer Entwurf: Legen Sie fest, wie der logische Entwurf auf bestimmten physischen Plattformen implementiert wird.
 
-### <a name="implementing"></a>Um
+### <a name="implementing"></a>Implementieren
 
--   Prototype – entwickeln Sie Papier-oder interaktive Bildschirm Entwürfe, die sich auf die Schnittstelle konzentrieren und keine ablenkend visuellen Entwurfs Elemente enthalten.
--   Construct – erstellen Sie die Anwendung, und bereiten Sie sich auf Entwurfs Änderungsanforderungen vor.
+-   Prototyp: Entwickeln Sie Papier- oder interaktive Bildschirmmodelle, die sich auf die Benutzeroberfläche konzentrieren und keine ablenkenden visuellen Entwurfselemente enthalten.
+-   Erstellen: Erstellen Sie die Anwendung, und bereiten Sie sich auf Entwurfsänderungsanforderungen vor.
 
-### <a name="testing"></a>Test
+### <a name="testing"></a>Testen
 
--   Benutzerbarkeits Tests – testen Sie die Anwendung mit verschiedenen Benutzern und Szenarios.
--   Barrierefreiheits Tests – testen Sie die Anwendung mit zugänglichen Technologien und automatisierten TestTools.
+-   Benutzerfreundlichkeitstests: Testen Sie die Anwendung mit verschiedenen Benutzern und Szenarien.
+-   Barrierefreiheitstests: Testen Sie die Anwendung mit barrierefreien Technologien und automatisierten Testtools.
 
- 
+ 
 
- 
+ 
 
 
 

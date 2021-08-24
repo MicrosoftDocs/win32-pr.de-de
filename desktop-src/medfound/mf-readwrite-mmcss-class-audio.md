@@ -1,41 +1,41 @@
 ---
-description: Gibt eine MMCSS-Klasse (Multimedia Class Scheduler Service) für audioverarbeitungsthreads im Quell-oder senkenwriter an.
+description: Gibt eine MMCSS-Klasse (Multimedia Class Scheduler Service) für Die Audioverarbeitung von Threads im Quellleser oder Senkenwriter an.
 ms.assetid: F1B8A8C8-2E41-4321-A94D-C50447C69941
-title: MF_READWRITE_MMCSS_CLASS_AUDIO-Attribut (mfreadwrite. h)
+title: MF_READWRITE_MMCSS_CLASS_AUDIO Attribut (Mfreadwrite.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa35db710c6b72c103855fa2c0a9f169f49c4511
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f416c22619c0777ef244e6566328154bf7a7336587fc73a3f29626fcdaa1c462
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119345280"
 ---
-# <a name="mf_readwrite_mmcss_class_audio-attribute"></a>MF \_ \_ -Attribut der MMCSS \_ -Klasse für die \_ Audioerstellung
+# <a name="mf_readwrite_mmcss_class_audio-attribute"></a>MF \_ READWRITE \_ MMCSS \_ CLASS \_ AUDIO-Attribut
 
-Gibt eine MMCSS-Klasse ( [Multimedia Class Scheduler Service](../procthread/multimedia-class-scheduler-service.md) ) für audioverarbeitungsthreads im Quell-oder senkenwriter an.
+Gibt eine [MMCSS-Klasse (Multimedia Class Scheduler Service)](../procthread/multimedia-class-scheduler-service.md) für Die Audioverarbeitung von Threads im Quellleser oder Senkenwriter an.
 
 ## <a name="data-type"></a>Datentyp
 
-**LPWSTR**
+**Lpwstr**
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)auf.
 
-Um dieses Attribut festzulegen, müssen Sie [**imfattributes:: SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)aufrufen.
+Um dieses Attribut festzulegen, rufen Sie [**DIE ATTRIBUTEAttributes::SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)auf.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Legen Sie dieses Attribut optional fest, wenn Sie eine Instanz des [Quell](source-reader.md) -oder [Senke Writers](sink-writer.md)erstellen. Der Wert des-Attributs muss ein gültiger MMCSS-Klassenname sein.
+Legen Sie dieses Attribut optional fest, wenn Sie eine Instanz des [Quelllesers](source-reader.md) oder [des Senkenwriters](sink-writer.md)erstellen. Der Wert des Attributs muss ein gültiger MMCSS-Klassenname sein.
 
-Wenn dieses Attribut festgelegt ist, registriert der Quell-oder sendenden Writer seine audioverarbeitungsthreads bei der angegebenen MMCSS-Klasse. Das MMCSS stellt sicher, dass die Datenverarbeitung im Quell-oder sendenden Writer Vorrang vor anderen System Tasks hat.
+Wenn dieses Attribut festgelegt ist, registriert der Quelllese- oder Senkenwriter seine Audioverarbeitungsthreads bei der angegebenen MMCSS-Klasse. MmCSS stellt sicher, dass die Datenverarbeitung im Quelllese- oder Senkenwriter Vorrang vor anderen Systemaufgaben hat.
 
-Wenn Sie die Basis Priorität für audiothreads angeben möchten, legen Sie das [audioattribut für die MF \_ -Read Write \_ MMCSS \_ \_ -Priorität](mf-readwrite-mmcss-priority-audio.md) fest. Wenn dieses Attribut nicht festgelegt ist, ist die Basis Priorität für audiothreads 0 (null).
+Um die Basispriorität für Audiothreads anzugeben, legen Sie das [MF \_ READWRITE \_ MMCSS \_ PRIORITY \_ AUDIO-Attribut](mf-readwrite-mmcss-priority-audio.md) fest. Wenn dieses Attribut nicht festgelegt ist, ist die Basispriorität für Audiothreads 0 (null).
 
-Dieses Attribut überschreibt das MF-Attribut der Klasse "read [ \_ Write \_ MMCSS \_ ](mf-readwrite-mmcss-class.md) " für audioverarbeitungsthreads. Wenn keines der Attribute festgelegt ist, werden audiothreads nicht bei MCSS registriert.
+Dieses Attribut überschreibt das [MF \_ READWRITE \_ MMCSS \_ CLASS-Attribut](mf-readwrite-mmcss-class.md) für Audioverarbeitungsthreads. Wenn kein Attribut festgelegt ist, werden Audiothreads nicht bei MCSS registriert.
 
-Bei den meisten Anwendungen ist das Audiomaterial für den Benutzer deutlich deutlicher als das Video-und somit weniger akzeptabel. Aus diesem Grund sollte eine Anwendung in der Regel die MF-Klasse "read \_ Write \_ MMCSS \_ Class" \_ auf eine MMCSS-Klasse mit höherer Priorität festlegen als die "MF-Klasse" read [ \_ Write \_ MMCSS \_ ](mf-readwrite-mmcss-class.md)". Dadurch wird sichergestellt, dass die Audioverarbeitung höhere Priorität hat als andere Tasks.
+Für die meisten Anwendungen ist die Audiowiedergabe für den Benutzer deutlich erkennbarer als die Videowiedergabe und daher weniger akzeptabel. Aus diesem Grund sollte eine Anwendung MF READWRITE MMCSS CLASS AUDIO in der Regel \_ \_ auf eine \_ \_ MMCSS-Klasse mit höherer Priorität als [MF \_ READWRITE \_ MMCSS \_ CLASS](mf-readwrite-mmcss-class.md)festlegen. Dadurch wird sichergestellt, dass die Audioverarbeitung eine höhere Priorität als andere Aufgaben erhält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,13 +43,13 @@ Bei den meisten Anwendungen ist das Audiomaterial für den Benutzer deutlich deu
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>"Mfreadwrite. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Mfreadwrite.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

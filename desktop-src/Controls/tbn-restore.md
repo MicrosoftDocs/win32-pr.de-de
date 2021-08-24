@@ -1,9 +1,9 @@
 ---
-title: TBN_RESTORE Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass gerade eine Symbolleiste wieder hergestellt wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TBN_RESTORE Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass gerade eine Symbolleiste wiederhergestellt wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: b1f0c801-d56b-4e93-b9ba-b572aaa38647
 keywords:
-- Windows-Steuerelemente für TBN_RESTORE Benachrichtigungs
+- TBN_RESTORE Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 374ed0fb68accbb65515d39ea01f237707eb16c9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4f267e5cff52eb1a6011b16aa02d63870503478051e72d574da05467c8329f91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119543499"
 ---
-# <a name="tbn_restore-notification-code"></a>TBN- \_ Wiederherstellungs Benachrichtigungs Code
+# <a name="tbn_restore-notification-code"></a>TBN \_ RESTORE-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass gerade eine Symbolleiste wieder hergestellt wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass gerade eine Symbolleiste wiederhergestellt wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,17 +41,17 @@ TBN_RESTORE
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmtbrestore**](/windows/win32/api/commctrl/ns-commctrl-nmtbrestore) -Struktur.
+Zeiger auf eine [**NMTBRESTORE-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmtbrestore)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anwendung sollte NULL als Antwort auf den ersten **TBN- \_ Wiederherstellungs** Benachrichtigungs Code zurückgeben, der zu Beginn des Wiederherstellungs Vorgangs empfangen wurde, damit die Schaltflächen Informationen weiterhin wieder hergestellt werden. Wenn die Anwendung einen Wert ungleich 0 (null) zurückgibt, wird der Wiederherstellungs Vorgang abgebrochen.
+Die Anwendung sollte null als Antwort auf den ersten **TBN \_ RESTORE-Benachrichtigungscode** zurückgeben, der zu Beginn des Wiederherstellungsprozesses empfangen wurde, um die Wiederherstellung der Schaltflächeninformationen fortzufahren. Wenn die Anwendung einen Wert ungleich 0 (null) zurückgibt, wird der Wiederherstellungsvorgang abgebrochen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung empfängt diesen Benachrichtigungs Code einmal zu Beginn des Wiederherstellungs Vorgangs und einmal für jede Schaltfläche. Mit diesem Benachrichtigungs Code können Sie die Informationen aus dem Datenstrom extrahieren, den Sie zuvor gespeichert haben. Wenn Sie keine Informationen gespeichert haben, ignorieren Sie den Benachrichtigungs Code. Eine ausführlichere Erläuterung zur Handhabung der **TBN- \_ Wiederherstellung** finden Sie unter [Symbolleisten Anpassung](toolbar-controls-overview.md) .
+Die Anwendung erhält diesen Benachrichtigungscode einmal zu Beginn des Wiederherstellungsprozesses und einmal für jede Schaltfläche. Dieser Benachrichtigungscode bietet Ihnen die Möglichkeit, die Informationen aus dem zuvor gespeicherten Datenstrom zu extrahieren. Wenn Sie keine Informationen gespeichert haben, ignorieren Sie den Benachrichtigungscode. Eine [ausführlichere Erläuterung der](toolbar-controls-overview.md) Behandlung von TBN RESTORE finden Sie unter Anpassung der **\_ Symbolleiste.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Die Anwendung empfängt diesen Benachrichtigungs Code einmal zu Beginn des Wiede
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

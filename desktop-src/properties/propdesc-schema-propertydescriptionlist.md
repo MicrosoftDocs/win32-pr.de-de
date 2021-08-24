@@ -1,19 +1,19 @@
 ---
-description: Container für ein oder mehrere einzelne propertydescription-Elemente.
+description: Container für ein oder mehrere einzelne propertyDescription-Elemente.
 ms.assetid: b54aaa85-6928-470e-9630-44b094205106
-title: propertydescriptionlist
+title: propertyDescriptionList
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cd0beaf4dbbd8b71c7f4b3335c169754c704d9c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f22e5e8e2c90b1a9f9587117f684ebfb89c55ee702749248cb0a886d5ba8266
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343807"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119341840"
 ---
-# <a name="propertydescriptionlist"></a>propertydescriptionlist
+# <a name="propertydescriptionlist"></a>propertyDescriptionList
 
-Container für ein oder mehrere einzelne [propertydescription](./propdesc-schema-propertydescription.md) -Elemente. Eine. PropDesc-Eigenschafts Beschreibungs-Schema Datei sollte mindestens ein [propertydescriptionlist]() -Element enthalten.
+Container für ein oder mehrere einzelne [propertyDescription-Elemente.](./propdesc-schema-propertydescription.md) Eine Propdesc-Eigenschaftenbeschreibungsschemadatei sollte mindestens ein [propertyDescriptionList-Element]() enthalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ Container für ein oder mehrere einzelne [propertydescription](./propdesc-schema
 
 | Übergeordnetes Element                        | Untergeordnete Elemente                                                   |
 |---------------------------------------|------------------------------------------------------------------|
-| [schema](./propdesc-schema-entry.md) | [propertydescription](./propdesc-schema-propertydescription.md) |
+| [schema](./propdesc-schema-entry.md) | [propertyDescription](./propdesc-schema-propertydescription.md) |
 
 
 
@@ -60,18 +60,18 @@ Container für ein oder mehrere einzelne [propertydescription](./propdesc-schema
 
 
 
-| Attribut | BESCHREIBUNG                                                               |
+| attribute | BESCHREIBUNG                                                               |
 |-----------|---------------------------------------------------------------------------|
-| publisher | Öffentlich. Erforderlich. Der Anzeige Name des Verlegers, der das Schema bereitstellt. |
-| product   | Öffentlich. Erforderlich. Der Anzeige Name des Produkts, das das Schema bereitstellt.   |
+| publisher | Öffentlich. Erforderlich. Der Anzeigename des Herausgebers, der das Schema an stellt. |
+| product   | Öffentlich. Erforderlich. Der Anzeigename des Produkts, das das Schema enthält.   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [propertydescriptionlist]() sollte nicht mit "Eigenschafts Listen" und " [**ipropertydescriptionlist**](/windows/win32/api/propsys/nn-propsys-ipropertydescriptionlist)" verwechselt werden, die vollständig voneinander getrennt sind.
+[PropertyDescriptionList]() sollte nicht mit "Eigenschaftenlisten" und [**IPropertyDescriptionList**](/windows/win32/api/propsys/nn-propsys-ipropertydescriptionlist)verwechselt werden, die vollständig getrennt sind.
 
  
 

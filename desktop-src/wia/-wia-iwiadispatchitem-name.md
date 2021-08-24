@@ -1,5 +1,5 @@
 ---
-description: Der Name des Elements, wie er in der Benutzeroberfläche angezeigt wird. Schreibgeschützt.
+description: Der Name des Elements, wie er auf der Benutzeroberfläche angezeigt wird. Schreibgeschützt.
 ms.assetid: fc469a6e-39d9-4b92-87a4-2f41cacb070d
 title: Item.Name-Eigenschaft
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: fc9775f869dc0a51eab394cc191e277c9a5ecf41
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b9fd14bfe7836525080c9d706c601f8e3d65327a629d1b67fb72fc3df035e7d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485286"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119549740"
 ---
 # <a name="itemname-property"></a>Item.Name-Eigenschaft
 
-Der Name des Elements, wie er in der Benutzeroberfläche angezeigt wird. Schreibgeschützt.
+Der Name des Elements, wie er auf der Benutzeroberfläche angezeigt wird. Schreibgeschützt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,9 +45,9 @@ Zeichenfolge, die den Namen empfängt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4,90 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 
 
 

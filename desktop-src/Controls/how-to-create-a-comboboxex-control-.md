@@ -1,39 +1,39 @@
 ---
-title: Erstellen eines ComboBoxEx-Steuer Elements
-description: In diesem Thema wird veranschaulicht, wie ein ComboBoxEx-Steuerelement erstellt wird.
+title: Erstellen eines ComboBoxEx-Steuerelements
+description: In diesem Thema wird das Erstellen eines ComboBoxEx-Steuerelements veranschaulicht.
 ms.assetid: E3D577AF-3290-431E-AA6C-1E9A9ED6448C
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 73989124982cb563fc008d7f3c543388cca685a5
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: d051c668e95667948d11a8ec86ed41236f84ff78325911e008c65ad787b958fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103949258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119576130"
 ---
-# <a name="how-to-create-a-comboboxex-control"></a>Erstellen eines ComboBoxEx-Steuer Elements
+# <a name="how-to-create-a-comboboxex-control"></a>Erstellen eines ComboBoxEx-Steuerelements
 
-In diesem Thema wird veranschaulicht, wie ein ComboBoxEx-Steuerelement erstellt wird.
+In diesem Thema wird das Erstellen eines ComboBoxEx-Steuerelements veranschaulicht.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Um ein ComboBoxEx-Steuerelement zu erstellen, rufen Sie [**die Funktion "**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) ComboBoxEx" mithilfe von " [**WC \_ ComboBoxEx**](common-control-window-classes.md) " als Fenster Klasse auf. Sie müssen zuerst die Fenster Klasse registrieren, indem Sie die [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) -Funktion aufrufen, während Sie das Bit der Klasse "ICC \_ userex" \_ in der zugehörigen [**InitCommonControlsEx**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) -Struktur angeben.
+Um ein ComboBoxEx-Steuerelement zu erstellen, rufen Sie die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) auf, indem Sie [**WC \_ COMBOBOXEX**](common-control-window-classes.md) als Fensterklasse verwenden. Sie müssen zuerst die Window-Klasse registrieren, indem Sie die [**InitCommonControlsEx-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) aufrufen, während Sie das BIT FÜR DIE BENUTZEREX-KLASSEN des BENUTZERS INITCOMMONCONTROLSEX in der zugehörigen \_ \_ [**INITCOMMONCONTROLSEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) angeben.
 
 ## <a name="complete-example"></a>Vollständiges Beispiel
 
-Die folgende Anwendungs definierte Funktion erstellt ein ComboBoxEx-Steuerelement mit [**dem \_ Dropdown**](combo-box-styles.md) -Stil CBS im Hauptfenster.
+Die folgende anwendungsdefinierte Funktion erstellt ein ComboBoxEx-Steuerelement mit dem [**\_ CBS-DROPDOWN-Stil**](combo-box-styles.md) im Hauptfenster.
 
 
 ```C++
@@ -78,7 +78,7 @@ HWND WINAPI CreateComboEx(void)
 [Informationen zu ComboBoxEx-Steuerelementen](comboboxex-controls.md)
 </dt> <dt>
 
-[ComboBoxEx-Steuerelement Verweis](bumper-comboboxex-comboboxex-control-reference.md)
+[ComboBoxEx-Steuerelementreferenz](bumper-comboboxex-comboboxex-control-reference.md)
 </dt> <dt>
 
 [Verwenden von ComboBoxEx-Steuerelementen](/windows/desktop/Controls/using-comboboxex)

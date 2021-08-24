@@ -1,6 +1,6 @@
 ---
-title: Zustandsvariablen für aktuelle Werte und zugeordnete Daten
-description: Zustandsvariablen für aktuelle Werte und zugeordnete Daten
+title: Statusvariablen für aktuelle Werte und zugeordnete Daten
+description: Statusvariablen für aktuelle Werte und zugeordnete Daten
 ms.assetid: 8e47b119-a065-43c5-b7f5-76deaf975ad8
 keywords:
 - Zustandsvariablen für aktuelle Werte und zugeordnete Daten OpenGL
@@ -12,14 +12,14 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 149139bc11698469ce0667c2ecf77bc7ab239adb
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 4d99a9504a673d23d6923d5faf0e99770f20fe55e1cdd6b63d9adcbe68282584
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107908468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119553710"
 ---
-# <a name="state-variables-for-current-values-and-associated-data"></a>Zustandsvariablen für aktuelle Werte und zugeordnete Daten
+# <a name="state-variables-for-current-values-and-associated-data"></a>Statusvariablen für aktuelle Werte und zugeordnete Daten
 
 <dl> <dt><span id="GL_CURRENT_COLOR"></span><span id="gl_current_color"></span>GL \_ CURRENT \_ COLOR</dt> <dd> 
 
@@ -112,7 +112,7 @@ ms.locfileid: "107908468"
 
  
 
-</dd> <dt><span id="GL_CURRENT_RASTER_INDEX"></span><span id="gl_current_raster_index"></span>GL \_ CURRENT \_ RASTER \_ INDEX</dt> <dd> 
+</dd> <dt><span id="GL_CURRENT_RASTER_INDEX"></span><span id="gl_current_raster_index"></span>GL \_ AKTUELLER \_ \_ RASTERINDEX</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -1,21 +1,21 @@
 ---
-description: Sie erstellen eine kubische Umgebungskarten Textur, indem Sie die createcubetexture-Methode aufrufen. Die Karten Texturen der kubischen Umgebung müssen quadratisch sein und zwei Dimensionen aufweisen.
+description: Sie erstellen eine kubische Umgebungszuordnungstextur, indem Sie die CreateCubeTexture-Methode aufrufen. Kubische Umgebungszuordnungstexturen müssen quadratisch sein, mit Dimensionen, die eine Zweierkraft haben.
 ms.assetid: 3879d215-064b-4d7d-afae-2ed46569c8bf
-title: Erstellen von kubischen Umgebungs Zuordnungs Oberflächen (Direct3D 9)
+title: Erstellen kubischer Umgebungszuordnungsoberflächen (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 36be3067c6a5f21c39cfed7cab731ca875b70799
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 0b37321978a40170d47718318e4b3f6898ba04d5fa229e97ada47e08e589fdcb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119608020"
 ---
-# <a name="creating-cubic-environment-map-surfaces-direct3d-9"></a>Erstellen von kubischen Umgebungs Zuordnungs Oberflächen (Direct3D 9)
+# <a name="creating-cubic-environment-map-surfaces-direct3d-9"></a>Erstellen kubischer Umgebungszuordnungsoberflächen (Direct3D 9)
 
-Sie erstellen eine kubische Umgebungskarten Textur, indem Sie die [**createcubetexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createcubetexture) -Methode aufrufen. Die Karten Texturen der kubischen Umgebung müssen quadratisch sein und zwei Dimensionen aufweisen.
+Sie erstellen eine kubische Umgebungszuordnungstextur, indem Sie [**die CreateCubeTexture-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createcubetexture) aufrufen. Kubische Umgebungszuordnungstexturen müssen quadratisch sein, mit Dimensionen, die eine Zweierkraft haben.
 
-Im folgenden Codebeispiel wird gezeigt, wie Ihre C++-Anwendung eine einfache kubische Umgebungs Zuordnung erstellen kann.
+Das folgende Codebeispiel zeigt, wie Ihre C++-Anwendung eine einfache kubische Umgebungszuordnung erstellen kann.
 
 
 ```
@@ -29,11 +29,11 @@ m_d3dDevice->CreateCubeTexture(256, 1, D3DUSAGE_RENDERTARGET, D3DFMT_R8G8B8,
 
 
 
-## <a name="accessing-cubic-environment-map-faces"></a>Zugreifen auf die Flächen der kubischen Umgebung
+## <a name="accessing-cubic-environment-map-faces"></a>Zugreifen auf kubische Umgebungszuordnungsgesichter
 
-Sie können mithilfe der [**getcubemapsurface**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dcubetexture9-getcubemapsurface) -Methode zwischen Flächen einer kubischen Umgebungs Zuordnung navigieren.
+Sie können mithilfe der [**GetCubeMapSurface-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dcubetexture9-getcubemapsurface) zwischen Gesichtern einer kubischen Umgebungskarte navigieren.
 
-Im folgenden Codebeispiel wird [**getcubemapsurface verwendet, um die cubemapoberfläche**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dcubetexture9-getcubemapsurface) abzurufen, die für die positive y-Seite verwendet wird (Face 2).
+Im folgenden Codebeispiel wird [**GetCubeMapSurface**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dcubetexture9-getcubemapsurface) verwendet, um die Cubemapoberfläche abzurufen, die für das positive y-Gesicht (Gesicht 2) verwendet wird.
 
 
 ```
@@ -45,19 +45,19 @@ m_pCubeMap->GetCubeMapSurface(D3DCUBEMAP_FACE_POSITIVE_Y, 0, &pFace2);
 
 
 
-Der erste Parameter, den [**getcubemapsurface**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dcubetexture9-getcubemapsurface) annimmt, ist ein [**D3DCUBEMAP \_ Gesichter**](./d3dcubemap-faces.md) -Enumerationswert, der die angefügte Oberfläche beschreibt, die die Methode abrufen soll. Der zweite Parameter teilt Direct3D, welche Ebene einer mipzugeordneten cubetextur abgerufen werden soll. Der dritte akzeptierte Parameter ist die Adresse der [**IDirect3DSurface9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9) -Schnittstelle, die die zurückgegebene cubetexturoberfläche darstellt. Da diese cubemap nicht falsch zugeordnet ist, wird hier 0 verwendet.
+Der erste Parameter, den [**GetCubeMapSurface**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dcubetexture9-getcubemapsurface) akzeptiert, ist ein [**aufzählter D3DCUBEMAP \_ FACES-Wert,**](./d3dcubemap-faces.md) der die angefügte Oberfläche beschreibt, die die Methode abrufen soll. Der zweite Parameter teilt Direct3D mit, welche Ebene einer mipmappen Cubetextur abgerufen werden soll. Der dritte akzeptierte Parameter ist die Adresse der [**IDirect3DSurface9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9) die die zurückgegebene Cubetexturoberfläche darstellt. Da diese Cubezuordnung nicht mipmapped ist, wird hier 0 verwendet.
 
 > [!Note]
 >
-> Nach dem Aufrufen dieser Methode wird der interne Verweis Zähler in der [**IDirect3DSurface9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9) -Schnittstelle erweitert. Wenn Sie diese Oberfläche verwenden, stellen Sie sicher, dass Sie die [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Methode auf dieser **IDirect3DSurface9** -Schnittstelle aufzurufen, oder Sie erhalten einen Speicherplatz.
+> Nach dem Aufruf dieser Methode wird die interne Verweisanzahl für die [**IDirect3DSurface9-Schnittstelle**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9) erhöht. Wenn Sie diese Oberfläche nicht mehr verwenden, rufen Sie unbedingt die [**IUnknown-Methode**](/windows/win32/api/unknwn/nn-unknwn-iunknown) auf dieser **IDirect3DSurface9-Schnittstelle** auf, da ein Arbeitsspeicherverlust vorlag.
 
  
 
-## <a name="rendering-to-cubic-environment-maps"></a>Rendering in kubische Umgebungs Zuordnungen
+## <a name="rendering-to-cubic-environment-maps"></a>Rendern in kubische Karten
 
-Sie können Bilder in die einzelnen Flächen der cubemap kopieren, ebenso wie jedes andere Textur-oder Oberflächen Objekt. Vor dem Rendern in eine Oberfläche müssen die Transformations Matrizen so festgelegt werden, dass die Kamera ordnungsgemäß positioniert ist, und in der richtigen Richtung auf die Vorderseite zeigt: vorwärts (+ z), rückwärts (-z), Links (-x), rechts (+ x), nach oben (+ y) oder nach unten (-y).
+Sie können Bilder auf die einzelnen Gesichter der Cube map kopieren, wie Sie es bei jedem anderen Textur- oder Oberflächenobjekt machen würden. Das Wichtigste vor dem Rendern in einem Gesicht ist, die Transformationsmatrizen so zu setzen, dass die Kamera ordnungsgemäß positioniert ist und in der richtigen Richtung für dieses Gesicht zeigt: vorwärts (+z), rückwärts (-z), links (-x), rechts (+x), nach oben (+y) oder nach unten (-y).
 
-Im folgenden C++-Codebeispiel wird eine Ansichts Matrix vorbereitet und entsprechend der geenderten Fläche festgelegt.
+Im folgenden C++-Codebeispiel wird eine Ansichtsmatrix entsprechend dem gerenderten Gesicht vorbereitet und definiert.
 
 
 ```
@@ -79,9 +79,9 @@ void RenderFaces()
 
 
 
-Beachten Sie, dass jedes Gesicht einer kubischen Umgebungs Zuordnung ein 90-Grad-Feld der Sicht darstellt. Es sei denn, für Ihre Anwendung ist ein anderes Feld mit Ansichts Winkel erforderlich. für besondere Effekte sollten Sie z. b. darauf achten, die Projektions Matrix entsprechend festzulegen.
+Denken Sie daran, dass jedes Gesicht einer kubischen Umgebungskarte ein 90-Grad-Sichtfeld darstellt. Wenn Ihre Anwendung nicht einen anderen Sichtwinkel erfordert , z. B. für Sondereffekte, achten Sie darauf, die Projektionsmatrix entsprechend zu setzen.
 
-In diesem Codebeispiel wird eine Projektions Matrix für den gängigsten Fall erstellt und festgelegt.
+In diesem Codebeispiel wird eine Projektionsmatrix für den gängigsten Fall erstellt und definiert.
 
 
 ```
@@ -132,7 +132,7 @@ In diesem Codebeispiel wird eine Projektions Matrix für den gängigsten Fall er
 
 
 
-Wenn sich die Kamera in der Position befindet und die Projektions Matrix festgelegt ist, können Sie die Szene renden. Jedes Objekt in der Szene sollte so positioniert werden, wie Sie es normalerweise positionieren würden. Das folgende Codebeispiel, das aus Gründen der Vollständigkeit bereitgestellt wird, skizziert diese Aufgabe.
+Wenn sich die Kamera in Position befindet und die Projektionsmatrix festgelegt ist, können Sie die Szene rendern. Jedes Objekt in der Szene sollte so positioniert sein, wie Sie es normalerweise positionieren würden. Im folgenden Codebeispiel, das der Vollständigkeit halber bereitgestellt wird, wird diese Aufgabe beschrieben.
 
 
 ```
@@ -161,13 +161,13 @@ Wenn sich die Kamera in der Position befindet und die Projektions Matrix festgel
 
 
 
-Beachten Sie den aufzurufenden aufzurufenden Befehl [**der Methode "**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrendertarget) " Beim Rendern in den cubezuordnungs Flächen müssen Sie die Vorderseite als aktuelle Renderziel-Oberfläche zuweisen. Anwendungen, die tiefen Puffer verwenden, können explizit einen tiefen Puffer für das Renderziel erstellen oder einen vorhandenen tiefen Puffer der renderzieloberfläche neu zuweisen. Im obigen Codebeispiel wird der letztere Ansatz verwendet.
+Beachten Sie den Aufruf der [**SetRenderTarget-Methode.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrendertarget) Beim Rendern auf die Cubemapgesichter müssen Sie das Gesicht als aktuelle Renderzieloberfläche zuweisen. Anwendungen, die Tiefenpuffer verwenden, können explizit einen Tiefenpuffer für das Renderziel erstellen oder einen vorhandenen Tiefenpuffer der Renderzieloberfläche neu zuweisen. Im obigen Codebeispiel wird der zweite Ansatz verwendet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Kubische Umgebungs Zuordnung](cubic-environment-mapping.md)
+[Kubische Umgebungszuordnung](cubic-environment-mapping.md)
 </dt> </dl>
 
  

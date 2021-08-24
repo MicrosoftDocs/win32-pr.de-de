@@ -1,7 +1,7 @@
 ---
-description: Stellt eine Auflistung dar, die Computerfunktionen bereitstellt und aus CIM \_ ManagedSystemElement-Objekten besteht.
+description: Stellt eine Auflistung dar, die Computingfunktionen bietet und aus CIM \_ ManagedSystemElement-Objekten besteht.
 ms.assetid: 410be43f-3368-4109-8b29-7b7cc2a3ec1b
-title: CIM_ComputerSystem-Klasse (Hyper-V-Verwaltung)
+title: CIM_ComputerSystem -Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 00a53d0c514113175c3c6ffb7ea40f8ef4e730d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dd8aac2c3846c65b633061d15e6b4311b18c0a84663eca28cf2a928df2b13f4d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119431600"
 ---
-# <a name="cim_computersystem-class-hyper-v-management"></a>CIM_ComputerSystem-Klasse (Hyper-V-Verwaltung)
+# <a name="cim_computersystem-class-hyper-v-management"></a>CIM_ComputerSystem -Klasse (Hyper-V-Verwaltung)
 
-Stellt eine Auflistung dar, die Computerfunktionen bereitstellt und aus [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md) -Objekten besteht.
+Stellt eine Auflistung dar, die Computingfunktionen bietet und aus [**CIM \_ ManagedSystemElement-Objekten**](cim-managedsystemelement.md) besteht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,20 +45,20 @@ class CIM_ComputerSystem : CIM_System
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ Computersystem** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ComputerSystem-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM \_ Computersystem** -Klasse verfügt über diese Methoden.
+Die **CIM \_ ComputerSystem-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                    | BESCHREIBUNG                                                                                                                                                                                                          |
+| Methode                                                    | Beschreibung                                                                                                                                                                                                          |
 |:----------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**SetPowerState**](cim-computersystem-setpowerstate.md) | Diese Methode ist als veraltet markiert. Verwenden Sie stattdessen die **requestpowerstatechange** -Methode in der **CIM- \_ powermanagementservice** -Klasse.<br/> **Veraltete Beschreibung:** Legt den Energiezustand des Computers fest.<br/> |
+| [**SetPowerState**](cim-computersystem-setpowerstate.md) | Diese Methode ist als veraltet markiert. Verwenden Sie stattdessen die **RequestPowerStateChange-Methode** in der **CIM \_ PowerManagementService-Klasse.**<br/> **Veraltete Beschreibung:** Legt den Energiezustand des Computers fest.<br/> |
 
 
 
@@ -66,29 +66,29 @@ Die **CIM \_ Computersystem** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ Computersystem** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ComputerSystem-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Dediziert**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \|MIB-II.sysServices "," FC-GS. INCITS-T11 \| Platform \| PlatformType "), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ Computersystem**.**Otherdedialisiedbeschreibungen**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \|MIB-II.sysServices", "FC-GS. INCITS-T11 \| Platform \| PlatformType"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ComputerSystem**.**OtherDedicatedDescriptions**")
 </dt> </dl>
 
-Der Zweck und die Features des Computer Systems. Beispielsweise könnte ein für das Drucken dediziertes System "11" (Print) angeben. Ein allgemeines System mit Druckfunktionen kann auf "0" (nicht dediziert) und "11" (Drucken) festgelegt werden.
+Der Zweck und die Features des Computersystems. Beispielsweise könnte ein für das Drucken dediziertes System "11" (Drucken) angeben. Ein allgemeines System mit Druckfunktionen kann auf "0" (Nicht de dedicated) und "11" (Drucken) festgelegt werden.
 
 <dt>
 
 <span id="Not_Dedicated"></span><span id="not_dedicated"></span><span id="NOT_DEDICATED"></span>
 
-<span id="Not_Dedicated"></span><span id="not_dedicated"></span><span id="NOT_DEDICATED"></span>**Nicht dediziert** (0)
+<span id="Not_Dedicated"></span><span id="not_dedicated"></span><span id="NOT_DEDICATED"></span>**Nicht de dedicated** (0)
 
 
 </dt> <dd></dd> <dt>
@@ -109,7 +109,7 @@ Der Zweck und die Features des Computer Systems. Beispielsweise könnte ein für
 
 <span id="Storage"></span><span id="storage"></span><span id="STORAGE"></span>
 
-<span id="Storage"></span><span id="storage"></span><span id="STORAGE"></span>**Speicher** (3)
+<span id="Storage"></span><span id="storage"></span><span id="STORAGE"></span>**Storage** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -130,14 +130,14 @@ Der Zweck und die Features des Computer Systems. Beispielsweise könnte ein für
 
 <span id="Layer_3_Switch"></span><span id="layer_3_switch"></span><span id="LAYER_3_SWITCH"></span>
 
-<span id="Layer_3_Switch"></span><span id="layer_3_switch"></span><span id="LAYER_3_SWITCH"></span>**Layer 3-Schalter** (6)
+<span id="Layer_3_Switch"></span><span id="layer_3_switch"></span><span id="LAYER_3_SWITCH"></span>**Layer 3-Switch** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Central_Office_Switch"></span><span id="central_office_switch"></span><span id="CENTRAL_OFFICE_SWITCH"></span>
 
-<span id="Central_Office_Switch"></span><span id="central_office_switch"></span><span id="CENTRAL_OFFICE_SWITCH"></span>**Zentrale Niederlassung** (7)
+<span id="Central_Office_Switch"></span><span id="central_office_switch"></span><span id="CENTRAL_OFFICE_SWITCH"></span>**Central Office Switch** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -151,7 +151,7 @@ Der Zweck und die Features des Computer Systems. Beispielsweise könnte ein für
 
 <span id="Access_Server"></span><span id="access_server"></span><span id="ACCESS_SERVER"></span>
 
-<span id="Access_Server"></span><span id="access_server"></span><span id="ACCESS_SERVER"></span>**Zugriffs Server** (9)
+<span id="Access_Server"></span><span id="access_server"></span><span id="ACCESS_SERVER"></span>**Access Server** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -172,14 +172,14 @@ Der Zweck und die Features des Computer Systems. Beispielsweise könnte ein für
 
 <span id="I_O"></span><span id="i_o"></span>
 
-<span id="I_O"></span><span id="i_o"></span>E **/** a (12)
+<span id="I_O"></span><span id="i_o"></span>**E/A** (12)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Web_Caching"></span><span id="web_caching"></span><span id="WEB_CACHING"></span>
 
-<span id="Web_Caching"></span><span id="web_caching"></span><span id="WEB_CACHING"></span>**Webcaching** (13)
+<span id="Web_Caching"></span><span id="web_caching"></span><span id="WEB_CACHING"></span>**Webzwischenspeicherung** (13)
 
 
 </dt> <dd></dd> <dt>
@@ -191,20 +191,20 @@ Der Zweck und die Features des Computer Systems. Beispielsweise könnte ein für
 
 </dt> <dd>
 
-Diese Instanz ist für das Hosting der System Verwaltungssoftware vorgesehen.
+Diese Instanz ist speziell für das Hosten von Systemverwaltungssoftware
 
 </dd> <dt>
 
 <span id="Block_Server"></span><span id="block_server"></span><span id="BLOCK_SERVER"></span>
 
-<span id="Block_Server"></span><span id="block_server"></span><span id="BLOCK_SERVER"></span>**Block Server** (15)
+<span id="Block_Server"></span><span id="block_server"></span><span id="BLOCK_SERVER"></span>**Blockserver** (15)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="File_Server"></span><span id="file_server"></span><span id="FILE_SERVER"></span>
 
-<span id="File_Server"></span><span id="file_server"></span><span id="FILE_SERVER"></span>**Datei Server** (16)
+<span id="File_Server"></span><span id="file_server"></span><span id="FILE_SERVER"></span>**Dateiserver** (16)
 
 
 </dt> <dd></dd> <dt>
@@ -216,7 +216,7 @@ Diese Instanz ist für das Hosting der System Verwaltungssoftware vorgesehen.
 
 </dt> <dd>
 
-Ein Beispiel für ein dediziertes Benutzergerät ist ein Mobiltelefon oder ein Barcode Scanner in einem Geschäft, das über eine Radiofrequenz kommuniziert. Diese Systeme sind in der Funktionalität und Programmierbarkeit sehr eingeschränkt und werden nicht als "universell" eingestuft. Alternativ ist ein Beispiel für ein mobiles System, das "universell" (d. h. nicht dediziert) ist, ein Hand gehalteter Computer. Obwohl die Programmierbarkeit eingeschränkt ist, kann neue Software heruntergeladen und ihre Funktionalität vom Benutzer erweitert werden.
+Ein Beispiel für ein dediziertes Benutzergerät ist ein Mobiltelefon oder ein Barcodescanner in einem Geschäft, das über Hochfrequenz kommuniziert. Diese Systeme sind in der Funktionalität und Programmierbarkeit recht eingeschränkt und gelten nicht als "allgemeine" Computingplattformen. Alternativ ist ein Beispiel für ein mobiles System, das "allgemein" ist (d. h. NICHT de dedicated ist), ein Handcomputer. Obwohl die Programmierbarkeit eingeschränkt ist, kann neue Software heruntergeladen und ihre Funktionalität vom Benutzer erweitert werden.
 
 </dd> <dt>
 
@@ -243,7 +243,7 @@ Ein Beispiel für ein dediziertes Benutzergerät ist ein Mobiltelefon oder ein B
 
 <span id="Storage_Virtualizer"></span><span id="storage_virtualizer"></span><span id="STORAGE_VIRTUALIZER"></span>
 
-<span id="Storage_Virtualizer"></span><span id="storage_virtualizer"></span><span id="STORAGE_VIRTUALIZER"></span>**Speichervirtualisierer** (21)
+<span id="Storage_Virtualizer"></span><span id="storage_virtualizer"></span><span id="STORAGE_VIRTUALIZER"></span>**Storage Virtualizer** (21)
 
 
 </dt> <dd></dd> <dt>
@@ -257,14 +257,14 @@ Ein Beispiel für ein dediziertes Benutzergerät ist ein Mobiltelefon oder ein B
 
 <span id="ExtenderNode"></span><span id="extendernode"></span><span id="EXTENDERNODE"></span>
 
-<span id="ExtenderNode"></span><span id="extendernode"></span><span id="EXTENDERNODE"></span>**Extendernode** (23)
+<span id="ExtenderNode"></span><span id="extendernode"></span><span id="EXTENDERNODE"></span>**ExtenderNode** (23)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NAS_Head"></span><span id="nas_head"></span><span id="NAS_HEAD"></span>
 
-<span id="NAS_Head"></span><span id="nas_head"></span><span id="NAS_HEAD"></span>**NAS-Head** (24)
+<span id="NAS_Head"></span><span id="nas_head"></span><span id="NAS_HEAD"></span>**NAS-Kopf** (24)
 
 
 </dt> <dd></dd> <dt>
@@ -292,42 +292,42 @@ Ein Beispiel für ein dediziertes Benutzergerät ist ein Mobiltelefon oder ein B
 
 <span id="Management_Controller"></span><span id="management_controller"></span><span id="MANAGEMENT_CONTROLLER"></span>
 
-<span id="Management_Controller"></span><span id="management_controller"></span><span id="MANAGEMENT_CONTROLLER"></span>**Verwaltungs Controller** (28)
+<span id="Management_Controller"></span><span id="management_controller"></span><span id="MANAGEMENT_CONTROLLER"></span>**Verwaltungscontroller** (28)
 
 
 </dt> <dd>
 
-Diese Instanz stellt spezielle Hardware dar, die für die Systemverwaltung vorgesehen ist (d. h. einen Baseboard-Verwaltungs Controller (BMC) oder einen Dienst Prozessor).
+Diese Instanz stellt spezielle Hardware dar, die für die Systemverwaltung (d. h. einen Baseboard Management Controller (BMC) oder einen Dienstprozessor) dedialisiert ist.
 
-Der Verwaltungsbereich eines Verwaltungs Controllers ist in der Regel ein einzelnes verwaltetes System, in dem es enthalten ist.
+Der Verwaltungsbereich eines "Verwaltungscontrollers" ist in der Regel ein einzelnes verwaltetes System, in dem er enthalten ist.
 
 </dd> <dt>
 
 <span id="Chassis_Manager"></span><span id="chassis_manager"></span><span id="CHASSIS_MANAGER"></span>
 
-<span id="Chassis_Manager"></span><span id="chassis_manager"></span><span id="CHASSIS_MANAGER"></span>**Chassis-Manager** (29)
+<span id="Chassis_Manager"></span><span id="chassis_manager"></span><span id="CHASSIS_MANAGER"></span>**Gehäuse-Manager** (29)
 
 
 </dt> <dd>
 
-Diese Instanz stellt ein System dar, das für die Verwaltung eines Blade Chassis und der darin enthaltenen Geräte vorgesehen ist. Dieser Wert wird verwendet, um einen Regal Controller darzustellen. Ein "Chassis-Manager" ist ein Aggregations Punkt für die Verwaltung und kann für die Verwaltung von Bestandteilen auf untergeordneten Verwaltungs Controllern beruhen.
+Diese Instanz stellt ein System dar, das für die Verwaltung eines Blattchassis und seiner enthaltenen Geräte de dedicated ist. Dieser Wert wird verwendet, um einen Regler für den Regler (Shelf Controller) zu darstellen. Ein "Chassis-Manager" ist ein Aggregationspunkt für die Verwaltung und kann für die Verwaltung der Bestandteile auf untergeordnete Verwaltungscontroller angewiesen sein.
 
 </dd> <dt>
 
 <span id="Host-based_RAID_controller"></span><span id="host-based_raid_controller"></span><span id="HOST-BASED_RAID_CONTROLLER"></span>
 
-<span id="Host-based_RAID_controller"></span><span id="host-based_raid_controller"></span><span id="HOST-BASED_RAID_CONTROLLER"></span>**Host basierter RAID-Controller** (30)
+<span id="Host-based_RAID_controller"></span><span id="host-based_raid_controller"></span><span id="HOST-BASED_RAID_CONTROLLER"></span>**Hostbasierter RAID-Controller** (30)
 
 
 </dt> <dd>
 
-Diese Instanz stellt einen RAID-Speichercontroller dar, der in einem Host Computer enthalten ist.
+Diese Instanz stellt einen RAID-Speichercontroller dar, der auf einem Hostcomputer enthalten ist.
 
 </dd> <dt>
 
 <span id="Storage_Device_Enclosure"></span><span id="storage_device_enclosure"></span><span id="STORAGE_DEVICE_ENCLOSURE"></span>
 
-<span id="Storage_Device_Enclosure"></span><span id="storage_device_enclosure"></span><span id="STORAGE_DEVICE_ENCLOSURE"></span>**Speichergeräte Gehäuse** (31)
+<span id="Storage_Device_Enclosure"></span><span id="storage_device_enclosure"></span><span id="STORAGE_DEVICE_ENCLOSURE"></span>**Storage Gerätegehäuse** (31)
 
 
 </dt> <dd>
@@ -352,23 +352,23 @@ Diese Instanz stellt ein Gehäuse dar, das Speichergeräte enthält.
 
 <span id="Virtual_Tape_Library"></span><span id="virtual_tape_library"></span><span id="VIRTUAL_TAPE_LIBRARY"></span>
 
-<span id="Virtual_Tape_Library"></span><span id="virtual_tape_library"></span><span id="VIRTUAL_TAPE_LIBRARY"></span>**Bibliothek für virtuelle Bänder** (34)
+<span id="Virtual_Tape_Library"></span><span id="virtual_tape_library"></span><span id="VIRTUAL_TAPE_LIBRARY"></span>**Virtuelle Bandbibliothek** (34)
 
 
 </dt> <dd>
 
-Die Emulation einer Band Bibliothek durch ein virtuelles Bibliotheks System.
+Die Emulation einer Bandbibliothek durch ein virtuelles Bibliothekssystem.
 
 </dd> <dt>
 
 <span id="Virtual_Library_System"></span><span id="virtual_library_system"></span><span id="VIRTUAL_LIBRARY_SYSTEM"></span>
 
-<span id="Virtual_Library_System"></span><span id="virtual_library_system"></span><span id="VIRTUAL_LIBRARY_SYSTEM"></span>**Virtuelles Bibliotheks System** (35)
+<span id="Virtual_Library_System"></span><span id="virtual_library_system"></span><span id="VIRTUAL_LIBRARY_SYSTEM"></span>**Virtual Library System** (35)
 
 
 </dt> <dd>
 
-Verwendung von Datenträger Speicher zum Emulieren von Bandbibliotheken
+Verwenden von Datenträgerspeicher zum Emulieren von Bandbibliotheken
 
 </dd> <dt>
 
@@ -381,12 +381,12 @@ Verwendung von Datenträger Speicher zum Emulieren von Bandbibliotheken
 
 <span id="FC_Switch"></span><span id="fc_switch"></span><span id="FC_SWITCH"></span>
 
-<span id="FC_Switch"></span><span id="fc_switch"></span><span id="FC_SWITCH"></span>**FC-Schalter** (37)
+<span id="FC_Switch"></span><span id="fc_switch"></span><span id="FC_SWITCH"></span>**FC-Switch** (37)
 
 
 </dt> <dd>
 
-Dediziert zum Wechseln von Fibre Channel-Frames der Ebene 2.
+Speziell für den Wechsel von Layer-2-Fibre Channel-Frames.
 
 </dd> <dt>
 
@@ -397,20 +397,20 @@ Dediziert zum Wechseln von Fibre Channel-Frames der Ebene 2.
 
 </dt> <dd>
 
-Dedizierter zum Wechseln von Layer 2-Ethernet-Frames
+Dediziertes Wechseln von Layer-2-Ethernetframes
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32568.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Vendor Reserved** (32568..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -426,10 +426,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("NameFormat")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("NameFormat")
 </dt> </dl>
 
-Das Format des System namens des Computers.
+Das Format des Computersystemnamens.
 
 <dt>
 
@@ -470,7 +470,7 @@ Das Format des System namens des Computers.
 
 
 
- ("Hwa")
+ ("HWA")
 
 
 </dt> <dd></dd> <dt>
@@ -512,7 +512,7 @@ Das Format des System namens des Computers.
 
 
 
- ("E. 164")
+ ("E.164")
 
 
 </dt> <dd></dd> <dt>
@@ -540,7 +540,7 @@ Das Format des System namens des Computers.
 
 
 
- ("Naa")
+ ("NAA")
 
 
 </dt> <dd></dd> </dl>
@@ -550,34 +550,34 @@ Das Format des System namens des Computers.
 **OtherDedicatedDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ Computersystem**".**Dediziert**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ComputerSystem**.**Dedicated**")
 </dt> </dl>
 
-Beschreibt, wie oder warum das System dediziert ist, wenn das **dedizierte** Array den Wert 2 (Sonstiges) enthält.
+Beschreibt, wie oder warum das System de dedicated ist, wenn das **Dedicated-Array** den Wert 2 (Sonstige) enthält.
 
 </dd> <dt>
 
-**Powermanagementfunktionen**
+**PowerManagementCapabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("CIM \_ powermanagementfunktionalitäten. Power-Funktionen"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| System Energiesteuerung \| 001,2 ")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("CIM \_ PowerManagementCapabilities.PowerCapabilities"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| System Power Controls \| 001.2")
 </dt> </dl>
 
-Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen die **powerchangefunktionalitäten** -Methode in der **CIM \_ powermanagementcapabilitiescim \_ powermanagementservice** -Klasse.
+Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen die **PowerChangeCapabilities-Methode** in der **CIM \_ PowerManagementCapabilitiesCIM \_ PowerManagementService-Klasse.**
 
-**Veraltete Beschreibung:** Die Energie Verwaltungsfunktionen des Systems.
+**Veraltete Beschreibung:** Die Energieverwaltungsfunktionen des Systems.
 
 <dt>
 
@@ -611,47 +611,47 @@ Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen die **powerchangefunkt
 
 <span id="Power_Saving_Modes_Entered_Automatically"></span><span id="power_saving_modes_entered_automatically"></span><span id="POWER_SAVING_MODES_ENTERED_AUTOMATICALLY"></span>
 
-**Automatisch eingegebene Energiespar Modi** (4)
+**Automatisch eingegebene Energiesparmodi** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_State_Settable"></span><span id="power_state_settable"></span><span id="POWER_STATE_SETTABLE"></span>
 
-**Einsetzbaren Energiezustand** (5)
+**Power State Settable** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>
 
-**Unterstützung für Power Cycling** (6)
+**Power-Bike unterstützt** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>
 
-**Unterstützte Unterstützung** (7)
+**Timed Power On Supported** (7)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Resetcapability**
+**ResetCapability**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| System Hardware Security \| 001,4 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| System Hardware Security \| 001.4")
 </dt> </dl>
 
-Gibt an, ob das System den Hardware Zurücksetzungs Vorgang unterstützt.
+Gibt an, ob das System den Hardwarezurücksetzungsvorgang unterstützt.
 
 <dt>
 
@@ -701,16 +701,16 @@ Gibt an, ob das System den Hardware Zurücksetzungs Vorgang unterstützt.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ System**](cim-system.md)
+[**\_CIM-System**](cim-system.md)
 </dt> </dl>
 
  

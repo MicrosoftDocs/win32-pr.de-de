@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Windows8Api. prereadkeyranges-Methode'
-title: Windows8Api. prereadkeyranges-Methode (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen zu: Windows8Api.PrereadKeyRanges-Methode'
+title: Windows8Api.PrereadKeyRanges-Methode (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'PrereadKeyRanges method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Windows8.Windows8Api.PrereadKeyRanges(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,System.Byte[][],System.Int32[],System.Byte[][],System.Int32[],System.Int32,System.Int32,System.Int32@,Microsoft.Isam.Esent.Interop.JET_COLUMNID[],Microsoft.Isam.Esent.Interop.Windows8.PrereadIndexRangesGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.windows8api.prereadkeyranges(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 091c1f92512fd9a55bb4acd4d824567acc19fdde
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 02328ddc47daec4fbd98f88222dd7519053ed92aa64d2a0048782340d626b03c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959197"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119452690"
 ---
-# <a name="windows8apiprereadkeyranges-method"></a>Windows8Api. prereadkeyranges-Methode
+# <a name="windows8apiprereadkeyranges-method"></a>Windows8Api.PrereadKeyRanges-Methode
 
-Wenn sich die Datensätze mit den angegebenen Schlüsselbereichen nicht im Puffer Cache befinden, starten Sie asynchrone Lesevorgänge, um die Datensätze in den Daten Bank Puffer Cache zu übertragen.
+Wenn sich die Datensätze mit den angegebenen Schlüsselbereichen nicht im Puffercache befinden, starten Sie asynchrone Lesezugriffe, um die Datensätze in den Datenbankpuffercache zu übertragen.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -90,87 +90,87 @@ public static void PrereadKeyRanges(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Die Tabelle, für die die prereads ausgestellt werden sollen.
+    Die Tabelle, für die die Prereads ausgegeben werden sollen.
 
 <!-- end list -->
 
-  - keysstart  
-    Sorte \[\]  
+  - keysStart  
+    Typ: \[\]  
     
-    Der Anfang der Schlüsselbereiche, die Voraussetzungen für die Voraussetzungen sind.
+    Der Anfang der vorab zu lesenden Schlüsselbereiche.
 
 <!-- end list -->
 
-  - keystartlängen  
-    Sorte \[\]  
+  - keyStartLengths  
+    Typ: \[\]  
     
-    Die Längen der Start Tasten, die Voraussetzungen sind.
+    Die Längen der vorab zu lesenden Startschlüssel.
 
 <!-- end list -->
 
-  - keysend  
-    Sorte \[\]  
+  - keysEnd  
+    Typ: \[\]  
     
-    Das Ende des rangess-Schlüssels, der sich im Voraus registriert.
+    Das Ende der vorab zu lesenden Schlüsselbereiche.
 
 <!-- end list -->
 
-  - keyendlängen  
-    Sorte \[\]  
+  - keyEndLengths  
+    Typ: \[\]  
     
-    Die Länge der zu Preread enden Endschlüssel.
+    Die Längen der vorab zu lesenden Endschlüssel.
 
 <!-- end list -->
 
   - rangeIndex  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Der Index des ersten zu lesenden Schlüsselbereichs im Array.
+    Der Index des ersten zu lesende Schlüsselbereichs im Array.
 
 <!-- end list -->
 
-  - rangecount  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - rangeCount  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die maximale Anzahl von Schlüsselbereichen, die Voraussetzungen für die Voraussetzungen sind.
+    Die maximale Anzahl von Schlüsselbereichen, die vorab gelesen werden sollen.
 
 <!-- end list -->
 
-  - rangespreread  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - rangesPreread  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Gibt die Anzahl der Schlüssel zurück, die tatsächlich vorab registriert werden.
+    Gibt die Anzahl der Schlüssel zurück, die tatsächlich vorab gelesen wurden.
 
 <!-- end list -->
 
-  - columnspreread  
-    Sorte \[\]  
+  - columnsPreread  
+    Typ: \[\]  
     
-    Liste der Spalten-IDs für lange Wert Spalten, die vorab registriert werden sollen.
+    Liste der Spalten-IDs für Spalten mit langen Werten, die vorab gelesen werden sollen.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. Windows8. prereadindexrangesgrbit](./prereadindexrangesgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.Windows8.PrereadIndexRangesGrbit](./prereadindexrangesgrbit-enumeration.md)  
     
-    Preread-Optionen. Wird verwendet, um die Richtung der Preread anzugeben.
+    Vorableseoptionen. Wird verwendet, um die Richtung des Prereads anzugeben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows8Api-Klasse](./windows8api-class.md)
 
 [Windows8Api-Member](./windows8api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

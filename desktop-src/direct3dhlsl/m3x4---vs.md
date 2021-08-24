@@ -1,6 +1,6 @@
 ---
-title: M3x4-vs
-description: Multipliziert einen 3-Komponenten Vektor mit einer rund m3-Matrix. | M3x4-vs
+title: m3x4 – im Vergleich
+description: Multipliziert einen 3-Komponenten-Vektor mit einer 3x4-Matrix. | m3x4 – im Vergleich
 ms.assetid: 8bec1ac5-376b-4eae-ba82-b42a6c0e7c4e
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a4018698dbe6ab986945a84c1fcf9ce0431bd0fc
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 54137f2081a48158d306e882eab0dc912a8e50332b7d66cfb137c3c10b669570
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981305"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119457430"
 ---
-# <a name="m3x4---vs"></a>M3x4-vs
+# <a name="m3x4---vs"></a>m3x4 – im Vergleich
 
-Multipliziert einen 3-Komponenten Vektor mit einer rund m3-Matrix.
+Multipliziert einen 3-Komponenten-Vektor mit einer 3x4-Matrix.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| M3x4 DST, src0, Quelle1 |
+| m3x4 dst, src0, src1 |
 |----------------------|
 
 
@@ -33,15 +33,15 @@ Multipliziert einen 3-Komponenten Vektor mit einer rund m3-Matrix.
 
 where
 
--   DST ist das Ziel Register. Das Ergebnis ist ein Vektor mit 4 Komponenten.
--   src0 ist ein Quell Register, das einen 3-Komponenten Vektor darstellt.
--   Quelle1 ist ein Quell Register, das eine rund m3-Matrix darstellt, die dem ersten von vier aufeinander folgenden Registern entspricht.
+-   dst ist das Zielregister. Das Ergebnis ist ein 4-Komponenten-Vektor.
+-   src0 ist ein Quellregister, das einen 3-Komponenten-Vektor darstellt.
+-   src1 ist ein Quellregister, das eine 3x4-Matrix darstellt, die dem ersten von vier aufeinanderfolgenden Registern entspricht.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
 | m3x4                   | x    | x    | x    | x     | x    | x     |
 
@@ -49,9 +49,9 @@ where
 
  
 
-Die xyzw-Maske (Standard) ist für das Ziel Register erforderlich. Negate-und Swizzle-Modifizierern sind für src0, aber nicht für Quelle1 zulässig.
+Die Xyzw-Maske (Standardmaske) ist für das Zielregister erforderlich. Negate- und swizzle-Modifizierer sind für src0, aber nicht für src1 zulässig.
 
-Das folgende Code Fragment zeigt die ausgeführten Vorgänge.
+Das folgende Codefragment zeigt die ausgeführten Vorgänge.
 
 
 ```
@@ -64,9 +64,9 @@ dest.w = (src0.x * src4.x) + (src0.y * src4.y) + (src0.z * src4.z);
 
 
 
-Der Eingabe Vektor befindet sich im Register src0. Die rund m3-Eingabe Matrix befindet sich in Register Quelle1 und die nächsten drei höheren Register, wie in der folgenden Erweiterung gezeigt.
+Der Eingabevektor befindet sich im Register src0. Die Eingabematrix 3x4 befindet sich im Register src1 und die nächsten drei höheren Register, wie in der folgenden Erweiterung gezeigt.
 
-Dieser Vorgang wird häufig verwendet, um einen Positions Vektor durch eine Matrix zu transformieren, die einen projectiven Effekt hat, aber keine Übersetzung anwendet. Diese Anweisung wird als Paar von Punkt Produkten implementiert, wie hier gezeigt.
+Dieser Vorgang wird häufig zum Transformieren eines Positionsvektors durch eine Matrix verwendet, die einen projektiven Effekt hat, aber keine Übersetzung anwendet. Diese Anweisung wird wie hier gezeigt als Paar von Punktprodukten implementiert.
 
 
 ```
@@ -84,7 +84,7 @@ dp3 r0.w, r1, c3
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

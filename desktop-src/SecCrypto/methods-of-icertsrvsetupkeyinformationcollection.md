@@ -1,25 +1,25 @@
 ---
-description: Methoden, die von der icerzrvsetupkeyinformationcollection-Schnittstelle definiert werden.
+description: Methoden, die von der ICertSrvSetupKeyInformationCollection-Schnittstelle definiert werden.
 ms.assetid: 5976034a-6ea3-49d7-8155-dbb199031df4
-title: Methoden von icerzrvsetupkeyinformationcollection
+title: Methoden von ICertSrvSetupKeyInformationCollection
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f314c3db8b4171c6cc0d5073d3ff6732ee55e06b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 025f8149c876753c4f01f07cd77842c19012df8478ba3f742a0156da0854d949
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119425550"
 ---
-# <a name="methods-of-icertsrvsetupkeyinformationcollection"></a>Methoden von icerzrvsetupkeyinformationcollection
+# <a name="methods-of-icertsrvsetupkeyinformationcollection"></a>Methoden von ICertSrvSetupKeyInformationCollection
 
-Die folgenden Methoden werden von der [**icerzrvsetupkeyinformationcollection**](/windows/desktop/api/Casetup/nn-casetup-icertsrvsetupkeyinformationcollection) -Schnittstelle definiert. Die Eigenschaften Zugriffsmethoden werden hier nicht angezeigt. Informationen zu den Eigenschaften von **icerpinrvsetupkeyinformationcollection** finden Sie unter [Properties of icerungrvsetupkeyinformationcollection](properties-of-icertsrvsetupkeyinformationcollection.md).
+Die folgenden Methoden werden von der [**ICertSrvSetupKeyInformationCollection-Schnittstelle**](/windows/desktop/api/Casetup/nn-casetup-icertsrvsetupkeyinformationcollection) definiert. Die Eigenschaftenzugriffsmethoden werden hier nicht angezeigt. Die Eigenschaften für **ICertSrvSetupKeyInformationCollection finden** Sie unter [Eigenschaften von ICertSrvSetupKeyInformationCollection](properties-of-icertsrvsetupkeyinformationcollection.md).
 
 
 
-| Methode                                                   | BESCHREIBUNG                                                                                          |
+| Methode                                                   | Beschreibung                                                                                          |
 |----------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [**Eren**](/windows/desktop/api/Casetup/nf-casetup-icertsrvsetupkeyinformationcollection-add) | Fügt der Auflistung ein [**icertrvsetupkeyinformation**](/windows/desktop/api/Casetup/nn-casetup-icertsrvsetupkeyinformation) -Objekt hinzu. |
+| [**Hinzufügen**](/windows/desktop/api/Casetup/nf-casetup-icertsrvsetupkeyinformationcollection-add) | Fügt der [**Auflistung ein ICertSrvSetupKeyInformation-Objekt**](/windows/desktop/api/Casetup/nn-casetup-icertsrvsetupkeyinformation) hinzu. |
 
 
 

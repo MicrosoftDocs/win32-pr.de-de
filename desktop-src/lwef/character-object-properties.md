@@ -1,54 +1,54 @@
 ---
-title: Zeichen Objekteigenschaften
-description: Zeichen Objekteigenschaften
+title: Eigenschaften von Zeichenobjekten
+description: Eigenschaften von Zeichenobjekten
 ms.assetid: 86748de2-f5c8-4057-bfa4-79d46cac1e62
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6212d6f0539b7fcb29faa883e6d88101952c12f5
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 3c80e16bdb35d3fdfd8687eb15f200d2005ab75027e4dcc786f883d21232af4e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119610690"
 ---
-# <a name="character-object-properties"></a>Zeichen Objekteigenschaften
+# <a name="character-object-properties"></a>Eigenschaften von Zeichenobjekten
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Das [**Character**](/windows/desktop/lwef/the-characters-object) -Objekt macht die folgenden Eigenschaften verfügbar:
+Das [**Character-Objekt**](/windows/desktop/lwef/the-characters-object) macht die folgenden Eigenschaften verfügbar:
 
 -   [**Aktiv**](active-property.md)
--   [**Autopopupmenu**](autopopupmenu-property.md)
+-   [**AutoPopupMenu**](autopopupmenu-property.md)
 -   [**Beschreibung**](description-property.md)
--   [**ExtraData**](extradata-property.md)
+-   [**Extradata**](extradata-property.md)
 -   [**GUID**](guid-property.md)
--   [**Hasotherclients**](hasotherclients-property.md)
--   [**Höhe**](height-property.md)
--   [**HelpContextID**](helpcontextid-property-ch.md)
--   [**HelpFile**](helpfile-property.md)
--   [**Helpmudeon**](helpmodeon-property.md)
--   [**Idleon**](idleon-property.md)
--   [**LanguageID**](languageid-property.md)
--   [**Linken**](left-property.md)
--   [**"Muvecause"**](movecause-property.md)
+-   [**HasOtherClients**](hasotherclients-property.md)
+-   [**Height**](height-property.md)
+-   [**Helpcontextid**](helpcontextid-property-ch.md)
+-   [**Helpfile**](helpfile-property.md)
+-   [**HelpModeOn**](helpmodeon-property.md)
+-   [**IdleOn**](idleon-property.md)
+-   [**Languageid**](languageid-property.md)
+-   [**Links**](left-property.md)
+-   [**MoveCause**](movecause-property.md)
 -   [**Name**](name-property.md)
 -   [**OriginalHeight**](originalheight-property.md)
 -   [**OriginalWidth**](originalwidth-property.md)
 -   [**Neigung**](pitch-property.md)
--   [**Sounentffectson**](soundeffectson-property.md)
+-   [**SoundEffectsOn**](soundeffectson-property.md)
 -   [**Geschwindigkeit**](speed-property.md)
--   [**Srmodeid**](srmodeid-property.md)
--   [**Srstatus**](srstatus-property.md)
+-   [**SRModeID**](srmodeid-property.md)
+-   [**SRStatus**](srstatus-property.md)
 -   [**Nach oben**](top-property.md)
--   [**Ttsmodeid**](ttsmodeid-property.md)
+-   [**TTSModeID**](ttsmodeid-property.md)
 -   [**Version**](version-property.md)
--   [**Visibilitycause**](visibilitycause-property.md)
+-   [**VisibilityCause**](visibilitycause-property.md)
 -   [**Sichtbar**](visible-property-cob.md)
--   [**Breite**](width-property-co.md)
+-   [**Width**](width-property-co.md)
 
-Beachten Sie, dass sich die Eigenschaften [**height**](height-property.md), [**left**](left-property.md), [**Top**](top-property.md)und [**Width**](width-property-co.md) eines Zeichens von denen unterscheiden, die möglicherweise von der Programmierumgebung für die Platzierung des Steuer Elements unterstützt werden. Die [**Zeichen**](/windows/desktop/lwef/the-characters-object) Eigenschaften gelten für die sichtbare Darstellung eines Zeichens, nicht für den Speicherort des Microsoft-Agent-Steuer Elements.
+Beachten Sie, dass sich die Eigenschaften [**Height,**](height-property.md) [**Left,**](left-property.md) [**Top**](top-property.md)und [**Width**](width-property-co.md) eines Zeichens von denen unterscheiden, die von der Programmierumgebung für die Platzierung des Steuerelements unterstützt werden können. Die [**Zeicheneigenschaften**](/windows/desktop/lwef/the-characters-object) gelten für die sichtbare Darstellung eines Zeichens, nicht für die Position des Microsoft-Agent-Steuerelements.
 
-Wie bei [**Zeichen**](/windows/desktop/lwef/the-characters-object) Objektmethoden können Sie mithilfe der [**Zeichen**](/windows/desktop/lwef/the-characters-object) Auflistung auf die Eigenschaften eines Zeichens zugreifen oder die Syntax vereinfachen, indem Sie eine Objekt Variable deklarieren und Sie auf ein Zeichen in der Auflistung festlegen. Im folgenden Beispiel werden Test1 und test2 auf denselben Wert festgelegt:
+Wie bei [**Character-Objektmethoden**](/windows/desktop/lwef/the-characters-object) können Sie mithilfe der [**Characters-Auflistung**](/windows/desktop/lwef/the-characters-object) auf die Eigenschaften eines Zeichens zugreifen oder Ihre Syntax vereinfachen, indem Sie eine Objektvariable deklarieren und auf ein Zeichen in der Auflistung festlegen. Im folgenden Beispiel werden Test1 und Test2 auf den gleichen Wert festgelegt:
 
 
 ```
@@ -79,8 +79,8 @@ Wie bei [**Zeichen**](/windows/desktop/lwef/the-characters-object) Objektmethode
 
 
 
-Da der Server ein Zeichen asynchron lädt, stellen Sie sicher, dass das Zeichen vor dem Abfragen der Eigenschaften geladen wurde, z. b. mit dem [**requestcomplete**](requestcomplete-event.md) -Ereignis. Andernfalls können die Eigenschaften falsche Werte zurückgeben.
+Da der Server ein Zeichen asynchron lädt, stellen Sie sicher, dass das Zeichen geladen wurde, bevor Sie seine Eigenschaften abfragen, z. B. mithilfe des [**RequestComplete-Ereignisses.**](requestcomplete-event.md) Andernfalls geben die Eigenschaften möglicherweise falsche Werte zurück.
 
- 
+ 
 
- 
+ 

@@ -1,11 +1,11 @@
 ---
-title: Monthlydowauslöst. DaysOfWeek (Eigenschaft)
-description: Ruft bei der Skripterstellung die Wochentage ab, an denen die Aufgabe ausgeführt wird, oder legt diese fest.
+title: MonthlyDOWTrigger.DaysOfWeek (Eigenschaft)
+description: Für die Skripterstellung ruft die Wochentage ab, an denen der Task ausgeführt wird, oder legt diese fest.
 ms.assetid: dd9b2463-69a1-4e77-a8f7-26b186d3d02d
 keywords:
-- DaysOfWeek-Eigenschaft Taskplaner
-- DaysOfWeek-Eigenschaft Taskplaner, monthlydowauslöserobjekt
-- Monthlydowauslöserobjekt Taskplaner, DaysOfWeek (Eigenschaft)
+- DaysOfWeek-Taskplaner
+- DaysOfWeek-Eigenschaft Taskplaner , MonthlyDOWTrigger-Objekt
+- MonthlyDOWTrigger-Objekt Taskplaner , DaysOfWeek-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 15344650dabdec2bcbacf91397b37b97ce3f0772
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0b9abf5dcd33c92d402f8ed6047a2fd80a0d5905bae075110931cfb8f83aa10a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119517460"
 ---
-# <a name="monthlydowtriggerdaysofweek-property"></a>Monthlydowauslöst. DaysOfWeek (Eigenschaft)
+# <a name="monthlydowtriggerdaysofweek-property"></a>MonthlyDOWTrigger.DaysOfWeek (Eigenschaft)
 
-Ruft bei der Skripterstellung die Wochentage ab, an denen die Aufgabe ausgeführt wird, oder legt diese fest.
+Für die Skripterstellung ruft die Wochentage ab, an denen der Task ausgeführt wird, oder legt diese fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,11 +38,11 @@ MonthlyDOWTrigger.DaysOfWeek As short
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine bitweise Maske, die die Wochentage angibt, an denen die Aufgabe ausgeführt wird.
+Eine bitweise Maske, die die Wochentage angibt, an denen der Task ausgeführt wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgende Tabelle zeigt die Zuordnung der bitweisen Maske, die von dieser Eigenschaft verwendet wird.
+Die folgende Tabelle zeigt die Zuordnung der bitweise Maske, die von dieser Eigenschaft verwendet wird.
 
 
 
@@ -60,7 +60,7 @@ Die folgende Tabelle zeigt die Zuordnung der bitweisen Maske, die von dieser Eig
 
  
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe werden die Wochentage eines monatlichen wochentags mit dem [**DaysOfWeek**](taskschedulerschema-daysofweek-monthlydayofweekscheduletype-element.md) -Element angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe werden die Wochentage eines monatlichen Wochentagskalenders durch das [**DaysOfWeek-Element**](taskschedulerschema-daysofweek-monthlydayofweekscheduletype-element.md) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe werden die Wochentage eines 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -79,7 +79,7 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe werden die Wochentage eines 
 
 <dl> <dt>
 
-[**Monthlydowlöst**](monthlydowtrigger.md)
+[**MonthlyDOWTrigger**](monthlydowtrigger.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

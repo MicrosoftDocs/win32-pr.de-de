@@ -1,21 +1,21 @@
 ---
-description: 'Anzeigen einer Vorschau eines Projekts: Beispiel Code'
+description: 'Vorschau einer Project: Beispielcode'
 ms.assetid: 8a4af82a-5611-4c53-8de8-04eaefd51df9
-title: 'Anzeigen einer Vorschau eines Projekts: Beispiel Code'
+title: 'Vorschau einer Project: Beispielcode'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c5527fd93d0f05d5388739cc936e4a4dd203e18
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: d98a47970a333ed27e249bddc81ba6fb4fb6e2c706fdfa2dda7c29f886e74022
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119583570"
 ---
-# <a name="previewing-a-project-example-code"></a>Anzeigen einer Vorschau eines Projekts: Beispiel Code
+# <a name="previewing-a-project-example-code"></a>Vorschau einer Project: Beispielcode
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Im folgenden Codebeispiel wird veranschaulicht, wie ein [DirectShow-Bearbeitungs Dienst](directshow-editing-services.md) Projekt geladen und in der Vorschau angezeigt wird. Die Fehlerüberprüfung wird aus Gründen der Übersichtlichkeit ausgelassen.
+Das folgende Codebeispiel zeigt, wie Sie ein [DirectShow Editing Services-Projekt](directshow-editing-services.md) laden und eine Vorschau anzeigen. Die Fehlerüberprüfung wird aus Gründen der Übersichtlichkeit ausgelassen.
 
 
 ```C++
@@ -88,7 +88,7 @@ void main( void )
 
 <dl> <dt>
 
-[Laden und Anzeigen der Vorschau eines Projekts](loading-and-previewing-a-project.md)
+[Laden eines Project und Anzeigen einer Vorschau](loading-and-previewing-a-project.md)
 </dt> </dl>
 
  

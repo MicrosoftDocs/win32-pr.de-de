@@ -16,14 +16,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: cc0975644609832c692f5522cc756240f7a5bff6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 601f1c10f2f9822972496097b8061859149eb5b862562b84fe4f755768248286
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119523280"
 ---
-# <a name="msvm_gpupartition-class"></a>MSVM- \_ gpupartition-Klasse
+# <a name="msvm_gpupartition-class"></a>Msvm \_ GpuPartition-Klasse
 
 Stellt den Status der GPU-Partition dar.
 
@@ -43,52 +43,52 @@ class Msvm_GpuPartition : CIM_LogicalDevice
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ gpupartition** " verfügt über diese Typen von Membern:
+Die **Msvm \_ GpuPartition-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM- \_ gpupartition** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ GpuPartition-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Gerätepfad**
+**DeviceInstancePath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die den geräteinstanzpfad enthält, der das GPU-Partitions Gerät identifiziert.
+Eine Zeichenfolge, die den Geräteinstanzpfad enthält, der das GPU-Partitionsgerät identifiziert.
 
 </dd> <dt>
 
 **PartitionId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Partitions-ID des GPU-Partitions Geräts.
+Die Partitions-ID des GPU-Partitionsgeräts.
 
 </dd> <dt>
 
-**Partitionvfluid**
+**PartitionVfLuid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die virtuelle Funktion LUID, die eine GPU-Partition darstellt.
+Die LUID der virtuellen Funktion, die eine GPU-Partition darstellt.
 
 </dd> </dl>
 
@@ -98,10 +98,10 @@ Die virtuelle Funktion LUID, die eine GPU-Partition darstellt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

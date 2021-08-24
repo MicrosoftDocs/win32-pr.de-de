@@ -3,7 +3,7 @@ title: Command.Name-Eigenschaft
 description: Stellt den Namen eines Befehls dar.
 ms.assetid: 36fb0b93-143f-4706-8c32-e6c818cce16f
 keywords:
-- Command.Name-Eigenschaften Fenster (Menü)
+- Command.Name-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,12 +12,12 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d93b830e29ca271052a4693b00ba64eee94309f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 48162c5edda2dd8787518ce7042a8ae8eeb349ff332488cd834d10b377d96a0b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040902"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119587750"
 ---
 # <a name="commandname-property"></a>Command.Name-Eigenschaft
 
@@ -43,27 +43,27 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                                                     |
 |-------------------------------------------------------------|
-| [**Get-Help**](windowsribbon-element-command.md)<br/> |
+| [**Befehl**](windowsribbon-element-command.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jeden [**Befehl**](windowsribbon-element-command.md)auftreten.
+Kann für jeden Befehl mindestens einmal [**auftreten.**](windowsribbon-element-command.md)
 
-Auf **Command.Name** wird im Markup verwiesen, um einen Befehl mit einem-Steuerelement über das *CommandName* -Attribut des-Steuer Elements zu verknüpfen.
+**Command.Name** wird im Markup referenziert, um einen Befehl über das *CommandName-Attribut* des Steuerelements einem -Steuerelement zu zuordnen.
 
-Dieses Element enthält einen Wert vom Typ *xs: String*.
+Dieses Element enthält einen Wert vom Typ *xs:string.*
 
-Der Wert ist auf eine Zeichenfolge beschränkt, die aus einem Buchstaben oder Unterstrich besteht, gefolgt von einer beliebigen Folge von Buchstaben, Ziffern und unterstrichen.
+Der Wert ist auf eine Zeichenfolge beschränkt, die aus einem Buchstaben oder Unterstrich gefolgt von einer beliebigen Sequenz von Buchstaben, Ziffern und Unterstrichen besteht.
 
 Die maximale Länge beträgt 100 Zeichen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das Markup für ein [**Command**](windowsribbon-element-command.md) -Element mit einer **Command.Name** -Deklaration veranschaulicht.
+Im folgenden Beispiel wird das Markup für ein [**Command-Element**](windowsribbon-element-command.md) mit einer Command.Name **veranschaulicht.**
 
 
 ```XML
@@ -93,8 +93,8 @@ Im folgenden Beispiel wird das Markup für ein [**Command**](windowsribbon-eleme
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 

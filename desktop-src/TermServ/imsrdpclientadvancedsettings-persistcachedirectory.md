@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings persistcachedirectory-Eigenschaft
-description: Diese Eigenschaft wird nicht unterstützt. | Imsrdpclientadvancedsettings persistcachedirectory-Eigenschaft
+title: IMsRdpClientAdvancedSettings PersistCacheDirectory-Eigenschaft
+description: Diese Eigenschaft wird nicht unterstützt. | IMsRdpClientAdvancedSettings PersistCacheDirectory-Eigenschaft
 ms.assetid: 4e92a1c8-a9e6-47c5-b231-e5c1a7e0701c
 ms.tgt_platform: multiple
 keywords:
-- Persistcachedirectory-Eigenschaft Remotedesktopdienste
-- Persistcachedirectory-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, persistcachedirectory-Eigenschaft
-- Persistcachedirectory-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, persistcachedirectory-Eigenschaft
-- Persistcachedirectory-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, persistcachedirectory-Eigenschaft
-- Persistcachedirectory-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, persistcachedirectory-Eigenschaft
-- Persistcachedirectory-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, persistcachedirectory-Eigenschaft
-- Persistcachedirectory-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, persistcachedirectory-Eigenschaft
-- Persistcachedirectory-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, persistcachedirectory-Eigenschaft
-- Persistcachedirectory-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, persistcachedirectory-Eigenschaft
+- PersistCacheDirectory-Eigenschaft Remotedesktopdienste
+- PersistCacheDirectory-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , PersistCacheDirectory-Eigenschaft
+- PersistCacheDirectory-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , PersistCacheDirectory-Eigenschaft
+- PersistCacheDirectory-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , PersistCacheDirectory-Eigenschaft
+- PersistCacheDirectory-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , PersistCacheDirectory-Eigenschaft
+- PersistCacheDirectory-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , PersistCacheDirectory-Eigenschaft
+- PersistCacheDirectory-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , PersistCacheDirectory-Eigenschaft
+- PersistCacheDirectory-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , PersistCacheDirectory-Eigenschaft
+- PersistCacheDirectory-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , PersistCacheDirectory-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -46,14 +46,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dab6b8e6c20aca6032cb8e8538a77af0e0cf5afe
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 39c5167b56c53d01501dd59f2577b22d1c28acb2c2314bd52a86e9b55e6feb07
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106364312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119574210"
 ---
-# <a name="imsrdpclientadvancedsettingspersistcachedirectory-property"></a>Imsrdpclientadvancedsettings::P ersistcachedirectory-Eigenschaft
+# <a name="imsrdpclientadvancedsettingspersistcachedirectory-property"></a>IMsRdpClientAdvancedSettings::P ersistCacheDirectory-Eigenschaft
 
 Diese Eigenschaft wird nicht unterstützt.
 
@@ -76,7 +76,7 @@ Der neue Pfad.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **" \_ false**" zurück.
+Gibt **S \_ FALSE zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,7 +89,7 @@ Gibt **" \_ false**" zurück.
 | Ende des Supports (Client)<br/>    | Nicht unterstützt<br/>                                                                       |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
@@ -118,7 +118,7 @@ Gibt **" \_ false**" zurück.
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

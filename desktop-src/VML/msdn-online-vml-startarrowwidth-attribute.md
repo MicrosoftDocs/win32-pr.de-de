@@ -1,50 +1,50 @@
 ---
-title: VML-Attribut "startarrowwidth"
-description: VML-Attribut "startarrowwidth"
+title: VML-Attribut "StartArrowWidth"
+description: VML-Attribut "StartArrowWidth"
 ms.assetid: 47b55330-7165-4368-ad01-5b7b38a6e5b2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 01ba4f5adddc328d1791fa2beb570f59da826f83
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d427db8e504fca57fc77b24b7b5fa1360ed7716276cd67b43c55ee8d0552d8f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728537"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513240"
 ---
-# <a name="vml-startarrowwidth-attribute"></a>VML-Attribut "startarrowwidth"
+# <a name="vml-startarrowwidth-attribute"></a>VML-Attribut "StartArrowWidth"
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Pfeilspitzen Breite für den Anfang einer Linie. Lese-/Schreibzugriff. **Vgarrowheadwidth**.
+Definiert die Pfeilspitzenbreite für den Anfang einer Linie. Lese-/Schreibzugriff. **VgArrowheadWidth**.
 
 **Gilt für**
 
-[Stellung](msdn-online-vml-stroke-element.md)
+[Takt](msdn-online-vml-stroke-element.md)
 
 **Tagsyntax**
 
-<v: *Element* startarrowwidth = " *Expression* " >
+<v: *element* startarrowwidth=" *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . startarrowwidth = "*Ausdruck*"
+*element* .startarrowwidth="*expression*"
 
-*Ausdruck* = *Element*. startarrowwidth
+*expression* = *Element*.startarrowwidth
 
 **Anmerkungen**
 
 Mögliche Werte:
 
--   Verringern
+-   Schmalen
 -   Mittel (Standard)
 -   Breite
 
-VML-Standard Attribut
+VML-Standardattribut
 
 **Beispiel**
 
@@ -60,6 +60,6 @@ Eine Linie wird mit einer breiten klassischen Pfeilspitze am Anfang des Strichs 
 
 
 
- 
+ 
 
- 
+ 

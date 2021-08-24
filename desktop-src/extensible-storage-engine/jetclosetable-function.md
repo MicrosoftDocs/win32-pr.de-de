@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der jetclosetable-Funktion.
-title: Jetclosetable-Funktion
+description: Weitere Informationen finden Sie unter JetCloseTable-Funktion.
+title: JetCloseTable-Funktion
 TOCTitle: JetCloseTable Function
 ms:assetid: c8975145-e48a-4029-9522-1509263019ae
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294087(v=EXCHG.10)
@@ -18,21 +18,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b38ba9b14c34d20b01b6530f2ed3406e55b3bc3f
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 84dbd573db443d09f4ece9271db5307beb17b56071679c15a8873f9ffbe08b32
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104531100"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119361190"
 ---
-# <a name="jetclosetable-function"></a>Jetclosetable-Funktion
+# <a name="jetclosetable-function"></a>JetCloseTable-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetclosetable-function"></a>Jetclosetable-Funktion
+## <a name="jetclosetable-function"></a>JetCloseTable-Funktion
 
-Die **jetclosetable** -Funktion schließt eine geöffnete Tabelle in einer Datenbank. Bei der Tabelle kann es sich um eine temporäre Tabelle oder eine normale Tabelle handeln.
+Die **JetCloseTable-Funktion** schließt eine geöffnete Tabelle in einer Datenbank. Die Tabelle kann eine temporäre Tabelle oder eine normale Tabelle sein.
 
 ```cpp
 JET_ERR JET_API JetCloseTable(
@@ -43,19 +43,19 @@ JET_ERR JET_API JetCloseTable(
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Identifiziert den Daten Bank Sitzungs Kontext, der für den API-Befehl verwendet wird.
+Identifiziert den Datenbanksitzungskontext, der für den API-Aufruf verwendet wird.
 
-*TableID*
+*tableid*
 
-Identifiziert die Tabelle, die geschlossen werden soll.
+Identifiziert die zu schließende Tabelle.
 
-Legen Sie *TableID* auf JET_tableidNil, um Arbeitsspeicher freizugeben.
+Legen *Sie tableid* auf JET_tableidNil, um Arbeitsspeicher frei zu geben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR-Datentyp](./jet-err.md) mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -77,11 +77,11 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </table>
 
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Diese Funktion muss für alle mit [jetopentable](./jetopentable-function.md)geöffneten Tabellen aufgerufen werden.
+Diese Funktion muss für alle Tabellen aufgerufen werden, die mit [JetOpenTable geöffnet wurden.](./jetopentable-function.md)
 
-Die Ausnahme von dieser Regel tritt auf, wenn [jetopentable](./jetopentable-function.md) in einer Transaktion aufgerufen wird und für die Transaktion ein Rollback ausgeführt wird (mit [jetrollback](./jetrollback-function.md)). Beim Rollback einer Transaktion wird die Tabelle automatisch geschlossen. In diesem Fall ist es ein Fehler, die Tabelle mit **jetclosetable** zu schließen.
+Die Ausnahme von dieser Regel tritt auf, wenn [JetOpenTable](./jetopentable-function.md) in einer Transaktion aufgerufen wird und für die Transaktion ein Rollback ausgeführt wird (mit [JetRollback](./jetrollback-function.md)). Beim Roll back einer Transaktion wird die Tabelle automatisch geschlossen. In diesem Fall ist es ein Fehler, die Tabelle mit **JetCloseTable zu schließen.**
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -101,14 +101,14 @@ Die Ausnahme von dieser Regel tritt auf, wenn [jetopentable](./jetopentable-func
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 </tbody>
@@ -121,5 +121,5 @@ Die Ausnahme von dieser Regel tritt auf, wenn [jetopentable](./jetopentable-func
 [JET_GRBIT](./jet-grbit.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetopentable](./jetopentable-function.md)  
-[Jetrollback](./jetrollback-function.md)
+[JetOpenTable](./jetopentable-function.md)  
+[JetRollback](./jetrollback-function.md)

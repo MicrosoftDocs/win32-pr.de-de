@@ -3,12 +3,12 @@ title: Winsock-Zeitstempel
 description: Paketzeitstempel sind ein wichtiges Feature für viele Zeitsynchronisierungsanwendungen, z. &mdash; B. Precision Time Protocol. Je näher die Zeitstempelgenerierung an dem Zeitpunkt liegt, an dem ein Paket von der Netzwerkadapterhardware empfangen/gesendet wird, desto genauer kann die Synchronisierungsanwendung sein.
 ms.topic: article
 ms.date: 10/22/2020
-ms.openlocfilehash: eae0dce8c2c16bc187ef5522f323e7f36d7fc0b4
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 329c13d76fc0c4ce0d87550623e7419af14bfdd268bf359a8f50729e0b0596e3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110559957"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119568990"
 ---
 # <a name="winsock-timestamping"></a>Winsock-Zeitstempel
 
@@ -20,7 +20,7 @@ Die in diesem Thema beschriebenen Zeitstempel-APIs bieten Ihrer Anwendung einen 
 
 ## <a name="receive-timestamps"></a>Empfangszeitstempel
 
-Sie konfigurieren den Empfangszeitstempelempfang über [**SIO_TIMESTAMPING**](/windows/win32/winsock/winsock-ioctls#sio_timestamping) IOCTL. Verwenden Sie diese IOCTL, um den Empfang des Zeitstempelempfangs zu aktivieren. Wenn Sie ein Datagramm mithilfe der [**LPFN_WSARECVMSG-Funktion (WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) erhalten, ist sein  Zeitstempel (sofern verfügbar) in der SO_TIMESTAMP steuerbar.
+Sie konfigurieren den Empfangszeitstempelempfang [**über**](/windows/win32/winsock/winsock-ioctls#sio_timestamping) SIO_TIMESTAMPING IOCTL. Verwenden Sie diese IOCTL, um den Empfang des Zeitstempelempfangs zu aktivieren. Wenn Sie ein Datagramm mithilfe der [**funktion LPFN_WSARECVMSG (WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) erhalten, ist sein Zeitstempel **(sofern verfügbar)** in der SO_TIMESTAMP Steuerelementmeldung enthalten.
 
 **SO_TIMESTAMP** (0x300A) ist in `mstcpip.h` definiert. Die Steuermeldungsdaten werden als **UINT64 zurückgegeben.**
 
@@ -28,7 +28,7 @@ Sie konfigurieren den Empfangszeitstempelempfang über [**SIO_TIMESTAMPING**](/w
 
 Der Empfang des Sendezeitstempels wird auch über [**die**](/windows/win32/winsock/winsock-ioctls#sio_timestamping) SIO_TIMESTAMPING IOCTL konfiguriert. Verwenden Sie diese IOCTL, um den Empfang des Sendezeitstempels zu aktivieren, und geben Sie die Anzahl der Übertragungszeitstempel an, die das System puffert. Wenn Übertragungszeitstempel generiert werden, werden sie dem Puffer hinzugefügt. Wenn der Puffer voll ist, werden neue Übertragungszeitstempel verworfen.
 
-Ordnen Sie beim Senden eines Datagramms das Datagramm einer  SO_TIMESTAMP_ID-Steuermeldung zu. Dieser sollte einen eindeutigen Bezeichner enthalten. Senden Sie das Datagramm zusammen mit der **SO_TIMESTAMP_ID** Mithilfe von [**WSASendMsg.**](/windows/win32/api/winsock2/nf-winsock2-wsasendmsg) Übertragungszeitstempel sind nach der Rückgabe von **WSASendMsg möglicherweise nicht sofort** verfügbar. Wenn Übertragungszeitstempel verfügbar werden, werden sie in einen Puffer pro Socket platziert. Verwenden Sie den [**SIO_GET_TX_TIMESTAMP**](/windows/win32/winsock/winsock-ioctls#sio_get_tx_timestamp) IOCTL, um den Zeitstempel nach seiner ID zu erhalten. Wenn der Zeitstempel verfügbar ist, wird er aus dem Puffer entfernt und zurückgegeben. Wenn der Zeitstempel nicht verfügbar ist, gibt [WSAGetLastError](/windows/win32/api/winsock/nf-winsock-wsagetlasterror) **WSAEWOULDBLOCK zurück.** Wenn ein Übertragungszeitstempel generiert wird, während der Puffer voll ist, wird der neue Zeitstempel verworfen.
+Ordnen Sie beim Senden eines Datagramms das Datagramm einer  SO_TIMESTAMP_ID-Steuermeldung zu. Dieser sollte einen eindeutigen Bezeichner enthalten. Senden Sie das Datagramm zusammen mit **der** SO_TIMESTAMP_ID Mithilfe von [**WSASendMsg.**](/windows/win32/api/winsock2/nf-winsock2-wsasendmsg) Übertragungszeitstempel sind möglicherweise nicht sofort verfügbar, nachdem **WSASendMsg zurückgegeben** wurde. Wenn Übertragungszeitstempel verfügbar werden, werden sie in einen Puffer pro Socket platziert. Verwenden Sie den [**SIO_GET_TX_TIMESTAMP**](/windows/win32/winsock/winsock-ioctls#sio_get_tx_timestamp) IOCTL, um den Zeitstempel nach seiner ID zu erhalten. Wenn der Zeitstempel verfügbar ist, wird er aus dem Puffer entfernt und zurückgegeben. Wenn der Zeitstempel nicht verfügbar ist, gibt [WSAGetLastError](/windows/win32/api/winsock/nf-winsock-wsagetlasterror) **WSAEWOULDBLOCK zurück.** Wenn ein Übertragungszeitstempel generiert wird, während der Puffer voll ist, wird der neue Zeitstempel verworfen.
 
 **SO_TIMESTAMP_ID** (0x300B) ist in `mstcpip.h` definiert. Sie sollten die Steuermeldungsdaten als **UINT32 -Wert () verwenden.**
 
@@ -38,9 +38,9 @@ Zusätzlich zur Konfiguration auf Socketebene mithilfe SIO_TIMESTAMPING Socketop
 
 ## <a name="estimating-latency-of-socket-send-path"></a>Schätzen der Latenz des Socketsendepfads
 
-In diesem Abschnitt verwenden wir Übertragungszeitstempel, um die Latenz des Sockets-Sendepfads zu schätzen. Wenn Sie über eine vorhandene Anwendung verfügen, die E/A-Zeitstempel auf Anwendungsebene &mdash; nutzt, wobei der Zeitstempel so nah wie möglich am tatsächlichen Übertragungspunkt liegen &mdash; muss, enthält dieses Beispiel eine quantitative Beschreibung, wie viel die Winsock-Zeitstempel-APIs die Genauigkeit Ihrer Anwendung verbessern können.
+In diesem Abschnitt verwenden wir Übertragungszeitstempel, um die Latenz des Sockets-Sendepfads zu schätzen. Wenn Sie über eine vorhandene Anwendung verfügen, die E/A-Zeitstempel auf Anwendungsebene verwendet, bei denen der Zeitstempel so nah wie möglich am tatsächlichen Übertragungspunkt sein muss, enthält dieses Beispiel eine quantitative Beschreibung, um wie viel die Winsock-Zeitstempel-APIs die Genauigkeit Ihrer Anwendung verbessern &mdash; &mdash; können.
 
-Im Beispiel wird davon ausgegangen, dass nur eine Netzwerkschnittstellenkarte (Network Interface Card, NIC) im System vorhanden ist, und dass *interfaceLuid* die LUID dieses Adapters ist.
+Im Beispiel wird davon ausgegangen, dass nur eine Netzwerkschnittstellenkarte (NIC) im System enthalten ist und *dass interfaceLuid* die LUID dieses Adapters ist.
 
 ```c
 void QueryHardwareClockFrequency(LARGE_INTEGER* clockFrequency)
@@ -196,7 +196,7 @@ void estimate_send_latency(SOCKET sock,
 
 ## <a name="estimating-latency-of-socket-receive-path"></a>Schätzen der Latenz des Socket-Empfangspfads
 
-Hier ist ein ähnliches Beispiel für den Empfangspfad. Im Beispiel wird davon ausgegangen, dass nur eine Netzwerkschnittstellenkarte (Network Interface Card, NIC) im System vorhanden ist, und dass *interfaceLuid* die LUID dieses Adapters ist.
+Hier ist ein ähnliches Beispiel für den Empfangspfad. Im Beispiel wird davon ausgegangen, dass nur eine Netzwerkschnittstellenkarte (NIC) im System enthalten ist und *dass interfaceLuid* die LUID dieses Adapters ist.
 
 ```c
 void QueryHardwareClockFrequency(LARGE_INTEGER* clockFrequency)
@@ -320,4 +320,4 @@ void estimate_receive_latency(SOCKET sock,
 
 ## <a name="a-limitation"></a>Eine Einschränkung
 
-Eine Einschränkung der Winsock-Zeitstempel-APIs besteht darin, dass das Aufrufen [**von SIO_GET_TX_TIMESTAMP**](/windows/win32/winsock/winsock-ioctls#sio_get_tx_timestamp) immer ein nicht blockierender Vorgang ist. Selbst das Aufrufen von IOCTL auf überlappende Weise führt zu einer sofortigen Rückgabe von **WSAEWULEDBLOCK,** wenn derzeit keine Übertragungszeitstempel verfügbar sind. Da Übertragungszeitstempel nach der Rückgabe von [**WSASendMsg**](/windows/win32/api/winsock2/nf-winsock2-wsasendmsg) möglicherweise nicht sofort verfügbar sind, muss Ihre Anwendung die IOCTL abfragen, bis der Zeitstempel verfügbar ist. Ein Übertragungszeitstempel ist nach einem **erfolgreichen WSASendMsg-Aufruf** garantiert verfügbar, da der Zeitstempelpuffer für die Übertragung nicht voll ist.
+Eine Einschränkung der Winsock-Zeitstempel-APIs ist, dass das Aufrufen SIO_GET_TX_TIMESTAMP immer ein nicht blockierende Vorgang ist. [](/windows/win32/winsock/winsock-ioctls#sio_get_tx_timestamp) Selbst das Aufrufen von IOCTL auf OVERLAPPED-Weise führt zu einer sofortigen Rückgabe von **WSAEWOULDBLOCK,** wenn derzeit keine Übertragungszeitstempel verfügbar sind. Da Übertragungszeitstempel nach der Rückgabe von [**WSASendMsg**](/windows/win32/api/winsock2/nf-winsock2-wsasendmsg) möglicherweise nicht sofort verfügbar sind, muss Ihre Anwendung die IOCTL-Datei abrufen, bis der Zeitstempel verfügbar ist. Ein Übertragungszeitstempel ist nach einem erfolgreichen **WSASendMsg-Aufruf** garantiert verfügbar, wenn der Übertragungszeitstempelpuffer nicht voll ist.

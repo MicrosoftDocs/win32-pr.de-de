@@ -1,7 +1,7 @@
 ---
-description: Ruft die Windows-Abbild Erwerbs-Vorschau Komponente (WIA) 2,0 ab.
+description: Ruft die Komponente Windows Image Acquisition (WIA) 2.0 (Vorschauversion) ab.
 ms.assetid: 0b773c4c-f080-41fa-8902-4243a80fc67c
-title: 'IWiaItem2:: getpreviewcomponent-Methode (WIA. h)'
+title: IWiaItem2::GetPreviewComponent-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 2e0881f68044c30731322c89d6cc2f19ce7277a3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ac3705b4be60ce53fee411df1142fb64bbd1c393864b644e260829080be8f81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129421"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119450430"
 ---
-# <a name="iwiaitem2getpreviewcomponent-method"></a>IWiaItem2:: getpreviewcomponent-Methode
+# <a name="iwiaitem2getpreviewcomponent-method"></a>IWiaItem2::GetPreviewComponent-Methode
 
-Ruft die Windows-Abbild Erwerbs-Vorschau Komponente (WIA) 2,0 ab.
+Ruft die Komponente Windows Image Acquisition (WIA) 2.0 (Vorschauversion) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ HRESULT GetPreviewComponent(
 
 <dl> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 Nicht verwendet. Auf 0 festlegen.
 
 </dd> <dt>
 
-*ppwiapreview* \[ vorgenommen\]
+*ppWiaPreview* \[ out\]
 </dt> <dd>
 
-Typ: **[ **iwiapreview**](-wia-iwiapreview.md)\*\***
+Typ: **[ **IWiaPreview**](-wia-iwiapreview.md)\*\***
 
-Gibt die Adresse eines Zeigers auf die [**iwiapreview**](-wia-iwiapreview.md) -Schnittstelle der vorschaukomponente zurück.
+Gibt die Adresse eines Zeigers auf die [**IWiaPreview-Schnittstelle**](-wia-iwiapreview.md) der Vorschaukomponente zurück.
 
 </dd> </dl>
 
@@ -62,13 +62,13 @@ Gibt die Adresse eines Zeigers auf die [**iwiapreview**](-wia-iwiapreview.md) -S
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Funktion, um einen Zeiger auf die Adresse der WIA 2,0-Vorschau Komponente für ein beliebiges [**IWiaItem2**](-wia-iwiaitem2.md) -Objekt in der Objektstruktur eines WIA 2,0-Hardware Geräts zurückzugeben.
+Verwenden Sie diese Funktion, um einen Zeiger auf die Adresse der WIA 2.0-Vorschaukomponente für jedes [**IWiaItem2-Objekt**](-wia-iwiaitem2.md) in der Objektstruktur eines WIA 2.0-Hardwaregeräts zurückzugeben.
 
-Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -Methode für die Schnittstellen Zeiger aufrufen, die Sie über den Parameter *ppwiapreview* empfangen.
+Anwendungen müssen die [IUnknown::Release-Methode](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für die Schnittstellenzeiger aufrufen, die sie über den *ppWiaPreview-Parameter* empfangen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,21 +76,21 @@ Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
 [**IWiaItem2**](-wia-iwiaitem2.md)
 </dt> <dt>
 
-[**Iwiapreview**](-wia-iwiapreview.md)
+[**IWiaPreview**](-wia-iwiapreview.md)
 </dt> </dl>
 
  

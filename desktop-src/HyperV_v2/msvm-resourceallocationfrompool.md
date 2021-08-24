@@ -1,5 +1,5 @@
 ---
-description: Ordnet dem Ressourcenpool, aus dem Sie zugeordnet ist, eine Instanz einer Ressourcenzuweisung zu.
+description: Ordnet dem Ressourcenpool, aus dem sie zugeordnet wird, eine Instanz einer Ressourcenzuordnung zu.
 ms.assetid: A2B3996D-7886-4B5F-BC89-EFDC1A48249B
 title: Msvm_ResourceAllocationFromPool-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 5bb3db9bce86731b12730966a7a2f6d1c9dc8946
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c8d3913f03560262309084d99ea97b44a165944d4b71acdcac17e2a39bfd44a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148203"
 ---
-# <a name="msvm_resourceallocationfrompool-class"></a>MSVM \_ resourcezucationfrompool-Klasse
+# <a name="msvm_resourceallocationfrompool-class"></a>Msvm \_ ResourceAllocationFromPool-Klasse
 
-Ordnet dem Ressourcenpool, aus dem Sie zugeordnet ist, eine Instanz einer Ressourcenzuweisung zu.
+Ordnet dem Ressourcenpool, aus dem sie zugeordnet wird, eine Instanz einer Ressourcenzuordnung zu.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,48 +41,48 @@ class Msvm_ResourceAllocationFromPool : CIM_ResourceAllocationFromPool
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ resourcezucationfrompool** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ ResourceAllocationFromPool-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ resourcezucationfrompool** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ ResourceAllocationFromPool-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ resourcepool**](/previous-versions//cc136903(v=vs.85))**
+Datentyp: **[ **CIM \_ ResourcePool**](/previous-versions//cc136903(v=vs.85))**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **außer Kraft** setzung, **Max** (1)
+Qualifizierer: **Überschreiben von**, **Max.** (1)
 </dt> </dl>
 
-Der Ressourcenpool. Diese Eigenschaft wird von [**CIM \_ resourcezucationfrompool**](/previous-versions//cc150673(v=vs.85))geerbt.
+Der Ressourcenpool. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationFromPool**](/previous-versions//cc150673(v=vs.85))geerbt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ resourcezubesettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)**
+Datentyp: **[ **CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Ressourcenzuweisung. Diese Eigenschaft wird von [**CIM \_ resourcezucationfrompool**](/previous-versions//cc150673(v=vs.85))geerbt.
+Die Ressourcenzuordnung. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationFromPool**](/previous-versions//cc150673(v=vs.85))geerbt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ resourcezucationfrompool** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ ResourceAllocationFromPool-Klasse** kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,28 +90,28 @@ Der Zugriff auf die **MSVM \_ resourcezucationfrompool** -Klasse kann durch die 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ resourcezucationfrompool**](cim-resourceallocationfrompool.md)
+[**CIM \_ ResourceAllocationFromPool**](cim-resourceallocationfrompool.md)
 </dt> <dt>
 
-[**CIM \_ resourcezucationfrompool**](/previous-versions//cc150673(v=vs.85))
+[**CIM \_ ResourceAllocationFromPool**](/previous-versions//cc150673(v=vs.85))
 </dt> <dt>
 
-[**MSVM \_ resourcezucationfrompool (v1)**](/previous-versions/windows/desktop/virtual/msvm-resourceallocationfrompool)
+[**Msvm \_ ResourceAllocationFromPool (V1)**](/previous-versions/windows/desktop/virtual/msvm-resourceallocationfrompool)
 </dt> <dt>
 
-[Ressourcen Verwaltungs Klassen](resource-management-classes.md)
+[Ressourcenverwaltungsklassen](resource-management-classes.md)
 </dt> </dl>
 
  

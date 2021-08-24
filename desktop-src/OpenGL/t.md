@@ -4,74 +4,74 @@ description: Definitionen von OpenGL-Begriffen, die mit dem Buchstaben T beginne
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: effb170b-fea3-4954-9f9c-3bc1aa829bc0
 keywords:
-- Mosaik
+- Tessellation
 - Texel
 - Struktur
-- Textur Zuordnung
-- Textur Matrix
+- Texturzuordnung
+- Texturmatrix
 - Transformationen
 - Dreiecke
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e1cb324179137dbf9f9046c0c19acfffdf7394e1
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 6668b791eed8d2ed3c14fdaa229e4b96126fb28e83fb14b683283e759bd20c4f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104102655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119580040"
 ---
 # <a name="t-opengl"></a>T (OpenGL)
 
-[a](a.md) [B](b.md) [C](c.md) [D](d.md) [E](e.md) [F](f.md) [G](g.md) [H](h.md) [I](i.md) [J K](jk.md) [L](l.md) [M](m.md) [N](n.md) [O](o.md) [P](p.md) [Q](q.md) [R](r.md) [S](s.md) T [U V](u-v.md) [W](w.md) [X Y Z](x-y-z.md)
+[A](a.md) [B](b.md) [C](c.md) [D](d.md) [E](e.md) [F](f.md) [G](g.md) [H](h.md) [I](i.md) J [K](jk.md) [L](l.md) [M](m.md) [N](n.md) [O](o.md) [P](p.md) [Q](q.md) [R](r.md) [S](s.md) T U [V](u-v.md) [W](w.md) X [Y Z](x-y-z.md)
 
 <dl> <dt>
 
-<span id="opengl_tessellation"></span><span id="OPENGL_TESSELLATION"></span>**Mosaik**
+<span id="opengl_tessellation"></span><span id="OPENGL_TESSELLATION"></span>**Tessellation**
 </dt> <dd>
 
-Reduzierung eines Teils einer analytischen Oberfläche auf ein Mesh von Polygonen oder einen Teil einer analytischen Kurve zu einer Sequenz von Linien.
+Reduzierung eines Teils einer Analytischen Oberfläche auf ein Gitternetz von Polygonen oder eines Teils einer analytischen Kurve auf eine Sequenz von Linien.
 
 </dd> <dt>
 
 <span id="opengl_texel"></span><span id="OPENGL_TEXEL"></span>**Texel**
 </dt> <dd>
 
-Ein Textur Element. Ein texaus dem Texturspeicher wird abgerufen und stellt die Farbe der Textur dar, die auf ein entsprechendes Fragment angewendet werden soll. Siehe auch [Fragment](f.md).
+Ein Texturelement. Ein Texel wird aus dem Texturspeicher abgerufen und stellt die Farbe der Textur dar, die auf ein entsprechendes Fragment angewendet werden soll. Siehe auch [Fragment .](f.md)
 
 </dd> <dt>
 
-<span id="opengl_texture"></span><span id="OPENGL_TEXTURE"></span>**Konsistenz**
+<span id="opengl_texture"></span><span id="OPENGL_TEXTURE"></span>**Textur**
 </dt> <dd>
 
-Ein ein-oder zweidimensionales Bild, das verwendet wird, um die Farbe von Fragmenten zu ändern, die von rasterization erzeugt werden. Siehe auch [Raster](r.md).
+Ein ein- oder zweidimensionales Bild, das verwendet wird, um die Farbe von Fragmenten zu ändern, die durch Rasterung erzeugt werden. Siehe auch [Rasterisieren von](r.md).
 
 </dd> <dt>
 
-<span id="opengl_texture_mapping"></span><span id="OPENGL_TEXTURE_MAPPING"></span>**Textur Zuordnung**
+<span id="opengl_texture_mapping"></span><span id="OPENGL_TEXTURE_MAPPING"></span>**Texturzuordnung**
 </dt> <dd>
 
-Der Prozess, bei dem ein Bild (die Textur) auf einen primitiven angewendet wird. Die Textur Zuordnung wird häufig verwendet, um einer Szene einen Realismus hinzuzufügen. Beispielsweise können Sie ein Bild einer Gebäudefassade auf ein Polygon anwenden, das eine Wand darstellt. Siehe auch Textur.
+Der Prozess des Anwendens eines Bilds (der Textur) auf einen Primitiven. Texturzuordnung wird häufig verwendet, um einer Szene Realismus hinzuzufügen. Beispielsweise können Sie ein Bild einer Gebäudefront auf ein Polygon anwenden, das eine Wand darstellt. Siehe auch Textur.
 
 </dd> <dt>
 
-<span id="opengl_texture_matrix"></span><span id="OPENGL_TEXTURE_MATRIX"></span>**Textur Matrix**
+<span id="opengl_texture_matrix"></span><span id="OPENGL_TEXTURE_MATRIX"></span>**Texturmatrix**
 </dt> <dd>
 
-Die 4X4-Matrix, die Texturkoordinaten aus den Koordinaten transformiert, die in den Koordinaten für Interpolations-und Textur Suche verwendet werden.
+Die 4x4-Matrix, die Texturkoordinaten von den Koordinaten, in denen sie angegeben sind, in die Koordinaten transformiert, die für Interpolation und Textursuche verwendet werden.
 
 </dd> <dt>
 
 <span id="opengl_transformation"></span><span id="OPENGL_TRANSFORMATION"></span>**Transformation**
 </dt> <dd>
 
-Ein warteping von Speicherplatz. In OpenGL sind Transformationen auf Projective Transformationen beschränkt, die alles enthalten, was durch eine 4 x 4-Matrix dargestellt werden kann. Zu diesen Transformationen gehören Rotationen, Übersetzungen, (nicht einheitliche) Skalierungen entlang der Koordinatenachsen, Perspektiven Transformationen und Kombinationen aus diesen.
+Eine Verkettung des Raumes. In OpenGL sind Transformationen auf projektive Transformationen beschränkt, die alles enthalten, was durch eine 4x4-Matrix dargestellt werden kann. Zu diesen Transformationen gehören Drehungen, Übersetzungen, (nichtuniforme) Skalierungen entlang der Koordinatenachsen, Perspektiventransformationen und Kombinationen dieser.
 
 </dd> <dt>
 
-<span id="opengl_triangle"></span><span id="OPENGL_TRIANGLE"></span>**Triangle**
+<span id="opengl_triangle"></span><span id="OPENGL_TRIANGLE"></span>**Dreieck**
 </dt> <dd>
 
-Ein Polygon mit drei Kanten. Dreiecke sind immer eine Konstante.
+Ein Polygon mit drei Kanten. Dreiecke sind immer konvex.
 
 </dd> </dl>
 

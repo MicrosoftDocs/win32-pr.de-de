@@ -1,12 +1,12 @@
 ---
-title: Imsrdpdrivecollection-drivecount-Eigenschaft
-description: Ruft die Anzahl der-Objekte in der-Auflistung ab. | Imsrdpdrivecollection-drivecount-Eigenschaft
+title: IMsRdpDriveCollection DriveCount (Eigenschaft)
+description: Ruft die Anzahl der Objekte in der Auflistung ab. | IMsRdpDriveCollection DriveCount (Eigenschaft)
 ms.assetid: 33b39657-2cc1-4f1e-b23a-809a9737ed8d
 ms.tgt_platform: multiple
 keywords:
-- Drivecount-Eigenschaft Remotedesktopdienste
-- Drivecount-Eigenschaft Remotedesktopdienste, imsrdpdrivecollection-Schnittstelle
-- Imsrdpdrivecollection-Schnittstelle Remotedesktopdienste, drivecount-Eigenschaft
+- DriveCount-Remotedesktopdienste
+- DriveCount-Remotedesktopdienste , IMsRdpDriveCollection-Schnittstelle
+- IMsRdpDriveCollection-Schnittstelle Remotedesktopdienste , DriveCount-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af724344cd7d88676483c13d1a6a8cfeb8548294
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 8ee79a361e8e24f8b699b8b5fae4aba923d11f62bf512f056a788c15d34d4805
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106355772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513290"
 ---
-# <a name="imsrdpdrivecollectiondrivecount-property"></a>Imsrdpdrivecollection::D rivecount (Eigenschaft)
+# <a name="imsrdpdrivecollectiondrivecount-property"></a>IMsRdpDriveCollection::D riveCount-Eigenschaft
 
-Ruft die Anzahl der-Objekte in der-Auflistung ab.
+Ruft die Anzahl der Objekte in der Auflistung ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,11 +44,11 @@ HRESULT get_DriveCount(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Objekt Anzahl.
+Die Objektanzahl.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT** -Wert gibt an, dass der-Fehler aufgetreten ist.
+Wenn die Methode erfolgreich ist, **wird S \_ OK** zurückgegeben. Jeder andere **HRESULT-Wert** gibt an, dass der Aufruf fehlgeschlagen ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere 
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>   |
-| IID<br/>                      | IID \_ imsrdpdrivecollection ist als 7ff17599-da2c-4677-ad35-f60c04fe1585 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpDriveCollection ist als 7ff17599-da2c-4677-ad35-f60c04fe1585 definiert.<br/> |
 
 
 
@@ -68,7 +68,7 @@ Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere 
 
 <dl> <dt>
 
-[**Imsrdpdrivecollection**](imsrdpdrivecollection.md)
+[**IMsRdpDriveCollection**](imsrdpdrivecollection.md)
 </dt> </dl>
 
  

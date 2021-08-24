@@ -1,9 +1,9 @@
 ---
-title: WINBIO_BDB_ANSI_381_RECORD Struktur (winbio \_ types. h)
-description: Enthält Informationen zu einem einzelnen Fingerabdruck oder einem Palmen Beispiel von einem Endbenutzer.
+title: WINBIO_BDB_ANSI_381_RECORD -Struktur (Winbio \_ types.h)
+description: Enthält Informationen zu einem einzelnen Fingerabdruck- oder Handflächenbeispiel eines Endbenutzers.
 ms.assetid: e0b32d05-3e96-4b42-9e18-57d10513f224
 keywords:
-- WINBIO_BDB_ANSI_381_RECORD Struktur Windows-Biometrieframework-API
+- WINBIO_BDB_ANSI_381_RECORD Struktur Windows Biometrieframework-API
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f30af31d88349dbe02066f231cdff21293aebe90
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 15e30cd66348245aa3090fb21188d7d1cea347c1b28ee51243d2effd9b52609f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391570"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119480340"
 ---
-# <a name="winbio_bdb_ansi_381_record-structure"></a>Struktur von winbio \_ BDB \_ ANSI \_ 381- \_ Datensätzen
+# <a name="winbio_bdb_ansi_381_record-structure"></a>WINBIO \_ BDB \_ ANSI \_ 381 \_ RECORD-Struktur
 
-Die Struktur von **winbio \_ BDB \_ ANSI \_ 381 \_** -Datensätzen enthält Informationen zu einem einzelnen Fingerabdruck oder einem Palmen Beispiel von einem Endbenutzer. Eine Auflistung dieser Strukturen ist in jeder [**winbio \_ BDB- \_ ANSI \_ 381- \_ Header**](winbio-bdb-ansi-381-header.md) Struktur enthalten.
+Die **WINBIO \_ BDB \_ ANSI \_ 381 \_ RECORD-Struktur** enthält Informationen zu einem einzelnen Fingerabdruck- oder Handflächenbeispiel eines Endbenutzers. Eine Auflistung dieser Strukturen ist in jeder [**WINBIO \_ BDB \_ ANSI \_ 381 \_ HEADER-Struktur**](winbio-bdb-ansi-381-header.md) enthalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,56 +48,56 @@ typedef struct _WINBIO_BDB_ANSI_381_RECORD {
 
 <dl> <dt>
 
-**Blocklength**
+**BlockLength**
 </dt> <dd>
 
-Enthält die Anzahl der Bytes in dieser Struktur zuzüglich der Anzahl von Bytes von Beispiel Bilddaten.
+Enthält die Anzahl der Bytes in dieser Struktur plus die Anzahl der Bytes von Beispielbilddaten.
 
 </dd> <dt>
 
-**Horizontallinelength**
+**HorizontalLineLength**
 </dt> <dd>
 
-Gibt die Anzahl der Pixel in einer horizontalen Zeile des Beispiels an.
+Gibt die Anzahl von Pixeln in einer horizontalen Linie des Beispiels an.
 
 </dd> <dt>
 
-**Verticallinelength**
+**VerticalLineLength**
 </dt> <dd>
 
-Gibt die Anzahl der Pixel in einer vertikalen Zeile des Beispiels an.
+Gibt die Anzahl der Pixel in einer vertikalen Linie des Beispiels an.
 
 </dd> <dt>
 
 **Position**
 </dt> <dd>
 
-Ein Wert des **Typs "winbio \_ biometrische \_ SubType** ", der den Finger oder die Palme angibt, mit dem das biometrische Beispiel generiert wird. Weitere Informationen finden Sie in den Hinweisen.
+Ein **WINBIO \_ BIOMETRIC \_ SUBTYPE-Wert,** der den Finger oder die Handfläche angibt, der bzw. die zum Generieren der biometrischen Stichprobe verwendet wird. Weitere Informationen finden Sie in den Hinweisen.
 
 </dd> <dt>
 
-**Ansichts Ansichten**
+**CountOfViews**
 </dt> <dd>
 
-Diese muss auf 1 festgelegt werden.
+Dies muss auf eins (1) festgelegt werden.
 
 </dd> <dt>
 
-**Viewnumber**
+**ViewNumber**
 </dt> <dd>
 
-Diese muss auf 1 festgelegt werden.
+Dies muss auf eins (1) festgelegt werden.
 
 </dd> <dt>
 
 **ImageQuality**
 </dt> <dd>
 
-Reserviert. Dies muss 254 (0xFE) sein.
+Reserviert. Dieser muss 254 (0xFE) sein.
 
 </dd> <dt>
 
-**Impressiontype**
+**ImpressionType**
 </dt> <dd>
 
 Reserviert.
@@ -111,28 +111,28 @@ Reserviert. Muss auf 0 (null) festgelegt werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der *Positions* Member gibt den Bereich der Hand oder der Palme an, der zum Erstellen des biometrischen Beispiels verwendet wird. Der Windows-Biometrieframework (WBF) unterstützt derzeit nur die Fingerabdruck Erfassung und verwendet die folgenden Konstanten, um Positionsinformationen darzustellen.
+Das *Position-Element* gibt den Bereich der Hand oder Handfläche an, der bzw. die verwendet wird, um die biometrische Stichprobe zu machen. Das Windows Biometric Framework (WBF) unterstützt derzeit nur die Fingerabdruckerfassung und verwendet die folgenden Konstanten, um Positionsinformationen zu darstellen.
 
--   Winbio \_ ANSI \_ 381 Torys \_ \_ unbekannt
--   Winbio \_ ANSI \_ 381 \_ POS, \_ RH \_ Thumb
--   Winbio \_ ANSI \_ 381 POS-Zeige- \_ \_ \_ \_ Finger
--   Winbio \_ ANSI \_ 381 \_ Torpo- \_ \_ \_ Mittelfinger
--   Winbio \_ ANSI \_ 381 \_ POS, \_ RH- \_ Klingel \_ Finger
--   Winbio \_ ANSI \_ 381 Torys \_ \_ RH \_ Little \_ Finger
--   Winbio \_ ANSI \_ 381 \_ POS \_ LH \_ Thumb
--   Winbio \_ ANSI \_ 381 Torys \_ \_ LH \_ Index \_ Finger
--   Winbio \_ ANSI \_ 381 \_ POS \_ - \_ Mittel \_ Fingerabdruck
--   Winbio \_ ANSI \_ 381 Torys LH- \_ \_ \_ Klingel \_ Finger
--   Winbio \_ ANSI \_ 381 Torys \_ \_ LH \_ wenig \_ Finger
--   Winbio \_ ANSI 381 Torys mit \_ \_ \_ \_ vier \_ Fingern
--   Winbio \_ ANSI 381 Torys mit \_ \_ \_ \_ vier \_ Fingern
--   Winbio \_ ANSI \_ 381 \_ POS \_ zwei \_ Daumen
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ UNKNOWN
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ RH \_ THUMB
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ RH \_ INDEX \_ FINGER
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ RH \_ MIDDLE \_ FINGER
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ RH \_ RING \_ FINGER
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ RH \_ LITTLE \_ FINGER
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ LSFINGER \_
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ LH \_ INDEX \_ FINGER
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ \_ LENK-MITTELFINGER \_
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ \_ LN-RINGFINGER \_
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ LH \_ LITTLE \_ FINGER
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ RH \_ FOUR \_ FINGERS
+-   WINBIO \_ ANSI \_ 381 \_ POS \_ \_ 4 \_ FINGER
+-   WINBIO \_ ANSI \_ 381 \_ POS ZWEI \_ \_ DAUMEN
 
 > [!IMPORTANT]
 >
-> Versuchen Sie nicht, den für den *Positions* Wert angegebenen Wert zu überprüfen. Der Windows-Biometrie-Dienst überprüft den angegebenen Wert vor der Übergabe an Ihre Implementierung. Wenn der Wert " **winbio \_ SubType \_ No \_ Information** " oder " **winbio \_ SubType \_ any**" lautet, überprüfen Sie ggf. ggf.
+> Versuchen Sie nicht, den für den Position-Wert angegebenen *Wert zu* überprüfen. Der Windows Biometriedienst überprüft den angegebenen Wert, bevor er an Ihre Implementierung übergeben wird. Wenn der Wert **WINBIO \_ SUBTYPE \_ NO \_ INFORMATION** oder **WINBIO \_ SUBTYPE \_ ANY ist,** überprüfen Sie gegebenenfalls.
 
  
 
@@ -142,17 +142,17 @@ Der *Positions* Member gibt den Bereich der Hand oder der Palme an, der zum Erst
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (einschließlich Winbio.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Strukturen](client-application-structures.md)
+[Clientanwendungsstrukturen](client-application-structures.md)
 </dt> </dl>
 
  

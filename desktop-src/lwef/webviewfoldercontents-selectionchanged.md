@@ -3,7 +3,7 @@ title: WebViewFolderContents.SelectionChanged-Ereignis (Shldisp.h)
 description: 'WebViewFolderContents.SelectionChanged-Ereignis: Tritt auf, wenn sich der Auswahlzustand eines Elements oder elements in der Ansicht geändert hat.'
 ms.assetid: 46dfceec-aa81-4950-81e5-526a6e621271
 keywords:
-- SelectionChanged-Ereignis Legacy-Windows-Umgebungsfeatures
+- SelectionChanged-Ereignis – Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea6176cb2a1703d48cd2ddec8069c65d7efc978f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4cccabe52d7370d22fa086e9e8664163771062e8828c8ab2a6d016df30f13350
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108102658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119607830"
 ---
 # <a name="webviewfoldercontentsselectionchanged-event"></a>WebViewFolderContents.SelectionChanged-Ereignis
 
-Tritt ein, wenn sich der Auswahlzustand eines Elements oder elements in der Ansicht geändert hat.
+Tritt ein, wenn sich der Auswahlzustand eines Elements oder von Elementen in der Ansicht geändert hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Dieser Ereignishandler verfügt über keine Parameter.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieses Ereignisses für JScript, das in HTML eingebettet ist.
+Im folgenden Beispiel wird die ordnungsgemäße Verwendung dieses Ereignisses für in HTML eingebettete JScript veranschaulicht.
 
 
 ```HTML
@@ -82,9 +82,9 @@ Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieses Ereignisses f
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |

@@ -1,11 +1,11 @@
 ---
-title: Byte-pro-Minute-Attribut
-description: Übertragungsrate für Drucker.
+title: Bytes-Pro-Minute-Attribut
+description: Druckerdatenübertragungsrate.
 ms.assetid: e2ed6fb7-d833-40ed-925b-689246c2953b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Byte-pro-Minute-Attribut
-- bytesperminute-Attribut, AD-Schema
+- Byte pro Minute-Attribut – AD-Schema
+- BY-Schema des bytesPerMinute-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 280427bd69d6ee06c8f7a8dd13812c2c8ce7f898
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 20165f20a9c43e828ebef5f7ddaf06ac7ef93a1a26bd6b78456649591fdd3b38
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119307230"
 ---
-# <a name="bytes-per-minute-attribute"></a>Byte-pro-Minute-Attribut
+# <a name="bytes-per-minute-attribute"></a>Bytes-Pro-Minute-Attribut
 
-Übertragungsrate für Drucker.
+Druckerdatenübertragungsrate.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Bytes pro Minute                     |
-| LDAP-Display-Name | bytesperminute                       |
+| Ldap-Anzeigename | bytesPerMinute                       |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.284               |
-| System-ID-GUID    | ba305f76-47e3-11d0-a1a6-00c04fd930c9 |
+| System-Id-Guid    | ba305f76-47e3-11d0-a1a6-00c04fd930c9 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ ms.locfileid: "106343113"
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ ms.locfileid: "106343113"
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ ms.locfileid: "106343113"
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ ms.locfileid: "106343113"
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ ms.locfileid: "106343113"
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ ms.locfileid: "106343113"
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ ms.locfileid: "106343113"
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 

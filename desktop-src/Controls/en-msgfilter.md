@@ -1,9 +1,9 @@
 ---
-title: EN_MSGFILTER Benachrichtigungs Code (RichEdit. h)
-description: Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements über ein Tastatur-oder Maus Ereignis im-Steuerelement. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs \_ Meldung.
+title: EN_MSGFILTER Benachrichtigungscode (Richedit.h)
+description: Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuerelements über ein Tastatur- oder Mausereignis im Steuerelement. Dieses Benachrichtigungscode wird von einem Rich-Edit-Steuerelement in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 96cf0047-baae-46cd-82e8-ab6f3f353260
 keywords:
-- Windows-Steuerelemente für EN_MSGFILTER Benachrichtigungs
+- EN_MSGFILTER Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 40ddb3e9b1d5314e2e981b00f0e0ef8e22974242
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 87d2cbe47af3d74deb4795946d58871b4729118db0e839027e78e05976ebf855
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119436710"
 ---
-# <a name="en_msgfilter-notification-code"></a>EN \_ msgfilter-Benachrichtigungs Code
+# <a name="en_msgfilter-notification-code"></a>EN \_ MSGFILTER-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements über ein Tastatur-oder Maus Ereignis im-Steuerelement. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs Meldung. [**\_**](wm-notify.md)
+Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuerelements über ein Tastatur- oder Mausereignis im Steuerelement. Dieses Benachrichtigungscode wird von einem Rich-Edit-Steuerelement in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,27 +41,27 @@ EN_MSGFILTER
 *lParam* 
 </dt> <dd>
 
-Eine [**msgfilter**](/windows/desktop/api/Richedit/ns-richedit-msgfilter) -Struktur, die Informationen über die Tastatur-oder Maus Meldung enthält. Wenn das übergeordnete Fenster diese Struktur ändert und einen Wert ungleich 0 (null) zurückgibt, wird die geänderte Nachricht anstelle der ursprünglichen verarbeitet.
+Eine [**MSGFILTER-Struktur,**](/windows/desktop/api/Richedit/ns-richedit-msgfilter) die Informationen zur Tastatur- oder Mausmeldung enthält. Wenn das übergeordnete Fenster diese Struktur ändert und einen Wert ungleich 0 (null) zurückgibt, wird die geänderte Nachricht anstelle der ursprünglichen verarbeitet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt NULL zurück, wenn das Steuerelement das Tastatur-oder Maus Ereignis verarbeiten soll.
+Gibt 0 (null) zurück, wenn das Steuerelement das Tastatur- oder Mausereignis verarbeiten soll.
 
-Gibt einen Wert ungleich 0 zurück, wenn das Steuerelement das Tastatur-oder Maus Ereignis ignorieren soll.
+Gibt einen Anderen als 0 (null) zurück, wenn das Steuerelement das Tastatur- oder Mausereignis ignorieren soll.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Empfangen von en- \_ msgfilter-Benachrichtigungs Codes für Ereignisse geben Sie mindestens eines der folgenden Flags in der Maske an, die mit der [**EM \_**](em-seteventmask.md) -Nachricht "-Abmeldung gesendet" gesendet wird.
+Um EN MSGFILTER-Benachrichtigungscodes für Ereignisse zu empfangen, geben Sie mindestens eines der folgenden Flags in der Maske an, die mit der \_ [**EM \_ SETEVENTMASK-Nachricht gesendet**](em-seteventmask.md) wird.
 
 
 
 | Flag                                                                             | Bedeutung                                                |
 |----------------------------------------------------------------------------------|--------------------------------------------------------|
-| [**"ESM"- \_ KEYEVENTs**](rich-edit-control-event-mask-flags.md)       | Zum Empfangen von Benachrichtigungs Codes für Tastatur Ereignisse.     |
-| [**"en"- \_ mouevent-Ereignisse**](rich-edit-control-event-mask-flags.md)   | Zum Empfangen von Benachrichtigungs Codes für Mausereignisse.        |
-| [**\_SM-scrollevents**](rich-edit-control-event-mask-flags.md) | Zum Empfangen von Benachrichtigungs Codes für ein Mausrad Ereignis. |
+| [**ENM \_ KEYEVENTS**](rich-edit-control-event-mask-flags.md)       | Zum Empfangen von Benachrichtigungscodes für Tastaturereignisse.     |
+| [**ENM \_ MOUSEEVENTS**](rich-edit-control-event-mask-flags.md)   | Zum Empfangen von Benachrichtigungscodes für Mausereignisse.        |
+| [**ENM \_ SCROLLEVENTS**](rich-edit-control-event-mask-flags.md) | Zum Empfangen von Benachrichtigungscodes für ein Mausradereignis. |
 
 
 
@@ -73,23 +73,23 @@ Zum Empfangen von en- \_ msgfilter-Benachrichtigungs Codes für Ereignisse geben
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Msgfilter**](/windows/desktop/api/Richedit/ns-richedit-msgfilter)
+[**MSGFILTER**](/windows/desktop/api/Richedit/ns-richedit-msgfilter)
 </dt> <dt>
 
-[**WM- \_ Benachrichtigung**](wm-notify.md)
+[**WM \_ NOTIFY**](wm-notify.md)
 </dt> </dl>
 
  

@@ -1,12 +1,12 @@
 ---
-title: Undvtaskpluginnotifysink ScheduleTask-Methode
-description: Wird vom Task-Agent zum Planen einer Aufgabe aufgerufen.
+title: IRDVTaskPluginNotifySink ScheduleTask-Methode
+description: Wird vom Task-Agent aufgerufen, um einen Task zu planen.
 ms.assetid: 06793439-cf16-40ca-8a91-08acc22c73ed
 ms.tgt_platform: multiple
 keywords:
-- ScheduleTask-Methode Remotedesktopdienste
-- ScheduleTask-Methode Remotedesktopdienste, undvtaskpluginnotifysink-Schnittstelle
-- Undvtaskpluginnotifysink-Schnittstelle Remotedesktopdienste, ScheduleTask-Methode
+- ScheduleTask-Remotedesktopdienste
+- ScheduleTask-Remotedesktopdienste , IRDVTaskPluginNotifySink-Schnittstelle
+- IRDVTaskPluginNotifySink-Schnittstelle Remotedesktopdienste , ScheduleTask-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c9bde92992eec9c4ab3d4151c59e6d687ec2f3fe
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fdcecba38b1fd5eb773e5076f5485ae900e5423267a3a311091bf01e0ed86ac0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119512020"
 ---
-# <a name="irdvtaskpluginnotifysinkscheduletask-method"></a>Undvtaskpluginnotifysink:: ScheduleTask-Methode
+# <a name="irdvtaskpluginnotifysinkscheduletask-method"></a>IRDVTaskPluginNotifySink::ScheduleTask-Methode
 
-Wird vom Task-Agent zum Planen einer Aufgabe aufgerufen.
+Wird vom Task-Agent aufgerufen, um einen Task zu planen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ HRESULT ScheduleTask(
 
 <dl> <dt>
 
-*ftstarttime* \[ in\]
+*ftStartTime* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)**
@@ -56,48 +56,48 @@ Die früheste Startzeit der Aufgabe in UTC.
 
 </dd> <dt>
 
-"- *Zeit* \[ " in\]
+*ftEndTime* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)**
 
-Die Endzeit der Aufgabe in UTC. Übergibt eine [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) -Menge auf alle Nullen, wenn keine Endzeit angegeben wird.
+Die Endzeit der Aufgabe in UTC. Übergeben Sie [**einen FILETIME-Wert,**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) der auf alle Nullen festgelegt ist, wenn keine Endzeit angegeben ist.
 
 </dd> <dt>
 
-*ftstichtag* \[ in\]
+*ftDeadline* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)**
 
-Der Task Stichtag in UTC. Hiermit wird die Priorität für mehrere Aufgaben festgelegt, die sich innerhalb des Start Fensters befinden. Wenn mehr als eine Aufgabe gestartet werden soll, wird die mit dem frühesten Stichtag zuerst gestartet.
+Der Stichtag für die Aufgabe in UTC. Damit wird die Priorität für mehrere Aufgaben innerhalb ihres Startfensters festgelegt. Wenn mehr als eine Aufgabe gestartet werden soll, wird zuerst die Aufgabe mit dem frühesten Stichtag gestartet.
 
 </dd> <dt>
 
-*bstraulabel* \[ in\]
+*bstrLabel* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Die Bezeichnung für den Task. Diese wird an die [**Starttask**](irdvtaskplugin-starttask.md) -Methode übermittelt.
+Die Bezeichnung für den Task. Dies wird an die [**StartTask-Methode**](irdvtaskplugin-starttask.md) übergeben.
 
 </dd> <dt>
 
-*bstridentifier* \[ in\]
+*bstrIdentifier* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Der Bezeichner des Tasks. Diese wird an die [**Starttask**](irdvtaskplugin-starttask.md) -Methode übermittelt.
+Der Bezeichner des Tasks. Dies wird an die [**StartTask-Methode**](irdvtaskplugin-starttask.md) übergeben.
 
 </dd> <dt>
 
-*sacontext* \[ in\]
+*saContext* \[ In\]
 </dt> <dd>
 
-Typ: **SafeArray (Byte)**
+Typ: **SAFEARRAY(BYTE)**
 
-Optionale Daten für den Task. Diese wird an die [**Starttask**](irdvtaskplugin-starttask.md) -Methode übermittelt.
+Optionale Daten für den Task. Dies wird an die [**StartTask-Methode**](irdvtaskplugin-starttask.md) übergeben.
 
 </dd> </dl>
 
@@ -105,7 +105,7 @@ Optionale Daten für den Task. Diese wird an die [**Starttask**](irdvtaskplugin-
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,7 +122,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**"Undvtaskpluginnotifysink"**](irdvtaskpluginnotifysink.md)
+[**IRDVTaskPluginNotifySink**](irdvtaskpluginnotifysink.md)
 </dt> </dl>
 
  

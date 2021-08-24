@@ -1,5 +1,5 @@
 ---
-description: Die CIM- \_ Klasse "fruincludesproduct" zeigt an, dass eine ersetzbare Feld Einheit (FRU) aus anderen Produkten bestehen kann.
+description: Die CIM \_ FRUIncludesProduct-Klasse gibt an, dass eine FRU (Field Replaceable Unit) aus anderen Produkten bestehen kann.
 ms.assetid: e57dc7f5-4c5b-4ec4-9300-e080053955cb
 ms.tgt_platform: multiple
 title: CIM_FRUIncludesProduct-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 196f0cc1f2e81312e5e695c34e0a492ac7c05389
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 1db2792cd5da23c7812e38682ddfa570bef927cb5e57440b31d1f110094b731c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104218999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119578676"
 ---
-# <a name="cim_fruincludesproduct-class"></a>CIM \_ fruincludesproduct-Klasse
+# <a name="cim_fruincludesproduct-class"></a>CIM \_ FRUIncludesProduct-Klasse
 
-Die CIM-Klasse " **\_ fruincludesproduct** " zeigt an, dass eine ersetzbare Feld Einheit (FRU) aus anderen Produkten bestehen kann.
+Die **CIM \_ FRUIncludesProduct-Klasse** gibt an, dass eine FRU (Field Replaceable Unit) aus anderen Produkten bestehen kann.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,20 +47,20 @@ class CIM_FRUIncludesProduct
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ fruincludesproduct** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ FRUIncludesProduct-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ fruincludesproduct** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ FRUIncludesProduct-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Komponente**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Produkt**
+Datentyp: **\_ CIM-Produkt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -79,18 +79,18 @@ Datentyp: **CIM \_ FRU**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Aggregieren,**](/windows/desktop/WmiSdk/standard-qualifiers) [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Verweis auf das FRU-.
+Verweis auf die FRU.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,8 +100,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

@@ -1,21 +1,21 @@
 ---
-description: Der WMI-Anbieter für Eltern Steuerelemente ist eine Instanz und ein Methoden Anbieter. Die Instanziierung neuer Klassen Instanzen, das Lesen oder Ändern vorhandener Instanzeigenschaften und das Aufrufen von Methoden wird von der Datei wpcsprov. MOF gesteuert.
+description: Der WMI-Anbieter für Jugendschutz ist eine Instanz und ein Methodenanbieter. Die Instanziierung neuer Klasseninstanzen, das Lesen oder Ändern vorhandener Instanzeigenschaften und der Aufruf von Methoden wird von der Datei Wpcsprov.mof gesteuert.
 ms.assetid: 28d46969-448e-4a67-bfb3-4240b5cebe57
-title: Jugend Steuerungs-WMI-Anbieter Schema
+title: Schema des WMI-Anbieters für Jugendschutz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 541d7fd9126d1992fab105d4b289fabae268148b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ea3c5cd54b14cc02f09f80558fe4cd5f9256c22bcdcc0f19da8553c4a8ff3b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104485646"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119601210"
 ---
-# <a name="parental-controls-wmi-provider-schema"></a>Jugend Steuerungs-WMI-Anbieter Schema
+# <a name="parental-controls-wmi-provider-schema"></a>Schema des WMI-Anbieters für Jugendschutz
 
-Der WMI-Anbieter für Eltern Steuerelemente ist eine Instanz und ein Methoden Anbieter. Die Instanziierung neuer Klassen Instanzen, das Lesen oder Ändern vorhandener Instanzeigenschaften und das Aufrufen von Methoden wird von der Datei wpcsprov. MOF gesteuert.
+Der WMI-Anbieter für Jugendschutz ist eine Instanz und ein Methodenanbieter. Die Instanziierung neuer Klasseninstanzen, das Lesen oder Ändern vorhandener Instanzeigenschaften und der Aufruf von Methoden wird von der Datei Wpcsprov.mof gesteuert.
 
-Die folgende Syntax ist aus "Namespace. mof".
+Die folgende Syntax ist von Namespace.mof.
 
 ``` syntax
 #pragma autorecover
@@ -38,7 +38,7 @@ instance of __NAMESPACE
 };
 ```
 
-Die folgende Syntax ist von "Ratings. mof".
+Die folgende Syntax ist aus Ratings.mof.
 
 ``` syntax
 //**************************************************************************
@@ -107,7 +107,7 @@ class WpcRatingsSystem
 
 ```
 
-Die folgende Syntax wird von wpcsettings. MOF abgeleitet.
+Die folgende Syntax wird von WpcSettings.mof verwendet.
 
 ``` syntax
 // WPC Class definitions
@@ -268,7 +268,7 @@ class WpcClamper
 // End of WPC Class Definitions
 ```
 
-Die folgende Syntax wird von wpcprovider. MOF abgeleitet.
+Die folgende Syntax wird von WpcProvider.mof verwendet.
 
 ``` syntax
 #pragma namespace ("\\\\.\\root\\CIMV2\\Applications\\WindowsParentalControls")

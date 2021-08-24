@@ -1,7 +1,7 @@
 ---
 description: Ruft die Anzahl der Schaltflächen auf dem Tablettstift ab.
 ms.assetid: ae4ce670-769a-4f00-b728-285020f09934
-title: 'Itabletcursor:: getbuttoncount-Methode'
+title: ITabletCursor::GetButtonCount-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: 08fdf24b2a0b69b7830a683786f18fc5df0805b2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 82a0825d64bc93601b933a98b3a7e0e3f321954d2fb2d7aa285d8d08a315545c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363733"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119336020"
 ---
-# <a name="itabletcursorgetbuttoncount-method"></a>Itabletcursor:: getbuttoncount-Methode
+# <a name="itabletcursorgetbuttoncount-method"></a>ITabletCursor::GetButtonCount-Methode
 
 Ruft die Anzahl der Schaltflächen auf dem Tablettstift ab.
 
@@ -40,7 +40,7 @@ HRESULT GetButtonCount(
 
 <dl> <dt>
 
-*pcbuttons* \[ vorgenommen\]
+*pcButtons* \[ out\]
 </dt> <dd>
 
 Die Anzahl der Schaltflächen auf dem Tablettstift.
@@ -56,7 +56,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
@@ -68,17 +68,17 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itabletcursor-Schnittstelle**](itabletcursor.md)
+[**ITabletCursor-Schnittstelle**](itabletcursor.md)
 </dt> </dl>
 
  

@@ -1,23 +1,23 @@
 ---
-title: Zurückgeben von Attributnamen mit idirector ysearch
-description: Sie können eine Suche durchführen, um zu ermitteln, welche Art von Daten für ein bestimmtes Objekt verfügbar ist.
+title: Zurückgeben von nur Attributnamen mit IDirectorySearch
+description: Sie können eine Suche durchführen, um zu bestimmen, welcher Datentyp für ein bestimmtes Objekt verfügbar ist.
 ms.assetid: 47e78b79-2063-420b-aa41-f4f0c35f87ea
 ms.tgt_platform: multiple
 keywords:
-- Zurückgeben von Attributnamen mit idirector ysearch ADSI
-- ADSI, Search, idirector ysearch, andere Suchoptionen, zurückgeben von Attributnamen
+- Zurückgeben von nur Attributnamen mit IDirectorySearch ADSI
+- ADSI, Suchen, IDirectorySearch, andere Suchoptionen, Zurückgeben von nur Attributnamen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 055acbb3fe19969ce95ea77a633e20b195c0257d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f4b9c69a99cad0ece5c660ba45954fe537abe69cfa88947b52b0d69d7833b4e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119444010"
 ---
-# <a name="returning-only-attribute-names-with-idirectorysearch"></a>Zurückgeben von Attributnamen mit idirector ysearch
+# <a name="returning-only-attribute-names-with-idirectorysearch"></a>Zurückgeben von nur Attributnamen mit IDirectorySearch
 
-Sie können eine Suche durchführen, um zu ermitteln, welche Art von Daten für ein bestimmtes Objekt verfügbar ist. In diesem Fall sind Sie nur an den Namen der Attribute interessiert, nicht an den Attributwerten des Objekts. Die Option **ADS \_ searchpref \_ attribtypes \_ only** bewirkt, dass der Server nur die Attributnamen und nicht die Attributwerte zurückgibt. Das Resultset enthält jedoch nur die Attribute, denen Werte zugewiesen sind. Nehmen Sie beispielsweise ein Objekt mit den folgenden Attributen:
+Sie können eine Suche durchführen, um zu bestimmen, welcher Datentyp für ein bestimmtes Objekt verfügbar ist. In diesem Fall sind sie nur an den Attributnamen interessiert, nicht an den Attributwerten des Objekts. Die **ADS \_ SEARCHPREF \_ ATTRIBTYPES \_ ONLY-Option** bewirkt, dass der Server nur die Attributnamen und nicht die Attributwerte zurück gibt. Das Ergebnisset enthält jedoch nur die Attribute, denen Werte zugewiesen sind. Betrachten Sie beispielsweise ein Objekt mit den folgenden Attributen:
 
 ``` syntax
 name = Jeff
@@ -26,7 +26,7 @@ department = Empty
 phone = 206-555-0111
 ```
 
-Wenn die Option **ADS \_ searchpref \_ attribtypes \_ only** festgelegt ist, enthält das Resultset Folgendes:
+Wenn die **OPTION ADS \_ SEARCHPREF \_ ATTRIBTYPES \_ ONLY** festgelegt ist, enthält das Resultset Folgendes:
 
 ``` syntax
 name
@@ -35,11 +35,11 @@ department
 phone
 ```
 
-Der Standardwert ist für Attributwerte und Namen, die zurückgegeben werden sollen.
+Der Standardwert ist, dass sowohl Attributwerte als auch Namen zurückgegeben werden.
 
-Wenn Sie nur Attributnamen abrufen möchten, legen Sie die Suchoption **ADS \_ searchpref \_ attribtypes \_ only** mit dem **\_ booleschen adstype** -Wert " **true** " im [**ADS \_ searchpref- \_ Informations**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) Array fest, das an die [**IDirectorySearch:: setsearchpreference**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) -Methode übermittelt wird.
+Um nur Attributnamen abzurufen, legen Sie eine **ADS \_ SEARCHPREF \_ ATTRIBTYPES \_ ONLY-Suchoption** mit dem **ADSTYPE \_ BOOLEAN-Wert** **TRUE** im [**ADS \_ SEARCHPREF \_ INFO-Array**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) fest, das an die [**IDirectorySearch::SetSearchPreference-Methode**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) übergeben wird.
 
-Im folgenden Codebeispiel wird gezeigt, wie nur Attributnamen abgerufen werden.
+Das folgende Codebeispiel zeigt, wie nur Attributnamen abgerufen werden.
 
 
 ```C++
@@ -51,11 +51,11 @@ SearchPref.vValue.Boolean = TRUE;
 
 
 
-Weitere Informationen und ein Codebeispiel, das zeigt, wie Sie die Suchoption **ADS \_ searchpref \_ attribtypes \_ only** verwenden, finden Sie unter [Beispielcode für die Suche nach Attributen](example-code-for-searching-for-attributes.md).
+Weitere Informationen und ein Codebeispiel, das zeigt, wie die **SUCHoption ADS \_ SEARCHPREF \_ ATTRIBTYPES \_ ONLY** verwendet wird, finden Sie unter Beispielcode für die Suche [nach Attributen.](example-code-for-searching-for-attributes.md)
 
- 
+ 
 
- 
+ 
 
 
 

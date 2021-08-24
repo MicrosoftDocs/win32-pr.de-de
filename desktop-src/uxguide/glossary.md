@@ -1,412 +1,412 @@
 ---
 title: Glossar (Entwurfsgrundlagen)
-description: Ein Glossar der in den UX-Richtlinien für Windows-Desktop-Apps verwendeten Begriffe.
+description: Ein Glossar mit Begriffen, die in den UX-Richtlinien für Windows Desktop-Apps verwendet werden.
 ms.assetid: 9f35f9be-6165-4d98-a2e6-26fb4fc91eae
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 3009940612d0b42ae8ee225e8db59ebabdbf35fa
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 7b611d1982427ebea68b51cba2f597fa54e4a28f4cbf96b4debf45731ce68e3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106355114"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119334450"
 ---
 # <a name="glossary-design-basics"></a>Glossar (Entwurfsgrundlagen)
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-[a](#alink) \| [B](#b) \| [C](#c) \| [D](#d) \| [E](#e) \| [F](#f) \| [G](#g) \| [H](#h) \| [I](#i) \| [J](#j) \| [K](#k) \| [L](#l) \| [M](#m)\|
+[A](#alink) \| [B](#b) \| [C](#c) \| [D](#d) \| [E](#e) \| [F](#f) \| [G](#g) \| [H](#h) \| [I](#i) \| [J](#j) \| [K](#k) \| [L](#l) \| [M](#m)\|
 
 [N](#n) \| [O](#o) \| [P](#p) \| [Q](#q) \| [R](#r) \| [S](#s) \| [T](#t) \| [U](#u) \| [V](#v) \| [W](#w) \| [X](#x) \| [Y](#y) \| [Z](#z)
 
 ## <a name=""></a><a name="alink">A</a>
 
-**Info Feld**
+**Feld "Informationen"**
 
-Ein Dialogfeld, das allgemeine Programminformationen bereitstellt, z. b. Versions Identifizierung, Copyright, Lizenzierungs Verträge und Methoden für den Zugriff auf den technischen Support.
+Ein Dialogfeld mit allgemeinen Programminformationen, z. B. Versionsidentifikation, Copyright, Lizenzvereinbarungen und Möglichkeiten für den Zugriff auf technischen Support.
 
-**oberhalb des Fold**
+**über dem Fold**
 
-Eine Bildschirmlayout-Metapher, die aus dem Zeitungsjournalismus entnommen wurde. Der Inhalt über dem Fold der Zeitung muss besonders für den Vertrieb von Verkäufen sorgen. Ebenso muss der wichtigste Inhalt im Bildschirmlayout ohne Bildlauf sichtbar sein. Benutzer müssen motivieren, sich die Zeit zu nehmen, einen Bildlauf nach dem Inhalt durchlaufen zu lassen, der anfänglich angezeigt wird.
+Eine Metapher für das Bildschirmlayout, die aus der Ante stammt. Der Inhalt über dem Fold des Händlers muss besonders ansprechend sein, um den Verkauf zu fördern. Auf ähnliche Weise muss der wichtigste Inhalt im Bildschirmlayout sichtbar sein, ohne scrollen zu müssen. Benutzer müssen sich die Zeit nehmen, nach dem Inhalt zu scrollen, den sie anfänglich "über dem Fold" finden.
 
-**Zugriffstaste**
+**Zugriffsschlüssel**
 
-Ein alphanumerischer Schlüssel, der in Kombination mit der Alt-Taste ein-Steuerelement aktiviert. Zugriffsschlüssel werden angegeben, indem eines der Zeichen in der Bezeichnung des Steuer Elements hervorgehoben wird. Wenn Sie z. b. ALT + O drücken, wird ein Steuerelement mit der Bezeichnung "Open" und dessen zugewiesener Zugriffsschlüssel "O" aktiviert. Bei Zugriffs Schlüsseln wird die Groß-/Kleinschreibung Die Auswirkung der Aktivierung eines Steuer Elements hängt vom Typ des Steuer Elements ab.
+Ein alphanumerischer Schlüssel, der in Kombination mit der ALT-TASTE ein Steuerelement aktiviert. Zugriffsschlüssel werden durch Unterstriche eines der Zeichen in der Bezeichnung des Steuerelements angegeben. Wenn Sie z. B. ALT+O drücken, wird ein Steuerelement aktiviert, dessen Bezeichnung "Open" lautet und dessen zugewiesener Zugriffsschlüssel "O" ist. Bei Zugriffsschlüsseln wird die Groß-/Kleinschreibung nicht beachtet. Die Auswirkung der Aktivierung eines Steuerelements hängt vom Typ des Steuerelements ab.
 
-Im Gegensatz zu Tastenkombinationen, die hauptsächlich für fortgeschrittene Benutzer gedacht sind, sind Zugriffsschlüssel zur Verbesserung der Barrierefreiheit konzipiert. Da Sie direkt in der Benutzeroberfläche (UI) selbst dokumentiert werden, können Sie nicht immer konsistent zugewiesen werden, und Sie sind nicht für die Speicherung vorgesehen.
+Im Gegensatz zu Tastenkombinationen, die hauptsächlich für fortgeschrittene Benutzer vorgesehen sind, sind Zugriffsschlüssel zur Verbesserung der Barrierefreiheit konzipiert. Da sie direkt in der Benutzeroberfläche selbst dokumentiert sind, können sie nicht immer konsistent zugewiesen werden und sind nicht dazu vorgesehen, sich diese merken zu können.
 
-**aktiver Monitor**
+**Aktiver Monitor**
 
 Der Monitor, auf dem das aktive Programm ausgeführt wird.
 
 **Adressleiste**
 
-Ein Navigationselement, das in der Regel am oberen Rand eines Fensters angezeigt wird, das angezeigt wird und es Benutzern ermöglicht, Ihre aktuelle Position zu ändern. Siehe auch: [Breadcrumb-Leiste](#b).
+Ein Navigationselement, das in der Regel am oberen Rand eines Fensters angezeigt wird und benutzern das Ändern ihres aktuellen Speicherorts ermöglicht. Siehe auch: [Breadcrumbleiste](#b).
 
-**kostengünstig**
+**affordance**
 
-Visuelle Eigenschaften eines Objekts, die angeben, wie es verwendet oder bearbeitet werden kann. Beispielsweise verfügen Befehls Schaltflächen über die visuelle Darstellung von echten Schaltflächen, die darauf hindeuten oder klicken.
+Visuelle Eigenschaften eines Objekts, die angeben, wie es verwendet oder angewendet werden kann. Befehlsschaltflächen weisen beispielsweise die visuelle Darstellung von realen Schaltflächen auf und schlagen vor, pushen oder klicken zu können.
 
 **application**
 
-Ein Programm, das zum Ausführen eines verknüpften Satzes von Benutzer Aufgaben verwendet wird. häufig relativ komplex und ausgereifte. Siehe auch: [Programm](#p).
+Ein Programm, das zum Ausführen eines verwandten Satzes von Benutzeraufgaben verwendet wird. oft relativ komplex und ausgereift. Siehe auch: [Programm](#p).
 
-**Anwendungs Schlüssel**
+**Anwendungsschlüssel**
 
-Eine Tastatur Taste mit einer Grafik des Kontextmenüs. Dieser Schlüssel wird verwendet, um das Kontextmenü für das ausgewählte Element anzuzeigen.
+Eine Tastaturtaste mit einer Kontextmenügrafik darauf. Dieser Schlüssel wird verwendet, um das Kontextmenü für das ausgewählte Element anzuzeigen.
 
 **Anwendungsmenü**
 
-Ein Steuerelement, das ein Menü mit Befehlen anzeigt, die eine Aktion für ein Dokument oder einen Arbeitsbereich, wie z. b. Datei bezogene Befehle, beinhalten.
+Ein Steuerelement, das ein Menü mit Befehlen darstellt, die ein Dokument oder einen Arbeitsbereich betreffen, z. B. dateibezogene Befehle.
 
-Zeigt das Kontextmenü für die aktuelle Auswahl an (identisch mit Drücken von UMSCHALT + F10).
+Zeigt das Kontextmenü für die aktuelle Auswahl an (entspricht dem Drücken von UMSCHALT+F10).
 
-**Anwendungsthemen**
+**Anwendungs-Theming**
 
-Verwenden verwandter visueller Techniken, wie z. b. angepasste Steuerelemente, um ein eindeutiges aussehen oder Branding für eine Anwendung zu erstellen.
+Verwenden verwandter visueller Techniken, z. B. benutzerdefinierter Steuerelemente, um ein eindeutiges Erscheinungsbild oder Branding für eine Anwendung zu erstellen.
 
 **Seitenverhältnis**
 
-Ein Ausdruck der Beziehung zwischen der Breite eines Objekts und seiner Höhe. Beispielsweise verwendet High Definition TV ein 16:9-Seitenverhältnis.
+Ein Ausdruck der Beziehung zwischen der Breite eines Objekts und seiner Höhe. High Definition Tv verwendet beispielsweise ein Seitenverhältnis von 16:9.
 
-**automatisch vervollständigen**
+**Automatische Vervollständigung**
 
-Eine Liste von Listen, die in Textfeldern und bearbeitbaren Dropdown Listen verwendet werden, in denen die wahrscheinliche Eingabe extrapoliert und automatisch aufgefüllt werden kann, wenn Sie zuvor eingegeben wurde. Benutzer geben eine minimale Menge an Text ein, um die automatische Vervollständigung aufzufüllen.
+Ein Listentyp, der in Textfeldern und bearbeitbaren Dropdownlisten verwendet wird, in denen die wahrscheinliche Eingabe extrapoliert und automatisch aus der vorherigen Eingabe aufgefüllt werden kann. Benutzer geben eine minimale Textmenge ein, um die Liste für die automatische Vervollständigung aufzufüllen.
 
-**automatisch beenden**
+**Automatisches Beenden**
 
-Ein Textfeld, in dem der Eingabefokus automatisch in das nächste Verwandte Textfeld verschoben wird, sobald ein Benutzer das letzte Zeichen eingibt.
+Ein Textfeld, in dem der Eingabefokus automatisch in das nächste verknüpfte Textfeld verschoben wird, sobald ein Benutzer das letzte Zeichen eingibt.
 
 ## <a name="b"></a>B
 
-**Ballons**
+**Ballon**
 
-Ein gängiges Windows-Steuerelement, mit dem Benutzer über ein nicht kritisches Problem oder eine besondere Bedingung informiert werden.
+Ein gängiges Windows Steuerelement, das Benutzer über ein nicht kritisches Problem oder eine besondere Bedingung informiert.
 
 **Breadcrumb-Leiste**
 
-Ein Navigationselement, das in der Regel am oberen Rand eines Fensters angezeigt wird, das angezeigt wird und es Benutzern ermöglicht, Ihre aktuelle Position zu ändern. "Breadcrumb" bezieht sich auf das Unterbrechen des aktuellen Standorts in eine Reihe von Links, die durch Pfeile getrennt sind, mit denen Benutzer direkt interagieren können. Verwenden Sie stattdessen die Adressleiste. Siehe auch: [Adressleiste](#alink).
+Ein Navigationselement, das in der Regel am oberen Rand eines Fensters angezeigt wird und benutzern das Ändern ihres aktuellen Speicherorts ermöglicht. "Breadcrumb" bezieht sich darauf, die aktuelle Position in eine Reihe von Links zu untergliedern, die durch Pfeile getrennt sind, mit denen Benutzer direkt interagieren können. Verwenden Sie stattdessen die Adressleiste. Siehe auch: [Adressleiste](#alink).
 
 ## <a name="c"></a>C
 
 **Kontrollkästchen**
 
-Ein gängiges Windows-Steuerelement, mit dem Benutzer zwischen klar abweichenden Optionen entscheiden können, z. b. ein-oder Ausschalten einer Option.
+Ein gängiges Windows Steuerelement, mit dem Benutzer zwischen eindeutig unterschiedlichen Optionen entscheiden können, z. B. das Umschalten einer Option ein- oder ausschalten.
 
 **Chevron**
 
-Ein kleines Steuerelement oder eine Schaltfläche, das angibt, dass mehr Elemente vorhanden sind, als im zugewiesenen Bereich angezeigt werden können. Benutzer klicken auf das Chevron, um die zusätzlichen Elemente anzuzeigen.
+Ein kleines Steuerelement oder eine kleine Schaltfläche, das angibt, dass mehr Elemente vorhanden sind, als im zugewiesenen Bereich angezeigt werden können. Benutzer klicken auf das Chevron, um die zusätzlichen Elemente anzuzeigen.
 
-**untergeordnetes Fenster**
+**Untergeordnetes Fenster**
 
-Ein Fenster, z. b. ein Steuerelement oder ein Bereich, das vollständig in einem anderen Fenster enthalten ist, das als übergeordnetes Fenster bezeichnet wird. Siehe auch: über [geordnetes Fenster](#p), [Besitzer Fenster](#o).
+Ein Fenster, z. B. ein Steuerelement oder ein Bereich, das vollständig in einem anderen Fenster enthalten ist, das als übergeordnetes Fenster bezeichnet wird. Siehe auch: [übergeordnetes Fenster,](#p) [eigenes Fenster](#o).
 
 **Deaktiviert**
 
-In einem Kontrollkästchen gibt an, dass die Option nicht festgelegt ist. Siehe auch: [ausgewählter](#s), [gemischter Zustand](#m).
+Gibt in einem Kontrollkästchen an, dass die Option nicht festgelegt ist. Siehe auch: [ausgewählt,](#s) [gemischter Zustand.](#m)
 
-**Kombinations Feld**
+**Kombinationsfeld**
 
-Ein gängiges Windows-Steuerelement, das die Eigenschaften einer Dropdown Liste oder eines Standard Listen Felds und ein bearbeitbares Textfeld kombiniert. Siehe auch: [Listenfeld](#l), [Dropdown Liste](#d).
+Ein allgemeines Windows Steuerelement, das die Merkmale einer Dropdownliste oder eines Standardlistenfelds und ein bearbeitbares Textfeld kombiniert. Siehe auch: [Listenfeld](#l), [Dropdownliste](#d).
 
 **Befehlsbereich**
 
-Der Bereich in einem Fenster, in dem sich die Commit-Schaltflächen befinden. Dialogfelder und Assistenten verfügen in der Regel über einen Befehlsbereich. Siehe auch: Commit-Schaltfläche.
+Der Bereich in einem Fenster, in dem sich die Commitschaltflächen befinden. In der Regel verfügen Dialogfelder und Assistenten über einen Befehlsbereich. Siehe auch: Commitschaltfläche.
 
-**Befehls Schaltfläche**
+**Befehlsschaltfläche**
 
-Ein gängiges Windows-Steuerelement, mit dem Benutzer sofort eine Aktion initiieren können.
+Ein gängiges Windows Steuerelement, mit dem Benutzer sofort eine Aktion initiieren können.
 
-**Befehls Link**
+**Befehlslink**
 
-Ein Steuerelement, das verwendet wird, um zwischen einem Satz von sich gegenseitig ausschließenden, zusammenhängenden Optionen auszuwählen. In Ihrem normalen Zustand haben Befehls Verknüpfungen ein einfacheres Aussehen ähnlich wie Hyperlinks, aber ihr Verhalten ähnelt den Befehls Schaltflächen.
+Ein Steuerelement, das verwendet wird, um eine Auswahl zwischen einer Reihe von sich gegenseitig ausschließenden, verwandten Optionen zu treffen. Im normalen Zustand weisen Befehlslinks eine einfache Darstellung auf, die Links ähnelt, aber ihr Verhalten ähnelt eher Befehlsschaltflächen.
 
-**Commit-Schaltfläche**
+**Commitschaltfläche**
 
-Eine Befehls Schaltfläche, mit der ein Commit für eine Aufgabe ausgeführt wird, mit dem nächsten Schritt in einer mehrstufigen Aufgabe fortgefahren oder eine Aufgabe abgebrochen wird. Siehe auch: Befehlsbereich.
+Eine Befehlsschaltfläche, die verwendet wird, um einen Commit für eine Aufgabe durchzuführen, mit dem nächsten Schritt in einer mehrstufigen Aufgabe fortzufahren oder eine Aufgabe abzubrechen. Siehe auch: Befehlsbereich.
 
-**Commit-Seite**
+**Commitseite**
 
-Eine Art der Assistenten Seite, in der Benutzer die Aufgabe ausführen. Danach kann die Aufgabe nicht rückgängig gemacht werden, indem Sie auf die Schaltflächen zurück oder Abbrechen klicken.
+Eine Art von Assistentenseite, auf der Benutzer sich für die Ausführung der Aufgabe committen. Anschließend kann die Aufgabe nicht rückgängig gemacht werden, indem Sie auf die Schaltflächen Zurück oder Abbrechen klicken.
 
-**Abschluss Seite**
+**Vervollständigungsseite**
 
-Eine Assistenten Seite, mit der das Ende eines Assistenten angegeben wird. Wird manchmal anstelle von Herzlichen Glückwunsch Seiten verwendet. Siehe auch: Seite mit Glückwunsch.
+Eine Assistentenseite, die verwendet wird, um das Ende eines Assistenten anzugeben. Manchmal anstelle von Herzlichen Glückwunschseiten verwendet. Siehe auch: Herzlichen Glückwunsch.
 
-**Herzlichen Glückwunsch**
+**Herzlichen Glückwunschseite**
 
-Eine Assistenten Seite, mit der das Ende eines Assistenten angegeben wird. Diese Seiten werden nicht mehr empfohlen. Assistenten werden effizienter mit einer Commit-Seite oder ggf. einer nach Verfolgungs-oder Abschluss Seite beendet. Siehe auch: Seite "Commit", Seite "Abschluss", Seite "nach [Verfolgung](#f)".
+Eine Assistentenseite, die verwendet wird, um das Ende eines Assistenten anzugeben. Diese Seiten werden nicht mehr empfohlen. Assistenten schließen effizienter mit einer Commitseite oder ggf. einer Nachverfolgungs- oder Vervollständigungsseite ab. Siehe auch: Commitseite, Vervollständigungsseite, [Nachverfolgungsseite.](#f)
 
-**Benutzeroberfläche für Zustimmung**
+**Zustimmungs-Benutzeroberfläche**
 
-Ein von der Benutzerkontensteuerung (User Account Control, UAC) verwendetes Dialogfeld, mit dem geschützte Administratoren ihre Berechtigungen vorübergehend erhöhen können.
+Ein dialogfeld, das von der Benutzerkontensteuerung (User Account Control, UAC) verwendet wird und es geschützten Administratoren ermöglicht, ihre Berechtigungen vorübergehend zu erhöhen.
 
 **Einschränkung**
 
-In Steuerelementen, die Benutzereingaben einschließen, wie z. b. Textfelder, sind Eingabe Einschränkungen eine wertvolle Methode zum Verhindern von Fehlern. Wenn z. b. die einzige gültige Eingabe für ein bestimmtes Steuerelement numerisch ist, kann das Steuerelement geeignete Wert Einschränkungen verwenden, um diese Anforderung zu erzwingen.
+In Steuerelementen, die Benutzereingaben beinhalten, z. B. Textfelder, sind Eingabeeinschränkungen eine wertvolle Möglichkeit, Fehler zu vermeiden. Wenn die einzige gültige Eingabe für ein bestimmtes Steuerelement beispielsweise numerisch ist, kann das Steuerelement entsprechende Werteinschränkungen verwenden, um diese Anforderung zu erzwingen.
 
-**Inhalts Bereich**
+**Inhaltsbereich**
 
-Der Teil der Benutzeroberflächen Oberflächen, z. b. Dialogfelder, System Steuerungselemente und Assistenten, die für das darstellen von Optionen, das Bereitstellen von Informationen und das Beschreiben von Steuerelementen vorgesehen sind Unterschieden im Befehlsbereich, im Aufgabenbereich und im Navigationsbereich.
+Der Teil der Benutzeroberflächen, z. B. Dialogfelder, Systemsteuerungselemente und Assistenten, der der Darstellung von Optionen, der Bereitstellung von Informationen und der Beschreibung von Steuerelementen dient. Unterscheidet sich vom Befehlsbereich, Aufgabenbereich und Navigationsbereich.
 
-**Kontext Registerkarte**
+**Kontextregisterkarte**
 
-Eine Registerkarte, die eine Auflistung von Befehlen enthält, die nur relevant sind, wenn der Benutzer einen bestimmten Objekttyp ausgewählt hat. Siehe auch: [Menüband](#r).
+Eine Registerkarte mit einer Auflistung von Befehlen, die nur relevant sind, wenn der Benutzer einen bestimmten Objekttyp ausgewählt hat. Siehe auch: [Menüband](#r).
 
 **Systemsteuerung**
 
-Ein Windows-Programm, das für Benutzer die Features der Computer auf Systemebene sammelt und anzeigt, einschließlich Hardware-und Software Einrichtung und Konfiguration. In der Systemsteuerung können Benutzer auf einzelne Elemente klicken, um Features auf Systemebene zu konfigurieren und verwandte Aufgaben auszuführen. Siehe auch: System Steuerungselement.
+Ein Windows Programm, das die Features des Computers auf Systemebene erfasst und für Benutzer anzeigt, einschließlich Hardware- und Softwareeinrichtung und -konfiguration. Über Systemsteuerung können Benutzer auf einzelne Elemente klicken, um Features auf Systemebene zu konfigurieren und verwandte Aufgaben auszuführen. Siehe auch: Systemsteuerungselement.
 
-**System Steuerungselement**
+**Systemsteuerungselement**
 
-Ein einzelnes Feature, das in der Systemsteuerung verfügbar ist. Programme und einfache Zugriffsmöglichkeiten sind z. b. zwei System Steuerungselemente.
+Ein einzelnes Feature, das über Systemsteuerung verfügbar ist. Programme und Erleichterte Bedienung sind beispielsweise zwei Systemsteuerungselemente.
 
-**Benutzeroberfläche für Anmelde Informationen**
+**Benutzeroberfläche für Anmeldeinformationen**
 
-Ein von der Benutzerkontensteuerung (User Account Control, UAC) verwendetes Dialogfeld, das es Standard Benutzern ermöglicht, eine temporäre Rechte Erweiterung anzufordern.
+Ein dialogfeld, das von der Benutzerkontensteuerung (User Account Control, UAC) verwendet wird und es Standardbenutzern ermöglicht, eine temporäre Rechteerweiterung anzufordern.
 
-**kritisch**
+**Kritisch**
 
-Der höchste Schweregrad. Beispielsweise können in Fehler-und Warnmeldungen kritische Umstände Datenverlust, Datenverlust oder Verlust der Systemintegrität einschließen.
+Der höchste Schweregrad. Bei Fehler- und Warnmeldungen können kritische Umstände z. B. Datenverlust, Verlust des Datenschutzes oder Verlust der Systemintegrität umfassen.
 
-**benutzerdefiniertes Symbol**
+**Benutzerdefiniertes Symbol**
 
-Eine eindeutige Darstellung eines Programms (im Gegensatz zu einem Windows-System Symbol).
+Eine bildliche Darstellung, die für ein Programm eindeutig ist (im Gegensatz zu einem Windows Systemsymbol).
 
-**benutzerdefinierte Visualisierungen**
+**Benutzerdefinierte Visuals**
 
 Grafiken, Animationen, Symbole und andere visuelle Elemente, die speziell für ein Programm entwickelt wurden.
 
 ## <a name="d"></a>D
 
-**Standard Befehls Schaltfläche oder Link**
+**Standardbefehlsschaltfläche oder Link**
 
-Die Befehls Schaltfläche oder der Link, die aufgerufen wird, wenn Benutzer die EINGABETASTE drücken. Die Standard Befehls Schaltfläche oder der Link wird vom Entwickler zugewiesen, allerdings wird eine beliebige Befehls Schaltfläche oder ein Link zum Standard, wenn Benutzer mit der Tab-Taste
+Die Befehlsschaltfläche oder der Link, die aufgerufen wird, wenn Benutzer die EINGABETASTE drücken. Die Standardbefehlsschaltfläche oder der Standardbefehlslink wird vom Entwickler zugewiesen, aber jede Befehlsschaltfläche oder jeder Befehlslink wird zum Standard, wenn Benutzer darauf klicken.
 
-**Standard Monitor**
+**Standardmonitor**
 
 Der Monitor mit dem Startmenü, der Taskleiste und dem Benachrichtigungsbereich.
 
-**verzögerte Commit-Modell**
+**Verzögertes Commitmodell**
 
-Das vom System Steuerungselement verwendete commitmodell verwendet Seiten, bei denen Änderungen erst vorgenommen werden, wenn Benutzer explizit durch Klicken auf die Schaltfläche "Commit" committet wurden Folglich können Benutzer eine Aufgabe verwerfen, indem Sie die Schaltfläche "zurück", "Schließen" oder "Adressleiste" navigieren. Siehe auch: [sofortiges Commit-Modell](#i).
+Das Commitmodell, das von den Spoke-Seiten des Systemsteuerungselements verwendet wird, auf denen Änderungen erst vorgenommen werden, wenn benutzer explizit auf eine Commitschaltfläche klicken. Daher können Benutzer eine Aufgabe verwerfen und mithilfe der Schaltfläche "Zurück", Schließen oder der Adressleiste weg navigieren. Siehe auch: [Modell mit sofortigem Commit.](#i)
 
 **Desktop**
 
-Der Arbeitsbereich auf dem Bildschirm, der von Windows bereitgestellt wird, analog zu einem physischen Desktop. Siehe auch: [Arbeitsbereich](#w).
+Der von Windows bereitgestellte Arbeitsbereich auf dem Bildschirm, analog zu einem physischen Desktop. Siehe auch: [Arbeitsbereich](#w).
 
 **destruktiver Befehl**
 
-Eine Aktion, die einen weit verbreiteten Effekt hat und nicht einfach rückgängig gemacht werden kann oder nicht sofort erkennbar ist.
+Eine Aktion, die weit verbreitete Auswirkungen hat und nicht einfach rückgängig zu machen ist oder nicht sofort wahrnehmbar ist.
 
 **Detailbereich**
 
-Der Bereich am unteren Rand eines Windows-Explorer-Fensters, in dem Details zu den ausgewählten Elementen (sofern vorhanden) angezeigt werden. Andernfalls werden Details zum Ordner angezeigt. Beispielsweise werden in der Windows-Fotogalerie der Bildname, der Dateityp, das Datum, die Tags, die Bewertung, die Dimensionen und die Dateigröße angezeigt. Siehe auch: [Vorschau](#p)Bereich.
+Der Bereich am unteren Rand eines Windows Explorer-Fensters, in dem (falls vorhanden) Details zu den ausgewählten Elementen angezeigt werden. Andernfalls werden Details zum Ordner angezeigt. Windows Fotogalerie zeigt z. B. den Bildnamen, den Dateityp, das Datum, tags, die Bewertung, die Dimensionen und die Dateigröße an. Siehe auch: [Vorschaubereich](#p).
 
 **Dialogfeld**
 
-Ein sekundäres Fenster, das es Benutzern ermöglicht, einen Befehl auszuführen, Benutzer zu einer Frage zu bitten oder Benutzern Informationen oder Fortschritts Feedback bereitstellt.
+Ein sekundäres Fenster, in dem Benutzer einen Befehl ausführen, Benutzern eine Frage stellen oder Informationen oder Fortschrittsfeedback erhalten.
 
 **Dialogfeld-Startprogramm**
 
-In einem Menüband eine Schaltfläche am unteren Rand einiger Gruppen, die ein Dialogfeld mit Funktionen öffnet, die mit der Gruppe verknüpft sind. Siehe auch: [Menüband](#r).
+In einem Menüband eine Schaltfläche am unteren Rand einiger Gruppen, die ein Dialogfeld mit Features öffnet, die sich auf die Gruppe beziehen. Siehe auch: [Menüband](#r).
 
-**Dialogfeld Einheit**
+**Dialogeinheit**
 
-Eine Dialog Einheit (DLU) ist das geräteunabhängige Measure, das für das Layout basierend auf der aktuellen System Schriftart verwendet werden soll.
+Eine Dialogeinheit (Dialog Unit, DLU) ist das geräteunabhängige Measure, das für das Layout basierend auf der aktuellen Systemschriftart verwendet werden soll.
 
-**direkte Bearbeitung**
+**Direkte Bearbeitung**
 
-Direkte Interaktion zwischen dem Benutzer und den Objekten in der Benutzeroberfläche (z. b. Symbole, Steuerelemente und Navigationselemente). Die Maus und die Fingereingabe sind gängige Methoden der direkten Bearbeitung.
+Direkte Interaktion zwischen dem Benutzer und den Objekten auf der Benutzeroberfläche (z. B. Symbole, Steuerelemente und Navigationselemente). Maus und Fingereingabe sind gängige Methoden für die direkte Bearbeitung.
 
-**angedocktes Fenster**
+**Angedocktes Fenster**
 
-Ein Fenster, das an einer festgelegten Position am Rand seines Besitzer Fensters angezeigt wird. Siehe auch: unverankerte [Fenster](#f).
+Ein Fenster, das an einer festen Position am Rand des Besitzerfensters angezeigt wird. Siehe auch: [Unverankerte Fenster](#f).
 
-**Dropdown Pfeil**
+**Dropdownpfeil**
 
-Der Pfeil, der Dropdown Listen, Kombinations Felder, unterteilte Schaltflächen und Menü Schaltflächen zugeordnet ist, gibt an, dass Benutzer die zugeordnete Liste anzeigen können, indem Sie auf den Pfeil klicken.
+Der Pfeil, der Dropdownlisten, Kombinationsfeldern, geteilten Schaltflächen und Menüschaltflächen zugeordnet ist und angibt, dass Benutzer die zugeordnete Liste anzeigen können, indem sie auf den Pfeil klicken.
 
 **Dropdownliste**
 
-Ein gängiges Windows-Steuerelement, mit dem Benutzer zwischen einer Liste von sich gegenseitig ausschließenden Werten auswählen können. Anders als bei einem Listenfeld wird diese Liste der verfügbaren Optionen normalerweise ausgeblendet.
+Ein allgemeines Windows Steuerelement, mit dem Benutzer eine Liste von sich gegenseitig ausschließenden Werten auswählen können. Im Gegensatz zu einem Listenfeld ist diese Liste der verfügbaren Optionen normalerweise ausgeblendet.
 
 ## <a name="e"></a>E
 
-**effektive Auflösung**
+**effektive Lösung**
 
-Die physische Auflösung eines Monitors, der durch die aktuelle dpi-Einstellung (dots per inch) normalisiert wird. Bei 96 dpi ist die effektive Auflösung identisch mit der physischen Auflösung, aber in anderen DPIs muss die effektive Auflösung proportional skaliert werden. Im Allgemeinen kann die effektive Auflösung mithilfe der folgenden Gleichung berechnet werden:
+Die physische Auflösung eines Monitors, normalisiert durch die aktuelle dpi-Einstellung (Punkte pro Zoll). Bei 96 dpi entspricht die effektive Auflösung der physischen Auflösung, aber in anderen DPIS muss die effektive Auflösung proportional skaliert werden. Im Allgemeinen kann die effektive Auflösung mithilfe der folgenden Gleichung berechnet werden:
 
-Effektive Auflösung = physische Auflösung x (96/aktuelle dpi-Einstellung)
+Effektive Auflösung = Physische Auflösung x (96 /aktuelle dpi-Einstellung)
 
-Siehe auch: [relative Pixel](#r), [physische Auflösung](#p).
+Siehe auch: [relative Pixel,](#r) [physische Auflösung.](#p)
 
 **Administrator mit erhöhten Rechten**
 
-In der Benutzerkontensteuerung haben Administratoren mit erhöhten Rechten Administratorrechte. Ohne Erhöhung werden Administratoren mit dem Zustand mit den geringsten Rechten ausgeführt. Das Dialogfeld für die Zustimmungs Benutzeroberfläche dient zum herauf Stufen von Administratoren auf einen erhöhten Status, wenn dies erforderlich ist. Siehe auch: [geschützter Administrator](#p), [Standardbenutzer](#s).
+Unter Benutzerkontensteuerung verfügen administratoren mit erhöhten Rechten über Administratorrechte. Ohne Eine Erhöhung werden Administratoren in ihrem Zustand mit den geringsten Berechtigungen ausgeführt. Das Dialogfeld Zustimmungs-Benutzeroberfläche wird verwendet, um Administratoren nur bei Bedarf auf einen erhöhten Status zu erhöhen. Siehe auch: [geschützter Administrator,](#p) [Standardbenutzer.](#s)
 
-**erweiterte QuickInfo**
+**Erweiterte QuickInfo**
 
-Ein Popup Fenster, in dem der Befehl, auf den verwiesen wird, kurz erläutert wird. Ebenso wie reguläre Quick Infos können erweiterte Quick Infos die Tastenkombination für den Befehl bereitstellen. Aber im Gegensatz zu regulären Quick Infos bieten Sie möglicherweise auch zusätzliche Informationen, Grafiken und einen Indikator, der die Hilfe verfügbar macht. Sie können auch Rich-Text und Trennzeichen verwenden. Siehe [auch:](#t)QuickInfo.
+Ein Popupfenster, in dem der Befehl, auf den gezeigt wird, präzise erläutert wird. Wie reguläre QuickInfos können erweiterte QuickInfos die Tastenkombination für den Befehl bereitstellen. Im Gegensatz zu regulären QuickInfos können sie jedoch auch zusätzliche Informationen, Grafiken und einen Indikator dafür bereitstellen, dass Hilfe verfügbar ist. Sie können auch Rich-Text und Trennzeichen verwenden. Siehe auch: [QuickInfo](#t).
 
 **error**
 
 Ein Zustand, in dem ein Problem aufgetreten ist. Siehe auch: [Warnung](#w).
 
-**erweiterbare Überschriften**
+**Erweiterbare Überschriften**
 
-Ein progressives Offenlegungs-Chevron-Muster, bei dem eine Überschrift erweitert oder reduziert werden kann, um eine Gruppe von Elementen anzuzeigen oder auszublenden. Siehe auch: [Progressive Offenlegung](#p).
+Ein Chevronmuster für die progressive Offenlegung, bei dem eine Überschrift erweitert oder reduziert werden kann, um eine Gruppe von Elementen ein- oder auszublenden. Siehe auch: [Progressive Offenlegung](#p).
 
 **Erweiterte Auswahl**
 
-In Listenansichten und Listenfeldern ein Mehrfachauswahl Modus, in dem die Auswahl eines einzelnen Elements durchziehen oder mit Umschalt + Klick oder Strg + Klick erweitert werden kann, um Gruppen von zusammenhängenden bzw. nicht angrenzenden Werten auszuwählen. Siehe auch: [Mehrfachauswahl](#m).
+In Listenansichten und Listenfeldern ein Mehrfachauswahlmodus, in dem die Auswahl eines einzelnen Elements durch Ziehen oder mit UMSCHALT+KLICK oder STRG+KLICK erweitert werden kann, um Gruppen zusammenhängender bzw. nicht benachbarter Werte auszuwählen. Siehe auch: [Mehrfachauswahl.](#m)
 
 ## <a name="f"></a>F
 
-**umzu**
+**Flick**
 
-Ein schneller, geradliniger Strich eines Fingers oder Stifts auf einem Bildschirm. Ein Flick wird als Geste erkannt und als Navigations-oder Bearbeitungs Befehl interpretiert.
+Ein schneller, gerader Strich eines Fingers oder Stifts auf einem Bildschirm. Ein Flimmer wird als Geste erkannt und als Navigations- oder Bearbeitungsbefehl interpretiert.
 
-**gleitendes Fenster**
+**Unverankerte Fenster**
 
-Ein Fenster, das auf dem Bildschirm angezeigt werden kann, den der Benutzer wünscht. Siehe auch: [angedocktes Fenster](#d).
+Ein Fenster, das an einer beliebigen Stelle auf dem Bildschirm angezeigt werden kann, den der Benutzer möchte. Siehe auch: [docked window](#d).
 
 **Flyout**
 
-Ein Popup Fenster, in dem temporär weitere Informationen angezeigt werden. Auf dem Windows-Desktop werden Flyouts angezeigt, indem Sie auf eine Mini Anwendung klicken und durch Klicken auf eine beliebige Stelle außerhalb des Flyout verworfen werden. Sie können Flyouts in den angedockten und gleitenden Zuständen verwenden.
+Ein Popupfenster, in dem vorübergehend weitere Informationen angezeigt werden. Auf dem Windows Desktop werden Flyouts angezeigt, indem Sie auf ein Gadget klicken, und durch Klicken auf eine beliebige Stelle außerhalb des Flyouts werden sie verworfen. Sie können Flyouts sowohl im angedockten als auch im unverankerten Status verwenden.
 
-**nach Verfolgungs Seite**
+**Nachverfolgungsseite**
 
-Eine Assistenten Seite, die verwendet wird, um verwandte Aufgaben darzustellen, die Benutzer wahrscheinlich als Nachverfolgung durchführen. Wird manchmal anstelle von Herzlichen Glückwunsch Seiten verwendet.
+Eine Assistentenseite, die verwendet wird, um verwandte Aufgaben zu präsentieren, die Benutzer wahrscheinlich als Folge ausführen werden. Wird manchmal anstelle von Glückwunschseiten verwendet.
 
-**Raster**
+**Schriftart**
 
 Ein Satz von Attributen für Textzeichen.
 
 **Vollbild**
 
-Ein maximiertes Fenster, das nicht über einen Frame verfügt.
+Ein maximiertes Fenster ohne Frame.
 
 ## <a name="g"></a>G
 
-**Gerät**
+**Gadget**
 
-Eine einfache Mini Anwendung, die auf dem Desktop des Benutzers gehostet wird. Siehe auch: Rand [Leiste](#s).
+Eine einfache Minianwendung, die auf dem Desktop des Benutzers gehostet wird. Siehe auch: [Randleiste](#s).
 
 **Galerie**
 
-Eine grafisch dargestellte Liste von Befehlen oder Optionen. In einem ergebnisbasierten Katalog werden die Auswirkungen der Befehle oder Optionen anstelle der Befehle selbst veranschaulicht. Kann eine Bezeichnung oder eine Gruppierung aufweisen. Formatierungsoptionen können z. b. in einem Miniatur Ansichts Katalog angezeigt werden.
+Eine Liste von Befehlen oder Optionen, die grafisch dargestellt werden. Ein ergebnisbasierter Katalog veranschaulicht die Auswirkungen der Befehle oder Optionen anstelle der Befehle selbst. Kann beschriftet oder gruppiert sein. Formatierungsoptionen können beispielsweise in einem Miniaturansichtskatalog angezeigt werden.
 
-**Gestaltungs**
+**Geste**
 
-Eine schnelle Bewegung eines Fingers oder Stifts auf einem Bildschirm, der vom Computer als Befehl interpretiert wird, anstatt als Mausbewegung, schreiben oder zeichnen.
+Eine schnelle Bewegung eines Fingers oder Stifts auf einem Bildschirm, den der Computer als Befehl interpretiert, anstatt als Mausbewegung, Schreiben oder Zeichnen.
 
-**Seite "Getting Started"**
+**Seite "Erste Schritte"**
 
-Eine optionale Assistenten Seite, die die Voraussetzungen für die erfolgreiche Ausführung des Assistenten beschreibt oder den Zweck des Assistenten erläutert.
+Eine optionale Assistentenseite, auf der die Voraussetzungen für die erfolgreiche Ausführung des Assistenten beschrieben werden oder der Zweck des Assistenten erläutert wird.
 
-**serei**
+**Glas**
 
-Eine von der Durchlässigkeit bezeichnete Fensterrahmen Option, die es Benutzern ermöglicht, sich auf Inhalte und Funktionen zu konzentrieren, anstatt auf die Schnittstelle, die Sie umgibt.
+Eine Fensterrahmenoption, die durch Transzendenz gekennzeichnet ist und Benutzern hilft, sich auf Inhalte und Funktionen zu konzentrieren, anstatt auf die Schnittstelle, die sie umhängt.
 
-**Symbol**
+**Glyph**
 
-Ein allgemeiner Begriff, mit dem auf ein beliebiges Diagramm oder ein symbolisches Bild verwiesen wird. Pfeile, Chevrons und Aufzählungs Zeichen sind Symbole, die häufig in Windows verwendet werden.
+Ein generischer Begriff, der verwendet wird, um auf ein beliebiges Diagramm oder ein symbolisches Bild zu verweisen. Pfeile, Chevrons und Aufzählungszeichen sind Glyphen, die häufig in der Windows.
 
 **Gruppenfeld**
 
-Ein gängiges Windows-Steuerelement, das Beziehungen zwischen einem Satz verwandter Steuerelemente anzeigt.
+Ein allgemeines Windows, das Beziehungen zwischen einem Satz verwandter Steuerelemente zeigt.
 
 ## <a name="h"></a>H
 
 **Handschrifterkennung**
 
-Software, die frei Hand Eingaben in Text konvertiert.
+Software, die Ink in Text konvertiert.
 
 **Hilfe**
 
-Benutzerunterstützung in einer detaillierteren Art als in der primären Benutzeroberfläche verfügbar ist. Dieser Inhalt kann in der Regel über ein Menü oder durch Klicken auf einen Hilfelink oder-Symbol aufgerufen werden. Dies umfasst u. a. schrittweise Anleitungen, konzeptionellen Text oder visuell-basierte, geführte Tutorials.
+Benutzerunterstützung, die detaillierter ist, als auf der primären Benutzeroberfläche verfügbar ist. In der Regel kann der Zugriff über ein Menü oder durch Klicken auf einen Hilfelink oder ein Symbol eine Vielzahl von Formularen umfassen, z. B. schrittweise Prozeduren, konzeptioneller Text oder mehr visuell basierte, geführte Tutorials.
 
-**Modus mit hohem Kontrast**
+**Modus für hohen Kontrast**
 
-Eine besondere Anzeige Einstellung, die einen extrem Kontrast für visuelle Vordergrund-und Hintergrundelemente (entweder schwarz bei weiß oder weiß in schwarz) bereitstellt. Besonders hilfreich für die Barrierefreiheit.
+Eine spezielle Anzeigeeinstellung, die extreme Kontraste für visuelle Vordergrund- und Hintergrundelemente (entweder Schwarz auf Weiß oder Weiß auf Schwarz) bietet. Besonders hilfreich für die Barrierefreiheit.
 
-**Seite "Hub"**
+**Hubseite**
 
-In System Steuerungselementen zeigt eine Hub-Seite Allgemeine Optionen an, z. b. die am häufigsten verwendeten Aufgaben (wie z. b. aufgabenbasierte Hub-Seiten) oder die verfügbaren Objekte (wie bei objektbasierten Hub-Seiten). Benutzer können zu den Sprachseiten navigieren, um bestimmte Aufgaben auszuführen. Siehe auch: [Seite](#s)"sprechen".
+In systemsteuerungsbasierten Elementen bietet eine Hubseite allgemeinen Auswahlmöglichkeiten, z. B. die am häufigsten verwendeten Aufgaben (wie bei aufgabenbasierten Hubseiten) oder die verfügbaren Objekte (wie bei objektbasierten Hubseiten). Benutzer können zu Spoke-Seiten navigieren, um bestimmte Aufgaben auszuführen. Siehe auch: [Spoke-Seite](#s).
 
-**hybridhub Seite**
+**Seite "Hybrid Hub"**
 
-In System Steuerungselementen ist eine hybridhub Seite eine Hub-Seite, auf der auch einige Eigenschaften oder Befehle direkt darauf angezeigt werden. Hybride Hub-Seiten werden dringend empfohlen, wenn Benutzer mit der höchsten Wahrscheinlichkeit das System Steuerungselement verwenden, um auf diese Eigenschaften und Befehle zuzugreifen.
+In Systemsteuerungselementen ist eine Hybrid Hub-Seite eine Hubseite, die auch einige Eigenschaften oder Befehle direkt enthält. Hybrid Hub-Seiten werden dringend empfohlen, wenn Benutzer höchstwahrscheinlich das Systemsteuerungselement verwenden, um auf diese Eigenschaften und Befehle zu zugreifen.
 
 ## <a name="i"></a>I
 
-**sofortiges Commit-Modell**
+**Modell für sofortiges Commit**
 
-Das von Hybrid-Hub-Seiten verwendete Commit-Modell, bei dem Änderungen wirksam werden, sobald Benutzer Sie vornehmen. Commit-Schaltflächen werden in diesem Modell nicht verwendet. Siehe auch: [verzögertes Commit-Modell](#d).
+Das von Hybrid Hub-Seiten verwendete Commitmodell, bei dem Änderungen wirksam werden, sobald sie von Benutzern vorgenommen werden. Commitschaltflächen werden in diesem Modell nicht verwendet. Siehe auch: [Modell mit verzögerten Commits.](#d)
 
-**direkte Nachricht**
+**In-Place-Nachricht**
 
-Eine Meldung, die im Kontext der aktuellen UI-Oberfläche anstelle eines separaten Fensters angezeigt wird. Anders als bei separaten Fenstern benötigen direkte Nachrichten entweder den verfügbaren Bildschirmbereich oder das dynamische Layout.
+Eine Meldung, die im Kontext der aktuellen Benutzeroberflächenoberfläche anstelle eines separaten Fensters angezeigt wird. Im Gegensatz zu separaten Fenstern erfordern direkt ausgeführte Nachrichten entweder verfügbaren Bildschirmbereich oder dynamisches Layout.
 
-**indirektes Dialogfeld**
+**Indirektes Dialogfeld**
 
-Ein Dialogfeld, das außerhalb des Kontexts angezeigt wird, entweder als indirektes Ergebnis einer Aufgabe oder als Ergebnis eines Problems mit einem System-oder Hintergrundprozess.
+Ein Dialogfeld, das nicht im Kontext angezeigt wird, entweder als indirektes Ergebnis einer Aufgabe oder als Ergebnis eines Problems mit einem System- oder Hintergrundprozess.
 
-**Induktive Benutzeroberfläche**
+**Inive Benutzeroberfläche**
 
-Eine Benutzeroberfläche, die eine komplexe Aufgabe in einfache, leicht zu erklärende Schritte mit einem klaren Zweck unterbricht.
+Eine Benutzeroberfläche, die eine komplexe Aufgabe in einfache, leicht zu erklärende, klar definierte Schritte mit einem eindeutigen Zweck unterbricht.
 
 **Infotipp**
 
-Ein kleines Popup Fenster, in dem das Objekt, auf das verwiesen wird, kurz beschrieben wird, z. b. Beschreibungen von Symbolleisten-Steuerelementen, Symbolen, Grafiken, Links, Windows-Explorer-Objekten, Start Menü Elementen und Task leisten Schaltflächen. Infotips sind eine Art progressiver Offenlegung, sodass nicht immer beschreibender Text auf dem Bildschirm vorhanden sein muss.
+Ein kleines Popupfenster, in dem das Objekt, auf das verwiesen wird, präzise beschrieben wird, z. B. Beschreibungen von Symbolleisten-Steuerelementen, Symbolen, Grafiken, Links, Windows Explorer-Objekten, Startmenü-Elementen und Taskleistenschaltflächen. Infotips sind eine Form der progressiven Offenlegung, sodass kein beschreibender Text mehr immer auf dem Bildschirm angezeigt werden muss.
 
-**Haken**
+**Tinte**
 
-Die Rohausgabe für einen Stift. Diese digitalen frei Hand Eingaben können wie geschrieben aufbewahrt werden, oder Sie können mithilfe von Handschrift Erkennungssoftware in Text konvertiert werden.
+Die rohe Ausgabe für einen Stift. Diese digitale Ink-Datei kann genauso geschrieben oder mithilfe von Handschrifterkennungssoftware in Text konvertiert werden.
 
-**Es**
+**inline**
 
-Platzierung von Links oder Meldungen direkt im Kontext der zugehörigen Benutzeroberfläche. Beispielsweise tritt ein Inline Link in einem anderen Text anstelle von separat auf.
+Direkte Platzierung von Links oder Nachrichten im Kontext der zugehörigen Benutzeroberfläche. Beispielsweise tritt ein Inlinelink in einem anderen Text statt separat auf.
 
 **Eingabefokus**
 
-Der Speicherort, an den der Benutzer derzeit Eingaben leitet. Beachten Sie, dass ein Speicherort in der Benutzeroberfläche nicht notwendigerweise bedeutet, dass dieser Speicherort den Eingabefokus besitzt.
+Der Speicherort, an dem der Benutzer die Eingabe gerade leitet. Beachten Sie, dass nur weil eine Position in der Benutzeroberfläche hervorgehoben ist, nicht notwendigerweise bedeutet, dass diese Position den Eingabefokus besitzt.
 
-**lichen**
+**Instanz**
 
-Eine Programm Sitzung. Beispielsweise ermöglicht Windows Internet Explorer Benutzern das Ausführen mehrerer Instanzen des Programms, da Benutzer mehrere unabhängige Sitzungen gleichzeitig ausführen können. Einstellungen können über programmsitzungen hinweg gespeichert werden. Siehe auch: [Persistenz](#p).
+Eine Programmsitzung. Beispielsweise ermöglicht Windows Internet Explorer Benutzern das Ausführen mehrerer Instanzen des Programms, da Benutzer mehrere unabhängige Sitzungen gleichzeitig ausführen können. Einstellungen können programmübergreifend gespeichert werden. Siehe auch: [Persistenz](#p).
 
 ## <a name="j"></a>J
 
 ## <a name="k"></a>K
 
-**KeyTip**
+**Keytip**
 
-Der zum Anzeigen von Zugriffs Schlüsseln verwendete Mechanismus in einem Menüband. Die Zugriffsschlüssel werden in Form eines kleinen Tipps für jeden Befehl oder jede Gruppe angezeigt, im Gegensatz zu den unterstrichenen Buchstaben, die normalerweise zum Anzeigen von Zugriffs Schlüsseln verwendet werden. Siehe auch: [Zugriffsschlüssel](#alink).
+In einem Menüband der Mechanismus zum Anzeigen von Zugriffsschlüsseln. Die Zugriffsschlüssel werden in Form eines kleinen Trinkgelds über jedem Befehl oder jeder Gruppe angezeigt, im Gegensatz zu den unterstrichenen Buchstaben, die normalerweise zum Anzeigen von Zugriffsschlüsseln verwendet werden. Siehe auch: [Zugriffsschlüssel](#alink).
 
 ## <a name="l"></a>L
 
 **Querformat**
 
-Eine Präsentations Option, mit der ein Objekt für einen größeren Wert als hoch festgelegt wird. Siehe auch: Hochformat [Modus](#p).
+Eine Präsentationsoption, die ein Objekt so ausrichten kann, dass es breiter als hoch ist. Siehe auch: [Hochformatmodus](#p).
 
-**Benutzerkonto mit geringsten Rechten**
+**Benutzerkonto mit der geringsten Berechtigung**
 
 Ein Benutzerkonto, das normalerweise mit minimalen Berechtigungen ausgeführt wird. Siehe auch: [Benutzerkontensteuerung](#u).
 
 **Listenfeld**
 
-Ein gängiges Windows-Steuerelement, mit dem Benutzer aus einer Reihe von Werten auswählen können, die in einer Liste dargestellt werden, die im Gegensatz zu einer Dropdown Liste immer sichtbar ist. Unterstützt eine einzelne oder mehrere Auswahlmöglichkeiten.
+Ein allgemeines Windows, mit dem Benutzer aus einer Gruppe von Werten in einer Liste auswählen können, die im Gegensatz zu einer Dropdownliste immer sichtbar ist. Unterstützt eine einzelne oder mehrfache Auswahl.
 
 **Listenansicht**
 
-Ein gängiges Windows-Steuerelement, mit dem Benutzer eine Auflistung von Datenobjekten anzeigen und mit einer einzelnen Auswahl oder einer Mehrfachauswahl interagieren können.
+Ein allgemeines Windows, mit dem Benutzer eine Sammlung von Datenobjekten anzeigen und mit ihr interagieren können, indem sie entweder eine einzelne Auswahl oder eine Mehrfachauswahl verwenden.
 
-**Live Vorschau**
+**Livevorschau**
 
-Ein vorschauverfahren, das die Auswirkung eines Befehls direkt auf die Auswahl oder den Mauszeiger anzeigt, ohne dass der Benutzer die Aktion commitht. Formatierungsoptionen, wie z. b. Designs, Schriftarten und Farben, profitieren z. b. von Live Vorschauen, indem die Benutzer die Auswirkungen mit minimalem Aufwand
+Eine Vorschautechnik, die die Auswirkung eines Befehls sofort auf die Auswahl oder den Hover zeigt, ohne dass der Benutzer einen Commit für die Aktion ausgeführt hat. Formatierungsoptionen wie Designs, Schriftarten und Farben profitieren beispielsweise von Livevorschauen, indem sie Benutzern den Effekt mit minimalem Aufwand zeigen.
 
 **Lokalisierung**
 
@@ -414,439 +414,439 @@ Der Prozess der Anpassung von Software für verschiedene Länder, Sprachen, Kult
 
 **Protokolldatei**
 
-Ein Datei basiertes Repository, das Informationen zu verschiedenen Arten von Aktivitäten auf einem Computersystem untersucht. Administratoren wenden häufig Protokolldateien an. Normalerweise ist dies nicht der Fall.
+Ein dateibasiertes Repository, das Informationen zu verschiedenen Arten von Aktivitäten auf einem Computersystem enthält. Administratoren konsultieren häufig Protokolldateien. Normale Benutzer tun dies in der Regel nicht.
 
 ## <a name="m"></a>M
 
-**Main-Anweisung**
+**main-Anweisung**
 
-Deutlich angezeigter Text, in dem kurz erläutert wird, was im Fenster oder auf der Seite zu tun ist. Die Anweisung sollte eine bestimmte Anweisung, eine imperative Richtung oder eine Frage sein. Gute Haupt Anweisungen vermitteln das Ziel des Benutzers, anstatt sich auf die Bearbeitung der Benutzeroberfläche zu konzentrieren.
+An prominenter Stelle angezeigter Text, der präzise erläutert, was im Fenster oder auf der Seite zu tun ist. Die Anweisung sollte eine bestimmte Anweisung, imperative Richtung oder Frage sein. Gute Hauptanweisungen kommunizieren das Ziel des Benutzers, anstatt sich nur auf die Bearbeitung der Benutzeroberfläche zu konzentrieren.
 
 **verwaltete Umgebung**
 
-Eine Netzwerkumgebung, die von einer IT-Abteilung oder einem Drittanbieter verwaltet wird, anstatt von einzelnen Benutzern. Administratoren können die Leistung optimieren und Betriebssystem-und Anwendungs Updates auf andere Aufgaben anwenden.
+Eine Netzwerkcomputerumgebung, die nicht von einzelnen Benutzern, sondern von einer IT-Abteilung oder einem Drittanbieter verwaltet wird. Administratoren können unter anderem die Leistung optimieren und Betriebssystem- und Anwendungsupdates anwenden.
 
-**Bearbeitung**
+**Manipulation**
 
-Ein Typ von Berührungs Interaktion, bei dem die Eingabe direkt der Art und Weise entspricht, wie das Objekt, das berührt wird, auf natürliche Weise auf die Aktion in der realen Welt reagiert
+Eine Art von Touchinteraktion, bei der eingabe direkt der Art entspricht, wie das objekt, das berührt wird, auf natürliche Weise auf die Aktion in der realen Welt reagiert.
 
-**optimieren**
+**Maximieren**
 
-, Wenn ein Fenster mit der größten Größe angezeigt werden soll. Siehe auch: minimieren, [wiederhergestellte Fenster](#r).
+So zeigen Sie ein Fenster mit der größten Größe an. Siehe auch: Minimieren des [wiederhergestellten Fensters.](#r)
 
-**stehen**
+**Menü**
 
-Eine Liste der Befehle oder Optionen, die für Benutzer im aktuellen Kontext verfügbar sind.
+Eine Liste der Befehle oder Optionen, die Benutzern im aktuellen Kontext zur Verfügung stehen.
 
-**Meldungs Feld**
+**Meldungsfeld**
 
 Ein sekundäres Fenster, das angezeigt wird, um einen Benutzer über eine bestimmte Bedingung zu informieren.
 
-**Mini Symbolleiste**
+**Minisymbolleiste**
 
-Eine kontextabhängige Symbolleiste, die auf Hover angezeigt wird.
+Eine kontextbezogene Symbolleiste, die beim Zeigen angezeigt wird.
 
-**Verkleinern**
+**Minimieren**
 
-, Um ein Fenster auszublenden. Siehe auch: maximieren, [Wiederherstellen des Fensters](#r).
+So blenden Sie ein Fenster aus Siehe auch: Maximieren, [wiederhergestelltes Fenster](#r).
 
 **Gemischter Zustand**
 
-Für Kontrollkästchen, die für eine Gruppe von Elementen gelten, gibt ein gemischter Zustand an, dass einige der Elemente ausgewählt sind und andere gelöscht werden.
+Bei Kontrollkästchen, die für eine Gruppe von Elementen gelten, gibt ein gemischter Zustand an, dass einige der Elemente ausgewählt und andere gelöscht werden.
 
-**aufkommen**
+**Modale**
 
-Restriktive oder eingeschränkte Interaktion aufgrund des Betriebs in einem Modus. Modal beschreibt häufig ein sekundäres Fenster, das die Interaktion eines Benutzers mit dem Besitzer Fenster einschränkt. Siehe auch: modeless.
+Restriktive oder eingeschränkte Interaktion aufgrund eines Betriebs in einem Modus. Modal beschreibt häufig ein sekundäres Fenster, das die Interaktion eines Benutzers mit dem Besitzerfenster einschränkt. Siehe auch: moduslos.
 
-**nicht modales**
+**Modeless**
 
-Nicht restriktive oder nicht eingeschränkte Interaktion. Das Modell ist oft ein sekundäres Fenster, das die Interaktion eines Benutzers mit dem Besitzer Fenster nicht einschränkt. Siehe auch: modal.
+Nicht restriktive oder nicht eingeschränkte Interaktion. Modeless beschreibt häufig ein sekundäres Fenster, das die Interaktion eines Benutzers mit dem Besitzerfenster nicht einschränkt. Siehe auch: modal.
 
 **Mehrfachauswahl**
 
-Die Möglichkeit für Benutzer, mehr als ein Objekt in einer Liste oder Struktur auszuwählen.
+Die Möglichkeit für Benutzer, mehrere Objekte in einer Liste oder Struktur auszuwählen.
 
 ## <a name="n"></a>N
 
-**nicht kritisches System Ereignis**
+**Nicht kritisches Systemereignis**
 
-Ein Typ eines System Ereignisses, das keine sofortige Aufmerksamkeit erfordert, häufig im Zusammenhang mit dem Systemstatus. Siehe auch: [kritisch](#c).
+Ein Typ von Systemereignis, das keine sofortige Aufmerksamkeit erfordert, häufig im Zusammenhang mit dem Systemstatus. Siehe auch: [kritisch.](#c)
 
 **Benachrichtigung**
 
-Informationen über eine nicht kritische Natur, die dem Benutzer kurz angezeigt wird. eine Benachrichtigung hat die Form einer Sprechblase von einem Symbol im Infobereich der Taskleiste.
+Informationen nicht kritischer Art, die dem Benutzer kurz angezeigt werden; eine Benachrichtigung hat die Form eines Sprechblasens von einem Symbol im Infobereich der Taskleiste.
 
 ## <a name="o"></a>O
 
-**anmelden**
+**Opt-In**
 
-Die Möglichkeit für Benutzer, optionale Features explizit auszuwählen. Weniger tiefgreifende Benutzer als Opt-out, insbesondere bei Datenschutz-und marketingbezogenen Features, weil es keine Annahme von Benutzer wünschen gibt. Siehe auch: Opt out, Options.
+Die Möglichkeit für Benutzer, optionale Features explizit auszuwählen. Weniger aufdringlich für Benutzer als die Deaktivierung, insbesondere für Datenschutz- und Marketingfeatures, da es keine Ungnärrung der Benutzer wünschen. Siehe auch: Abmeldung, Optionen.
 
-**ablehnen**
+**Opt-Out**
 
-Die Möglichkeit für Benutzer, Features zu entfernen, die Sie nicht möchten, indem Sie Ihre Auswahl löschen. Benutzer, die sich vor allem bei Datenschutz-und marketingbezogenen Features stärker als Opt-in einspielen, weil eine Annahme von Benutzer wünschen vorliegt. Siehe auch: Opt in, Optionen.
+Die Möglichkeit für Benutzer, Features zu entfernen, die sie nicht wünschen, indem sie ihre Auswahl löschen. Die Benutzer werden stärker beeinträchtigt als die Zustimmung, insbesondere bei Datenschutz- und Marketingfeatures, da von den Wünschen der Benutzer ausgegangen wird. Siehe auch: Opt-In, Optionen.
 
 **options**
 
-Optionen, die Benutzern zur Anpassung eines Programms zur Verfügung stehen. Beispielsweise können Benutzer mit einem Dialogfeld "Optionen" Programmoptionen anzeigen und ändern. Siehe auch: [Eigenschaften](#p).
+Optionen, die Benutzern zum Anpassen eines Programms zur Verfügung stehen. Mit einem Dialogfeld Optionen können Benutzer z. B. Programmoptionen anzeigen und ändern. Siehe auch: [Eigenschaften](#p).
 
-**nicht Kontext übergreifende Benutzeroberfläche**
+**Nicht kontextbezogene Benutzeroberfläche**
 
-Jede Benutzeroberfläche, die in einem Popup Fenster angezeigt wird, das nicht direkt mit der aktuellen Aktivität des Benutzers verknüpft ist. Benachrichtigungen und die Benutzeroberfläche für die Zustimmung für Benutzer Access Control sind z. b. eine Kontext übergreifende Benutzeroberfläche.
+Jede Benutzeroberfläche, die in einem Popupfenster angezeigt wird, das nicht direkt mit der aktuellen Aktivität des Benutzers verknüpft ist. Benachrichtigungen und die Zustimmungsbenutzeroberfläche für Benutzer-Access Control sind beispielsweise nicht kontextbezogene Benutzeroberflächen.
 
-**eigenes Fenster**
+**Eigenes Fenster**
 
-Ein sekundäres Fenster, das zum Ausführen einer hilfsaufgabe verwendet wird. Es handelt sich nicht um ein Fenster der obersten Ebene (es wird also nicht auf der Taskleiste angezeigt); Stattdessen ist es das Besitzer Fenster. Beispielsweise befinden sich die meisten Dialogfelder im Besitz von Fenstern. Siehe auch: untergeordnetes [Fenster](#c), Besitzer Fenster.
+Ein sekundäres Fenster, das zum Ausführen einer Hilfsaufgabe verwendet wird. Es handelt sich nicht um ein Fenster der obersten Ebene (daher wird es nicht auf der Taskleiste angezeigt). stattdessen befindet es sich im Besitz des Besitzerfensters. Die meisten Dialogfelder sind beispielsweise Besitzer von Fenstern. Siehe auch: [untergeordnetes Fenster,](#c)Besitzerfenster.
 
-**Besitzer Steuerelement**
+**Besitzersteuerelement**
 
-Die Quelle für einen Tipp, eine Sprechblase oder ein Flyout. Beispielsweise kann ein Textfeld mit Eingabe Einschränkungen eine Sprechblase anzeigen, um den Benutzer über diese Einschränkungen zu informieren. In diesem Fall wird das Textfeld als Besitzer Steuerelement betrachtet.
+Die Quelle eines Trinkgelds, einer Sprechblase oder eines Flyouts. Beispielsweise kann ein Textfeld mit Eingabeeinschränkungen eine Sprechblase anzeigen, um den Benutzer über diese Einschränkungen zu informieren. In diesem Fall wird das Textfeld als Besitzersteuerelement betrachtet.
 
-**Besitzer Fenster**
+**Besitzerfenster**
 
-Ein Fenster, von dem ein eigenes Fenster stammt. Wird unterhalb des Fensters im Besitz der Z-Reihenfolge angezeigt. Siehe auch: eigenes Fenster, über [geordnetes Fenster](#p), [Z-Reihenfolge](#z).
+Ein Fenster, aus dem ein eigenes Fenster stammt. Wird unterhalb des eigenen Fensters in Z-Reihenfolge angezeigt. Siehe auch: Besitzerfenster, [übergeordnetes Fenster,](#p) [Z-Reihenfolge.](#z)
 
 ## <a name="p"></a>P
 
 **page**
 
-Eine grundlegende navigationseinheit für aufgabenbasierte Benutzeroberfläche, z. b. Assistenten, Eigenschaften Blätter, System Steuerungselemente und Websites. Benutzer führen Aufgaben aus, indem Sie in einem einzelnen Host Fenster von Seite zu Seite navigieren. Siehe auch: Seiten Fluss, [Fenster](#w).
+Eine grundlegende Navigationseinheit für die aufgabenbasierte Benutzeroberfläche, z. B. Assistenten, Eigenschaftenblätter, Systemsteuerungselemente und Websites. Benutzer führen Aufgaben aus, indem sie in einem einzelnen Hostfenster von Seite zu Seite navigieren. Siehe auch: Seitenfluss, [Fenster](#w).
 
-**Seiten Fluss**
+**Seitenfluss**
 
-Eine Auflistung von Seiten, in denen Benutzer eine Aufgabe ausführen. Siehe auch: Seite, [Aufgabe](#t), [Assistent](#w), [Systemsteuerung](#c).
+Eine Auflistung von Seiten, auf denen Benutzer eine Aufgabe ausführen. Siehe auch: Seite, [Aufgabe,](#t) [Assistent,](#w) [Systemsteuerung](#c).
 
-**Seiten Raum Steuerelement**
+**Steuerelement "Seitenbereich"**
 
-Ermöglicht es Benutzern, eine hierarchisch angeordnete Auflistung von-Objekten anzuzeigen und mit ihr zu interagieren. Seiten Raum Steuerelemente ähneln Struktur Steuerelementen, haben aber eine etwas andere visuelle Darstellung. Sie werden hauptsächlich von Windows-Explorer verwendet.
+Ermöglicht Benutzern das Anzeigen und Interagieren mit einer hierarchisch angeordneten Sammlung von Objekten. Steuerelemente für den Seitenbereich ähneln Struktursteuerelementen, weisen jedoch eine etwas andere visuelle Darstellung auf. Sie werden hauptsächlich von Windows Explorer verwendet.
 
 **Palettenfenster**
 
-Ein nicht modalem sekundäres Fenster, in dem eine Symbolleiste oder andere Optionen wie Farben, Muster, Schriftarten oder Schriftart Attribute angezeigt werden.
+Ein modusloses sekundäres Fenster, in dem eine Symbolleiste oder andere Optionen wie Farben, Muster, Schriftarten oder Schriftartattribute angezeigt werden.
 
-**Spanne**
+**Pfanne**
 
-, Um eine Szene, z. b. eine Karte oder ein Foto, in zwei Dimensionen zu verschieben, indem Sie Sie direkt ziehen. Dies unterscheidet sich von einem Bildlauf auf zwei Arten: Bildlauf-Inhalte verfügen in der Regel über eine vorherrschende Dimension und Scrollen häufig nur entlang dieser Dimension. und das Scrollen von Inhalten wird mit Bild Lauf leisten angezeigt, die der Benutzer in umgekehrter Richtung der scrollbewegung zieht.
+So verschieben Sie eine Szene, z. B. eine Karte oder ein Foto, in zwei Dimensionen, indem Sie sie direkt ziehen. Dies unterscheidet sich vom Scrollen auf zwei Arten: Scrollinhalte weisen in der Regel eine vorherrschende Dimension auf und scrollen häufig nur entlang dieser Dimension. und Bildlaufinhalte werden konventionell mit Bildlaufleisten angezeigt, die der Benutzer in die entgegengesetzte Richtung der Bildlaufbewegung zieht.
 
-**schlugen**
+**Bereich**
 
-Ein rechteckiger Bereich innerhalb eines Fensters, den Benutzer möglicherweise verschieben, die Größe ändern, ausblenden oder schließen können. Bereiche werden immer an der Seite ihres übergeordneten Fensters angedockt. Sie können sich an andere Bereiche angrenzen, aber Sie überlappen sich nie. Das Andocken eines Bereichs wird in ein untergeordnetes Fenster konvertiert. Siehe auch: [Fenster](#w).
+Ein rechteckiger Bereich innerhalb eines Fensters, den Benutzer möglicherweise verschieben, ändern, ausblenden oder schließen können. Bereiche werden immer an die Seite ihres übergeordneten Fensters angedockt. Sie können sich an andere Bereiche angrenzen, überlappen sich jedoch nie. Durch das Abdocken eines Bereichs wird er in ein untergeordnetes Fenster konvertiert. Siehe auch: [Fenster](#w).
 
 **übergeordnetes Fenster**
 
-Der Container untergeordneter Fenster (z. b. Steuerelemente oder Bereiche). Siehe auch: [Besitzer Fenster](#o).
+Der Container untergeordneter Fenster (z. B. Steuerelemente oder Bereiche). Siehe auch: [Besitzerfenster](#o).
 
-**Pen@@**
+**Stift**
 
-Ein Tablettstift, der zum zeigen, Gesten, einfachen Texteingabe und Freihand Schriftzeichen verwendet wird. Stifte haben eine gute, glatte Tipps, die das präzise zeigen, schreiben oder zeichnen in frei Hand Eingaben unterstützen. Sie verfügen möglicherweise auch über eine optionale Stift Schaltfläche (mit Rechtsklick) und Radierer (wird zum Löschen von frei Hand Eingaben verwendet).
+Ein Stift, der für Zeigen, Gesten, einfache Texteingabe und Freiformhandschreibung verwendet wird. Stifte verfügen über eine gute, gleichmäßige Spitze, die präzises Zeigen, Schreiben oder Zeichnen von Ink unterstützt. Sie können auch über eine optionale Stiftschaltfläche (zum Ausführen von Rechtsklicks) und einen Radierer (zum Löschen von Freihandhand) verfügen.
 
-**Dauerhaftigkeit**
+**Persistenz**
 
 Das Prinzip, dass der Zustand oder die Eigenschaften eines Objekts automatisch beibehalten werden.
 
-**Personalisierungs**
+**Personalisierung**
 
-Anpassen eines Kern Erlebnisses, das für die persönliche Identifizierung des Benutzers mit einem Programm entscheidend ist. Im Gegensatz dazu sind normale Optionen und Eigenschaften für die persönliche Identifizierung des Benutzers mit einem Programm nicht entscheidend.
+Anpassen einer Kernerfahrung, die für die persönliche Identifikation des Benutzers mit einem Programm entscheidend ist. Im Gegensatz dazu sind normale Optionen und Eigenschaften nicht entscheidend für die persönliche Identifikation des Benutzers mit einem Programm.
 
-**ELT**
+**Personas**
 
-Ausführliche Beschreibungen von imaginären Personen. Personas werden aus gut verständlichen, stark spezifizierten Daten zu echten Personen erstellt.
+Detaillierte Beschreibungen von imaginären Personen. Personas werden aus wohlverstandenen, hoch angegebenen Daten über echte Personen erstellt.
 
 **physische Auflösung**
 
 Die horizontalen und vertikalen Pixel, die von der Hardware eines Computermonitors angezeigt werden können.
 
-**Schaltfläche für Popup Gruppe**
+**Popup-Gruppenschaltfläche**
 
-In einem Menüband eine Menü Schaltfläche, die alle Befehle und Optionen innerhalb einer Gruppe konsolidiert. Wird verwendet, um Multifunktionsleisten in kleinen Leerzeichen anzuzeigen.
+In einem Menüband eine Menüschaltfläche, die alle Befehle und Optionen innerhalb einer Gruppe konsolidiert. Wird verwendet, um Menübänder in kleinen Bereichen anzuzeigen.
 
 **Hochformat**
 
-Eine Präsentations Option, mit der ein Objekt als breit festgelegt wird. Siehe auch: [quer](#l)Format.
+Eine Präsentationsoption, die ein Objekt so richtet, dass es größer als es breit ist. Siehe auch: [Querformat.](#l)
 
 **Einstellungen**
 
-Verwenden Sie nicht. Verwenden Sie stattdessen [Optionen](#o) oder Eigenschaften.
+Nicht verwenden. Verwenden Sie stattdessen [Optionen](#o) oder Eigenschaften.
 
 **Vorschauversion**
 
-Eine Darstellung dessen, was Benutzern angezeigt wird, wenn Sie eine Option auswählen. Vorschau Versionen können statisch als Teil der Option oder nach Anforderung mit einer Vorschau oder über die Schaltfläche "übernehmen" angezeigt werden.
+Eine Darstellung, was Benutzern angezeigt wird, wenn sie eine Option auswählen. Vorschauen können statisch als Teil der Option oder auf Anforderung mit der Schaltfläche Vorschau oder Anwenden angezeigt werden.
 
 **Vorschaubereich**
 
-Ein Fensterbereich, der verwendet wird, um Vorschau-und andere Daten zu ausgewählten Objekten anzuzeigen.
+Ein Fensterbereich, in dem Vorschauversionen und andere Daten zu ausgewählten Objekten angezeigt werden.
 
-**primärer Befehl**
+**Primärer Befehl**
 
-Eine zentrale Aktion, die den Hauptzweck eines Fensters erfüllt. Print ist beispielsweise ein primärer Befehl für ein Druck Dialogfeld. Siehe auch: [sekundärer Befehl](#s).
+Eine zentrale Aktion, die den primären Zweck eines Fensters erfüllt. Drucken ist beispielsweise ein primärer Befehl für ein Dialogfeld Drucken. Siehe auch: [sekundärer Befehl](#s).
 
 **primäre Symbolleiste**
 
-Eine Auflistung von Befehlen, die umfassend genug sind, um die Verwendung einer Menüleiste auszuschließen. Siehe auch: [ergänzende Symbolleiste](#s).
+Eine Sammlung von Befehlen, die umfassend genug sind, um die Verwendung einer Menüleiste auszuschließen. Siehe auch: [zusätzliche Symbolleiste](#s).
 
-**primäres Fenster**
+**Primäres Fenster**
 
-Ein primäres Fenster hat kein Besitzer Fenster und wird auf der Taskleiste angezeigt. Hauptprogrammfenster sind immer primäre Fenster. Siehe auch: [sekundäres Fenster](#s).
+Ein primäres Fenster verfügt über kein Besitzerfenster und wird auf der Taskleiste angezeigt. Hauptprogrammfenster sind immer primäre Fenster. Siehe auch: [sekundäres Fenster](#s).
 
-**Oren**
+**Programm**
 
-Eine Sequenz von Anweisungen, die von einem Computer ausgeführt werden kann. Zu den gängigen Programmtypen zählen Produktivitätsanwendungen, Consumeranwendungen, Spiele, Kiosk und Hilfsprogramme.
+Eine Sequenz von Anweisungen, die von einem Computer ausgeführt werden können. Zu den gängigen Arten von Programmen gehören Produktivitätsanwendungen, Consumeranwendungen, Spiele, Kioske und Hilfsprogramme.
 
 **Statusanzeige**
 
-Ein gängiges Windows-Steuerelement, das den Fortschritt eines bestimmten Vorgangs als Grafik Leiste anzeigt.
+Ein allgemeines Windows Steuerelement, das den Fortschritt eines bestimmten Vorgangs als grafische Leiste anzeigt.
 
 **Progressive Offenlegung**
 
-Eine Technik, mit der Benutzer bei Bedarf weniger häufig verwendete Informationen (in der Regel Daten, Optionen oder Befehle) anzeigen können. Wenn z. b. manchmal weitere Optionen erforderlich sind, können Benutzer diese im Kontext verfügbar machen, indem Sie auf die Chevron-Schaltfläche klicken.
+Eine Technik, mit der Benutzer bei Bedarf weniger häufig verwendete Informationen (in der Regel Daten, Optionen oder Befehle) anzeigen können. Wenn z. B. manchmal weitere Optionen erforderlich sind, können Benutzer sie im Kontext verfügbar machen, indem sie auf eine Chevron-Schaltfläche klicken.
 
 **Progressive Eskalation**
 
-Eine Sequenz, in der die Benutzeroberfläche zum Benachrichtigen von Benutzern progressiver wird, wenn das Ereignis kritischer wird. Beispielsweise kann eine Benachrichtigung für ein Ereignis verwendet werden, das Benutzer zunächst auf sichere Weise ignorieren können. Wenn die Situation kritisch wird, sollte eine eher verborgene Benutzeroberfläche, z. b. ein modales Dialogfeld, verwendet werden.
+Eine Sequenz, in der die Benutzeroberfläche, mit der Benutzer informiert werden, zunehmend aufdringlicher wird, wenn das Ereignis kritischer wird. Beispielsweise kann eine Benachrichtigung für ein Ereignis verwendet werden, das Benutzer zunächst problemlos ignorieren können. Wenn die Situation kritisch wird, sollte eine obtrusivere Benutzeroberfläche verwendet werden, z. B. ein modaler Dialog.
 
 **prompt**
 
-Eine Bezeichnung oder eine kurze Anweisung in einem Textfeld oder eine bearbeitbare Dropdown Liste als Standardwert. Im Gegensatz zu statischem Text werden Eingabe Aufforderungen angezeigt, sobald Benutzer etwas in das Steuerelement eingeben oder den Eingabefokus erhalten.
+Eine Bezeichnung oder kurze Anweisung, die in einem Textfeld oder einer bearbeitbaren Dropdownliste als Standardwert platziert wird. Im Gegensatz zu statischem Text werden Eingabeaufforderungen ausgeblendet, sobald Benutzer etwas in das Steuerelement eingeben oder den Eingabefokus erhalten.
 
 **properties**
 
-Einstellungen eines Objekts, das von Benutzern geändert werden kann, z. b. der Name einer Datei und der schreibgeschützte Status sowie die Attribute eines Objekts, das Benutzer nicht direkt ändern können, wie z. b. die Größe und das Erstellungsdatum einer Datei. Eigenschaften definieren in der Regel den Zustand, den Wert oder die Darstellung eines Objekts.
+Einstellungen eines Objekts, das Benutzer ändern können, z. B. den Namen und den schreibgeschützten Status einer Datei, sowie Attribute eines Objekts, das Benutzer nicht direkt ändern können, z. B. Größe und Erstellungsdatum einer Datei. In der Regel definieren Eigenschaften den Zustand, den Wert oder die Darstellung eines Objekts.
 
 **geschützter Administrator**
 
-In der Benutzerkontensteuerung ein Administrator, der mit dem Zustand mit den geringsten Berechtigungen ausgeführt wird. Siehe auch: [Administrator mit erhöhten](#e)rechten, [Standardbenutzer](#s).
+In der Benutzerkontensteuerung ein Administrator, der im Zustand mit den geringsten Berechtigungen ausgeführt wird. Siehe auch: [Administrator mit erhöhten Rechten,](#e) [Standardbenutzer.](#s)
 
 ## <a name="q"></a>Q
 
 **Symbolleiste für den Schnellzugriff**
 
-Eine kleine, anpassbare Symbolleiste, auf der häufig verwendete Befehle angezeigt werden.
+Eine kleine, anpassbare Symbolleiste, die häufig verwendete Befehle anzeigt.
 
-**Schnellstartleiste**
+**Schnellstart Leiste**
 
-Ein direkter Zugriffspunkt auf dem Windows-Desktop, der neben der Schaltfläche Start angezeigt wird, wird mit Symbolen für Programme der Auswahl des Benutzers aufgefüllt. In Windows 7 entfernt.
+Ein Direktzugriffspunkt auf dem Windows Desktop, der sich neben dem Schaltfläche "Start" befindet und mit Symbolen für Programme der Wahl des Benutzers aufgefüllt ist. In Windows 7 entfernt.
 
 ## <a name="r"></a>R
 
 **Optionsfeld**
 
-Ein gängiges Windows-Steuerelement, mit dem Benutzer aus einem Satz von sich gegenseitig ausschließenden Optionen auswählen können.
+Ein allgemeines Windows Steuerelement, mit dem Benutzer aus einer Reihe von sich gegenseitig ausschließenden, verwandten Optionen auswählen können.
 
-**relative Pixel**
+**Relative Pixel**
 
-Eine geräteunabhängige Metrik, die mit einem physischen Pixel bei 96 dpi (dpi pro Zoll) identisch ist, aber proportional in anderen DPIs skaliert wird. Siehe auch: [effektive Auflösung](#e).
+Eine geräteunabhängige Metrik, die mit einem physischen Pixel mit 96 dpi (Punkte pro Zoll) identisch ist, aber proportional in anderen dpis skaliert wird. Siehe auch: [effektive Auflösung.](#e)
 
-**wiederhergestellte Fenster**
+**Wiederhergestelltes Fenster**
 
-Ein sichtbares, partielles Bildschirmfenster, weder maximiert noch minimiert. Siehe auch: [maximieren](#m), minimieren.
+Ein sichtbares Fenster mit Teilbildschirm, weder maximiert noch minimiert. Siehe auch: [Maximieren](#m)von , Minimieren.
 
-**Band**
+**Bändchen**
 
-Ein Container mit Registerkarten für Befehle und Optionen, der sich am oberen Rand eines Fensters oder Arbeitsbereichs befindet und über eine Position mit fester Position und Höhe verfügt. Menü Bänder verfügen in der Regel über ein Anwendungsmenü und eine Symbolleiste für den Siehe auch: [Menü](#m), [Symbolleiste](#t).
+Ein Container im Registerkartenbett mit Befehlen und Optionen, der sich am oberen Rand eines Fensters oder Arbeitsbereichs befindet und eine feste Position und Höhe aufweist. Menübänder verfügen in der Regel über ein Anwendungsmenü und eine Symbolleiste für den Schnellzugriff. Siehe auch: [Menü](#m), [Symbolleiste](#t).
 
-**riskante Aktion**
+**Riskante Aktion**
 
-Eine Qualität von Benutzeraktionen, die negative Folgen haben können und nicht einfach rückgängig gemacht werden können. Zu den riskanten Aktionen gehören Aktionen, mit denen die Sicherheit eines Computers beeinträchtigt, der Zugriff auf einen Computer beeinträchtigt wird oder der Datenverlust zu unbeabsichtigtem Datenverlust führen kann.
+Eine Qualität der Benutzeraktion, die negative Folgen haben kann und nicht einfach rückgängig zu werden ist. Riskante Aktionen umfassen Aktionen, die die Sicherheit eines Computers beeinträchtigen, den Zugriff auf einen Computer beeinträchtigen oder zu unbeabsichtigten Datenverlusten führen können.
 
 ## <a name="s"></a>E
 
 **Scanpfad**
 
-Die Route, die Benutzer bei der Überprüfung verwenden, um die Elemente in einem Fenster zu finden. Besonders wichtig, wenn Benutzer nicht am immersiven Lesen von Text beteiligt sind.
+Die Route, die Benutzer wahrscheinlich beim Scannen verwenden, um Dinge in einem Fenster zu finden. Besonders wichtig, wenn Benutzer nicht am immersiven Lesen von Text beteiligt sind.
 
-**Bildschirmleser**
+**Sprachausgabe**
 
-Eine Hilfstechnologie, die es Benutzern mit visuellen Beeinträchtigungen ermöglicht, eine Benutzeroberfläche zu interpretieren und zu navigieren, indem visuelle Elemente in Audiodaten transformiert werden. Folglich werden Text, Steuerelemente, Menüs, Symbolleisten, Grafiken und andere Bildschirmelemente von der computerisierten Stimme der Bildschirm Sprachausgabe gesprochen.
+Eine Hilfstechnologie, mit der Benutzer mit sehbehinderten Sehbehinderungen eine Benutzeroberfläche interpretieren und navigieren können, indem sie visuelle Elemente in Audio transformieren. Daher werden Text, Steuerelemente, Menüs, Symbolleisten, Grafiken und andere Bildschirmelemente von der computerisierten Stimme der Sprachausgabe gesprochen.
 
 **Scrollleiste**
 
-Ein Steuerelement, mit dem Benutzer einen Bildlauf im Inhalt eines Fensters entweder vertikal oder horizontal durchführen können.
+Ein Steuerelement, mit dem Benutzer den Inhalt eines Fensters vertikal oder horizontal scrollen können.
 
-**sekundärer Befehl**
+**Sekundärer Befehl**
 
-Eine Peripherie Aktion, die für den Zweck des Fensters nicht wesentlich ist. Beispielsweise sind "Drucker suchen" oder "Drucker installieren" sekundäre Befehle für ein Druck Dialogfeld. Siehe auch: [primärer Befehl](#p).
+Eine Peripherieaktion, die zwar hilfreich, aber für den Zweck des Fensters nicht wesentlich ist. Beispielsweise sind Drucker suchen oder Drucker installieren sekundäre Befehle für ein Dialogfeld Drucken. Siehe auch: [primärer Befehl](#p).
 
-**sekundäres Fenster**
+**Sekundäres Fenster**
 
-Ein Fenster mit einem Besitzer Fenster, das folglich nicht auf der Taskleiste angezeigt wird. Siehe auch: [Primäres Fenster](#p).
+Ein Fenster, das über ein Besitzerfenster verfügt und daher nicht auf der Taskleiste angezeigt wird. Siehe auch: [primäres Fenster](#p).
 
-**sicherer Desktop**
+**Sicherer Desktop**
 
-Eine geschützte Umgebung, die von Programmen isoliert ist, die auf dem System ausgeführt werden. Sie wird verwendet, um die Sicherheit von extrem sicheren Aufgaben wie z. b. Anmeldung, Kenn Wort Änderungen und UAC-Rechte Erweiterungen zu erhöhen. Siehe auch: [Benutzerkontensteuerung](#u).
+Eine geschützte Umgebung, die von Programmen isoliert ist, die auf dem System ausgeführt werden und verwendet wird, um die Sicherheit hochsicherer Aufgaben wie Anmeldung, Kennwortänderungen und UAC-Rechteerweiterungen zu erhöhen. Siehe auch: [Benutzerkontensteuerung.](#u)
 
-**Sicherheitsschild**
+**Security Shield**
 
-Ein Schild Symbol, das für das Sicherheits Branding verwendet wird.
+Ein Schutzsymbol, das für das Sicherheitsbranding verwendet wird.
 
 **Ausgewählt**
 
-Wird vom Benutzer ausgewählt, um einen Vorgang auszuführen. Vorder.
+Wird vom Benutzer ausgewählt, um einen Vorgang auszuführen. Hervorgehoben.
 
-**Groß-/Kleinschreibung im Satz**
+**Groß-/Großschreibung im Satzstil**
 
-Für Groß-/Kleinschreibung im Satz Format:
+Für großgeschriebene Sätze:
 
--   Schreiben Sie immer das erste Wort eines neuen Satzes in Großbuchstaben.
--   Schreiben Sie das Wort nach einem Doppelpunkt nicht in Großbuchstaben, es sei denn, das Wort ist ein richtiges Substantiv, oder der Text nach dem Doppelpunkt ist ein vollständiger Satz.
--   Schreiben Sie das Wort nach einem EM-Bindestrich nicht groß, es sei denn, es ist ein richtiges Substantiv, auch wenn der Text, der auf den Bindestrich folgt, ein vollständiger Satz
--   Schreiben Sie immer das erste Wort eines neuen Satzes nach jedem endinterpunktions Zeichen in Großbuchstaben. Schreiben Sie Sätze um, die mit Groß-/Kleinschreibung in Kleinbuchstaben beginnen.
+-   Großschreibung des ersten Worts eines neuen Satzes immer.
+-   Großschreibung des Worts nach einem Doppelpunkt nur dann, wenn das Wort ein richtiges Nomen ist oder der Text, der auf den Doppelpunkt folgt, ein vollständiger Satz ist.
+-   Großschreibung des Worts nach einem Em-Bindestrich nur dann, wenn es sich um ein ordnungsgemäßes Nomen handelt, auch wenn der Text, der auf den Bindestrich folgt, ein vollständiger Satz ist.
+-   Großschreibung des ersten Worts eines neuen Satzes nach einer beliebigen Endpunktion. Schreiben Sie Sätze neu, die mit einem Kleinbuchstaben beginnen, bei dem die Groß-/Kleinschreibung beachtet wird.
 
 **settings**
 
-Bestimmte Werte, die (entweder vom Benutzer oder standardmäßig) ausgewählt wurden, um ein Programm oder ein Objekt zu konfigurieren.
+Bestimmte Werte, die (vom Benutzer oder standardmäßig) zum Konfigurieren eines Programms oder Objekts ausgewählt wurden.
 
 **Tastenkombination**
 
-Schlüssel oder Tastenkombinationen, die Benutzer für den schnellen Zugriff auf häufig durchführte Aktionen drücken können. Tastenkombinationen und Funktionstasten für STRG + Buchstaben und Funktionstasten (F1 bis F12) sind in der Regel die beste Wahl für Tastenkombinationen. Definitionsgemäß ist eine Tastenkombination das Tastatur Äquivalent zu Funktionen, die an anderer Stelle in der Schnittstelle unterstützt werden. Vermeiden Sie daher die Verwendung einer Tastenkombination als einzige Möglichkeit für den Zugriff auf einen bestimmten Vorgang.
+Tastenkombinationen oder Tastenkombinationen, die Benutzer drücken können, um schnell auf Aktionen zuzugreifen, die sie häufig ausführen. Tastenkombinationen und Funktionstasten (F1 bis F12) sind in der Regel die beste Wahl für Tastenkombinationen. Definitionsgemäß ist eine Tastenkombination die Tastaturentsprechung der Funktionalität, die an anderer Stelle in der Schnittstelle angemessen unterstützt wird. Vermeiden Sie daher die Verwendung einer Tastenkombination als einzige Möglichkeit, auf einen bestimmten Vorgang zuzugreifen.
 
-Im Gegensatz zu Zugriffs Schlüsseln, die zur Verbesserung der Barrierefreiheit entwickelt wurden, sind Tastenkombinationen hauptsächlich für fortgeschrittene Benutzer konzipiert. Da Sie nicht direkt in der Benutzeroberfläche dokumentiert werden (obwohl Sie möglicherweise in Menüs und Symbolleisten-Quick Infos dokumentiert sind), sind Sie für die Speicherung gedacht und müssen daher konsistent in Anwendungen und in verschiedenen Anwendungen zugewiesen werden.
+Im Gegensatz zu Zugriffsschlüsseln, die zur Verbesserung der Barrierefreiheit entwickelt wurden, sind Tastenkombinationen in erster Linie für fortgeschrittene Benutzer konzipiert. Da sie nicht direkt auf der Benutzeroberfläche selbst dokumentiert sind (obwohl sie möglicherweise in Menüs und Symbolleisten-QuickInfos dokumentiert sind), sind sie merken und müssen daher innerhalb von Anwendungen und in verschiedenen Anwendungen konsistent zugewiesen werden.
 
-**Leiste**
+**Seitenleiste**
 
-Eine Region auf der Seite des Benutzer Desktops, mit der Gadgets in Windows Vista angezeigt werden. Siehe auch: [Gadget](#g).
+Eine Region auf der Seite des Desktops des Benutzers, in der Gadgets in Windows Vista angezeigt werden. Siehe auch: [Gadget](#g).
 
 **Single-Point-Fehler**
 
-Ein Benutzereingabe Fehler im Zusammenhang mit einem einzelnen-Steuerelement. Wenn Sie beispielsweise eine falsche Kreditkartennummer eingeben, handelt es sich bei einer falschen Anmeldung um einen doppelten Punkt Fehler, da entweder der Benutzername oder das Kennwort das Problem darstellen könnte.
+Ein Benutzereingabefehler im Zusammenhang mit einem einzelnen Steuerelement. Beispielsweise ist die Eingabe einer falschen Kreditkartennummer ein Single-Point-Fehler, während eine falsche Anmeldung ein Doppeltpunktfehler ist, da entweder der Benutzername oder das Kennwort das Problem darstellen kann.
 
-**keits**
+**Schieberegler**
 
-Ein gängiges Windows-Steuerelement, das einen Wert aus einem kontinuierlichen Bereich möglicher Werte, wie z. b. Helligkeit oder Volume, anzeigt und festlegt.
+Ein allgemeines Windows Steuerelement, das einen Wert aus einem kontinuierlichen Bereich möglicher Werte wie Helligkeit oder Lautstärke anzeigt und festlegt.
 
-**besondere Darstellung**
+**Besondere Erfahrung**
 
-In-Programmen beziehen sich besondere Oberflächen auf die primäre Funktion des Programms, etwas, das sich auf das Programm bezieht, oder auf andere Weise eine emotionale Verbindung mit den Benutzern. Beispielsweise ist die Wiedergabe von Audiodaten und Videos ein besonderes Erlebnis für einen Media Player.
+In Programmen beziehen sich besondere Erfahrungen auf die primäre Funktion des Programms, etwas, das für das Programm einzigartig ist, oder stellen auf andere Weise eine emotionale Verbindung mit Benutzern her. Die Wiedergabe eines Audios oder Videos ist beispielsweise eine besondere Erfahrung für einen Medienplayer.
 
 **Drehfeld**
 
-Die Kombination eines Textfelds und des zugeordneten Drehungs Steuer Elements. Benutzer klicken auf den nach-oben-oder nach unten-Pfeil eines Drehfelds, um einen numerischen Wert zu vergrößern oder zu verkleinern. Anders als Schieberegler-Steuerelemente, die für relative Mengen verwendet werden, werden Drehfelder nur für exakte, bekannte numerische Werte verwendet.
+Die Kombination aus einem Textfeld und dem zugehörigen Drehsteuerelement. Benutzer klicken auf den Pfeil nach oben oder unten eines Drehfelds, um einen numerischen Wert zu erhöhen oder zu verringern. Im Gegensatz zu Schieberegler-Steuerelementen, die für relative Mengen verwendet werden, werden Drehfelder nur für genaue, bekannte numerische Werte verwendet.
 
-**Dreh Steuerelement**
+**Drehungssteuerelement**
 
-Ein Steuerelement, auf das Benutzer klicken, um Werte zu ändern. Dreh Steuerelemente verwenden die Pfeile nach oben und unten, um den Wert zu vergrößern oder zu verkleinern.
+Ein Steuerelement, auf das Benutzer klicken, um Werte zu ändern. Drehsteuerelemente verwenden Pfeile nach oben und unten, um den Wert zu erhöhen oder zu verringern.
 
 **Begrüßungsbildschirm**
 
-Das Übergangs Bildschirm Bild, das als Programm angezeigt wird, wird gerade gestartet.
+Das Bildschirmbild, das als Programm angezeigt wird, wird gerade gestartet.
 
-**Trenn Schaltfläche**
+**Schaltfläche "Teilen"**
 
-Eine bipartite Befehls Schaltfläche, die eine kleine Schaltfläche mit einem nach unten zeigenden Dreieck auf dem äußersten rechten Teil der Haupt Schaltfläche enthält. Benutzer klicken auf das Dreieck, um Variationen eines Befehls in einem Dropdown Menü anzuzeigen. Siehe auch: [Befehls Schaltfläche](#c).
+Eine Befehlsschaltfläche mit einem zweiteiligen Befehl, die eine kleine Schaltfläche mit einem nach unten zeigenden Dreieck auf der rechten Seite der Hauptschaltfläche enthält. Benutzer klicken auf das Dreieck, um Variationen eines Befehls in einem Dropdownmenü anzuzeigen. Siehe auch: [Befehlsschaltfläche](#c).
 
-**Seite "sprechen"**
+**Spoke-Seite**
 
-In System Steuerungselementen sind die Sprachseiten die Stelle, an der Benutzer Aufgaben ausführen. Zwei Arten von Wort Seiten sind Aufgabenseiten und Formular Seiten: Aufgabenseiten stellen eine Aufgabe oder einen Schritt in einer Aufgabe mit einer bestimmten aufgabenbasierten Haupt Anweisung dar. Formular Seiten stellen eine Auflistung verwandter Eigenschaften und Aufgaben basierend auf einer allgemeinen Haupt Anweisung dar. Siehe auch: [Hub-Seite](#h).
+In Systemsteuerungselementen sind Spoke-Seiten der Ort, an dem Benutzer Aufgaben ausführen. Zwei Arten von Spoke-Seiten sind Aufgabenseiten und Formularseiten: Aufgabenseiten stellen eine Aufgabe oder einen Schritt in einer Aufgabe mit einer bestimmten aufgabenbasierten Hauptanweisung dar. Formularseiten stellen eine Auflistung verwandter Eigenschaften und Aufgaben dar, die auf einer allgemeinen Hauptanweisung basieren. Siehe auch: [Hubseite](#h).
 
 **Standardbenutzer**
 
-In der Benutzerkontensteuerung haben Standardbenutzer die geringsten Berechtigungen auf dem Computer, und Sie müssen eine Berechtigung von einem Administrator auf dem Computer anfordern, um administrative Aufgaben ausführen zu können. Im Gegensatz zu geschützten Administratoren können Standardbenutzer nicht selbst herauf Stufen. Siehe auch: [Administrator mit erhöhten](#e)rechten, [geschützter Administrator](#p).
+In der Benutzerkontensteuerung verfügen Standardbenutzer über die geringsten Berechtigungen auf dem Computer und müssen die Berechtigung von einem Administrator auf dem Computer anfordern, um Administrative Aufgaben auszuführen. Im Gegensatz zu geschützten Administratoren können Sich Standardbenutzer nicht selbst erhöhen. Siehe auch: [Administrator mit erhöhten Rechten,](#e) [geschützter Administrator.](#p)
 
-**statischer Text**
+**Statischer Text**
 
-Der Benutzeroberflächen Text, der nicht Teil eines interaktiven Steuer Elements ist. Umfasst Bezeichnungen, Haupt Anweisungen, ergänzende Anweisungen und ergänzende Erklärungen.
+Benutzeroberflächentext, der nicht Teil eines interaktiven Steuerelements ist. Enthält Bezeichnungen, Hauptanweisungen, zusätzliche Anweisungen und ergänzende Erklärungen.
 
-**Ergänzende Anweisungen**
+**Zusätzliche Anweisungen**
 
-Eine optionale Form von Benutzeroberflächen Text, mit der Informationen, Details oder Kontext der Haupt Anweisung hinzugefügt werden. Siehe auch: [Main-Anweisung](#m).
+Eine optionale Form von Benutzeroberflächentext, der der Hauptanweisung Informationen, Details oder Kontext hinzufügt. Siehe auch: [main-Anweisung.](#m)
 
-**ergänzende Symbolleiste**
+**Zusätzliche Symbolleiste**
 
-Eine Auflistung von Befehlen, die für die Zusammenarbeit mit einer Menüleiste entworfen wurden. Siehe auch: [primäre Symbolleiste](#p).
+Eine Auflistung von Befehlen, die in Verbindung mit einer Menüleiste funktionieren sollen. Siehe auch: [primäre Symbolleiste](#p).
 
-**System Farbe**
+**Systemfarbe**
 
-Eine von Windows für einen bestimmten Zweck definierte Farbe, auf die über die GetSysColor-API (Application Programming Interface) zugegriffen wird. Beispielsweise \_ definiert das Farbfenster die Hintergrundfarbe des Fensters, und \_ die Farbe WindowText definiert die Fenster Textfarbe. System Farben sind nicht so umfangreich wie Design Farben. Siehe auch: Design [Farbe](#t).
+Eine Farbe, die von Windows für einen bestimmten Zweck definiert wird und auf die über die GetSysColor-Api (Application Programming Interface) zugegriffen wird. Beispielsweise definiert COLOR \_ WINDOW die Hintergrundfarbe des Fensters und COLOR \_ WINDOWTEXT die Fenstertextfarbe. Systemfarben sind nicht so rich wie Designfarben. Siehe auch: [Designfarbe](#t).
 
 **Systemmenü**
 
-Eine Auflistung grundlegender Fenster Befehle, z. b. verschieben, Größe, maximieren, minimieren und schließen, verfügbar über das Programmsymbol auf der Titelleiste oder durch Rechtsklick auf eine Task leisten Schaltfläche.
+Eine Sammlung grundlegender Fensterbefehle, z. B. Verschieben, Dimensionieren, Maximieren, Minimieren und Schließen, verfügbar über das Programmsymbol auf der Titelleiste oder durch Klicken mit der rechten Maustaste auf eine Taskleistenschaltfläche.
 
 ## <a name="t"></a>T
 
-**Dialogfeld mit Registerkarten**
+**Dialogfeld "Registerkarten"**
 
-Ein Dialogfeld, das verwandte Informationen zu separaten Seiten (Registerkarten) enthält. Im Gegensatz zu Eigenschaften Blättern, die häufig auch Registerkarten enthalten, werden Dialogfelder im Registerkarten Format nicht zum Anzeigen der Eigenschaften eines Objekts verwendet. Siehe auch: [Eigenschaften](#p).
+Ein Dialogfeld, das verwandte Informationen auf separaten beschrifteten Seiten (Registerkarten) enthält. Im Gegensatz zu Eigenschaftenblättern, die häufig auch Registerkarten enthalten, werden Dialogfelder im Registerkartenbett nicht zum Anzeigen der Eigenschaften eines Objekts verwendet. Siehe auch: [Eigenschaften](#p).
 
-**Task**
+**Aufgabe**
 
-Eine Einheit von Benutzeraktivitäten, die häufig durch eine einzelne Benutzeroberfläche (z. b. ein Dialogfeld) oder eine Sequenz von Seiten (z. b. einen Assistenten) dargestellt wird.
+Eine Benutzeraktivitätseinheit, die häufig durch eine einzelne Benutzeroberflächenoberfläche (z. B. ein Dialogfeld) oder eine Folge von Seiten (z. B. einen Assistenten) dargestellt wird.
 
-**Aufgaben Dialogfeld**
+**Aufgabendialogfeld**
 
-Ein Dialogfeld, das mithilfe der Task Dialog-API implementiert wird. Erfordert Windows Vista oder höher.
+Ein Dialogfeld, das mithilfe der Aufgabendialog-API implementiert wird. Erfordert Windows Vista oder höher.
 
-**Aufgaben Fluss**
+**Aufgabenfluss**
 
-Eine Sequenz von Seiten, mit deren Hilfe Benutzer eine Aufgabe entweder in einem Assistenten, Explorer oder Browser ausführen können.
+Eine Folge von Seiten, die Benutzern hilft, eine Aufgabe in einem Assistenten, Explorer oder Browser auszuführen.
 
-**Task Verknüpfung**
+**Tasklink**
 
-Ein Link, der verwendet wird, um eine Aufgabe zu initiieren, im Gegensatz zu Links, die zu anderen Seiten oder Fenstern navigieren, Optionen auswählen oder Hilfe anzeigen.
+Ein Link, der zum Initiieren einer Aufgabe verwendet wird, im Gegensatz zu Links, die zu anderen Seiten oder Fenstern navigieren, Optionen auswählen oder Hilfe anzeigen.
 
 **Aufgabenbereich**
 
-Eine Art von Benutzeroberfläche, die einem Dialogfeld ähnelt, mit dem Unterschied, dass es in einem Fensterbereich anstelle eines separaten Fensters angezeigt wird. Daher haben Aufgabenbereiche ein direkteres kontextbezogenes Gefühl als Dialogfelder. Ein Aufgabenbereich kann ein Menü enthalten, um dem Benutzer einen kleinen Satz von Befehlen für den ausgewählten Objekt-oder Programmmodus bereitzustellen.
+Ein Benutzeroberflächentyp, der einem Dialogfeld ähnelt, mit dem Unterschied, dass es in einem Fensterbereich anstelle eines separaten Fensters angezeigt wird. Daher haben Aufgabenbereiche ein direkteres kontextbezogenes Gefühl als Dialogfelder. Ein Aufgabenbereich kann ein Menü enthalten, um dem Benutzer einen kleinen Satz von Befehlen im Zusammenhang mit dem ausgewählten Objekt oder Programmmodus bereitzustellen.
 
 **Taskleiste**
 
-Der Zugriffspunkt für das Ausführen von Programmen, die über eine Desktop Präsenz verfügen. Benutzer interagieren mit Steuerelementen namens Task leisten Schaltflächen, um Programmfenster anzuzeigen, auszublenden und zu minimieren.
+Der Zugriffspunkt zum Ausführen von Programmen, die über einen Desktop verfügen. Benutzer interagieren mit Steuerelementen, die als Taskleistenschaltflächen bezeichnet werden, um Programmfenster anzuzeigen, auszublenden und zu minimieren.
 
 **Textfeld**
 
-Ein Steuerelement, das speziell für Texteingaben entworfen wurde. ermöglicht Benutzern das anzeigen, eingeben oder Bearbeiten von Text oder Zahlen.
+Ein Steuerelement, das speziell für Texteingaben entwickelt wurde. ermöglicht Benutzern das Anzeigen, Eingeben oder Bearbeiten von Text oder Zahlen.
 
-**Design Farbe**
+**Designfarbe**
 
-Eine Farbe, die von Windows für einen bestimmten Zweck definiert wird und auf die mit der getmecolor-API sowie Teilen, Zuständen und Farben zugegriffen wird. Der Windows-Teil definiert z. b. eine FillColor und eine TextColor. Design Farben sind umfangreicher als Systemfarben, erfordern jedoch, dass der Design Dienst ausgeführt wird. Siehe auch: [System Farbe](#s).
+Eine farbe, die von Windows für einen bestimmten Zweck definiert wird und auf die mithilfe der GetThemeColor-API zusammen mit Teilen, Zuständen und Farben zugegriffen wird. Der Fensterteil definiert z. B. fillColor und TextColor. Designfarben sind umfangreicher als Systemfarben, erfordern jedoch die Ausführung des Designdiensts. Siehe auch: [Systemfarbe](#s).
 
-**Groß-/Kleinschreibung im Titel**
+**Groß-/Großschreibung im Titelstil**
 
-Für die Groß-/Kleinschreibung im Titel:
+Für Die Groß-/Großschreibung im Titelstil:
 
--   Setzen Sie alle Nomen, Verben (einschließlich und andere Formen von in), adversb (einschließlich und wann), Adjektive (einschließlich dieses und dieses) und Pronomen (einschließlich der) groß.
--   Schreiben Sie das erste und das letzte Wort unabhängig von den Teilen der Sprache (z. b. den Text, nach dem gesucht werden soll).
--   Geben Sie die Präpositionen ein, die Teil eines Verb Ausdrucks sind (z. b. das Sichern des Datenträgers).
--   Schreiben Sie Artikel (a,,) nicht in Großbuchstaben, es sei denn, der Artikel ist das erste Wort im Titel.
--   Keine Groß-und Kleinschreibung für Koordinaten Verknüpfungen (und, aber, für, oder), es sei denn, die Verbindung ist das erste Wort im Titel.
--   Stellen Sie keine Präpositionen von vier oder weniger Buchstaben groß, es sei denn, die Vorposition ist das erste Wort im Titel.
--   Geben Sie in einem unendlichen Ausdruck (z. b. zum Formatieren der Festplatte) keinen Großbuchstaben an, es sei denn, der Ausdruck ist das erste Wort im Titel.
--   Geben Sie das zweite Wort in zusammengesetzten Wörtern ein, wenn es sich um ein Substantiv oder ein richtiges Adjektiv, ein "e-Word" oder um die gleichen Gewichtungen (z. b. e-Commerce, Querverweise, Software vor Microsoft, Lese-/Schreibzugriff, Laufzeit) handelt. Verwenden Sie das zweite Wort nicht groß, wenn es ein anderer Teil der Sprache ist, z. b. eine vorangestellt Position oder ein anderes kleines Wort (z. b. Add-in, Vorgehensweise, Take-Off).
--   Großbuchstaben von Benutzeroberflächen-und Anwendungs Programmierschnittstellen, die normalerweise nicht groß geschrieben werden, es sei denn, die Groß-/Kleinschreibung wird beachtet (z. b. der fdisk-Befehl). Befolgen Sie die traditionelle groß-und Kleinschreibung von Schlüsselwörtern und anderen speziellen Begriffen in Programmiersprachen (z. b. die printf-Funktion, indem Sie die-Direktiven und die-Anweisung
--   Großbuchstaben nur für das erste Wort der einzelnen Spaltenüberschriften.
+-   Großschreibung aller Nomen, Verben (einschließlich is und anderer Formen von ), Adverbs (einschließlich und wann), Adjektive (einschließlich dieser und dieser) und Pronomen (einschließlich ihrer).
+-   Großschreibung der ersten und letzten Wörter, unabhängig von deren Teilen der Sprache (z. B. Der zu suchbare Text).
+-   Großschreibung von Präpositionen, die Teil eines Verbbegriffs sind (z. B. Sichern des Datenträgers).
+-   Großschreibung von Artikeln (a, an, the) ist nur dann erforderlich, wenn der Artikel das erste Wort im Titel ist.
+-   Koordinate konjunktionen (und, aber für, noch oder) sollten nicht großgeschrieben werden, es sei denn, die Konjunktion ist das erste Wort im Titel.
+-   Großschreibung von Präpositionen von vier oder weniger Buchstaben ist nur dann erforderlich, wenn die Präposition das erste Wort im Titel ist.
+-   Großschreibung in nicht in einem infinitiven Ausdruck (z. B. How to Format Your Hard Disk) (Formatieren ihrer Festplatte) ist nur dann erforderlich, wenn der Ausdruck das erste Wort im Titel ist.
+-   Großschreibung des zweiten Worts in zusammengesetzten Wörtern, wenn es sich um ein Substantiv oder ein ordnungsgemäßes Adjektiv, ein "E-Wort" oder die Wörter mit gleicher Gewichtung handelt (z. B. E-Commerce, Querverweis, Prä-Microsoft-Software, Lese-/Schreibzugriff, Laufzeit). Groß-/Kleinschreibung des zweiten Worts nicht, wenn es sich um einen anderen Teil der Sprache handelt, z. B. eine Präposition oder ein anderes nebengeordnetes Wort (z. B. Add-In, Vorgehensweise, Take-off).
+-   Großschreibung von Benutzeroberflächen- und Anwendungsprogrammierschnittstellenbegriffen, die Sie normalerweise nicht groß schreiben würden, es sei denn, bei ihnen wird die Groß-/Kleinschreibung beachtet (z. B. FDISK-Befehl). Folgen Sie der herkömmlichen Groß-/A-Groß-/Ausgabe von Schlüsselwörtern und anderen speziellen Begriffen in Programmiersprachen (z. B. Die printf-Funktion, Verwenden der EVEN- und ALIGN-Direktiven).
+-   Großschrift nur das erste Wort jeder Spaltenüberschrift.
 
-**Suchfeld**
+**Symbolleiste**
 
 Eine grafische Darstellung von Befehlen, die für effizienten Zugriff optimiert sind.
 
-**QuickInfo**
+**Quickinfo**
 
-Ein kleines Popup Fenster, das das unbeschriftete Steuerelement bezeichnet, auf das verwiesen wird, z. b. nicht gekennzeichnete Symbolleisten-Steuerelemente oder Befehlszeilen.
+Ein kleines Popupfenster, das das steuerelement ohne Bezeichnung bezeichnet, auf das verwiesen wird, z. B. Symbolleistensteuerelemente ohne Bezeichnung oder Befehlsschaltflächen.
 
-**ansprechen**
+**Touch**
 
-Direkte Interaktion mit einem Computer, der mit einem Finger angezeigt wird.
+Direkte Interaktion mit einer Computeranzeige mit einem Finger.
 
 ## <a name="u"></a>U
 
-**benutznutzbarkeits Studie**
+**Benutzerfreundlichkeitsstudie**
 
-Ein Forschungsverfahren, das Ihnen hilft, die Benutzeroberfläche zu verbessern, indem Sie den Entwurf Ihrer Benutzeroberfläche testen und Feedback von echten Ziel Benutzern sammeln. Nutzbarkeits Studien können von formalen Techniken in Einstellungen wie z. b. benutzernutzungslabs bis hin zu informellen Techniken in Einstellungen wie dem Büro des Benutzers reichen. Die Konstanten solcher Studien sind jedoch: Erfassen von Informationen von den Teilnehmern. Auswerten dieser Informationen für sinnvolle Trends und Muster und schließlich logische Änderungen implementieren, die die in der Studie identifizierten Probleme beheben.
+Eine Forschungstechnik, mit der Sie Ihre Benutzerfreundlichkeit verbessern können, indem Sie Ihren Benutzeroberflächenentwurf testen und Feedback von echten Zielbenutzern sammeln. Benutzerfreundlichkeitsstudien können von formalen Techniken in Einstellungen wie Benutzerfreundlichkeitslabs bis zu informellen Techniken in Einstellungen wie dem eigenen Büro des Benutzers reichen. Die Konstanten solcher Studien sind jedoch: Erfassen von Informationen von den Teilnehmern; Auswerten dieser Informationen auf sinnvolle Trends und Muster; und schließlich die Implementierung logischer Änderungen, die die in der Studie identifizierten Probleme beheben.
 
 **Benutzerkontensteuerung**
 
-Mit der Benutzerkontensteuerung (oder UAC, früher bekannt als "Benutzerkonto mit geringsten Rechten" oder LUA), werden interaktive Administratoren normalerweise mit geringsten Benutzerrechten ausgeführt. Sie können sich jedoch selbst erhöhen, um administrative Aufgaben durchzuführen, indem Sie der Zustimmungs Benutzeroberfläche eine explizite Zustimmung erteilen. Zu diesen Verwaltungsaufgaben gehören das Installieren von Software und Treibern, das Ändern von systemweiten Einstellungen, das Anzeigen oder Ändern anderer Benutzerkonten und das Ausführen von Verwaltungs Tools.
+Mit aktivierter Benutzerkontensteuerung (oder UAC, früher als "Benutzerkonto mit geringsten Rechten" oder LUA bezeichnet) werden interaktive Administratoren normalerweise mit den geringsten Benutzerberechtigungen ausgeführt. Sie können jedoch selbst erhöhte Rechte zum Ausführen administrativer Aufgaben durchführen, indem sie der Zustimmungsbenutzeroberfläche explizit zustimmen. Zu diesen administrativen Aufgaben gehören das Installieren von Software und Treibern, das Ändern systemweiter Einstellungen, das Anzeigen oder Ändern anderer Benutzerkonten und das Ausführen von Verwaltungstools.
 
-**Benutzerkontensteuerung-Schild**
+**Abschirmung der Benutzerkontensteuerung**
 
-Ein Schild Symbol, mit dem angegeben wird, dass für einen Befehl oder eine Option eine Erhöhung der Benutzerkontensteuerung erforderlich ist.
+Ein Schildsymbol, mit dem angegeben wird, dass für einen Befehl oder eine Option eine Erhöhung der Rechte für die Benutzerkontensteuerung benötigt wird.
 
-**Benutzereingabe Problem**
+**Benutzereingabeproblem**
 
-Ein Fehler, der sich aus der Benutzereingabe ergibt. Benutzereingabe Probleme sind in der Regel nicht kritisch, da Sie vor dem Fortfahren korrigiert werden müssen.
+Ein Fehler, der sich aus der Benutzereingabe ergibt. Benutzereingabeprobleme sind in der Regel nicht kritisch, da sie vor dem Fortfahren korrigiert werden müssen.
 
-**Benutzer Szenario**
+**Benutzerszenario**
 
-Eine Beschreibung eines Benutzer Ziels, eines Problems oder einer Aufgabe in einem bestimmten Satz von Umständen.
+Eine Beschreibung eines Benutzerziels, eines Problems oder einer Aufgabe unter bestimmten Umständen.
 
 ## <a name="v"></a>V
 
@@ -854,31 +854,31 @@ Eine Beschreibung eines Benutzer Ziels, eines Problems oder einer Aufgabe in ein
 
 **warning**
 
-Eine Meldung, die eine Bedingung beschreibt, die in der Zukunft ein Problem verursachen kann. Warnungen sind keine Fehler oder Fragen. In Windows Vista und höher werden Warnmeldungen in der Regel in Aufgaben Dialogfeldern angezeigt, enthalten eine klare, präzise Haupt Anweisung und enthalten in der Regel ein Standard Warnsymbol für die visuelle Verstärkung des Texts.
+Eine Meldung, die eine Bedingung beschreibt, die in Zukunft ein Problem verursachen kann. Warnungen sind keine Fehler oder Fragen. In Windows Vista und höher werden Warnmeldungen in der Regel in Aufgabendialogfeldern angezeigt, enthalten eine klare, präzise Hauptanweisung und in der Regel ein Standardwarnungssymbol zur visuellen Vertärkung des Texts.
 
 **Willkommensseite**
 
-Die erste Seite eines Assistenten, in der der Zweck des Assistenten erläutert wird. Willkommens Seiten werden nicht mehr empfohlen. Benutzer haben ein effizienteres Verfahren ohne diese Seiten.
+Die erste Seite eines Assistenten, auf der der Zweck des Assistenten erläutert wird. Willkommensseiten werden nicht mehr empfohlen. Benutzer verfügen über eine effizientere Benutzererfahrung ohne solche Seiten.
 
-**ster**
+**Fenster**
 
-Ein rechteckiger Bereich auf einem Computerbildschirm, in dem Programme und Inhalte angezeigt werden. Ein Fenster kann verschoben, verkleinert, minimiert oder geschlossen werden. Es kann sich auch um andere Fenster überlappen. Das Andocken eines untergeordneten Fensters wird in einen Bereich konvertiert. Siehe [auch: Bereich](#p).
+Ein rechteckiger Bereich auf einem Computerbildschirm, in dem Programme und Inhalte angezeigt werden. Ein Fenster kann verschoben, seine Größe geändert, minimiert oder geschlossen werden. es kann sich mit anderen Fenstern überschneiden. Beim Andocken eines untergeordneten Fensters wird es in einen Bereich konvertiert. Siehe auch: [Bereich](#p).
 
 **WINDOWS-TASTE**
 
-Eine Modifizierertaste mit dem Windows-Logo. Dieser Schlüssel wird für eine Reihe von Windows-Tastenkombinationen verwendet und ist für die Verwendung durch Windows reserviert. Wenn Sie z. b. die Windows-Taste drücken, wird das Windows-Startmenü angezeigt oder ausgeblendet.
+Ein Modifiziererschlüssel mit dem Windows darauf. Dieser Schlüssel wird für eine Reihe von Tastenkombinationen Windows verwendet und ist für Windows reserviert. Wenn Sie z. B. die Windows-Taste drücken, wird die -Taste angezeigt oder Windows Startmenü.
 
-**Draht Modelle**
+**Wireframes**
 
-Ein UI-Modell, das die Funktionalität und das Layout eines Fensters anzeigt, aber nicht die fertige Darstellung. Ein Draht Modell verwendet nur Liniensegmente, Steuerelemente und Text ohne Farbe, komplexe Grafiken oder die Verwendung von Designs.
+Ein Benutzeroberflächen-Mockup, das die Funktionalität und das Layout eines Fensters, aber nicht seine fertige Darstellung zeigt. Ein Drahtmodell verwendet nur Liniensegmente, Steuerelemente und Text ohne Farbe, komplexe Grafiken oder die Verwendung von Designs.
 
-**TZI**
+**Zauberer**
 
-Eine Sequenz von Seiten, die Benutzer durch eine selten ausgeführte Aufgabe mit mehreren Schritten führt. Effektive Assistenten reduzieren das wissen, das zum Ausführen der Aufgabe im Vergleich zu alternativen Benutzeroberflächen Anforderungen erforderlich ist.
+Eine Sequenz von Seiten, die Benutzer durch eine mehrstufige, selten ausgeführte Aufgabe führt. Effektive Assistenten reduzieren das zum Ausführen der Aufgabe erforderliche Wissen im Vergleich zu alternativen Beis.
 
 **-Arbeitsbereich**
 
-Der Bereich auf dem Bildschirm, in dem Benutzer ihre Arbeit ausführen und Programme, Dokumente und deren Verknüpfungen speichern können. Siehe auch: [Desktop](#d).
+Der Bildschirmbereich, in dem Benutzer ihre Arbeit ausführen sowie Programme, Dokumente und ihre Verknüpfungen speichern können. Siehe auch: [Desktop](#d).
 
 ## <a name="x"></a>X
 
@@ -888,7 +888,7 @@ Der Bereich auf dem Bildschirm, in dem Benutzer ihre Arbeit ausführen und Progr
 
 **Z-Reihenfolge**
 
-Die geschichtete Beziehung von Fenstern auf der Anzeige.
+Die mehrschichtige Beziehung von Fenstern auf der Anzeige.
 
  
 

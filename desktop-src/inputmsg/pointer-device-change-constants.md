@@ -1,5 +1,5 @@
 ---
-title: Zeiger Geräte Änderung
+title: Zeigergeräteänderung
 description: Werte, die im wParam-Parameter der WM_POINTERDEVICECHANGE Nachricht übergeben werden können.
 ms.assetid: B95191D7-820B-445A-A3A4-811F9F1A8C4F
 topic_type:
@@ -23,16 +23,16 @@ api_type:
 - HeaderDef
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 5e4b85c17adcd2db7c0f2f672e27ca467b346b0b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 67dc120a4541b56638c2947c24534c9f42543533b4b1a97ace72297aaf48341c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119602550"
 ---
-# <a name="pointer-device-change"></a>Zeiger Geräte Änderung
+# <a name="pointer-device-change"></a>Zeigergeräteänderung
 
-Werte, die im *wParam* -Parameter der [**WM_POINTERDEVICECHANGE**](wm-pointerdevicechange.md) Nachricht übergeben werden können.
+Werte, die im *wParam-Parameter* der [**WM_POINTERDEVICECHANGE**](wm-pointerdevicechange.md) Nachricht übergeben werden können.
 
 <dl> <dt>
 
@@ -44,7 +44,7 @@ Werte, die im *wParam* -Parameter der [**WM_POINTERDEVICECHANGE**](wm-pointerdev
 
 
 
-Ein neues Gerät wird angefügt.
+Ein neues Gerät ist angefügt.
 
 
 </dt> </dl> </dd> <dt>
@@ -70,7 +70,7 @@ Ein Gerät wurde getrennt.
 
 
 
-Die Ausrichtung des Geräts.
+Ausrichtung des Geräts.
 
 
 </dt> </dl> </dd> <dt>
@@ -83,7 +83,7 @@ Die Ausrichtung des Geräts.
 
 
 
-Die Ausrichtung des Geräts.
+Ausrichtung des Geräts.
 
 
 </dt> </dl> </dd> <dt>
@@ -96,7 +96,7 @@ Die Ausrichtung des Geräts.
 
 
 
-Die Ausrichtung des Geräts.
+Ausrichtung des Geräts.
 
 
 </dt> </dl> </dd> <dt>
@@ -109,7 +109,7 @@ Die Ausrichtung des Geräts.
 
 
 
-Die Ausrichtung des Geräts.
+Ausrichtung des Geräts.
 
 
 </dt> </dl> </dd> <dt>
@@ -122,7 +122,7 @@ Die Ausrichtung des Geräts.
 
 
 
-Der Standard Anzeigemodus.
+Der Standardanzeigemodus.
 
 
 </dt> </dl> </dd> <dt>
@@ -148,7 +148,7 @@ Zentrierter Anzeigemodus.
 
 
 
-Die Änderung in der Anzeige der Digitalisierungs Zuordnung.
+Die Änderung der Anzeige in die Digitizerzuordnung.
 
 
 </dt> </dl> </dd> <dt>
@@ -161,7 +161,7 @@ Die Änderung in der Anzeige der Digitalisierungs Zuordnung.
 
 
 
-Anzeige Auflösung.
+Anzeigeauflösung.
 
 
 </dt> </dl> </dd> <dt>
@@ -174,7 +174,7 @@ Anzeige Auflösung.
 
 
 
-Der Ursprung der Anzeige.
+Der Anzeigeursprung.
 
 
 </dt> </dl> </dd> <dt>
@@ -198,9 +198,9 @@ Das Seitenverhältnis der Anzeige.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Winuser. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winuser.h</dt> </dl> |
 
 
 

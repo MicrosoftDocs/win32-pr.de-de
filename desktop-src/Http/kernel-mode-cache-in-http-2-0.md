@@ -4,32 +4,32 @@ description: Kernelmoduscache
 ms.assetid: f9a46ff4-779b-4b3a-b8f5-1ae10a3c0a61
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 83c409b00da03c0550899f5d26c4e6a0fa215118
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c34296ae6d0bca81988437478eb5893f1a7cb1b3c8a0dc2ae461356499bbfe10
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119340500"
 ---
 # <a name="kernel-mode-cache"></a>Kernelmoduscache
 
-Mit der HTTP Server-API Version 2.0 können Anwendungen Antworten mit statischem Inhalt im Kernelmodus zwischenspeichern. Eine höhere Leistung wird erzielt, wenn Anforderungen aus dem Kernelcache bedient werden, ohne in den Benutzermodus zu wechseln.
+Die HTTP Server Version 2.0-API ermöglicht Anwendungen das Zwischenspeichern von Antworten mit statischem Inhalt im Kernelmodus. Eine höhere Leistung wird erzielt, wenn Anforderungen aus dem Kernelcache bedient werden, ohne in den Benutzermodus zu wechseln.
 
-Die HTTP-Server-API wendet die entsprechenden Eigenschaftenkonfigurationen auf alle Anforderungen an, die vom Kernelcache bereitgestellt werden, einschließlich der Protokollierung von Antworten. Anforderungen, die eine Authentifizierung erfordern, werden jedoch nicht aus dem Cache bereitgestellt.
+Die HTTP-Server-API wendet die entsprechenden Eigenschaftenkonfigurationen auf alle Anforderungen an, die aus dem Kernelcache bereitgestellt werden, einschließlich Protokollierungsantworten. Anforderungen, die eine Authentifizierung erfordern, werden jedoch nicht aus dem Cache bedient.
 
-Die HTTP-Server-API beschränkt den Cache im Kernelmodus auf Anforderungen, die die folgenden Bedingungen erfüllen:
+Die HTTP-Server-API schränkt den Kernelmoduscache auf Anforderungen ein, die die folgenden Bedingungen erfüllen:
 
 -   Das Anforderungsverb ist GET, und die gesamte Anforderung wird empfangen.
--   Die Anforderung darf keinen Entitätskörper haben.
+-   Die Anforderung darf keinen Entitätstext aufweisen.
 -   Das HTTP-Protokoll ist Version 1.0 oder höher.
 -   Der Header "Translate: f" ist nicht vorhanden.
--   Es sind keine anderen Header als "Expect: 100-Continue" vorhanden.
+-   Andere Header als "Expect: 100-Continue" sind nicht vorhanden.
 -   Der Autorisierungsheader ist nicht vorhanden.
--   Die Range- If-Range-Header sind nicht vorhanden.
+-   Die Header Range und If-Range sind nicht vorhanden.
 
 Zusätzlich zu den Einschränkungen für die Anforderung muss die Antwort auch die folgenden Bedingungen erfüllen:
 
--   Die Antwortgröße ist standardmäßig auf 256 KB beschränkt. Um die Größe der zwischengespeicherten Antwort zu ändern, legen Sie den **Registrierungswert UriMaxUriBytes** auf die erforderliche Anzahl von Bytes fest.
+-   Die Antwortgröße ist standardmäßig auf 256 KB beschränkt. Um die Größe der zwischengespeicherten Antwort zu ändern, legen Sie den Registrierungswert **UriMaxUriBytes** auf die erforderliche Anzahl von Bytes fest.
 
     ```
     HKEY_LOCAL_MACHINE
@@ -41,7 +41,7 @@ Zusätzlich zu den Einschränkungen für die Anforderung muss die Antwort auch d
                       UriMaxUriBytes
     ```
 
--   Die gesamte Antwort muss in einem einzigen Aufruf von [**HttpSendHttpResponse bereitgestellt werden.**](/windows/desktop/api/Http/nf-http-httpsendhttpresponse)
+-   Die gesamte Antwort muss in einem einzigen Aufruf von [**HttpSendHttpResponse**](/windows/desktop/api/Http/nf-http-httpsendhttpresponse)bereitgestellt werden.
 -   Der Datumsheader in der Antwort darf nicht unterdrückt werden.
 -   Wenn der Zuletzt geänderte Header vorhanden ist, muss der Wert des Headers die richtige Syntax aufweisen. Der Zeitwert in diesem Header wird für die Überprüfung des Cachesteuerelements verwendet.
 -   Der Kernelmoduscache verfügt über genügend Speicherplatz, um die Antwort zu speichern.

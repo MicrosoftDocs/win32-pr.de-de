@@ -1,23 +1,23 @@
 ---
-description: Die CIM- \_ Lüfter-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die \_ CIM-Lüfterklasse macht die folgenden Methoden verfügbar.
 ms.assetid: 84AB7D53-AA24-447A-A715-F521575573C1
 ms.tgt_platform: multiple
-title: CIM_Fan Methoden
+title: CIM_Fan-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f7cbabf7624338ed8554392e831e5bae5a039983
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 93da7777747e5eac7a3c6d215cb9952546fbb505462a6b027908ffdf3fd11a7e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344367"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119321082"
 ---
-# <a name="cim_fan-methods"></a>CIM- \_ Fan-Methoden
+# <a name="cim_fan-methods"></a>\_CIM-Lüftermethoden
 
-Die [**CIM- \_ Lüfter**](cim-fan.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**\_ CIM-Lüfterklasse**](cim-fan.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

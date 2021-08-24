@@ -1,11 +1,11 @@
 ---
-title: ms-DS-Tasks-für-AZ-Role-Attribut
-description: Liste der Aufgaben für AZ-Role.
+title: ms-DS-Tasks-For-Az-Role-Attribut
+description: Liste der Aufgaben für Az-Role.
 ms.assetid: 3247ccd9-f86d-453e-8150-db52aff11f6a
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-Tasks-für-AZ-Role-Attribut AD-Schema
-- AD-Schema des msDS-tasksforazrole-Attributs
+- ms-DS-Tasks-For-Az-Role-Attribut AD-Schema
+- MSDS-TasksForAzRole-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ffcd5bc033afa6f61ea1aa8c127276994f6d3b4
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: da8c1e7a76131de1e1f1890819a60e9d5c5669e2d4098962ebb1a32322fdd0cf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106338828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544320"
 ---
-# <a name="ms-ds-tasks-for-az-role-attribute"></a>ms-DS-Tasks-für-AZ-Role-Attribut
+# <a name="ms-ds-tasks-for-az-role-attribute"></a>ms-DS-Tasks-For-Az-Role-Attribut
 
-Liste der Aufgaben für AZ-Role.
+Liste der Aufgaben für Az-Role.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-Tasks-für-AZ-Role                 |
-| LDAP-Display-Name | MSDS-tasksforazrole                     |
+| CN                | ms-DS-Tasks-for-Az-Role                 |
+| Ldap-Anzeigename | msDS-TasksForAzRole                     |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | Azrollen-Administrator                           |
-| Aktualisierungshäufigkeit  | Während der Initialisierung oder Richtlinien Änderung. |
+| Aktualisieren von Berechtigungen  | AzRoles admin                           |
+| Updatehäufigkeit  | Während der Initialisierung oder Richtlinienänderung. |
 | Attribute-Id      | 1.2.840.113556.1.4.1814                 |
 | System-ID-GUID    | 35319082-8c4a-4646-9386-c2949d49894d    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
@@ -42,13 +42,13 @@ Liste der Aufgaben für AZ-Role.
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,15 +57,15 @@ Liste der Aufgaben für AZ-Role.
 | Link-ID                | 2024                                              |
 | MAPI-Id                | \-                                                |
 | System-Only            | False                                             |
-| Ist-einwertig       | False                                             |
+| Ist einwertig       | False                                             |
 | Ist indiziert             | False                                             |
 | Im globalen Katalog      | False                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                      |
 | Range-Lower            | \-                                                |
 | Range-Upper            | \-                                                |
 | Search-Flags           | 0x00000000                                        |
 | System-Flags           | 0x00000010                                        |
-| In verwendete Klassen        | [**ms-DS-AZ-Role**](c-msds-azrole.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Az-Role**](c-msds-azrole.md)<br/> |
 
 
 
@@ -78,15 +78,15 @@ Liste der Aufgaben für AZ-Role.
 | Link-ID                | 2024                                              |
 | MAPI-Id                | \-                                                |
 | System-Only            | False                                             |
-| Ist-einwertig       | False                                             |
+| Ist einwertig       | False                                             |
 | Ist indiziert             | False                                             |
 | Im globalen Katalog      | False                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                      |
 | Range-Lower            | \-                                                |
 | Range-Upper            | \-                                                |
 | Search-Flags           | 0x00000000                                        |
 | System-Flags           | 0x00000010                                        |
-| In verwendete Klassen        | [**ms-DS-AZ-Role**](c-msds-azrole.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Az-Role**](c-msds-azrole.md)<br/> |
 
 
 
@@ -99,15 +99,15 @@ Liste der Aufgaben für AZ-Role.
 | Link-ID                | 2024                                              |
 | MAPI-Id                | \-                                                |
 | System-Only            | False                                             |
-| Ist-einwertig       | False                                             |
+| Ist einwertig       | False                                             |
 | Ist indiziert             | False                                             |
 | Im globalen Katalog      | False                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                      |
 | Range-Lower            | \-                                                |
 | Range-Upper            | \-                                                |
 | Search-Flags           | 0x00000000                                        |
 | System-Flags           | 0x00000010                                        |
-| In verwendete Klassen        | [**ms-DS-AZ-Role**](c-msds-azrole.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Az-Role**](c-msds-azrole.md)<br/> |
 
 
 
@@ -120,15 +120,15 @@ Liste der Aufgaben für AZ-Role.
 | Link-ID                | 2024                                              |
 | MAPI-Id                | \-                                                |
 | System-Only            | False                                             |
-| Ist-einwertig       | False                                             |
+| Ist einwertig       | False                                             |
 | Ist indiziert             | False                                             |
 | Im globalen Katalog      | False                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                      |
 | Range-Lower            | \-                                                |
 | Range-Upper            | \-                                                |
 | Search-Flags           | 0x00000000                                        |
 | System-Flags           | 0x00000010                                        |
-| In verwendete Klassen        | [**ms-DS-AZ-Role**](c-msds-azrole.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Az-Role**](c-msds-azrole.md)<br/> |
 
 
 
@@ -141,15 +141,15 @@ Liste der Aufgaben für AZ-Role.
 | Link-ID                | 2024                                              |
 | MAPI-Id                | \-                                                |
 | System-Only            | False                                             |
-| Ist-einwertig       | False                                             |
+| Ist einwertig       | False                                             |
 | Ist indiziert             | False                                             |
 | Im globalen Katalog      | False                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                      |
 | Range-Lower            | \-                                                |
 | Range-Upper            | \-                                                |
 | Search-Flags           | 0x00000000                                        |
 | System-Flags           | 0x00000010                                        |
-| In verwendete Klassen        | [**ms-DS-AZ-Role**](c-msds-azrole.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Az-Role**](c-msds-azrole.md)<br/> |
 
 
 

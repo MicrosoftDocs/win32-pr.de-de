@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-deletedpath-Attribut
+title: ms-DFSR-DeletedPath-Attribut
 description: Vollständiger Pfad des gelöschten Verzeichnisses.
 ms.assetid: 8fb702a5-abd1-494c-980b-af90385bfd9c
 ms.tgt_platform: multiple
 keywords:
-- MS-DFSR-deletedpath-Attribut, AD-Schema
-- AD-Schema für das msdfsr-deletedpath-Attribut
+- MS-DFSR-DeletedPath-Attribut AD-Schema
+- MSDFSR-DeletedPath-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 31d39c0140ef15de491fe84b1a314c9bf76b10ee
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f2fe3da5c51180c125b2d34b28cbdf860e8d26589e98b93edf30925812d887fb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104392285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119298900"
 ---
-# <a name="ms-dfsr-deletedpath-attribute"></a>MS-DFSR-deletedpath-Attribut
+# <a name="ms-dfsr-deletedpath-attribute"></a>ms-DFSR-DeletedPath-Attribut
 
 Vollständiger Pfad des gelöschten Verzeichnisses.
 
@@ -29,11 +29,11 @@ Vollständiger Pfad des gelöschten Verzeichnisses.
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-DFSR-deletedpath                         |
-| LDAP-Display-Name | msdfsr-deletedpath                          |
+| CN                | ms-DFSR-DeletedPath                         |
+| Ldap-Anzeigename | msDFSR-DeletedPath                          |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.26                  |
 | System-ID-GUID    | 817cf0b8-db95-4914-b833-5a079ef65764        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -54,16 +54,16 @@ Vollständiger Pfad des gelöschten Verzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Ist einwertig       | True                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -75,16 +75,16 @@ Vollständiger Pfad des gelöschten Verzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Ist einwertig       | True                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -96,16 +96,16 @@ Vollständiger Pfad des gelöschten Verzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Ist einwertig       | True                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 

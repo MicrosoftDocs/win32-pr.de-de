@@ -1,9 +1,9 @@
 ---
-title: CCM_SETUNICODEFORMAT Meldung (kommstrg. h)
-description: Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest. Diese Meldung ermöglicht es Ihnen, den Zeichensatz zu ändern, der vom Steuerelement zur Laufzeit verwendet wird, anstatt das Steuerelement neu erstellen zu müssen.
+title: CCM_SETUNICODEFORMAT Meldung (Commctrl.h)
+description: Legt das Unicode-Zeichenformatflag für das Steuerelement fest. Mit dieser Meldung können Sie den vom Steuerelement zur Laufzeit verwendeten Zeichensatz ändern, anstatt das Steuerelement neu erstellen zu müssen.
 ms.assetid: 8028b7d7-30d2-4154-81c7-ba1ed095ef02
 keywords:
-- Windows-Steuerelemente für CCM_SETUNICODEFORMAT Meldung
+- CCM_SETUNICODEFORMAT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ffbe9f5032c193cb612f68ca8ed6ec6b04ce8094
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9c687d476b5dc5aa65e876839dcd0c94c0f77c96f133db710d6b98f7114ab724
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119320150"
 ---
-# <a name="ccm_setunicodeformat-message"></a>CCM-Nachricht "*- \_ Code Format"
+# <a name="ccm_setunicodeformat-message"></a>CCM \_ SETUNICODEFORMAT-Nachricht
 
-Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest. Diese Meldung ermöglicht es Ihnen, den Zeichensatz zu ändern, der vom Steuerelement zur Laufzeit verwendet wird, anstatt das Steuerelement neu erstellen zu müssen.
+Legt das Unicode-Zeichenformatflag für das Steuerelement fest. Mit dieser Meldung können Sie den vom Steuerelement zur Laufzeit verwendeten Zeichensatz ändern, anstatt das Steuerelement neu erstellen zu müssen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt das Unicode-Zeichenformat Flag für das-Steuerelement fest. Diese Meldung e
 *wParam* 
 </dt> <dd>
 
-Ein-Wert, der den Zeichensatz bestimmt, der vom-Steuerelement verwendet wird. Wenn dieser Wert **true** ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert **false** ist, verwendet das Steuerelement ANSI-Zeichen.
+Ein -Wert, der den vom Steuerelement verwendeten Zeichensatz bestimmt. Wenn dieser Wert **TRUE** ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert **FALSE** ist, verwendet das Steuerelement ANSI-Zeichen.
 
 </dd> <dt>
 
@@ -41,7 +41,7 @@ Ein-Wert, der den Zeichensatz bestimmt, der vom-Steuerelement verwendet wird. We
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das vorherige Unicode-formatflag für das-Steuerelement zurück.
+Gibt das vorherige Unicode-Formatflag für das Steuerelement zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,17 +49,17 @@ Gibt das vorherige Unicode-formatflag für das-Steuerelement zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CCM \_ getunicodeformat**](ccm-getunicodeformat.md)
+[**CCM \_ GETUNICODEFORMAT**](ccm-getunicodeformat.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: EM_GETUNDONAME Meldung (RichEdit. h)
-description: Microsoft Rich Edit 2,0 und höher ruft ggf. den Typ der nächsten Rückgängig-Aktion ab. Microsoft Rich Edit 1,0 diese Meldung wird nicht unterstützt.
+title: EM_GETUNDONAME Nachricht (Richedit.h)
+description: Microsoft Rich Edit 2.0 und höher Ruft ggf. den Typ der nächsten Rückgängigaktion ab. Microsoft Rich Edit 1.0 Diese Meldung wird nicht unterstützt.
 ms.assetid: 43351909-f8bc-425a-9d9b-655e3b47eb75
 keywords:
-- Windows-Steuerelemente für EM_GETUNDONAME Meldung
+- EM_GETUNDONAME Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a0c29b5815da5569059ba80c007d6af39d1e389f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d133038c0adad2fe7eaa1ae98cf638fe6bd13fad82df3b3d2d1ac384a30e1a80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956900"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119576640"
 ---
-# <a name="em_getundoname-message"></a>EM \_ getundoname-Meldung
+# <a name="em_getundoname-message"></a>EM \_ GETUNDONAME-Nachricht
 
-Microsoft Rich Edit 2,0 und höher: Ruft den Typ der nächsten Rückgängig-Aktion ab, sofern vorhanden.
+Microsoft Rich Edit 2.0 und höher: Ruft ggf. den Typ der nächsten Rückgängigaktion ab.
 
-Microsoft Rich Edit 1,0: Diese Meldung wird nicht unterstützt.
+Microsoft Rich Edit 1.0: Diese Meldung wird nicht unterstützt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -47,13 +47,13 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Rückgängig-Aktion vorliegt, ist der zurückgegebene Wert ein [**undonameid**](/windows/desktop/api/Richedit/ne-richedit-undonameid) -Enumerationswert, der den Typ der nächsten Aktion in der Rückgängig-Warteschlange des Steuer Elements angibt.
+Wenn eine Rückgängigaktion vorhanden ist, ist der zurückgegebene Wert ein [**UNDONAMEID-Enumerationswert,**](/windows/desktop/api/Richedit/ne-richedit-undonameid) der den Typ der nächsten Aktion in der Rückgängig-Warteschlange des Steuerelements angibt.
 
-Wenn keine Aktionen vorhanden sind, die rückgängig gemacht werden können, oder der Typ der nächsten Rückgängig-Aktion unbekannt ist, ist der Rückgabewert 0 (null).
+Wenn keine Aktionen rückgängig werden können oder der Typ der nächsten Rückgängigaktion unbekannt ist, ist der Rückgabewert 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Typen von Aktionen, die rückgängig gemacht oder wiederholt werden können, sind das eingeben, löschen, ziehen, ablegen, Ausschneiden und einfügen. Diese Informationen können für Anwendungen nützlich sein, die eine erweiterte Benutzeroberfläche für Rückgängigvorgänge und Wiederholungs Vorgänge bereitstellen, z. b. ein Dropdown-Listenfeld mit Aktionen, die rückgängig gemacht werden können.
+Zu den Aktionstypen, die rückgängig machen oder wieder rückgängig machen können, gehören Eingabe-, Lösch-, Drag&drop-, Ausschneide- und Einfügevorgänge. Diese Informationen können für Anwendungen nützlich sein, die eine erweiterte Benutzeroberfläche für Rückgängig- und Wiederholungsvorgänge bereitstellen, z. B. ein Dropdownlistenfeld mit Aktionen, die rückgängig gemacht werden können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,9 +61,9 @@ Die Typen von Aktionen, die rückgängig gemacht oder wiederholt werden können,
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -71,19 +71,19 @@ Die Typen von Aktionen, die rückgängig gemacht oder wiederholt werden können,
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ getredoname**](em-getredoname.md)
+[**EM \_ GETREDONAME**](em-getredoname.md)
 </dt> <dt>
 
-[**EM- \_ Wiederholung**](em-redo.md)
+[**EM \_ REDO**](em-redo.md)
 </dt> <dt>
 
-[**EM \_ rückgängig machen**](em-undo.md)
+[**EM \_ UNDO**](em-undo.md)
 </dt> <dt>
 
-[**Undonameid**](/windows/desktop/api/Richedit/ne-richedit-undonameid)
+[**UNDONAMEID**](/windows/desktop/api/Richedit/ne-richedit-undonameid)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
 title: AcceptServerName (PeapExtensionsType) -Element (EAPHost)
-description: Das AcceptServerName-Element (PeapExtensionsType) gibt an, ob der Servername anhand der Namenszeichenfolge überprüft wird, die im Schema mspeapconnectionpropertiesv1 in serverNames angegeben ist.
+description: Das AcceptServerName-Element (PeapExtensionsType) gibt an, ob der Servername anhand der Namenszeichenfolge überprüft wird, die im Schema mspeapconnectionpropertiesv1 in ServerNames angegeben ist.
 ms.assetid: 95173b57-8100-44e4-98f0-4f2a3deabce7
 keywords:
 - Element EAPHost
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 64565b24da0b4a93fd35fd3c4a6e7075546024c4
-ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
+ms.openlocfilehash: d85a68eb497dda352f5d1860d2726f26e146545a0b1705ae52731d0cfdee9ddf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111989095"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119404690"
 ---
 # <a name="acceptservername-peapextensionstype-element-eaphost"></a>AcceptServerName (PeapExtensionsType) -Element (EAPHost)
 
-Das **AcceptServerName -Element (PeapExtensionsType)** gibt an, ob der Servername anhand der Im [**ServerNames -Element (ServerValidationParameters)**](mspeapconnectionpropertiesv1schema-servernames-servervalidationparameters-element.md) angegebenen Namenszeichenfolge überprüft wird.
+Das **AcceptServerName-Element (PeapExtensionsType)** gibt an, ob der Servername anhand der Im [**ServerNames-Element (ServerValidationParameters)**](mspeapconnectionpropertiesv1schema-servernames-servervalidationparameters-element.md) angegebenen Namenszeichenfolge überprüft wird.
 
 ``` syntax
 <xs:element
@@ -38,18 +38,18 @@ Das -Element wird durch das [**PeapExtensionsType-Element**](mspeapconnectionpro
 
 Das **AcceptServerName-Element** ist optional.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ 7-Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ R2-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

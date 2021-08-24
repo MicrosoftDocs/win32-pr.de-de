@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_err-Enumeration'
-title: JET_err-Enumeration
+description: 'Weitere Informationen finden Sie unter: JET_err Enumeration'
+title: JET_err Enumeration
 TOCTitle: JET_err enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_err
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_err(v=EXCHG.10)
@@ -832,19 +832,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: eccc99baa6fe791f3817e7e88326e3cee9b451b8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f726de52cc640c47bedc15f7204b421dabee5f0c91a9200f1f5490b224ae38d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119475050"
 ---
-# <a name="jet_err-enumeration"></a>JET_err-Enumeration
+# <a name="jet_err-enumeration"></a>JET_err Enumeration
 
 ESENT-Fehlercodes.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -877,33 +877,33 @@ public enum JET_err
 </tr>
 <tr class="even">
 <td></td>
-<td>Rfsfailure</td>
-<td>Fehler beim Simulator des Ressourcen Fehlers</td>
+<td>RfsFailure</td>
+<td>Fehler im Ressourcenfehlersimulator</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Rfsnotarmed</td>
-<td>Der Ressourcen Fehler Simulator wurde nicht initialisiert.</td>
+<td>RfsNotArmed</td>
+<td>Ressourcenfehlersimulator nicht initialisiert</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>FileClose</td>
-<td>Die Datei konnte nicht geschlossen werden.</td>
+<td>Fileclose</td>
+<td>Datei konnte nicht geschlossen werden</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Outo-Threads</td>
-<td>Der Thread konnte nicht gestartet werden.</td>
+<td>OutOfThreads</td>
+<td>Thread konnte nicht gestartet werden</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Die e/a-Vorgänge</td>
-<td>Das System ist aufgrund zu vieler IOS ausgelastet.</td>
+<td>TooManyIO</td>
+<td>System ausgelastet aufgrund zu vieler E/A-Geräte</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Taskdrop</td>
-<td>Ein angeforderter asynchroner Task konnte nicht ausgeführt werden.</td>
+<td>TaskDropped</td>
+<td>Eine angeforderte asynchrone Aufgabe konnte nicht ausgeführt werden.</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -912,18 +912,18 @@ public enum JET_err
 </tr>
 <tr class="odd">
 <td></td>
-<td>Disabledfunktionsfunktion</td>
-<td>Sie führen minese aus, für das nicht alle Features kompiliert wurden. Diese Funktion wird nur in einer Vollversion von ESE unterstützt.</td>
+<td>DisabledFunctionality</td>
+<td>Sie verwenden MinESE, in das nicht alle Funktionen kompiliert sind. Diese Funktionalität wird nur in einer Vollversion von ESE unterstützt.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Unloadableosfunktionalität</td>
-<td>Die gewünschte Betriebssystem Funktionalität konnte nicht gefunden und geladen/verknüpft werden.</td>
+<td>UnloadableOSFunctionality</td>
+<td>Die gewünschte Betriebssystemfunktion konnte nicht gefunden und geladen/verknüpft werden.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>DatabaseBufferDependenciesCorrupted</td>
-<td>Puffer Abhängigkeiten sind nicht ordnungsgemäß festgelegt. Wiederherstellungsfehler</td>
+<td>Pufferabhängigkeiten sind nicht ordnungsgemäß festgelegt. Wiederherstellungsfehler</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -932,548 +932,548 @@ public enum JET_err
 </tr>
 <tr class="odd">
 <td></td>
-<td>Pageborder</td>
-<td>Seiten Grenze erreicht</td>
+<td>PageBoundary</td>
+<td>Seitenbegrenzung erreicht</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Keyboundary</td>
-<td>Schlüssel Grenze erreicht</td>
+<td>KeyBoundary</td>
+<td>Schlüsselgrenze erreicht</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Badpagelink</td>
+<td>BadPageLink</td>
 <td>Datenbank beschädigt</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Badbookmark</td>
-<td>Lesezeichen hat keine entsprechende Adresse in der Datenbank.</td>
+<td>BadBookmark</td>
+<td>Lesezeichen hat keine entsprechende Adresse in der Datenbank</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Ntsystemcallfailed</td>
-<td>Fehler beim Abrufen des Betriebssystems.</td>
+<td>NTSystemCallFailed</td>
+<td>Fehler beim Aufruf des Betriebssystems</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Badparser-pagelink</td>
+<td>BadParentPageLink</td>
 <td>Datenbank beschädigt</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Spavailextcacheouesf Sync</td>
-<td>Availext-Cache stimmt nicht mit BTREE</td>
+<td>SPAvailExtCacheOutOfSync</td>
+<td>AvailExt cache doesn't match btree</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Spavailextbeschädigt</td>
-<td>Die availext-Raumstruktur ist beschädigt.</td>
+<td>SPAvailExtCorrupted</td>
+<td>Die Platzstruktur "AvailExt" ist beschädigt.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Spavailextcacheouto-Memory</td>
-<td>Nicht genügend Arbeitsspeicher zum Zuordnen eines availext-Cache Knotens</td>
+<td>SPAvailExtCacheOutOfMemory</td>
+<td>Nicht genügend Arbeitsspeicher zum Zuordnen eines AvailExt-Cacheknotens</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Spownextbeschädigt</td>
-<td>OwnExt-Raumstruktur ist beschädigt.</td>
+<td>SPOwnExtCorrupted</td>
+<td>OwnExt-Raumstruktur ist beschädigt</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Dbtimebeschädigte</td>
-<td>Dbtime fest auf der aktuellen Seite ist größer als die globale dbtime fest-Datenbank</td>
+<td>DbTimeCorrupted</td>
+<td>Dbtime auf der aktuellen Seite ist größer als die globale Datenbank dbtime</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Keytruncated</td>
-<td>der Schlüssel wurde für den Index abgeschnitten, der das Abschneiden von Schlüsseln nicht zulässt.</td>
+<td>KeyTruncated</td>
+<td>Schlüssel für Index abgeschnitten, der das Abschneiden von Schlüsseln nicht zusah</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databaseleakinspace</td>
-<td>Einige Datenbankseiten sind nicht erreichbar, selbst wenn Sie in der-Struktur nicht erreichbar sind. nur eine Offline Defragmentierung kann den verlorenen Speicherplatz zurückgeben.</td>
+<td>DatabaseLeakInSpace</td>
+<td>Einige Datenbankseiten sind selbst aus der Verfügbarkeitsstruktur nicht mehr erreichbar. Nur eine Offlinedefragmentierung kann den verloren gegangenen Speicherplatz zurückgeben.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Bademptypage</td>
-<td>Die Datenbank ist beschädigt. Eine unerwartete leere Seite wird durchsucht.</td>
+<td>BadEmptyPage</td>
+<td>Datenbank beschädigt. Suchen einer unerwartet leeren Seite.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Keyto-Big</td>
-<td>Der Schlüssel ist zu groß.</td>
+<td>KeyTooBig</td>
+<td>Schlüssel ist zu groß</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Cannotseparateintrinsiclv</td>
-<td>Unzulässiger Versuch, ein LV zu trennen, das System intern sein muss</td>
+<td>CannotSeparateIntrinsicLV</td>
+<td>Unzulässiger Versuch, einen lv-Wert zu trennen, der systeminterner Natur sein muss</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Separatedlongvalue</td>
-<td>Der Vorgang wird für einen getrennten langen Wert nicht unterstützt.</td>
+<td>SeparatedLongValue</td>
+<td>Operation not supported on separated long-value (Vorgang wird für getrennten Long-Value nicht unterstützt)</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Mustbeseparatelongvalue</td>
-<td>Können nur lange Wert Spalten, die separat sein können, nur dann, wenn die Größe eingeschränkt ist, so eingeschränkt werden, dass Sie fest oder Variablen Spalten sind.</td>
+<td>MustBeSeparateLongValue</td>
+<td>Kann nur Spalten mit langen Wert vorlesen, die getrennt werden können, z. B. keine Größenbeschränkung, sodass es sich um feste oder variable Spalten handelt.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidpreread</td>
-<td>Lange Werte können beim aktuellen Index Sekundär nicht vorab registriert werden.</td>
+<td>InvalidPreread</td>
+<td>Lange Werte können nicht vorgelesen werden, wenn der aktuelle sekundäre Index</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidloggedoperation</td>
-<td>Der protokollierte Vorgang kann nicht erneut ausgeführt werden.</td>
+<td>InvalidLoggedOperation</td>
+<td>Protokollierter Vorgang kann nicht wie möglich durchgeführt werden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Logfilebeschädigt</td>
-<td>Die Protokolldatei ist beschädigt.</td>
+<td>LogFileCorrupt</td>
+<td>Protokolldatei ist beschädigt</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Nobackupdirectory</td>
-<td>Kein Sicherungs Verzeichnis angegeben.</td>
+<td>NoBackupDirectory</td>
+<td>Kein Sicherungsverzeichnis angegeben</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Backupdirectoriynotempty</td>
-<td>Das Sicherungs Verzeichnis ist nicht leer..</td>
+<td>BackupDirectoryNotEmpty</td>
+<td>Das Sicherungsverzeichnis ist nicht emtpy.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>BackupInProgress</td>
-<td>Die Sicherung ist bereits aktiv.</td>
+<td>Sicherung ist bereits aktiv</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Restorum Progress</td>
-<td>Wiederherstellung wird ausgeführt</td>
+<td>RestoreInProgress</td>
+<td>Wiederherstellung wird in Bearbeitung</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Missingpreviouslogfile</td>
-<td>Die Protokolldatei für den Prüf Punkt fehlt.</td>
+<td>MissingPreviousLogFile</td>
+<td>Fehlende Protokolldatei für den Überprüfungspunkt</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Logwrite-Fail</td>
-<td>Fehler beim Schreiben in die Protokolldatei.</td>
+<td>LogWriteFail</td>
+<td>Fehler beim Schreiben in die Protokolldatei</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Logdisabledduetorecoveryfailure</td>
-<td>Versuchen Sie, etwas nach Wiederherstellungs Fehler beim zu protokollieren</td>
+<td>LogDisabledDueToRecoveryFailure</td>
+<td>Versuchen Sie, etwas zu protokollieren, nachdem die Wiederherstellung fehlgeschlagen ist.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Cannotlogduringrecoveryredo</td>
-<td>Versuchen Sie, etwas während des Wiederherstellungs Vorgangs zu protokollieren</td>
+<td>CannotLogDuringRecoveryRedo</td>
+<td>Versuchen Sie, während der Wiederherstellungswiederherstellung etwas zu protokollieren.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Loggenerationmismatch</td>
-<td>Der Name der Protokolldatei stimmt nicht mit der internen Generierungs Nummer.</td>
+<td>LogGenerationMismatch</td>
+<td>Der Name der Protokolldatei passt nicht zur internen Generierungsnummer.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Badlogversion</td>
+<td>BadLogVersion</td>
 <td>Die Version der Protokolldatei ist nicht mit der Jet-Version kompatibel.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidlogsequence</td>
-<td>Der Zeitstempel im nächsten Protokoll entspricht nicht den Erwartungen.</td>
+<td>InvalidLogSequence</td>
+<td>Der Zeitstempel im nächsten Protokoll stimmt nicht mit dem erwarteten Zeitstempel überein.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Loggingdeaktiviert</td>
+<td>LoggingDisabled</td>
 <td>Das Protokoll ist nicht aktiv.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Logbufferabosmall</td>
-<td>Der Protokollpuffer ist zu klein für die Wiederherstellung.</td>
+<td>LogBufferTooSmall</td>
+<td>Protokollpuffer ist für die Wiederherstellung zu klein</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Logsequenceend</td>
-<td>Maximale Anzahl von Protokolldateien überschritten.</td>
+<td>LogSequenceEnd</td>
+<td>Maximale Anzahl von Protokolldateien überschritten</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Nobackup</td>
-<td>Keine Sicherung wird ausgeführt.</td>
+<td>NoBackup</td>
+<td>Es wird keine Sicherung ausgeführt.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidbackupsequence</td>
-<td>Sicherungs Rückruf außerhalb der Reihenfolge</td>
+<td>InvalidBackupSequence</td>
+<td>Sicherungsaufruf außerhalb der Reihenfolge</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Backupnotallowedyet</td>
-<td>Sicherung kann jetzt nicht durchführen werden</td>
+<td>BackupNotAllowedYet</td>
+<td>Sicherung kann jetzt nicht durchgeführt werden</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Deletebackupfilefail</td>
-<td>Die Sicherungsdatei konnte nicht gelöscht werden.</td>
+<td>DeleteBackupFileFail</td>
+<td>Sicherungsdatei konnte nicht gelöscht werden</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Makebackupdirectoriyfail</td>
-<td>Das temporäre Sicherungs Verzeichnis konnte nicht erstellt werden.</td>
+<td>MakeBackupDirectoryFail</td>
+<td>Temporäres Sicherungsverzeichnis konnte nicht erstellt werden</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidbackup</td>
-<td>Inkrementelle Sicherung kann nicht durchgeführt werden</td>
+<td>InvalidBackup</td>
+<td>Inkrementelle Sicherung kann nicht ausgeführt werden, wenn die Zirkelprotokollierung aktiviert ist</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Wiederherstellungsmethoden</td>
-<td>Mit Fehlern wieder hergestellt</td>
+<td>RecoveredWithErrors</td>
+<td>Mit Fehlern wiederhergestellt</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Missinglogfile</td>
-<td>Die aktuelle Protokolldatei fehlt.</td>
+<td>MissingLogFile</td>
+<td>Aktuelle Protokolldatei fehlt</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Logdiskfull</td>
-<td>Protokoll Datenträger</td>
+<td>LogDiskFull</td>
+<td>Protokolldatenträger voll</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Badlogsignature</td>
-<td>Ungültige Signatur für eine Protokolldatei.</td>
+<td>BadLogSignature</td>
+<td>Ungültige Signatur für eine Protokolldatei</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Baddbsignature</td>
-<td>Ungültige Signatur für eine Datenbankdatei.</td>
+<td>BadDbSignature</td>
+<td>Ungültige Signatur für eine Datenbankdatei</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Badcheckpointsignature</td>
-<td>Ungültige Signatur für eine Prüf Punkt Datei.</td>
+<td>BadCheckpointSignature</td>
+<td>Ungültige Signatur für eine Prüfpunktdatei</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Checkpointbeschädigt</td>
-<td>Die Prüf Punkt Datei wurde nicht gefunden oder ist beschädigt</td>
+<td>CheckpointCorrupt</td>
+<td>Prüfpunktdatei nicht gefunden oder beschädigt</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Missingpatchseite</td>
-<td>Seite "Patchdatei" wurde während der Wiederherstellung nicht gefunden</td>
+<td>MissingPatchPage</td>
+<td>Patchdateiseite während der Wiederherstellung nicht gefunden</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Badpatchseite</td>
-<td>Die Seite "Patchdatei" ist ungültig.</td>
+<td>BadPatchPage</td>
+<td>Patchdateiseite ist ungültig</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Redoabrupangespannt</td>
-<td>Die Wiederholung wurde aufgrund eines plötzlichen Fehlers beim Lesen der Protokolle aus der Protokolldatei plötzlich beendet.</td>
+<td>RedoAbruptEnded</td>
+<td>Die Wiederholung wurde aufgrund eines plötzlichen Fehlers beim Lesen von Protokollen aus der Protokolldatei plötzlich beendet.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Badslvsignature</td>
+<td>BadSLVSignature</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Patchfilemissing</td>
-<td>Harte Wiederherstellung hat erkannt, dass die Patchdatei im Sicherungs Satz fehlt.</td>
+<td>PatchFileMissing</td>
+<td>Hard restore detected that patch file is missing in backup set (Bei der hard-Wiederherstellung wurde festgestellt, dass die Patchdatei im Sicherungssatz fehlt)</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Databaselogsetmismatch</td>
+<td>DatabaseLogSetMismatch</td>
 <td>Die Datenbank gehört nicht zum aktuellen Satz von Protokolldateien.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databasestreamingfilemismatch</td>
-<td>Datenbank-und Streamingdatei stimmen nicht mit einander identisch.</td>
+<td>DatabaseStreamingFileMismatch</td>
+<td>Datenbank und Streamingdatei stimmen nicht überein</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Logfilesizemismatch</td>
-<td>die tatsächliche Protokolldatei Größe stimmt nicht JET_paramLogFileSize</td>
+<td>LogFileSizeMismatch</td>
+<td>Die tatsächliche Protokolldateigröße stimmt nicht mit JET_paramLogFileSize</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Checkpointfile-found</td>
-<td>Die Prüf Punkt Datei wurde nicht gefunden.</td>
+<td>CheckpointFileNotFound</td>
+<td>Prüfpunktdatei konnte nicht gefunden werden</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>"Requirements dlogfilesmissing"</td>
-<td>Die für die Wiederherstellung erforderlichen Protokolldateien fehlen.</td>
+<td>RequiredLogFilesMissing</td>
+<td>Die erforderlichen Protokolldateien für die Wiederherstellung fehlen.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Softrecoveryonbackupdatabase</td>
-<td>Die weiche Wiederherstellung ist für eine Sicherungs Datenbank vorgesehen. Stattdessen sollte RESTORE verwendet werden.</td>
+<td>SoftRecoveryOnBackupDatabase</td>
+<td>Die weiche Wiederherstellung ist für eine Sicherungsdatenbank vorgesehen. Stattdessen sollte die Wiederherstellung verwendet werden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Logfilesizemismatchdatabaseskonsistentes</td>
-<td>die Datenbanken wurden wieder hergestellt, aber die während der Wiederherstellung verwendete Protokolldatei entspricht nicht JET_paramLogFileSize</td>
+<td>LogFileSizeMismatchDatabasesConsistent</td>
+<td>-Datenbanken wurden wiederhergestellt, aber die bei der Wiederherstellung verwendete Protokolldateigröße stimmt nicht mit JET_paramLogFileSize</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Logsector sizemismatch</td>
-<td>die Sektorgröße der Protokolldatei entspricht nicht der Sektorgröße des aktuellen Volumes.</td>
+<td>LogSectorSizeMismatch</td>
+<td>Die Sektorgröße der Protokolldatei stimmt nicht mit der Sektorgröße des aktuellen Volumes überein.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Logsector sizemismatchdatabaseskonsistentes</td>
-<td>Datenbanken wurden wieder hergestellt, aber die Sektorgröße der Protokolldatei (die während der Wiederherstellung verwendet wird) entspricht nicht der Sektorgröße des aktuellen Volumes.</td>
+<td>LogSectorSizeMismatchDatabasesConsistent</td>
+<td>-Datenbanken wurden wiederhergestellt, aber die Sektorgröße der Protokolldatei (die während der Wiederherstellung verwendet wird) stimmt nicht mit der Sektorgröße des aktuellen Volumes überein.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Logsequenceenddatabaseskonsistentes</td>
-<td>Datenbanken wurden wieder hergestellt, aber alle möglichen Protokoll Generierungen in der aktuellen Sequenz werden verwendet. alle Protokolldateien und Prüf Punkt Dateien löschen und die Datenbanken sichern, bevor Sie fortfahren</td>
+<td>LogSequenceEndDatabasesConsistent</td>
+<td>-Datenbanken wurden wiederhergestellt, aber alle möglichen Protokollgenerationen in der aktuellen Sequenz werden verwendet. Löschen Sie alle Protokolldateien und die Prüfpunktdatei, und sichern Sie die Datenbanken, bevor Sie fortfahren.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Streamingdatanotlogger</td>
-<td>Ungültiger Versuch, einen Vorgang zum Streamen von Dateien wiederzugeben, bei dem die Daten nicht protokolliert wurden Wahrscheinlich aufgrund eines rollforwardrollbacks mit aktivierter zirkulären Protokollierung</td>
+<td>StreamingDataNotLogged</td>
+<td>Unzulässiger Versuch, einen Streamingdateivorgang wiederzugeben, bei dem die Daten nicht protokolliert wurden. Wahrscheinlich durch einen Roll-Forward mit aktivierter Zirkelprotokollierung verursacht</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databasedirtyshutdown</td>
-<td>Die Datenbank wurde nicht ordnungsgemäß heruntergefahren. Die Wiederherstellung muss zuerst ausgeführt werden, um die Daten Bank Vorgänge für das vorherige Herunterfahren ordnungsgemäß abzuschließen.</td>
+<td>DatabaseDirtyShutdown</td>
+<td>Die Datenbank wurde nicht sauber heruntergefahren. Die Wiederherstellung muss zuerst ausgeführt werden, um die Datenbankvorgänge für das vorherige Herunterfahren ordnungsgemäß abzuschließen.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Konsistenz Zeit Konflikt</td>
-<td>Nicht übereinstimmende Datenbank in letzter Zeit</td>
+<td>ConsistentTimeMismatch</td>
+<td>Letzte konsistente Datenbankzeit ohne Übereinstimmung</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databasepatchfilemismatch</td>
-<td>Die Patchdatei wird nicht aus dieser Sicherung generiert.</td>
+<td>DatabasePatchFileMismatch</td>
+<td>Patchdatei wird nicht aus dieser Sicherung generiert</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Endingrestorelogdoolow</td>
-<td>Die Start Protokollnummer für die Wiederherstellung ist zu niedrig.</td>
+<td>EndingRestoreLogTooLow</td>
+<td>Die Startprotokollnummer für die Wiederherstellung ist zu niedrig.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Startingrestorelogstarhigh</td>
-<td>Die Start Protokollnummer für die Wiederherstellung ist zu hoch.</td>
+<td>StartingRestoreLogTooHigh</td>
+<td>Die Startprotokollnummer ist für die Wiederherstellung zu hoch.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Givenlogfilehasbadsignature</td>
-<td>Restore Log File hat eine ungültige Signatur.</td>
+<td>GivenLogFileHasBadSignature</td>
+<td>Die Wiederherstellungsprotokolldatei weist eine ungültige Signatur auf.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Givenlogfileisnotcontiguous</td>
-<td>Die Wiederherstellungs Protokolldatei ist nicht zusammenhängend.</td>
+<td>GivenLogFileIsNotContiguous</td>
+<td>Die Wiederherstellungsprotokolldatei ist nicht zusammenhängend.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Missingrestorelogfiles</td>
-<td>Einige Wiederherstellungs Protokolldateien fehlen.</td>
+<td>MissingRestoreLogFiles</td>
+<td>Einige Wiederherstellungsprotokolldateien fehlen.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Missingfullbackup</td>
-<td>Vor der inkrementellen Sicherung fehlt eine vorherige vollständige Sicherung</td>
+<td>MissingFullBackup</td>
+<td>Die Datenbank hat vor der inkrementellen Sicherung eine vorherige vollständige Sicherung verpasst.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Badbackupdatabasesize</td>
-<td>Die Größe der Sicherungs Datenbank ist nicht in 4 KB vorhanden.</td>
+<td>BadBackupDatabaseSize</td>
+<td>Die Größe der Sicherungsdatenbank beträgt nicht 4 KB.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databasealleseryupgrade</td>
-<td>Es wurde versucht, eine Datenbank zu aktualisieren, die bereits aktuell ist.</td>
+<td>DatabaseAlreadyUpgraded</td>
+<td>Es wurde versucht, ein Upgrade für eine Datenbank durchzuführen, die bereits aktuell ist.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Databaseingecompleteupgrade</td>
-<td>Es wurde versucht, eine Datenbank zu verwenden, die nur teilweise in das aktuelle Format konvertiert wurde. muss von der Sicherung wieder hergestellt werden.</td>
+<td>DatabaseIncompleteUpgrade</td>
+<td>Der Versuch, eine Datenbank zu verwenden, die nur teilweise in das aktuelle Format konvertiert wurde, muss aus einer Sicherung wiederhergestellt werden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Missingcurrentlogfiles</td>
-<td>Einige aktuelle Protokolldateien fehlen für die fortlaufende Wiederherstellung.</td>
+<td>MissingCurrentLogFiles</td>
+<td>Einige aktuelle Protokolldateien fehlen für die kontinuierliche Wiederherstellung.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Dbtimeto oold</td>
-<td>dbtime fest auf der Seite kleiner als dbtimebefore in Datensatz</td>
+<td>DbTimeTooOld</td>
+<td>dbtime auf einer Seite, die kleiner als dbtimeBefore im Datensatz ist</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Dbtimeto Onew</td>
-<td>dbtime fest auf der Seite im Vorfeld von dbtimebefore in Datensatz</td>
+<td>DbTimeTooNew</td>
+<td>dbtime auf der Seite vor dem dbtimeBefore-Datensatz</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Missingfileto Backup</td>
-<td>Einige Protokoll-oder Patchdateien fehlen während der Sicherung.</td>
+<td>MissingFileToBackup</td>
+<td>Einige Protokoll- oder Patchdateien fehlen während der Sicherung.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Logtornschreiteduringhardrestore</td>
-<td>in einem Sicherungs Satz wurde während der fest Wiederherstellung ein unterbrochener Schreibvorgang festgestellt.</td>
+<td>LogTornWriteDuringHardRestore</td>
+<td>Zerreißerter Schreibvorgang in einem Sicherungssatz während der hard restore erkannt</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Logtornschreiteduringhardrecovery</td>
-<td>während der hardwarenwiederherstellung wurde ein zerrissener Schreibvorgang erkannt (Protokoll war nicht Teil eines Sicherungs Satzes).</td>
+<td>LogTornWriteDuringHardRecovery</td>
+<td>Zerreißerte Schreibzugriffe wurden während der wiederherstellung erkannt (das Protokoll war nicht Teil eines Sicherungssatzes).</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Logkorruptduringhardrestore</td>
-<td>während der fest Wiederherstellung wurde in einem Sicherungs Satz eine Beschädigung festgestellt.</td>
+<td>LogCorruptDuringHardRestore</td>
+<td>Beschädigung in einem Sicherungssatz während der harter Wiederherstellung erkannt</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Logkorruptduringhardrecovery</td>
-<td>während der fest Wiederherstellung wurde eine Beschädigung festgestellt (Protokoll war nicht Teil eines Sicherungs Satzes).</td>
+<td>LogCorruptDuringHardRecovery</td>
+<td>Während der wiederherstellung wurde eine Beschädigung erkannt (das Protokoll war nicht Teil eines Sicherungssatzes).</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Mustdisableloggingfordbupgrade</td>
-<td>Die Protokollierung kann beim Upgraden der Datenbank nicht aktiviert werden.</td>
+<td>MustDisableLoggingForDbUpgrade</td>
+<td>Die Protokollierung kann nicht aktiviert sein, wenn versucht wird, ein Db-Upgrade durchzuführen.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Badrestoretargetinstance</td>
-<td>Die zur Wiederherstellung angegebene TargetInstance wurde nicht gefunden, oder die Protokolldateien stimmen nicht ab.</td>
+<td>BadRestoreTargetInstance</td>
+<td>Die für die Wiederherstellung angegebene TargetInstance wurde nicht gefunden, oder Protokolldateien stimmen nicht überein.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Wiederherstellbarkeits Rückgängigmachen</td>
-<td>Die weiche Wiederherstellung hat alle Vorgänge erfolgreich wiedergegeben, aber die Roll Back Phase der Wiederherstellung wurde übersprungen.</td>
+<td>RecoveredWithoutUndo</td>
+<td>Die weiche Wiederherstellung hat alle Vorgänge erfolgreich wiedergegeben, aber die Rückgängig-Phase der Wiederherstellung wurde übersprungen.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Databasesnotfromsamesnapshot</td>
-<td>Die wiederherzustellenden Datenbanken stammen nicht aus derselben Schattenkopiesicherung.</td>
+<td>DatabasesNotFromSameSnapshot</td>
+<td>Datenbanken, die wiederhergestellt werden sollen, stammen nicht aus derselben Schattenkopiesicherung.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Softrecoveryonsnapshot</td>
-<td>Weiche Wiederherstellung einer Datenbank aus einem Sicherungs Satz für Schatten Kopien</td>
+<td>SoftRecoveryOnSnapshot</td>
+<td>Soft recovery on a database from a shadow copy backup set (Soft Recovery für eine Datenbank aus einem Schattenkopiesicherungssatz)</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Committedlogfilesmissing</td>
-<td>Mindestens ein Protokoll, für das ein Commit in diese Datenbank ausgeführt wurde, fehlt. Diese Protokolldateien sind erforderlich, um eine dauerhafte ACID-Semantik aufrechtzuerhalten, sind jedoch nicht erforderlich, um die Konsistenz aufrechtzuerhalten, wenn das JET_bitReplayIgnoreLostLogs Bit während der Wiederherstellung angegeben wird</td>
+<td>CommittedLogFilesMissing</td>
+<td>Mindestens ein Protokoll, für das ein Commit für diese Datenbank ausgeführt wurde, fehlt. Diese Protokolldateien sind erforderlich, um eine dauerhafte ACID-Semantik beizubehalten, aber nicht, um die Konsistenz aufrechtzuerhalten, wenn das JET_bitReplayIgnoreLostLogs Bit während der Wiederherstellung angegeben wird.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Sector sizenotsupported</td>
-<td>Die vom Datenträger Subsystem gemeldete physische Sektorgröße wird von ESE für einen bestimmten Dateityp nicht unterstützt.</td>
+<td>SectorSizeNotSupported</td>
+<td>Die vom Datenträgersubsystem gemeldete physische Sektorgröße wird von ESE für einen bestimmten Dateityp nicht unterstützt.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Wiederherstellundodatabaseskonsistentes</td>
-<td>Die weiche Wiederherstellung hat alle Vorgänge erfolgreich wiedergegeben und soll die Roll Back Phase der Wiederherstellung überspringen, aber die Roll Back Phase war nicht erforderlich.</td>
+<td>RecoveredWithoutUndoDatabasesConsistent</td>
+<td>Die weiche Wiederherstellung hat alle Vorgänge erfolgreich wiedergegeben und sollte die Wiederherstellungsphase überspringen, aber die Rückgängig-Phase war nicht erforderlich.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Committedlogfilebeschädigt</td>
-<td>Mindestens ein Protokoll wurde während der Wiederherstellung beschädigt. Diese Protokolldateien sind erforderlich, um eine dauerhafte ACID-Semantik aufrechtzuerhalten, jedoch nicht erforderlich, um Konsistenz zu gewährleisten, wenn das JET_bitIgnoreLostLogs Bit und JET_paramDeleteOutOfRangeLogs während der Wiederherstellung angegeben werden.</td>
+<td>CommittedLogFileCorrupt</td>
+<td>Es wurde festgestellt, dass mindestens ein Protokoll während der Wiederherstellung beschädigt ist. Diese Protokolldateien sind erforderlich, um eine dauerhafte ACID-Semantik beizubehalten, aber nicht, um die Konsistenz aufrechtzuerhalten, wenn das JET_bitIgnoreLostLogs Bit und JET_paramDeleteOutOfRangeLogs während der Wiederherstellung angegeben wird.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Unicodetranslationbufferdeosmall</td>
-<td>Unicode-Übersetzungs Puffer zu klein</td>
+<td>UnicodeTranslationBufferTooSmall</td>
+<td>Zu kleiner Unicode-Übersetzungspuffer</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Unicodetranslationfail</td>
-<td>Fehler bei Unicode-Normalisierung</td>
+<td>UnicodeTranslationFail</td>
+<td>Unicode-Normalisierung fehlgeschlagen</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Unicodenormalizationnotsupported</td>
-<td>Das Betriebssystem bietet keine Unterstützung für die Unicode-Normalisierung (es wurde kein normalisierungs Rückruf angegeben).</td>
+<td>UnicodeNormalizationNotSupported</td>
+<td>Das Betriebssystem bietet keine Unterstützung für die Unicode-Normalisierung (und es wurde kein Normalisierungsrückruf angegeben).</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Unicodelta anguagevalidationfailure</td>
+<td>UnicodeLanguageValidationFailure</td>
 <td>Die Sprache kann nicht überprüft werden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Existinglogflehasbadsignature</td>
-<td>Die vorhandene Protokolldatei hat eine ungültige Signatur.</td>
+<td>ExistingLogFileHasBadSignature</td>
+<td>Vorhandene Protokolldatei weist eine ungültige Signatur auf</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Existinglogfleisnotcontiguous</td>
+<td>ExistingLogFileIsNotContiguous</td>
 <td>Vorhandene Protokolldatei ist nicht zusammenhängend</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Logreadverifyfailure</td>
-<td>Prüfsummen Fehler in Protokolldatei während der Sicherung.</td>
+<td>LogReadVerifyFailure</td>
+<td>Prüfsummenfehler in Protokolldatei während der Sicherung</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvlesverifyfailure</td>
+<td>SLVReadVerifyFailure</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Checkpointdepthdeodeep</td>
-<td>zu viele ausstehende Generationen zwischen Prüfpunkt und aktueller Generierung</td>
+<td>CheckpointDepthTooDeep</td>
+<td>Zu viele ausstehende Generationen zwischen Prüfpunkt und aktueller Generierung</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Restoreoononbackupdatabase</td>
-<td>Es wurde versucht, eine Datenbank zu sichern, die keine Sicherungs Datenbank war</td>
+<td>RestoreOfNonBackupDatabase</td>
+<td>Harter Wiederherstellungsversuch für eine Datenbank, bei der es sich nicht um eine Sicherungsdatenbank handelte</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Logfile otkopiert</td>
-<td>Fehler beim Abschneiden des Protokolls, aber nicht alle erforderlichen Protokolle wurden kopiert.</td>
+<td>LogFileNotCopied</td>
+<td>Protokollkürzung wurde versucht, aber nicht alle erforderlichen Protokolle wurden kopiert.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Surrogatebackupinprogress</td>
-<td>Eine Ersatz Zeichen Sicherung wird ausgeführt.</td>
+<td>SurrogateBackupInProgress</td>
+<td>Eine Ersatzsicherung wird ausgeführt.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Backupabortbyserver</td>
-<td>Die Sicherung wurde vom Server durch Aufrufen von jetterm mit JET_bitTermStopBackup oder durch Aufrufen von jetstopbackup abgebrochen.</td>
+<td>BackupAbortByServer</td>
+<td>Die Sicherung wurde vom Server abgebrochen, indem JetTerm mit JET_bitTermStopBackup aufgerufen oder JetStopBackup aufgerufen wurde.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidgrbit</td>
-<td>Ungültiger Flags-Parameter</td>
+<td>InvalidGrbit</td>
+<td>Ungültiger flags-Parameter</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Terminprogress</td>
-<td>Beendigung läuft</td>
+<td>TermInProgress</td>
+<td>Beendigung wird ausgeführt</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Featurenotavailable</td>
-<td>API nicht unterstützt</td>
+<td>FeatureNotAvailable</td>
+<td>API wird nicht unterstützt</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -1487,12 +1487,12 @@ public enum JET_err
 </tr>
 <tr class="even">
 <td></td>
-<td>Databasefilereadonly</td>
+<td>DatabaseFileReadOnly</td>
 <td>Es wurde versucht, eine schreibgeschützte Datenbankdatei für Lese-/Schreibvorgänge anzufügen.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invaliddatabaseid</td>
+<td>InvalidDatabaseId</td>
 <td>Ungültige Datenbank-ID</td>
 </tr>
 <tr class="even">
@@ -1502,608 +1502,608 @@ public enum JET_err
 </tr>
 <tr class="odd">
 <td></td>
-<td>Outo fdatabasespace</td>
+<td>OutOfDatabaseSpace</td>
 <td>Maximale Datenbankgröße erreicht</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Outo-Cursors</td>
-<td>Out-of-table-Cursor</td>
+<td>OutOfCursors</td>
+<td>Out of table cursors (Nicht aus Tabellencursor)</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Outo-Puffer</td>
-<td>Nicht genügend Datenbankseiten Puffer</td>
+<td>OutOfBuffers</td>
+<td>Seitenpuffer außerhalb der Datenbank</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>"-Indizes"</td>
+<td>TooManyIndexes</td>
 <td>Zu viele Indizes</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"-Schlüssel"</td>
-<td>Zu viele Spalten in einem Index.</td>
+<td>TooManyKeys</td>
+<td>Zu viele Spalten in einem Index</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>RecordDeleted</td>
-<td>Der Datensatz wurde gelöscht.</td>
+<td>Datensatz gelöscht</td>
+<td>Datensatz wurde gelöscht</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"Read verifyfailure"</td>
-<td>Prüfsummen Fehler auf einer Datenbankseite</td>
+<td>ReadVerifyFailure</td>
+<td>Prüfsummenfehler auf einer Datenbankseite</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Pagenotinitialized</td>
+<td>PageNotInitialized</td>
 <td>Leere Datenbankseite</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Outo-Handles</td>
+<td>OutOfFileHandles</td>
 <td>Out-of-File-Handles</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Diskleseverificationfailure</td>
-<td>Von der Datei-e/a ERROR_CRC zurückgegebene Betriebssystem</td>
+<td>DiskReadVerificationFailure</td>
+<td>Das von Datei-E/A zurückgegebene ERROR_CRC Betriebssystem</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Sowie</td>
-<td>E/a-Fehler</td>
+<td>DiskIO</td>
+<td>Datenträger-E/A-Fehler</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidpath</td>
+<td>InvalidPath</td>
 <td>Ungültiger Dateipfad</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidsystempath</td>
-<td>Ungültiger Systempfad.</td>
+<td>InvalidSystemPath</td>
+<td>Ungültiger Systempfad</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidlogdirectory</td>
-<td>Ungültiges Protokoll Verzeichnis.</td>
+<td>InvalidLogDirectory</td>
+<td>Ungültiges Protokollverzeichnis</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Recordobig</td>
-<td>Datensatz ist größer als die maximale Größe.</td>
+<td>RecordTooBig</td>
+<td>Datensatz größer als die maximale Größe</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>"-Opendatenbanken"</td>
+<td>TooManyOpenDatabases</td>
 <td>Zu viele geöffnete Datenbanken</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invaliddatabase</td>
+<td>InvalidDatabase</td>
 <td>Keine Datenbankdatei</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Notinitialisiert</td>
+<td>NotInitialized</td>
 <td>Datenbank-Engine nicht initialisiert</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"Alleseryinitialized"</td>
-<td>Datenbank-Engine bereits initialisiert</td>
+<td>AlreadyInitialized</td>
+<td>Die Datenbank-Engine wurde bereits initialisiert.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Initinprogress</td>
+<td>InitInProgress</td>
 <td>Die Datenbank-Engine wird initialisiert.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Fileaccessdenied</td>
-<td>Auf die Datei kann nicht zugegriffen werden. die Datei ist gesperrt oder wird verwendet.</td>
+<td>FileAccessDenied</td>
+<td>Der Zugriff auf die Datei ist nicht möglich, die Datei ist gesperrt oder wird verwendet.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Querynotsupported</td>
-<td>Abfrage Unterstützung nicht verfügbar</td>
+<td>QueryNotSupported</td>
+<td>Abfrageunterstützung nicht verfügbar</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Sqllinklotsupported</td>
-<td>SQL-Link Unterstützung nicht verfügbar</td>
+<td>SQLLinkNotSupported</td>
+<td>SQL Linkunterstützung nicht verfügbar</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Bufferum osmall</td>
-<td>Der Puffer ist zu klein.</td>
+<td>BufferTooSmall</td>
+<td>Puffer ist zu klein</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"-Spalten"</td>
-<td>Es wurden zu viele Spalten definiert.</td>
+<td>TooManyColumns</td>
+<td>Zu viele Spalten definiert</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Containernotempty</td>
-<td>Der Container ist nicht leer.</td>
+<td>ContainerNotEmpty</td>
+<td>Container ist nicht leer</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>InvalidFileName</td>
-<td>Dateiname ist ungültig</td>
+<td>InvalidFilename</td>
+<td>Der Dateiname ist ungültig.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidbookmark</td>
+<td>InvalidBookmark</td>
 <td>Ungültiges Lesezeichen</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columninuse</td>
+<td>ColumnInUse</td>
 <td>In einem Index verwendete Spalte</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidbuffersize</td>
-<td>Der Datenpuffer stimmt nicht mit der Spaltengröße</td>
+<td>InvalidBufferSize</td>
+<td>Datenpuffer passt nicht zur Spaltengröße</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columnnotupdatable</td>
-<td>Spaltenwert kann nicht festgelegt werden</td>
+<td>ColumnNotUpdatable</td>
+<td>Der Spaltenwert kann nicht festgelegt werden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Indexinuse</td>
-<td>Der Index wird verwendet.</td>
+<td>IndexInUse</td>
+<td>Index wird verwendet</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Linklotsupported</td>
-<td>Link Unterstützung nicht verfügbar</td>
+<td>LinkNotSupported</td>
+<td>Linkunterstützung nicht verfügbar</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Nullkeyunallowed</td>
-<td>NULL-Schlüssel sind für den Index nicht zulässig.</td>
+<td>NullKeyDisallowed</td>
+<td>NULL-Schlüssel sind für den Index nicht zu verwenden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Notintransaction</td>
-<td>Der Vorgang muss innerhalb einer Transaktion erfolgen.</td>
+<td>NotInTransaction</td>
+<td>Der Vorgang muss innerhalb einer Transaktion ausgeführt werden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Mustrollback</td>
-<td>Für die Transaktion muss ein Rollback ausgeführt werden, da die Aktualisierung nicht versioniert</td>
+<td>MustRollback</td>
+<td>Für die Transaktion muss ein Rollback ausgeführt werden, weil ein Fehler beim Nichtversionsupdate vorprogrammiert wurde.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"Onomanyactiveusers"</td>
+<td>TooManyActiveUsers</td>
 <td>Zu viele aktive Datenbankbenutzer</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidcountry</td>
-<td>Ungültiger oder unbekannter Länder-/Regionscode</td>
+<td>InvalidCountry</td>
+<td>Ungültiger oder unbekannter Länder-/Regioncode</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidlanguageid</td>
-<td>Ungültige oder unbekannte Sprach-ID.</td>
+<td>InvalidLanguageId</td>
+<td>Ungültige oder unbekannte Sprach-ID</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidcodepage</td>
-<td>Ungültige oder unbekannte Codepage.</td>
+<td>InvalidCodePage</td>
+<td>Ungültige oder unbekannte Codepage</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidlcmapstringflags</td>
-<td>Ungültige Flags für LCMapString ().</td>
+<td>InvalidLCMapStringFlags</td>
+<td>Ungültige Flags für LCMapString()</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Versionstoreentrytebig</td>
-<td>Es wurde versucht, einen Versionsspeicher Eintrag (RCE) zu erstellen, der größer als ein Versions Bucket ist.</td>
+<td>VersionStoreEntryTooBig</td>
+<td>Es wurde versucht, einen Versionsspeichereintrag (RCE) zu erstellen, der größer als ein Versionsb bucket ist.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Versionstoreouto f memoryandcleanuptimedout</td>
-<td>Nicht genügend Arbeitsspeicher für den Versionsspeicher (und der Bereinigungs Versuch nicht vollständig)</td>
+<td>VersionStoreOutOfMemoryAndCleanupTimedOut</td>
+<td>Versionsspeicher nicht genügend Arbeitsspeicher (und Bereinigungsversuch konnte nicht abgeschlossen werden)</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Versionstoreouabf-Speicher</td>
-<td>Nicht genügend Arbeitsspeicher für den Versionsspeicher (Cleanup bereits versucht)</td>
+<td>VersionStoreOutOfMemory</td>
+<td>Versionsspeicher nicht genügend Arbeitsspeicher (Bereinigung bereits versucht)</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"Changecystackouto"-Speicher</td>
-<td>Nicht verwendet: lcsrperffucb * g_lCursorsMax überschritten (nur xjet)</td>
+<td>CurrencyStackOutOfMemory</td>
+<td>NICHT VERWENDET: lCSRPerfFUCB * g_lCursorsMax überschritten (nur XJET)</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Cannotindex</td>
-<td>Hinterlegte Spalten-oder SLV-Spalten können nicht indiziert werden.</td>
+<td>CannotIndex</td>
+<td>Die Spalte "Escrow" oder "SLV" kann nicht indiziert werden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Recordnotdeleted</td>
-<td>Der Datensatz wurde nicht gelöscht.</td>
+<td>RecordNotDeleted</td>
+<td>Datensatz wurde nicht gelöscht</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>"" "" Zu ""</td>
-<td>Es wurden zu viele mempool-Einträge angefordert.</td>
+<td>TooManyMempoolEntries</td>
+<td>Zu viele mempool-Einträge angefordert</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Outoifobjectids</td>
-<td>Aus BTREE-ObjectIDs (Offline-Debug durchführen, um freigegebene/nicht verwendete ObjectIDs freizugeben)</td>
+<td>OutOfObjectIDs</td>
+<td>Out of btree ObjectIDs (Offlinedefragmentierung durchführen, um frei bzw. nicht verwendete ObjectIds frei zu machen)</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Outoiflongvalueids</td>
-<td>Der Wert des Werts für lange Wert-IDs hat den maximalen Wert erreicht. (Offline-Debug durchführen, um freie/nicht verwendete longvalueids freizugeben)</td>
+<td>OutOfLongValueIDs</td>
+<td>Der Wert für den WERT-ID-Indikator hat den maximal erreichten Wert erreicht. (Offlinedefragmentierung durchführen, um kostenlose/nicht verwendete LongValueIDs frei zu machen)</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Outo-autoincrementvalues</td>
-<td>Der Wert für die automatische Inkrement-Einschränkung hat den maximalen Wert erreicht (Offline-Debug kann keine freien/nicht verwendeten automatischen Inkrement-Werte freigeben).</td>
+<td>OutOfAutoincrementValues</td>
+<td>Der Leistungsindikator für die automatische Inkrementierung hat den maximalen Wert erreicht (Offlinedefragmentierung kann keine kostenlosen/nicht verwendeten Automatischen Inkrementwerte wiederverlangen).</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Outo-dbtimevalues</td>
-<td>Der dbtime-Leistungstest hat den maximalen Wert erreicht (Offline-Debug-Vorgänge durchführen, um freie/nicht verwendete dbtime-Werte</td>
+<td>OutOfDbtimeValues</td>
+<td>Der Dbtime-Indikator hat den maximalen Wert erreicht (Offlinedefragmentierung durchführen, um freie/nicht verwendete Dbtime-Werte frei zu machen)</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Outo-sequentialindexvalues</td>
-<td>Der sequenzielle Index Indikator hat den maximalen Wert erreicht (Offline-Debug durchführen, um freie/nicht verwendete sequentialindex-Werte freizugeben).</td>
+<td>OutOfSequentialIndexValues</td>
+<td>Der sequenzielle Indexzähler hat den maximal zulässigen Wert erreicht (Offlinedefragmentierung durchführen, um freie/nicht verwendete SequentialIndex-Werte frei zu machen)</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Runninginoneinstancemode</td>
-<td>Mehrfach Instanz-Aufrufe mit aktiviertem einzelinstanzmodus</td>
+<td>RunningInOneInstanceMode</td>
+<td>Aufruf mit mehreren Instanzen mit aktivierter Einzelinstanz</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Runninginmultiinstancemode</td>
-<td>Single-Instance-Aufrufe mit aktiviertem Modus für mehrere Instanzen</td>
+<td>RunningInMultiInstanceMode</td>
+<td>Einzelinstanzaufruf mit aktivierten Modus für mehrere Instanzen</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Systemparamsalleseryset</td>
+<td>SystemParamsAlreadySet</td>
 <td>Globale Systemparameter wurden bereits festgelegt.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Systempaarverwendung</td>
-<td>Der bereits von einer anderen Daten Bank Instanz verwendete System Pfad</td>
+<td>SystemPathInUse</td>
+<td>Systempfad, der bereits von einer anderen Datenbankinstanz verwendet wird</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Logfilepythinuse</td>
-<td>Der Protokolldatei Pfad wird bereits von einer anderen Daten Bank Instanz verwendet.</td>
+<td>LogFilePathInUse</td>
+<td>Protokolldateipfad, der bereits von einer anderen Datenbankinstanz verwendet wird</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Temppathinuse</td>
-<td>Temporärer Pfad wird bereits von einer anderen Daten Bank Instanz verwendet</td>
+<td>TempPathInUse</td>
+<td>Temporärer Pfad, der bereits von einer anderen Datenbankinstanz verwendet wird</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Instancenameingeuse</td>
-<td>Der Instanzname wird bereits verwendet.</td>
+<td>InstanceNameInUse</td>
+<td>Bereits verwendeter Instanzname</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Instancenicht verfügbar</td>
-<td>Diese Instanz kann nicht verwendet werden, weil ein schwerwiegender Fehler aufgetreten ist.</td>
+<td>InstanceUnavailable</td>
+<td>Diese Instanz kann nicht verwendet werden, da ein schwerwiegender Fehler aufgetreten ist.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Databasenicht verfügbar</td>
-<td>Diese Datenbank kann nicht verwendet werden, weil ein schwerwiegender Fehler aufgetreten ist.</td>
+<td>DatabaseUnavailable</td>
+<td>Diese Datenbank kann nicht verwendet werden, da ein schwerwiegender Fehler aufgetreten ist.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Instanceunavailableduetofatzugewiesene gdiskfull</td>
-<td>Diese Instanz kann nicht verwendet werden, da es einen Fehler aufgrund eines Fehlers bei der Protokolldaten Träger-vollständigen Ausführung eines Vorgangs (wahrscheinliche Transaktionsrollback) gefunden hat, der einen Fehler nicht tolerieren</td>
+<td>InstanceUnavailableDueToFatalLogDiskFull</td>
+<td>Diese Instanz kann nicht verwendet werden, da bei der Ausführung eines Vorgangs (wahrscheinlich eines Transaktionsrollbacks), der einen Fehler nicht tolerieren konnte, ein Protokolldatenträgerfehler aufgetreten ist.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Outo-Sitzungen</td>
-<td>Außerhalb der Sitzungen</td>
+<td>OutOfSessions</td>
+<td>Out of sessions (Nicht in Sitzungen)</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>WriteConflict</td>
-<td>Fehler bei Schreibsperre aufgrund einer ausstehenden Schreibsperre.</td>
+<td>Fehler bei Schreibsperre aufgrund einer ausstehenden Schreibsperre</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Transtoodeep</td>
-<td>Transaktionen sind zu tief geschachtelt.</td>
+<td>TransTooDeep</td>
+<td>Zu tief geschachtelte Transaktionen</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidsisid</td>
-<td>Ungültiges Sitzungs handle</td>
+<td>InvalidSesid</td>
+<td>Ungültiges Sitzungshand handle</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>"Write-conflictprimaryindex"</td>
-<td>Update Versuch für nicht ausgeführter primärer Index</td>
+<td>WriteConflictPrimaryIndex</td>
+<td>Aktualisierungsversuch für den primären Index ohneCommitted</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>InTransaction</td>
-<td>Der Vorgang ist innerhalb einer Transaktion nicht zulässig.</td>
+<td>Vorgang innerhalb einer Transaktion nicht zulässig</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Rollbackrequired</td>
-<td>Für die aktuelle Transaktion muss ein Rollback ausgeführt werden, und es kann kein Commit ausgeführt werden.</td>
+<td>RollbackRequired</td>
+<td>Muss ein Rollback für die aktuelle Transaktion ausgeführt werden: Commit oder Start einer neuen Transaktion ist nicht möglich.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Transread Only</td>
-<td>Schreibgeschützte Transaktion hat versucht, die Datenbank zu ändern.</td>
+<td>TransReadOnly</td>
+<td>Schreibgeschützte Transaktion hat versucht, die Datenbank zu ändern</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Sessionschreiteconflict</td>
+<td>SessionWriteConflict</td>
 <td>Versuchen Sie, denselben Datensatz durch zwei diffrerent-Cursor in derselben Sitzung zu ersetzen.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Recordtoobigforbackwardcompatibility</td>
-<td>der Datensatz wäre zu groß, wenn er in einem Datenbankformat aus einer früheren Version von Jet dargestellt wird.</td>
+<td>RecordTooBigForBackwardCompatibility</td>
+<td>Der Datensatz wäre zu groß, wenn er in einem Datenbankformat aus einer früheren Version von Jet dargestellt wird.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Cannotmaterializeforwardonlysort</td>
-<td>Die temporäre Tabelle konnte aufgrund von Parametern, die in Konflikt mit JET_bitTTForwardOnly, nicht erstellt werden.</td>
+<td>CannotMaterializeForwardOnlySort</td>
+<td>Die temporäre Tabelle konnte aufgrund von Parametern nicht erstellt werden, die mit der JET_bitTTForwardOnly</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Nicht übereinstimmende ""</td>
-<td>Dieses Sitzungs Handle kann nicht mit dieser Tabellen-ID verwendet werden.</td>
+<td>SesidTableIdMismatch</td>
+<td>Dieses Sitzungshand handle kann nicht mit dieser Tabellen-ID verwendet werden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidinstance</td>
-<td>Ungültiges Instanzhandle</td>
+<td>InvalidInstance</td>
+<td>Ungültiges Instanzhand handle</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Dirtyshutdown</td>
-<td>Die Instanz wurde erfolgreich heruntergefahren, aber alle angefügten Datenbanken wurden von der Anforderung über JET_bitTermDirty</td>
+<td>DirtyShutdown</td>
+<td>Die Instanz wurde erfolgreich heruntergefahren, aber alle angefügten Datenbanken wurden per Anforderung über JET_bitTermDirty</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>"Read pgnoverifyfailure"</td>
-<td>Die von der Festplatte gelesene Datenbankseite enthielt die falsche Seitenzahl.</td>
+<td>ReadPgnoVerifyFailure</td>
+<td>Die vom Datenträger gelesene Datenbankseite hatte die falsche Seitennummer.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Read lostflushverifyfailure</td>
-<td>Auf der vom Datenträger gelesenen Datenbankseite wurde ein vorheriger Schreibvorgang auf der Seite nicht dargestellt.</td>
+<td>ReadLostFlushVerifyFailure</td>
+<td>Auf der datenbankseitigen Seite, die vom Datenträger gelesen wurde, war ein vorheriger Schreibzugriff nicht auf der Seite dargestellt.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Filesystemcorruption</td>
-<td>Fehler beim Dateisystem Vorgang mit dem Hinweis, dass das Dateisystem beschädigt ist.</td>
+<td>FileSystemCorruption</td>
+<td>Fehler beim Dateisystemvorgang mit dem Hinweis, dass das Dateisystem beschädigt ist.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Wiederherstellerverifyfailure</td>
-<td>Mindestens eine Datenbankseite, die während der Wiederherstellung vom Datenträger gelesen wird, entspricht nicht dem erwarteten Status.</td>
+<td>RecoveryVerifyFailure</td>
+<td>Eine oder mehrere Datenbankseiten, die während der Wiederherstellung vom Datenträger gelesen werden, passen nicht zum erwarteten Zustand.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Filteredmuvenotsupported</td>
-<td>Es wurde versucht, einen Filter für jetsetcursor Filter () in einem nicht unterstützten Szenario bereitzustellen.</td>
+<td>FilteredMoveNotSupported</td>
+<td>Es wurde versucht, einen Filter für JetSetCursorFilter() in einem nicht unterstützten Szenario zur Verfügung zu stellen.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>MustCommitDistributedTransactionToLevel0</td>
-<td>Es wurde versucht, eine verteilte Transaktion auf eine nicht-NULL-Ebene bereitzustellen.</td>
+<td>Es wurde versucht, prepareToCommit einer verteilten Transaktion auf eine Ebene ungleich 0 (null) zu erstellen.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Distributedtransaktionalleserypreparedtodcommit</td>
-<td>Es wurde versucht, einen Schreibvorgang auszuführen, nachdem eine verteilte Transaktion preparetocommit aufgerufen hat.</td>
+<td>DistributedTransactionAlreadyPreparedToCommit</td>
+<td>Es wurde ein Schreibvorgang versucht, nachdem eine verteilte Transaktion PrepareToCommit aufgerufen hat.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Notindistributedtransaction</td>
-<td>Es wurde versucht, eine nicht verteilte Transaktion als preparetocommit auszuführen.</td>
+<td>NotInDistributedTransaction</td>
+<td>Es wurde versucht, prepareToCommit für eine nicht verteilte Transaktion zu erstellen.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Distributedtransaktionnotyetpreparedtodcommit</td>
-<td>Es wurde versucht, einen Commit für eine verteilte Transaktion auszuführen, aber preparetocommit wurde noch nicht aufgerufen.</td>
+<td>DistributedTransactionNotYetPreparedToCommit</td>
+<td>Es wurde versucht, einen Commit für eine verteilte Transaktion zu erstellen, aber PrepareToCommit wurde noch nicht aufgerufen.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Cannotnestdistributedtransactions</td>
-<td>Es wurde versucht, eine verteilte Transaktion zu starten, wenn nicht auf Ebene 0</td>
+<td>CannotNestDistributedTransactions</td>
+<td>Es wurde versucht, eine verteilte Transaktion zu starten, wenn sie nicht auf Ebene 0 ausgeführt wurde.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Dtcmissingcallback</td>
-<td>Es wurde versucht, eine verteilte Transaktion zu starten, aber bei der Initialisierung wurde kein Rückruf für die DTC-Koordination angegeben</td>
+<td>DTCMissingCallback</td>
+<td>Es wurde versucht, eine verteilte Transaktion zu starten, aber bei der Initialisierung wurde kein Rückruf für die DTC-Koordination angegeben.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Dtcmissingcallbackonrecovery</td>
-<td>Es wurde versucht, eine verteilte Transaktion wiederherzustellen, für die Initialisierung wurde jedoch kein Rückruf für die DTC-Koordination angegeben</td>
+<td>DTCMissingCallbackOnRecovery</td>
+<td>Es wurde versucht, eine verteilte Transaktion wiederhergestellt, aber bei der Initialisierung wurde kein Rückruf für die DTC-Koordination angegeben.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Dtccallbackunexpectederror</td>
-<td>Unerwarteter Fehlercode vom DTC-Rückruf zurückgegeben</td>
+<td>DTCCallbackUnexpectedError</td>
+<td>Unerwarteter Fehlercode, der vom DTC-Rückruf zurückgegeben wird</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databaseduplicate</td>
-<td>Datenbank ist bereits vorhanden.</td>
+<td>DatabaseDuplicate</td>
+<td>Die Datenbank ist bereits vorhanden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Databaseingeuse</td>
+<td>DatabaseInUse</td>
 <td>Verwendete Datenbank</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databasenotfound</td>
+<td>DatabaseNotFound</td>
 <td>Keine solche Datenbank</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Databaseinvalidname</td>
+<td>DatabaseInvalidName</td>
 <td>Ungültiger Datenbankname</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databaseinvalidpages</td>
+<td>DatabaseInvalidPages</td>
 <td>Ungültige Anzahl von Seiten</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>DatabaseCorrupted</td>
-<td>Nicht Datenbankdatei oder beschädigte DB</td>
+<td>Nicht-Datenbankdatei oder beschädigte Datenbank</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databaselocked</td>
-<td>Datenbank exklusiv gesperrt</td>
+<td>DatabaseLocked</td>
+<td>Ausschließlich gesperrte Datenbank</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Cannotdisableversioning</td>
-<td>Die Versionsverwaltung für diese Datenbank kann nicht deaktiviert werden.</td>
+<td>CannotDisableVersioning</td>
+<td>Versionierung für diese Datenbank kann nicht deaktiviert werden</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invaliddatabaseversion</td>
-<td>Datenbank-Engine ist nicht mit Datenbank kompatibel.</td>
+<td>InvalidDatabaseVersion</td>
+<td>Datenbank-Engine ist nicht mit Datenbank kompatibel</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Database200Format</td>
-<td>Die Datenbank weist ein älteres Format (200) auf.</td>
+<td>Die Datenbank hat ein älteres Format (200).</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>Database400Format</td>
-<td>Die Datenbank weist ein älteres Format (400) auf.</td>
+<td>Die Datenbank hat ein älteres Format (400).</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Database500Format</td>
-<td>Die Datenbank weist ein älteres Format (500) auf.</td>
+<td>Die Datenbank hat ein älteres Format (500).</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Pagesizemismatch</td>
-<td>Die Seitengröße der Datenbank stimmt nicht mit der Engine</td>
+<td>PageSizeMismatch</td>
+<td>Die Größe der Datenbankseite passt nicht zur Engine.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Instanzen</td>
-<td>Es können keine weiteren Datenbankinstanzen gestartet werden.</td>
+<td>TooManyInstances</td>
+<td>Weitere Datenbankinstanzen können nicht gestartet werden</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databasesharingverletzung</td>
-<td>Diese Datenbank wird von einer anderen Daten Bank Instanz verwendet.</td>
+<td>DatabaseSharingViolation</td>
+<td>Diese Datenbank wird von einer anderen Datenbankinstanz verwendet.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>"Attacheddatabasemismatch"</td>
-<td>Am Anfang oder Ende der Wiederherstellung wurde eine ausstehende Daten Bank Anlage erkannt, die Datenbank ist jedoch nicht vorhanden oder entspricht nicht den Informationen zur Anlage.</td>
+<td>AttachedDatabaseMismatch</td>
+<td>Eine ausstehende Datenbankanlage wurde am Anfang oder Ende der Wiederherstellung erkannt, aber die Datenbank fehlt oder passt nicht zu den Anlageninformationen.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databaseinvalidpath</td>
-<td>Der angegebene Pfad zur Datenbankdatei ist unzulässig.</td>
+<td>DatabaseInvalidPath</td>
+<td>Der angegebene Pfad zur Datenbankdatei ist ungültig.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Databaseidinuse</td>
-<td>Einer Datenbank wird bereits eine ID zugewiesen, die bereits verwendet wird.</td>
+<td>DatabaseIdInUse</td>
+<td>Einer Datenbank wird eine id zugewiesen, die bereits verwendet wird.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Forcedetachnotallowed</td>
-<td>Das Erzwingen von Trenn vorern ist nur nach dem normalen trennen fehl gelassen.</td>
+<td>ForceDetachNotAllowed</td>
+<td>Force Detach allowed only after normal detach errored out</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Catalogbeschädigt</td>
+<td>CatalogCorrupted</td>
 <td>Im Katalog erkannte Beschädigung</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Partiallyattacheddb</td>
-<td>Die Datenbank ist teilweise angefügt. Anfüge Vorgang kann nicht ausgeführt werden</td>
+<td>PartiallyAttachedDB</td>
+<td>Die Datenbank ist teilweise angefügt. Anfügen kann nicht abgeschlossen werden</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Databasesigninuse</td>
-<td>Datenbank mit derselben Signatur wird verwendet</td>
+<td>DatabaseSignInUse</td>
+<td>Datenbank mit der gleichen signatur in Gebrauch</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databasecorruptednorepair</td>
-<td>Beschädigte DB, die Reparatur ist jedoch nicht zulässig.</td>
+<td>DatabaseCorruptedNoRepair</td>
+<td>Beschädigte Datenbank, aber Reparatur nicht zulässig</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidkreatedbversion</td>
-<td>bei der Wiederherstellung wurde versucht, eine Daten Bank Erstellung wiederzugeben, aber die Datenbank wurde ursprünglich mit einer nicht kompatiblen (wahrscheinlich älteren) Version der Datenbank-Engine erstellt.</td>
+<td>InvalidCreateDbVersion</td>
+<td>Bei der Wiederherstellung wurde versucht, eine Datenbankerstellung wiederzuverspielen, aber die Datenbank wurde ursprünglich mit einer inkompatiblen (wahrscheinlich älteren) Version der Datenbank-Engine erstellt.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databaseingecompleteinkrementalreseed</td>
-<td>Die Datenbank kann nicht angefügt werden, da Sie zurzeit als Teil eines inkrementellen reseed neu erstellt wird.</td>
+<td>DatabaseIncompleteIncrementalReseed</td>
+<td>Die Datenbank kann nicht angefügt werden, da sie derzeit im Rahmen eines inkrementellen erneuten Sendens neu erstellt wird.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Databaseingevalidinkrementalreseed</td>
-<td>Die Datenbank ist kein gültiger Status zum Ausführen eines inkrementellen reseed.</td>
+<td>DatabaseInvalidIncrementalReseed</td>
+<td>Die Datenbank ist kein gültiger Zustand zum Ausführen eines inkrementellen erneuten Sendens.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databasefailedinkrementalreseed</td>
-<td>Der inkrementelle reseed, der für die angegebene Datenbank ausgeführt wird, kann aufgrund eines schwerwiegenden Fehlers nicht abgeschlossen werden. Zum Wiederherstellen dieser Datenbank ist ein vollständiger reseed erforderlich.</td>
+<td>DatabaseFailedIncrementalReseed</td>
+<td>Das inkrementelle erneute Senden, das für die angegebene Datenbank ausgeführt wird, kann aufgrund eines schwerwiegenden Fehlers nicht abgeschlossen werden. Zum Wiederherstellen dieser Datenbank ist ein vollständiges erneutes Senden erforderlich.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Noattachmentsfailedinkrementalreseed</td>
-<td>Der inkrementelle reseed, der für die angegebene Datenbank ausgeführt wird, kann nicht abgeschlossen werden, da das min. erforderliche Protokoll keine Anlagen Informationen enthält. Zum Wiederherstellen dieser Datenbank ist ein vollständiger reseed erforderlich.</td>
+<td>NoAttachmentsFailedIncrementalReseed</td>
+<td>Das inkrementelle erneute Senden, das für die angegebene Datenbank ausgeführt wird, kann nicht abgeschlossen werden, da das mindestens erforderliche Protokoll keine Anlageninformationen enthält. Zum Wiederherstellen dieser Datenbank ist ein vollständiges erneutes Senden erforderlich.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Tablelocked</td>
-<td>Die Tabelle ist exklusiv gesperrt.</td>
+<td>TableLocked</td>
+<td>Die Tabelle ist ausschließlich gesperrt.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Tableduplicate</td>
-<td>Tabelle ist bereits vorhanden.</td>
+<td>TableDuplicate</td>
+<td>Tabelle ist bereits vorhanden</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Tableinuse</td>
-<td>Die Tabelle wird verwendet und kann nicht gesperrt werden.</td>
+<td>TableInUse</td>
+<td>Tabelle wird verwendet, kann nicht gesperrt werden</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -2112,348 +2112,348 @@ public enum JET_err
 </tr>
 <tr class="odd">
 <td></td>
-<td>Densityinvalid</td>
+<td>DensityInvalid</td>
 <td>Ungültige Datei-/Indexdichte</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Tablenotempty</td>
-<td>Die Tabelle ist nicht leer.</td>
+<td>TableNotEmpty</td>
+<td>Tabelle ist nicht leer</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidtableid</td>
+<td>InvalidTableId</td>
 <td>Ungültige Tabellen-ID</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>"-OpenTables"</td>
-<td>Es können keine weiteren Tabellen geöffnet werden (Cleanup wurde bereits versucht).</td>
+<td>TooManyOpenTables</td>
+<td>Weitere Tabellen können nicht geöffnet werden (Bereinigung bereits versucht)</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Illegaloperation</td>
-<td>Gers. wird für Tabelle nicht unterstützt.</td>
+<td>IllegalOperation</td>
+<td>Dies ist der Ablauf. wird in der Tabelle nicht unterstützt.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>"Opomanyopentablesandcleanuptimedout"</td>
-<td>Es können keine weiteren Tabellen geöffnet werden (Fehler beim Cleanup-Versuch).</td>
+<td>TooManyOpenTablesAndCleanupTimedOut</td>
+<td>Weitere Tabellen können nicht geöffnet werden (Bereinigungsversuch konnte nicht abgeschlossen werden)</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Objectduplicate</td>
-<td>Der verwendete Tabellen-oder Objektname</td>
+<td>ObjectDuplicate</td>
+<td>Verwendeter Tabellen- oder Objektname</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidobject</td>
+<td>InvalidObject</td>
 <td>Das Objekt ist für den Vorgang ungültig.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Cannotdeletetemptable</td>
-<td>Verwenden Sie closetable anstelle von deleteTable, um die temporäre Tabelle zu löschen.</td>
+<td>CannotDeleteTempTable</td>
+<td>Verwenden von CloseTable anstelle von DeleteTable zum Löschen der temporären Tabelle</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Cannotdelta etesystemtable</td>
-<td>Unzulässiger Versuch, eine Systemtabelle zu löschen.</td>
+<td>CannotDeleteSystemTable</td>
+<td>Unzulässiger Versuch, eine Systemtabelle zu löschen</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Cannotdeletetemplatetable</td>
-<td>Unzulässiger Versuch, eine Vorlagen Tabelle zu löschen.</td>
+<td>CannotDeleteTemplateTable</td>
+<td>Unzulässiger Versuch, eine Vorlagentabelle zu löschen</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Exclusivetablelockrequired</td>
-<td>Es muss eine exklusive Sperre für die Tabelle vorhanden sein.</td>
+<td>ExclusiveTableLockRequired</td>
+<td>Muss über eine exklusive Sperre für die Tabelle verfügen.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Fixedddl</td>
-<td>Für diese Tabelle nicht zulässige DDL-Vorgänge.</td>
+<td>FixedDDL</td>
+<td>Für diese Tabelle unzulässige DDL-Vorgänge</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Fixedinheritedddl</td>
-<td>Für eine abgeleitete Tabelle sind DDL-Vorgänge für geerbte DDL-Teile unzulässig.</td>
+<td>FixedInheritedDDL</td>
+<td>In einer abgeleiteten Tabelle sind DDL-Vorgänge für geerbte Teile von DDL unzulässig.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Cannotnestddl</td>
-<td>Die Schachtelung von hierarchischen DDL wird derzeit nicht unterstützt.</td>
+<td>CannotNestDDL</td>
+<td>Das Schachteln hierarchischer DDL wird derzeit nicht unterstützt.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Ddlnotvererbt able</td>
-<td>Es wurde versucht, DDL von einer Tabelle zu erben, die nicht als Vorlagen Tabelle gekennzeichnet ist.</td>
+<td>DDLNotInheritable</td>
+<td>Es wurde versucht, DDL von einer Tabelle zu erben, die nicht als Vorlagentabelle markiert ist.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidsettings</td>
-<td>System Parameter wurden nicht ordnungsgemäß festgelegt.</td>
+<td>InvalidSettings</td>
+<td>Systemparameter wurden nicht ordnungsgemäß festgelegt</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Clientrequesttostopjetservice</td>
-<td>Der Client hat den Dienst zum Abbrechen angefordert</td>
+<td>ClientRequestToStopJetService</td>
+<td>Der Client hat den Beendigungsdienst angefordert.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Cannotaddfixedvarcolumntyvedtable</td>
-<td>Die Vorlagen Tabelle wurde mit nofixedvarcolumnsinderivedtables erstellt.</td>
+<td>CannotAddFixedVarColumnToDerivedTable</td>
+<td>Die Vorlagentabelle wurde mit NoFixedVarColumnsInDerivedTables erstellt.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Indexcantbuild</td>
-<td>Fehler beim Erstellen des Indexes</td>
+<td>IndexBuild</td>
+<td>Fehler beim Indexbuild</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Indexhasprimary</td>
-<td>Primärer Index ist bereits definiert.</td>
+<td>IndexHasPrimary</td>
+<td>Primärer Index bereits definiert</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Indexduplicate</td>
+<td>IndexDuplicate</td>
 <td>Der Index ist bereits definiert.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Indexnotfound</td>
+<td>IndexNotFound</td>
 <td>Kein solcher Index</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Indexmuststay</td>
-<td>Gruppierter Index kann nicht gelöscht werden.</td>
+<td>IndexMustStay</td>
+<td>Gruppierter Index kann nicht gelöscht werden</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Indexinvaliddef</td>
-<td>Ungültige Index Definition</td>
+<td>IndexInvalidDef</td>
+<td>Ungültige Indexdefinition</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidkreateindex</td>
-<td>Ungültige Create Index-Beschreibung</td>
+<td>InvalidCreateIndex</td>
+<td>Ungültige Indexerstellungsbeschreibung</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"-Openindexes"</td>
-<td>Nicht genügend Index Beschreibungs Blöcke</td>
+<td>TooManyOpenIndexes</td>
+<td>Out of index description blocks (Nicht in Indexbeschreibungsblöcken)</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Multivaluedindexverletzung</td>
-<td>Nicht eindeutige Index Schlüssel für den Index, die für einen mehrwertigen Index generiert wurden.</td>
+<td>MultiValuedIndexViolation</td>
+<td>Nicht eindeutige, datensatzübergreifende Indexschlüssel, die für einen mehrwertigen Index generiert wurden</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Indexbuildbeschädigte</td>
-<td>Fehler beim Erstellen eines sekundären Indexes, der den primären Index korrekt widerspiegelt.</td>
+<td>IndexBuildCorrupted</td>
+<td>Fehler beim Erstellen eines sekundären Indexes, der den primären Index ordnungsgemäß widerspiegelt</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Primaryindexbeschädigt</td>
-<td>Der primäre Index ist beschädigt. Die Datenbank muss zerlegt oder die Tabelle gelöscht werden.</td>
+<td>PrimaryIndexCorrupted</td>
+<td>Der primäre Index ist beschädigt. Die Datenbank muss defragmentiert oder die Tabelle gelöscht werden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Secondaryindexbeschädigt</td>
-<td>Der sekundäre Index ist beschädigt. Die Datenbank muss zerlegt werden, oder der betroffene Index muss gelöscht werden. Wenn der beschädigte Index über Unicode-Text ist, führt dies wahrscheinlich zu einer Änderung der Sortierreihenfolge.</td>
+<td>SecondaryIndexCorrupted</td>
+<td>Der sekundäre Index ist beschädigt. Die Datenbank muss defragmentiert oder der betroffene Index gelöscht werden. Wenn der beschädigte Index über Unicode-Text liegt, führt dies wahrscheinlich zu einer Änderung der Sortierreihenfolge.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidindexid</td>
+<td>InvalidIndexId</td>
 <td>Ungültige Index-ID</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Indextuplessecondaryindexonly</td>
-<td>der Tupelindex kann nur auf einem sekundären Index gespeichert werden.</td>
+<td>IndexTuplesSecondaryIndexOnly</td>
+<td>Tupelindex kann sich nur auf einem sekundären Index</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Indextuplestoomanycolumns</td>
-<td>der Tupelindex darf nur elf Spalten im Index enthalten.</td>
+<td>IndexTuplesTooManyColumns</td>
+<td>Tupelindex kann nur elf Spalten im Index enthalten.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Indextuplesnonuniqueonly</td>
-<td>der Tupelindex muss ein nicht eindeutiger Index sein.</td>
+<td>IndexTuplesNonUniqueOnly</td>
+<td>Tupelindex muss ein nicht eindeutiger Index sein</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Indextuplestextbinarycolumnsonly</td>
-<td>der Tupelindex muss sich in einer Text-/Binärspalte befinden.</td>
+<td>IndexTuplesTextBinaryColumnsOnly</td>
+<td>Der Tupelindex muss sich in einer Text-/Binärspalte befinden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Indextuplesvarsegmacnotallowed</td>
-<td>der Tupelindex lässt das Festlegen von cbvarsegmac nicht zu.</td>
+<td>IndexTuplesVarSegMacNotAllowed</td>
+<td>Tupelindex lässt das Festlegen von cbVarSegMac nicht zu</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Indextuplesinvalidlimits</td>
-<td>Ungültige minimale/maximale tupellänge oder maximal zulässige Zeichen für Index Angabe</td>
+<td>IndexTuplesInvalidLimits</td>
+<td>Ungültige Mindest-/Maximale Tupellänge oder maximal zu indizierte Zeichen</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Indextuplescannotretrievefromindex</td>
-<td>"retrievecolenn ()" kann nicht mit "retrievefromindex" für einen Tupelindex aufgerufen werden.</td>
+<td>IndexTuplesCannotRetrieveFromIndex</td>
+<td>RetrieveColumn() kann nicht mit RetrieveFromIndex für einen Tupelindex aufgerufen werden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Indextupleskeydeosmall</td>
-<td>der angegebene Schlüssel entspricht nicht der minimalen tupellänge.</td>
+<td>IndexTuplesKeyTooSmall</td>
+<td>Der angegebene Schlüssel erfüllt nicht die minimale Tupellänge.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columnlong</td>
-<td>Der Spaltenwert ist Long.</td>
+<td>ColumnLong</td>
+<td>Der Spaltenwert ist lang.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Columnnochunk</td>
-<td>Kein solcher Block im Long-Wert.</td>
+<td>ColumnNoChunk</td>
+<td>Kein solcher Block im Long-Wert</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columndoesnotfit</td>
-<td>Das Feld passt nicht in den Datensatz.</td>
+<td>ColumnDoesNotFit</td>
+<td>Feld passt nicht in Datensatz</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Nullinvalid</td>
-<td>NULL ist ungültig.</td>
+<td>NullInvalid</td>
+<td>NULL ungültig</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columnindiziert</td>
-<td>Indizierte Spalte, kann nicht gelöscht werden</td>
+<td>ColumnIndexed</td>
+<td>Spalte indiziert, kann nicht gelöscht werden</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Columnzu obig</td>
-<td>Die Feldlänge ist größer als der Höchstwert.</td>
+<td>ColumnTooBig</td>
+<td>Feldlänge ist größer als das Maximum</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columnnotfound</td>
+<td>ColumnNotFound</td>
 <td>Keine solche Spalte</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Columnduplicate</td>
-<td>Das Feld ist bereits definiert.</td>
+<td>ColumnDuplicate</td>
+<td>Feld ist bereits definiert</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Multivaluedcolumnmustbetaging</td>
-<td>Es wurde versucht, eine mehrwertige Spalte zu erstellen, aber die Spalte wurde nicht markiert.</td>
+<td>MultiValuedColumnMustBeTagged</td>
+<td>Es wurde versucht, eine mehrwertige Spalte zu erstellen, die Spalte wurde jedoch nicht markiert.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Columnredundant</td>
-<td>Zweite AutoIncrement-oder Versions Spalte</td>
+<td>ColumnRedundant</td>
+<td>Zweite Spalte für die automatische Inkrementierung oder Version</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidcolumntype</td>
-<td>Ungültiger Spaltendatentyp.</td>
+<td>InvalidColumnType</td>
+<td>Ungültiger Spaltendatentyp</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Taggednotnull</td>
-<td>Keine markierten Spalten ungleich NULL</td>
+<td>TaggedNotNULL</td>
+<td>Keine mit NULL markierten Spalten</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Nocurrentindex</td>
-<td>Ungültiger w/o-Index.</td>
+<td>NoCurrentIndex</td>
+<td>Ungültiger w/o-Wert für einen aktuellen Index</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Keyismade</td>
-<td>Der Schlüssel wird vollständig erstellt.</td>
+<td>KeyIs Tasten</td>
+<td>Der Schlüssel ist vollständig gemacht.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Badcolumnid</td>
-<td>Spalten-ID ist falsch</td>
+<td>BadColumnId</td>
+<td>Spalten-ID falsch</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Baditagsequence</td>
-<td>Ungültige itagsequence für markierte Spalte.</td>
+<td>BadItagSequence</td>
+<td>Fehlerhafte itagSequence für markierte Spalte</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columninrelationship</td>
-<td>Löschen nicht möglich, die Spalte ist Teil einer Beziehung.</td>
+<td>ColumnInRelationship</td>
+<td>Kann nicht gelöscht werden, Spalte nimmt an Beziehung teil</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Cannotbetaging</td>
-<td>AutoIncrement und Version können nicht markiert werden.</td>
+<td>CannotBeTagged</td>
+<td>AutoIncrement und Version können nicht markiert werden</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Defaultvaluetoobig</td>
-<td>Der Standardwert überschreitet die maximale Größe</td>
+<td>DefaultValueTooBig</td>
+<td>Standardwert überschreitet die maximale Größe</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Multivaluedduplicate</td>
-<td>Für eine eindeutige mehrwertige Spalte wurde ein Duplikat erkannt.</td>
+<td>MultiValuedDuplicate</td>
+<td>Duplikat für eine eindeutige mehrwertige Spalte erkannt</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Lvbeschädigt</td>
-<td>Beschädigung in Long-Value-Struktur.</td>
+<td>LVCorrupted</td>
+<td>Beschädigung in Der Long-Value-Struktur</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Multivaluedduplicateaftertrunation</td>
-<td>Für eine eindeutige mehrwertige Spalte wurde ein Duplikat erkannt, nachdem die Daten normalisiert wurden, und die Daten werden vor dem Vergleich normalisiert.</td>
+<td>MultiValuedDuplicateAfterTruncation</td>
+<td>Duplikat in einer eindeutigen mehrwertigen Spalte erkannt, nachdem die Daten normalisiert wurden, und die Normalisierung hat die Daten vor dem Vergleich abgeschnitten.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Derivedcolumncorruption</td>
+<td>DerivedColumnCorruption</td>
 <td>Ungültige Spalte in abgeleiteter Tabelle</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Invalidplaceholdercolumn</td>
-<td>Es wurde versucht, eine Spalte in einen primären Index Platzhalter zu konvertieren, aber die Spalte erfüllt die erforderlichen Kriterien nicht.</td>
+<td>InvalidPlaceholderColumn</td>
+<td>Es wurde versucht, die Spalte in einen primären Indexplatzhalter zu konvertieren, aber die Spalte erfüllt nicht die erforderlichen Kriterien.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Columncannotbecompressed</td>
-<td>Nur JET_coltypLongText-und JET_coltypLongBinary Spalten können komprimiert werden.</td>
+<td>ColumnCannotBeCompressed</td>
+<td>Nur JET_coltypLongText und JET_coltypLongBinary spalten können komprimiert werden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Recordnotfound</td>
+<td>RecordNotFound</td>
 <td>Der Schlüssel wurde nicht gefunden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Recordnocopy</td>
-<td>Kein Arbeits Puffer</td>
+<td>RecordNoCopy</td>
+<td>Kein Arbeitspuffer</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Nocurrentrecord</td>
-<td>Währung nicht in einem Datensatz</td>
+<td>NoCurrentRecord</td>
+<td>Währung nicht auf einem Datensatz</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Recordprimarychanged</td>
-<td>Der Primärschlüssel kann nicht geändert werden.</td>
+<td>RecordPrimaryChanged</td>
+<td>Primärschlüssel ändert sich möglicherweise nicht</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -2462,67 +2462,67 @@ public enum JET_err
 </tr>
 <tr class="odd">
 <td></td>
-<td>"Alleseryprepared"</td>
-<td>Es wurde versucht, den Datensatz zu aktualisieren, als die Daten Satz Aktualisierung bereits ausgeführt</td>
+<td>Bereits vorbereitet</td>
+<td>Es wurde versucht, den Datensatz zu aktualisieren, wenn das Datensatzupdate bereits in Bearbeitung war.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Keynotmade</td>
-<td>Kein Befehl von jetmakekey</td>
+<td>KeyNot Tasten</td>
+<td>Kein Aufruf von JetMakeKey</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Updatenotprepared</td>
-<td>Kein Aufrufe von jetprepareupdate</td>
+<td>UpdateNotPrepared</td>
+<td>Kein Aufruf von JetPrepareUpdate</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Datahasn</td>
-<td>Daten wurden geändert, Vorgang abgebrochen.</td>
+<td>DataHasChanged</td>
+<td>Daten geändert, Vorgang abgebrochen</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Languagenotsupported</td>
-<td>Die Windows-Installation unterstützt keine Sprache</td>
+<td>LanguageNotSupported</td>
+<td>Windows-Installation unterstützt keine Sprache</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Debug-Fehler</td>
-<td>Interner Fehler: die Daten konnten nicht entpackt werden.</td>
+<td>DecompressionFailed</td>
+<td>Interner Fehler: Daten konnten nicht dekomprimiert werden</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Updatemustversion</td>
-<td>Keine Versions Updates für Tabellen, für die kein Commit ausgeführt wurde</td>
+<td>UpdateMustVersion</td>
+<td>Keine Versionsupdates nur für Tabellen ohneCommitted</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>""-Sortier Sortierungen</td>
-<td>Zu viele Sortier Prozesse</td>
+<td>TooManySorts</td>
+<td>Zu viele Sortierprozesse</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidonsort</td>
-<td>Ungültiger Vorgang bei Sortierung</td>
+<td>InvalidOnSort</td>
+<td>Ungültiger Vorgang beim Sortieren</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Tempfleopenerror</td>
+<td>TempFileOpenError</td>
 <td>Die temporäre Datei konnte nicht geöffnet werden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"Onomanyattacheddatenbanken"</td>
+<td>TooManyAttachedDatabases</td>
 <td>Zu viele geöffnete Datenbanken</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>DiskFull</td>
-<td>Kein Speicherplatz auf dem Datenträger übrig</td>
+<td>Kein Speicherplatz mehr auf dem Datenträger</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Permissionverweigert</td>
+<td>Berechtigung verweigert</td>
 <td>Berechtigung verweigert</td>
 </tr>
 <tr class="even">
@@ -2532,23 +2532,23 @@ public enum JET_err
 </tr>
 <tr class="odd">
 <td></td>
-<td>Fileinvalidtype</td>
+<td>FileInvalidType</td>
 <td>Ungültiger Dateityp</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Afterinitialisierung</td>
-<td>Nach init kann nicht wieder hergestellt werden.</td>
+<td>AfterInitialization</td>
+<td>Die Wiederherstellung nach init ist nicht möglich.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Logbeschädigt</td>
+<td>LogCorrupted</td>
 <td>Protokolle konnten nicht interpretiert werden.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>InvalidOperation</td>
-<td>Ungültiger Vorgang.</td>
+<td>Ungültiger Vorgang</td>
 </tr>
 <tr class="odd">
 <td></td>
@@ -2557,68 +2557,68 @@ public enum JET_err
 </tr>
 <tr class="even">
 <td></td>
-<td>Alle Teilungen</td>
-<td>Unendliche Teilung</td>
+<td>TooManySplits</td>
+<td>Unendliche Aufteilung</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Sessionsharingverletzung</td>
+<td>SessionSharingViolation</td>
 <td>Mehrere Threads verwenden dieselbe Sitzung.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Entrypointnotfound</td>
-<td>Ein Einstiegspunkt in einer DLL, den wir benötigen, wurde nicht gefunden.</td>
+<td>EntryPointNotFound</td>
+<td>Ein Einstiegspunkt in einer DLL, die wir benötigen, wurde nicht gefunden.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Sessioncontextalleseryset</td>
-<td>Für die angegebene Sitzung ist bereits ein Sitzungs Kontext festgelegt.</td>
+<td>SessionContextAlreadySet</td>
+<td>Die angegebene Sitzung verfügt bereits über einen Sitzungskontextsatz.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Sessioncontextnotsetbythisthread</td>
-<td>Es wurde versucht, den Sitzungs Kontext zurückzusetzen, der aktuelle Thread hat den Sitzungs Kontext jedoch nicht festgelegt.</td>
+<td>SessionContextNotSetByThisThread</td>
+<td>Es wurde versucht, den Sitzungskontext zurückzusetzen, aber der aktuelle Thread hat den Sitzungskontext nicht festgelegt.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Sessioninuse</td>
-<td>Es wurde versucht, die verwendete Sitzung zu beenden.</td>
+<td>SessionInUse</td>
+<td>Es wurde versucht, die Sitzung zu beenden, die verwendet wird.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Recordformatconfiguration-Fehler</td>
-<td>Interner Fehler bei der Konvertierung des dynamischen Daten Satz Formats</td>
+<td>RecordFormatConversionFailed</td>
+<td>Interner Fehler während der Dynamischen Datensatzformatkonvertierung</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Onedatabasepersession</td>
-<td>Pro Sitzung ist nur eine geöffnete Benutzerdatenbank zulässig (JET_paramOneDatabasePerSession).</td>
+<td>OneDatabasePerSession</td>
+<td>Pro Sitzung ist nur eine geöffnete Benutzerdatenbank zulässig (JET_paramOneDatabasePerSession)</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Rollbackerror</td>
-<td>Fehler beim Rollback.</td>
+<td>RollbackError</td>
+<td>Fehler während des Rollbacks</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Databaseallelerunningmaintenance</td>
-<td>Der Vorgang wurde nicht erfolgreich abgeschlossen, weil die Datenbank bereits für die angegebene Datenbank ausgeführt wird.</td>
+<td>DatabaseAlreadyRunningMaintenance</td>
+<td>Der Vorgang wurde nicht erfolgreich abgeschlossen, da die Datenbank bereits eine Wartung für die angegebene Datenbank ausgeführt hat.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Callbackfailed</td>
-<td>Fehler beim Rückruf.</td>
+<td>CallbackFailed</td>
+<td>Fehler beim Rückruf</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Callbacknotregelöst</td>
+<td>CallbackNotResolved</td>
 <td>Eine Rückruffunktion wurde nicht gefunden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Spacehintsinvalid</td>
-<td>Ein Element der Jet-Raum Hinweise-Struktur war nicht korrekt oder kann nicht ausgeführt werden.</td>
+<td>SpaceHintsInvalid</td>
+<td>Ein Element der JET-Raumhinweisstruktur war nicht richtig oder umsetzbar.</td>
 </tr>
 <tr class="odd">
 <td></td>
@@ -2627,275 +2627,275 @@ public enum JET_err
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvbeschädigt</td>
+<td>SLVCorrupted</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvcolumndefaultvaluenotallowed</td>
+<td>SLVColumnDefaultValueNotAllowed</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvstreamingfilemissing</td>
+<td>SLVStreamingFileMissing</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvdatabasemissing</td>
+<td>SLVDatabaseMissing</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvstreamingfilealread yexistiert</td>
+<td>SLVStreamingFileAlreadyExists</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvinvalidpath</td>
+<td>SLVInvalidPath</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvstreamingdatotcreated</td>
+<td>SLVStreamingFileNotCreated</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvstreamingfilereadonly</td>
+<td>SLVStreamingFileReadOnly</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvheaderbadchecksum</td>
+<td>SLVHeaderBadChecksum</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvheaderbeschädigt</td>
+<td>SLVHeaderCorrupted</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvpgesnotfree</td>
+<td>SLVPagesNotFree</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvpgesnotreserved</td>
+<td>SLVPagesNotReserved</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvpgesnotcommit</td>
+<td>SLVPagesNotCommitted</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvpgesnotdeleted</td>
+<td>SLVPagesNotDeleted</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvspaceschreiteconflict</td>
+<td>SLVSpaceWriteConflict</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvrootstillopen</td>
+<td>SLVRootRootOpen</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvprovidernotloaded</td>
+<td>SLVProviderNotLoaded</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvealistbeschädigt</td>
+<td>SLVEAListCorrupt</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvrootnotspezifiziert</td>
+<td>SLVRootNotSpecified</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvrootpathinvalid</td>
+<td>SLVRootPathInvalid</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvealistzeroallocation</td>
+<td>SLVEAListZeroAllocation</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvcolumncannotdelete</td>
+<td>SLVColumnCannotDelete</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvownermapalleseryist vorhanden</td>
+<td>SLVOwnerMapAlreadyExists</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvownermapbeschädigte</td>
+<td>SLVOwnerMapCorrupted</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvownermappagenotfound</td>
+<td>SLVOwnerMapPageNotFound</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvfilestale</td>
+<td>SLVFileFileFilee</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvfilinput use</td>
+<td>SLVFileInUse</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvstreamingfilinuse</td>
+<td>SLVStreamingFileInUse</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvfi</td>
+<td>SLVFileIO</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvstreamingfilefull</td>
+<td>SLVStreamingFileFull</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvfileinvalidpath</td>
+<td>SLVFileInvalidPath</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvfileaccessdenied</td>
+<td>SLVFileAccessDenied</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvfile-found</td>
+<td>SLVFileNotFound</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvfileunknown</td>
+<td>SLVFileUnknown</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvealistabobig</td>
+<td>SLVEAListTooBig</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Slvproviderversionmismatch</td>
+<td>SLVProviderVersionMismatch</td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Slvbufferto osmall</td>
+<td>SLVBufferTooSmall</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Ossnapshotinvalidsequence</td>
-<td>In einer ungültigen Sequenz verwendete OS-schattenkopieapi</td>
+<td>OSSnapshotInvalidSequence</td>
+<td>Betriebssystemschattenkopie-API, die in einer ungültigen Sequenz verwendet wird</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Ossnapshottimeout</td>
-<td>Die OS-Schatten Kopie wurde mit einem Timeout beendet.</td>
+<td>OSSnapshotTimeOut</td>
+<td>Die Schattenkopie des Betriebssystems wurde mit einem Time out beendet.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Ossnapshotnotallowed</td>
-<td>Die OS-Schatten Kopie ist nicht zulässig (Sicherung oder Wiederherstellung in Bearbeitung).</td>
+<td>OSSnapshotNotAllowed</td>
+<td>Schattenkopie des Betriebssystems nicht zulässig (Sicherung oder Wiederherstellung wird in Bearbeitung)</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Ossnapshotinvalidsnapid</td>
+<td>OSSnapshotInvalidSnapId</td>
 <td>Ungültige JET_OSSNAPID</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"Jeomanytestinjections"</td>
-<td>Interner Test einschleusungs Limit erreicht</td>
+<td>TooManyTestInjections</td>
+<td>Grenzwert für ein internes Einsinjektionstest erreicht</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Testinjectionnotsupported</td>
-<td>Test Injektion wird nicht unterstützt.</td>
+<td>TestInjectionNotSupported</td>
+<td>Testinjektion wird nicht unterstützt</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Invalidlogdatasequence</td>
-<td>Einige der bereitgestellten Protokolldaten sind mit dem aktuellen Status der Instanz nicht mehr in der Sequenz</td>
+<td>InvalidLogDataSequence</td>
+<td>Einige, wie die bereitgestellten Protokolldaten mit dem aktuellen Zustand der Instanz nicht mehr in der richtigen Reihenfolge sind</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Lscallbacknotfest gelegt</td>
-<td>Es wurde versucht, lokalen Speicher zu verwenden, ohne eine Rückruffunktion anzugeben.</td>
+<td>LSCallbackNotSpecified</td>
+<td>Es wurde versucht, "Local Storage" zu verwenden, ohne dass eine Rückruffunktion angegeben wurde.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Lsalleseryset</td>
-<td>Es wurde versucht, den lokalen Speicher für ein Objekt festzulegen, das bereits festgelegt wurde.</td>
+<td>LSAlreadySet</td>
+<td>Es wurde versucht, lokale Storage für ein Objekt, für das es bereits festgelegt wurde.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Lsnotset</td>
-<td>Es wurde versucht, lokalen Speicher von einem Objekt abzurufen, für das es nicht festgelegt wurde.</td>
+<td>LSNotSet</td>
+<td>Es wurde versucht, lokale Storage aus einem Objekt abzurufen, für das sie nicht festgelegt wurde.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"Fleiosparse"</td>
-<td>ein e/a-Speicherort wurde an einem Speicherort mit geringer Dichte ausgegeben.</td>
+<td>FileIOSparse</td>
+<td>Eine E/A wurde an einem Standort mit einer spärlichen Datenlage ausgegeben.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>"Fleiobeyonde of"</td>
-<td>ein Lesevorgang wurde an einen Speicherort außerhalb von EOF ausgegeben (die Datei wird von den Schreibvorgängen erweitert)</td>
+<td>FileIOBeyondEOF</td>
+<td>Ein Lesevorgänge wurde an einen Speicherort außerhalb von EOF ausgegeben (Schreibvorgänge erweitern die Datei).</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"Fleioabort"</td>
-<td>weist den JET_ABORTRETRYFAILCALLBACK Aufrufer an, den angegebenen e/a-Vorgang abzubrechen.</td>
+<td>FileIOAbort</td>
+<td>weist den JET_ABORTRETRYFAILCALLBACK an, die angegebene E/A zu abbrechen.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>"Fleioretry"</td>
-<td>weist den JET_ABORTRETRYFAILCALLBACK Aufrufer an, den angegebenen e/a-Vorgang zu wiederholen.</td>
+<td>FileIORetry</td>
+<td>weist den JET_ABORTRETRYFAILCALLBACK an, die angegebene E/A erneut zu versuchen.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>"Fleiofail"</td>
-<td>weist den JET_ABORTRETRYFAILCALLBACK Aufrufer an, den angegebenen e/a-Fehler zu verursachen.</td>
+<td>FileIOFail</td>
+<td>weist JET_ABORTRETRYFAILCALLBACK aufrufer an, die angegebene E/A zu fehlschlagen.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Filecompressed</td>
+<td>FileCompressed</td>
 <td>Lese-/Schreibzugriff wird für komprimierte Dateien nicht unterstützt.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

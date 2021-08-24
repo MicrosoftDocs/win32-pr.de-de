@@ -1,6 +1,6 @@
 ---
-title: glLineWidth-Funktion (GL. h)
-description: Die Funktion "glLineWidth" gibt die Breite von rasterisierten Linien an.
+title: glLineWidth-Funktion (Gl.h)
+description: Die glLineWidth-Funktion gibt die Breite von rasterisierten Linien an.
 ms.assetid: 13a69fd7-5eee-42ec-bd05-5bd3c838d4d7
 keywords:
 - glLineWidth-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aa4cecafc9e5d8e0f55c6e9d0dbfe49924d54f14
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cad5af24170f47125136e87e055413a576821bf75d3f5f87532d026d0bb2fd0f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119492970"
 ---
 # <a name="gllinewidth-function"></a>glLineWidth-Funktion
 
-Die Funktion " **glLineWidth** " gibt die Breite von rasterisierten Linien an.
+Die **glLineWidth-Funktion** gibt die Breite von rasterisierten Linien an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI glLineWidth(
 *width* 
 </dt> <dd>
 
-Die Breite von rasterisierten Linien. Der Standardwert ist 1.0.
+Die Breite von gerasterten Linien. Der Standardwert ist 1.0.
 
 </dd> </dl>
 
@@ -53,40 +53,40 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | *Breite* war kleiner als oder gleich 0 (null).<br/>                                                                                    |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *width* war kleiner als oder gleich 0 (null).<br/>                                                                                    |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glLineWidth** " gibt die gerenderte Breite sowohl von Aliasing-als auch von Antialiasing-Zeilen an. Die Verwendung einer anderen Linienbreite als 1,0 hat unterschiedliche Effekte, je nachdem, ob das linienantialiasing aktiviert ist. Das Antialiasing von Zeilen wird durch Aufrufen von [**glEnable**](glenable.md) und **gldeaktiviert** mit dem Argument GL \_ line \_ Smooth gesteuert.
+Die **glLineWidth-Funktion** gibt die rasterisierte Breite von Linien mit Alias und Antialiasing an. Die Verwendung einer anderen Linienbreite als 1,0 hat unterschiedliche Auswirkungen, je nachdem, ob Zeilen antialiasing aktiviert ist. Das Antialiasing von Linien wird durch Aufrufen von [**glEnable**](glenable.md) und **glDisable** mit dem Argument GL \_ LINE SMOOTH \_ gesteuert.
 
-Wenn das Zeilen-Antialiasing deaktiviert ist, wird die tatsächliche Breite festgelegt, indem die angegebene Breite auf die nächste ganze Zahl gerundet wird. (Wenn die Rundung den Wert 0,0 ergibt, ist Sie so, als ob die Linienstärke 1,0 wäre.) Wenn \| ? x \|  =  \| ? y \| , *i* Pixel werden in jede Spalte eingefügt, die rasterisiert ist, wobei *ich* den gerundeten Wert von *Width* verwende. Andernfalls wird jede Zeile, die gerengt wird, in " *i* Pixel" aufgefüllt.
+Wenn das Zeilen-Antialiasing deaktiviert ist, wird die tatsächliche Breite bestimmt, indem die angegebene Breite auf die nächste ganze Zahl gerundet wird. (Wenn die Rundung den Wert 0,0 ergibt, ist dies so, als ob die Linienbreite 1,0 wäre.) Wenn \| ? x \|  =  \| ? y \| , *i* Pixel werden in jeder Spalte ausgefüllt, die gerastert wird, wobei *i* der gerundete Wert der *Breite* ist. Andernfalls werden *i* Pixel in jeder Zeile ausgefüllt, die gerastert wird.
 
-Wenn Antialiasing aktiviert ist, erzeugt die linienrasterisierung ein Fragment für jedes Pixel Quadrat, das den Bereich überschneidet, der innerhalb des Rechtecks liegt und dessen Breite gleich der aktuellen Linienstärke, der Länge der tatsächlichen Länge der Zeile und der zentriert auf dem mathematischen Liniensegment liegt. Der Abdeckungs Wert für jedes Fragment ist der Fenster Koordinaten Bereich der Schnittmenge des rechteckigen Bereichs mit dem entsprechenden Pixel Quadrat. Dieser Wert wird gespeichert und im abschließenden rasterisierungsschritt verwendet.
+Wenn Antialiasing aktiviert ist, erzeugt die Linienrasterung ein Fragment für jedes Pixelquadrat, das den Bereich innerhalb des Rechtecks überschneidet, wobei die Breite gleich der aktuellen Linienbreite, die Länge gleich der tatsächlichen Länge der Linie und zentriert auf dem mathematischen Liniensegment ist. Der Abdeckungswert für jedes Fragment ist der Fensterkoordinatenbereich der Schnittmenge des rechteckigen Bereichs mit dem entsprechenden Pixelquadrat. Dieser Wert wird gespeichert und im letzten Rasterungsschritt verwendet.
 
-Nicht alle breiten können unterstützt werden, wenn das linienantialiasing aktiviert ist. Wenn eine nicht unterstützte Breite angefordert wird, wird die nächste unterstützte Breite verwendet. Es wird sichergestellt, dass nur die Breite 1,0 unterstützt wird. andere sind von der Implementierung abhängig. Der Bereich der unterstützten breiten und der Größenunterschied zwischen unterstützten breiten innerhalb des Bereichs kann durch Aufrufen von **glget** mit den Argumenten GL \_ \_ -Linienbreite \_ und- \_ \_ \_ Granularität der GL-Linie abgefragt werden.
+Nicht alle Breiten können unterstützt werden, wenn Zeilen antialiasing aktiviert ist. Wenn eine nicht unterstützte Breite angefordert wird, wird die nächste unterstützte Breite verwendet. Es wird garantiert nur die Breite 1,0 unterstützt. andere hängen von der Implementierung ab. Der Bereich der unterstützten Breiten und der Größenunterschied zwischen unterstützten Breiten innerhalb des Bereichs können durch Aufrufen von **glGet** mit den Argumenten GL LINE WIDTH RANGE und GL LINE WIDTH GRANULARITY abgefragt \_ \_ \_ \_ \_ \_ werden.
 
-Die durch **glLineWidth** angegebene Linienbreite wird immer zurückgegeben, wenn die GL- \_ Linien \_ Breite abgefragt wird. Das Spannen und Runden von Zeilen mit einem Alias und einem mit einem AntiAlias einhergehenden Zeilen haben keine Auswirkung auf den angegebenen Wert.
+Die von **glLineWidth** angegebene Linienbreite wird immer zurückgegeben, wenn GL \_ LINE WIDTH abgefragt \_ wird. Das Klammern und Runden für Alias- und Antialiasinglinien hat keine Auswirkungen auf den angegebenen Wert.
 
-Die Linienbreite ohne Antialiasing kann an einen von der Implementierung abhängigen Höchstwert gebunden werden. Obwohl dieser Höchstwert nicht abgefragt werden kann, darf er nicht kleiner sein als der Maximalwert für Antialiasing-Zeilen, gerundet auf den nächsten ganzzahligen Wert.
+Die Nicht-Antialiased-Linienbreite kann an einen implementierungsabhängigen Höchstwert gebunden werden. Obwohl dieser Höchstwert nicht abgefragt werden kann, darf er nicht kleiner als der Höchstwert für gealiaste Zeilen sein, gerundet auf den nächsten ganzzahligen Wert.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glLineWidth** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glLineWidth** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL- \_ Linien \_ Breite
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ LINE \_ WIDTH
 
-**glget** mit Argument GL- \_ Linien \_ Breite \_ Bereich
+**glGet** mit argument GL \_ LINE \_ WIDTH \_ RANGE
 
-**glget** mit Argument GL- \_ Linienstärke \_ \_ Granularität
+**glGet** mit Argument GL \_ LINE \_ WIDTH \_ GRANULARITY
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ line \_ Smooth
+[**glIsEnabled**](glisenabled.md) mit dem Argument GL \_ LINE \_ SMOOTH
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,8 +96,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glLineWi
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -115,7 +115,7 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glLineWi
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> </dl>
 
  

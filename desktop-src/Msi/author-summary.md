@@ -1,23 +1,23 @@
 ---
-description: Die Eigenschaft "Autoren Zusammenfassung" vermittelt den Hersteller des Installationspakets, der Transformation oder des Patchpakets. Legen Sie die Eigenschaft Autoren Zusammenfassung in einem Installationspaket auf denselben Wert wie die Eigenschaft Hersteller fest. Legen Sie die Eigenschaft Autoren Zusammenfassung in einer Transformation auf den Namen des Herstellers der Transformation fest. Legen Sie die Eigenschaft Autoren Zusammenfassung in einem Patchpaket auf den Namen des Herstellers des Patchpakets fest.
+description: Die Eigenschaft Zusammenfassung erstellen übermittelt den Hersteller des Installationspakets, der Transformation oder des Patchpakets. Legen Sie die Eigenschaft Zusammenfassung erstellen in einem Installationspaket auf den gleichen Wert wie die Manufacturer-Eigenschaft fest. Legen Sie die Eigenschaft Zusammenfassung erstellen in einer Transformation auf den Namen des Herstellers der Transformation fest. Legen Sie die Eigenschaft Zusammenfassung erstellen in einem Patchpaket auf den Namen des Herstellers des Patchpakets fest.
 ms.assetid: 9b480750-602e-421e-8dfd-0b7049ed8b8a
-title: Zusammenfassungs Eigenschaft des Autors
+title: Author Summary-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a860b03baaf395892f0c155e1166af4ea42e0edb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 69a050fdb64a8c931ad53c92229ca93994270a26829f72a15d025e4d513109d6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119581790"
 ---
-# <a name="author-summary-property"></a>Zusammenfassungs Eigenschaft des Autors
+# <a name="author-summary-property"></a>Author Summary-Eigenschaft
 
-Die Eigenschaft " **Autoren Zusammenfassung** " vermittelt den Hersteller des Installationspakets, der Transformation oder des Patchpakets.
+Die Eigenschaft **Zusammenfassung** erstellen übermittelt den Hersteller des Installationspakets, der Transformation oder des Patchpakets.
 
--   Legen Sie die Eigenschaft **Autoren Zusammenfassung** in einem Installationspaket auf denselben Wert wie die Eigenschaft [**Hersteller**](manufacturer.md) fest.
--   Legen Sie die Eigenschaft **Autoren Zusammenfassung** in einer Transformation auf den Namen des Herstellers der Transformation fest.
--   Legen Sie die Eigenschaft **Autoren Zusammenfassung** in einem Patchpaket auf den Namen des Herstellers des Patchpakets fest.
+-   Legen Sie die Eigenschaft **Zusammenfassung** erstellen in einem Installationspaket auf den gleichen Wert wie die [**Manufacturer-Eigenschaft**](manufacturer.md) fest.
+-   Legen Sie die Eigenschaft **Zusammenfassung** erstellen in einer Transformation auf den Namen des Herstellers der Transformation fest.
+-   Legen Sie die Eigenschaft **Zusammenfassung** erstellen in einem Patchpaket auf den Namen des Herstellers des Patchpakets fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -25,7 +25,7 @@ Die Eigenschaft " **Autoren Zusammenfassung** " vermittelt den Hersteller des In
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 
 
 
@@ -33,7 +33,7 @@ Die Eigenschaft " **Autoren Zusammenfassung** " vermittelt den Hersteller des In
 
 <dl> <dt>
 
-[Beschreibungen der Zusammenfassungs Eigenschaften](summary-property-descriptions.md)
+[Zusammenfassungseigenschaftenbeschreibungen](summary-property-descriptions.md)
 </dt> </dl>
 
  

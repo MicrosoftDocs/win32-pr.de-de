@@ -1,11 +1,11 @@
 ---
-title: ms-DS-Bridgehead-Servers-verwendetes Attribut
-description: Liste der Bridge Head-Server, die von KCC in der vorherigen Testlauf verwendet werden.
+title: ms-DS-BridgeHead-Servers-Used-Attribut
+description: Liste der Bridge-Hauptserver, die von KCC in der vorherigen Ausführung verwendet wurden.
 ms.assetid: f99e9ef2-1a64-49ab-b6b7-7613f3246e61
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-Bridgehead-Server-verwendetes Attribut AD-Schema
-- AD-Schema des msDS-bridgeheadserversused-Attributs
+- ms-DS-BridgeHead-Servers-Used-Attribut AD-Schema
+- msDS-BridgeHeadServersUsed-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 52dca97dc5d8f501588cebc04ceae090fd1ce69c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 99d6f26e28528f633e9dd0593e60d2e4d7b54780740feab35ca211a2494751ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119552720"
 ---
-# <a name="ms-ds-bridgehead-servers-used-attribute"></a>ms-DS-Bridgehead-Servers-verwendetes Attribut
+# <a name="ms-ds-bridgehead-servers-used-attribute"></a>ms-DS-BridgeHead-Servers-Used-Attribut
 
-Liste der Bridge Head-Server, die von KCC in der vorherigen Testlauf verwendet werden.
+Liste der Bridge-Hauptserver, die von KCC in der vorherigen Ausführung verwendet wurden.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------|
-| CN                | ms-DS-Bridgehead-Server-verwendet                   |
-| LDAP-Display-Name | MSDS-bridgeheadserversused                      |
+| CN                | ms-DS-BridgeHead-Servers-Used                   |
+| Ldap-Anzeigename | msDS-BridgeHeadServersUsed                      |
 | Size              | \-                                              |
-| Berechtigung aktualisieren  | \-                                              |
-| Aktualisierungshäufigkeit  | \-                                              |
+| Aktualisieren von Berechtigungen  | \-                                              |
+| Updatehäufigkeit  | \-                                              |
 | Attribute-Id      | 1.2.840.113556.1.4.2049                         |
 | System-ID-GUID    | 3ced1465-7b71-2541-8780-1e1ea6243a82            |
 | Syntax            | [**Object(DN-Binary)**](s-object-dn-binary.md) |
@@ -55,10 +55,10 @@ Liste der Bridge Head-Server, die von KCC in der vorherigen Testlauf verwendet w
 | Link-ID                | 2160                              |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
+| Ist einwertig       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -76,10 +76,10 @@ Liste der Bridge Head-Server, die von KCC in der vorherigen Testlauf verwendet w
 | Link-ID                | 2160                              |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
+| Ist einwertig       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -97,10 +97,10 @@ Liste der Bridge Head-Server, die von KCC in der vorherigen Testlauf verwendet w
 | Link-ID                | 2160                              |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
+| Ist einwertig       | False                             |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |

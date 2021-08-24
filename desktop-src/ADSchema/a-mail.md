@@ -1,11 +1,11 @@
 ---
-title: E-Mail-Adressen-Attribut
-description: Die Liste der e-Mail-Adressen für einen Kontakt.
+title: Attribut "E-Mail-Adressen"
+description: Die Liste der E-Mail-Adressen für einen Kontakt.
 ms.assetid: d8c75284-fdfd-4188-a4cf-ba2ddb9985fc
 ms.tgt_platform: multiple
 keywords:
-- E-Mail-Adressen Attribut AD-Schema
-- Mail-Attribut, AD-Schema
+- AD-Schema des E-Mail-Adressen-Attributs
+- E-Mail-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa769b886171211fc89ed5b1e3d5082e6eeedd2b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8e11247c9b81b378637fd751cd59ec76360e118da8220593340ff55ed25c7518
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119301300"
 ---
-# <a name="e-mail-addresses-attribute"></a>E-Mail-Adressen-Attribut
+# <a name="e-mail-addresses-attribute"></a>Attribut "E-Mail-Adressen"
 
-Die Liste der e-Mail-Adressen für einen Kontakt.
+Die Liste der E-Mail-Adressen für einen Kontakt.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | E-Mail-Adressen                            |
-| LDAP-Display-Name | mail                                        |
+| Ldap-Anzeigename | mail                                        |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 0.9.2342.19200300.100.1.3                   |
-| System-ID-GUID    | bf967961-0de6-11d0-a285-00aa003049e2        |
+| System-Id-Guid    | bf967961-0de6-11d0-a285-00aa003049e2        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Die Liste der e-Mail-Adressen für einen Kontakt.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,12 +56,12 @@ Die Liste der e-Mail-Adressen für einen Kontakt.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                     |
-| MAPI-Id                | 0x39fe                                                                                                 |
+| MAPI-Id                | 0x39FE                                                                                                 |
 | System-Only            | False                                                                                                  |
-| Ist-einwertig       | Richtig                                                                                                   |
-| Ist indiziert             | Richtig                                                                                                   |
-| Im globalen Katalog      | Richtig                                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                           |
+| Is-Single-Valued       | True                                                                                                   |
+| Ist indiziert             | True                                                                                                   |
+| Im globalen Katalog      | True                                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                           |
 | Range-Lower            | 0                                                                                                      |
 | Range-Upper            | 256                                                                                                    |
 | Search-Flags           | 0x00000001                                                                                             |
@@ -70,19 +70,19 @@ Die Liste der e-Mail-Adressen für einen Kontakt.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                           |
-| MAPI-Id                | 0x39fe                                                                                                                                                                                       |
+| MAPI-Id                | 0x39FE                                                                                                                                                                                       |
 | System-Only            | False                                                                                                                                                                                        |
-| Ist-einwertig       | Richtig                                                                                                                                                                                         |
-| Ist indiziert             | Richtig                                                                                                                                                                                         |
-| Im globalen Katalog      | Richtig                                                                                                                                                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                 |
+| Is-Single-Valued       | True                                                                                                                                                                                         |
+| Ist indiziert             | True                                                                                                                                                                                         |
+| Im globalen Katalog      | True                                                                                                                                                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                 |
 | Range-Lower            | 0                                                                                                                                                                                            |
 | Range-Upper            | 256                                                                                                                                                                                          |
 | Search-Flags           | 0x00000001                                                                                                                                                                                   |
@@ -98,12 +98,12 @@ Die Liste der e-Mail-Adressen für einen Kontakt.
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                           |
-| MAPI-Id                | 0x39fe                                                                                                                                                                                       |
+| MAPI-Id                | 0x39FE                                                                                                                                                                                       |
 | System-Only            | False                                                                                                                                                                                        |
-| Ist-einwertig       | Richtig                                                                                                                                                                                         |
-| Ist indiziert             | Richtig                                                                                                                                                                                         |
-| Im globalen Katalog      | Richtig                                                                                                                                                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                 |
+| Is-Single-Valued       | True                                                                                                                                                                                         |
+| Ist indiziert             | True                                                                                                                                                                                         |
+| Im globalen Katalog      | True                                                                                                                                                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                 |
 | Range-Lower            | 0                                                                                                                                                                                            |
 | Range-Upper            | 256                                                                                                                                                                                          |
 | Search-Flags           | 0x00000001                                                                                                                                                                                   |
@@ -119,12 +119,12 @@ Die Liste der e-Mail-Adressen für einen Kontakt.
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                           |
-| MAPI-Id                | 0x39fe                                                                                                                                                                                       |
+| MAPI-Id                | 0x39FE                                                                                                                                                                                       |
 | System-Only            | False                                                                                                                                                                                        |
-| Ist-einwertig       | Richtig                                                                                                                                                                                         |
-| Ist indiziert             | Richtig                                                                                                                                                                                         |
-| Im globalen Katalog      | Richtig                                                                                                                                                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                 |
+| Is-Single-Valued       | True                                                                                                                                                                                         |
+| Ist indiziert             | True                                                                                                                                                                                         |
+| Im globalen Katalog      | True                                                                                                                                                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                 |
 | Range-Lower            | 0                                                                                                                                                                                            |
 | Range-Upper            | 256                                                                                                                                                                                          |
 | Search-Flags           | 0x00000001                                                                                                                                                                                   |
@@ -140,12 +140,12 @@ Die Liste der e-Mail-Adressen für einen Kontakt.
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                           |
-| MAPI-Id                | 0x39fe                                                                                                                                                                                       |
+| MAPI-Id                | 0x39FE                                                                                                                                                                                       |
 | System-Only            | False                                                                                                                                                                                        |
-| Ist-einwertig       | Richtig                                                                                                                                                                                         |
-| Ist indiziert             | Richtig                                                                                                                                                                                         |
-| Im globalen Katalog      | Richtig                                                                                                                                                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                 |
+| Is-Single-Valued       | True                                                                                                                                                                                         |
+| Ist indiziert             | True                                                                                                                                                                                         |
+| Im globalen Katalog      | True                                                                                                                                                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                 |
 | Range-Lower            | 0                                                                                                                                                                                            |
 | Range-Upper            | 256                                                                                                                                                                                          |
 | Search-Flags           | 0x00000001                                                                                                                                                                                   |
@@ -161,12 +161,12 @@ Die Liste der e-Mail-Adressen für einen Kontakt.
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                           |
-| MAPI-Id                | 0x39fe                                                                                                                                                                                       |
+| MAPI-Id                | 0x39FE                                                                                                                                                                                       |
 | System-Only            | False                                                                                                                                                                                        |
-| Ist-einwertig       | Richtig                                                                                                                                                                                         |
-| Ist indiziert             | Richtig                                                                                                                                                                                         |
-| Im globalen Katalog      | Richtig                                                                                                                                                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                 |
+| Is-Single-Valued       | True                                                                                                                                                                                         |
+| Ist indiziert             | True                                                                                                                                                                                         |
+| Im globalen Katalog      | True                                                                                                                                                                                         |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                 |
 | Range-Lower            | 0                                                                                                                                                                                            |
 | Range-Upper            | 256                                                                                                                                                                                          |
 | Search-Flags           | 0x00000001                                                                                                                                                                                   |

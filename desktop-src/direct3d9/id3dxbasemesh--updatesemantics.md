@@ -1,7 +1,7 @@
 ---
-description: Mit dieser Methode kann der Benutzer die Mesh-Deklaration ändern, ohne das Datenlayout des Vertexpuffers zu ändern. Der-Rückruf ist nur gültig, wenn die alten und neuen Deklarations Formate die gleiche Scheitelpunkt Größe aufweisen.
+description: Mit dieser Methode kann der Benutzer die Gitternetzdeklaration ändern, ohne das Datenlayout des Scheitelpunktpuffers zu ändern. Der Aufruf ist nur gültig, wenn das alte und das neue Deklarationsformat die gleiche Scheitelpunktgröße aufweisen.
 ms.assetid: ed2ad479-e0f7-4580-a20a-d3649759876a
-title: 'ID3DXBaseMesh:: updatesemantics-Methode (D3DX9Mesh. h)'
+title: ID3DXBaseMesh::UpdateSemantics-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 6e31a6fe424d085467bfa795c7ce7b2d445a1f69
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3a9a628c16e7f4a26db9953298be1adcba2cef364153d4bb2e6b29dbc4d9ef83
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050869"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119607320"
 ---
-# <a name="id3dxbasemeshupdatesemantics-method"></a>ID3DXBaseMesh:: updatesemantics-Methode
+# <a name="id3dxbasemeshupdatesemantics-method"></a>ID3DXBaseMesh::UpdateSemantics-Methode
 
-Mit dieser Methode kann der Benutzer die Mesh-Deklaration ändern, ohne das Datenlayout des Vertexpuffers zu ändern. Der-Rückruf ist nur gültig, wenn die alten und neuen Deklarations Formate die gleiche Scheitelpunkt Größe aufweisen.
+Mit dieser Methode kann der Benutzer die Gitternetzdeklaration ändern, ohne das Datenlayout des Scheitelpunktpuffers zu ändern. Der Aufruf ist nur gültig, wenn das alte und das neue Deklarationsformat die gleiche Scheitelpunktgröße aufweisen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT UpdateSemantics(
 
 Typ: **[ **D3DVERTEXELEMENT9**](d3dvertexelement9.md)**
 
-Ein Array von [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) -Elementen, das das Scheitelpunkt Format der mesvertices beschreibt. Die Obergrenze dieses deklaratorarrays ist [**Max \_ \_ \_**](./max-fvf-decl-size.md).
+Ein Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) das das Scheitelpunktformat der Netzvertices beschreibt. Die Obergrenze dieses Deklaratorarrays ist [**MAX \_ FVF \_ DECL \_ SIZE**](./max-fvf-decl-size.md).
 
 </dd> </dl>
 
@@ -53,13 +53,13 @@ Ein Array von [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) -Elementen, das das 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[**ID3DXBaseMesh:: clonemesh**](id3dxbasemesh--clonemesh.md) dient zum erneuten Formatieren und Ändern des Vertex-Daten Layouts. Verwenden Sie es z. b. zum Hinzufügen von Platz für normale, Texturkoordinaten, Farben, Gewichtungen usw., die zuvor nicht vorhanden waren.
+[**ID3DXBaseMesh::CloneMesh**](id3dxbasemesh--clonemesh.md) wird verwendet, um das Vertexdatenlayout neu zu formatiert und zu ändern. Verwenden Sie es beispielsweise, um Platz für Normalitäten, Texturkoordinaten, Farben, Gewichtungen usw. hinzuzufügen, die zuvor nicht vorhanden waren.
 
-**ID3DXBaseMesh:: updatesemantics** ist eine Methode zum Aktualisieren der Scheitelpunkt Deklaration mit unterschiedlichen Semantik Informationen, ohne das Layout des Vertexpuffers zu ändern. Verwenden Sie diese z. b., um eine 3D-Textur Koordinate als Binormal oder Tangens neu zu bezeichnen (oder umgekehrt).
+**ID3DXBaseMesh::UpdateSemantics** ist eine Methode zum Aktualisieren der Scheitelpunktdeklaration mit anderen semantischen Informationen, ohne das Layout des Scheitelpunktpuffers zu ändern. Verwenden Sie sie beispielsweise, um eine 3D-Texturkoordinate als binormal oder Tangens neu zu bezeichnen oder umgekehrt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,8 +67,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -79,7 +79,7 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 [ID3DXBaseMesh](id3dxbasemesh.md)
 </dt> <dt>
 
-[**ID3DXBaseMesh:: clonemeshf VF**](id3dxbasemesh--clonemeshfvf.md)
+[**ID3DXBaseMesh::CloneMeshFVF**](id3dxbasemesh--clonemeshfvf.md)
 </dt> <dt>
 
 [**D3DXDeclaratorFromFVF**](d3dxdeclaratorfromfvf.md)

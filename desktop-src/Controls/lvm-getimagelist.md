@@ -1,9 +1,9 @@
 ---
-title: LVM_GETIMAGELIST Meldung (kommstrg. h)
-description: Ruft das Handle für eine Bildliste ab, die zum Zeichnen von Listen Ansichts Elementen verwendet wird. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetImageList-Makros senden.
+title: LVM_GETIMAGELIST (Commctrl.h)
+description: Ruft das Handle für eine Bildliste ab, die zum Zeichnen von Listenansichtselementen verwendet wird. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetImageList-Makros senden.
 ms.assetid: dd48d8b5-6dbd-48ab-95c3-0fcf1e8c24f0
 keywords:
-- Windows-Steuerelemente für LVM_GETIMAGELIST Meldung
+- LVM_GETIMAGELIST message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0abc68c5e5dd9a18c3ec203ad7fe3db97a542845
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 339de36c85b4a5d39476a93cde71cbc6db23d1bc08946d3ce2d1ab1b5a4cb926
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119540810"
 ---
-# <a name="lvm_getimagelist-message"></a>LVM \_ GetImageList-Meldung
+# <a name="lvm_getimagelist-message"></a>LVM \_ GETIMAGELIST-Nachricht
 
-Ruft das Handle für eine Bildliste ab, die zum Zeichnen von Listen Ansichts Elementen verwendet wird. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ GetImageList**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getimagelist) -Makros senden.
+Ruft das Handle für eine Bildliste ab, die zum Zeichnen von Listenansichtselementen verwendet wird. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ GetImageList-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getimagelist) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,16 +32,16 @@ Ruft das Handle für eine Bildliste ab, die zum Zeichnen von Listen Ansichts Ele
 *wParam* 
 </dt> <dd>
 
-Abzurufende Bildliste. Dieser Parameter kann einen der folgenden Werte aufweisen:
+Bildliste, die abgerufen werden soll. Dieser Parameter kann einen der folgenden Werte haben:
 
 
 
 | Wert                                                                                                                                                                     | Bedeutung                                  |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
-| <span id="LVSIL_NORMAL"></span><span id="lvsil_normal"></span><dl> <dt>**lvsil \_ Normal**</dt> </dl>                | Bildliste mit großen Symbolen.<br/>  |
-| <span id="LVSIL_SMALL"></span><span id="lvsil_small"></span><dl> <dt>**lvsil \_ Small**</dt> </dl>                   | Bildliste mit kleinen Symbolen.<br/>  |
-| <span id="LVSIL_STATE"></span><span id="lvsil_state"></span><dl> <dt>**Zustand "lvsil" \_**</dt> </dl>                   | Bildliste mit Zustands Bildern.<br/> |
-| <span id="LVSIL_GROUPHEADER"></span><span id="lvsil_groupheader"></span><dl> <dt>**lvsil- \_ GroupHeader**</dt> </dl> | Bildliste für Gruppen Kopfzeile.<br/>  |
+| <span id="LVSIL_NORMAL"></span><span id="lvsil_normal"></span><dl> <dt>**LVSIL \_ NORMAL**</dt> </dl>                | Bildliste mit großen Symbolen.<br/>  |
+| <span id="LVSIL_SMALL"></span><span id="lvsil_small"></span><dl> <dt>**LVSIL \_ SMALL**</dt> </dl>                   | Bildliste mit kleinen Symbolen.<br/>  |
+| <span id="LVSIL_STATE"></span><span id="lvsil_state"></span><dl> <dt>**LVSIL \_ STATE**</dt> </dl>                   | Bildliste mit Zustandsbildern.<br/> |
+| <span id="LVSIL_GROUPHEADER"></span><span id="lvsil_groupheader"></span><dl> <dt>**LVSIL \_ GROUPHEADER**</dt> </dl> | Bildliste für Gruppenheader.<br/>  |
 
 
 
@@ -54,7 +54,7 @@ Abzurufende Bildliste. Dieser Parameter kann einen der folgenden Werte aufweisen
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für die angegebene Bildliste zurück, wenn erfolgreich, andernfalls **null** .
+Gibt das Handle bei Erfolg an die angegebene Bildliste zurück, **andernfalls NULL.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,9 +62,9 @@ Gibt das Handle für die angegebene Bildliste zurück, wenn erfolgreich, andernf
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

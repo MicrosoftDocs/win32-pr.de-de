@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopyfile GetProgress-Methode (deliveryoptimization. h)
+title: IBackgroundCopyFile GetProgress-Methode (Deliveryoptimization.h)
 description: Ruft Informationen zum Fortschritt der Dateiübertragung ab.
 ms.assetid: 3D8AFD65-AF34-4000-A4A9-8A187427E85C
 keywords:
 - GetProgress-Methode
-- GetProgress-Methode, ibackgroundcopyfile-Schnittstelle
-- Ibackgroundcopyfile-Schnittstelle, GetProgress-Methode
+- GetProgress-Methode, IBackgroundCopyFile-Schnittstelle
+- IBackgroundCopyFile-Schnittstelle, GetProgress-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f0828105822700f9d34cd180c8877634bc3a6013
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a7c5fe4a9fcfac86403fd7f4c330d437156e57179b3bf692f53bf3777399b9bf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119610500"
 ---
-# <a name="ibackgroundcopyfilegetprogress-method"></a>Ibackgroundcopyfile:: GetProgress-Methode
+# <a name="ibackgroundcopyfilegetprogress-method"></a>IBackgroundCopyFile::GetProgress-Methode
 
 Ruft Informationen zum Fortschritt der Dateiübertragung ab.
 
@@ -43,16 +43,16 @@ HRESULT GetProgress(
 
 <dl> <dt>
 
-*pprogress* \[ vorgenommen\]
+*pProgress* \[ out\]
 </dt> <dd>
 
--Struktur, deren Elemente den Fortschritt der Dateiübertragung angeben. Ausführliche Informationen zu den verfügbaren Fortschrittsinformationen finden Sie in der [**BG_FILE_PROGRESS**](bg-file-progress.md) -Struktur.
+Struktur, deren Member den Status der Dateiübertragung angeben. Weitere Informationen zum Typ der verfügbaren Statusinformationen finden Sie in der [**BG_FILE_PROGRESS**](bg-file-progress.md) Struktur.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt **S_OK** bei Erfolg oder einen der standardmäßigen com **HRESULT** -Werte bei einem Fehler zurück.
+Diese Methode gibt **S_OK** bei Erfolg oder einen der STANDARDMÄßIGEN COM **HRESULT-Werte** bei einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,13 +60,13 @@ Diese Methode gibt **S_OK** bei Erfolg oder einen der standardmäßigen com **HR
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur Desktop-Apps der Version 1709) \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyFile ist als 01b7bd23-B88-4a77-8490-5891d3e4653a definiert.<br/>              |
+| IID<br/>                      | IID_IBackgroundCopyFile ist als 01B7BD23-FB88-4A77-8490-5891D3E4653A definiert.<br/>              |
 
 
 
@@ -77,10 +77,10 @@ Diese Methode gibt **S_OK** bei Erfolg oder einen der standardmäßigen com **HR
 [**BG_FILE_PROGRESS**](bg-file-progress.md)
 </dt> <dt>
 
-[**Ibackgroundcopyfile**](ibackgroundcopyfile.md)
+[**IBackgroundCopyFile**](ibackgroundcopyfile.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: GetProgress**](ibackgroundcopyjob-getprogress.md)
+[**IBackgroundCopyJob::GetProgress**](ibackgroundcopyjob-getprogress.md)
 </dt> </dl>
 
  
