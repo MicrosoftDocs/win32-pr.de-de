@@ -1,7 +1,7 @@
 ---
 description: Erstellt ein DXVA-Decodergerät (DirectX Video Acceleration).
 ms.assetid: aeebf65f-1bde-4a33-87cd-25c62dcc0248
-title: 'IDirect3DVideoDevice9:: kreatedxvadevice-Methode (DXVA. h)'
+title: IDirect3DVideoDevice9::CreateDXVADevice-Methode (Dxva.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - dxva.h
-ms.openlocfilehash: 50ce7cee350479f4286921b6cdf69b319033c721
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4f70f976487db270145c8587107499f3c4e84ad85dacf99bec21050a2684b723
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119555730"
 ---
-# <a name="idirect3dvideodevice9createdxvadevice-method"></a>IDirect3DVideoDevice9:: kreatedxvadevice-Methode
+# <a name="idirect3dvideodevice9createdxvadevice-method"></a>IDirect3DVideoDevice9::CreateDXVADevice-Methode
 
 Erstellt ein DXVA-Decodergerät (DirectX Video Acceleration).
 
@@ -43,44 +43,44 @@ HRESULT CreateDXVADevice(
 
 <dl> <dt>
 
-*pguid* 
+*pGuid* 
 </dt> <dd>
 
-Zeiger auf eine GUID, die das zu Erstell Bare Gerät angibt.
+Zeiger auf eine GUID, die das zu erstellende Gerät angibt.
 
 </dd> <dt>
 
-*puncompdata* 
+*pUncompData* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**dxvauncompdatainfo**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxvauncompdatainfo) -Struktur, die das Format des nicht komprimierten Bilds angibt.
+Zeiger auf eine [**DXVAUncompDataInfo-Struktur,**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxvauncompdatainfo) die das Format des nicht komprimierten Bilds angibt.
 
 </dd> <dt>
 
-*pData* 
+*Pdata* 
 </dt> <dd>
 
-Zeiger auf eine **DXVA- \_ ConnectMode** -Struktur, die den DXVA-Modus und das eingeschränkte Profil angibt.
+Zeiger auf eine **DXVA \_ ConnectMode-Struktur,** die den DXVA-Modus und das eingeschränkte Profil angibt.
 
 </dd> <dt>
 
-*DataSize* 
+*Datasize* 
 </dt> <dd>
 
-Größe der **DXVA- \_ ConnectMode** -Struktur in Bytes.
+Größe der **DXVA \_ ConnectMode-Struktur** in Bytes.
 
 </dd> <dt>
 
-*ppdxvadevice* 
+*ppDXVADevice* 
 </dt> <dd>
 
-Empfängt einen Zeiger auf die [**IDirect3DDXVADevice9**](idirect3ddxvadevice9.md) -Schnittstelle. Der Aufrufer muss die-Schnittstelle freigeben.
+Empfängt einen Zeiger auf die [**IDirect3DDXVADevice9-Schnittstelle.**](idirect3ddxvadevice9.md) Der Aufrufer muss die Schnittstelle freigeben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,9 +88,9 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>DXVA. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Dxva.h</dt> </dl> |
 
 
 

@@ -1,25 +1,25 @@
 ---
 title: Entwerfen eines Domänen-Shaders
-description: In diesem Thema wird gezeigt, wie ein Domänen-Shader entworfen wird.
+description: In diesem Thema wird gezeigt, wie Sie einen Domänen-Shader entwerfen.
 ms.assetid: 329d4eb9-8886-401d-8fb4-39e06886998f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a01d6b006c5ffe3afa355abe5e662cb96aa1391
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 46733bc9147f67cf33a127d8254f16c5813d8ebc2f0cb96c2071ae15589e34bd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119566180"
 ---
-# <a name="how-to-design-a-domain-shader"></a>Vorgehensweise: Entwerfen eines Domänen-Shader
+# <a name="how-to-design-a-domain-shader"></a>Vorgehensweise: Entwerfen eines Domänen-Shaders
 
-Ein Domänen-Shader ist der dritte von drei Phasen, die zusammenarbeiten, um Mosaik Vorgänge [zu implementieren.](direct3d-11-advanced-stages-tessellation.md) Der Domänen-Shader generiert die Oberflächengeometrie aus den transformierten Steuerungs Punkten von einem Hull-Shader und den UV-Koordinaten. In diesem Thema wird gezeigt, wie ein Domänen-Shader entworfen wird.
+Ein Domänen-Shader ist die dritte von drei Phasen, die zusammenarbeiten, um Mosaik zu [implementieren.](direct3d-11-advanced-stages-tessellation.md) Der Domänen-Shader generiert die Oberflächengeometrie aus den transformierten Kontrollpunkten aus einem Hüllen-Shader und den UV-Koordinaten. In diesem Thema wird gezeigt, wie Sie einen Domänen-Shader entwerfen.
 
-Ein Domänen-Shader wird einmal für jeden Punkt aufgerufen, der vom Mosaik der Fixed-Funktion generiert wird. Die Eingaben sind die UV \[ - \] Koordinaten des Punkts auf dem Patch sowie alle Ausgabedaten aus dem Hull-Shader einschließlich der Steuerungs Punkte und patchkonstanten. Die Ausgabe ist ein Scheitelpunkt, der in der gewünschten Weise definiert ist. Wenn die Ausgabe an den Pixelshader gesendet wird, muss die Ausgabe eine Position (mit einer SV- \_ Positions Semantik) enthalten.
+Ein Domänen-Shader wird einmal für jeden Punkt aufgerufen, der vom festen Funktionstessellator generiert wird. Die Eingaben sind die UV \[ \] W-Koordinaten des Punkts auf dem Patch sowie alle Ausgabedaten des Hüllen-Shaders, einschließlich Kontrollpunkten und Patchkonstanten. Die Ausgabe ist ein Scheitelpunkt, der auf beliebige Weise definiert ist. Wenn die Ausgabe an den Pixelshader gesendet wird, muss die Ausgabe eine Position enthalten (angegeben mit einer \_ SV-Positionssemantik).
 
 **So entwerfen Sie einen Domänen-Shader**
 
-1.  Definieren des Domänen Attributs.
+1.  Definieren Sie das Domänenattribut.
 
     ```
     [domain("quad")]
@@ -29,13 +29,13 @@ Ein Domänen-Shader wird einmal für jeden Punkt aufgerufen, der vom Mosaik der 
 
     Die Domäne ist für einen Quad-Patch definiert.
 
-2.  Deklarieren Sie den Speicherort auf der Hülle mit dem [Domänen Speicherort](/windows/desktop/direct3dhlsl/sv-domainlocation) System Wert.
+2.  Deklarieren Sie den Speicherort auf der Hülle mit dem Systemwert des [Domänenstandorts.](/windows/desktop/direct3dhlsl/sv-domainlocation)
 
-    -   Verwenden Sie für einen Quad-Patch eine float2.
-    -   Verwenden Sie für einen Tri-Patch eine float3 (für baryzentrierte Koordinaten).
-    -   Verwenden Sie für eine Isoline eine float2.
+    -   Verwenden Sie für einen Quad-Patch float2.
+    -   Verwenden Sie für einen Tri-Patch float3 (für baryzentrische Koordinaten).
+    -   Verwenden Sie für eine Isolinie float2.
 
-    Daher sieht der Domänen Speicherort für einen Quad-Patch wie folgt aus:
+    Daher sieht der Domänenspeicherort für einen Quad-Patch wie folgt aus:
 
     ```
     float2 UV : SV_DomainLocation
@@ -45,9 +45,9 @@ Ein Domänen-Shader wird einmal für jeden Punkt aufgerufen, der vom Mosaik der 
 
 3.  Definieren Sie die anderen Eingaben.
 
-    Die anderen Eingaben stammen aus dem Hull-Shader und sind Benutzer definiert. Dies schließt die Eingabe Steuerungs Punkte für Patch ein, von denen zwischen 1 und 32 Punkte bestehen können, und Daten der Eingabe patchkonstante.
+    Die anderen Eingaben stammen vom Hüllen-Shader und sind benutzerdefiniert. Dazu gehören die Eingabesteuerpunkte für den Patch, von denen zwischen 1 und 32 Punkte vorhanden sein können, und Eingabepatchkonstantendaten.
 
-    Die Kontrollpunkte sind Benutzer definiert, normalerweise mit einer Struktur wie dieser (in Gewusst [wie: Entwerfen eines Hull-Shaders](direct3d-11-advanced-stages-hull-shader-design.md)definiert):
+    Die Kontrollpunkte sind benutzerdefiniert, in der Regel mit einer Struktur wie dieser (definiert in [Vorgehensweise: Entwerfen eines Hüllen-Shaders):](direct3d-11-advanced-stages-hull-shader-design.md)
 
     ```
     const OutputPatch<BEZIER_CONTROL_POINT, 16> bezpatch
@@ -55,7 +55,7 @@ Ein Domänen-Shader wird einmal für jeden Punkt aufgerufen, der vom Mosaik der 
 
     
 
-    Die Patch-konstantendaten sind ebenfalls Benutzer definiert und könnten wie folgt aussehen (in Gewusst [wie: Entwerfen eines Hull-Shaders](direct3d-11-advanced-stages-hull-shader-design.md)definiert):
+    Die Patchkonstantendaten sind ebenfalls benutzerdefiniert und können wie folgt aussehen (definiert in [Vorgehensweise: Entwerfen eines Hüllen-Shaders):](direct3d-11-advanced-stages-hull-shader-design.md)
 
     ```
     HS_CONSTANT_DATA_OUTPUT input
@@ -63,9 +63,9 @@ Ein Domänen-Shader wird einmal für jeden Punkt aufgerufen, der vom Mosaik der 
 
     
 
-4.  Fügen Sie benutzerdefinierten Code hinzu, um die Ausgaben zu berechnen. Dadurch wird der Hauptteil des Domänen-Shaders angezeigt.
+4.  Fügen Sie benutzerdefinierten Code hinzu, um die Ausgaben zu berechnen. dies bildet den Text des Domänen-Shaders.
 
-    Diese Struktur enthält benutzerdefinierte Domänen-Shader-Ausgaben.
+    Diese Struktur enthält benutzerdefinierte Domänen-Shaderausgaben.
 
     ```
     struct DS_OUTPUT
@@ -81,7 +81,7 @@ Ein Domänen-Shader wird einmal für jeden Punkt aufgerufen, der vom Mosaik der 
 
     
 
-    Die Funktion nimmt jede Eingabe-UV (aus dem Mosaik Prozess) an und wertet den Bezier-Patch an dieser Position aus.
+    Die Funktion nimmt jedes Eingabe-UV (aus dem Mosaik) und wertet den Bézierpatch an dieser Position aus.
 
     ```
     [domain("quad")]
@@ -99,22 +99,22 @@ Ein Domänen-Shader wird einmal für jeden Punkt aufgerufen, der vom Mosaik der 
 
     
 
-    Die-Funktion wird einmal für jeden Punkt aufgerufen, der vom Mosaik der Fixed-Funktion generiert wird. Da in diesem Beispiel ein Quad-Patch verwendet wird, ist der Speicherort der Eingabe Domäne ([SV \_ domainlocation](/windows/desktop/direct3dhlsl/sv-domainlocation)) ein float2 (UV), ein Tri-Patch hätte einen float3-Eingabe Speicherort (UVW-baryzentrische Koordinaten), und eine Isoline würde einen float2-Eingabe Domänen Speicherort aufweisen.
+    Die Funktion wird einmal für jeden Punkt aufgerufen, der vom festen Funktionstessellator generiert wird. Da in diesem Beispiel ein Quad-Patch verwendet wird, ist der Speicherort der Eingabedomäne ([SV \_ DomainLocation](/windows/desktop/direct3dhlsl/sv-domainlocation)) float2 (UV). Ein Tri-Patch würde eine float3-Eingabeposition (UVW-barycentric-Koordinaten) und eine Isolinie eine Float2-Eingabedomänenposition aufweisen.
 
-    Die anderen Eingaben für die Funktion stammen direkt aus dem Hull-Shader. In diesem Beispiel handelt es sich um 16 Kontrollpunkte, von denen jeder ein **Bezier- \_ Steuerungs \_ Punkt** ist, sowie um patchkonstantendaten (**HS- \_ Konstante \_ Daten \_ Ausgabe**). Bei der Ausgabe handelt es sich um einen Scheitelpunkt, der alle in diesem Beispiel für die Daten gewünschten **DS- \_ Ausgaben**
+    Die anderen Eingaben für die Funktion stammen direkt vom Hüllen-Shader. In diesem Beispiel sind es 16 Steuerpunkte, die jeweils ein **BEZIER \_ CONTROL \_ POINT** sind, sowie Patchkonstantendaten (**HS \_ CONSTANT DATA \_ \_ OUTPUT**). Die Ausgabe ist ein Scheitelpunkt, der alle gewünschten Daten enthält– **DS \_ OUTPUT** in diesem Beispiel.
 
-Nachdem Sie einen Domänen-Shader entworfen haben, finden Sie unter Gewusst [wie: Erstellen eines Domänen-Shaders](direct3d-11-advanced-stages-domain-shader-create.md)
+Nachdem Sie einen Domänen-Shader entworfen haben, finden Sie weitere Informationen unter [Vorgehensweise: Erstellen eines Domänen-Shaders.](direct3d-11-advanced-stages-domain-shader-create.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwendung von Direct3D 11](how-to-use-direct3d-11.md)
+[Verwenden von Direct3D 11](how-to-use-direct3d-11.md)
 </dt> <dt>
 
-[Mosaik Übersicht](direct3d-11-advanced-stages-tessellation.md)
+[Übersicht über Mosaik](direct3d-11-advanced-stages-tessellation.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

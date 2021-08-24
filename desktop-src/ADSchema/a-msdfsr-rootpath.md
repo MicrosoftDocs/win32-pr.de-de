@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-RootPath-Attribut
-description: Enthält den vollständigen Pfad des Stamm Verzeichnisses.
+title: ms-DFSR-RootPath-Attribut
+description: Enthält den vollständigen Pfad des Stammverzeichnisses.
 ms.assetid: ed093b4a-3213-437b-9daa-e446d5953f18
 ms.tgt_platform: multiple
 keywords:
-- MS-DFSR-RootPath-Attribut AD-Schema
-- msdfsr-RootPath-Attribut AD-Schema
+- AD-Schema des ms-DFSR-RootPath-Attributs
+- AD-Schema des msDFSR-RootPath-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c02b7f76ba940eac73072bf076c7620dae953e3b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c60078f5bfb5bb829717eaa2f2fee0d689ad5a0766780bf57ed2aa71317f75ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119298330"
 ---
-# <a name="ms-dfsr-rootpath-attribute"></a>MS-DFSR-RootPath-Attribut
+# <a name="ms-dfsr-rootpath-attribute"></a>ms-DFSR-RootPath-Attribut
 
-Enthält den vollständigen Pfad des Stamm Verzeichnisses.
+Enthält den vollständigen Pfad des Stammverzeichnisses.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-DFSR-RootPath                            |
-| LDAP-Display-Name | msdfsr-RootPath                             |
+| CN                | ms-DFSR-RootPath                            |
+| Ldap-Anzeigename | msDFSR-RootPath                             |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.3                   |
-| System-ID-GUID    | d7d5e8c1-e61f-464f-9fcf-20bbe0a2ec54        |
+| System-Id-Guid    | d7d5e8c1-e61f-464f-9fcf-20bbe0a2ec54        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -55,16 +55,16 @@ Enthält den vollständigen Pfad des Stamm Verzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | True                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | 0                                                                |
 | Range-Upper            | 32767                                                            |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -76,16 +76,16 @@ Enthält den vollständigen Pfad des Stamm Verzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | True                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | 0                                                                |
 | Range-Upper            | 32767                                                            |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -97,16 +97,16 @@ Enthält den vollständigen Pfad des Stamm Verzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Is-Single-Valued       | True                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | 0                                                                |
 | Range-Upper            | 32767                                                            |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
@@ -118,22 +118,22 @@ Enthält den vollständigen Pfad des Stamm Verzeichnisses.
 |------------------------|------------------------------------------------------------------|
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
-| System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
-| Ist indiziert             | False                                                            |
-| Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| System-Only            | Falsch                                                            |
+| Ist einwertig       | Richtig                                                             |
+| Ist indiziert             | Falsch                                                            |
+| Im globalen Katalog      | Falsch                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | 0                                                                |
 | Range-Upper            | 32767                                                            |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000000                                                       |
-| In verwendete Klassen        | [**MS-DFSR-Abonnement**](c-msdfsr-subscription.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-Subscription**](c-msdfsr-subscription.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **MS-DFSR-RootPath-** Attribut ist ein Teil der Unterstützung für den verteiltes Dateisystem (DFS)-Replikations Dienst.
+Das **ms-DFSR-RootPath-Attribut** ist Teil der Unterstützung des verteiltes Dateisystem -Replikationsdiensts (DFS).
 
  
 

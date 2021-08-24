@@ -1,7 +1,7 @@
 ---
 description: Entfernt anwendungsspezifische Daten.
 ms.assetid: 41077c2f-39e3-4069-ac05-97f1785e37b7
-title: 'Icontextnode:: RemovePropertyData-Methode (iacom. h)'
+title: IContextNode::RemovePropertyData-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 4c2fd5924b206ee296c066a908d2a59b02019f72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cba88c90f33a52e0a1ff94cdbe69e2f210163769a09916f04de41c262d9e7e22
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119660710"
 ---
-# <a name="icontextnoderemovepropertydata-method"></a>Icontextnode:: RemovePropertyData-Methode
+# <a name="icontextnoderemovepropertydata-method"></a>IContextNode::RemovePropertyData-Methode
 
 Entfernt anwendungsspezifische Daten.
 
@@ -39,7 +39,7 @@ HRESULT RemovePropertyData(
 
 <dl> <dt>
 
-*ppropertydataid* \[ in\]
+*pPropertyDataId* \[ In\]
 </dt> <dd>
 
 Der Bezeichner der zu entfernenden Daten.
@@ -48,11 +48,11 @@ Der Bezeichner der zu entfernenden Daten.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**E \_ InvalidArg** wird zurückgegeben, wenn der *ppropertydataid* -Parameter einer der Eigenschaften Konstanten für [Kontext Knoten](context-node-properties.md) ist.
+**E \_ INVALIDARG** wird zurückgegeben, wenn der *pPropertyDataId-Parameter* eine der Konstanten für [Kontextknoteneigenschaften](context-node-properties.md) ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,9 +60,9 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -71,28 +71,28 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextnode:: AddPropertyData**](icontextnode-addpropertydata.md)
+[**IContextNode::AddPropertyData**](icontextnode-addpropertydata.md)
 </dt> <dt>
 
-[**Icontextnode:: ContainsPropertyData**](icontextnode-containspropertydata.md)
+[**IContextNode::ContainsPropertyData**](icontextnode-containspropertydata.md)
 </dt> <dt>
 
-[**Icontextnode:: GetPropertyData**](icontextnode-getpropertydata.md)
+[**IContextNode::GetPropertyData**](icontextnode-getpropertydata.md)
 </dt> <dt>
 
-[**Icontextnode:: GetPropertyDataIds**](icontextnode-getpropertydataids.md)
+[**IContextNode::GetPropertyDataIds**](icontextnode-getpropertydataids.md)
 </dt> <dt>
 
-[**Icontextnode:: loadpropertiesdata**](icontextnode-loadpropertiesdata.md)
+[**IContextNode::LoadPropertiesData**](icontextnode-loadpropertiesdata.md)
 </dt> <dt>
 
-[**Icontextnode:: savepropertiesdata**](icontextnode-savepropertiesdata.md)
+[**IContextNode::SavePropertiesData**](icontextnode-savepropertiesdata.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

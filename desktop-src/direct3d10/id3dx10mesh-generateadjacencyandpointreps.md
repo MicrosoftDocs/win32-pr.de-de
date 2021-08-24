@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: e496f96f36805d411c71e9aba1e2560b0dcbe3c6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 55198648be8952f975313dad3019063917eddf4d38f0a7d636039d5802f08e00
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119566940"
 ---
 # <a name="id3dx10meshgenerateadjacencyandpointreps-method"></a>ID3DX10Mesh::GenerateAdjaencyAndPointReps-Methode
 
@@ -55,7 +55,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Nachdem eine Anwendung Adjazenzinformationen für ein Gitternetz generiert hat, können die Gitternetzdaten optimiert werden, um eine bessere Zeichnungsleistung zu erzielen.
 
@@ -65,14 +65,14 @@ Die Reihenfolge der Einträge im Adjazenzpuffer wird durch die Reihenfolge der S
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

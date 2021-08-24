@@ -1,11 +1,11 @@
 ---
-title: MS-"-wiederherstellungkennwort"-Attribut
-description: Enthält das zum Wiederherstellen eines FVE-Volumes (Full Volume Encryption) erforderliche Kennwort.
+title: ms-FVE-RecoveryPassword-Attribut
+description: Enthält das Kennwort, das zum Wiederherstellen eines FVE-Volumes (Full Volume Encryption) erforderlich ist.
 ms.assetid: 460e7014-42ce-4e49-a642-9f97fe9044fc
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-v-wiederherstellungpassword\"-Attribut, AD-Schema"
-- AD-Schema für das MSF-wiederherstellungkennwort
+- MS-FVE-RecoveryPassword-Attribut AD-Schema
+- MSFVE-RecoveryPassword-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b8d9a5603c72d6707294a922aee8e49ab067afb
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f1b200c9da2709f54e1206ff0c8d69e987eac0b627e6f9a819a92451a2a770fe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544050"
 ---
-# <a name="ms-fve-recoverypassword-attribute"></a>MS-"-wiederherstellungkennwort"-Attribut
+# <a name="ms-fve-recoverypassword-attribute"></a>ms-FVE-RecoveryPassword-Attribut
 
-Enthält das zum Wiederherstellen eines FVE-Volumes (Full Volume Encryption) erforderliche Kennwort.
+Enthält das Kennwort, das zum Wiederherstellen eines FVE-Volumes (Full Volume Encryption) erforderlich ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-f-wiederherstellungkennwort                     |
-| LDAP-Display-Name | MSF-wiederherstellungkennwort                      |
+| CN                | ms-FVE-RecoveryPassword                     |
+| Ldap-Anzeigename | msFVE-RecoveryPassword                      |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1964                     |
-| System-ID-GUID    | 43061ac1-c8ad-4ccc-B785-2bfak20fc60a        |
+| System-ID-GUID    | 43061ac1-c8ad-4ccc-b785-2bfac20fc60a        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -54,16 +54,16 @@ Enthält das zum Wiederherstellen eines FVE-Volumes (Full Volume Encryption) erf
 |------------------------|------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                           |
 | MAPI-Id                | \-                                                                           |
-| System-Only            | False                                                                        |
-| Ist-einwertig       | Richtig                                                                         |
-| Ist indiziert             | False                                                                        |
-| Im globalen Katalog      | False                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                 |
+| System-Only            | Falsch                                                                        |
+| Ist einwertig       | True                                                                         |
+| Ist indiziert             | Falsch                                                                        |
+| Im globalen Katalog      | Falsch                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                 |
 | Range-Lower            | \-                                                                           |
 | Range-Upper            | \-                                                                           |
 | Search-Flags           | 0x00000298                                                                   |
 | System-Flags           | 0x00000010                                                                   |
-| In verwendete Klassen        | [**MS-f-Wiederherstellungsinformationen**](c-msfve-recoveryinformation.md)<br/> |
+| In verwendete Klassen        | [**ms-FVE-RecoveryInformation**](c-msfve-recoveryinformation.md)<br/> |
 
 
 
@@ -75,16 +75,16 @@ Enthält das zum Wiederherstellen eines FVE-Volumes (Full Volume Encryption) erf
 |------------------------|------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                           |
 | MAPI-Id                | \-                                                                           |
-| System-Only            | False                                                                        |
-| Ist-einwertig       | Richtig                                                                         |
-| Ist indiziert             | False                                                                        |
-| Im globalen Katalog      | False                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                 |
+| System-Only            | Falsch                                                                        |
+| Ist einwertig       | True                                                                         |
+| Ist indiziert             | Falsch                                                                        |
+| Im globalen Katalog      | Falsch                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                 |
 | Range-Lower            | \-                                                                           |
 | Range-Upper            | \-                                                                           |
 | Search-Flags           | 0x00000298                                                                   |
 | System-Flags           | 0x00000010                                                                   |
-| In verwendete Klassen        | [**MS-f-Wiederherstellungsinformationen**](c-msfve-recoveryinformation.md)<br/> |
+| In verwendete Klassen        | [**ms-FVE-RecoveryInformation**](c-msfve-recoveryinformation.md)<br/> |
 
 
 
@@ -96,16 +96,16 @@ Enthält das zum Wiederherstellen eines FVE-Volumes (Full Volume Encryption) erf
 |------------------------|------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                           |
 | MAPI-Id                | \-                                                                           |
-| System-Only            | False                                                                        |
-| Ist-einwertig       | Richtig                                                                         |
-| Ist indiziert             | False                                                                        |
-| Im globalen Katalog      | False                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                 |
+| System-Only            | Falsch                                                                        |
+| Ist einwertig       | True                                                                         |
+| Ist indiziert             | Falsch                                                                        |
+| Im globalen Katalog      | Falsch                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                 |
 | Range-Lower            | \-                                                                           |
 | Range-Upper            | \-                                                                           |
 | Search-Flags           | 0x00000298                                                                   |
 | System-Flags           | 0x00000010                                                                   |
-| In verwendete Klassen        | [**MS-f-Wiederherstellungsinformationen**](c-msfve-recoveryinformation.md)<br/> |
+| In verwendete Klassen        | [**ms-FVE-RecoveryInformation**](c-msfve-recoveryinformation.md)<br/> |
 
 
 

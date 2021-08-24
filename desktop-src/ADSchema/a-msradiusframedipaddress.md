@@ -1,10 +1,10 @@
 ---
-title: msradius framedipaddress-Attribut
-description: Das msradius framedipaddress-Attribut wird intern verwendet.
+title: msRADIUSFramedIPAddress-Attribut
+description: Das attribut msRADIUSFramedIPAddress wird intern verwendet.
 ms.assetid: 4c976dae-92af-42e0-8c05-c98ba238272a
 ms.tgt_platform: multiple
 keywords:
-- "\"msradius framedipaddress\"-Attribut, AD-Schema"
+- msRADIUSFramedIPAddress-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d15949319700179edfa982f7d41b5a83ba77f62
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4da294b0ba249ed92284f7555d76ced459a81a4fd0d79f311250fbb3477b8c12
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119542668"
 ---
-# <a name="msradiusframedipaddress-attribute"></a>msradius framedipaddress-Attribut
+# <a name="msradiusframedipaddress-attribute"></a>msRADIUSFramedIPAddress-Attribut
 
-Das **msradius framedipaddress** -Attribut wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
+Das **attribut msRADIUSFramedIPAddress** wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | msradius framedipaddress              |
-| LDAP-Display-Name | msradius framedipaddress              |
+| CN                | msRADIUSFramedIPAddress              |
+| Ldap-Anzeigename | msRADIUSFramedIPAddress              |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1153              |
-| System-ID-GUID    | db0c90a4-c1f2-11d1-bbc5-0080c76670c0 |
+| System-ID-GUID    | db0c90a4-c1f2-11d1-muss5-0080c76670c0 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -42,7 +42,7 @@ Das **msradius framedipaddress** -Attribut wird intern verwendet. Ändern Sie di
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,11 +56,11 @@ Das **msradius framedipaddress** -Attribut wird intern verwendet. Ändern Sie di
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | True                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -69,7 +69,7 @@ Das **msradius framedipaddress** -Attribut wird intern verwendet. Ändern Sie di
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -77,11 +77,11 @@ Das **msradius framedipaddress** -Attribut wird intern verwendet. Ändern Sie di
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | True                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -98,11 +98,11 @@ Das **msradius framedipaddress** -Attribut wird intern verwendet. Ändern Sie di
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | True                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -119,11 +119,11 @@ Das **msradius framedipaddress** -Attribut wird intern verwendet. Ändern Sie di
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | True                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -140,11 +140,11 @@ Das **msradius framedipaddress** -Attribut wird intern verwendet. Ändern Sie di
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -161,11 +161,11 @@ Das **msradius framedipaddress** -Attribut wird intern verwendet. Ändern Sie di
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |

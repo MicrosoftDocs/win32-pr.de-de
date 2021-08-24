@@ -1,7 +1,7 @@
 ---
-description: Sucht ein MSVM \_ mountedstorageimage-Objekt für einen angegebenen Datenträger-Bildpfad.
+description: Sucht ein Msvm \_ MountedStorageImage-Objekt für einen bestimmten Datenträgerimagepfad.
 ms.assetid: 498ed285-2b5b-472b-b0ee-649c97b61274
-title: Findmountedstorageimageinstance-Methode der Msvm_ImageManagementService-Klasse
+title: FindMountedStorageImageInstance-Methode der Msvm_ImageManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 80462fb57be8c3f89764774ea68e73a988f11643
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de205cb729b9ad53674808523cc640b9aaccb2adfaf6fba0b8a06c8a0d8952f9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526834"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119522630"
 ---
-# <a name="findmountedstorageimageinstance-method-of-the-msvm_imagemanagementservice-class"></a>Findmountedstorageimageinstance-Methode der MSVM \_ imagemanagementservice-Klasse
+# <a name="findmountedstorageimageinstance-method-of-the-msvm_imagemanagementservice-class"></a>FindMountedStorageImageInstance-Methode der Msvm \_ ImageManagementService-Klasse
 
-Sucht ein [**MSVM \_ mountedstorageimage**](msvm-mountedstorageimage.md) -Objekt für einen angegebenen Datenträger-Bildpfad.
+Sucht ein [**Msvm \_ MountedStorageImage-Objekt**](msvm-mountedstorageimage.md) für einen bestimmten Datenträgerimagepfad.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ uint32 FindMountedStorageImageInstance(
 
 <dl> <dt>
 
-*Selectionkriterium* \[ in\]
+*SelectionCriterion* \[ In\]
 </dt> <dd>
 
-Ein voll qualifizierter Pfad, der den Speicherort einer Datenträger Image Datei angibt.
+Ein vollqualifiziertes Pfad, der den Speicherort einer Datenträgerimagedatei angibt.
 
 </dd> <dt>
 
-*Kriteriontype* \[ in\]
+*CriterionType* \[ In\]
 </dt> <dd>
 
-Der Typ des Kriteriums, das beim Auffinden des Datenträger Images gesucht werden soll.
+Der Typ des Kriteriums, nach dem gesucht werden soll, wenn das Datenträgerimage gefunden wird.
 
 <dt>
 
@@ -69,10 +69,10 @@ Der Typ des Kriteriums, das beim Auffinden des Datenträger Images gesucht werde
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Bild* \[ vorgenommen\]
+*Abbildung:* \[ out\]
 </dt> <dd>
 
-Ein Verweis auf [**MSVM \_ mountedstorageimage**](msvm-mountedstorageimage.md) (kann NULL sein, wenn das Bild nicht eingebunden ist).
+Ein Verweis auf [**das Msvm \_ MountedStorageImage**](msvm-mountedstorageimage.md) (kann NULL sein, wenn das Image nicht eingebunden ist).
 
 </dd> </dl>
 
@@ -85,7 +85,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -94,7 +94,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -106,19 +106,19 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> <dt>
 
 **Objekt nicht gefunden** (32789)
@@ -130,10 +130,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -142,7 +142,7 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md)
+[**Msvm \_ ImageManagementService**](msvm-imagemanagementservice.md)
 </dt> </dl>
 
  

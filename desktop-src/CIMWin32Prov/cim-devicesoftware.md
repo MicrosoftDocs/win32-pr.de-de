@@ -1,5 +1,5 @@
 ---
-description: Die CIM- \_ devicesoftware-Beziehung identifiziert Software, die einem Gerät zugeordnet ist, z. b. Treiber, Konfigurations-oder Anwendungssoftware oder Firmware.
+description: Die \_ Cim DeviceSoftware-Beziehung identifiziert Software, die einem Gerät zugeordnet ist, z. B. Treiber, Konfigurations- oder Anwendungssoftware oder Firmware.
 ms.assetid: 831d0014-2a01-49f4-9642-fae5682f0388
 ms.tgt_platform: multiple
 title: CIM_DeviceSoftware-Klasse
@@ -18,23 +18,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 467fa670e8bb3f7d6ee967e6dd422102a2026a57
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 483490c35066457b3c640ef934b6543a737bc52bd31e5178aee837b2a7abc321
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119321580"
 ---
-# <a name="cim_devicesoftware-class"></a>CIM- \_ devicesoftware-Klasse
+# <a name="cim_devicesoftware-class"></a>CIM \_ DeviceSoftware-Klasse
 
-Die **CIM- \_ devicesoftware** -Beziehung identifiziert Software, die einem Gerät zugeordnet ist, z. b. Treiber, Konfigurations-oder Anwendungssoftware oder Firmware.
+Die **Cim \_ DeviceSoftware-Beziehung** identifiziert Software, die einem Gerät zugeordnet ist, z. B. Treiber, Konfigurations- oder Anwendungssoftware oder Firmware.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,33 +51,33 @@ class CIM_DeviceSoftware : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ devicesoftware** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ DeviceSoftware-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ devicesoftware** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ DeviceSoftware-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Softwareelement**
+Datentyp: **CIM \_ SoftwareElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM- \_ Softwareelement**](cim-softwareelement.md) , das das Softwareelement beschreibt.
+Ein [**CIM \_ SoftwareElement,**](cim-softwareelement.md) das das Softwareelement beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -86,26 +86,26 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM \_ LogicalDevice**](cim-logicaldevice.md) , das das logische Gerät beschreibt, das die Software benötigt oder verwendet.
+Ein [**CIM \_ LogicalDevice,**](cim-logicaldevice.md) der das logische Gerät beschreibt, das die Software erfordert oder verwendet.
 
 </dd> <dt>
 
 **Zweck**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM-Geräte-Agent-**\_ Software**.**Zweck Beschreibung**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ DeviceSoftware**.**PurposeDescription**")
 </dt> </dl>
 
-Rolle, die die Software in Bezug auf das zugehörige Gerät übernimmt.
+Rolle, die die Software für ihr zugeordnetes Gerät übernimmt.
 
 <dt>
 
@@ -122,7 +122,7 @@ Unbekannt
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 
 
 </dt> <dd>
@@ -138,13 +138,13 @@ Sonstiges
 
 </dt> <dd>
 
-Trei.
+Treiber.
 
 </dd> <dt>
 
 <span id="Configuration_Software"></span><span id="configuration_software"></span><span id="CONFIGURATION_SOFTWARE"></span>
 
-<span id="Configuration_Software"></span><span id="configuration_software"></span><span id="CONFIGURATION_SOFTWARE"></span>**Konfigurations Software** (3)
+<span id="Configuration_Software"></span><span id="configuration_software"></span><span id="CONFIGURATION_SOFTWARE"></span>**Konfigurationssoftware** (3)
 
 
 </dt> <dd>
@@ -155,7 +155,7 @@ Konfigurationssoftware.
 
 <span id="Application_Software"></span><span id="application_software"></span><span id="APPLICATION_SOFTWARE"></span>
 
-<span id="Application_Software"></span><span id="application_software"></span><span id="APPLICATION_SOFTWARE"></span>**Anwendungs Software** (4)
+<span id="Application_Software"></span><span id="application_software"></span><span id="APPLICATION_SOFTWARE"></span>**Anwendungssoftware** (4)
 
 
 </dt> <dd>
@@ -166,7 +166,7 @@ Anwendungssoftware.
 
 <span id="Instrumentation"></span><span id="instrumentation"></span><span id="INSTRUMENTATION"></span>
 
-<span id="Instrumentation"></span><span id="instrumentation"></span><span id="INSTRUMENTATION"></span>**Instrumentation** (5)
+<span id="Instrumentation"></span><span id="instrumentation"></span><span id="INSTRUMENTATION"></span>**Instrumentierung** (5)
 
 
 </dt> <dd>
@@ -182,7 +182,7 @@ Instrumentierung:
 
 </dt> <dd>
 
-Abhängigen.
+Firmware.
 
 </dd> <dt>
 
@@ -193,7 +193,7 @@ Abhängigen.
 
 </dt> <dd>
 
-Zugreifen.
+Bios.
 
 </dd> <dt>
 
@@ -210,29 +210,29 @@ Start-ROM.
 
 </dd> <dt>
 
-**Zweck Beschreibung**
+**PurposeDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM-Geräte-Agent-**\_ Software**.**Zweck**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ DeviceSoftware**.**Zweck**")
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die weitere Informationen zur Eigenschaft " **Zweck** " bereitstellt, z. b. "Anwendungs Software".
+Freiformzeichenfolge, die weitere Informationen für die **Purpose-Eigenschaft** bereitstellt, z.B. "Anwendungssoftware".
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Die **CIM- \_ devicesoftware** -Klasse wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **CIM \_ DeviceSoftware-Klasse** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -242,17 +242,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

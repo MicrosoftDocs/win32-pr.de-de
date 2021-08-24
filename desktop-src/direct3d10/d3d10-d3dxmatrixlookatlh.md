@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixLookAtLH-Funktion (D3DX10Math.h): Erstellt eine linkshändige Look-at-Matrix.'
+description: 'D3DXMatrixLookAtLH-Funktion (D3DX10Math.h): Erstellt eine linkshändige Look-At-Matrix.'
 ms.assetid: 06888a97-66ef-447f-be8b-ea458ce16b4b
 title: D3DXMatrixLookAtLH-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 3590d2cbdeead9e1b9b2547b2344163b81f05d11
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 749994cf02e4608f5e677d20bf0b1b0dab714e5df739e204a9e80ada4f41f3c5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119609500"
 ---
 # <a name="d3dxmatrixlookatlh-function-d3dx10mathh"></a>D3DXMatrixLookAtLH-Funktion (D3DX10Math.h)
 
-Erstellt eine linkshändige Look-at-Matrix.
+Erstellt eine linkshändige Look-At-Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,7 +57,7 @@ Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis 
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf [**D3DXVECTOR3,**](d3d10-d3dxvector3.md) der den Augenpunkt definiert. Dieser Wert wird bei der Übersetzung verwendet.
+Zeiger auf [**D3DXVECTOR3,**](d3d10-d3dxvector3.md) der den Blickpunkt definiert. Dieser Wert wird bei der Übersetzung verwendet.
 
 </dd> <dt>
 
@@ -66,7 +66,7 @@ Zeiger auf [**D3DXVECTOR3,**](d3d10-d3dxvector3.md) der den Augenpunkt definiert
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf die D3DXVECTOR3-Struktur, die das Kamera-Look-At-Ziel definiert.
+Zeiger auf die D3DXVECTOR3-Struktur, die das Kamera-Look-at-Ziel definiert.
 
 </dd> <dt>
 
@@ -75,7 +75,7 @@ Zeiger auf die D3DXVECTOR3-Struktur, die das Kamera-Look-At-Ziel definiert.
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf die D3DXVECTOR3-Struktur, die die aktuelle Welt definiert, in der Regel \[ 0, 1, 0 \] .
+Zeiger auf die D3DXVECTOR3-Struktur, die den Up der aktuellen Welt definiert, in der Regel \[ 0, 1, 0 \] .
 
 </dd> </dl>
 
@@ -83,9 +83,9 @@ Zeiger auf die D3DXVECTOR3-Struktur, die die aktuelle Welt definiert, in der Reg
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, bei der es sich um eine linkshändige Look-At-Matrix handelt.
+Zeiger auf eine D3DXMATRIX-Struktur, die eine linkshändige Look-at-Matrix ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixLookAtLH-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -109,14 +109,14 @@ yaxis = cross(zaxis, xaxis)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

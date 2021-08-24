@@ -3,7 +3,7 @@ title: add urlacl
 description: Reserviert die angegebene URL für Benutzer und Konten ohne Administratorrechte.
 ms.assetid: 5d89dec3-26e6-4db8-b4cc-e9b933ac60c5
 keywords:
-- Hinzufügen von urlacl http
+- urlacl HTTP hinzufügen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.custom: snippet-project
 ms.date: 07/29/2020
-ms.openlocfilehash: 16f6cb64c0c784f3a5400e2c97e212edbc50936c
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: e3f4c715df70255ede8bd9ca5fc23131102983f8a3aeeb25735d5fc81d5ad9b5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "103961537"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119638780"
 ---
 # <a name="add-urlacl"></a>add urlacl
 
-Reserviert die angegebene URL für Benutzer und Konten ohne Administratorrechte. Die freigegebene Zugriffs Steuerungs Liste (DACL) kann mithilfe eines Konto namens mit den Abhör-und delegatparametern oder mithilfe einer SDDL-Zeichenfolge (Security Deskriptor Definition Language) angegeben werden.
+Reserviert die angegebene URL für Benutzer und Konten ohne Administratorrechte. Die DACL (Discretionary Access Control List) kann mithilfe eines Kontonamens mit den Listen- und Delegatparametern oder mithilfe einer SDDL-Zeichenfolge (Security Descriptor Definition Language) angegeben werden.
 
 ``` syntax
 add urlacl [url=]string
@@ -37,43 +37,43 @@ add urlacl [url=]string
 <dl> <dt>
 
 <span id="_url__string"></span><span id="_URL__STRING"></span>
-**[URL =] Zeichenfolge**
+**[url=] zeichenfolge**
 </dt> <dd>
 
-Gibt die voll qualifizierte URL an.
+Gibt die vollqualifizierte URL an.
 
 </dd> <dt>
 
 <span id="_user__string"></span><span id="_USER__STRING"></span>
-**[user =] Zeichenfolge**
+**[user=] string**
 </dt> <dd>
 
 Gibt den Namen des Benutzers oder der Benutzergruppe an.
 
 </dd> <dt>
 
-<span id="_listen__yes_no__"></span><span id="_LISTEN__YES_NO__"></span>**\[lauschen = {Yes \| No}\]**
+<span id="_listen__yes_no__"></span><span id="_LISTEN__YES_NO__"></span>**\[listen={ja \| nein}\]**
 </dt> <dd>
 
 Gibt einen der folgenden Werte an:
 
--   Ja: ermöglicht dem Benutzer das Registrieren von URLs. Dies ist der Standardwert.
--   Nein: verweigert dem Benutzer das Registrieren von URLs.
+-   ja: Ermöglicht dem Benutzer das Registrieren von URLs. Dies ist der Standardwert.
+-   nein: Verweigert dem Benutzer die Registrierung von URLs.
 
 </dd> <dt>
 
-<span id="_delegate__yes_no__"></span><span id="_DELEGATE__YES_NO__"></span>**\[Delegat = {Yes \| No}\]**
+<span id="_delegate__yes_no__"></span><span id="_DELEGATE__YES_NO__"></span>**\[delegate={yes \| no}\]**
 </dt> <dd>
 
 Gibt einen der folgenden Werte an:
 
--   Ja: ermöglicht dem Benutzer das Delegieren von URLs.
--   Nein: verweigert dem Benutzer die Delegierung von URLs. Dies ist der Standardwert.
+-   ja: Ermöglicht dem Benutzer das Delegieren von URLs.
+-   nein: Verweigert dem Benutzer das Delegieren von URLs. Dies ist der Standardwert.
 
 </dd> <dt>
 
 <span id="_sddl__string"></span><span id="_SDDL__STRING"></span>
-**[SDDL =] Zeichenfolge**
+**[sddl=] string**
 </dt> <dd>
 
 Gibt die SDDL-Zeichenfolge an, die die DACL beschreibt.

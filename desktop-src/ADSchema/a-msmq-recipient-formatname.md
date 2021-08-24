@@ -1,11 +1,11 @@
 ---
-title: MSMQ-Recipient-Formatname-Attribut
-description: Wird als Empfänger Format Name in der MSMQ-Custom-Recipient-Klasse verwendet.
+title: MSMQ-Recipient-FormatName-Attribut
+description: Wird als Name des Empfängerformats in der MSMQ-Custom-Recipient-Klasse verwendet.
 ms.assetid: 26ee4cec-4e69-412e-914b-437f2f4cd88e
 ms.tgt_platform: multiple
 keywords:
-- MSMQ-Recipient-Formatname-Attribut AD-Schema
-- MSMQ-Recipient-Formatname-Attribut AD-Schema
+- AD-Schema des MSMQ-Recipient-FormatName-Attributs
+- AD-Schema des msMQ-Recipient-FormatName-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c57fbeee49ddf0c734212bc91926e5c848a9e8d1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 13251682e006f493fe0caa04aa5dab03bb602e62f2bea0774295c878beb6d549
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122899"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582710"
 ---
-# <a name="msmq-recipient-formatname-attribute"></a>MSMQ-Recipient-Formatname-Attribut
+# <a name="msmq-recipient-formatname-attribute"></a>MSMQ-Recipient-FormatName-Attribut
 
-Wird als Empfänger Format Name in der MSMQ-Custom-Recipient-Klasse verwendet.
+Wird als Name des Empfängerformats in der MSMQ-Custom-Recipient-Klasse verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MSMQ-Recipient-Format Name                   |
-| LDAP-Display-Name | MSMQ-Recipient-Format Name                   |
+| CN                | MSMQ-Recipient-FormatName                   |
+| Ldap-Anzeigename | msMQ-Recipient-FormatName                   |
 | Size              | 1 bis 255 Zeichen.                        |
-| Berechtigung aktualisieren  | Der Besitzer der Warteschlange.                            |
-| Aktualisierungshäufigkeit  | Erst nachdem die externe Warteschlange verschoben wurde.    |
+| Aktualisieren von Berechtigungen  | Der Warteschlangenbesitzer.                            |
+| Updatehäufigkeit  | Erst nachdem die externe Warteschlange verschoben wurde.    |
 | Attribute-Id      | 1.2.840.113556.1.4.1695                     |
-| System-ID-GUID    | 3bfe6748-b544-485A-B067-1b310c4334bf        |
+| System-Id-Guid    | 3bfe6748-b544-485a-b067-1b310c4334bf        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,10 +57,10 @@ Wird als Empfänger Format Name in der MSMQ-Custom-Recipient-Klasse verwendet.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | 1                                                                   |
 | Range-Upper            | 255                                                                 |
 | Search-Flags           | 0x00000000                                                          |
@@ -78,10 +78,10 @@ Wird als Empfänger Format Name in der MSMQ-Custom-Recipient-Klasse verwendet.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | 1                                                                   |
 | Range-Upper            | 255                                                                 |
 | Search-Flags           | 0x00000000                                                          |
@@ -99,10 +99,10 @@ Wird als Empfänger Format Name in der MSMQ-Custom-Recipient-Klasse verwendet.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | 1                                                                   |
 | Range-Upper            | 255                                                                 |
 | Search-Flags           | 0x00000000                                                          |
@@ -120,10 +120,10 @@ Wird als Empfänger Format Name in der MSMQ-Custom-Recipient-Klasse verwendet.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | 1                                                                   |
 | Range-Upper            | 255                                                                 |
 | Search-Flags           | 0x00000000                                                          |
@@ -141,10 +141,10 @@ Wird als Empfänger Format Name in der MSMQ-Custom-Recipient-Klasse verwendet.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | 1                                                                   |
 | Range-Upper            | 255                                                                 |
 | Search-Flags           | 0x00000000                                                          |

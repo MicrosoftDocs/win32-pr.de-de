@@ -1,9 +1,9 @@
 ---
-title: glfrontface-Funktion (GL. h)
-description: Die Funktion "glfrontface" definiert Front-und rückwärts gerichtete Polygone.
+title: glFrontFace-Funktion (Gl.h)
+description: Die glFrontFace-Funktion definiert nach vorne gerichtete und zurück gerichtete Polygone.
 ms.assetid: 4087107c-99cd-4c26-92e3-8dc43633d51f
 keywords:
-- glfrontface-Funktion OpenGL
+- glFrontFace-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 106fa40989f21e50eb738f1a218394e8e7e9b4bf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 91d288b4e6380ab845af9a05381963444e28ddf50739ecd3f5563d9f2dc729fc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119580160"
 ---
-# <a name="glfrontface-function"></a>glfrontface-Funktion
+# <a name="glfrontface-function"></a>glFrontFace-Funktion
 
-Die Funktion " **glfrontface** " definiert Front-und rückwärts gerichtete Polygone.
+Die **glFrontFace-Funktion** definiert nach vorne gerichtete und zurück gerichtete Polygone.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI glFrontFace(
 *mode* 
 </dt> <dd>
 
-Die Ausrichtung von nach vorne gerichteten Polygonen. GL \_ CW und GL \_ CCW werden akzeptiert. Der Standardwert ist GL \_ CCW.
+Die Ausrichtung von polygonen nach vorn gerichteten Polygonen. GL \_ CW und GL \_ CCW werden akzeptiert. Der Standardwert ist GL \_ CCW.
 
 </dd> </dl>
 
@@ -53,26 +53,26 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | der *Modus* war kein akzeptierter Wert.<br/>                                                                                          |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *mode* war kein akzeptierter Wert.<br/>                                                                                          |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In einer Szene, die vollständig aus nicht transparenten geschlossenen Oberflächen besteht, werden die rückwärts gerichteten Polygone nie sichtbar. Die Beseitigung dieser unsichtbaren Polygone hat den offensichtlichen Vorteil, dass das Rendering des Bilds beschleunigt wird. Sie aktivieren und deaktivieren die Beseitigung von mit der Rückseite verknüpfte Polygone mit [**glEnable**](glenable.md) und [**gldeaktiviert**](gldisable.md) mithilfe des "Argument GL \_ cull \_ Face".
+In einer Szene, die vollständig aus undurchsichtigen geschlossenen Oberflächen besteht, sind hintere Polygone nie sichtbar. Das Beseitigen dieser unsichtbaren Polygone hat den offensichtlichen Vorteil, dass das Rendern des Bilds beschleunigt wird. Sie aktivieren und deaktivieren die Beseitigung von nach hinten gerichteten Polygonen mit [**glEnable**](glenable.md) und [**glDisable**](gldisable.md) mit dem Argument GL \_ CULL \_ FACE.
 
-Die Projektion einer Polygon-zu-Fenster-Koordinate wird als "im Uhrzeigersinn" bezeichnet, wenn ein imaginäres Objekt, das auf den Pfad vom ersten Scheitelpunkt, seinen zweiten Scheitelpunkt usw., bis zum letzten Scheitelpunkt folgt, und schließlich zurück zum ersten Scheitelpunkt in einer Richtung im Uhrzeigersinn zum Inneren des Polygons bewegt wird. Das Vieleck des Polygons wird gegen den Uhrzeigersinn gesetzt, wenn das imaginäre Objekt, das denselben Pfad folgt, gegen den Uhrzeigersinn zum Inneren des Polygons bewegt wird. Die **glfrontface** -Funktion gibt an, ob Polygone mit dem Uhrzeigersinn im Uhrzeigersinn in Fenster Koordinaten oder gegen den Uhrzeigersinn im Uhrzeigersinn in Fenster Koordinaten übernommen werden. Durch \_ die Übergabe von GL CCW an *Mode* werden Polygone gegen den Uhrzeigersinn als Front-on ausgewählt; GL \_ CW wählt Polygone im Uhrzeigersinn als Front-on aus. Standardmäßig werden Polygone gegen den Uhrzeigersinn als Front-on verwendet.
+Die Projektion eines Polygons auf Fensterkoordinaten wird als im Uhrzeigersinn gewindet bezeichnet, wenn ein imaginäres Objekt, das dem Pfad vom ersten Scheitelpunkt, dem zweiten Scheitelpunkt und so weiter folgt, bis zum letzten Scheitelpunkt und schließlich zurück zum ersten Vertex im Uhrzeigersinn um das Innere des Polygons bewegt wird. Die Windung des Polygons wird als gegen den Uhrzeigersinn bezeichnet, wenn sich das imaginäre Objekt, das demselben Pfad folgt, gegen den Uhrzeigersinn um das Innere des Polygons bewegt. Die **glFrontFace-Funktion** gibt an, ob Polygone mit im Uhrzeigersinn in Fensterkoordinaten oder gegen den Uhrzeigersinn gerichteten Windungen in Fensterkoordinaten nach vorne gerichtet werden. Beim Übergeben von GL \_ CCW *an den Modus* werden Polygone gegen den Uhrzeigersinn als front-facing ausgewählt. GL \_ CW wählt Polygone im Uhrzeigersinn als front-facing aus. Standardmäßig werden Polygone gegen den Uhrzeigersinn als front-orientierte Polygone verwendet.
 
-Mit der folgenden Funktion werden Informationen zu **glfrontface** abgerufen:
+Die folgende Funktion ruft Informationen zu **glFrontface ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Front- \_ Face
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ FRONT \_ FACE
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,8 +82,8 @@ Mit der folgenden Funktion werden Informationen zu **glfrontface** abgerufen:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -95,10 +95,10 @@ Mit der folgenden Funktion werden Informationen zu **glfrontface** abgerufen:
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcullface**](glcullface.md)
+[**glCullFace**](glcullface.md)
 </dt> <dt>
 
-[**gldeaktivieren**](gldisable.md)
+[**glDisable**](gldisable.md)
 </dt> <dt>
 
 [**glEnable**](glenable.md)
@@ -107,10 +107,10 @@ Mit der folgenden Funktion werden Informationen zu **glfrontface** abgerufen:
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**gllightmodel**](gllightmodel-functions.md)
+[**glLightModel**](gllightmodel-functions.md)
 </dt> </dl>
 
  

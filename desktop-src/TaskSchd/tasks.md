@@ -1,97 +1,97 @@
 ---
 title: Aufgaben
-description: Eine Aufgabe ist die geplante Arbeit, die der Taskplaner-Dienst ausführt.
+description: Eine Aufgabe ist die geplante Arbeit, die vom Taskplaner Dienst ausgeführt wird.
 ms.assetid: 24c43834-5731-4b14-9409-7d7cf20b1a71
 keywords:
-- Aufgaben Taskplaner
+- tasks Taskplaner
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: efbb4ef41915ec70c98b59c9a7ba74c00f283ce6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 43f6122bcf32e0c3e242b6dce119432a9014718d4b65d19c613ce27794355491
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119517105"
 ---
 # <a name="tasks"></a>Aufgaben
 
-Eine Aufgabe ist die geplante Arbeit, die der Taskplaner-Dienst ausführt. Eine Aufgabe besteht aus verschiedenen Komponenten, aber eine Aufgabe muss einen-Triggern enthalten, den der Taskplaner verwendet, um die Aufgabe zu starten, und eine Aktion, die beschreibt, welche Arbeit der Taskplaner ausführt.
+Eine Aufgabe ist die geplante Arbeit, die vom Taskplaner Dienst ausgeführt wird. Eine Aufgabe besteht aus verschiedenen Komponenten, aber eine Aufgabe muss einen Trigger enthalten, den der Taskplaner zum Starten der Aufgabe verwendet, und eine Aktion, die beschreibt, welche Arbeit die Taskplaner ausführt.
 
-Wenn eine Aufgabe erstellt wird, wird Sie in einem Aufgaben Ordner gespeichert. Auf Aufgaben Ordner kann über die [**ITaskFolder**](/windows/desktop/api/taskschd/nn-taskschd-itaskfolder) -Schnittstelle ([**taskfolder**](taskfolder.md) für die Skripterstellung) zugegriffen werden, und auf Aufgaben kann über die [**IRegisteredTask**](/windows/desktop/api/taskschd/nn-taskschd-iregisteredtask) -Schnittstelle ([**registeredtask**](registeredtask.md) für die Skripterstellung) zugegriffen werden, wenn Sie erstellt werden. Sie können Zugriffs Steuerungs Listen (Access Control Lists, ACLs) für Aufgaben und Aufgaben Ordner ändern, um bestimmten Benutzern und Gruppen den Zugriff auf einen Task-oder Aufgaben Ordner zu gewähren oder zu verweigern. Dies kann mithilfe der [**IRegisteredTask:: SETSECURITYDESCRIPTOR**](/windows/desktop/api/taskschd/nf-taskschd-iregisteredtask-setsecuritydescriptor) -Methode, der [**ITaskFolder:: SETSECURITYDESCRIPTOR**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-setsecuritydescriptor) -Methode oder durch Angeben einer Sicherheits Beschreibung erfolgen, wenn eine Aufgabe mithilfe der [**RegisterTaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertaskdefinition) -Methode oder der [**RegisterTask**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) -Methode registriert wird.
+Wenn eine Aufgabe erstellt wird, wird sie in einem Aufgabenordner gespeichert. Auf Taskordner kann über die [**ITaskFolder-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-itaskfolder) [**(TaskFolder**](taskfolder.md) für Skripterstellung) zugegriffen werden, und auf Aufgaben kann über die [**IRegisteredTask-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-iregisteredtask) [**(RegisteredTask**](registeredtask.md) für Skripterstellung) zugegriffen werden, wenn sie erstellt werden. Sie können Zugriffssteuerungslisten (ACCESS Control Lists, ACLs) für Tasks und Aufgabenordner ändern, um bestimmten Benutzern und Gruppen den Zugriff auf einen Task- oder Aufgabenordner zu gewähren oder zu verweigern. Hierzu können Sie die [**IRegisteredTask::SetSecurityDescriptor-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-iregisteredtask-setsecuritydescriptor) die [**ITaskFolder::SetSecurityDescriptor-Methode**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-setsecuritydescriptor) oder einen Sicherheitsdeskriptor angeben, wenn eine Aufgabe mithilfe der [**RegisterTaskDefinition-**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertaskdefinition) oder [**RegisterTask-Methode**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) registriert wird.
 
 > [!Note]  
-> Wenn dem lokalen System Konto der Zugriff auf eine Aufgaben Datei oder einen Aufgaben Ordner verweigert wird, kann der Taskplaner Dienst unerwartete Ergebnisse liefern.
+> Wenn dem lokalen Systemkonto der Zugriff auf eine Taskdatei oder einen Aufgabenordner verweigert wird, kann der Taskplaner Dienst zu unerwarteten Ergebnissen führen.
 
- 
+ 
 
-## <a name="components-of-a-task"></a>Komponenten einer Aufgabe
+## <a name="components-of-a-task"></a>Komponenten eines Tasks
 
-In der folgenden Abbildung sind die Aufgaben Komponenten dargestellt.
+Die folgende Abbildung zeigt die Aufgabenkomponenten.
 
-![Task Komponenten](images/taskcomponents.png)
+![Taskkomponenten](images/taskcomponents.png)
 
-Die folgende Liste enthält eine kurze Beschreibung der einzelnen Aufgaben Komponenten:
+Die folgende Liste enthält eine kurze Beschreibung der einzelnen Aufgabenkomponenten:
 
--   Trigger: Taskplaner verwendet Ereignis-oder zeitbasierte Trigger, um zu erfahren, wann eine Aufgabe gestartet werden soll. Jeder Task kann einen oder mehrere Trigger zum Starten der Aufgabe angeben.
+-   Trigger: Taskplaner verwendet ereignis- oder zeitbasierte Trigger, um zu wissen, wann eine Aufgabe gestartet werden soll. Jede Aufgabe kann einen oder mehrere Trigger angeben, um die Aufgabe zu starten.
 
-    Weitere Informationen zu Triggern finden Sie unter [Task Trigger](task-triggers.md).
+    Weitere Informationen zu Triggern finden Sie unter [Tasktrigger.](task-triggers.md)
 
--   Aktionen: Dies sind die Aktionen, die von der Aufgabe durchgeführt werden. Jeder Task kann eine oder mehrere Aktionen angeben, um seine Arbeit abzuschließen.
+-   Aktionen: Dies sind die Aktionen, die eigentliche Arbeit, die von der Aufgabe ausgeführt wird. Jede Aufgabe kann eine oder mehrere Aktionen angeben, um ihre Arbeit abzuschließen.
 
-    Weitere Informationen zu Aktionen finden Sie unter [Task Actions](task-actions.md).
+    Weitere Informationen zu Aktionen finden Sie unter [Aufgabenaktionen.](task-actions.md)
 
--   Prinzipale: Prinzipale definieren den Sicherheitskontext, in dem die Aufgabe ausgeführt wird. Ein Prinzipal könnte z. b. einen bestimmten Benutzer oder eine Benutzergruppe definieren, die die Aufgabe ausführen kann.
+-   Prinzipale: Prinzipale definieren den Sicherheitskontext, in dem der Task ausgeführt wird. Beispielsweise kann ein Prinzipal einen bestimmten Benutzer oder eine Bestimmte Benutzergruppe definieren, der bzw. die die Aufgabe ausführen kann.
 
-    Weitere Informationen zu Prinzipale finden Sie unter [Sicherheits Kontexte für Aufgaben](security-contexts-for-running-tasks.md).
+    Weitere Informationen zu Prinzipalen finden Sie unter [Sicherheitskontexte für Tasks.](security-contexts-for-running-tasks.md)
 
--   Einstellungen: Dies sind die Einstellungen, die von der Taskplaner verwendet werden, um die Aufgabe in Bezug auf Bedingungen auszuführen, die sich außerhalb der Aufgabe selbst befinden. Diese Einstellungen können z. b. die Priorität der Aufgabe in Bezug auf andere Aufgaben angeben, unabhängig davon, ob mehrere Instanzen der Aufgabe ausgeführt werden können, wie die Aufgabe behandelt wird, wenn sich der Computer in einem Leerlaufzustand befindet, und andere Bedingungen.
+-   Einstellungen: Dies sind die Einstellungen, die der Taskplaner verwendet, um den Task in Bezug auf Bedingungen auszuführen, die außerhalb der Aufgabe selbst liegen. Diese Einstellungen können z. B. die Priorität des Tasks in Bezug auf andere Tasks angeben, ob mehrere Instanzen des Tasks ausgeführt werden können, wie der Task behandelt wird, wenn sich der Computer in einer Leerlaufbedingung befindet, und andere Bedingungen.
 
-    Weitere Informationen zu Aufgaben Einstellungen finden Sie unter [**itasksettings**](/windows/desktop/api/taskschd/nn-taskschd-itasksettings) ([**tasksettings**](tasksettings.md) für Skripterstellung).
+    Weitere Informationen zu Taskeinstellungen finden Sie unter [**ITaskSettings**](/windows/desktop/api/taskschd/nn-taskschd-itasksettings) ([**TaskSettings**](tasksettings.md) for scripting).
 
     > [!Note]  
-    > Standardmäßig wird eine Aufgabe 72 Stunden nach dem Start angehalten. Sie können dies ändern, indem Sie die Einstellung [**executiontimelimit**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_executiontimelimit) ändern.
+    > Standardmäßig wird eine Aufgabe 72 Stunden nach beginn der Ausführung beendet. Sie können dies ändern, indem Sie die [**Einstellung ExecutionTimeLimit**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_executiontimelimit) ändern.
 
-     
+     
 
--   Registrierungsinformationen: Hierbei handelt es sich um administrative Informationen, die gesammelt werden, wenn der Task registriert wird. Diese Informationen beschreiben beispielsweise den Autor der Aufgabe, das Datum, an dem die Aufgabe registriert wurde, eine XML-Beschreibung des Tasks und weitere Informationen.
+-   Registrierungsinformationen: Dies sind Administrative Informationen, die bei der Registrierung des Tasks gesammelt werden. Diese Informationen beschreiben z. B. den Ersteller der Aufgabe, das Datum, an dem der Task registriert wurde, eine XML-Beschreibung der Aufgabe und andere Informationen.
 
-    Weitere Informationen zu Aufgaben Registrierungsinformationen finden Sie unter [Aufgaben Registrierungsinformationen](task-registration-information.md).
+    Weitere Informationen zur Aufgabenregistrierung finden Sie unter [Informationen zur Aufgabenregistrierung.](task-registration-information.md)
 
--   Daten: Dies ist eine zusätzliche Dokumentation zu der Aufgabe, die vom Autor der Aufgabe bereitgestellt wird. Diese Daten können z. b. XML-Hilfe enthalten, die von Benutzern verwendet werden kann, wenn Sie die Aufgabe ausführen.
+-   Daten: Dies ist eine zusätzliche Dokumentation zu der Aufgabe, die vom Ersteller der Aufgabe bereitgestellt wird. Diese Daten können z. B. XML-Hilfe enthalten, die von Benutzern beim Ausführen der Aufgabe verwendet werden kann.
 
-## <a name="task-apis"></a>Task-APIs
+## <a name="task-apis"></a>Aufgaben-APIs
 
-Taskplaner 2,0 stellt zwei Sätze von APIs bereit: einen Satz von Skript Objekten und Schnittstellen für Taskplaner 2,0. Weitere Informationen finden Sie unter [Taskplaner Referenz](task-scheduler-reference.md).
+Taskplaner 2.0 bietet zwei APIs: eine Reihe von Skriptobjekten und Schnittstellen für Taskplaner 2.0. Weitere Informationen finden Sie unter [Taskplaner Referenz.](task-scheduler-reference.md)
 
-Die mit der [**Compatibility**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_compatibility) -Eigenschaft festgelegte Task Kompatibilität sollte nur auf Task Kompatibilität v1 festgelegt werden, \_ \_ Wenn ein Task auf einen Computer unter Windows XP, Windows Server 2003 oder Windows 2000 zugegriffen werden muss oder geändert werden muss. Andernfalls empfiehlt es sich, die Kompatibilität mit Taskplaner 2,0 zu verwenden, da Sie mehr Features hat.
+Taskkompatibilität, die über die [**Compatibility-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_compatibility) festgelegt wird, sollte nur auf TASK COMPATIBILITY V1 festgelegt werden, wenn auf \_ einen Task von einem Windows \_ XP-, Windows Server 2003- oder Windows 2000-Computer zugegriffen oder geändert werden muss. Andernfalls wird empfohlen, Taskplaner 2.0-Kompatibilität zu verwenden, da sie über mehr Features verfügt.
 
-Ab Taskplaner 2,0 wird die [**ITaskService**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice) -Schnittstelle ([**Task Service**](taskservice.md) für die Skripterstellung) als Ausgangspunkt zum Erstellen von Aufgaben in den angegebenen Ordnern verwendet. Die [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Schnittstelle ([**Task Definition**](taskdefinition.md) für die Skripterstellung) wird verwendet, um alle Komponenten einer Aufgabe (z. b. Einstellungen, Aktionen und Trigger) zu speichern. Die [**itasktrigger-**](/windows/desktop/api/Mstask/nn-mstask-itasktrigger), [**IAction**](/windows/desktop/api/taskschd/nn-taskschd-iaction)-und [**itasksettings**](/windows/desktop/api/taskschd/nn-taskschd-itasksettings) -APIs stellen Eigenschaften bereit, die dann verwendet werden, um die anderen Komponenten der Aufgabe zu definieren. Taskplaner 1,0 stellt die [**ITask**](/windows/desktop/api/Mstask/nn-mstask-itask) -Schnittstelle bereit, die nur aus Gründen der Abwärtskompatibilität unterstützt wird.
+Ab Taskplaner 2.0 wird die [**ITaskService-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice) [**(TaskService**](taskservice.md) für Skripterstellung) als Ausgangspunkt zum Erstellen von Aufgaben in angegebenen Ordnern verwendet. Die [**ITaskDefinition-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) [**(TaskDefinition**](taskdefinition.md) für Skripts) wird verwendet, um alle Komponenten einer Aufgabe zu speichern, z. B. einstellungen, aktionen und trigger. Die [**APIs ITaskTrigger,**](/windows/desktop/api/Mstask/nn-mstask-itasktrigger) [**IAction**](/windows/desktop/api/taskschd/nn-taskschd-iaction)und [**ITaskSettings**](/windows/desktop/api/taskschd/nn-taskschd-itasksettings) stellen Eigenschaften bereit, die dann zum Definieren der anderen Komponenten des Tasks verwendet werden. Taskplaner 1.0 stellt die [**ITask-Schnittstelle**](/windows/desktop/api/Mstask/nn-mstask-itask) bereit, die nur aus Gründen der Abwärtskompatibilität unterstützt wird.
 
-Bei der Skripterstellung werden die Taskplaner Schnittstellen Skript Objekten mit ähnlichen Namen, Eigenschaften und Methoden zugeordnet. Das [**TaskService**](taskservice.md) -Skript Objekt hat z. b. die gleichen Eigenschaften und Methoden wie die [**ITaskService**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice) -Schnittstelle.
+Für die Skripterstellung werden die Taskplaner Schnittstellen Skriptobjekten zugeordnet, die ähnliche Namen, Eigenschaften und Methoden aufweisen. Beispielsweise verfügt das [**TaskService-Skriptobjekt**](taskservice.md) über die gleichen Eigenschaften und Methoden wie die [**ITaskService-Schnittstelle.**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice)
 
-Weitere Informationen und Beispiele zur Verwendung der Taskplaner Schnittstellen, Skript Objekte und XML finden [Sie unter Verwenden der Taskplaner](using-the-task-scheduler.md).
+Weitere Informationen und Beispiele zur Verwendung der Taskplaner Schnittstellen, Skriptobjekte und XML finden Sie unter [Verwenden der Taskplaner](using-the-task-scheduler.md).
 
-### <a name="task-scheduler-10-tasks"></a>Taskplaner 1,0 Tasks
+### <a name="task-scheduler-10-tasks"></a>Taskplaner 1.0 Tasks
 
-Eine Taskplaner 1,0-Aufgabe ist jede Anwendung oder jeder Dateityp, die von der Taskplaner ausgeführt werden kann. Diese können Folgendes umfassen (wie von dem Betriebssystem unterstützt, auf dem der Task ausgeführt wird): Win32-Anwendungen, Win16-Anwendungen, OS/2-Anwendungen, MS-DOS-Anwendungen, Batch Dateien ( \* bat), Befehls Dateien ( \* . cmd) oder ein beliebiger ordnungsgemäß registrierter Dateityp.
+Eine Taskplaner 1.0-Aufgabe ist jede Anwendung oder jeder Dateityp, die bzw. der vom Taskplaner ausgeführt werden kann. Dies kann eine der folgenden Optionen umfassen (wie vom Betriebssystem unterstützt, unter dem der Task ausgeführt wird): Win32-Anwendungen, Win16-Anwendungen, Betriebssystem-/2-Anwendungen, MS-DOS-Anwendungen, Batchdateien ( \*.bat), Befehlsdateien ( \* CMD) oder alle ordnungsgemäß registrierten Dateitypen.
 
-Daten, die eine Aufgabe beschreiben, werden in einer Aufgaben Datei gespeichert, die im Ordner "geplante Aufgaben" gespeichert ist. Weitere Informationen finden Sie im [*Ordner "geplante Aufgaben*](s.md)". Der Name dieser Aufgaben Dateien enthält den Namen der Aufgabe, gefolgt von der Dateinamenerweiterung. Job.
+Daten, die eine Aufgabe beschreiben, werden in einer Taskdatei gespeichert, die im Ordner Geplante Aufgaben gespeichert ist. Weitere Informationen finden Sie unter [*Scheduled Tasks folder (Ordner*](s.md)für geplante Aufgaben). Der Name dieser Taskdateien enthält den Namen der Aufgabe, gefolgt von der Dateierweiterung .job.
 
-Weitere Informationen zum Hinzufügen von Taskplaner 1,0-Tasks finden Sie unter [Hinzufügen von Arbeits Elementen](adding-work-items.md).
+Weitere Informationen zum Hinzufügen von Taskplaner 1.0-Aufgaben finden Sie unter [Hinzufügen von Arbeitselementen.](adding-work-items.md)
 
-Weitere Informationen zum Auflisten von Taskplaner 1,0-Tasks finden Sie unter Auflisten von [Tasks](enumerating-tasks.md).
+Weitere Informationen zum Aufzählen von Taskplaner 1.0-Tasks finden Sie unter [Aufzählen von Tasks.](enumerating-tasks.md)
 
-Für einen Computer mit Windows Server 2003, Windows XP oder Windows 2000 zum Erstellen, überwachen oder Steuern von Aufgaben auf einem Computer mit Windows Vista müssen die folgenden Vorgänge auf dem Computer mit Windows Vista ausgeführt werden, und der Benutzer, der die [**itaskscheduler:: settargetcomputer**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-settargetcomputer) -Methode aufgerufen hat, muss ein Mitglied der Gruppe "Administratoren" auf dem Windows Vista-Remote Computer sein.
+Damit ein Windows Server 2003-, Windows XP- oder Windows 2000-Computer Aufgaben auf einem Windows Vista-Computer erstellen, überwachen oder steuern kann, müssen die folgenden Vorgänge auf dem computer Windows Vista ausgeführt werden, und der Benutzer, der die [**ITaskScheduler::SetTargetComputer-Methode**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-settargetcomputer) aufruft, muss Mitglied der Gruppe Administratoren auf dem Remotecomputer Windows Vista sein.
 
-**So aktivieren Sie die Ausnahme "Datei und Drucker freigeben" in der Windows-Firewall**
+**So aktivieren Sie die Ausnahme "Datei und Drucker freigeben" in Windows Firewall**
 
 1.  Klicken Sie auf **Start** und dann auf **Systemsteuerung**.
-2.  Klicken Sie in der **Systemsteuerung** auf **klassische Ansicht** , und doppelklicken Sie dann auf das Symbol **Windows-Firewall** .
-3.  Klicken Sie im Fenster **Windows-Firewall** auf die Registerkarte **Ausnahmen** , und aktivieren Sie das Kontrollkästchen **Datei-und Druckerfreigabe Ausnahme** .
+2.  Klicken Sie **in Systemsteuerung** auf **Klassische Ansicht,** und doppelklicken Sie dann auf das **Windows Firewallsymbol.**
+3.  Klicken Sie im **fenster Windows Firewall** auf die Registerkarte **Ausnahmen,** und aktivieren Sie das **Kontrollkästchen Datei- und Druckerfreigabeausnahme.**
 
-**So aktivieren Sie den Dienst "Remote Registrierung"**
+**So aktivieren Sie den Dienst "Remoteregistrierung"**
 
--   Öffnen Sie ein Eingabe Aufforderungs Fenster, und geben Sie den folgenden Befehl ein: **net Start "Remote Registry"**.
+-   Öffnen Sie ein Eingabeaufforderungsfenster, und geben Sie den folgenden Befehl ein: **net start "Remote Registry".**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -100,27 +100,27 @@ Für einen Computer mit Windows Server 2003, Windows XP oder Windows 2000 zum Er
 [Informationen zum Taskplaner](about-the-task-scheduler.md)
 </dt> <dt>
 
-[Task Trigger](task-triggers.md)
+[Aufgabentrigger](task-triggers.md)
 </dt> <dt>
 
-[Task Aktionen](task-actions.md)
+[Aufgabenaktionen](task-actions.md)
 </dt> <dt>
 
-[**Itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition)
+[**ITaskDefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition)
 </dt> <dt>
 
-[**Task Definition**](taskdefinition.md)
+[**TaskDefinition**](taskdefinition.md)
 </dt> <dt>
 
 [**ITaskService**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice)
 </dt> <dt>
 
-[**Task Service**](taskservice.md)
+[**TaskService**](taskservice.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,10 +1,10 @@
 ---
-title: Syntax für Zeichen folgen (numerisch)
+title: String(Numeric)-Syntax
 description: Eine Zeichenfolge, die Ziffern enthält.
 ms.assetid: cf440092-8777-460c-a3a2-6cc7bd3075b8
 ms.tgt_platform: multiple
 keywords:
-- Zeichen folgen Syntax (numeric) AD Schema
+- String(Numeric) syntax AD Schema
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ffa90dce532e750f9d51f4203a8f90b4c505dccf
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4d2be2f89961ff1b1a646adcb6716c0b4c62cbfc74be2642630e23084bc8d29f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119580174"
 ---
-# <a name="stringnumeric-syntax"></a>Syntax für Zeichen folgen (numerisch)
+# <a name="stringnumeric-syntax"></a>String(Numeric)-Syntax
 
 Eine Zeichenfolge, die Ziffern enthält.
 
@@ -31,9 +31,9 @@ Eine Zeichenfolge, die Ziffern enthält.
 | Name         | String(Numeric)                                                        |
 | Syntax-ID    | 2.5.5.6                                                                |
 | OM-ID        | 18                                                                     |
-| MAPI-Typ    | TString                                                                |
-| ADS-Typ     | \_numerische \_ Zeichenfolge von adstype                                               |
-| Varianttyp | VT \_ BSTR                                                               |
+| MAPI-Typ    | TSTRING                                                                |
+| ADS-Typ     | ADSTYPE \_ NUMERIC \_ STRING                                               |
+| Variant-Typ | VT \_ BSTR                                                               |
 | SDS-Typ     | [System.String](/dotnet/api/system.string) |
 
 

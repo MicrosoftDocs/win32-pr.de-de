@@ -1,11 +1,11 @@
 ---
-title: Tasksettings. deleteexpiredtaskafter-Eigenschaft
-description: Ruft bei der Skripterstellung die Zeitspanne ab, die der Taskplaner wartet, bevor der Task nach Ablauf gelöscht wird, oder legt ihn fest.
+title: TaskSettings.DeleteExpiredTaskAfter-Eigenschaft
+description: Für die Skripterstellung ruft die Zeit ab, die der Taskplaner abwarten soll, bevor der Task nach ablaufen gelöscht wird, oder legt diesen fest.
 ms.assetid: c57d736c-e3ce-44b8-809e-44f7c0321d70
 keywords:
-- Deleteexpiredtaskafter-Eigenschaft Taskplaner
-- Deleteexpiredtaskafter-Eigenschaft Taskplaner, tasksettings-Objekt
-- Tasksettings-Objekt Taskplaner, deleteexpiredtaskafter-Eigenschaft
+- DeleteExpiredTaskAfter-Taskplaner
+- DeleteExpiredTaskAfter-Eigenschaft Taskplaner , TaskSettings-Objekt
+- TaskSettings-Objekt Taskplaner , DeleteExpiredTaskAfter-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9005ff7988353daa902b1bc3151c539713bb94ea
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 521f07a5712165c282a36bbfe2c3b66769239c53d652ae49a03fa6a50c19cb05
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475957"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119658450"
 ---
-# <a name="tasksettingsdeleteexpiredtaskafter-property"></a>Tasksettings. deleteexpiredtaskafter-Eigenschaft
+# <a name="tasksettingsdeleteexpiredtaskafter-property"></a>TaskSettings.DeleteExpiredTaskAfter-Eigenschaft
 
-Ruft bei der Skripterstellung die Zeitspanne ab, die der Taskplaner wartet, bevor der Task nach Ablauf gelöscht wird, oder legt ihn fest. Wenn für diese Eigenschaft kein Wert angegeben wird, wird die Aufgabe vom Taskplaner-Dienst nicht gelöscht.
+Für die Skripterstellung ruft die Zeit ab, die der Taskplaner abwarten soll, bevor der Task nach ablaufen gelöscht wird, oder legt diesen fest. Wenn für diese Eigenschaft kein Wert angegeben wird, löscht der Taskplaner den Task nicht.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -40,13 +40,13 @@ TaskSettings.DeleteExpiredTaskAfter As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Zeichenfolge, mit der die Zeitspanne abgerufen oder festgelegt wird, die der Taskplaner wartet, bevor die Aufgabe nach Ablauf gelöscht wird. Das Format dieser Zeichenfolge lautet pnynmndtnhnmns. dabei ist "NY" die Anzahl der Jahre, "nm" die Anzahl von Monaten, "ND" die Anzahl der Tage, "t" ist das Trennzeichen für Datum/Uhrzeit, "NH" die Anzahl von Stunden, "nm" die Anzahl der Minuten und "NS" die Anzahl von Sekunden (z
+Eine Zeichenfolge, die die Zeit abgibt, die der Taskplaner task nach ablaufendem Vorgang vor dem Löschen wartet, oder legt diese fest. Das Format für diese Zeichenfolge ist PnYnMnDTnHnMnS, Dabei steht nY für die Anzahl von Jahren, nM für die Anzahl der Monate, nD für die Anzahl von Tagen, "T" für das Datums-/Uhrzeittrennzeichen, nH für die Anzahl von Stunden, nM für die Anzahl von Minuten und nS für die Anzahl von Sekunden (pt5M gibt beispielsweise 5 Minuten an, und P1M4DT2H5M gibt einen Monat, vier Tage, zwei Stunden und fünf Minuten an).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Task läuft ab, nachdem die Endgrenze für alle der Aufgabe zugeordneten Trigger überschritten wurde. Die Endgrenze für einen-Endpunkt wird durch die [endboundary](trigger-endboundary.md) -Eigenschaft angegeben, die von allen auslöserobjekten geerbt wird.
+Eine Aufgabe läuft ab, nachdem die Endgrenze für alle Trigger überschritten wurde, die der Aufgabe zugeordnet sind. Die Endgrenze für einen Trigger wird von der [EndBoundary-Eigenschaft angegeben,](trigger-endboundary.md) die von allen Triggerobjekten geerbt wird.
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [**deleteexpiredtaskafter-Element (settingstype)**](taskschedulerschema-deleteexpiredtaskafter-settingstype-element.md) des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [**DeleteExpiredTaskAfter-Element (settingsType)**](taskschedulerschema-deleteexpiredtaskafter-settingstype-element.md) des Taskplaner angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,9 +54,9 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [*
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

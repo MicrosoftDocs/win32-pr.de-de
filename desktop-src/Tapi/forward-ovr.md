@@ -1,34 +1,34 @@
 ---
-description: Bei der Weiterleitung wird eine eingehende Sitzung an eine andere Zieladresse umgeleitet.
+description: Weiterleitung ist die Umleitung einer eingehenden Sitzung an eine andere Zieladresse.
 ms.assetid: c70bf596-b2a4-46ec-9b1a-c9d948768b51
 title: Weiter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4154e2bb6f8c688feffe2e33d3c5988b0b7da27b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ddddd21a945c3ca63a5c9040b8eabe0d1056b74b2f819f3fb62dbd8b760aaca3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862619"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119660850"
 ---
 # <a name="forward"></a>Weiter
 
-Bei der Weiterleitung wird eine eingehende Sitzung an eine andere Zieladresse umgeleitet. TAPI ermöglicht es einer Anwendung, eine Liste von Weiterleitungs Bedingungen für eine Adresse anzugeben. Weiterleitungs Bedingungen können für jede aufrufende Adresse so fein wie ein anderes Ziel und [**Weiterleitungs Modus**](./lineforwardmode--constants.md) sein.
+Weiterleitung ist die Umleitung einer eingehenden Sitzung an eine andere Zieladresse. TAPI ermöglicht einer Anwendung, eine Liste der Weiterleitungsbedingungen für eine Adresse anzugeben. Weiterleitungsbedingungen können so genau wie ein anderes Ziel und [**Weiterleitungsmodus**](./lineforwardmode--constants.md) für jede Aufruferadresse sein.
 
-Der Weiterleitungs Vorgang kann auch verwendet werden, um eine selektive Funktion zum stören von Funktionen zu implementieren, indem einige Aufrufer an Voicemail weitergeleitet werden und anderen Benutzer den abschlussversuch gestatten.
+Der Weiterleitungsvorgang kann auch verwendet werden, um ein selektives Feature ohne Störung zu implementieren, indem einige Anrufer an Voicemail weitergeleitet werden und andere versuchen, den Abschluss zu versuchen.
 
-Der Weiterleitungs Vorgang kann auch alle derzeit gültigen Weiterleitungen abbrechen.
+Der Weiterleitungsvorgang kann auch alle derzeit wirksamen Weiterleitungen abbrechen.
 
-Einige Dienstanbieter erfordern, dass eine Anwendung vor einem Weiterleitungs Vorgang einen Beratungs Rückruf erstellt. Der Weiterleitungs Vorgang wird dann als Zeiger auf den-Rückruf übermittelt.
+Einige Dienstanbieter erfordern, dass eine Anwendung vor einem Weiterleitungsvorgang einen Beratungsaufruf erstellt. Der Weiterleitungsvorgang wird dann mit einem Zeiger auf den Anruf der Beratung übergeben.
 
 Nicht alle Dienstanbieter unterstützen die Verwendung dieses Vorgangs.
 
-**TAPI 2. x:** Wenn Sie [**lineforward**](/windows/win32/api/tapi/nf-tapi-lineforward) festlegen möchten, um [**linegetaddressstatus**](/windows/win32/api/tapi/nf-tapi-linegetaddressstatus)zu erhalten, ändern Sie die [**Zeile \_ addressstate**](./line-addressstate.md) -Benachrichtigungs Meldung mit lineaddressstate \_ Forward.
+**TAPI 2.x:** Um [**lineForward**](/windows/win32/api/tapi/nf-tapi-lineforward) zum Abrufen von [**lineGetAddressStatus**](/windows/win32/api/tapi/nf-tapi-linegetaddressstatus)festzulegen, ändern Sie die [**LINE \_ ADDRESSSTATE-Benachrichtigungsmeldung**](./line-addressstate.md) mit LINEADDRESSSTATE \_ FORWARD.
 
-**TAPI 3. x:** Weitere Informationen finden Sie unter [**itaddress:: Forward**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddress-forward), [**itaddress:: get \_ currentforwardinfo**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddress-get_currentforwardinfo), Change Notification: [**itadressssevent:: get \_ Event**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddressevent-get_event) with AE \_ Forward.
+**TAPI 3.x:** Siehe [**ITAddress::Forward**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddress-forward), [**ITAddress::get \_ CurrentForwardInfo**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddress-get_currentforwardinfo), Änderungsbenachrichtigung: [**ITAddressEvent::get \_ Event**](/windows/desktop/api/tapi3if/nf-tapi3if-itaddressevent-get_event) with AE \_ FORWARD.
 
 > [!Note]  
-> Es ist möglicherweise nicht möglich, dass ein Dienstanbieter immer weiß, welche Weiterleitung für eine Adresse wirksam ist. Die Weiterleitung kann auf eine Weise abgebrochen oder geändert werden, die nicht zur Benachrichtigung an den Dienstanbieter führt.
+> Es kann für einen Dienstanbieter unmöglich sein, jederzeit zu wissen, welche Weiterleitung für eine Adresse wirksam ist. Die Weiterleitung kann auf eine Weise abgebrochen oder geändert werden, die nicht zu einer Benachrichtigung an den Dienstanbieter führt.
 
  
 

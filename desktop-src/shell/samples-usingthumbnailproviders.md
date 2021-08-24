@@ -1,5 +1,5 @@
 ---
-description: Zeigt, wie die IThumbnailProvider-Schnittstelle verwendet wird, um die Miniaturansicht für ein Element aus dem Windows-Miniatur Ansichts Cachesystem zu extrahieren.
+description: Veranschaulicht, wie die IThumbnailProvider-Schnittstelle verwendet wird, um die Miniaturansicht für ein Element aus dem Windows Cachesystem zu extrahieren.
 title: Verwenden von Miniaturansichtenanbieter (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 7e0cab8db27ddfdca0db5a7a08b6329c44776fc2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ac28ae28f3d5ef858b3f4cab328f94c4df245dc1681b263ca22fa34f7f6399df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119592870"
 ---
 # <a name="using-thumbnail-providers-sample"></a>Verwenden von Miniaturansichtenanbieter (Beispiel)
 
-Zeigt, wie die [**IThumbnailProvider**](/windows/desktop/api/Thumbcache/nn-thumbcache-ithumbnailprovider) -Schnittstelle verwendet wird, um die Miniaturansicht für ein Element aus dem Windows-Miniatur Ansichts Cachesystem zu extrahieren.
+Veranschaulicht, wie die [**IThumbnailProvider-Schnittstelle**](/windows/desktop/api/Thumbcache/nn-thumbcache-ithumbnailprovider) verwendet wird, um die Miniaturansicht für ein Element aus dem Windows Cachesystem zu extrahieren.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Produkt                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 6.1                     |
@@ -40,21 +40,21 @@ Dieses Thema enthält folgende Abschnitte:
 
  
 
-Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Infodatei.
+Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Usingthumbnailproviders-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/UsingThumbnailProviders) |
+| GitHub  | [UsingThumbnailProviders-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/UsingThumbnailProviders) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
  
 

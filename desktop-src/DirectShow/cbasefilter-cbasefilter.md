@@ -1,7 +1,7 @@
 ---
-description: CBaseFilter.CBaseFilter(const TCHAR \* , LPUNKNOWN, CCritSec \* , REFCLSID, HRESULT \* ) -Konstruktormethode.
+description: CBaseFilter.CBaseFilter(const TCHAR \* , LPUNKNOWN, CCritSec \* , REFCLSID, HRESULT \* ) konstruktor – Konstruktormethode.
 ms.assetid: 705a075e-3f0f-4e7d-94b6-3458f87b6718
-title: CBaseFilter.CBaseFilter(const *TCHAR, LPUNKNOWN, CCritSec*, REFCLSID, HRESULT*) -Konstruktor (Amfilter.h)
+title: CBaseFilter.CBaseFilter(const TCHAR *, LPUNKNOWN, CCritSec*, REFCLSID, HRESULT*) konstruktor (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f85fc666d299d5e120f71cfeaec5fc2f88e72761
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 023de6fd8df37930954b59114e4e00fa409b7803a83ae15b31f6816c4dfdffbb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108120108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119640710"
 ---
-# <a name="cbasefiltercbasefilterconst-tchar-lpunknown-ccritsec-refclsid-hresult-constructor"></a>CBaseFilter.CBaseFilter(const TCHAR \* , LPUNKNOWN, CCritSec \* , REFCLSID, HRESULT \* ) -Konstruktor
+# <a name="cbasefiltercbasefilterconst-tchar-lpunknown-ccritsec-refclsid-hresult-constructor"></a>CBaseFilter.CBaseFilter(const TCHAR \* , LPUNKNOWN, CCritSec \* , REFCLSID, HRESULT \* ) konstruktor
 
 Konstruktormethode.
 
@@ -56,7 +56,7 @@ Zeiger auf eine Zeichenfolge, die den Namen des Filters enthält, zu Debugzwecke
 *Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle** des aggregierenden Objekts. Legen Sie andernfalls diesen Parameter auf **NULL** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle des aggregierenden** Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
 
 </dd> <dt>
 
@@ -81,25 +81,25 @@ Zeiger auf einen **HRESULT-Wert.** Der Konstruktor ignoriert diesen Parameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für das kritische Abschnittsobjekt würden Sie in der Regel einen der folgenden Schritte ausführen:
+Für das kritische Abschnittsobjekt führen Sie in der Regel einen der folgenden Schritte aus:
 
--   Leiten Sie eine Klasse ab, die sowohl **CBaseFilter** als auch **CCritSec** erbt. Übergeben Sie für *pLock* den `this` Zeiger.
+-   Leiten Sie eine Klasse ab, die **sowohl CBaseFilter** als auch **CCritSec erbt.** Übergeben *Sie für pLock* den `this` Zeiger.
 -   Leiten Sie eine Klasse ab, die **CBaseFilter erbt** und eine **CCritSec-Membervariable** enthält. Übergeben *Sie für pLock* die Adresse dieser Variablen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

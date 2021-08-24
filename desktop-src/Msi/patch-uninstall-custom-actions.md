@@ -1,35 +1,35 @@
 ---
-description: Mit der Option zum Deinstallieren von benutzerdefinierten Aktionen können Sie angeben, dass das Installationsprogramm die benutzerdefinierte Aktion nur dann ausführen soll, wenn ein Patch deinstalliert wird.
+description: Sie können die Option Custom Action Patch Uninstall verwenden, um anzugeben, dass das Installationsprogramm die benutzerdefinierte Aktion nur ausführen soll, wenn ein Patch deinstalliert wird.
 ms.assetid: c741aa40-ba4c-459e-936a-19c002620c30
-title: Patch zum Deinstallieren benutzerdefinierter Aktionen
+title: Benutzerdefinierte Aktionen zur Patchdeinstallation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b90cfffbdb37f1f2fab046b794010a790e9a5212
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f69077337b80177984ff43f12038edb1daa48215f92c627f4ed22ea2f69c876b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145423"
 ---
-# <a name="patch-uninstall-custom-actions"></a>Patch zum Deinstallieren benutzerdefinierter Aktionen
+# <a name="patch-uninstall-custom-actions"></a>Benutzerdefinierte Aktionen zur Patchdeinstallation
 
-Mit der Option zum [Deinstallieren von benutzerdefinierten Aktionen](custom-action-patch-uninstall-option.md) können Sie angeben, dass das Installationsprogramm die benutzerdefinierte Aktion nur dann ausführen soll, wenn ein Patch deinstalliert wird.
+Sie können die Option [Custom Action Patch Uninstall verwenden,](custom-action-patch-uninstall-option.md) um anzugeben, dass das Installationsprogramm die benutzerdefinierte Aktion nur ausführen soll, wenn ein Patch deinstalliert wird.
 
-**Windows Installer 4,5 und höher:** Sie können die [Option zum Deinstallieren von benutzerdefinierten Aktionen](custom-action-patch-uninstall-option.md) verwenden, um anzugeben, dass das Installationsprogramm nur die benutzerdefinierte Aktion ausführen soll, wenn ein Patch deinstalliert wird.
+**Windows Installer 4.5 und höher:** Sie können die Deinstallationsoption [Benutzerdefinierte Aktionspatch verwenden,](custom-action-patch-uninstall-option.md) um anzugeben, dass das Installationsprogramm die benutzerdefinierte Aktion nur ausführen soll, wenn ein Patch deinstalliert wird.
 
-**[Windows Installer 4,0 und früher](not-supported-in-windows-installer-4-0.md): * *
+**[Windows Installer 4.0 und früher:](not-supported-in-windows-installer-4-0.md)**
 
-Die [Option zum Deinstallieren des benutzerdefinierten Aktions Patches](custom-action-patch-uninstall-option.md) ist nicht verfügbar. Es gibt keine Möglichkeit, eine [benutzerdefinierte Aktion](custom-actions.md) innerhalb eines Patchpakets zu markieren, die ausgeführt wird, wenn der Patch deinstalliert wird, da das Installationsprogramm nicht die zu installierenden Patchpakete anwendet.
+Die [Option "Patch deinstallieren" für benutzerdefinierte Aktionen](custom-action-patch-uninstall-option.md) ist nicht verfügbar. Es gibt keine Methode [](custom-actions.md) zum Markieren einer benutzerdefinierten Aktion innerhalb eines Patchpakets, die ausgeführt werden soll, wenn der Patch deinstalliert wird, da das Installationsprogramm die zu deinstallierenden Patchpakete nicht übernimmt.
 
-Um eine [benutzerdefinierte Aktion](custom-actions.md) auszuführen, wenn ein bestimmter Patch deinstalliert wird, muss die benutzerdefinierte Aktion entweder in der ursprünglichen Anwendung vorhanden sein oder sich in einem Patch für das Produkt befinden, das immer angewendet wird.
+Damit eine [benutzerdefinierte](custom-actions.md) Aktion ausgeführt wird, wenn ein bestimmter Patch deinstalliert wird, muss die benutzerdefinierte Aktion entweder in der ursprünglichen Anwendung oder in einem Patch für das Produkt vorhanden sein, das immer angewendet wird.
 
-Entwickler können die [**msipatchremovallist**](msipatchremovallist.md) -Eigenschaft verwenden, um ein Windows Installer Paket oder einen Patch zu erstellen, der beim Entfernen eines Patches [benutzerdefinierte Aktionen](custom-actions.md) ausführt. Die benutzerdefinierte Aktion kann im ursprünglichen Installationspaket, einem Patch, der bereits auf das Paket angewendet wurde, oder einem Patch, bei dem es sich nicht um einen nicht [installierbaren Patch](uninstallable-patches.md)handelt, erstellt werden. Die benutzerdefinierte Aktion kann für die **msipatchremovallist** -Eigenschaft in den Sequenz Tabellen conditionalisiert werden. Weitere Informationen zu conditionalisierungsaktionen finden [Sie unter Verwenden von Eigenschaften in Bedingungs Anweisungen](using-properties-in-conditional-statements.md) .
+Entwickler können die [**MsiPatchRemovalList-Eigenschaft**](msipatchremovallist.md) verwenden, um ein Windows [](custom-actions.md) Installer-Paket oder einen Patch zu erstellen, das benutzerdefinierte Aktionen zum Entfernen eines Patches ausführt. Die benutzerdefinierte Aktion kann im ursprünglichen Installationspaket, einem Patch, der bereits auf das Paket angewendet wurde, oder einem Patch erstellt werden, der kein deinstallationsfähiger [Patch ist.](uninstallable-patches.md) Die benutzerdefinierte Aktion kann für die **MsiPatchRemovalList-Eigenschaft** in den Sequenztabellen bedingt werden. Weitere [Informationen zum Bedingten Festlegen](using-properties-in-conditional-statements.md) von Aktionen finden Sie unter Verwenden von Eigenschaften in bedingten Anweisungen.
 
-Die benutzerdefinierte Aktion kann die GUIDs von Patches abrufen, die aus dem Wert der [**msipatchremovallist**](msipatchremovallist.md) -Eigenschaft entfernt werden. Die benutzerdefinierte Aktion kann ermitteln, ob der Installationsstatus des Patches angewendet, veraltet oder ersetzt wird, indem die [**msigetpatchinfoex**](/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa) -Eigenschaft oder die [**patchproperty**](patch-patchproperty.md) -Eigenschaft des [Patch-Objekts](patch-object.md)aufgerufen wird.
+Die benutzerdefinierte Aktion kann die GUIDs von Patches abrufen, die aus dem Wert der [**MsiPatchRemovalList-Eigenschaft entfernt**](msipatchremovallist.md) werden. Die benutzerdefinierte Aktion kann bestimmen, ob der Installationsstatus des Patches angewendet, veraltet oder ersetzt wird, indem [**msiGetPatchInfoEx**](/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa) oder die [**PatchProperty-Eigenschaft**](patch-patchproperty.md) des [Patch-Objekts aufruft.](patch-object.md)
 
-Wenn für die benutzerdefinierte Aktion besondere Metadaten aus dem Patch erforderlich sind, sollte der Patch eine benutzerdefinierte Aktion enthalten, die die Metadaten in einen Registrierungs-oder Datei Speicherort schreibt, wenn der Patch angewendet wird. Die benutzerdefinierte Aktion in der ursprünglichen Anwendung oder ein Patch, das immer angewendet wird, kann die zum Entfernen der Änderungen des Patches benötigten Informationen abrufen.
+Wenn die benutzerdefinierte Aktion spezielle Metadaten aus dem Patch erfordert, sollte der Patch eine benutzerdefinierte Aktion enthalten, die die Metadaten in eine Registrierung oder einen Dateispeicherort schreibt, wenn der Patch angewendet wird. Die benutzerdefinierte Aktion in der ursprünglichen Anwendung oder ein Patch, der immer angewendet wird, kann die Informationen abrufen, die zum Entfernen der Patchänderungen erforderlich sind.
 
-Patches, die Änderungen vornehmen, die nur schwer rückgängig gemacht werden können, sollten nicht als [nicht installierbare Patches](uninstallable-patches.md)gekennzeichnet werden.
+Patches, die Änderungen vornehmen, die schwer rückgängig gemacht werden können, sollten nicht als [deinstallationsfähige Patches markiert werden.](uninstallable-patches.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -41,22 +41,22 @@ Patches, die Änderungen vornehmen, die nur schwer rückgängig gemacht werden k
 [Entfernen von Patches](removing-patches.md)
 </dt> <dt>
 
-[Nicht installierbare Patches](uninstallable-patches.md)
+[Deinstallationsfähige Patches](uninstallable-patches.md)
 </dt> <dt>
 
-[Patches werden deinstalliert.](uninstalling-patches.md)
+[Deinstallieren von Patches](uninstalling-patches.md)
 </dt> <dt>
 
-[**Msipatchremove**](msipatchremove.md)
+[**MSIPATCHREMOVE**](msipatchremove.md)
 </dt> <dt>
 
-[**Msienumapplicationsex**](/windows/desktop/api/Msi/nf-msi-msienumproductsexa)
+[**MsiEnumapplicationsEx**](/windows/desktop/api/Msi/nf-msi-msienumproductsexa)
 </dt> <dt>
 
-[**Msigetpatchinfoex**](/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa)
+[**MsiGetPatchInfoEx**](/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa)
 </dt> <dt>
 
-[**Msiremovepatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)
+[**MsiRemovePatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)
 </dt> </dl>
 
  

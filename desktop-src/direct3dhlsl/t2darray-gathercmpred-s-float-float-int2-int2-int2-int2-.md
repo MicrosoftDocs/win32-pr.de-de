@@ -1,9 +1,9 @@
 ---
-title: 'Texture2DArray:: gathercmpred (S, float, float, int2, int2, int2, int2)-Funktion'
-description: 'Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der roten Komponente mit einem Vergleichswert zurückgegeben. | Texture2DArray:: gathercmpred (S, float, float, int2, int2, int2, int2)-Funktion'
+title: Texture2DArray::GatherCmpRed(S,float,float,int2,int2,int2,int2)-Funktion
+description: Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer roten Komponente mit einem Vergleichswert zurück. | Texture2DArray::GatherCmpRed(S,float,float,int2,int2,int2,int2)-Funktion
 ms.assetid: B436FB9A-C55C-477F-B8BE-933B1EB04AE1
 keywords:
-- Gathercmpred-Funktion HLSL
+- GatherCmpRed-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2d621bf26d097eeac17962fd14557f73f295a2e3
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 93ee67c536934adb3187a5e224be0043167f9836e391d86556b8e76871563aad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104050792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119485870"
 ---
-# <a name="texture2darraygathercmpredsfloatfloatint2int2int2int2-function"></a>Texture2DArray:: gathercmpred (S, float, float, int2, int2, int2, int2)-Funktion
+# <a name="texture2darraygathercmpredsfloatfloatint2int2int2int2-function"></a>Texture2DArray::GatherCmpRed(S,float,float,int2,int2,int2,int2)-Funktion
 
-Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der roten Komponente mit einem Vergleichswert zurückgegeben.
+Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer roten Komponente mit einem Vergleichswert zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,81 +48,81 @@ TemplateType GatherCmpRed(
 *S* \[ in\]
 </dt> <dd>
 
-Typ: **samplerstate**
+Typ: **SamplerState**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*CompareValue* \[ in\]
+*CompareValue* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Ein Wert, der jeweils mit jedem Stichproben Wert verglichen werden soll.
+Ein -Wert, der mit jedem Stichprobenwert verglichen werden soll.
 
 </dd> <dt>
 
-*Offset1* \[ in\]
+*Offset1* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die erste Offset-Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die erste Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset2* \[ in\]
+*Offset2* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die zweite Offset Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die zweite Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset3* \[ in\]
+*Offset3* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die dritte Offset Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die dritte Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Offset4* \[ in\]
+*Offset4* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Die vierte Offset-Komponente, die vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Die vierte Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **TemplateType**
+Typ: **TemplateType**
 
-Ein vier komponentenwert, dessen Typ mit dem Vorlagentyp identisch ist.
+Ein Wert mit vier Komponenten, dessen Typ mit dem Vorlagentyp identisch ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -130,11 +130,11 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Gathercmpred-Methoden](texture2darray-gathercmpred.md)
+[GatherCmpRed-Methoden](texture2darray-gathercmpred.md)
 </dt> </dl>
 
  

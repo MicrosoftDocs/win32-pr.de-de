@@ -1,43 +1,43 @@
 ---
-description: Wenn mehrere Monitore Teil des Desktops sind, können Objekte nahtlos zwischen Monitoren übertragen werden.
+description: Wenn mehrere Monitore Teil des Desktops sind, können Objekte nahtlos zwischen Monitoren ausgeführt werden.
 ms.assetid: eb7576c6-322c-48d0-abbb-bdc3b34976c3
-title: Informationen zu mehreren Anzeige Monitoren
+title: Informationen zu mehreren Anzeigemonitoren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5997e39768d01522ae1fdd2e976c611e67826350
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 31c28c8ccbd9abbcbcee696bb927c5aa484df7b23d6aba811ff95145d447109b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119400510"
 ---
-# <a name="about-multiple-display-monitors"></a>Informationen zu mehreren Anzeige Monitoren
+# <a name="about-multiple-display-monitors"></a>Informationen zu mehreren Anzeigemonitoren
 
-Wenn mehrere Monitore Teil des Desktops sind, können Objekte nahtlos zwischen Monitoren übertragen werden. Das heißt, Sie können Fenster oder Verknüpfungen von einem Monitor auf einen anderen ziehen, und Sie können die Größe von Fenstern anpassen, um mehr als einen Monitor abzudecken. Wenn außerdem ein Monitor oberhalb eines anderen Monitors installiert wird, wird ein Cursor, der den unteren Rand des oberen Monitors verlässt, oben im unteren Monitor angezeigt.
+Wenn mehrere Monitore Teil des Desktops sind, können Objekte nahtlos zwischen Monitoren ausgeführt werden. Das heißt, Sie können Fenster oder Tastenkombinationen von einem Monitor auf einen anderen ziehen, und Sie können Fenster so sgrößern, dass sie mehrere Monitore abdecken. Wenn ein Monitor über einem anderen installiert ist, wird oben auf dem unteren Monitor ein Cursor angezeigt, der den unteren Rand des oberen Monitors verlässt.
 
-In der Regel ordnet ein Benutzer die Monitore im System an, um die Anordnung der physischen Anzeigeeinheiten widerzuspiegeln. z. b. nebeneinander oder eins auf der obersten Seite der anderen. Der Benutzer führt dies über die Registerkarte Monitore durch, die im Dialogfeld **Anzeigeeigenschaften** über die Systemsteuerung die Registerkarte **Einstellungen** ersetzt. Die Monitore müssen einen zusammenhängenden Bereich bilden, d. h. jeder Monitor berührt einen anderen Monitor auf mindestens einem Teil eines Edge.
+In der Regel ordnet ein Benutzer die Monitore im System so an, dass sie die Anordnung der physischen Anzeigeeinheiten widerspiegeln. z. B. nebeneinander oder 1-on-top-of-the-other. Der Benutzer führt dies mit der  Registerkarte Monitore durch, wodurch die Registerkarte Einstellungen registerkarte im Dialogfeld "Anzeigeeigenschaften"  durch Systemsteuerung. Die Monitore müssen einen zusammenhängenden Bereich bilden, d.&a; jeder Monitor berührt einen anderen Monitor an mindestens einem Teil eines Edges.
 
-Wenn ein Fenster verschoben oder seine Größe geändert wird, ist ein Teil der Beschriftung immer sichtbar, sodass der Benutzer das Fenster mit der Maus verschieben und die Größe ändern kann. Die Cursor Bewegung ist auf den Bereich der Monitore beschränkt, sodass Sie immer sichtbar ist. Shellsymbole befinden sich auf demselben Monitor wie die Taskleiste, und die Taskleiste kann sich auf einem beliebigen Monitor befinden. Weitere Informationen finden Sie unter über [Legungen zum Monitor für ältere Programme](multiple-monitor-considerations-for-older-programs.md).
+Wenn ein Fenster verschoben oder seine Größe geändert wird, ist ein Teil der Beschriftung immer sichtbar, damit der Benutzer das Fenster mit der Maus verschieben und seine Größe ändern kann. Die Cursorbewegung ist auf den Bereich der Monitore beschränkt, sodass sie immer sichtbar ist. Shellsymbole werden auf demselben Monitor wie die Taskleiste positioniert, und die Taskleiste kann sich auf jedem Monitor befinden. Weitere Informationen finden Sie unter Überlegungen zu mehreren Monitoren [für ältere Programme.](multiple-monitor-considerations-for-older-programs.md)
 
-Ein System mit mehreren Monitoren wirkt sich auf bestimmte Tastenkombinationen aus. Die Tastenkombination ALT + PRINTSCRN erstellt eine Momentaufnahme des Vordergrund Fensters, wie immer. Der PRINTSCRN-Schlüssel erstellt jedoch eine Momentaufnahme des Monitors mit der Maus. Die Tastenkombination STRG + PRINTSCRN erstellt eine Momentaufnahme des gesamten virtuellen Bildschirms. Weitere Informationen finden Sie auf [dem virtuellen Bildschirm](the-virtual-screen.md).
+Ein System mit mehreren Monitoren wirkt sich auf bestimmte Tastenkombinationen aus. Die Tastenkombination ALT+PRINTSCRN erstellt wie immer eine Momentaufnahme des Vordergrundfensters. Der PRINTSCRN-Schlüssel erstellt jedoch eine Momentaufnahme des Monitors mit der Maus. Die Tastenkombination STRG+PRINTSCRN erstellt eine Momentaufnahme des gesamten virtuellen Bildschirms. Weitere Informationen finden Sie unter [Der virtuelle Bildschirm](the-virtual-screen.md).
 
-Die Unterstützung für mehrere Monitore wirkt sich nicht auf die Leistung von Anwendungen aus, wenn Sie in einer einzigen Anzeige Umgebung ausgeführt wird. Dies bedeutet, dass bei der Ausführung auf einem einzelnen Anzeigesystem kein zusätzlicher mehr Aufwand im Hochleistungs-Grafik Vorgangs Code vorhanden ist. In einem System mit mehreren Monitoren ist die Leistung jedoch geringfügig beeinträchtigt, wenn eine Anwendung nur auf einem der Grafikgeräte ausgeführt wird. Außerdem kann die Leistung erheblich beeinträchtigt werden, wenn eine Anwendung mehrere anzeigen umfasst, insbesondere für grafikintensive Vorgänge.
+Die Unterstützung mehrerer Monitore wirkt sich nicht auf die Leistung von Anwendungen aus, wenn sie in einer einzelnen Anzeigeumgebung ausgeführt werden. Das bedeutet, dass bei der Ausführung auf einem einzelnen Anzeigesystem kein zusätzlicher Mehraufwand im Code für leistungsstarke Grafikvorgänge vorhanden ist. In einem System mit mehreren Monitoren wird die Leistung jedoch geringfügig beeinträchtigt, wenn eine Anwendung nur auf einem der Grafikgeräte ausgeführt wird. Darüber hinaus kann die Leistung stark beeinträchtigt werden, wenn eine Anwendung mehrere Anzeigen umfasst, insbesondere bei grafikintensiven Vorgängen.
 
-Der *voll Bildschirm* ist eine vom Betriebssystem bereitgestellte Funktion, mit der ein Benutzer eine Anwendung in einen bestimmten Zustand umschalten kann, in dem die Anwendung direkt auf die VGA-Grafikhardware zugreifen kann. Dies ist ein wichtiges Feature für Spiele und andere Grafik orientierte Anwendungen, die eine hohe Leistung erfordern. Außerdem wird es häufig von Entwicklern für die Textbearbeitung verwendet, da es sehr schnelles Scrollen von Text ermöglicht.
+*Der Vollbildmodus* ist ein Feature des Betriebssystems, mit dem ein Benutzer eine Anwendung in einen speziellen Zustand umschalten kann, in dem die Anwendung direkt auf VGA-Grafikhardware zugreifen kann. Dies ist ein wichtiges Feature für Spiele und andere grafikorientierte Anwendungen, die eine hohe Leistung erfordern. Außerdem wird es häufig von Entwicklern für die Textbearbeitung verwendet, da es ein sehr schnelles Scrollen von Text ermöglicht.
 
-In einer Umgebung mit mehreren Monitoren kann nur ein Grafikgerät mit VGA kompatibel sein. Dies ist eine Einschränkung der Computer Hardware, die erfordert, dass nur ein Gerät auf Hardware Adressen antwortet. Da der VGA-Hardware Kompatibilitäts Standard bestimmte Hardware Adressen erfordert, kann nur ein VGA-Grafikgerät auf einem Computer vorhanden sein, und nur dieses Gerät kann physisch auf VGA-Adressen reagieren. Anwendungen, die einen Vollbildmodus erfordern, werden daher nur auf einem bestimmten Gerät ausgeführt, das die VGA-Hardware Kompatibilität unterstützt.
+In einer Umgebung mit mehreren Monitoren kann nur ein Grafikgerät VGA-kompatibel sein. Dies ist eine Einschränkung der Computerhardware, die erfordert, dass nur ein Gerät auf eine Hardwareadresse reagiert. Da der VGA-Hardwarekompatibilitätsstandard bestimmte Hardwareadressen erfordert, kann auf einem Computer nur ein VGA-Grafikgerät vorhanden sein, und nur dieses Gerät kann physisch auf VGA-Adressen reagieren. Daher werden Anwendungen, für die ein Vollbildmodus erforderlich ist, nur auf dem gerät ausgeführt, das VGA-Hardwarekompatibilität unterstützt.
 
 Diese Übersicht enthält Informationen zu den folgenden Themen.
 
 -   [Der virtuelle Bildschirm](the-virtual-screen.md)
--   [Hmonitor und der Gerätekontext](hmonitor-and-the-device-context.md)
--   [Enumeration und Anzeige Steuerung](enumeration-and-display-control.md)
--   [Mehrere Monitor Systemmetriken](multiple-monitor-system-metrics.md)
--   [Verwenden mehrerer Monitore als unabhängige Anzeige](using-multiple-monitors-as-independent-displays.md)
--   [Farben auf mehreren Anzeige Monitoren](colors-on-multiple-display-monitors.md)
--   [Positionieren von Objekten auf mehreren Anzeige Monitoren](positioning-objects-on-multiple-display-monitors.md)
--   [Mehrere Monitor Anwendungen auf verschiedenen Systemen](multiple-monitor-applications-on-different-systems.md)
--   [Überlegungen zu mehreren überwachen für ältere Programme](multiple-monitor-considerations-for-older-programs.md)
+-   [HMONITOR und der Gerätekontext](hmonitor-and-the-device-context.md)
+-   [Enumerations- und Anzeigesteuer steuerelement](enumeration-and-display-control.md)
+-   [Mehrere Systemmetriken überwachen](multiple-monitor-system-metrics.md)
+-   [Verwenden mehrerer Monitore als unabhängige Anzeigen](using-multiple-monitors-as-independent-displays.md)
+-   [Farben auf mehreren Anzeigemonitoren](colors-on-multiple-display-monitors.md)
+-   [Positionieren von Objekten auf mehreren Anzeigemonitoren](positioning-objects-on-multiple-display-monitors.md)
+-   [Mehrere Monitoranwendungen auf unterschiedlichen Systemen](multiple-monitor-applications-on-different-systems.md)
+-   [Überlegungen zu mehreren Monitoren für ältere Programme](multiple-monitor-considerations-for-older-programs.md)
 
  
 

@@ -1,6 +1,6 @@
 ---
-title: 'Texture2DArray:: Texture2DArray Gather-Methoden'
-description: Führt eine Texture2DArray aus und gibt alle vier Komponenten zurück.
+title: Texture2DArray::Texture2DArray Gather-Methoden
+description: Stichproben von Texture2DArray und Rückgabe aller vier Komponenten.
 ms.assetid: eea1dd00-0061-4601-a218-979eb0ecd36d
 keywords:
 - Gather-Methoden HLSL
@@ -12,27 +12,27 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: cd10959490a85583cab01814f9cdb012859317a4
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 4b973060e30385087c653e47c692ac4d44e3eb63f528eb4e6f2ced65431100c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104981024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119485210"
 ---
-# <a name="texture2darraygather-methods"></a>Texture2DArray:: Gather-Methoden
+# <a name="texture2darraygather-methods"></a>Texture2DArray::Gather-Methoden
 
-Gibt die vier texelwerte eines [**Texture2DArray**](sm5-object-texture2darray.md) zurück, die in einem bilinearen Filter Vorgang verwendet werden.
+Gibt die vier Texelwerte eines [**Texture2DArray**](sm5-object-texture2darray.md) zurück, die in einem bilinealen Filtervorgang verwendet werden.
 
-Weitere Informationen zum Beschreiben der zugrunde liegenden dxbc-Anweisung finden Sie in der Dokumentation zu [gather4](./gather4--sm5---asm-.md) .
+Weitere Informationen zur zugrunde liegenden DXBC-Anweisung finden Sie in der Dokumentation zu [gather4.](./gather4--sm5---asm-.md)
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                | BESCHREIBUNG                                                                                                               |
+| Methode                                                                | Beschreibung                                                                                                               |
 |:----------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------|
-| [**Gather (S, float, int)**](sm5-object-texture2darray-gather.md)        | Gibt die vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.<br/>                                 |
-| [**Gather (S, float, int, uint)**](t2darray-gather-s-float-int-uint-.md)  | Gibt die vier texelwerte zurück, die in einem bilinearen Filter Vorgang zusammen mit dem Status der Kachel Zuordnung verwendet werden.<br/> |
+| [**Gather(S,float,int)**](sm5-object-texture2darray-gather.md)        | Gibt die vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.<br/>                                 |
+| [**Gather(S,float,int,uint)**](t2darray-gather-s-float-int-uint-.md)  | Gibt die vier Texelwerte zurück, die in einem bilinealen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden.<br/> |
 
 
 

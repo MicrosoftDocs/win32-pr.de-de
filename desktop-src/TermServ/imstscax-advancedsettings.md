@@ -1,30 +1,30 @@
 ---
-title: Imstscax advancedsettings-Eigenschaft
-description: Ruft einen imstscadvancedsettings-Schnittstellen Zeiger ab.
+title: IMsTscAx AdvancedSettings(Eigenschaft)
+description: Ruft einen IMsTscAdvancedSettings-Schnittstellenzeiger ab.
 ms.assetid: 1c0e2216-0c65-48ad-b0f6-3a766c8fa44e
 ms.tgt_platform: multiple
 keywords:
-- Advancedsettings-Eigenschaft Remotedesktopdienste
-- Advancedsettings-Eigenschaft Remotedesktopdienste, imstscax-Schnittstelle
-- Imstscax-Schnittstelle Remotedesktopdienste, advancedsettings-Eigenschaft
-- Advancedsettings-Eigenschaft Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient-Schnittstelle Remotedesktopdienste, advancedsettings-Eigenschaft
-- Advancedsettings-Eigenschaft Remotedesktopdienste, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2 Interface Remotedesktopdienste, advancedsettings-Eigenschaft
-- Advancedsettings-Eigenschaft Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3 Interface Remotedesktopdienste, advancedsettings-Eigenschaft
-- Advancedsettings-Eigenschaft Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4 Interface Remotedesktopdienste, advancedsettings-Eigenschaft
-- Advancedsettings-Eigenschaft Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5 Interface Remotedesktopdienste, advancedsettings-Eigenschaft
-- Advancedsettings-Eigenschaft Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6 Interface Remotedesktopdienste, advancedsettings-Eigenschaft
-- Advancedsettings-Eigenschaft Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7 Interface Remotedesktopdienste, advancedsettings-Eigenschaft
-- Advancedsettings-Eigenschaft Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8 Interface Remotedesktopdienste, advancedsettings-Eigenschaft
-- Advancedsettings-Eigenschaft Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9 Interface Remotedesktopdienste, advancedsettings-Eigenschaft
+- AdvancedSettings-Remotedesktopdienste
+- AdvancedSettings-Eigenschaft Remotedesktopdienste , IMsTscAx-Schnittstelle
+- IMsTscAx-Schnittstelle Remotedesktopdienste , AdvancedSettings-Eigenschaft
+- AdvancedSettings-Eigenschaft Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , AdvancedSettings-Eigenschaft
+- AdvancedSettings-Eigenschaft Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste , AdvancedSettings-Eigenschaft
+- AdvancedSettings-Eigenschaft Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , AdvancedSettings-Eigenschaft
+- AdvancedSettings-Eigenschaft Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , AdvancedSettings-Eigenschaft
+- AdvancedSettings-Eigenschaft Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , AdvancedSettings-Eigenschaft
+- AdvancedSettings-Eigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , AdvancedSettings-Eigenschaft
+- AdvancedSettings-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , AdvancedSettings-Eigenschaft
+- AdvancedSettings-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , AdvancedSettings-Eigenschaft
+- AdvancedSettings-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , AdvancedSettings-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 98bb6b1d581704a0638a47310004777f020ce9bc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 46fa39bd56c33d35b96cf98b1756e13e0de1796bff12ad3cc32f99a341068e29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956460"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657290"
 ---
-# <a name="imstscaxadvancedsettings-property"></a>Imstscax:: advancedsettings-Eigenschaft
+# <a name="imstscaxadvancedsettings-property"></a>IMsTscAx::AdvancedSettings (Eigenschaft)
 
-Ruft einen [**imstscadvancedsettings**](imstscadvancedsettings-interface.md) -Schnittstellen Zeiger ab.
+Ruft einen [**IMsTscAdvancedSettings-Schnittstellenzeiger**](imstscadvancedsettings-interface.md) ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -80,13 +80,13 @@ HRESULT get_AdvancedSettings(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein [**imstscadvancedsettings**](imstscadvancedsettings-interface.md) -Schnittstellen Zeiger.
+Ein [**IMsTscAdvancedSettings-Schnittstellenzeiger.**](imstscadvancedsettings-interface.md)
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -100,7 +100,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imstscax ist als 8c11efae-92c3-11d1-bc1e-00c04fa31489 definiert.<br/>            |
+| IID<br/>                      | IID \_ IMsTscAx ist als 8C11EFAE-92C3-11D1-BC1E-00C04FA31489 definiert.<br/>            |
 
 
 
@@ -108,7 +108,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)
@@ -135,7 +135,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClient9**](imsrdpclient9.md)
 </dt> <dt>
 
-[**Imstscax**](imstscax-interface.md)
+[**IMsTscAx**](imstscax-interface.md)
 </dt> </dl>
 
  

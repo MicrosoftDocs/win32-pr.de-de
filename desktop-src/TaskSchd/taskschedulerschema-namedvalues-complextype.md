@@ -1,9 +1,9 @@
 ---
-title: komplexer namedValues-Typ
+title: NamedValues Complex Type
 description: Definiert ein Name-Wert-Paar, in dem der Name dem Wert zugeordnet ist.
 ms.assetid: 07c512fd-3eab-4238-8d75-83827a958a1e
 keywords:
-- komplexer namedValues-Typ Taskplaner
+- 'NamedValues: komplexer Taskplaner'
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5f18c9fddab58f33ffc724a3e8df7bd65583cb88
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9d54e7c33d0b7ab2e5be3c4de6f3f648398a7e65670c0379f5621ae9e8a8bd46
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513936"
 ---
-# <a name="namedvalues-complex-type"></a>komplexer namedValues-Typ
+# <a name="namedvalues-complex-type"></a>NamedValues Complex Type
 
 Definiert ein Name-Wert-Paar, in dem der Name dem Wert zugeordnet ist.
 
@@ -40,9 +40,9 @@ Definiert ein Name-Wert-Paar, in dem der Name dem Wert zugeordnet ist.
 
 
 
-| Element                                                        | type                                                | BESCHREIBUNG                                                                         |
+| Element                                                        | Typ                                                | Beschreibung                                                                         |
 |----------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------------------------------|
-| [**Wert**](taskschedulerschema-value-namedvalues-element.md) | [**NamedValue**](schema-namedvalue-complextype.md) | Gibt den Wert an, der einem Namen in einem Name-Wert-Paar zugeordnet ist.<br/> |
+| [**Wert**](taskschedulerschema-value-namedvalues-element.md) | [**namedValue**](schema-namedvalue-complextype.md) | Gibt den Wert an, der einem Namen in einem Name-Wert-Paar zugeordnet ist.<br/> |
 
 
 
@@ -52,8 +52,8 @@ Definiert ein Name-Wert-Paar, in dem der Name dem Wert zugeordnet ist.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

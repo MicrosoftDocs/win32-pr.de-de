@@ -1,8 +1,8 @@
 ---
-description: 'ChangeSecurityPermissions-Methode der Win32_Directory-Klasse: Ändert die Sicherheitsberechtigungen für die im Objektpfad angegebene logische Verzeichniseintragsdatei.'
+description: 'ChangeSecurityPermissions-Methode der Win32_Directory Klasse: Ändert die Sicherheitsberechtigungen für die im Objektpfad angegebene Logische Verzeichniseintragsdatei.'
 ms.assetid: de2b3269-61e0-484c-8bea-00578422491f
 ms.tgt_platform: multiple
-title: ChangeSecurityPermissions-Methode der Win32_Directory-Klasse
+title: ChangeSecurityPermissions-Methode der Win32_Directory Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 98c6026497496ab758c71a8a0403557ad2cacc7f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0eb6c8e86d21894bcf8abcf921706e46b78f45844d4bd7f66c8d6cfcfc019d5d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108091058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119323180"
 ---
 # <a name="changesecuritypermissions-method-of-the-win32_directory-class"></a>ChangeSecurityPermissions-Methode der Win32 \_ Directory-Klasse
 
-Die **WMI-Klassenmethode ChangeSecurityPermissions** ändert die Sicherheitsberechtigungen für die im Objektpfad angegebene logische Verzeichniseintragsdatei. Wenn die logische Datei ein Verzeichnis ist, ist **ChangeSecurityPermissions** rekursiv und ändert die Sicherheitsberechtigungen aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält. Die **ChangeSecurityPermissions-Klasse** gibt einen ganzzahligen Wert von 0 (null) zurück, wenn die Berechtigungen geändert werden, und eine andere Zahl, um einen Fehler anzugeben.
+Die **WMI-Klassenmethode ChangeSecurityPermissions** ändert die Sicherheitsberechtigungen für die logische Verzeichniseintragsdatei, die im Objektpfad angegeben ist. Wenn die logische Datei ein Verzeichnis ist, ist **ChangeSecurityPermissions** rekursiv und ändert die Sicherheitsberechtigungen aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält. Die **ChangeSecurityPermissions-Klasse** gibt einen ganzzahligen Wert von 0 (null) zurück, wenn die Berechtigungen geändert werden, und eine andere Zahl, um einen Fehler anzugeben.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,14 +46,14 @@ uint32 ChangeSecurityPermissions(
 *SecurityDescriptor* \[ In\]
 </dt> <dd>
 
-Ausdruck, der in eine Instanz von [**Win32 \_ SecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)aufgelöst wird. Dieser Deskriptor enthält neue Sicherheitsberechtigungen für die Instanz von [**Win32 \_ PageFile**](win32-pagefile.md).
+Ausdruck, der in eine Instanz von [**Win32 \_ SecurityDescriptor auflöset.**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) Dieser Deskriptor enthält neue Sicherheitsberechtigungen für die Instanz von [**Win32 \_ PageFile.**](win32-pagefile.md)
 
 </dd> <dt>
 
 *Option* \[ In\]
 </dt> <dd>
 
-Zu ändernde Sicherheitsberechtigungen. Verwenden Sie beispielsweise Folgendes, um die Sicherheit der Besitzer- und der Dacl-Zugriffssteuerungsliste (Discretionary Access Control List, DACL) zu ändern:
+Sicherheitsprivileg, das geändert werden soll. Verwenden Sie beispielsweise Folgendes, um die Sicherheit für Besitzer und dacläre Zugriffssteuerungsliste (Discretionary Access Control List, DACL) zu ändern:
 
 `Option = 1 + 4`
 
@@ -87,18 +87,18 @@ Oder
 
 <span id="CHANGE_DACL_SECURITY_INFORMATION"></span><span id="change_dacl_security_information"></span>
 
-<span id="CHANGE_DACL_SECURITY_INFORMATION"></span><span id="change_dacl_security_information"></span>**CHANGE \_ \_DACL-SICHERHEITSINFORMATIONEN \_** (4)
+<span id="CHANGE_DACL_SECURITY_INFORMATION"></span><span id="change_dacl_security_information"></span>**CHANGE \_ \_ \_ DACL-SICHERHEITSINFORMATIONEN** (4)
 
 
 </dt> <dd>
 
-Ändern Sie die DACL der logischen Datei.
+Ändern Sie die daCL der logischen Datei.
 
 </dd> <dt>
 
 <span id="CHANGE_SACL_SECURITY_INFORMATION"></span><span id="change_sacl_security_information"></span>
 
-<span id="CHANGE_SACL_SECURITY_INFORMATION"></span><span id="change_sacl_security_information"></span>**CHANGE \_ \_SACL-SICHERHEITSINFORMATIONEN \_** (8)
+<span id="CHANGE_SACL_SECURITY_INFORMATION"></span><span id="change_sacl_security_information"></span>**CHANGE \_ \_ \_ SACL-SICHERHEITSINFORMATIONEN** (8)
 
 
 </dt> <dd>
@@ -127,7 +127,7 @@ Die Anforderung ist erfolgreich.
 
 2
 
-Der Zugriff wird verweigert.
+Zugriff verweigert.“
 
 </dd> <dt>
 
@@ -149,7 +149,7 @@ Der angegebene Name ist ungültig.
 
 </dd> <dt>
 
-**Objekt ist bereits vorhanden**
+**Das Objekt ist bereits vorhanden.**
 </dt> <dd>
 
 10
@@ -158,7 +158,7 @@ Das Objekt "" ist bereits vorhanden.
 
 </dd> <dt>
 
-**Dateisystem nicht NTFS**
+**Dateisystem, nicht NTFS**
 </dt> <dd>
 
 11
@@ -194,7 +194,7 @@ Das Verzeichnis ist nicht leer.
 
 </dd> <dt>
 
-**Verletzung der Freigabe**
+**Freigabeverletzung**
 </dt> <dd>
 
 15
@@ -212,7 +212,7 @@ Die angegebene Startdatei ist ungültig.
 
 </dd> <dt>
 
-**Nicht privileg**
+**Nicht gehaltene Rechte**
 </dt> <dd>
 
 17
@@ -234,7 +234,7 @@ Ein angegebener Parameter ist ungültig.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |

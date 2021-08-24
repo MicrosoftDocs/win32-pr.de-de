@@ -1,7 +1,7 @@
 ---
-description: 'Ruft das ungefilterte Bild ab, das von der iwiapreview:: getnewpreview-Methode zwischengespeichert wird.'
+description: Ruft das ungefilterte Bild ab, das von der IWiaPreview::GetNewPreview-Methode zwischengespeichert wird.
 ms.assetid: 121b6866-cca1-4170-9bdf-225491f942f5
-title: 'Iwiapreview:: updatepreview-Methode (WIA. h)'
+title: IWiaPreview::UpdatePreview-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 4a5d469179f341f3bad5d2b9b5ed25a5715be694
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b5f48462d926d96acebf4a74f0a843d82f9cd97190585b954565d5da649ff9f8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119549690"
 ---
-# <a name="iwiapreviewupdatepreview-method"></a>Iwiapreview:: updatepreview-Methode
+# <a name="iwiapreviewupdatepreview-method"></a>IWiaPreview::UpdatePreview-Methode
 
-Ruft das ungefilterte Bild ab, das von der [**iwiapreview:: getnewpreview**](-wia-iwiapreview-getnewpreview.md) -Methode zwischengespeichert wird.
+Ruft das ungefilterte Bild ab, das von der [**IWiaPreview::GetNewPreview-Methode zwischengespeichert**](-wia-iwiapreview-getnewpreview.md) wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,32 +40,32 @@ HRESULT UpdatePreview(
 
 <dl> <dt>
 
-*loptions* \[ in\]
+*lOptions* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
-Gibt an, ob die Anwendung die WIA 2,0-Vorschau Komponente benötigt, um einen Teilbereich des zwischengespeicherten Bilds oder das gesamte zwischengespeicherte Bild an den Bild Verarbeitungs Filter zu übergeben.
+Gibt an, ob für die Anwendung die WIA 2.0 Preview-Komponente eine Unterregion des zwischengespeicherten Bilds oder das gesamte zwischengespeicherte Bild an den Bildverarbeitungsfilter übergeben muss.
 
 <dt>
 
 <span id="WiaPreviewReturnOriginalImage"></span><span id="wiapreviewreturnoriginalimage"></span><span id="WIAPREVIEWRETURNORIGINALIMAGE"></span>
 
-<span id="WiaPreviewReturnOriginalImage"></span><span id="wiapreviewreturnoriginalimage"></span><span id="WIAPREVIEWRETURNORIGINALIMAGE"></span>**Wiapreviewreturnoriginalimage**
+<span id="WiaPreviewReturnOriginalImage"></span><span id="wiapreviewreturnoriginalimage"></span><span id="WIAPREVIEWRETURNORIGINALIMAGE"></span>**WiaPreviewReturnOriginalImage**
 
 
 </dt> <dd>
 
-Übergeben Sie das gesamte zwischengespeicherte Bild an den Bild Verarbeitungs Filter.
+Übergeben Sie das gesamte zwischengespeicherte Bild an den Bildverarbeitungsfilter.
 
 </dd> </dl> </dd> <dt>
 
-*pchildwiaitem* \[ in\]
+*pChildWiaItem* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWiaItem2**](-wia-iwiaitem2.md) \** _
+Typ: **[ **IWiaItem2**](-wia-iwiaitem2.md)\***
 
-Gibt einen Zeiger auf das [_ *IWiaItem2* *](-wia-iwiaitem2.md) -Element an, das ein untergeordnetes Element des **IWiaItem2** -Elements ist, das durch den *pWiaItem2* -Parameter der [**iwiapreview:: getnewpreview**](-wia-iwiapreview-getnewpreview.md) -Methode angegeben wird. Wenn die Anwendung eine Vorschau des gesamten Flatbed erfordert, gibt einen Zeiger auf den *pWiaItem2* -Parameter der **iwiapreview:: getnewpreview** -Methode an. Wenn *pchildwiaitem* ein untergeordnetes Element des *pWiaItem2* -Parameters von **iwiapreview:: getnewpreview** ist, wird dieses untergeordnete Element normalerweise vom Segmentierungs Filter erstellt.
+Gibt einen Zeiger auf das [**IWiaItem2-Element**](-wia-iwiaitem2.md) an, das ein untergeordnetes Element des **IWiaItem2-Elements** ist, das durch den *pWiaItem2-Parameter* der [**IWiaPreview::GetNewPreview-Methode**](-wia-iwiapreview-getnewpreview.md) angegeben wird. Wenn die Anwendung eine Vorschau des gesamten Flatbeds erfordert, gibt einen Zeiger auf den *pWiaItem2-Parameter* der **IWiaPreview::GetNewPreview-Methode** an. Wenn *pChildWiaItem* ein untergeordnetes Element des *pWiaItem2-Parameters* von **IWiaPreview::GetNewPreview** ist, wird dieses untergeordnete Element in der Regel durch den Segmentierungsfilter erstellt.
 
 </dd> </dl>
 
@@ -73,30 +73,30 @@ Gibt einen Zeiger auf das [_ *IWiaItem2* *](-wia-iwiaitem2.md) -Element an, das 
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode übergibt das zwischengespeicherte, ungefilterte Bild über den Bild Verarbeitungs Filter, der dann die gefilterten Daten in den von der Anwendung bereitgestellten Stream schreibt. Die WIA 2,0-Vorschau Komponente ruft diesen Stream durch Aufrufen der [**getnextstream**](-wia-iwiatransfercallback-getnextstream.md) -Methode des Bild Verarbeitungs Filters ab, die dann die **getnextstream** -Implementierung des Anwendungs Rückrufs aufruft. Vor dem Aufrufen von **iwiapreview:: updatepreview** muss eine Anwendung zuerst [**iwiapreview:: getnewpreview**](-wia-iwiapreview-getnewpreview.md) aufrufen, um das Image vom Scanner abzurufen. Andernfalls gibt die Methode einen Fehler zurück.
+Diese Methode übergibt das zwischengespeicherte, ungefilterte Bild über den Bildverarbeitungsfilter, der die gefilterten Daten dann in den von der Anwendung bereitgestellten Stream schreibt. Die WIA 2.0 Preview-Komponente ruft diesen Stream ab, indem sie die [**GetNextStream-Methode**](-wia-iwiatransfercallback-getnextstream.md) des Bildverarbeitungsfilters aufruft, die dann die **GetNextStream-Implementierung** des Anwendungsrückrufs aufruft. Vor dem **Aufrufen von IWiaPreview::UpdatePreview** muss eine Anwendung zuerst [**IWiaPreview::GetNewPreview**](-wia-iwiapreview-getnewpreview.md) aufrufen, um das Bild vom Scanner zu erhalten. andernfalls gibt die Methode einen Fehler zurück.
 
-Die WIA 2,0-Vorschau Komponente speichert das ungefilterte Bild, das vom Treiber heruntergeladen wurde. Es ist möglich, dass das an **iwiapreview:: updatepreview** übergebenen WIA 2,0-Element nur einen kleinen Bereich des vom Treiber heruntergeladenen Bilds darstellt. Wenn dies der Fall ist, schneidet die WIA 2,0-Vorschau Komponente diese Region tatsächlich aus dem zwischengespeicherten Image aus, bevor Sie Sie an den Bild Verarbeitungs Filter übergibt, der wiederum die gefilterten Bilddaten an die Anwendung zurück übergibt.
+Die WIA 2.0 Preview-Komponente speichert das ungefilterte Image, das vom Treiber heruntergeladen wurde. Es ist möglich, dass das an **IWiaPreview::UpdatePreview** übergebene WIA 2.0-Element nur einen kleinen Bereich des images darstellt, das vom Treiber heruntergeladen wurde. Wenn dies der Fall ist, schneidet die WIA 2.0 Preview-Komponente diesen Bereich tatsächlich aus dem zwischengespeicherten Bild ab, bevor sie es an den Bildverarbeitungsfilter übergibt, der wiederum die gefilterten Bilddaten an die Anwendung übergibt.
 
-Damit eine Anwendung das gesamte zwischengespeicherte Bild an den Bild Verarbeitungs Filter übergibt (der wiederum an die Anwendung übergeben wird), muss die *loptions* beim Aufrufen von **iwiapreview:: updatepreview** auf **wiapreviewreturnoriginalimage** festgelegt werden. Wenn *loptions* auf **wiapreviewreturnoriginalimage** festgelegt wird, muss die Anwendung sicherstellen, dass die Block Einstellungen ([**WIA \_ IPS \_ xblock**](-wia-wiaitempropscanneritem.md) und **WIA \_ IPS \_ yblock**) des an **iwiapreview:: updatepreview** übergebenen Elements mit dem vollständig zwischengespeicherten Image übereinstimmen. Der Bild Verarbeitungs Filter muss in diesem Fall nichts unterscheiden. das Image wird einfach basierend auf den Eigenschaften von *pchildwiaitem* gefiltert (in diesem Fall ist *pchildwiaitem* dasselbe Element, das an [**iwiapreview:: getnewpreview**](-wia-iwiapreview-getnewpreview.md)übergeben wurde). Die Unterbereiche werden ignoriert, und das gesamte Bild wird mit denselben Einstellungen gefiltert. Es gibt mehrere Gründe, warum eine Anwendung dies tun würde.
+Damit eine Anwendung das gesamte zwischengespeicherte Bild an den Bildverarbeitungsfilter übergibt (der es wiederum an die Anwendung übergibt), muss sie beim Aufrufen von **IWiaPreview::UpdatePreview** die *lOptions* auf **WiaPreviewReturnOriginalImage** festlegen. Wenn *lOptions* auf **WiaPreviewReturnOriginalImage** festgelegt wird, muss die Anwendung sicherstellen, dass die Blockeinstellungen ([**WIA \_ IPS \_ XEXTENT**](-wia-wiaitempropscanneritem.md) und **WIA \_ IPS \_ YEXTENT)** des elements, das an **IWiaPreview::UpdatePreview** übergeben wird, mit dem vollständig zwischengespeicherten Image übereinstimmungen. Der Bildverarbeitungsfilter muss in diesem Fall nichts anderes tun. Es filtert einfach das Bild basierend auf den Eigenschaften von *pChildWiaItem* (in der Regel ist *pChildWiaItem* dasselbe Element, das an [**IWiaPreview::GetNewPreview übergeben**](-wia-iwiapreview-getnewpreview.md)wurde). Die verschiedenen Unterregionen werden ignoriert, und das gesamte Bild wird mit den gleichen Einstellungen gefiltert. Es gibt mehrere Gründe, warum eine Anwendung dies tun würde.
 
-1.  Die Anwendung unterstützt möglicherweise nicht das Ändern der Einstellungen (z. b. durch [**WIA- \_ IPS- \_ Helligkeit**](-wia-wiaitempropscanneritem.md) und **WIA- \_ IPS \_**) für jede Region, die der Segmentierungs Filter erkennt (oder der Segmentierungs Filter kann nicht einmal verwendet werden). Es ist einfacher, dass die Anwendung **iwiapreview:: updatepreview** mit **wiapreviewreturnoriginalimage** aufruft, damit Sie immer das vollständige Image aus der WIA 2,0 Preview-Komponente empfängt.
-2.  Die WIA 2,0 Preview-Komponente unterstützt das Bildformat des Vorschaubilds nicht. in diesem Fall können die Aktionen nicht zum Ausschneiden der gewünschten Region durchgeführt werden. Die Unterstützung von Image Formaten der WIA 2,0 Preview-Komponente ist auf Formate beschränkt, für die Windows GDI+ 1,1 Encoder und Decoders vorhanden sind. Diese Formate sind Bitmap (BMP) (eine Bitmap, die den BITMAPFILEHEADER enthält), Graphics Interchange Format (GIF), JPEG, Portable Network Graphics (PNG) und Tagged Image File Format (TIFF).
+1.  Die Anwendung unterstützt möglicherweise nicht, die Einstellungen (wie [**WIA \_ IPS \_ BRIGHTNESS**](-wia-wiaitempropscanneritem.md) und **WIA \_ IPS \_ CONTRAST)** einzeln für jede Region zu ändern, die der Segmentierungsfilter erkennt (oder möglicherweise nicht einmal den Segmentierungsfilter verwenden möchte). Es ist einfacher, dass die Anwendung **IWiaPreview::UpdatePreview** mit **WiaPreviewReturnOriginalImage** aufruft, sodass sie immer das vollständige Image von der WIA 2.0 Preview-Komponente empfängt.
+2.  Die WIA 2.0 Preview-Komponente unterstützt das Bildformat des Vorschaubilds nicht. In diesem Fall kann sie die Aktionen zum Ausschneiden des gewünschten Bereich nicht ausführen. Die Bildformatunterstützung der WIA 2.0 Preview-Komponente ist auf Formate beschränkt, für die es Windows GDI+ 1.1-Encoder und -Decoder gibt. Diese Formate sind Bitmap (BMP) (eine Bitmap, die BITMAPFILEHEADER enthält), Graphics Interchange Format (GIF), JPEG, Portable Network Graphics (PNG) und Tagged Image File Format (TIFF).
 
-Beachten Sie Folgendes: Wenn die Anwendung **wiapreviewreturnoriginalimage** an **iwiapreview:: updatepreview** übergibt, kann die WIA 2,0-Vorschau Komponente jedes beliebige Bild oder Pixel Format unterstützen.
+Beachten Sie: Wenn die Anwendung **WiaPreviewReturnOriginalImage** an **IWiaPreview::UpdatePreview** übergibt, kann die WIA 2.0 Preview-Komponente jedes Bild- oder Pixelformat unterstützen.
 
-**Iwiapreview:: updatepreview** legt die [**WIA-Eigenschaft \_ DPS \_ Preview**](-wia-wiaitempropscannerdevice.md) fest (und setzt Sie vor der Rückgabe zurück, es sei denn, Sie wurde zuvor festgelegt). Dadurch kann der Treiber (und die Hardware) und der Bild Verarbeitungs Filter wissen, dass es sich bei dem Element um eine Vorschauversion handelt.
+**IWiaPreview::UpdatePreview** legt die [**WIA \_ DPS \_ PREVIEW-Eigenschaft**](-wia-wiaitempropscannerdevice.md) fest (und setzt sie zurück, bevor sie zurückgegeben wird, es sei denn, sie wurde zuvor festgelegt). Dadurch können der Treiber (und die Hardware) sowie der Bildverarbeitungsfilter wissen, dass es sich bei dem Element um eine Vorschauprüfung handelt.
 
-Eine Anwendung muss sicherstellen, dass *pchildwiaitem* über das gleiche Bildformat ([**WIA \_ IPA- \_ Format**](-wia-wiaitempropcommonitem.md)) und die Auflösung ([**WIA- \_ IPS \_ xres**](-wia-wiaitempropscanneritem.md) und **WIA- \_ IPS \_**) wie *pwiaitem* verfügt, als es an [**iwiapreview:: getnewpreview**](-wia-iwiapreview-getnewpreview.md)übergeben wurde. Das Format des untergeordneten Elements muss dem Format des zwischengespeicherten Images der WIA 2,0-Vorschau Komponente entsprechen (die WIA 2,0 Preview-Komponente führt keine Bild Konvertierung aus).
+Eine Anwendung muss sicherstellen, dass *pChildWiaItem* das gleiche Bildformat ([**WIA \_ IPA \_ FORMAT**](-wia-wiaitempropcommonitem.md)) und die gleiche Auflösung ([**WIA \_ IPS \_ XRES**](-wia-wiaitempropscanneritem.md) und **WIA \_ IPS \_ YRES**) wie *pWiaItem* hat, als es an [**IWiaPreview::GetNewPreview übergeben wurde.**](-wia-iwiapreview-getnewpreview.md) Das Format des untergeordneten Elements muss dem Format des zwischengespeicherten Images der WIA 2.0 Preview-Komponente entsprechen (die WIA 2.0 Preview-Komponente führt keine Bildkonvertierung durch).
 
 ## <a name="examples"></a>Beispiele
 
-Updateregion sollte jedes Mal aufgerufen werden, wenn sich ein Benutzer ändert, z. b. die Helligkeit oder der Kontrast für das untergeordnete Element, das durch dargestellt wird `dwRegionNumber` . Dieses untergeordnete Element wurde zuvor vom Segmentierungs Filter ([**iwiasegmentationfilter**](-wia-iwiasegmentationfilter.md)) erstellt. Das in [IStream](/windows/win32/api/objidl/nn-objidl-istream) geschriebene Bild wird von der [**getnextstream**](-wia-iwiatransfercallback-getnextstream.md) -Methode der Übertragungs Rückruf Schnittstelle zurückgegeben. Der Code für "getsubregionitem" wird in diesem Beispiel ausgelassen.
+UpdateRegion sollte jedes Mal aufgerufen werden, wenn sich ein Benutzer ändert, z. B. die Helligkeit oder den Kontrast für das untergeordnete Element, das durch dargestellt `dwRegionNumber` wird. Dieses untergeordnete Element wurde zuvor vom Segmentierungsfilter ([**IWiaSegmentationFilter ) erstellt.**](-wia-iwiasegmentationfilter.md) Das in den [IStream geschriebene Bild](/windows/win32/api/objidl/nn-objidl-istream) wird von der [**GetNextStream-Methode der Übertragungsrückrufschnittstelle**](-wia-iwiatransfercallback-getnextstream.md) zurückgegeben. Der Code für GetSubRegionItem wird in diesem Beispiel ausgelassen.
 
-Nachdem diese Funktion aufgerufen wurde, würde eine Anwendung in der Regel den Bereich auf dem Bildschirm neu zeichnen.
+Nachdem diese Funktion aufgerufen wurde, wird der Bereich in der Regel von einer Anwendung auf dem Bildschirm neu gezeichnet.
 
 
 ```C++
@@ -118,10 +118,10 @@ UpdateRegion(
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

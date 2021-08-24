@@ -1,23 +1,23 @@
 ---
-title: emit_stream (SM5-ASM)
-description: Gibt einen Scheitelpunkt für einen angegebenen Stream aus.
+title: emit_stream (sm5 - asm)
+description: Geben Sie einen Scheitelpunkt an einen bestimmten Stream aus.
 ms.assetid: 5DBB0BEC-6EA4-4C04-A3D2-853E48260226
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f56c2582453d18120e3e95b27af9c7613728fa62
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 9e7e90bfb72862abeccc8a9411904a7b42f77c933cc4c87af189d6557596389c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389525"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119562700"
 ---
-# <a name="emit_stream-sm5---asm"></a>\_Ausgabestream (SM5-ASM)
+# <a name="emit_stream-sm5---asm"></a>Emit \_ stream (sm5 - asm)
 
-Gibt einen Scheitelpunkt für einen angegebenen Stream aus.
+Geben Sie einen Scheitelpunkt an einen bestimmten Stream aus.
 
 
 
-| \_Stream streamindex ausgeben |
+| Stream \_ streamIndex aus geben |
 |--------------------------|
 
 
@@ -26,32 +26,32 @@ Gibt einen Scheitelpunkt für einen angegebenen Stream aus.
 
 
 
-| Element                                                                                                               | BESCHREIBUNG                         |
+| Element                                                                                                               | Beschreibung                         |
 |--------------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| <span id="streamIndex"></span><span id="streamindex"></span><span id="STREAMINDEX"></span>*streamIndex*<br/> | \[im \] Stream-Index.<br/> |
+| <span id="streamIndex"></span><span id="streamindex"></span><span id="STREAMINDEX"></span>*streamIndex*<br/> | \[in \] Der Streamindex.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung bewirkt, dass alle deklarierten o- \# Register für den angegebenen Stream aus dem Geometry-Shader gelesen werden, um einen Scheitelpunkt zu generieren. Die Ausgabe gibt an, dass alle Daten in allen Ausgabe Registern für alle Streams nicht initialisiert werden, nicht nur der Stream, der an ausgegeben wird.
+Diese Anweisung bewirkt, dass alle deklarierten o-Register für den angegebenen Stream aus dem Geometrie-Shader gelesen werden, um \# einen Scheitelpunkt zu generieren. Aferieren Sie die Ausgabe. Alle Daten in allen Ausgaberegistern für alle Datenströme werden nicht initialisiert, sondern nicht nur der stream, der ausgegeben wird.
 
-*streamindex* muss ein unmittelbarer Wert \[ von 0.. 3 \] für einen deklarierten Stream sein.
+*streamIndex* muss für einen deklarierten Stream den unmittelbaren Wert \[ 0..3 \] haben.
 
-Wenn mehrere **\_ ausgabestreamaufrufe** ausgegeben werden, werden primitive generiert.
+Wenn mehrere **\_ Streamaufrufe** ausgegeben werden, werden Primitive generiert.
 
 ### <a name="restrictions"></a>Beschränkungen
 
--   **der \_ Ausgabestream** kann beliebig oft in einem Geometry-Shader vorkommen, einschließlich innerhalb der Fluss Steuerung.
--   Wenn Streams nicht deklariert wurden, müssen Sie die [Ausgabe anstelle des](emit--sm4---asm-.md) Ausgabestreams verwenden. **\_**
+-   **emit \_ stream** kann in einem Geometrie-Shader eine beliebige Anzahl von Malen angezeigt werden, auch innerhalb der Flusssteuerung.
+-   Wenn Streams nicht deklariert wurden, müssen Sie [emit](emit--sm4---asm-.md) anstelle von **stream \_ verwenden.**
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        | X        |       |         |
 
@@ -59,20 +59,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

@@ -1,23 +1,23 @@
 ---
-description: Die getipaddrtable-Funktion füllt einen Zeiger auf eine MIB \_ ipaddrtable-Struktur mit Informationen zu den aktuellen IP-Adressen, die dem System zugeordnet sind.
+description: Die GetIpAddrTable-Funktion füllt einen Zeiger auf eine \_ MIB-IPADDRTABLE-Struktur mit Informationen zu den aktuellen IP-Adressen, die dem System zugeordnet sind.
 ms.assetid: f041cb37-926d-4eeb-835c-f8b9d5ee4d2e
-title: Verwalten von IP-Adressen mit getipaddrtable
+title: Verwalten von IP-Adressen mit getIpAddrTable
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a3d94eb4de22a428e20a4cb0fdc8970d7f65fed
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 090bdb1e73d3f770eafb3a5e70893253918eb68573ebd05aa6ec40a609a7ba4e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146683"
 ---
-# <a name="managing-ip-addresses-using-getipaddrtable"></a>Verwalten von IP-Adressen mit getipaddrtable
+# <a name="managing-ip-addresses-using-getipaddrtable"></a>Verwalten von IP-Adressen mit getIpAddrTable
 
-Die [**getipaddrtable**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtable) -Funktion füllt einen Zeiger auf eine [**MIB \_ ipaddrtable**](/windows/win32/api/ipmib/ns-ipmib-mib_ipaddrtable) -Struktur mit Informationen zu den aktuellen IP-Adressen, die dem System zugeordnet sind.
+Die [**GetIpAddrTable-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtable) füllt einen Zeiger auf eine [**\_ MIB-IPADDRTABLE-Struktur**](/windows/win32/api/ipmib/ns-ipmib-mib_ipaddrtable) mit Informationen zu den aktuellen IP-Adressen, die dem System zugeordnet sind.
 
-**So verwenden Sie "getipaddrtable"**
+**So verwenden Sie GetIpAddrTable**
 
-1.  Deklarieren Sie einen Zeiger auf ein [**MIB \_ ipaddrtable**](/windows/win32/api/ipmib/ns-ipmib-mib_ipaddrtable) -Objekt namens *pipaddrtable* und ein **DWORD** -Objekt mit dem Namen *dwSize*. Diese Variablen werden als Parameter an die [**getipaddrtable**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtable) -Funktion übermittelt. Erstellen Sie außerdem eine **DWORD** -Variable mit dem Namen *dwretval* (für die Fehlerüberprüfung verwendet).
+1.  Deklarieren Sie einen Zeiger auf ein [**\_ MIB-IPADDRTABLE-Objekt**](/windows/win32/api/ipmib/ns-ipmib-mib_ipaddrtable) namens *pIPAddrTable* und ein **DWORD-Objekt** mit dem Namen *dwSize.* Diese Variablen werden als Parameter an die [**GetIpAddrTable-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtable) übergeben. Erstellen Sie außerdem eine **DWORD-Variable** namens *dwRetVal* (wird für die Fehlerüberprüfung verwendet).
     ```C++
     MIB_IPADDRTABLE  *pIPAddrTable;
     DWORD            dwSize = 0;
@@ -27,7 +27,7 @@ Die [**getipaddrtable**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtabl
 
     
 
-2.  Zuweisen von Speicher für die Struktur.
+2.  Zuordnen von Arbeitsspeicher für die Struktur.
     > [!Note]  
     > Die Größe von *dwSize* reicht nicht aus, um die Informationen zu speichern. Weitere Informationen finden Sie im nächsten Schritt.
 
@@ -40,9 +40,9 @@ Die [**getipaddrtable**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtabl
 
     
 
-3.  Führen Sie einen anfänglichen Aufrufen von [**getipaddrtable**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtable) aus, um die benötigte Größe in die *dwSize* -Variable zu übernehmen.
+3.  Rufen [**Sie getIpAddrTable**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtable) zunächst auf, um die erforderliche Größe in der *dwSize-Variablen* abzurufen.
     > [!Note]  
-    > Dieser Aufrufen der-Funktion soll fehlschlagen und wird verwendet, um sicherzustellen, dass die *dwSize* -Variable eine ausreichende Größe angibt, um alle an *pipaddrtable* zurückgegebenen Informationen zu speichern. Dies ist ein gängiges Programmiermodell für Datenstrukturen und Funktionen dieses Typs.
+    > Dieser Aufruf der Funktion soll fehlschlagen und wird verwendet, um sicherzustellen, dass die *dwSize-Variable* eine Größe angibt, die ausreicht, um alle an *pIPAddrTable zurückgegebenen* Informationen zu enthalten. Dies ist ein gängiges Programmiermodell für Datenstrukturen und Funktionen dieses Typs.
 
      
 
@@ -56,7 +56,7 @@ Die [**getipaddrtable**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtabl
 
     
 
-4.  Erstellen Sie einen zweiten Aufrufen von [**getipaddrtable**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtable) mit allgemeiner Fehlerüberprüfung, und geben Sie den Wert an die **DWORD** -Variable *dwretval* zurück (für eine erweiterte Fehlerüberprüfung).
+4.  Erstellen Sie einen zweiten Aufruf von [**GetIpAddrTable**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtable) mit allgemeiner Fehlerüberprüfung, und geben Sie dessen Wert an die **DWORD-Variable** *dwRetVal* zurück (für eine erweiterte Fehlerüberprüfung).
     ```C++
     if ( (dwRetVal = GetIpAddrTable( pIPAddrTable, &dwSize, 0 )) != NO_ERROR ) { 
         printf("GetIpAddrTable call failed with %d\n", dwRetVal);
@@ -66,7 +66,7 @@ Die [**getipaddrtable**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtabl
 
     
 
-5.  Wenn der-Befehl erfolgreich ausgeführt wurde, greifen Sie auf die Daten aus der *pipaddrtable* -Datenstruktur zu.
+5.  Wenn der Aufruf erfolgreich war, greifen Sie über die *Datenstruktur pIPAddrTable* auf die Daten zu.
     ```C++
     printf("IP Address:         %ld\n", pIPAddrTable->table[0].dwAddr);
     printf("IP Mask:            %ld\n", pIPAddrTable->table[0].dwMask);
@@ -78,7 +78,7 @@ Die [**getipaddrtable**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtabl
 
     
 
-6.  Gibt den für die *pipaddrtable* -Struktur zugeordneten Arbeitsspeicher frei.
+6.  Freigeben des für die *pIPAddrTable-Struktur* belegten Arbeitsspeichers.
     ```C++
     if (pIPAddrTable)
             free(pIPAddrTable);
@@ -88,13 +88,13 @@ Die [**getipaddrtable**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipaddrtabl
     
 
 > [!Note]  
-> Die **DWORD** -Objekte *dwaddr* und *dwMask* werden als numerische Werte in der Host-Byte Reihenfolge und nicht in der netzwerkbyte Reihenfolge zurückgegeben Diese Werte sind keine gepunkteten IP-Adressen.
+> Die **DWORD-Objekte** *dwAddr* und *dwMask* werden als numerische Werte in der Host-Bytereihenfolge und nicht in der Netzwerk-Bytereihenfolge zurückgegeben. Diese Werte sind keine gepunkteten IP-Adressen.
 
  
 
-Nächster Schritt: [Verwalten von DHCP-Leases mithilfe von ipreleaseaddress und iprenewaddress](managing-dhcp-leases-using-ipreleaseaddress-and-iprenewaddress.md)
+Nächster Schritt: [Verwalten von DHCP-Leases mit ipReleaseAddress und IpRenewAddress](managing-dhcp-leases-using-ipreleaseaddress-and-iprenewaddress.md)
 
-Vorheriger Schritt: [Verwalten von Schnittstellen mithilfe von getinterfakeinfo](managing-interfaces-using-getinterfaceinfo.md)
+Vorheriger Schritt: [Verwalten von Schnittstellen mit GetInterfaceInfo](managing-interfaces-using-getinterfaceinfo.md)
 
  
 

@@ -1,23 +1,23 @@
 ---
-title: Format Bezeichner
-description: Eigenschafts Satz Werte werden in einem Abschnitt gespeichert, der mit einer eindeutigen fmtid gekennzeichnet ist.
+title: Formatbezeichner
+description: Eigenschaftssatzwerte werden in einem Abschnitt gespeichert, der mit einer eindeutigen FMTID gekennzeichnet ist.
 ms.assetid: 3ffb6c5e-72ce-4769-847a-72db6f145d61
 keywords:
-- Format Bezeichner
+- Formatbezeichner
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b0202cd1287c3b4fef6e9e2b56e272541a03425b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 72ec9e9843b1dfe843e89ebf85eadbbcb5da8cb58dfc1b289eb88c844aae7456
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309812"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663150"
 ---
-# <a name="format-identifiers"></a>Format Bezeichner
+# <a name="format-identifiers"></a>Formatbezeichner
 
-Eigenschafts Satz Werte werden in einem Abschnitt gespeichert, der mit einer eindeutigen fmtid gekennzeichnet ist. Beispielsweise ist die fmtid für den Eigenschaften Satz für com-Zusammenfassungs Informationen **F29F85E0-4FF9-1068-AB91-08002B27B3D9**.
+Eigenschaftssatzwerte werden in einem Abschnitt gespeichert, der mit einer eindeutigen FMTID gekennzeichnet ist. Beispielsweise ist der FMTID-Eigenschaftssatz für die COM-Zusammenfassungsinformationen **F29F85E0-4FF9-1068-AB91-08002B27B3D9.**
 
-Zum Definieren einer fmtid für den Eigenschaften Satz für Zusammenfassungs Informationen verwenden Sie das **\_ GUID** -Makro definieren in einer Includedatei für den Code, der den Eigenschaften Satz bearbeitet.
+Verwenden Sie zum Definieren einer FMTID für den Eigenschaftssatz Zusammenfassungsinformationen das **DEFINE \_ GUID-Makro** in einer Includedatei für den Code, der den Eigenschaftensatz bearbeitet.
 
 
 ```C++
@@ -27,13 +27,13 @@ DEFINE_GUID(FMTID_SummaryInformation, 0xF29F85E0, 0x4FF9, 0x1068,
 
 
 
-Sämtlicher Code, der die fmtid für den Eigenschaften Satz für Zusammenfassungs Informationen erfordert, kann über die *fmtid \_ SummaryInformation* -Variable darauf zugreifen.
+Jeder Code, der FMTID für den Eigenschaftssatz Zusammenfassungsinformationen erfordert, kann über die *Variable FMTID \_ SummaryInformation darauf* zugreifen.
 
-Beim Speichern von Eigenschafts Sätzen in [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Instanzen wird die fmtid in einen Zeichen folgen Namen für das Speicher Objekt konvertiert.
+Konvertieren Sie beim Speichern von Eigenschaftensätzen in [**IStorage-Instanzen**](/windows/desktop/api/Objidl/nn-objidl-istorage) die FMTID in einen Zeichenfolgennamen für das Speicherobjekt.
 
- 
+ 
 
- 
+ 
 
 
 

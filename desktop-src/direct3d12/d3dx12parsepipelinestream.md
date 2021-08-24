@@ -1,6 +1,6 @@
 ---
-title: D3DX12ParsePipelineStream-Funktion (D3dx12. h)
-description: Analysiert eine Pipeline Status-Datenstrom Beschreibung und ruft für jede analysierte untergeordnete Instanz einen benutzerdefinierten Rückruf auf.
+title: D3DX12ParsePipelineStream-Funktion (D3dx12.h)
+description: Analysiert eine Pipelinezustandsstreambeschreibung und ruft einen benutzerdefinierten Rückruf für jede analysierte Unterobjektinstanz auf.
 ms.assetid: BE4E8CC4-1E1F-4FE8-B109-05FAF93EB620
 keywords:
 - D3DX12ParsePipelineStream-Funktion
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b6778c29793f01ff7f1e5fd6424fb6795a29e64c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cbdd472d118a5ec9d49c5f105ee6b8e8ef2e3ea540f6f1954bad17273e9e030f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119608560"
 ---
 # <a name="d3dx12parsepipelinestream-function"></a>D3DX12ParsePipelineStream-Funktion
 
-Analysiert eine Pipeline Status-Datenstrom Beschreibung und ruft für jede analysierte untergeordnete Instanz einen benutzerdefinierten Rückruf auf.
+Analysiert eine Pipelinezustandsstreambeschreibung und ruft einen benutzerdefinierten Rückruf für jede analysierte Unterobjektinstanz auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,21 +42,21 @@ HRESULT inline D3DX12ParsePipelineStream(
 
 <dl> <dt>
 
-*Wird deaktiviert* \[ atur\]
+*Desc* \[ Ref\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3D12 \_ Pipeline \_ State \_ Stream \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_pipeline_state_stream_desc)**
+Typ: **const [**D3D12 \_ PIPELINE STATE STREAM \_ \_ \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_pipeline_state_stream_desc)**
 
-Die Beschreibung des Pipeline Zustandsdaten Stroms, die analysiert werden soll.
+Die zu analysierende Beschreibung des Pipelinezustandsstreams.
 
 </dd> <dt>
 
-*pcallbacks* 
+*pCallbacks* 
 </dt> <dd>
 
 Typ: **[ **ID3DX12PipelineParserCallbacks**](id3dx12pipelineparsercallbacks.md)\***
 
-Eine-Struktur, die die Rückrufe angibt, die für jeden untergeordneten Objekttyp aufgerufen werden sollen, sowie zusätzliche Rückrufe, die im Fall eines Fehler bei der Verarbeitung aufgerufen werden.
+Eine -Struktur, die die Rückrufe angibt, die für jeden Unterobjekttyp und zusätzliche Rückrufe für den Fall eines Analysefehlers aufruft werden.
 
 </dd> </dl>
 
@@ -64,7 +64,7 @@ Eine-Struktur, die die Rückrufe angibt, die für jeden untergeordneten Objektty
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Diese Methode gibt einen HRESULT Success (**S \_ OK** -oder **E \_ invalidArg** -Fehler zurück, wenn ein unbekannter unter Typ gefunden wird, wenn die Datenstrom Beschreibung leer ist, NULL ist oder doppelte unter Objekte (einschließlich abgeleiteter unter Objekte) enthält, oder wenn *pcallbacks* NULL ist. In jedem Fall, dass E \_ invalidArg zurückgegeben wird, wird zuerst ein entsprechender Rückruf aufgerufen.
+Diese Methode gibt einen HRESULT-Erfolg zurück (**S \_ OK-** oder **E \_ INVALIDARG-Fehler,** wenn ein unbekannter Unterobjekttyp gefunden wird, wenn die Streambeschreibung leer ist, NULL ist oder doppelte Unterobjekte (einschließlich abgeleiteter Unterobjekte) enthält, oder , wenn *pCallbacks* NULL ist. In jedem Fall, in dem E \_ INVALIDARG zurückgegeben wird, wird zuerst ein entsprechender Rückruf aufgerufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,8 +72,8 @@ Diese Methode gibt einen HRESULT Success (**S \_ OK** -oder **E \_ invalidArg** 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx12. h</dt> </dl>  |
-| Bibliothek<br/> | <dl> <dt>D3D12. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx12.h</dt> </dl>  |
+| Bibliothek<br/> | <dl> <dt>D3D12.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3D12.dll</dt> </dl> |
 
 

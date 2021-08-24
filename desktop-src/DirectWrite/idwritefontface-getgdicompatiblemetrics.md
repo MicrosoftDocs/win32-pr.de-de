@@ -1,11 +1,11 @@
 ---
-title: Idwrite-fontface getgdicompatiblemetrics-Methode
-description: Ruft Entwurfs Einheiten und allgemeine Metriken für die Schriftart ab. Diese Metriken gelten für alle Symbole innerhalb eines fontface und werden von Anwendungen für Layoutberechnungen verwendet.
+title: IDWriteFontFace GetGdiCompatibleMetrics-Methode
+description: Ruft Entwurfseinheiten und allgemeine Metriken für die Schriftart ab. Diese Metriken gelten für alle Glyphen in einer Schriftart und werden von Anwendungen für Layoutberechnungen verwendet.
 ms.assetid: 9e132ec0-64cb-4681-b079-02a0047badd5
 keywords:
-- Getgdicompatiblemetrics-Methode direkt schreiben
-- Getgdicompatiblemetrics-Methode direkt schreiben, idschreitefontface-Schnittstelle
-- Idwrite Test fontface Interface Direct Write, getgdicompatiblemetrics-Methode
+- GetGdiCompatibleMetrics-Methode Direct Write
+- GetGdiCompatibleMetrics-Methode Direct Write , IDWriteFontFace-Schnittstelle
+- IDWriteFontFace-Schnittstelle Direct Write , GetGdiCompatibleMetrics-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 81b1c00c872352c984c87ee84f7eaed5baffafd3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fce5080edc44501290672bf0db0ebac69ef4856ec0b7163821cf60ac63d384ed
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370001"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119290710"
 ---
-# <a name="idwritefontfacegetgdicompatiblemetrics-method"></a>Idschreitefontface:: getgdicompatiblemetrics-Methode
+# <a name="idwritefontfacegetgdicompatiblemetrics-method"></a>IDWriteFontFace::GetGdiCompatibleMetrics-Methode
 
-Ruft Entwurfs Einheiten und allgemeine Metriken für die Schriftart ab. Diese Metriken gelten für alle Symbole innerhalb eines fontface und werden von Anwendungen für Layoutberechnungen verwendet.
+Ruft Entwurfseinheiten und allgemeine Metriken für die Schriftart ab. Diese Metriken gelten für alle Glyphen in einer Schriftart und werden von Anwendungen für Layoutberechnungen verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,36 +48,36 @@ virtual HRESULT GetGdiCompatibleMetrics(
 *emSize* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Die logische Größe der Schriftart in DIP-Einheiten.
 
 </dd> <dt>
 
-*Pixel sperdip* 
+*pixelsPerDip* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
 Die Anzahl der physischen Pixel pro DIP.
 
 </dd> <dt>
 
-*Transformation* \[ in, optional\]
+*transformieren* \[ in, optional\]
 </dt> <dd>
 
-Typ: Konstante **[**dwrite- \_ Matrix**](/windows/win32/api/dwrite/ns-dwrite-dwrite_matrix) \***
+Typ: **const [**DWRITE \_ MATRIX**](/windows/win32/api/dwrite/ns-dwrite-dwrite_matrix) \***
 
-Eine optionale Transformation, die auf die Symbole und deren Positionen angewendet wird. Diese Transformation wird nach der durch Schriftart Größe und *pixelsperdip* angegebenen Skalierung angewendet.
+Eine optionale Transformation, die auf die Glyphen und ihre Positionen angewendet wird. Diese Transformation wird nach der Skalierung angewendet, die durch den Schriftgrad und *pixelsPerDip* angegeben wird.
 
 </dd> <dt>
 
-*fontfacemetrics* \[ vorgenommen\]
+*fontFaceMetrics* \[ out\]
 </dt> <dd>
 
-Typ: **[ **dwrite- \_ Schriftart \_ Metriken**](/windows/win32/api/dwrite/ns-dwrite-dwrite_font_metrics)\***
+Typ: **[ **DWRITE-SCHRIFTARTMETRIKEN \_ \_**](/windows/win32/api/dwrite/ns-dwrite-dwrite_font_metrics)\***
 
-Ein Zeiger auf eine [**dwrite- \_ Schriftart \_ Metrik**](/windows/win32/api/dwrite/ns-dwrite-dwrite_font_metrics)S-Struktur, die ausgefüllt werden soll. Die von dieser Funktion zurückgegebenen Metriken sind in Schriftart Entwurfs Einheiten.
+Ein Zeiger auf eine ZU füllende [**DWRITE \_ FONT \_ METRIC S-Struktur.**](/windows/win32/api/dwrite/ns-dwrite-dwrite_font_metrics) Die von dieser Funktion zurückgegebenen Metriken befinden sich in Schriftentwurfseinheiten.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Standard-HRESULT-Fehlercode.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>Dwrite. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Dwrite.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>Dwrite.dll</dt> </dl> |
 
 
@@ -102,10 +102,10 @@ Standard-HRESULT-Fehlercode.
 
 <dl> <dt>
 
-[**Idschreitefontface**](/windows/win32/api/dwrite/nn-dwrite-idwritefontface)
+[**IDWriteFontFace**](/windows/win32/api/dwrite/nn-dwrite-idwritefontface)
 </dt> <dt>
 
-[**Idschreitefontface**](/windows/win32/api/dwrite/nn-dwrite-idwritefontface)
+[**IDWriteFontFace**](/windows/win32/api/dwrite/nn-dwrite-idwritefontface)
 </dt> </dl>
 
  

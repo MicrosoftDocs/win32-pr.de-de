@@ -1,11 +1,11 @@
 ---
-title: Registeredtask. stoppt-Methode
+title: RegisteredTask.Stop-Methode
 description: Bei der Skripterstellung wird die registrierte Aufgabe sofort beendet.
 ms.assetid: e4a533d8-5cf0-46ba-a603-f7a9c59ab0fd
 keywords:
-- Taskplaner der Methode wird beendet
-- Methode zum Taskplaner Ende, registeredtask-Objekt
-- Registeredtask-Objekt Taskplaner, Methode "Ende"
+- Beenden der Taskplaner
+- Stop-Methode Taskplaner , RegisteredTask-Objekt
+- RegisteredTask-Objekt Taskplaner , Stop-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d2d51cf748bb65a9db38c56fded102ddeb5b40fb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0496a3b9c8adad0ad4095b6c8aed3888940fd699750350117f4bf503c442f4c8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681660"
 ---
-# <a name="registeredtaskstop-method"></a>Registeredtask. stoppt-Methode
+# <a name="registeredtaskstop-method"></a>RegisteredTask.Stop-Methode
 
 Bei der Skripterstellung wird die registrierte Aufgabe sofort beendet.
 
@@ -42,7 +42,7 @@ RegisteredTask.Stop( _
 
 <dl> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Reserviert. Muss Null sein.
@@ -53,11 +53,11 @@ Reserviert. Muss Null sein.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit der **registeredtask. Stopp** -Funktion werden alle Instanzen der Aufgabe beendet.
+Die **RegisteredTask.Stop-Funktion** beendet alle Instanzen der Aufgabe.
 
-System Kontobenutzer können eine Aufgabe abbrechen, Benutzer mit Administrator Gruppenberechtigungen können eine Aufgabe abbrechen, und wenn ein Benutzer über Rechte zum Ausführen und Lesen einer Aufgabe verfügt, kann der Benutzer die Aufgabe abbrechen. Ein Benutzer kann die Task Instanzen, die ausgeführt werden, mit denselben Anmelde Informationen wie das Benutzerkonto abbrechen. In allen anderen Fällen wird dem Benutzer der Zugriff verweigert, um den Task zu unterbinden.
+Systemkontobenutzer können eine Aufgabe beenden, Benutzer mit Administratorgruppenberechtigungen können eine Aufgabe beenden. Wenn ein Benutzer über Rechte zum Ausführen und Lesen einer Aufgabe verfügt, kann der Benutzer die Aufgabe beenden. Ein Benutzer kann die Aufgabeninstanzen beenden, die unter denselben Anmeldeinformationen wie das Benutzerkonto ausgeführt werden. In allen anderen Fällen wird dem Benutzer der Zugriff zum Beenden der Aufgabe verweigert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,9 +65,9 @@ System Kontobenutzer können eine Aufgabe abbrechen, Benutzer mit Administrator 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -76,7 +76,7 @@ System Kontobenutzer können eine Aufgabe abbrechen, Benutzer mit Administrator 
 
 <dl> <dt>
 
-[**Registeredtask**](registeredtask.md)
+[**RegisteredTask**](registeredtask.md)
 </dt> </dl>
 
  

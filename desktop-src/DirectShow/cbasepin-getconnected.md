@@ -1,7 +1,7 @@
 ---
-description: Die getconnected-Methode ruft die mit dieser Pin verbundene Pin ab.
+description: Die GetConnected-Methode ruft den an diesen Pin angeschlossenen Pin ab.
 ms.assetid: 7b47aa8e-55a9-45f8-aa32-902fee037c72
-title: Cbasepin. getconnected-Methode (amfilter. h)
+title: CBasePin.GetConnected-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e5c583b06a9c25126a611736002c455a2c93ed90
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8bac5bc971f67c7678d2160cadb452995165638db4bb44d2ed1c89b3ab08f882
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119526840"
 ---
-# <a name="cbasepingetconnected-method"></a>Cbasepin. getconnected-Methode
+# <a name="cbasepingetconnected-method"></a>CBasePin.GetConnected-Methode
 
-Die- `GetConnected` Methode ruft die mit dieser Pin verbundene Pin ab.
+Die `GetConnected` -Methode ruft den Anheften ab, der mit diesem Pin verbunden ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der anderen Pin zurück.
+Gibt einen Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des anderen Pins zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die PIN nicht verbunden ist, gibt diese Methode **null** zurück. Wenden Sie die [**cbasepin:: IsConnected**](cbasepin-isconnected.md) -Methode an, um zu bestimmen, ob die PIN verbunden ist.
+Wenn der Pin nicht verbunden ist, gibt diese Methode **NULL** zurück. Rufen Sie die [**CBasePin::IsConnected-Methode**](cbasepin-isconnected.md) auf, um zu bestimmen, ob der Pin verbunden ist.
 
-Die-Methode ruft keine **adressf** für die **IPin** -Schnittstelle auf, sodass der Aufrufer die-Schnittstelle nicht freigeben darf.
+Die -Methode ruft **AddRef** nicht für die **IPin-Schnittstelle** auf, sodass der Aufrufer die Schnittstelle nicht freigeben sollte.
 
 ## <a name="examples"></a>Beispiele
 
-Da der Verweis Zähler auf dem zurückgegebenen Zeiger nicht inkrementiert wird, können Sie Methodenaufrufe verketten:
+Da der Verweiszähler für den zurückgegebenen Zeiger nicht erhöht wird, können Sie Methodenaufrufe miteinander verketten:
 
 
 ```C++
@@ -64,7 +64,7 @@ if (m_MyPin->IsConnected())
 
 
 
-Dieses Codierungs Muster ist sehr praktisch. wie im Beispiel gezeigt, müssen Sie jedoch darauf achten, einen **null** -Zeiger nicht zu dereferenzieren, wenn die PIN nicht verbunden ist.
+Dieses Codierungsmuster ist sehr praktisch. Wie das Beispiel zeigt, müssen Sie jedoch darauf achten, keinen **NULL-Zeiger** zu dereferenzieren, wenn die Verbindung des Pins nicht hergestellt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,8 +72,8 @@ Dieses Codierungs Muster ist sehr praktisch. wie im Beispiel gezeigt, müssen Si
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -81,7 +81,7 @@ Dieses Codierungs Muster ist sehr praktisch. wie im Beispiel gezeigt, müssen Si
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

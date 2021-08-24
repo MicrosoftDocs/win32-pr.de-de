@@ -1,19 +1,19 @@
 ---
-title: Iagentcharacter hasotherclients
-description: Iagentcharacter hasotherclients
+title: IAgentCharacter HasOtherClients
+description: IAgentCharacter HasOtherClients
 ms.assetid: ee74fa9b-2842-43ac-8493-bc69b480581e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 32380e31e63278f4181cfd854ecaada1775a4fd5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6469c289d846cb34e14c6afabbed72647e6e786fbda273baaf70532d4ad6578c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104516118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119665750"
 ---
-# <a name="iagentcharacterhasotherclients"></a>Iagentcharacter:: hasotherclients
+# <a name="iagentcharacterhasotherclients"></a>IAgentCharacter::HasOtherClients
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT HasOtherClients(
@@ -27,16 +27,16 @@ Ruft ab, ob ein Zeichen über andere Clients verfügt.
 
 <dl> <dt>
 
-<span id="plNumOtherClients"></span><span id="plnumotherclients"></span><span id="PLNUMOTHERCLIENTS"></span>*plnumotherclients*
+<span id="plNumOtherClients"></span><span id="plnumotherclients"></span><span id="PLNUMOTHERCLIENTS"></span>*plNumOtherClients*
 </dt> <dd>
 
-Adresse einer Variablen, die die Anzahl anderer verbundener Clients für das Zeichen empfängt (Gesamtzahl der Clients abzüglich des Clients).
+Adresse einer Variablen, die die Anzahl anderer verbundener Clients für das Zeichen empfängt (Gesamtzahl der Clients abzüglich Ihres Clients).
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

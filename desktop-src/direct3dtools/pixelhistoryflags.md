@@ -1,10 +1,10 @@
 ---
-description: Eine Enumeration, die Flags enthält, die zum Beschreiben eines Pixel Verlaufs Ergebnisses verwendet werden. Siehe pixelhistoryoperation.
+description: Eine -Enum, die Flags enthält, die verwendet werden, um ein Pixelverlaufsergebnis zu beschreiben. Siehe PixelHistoryOperation.
 MS-HAID: vspixengine.PIXELHISTORYFLAGS
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Pixelhistoryflags-Enumeration
+title: PIXELHISTORYFLAGS-Enumeration
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: BDB88A2D-016A-4E15-B47A-870A2959E943
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 2a1b4b0e5b3df84af04d5533ec9d53b15ebe5057
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6ff4447bdf19342dd2932f5b93eaf2722072660ae5007b40747834d603a6c57f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119726680"
 ---
-# <a name="span-idvspixenginepixelhistoryflagsspanpixelhistoryflags-enumeration"></a><span id="vspixengine.pixelhistoryflags"></span>Pixelhistoryflags-Enumeration
+# <a name="span-idvspixenginepixelhistoryflagsspanpixelhistoryflags-enumeration"></a><span id="vspixengine.pixelhistoryflags"></span>PIXELHISTORYFLAGS-Enumeration
 
-Eine Enumeration, die Flags enthält, die zum Beschreiben eines Pixel Verlaufs Ergebnisses verwendet werden. Siehe pixelhistoryoperation.
+Eine -Enum, die Flags enthält, die verwendet werden, um ein Pixelverlaufsergebnis zu beschreiben. Siehe PixelHistoryOperation.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,37 +37,37 @@ Eine Enumeration, die Flags enthält, die zum Beschreiben eines Pixel Verlaufs E
 
 ## <a name="constants"></a>Konstanten
 
-<span id="PHF_INITIALVALUE"></span><span id="phf_initialvalue"></span>**PHF- \_ InitialValue**  
-Ein Flag, das dem Anfangs Farbwert (vor dem Frame) entspricht.
+<span id="PHF_INITIALVALUE"></span><span id="phf_initialvalue"></span>**PHF \_ INITIALVALUE**  
+Ein Flag, das dem ursprünglichen Farbwert (vor dem Frame) entspricht.
 
-<span id="PHF_CLEAR"></span><span id="phf_clear"></span>**PHF \_ Löschen**  
-Ein Flag, das dem klaren Farbergebnis entspricht.
+<span id="PHF_CLEAR"></span><span id="phf_clear"></span>**PHF \_ CLEAR**  
+Ein Flag, das dem Ergebnis der eindeutigen Farbe entspricht.
 
-<span id="PHF_DRAW"></span><span id="phf_draw"></span>**PHF- \_ Zeichnen**  
-Ein Flag, das dem Ergebnis der Zeichnungs Farbe entspricht.
+<span id="PHF_DRAW"></span><span id="phf_draw"></span>**PHF \_ DRAW**  
+Ein Flag, das dem Zeichnen-Farbergebnis entspricht.
 
-<span id="PHF_FINALVALUE"></span><span id="phf_finalvalue"></span>**PHF \_ finalvalue**  
-Ein Flag, das dem Endergebnis der endgültigen Farbe entspricht.
+<span id="PHF_FINALVALUE"></span><span id="phf_finalvalue"></span>**PHF \_ FINALVALUE**  
+Ein Flag, das dem endgültigen Farbergebnis entspricht.
 
-<span id="PHF_HASCOLOR"></span><span id="phf_hascolor"></span>**PHF \_ hascolor**  
-Ein Flag, das entspricht, ob das Farbergebnis in der pixelhistoryoperation-Struktur vorhanden ist.
+<span id="PHF_HASCOLOR"></span><span id="phf_hascolor"></span>**PHF \_ HASCOLOR**  
+Ein Flag, das entspricht, ob das Farbergebnis in der PixelHistoryOperation-Struktur vorhanden ist.
 
-<span id="PHF_HASFBCOLOR"></span><span id="phf_hasfbcolor"></span>**PHF \_ hasbcolor**  
-Ein Flag, das entspricht, ob das endgültige Puffer Farbergebnis in der pixelhistoryoperation-Struktur vorhanden ist.
+<span id="PHF_HASFBCOLOR"></span><span id="phf_hasfbcolor"></span>**PHF \_ HASFBCOLOR**  
+Ein Flag, das entspricht, ob das endgültige Pufferfarbergebnis in der PixelHistoryOperation-Struktur vorhanden ist.
 
-<span id="PHF_ERROR"></span><span id="phf_error"></span>**PHF- \_ Fehler**  
+<span id="PHF_ERROR"></span><span id="phf_error"></span>**\_PHF-FEHLER**  
 
-<span id="PHF_VERTEXPROCESSINGSKIPPED"></span><span id="phf_vertexprocessingskipped"></span>**PHF \_ vertexprocessingskipped**  
-Nicht verwendet.
+<span id="PHF_VERTEXPROCESSINGSKIPPED"></span><span id="phf_vertexprocessingskipped"></span>**PHF \_ VERTEXPROCESSINGSKIPPED**  
+Wird nicht verwendet.
 
-<span id="PHF_MODIFYRESOURCE"></span><span id="phf_modifyresource"></span>**PHF \_ modifyresource**  
+<span id="PHF_MODIFYRESOURCE"></span><span id="phf_modifyresource"></span>**PHF \_ MODIFYRESOURCE**  
 
-<span id="PHF_CANNOTRUNFULLDEPTHSTENCILTEST"></span><span id="phf_cannotrunfulldepthstenciltest"></span>**PHF \_ cannotrunfulldepthstenciltest**  
-Ein Flag, das entspricht, dass es nicht möglich ist, den tiefen-oder Schablonen Test auszuführen.
+<span id="PHF_CANNOTRUNFULLDEPTHSTENCILTEST"></span><span id="phf_cannotrunfulldepthstenciltest"></span>**PHF \_ CANNOTRUNFULLDEPTHSTENCILTEST**  
+Ein Flag, das entspricht, wenn der Tiefen- oder Schablonentest nicht ausgeführt werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

@@ -15,14 +15,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 48854d7b5aaaa6f8026f8dec14745545b0c58806
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e34260e0bfe77b847437e9b3d49794334b3897d8425981fecb2032098e24fa7a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119521920"
 ---
-# <a name="msvm_lastappliedsnapshot-class"></a>MSVM \_ lastappliedsnapshot-Klasse
+# <a name="msvm_lastappliedsnapshot-class"></a>Msvm \_ LastAppliedSnapshot-Klasse
 
 Stellt eine Zuordnung zwischen einem virtuellen System und den Einstellungsdaten der Momentaufnahme dar, die zuletzt auf das virtuelle System angewendet wurde.
 
@@ -41,45 +41,45 @@ class Msvm_LastAppliedSnapshot : CIM_LastAppliedSnapshot
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ lastappliedsnapshot** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ LastAppliedSnapshot-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ lastappliedsnapshot** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ LastAppliedSnapshot-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ virtualsystemsettingdata**
+Datentyp: **CIM \_ VirtualSystemSettingData**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **außer Kraft** setzung, **Min** (0), **Max** (1)
+Qualifizierer: **Überschreiben,** **Min** ( 0 ), **Max** ( 1 )
 </dt> </dl>
 
-Verweis auf eine Instanz der [**MSVM \_ virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md) -Klasse, die die Momentaufnahme des virtuellen Systems darstellt, die zuletzt auf das virtuelle System angewendet wurde. Diese Eigenschaft wird von der **CIM- \_ Abhängigkeit** geerbt.
+Verweis auf eine Instanz der [**Msvm \_ VirtualSystemSettingData-Klasse,**](msvm-virtualsystemsettingdata.md) die die Momentaufnahme des virtuellen Systems darstellt, die zuletzt auf das virtuelle System angewendet wurde. Diese Eigenschaft wird von der **CIM-Abhängigkeit \_ geerbt.**
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Computersystem**
+Datentyp: **CIM \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **außer Kraft** setzung, **Min** (0), **Max** (1)
+Qualifizierer: **Überschreiben,** **Min** ( 0 ), **Max** ( 1 )
 </dt> </dl>
 
-Verweis auf eine Instanz der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse, die das virtuelle System darstellt, auf dem die durch die **Vorgänger** Eigenschaft dargestellte virtuelle System Momentaufnahme zuletzt angewendet wurde. Diese Eigenschaft wird von der **CIM- \_ Abhängigkeit** geerbt.
+Verweis auf eine Instanz der [**Msvm \_ ComputerSystem-Klasse,**](msvm-computersystem.md) die das virtuelle System darstellt, auf das die von der **Antecedent-Eigenschaft** dargestellte virtuelle Systemmomentaufnahme zuletzt angewendet wurde. Diese Eigenschaft wird von der **CIM-Abhängigkeit \_ geerbt.**
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Verweis auf eine Instanz der [**MSVM \_ Computersystem**](msvm-computersystem.md
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

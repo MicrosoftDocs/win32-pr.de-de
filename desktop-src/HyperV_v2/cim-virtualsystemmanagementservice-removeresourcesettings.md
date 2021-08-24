@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: e5c7daabcdcd732c3a5693664e1768ebf66668d6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4a3b94ff6ecd42ea362cc5caec91bdbd6c7f484acc687dc52d22acf4c1047f09
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108112258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682719"
 ---
 # <a name="removeresourcesettings-method-of-the-cim_virtualsystemmanagementservice-class"></a>RemoveResourceSettings-Methode der CIM \_ VirtualSystemManagementService-Klasse
 
 Entfernt Einstellungen für virtuelle Ressourcen aus einer Konfiguration des virtuellen Systems.
 
-Wenn sie auf Teile einer "aktuellen" Konfiguration des virtuellen Systems angewendet werden, können ressourcen des aktiven virtuellen Systems als Nebeneffekt entfernt werden.
+Wenn sie auf Teile einer "aktuellen" konfiguration des virtuellen Systems angewendet werden, können ressourcen des aktiven virtuellen Systems als Nebeneffekt entfernt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ uint32 RemoveResourceSettings(
 *ResourceSettings* \[ In\]
 </dt> <dd>
 
-Array von Verweisen auf Instanzen der [**Cim \_ ResourceAllocationSettingData-Klasse,**](cim-resourceallocationsettingdata.md) wobei jede Instanz die Einstellungen einer virtuellen Ressource innerhalb einer konfiguration des virtuellen Systems darstellt, die entfernt werden sollen.
+Array von Verweisen auf Instanzen der [**Klasse CIM \_ ResourceAllocationSettingData,**](cim-resourceallocationsettingdata.md) wobei jede Instanz die Einstellungen einer virtuellen Ressource innerhalb einer konfiguration des virtuellen Systems darstellt, die entfernt werden sollen.
 
 </dd> <dt>
 
@@ -83,7 +83,7 @@ Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 **DMTF Reserved** (..)
 </dt> <dt>
 
-**Methodenparameter überprüft** – Auftrag gestartet (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
 **Reservierte Methode** (4097..32767)
@@ -96,7 +96,7 @@ Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -106,7 +106,7 @@ Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,29 +1,29 @@
 ---
-description: Die Geräteklasse "MIDI/Out" besteht aus den für die Ausgabe verwendeten MIDI-Sequencern. Sie greifen auf diese Geräte mithilfe der Funktionen von MIDI zu, die im Platform Software Development Kit (SDK) beschrieben werden.
+description: Die Geräteklasse "keyboard/out" besteht aus DEN FÜR die Ausgabe verwendeten SEQUENCE-Sequencern. Sie greifen auf diese Geräte mithilfe der IMK-Funktionen zu, die im Platform Software Development Kit (SDK) beschrieben sind.
 ms.assetid: 398119ec-2d08-4c37-a993-a9b5ce52bcc8
-title: "\"MIDI/Out\""
+title: ein- und aus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d6ae6a3daba8fa0520fca666e6c43a8b3db86c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4c0199cc7918ab9aeacb3210b6f98d5ff03fc3bca90624bee00d864727ae0fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119518610"
 ---
-# <a name="midiout"></a>"MIDI/Out"
+# <a name="midiout"></a>ein- und aus
 
-Die Geräteklasse "MIDI/Out" besteht aus den für die Ausgabe verwendeten MIDI-Sequencern. Sie greifen auf diese Geräte mithilfe der Funktionen von MIDI zu, die im Platform Software Development Kit (SDK) beschrieben werden.
+Die Geräteklasse "keyboard/out" besteht aus DEN FÜR die Ausgabe verwendeten SEQUENCE-Sequencern. Sie greifen auf diese Geräte mithilfe der IMK-Funktionen zu, die im Platform Software Development Kit (SDK) beschrieben sind.
 
-Die Funktionen [**lineGetID**](/windows/desktop/api/Tapi/nf-tapi-linegetid) und [**phonegetid**](/windows/desktop/api/Tapi/nf-tapi-phonegetid) füllen eine [**varstring**](/windows/desktop/api/Tapi/ns-tapi-varstring) -Struktur aus, indem Sie das Element **dwstringformat** auf den Binär Wert StringFormat festlegen \_ und diesen zusätzlichen Member anhängen:
+Die [**Funktionen lineGetID**](/windows/desktop/api/Tapi/nf-tapi-linegetid) und [**phoneGetID**](/windows/desktop/api/Tapi/nf-tapi-phonegetid) füllen eine [**VARSTRING-Struktur**](/windows/desktop/api/Tapi/ns-tapi-varstring) aus, legen den **dwStringFormat-Member** auf den STRINGFORMAT BINARY-Wert und fügen diesen \_ zusätzlichen Member an:
 
 ``` syntax
 DWORD DeviceId;  // identifier of MIDI device
 ```
 
-Der Member " **enviceid** " ist der Bezeichner eines geschlossenen MIDI-Geräts. Sie verwenden diesen Bezeichner in einem Aufrufe der [**midioutopen**](/windows/win32/api/mmeapi/nf-mmeapi-midioutopen) -Funktion, um das Gerät für die Ausgabe zu öffnen. Sie können das resultierende Geräte Handle verwenden, um die Daten von MIDI an der Zeile oder dem Telefongerät wiederzugeben.
+Der **DeviceId-Member** ist der Bezeichner eines geschlossenen DANN-Geräts. Sie verwenden diesen Bezeichner in einem Aufruf der [**Funktion "bezeichnerOutOpen",**](/windows/win32/api/mmeapi/nf-mmeapi-midioutopen) um das Gerät für die Ausgabe zu öffnen. Sie können das resultierende Gerätehand handle verwenden, um DIE Daten auf der Linie oder dem Telefon wiedergeben.
 
-Weitere Informationen zu den Funktionen von MIDI finden Sie unter [**Multimedia Functions**](../multimedia/multimedia-functions.md).
+Weitere Informationen zu denFUNKTIONSfunktionen finden Sie unter [**Multimediafunktionen**](../multimedia/multimedia-functions.md).
 
  
 

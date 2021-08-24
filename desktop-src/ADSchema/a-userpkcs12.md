@@ -1,10 +1,10 @@
 ---
 title: userPKCS12-Attribut
-description: PKCS \ 12 PFX PDU für den Austausch persönlicher Identitätsinformationen.
+description: PKCS \ 12 PFX-PDU für den Austausch von persönlichen Identitätsinformationen.
 ms.assetid: dbc35a0f-c42d-4d1d-8ac6-5eca997af0fe
 ms.tgt_platform: multiple
 keywords:
-- userPKCS12-Attribut AD-Schema
+- USERPKCS12-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,41 +13,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8493bf46bc41d062f254f6e7d50331ed22dec25
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b9afc52f10ad8fc4df6c7785b3d9cbe19e46707042a519446ae580c49fa38622
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104041077"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119644520"
 ---
 # <a name="userpkcs12-attribute"></a>userPKCS12-Attribut
 
-PKCS \# 12 PFX PDU für den Austausch persönlicher Identitätsinformationen.
+PKCS \# 12 PFX-PDU für den Austausch persönlicher Identitätsinformationen.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | userPKCS12                                            |
-| LDAP-Display-Name | userPKCS12                                            |
+| Ldap-Anzeigename | userPKCS12                                            |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 2.16.840.1.113730.3.1.216                             |
-| System-ID-GUID    | 23998ab5-70b8-4007-a4c1-a84a38311, f a                  |
+| System-ID-GUID    | 23998ab5-70f8-4007-a4c1-a84a38311f9a                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,10 +56,10 @@ PKCS \# 12 PFX PDU für den Austausch persönlicher Identitätsinformationen.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Ist einwertig       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
@@ -77,10 +77,10 @@ PKCS \# 12 PFX PDU für den Austausch persönlicher Identitätsinformationen.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Ist einwertig       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
@@ -98,10 +98,10 @@ PKCS \# 12 PFX PDU für den Austausch persönlicher Identitätsinformationen.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Ist einwertig       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
@@ -119,10 +119,10 @@ PKCS \# 12 PFX PDU für den Austausch persönlicher Identitätsinformationen.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Is-Single-Valued       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
@@ -140,10 +140,10 @@ PKCS \# 12 PFX PDU für den Austausch persönlicher Identitätsinformationen.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Is-Single-Valued       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |

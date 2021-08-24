@@ -1,9 +1,9 @@
 ---
-title: Iwmcodecleakybucket (wmcodecdsp. h)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Iwmcodecleakybucket (wmcodecdsp. h)
+title: IWMCodecLeakyBucket (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | IWMCodecLeakyBucket (Wmcodecdsp.h)
 ms.assetid: ef1cedff-bbc7-4350-84eb-c9d044bb3fb5
 keywords:
-- Iwmcodecleakybucket-Windows Media-Format
+- IWMCodecLeakyBucket windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 138e2aecdb0a42890ddb06ae2f8648f67addc595
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 73d3cd69507b1bc57067f92abc8e68a4d4f145eb9c32426d2ef6679f7c01f7bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119585610"
 ---
-# <a name="iwmcodecleakybucket"></a>Iwmcodecleakybucket
+# <a name="iwmcodecleakybucket"></a>IWMCodecLeakyBucket
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und Digitalsignalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,7 +31,7 @@ Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren f
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 

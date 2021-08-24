@@ -1,11 +1,11 @@
 ---
-title: Ivmharddiskconnectioncollection-_NewEnum-Eigenschaft (vpccominterfaces. h)
-description: Ruft einen Enumerator für die Auflistung ab. | Ivmharddiskconnectioncollection-_NewEnum-Eigenschaft (vpccominterfaces. h)
+title: IVMHardDiskConnectionCollection _NewEnum-Eigenschaft (VPCCOMInterfaces.h)
+description: Ruft einen Enumerator für die Auflistung ab. | IVMHardDiskConnectionCollection _NewEnum-Eigenschaft (VPCCOMInterfaces.h)
 ms.assetid: 9302f536-de25-4aac-88cf-9f4af6efcda7
 keywords:
-- Virtual PC für _NewEnum-Eigenschaft
-- _NewEnum-Eigenschaft Virtual PC, ivmharddiskconnectioncollection-Schnittstelle
-- Ivmharddiskconnectioncollection-Schnittstelle Virtual PC, _NewEnum-Eigenschaft
+- _NewEnum-Eigenschaft Virtueller PC
+- _NewEnum Eigenschaft Virtueller PC, IVMHardDiskConnectionCollection-Schnittstelle
+- IVMHardDiskConnectionCollection-Schnittstelle Virtueller PC , _NewEnum-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66a6e8d5278b0aa164e2bc1ffd75b07a54300b45
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: b02c4bbd5d0d54d5116adc09c3a0a23c4594834b48b1b28d1700d41e5525b5d8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106363067"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119510800"
 ---
-# <a name="ivmharddiskconnectioncollection_newenum-property"></a>Ivmharddiskconnectioncollection:: \_ netwenum-Eigenschaft
+# <a name="ivmharddiskconnectioncollection_newenum-property"></a>IVMHardDiskConnectionCollection:: \_ NewEnum-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft einen Enumerator für die Auflistung ab.
 
@@ -45,7 +45,7 @@ HRESULT get__NewEnum(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) -Enumerator.
+Der [](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) IEnumVARIANT-Enumerator.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,8 +54,8 @@ Der [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) -Enumerator.
 | Name/Wert                                                                                                                                                    | Bedeutung                                  |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/> |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>    |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der Parameter ist **NULL.**<br/>    |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -65,12 +65,12 @@ Der [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) -Enumerator.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                         |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                         |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                          |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                               |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                      |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl>      |
-| IID<br/>                      | IID \_ ivmharddiskconnectioncollection ist definiert als b9f2caf4-0aeb-4085-B105-ceddb90dbf62<br/> |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl>      |
+| IID<br/>                      | IID \_ IVMHardDiskconnectionCollection ist als b9f2caf4-0aeb-4085-b105-ceddb90dbf62 definiert.<br/> |
 
 
 
@@ -78,7 +78,7 @@ Der [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) -Enumerator.
 
 <dl> <dt>
 
-[**Ivmharddiskconnectioncollection**](ivmharddiskconnectioncollection.md)
+[**IVMHardDiskConnectionCollection**](ivmharddiskconnectioncollection.md)
 </dt> </dl>
 
  

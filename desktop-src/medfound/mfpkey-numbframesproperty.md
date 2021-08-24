@@ -1,23 +1,23 @@
 ---
-description: Gibt die Anzahl der bidirektionalen Vorhersage Rahmen (B-Frames) an.
+description: Gibt die Anzahl bidirektionaler Vorhersageframes (B-Frames) an.
 ms.assetid: 8bd95baa-c130-4616-8ab7-7d902162e4ed
-title: MFPKEY_NUMBFRAMES-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_NUMBFRAMES-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dc3b0655a4a5e24b92f9699b198f10232de8edf8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dfcf103da1d629c90209aef4badd604651d73af3e9101cac0f613b47c82883e3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119555419"
 ---
-# <a name="mfpkey_numbframes-property"></a>Mfpkey- \_ numbframes (Eigenschaft)
+# <a name="mfpkey_numbframes-property"></a>MFPKEY \_ NUMBFRAMES-Eigenschaft
 
-Gibt die Anzahl der bidirektionalen Vorhersage Rahmen (B-Frames) an.
+Gibt die Anzahl bidirektionaler Vorhersageframes (B-Frames) an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcnumbframes
+g \_ wszWMVCNumBFrames
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,15 +27,15 @@ VT-I4
 
 0
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig verwendet Windows Media Video 9 nur die Rahmen (I-Frames) (I-Frames), die auch als Keyframes oder Anker Frames bezeichnet werden, bei denen es sich um vollständig codierte Frames und Vorhersage Rahmen (P-Frames) handelt, die als Unterschied zum vorherigen I-Frame codiert werden. B-Frames unterscheiden sich von P-Frames, da Sie sowohl die Unterschiede zwischen dem vorherigen Frame als auch die Unterschiede zwischen dem folgenden Frame speichern.
+Standardmäßig verwendet Windows Media Video 9 nur Intraframes (I-Frames), auch bekannt als Keyframes oder Ankerrahmen, die vollständig codierte Frames sind, und Vorhersageframes (P-Frames), die als Unterschied zum vorherigen I-Frame codiert sind. B-Frames unterscheiden sich von P-Frames, da sie sowohl die Unterschiede vom vorherigen Frame als auch die Unterschiede zum folgenden Frame speichern.
 
-Wenn Sie den Codec so konfigurieren, dass er b-Frames verwendet, wird die angegebene Anzahl von b-Frames zwischen jedem Paar von Frames des Typs I oder P verwendet.
+Wenn Sie den Codec für die Verwendung von B-Frames konfigurieren, wird die angegebene Anzahl von B-Frames zwischen jedem Framespaar vom Typ I oder P verwendet.
 
-Wenn eine Sequenz von Frames ohne b-Frames z. b. "ippppppppi" ist, wäre dieselbe Sequenz Codierung mit zwei b-Frames "ibbpbbpbbi".
+Wenn z. B. eine Sequenz von Frames ohne B-Frames "IPPPPPPLP" ist, wäre die gleiche Sequenzcodierung mit zwei B-Frames "IBBPBBPBBI".
 
-Für die meisten Inhalte sind entweder ein oder zwei B-Frames geeignet. Bei höheren Datenraten ist ein B-Frame normalerweise die optimale Wahl. Drei oder mehr sind selten nützlich.
+Für die meisten Inhalte sind ein oder zwei B-Frames geeignet. Bei höheren Datenraten ist normalerweise ein B-Frame die optimale Wahl. Drei oder mehr sind selten nützlich.
 
 Der gültige Wertebereich für diese Eigenschaft ist 0 bis 7.
 
@@ -45,9 +45,9 @@ Der gültige Wertebereich für diese Eigenschaft ist 0 bis 7.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Der gültige Wertebereich für diese Eigenschaft ist 0 bis 7.
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

@@ -1,33 +1,33 @@
 ---
-description: Die \_ Kategorie "Kategorie der Kategorie alle" \_ stellt den Satz aller Platt Form definierten Sensor Kategorien dar.
+description: Die Kategorie SENSOR \_ CATEGORY ALL stellt den Satz aller \_ plattformdefinierte Sensorkategorien dar.
 ms.assetid: e2d9fe6d-450a-446b-968b-0924116af6fe
-title: SENSOR_CATEGORY_ALL (Sensors. h)
+title: SENSOR_CATEGORY_ALL (Sensors.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a2e5641e51dde130cc51d9b2fc35fcc1e158ea6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b4254de58903d664f7a285890dae50202eca49c2a07e100460eab2a2ef81209
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119666870"
 ---
-# <a name="sensor_category_all"></a>\_alle Sensor Kategorie \_
+# <a name="sensor_category_all"></a>SENSORKATEGORIE \_ \_ ALLE
 
-Die \_ Kategorie "Kategorie der Kategorie alle" \_ stellt den Satz aller Platt Form definierten Sensor Kategorien dar.
+Die Kategorie SENSOR \_ CATEGORY ALL stellt den Satz aller \_ plattformdefinierte Sensorkategorien dar.
 
-**Platt Form definierte Eigenschafts Schlüssel**
+**Plattformdefinierte Eigenschaftsschlüssel**
 
-Platt Form definierte Eigenschafts Schlüssel für diese Kategorie basieren auf der \_ \_ \_ allgemeinen GUID des Sensor Datentyps \_ :
+Plattformdefinierte Eigenschaftsschlüssel für diese Kategorie basieren auf SENSOR \_ DATA \_ TYPE COMMON \_ \_ GUID:
 
 {DB5E0CF2-CF1F-4C18-B46C-D86011D62150}
 
-In der folgenden Tabelle werden Platt Form definierte Datenfelder beschrieben.
+In der folgenden Tabelle werden plattformdefinierte Datenfelder beschrieben.
 
 
 
-| Name und PID des Daten Felds                                                                                                                                                                                                                                                 | BESCHREIBUNG                                                                                                                                                                        |
+| Datenfeldname und PID                                                                                                                                                                                                                                                 | Beschreibung                                                                                                                                                                        |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="SENSOR_DATA_TYPE_TIMESTAMP"></span><span id="sensor_data_type_timestamp"></span><dl> <dt>**Sensor \_ \_Datentyp \_ timestamp**</dt> <dt>(PID = 2)</dt> </dl> | **VT \_ FILETIME**<br/> Für alle Daten Berichte erforderlich. Markiert jeden Datenbericht mit der Zeit, zu der der Datenbericht im UTC-Format (koordinierte Weltzeit) erstellt wurde.<br/> |
+| <span id="SENSOR_DATA_TYPE_TIMESTAMP"></span><span id="sensor_data_type_timestamp"></span><dl> <dt>**SENSOR \_ \_DATENTYP \_ TIMESTAMP**</dt> <dt>(PID = 2 )</dt> </dl> | **VT \_ FILETIME**<br/> Erforderlich für alle Datenberichte. Markiert jeden Datenbericht mit dem Zeitpunkt, zu dem der Datenbericht im UTC-Format (koordinierte Weltzeit) erstellt wurde.<br/> |
 
 
 
@@ -37,9 +37,9 @@ In der folgenden Tabelle werden Platt Form definierte Datenfelder beschrieben.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                            |
-| Header<br/>                   | <dl> <dt>Sensoren. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Sensors.h</dt> </dl> |
 
 
 

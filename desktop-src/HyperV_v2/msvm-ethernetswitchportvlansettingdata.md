@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungsdaten für das virtuelle LAN (VLAN) dar.
+description: Stellt die Einstellungsdaten des virtuellen LAN (VLAN) dar.
 ms.assetid: c3a49021-5256-4751-a5a5-81bf1c6d6e6d
 title: Msvm_EthernetSwitchPortVlanSettingData-Klasse
 ms.topic: reference
@@ -26,16 +26,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6fce6416696a99e5d928b774e2ba2a05b1dc21d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8c4d9c3c3101cb7593f54e8624a2d7e316cb27378b0ad504cdf8364b03020efb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119523770"
 ---
-# <a name="msvm_ethernetswitchportvlansettingdata-class"></a>MSVM \_ ethernetzwitchportvlansettingdata-Klasse
+# <a name="msvm_ethernetswitchportvlansettingdata-class"></a>Msvm \_ EthernetSwitchPortVlanSettingData-Klasse
 
-Stellt die Einstellungsdaten für das virtuelle LAN (VLAN) dar.
+Stellt die Einstellungsdaten des virtuellen LAN (VLAN) dar.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -63,75 +63,75 @@ class Msvm_EthernetSwitchPortVlanSettingData : Msvm_EthernetSwitchPortFeatureSet
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ ethernetzwitchportvlansettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetSwitchPortVlanSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ ethernetzwitchportvlansettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetSwitchPortVlanSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Accessvlanid**
+**AccessVlanId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (2), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die VLAN-Kennung im Zugriffsmodus an.
+Gibt den VLAN-Bezeichner im Zugriffsmodus an.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Ethernet Switch Port VLAN Settings" festgelegt.
+Eine kurze Beschreibung des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Ethernet Switch Port VLAN Einstellungen" festgelegt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "stellt die VLAN-Einstellungsdaten" fest.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Stellt die Vlan-Einstellungsdaten dar." festgelegt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Ethernet Switch Port VLAN Settings" festgelegt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Ethernet Switch Port VLAN Einstellungen" festgelegt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -140,36 +140,36 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
-**Nativevlanid**
+**NativeVlanId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (3), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die VLAN-Kennung im trunk Modus an.
+Gibt den VLAN-Bezeichner im Trunkmodus an.
 
 </dd> <dt>
 
 **OperationMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (1), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
 Gibt den VLAN-Betriebsmodus an.
@@ -202,45 +202,45 @@ Gibt den VLAN-Betriebsmodus an.
 **PrimaryVlanId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (5), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
 Gibt den primären VLAN-Bezeichner im privaten Modus an.
 
 </dd> <dt>
 
-**Prunevlanidarray**
+**PruneVlanIdArray**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (7), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die Bitmap des VLAN-Bezeichners im trunk Modus an.
+Gibt die Bezeichnerbitmap des Bezeichners "Prune VLAN" im Trunkmodus an.
 
 </dd> <dt>
 
-**Pvlanmode**
+**PvlanMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (4), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
 Gibt den privaten VLAN-Modus an.
@@ -273,48 +273,48 @@ Gibt den privaten VLAN-Modus an.
 **SecondaryVlanId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (6), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
 Gibt den sekundären VLAN-Bezeichner im privaten Modus an.
 
 </dd> <dt>
 
-**Secondaryvlanidarray**
+**SecondaryVlanIdArray**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (9), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (9), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die sekundäre VLAN-bezeichnerbitmap im privaten Modus an.
+Gibt die sekundäre VLAN-Bezeichnerbitmap im privaten Modus an.
 
 </dd> <dt>
 
-**Trunkvlanidarray**
+**TrunkVlanIdArray**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (8), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (8), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die Bitmap des trunk-VLAN-Bezeichners im trunk Modus an.
+Gibt die Trunk-VLAN-Bezeichnerbitmap im Trunkmodus an.
 
 </dd> </dl>
 
@@ -324,10 +324,10 @@ Gibt die Bitmap des trunk-VLAN-Bezeichners im trunk Modus an.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

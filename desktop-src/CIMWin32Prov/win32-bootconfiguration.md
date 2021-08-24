@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse "Win32 bootconfiguration" stellt die Startkonfiguration eines Computer Systems dar, auf dem Windows ausgeführt wird.
+description: Die WMI-Klasse Win32 \_ BootConfiguration stellt die Startkonfiguration eines Computersystems dar, auf dem Windows ausgeführt wird.
 ms.assetid: c2db28dd-3feb-44bb-a532-c91cab980ba3
 ms.tgt_platform: multiple
 title: Win32_BootConfiguration-Klasse
@@ -23,18 +23,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 556688d7c80038f04dd5b94b7c61c5d6dfef3199
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: db18b6ebbd7ccc9e87bffb06cd2b40647e4a9509edc1c27779a0b55efc36b7e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119546514"
 ---
-# <a name="win32_bootconfiguration-class"></a>Win32- \_ bootconfiguration-Klasse
+# <a name="win32_bootconfiguration-class"></a>Win32 \_ BootConfiguration-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) " **Win32 \_ bootconfiguration** " stellt die Startkonfiguration eines Computer Systems dar, auf dem Windows ausgeführt wird.
+Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) **Win32 \_ BootConfiguration** stellt die Startkonfiguration eines Computersystems dar, auf dem Windows ausgeführt wird.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,29 +56,29 @@ class Win32_BootConfiguration : CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ bootconfiguration** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ BootConfiguration-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ bootconfiguration** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ BootConfiguration-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **BootDirectory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Process and Thread Functions \| [**GetEnvironmentVariable**](/windows/desktop/api/winbase/nf-winbase-getenvironmentvariable) \| WinBootDir")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API-Prozess- \| und Threadfunktionen \| [**GetEnvironmentVariable**](/windows/desktop/api/winbase/nf-winbase-getenvironmentvariable) \| WinBootDir")
 </dt> </dl>
 
-Der Pfad zu den Systemdateien, die für den Systemstart erforderlich sind.
+Pfad zu den Systemdateien, die zum Starten des Systems erforderlich sind.
 
 Beispiel: "C: \\ Windows"
 
@@ -87,65 +87,65 @@ Beispiel: "C: \\ Windows"
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Textbeschreibung des aktuellen-Objekts.
+Kurze Textbeschreibung des aktuellen Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
 **ConfigurationPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Process and Thread Functions \| [**GetEnvironmentVariable**](/windows/desktop/api/winbase/nf-winbase-getenvironmentvariable) \| WinBootDir")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API-Prozess- \| und Threadfunktionen \| [**GetEnvironmentVariable**](/windows/desktop/api/winbase/nf-winbase-getenvironmentvariable) \| WinBootDir")
 </dt> </dl>
 
-Pfad zu den Konfigurationsdateien. Dieser Wert ähnelt möglicherweise dem Wert in der **BootDirectory** -Eigenschaft.
+Pfad zu den Konfigurationsdateien. Dieser Wert kann dem Wert in der **BootDirectory-Eigenschaft** ähneln.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Textbeschreibung des aktuellen-Objekts.
+Textbeschreibung des aktuellen -Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
-**Lastdrive**
+**LastDrive**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| File Functions \| GetDriveType")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API-Dateifunktionen \| \| GetDriveType")
 </dt> </dl>
 
-Der letzte Laufwerk Buchstabe, dem ein physisches Laufwerk zugewiesen wird.
+Letzter Laufwerkbuchstabe, dem ein physisches Laufwerk zugewiesen ist.
 
 Beispiel: "E:"
 
@@ -154,80 +154,80 @@ Beispiel: "E:"
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
 </dt> </dl>
 
-Der Name der Startkonfiguration. Es handelt sich um einen Bezeichner für die Startkonfiguration.
+Name der Startkonfiguration. Es handelt sich um einen Bezeichner für die Startkonfiguration.
 
 </dd> <dt>
 
 **ScratchDirectory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| File Functions \| GetTempPath")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API-Dateifunktionen \| \| GetTempPath")
 </dt> </dl>
 
-Verzeichnis, in dem sich temporäre Dateien während der Startzeit befinden können.
+Verzeichnis, in dem temporäre Dateien während der Startzeit gespeichert werden können.
 
 </dd> <dt>
 
 **SettingID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Bezeichner, durch den das aktuelle-Objekt bekannt ist.
+Bezeichner, durch den das aktuelle Objekt bekannt ist.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
 **TempDirectory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| File Functions \| GetTempPath")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API-Dateifunktionen \| \| GetTempPath")
 </dt> </dl>
 
 Verzeichnis, in dem temporäre Dateien gespeichert werden.
 
-Beispiel: "C: \\ Temp"
+Beispiel: "C: \\ TEMP"
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ bootconfiguration** -Klasse wird von der [**CIM- \_ Einstellung**](cim-setting.md)abgeleitet.
+Die **Win32 \_ BootConfiguration-Klasse** wird von [**der \_ CIM-Einstellung**](cim-setting.md)abgeleitet.
 
 ## <a name="examples"></a>Beispiele
 
-Im Beispiel [Auflisten der Start Konfigurations Eigenschaften eines Computers](https://Gallery.TechNet.Microsoft.Com/55c35de3-bb6a-47f0-89f9-d2c49ab4cf19) perl werden Start Konfigurationsinformationen für einen Computer zurückgegeben.
+Im Beispiel List the Boot Configuration Properties of a Computer Perl [(Auflisten der Startkonfigurationseigenschaften eines](https://Gallery.TechNet.Microsoft.Com/55c35de3-bb6a-47f0-89f9-d2c49ab4cf19) Computer-Perl-Beispiels) werden Startkonfigurationsinformationen für einen Computer zurückgegeben.
 
-Im folgenden VBScript-Beispiel werden Start Konfigurationsinformationen für einen Computer zurückgegeben.
+Im folgenden VBScript-Beispiel werden Startkonfigurationsinformationen für einen Computer zurückgegeben.
 
 
 ```VB
@@ -253,7 +253,7 @@ Next
 
 
 
-Im folgenden Codebeispiel wird die Verwendung der WMI-Klasse für die **Win32- \_ bootconfiguration** veranschaulicht.
+Im folgenden Codebeispiel wird die Verwendung der WMI-Klasse **Win32 \_ BootConfiguration** veranschaulicht.
 
 
 ```PowerShell
@@ -293,8 +293,8 @@ Temp Directory     : C:\WINDOWS\system32\config\systemprofile\Local Settings\Tem
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -303,7 +303,7 @@ Temp Directory     : C:\WINDOWS\system32\config\systemprofile\Local Settings\Tem
 
 <dl> <dt>
 
-[**CIM- \_ Einstellung**](cim-setting.md)
+[**\_CIM-Einstellung**](cim-setting.md)
 </dt> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))

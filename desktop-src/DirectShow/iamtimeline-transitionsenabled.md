@@ -1,7 +1,7 @@
 ---
-description: Die transitionsenabled-Methode bestimmt, ob Übergänge aktiviert sind.
+description: Die TransitionsEnabled-Methode bestimmt, ob Übergänge aktiviert sind.
 ms.assetid: c961d8d7-4509-444b-a49f-6ab79fc31f7e
-title: 'Iamtimeline:: transitionsenabled-Methode (qedit. h)'
+title: IAMTimeline::TransitionsEnabled-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 7116ccf4ff2015934c9071f4ce2ef073656b89c5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 36d22fa1c19c6a90faa033e6a8ccf100b5042cd2aeeabf9b012ee42f13cd57da
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119316470"
 ---
-# <a name="iamtimelinetransitionsenabled-method"></a>Iamtimeline:: transitionsenabled-Methode
+# <a name="iamtimelinetransitionsenabled-method"></a>IAMTimeline::TransitionsEnabled-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die **transitionsenabled** -Methode bestimmt, ob Übergänge aktiviert sind.
+Die **TransitionsEnabled-Methode** bestimmt, ob Übergänge aktiviert sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,26 +45,26 @@ HRESULT TransitionsEnabled(
 
 <dl> <dt>
 
-*pfaktivierte* 
+*pfEnabled* 
 </dt> <dd>
 
-Empfängt einen booleschen Wert. **True** gibt an, dass Übergänge aktiviert sind. Andernfalls sind Übergänge deaktiviert.
+Empfängt einen booleschen Wert. True **gibt an,** dass Übergänge aktiviert sind. Andernfalls sind Übergänge deaktiviert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,22 +74,22 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamtimeline-Schnittstelle**](iamtimeline.md)
+[**IAMTimeline-Schnittstelle**](iamtimeline.md)
 </dt> <dt>
 
-[**Iamtimeline:: enabletransitions**](iamtimeline-enabletransitions.md)
+[**IAMTimeline::EnableTransitions**](iamtimeline-enabletransitions.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

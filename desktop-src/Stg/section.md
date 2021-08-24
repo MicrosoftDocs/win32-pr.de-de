@@ -1,29 +1,29 @@
 ---
 title: '`Section`'
-description: Der Abschnitt ist der dritte Teil des Eigenschaften Satz-Streams und enthält die tatsächlichen Eigenschaften Satz Werte.
+description: Der Abschnitt ist der dritte Teil des Eigenschaftensatzstreams und enthält die tatsächlichen Eigenschaftssatzwerte.
 ms.assetid: cb392072-116e-4dca-bd70-5f82f86d8c98
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed6f51891d14a9690e295379b7bcf619fe0fbe19
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 71796bca5dd2801e437ecfffe663f2702abc4c202d721ecbda8a9b95656e40a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682800"
 ---
 # <a name="section"></a>`Section`
 
-Der Abschnitt ist der dritte Teil des Eigenschaften Satz-Streams und enthält die tatsächlichen Eigenschaften Satz Werte.
+Der Abschnitt ist der dritte Teil des Eigenschaftensatzstreams und enthält die tatsächlichen Eigenschaftssatzwerte.
 
-Ein Abschnitt enthält:
+Ein Abschnitt enthält Folgendes:
 
--   Byte Anzahl für den Abschnitt, der die Byte Anzahl selbst einschließt.
--   Array von 32-Bit-Eigenschaften-ID/Offset-Paaren.
--   Array von Eigenschaftentyp-Indikatoren/Wert-Paaren.
+-   Byteanzahl für den Abschnitt, der die Byteanzahl selbst einschließt.
+-   Array von 32-Bit-Eigenschafts-ID/Offset-Paaren.
+-   Array von Eigenschaftstypindikatoren-Wert-Paaren.
 
-Offsets sind der Abstand zwischen dem Anfang des Abschnitts und dem Anfang des Eigenschafts Paars (Typ, Wert). Dadurch kann ein Abschnitt ohne Übersetzung der internen Struktur als Bytearray kopiert werden.
+Offsets sind der Abstand zwischen dem Anfang des Abschnitts und dem Anfang des Eigenschaftspaars (Typ, Wert). Dadurch kann ein Abschnitt ohne Übersetzung der internen Struktur als Bytearray kopiert werden.
 
-Die folgenden Pseudo Strukturen veranschaulichen das Format eines-Abschnitts.
+Die folgenden Pseudostrukturen veranschaulichen das Format eines Abschnitts.
 
 ``` syntax
 typedef struct tagPROPERTYSECTIONHEADER 
@@ -45,9 +45,9 @@ typedef struct tagSERIALIZEDPROPERTYVALUE
 } SERIALIZEDPROPERTYVALUE ;
 ```
 
- 
+ 
 
- 
+ 
 
 
 

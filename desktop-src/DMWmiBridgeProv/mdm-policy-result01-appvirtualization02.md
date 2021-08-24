@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Result01_AppVirtualization02-Klasse
-description: Die MDM- \_ Richtlinie \_ Result01 \_ AppVirtualization02-Klasse stellt die verfügbaren anwendungsvirtualisierungsrichtlinien dar.
+description: Die Mdm \_ Policy \_ Result01 \_ AppVirtualization02-Klasse stellt die verfügbaren App-Virtualisierungsrichtlinien dar.
 ms.assetid: fc28646f-f4b9-4648-a22d-b90d32ff888f
 keywords:
 - MDM_Policy_Result01_AppVirtualization02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 968c4718d7978bdf6770bdf8f828e6ef268cd32d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e6d387e5ef58b9929c29c6bae575691e685a954464503c9a38c36bb67585f017
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477283"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119587900"
 ---
-# <a name="mdm_policy_result01_appvirtualization02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ AppVirtualization02-Klasse
+# <a name="mdm_policy_result01_appvirtualization02-class"></a>MDM \_ Policy \_ Result01 \_ AppVirtualization02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Richtlinie \_ Result01 \_ AppVirtualization02-Klasse stellt die verfügbaren anwendungsvirtualisierungsrichtlinien dar.
+Die Mdm \_ Policy \_ Result01 \_ AppVirtualization02-Klasse stellt die verfügbaren App-Virtualisierungsrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -73,17 +73,17 @@ class MDM_Policy_Result01_AppVirtualization02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ AppVirtualization02** -Klasse verfügt über diese Typen von Membern:
+Die **Mdm \_ Policy \_ Result01 \_ AppVirtualization02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ AppVirtualization02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Result01 \_ AppVirtualization02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowappvclient](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowappvclient)
+[AllowAppVClient](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowappvclient)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -94,7 +94,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowdynamicvirtualization](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowdynamicvirtualization)
+[AllowDynamicVirtualization](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowdynamicvirtualization)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -105,7 +105,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowpackagecleanup](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowpackagecleanup)
+[AllowPackageCleanup](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowpackagecleanup)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -116,7 +116,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowpackagescripts](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowpackagescripts)
+[AllowPackageScripts](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowpackagescripts)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -127,7 +127,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowpublishingrefreshux](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowpublishingrefreshux)
+[AllowPublishingRefreshUX](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowpublishingrefreshux)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -138,7 +138,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-["Zuordnung"](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowreportingserver)
+[AllowReportingServer](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowreportingserver)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -149,7 +149,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowroamingfileausschlüsse](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowroamingfileexclusions)
+[AllowRoamingFileExclusions](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowroamingfileexclusions)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -160,7 +160,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowroamingregistryausschlüsse](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowroamingregistryexclusions)
+[AllowRoamingRegistryExclusions](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowroamingregistryexclusions)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -171,7 +171,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowstreamingautoload](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowstreamingautoload)
+[AllowStreamingAutoload](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-allowstreamingautoload)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -182,7 +182,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Clientcoexistenceallowmigrationmode](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-clientcoexistenceallowmigrationmode)
+[ClientCoexistenceAllowMigrationmode](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-clientcoexistenceallowmigrationmode)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -207,7 +207,7 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-[Integrationallowrootglobal](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-integrationallowrootglobal)
+[IntegrationAllowRootGlobal](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-integrationallowrootglobal)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -218,7 +218,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Integrationallowrootuser](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-integrationallowrootuser)
+[IntegrationAllowRootUser](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-integrationallowrootuser)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -229,7 +229,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -298,7 +298,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Streamingallowcertificatefilterforclient- \_ SSL](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowcertificatefilterforclient-ssl)
+[StreamingAllowCertificateFilterForClient \_ SSL](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowcertificatefilterforclient-ssl)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -309,7 +309,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Streamingzuweisung whighcostlaunch](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowhighcostlaunch)
+[StreamingAllowHighCostLaunch](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowhighcostlaunch)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -320,7 +320,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Streamingallowlocationprovider](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowlocationprovider)
+[StreamingAllowLocationProvider](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowlocationprovider)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -331,7 +331,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Streamingallowpackageingestallationroot](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowpackageinstallationroot)
+[StreamingAllowPackageInstallationRoot](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowpackageinstallationroot)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -342,7 +342,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Streamingallowpackagesourceroot](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowpackagesourceroot)
+[StreamingAllowPackageSourceRoot](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowpackagesourceroot)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -353,7 +353,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Streamingzuordnung](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowreestablishmentinterval)
+[StreamingAllowReestablishmentInterval](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowreestablishmentinterval)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -364,7 +364,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Streamingzufügungen](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowreestablishmentretries)
+[StreamingAllowReestablishmentRetries](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingallowreestablishmentretries)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -375,7 +375,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Streamingsharedcontentstoremode](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingsharedcontentstoremode)
+[StreamingSharedContentStoreMode](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingsharedcontentstoremode)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -386,7 +386,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Streamingsupportbranchcache](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingsupportbranchcache)
+[StreamingSupportBranchCache](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingsupportbranchcache)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -397,10 +397,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Streamingverifycertificaterevocationlist](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingverifycertificaterevocationlist)
+[StreamingVerifyCertificateRevocationList](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-streamingverifycertificaterevocationlist)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -408,10 +408,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Virtualcomponentsallowlist](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-virtualcomponentsallowlist)
+[VirtualComponentsAllowList](/windows/client-management/mdm/policy-csp-appvirtualization#appvirtualization-virtualcomponentsallowlist)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -425,10 +425,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

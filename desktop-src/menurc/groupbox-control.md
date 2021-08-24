@@ -1,9 +1,9 @@
 ---
-title: GroupBox-Steuerelement (Menüs und andere Ressourcen)
-description: Definiert ein Gruppenfeld-Steuerelement. Das-Steuerelement ist ein Rechteck, in dem andere Steuerelemente gruppiert werden. Die Steuerelemente werden gruppiert, indem Sie einen Rahmen herum zeichnen und den angegebenen Text in der oberen linken Ecke anzeigen.
+title: GROUPBOX-Steuerelement (Menüs und andere Ressourcen)
+description: Definiert ein Gruppenfeld-Steuerelement. Das Steuerelement ist ein Rechteck, das andere Steuerelemente gruppiert. Die Steuerelemente werden gruppiert, indem ein Rahmen um sie gezeichnet und der angegebene Text in der oberen linken Ecke angezeigt wird.
 ms.assetid: ffca7b68-0326-4fbe-8330-7d1151abb14a
 keywords:
-- GroupBox-Steuerelement Menüs und andere Ressourcen
+- 'GROUPBOX-Steuerelement: Menüs und andere Ressourcen'
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a4f77461099362e4f100924f82d95dffa09a94fa
-ms.sourcegitcommit: 40a1246849dba8ececf54c716b2794b99c96ad50
+ms.openlocfilehash: 05fb8e795cfe483d16406f07fffd2a26df14cebc3c38a07fbef7f2cb78cc245a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "104038301"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119602080"
 ---
-# <a name="groupbox-control"></a>GroupBox-Steuerelement
+# <a name="groupbox-control"></a>GROUPBOX-Steuerelement
 
-Definiert ein Gruppenfeld-Steuerelement. Das-Steuerelement ist ein Rechteck, in dem andere Steuerelemente gruppiert werden. Die Steuerelemente werden gruppiert, indem Sie einen Rahmen herum zeichnen und den angegebenen Text in der oberen linken Ecke anzeigen.
+Definiert ein Gruppenfeld-Steuerelement. Das Steuerelement ist ein Rechteck, das andere Steuerelemente gruppiert. Die Steuerelemente werden gruppiert, indem ein Rahmen um sie gezeichnet und der angegebene Text in der oberen linken Ecke angezeigt wird.
 
-Die **GroupBox** -Anweisung, die Sie nur in einer [**DIALOGEX**](dialogex-resource.md) -Anweisung verwenden können, definiert den Text, den Bezeichner, die Dimensionen und die Attribute eines Steuerelement Fensters.
+Die **GROUPBOX-Anweisung,** die Sie nur in einer [**DIALOGEX-Anweisung**](dialogex-resource.md) verwenden können, definiert den Text, bezeichner, Dimensionen und Attribute eines Steuerelementfensters.
 
 ``` syntax
 GROUPBOX text, id, x, y, width, height [, style [, extended-style]]
@@ -31,24 +31,24 @@ GROUPBOX text, id, x, y, width, height [, style [, extended-style]]
 
 <dl> <dt>
 
-<span id="style"></span><span id="STYLE"></span>*Vorbild*
+<span id="style"></span><span id="STYLE"></span>*Stil*
 </dt> <dd>
 
-Steuerelement Stile. Bei diesem Wert kann es sich um eine Kombination aus der Schaltfläche "Class Style" der Schaltfläche " **\_ GroupBox** **" und den Stilen " \_** **WS \_ Tabstopps** "
+Steuerelementstile. Dieser Wert kann eine Kombination aus dem **BS \_ GROUPBOX-Stil** der Schaltflächenklasse und den **Stilen WS \_ TABSTOP** und **WS \_ DISABLED** sein.
 
-Wenn Sie keinen Stil angeben, ist der Standardstil " **SB \_ GroupBox**".
+Wenn Sie keinen Stil angeben, lautet der Standardstil **BS \_ GROUPBOX**.
 
 </dd> </dl>
 
-Weitere Informationen zur allgemeinen Syntax einer Control-Anweisung finden Sie unter allgemeine [Steuerelement Parameter](common-control-parameters.md).
+Weitere Informationen zur allgemeinen Syntax einer Control-Anweisung finden Sie unter [Allgemeine Steuerungsparameter.](common-control-parameters.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Stil **WS \_ Tabstopps** enthält oder der Text eine Zugriffstaste angibt, verschiebt die Tab-Taste oder das Drücken der Tastenkombination den Fokus auf das erste Steuerelement in der Gruppe.
+Wenn der Stil **WS \_ TABSTOP** enthält oder der Text eine Zugriffstaste angibt, verschiebt das Drücken oder Drücken der Tastenkombination den Fokus auf das erste Steuerelement innerhalb der Gruppe.
 
 ## <a name="examples"></a>Beispiele
 
-In diesem Beispiel wird ein Gruppenfeld-Steuerelement mit der Bezeichnung "Options" definiert:
+In diesem Beispiel wird ein Gruppenfeld-Steuerelement mit der Bezeichnung Optionen definiert:
 
 ``` syntax
 GROUPBOX "Options", 101, 10, 10, 100, 100
@@ -61,9 +61,9 @@ GROUPBOX "Options", 101, 10, 10, 100, 100
 [Gruppenfelder](https://www.bing.com/search?q=Group+Boxes)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

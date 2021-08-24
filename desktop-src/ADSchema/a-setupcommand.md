@@ -1,11 +1,11 @@
 ---
 title: Setup-Command-Attribut
-description: Dieses Attribut gibt an, ob ein Setup Befehl erforderlich ist, um diese Anwendung einzurichten.
+description: Dieses Attribut gibt an, ob ein Setupbefehl erforderlich ist, um diese Anwendung einzurichten.
 ms.assetid: f6292605-b392-4de2-b0a0-cae3f0551184
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Setup-Command-Attribut
-- SetupCommand-Attribut, AD-Schema
+- Setup-Command AD-Schema
+- setupCommand-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1acea4a714c4175b77812e05880e8d9e78ca6645
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: fefb6adb546063e7158aacdd41ab73a75c34c13907287526fb8d0d648a0dec97
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122672"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119645950"
 ---
 # <a name="setup-command-attribute"></a>Setup-Command-Attribut
 
-Dieses Attribut gibt an, ob ein Setup Befehl erforderlich ist, um diese Anwendung einzurichten.
+Dieses Attribut gibt an, ob ein Setupbefehl erforderlich ist, um diese Anwendung einzurichten.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Setup-Command                               |
-| LDAP-Display-Name | SetupCommand                                |
+| Ldap-Anzeigename | setupCommand                                |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.325                      |
-| System-ID-GUID    | 7d6c0e97-7E20-11D0-afd6-00c04f d930c9        |
+| System-Id-Guid    | 7d6c0e97-7e20-11d0-afd6-00c04fd930c9        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Dieses Attribut gibt an, ob ein Setup Befehl erforderlich ist, um diese Anwendun
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Dieses Attribut gibt an, ob ein Setup Befehl erforderlich ist, um diese Anwendun
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
+| Is-Single-Valued       | True                                                             |
 | Ist indiziert             | False                                                            |
 | Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000010                                                       |
-| In verwendete Klassen        | [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Dieses Attribut gibt an, ob ein Setup Befehl erforderlich ist, um diese Anwendun
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
+| Is-Single-Valued       | True                                                             |
 | Ist indiziert             | False                                                            |
 | Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000010                                                       |
-| In verwendete Klassen        | [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Dieses Attribut gibt an, ob ein Setup Befehl erforderlich ist, um diese Anwendun
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
+| Is-Single-Valued       | True                                                             |
 | Ist indiziert             | False                                                            |
 | Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000010                                                       |
-| In verwendete Klassen        | [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Dieses Attribut gibt an, ob ein Setup Befehl erforderlich ist, um diese Anwendun
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
+| Ist einwertig       | True                                                             |
 | Ist indiziert             | False                                                            |
 | Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000010                                                       |
-| In verwendete Klassen        | [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Dieses Attribut gibt an, ob ein Setup Befehl erforderlich ist, um diese Anwendun
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
+| Ist einwertig       | True                                                             |
 | Ist indiziert             | False                                                            |
 | Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000010                                                       |
-| In verwendete Klassen        | [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Dieses Attribut gibt an, ob ein Setup Befehl erforderlich ist, um diese Anwendun
 | Link-ID                | \-                                                               |
 | MAPI-Id                | \-                                                               |
 | System-Only            | False                                                            |
-| Ist-einwertig       | Richtig                                                             |
+| Ist einwertig       | True                                                             |
 | Ist indiziert             | False                                                            |
 | Im globalen Katalog      | False                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                     |
 | Range-Lower            | \-                                                               |
 | Range-Upper            | \-                                                               |
 | Search-Flags           | 0x00000000                                                       |
 | System-Flags           | 0x00000010                                                       |
-| In verwendete Klassen        | [**Paket Registrierung**](c-packageregistration.md)<br/> |
+| In verwendete Klassen        | [**Paketregistrierung**](c-packageregistration.md)<br/> |
 
 
 

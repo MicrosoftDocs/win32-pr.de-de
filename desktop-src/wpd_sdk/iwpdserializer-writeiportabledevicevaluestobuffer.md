@@ -1,7 +1,7 @@
 ---
-description: Die Methode "Write teiportabledevicevaluestobuffer" serialisiert eine iportabledevicevalues-Schnittstelle zu einem vom Aufrufer zugeordneten Bytearray.
+description: Die WriteIPortableDeviceValuesToBuffer-Methode serialisiert eine IPortableDeviceValues-Schnittstelle in ein vom Aufrufer zugeordnetes Bytearray.
 ms.assetid: 4d0108f1-563e-42df-897b-7cc0e9ff5b3a
-title: 'Iwpdserializer:: Write-portabledevicevaluestobuffer-Methode (portabledevicetypes. h)'
+title: IWpdSerializer::WriteIPortableDeviceValuesToBuffer-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: f2a8f8b374f967f7231881d9e0eca6434e9c57e2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: db86953e2e08c0a66f6e497c1fcd2350cc726be8852803cf8f4d64bfff523500
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370494"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657740"
 ---
-# <a name="iwpdserializerwriteiportabledevicevaluestobuffer-method"></a>Iwpdserializer:: Write-portabledevicevaluestobuffer-Methode
+# <a name="iwpdserializerwriteiportabledevicevaluestobuffer-method"></a>IWpdSerializer::WriteIPortableDeviceValuesToBuffer-Methode
 
-Die Methode " **Write teiportabledevicevaluestobuffer** " serialisiert eine **iportabledevicevalues** -Schnittstelle zu einem vom Aufrufer zugeordneten Bytearray.
+Die **WriteIPortableDeviceValuesToBuffer-Methode** serialisiert eine **IPortableDeviceValues-Schnittstelle** in ein vom Aufrufer zugeordnetes Bytearray.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,53 +43,53 @@ HRESULT WriteIPortableDeviceValuesToBuffer(
 
 <dl> <dt>
 
-*dwoutputbufferlength* \[ in\]
+*dwOutputBufferLength* \[ In\]
 </dt> <dd>
 
-**DWORD** , das die Größe von *pbuffer* in Bytes angibt.
+**DWORD,** das die Größe von *pBuffer* in Bytes angibt.
 
 </dd> <dt>
 
-*präsults* \[ in\]
+*pResults* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine [**iportabledevicevalues**](iportabledevicevalues.md) -Schnittstelle, die serialisiert werden soll.
+Zeiger auf eine zu serialisierende [**IPortableDeviceValues-Schnittstelle.**](iportabledevicevalues.md)
 
 </dd> <dt>
 
-*pbuffer* \[ vorgenommen\]
+*pBuffer* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen vom Aufrufer zugewiesenen Puffer. Um die Größe des erforderlichen Puffers zu ermitteln, müssen Sie **getserializedsize** aufrufen.
+Zeiger auf einen vom Aufrufer zugeordneten Puffer. Rufen **Sie GetSerializedSize** auf, um die Größe des erforderlichen Puffers zu erfahren.
 
 </dd> <dt>
 
-*pdwbyteswritten* \[ vorgenommen\]
+*pdwBytesWritten* \[ out\]
 </dt> <dd>
 
-Zeiger auf ein **DWORD** , das die Anzahl der Bytes angibt, die tatsächlich in den von dem Aufrufer zugewiesenen Puffer geschrieben wurden.
+Zeiger auf ein **DWORD,** das die Anzahl der Bytes angibt, die tatsächlich in den vom Aufrufer zugeordneten Puffer geschrieben wurden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                               |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Die Methode wurde erfolgreich ausgeführt.<br/>                          |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein erforderliches Zeigerargument war **null**.<br/>      |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Der vom Aufrufer bereitgestellte Puffer war nicht groß genug.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein erforderliches Zeigerargument war **NULL.**<br/>      |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Der vom Aufrufer bereitgestellte Puffer war nicht groß genug.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kopiert eine **iportabledevicevalues** -Schnittstelle in einen vorhandenen Puffer. Wenn Sie einen neuen Puffer zuordnen möchten, verwenden Sie [**getbufferfromiportableendvicevalues**](iwpdserializer-getbufferfromiportabledevicevalues.md).
+Diese Methode kopiert eine **IPortableDeviceValues-Schnittstelle** in einen vorhandenen Puffer. Wenn Sie einen neuen Puffer zuordnen möchten, verwenden [**Sie GetBufferFromIPortableDeviceValues**](iwpdserializer-getbufferfromiportabledevicevalues.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,8 +97,8 @@ Diese Methode kopiert eine **iportabledevicevalues** -Schnittstelle in einen vor
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
@@ -106,7 +106,7 @@ Diese Methode kopiert eine **iportabledevicevalues** -Schnittstelle in einen vor
 
 <dl> <dt>
 
-[**Iwpdserializer-Schnittstelle**](iwpdserializer.md)
+[**IWpdSerializer-Schnittstelle**](iwpdserializer.md)
 </dt> </dl>
 
  

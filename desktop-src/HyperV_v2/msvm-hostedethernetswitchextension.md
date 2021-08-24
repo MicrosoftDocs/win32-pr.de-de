@@ -1,5 +1,5 @@
 ---
-description: Ordnet den zurzeit an ihn gebundenen Erweiterungen einen virtuellen Ethernet-Switch zu.
+description: Ordnet den derzeit an ihn gebundenen Erweiterungen einen virtuellen Ethernet-Switch zu.
 ms.assetid: d8c87fa2-6859-49ed-abd5-32a836b00e5a
 title: Msvm_HostedEthernetSwitchExtension-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: cb952d42864fb6130ad6cbec09ef5eb68439f6a7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dda28d4d5893f05ef067016da771b8dc510ba5588dd4f25ed89dfe7c4a8aa2fe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119522980"
 ---
-# <a name="msvm_hostedethernetswitchextension-class"></a>MSVM- \_ Klasse "hustedethernetzwitchextension"
+# <a name="msvm_hostedethernetswitchextension-class"></a>Msvm \_ HostedEthernetSwitchExtension-Klasse
 
-Ordnet den zurzeit an ihn gebundenen Erweiterungen einen virtuellen Ethernet-Switch zu.
+Ordnet den derzeit an ihn gebundenen Erweiterungen einen virtuellen Ethernet-Switch zu.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,45 +41,45 @@ class Msvm_HostedEthernetSwitchExtension : CIM_HostedDependency
 
 ## <a name="members"></a>Member
 
-Die **MSVM-Klasse " \_ hustedethernetzwitchextension** " verfügt über diese Typen von Membern:
+Die **Msvm \_ HostedEthernetSwitchExtension-Klasse** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM-Klasse " \_ hustedethernetzwitchextension** " verfügt über diese Eigenschaften.
+Die **Msvm \_ HostedEthernetSwitchExtension-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ virtualethernwitch**](msvm-virtualethernetswitch.md)**
+Datentyp: **[ **Msvm \_ VirtualEthernetSwitch**](msvm-virtualethernetswitch.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**Min(**](/windows/desktop/WmiSdk/standard-qualifiers) 1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM \_ virtualethernwitch**](msvm-virtualethernetswitch.md) -Klasse, die den virtuellen Switch darstellt.
+Ein Verweis auf eine Instanz der [**Msvm \_ VirtualEthernetSwitch-Klasse,**](msvm-virtualethernetswitch.md) die den virtuellen Switch darstellt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ ethernetungwitchextension**](msvm-ethernetswitchextension.md)**
+Datentyp: **[ **Msvm \_ EthernetSwitchExtension**](msvm-ethernetswitchextension.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**Weak**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("abhängig"), [**Schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM-Klasse \_ ethernetungwitchextension**](msvm-ethernetswitchextension.md) , die die switcherweiterungsinstanz darstellt, die an den virtuellen Switch gebunden ist.
+Ein Verweis auf eine Instanz der [**Msvm \_ EthernetSwitchExtension-Klasse,**](msvm-ethernetswitchextension.md) die die an den virtuellen Switch gebundene Switcherweiterungsinstanz darstellt.
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Ein Verweis auf eine Instanz der [**MSVM-Klasse \_ ethernetungwitchextension**](
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

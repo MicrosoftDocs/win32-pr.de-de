@@ -1,9 +1,9 @@
 ---
-title: WM/mediaissap
-description: Das Attribut WM/mediaissap gibt an, ob der Inhalt ein zweites Audioprogramm (SAP) enthält.
+title: WM/MediaIsSAP
+description: Das WM/MediaIsSAP-Attribut gibt an, ob der Inhalt ein zweites Audioprogramm (SAP) enthält.
 ms.assetid: 9fe0a901-bf03-4300-8616-4dceb35949d7
 keywords:
-- WM/mediaissap-Windows Media-Format
+- WM/MediaIsSAP windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,30 +12,30 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 83f744bdd8d247307444909218e18d12942c46d3
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 5803806bffe4a3c0478ade320cdf3ba2d977dc6f838a7097002dc7d2ba403430
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037972"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119546570"
 ---
-# <a name="wmmediaissap"></a>WM/mediaissap
+# <a name="wmmediaissap"></a>WM/MediaIsSAP
 
-Das Attribut **WM/mediaissap** gibt an, ob der Inhalt ein zweites Audioprogramm (SAP) enthält.
+Das **WM/MediaIsSAP-Attribut** gibt an, ob der Inhalt ein zweites Audioprogramm (SAP) enthält.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmmediaissap
+g \_ wszWMMediaIsSAP
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ bool**
+**\_WMT-TYP \_ BOOL**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird für Broadcast-TV verwendet.
+Dieses Attribut wird für Fernsehsendungen verwendet.
 
-SAP identifiziert normalerweise Fernsehprogramme, die einen alternativen Sound in einer anderen Sprache enthalten.
+SAP identifiziert in der Regel Fernsehprogramme, die ein alternatives Fernsehgerät in einer anderen Sprache enthalten.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -44,9 +44,9 @@ SAP identifiziert normalerweise Fernsehprogramme, die einen alternativen Sound i
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

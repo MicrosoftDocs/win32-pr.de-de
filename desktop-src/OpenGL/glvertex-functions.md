@@ -4,22 +4,22 @@ description: Diese Funktionen geben einen Scheitelpunkt an.
 ms.assetid: 20253760-f9ec-4053-bcde-748178f3b359
 keywords:
 - OpenGL-, glVertex-Funktionen
-- OpenGL-Referenz, glVertex-Funktionen
-- Verweis für OpenGL, glVertex-Funktionen
-- OpenGL-, Vertex-Funktionen
-- OpenGL-Referenz, Vertex-Funktionen
-- Verweis für OpenGL, Vertex-Funktionen
-- glvertexl-Funktionen
-- Vertices, Funktionen
-- Vertex-Funktionen
+- OpenGL-Referenz,glVertex-Funktionen
+- Referenz für OpenGL-, glVertex-Funktionen
+- OpenGL,Vertexfunktionen
+- OpenGL-Referenz, Vertexfunktionen
+- Referenz für OpenGL,Vertexfunktionen
+- glVertexl-Funktionen
+- Scheitelungen,Funktionen
+- Vertexfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fd062df9a830abd283232a9e431a65ac7af57967
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3913ba44fe4ffd1659a0a4b5ab9cfcfcdb9bc5c82a13efb6e4700398d08f352b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119488350"
 ---
 # <a name="glvertex-functions"></a>glVertex-Funktionen
 
@@ -50,9 +50,9 @@ Diese Funktionen geben einen Scheitelpunkt an:
 -   [**glVertex4iv**](glvertex4iv.md)
 -   [**glVertex4sv**](glvertex4sv.md)
 
- 
+ 
 
- 
+ 
 
 
 

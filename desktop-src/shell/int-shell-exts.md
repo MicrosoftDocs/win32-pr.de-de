@@ -1,54 +1,54 @@
 ---
-description: Ein Großteil der Implementierung eines Shellerweiterungs-Handlerobjekts wird durch seinen Typ vorgegeben. Es gibt jedoch einige allgemeine Elemente. In diesem Thema werden die Aspekte der Implementierung erläutert, die von allen Shellerweiterungs Handlern gemeinsam genutzt werden.
+description: Ein Großteil der Implementierung eines Shell-Erweiterungshandlerobjekts wird durch seinen Typ vorgegeben. Es gibt jedoch einige allgemeine Elemente. In diesem Thema werden die Aspekte der Implementierung erläutert, die von allen Shellerweiterungshandlern gemeinsam genutzt werden.
 ms.assetid: ce21ca0f-157c-4f69-bcf9-dc259c3bac80
-title: Initialisieren von Shellerweiterungs Handlern
+title: Initialisieren von Shellerweiterungshandlern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6a27b6273c5e342dc4caf545fb3593cdad66261
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 82f83a47400cff5d0fa4628f6f6f9d9ba74b158947c7843f61831d54f62c7a6f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980777"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119661220"
 ---
-# <a name="initializing-shell-extension-handlers"></a>Initialisieren von Shellerweiterungs Handlern
+# <a name="initializing-shell-extension-handlers"></a>Initialisieren von Shellerweiterungshandlern
 
-Ein Großteil der Implementierung eines Shellerweiterungs-Handlerobjekts wird durch seinen Typ vorgegeben. Es gibt jedoch einige allgemeine Elemente. In diesem Thema werden die Aspekte der Implementierung erläutert, die von allen Shellerweiterungs Handlern gemeinsam genutzt werden.
+Ein Großteil der Implementierung eines Shell-Erweiterungshandlerobjekts wird durch seinen Typ vorgegeben. Es gibt jedoch einige allgemeine Elemente. In diesem Thema werden die Aspekte der Implementierung erläutert, die von allen Shellerweiterungshandlern gemeinsam genutzt werden.
 
-Alle Shellerweiterungs Handler sind in-Process-Component Object Model (com)-Objekten. Sie müssen eine GUID zugewiesen und wie unter [Registrieren von Shellerweiterungs Handlern](handlers.md)beschrieben registriert sein. Sie werden als DLLs implementiert und müssen die folgenden Standardfunktionen exportieren:
+Alle Shellerweiterungshandler sind COM-Objekte (In-Process Component Object Model). Ihnen muss eine GUID zugewiesen und registriert werden, wie unter [Registrieren von Shellerweiterungshandlern](handlers.md)beschrieben. Sie werden als DLLs implementiert und müssen die folgenden Standardfunktionen exportieren:
 
--   [**DllMain**](../dlls/dllmain.md). Der Standard Einstiegspunkt für die dll.
+-   [**DllMain**](../dlls/dllmain.md). Der Standardeinstiegspunkt für die DLL.
 -   [**DllGetClassObject**](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject). Macht die Klassenfactory des Objekts verfügbar.
--   [**DllCanUnloadNow**](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow). COM ruft diese Funktion auf, um zu bestimmen, ob das Objekt Clients bedient. Andernfalls kann das System die DLL entladen und den zugeordneten Speicher freigeben.
+-   [**DllCanUnloadNow**](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow). COM ruft diese Funktion auf, um zu bestimmen, ob das Objekt Clients bedient. Andernfalls kann das System die DLL entladen und den zugeordneten Arbeitsspeicher freigeben.
 
-Wie alle COM-Objekte müssen Shellerweiterungs Handler eine [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle und eine [Klassenfactory](../com/implementing-iclassfactory.md)implementieren. In den meisten Fällen muss in Windows XP oder früher entweder eine [**IPersistFile**](/windows/win32/api/objidl/nn-objidl-ipersistfile) -oder [**ishellextinit**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellextinit) -Schnittstelle implementiert werden. Diese wurden durch [**IInitializeWithStream**](/windows/desktop/api/Propsys/nn-propsys-iinitializewithstream), [**IInitializeWithItem**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinitializewithitem) und [**IInitializeWithFile**](/windows/desktop/api/Propsys/nn-propsys-iinitializewithfile) in Windows Vista ersetzt. Die Shell verwendet diese Schnittstellen, um den Handler zu initialisieren.
+Wie alle COM-Objekte müssen Shellerweiterungshandler eine [**IUnknown-Schnittstelle**](/windows/win32/api/unknwn/nn-unknwn-iunknown) und eine [Klassenfactory](../com/implementing-iclassfactory.md)implementieren. Die meisten müssen auch eine [**IPersistFile-**](/windows/win32/api/objidl/nn-objidl-ipersistfile) oder [**IShellExtInit-Schnittstelle**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellextinit) in Windows XP oder früher implementieren. Diese wurden in Windows Vista durch [**IInitializeWithStream,**](/windows/desktop/api/Propsys/nn-propsys-iinitializewithstream) [**IInitializeWithItem**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iinitializewithitem) und [**IInitializeWithFile**](/windows/desktop/api/Propsys/nn-propsys-iinitializewithfile) ersetzt. Die Shell verwendet diese Schnittstellen, um den Handler zu initialisieren.
 
-Die [**IPersistFile**](/windows/win32/api/objidl/nn-objidl-ipersistfile) -Schnittstelle muss folgendermaßen implementiert werden:
+Die [**IPersistFile-Schnittstelle**](/windows/win32/api/objidl/nn-objidl-ipersistfile) muss wie folgt implementiert werden:
 
--   Symbol Handler
--   Daten Handler
--   Drop Handler
+-   Symbolhandler
+-   Datenhandler
+-   Löschen von Handlern
 
-Die [**ishellextinit**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellextinit) -Schnittstelle muss wie folgt implementiert werden:
+Die [**IShellExtInit-Schnittstelle**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellextinit) muss wie folgt implementiert werden:
 
--   Handler für Kontextmenü
+-   Kontextmenühandler
 -   Drag & Drop-Handler
--   Eigenschaften Blatt Handler
+-   Eigenschaftenblatthandler
 
-Im restlichen Teil dieses Themas werden die folgenden Themen behandelt:
+Die folgenden Themen werden im weiteren Verlauf dieses Themas erläutert:
 
 -   [Implementieren von IPersistFile](#implementing-ipersistfile)
--   [Implementieren von ishellextinit](#implementing-ishellextinit)
--   [Infotip-Anpassung](#infotip-customization)
+-   [Implementieren von IShellExtInit](#implementing-ishellextinit)
+-   [Anpassung von Infotips](#infotip-customization)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="implementing-ipersistfile"></a>Implementieren von IPersistFile
 
-Die [**IPersistFile**](/windows/win32/api/objidl/nn-objidl-ipersistfile) -Schnittstelle ist so konzipiert, dass ein Objekt aus einer Datenträger Datei geladen oder in einer Datei gespeichert werden kann. Sie verfügt über sechs Methoden, zusätzlich zu [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown), fünf ihrer eigenen und der [**GetClassID-**](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) Methode, die von [**ipersistent**](/windows/win32/api/objidl/nn-objidl-ipersist)erbt. Bei Shellerweiterungen wird **ipersistent** nur zum Initialisieren eines Shellerweiterungs-Handlerobjekts verwendet. Da in der Regel kein Lese-oder Schreibzugriff auf den Datenträger erforderlich ist, benötigen nur die Methoden **GetClassID** und [**Load**](/windows/win32/api/objidl/nf-objidl-ipersistfile-load) eine nicht Token-Implementierung.
+Die [**IPersistFile-Schnittstelle**](/windows/win32/api/objidl/nn-objidl-ipersistfile) ist so konzipiert, dass ein Objekt aus einer Datenträgerdatei geladen oder darin gespeichert werden kann. Es verfügt über sechs Methoden zusätzlich zu [**IUnknown,**](/windows/win32/api/unknwn/nn-unknwn-iunknown)fünf eigene Methoden und die [**GetClassID-Methode,**](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) die sie von [**IPersist**](/windows/win32/api/objidl/nn-objidl-ipersist)erbt. Bei Shell-Erweiterungen wird **IPersist** nur zum Initialisieren eines Shell-Erweiterungshandlerobjekts verwendet. Da in der Regel kein Lese- oder Schreibzugriff auf den Datenträger erforderlich ist, erfordern nur die Methoden **GetClassID** und [**Load**](/windows/win32/api/objidl/nf-objidl-ipersistfile-load) eine Nichttokenimplementierungen.
 
-Die Shell ruft zuerst [**GetClassID**](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) auf, und die-Funktion gibt den Klassen Bezeichner (CLSID) des Erweiterungs Handler-Objekts zurück. Die Shell ruft dann [**Load**](/windows/win32/api/objidl/nf-objidl-ipersistfile-load) auf und übergibt zwei Werte. Der erste *pszFile-Datentyp* ist eine Unicode-Zeichenfolge mit dem Namen der Datei oder des Ordners, mit der die Shell arbeiten soll. Die zweite ist der *dwmode*, der den Datei Zugriffsmodus angibt. Da der Zugriff auf Dateien normalerweise nicht erforderlich ist, ist *dwmode* normalerweise 0 (null). Die-Methode speichert diese Werte nach Bedarf für den späteren Verweis.
+Die Shell ruft zuerst [**GetClassID**](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) auf, und die Funktion gibt den Klassenbezeichner (CLSID) des Erweiterungshandlerobjekts zurück. Die Shell ruft dann [**Load auf**](/windows/win32/api/objidl/nf-objidl-ipersistfile-load) und übergibt zwei Werte. Die erste , *pszFile,* ist eine Unicode-Zeichenfolge mit dem Namen der Datei oder des Ordners, für die Shell ausgeführt werden soll. Der zweite ist *dwMode,* der den Dateizugriffsmodus angibt. Da normalerweise kein Zugriff auf Dateien erforderlich ist, ist *dwMode* in der Regel 0 (null). Die -Methode speichert diese Werte nach Bedarf für einen späteren Verweis.
 
-Das folgende Code Fragment veranschaulicht, wie ein typischer shellerweiterungshandler die Methoden [**GetClassID**](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) und [**Load**](/windows/win32/api/objidl/nf-objidl-ipersistfile-load) implementiert. Es ist für die Handhabung von ANSI oder Unicode konzipiert. CLSID \_ sampleexthandler ist die GUID des Erweiterungs Handler-Objekts, und csampleshellextension ist der Name der Klasse, die zum Implementieren der Schnittstelle verwendet wird. Die Variablen **m \_ szFilename** und **m \_ dwmode** sind private Variablen, die zum Speichern des Namens und der Zugriffsflags der Datei verwendet werden.
+Das folgende Codefragment veranschaulicht, wie ein typischer Shellerweiterungshandler die [**Methoden GetClassID**](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) und [**Load**](/windows/win32/api/objidl/nf-objidl-ipersistfile-load) implementiert. Es ist für die Verarbeitung von ANSI oder Unicode konzipiert. CLSID \_ SampleExtHandler ist die GUID des Erweiterungshandlerobjekts, und CSampleShellExtension ist der Name der Klasse, die zum Implementieren der -Schnittstelle verwendet wird. Die Variablen **m \_ szFileName** und **m \_ dwMode** sind private Variablen, die zum Speichern des Dateinamens und der Zugriffsflags verwendet werden.
 
 
 ```C++
@@ -77,15 +77,15 @@ IFACEMETHODIMP CSampleShellExtension::Load(PCWSTR pszFile, DWORD dwMode)
 
 
 
-## <a name="implementing-ishellextinit"></a>Implementieren von ishellextinit
+## <a name="implementing-ishellextinit"></a>Implementieren von IShellExtInit
 
-Die [**ishellextinit**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellextinit) -Schnittstelle verfügt über nur eine Methode, [**ishellextinit:: Initialize**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize), zusätzlich zu [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown). Die-Methode verfügt über drei Parameter, die von der Shell verwendet werden können, um verschiedene Arten von Informationen zu übergeben. Welche Werte weitergegeben werden, hängt vom Typ des Handlers ab, und einige können auf **null** festgelegt werden.
+Die [**IShellExtInit-Schnittstelle**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellextinit) verfügt zusätzlich zu [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown)nur über eine Methode, [**IShellExtInit::Initialize.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize) Die -Methode verfügt über drei Parameter, mit denen die Shell verschiedene Informationstypen übergeben kann. Die übergebenen Werte hängen vom Typ des Handlers ab, und einige können auf **NULL** festgelegt werden.
 
--   *pidlfolder* enthält einen Ordner Zeiger auf eine Liste der Element Bezeichner (PIDL). Dabei handelt es sich um eine absolute PIDL. Bei Eigenschaften Blatt Erweiterungen ist dieser Wert **null**. Bei Kontextmenü Erweiterungen ist dies die PIDL des Ordners, der das Element enthält, dessen Kontextmenü angezeigt wird. Bei nicht standardmäßigen Drag & Drop-Handlern ist dies die PIDL des Ziel Ordners.
--   *pdataobject* enthält einen Zeiger auf die [**IDataObject**](/windows/win32/api/objidl/nn-objidl-idataobject) -Schnittstelle eines Datenobjekts. Das Datenobjekt enthält einen oder mehrere Dateinamen im [CF- \_ HDROP](dragdrop.md) -Format.
--   *hregkey* enthält einen Registrierungsschlüssel für das Datei Objekt oder den Ordnertyp.
+-   *pidlFolder* enthält den Zeiger eines Ordners auf eine Elementbezeichnerliste (PIDL). Dies ist eine absolute PIDL. Bei Eigenschaftenblatterweiterungen ist dieser Wert **NULL.** Bei Kontextmenüerweiterungen ist es die PIDL des Ordners, der das Element enthält, dessen Kontextmenü angezeigt wird. Bei Drag & Drop-Handlern ohne Standardmäßigkeit ist dies die PIDL des Zielordners.
+-   *pDataObject* enthält einen Zeiger auf die [**IDataObject-Schnittstelle**](/windows/win32/api/objidl/nn-objidl-idataobject) eines Datenobjekts. Das Datenobjekt enthält mindestens einen Dateinamen im [CF \_ HDROP-Format.](dragdrop.md)
+-   *hRegKey* enthält einen Registrierungsschlüssel für das Dateiobjekt oder den Ordnertyp.
 
-Die [**ishellextinit:: Initialize**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize) -Methode speichert den Dateinamen, den [**IDataObject**](/windows/win32/api/objidl/nn-objidl-idataobject) -Zeiger und den Registrierungsschlüssel nach Bedarf für die spätere Verwendung. Das folgende Code Fragment veranschaulicht die Implementierung von **ishellextinit:: Initialize**. Der Einfachheit halber wird in diesem Beispiel davon ausgegangen, dass das Datenobjekt nur eine einzelne Datei enthält. Im Allgemeinen enthält das Datenobjekt möglicherweise mehrere Dateien, die jeweils extrahiert werden müssen.
+Die [**IShellExtInit::Initialize-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize) speichert den Dateinamen, [**den IDataObject-Zeiger**](/windows/win32/api/objidl/nn-objidl-idataobject) und den Registrierungsschlüssel nach Bedarf für die spätere Verwendung. Das folgende Codefragment veranschaulicht eine Implementierung von **IShellExtInit::Initialize**. Der Einfachheit halber wird in diesem Beispiel davon ausgegangen, dass das Datenobjekt nur eine einzelne Datei enthält. Im Allgemeinen kann das Datenobjekt mehrere Dateien enthalten, von denen jede extrahiert werden muss.
 
 
 ```C++
@@ -171,11 +171,11 @@ IFACEMETHODIMP CSampleShellExtension::Initialize(__in_opt PCIDLIST_ABSOLUTE pidl
 
 
 
-## <a name="infotip-customization"></a>Infotip-Anpassung
+## <a name="infotip-customization"></a>Anpassung von Infotips
 
-Es gibt zwei Möglichkeiten zum Anpassen von infotips. Eine Möglichkeit besteht darin, ein Objekt zu implementieren, das [**iqueryinfo**](/windows/win32/api/shlobj_core/nn-shlobj_core-iqueryinfo) unterstützt, und das Objekt dann unter dem richtigen Unterschlüssel in der Registrierung zu registrieren (siehe unten). Alternativ können Sie entweder eine festgelegte Zeichenfolge oder eine Liste bestimmter Dateieigenschaften angeben, die angezeigt werden sollen.
+Es gibt zwei Möglichkeiten, Infotips anzupassen. Eine Möglichkeit besteht darin, ein Objekt zu implementieren, das [**IQueryInfo**](/windows/win32/api/shlobj_core/nn-shlobj_core-iqueryinfo) unterstützt, und dann das Objekt unter dem richtigen Unterschlüssel in der Registrierung zu registrieren (siehe unten). Alternativ können Sie entweder eine feste Zeichenfolge oder eine Liste bestimmter Dateieigenschaften angeben, die angezeigt werden sollen.
 
-Um eine Zeichenfolge fester Zeichenfolge für eine Namespace Erweiterung anzuzeigen, erstellen Sie unter dem CLSID-Schlüssel der Namespace Erweiterung einen Unterschlüssel namens **infotip** . Legen Sie die Daten des unter Schlüssels auf die Zeichenfolge fest, die Sie anzeigen möchten.
+Um eine feste Zeichenfolge für eine Namespaceerweiterung anzuzeigen, erstellen Sie unter dem CLSID-Schlüssel Ihrer Namespaceerweiterung einen Unterschlüssel namens **InfoTip.** Legen Sie die Daten dieses Unterschlüssels auf die Zeichenfolge fest, die angezeigt werden soll.
 
 ```
 HKEY_CLASSES_ROOT
@@ -184,7 +184,7 @@ HKEY_CLASSES_ROOT
          InfoTip = InfoTip string for your namespace extension
 ```
 
-Um eine festgelegte Zeichenfolge für einen Dateityp anzuzeigen, erstellen Sie unter dem **ProgID** -Schlüssel des Dateityps, für den Sie Infotipps bereitstellen möchten, einen Unterschlüssel namens **infotip** . Legen Sie die Daten des unter Schlüssels auf die Zeichenfolge fest, die Sie anzeigen möchten.
+Um eine feste Zeichenfolge für einen Dateityp anzuzeigen, erstellen Sie unter dem **ProgID-Schlüssel** des Dateityps, für den Sie Infotips bereitstellen möchten, einen Unterschlüssel namens **InfoTip.** Legen Sie die Daten dieses Unterschlüssels auf die Zeichenfolge fest, die angezeigt werden soll.
 
 ```
 HKEY_CLASSES_ROOT
@@ -192,7 +192,7 @@ HKEY_CLASSES_ROOT
       InfoTip = InfoTip string for all files of this type
 ```
 
-Wenn Sie möchten, dass die Shell bestimmte Dateieigenschaften im Infotipp für einen bestimmten Dateityp anzeigt, erstellen Sie unter dem **ProgID** -Schlüssel dieses Dateityps einen Unterschlüssel namens **Infotipp** . Legen Sie für die Daten dieses unter Schlüssels eine durch Semikolons getrennte Liste von kanonischen Eigenschaftsnamen oder {fmtid}, PID-Paare, bei denen *propName* ein kanonischer Eigenschaftsname ist *, und {fmtid}, PID* ein [**fmtid/PID-paar**](./objects.md).
+Wenn die Shell bestimmte Dateieigenschaften in der Infotip für einen bestimmten Dateityp anzeigen soll, erstellen Sie unter dem **ProgID-Schlüssel** dieses Dateityps einen Unterschlüssel namens **InfoTip.** Legen Sie die Daten dieses Unterschlüssels als eine durch Semikolons getrennten Liste kanonischer Eigenschaftennamen oder {fmtid}, pid-Paare fest, wobei *propname* ein kanonischer Eigenschaftenname und *{fmtid},pid* ein [**FMTID/PID-Paar**](./objects.md)ist.
 
 ```
 HKEY_CLASSES_ROOT
@@ -200,35 +200,35 @@ HKEY_CLASSES_ROOT
       InfoTip = propname;propname;{fmtid},pid;{fmtid},pid
 ```
 
-Die folgenden Eigenschaftsnamen können verwendet werden.
+Die folgenden Eigenschaftennamen können verwendet werden.
 
 
 
-| Eigenschaftenname    | BESCHREIBUNG                   | Abgerufen von                                                                            |
+| Eigenschaftenname    | Beschreibung                   | Abgerufen von                                                                            |
 |------------------|-------------------------------|-------------------------------------------------------------------------------------------|
-| Autor           | Autor des Dokuments        | [**pidsi- \_ Autor**](../stg/the-summary-information-property-set.md)                             |
-| Titel            | Titel des Dokuments         | [**pidsi- \_ Titel**](../stg/the-summary-information-property-set.md)                              |
-| Subject          | Themen Zusammenfassung               | [**pidsi- \_ Betreff**](../stg/the-summary-information-property-set.md)                            |
-| Comment          | Dokument Kommentare             | [**Pidsi \_ Kommentar**](../stg/the-summary-information-property-set.md) -oder Ordner-/Laufwerkeigenschaften |
-| PageCount        | Anzahl von Seiten               | [**pidsi \_ Page count**](../stg/the-summary-information-property-set.md)                          |
-| Name             | Anzeigename                 | Standard Ordneransicht                                                                      |
-| Ursprungs Zuordnung | Speicherort der ursprünglichen Datei     | Ordner "Briefkasten" und "Papierkorb"                                                   |
-| Datedeleted      | Die Datums Datei wurde gelöscht.         | Papierkorb Ordner                                                                        |
-| type             | Dateityp                  | Ansicht "Standard Ordner Details"                                                              |
-| Size             | Größe der Datei                  | Ansicht "Standard Ordner Details"                                                              |
-| Synccopyin       | Identisch mit "Ursprungs Zuordnung"      | Identisch mit "Ursprungs Zuordnung"                                                                  |
-| Geändert         | Datum der letzten Änderung            | Ansicht "Standard Ordner Details"                                                              |
-| Erstellt          | Erstellungsdatum                  | Ansicht "Standard Ordner Details"                                                              |
-| Auf         | Datum des letzten Zugriffs            | Ansicht "Standard Ordner Details"                                                              |
-| InFolder         | Verzeichnis, das die Datei enthält | Dokument Suchergebnisse                                                                   |
-| Rang             | Qualität der Such Übereinstimmung       | Dokument Suchergebnisse                                                                   |
+| Autor           | Autor des Dokuments        | [**PIDSI \_ AUTHOR**](../stg/the-summary-information-property-set.md)                             |
+| Titel            | Titel des Dokuments         | [**PIDSI \_ TITLE**](../stg/the-summary-information-property-set.md)                              |
+| Gegenstand          | Betreffzusammenfassung               | [**PIDSI \_ SUBJECT**](../stg/the-summary-information-property-set.md)                            |
+| Kommentar          | Dokumentkommentare             | [**PIDSI \_ COMMENT-**](../stg/the-summary-information-property-set.md) oder Ordner-/Laufwerkeigenschaften |
+| PageCount        | Anzahl von Seiten               | [**PIDSI \_ PAGECOUNT**](../stg/the-summary-information-property-set.md)                          |
+| Name             | Anzeigename                 | Standardordneransicht                                                                      |
+| OriginalLocation | Speicherort der ursprünglichen Datei     | Ordner "Kleinbuchstaben" und Papierkorb Ordner                                                   |
+| DateDeleted      | Datum, an dem die Datei gelöscht wurde         | Papierkorb Ordner                                                                        |
+| Typ             | Dateityp                  | Standardansicht der Ordnerdetails                                                              |
+| Size             | Größe der Datei                  | Standardansicht der Ordnerdetails                                                              |
+| SyncCopyIn       | Identisch mit OriginalLocation      | Identisch mit OriginalLocation                                                                  |
+| Geändert         | Datum der letzten Änderung            | Standardansicht der Ordnerdetails                                                              |
+| Erstellt          | Erstellungsdatum                  | Standardansicht der Ordnerdetails                                                              |
+| Zugegriffen         | Datum des letzten Zugriffes            | Standardansicht der Ordnerdetails                                                              |
+| InFolder         | Verzeichnis, das die Datei enthält | Dokumentsuchergebnisse                                                                   |
+| Rang             | Qualität der Such übereinstimmung       | Dokumentsuchergebnisse                                                                   |
 | FreeSpace        | Verfügbarer Speicherplatz       | Laufwerke                                                                               |
-| Anzahl von besuchen   | Anzahl von Aufrufen              | Ordner "Favoriten"                                                                          |
-| Attributes       | Dateiattribute               | Ansicht "Standard Ordner Details"                                                              |
-| Company          | Unternehmensname                  | [**piddsi- \_ Unternehmen**](../stg/the-documentsummaryinformation-and-userdefined-property-sets.md)   |
-| Kategorie         | Dokument Kategorie             | [**piddsi- \_ Kategorie**](../stg/the-documentsummaryinformation-and-userdefined-property-sets.md)  |
-| Copyright        | Medien Copyright               | [**pidmsi \_ Copyright**](../stg/the-documentsummaryinformation-and-userdefined-property-sets.md) |
-| Htmlinfotipfile  | HTML-infotip-Datei             | Datei für Ordner Desktop.ini                                                               |
+| NumberOfVisits   | Anzahl von Aufrufen              | Ordner "Favoriten"                                                                          |
+| Attribute       | Dateiattribute               | Standardansicht der Ordnerdetails                                                              |
+| Company          | Unternehmensname                  | [**PIDDSI \_ COMPANY**](../stg/the-documentsummaryinformation-and-userdefined-property-sets.md)   |
+| Category         | Dokumentkategorie             | [**PIDDSI \_ CATEGORY**](../stg/the-documentsummaryinformation-and-userdefined-property-sets.md)  |
+| Copyright        | Medienrechte               | [**PIDMSI \_ COPYRIGHT**](../stg/the-documentsummaryinformation-and-userdefined-property-sets.md) |
+| HTMLInfoTipFile  | HTML-InfoTip-Datei             | Desktop.ini-Datei für den Ordner                                                               |
 
 
 
@@ -238,7 +238,7 @@ Die folgenden Eigenschaftsnamen können verwendet werden.
 
 <dl> <dt>
 
-[Registrieren von Shellerweiterungs Handlern](reg-shell-exts.md)
+[Registrieren von Shellerweiterungshandlern](reg-shell-exts.md)
 </dt> </dl>
 
  

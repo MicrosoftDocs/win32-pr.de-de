@@ -1,11 +1,11 @@
 ---
-title: Comhandleraction-Objekt
-description: Skript Objekt, das eine Aktion darstellt, die einen Handler auslöst.
+title: ComHandlerAction-Objekt
+description: Skripterstellungsobjekt, das eine Aktion darstellt, die einen Handler ausspricht.
 ms.assetid: 47ffe52f-b7b7-4486-a00d-6105395f23c0
 keywords:
-- COM-handleraktion Taskplaner, Objekt
-- Comhandleraction-Objekt Taskplaner
-- Comhandleraction-Objekt Taskplaner, beschrieben
+- COM-Handleraktion Taskplaner , Objekt
+- ComHandlerAction-Taskplaner
+- ComHandlerAction-Objekt Taskplaner , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,45 +16,45 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 02d7e8371deda260c407682181fd31e29886b777
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7dd803d67d292df22e651e4393880038835c862e0e81dde19e0d0a7e15fccd32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119659680"
 ---
-# <a name="comhandleraction-object"></a>Comhandleraction-Objekt
+# <a name="comhandleraction-object"></a>ComHandlerAction-Objekt
 
-Skript Objekt, das eine Aktion darstellt, die einen Handler auslöst.
+Skripterstellungsobjekt, das eine Aktion darstellt, die einen Handler ausspricht.
 
 ## <a name="members"></a>Member
 
-Das **comhandleraction** -Objekt verfügt über diese Typen von Membern:
+Das **ComHandlerAction-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **comhandleraction** -Objekt verfügt über diese Eigenschaften.
+Das **ComHandlerAction-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                               | Zugriffstyp           | BESCHREIBUNG                                                                                               |
+| Eigenschaft                                               | Zugriffstyp           | Beschreibung                                                                                               |
 |:-------------------------------------------------------|:----------------------|:----------------------------------------------------------------------------------------------------------|
-| [**ClassID**](comhandleraction-classid.md)<br/> | Lesen/Schreiben<br/> | Ruft den Bezeichner der Handlerklasse ab oder legt ihn fest.<br/>                                              |
+| [**Classid**](comhandleraction-classid.md)<br/> | Lesen/Schreiben<br/> | Ruft den Bezeichner der Handlerklasse ab oder legt den Bezeichner fest.<br/>                                              |
 | [**Daten**](comhandleraction-data.md)<br/>       | Lesen/Schreiben<br/> | Ruft zusätzliche Daten ab, die dem Handler zugeordnet sind, oder legt diese fest.<br/>                              |
-| [**Name**](action-id.md)<br/>                     | Lesen/Schreiben<br/> | Wird vom [**Action**](action.md) -Objekt geerbt. Ruft den Bezeichner der Aktion ab oder legt ihn fest.<br/> |
-| [**type**](action-type.md)<br/>                 | Schreibgeschützt<br/>  | Wird vom [**Action**](action.md) -Objekt geerbt. Ruft den Typ der Aktion ab.<br/>               |
+| [**Id**](action-id.md)<br/>                     | Lesen/Schreiben<br/> | Geerbt vom [**Action-Objekt.**](action.md) Ruft den Bezeichner der Aktion ab oder legt den Bezeichner fest.<br/> |
+| [**Typ**](action-type.md)<br/>                 | Schreibgeschützt<br/>  | Geerbt vom [**Action-Objekt.**](action.md) Ruft den Typ der Aktion ab.<br/>               |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-COM-Handler müssen die [**ITaskHandler**](/windows/desktop/api/taskschd/nn-taskschd-itaskhandler) -Schnittstelle für das Taskplaner implementieren, um den Handler zu starten und anzuhalten. Der com-Handler verwendet wiederum die Methoden des [**taskhandlerstatus**](/windows/desktop/api/taskschd/nn-taskschd-itaskhandlerstatus) -Objekts, um den Status zurück an den Taskplaner zu übermitteln.
+COM-Handler müssen die [**ITaskHandler-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-itaskhandler) implementieren, damit Taskplaner handler starten und beenden kann. Im Gegenzug verwendet der COM-Handler die Methoden des [**TaskHandlerStatus-Objekts,**](/windows/desktop/api/taskschd/nn-taskschd-itaskhandlerstatus) um den Status an die Taskplaner.
 
-Beim Lesen oder Schreiben von XML wird eine com-handleraktion im [**comhandler**](taskschedulerschema-comhandler-actiongroup-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben von XML wird eine COM-Handleraktion im [**ComHandler-Element**](taskschedulerschema-comhandler-actiongroup-element.md) des Taskplaner angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,9 +62,9 @@ Beim Lesen oder Schreiben von XML wird eine com-handleraktion im [**comhandler**
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -73,7 +73,7 @@ Beim Lesen oder Schreiben von XML wird eine com-handleraktion im [**comhandler**
 
 <dl> <dt>
 
-[**Taskhandlerstatus**](/windows/desktop/api/taskschd/nn-taskschd-itaskhandlerstatus)
+[**TaskHandlerStatus**](/windows/desktop/api/taskschd/nn-taskschd-itaskhandlerstatus)
 </dt> <dt>
 
 [Taskplaner Objekte](task-scheduler-objects.md)

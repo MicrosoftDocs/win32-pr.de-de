@@ -1,11 +1,11 @@
 ---
 title: LDAP-IPDeny-List-Attribut
-description: Enthält eine Liste von binären IP-Adressen, denen der Zugriff auf einen LDAP-Server verweigert wird.
+description: Enthält eine Liste der binären IP-Adressen, denen der Zugriff auf einen LDAP-Server verweigert wird.
 ms.assetid: 7d554d49-8934-4d71-b32f-8e59c22faf8c
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des LDAP-IPDeny-List-Attributs
-- LDAPIPDenyList-Attribut, AD-Schema
+- LDAP-IPDeny-List-Attribut AD-Schema
+- AD-Schema des lDAPIPDenyList-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 43246b5bb5786eefafc8598e9d729d9a2f308e08
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f3c7a759e72680927a1143435e48940b88b7611f803c275ccdc65342f1ff4e62
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119302139"
 ---
 # <a name="ldap-ipdeny-list-attribute"></a>LDAP-IPDeny-List-Attribut
 
-Enthält eine Liste von binären IP-Adressen, denen der Zugriff auf einen LDAP-Server verweigert wird.
+Enthält eine Liste der binären IP-Adressen, denen der Zugriff auf einen LDAP-Server verweigert wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | LDAP-IPDeny-List                                      |
-| LDAP-Display-Name | LDAPIPDenyList                                        |
+| Ldap-Anzeigename | lDAPIPDenyList                                        |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.844                                |
-| System-ID-GUID    | 7359a353-90F 7-11d1-AEbc-0000                  |
+| System-ID-GUID    | 7359a353-90f7-11d1-aebc-0000f80367c1                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Enthält eine Liste von binären IP-Adressen, denen der Zugriff auf einen LDAP-S
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,19 +59,19 @@ Enthält eine Liste von binären IP-Adressen, denen der Zugriff auf einen LDAP-S
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,15 +80,15 @@ Enthält eine Liste von binären IP-Adressen, denen der Zugriff auf einen LDAP-S
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
 
 
 
@@ -101,15 +101,15 @@ Enthält eine Liste von binären IP-Adressen, denen der Zugriff auf einen LDAP-S
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
 
 
 
@@ -122,15 +122,15 @@ Enthält eine Liste von binären IP-Adressen, denen der Zugriff auf einen LDAP-S
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Is-Single-Valued       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Query-Policy**](c-querypolicy.md)<br/> |
 
 
 
@@ -143,15 +143,15 @@ Enthält eine Liste von binären IP-Adressen, denen der Zugriff auf einen LDAP-S
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Is-Single-Valued       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Query-Policy**](c-querypolicy.md)<br/> |
 
 
 
@@ -164,15 +164,15 @@ Enthält eine Liste von binären IP-Adressen, denen der Zugriff auf einen LDAP-S
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Is-Single-Valued       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Query-Policy**](c-querypolicy.md)<br/> |
 
 
 
@@ -185,15 +185,15 @@ Enthält eine Liste von binären IP-Adressen, denen der Zugriff auf einen LDAP-S
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Is-Single-Valued       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Query-Policy**](c-querypolicy.md)<br/> |
 
 
 
