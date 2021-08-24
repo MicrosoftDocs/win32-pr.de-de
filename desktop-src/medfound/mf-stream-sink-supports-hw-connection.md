@@ -1,39 +1,39 @@
 ---
-description: Gibt an, ob eine Medien Senke den Hardware Datenfluss unterstützt.
+description: Gibt an, ob eine Mediensenke den Hardwaredatenfluss unterstützt.
 ms.assetid: 15838467-D253-4ECE-B9E7-AFD3A21B3AF2
-title: MF_STREAM_SINK_SUPPORTS_HW_CONNECTION-Attribut (mspdl. h)
+title: MF_STREAM_SINK_SUPPORTS_HW_CONNECTION-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a95bfecba4cf53b6ef7c8863ec0456e310d8bcb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6a9f663c492e5ae15590cc9240762e90298122790fa350fae51d09dd1199f6d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485206"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119714375"
 ---
-# <a name="mf_stream_sink_supports_hw_connection-attribute"></a>Daten \_ Strom- \_ Senke \_ unterstützt das \_ HW- \_ Verbindungs Attribut
+# <a name="mf_stream_sink_supports_hw_connection-attribute"></a>MF STREAM SINK SUPPORTS HW CONNECTION attribute (MF \_ \_ STREAM-SENKE \_ UNTERSTÜTZT \_ \_ HW-VERBINDUNGSattribut)
 
-Gibt an, ob eine Medien Senke den Hardware Datenfluss unterstützt.
+Gibt an, ob eine Mediensenke den Hardwaredatenfluss unterstützt.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL** als **UINT32** gespeichert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird verwendet, wenn eine Medien Senke ein Hardware Gerät als Proxy verwendet und Daten über einen Hardwarebus empfangen kann. Beispielsweise kann ein Hardware-Audiodecoder Audiodaten direkt an die audiorenderinghardware senden.
+Dieses Attribut wird verwendet, wenn eine Mediensenke ein Hardwaregerät proxt und Daten über einen Hardwarebus empfangen kann. Beispielsweise kann ein Hardwareaudiodecoder Audiodaten direkt an die Audiorenderinghardware senden.
 
-In diesem Szenario werden der Decoder und die Senke weiterhin in der Microsoft Media Foundation durch eine [Media Foundation Transformation](media-foundation-transforms.md) (MFT) und eine Medien Senke dargestellt. Zwischen diesen beiden Objekten auf der Pipeline Ebene werden jedoch keine Daten übertragen, sondern nur auf der Hardwareebene, wie in der folgenden Abbildung dargestellt.
+In diesem Szenario werden der Decoder und die Senke weiterhin im Microsoft Media Foundation durch eine [Media Foundation Transformation](media-foundation-transforms.md) (MFT) und eine Mediensenke dargestellt. Allerdings fließen keine Daten zwischen diesen beiden Objekten auf der Pipelineebene, sondern nur auf der Hardwareebene, wie im folgenden Diagramm dargestellt.
 
-![ein Diagramm, das eine Hardware Proxy Quelle anzeigt.](images/proxy-mft4.png)
+![Ein Diagramm, das eine Hardwareproxyquelle zeigt.](images/proxy-mft4.png)
 
-Die Verbindung zwischen dem MFT und der Medien Senke wird wie folgt ausgehandelt.
+Die Verbindung zwischen MFT und der Mediensenke wird wie folgt ausgehandelt.
 
-1.  Die Pipeline prüft, ob es sich bei der MFT um einen Hardware Proxy handelt, indem auf der MFT das Attribut Attribut für die MFT-Aufzählung der [ \_ Hardware- \_ \_ URL \_ ](mft-enum-hardware-url-attribute.md) überprüft wird. Weitere Informationen finden Sie unter [Hardware-MFTs](hardware-mfts.md).
-2.  Die Pipeline erhält einen Zeiger auf die [**imfstreamsink**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamsink) -Schnittstelle der Stream-Senke in der Medien Senke.
-3.  Die Pipeline verwendet den [**imfstreamsink**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamsink) -Zeiger zum Abfragen der MF-Daten \_ Strom- \_ Senke \_ unterstützt das \_ HW- \_ Verbindungs Attribut. Wenn dieses Attribut vorhanden und gleich **true** ist, unterstützt die Medienquelle Hardware Verbindungen.
-4.  Die Pipeline legt das [Attribut Attribut des verbundenen MFT- \_ \_ Streams \_ ](mft-connected-stream-attribute.md) in der streamsenke fest. Der Wert dieses Attributs ist der [**imfattribute**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Zeiger aus dem MFT.
-5.  Die Pipeline legt die mit dem [ \_ HW- \_ \_ \_ streamattribut verbundene MFT](mft-connected-to-hw-stream.md) für die streamsenke und die MFT auf " **true** " fest.
+1.  Die Pipeline überprüft, ob der MFT ein Hardwareproxy ist, indem das [Attribut MFT \_ ENUM HARDWARE URL Attribute (MFT-ENUM-HARDWARE-URL-Attribut) \_ \_ \_ ](mft-enum-hardware-url-attribute.md) auf dem MFT überprüft wird. Weitere Informationen finden Sie unter [Hardware-MFTs.](hardware-mfts.md)
+2.  Die Pipeline ruft einen Zeiger auf die [**INTERFACESStreamSink-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamsink) der Streamsenke auf der Mediensenke ab.
+3.  Die Pipeline verwendet den [**POINTERStreamSink-Zeiger,**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamsink) um das MF \_ STREAM SINK SUPPORTS \_ \_ \_ HW \_ CONNECTION-Attribut abzufragen. Wenn dieses Attribut vorhanden und **gleich TRUE** ist, unterstützt die Medienquelle Hardwareverbindungen.
+4.  Die Pipeline legt das [Attribut MFT \_ CONNECTED STREAM \_ \_ ATTRIBUTE](mft-connected-stream-attribute.md) für die Streamsenke fest. Der Wert dieses Attributs ist der [**POINTERAttribute-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) aus dem MFT.
+5.  Die Pipeline legt das [MFT \_ CONNECTED TO \_ \_ HW \_ STREAM-Attribut](mft-connected-to-hw-stream.md) sowohl in der Streamsenke als auch im MFT auf **TRUE** fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,9 +41,9 @@ Die Verbindung zwischen dem MFT und der Medien Senke wird wie folgt ausgehandelt
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ Desktop-Apps \| UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ Desktop-Apps \| UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 

@@ -1,26 +1,26 @@
 ---
-description: Die isearchjob-Schnittstelle definiert die folgenden Methoden.
+description: Die ISearchJob-Schnittstelle definiert die folgenden Methoden.
 ms.assetid: bb15e1fe-4ac3-4666-b28c-d580d9c33660
-title: Isearchjob-Methoden
+title: ISearchJob-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2790cdbbeabf8347f85c0709c3975cad6e7d971c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dd7745bf312c06e95105c84a9d4698ef8050de9b1717fa6488ce9c4bd4b71f0b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119756530"
 ---
-# <a name="isearchjob-methods"></a>Isearchjob-Methoden
+# <a name="isearchjob-methods"></a>ISearchJob-Methoden
 
-Die [**isearchjob**](/windows/desktop/api/Wuapi/nn-wuapi-isearchjob) -Schnittstelle definiert die folgenden Methoden.
+Die [**ISearchJob-Schnittstelle**](/windows/desktop/api/Wuapi/nn-wuapi-isearchjob) definiert die folgenden Methoden.
 
 
 
-| Methode                                          | BESCHREIBUNG                                                                          |
+| Methode                                          | Beschreibung                                                                          |
 |-------------------------------------------------|--------------------------------------------------------------------------------------|
 | [**Bereinigung**](/windows/desktop/api/Wuapi/nf-wuapi-isearchjob-cleanup)           | Wartet auf den Abschluss eines asynchronen Vorgangs und gibt dann alle Rückrufe frei. |
-| [**Requestabort**](/windows/desktop/api/Wuapi/nf-wuapi-isearchjob-requestabort) | Führt eine Anforderung zum Abbrechen einer asynchronen Suche aus.                                    |
+| [**RequestAbort**](/windows/desktop/api/Wuapi/nf-wuapi-isearchjob-requestabort) | Stellt eine Anforderung zum Abbrechen einer asynchronen Suche.                                    |
 
 
 

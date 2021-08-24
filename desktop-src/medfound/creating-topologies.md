@@ -4,46 +4,46 @@ ms.assetid: afd1e646-9bb6-4265-a225-6aaaf1a7bb2a
 title: Erstellen von Topologien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a9ec738c82ea2b85bcae7d4c05627b81ad939db
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e4048200055066a601f9044ff109f173cb00fc4449a71ea1331b29c8be1a59b8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393294"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119777620"
 ---
 # <a name="creating-topologies"></a>Erstellen von Topologien
 
 In diesem Abschnitt werden einige der allgemeinen Verfahren zum Erstellen einer Topologie beschrieben.
 
-Die allgemeinen Schritte zum Erstellen einer Topologie lauten wie folgt:
+Die allgemeinen Schritte zum Erstellen einer Topologie sind wie folgt:
 
-1.  Erstellen Sie ein neues Topologieobjekt durch Aufrufen von [**mfcreatetopology**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetopology). Diese Funktion gibt einen Zeiger auf die [**imftopology**](/windows/desktop/api/mfidl/nn-mfidl-imftopology) -Schnittstelle der Topologie zurück.
+1.  Erstellen Sie ein neues Topologieobjekt, indem Sie [**MFCreateTopology**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetopology)aufrufen. Diese Funktion gibt einen Zeiger auf [**dieTOPTOPOLOGY-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imftopology) der Topologie zurück.
 
-2.  Anfänglich enthält die Topologie keine Knoten. Um Knoten für die Topologie zu erstellen, rufen Sie [**mfkreatetopologynode**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetopologynode)auf. Diese Funktion gibt einen Zeiger auf die [**imftopologynode**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode) -Schnittstelle des Knotens zurück. Beim Erstellen des Knotens müssen Sie den Knotentyp angeben:
+2.  Anfänglich enthält die Topologie keine Knoten. Um Knoten für die Topologie zu erstellen, rufen [**Sie MFCreateTopologyNode auf.**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetopologynode) Diese Funktion gibt einen Zeiger auf die [**NODESTopologyNode-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynode) des Knotens zurück. Sie müssen den Knotentyp angeben, wenn Sie den Knoten erstellen:
 
     -   Quellknoten.
 
     -   Knoten transformieren.
 
-    -   Ausgabe Knoten.
+    -   Ausgabeknoten.
 
     -   Tee-Knoten.
 
-3.  Initialisieren Sie jeden Knoten. Der Initialisierungs Prozess hängt vom Knotentyp ab, wie in den folgenden Themen beschrieben.
+3.  Initialisieren Sie jeden Knoten. Der Initialisierungsprozess hängt vom Knotentyp ab, wie in den folgenden Themen beschrieben.
 
-4.  Fügen Sie jeden Knoten der Topologie hinzu, indem Sie [**imftopology:: AddNode**](/windows/desktop/api/mfidl/nf-mfidl-imftopology-addnode)aufrufen.
+4.  Fügen Sie jeden Knoten der Topologie hinzu, indem Sie [**DIE KNOTENTOPTOPOLOGIE::AddNode**](/windows/desktop/api/mfidl/nf-mfidl-imftopology-addnode)aufrufen.
 
-5.  Verbinden Sie die Knoten. Um einen Knoten zu verbinden, nennen Sie [**imftopologynode:: ConnectOutput**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-connectoutput) auf dem upstreamknoten, und übergeben Sie einen Zeiger auf den downstreamknoten.
+5.  Verbinden die Knoten. Um eine Verbindung mit einem Knoten herzustellen, rufen Sie [**AUFTOPTOPOLOGYNode::ConnectOutput**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-connectoutput) auf dem Upstreamknoten auf, und übergeben Sie einen Zeiger auf den Downstreamknoten.
 
-In den folgenden Themen werden die spezifischen Schritte für die einzelnen Knoten Typen beschrieben.
+In den folgenden Themen werden die spezifischen Schritte für jeden Knotentyp beschrieben.
 
 
 
-| Thema                                                    | BESCHREIBUNG                     |
+| Thema                                                    | Beschreibung                     |
 |----------------------------------------------------------|---------------------------------|
-| [Erstellen von Quellknoten](creating-source-nodes.md)       | Erstellen eines Quell Knotens    |
-| [Erstellen von Transformations Knoten](creating-transform-nodes.md) | So erstellen Sie einen Transformations Knoten. |
-| [Erstellen von Ausgabe Knoten](creating-output-nodes.md)       | So erstellen Sie einen Ausgabe Knoten.   |
+| [Erstellen von Quellknoten](creating-source-nodes.md)       | Erstellen eines Quellknotens    |
+| [Erstellen von Transformationsknoten](creating-transform-nodes.md) | Erstellen eines Transformationsknotens. |
+| [Erstellen von Ausgabeknoten](creating-output-nodes.md)       | Erstellen eines Ausgabeknotens.   |
 
 
 

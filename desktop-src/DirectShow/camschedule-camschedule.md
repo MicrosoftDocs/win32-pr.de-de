@@ -1,7 +1,7 @@
 ---
-description: CABSchedule.CABSchedule-Konstruktor – Konstruktormethode.
+description: CAMSchedule.CAMSchedule-Konstruktor – Konstruktormethode.
 ms.assetid: ff210374-f394-4267-a67a-1a60a2f9538d
-title: CABSchedule.CABSchedule-Konstruktor (Dsschedule.h)
+title: CAMSchedule.WEBCAMSchedule-Konstruktor (Dsschedule.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ce52a296c375f4d6e96f5fa44817a0098da9ae9f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c5423b774b265fa205fecd0b01df2c6909f53a4178c57d0ba6883f35b421f051
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119757730"
 ---
-# <a name="camschedulecamschedule-constructor"></a>CABSchedule.CABSchedule-Konstruktor
+# <a name="camschedulecamschedule-constructor"></a>CAMSchedule.CAMSchedule-Konstruktor
 
 Konstruktormethode.
 
@@ -45,7 +45,7 @@ CAMSchedule(
 *hEvent* 
 </dt> <dd>
 
-Behandeln eines Ereignisses für die automatische Zurücksetzung.
+Behandeln sie ein Ereignis für die automatische Zurücksetzung.
 
 </dd> </dl>
 
@@ -53,10 +53,10 @@ Behandeln eines Ereignisses für die automatische Zurücksetzung.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Dsschedule.h (include Streams.h)</dt> </dl>                                                                                |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -64,7 +64,7 @@ Behandeln eines Ereignisses für die automatische Zurücksetzung.
 
 <dl> <dt>
 
-[**WEBCAMSchedule-Klasse**](camschedule.md)
+[**CAMSchedule-Klasse**](camschedule.md)
 </dt> </dl>
 
  

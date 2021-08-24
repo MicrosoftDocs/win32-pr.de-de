@@ -1,23 +1,23 @@
 ---
 title: NLS-Unterstützung
-description: Die Netzwerk Verwaltungsfunktionen nehmen Unicode-Zeichen folgen als Eingabe auf und stellen Unicode-Zeichen folgen in der Ausgabe bereit. Wenn Ihre Anwendung in der Regel mit ANSI-Zeichen folgen funktioniert, müssen Sie ggf. auf eine Konvertierung in und aus Unicode achten.
+description: Die Netzwerkverwaltungsfunktionen verwenden Unicode-Zeichenfolgen als Eingabe und stellen Unicode-Zeichenfolgen bei der Ausgabe bereit. Wenn Ihre Anwendung in der Regel mit ANSI-Zeichenfolgen funktioniert, muss ggf. eine Konvertierung in und aus Unicode durchgeführt werden.
 ms.assetid: 63ce93eb-3a5b-4650-aa6c-ffbb0f3ccf6e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a0285bed631546d086b395f218e75ff0e658b2f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 842ab308ee1aa56ae017f9d5ef2e12ad1f4d42e79092201254c04f7613544c5b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037243"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119745100"
 ---
 # <a name="nls-support"></a>NLS-Unterstützung
 
-Die Netzwerk Verwaltungsfunktionen nehmen Unicode-Zeichen folgen als Eingabe auf und stellen Unicode-Zeichen folgen in der Ausgabe bereit. Wenn Ihre Anwendung in der Regel mit ANSI-Zeichen folgen funktioniert, müssen Sie ggf. auf eine Konvertierung in und aus Unicode achten.
+Die Netzwerkverwaltungsfunktionen verwenden Unicode-Zeichenfolgen als Eingabe und stellen Unicode-Zeichenfolgen bei der Ausgabe bereit. Wenn Ihre Anwendung in der Regel mit ANSI-Zeichenfolgen funktioniert, muss ggf. eine Konvertierung in und aus Unicode durchgeführt werden.
 
- 
+ 
 
- 
+ 
 
 
 

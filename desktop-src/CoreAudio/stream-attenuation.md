@@ -1,45 +1,45 @@
 ---
-description: Standardmäßiges ducken
+description: Standardeinstellung für die Beeinschnung
 ms.assetid: 2ad9482f-1888-4f19-bc41-9d47a8e0ed15
-title: Standardmäßiges ducken
+title: Standardeinstellung für die Beeinschnung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d81aa22254ab33ee7396fd4a22d83cc7f5a58041
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ec323bdaf01a7bba0821a9dee2c349239b3a53660334d2ac57edbf71287f396d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119695015"
 ---
-# <a name="default-ducking-experience"></a>Standardmäßiges ducken
+# <a name="default-ducking-experience"></a>Standardeinstellung für die Beeinschnung
 
-Stellen Sie sich ein Szenario vor, in dem ein Benutzer einen Telefonanruf erhält, während er die Musik auf dem Computer hört. Während des Telefonanrufs möchte der Benutzer die Lautstärke der Musik reduzieren, während er an den Telefonanruf teilnimmt, und das ursprüngliche Volume fortsetzen, nachdem der Telefonanruf beendet wurde. Abhängig von den Optionen, die vom Benutzer in der **Sounds** -Systemsteuerung angegeben werden, stellt das Betriebssystem diese Funktion automatisch durch *Ducking* -oder *streamdämpfung* bereit – Verringerung der Intensität eines Audiostreams.
+Stellen Sie sich ein Szenario vor, in dem ein Benutzer beim Lauschen auf Musik auf dem Computer einen Telefonanruf empfängt. Während des Telefonanrufs möchte der Benutzer die Lautstärke der Musik reduzieren, während er sich an den Telefonanrufen nimmt, und das ursprüngliche Volume fortsetzen, nachdem der Telefonanruf beendet wurde. Abhängig von den optionen, die vom Benutzer in der **Sound-Systemsteuerung** angegeben  werden, stellt das Betriebssystem diese Funktionalität automatisch durch Dämpfung von Strömen oder Streamen zur Verfügung – Verringerung der Intensität eines Audiostreams.
 
-Die standardmäßige Dämpfung ist abhängig von der Benutzereinstellung, wie in der **Sound** Option der Systemsteuerung angegeben. Auf der Registerkarte **Kommunikation** kann der Benutzer eine Dämpfung auswählen (der Standardwert ist 80%), alle nicht-Kommunikationsstreams stumm schalten oder die standardmäßige Datenstrom Dämpfung deaktivieren. Das System ermöglicht das Öffnen neuer nicht-Kommunikationsstreams (außer bei neuen Systemsounds) während der Kommunikationssitzung, die neuen Streams werden jedoch nicht automatisch abgeschwächt. Wenn alle Kommunikationsstreams geschlossen sind, beendet das System die Kommunikationssitzung und stellt die Menge der Datenströme wieder her, die während der Kommunikationssitzung gedämpft wurden.
+Die Standardeinstellung für die Dämpfung hängt von der Einstellung des Benutzers ab, wie in der Option Sound der **Systemsteuerung** angegeben. Auf der **Registerkarte** Kommunikation kann der Benutzer eine Dämpfungsstufe auswählen (Der Standardwert ist 80 %), alle nicht kommunikationsbasierten Datenströme stummschalten oder die Standardmäßige Streamdämpfungserfahrung deaktivieren. Das System ermöglicht das Öffnen neuer Nichtkommunikationsstreams (mit Ausnahme neuer Systemklänge) während der Kommunikationssitzung, aber die neuen Streams werden nicht automatisch abgedämpft. Wenn alle Kommunikationsstreams geschlossen sind, beendet das System die Kommunikationssitzung und stellt das Volume der Datenströme wieder wieder auf, die während der Kommunikationssitzung abgedämpft wurden.
 
-Um die streamdämpfung visuell anzugeben, ändert das System die volumemixer-Einstellungen abhängig von der Benutzereinstellung. Wenn der Benutzer z. b. eine Dämpfungs Ebene angibt, wird der Schieberegler vom volumemixer gesenkt, das neue abgedämpfte Volume wird angezeigt, und die ursprüngliche Volumeebene wird angezeigt. Dieses Verfahren wird in der folgenden Abbildung veranschaulicht.
+Um die Streamdämpfung visuell anzugeben, ändert das System die Einstellungen des Volumemixers je nach Benutzereinstellung. Wenn der Benutzer beispielsweise eine Dämpfungsstufe angibt, senkt der Volumemixer den Schieberegler, zeigt das neue abgedämpfte Volume an und zeigt die ursprüngliche Volumeebene an. Die folgende Abbildung veranschaulicht diesen Prozess.
 
-![Diagramm des standardmäßigen streamdedäsierungsverhaltens in Windows 7](images/stream-aatenuation.jpg)
+![Diagramm des standarden Streamdämpfungsverhaltens in Windows 7](images/stream-aatenuation.jpg)
 
-Eine Anwendung kann die Datenstrom Dämpfung überschreiben und eine benutzerdefinierte Ducking-Funktion implementieren, wenn Sie weiß, wann die Kommunikationssitzung beginnt und endet. Weitere Informationen finden Sie unter [Bereitstellen eines benutzerdefinierten Ducking-Verhaltens](providing-a-custom-ducking-experience.md).
+Eine Anwendung kann die Streamdämpfung überschreiben und eine benutzerdefinierte Beschningserfahrung implementieren, wenn sie weiß, wann die Kommunikationssitzung gestartet und beendet wird. Weitere Informationen finden Sie unter [Bereitstellen eines benutzerdefinierten Verhaltens für die Zurückdringung.](providing-a-custom-ducking-experience.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden eines kommunikationsgeräts](using-the-communication-device.md)
+[Verwenden eines Kommunikationsgeräts](using-the-communication-device.md)
 </dt> <dt>
 
-[Deaktivieren der Standardeinstellung für das ducken](disabling-the-ducking-experience.md)
+[Deaktivieren der Standardmäßigen Begeherfahrung](disabling-the-ducking-experience.md)
 </dt> <dt>
 
-[Bereitstellen eines benutzerdefinierten Ducking-Verhaltens](providing-a-custom-ducking-experience.md)
+[Bereitstellen eines benutzerdefinierten Verhaltens bei der Abschüssung](providing-a-custom-ducking-experience.md)
 </dt> <dt>
 
-[Implementierungs Überlegungen für Ducking-Benachrichtigungen](handling-audio-ducking-events-from-communication-devices.md)
+[Überlegungen zur Implementierung von Benachrichtigungen](handling-audio-ducking-events-from-communication-devices.md)
 </dt> <dt>
 
-[Erhalten von Ducking-Ereignissen](getting-ducking-events-from-a-communication-device.md)
+[Getting GettingIng Events (Getting GettingIng Events) (Abrufen](getting-ducking-events-from-a-communication-device.md)
 </dt> </dl>
 
  

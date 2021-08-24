@@ -1,10 +1,10 @@
 ---
-title: shadowwarning-Attribut
-description: Enthält die Anzahl der Tage, bevor das Kennwort abläuft, um den Benutzer zu warnen.
+title: shadowWarning-Attribut
+description: Enthält die Anzahl von Tagen, bevor das Kennwort abläuft, um den Benutzer zu warnen.
 ms.assetid: f4ffa073-af53-40c5-8235-e713828d72d9
 ms.tgt_platform: multiple
 keywords:
-- shadowwarning-Attribut, AD-Schema
+- shadowWarning-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 99446711d881e04e8c6769fa00498656f7f4fa67
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 157e6d59a6e6623b2174041f962b22960813a032d1eb705144659ddb57d76268
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479935"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836500"
 ---
-# <a name="shadowwarning-attribute"></a>shadowwarning-Attribut
+# <a name="shadowwarning-attribute"></a>shadowWarning-Attribut
 
-Enthält die Anzahl der Tage, bevor das Kennwort abläuft, um den Benutzer zu warnen.
+Enthält die Anzahl von Tagen, bevor das Kennwort abläuft, um den Benutzer zu warnen.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | shadowwarning                        |
-| LDAP-Display-Name | shadowwarning                        |
+| CN                | shadowWarning                        |
+| Ldap-Anzeigename | shadowWarning                        |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.8                      |
-| System-ID-GUID    | 7ae89c9c-2976-4a46-bb8a-340f88560117 |
+| System-Id-Guid    | 7ae89c9c-2976-4a46-bb8a-340f88560117 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -54,11 +54,11 @@ Enthält die Anzahl der Tage, bevor das Kennwort abläuft, um den Benutzer zu wa
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -75,11 +75,11 @@ Enthält die Anzahl der Tage, bevor das Kennwort abläuft, um den Benutzer zu wa
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -96,11 +96,11 @@ Enthält die Anzahl der Tage, bevor das Kennwort abläuft, um den Benutzer zu wa
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -117,11 +117,11 @@ Enthält die Anzahl der Tage, bevor das Kennwort abläuft, um den Benutzer zu wa
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |

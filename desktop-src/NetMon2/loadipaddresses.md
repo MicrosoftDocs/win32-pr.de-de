@@ -1,7 +1,7 @@
 ---
-description: Die loadipaddress-Funktion wird vom Monitor aufgerufen, um eine IP-Adressliste mit Adressen auszufüllen, die aus einer HTML-Konfigurations Zeichenfolgen-Variablen entnommen werden.
+description: Die LoadIPAddresses-Funktion wird vom Monitor aufgerufen, um eine IP-Adressliste mit Adressen aus einer HTML-Konfigurationszeichenfolgenvariablen auszufüllen.
 ms.assetid: d0b5d686-5a98-4d61-aa28-24ea71fcb06b
-title: Loadipadressen-Funktion (Netmon. h)
+title: LoadIPAddresses-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 4a5c172117081777b2a89b875401ec0645dd643e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f56517fd0caf4762be2848ac9a6f3094ed5e3194b2eb84123bf2fcc2bf67bcd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119742670"
 ---
-# <a name="loadipaddresses-function"></a>Loadipadressen-Funktion
+# <a name="loadipaddresses-function"></a>LoadIPAddresses-Funktion
 
-Die **loadipaddress** -Funktion wird vom Monitor aufgerufen, um eine IP-Adressliste mit Adressen auszufüllen, die aus einer HTML-Konfigurations Zeichenfolgen-Variablen entnommen werden.
+Die **LoadIPAddresses-Funktion** wird vom Monitor aufgerufen, um eine IP-Adressliste mit Adressen aus einer HTML-Konfigurationszeichenfolgenvariablen auszufüllen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,43 +42,43 @@ BOOL LoadIPAddresses(
 
 <dl> <dt>
 
-*pConfig* \[ in\]
+*pConfig* \[ In\]
 </dt> <dd>
 
-Zeiger auf die HTML-Konfigurations Zeichenfolge, die von der [Imonitor::D oconfigure](imonitor-doconfigure.md) -Methode an den Monitor übermittelt wurde.
+Zeiger auf die HTML-Konfigurationszeichenfolge, die von der [IMonitor::D oConfigure-Methode](imonitor-doconfigure.md) an den Monitor übergeben wird.
 
 </dd> <dt>
 
-*pvarname* \[ in\]
+*pVarName* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Namen der Variablen in der Konfigurations Zeichenfolge.
+Zeiger auf den Namen der Variablen in der Konfigurationszeichenfolge.
 
 </dd> <dt>
 
-*ppadressen* \[ vorgenommen\]
+*ppAddresses* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen Zeiger auf ein Array von Adressen. Wenn die in *pvarname* angegebene Variable gefunden wird und eine nicht-Null-Länge aufweist, ordnet die Funktion ausreichenden Speicherplatz zu und speichert alle IP-Adressen als Array.
+Zeiger auf einen Zeiger auf ein Array von Adressen. Wenn die in *pVarName* angegebene Variable gefunden wird und eine Länge ungleich 0 (null) aufweist, ordnet die Funktion ausreichend Speicherplatz zu und speichert alle IP-Adressen als Array.
 
 </dd> <dt>
 
-*pnumadkleider* \[ vorgenommen\]
+*pNumAddresses* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die **DWORD** -Variable, die auf die Anzahl der IP-Adressen aus der Konfigurations Zeichenfolge festgelegt ist.
+Zeiger auf die **DWORD-Variable,** die auf die Anzahl der IP-Adressen aus der Konfigurationszeichenfolge festgelegt ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist (der Variablenname wurde gefunden, und eine Zeichenfolge mit einer Länge ungleich Null war, die IP-Adressen repräsentiert), ist der Rückgabewert " **true**".
+Wenn die Funktion erfolgreich ist (der Variablenname wurde gefunden und hatte eine Zeichenfolge ungleich 0 (null), die IP-Adressen darstellte), ist der Rückgabewert **TRUE.**
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **false**.
+Wenn die Funktion nicht erfolgreich ist, lautet der Rückgabewert **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die IP-Adressen müssen das Format x. x. x. x aufweisen (z. b. 127.0.0.1).
+Die IP-Adressen müssen im x.x.x.x-Format vorliegen (z.B. 127.0.0.1).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,8 +88,8 @@ Die IP-Adressen müssen das Format x. x. x. x aufweisen (z. b. 127.0.0.1).
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

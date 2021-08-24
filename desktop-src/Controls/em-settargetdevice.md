@@ -1,9 +1,9 @@
 ---
-title: EM_SETTARGETDEVICE Meldung (RichEdit. h)
-description: Legt das Zielgerät und die für \ 0034 verwendete Linienbreite fest. was Sie sehen, ist das, was Sie erhalten \ 0034; (WYSIWYG) Formatierung in einem Rich-Edit-Steuerelement.
+title: EM_SETTARGETDEVICE Nachricht (Richedit.h)
+description: Legt das Zielgerät und die Linienbreite fest, die für \ 0034 verwendet werden. Sie sehen, was Sie erhalten \ 0034; (WYSIWYG)-Formatierung in einem Rich-Edit-Steuerelement.
 ms.assetid: dfc829f5-e711-419e-abb5-c1e8df994c4a
 keywords:
-- Windows-Steuerelemente für EM_SETTARGETDEVICE Meldung
+- EM_SETTARGETDEVICE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f82d6ee5df86572564cffcf192395ccee1fbd05
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2d9a3cd4e59f3800b91fedee446e927ab0ec39988474752561a04dace5572ef0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697590"
 ---
-# <a name="em_settargetdevice-message"></a>EM \_ SetTargetDevice-Meldung
+# <a name="em_settargetdevice-message"></a>EM \_ SETTARGETDEVICE-Meldung
 
-Legt das Zielgerät und die Linienbreite fest, die für die Formatierung "was Sie sehen, was Sie erhalten" (WYSIWYG) in einem Rich-Edit-Steuerelement verwendet wird.
+Legt die Zielgeräte- und Linienbreite fest, die für die Formatierung "Was Sie sehen, was Sie erhalten" (WYSIWYG) in einem Rich-Edit-Steuerelement verwendet wird.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,15 +39,15 @@ HDC für das Zielgerät.
 *lParam* 
 </dt> <dd>
 
-Linienstärke, die für die Formatierung verwendet werden soll.
+Linienbreite, die für die Formatierung verwendet werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist 0 (null), wenn der Vorgang fehlschlägt, oder ungleich NULL, wenn er erfolgreich ist.
+Der Rückgabewert ist 0 (null), wenn der Vorgang fehlschlägt, oder ungleich 0 (null), wenn er erfolgreich ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der HDC für den Standarddrucker kann wie folgt abgerufen werden.
 
@@ -64,7 +64,7 @@ if (PrintDlg(&pd))
 
 
 
-Wenn *LPARAM* gleich 0 (null) ist, werden keine Zeilenumbrüche erstellt.
+Wenn *lParam 0* (null) ist, werden keine Zeilenumbrüche erstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,9 +72,9 @@ Wenn *LPARAM* gleich 0 (null) ist, werden keine Zeilenumbrüche erstellt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 

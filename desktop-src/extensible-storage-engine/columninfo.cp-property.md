@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der ColumnInfo. CP-Eigenschaft.
-title: ColumnInfo. CP (Eigenschaft)
+description: Weitere Informationen zur ColumnInfo.Cp-Eigenschaft
+title: ColumnInfo.Cp-Eigenschaft
 TOCTitle: 'Cp property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnInfo.Cp
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.columninfo.cp(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b6876c6b43d615b5298263aa448caac064278610
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8468692c0d9ee89f39e70d5ef63b09de00626730f3a153eb3d600484f02c16d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527566"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119738200"
 ---
-# <a name="columninfocp-property"></a>ColumnInfo. CP (Eigenschaft)
+# <a name="columninfocp-property"></a>ColumnInfo.Cp-Eigenschaft
 
 Ruft die Codepage der Spalte ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_CP Cp { get; private set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_CP](./jet-cp-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_CP](./jet-cp-enumeration.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [ColumnInfo-Klasse](./columninfo-class.md)
 
-[ColumnInfo-Member](./columninfo-members.md)
+[ColumnInfo-Elemente](./columninfo-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

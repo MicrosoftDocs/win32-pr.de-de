@@ -1,11 +1,11 @@
 ---
-title: TaskVariables. SetOutput-Methode
-description: Bei der Skripterstellung werden die Ausgabevariablen für einen Task festgelegt.
+title: TaskVariables.SetOutput-Methode
+description: Legt für die Skripterstellung die Ausgabevariablen für eine Aufgabe fest.
 ms.assetid: 346c8204-5e64-4932-b939-08b8b479e7e0
 keywords:
 - SetOutput-Methode Taskplaner
-- SetOutput-Methode Taskplaner, taskVariables-Objekt
-- TaskVariables-Objekt Taskplaner, SetOutput-Methode
+- SetOutput-Methode Taskplaner , TaskVariables-Objekt
+- TaskVariables-Objekt Taskplaner , SetOutput-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d979fa4bfae882179248f6f4c81787b3b31ba17d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0bbb6faa0a2dc09b61817e214e7f5021e8de4e33223d7dc5fa20f3de48f3718a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518581"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119738090"
 ---
-# <a name="taskvariablessetoutput-method"></a>TaskVariables. SetOutput-Methode
+# <a name="taskvariablessetoutput-method"></a>TaskVariables.SetOutput-Methode
 
-Bei der Skripterstellung werden die Ausgabevariablen für einen Task festgelegt. Diese Methode ist nicht implementiert.
+Legt für die Skripterstellung die Ausgabevariablen für eine Aufgabe fest. Diese Methode ist nicht implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ TaskVariables.SetOutput( _
 
 <dl> <dt>
 
-*Eingabe* \[ in\]
+*Eingabe* \[ In\]
 </dt> <dd>
 
 Die Ausgabevariablen für eine Aufgabe.
@@ -59,14 +59,14 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

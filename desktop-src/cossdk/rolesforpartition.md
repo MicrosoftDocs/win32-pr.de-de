@@ -1,7 +1,7 @@
 ---
-description: Die rolesforpartition-Auflistung ist immer mit einem Objekt in der Partitions Sammlung verknüpft. Sie enthält ein-Objekt für jede Rolle, die der Partition zugewiesen ist, mit der Sie verknüpft ist.
+description: Die RolesForPartition-Auflistung bezieht sich immer auf ein Objekt in der Partitionsauflistung. Sie enthält ein -Objekt für jede Rolle, die der Partition zugewiesen ist, mit der sie verknüpft ist.
 ms.assetid: 56985f55-d6e8-4066-b6d5-21c62d4278ce
-title: Rolesforpartition-Sammlung
+title: RolesForPartition-Sammlung
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,54 +12,54 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: c97d524e3fc516086db3a815396d6d59f9369b31
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6c1e64e314478793a5b421d1f0a6a76c2eb028708410a14ea426f52fbd41dfe4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119637040"
 ---
-# <a name="rolesforpartition-collection"></a>Rolesforpartition-Sammlung
+# <a name="rolesforpartition-collection"></a>RolesForPartition-Sammlung
 
-Die **rolesforpartition** -Auflistung ist immer mit einem Objekt in der [**Partitions**](partitions.md) Sammlung verknüpft. Sie enthält ein-Objekt für jede Rolle, die der Partition zugewiesen ist, mit der Sie verknüpft ist.
+Die **RolesForPartition-Auflistung** bezieht sich immer auf ein Objekt in der [**Partitionsauflistung.**](partitions.md) Sie enthält ein -Objekt für jede Rolle, die der Partition zugewiesen ist, mit der sie verknüpft ist.
 
-Diese Auflistung unterstützt die [**Add**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) -und [**Remove**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) -Methoden des [**comadmincatalogcollection**](comadmincatalogcollection.md) -Objekts nicht.
+Diese Auflistung unterstützt nicht die [**Add-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) und [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
 ## <a name="members"></a>Member
 
-Die **rolesforpartition** -Auflistung erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle, verfügt jedoch nicht über zusätzliche Member.
+Die **RolesForPartition-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
 
 ## <a name="related-collections"></a>Verwandte Auflistungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
 -   [**ErrorInfo**](errorinfo.md)
--   [**PropertyInfo**](propertyinfo.md)
--   [**Relatedcollectioninfo**](relatedcollectioninfo.md)
--   [**Usersinpartitionrole**](usersinpartitionrole.md)
+-   [**Propertyinfo**](propertyinfo.md)
+-   [**RelatedCollectionInfo**](relatedcollectioninfo.md)
+-   [**UsersInPartitionRole**](usersinpartitionrole.md)
 
-Sie können von den folgenden Sammlungen aus zu dieser Sammlung navigieren:
+Sie können aus den folgenden Sammlungen zu dieser Sammlung navigieren:
 
 -   [**Partitionen**](partitions.md)
 
 ## <a name="properties"></a>Eigenschaften
 
-Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatalogobject.md) -Objekt in der-Auflistung unterstützt:
+Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadmincatalogobject.md) in der Auflistung unterstützt:
 
 -   [Beschreibung](#description)
 -   [Name](#name)
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 
 
 | Eingabe | Wert |
 |----------------|----------------------------|
-| BESCHREIBUNG    | Eine Beschreibung der Rolle. |
-| Access         | ReadOnly                   |
+| Beschreibung    | Eine Beschreibung der Rolle. |
+| Zugriff         | ReadOnly                   |
 | type           | String                     |
 | Standard        | ""                         |
-| Minimalsystem | Windows Server 2003        |
+| Mindestsystem | Windows Server 2003        |
 
 
 
@@ -71,21 +71,21 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Der Name der Rolle. Zusätzliche Leerzeichen am Anfang und Ende der Zeichenfolge werden entfernt. Diese Eigenschaft wird zurückgegeben, wenn die [**Schlüssel**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) -oder [**Name**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) -Eigenschaften Methode für ein Objekt dieser Auflistung aufgerufen wird. |
-| Access         | ReadOnly                                                                                                                                                                                                                                                    |
+| Beschreibung    | Der Name der Rolle. Zusätzliche Leerzeichen am Anfang und Ende der Zeichenfolge werden entfernt. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
+| Zugriff         | ReadOnly                                                                                                                                                                                                                                                    |
 | type           | String                                                                                                                                                                                                                                                      |
 | Standard        | ""                                                                                                                                                                                                                                                          |
-| Minimalsystem | Windows Server 2003                                                                                                                                                                                                                                         |
+| Mindestsystem | Windows Server 2003                                                                                                                                                                                                                                         |
 
 
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Com+-Verwaltungs Sammlungen](com--administration-collections.md)
+[COM+-Verwaltungssammlungen](com--administration-collections.md)
 </dt> </dl>
 
  

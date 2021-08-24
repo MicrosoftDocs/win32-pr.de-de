@@ -1,11 +1,11 @@
 ---
-title: MS-TS-Secondary-Desktop-BL-Attribut
-description: Dieses Attribut stellt den rückwärts Link zu einem Benutzer dar. | MS-TS-Secondary-Desktop-BL-Attribut
+title: ms-TS-Secondary-Desktop-BL-Attribut
+description: Dieses Attribut stellt den Rückwärtslink zu einem Benutzer dar. | ms-TS-Secondary-Desktop-BL-Attribut
 ms.assetid: e87ebdd5-9a8c-4b1a-9213-1b22ffaf0363
 ms.tgt_platform: multiple
 keywords:
-- MS-TS-Secondary-Desktop-BL-Attribut AD-Schema
-- mstssecondarydesktopbl-Attribut, AD-Schema
+- MS-TS-Secondary-Desktop-BL-Attribut-AD-Schema
+- msTSSecondaryDesktopBL-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9486aed4897566886722d9f06253cc111be0a4f8
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 630c7c4f917dc5b9bef36b6da72aae7d41e4a918dcf60427edd5e9b36eb69fc9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106363914"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119760900"
 ---
-# <a name="ms-ts-secondary-desktop-bl-attribute"></a>MS-TS-Secondary-Desktop-BL-Attribut
+# <a name="ms-ts-secondary-desktop-bl-attribute"></a>ms-TS-Secondary-Desktop-BL-Attribut
 
-Dieses Attribut stellt den rückwärts Link zu einem Benutzer dar.
+Dieses Attribut stellt den Rückwärtslink zu einem Benutzer dar.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | MS-TS-Sekundär-Desktop-BL              |
-| LDAP-Display-Name | mstssecondarydesktopbl                  |
+| CN                | ms-TS-Secondary-Desktop-BL              |
+| Ldap-Anzeigename | msTSSecondaryDesktopBL                  |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.2078                 |
-| System-ID-GUID    | 34b107af-a00a-455a-B139-dd1a1b12d8af    |
+| System-ID-GUID    | 34b107af-a00a-455a-b139-dd1a1b12d8af    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -53,11 +53,11 @@ Dieses Attribut stellt den rückwärts Link zu einem Benutzer dar.
 |------------------------|-------------------------------------------|
 | Link-ID                | 2173                                      |
 | MAPI-Id                | \-                                        |
-| System-Only            | Richtig                                      |
-| Ist-einwertig       | False                                     |
+| System-Only            | True                                      |
+| Ist einwertig       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -74,11 +74,11 @@ Dieses Attribut stellt den rückwärts Link zu einem Benutzer dar.
 |------------------------|-------------------------------------------|
 | Link-ID                | 2173                                      |
 | MAPI-Id                | \-                                        |
-| System-Only            | Richtig                                      |
-| Ist-einwertig       | False                                     |
+| System-Only            | True                                      |
+| Ist einwertig       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |

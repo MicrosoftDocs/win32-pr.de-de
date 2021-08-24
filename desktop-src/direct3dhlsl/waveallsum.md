@@ -1,9 +1,9 @@
 ---
-title: Waveactivesum-Funktion
-description: Fasst den Wert des Ausdrucks für alle aktiven Bereiche in der aktuellen Wave zusammen und repliziert Sie in allen Bereichen in der aktuellen Wave.
+title: WaveActiveSum-Funktion
+description: Summiert den Wert des Ausdrucks über alle aktiven Lanes in der aktuellen Welle hinweg und repliziert ihn auf alle Spuren in der aktuellen Welle.
 ms.assetid: 94CEF4AA-D6DE-4B00-9743-F491F255FE3D
 keywords:
-- Waveactivesum-Funktion HLSL
+- WaveActiveSum-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b98ecf2521841b9da73e1b917d44f1d91b7876d2
-ms.sourcegitcommit: f01bc6744cea55ad1aeeace7981a30b567e6fe60
+ms.openlocfilehash: 403768b875ed9462b79fb5d0abeee9539189597591f3a3b20f5a3b9662995542
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103949220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119742260"
 ---
-# <a name="waveactivesum-function"></a>Waveactivesum-Funktion
+# <a name="waveactivesum-function"></a>WaveActiveSum-Funktion
 
-Fasst den Wert des Ausdrucks für alle aktiven Bereiche in der aktuellen Wave zusammen und repliziert Sie in allen Bereichen in der aktuellen Wave.
+Summiert den Wert des Ausdrucks über alle aktiven Lanes in der aktuellen Welle hinweg und repliziert ihn auf alle Spuren in der aktuellen Welle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,13 +45,13 @@ Der auszuwertende Ausdruck.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Sum-Wert.
+Der Summenwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Reihenfolge der Vorgänge ist nicht definiert.
 
-Diese Funktion wird vom Shader-Modell 6,0 in allen shaderphasen unterstützt. 
+Diese Funktion wird von Shadermodell 6.0 in allen Shaderstufen unterstützt. 
 
 
 
@@ -68,10 +68,10 @@ float3 center = total/count;           // compute average of these positions
 
 <dl> <dt>
 
-[Übersicht über Shader-Modell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
+[Übersicht über Shadermodell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
 </dt> <dt>
 
-[Shader-Modell 6](shader-model-6-0.md)
+[Shadermodell 6](shader-model-6-0.md)
 </dt> </dl>
 
  

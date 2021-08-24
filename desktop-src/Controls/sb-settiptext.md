@@ -1,9 +1,9 @@
 ---
-title: SB_SETTIPTEXT Meldung (kommstrg. h)
-description: Legt den QuickInfo-Text für einen Teil in einer Statusleiste fest. Die Statusleiste muss mit dem SBT-Tooltips-Stil erstellt worden sein \_ , um Quick Infos zu aktivieren.
+title: SB_SETTIPTEXT-Nachricht (Commctrl.h)
+description: Legt den QuickInfo-Text für ein Teil in einer Statusleiste fest. Die Statusleiste muss mit dem SBT \_ TOOLTIPS-Stil erstellt worden sein, um QuickInfos zu aktivieren.
 ms.assetid: 8fc3cc00-9742-4861-b2c2-b8aa30f75aaa
 keywords:
-- Windows-Steuerelemente für SB_SETTIPTEXT Meldung
+- SB_SETTIPTEXT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 52d5ddb3f4fdfe18525e2b444438295f8a926180
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 864ba53066b000f9f7ae65365341238a701b4e70bc4ce8cc70adba923d57a5f9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119637020"
 ---
-# <a name="sb_settiptext-message"></a>SB-Setup \_ Textnachricht
+# <a name="sb_settiptext-message"></a>SB \_ SETTIPTEXT-Nachricht
 
-Legt den QuickInfo-Text für einen Teil in einer Statusleiste fest. Die Statusleiste muss mit dem [**SBT- \_ Tooltips**](status-bar-styles.md) -Stil erstellt worden sein, um Quick Infos zu aktivieren.
+Legt den QuickInfo-Text für ein Teil in einer Statusleiste fest. Die Statusleiste muss mit dem [**SBT \_ TOOLTIPS-Stil**](status-bar-styles.md) erstellt worden sein, um QuickInfos zu aktivieren.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,14 +34,14 @@ Legt den QuickInfo-Text für einen Teil in einer Statusleiste fest. Die Statusle
 *wParam* 
 </dt> <dd>
 
-NULL basierter Index des Teils, der den QuickInfo-Text empfängt.
+Nullbasierter Index des Teils, der den QuickInfo-Text empfängt.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Zeiger auf einen Zeichen Puffer, der den neuen QuickInfo-Text enthält.
+Zeiger auf einen Zeichenpuffer, der den neuen QuickInfo-Text enthält.
 
 </dd> </dl>
 
@@ -49,7 +49,7 @@ Zeiger auf einen Zeichen Puffer, der den neuen QuickInfo-Text enthält.
 
 Der Rückgabewert wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieser QuickInfo-Text wird in zwei Situationen angezeigt:
 
@@ -62,10 +62,10 @@ Dieser QuickInfo-Text wird in zwei Situationen angezeigt:
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **SB \_ "Sttiptextw** (Unicode)" und " **SB \_** " (ANSI)<br/>               |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **SB \_ SETTIPTEXTW** (Unicode) und **SB \_ SETTIPTEXTA** (ANSI)<br/>               |
 
 
 

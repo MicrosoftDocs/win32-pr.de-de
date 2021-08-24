@@ -4,28 +4,28 @@ ms.assetid: d219d3f1-3940-46ed-9811-3cf8bf1eec55
 title: Shellmetadatenanbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 35488e750531a5ee7bac7dc915990593ecee1d10
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 31960ed41743a86b62b63555236d2876166a14b098f0692f3d6cb22b051e338e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353172"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119713360"
 ---
 # <a name="shell-metadata-providers"></a>Shellmetadatenanbieter
 
-Ab Windows 7 macht Microsoft Media Foundation Metadaten über die [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Schnittstelle verfügbar.
+Ab Windows 7 macht Microsoft Media Foundation Metadaten über die [**IPropertyStore-Schnittstelle**](/windows/win32/api/propsys/nn-propsys-ipropertystore) verfügbar.
 
-Metadaten, die mit dem in diesem Thema definierten Prozess abgerufen werden, sollten nur für den schreibgeschützten Zugriff verwendet werden. Das Schreiben von Daten mit diesem Prozess wird nicht unterstützt. Sie können ein [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Objekt zu Schreib Zwecken mithilfe eines Klassen Bezeichners (CLSID) erstellen, der von [**pslookuppropertyhandlerclsid**](/windows/win32/api/propsys/nf-propsys-pslookuppropertyhandlerclsid)abgerufen wurde.
+Metadaten, die mithilfe des in diesem Thema definierten Prozesses abgerufen werden, sollten nur für den schreibgeschützten Zugriff verwendet werden. Das Schreiben von Daten mit diesem Prozess wird nicht unterstützt. Sie können ein [**IPropertyStore-Objekt**](/windows/win32/api/propsys/nn-propsys-ipropertystore) zu Schreibzwecken erstellen, indem Sie einen Klassenbezeichner (CLSID) verwenden, der aus [**PSLookupPropertyHandlerCLSID**](/windows/win32/api/propsys/nf-propsys-pslookuppropertyhandlerclsid)abgerufen wird.
 
 ## <a name="reading-metadata"></a>Lesen von Metadaten
 
-Um Metadaten aus einer Medienquelle zu lesen, führen Sie die folgenden Schritte aus:
+Führen Sie die folgenden Schritte aus, um Metadaten aus einer Medienquelle zu lesen:
 
-1.  Einen Zeiger auf die [**imfmediasource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource) -Schnittstelle der Medienquelle erhalten. Sie können die [**imfsourceresolver**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceresolver) -Schnittstelle verwenden, um einen **imfmediasource** -Zeiger zu erhalten.
-2.  Aufrufen von [**mfgetservice**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) für die Medienquelle, um einen Zeiger auf die [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Schnittstelle zu erhalten. Geben Sie im *guidservice* -Parameter von **MF-Service** den Wert **MF- \_ eigenschaftenhandlerdienst \_ \_** an. Wenn die Quelle die **IPropertyStore** -Schnittstelle nicht unterstützt, gibt **MF-Service** einen **\_ \_ nicht \_ unterstützten MF-Dienst** zurück.
-3.  Aufrufen von [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Methoden zum Aufzählen der Metadateneigenschaften.
+1.  Abrufen eines Zeigers auf die [**INTERFACESMediaSource-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource) der Medienquelle. Sie können die [**INTERFACESSourceResolver-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceresolver) verwenden, um einen **POINTERMediaSource-Zeiger** abzurufen.
+2.  Rufen Sie [**MFGetService**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) für die Medienquelle auf, um einen Zeiger auf die [**IPropertyStore-Schnittstelle**](/windows/win32/api/propsys/nn-propsys-ipropertystore) abzurufen. Geben Sie im *guidService-Parameter* von **MFGetService** den Wert **MF PROPERTY HANDLER \_ \_ \_ SERVICE** an. Wenn die Quelle die **IPropertyStore-Schnittstelle** nicht unterstützt, gibt **MFGetService** **MF E \_ \_ UNSUPPORTED \_ SERVICE** zurück.
+3.  Rufen Sie [**IPropertyStore-Methoden**](/windows/win32/api/propsys/nn-propsys-ipropertystore) auf, um die Metadateneigenschaften aufzuzählen.
 
-Der folgende Code zeigt diese Schritte. Angenommen, `DisplayProperty` Es handelt sich um eine Funktion, die einen **PROPVARIANT** -Wert anzeigt.
+Der folgende Code zeigt diese Schritte. Angenommen, es handelt sich `DisplayProperty` um eine Funktion, die einen **PROPVARIANT-Wert** anzeigt.
 
 
 ```C++
@@ -78,13 +78,13 @@ done:
 
 
 
-Eine Liste der Metadaten-Eigenschafts Schlüssel finden Sie unter [Metadateneigenschaften für Mediendateien](metadata-properties-for-media-files.md).
+Eine Liste der Metadateneigenschaftsschlüssel finden Sie unter [Metadateneigenschaften für Mediendateien.](metadata-properties-for-media-files.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Medien Metadaten](media-metadata.md)
+[Medienmetadaten](media-metadata.md)
 </dt> </dl>
 
  

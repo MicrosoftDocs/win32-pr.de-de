@@ -1,9 +1,9 @@
 ---
-title: LB_GETHORIZONTALEXTENT Meldung (Winuser. h)
-description: Ruft die Breite in Pixel ab, in der ein Listenfeld Horizontal (die scrollbare Breite) gescrollt werden kann, wenn das Listenfeld eine horizontale Schiebe Leiste hat.
+title: LB_GETHORIZONTALEXTENT Meldung (Winuser.h)
+description: Ruft die Breite in Pixel ab, die ein Listenfeld horizontal scrollen kann (die scrollbare Breite), wenn das Listenfeld über eine horizontale Scrollleiste verfügt.
 ms.assetid: 52461724-c06a-436a-ac95-94c5189ba37e
 keywords:
-- Windows-Steuerelemente für LB_GETHORIZONTALEXTENT Meldung
+- LB_GETHORIZONTALEXTENT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf10f4f216e0c00fba256c1373fb9aae4f2a4ac7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 01f754b62ad0f51a236662fdfba2304221d58e1288e2756c0330343c63a0699e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957106"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119799510"
 ---
-# <a name="lb_gethorizontalextent-message"></a>LB- \_ gethorizontalblock-Nachricht
+# <a name="lb_gethorizontalextent-message"></a>LB \_ GETHORIZONTALEXTENT-Nachricht
 
-Ruft die Breite in Pixel ab, in der ein Listenfeld Horizontal (die scrollbare Breite) gescrollt werden kann, wenn das Listenfeld eine horizontale Schiebe Leiste hat.
+Ruft die Breite in Pixel ab, die ein Listenfeld horizontal scrollen kann (die scrollbare Breite), wenn das Listenfeld über eine horizontale Scrollleiste verfügt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,13 +45,13 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist die scrollbare Breite des Listen Felds in Pixel.
+Der Rückgabewert ist die bildlauffähige Breite des Listenfelds in Pixel.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um auf die **lb- \_ gethorizontalblock** -Nachricht zu reagieren, muss das Listenfeld mit dem [**WS- \_ HScroll**](/windows/desktop/winmsg/window-styles) -Stil definiert worden sein.
+Um auf die **LB \_ GETHORIZONTALEXTENT-Nachricht** zu reagieren, muss das Listenfeld mit dem [**WS \_ HSCROLL-Stil**](/windows/desktop/winmsg/window-styles) definiert worden sein.
 
-Wenn die Anwendung den horizontalen Wertebereich des Listen Felds (mit [**lb- \_ sethorizontalblock**](lb-sethorizontalextent.md)) nicht festgelegt hat, ist der standardmäßige horizontale Block NULL. Beachten Sie, dass das Listenfeld den horizontalen Block nicht dynamisch aktualisiert.
+Wenn die Anwendung den horizontalen Umfang des Listenfelds nicht festgelegt (mit [**LB \_ SETHORIZONTALEXTENT),**](lb-sethorizontalextent.md)ist der horizontale Standardumfang 0 (null). Beachten Sie, dass der horizontale Umfang des Listenfelds nicht dynamisch aktualisiert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,17 +59,17 @@ Wenn die Anwendung den horizontalen Wertebereich des Listen Felds (mit [**lb- \_
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**LB-Abbild \_ Umfang**](lb-sethorizontalextent.md)
+[**LB \_ SETHORIZONTALEXTENT**](lb-sethorizontalextent.md)
 </dt> </dl>
 
  

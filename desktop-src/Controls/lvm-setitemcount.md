@@ -1,9 +1,9 @@
 ---
-title: LVM_SETITEMCOUNT Meldung (kommstrg. h)
-description: Bewirkt, dass das Listenansicht-Steuerelement Arbeitsspeicher für die angegebene Anzahl von Elementen zuweist oder die virtuelle Anzahl von Elementen in einem Steuerelement für die virtuelle Listenansicht festlegt.
+title: LVM_SETITEMCOUNT Meldung (Commctrl.h)
+description: Bewirkt, dass das Listenansichtssteuerelement Speicher für die angegebene Anzahl von Elementen zuweist oder die virtuelle Anzahl von Elementen in einem virtuellen Listenansichtssteuerelement festlegt.
 ms.assetid: 5e794c12-ddcb-44fc-b0d2-677352602503
 keywords:
-- Windows-Steuerelemente für LVM_SETITEMCOUNT Meldung
+- LVM_SETITEMCOUNT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e390e7ae5913053f91f7f2f8d197af1cf4b7a40
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: be6b35b38c65663d9811a27341cf10d668a9e045641a8ff0871f6b49fe8bcdbe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119656280"
 ---
-# <a name="lvm_setitemcount-message"></a>LVM- \_ Nachricht
+# <a name="lvm_setitemcount-message"></a>LVM \_ SETITEMCOUNT-Nachricht
 
-Bewirkt, dass das Listenansicht-Steuerelement Arbeitsspeicher für die angegebene Anzahl von Elementen zuweist oder die virtuelle Anzahl von Elementen in einem Steuerelement für die [virtuelle Listenansicht](list-view-controls-overview.md)festlegt.
+Bewirkt, dass das Listenansichtssteuerelement Speicher für die angegebene Anzahl von Elementen zuweist, oder legt die virtuelle Anzahl von Elementen in einem [virtuellen Listenansichtssteuerelement fest.](list-view-controls-overview.md)
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,21 +32,21 @@ Bewirkt, dass das Listenansicht-Steuerelement Arbeitsspeicher für die angegeben
 *wParam* 
 </dt> <dd>
 
-Anzahl der Elemente, die das Listenansicht-Steuerelement letztendlich enthalten wird.
+Die Anzahl der Elemente, die das Listenansichtssteuerelement letztendlich enthält.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-[Version 4,70](common-control-versions.md). Werte, die das Verhalten des Listenansicht-Steuer Elements nach dem Zurücksetzen der Element Anzahl angeben. Dieser Wert kann eine Kombination folgender Werte sein:
+[Version 4.70.](common-control-versions.md) Werte, die das Verhalten des Listenansichtssteuerelements nach dem Zurücksetzen der Elementanzahl angeben. Dieser Wert kann eine Kombination der folgenden Sein:
 
 
 
 | Wert                                                                                                                                                                                    | Bedeutung                                                                                           |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| <span id="LVSICF_NOINVALIDATEALL"></span><span id="lvsicf_noinvalidateall"></span><dl> <dt>**lvsicf \_ noinvalidateall**</dt> </dl> | Das Listenansicht-Steuerelement wird nicht neu gezeichnet, es sei denn, die betroffenen Elemente sind aktuell in der Ansicht.<br/>    |
-| <span id="LVSICF_NOSCROLL"></span><span id="lvsicf_noscroll"></span><dl> <dt>**lvsicf \_ NoScroll**</dt> </dl>                      | Das Listenansicht-Steuerelement ändert die Bild Lauf Position nicht, wenn die Element Anzahl geändert wird.<br/> |
+| <span id="LVSICF_NOINVALIDATEALL"></span><span id="lvsicf_noinvalidateall"></span><dl> <dt>**LVSICF \_ NOINVALIDATEALL**</dt> </dl> | Das Listenansichtssteuerelement wird nur dann neu maliert, wenn die betroffenen Elemente derzeit angezeigt werden.<br/>    |
+| <span id="LVSICF_NOSCROLL"></span><span id="lvsicf_noscroll"></span><dl> <dt>**LVSICF \_ NOSCROLL**</dt> </dl>                      | Das Listenansichtssteuerelement ändert die Bildlaufposition nicht, wenn sich die Elementanzahl ändert.<br/> |
 
 
 
@@ -56,19 +56,19 @@ Anzahl der Elemente, die das Listenansicht-Steuerelement letztendlich enthalten 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück. Andernfalls wird 0 (null) zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wie der Arbeitsspeicher zugewiesen wird, hängt davon ab, wie das Listenansicht-Steuerelement erstellt wurde. Sie können diese Nachricht explizit senden oder das [**ListView- \_**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setitemcount) /ListView-oder [**ListView \_ -/ListView**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setitemcountex) -Makro verwenden. Weitere Informationen finden Sie unter [virtual List-View Style](/windows/desktop/Controls/list-view-controls-overview).
+Wie der Arbeitsspeicher zugeordnet wird, hängt davon ab, wie das Listenansicht-Steuerelement erstellt wurde. Sie können diese Nachricht explizit senden oder die [**Makros ListView \_ SetItemCount**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setitemcount) oder [**ListView \_ SetItemCountEx**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setitemcountex) verwenden. Weitere Informationen finden Sie unter [Virtual List-View Style](/windows/desktop/Controls/list-view-controls-overview).
 
-Wenn das Listenansicht-Steuerelement ohne den [**LVS-Besitzer \_ Daten**](list-view-window-styles.md) Stil erstellt wurde, bewirkt das Senden dieser Nachricht, dass das Steuerelement seine internen Datenstrukturen für die angegebene Anzahl von Elementen zuweist. Dadurch wird verhindert, dass das-Steuerelement die Datenstrukturen jedes Mal zuordnen muss, wenn ein Element hinzugefügt wird.
+Wenn das Listenansichtssteuerelement ohne den [**LVS \_ OWNERDATA-Stil**](list-view-window-styles.md) erstellt wurde, bewirkt das Senden dieser Nachricht, dass das Steuerelement seine internen Datenstrukturen für die angegebene Anzahl von Elementen zuordnet. Dadurch wird verhindert, dass das Steuerelement die Datenstrukturen jedes Mal zuordnen muss, wenn ein Element hinzugefügt wird.
 
-Wenn das Listenansicht-Steuerelement mit dem [**LVS-Besitzer \_ Daten**](list-view-window-styles.md) Stil (eine virtuelle Listenansicht) erstellt wurde, wird beim Senden dieser Nachricht die virtuelle Anzahl der im Steuerelement enthaltenen Elemente festgelegt.
+Wenn das Listenansichtssteuerelement mit dem [**LVS \_ OWNERDATA-Stil**](list-view-window-styles.md) (einer virtuellen Listenansicht) erstellt wurde, legt das Senden dieser Meldung die virtuelle Anzahl von Elementen fest, die das Steuerelement enthält.
 
-Der *LPARAM* -Parameter ist nur für Listenansicht-Steuerelemente vorgesehen, die den [**LVS-Besitzer \_ Daten**](list-view-window-styles.md) -und [**LVS- \_ Bericht**](list-view-window-styles.md) oder [**LVS- \_ Listen**](list-view-window-styles.md) Stile verwenden.
+Der *lParam-Parameter* ist nur für Listenansichtssteuerelemente vorgesehen, die die Formate [**LVS \_ OWNERDATA**](list-view-window-styles.md) und [**LVS \_ REPORT**](list-view-window-styles.md) oder [**LVS \_ LIST**](list-view-window-styles.md) verwenden.
 
-Wenn es sich bei der allgemeinen Steuerelement Listenansicht um eine virtualisierte Listenansicht ([**LVS-Besitzer \_ Daten**](list-view-window-styles.md)) handelt, gibt es in der Listenansicht einen Grenzwert von 100 Millionen Elementen. In diesem Szenario gibt **LVM " \_ sstitemcount** " den Wert "false" zurück, wenn er einen *wParam* -Wert von 100.000.001 hat.
+Wenn die Listenansicht des allgemeinen Steuerelements eine virtualisierte Listenansicht [**(LVS \_ OWNERDATA)**](list-view-window-styles.md)ist, gilt für die Listenansicht ein Grenzwert von 100.000.000 Einträgen. In diesem Szenario gibt **LVM \_ SETITEMCOUNT** FALSE zurück, wenn es über eine *wParam* von 100.000.001 verfügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,9 +76,9 @@ Wenn es sich bei der allgemeinen Steuerelement Listenansicht um eine virtualisie
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

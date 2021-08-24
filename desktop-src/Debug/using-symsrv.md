@@ -4,12 +4,12 @@ ms.assetid: d400f222-c50c-4c7b-8f8a-0c3ed3bba3b9
 title: Verwenden von SymSrv
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bbaf68e80555629db8bc9a2a21394b95fe6fb85
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 197a627e50c6be3a3e8636378890025a6dde091948954e2709935c7dc84fa30c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110550035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119655030"
 ---
 # <a name="using-symsrv"></a>Verwenden von SymSrv
 
@@ -38,22 +38,22 @@ srv \* *SymbolStore1* \* *SymbolStoreN*
 
 Wenn nur ein Symbolspeicherelement im Pfad enthalten ist, versucht SymSrv, die angeforderte Datei direkt aus diesem Speicher zu verwenden.
 
-Wenn der Pfad zwei Symbolspeicher enthält, sucht SymSrv im Symbolspeicher ganz links nach der Symboldatei. Wenn die Datei dort ist, wird sie verwendet. Wenn dies nicht der Fehler ist, sucht SymSrv sofort nach rechts im Symbolspeicher. Wenn die Datei dort ist, wird sie in den linken Speicher kopiert und von dort aus geöffnet.
+Wenn sich im Pfad zwei Symbolspeicher befinden, sucht SymSrv im Symbolspeicher ganz links nach der Symboldatei. Wenn die Datei vorhanden ist, wird sie verwendet. Wenn er nicht vorhanden ist, sucht SymSrv sofort rechts im Symbolspeicher. Wenn die Datei vorhanden ist, wird sie in den linken Speicher kopiert und von dort aus geöffnet.
 
-Wenn mehr als zwei Speicher verfügbar sind, bleibt dieses Verhalten so lange auf der rechten Seite, bis die Datei gefunden wird oder keine Speicher mehr in der Liste enthalten sind.
+Wenn mehr als zwei Speicher vorhanden sind, wird dieses Verhalten nach rechts fortgesetzt, bis die Datei gefunden wird oder keine weiteren Speicher in der Liste vorhanden sind.
 
-Die Datei wird nie aus einem Speicher geöffnet, sondern aus dem äußersten linken Speicher. Wenn die Datei an einer anderen Stelle in der Kette gefunden wird, wird sie in jeden Speicher links davon kopiert. Dieser Kopiervorgang wird als "kaskadierend" bezeichnet und bietet bestimmte Vorteile, die später in diesem Dokument erläutert werden.
+Die Datei wird nie in einem Speicher geöffnet, sondern im äußersten linken Speicher. Wenn die Datei an einer anderen Stelle in der Kette gefunden wird, wird sie in jeden Speicher auf der linken Seite kopiert. Dieser Kopiervorgang wird als "kaskadierend" bezeichnet und bietet bestimmte Vorteile, die später in diesem Dokument beschrieben werden.
 
 ## <a name="types-of-symbol-stores"></a>Typen von Symbolspeichern
 
-Die folgende Tabelle enthält Beispiele für die unterstützten Symbolspeichertypen.
+In der folgenden Tabelle werden Beispiele für die unterstützten Symbolspeichertypen angezeigt.
 
 |  Symbolspeichertyp       |  Beschreibung |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | \\\\\\Serverfreigabe          | Ein vollqualifizierter UNC-Pfad zu einer Freigabe auf einem Remoteserver.                                                                                                                                                                                                                                                                                                 |
 | c: \\ LocalCache             | Ein Pfad zu einem Verzeichnis auf dem Clientcomputer.                                                                                                                                                                                                                                                                                                             |
-| https://InternetSite        | Die URL zu einer Website, die die Symbole hosten. Muss der äußerste rechte Speicher in der Liste sein und darf nicht der einzige Speicher in der Liste sein.                                                                                                                                                                                                                          |
-| https://SecureInternetSite | Die URL zu einer sicheren Website, die die Symbole hosten. Dies kann Kennwörter, Windows-Anmeldeinformationen, Zertifikate und Smartcards unterstützen. Muss der am weitesten rechts in der Liste enthaltene Speicher sein und darf nicht der einzige Speicher in der Liste sein.                                                                                                                              |
+| https://InternetSite        | Die URL zu einer Website, die die Symbole hostet. Muss der am weitesten rechts in der Liste enthaltene Speicher sein und darf nicht der einzige Speicher in der Liste sein.                                                                                                                                                                                                                          |
+| https://SecureInternetSite | Die URL zu einer sicheren Website, auf der die Symbole gehostet werden. Dies kann Kennwörter, Windows Anmeldeinformationen, Zertifikate und Smartcards unterstützen. Muss der am weitesten rechts in der Liste enthaltene Speicher sein und darf nicht der einzige Speicher in der Liste sein.                                                                                                                              |
 | <blank>              | Wenn kein Text zwischen zwei Sternchen vorhanden ist, gibt dies den *standardmäßigen Downstreamspeicher* an. Der Speicherort wird durch Aufrufen von [**SymSetHomeDirectory**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsethomedirectory)festgelegt. Der Standardwert ist ein Verzeichnis namens "sym" direkt unterhalb des Programmverzeichnisses der aufrufenden Anwendung. Dies wird manchmal als *lokaler Standardcache* bezeichnet. |
 
 
@@ -82,17 +82,17 @@ Um einen kaskadierenden Speicher zu verwenden, legen Sie den folgenden Symbolpfa
 
 In diesem Beispiel sucht SymSrv zuerst nach der Datei in c: \\ localsymbols. Wenn sie dort gefunden wird, wird ein Pfad zur Datei zurückgegeben. Andernfalls sucht SymSrv im \\ \\ NearbyServer-Speicher nach der \\ Datei. Wenn sie dort gefunden wird, kopiert SymSrv die Datei in c: \\ localsymbols und gibt einen Pfad zur Datei zurück. Wenn sie nicht gefunden wird, sucht SymSrv nach der Datei in https://DistantServer , und wenn sie dort gefunden wird, kopiert SymSrv die Datei in den \\ \\ \\ NearbyServer-Speicher und dann in c: \\ localsymbols.
 
-In diesem letzten Beispiel wird gezeigt, wie ein mit Vorsicht gestalteter Symbolpfad verwendet werden kann, um das Herunterladen von Symbolen zu optimieren. Wenn Sie über eine Arbeitswebsite mit einer Gruppe von Debuggern verfügen und alle Symbole von einem entfernten Ort abrufen müssen, können Sie einen gemeinsamen Server mit einem Symbolspeicher in der Nähe aller Debugger einrichten. Richten Sie dann jeden Debugger mit dem obigen Symbolpfad ein. Der erste Debugger, der eine bestimmte Version von foo.pdb erfordert, lädt ihn aus https://DistantServer dem \\ \\ \\ NearbyServer-Speicher und dann auf seinen eigenen Computer in c: \\ localsymbols herunter. Der nächste Debugger, der dieselbe Datei erfordert, kann sie aus dem \\ \\ \\ NearbyServer-Speicher herunterladen, da er bereits vom vorherigen Debugger an diesen Speicherort heruntergeladen wurde. Diese Zwischenspeicherung auf mehreren Ebenen spart viel Zeit und Netzwerkbandbreite.
+In diesem letzten Beispiel wird gezeigt, wie ein mit Vorsicht gestalteter Symbolpfad verwendet werden kann, um das Herunterladen von Symbolen zu optimieren. Wenn Sie über eine Arbeitswebsite mit einer Gruppe von Debuggern verfügen und alle Symbole von einem entfernten Ort abrufen müssen, können Sie einen gemeinsamen Server mit einem Symbolspeicher in der Nähe aller Debugger einrichten. Richten Sie dann jeden Debugger mit dem obigen Symbolpfad ein. Der erste Debugger, der eine bestimmte Version von foo.pdb erfordert, lädt ihn aus https://DistantServer dem \\ \\ \\ NearbyServer-Speicher und dann auf seinen eigenen Computer in c: \\ localsymbols herunter. Der nächste Debugger, der dieselbe Datei erfordert, kann sie aus dem \\ \\ NearbyServer-Speicher \\ herunterladen, da er bereits vom vorherigen Debugger an diesen Speicherort heruntergeladen wurde. Diese Zwischenspeicherung auf mehreren Ebenen spart viel Zeit und Netzwerkbandbreite.
 
-## <a name="microsoft-symbol-store"></a>Microsoft-Symbolspeicher
+## <a name="microsoft-symbol-store"></a>Microsoft Symbol Store
 
-Microsoft bietet Zugriff auf einen Internetsymbolserver, der Symboldateien für die vielen Versionen des Windows-Betriebssystems enthält. Dieser Katalog von Symbolen ist nicht garantiert vollständig, aber er ist umfangreich. Andere Microsoft-Produkte werden ebenfalls dargestellt.
+Microsoft bietet Zugriff auf einen Internetsymbolserver, der Symboldateien für die vielen Versionen des Windows Betriebssystems enthält. Dieser Katalog von Symbolen ist nicht garantiert vollständig, aber er ist umfangreich. Andere Microsoft-Produkte werden ebenfalls dargestellt.
 
-Der Internetsymbolserver wird mit einer Vielzahl von Windows-Symbolen für Microsoft Windows-Betriebssysteme aufgefüllt, einschließlich Hotfixes, Service Packs, Sicherheitsrolluppaketen und Verkaufsversionen. Symbole sind auch auf dem Server für aktuelle Betaversionen und Release Candidates für Windows-Produkte sowie für eine Vielzahl anderer Microsoft-Produkte wie Microsoft Internet Explorer.
+Der Internetsymbolserver wird mit einer Vielzahl von Windows Symbolen für Microsoft Windows-Betriebssysteme aufgefüllt, einschließlich Hotfixes, Service Packs, Sicherheitsrolluppaketen und Verkaufsversionen. Symbole sind auch auf dem Server für aktuelle Betaversionen und Releasekandidaten für Windows Produkte sowie eine Vielzahl anderer Microsoft-Produkte verfügbar, z. B. Microsoft Internet Explorer.
 
-Wenn Sie während des Debuggens Zugriff auf das Internet haben, können Sie den Debugger so konfigurieren, dass symbole bei Bedarf während einer Debugsitzung heruntergeladen werden, anstatt Symboldateien separat vor einer Debugsitzung herunterzuladen. Die Symbole werden an einen von Ihnen angegebenen Verzeichnisspeicherort heruntergeladen, und der Debugger lädt sie dann von dort.
+Wenn Sie während des Debuggens Zugriff auf das Internet haben, können Sie den Debugger so konfigurieren, dass Symbole bei Bedarf während einer Debugsitzung heruntergeladen werden, anstatt Symboldateien vor einer Debugsitzung separat herunterzuladen. Die Symbole werden an einen verzeichnisspeicherort heruntergeladen, den Sie angeben, und dann lädt der Debugger sie von dort.
 
-Die URL für den Microsoft-Symbolspeicher ist https://msdl.microsoft.com/download/symbols . Das folgende Beispiel zeigt, wie Sie den Debuggersymbolpfad festlegen (ersetzen Sie den Downstreamspeicherpfad *durch c: \\ DownstreamStore*):
+Die URL für den Microsoft-Symbolspeicher lautet https://msdl.microsoft.com/download/symbols . Das folgende Beispiel zeigt, wie Sie den Debuggersymbolpfad festlegen (ersetzen Sie den Downstreamspeicherpfad durch *c: \\ DownstreamStore):*
 
 ``` syntax
 srv*c:\DownstreamStore*https://msdl.microsoft.com/download/symbols
@@ -100,27 +100,27 @@ srv*c:\DownstreamStore*https://msdl.microsoft.com/download/symbols
 
 ## <a name="compressed-files"></a>Komprimierte Dateien
 
-SymSrv ist mit Symbolspeichern kompatibel, die komprimierte Dateien enthalten, solange diese Komprimierung mit dem compress.exe-Tool vorgefertigt wurde, das mit dem Windows Server 2003 Resource Kit verteilt wurde. Komprimierte Dateien sollten einen Unterstrich als letztes Zeichen in ihren Dateierweiterungen enthalten (z. B. module1.pd \_ oder module2.db \_ ). Weitere Informationen finden Sie unter [Verwenden von SymStore.](using-symstore.md)
+SymSrv ist mit Symbolspeichern kompatibel, die komprimierte Dateien enthalten, solange diese Komprimierung mit dem compress.exe Tool vorab formatiert wurde, das mit dem Windows Server 2003 Resource Kit verteilt wurde. Komprimierte Dateien sollten einen Unterstrich als letztes Zeichen in ihren Dateierweiterungen aufweisen (z.B. module1.pd \_ oder module2.db). \_ Weitere Informationen finden Sie unter [Verwenden von SymStore.](using-symstore.md)
 
-Beim Kaskadieren werden Dateien nur dann dekomprimiert, wenn der Zielspeicher der äußerste linke Speicher im Pfad ist. Wenn der Pfad nur einen Speicher enthält und eine komprimierte Datei enthält, kopiert SymSrv die Datei in den Standard-Downstreamspeicher und öffnet sie von dort aus, auch wenn der Standard-Downstreamspeicher im Symbolpfad nicht angegeben ist.
+Beim Kaskadieren werden Dateien nicht dekomprimiert, es sei denn, der Zielspeicher ist der äußerste linke Speicher im Pfad. Wenn sich nur ein Speicher im Pfad befindet und er eine komprimierte Datei enthält, kopiert SymSrv die Datei in den standardmäßigen Downstreamspeicher und öffnet sie von dort aus, obwohl der standardmäßige Downstreamspeicher nicht im Symbolpfad angegeben ist.
 
-**DbgHelp 6.1 und früher:** Wenn die Dateien im Masterspeicher komprimiert sind, müssen Sie einen Downstreamspeicher verwenden. SymSrv dekomprimiert alle Dateien, bevor sie in den Downstreamspeicher kopiert werden.
+**DbgHelp 6.1 und früher:** Wenn die Dateien im Masterspeicher komprimiert sind, müssen Sie einen Downstreamspeicher verwenden. SymSrv entkomprimiert alle Dateien, bevor sie in den Downstreamspeicher kopiert werden.
 
 ## <a name="deleting-the-cache"></a>Löschen des Caches
 
 Wenn Sie einen Downstreamspeicher als Cache verwenden, können Sie dieses Verzeichnis jederzeit löschen, um Speicherplatz zu sparen.
 
-Es ist möglich, einen umfangreichen Symbolspeicher zu verwenden, der Symboldateien für viele verschiedene Programme oder Windows-Versionen enthält. Wenn Sie die auf dem Zielcomputer verwendete Windows-Version aktualisieren, werden alle zwischengespeicherten Symboldateien mit der früheren Version übereinstimmen. Diese zwischengespeicherten Dateien werden nicht weiter verwendet, daher ist dies möglicherweise ein guter Zeitpunkt, um den Cache zu löschen.
+Es ist möglich, einen großen Symbolspeicher zu haben, der Symboldateien für viele verschiedene Programme oder Windows Versionen enthält. Wenn Sie die Version von Windows aktualisieren, die auf dem Zielcomputer verwendet wird, stimmen alle zwischengespeicherten Symboldateien mit der früheren Version überein. Diese zwischengespeicherten Dateien werden nicht weiter verwendet, und daher ist es möglicherweise ein guter Zeitpunkt, den Cache zu löschen.
 
-Debugtools für Windows verfügt über ein Hilfsprogramm namens agestore.exe, das Dateien selektiv aus einer Verzeichnisstruktur entfernt und die zuletzt verwendeten Dateien beibelässt. Dieses Tool ist für das Löschen nicht verwendeter Dateien aus Symbolserverspeichern konzipiert. Sie können viele Optionen steuern, z. B. Abschneidedatums- und Verzeichnisgrößenalgorithmen.
+Debugtools für Windows verfügt über ein Hilfsprogramm namens agestore.exe, das selektiv Dateien aus einer Verzeichnisstruktur entfernt und die zuletzt verwendeten Dateien beilässt. Dieses Tool ist für das Löschen nicht verwendeter Dateien aus Symbolserverspeichern konzipiert. Sie können viele Optionen steuern, einschließlich Stichtag- und Verzeichnisgrößenalgorithmen.
 
 ## <a name="flat-cache-directory"></a>Flatcacheverzeichnis
 
-Es ist möglich, den standardmäßigen Downstreamspeicher als flaches Verzeichnis zu deklarieren, anstatt als Standardsymbolstruktur. Rufen Sie hierzu die [**SymSetOptions-Funktion**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions) mit **SYMOPT \_ FLAT \_ DIRECTORY** auf (hiermit wird auch die **Option SSRVOPT \_ FLAT DEFAULT \_ \_ STORE** in SymSrv festgelegt). Stellen Sie sicher, dass [**Sie SymSetHomeDirectory aufrufen,**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsethomedirectory) bevor Sie dies tun. Andernfalls können die Symboldateien in das Programmverzeichnis geschrieben werden.
+Es ist möglich, den standardmäßigen Downstreamspeicher als flaches Verzeichnis und nicht als Standardsymbolstruktur zu deklarieren. Rufen Sie hierzu die [**Funktion SymSetOptions**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions) mit **SYMOPT \_ FLAT \_ DIRECTORY** auf (dadurch wird auch die Option **SSRVOPT \_ FLAT DEFAULT \_ \_ STORE** in SymSrv festgelegt). Rufen Sie [**symSetHomeDirectory**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsethomedirectory) auf, bevor Sie dies tun. Andernfalls können die Symboldateien in das Programmverzeichnis geschrieben werden.
 
 ## <a name="pointer-files"></a>Zeigerdateien
 
-SymStore kann Dateien erstellen und verwenden, die auf eine Zieldatei anstatt auf die Zieldatei selbst verweisen. Wenn ein Symbolspeicher eine solche Zeigerdatei enthält, wird die Datei standardmäßig von dem in der Zeigerdatei angegebenen Speicherort in den Speicher kopiert. Um einen Speicher so zu konfigurieren, dass die Zeigerdatei anstelle der Datei kopiert wird, auf die sie verweist, erstellen Sie eine Datei namens wantsptr.txt im Stammverzeichnis des Zielspeichers. Der Inhalt wantsptr.txt nicht wichtig, sondern nur das Vorhandensein der Datei.
+SymStore kann Dateien erstellen und verwenden, die auf eine Zieldatei anstatt auf die Zieldatei selbst zeigen. Wenn ein Symbolspeicher eine solche Zeigerdatei enthält, wird die Datei standardmäßig von dem in der Zeigerdatei angegebenen Speicherort in den Speicher kopiert. Um einen Speicher so zu konfigurieren, dass die Zeigerdatei anstelle der Datei kopiert wird, auf die sie verweist, erstellen Sie eine Datei namens wantsptr.txt im Stammverzeichnis des Zielspeichers. Der Inhalt der wantsptr.txt ist nicht wichtig, sondern nur das Vorhandensein der Datei.
 
 ## <a name="excluding-files-from-symbols-list"></a>Ausschließen von Dateien aus der Symbolliste
 
@@ -133,13 +133,13 @@ symsrv.*
 mso*
 ```
 
-Symsrv.ini sollten sich in demselben Verzeichnis befinden, in dem sich symsrv.dll befindet. In den meisten Installationen ist die Datei nicht vorhanden, und Sie müssen eine neue erstellen.
+Symsrv.ini sollte sich in demselben Verzeichnis befinden, in dem sich symsrv.dll befindet. In den meisten Installationen ist die Datei nicht vorhanden, und Sie müssen eine neue erstellen.
 
-Alternativ können Sie die Dateien speichern, die in der Registrierung ausgeschlossen werden sollen. Erstellen Sie den folgenden Registrierungsschlüssel: **HKEY \_ LOCAL MACHINE Software Microsoft Symbol Server \_ \\ \\ \\ \\ Exclusions**. Speichern Sie jeden Dateinamen als Zeichenfolgenwert (REG \_ SZ) in diesem Schlüssel. Der Name des Zeichenfolgenwerts gibt den Namen der auszuschließenden Datei an. Sie können den Inhalt des Zeichenfolgenwerts verwenden, um einen Kommentar zu speichern, der beschreibt, warum die Datei ausgeschlossen wird.
+Alternativ können Sie die Dateien speichern, die in der Registrierung ausgeschlossen werden sollen. Erstellen Sie den folgenden Registrierungsschlüssel: **HKEY \_ LOCAL MACHINE Software Microsoft Symbol Server \_ \\ \\ \\ \\ Exclusions**. Store jeden Dateinamen als Zeichenfolgenwert (REG \_ SZ) in diesem Schlüssel. Der Name des Zeichenfolgenwerts gibt den Namen der auszuschließenden Datei an. Sie können den Inhalt des Zeichenfolgenwerts verwenden, um einen Kommentar zu speichern, der beschreibt, warum die Datei ausgeschlossen wird.
 
 ## <a name="installation"></a>Installation
 
-Der Symbolserver SymSrv (symsrv.dll) ist im Paket Debugtools für Windows enthalten. Sie muss im gleichen Verzeichnis installiert sein wie die Kopie der dbghelp.dll, die Sie laden. Weitere Informationen finden Sie unter [Aufrufen der DbgHelp-Bibliothek.](calling-the-dbghelp-library.md)
+Der Symbolserver SymSrv (symsrv.dll) ist im Debugtools für Windows enthalten. Sie muss im gleichen Verzeichnis installiert sein wie die Kopie der dbghelp.dll, die Sie laden. Weitere Informationen finden Sie unter [Aufrufen der DbgHelp-Bibliothek.](calling-the-dbghelp-library.md)
 
  
 

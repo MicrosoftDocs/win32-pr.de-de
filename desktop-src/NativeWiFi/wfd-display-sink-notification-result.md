@@ -1,7 +1,7 @@
 ---
-description: Beschreibt das Ergebnis, das Sie optional festlegen können, nachdem eine Anzeige Senke-notalisierung in der WFD- \_ \_ \_ Benachrichtigungs \_ Rückruffunktion angezeigt wird.
+description: Beschreibt das Ergebnis, das Sie optional festlegen können, nachdem Sie eine Anzeigesenkennotation in der WFD \_ DISPLAY \_ SINK NOTIFICATION \_ \_ CALLBACK-Funktion verarbeitet haben.
 ms.assetid: 6ED04294-2ED9-455B-9274-8C3DB06D4B21
-title: WFD_DISPLAY_SINK_NOTIFICATION_RESULT-Struktur (WF-Sink. h)
+title: WFD_DISPLAY_SINK_NOTIFICATION_RESULT-Struktur (Wfdsink.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - wfdsink.h
-ms.openlocfilehash: dc23416d4d13284862aea652dd71909e71879afc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d72f444d409a7a3d43103967aff671fa7c808e5a37858e79f175db3511960e95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119780080"
 ---
-# <a name="wfd_display_sink_notification_result-structure"></a>WFD- \_ Anzeige \_ Senke- \_ Benachrichtigungs \_ Ergebnis Struktur
+# <a name="wfd_display_sink_notification_result-structure"></a>WFD \_ DISPLAY SINK NOTIFICATION RESULT \_ \_ \_ STRUCTURE
 
-In der **WFD- \_ \_ \_ Benachrichtigungs \_ Ergebnis** Struktur wird das Ergebnis beschrieben, das Sie optional festlegen können, nachdem Sie die Anzeige Senke-notalisierung in der [**WFD- \_ \_ \_ Benachrichtigungs \_ Rückruf**](wfd-display-sink-notification-callback.md) Funktion verarbeitet haben.
+Die **WFD \_ DISPLAY SINK NOTIFICATION \_ \_ \_ RESULT-Struktur** beschreibt das Ergebnis, das Sie nach der Verarbeitung einer Anzeigesenkennotation in der [**WFD \_ DISPLAY SINK NOTIFICATION \_ \_ \_ CALLBACK-Funktion**](wfd-display-sink-notification-callback.md) optional festlegen können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,56 +53,56 @@ typedef struct _WFD_DISPLAY_SINK_NOTIFICATION {
 **Header**
 </dt> <dd>
 
-Ein [**WFD- \_ Anzeige- \_ \_ senkobjektheader \_**](wfd-display-sink-object-header.md) , der die im Benachrichtigungs Ergebnis enthaltenen Daten beschreibt.
+Ein [**WFD \_ DISPLAY SINK OBJECT \_ \_ \_ HEADER,**](wfd-display-sink-object-header.md) der die im Benachrichtigungsergebnis enthaltenen Daten beschreibt.
 
 </dd> <dt>
 
 **type**
 </dt> <dd>
 
-Ein [**WFD \_ - \_ \_ \_ Benachrichtigungstyp**](wfd-display-sink-notification-type.md) Wert, der den Typ des Benachrichtigungs Ergebnisses angibt. Dieser Parameter bestimmt auch, welche Informationen in der Union unten verwendet werden sollen.
+Ein [**WFD \_ DISPLAY SINK NOTIFICATION \_ \_ \_ TYPE-Wert,**](wfd-display-sink-notification-type.md) der den Typ des Benachrichtigungsergebnisses angibt. Dieser Parameter bestimmt auch, welche Info in der folgenden Union verwendet werden soll.
 
 </dd> <dt>
 
-**Provisioningdata**
+**ProvisioningData**
 </dt> <dd>
 
-Informationen zum Ergebnis einer Bereitstellungs Anforderung. Verwenden Sie diese Einstellung, wenn der *Typ* den Wert **provisioningrequestnotification** hat.
+Informationen zum Ergebnis einer Bereitstellungsanforderung. Verwenden Sie diese , wenn *der Typ* den Wert **ProvisioningRequestNotification** auf hat.
 
 <dl> <dt>
 
-**Configmethod**
+**ConfigMethod**
 </dt> <dd>
 
-Die Methode für die Anzeige der Benutzeroberfläche für die interaktive Annahme.
+Die Methode zum Anzeigen der Benutzeroberfläche für die interaktive Akzeptanz.
 
 </dd> <dt>
 
-**upasskeylength**
+**uPassKeyLength**
 </dt> <dd>
 
-Die Anzahl der breit Zeichen in einem *Passkey*, wobei kein NULL-Terminator gezählt wird.
+Die Anzahl der Breitzeichen im *Hauptschlüssel*, ohne NULL-Abschlusszeichen.
 
 </dd> <dt>
 
 **Hauptschlüssel**
 </dt> <dd>
 
-Enthält den Pass-Key als Array von breit Zeichen. \_ \_ Die maximale Passkey-Länge der WFD-Sink-WPS- \_ Informationen \_ \_ \_ ist als Wert (8) definiert.
+Enthält den Passschlüssel als Array von Breitzeichen. WFD \_ SINK \_ WPS INFO MAX \_ \_ \_ PASSKEY LENGTH ist als Wert \_ (8) definiert.
 
 </dd> </dl> </dd> <dt>
 
-**Reconnectdata**
+**ReconnectData**
 </dt> <dd>
 
-Informationen zum Ergebnis einer Anforderung zum erneuten Verbinden. Verwenden Sie diese Eigenschaft, wenn der *Typ* den Wert **reconnectrequestnotification** hat.
+Informationen zum Ergebnis einer Anforderung zur erneuten Verbindung. Verwenden Sie diese , wenn *type* den Wert **ReconnectRequestNotification** auf hat.
 
 <dl> <dt>
 
-**"Trend Profil"**
+**strProfile**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die das Profil beschreibt.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die das Profil beschreibt.
 
 </dd> </dl> </dd> </dl>
 
@@ -112,9 +112,9 @@ Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die das Profil beschreibt.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>WF-Senke. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Wfdsink.h</dt> </dl> |
 
 
 

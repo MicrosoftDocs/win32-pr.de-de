@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 9d3879104a8f7406ff24dc2f63b79b51eb2fa58c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8ea0e4371246f71d125295730c19de75c59eafb08a4c081699b6b40575f27a99
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351484"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694660"
 ---
-# <a name="cim_owningjobelement-class"></a>CIM \_ owningjobelements-Klasse
+# <a name="cim_owningjobelement-class"></a>CIM \_ OwningJobElement-Klasse
 
-Stellt eine Zuordnung zwischen einem Auftrag und dem verwalteten Element dar, das den Auftrag erstellt hat. Da ein Auftrag zwischen Systemen verschoben werden kann und das verwaltete Element möglicherweise nicht für die gesamte Dauer des Auftrags vorhanden ist, ist diese Zuordnung in einigen Fällen möglicherweise nicht möglich oder nur für einen Teil des Vorhandenseins des Auftrags vorhanden.
+Stellt eine Zuordnung zwischen einem Auftrag und dem verwalteten Element dar, das den Auftrag erstellt hat. Da ein Auftrag zwischen Systemen wechseln kann und das verwaltete Element während der gesamten Dauer des Auftrags möglicherweise nicht vorhanden ist, ist diese Zuordnung in einigen Fällen möglicherweise nicht möglich oder nur für einen Teil des Auftragsbestands vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ class CIM_OwningJobElement
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ owningjobelements** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ OwningJobElement-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ owningjobelements** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ OwningJobElement-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Owdelta-Element**
+**OwnedElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Auftrag**
+Datentyp: **\_ CIM-Auftrag**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -68,7 +68,7 @@ Ein Verweis auf den Auftrag, der vom verwalteten Element erstellt wurde.
 **OwningElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -90,7 +90,7 @@ Ein Verweis auf das verwaltete Element, das den Auftrag erstellt hat.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

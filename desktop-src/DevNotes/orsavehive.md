@@ -1,7 +1,7 @@
 ---
-description: Schreibt die angegebene Offline Registrierungs Struktur in eine Datei.
+description: Schreibt die angegebene Offlineregistrierungsstruktur in eine Datei.
 ms.assetid: 26f2eed9-e6e0-4dc0-8b91-212cde072744
-title: Orsavehive-Funktion (offreg. h)
+title: ORSaveHive-Funktion (Offreg.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Offreg.dll
-ms.openlocfilehash: 59df5b191a9bc0cfe98e1681665c5814935aa2c3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0b4dde44b6cc6d2c5cfd80f4041cd6370f680eb6ca867e9e8f2bbce5f0702e27
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119758510"
 ---
-# <a name="orsavehive-function"></a>Orsavehive-Funktion
+# <a name="orsavehive-function"></a>ORSaveHive-Funktion
 
-Schreibt die angegebene Offline Registrierungs Struktur in eine Datei.
+Schreibt die angegebene Offlineregistrierungsstruktur in eine Datei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ DWORD ORSaveHive(
 
 <dl> <dt>
 
-*Handle* \[ in\]
+*Handle* \[ In\]
 </dt> <dd>
 
-Ein Handle für die zu speichernde Offline Registrierungs Struktur.
+Ein Handle für die zu speichernde Offlineregistrierungsstruktur.
 
 </dd> <dt>
 
-*lphivepath* \[ in\]
+*lpHivePath* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Unicode-Zeichenfolge, die den Namen der Hive-Registrierungsdatei angibt. Dabei kann es sich nicht um den Namen einer vorhandenen Datei handeln.
+Ein Zeiger auf eine Unicode-Zeichenfolge, die den Namen der Registrierungsstrukturdatei angibt. Dies darf nicht der Name einer vorhandenen Datei sein.
 
 </dd> <dt>
 
-*dwOSMajorVersion* \[ in\]
+*dwOsMajorVersion* \[ In\]
 </dt> <dd>
 
-Die Hauptversionsnummer des Betriebssystems. Dieser Member kann einen der folgenden Werte aufweisen.
+Die Hauptversionsnummer des Betriebssystems. Dieser Member kann einer der folgenden Werte sein.
 
 
 
 | Wert                                                                        | Bedeutung                                                                                                                                                                                                                        |
 |------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>5</dt> </dl> | Wenn *dwOSMinorVersion* den Wert 1 hat, ist das Betriebssystem Windows XP.<br/> Wenn *dwOSMinorVersion* 2 ist, ist das Betriebssystem Windows Server 2003 R2, Windows Server 2003 oder Windows XP Professional x64 Edition.<br/> |
-| <dl> <dt>6</dt> </dl> | Wenn *dwOSMinorVersion* den Wert 0 hat, ist das Betriebssystem Windows Server 2008 oder Windows Vista.<br/> Wenn *dwOSMinorVersion* den Wert 1 hat, ist das Betriebssystem Windows Server 2008 R2 oder Windows 7.<br/>                       |
+| <dl> <dt>5</dt> </dl> | Wenn *dwOsMinorVersion* 1 ist, wird das Windows XP verwendet.<br/> Wenn *dwOsMinorVersion* 2 ist, ist das Betriebssystem Windows Server 2003 R2, Windows Server 2003 oder Windows XP Professional x64 Edition.<br/> |
+| <dl> <dt>6</dt> </dl> | Wenn *dwOsMinorVersion* 0 ist, wird das Betriebssystem Windows Server 2008 oder Windows Vista installiert.<br/> Wenn *dwOsMinorVersion* 1 ist, wird das Windows Server 2008 R2 oder Windows 7 verwendet.<br/>                       |
 
 
 
@@ -74,18 +74,18 @@ Die Hauptversionsnummer des Betriebssystems. Dieser Member kann einen der folgen
 
 </dd> <dt>
 
-*dwOSMinorVersion* \[ in\]
+*dwOsMinorVersion* \[ In\]
 </dt> <dd>
 
-Die neben Versionsnummer des Betriebssystems. Dieser Member kann einen der folgenden Werte aufweisen.
+Die Nebenversionsnummer des Betriebssystems. Dieser Member kann einer der folgenden Werte sein.
 
 
 
 | Wert                                                                        | Bedeutung                                                                                                                                                                                                                                       |
 |------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>0</dt> </dl> | Wenn *dwOSMajorVersion* den Wert 6 hat, ist das Betriebssystem Windows Server 2008 oder Windows Vista.<br/>                                                                                                                                          |
-| <dl> <dt>1</dt> </dl> | Wenn *dwOSMajorVersion* den Wert 5 hat, ist das Betriebssystem Windows XP.<br/> Wenn *dwOSMajorVersion* den Wert 6 hat, ist das Betriebssystem Windows Server 2008 R2 oder Windows 7.<br/>                                                                |
-| <dl> <dt>2</dt> </dl> | Wenn *dwOSMajorVersion* den Wert 5 hat, ist das Betriebssystem Windows Server 2003 R2, Windows Server 2003 oder Windows XP Professional x64 Edition. <br/> Wenn *dwOSMajorVersion* den Wert 6 hat, muss der *dwOSMinorVersion* -Parameter den Wert 0 oder 1 aufweisen. <br/> |
+| <dl> <dt>0</dt> </dl> | Wenn *dwOsMajorVersion* 6 ist, wird das Betriebssystem Windows Server 2008 oder Windows Vista installiert.<br/>                                                                                                                                          |
+| <dl> <dt>1</dt> </dl> | Wenn *dwOsMajorVersion* 5 ist, wird das Betriebssystem Windows XP verwendet.<br/> Wenn *dwOsMajorVersion* 6 ist, ist das Betriebssystem Windows Server 2008 R2 oder Windows 7.<br/>                                                                |
+| <dl> <dt>2</dt> </dl> | Wenn *dwOsMajorVersion* 5 ist, ist das Betriebssystem Windows Server 2003 R2, Windows Server 2003 oder Windows XP Professional x64 Edition. <br/> Wenn *dwOsMajorVersion* 6 ist, muss *der dwOsMinorVersion-Parameter* 0 oder 1 sein. <br/> |
 
 
 
@@ -95,18 +95,18 @@ Die neben Versionsnummer des Betriebssystems. Dieser Member kann einen der folge
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WinError. h definiert ist. Sie können die [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) -Funktion mit dem \_ Flag Format Message \_ from System verwenden \_ , um eine generische Beschreibung des Fehlers zu erhalten. Folgende Fehlercodes sind möglich:
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerfreier Code, der in Winerror.h definiert ist. Sie können die [FormatMessage-Funktion](/windows/win32/api/winbase/nf-winbase-formatmessage) mit dem Flag FORMAT \_ MESSAGE FROM SYSTEM \_ \_ verwenden, um eine generische Beschreibung des Fehlers zu erhalten. Mögliche Fehlercodes:
 
--   Wenn der Aufrufer nicht über die erforderlichen Zugriffsrechte zum Schreiben der Datei verfügt, gibt die Funktion den Fehler \_ Zugriff \_ verweigert zurück.
--   Wenn die angegebene Datei bereits vorhanden ist, gibt die Funktion einen Fehler zurück \_ \_ .
+-   Wenn der Aufrufer nicht über die erforderlichen Zugriffsrechte zum Schreiben der Datei verfügt, gibt die Funktion ERROR \_ ACCESS \_ DENIED zurück.
+-   Wenn die angegebene Datei bereits vorhanden ist, gibt die Funktion ERROR \_ ALREADY \_ EXISTS zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **orsavehive** -Funktion muss verwendet werden, um an einer Offline Registrierungs Struktur vorgenommene Änderungen zu speichern. Änderungen werden nicht beibehalten, bis **orsavehive** aufgerufen wird, um die Struktur in einer Datei zu speichern.
+Die **ORSaveHive-Funktion** muss verwendet werden, um Änderungen an einer Offlineregistrierungsstruktur zu speichern. Änderungen werden erst beibehalten, wenn **ORSaveHive aufgerufen** wird, um die Struktur in einer Datei zu speichern.
 
-Die Parameter *dwOSMajorVersion* und *dwOSMinorVersion* geben das Zielformat der Hive-Registrierungsdatei an. In der folgenden Tabelle werden die aktuellen Versionsnummern des Betriebssystems zusammengefasst.
+Die *Parameter dwOsMajorVersion* und *dwOsMinorVersion* geben zusammen das Zielformat der Registrierungsstrukturdatei an. In der folgenden Tabelle sind die neuesten Betriebssystemversionsnummern zusammengefasst.
 
 
 
@@ -117,7 +117,7 @@ Die Parameter *dwOSMajorVersion* und *dwOSMinorVersion* geben das Zielformat der
 | Windows Server 2008                 | 6.0            |
 | Windows Vista                       | 6.0            |
 | Windows Server 2003 R2              | 5,2            |
-| Windows Server 2003                 | 5,2            |
+| Windows Server 2003                 | 5,2            |
 | Windows XP Professional x64 Edition | 5,2            |
 | Windows XP                          | 5,1            |
 
@@ -125,11 +125,11 @@ Die Parameter *dwOSMajorVersion* und *dwOSMinorVersion* geben das Zielformat der
 
  
 
-Verwenden Sie die Funktion [GetVersionEx](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa) zum Abrufen von Informationen zum aktuellen Betriebssystem.
+Verwenden Sie [die GetVersionEx-Funktion,](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa) um Informationen zum aktuellen Betriebssystem abzurufen.
 
-Die **orsavehive** -Funktion sperrt die Registrierungs Struktur, während Sie die Struktur in die Datei schreibt, schließt dann die Datei und gibt die Sperre frei. Die Registrierungs Struktur verbleibt im Arbeitsspeicher, bis Sie durch Aufrufen der [**orclosehive**](orclosehive.md) -Funktion geschlossen wird. Es ist möglich, Änderungen an der Registrierungs Struktur vorzunehmen, während Sie geöffnet ist. um diese Änderungen beizubehalten, muss die Struktur jedoch in einer neuen Datei gespeichert werden, da die **orsavehive** -Funktion eine vorhandene Datei nicht überschreibt.
+Die **ORSaveHive-Funktion** sperrt die Registrierungsstruktur, während sie die Struktur in die Datei schreibt, schließt dann die Datei und gibt die Sperre frei. Die Registrierungsstruktur verbleibt im Arbeitsspeicher, bis sie durch Aufrufen der [**ORCloseHive-Funktion geschlossen**](orclosehive.md) wird. Es ist möglich, weitere Änderungen an der Registrierungsstruktur vorzunehmen, während sie geöffnet ist. Um diese Änderungen zu erhalten, muss die Struktur jedoch in einer neuen Datei gespeichert werden, da die **ORSaveHive-Funktion** keine vorhandene Datei überschreibt.
 
-Die **orsavehive** -Funktion kann verwendet werden, um einen Teil der Offline Registrierungs Struktur zu speichern. Der im *handle* -Parameter angegebene Schlüssel wird zum Stamm Schlüssel einer Struktur, die aus dem angegebenen Schlüssel und den zugehörigen unter Schlüsseln besteht.
+Die **ORSaveHive-Funktion** kann verwendet werden, um einen Teil der Offlineregistrierungsstruktur zu speichern. Der im *Handle-Parameter* angegebene Schlüssel wird zum Stammschlüssel einer Struktur, die aus dem angegebenen Schlüssel und allen unteren Schlüsseln besteht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -137,23 +137,23 @@ Die **orsavehive** -Funktion kann verwendet werden, um einen Teil der Offline Re
 
 | Anforderung | Wert |
 |----------------------------|---------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | Windows-offline Registrierungs Bibliothek, Version 1,0 oder höher<br/>                      |
-| Header<br/>          | <dl> <dt>Offreg. h</dt> </dl>   |
+| Verteilbare Komponente<br/> | Windows Offlineregistrierungsbibliothek, Version 1.0 oder höher<br/>                      |
+| Header<br/>          | <dl> <dt>Offreg.h</dt> </dl>   |
 | DLL<br/>             | <dl> <dt>Offreg.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[GetVersionEx](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa)
+[Getversionex](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa)
 </dt> <dt>
 
-[**Orclosehive**](orclosehive.md)
+[**ORCloseHive**](orclosehive.md)
 </dt> <dt>
 
-[**Oropenhive**](oropenhive.md)
+[**OROpenHive**](oropenhive.md)
 </dt> </dl>
 
  

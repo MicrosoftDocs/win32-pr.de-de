@@ -1,6 +1,6 @@
 ---
-description: Das- <iconReference> Element gibt ein benutzerdefiniertes Symbol für diese Bibliothek an. Dieses Element ist optional und besitzt keine Attribute oder untergeordneten Elemente.
-title: iconReference-Element (Bibliotheks Schema)
+description: Das <iconReference> -Element gibt ein benutzerdefiniertes Symbol für diese Bibliothek an. Dieses Element ist optional und verfügt über keine Attribute oder untergeordneten Elemente.
+title: iconReference-Element (Bibliotheksschema)
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: 7A35B014-1E01-4da2-AA64-4CFC3436C6D9
@@ -9,16 +9,16 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 1f307ecd4fa523cc28881164869dca3329dfd698
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 84e200fa4969dc376661bd32851296d80c74120939afc995754cb2937ea04be3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994150"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119820230"
 ---
-# <a name="iconreference-element-library-schema"></a>iconReference-Element (Bibliotheks Schema)
+# <a name="iconreference-element-library-schema"></a>iconReference-Element (Bibliotheksschema)
 
-Das- <iconReference> Element gibt ein benutzerdefiniertes Symbol für diese Bibliothek an. Dieses Element ist optional und besitzt keine Attribute oder untergeordneten Elemente.
+Das <iconReference> -Element gibt ein benutzerdefiniertes Symbol für diese Bibliothek an. Dieses Element ist optional und verfügt über keine Attribute oder untergeordneten Elemente.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,48 +36,48 @@ Das- <iconReference> Element gibt ein benutzerdefiniertes Symbol für diese Bibl
 
 | Übergeordnetes Element                                                               | Untergeordnete Elemente |
 |------------------------------------------------------------------------------|----------------|
-| [librarydescription-Element (Bibliotheks Schema)](schema-librarydescription.md) |                |
+| [libraryDescription-Element (Bibliotheksschema)](schema-librarydescription.md) |                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Symbol Verweis muss in einem Formular angegeben werden, das für die [**pathparser**](/windows/desktop/api/Shlwapi/nf-shlwapi-pathparseiconlocationa) -Funktion geeignet ist. Beispiel: `ModuleFileName,IconResourceIndex`.
+Der Symbolverweis muss in einem für die [**PathParseIconLocation-Funktion**](/windows/desktop/api/Shlwapi/nf-shlwapi-pathparseiconlocationa) geeigneten Formular angegeben werden. Beispiel: `ModuleFileName,IconResourceIndex`.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[foldertype-Element (Bibliotheks Schema)](schema-library-foldertype.md)
+[folderType-Element (Bibliotheksschema)](schema-library-foldertype.md)
 </dt> <dt>
 
-[islibrarypinned-Element (Bibliotheks Schema)](schema-library-islibrarypinned.md)
+[isLibraryPinned-Element (Bibliotheksschema)](schema-library-islibrarypinned.md)
 </dt> <dt>
 
-[librarydescription-Element (Bibliotheks Schema)](schema-librarydescription.md)
+[libraryDescription-Element (Bibliotheksschema)](schema-librarydescription.md)
 </dt> <dt>
 
-[Name-Element (Bibliotheks Schema)](schema-library-name.md)
+[name-Element (Bibliotheksschema)](schema-library-name.md)
 </dt> <dt>
 
-[Besitzer-SID-Element (Bibliotheks Schema)](schema-library-ownersid.md)
+[ownerSID-Element (Bibliotheksschema)](schema-library-ownersid.md)
 </dt> <dt>
 
-[PropertyStore-Element (Bibliotheks Schema)](schema-library-propertystore.md)
+[propertyStore-Element (Bibliotheksschema)](schema-library-propertystore.md)
 </dt> <dt>
 
-[searchconnectordescription-Element (Bibliotheks Schema)](schema-library-searchconnectordescription.md)
+[searchConnectorDescription-Element (Bibliotheksschema)](schema-library-searchconnectordescription.md)
 </dt> <dt>
 
-[searchconnectordescriptionlist-Element (Bibliotheks Schema)](schema-library-searchconnectordescriptionlist.md)
+[searchConnectorDescriptionList-Element (Bibliotheksschema)](schema-library-searchconnectordescriptionlist.md)
 </dt> <dt>
 
-[templateingefo-Element (Bibliotheks Schema)](schema-library-templateinfo.md)
+[templateInfo-Element (Bibliotheksschema)](schema-library-templateinfo.md)
 </dt> <dt>
 
-[Version-Element (Bibliotheks Schema)](schema-library-version.md)
+[version-Element (Bibliotheksschema)](schema-library-version.md)
 </dt> </dl>
 
  

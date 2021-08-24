@@ -1,9 +1,9 @@
 ---
-title: 'Texturecube:: texturecube gathercmpblue-Methoden'
-description: 'Vergleicht und vergleicht eine Textur und gibt die blaue Komponente zurück. | Texturecube:: texturecube gathercmpblue-Methoden'
+title: TextureCube::TextureCube GatherCmpBlue-Methoden
+description: Sampling und Vergleich einer Textur und Rückgabe der blauen Komponente. | TextureCube::TextureCube GatherCmpBlue-Methoden
 ms.assetid: 28BF865B-906E-4BAC-9EBE-F75590346392
 keywords:
-- Gathercmpblue-Methoden HLSL
+- GatherCmpBlue-Methoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,24 +12,24 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 7124d9bfa3aadd201604aef91b25ba06ad45ca79
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 217ce618acbc16382da17155245c1534cd043b7b9593aa00f79f5b4b9f9ff440
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995462"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119742630"
 ---
-# <a name="texturecubegathercmpblue-methods"></a>Texturecube:: gathercmpblue-Methoden
+# <a name="texturecubegathercmpblue-methods"></a>TextureCube::GatherCmpBlue-Methoden
 
-Vergleicht und vergleicht eine Textur und gibt die blaue Komponente zurück.
+Sampling und Vergleich einer Textur und Rückgabe der blauen Komponente.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                               | BESCHREIBUNG                                                                                                     |
+| Methode                                                                               | Beschreibung                                                                                                     |
 |:-------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
-| [**Gathercmpblue (S, float, float, uint)**](tcube-gathercmpblue-s-float-float-uint-.md) | Vergleicht und vergleicht eine Textur und gibt die blaue Komponente zusammen mit dem Status des Vorgangs zurück.<br/> |
+| [**GatherCmpBlue(S,float,float,uint)**](tcube-gathercmpblue-s-float-float-uint-.md) | Lädt eine Textur ein und vergleicht sie und gibt die blaue Komponente zusammen mit dem Status des Vorgangs zurück.<br/> |
 
 
 

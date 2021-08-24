@@ -1,10 +1,10 @@
 ---
-title: msrassavedcallbacknumber-Attribut
-description: Das msrassavedcallbacknumber-Attribut wird intern verwendet.
+title: msRASSavedCallbackNumber-Attribut
+description: Das msRASSavedCallbackNumber-Attribut wird intern verwendet.
 ms.assetid: e72e2491-6c73-4fd3-811d-80b83a1c4632
 ms.tgt_platform: multiple
 keywords:
-- "\"msrassavedcallbacknumber\"-Attribut, AD-Schema"
+- AD-Schema des msRASSavedCallbackNumber-Attributs
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d497589770412f6cef90384c24353899f390bc0f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 3a4cd3206c24b4ad4959829788ddbf4f531c5d734defbf24cacb9361a69ffc8e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480023"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761400"
 ---
-# <a name="msrassavedcallbacknumber-attribute"></a>msrassavedcallbacknumber-Attribut
+# <a name="msrassavedcallbacknumber-attribute"></a>msRASSavedCallbackNumber-Attribut
 
-Das [**msrassavedcallbacknumber**](a-msradiusservicetype.md) -Attribut wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
+Das [**msRASSavedCallbackNumber-Attribut**](a-msradiusservicetype.md) wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | msrassavedcallbacknumber             |
-| LDAP-Display-Name | msrassavedcallbacknumber             |
+| CN                | msRASSavedCallbackNumber             |
+| Ldap-Anzeigename | msRASSavedCallbackNumber             |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1189              |
-| System-ID-GUID    | db0c90c5-c1f2-11d1-bbc5-0080c76670c0 |
+| System-Id-Guid    | db0c90c5-c1f2-11d1-bb5-0080c76670c0 |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
 
 
@@ -42,7 +42,7 @@ Das [**msrassavedcallbacknumber**](a-msradiusservicetype.md) -Attribut wird inte
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,10 +57,10 @@ Das [**msrassavedcallbacknumber**](a-msradiusservicetype.md) -Attribut wird inte
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -69,7 +69,7 @@ Das [**msrassavedcallbacknumber**](a-msradiusservicetype.md) -Attribut wird inte
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,10 +78,10 @@ Das [**msrassavedcallbacknumber**](a-msradiusservicetype.md) -Attribut wird inte
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -99,10 +99,10 @@ Das [**msrassavedcallbacknumber**](a-msradiusservicetype.md) -Attribut wird inte
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -120,10 +120,10 @@ Das [**msrassavedcallbacknumber**](a-msradiusservicetype.md) -Attribut wird inte
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -141,10 +141,10 @@ Das [**msrassavedcallbacknumber**](a-msradiusservicetype.md) -Attribut wird inte
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -162,10 +162,10 @@ Das [**msrassavedcallbacknumber**](a-msradiusservicetype.md) -Attribut wird inte
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |

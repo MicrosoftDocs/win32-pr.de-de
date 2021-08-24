@@ -1,7 +1,7 @@
 ---
-description: Ändert die Funktionseinstellungen eines Ethernet-Switchports.
+description: Ändert die Featureeinstellungen eines Ethernet-Switchports.
 ms.assetid: 8c21a932-fffb-40fd-9166-d7e351329217
-title: Modifyfeaturesettings-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse
+title: ModifyFeatureSettings-Methode der Msvm_VirtualEthernetSwitchManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0bee92019f9457a42a0c87ab619f7de1f7d203ab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f400ec4ef7318a51fde09defee96112bf2247c897a323509084731974af88d9e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694200"
 ---
-# <a name="modifyfeaturesettings-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>Modifyfeaturesettings-Methode der MSVM \_ virtualethernetzwitchmanagementservice-Klasse
+# <a name="modifyfeaturesettings-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>ModifyFeatureSettings-Methode der Msvm \_ VirtualEthernetSwitchManagementService-Klasse
 
-Ändert die Funktionseinstellungen eines Ethernet-Switchports.
+Ändert die Featureeinstellungen eines Ethernet-Switchports.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 ModifyFeatureSettings(
 
 <dl> <dt>
 
-*Featuresettings* \[ in\]
+*FeatureSettings* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, die eine eingebettete Instanz einer von der [**MSVM \_ featuresettingdata**](msvm-featuresettingdata.md) -Klasse abgeleiteten Klasse enthalten, die die zu ändernden Switchport-Funktionseinstellungen beschreibt.
+Ein Array von Zeichenfolgen, das eine eingebettete Instanz einer Klasse enthält, die von der [**Msvm \_ FeatureSettingData-Klasse**](msvm-featuresettingdata.md) abgeleitet wurde und die zu ändernden Einstellungen der Switchportfunktion beschreibt.
 
 </dd> <dt>
 
-*Resultingfeaturesettings* \[ vorgenommen\]
+*ResultingFeatureSettings* \[ out\]
 </dt> <dd>
 
-Ein Array von Verweisen auf Instanzen der [**MSVM \_ featuresettingdata**](msvm-featuresettingdata.md) -Klasse, die die geänderten Funktionseinstellungen darstellen.
+Ein Array von Verweisen auf Instanzen der [**Msvm \_ FeatureSettingData-Klasse,**](msvm-featuresettingdata.md) die die geänderten Featureeinstellungen darstellen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -74,7 +74,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -83,22 +83,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-Nicht **kompatible Parameter** (6)
+**Inkompatible** Parameter (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -107,10 +107,10 @@ Nicht **kompatible Parameter** (6)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -119,13 +119,13 @@ Nicht **kompatible Parameter** (6)
 
 <dl> <dt>
 
-[**Addfeaturesettings**](addfeaturesettings-msvm-virtualethernetswitchmanagementservice.md)
+[**AddFeatureSettings**](addfeaturesettings-msvm-virtualethernetswitchmanagementservice.md)
 </dt> <dt>
 
-[**Removefeaturesettings**](removefeaturesettings-msvm-virtualethernetswitchmanagementservice.md)
+[**RemoveFeatureSettings**](removefeaturesettings-msvm-virtualethernetswitchmanagementservice.md)
 </dt> <dt>
 
-[**MSVM \_ virtualethernetzwitchmanagementservice**](msvm-virtualethernetswitchmanagementservice.md)
+[**Msvm \_ VirtualEthernetSwitchManagementService**](msvm-virtualethernetswitchmanagementservice.md)
 </dt> </dl>
 
  

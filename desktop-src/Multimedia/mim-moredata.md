@@ -1,9 +1,9 @@
 ---
 title: MIM_MOREDATA (Mmsystem.h)
-description: Die MIM MOREDATA-Nachricht wird an eine EINGABE-Rückruffunktion gesendet, wenn eine FEHLERMELDUNG-Nachricht von einem EINGABEEINGABE-Gerät empfangen wird, die Anwendung mim-DATENnachrichten jedoch nicht schnell genug verarbeitet, um mit dem Eingabegerätetreiber mithalten zu \_ \_ können.
+description: Die MIM MOREDATA-Nachricht wird an eine EINGABE-Rückruffunktion gesendet, wenn eine FEHLERMELDUNG-Nachricht von einem EINGABEEINGABE-Gerät empfangen wird, die Anwendung jedoch MIM DATA-Nachrichten nicht schnell genug verarbeitet, um mit dem Eingabegerätetreiber mithalten zu \_ \_ können.
 ms.assetid: 74ed46ab-a18e-4df5-bf36-ab3dec7fafa5
 keywords:
-- MIM_MOREDATA Meldung Windows Multimedia
+- MIM_MOREDATA von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c6342823e13a085b377a3e71f28a0f9ff016681c
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 130a07d1d205e9944c7be6ab9ad1294e09d0ebdcdb81d5befc5468ff5a65218f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119782970"
 ---
-# <a name="mim_moredata-message"></a>MIM \_ MOREDATA-Nachricht
+# <a name="mim_moredata-message"></a>\_MIM MOREDATA-Meldung
 
-Die **MIM \_ MOREDATA-Nachricht** wird an eine EINGABE-Rückruffunktion gesendet, wenn eine FEHLERMELDUNG-Nachricht von einem EINGABEEINGABE-Gerät empfangen wird, die Anwendung [**mim-DATENnachrichten \_**](mim-data.md) jedoch nicht schnell genug verarbeitet, um mit dem Eingabegerätetreiber mithalten zu können. Die Rückruffunktion empfängt diese Nachricht nur, wenn die Anwendung im Aufruf der \_ \_ funktion [**"eigenschaftInOpen"**](/windows/win32/api/mmeapi/nf-mmeapi-midiinopen) den STATUS DESEJO angibt.
+Die **MIM \_ MOREDATA-Nachricht** wird an eine EINGABE-Rückruffunktion gesendet, wenn eine EINGABE-Nachricht von einem EINGABEEINGABE-Gerät empfangen wird, die Anwendung jedoch MIM [**\_ DATA-Nachrichten**](mim-data.md) nicht schnell genug verarbeitet, um mit dem Eingabegerätetreiber mithalten zu können. Die Rückruffunktion empfängt diese Nachricht nur, wenn die Anwendung im Aufruf der \_ funktion "sollInOpen" den STATUS DESEID-E/A-Werts \_ [**angibt.**](/windows/win32/api/mmeapi/nf-mmeapi-midiinopen)
 
 
 ```C++
@@ -47,16 +47,16 @@ Gibt die empfangene MESSAGE-Nachricht an. Die Nachricht wird wie folgt in **eine
 
 | Anforderung | Wert | Beschreibung |
 |-----------|-----------------|-----------------------------------------------------|
-| Hohes Wort | High-Order-Byte | Wird nicht verwendet.                                           |
+| Hohes Wort | High-Order Byte | Wird nicht verwendet.                                           |
 |           | Niedriges Byte  | Enthält (bei Bedarf) ein zweites Byte von DANN-Daten.  |
-| Niedriges Wort  | High-Order-Byte | Enthält (falls erforderlich) das erste Byte derTEN-Daten. |
+| Niedriges Wort  | High-Order Byte | Enthält (falls erforderlich) das erste Byte derTEN-Daten. |
 |           | Niedriges Byte  | Enthält den STATUS DEST-Status.                           |
 
 
 
  
 
-Die beiden BYTES der BYTES-DATEN sind je nach STATUS-Byte optional.
+Die beiden BYTES der BYTES für DIE BYTES sind je nach STATUS-Byte optional.
 
 </dd> <dt>
 
@@ -71,17 +71,17 @@ Gibt den Zeitpunkt an, zu dem die Nachricht vom Eingabegerätetreiber empfangen 
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung sollte nur einen minimalen Verarbeitungsaufwand für MIM \_ MOREDATA-Nachrichten verarbeiten. (Insbesondere sollten Anwendungen die [PostMessage-Funktion](/windows/win32/api/winuser/nf-winuser-postmessagea) bei der Verarbeitung von MIM nicht aufrufen. \_ MOREDATA.) Stattdessen sollte die Anwendung die Ereignisdaten in einen Puffer platzieren und dann zurückgeben.
+Eine Anwendung sollte nur einen minimalen Verarbeitungsaufwand für MIM \_ MOREDATA-Nachrichten verarbeiten. (Insbesondere sollten Anwendungen die [PostMessage-Funktion](/windows/win32/api/winuser/nf-winuser-postmessagea) nicht aufrufen, während sie MIM \_ MOREDATA.) Stattdessen sollte die Anwendung die Ereignisdaten in einen Puffer platzieren und dann zurückgeben.
 
-Wenn eine Anwendung nach einer Reihe von MIM MOREDATA-Nachrichten eine [**MIM \_ DATA-Nachricht**](mim-data.md) empfängt, ist sie mit eingehenden ANMELDUNG-Ereignissen auf dem Auffangen und kann zeitintensive \_ Funktionen sicher aufrufen.
+Wenn eine Anwendung eine [**MIM \_ DATA-Nachricht**](mim-data.md) nach einer Reihe von MIM MOREDATA-Nachrichten empfängt, hat sie die \_ eingehenden NOTE-Ereignisse erfasst und kann zeitintensive Funktionen sicher aufrufen.
 
 Der Ausführungsstatus von über einen EINGABE-Eingabeport empfangenen SMS-Nachrichten ist deaktiviert. jede Nachricht wird erweitert, um das STATUS-Byte zu enthalten.
 
 Diese Nachricht wird nicht gesendet, wenn eine exklusive SYSTEM-EXCLUSIVE-Nachricht empfangen wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -89,11 +89,11 @@ Diese Nachricht wird nicht gesendet, wenn eine exklusive SYSTEM-EXCLUSIVE-Nachri
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Mmsystem.h (einschließlich Windows.h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

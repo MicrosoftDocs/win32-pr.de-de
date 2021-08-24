@@ -1,82 +1,82 @@
 ---
-title: Glu-Funktionen
-description: Glu-Funktionen
+title: GLU-Funktionen
+description: GLU-Funktionen
 ms.assetid: 8304a291-1a26-42bc-8887-386732980722
 keywords:
-- OpenGL-, Glu-Bibliotheksfunktionen
-- OpenGL-Referenz, Glu-Bibliotheksfunktionen
-- Glu-Bibliothek, Funktionen
+- OpenGL,GLU-Bibliotheksfunktionen
+- OpenGL-Referenz, GLU-Bibliotheksfunktionen
+- GLU-Bibliothek, Funktionen
 - OpenGL-Hilfsprogramm (GLU), Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fae3ece873f4e1e015861f597c0d51ebfc3436de
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2e4483b364d2d67daff0bbc04b9a30cd7cdb3059f3977f763b247f77be74d62f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119777700"
 ---
-# <a name="glu-functions"></a>Glu-Funktionen
+# <a name="glu-functions"></a>GLU-Funktionen
 
-Dieser Abschnitt enthält Referenzseiten in alphabetischer Reihenfolge für alle OpenGL-hilfsprogrammbibliotheks-Funktionen. Hintergrundinformationen zu diesen Funktionen finden Sie unter [OpenGL Utility Library](opengl-utility-library.md).
+Dieser Abschnitt enthält Referenzseiten in alphabetischer Reihenfolge für alle Funktionen der OpenGL-Hilfsprogrammbibliothek. Hintergrundinformationen zu diesen Funktionen finden Sie unter [OpenGL-Hilfsprogrammbibliothek.](opengl-utility-library.md)
 
 
 
-| Funktion                                                                                           | BESCHREIBUNG                                                                                              |
+| Funktion                                                                                           | Beschreibung                                                                                              |
 |----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| [**glubegincurve**](glubegincurve.md), [ **gluendcurve**](gluendcurve.md)                         | Begrenzt eine nicht einheitliche ([NURBS](using-nurbs-curves-and-surfaces.md))-Kurven Definition (Rational B-Spline). |
-| [**glubeginpolygon**](glubeginpolygon.md), [ **gluendpolygon**](gluendpolygon.md)                 | Begrenzen einer Polygon Beschreibung.                                                                           |
-| [**glubeginsurface**](glubeginsurface.md), [ **gluendsurface**](gluendsurface.md)                 | Begrenzen einer nursb-Oberflächen Definition.                                                                      |
-| [**glubegintrim**](glubegintrim.md), [ **gluendtrim**](gluendtrim.md)                             | Begrenzen Sie die Definition einer nursb-Kürzungs Schleife.                                                                |
-| [**gluBuild1DMipmaps**](glubuild1dmipmaps.md)                                                     | Erstellt 1-D-Mipmaps.                                                                                     |
+| [**gluBeginCurve**](glubegincurve.md), [ **gluEndCurve**](gluendcurve.md)                         | Trenne eine nicht einheitliche rationale B-Spline-Kurvendefinition[(NURBS).](using-nurbs-curves-and-surfaces.md) |
+| [**gluBeginPolygon,**](glubeginpolygon.md) [ **gluEndPolygon**](gluendpolygon.md)                 | Trennzeichen für eine Polygonbeschreibung.                                                                           |
+| [**gluBeginSurface,**](glubeginsurface.md) [ **gluEndSurface**](gluendsurface.md)                 | Trennzeichen für eine NURBS-Oberflächendefinition.                                                                      |
+| [**gluBeginTrim,**](glubegintrim.md) [ **gluEndTrim**](gluendtrim.md)                             | Trennzeichen für eine NURBS-Kürzungsschleifendefinition.                                                                |
+| [**gluBuild1DMipmaps**](glubuild1dmipmaps.md)                                                     | Erstellt 1D-Mipmaps.                                                                                     |
 | [**gluBuild2DMipmaps**](glubuild2dmipmaps.md)                                                     | Erstellt 2D-Mipmaps.                                                                                     |
-| [**gluzylinder**](glucylinder.md)                                                                 | Zeichnet einen Zylinder.                                                                                        |
-| [**gludeletenurbsrenderer**](gludeletenurbsrenderer.md)                                           | Zerstört ein nursb-Objekt.                                                                                 |
-| [**gludeletequadric**](gludeletequadric.md)                                                       | Zerstört ein Quadric-Objekt.                                                                               |
-| [**gludeletetess**](gludeletetess.md)                                                             | Zerstört ein Mosaik Objekt.                                                                          |
-| [**gludisk**](gludisk.md)                                                                         | Zeichnet einen Datenträger.                                                                                            |
-| [**gluerrorstring**](gluerrorstring.md)                                                           | Erzeugt eine Fehler Zeichenfolge aus einem OpenGL-oder glu-Fehlercode. Die Fehler Zeichenfolge ist nur ANSI.                |
-| [**glugetnurbsproperty**](glugetnurbsproperty.md)                                                 | Ruft eine nursb-Eigenschaft ab.                                                                              |
-| [**glugetstring**](glugetstring.md)                                                               | Ruft eine Zeichenfolge ab, die die glu-Versionsnummer oder die unterstützten glu-Erweiterungs Aufrufe beschreibt.               |
-| [**"glugettessproperty"**](glugettessproperty.md)                                                   | Ruft eine Mosaik Objekt Eigenschaft ab.                                                                |
-| [**gluloadsamplingmatrices**](gluloadsamplingmatrices.md)                                         | Lädt nursb-Sampling-und-cullinger-Matrizen.                                                               |
-| [**glulookat**](glulookat.md)                                                                     | Definiert eine Anzeige Transformation.                                                                        |
-| [**glunewnurbsrenderer**](glunewnurbsrenderer.md)                                                 | Erstellt ein nursb-Objekt.                                                                                  |
-| [**glunewquadric**](glunewquadric.md)                                                             | Erstellt ein Quadric-Objekt.                                                                                |
-| [**glunewtess**](glunewtess.md)                                                                   | Erstellt ein Mosaik Objekt.                                                                           |
-| [**glunextcontour**](glunextcontour.md)                                                           | Markiert den Anfang einer anderen Kontur.                                                                  |
-| [*glunurbscallback*](glunurbs.md)                                                                 | Definiert einen Rückruf für ein nursb-Objekt.                                                                   |
-| [**glunurbscurve**](glunurbscurve.md)                                                             | Definiert die Form einer nursb-Kurve.                                                                      |
-| [**glunurbsproperty**](glunurbsproperty.md)                                                       | Legt eine nursb-Eigenschaft fest.                                                                                   |
-| [**glunurbssurface**](glunurbssurface.md)                                                         | Definiert die Form einer nursb-Oberfläche.                                                                    |
-| [**gluOrtho2D**](gluortho2d.md)                                                                   | Definiert eine 2D-Projektions Matrix (orthografische).                                                            |
-| [**glupartialdisk**](glupartialdisk.md)                                                           | Zeichnet einen Bogen eines Datenträgers.                                                                                  |
-| [**gluperspective**](gluperspective.md)                                                           | Richtet eine perspektivische Projektions Matrix ein.                                                                 |
-| [**glupickmatrix**](glupickmatrix.md)                                                             | Definiert einen Auswahlbereich.                                                                                |
-| [**gluproject**](gluproject.md)                                                                   | Ordnet den Fenster Koordinaten Objekt Koordinaten zu.                                                           |
-| [**glupwlcurve**](glupwlcurve.md)                                                                 | Beschreibt eine schrittweise lineare, lineare nursb-Kürzungs Kurve.                                                       |
-| [*gluvierccallback*](gluquadric.md)                                                             | Definiert einen Rückruf für ein Quadric-Objekt.                                                                 |
-| [**gluquadricdrawstyle**](gluquadricdrawstyle.md)                                                 | Gibt die gewünschte Zeichnungs Art für viercs an.                                                           |
-| [**gluquadricnormals**](gluquadricnormals.md)                                                     | Gibt an, welche Art von normalen für viercs verwendet werden sollen.                                              |
-| [**gluquadricorientation**](gluquadricorientation.md)                                             | Gibt die Ausrichtung innerhalb oder außerhalb von viercs an.                                                    |
-| [**gluquadrictexture**](gluquadrictexture.md)                                                     | Gibt an, ob viercs texturiert werden sollen.                                                           |
-| [**gluscaleimage**](gluscaleimage.md)                                                             | Skaliert ein Bild auf eine beliebige Größe.                                                                    |
-| [**glusphere**](glusphere.md)                                                                     | Zeichnet eine Kugel.                                                                                          |
-| [**glutess begincontour**](glutessbegincontour.md), [ **gluTessEndContour**](glutessendcontour.md) | Trennzeichen für eine Kontur Beschreibung.                                                                           |
-| [**glutess beginpolygon**](glutessbeginpolygon.md), [ **glutessendpolygon**](glutessendpolygon.md) | Begrenzen einer Polygon Beschreibung.                                                                           |
-| [*glutesscallback*](glutess.md)                                                                   | Definiert einen Rückruf für ein Mosaik Objekt.                                                            |
-| [**glutess normal**](glutessnormal.md)                                                             | Gibt einen normalen für ein Polygon an.                                                                        |
-| [**glutessproperty**](glutessproperty.md)                                                         | Legt die-Eigenschaft eines Mosaik Objekts fest.                                                              |
-| [**glutess Vertex**](glutessvertex.md)                                                             | Gibt einen Scheitelpunkt auf einem Polygon an.                                                                         |
-| [**"gluunproject"**](gluunproject.md)                                                               | Ordnet Fenster Koordinaten den Objekt Koordinaten zu.                                                           |
+| [**gluCylinder**](glucylinder.md)                                                                 | Zeichnet einen Zylinder.                                                                                        |
+| [**gluDeleteNurbsRenderer**](gludeletenurbsrenderer.md)                                           | Zerstört ein NURBS-Objekt.                                                                                 |
+| [**gluDeleteQuadric**](gludeletequadric.md)                                                       | Zerstört ein quadrisches Objekt.                                                                               |
+| [**gluDeleteTess**](gludeletetess.md)                                                             | Zerstört ein Mosaikobjekt.                                                                          |
+| [**gluDisk**](gludisk.md)                                                                         | Zeichnet einen Datenträger.                                                                                            |
+| [**gluErrorString**](gluerrorstring.md)                                                           | Erzeugt eine Fehlerzeichenfolge aus einem OpenGL- oder GLU-Fehlercode. Die Fehlerzeichenfolge ist nur ANSI.                |
+| [**gluGetNurbsProperty**](glugetnurbsproperty.md)                                                 | Ruft eine NURBS-Eigenschaft ab.                                                                              |
+| [**gluGetString**](glugetstring.md)                                                               | Ruft eine Zeichenfolge ab, die die GLU-Versionsnummer oder unterstützte GLU-Erweiterungsaufrufe beschreibt.               |
+| [**gluGetTessProperty**](glugettessproperty.md)                                                   | Ruft eine Mosaikobjekteigenschaft ab.                                                                |
+| [**gluLoadSamplingMatrices**](gluloadsamplingmatrices.md)                                         | Lädt NURBS-Sampling- und Cullingmatrizen.                                                               |
+| [**gluLookAt**](glulookat.md)                                                                     | Definiert eine Anzeigetransformation.                                                                        |
+| [**gluNewNurbsRenderer**](glunewnurbsrenderer.md)                                                 | Erstellt ein NURBS-Objekt.                                                                                  |
+| [**gluNewQuadric**](glunewquadric.md)                                                             | Erstellt ein quadrisches -Objekt.                                                                                |
+| [**gluNewTess**](glunewtess.md)                                                                   | Erstellt ein Mosaikobjekt.                                                                           |
+| [**gluNextContour**](glunextcontour.md)                                                           | Markiert den Anfang einer anderen Kontur.                                                                  |
+| [*gluNurbsCallback*](glunurbs.md)                                                                 | Definiert einen Rückruf für ein NURBS-Objekt.                                                                   |
+| [**gluNurbsCurve**](glunurbscurve.md)                                                             | Definiert die Form einer NURBS-Kurve.                                                                      |
+| [**gluNurbsProperty**](glunurbsproperty.md)                                                       | Legt eine NURBS-Eigenschaft fest.                                                                                   |
+| [**gluNurbsSurface**](glunurbssurface.md)                                                         | Definiert die Form einer NURBS-Oberfläche.                                                                    |
+| [**gluOrtho2D**](gluortho2d.md)                                                                   | Definiert eine 2D-orthografische Projektionsmatrix.                                                            |
+| [**gluPartialDisk**](glupartialdisk.md)                                                           | Zeichnet einen Bogen eines Datenträgers.                                                                                  |
+| [**gluPerspective**](gluperspective.md)                                                           | Richtet eine perspektivische Projektionsmatrix ein.                                                                 |
+| [**gluPickMatrix**](glupickmatrix.md)                                                             | Definiert eine Auswahlregion.                                                                                |
+| [**gluProject**](gluproject.md)                                                                   | Karten Objektkoordinaten zu Fensterkoordinaten.                                                           |
+| [**gluPwlCurve**](glupwlcurve.md)                                                                 | Beschreibt eine schrittweise lineare NURBS-Kürzungskurve.                                                       |
+| [*gluQuadricCallback*](gluquadric.md)                                                             | Definiert einen Rückruf für ein quadrisches Objekt.                                                                 |
+| [**gluQuadricDrawStyle**](gluquadricdrawstyle.md)                                                 | Gibt den gewünschten Zeichnen-Stil für Quadrics an.                                                           |
+| [**gluQuadricNormals**](gluquadricnormals.md)                                                     | Gibt an, welche Art von Normalitäten für Quadrics verwendet werden sollen.                                              |
+| [**gluQuadricOrientation**](gluquadricorientation.md)                                             | Gibt innerhalb oder außerhalb der Ausrichtung für Quadrics an.                                                    |
+| [**gluQuadricTexture**](gluquadrictexture.md)                                                     | Gibt an, ob Quadrics texturiert werden sollen.                                                           |
+| [**gluScaleImage**](gluscaleimage.md)                                                             | Skaliert ein Bild auf eine beliebige Größe.                                                                    |
+| [**gluSphere**](glusphere.md)                                                                     | Zeichnet eine Kugel.                                                                                          |
+| [**gluTessBeginContour**](glutessbegincontour.md), [ **gluTessEndContour**](glutessendcontour.md) | Trennzeichen für eine Beschreibung der Kontur.                                                                           |
+| [**gluTessBeginPolygon**](glutessbeginpolygon.md), [ **gluTessEndPolygon**](glutessendpolygon.md) | Trennzeichen für eine Polygonbeschreibung.                                                                           |
+| [*gluTessCallback*](glutess.md)                                                                   | Definiert einen Rückruf für ein Mosaikobjekt.                                                            |
+| [**gluTessNormal**](glutessnormal.md)                                                             | Gibt einen normalen für ein Polygon an.                                                                        |
+| [**gluTessProperty**](glutessproperty.md)                                                         | Legt die -Eigenschaft eines Mosaikobjekts fest.                                                              |
+| [**gluTessVertex**](glutessvertex.md)                                                             | Gibt einen Scheitelpunkt auf einem Polygon an.                                                                         |
+| [**gluUnProject**](gluunproject.md)                                                               | Karten fensterkoordinaten zu Objektkoordinaten.                                                           |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: MCI_VD_STEP_PARMS-Struktur (mciapi. h)
-description: Die Struktur der MCI- \_ VD- \_ Schritt-Parametern \_ enthält Informationen zum MCI- \_ Schritt Befehl für Videodisk-Geräte.
+title: MCI_VD_STEP_PARMS-Struktur (Mciapi.h)
+description: Die MCI \_ VD \_ STEP \_ PARMS-Struktur enthält Informationen zum MCI \_ STEP-Befehl für videodisc-Geräte.
 ms.assetid: 5345468c-b195-485a-8101-4a076410f26a
 keywords:
-- MCI_VD_STEP_PARMS Struktur Windows Multimedia
+- MCI_VD_STEP_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b8b368046375f87a897d002c362624fed3ea105
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f494c821a1df68b98548c95a10af47b817e00b8bc0ffbd52ee7836bb4d97441f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517813"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119783855"
 ---
-# <a name="mci_vd_step_parms-structure"></a>Struktur von MCI- \_ VD- \_ Schritt- \_ Parametern
+# <a name="mci_vd_step_parms-structure"></a>MCI \_ VD \_ STEP \_ PARMS-Struktur
 
-Die Struktur der **MCI- \_ VD-Schritt- \_ \_ Parametern** enthält Informationen zum [**MCI- \_ Schritt**](mci-step.md) Befehl für Videodisk-Geräte.
+Die **MCI \_ VD STEP \_ \_ PARMS-Struktur** enthält Informationen zum [**MCI \_ STEP-Befehl**](mci-step.md) für videodisc-Geräte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwframes**
+**dwFrames**
 </dt> <dd>
 
-Anzahl der zu schrifenden Frames.
+Anzahl der einzelgehende Frames.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,21 +67,21 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Schritt**](mci-step.md)
+[**\_MCI-SCHRITT**](mci-step.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

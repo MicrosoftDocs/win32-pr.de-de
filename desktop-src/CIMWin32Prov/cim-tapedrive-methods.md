@@ -1,20 +1,20 @@
 ---
-description: Die CIM \_ TapeDrive-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ TapeDrive-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 53D03E02-DD6D-4C81-9EED-703A99ADE270
 ms.tgt_platform: multiple
-title: CIM_TapeDrive Methoden
+title: CIM_TapeDrive-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f65d12ce24a5dd48f9b5f78e688c71077c549e1d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a763ad33f005704d0d7cd922e3389922638f51a5bd4c354a5fe66b5c2cf8026f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119817590"
 ---
-# <a name="cim_tapedrive-methods"></a>CIM- \_ TapeDrive-Methoden
+# <a name="cim_tapedrive-methods"></a>\_CIM-TapeDrive-Methoden
 
-Die [**CIM \_ TapeDrive**](cim-tapedrive.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ TapeDrive-Klasse**](cim-tapedrive.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

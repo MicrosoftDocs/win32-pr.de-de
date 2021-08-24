@@ -1,24 +1,24 @@
 ---
-description: Das Ereignis "Read ystatechange" wird gesendet, wenn sich die Eigenschaft "Read-State" des mswebdvd-Steuer Elements geändert hat.
+description: Das ReadyStateChange-Ereignis wird gesendet, wenn sich die ReadyState-Eigenschaft des MSWebDVD-Steuerelements geändert hat.
 ms.assetid: 814a09e1-2e85-4ea3-9135-8377dc2acf64
-title: "\"Leserystatechange\""
+title: ReadyStateChange
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 46cc8d7ffdee650aac48839d49ed8162e10bb955
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5f73e0b5b7cd7178df31b3f6efda56e398d8cb406598355a3c49702714686af3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104522048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697120"
 ---
-# <a name="readystatechange"></a>"Leserystatechange"
+# <a name="readystatechange"></a>ReadyStateChange
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Das `ReadyStateChange` Ereignis wird gesendet, wenn die Eigenschaft "read- **State** " des mswebdvd-Steuer Elements geändert wurde.
+Das `ReadyStateChange` Ereignis wird gesendet, wenn sich die **ReadyState-Eigenschaft** des MSWebDVD-Steuerelements geändert hat.
 
 ``` syntax
 ReadyStateChange(ReadyState)
@@ -28,20 +28,20 @@ ReadyStateChange(ReadyState)
 
 <dl> <dt>
 
-<span id="ReadyState"></span><span id="readystate"></span><span id="READYSTATE"></span>*ReadyState*
+<span id="ReadyState"></span><span id="readystate"></span><span id="READYSTATE"></span>*Readystate*
 </dt> <dd>
 
-Gibt den neuen Wert der Eigenschaft " [**leserystate**](readystate-property.md) " an.
+Gibt den neuen Wert der [**ReadyState-Eigenschaft**](readystate-property.md) an.
 
 
 
-| Wert | BESCHREIBUNG               |
+| Wert | Beschreibung               |
 |-------|---------------------------|
-| 0     | "Read ystate" ist \_ nicht initialisiert. |
-| 1     | Laden von "Read ystate" \_       |
-| 2     | "Read ystate" \_ geladen        |
-| 3     | Read-State \_ interaktiv   |
-| 4     | Read-State ist fertiggestellt. \_      |
+| 0     | READYSTATE \_ UNINITIALIZED |
+| 1     | READYSTATE \_ LOADING       |
+| 2     | READYSTATE \_ LOADED        |
+| 3     | READYSTATE \_ INTERACTIVE   |
+| 4     | READYSTATE \_ COMPLETE      |
 
 
 

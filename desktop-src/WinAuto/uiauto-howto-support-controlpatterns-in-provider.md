@@ -1,26 +1,26 @@
 ---
 title: Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter
-description: In diesem Thema wird gezeigt, wie ein Microsoft UI Automation-Anbieter Steuerelement Muster für ein Steuerelement implementiert. Steuerelement Muster ermöglichen es Client Anwendungen, das Steuerelement zu bearbeiten und Informationen dazu zu erhalten.
+description: In diesem Thema wird gezeigt, wie ein Microsoft Benutzeroberflächenautomatisierung-Anbieter Steuerelementmuster für ein Steuerelement implementiert. Mit Steuerelementmustern können Clientanwendungen das Steuerelement bearbeiten und Informationen dazu abrufen.
 ms.assetid: 504d0ed8-32c1-43ed-9f71-328a013ab350
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 54e75fa12dba891bc4eded5fd9763f7825eb7f88
-ms.sourcegitcommit: 2e9db3c7d9a3dbea15196b03c883846fad6f32be
+ms.openlocfilehash: 649f9419c5e3003c0185f435cba4d38f4a25c3d7adc1bdc7cf9c53cd06b32a6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "104313578"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119759230"
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter
 
-In diesem Thema wird gezeigt, wie ein Microsoft UI Automation-Anbieter Steuerelement Muster für ein Steuerelement implementiert. Steuerelement Muster ermöglichen es Client Anwendungen, das Steuerelement zu bearbeiten und Informationen dazu zu erhalten.
+In diesem Thema wird gezeigt, wie ein Microsoft Benutzeroberflächenautomatisierung-Anbieter Steuerelementmuster für ein Steuerelement implementiert. Mit Steuerelementmustern können Clientanwendungen das Steuerelement bearbeiten und Informationen dazu abrufen.
 
-Ein Anbieter implementiert ein Steuerelement Muster, indem er die folgenden Schritte ausführt:
+Ein Anbieter implementiert ein Steuerelementmuster, indem er die folgenden Hauptschritte durchführt:
 
-1.  Implementieren Sie die Anbieter Schnittstelle, die das-Steuerelement Muster unterstützt. Um z. b. das [Auswahl](uiauto-implementingselection.md) Steuerelement Muster zu unterstützen, würde ein Anbieter für ein benutzerdefiniertes Listen Steuerelement die [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider) -Schnittstelle implementieren.
-2.  Gibt ein Objekt zurück, das die Schnittstelle des Steuerelement Muster Anbieters enthält, wenn die Benutzeroberflächen Automatisierung die Methode [**IRawElementProviderSimple:: GetPatternProvider**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementprovidersimple-getpatternprovider) des Anbieters aufruft.
+1.  Implementieren Sie die Anbieterschnittstelle, die das Steuerelementmuster unterstützt. Um beispielsweise das [Selection-Steuerelementmuster](uiauto-implementingselection.md) zu unterstützen, implementiert ein Anbieter für ein benutzerdefiniertes Listensteuerelement die [**ISelectionProvider-Schnittstelle.**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider)
+2.  Gibt ein Objekt zurück, das die Schnittstelle des Steuerelementmusteranbieters enthält, wenn Benutzeroberflächenautomatisierung die [**IRawElementProviderSimple::GetPatternProvider-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementprovidersimple-getpatternprovider) des Anbieters aufruft.
 
-Das folgende Beispiel zeigt die Implementierung der [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider) -Schnittstelle für ein benutzerdefiniertes Listen Steuerelement für die einfache Auswahl. Die-Implementierung enthält Methoden zum Abrufen von Eigenschaften für die Eigenschaften IsSelectionRequired und CanSelectMultiple sowie eine Methode zum Abrufen des Anbieters für das ausgewählte Listenelement.
+Das folgende Beispiel zeigt die [**ISelectionProvider-Schnittstellenimplementierung**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider) für ein benutzerdefiniertes Einzelauswahllisten-Steuerelement. Die Implementierung umfasst Methoden zum Abrufen von Eigenschaften für die Eigenschaften IsSelectionRequired und CanSelectMultiple sowie eine Methode zum Abrufen des Anbieters für das ausgewählte Listenelement.
 
 
 ```C++
@@ -73,7 +73,7 @@ IFACEMETHODIMP ListProvider::GetSelection(SAFEARRAY** pRetVal)
 
 
 
-Das folgende Beispiel zeigt eine Implementierung von [**IRawElementProviderSimple:: GetPatternProvider**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementprovidersimple-getpatternprovider) , die ein Objekt zurückgibt, das [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider)implementiert. Die meisten Listen Steuerelemente unterstützen auch andere Muster, in diesem Beispiel wird jedoch ein NULL-Verweis für alle anderen Steuerelement Muster Bezeichner zurückgegeben.
+Das folgende Beispiel zeigt eine Implementierung von [**IRawElementProviderSimple::GetPatternProvider,**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irawelementprovidersimple-getpatternprovider) die ein Objekt zurückgibt, das [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider)implementiert. Die meisten Listensteuerelemente unterstützen auch andere Muster, aber in diesem Beispiel wird ein NULL-Verweis für alle anderen Steuerelementmusterbezeichner zurückgegeben.
 
 
 ```C++
@@ -99,18 +99,18 @@ IFACEMETHODIMP ListProvider::GetPatternProvider(PATTERNID patternId, IUnknown** 
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](uiauto-controlpatternsoverview.md)
 </dt> <dt>
 
-[Gewusst-wie-Themen für Benutzeroberflächenautomatisierungs-Anbieter](uiauto-howto-topics-for-uiautomation-providers.md)
+[Anleitungsthemen für Benutzeroberflächenautomatisierung-Anbieter](uiauto-howto-topics-for-uiautomation-providers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

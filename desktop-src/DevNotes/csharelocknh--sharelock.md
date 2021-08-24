@@ -1,7 +1,7 @@
 ---
 description: Erh채lt eine freigegebene Sperre.
 ms.assetid: dff9a842-573a-4530-820d-6fd9001e502a
-title: 'Csharelocknh:: sharelock-Methode'
+title: CShareLockNH::ShareLock-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Rwnh.dll
-ms.openlocfilehash: d0c77564deceab29a8bee0cbffbd477559117cbd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7fd398228c6d0feb7e63133e8faeefd7a2fd3359bf62e80a8f398a3467424b90
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654830"
 ---
-# <a name="csharelocknhsharelock-method"></a>Csharelocknh:: sharelock-Methode
+# <a name="csharelocknhsharelock-method"></a>CShareLockNH::ShareLock-Methode
 
 Erh채lt eine freigegebene Sperre.
 
@@ -41,11 +41,11 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zur체ck.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jeder aufgerufene **sharelock** muss mit genau einem [**share Unlock**](csharelocknh--shareunlock.md)-Aufrufvorgang gekoppelt werden. Nur ein Thread, der **sharelock** erfolgreich aufruft, kann **shareunlock** aufrufen. Andernfalls kann ein Deadlock auftreten.
+Jeder Aufruf von **ShareLock** muss mit genau einem Aufruf von [**ShareUnlock gekoppelt werden.**](csharelocknh--shareunlock.md) Nur ein Thread, der **ShareLock erfolgreich aufruft,** kann **ShareUnlock aufrufen.** Andernfalls kann ein Deadlock auftreten.
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m체ssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie m체ssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 <dl> <dt>
 
-[**Share Unlock**](csharelocknh--shareunlock.md)
+[**ShareUnlock**](csharelocknh--shareunlock.md)
 </dt> </dl>
 
  

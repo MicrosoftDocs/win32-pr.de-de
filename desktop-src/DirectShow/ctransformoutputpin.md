@@ -1,7 +1,7 @@
 ---
-description: Die ctransformoutputpin-Klasse implementiert eine Ausgabe-PIN, die von der ctransformfilter-Klasse verwendet wird.
+description: Die CTransformOutputPin-Klasse implementiert einen Ausgabepin, der von der CTransformFilter-Klasse verwendet wird.
 ms.assetid: 76f9a981-8f0d-45d4-b901-c5ec5b5ac9ee
-title: Ctransformoutputpin-Klasse (Transfrm. h)
+title: CTransformOutputPin-Klasse (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,45 +16,45 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c55c57fbec0a8441b80398370542d94b2b70c1ce
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4f99b0d03eb3b2b1ac63c69620346e4db663c75730ff773de2fb1429b268aefb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119756785"
 ---
-# <a name="ctransformoutputpin-class"></a>Ctransformoutputpin-Klasse
+# <a name="ctransformoutputpin-class"></a>CTransformOutputPin-Klasse
 
 ![ctransformoutputpin-Klassenhierarchie](images/tfrm02.png)
 
-Die- `CTransformOutputPin` Klasse implementiert eine Ausgabe-PIN, die von der [**ctransformfilter**](ctransformfilter.md) -Klasse verwendet wird.
+Die `CTransformOutputPin` -Klasse implementiert einen Ausgabepin, der von der [**CTransformFilter-Klasse**](ctransformfilter.md) verwendet wird.
 
-In der Regel müssen Sie keine Ableitung von dieser Klasse durchführen. Die meisten Methoden in dieser Klasse können die entsprechenden Methoden der **ctransformfilter** -Klasse aufzurufen, die Sie überschreiben können. Wenn Sie von dieser Klasse ableiten, müssen Sie die [**ctransformfilter:: getpin**](ctransformfilter-getpin.md) -Methode des Filters überschreiben, um Instanzen ihrer abgeleiteten Klasse zu erstellen.
+In der Regel müssen Sie nicht von dieser Klasse ableiten. Die meisten Methoden in dieser Klasse rufen entsprechende Methoden für die **CTransformFilter-Klasse** auf, die Sie überschreiben können. Wenn Sie von dieser Klasse ableiten, müssen Sie die [**CTransformFilter::GetPin-Methode**](ctransformfilter-getpin.md) des Filters überschreiben, um Instanzen Ihrer abgeleiteten Klasse zu erstellen.
 
-Diese Klasse macht die Schnittstellen **imediaseeking** und **imediaposition** über das [**cpospassthru**](cpospassthru.md) -Objekt verfügbar. Alle Suchanforderungen werden an den nächsten Filter Upstream weitergeleitet.
+Diese Klasse macht die **Schnittstellen IMediaSeeking** und **IMediaPosition** über das [**CPosPassThru-Objekt**](cpospassthru.md) verfügbar. Er übergibt alle Suchanforderungen an den nächsten Filter upstream.
 
 
 
-| Geschützte Member-Variablen                                               | BESCHREIBUNG                                              |
+| Geschützte Membervariablen                                               | Beschreibung                                              |
 |--------------------------------------------------------------------------|----------------------------------------------------------|
-| [**m \_ ptransformfilter**](ctransformoutputpin-m-ptransformfilter.md)    | Zeiger auf den besitzenden Filter.                            |
-| Öffentliche Element Variablen                                                  | BESCHREIBUNG                                              |
-| [**m \_ pposition**](ctransformoutputpin-m-pposition.md)                  | Hilfsobjekt, um Seek-Befehle zu übergeben.            |
-| Öffentliche Methoden                                                           | BESCHREIBUNG                                              |
-| [**Ctransformoutputpin**](ctransformoutputpin-ctransformoutputpin.md)   | Konstruktormethode.                                      |
-| [**~ Ctransformoutputpin**](ctransformoutputpin--ctransformoutputpin.md) | Dekonstruktormethode.                                       |
-| [**Check Connect**](ctransformoutputpin-checkconnect.md)                 | Bestimmt, ob eine PIN-Verbindung geeignet ist.         |
-| [**Breakconnect**](ctransformoutputpin-breakconnect.md)                 | Gibt die PIN von einer Verbindung frei.                      |
-| [**Completeconnect**](ctransformoutputpin-completeconnect.md)           | Schließt eine Verbindung mit einer anderen Pin ab.                   |
-| [**Checkmediatype**](ctransformoutputpin-checkmediatype.md)             | Bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert.     |
-| [**Setmediatype**](ctransformoutputpin-setmediatype.md)                 | Legt den Medientyp für die Verbindung fest.                  |
-| [**Decidebuffersize**](ctransformoutputpin-decidebuffersize.md)         | Legt die Puffer Anforderungen fest.                            |
-| [**Getmediatype**](ctransformoutputpin-getmediatype.md)                 | Ruft einen bevorzugten Medientyp nach Indexwert ab.        |
-| [**Currentmediatype**](ctransformoutputpin-currentmediatype.md)         | Ruft den Medientyp für die aktuelle PIN-Verbindung ab. |
-| IPin-Methoden                                                             | BESCHREIBUNG                                              |
-| [**QueryId**](ctransformoutputpin-queryid.md)                           | Ruft einen Bezeichner für die PIN ab.                     |
-| Iqualitycontrol-Methoden                                                  | BESCHREIBUNG                                              |
-| [**Benachrichtigen**](ctransformoutputpin-notify.md)                             | Benachrichtigt die PIN, dass eine Qualitätsänderung angefordert wird.     |
+| [**m \_ pTransformFilter**](ctransformoutputpin-m-ptransformfilter.md)    | Zeiger auf den besitzenden Filter.                            |
+| Öffentliche Membervariablen                                                  | Beschreibung                                              |
+| [**m \_ pPosition**](ctransformoutputpin-m-pposition.md)                  | Hilfsobjekt zum Übergeben von Suchbefehlen upstream.            |
+| Öffentliche Methoden                                                           | Beschreibung                                              |
+| [**CTransformOutputPin**](ctransformoutputpin-ctransformoutputpin.md)   | Konstruktormethode.                                      |
+| [**~CTransformOutputPin**](ctransformoutputpin--ctransformoutputpin.md) | Destruktormethode.                                       |
+| [**CheckConnect**](ctransformoutputpin-checkconnect.md)                 | Bestimmt, ob eine Stecknadelverbindung geeignet ist.         |
+| [**BreakConnect**](ctransformoutputpin-breakconnect.md)                 | Gibt den Pin von einer Verbindung frei.                      |
+| [**CompleteConnect**](ctransformoutputpin-completeconnect.md)           | Schließt eine Verbindung mit einem anderen Pin ab.                   |
+| [**CheckMediaType**](ctransformoutputpin-checkmediatype.md)             | Bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert.     |
+| [**SetMediaType**](ctransformoutputpin-setmediatype.md)                 | Legt den Medientyp für die Verbindung fest.                  |
+| [**DecideBufferSize**](ctransformoutputpin-decidebuffersize.md)         | Legt die Pufferanforderungen fest.                            |
+| [**GetMediaType**](ctransformoutputpin-getmediatype.md)                 | Ruft einen bevorzugten Medientyp nach Indexwert ab.        |
+| [**CurrentMediaType**](ctransformoutputpin-currentmediatype.md)         | Ruft den Medientyp für die aktuelle Pinverbindung ab. |
+| IPin-Methoden                                                             | Beschreibung                                              |
+| [**QueryId**](ctransformoutputpin-queryid.md)                           | Ruft einen Bezeichner für den Stecknadel ab.                     |
+| IQualityControl-Methoden                                                  | Beschreibung                                              |
+| [**Benachrichtigen**](ctransformoutputpin-notify.md)                             | Benachrichtigt den Pin, dass eine Qualitätsänderung angefordert wird.     |
 
 
 
@@ -66,8 +66,8 @@ Diese Klasse macht die Schnittstellen **imediaseeking** und **imediaposition** �
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

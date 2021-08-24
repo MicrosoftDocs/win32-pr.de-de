@@ -1,7 +1,7 @@
 ---
-description: Die iamerrorlog-Schnittstelle stellt eine Rückruf Methode für die Fehler Protokollierung in DirectShow-Bearbeitungs Diensten bereit. Von des wird diese Schnittstelle nicht implementiert.
+description: Die IAMErrorLog-Schnittstelle stellt eine Rückrufmethode für die Fehlerprotokollierung in DirectShow Editing Services (DES) bereit. Des implementiert diese Schnittstelle nicht.
 ms.assetid: d5366072-2de7-437c-b198-cbc4d8623c45
-title: Iamerrorlog-Schnittstelle (qedit. h)
+title: IAMErrorLog-Schnittstelle (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,39 +14,39 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 48a1515ebf3e7c829a3e23772f1f84ee76c36ae0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f2edd1d315cc7ae35bbc200209667d49d53392ce86a10b40a067182cd0621124
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119756460"
 ---
-# <a name="iamerrorlog-interface"></a>Iamerrorlog-Schnittstelle
+# <a name="iamerrorlog-interface"></a>IAMErrorLog-Schnittstelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `IAMErrorLog` Schnittstelle stellt eine Rückruf Methode für die Fehler Protokollierung in [DirectShow-Bearbeitungs Diensten](directshow-editing-services.md) bereit.
+Die `IAMErrorLog` -Schnittstelle stellt eine Rückrufmethode für die Fehlerprotokollierung in [DirectShow Editing Services](directshow-editing-services.md) (DES) bereit.
 
-Von des wird diese Schnittstelle nicht implementiert. Um die Fehler Protokollierung auszuführen, implementieren Sie diese Schnittstelle in der Anwendung, und nennen Sie [**iamseterrorlog::p UT \_ ErrorLog**](iamseterrorlog-put-errorlog.md) auf der Zeitachse. Wenn beim Rendering des Projekts ein Fehler auftritt, ruft der die [**iamerrorlog:: LogError**](iamerrorlog-logerror.md) -Methode auf, die von der Anwendung implementiert wird.
+Des implementiert diese Schnittstelle nicht. Implementieren Sie zum Ausführen der Fehlerprotokollierung diese Schnittstelle in Ihrer Anwendung, und rufen Sie [**IAMSetErrorLog::p ut \_ ErrorLog**](iamseterrorlog-put-errorlog.md) auf der Zeitachse auf. Wenn beim Rendern des Projekts ein Fehler auftritt, ruft DES die [**IAMErrorLog::LogError-Methode**](iamerrorlog-logerror.md) auf, die von Ihrer Anwendung implementiert wird.
 
-DES protokolliert Fehler nur, wenn Sie ein Projekt mit der " [**unenderengine**](irenderengine.md) "-Schnittstelle Rendering. Wenn Sie z. b. ein Projekt als DirectShow-Filter Diagramm (GRF-Format) speichern und die Diagramm Datei wiedergeben, gibt es keine Fehler Protokollierung. Weitere Informationen zur Verwendung dieser Schnittstelle finden Sie unter [Protokollieren von Fehlern](logging-errors.md).
+DES protokolliert Fehler nur, wenn Sie ein Projekt mithilfe der [**IRenderEngine-Schnittstelle rendern.**](irenderengine.md) Wenn Sie beispielsweise ein Projekt als DirectShow-Filtergraph (GRF-Format) speichern und die Graphdatei wiedergeben, erfolgt keine Fehlerprotokollierung. Weitere Informationen zur Verwendung dieser Schnittstelle finden Sie unter [Protokollierungsfehler.](logging-errors.md)
 
 ## <a name="members"></a>Member
 
-Die **iamerrorlog** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iamerrorlog** verfügt auch über die folgenden Typen von Membern:
+Die **IAMErrorLog-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IAMErrorLog** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iamerrorlog** -Schnittstelle verfügt über diese Methoden.
+Die **IAMErrorLog-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                   | BESCHREIBUNG               |
+| Methode                                   | Beschreibung               |
 |:-----------------------------------------|:--------------------------|
 | [**LogError**](iamerrorlog-logerror.md) | Protokolliert einen Fehler.<br/> |
 
@@ -54,15 +54,15 @@ Die **iamerrorlog** -Schnittstelle verfügt über diese Methoden.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -72,8 +72,8 @@ Die **iamerrorlog** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
